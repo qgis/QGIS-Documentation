@@ -9,11 +9,12 @@ $currentfeature
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Returns the current feature being evaluated. This can be used with the 'attribute' function to evaluate attribute values from the current feature.
+   * - Description
+     - Returns the current feature being evaluated. This can be used with the 'attribute' function to evaluate attribute values from the current feature.
 
-  - Examples
-  - ``attribute( $currentfeature, 'name' )`` → value stored in 'name' attribute for the current feature
+      * - Examples
+     - ``attribute( $currentfeature, 'name' )`` → value stored in 'name' attribute for the current feature
+
 
 .. _expression_function_$id:
 
@@ -26,11 +27,12 @@ $id
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Returns the feature id of the current row.
+   * - Description
+     - Returns the feature id of the current row.
 
-  - Examples
-  - ``$id`` → 42
+      * - Examples
+     - ``$id`` → 42
+
 
 .. _expression_function_attribute:
 
@@ -43,9 +45,10 @@ attribute
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Returns an attribute from a feature.
+   * - Description
+     - Returns an attribute from a feature.
 
+      
 
 
 .. _expression_function_attributes:
@@ -59,9 +62,10 @@ attributes
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Returns a map containing all attributes from a feature, with field names as map keys.
+   * - Description
+     - Returns a map containing all attributes from a feature, with field names as map keys.
 
+      
 
 
 .. _expression_function_display_expression:
@@ -75,18 +79,23 @@ display_expression(feature, layer, evaluate)
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Returns the display expression for a given feature in a layer. If called with no parameters, it evaluates the current feature. The expression is evaluated by default.
+   * - Description
+     - Returns the display expression for a given feature in a layer. If called with no parameters, it evaluates the current feature. The expression is evaluated by default.
 
-  - Arguments
-  - **feature** - The feature which should be evaluated.
-    **layer** - The layer (or its id or name).
-    **evaluate** - If the expression must be evaluated. If false, the expression will be returned as a string literal only (which could potentially be later evaluated using the 'eval' function).
+   * - Arguments
+     - **feature** - The feature which should be evaluated.
 
-  - Examples
-  - ``display_expression()`` → The display expression of the current feature.
-    ``display_expression(get_feature_by_id('streets', 1), 'streets')`` → The display expression of the feature with the ID 1 on the layer 'streets'.
-    ``display_expression('a_layer_id', $currentfeature, 'False')`` → The display expression of the given feature not evaluated.
+       **layer** - The layer (or its id or name).
+
+       **evaluate** - If the expression must be evaluated. If false, the expression will be returned as a string literal only (which could potentially be later evaluated using the 'eval' function).
+
+   * - Examples
+     - ``display_expression()`` → The display expression of the current feature.
+
+       ``display_expression(get_feature_by_id('streets', 1), 'streets')`` → The display expression of the feature with the ID 1 on the layer 'streets'.
+
+       ``display_expression('a_layer_id', $currentfeature, 'False')`` → The display expression of the given feature not evaluated.
+
 
 .. _expression_function_get_feature:
 
@@ -99,16 +108,19 @@ get_feature(layer, attribute, value)
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Returns the first feature of a layer matching a given attribute value.
+   * - Description
+     - Returns the first feature of a layer matching a given attribute value.
 
-  - Arguments
-  - **layer** - layer name or ID
-    **attribute** - attribute name
-    **value** - attribute value to match
+   * - Arguments
+     - **layer** - layer name or ID
 
-  - Examples
-  - ``get_feature('streets','name','main st')`` → first feature found in "streets" layer with "main st" value in the "name" field
+       **attribute** - attribute name
+
+       **value** - attribute value to match
+
+   * - Examples
+     - ``get_feature('streets','name','main st')`` → first feature found in "streets" layer with "main st" value in the "name" field
+
 
 .. _expression_function_get_feature_by_id:
 
@@ -121,15 +133,17 @@ get_feature_by_id(layer, feature_id)
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Returns the feature with an id on a layer.
+   * - Description
+     - Returns the feature with an id on a layer.
 
-  - Arguments
-  - **layer** - layer, layer name or layer id
-    **feature_id** - the id of the feature which should be returned
+   * - Arguments
+     - **layer** - layer, layer name or layer id
 
-  - Examples
-  - ``get_feature('streets', 1)`` → the feature with the id 1 on the layer "streets"
+       **feature_id** - the id of the feature which should be returned
+
+   * - Examples
+     - ``get_feature('streets', 1)`` → the feature with the id 1 on the layer "streets"
+
 
 .. _expression_function_is_selected:
 
@@ -142,9 +156,10 @@ is_selected
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Returns True if a feature is selected. Can be used with zero, one or two arguments, see below for details.
+   * - Description
+     - Returns True if a feature is selected. Can be used with zero, one or two arguments, see below for details.
 
+      
 
 
 .. _expression_function_maptip:
@@ -158,18 +173,23 @@ maptip(feature, layer, evaluate)
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Returns the maptip for a given feature in a layer. If called with no parameters, it evaluates the current feature. The maptip is evaluated by default.
+   * - Description
+     - Returns the maptip for a given feature in a layer. If called with no parameters, it evaluates the current feature. The maptip is evaluated by default.
 
-  - Arguments
-  - **feature** - The feature which should be evaluated.
-    **layer** - The layer (or its id or name).
-    **evaluate** - If the expression must be evaluated. If false, the expression will be returned as a string literal only (which could potentially be later evaluated using the 'eval_template' function).
+   * - Arguments
+     - **feature** - The feature which should be evaluated.
 
-  - Examples
-  - ``maptip()`` → The maptip of the current feature.
-    ``maptip(get_feature('streets', 1), 'streets')`` → The maptip of the feature with the ID 1 on the layer 'streets'.
-    ``maptip('a_layer_id', $currentfeature, 'False')`` → The maptip of the given feature not evaluated.
+       **layer** - The layer (or its id or name).
+
+       **evaluate** - If the expression must be evaluated. If false, the expression will be returned as a string literal only (which could potentially be later evaluated using the 'eval_template' function).
+
+   * - Examples
+     - ``maptip()`` → The maptip of the current feature.
+
+       ``maptip(get_feature('streets', 1), 'streets')`` → The maptip of the feature with the ID 1 on the layer 'streets'.
+
+       ``maptip('a_layer_id', $currentfeature, 'False')`` → The maptip of the given feature not evaluated.
+
 
 .. _expression_function_num_selected:
 
@@ -182,15 +202,17 @@ num_selected(layer)
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Returns the number of selected features on a given layer. By default works on the layer on which the expression is evaluated.
+   * - Description
+     - Returns the number of selected features on a given layer. By default works on the layer on which the expression is evaluated.
 
-  - Arguments
-  - **layer** - The layer (or its id or name) on which the selection will be checked.
+   * - Arguments
+     - **layer** - The layer (or its id or name) on which the selection will be checked.
 
-  - Examples
-  - ``num_selected()`` → The number of selected features on the current layer.
-    ``num_selected('streets')`` → The number of selected features on the layer streets
+   * - Examples
+     - ``num_selected()`` → The number of selected features on the current layer.
+
+       ``num_selected('streets')`` → The number of selected features on the layer streets
+
 
 .. _expression_function_represent_value:
 
@@ -203,16 +225,19 @@ represent_value(value, fieldName)
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Returns the configured representation value for a field value. It depends on the configured widget type. Often, this is useful for 'Value Map' widgets.
+   * - Description
+     - Returns the configured representation value for a field value. It depends on the configured widget type. Often, this is useful for 'Value Map' widgets.
 
-  - Arguments
-  - **value** - The value which should be resolved. Most likely a field.
-    **fieldName** - The field name for which the widget configuration should be loaded. (Optional)
+   * - Arguments
+     - **value** - The value which should be resolved. Most likely a field.
 
-  - Examples
-  - ``represent_value("field_with_value_map")`` → Description for value
-    ``represent_value('static value', 'field_name')`` → Description for static value
+       **fieldName** - The field name for which the widget configuration should be loaded. (Optional)
+
+   * - Examples
+     - ``represent_value("field_with_value_map")`` → Description for value
+
+       ``represent_value('static value', 'field_name')`` → Description for static value
+
 
 .. _expression_function_sqlite_fetch_and_increment:
 
@@ -225,20 +250,27 @@ sqlite_fetch_and_increment(database, table, id_field, filter_attribute, filter_v
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Manage autoincrementing values in sqlite databases.<p>SQlite default values can only be applied on insert and not prefetched.</p><p>This makes it impossible to acquire an incremented primary key via AUTO_INCREMENT before creating the row in the database. Sidenote: with postgres, this works via the option <i>evaluate default values</i>.</p><p>When adding new features with relations, it is really nice to be able to already add children for a parent, while the parents form is still open and hence the parent feature uncommitted.</p><p>To get around this limitation, this function can be used to manage sequence values in a separate table on sqlite based formats like gpkg.</p><p>The sequence table will be filtered for a sequence id (filter_attribute and filter_value) and the current value of the id_field will be incremented by 1 and the incremented value returned.</p><p>If additional columns require values to be specified, the default_value map can be used for this purpose.</p><p><b>Note</b><br/>This function modifies the target sqlite table. It is intended for usage with default value configurations for attributes.</p><p>When the database parameter is a layer and the layer is in transaction mode, the value will only be retrieved once during the lifetime of a transaction and cached and incremented. This makes it unsafe to work on the same database from several processes in parallel.</p>
+   * - Description
+     - Manage autoincrementing values in sqlite databases.<p>SQlite default values can only be applied on insert and not prefetched.</p><p>This makes it impossible to acquire an incremented primary key via AUTO_INCREMENT before creating the row in the database. Sidenote: with postgres, this works via the option <i>evaluate default values</i>.</p><p>When adding new features with relations, it is really nice to be able to already add children for a parent, while the parents form is still open and hence the parent feature uncommitted.</p><p>To get around this limitation, this function can be used to manage sequence values in a separate table on sqlite based formats like gpkg.</p><p>The sequence table will be filtered for a sequence id (filter_attribute and filter_value) and the current value of the id_field will be incremented by 1 and the incremented value returned.</p><p>If additional columns require values to be specified, the default_value map can be used for this purpose.</p><p><b>Note</b><br/>This function modifies the target sqlite table. It is intended for usage with default value configurations for attributes.</p><p>When the database parameter is a layer and the layer is in transaction mode, the value will only be retrieved once during the lifetime of a transaction and cached and incremented. This makes it unsafe to work on the same database from several processes in parallel.</p>
 
-  - Arguments
-  - **database** - Path to the sqlite file or geopackage layer
-    **table** - Name of the table that manages the sequences
-    **id_field** - Name of the field that contains the current value
-    **filter_attribute** - Name the field that contains a unique identifier for this sequence. Must have a UNIQUE index.
-    **filter_value** - Name of the sequence to use.
-    **default_values** - Map with default values for additional columns on the table. The values need to be fully quoted. Functions are allowed.
+   * - Arguments
+     - **database** - Path to the sqlite file or geopackage layer
 
-  - Examples
-  - ``sqlite_fetch_and_increment(@layer, 'sequence_table', 'last_unique_id', 'sequence_id', 'global', map('last_change','date(''now'')','user','''' || @user_account_name || ''''))`` → 0
-    ``sqlite_fetch_and_increment(layer_property(@layer, 'path'), 'sequence_table', 'last_unique_id', 'sequence_id', 'global', map('last_change','date(''now'')','user','''' || @user_account_name || ''''))`` → 0
+       **table** - Name of the table that manages the sequences
+
+       **id_field** - Name of the field that contains the current value
+
+       **filter_attribute** - Name the field that contains a unique identifier for this sequence. Must have a UNIQUE index.
+
+       **filter_value** - Name of the sequence to use.
+
+       **default_values** - Map with default values for additional columns on the table. The values need to be fully quoted. Functions are allowed.
+
+   * - Examples
+     - ``sqlite_fetch_and_increment(@layer, 'sequence_table', 'last_unique_id', 'sequence_id', 'global', map('last_change','date(''now'')','user','''' || @user_account_name || ''''))`` → 0
+
+       ``sqlite_fetch_and_increment(layer_property(@layer, 'path'), 'sequence_table', 'last_unique_id', 'sequence_id', 'global', map('last_change','date(''now'')','user','''' || @user_account_name || ''''))`` → 0
+
 
 .. _expression_function_uuid:
 
@@ -251,9 +283,10 @@ uuid
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Generates a Universally Unique Identifier (UUID) for each row using the Qt <a href='http://qt-project.org/doc/qt-4.8/quuid.html#createUuid'>QUuid::createUuid</a>  method.  Each UUID is 38 characters long.
+   * - Description
+     - Generates a Universally Unique Identifier (UUID) for each row using the Qt <a href='http://qt-project.org/doc/qt-4.8/quuid.html#createUuid'>QUuid::createUuid</a>  method.  Each UUID is 38 characters long.
 
-  - Examples
-  - ``uuid()`` → '{0bd2f60f-f157-4a6d-96af-d4ba4cb366a1}'
+      * - Examples
+     - ``uuid()`` → '{0bd2f60f-f157-4a6d-96af-d4ba4cb366a1}'
+
 

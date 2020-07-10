@@ -28,9 +28,9 @@ def format_function(function_dict):
     # Prepare syntax and arguments strings
     if len(arg_syntax_list) > 0:
         syntax = f'{f_name}({", ".join(arg_syntax_list)}{variable_args})'
-        descriptions = '\n    '.join(arg_description_list)
-        arguments = (f"  - Arguments\n"
-                     f"  - {descriptions}\n"
+        descriptions = '\n\n       '.join(arg_description_list)
+        arguments = (f"* - Arguments\n"
+                     f"     - {descriptions}\n"
                      f"\n")
     else:
         syntax = f_name
@@ -39,7 +39,7 @@ def format_function(function_dict):
     # Prepare examples
     if 'examples' in function_dict:
         ex_list = [f"``{ex['expression']}`` → {ex['returns']}" for ex in function_dict['examples']]
-        examples = "  - Examples\n  - "+ "\n    ".join(ex_list)
+        examples = "* - Examples\n     - "+ "\n\n       ".join(ex_list)
     else:
         examples = ''
 
@@ -59,11 +59,11 @@ def format_function(function_dict):
             f"   :widths: 15 85\n"
             f"   :stub-columns: 1\n"
             f"\n"
-            f"* - Description\n"
-            f"  - {f_description}\n"
+            f"   * - Description\n"
+            f"     - {f_description}\n"
             f"\n"
-            f"{arguments}"
-            f"{examples}"
+            f"   {arguments}"
+            f"   {examples}"
             f"\n\n\n")
     return text
         

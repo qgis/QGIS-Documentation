@@ -9,14 +9,15 @@ array(value1, value2, ...)
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Returns an array containing all the values passed as parameter.
+   * - Description
+     - Returns an array containing all the values passed as parameter.
 
-  - Arguments
-  - **value** - a value
+   * - Arguments
+     - **value** - a value
 
-  - Examples
-  - ``array(2,10)`` → [ 2, 10 ]
+   * - Examples
+     - ``array(2,10)`` → [ 2, 10 ]
+
 
 .. _expression_function_array_all:
 
@@ -29,16 +30,19 @@ array_all(array_a, array_b)
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Returns true if an array contains all the values of a given array.
+   * - Description
+     - Returns true if an array contains all the values of a given array.
 
-  - Arguments
-  - **array_a** - an array
-    **array_b** - the array of values to search
+   * - Arguments
+     - **array_a** - an array
 
-  - Examples
-  - ``array_all(array(1,2,3),array(2,3))`` → true
-    ``array_all(array(1,2,3),array(1,2,4))`` → false
+       **array_b** - the array of values to search
+
+   * - Examples
+     - ``array_all(array(1,2,3),array(2,3))`` → true
+
+       ``array_all(array(1,2,3),array(1,2,4))`` → false
+
 
 .. _expression_function_array_append:
 
@@ -51,15 +55,17 @@ array_append(array, value)
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Returns an array with the given value added at the end.
+   * - Description
+     - Returns an array with the given value added at the end.
 
-  - Arguments
-  - **array** - an array
-    **value** - the value to add
+   * - Arguments
+     - **array** - an array
 
-  - Examples
-  - ``array_append(array(1,2,3),4)`` → [ 1, 2, 3, 4 ]
+       **value** - the value to add
+
+   * - Examples
+     - ``array_append(array(1,2,3),4)`` → [ 1, 2, 3, 4 ]
+
 
 .. _expression_function_array_cat:
 
@@ -72,14 +78,15 @@ array_cat(array1, array2, ...)
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Returns an array containing all the given arrays concatenated.
+   * - Description
+     - Returns an array containing all the given arrays concatenated.
 
-  - Arguments
-  - **array** - an array
+   * - Arguments
+     - **array** - an array
 
-  - Examples
-  - ``array_cat(array(1,2),array(2,3))`` → [ 1, 2, 2, 3 ]
+   * - Examples
+     - ``array_cat(array(1,2),array(2,3))`` → [ 1, 2, 2, 3 ]
+
 
 .. _expression_function_array_contains:
 
@@ -92,15 +99,17 @@ array_contains(array, value)
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Returns true if an array contains the given value.
+   * - Description
+     - Returns true if an array contains the given value.
 
-  - Arguments
-  - **array** - an array
-    **value** - the value to search
+   * - Arguments
+     - **array** - an array
 
-  - Examples
-  - ``array_contains(array(1,2,3),2)`` → true
+       **value** - the value to search
+
+   * - Examples
+     - ``array_contains(array(1,2,3),2)`` → true
+
 
 .. _expression_function_array_distinct:
 
@@ -113,14 +122,15 @@ array_distinct(array)
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Returns an array containing distinct values of the given array.
+   * - Description
+     - Returns an array containing distinct values of the given array.
 
-  - Arguments
-  - **array** - an array
+   * - Arguments
+     - **array** - an array
 
-  - Examples
-  - ``array_distinct(array(1,2,3,2,1))`` → [ 1, 2, 3 ]
+   * - Examples
+     - ``array_distinct(array(1,2,3,2,1))`` → [ 1, 2, 3 ]
+
 
 .. _expression_function_array_filter:
 
@@ -133,15 +143,17 @@ array_filter(array, expression)
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Returns an array with only the items for which the expression evaluates to true.
+   * - Description
+     - Returns an array with only the items for which the expression evaluates to true.
 
-  - Arguments
-  - **array** - an array
-    **expression** - an expression to evaluate on each item. The variable `@element` will be replaced by the current value.
+   * - Arguments
+     - **array** - an array
 
-  - Examples
-  - ``array_filter(array(1,2,3),@element &lt; 3)`` → [ 1, 2 ]
+       **expression** - an expression to evaluate on each item. The variable `@element` will be replaced by the current value.
+
+   * - Examples
+     - ``array_filter(array(1,2,3),@element &lt; 3)`` → [ 1, 2 ]
+
 
 .. _expression_function_array_find:
 
@@ -154,15 +166,17 @@ array_find(array, value)
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Returns the index (0 for the first one) of a value within an array. Returns -1 if the value is not found.
+   * - Description
+     - Returns the index (0 for the first one) of a value within an array. Returns -1 if the value is not found.
 
-  - Arguments
-  - **array** - an array
-    **value** - the value to search
+   * - Arguments
+     - **array** - an array
 
-  - Examples
-  - ``array_find(array(1,2,3),2)`` → 1
+       **value** - the value to search
+
+   * - Examples
+     - ``array_find(array(1,2,3),2)`` → 1
+
 
 .. _expression_function_array_first:
 
@@ -175,14 +189,15 @@ array_first(array)
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Returns the first value of an array.
+   * - Description
+     - Returns the first value of an array.
 
-  - Arguments
-  - **array** - an array
+   * - Arguments
+     - **array** - an array
 
-  - Examples
-  - ``array_first(array('a','b','c'))`` → 'a'
+   * - Examples
+     - ``array_first(array('a','b','c'))`` → 'a'
+
 
 .. _expression_function_array_foreach:
 
@@ -195,16 +210,19 @@ array_foreach(array, expression)
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Returns an array with the given expression evaluated on each item.
+   * - Description
+     - Returns an array with the given expression evaluated on each item.
 
-  - Arguments
-  - **array** - an array
-    **expression** - an expression to evaluate on each item. The variable `@element` will be replaced by the current value.
+   * - Arguments
+     - **array** - an array
 
-  - Examples
-  - ``array_foreach(array('a','b','c'),upper(@element))`` → [ 'A', 'B', 'C' ]
-    ``array_foreach(array(1,2,3),@element + 10)`` → [ 11, 12, 13 ]
+       **expression** - an expression to evaluate on each item. The variable `@element` will be replaced by the current value.
+
+   * - Examples
+     - ``array_foreach(array('a','b','c'),upper(@element))`` → [ 'A', 'B', 'C' ]
+
+       ``array_foreach(array(1,2,3),@element + 10)`` → [ 11, 12, 13 ]
+
 
 .. _expression_function_array_get:
 
@@ -217,15 +235,17 @@ array_get(array, index)
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Returns the Nth value (0 for the first one) of an array.
+   * - Description
+     - Returns the Nth value (0 for the first one) of an array.
 
-  - Arguments
-  - **array** - an array
-    **index** - the index to get (0 based)
+   * - Arguments
+     - **array** - an array
 
-  - Examples
-  - ``array_get(array('a','b','c'),1)`` → 'b'
+       **index** - the index to get (0 based)
+
+   * - Examples
+     - ``array_get(array('a','b','c'),1)`` → 'b'
+
 
 .. _expression_function_array_insert:
 
@@ -238,16 +258,19 @@ array_insert(array, pos, value)
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Returns an array with the given value added at the given position.
+   * - Description
+     - Returns an array with the given value added at the given position.
 
-  - Arguments
-  - **array** - an array
-    **pos** - the position where to add (0 based)
-    **value** - the value to add
+   * - Arguments
+     - **array** - an array
 
-  - Examples
-  - ``array_insert(array(1,2,3),1,100)`` → [ 1, 100, 2, 3 ]
+       **pos** - the position where to add (0 based)
+
+       **value** - the value to add
+
+   * - Examples
+     - ``array_insert(array(1,2,3),1,100)`` → [ 1, 100, 2, 3 ]
+
 
 .. _expression_function_array_intersect:
 
@@ -260,15 +283,17 @@ array_intersect(array1, array2)
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Returns true if at least one element of array1 exists in array2.
+   * - Description
+     - Returns true if at least one element of array1 exists in array2.
 
-  - Arguments
-  - **array1** - an array
-    **array2** - another array
+   * - Arguments
+     - **array1** - an array
 
-  - Examples
-  - ``array_intersect(array(1,2,3,4),array(4,0,2,5))`` → true
+       **array2** - another array
+
+   * - Examples
+     - ``array_intersect(array(1,2,3,4),array(4,0,2,5))`` → true
+
 
 .. _expression_function_array_last:
 
@@ -281,14 +306,15 @@ array_last(array)
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Returns the last value of an array.
+   * - Description
+     - Returns the last value of an array.
 
-  - Arguments
-  - **array** - an array
+   * - Arguments
+     - **array** - an array
 
-  - Examples
-  - ``array_last(array('a','b','c'))`` → 'c'
+   * - Examples
+     - ``array_last(array('a','b','c'))`` → 'c'
+
 
 .. _expression_function_array_length:
 
@@ -301,14 +327,15 @@ array_length(array)
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Returns the number of elements of an array.
+   * - Description
+     - Returns the number of elements of an array.
 
-  - Arguments
-  - **array** - an array
+   * - Arguments
+     - **array** - an array
 
-  - Examples
-  - ``array_length(array(1,2,3))`` → 3
+   * - Examples
+     - ``array_length(array(1,2,3))`` → 3
+
 
 .. _expression_function_array_prepend:
 
@@ -321,15 +348,17 @@ array_prepend(array, value)
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Returns an array with the given value added at the beginning.
+   * - Description
+     - Returns an array with the given value added at the beginning.
 
-  - Arguments
-  - **array** - an array
-    **value** - the value to add
+   * - Arguments
+     - **array** - an array
 
-  - Examples
-  - ``array_prepend(array(1,2,3),0)`` → [ 0, 1, 2, 3 ]
+       **value** - the value to add
+
+   * - Examples
+     - ``array_prepend(array(1,2,3),0)`` → [ 0, 1, 2, 3 ]
+
 
 .. _expression_function_array_remove_all:
 
@@ -342,15 +371,17 @@ array_remove_all(array, value)
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Returns an array with all the entries of the given value removed.
+   * - Description
+     - Returns an array with all the entries of the given value removed.
 
-  - Arguments
-  - **array** - an array
-    **value** - the values to remove
+   * - Arguments
+     - **array** - an array
 
-  - Examples
-  - ``array_remove_all(array('a','b','c','b'),'b')`` → [ 'a', 'c' ]
+       **value** - the values to remove
+
+   * - Examples
+     - ``array_remove_all(array('a','b','c','b'),'b')`` → [ 'a', 'c' ]
+
 
 .. _expression_function_array_remove_at:
 
@@ -363,15 +394,17 @@ array_remove_at(array, pos)
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Returns an array with the given index removed.
+   * - Description
+     - Returns an array with the given index removed.
 
-  - Arguments
-  - **array** - an array
-    **pos** - the position to remove (0 based)
+   * - Arguments
+     - **array** - an array
 
-  - Examples
-  - ``array_remove_at(array(1,2,3),1)`` → [ 1, 3 ]
+       **pos** - the position to remove (0 based)
+
+   * - Examples
+     - ``array_remove_at(array(1,2,3),1)`` → [ 1, 3 ]
+
 
 .. _expression_function_array_reverse:
 
@@ -384,14 +417,15 @@ array_reverse(array)
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Returns the given array with array values in reversed order.
+   * - Description
+     - Returns the given array with array values in reversed order.
 
-  - Arguments
-  - **array** - an array
+   * - Arguments
+     - **array** - an array
 
-  - Examples
-  - ``array_reverse(array(2,4,0,10))`` → [ 10, 0, 4, 2 ]
+   * - Examples
+     - ``array_reverse(array(2,4,0,10))`` → [ 10, 0, 4, 2 ]
+
 
 .. _expression_function_array_slice:
 
@@ -404,23 +438,33 @@ array_slice(array, start_pos, end_pos)
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Returns a portion of the array. The slice is defined by the start_pos and end_pos arguments.
+   * - Description
+     - Returns a portion of the array. The slice is defined by the start_pos and end_pos arguments.
 
-  - Arguments
-  - **array** - an array
-    **start_pos** - the index of the start position of the slice (0 based). The start_pos index is included in the slice. If you use a negative start_pos, the index is counted from the end of the list (-1 based).
-    **end_pos** - the index of the end position of the slice (0 based). The end_pos index is included in the slice. If you use a negative end_pos, the index is counted from the end of the list (-1 based).
+   * - Arguments
+     - **array** - an array
 
-  - Examples
-  - ``array_slice(array(1,2,3,4,5),0,3)`` → [ 1, 2, 3, 4 ]
-    ``array_slice(array(1,2,3,4,5),0,-1)`` → [ 1, 2, 3, 4, 5 ]
-    ``array_slice(array(1,2,3,4,5),-5,-1)`` → [ 1, 2, 3, 4, 5 ]
-    ``array_slice(array(1,2,3,4,5),0,0)`` → [ 1 ]
-    ``array_slice(array(1,2,3,4,5),-2,-1)`` → [ 4, 5 ]
-    ``array_slice(array(1,2,3,4,5),-1,-1)`` → [ 5 ]
-    ``array_slice(array('Dufour','Valmiera','Chugiak','Brighton'),1,2)`` → [ 'Valmiera', 'Chugiak' ]
-    ``array_slice(array_slice(array('Dufour','Valmiera','Chugiak','Brighton'),-2,-1)`` → [ 'Chugiak', 'Brighton' ]
+       **start_pos** - the index of the start position of the slice (0 based). The start_pos index is included in the slice. If you use a negative start_pos, the index is counted from the end of the list (-1 based).
+
+       **end_pos** - the index of the end position of the slice (0 based). The end_pos index is included in the slice. If you use a negative end_pos, the index is counted from the end of the list (-1 based).
+
+   * - Examples
+     - ``array_slice(array(1,2,3,4,5),0,3)`` → [ 1, 2, 3, 4 ]
+
+       ``array_slice(array(1,2,3,4,5),0,-1)`` → [ 1, 2, 3, 4, 5 ]
+
+       ``array_slice(array(1,2,3,4,5),-5,-1)`` → [ 1, 2, 3, 4, 5 ]
+
+       ``array_slice(array(1,2,3,4,5),0,0)`` → [ 1 ]
+
+       ``array_slice(array(1,2,3,4,5),-2,-1)`` → [ 4, 5 ]
+
+       ``array_slice(array(1,2,3,4,5),-1,-1)`` → [ 5 ]
+
+       ``array_slice(array('Dufour','Valmiera','Chugiak','Brighton'),1,2)`` → [ 'Valmiera', 'Chugiak' ]
+
+       ``array_slice(array_slice(array('Dufour','Valmiera','Chugiak','Brighton'),-2,-1)`` → [ 'Chugiak', 'Brighton' ]
+
 
 .. _expression_function_array_sort:
 
@@ -433,15 +477,17 @@ array_sort(array, ascending)
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Returns the provided array with its elements sorted.
+   * - Description
+     - Returns the provided array with its elements sorted.
 
-  - Arguments
-  - **array** - an array
-    **ascending** - set this parameter to false to sort the array in descending order
+   * - Arguments
+     - **array** - an array
 
-  - Examples
-  - ``array_sort(array(3,2,1))`` → [ 1, 2, 3 ]
+       **ascending** - set this parameter to false to sort the array in descending order
+
+   * - Examples
+     - ``array_sort(array(3,2,1))`` → [ 1, 2, 3 ]
+
 
 .. _expression_function_array_to_string:
 
@@ -454,18 +500,23 @@ array_to_string(array, delimiter, empty_value)
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Concatenates array elements into a string separated by a delimiter and using optional string for empty values.
+   * - Description
+     - Concatenates array elements into a string separated by a delimiter and using optional string for empty values.
 
-  - Arguments
-  - **array** - the input array
-    **delimiter** - the string delimiter used to separate concatenated array elements
-    **empty_value** - the optional string to use as replacement for empty (zero length) matches
+   * - Arguments
+     - **array** - the input array
 
-  - Examples
-  - ``array_to_string(array('1','2','3'))`` → '1,2,3'
-    ``array_to_string(array(1,2,3),'-')`` → '1-2-3'
-    ``array_to_string(array('1','','3'),',','0')`` → '1,0,3'
+       **delimiter** - the string delimiter used to separate concatenated array elements
+
+       **empty_value** - the optional string to use as replacement for empty (zero length) matches
+
+   * - Examples
+     - ``array_to_string(array('1','2','3'))`` → '1,2,3'
+
+       ``array_to_string(array(1,2,3),'-')`` → '1-2-3'
+
+       ``array_to_string(array('1','','3'),',','0')`` → '1,0,3'
+
 
 .. _expression_function_generate_series:
 
@@ -478,17 +529,21 @@ generate_series(start, stop, step)
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Creates an array containing a sequence of numbers.
+   * - Description
+     - Creates an array containing a sequence of numbers.
 
-  - Arguments
-  - **start** - first value of the sequence
-    **stop** - value that ends the sequence once reached
-    **step** - value used as the increment between values
+   * - Arguments
+     - **start** - first value of the sequence
 
-  - Examples
-  - ``generate_series(1,5)`` → [ 1, 2, 3, 4, 5 ]
-    ``generate_series(5,1,-1)`` → [ 5, 4, 3, 2, 1 ]
+       **stop** - value that ends the sequence once reached
+
+       **step** - value used as the increment between values
+
+   * - Examples
+     - ``generate_series(1,5)`` → [ 1, 2, 3, 4, 5 ]
+
+       ``generate_series(5,1,-1)`` → [ 5, 4, 3, 2, 1 ]
+
 
 .. _expression_function_regexp_matches:
 
@@ -501,17 +556,21 @@ regexp_matches(string, regex, empty_value)
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Returns an array of all strings captured by capturing groups, in the order the groups themselves appear in the supplied regular expression against a string.
+   * - Description
+     - Returns an array of all strings captured by capturing groups, in the order the groups themselves appear in the supplied regular expression against a string.
 
-  - Arguments
-  - **string** - the string to capture groups from against the regular expression
-    **regex** - the regular expression used to capture groups
-    **empty_value** - the optional string to use as replacement for empty (zero length) matches
+   * - Arguments
+     - **string** - the string to capture groups from against the regular expression
 
-  - Examples
-  - ``regexp_matches('QGIS=>rocks','(.*)=>(.*)')`` → [ 'QGIS', 'rocks' ]
-    ``regexp_matches('key=>','(.*)=>(.*)','empty value')`` → [ 'key', 'empty value' ]
+       **regex** - the regular expression used to capture groups
+
+       **empty_value** - the optional string to use as replacement for empty (zero length) matches
+
+   * - Examples
+     - ``regexp_matches('QGIS=>rocks','(.*)=>(.*)')`` → [ 'QGIS', 'rocks' ]
+
+       ``regexp_matches('key=>','(.*)=>(.*)','empty value')`` → [ 'key', 'empty value' ]
+
 
 .. _expression_function_string_to_array:
 
@@ -524,15 +583,19 @@ string_to_array(string, delimiter, empty_value)
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Splits string into an array using supplied delimiter and optional string for empty values.
+   * - Description
+     - Splits string into an array using supplied delimiter and optional string for empty values.
 
-  - Arguments
-  - **string** - the input string
-    **delimiter** - the string delimiter used to split the input string
-    **empty_value** - the optional string to use as replacement for empty (zero length) matches
+   * - Arguments
+     - **string** - the input string
 
-  - Examples
-  - ``string_to_array('1,2,3',',')`` → [ '1', '2', '3' ]
-    ``string_to_array('1,,3',',','0')`` → [ '1', '0', '3' ]
+       **delimiter** - the string delimiter used to split the input string
+
+       **empty_value** - the optional string to use as replacement for empty (zero length) matches
+
+   * - Examples
+     - ``string_to_array('1,2,3',',')`` → [ '1', '2', '3' ]
+
+       ``string_to_array('1,,3',',','0')`` → [ '1', '0', '3' ]
+
 

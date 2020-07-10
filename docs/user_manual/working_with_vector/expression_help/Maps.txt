@@ -9,15 +9,17 @@ from_json(string)
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Loads a JSON formatted string.
+   * - Description
+     - Loads a JSON formatted string.
 
-  - Arguments
-  - **string** - JSON string
+   * - Arguments
+     - **string** - JSON string
 
-  - Examples
-  - ``from_json('{"qgis":"rocks"}')`` → { "qgis" : "rocks" }
-    ``from_json('[1,2,3]')`` → [1,2,3]
+   * - Examples
+     - ``from_json('{"qgis":"rocks"}')`` → { "qgis" : "rocks" }
+
+       ``from_json('[1,2,3]')`` → [1,2,3]
+
 
 .. _expression_function_hstore_to_map:
 
@@ -30,14 +32,15 @@ hstore_to_map(string)
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Creates a map from a hstore-formatted string.
+   * - Description
+     - Creates a map from a hstore-formatted string.
 
-  - Arguments
-  - **string** - the input string
+   * - Arguments
+     - **string** - the input string
 
-  - Examples
-  - ``hstore_to_map('qgis=>rocks')`` → { "qgis" : "rocks" }
+   * - Examples
+     - ``hstore_to_map('qgis=>rocks')`` → { "qgis" : "rocks" }
+
 
 .. _expression_function_json_to_map:
 
@@ -50,14 +53,15 @@ json_to_map(string)
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Creates a map from a json-formatted string.
+   * - Description
+     - Creates a map from a json-formatted string.
 
-  - Arguments
-  - **string** - the input string
+   * - Arguments
+     - **string** - the input string
 
-  - Examples
-  - ``json_to_map('{"qgis":"rocks"}')`` → { "qgis" : "rocks" }
+   * - Examples
+     - ``json_to_map('{"qgis":"rocks"}')`` → { "qgis" : "rocks" }
+
 
 .. _expression_function_map:
 
@@ -70,15 +74,17 @@ map(key1, value1, key2, value2, ...)
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Returns a map containing all the keys and values passed as pair of parameters.
+   * - Description
+     - Returns a map containing all the keys and values passed as pair of parameters.
 
-  - Arguments
-  - **key** - a key (string)
-    **value** - a value
+   * - Arguments
+     - **key** - a key (string)
 
-  - Examples
-  - ``map('1','one','2', 'two')`` → { '1': 'one', '2': 'two' }
+       **value** - a value
+
+   * - Examples
+     - ``map('1','one','2', 'two')`` → { '1': 'one', '2': 'two' }
+
 
 .. _expression_function_map_akeys:
 
@@ -91,14 +97,15 @@ map_akeys(map)
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Returns all the keys of a map as an array.
+   * - Description
+     - Returns all the keys of a map as an array.
 
-  - Arguments
-  - **map** - a map
+   * - Arguments
+     - **map** - a map
 
-  - Examples
-  - ``map_akeys(map('1','one','2','two'))`` → [ '1', '2' ]
+   * - Examples
+     - ``map_akeys(map('1','one','2','two'))`` → [ '1', '2' ]
+
 
 .. _expression_function_map_avals:
 
@@ -111,14 +118,15 @@ map_avals(map)
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Returns all the values of a map as an array.
+   * - Description
+     - Returns all the values of a map as an array.
 
-  - Arguments
-  - **map** - a map
+   * - Arguments
+     - **map** - a map
 
-  - Examples
-  - ``map_avals(map('1','one','2','two'))`` → [ 'one', 'two' ]
+   * - Examples
+     - ``map_avals(map('1','one','2','two'))`` → [ 'one', 'two' ]
+
 
 .. _expression_function_map_concat:
 
@@ -131,14 +139,15 @@ map_concat(map1, map2, ...)
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Returns a map containing all the entries of the given maps. If two maps contain the same key, the value of the second map is taken.
+   * - Description
+     - Returns a map containing all the entries of the given maps. If two maps contain the same key, the value of the second map is taken.
 
-  - Arguments
-  - **map** - a map
+   * - Arguments
+     - **map** - a map
 
-  - Examples
-  - ``map_concat(map('1','one', '2','overridden'),map('2','two', '3','three'))`` → { '1': 'one, '2': 'two', '3': 'three' }
+   * - Examples
+     - ``map_concat(map('1','one', '2','overridden'),map('2','two', '3','three'))`` → { '1': 'one, '2': 'two', '3': 'three' }
+
 
 .. _expression_function_map_delete:
 
@@ -151,15 +160,17 @@ map_delete(map, key)
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Returns a map with the given key and its corresponding value deleted.
+   * - Description
+     - Returns a map with the given key and its corresponding value deleted.
 
-  - Arguments
-  - **map** - a map
-    **key** - the key to delete
+   * - Arguments
+     - **map** - a map
 
-  - Examples
-  - ``map_delete(map('1','one','2','two'),'2')`` → { '1': 'one' }
+       **key** - the key to delete
+
+   * - Examples
+     - ``map_delete(map('1','one','2','two'),'2')`` → { '1': 'one' }
+
 
 .. _expression_function_map_exist:
 
@@ -172,15 +183,17 @@ map_exist(map, key)
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Returns true if the given key exists in the map.
+   * - Description
+     - Returns true if the given key exists in the map.
 
-  - Arguments
-  - **map** - a map
-    **key** - the key to lookup
+   * - Arguments
+     - **map** - a map
 
-  - Examples
-  - ``map_exist(map('1','one','2','two'),'3')`` → false
+       **key** - the key to lookup
+
+   * - Examples
+     - ``map_exist(map('1','one','2','two'),'3')`` → false
+
 
 .. _expression_function_map_get:
 
@@ -193,15 +206,17 @@ map_get(map, key)
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Returns the value of a map, given it's key.
+   * - Description
+     - Returns the value of a map, given it's key.
 
-  - Arguments
-  - **map** - a map
-    **key** - the key to lookup
+   * - Arguments
+     - **map** - a map
 
-  - Examples
-  - ``map_get(map('1','one','2','two'),'2')`` → 'two'
+       **key** - the key to lookup
+
+   * - Examples
+     - ``map_get(map('1','one','2','two'),'2')`` → 'two'
+
 
 .. _expression_function_map_insert:
 
@@ -214,16 +229,19 @@ map_insert(map, key, value)
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Returns a map with an added key/value.
+   * - Description
+     - Returns a map with an added key/value.
 
-  - Arguments
-  - **map** - a map
-    **key** - the key to add
-    **value** - the value to add
+   * - Arguments
+     - **map** - a map
 
-  - Examples
-  - ``map_insert(map('1','one'),'3','three')`` → { '1': 'one', '3': 'three' }
+       **key** - the key to add
+
+       **value** - the value to add
+
+   * - Examples
+     - ``map_insert(map('1','one'),'3','three')`` → { '1': 'one', '3': 'three' }
+
 
 .. _expression_function_map_to_hstore:
 
@@ -236,14 +254,15 @@ map_to_hstore(map)
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Merge map elements into a hstore-formatted string.
+   * - Description
+     - Merge map elements into a hstore-formatted string.
 
-  - Arguments
-  - **map** - the input map
+   * - Arguments
+     - **map** - the input map
 
-  - Examples
-  - ``map_to_hstore(map('qgis','rocks'))`` → "qgis"=>"rocks"}
+   * - Examples
+     - ``map_to_hstore(map('qgis','rocks'))`` → "qgis"=>"rocks"}
+
 
 .. _expression_function_map_to_json:
 
@@ -256,14 +275,15 @@ map_to_json(map)
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Merge map elements into a json-formatted string.
+   * - Description
+     - Merge map elements into a json-formatted string.
 
-  - Arguments
-  - **map** - the input map
+   * - Arguments
+     - **map** - the input map
 
-  - Examples
-  - ``map_to_json(map('qgis','rocks'))`` → {"qgis":"rocks"}
+   * - Examples
+     - ``map_to_json(map('qgis','rocks'))`` → {"qgis":"rocks"}
+
 
 .. _expression_function_to_json:
 
@@ -276,13 +296,15 @@ to_json(value)
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Create a JSON formatted string from a map, array or other value.
+   * - Description
+     - Create a JSON formatted string from a map, array or other value.
 
-  - Arguments
-  - **value** - The input value
+   * - Arguments
+     - **value** - The input value
 
-  - Examples
-  - ``to_json(map('qgis','rocks'))`` → {"qgis":"rocks"}
-    ``to_json(array(1,2,3))`` → [1,2,3]
+   * - Examples
+     - ``to_json(map('qgis','rocks'))`` → {"qgis":"rocks"}
+
+       ``to_json(array(1,2,3))`` → [1,2,3]
+
 

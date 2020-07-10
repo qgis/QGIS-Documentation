@@ -9,17 +9,21 @@ coalesce(expression1, expression2, ...)
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Returns the first non-NULL value from the expression list.<br>This function can take any number of arguments.
+   * - Description
+     - Returns the first non-NULL value from the expression list.<br>This function can take any number of arguments.
 
-  - Arguments
-  - **expression** - any valid expression or value, regardless of type.
+   * - Arguments
+     - **expression** - any valid expression or value, regardless of type.
 
-  - Examples
-  - ``coalesce(NULL, 2)`` → 2
-    ``coalesce(NULL, 2, 3)`` → 2
-    ``coalesce(7, NULL, 3*2)`` → 7
-    ``coalesce("fieldA", "fallbackField", 'ERROR')`` → value of fieldA if it is non-NULL else the value of "fallbackField" or the string 'ERROR' if both are NULL
+   * - Examples
+     - ``coalesce(NULL, 2)`` → 2
+
+       ``coalesce(NULL, 2, 3)`` → 2
+
+       ``coalesce(7, NULL, 3*2)`` → 7
+
+       ``coalesce("fieldA", "fallbackField", 'ERROR')`` → value of fieldA if it is non-NULL else the value of "fallbackField" or the string 'ERROR' if both are NULL
+
 
 .. _expression_function_if:
 
@@ -32,22 +36,31 @@ if(condition, result_when_true, result_when_false)
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Tests a condition and returns a different result depending on the conditional check.
+   * - Description
+     - Tests a condition and returns a different result depending on the conditional check.
 
-  - Arguments
-  - **condition** - the condition which should be checked
-    **result_when_true** - the result which will be returned when the condition is true or another value that does not convert to false.
-    **result_when_false** - the result which will be returned when the condition is false or another value that converts to false like 0 or ''. NULL will also be converted to false.
+   * - Arguments
+     - **condition** - the condition which should be checked
 
-  - Examples
-  - ``if( 1+1=2, 'Yes', 'No' )`` → 'Yes'
-    ``if( 1+1=3, 'Yes', 'No' )`` → 'No'
-    ``if( 5 > 3, 1, 0)`` → 1
-    ``if( '', 'It is true (not empty)', 'It is false (empty)' )`` → 'It is false (empty)'
-    ``if( ' ', 'It is true (not empty)', 'It is false (empty)' )`` → 'It is true (not empty)'
-    ``if( 0, 'One', 'Zero' )`` → 'Zero'
-    ``if( 10, 'One', 'Zero' )`` → 'One'
+       **result_when_true** - the result which will be returned when the condition is true or another value that does not convert to false.
+
+       **result_when_false** - the result which will be returned when the condition is false or another value that converts to false like 0 or ''. NULL will also be converted to false.
+
+   * - Examples
+     - ``if( 1+1=2, 'Yes', 'No' )`` → 'Yes'
+
+       ``if( 1+1=3, 'Yes', 'No' )`` → 'No'
+
+       ``if( 5 > 3, 1, 0)`` → 1
+
+       ``if( '', 'It is true (not empty)', 'It is false (empty)' )`` → 'It is false (empty)'
+
+       ``if( ' ', 'It is true (not empty)', 'It is false (empty)' )`` → 'It is true (not empty)'
+
+       ``if( 0, 'One', 'Zero' )`` → 'Zero'
+
+       ``if( 10, 'One', 'Zero' )`` → 'One'
+
 
 .. _expression_function_nullif:
 
@@ -60,17 +73,21 @@ nullif(value1, value2)
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Returns a null value if value1 equals value2; otherwise it returns value1. This can be used to conditionally substitute values with NULL.
+   * - Description
+     - Returns a null value if value1 equals value2; otherwise it returns value1. This can be used to conditionally substitute values with NULL.
 
-  - Arguments
-  - **value1** - The value that should either be used or substituted with NULL.
-    **value2** - The control value that will trigger the NULL substitution.
+   * - Arguments
+     - **value1** - The value that should either be used or substituted with NULL.
 
-  - Examples
-  - ``nullif('(none)', '(none)')`` → NULL
-    ``nullif('text', '(none)')`` → 'text'
-    ``nullif("name", '')`` → NULL, if name is an empty string (or already NULL), the name in any other case.
+       **value2** - The control value that will trigger the NULL substitution.
+
+   * - Examples
+     - ``nullif('(none)', '(none)')`` → NULL
+
+       ``nullif('text', '(none)')`` → 'text'
+
+       ``nullif("name", '')`` → NULL, if name is an empty string (or already NULL), the name in any other case.
+
 
 .. _expression_function_regexp_match:
 
@@ -83,15 +100,17 @@ regexp_match(input_string, regex)
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Return the first matching position matching a regular expression within a string, or 0 if the substring is not found.
+   * - Description
+     - Return the first matching position matching a regular expression within a string, or 0 if the substring is not found.
 
-  - Arguments
-  - **input_string** - the string to test against the regular expression
-    **regex** - The regular expression to test against. Backslash characters must be double escaped (e.g., "\\\\s" to match a white space character).
+   * - Arguments
+     - **input_string** - the string to test against the regular expression
 
-  - Examples
-  - ``regexp_match('QGIS ROCKS','\\\\sROCKS')`` → 4
+       **regex** - The regular expression to test against. Backslash characters must be double escaped (e.g., "\\\\s" to match a white space character).
+
+   * - Examples
+     - ``regexp_match('QGIS ROCKS','\\\\sROCKS')`` → 4
+
 
 .. _expression_function_try:
 
@@ -104,15 +123,19 @@ try(expression, alternative)
    :widths: 15 85
    :stub-columns: 1
 
-* - Description
-  - Tries an expression and returns its value if error-free. If the expression returns an error, an alternative value will be returned when provided otherwise the function will return null.
+   * - Description
+     - Tries an expression and returns its value if error-free. If the expression returns an error, an alternative value will be returned when provided otherwise the function will return null.
 
-  - Arguments
-  - **expression** - the expression which should be run
-    **alternative** - the result which will be returned if the expression returns an error.
+   * - Arguments
+     - **expression** - the expression which should be run
 
-  - Examples
-  - ``try( to_int( '1' ), 0 )`` → 1
-    ``try( to_int( 'a' ), 0 )`` → 0
-    ``try( to_date( 'invalid_date' ) )`` → NULL
+       **alternative** - the result which will be returned if the expression returns an error.
+
+   * - Examples
+     - ``try( to_int( '1' ), 0 )`` → 1
+
+       ``try( to_int( 'a' ), 0 )`` → 0
+
+       ``try( to_date( 'invalid_date' ) )`` → NULL
+
 

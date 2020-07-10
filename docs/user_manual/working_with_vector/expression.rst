@@ -210,6 +210,10 @@ Aggregates Functions
 
 This group contains functions which aggregate values over layers and fields.
 
+.. contents:: :local:
+
+.. include:: expression_help/Aggregates.txt
+
 .. csv-table::
    :header: "Function", "Description"
    :widths: 20, 75
