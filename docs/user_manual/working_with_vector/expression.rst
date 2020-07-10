@@ -822,43 +822,6 @@ This group contains functions that operate on geometry objects
     )
 
 
-Hash Functions
-----------------
-
-This group contains hash functions.
-All these functions return the hash (a string hex value) of the string argument.
-
-.. csv-table::
-   :header: "Function", "Description"
-   :widths: auto
-
-   "md4", "Message Digest algorithm. Produces a 128-bit (16-byte) hash value (widely used)."
-   "md5", "Message Digest algorithm. Produces a 128-bit (16-byte) hash value (widely used)."
-   "sha1", "Secure Hash Algorithm (NSA). Produces a 160-bit (20-byte) hash value."
-   "sha224", "Secure Hash Algorithm (NSA). Produces a 224-bit (28-byte) hash value."
-   "sha256", "Secure Hash Algorithm (NSA). Produces a 256-bit (32-byte) hash value."
-   "sha384", "Secure Hash Algorithm (NSA). Produces a 384-bit (48-byte) hash value."
-   "sha512", "Secure Hash Algorithm (NSA). Produces a 512-bit (64-byte) hash value."
-   "sha3_224", "Secure Hash Algorithm 3 (NIST). Produces a 224-bit (28-byte) hash value."
-   "sha3_256", "Secure Hash Algorithm 3 (NIST). Produces a 256-bit (32-byte) hash value."
-   "sha3_384", "Secure Hash Algorithm 3 (NIST). Produces a 384-bit (48-byte) hash value."
-   "sha3_512", "Secure Hash Algorithm 3 (NIST). Produces a 512-bit (64-byte) hash value."
-   "keccak_224", "Keccak cryptographic primitive family. Produces a 224-bit (28-byte) hash value."
-   "keccak_256", "Keccak cryptographic primitive family. Produces a 256-bit (32-byte) hash value."
-   "keccak_384", "Keccak cryptographic primitive family. Produces a 384-bit (48-byte) hash value."
-   "keccak_512", "Keccak cryptographic primitive family. Produces a 512-bit (64-byte) hash value."
-
-One byte (8 bits) is represented with two hex ''digits'', so md4 (16 bytes)
-produces a 16 * 2 = 32 character long hex string and keccak_512 (64 bytes)
-produces a 64 * 2 = 128 character long hex string.
-
-**An example:**
-
-* Return the md4 hash ( 'c0fc71c241cdebb6e888cbac0e2b68eb' ) of the string 'QGIS'::
-
-    md4( 'QGIS')
-
-
 Layout Functions
 ----------------
 
