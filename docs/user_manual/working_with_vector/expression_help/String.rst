@@ -1,5 +1,3 @@
-:orphan:
-
 .. ascii_section
 
 .. _expression_function_String_ascii:

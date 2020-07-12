@@ -1,5 +1,3 @@
-:orphan:
-
 .. aggregate_section
 
 .. _expression_function_Aggregates_aggregate:

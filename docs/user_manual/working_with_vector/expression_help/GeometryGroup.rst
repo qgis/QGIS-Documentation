@@ -1,187 +1,3 @@
-:orphan:
-
-.. $area_section
-
-.. _expression_function_GeometryGroup_$area:
-
-$area
-.....
-
-Returns the area of the current feature. The area calculated by this function respects both the current project's ellipsoid setting and area unit settings. For example, if an ellipsoid has been set for the project then the calculated area will be ellipsoidal, and if no ellipsoid is set then the calculated area will be planimetric.
-
-.. list-table::
-   :widths: 15 85
-   :stub-columns: 1
-
-   * - Syntax
-     - $area
-
-   * - Examples
-     - * $area → 42
-
-
-.. end_$area_section
-
-.. $geometry_section
-
-.. _expression_function_GeometryGroup_$geometry:
-
-$geometry
-.........
-
-Returns the geometry of the current feature. Can be used for processing with other functions.
-
-.. list-table::
-   :widths: 15 85
-   :stub-columns: 1
-
-   * - Syntax
-     - $geometry
-
-   * - Examples
-     - * geomToWKT( $geometry ) → POINT(6 50)
-
-
-.. end_$geometry_section
-
-.. $length_section
-
-.. _expression_function_GeometryGroup_$length:
-
-$length
-.......
-
-Returns the length of a linestring. If you need the length of a border of a polygon, use $perimeter instead. The length calculated by this function respects both the current project's ellipsoid setting and distance unit settings. For example, if an ellipsoid has been set for the project then the calculated length will be ellipsoidal, and if no ellipsoid is set then the calculated length will be planimetric.
-
-.. list-table::
-   :widths: 15 85
-   :stub-columns: 1
-
-   * - Syntax
-     - $length
-
-   * - Examples
-     - * $length → 42.4711
-
-
-.. end_$length_section
-
-.. $perimeter_section
-
-.. _expression_function_GeometryGroup_$perimeter:
-
-$perimeter
-..........
-
-Returns the perimeter length of the current feature. The perimeter calculated by this function respects both the current project's ellipsoid setting and distance unit settings. For example, if an ellipsoid has been set for the project then the calculated perimeter will be ellipsoidal, and if no ellipsoid is set then the calculated perimeter will be planimetric.
-
-.. list-table::
-   :widths: 15 85
-   :stub-columns: 1
-
-   * - Syntax
-     - $perimeter
-
-   * - Examples
-     - * $perimeter → 42
-
-
-.. end_$perimeter_section
-
-.. $x_section
-
-.. _expression_function_GeometryGroup_$x:
-
-$x
-..
-
-Returns the x coordinate of the current feature.
-
-.. list-table::
-   :widths: 15 85
-   :stub-columns: 1
-
-   * - Syntax
-     - $x
-
-   * - Examples
-     - * $x → 42
-
-
-.. end_$x_section
-
-.. $x_at_section
-
-.. _expression_function_GeometryGroup_$x_at:
-
-$x_at
-.....
-
-Retrieves a x coordinate of the current feature's geometry.
-
-.. list-table::
-   :widths: 15 85
-   :stub-columns: 1
-
-   * - Syntax
-     - $x_at(i)
-
-   * - Arguments
-     - * **i** - index of point of a line (indices start at 0; negative values apply from the last index, starting at -1)
-
-   * - Examples
-     - * $x_at(1) → 5
-
-
-.. end_$x_at_section
-
-.. $y_section
-
-.. _expression_function_GeometryGroup_$y:
-
-$y
-..
-
-Returns the y coordinate of the current feature.
-
-.. list-table::
-   :widths: 15 85
-   :stub-columns: 1
-
-   * - Syntax
-     - $y
-
-   * - Examples
-     - * $y → 42
-
-
-.. end_$y_section
-
-.. $y_at_section
-
-.. _expression_function_GeometryGroup_$y_at:
-
-$y_at
-.....
-
-Retrieves a y coordinate of the current feature's geometry.
-
-.. list-table::
-   :widths: 15 85
-   :stub-columns: 1
-
-   * - Syntax
-     - $y_at(i)
-
-   * - Arguments
-     - * **i** - index of point of a line (indices start at 0; negative values apply from the last index, starting at -1)
-
-   * - Examples
-     - * $y_at(1) → 2
-
-
-.. end_$y_at_section
-
 .. angle_at_vertex_section
 
 .. _expression_function_GeometryGroup_angle_at_vertex:
@@ -233,6 +49,28 @@ Returns the area of a geometry polygon object. Calculations are always planimetr
 
 
 .. end_area_section
+
+.. $area_section
+
+.. _expression_function_GeometryGroup_$area:
+
+$area
+.....
+
+Returns the area of the current feature. The area calculated by this function respects both the current project's ellipsoid setting and area unit settings. For example, if an ellipsoid has been set for the project then the calculated area will be ellipsoidal, and if no ellipsoid is set then the calculated area will be planimetric.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - $area
+
+   * - Examples
+     - * $area → 42
+
+
+.. end_$area_section
 
 .. azimuth_section
 
@@ -1028,6 +866,28 @@ Returns the Well-Known Text (WKT) representation of the geometry without SRID me
 
 .. end_geom_to_wkt_section
 
+.. $geometry_section
+
+.. _expression_function_GeometryGroup_$geometry:
+
+$geometry
+.........
+
+Returns the geometry of the current feature. Can be used for processing with other functions.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - $geometry
+
+   * - Examples
+     - * geomToWKT( $geometry ) → POINT(6 50)
+
+
+.. end_$geometry_section
+
 .. geometry_section
 
 .. _expression_function_GeometryGroup_geometry:
@@ -1404,6 +1264,28 @@ Returns true if a geometry is valid; if it is well-formed in 2D according to the
 
 
 .. end_is_valid_section
+
+.. $length_section
+
+.. _expression_function_GeometryGroup_$length:
+
+$length
+.......
+
+Returns the length of a linestring. If you need the length of a border of a polygon, use $perimeter instead. The length calculated by this function respects both the current project's ellipsoid setting and distance unit settings. For example, if an ellipsoid has been set for the project then the calculated length will be ellipsoidal, and if no ellipsoid is set then the calculated length will be planimetric.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - $length
+
+   * - Examples
+     - * $length → 42.4711
+
+
+.. end_$length_section
 
 .. length_section
 
@@ -2234,6 +2116,28 @@ Tests whether a geometry overlaps another. Returns true if the geometries share 
 
 .. end_overlaps_section
 
+.. $perimeter_section
+
+.. _expression_function_GeometryGroup_$perimeter:
+
+$perimeter
+..........
+
+Returns the perimeter length of the current feature. The perimeter calculated by this function respects both the current project's ellipsoid setting and distance unit settings. For example, if an ellipsoid has been set for the project then the calculated perimeter will be ellipsoidal, and if no ellipsoid is set then the calculated perimeter will be planimetric.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - $perimeter
+
+   * - Examples
+     - * $perimeter → 42
+
+
+.. end_$perimeter_section
+
 .. perimeter_section
 
 .. _expression_function_GeometryGroup_perimeter:
@@ -2883,6 +2787,28 @@ Tests whether a geometry is within another. Returns true if the geometry a is co
 
 .. end_within_section
 
+.. $x_section
+
+.. _expression_function_GeometryGroup_$x:
+
+$x
+..
+
+Returns the x coordinate of the current feature.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - $x
+
+   * - Examples
+     - * $x → 42
+
+
+.. end_$x_section
+
 .. x_section
 
 .. _expression_function_GeometryGroup_x:
@@ -2909,6 +2835,31 @@ Returns the x coordinate of a point geometry, or the x-coordinate of the centroi
 
 
 .. end_x_section
+
+.. $x_at_section
+
+.. _expression_function_GeometryGroup_$x_at:
+
+$x_at
+.....
+
+Retrieves a x coordinate of the current feature's geometry.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - $x_at(i)
+
+   * - Arguments
+     - * **i** - index of point of a line (indices start at 0; negative values apply from the last index, starting at -1)
+
+   * - Examples
+     - * $x_at(1) → 5
+
+
+.. end_$x_at_section
 
 .. x_max_section
 
@@ -2960,6 +2911,28 @@ Returns the minimum x coordinate of a geometry. Calculations are in the spatial 
 
 .. end_x_min_section
 
+.. $y_section
+
+.. _expression_function_GeometryGroup_$y:
+
+$y
+..
+
+Returns the y coordinate of the current feature.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - $y
+
+   * - Examples
+     - * $y → 42
+
+
+.. end_$y_section
+
 .. y_section
 
 .. _expression_function_GeometryGroup_y:
@@ -2986,6 +2959,31 @@ Returns the y coordinate of a point geometry, or the y-coordinate of the centroi
 
 
 .. end_y_section
+
+.. $y_at_section
+
+.. _expression_function_GeometryGroup_$y_at:
+
+$y_at
+.....
+
+Retrieves a y coordinate of the current feature's geometry.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - $y_at(i)
+
+   * - Arguments
+     - * **i** - index of point of a line (indices start at 0; negative values apply from the last index, starting at -1)
+
+   * - Examples
+     - * $y_at(1) → 2
+
+
+.. end_$y_at_section
 
 .. y_max_section
 

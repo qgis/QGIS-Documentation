@@ -1,5 +1,3 @@
-:orphan:
-
 .. color_cmyk_section
 
 .. _expression_function_Color_color_cmyk:

@@ -1,5 +1,3 @@
-:orphan:
-
 .. age_section
 
 .. _expression_function_Date_and_Time_age:

@@ -1,5 +1,3 @@
-:orphan:
-
 .. array_section
 
 .. _expression_function_Arrays_array:

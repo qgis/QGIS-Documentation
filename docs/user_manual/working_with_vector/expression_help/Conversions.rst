@@ -1,5 +1,3 @@
-:orphan:
-
 .. from_base64_section
 
 .. _expression_function_Conversions_from_base64:

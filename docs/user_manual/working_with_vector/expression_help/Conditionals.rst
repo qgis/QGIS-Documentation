@@ -1,5 +1,3 @@
-:orphan:
-
 .. coalesce_section
 
 .. _expression_function_Conditionals_coalesce:

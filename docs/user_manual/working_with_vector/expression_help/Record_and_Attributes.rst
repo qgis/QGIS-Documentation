@@ -1,49 +1,3 @@
-:orphan:
-
-.. $currentfeature_section
-
-.. _expression_function_Record_and_Attributes_$currentfeature:
-
-$currentfeature
-...............
-
-Returns the current feature being evaluated. This can be used with the 'attribute' function to evaluate attribute values from the current feature.
-
-.. list-table::
-   :widths: 15 85
-   :stub-columns: 1
-
-   * - Syntax
-     - $currentfeature
-
-   * - Examples
-     - * attribute( $currentfeature, 'name' ) → value stored in 'name' attribute for the current feature
-
-
-.. end_$currentfeature_section
-
-.. $id_section
-
-.. _expression_function_Record_and_Attributes_$id:
-
-$id
-...
-
-Returns the feature id of the current row.
-
-.. list-table::
-   :widths: 15 85
-   :stub-columns: 1
-
-   * - Syntax
-     - $id
-
-   * - Examples
-     - * $id → 42
-
-
-.. end_$id_section
-
 .. attribute_section
 
 .. _expression_function_Record_and_Attributes_attribute:
@@ -85,6 +39,28 @@ Returns a map containing all attributes from a feature, with field names as map 
 
 
 .. end_attributes_section
+
+.. $currentfeature_section
+
+.. _expression_function_Record_and_Attributes_$currentfeature:
+
+$currentfeature
+...............
+
+Returns the current feature being evaluated. This can be used with the 'attribute' function to evaluate attribute values from the current feature.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - $currentfeature
+
+   * - Examples
+     - * attribute( $currentfeature, 'name' ) → value stored in 'name' attribute for the current feature
+
+
+.. end_$currentfeature_section
 
 .. display_expression_section
 
@@ -174,6 +150,28 @@ Returns the feature with an id on a layer.
 
 
 .. end_get_feature_by_id_section
+
+.. $id_section
+
+.. _expression_function_Record_and_Attributes_$id:
+
+$id
+...
+
+Returns the feature id of the current row.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - $id
+
+   * - Examples
+     - * $id → 42
+
+
+.. end_$id_section
 
 .. is_selected_section
 

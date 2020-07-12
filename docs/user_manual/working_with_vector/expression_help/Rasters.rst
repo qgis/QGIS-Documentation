@@ -1,5 +1,3 @@
-:orphan:
-
 .. raster_statistic_section
 
 .. _expression_function_Rasters_raster_statistic:

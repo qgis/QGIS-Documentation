@@ -1,5 +1,3 @@
-:orphan:
-
 .. abs_section
 
 .. _expression_function_Math_abs:

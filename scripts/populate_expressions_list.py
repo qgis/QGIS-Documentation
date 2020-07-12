@@ -101,10 +101,9 @@ for g_name in groups:
     func_list = groups[g_name]['func_list']
     if len(func_list) < 1:
         continue
-    func_list.sort()
+    func_list.sort(key=lambda x: x.strip('$'))
     output_group_file = path.join(output_folder, g_name.replace(' ','_') + '.rst')
     with open(output_group_file, 'w') as f:
-        f.write(':orphan:\n\n')
         for f_name in func_list:
             f.write(f'.. {f_name}_section\n\n')
             text = format_function(g_name, functions[f_name])
