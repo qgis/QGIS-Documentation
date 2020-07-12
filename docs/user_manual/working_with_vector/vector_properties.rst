@@ -1848,59 +1848,6 @@ When set, the diagram legend items (attributes with color and diagram size)
 are also displayed in the print layout legend, next to the layer symbology.
 
 
-Case Study
-----------
-
-We will demonstrate an example and overlay on the Alaska boundary layer a
-text diagram showing temperature data from a climate vector layer.
-Both vector layers are part of the QGIS sample dataset (see section
-:ref:`label_sampledata`).
-
-#. First, click on the |addOgrLayer| :sup:`Load Vector` icon, browse
-   to the QGIS sample dataset folder, and load the two vector shape layers
-   :file:`alaska.shp` and :file:`climate.shp`.
-#. Double click the ``climate`` layer in the map legend to open the
-   :guilabel:`Layer Properties` dialog.
-#. Click on the :guilabel:`Diagrams` tab and from the :guilabel:`Diagram type`
-   |selectString| combo box, select 'Text diagram'.
-#. In the :guilabel:`Appearance` tab, we choose a light blue as background color,
-   and in the :guilabel:`Size` tab, we set a fixed size to 18 mm.
-#. In the :guilabel:`Position` tab, placement could be set to 'Around Point'.
-#. In the diagram, we want to display the values of the three columns
-   ``T_F_JAN``, ``T_F_JUL`` and ``T_F_MEAN``. So, in the :guilabel:`Attributes` tab
-   first select ``T_F_JAN`` and click the |signPlus| button, then repeat with
-   ``T_F_JUL`` and finally ``T_F_MEAN``.
-#. Now click :guilabel:`Apply` to display the diagram in the QGIS main window.
-#. You can adapt the chart size in the :guilabel:`Size` tab. Activate the
-   |radioButtonOn| :guilabel:`Scaled size` and set the size of the diagrams on
-   the basis of the :guilabel:`maximum value` of an attribute and the
-   :guilabel:`Size` option.
-   If the diagrams appear too small on the screen, you can activate the
-   |checkbox| :guilabel:`Increase size of small diagrams` checkbox and define
-   the minimum size of the diagrams.
-#. Change the attribute colors by double clicking on the color values in the
-   :guilabel:`Assigned attributes` field.
-   Figure_diagrams_mapped_ gives an idea of the result.
-#. Finally, click :guilabel:`OK`.
-
-.. _figure_diagrams_mapped:
-
-.. figure:: img/climate_diagram.png
-   :align: center
-   :width: 25em
-
-   Diagram from temperature data overlayed on a map
-
-Remember that in the :guilabel:`Position` tab, a |checkbox| :guilabel:`Data
-defined position` of the diagrams is possible. Here, you can use attributes
-to define the position of the diagram.
-You can also set a scale-dependent visibility in the :guilabel:`Appearance` tab.
-
-The size and the attributes can also be an expression.
-Use the |expression| button to add an expression.
-See :ref:`vector_expressions` chapter for more information and example.
-
-
 .. index:: 3d view properties
 .. _`sec_3_d_view`:
 
