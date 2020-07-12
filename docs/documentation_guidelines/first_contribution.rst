@@ -156,7 +156,7 @@ The name of the new branch should relate to the problem you intend to fix. The
 
 You need to make a pull request to integrate your changes into the official documentation.
 
-.. note:: **If you used a** ``Edit on GitHub`` **link**
+.. note:: **If you used an** ``Edit on GitHub`` **link**
 
   After you commit your changes GitHub will automatically open a new page
   comparing the changes you made in your ``patch-xxx`` branch to the ``qgis/QGIS-Documentation``
