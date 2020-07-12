@@ -1,5 +1,7 @@
 :orphan:
 
+.. parameter_section
+
 .. _expression_function_Processing_parameter:
 
 parameter
@@ -20,4 +22,6 @@ Returns the value of a processing algorithm input parameter.
    * - Examples
      - * parameter('BUFFER_SIZE') → 5.6
 
+
+.. end_parameter_section
 

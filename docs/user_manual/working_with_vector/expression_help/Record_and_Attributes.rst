@@ -1,5 +1,7 @@
 :orphan:
 
+.. $currentfeature_section
+
 .. _expression_function_Record_and_Attributes_$currentfeature:
 
 $currentfeature
@@ -17,6 +19,10 @@ Returns the current feature being evaluated. This can be used with the 'attribut
    * - Examples
      - * attribute( $currentfeature, 'name' ) → value stored in 'name' attribute for the current feature
 
+
+.. end_$currentfeature_section
+
+.. $id_section
 
 .. _expression_function_Record_and_Attributes_$id:
 
@@ -36,6 +42,10 @@ Returns the feature id of the current row.
      - * $id → 42
 
 
+.. end_$id_section
+
+.. attribute_section
+
 .. _expression_function_Record_and_Attributes_attribute:
 
 attribute
@@ -53,6 +63,10 @@ Returns an attribute from a feature.
 
 
 
+.. end_attribute_section
+
+.. attributes_section
+
 .. _expression_function_Record_and_Attributes_attributes:
 
 attributes
@@ -69,6 +83,10 @@ Returns a map containing all attributes from a feature, with field names as map 
 
 
 
+
+.. end_attributes_section
+
+.. display_expression_section
 
 .. _expression_function_Record_and_Attributes_display_expression:
 
@@ -99,6 +117,10 @@ Returns the display expression for a given feature in a layer. If called with no
        * display_expression('a_layer_id', $currentfeature, 'False') → The display expression of the given feature not evaluated.
 
 
+.. end_display_expression_section
+
+.. get_feature_section
+
 .. _expression_function_Record_and_Attributes_get_feature:
 
 get_feature
@@ -124,6 +146,10 @@ Returns the first feature of a layer matching a given attribute value.
      - * get_feature('streets','name','main st') → first feature found in "streets" layer with "main st" value in the "name" field
 
 
+.. end_get_feature_section
+
+.. get_feature_by_id_section
+
 .. _expression_function_Record_and_Attributes_get_feature_by_id:
 
 get_feature_by_id
@@ -147,6 +173,10 @@ Returns the feature with an id on a layer.
      - * get_feature('streets', 1) → the feature with the id 1 on the layer "streets"
 
 
+.. end_get_feature_by_id_section
+
+.. is_selected_section
+
 .. _expression_function_Record_and_Attributes_is_selected:
 
 is_selected
@@ -163,6 +193,10 @@ Returns True if a feature is selected. Can be used with zero, one or two argumen
 
 
 
+
+.. end_is_selected_section
+
+.. maptip_section
 
 .. _expression_function_Record_and_Attributes_maptip:
 
@@ -193,6 +227,10 @@ Returns the maptip for a given feature in a layer. If called with no parameters,
        * maptip('a_layer_id', $currentfeature, 'False') → The maptip of the given feature not evaluated.
 
 
+.. end_maptip_section
+
+.. num_selected_section
+
 .. _expression_function_Record_and_Attributes_num_selected:
 
 num_selected
@@ -215,6 +253,10 @@ Returns the number of selected features on a given layer. By default works on th
 
        * num_selected('streets') → The number of selected features on the layer streets
 
+
+.. end_num_selected_section
+
+.. represent_value_section
 
 .. _expression_function_Record_and_Attributes_represent_value:
 
@@ -240,6 +282,10 @@ Returns the configured representation value for a field value. It depends on the
 
        * represent_value('static value', 'field_name') → Description for static value
 
+
+.. end_represent_value_section
+
+.. sqlite_fetch_and_increment_section
 
 .. _expression_function_Record_and_Attributes_sqlite_fetch_and_increment:
 
@@ -274,6 +320,10 @@ Manage autoincrementing values in sqlite databases.<p>SQlite default values can 
        * sqlite_fetch_and_increment(layer_property(@layer, 'path'), 'sequence_table', 'last_unique_id', 'sequence_id', 'global', map('last_change','date(''now'')','user','''' || @user_account_name || '''')) → 0
 
 
+.. end_sqlite_fetch_and_increment_section
+
+.. uuid_section
+
 .. _expression_function_Record_and_Attributes_uuid:
 
 uuid
@@ -291,4 +341,6 @@ Generates a Universally Unique Identifier (UUID) for each row using the Qt <a hr
    * - Examples
      - * uuid() → '{0bd2f60f-f157-4a6d-96af-d4ba4cb366a1}'
 
+
+.. end_uuid_section
 

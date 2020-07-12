@@ -1,5 +1,7 @@
 :orphan:
 
+.. array_section
+
 .. _expression_function_Arrays_array:
 
 array
@@ -20,6 +22,10 @@ Returns an array containing all the values passed as parameter.
    * - Examples
      - * array(2,10) → [ 2, 10 ]
 
+
+.. end_array_section
+
+.. array_all_section
 
 .. _expression_function_Arrays_array_all:
 
@@ -46,6 +52,10 @@ Returns true if an array contains all the values of a given array.
        * array_all(array(1,2,3),array(1,2,4)) → false
 
 
+.. end_array_all_section
+
+.. array_append_section
+
 .. _expression_function_Arrays_array_append:
 
 array_append
@@ -69,6 +79,10 @@ Returns an array with the given value added at the end.
      - * array_append(array(1,2,3),4) → [ 1, 2, 3, 4 ]
 
 
+.. end_array_append_section
+
+.. array_cat_section
+
 .. _expression_function_Arrays_array_cat:
 
 array_cat
@@ -89,6 +103,10 @@ Returns an array containing all the given arrays concatenated.
    * - Examples
      - * array_cat(array(1,2),array(2,3)) → [ 1, 2, 2, 3 ]
 
+
+.. end_array_cat_section
+
+.. array_contains_section
 
 .. _expression_function_Arrays_array_contains:
 
@@ -113,6 +131,10 @@ Returns true if an array contains the given value.
      - * array_contains(array(1,2,3),2) → true
 
 
+.. end_array_contains_section
+
+.. array_distinct_section
+
 .. _expression_function_Arrays_array_distinct:
 
 array_distinct
@@ -133,6 +155,10 @@ Returns an array containing distinct values of the given array.
    * - Examples
      - * array_distinct(array(1,2,3,2,1)) → [ 1, 2, 3 ]
 
+
+.. end_array_distinct_section
+
+.. array_filter_section
 
 .. _expression_function_Arrays_array_filter:
 
@@ -157,6 +183,10 @@ Returns an array with only the items for which the expression evaluates to true.
      - * array_filter(array(1,2,3),@element &lt; 3) → [ 1, 2 ]
 
 
+.. end_array_filter_section
+
+.. array_find_section
+
 .. _expression_function_Arrays_array_find:
 
 array_find
@@ -180,6 +210,10 @@ Returns the index (0 for the first one) of a value within an array. Returns -1 i
      - * array_find(array(1,2,3),2) → 1
 
 
+.. end_array_find_section
+
+.. array_first_section
+
 .. _expression_function_Arrays_array_first:
 
 array_first
@@ -200,6 +234,10 @@ Returns the first value of an array.
    * - Examples
      - * array_first(array('a','b','c')) → 'a'
 
+
+.. end_array_first_section
+
+.. array_foreach_section
 
 .. _expression_function_Arrays_array_foreach:
 
@@ -226,6 +264,10 @@ Returns an array with the given expression evaluated on each item.
        * array_foreach(array(1,2,3),@element + 10) → [ 11, 12, 13 ]
 
 
+.. end_array_foreach_section
+
+.. array_get_section
+
 .. _expression_function_Arrays_array_get:
 
 array_get
@@ -248,6 +290,10 @@ Returns the Nth value (0 for the first one) of an array.
    * - Examples
      - * array_get(array('a','b','c'),1) → 'b'
 
+
+.. end_array_get_section
+
+.. array_insert_section
 
 .. _expression_function_Arrays_array_insert:
 
@@ -274,6 +320,10 @@ Returns an array with the given value added at the given position.
      - * array_insert(array(1,2,3),1,100) → [ 1, 100, 2, 3 ]
 
 
+.. end_array_insert_section
+
+.. array_intersect_section
+
 .. _expression_function_Arrays_array_intersect:
 
 array_intersect
@@ -297,6 +347,10 @@ Returns true if at least one element of array1 exists in array2.
      - * array_intersect(array(1,2,3,4),array(4,0,2,5)) → true
 
 
+.. end_array_intersect_section
+
+.. array_last_section
+
 .. _expression_function_Arrays_array_last:
 
 array_last
@@ -318,6 +372,10 @@ Returns the last value of an array.
      - * array_last(array('a','b','c')) → 'c'
 
 
+.. end_array_last_section
+
+.. array_length_section
+
 .. _expression_function_Arrays_array_length:
 
 array_length
@@ -338,6 +396,10 @@ Returns the number of elements of an array.
    * - Examples
      - * array_length(array(1,2,3)) → 3
 
+
+.. end_array_length_section
+
+.. array_prepend_section
 
 .. _expression_function_Arrays_array_prepend:
 
@@ -362,6 +424,10 @@ Returns an array with the given value added at the beginning.
      - * array_prepend(array(1,2,3),0) → [ 0, 1, 2, 3 ]
 
 
+.. end_array_prepend_section
+
+.. array_remove_all_section
+
 .. _expression_function_Arrays_array_remove_all:
 
 array_remove_all
@@ -384,6 +450,10 @@ Returns an array with all the entries of the given value removed.
    * - Examples
      - * array_remove_all(array('a','b','c','b'),'b') → [ 'a', 'c' ]
 
+
+.. end_array_remove_all_section
+
+.. array_remove_at_section
 
 .. _expression_function_Arrays_array_remove_at:
 
@@ -408,6 +478,10 @@ Returns an array with the given index removed.
      - * array_remove_at(array(1,2,3),1) → [ 1, 3 ]
 
 
+.. end_array_remove_at_section
+
+.. array_reverse_section
+
 .. _expression_function_Arrays_array_reverse:
 
 array_reverse
@@ -428,6 +502,10 @@ Returns the given array with array values in reversed order.
    * - Examples
      - * array_reverse(array(2,4,0,10)) → [ 10, 0, 4, 2 ]
 
+
+.. end_array_reverse_section
+
+.. array_slice_section
 
 .. _expression_function_Arrays_array_slice:
 
@@ -468,6 +546,10 @@ Returns a portion of the array. The slice is defined by the start_pos and end_po
        * array_slice(array_slice(array('Dufour','Valmiera','Chugiak','Brighton'),-2,-1) → [ 'Chugiak', 'Brighton' ]
 
 
+.. end_array_slice_section
+
+.. array_sort_section
+
 .. _expression_function_Arrays_array_sort:
 
 array_sort
@@ -490,6 +572,10 @@ Returns the provided array with its elements sorted.
    * - Examples
      - * array_sort(array(3,2,1)) → [ 1, 2, 3 ]
 
+
+.. end_array_sort_section
+
+.. array_to_string_section
 
 .. _expression_function_Arrays_array_to_string:
 
@@ -520,6 +606,10 @@ Concatenates array elements into a string separated by a delimiter and using opt
        * array_to_string(array('1','','3'),',','0') → '1,0,3'
 
 
+.. end_array_to_string_section
+
+.. generate_series_section
+
 .. _expression_function_Arrays_generate_series:
 
 generate_series
@@ -546,6 +636,10 @@ Creates an array containing a sequence of numbers.
 
        * generate_series(5,1,-1) → [ 5, 4, 3, 2, 1 ]
 
+
+.. end_generate_series_section
+
+.. regexp_matches_section
 
 .. _expression_function_Arrays_regexp_matches:
 
@@ -574,6 +668,10 @@ Returns an array of all strings captured by capturing groups, in the order the g
        * regexp_matches('key=>','(.*)=>(.*)','empty value') → [ 'key', 'empty value' ]
 
 
+.. end_regexp_matches_section
+
+.. string_to_array_section
+
 .. _expression_function_Arrays_string_to_array:
 
 string_to_array
@@ -600,4 +698,6 @@ Splits string into an array using supplied delimiter and optional string for emp
 
        * string_to_array('1,,3',',','0') → [ '1', '0', '3' ]
 
+
+.. end_string_to_array_section
 

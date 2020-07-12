@@ -1,5 +1,7 @@
 :orphan:
 
+.. ascii_section
+
 .. _expression_function_String_ascii:
 
 ascii
@@ -21,6 +23,10 @@ Returns the unicode code associated with the first character of a string.
      - * ascii('Q') → 81
 
 
+.. end_ascii_section
+
+.. char_section
+
 .. _expression_function_String_char:
 
 char
@@ -41,6 +47,10 @@ Returns the character associated with a unicode code.
    * - Examples
      - * char(81) → 'Q'
 
+
+.. end_char_section
+
+.. concat_section
 
 .. _expression_function_String_concat:
 
@@ -69,6 +79,10 @@ Concatenates several strings to one. NULL values are converted to empty strings.
        * concat('The Wall', NULL) → 'The Wall'
 
 
+.. end_concat_section
+
+.. format_section
+
 .. _expression_function_String_format:
 
 format
@@ -91,6 +105,10 @@ Format a string using supplied arguments.
    * - Examples
      - * format('This %1 a %2','is', 'test') → 'This is a test''
 
+
+.. end_format_section
+
+.. format_date_section
 
 .. _expression_function_String_format_date:
 
@@ -119,6 +137,10 @@ Formats a date type or string into a custom string format. Uses Qt date/time for
        * format_date('2012-05-15','d MMMM yyyy','fr') → '15 juin 2012'
 
 
+.. end_format_date_section
+
+.. format_number_section
+
 .. _expression_function_String_format_number:
 
 format_number
@@ -144,6 +166,10 @@ Returns a number formatted with the locale separator for thousands. Also truncat
      - * format_number(10000000.332,2) → '10,000,000.33'
 
 
+.. end_format_number_section
+
+.. left_section
+
 .. _expression_function_String_left:
 
 left
@@ -167,6 +193,10 @@ Returns a substring that contains the <i>n</i> leftmost characters of the string
      - * left('Hello World',5) → 'Hello'
 
 
+.. end_left_section
+
+.. length_section
+
 .. _expression_function_String_length:
 
 length
@@ -183,6 +213,10 @@ Returns the number of characters in a string or the length of a geometry linestr
 
 
 
+
+.. end_length_section
+
+.. lower_section
 
 .. _expression_function_String_lower:
 
@@ -204,6 +238,10 @@ Converts a string to lower case letters.
    * - Examples
      - * lower('HELLO World') → 'hello world'
 
+
+.. end_lower_section
+
+.. lpad_section
 
 .. _expression_function_String_lpad:
 
@@ -232,6 +270,10 @@ Returns a string padded on the left to the specified width, using a fill charact
        * lpad('Hello', 3, 'x') → 'Hel'
 
 
+.. end_lpad_section
+
+.. regexp_match_section
+
 .. _expression_function_String_regexp_match:
 
 regexp_match
@@ -254,6 +296,10 @@ Return the first matching position matching a regular expression within a string
    * - Examples
      - * regexp_match('QGIS ROCKS','\\\\sROCKS') → 4
 
+
+.. end_regexp_match_section
+
+.. regexp_replace_section
 
 .. _expression_function_String_regexp_replace:
 
@@ -280,6 +326,10 @@ Returns a string with the supplied regular expression replaced.
      - * regexp_replace('QGIS SHOULD ROCK','\\\\sSHOULD\\\\s',' DOES ') → 'QGIS DOES ROCK'
 
 
+.. end_regexp_replace_section
+
+.. regexp_substr_section
+
 .. _expression_function_String_regexp_substr:
 
 regexp_substr
@@ -303,6 +353,10 @@ Returns the portion of a string which matches a supplied regular expression.
      - * regexp_substr('abc123','(\\\\d+)') → '123'
 
 
+.. end_regexp_substr_section
+
+.. replace_section
+
 .. _expression_function_String_replace:
 
 replace
@@ -319,6 +373,10 @@ Returns a string with the supplied string, array, or map of strings replaced.
 
 
 
+
+.. end_replace_section
+
+.. right_section
 
 .. _expression_function_String_right:
 
@@ -342,6 +400,10 @@ Returns a substring that contains the <i>n</i> rightmost characters of the strin
    * - Examples
      - * right('Hello World',5) → 'World'
 
+
+.. end_right_section
+
+.. rpad_section
 
 .. _expression_function_String_rpad:
 
@@ -370,6 +432,10 @@ Returns a string padded on the right to the specified width, using a fill charac
        * rpad('Hello', 3, 'x') → 'Hel'
 
 
+.. end_rpad_section
+
+.. strpos_section
+
 .. _expression_function_String_strpos:
 
 strpos
@@ -394,6 +460,10 @@ Return the first matching position of a substring within another string, or 0 if
 
        * strpos('HELLO WORLD','GOODBYE') → 0
 
+
+.. end_strpos_section
+
+.. substr_section
 
 .. _expression_function_String_substr:
 
@@ -430,6 +500,10 @@ Returns a part of a string.
        * substr('HELLO WORLD',-5,-1) → 'WORL'
 
 
+.. end_substr_section
+
+.. title_section
+
 .. _expression_function_String_title:
 
 title
@@ -450,6 +524,10 @@ Converts all words of a string to title case (all words lower case with leading 
    * - Examples
      - * title('hello WOrld') → 'Hello World'
 
+
+.. end_title_section
+
+.. to_string_section
 
 .. _expression_function_String_to_string:
 
@@ -472,6 +550,10 @@ Converts a number to string.
      - * to_string(123) → '123'
 
 
+.. end_to_string_section
+
+.. trim_section
+
 .. _expression_function_String_trim:
 
 trim
@@ -493,6 +575,10 @@ Removes all leading and trailing whitespace (spaces, tabs, etc) from a string.
      - * trim('   hello world    ') → 'hello world'
 
 
+.. end_trim_section
+
+.. upper_section
+
 .. _expression_function_String_upper:
 
 upper
@@ -513,6 +599,10 @@ Converts a string to upper case letters.
    * - Examples
      - * upper('hello WOrld') → 'HELLO WORLD'
 
+
+.. end_upper_section
+
+.. wordwrap_section
 
 .. _expression_function_String_wordwrap:
 
@@ -540,4 +630,6 @@ Returns a string wrapped to a maximum/minimum number of characters.
 
        * wordwrap('UNIVERSITY OF QGIS',-3) → 'UNIVERSITY<br>OF QGIS'
 
+
+.. end_wordwrap_section
 

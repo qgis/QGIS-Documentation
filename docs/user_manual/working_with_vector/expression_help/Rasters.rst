@@ -1,5 +1,7 @@
 :orphan:
 
+.. raster_statistic_section
+
 .. _expression_function_Rasters_raster_statistic:
 
 raster_statistic
@@ -27,6 +29,10 @@ Returns statistics from a raster layer.
        * raster_statistic('ac2010',3,'min') → Minimum value from band 3 from 'ac2010' raster layer
 
 
+.. end_raster_statistic_section
+
+.. raster_value_section
+
 .. _expression_function_Rasters_raster_value:
 
 raster_value
@@ -51,4 +57,6 @@ Returns the raster value found at the provided point.
    * - Examples
      - * raster_value('dem', 1, make_point(1,1)) → 25
 
+
+.. end_raster_value_section
 

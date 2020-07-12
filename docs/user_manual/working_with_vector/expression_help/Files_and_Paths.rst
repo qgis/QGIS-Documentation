@@ -1,5 +1,7 @@
 :orphan:
 
+.. base_file_name_section
+
 .. _expression_function_Files_and_Paths_base_file_name:
 
 base_file_name
@@ -20,6 +22,10 @@ Returns the base name of the file without the directory or file suffix.
    * - Examples
      - * base_file_name('/home/qgis/data/country_boundaries.shp') → 'country_boundaries'
 
+
+.. end_base_file_name_section
+
+.. file_exists_section
 
 .. _expression_function_Files_and_Paths_file_exists:
 
@@ -42,6 +48,10 @@ Returns true if a file path exists.
      - * file_exists('/home/qgis/data/country_boundaries.shp') → true
 
 
+.. end_file_exists_section
+
+.. file_name_section
+
 .. _expression_function_Files_and_Paths_file_name:
 
 file_name
@@ -62,6 +72,10 @@ Returns the name of a file (including the file extension), excluding the directo
    * - Examples
      - * file_name('/home/qgis/data/country_boundaries.shp') → 'country_boundaries.shp'
 
+
+.. end_file_name_section
+
+.. file_path_section
 
 .. _expression_function_Files_and_Paths_file_path:
 
@@ -84,6 +98,10 @@ Returns the directory component of a file path. This does not include the file n
      - * file_path('/home/qgis/data/country_boundaries.shp') → '/home/qgis/data'
 
 
+.. end_file_path_section
+
+.. file_size_section
+
 .. _expression_function_Files_and_Paths_file_size:
 
 file_size
@@ -105,6 +123,10 @@ Returns the size (in bytes) of a file.
      - * file_size('/home/qgis/data/country_boundaries.geojson') → 5674
 
 
+.. end_file_size_section
+
+.. file_suffix_section
+
 .. _expression_function_Files_and_Paths_file_suffix:
 
 file_suffix
@@ -125,6 +147,10 @@ Returns the file suffix (extension) from a file path.
    * - Examples
      - * file_suffix('/home/qgis/data/country_boundaries.shp') → 'shp'
 
+
+.. end_file_suffix_section
+
+.. is_directory_section
 
 .. _expression_function_Files_and_Paths_is_directory:
 
@@ -149,6 +175,10 @@ Returns true if a path corresponds to a directory.
        * is_directory('/home/qgis/data/') → true
 
 
+.. end_is_directory_section
+
+.. is_file_section
+
 .. _expression_function_Files_and_Paths_is_file:
 
 is_file
@@ -171,4 +201,6 @@ Returns true if a path corresponds to a file.
 
        * is_file('/home/qgis/data/') → false
 
+
+.. end_is_file_section
 

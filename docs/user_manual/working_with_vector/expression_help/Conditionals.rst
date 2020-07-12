@@ -1,5 +1,7 @@
 :orphan:
 
+.. coalesce_section
+
 .. _expression_function_Conditionals_coalesce:
 
 coalesce
@@ -26,6 +28,10 @@ Returns the first non-NULL value from the expression list.<br>This function can 
 
        * coalesce("fieldA", "fallbackField", 'ERROR') → value of fieldA if it is non-NULL else the value of "fallbackField" or the string 'ERROR' if both are NULL
 
+
+.. end_coalesce_section
+
+.. if_section
 
 .. _expression_function_Conditionals_if:
 
@@ -64,6 +70,10 @@ Tests a condition and returns a different result depending on the conditional ch
        * if( 10, 'One', 'Zero' ) → 'One'
 
 
+.. end_if_section
+
+.. nullif_section
+
 .. _expression_function_Conditionals_nullif:
 
 nullif
@@ -91,6 +101,10 @@ Returns a null value if value1 equals value2; otherwise it returns value1. This 
        * nullif("name", '') → NULL, if name is an empty string (or already NULL), the name in any other case.
 
 
+.. end_nullif_section
+
+.. regexp_match_section
+
 .. _expression_function_Conditionals_regexp_match:
 
 regexp_match
@@ -113,6 +127,10 @@ Return the first matching position matching a regular expression within a string
    * - Examples
      - * regexp_match('QGIS ROCKS','\\\\sROCKS') → 4
 
+
+.. end_regexp_match_section
+
+.. try_section
 
 .. _expression_function_Conditionals_try:
 
@@ -140,4 +158,6 @@ Tries an expression and returns its value if error-free. If the expression retur
 
        * try( to_date( 'invalid_date' ) ) → NULL
 
+
+.. end_try_section
 

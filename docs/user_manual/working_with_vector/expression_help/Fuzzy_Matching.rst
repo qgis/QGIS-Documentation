@@ -1,5 +1,7 @@
 :orphan:
 
+.. hamming_distance_section
+
 .. _expression_function_Fuzzy_Matching_hamming_distance:
 
 hamming_distance
@@ -26,6 +28,10 @@ Returns the Hamming distance between two strings. This equates to the number of 
 
        * hamming_distance(upper('abc'),upper('ABC')) → 0
 
+
+.. end_hamming_distance_section
+
+.. levenshtein_section
 
 .. _expression_function_Fuzzy_Matching_levenshtein:
 
@@ -54,6 +60,10 @@ Returns the Levenshtein edit distance between two strings. This equates to the m
        * levenshtein(upper('Kitten'),upper('kitten')) → 0
 
 
+.. end_levenshtein_section
+
+.. longest_common_substring_section
+
 .. _expression_function_Fuzzy_Matching_longest_common_substring:
 
 longest_common_substring
@@ -81,6 +91,10 @@ Returns the longest common substring between two strings. This substring is the 
        * longest_common_substring(upper('abcDeF'),upper('abcdex')) → 'ABCDE'
 
 
+.. end_longest_common_substring_section
+
+.. soundex_section
+
 .. _expression_function_Fuzzy_Matching_soundex:
 
 soundex
@@ -105,4 +119,6 @@ Returns the Soundex representation of a string. Soundex is a phonetic matching a
 
        * soundex('rubin') → 'R150'
 
+
+.. end_soundex_section
 

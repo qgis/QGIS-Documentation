@@ -1,5 +1,7 @@
 :orphan:
 
+.. from_base64_section
+
 .. _expression_function_Conversions_from_base64:
 
 from_base64
@@ -20,6 +22,10 @@ Decodes a string in the Base64 encoding into a binary value.
    * - Examples
      - * from_base64('UUdJUw==') → 'QGIS'
 
+
+.. end_from_base64_section
+
+.. hash_section
 
 .. _expression_function_Conversions_hash:
 
@@ -72,6 +78,10 @@ Creates a hash from a string with a given method. One byte (8 bits) is represent
        * keccak_512('QGIS') → '6f0f751776b505e317de222508fa5d3ed7099d8f07c74fed54ccee6e7cdc6b89b4a085e309f2ee5210c9'
 
 
+.. end_hash_section
+
+.. md5_section
+
 .. _expression_function_Conversions_md5:
 
 md5
@@ -92,6 +102,10 @@ Creates a md5 hash from a string.
    * - Examples
      - * md5('QGIS') → '57470aaa9e22adaefac7f5f342f1c6da'
 
+
+.. end_md5_section
+
+.. sha256_section
 
 .. _expression_function_Conversions_sha256:
 
@@ -114,6 +128,10 @@ Creates a sha256 hash from a string.
      - * sha256('QGIS') → 'eb045cba7a797aaa06ac58830846e40c8e8c780bc0676d3393605fae50c05309'
 
 
+.. end_sha256_section
+
+.. to_base64_section
+
 .. _expression_function_Conversions_to_base64:
 
 to_base64
@@ -134,6 +152,10 @@ Encodes a binary value into a string, using the Base64 encoding.
    * - Examples
      - * to_base64('QGIS') → 'UUdJUw=='
 
+
+.. end_to_base64_section
+
+.. to_date_section
 
 .. _expression_function_Conversions_to_date:
 
@@ -164,6 +186,10 @@ Converts a string into a date object. An optional format string can be provided 
        * to_date('29 juin, 2019','d MMMM, yyyy','fr') → 2019-06-29
 
 
+.. end_to_date_section
+
+.. to_datetime_section
+
 .. _expression_function_Conversions_to_datetime:
 
 to_datetime
@@ -192,6 +218,10 @@ Converts a string into a datetime object. An optional format string can be provi
 
        * to_datetime('29 juin, 2019 @ 12:34','d MMMM, yyyy @ HH:mm','fr') → 2019-06-29T12:34
 
+
+.. end_to_datetime_section
+
+.. to_dm_section
 
 .. _expression_function_Conversions_to_dm:
 
@@ -222,6 +252,10 @@ Convert a coordinate to degree, minute.
        * to_dm(6.3545681, 'y', 4, 'suffix') → 6°21.2741′N
 
 
+.. end_to_dm_section
+
+.. to_dms_section
+
 .. _expression_function_Conversions_to_dms:
 
 to_dms
@@ -251,6 +285,10 @@ Convert a coordinate to degree, minute, second.
        * to_dms(6.3545681, 'y', 4, 'suffix') → 6°21′16.4452″N
 
 
+.. end_to_dms_section
+
+.. to_int_section
+
 .. _expression_function_Conversions_to_int:
 
 to_int
@@ -271,6 +309,10 @@ Converts a string to integer number. Nothing is returned if a value cannot be co
    * - Examples
      - * to_int('123') → 123
 
+
+.. end_to_int_section
+
+.. to_interval_section
 
 .. _expression_function_Conversions_to_interval:
 
@@ -293,6 +335,10 @@ Converts a string to a interval type. Can be used to take days, hours, month, et
      - * to_datetime('2012-05-05 12:00:00') - to_interval('1 day 2 hours') → 2012-05-04T10:00:00
 
 
+.. end_to_interval_section
+
+.. to_real_section
+
 .. _expression_function_Conversions_to_real:
 
 to_real
@@ -314,6 +360,10 @@ Converts a string to a real number. Nothing is returned if a value cannot be con
      - * to_real('123.45') → 123.45
 
 
+.. end_to_real_section
+
+.. to_string_section
+
 .. _expression_function_Conversions_to_string:
 
 to_string
@@ -334,6 +384,10 @@ Converts a number to string.
    * - Examples
      - * to_string(123) → '123'
 
+
+.. end_to_string_section
+
+.. to_time_section
 
 .. _expression_function_Conversions_to_time:
 
@@ -363,4 +417,6 @@ Converts a string into a time object. An optional format string can be provided 
 
        * to_time('12:34','HH:mm','fr') → 12:34:00
 
+
+.. end_to_time_section
 

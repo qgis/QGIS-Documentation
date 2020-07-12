@@ -1,5 +1,7 @@
 :orphan:
 
+.. age_section
+
 .. _expression_function_Date_and_Time_age:
 
 age
@@ -25,6 +27,10 @@ Returns the difference between two dates or datetimes.<br>The difference is retu
        * hour(age('2012-05-12','2012-05-02')) → 240
 
 
+.. end_age_section
+
+.. datetime_from_epoch_section
+
 .. _expression_function_Date_and_Time_datetime_from_epoch:
 
 datetime_from_epoch
@@ -46,6 +52,10 @@ Returns a datetime whose date and time are the number of milliseconds, msecs, th
      - * datetime_from_epoch(1483225200000) → 2017-01-01T00:00:00
 
 
+.. end_datetime_from_epoch_section
+
+.. day_section
+
 .. _expression_function_Date_and_Time_day:
 
 day
@@ -62,6 +72,10 @@ Extracts the day from a date, or the number of days from an interval.
 
 
 
+
+.. end_day_section
+
+.. day_of_week_section
 
 .. _expression_function_Date_and_Time_day_of_week:
 
@@ -84,6 +98,10 @@ Returns the day of the week for a specified date or datetime. The returned value
      - * day_of_week(to_date('2015-09-21')) → 1
 
 
+.. end_day_of_week_section
+
+.. epoch_section
+
 .. _expression_function_Date_and_Time_epoch:
 
 epoch
@@ -104,6 +122,10 @@ Returns the interval in milliseconds between the unix epoch and a given date val
    * - Examples
      - * epoch(to_date('2017-01-01')) → 1483203600000
 
+
+.. end_epoch_section
+
+.. format_date_section
 
 .. _expression_function_Date_and_Time_format_date:
 
@@ -132,6 +154,10 @@ Formats a date type or string into a custom string format. Uses Qt date/time for
        * format_date('2012-05-15','d MMMM yyyy','fr') → '15 juin 2012'
 
 
+.. end_format_date_section
+
+.. hour_section
+
 .. _expression_function_Date_and_Time_hour:
 
 hour
@@ -148,6 +174,10 @@ Extracts the hour part from a datetime or time, or the number of hours from an i
 
 
 
+
+.. end_hour_section
+
+.. make_date_section
 
 .. _expression_function_Date_and_Time_make_date:
 
@@ -173,6 +203,10 @@ Creates a date value from year, month and day numbers.
    * - Examples
      - * make_date(2020,5,4) → date value 2020-05-04
 
+
+.. end_make_date_section
+
+.. make_datetime_section
 
 .. _expression_function_Date_and_Time_make_datetime:
 
@@ -204,6 +238,10 @@ Creates a datetime value from year, month, day, hour, minute and second numbers.
    * - Examples
      - * make_datetime(2020,5,4,13,45,30.5) → datetime value 2020-05-04 13:45:30.500
 
+
+.. end_make_datetime_section
+
+.. make_interval_section
 
 .. _expression_function_Date_and_Time_make_interval:
 
@@ -240,6 +278,10 @@ Creates an interval value from year, month, weeks, days, hours, minute and secon
        * make_interval(days:=2, hours:=3) → 2 day, 3 hour interval
 
 
+.. end_make_interval_section
+
+.. make_time_section
+
 .. _expression_function_Date_and_Time_make_time:
 
 make_time
@@ -265,6 +307,10 @@ Creates a time value from hour, minute and second numbers.
      - * make_time(13,45,30.5) → time value 13:45:30.500
 
 
+.. end_make_time_section
+
+.. minute_section
+
 .. _expression_function_Date_and_Time_minute:
 
 minute
@@ -282,6 +328,10 @@ Extracts the minutes part from a datetime or time, or the number of minutes from
 
 
 
+.. end_minute_section
+
+.. month_section
+
 .. _expression_function_Date_and_Time_month:
 
 month
@@ -298,6 +348,10 @@ Extracts the month part from a date, or the number of months from an interval.
 
 
 
+
+.. end_month_section
+
+.. now_section
 
 .. _expression_function_Date_and_Time_now:
 
@@ -317,6 +371,10 @@ Returns the current date and time. The function is static and will return consis
      - * now() → 2012-07-22T13:24:57
 
 
+.. end_now_section
+
+.. second_section
+
 .. _expression_function_Date_and_Time_second:
 
 second
@@ -333,6 +391,10 @@ Extracts the seconds part from a datetime or time, or the number of seconds from
 
 
 
+
+.. end_second_section
+
+.. to_date_section
 
 .. _expression_function_Date_and_Time_to_date:
 
@@ -363,6 +425,10 @@ Converts a string into a date object. An optional format string can be provided 
        * to_date('29 juin, 2019','d MMMM, yyyy','fr') → 2019-06-29
 
 
+.. end_to_date_section
+
+.. to_datetime_section
+
 .. _expression_function_Date_and_Time_to_datetime:
 
 to_datetime
@@ -392,6 +458,10 @@ Converts a string into a datetime object. An optional format string can be provi
        * to_datetime('29 juin, 2019 @ 12:34','d MMMM, yyyy @ HH:mm','fr') → 2019-06-29T12:34
 
 
+.. end_to_datetime_section
+
+.. to_interval_section
+
 .. _expression_function_Date_and_Time_to_interval:
 
 to_interval
@@ -412,6 +482,10 @@ Converts a string to a interval type. Can be used to take days, hours, month, et
    * - Examples
      - * to_datetime('2012-05-05 12:00:00') - to_interval('1 day 2 hours') → 2012-05-04T10:00:00
 
+
+.. end_to_interval_section
+
+.. to_time_section
 
 .. _expression_function_Date_and_Time_to_time:
 
@@ -442,6 +516,10 @@ Converts a string into a time object. An optional format string can be provided 
        * to_time('12:34','HH:mm','fr') → 12:34:00
 
 
+.. end_to_time_section
+
+.. week_section
+
 .. _expression_function_Date_and_Time_week:
 
 week
@@ -459,6 +537,10 @@ Extracts the week number from a date, or the number of weeks from an interval.
 
 
 
+.. end_week_section
+
+.. year_section
+
 .. _expression_function_Date_and_Time_year:
 
 year
@@ -475,4 +557,6 @@ Extracts the year part from a date, or the number of years from an interval.
 
 
 
+
+.. end_year_section
 

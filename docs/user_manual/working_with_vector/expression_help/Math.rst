@@ -1,5 +1,7 @@
 :orphan:
 
+.. abs_section
+
 .. _expression_function_Math_abs:
 
 abs
@@ -20,6 +22,10 @@ Returns the absolute value of a number.
    * - Examples
      - * abs(-2) → 2
 
+
+.. end_abs_section
+
+.. acos_section
 
 .. _expression_function_Math_acos:
 
@@ -42,6 +48,10 @@ Returns the inverse cosine of a value in radians.
      - * acos(0.5) → 1.0471975511966
 
 
+.. end_acos_section
+
+.. asin_section
+
 .. _expression_function_Math_asin:
 
 asin
@@ -63,6 +73,10 @@ Returns the inverse sine of a value in radians.
      - * asin(1.0) → 1.5707963267949
 
 
+.. end_asin_section
+
+.. atan_section
+
 .. _expression_function_Math_atan:
 
 atan
@@ -83,6 +97,10 @@ Returns the inverse tangent of a value in radians.
    * - Examples
      - * atan(0.5) → 0.463647609000806
 
+
+.. end_atan_section
+
+.. atan2_section
 
 .. _expression_function_Math_atan2:
 
@@ -106,6 +124,10 @@ Returns the inverse tangent of dy/dx by using the signs of the two arguments to 
    * - Examples
      - * atan2(1.0, 1.732) → 0.523611477769969
 
+
+.. end_atan2_section
+
+.. azimuth_section
 
 .. _expression_function_Math_azimuth:
 
@@ -132,6 +154,10 @@ Returns the north-based azimuth as the angle in radians measured clockwise from 
        * degrees( azimuth( make_point(75, 100), make_point(25,45) ) ) → 222.273689
 
 
+.. end_azimuth_section
+
+.. ceil_section
+
 .. _expression_function_Math_ceil:
 
 ceil
@@ -154,6 +180,10 @@ Rounds a number upwards.
 
        * ceil(-4.9) → -4
 
+
+.. end_ceil_section
+
+.. clamp_section
 
 .. _expression_function_Math_clamp:
 
@@ -184,6 +214,10 @@ Restricts an input value to a specified range.
        * clamp(1,11,10) → 10
 
 
+.. end_clamp_section
+
+.. cos_section
+
 .. _expression_function_Math_cos:
 
 cos
@@ -204,6 +238,10 @@ Returns cosine of an angle.
    * - Examples
      - * cos(1.571) → 0.000796326710733263
 
+
+.. end_cos_section
+
+.. degrees_section
 
 .. _expression_function_Math_degrees:
 
@@ -228,6 +266,10 @@ Converts from radians to degrees.
        * degrees(1) → 57.2958
 
 
+.. end_degrees_section
+
+.. exp_section
+
 .. _expression_function_Math_exp:
 
 exp
@@ -248,6 +290,10 @@ Returns exponential of an value.
    * - Examples
      - * exp(1.0) → 2.71828182845905
 
+
+.. end_exp_section
+
+.. floor_section
 
 .. _expression_function_Math_floor:
 
@@ -271,6 +317,10 @@ Rounds a number downwards.
 
        * floor(-4.9) → -5
 
+
+.. end_floor_section
+
+.. inclination_section
 
 .. _expression_function_Math_inclination:
 
@@ -301,6 +351,10 @@ Returns the inclination measured from the zenith (0) to the nadir (180) on point
        * inclination( make_point( 5, 10, 0 ), make_point( 5, 10, -5 ) ) → 180.0
 
 
+.. end_inclination_section
+
+.. ln_section
+
 .. _expression_function_Math_ln:
 
 ln
@@ -323,6 +377,10 @@ Returns the natural logarithm of a value.
 
        * ln(2.7182818284590452354) → 1
 
+
+.. end_ln_section
+
+.. log_section
 
 .. _expression_function_Math_log:
 
@@ -349,6 +407,10 @@ Returns the value of the logarithm of the passed value and base.
        * log(0.5, 32) → -5
 
 
+.. end_log_section
+
+.. log10_section
+
 .. _expression_function_Math_log10:
 
 log10
@@ -371,6 +433,10 @@ Returns the value of the base 10 logarithm of the passed expression.
 
        * log10(100) → 2
 
+
+.. end_log10_section
+
+.. max_section
 
 .. _expression_function_Math_max:
 
@@ -395,6 +461,10 @@ Returns the largest value in a set of values.
        * max(20.5,NULL,6.2) → 20.5
 
 
+.. end_max_section
+
+.. min_section
+
 .. _expression_function_Math_min:
 
 min
@@ -418,6 +488,10 @@ Returns the smallest value in a set of values.
        * min(2,-10.3,NULL) → -10.3
 
 
+.. end_min_section
+
+.. pi_section
+
 .. _expression_function_Math_pi:
 
 pi
@@ -435,6 +509,10 @@ Returns value of pi for calculations.
    * - Examples
      - * pi() → 3.14159265358979
 
+
+.. end_pi_section
+
+.. radians_section
 
 .. _expression_function_Math_radians:
 
@@ -458,6 +536,10 @@ Converts from degrees to radians.
 
        * radians(57.2958) → 1
 
+
+.. end_radians_section
+
+.. rand_section
 
 .. _expression_function_Math_rand:
 
@@ -484,6 +566,10 @@ Returns a random integer within the range specified by the minimum and maximum a
      - * rand(1, 10) → 8
 
 
+.. end_rand_section
+
+.. randf_section
+
 .. _expression_function_Math_randf:
 
 randf
@@ -509,6 +595,10 @@ Returns a random float within the range specified by the minimum and maximum arg
      - * randf(1, 10) → 4.59258286403147
 
 
+.. end_randf_section
+
+.. round_section
+
 .. _expression_function_Math_round:
 
 round
@@ -533,6 +623,10 @@ Rounds a number to number of decimal places.
 
        * round(1234.567) → 1235
 
+
+.. end_round_section
+
+.. scale_exp_section
 
 .. _expression_function_Math_scale_exp:
 
@@ -567,6 +661,10 @@ Transforms a given value from an input domain to an output range using an expone
        * scale_exp(3,0,10,0,100,0.5) → 54.772
 
 
+.. end_scale_exp_section
+
+.. scale_linear_section
+
 .. _expression_function_Math_scale_linear:
 
 scale_linear
@@ -600,6 +698,10 @@ Transforms a given value from an input domain to an output range using linear in
        * scale_linear(1500,1000,10000,9,20) → 9.6111111
 
 
+.. end_scale_linear_section
+
+.. sin_section
+
 .. _expression_function_Math_sin:
 
 sin
@@ -620,6 +722,10 @@ Returns the sine of an angle.
    * - Examples
      - * sin(1.571) → 0.999999682931835
 
+
+.. end_sin_section
+
+.. sqrt_section
 
 .. _expression_function_Math_sqrt:
 
@@ -642,6 +748,10 @@ Returns square root of a value.
      - * sqrt(9) → 3
 
 
+.. end_sqrt_section
+
+.. tan_section
+
 .. _expression_function_Math_tan:
 
 tan
@@ -662,4 +772,6 @@ Returns the tangent of an angle.
    * - Examples
      - * tan(1.0) → 1.5574077246549
 
+
+.. end_tan_section
 

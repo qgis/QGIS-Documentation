@@ -1,5 +1,7 @@
 :orphan:
 
+.. current_parent_value_section
+
 .. _expression_function_Form_current_parent_value:
 
 current_parent_value
@@ -21,6 +23,10 @@ Only usable in an embedded form context, this function returns the current, unsa
      - * current_parent_value( 'FIELD_NAME' ) → The current value of a field 'FIELD_NAME' in the parent form.
 
 
+.. end_current_parent_value_section
+
+.. current_value_section
+
 .. _expression_function_Form_current_value:
 
 current_value
@@ -41,4 +47,6 @@ Returns the current, unsaved value of a field in the form or table row currently
    * - Examples
      - * current_value( 'FIELD_NAME' ) → The current value of field 'FIELD_NAME'.
 
+
+.. end_current_value_section
 

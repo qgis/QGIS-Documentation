@@ -1,5 +1,7 @@
 :orphan:
 
+.. $area_section
+
 .. _expression_function_GeometryGroup_$area:
 
 $area
@@ -17,6 +19,10 @@ Returns the area of the current feature. The area calculated by this function re
    * - Examples
      - * $area → 42
 
+
+.. end_$area_section
+
+.. $geometry_section
 
 .. _expression_function_GeometryGroup_$geometry:
 
@@ -36,6 +42,10 @@ Returns the geometry of the current feature. Can be used for processing with oth
      - * geomToWKT( $geometry ) → POINT(6 50)
 
 
+.. end_$geometry_section
+
+.. $length_section
+
 .. _expression_function_GeometryGroup_$length:
 
 $length
@@ -53,6 +63,10 @@ Returns the length of a linestring. If you need the length of a border of a poly
    * - Examples
      - * $length → 42.4711
 
+
+.. end_$length_section
+
+.. $perimeter_section
 
 .. _expression_function_GeometryGroup_$perimeter:
 
@@ -72,6 +86,10 @@ Returns the perimeter length of the current feature. The perimeter calculated by
      - * $perimeter → 42
 
 
+.. end_$perimeter_section
+
+.. $x_section
+
 .. _expression_function_GeometryGroup_$x:
 
 $x
@@ -89,6 +107,10 @@ Returns the x coordinate of the current feature.
    * - Examples
      - * $x → 42
 
+
+.. end_$x_section
+
+.. $x_at_section
 
 .. _expression_function_GeometryGroup_$x_at:
 
@@ -111,6 +133,10 @@ Retrieves a x coordinate of the current feature's geometry.
      - * $x_at(1) → 5
 
 
+.. end_$x_at_section
+
+.. $y_section
+
 .. _expression_function_GeometryGroup_$y:
 
 $y
@@ -128,6 +154,10 @@ Returns the y coordinate of the current feature.
    * - Examples
      - * $y → 42
 
+
+.. end_$y_section
+
+.. $y_at_section
 
 .. _expression_function_GeometryGroup_$y_at:
 
@@ -149,6 +179,10 @@ Retrieves a y coordinate of the current feature's geometry.
    * - Examples
      - * $y_at(1) → 2
 
+
+.. end_$y_at_section
+
+.. angle_at_vertex_section
 
 .. _expression_function_GeometryGroup_angle_at_vertex:
 
@@ -173,6 +207,10 @@ Returns the bisector angle (average angle) to the geometry for a specified verte
      - * angle_at_vertex(geometry:=geom_from_wkt('LineString(0 0, 10 0, 10 10)'),vertex:=1) → 45.0
 
 
+.. end_angle_at_vertex_section
+
+.. area_section
+
 .. _expression_function_GeometryGroup_area:
 
 area
@@ -193,6 +231,10 @@ Returns the area of a geometry polygon object. Calculations are always planimetr
    * - Examples
      - * area(geom_from_wkt('POLYGON((0 0, 4 0, 4 2, 0 2, 0 0))')) → 8.0
 
+
+.. end_area_section
+
+.. azimuth_section
 
 .. _expression_function_GeometryGroup_azimuth:
 
@@ -219,6 +261,10 @@ Returns the north-based azimuth as the angle in radians measured clockwise from 
        * degrees( azimuth( make_point(75, 100), make_point(25,45) ) ) → 222.273689
 
 
+.. end_azimuth_section
+
+.. boundary_section
+
 .. _expression_function_GeometryGroup_boundary:
 
 boundary
@@ -239,6 +285,10 @@ Returns the closure of the combinatorial boundary of the geometry (ie the topolo
    * - Examples
      - * geom_to_wkt(boundary(geom_from_wkt('Polygon((1 1, 0 0, -1 1, 1 1))'))) → 'LineString(1 1,0 0,-1 1,1 1)'
 
+
+.. end_boundary_section
+
+.. bounds_section
 
 .. _expression_function_GeometryGroup_bounds:
 
@@ -261,6 +311,10 @@ Returns a geometry which represents the bounding box of an input geometry. Calcu
      - * bounds($geometry) → bounding box of $geometry
 
 
+.. end_bounds_section
+
+.. bounds_height_section
+
 .. _expression_function_GeometryGroup_bounds_height:
 
 bounds_height
@@ -282,6 +336,10 @@ Returns the height of the bounding box of a geometry. Calculations are in the Sp
      - * bounds_height($geometry) → height of bounding box of $geometry
 
 
+.. end_bounds_height_section
+
+.. bounds_width_section
+
 .. _expression_function_GeometryGroup_bounds_width:
 
 bounds_width
@@ -302,6 +360,10 @@ Returns the width of the bounding box of a geometry. Calculations are in the Spa
    * - Examples
      - * bounds_width($geometry) → width of bounding box of $geometry
 
+
+.. end_bounds_width_section
+
+.. buffer_section
 
 .. _expression_function_GeometryGroup_buffer:
 
@@ -328,6 +390,10 @@ Returns a geometry that represents all points whose distance from this geometry 
      - * buffer($geometry, 10.5) → polygon of $geometry buffered by 10.5 units
 
 
+.. end_buffer_section
+
+.. buffer_by_m_section
+
 .. _expression_function_GeometryGroup_buffer_by_m:
 
 buffer_by_m
@@ -351,6 +417,10 @@ Creates a buffer along a line geometry where the buffer diameter varies accordin
      - * buffer_by_m(geometry:=geom_from_wkt('LINESTRINGM(1 2 0.5, 4 2 0.2)'),segments:=8) → A variable width buffer starting with a diameter of 0.5 and ending with a diameter of 0.2 along the linestring geometry.
 
 
+.. end_buffer_by_m_section
+
+.. centroid_section
+
 .. _expression_function_GeometryGroup_centroid:
 
 centroid
@@ -371,6 +441,10 @@ Returns the geometric center of a geometry.
    * - Examples
      - * centroid($geometry) → a point geometry
 
+
+.. end_centroid_section
+
+.. close_line_section
 
 .. _expression_function_GeometryGroup_close_line:
 
@@ -395,6 +469,10 @@ Returns a closed line string of the input line string by appending the first poi
        * geom_to_wkt(close_line(geom_from_wkt('LINESTRING(0 0, 1 0, 1 1, 0 0)'))) → LineString (0 0, 1 0, 1 1, 0 0)
 
 
+.. end_close_line_section
+
+.. closest_point_section
+
 .. _expression_function_GeometryGroup_closest_point:
 
 closest_point
@@ -418,6 +496,10 @@ Returns the point on geometry1 that is closest to geometry2.
      - * geom_to_wkt(closest_point(geom_from_wkt('LINESTRING (20 80, 98 190, 110 180, 50 75 )'),geom_from_wkt('POINT(100 100)'))) → Point(73.0769 115.384)
 
 
+.. end_closest_point_section
+
+.. collect_geometries_section
+
 .. _expression_function_GeometryGroup_collect_geometries:
 
 collect_geometries
@@ -434,6 +516,10 @@ Collects a set of geometries into a multi-part geometry object.
 
 
 
+
+.. end_collect_geometries_section
+
+.. combine_section
 
 .. _expression_function_GeometryGroup_combine:
 
@@ -460,6 +546,10 @@ Returns the combination of two geometries.
        * geom_to_wkt( combine( geom_from_wkt( 'LINESTRING(3 3, 4 4)' ), geom_from_wkt( 'LINESTRING(3 3, 6 6, 2 1)' ) ) ) → LINESTRING(3 3, 4 4, 6 6, 2 1)
 
 
+.. end_combine_section
+
+.. contains_section
+
 .. _expression_function_GeometryGroup_contains:
 
 contains
@@ -485,6 +575,10 @@ Tests whether a geometry contains another. Returns true if and only if no points
        * contains( geom_from_wkt( 'POLYGON((0 0, 0 1, 1 1, 1 0, 0 0))' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) ) → false
 
 
+.. end_contains_section
+
+.. convex_hull_section
+
 .. _expression_function_GeometryGroup_convex_hull:
 
 convex_hull
@@ -505,6 +599,10 @@ Returns the convex hull of a geometry. It represents the minimum convex geometry
    * - Examples
      - * geom_to_wkt( convex_hull( geom_from_wkt( 'LINESTRING(3 3, 4 4, 4 10)' ) ) ) → POLYGON((3 3,4 10,4 4,3 3))
 
+
+.. end_convex_hull_section
+
+.. crosses_section
 
 .. _expression_function_GeometryGroup_crosses:
 
@@ -531,6 +629,10 @@ Tests whether a geometry crosses another. Returns true if the supplied geometrie
        * crosses( geom_from_wkt( 'POINT(4 5)' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) ) → false
 
 
+.. end_crosses_section
+
+.. difference_section
+
 .. _expression_function_GeometryGroup_difference:
 
 difference
@@ -553,6 +655,10 @@ Returns a geometry that represents that part of geometry_a that does not interse
    * - Examples
      - * geom_to_wkt( difference( geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ), geom_from_wkt( 'LINESTRING(3 3, 4 4)' ) ) ) → LINESTRING(4 4, 5 5)
 
+
+.. end_difference_section
+
+.. disjoint_section
 
 .. _expression_function_GeometryGroup_disjoint:
 
@@ -579,6 +685,10 @@ Tests whether geometries do not spatially intersect. Returns true if the geometr
        * disjoint( geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ), geom_from_wkt( 'POINT(4 4)' )) → false
 
 
+.. end_disjoint_section
+
+.. distance_section
+
 .. _expression_function_GeometryGroup_distance:
 
 distance
@@ -601,6 +711,10 @@ Returns the minimum distance (based on spatial ref) between two geometries in pr
    * - Examples
      - * distance( geom_from_wkt( 'POINT(4 4)' ), geom_from_wkt( 'POINT(4 8)' ) ) → 4
 
+
+.. end_distance_section
+
+.. distance_to_vertex_section
 
 .. _expression_function_GeometryGroup_distance_to_vertex:
 
@@ -625,6 +739,10 @@ Returns the distance along the geometry to a specified vertex.
      - * distance_to_vertex(geometry:=geom_from_wkt('LineString(0 0, 10 0, 10 10)'),vertex:=1) → 10.0
 
 
+.. end_distance_to_vertex_section
+
+.. end_point_section
+
 .. _expression_function_GeometryGroup_end_point:
 
 end_point
@@ -645,6 +763,10 @@ Returns the last node from a geometry.
    * - Examples
      - * geom_to_wkt(end_point(geom_from_wkt('LINESTRING(4 0, 4 2, 0 2)'))) → 'Point (0 2)'
 
+
+.. end_end_point_section
+
+.. extend_section
 
 .. _expression_function_GeometryGroup_extend:
 
@@ -671,6 +793,10 @@ Extends the start and end of a linestring geometry by a specified amount. Lines 
      - * geom_to_wkt(extend(geom_from_wkt('LineString(0 0, 1 0, 1 1)'),1,2)) → LineString (-1 0, 1 0, 1 3)
 
 
+.. end_extend_section
+
+.. exterior_ring_section
+
 .. _expression_function_GeometryGroup_exterior_ring:
 
 exterior_ring
@@ -691,6 +817,10 @@ Returns a line string representing the exterior ring of a polygon geometry. If t
    * - Examples
      - * geom_to_wkt(exterior_ring(geom_from_wkt('POLYGON((-1 -1, 4 0, 4 2, 0 2, -1 -1),( 0.1 0.1, 0.1 0.2, 0.2 0.2, 0.2, 0.1, 0.1 0.1))'))) → 'LineString (-1 -1, 4 0, 4 2, 0 2, -1 -1)'
 
+
+.. end_exterior_ring_section
+
+.. extrude_section
 
 .. _expression_function_GeometryGroup_extrude:
 
@@ -719,6 +849,10 @@ Returns an extruded version of the input (Multi-)Curve or (Multi-)Linestring geo
        * extrude(geom_from_wkt('MultiLineString((1 2, 3 2), (4 3, 8 3)'), 1, 2) → MultiPolygon (((1 2, 3 2, 4 4, 2 4, 1 2)),((4 3, 8 3, 9 5, 5 5, 4 3)))
 
 
+.. end_extrude_section
+
+.. flip_coordinates_section
+
 .. _expression_function_GeometryGroup_flip_coordinates:
 
 flip_coordinates
@@ -739,6 +873,10 @@ Returns a copy of the geometry with the x and y coordinates swapped. Useful for 
    * - Examples
      - * geom_to_wkt(flip_coordinates(make_point(1, 2))) → Point (2 1)
 
+
+.. end_flip_coordinates_section
+
+.. force_rhr_section
 
 .. _expression_function_GeometryGroup_force_rhr:
 
@@ -761,6 +899,10 @@ Forces a geometry to respect the Right-Hand-Rule, in which the area that is boun
      - * geom_to_wkt(force_rhr(geometry:=geom_from_wkt('POLYGON((-1 -1, 4 0, 4 2, 0 2, -1 -1))'))) → Polygon ((-1 -1, 0 2, 4 2, 4 0, -1 -1))
 
 
+.. end_force_rhr_section
+
+.. geom_from_gml_section
+
 .. _expression_function_GeometryGroup_geom_from_gml:
 
 geom_from_gml
@@ -781,6 +923,10 @@ Returns a geometry from a GML representation of geometry.
    * - Examples
      - * geom_from_gml('&lt;gml:LineString srsName="EPSG:4326"&gt;&lt;gml:coordinates&gt;4,4 5,5 6,6&lt;/gml:coordinates&gt;&lt;/gml:LineString&gt;') → a line geometry object
 
+
+.. end_geom_from_gml_section
+
+.. geom_from_wkb_section
 
 .. _expression_function_GeometryGroup_geom_from_wkb:
 
@@ -803,6 +949,10 @@ Returns a geometry created from a Well-Known Binary (WKB) representation.
      - * geom_from_wkb( geom_to_wkb( make_point(4,5) ) ) → a point geometry object
 
 
+.. end_geom_from_wkb_section
+
+.. geom_from_wkt_section
+
 .. _expression_function_GeometryGroup_geom_from_wkt:
 
 geom_from_wkt
@@ -824,6 +974,10 @@ Returns a geometry created from a Well-Known Text (WKT) representation.
      - * geom_from_wkt( 'POINT(4 5)' ) → a geometry object
 
 
+.. end_geom_from_wkt_section
+
+.. geom_to_wkb_section
+
 .. _expression_function_GeometryGroup_geom_to_wkb:
 
 geom_to_wkb
@@ -844,6 +998,10 @@ Returns the Well-Known Binary (WKB) representation of a geometry
    * - Examples
      - * geom_to_wkb( $geometry ) → binary blob containing a geometry object
 
+
+.. end_geom_to_wkb_section
+
+.. geom_to_wkt_section
 
 .. _expression_function_GeometryGroup_geom_to_wkt:
 
@@ -868,6 +1026,10 @@ Returns the Well-Known Text (WKT) representation of the geometry without SRID me
      - * geom_to_wkt( $geometry ) → POINT(6 50)
 
 
+.. end_geom_to_wkt_section
+
+.. geometry_section
+
 .. _expression_function_GeometryGroup_geometry:
 
 geometry
@@ -891,6 +1053,10 @@ Returns a feature's geometry.
        * intersects( $geometry, geometry( get_feature( layer, attributeField, value ) ) ) → true
 
 
+.. end_geometry_section
+
+.. geometry_n_section
+
 .. _expression_function_GeometryGroup_geometry_n:
 
 geometry_n
@@ -913,6 +1079,10 @@ Returns a specific geometry from a geometry collection, or null if the input geo
    * - Examples
      - * geom_to_wkt(geometry_n(geom_from_wkt('GEOMETRYCOLLECTION(POINT(0 1), POINT(0 0), POINT(1 0), POINT(1 1))'),3)) → 'Point (1 0)'
 
+
+.. end_geometry_n_section
+
+.. hausdorff_distance_section
 
 .. _expression_function_GeometryGroup_hausdorff_distance:
 
@@ -943,6 +1113,10 @@ Returns the Hausdorff distance between two geometries. This is basically a measu
        * hausdorff_distance( geom_from_wkt('LINESTRING (130 0, 0 0, 0 150)'),geom_from_wkt('LINESTRING (10 10, 10 150, 130 10)'),0.5) → 70.0
 
 
+.. end_hausdorff_distance_section
+
+.. inclination_section
+
 .. _expression_function_GeometryGroup_inclination:
 
 inclination
@@ -972,6 +1146,10 @@ Returns the inclination measured from the zenith (0) to the nadir (180) on point
        * inclination( make_point( 5, 10, 0 ), make_point( 5, 10, -5 ) ) → 180.0
 
 
+.. end_inclination_section
+
+.. interior_ring_n_section
+
 .. _expression_function_GeometryGroup_interior_ring_n:
 
 interior_ring_n
@@ -995,6 +1173,10 @@ Returns a specific interior ring from a polygon geometry, or null if the geometr
      - * geom_to_wkt(interior_ring_n(geom_from_wkt('POLYGON((-1 -1, 4 0, 4 2, 0 2, -1 -1),(-0.1 -0.1, 0.4 0, 0.4 0.2, 0 0.2, -0.1 -0.1),(-1 -1, 4 0, 4 2, 0 2, -1 -1))'),1)) → 'LineString (-0.1 -0.1, 0.4 0, 0.4 0.2, 0 0.2, -0.1 -0.1))'
 
 
+.. end_interior_ring_n_section
+
+.. intersection_section
+
 .. _expression_function_GeometryGroup_intersection:
 
 intersection
@@ -1017,6 +1199,10 @@ Returns a geometry that represents the shared portion of two geometries.
    * - Examples
      - * geom_to_wkt( intersection( geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ), geom_from_wkt( 'LINESTRING(3 3, 4 4)' ) ) ) → LINESTRING(3 3, 4 4)
 
+
+.. end_intersection_section
+
+.. intersects_section
 
 .. _expression_function_GeometryGroup_intersects:
 
@@ -1043,6 +1229,10 @@ Tests whether a geometry intersects another. Returns true if the geometries spat
        * intersects( geom_from_wkt( 'POINT(4 5)' ), geom_from_wkt( 'POINT(5 5)' ) ) → false
 
 
+.. end_intersects_section
+
+.. intersects_bbox_section
+
 .. _expression_function_GeometryGroup_intersects_bbox:
 
 intersects_bbox
@@ -1068,6 +1258,10 @@ Tests whether a geometry's bounding box overlaps another geometry's bounding box
        * intersects_bbox( geom_from_wkt( 'POINT(6 5)' ), geom_from_wkt( 'POLYGON((3 3, 4 4, 5 5, 3 3))' ) ) → false
 
 
+.. end_intersects_bbox_section
+
+.. is_closed_section
+
 .. _expression_function_GeometryGroup_is_closed:
 
 is_closed
@@ -1090,6 +1284,10 @@ Returns true if a line string is closed (start and end points are coincident), o
 
        * is_closed(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2, 0 0)')) → true
 
+
+.. end_is_closed_section
+
+.. is_empty_section
 
 .. _expression_function_GeometryGroup_is_empty:
 
@@ -1117,6 +1315,10 @@ Returns true if a geometry is empty (without coordinates), false if the geometry
 
        * is_empty(geom_from_wkt('POINT EMPTY')) → true
 
+
+.. end_is_empty_section
+
+.. is_empty_or_null_section
 
 .. _expression_function_GeometryGroup_is_empty_or_null:
 
@@ -1147,6 +1349,10 @@ Returns true if a geometry is NULL or empty (without coordinates) or false other
        * is_empty_or_null(geom_from_wkt('POINT EMPTY')) → true
 
 
+.. end_is_empty_or_null_section
+
+.. is_multipart_section
+
 .. _expression_function_GeometryGroup_is_multipart:
 
 is_multipart
@@ -1169,6 +1375,10 @@ Returns true if the geometry is of Multi type.
 
        * is_multipart(geom_from_wkt('POINT (0 0)')) → false
 
+
+.. end_is_multipart_section
+
+.. is_valid_section
 
 .. _expression_function_GeometryGroup_is_valid:
 
@@ -1193,6 +1403,10 @@ Returns true if a geometry is valid; if it is well-formed in 2D according to the
        * is_valid(geom_from_wkt('LINESTRING(0 0)')) → false
 
 
+.. end_is_valid_section
+
+.. length_section
+
 .. _expression_function_GeometryGroup_length:
 
 length
@@ -1209,6 +1423,10 @@ Returns the number of characters in a string or the length of a geometry linestr
 
 
 
+
+.. end_length_section
+
+.. line_interpolate_angle_section
 
 .. _expression_function_GeometryGroup_line_interpolate_angle:
 
@@ -1233,6 +1451,10 @@ Returns the angle parallel to the geometry at a specified distance along a lines
      - * line_interpolate_angle(geometry:=geom_from_wkt('LineString(0 0, 10 0)'),distance:=5) → 90.0
 
 
+.. end_line_interpolate_angle_section
+
+.. line_interpolate_point_section
+
 .. _expression_function_GeometryGroup_line_interpolate_point:
 
 line_interpolate_point
@@ -1255,6 +1477,10 @@ Returns the point interpolated by a specified distance along a linestring geomet
    * - Examples
      - * geom_to_wkt(line_interpolate_point(geometry:=geom_from_wkt('LineString(0 0, 10 0)'),distance:=5)) → 'Point (5 0)'
 
+
+.. end_line_interpolate_point_section
+
+.. line_locate_point_section
 
 .. _expression_function_GeometryGroup_line_locate_point:
 
@@ -1279,6 +1505,10 @@ Returns the distance along a linestring corresponding to the closest position th
      - * line_locate_point(geometry:=geom_from_wkt('LineString(0 0, 10 0)'),point:=geom_from_wkt('Point(5 0)')) → 5.0
 
 
+.. end_line_locate_point_section
+
+.. line_merge_section
+
 .. _expression_function_GeometryGroup_line_merge:
 
 line_merge
@@ -1301,6 +1531,10 @@ Returns a LineString or MultiLineString geometry, where any connected LineString
 
        * geom_to_wkt(line_merge(geom_from_wkt('MULTILINESTRING((0 0, 1 1),(11 1, 21 2))'))) → 'MultiLineString((0 0, 1 1),(11 1, 21 2)'
 
+
+.. end_line_merge_section
+
+.. line_substring_section
 
 .. _expression_function_GeometryGroup_line_substring:
 
@@ -1327,6 +1561,10 @@ Returns the portion of a line (or curve) geometry which falls between the specif
      - * geom_to_wkt(line_substring(geometry:=geom_from_wkt('LineString(0 0, 10 0)'),start_distance:=2,end_distance=6)) → 'LineString (2 0,6 0)'
 
 
+.. end_line_substring_section
+
+.. m_section
+
 .. _expression_function_GeometryGroup_m:
 
 m
@@ -1347,6 +1585,10 @@ Returns the m value of a point geometry.
    * - Examples
      - * m( geom_from_wkt( 'POINTM(2 5 4)' ) ) → 4
 
+
+.. end_m_section
+
+.. m_max_section
 
 .. _expression_function_GeometryGroup_m_max:
 
@@ -1371,6 +1613,10 @@ Returns the maximum m (measure) value of a geometry.
        * m_max(make_line( make_point_m( 0,0,1 ), make_point_m( -1,-1,2 ), make_point_m( -2,-2,0 ) ) ) → 2
 
 
+.. end_m_max_section
+
+.. m_min_section
+
 .. _expression_function_GeometryGroup_m_min:
 
 m_min
@@ -1393,6 +1639,10 @@ Returns the minimum m (measure) value of a geometry.
 
        * m_min(make_line( make_point_m( 0,0,1 ), make_point_m( -1,-1,2 ), make_point_m( -2,-2,0 ) ) ) → 0
 
+
+.. end_m_min_section
+
+.. make_circle_section
 
 .. _expression_function_GeometryGroup_make_circle:
 
@@ -1422,6 +1672,10 @@ Creates a circular polygon.
 
        * geom_to_wkt(make_circle(make_point(10,10,5,30), 5, 4)) → 'PolygonZM ((10 15 5 30, 15 10 5 30, 10 5 5 30, 5 10 5 30, 10 15 5 30))'
 
+
+.. end_make_circle_section
+
+.. make_ellipse_section
 
 .. _expression_function_GeometryGroup_make_ellipse:
 
@@ -1456,6 +1710,10 @@ Creates an elliptical polygon.
        * geom_to_wkt(make_ellipse(make_point(10,10,5,30), 5, 2, 90, 4)) → 'PolygonZM ((15 10 5 30, 10 8 5 30, 5 10 5 30, 10 12 5 30, 15 10 5 30))'
 
 
+.. end_make_ellipse_section
+
+.. make_line_section
+
 .. _expression_function_GeometryGroup_make_line:
 
 make_line
@@ -1472,6 +1730,10 @@ Creates a line geometry from a series of point geometries.
 
 
 
+
+.. end_make_line_section
+
+.. make_point_section
 
 .. _expression_function_GeometryGroup_make_point:
 
@@ -1504,6 +1766,10 @@ Creates a point geometry from an x and y (and optional z and m) value.
        * geom_to_wkt(make_point(2,4,6,8)) → 'PointZM (2 4 6 8)'
 
 
+.. end_make_point_section
+
+.. make_point_m_section
+
 .. _expression_function_GeometryGroup_make_point_m:
 
 make_point_m
@@ -1529,6 +1795,10 @@ Creates a point geometry from an x, y coordinate and m value.
      - * geom_to_wkt(make_point_m(2,4,6)) → 'PointM (2 4 6)'
 
 
+.. end_make_point_m_section
+
+.. make_polygon_section
+
 .. _expression_function_GeometryGroup_make_polygon:
 
 make_polygon
@@ -1553,6 +1823,10 @@ Creates a polygon geometry from an outer ring and optional series of inner ring 
 
        * geom_to_wkt(make_polygon(geom_from_wkt('LINESTRING( 0 0, 0 1, 1 1, 1 0, 0 0 )'),geom_from_wkt('LINESTRING( 0.1 0.1, 0.1 0.2, 0.2 0.2, 0.2 0.1, 0.1 0.1 )'),geom_from_wkt('LINESTRING( 0.8 0.8, 0.8 0.9, 0.9 0.9, 0.9 0.8, 0.8 0.8 )'))) → 'Polygon ((0 0, 0 1, 1 1, 1 0, 0 0),(0.1 0.1, 0.1 0.2, 0.2 0.2, 0.2 0.1, 0.1 0.1),(0.8 0.8, 0.8 0.9, 0.9 0.9, 0.9 0.8, 0.8 0.8))'
 
+
+.. end_make_polygon_section
+
+.. make_rectangle_3points_section
 
 .. _expression_function_GeometryGroup_make_rectangle_3points:
 
@@ -1583,6 +1857,10 @@ Creates a rectangle from 3 points.
        * geom_to_wkt(make_rectangle(make_point(0, 0), make_point(0,5), make_point(5, 3), 1))) → 'Polygon ((0 0, 0 5, 5 5, 5 0, 0 0))'
 
 
+.. end_make_rectangle_3points_section
+
+.. make_regular_polygon_section
+
 .. _expression_function_GeometryGroup_make_regular_polygon:
 
 make_regular_polygon
@@ -1612,6 +1890,10 @@ Creates a regular polygon.
        * geom_to_wkt(make_regular_polygon(make_point(0,0), project(make_point(0,0), 4.0451, radians(36)), 5)) → 'Polygon ((0 5, 4.76 1.55, 2.94 -4.05, -2.94 -4.05, -4.76 1.55, 0 5))'
 
 
+.. end_make_regular_polygon_section
+
+.. make_square_section
+
 .. _expression_function_GeometryGroup_make_square:
 
 make_square
@@ -1636,6 +1918,10 @@ Creates a square from a diagonal.
 
        * geom_to_wkt(make_square( make_point(5,0), make_point(5,5))) → 'Polygon ((5 0, 2.5 2.5, 5 5, 7.5 2.5, 5 0))'
 
+
+.. end_make_square_section
+
+.. make_triangle_section
 
 .. _expression_function_GeometryGroup_make_triangle:
 
@@ -1664,6 +1950,10 @@ Creates a triangle polygon.
        * geom_to_wkt(boundary(make_triangle(make_point(0,0), make_point(5,5), make_point(0,10)))) → 'LineString (0 0, 5 5, 0 10, 0 0)'
 
 
+.. end_make_triangle_section
+
+.. minimal_circle_section
+
 .. _expression_function_GeometryGroup_minimal_circle:
 
 minimal_circle
@@ -1688,6 +1978,10 @@ Returns the minimal enclosing circle of a geometry. It represents the minimum ci
 
        * geom_to_wkt( minimal_circle( geom_from_wkt( 'MULTIPOINT(1 2, 3 4, 3 2)' ), 4 ) ) → Polygon ((3 4, 3 2, 1 2, 1 4, 3 4))
 
+
+.. end_minimal_circle_section
+
+.. nodes_to_points_section
 
 .. _expression_function_GeometryGroup_nodes_to_points:
 
@@ -1714,6 +2008,10 @@ Returns a multipoint geometry consisting of every node in the input geometry.
        * geom_to_wkt(nodes_to_points(geom_from_wkt('POLYGON((-1 -1, 4 0, 4 2, 0 2, -1 -1))'),true)) → 'MultiPoint ((-1 -1),(4 0),(4 2),(0 2))'
 
 
+.. end_nodes_to_points_section
+
+.. num_geometries_section
+
 .. _expression_function_GeometryGroup_num_geometries:
 
 num_geometries
@@ -1734,6 +2032,10 @@ Returns the number of geometries in a geometry collection, or null if the input 
    * - Examples
      - * num_geometries(geom_from_wkt('GEOMETRYCOLLECTION(POINT(0 1), POINT(0 0), POINT(1 0), POINT(1 1))')) → 4
 
+
+.. end_num_geometries_section
+
+.. num_interior_rings_section
 
 .. _expression_function_GeometryGroup_num_interior_rings:
 
@@ -1756,6 +2058,10 @@ Returns the number of interior rings in a polygon or geometry collection, or nul
      - * num_interior_rings(geom_from_wkt('POLYGON((-1 -1, 4 0, 4 2, 0 2, -1 -1),(-0.1 -0.1, 0.4 0, 0.4 0.2, 0 0.2, -0.1 -0.1))')) → 1
 
 
+.. end_num_interior_rings_section
+
+.. num_points_section
+
 .. _expression_function_GeometryGroup_num_points:
 
 num_points
@@ -1777,6 +2083,10 @@ Returns the number of vertices in a geometry.
      - * num_points($geometry) → number of vertices in $geometry
 
 
+.. end_num_points_section
+
+.. num_rings_section
+
 .. _expression_function_GeometryGroup_num_rings:
 
 num_rings
@@ -1797,6 +2107,10 @@ Returns the number of rings (including exterior rings) in a polygon or geometry 
    * - Examples
      - * num_rings(geom_from_wkt('POLYGON((-1 -1, 4 0, 4 2, 0 2, -1 -1),(-0.1 -0.1, 0.4 0, 0.4 0.2, 0 0.2, -0.1 -0.1))')) → 2
 
+
+.. end_num_rings_section
+
+.. offset_curve_section
 
 .. _expression_function_GeometryGroup_offset_curve:
 
@@ -1833,6 +2147,10 @@ Returns a geometry formed by offsetting a linestring geometry to the side. Dista
        * offset_curve($geometry, 10.5, join=3) → line offset to the left by 10.5 units, using a beveled join
 
 
+.. end_offset_curve_section
+
+.. order_parts_section
+
 .. _expression_function_GeometryGroup_order_parts:
 
 order_parts
@@ -1860,6 +2178,10 @@ Orders the parts of a MultiGeometry by a given criteria
        * order_parts(geom_from_wkt('LineString(1 2, 3 2, 4 3)'), '1', True) → LineString(1 2, 3 2, 4 3)
 
 
+.. end_order_parts_section
+
+.. oriented_bbox_section
+
 .. _expression_function_GeometryGroup_oriented_bbox:
 
 oriented_bbox
@@ -1880,6 +2202,10 @@ Returns a geometry which represents the minimal oriented bounding box of an inpu
    * - Examples
      - * geom_to_wkt( oriented_bbox( geom_from_wkt( 'MULTIPOINT(1 2, 3 4, 3 2)' ) ) ) → Polygon ((1 4, 1 2, 3 2, 3 4, 1 4))
 
+
+.. end_oriented_bbox_section
+
+.. overlaps_section
 
 .. _expression_function_GeometryGroup_overlaps:
 
@@ -1906,6 +2232,10 @@ Tests whether a geometry overlaps another. Returns true if the geometries share 
        * overlaps( geom_from_wkt( 'LINESTRING(0 0, 1 1)' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) ) → false
 
 
+.. end_overlaps_section
+
+.. perimeter_section
+
 .. _expression_function_GeometryGroup_perimeter:
 
 perimeter
@@ -1926,6 +2256,10 @@ Returns the perimeter of a geometry polygon object. Calculations are always plan
    * - Examples
      - * perimeter(geom_from_wkt('POLYGON((0 0, 4 0, 4 2, 0 2, 0 0))')) → 12.0
 
+
+.. end_perimeter_section
+
+.. point_n_section
 
 .. _expression_function_GeometryGroup_point_n:
 
@@ -1950,6 +2284,10 @@ Returns a specific node from a geometry.
      - * geom_to_wkt(point_n(geom_from_wkt('POLYGON((0 0, 4 0, 4 2, 0 2, 0 0))'),2)) → 'Point (4 0)'
 
 
+.. end_point_n_section
+
+.. point_on_surface_section
+
 .. _expression_function_GeometryGroup_point_on_surface:
 
 point_on_surface
@@ -1970,6 +2308,10 @@ Returns a point guaranteed to lie on the surface of a geometry.
    * - Examples
      - * point_on_surface($geometry) → a point geometry
 
+
+.. end_point_on_surface_section
+
+.. pole_of_inaccessibility_section
 
 .. _expression_function_GeometryGroup_pole_of_inaccessibility:
 
@@ -1993,6 +2335,10 @@ Calculates the approximate pole of inaccessibility for a surface, which is the m
    * - Examples
      - * geom_to_wkt(pole_of_inaccessibility( geom_from_wkt('POLYGON((0 1,0 9,3 10,3 3, 10 3, 10 1, 0 1))'), 0.1)) → Point(1.55, 1.55)
 
+
+.. end_pole_of_inaccessibility_section
+
+.. project_section
 
 .. _expression_function_GeometryGroup_project:
 
@@ -2021,6 +2367,10 @@ Returns a point projected from a start point using a distance, a bearing (azimut
      - * geom_to_wkt(project(make_point(1, 2), 3, radians(270))) → Point(-2, 2)
 
 
+.. end_project_section
+
+.. relate_section
+
 .. _expression_function_GeometryGroup_relate:
 
 relate
@@ -2037,6 +2387,10 @@ Tests the Dimensional Extended 9 Intersection Model (DE-9IM) representation of t
 
 
 
+
+.. end_relate_section
+
+.. reverse_section
 
 .. _expression_function_GeometryGroup_reverse:
 
@@ -2058,6 +2412,10 @@ Reverses the direction of a line string by reversing the order of its vertices.
    * - Examples
      - * geom_to_wkt(reverse(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2)'))) → 'LINESTRING(2 2, 1 1, 0 0)'
 
+
+.. end_reverse_section
+
+.. rotate_section
 
 .. _expression_function_GeometryGroup_rotate:
 
@@ -2086,6 +2444,10 @@ Returns a rotated version of a geometry. Calculations are in the Spatial Referen
        * rotate($geometry, 45) → geometry rotated 45 degrees clockwise around the center of its bounding box
 
 
+.. end_rotate_section
+
+.. segments_to_lines_section
+
 .. _expression_function_GeometryGroup_segments_to_lines:
 
 segments_to_lines
@@ -2106,6 +2468,10 @@ Returns a multi line geometry consisting of a line for every segment in the inpu
    * - Examples
      - * geom_to_wkt(segments_to_lines(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2)'))) → 'MultiLineString ((0 0, 1 1),(1 1, 2 2))'
 
+
+.. end_segments_to_lines_section
+
+.. shortest_line_section
 
 .. _expression_function_GeometryGroup_shortest_line:
 
@@ -2130,6 +2496,10 @@ Returns the shortest line joining geometry1 to geometry2. The resultant line wil
      - * geom_to_wkt(shortest_line(geom_from_wkt('LINESTRING (20 80, 98 190, 110 180, 50 75 )'),geom_from_wkt('POINT(100 100)'))) → LineString(73.0769 115.384, 100 100)
 
 
+.. end_shortest_line_section
+
+.. simplify_section
+
 .. _expression_function_GeometryGroup_simplify:
 
 simplify
@@ -2153,6 +2523,10 @@ Simplifies a geometry by removing nodes using a distance based threshold (ie, th
      - * geom_to_wkt(simplify(geometry:=geom_from_wkt('LineString(0 0, 5 0.1, 10 0)'),tolerance:=5)) → 'LineString(0 0, 10 0)'
 
 
+.. end_simplify_section
+
+.. simplify_vw_section
+
 .. _expression_function_GeometryGroup_simplify_vw:
 
 simplify_vw
@@ -2175,6 +2549,10 @@ Simplifies a geometry by removing nodes using an area based threshold (ie, the V
    * - Examples
      - * geom_to_wkt(simplify_vw(geometry:=geom_from_wkt('LineString(0 0, 5 0, 5.01 10, 5.02 0, 10 0)'),tolerance:=5)) → 'LineString(0 0, 10 0)'
 
+
+.. end_simplify_vw_section
+
+.. single_sided_buffer_section
 
 .. _expression_function_GeometryGroup_single_sided_buffer:
 
@@ -2211,6 +2589,10 @@ Returns a geometry formed by buffering out just one side of a linestring geometr
        * single_sided_buffer($geometry, 10.5, join=3) → line buffered to the left by 10.5 units, using a beveled join
 
 
+.. end_single_sided_buffer_section
+
+.. smooth_section
+
 .. _expression_function_GeometryGroup_smooth:
 
 smooth
@@ -2240,6 +2622,10 @@ Smooths a geometry by adding extra nodes which round off corners in the geometry
      - * geom_to_wkt(smooth(geometry:=geom_from_wkt('LineString(0 0, 5 0, 5 5)'),iterations:=1,offset:=0.2,min_length:=-1,max_angle:=180)) → 'LineString (0 0, 4 0, 5 1, 5 5)'
 
 
+.. end_smooth_section
+
+.. start_point_section
+
 .. _expression_function_GeometryGroup_start_point:
 
 start_point
@@ -2260,6 +2646,10 @@ Returns the first node from a geometry.
    * - Examples
      - * geom_to_wkt(start_point(geom_from_wkt('LINESTRING(4 0, 4 2, 0 2)'))) → 'Point (4 0)'
 
+
+.. end_start_point_section
+
+.. sym_difference_section
 
 .. _expression_function_GeometryGroup_sym_difference:
 
@@ -2283,6 +2673,10 @@ Returns a geometry that represents the portions of two geometries that do not in
    * - Examples
      - * geom_to_wkt( sym_difference( geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ), geom_from_wkt( 'LINESTRING(3 3, 8 8)' ) ) ) → LINESTRING(5 5, 8 8)
 
+
+.. end_sym_difference_section
+
+.. tapered_buffer_section
 
 .. _expression_function_GeometryGroup_tapered_buffer:
 
@@ -2311,6 +2705,10 @@ Creates a buffer along a line geometry where the buffer diameter varies evenly o
      - * tapered_buffer(geometry:=geom_from_wkt('LINESTRING(1 2, 4 2)'),start_width:=1,end_width:=2,segments:=8) → A tapered buffer starting with a diameter of 1 and ending with a diameter of 2 along the linestring geometry.
 
 
+.. end_tapered_buffer_section
+
+.. touches_section
+
 .. _expression_function_GeometryGroup_touches:
 
 touches
@@ -2335,6 +2733,10 @@ Tests whether a geometry touches another. Returns true if the geometries have at
 
        * touches( geom_from_wkt( 'POINT(4 4)' ), geom_from_wkt( 'POINT(5 5)' ) ) → false
 
+
+.. end_touches_section
+
+.. transform_section
 
 .. _expression_function_GeometryGroup_transform:
 
@@ -2361,6 +2763,10 @@ Returns the geometry transformed from a source CRS to a destination CRS.
      - * geom_to_wkt( transform( $geometry, 'EPSG:2154', 'EPSG:4326' ) ) → POINT(0 51)
 
 
+.. end_transform_section
+
+.. translate_section
+
 .. _expression_function_GeometryGroup_translate:
 
 translate
@@ -2386,6 +2792,10 @@ Returns a translated version of a geometry. Calculations are in the Spatial Refe
      - * translate($geometry, 5, 10) → a geometry of the same type like the original one
 
 
+.. end_translate_section
+
+.. union_section
+
 .. _expression_function_GeometryGroup_union:
 
 union
@@ -2408,6 +2818,10 @@ Returns a geometry that represents the point set union of the geometries.
    * - Examples
      - * geom_to_wkt( union( geom_from_wkt( 'POINT(4 4)' ), geom_from_wkt( 'POINT(5 5)' ) ) ) → MULTIPOINT(4 4, 5 5)
 
+
+.. end_union_section
+
+.. wedge_buffer_section
 
 .. _expression_function_GeometryGroup_wedge_buffer:
 
@@ -2438,6 +2852,10 @@ Returns a wedge shaped buffer originating from a point geometry.
      - * wedge_buffer(center:=geom_from_wkt('POINT(1 2)'),azimuth:=90,width:=180,outer_radius:=1) → A wedge shaped buffer centered on the point (1,2), facing to the East, with a width of 180 degrees and outer radius of 1.
 
 
+.. end_wedge_buffer_section
+
+.. within_section
+
 .. _expression_function_GeometryGroup_within:
 
 within
@@ -2463,6 +2881,10 @@ Tests whether a geometry is within another. Returns true if the geometry a is co
        * within( geom_from_wkt( 'POINT( 5 5 )' ), geom_from_wkt( 'POLYGON((0 0, 0 1, 1 1, 1 0, 0 0 ))' ) ) → false
 
 
+.. end_within_section
+
+.. x_section
+
 .. _expression_function_GeometryGroup_x:
 
 x
@@ -2486,6 +2908,10 @@ Returns the x coordinate of a point geometry, or the x-coordinate of the centroi
        * x( $geometry ) → x coordinate of the current feature's centroid
 
 
+.. end_x_section
+
+.. x_max_section
+
 .. _expression_function_GeometryGroup_x_max:
 
 x_max
@@ -2507,6 +2933,10 @@ Returns the maximum x coordinate of a geometry. Calculations are in the spatial 
      - * x_max( geom_from_wkt( 'LINESTRING(2 5, 3 6, 4 8)') ) → 4
 
 
+.. end_x_max_section
+
+.. x_min_section
+
 .. _expression_function_GeometryGroup_x_min:
 
 x_min
@@ -2527,6 +2957,10 @@ Returns the minimum x coordinate of a geometry. Calculations are in the spatial 
    * - Examples
      - * x_min( geom_from_wkt( 'LINESTRING(2 5, 3 6, 4 8)') ) → 2
 
+
+.. end_x_min_section
+
+.. y_section
 
 .. _expression_function_GeometryGroup_y:
 
@@ -2551,6 +2985,10 @@ Returns the y coordinate of a point geometry, or the y-coordinate of the centroi
        * y( $geometry ) → y coordinate of the current feature's centroid
 
 
+.. end_y_section
+
+.. y_max_section
+
 .. _expression_function_GeometryGroup_y_max:
 
 y_max
@@ -2571,6 +3009,10 @@ Returns the maximum y coordinate of a geometry. Calculations are in the spatial 
    * - Examples
      - * y_max( geom_from_wkt( 'LINESTRING(2 5, 3 6, 4 8)') ) → 8
 
+
+.. end_y_max_section
+
+.. y_min_section
 
 .. _expression_function_GeometryGroup_y_min:
 
@@ -2593,6 +3035,10 @@ Returns the minimum y coordinate of a geometry. Calculations are in the spatial 
      - * y_min( geom_from_wkt( 'LINESTRING(2 5, 3 6, 4 8)') ) → 5
 
 
+.. end_y_min_section
+
+.. z_section
+
 .. _expression_function_GeometryGroup_z:
 
 z
@@ -2613,6 +3059,10 @@ Returns the z coordinate of a point geometry.
    * - Examples
      - * z( geom_from_wkt( 'POINTZ(2 5 7)' ) ) → 7
 
+
+.. end_z_section
+
+.. z_max_section
 
 .. _expression_function_GeometryGroup_z_max:
 
@@ -2637,6 +3087,10 @@ Returns the maximum z coordinate of a geometry.
        * z_max( make_line( make_point( 0,0,0 ), make_point( -1,-1,-2 ) ) ) → 0
 
 
+.. end_z_max_section
+
+.. z_min_section
+
 .. _expression_function_GeometryGroup_z_min:
 
 z_min
@@ -2659,4 +3113,6 @@ Returns the minimum z coordinate of a geometry.
 
        * z_min( make_line( make_point( 0,0,0 ), make_point( -1,-1,-2 ) ) ) → -2
 
+
+.. end_z_min_section
 

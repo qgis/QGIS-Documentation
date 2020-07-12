@@ -1,5 +1,7 @@
 :orphan:
 
+.. aggregate_section
+
 .. _expression_function_Aggregates_aggregate:
 
 aggregate
@@ -39,6 +41,10 @@ Returns an aggregate value calculated using features from another layer.
        * aggregate(layer:='countries', aggregate:='max', expression:="code", filter:=intersects( $geometry, geometry(@parent) ) ) → The country code of an intersecting country on the layer 'countries'
 
 
+.. end_aggregate_section
+
+.. array_agg_section
+
 .. _expression_function_Aggregates_array_agg:
 
 array_agg
@@ -66,6 +72,10 @@ Returns an array of aggregated values from a field or expression.
      - * array_agg("name",group_by:="state") → list of name values, grouped by state field
 
 
+.. end_array_agg_section
+
+.. collect_section
+
 .. _expression_function_Aggregates_collect:
 
 collect
@@ -90,6 +100,10 @@ Returns the multipart geometry of aggregated geometries from an expression
    * - Examples
      - * collect( $geometry ) → multipart geometry of aggregated geometries
 
+
+.. end_collect_section
+
+.. concatenate_section
 
 .. _expression_function_Aggregates_concatenate:
 
@@ -120,6 +134,10 @@ Returns all aggregated strings from a field or expression joined by a delimiter.
      - * concatenate("town_name",group_by:="state",concatenator:=',') → comma separated list of town_names, grouped by state field
 
 
+.. end_concatenate_section
+
+.. concatenate_unique_section
+
 .. _expression_function_Aggregates_concatenate_unique:
 
 concatenate_unique
@@ -149,6 +167,10 @@ Returns all unique strings from a field or expression joined by a delimiter.
      - * concatenate("town_name",group_by:="state",concatenator:=',') → comma separated list of unique town_names, grouped by state field
 
 
+.. end_concatenate_unique_section
+
+.. count_section
+
 .. _expression_function_Aggregates_count:
 
 count
@@ -173,6 +195,10 @@ Returns the count of matching features.
    * - Examples
      - * count("stations",group_by:="state") → count of stations, grouped by state field
 
+
+.. end_count_section
+
+.. count_distinct_section
 
 .. _expression_function_Aggregates_count_distinct:
 
@@ -199,6 +225,10 @@ Returns the count of distinct values.
      - * count_distinct("stations",group_by:="state") → count of distinct stations values, grouped by state field
 
 
+.. end_count_distinct_section
+
+.. count_missing_section
+
 .. _expression_function_Aggregates_count_missing:
 
 count_missing
@@ -223,6 +253,10 @@ Returns the count of missing (null) values.
    * - Examples
      - * count_missing("stations",group_by:="state") → count of missing (null) station values, grouped by state field
 
+
+.. end_count_missing_section
+
+.. iqr_section
 
 .. _expression_function_Aggregates_iqr:
 
@@ -249,6 +283,10 @@ Returns the calculated inter quartile range from a field or expression.
      - * iqr("population",group_by:="state") → inter quartile range of population value, grouped by state field
 
 
+.. end_iqr_section
+
+.. majority_section
+
 .. _expression_function_Aggregates_majority:
 
 majority
@@ -273,6 +311,10 @@ Returns the aggregate majority of values (most commonly occurring value) from a 
    * - Examples
      - * majority("class",group_by:="state") → most commonly occurring class value, grouped by state field
 
+
+.. end_majority_section
+
+.. max_length_section
 
 .. _expression_function_Aggregates_max_length:
 
@@ -299,6 +341,10 @@ Returns the maximum length of strings from a field or expression.
      - * max_length("town_name",group_by:="state") → maximum length of town_name, grouped by state field
 
 
+.. end_max_length_section
+
+.. maximum_section
+
 .. _expression_function_Aggregates_maximum:
 
 maximum
@@ -323,6 +369,10 @@ Returns the aggregate maximum value from a field or expression.
    * - Examples
      - * maximum("population",group_by:="state") → maximum population value, grouped by state field
 
+
+.. end_maximum_section
+
+.. mean_section
 
 .. _expression_function_Aggregates_mean:
 
@@ -349,6 +399,10 @@ Returns the aggregate mean value from a field or expression.
      - * mean("population",group_by:="state") → mean population value, grouped by state field
 
 
+.. end_mean_section
+
+.. median_section
+
 .. _expression_function_Aggregates_median:
 
 median
@@ -373,6 +427,10 @@ Returns the aggregate median value from a field or expression.
    * - Examples
      - * median("population",group_by:="state") → median population value, grouped by state field
 
+
+.. end_median_section
+
+.. min_length_section
 
 .. _expression_function_Aggregates_min_length:
 
@@ -399,6 +457,10 @@ Returns the minimum length of strings from a field or expression.
      - * min_length("town_name",group_by:="state") → minimum length of town_name, grouped by state field
 
 
+.. end_min_length_section
+
+.. minimum_section
+
 .. _expression_function_Aggregates_minimum:
 
 minimum
@@ -423,6 +485,10 @@ Returns the aggregate minimum value from a field or expression.
    * - Examples
      - * minimum("population",group_by:="state") → minimum population value, grouped by state field
 
+
+.. end_minimum_section
+
+.. minority_section
 
 .. _expression_function_Aggregates_minority:
 
@@ -449,6 +515,10 @@ Returns the aggregate minority of values (least occurring value) from a field or
      - * minority("class",group_by:="state") → least occurring class value, grouped by state field
 
 
+.. end_minority_section
+
+.. q1_section
+
 .. _expression_function_Aggregates_q1:
 
 q1
@@ -473,6 +543,10 @@ Returns the calculated first quartile from a field or expression.
    * - Examples
      - * q1("population",group_by:="state") → first quartile of population value, grouped by state field
 
+
+.. end_q1_section
+
+.. q3_section
 
 .. _expression_function_Aggregates_q3:
 
@@ -499,6 +573,10 @@ Returns the calculated third quartile from a field or expression.
      - * q3("population",group_by:="state") → third quartile of population value, grouped by state field
 
 
+.. end_q3_section
+
+.. range_section
+
 .. _expression_function_Aggregates_range:
 
 range
@@ -523,6 +601,10 @@ Returns the aggregate range of values (maximum - minimum) from a field or expres
    * - Examples
      - * range("population",group_by:="state") → range of population values, grouped by state field
 
+
+.. end_range_section
+
+.. relation_aggregate_section
 
 .. _expression_function_Aggregates_relation_aggregate:
 
@@ -559,6 +641,10 @@ Returns an aggregate value calculated using all matching child features from a l
        * relation_aggregate('my_relation','array_agg', "id") → array of the id field from all matching child features using the 'my_relation' relation
 
 
+.. end_relation_aggregate_section
+
+.. stdev_section
+
 .. _expression_function_Aggregates_stdev:
 
 stdev
@@ -584,6 +670,10 @@ Returns the aggregate standard deviation value from a field or expression.
      - * stdev("population",group_by:="state") → standard deviation of population value, grouped by state field
 
 
+.. end_stdev_section
+
+.. sum_section
+
 .. _expression_function_Aggregates_sum:
 
 sum
@@ -608,4 +698,6 @@ Returns the aggregate summed value from a field or expression.
    * - Examples
      - * sum("population",group_by:="state") → summed population value, grouped by state field
 
+
+.. end_sum_section
 

@@ -1,5 +1,7 @@
 :orphan:
 
+.. color_cmyk_section
+
 .. _expression_function_Color_color_cmyk:
 
 color_cmyk
@@ -26,6 +28,10 @@ Returns a string representation of a color based on its cyan, magenta, yellow an
    * - Examples
      - * color_cmyk(100,50,0,10) → '0,115,230'
 
+
+.. end_color_cmyk_section
+
+.. color_cmyka_section
 
 .. _expression_function_Color_color_cmyka:
 
@@ -56,6 +62,10 @@ Returns a string representation of a color based on its cyan, magenta, yellow, b
      - * color_cmyk(100,50,0,10,200) → '0,115,230,200'
 
 
+.. end_color_cmyka_section
+
+.. color_grayscale_average_section
+
 .. _expression_function_Color_color_grayscale_average:
 
 color_grayscale_average
@@ -76,6 +86,10 @@ Applies a grayscale filter and returns a string representation from a provided c
    * - Examples
      - * color_grayscale_average('255,100,50') → '135,135,135,255'
 
+
+.. end_color_grayscale_average_section
+
+.. color_hsl_section
 
 .. _expression_function_Color_color_hsl:
 
@@ -101,6 +115,10 @@ Returns a string representation of a color based on its hue, saturation, and lig
    * - Examples
      - * color_hsl(100,50,70) → '166,217,140'
 
+
+.. end_color_hsl_section
+
+.. color_hsla_section
 
 .. _expression_function_Color_color_hsla:
 
@@ -129,6 +147,10 @@ Returns a string representation of a color based on its hue, saturation, lightne
      - * color_hsla(100,50,70,200) → '166,217,140,200'
 
 
+.. end_color_hsla_section
+
+.. color_hsv_section
+
 .. _expression_function_Color_color_hsv:
 
 color_hsv
@@ -153,6 +175,10 @@ Returns a string representation of a color based on its hue, saturation, and val
    * - Examples
      - * color_hsv(40,100,100) → '255,170,0'
 
+
+.. end_color_hsv_section
+
+.. color_hsva_section
 
 .. _expression_function_Color_color_hsva:
 
@@ -181,6 +207,10 @@ Returns a string representation of a color based on its hue, saturation, value a
      - * color_hsva(40,100,100,200) → '255,170,0,200'
 
 
+.. end_color_hsva_section
+
+.. color_mix_rgb_section
+
 .. _expression_function_Color_color_mix_rgb:
 
 color_mix_rgb
@@ -206,6 +236,10 @@ Returns a string representing a color mixing the red, green, blue, and alpha val
      - * color_mix_rgb('0,0,0','255,255,255',0.5) → '127,127,127,255'
 
 
+.. end_color_mix_rgb_section
+
+.. color_part_section
+
 .. _expression_function_Color_color_part:
 
 color_part
@@ -228,6 +262,10 @@ Returns a specific component from a color string, e.g., the red component or alp
    * - Examples
      - * color_part('200,10,30','green') → 10
 
+
+.. end_color_part_section
+
+.. color_rgb_section
 
 .. _expression_function_Color_color_rgb:
 
@@ -253,6 +291,10 @@ Returns a string representation of a color based on its red, green, and blue com
    * - Examples
      - * color_rgb(255,127,0) → '255,127,0'
 
+
+.. end_color_rgb_section
+
+.. color_rgba_section
 
 .. _expression_function_Color_color_rgba:
 
@@ -281,6 +323,10 @@ Returns a string representation of a color based on its red, green, blue, and al
      - * color_rgba(255,127,0,200) → '255,127,0,200'
 
 
+.. end_color_rgba_section
+
+.. create_ramp_section
+
 .. _expression_function_Color_create_ramp:
 
 create_ramp
@@ -303,6 +349,10 @@ Returns a gradient ramp from a map of color strings and steps.
    * - Examples
      - * ramp_color(create_ramp(map(0,'0,0,0',1,'255,0,0')),1) → '255,0,0,255'
 
+
+.. end_create_ramp_section
+
+.. darker_section
 
 .. _expression_function_Color_darker:
 
@@ -327,6 +377,10 @@ Returns a darker (or lighter) color string
      - * darker('200,10,30',300) → '66,3,10,255'
 
 
+.. end_darker_section
+
+.. lighter_section
+
 .. _expression_function_Color_lighter:
 
 lighter
@@ -350,6 +404,10 @@ Returns a lighter (or darker) color string
      - * lighter('200,10,30',200) → '255,158,168,255'
 
 
+.. end_lighter_section
+
+.. project_color_section
+
 .. _expression_function_Color_project_color:
 
 project_color
@@ -371,6 +429,10 @@ Returns a color from the project's color scheme.
      - * project_color('Logo color') → '20,140,50'
 
 
+.. end_project_color_section
+
+.. ramp_color_section
+
 .. _expression_function_Color_ramp_color:
 
 ramp_color
@@ -387,6 +449,10 @@ Returns a string representing a color from a color ramp.
 
 
 
+
+.. end_ramp_color_section
+
+.. set_color_part_section
 
 .. _expression_function_Color_set_color_part:
 
@@ -412,4 +478,6 @@ Sets a specific color component for a color string, e.g., the red component or a
    * - Examples
      - * set_color_part('200,10,30','green',50) → '200,50,30,255'
 
+
+.. end_set_color_part_section
 

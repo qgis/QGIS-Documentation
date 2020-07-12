@@ -1,5 +1,7 @@
 :orphan:
 
+.. env_section
+
 .. _expression_function_General_env:
 
 env
@@ -25,6 +27,10 @@ Gets an environment variable and returns its content as a string. If the variabl
        * env( 'I_DO_NOT_EXIST' ) → NULL
 
 
+.. end_env_section
+
+.. eval_section
+
 .. _expression_function_General_eval:
 
 eval
@@ -48,6 +54,10 @@ Evaluates an expression which is passed in a string. Useful to expand dynamic pa
        * eval(@expression_var) → [whatever the result of evaluating @expression_var might be…]
 
 
+.. end_eval_section
+
+.. eval_template_section
+
 .. _expression_function_General_eval_template:
 
 eval_template
@@ -69,6 +79,10 @@ Evaluates a template which is passed in a string. Useful to expand dynamic param
      - * eval_template('QGIS [% upper(\\'rocks\\') %]') → QGIS ROCKS
 
 
+.. end_eval_template_section
+
+.. is_layer_visible_section
+
 .. _expression_function_General_is_layer_visible:
 
 is_layer_visible
@@ -89,6 +103,10 @@ Returns true if a specified layer is visible.
    * - Examples
      - * is_layer_visible('baseraster') → True
 
+
+.. end_is_layer_visible_section
+
+.. layer_property_section
 
 .. _expression_function_General_layer_property:
 
@@ -117,6 +135,10 @@ Returns a matching layer property or metadata value.
        * layer_property('landsat','crs') → 'EPSG:4326'
 
 
+.. end_layer_property_section
+
+.. var_section
+
 .. _expression_function_General_var:
 
 var
@@ -137,6 +159,10 @@ Returns the value stored within a specified variable.
    * - Examples
      - * var('qgis_version') → '2.12'
 
+
+.. end_var_section
+
+.. with_variable_section
 
 .. _expression_function_General_with_variable:
 
@@ -162,4 +188,6 @@ This function sets a variable for any expression code that will be provided as 3
    * - Examples
      - * with_variable('my_sum', 1 + 2 + 3, @my_sum * 2 + @my_sum * 5) → 42
 
+
+.. end_with_variable_section
 
