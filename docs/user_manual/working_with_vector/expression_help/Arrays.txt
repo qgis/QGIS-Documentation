@@ -3,20 +3,20 @@
 array
 .....
 
+Returns an array containing all the values passed as parameter.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns an array containing all the values passed as parameter.
    * - Syntax
      - array(value1, value2, ...)
 
    * - Arguments
-     - **value** - a value
+     - * **value** - a value
 
    * - Examples
-     - ``array(2,10)`` → [ 2, 10 ]
+     - * array(2,10) → [ 2, 10 ]
 
 
 .. _expression_function_Arrays_array_all:
@@ -24,24 +24,24 @@ array
 array_all
 .........
 
+Returns true if an array contains all the values of a given array.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns true if an array contains all the values of a given array.
    * - Syntax
      - array_all(array_a, array_b)
 
    * - Arguments
-     - **array_a** - an array
+     - * **array_a** - an array
 
-       **array_b** - the array of values to search
+       * **array_b** - the array of values to search
 
    * - Examples
-     - ``array_all(array(1,2,3),array(2,3))`` → true
+     - * array_all(array(1,2,3),array(2,3)) → true
 
-       ``array_all(array(1,2,3),array(1,2,4))`` → false
+       * array_all(array(1,2,3),array(1,2,4)) → false
 
 
 .. _expression_function_Arrays_array_append:
@@ -49,22 +49,22 @@ array_all
 array_append
 ............
 
+Returns an array with the given value added at the end.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns an array with the given value added at the end.
    * - Syntax
      - array_append(array, value)
 
    * - Arguments
-     - **array** - an array
+     - * **array** - an array
 
-       **value** - the value to add
+       * **value** - the value to add
 
    * - Examples
-     - ``array_append(array(1,2,3),4)`` → [ 1, 2, 3, 4 ]
+     - * array_append(array(1,2,3),4) → [ 1, 2, 3, 4 ]
 
 
 .. _expression_function_Arrays_array_cat:
@@ -72,20 +72,20 @@ array_append
 array_cat
 .........
 
+Returns an array containing all the given arrays concatenated.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns an array containing all the given arrays concatenated.
    * - Syntax
      - array_cat(array1, array2, ...)
 
    * - Arguments
-     - **array** - an array
+     - * **array** - an array
 
    * - Examples
-     - ``array_cat(array(1,2),array(2,3))`` → [ 1, 2, 2, 3 ]
+     - * array_cat(array(1,2),array(2,3)) → [ 1, 2, 2, 3 ]
 
 
 .. _expression_function_Arrays_array_contains:
@@ -93,22 +93,22 @@ array_cat
 array_contains
 ..............
 
+Returns true if an array contains the given value.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns true if an array contains the given value.
    * - Syntax
      - array_contains(array, value)
 
    * - Arguments
-     - **array** - an array
+     - * **array** - an array
 
-       **value** - the value to search
+       * **value** - the value to search
 
    * - Examples
-     - ``array_contains(array(1,2,3),2)`` → true
+     - * array_contains(array(1,2,3),2) → true
 
 
 .. _expression_function_Arrays_array_distinct:
@@ -116,20 +116,20 @@ array_contains
 array_distinct
 ..............
 
+Returns an array containing distinct values of the given array.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns an array containing distinct values of the given array.
    * - Syntax
      - array_distinct(array)
 
    * - Arguments
-     - **array** - an array
+     - * **array** - an array
 
    * - Examples
-     - ``array_distinct(array(1,2,3,2,1))`` → [ 1, 2, 3 ]
+     - * array_distinct(array(1,2,3,2,1)) → [ 1, 2, 3 ]
 
 
 .. _expression_function_Arrays_array_filter:
@@ -137,22 +137,22 @@ array_distinct
 array_filter
 ............
 
+Returns an array with only the items for which the expression evaluates to true.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns an array with only the items for which the expression evaluates to true.
    * - Syntax
      - array_filter(array, expression)
 
    * - Arguments
-     - **array** - an array
+     - * **array** - an array
 
-       **expression** - an expression to evaluate on each item. The variable `@element` will be replaced by the current value.
+       * **expression** - an expression to evaluate on each item. The variable `@element` will be replaced by the current value.
 
    * - Examples
-     - ``array_filter(array(1,2,3),@element &lt; 3)`` → [ 1, 2 ]
+     - * array_filter(array(1,2,3),@element &lt; 3) → [ 1, 2 ]
 
 
 .. _expression_function_Arrays_array_find:
@@ -160,22 +160,22 @@ array_filter
 array_find
 ..........
 
+Returns the index (0 for the first one) of a value within an array. Returns -1 if the value is not found.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns the index (0 for the first one) of a value within an array. Returns -1 if the value is not found.
    * - Syntax
      - array_find(array, value)
 
    * - Arguments
-     - **array** - an array
+     - * **array** - an array
 
-       **value** - the value to search
+       * **value** - the value to search
 
    * - Examples
-     - ``array_find(array(1,2,3),2)`` → 1
+     - * array_find(array(1,2,3),2) → 1
 
 
 .. _expression_function_Arrays_array_first:
@@ -183,20 +183,20 @@ array_find
 array_first
 ...........
 
+Returns the first value of an array.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns the first value of an array.
    * - Syntax
      - array_first(array)
 
    * - Arguments
-     - **array** - an array
+     - * **array** - an array
 
    * - Examples
-     - ``array_first(array('a','b','c'))`` → 'a'
+     - * array_first(array('a','b','c')) → 'a'
 
 
 .. _expression_function_Arrays_array_foreach:
@@ -204,24 +204,24 @@ array_first
 array_foreach
 .............
 
+Returns an array with the given expression evaluated on each item.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns an array with the given expression evaluated on each item.
    * - Syntax
      - array_foreach(array, expression)
 
    * - Arguments
-     - **array** - an array
+     - * **array** - an array
 
-       **expression** - an expression to evaluate on each item. The variable `@element` will be replaced by the current value.
+       * **expression** - an expression to evaluate on each item. The variable `@element` will be replaced by the current value.
 
    * - Examples
-     - ``array_foreach(array('a','b','c'),upper(@element))`` → [ 'A', 'B', 'C' ]
+     - * array_foreach(array('a','b','c'),upper(@element)) → [ 'A', 'B', 'C' ]
 
-       ``array_foreach(array(1,2,3),@element + 10)`` → [ 11, 12, 13 ]
+       * array_foreach(array(1,2,3),@element + 10) → [ 11, 12, 13 ]
 
 
 .. _expression_function_Arrays_array_get:
@@ -229,22 +229,22 @@ array_foreach
 array_get
 .........
 
+Returns the Nth value (0 for the first one) of an array.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns the Nth value (0 for the first one) of an array.
    * - Syntax
      - array_get(array, index)
 
    * - Arguments
-     - **array** - an array
+     - * **array** - an array
 
-       **index** - the index to get (0 based)
+       * **index** - the index to get (0 based)
 
    * - Examples
-     - ``array_get(array('a','b','c'),1)`` → 'b'
+     - * array_get(array('a','b','c'),1) → 'b'
 
 
 .. _expression_function_Arrays_array_insert:
@@ -252,24 +252,24 @@ array_get
 array_insert
 ............
 
+Returns an array with the given value added at the given position.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns an array with the given value added at the given position.
    * - Syntax
      - array_insert(array, pos, value)
 
    * - Arguments
-     - **array** - an array
+     - * **array** - an array
 
-       **pos** - the position where to add (0 based)
+       * **pos** - the position where to add (0 based)
 
-       **value** - the value to add
+       * **value** - the value to add
 
    * - Examples
-     - ``array_insert(array(1,2,3),1,100)`` → [ 1, 100, 2, 3 ]
+     - * array_insert(array(1,2,3),1,100) → [ 1, 100, 2, 3 ]
 
 
 .. _expression_function_Arrays_array_intersect:
@@ -277,22 +277,22 @@ array_insert
 array_intersect
 ...............
 
+Returns true if at least one element of array1 exists in array2.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns true if at least one element of array1 exists in array2.
    * - Syntax
      - array_intersect(array1, array2)
 
    * - Arguments
-     - **array1** - an array
+     - * **array1** - an array
 
-       **array2** - another array
+       * **array2** - another array
 
    * - Examples
-     - ``array_intersect(array(1,2,3,4),array(4,0,2,5))`` → true
+     - * array_intersect(array(1,2,3,4),array(4,0,2,5)) → true
 
 
 .. _expression_function_Arrays_array_last:
@@ -300,20 +300,20 @@ array_intersect
 array_last
 ..........
 
+Returns the last value of an array.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns the last value of an array.
    * - Syntax
      - array_last(array)
 
    * - Arguments
-     - **array** - an array
+     - * **array** - an array
 
    * - Examples
-     - ``array_last(array('a','b','c'))`` → 'c'
+     - * array_last(array('a','b','c')) → 'c'
 
 
 .. _expression_function_Arrays_array_length:
@@ -321,20 +321,20 @@ array_last
 array_length
 ............
 
+Returns the number of elements of an array.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns the number of elements of an array.
    * - Syntax
      - array_length(array)
 
    * - Arguments
-     - **array** - an array
+     - * **array** - an array
 
    * - Examples
-     - ``array_length(array(1,2,3))`` → 3
+     - * array_length(array(1,2,3)) → 3
 
 
 .. _expression_function_Arrays_array_prepend:
@@ -342,22 +342,22 @@ array_length
 array_prepend
 .............
 
+Returns an array with the given value added at the beginning.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns an array with the given value added at the beginning.
    * - Syntax
      - array_prepend(array, value)
 
    * - Arguments
-     - **array** - an array
+     - * **array** - an array
 
-       **value** - the value to add
+       * **value** - the value to add
 
    * - Examples
-     - ``array_prepend(array(1,2,3),0)`` → [ 0, 1, 2, 3 ]
+     - * array_prepend(array(1,2,3),0) → [ 0, 1, 2, 3 ]
 
 
 .. _expression_function_Arrays_array_remove_all:
@@ -365,22 +365,22 @@ array_prepend
 array_remove_all
 ................
 
+Returns an array with all the entries of the given value removed.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns an array with all the entries of the given value removed.
    * - Syntax
      - array_remove_all(array, value)
 
    * - Arguments
-     - **array** - an array
+     - * **array** - an array
 
-       **value** - the values to remove
+       * **value** - the values to remove
 
    * - Examples
-     - ``array_remove_all(array('a','b','c','b'),'b')`` → [ 'a', 'c' ]
+     - * array_remove_all(array('a','b','c','b'),'b') → [ 'a', 'c' ]
 
 
 .. _expression_function_Arrays_array_remove_at:
@@ -388,22 +388,22 @@ array_remove_all
 array_remove_at
 ...............
 
+Returns an array with the given index removed.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns an array with the given index removed.
    * - Syntax
      - array_remove_at(array, pos)
 
    * - Arguments
-     - **array** - an array
+     - * **array** - an array
 
-       **pos** - the position to remove (0 based)
+       * **pos** - the position to remove (0 based)
 
    * - Examples
-     - ``array_remove_at(array(1,2,3),1)`` → [ 1, 3 ]
+     - * array_remove_at(array(1,2,3),1) → [ 1, 3 ]
 
 
 .. _expression_function_Arrays_array_reverse:
@@ -411,20 +411,20 @@ array_remove_at
 array_reverse
 .............
 
+Returns the given array with array values in reversed order.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns the given array with array values in reversed order.
    * - Syntax
      - array_reverse(array)
 
    * - Arguments
-     - **array** - an array
+     - * **array** - an array
 
    * - Examples
-     - ``array_reverse(array(2,4,0,10))`` → [ 10, 0, 4, 2 ]
+     - * array_reverse(array(2,4,0,10)) → [ 10, 0, 4, 2 ]
 
 
 .. _expression_function_Arrays_array_slice:
@@ -432,38 +432,38 @@ array_reverse
 array_slice
 ...........
 
+Returns a portion of the array. The slice is defined by the start_pos and end_pos arguments.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns a portion of the array. The slice is defined by the start_pos and end_pos arguments.
    * - Syntax
      - array_slice(array, start_pos, end_pos)
 
    * - Arguments
-     - **array** - an array
+     - * **array** - an array
 
-       **start_pos** - the index of the start position of the slice (0 based). The start_pos index is included in the slice. If you use a negative start_pos, the index is counted from the end of the list (-1 based).
+       * **start_pos** - the index of the start position of the slice (0 based). The start_pos index is included in the slice. If you use a negative start_pos, the index is counted from the end of the list (-1 based).
 
-       **end_pos** - the index of the end position of the slice (0 based). The end_pos index is included in the slice. If you use a negative end_pos, the index is counted from the end of the list (-1 based).
+       * **end_pos** - the index of the end position of the slice (0 based). The end_pos index is included in the slice. If you use a negative end_pos, the index is counted from the end of the list (-1 based).
 
    * - Examples
-     - ``array_slice(array(1,2,3,4,5),0,3)`` → [ 1, 2, 3, 4 ]
+     - * array_slice(array(1,2,3,4,5),0,3) → [ 1, 2, 3, 4 ]
 
-       ``array_slice(array(1,2,3,4,5),0,-1)`` → [ 1, 2, 3, 4, 5 ]
+       * array_slice(array(1,2,3,4,5),0,-1) → [ 1, 2, 3, 4, 5 ]
 
-       ``array_slice(array(1,2,3,4,5),-5,-1)`` → [ 1, 2, 3, 4, 5 ]
+       * array_slice(array(1,2,3,4,5),-5,-1) → [ 1, 2, 3, 4, 5 ]
 
-       ``array_slice(array(1,2,3,4,5),0,0)`` → [ 1 ]
+       * array_slice(array(1,2,3,4,5),0,0) → [ 1 ]
 
-       ``array_slice(array(1,2,3,4,5),-2,-1)`` → [ 4, 5 ]
+       * array_slice(array(1,2,3,4,5),-2,-1) → [ 4, 5 ]
 
-       ``array_slice(array(1,2,3,4,5),-1,-1)`` → [ 5 ]
+       * array_slice(array(1,2,3,4,5),-1,-1) → [ 5 ]
 
-       ``array_slice(array('Dufour','Valmiera','Chugiak','Brighton'),1,2)`` → [ 'Valmiera', 'Chugiak' ]
+       * array_slice(array('Dufour','Valmiera','Chugiak','Brighton'),1,2) → [ 'Valmiera', 'Chugiak' ]
 
-       ``array_slice(array_slice(array('Dufour','Valmiera','Chugiak','Brighton'),-2,-1)`` → [ 'Chugiak', 'Brighton' ]
+       * array_slice(array_slice(array('Dufour','Valmiera','Chugiak','Brighton'),-2,-1) → [ 'Chugiak', 'Brighton' ]
 
 
 .. _expression_function_Arrays_array_sort:
@@ -471,22 +471,22 @@ array_slice
 array_sort
 ..........
 
+Returns the provided array with its elements sorted.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns the provided array with its elements sorted.
    * - Syntax
      - array_sort(array, ascending)
 
    * - Arguments
-     - **array** - an array
+     - * **array** - an array
 
-       **ascending** - set this parameter to false to sort the array in descending order
+       * **ascending** - set this parameter to false to sort the array in descending order
 
    * - Examples
-     - ``array_sort(array(3,2,1))`` → [ 1, 2, 3 ]
+     - * array_sort(array(3,2,1)) → [ 1, 2, 3 ]
 
 
 .. _expression_function_Arrays_array_to_string:
@@ -494,28 +494,28 @@ array_sort
 array_to_string
 ...............
 
+Concatenates array elements into a string separated by a delimiter and using optional string for empty values.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Concatenates array elements into a string separated by a delimiter and using optional string for empty values.
    * - Syntax
      - array_to_string(array, delimiter, empty_value)
 
    * - Arguments
-     - **array** - the input array
+     - * **array** - the input array
 
-       **delimiter** - the string delimiter used to separate concatenated array elements
+       * **delimiter** - the string delimiter used to separate concatenated array elements
 
-       **empty_value** - the optional string to use as replacement for empty (zero length) matches
+       * **empty_value** - the optional string to use as replacement for empty (zero length) matches
 
    * - Examples
-     - ``array_to_string(array('1','2','3'))`` → '1,2,3'
+     - * array_to_string(array('1','2','3')) → '1,2,3'
 
-       ``array_to_string(array(1,2,3),'-')`` → '1-2-3'
+       * array_to_string(array(1,2,3),'-') → '1-2-3'
 
-       ``array_to_string(array('1','','3'),',','0')`` → '1,0,3'
+       * array_to_string(array('1','','3'),',','0') → '1,0,3'
 
 
 .. _expression_function_Arrays_generate_series:
@@ -523,26 +523,26 @@ array_to_string
 generate_series
 ...............
 
+Creates an array containing a sequence of numbers.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Creates an array containing a sequence of numbers.
    * - Syntax
      - generate_series(start, stop, step)
 
    * - Arguments
-     - **start** - first value of the sequence
+     - * **start** - first value of the sequence
 
-       **stop** - value that ends the sequence once reached
+       * **stop** - value that ends the sequence once reached
 
-       **step** - value used as the increment between values
+       * **step** - value used as the increment between values
 
    * - Examples
-     - ``generate_series(1,5)`` → [ 1, 2, 3, 4, 5 ]
+     - * generate_series(1,5) → [ 1, 2, 3, 4, 5 ]
 
-       ``generate_series(5,1,-1)`` → [ 5, 4, 3, 2, 1 ]
+       * generate_series(5,1,-1) → [ 5, 4, 3, 2, 1 ]
 
 
 .. _expression_function_Arrays_regexp_matches:
@@ -550,26 +550,26 @@ generate_series
 regexp_matches
 ..............
 
+Returns an array of all strings captured by capturing groups, in the order the groups themselves appear in the supplied regular expression against a string.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns an array of all strings captured by capturing groups, in the order the groups themselves appear in the supplied regular expression against a string.
    * - Syntax
      - regexp_matches(string, regex, empty_value)
 
    * - Arguments
-     - **string** - the string to capture groups from against the regular expression
+     - * **string** - the string to capture groups from against the regular expression
 
-       **regex** - the regular expression used to capture groups
+       * **regex** - the regular expression used to capture groups
 
-       **empty_value** - the optional string to use as replacement for empty (zero length) matches
+       * **empty_value** - the optional string to use as replacement for empty (zero length) matches
 
    * - Examples
-     - ``regexp_matches('QGIS=>rocks','(.*)=>(.*)')`` → [ 'QGIS', 'rocks' ]
+     - * regexp_matches('QGIS=>rocks','(.*)=>(.*)') → [ 'QGIS', 'rocks' ]
 
-       ``regexp_matches('key=>','(.*)=>(.*)','empty value')`` → [ 'key', 'empty value' ]
+       * regexp_matches('key=>','(.*)=>(.*)','empty value') → [ 'key', 'empty value' ]
 
 
 .. _expression_function_Arrays_string_to_array:
@@ -577,25 +577,25 @@ regexp_matches
 string_to_array
 ...............
 
+Splits string into an array using supplied delimiter and optional string for empty values.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Splits string into an array using supplied delimiter and optional string for empty values.
    * - Syntax
      - string_to_array(string, delimiter, empty_value)
 
    * - Arguments
-     - **string** - the input string
+     - * **string** - the input string
 
-       **delimiter** - the string delimiter used to split the input string
+       * **delimiter** - the string delimiter used to split the input string
 
-       **empty_value** - the optional string to use as replacement for empty (zero length) matches
+       * **empty_value** - the optional string to use as replacement for empty (zero length) matches
 
    * - Examples
-     - ``string_to_array('1,2,3',',')`` → [ '1', '2', '3' ]
+     - * string_to_array('1,2,3',',') → [ '1', '2', '3' ]
 
-       ``string_to_array('1,,3',',','0')`` → [ '1', '0', '3' ]
+       * string_to_array('1,,3',',','0') → [ '1', '0', '3' ]
 
 

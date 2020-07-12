@@ -3,20 +3,20 @@
 ascii
 .....
 
+Returns the unicode code associated with the first character of a string.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns the unicode code associated with the first character of a string.
    * - Syntax
      - ascii(string)
 
    * - Arguments
-     - **string** - the string to convert to unicode code
+     - * **string** - the string to convert to unicode code
 
    * - Examples
-     - ``ascii('Q')`` → 81
+     - * ascii('Q') → 81
 
 
 .. _expression_function_String_char:
@@ -24,20 +24,20 @@ ascii
 char
 ....
 
+Returns the character associated with a unicode code.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns the character associated with a unicode code.
    * - Syntax
      - char(code)
 
    * - Arguments
-     - **code** - a unicode code number
+     - * **code** - a unicode code number
 
    * - Examples
-     - ``char(81)`` → 'Q'
+     - * char(81) → 'Q'
 
 
 .. _expression_function_String_concat:
@@ -45,26 +45,26 @@ char
 concat
 ......
 
+Concatenates several strings to one. NULL values are converted to empty strings. Other values (like numbers) are converted to strings.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Concatenates several strings to one. NULL values are converted to empty strings. Other values (like numbers) are converted to strings.
    * - Syntax
      - concat(string1, string2, ...)
 
    * - Arguments
-     - **string** - a string value
+     - * **string** - a string value
 
    * - Examples
-     - ``concat('sun', 'set')`` → 'sunset'
+     - * concat('sun', 'set') → 'sunset'
 
-       ``concat('a','b','c','d','e')`` → 'abcde'
+       * concat('a','b','c','d','e') → 'abcde'
 
-       ``concat('Anno ', 1984)`` → 'Anno 1984'
+       * concat('Anno ', 1984) → 'Anno 1984'
 
-       ``concat('The Wall', NULL)`` → 'The Wall'
+       * concat('The Wall', NULL) → 'The Wall'
 
 
 .. _expression_function_String_format:
@@ -72,22 +72,22 @@ concat
 format
 ......
 
+Format a string using supplied arguments.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Format a string using supplied arguments.
    * - Syntax
      - format(string, arg1, arg2, ...)
 
    * - Arguments
-     - **string** - A string with place holders for the arguments. Use %1, %2, etc for placeholders. Placeholders can be repeated.
+     - * **string** - A string with place holders for the arguments. Use %1, %2, etc for placeholders. Placeholders can be repeated.
 
-       **arg** - any type. Any number of arguments.
+       * **arg** - any type. Any number of arguments.
 
    * - Examples
-     - ``format('This %1 a %2','is', 'test')`` → 'This is a test''
+     - * format('This %1 a %2','is', 'test') → 'This is a test''
 
 
 .. _expression_function_String_format_date:
@@ -95,26 +95,26 @@ format
 format_date
 ...........
 
+Formats a date type or string into a custom string format. Uses Qt date/time format strings. See <a href='https://doc.qt.io/qt-5/qdatetime.html#toString'>QDateTime::toString</a>.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Formats a date type or string into a custom string format. Uses Qt date/time format strings. See <a href='https://doc.qt.io/qt-5/qdatetime.html#toString'>QDateTime::toString</a>.
    * - Syntax
      - format_date(datetime, format, language)
 
    * - Arguments
-     - **datetime** - date, time or datetime value
+     - * **datetime** - date, time or datetime value
 
-       **format** - String template used to format the string. <table><thead><tr><th>Expression</th><th>Output</th></tr></thead><tr valign="top"><td>d</td><td>the day as number without a leading zero (1 to 31)</td></tr><tr valign="top"><td>dd</td><td>the day as number with a leading zero (01 to 31)</td></tr><tr valign="top"><td>ddd</td><td>the abbreviated localized day name (e.g. 'Mon' to 'Sun')</td></tr><tr valign="top"><td>dddd</td><td>the long localized day name (e.g. 'Monday' to 'Sunday')</td></tr><tr valign="top"><td>M</td><td>the month as number without a leading zero (1-12)</td></tr><tr valign="top"><td>MM</td><td>the month as number with a leading zero (01-12)</td></tr><tr valign="top"><td>MMM</td><td>the abbreviated localized month name (e.g. 'Jan' to 'Dec')</td></tr><tr valign="top"><td>MMMM</td><td>the long localized month name (e.g. 'January' to 'December')</td></tr><tr valign="top"><td>yy</td><td>the year as two digit number (00-99)</td></tr><tr valign="top"><td>yyyy</td><td>the year as four digit number</td></tr></table><p>These expressions may be used for the time part of the format string:</p><table><thead><tr><th>Expression</th><th>Output</th></tr></thead><tr valign="top"><td>h</td><td>the hour without a leading zero (0 to 23 or 1 to 12 if AM/PM display)</td></tr><tr valign="top"><td>hh</td><td>the hour with a leading zero (00 to 23 or 01 to 12 if AM/PM display)</td></tr><tr valign="top"><td>H</td><td>the hour without a leading zero (0 to 23, even with AM/PM display)</td></tr><tr valign="top"><td>HH</td><td>the hour with a leading zero (00 to 23, even with AM/PM display)</td></tr><tr valign="top"><td>m</td><td>the minute without a leading zero (0 to 59)</td></tr><tr valign="top"><td>mm</td><td>the minute with a leading zero (00 to 59)</td></tr><tr valign="top"><td>s</td><td>the second without a leading zero (0 to 59)</td></tr><tr valign="top"><td>ss</td><td>the second with a leading zero (00 to 59)</td></tr><tr valign="top"><td>z</td><td>the milliseconds without trailing zeroes (0 to 999)</td></tr><tr valign="top"><td>zzz</td><td>the milliseconds with trailing zeroes (000 to 999)</td></tr><tr valign="top"><td>AP or A</td><td>interpret as an AM/PM time. <i>AP</i> must be either "AM" or "PM".</td></tr><tr valign="top"><td>ap or a</td><td>Interpret as an AM/PM time. <i>ap</i> must be either "am" or "pm".</td></tr></table>
+       * **format** - String template used to format the string. <table><thead><tr><th>Expression</th><th>Output</th></tr></thead><tr valign="top"><td>d</td><td>the day as number without a leading zero (1 to 31)</td></tr><tr valign="top"><td>dd</td><td>the day as number with a leading zero (01 to 31)</td></tr><tr valign="top"><td>ddd</td><td>the abbreviated localized day name (e.g. 'Mon' to 'Sun')</td></tr><tr valign="top"><td>dddd</td><td>the long localized day name (e.g. 'Monday' to 'Sunday')</td></tr><tr valign="top"><td>M</td><td>the month as number without a leading zero (1-12)</td></tr><tr valign="top"><td>MM</td><td>the month as number with a leading zero (01-12)</td></tr><tr valign="top"><td>MMM</td><td>the abbreviated localized month name (e.g. 'Jan' to 'Dec')</td></tr><tr valign="top"><td>MMMM</td><td>the long localized month name (e.g. 'January' to 'December')</td></tr><tr valign="top"><td>yy</td><td>the year as two digit number (00-99)</td></tr><tr valign="top"><td>yyyy</td><td>the year as four digit number</td></tr></table><p>These expressions may be used for the time part of the format string:</p><table><thead><tr><th>Expression</th><th>Output</th></tr></thead><tr valign="top"><td>h</td><td>the hour without a leading zero (0 to 23 or 1 to 12 if AM/PM display)</td></tr><tr valign="top"><td>hh</td><td>the hour with a leading zero (00 to 23 or 01 to 12 if AM/PM display)</td></tr><tr valign="top"><td>H</td><td>the hour without a leading zero (0 to 23, even with AM/PM display)</td></tr><tr valign="top"><td>HH</td><td>the hour with a leading zero (00 to 23, even with AM/PM display)</td></tr><tr valign="top"><td>m</td><td>the minute without a leading zero (0 to 59)</td></tr><tr valign="top"><td>mm</td><td>the minute with a leading zero (00 to 59)</td></tr><tr valign="top"><td>s</td><td>the second without a leading zero (0 to 59)</td></tr><tr valign="top"><td>ss</td><td>the second with a leading zero (00 to 59)</td></tr><tr valign="top"><td>z</td><td>the milliseconds without trailing zeroes (0 to 999)</td></tr><tr valign="top"><td>zzz</td><td>the milliseconds with trailing zeroes (000 to 999)</td></tr><tr valign="top"><td>AP or A</td><td>interpret as an AM/PM time. <i>AP</i> must be either "AM" or "PM".</td></tr><tr valign="top"><td>ap or a</td><td>Interpret as an AM/PM time. <i>ap</i> must be either "am" or "pm".</td></tr></table>
 
-       **language** - language (lowercase, two- or three-letter, ISO 639 language code) used to format the date into a custom string
+       * **language** - language (lowercase, two- or three-letter, ISO 639 language code) used to format the date into a custom string
 
    * - Examples
-     - ``format_date('2012-05-15','dd.MM.yyyy')`` → '15.05.2012'
+     - * format_date('2012-05-15','dd.MM.yyyy') → '15.05.2012'
 
-       ``format_date('2012-05-15','d MMMM yyyy','fr')`` → '15 juin 2012'
+       * format_date('2012-05-15','d MMMM yyyy','fr') → '15 juin 2012'
 
 
 .. _expression_function_String_format_number:
@@ -122,24 +122,24 @@ format_date
 format_number
 .............
 
+Returns a number formatted with the locale separator for thousands. Also truncates the decimal places to the number of supplied places.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns a number formatted with the locale separator for thousands. Also truncates the decimal places to the number of supplied places.
    * - Syntax
      - format_number(number, places, language)
 
    * - Arguments
-     - **number** - number to be formatted
+     - * **number** - number to be formatted
 
-       **places** - integer representing the number of decimal places to truncate the string to.
+       * **places** - integer representing the number of decimal places to truncate the string to.
 
-       **language** - language (lowercase, two- or three-letter, ISO 639 language code) used to format the number into a string
+       * **language** - language (lowercase, two- or three-letter, ISO 639 language code) used to format the number into a string
 
    * - Examples
-     - ``format_number(10000000.332,2)`` → '10,000,000.33'
+     - * format_number(10000000.332,2) → '10,000,000.33'
 
 
 .. _expression_function_String_left:
@@ -147,22 +147,22 @@ format_number
 left
 ....
 
+Returns a substring that contains the <i>n</i> leftmost characters of the string.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns a substring that contains the <i>n</i> leftmost characters of the string.
    * - Syntax
      - left(string, length)
 
    * - Arguments
-     - **string** - a string
+     - * **string** - a string
 
-       **length** - integer. The number of characters from the left of the string to return.
+       * **length** - integer. The number of characters from the left of the string to return.
 
    * - Examples
-     - ``left('Hello World',5)`` → 'Hello'
+     - * left('Hello World',5) → 'Hello'
 
 
 .. _expression_function_String_length:
@@ -170,12 +170,12 @@ left
 length
 ......
 
+Returns the number of characters in a string or the length of a geometry linestring.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns the number of characters in a string or the length of a geometry linestring.
    * - Syntax
      - length
 
@@ -187,20 +187,20 @@ length
 lower
 .....
 
+Converts a string to lower case letters.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Converts a string to lower case letters.
    * - Syntax
      - lower(string)
 
    * - Arguments
-     - **string** - the string to convert to lower case
+     - * **string** - the string to convert to lower case
 
    * - Examples
-     - ``lower('HELLO World')`` → 'hello world'
+     - * lower('HELLO World') → 'hello world'
 
 
 .. _expression_function_String_lpad:
@@ -208,26 +208,26 @@ lower
 lpad
 ....
 
+Returns a string padded on the left to the specified width, using a fill character. If the target width is smaller than the string's length, the string is truncated.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns a string padded on the left to the specified width, using a fill character. If the target width is smaller than the string's length, the string is truncated.
    * - Syntax
      - lpad(string, width, fill)
 
    * - Arguments
-     - **string** - string to pad
+     - * **string** - string to pad
 
-       **width** - length of new string
+       * **width** - length of new string
 
-       **fill** - character to pad the remaining space with
+       * **fill** - character to pad the remaining space with
 
    * - Examples
-     - ``lpad('Hello', 10, 'x')`` → 'xxxxxHello'
+     - * lpad('Hello', 10, 'x') → 'xxxxxHello'
 
-       ``lpad('Hello', 3, 'x')`` → 'Hel'
+       * lpad('Hello', 3, 'x') → 'Hel'
 
 
 .. _expression_function_String_regexp_match:
@@ -235,22 +235,22 @@ lpad
 regexp_match
 ............
 
+Return the first matching position matching a regular expression within a string, or 0 if the substring is not found.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Return the first matching position matching a regular expression within a string, or 0 if the substring is not found.
    * - Syntax
      - regexp_match(input_string, regex)
 
    * - Arguments
-     - **input_string** - the string to test against the regular expression
+     - * **input_string** - the string to test against the regular expression
 
-       **regex** - The regular expression to test against. Backslash characters must be double escaped (e.g., "\\\\s" to match a white space character).
+       * **regex** - The regular expression to test against. Backslash characters must be double escaped (e.g., "\\\\s" to match a white space character).
 
    * - Examples
-     - ``regexp_match('QGIS ROCKS','\\\\sROCKS')`` → 4
+     - * regexp_match('QGIS ROCKS','\\\\sROCKS') → 4
 
 
 .. _expression_function_String_regexp_replace:
@@ -258,24 +258,24 @@ regexp_match
 regexp_replace
 ..............
 
+Returns a string with the supplied regular expression replaced.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns a string with the supplied regular expression replaced.
    * - Syntax
      - regexp_replace(input_string, regex, replacement)
 
    * - Arguments
-     - **input_string** - the string to replace matches in
+     - * **input_string** - the string to replace matches in
 
-       **regex** - The regular expression to replace. Backslash characters must be double escaped (e.g., "\\\\s" to match a white space character).
+       * **regex** - The regular expression to replace. Backslash characters must be double escaped (e.g., "\\\\s" to match a white space character).
 
-       **replacement** - The string that will replace any matching occurrences of the supplied regular expression. Captured groups can be inserted into the replacement string using \\\\1, \\\\2, etc.
+       * **replacement** - The string that will replace any matching occurrences of the supplied regular expression. Captured groups can be inserted into the replacement string using \\\\1, \\\\2, etc.
 
    * - Examples
-     - ``regexp_replace('QGIS SHOULD ROCK','\\\\sSHOULD\\\\s',' DOES ')`` → 'QGIS DOES ROCK'
+     - * regexp_replace('QGIS SHOULD ROCK','\\\\sSHOULD\\\\s',' DOES ') → 'QGIS DOES ROCK'
 
 
 .. _expression_function_String_regexp_substr:
@@ -283,22 +283,22 @@ regexp_replace
 regexp_substr
 .............
 
+Returns the portion of a string which matches a supplied regular expression.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns the portion of a string which matches a supplied regular expression.
    * - Syntax
      - regexp_substr(input_string, regex)
 
    * - Arguments
-     - **input_string** - the string to find matches in
+     - * **input_string** - the string to find matches in
 
-       **regex** - The regular expression to match against. Backslash characters must be double escaped (e.g., "\\\\s" to match a white space character).
+       * **regex** - The regular expression to match against. Backslash characters must be double escaped (e.g., "\\\\s" to match a white space character).
 
    * - Examples
-     - ``regexp_substr('abc123','(\\\\d+)')`` → '123'
+     - * regexp_substr('abc123','(\\\\d+)') → '123'
 
 
 .. _expression_function_String_replace:
@@ -306,12 +306,12 @@ regexp_substr
 replace
 .......
 
+Returns a string with the supplied string, array, or map of strings replaced.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns a string with the supplied string, array, or map of strings replaced.
    * - Syntax
      - replace
 
@@ -323,22 +323,22 @@ replace
 right
 .....
 
+Returns a substring that contains the <i>n</i> rightmost characters of the string.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns a substring that contains the <i>n</i> rightmost characters of the string.
    * - Syntax
      - right(string, length)
 
    * - Arguments
-     - **string** - a string
+     - * **string** - a string
 
-       **length** - integer. The number of characters from the right of the string to return.
+       * **length** - integer. The number of characters from the right of the string to return.
 
    * - Examples
-     - ``right('Hello World',5)`` → 'World'
+     - * right('Hello World',5) → 'World'
 
 
 .. _expression_function_String_rpad:
@@ -346,26 +346,26 @@ right
 rpad
 ....
 
+Returns a string padded on the right to the specified width, using a fill character. If the target width is smaller than the string's length, the string is truncated.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns a string padded on the right to the specified width, using a fill character. If the target width is smaller than the string's length, the string is truncated.
    * - Syntax
      - rpad(string, width, fill)
 
    * - Arguments
-     - **string** - string to pad
+     - * **string** - string to pad
 
-       **width** - length of new string
+       * **width** - length of new string
 
-       **fill** - character to pad the remaining space with
+       * **fill** - character to pad the remaining space with
 
    * - Examples
-     - ``rpad('Hello', 10, 'x')`` → 'Helloxxxxx'
+     - * rpad('Hello', 10, 'x') → 'Helloxxxxx'
 
-       ``rpad('Hello', 3, 'x')`` → 'Hel'
+       * rpad('Hello', 3, 'x') → 'Hel'
 
 
 .. _expression_function_String_strpos:
@@ -373,24 +373,24 @@ rpad
 strpos
 ......
 
+Return the first matching position of a substring within another string, or 0 if the substring is not found.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Return the first matching position of a substring within another string, or 0 if the substring is not found.
    * - Syntax
      - strpos(haystack, needle)
 
    * - Arguments
-     - **haystack** - string that is to be searched
+     - * **haystack** - string that is to be searched
 
-       **needle** - string to search for
+       * **needle** - string to search for
 
    * - Examples
-     - ``strpos('HELLO WORLD','WORLD')`` → 7
+     - * strpos('HELLO WORLD','WORLD') → 7
 
-       ``strpos('HELLO WORLD','GOODBYE')`` → 0
+       * strpos('HELLO WORLD','GOODBYE') → 0
 
 
 .. _expression_function_String_substr:
@@ -398,34 +398,34 @@ strpos
 substr
 ......
 
+Returns a part of a string.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns a part of a string.
    * - Syntax
      - substr(string, start, length)
 
    * - Arguments
-     - **string** - the full input string
+     - * **string** - the full input string
 
-       **start** - integer representing start position to extract beginning with 1; if start is negative, the return string will begin at the end of the string minus the start value
+       * **start** - integer representing start position to extract beginning with 1; if start is negative, the return string will begin at the end of the string minus the start value
 
-       **length** - integer representing length of string to extract; if length is negative, the return string will omit the given length of characters from the end of the string
+       * **length** - integer representing length of string to extract; if length is negative, the return string will omit the given length of characters from the end of the string
 
    * - Examples
-     - ``substr('HELLO WORLD',3,5)`` → 'LLO W'
+     - * substr('HELLO WORLD',3,5) → 'LLO W'
 
-       ``substr('HELLO WORLD',6)`` → ' WORLD'
+       * substr('HELLO WORLD',6) → ' WORLD'
 
-       ``substr('HELLO WORLD',-5)`` → 'WORLD'
+       * substr('HELLO WORLD',-5) → 'WORLD'
 
-       ``substr('HELLO',3,-1)`` → 'LL'
+       * substr('HELLO',3,-1) → 'LL'
 
-       ``substr('HELLO WORLD',-5,2)`` → 'WO'
+       * substr('HELLO WORLD',-5,2) → 'WO'
 
-       ``substr('HELLO WORLD',-5,-1)`` → 'WORL'
+       * substr('HELLO WORLD',-5,-1) → 'WORL'
 
 
 .. _expression_function_String_title:
@@ -433,20 +433,20 @@ substr
 title
 .....
 
+Converts all words of a string to title case (all words lower case with leading capital letter).
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Converts all words of a string to title case (all words lower case with leading capital letter).
    * - Syntax
      - title(string)
 
    * - Arguments
-     - **string** - the string to convert to title case
+     - * **string** - the string to convert to title case
 
    * - Examples
-     - ``title('hello WOrld')`` → 'Hello World'
+     - * title('hello WOrld') → 'Hello World'
 
 
 .. _expression_function_String_to_string:
@@ -454,20 +454,20 @@ title
 to_string
 .........
 
+Converts a number to string.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Converts a number to string.
    * - Syntax
      - to_string(number)
 
    * - Arguments
-     - **number** - Integer or real value. The number to convert to string.
+     - * **number** - Integer or real value. The number to convert to string.
 
    * - Examples
-     - ``to_string(123)`` → '123'
+     - * to_string(123) → '123'
 
 
 .. _expression_function_String_trim:
@@ -475,20 +475,20 @@ to_string
 trim
 ....
 
+Removes all leading and trailing whitespace (spaces, tabs, etc) from a string.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Removes all leading and trailing whitespace (spaces, tabs, etc) from a string.
    * - Syntax
      - trim(string)
 
    * - Arguments
-     - **string** - string to trim
+     - * **string** - string to trim
 
    * - Examples
-     - ``trim('   hello world    ')`` → 'hello world'
+     - * trim('   hello world    ') → 'hello world'
 
 
 .. _expression_function_String_upper:
@@ -496,20 +496,20 @@ trim
 upper
 .....
 
+Converts a string to upper case letters.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Converts a string to upper case letters.
    * - Syntax
      - upper(string)
 
    * - Arguments
-     - **string** - the string to convert to upper case
+     - * **string** - the string to convert to upper case
 
    * - Examples
-     - ``upper('hello WOrld')`` → 'HELLO WORLD'
+     - * upper('hello WOrld') → 'HELLO WORLD'
 
 
 .. _expression_function_String_wordwrap:
@@ -517,25 +517,25 @@ upper
 wordwrap
 ........
 
+Returns a string wrapped to a maximum/minimum number of characters.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns a string wrapped to a maximum/minimum number of characters.
    * - Syntax
      - wordwrap(string, wrap_length, delimiter_string)
 
    * - Arguments
-     - **string** - the string to be wrapped
+     - * **string** - the string to be wrapped
 
-       **wrap_length** - an integer. If wrap_length is positive the number represents the ideal maximum number of characters to wrap; if negative, the number represents the minimum number of characters to wrap.
+       * **wrap_length** - an integer. If wrap_length is positive the number represents the ideal maximum number of characters to wrap; if negative, the number represents the minimum number of characters to wrap.
 
-       **delimiter_string** - Optional delimiter string to wrap to a new line.
+       * **delimiter_string** - Optional delimiter string to wrap to a new line.
 
    * - Examples
-     - ``wordwrap('UNIVERSITY OF QGIS',13)`` → 'UNIVERSITY OF<br>QGIS'
+     - * wordwrap('UNIVERSITY OF QGIS',13) → 'UNIVERSITY OF<br>QGIS'
 
-       ``wordwrap('UNIVERSITY OF QGIS',-3)`` → 'UNIVERSITY<br>OF QGIS'
+       * wordwrap('UNIVERSITY OF QGIS',-3) → 'UNIVERSITY<br>OF QGIS'
 
 

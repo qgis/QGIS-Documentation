@@ -3,20 +3,20 @@
 base_file_name
 ..............
 
+Returns the base name of the file without the directory or file suffix.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns the base name of the file without the directory or file suffix.
    * - Syntax
      - base_file_name(path)
 
    * - Arguments
-     - **path** - a file path
+     - * **path** - a file path
 
    * - Examples
-     - ``base_file_name('/home/qgis/data/country_boundaries.shp')`` → 'country_boundaries'
+     - * base_file_name('/home/qgis/data/country_boundaries.shp') → 'country_boundaries'
 
 
 .. _expression_function_Files_and_Paths_file_exists:
@@ -24,20 +24,20 @@ base_file_name
 file_exists
 ...........
 
+Returns true if a file path exists.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns true if a file path exists.
    * - Syntax
      - file_exists(path)
 
    * - Arguments
-     - **path** - a file path
+     - * **path** - a file path
 
    * - Examples
-     - ``file_exists('/home/qgis/data/country_boundaries.shp')`` → true
+     - * file_exists('/home/qgis/data/country_boundaries.shp') → true
 
 
 .. _expression_function_Files_and_Paths_file_name:
@@ -45,20 +45,20 @@ file_exists
 file_name
 .........
 
+Returns the name of a file (including the file extension), excluding the directory.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns the name of a file (including the file extension), excluding the directory.
    * - Syntax
      - file_name(path)
 
    * - Arguments
-     - **path** - a file path
+     - * **path** - a file path
 
    * - Examples
-     - ``file_name('/home/qgis/data/country_boundaries.shp')`` → 'country_boundaries.shp'
+     - * file_name('/home/qgis/data/country_boundaries.shp') → 'country_boundaries.shp'
 
 
 .. _expression_function_Files_and_Paths_file_path:
@@ -66,20 +66,20 @@ file_name
 file_path
 .........
 
+Returns the directory component of a file path. This does not include the file name.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns the directory component of a file path. This does not include the file name.
    * - Syntax
      - file_path(path)
 
    * - Arguments
-     - **path** - a file path
+     - * **path** - a file path
 
    * - Examples
-     - ``file_path('/home/qgis/data/country_boundaries.shp')`` → '/home/qgis/data'
+     - * file_path('/home/qgis/data/country_boundaries.shp') → '/home/qgis/data'
 
 
 .. _expression_function_Files_and_Paths_file_size:
@@ -87,20 +87,20 @@ file_path
 file_size
 .........
 
+Returns the size (in bytes) of a file.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns the size (in bytes) of a file.
    * - Syntax
      - file_size(path)
 
    * - Arguments
-     - **path** - a file path
+     - * **path** - a file path
 
    * - Examples
-     - ``file_size('/home/qgis/data/country_boundaries.geojson')`` → 5674
+     - * file_size('/home/qgis/data/country_boundaries.geojson') → 5674
 
 
 .. _expression_function_Files_and_Paths_file_suffix:
@@ -108,20 +108,20 @@ file_size
 file_suffix
 ...........
 
+Returns the file suffix (extension) from a file path.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns the file suffix (extension) from a file path.
    * - Syntax
      - file_suffix(path)
 
    * - Arguments
-     - **path** - a file path
+     - * **path** - a file path
 
    * - Examples
-     - ``file_suffix('/home/qgis/data/country_boundaries.shp')`` → 'shp'
+     - * file_suffix('/home/qgis/data/country_boundaries.shp') → 'shp'
 
 
 .. _expression_function_Files_and_Paths_is_directory:
@@ -129,22 +129,22 @@ file_suffix
 is_directory
 ............
 
+Returns true if a path corresponds to a directory.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns true if a path corresponds to a directory.
    * - Syntax
      - is_directory(path)
 
    * - Arguments
-     - **path** - a file path
+     - * **path** - a file path
 
    * - Examples
-     - ``is_directory('/home/qgis/data/country_boundaries.shp')`` → false
+     - * is_directory('/home/qgis/data/country_boundaries.shp') → false
 
-       ``is_directory('/home/qgis/data/')`` → true
+       * is_directory('/home/qgis/data/') → true
 
 
 .. _expression_function_Files_and_Paths_is_file:
@@ -152,21 +152,21 @@ is_directory
 is_file
 .......
 
+Returns true if a path corresponds to a file.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns true if a path corresponds to a file.
    * - Syntax
      - is_file(path)
 
    * - Arguments
-     - **path** - a file path
+     - * **path** - a file path
 
    * - Examples
-     - ``is_file('/home/qgis/data/country_boundaries.shp')`` → true
+     - * is_file('/home/qgis/data/country_boundaries.shp') → true
 
-       ``is_file('/home/qgis/data/')`` → false
+       * is_file('/home/qgis/data/') → false
 
 

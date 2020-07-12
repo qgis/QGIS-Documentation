@@ -3,26 +3,26 @@
 color_cmyk
 ..........
 
+Returns a string representation of a color based on its cyan, magenta, yellow and black components
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns a string representation of a color based on its cyan, magenta, yellow and black components
    * - Syntax
      - color_cmyk(cyan, magenta, yellow, black)
 
    * - Arguments
-     - **cyan** - cyan component of the color, as a percentage integer value from 0 to 100
+     - * **cyan** - cyan component of the color, as a percentage integer value from 0 to 100
 
-       **magenta** - magenta component of the color, as a percentage integer value from 0 to 100
+       * **magenta** - magenta component of the color, as a percentage integer value from 0 to 100
 
-       **yellow** - yellow component of the color, as a percentage integer value from 0 to 100
+       * **yellow** - yellow component of the color, as a percentage integer value from 0 to 100
 
-       **black** - black component of the color, as a percentage integer value from 0 to 100
+       * **black** - black component of the color, as a percentage integer value from 0 to 100
 
    * - Examples
-     - ``color_cmyk(100,50,0,10)`` → '0,115,230'
+     - * color_cmyk(100,50,0,10) → '0,115,230'
 
 
 .. _expression_function_Color_color_cmyka:
@@ -30,28 +30,28 @@ color_cmyk
 color_cmyka
 ...........
 
+Returns a string representation of a color based on its cyan, magenta, yellow, black and alpha (transparency) components
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns a string representation of a color based on its cyan, magenta, yellow, black and alpha (transparency) components
    * - Syntax
      - color_cmyka(cyan, magenta, yellow, black, alpha)
 
    * - Arguments
-     - **cyan** - cyan component of the color, as a percentage integer value from 0 to 100
+     - * **cyan** - cyan component of the color, as a percentage integer value from 0 to 100
 
-       **magenta** - magenta component of the color, as a percentage integer value from 0 to 100
+       * **magenta** - magenta component of the color, as a percentage integer value from 0 to 100
 
-       **yellow** - yellow component of the color, as a percentage integer value from 0 to 100
+       * **yellow** - yellow component of the color, as a percentage integer value from 0 to 100
 
-       **black** - black component of the color, as a percentage integer value from 0 to 100
+       * **black** - black component of the color, as a percentage integer value from 0 to 100
 
-       **alpha** - alpha component as an integer value from 0 (completely transparent) to 255 (opaque).
+       * **alpha** - alpha component as an integer value from 0 (completely transparent) to 255 (opaque).
 
    * - Examples
-     - ``color_cmyk(100,50,0,10,200)`` → '0,115,230,200'
+     - * color_cmyk(100,50,0,10,200) → '0,115,230,200'
 
 
 .. _expression_function_Color_color_grayscale_average:
@@ -59,20 +59,20 @@ color_cmyka
 color_grayscale_average
 .......................
 
+Applies a grayscale filter and returns a string representation from a provided color.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Applies a grayscale filter and returns a string representation from a provided color.
    * - Syntax
      - color_grayscale_average(color)
 
    * - Arguments
-     - **color** - a color string
+     - * **color** - a color string
 
    * - Examples
-     - ``color_grayscale_average('255,100,50')`` → '135,135,135,255'
+     - * color_grayscale_average('255,100,50') → '135,135,135,255'
 
 
 .. _expression_function_Color_color_hsl:
@@ -80,24 +80,24 @@ color_grayscale_average
 color_hsl
 .........
 
+Returns a string representation of a color based on its hue, saturation, and lightness attributes.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns a string representation of a color based on its hue, saturation, and lightness attributes.
    * - Syntax
      - color_hsl(hue, saturation, lightness)
 
    * - Arguments
-     - **hue** - hue of the color, as an integer value from 0 to 360
+     - * **hue** - hue of the color, as an integer value from 0 to 360
 
-       **saturation** - saturation percentage of the color as an integer value from 0 to 100
+       * **saturation** - saturation percentage of the color as an integer value from 0 to 100
 
-       **lightness** - lightness percentage of the color as an integer value from 0 to 100
+       * **lightness** - lightness percentage of the color as an integer value from 0 to 100
 
    * - Examples
-     - ``color_hsl(100,50,70)`` → '166,217,140'
+     - * color_hsl(100,50,70) → '166,217,140'
 
 
 .. _expression_function_Color_color_hsla:
@@ -105,26 +105,26 @@ color_hsl
 color_hsla
 ..........
 
+Returns a string representation of a color based on its hue, saturation, lightness and alpha (transparency) attributes
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns a string representation of a color based on its hue, saturation, lightness and alpha (transparency) attributes
    * - Syntax
      - color_hsla(hue, saturation, lightness, alpha)
 
    * - Arguments
-     - **hue** - hue of the color, as an integer value from 0 to 360
+     - * **hue** - hue of the color, as an integer value from 0 to 360
 
-       **saturation** - saturation percentage of the color as an integer value from 0 to 100
+       * **saturation** - saturation percentage of the color as an integer value from 0 to 100
 
-       **lightness** - lightness percentage of the color as an integer value from 0 to 100
+       * **lightness** - lightness percentage of the color as an integer value from 0 to 100
 
-       **alpha** - alpha component as an integer value from 0 (completely transparent) to 255 (opaque).
+       * **alpha** - alpha component as an integer value from 0 (completely transparent) to 255 (opaque).
 
    * - Examples
-     - ``color_hsla(100,50,70,200)`` → '166,217,140,200'
+     - * color_hsla(100,50,70,200) → '166,217,140,200'
 
 
 .. _expression_function_Color_color_hsv:
@@ -132,24 +132,24 @@ color_hsla
 color_hsv
 .........
 
+Returns a string representation of a color based on its hue, saturation, and value attributes.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns a string representation of a color based on its hue, saturation, and value attributes.
    * - Syntax
      - color_hsv(hue, saturation, value)
 
    * - Arguments
-     - **hue** - hue of the color, as an integer value from 0 to 360
+     - * **hue** - hue of the color, as an integer value from 0 to 360
 
-       **saturation** - saturation percentage of the color as an integer value from 0 to 100
+       * **saturation** - saturation percentage of the color as an integer value from 0 to 100
 
-       **value** - value percentage of the color as an integer from 0 to 100
+       * **value** - value percentage of the color as an integer from 0 to 100
 
    * - Examples
-     - ``color_hsv(40,100,100)`` → '255,170,0'
+     - * color_hsv(40,100,100) → '255,170,0'
 
 
 .. _expression_function_Color_color_hsva:
@@ -157,26 +157,26 @@ color_hsv
 color_hsva
 ..........
 
+Returns a string representation of a color based on its hue, saturation, value and alpha (transparency) attributes.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns a string representation of a color based on its hue, saturation, value and alpha (transparency) attributes.
    * - Syntax
      - color_hsva(hue, saturation, value, alpha)
 
    * - Arguments
-     - **hue** - hue of the color, as an integer value from 0 to 360
+     - * **hue** - hue of the color, as an integer value from 0 to 360
 
-       **saturation** - saturation percentage of the color as an integer value from 0 to 100
+       * **saturation** - saturation percentage of the color as an integer value from 0 to 100
 
-       **value** - value percentage of the color as an integer from 0 to 100
+       * **value** - value percentage of the color as an integer from 0 to 100
 
-       **alpha** - alpha component as an integer value from 0 (completely transparent) to 255 (opaque)
+       * **alpha** - alpha component as an integer value from 0 (completely transparent) to 255 (opaque)
 
    * - Examples
-     - ``color_hsva(40,100,100,200)`` → '255,170,0,200'
+     - * color_hsva(40,100,100,200) → '255,170,0,200'
 
 
 .. _expression_function_Color_color_mix_rgb:
@@ -184,24 +184,24 @@ color_hsva
 color_mix_rgb
 .............
 
+Returns a string representing a color mixing the red, green, blue, and alpha values of two provided colors based on a given ratio.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns a string representing a color mixing the red, green, blue, and alpha values of two provided colors based on a given ratio.
    * - Syntax
      - color_mix_rgb(color1, color2, ratio)
 
    * - Arguments
-     - **color1** - a color string
+     - * **color1** - a color string
 
-       **color2** - a color string
+       * **color2** - a color string
 
-       **ratio** - a ratio
+       * **ratio** - a ratio
 
    * - Examples
-     - ``color_mix_rgb('0,0,0','255,255,255',0.5)`` → '127,127,127,255'
+     - * color_mix_rgb('0,0,0','255,255,255',0.5) → '127,127,127,255'
 
 
 .. _expression_function_Color_color_part:
@@ -209,22 +209,22 @@ color_mix_rgb
 color_part
 ..........
 
+Returns a specific component from a color string, e.g., the red component or alpha component.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns a specific component from a color string, e.g., the red component or alpha component.
    * - Syntax
      - color_part(color, component)
 
    * - Arguments
-     - **color** - a color string
+     - * **color** - a color string
 
-       **component** - a string corresponding to the color component to return. Valid options are:<br /><ul><li>red: RGB red component (0-255)</li><li>green: RGB green component (0-255)</li><li>blue: RGB blue component (0-255)</li><li>alpha: alpha (transparency) value (0-255)</li><li>hue: HSV hue (0-360)</li><li>saturation: HSV saturation (0-100)</li><li>value: HSV value (0-100)</li><li>hsl_hue: HSL hue (0-360)</li><li>hsl_saturation: HSL saturation (0-100)</li><li>lightness: HSL lightness (0-100)</li><li>cyan: CMYK cyan component (0-100)</li><li>magenta: CMYK magenta component (0-100)</li><li>yellow: CMYK yellow component (0-100)</li> <li>black: CMYK black component (0-100)</li></ul>
+       * **component** - a string corresponding to the color component to return. Valid options are:<br /><ul><li>red: RGB red component (0-255)</li><li>green: RGB green component (0-255)</li><li>blue: RGB blue component (0-255)</li><li>alpha: alpha (transparency) value (0-255)</li><li>hue: HSV hue (0-360)</li><li>saturation: HSV saturation (0-100)</li><li>value: HSV value (0-100)</li><li>hsl_hue: HSL hue (0-360)</li><li>hsl_saturation: HSL saturation (0-100)</li><li>lightness: HSL lightness (0-100)</li><li>cyan: CMYK cyan component (0-100)</li><li>magenta: CMYK magenta component (0-100)</li><li>yellow: CMYK yellow component (0-100)</li> <li>black: CMYK black component (0-100)</li></ul>
 
    * - Examples
-     - ``color_part('200,10,30','green')`` → 10
+     - * color_part('200,10,30','green') → 10
 
 
 .. _expression_function_Color_color_rgb:
@@ -232,24 +232,24 @@ color_part
 color_rgb
 .........
 
+Returns a string representation of a color based on its red, green, and blue components.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns a string representation of a color based on its red, green, and blue components.
    * - Syntax
      - color_rgb(red, green, blue)
 
    * - Arguments
-     - **red** - red component as an integer value from 0 to 255
+     - * **red** - red component as an integer value from 0 to 255
 
-       **green** - green component as an integer value from 0 to 255
+       * **green** - green component as an integer value from 0 to 255
 
-       **blue** - blue component as an integer value from 0 to 255
+       * **blue** - blue component as an integer value from 0 to 255
 
    * - Examples
-     - ``color_rgb(255,127,0)`` → '255,127,0'
+     - * color_rgb(255,127,0) → '255,127,0'
 
 
 .. _expression_function_Color_color_rgba:
@@ -257,26 +257,26 @@ color_rgb
 color_rgba
 ..........
 
+Returns a string representation of a color based on its red, green, blue, and alpha (transparency) components.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns a string representation of a color based on its red, green, blue, and alpha (transparency) components.
    * - Syntax
      - color_rgba(red, green, blue, alpha)
 
    * - Arguments
-     - **red** - red component as an integer value from 0 to 255
+     - * **red** - red component as an integer value from 0 to 255
 
-       **green** - green component as an integer value from 0 to 255
+       * **green** - green component as an integer value from 0 to 255
 
-       **blue** - blue component as an integer value from 0 to 255
+       * **blue** - blue component as an integer value from 0 to 255
 
-       **alpha** - alpha component as an integer value from 0 (completely transparent) to 255 (opaque).
+       * **alpha** - alpha component as an integer value from 0 (completely transparent) to 255 (opaque).
 
    * - Examples
-     - ``color_rgba(255,127,0,200)`` → '255,127,0,200'
+     - * color_rgba(255,127,0,200) → '255,127,0,200'
 
 
 .. _expression_function_Color_create_ramp:
@@ -284,22 +284,22 @@ color_rgba
 create_ramp
 ...........
 
+Returns a gradient ramp from a map of color strings and steps.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns a gradient ramp from a map of color strings and steps.
    * - Syntax
      - create_ramp(map, discrete)
 
    * - Arguments
-     - **map** - a map of color strings and steps
+     - * **map** - a map of color strings and steps
 
-       **discrete** - set this parameter to true to create a discrete color ramp
+       * **discrete** - set this parameter to true to create a discrete color ramp
 
    * - Examples
-     - ``ramp_color(create_ramp(map(0,'0,0,0',1,'255,0,0')),1)`` → '255,0,0,255'
+     - * ramp_color(create_ramp(map(0,'0,0,0',1,'255,0,0')),1) → '255,0,0,255'
 
 
 .. _expression_function_Color_darker:
@@ -307,22 +307,22 @@ create_ramp
 darker
 ......
 
+Returns a darker (or lighter) color string
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns a darker (or lighter) color string
    * - Syntax
      - darker(color, factor)
 
    * - Arguments
-     - **color** - a color string
+     - * **color** - a color string
 
-       **factor** - an integer corresponding to the darkening factor:<ul><li>if the factor is greater than 100, this functions returns a darker color (e.g., setting factor to 300 returns a color that has one-third the brightness);</li><li>if the factor is less than 100, the return color is lighter, but using the lighter() function for this purpose is recommended;</li><li>if the factor is 0 or negative, the return value is unspecified.</li></ul>
+       * **factor** - an integer corresponding to the darkening factor:<ul><li>if the factor is greater than 100, this functions returns a darker color (e.g., setting factor to 300 returns a color that has one-third the brightness);</li><li>if the factor is less than 100, the return color is lighter, but using the lighter() function for this purpose is recommended;</li><li>if the factor is 0 or negative, the return value is unspecified.</li></ul>
 
    * - Examples
-     - ``darker('200,10,30',300)`` → '66,3,10,255'
+     - * darker('200,10,30',300) → '66,3,10,255'
 
 
 .. _expression_function_Color_lighter:
@@ -330,22 +330,22 @@ darker
 lighter
 .......
 
+Returns a lighter (or darker) color string
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns a lighter (or darker) color string
    * - Syntax
      - lighter(color, factor)
 
    * - Arguments
-     - **color** - a color string
+     - * **color** - a color string
 
-       **factor** - a integer number corresponding to the lightening factor:<ul><li>if the factor is greater than 100, this functions returns a lighter color (for e.g., setting factor to 150 returns a color that is 50% brighter);</li><li>if the factor is less than 100, the return color is darker, but using the darker() function for this purpose is recommended;</li><li>if the factor is 0 or negative, the return value is unspecified.</li></ul>
+       * **factor** - a integer number corresponding to the lightening factor:<ul><li>if the factor is greater than 100, this functions returns a lighter color (for e.g., setting factor to 150 returns a color that is 50% brighter);</li><li>if the factor is less than 100, the return color is darker, but using the darker() function for this purpose is recommended;</li><li>if the factor is 0 or negative, the return value is unspecified.</li></ul>
 
    * - Examples
-     - ``lighter('200,10,30',200)`` → '255,158,168,255'
+     - * lighter('200,10,30',200) → '255,158,168,255'
 
 
 .. _expression_function_Color_project_color:
@@ -353,20 +353,20 @@ lighter
 project_color
 .............
 
+Returns a color from the project's color scheme.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns a color from the project's color scheme.
    * - Syntax
      - project_color(name)
 
    * - Arguments
-     - **name** - a color name
+     - * **name** - a color name
 
    * - Examples
-     - ``project_color('Logo color')`` → '20,140,50'
+     - * project_color('Logo color') → '20,140,50'
 
 
 .. _expression_function_Color_ramp_color:
@@ -374,12 +374,12 @@ project_color
 ramp_color
 ..........
 
+Returns a string representing a color from a color ramp.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Returns a string representing a color from a color ramp.
    * - Syntax
      - ramp_color
 
@@ -391,23 +391,23 @@ ramp_color
 set_color_part
 ..............
 
+Sets a specific color component for a color string, e.g., the red component or alpha component.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
-   * - Description
-     - Sets a specific color component for a color string, e.g., the red component or alpha component.
    * - Syntax
      - set_color_part(color, component, value)
 
    * - Arguments
-     - **color** - a color string
+     - * **color** - a color string
 
-       **component** - a string corresponding to the color component to set. Valid options are:<br /><ul><li>red: RGB red component (0-255)</li><li>green: RGB green component (0-255)</li><li>blue: RGB blue component (0-255)</li><li>alpha: alpha (transparency) value (0-255)</li><li>hue: HSV hue (0-360)</li><li>saturation: HSV saturation (0-100)</li><li>value: HSV value (0-100)</li><li>hsl_hue: HSL hue (0-360)</li><li>hsl_saturation: HSL saturation (0-100)</li><li>lightness: HSL lightness (0-100)</li><li>cyan: CMYK cyan component (0-100)</li><li>magenta: CMYK magenta component (0-100)</li><li>yellow: CMYK yellow component (0-100)</li> <li>black: CMYK black component (0-100)</li></ul>
+       * **component** - a string corresponding to the color component to set. Valid options are:<br /><ul><li>red: RGB red component (0-255)</li><li>green: RGB green component (0-255)</li><li>blue: RGB blue component (0-255)</li><li>alpha: alpha (transparency) value (0-255)</li><li>hue: HSV hue (0-360)</li><li>saturation: HSV saturation (0-100)</li><li>value: HSV value (0-100)</li><li>hsl_hue: HSL hue (0-360)</li><li>hsl_saturation: HSL saturation (0-100)</li><li>lightness: HSL lightness (0-100)</li><li>cyan: CMYK cyan component (0-100)</li><li>magenta: CMYK magenta component (0-100)</li><li>yellow: CMYK yellow component (0-100)</li> <li>black: CMYK black component (0-100)</li></ul>
 
-       **value** - new value for color component, respecting the ranges listed above
+       * **value** - new value for color component, respecting the ranges listed above
 
    * - Examples
-     - ``set_color_part('200,10,30','green',50)`` → '200,50,30,255'
+     - * set_color_part('200,10,30','green',50) → '200,50,30,255'
 
 
