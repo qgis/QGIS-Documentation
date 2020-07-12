@@ -693,7 +693,7 @@ Open the :guilabel:`Relations` tab and click on :guilabel:`Add Relation`.
 * **Referenced Layer (Parent)** also considered as parent layer, is the one with
   the primary key, pointed to, so here it is the ``regions`` layer. For this layer
   you can define multiple referenced fields as primary key, so these are ``ID``
-  and ``a_airports.
+  and ``a_airports``.
 * **Referencing Layer (Child)** also considered as child layer, is the one with
   the foreign key field on it. In our case, this is the ``airports`` layer. For
   this layer you need to add two referencing fields which point to the other
