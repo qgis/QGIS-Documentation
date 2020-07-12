@@ -697,7 +697,7 @@ Open the :guilabel:`Relations` tab and click on :guilabel:`Add Relation`.
 * **Referencing Layer (Child)** also considered as child layer, is the one with
   the foreign key field on it. In our case, this is the ``airports`` layer. For
   this layer you need to add two referencing fields which point to the other
-  layer, so these are ``fk_region`` and ``a_aiports``.
+  layer, so these are ``fk_region`` and ``a_airports``.
 * **Id** will be used for internal purposes and has to be unique. You may need
   it to build :ref:`custom forms <customize_form>`. If
   you leave it empty, one will be generated for you but you can assign one
