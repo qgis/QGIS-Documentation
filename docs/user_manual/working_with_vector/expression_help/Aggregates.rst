@@ -1,3 +1,5 @@
+:orphan:
+
 .. _expression_function_Aggregates_aggregate:
 
 aggregate

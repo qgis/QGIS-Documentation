@@ -1,3 +1,5 @@
+:orphan:
+
 .. _expression_function_Conditionals_coalesce:
 
 coalesce

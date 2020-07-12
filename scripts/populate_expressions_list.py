@@ -9,6 +9,7 @@ output_folder = path.abspath('./docs/user_manual/working_with_vector/expression_
 
 def format_function(group, function_dict):
     f_name = function_dict['name']
+    f_description = function_dict['description']
     
     # Organize arguments
     arg_syntax_list = []
@@ -32,9 +33,12 @@ def format_function(group, function_dict):
         arguments = (f"   * - Arguments\n"
                      f"     - * {descriptions}\n"
                      f"\n")
-    else:
+    elif f_name.startswith("$"):
         syntax = f_name
-        arguments = ''    
+        arguments = ''
+    else:
+        syntax = f"{f_name}()" 
+        arguments = ''
     
     # Prepare examples
     if 'examples' in function_dict:
@@ -43,8 +47,6 @@ def format_function(group, function_dict):
     else:
         examples = ''
       
-    
-    f_description = function_dict['description']
     text = (f".. _expression_function_{group.replace(' ','_')}_{f_name}:\n\n"
             f"{f_name}\n"
             f"{'.'* len(f_name)}\n"
@@ -97,9 +99,12 @@ for f_name in functions.keys():
 
 for g_name in groups:
     func_list = groups[g_name]['func_list']
+    if len(func_list) < 1:
+        continue
     func_list.sort()
-    output_group_file = path.join(output_folder, g_name.replace(' ','_') + '.txt')
+    output_group_file = path.join(output_folder, g_name.replace(' ','_') + '.rst')
     with open(output_group_file, 'w') as f:
+        f.write(':orphan:\n\n')
         for f_name in func_list:
             text = format_function(g_name, functions[f_name])
             f.write(text)

@@ -212,7 +212,7 @@ This group contains functions which aggregate values over layers and fields.
 
 .. contents:: :local:
 
-.. include:: expression_help/Aggregates.txt
+.. include:: expression_help/Aggregates.rst
 
 .. csv-table::
    :header: "Function", "Description"
@@ -284,7 +284,7 @@ is irrelevant and values are identified by their keys.
 
 .. contents:: :local:
 
-.. include:: expression_help/Arrays.txt
+.. include:: expression_help/Arrays.rst
 
 
 .. csv-table::
@@ -333,7 +333,7 @@ This group contains functions for manipulating colors.
 
 .. contents:: :local:
 
-.. include:: expression_help/Color.txt
+.. include:: expression_help/Color.rst
 
 .. csv-table::
    :header: "Function", "Description"
@@ -374,7 +374,7 @@ This group contains functions to handle conditional checks in expressions.
 
 .. contents:: :local:
 
-.. include:: expression_help/Conditionals.txt
+.. include:: expression_help/Conditionals.rst
 
 .. csv-table::
    :header: "Function", "Description"
@@ -407,7 +407,7 @@ This group contains functions to convert one data type to another
 
 .. contents:: :local:
 
-.. include:: expression_help/Conversions.txt
+.. include:: expression_help/Conversions.rst
 
 .. csv-table::
    :header: "Function", "Description"
@@ -439,7 +439,7 @@ This group contains functions for handling date and time data.
 
 .. contents:: :local:
 
-.. include:: expression_help/Date_and_Time.txt
+.. include:: expression_help/Date_and_Time.rst
 
 .. csv-table::
    :header: "Function", "Description"
@@ -546,7 +546,7 @@ This group contains functions which manipulate file and path names.
 
 .. contents:: :local:
 
-.. include:: expression_help/Files_and_Paths.txt
+.. include:: expression_help/Files_and_Paths.rst
 
 .. csv-table::
    :header: "Function", "Description"
@@ -569,7 +569,7 @@ context. For example, in field's widgets settings.
 
 .. contents:: :local:
 
-.. include:: expression_help/Form.txt
+.. include:: expression_help/Form.rst
 
 Fuzzy Matching Functions
 -------------------------
@@ -578,7 +578,7 @@ This group contains functions for fuzzy comparisons between values.
 
 .. contents:: :local:
 
-.. include:: expression_help/Fuzzy_Matching.txt
+.. include:: expression_help/Fuzzy_Matching.rst
 
 .. csv-table::
    :header: "Function", "Description"
@@ -600,7 +600,7 @@ This group contains general assorted functions.
 
 .. contents:: :local:
 
-.. include:: expression_help/General.txt
+.. include:: expression_help/General.rst
 
 .. csv-table::
    :header: "Function", "Description"
@@ -631,7 +631,7 @@ This group contains functions that operate on geometry objects
 
 .. contents:: :local:
 
-.. include:: expression_help/GeometryGroup.txt
+.. include:: expression_help/GeometryGroup.rst
 
 .. csv-table::
    :header: "Function", "Description"
@@ -870,7 +870,7 @@ This group contains functions to manipulate print layout items properties.
 
 .. contents:: :local:
 
-.. include:: expression_help/Layout.txt
+.. include:: expression_help/Layout.rst
 
 .. csv-table::
    :header: "Function", "Description"
@@ -897,7 +897,7 @@ It also provides some convenient functions to manipulate layers.
 
 .. contents:: :local:
 
-.. include:: expression_help/Map_Layers.txt
+.. include:: expression_help/Map_Layers.rst
 
 .. csv-table::
    :header: "Function", "Description"
@@ -920,7 +920,7 @@ and values are identified by their keys.
 
 .. contents:: :local:
 
-.. include:: expression_help/Maps.txt
+.. include:: expression_help/Maps.rst
 
 .. csv-table::
    :header: "Function", "Description"
@@ -950,7 +950,7 @@ This group contains math functions (e.g., square root, sin and cos).
 
 .. contents:: :local:
 
-.. include:: expression_help/Math.txt
+.. include:: expression_help/Math.rst
 
 .. csv-table::
    :header: "Function", "Description"
@@ -1058,7 +1058,7 @@ This group contains functions that operate on processing algorithms.
 
 .. contents:: :local:
 
-.. include:: expression_help/Processing.txt
+.. include:: expression_help/Processing.rst
 
 .. csv-table::
    :header: "Function", "Description"
@@ -1076,7 +1076,7 @@ This group contains functions to operate on raster layer.
 
 .. contents:: :local:
 
-.. include:: expression_help/Rasters.txt
+.. include:: expression_help/Rasters.rst
 
 .. csv-table::
    :header: "Function", "Description"
@@ -1095,7 +1095,7 @@ This group contains functions that operate on record identifiers.
 
 .. contents:: :local:
 
-.. include:: expression_help/Record_and_Attributes.txt
+.. include:: expression_help/Record_and_Attributes.rst
 
 .. csv-table::
    :header: "Function", "Description"
@@ -1143,7 +1143,7 @@ This group contains functions that operate on strings
 
 .. contents:: :local:
 
-.. include:: expression_help/String.txt
+.. include:: expression_help/String.rst
 
 .. csv-table::
    :header: "Function", "Description"

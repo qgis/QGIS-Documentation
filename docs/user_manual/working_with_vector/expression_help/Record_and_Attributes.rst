@@ -1,3 +1,5 @@
+:orphan:
+
 .. _expression_function_Record_and_Attributes_$currentfeature:
 
 $currentfeature
@@ -46,7 +48,7 @@ Returns an attribute from a feature.
    :stub-columns: 1
 
    * - Syntax
-     - attribute
+     - attribute()
 
 
 
@@ -63,7 +65,7 @@ Returns a map containing all attributes from a feature, with field names as map 
    :stub-columns: 1
 
    * - Syntax
-     - attributes
+     - attributes()
 
 
 
@@ -157,7 +159,7 @@ Returns True if a feature is selected. Can be used with zero, one or two argumen
    :stub-columns: 1
 
    * - Syntax
-     - is_selected
+     - is_selected()
 
 
 
@@ -284,7 +286,7 @@ Generates a Universally Unique Identifier (UUID) for each row using the Qt <a hr
    :stub-columns: 1
 
    * - Syntax
-     - uuid
+     - uuid()
 
    * - Examples
      - * uuid() → '{0bd2f60f-f157-4a6d-96af-d4ba4cb366a1}'

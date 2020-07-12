@@ -1,3 +1,5 @@
+:orphan:
+
 .. _expression_function_Fuzzy_Matching_hamming_distance:
 
 hamming_distance

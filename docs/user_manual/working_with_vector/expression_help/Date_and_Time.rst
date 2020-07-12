@@ -1,3 +1,5 @@
+:orphan:
+
 .. _expression_function_Date_and_Time_age:
 
 age
@@ -56,7 +58,7 @@ Extracts the day from a date, or the number of days from an interval.
    :stub-columns: 1
 
    * - Syntax
-     - day
+     - day()
 
 
 
@@ -142,7 +144,7 @@ Extracts the hour part from a datetime or time, or the number of hours from an i
    :stub-columns: 1
 
    * - Syntax
-     - hour
+     - hour()
 
 
 
@@ -275,7 +277,7 @@ Extracts the minutes part from a datetime or time, or the number of minutes from
    :stub-columns: 1
 
    * - Syntax
-     - minute
+     - minute()
 
 
 
@@ -292,7 +294,7 @@ Extracts the month part from a date, or the number of months from an interval.
    :stub-columns: 1
 
    * - Syntax
-     - month
+     - month()
 
 
 
@@ -309,7 +311,7 @@ Returns the current date and time. The function is static and will return consis
    :stub-columns: 1
 
    * - Syntax
-     - now
+     - now()
 
    * - Examples
      - * now() → 2012-07-22T13:24:57
@@ -327,7 +329,7 @@ Extracts the seconds part from a datetime or time, or the number of seconds from
    :stub-columns: 1
 
    * - Syntax
-     - second
+     - second()
 
 
 
@@ -452,7 +454,7 @@ Extracts the week number from a date, or the number of weeks from an interval.
    :stub-columns: 1
 
    * - Syntax
-     - week
+     - week()
 
 
 
@@ -469,7 +471,7 @@ Extracts the year part from a date, or the number of years from an interval.
    :stub-columns: 1
 
    * - Syntax
-     - year
+     - year()
 
 
 

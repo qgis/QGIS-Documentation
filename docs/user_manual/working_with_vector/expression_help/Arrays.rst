@@ -1,3 +1,5 @@
+:orphan:
+
 .. _expression_function_Arrays_array:
 
 array

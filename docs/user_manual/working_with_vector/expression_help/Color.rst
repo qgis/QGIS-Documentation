@@ -1,3 +1,5 @@
+:orphan:
+
 .. _expression_function_Color_color_cmyk:
 
 color_cmyk
@@ -381,7 +383,7 @@ Returns a string representing a color from a color ramp.
    :stub-columns: 1
 
    * - Syntax
-     - ramp_color
+     - ramp_color()
 
 
 

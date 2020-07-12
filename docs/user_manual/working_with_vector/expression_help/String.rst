@@ -1,3 +1,5 @@
+:orphan:
+
 .. _expression_function_String_ascii:
 
 ascii
@@ -177,7 +179,7 @@ Returns the number of characters in a string or the length of a geometry linestr
    :stub-columns: 1
 
    * - Syntax
-     - length
+     - length()
 
 
 
@@ -313,7 +315,7 @@ Returns a string with the supplied string, array, or map of strings replaced.
    :stub-columns: 1
 
    * - Syntax
-     - replace
+     - replace()
 
 
 

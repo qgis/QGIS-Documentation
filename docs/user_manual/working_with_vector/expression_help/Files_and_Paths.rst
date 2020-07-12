@@ -1,3 +1,5 @@
+:orphan:
+
 .. _expression_function_Files_and_Paths_base_file_name:
 
 base_file_name

@@ -1,3 +1,5 @@
+:orphan:
+
 .. _expression_function_Math_abs:
 
 abs
@@ -428,7 +430,7 @@ Returns value of pi for calculations.
    :stub-columns: 1
 
    * - Syntax
-     - pi
+     - pi()
 
    * - Examples
      - * pi() → 3.14159265358979

@@ -1,3 +1,5 @@
+:orphan:
+
 .. _expression_function_Rasters_raster_statistic:
 
 raster_statistic

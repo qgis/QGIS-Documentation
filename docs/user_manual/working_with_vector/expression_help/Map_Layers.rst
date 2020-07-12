@@ -1,3 +1,5 @@
+:orphan:
+
 .. _expression_function_Map_Layers_decode_uri:
 
 decode_uri

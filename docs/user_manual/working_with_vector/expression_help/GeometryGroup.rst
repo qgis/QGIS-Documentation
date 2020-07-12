@@ -1,3 +1,5 @@
+:orphan:
+
 .. _expression_function_GeometryGroup_$area:
 
 $area
@@ -428,7 +430,7 @@ Collects a set of geometries into a multi-part geometry object.
    :stub-columns: 1
 
    * - Syntax
-     - collect_geometries
+     - collect_geometries()
 
 
 
@@ -1203,7 +1205,7 @@ Returns the number of characters in a string or the length of a geometry linestr
    :stub-columns: 1
 
    * - Syntax
-     - length
+     - length()
 
 
 
@@ -1466,7 +1468,7 @@ Creates a line geometry from a series of point geometries.
    :stub-columns: 1
 
    * - Syntax
-     - make_line
+     - make_line()
 
 
 
@@ -2031,7 +2033,7 @@ Tests the Dimensional Extended 9 Intersection Model (DE-9IM) representation of t
    :stub-columns: 1
 
    * - Syntax
-     - relate
+     - relate()
 
 
 
