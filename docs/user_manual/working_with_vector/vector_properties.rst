@@ -1900,16 +1900,6 @@ The size and the attributes can also be an expression.
 Use the |expression| button to add an expression.
 See :ref:`vector_expressions` chapter for more information and example.
 
-Using data-defined override
----------------------------
-
-As mentioned above, you can use some custom data-defined to tune the diagrams
-rendering:
-
-* position in :guilabel:`Placement` tab by filling ``X`` and ``Y`` fields
-* visibility in :guilabel:`Appearance` tab by filling the ``Visibility`` field
-
-See :ref:`data_defined_labeling` for more information.
 
 .. index:: 3d view properties
 .. _`sec_3_d_view`:
