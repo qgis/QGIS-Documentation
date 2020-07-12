@@ -30,7 +30,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -97,7 +97,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -108,6 +107,9 @@ Outputs
      - [raster]
      - Output raster layer
   
+Python code
+...........
+
 **Algorithm ID**: ``qgis:rasterize``
 
 .. include:: qgis_algs_include.rst
@@ -127,7 +129,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -178,7 +179,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -189,6 +189,9 @@ Outputs
      - [raster]
      - Raster covering the desired extent with the specified pixel
        size and value.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:createconstantrasterlayer``
 
@@ -211,7 +214,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -337,7 +340,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -351,6 +353,9 @@ Outputs
      - ``OUTPUT_HTML``
      - [html]
      - The output HTML (Leaflet) file
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:tilesxyzdirectory``
 
@@ -373,7 +378,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -465,7 +470,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -475,6 +479,9 @@ Outputs
      - ``OUTPUT_FILE``
      - [file]
      - The output file.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:tilesxyzmbtiles``
 
@@ -501,7 +508,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -522,7 +528,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -532,6 +537,9 @@ Outputs
      - ``INPUT``
      - [raster]
      - The raster layer with the chosen style
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:setstyleforrasterlayer``
 

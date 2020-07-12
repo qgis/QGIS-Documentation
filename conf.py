@@ -240,6 +240,7 @@ latex_elements = {
     # Additional stuff for the LaTeX preamble.
     'preamble': u'''
     \\usepackage{combelow}
+    \\setcounter{tocdepth}{2}
     \\usepackage{newunicodechar}
     \\newunicodechar{Ș}{\\cb{S}}
     \\newunicodechar{ș}{\\cb{s}}

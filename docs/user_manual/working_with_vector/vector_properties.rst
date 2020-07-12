@@ -3365,8 +3365,6 @@ This makes it possible to quickly flag gaps as allowed.
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
-.. |colorWheel| image:: /static/common/mIconColorWheel.png
-   :width: 1.5em
 .. |dataDefineExpressionOn| image:: /static/common/mIconDataDefineExpressionOn.png
    :width: 1.5em
 .. |dataDefineOn| image:: /static/common/mIconDataDefineOn.png

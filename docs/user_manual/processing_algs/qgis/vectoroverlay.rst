@@ -51,7 +51,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -87,7 +86,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -98,6 +96,9 @@ Outputs
      - [same as input]
      - Layer containing features from the input layer split by the
        overlay layer.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:clip``
 
@@ -138,7 +139,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -179,7 +179,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -190,6 +189,9 @@ Outputs
      - [same as input]
      - Layer containing (parts of) features from the input layer
        not overlapping the overlay layer.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:difference``
 
@@ -215,7 +217,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -260,7 +261,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -270,6 +270,9 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - Layer containing the clipped features.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:extractbyextent``
 
@@ -307,7 +310,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -373,7 +376,7 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -384,6 +387,9 @@ Outputs
      - [same as input]
      - Layer containing (parts of) features from the input
        layer that overlap the overlay layer.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:intersection``
 
@@ -411,7 +417,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -473,7 +479,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -483,6 +488,9 @@ Outputs
      - ``OUTPUT``
      - [vector: point]
      - Point vector layer with the intersections.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:lineintersections``
 
@@ -515,7 +523,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -552,7 +559,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -563,6 +569,9 @@ Outputs
      - [same as input]
      - Output vector layer with split lines or polygons from input
        layer.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:splitwithlines``
 
@@ -601,7 +610,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -647,7 +655,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -658,6 +665,9 @@ Outputs
      - [same as input]
      - Layer containing (parts of) features from each layer
        not overlapping the other layer.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:symmetricaldifference``
 
@@ -714,7 +724,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -761,7 +770,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -772,6 +780,9 @@ Outputs
      - [same as input]
      - Layer containing all the overlapping and
        non-overlapping parts from the processed layer(s).
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:union``
 

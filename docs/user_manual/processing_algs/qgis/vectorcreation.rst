@@ -34,7 +34,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -103,7 +103,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -114,6 +113,9 @@ Outputs
      - [vector: line]
      - Output line layer with offset features.
        The original features are also copied.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:arrayoffsetlines``
 
@@ -150,7 +152,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -212,7 +214,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -224,6 +225,9 @@ Outputs
      - Output vector layer with translated (moved)
        copies of the features.
        The original features are also copied.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:arraytranslatedfeatures``
 
@@ -260,7 +264,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -335,7 +339,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -346,6 +349,9 @@ Outputs
      - [vector: any]
      - Resulting vector grid layer. The output geometry type (point,
        line or polygon) depends on the :guilabel:`Grid type`.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:creategrid``
 
@@ -369,7 +375,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -427,7 +433,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -437,6 +442,9 @@ Outputs
      - ``OUTPUT``
      - [vector: point]
      - The resulting point layer
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:createpointslayerfromtable``
 
@@ -466,7 +474,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -500,7 +507,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -510,6 +516,9 @@ Outputs
      - ``OUTPUT``
      - [vector: point]
      - Resulting point layer with pixel centroids
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:generatepointspixelcentroidsalongline``
 
@@ -539,7 +548,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -573,7 +581,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -583,6 +590,9 @@ Outputs
      - ``OUTPUT``
      - [vector: point]
      - Resulting point layer of pixel centroids
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:generatepointspixelcentroidsinsidepolygons``
 
@@ -613,7 +623,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -667,7 +677,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -686,6 +695,9 @@ Outputs
      - [table]
      - Table of unreadable or non-geotagged photos can
        also be created.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:importphotos``
 
@@ -715,7 +727,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -780,7 +792,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -794,6 +805,9 @@ Outputs
      - ``OUTPUT``
      - [folder]
      - Directory containing description files of points and paths
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:pointstopath``
 
@@ -843,7 +857,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -885,7 +898,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -895,6 +907,9 @@ Outputs
      - ``OUTPUT``
      - [vector: point]
      - The output random points layer.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:qgisrandompointsalongline``
 
@@ -921,7 +936,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -969,7 +983,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -979,6 +992,9 @@ Outputs
      - ``OUTPUT``
      - [vector: point]
      - The output random points layer.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:randompointsinextent``
 
@@ -1005,7 +1021,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1047,7 +1062,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1058,7 +1072,178 @@ Outputs
      - [vector: point]
      - The output random points layer.
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:randompointsinlayerbounds``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+        
+.. _qgisrandompointsinpolygons:
+
+Random points in polygons |314|
+-------------------------------
+Creates a point layer with points placed inside the polygons of
+another layer.
+
+For each feature (polygon / multi-polygon) geometry in the input
+layer, the given number of points is added to the result layer.
+
+Per feature and global minimum distances can be specified in order to
+avoid points being too close in the output point layer.
+If a minimum distance is specified, it may not be possible to generate
+the specified number of points for each feature.
+The total number of generated points and missed points are available
+as output from the algorithm.
+
+The illustration below shows the effect of per feature and global
+minimum distances and zero/non-zero minimum distances (generated with
+the same seed, so at least the first point generated will be the
+same).
+
+.. figure:: img/randompointsinpolygons_mindistance.png
+   :align: center
+
+   Ten points per polygon feature, *left*: min. distances = 0,
+   *middle*: min.distances = 1, *right*: min. distance = 1,
+   global min. distance = 0
+
+The maximum number of tries per point can be specified.
+This is only relevant for non-zero minimum distance.
+
+A seed for the random number generator can be provided, making it
+possible to get identical random number sequences for different runs
+of the algorithm.
+
+The attributes of the polygon feature on which a point was generated
+can be included (:guilabel:`Include polygon attributes`).
+
+If you want approximately the same point density for all the line
+features, you can data-define the number of points using the area of
+the polygon feature geometry.
+
+.. seealso:: :ref:`qgisrandompointsinsidepolygons`
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input polygon layer**
+     - ``INPUT``
+     - [vector: line]
+     - Input polygon vector layer
+   * - **Number of points for each feature**
+     - ``POINTS_NUMBER``
+     - [number |dataDefined|]
+
+       Default: 1
+     - Number of points to create
+   * - **Minimum distance between points**
+
+       Optional
+     - ``MIN_DISTANCE``
+     - [number |dataDefined|]
+
+       Default: 0.0
+     - The minimum distance between points within one polygon feature
+   * - **Global minimum distance between points**
+
+       Optional
+     - ``MIN_DISTANCE_GLOBAL``
+     - [number |dataDefined|]
+
+       Default: 0.0
+     - The global minimum distance between points.
+       Should be smaller than the *Minimum distance between
+       points (per feature)* for that parameter to have an effect.
+   * - **Maximum number of search attempts (for Min. dist. > 0)**
+
+       Optional
+     - ``MAX_TRIES_PER_POINT``
+     - [number |dataDefined|]
+
+       Default: 10
+     - The maximum number of tries per point.
+       Only relevant if the minimum distance between points is set
+       (and greater than 0).
+   * - **Random seed**
+
+       Optional
+     - ``SEED``
+     - [number]
+
+       Default: Not set
+     - The seed to use for the random number generator.
+   * - **Include polygon attributes**
+     - ``INCLUDE_POLYGON_ATTRIBUTES``
+     - [boolean]
+
+       Default: True
+     - If set, a point will get the attributes from the line on
+       which it is placed.
+   * - **Random points in polygons**
+     - ``OUTPUT``
+     - [vector: point]
+
+       Default: ``[Create temporary layer]``
+     - The output random points. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table...
+
+       The file encoding can also be changed here.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Random points in polygons**
+     - ``OUTPUT``
+     - [vector: point]
+     - The output random points layer.
+   * - **Number of features with empty or no geometry**
+     - ``FEATURES_WITH_EMPTY_OR_NO_GEOMETRY``
+     - [number]
+     - 
+   * - **Total number of points generated**
+     - ``OUTPUT_POINTS``
+     - [number]
+     - 
+   * - **Number of missed points**
+     - ``POINTS_MISSED``
+     - [number]
+     - The number of points that could not be generated due to
+       the minimum distance constraint.
+   * - **Number of features with missed points**
+     - ``POLYGONS_WITH_MISSED_POINTS``
+     - [number]
+     - Not including features with empty or no geometry
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:randompointsinpolygons``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -1082,13 +1267,15 @@ to each other.
 
 **Default menu**: :menuselection:`Vector --> Research Tools`
 
+.. seealso:: :ref:`qgisrandompointsinpolygons`
+
 Parameters
 ..........
 
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -1141,7 +1328,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1151,6 +1337,9 @@ Outputs
      - ``OUTPUT``
      - [vector: point]
      - The output random points layer.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:randompointsinsidepolygons``
 
@@ -1210,6 +1399,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
+   :class: longtable
 
    * - Label
      - Name
@@ -1288,7 +1478,7 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -1316,6 +1506,9 @@ Outputs
      - The number of points that could not be generated due to
        the minimum distance constraint.
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:randompointsonlines``
 
 .. include:: qgis_algs_include.rst
@@ -1340,7 +1533,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1381,7 +1573,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1391,6 +1582,9 @@ Outputs
      - ``OUTPUT``
      - [vector: point]
      - Resulting point layer with pixels centroids
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:pixelstopoints``
 
@@ -1416,7 +1610,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1457,7 +1650,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1467,6 +1659,9 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - Resulting polygon layer of pixel extents
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:pixelstopolygons``
 
@@ -1499,7 +1694,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -1561,7 +1756,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1571,6 +1765,9 @@ Outputs
      - ``OUTPUT``
      - [vector: point]
      - The output regular point layer.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:regularpoints``
 

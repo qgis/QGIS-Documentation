@@ -24,7 +24,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -129,6 +129,9 @@ Outputs
 
 The algorithm has no output.
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:importintopostgis``
 
 .. include:: qgis_algs_include.rst
@@ -150,7 +153,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -243,6 +246,9 @@ Outputs
 
 The algorithm has no output.
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:importintospatialite``
 
 .. include:: qgis_algs_include.rst
@@ -267,7 +273,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -308,7 +313,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -319,6 +323,9 @@ Outputs
      - ``OUTPUT_LAYERS``
      - [string] [list]
      - The list of layers added to the GeoPackage.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:package``
 
@@ -352,7 +359,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -390,7 +396,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -401,6 +406,9 @@ Outputs
      - ``OUTPUT``
      - [vector: any]
      - The resulting vector layer to be loaded into QGIS.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:postgisexecuteandloadsql``
 
@@ -433,7 +441,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -456,6 +463,9 @@ Outputs
 
 No output is created.
 The SQL query is executed in place.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:postgisexecutesql``
 
@@ -485,7 +495,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -511,6 +520,9 @@ Outputs
 
 No output is created.
 The SQL query is executed in place.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:spatialiteexecutesql``
 

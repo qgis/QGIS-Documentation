@@ -30,7 +30,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -108,7 +108,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -118,6 +117,9 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - Vector layer with auto incremental field
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:addautoincrementalfield``
 
@@ -144,7 +146,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -203,7 +205,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -213,6 +214,9 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - Vector layer with new field added
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:addfieldtoattributestable``
 
@@ -243,7 +247,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -302,7 +306,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -319,6 +322,9 @@ Outputs
        Default: ``[Skip Output]``
      - Table with summary of the class field mapped to the
        corresponding unique value.  
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:adduniquevalueindexfield``
 
@@ -342,7 +348,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -387,7 +393,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -398,6 +403,9 @@ Outputs
      - [vector: point]
      - The output layer - identical to the input layer but with two
        new double fields, ``x`` and ``y``.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:addxyfieldstolayer``
 
@@ -421,7 +429,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -501,7 +509,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -511,6 +518,9 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - Vector layer with the new calculated field
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:advancedpythonfieldcalculator``
 
@@ -532,7 +542,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -567,7 +576,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -577,6 +585,9 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - Vector layer with the remaining fields
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:deletecolumn``
 
@@ -610,7 +621,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -654,7 +665,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -664,6 +674,9 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - Output vector layer
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:explodehstorefield``
 
@@ -687,7 +700,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -723,7 +735,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -733,6 +744,9 @@ Outputs
      - ``FOLDER``
      - [folder]
      - The folder that contains the output files.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:extractbinary``
 
@@ -760,7 +774,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -783,7 +796,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -796,6 +808,9 @@ Outputs
      - [same as input]
      - The output layers with filtered features (as many as there are
        filters).
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:featurefilter``
 
@@ -822,7 +837,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -883,7 +898,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -893,6 +907,9 @@ Outputs
      - ``OUTPUT``
      - [vector: any]
      - Output layer with the calculated field values
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:fieldcalculator``
 
@@ -932,7 +949,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -1006,7 +1023,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1016,6 +1032,9 @@ Outputs
      - ``OUTPUT``
      - [vector: any]
      - Output layer with refactored fields
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:refactorfields``
 
@@ -1044,7 +1063,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1079,7 +1097,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1090,6 +1107,9 @@ Outputs
      - [same as input]
      - Output vector layer with the string field converted into
        a float field
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:texttofloat``
 

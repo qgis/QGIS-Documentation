@@ -77,11 +77,11 @@ There are different ways to contribute to QGIS documentation. We show
 them separately below, but you can switch from one process to the other
 without any harm.
 
-Alternative 1: Use the ``Fix Me`` shortcut
-..........................................
+Alternative 1: Use the ``Edit on GitHub`` shortcut
+..................................................
 
 Pages on the QGIS website can be edited quickly and easily by clicking on the
-``Fix Me`` link in the footer of each page.
+``Edit on GitHub`` link at the top right of each page.
 
 #. This will open the file in the ``qgis:master`` branch with a message at the
    top of the page telling you that you don't have write access to this repo
@@ -108,6 +108,9 @@ Pages on the QGIS website can be edited quickly and easily by clicking on the
         this patch branch. The |githubBranch| button will now say
         :guilabel:`Branch: patch-xxx`
      #. Jump down to :ref:`Modify files <modify_files>` below.
+
+.. note:: The ``Edit on GitHub`` shortcut is also available in the drop-down
+  menu at the bottom of the left sidebar.
 
 Alternative 2: Create an ad hoc branch in your documentation repository
 .......................................................................
@@ -153,7 +156,7 @@ The name of the new branch should relate to the problem you intend to fix. The
 
 You need to make a pull request to integrate your changes into the official documentation.
 
-.. note:: **If you used a** ``Fix Me`` **link**
+.. note:: **If you used an** ``Edit on GitHub`` **link**
 
   After you commit your changes GitHub will automatically open a new page
   comparing the changes you made in your ``patch-xxx`` branch to the ``qgis/QGIS-Documentation``

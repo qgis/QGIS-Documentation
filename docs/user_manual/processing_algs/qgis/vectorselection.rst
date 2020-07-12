@@ -27,7 +27,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -101,7 +101,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -117,6 +116,9 @@ Outputs
      - [same as input]
      - Vector layer with non-matching features from the
        input layer
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:extractbyattribute``
 
@@ -146,7 +148,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -195,7 +196,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -211,6 +211,9 @@ Outputs
      - [same as input]
      - Vector layer with non-matching features from the
        input layer
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:extractbyexpression``
 
@@ -242,7 +245,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -297,7 +300,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -309,6 +311,9 @@ Outputs
      - Vector layer with features from the input layer that
        have the chosen spatial relationship(s) with one or
        more features in the comparison layer.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:extractbylocation``
 
@@ -336,7 +341,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -384,7 +389,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -395,6 +399,9 @@ Outputs
      - [same as input]
      - Vector layer containing randomly selected features from
        the input layer
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:randomextract``
 
@@ -425,7 +432,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -477,7 +484,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -488,6 +494,9 @@ Outputs
      - [same as input]
      - Vector layer containing randomly selected features from
        the input layer
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:randomextractwithinsubsets``
 
@@ -517,7 +526,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -550,7 +558,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -560,6 +567,9 @@ Outputs
      - ``INPUT``
      - [same as input]
      - The input layer with features selected
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:randomselection``
 
@@ -597,7 +607,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -634,7 +643,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -644,6 +652,9 @@ Outputs
      - ``INPUT``
      - [same as input]
      - The input layer with features selected
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:randomselectionwithinsubsets``
 
@@ -669,7 +680,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -727,7 +738,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -737,6 +747,9 @@ Outputs
      - ``INPUT``
      - [same as input]
      - The input layer with features selected
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:selectbyattribute``
 
@@ -763,7 +776,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -796,7 +808,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -806,6 +817,9 @@ Outputs
      - ``INPUT``
      - [same as input]
      - The input layer with features selected
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:selectbyexpression``
 
@@ -838,7 +852,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -891,7 +905,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -901,6 +914,9 @@ Outputs
      - ``INPUT``
      - [same as input]
      - The input layer with features selected
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:selectbylocation``
 
