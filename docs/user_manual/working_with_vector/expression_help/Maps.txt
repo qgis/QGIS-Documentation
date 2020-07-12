@@ -3,14 +3,14 @@
 from_json
 .........
 
-from_json(string)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Loads a JSON formatted string.
+   * - Syntax
+     - from_json(string)
 
    * - Arguments
      - **string** - JSON string
@@ -26,14 +26,14 @@ from_json(string)
 hstore_to_map
 .............
 
-hstore_to_map(string)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Creates a map from a hstore-formatted string.
+   * - Syntax
+     - hstore_to_map(string)
 
    * - Arguments
      - **string** - the input string
@@ -47,14 +47,14 @@ hstore_to_map(string)
 json_to_map
 ...........
 
-json_to_map(string)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Creates a map from a json-formatted string.
+   * - Syntax
+     - json_to_map(string)
 
    * - Arguments
      - **string** - the input string
@@ -68,14 +68,14 @@ json_to_map(string)
 map
 ...
 
-map(key1, value1, key2, value2, ...)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns a map containing all the keys and values passed as pair of parameters.
+   * - Syntax
+     - map(key1, value1, key2, value2, ...)
 
    * - Arguments
      - **key** - a key (string)
@@ -91,14 +91,14 @@ map(key1, value1, key2, value2, ...)
 map_akeys
 .........
 
-map_akeys(map)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns all the keys of a map as an array.
+   * - Syntax
+     - map_akeys(map)
 
    * - Arguments
      - **map** - a map
@@ -112,14 +112,14 @@ map_akeys(map)
 map_avals
 .........
 
-map_avals(map)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns all the values of a map as an array.
+   * - Syntax
+     - map_avals(map)
 
    * - Arguments
      - **map** - a map
@@ -133,14 +133,14 @@ map_avals(map)
 map_concat
 ..........
 
-map_concat(map1, map2, ...)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns a map containing all the entries of the given maps. If two maps contain the same key, the value of the second map is taken.
+   * - Syntax
+     - map_concat(map1, map2, ...)
 
    * - Arguments
      - **map** - a map
@@ -154,14 +154,14 @@ map_concat(map1, map2, ...)
 map_delete
 ..........
 
-map_delete(map, key)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns a map with the given key and its corresponding value deleted.
+   * - Syntax
+     - map_delete(map, key)
 
    * - Arguments
      - **map** - a map
@@ -177,14 +177,14 @@ map_delete(map, key)
 map_exist
 .........
 
-map_exist(map, key)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns true if the given key exists in the map.
+   * - Syntax
+     - map_exist(map, key)
 
    * - Arguments
      - **map** - a map
@@ -200,14 +200,14 @@ map_exist(map, key)
 map_get
 .......
 
-map_get(map, key)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns the value of a map, given it's key.
+   * - Syntax
+     - map_get(map, key)
 
    * - Arguments
      - **map** - a map
@@ -223,14 +223,14 @@ map_get(map, key)
 map_insert
 ..........
 
-map_insert(map, key, value)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns a map with an added key/value.
+   * - Syntax
+     - map_insert(map, key, value)
 
    * - Arguments
      - **map** - a map
@@ -248,14 +248,14 @@ map_insert(map, key, value)
 map_to_hstore
 .............
 
-map_to_hstore(map)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Merge map elements into a hstore-formatted string.
+   * - Syntax
+     - map_to_hstore(map)
 
    * - Arguments
      - **map** - the input map
@@ -269,14 +269,14 @@ map_to_hstore(map)
 map_to_json
 ...........
 
-map_to_json(map)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Merge map elements into a json-formatted string.
+   * - Syntax
+     - map_to_json(map)
 
    * - Arguments
      - **map** - the input map
@@ -290,14 +290,14 @@ map_to_json(map)
 to_json
 .......
 
-to_json(value)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Create a JSON formatted string from a map, array or other value.
+   * - Syntax
+     - to_json(value)
 
    * - Arguments
      - **value** - The input value

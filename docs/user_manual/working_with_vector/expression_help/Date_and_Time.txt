@@ -3,14 +3,14 @@
 age
 ...
 
-age(datetime1, datetime2)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns the difference between two dates or datetimes.<br>The difference is returned as a <code>Interval</code> and needs to be used with one of the following functions in order to extract useful information:<br /><ul><li><code>year</code><li><code>month</code><li><code>week</code><li><code>day</code><li><code>hour</code><li><code>minute</code><li><code>second</code></ul>
+   * - Syntax
+     - age(datetime1, datetime2)
 
    * - Arguments
      - **datetime1** - a string, date or datetime representing the later date
@@ -28,14 +28,14 @@ age(datetime1, datetime2)
 datetime_from_epoch
 ...................
 
-datetime_from_epoch(int)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns a datetime whose date and time are the number of milliseconds, msecs, that have passed since 1970-01-01T00:00:00.000, Coordinated Universal Time (Qt.UTC), and converted to Qt.LocalTime.
+   * - Syntax
+     - datetime_from_epoch(int)
 
    * - Arguments
      - **int** - number (milliseconds)
@@ -49,14 +49,14 @@ datetime_from_epoch(int)
 day
 ...
 
-day
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Extracts the day from a date, or the number of days from an interval.
+   * - Syntax
+     - day
 
 
 
@@ -66,14 +66,14 @@ day
 day_of_week
 ...........
 
-day_of_week(date)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns the day of the week for a specified date or datetime. The returned value ranges from 0 to 6, where 0 corresponds to a Sunday and 6 to a Saturday.
+   * - Syntax
+     - day_of_week(date)
 
    * - Arguments
      - **date** - date or datetime value
@@ -87,14 +87,14 @@ day_of_week(date)
 epoch
 .....
 
-epoch(date)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns the interval in milliseconds between the unix epoch and a given date value.
+   * - Syntax
+     - epoch(date)
 
    * - Arguments
      - **date** - a date or datetime value
@@ -108,14 +108,14 @@ epoch(date)
 format_date
 ...........
 
-format_date(datetime, format, language)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Formats a date type or string into a custom string format. Uses Qt date/time format strings. See <a href='https://doc.qt.io/qt-5/qdatetime.html#toString'>QDateTime::toString</a>.
+   * - Syntax
+     - format_date(datetime, format, language)
 
    * - Arguments
      - **datetime** - date, time or datetime value
@@ -135,14 +135,14 @@ format_date(datetime, format, language)
 hour
 ....
 
-hour
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Extracts the hour part from a datetime or time, or the number of hours from an interval.
+   * - Syntax
+     - hour
 
 
 
@@ -152,14 +152,14 @@ hour
 make_date
 .........
 
-make_date(year, month, day)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Creates a date value from year, month and day numbers.
+   * - Syntax
+     - make_date(year, month, day)
 
    * - Arguments
      - **year** - Year number. Years 1 to 99 are interpreted as is. Year 0 is invalid.
@@ -177,14 +177,14 @@ make_date(year, month, day)
 make_datetime
 .............
 
-make_datetime(year, month, day, hour, minute, second)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Creates a datetime value from year, month, day, hour, minute and second numbers.
+   * - Syntax
+     - make_datetime(year, month, day, hour, minute, second)
 
    * - Arguments
      - **year** - Year number. Years 1 to 99 are interpreted as is. Year 0 is invalid.
@@ -208,14 +208,14 @@ make_datetime(year, month, day, hour, minute, second)
 make_interval
 .............
 
-make_interval(years, months, weeks, days, hours, minutes, seconds)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Creates an interval value from year, month, weeks, days, hours, minute and seconds values.
+   * - Syntax
+     - make_interval(years, months, weeks, days, hours, minutes, seconds)
 
    * - Arguments
      - **years** - Number of years (assumes a 365.25 day year length).
@@ -243,14 +243,14 @@ make_interval(years, months, weeks, days, hours, minutes, seconds)
 make_time
 .........
 
-make_time(hour, minute, second)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Creates a time value from hour, minute and second numbers.
+   * - Syntax
+     - make_time(hour, minute, second)
 
    * - Arguments
      - **hour** - Hour number
@@ -268,14 +268,14 @@ make_time(hour, minute, second)
 minute
 ......
 
-minute
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Extracts the minutes part from a datetime or time, or the number of minutes from an interval.
+   * - Syntax
+     - minute
 
 
 
@@ -285,14 +285,14 @@ minute
 month
 .....
 
-month
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Extracts the month part from a date, or the number of months from an interval.
+   * - Syntax
+     - month
 
 
 
@@ -302,14 +302,14 @@ month
 now
 ...
 
-now
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns the current date and time. The function is static and will return consistent results while evaluating. The time returned is the time when the expression is prepared.
+   * - Syntax
+     - now
 
    * - Examples
      - ``now()`` → 2012-07-22T13:24:57
@@ -320,14 +320,14 @@ now
 second
 ......
 
-second
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Extracts the seconds part from a datetime or time, or the number of seconds from an interval.
+   * - Syntax
+     - second
 
 
 
@@ -337,14 +337,14 @@ second
 to_date
 .......
 
-to_date(string, format, language)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Converts a string into a date object. An optional format string can be provided to parse the string; see <a href='https://doc.qt.io/qt-5/qdate.html#fromString-1'>QDate::fromString</a> for additional documentation on the format.
+   * - Syntax
+     - to_date(string, format, language)
 
    * - Arguments
      - **string** - string representing a date value
@@ -366,14 +366,14 @@ to_date(string, format, language)
 to_datetime
 ...........
 
-to_datetime(string, format, language)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Converts a string into a datetime object. An optional format string can be provided to parse the string; see <a href='https://doc.qt.io/qt-5/qdatetime.html#fromString-1'>QDateTime::fromString</a> for additional documentation on the format.
+   * - Syntax
+     - to_datetime(string, format, language)
 
    * - Arguments
      - **string** - string representing a datetime value
@@ -395,14 +395,14 @@ to_datetime(string, format, language)
 to_interval
 ...........
 
-to_interval(string)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Converts a string to a interval type. Can be used to take days, hours, month, etc of a date.
+   * - Syntax
+     - to_interval(string)
 
    * - Arguments
      - **string** - a string representing an interval. Allowable formats include {n} days {n} hours {n} months.
@@ -416,14 +416,14 @@ to_interval(string)
 to_time
 .......
 
-to_time(string, format, language)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Converts a string into a time object. An optional format string can be provided to parse the string; see <a href='https://doc.qt.io/qt-5/qtime.html#fromString-1'>QTime::fromString</a> for additional documentation on the format.
+   * - Syntax
+     - to_time(string, format, language)
 
    * - Arguments
      - **string** - string representing a time value
@@ -445,14 +445,14 @@ to_time(string, format, language)
 week
 ....
 
-week
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Extracts the week number from a date, or the number of weeks from an interval.
+   * - Syntax
+     - week
 
 
 
@@ -462,14 +462,14 @@ week
 year
 ....
 
-year
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Extracts the year part from a date, or the number of years from an interval.
+   * - Syntax
+     - year
 
 
 

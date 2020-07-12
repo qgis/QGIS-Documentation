@@ -3,14 +3,14 @@
 aggregate
 .........
 
-aggregate(layer, aggregate, expression, filter, concatenator, order_by)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns an aggregate value calculated using features from another layer.
+   * - Syntax
+     - aggregate(layer, aggregate, expression, filter, concatenator, order_by)
 
    * - Arguments
      - **layer** - a string, representing either a layer name or layer ID
@@ -42,14 +42,14 @@ aggregate(layer, aggregate, expression, filter, concatenator, order_by)
 array_agg
 .........
 
-array_agg(expression, group_by, filter, order_by)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns an array of aggregated values from a field or expression.
+   * - Syntax
+     - array_agg(expression, group_by, filter, order_by)
 
    * - Arguments
      - **expression** - sub expression of field to aggregate
@@ -69,14 +69,14 @@ array_agg(expression, group_by, filter, order_by)
 collect
 .......
 
-collect(expression, group_by, filter)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns the multipart geometry of aggregated geometries from an expression
+   * - Syntax
+     - collect(expression, group_by, filter)
 
    * - Arguments
      - **expression** - geometry expression to aggregate
@@ -94,14 +94,14 @@ collect(expression, group_by, filter)
 concatenate
 ...........
 
-concatenate(expression, group_by, filter, concatenator, order_by)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns all aggregated strings from a field or expression joined by a delimiter.
+   * - Syntax
+     - concatenate(expression, group_by, filter, concatenator, order_by)
 
    * - Arguments
      - **expression** - sub expression of field to aggregate
@@ -123,14 +123,14 @@ concatenate(expression, group_by, filter, concatenator, order_by)
 concatenate_unique
 ..................
 
-concatenate_unique(expression, group_by, filter, concatenator, order_by)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns all unique strings from a field or expression joined by a delimiter.
+   * - Syntax
+     - concatenate_unique(expression, group_by, filter, concatenator, order_by)
 
    * - Arguments
      - **expression** - sub expression of field to aggregate
@@ -152,14 +152,14 @@ concatenate_unique(expression, group_by, filter, concatenator, order_by)
 count
 .....
 
-count(expression, group_by, filter)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns the count of matching features.
+   * - Syntax
+     - count(expression, group_by, filter)
 
    * - Arguments
      - **expression** - sub expression of field to aggregate
@@ -177,14 +177,14 @@ count(expression, group_by, filter)
 count_distinct
 ..............
 
-count_distinct(expression, group_by, filter)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns the count of distinct values.
+   * - Syntax
+     - count_distinct(expression, group_by, filter)
 
    * - Arguments
      - **expression** - sub expression of field to aggregate
@@ -202,14 +202,14 @@ count_distinct(expression, group_by, filter)
 count_missing
 .............
 
-count_missing(expression, group_by, filter)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns the count of missing (null) values.
+   * - Syntax
+     - count_missing(expression, group_by, filter)
 
    * - Arguments
      - **expression** - sub expression of field to aggregate
@@ -227,14 +227,14 @@ count_missing(expression, group_by, filter)
 iqr
 ...
 
-iqr(expression, group_by, filter)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns the calculated inter quartile range from a field or expression.
+   * - Syntax
+     - iqr(expression, group_by, filter)
 
    * - Arguments
      - **expression** - sub expression of field to aggregate
@@ -252,14 +252,14 @@ iqr(expression, group_by, filter)
 majority
 ........
 
-majority(expression, group_by, filter)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns the aggregate majority of values (most commonly occurring value) from a field or expression.
+   * - Syntax
+     - majority(expression, group_by, filter)
 
    * - Arguments
      - **expression** - sub expression of field to aggregate
@@ -277,14 +277,14 @@ majority(expression, group_by, filter)
 max_length
 ..........
 
-max_length(expression, group_by, filter)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns the maximum length of strings from a field or expression.
+   * - Syntax
+     - max_length(expression, group_by, filter)
 
    * - Arguments
      - **expression** - sub expression of field to aggregate
@@ -302,14 +302,14 @@ max_length(expression, group_by, filter)
 maximum
 .......
 
-maximum(expression, group_by, filter)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns the aggregate maximum value from a field or expression.
+   * - Syntax
+     - maximum(expression, group_by, filter)
 
    * - Arguments
      - **expression** - sub expression of field to aggregate
@@ -327,14 +327,14 @@ maximum(expression, group_by, filter)
 mean
 ....
 
-mean(expression, group_by, filter)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns the aggregate mean value from a field or expression.
+   * - Syntax
+     - mean(expression, group_by, filter)
 
    * - Arguments
      - **expression** - sub expression of field to aggregate
@@ -352,14 +352,14 @@ mean(expression, group_by, filter)
 median
 ......
 
-median(expression, group_by, filter)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns the aggregate median value from a field or expression.
+   * - Syntax
+     - median(expression, group_by, filter)
 
    * - Arguments
      - **expression** - sub expression of field to aggregate
@@ -377,14 +377,14 @@ median(expression, group_by, filter)
 min_length
 ..........
 
-min_length(expression, group_by, filter)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns the minimum length of strings from a field or expression.
+   * - Syntax
+     - min_length(expression, group_by, filter)
 
    * - Arguments
      - **expression** - sub expression of field to aggregate
@@ -402,14 +402,14 @@ min_length(expression, group_by, filter)
 minimum
 .......
 
-minimum(expression, group_by, filter)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns the aggregate minimum value from a field or expression.
+   * - Syntax
+     - minimum(expression, group_by, filter)
 
    * - Arguments
      - **expression** - sub expression of field to aggregate
@@ -427,14 +427,14 @@ minimum(expression, group_by, filter)
 minority
 ........
 
-minority(expression, group_by, filter)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns the aggregate minority of values (least occurring value) from a field or expression.
+   * - Syntax
+     - minority(expression, group_by, filter)
 
    * - Arguments
      - **expression** - sub expression of field to aggregate
@@ -452,14 +452,14 @@ minority(expression, group_by, filter)
 q1
 ..
 
-q1(expression, group_by, filter)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns the calculated first quartile from a field or expression.
+   * - Syntax
+     - q1(expression, group_by, filter)
 
    * - Arguments
      - **expression** - sub expression of field to aggregate
@@ -477,14 +477,14 @@ q1(expression, group_by, filter)
 q3
 ..
 
-q3(expression, group_by, filter)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns the calculated third quartile from a field or expression.
+   * - Syntax
+     - q3(expression, group_by, filter)
 
    * - Arguments
      - **expression** - sub expression of field to aggregate
@@ -502,14 +502,14 @@ q3(expression, group_by, filter)
 range
 .....
 
-range(expression, group_by, filter)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns the aggregate range of values (maximum - minimum) from a field or expression.
+   * - Syntax
+     - range(expression, group_by, filter)
 
    * - Arguments
      - **expression** - sub expression of field to aggregate
@@ -527,14 +527,14 @@ range(expression, group_by, filter)
 relation_aggregate
 ..................
 
-relation_aggregate(relation, aggregate, expression, concatenator, order_by)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns an aggregate value calculated using all matching child features from a layer relation.
+   * - Syntax
+     - relation_aggregate(relation, aggregate, expression, concatenator, order_by)
 
    * - Arguments
      - **relation** - a string, representing a relation ID
@@ -562,14 +562,14 @@ relation_aggregate(relation, aggregate, expression, concatenator, order_by)
 stdev
 .....
 
-stdev(expression, group_by, filter)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns the aggregate standard deviation value from a field or expression.
+   * - Syntax
+     - stdev(expression, group_by, filter)
 
    * - Arguments
      - **expression** - sub expression of field to aggregate
@@ -587,14 +587,14 @@ stdev(expression, group_by, filter)
 sum
 ...
 
-sum(expression, group_by, filter)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns the aggregate summed value from a field or expression.
+   * - Syntax
+     - sum(expression, group_by, filter)
 
    * - Arguments
      - **expression** - sub expression of field to aggregate

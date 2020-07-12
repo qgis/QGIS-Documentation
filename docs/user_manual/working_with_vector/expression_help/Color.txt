@@ -3,14 +3,14 @@
 color_cmyk
 ..........
 
-color_cmyk(cyan, magenta, yellow, black)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns a string representation of a color based on its cyan, magenta, yellow and black components
+   * - Syntax
+     - color_cmyk(cyan, magenta, yellow, black)
 
    * - Arguments
      - **cyan** - cyan component of the color, as a percentage integer value from 0 to 100
@@ -30,14 +30,14 @@ color_cmyk(cyan, magenta, yellow, black)
 color_cmyka
 ...........
 
-color_cmyka(cyan, magenta, yellow, black, alpha)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns a string representation of a color based on its cyan, magenta, yellow, black and alpha (transparency) components
+   * - Syntax
+     - color_cmyka(cyan, magenta, yellow, black, alpha)
 
    * - Arguments
      - **cyan** - cyan component of the color, as a percentage integer value from 0 to 100
@@ -59,14 +59,14 @@ color_cmyka(cyan, magenta, yellow, black, alpha)
 color_grayscale_average
 .......................
 
-color_grayscale_average(color)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Applies a grayscale filter and returns a string representation from a provided color.
+   * - Syntax
+     - color_grayscale_average(color)
 
    * - Arguments
      - **color** - a color string
@@ -80,14 +80,14 @@ color_grayscale_average(color)
 color_hsl
 .........
 
-color_hsl(hue, saturation, lightness)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns a string representation of a color based on its hue, saturation, and lightness attributes.
+   * - Syntax
+     - color_hsl(hue, saturation, lightness)
 
    * - Arguments
      - **hue** - hue of the color, as an integer value from 0 to 360
@@ -105,14 +105,14 @@ color_hsl(hue, saturation, lightness)
 color_hsla
 ..........
 
-color_hsla(hue, saturation, lightness, alpha)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns a string representation of a color based on its hue, saturation, lightness and alpha (transparency) attributes
+   * - Syntax
+     - color_hsla(hue, saturation, lightness, alpha)
 
    * - Arguments
      - **hue** - hue of the color, as an integer value from 0 to 360
@@ -132,14 +132,14 @@ color_hsla(hue, saturation, lightness, alpha)
 color_hsv
 .........
 
-color_hsv(hue, saturation, value)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns a string representation of a color based on its hue, saturation, and value attributes.
+   * - Syntax
+     - color_hsv(hue, saturation, value)
 
    * - Arguments
      - **hue** - hue of the color, as an integer value from 0 to 360
@@ -157,14 +157,14 @@ color_hsv(hue, saturation, value)
 color_hsva
 ..........
 
-color_hsva(hue, saturation, value, alpha)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns a string representation of a color based on its hue, saturation, value and alpha (transparency) attributes.
+   * - Syntax
+     - color_hsva(hue, saturation, value, alpha)
 
    * - Arguments
      - **hue** - hue of the color, as an integer value from 0 to 360
@@ -184,14 +184,14 @@ color_hsva(hue, saturation, value, alpha)
 color_mix_rgb
 .............
 
-color_mix_rgb(color1, color2, ratio)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns a string representing a color mixing the red, green, blue, and alpha values of two provided colors based on a given ratio.
+   * - Syntax
+     - color_mix_rgb(color1, color2, ratio)
 
    * - Arguments
      - **color1** - a color string
@@ -209,14 +209,14 @@ color_mix_rgb(color1, color2, ratio)
 color_part
 ..........
 
-color_part(color, component)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns a specific component from a color string, e.g., the red component or alpha component.
+   * - Syntax
+     - color_part(color, component)
 
    * - Arguments
      - **color** - a color string
@@ -232,14 +232,14 @@ color_part(color, component)
 color_rgb
 .........
 
-color_rgb(red, green, blue)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns a string representation of a color based on its red, green, and blue components.
+   * - Syntax
+     - color_rgb(red, green, blue)
 
    * - Arguments
      - **red** - red component as an integer value from 0 to 255
@@ -257,14 +257,14 @@ color_rgb(red, green, blue)
 color_rgba
 ..........
 
-color_rgba(red, green, blue, alpha)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns a string representation of a color based on its red, green, blue, and alpha (transparency) components.
+   * - Syntax
+     - color_rgba(red, green, blue, alpha)
 
    * - Arguments
      - **red** - red component as an integer value from 0 to 255
@@ -284,14 +284,14 @@ color_rgba(red, green, blue, alpha)
 create_ramp
 ...........
 
-create_ramp(map, discrete)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns a gradient ramp from a map of color strings and steps.
+   * - Syntax
+     - create_ramp(map, discrete)
 
    * - Arguments
      - **map** - a map of color strings and steps
@@ -307,14 +307,14 @@ create_ramp(map, discrete)
 darker
 ......
 
-darker(color, factor)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns a darker (or lighter) color string
+   * - Syntax
+     - darker(color, factor)
 
    * - Arguments
      - **color** - a color string
@@ -330,14 +330,14 @@ darker(color, factor)
 lighter
 .......
 
-lighter(color, factor)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns a lighter (or darker) color string
+   * - Syntax
+     - lighter(color, factor)
 
    * - Arguments
      - **color** - a color string
@@ -353,14 +353,14 @@ lighter(color, factor)
 project_color
 .............
 
-project_color(name)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns a color from the project's color scheme.
+   * - Syntax
+     - project_color(name)
 
    * - Arguments
      - **name** - a color name
@@ -374,14 +374,14 @@ project_color(name)
 ramp_color
 ..........
 
-ramp_color
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns a string representing a color from a color ramp.
+   * - Syntax
+     - ramp_color
 
 
 
@@ -391,14 +391,14 @@ ramp_color
 set_color_part
 ..............
 
-set_color_part(color, component, value)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Sets a specific color component for a color string, e.g., the red component or alpha component.
+   * - Syntax
+     - set_color_part(color, component, value)
 
    * - Arguments
      - **color** - a color string

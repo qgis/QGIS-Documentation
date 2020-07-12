@@ -3,14 +3,14 @@
 ascii
 .....
 
-ascii(string)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns the unicode code associated with the first character of a string.
+   * - Syntax
+     - ascii(string)
 
    * - Arguments
      - **string** - the string to convert to unicode code
@@ -24,14 +24,14 @@ ascii(string)
 char
 ....
 
-char(code)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns the character associated with a unicode code.
+   * - Syntax
+     - char(code)
 
    * - Arguments
      - **code** - a unicode code number
@@ -45,14 +45,14 @@ char(code)
 concat
 ......
 
-concat(string1, string2, ...)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Concatenates several strings to one. NULL values are converted to empty strings. Other values (like numbers) are converted to strings.
+   * - Syntax
+     - concat(string1, string2, ...)
 
    * - Arguments
      - **string** - a string value
@@ -72,14 +72,14 @@ concat(string1, string2, ...)
 format
 ......
 
-format(string, arg1, arg2, ...)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Format a string using supplied arguments.
+   * - Syntax
+     - format(string, arg1, arg2, ...)
 
    * - Arguments
      - **string** - A string with place holders for the arguments. Use %1, %2, etc for placeholders. Placeholders can be repeated.
@@ -95,14 +95,14 @@ format(string, arg1, arg2, ...)
 format_date
 ...........
 
-format_date(datetime, format, language)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Formats a date type or string into a custom string format. Uses Qt date/time format strings. See <a href='https://doc.qt.io/qt-5/qdatetime.html#toString'>QDateTime::toString</a>.
+   * - Syntax
+     - format_date(datetime, format, language)
 
    * - Arguments
      - **datetime** - date, time or datetime value
@@ -122,14 +122,14 @@ format_date(datetime, format, language)
 format_number
 .............
 
-format_number(number, places, language)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns a number formatted with the locale separator for thousands. Also truncates the decimal places to the number of supplied places.
+   * - Syntax
+     - format_number(number, places, language)
 
    * - Arguments
      - **number** - number to be formatted
@@ -147,14 +147,14 @@ format_number(number, places, language)
 left
 ....
 
-left(string, length)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns a substring that contains the <i>n</i> leftmost characters of the string.
+   * - Syntax
+     - left(string, length)
 
    * - Arguments
      - **string** - a string
@@ -170,14 +170,14 @@ left(string, length)
 length
 ......
 
-length
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns the number of characters in a string or the length of a geometry linestring.
+   * - Syntax
+     - length
 
 
 
@@ -187,14 +187,14 @@ length
 lower
 .....
 
-lower(string)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Converts a string to lower case letters.
+   * - Syntax
+     - lower(string)
 
    * - Arguments
      - **string** - the string to convert to lower case
@@ -208,14 +208,14 @@ lower(string)
 lpad
 ....
 
-lpad(string, width, fill)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns a string padded on the left to the specified width, using a fill character. If the target width is smaller than the string's length, the string is truncated.
+   * - Syntax
+     - lpad(string, width, fill)
 
    * - Arguments
      - **string** - string to pad
@@ -235,14 +235,14 @@ lpad(string, width, fill)
 regexp_match
 ............
 
-regexp_match(input_string, regex)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Return the first matching position matching a regular expression within a string, or 0 if the substring is not found.
+   * - Syntax
+     - regexp_match(input_string, regex)
 
    * - Arguments
      - **input_string** - the string to test against the regular expression
@@ -258,14 +258,14 @@ regexp_match(input_string, regex)
 regexp_replace
 ..............
 
-regexp_replace(input_string, regex, replacement)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns a string with the supplied regular expression replaced.
+   * - Syntax
+     - regexp_replace(input_string, regex, replacement)
 
    * - Arguments
      - **input_string** - the string to replace matches in
@@ -283,14 +283,14 @@ regexp_replace(input_string, regex, replacement)
 regexp_substr
 .............
 
-regexp_substr(input_string, regex)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns the portion of a string which matches a supplied regular expression.
+   * - Syntax
+     - regexp_substr(input_string, regex)
 
    * - Arguments
      - **input_string** - the string to find matches in
@@ -306,14 +306,14 @@ regexp_substr(input_string, regex)
 replace
 .......
 
-replace
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns a string with the supplied string, array, or map of strings replaced.
+   * - Syntax
+     - replace
 
 
 
@@ -323,14 +323,14 @@ replace
 right
 .....
 
-right(string, length)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns a substring that contains the <i>n</i> rightmost characters of the string.
+   * - Syntax
+     - right(string, length)
 
    * - Arguments
      - **string** - a string
@@ -346,14 +346,14 @@ right(string, length)
 rpad
 ....
 
-rpad(string, width, fill)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns a string padded on the right to the specified width, using a fill character. If the target width is smaller than the string's length, the string is truncated.
+   * - Syntax
+     - rpad(string, width, fill)
 
    * - Arguments
      - **string** - string to pad
@@ -373,14 +373,14 @@ rpad(string, width, fill)
 strpos
 ......
 
-strpos(haystack, needle)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Return the first matching position of a substring within another string, or 0 if the substring is not found.
+   * - Syntax
+     - strpos(haystack, needle)
 
    * - Arguments
      - **haystack** - string that is to be searched
@@ -398,14 +398,14 @@ strpos(haystack, needle)
 substr
 ......
 
-substr(string, start, length)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns a part of a string.
+   * - Syntax
+     - substr(string, start, length)
 
    * - Arguments
      - **string** - the full input string
@@ -433,14 +433,14 @@ substr(string, start, length)
 title
 .....
 
-title(string)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Converts all words of a string to title case (all words lower case with leading capital letter).
+   * - Syntax
+     - title(string)
 
    * - Arguments
      - **string** - the string to convert to title case
@@ -454,14 +454,14 @@ title(string)
 to_string
 .........
 
-to_string(number)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Converts a number to string.
+   * - Syntax
+     - to_string(number)
 
    * - Arguments
      - **number** - Integer or real value. The number to convert to string.
@@ -475,14 +475,14 @@ to_string(number)
 trim
 ....
 
-trim(string)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Removes all leading and trailing whitespace (spaces, tabs, etc) from a string.
+   * - Syntax
+     - trim(string)
 
    * - Arguments
      - **string** - string to trim
@@ -496,14 +496,14 @@ trim(string)
 upper
 .....
 
-upper(string)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Converts a string to upper case letters.
+   * - Syntax
+     - upper(string)
 
    * - Arguments
      - **string** - the string to convert to upper case
@@ -517,14 +517,14 @@ upper(string)
 wordwrap
 ........
 
-wordwrap(string, wrap_length, delimiter_string)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns a string wrapped to a maximum/minimum number of characters.
+   * - Syntax
+     - wordwrap(string, wrap_length, delimiter_string)
 
    * - Arguments
      - **string** - the string to be wrapped

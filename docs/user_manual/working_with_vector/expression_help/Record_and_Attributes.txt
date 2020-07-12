@@ -3,14 +3,14 @@
 $currentfeature
 ...............
 
-$currentfeature
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns the current feature being evaluated. This can be used with the 'attribute' function to evaluate attribute values from the current feature.
+   * - Syntax
+     - $currentfeature
 
    * - Examples
      - ``attribute( $currentfeature, 'name' )`` → value stored in 'name' attribute for the current feature
@@ -21,14 +21,14 @@ $currentfeature
 $id
 ...
 
-$id
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns the feature id of the current row.
+   * - Syntax
+     - $id
 
    * - Examples
      - ``$id`` → 42
@@ -39,14 +39,14 @@ $id
 attribute
 .........
 
-attribute
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns an attribute from a feature.
+   * - Syntax
+     - attribute
 
 
 
@@ -56,14 +56,14 @@ attribute
 attributes
 ..........
 
-attributes
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns a map containing all attributes from a feature, with field names as map keys.
+   * - Syntax
+     - attributes
 
 
 
@@ -73,14 +73,14 @@ attributes
 display_expression
 ..................
 
-display_expression(feature, layer, evaluate)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns the display expression for a given feature in a layer. If called with no parameters, it evaluates the current feature. The expression is evaluated by default.
+   * - Syntax
+     - display_expression(feature, layer, evaluate)
 
    * - Arguments
      - **feature** - The feature which should be evaluated.
@@ -102,14 +102,14 @@ display_expression(feature, layer, evaluate)
 get_feature
 ...........
 
-get_feature(layer, attribute, value)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns the first feature of a layer matching a given attribute value.
+   * - Syntax
+     - get_feature(layer, attribute, value)
 
    * - Arguments
      - **layer** - layer name or ID
@@ -127,14 +127,14 @@ get_feature(layer, attribute, value)
 get_feature_by_id
 .................
 
-get_feature_by_id(layer, feature_id)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns the feature with an id on a layer.
+   * - Syntax
+     - get_feature_by_id(layer, feature_id)
 
    * - Arguments
      - **layer** - layer, layer name or layer id
@@ -150,14 +150,14 @@ get_feature_by_id(layer, feature_id)
 is_selected
 ...........
 
-is_selected
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns True if a feature is selected. Can be used with zero, one or two arguments, see below for details.
+   * - Syntax
+     - is_selected
 
 
 
@@ -167,14 +167,14 @@ is_selected
 maptip
 ......
 
-maptip(feature, layer, evaluate)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns the maptip for a given feature in a layer. If called with no parameters, it evaluates the current feature. The maptip is evaluated by default.
+   * - Syntax
+     - maptip(feature, layer, evaluate)
 
    * - Arguments
      - **feature** - The feature which should be evaluated.
@@ -196,14 +196,14 @@ maptip(feature, layer, evaluate)
 num_selected
 ............
 
-num_selected(layer)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns the number of selected features on a given layer. By default works on the layer on which the expression is evaluated.
+   * - Syntax
+     - num_selected(layer)
 
    * - Arguments
      - **layer** - The layer (or its id or name) on which the selection will be checked.
@@ -219,14 +219,14 @@ num_selected(layer)
 represent_value
 ...............
 
-represent_value(value, fieldName)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Returns the configured representation value for a field value. It depends on the configured widget type. Often, this is useful for 'Value Map' widgets.
+   * - Syntax
+     - represent_value(value, fieldName)
 
    * - Arguments
      - **value** - The value which should be resolved. Most likely a field.
@@ -244,14 +244,14 @@ represent_value(value, fieldName)
 sqlite_fetch_and_increment
 ..........................
 
-sqlite_fetch_and_increment(database, table, id_field, filter_attribute, filter_value, default_values)
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Manage autoincrementing values in sqlite databases.<p>SQlite default values can only be applied on insert and not prefetched.</p><p>This makes it impossible to acquire an incremented primary key via AUTO_INCREMENT before creating the row in the database. Sidenote: with postgres, this works via the option <i>evaluate default values</i>.</p><p>When adding new features with relations, it is really nice to be able to already add children for a parent, while the parents form is still open and hence the parent feature uncommitted.</p><p>To get around this limitation, this function can be used to manage sequence values in a separate table on sqlite based formats like gpkg.</p><p>The sequence table will be filtered for a sequence id (filter_attribute and filter_value) and the current value of the id_field will be incremented by 1 and the incremented value returned.</p><p>If additional columns require values to be specified, the default_value map can be used for this purpose.</p><p><b>Note</b><br/>This function modifies the target sqlite table. It is intended for usage with default value configurations for attributes.</p><p>When the database parameter is a layer and the layer is in transaction mode, the value will only be retrieved once during the lifetime of a transaction and cached and incremented. This makes it unsafe to work on the same database from several processes in parallel.</p>
+   * - Syntax
+     - sqlite_fetch_and_increment(database, table, id_field, filter_attribute, filter_value, default_values)
 
    * - Arguments
      - **database** - Path to the sqlite file or geopackage layer
@@ -277,14 +277,14 @@ sqlite_fetch_and_increment(database, table, id_field, filter_attribute, filter_v
 uuid
 ....
 
-uuid
-
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Description
      - Generates a Universally Unique Identifier (UUID) for each row using the Qt <a href='http://qt-project.org/doc/qt-4.8/quuid.html#createUuid'>QUuid::createUuid</a>  method.  Each UUID is 38 characters long.
+   * - Syntax
+     - uuid
 
    * - Examples
      - ``uuid()`` → '{0bd2f60f-f157-4a6d-96af-d4ba4cb366a1}'
