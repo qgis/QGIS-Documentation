@@ -459,6 +459,8 @@ Returns a string representing a color from a saved ramp
    * - Examples
      - * ramp_color('Spectral',0.3) → '253,190,115,255'
 
+.. note:: The color ramps available vary between QGIS installations. This function may not give the expected results if you move your QGIS project between installations.
+
 
 **Expression-created ramp variant**
 

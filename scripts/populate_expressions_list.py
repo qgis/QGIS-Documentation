@@ -79,6 +79,11 @@ def format_variant(function_dict, f_name):
     else:
         v_description = ''
 
+    if 'notes' in function_dict:
+        notes = f"\n\n.. note:: {function_dict['notes']}"
+    else:
+        notes = ''
+
     text = (f"{v_description}"
             f".. list-table::\n"
             f"   :widths: 15 85\n"
@@ -89,6 +94,7 @@ def format_variant(function_dict, f_name):
             f"\n"
             f"{arguments}"
             f"{examples}"
+            f"{notes}"
             f"\n\n\n")
     return text
         
