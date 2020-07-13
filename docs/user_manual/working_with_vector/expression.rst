@@ -210,7 +210,9 @@ Aggregates Functions
 
 This group contains functions which aggregate values over layers and fields.
 
-.. contents:: :local:
+.. contents::
+   :local:
+   :class: toc_columns
 
 .. include:: expression_help/Aggregates.rst
 
@@ -282,7 +284,9 @@ list data structures). The order of values within the array matters, unlike the
 :ref:`'map' data structure <maps_functions>`, where the order of key-value pairs
 is irrelevant and values are identified by their keys.
 
-.. contents:: :local:
+.. contents::
+   :local:
+   :class: toc_columns
 
 .. include:: expression_help/Arrays.rst
 
@@ -331,7 +335,9 @@ Color Functions
 
 This group contains functions for manipulating colors.
 
-.. contents:: :local:
+.. contents::
+   :local:
+   :class: toc_columns
 
 .. include:: expression_help/Color.rst
 
@@ -372,7 +378,9 @@ Conditional Functions
 
 This group contains functions to handle conditional checks in expressions.
 
-.. contents:: :local:
+.. contents::
+   :local:
+   :class: toc_columns
 
 .. include:: expression_help/Conditionals.rst
 
@@ -405,7 +413,9 @@ Conversions Functions
 This group contains functions to convert one data type to another
 (e.g., string to integer, integer to string).
 
-.. contents:: :local:
+.. contents::
+   :local:
+   :class: toc_columns
 
 .. include:: expression_help/Conversions.rst
 
@@ -437,7 +447,9 @@ Date and Time Functions
 
 This group contains functions for handling date and time data.
 
-.. contents:: :local:
+.. contents::
+   :local:
+   :class: toc_columns
 
 .. include:: expression_help/Date_and_Time.rst
 
@@ -544,7 +556,9 @@ Files and Paths Functions
 
 This group contains functions which manipulate file and path names.
 
-.. contents:: :local:
+.. contents::
+   :local:
+   :class: toc_columns
 
 .. include:: expression_help/Files_and_Paths.rst
 
@@ -576,7 +590,9 @@ Fuzzy Matching Functions
 
 This group contains functions for fuzzy comparisons between values.
 
-.. contents:: :local:
+.. contents::
+   :local:
+   :class: toc_columns
 
 .. include:: expression_help/Fuzzy_Matching.rst
 
@@ -598,7 +614,9 @@ General Functions
 
 This group contains general assorted functions.
 
-.. contents:: :local:
+.. contents::
+   :local:
+   :class: toc_columns
 
 .. include:: expression_help/General.rst
 
@@ -629,7 +647,9 @@ Geometry Functions
 This group contains functions that operate on geometry objects
 (e.g. buffer, transform, $area).
 
-.. contents:: :local:
+.. contents::
+   :local:
+   :class: toc_columns
 
 .. include:: expression_help/GeometryGroup.rst
 
@@ -868,7 +888,9 @@ Layout Functions
 
 This group contains functions to manipulate print layout items properties.
 
-.. contents:: :local:
+.. contents::
+   :local:
+   :class: toc_columns
 
 .. include:: expression_help/Layout.rst
 
@@ -895,7 +917,9 @@ such as when performing :ref:`aggregates <aggregates_function>`, :ref:`attribute
 
 It also provides some convenient functions to manipulate layers.
 
-.. contents:: :local:
+.. contents::
+   :local:
+   :class: toc_columns
 
 .. include:: expression_help/Map_Layers.rst
 
@@ -918,7 +942,9 @@ arrays). Unlike the :ref:`list data structure <array_functions>` where values
 order matters, the order of the key-value pairs in the map object is not relevant
 and values are identified by their keys.
 
-.. contents:: :local:
+.. contents::
+   :local:
+   :class: toc_columns
 
 .. include:: expression_help/Maps.rst
 
@@ -948,7 +974,9 @@ Mathematical Functions
 
 This group contains math functions (e.g., square root, sin and cos).
 
-.. contents:: :local:
+.. contents::
+   :local:
+   :class: toc_columns
 
 .. include:: expression_help/Math.rst
 
@@ -1093,7 +1121,9 @@ Record and Attributes Functions
 
 This group contains functions that operate on record identifiers.
 
-.. contents:: :local:
+.. contents::
+   :local:
+   :class: toc_columns
 
 .. include:: expression_help/Record_and_Attributes.rst
 
@@ -1141,7 +1171,9 @@ String Functions
 This group contains functions that operate on strings
 (e.g., that replace, convert to upper case).
 
-.. contents:: :local:
+.. contents::
+   :local:
+   :class: toc_columns
 
 .. include:: expression_help/String.rst
 
