@@ -26,6 +26,13 @@ Let's now dive into the process.
 
 Documentation sources are stored using the git version control system and are
 available on GitHub at https://github.com/qgis/QGIS-Documentation.
+A list of features to write about can be found at
+https://github.com/qgis/QGIS-Documentation/issues.
+
+.. tip:: If you are a first-time contributor and do not know where to start from,
+  you may be interested in tackling our `welcoming reports
+  <https://github.com/qgis/QGIS-Documentation/issues?q=is%3Aissue+is%3Aopen+label%3AEasy>`_.
+
 There are two main ways, not mutually exclusive, to modify the files:
 
 #. :ref:`Using the GitHub web interface <github_interface>`
