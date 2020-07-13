@@ -349,14 +349,40 @@ collect_geometries
 
 Collects a set of geometries into a multi-part geometry object.
 
+**List of arguments variant**
+
+Geometry parts are specified as separate arguments to the function.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Syntax
-     - collect_geometries()
+     - collect_geometries(geometry1, geometry2, ...)
+
+   * - Arguments
+     - * **geometry** - a geometry
+
+   * - Examples
+     - * geom_to_wkt(collect_geometries(make_point(1,2), make_point(3,4), make_point(5,6))) → 'MultiPoint ((1 2),(3 4),(5 6))'
 
 
+**Array variant**
+
+Geometry parts are specified as an array of geometry parts.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - collect_geometries(array)
+
+   * - Arguments
+     - * **array** - array of geometry objects
+
+   * - Examples
+     - * geom_to_wkt(collect_geometries(array(make_point(1,2), make_point(3,4), make_point(5,6)))) → 'MultiPoint ((1 2),(3 4),(5 6))'
 
 
 .. end_collect_geometries_section
@@ -1304,14 +1330,40 @@ length
 
 Returns the number of characters in a string or the length of a geometry linestring.
 
+**String variant**
+
+Returns the number of characters in a string.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Syntax
-     - length()
+     - length(string)
+
+   * - Arguments
+     - * **string** - string to count length of
+
+   * - Examples
+     - * length('hello') → 5
 
 
+**Geometry variant**
+
+Calculate the length of a geometry line object. Calculations are always planimetric in the Spatial Reference System (SRS) of this geometry, and the units of the returned length will match the units for the SRS. This differs from the calculations performed by the $length function, which will perform ellipsoidal calculations based on the project's ellipsoid and distance unit settings.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - length(geometry)
+
+   * - Arguments
+     - * **geometry** - line geometry object
+
+   * - Examples
+     - * length(geom_from_wkt('LINESTRING(0 0, 4 0)')) → 4.0
 
 
 .. end_length_section
@@ -1615,14 +1667,42 @@ make_line
 
 Creates a line geometry from a series of point geometries.
 
+**List of arguments variant**
+
+Line vertices are specified as separate arguments to the function.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Syntax
-     - make_line()
+     - make_line(point1, point2, ...)
+
+   * - Arguments
+     - * **point** - a point geometry (or array of points)
+
+   * - Examples
+     - * geom_to_wkt(make_line(make_point(2,4),make_point(3,5))) → 'LineString (2 4, 3 5)'
+
+       * geom_to_wkt(make_line(make_point(2,4),make_point(3,5),make_point(9,7))) → 'LineString (2 4, 3 5, 9 7)'
 
 
+**Array variant**
+
+Line vertices are specified as an array of points.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - make_line(array)
+
+   * - Arguments
+     - * **array** - array of points
+
+   * - Examples
+     - * geom_to_wkt(make_line(array(make_point(2,4),make_point(3,5),make_point(9,7)))) → 'LineString (2 4, 3 5, 9 7)'
 
 
 .. end_make_line_section
@@ -2310,14 +2390,46 @@ relate
 
 Tests the Dimensional Extended 9 Intersection Model (DE-9IM) representation of the relationship between two geometries.
 
+**Relationship variant**
+
+Returns the Dimensional Extended 9 Intersection Model (DE-9IM) representation of the relationship between two geometries.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Syntax
-     - relate()
+     - relate(geometry, geometry)
+
+   * - Arguments
+     - * **geometry** - a geometry
+
+       * **geometry** - a geometry
+
+   * - Examples
+     - * relate( geom_from_wkt( 'LINESTRING(40 40,120 120)' ), geom_from_wkt( 'LINESTRING(40 40,60 120)' ) ) → 'FF1F00102'
 
 
+**Pattern match variant**
+
+Tests whether the DE-9IM relationship between two geometries matches a specified pattern.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - relate(geometry, geometry, pattern)
+
+   * - Arguments
+     - * **geometry** - a geometry
+
+       * **geometry** - a geometry
+
+       * **pattern** - DE-9IM pattern to match
+
+   * - Examples
+     - * relate( geom_from_wkt( 'LINESTRING(40 40,120 120)' ), geom_from_wkt( 'LINESTRING(40 40,60 120)' ), '**1F001**' ) → True
 
 
 .. end_relate_section

@@ -7,14 +7,42 @@ attribute
 
 Returns an attribute from a feature.
 
+**Variant 1**
+
+Returns the value of an attribute from the current feature.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Syntax
-     - attribute()
+     - attribute(attribute_name)
+
+   * - Arguments
+     - * **attribute_name** - name of attribute to be returned
+
+   * - Examples
+     - * attribute( 'name' ) → value stored in 'name' attribute for the current feature
 
 
+**Variant 2**
+
+Allows the target feature and attribute name to be specified.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - attribute(feature, attribute_name)
+
+   * - Arguments
+     - * **feature** - a feature
+
+       * **attribute_name** - name of attribute to be returned
+
+   * - Examples
+     - * attribute( @atlas_feature, 'name' ) → value stored in 'name' attribute for the current atlas feature
 
 
 .. end_attribute_section
@@ -28,6 +56,10 @@ attributes
 
 Returns a map containing all attributes from a feature, with field names as map keys.
 
+**Variant 1**
+
+Returns a map of all attributes from the current feature.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
@@ -35,7 +67,26 @@ Returns a map containing all attributes from a feature, with field names as map 
    * - Syntax
      - attributes()
 
+   * - Examples
+     - * attributes()['name'] → value stored in 'name' attribute for the current feature
 
+
+**Variant 2**
+
+Allows the target feature to be specified.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - attributes(feature)
+
+   * - Arguments
+     - * **feature** - a feature
+
+   * - Examples
+     - * attributes( @atlas_feature )['name'] → value stored in 'name' attribute for the current atlas feature
 
 
 .. end_attributes_section
@@ -184,6 +235,10 @@ is_selected
 
 Returns True if a feature is selected. Can be used with zero, one or two arguments, see below for details.
 
+**No parameters**
+
+If called with no parameters, the function will return true if the current feature in the current layer is selected.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
@@ -191,7 +246,46 @@ Returns True if a feature is selected. Can be used with zero, one or two argumen
    * - Syntax
      - is_selected()
 
+   * - Examples
+     - * is_selected() → True if the current feature in the current layer is selected.
 
+
+**One 'feature' parameter**
+
+If called with a 'feature' parameter only, the function returns true if the specified feature from the current layer is selected.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - is_selected(feature)
+
+   * - Arguments
+     - * **feature** - The feature which should be checked for selection.
+
+   * - Examples
+     - * is_selected(@atlas_feature) → True if the current atlas feature is selected.
+
+
+**Two parameters**
+
+If the function is called with both a layer and a feature, it will return true if the specified feature from the specified layer is selected.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - is_selected(layer, feature)
+
+   * - Arguments
+     - * **layer** - The layer (or its ID or name) on which the selection will be checked.
+
+       * **feature** - The feature which should be checked for selection.
+
+   * - Examples
+     - * is_selected( 'streets', get_feature('streets', 'name', "street_name")) → True if the current building's street is selected (assuming the building layer has a field named 'street_name' and the 'streets' layer has a field called 'name').
 
 
 .. end_is_selected_section

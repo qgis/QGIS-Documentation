@@ -61,14 +61,44 @@ day
 
 Extracts the day from a date, or the number of days from an interval.
 
+**Date variant**
+
+Extracts the day from a date or datetime.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Syntax
-     - day()
+     - day(date)
+
+   * - Arguments
+     - * **date** - a date or datetime value
+
+   * - Examples
+     - * day('2012-05-12') → 12
 
 
+**Interval variant**
+
+Calculates the length in days of an interval.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - day(interval)
+
+   * - Arguments
+     - * **interval** - interval value to return number of days from
+
+   * - Examples
+     - * day(to_interval('3 days')) → 3
+
+       * day(to_interval('3 weeks 2 days')) → 23
+
+       * day(age('2012-01-01','2010-01-01')) → 730
 
 
 .. end_day_section
@@ -165,14 +195,44 @@ hour
 
 Extracts the hour part from a datetime or time, or the number of hours from an interval.
 
+**Time variant**
+
+Extracts the hour part from a time or datetime.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Syntax
-     - hour()
+     - hour(datetime)
+
+   * - Arguments
+     - * **datetime** - a time or datetime value
+
+   * - Examples
+     - * hour('2012-07-22T13:24:57') → 13
 
 
+**Interval variant**
+
+Calculates the length in hours of an interval.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - hour(interval)
+
+   * - Arguments
+     - * **interval** - interval value to return number of hours from
+
+   * - Examples
+     - * hour(tointerval('3 hours')) → 3
+
+       * hour(age('2012-07-22T13:00:00','2012-07-22T10:00:00')) → 3
+
+       * hour(age('2012-01-01','2010-01-01')) → 17520
 
 
 .. end_hour_section
@@ -320,14 +380,44 @@ minute
 
 Extracts the minutes part from a datetime or time, or the number of minutes from an interval.
 
+**Time variant**
+
+Extracts the minutes part from a time or datetime.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Syntax
-     - minute()
+     - minute(datetime)
+
+   * - Arguments
+     - * **datetime** - a time or datetime value
+
+   * - Examples
+     - * minute('2012-07-22T13:24:57') → 24
 
 
+**Interval variant**
+
+Calculates the length in minutes of an interval.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - minute(interval)
+
+   * - Arguments
+     - * **interval** - interval value to return number of minutes from
+
+   * - Examples
+     - * minute(tointerval('3 minutes')) → 3
+
+       * minute(age('2012-07-22T00:20:00','2012-07-22T00:00:00')) → 20
+
+       * minute(age('2012-01-01','2010-01-01')) → 1051200
 
 
 .. end_minute_section
@@ -341,14 +431,42 @@ month
 
 Extracts the month part from a date, or the number of months from an interval.
 
+**Date variant**
+
+Extracts the month part from a date or datetime.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Syntax
-     - month()
+     - month(date)
+
+   * - Arguments
+     - * **date** - a date or datetime value
+
+   * - Examples
+     - * month('2012-05-12') → 05
 
 
+**Interval variant**
+
+Calculates the length in months of an interval.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - month(interval)
+
+   * - Arguments
+     - * **interval** - interval value to return number of months from
+
+   * - Examples
+     - * month(to_interval('3 months')) → 3
+
+       * month(age('2012-01-01','2010-01-01')) → 4.03333
 
 
 .. end_month_section
@@ -384,14 +502,42 @@ second
 
 Extracts the seconds part from a datetime or time, or the number of seconds from an interval.
 
+**Time variant**
+
+Extracts the seconds part from a time or datetime.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Syntax
-     - second()
+     - second(datetime)
+
+   * - Arguments
+     - * **datetime** - a time or datetime value
+
+   * - Examples
+     - * second('2012-07-22T13:24:57') → 57
 
 
+**Interval variant**
+
+Calculates the length in seconds of an interval.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - second(interval)
+
+   * - Arguments
+     - * **interval** - interval value to return number of seconds from
+
+   * - Examples
+     - * second(age('2012-07-22T00:20:00','2012-07-22T00:00:00')) → 1200
+
+       * second(age('2012-01-01','2010-01-01')) → 63072000
 
 
 .. end_second_section
@@ -535,14 +681,42 @@ week
 
 Extracts the week number from a date, or the number of weeks from an interval.
 
+**Date variant**
+
+Extracts the week number from a date or datetime.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Syntax
-     - week()
+     - week(date)
+
+   * - Arguments
+     - * **date** - a date or datetime value
+
+   * - Examples
+     - * week('2012-05-12') → 19
 
 
+**Interval variant**
+
+Calculates the length in weeks of an interval.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - week(interval)
+
+   * - Arguments
+     - * **interval** - interval value to return number of months from
+
+   * - Examples
+     - * week(to_interval('3 weeks')) → 3
+
+       * week(age('2012-01-01','2010-01-01')) → 104.285
 
 
 .. end_week_section
@@ -556,14 +730,42 @@ year
 
 Extracts the year part from a date, or the number of years from an interval.
 
+**Date variant**
+
+Extracts the year part from a date or datetime.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Syntax
-     - year()
+     - year(date)
+
+   * - Arguments
+     - * **date** - a date or datetime value
+
+   * - Examples
+     - * year('2012-05-12') → 2012
 
 
+**Interval variant**
+
+Calculates the length in years of an interval.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - year(interval)
+
+   * - Arguments
+     - * **interval** - interval value to return number of years from
+
+   * - Examples
+     - * year(to_interval('3 years')) → 3
+
+       * year(age('2012-01-01','2010-01-01')) → 1.9986
 
 
 .. end_year_section

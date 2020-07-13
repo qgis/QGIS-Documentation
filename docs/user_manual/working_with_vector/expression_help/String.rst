@@ -206,14 +206,40 @@ length
 
 Returns the number of characters in a string or the length of a geometry linestring.
 
+**String variant**
+
+Returns the number of characters in a string.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Syntax
-     - length()
+     - length(string)
+
+   * - Arguments
+     - * **string** - string to count length of
+
+   * - Examples
+     - * length('hello') → 5
 
 
+**Geometry variant**
+
+Calculate the length of a geometry line object. Calculations are always planimetric in the Spatial Reference System (SRS) of this geometry, and the units of the returned length will match the units for the SRS. This differs from the calculations performed by the $length function, which will perform ellipsoidal calculations based on the project's ellipsoid and distance unit settings.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - length(geometry)
+
+   * - Arguments
+     - * **geometry** - line geometry object
+
+   * - Examples
+     - * length(geom_from_wkt('LINESTRING(0 0, 4 0)')) → 4.0
 
 
 .. end_length_section
@@ -366,14 +392,50 @@ replace
 
 Returns a string with the supplied string, array, or map of strings replaced.
 
+**String & array variant**
+
+Returns a string with the supplied string or array of strings replaced by a string or an array of strings.
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Syntax
-     - replace()
+     - replace(string, before, after)
+
+   * - Arguments
+     - * **string** - the input string
+
+       * **before** - the string or array of strings to replace
+
+       * **after** - the string or array of strings to use as a replacement
+
+   * - Examples
+     - * replace('QGIS SHOULD ROCK','SHOULD','DOES') → 'QGIS DOES ROCK'
+
+       * replace('QGIS ABC',array('A','B','C'),array('X','Y','Z')) → 'QGIS XYZ'
+
+       * replace('QGIS',array('Q','S'),'') → 'GI'
 
 
+**Map variant**
+
+Returns a string with the supplied map keys replaced by paired values.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - replace(string, map)
+
+   * - Arguments
+     - * **string** - the input string
+
+       * **map** - the map containing keys and values
+
+   * - Examples
+     - * replace('APP SHOULD ROCK',map('APP','QGIS','SHOULD','DOES')) → 'QGIS DOES ROCK'
 
 
 .. end_replace_section

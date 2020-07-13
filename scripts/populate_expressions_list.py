@@ -7,10 +7,23 @@ help_folder = path.join(qgis_repo_path,'resources/function_help/json')
 # expression help folder
 output_folder = path.abspath('./docs/user_manual/working_with_vector/expression_help')
 
-def format_function(group, function_dict):
+def format_function(function_dict):
     f_name = function_dict['name']
-    f_description = function_dict['description']
+    if not 'variants' in function_dict:
+        # No variants make a list with a single function call
+        variants = [function_dict]
+    else:
+        # Multiple function calls
+        variants = function_dict['variants']
     
+    text = ''
+    for variant in variants:
+        # Format each function variant and add it to the function text
+        text += format_variant(variant, f_name)
+    return text
+
+def format_variant(function_dict, f_name):
+
     # Organize arguments
     arg_syntax_list = []
     arg_description_list = []
@@ -59,13 +72,14 @@ def format_function(group, function_dict):
         examples = "   * - Examples\n     - * "+ "\n\n       * ".join(ex_list)
     else:
         examples = ''
-      
-    text = (f".. _expression_function_{group.replace(' ','_')}_{f_name}:\n\n"
-            f"{f_name}\n"
-            f"{'.'* len(f_name)}\n"
-            f"\n"
-            f"{f_description}\n"
-            f"\n"
+
+    if 'variant' in function_dict:
+        v_description = (f"**{function_dict['variant']}**\n\n"
+                         f"{function_dict['variant_description']}\n\n")
+    else:
+        v_description = ''
+
+    text = (f"{v_description}"
             f".. list-table::\n"
             f"   :widths: 15 85\n"
             f"   :stub-columns: 1\n"
@@ -118,7 +132,13 @@ for g_name in groups:
     output_group_file = path.join(output_folder, g_name.replace(' ','_') + '.rst')
     with open(output_group_file, 'w') as f:
         for f_name in func_list:
-            f.write(f'.. {f_name}_section\n\n')
-            text = format_function(g_name, functions[f_name])
+            f_description = functions[f_name]['description']
+            f.write(f'.. {f_name}_section\n\n'
+                    f".. _expression_function_{g_name.replace(' ','_')}_{f_name}:\n\n"
+                    f"{f_name}\n"
+                    f"{'.'* len(f_name)}\n\n"
+                    f"{f_description}\n"
+                    f"\n")
+            text = format_function(functions[f_name])
             f.write(text)
             f.write(f'.. end_{f_name}_section\n\n')

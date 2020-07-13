@@ -440,14 +440,44 @@ ramp_color
 
 Returns a string representing a color from a color ramp.
 
+**Saved ramp variant**
+
+Returns a string representing a color from a saved ramp
+
 .. list-table::
    :widths: 15 85
    :stub-columns: 1
 
    * - Syntax
-     - ramp_color()
+     - ramp_color(ramp_name, value)
+
+   * - Arguments
+     - * **ramp_name** - the name of the color ramp as a string, for example 'Spectral'
+
+       * **value** - the position on the ramp to select the color from as a real number between 0 and 1
+
+   * - Examples
+     - * ramp_color('Spectral',0.3) → '253,190,115,255'
 
 
+**Expression-created ramp variant**
+
+Returns a string representing a color from an expression-created ramp
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - ramp_color(ramp, value)
+
+   * - Arguments
+     - * **ramp** - the color ramp
+
+       * **value** - the position on the ramp to select the color from as a real number between 0 and 1
+
+   * - Examples
+     - * ramp_color(create_ramp(map(0,'0,0,0',1,'255,0,0')),1) → '255,0,0,255'
 
 
 .. end_ramp_color_section
