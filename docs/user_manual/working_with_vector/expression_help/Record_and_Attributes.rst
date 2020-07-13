@@ -76,7 +76,9 @@ Returns the display expression for a given feature in a layer. If called with no
    :stub-columns: 1
 
    * - Syntax
-     - display_expression(feature, layer, evaluate)
+     - display_expression([feature=current feature], [layer=current layer], [evaluate=true])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **feature** - The feature which should be evaluated.
@@ -208,7 +210,9 @@ Returns the maptip for a given feature in a layer. If called with no parameters,
    :stub-columns: 1
 
    * - Syntax
-     - maptip(feature, layer, evaluate)
+     - maptip([feature=current feature], [layer=current layer], [evaluate=true])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **feature** - The feature which should be evaluated.
@@ -241,7 +245,9 @@ Returns the number of selected features on a given layer. By default works on th
    :stub-columns: 1
 
    * - Syntax
-     - num_selected(layer)
+     - num_selected([layer=current layer])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **layer** - The layer (or its id or name) on which the selection will be checked.
@@ -297,7 +303,9 @@ Manage autoincrementing values in sqlite databases.<p>SQlite default values can 
    :stub-columns: 1
 
    * - Syntax
-     - sqlite_fetch_and_increment(database, table, id_field, filter_attribute, filter_value, default_values)
+     - sqlite_fetch_and_increment(database, table, id_field, filter_attribute, filter_value, [default_values])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **database** - Path to the sqlite file or geopackage layer

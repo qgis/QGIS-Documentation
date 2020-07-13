@@ -120,7 +120,9 @@ Formats a date type or string into a custom string format. Uses Qt date/time for
    :stub-columns: 1
 
    * - Syntax
-     - format_date(datetime, format, language)
+     - format_date(datetime, format, [language])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **datetime** - date, time or datetime value
@@ -151,7 +153,9 @@ Returns a number formatted with the locale separator for thousands. Also truncat
    :stub-columns: 1
 
    * - Syntax
-     - format_number(number, places, language)
+     - format_number(number, places, [language])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **number** - number to be formatted
@@ -475,7 +479,9 @@ Returns a part of a string.
    :stub-columns: 1
 
    * - Syntax
-     - substr(string, start, length)
+     - substr(string, start, [length])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **string** - the full input string
@@ -614,7 +620,9 @@ Returns a string wrapped to a maximum/minimum number of characters.
    :stub-columns: 1
 
    * - Syntax
-     - wordwrap(string, wrap_length, delimiter_string)
+     - wordwrap(string, wrap_length, [delimiter_string])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **string** - the string to be wrapped

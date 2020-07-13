@@ -551,7 +551,9 @@ Returns a random integer within the range specified by the minimum and maximum a
    :stub-columns: 1
 
    * - Syntax
-     - rand(min, max, seed)
+     - rand(min, max, [seed=null])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **min** - an integer representing the smallest possible random number desired
@@ -580,7 +582,9 @@ Returns a random float within the range specified by the minimum and maximum arg
    :stub-columns: 1
 
    * - Syntax
-     - randf(min, max, seed)
+     - randf([min=0.0], [max=1.0], [seed=null])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **min** - an float representing the smallest possible random number desired
@@ -609,7 +613,9 @@ Rounds a number to number of decimal places.
    :stub-columns: 1
 
    * - Syntax
-     - round(value, places)
+     - round(value, [places=0])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **value** - decimal number to be rounded

@@ -142,7 +142,9 @@ Tries an expression and returns its value if error-free. If the expression retur
    :stub-columns: 1
 
    * - Syntax
-     - try(expression, alternative)
+     - try(expression, [alternative])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **expression** - the expression which should be run

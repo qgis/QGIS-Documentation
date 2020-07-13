@@ -215,7 +215,9 @@ Returns a geometry that represents all points whose distance from this geometry 
    :stub-columns: 1
 
    * - Syntax
-     - buffer(geom, distance, segments)
+     - buffer(geom, distance, [segments=8])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **geom** - a geometry
@@ -244,7 +246,9 @@ Creates a buffer along a line geometry where the buffer diameter varies accordin
    :stub-columns: 1
 
    * - Syntax
-     - buffer_by_m(geometry, segments)
+     - buffer_by_m(geometry, [segments=8])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **geometry** - input geometry. Must be a (multi)line geometry with m values.
@@ -853,7 +857,9 @@ Returns the Well-Known Text (WKT) representation of the geometry without SRID me
    :stub-columns: 1
 
    * - Syntax
-     - geom_to_wkt(geometry, precision)
+     - geom_to_wkt(geometry, [precision])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **geometry** - a geometry
@@ -956,7 +962,9 @@ Returns the Hausdorff distance between two geometries. This is basically a measu
    :stub-columns: 1
 
    * - Syntax
-     - hausdorff_distance(geometry a, geometry b, densify_fraction)
+     - hausdorff_distance(geometry a, geometry b, [densify_fraction])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **geometry a** - a geometry
@@ -1538,7 +1546,9 @@ Creates a circular polygon.
    :stub-columns: 1
 
    * - Syntax
-     - make_circle(center, radius, segment)
+     - make_circle(center, radius, [segment=36])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **center** - center point of the circle
@@ -1571,7 +1581,9 @@ Creates an elliptical polygon.
    :stub-columns: 1
 
    * - Syntax
-     - make_ellipse(center, semi_major_axis, semi_minor_axis, azimuth, segment)
+     - make_ellipse(center, semi_major_axis, semi_minor_axis, azimuth, [segment=36])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **center** - center point of the ellipse
@@ -1629,7 +1641,9 @@ Creates a point geometry from an x and y (and optional z and m) value.
    :stub-columns: 1
 
    * - Syntax
-     - make_point(x, y, z, m)
+     - make_point(x, y, [z], [m])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **x** - x coordinate of point
@@ -1693,7 +1707,9 @@ Creates a polygon geometry from an outer ring and optional series of inner ring 
    :stub-columns: 1
 
    * - Syntax
-     - make_polygon(outerRing, innerRing1, innerRing2, ...)
+     - make_polygon(outerRing, [innerRing1], [innerRing2], ...)
+
+       [] marks optional arguments
 
    * - Arguments
      - * **outerRing** - closed line geometry for polygon's outer ring
@@ -1722,7 +1738,9 @@ Creates a rectangle from 3 points.
    :stub-columns: 1
 
    * - Syntax
-     - make_rectangle_3points(point1, point2, point3, option)
+     - make_rectangle_3points(point1, point2, point3, [option=0])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **point1** - First point.
@@ -1755,7 +1773,9 @@ Creates a regular polygon.
    :stub-columns: 1
 
    * - Syntax
-     - make_regular_polygon(center, radius, number_sides, circle)
+     - make_regular_polygon(center, radius, number_sides, [circle=0])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **center** - center of the regular polygon
@@ -1848,7 +1868,9 @@ Returns the minimal enclosing circle of a geometry. It represents the minimum ci
    :stub-columns: 1
 
    * - Syntax
-     - minimal_circle(geometry, segment)
+     - minimal_circle(geometry, [segment=36])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **geometry** - a geometry
@@ -1877,7 +1899,9 @@ Returns a multipoint geometry consisting of every node in the input geometry.
    :stub-columns: 1
 
    * - Syntax
-     - nodes_to_points(geometry, ignore_closing_nodes)
+     - nodes_to_points(geometry, [ignore_closing_nodes=false])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **geometry** - geometry object
@@ -2006,7 +2030,9 @@ Returns a geometry formed by offsetting a linestring geometry to the side. Dista
    :stub-columns: 1
 
    * - Syntax
-     - offset_curve(geometry, distance, segments, join, miter_limit)
+     - offset_curve(geometry, distance, [segments=8], [join=1], [miter_limit=2.0])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **geometry** - a (multi)linestring geometry
@@ -2256,7 +2282,9 @@ Returns a point projected from a start point using a distance, a bearing (azimut
    :stub-columns: 1
 
    * - Syntax
-     - project(point, distance, azimuth, elevation)
+     - project(point, distance, azimuth, [elevation])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **point** - start point
@@ -2333,7 +2361,9 @@ Returns a rotated version of a geometry. Calculations are in the Spatial Referen
    :stub-columns: 1
 
    * - Syntax
-     - rotate(geom, rotation, point)
+     - rotate(geom, rotation, [point])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **geom** - a geometry
@@ -2470,7 +2500,9 @@ Returns a geometry formed by buffering out just one side of a linestring geometr
    :stub-columns: 1
 
    * - Syntax
-     - single_sided_buffer(geometry, distance, segments, join, miter_limit)
+     - single_sided_buffer(geometry, distance, [segments=8], [join=1], [miter_limit=2.0])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **geometry** - a (multi)linestring geometry
@@ -2509,7 +2541,9 @@ Smooths a geometry by adding extra nodes which round off corners in the geometry
    :stub-columns: 1
 
    * - Syntax
-     - smooth(geometry, iterations, offset, min_length, max_angle)
+     - smooth(geometry, [iterations], [offset], [min_length], [max_angle])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **geometry** - a geometry
@@ -2594,7 +2628,9 @@ Creates a buffer along a line geometry where the buffer diameter varies evenly o
    :stub-columns: 1
 
    * - Syntax
-     - tapered_buffer(geometry, start_width, end_width, segments)
+     - tapered_buffer(geometry, start_width, end_width, [segments=8])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **geometry** - input geometry. Must be a (multi)line geometry.
@@ -2739,7 +2775,9 @@ Returns a wedge shaped buffer originating from a point geometry.
    :stub-columns: 1
 
    * - Syntax
-     - wedge_buffer(center, azimuth, width, outer_radius, inner_radius)
+     - wedge_buffer(center, azimuth, width, outer_radius, [inner_radius=0.0])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **center** - center point (origin) of buffer. Must be a point geometry.

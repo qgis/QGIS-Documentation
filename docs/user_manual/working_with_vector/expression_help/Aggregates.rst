@@ -12,7 +12,9 @@ Returns an aggregate value calculated using features from another layer.
    :stub-columns: 1
 
    * - Syntax
-     - aggregate(layer, aggregate, expression, filter, concatenator, order_by)
+     - aggregate(layer, aggregate, expression, [filter], [concatenator], [order_by])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **layer** - a string, representing either a layer name or layer ID
@@ -55,7 +57,9 @@ Returns an array of aggregated values from a field or expression.
    :stub-columns: 1
 
    * - Syntax
-     - array_agg(expression, group_by, filter, order_by)
+     - array_agg(expression, [group_by], [filter], [order_by])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **expression** - sub expression of field to aggregate
@@ -86,7 +90,9 @@ Returns the multipart geometry of aggregated geometries from an expression
    :stub-columns: 1
 
    * - Syntax
-     - collect(expression, group_by, filter)
+     - collect(expression, [group_by], [filter])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **expression** - geometry expression to aggregate
@@ -115,7 +121,9 @@ Returns all aggregated strings from a field or expression joined by a delimiter.
    :stub-columns: 1
 
    * - Syntax
-     - concatenate(expression, group_by, filter, concatenator, order_by)
+     - concatenate(expression, [group_by], [filter], [concatenator], [order_by])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **expression** - sub expression of field to aggregate
@@ -148,7 +156,9 @@ Returns all unique strings from a field or expression joined by a delimiter.
    :stub-columns: 1
 
    * - Syntax
-     - concatenate_unique(expression, group_by, filter, concatenator, order_by)
+     - concatenate_unique(expression, [group_by], [filter], [concatenator], [order_by])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **expression** - sub expression of field to aggregate
@@ -181,7 +191,9 @@ Returns the count of matching features.
    :stub-columns: 1
 
    * - Syntax
-     - count(expression, group_by, filter)
+     - count(expression, [group_by], [filter])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **expression** - sub expression of field to aggregate
@@ -210,7 +222,9 @@ Returns the count of distinct values.
    :stub-columns: 1
 
    * - Syntax
-     - count_distinct(expression, group_by, filter)
+     - count_distinct(expression, [group_by], [filter])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **expression** - sub expression of field to aggregate
@@ -239,7 +253,9 @@ Returns the count of missing (null) values.
    :stub-columns: 1
 
    * - Syntax
-     - count_missing(expression, group_by, filter)
+     - count_missing(expression, [group_by], [filter])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **expression** - sub expression of field to aggregate
@@ -268,7 +284,9 @@ Returns the calculated inter quartile range from a field or expression.
    :stub-columns: 1
 
    * - Syntax
-     - iqr(expression, group_by, filter)
+     - iqr(expression, [group_by], [filter])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **expression** - sub expression of field to aggregate
@@ -297,7 +315,9 @@ Returns the aggregate majority of values (most commonly occurring value) from a 
    :stub-columns: 1
 
    * - Syntax
-     - majority(expression, group_by, filter)
+     - majority(expression, [group_by], [filter])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **expression** - sub expression of field to aggregate
@@ -326,7 +346,9 @@ Returns the maximum length of strings from a field or expression.
    :stub-columns: 1
 
    * - Syntax
-     - max_length(expression, group_by, filter)
+     - max_length(expression, [group_by], [filter])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **expression** - sub expression of field to aggregate
@@ -355,7 +377,9 @@ Returns the aggregate maximum value from a field or expression.
    :stub-columns: 1
 
    * - Syntax
-     - maximum(expression, group_by, filter)
+     - maximum(expression, [group_by], [filter])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **expression** - sub expression of field to aggregate
@@ -384,7 +408,9 @@ Returns the aggregate mean value from a field or expression.
    :stub-columns: 1
 
    * - Syntax
-     - mean(expression, group_by, filter)
+     - mean(expression, [group_by], [filter])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **expression** - sub expression of field to aggregate
@@ -413,7 +439,9 @@ Returns the aggregate median value from a field or expression.
    :stub-columns: 1
 
    * - Syntax
-     - median(expression, group_by, filter)
+     - median(expression, [group_by], [filter])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **expression** - sub expression of field to aggregate
@@ -442,7 +470,9 @@ Returns the minimum length of strings from a field or expression.
    :stub-columns: 1
 
    * - Syntax
-     - min_length(expression, group_by, filter)
+     - min_length(expression, [group_by], [filter])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **expression** - sub expression of field to aggregate
@@ -471,7 +501,9 @@ Returns the aggregate minimum value from a field or expression.
    :stub-columns: 1
 
    * - Syntax
-     - minimum(expression, group_by, filter)
+     - minimum(expression, [group_by], [filter])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **expression** - sub expression of field to aggregate
@@ -500,7 +532,9 @@ Returns the aggregate minority of values (least occurring value) from a field or
    :stub-columns: 1
 
    * - Syntax
-     - minority(expression, group_by, filter)
+     - minority(expression, [group_by], [filter])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **expression** - sub expression of field to aggregate
@@ -529,7 +563,9 @@ Returns the calculated first quartile from a field or expression.
    :stub-columns: 1
 
    * - Syntax
-     - q1(expression, group_by, filter)
+     - q1(expression, [group_by], [filter])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **expression** - sub expression of field to aggregate
@@ -558,7 +594,9 @@ Returns the calculated third quartile from a field or expression.
    :stub-columns: 1
 
    * - Syntax
-     - q3(expression, group_by, filter)
+     - q3(expression, [group_by], [filter])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **expression** - sub expression of field to aggregate
@@ -587,7 +625,9 @@ Returns the aggregate range of values (maximum - minimum) from a field or expres
    :stub-columns: 1
 
    * - Syntax
-     - range(expression, group_by, filter)
+     - range(expression, [group_by], [filter])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **expression** - sub expression of field to aggregate
@@ -616,7 +656,9 @@ Returns an aggregate value calculated using all matching child features from a l
    :stub-columns: 1
 
    * - Syntax
-     - relation_aggregate(relation, aggregate, expression, concatenator, order_by)
+     - relation_aggregate(relation, aggregate, expression, [concatenator], [order_by])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **relation** - a string, representing a relation ID
@@ -655,7 +697,9 @@ Returns the aggregate standard deviation value from a field or expression.
    :stub-columns: 1
 
    * - Syntax
-     - stdev(expression, group_by, filter)
+     - stdev(expression, [group_by], [filter])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **expression** - sub expression of field to aggregate
@@ -684,7 +728,9 @@ Returns the aggregate summed value from a field or expression.
    :stub-columns: 1
 
    * - Syntax
-     - sum(expression, group_by, filter)
+     - sum(expression, [group_by], [filter])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **expression** - sub expression of field to aggregate

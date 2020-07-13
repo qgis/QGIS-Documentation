@@ -137,7 +137,9 @@ Formats a date type or string into a custom string format. Uses Qt date/time for
    :stub-columns: 1
 
    * - Syntax
-     - format_date(datetime, format, language)
+     - format_date(datetime, format, [language])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **datetime** - date, time or datetime value
@@ -253,7 +255,9 @@ Creates an interval value from year, month, weeks, days, hours, minute and secon
    :stub-columns: 1
 
    * - Syntax
-     - make_interval(years, months, weeks, days, hours, minutes, seconds)
+     - make_interval([years=0], [months=0], [weeks=0], [days=0], [hours=0], [minutes=0], [seconds=0])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **years** - Number of years (assumes a 365.25 day year length).
@@ -406,7 +410,9 @@ Converts a string into a date object. An optional format string can be provided 
    :stub-columns: 1
 
    * - Syntax
-     - to_date(string, format, language)
+     - to_date(string, [format], [language])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **string** - string representing a date value
@@ -439,7 +445,9 @@ Converts a string into a datetime object. An optional format string can be provi
    :stub-columns: 1
 
    * - Syntax
-     - to_datetime(string, format, language)
+     - to_datetime(string, [format], [language])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **string** - string representing a datetime value
@@ -497,7 +505,9 @@ Converts a string into a time object. An optional format string can be provided 
    :stub-columns: 1
 
    * - Syntax
-     - to_time(string, format, language)
+     - to_time(string, [format], [language])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **string** - string representing a time value

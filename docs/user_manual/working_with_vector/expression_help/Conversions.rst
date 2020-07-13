@@ -167,7 +167,9 @@ Converts a string into a date object. An optional format string can be provided 
    :stub-columns: 1
 
    * - Syntax
-     - to_date(string, format, language)
+     - to_date(string, [format], [language])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **string** - string representing a date value
@@ -200,7 +202,9 @@ Converts a string into a datetime object. An optional format string can be provi
    :stub-columns: 1
 
    * - Syntax
-     - to_datetime(string, format, language)
+     - to_datetime(string, [format], [language])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **string** - string representing a datetime value
@@ -233,7 +237,9 @@ Convert a coordinate to degree, minute.
    :stub-columns: 1
 
    * - Syntax
-     - to_dm(coordinate, axis, precision, formatting)
+     - to_dm(coordinate, axis, precision, [formatting=])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **coordinate** - A latitude or longitude value.
@@ -266,7 +272,9 @@ Convert a coordinate to degree, minute, second.
    :stub-columns: 1
 
    * - Syntax
-     - to_dms(coordinate, axis, precision, formatting)
+     - to_dms(coordinate, axis, precision, [formatting=])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **coordinate** - A latitude or longitude value.
@@ -399,7 +407,9 @@ Converts a string into a time object. An optional format string can be provided 
    :stub-columns: 1
 
    * - Syntax
-     - to_time(string, format, language)
+     - to_time(string, [format], [language])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **string** - string representing a time value

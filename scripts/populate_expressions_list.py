@@ -14,16 +14,26 @@ def format_function(group, function_dict):
     # Organize arguments
     arg_syntax_list = []
     arg_description_list = []
+    optional_args = False
     variable_args = ''
     if 'arguments' in function_dict:
         for arg in function_dict['arguments']:
+            if "optional" in arg and arg["optional"]:
+                if "default" in arg:
+                    default = f'={arg["default"]}'
+                else:
+                    default = ''
+                arg_text = f'[{arg["arg"]}{default}]'
+                optional_args = True
+            else:
+                arg_text = arg['arg']
             if 'syntaxOnly' in arg:
-                arg_syntax_list.append(arg['arg'])
+                arg_syntax_list.append(arg_text)
                 variable_args = ', ...'
             elif 'descOnly' in arg:
                 arg_description_list.append(f"**{arg['arg']}** - {arg['description']}")
             else:
-                arg_syntax_list.append(arg['arg'])
+                arg_syntax_list.append(arg_text)
                 arg_description_list.append(f"**{arg['arg']}** - {arg['description']}")
     
     # Prepare syntax and arguments strings
@@ -40,6 +50,9 @@ def format_function(group, function_dict):
         syntax = f"{f_name}()" 
         arguments = ''
     
+    if optional_args:
+        syntax += '\n\n       [] marks optional arguments'
+
     # Prepare examples
     if 'examples' in function_dict:
         ex_list = [f"{ex['expression']} → {ex['returns']}" for ex in function_dict['examples']]

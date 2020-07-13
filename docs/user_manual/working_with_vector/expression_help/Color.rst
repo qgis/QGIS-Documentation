@@ -337,7 +337,9 @@ Returns a gradient ramp from a map of color strings and steps.
    :stub-columns: 1
 
    * - Syntax
-     - create_ramp(map, discrete)
+     - create_ramp(map, [discrete=false])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **map** - a map of color strings and steps

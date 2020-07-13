@@ -560,7 +560,9 @@ Returns the provided array with its elements sorted.
    :stub-columns: 1
 
    * - Syntax
-     - array_sort(array, ascending)
+     - array_sort(array, [ascending=true])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **array** - an array
@@ -587,7 +589,9 @@ Concatenates array elements into a string separated by a delimiter and using opt
    :stub-columns: 1
 
    * - Syntax
-     - array_to_string(array, delimiter, empty_value)
+     - array_to_string(array, [delimiter=','], [empty_value=''])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **array** - the input array
@@ -620,7 +624,9 @@ Creates an array containing a sequence of numbers.
    :stub-columns: 1
 
    * - Syntax
-     - generate_series(start, stop, step)
+     - generate_series(start, stop, [step=1])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **start** - first value of the sequence
@@ -651,7 +657,9 @@ Returns an array of all strings captured by capturing groups, in the order the g
    :stub-columns: 1
 
    * - Syntax
-     - regexp_matches(string, regex, empty_value)
+     - regexp_matches(string, regex, [empty_value=''])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **string** - the string to capture groups from against the regular expression
@@ -682,7 +690,9 @@ Splits string into an array using supplied delimiter and optional string for emp
    :stub-columns: 1
 
    * - Syntax
-     - string_to_array(string, delimiter, empty_value)
+     - string_to_array(string, [delimiter=','], [empty_value=''])
+
+       [] marks optional arguments
 
    * - Arguments
      - * **string** - the input string
