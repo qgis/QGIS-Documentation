@@ -1753,7 +1753,7 @@ Size
 :guilabel:`Size` is the main tab to set how the selected statistics are
 represented. The diagram size :ref:`units <unit_selector>` can be 'Millimeters',
 'Points', 'Pixels', 'Map Units' or 'Inches'.
-You can use :
+You can use:
 
 * :guilabel:`Fixed size`, a unique size to represent the graphic of all the
   features (not available for histograms)
@@ -1795,18 +1795,26 @@ placement (more details at :ref:`Placement <labels_placement>`):
   and you can specify the diagram placement relative to the feature
   ('above', 'on' and/or 'below' the line)
   It's possible to select several options at once.
-  In that case, QGIS will look for the optimal position of the diagram. Remember that
-  here you can also use the line orientation for the position of the diagram.
-* :guilabel:`Around centroid' (with a distance set)`, :guilabel:`Over centroid`,
-  :guilabel:`Using perimeter` and :guilabel:`Inside polygon`
-  are the options for polygon features.
+  In that case, QGIS will look for the optimal position of the diagram.
+  Remember that you can also use the line orientation for the position
+  of the diagram.
+* :guilabel:`Around centroid` (at a set :guilabel:`Distance`),
+  :guilabel:`Over centroid`, :guilabel:`Using perimeter` and
+  :guilabel:`Inside polygon` are the options for polygon features.
 
-The diagram can also be placed by data-defining the :guilabel:`X` and
-:guilabel:`Y` coordinate fields.
+The :guilabel:`Coordinate` group provides direct control on diagrams
+placement, on a feature-by-feature basis, using their attributes
+or an expression to set the :guilabel:`X` and :guilabel:`Y` coordinate.
+The information can also be filled using the :ref:`Move labels and diagrams
+<label_toolbar>` tool.
 
-The placement of the diagrams can interact with the labeling, so you can
-detect and solve position conflicts between diagrams and labels by setting
-the :guilabel:`Priority` slider value.
+In the :guilabel:`Priority` section, you can define the placement priority rank
+of each diagram, ie if there are different diagrams or labels candidates for the
+same location, the item with the higher priority will be displayed and the
+others could be left out.
+
+The priority rank is also used to evaluate whether a diagram could be omitted
+due to a greater weighted :ref:`obstacle feature <labels_obstacles>`.
 
 .. _figure_diagrams_placement:
 
