@@ -693,12 +693,12 @@ Open the :guilabel:`Relations` tab and click on :guilabel:`Add Relation`.
 * **Referenced Layer (Parent)** also considered as parent layer, is the one with
   the primary key, pointed to, so here it is the ``regions`` layer. You can define
   the primary key of the referenced layer, so it is ``ID``. For this layer
-  you can define multiple referenced fields by using the |plus| button.
+  you can define multiple referenced fields by using the |signPlus| button.
 * **Referencing Layer (Child)** also considered as child layer, is the one with
   the foreign key field on it. In our case, this is the ``airports`` layer. For
   this layer you need to add a referencing field which points to the other
   layer, so this is ``fk_region``. When using multiple field relations you can
-  add another referencing field by using the |plus| button.
+  add another referencing field by using the |signPlus| button.
 * **Id** will be used for internal purposes and has to be unique. You may need
   it to build :ref:`custom forms <customize_form>`. If
   you leave it empty, one will be generated for you but you can assign one
