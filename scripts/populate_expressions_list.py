@@ -147,7 +147,7 @@ for file in filenames:
     #print(data)
     if data['type'] == 'group':
         groups[data['name']] = {'description': data['description'], 'func_list': []}
-    elif data['type'] == 'function':
+    elif data['type'] == 'function' or data['type'] == 'expression':
         functions[data['name']] = data
     else:
         print(f'{data["name"]} is not a group or a function. It is a {data["type"]}')

@@ -1,3 +1,48 @@
+.. CASE_section
+
+.. _expression_function_Conditionals_CASE:
+
+CASE
+....
+
+The CASE expression goes through conditions and returns a value when the first condition is met. So, once a condition is true, it will stop reading and return the result. If no conditions are true, it returns the value in the ELSE clause. If there is no ELSE part and no conditions are true, it returns NULL.
+
+<pre>
+
+CASE
+
+WHEN *condition* THEN *result*
+
+[ …n ]
+
+[ ELSE *result* ]
+
+END
+
+</pre>[ ] marks optional components
+
+
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - CASE(WHEN condition, THEN result, ELSE result)
+
+   * - Arguments
+     - * **WHEN condition** - The condition expression to evaluate
+
+       * **THEN result** - If *condition* evaluates to True then *result* is evaluated and returned.
+
+       * **ELSE result** - If none of the above conditions evaluated to True then *result* is evaluated and returned.
+
+   * - Examples
+     - * CASE WHEN "column" IS NULL THEN 'None' END →  Retunr the string 'none' if the "column" field is NULL
+
+
+.. end_CASE_section
+
 .. coalesce_section
 
 .. _expression_function_Conditionals_coalesce:
