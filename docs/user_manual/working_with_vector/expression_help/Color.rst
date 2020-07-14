@@ -255,7 +255,26 @@ Returns a specific component from a color string, e.g., the red component or alp
    * - Arguments
      - * **color** - a color string
 
-       * **component** - a string corresponding to the color component to return. Valid options are:<br /><ul><li>red: RGB red component (0-255)</li><li>green: RGB green component (0-255)</li><li>blue: RGB blue component (0-255)</li><li>alpha: alpha (transparency) value (0-255)</li><li>hue: HSV hue (0-360)</li><li>saturation: HSV saturation (0-100)</li><li>value: HSV value (0-100)</li><li>hsl_hue: HSL hue (0-360)</li><li>hsl_saturation: HSL saturation (0-100)</li><li>lightness: HSL lightness (0-100)</li><li>cyan: CMYK cyan component (0-100)</li><li>magenta: CMYK magenta component (0-100)</li><li>yellow: CMYK yellow component (0-100)</li> <li>black: CMYK black component (0-100)</li></ul>
+       * **component** - a string corresponding to the color component to return. Valid options are:
+
+         
+
+         * red: RGB red component (0-255)
+         * green: RGB green component (0-255)
+         * blue: RGB blue component (0-255)
+         * alpha: alpha (transparency) value (0-255)
+         * hue: HSV hue (0-360)
+         * saturation: HSV saturation (0-100)
+         * value: HSV value (0-100)
+         * hsl_hue: HSL hue (0-360)
+         * hsl_saturation: HSL saturation (0-100)
+         * lightness: HSL lightness (0-100)
+         * cyan: CMYK cyan component (0-100)
+         * magenta: CMYK magenta component (0-100)
+         * yellow: CMYK yellow component (0-100)
+         * black: CMYK black component (0-100)
+         
+
 
    * - Examples
      - * color_part('200,10,30','green') → 10
@@ -371,7 +390,13 @@ Returns a darker (or lighter) color string
    * - Arguments
      - * **color** - a color string
 
-       * **factor** - an integer corresponding to the darkening factor:<ul><li>if the factor is greater than 100, this functions returns a darker color (e.g., setting factor to 300 returns a color that has one-third the brightness);</li><li>if the factor is less than 100, the return color is lighter, but using the lighter() function for this purpose is recommended;</li><li>if the factor is 0 or negative, the return value is unspecified.</li></ul>
+       * **factor** - an integer corresponding to the darkening factor:
+
+         * if the factor is greater than 100, this functions returns a darker color (e.g., setting factor to 300 returns a color that has one-third the brightness);
+         * if the factor is less than 100, the return color is lighter, but using the lighter() function for this purpose is recommended;
+         * if the factor is 0 or negative, the return value is unspecified.
+         
+
 
    * - Examples
      - * darker('200,10,30',300) → '66,3,10,255'
@@ -398,7 +423,13 @@ Returns a lighter (or darker) color string
    * - Arguments
      - * **color** - a color string
 
-       * **factor** - a integer number corresponding to the lightening factor:<ul><li>if the factor is greater than 100, this functions returns a lighter color (for e.g., setting factor to 150 returns a color that is 50% brighter);</li><li>if the factor is less than 100, the return color is darker, but using the darker() function for this purpose is recommended;</li><li>if the factor is 0 or negative, the return value is unspecified.</li></ul>
+       * **factor** - a integer number corresponding to the lightening factor:
+
+         * if the factor is greater than 100, this functions returns a lighter color (for e.g., setting factor to 150 returns a color that is 50% brighter);
+         * if the factor is less than 100, the return color is darker, but using the darker() function for this purpose is recommended;
+         * if the factor is 0 or negative, the return value is unspecified.
+         
+
 
    * - Examples
      - * lighter('200,10,30',200) → '255,158,168,255'
@@ -503,7 +534,26 @@ Sets a specific color component for a color string, e.g., the red component or a
    * - Arguments
      - * **color** - a color string
 
-       * **component** - a string corresponding to the color component to set. Valid options are:<br /><ul><li>red: RGB red component (0-255)</li><li>green: RGB green component (0-255)</li><li>blue: RGB blue component (0-255)</li><li>alpha: alpha (transparency) value (0-255)</li><li>hue: HSV hue (0-360)</li><li>saturation: HSV saturation (0-100)</li><li>value: HSV value (0-100)</li><li>hsl_hue: HSL hue (0-360)</li><li>hsl_saturation: HSL saturation (0-100)</li><li>lightness: HSL lightness (0-100)</li><li>cyan: CMYK cyan component (0-100)</li><li>magenta: CMYK magenta component (0-100)</li><li>yellow: CMYK yellow component (0-100)</li> <li>black: CMYK black component (0-100)</li></ul>
+       * **component** - a string corresponding to the color component to set. Valid options are:
+
+         
+
+         * red: RGB red component (0-255)
+         * green: RGB green component (0-255)
+         * blue: RGB blue component (0-255)
+         * alpha: alpha (transparency) value (0-255)
+         * hue: HSV hue (0-360)
+         * saturation: HSV saturation (0-100)
+         * value: HSV value (0-100)
+         * hsl_hue: HSL hue (0-360)
+         * hsl_saturation: HSL saturation (0-100)
+         * lightness: HSL lightness (0-100)
+         * cyan: CMYK cyan component (0-100)
+         * magenta: CMYK magenta component (0-100)
+         * yellow: CMYK yellow component (0-100)
+         * black: CMYK black component (0-100)
+         
+
 
        * **value** - new value for color component, respecting the ranges listed above
 

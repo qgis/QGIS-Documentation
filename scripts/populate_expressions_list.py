@@ -1,11 +1,46 @@
 from os import path, walk
 import json
+import re
 
 # Determine the folder where the json files are
 qgis_repo_path = path.abspath('/home/aneto/qgis/repos/QGIS')
 help_folder = path.join(qgis_repo_path,'resources/function_help/json')
 # expression help folder
 output_folder = path.abspath('./docs/user_manual/working_with_vector/expression_help')
+
+def sphynxify_html(text, base_indent=0):
+    filler = base_indent * ' '
+    text = text.replace('<p>','\n\n'+ filler)
+    text = text.replace('</p>','\n')
+    text = text.replace('<br />','\n\n'+ filler)
+    text = text.replace('<br/>','\n\n'+ filler)
+    text = text.replace('<br>','\n\n'+ filler)
+    text = text.replace('<ul>','\n\n'+ filler)
+    text = text.replace('</ul>','\n')
+    text = text.replace('<li>','* ')
+    text = text.replace('</li>','\n' + filler)
+    text = text.replace('<code>','``')
+    text = text.replace('</code>','``')
+    text = text.replace('<b>','**')
+    text = text.replace('</b>','**')
+    text = text.replace('<i>','*')
+    text = text.replace('</i>','*')
+    text = text.replace('<table>','\n\n'+ filler + '.. csv-table::\n')
+    text = text.replace('<thead>', filler + '   :header-rows: 1\n' + filler + '   :widths: 20, 80\n\n')
+    text = text.replace('<tr>', filler + '   ')
+    text = text.replace('<tr valign="top">', filler + '   ')
+    text = text.replace('</th><th>','", "')
+    text = text.replace('<th>','"')
+    text = text.replace('</th>','"')
+    text = text.replace('</tr>', '\n')
+    text = text.replace('</td><td>','", "')
+    text = text.replace('<td>','"')
+    text = text.replace('</td>','"')
+    text = text.replace('</thead>','')
+    text = text.replace('</table>','')
+    text = re.sub(r"<a href='(.*)'>(.*)</a>", r"`\2 <\1>`_", text)
+
+    return text
 
 def format_function(function_dict):
     f_name = function_dict['name']
@@ -44,10 +79,10 @@ def format_variant(function_dict, f_name):
                 arg_syntax_list.append(arg_text)
                 variable_args = ', ...'
             elif 'descOnly' in arg:
-                arg_description_list.append(f"**{arg['arg']}** - {arg['description']}")
+                arg_description_list.append(f"**{arg['arg']}** - {sphynxify_html(arg['description'],9)}")
             else:
                 arg_syntax_list.append(arg_text)
-                arg_description_list.append(f"**{arg['arg']}** - {arg['description']}")
+                arg_description_list.append(f"**{arg['arg']}** - {sphynxify_html(arg['description'],9)}")
     
     # Prepare syntax and arguments strings
     if len(arg_syntax_list) > 0:
@@ -138,7 +173,7 @@ for g_name in groups:
     output_group_file = path.join(output_folder, g_name.replace(' ','_') + '.rst')
     with open(output_group_file, 'w') as f:
         for f_name in func_list:
-            f_description = functions[f_name]['description']
+            f_description = sphynxify_html(functions[f_name]['description'])
             f.write(f'.. {f_name}_section\n\n'
                     f".. _expression_function_{g_name.replace(' ','_')}_{f_name}:\n\n"
                     f"{f_name}\n"

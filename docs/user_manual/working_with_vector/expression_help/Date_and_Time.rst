@@ -5,7 +5,20 @@
 age
 ...
 
-Returns the difference between two dates or datetimes.<br>The difference is returned as a <code>Interval</code> and needs to be used with one of the following functions in order to extract useful information:<br /><ul><li><code>year</code><li><code>month</code><li><code>week</code><li><code>day</code><li><code>hour</code><li><code>minute</code><li><code>second</code></ul>
+Returns the difference between two dates or datetimes.
+
+The difference is returned as a ``Interval`` and needs to be used with one of the following functions in order to extract useful information:
+
+
+
+* ``year``
+* ``month``
+* ``week``
+* ``day``
+* ``hour``
+* ``minute``
+* ``second``
+
 
 .. list-table::
    :widths: 15 85
@@ -160,7 +173,7 @@ Returns the interval in milliseconds between the unix epoch and a given date val
 format_date
 ...........
 
-Formats a date type or string into a custom string format. Uses Qt date/time format strings. See <a href='https://doc.qt.io/qt-5/qdatetime.html#toString'>QDateTime::toString</a>.
+Formats a date type or string into a custom string format. Uses Qt date/time format strings. See `QDateTime::toString <https://doc.qt.io/qt-5/qdatetime.html#toString>`_.
 
 .. list-table::
    :widths: 15 85
@@ -174,7 +187,46 @@ Formats a date type or string into a custom string format. Uses Qt date/time for
    * - Arguments
      - * **datetime** - date, time or datetime value
 
-       * **format** - String template used to format the string. <table><thead><tr><th>Expression</th><th>Output</th></tr></thead><tr valign="top"><td>d</td><td>the day as number without a leading zero (1 to 31)</td></tr><tr valign="top"><td>dd</td><td>the day as number with a leading zero (01 to 31)</td></tr><tr valign="top"><td>ddd</td><td>the abbreviated localized day name (e.g. 'Mon' to 'Sun')</td></tr><tr valign="top"><td>dddd</td><td>the long localized day name (e.g. 'Monday' to 'Sunday')</td></tr><tr valign="top"><td>M</td><td>the month as number without a leading zero (1-12)</td></tr><tr valign="top"><td>MM</td><td>the month as number with a leading zero (01-12)</td></tr><tr valign="top"><td>MMM</td><td>the abbreviated localized month name (e.g. 'Jan' to 'Dec')</td></tr><tr valign="top"><td>MMMM</td><td>the long localized month name (e.g. 'January' to 'December')</td></tr><tr valign="top"><td>yy</td><td>the year as two digit number (00-99)</td></tr><tr valign="top"><td>yyyy</td><td>the year as four digit number</td></tr></table><p>These expressions may be used for the time part of the format string:</p><table><thead><tr><th>Expression</th><th>Output</th></tr></thead><tr valign="top"><td>h</td><td>the hour without a leading zero (0 to 23 or 1 to 12 if AM/PM display)</td></tr><tr valign="top"><td>hh</td><td>the hour with a leading zero (00 to 23 or 01 to 12 if AM/PM display)</td></tr><tr valign="top"><td>H</td><td>the hour without a leading zero (0 to 23, even with AM/PM display)</td></tr><tr valign="top"><td>HH</td><td>the hour with a leading zero (00 to 23, even with AM/PM display)</td></tr><tr valign="top"><td>m</td><td>the minute without a leading zero (0 to 59)</td></tr><tr valign="top"><td>mm</td><td>the minute with a leading zero (00 to 59)</td></tr><tr valign="top"><td>s</td><td>the second without a leading zero (0 to 59)</td></tr><tr valign="top"><td>ss</td><td>the second with a leading zero (00 to 59)</td></tr><tr valign="top"><td>z</td><td>the milliseconds without trailing zeroes (0 to 999)</td></tr><tr valign="top"><td>zzz</td><td>the milliseconds with trailing zeroes (000 to 999)</td></tr><tr valign="top"><td>AP or A</td><td>interpret as an AM/PM time. <i>AP</i> must be either "AM" or "PM".</td></tr><tr valign="top"><td>ap or a</td><td>Interpret as an AM/PM time. <i>ap</i> must be either "am" or "pm".</td></tr></table>
+       * **format** - String template used to format the string. 
+
+         .. csv-table::
+            :header-rows: 1
+            :widths: 20, 80
+
+            "Expression", "Output"
+            "d", "the day as number without a leading zero (1 to 31)"
+            "dd", "the day as number with a leading zero (01 to 31)"
+            "ddd", "the abbreviated localized day name (e.g. 'Mon' to 'Sun')"
+            "dddd", "the long localized day name (e.g. 'Monday' to 'Sunday')"
+            "M", "the month as number without a leading zero (1-12)"
+            "MM", "the month as number with a leading zero (01-12)"
+            "MMM", "the abbreviated localized month name (e.g. 'Jan' to 'Dec')"
+            "MMMM", "the long localized month name (e.g. 'January' to 'December')"
+            "yy", "the year as two digit number (00-99)"
+            "yyyy", "the year as four digit number"
+
+
+         These expressions may be used for the time part of the format string:
+
+
+         .. csv-table::
+            :header-rows: 1
+            :widths: 20, 80
+
+            "Expression", "Output"
+            "h", "the hour without a leading zero (0 to 23 or 1 to 12 if AM/PM display)"
+            "hh", "the hour with a leading zero (00 to 23 or 01 to 12 if AM/PM display)"
+            "H", "the hour without a leading zero (0 to 23, even with AM/PM display)"
+            "HH", "the hour with a leading zero (00 to 23, even with AM/PM display)"
+            "m", "the minute without a leading zero (0 to 59)"
+            "mm", "the minute with a leading zero (00 to 59)"
+            "s", "the second without a leading zero (0 to 59)"
+            "ss", "the second with a leading zero (00 to 59)"
+            "z", "the milliseconds without trailing zeroes (0 to 999)"
+            "zzz", "the milliseconds with trailing zeroes (000 to 999)"
+            "AP or A", "interpret as an AM/PM time. *AP* must be either 'AM' or 'PM'."
+            "ap or a", "Interpret as an AM/PM time. *ap* must be either 'am' or 'pm'."
+
 
        * **language** - language (lowercase, two- or three-letter, ISO 639 language code) used to format the date into a custom string
 
@@ -549,7 +601,7 @@ Calculates the length in seconds of an interval.
 to_date
 .......
 
-Converts a string into a date object. An optional format string can be provided to parse the string; see <a href='https://doc.qt.io/qt-5/qdate.html#fromString-1'>QDate::fromString</a> for additional documentation on the format.
+Converts a string into a date object. An optional format string can be provided to parse the string; see `QDate::fromString <https://doc.qt.io/qt-5/qdate.html#fromString-1>`_ for additional documentation on the format.
 
 .. list-table::
    :widths: 15 85
@@ -584,7 +636,7 @@ Converts a string into a date object. An optional format string can be provided 
 to_datetime
 ...........
 
-Converts a string into a datetime object. An optional format string can be provided to parse the string; see <a href='https://doc.qt.io/qt-5/qdatetime.html#fromString-1'>QDateTime::fromString</a> for additional documentation on the format.
+Converts a string into a datetime object. An optional format string can be provided to parse the string; see `QDateTime::fromString <https://doc.qt.io/qt-5/qdatetime.html#fromString-1>`_ for additional documentation on the format.
 
 .. list-table::
    :widths: 15 85
@@ -644,7 +696,7 @@ Converts a string to a interval type. Can be used to take days, hours, month, et
 to_time
 .......
 
-Converts a string into a time object. An optional format string can be provided to parse the string; see <a href='https://doc.qt.io/qt-5/qtime.html#fromString-1'>QTime::fromString</a> for additional documentation on the format.
+Converts a string into a time object. An optional format string can be provided to parse the string; see `QTime::fromString <https://doc.qt.io/qt-5/qtime.html#fromString-1>`_ for additional documentation on the format.
 
 .. list-table::
    :widths: 15 85

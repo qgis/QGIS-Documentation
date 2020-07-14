@@ -390,7 +390,33 @@ Returns the configured representation value for a field value. It depends on the
 sqlite_fetch_and_increment
 ..........................
 
-Manage autoincrementing values in sqlite databases.<p>SQlite default values can only be applied on insert and not prefetched.</p><p>This makes it impossible to acquire an incremented primary key via AUTO_INCREMENT before creating the row in the database. Sidenote: with postgres, this works via the option <i>evaluate default values</i>.</p><p>When adding new features with relations, it is really nice to be able to already add children for a parent, while the parents form is still open and hence the parent feature uncommitted.</p><p>To get around this limitation, this function can be used to manage sequence values in a separate table on sqlite based formats like gpkg.</p><p>The sequence table will be filtered for a sequence id (filter_attribute and filter_value) and the current value of the id_field will be incremented by 1 and the incremented value returned.</p><p>If additional columns require values to be specified, the default_value map can be used for this purpose.</p><p><b>Note</b><br/>This function modifies the target sqlite table. It is intended for usage with default value configurations for attributes.</p><p>When the database parameter is a layer and the layer is in transaction mode, the value will only be retrieved once during the lifetime of a transaction and cached and incremented. This makes it unsafe to work on the same database from several processes in parallel.</p>
+Manage autoincrementing values in sqlite databases.
+
+SQlite default values can only be applied on insert and not prefetched.
+
+
+This makes it impossible to acquire an incremented primary key via AUTO_INCREMENT before creating the row in the database. Sidenote: with postgres, this works via the option *evaluate default values*.
+
+
+When adding new features with relations, it is really nice to be able to already add children for a parent, while the parents form is still open and hence the parent feature uncommitted.
+
+
+To get around this limitation, this function can be used to manage sequence values in a separate table on sqlite based formats like gpkg.
+
+
+The sequence table will be filtered for a sequence id (filter_attribute and filter_value) and the current value of the id_field will be incremented by 1 and the incremented value returned.
+
+
+If additional columns require values to be specified, the default_value map can be used for this purpose.
+
+
+**Note**
+
+This function modifies the target sqlite table. It is intended for usage with default value configurations for attributes.
+
+
+When the database parameter is a layer and the layer is in transaction mode, the value will only be retrieved once during the lifetime of a transaction and cached and incremented. This makes it unsafe to work on the same database from several processes in parallel.
+
 
 .. list-table::
    :widths: 15 85
@@ -429,7 +455,7 @@ Manage autoincrementing values in sqlite databases.<p>SQlite default values can 
 uuid
 ....
 
-Generates a Universally Unique Identifier (UUID) for each row using the Qt <a href='http://qt-project.org/doc/qt-4.8/quuid.html#createUuid'>QUuid::createUuid</a>  method.  Each UUID is 38 characters long.
+Generates a Universally Unique Identifier (UUID) for each row using the Qt `QUuid::createUuid <http://qt-project.org/doc/qt-4.8/quuid.html#createUuid>`_  method.  Each UUID is 38 characters long.
 
 .. list-table::
    :widths: 15 85

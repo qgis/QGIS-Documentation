@@ -198,11 +198,11 @@ Restricts an input value to a specified range.
      - clamp(minimum, input, maximum)
 
    * - Arguments
-     - * **minimum** - the smallest value <i>input</i> is allowed to take.
+     - * **minimum** - the smallest value *input* is allowed to take.
 
-       * **input** - a value which will be restricted to the range specified by <i>minimum</i> and <i>maximum</i>
+       * **input** - a value which will be restricted to the range specified by *minimum* and *maximum*
 
-       * **maximum** - the largest value <i>input</i> is allowed to take
+       * **maximum** - the largest value *input* is allowed to take
 
    * - Examples
      - * clamp(1,5,10) → 5

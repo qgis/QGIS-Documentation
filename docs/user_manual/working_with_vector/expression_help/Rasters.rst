@@ -19,7 +19,18 @@ Returns statistics from a raster layer.
 
        * **band** - integer representing the band number from the raster layer, starting at 1
 
-       * **property** - a string corresponding to the property to return. Valid options are:<br /><ul><li>min: minimum value</li><li>max: maximum value</li><li>avg: average (mean) value</li><li>stdev: standard deviation of values</li><li>range: range of values (max - min)</li><li>sum: sum of all values from raster</li></ul>
+       * **property** - a string corresponding to the property to return. Valid options are:
+
+         
+
+         * min: minimum value
+         * max: maximum value
+         * avg: average (mean) value
+         * stdev: standard deviation of values
+         * range: range of values (max - min)
+         * sum: sum of all values from raster
+         
+
 
    * - Examples
      - * raster_statistic('lc',1,'avg') → Average value from band 1 from 'lc' raster layer

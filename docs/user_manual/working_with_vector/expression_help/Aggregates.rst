@@ -19,7 +19,34 @@ Returns an aggregate value calculated using features from another layer.
    * - Arguments
      - * **layer** - a string, representing either a layer name or layer ID
 
-       * **aggregate** - a string corresponding to the aggregate to calculate. Valid options are:<br /><ul><li>count</li><li>count_distinct</li><li>count_missing</li><li>min</li><li>max</li><li>sum</li><li>mean</li><li>median</li><li>stdev</li><li>stdevsample</li><li>range</li><li>minority</li><li>majority</li><li>q1: first quartile</li><li>q3: third quartile</li><li>iqr: inter quartile range</li><li>min_length: minimum string length</li><li>max_length: maximum string length</li><li>concatenate: join strings with a concatenator</li><li>concatenate_unique: join unique strings with a concatenator</li><li>collect: create an aggregated multipart geometry</li><li>array_agg: create an array of aggregated values</li></ul>
+       * **aggregate** - a string corresponding to the aggregate to calculate. Valid options are:
+
+         
+
+         * count
+         * count_distinct
+         * count_missing
+         * min
+         * max
+         * sum
+         * mean
+         * median
+         * stdev
+         * stdevsample
+         * range
+         * minority
+         * majority
+         * q1: first quartile
+         * q3: third quartile
+         * iqr: inter quartile range
+         * min_length: minimum string length
+         * max_length: maximum string length
+         * concatenate: join strings with a concatenator
+         * concatenate_unique: join unique strings with a concatenator
+         * collect: create an aggregated multipart geometry
+         * array_agg: create an array of aggregated values
+         
+
 
        * **expression** - sub expression or field name to aggregate
 
@@ -663,7 +690,34 @@ Returns an aggregate value calculated using all matching child features from a l
    * - Arguments
      - * **relation** - a string, representing a relation ID
 
-       * **aggregate** - a string corresponding to the aggregate to calculate. Valid options are:<br /><ul><li>count</li><li>count_distinct</li><li>count_missing</li><li>min</li><li>max</li><li>sum</li><li>mean</li><li>median</li><li>stdev</li><li>stdevsample</li><li>range</li><li>minority</li><li>majority</li><li>q1: first quartile</li><li>q3: third quartile</li><li>iqr: inter quartile range</li><li>min_length: minimum string length</li><li>max_length: maximum string length</li><li>concatenate: join strings with a concatenator</li><li>concatenate_unique: join unique strings with a concatenator</li><li>collect: create an aggregated multipart geometry</li><li>array_agg: create an array of aggregated values</li></ul>
+       * **aggregate** - a string corresponding to the aggregate to calculate. Valid options are:
+
+         
+
+         * count
+         * count_distinct
+         * count_missing
+         * min
+         * max
+         * sum
+         * mean
+         * median
+         * stdev
+         * stdevsample
+         * range
+         * minority
+         * majority
+         * q1: first quartile
+         * q3: third quartile
+         * iqr: inter quartile range
+         * min_length: minimum string length
+         * max_length: maximum string length
+         * concatenate: join strings with a concatenator
+         * concatenate_unique: join unique strings with a concatenator
+         * collect: create an aggregated multipart geometry
+         * array_agg: create an array of aggregated values
+         
+
 
        * **expression** - sub expression or field name to aggregate
 

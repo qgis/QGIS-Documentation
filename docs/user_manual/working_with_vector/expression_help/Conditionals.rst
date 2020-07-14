@@ -5,7 +5,9 @@
 coalesce
 ........
 
-Returns the first non-NULL value from the expression list.<br>This function can take any number of arguments.
+Returns the first non-NULL value from the expression list.
+
+This function can take any number of arguments.
 
 .. list-table::
    :widths: 15 85
