@@ -1,0 +1,781 @@
+.. abs_section
+
+.. _expression_function_Math_abs:
+
+abs
+...
+
+Returns the absolute value of a number.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - abs(value)
+
+   * - Arguments
+     - * **value** - a number
+
+   * - Examples
+     - * abs(-2) → 2
+
+
+.. end_abs_section
+
+.. acos_section
+
+.. _expression_function_Math_acos:
+
+acos
+....
+
+Returns the inverse cosine of a value in radians.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - acos(value)
+
+   * - Arguments
+     - * **value** - cosine of an angle in radians
+
+   * - Examples
+     - * acos(0.5) → 1.0471975511966
+
+
+.. end_acos_section
+
+.. asin_section
+
+.. _expression_function_Math_asin:
+
+asin
+....
+
+Returns the inverse sine of a value in radians.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - asin(value)
+
+   * - Arguments
+     - * **value** - sine of an angle in radians
+
+   * - Examples
+     - * asin(1.0) → 1.5707963267949
+
+
+.. end_asin_section
+
+.. atan_section
+
+.. _expression_function_Math_atan:
+
+atan
+....
+
+Returns the inverse tangent of a value in radians.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - atan(value)
+
+   * - Arguments
+     - * **value** - tan of an angle in radians
+
+   * - Examples
+     - * atan(0.5) → 0.463647609000806
+
+
+.. end_atan_section
+
+.. atan2_section
+
+.. _expression_function_Math_atan2:
+
+atan2
+.....
+
+Returns the inverse tangent of dy/dx by using the signs of the two arguments to determine the quadrant of the result.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - atan2(dy, dx)
+
+   * - Arguments
+     - * **dy** - y coordinate difference
+
+       * **dx** - x coordinate difference
+
+   * - Examples
+     - * atan2(1.0, 1.732) → 0.523611477769969
+
+
+.. end_atan2_section
+
+.. azimuth_section
+
+.. _expression_function_Math_azimuth:
+
+azimuth
+.......
+
+Returns the north-based azimuth as the angle in radians measured clockwise from the vertical on point_a to point_b.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - azimuth(point_a, point_b)
+
+   * - Arguments
+     - * **point_a** - point geometry
+
+       * **point_b** - point geometry
+
+   * - Examples
+     - * degrees( azimuth( make_point(25, 45), make_point(75, 100) ) ) → 42.273689
+
+       * degrees( azimuth( make_point(75, 100), make_point(25,45) ) ) → 222.273689
+
+
+.. end_azimuth_section
+
+.. ceil_section
+
+.. _expression_function_Math_ceil:
+
+ceil
+....
+
+Rounds a number upwards.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - ceil(value)
+
+   * - Arguments
+     - * **value** - a number
+
+   * - Examples
+     - * ceil(4.9) → 5
+
+       * ceil(-4.9) → -4
+
+
+.. end_ceil_section
+
+.. clamp_section
+
+.. _expression_function_Math_clamp:
+
+clamp
+.....
+
+Restricts an input value to a specified range.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - clamp(minimum, input, maximum)
+
+   * - Arguments
+     - * **minimum** - the smallest value *input* is allowed to take.
+
+       * **input** - a value which will be restricted to the range specified by *minimum* and *maximum*
+
+       * **maximum** - the largest value *input* is allowed to take
+
+   * - Examples
+     - * clamp(1,5,10) → 5
+
+       * clamp(1,0,10) → 1
+
+       * clamp(1,11,10) → 10
+
+
+.. end_clamp_section
+
+.. cos_section
+
+.. _expression_function_Math_cos:
+
+cos
+...
+
+Returns cosine of an angle.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - cos(angle)
+
+   * - Arguments
+     - * **angle** - angle in radians
+
+   * - Examples
+     - * cos(1.571) → 0.000796326710733263
+
+
+.. end_cos_section
+
+.. degrees_section
+
+.. _expression_function_Math_degrees:
+
+degrees
+.......
+
+Converts from radians to degrees.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - degrees(radians)
+
+   * - Arguments
+     - * **radians** - numeric value
+
+   * - Examples
+     - * degrees(3.14159) → 180
+
+       * degrees(1) → 57.2958
+
+
+.. end_degrees_section
+
+.. exp_section
+
+.. _expression_function_Math_exp:
+
+exp
+...
+
+Returns exponential of an value.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - exp(value)
+
+   * - Arguments
+     - * **value** - number to return exponent of
+
+   * - Examples
+     - * exp(1.0) → 2.71828182845905
+
+
+.. end_exp_section
+
+.. floor_section
+
+.. _expression_function_Math_floor:
+
+floor
+.....
+
+Rounds a number downwards.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - floor(value)
+
+   * - Arguments
+     - * **value** - a number
+
+   * - Examples
+     - * floor(4.9) → 4
+
+       * floor(-4.9) → -5
+
+
+.. end_floor_section
+
+.. inclination_section
+
+.. _expression_function_Math_inclination:
+
+inclination
+...........
+
+Returns the inclination measured from the zenith (0) to the nadir (180) on point_a to point_b.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - inclination(point_a, point_b)
+
+   * - Arguments
+     - * **point_a** - point geometry
+
+       * **point_b** - point geometry
+
+   * - Examples
+     - * inclination( make_point( 5, 10, 0 ), make_point( 5, 10, 5 ) ) → 0.0
+
+       * inclination( make_point( 5, 10, 0 ), make_point( 5, 10, 0 ) ) → 90.0
+
+       * inclination( make_point( 5, 10, 0 ), make_point( 50, 100, 0 ) ) → 90.0
+
+       * inclination( make_point( 5, 10, 0 ), make_point( 5, 10, -5 ) ) → 180.0
+
+
+.. end_inclination_section
+
+.. ln_section
+
+.. _expression_function_Math_ln:
+
+ln
+..
+
+Returns the natural logarithm of a value.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - ln(value)
+
+   * - Arguments
+     - * **value** - numeric value
+
+   * - Examples
+     - * ln(1) → 0
+
+       * ln(2.7182818284590452354) → 1
+
+
+.. end_ln_section
+
+.. log_section
+
+.. _expression_function_Math_log:
+
+log
+...
+
+Returns the value of the logarithm of the passed value and base.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - log(base, value)
+
+   * - Arguments
+     - * **base** - any positive number
+
+       * **value** - any positive number
+
+   * - Examples
+     - * log(2, 32) → 5
+
+       * log(0.5, 32) → -5
+
+
+.. end_log_section
+
+.. log10_section
+
+.. _expression_function_Math_log10:
+
+log10
+.....
+
+Returns the value of the base 10 logarithm of the passed expression.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - log10(value)
+
+   * - Arguments
+     - * **value** - any positive number
+
+   * - Examples
+     - * log10(1) → 0
+
+       * log10(100) → 2
+
+
+.. end_log10_section
+
+.. max_section
+
+.. _expression_function_Math_max:
+
+max
+...
+
+Returns the largest value in a set of values.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - max(value1, value2, ...)
+
+   * - Arguments
+     - * **value** - a number
+
+   * - Examples
+     - * max(2,10.2,5.5) → 10.2
+
+       * max(20.5,NULL,6.2) → 20.5
+
+
+.. end_max_section
+
+.. min_section
+
+.. _expression_function_Math_min:
+
+min
+...
+
+Returns the smallest value in a set of values.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - min(value1, value2, ...)
+
+   * - Arguments
+     - * **value** - a number
+
+   * - Examples
+     - * min(20.5,10,6.2) → 6.2
+
+       * min(2,-10.3,NULL) → -10.3
+
+
+.. end_min_section
+
+.. pi_section
+
+.. _expression_function_Math_pi:
+
+pi
+..
+
+Returns value of pi for calculations.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - pi()
+
+   * - Examples
+     - * pi() → 3.14159265358979
+
+
+.. end_pi_section
+
+.. radians_section
+
+.. _expression_function_Math_radians:
+
+radians
+.......
+
+Converts from degrees to radians.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - radians(degrees)
+
+   * - Arguments
+     - * **degrees** - numeric value
+
+   * - Examples
+     - * radians(180) → 3.14159
+
+       * radians(57.2958) → 1
+
+
+.. end_radians_section
+
+.. rand_section
+
+.. _expression_function_Math_rand:
+
+rand
+....
+
+Returns a random integer within the range specified by the minimum and maximum argument (inclusive). If a seed is provided, the returned will always be the same, depending on the seed.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - rand(min, max, [seed=null])
+
+       [] marks optional arguments
+
+   * - Arguments
+     - * **min** - an integer representing the smallest possible random number desired
+
+       * **max** - an integer representing the largest possible random number desired
+
+       * **seed** - any value to use as seed
+
+   * - Examples
+     - * rand(1, 10) → 8
+
+
+.. end_rand_section
+
+.. randf_section
+
+.. _expression_function_Math_randf:
+
+randf
+.....
+
+Returns a random float within the range specified by the minimum and maximum argument (inclusive). If a seed is provided, the returned will always be the same, depending on the seed.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - randf([min=0.0], [max=1.0], [seed=null])
+
+       [] marks optional arguments
+
+   * - Arguments
+     - * **min** - an float representing the smallest possible random number desired
+
+       * **max** - an float representing the largest possible random number desired
+
+       * **seed** - any value to use as seed
+
+   * - Examples
+     - * randf(1, 10) → 4.59258286403147
+
+
+.. end_randf_section
+
+.. round_section
+
+.. _expression_function_Math_round:
+
+round
+.....
+
+Rounds a number to number of decimal places.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - round(value, [places=0])
+
+       [] marks optional arguments
+
+   * - Arguments
+     - * **value** - decimal number to be rounded
+
+       * **places** - Optional integer representing number of places to round decimals to. Can be negative.
+
+   * - Examples
+     - * round(1234.567, 2) → 1234.57
+
+       * round(1234.567) → 1235
+
+
+.. end_round_section
+
+.. scale_exp_section
+
+.. _expression_function_Math_scale_exp:
+
+scale_exp
+.........
+
+Transforms a given value from an input domain to an output range using an exponential curve. This function can be used to ease values in or out of the specified output range.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - scale_exp(val, domain_min, domain_max, range_min, range_max, exponent)
+
+   * - Arguments
+     - * **val** - A value in the input domain. The function will return a corresponding scaled value in the output range.
+
+       * **domain_min** - Specifies the minimum value in the input domain, the smallest value the input value should take.
+
+       * **domain_max** - Specifies the maximum value in the input domain, the largest value the input value should take.
+
+       * **range_min** - Specifies the minimum value in the output range, the smallest value which should be output by the function.
+
+       * **range_max** - Specifies the maximum value in the output range, the largest value which should be output by the function.
+
+       * **exponent** - A positive value (greater than 0), which dictates the way input values are mapped to the output range. Large exponents will cause the output values to 'ease in', starting slowly before accelerating as the input values approach the domain maximum. Smaller exponents (less than 1) will cause output values to 'ease out', where the mapping starts quickly but slows as it approaches the domain maximum.
+
+   * - Examples
+     - * scale_exp(5,0,10,0,100,2) → 25
+
+       * scale_exp(3,0,10,0,100,0.5) → 54.772
+
+
+.. end_scale_exp_section
+
+.. scale_linear_section
+
+.. _expression_function_Math_scale_linear:
+
+scale_linear
+............
+
+Transforms a given value from an input domain to an output range using linear interpolation.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - scale_linear(val, domain_min, domain_max, range_min, range_max)
+
+   * - Arguments
+     - * **val** - A value in the input domain. The function will return a corresponding scaled value in the output range.
+
+       * **domain_min** - Specifies the minimum value in the input domain, the smallest value the input value should take.
+
+       * **domain_max** - Specifies the maximum value in the input domain, the largest value the input value should take.
+
+       * **range_min** - Specifies the minimum value in the output range, the smallest value which should be output by the function.
+
+       * **range_max** - Specifies the maximum value in the output range, the largest value which should be output by the function.
+
+   * - Examples
+     - * scale_linear(5,0,10,0,100) → 50
+
+       * scale_linear(0.2,0,1,0,360) → 72
+
+       * scale_linear(1500,1000,10000,9,20) → 9.6111111
+
+
+.. end_scale_linear_section
+
+.. sin_section
+
+.. _expression_function_Math_sin:
+
+sin
+...
+
+Returns the sine of an angle.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - sin(angle)
+
+   * - Arguments
+     - * **angle** - angle in radians
+
+   * - Examples
+     - * sin(1.571) → 0.999999682931835
+
+
+.. end_sin_section
+
+.. sqrt_section
+
+.. _expression_function_Math_sqrt:
+
+sqrt
+....
+
+Returns square root of a value.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - sqrt(value)
+
+   * - Arguments
+     - * **value** - a number
+
+   * - Examples
+     - * sqrt(9) → 3
+
+
+.. end_sqrt_section
+
+.. tan_section
+
+.. _expression_function_Math_tan:
+
+tan
+...
+
+Returns the tangent of an angle.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - tan(angle)
+
+   * - Arguments
+     - * **angle** - angle in radians
+
+   * - Examples
+     - * tan(1.0) → 1.5574077246549
+
+
+.. end_tan_section
+

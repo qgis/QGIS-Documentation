@@ -23,7 +23,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -63,7 +62,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -89,6 +87,9 @@ Outputs
      - ``TEXTFORMATS``
      - [number]
      - 
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:combinestyles``
 
@@ -119,7 +120,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -198,7 +199,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -219,6 +219,9 @@ Outputs
      - [same as input]
      - The input vector layer with the categorized style applied.
        No new layer is output.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:categorizeusingstyle``
 
@@ -246,7 +249,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -288,7 +290,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -315,6 +316,9 @@ Outputs
      - [number]
      - Number of text formats
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:stylefromproject``
 
 .. include:: qgis_algs_include.rst
@@ -340,7 +344,6 @@ the original map item CRS will be used.
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -391,7 +394,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -418,6 +420,9 @@ Outputs
      - ``WIDTH``
      - [number]
      - 
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:printlayoutmapextenttolayer``
 
@@ -452,7 +457,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -525,7 +530,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -535,6 +539,9 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - Polygon vector layer with an added ``color_id`` column
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:topologicalcoloring``
 

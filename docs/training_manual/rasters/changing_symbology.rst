@@ -205,6 +205,5 @@ analyze it further.
    :width: 1.5em
 .. |signPlus| image:: /static/common/symbologyAdd.png
    :width: 1.5em
-.. |srtmFileName| replace:: :file:`srtm_41_19_4326.tif`
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em

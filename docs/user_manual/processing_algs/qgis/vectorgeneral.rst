@@ -32,7 +32,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -71,7 +70,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -81,6 +79,9 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - Vector layer with assigned projection
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:assignprojection``
 
@@ -102,7 +103,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -139,7 +139,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -149,6 +148,9 @@ Outputs
      - ``COUNT``
      - [number]
      - 
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:layertobookmarks``
 
@@ -172,7 +174,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -214,7 +215,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -224,6 +224,9 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - The output (bookmarks) vector layer
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:bookmarkstolayer``
 
@@ -249,7 +252,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -271,7 +273,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -282,6 +283,9 @@ Outputs
      - [same as input]
      - A copy of the input vector layer with an index for the
        specified field
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:createattributeindex``
 
@@ -309,7 +313,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -326,7 +329,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -336,6 +338,9 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - A copy of the input vector layer with a spatial index
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:createspatialindex``
 
@@ -370,7 +375,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -391,7 +395,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -401,6 +404,9 @@ Outputs
      - ``INPUT``
      - [same as input]
      - The input vector layer with the defined projection
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:definecurrentprojection``
 
@@ -429,7 +435,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -459,7 +464,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -477,6 +481,9 @@ Outputs
      - ``RETAINED_COUNT``
      - [number]
      - Count of unique records
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:deleteduplicategeometries``
 
@@ -505,7 +512,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -559,7 +566,7 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -588,6 +595,9 @@ Outputs
      - [number]
      - Count of unique records
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:deleteduplicatesbyattribute``
 
 .. include:: qgis_algs_include.rst
@@ -597,7 +607,7 @@ Outputs
 
 .. _qgisdetectdatasetchanges:
 
-Detect dataset changes
+Detect dataset changes |312|
 -----------------------------------
 Compares two vector layers, and determines which features are
 unchanged, added or deleted between the two.
@@ -615,7 +625,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -693,7 +703,7 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -724,6 +734,9 @@ Outputs
      - [number]
      - Count of features deleted from original layer.
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:detectdatasetchanges``
 
 .. include:: qgis_algs_include.rst
@@ -753,7 +766,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -781,7 +793,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -792,6 +803,9 @@ Outputs
      - [table]
      - The output geometryless layer.
        A copy of the original attribute table.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:dropgeometries``
 
@@ -818,7 +832,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -894,7 +908,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -904,6 +917,9 @@ Outputs
      - ``OUTPUT``
      - [vector: any]
      - Vector layer created by the query
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:executesql``
 
@@ -927,7 +943,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -958,7 +973,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -969,6 +983,9 @@ Outputs
      - [same as input]
      - Vector layer with only the selected features,
        or no feature if none was selected.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:saveselectedfeatures``
 
@@ -1002,7 +1019,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -1045,7 +1062,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1056,6 +1072,9 @@ Outputs
      - [table]
      - A table with all the
        CRS (EPSG codes) of the matching criteria.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:findprojection``
 
@@ -1085,7 +1104,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -1181,7 +1200,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1207,6 +1225,9 @@ Outputs
      - ``UNJOINABLE_COUNT``
      - [number]
      - 
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:joinattributestable``
 
@@ -1239,7 +1260,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -1341,7 +1362,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1361,6 +1381,9 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - Output vector layer with added attributes from the join
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:joinattributesbylocation``
 
@@ -1394,7 +1417,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -1490,7 +1513,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1500,6 +1522,9 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - Output vector layer with summarized attributes from the join
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:joinbylocationsummary``
 
@@ -1534,7 +1559,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -1610,7 +1635,7 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -1635,6 +1660,9 @@ Outputs
      - [number]
      - Number of features from the input table that could not
        be joined.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:joinattributesbynearest``
 
@@ -1678,7 +1706,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1718,7 +1745,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1729,6 +1755,9 @@ Outputs
      - [same as input]
      - Output vector layer containing all the
        features and attributes from the input layers.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:mergevectorlayers``
 
@@ -1753,7 +1782,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1800,7 +1828,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1811,6 +1838,9 @@ Outputs
      - [same as input]
      - Output (sorted) vector layer
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:orderbyexpression``
 
 .. include:: qgis_algs_include.rst
@@ -1820,8 +1850,8 @@ Outputs
 
 .. _qgisrepairshapefile:
 
-Repair Shapefile
-----------------
+Repair Shapefile |312|
+----------------------
 Repairs a broken ESRI Shapefile dataset by (re)creating the SHX file.
 
 Parameters
@@ -1830,7 +1860,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1848,7 +1877,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1858,8 +1886,11 @@ Outputs
      - ``OUTPUT``
      - [vector any]
      - The input vector layer with the SHX file repaired
-	 
-	 **Algorithm ID**: ``qgis:repairshapefile``
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:repairshapefile``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -1884,7 +1915,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1920,7 +1950,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1930,6 +1959,9 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - Output (reprojected) vector layer
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:reprojectlayer``
 
@@ -1956,7 +1988,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1977,7 +2008,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1987,6 +2017,9 @@ Outputs
      - ``INPUT``
      - [same as input]
      - The input vector layer with the new style
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:setstyleforvectorlayer``
 
@@ -2015,7 +2048,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -2059,7 +2092,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -2069,6 +2101,9 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - The output vector layer.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:splitfeaturesbycharacter``
 
@@ -2101,7 +2136,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -2134,7 +2168,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -2148,6 +2181,9 @@ Outputs
      - ``OUTPUT_LAYERS``
      - [same as input] [list]
      - The output vector layers resulting from the split.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:splitvectorlayer``
 
@@ -2171,7 +2207,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -2188,7 +2223,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -2198,6 +2232,9 @@ Outputs
      - ``OUTPUT``
      - [folder]
      - The truncated (empty) layer
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:truncatetable``
 
@@ -2212,5 +2249,6 @@ Outputs
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |312| replace:: ``NEW in 3.12``
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em

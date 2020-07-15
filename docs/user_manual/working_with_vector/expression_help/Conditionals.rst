@@ -1,0 +1,210 @@
+.. CASE_section
+
+.. _expression_function_Conditionals_CASE:
+
+CASE
+....
+
+The CASE expression goes through conditions and returns a value when the first condition is met. So, once a condition is true, it will stop reading and return the result. If no conditions are true, it returns the value in the ELSE clause. If there is no ELSE part and no conditions are true, it returns NULL.
+
+<pre>
+
+CASE
+
+WHEN *condition* THEN *result*
+
+[ …n ]
+
+[ ELSE *result* ]
+
+END
+
+</pre>[ ] marks optional components
+
+
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - CASE(WHEN condition, THEN result, ELSE result)
+
+   * - Arguments
+     - * **WHEN condition** - The condition expression to evaluate
+
+       * **THEN result** - If *condition* evaluates to True then *result* is evaluated and returned.
+
+       * **ELSE result** - If none of the above conditions evaluated to True then *result* is evaluated and returned.
+
+   * - Examples
+     - * CASE WHEN "column" IS NULL THEN 'None' END →  Retunr the string 'none' if the "column" field is NULL
+
+
+.. end_CASE_section
+
+.. coalesce_section
+
+.. _expression_function_Conditionals_coalesce:
+
+coalesce
+........
+
+Returns the first non-NULL value from the expression list.
+
+This function can take any number of arguments.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - coalesce(expression1, expression2, ...)
+
+   * - Arguments
+     - * **expression** - any valid expression or value, regardless of type.
+
+   * - Examples
+     - * coalesce(NULL, 2) → 2
+
+       * coalesce(NULL, 2, 3) → 2
+
+       * coalesce(7, NULL, 3*2) → 7
+
+       * coalesce("fieldA", "fallbackField", 'ERROR') → value of fieldA if it is non-NULL else the value of "fallbackField" or the string 'ERROR' if both are NULL
+
+
+.. end_coalesce_section
+
+.. if_section
+
+.. _expression_function_Conditionals_if:
+
+if
+..
+
+Tests a condition and returns a different result depending on the conditional check.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - if(condition, result_when_true, result_when_false)
+
+   * - Arguments
+     - * **condition** - the condition which should be checked
+
+       * **result_when_true** - the result which will be returned when the condition is true or another value that does not convert to false.
+
+       * **result_when_false** - the result which will be returned when the condition is false or another value that converts to false like 0 or ''. NULL will also be converted to false.
+
+   * - Examples
+     - * if( 1+1=2, 'Yes', 'No' ) → 'Yes'
+
+       * if( 1+1=3, 'Yes', 'No' ) → 'No'
+
+       * if( 5 > 3, 1, 0) → 1
+
+       * if( '', 'It is true (not empty)', 'It is false (empty)' ) → 'It is false (empty)'
+
+       * if( ' ', 'It is true (not empty)', 'It is false (empty)' ) → 'It is true (not empty)'
+
+       * if( 0, 'One', 'Zero' ) → 'Zero'
+
+       * if( 10, 'One', 'Zero' ) → 'One'
+
+
+.. end_if_section
+
+.. nullif_section
+
+.. _expression_function_Conditionals_nullif:
+
+nullif
+......
+
+Returns a null value if value1 equals value2; otherwise it returns value1. This can be used to conditionally substitute values with NULL.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - nullif(value1, value2)
+
+   * - Arguments
+     - * **value1** - The value that should either be used or substituted with NULL.
+
+       * **value2** - The control value that will trigger the NULL substitution.
+
+   * - Examples
+     - * nullif('(none)', '(none)') → NULL
+
+       * nullif('text', '(none)') → 'text'
+
+       * nullif("name", '') → NULL, if name is an empty string (or already NULL), the name in any other case.
+
+
+.. end_nullif_section
+
+.. regexp_match_section
+
+.. _expression_function_Conditionals_regexp_match:
+
+regexp_match
+............
+
+Return the first matching position matching a regular expression within a string, or 0 if the substring is not found.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - regexp_match(input_string, regex)
+
+   * - Arguments
+     - * **input_string** - the string to test against the regular expression
+
+       * **regex** - The regular expression to test against. Backslash characters must be double escaped (e.g., "\\\\s" to match a white space character).
+
+   * - Examples
+     - * regexp_match('QGIS ROCKS','\\\\sROCKS') → 4
+
+
+.. end_regexp_match_section
+
+.. try_section
+
+.. _expression_function_Conditionals_try:
+
+try
+...
+
+Tries an expression and returns its value if error-free. If the expression returns an error, an alternative value will be returned when provided otherwise the function will return null.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - try(expression, [alternative])
+
+       [] marks optional arguments
+
+   * - Arguments
+     - * **expression** - the expression which should be run
+
+       * **alternative** - the result which will be returned if the expression returns an error.
+
+   * - Examples
+     - * try( to_int( '1' ), 0 ) → 1
+
+       * try( to_int( 'a' ), 0 ) → 0
+
+       * try( to_date( 'invalid_date' ) ) → NULL
+
+
+.. end_try_section
+

@@ -64,7 +64,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -148,7 +148,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -164,6 +163,12 @@ Outputs
        own contribution plus the contribution from upslope neighbors
        that have some fraction draining to it according to the
        D-infinity flow model.
+
+**Algorithm ID**: ``taudem:areadinf``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 D-Infinity Flow Directions
@@ -218,7 +223,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -277,7 +282,7 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -307,6 +312,12 @@ Outputs
        This is the steepest outwards slope on one of eight triangular
        facets centered at each grid cell, measured as drop/distance,
        i.e. tan of the slope angle.
+
+**Algorithm ID**: ``taudem:dinfflowdir``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 D8 Contributing Area
@@ -343,7 +354,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -418,7 +429,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -430,6 +440,12 @@ Outputs
      - A grid of contributing area values calculated as the cells own
        contribution plus the contribution from upslope neighbors that
        drain in to it according to the D8 flow model.
+
+**Algorithm ID**: ``taudem:aread8``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 D8 Flow Directions
@@ -474,7 +490,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -533,7 +549,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -550,6 +565,12 @@ Outputs
      - [raster]
      - A grid giving slope in the D8 flow direction.
        This is measured as drop/distance.
+
+**Algorithm ID**: ``taudem:d8flowdir``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 Grid Network
@@ -595,7 +616,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -686,7 +707,7 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -725,6 +746,12 @@ Outputs
        This generalizes the common definition to cases where more
        than two flow paths join at a point.
 
+**Algorithm ID**: ``taudem:gridnet``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 Pit Remove
 ----------
@@ -753,7 +780,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -795,7 +821,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -806,3 +831,10 @@ Outputs
      - [raster]
      - A grid of elevation values with pits removed so that flow
        is routed off of the domain.
+
+**Algorithm ID**: ``taudem:pitremove``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+

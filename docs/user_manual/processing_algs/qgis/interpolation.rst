@@ -26,7 +26,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -156,7 +156,7 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -239,6 +239,9 @@ The final result is shown in Figure_Heatmap_styled_processing_.
 
 .. _Wikipedia: https://en.wikipedia.org/wiki/Kernel_(statistics)#Kernel_functions_in_common_use
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:heatmapkerneldensityestimation``
 
 .. include:: qgis_algs_include.rst
@@ -270,7 +273,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -357,7 +360,7 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -367,6 +370,9 @@ Outputs
      - ``OUTPUT``
      - [raster]
      - Raster layer of interpolated values
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:idwinterpolation``
 
@@ -398,7 +404,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -446,7 +452,7 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -456,6 +462,9 @@ Outputs
      - ``OUTPUT``
      - [raster]
      - The output line density raster layer.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:linedensity``
 
@@ -487,7 +496,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -588,7 +597,7 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -602,6 +611,9 @@ Outputs
      - ``TRIANGULATION``
      - [vector: line]
      - The output TIN as a vector layer.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:tininterpolation``
 

@@ -37,7 +37,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -73,7 +72,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -83,6 +81,9 @@ Outputs
      - ``OUTPUT``
      - [raster]
      - The output aspect raster layer
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:aspect``
 
@@ -131,7 +132,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -185,7 +186,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -195,6 +195,9 @@ Outputs
      - ``OUTPUT``
      - [raster]
      - The output hillshade raster layer
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:hillshade``
 
@@ -223,7 +226,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -269,7 +272,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -289,6 +291,9 @@ Outputs
 .. figure:: img/hypsometric.png
    :align: center
    :scale: 50%
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:hypsometriccurves``
 
@@ -316,7 +321,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -398,7 +403,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -412,6 +416,9 @@ Outputs
      - ``OUTPUT``
      - [table]
      - The output frequency distribution
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:relief``
 
@@ -443,7 +450,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -483,7 +489,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -493,6 +498,9 @@ Outputs
      - ``OUTPUT``
      - [raster]
      - The output ruggedness raster layer
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:ruggednessindex``
 
@@ -522,7 +530,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -562,7 +569,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -572,6 +578,9 @@ Outputs
      - ``OUTPUT``
      - [raster]
      - The output slope raster layer
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:slope``
 

@@ -210,6 +210,12 @@ Aggregates Functions
 
 This group contains functions which aggregate values over layers and fields.
 
+.. contents::
+   :local:
+   :class: toc_columns
+
+.. include:: expression_help/Aggregates.rst
+
 .. csv-table::
    :header: "Function", "Description"
    :widths: 20, 75
@@ -278,6 +284,12 @@ list data structures). The order of values within the array matters, unlike the
 :ref:`'map' data structure <maps_functions>`, where the order of key-value pairs
 is irrelevant and values are identified by their keys.
 
+.. contents::
+   :local:
+   :class: toc_columns
+
+.. include:: expression_help/Arrays.rst
+
 
 .. csv-table::
    :header: "Function", "Description"
@@ -323,9 +335,11 @@ Color Functions
 
 This group contains functions for manipulating colors.
 
-.. contents:: :local:
+.. contents::
+   :local:
+   :class: toc_columns
 
-.. include:: expression_help/Color.txt
+.. include:: expression_help/Color.rst
 
 .. csv-table::
    :header: "Function", "Description"
@@ -364,6 +378,12 @@ Conditional Functions
 
 This group contains functions to handle conditional checks in expressions.
 
+.. contents::
+   :local:
+   :class: toc_columns
+
+.. include:: expression_help/Conditionals.rst
+
 .. csv-table::
    :header: "Function", "Description"
    :widths: auto
@@ -393,6 +413,12 @@ Conversions Functions
 This group contains functions to convert one data type to another
 (e.g., string to integer, integer to string).
 
+.. contents::
+   :local:
+   :class: toc_columns
+
+.. include:: expression_help/Conversions.rst
+
 .. csv-table::
    :header: "Function", "Description"
    :widths: auto
@@ -420,6 +446,12 @@ Date and Time Functions
 ------------------------
 
 This group contains functions for handling date and time data.
+
+.. contents::
+   :local:
+   :class: toc_columns
+
+.. include:: expression_help/Date_and_Time.rst
 
 .. csv-table::
    :header: "Function", "Description"
@@ -524,6 +556,12 @@ Files and Paths Functions
 
 This group contains functions which manipulate file and path names.
 
+.. contents::
+   :local:
+   :class: toc_columns
+
+.. include:: expression_help/Files_and_Paths.rst
+
 .. csv-table::
    :header: "Function", "Description"
    :widths: auto
@@ -537,11 +575,26 @@ This group contains functions which manipulate file and path names.
    "is_directory", "Returns true if a path corresponds to a directory."
    "is_file", "Returns true if a path corresponds to a file."
 
+Form Functions
+--------------
+
+This group contains functions that operate exclusively under the attribute form
+context. For example, in field's widgets settings.
+
+.. contents:: :local:
+
+.. include:: expression_help/Form.rst
 
 Fuzzy Matching Functions
 -------------------------
 
 This group contains functions for fuzzy comparisons between values.
+
+.. contents::
+   :local:
+   :class: toc_columns
+
+.. include:: expression_help/Fuzzy_Matching.rst
 
 .. csv-table::
    :header: "Function", "Description"
@@ -560,6 +613,12 @@ General Functions
 ------------------
 
 This group contains general assorted functions.
+
+.. contents::
+   :local:
+   :class: toc_columns
+
+.. include:: expression_help/General.rst
 
 .. csv-table::
    :header: "Function", "Description"
@@ -587,6 +646,12 @@ Geometry Functions
 
 This group contains functions that operate on geometry objects
 (e.g. buffer, transform, $area).
+
+.. contents::
+   :local:
+   :class: toc_columns
+
+.. include:: expression_help/GeometryGroup.rst
 
 .. csv-table::
    :header: "Function", "Description"
@@ -818,47 +883,16 @@ This group contains functions that operate on geometry objects
     )
 
 
-Hash Functions
-----------------
-
-This group contains hash functions.
-All these functions return the hash (a string hex value) of the string argument.
-
-.. csv-table::
-   :header: "Function", "Description"
-   :widths: auto
-
-   "md4", "Message Digest algorithm. Produces a 128-bit (16-byte) hash value (widely used)."
-   "md5", "Message Digest algorithm. Produces a 128-bit (16-byte) hash value (widely used)."
-   "sha1", "Secure Hash Algorithm (NSA). Produces a 160-bit (20-byte) hash value."
-   "sha224", "Secure Hash Algorithm (NSA). Produces a 224-bit (28-byte) hash value."
-   "sha256", "Secure Hash Algorithm (NSA). Produces a 256-bit (32-byte) hash value."
-   "sha384", "Secure Hash Algorithm (NSA). Produces a 384-bit (48-byte) hash value."
-   "sha512", "Secure Hash Algorithm (NSA). Produces a 512-bit (64-byte) hash value."
-   "sha3_224", "Secure Hash Algorithm 3 (NIST). Produces a 224-bit (28-byte) hash value."
-   "sha3_256", "Secure Hash Algorithm 3 (NIST). Produces a 256-bit (32-byte) hash value."
-   "sha3_384", "Secure Hash Algorithm 3 (NIST). Produces a 384-bit (48-byte) hash value."
-   "sha3_512", "Secure Hash Algorithm 3 (NIST). Produces a 512-bit (64-byte) hash value."
-   "keccak_224", "Keccak cryptographic primitive family. Produces a 224-bit (28-byte) hash value."
-   "keccak_256", "Keccak cryptographic primitive family. Produces a 256-bit (32-byte) hash value."
-   "keccak_384", "Keccak cryptographic primitive family. Produces a 384-bit (48-byte) hash value."
-   "keccak_512", "Keccak cryptographic primitive family. Produces a 512-bit (64-byte) hash value."
-
-One byte (8 bits) is represented with two hex ''digits'', so md4 (16 bytes)
-produces a 16 * 2 = 32 character long hex string and keccak_512 (64 bytes)
-produces a 64 * 2 = 128 character long hex string.
-
-**An example:**
-
-* Return the md4 hash ( 'c0fc71c241cdebb6e888cbac0e2b68eb' ) of the string 'QGIS'::
-
-    md4( 'QGIS')
-
-
 Layout Functions
 ----------------
 
 This group contains functions to manipulate print layout items properties.
+
+.. contents::
+   :local:
+   :class: toc_columns
+
+.. include:: expression_help/Layout.rst
 
 .. csv-table::
    :header: "Function", "Description"
@@ -883,6 +917,12 @@ such as when performing :ref:`aggregates <aggregates_function>`, :ref:`attribute
 
 It also provides some convenient functions to manipulate layers.
 
+.. contents::
+   :local:
+   :class: toc_columns
+
+.. include:: expression_help/Map_Layers.rst
+
 .. csv-table::
    :header: "Function", "Description"
    :widths: auto
@@ -901,6 +941,12 @@ data structures (also known as dictionary objects, key-value pairs, or associati
 arrays). Unlike the :ref:`list data structure <array_functions>` where values
 order matters, the order of the key-value pairs in the map object is not relevant
 and values are identified by their keys.
+
+.. contents::
+   :local:
+   :class: toc_columns
+
+.. include:: expression_help/Maps.rst
 
 .. csv-table::
    :header: "Function", "Description"
@@ -927,6 +973,12 @@ Mathematical Functions
 -----------------------
 
 This group contains math functions (e.g., square root, sin and cos).
+
+.. contents::
+   :local:
+   :class: toc_columns
+
+.. include:: expression_help/Math.rst
 
 .. csv-table::
    :header: "Function", "Description"
@@ -1032,6 +1084,10 @@ Processing Functions
 
 This group contains functions that operate on processing algorithms.
 
+.. contents:: :local:
+
+.. include:: expression_help/Processing.rst
+
 .. csv-table::
    :header: "Function", "Description"
    :widths: auto
@@ -1045,6 +1101,10 @@ Rasters Functions
 -----------------
 
 This group contains functions to operate on raster layer.
+
+.. contents:: :local:
+
+.. include:: expression_help/Rasters.rst
 
 .. csv-table::
    :header: "Function", "Description"
@@ -1060,6 +1120,12 @@ Record and Attributes Functions
 -------------------------------
 
 This group contains functions that operate on record identifiers.
+
+.. contents::
+   :local:
+   :class: toc_columns
+
+.. include:: expression_help/Record_and_Attributes.rst
 
 .. csv-table::
    :header: "Function", "Description"
@@ -1104,6 +1170,12 @@ String Functions
 
 This group contains functions that operate on strings
 (e.g., that replace, convert to upper case).
+
+.. contents::
+   :local:
+   :class: toc_columns
+
+.. include:: expression_help/String.rst
 
 .. csv-table::
    :header: "Function", "Description"
