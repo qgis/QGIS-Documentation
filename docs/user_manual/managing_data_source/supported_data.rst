@@ -117,6 +117,10 @@ A Shapefile format dataset can contain additional files.
 For further details, see the ESRI technical specification at
 https://www.esri.com/library/whitepapers/pdfs/shapefile.pdf.
 
+If you compile QGIS 3.10 against GDAL 3.1 you have
+read-write support for compressed ESRI Shapefiles like :file:`shx`
+and :file:`shp.zip`.
+
 **Improving Performance for Shapefile format datasets**
 
 To improve the performance of drawing a Shapefile format dataset,
