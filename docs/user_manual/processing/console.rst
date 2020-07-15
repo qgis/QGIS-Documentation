@@ -333,10 +333,10 @@ the ``load()`` method.
 Or you could use ``runAndLoadResults()`` instead of ``run()`` to load
 them immediately.
 
-If you want to open an algorithm dialog from console you can use the 
-``createAlgorithmDialog``. The only mandatory parameter is the algorithm name
-but you can also define the dictionary of parameters so that the dialog will
-be filled automatically:
+If you want to open an algorithm dialog from the console you can use the 
+``createAlgorithmDialog`` method. The only mandatory parameter is the algorithm 
+name but you can also define the dictionary of parameters so that the dialog 
+will be filled automatically:
 
 ::
 
