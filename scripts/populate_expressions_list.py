@@ -104,8 +104,7 @@ def format_variant(function_dict, f_name):
         syntax += f'{f_name}({", ".join(arg_syntax_list)}{variable_args})\n'
         descriptions = '\n       * '.join(arg_description_list)
         arguments = (f"   * - Arguments\n"
-                     f"     - * {descriptions}\n"
-                     f"\n")
+                     f"     - * {descriptions}\n")
     elif f_name.startswith("$"):
         syntax += f"{f_name}\n"
         arguments = ''
@@ -121,8 +120,8 @@ def format_variant(function_dict, f_name):
 
     # Prepare examples
     if 'examples' in function_dict:
-        ex_list = [f"{ex['expression']} → {ex['returns']}" for ex in function_dict['examples']]
-        examples = "   * - Examples\n     - * "+ "\n\n       * ".join(ex_list)
+        ex_list = [(f"{ex['expression']} → {ex['returns']}" + (f"\n\n         {ex['note']}" if 'note' in ex else "")) for ex in function_dict['examples']]
+        examples = "   * - Examples\n     - * " + "\n       * ".join(ex_list)
     else:
         examples = ''
 
