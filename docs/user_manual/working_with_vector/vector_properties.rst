@@ -1802,7 +1802,7 @@ placement (more details at :ref:`Placement <labels_placement>`):
   :guilabel:`Over centroid`, :guilabel:`Using perimeter` and
   :guilabel:`Inside polygon` are the options for polygon features.
 
-The :guilabel:`Coordinate` group provides direct control on diagrams
+The :guilabel:`Coordinate` group provides direct control on diagram
 placement, on a feature-by-feature basis, using their attributes
 or an expression to set the :guilabel:`X` and :guilabel:`Y` coordinate.
 The information can also be filled using the :ref:`Move labels and diagrams

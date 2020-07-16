@@ -520,7 +520,7 @@ Priority
 
 In the :guilabel:`Priority` section you can define the placement priority rank
 of each label, ie if there are different diagrams or labels candidates for the
-same location, the label with the higher priority will be displayed and the
+same location, the item with the higher priority will be displayed and the
 others could be left out.
 
 The priority rank is also used to evaluate whether a label could be omitted
