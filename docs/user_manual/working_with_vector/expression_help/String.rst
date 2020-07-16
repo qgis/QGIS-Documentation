@@ -13,7 +13,6 @@ Returns the unicode code associated with the first character of a string.
 
    * - Syntax
      - ascii(string)
-
    * - Arguments
      - * **string** - the string to convert to unicode code
 
@@ -38,7 +37,6 @@ Returns the character associated with a unicode code.
 
    * - Syntax
      - char(code)
-
    * - Arguments
      - * **code** - a unicode code number
 
@@ -63,7 +61,6 @@ Concatenates several strings to one. NULL values are converted to empty strings.
 
    * - Syntax
      - concat(string1, string2, ...)
-
    * - Arguments
      - * **string** - a string value
 
@@ -94,10 +91,8 @@ Format a string using supplied arguments.
 
    * - Syntax
      - format(string, arg1, arg2, ...)
-
    * - Arguments
      - * **string** - A string with place holders for the arguments. Use %1, %2, etc for placeholders. Placeholders can be repeated.
-
        * **arg** - any type. Any number of arguments.
 
    * - Examples
@@ -123,10 +118,8 @@ Formats a date type or string into a custom string format. Uses Qt date/time for
      - format_date(datetime, format, [language])
 
        [] marks optional arguments
-
    * - Arguments
      - * **datetime** - date, time or datetime value
-
        * **format** - String template used to format the string. 
 
          .. csv-table::
@@ -167,7 +160,6 @@ Formats a date type or string into a custom string format. Uses Qt date/time for
             "AP or A", "interpret as an AM/PM time. *AP* must be either 'AM' or 'PM'."
             "ap or a", "Interpret as an AM/PM time. *ap* must be either 'am' or 'pm'."
 
-
        * **language** - language (lowercase, two- or three-letter, ISO 639 language code) used to format the date into a custom string
 
    * - Examples
@@ -195,12 +187,9 @@ Returns a number formatted with the locale separator for thousands. Also truncat
      - format_number(number, places, [language])
 
        [] marks optional arguments
-
    * - Arguments
      - * **number** - number to be formatted
-
        * **places** - integer representing the number of decimal places to truncate the string to.
-
        * **language** - language (lowercase, two- or three-letter, ISO 639 language code) used to format the number into a string
 
    * - Examples
@@ -224,10 +213,8 @@ Returns a substring that contains the *n* leftmost characters of the string.
 
    * - Syntax
      - left(string, length)
-
    * - Arguments
      - * **string** - a string
-
        * **length** - integer. The number of characters from the left of the string to return.
 
    * - Examples
@@ -255,7 +242,6 @@ Returns the number of characters in a string.
 
    * - Syntax
      - length(string)
-
    * - Arguments
      - * **string** - string to count length of
 
@@ -273,7 +259,6 @@ Calculate the length of a geometry line object. Calculations are always planimet
 
    * - Syntax
      - length(geometry)
-
    * - Arguments
      - * **geometry** - line geometry object
 
@@ -298,7 +283,6 @@ Converts a string to lower case letters.
 
    * - Syntax
      - lower(string)
-
    * - Arguments
      - * **string** - the string to convert to lower case
 
@@ -323,12 +307,9 @@ Returns a string padded on the left to the specified width, using a fill charact
 
    * - Syntax
      - lpad(string, width, fill)
-
    * - Arguments
      - * **string** - string to pad
-
        * **width** - length of new string
-
        * **fill** - character to pad the remaining space with
 
    * - Examples
@@ -354,10 +335,8 @@ Return the first matching position matching a regular expression within a string
 
    * - Syntax
      - regexp_match(input_string, regex)
-
    * - Arguments
      - * **input_string** - the string to test against the regular expression
-
        * **regex** - The regular expression to test against. Backslash characters must be double escaped (e.g., "\\\\s" to match a white space character).
 
    * - Examples
@@ -381,12 +360,9 @@ Returns a string with the supplied regular expression replaced.
 
    * - Syntax
      - regexp_replace(input_string, regex, replacement)
-
    * - Arguments
      - * **input_string** - the string to replace matches in
-
        * **regex** - The regular expression to replace. Backslash characters must be double escaped (e.g., "\\\\s" to match a white space character).
-
        * **replacement** - The string that will replace any matching occurrences of the supplied regular expression. Captured groups can be inserted into the replacement string using \\\\1, \\\\2, etc.
 
    * - Examples
@@ -410,10 +386,8 @@ Returns the portion of a string which matches a supplied regular expression.
 
    * - Syntax
      - regexp_substr(input_string, regex)
-
    * - Arguments
      - * **input_string** - the string to find matches in
-
        * **regex** - The regular expression to match against. Backslash characters must be double escaped (e.g., "\\\\s" to match a white space character).
 
    * - Examples
@@ -441,12 +415,9 @@ Returns a string with the supplied string or array of strings replaced by a stri
 
    * - Syntax
      - replace(string, before, after)
-
    * - Arguments
      - * **string** - the input string
-
        * **before** - the string or array of strings to replace
-
        * **after** - the string or array of strings to use as a replacement
 
    * - Examples
@@ -467,10 +438,8 @@ Returns a string with the supplied map keys replaced by paired values.
 
    * - Syntax
      - replace(string, map)
-
    * - Arguments
      - * **string** - the input string
-
        * **map** - the map containing keys and values
 
    * - Examples
@@ -494,10 +463,8 @@ Returns a substring that contains the *n* rightmost characters of the string.
 
    * - Syntax
      - right(string, length)
-
    * - Arguments
      - * **string** - a string
-
        * **length** - integer. The number of characters from the right of the string to return.
 
    * - Examples
@@ -521,12 +488,9 @@ Returns a string padded on the right to the specified width, using a fill charac
 
    * - Syntax
      - rpad(string, width, fill)
-
    * - Arguments
      - * **string** - string to pad
-
        * **width** - length of new string
-
        * **fill** - character to pad the remaining space with
 
    * - Examples
@@ -552,10 +516,8 @@ Return the first matching position of a substring within another string, or 0 if
 
    * - Syntax
      - strpos(haystack, needle)
-
    * - Arguments
      - * **haystack** - string that is to be searched
-
        * **needle** - string to search for
 
    * - Examples
@@ -583,12 +545,9 @@ Returns a part of a string.
      - substr(string, start, [length])
 
        [] marks optional arguments
-
    * - Arguments
      - * **string** - the full input string
-
        * **start** - integer representing start position to extract beginning with 1; if start is negative, the return string will begin at the end of the string minus the start value
-
        * **length** - integer representing length of string to extract; if length is negative, the return string will omit the given length of characters from the end of the string
 
    * - Examples
@@ -622,7 +581,6 @@ Converts all words of a string to title case (all words lower case with leading 
 
    * - Syntax
      - title(string)
-
    * - Arguments
      - * **string** - the string to convert to title case
 
@@ -647,7 +605,6 @@ Converts a number to string.
 
    * - Syntax
      - to_string(number)
-
    * - Arguments
      - * **number** - Integer or real value. The number to convert to string.
 
@@ -672,7 +629,6 @@ Removes all leading and trailing whitespace (spaces, tabs, etc) from a string.
 
    * - Syntax
      - trim(string)
-
    * - Arguments
      - * **string** - string to trim
 
@@ -697,7 +653,6 @@ Converts a string to upper case letters.
 
    * - Syntax
      - upper(string)
-
    * - Arguments
      - * **string** - the string to convert to upper case
 
@@ -724,12 +679,9 @@ Returns a string wrapped to a maximum/minimum number of characters.
      - wordwrap(string, wrap_length, [delimiter_string])
 
        [] marks optional arguments
-
    * - Arguments
      - * **string** - the string to be wrapped
-
        * **wrap_length** - an integer. If wrap_length is positive the number represents the ideal maximum number of characters to wrap; if negative, the number represents the minimum number of characters to wrap.
-
        * **delimiter_string** - Optional delimiter string to wrap to a new line.
 
    * - Examples

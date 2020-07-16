@@ -13,12 +13,9 @@ Returns statistics from a raster layer.
 
    * - Syntax
      - raster_statistic(layer, band, property)
-
    * - Arguments
      - * **layer** - a string, representing either a raster layer name or layer ID
-
        * **band** - integer representing the band number from the raster layer, starting at 1
-
        * **property** - a string corresponding to the property to return. Valid options are:
 
          
@@ -55,12 +52,9 @@ Returns the raster value found at the provided point.
 
    * - Syntax
      - raster_value(layer, band, point)
-
    * - Arguments
      - * **layer** - the name or id of a raster layer
-
        * **band** - the band number to sample the value from.
-
        * **point** - point geometry (for multipart geometries having more than one part, a null value will be returned)
 
    * - Examples

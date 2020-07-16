@@ -13,10 +13,8 @@ Returns the Hamming distance between two strings. This equates to the number of 
 
    * - Syntax
      - hamming_distance(string1, string2)
-
    * - Arguments
      - * **string1** - a string
-
        * **string2** - a string
 
    * - Examples
@@ -46,10 +44,8 @@ The Levenshtein distance is a measure of the similarity between two strings. Sma
 
    * - Syntax
      - levenshtein(string1, string2)
-
    * - Arguments
      - * **string1** - a string
-
        * **string2** - a string
 
    * - Examples
@@ -77,10 +73,8 @@ Returns the longest common substring between two strings. This substring is the 
 
    * - Syntax
      - longest_common_substring(string1, string2)
-
    * - Arguments
      - * **string1** - a string
-
        * **string2** - a string
 
    * - Examples
@@ -108,7 +102,6 @@ Returns the Soundex representation of a string. Soundex is a phonetic matching a
 
    * - Syntax
      - soundex(string)
-
    * - Arguments
      - * **string** - a string
 

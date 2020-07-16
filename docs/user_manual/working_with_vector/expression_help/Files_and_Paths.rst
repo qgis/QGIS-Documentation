@@ -13,7 +13,6 @@ Returns the base name of the file without the directory or file suffix.
 
    * - Syntax
      - base_file_name(path)
-
    * - Arguments
      - * **path** - a file path
 
@@ -38,7 +37,6 @@ Returns true if a file path exists.
 
    * - Syntax
      - file_exists(path)
-
    * - Arguments
      - * **path** - a file path
 
@@ -63,7 +61,6 @@ Returns the name of a file (including the file extension), excluding the directo
 
    * - Syntax
      - file_name(path)
-
    * - Arguments
      - * **path** - a file path
 
@@ -88,7 +85,6 @@ Returns the directory component of a file path. This does not include the file n
 
    * - Syntax
      - file_path(path)
-
    * - Arguments
      - * **path** - a file path
 
@@ -113,7 +109,6 @@ Returns the size (in bytes) of a file.
 
    * - Syntax
      - file_size(path)
-
    * - Arguments
      - * **path** - a file path
 
@@ -138,7 +133,6 @@ Returns the file suffix (extension) from a file path.
 
    * - Syntax
      - file_suffix(path)
-
    * - Arguments
      - * **path** - a file path
 
@@ -163,7 +157,6 @@ Returns true if a path corresponds to a directory.
 
    * - Syntax
      - is_directory(path)
-
    * - Arguments
      - * **path** - a file path
 
@@ -190,7 +183,6 @@ Returns true if a path corresponds to a file.
 
    * - Syntax
      - is_file(path)
-
    * - Arguments
      - * **path** - a file path
 

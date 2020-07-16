@@ -13,7 +13,6 @@ Only usable in an embedded form context, this function returns the current, unsa
 
    * - Syntax
      - current_parent_value(field_name)
-
    * - Arguments
      - * **field_name** - a field name in the current parent form
 
@@ -38,7 +37,6 @@ Returns the current, unsaved value of a field in the form or table row currently
 
    * - Syntax
      - current_value(field_name)
-
    * - Arguments
      - * **field_name** - a field name in the current form or table row
 

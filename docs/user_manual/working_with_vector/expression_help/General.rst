@@ -13,7 +13,6 @@ Gets an environment variable and returns its content as a string. If the variabl
 
    * - Syntax
      - env(name)
-
    * - Arguments
      - * **name** - The name of the environment variable which should be retrieved.
 
@@ -42,7 +41,6 @@ Evaluates an expression which is passed in a string. Useful to expand dynamic pa
 
    * - Syntax
      - eval(expression)
-
    * - Arguments
      - * **expression** - an expression string
 
@@ -69,7 +67,6 @@ Evaluates a template which is passed in a string. Useful to expand dynamic param
 
    * - Syntax
      - eval_template(template)
-
    * - Arguments
      - * **template** - a template string
 
@@ -94,7 +91,6 @@ Returns true if a specified layer is visible.
 
    * - Syntax
      - is_layer_visible(layer)
-
    * - Arguments
      - * **layer** - a string, representing either a layer name or layer ID
 
@@ -119,10 +115,8 @@ Returns a matching layer property or metadata value.
 
    * - Syntax
      - layer_property(layer, property)
-
    * - Arguments
      - * **layer** - a string, representing either a layer name or layer ID
-
        * **property** - a string corresponding to the property to return. Valid options are:
 
          
@@ -177,7 +171,6 @@ Returns the value stored within a specified variable.
 
    * - Syntax
      - var(name)
-
    * - Arguments
      - * **name** - a variable name
 
@@ -202,12 +195,9 @@ This function sets a variable for any expression code that will be provided as 3
 
    * - Syntax
      - with_variable(name, value, expression)
-
    * - Arguments
      - * **name** - the name of the variable to set
-
        * **value** - the value to set
-
        * **expression** - the expression for which the variable will be available
 
    * - Examples

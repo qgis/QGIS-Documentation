@@ -13,7 +13,6 @@ Returns the absolute value of a number.
 
    * - Syntax
      - abs(value)
-
    * - Arguments
      - * **value** - a number
 
@@ -38,7 +37,6 @@ Returns the inverse cosine of a value in radians.
 
    * - Syntax
      - acos(value)
-
    * - Arguments
      - * **value** - cosine of an angle in radians
 
@@ -63,7 +61,6 @@ Returns the inverse sine of a value in radians.
 
    * - Syntax
      - asin(value)
-
    * - Arguments
      - * **value** - sine of an angle in radians
 
@@ -88,7 +85,6 @@ Returns the inverse tangent of a value in radians.
 
    * - Syntax
      - atan(value)
-
    * - Arguments
      - * **value** - tan of an angle in radians
 
@@ -113,10 +109,8 @@ Returns the inverse tangent of dy/dx by using the signs of the two arguments to 
 
    * - Syntax
      - atan2(dy, dx)
-
    * - Arguments
      - * **dy** - y coordinate difference
-
        * **dx** - x coordinate difference
 
    * - Examples
@@ -140,10 +134,8 @@ Returns the north-based azimuth as the angle in radians measured clockwise from 
 
    * - Syntax
      - azimuth(point_a, point_b)
-
    * - Arguments
      - * **point_a** - point geometry
-
        * **point_b** - point geometry
 
    * - Examples
@@ -169,7 +161,6 @@ Rounds a number upwards.
 
    * - Syntax
      - ceil(value)
-
    * - Arguments
      - * **value** - a number
 
@@ -196,12 +187,9 @@ Restricts an input value to a specified range.
 
    * - Syntax
      - clamp(minimum, input, maximum)
-
    * - Arguments
      - * **minimum** - the smallest value *input* is allowed to take.
-
        * **input** - a value which will be restricted to the range specified by *minimum* and *maximum*
-
        * **maximum** - the largest value *input* is allowed to take
 
    * - Examples
@@ -229,7 +217,6 @@ Returns cosine of an angle.
 
    * - Syntax
      - cos(angle)
-
    * - Arguments
      - * **angle** - angle in radians
 
@@ -254,7 +241,6 @@ Converts from radians to degrees.
 
    * - Syntax
      - degrees(radians)
-
    * - Arguments
      - * **radians** - numeric value
 
@@ -281,7 +267,6 @@ Returns exponential of an value.
 
    * - Syntax
      - exp(value)
-
    * - Arguments
      - * **value** - number to return exponent of
 
@@ -306,7 +291,6 @@ Rounds a number downwards.
 
    * - Syntax
      - floor(value)
-
    * - Arguments
      - * **value** - a number
 
@@ -333,10 +317,8 @@ Returns the inclination measured from the zenith (0) to the nadir (180) on point
 
    * - Syntax
      - inclination(point_a, point_b)
-
    * - Arguments
      - * **point_a** - point geometry
-
        * **point_b** - point geometry
 
    * - Examples
@@ -366,7 +348,6 @@ Returns the natural logarithm of a value.
 
    * - Syntax
      - ln(value)
-
    * - Arguments
      - * **value** - numeric value
 
@@ -393,10 +374,8 @@ Returns the value of the logarithm of the passed value and base.
 
    * - Syntax
      - log(base, value)
-
    * - Arguments
      - * **base** - any positive number
-
        * **value** - any positive number
 
    * - Examples
@@ -422,7 +401,6 @@ Returns the value of the base 10 logarithm of the passed expression.
 
    * - Syntax
      - log10(value)
-
    * - Arguments
      - * **value** - any positive number
 
@@ -449,7 +427,6 @@ Returns the largest value in a set of values.
 
    * - Syntax
      - max(value1, value2, ...)
-
    * - Arguments
      - * **value** - a number
 
@@ -476,7 +453,6 @@ Returns the smallest value in a set of values.
 
    * - Syntax
      - min(value1, value2, ...)
-
    * - Arguments
      - * **value** - a number
 
@@ -503,7 +479,6 @@ Returns value of pi for calculations.
 
    * - Syntax
      - pi()
-
    * - Examples
      - * pi() → 3.14159265358979
 
@@ -525,7 +500,6 @@ Converts from degrees to radians.
 
    * - Syntax
      - radians(degrees)
-
    * - Arguments
      - * **degrees** - numeric value
 
@@ -554,12 +528,9 @@ Returns a random integer within the range specified by the minimum and maximum a
      - rand(min, max, [seed=null])
 
        [] marks optional arguments
-
    * - Arguments
      - * **min** - an integer representing the smallest possible random number desired
-
        * **max** - an integer representing the largest possible random number desired
-
        * **seed** - any value to use as seed
 
    * - Examples
@@ -585,12 +556,9 @@ Returns a random float within the range specified by the minimum and maximum arg
      - randf([min=0.0], [max=1.0], [seed=null])
 
        [] marks optional arguments
-
    * - Arguments
      - * **min** - an float representing the smallest possible random number desired
-
        * **max** - an float representing the largest possible random number desired
-
        * **seed** - any value to use as seed
 
    * - Examples
@@ -616,10 +584,8 @@ Rounds a number to number of decimal places.
      - round(value, [places=0])
 
        [] marks optional arguments
-
    * - Arguments
      - * **value** - decimal number to be rounded
-
        * **places** - Optional integer representing number of places to round decimals to. Can be negative.
 
    * - Examples
@@ -645,18 +611,12 @@ Transforms a given value from an input domain to an output range using an expone
 
    * - Syntax
      - scale_exp(val, domain_min, domain_max, range_min, range_max, exponent)
-
    * - Arguments
      - * **val** - A value in the input domain. The function will return a corresponding scaled value in the output range.
-
        * **domain_min** - Specifies the minimum value in the input domain, the smallest value the input value should take.
-
        * **domain_max** - Specifies the maximum value in the input domain, the largest value the input value should take.
-
        * **range_min** - Specifies the minimum value in the output range, the smallest value which should be output by the function.
-
        * **range_max** - Specifies the maximum value in the output range, the largest value which should be output by the function.
-
        * **exponent** - A positive value (greater than 0), which dictates the way input values are mapped to the output range. Large exponents will cause the output values to 'ease in', starting slowly before accelerating as the input values approach the domain maximum. Smaller exponents (less than 1) will cause output values to 'ease out', where the mapping starts quickly but slows as it approaches the domain maximum.
 
    * - Examples
@@ -682,16 +642,11 @@ Transforms a given value from an input domain to an output range using linear in
 
    * - Syntax
      - scale_linear(val, domain_min, domain_max, range_min, range_max)
-
    * - Arguments
      - * **val** - A value in the input domain. The function will return a corresponding scaled value in the output range.
-
        * **domain_min** - Specifies the minimum value in the input domain, the smallest value the input value should take.
-
        * **domain_max** - Specifies the maximum value in the input domain, the largest value the input value should take.
-
        * **range_min** - Specifies the minimum value in the output range, the smallest value which should be output by the function.
-
        * **range_max** - Specifies the maximum value in the output range, the largest value which should be output by the function.
 
    * - Examples
@@ -719,7 +674,6 @@ Returns the sine of an angle.
 
    * - Syntax
      - sin(angle)
-
    * - Arguments
      - * **angle** - angle in radians
 
@@ -744,7 +698,6 @@ Returns square root of a value.
 
    * - Syntax
      - sqrt(value)
-
    * - Arguments
      - * **value** - a number
 
@@ -769,7 +722,6 @@ Returns the tangent of an angle.
 
    * - Syntax
      - tan(angle)
-
    * - Arguments
      - * **angle** - angle in radians
 

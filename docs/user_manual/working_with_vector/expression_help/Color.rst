@@ -13,14 +13,10 @@ Returns a string representation of a color based on its cyan, magenta, yellow an
 
    * - Syntax
      - color_cmyk(cyan, magenta, yellow, black)
-
    * - Arguments
      - * **cyan** - cyan component of the color, as a percentage integer value from 0 to 100
-
        * **magenta** - magenta component of the color, as a percentage integer value from 0 to 100
-
        * **yellow** - yellow component of the color, as a percentage integer value from 0 to 100
-
        * **black** - black component of the color, as a percentage integer value from 0 to 100
 
    * - Examples
@@ -44,16 +40,11 @@ Returns a string representation of a color based on its cyan, magenta, yellow, b
 
    * - Syntax
      - color_cmyka(cyan, magenta, yellow, black, alpha)
-
    * - Arguments
      - * **cyan** - cyan component of the color, as a percentage integer value from 0 to 100
-
        * **magenta** - magenta component of the color, as a percentage integer value from 0 to 100
-
        * **yellow** - yellow component of the color, as a percentage integer value from 0 to 100
-
        * **black** - black component of the color, as a percentage integer value from 0 to 100
-
        * **alpha** - alpha component as an integer value from 0 (completely transparent) to 255 (opaque).
 
    * - Examples
@@ -77,7 +68,6 @@ Applies a grayscale filter and returns a string representation from a provided c
 
    * - Syntax
      - color_grayscale_average(color)
-
    * - Arguments
      - * **color** - a color string
 
@@ -102,12 +92,9 @@ Returns a string representation of a color based on its hue, saturation, and lig
 
    * - Syntax
      - color_hsl(hue, saturation, lightness)
-
    * - Arguments
      - * **hue** - hue of the color, as an integer value from 0 to 360
-
        * **saturation** - saturation percentage of the color as an integer value from 0 to 100
-
        * **lightness** - lightness percentage of the color as an integer value from 0 to 100
 
    * - Examples
@@ -131,14 +118,10 @@ Returns a string representation of a color based on its hue, saturation, lightne
 
    * - Syntax
      - color_hsla(hue, saturation, lightness, alpha)
-
    * - Arguments
      - * **hue** - hue of the color, as an integer value from 0 to 360
-
        * **saturation** - saturation percentage of the color as an integer value from 0 to 100
-
        * **lightness** - lightness percentage of the color as an integer value from 0 to 100
-
        * **alpha** - alpha component as an integer value from 0 (completely transparent) to 255 (opaque).
 
    * - Examples
@@ -162,12 +145,9 @@ Returns a string representation of a color based on its hue, saturation, and val
 
    * - Syntax
      - color_hsv(hue, saturation, value)
-
    * - Arguments
      - * **hue** - hue of the color, as an integer value from 0 to 360
-
        * **saturation** - saturation percentage of the color as an integer value from 0 to 100
-
        * **value** - value percentage of the color as an integer from 0 to 100
 
    * - Examples
@@ -191,14 +171,10 @@ Returns a string representation of a color based on its hue, saturation, value a
 
    * - Syntax
      - color_hsva(hue, saturation, value, alpha)
-
    * - Arguments
      - * **hue** - hue of the color, as an integer value from 0 to 360
-
        * **saturation** - saturation percentage of the color as an integer value from 0 to 100
-
        * **value** - value percentage of the color as an integer from 0 to 100
-
        * **alpha** - alpha component as an integer value from 0 (completely transparent) to 255 (opaque)
 
    * - Examples
@@ -222,12 +198,9 @@ Returns a string representing a color mixing the red, green, blue, and alpha val
 
    * - Syntax
      - color_mix_rgb(color1, color2, ratio)
-
    * - Arguments
      - * **color1** - a color string
-
        * **color2** - a color string
-
        * **ratio** - a ratio
 
    * - Examples
@@ -251,10 +224,8 @@ Returns a specific component from a color string, e.g., the red component or alp
 
    * - Syntax
      - color_part(color, component)
-
    * - Arguments
      - * **color** - a color string
-
        * **component** - a string corresponding to the color component to return. Valid options are:
 
          
@@ -297,12 +268,9 @@ Returns a string representation of a color based on its red, green, and blue com
 
    * - Syntax
      - color_rgb(red, green, blue)
-
    * - Arguments
      - * **red** - red component as an integer value from 0 to 255
-
        * **green** - green component as an integer value from 0 to 255
-
        * **blue** - blue component as an integer value from 0 to 255
 
    * - Examples
@@ -326,14 +294,10 @@ Returns a string representation of a color based on its red, green, blue, and al
 
    * - Syntax
      - color_rgba(red, green, blue, alpha)
-
    * - Arguments
      - * **red** - red component as an integer value from 0 to 255
-
        * **green** - green component as an integer value from 0 to 255
-
        * **blue** - blue component as an integer value from 0 to 255
-
        * **alpha** - alpha component as an integer value from 0 (completely transparent) to 255 (opaque).
 
    * - Examples
@@ -359,10 +323,8 @@ Returns a gradient ramp from a map of color strings and steps.
      - create_ramp(map, [discrete=false])
 
        [] marks optional arguments
-
    * - Arguments
      - * **map** - a map of color strings and steps
-
        * **discrete** - set this parameter to true to create a discrete color ramp
 
    * - Examples
@@ -386,10 +348,8 @@ Returns a darker (or lighter) color string
 
    * - Syntax
      - darker(color, factor)
-
    * - Arguments
      - * **color** - a color string
-
        * **factor** - an integer corresponding to the darkening factor:
 
          * if the factor is greater than 100, this functions returns a darker color (e.g., setting factor to 300 returns a color that has one-third the brightness);
@@ -419,10 +379,8 @@ Returns a lighter (or darker) color string
 
    * - Syntax
      - lighter(color, factor)
-
    * - Arguments
      - * **color** - a color string
-
        * **factor** - a integer number corresponding to the lightening factor:
 
          * if the factor is greater than 100, this functions returns a lighter color (for e.g., setting factor to 150 returns a color that is 50% brighter);
@@ -452,7 +410,6 @@ Returns a color from the project's color scheme.
 
    * - Syntax
      - project_color(name)
-
    * - Arguments
      - * **name** - a color name
 
@@ -481,10 +438,8 @@ Returns a string representing a color from a saved ramp
 
    * - Syntax
      - ramp_color(ramp_name, value)
-
    * - Arguments
      - * **ramp_name** - the name of the color ramp as a string, for example 'Spectral'
-
        * **value** - the position on the ramp to select the color from as a real number between 0 and 1
 
    * - Examples
@@ -503,10 +458,8 @@ Returns a string representing a color from an expression-created ramp
 
    * - Syntax
      - ramp_color(ramp, value)
-
    * - Arguments
      - * **ramp** - the color ramp
-
        * **value** - the position on the ramp to select the color from as a real number between 0 and 1
 
    * - Examples
@@ -530,10 +483,8 @@ Sets a specific color component for a color string, e.g., the red component or a
 
    * - Syntax
      - set_color_part(color, component, value)
-
    * - Arguments
      - * **color** - a color string
-
        * **component** - a string corresponding to the color component to set. Valid options are:
 
          
@@ -553,7 +504,6 @@ Sets a specific color component for a color string, e.g., the red component or a
          * yellow: CMYK yellow component (0-100)
          * black: CMYK black component (0-100)
          
-
 
        * **value** - new value for color component, respecting the ranges listed above
 

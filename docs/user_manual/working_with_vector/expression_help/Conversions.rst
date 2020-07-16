@@ -13,7 +13,6 @@ Decodes a string in the Base64 encoding into a binary value.
 
    * - Syntax
      - from_base64(string)
-
    * - Arguments
      - * **string** - the string to decode
 
@@ -38,10 +37,8 @@ Creates a hash from a string with a given method. One byte (8 bits) is represent
 
    * - Syntax
      - hash(string, method)
-
    * - Arguments
      - * **string** - the string to hash
-
        * **method** - The hash method among 'md4', 'md5', 'sha1', 'sha224', 'sha384', 'sha512', 'sha3_224', 'sha3_256', 'sha3_384', 'sha3_512', 'keccak_224', 'keccak_256', 'keccak_384', 'keccak_512'
 
    * - Examples
@@ -93,7 +90,6 @@ Creates a md5 hash from a string.
 
    * - Syntax
      - md5(string)
-
    * - Arguments
      - * **string** - the string to hash
 
@@ -118,7 +114,6 @@ Creates a sha256 hash from a string.
 
    * - Syntax
      - sha256(string)
-
    * - Arguments
      - * **string** - the string to hash
 
@@ -143,7 +138,6 @@ Encodes a binary value into a string, using the Base64 encoding.
 
    * - Syntax
      - to_base64(value)
-
    * - Arguments
      - * **value** - the binary value to encode
 
@@ -170,12 +164,9 @@ Converts a string into a date object. An optional format string can be provided 
      - to_date(string, [format], [language])
 
        [] marks optional arguments
-
    * - Arguments
      - * **string** - string representing a date value
-
        * **format** - format used to convert the string into a date
-
        * **language** - language (lowercase, two- or three-letter, ISO 639 language code) used to convert the string into a date
 
    * - Examples
@@ -205,12 +196,9 @@ Converts a string into a datetime object. An optional format string can be provi
      - to_datetime(string, [format], [language])
 
        [] marks optional arguments
-
    * - Arguments
      - * **string** - string representing a datetime value
-
        * **format** - format used to convert the string into a datetime
-
        * **language** - language (lowercase, two- or three-letter, ISO 639 language code) used to convert the string into a datetime
 
    * - Examples
@@ -240,14 +228,10 @@ Convert a coordinate to degree, minute.
      - to_dm(coordinate, axis, precision, [formatting=])
 
        [] marks optional arguments
-
    * - Arguments
      - * **coordinate** - A latitude or longitude value.
-
        * **axis** - The axis of the coordinate. Either 'x' or 'y'.
-
        * **precision** - Number of decimals.
-
        * **formatting** - Designates the formatting type. Acceptable values are NULL, 'aligned' or 'suffix'.
 
    * - Examples
@@ -275,14 +259,10 @@ Convert a coordinate to degree, minute, second.
      - to_dms(coordinate, axis, precision, [formatting=])
 
        [] marks optional arguments
-
    * - Arguments
      - * **coordinate** - A latitude or longitude value.
-
        * **axis** - The axis of the coordinate. Either 'x' or 'y'.
-
        * **precision** - Number of decimals.
-
        * **formatting** - Designates the formatting type. Acceptable values are NULL, 'aligned' or 'suffix'.
 
    * - Examples
@@ -308,7 +288,6 @@ Converts a string to integer number. Nothing is returned if a value cannot be co
 
    * - Syntax
      - to_int(string)
-
    * - Arguments
      - * **string** - string to convert to integer number
 
@@ -333,7 +312,6 @@ Converts a string to a interval type. Can be used to take days, hours, month, et
 
    * - Syntax
      - to_interval(string)
-
    * - Arguments
      - * **string** - a string representing an interval. Allowable formats include {n} days {n} hours {n} months.
 
@@ -358,7 +336,6 @@ Converts a string to a real number. Nothing is returned if a value cannot be con
 
    * - Syntax
      - to_real(string)
-
    * - Arguments
      - * **string** - string to convert to real number
 
@@ -383,7 +360,6 @@ Converts a number to string.
 
    * - Syntax
      - to_string(number)
-
    * - Arguments
      - * **number** - Integer or real value. The number to convert to string.
 
@@ -410,12 +386,9 @@ Converts a string into a time object. An optional format string can be provided 
      - to_time(string, [format], [language])
 
        [] marks optional arguments
-
    * - Arguments
      - * **string** - string representing a time value
-
        * **format** - format used to convert the string into a time
-
        * **language** - language (lowercase, two- or three-letter, ISO 639 language code) used to convert the string into a time
 
    * - Examples

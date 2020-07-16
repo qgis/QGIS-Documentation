@@ -13,7 +13,6 @@ Returns the value of a processing algorithm input parameter.
 
    * - Syntax
      - parameter(name)
-
    * - Arguments
      - * **name** - name of the corresponding input parameter
 

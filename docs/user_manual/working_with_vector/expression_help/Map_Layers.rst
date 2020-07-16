@@ -15,10 +15,8 @@ Takes a layer and decodes the uri of the underlying data provider. It depends on
      - decode_uri(layer, [part])
 
        [] marks optional arguments
-
    * - Arguments
      - * **layer** - The layer for which the uri should be decoded.
-
        * **part** - The part of the uri to return. If unspecified, a map with all uri parts will be returned.
 
    * - Examples

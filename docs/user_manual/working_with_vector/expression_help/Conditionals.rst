@@ -5,9 +5,9 @@
 CASE
 ....
 
-The CASE expression goes through conditions and returns a value when the first condition is met. So, once a condition is true, it will stop reading and return the result. If no conditions are true, it returns the value in the ELSE clause. If there is no ELSE part and no conditions are true, it returns NULL.
+The CASE expression evaluates several conditions and returns a result when the first condition is met. When a condition is true, it will stop reading and return the corresponding result. If none of the conditions is true, it returns the value in the ELSE clause. Furthermore, if no ELSE clause is set and none of the conditions is met, it returns NULL.
 
-<pre>
+
 
 CASE
 
@@ -19,7 +19,7 @@ WHEN *condition* THEN *result*
 
 END
 
-</pre>[ ] marks optional components
+[ ] marks optional components
 
 
 
@@ -27,18 +27,13 @@ END
    :widths: 15 85
    :stub-columns: 1
 
-   * - Syntax
-     - CASE(WHEN condition, THEN result, ELSE result)
-
    * - Arguments
      - * **WHEN condition** - The condition expression to evaluate
-
        * **THEN result** - If *condition* evaluates to True then *result* is evaluated and returned.
-
        * **ELSE result** - If none of the above conditions evaluated to True then *result* is evaluated and returned.
 
    * - Examples
-     - * CASE WHEN "column" IS NULL THEN 'None' END →  Retunr the string 'none' if the "column" field is NULL
+     - * CASE WHEN "column" IS NULL THEN 'None' END →  Returns the string 'none' if the "column" field is NULL
 
 
 .. end_CASE_section
@@ -60,7 +55,6 @@ This function can take any number of arguments.
 
    * - Syntax
      - coalesce(expression1, expression2, ...)
-
    * - Arguments
      - * **expression** - any valid expression or value, regardless of type.
 
@@ -91,12 +85,9 @@ Tests a condition and returns a different result depending on the conditional ch
 
    * - Syntax
      - if(condition, result_when_true, result_when_false)
-
    * - Arguments
      - * **condition** - the condition which should be checked
-
        * **result_when_true** - the result which will be returned when the condition is true or another value that does not convert to false.
-
        * **result_when_false** - the result which will be returned when the condition is false or another value that converts to false like 0 or ''. NULL will also be converted to false.
 
    * - Examples
@@ -132,10 +123,8 @@ Returns a null value if value1 equals value2; otherwise it returns value1. This 
 
    * - Syntax
      - nullif(value1, value2)
-
    * - Arguments
      - * **value1** - The value that should either be used or substituted with NULL.
-
        * **value2** - The control value that will trigger the NULL substitution.
 
    * - Examples
@@ -163,10 +152,8 @@ Return the first matching position matching a regular expression within a string
 
    * - Syntax
      - regexp_match(input_string, regex)
-
    * - Arguments
      - * **input_string** - the string to test against the regular expression
-
        * **regex** - The regular expression to test against. Backslash characters must be double escaped (e.g., "\\\\s" to match a white space character).
 
    * - Examples
@@ -192,10 +179,8 @@ Tries an expression and returns its value if error-free. If the expression retur
      - try(expression, [alternative])
 
        [] marks optional arguments
-
    * - Arguments
      - * **expression** - the expression which should be run
-
        * **alternative** - the result which will be returned if the expression returns an error.
 
    * - Examples

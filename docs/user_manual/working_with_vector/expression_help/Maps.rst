@@ -13,7 +13,6 @@ Loads a JSON formatted string.
 
    * - Syntax
      - from_json(string)
-
    * - Arguments
      - * **string** - JSON string
 
@@ -40,7 +39,6 @@ Creates a map from a hstore-formatted string.
 
    * - Syntax
      - hstore_to_map(string)
-
    * - Arguments
      - * **string** - the input string
 
@@ -65,7 +63,6 @@ Creates a map from a json-formatted string.
 
    * - Syntax
      - json_to_map(string)
-
    * - Arguments
      - * **string** - the input string
 
@@ -90,10 +87,8 @@ Returns a map containing all the keys and values passed as pair of parameters.
 
    * - Syntax
      - map(key1, value1, key2, value2, ...)
-
    * - Arguments
      - * **key** - a key (string)
-
        * **value** - a value
 
    * - Examples
@@ -117,7 +112,6 @@ Returns all the keys of a map as an array.
 
    * - Syntax
      - map_akeys(map)
-
    * - Arguments
      - * **map** - a map
 
@@ -142,7 +136,6 @@ Returns all the values of a map as an array.
 
    * - Syntax
      - map_avals(map)
-
    * - Arguments
      - * **map** - a map
 
@@ -167,7 +160,6 @@ Returns a map containing all the entries of the given maps. If two maps contain 
 
    * - Syntax
      - map_concat(map1, map2, ...)
-
    * - Arguments
      - * **map** - a map
 
@@ -192,10 +184,8 @@ Returns a map with the given key and its corresponding value deleted.
 
    * - Syntax
      - map_delete(map, key)
-
    * - Arguments
      - * **map** - a map
-
        * **key** - the key to delete
 
    * - Examples
@@ -219,10 +209,8 @@ Returns true if the given key exists in the map.
 
    * - Syntax
      - map_exist(map, key)
-
    * - Arguments
      - * **map** - a map
-
        * **key** - the key to lookup
 
    * - Examples
@@ -246,10 +234,8 @@ Returns the value of a map, given it's key.
 
    * - Syntax
      - map_get(map, key)
-
    * - Arguments
      - * **map** - a map
-
        * **key** - the key to lookup
 
    * - Examples
@@ -273,12 +259,9 @@ Returns a map with an added key/value.
 
    * - Syntax
      - map_insert(map, key, value)
-
    * - Arguments
      - * **map** - a map
-
        * **key** - the key to add
-
        * **value** - the value to add
 
    * - Examples
@@ -302,7 +285,6 @@ Merge map elements into a hstore-formatted string.
 
    * - Syntax
      - map_to_hstore(map)
-
    * - Arguments
      - * **map** - the input map
 
@@ -327,7 +309,6 @@ Merge map elements into a json-formatted string.
 
    * - Syntax
      - map_to_json(map)
-
    * - Arguments
      - * **map** - the input map
 
@@ -352,7 +333,6 @@ Create a JSON formatted string from a map, array or other value.
 
    * - Syntax
      - to_json(value)
-
    * - Arguments
      - * **value** - The input value
 

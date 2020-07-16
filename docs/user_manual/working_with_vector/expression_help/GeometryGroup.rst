@@ -13,10 +13,8 @@ Returns the bisector angle (average angle) to the geometry for a specified verte
 
    * - Syntax
      - angle_at_vertex(geometry, vertex)
-
    * - Arguments
      - * **geometry** - a linestring geometry
-
        * **vertex** - vertex index, starting from 0; if the value is negative, the selected vertex index will be its total count minus the absolute value
 
    * - Examples
@@ -24,31 +22,6 @@ Returns the bisector angle (average angle) to the geometry for a specified verte
 
 
 .. end_angle_at_vertex_section
-
-.. area_section
-
-.. _expression_function_GeometryGroup_area:
-
-area
-....
-
-Returns the area of a geometry polygon object. Calculations are always planimetric in the Spatial Reference System (SRS) of this geometry, and the units of the returned area will match the units for the SRS. This differs from the calculations performed by the $area function, which will perform ellipsoidal calculations based on the project's ellipsoid and area unit settings.
-
-.. list-table::
-   :widths: 15 85
-   :stub-columns: 1
-
-   * - Syntax
-     - area(geometry)
-
-   * - Arguments
-     - * **geometry** - polygon geometry object
-
-   * - Examples
-     - * area(geom_from_wkt('POLYGON((0 0, 4 0, 4 2, 0 2, 0 0))')) → 8.0
-
-
-.. end_area_section
 
 .. $area_section
 
@@ -65,12 +38,35 @@ Returns the area of the current feature. The area calculated by this function re
 
    * - Syntax
      - $area
-
    * - Examples
      - * $area → 42
 
 
 .. end_$area_section
+
+.. area_section
+
+.. _expression_function_GeometryGroup_area:
+
+area
+....
+
+Returns the area of a geometry polygon object. Calculations are always planimetric in the Spatial Reference System (SRS) of this geometry, and the units of the returned area will match the units for the SRS. This differs from the calculations performed by the $area function, which will perform ellipsoidal calculations based on the project's ellipsoid and area unit settings.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - area(geometry)
+   * - Arguments
+     - * **geometry** - polygon geometry object
+
+   * - Examples
+     - * area(geom_from_wkt('POLYGON((0 0, 4 0, 4 2, 0 2, 0 0))')) → 8.0
+
+
+.. end_area_section
 
 .. azimuth_section
 
@@ -87,10 +83,8 @@ Returns the north-based azimuth as the angle in radians measured clockwise from 
 
    * - Syntax
      - azimuth(point_a, point_b)
-
    * - Arguments
      - * **point_a** - point geometry
-
        * **point_b** - point geometry
 
    * - Examples
@@ -116,7 +110,6 @@ Returns the closure of the combinatorial boundary of the geometry (ie the topolo
 
    * - Syntax
      - boundary(geometry)
-
    * - Arguments
      - * **geometry** - a geometry
 
@@ -141,7 +134,6 @@ Returns a geometry which represents the bounding box of an input geometry. Calcu
 
    * - Syntax
      - bounds(geom)
-
    * - Arguments
      - * **geom** - a geometry
 
@@ -166,7 +158,6 @@ Returns the height of the bounding box of a geometry. Calculations are in the Sp
 
    * - Syntax
      - bounds_height(geom)
-
    * - Arguments
      - * **geom** - a geometry
 
@@ -191,7 +182,6 @@ Returns the width of the bounding box of a geometry. Calculations are in the Spa
 
    * - Syntax
      - bounds_width(geom)
-
    * - Arguments
      - * **geom** - a geometry
 
@@ -218,12 +208,9 @@ Returns a geometry that represents all points whose distance from this geometry 
      - buffer(geom, distance, [segments=8])
 
        [] marks optional arguments
-
    * - Arguments
      - * **geom** - a geometry
-
        * **distance** - buffer distance in layer units
-
        * **segments** - number of segments to use to represent a quarter circle when a round join style is used. A larger number results in a smoother buffer with more nodes.
 
    * - Examples
@@ -249,10 +236,8 @@ Creates a buffer along a line geometry where the buffer diameter varies accordin
      - buffer_by_m(geometry, [segments=8])
 
        [] marks optional arguments
-
    * - Arguments
      - * **geometry** - input geometry. Must be a (multi)line geometry with m values.
-
        * **segments** - number of segments to approximate quarter-circle curves in the buffer.
 
    * - Examples
@@ -276,7 +261,6 @@ Returns the geometric center of a geometry.
 
    * - Syntax
      - centroid(geom)
-
    * - Arguments
      - * **geom** - a geometry
 
@@ -301,7 +285,6 @@ Returns a closed line string of the input line string by appending the first poi
 
    * - Syntax
      - close_line(geometry)
-
    * - Arguments
      - * **geometry** - a line string geometry
 
@@ -328,10 +311,8 @@ Returns the point on geometry1 that is closest to geometry2.
 
    * - Syntax
      - closest_point(geometry1, geometry2)
-
    * - Arguments
      - * **geometry1** - geometry to find closest point on
-
        * **geometry2** - geometry to find closest point to
 
    * - Examples
@@ -359,7 +340,6 @@ Geometry parts are specified as separate arguments to the function.
 
    * - Syntax
      - collect_geometries(geometry1, geometry2, ...)
-
    * - Arguments
      - * **geometry** - a geometry
 
@@ -377,7 +357,6 @@ Geometry parts are specified as an array of geometry parts.
 
    * - Syntax
      - collect_geometries(array)
-
    * - Arguments
      - * **array** - array of geometry objects
 
@@ -402,10 +381,8 @@ Returns the combination of two geometries.
 
    * - Syntax
      - combine(geometry1, geometry2)
-
    * - Arguments
      - * **geometry1** - a geometry
-
        * **geometry2** - a geometry
 
    * - Examples
@@ -431,10 +408,8 @@ Tests whether a geometry contains another. Returns true if and only if no points
 
    * - Syntax
      - contains(geometry a, geometry b)
-
    * - Arguments
      - * **geometry a** - a geometry
-
        * **geometry b** - a geometry
 
    * - Examples
@@ -460,7 +435,6 @@ Returns the convex hull of a geometry. It represents the minimum convex geometry
 
    * - Syntax
      - convex_hull(geometry)
-
    * - Arguments
      - * **geometry** - a geometry
 
@@ -485,10 +459,8 @@ Tests whether a geometry crosses another. Returns true if the supplied geometrie
 
    * - Syntax
      - crosses(geometry a, geometry b)
-
    * - Arguments
      - * **geometry a** - a geometry
-
        * **geometry b** - a geometry
 
    * - Examples
@@ -514,10 +486,8 @@ Returns a geometry that represents that part of geometry_a that does not interse
 
    * - Syntax
      - difference(geometry_a, geometry_b)
-
    * - Arguments
      - * **geometry_a** - a geometry
-
        * **geometry_b** - a geometry
 
    * - Examples
@@ -541,10 +511,8 @@ Tests whether geometries do not spatially intersect. Returns true if the geometr
 
    * - Syntax
      - disjoint(geometry a, geometry b)
-
    * - Arguments
      - * **geometry a** - a geometry
-
        * **geometry b** - a geometry
 
    * - Examples
@@ -570,10 +538,8 @@ Returns the minimum distance (based on spatial ref) between two geometries in pr
 
    * - Syntax
      - distance(geometry a, geometry b)
-
    * - Arguments
      - * **geometry a** - a geometry
-
        * **geometry b** - a geometry
 
    * - Examples
@@ -597,10 +563,8 @@ Returns the distance along the geometry to a specified vertex.
 
    * - Syntax
      - distance_to_vertex(geometry, vertex)
-
    * - Arguments
      - * **geometry** - a linestring geometry
-
        * **vertex** - vertex index, starting from 0; if the value is negative, the selected vertex index will be its total count minus the absolute value
 
    * - Examples
@@ -624,7 +588,6 @@ Returns the last node from a geometry.
 
    * - Syntax
      - end_point(geometry)
-
    * - Arguments
      - * **geometry** - geometry object
 
@@ -649,12 +612,9 @@ Extends the start and end of a linestring geometry by a specified amount. Lines 
 
    * - Syntax
      - extend(geometry, start_distance, end_distance)
-
    * - Arguments
      - * **geometry** - a (multi)linestring geometry
-
        * **start_distance** - distance to extend the start of the line
-
        * **end_distance** - distance to extend the end of the line.
 
    * - Examples
@@ -678,7 +638,6 @@ Returns a line string representing the exterior ring of a polygon geometry. If t
 
    * - Syntax
      - exterior_ring(geom)
-
    * - Arguments
      - * **geom** - a polygon geometry
 
@@ -703,12 +662,9 @@ Returns an extruded version of the input (Multi-)Curve or (Multi-)Linestring geo
 
    * - Syntax
      - extrude(geom, x, y)
-
    * - Arguments
      - * **geom** - a polygon geometry
-
        * **x** - x extension, numeric value
-
        * **y** - y extension, numeric value
 
    * - Examples
@@ -734,7 +690,6 @@ Returns a copy of the geometry with the x and y coordinates swapped. Useful for 
 
    * - Syntax
      - flip_coordinates(geom)
-
    * - Arguments
      - * **geom** - a geometry
 
@@ -759,7 +714,6 @@ Forces a geometry to respect the Right-Hand-Rule, in which the area that is boun
 
    * - Syntax
      - force_rhr(geom)
-
    * - Arguments
      - * **geom** - a geometry. Any non-polygon geometries are returned unchanged.
 
@@ -784,7 +738,6 @@ Returns a geometry from a GML representation of geometry.
 
    * - Syntax
      - geom_from_gml(gml)
-
    * - Arguments
      - * **gml** - GML representation of a geometry as a string
 
@@ -809,7 +762,6 @@ Returns a geometry created from a Well-Known Binary (WKB) representation.
 
    * - Syntax
      - geom_from_wkb(binary)
-
    * - Arguments
      - * **binary** - Well-Known Binary (WKB) representation of a geometry (as a binary blob)
 
@@ -834,7 +786,6 @@ Returns a geometry created from a Well-Known Text (WKT) representation.
 
    * - Syntax
      - geom_from_wkt(text)
-
    * - Arguments
      - * **text** - Well-Known Text (WKT) representation of a geometry
 
@@ -859,7 +810,6 @@ Returns the Well-Known Binary (WKB) representation of a geometry
 
    * - Syntax
      - geom_to_wkb(geometry)
-
    * - Arguments
      - * **geometry** - a geometry
 
@@ -886,10 +836,8 @@ Returns the Well-Known Text (WKT) representation of the geometry without SRID me
      - geom_to_wkt(geometry, [precision])
 
        [] marks optional arguments
-
    * - Arguments
      - * **geometry** - a geometry
-
        * **precision** - numeric precision
 
    * - Examples
@@ -897,28 +845,6 @@ Returns the Well-Known Text (WKT) representation of the geometry without SRID me
 
 
 .. end_geom_to_wkt_section
-
-.. $geometry_section
-
-.. _expression_function_GeometryGroup_$geometry:
-
-$geometry
-.........
-
-Returns the geometry of the current feature. Can be used for processing with other functions.
-
-.. list-table::
-   :widths: 15 85
-   :stub-columns: 1
-
-   * - Syntax
-     - $geometry
-
-   * - Examples
-     - * geomToWKT( $geometry ) → POINT(6 50)
-
-
-.. end_$geometry_section
 
 .. geometry_section
 
@@ -935,7 +861,6 @@ Returns a feature's geometry.
 
    * - Syntax
      - geometry(feature)
-
    * - Arguments
      - * **feature** - a feature object
 
@@ -946,6 +871,27 @@ Returns a feature's geometry.
 
 
 .. end_geometry_section
+
+.. $geometry_section
+
+.. _expression_function_GeometryGroup_$geometry:
+
+$geometry
+.........
+
+Returns the geometry of the current feature. Can be used for processing with other functions.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - $geometry
+   * - Examples
+     - * geomToWKT( $geometry ) → POINT(6 50)
+
+
+.. end_$geometry_section
 
 .. geometry_n_section
 
@@ -962,10 +908,8 @@ Returns a specific geometry from a geometry collection, or null if the input geo
 
    * - Syntax
      - geometry_n(geometry, index)
-
    * - Arguments
      - * **geometry** - geometry collection
-
        * **index** - index of geometry to return, where 1 is the first geometry in the collection
 
    * - Examples
@@ -1003,12 +947,9 @@ If the default approximate provided by this method is insufficient, specify the 
      - hausdorff_distance(geometry a, geometry b, [densify_fraction])
 
        [] marks optional arguments
-
    * - Arguments
      - * **geometry a** - a geometry
-
        * **geometry b** - a geometry
-
        * **densify_fraction** - densify fraction amount
 
    * - Examples
@@ -1036,10 +977,8 @@ Returns the inclination measured from the zenith (0) to the nadir (180) on point
 
    * - Syntax
      - inclination(point_a, point_b)
-
    * - Arguments
      - * **point_a** - point geometry
-
        * **point_b** - point geometry
 
    * - Examples
@@ -1069,10 +1008,8 @@ Returns a specific interior ring from a polygon geometry, or null if the geometr
 
    * - Syntax
      - interior_ring_n(geometry, index)
-
    * - Arguments
      - * **geometry** - polygon geometry
-
        * **index** - index of interior to return, where 1 is the first interior ring
 
    * - Examples
@@ -1096,10 +1033,8 @@ Returns a geometry that represents the shared portion of two geometries.
 
    * - Syntax
      - intersection(geometry1, geometry2)
-
    * - Arguments
      - * **geometry1** - a geometry
-
        * **geometry2** - a geometry
 
    * - Examples
@@ -1123,10 +1058,8 @@ Tests whether a geometry intersects another. Returns true if the geometries spat
 
    * - Syntax
      - intersects(geometry a, geometry b)
-
    * - Arguments
      - * **geometry a** - a geometry
-
        * **geometry b** - a geometry
 
    * - Examples
@@ -1152,10 +1085,8 @@ Tests whether a geometry's bounding box overlaps another geometry's bounding box
 
    * - Syntax
      - intersects_bbox(geometry, geometry)
-
    * - Arguments
      - * **geometry** - a geometry
-
        * **geometry** - a geometry
 
    * - Examples
@@ -1181,7 +1112,6 @@ Returns true if a line string is closed (start and end points are coincident), o
 
    * - Syntax
      - is_closed(geom)
-
    * - Arguments
      - * **geom** - a line string geometry
 
@@ -1208,7 +1138,6 @@ Returns true if a geometry is empty (without coordinates), false if the geometry
 
    * - Syntax
      - is_empty(geom)
-
    * - Arguments
      - * **geom** - a geometry
 
@@ -1239,7 +1168,6 @@ Returns true if a geometry is NULL or empty (without coordinates) or false other
 
    * - Syntax
      - is_empty_or_null(geom)
-
    * - Arguments
      - * **geom** - a geometry
 
@@ -1272,7 +1200,6 @@ Returns true if the geometry is of Multi type.
 
    * - Syntax
      - is_multipart(geometry)
-
    * - Arguments
      - * **geometry** - a geometry
 
@@ -1299,7 +1226,6 @@ Returns true if a geometry is valid; if it is well-formed in 2D according to the
 
    * - Syntax
      - is_valid(geom)
-
    * - Arguments
      - * **geom** - a geometry
 
@@ -1310,28 +1236,6 @@ Returns true if a geometry is valid; if it is well-formed in 2D according to the
 
 
 .. end_is_valid_section
-
-.. $length_section
-
-.. _expression_function_GeometryGroup_$length:
-
-$length
-.......
-
-Returns the length of a linestring. If you need the length of a border of a polygon, use $perimeter instead. The length calculated by this function respects both the current project's ellipsoid setting and distance unit settings. For example, if an ellipsoid has been set for the project then the calculated length will be ellipsoidal, and if no ellipsoid is set then the calculated length will be planimetric.
-
-.. list-table::
-   :widths: 15 85
-   :stub-columns: 1
-
-   * - Syntax
-     - $length
-
-   * - Examples
-     - * $length → 42.4711
-
-
-.. end_$length_section
 
 .. length_section
 
@@ -1352,7 +1256,6 @@ Returns the number of characters in a string.
 
    * - Syntax
      - length(string)
-
    * - Arguments
      - * **string** - string to count length of
 
@@ -1370,7 +1273,6 @@ Calculate the length of a geometry line object. Calculations are always planimet
 
    * - Syntax
      - length(geometry)
-
    * - Arguments
      - * **geometry** - line geometry object
 
@@ -1379,6 +1281,27 @@ Calculate the length of a geometry line object. Calculations are always planimet
 
 
 .. end_length_section
+
+.. $length_section
+
+.. _expression_function_GeometryGroup_$length:
+
+$length
+.......
+
+Returns the length of a linestring. If you need the length of a border of a polygon, use $perimeter instead. The length calculated by this function respects both the current project's ellipsoid setting and distance unit settings. For example, if an ellipsoid has been set for the project then the calculated length will be ellipsoidal, and if no ellipsoid is set then the calculated length will be planimetric.
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+   * - Syntax
+     - $length
+   * - Examples
+     - * $length → 42.4711
+
+
+.. end_$length_section
 
 .. line_interpolate_angle_section
 
@@ -1395,10 +1318,8 @@ Returns the angle parallel to the geometry at a specified distance along a lines
 
    * - Syntax
      - line_interpolate_angle(geometry, distance)
-
    * - Arguments
      - * **geometry** - a linestring geometry
-
        * **distance** - distance along line to interpolate angle at
 
    * - Examples
@@ -1422,10 +1343,8 @@ Returns the point interpolated by a specified distance along a linestring geomet
 
    * - Syntax
      - line_interpolate_point(geometry, distance)
-
    * - Arguments
      - * **geometry** - a linestring geometry
-
        * **distance** - distance along line to interpolate
 
    * - Examples
@@ -1449,10 +1368,8 @@ Returns the distance along a linestring corresponding to the closest position th
 
    * - Syntax
      - line_locate_point(geometry, point)
-
    * - Arguments
      - * **geometry** - a linestring geometry
-
        * **point** - point geometry to locate closest position on linestring to
 
    * - Examples
@@ -1476,7 +1393,6 @@ Returns a LineString or MultiLineString geometry, where any connected LineString
 
    * - Syntax
      - line_merge(geometry)
-
    * - Arguments
      - * **geometry** - a LineString/MultiLineString geometry
 
@@ -1503,12 +1419,9 @@ Returns the portion of a line (or curve) geometry which falls between the specif
 
    * - Syntax
      - line_substring(geometry, start_distance, end_distance)
-
    * - Arguments
      - * **geometry** - a linestring or curve geometry
-
        * **start_distance** - distance to start of substring
-
        * **end_distance** - distance to end of substring
 
    * - Examples
@@ -1532,7 +1445,6 @@ Returns the m value of a point geometry.
 
    * - Syntax
      - m(geom)
-
    * - Arguments
      - * **geom** - a point geometry
 
@@ -1557,7 +1469,6 @@ Returns the maximum m (measure) value of a geometry.
 
    * - Syntax
      - m_max(geometry)
-
    * - Arguments
      - * **geometry** - a geometry containing m values
 
@@ -1584,7 +1495,6 @@ Returns the minimum m (measure) value of a geometry.
 
    * - Syntax
      - m_min(geometry)
-
    * - Arguments
      - * **geometry** - a geometry containing m values
 
@@ -1613,12 +1523,9 @@ Creates a circular polygon.
      - make_circle(center, radius, [segment=36])
 
        [] marks optional arguments
-
    * - Arguments
      - * **center** - center point of the circle
-
        * **radius** - radius of the circle
-
        * **segment** - optional argument for polygon segmentation. By default this value is 36
 
    * - Examples
@@ -1648,16 +1555,11 @@ Creates an elliptical polygon.
      - make_ellipse(center, semi_major_axis, semi_minor_axis, azimuth, [segment=36])
 
        [] marks optional arguments
-
    * - Arguments
      - * **center** - center point of the ellipse
-
        * **semi_major_axis** - semi-major axis of the ellipse
-
        * **semi_minor_axis** - semi-minor axis of the ellipse
-
        * **azimuth** - orientation of the ellipse
-
        * **segment** - optional argument for polygon segmentation. By default this value is 36
 
    * - Examples
@@ -1689,7 +1591,6 @@ Line vertices are specified as separate arguments to the function.
 
    * - Syntax
      - make_line(point1, point2, ...)
-
    * - Arguments
      - * **point** - a point geometry (or array of points)
 
@@ -1709,7 +1610,6 @@ Line vertices are specified as an array of points.
 
    * - Syntax
      - make_line(array)
-
    * - Arguments
      - * **array** - array of points
 
@@ -1736,14 +1636,10 @@ Creates a point geometry from an x and y (and optional z and m) value.
      - make_point(x, y, [z], [m])
 
        [] marks optional arguments
-
    * - Arguments
      - * **x** - x coordinate of point
-
        * **y** - y coordinate of point
-
        * **z** - optional z coordinate of point
-
        * **m** - optional m value of point
 
    * - Examples
@@ -1771,12 +1667,9 @@ Creates a point geometry from an x, y coordinate and m value.
 
    * - Syntax
      - make_point_m(x, y, m)
-
    * - Arguments
      - * **x** - x coordinate of point
-
        * **y** - y coordinate of point
-
        * **m** - m value of point
 
    * - Examples
@@ -1802,10 +1695,8 @@ Creates a polygon geometry from an outer ring and optional series of inner ring 
      - make_polygon(outerRing, [innerRing1], [innerRing2], ...)
 
        [] marks optional arguments
-
    * - Arguments
      - * **outerRing** - closed line geometry for polygon's outer ring
-
        * **innerRing** - optional closed line geometry for inner ring
 
    * - Examples
@@ -1833,14 +1724,10 @@ Creates a rectangle from 3 points.
      - make_rectangle_3points(point1, point2, point3, [option=0])
 
        [] marks optional arguments
-
    * - Arguments
      - * **point1** - First point.
-
        * **point2** - Second point.
-
        * **point3** - Third point.
-
        * **option** - An optional argument to construct the rectangle. By default this value is 0. Value can be 0 (distance) or 1 (projected). Option distance: Second distance is equal to the distance between 2nd and 3rd point. Option projected: Second distance is equal to the distance of the perpendicular projection of the 3rd point on the segment or its extension.
 
    * - Examples
@@ -1868,14 +1755,10 @@ Creates a regular polygon.
      - make_regular_polygon(center, radius, number_sides, [circle=0])
 
        [] marks optional arguments
-
    * - Arguments
      - * **center** - center of the regular polygon
-
        * **radius** - second point. The first if the regular polygon is inscribed. The midpoint of the first side if the regular polygon is circumscribed.
-
        * **number_sides** - Number of sides/edges of the regular polygon
-
        * **circle** - Optional argument to construct the regular polygon. By default this value is 0. Value can be 0 (inscribed) or 1 (circumscribed)
 
    * - Examples
@@ -1901,10 +1784,8 @@ Creates a square from a diagonal.
 
    * - Syntax
      - make_square(point1, point2)
-
    * - Arguments
      - * **point1** - First point of the regular polygon
-
        * **point2** - Second point
 
    * - Examples
@@ -1930,12 +1811,9 @@ Creates a triangle polygon.
 
    * - Syntax
      - make_triangle(point 1, point 2, point 3)
-
    * - Arguments
      - * **point 1** - first point of the triangle
-
        * **point 2** - second point of the triangle
-
        * **point 3** - third point of the triangle
 
    * - Examples
@@ -1963,10 +1841,8 @@ Returns the minimal enclosing circle of a geometry. It represents the minimum ci
      - minimal_circle(geometry, [segment=36])
 
        [] marks optional arguments
-
    * - Arguments
      - * **geometry** - a geometry
-
        * **segment** - optional argument for polygon segmentation. By default this value is 36
 
    * - Examples
@@ -1994,10 +1870,8 @@ Returns a multipoint geometry consisting of every node in the input geometry.
      - nodes_to_points(geometry, [ignore_closing_nodes=false])
 
        [] marks optional arguments
-
    * - Arguments
      - * **geometry** - geometry object
-
        * **ignore_closing_nodes** - optional argument specifying whether to include duplicate nodes which close lines or polygons rings. Defaults to false, set to true to avoid including these duplicate nodes in the output collection.
 
    * - Examples
@@ -2023,7 +1897,6 @@ Returns the number of geometries in a geometry collection, or null if the input 
 
    * - Syntax
      - num_geometries(geometry)
-
    * - Arguments
      - * **geometry** - geometry collection
 
@@ -2048,7 +1921,6 @@ Returns the number of interior rings in a polygon or geometry collection, or nul
 
    * - Syntax
      - num_interior_rings(geometry)
-
    * - Arguments
      - * **geometry** - input geometry
 
@@ -2073,7 +1945,6 @@ Returns the number of vertices in a geometry.
 
    * - Syntax
      - num_points(geom)
-
    * - Arguments
      - * **geom** - a geometry
 
@@ -2098,7 +1969,6 @@ Returns the number of rings (including exterior rings) in a polygon or geometry 
 
    * - Syntax
      - num_rings(geometry)
-
    * - Arguments
      - * **geometry** - input geometry
 
@@ -2125,16 +1995,11 @@ Returns a geometry formed by offsetting a linestring geometry to the side. Dista
      - offset_curve(geometry, distance, [segments=8], [join=1], [miter_limit=2.0])
 
        [] marks optional arguments
-
    * - Arguments
      - * **geometry** - a (multi)linestring geometry
-
        * **distance** - offset distance. Positive values will be buffered to the left of lines, negative values to the right
-
        * **segments** - number of segments to use to represent a quarter circle when a round join style is used. A larger number results in a smoother line with more nodes.
-
        * **join** - join style for corners, where 1 = round, 2 = miter and 3 = bevel
-
        * **miter_limit** - limit on the miter ratio used for very sharp corners (when using miter joins only)
 
    * - Examples
@@ -2164,12 +2029,9 @@ Orders the parts of a MultiGeometry by a given criteria
 
    * - Syntax
      - order_parts(geom, orderby, ascending)
-
    * - Arguments
      - * **geom** - a multi-type geometry
-
        * **orderby** - an expression string defining the order criteria
-
        * **ascending** - boolean, True for ascending, False for descending
 
    * - Examples
@@ -2195,7 +2057,6 @@ Returns a geometry which represents the minimal oriented bounding box of an inpu
 
    * - Syntax
      - oriented_bbox(geom)
-
    * - Arguments
      - * **geom** - a geometry
 
@@ -2220,10 +2081,8 @@ Tests whether a geometry overlaps another. Returns true if the geometries share 
 
    * - Syntax
      - overlaps(geometry a, geometry b)
-
    * - Arguments
      - * **geometry a** - a geometry
-
        * **geometry b** - a geometry
 
    * - Examples
@@ -2249,7 +2108,6 @@ Returns the perimeter length of the current feature. The perimeter calculated by
 
    * - Syntax
      - $perimeter
-
    * - Examples
      - * $perimeter → 42
 
@@ -2271,7 +2129,6 @@ Returns the perimeter of a geometry polygon object. Calculations are always plan
 
    * - Syntax
      - perimeter(geometry)
-
    * - Arguments
      - * **geometry** - polygon geometry object
 
@@ -2296,10 +2153,8 @@ Returns a specific node from a geometry.
 
    * - Syntax
      - point_n(geometry, index)
-
    * - Arguments
      - * **geometry** - geometry object
-
        * **index** - index of node to return, where 1 is the first node; if the value is negative, the selected vertex index will be its total count minus the absolute value
 
    * - Examples
@@ -2323,7 +2178,6 @@ Returns a point guaranteed to lie on the surface of a geometry.
 
    * - Syntax
      - point_on_surface(geom)
-
    * - Arguments
      - * **geom** - a geometry
 
@@ -2348,10 +2202,8 @@ Calculates the approximate pole of inaccessibility for a surface, which is the m
 
    * - Syntax
      - pole_of_inaccessibility(geometry, tolerance)
-
    * - Arguments
      - * **geometry** - a geometry
-
        * **tolerance** - maximum distance between the returned point and the true pole location
 
    * - Examples
@@ -2377,14 +2229,10 @@ Returns a point projected from a start point using a distance, a bearing (azimut
      - project(point, distance, azimuth, [elevation])
 
        [] marks optional arguments
-
    * - Arguments
      - * **point** - start point
-
        * **distance** - distance to project
-
        * **azimuth** - azimuth in radians clockwise, where 0 corresponds to north
-
        * **elevation** - angle of inclination in radians
 
    * - Examples
@@ -2412,10 +2260,8 @@ Returns the Dimensional Extended 9 Intersection Model (DE-9IM) representation of
 
    * - Syntax
      - relate(geometry, geometry)
-
    * - Arguments
      - * **geometry** - a geometry
-
        * **geometry** - a geometry
 
    * - Examples
@@ -2432,12 +2278,9 @@ Tests whether the DE-9IM relationship between two geometries matches a specified
 
    * - Syntax
      - relate(geometry, geometry, pattern)
-
    * - Arguments
      - * **geometry** - a geometry
-
        * **geometry** - a geometry
-
        * **pattern** - DE-9IM pattern to match
 
    * - Examples
@@ -2461,7 +2304,6 @@ Reverses the direction of a line string by reversing the order of its vertices.
 
    * - Syntax
      - reverse(geom)
-
    * - Arguments
      - * **geom** - a geometry
 
@@ -2488,12 +2330,9 @@ Returns a rotated version of a geometry. Calculations are in the Spatial Referen
      - rotate(geom, rotation, [point])
 
        [] marks optional arguments
-
    * - Arguments
      - * **geom** - a geometry
-
        * **rotation** - clockwise rotation in degrees
-
        * **point** - rotation center point. If not specified, the center of the geometry's bounding box is used.
 
    * - Examples
@@ -2519,7 +2358,6 @@ Returns a multi line geometry consisting of a line for every segment in the inpu
 
    * - Syntax
      - segments_to_lines(geometry)
-
    * - Arguments
      - * **geometry** - geometry object
 
@@ -2544,10 +2382,8 @@ Returns the shortest line joining geometry1 to geometry2. The resultant line wil
 
    * - Syntax
      - shortest_line(geometry1, geometry2)
-
    * - Arguments
      - * **geometry1** - geometry to find shortest line from
-
        * **geometry2** - geometry to find shortest line to
 
    * - Examples
@@ -2571,10 +2407,8 @@ Simplifies a geometry by removing nodes using a distance based threshold (ie, th
 
    * - Syntax
      - simplify(geometry, tolerance)
-
    * - Arguments
      - * **geometry** - a geometry
-
        * **tolerance** - maximum deviation from straight segments for points to be removed
 
    * - Examples
@@ -2598,10 +2432,8 @@ Simplifies a geometry by removing nodes using an area based threshold (ie, the V
 
    * - Syntax
      - simplify_vw(geometry, tolerance)
-
    * - Arguments
      - * **geometry** - a geometry
-
        * **tolerance** - a measure of the maximum area created by a node for the node to be removed
 
    * - Examples
@@ -2627,16 +2459,11 @@ Returns a geometry formed by buffering out just one side of a linestring geometr
      - single_sided_buffer(geometry, distance, [segments=8], [join=1], [miter_limit=2.0])
 
        [] marks optional arguments
-
    * - Arguments
      - * **geometry** - a (multi)linestring geometry
-
        * **distance** - buffer distance. Positive values will be buffered to the left of lines, negative values to the right
-
        * **segments** - number of segments to use to represent a quarter circle when a round join style is used. A larger number results in a smoother buffer with more nodes.
-
        * **join** - join style for corners, where 1 = round, 2 = miter and 3 = bevel
-
        * **miter_limit** - limit on the miter ratio used for very sharp corners (when using miter joins only)
 
    * - Examples
@@ -2668,16 +2495,11 @@ Smooths a geometry by adding extra nodes which round off corners in the geometry
      - smooth(geometry, [iterations], [offset], [min_length], [max_angle])
 
        [] marks optional arguments
-
    * - Arguments
      - * **geometry** - a geometry
-
        * **iterations** - number of smoothing iterations to apply. Larger numbers result in smoother but more complex geometries.
-
        * **offset** - value between 0 and 0.5 which controls how tightly the smoothed geometry follow the original geometry. Smaller values result in a tighter smoothing, larger values result in looser smoothing.
-
        * **min_length** - minimum length of segments to apply smoothing to. This parameter can be used to avoid placing excessive additional nodes in shorter segments of the geometry.
-
        * **max_angle** - maximum angle at node for smoothing to be applied (0-180). By lowering the maximum angle intentionally sharp corners in the geometry can be preserved. For instance, a value of 80 degrees will retain right angles in the geometry.
 
    * - Examples
@@ -2701,7 +2523,6 @@ Returns the first node from a geometry.
 
    * - Syntax
      - start_point(geometry)
-
    * - Arguments
      - * **geometry** - geometry object
 
@@ -2726,10 +2547,8 @@ Returns a geometry that represents the portions of two geometries that do not in
 
    * - Syntax
      - sym_difference(geometry1, geometry2)
-
    * - Arguments
      - * **geometry1** - a geometry
-
        * **geometry2** - a geometry
 
    * - Examples
@@ -2755,14 +2574,10 @@ Creates a buffer along a line geometry where the buffer diameter varies evenly o
      - tapered_buffer(geometry, start_width, end_width, [segments=8])
 
        [] marks optional arguments
-
    * - Arguments
      - * **geometry** - input geometry. Must be a (multi)line geometry.
-
        * **start_width** - width of buffer at start of line,
-
        * **end_width** - width of buffer at end of line.
-
        * **segments** - number of segments to approximate quarter-circle curves in the buffer.
 
    * - Examples
@@ -2786,10 +2601,8 @@ Tests whether a geometry touches another. Returns true if the geometries have at
 
    * - Syntax
      - touches(geometry a, geometry b)
-
    * - Arguments
      - * **geometry a** - a geometry
-
        * **geometry b** - a geometry
 
    * - Examples
@@ -2815,12 +2628,9 @@ Returns the geometry transformed from a source CRS to a destination CRS.
 
    * - Syntax
      - transform(geom, source_auth_id, dest_auth_id)
-
    * - Arguments
      - * **geom** - a geometry
-
        * **source_auth_id** - the source auth CRS ID
-
        * **dest_auth_id** - the destination auth CRS ID
 
    * - Examples
@@ -2844,12 +2654,9 @@ Returns a translated version of a geometry. Calculations are in the Spatial Refe
 
    * - Syntax
      - translate(geom, dx, dy)
-
    * - Arguments
      - * **geom** - a geometry
-
        * **dx** - delta x
-
        * **dy** - delta y
 
    * - Examples
@@ -2873,10 +2680,8 @@ Returns a geometry that represents the point set union of the geometries.
 
    * - Syntax
      - union(geometry1, geometry2)
-
    * - Arguments
      - * **geometry1** - a geometry
-
        * **geometry2** - a geometry
 
    * - Examples
@@ -2902,16 +2707,11 @@ Returns a wedge shaped buffer originating from a point geometry.
      - wedge_buffer(center, azimuth, width, outer_radius, [inner_radius=0.0])
 
        [] marks optional arguments
-
    * - Arguments
      - * **center** - center point (origin) of buffer. Must be a point geometry.
-
        * **azimuth** - angle (in degrees) for the middle of the wedge to point.
-
        * **width** - buffer width (in degrees). Note that the wedge will extend to half of the angular width either side of the azimuth direction.
-
        * **outer_radius** - outer radius for buffers
-
        * **inner_radius** - optional inner radius for buffers
 
    * - Examples
@@ -2935,10 +2735,8 @@ Tests whether a geometry is within another. Returns true if the geometry a is co
 
    * - Syntax
      - within(geometry a, geometry b)
-
    * - Arguments
      - * **geometry a** - a geometry
-
        * **geometry b** - a geometry
 
    * - Examples
@@ -2964,7 +2762,6 @@ Returns the x coordinate of the current feature.
 
    * - Syntax
      - $x
-
    * - Examples
      - * $x → 42
 
@@ -2986,7 +2783,6 @@ Returns the x coordinate of a point geometry, or the x-coordinate of the centroi
 
    * - Syntax
      - x(geom)
-
    * - Arguments
      - * **geom** - a geometry
 
@@ -3013,7 +2809,6 @@ Retrieves a x coordinate of the current feature's geometry.
 
    * - Syntax
      - $x_at(i)
-
    * - Arguments
      - * **i** - index of point of a line (indices start at 0; negative values apply from the last index, starting at -1)
 
@@ -3038,7 +2833,6 @@ Returns the maximum x coordinate of a geometry. Calculations are in the spatial 
 
    * - Syntax
      - x_max(geom)
-
    * - Arguments
      - * **geom** - a geometry
 
@@ -3063,7 +2857,6 @@ Returns the minimum x coordinate of a geometry. Calculations are in the spatial 
 
    * - Syntax
      - x_min(geom)
-
    * - Arguments
      - * **geom** - a geometry
 
@@ -3088,7 +2881,6 @@ Returns the y coordinate of the current feature.
 
    * - Syntax
      - $y
-
    * - Examples
      - * $y → 42
 
@@ -3110,7 +2902,6 @@ Returns the y coordinate of a point geometry, or the y-coordinate of the centroi
 
    * - Syntax
      - y(geom)
-
    * - Arguments
      - * **geom** - a geometry
 
@@ -3137,7 +2928,6 @@ Retrieves a y coordinate of the current feature's geometry.
 
    * - Syntax
      - $y_at(i)
-
    * - Arguments
      - * **i** - index of point of a line (indices start at 0; negative values apply from the last index, starting at -1)
 
@@ -3162,7 +2952,6 @@ Returns the maximum y coordinate of a geometry. Calculations are in the spatial 
 
    * - Syntax
      - y_max(geom)
-
    * - Arguments
      - * **geom** - a geometry
 
@@ -3187,7 +2976,6 @@ Returns the minimum y coordinate of a geometry. Calculations are in the spatial 
 
    * - Syntax
      - y_min(geom)
-
    * - Arguments
      - * **geom** - a geometry
 
@@ -3212,7 +3000,6 @@ Returns the z coordinate of a point geometry.
 
    * - Syntax
      - z(geom)
-
    * - Arguments
      - * **geom** - a point geometry
 
@@ -3237,7 +3024,6 @@ Returns the maximum z coordinate of a geometry.
 
    * - Syntax
      - z_max(geometry)
-
    * - Arguments
      - * **geometry** - a geometry with z coordinate
 
@@ -3264,7 +3050,6 @@ Returns the minimum z coordinate of a geometry.
 
    * - Syntax
      - z_min(geometry)
-
    * - Arguments
      - * **geometry** - a geometry with z coordinate
 

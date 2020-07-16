@@ -13,7 +13,6 @@ Returns an array containing all the values passed as parameter.
 
    * - Syntax
      - array(value1, value2, ...)
-
    * - Arguments
      - * **value** - a value
 
@@ -38,10 +37,8 @@ Returns true if an array contains all the values of a given array.
 
    * - Syntax
      - array_all(array_a, array_b)
-
    * - Arguments
      - * **array_a** - an array
-
        * **array_b** - the array of values to search
 
    * - Examples
@@ -67,10 +64,8 @@ Returns an array with the given value added at the end.
 
    * - Syntax
      - array_append(array, value)
-
    * - Arguments
      - * **array** - an array
-
        * **value** - the value to add
 
    * - Examples
@@ -94,7 +89,6 @@ Returns an array containing all the given arrays concatenated.
 
    * - Syntax
      - array_cat(array1, array2, ...)
-
    * - Arguments
      - * **array** - an array
 
@@ -119,10 +113,8 @@ Returns true if an array contains the given value.
 
    * - Syntax
      - array_contains(array, value)
-
    * - Arguments
      - * **array** - an array
-
        * **value** - the value to search
 
    * - Examples
@@ -146,7 +138,6 @@ Returns an array containing distinct values of the given array.
 
    * - Syntax
      - array_distinct(array)
-
    * - Arguments
      - * **array** - an array
 
@@ -171,10 +162,8 @@ Returns an array with only the items for which the expression evaluates to true.
 
    * - Syntax
      - array_filter(array, expression)
-
    * - Arguments
      - * **array** - an array
-
        * **expression** - an expression to evaluate on each item. The variable `@element` will be replaced by the current value.
 
    * - Examples
@@ -198,10 +187,8 @@ Returns the index (0 for the first one) of a value within an array. Returns -1 i
 
    * - Syntax
      - array_find(array, value)
-
    * - Arguments
      - * **array** - an array
-
        * **value** - the value to search
 
    * - Examples
@@ -225,7 +212,6 @@ Returns the first value of an array.
 
    * - Syntax
      - array_first(array)
-
    * - Arguments
      - * **array** - an array
 
@@ -250,10 +236,8 @@ Returns an array with the given expression evaluated on each item.
 
    * - Syntax
      - array_foreach(array, expression)
-
    * - Arguments
      - * **array** - an array
-
        * **expression** - an expression to evaluate on each item. The variable `@element` will be replaced by the current value.
 
    * - Examples
@@ -279,10 +263,8 @@ Returns the Nth value (0 for the first one) of an array.
 
    * - Syntax
      - array_get(array, index)
-
    * - Arguments
      - * **array** - an array
-
        * **index** - the index to get (0 based)
 
    * - Examples
@@ -306,12 +288,9 @@ Returns an array with the given value added at the given position.
 
    * - Syntax
      - array_insert(array, pos, value)
-
    * - Arguments
      - * **array** - an array
-
        * **pos** - the position where to add (0 based)
-
        * **value** - the value to add
 
    * - Examples
@@ -335,10 +314,8 @@ Returns true if at least one element of array1 exists in array2.
 
    * - Syntax
      - array_intersect(array1, array2)
-
    * - Arguments
      - * **array1** - an array
-
        * **array2** - another array
 
    * - Examples
@@ -362,7 +339,6 @@ Returns the last value of an array.
 
    * - Syntax
      - array_last(array)
-
    * - Arguments
      - * **array** - an array
 
@@ -387,7 +363,6 @@ Returns the number of elements of an array.
 
    * - Syntax
      - array_length(array)
-
    * - Arguments
      - * **array** - an array
 
@@ -412,10 +387,8 @@ Returns an array with the given value added at the beginning.
 
    * - Syntax
      - array_prepend(array, value)
-
    * - Arguments
      - * **array** - an array
-
        * **value** - the value to add
 
    * - Examples
@@ -439,10 +412,8 @@ Returns an array with all the entries of the given value removed.
 
    * - Syntax
      - array_remove_all(array, value)
-
    * - Arguments
      - * **array** - an array
-
        * **value** - the values to remove
 
    * - Examples
@@ -466,10 +437,8 @@ Returns an array with the given index removed.
 
    * - Syntax
      - array_remove_at(array, pos)
-
    * - Arguments
      - * **array** - an array
-
        * **pos** - the position to remove (0 based)
 
    * - Examples
@@ -493,7 +462,6 @@ Returns the given array with array values in reversed order.
 
    * - Syntax
      - array_reverse(array)
-
    * - Arguments
      - * **array** - an array
 
@@ -518,12 +486,9 @@ Returns a portion of the array. The slice is defined by the start_pos and end_po
 
    * - Syntax
      - array_slice(array, start_pos, end_pos)
-
    * - Arguments
      - * **array** - an array
-
        * **start_pos** - the index of the start position of the slice (0 based). The start_pos index is included in the slice. If you use a negative start_pos, the index is counted from the end of the list (-1 based).
-
        * **end_pos** - the index of the end position of the slice (0 based). The end_pos index is included in the slice. If you use a negative end_pos, the index is counted from the end of the list (-1 based).
 
    * - Examples
@@ -563,10 +528,8 @@ Returns the provided array with its elements sorted.
      - array_sort(array, [ascending=true])
 
        [] marks optional arguments
-
    * - Arguments
      - * **array** - an array
-
        * **ascending** - set this parameter to false to sort the array in descending order
 
    * - Examples
@@ -592,12 +555,9 @@ Concatenates array elements into a string separated by a delimiter and using opt
      - array_to_string(array, [delimiter=','], [empty_value=''])
 
        [] marks optional arguments
-
    * - Arguments
      - * **array** - the input array
-
        * **delimiter** - the string delimiter used to separate concatenated array elements
-
        * **empty_value** - the optional string to use as replacement for empty (zero length) matches
 
    * - Examples
@@ -627,12 +587,9 @@ Creates an array containing a sequence of numbers.
      - generate_series(start, stop, [step=1])
 
        [] marks optional arguments
-
    * - Arguments
      - * **start** - first value of the sequence
-
        * **stop** - value that ends the sequence once reached
-
        * **step** - value used as the increment between values
 
    * - Examples
@@ -660,12 +617,9 @@ Returns an array of all strings captured by capturing groups, in the order the g
      - regexp_matches(string, regex, [empty_value=''])
 
        [] marks optional arguments
-
    * - Arguments
      - * **string** - the string to capture groups from against the regular expression
-
        * **regex** - the regular expression used to capture groups
-
        * **empty_value** - the optional string to use as replacement for empty (zero length) matches
 
    * - Examples
@@ -693,12 +647,9 @@ Splits string into an array using supplied delimiter and optional string for emp
      - string_to_array(string, [delimiter=','], [empty_value=''])
 
        [] marks optional arguments
-
    * - Arguments
      - * **string** - the input string
-
        * **delimiter** - the string delimiter used to split the input string
-
        * **empty_value** - the optional string to use as replacement for empty (zero length) matches
 
    * - Examples

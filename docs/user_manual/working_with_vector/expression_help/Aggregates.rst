@@ -15,10 +15,8 @@ Returns an aggregate value calculated using features from another layer.
      - aggregate(layer, aggregate, expression, [filter], [concatenator], [order_by])
 
        [] marks optional arguments
-
    * - Arguments
      - * **layer** - a string, representing either a layer name or layer ID
-
        * **aggregate** - a string corresponding to the aggregate to calculate. Valid options are:
 
          
@@ -47,13 +45,9 @@ Returns an aggregate value calculated using features from another layer.
          * array_agg: create an array of aggregated values
          
 
-
        * **expression** - sub expression or field name to aggregate
-
        * **filter** - optional filter expression to limit the features used for calculating the aggregate. Fields and geometry are from the features on the joined layer. The source feature can be accessed with the variable @parent.
-
        * **concatenator** - optional string to use to join values for 'concatenate' aggregate
-
        * **order_by** - optional filter expression to order the features used for calculating the aggregate. Fields and geometry are from the features on the joined layer.
 
    * - Examples
@@ -87,14 +81,10 @@ Returns an array of aggregated values from a field or expression.
      - array_agg(expression, [group_by], [filter], [order_by])
 
        [] marks optional arguments
-
    * - Arguments
      - * **expression** - sub expression of field to aggregate
-
        * **group_by** - optional expression to use to group aggregate calculations
-
        * **filter** - optional expression to use to filter features used to calculate aggregate
-
        * **order_by** - optional expression to use to order features used to calculate aggregate
 
    * - Examples
@@ -120,12 +110,9 @@ Returns the multipart geometry of aggregated geometries from an expression
      - collect(expression, [group_by], [filter])
 
        [] marks optional arguments
-
    * - Arguments
      - * **expression** - geometry expression to aggregate
-
        * **group_by** - optional expression to use to group aggregate calculations
-
        * **filter** - optional expression to use to filter features used to calculate aggregate
 
    * - Examples
@@ -151,16 +138,11 @@ Returns all aggregated strings from a field or expression joined by a delimiter.
      - concatenate(expression, [group_by], [filter], [concatenator], [order_by])
 
        [] marks optional arguments
-
    * - Arguments
      - * **expression** - sub expression of field to aggregate
-
        * **group_by** - optional expression to use to group aggregate calculations
-
        * **filter** - optional expression to use to filter features used to calculate aggregate
-
        * **concatenator** - optional string to use to join values
-
        * **order_by** - optional expression to use to order features used to calculate aggregate
 
    * - Examples
@@ -186,16 +168,11 @@ Returns all unique strings from a field or expression joined by a delimiter.
      - concatenate_unique(expression, [group_by], [filter], [concatenator], [order_by])
 
        [] marks optional arguments
-
    * - Arguments
      - * **expression** - sub expression of field to aggregate
-
        * **group_by** - optional expression to use to group aggregate calculations
-
        * **filter** - optional expression to use to filter features used to calculate aggregate
-
        * **concatenator** - optional string to use to join values
-
        * **order_by** - optional expression to use to order features used to calculate aggregate
 
    * - Examples
@@ -221,12 +198,9 @@ Returns the count of matching features.
      - count(expression, [group_by], [filter])
 
        [] marks optional arguments
-
    * - Arguments
      - * **expression** - sub expression of field to aggregate
-
        * **group_by** - optional expression to use to group aggregate calculations
-
        * **filter** - optional expression to use to filter features used to calculate aggregate
 
    * - Examples
@@ -252,12 +226,9 @@ Returns the count of distinct values.
      - count_distinct(expression, [group_by], [filter])
 
        [] marks optional arguments
-
    * - Arguments
      - * **expression** - sub expression of field to aggregate
-
        * **group_by** - optional expression to use to group aggregate calculations
-
        * **filter** - optional expression to use to filter features used to calculate aggregate
 
    * - Examples
@@ -283,12 +254,9 @@ Returns the count of missing (null) values.
      - count_missing(expression, [group_by], [filter])
 
        [] marks optional arguments
-
    * - Arguments
      - * **expression** - sub expression of field to aggregate
-
        * **group_by** - optional expression to use to group aggregate calculations
-
        * **filter** - optional expression to use to filter features used to calculate aggregate
 
    * - Examples
@@ -314,12 +282,9 @@ Returns the calculated inter quartile range from a field or expression.
      - iqr(expression, [group_by], [filter])
 
        [] marks optional arguments
-
    * - Arguments
      - * **expression** - sub expression of field to aggregate
-
        * **group_by** - optional expression to use to group aggregate calculations
-
        * **filter** - optional expression to use to filter features used to calculate aggregate
 
    * - Examples
@@ -345,12 +310,9 @@ Returns the aggregate majority of values (most commonly occurring value) from a 
      - majority(expression, [group_by], [filter])
 
        [] marks optional arguments
-
    * - Arguments
      - * **expression** - sub expression of field to aggregate
-
        * **group_by** - optional expression to use to group aggregate calculations
-
        * **filter** - optional expression to use to filter features used to calculate aggregate
 
    * - Examples
@@ -376,12 +338,9 @@ Returns the maximum length of strings from a field or expression.
      - max_length(expression, [group_by], [filter])
 
        [] marks optional arguments
-
    * - Arguments
      - * **expression** - sub expression of field to aggregate
-
        * **group_by** - optional expression to use to group aggregate calculations
-
        * **filter** - optional expression to use to filter features used to calculate aggregate
 
    * - Examples
@@ -407,12 +366,9 @@ Returns the aggregate maximum value from a field or expression.
      - maximum(expression, [group_by], [filter])
 
        [] marks optional arguments
-
    * - Arguments
      - * **expression** - sub expression of field to aggregate
-
        * **group_by** - optional expression to use to group aggregate calculations
-
        * **filter** - optional expression to use to filter features used to calculate aggregate
 
    * - Examples
@@ -438,12 +394,9 @@ Returns the aggregate mean value from a field or expression.
      - mean(expression, [group_by], [filter])
 
        [] marks optional arguments
-
    * - Arguments
      - * **expression** - sub expression of field to aggregate
-
        * **group_by** - optional expression to use to group aggregate calculations
-
        * **filter** - optional expression to use to filter features used to calculate aggregate
 
    * - Examples
@@ -469,12 +422,9 @@ Returns the aggregate median value from a field or expression.
      - median(expression, [group_by], [filter])
 
        [] marks optional arguments
-
    * - Arguments
      - * **expression** - sub expression of field to aggregate
-
        * **group_by** - optional expression to use to group aggregate calculations
-
        * **filter** - optional expression to use to filter features used to calculate aggregate
 
    * - Examples
@@ -500,12 +450,9 @@ Returns the minimum length of strings from a field or expression.
      - min_length(expression, [group_by], [filter])
 
        [] marks optional arguments
-
    * - Arguments
      - * **expression** - sub expression of field to aggregate
-
        * **group_by** - optional expression to use to group aggregate calculations
-
        * **filter** - optional expression to use to filter features used to calculate aggregate
 
    * - Examples
@@ -531,12 +478,9 @@ Returns the aggregate minimum value from a field or expression.
      - minimum(expression, [group_by], [filter])
 
        [] marks optional arguments
-
    * - Arguments
      - * **expression** - sub expression of field to aggregate
-
        * **group_by** - optional expression to use to group aggregate calculations
-
        * **filter** - optional expression to use to filter features used to calculate aggregate
 
    * - Examples
@@ -562,12 +506,9 @@ Returns the aggregate minority of values (least occurring value) from a field or
      - minority(expression, [group_by], [filter])
 
        [] marks optional arguments
-
    * - Arguments
      - * **expression** - sub expression of field to aggregate
-
        * **group_by** - optional expression to use to group aggregate calculations
-
        * **filter** - optional expression to use to filter features used to calculate aggregate
 
    * - Examples
@@ -593,12 +534,9 @@ Returns the calculated first quartile from a field or expression.
      - q1(expression, [group_by], [filter])
 
        [] marks optional arguments
-
    * - Arguments
      - * **expression** - sub expression of field to aggregate
-
        * **group_by** - optional expression to use to group aggregate calculations
-
        * **filter** - optional expression to use to filter features used to calculate aggregate
 
    * - Examples
@@ -624,12 +562,9 @@ Returns the calculated third quartile from a field or expression.
      - q3(expression, [group_by], [filter])
 
        [] marks optional arguments
-
    * - Arguments
      - * **expression** - sub expression of field to aggregate
-
        * **group_by** - optional expression to use to group aggregate calculations
-
        * **filter** - optional expression to use to filter features used to calculate aggregate
 
    * - Examples
@@ -655,12 +590,9 @@ Returns the aggregate range of values (maximum - minimum) from a field or expres
      - range(expression, [group_by], [filter])
 
        [] marks optional arguments
-
    * - Arguments
      - * **expression** - sub expression of field to aggregate
-
        * **group_by** - optional expression to use to group aggregate calculations
-
        * **filter** - optional expression to use to filter features used to calculate aggregate
 
    * - Examples
@@ -686,10 +618,8 @@ Returns an aggregate value calculated using all matching child features from a l
      - relation_aggregate(relation, aggregate, expression, [concatenator], [order_by])
 
        [] marks optional arguments
-
    * - Arguments
      - * **relation** - a string, representing a relation ID
-
        * **aggregate** - a string corresponding to the aggregate to calculate. Valid options are:
 
          
@@ -718,11 +648,8 @@ Returns an aggregate value calculated using all matching child features from a l
          * array_agg: create an array of aggregated values
          
 
-
        * **expression** - sub expression or field name to aggregate
-
        * **concatenator** - optional string to use to join values for 'concatenate' aggregate
-
        * **order_by** - optional expression to order the features used for calculating the aggregate. Fields and geometry are from the features on the joined layer.
 
    * - Examples
@@ -754,12 +681,9 @@ Returns the aggregate standard deviation value from a field or expression.
      - stdev(expression, [group_by], [filter])
 
        [] marks optional arguments
-
    * - Arguments
      - * **expression** - sub expression of field to aggregate
-
        * **group_by** - optional expression to use to group aggregate calculations
-
        * **filter** - optional expression to use to filter features used to calculate aggregate
 
    * - Examples
@@ -785,12 +709,9 @@ Returns the aggregate summed value from a field or expression.
      - sum(expression, [group_by], [filter])
 
        [] marks optional arguments
-
    * - Arguments
      - * **expression** - sub expression of field to aggregate
-
        * **group_by** - optional expression to use to group aggregate calculations
-
        * **filter** - optional expression to use to filter features used to calculate aggregate
 
    * - Examples

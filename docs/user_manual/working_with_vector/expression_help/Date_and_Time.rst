@@ -26,10 +26,8 @@ The difference is returned as a ``Interval`` and needs to be used with one of th
 
    * - Syntax
      - age(datetime1, datetime2)
-
    * - Arguments
      - * **datetime1** - a string, date or datetime representing the later date
-
        * **datetime2** - a string, date or datetime representing the earlier date
 
    * - Examples
@@ -55,7 +53,6 @@ Returns a datetime whose date and time are the number of milliseconds, msecs, th
 
    * - Syntax
      - datetime_from_epoch(int)
-
    * - Arguments
      - * **int** - number (milliseconds)
 
@@ -84,7 +81,6 @@ Extracts the day from a date or datetime.
 
    * - Syntax
      - day(date)
-
    * - Arguments
      - * **date** - a date or datetime value
 
@@ -102,7 +98,6 @@ Calculates the length in days of an interval.
 
    * - Syntax
      - day(interval)
-
    * - Arguments
      - * **interval** - interval value to return number of days from
 
@@ -131,7 +126,6 @@ Returns the day of the week for a specified date or datetime. The returned value
 
    * - Syntax
      - day_of_week(date)
-
    * - Arguments
      - * **date** - date or datetime value
 
@@ -156,7 +150,6 @@ Returns the interval in milliseconds between the unix epoch and a given date val
 
    * - Syntax
      - epoch(date)
-
    * - Arguments
      - * **date** - a date or datetime value
 
@@ -183,10 +176,8 @@ Formats a date type or string into a custom string format. Uses Qt date/time for
      - format_date(datetime, format, [language])
 
        [] marks optional arguments
-
    * - Arguments
      - * **datetime** - date, time or datetime value
-
        * **format** - String template used to format the string. 
 
          .. csv-table::
@@ -227,7 +218,6 @@ Formats a date type or string into a custom string format. Uses Qt date/time for
             "AP or A", "interpret as an AM/PM time. *AP* must be either 'AM' or 'PM'."
             "ap or a", "Interpret as an AM/PM time. *ap* must be either 'am' or 'pm'."
 
-
        * **language** - language (lowercase, two- or three-letter, ISO 639 language code) used to format the date into a custom string
 
    * - Examples
@@ -257,7 +247,6 @@ Extracts the hour part from a time or datetime.
 
    * - Syntax
      - hour(datetime)
-
    * - Arguments
      - * **datetime** - a time or datetime value
 
@@ -275,7 +264,6 @@ Calculates the length in hours of an interval.
 
    * - Syntax
      - hour(interval)
-
    * - Arguments
      - * **interval** - interval value to return number of hours from
 
@@ -304,12 +292,9 @@ Creates a date value from year, month and day numbers.
 
    * - Syntax
      - make_date(year, month, day)
-
    * - Arguments
      - * **year** - Year number. Years 1 to 99 are interpreted as is. Year 0 is invalid.
-
        * **month** - Month number, where 1=January
-
        * **day** - Day number, beginning with 1 for the first day in the month
 
    * - Examples
@@ -333,18 +318,12 @@ Creates a datetime value from year, month, day, hour, minute and second numbers.
 
    * - Syntax
      - make_datetime(year, month, day, hour, minute, second)
-
    * - Arguments
      - * **year** - Year number. Years 1 to 99 are interpreted as is. Year 0 is invalid.
-
        * **month** - Month number, where 1=January
-
        * **day** - Day number, beginning with 1 for the first day in the month
-
        * **hour** - Hour number
-
        * **minute** - Minutes
-
        * **second** - Seconds (fractional values include milliseconds)
 
    * - Examples
@@ -370,20 +349,13 @@ Creates an interval value from year, month, weeks, days, hours, minute and secon
      - make_interval([years=0], [months=0], [weeks=0], [days=0], [hours=0], [minutes=0], [seconds=0])
 
        [] marks optional arguments
-
    * - Arguments
      - * **years** - Number of years (assumes a 365.25 day year length).
-
        * **months** - Number of months (assumes a 30 day month length)
-
        * **weeks** - Number of weeks
-
        * **days** - Number of days
-
        * **hours** - Number of hours
-
        * **minutes** - Number of minutes
-
        * **seconds** - Number of seconds
 
    * - Examples
@@ -409,12 +381,9 @@ Creates a time value from hour, minute and second numbers.
 
    * - Syntax
      - make_time(hour, minute, second)
-
    * - Arguments
      - * **hour** - Hour number
-
        * **minute** - Minutes
-
        * **second** - Seconds (fractional values include milliseconds)
 
    * - Examples
@@ -442,7 +411,6 @@ Extracts the minutes part from a time or datetime.
 
    * - Syntax
      - minute(datetime)
-
    * - Arguments
      - * **datetime** - a time or datetime value
 
@@ -460,7 +428,6 @@ Calculates the length in minutes of an interval.
 
    * - Syntax
      - minute(interval)
-
    * - Arguments
      - * **interval** - interval value to return number of minutes from
 
@@ -493,7 +460,6 @@ Extracts the month part from a date or datetime.
 
    * - Syntax
      - month(date)
-
    * - Arguments
      - * **date** - a date or datetime value
 
@@ -511,7 +477,6 @@ Calculates the length in months of an interval.
 
    * - Syntax
      - month(interval)
-
    * - Arguments
      - * **interval** - interval value to return number of months from
 
@@ -538,7 +503,6 @@ Returns the current date and time. The function is static and will return consis
 
    * - Syntax
      - now()
-
    * - Examples
      - * now() → 2012-07-22T13:24:57
 
@@ -564,7 +528,6 @@ Extracts the seconds part from a time or datetime.
 
    * - Syntax
      - second(datetime)
-
    * - Arguments
      - * **datetime** - a time or datetime value
 
@@ -582,7 +545,6 @@ Calculates the length in seconds of an interval.
 
    * - Syntax
      - second(interval)
-
    * - Arguments
      - * **interval** - interval value to return number of seconds from
 
@@ -611,12 +573,9 @@ Converts a string into a date object. An optional format string can be provided 
      - to_date(string, [format], [language])
 
        [] marks optional arguments
-
    * - Arguments
      - * **string** - string representing a date value
-
        * **format** - format used to convert the string into a date
-
        * **language** - language (lowercase, two- or three-letter, ISO 639 language code) used to convert the string into a date
 
    * - Examples
@@ -646,12 +605,9 @@ Converts a string into a datetime object. An optional format string can be provi
      - to_datetime(string, [format], [language])
 
        [] marks optional arguments
-
    * - Arguments
      - * **string** - string representing a datetime value
-
        * **format** - format used to convert the string into a datetime
-
        * **language** - language (lowercase, two- or three-letter, ISO 639 language code) used to convert the string into a datetime
 
    * - Examples
@@ -679,7 +635,6 @@ Converts a string to a interval type. Can be used to take days, hours, month, et
 
    * - Syntax
      - to_interval(string)
-
    * - Arguments
      - * **string** - a string representing an interval. Allowable formats include {n} days {n} hours {n} months.
 
@@ -706,12 +661,9 @@ Converts a string into a time object. An optional format string can be provided 
      - to_time(string, [format], [language])
 
        [] marks optional arguments
-
    * - Arguments
      - * **string** - string representing a time value
-
        * **format** - format used to convert the string into a time
-
        * **language** - language (lowercase, two- or three-letter, ISO 639 language code) used to convert the string into a time
 
    * - Examples
@@ -743,7 +695,6 @@ Extracts the week number from a date or datetime.
 
    * - Syntax
      - week(date)
-
    * - Arguments
      - * **date** - a date or datetime value
 
@@ -761,7 +712,6 @@ Calculates the length in weeks of an interval.
 
    * - Syntax
      - week(interval)
-
    * - Arguments
      - * **interval** - interval value to return number of months from
 
@@ -792,7 +742,6 @@ Extracts the year part from a date or datetime.
 
    * - Syntax
      - year(date)
-
    * - Arguments
      - * **date** - a date or datetime value
 
@@ -810,7 +759,6 @@ Calculates the length in years of an interval.
 
    * - Syntax
      - year(interval)
-
    * - Arguments
      - * **interval** - interval value to return number of years from
 

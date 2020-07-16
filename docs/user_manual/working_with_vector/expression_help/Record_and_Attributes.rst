@@ -17,7 +17,6 @@ Returns the value of an attribute from the current feature.
 
    * - Syntax
      - attribute(attribute_name)
-
    * - Arguments
      - * **attribute_name** - name of attribute to be returned
 
@@ -35,10 +34,8 @@ Allows the target feature and attribute name to be specified.
 
    * - Syntax
      - attribute(feature, attribute_name)
-
    * - Arguments
      - * **feature** - a feature
-
        * **attribute_name** - name of attribute to be returned
 
    * - Examples
@@ -66,7 +63,6 @@ Returns a map of all attributes from the current feature.
 
    * - Syntax
      - attributes()
-
    * - Examples
      - * attributes()['name'] → value stored in 'name' attribute for the current feature
 
@@ -81,7 +77,6 @@ Allows the target feature to be specified.
 
    * - Syntax
      - attributes(feature)
-
    * - Arguments
      - * **feature** - a feature
 
@@ -106,7 +101,6 @@ Returns the current feature being evaluated. This can be used with the 'attribut
 
    * - Syntax
      - $currentfeature
-
    * - Examples
      - * attribute( $currentfeature, 'name' ) → value stored in 'name' attribute for the current feature
 
@@ -130,12 +124,9 @@ Returns the display expression for a given feature in a layer. If called with no
      - display_expression([feature=current feature], [layer=current layer], [evaluate=true])
 
        [] marks optional arguments
-
    * - Arguments
      - * **feature** - The feature which should be evaluated.
-
        * **layer** - The layer (or its id or name).
-
        * **evaluate** - If the expression must be evaluated. If false, the expression will be returned as a string literal only (which could potentially be later evaluated using the 'eval' function).
 
    * - Examples
@@ -163,12 +154,9 @@ Returns the first feature of a layer matching a given attribute value.
 
    * - Syntax
      - get_feature(layer, attribute, value)
-
    * - Arguments
      - * **layer** - layer name or ID
-
        * **attribute** - attribute name
-
        * **value** - attribute value to match
 
    * - Examples
@@ -192,10 +180,8 @@ Returns the feature with an id on a layer.
 
    * - Syntax
      - get_feature_by_id(layer, feature_id)
-
    * - Arguments
      - * **layer** - layer, layer name or layer id
-
        * **feature_id** - the id of the feature which should be returned
 
    * - Examples
@@ -219,7 +205,6 @@ Returns the feature id of the current row.
 
    * - Syntax
      - $id
-
    * - Examples
      - * $id → 42
 
@@ -245,7 +230,6 @@ If called with no parameters, the function will return true if the current featu
 
    * - Syntax
      - is_selected()
-
    * - Examples
      - * is_selected() → True if the current feature in the current layer is selected.
 
@@ -260,7 +244,6 @@ If called with a 'feature' parameter only, the function returns true if the spec
 
    * - Syntax
      - is_selected(feature)
-
    * - Arguments
      - * **feature** - The feature which should be checked for selection.
 
@@ -278,10 +261,8 @@ If the function is called with both a layer and a feature, it will return true i
 
    * - Syntax
      - is_selected(layer, feature)
-
    * - Arguments
      - * **layer** - The layer (or its ID or name) on which the selection will be checked.
-
        * **feature** - The feature which should be checked for selection.
 
    * - Examples
@@ -307,12 +288,9 @@ Returns the maptip for a given feature in a layer. If called with no parameters,
      - maptip([feature=current feature], [layer=current layer], [evaluate=true])
 
        [] marks optional arguments
-
    * - Arguments
      - * **feature** - The feature which should be evaluated.
-
        * **layer** - The layer (or its id or name).
-
        * **evaluate** - If the expression must be evaluated. If false, the expression will be returned as a string literal only (which could potentially be later evaluated using the 'eval_template' function).
 
    * - Examples
@@ -342,7 +320,6 @@ Returns the number of selected features on a given layer. By default works on th
      - num_selected([layer=current layer])
 
        [] marks optional arguments
-
    * - Arguments
      - * **layer** - The layer (or its id or name) on which the selection will be checked.
 
@@ -369,10 +346,8 @@ Returns the configured representation value for a field value. It depends on the
 
    * - Syntax
      - represent_value(value, fieldName)
-
    * - Arguments
      - * **value** - The value which should be resolved. Most likely a field.
-
        * **fieldName** - The field name for which the widget configuration should be loaded. (Optional)
 
    * - Examples
@@ -426,18 +401,12 @@ When the database parameter is a layer and the layer is in transaction mode, the
      - sqlite_fetch_and_increment(database, table, id_field, filter_attribute, filter_value, [default_values])
 
        [] marks optional arguments
-
    * - Arguments
      - * **database** - Path to the sqlite file or geopackage layer
-
        * **table** - Name of the table that manages the sequences
-
        * **id_field** - Name of the field that contains the current value
-
        * **filter_attribute** - Name the field that contains a unique identifier for this sequence. Must have a UNIQUE index.
-
        * **filter_value** - Name of the sequence to use.
-
        * **default_values** - Map with default values for additional columns on the table. The values need to be fully quoted. Functions are allowed.
 
    * - Examples
@@ -463,7 +432,6 @@ Generates a Universally Unique Identifier (UUID) for each row using the Qt `QUui
 
    * - Syntax
      - uuid()
-
    * - Examples
      - * uuid() → '{0bd2f60f-f157-4a6d-96af-d4ba4cb366a1}'
 

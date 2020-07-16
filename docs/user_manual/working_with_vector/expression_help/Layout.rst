@@ -13,7 +13,6 @@ Returns a map of variables from a composer item inside this composition.
 
    * - Syntax
      - item_variables(id)
-
    * - Arguments
      - * **id** - composer item ID
 
