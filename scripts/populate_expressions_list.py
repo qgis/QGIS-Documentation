@@ -38,6 +38,8 @@ def sphynxify_html(text, base_indent=0):
     text = text.replace('</td>','"')
     text = text.replace('</thead>','')
     text = text.replace('</table>','')
+    text = text.replace('<pre>','\n\n'+ filler)
+    text = text.replace('</pre>','\n\n')
     text = re.sub(r"<a href='(.*)'>(.*)</a>", r"`\2 <\1>`_", text)
 
     return text
@@ -50,7 +52,7 @@ def format_function(function_dict):
     else:
         # Multiple function calls
         variants = function_dict['variants']
-    
+
     text = ''
     for variant in variants:
         # Format each function variant and add it to the function text
@@ -83,23 +85,27 @@ def format_variant(function_dict, f_name):
             else:
                 arg_syntax_list.append(arg_text)
                 arg_description_list.append(f"**{arg['arg']}** - {sphynxify_html(arg['description'],9)}")
-    
+
     # Prepare syntax and arguments strings
+    syntax = f'   * - Syntax\n     - '
     if len(arg_syntax_list) > 0:
-        syntax = f'{f_name}({", ".join(arg_syntax_list)}{variable_args})'
-        descriptions = '\n\n       * '.join(arg_description_list)
+        syntax += f'{f_name}({", ".join(arg_syntax_list)}{variable_args})\n'
+        descriptions = '\n       * '.join(arg_description_list)
         arguments = (f"   * - Arguments\n"
                      f"     - * {descriptions}\n"
                      f"\n")
     elif f_name.startswith("$"):
-        syntax = f_name
+        syntax += f"{f_name}\n"
         arguments = ''
     else:
-        syntax = f"{f_name}()" 
+        syntax += f"{f_name}()\n"
         arguments = ''
-    
+
     if optional_args:
-        syntax += '\n\n       [] marks optional arguments'
+        syntax += '\n       [] marks optional arguments\n'
+
+    if 'type' in function_dict and function_dict['type'] == 'expression':
+        syntax = ''
 
     # Prepare examples
     if 'examples' in function_dict:
@@ -124,15 +130,13 @@ def format_variant(function_dict, f_name):
             f"   :widths: 15 85\n"
             f"   :stub-columns: 1\n"
             f"\n"
-            f"   * - Syntax\n"
-            f"     - {syntax}\n"
-            f"\n"
+            f"{syntax}"
             f"{arguments}"
             f"{examples}"
             f"{notes}"
             f"\n\n\n")
     return text
-        
+
 # Get a list of all files on that folder
 
 (_, _, filenames) = next(walk(help_folder))
