@@ -1,12 +1,23 @@
 from os import path, walk
+from sys import argv
 import json
 import re
 
+# To use this script clone the QGIS/QGIS repository, and run
+#
+# python3 populate_expression [path/to/qgis/repository]
+#
+# If no argument is given, the script assumes that the QGIS repository is in the
+# same folder of the QGIS-Documentation repository
+
 # Determine the folder where the json files are
-qgis_repo_path = path.abspath('/home/aneto/qgis/repos/QGIS')
+if len(argv) > 1:
+    qgis_repo_path = argv[1]
+else:
+    qgis_repo_path = path.join(path.dirname( __file__ ), '..','..','QGIS')
 help_folder = path.join(qgis_repo_path,'resources/function_help/json')
 # expression help folder
-output_folder = path.abspath('./docs/user_manual/working_with_vector/expression_help')
+output_folder = path.join(path.dirname( __file__ ), '..', 'docs/user_manual/working_with_vector/expression_help')
 
 def sphynxify_html(text, base_indent=0):
     filler = base_indent * ' '
