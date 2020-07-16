@@ -495,20 +495,22 @@ Back to the Classes tab, you can specify the number of classes and also the
 mode for classifying features within the classes (using the Mode list). The
 available modes are:
 
-* Equal Interval: each class has the same size (e.g. values from 0 to 16 and
-  4 classes, each class has a size of 4).
-* Equal Count (Quantile): each class will have the same number of element inside
+* Equal Count (Quantile): each class will have the same number of elements
   (the idea of a boxplot).
-* Logarithmic scale: Computes classes for data with a wide range of values.
-  The low data can be distinguished very well by means of the classes.
-* Natural Breaks (Jenks): the variance within each class is minimal while the
-  variance between classes is maximal.
-* Standard Deviation: classes are built depending on the standard deviation of
-  the values.
-* Pretty Breaks: Computes a sequence of about n+1 equally spaced nice values
+* Equal Interval: each class will have the same size (e.g. with the values
+  from 1 to 16 and four classes, each class will have a size of four).
+* Logarithmic scale: suitable for data with a wide range of values.
+  Narrow classes for low values and wide classes for large values (e.g. for
+  decimal numbers with range [0..100] and two classes, the first class will
+  be from 0 to 10 and the second class from 10 to 100).
+* Natural Breaks (Jenks): the variance within each class is minimized while
+  the variance between classes is maximized.
+* Pretty Breaks: computes a sequence of about n+1 equally spaced nice values
   which cover the range of the values in x. The values are chosen so that they
   are 1, 2 or 5 times a power of 10. (based on pretty from the R statistical
-  environment https://astrostatistics.psu.edu/datasets/R/html/base/html/pretty.html)
+  environment https://www.rdocumentation.org/packages/base/topics/pretty).
+* Standard Deviation: classes are built depending on the standard deviation of
+  the values.
 
 The listbox in the center part of the :guilabel:`Symbology` tab lists the classes
 together with their ranges, labels and symbols that will be rendered.
