@@ -3,9 +3,10 @@ from sys import argv
 import json
 import re
 
-# To use this script clone the QGIS/QGIS repository, and run
+# To use this script clone the QGIS/QGIS repository, and checkout the release
+# and run:
 #
-# python3 populate_expression [path/to/qgis/repository]
+# python3 populate_expression.py [path/to/qgis/repository]
 #
 # If no argument is given, the script assumes that the QGIS repository is in the
 # same folder of the QGIS-Documentation repository
@@ -187,6 +188,11 @@ for g_name in groups:
     func_list.sort(key=lambda x: x.strip('$'))
     output_group_file = path.join(output_folder, g_name.replace(' ','_') + '.rst')
     with open(output_group_file, 'w') as f:
+        f.write(f".. DO NOT EDIT THESE FILE DIRECTLY, it's generated automatically by\n"
+                f"   populate_expressions_list.py in the scripts folder\n"
+                f"   Any changes should be done in the function help files\n"
+                f"   in the QGIS/resources/function_help/json/ folder in the\n"
+                f"   qgis/QGIS repository\n\n")
         for f_name in func_list:
             f_description = sphynxify_html(functions[f_name]['description'])
             f.write(f'.. {f_name}_section\n\n'

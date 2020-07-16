@@ -1,3 +1,9 @@
+.. DO NOT EDIT THESE FILE DIRECTLY, it's generated automatically by
+   populate_expressions_list.py in the scripts folder
+   Any changes should be done in the function help files
+   in the QGIS/resources/function_help/json/ folder in the
+   qgis/QGIS repository
+
 .. base_file_name_section
 
 .. _expression_function_Files_and_Paths_base_file_name:
