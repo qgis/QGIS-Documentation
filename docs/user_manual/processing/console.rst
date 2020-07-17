@@ -335,7 +335,7 @@ them immediately.
 
 If you want to open an algorithm dialog from the console you can use the 
 ``createAlgorithmDialog`` method. The only mandatory parameter is the algorithm 
-name but you can also define the dictionary of parameters so that the dialog 
+name, but you can also define the dictionary of parameters so that the dialog 
 will be filled automatically:
 
 ::
