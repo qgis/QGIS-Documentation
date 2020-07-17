@@ -15,43 +15,47 @@ import re
 if len(argv) > 1:
     qgis_repo_path = argv[1]
 else:
-    qgis_repo_path = path.join(path.dirname( __file__ ), '..','..','QGIS')
-help_folder = path.join(qgis_repo_path,'resources/function_help/json')
+    qgis_repo_path = path.join(path.dirname(__file__), '..', '..', 'QGIS')
+help_folder = path.join(qgis_repo_path, 'resources/function_help/json')
 # expression help folder
-output_folder = path.join(path.dirname( __file__ ), '..', 'docs/user_manual/working_with_vector/expression_help')
+output_folder = path.join(path.dirname(__file__), '..', 'docs/user_manual/working_with_vector/expression_help')
 
 def sphynxify_html(text, base_indent=0):
     filler = base_indent * ' '
-    text = text.replace('<p>','\n\n'+ filler)
-    text = text.replace('</p>','\n')
-    text = text.replace('<br />','\n\n'+ filler)
-    text = text.replace('<br/>','\n\n'+ filler)
-    text = text.replace('<br>','\n\n'+ filler)
-    text = text.replace('<ul>','\n\n'+ filler)
-    text = text.replace('</ul>','\n')
-    text = text.replace('<li>','* ')
-    text = text.replace('</li>','\n' + filler)
-    text = text.replace('<code>','``')
-    text = text.replace('</code>','``')
-    text = text.replace('<b>','**')
-    text = text.replace('</b>','**')
-    text = text.replace('<i>','*')
-    text = text.replace('</i>','*')
-    text = text.replace('<table>','\n\n'+ filler + '.. csv-table::\n')
-    text = text.replace('<thead>', filler + '   :header-rows: 1\n' + filler + '   :widths: 20, 80\n\n')
-    text = text.replace('<tr>', filler + '   ')
-    text = text.replace('<tr valign="top">', filler + '   ')
-    text = text.replace('</th><th>','", "')
-    text = text.replace('<th>','"')
-    text = text.replace('</th>','"')
+
+    # Format paragraphs and breaks
+    text = text.replace('<p>', '\n\n'+ filler)
+    text = text.replace('</p>', '\n')
+    text = re.sub(r"<br\s?\/?>", '\n\n'+ filler, text)
+
+    # Format unsorted lists
+    text = text.replace('<ul>', '\n\n'+ filler)
+    text = text.replace('</ul>', '\n')
+    text = text.replace('<li>', '* ')
+    text = text.replace('</li>', '\n' + filler)
+
+    # Format bold and italic
+    text = re.sub(r"<\/?b>", '**', text)
+    text = re.sub(r"<\/?i>", '*', text)
+
+    # Format inline code
+    text = re.sub(r"<\/?code>", '``', text)
+
+    # Ignore code block
+    text = text.replace('<pre>', '\n\n'+ filler)
+    text = text.replace('</pre>', '\n\n')
+
+    # Format tables
+    text = text.replace('<table>', '\n\n'+ filler + '.. csv-table::\n')
+    text = text.replace('<thead>', filler + '   :header-rows: 1\n' + filler + \
+                                   '   :widths: 20, 80\n\n')
+    text = re.sub(r'<tr[^>]*>', filler + '   ', text)
+    text = re.sub(r'</t[hd]><t[hd]>', '", "', text)
     text = text.replace('</tr>', '\n')
-    text = text.replace('</td><td>','", "')
-    text = text.replace('<td>','"')
-    text = text.replace('</td>','"')
-    text = text.replace('</thead>','')
-    text = text.replace('</table>','')
-    text = text.replace('<pre>','\n\n'+ filler)
-    text = text.replace('</pre>','\n\n')
+    text = re.sub(r"<\/?t[hd]>", '"', text)
+    text = re.sub(r"<\/(thead|table)>", '', text)
+
+    # Format <a> links
     text = re.sub(r"<a href='(.*)'>(.*)</a>", r"`\2 <\1>`_", text)
 
     return text
