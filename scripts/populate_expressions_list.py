@@ -124,7 +124,14 @@ def format_variant(function_dict, f_name):
 
     # Prepare examples
     if 'examples' in function_dict:
-        ex_list = [(f"{ex['expression']} → {ex['returns']}" + (f"\n\n         {ex['note']}" if 'note' in ex else "")) for ex in function_dict['examples']]
+        ex_list = []
+        for ex in function_dict['examples']:
+            example = f"{ex['expression']} → {ex['returns']}"
+            if 'note' in ex:
+                example += f"\n\n         {sphynxify_html(ex['note'])}"
+
+            ex_list.append(example)
+
         examples = "   * - Examples\n     - * " + "\n       * ".join(ex_list)
     else:
         examples = ''
