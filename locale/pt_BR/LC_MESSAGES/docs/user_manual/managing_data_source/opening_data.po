@@ -44,6 +44,11 @@ msgid ""
 "complete list of `supported vector formats "
 "<https://gdal.org/drivers/vector/index.html>`_."
 msgstr ""
+"Os formatos de dados vetoriais incluem GeoPackage, GML, GeoJSON, GPX, KML, "
+"Valores separados por vírgula, formatos ESRI (Shapefile, Geodatabase...), "
+"formatos de arquivo MapInfo e MicroStation, AutoCAD DWG/DXF, GRASS e muito "
+"mais... Leia o artigo completo lista de `formatos vetoriais suportados "
+"<https://gdal.org/drivers/vector/index.html>`_."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:26
 msgid ""
@@ -107,6 +112,21 @@ msgid ""
 "|checkbox| :guilabel:`Modeless data source manager dialog` in the "
 ":menuselection:`Settings --> Options --> General` menu."
 msgstr ""
+"No QGIS, dependendo do formato dos dados, existem diferentes ferramentas "
+"para abrir um conjunto de dados, principalmente disponíveis no "
+":menuselection:`Camada --> Adicionar Camada -->` ou na barra de ferramentas "
+":guilabel:`Gerenciar Camadas` (ativada através do menu "
+":menuselection:`Exibir --> Barras de Ferramentas`). No entanto, todas essas "
+"ferramentas apontam para uma caixa de diálogo exclusiva, a "
+":guilabel:`Gerenciador de Fonte de Dados`, que você pode abrir com o botão "
+"|dataSourceManager| :sup:`Abrir Gerenciador de Fonte de Dados`, disponível "
+"na :guilabel:`Barra de Ferramentas do Gerenciador de Fonte de Dados` ou "
+"pressionando :kbd:`Ctrl+L`. A caixa de diálogo :guilabel:`Gerenciador de "
+"Fonte de Dados` oferece uma interface unificada para abrir dados baseados em"
+" arquivos vetoriais ou raster, além de bancos de dados ou serviços da web "
+"suportados pelo QGIS. Pode ser definido como modal ou não com a |checkbox| "
+":guilabel:`Caixa de diálogo do gerenciador de fonte de dados não modelada` "
+"no menu :menuselection:`Configurações --> Opções --> Geral`."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:79
 msgid "QGIS Data Source Manager dialog"
@@ -203,7 +223,7 @@ msgstr ""
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:129
 msgid ":guilabel:`Normal`: show items containing the search text"
-msgstr ""
+msgstr ":guilabel:`Normal`: mostra itens que contêm o texto de pesquisa"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:130
 msgid ""
@@ -213,7 +233,7 @@ msgstr ""
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:132
 msgid ":guilabel:`Regular expression`"
-msgstr ""
+msgstr ":guilabel:`Expressão regular`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:134
 msgid "|collapseTree| :sup:`Collapse All` the whole tree;"
@@ -477,6 +497,9 @@ msgid ""
 "tree. Hidden folders can be managed from the :menuselection:`Settings --> "
 "Options --> Data Sources` tab."
 msgstr ""
+"para uma pasta, adicione-a aos favoritos ou oculte-a na árvore do navegador."
+" As pastas ocultas podem ser gerenciadas a partir da guia  "
+":menuselection:`Configurações --> Opções --> Fontes de Dados`."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:256
 msgid ""
@@ -490,7 +513,7 @@ msgstr "crie uma conexão com um banco de dados ou um serviço da web."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:259
 msgid "refresh, rename or delete a schema."
-msgstr ""
+msgstr "atualizar, renomear ou excluir um esquema."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:261
 msgid ""
@@ -602,6 +625,10 @@ msgid ""
 "click the |dataSourceManager| :sup:`Open Data Source Manager` button (or "
 "press :kbd:`Ctrl+L`) and enable the target tab or:"
 msgstr ""
+"Abra a guia do tipo de camada na caixa de diálogo :guilabel:`Gerenciador de "
+"Fonte de Dados`, ou seja, clique no  botão |dataSourceManager| :sup:`Abrir "
+"Gerenciador de Fonte de Dados` (ou pressione: kbd:`Ctrl+L`) e ative a guia "
+"de destino ou:"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:334
 msgid ""
@@ -675,6 +702,9 @@ msgid ""
 "view. figure_vector_loaded_ shows QGIS after loading the :file:`alaska.shp` "
 "file."
 msgstr ""
+"Pressione :guilabel:`Adicionar` para carregar o arquivo no QGIS e exibi-lo "
+"na visualização do mapa. figure_vector_loaded_ mostra o QGIS após carregar o"
+" arquivo :file:`alaska.shp`."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:379
 msgid "QGIS with Shapefile of Alaska loaded"
@@ -1297,7 +1327,7 @@ msgstr ""
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:748
 msgid "Create a New PostGIS Connection Dialog"
-msgstr ""
+msgstr "Criar uma Nova Caixa de Diálogo de Conexão PostGIS"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:751
 msgid ""
@@ -1410,7 +1440,7 @@ msgstr ""
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:794
 msgid "**QGIS User Settings and Security**"
-msgstr ""
+msgstr "**Configurações e segurança do usuário QGIS**"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:796
 msgid ""
@@ -1475,7 +1505,7 @@ msgstr ""
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:820
 msgid "|checkbox| :guilabel:`Use estimated table metadata`"
-msgstr ""
+msgstr "|checkbox| :guilabel:`Usar metadados estimados da tabela`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:821
 msgid ""
@@ -1917,6 +1947,13 @@ msgid ""
 " Manager <dbmanager>` to drag and drop the database tables into the map "
 "canvas."
 msgstr ""
+"A adição de tabelas de BD do :guilabel:`Gerenciador de Fonte de Dados` às "
+"vezes pode ser demorado, pois o QGIS busca estatísticas e propriedades (por "
+"exemplo, tipo e campo de geometria, SRC, número de recursos) para cada "
+"tabela com antecedência. Para evitar isso, uma vez que :ref:`the connection "
+"is set <vector_create_stored_connection>`, é melhor usar o :ref:`Browser "
+"Panel <browser_panel>` ou o :ref:`DB Manager <dbmanager>` para arrastar e "
+"soltar as tabelas do banco de dados na tela do mapa."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1096
 msgid "QGIS Custom formats"

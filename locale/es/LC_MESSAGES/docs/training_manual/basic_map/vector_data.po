@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:17+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -41,10 +42,10 @@ msgstr ""
 " la forma de los elementos geográficos utilizando puntos, líneas y polígonos"
 " (y también superficies y volúmenes para datos 3D), mientras que sus otras "
 "propiedades se incluyen como atributos (que normalmente vemos representados "
-"como una tabla en QGIS). Por lo general, se usa para almacenar "
-"características discretas, como carreteras y edificios en ciudades. Cada uno"
-" de los elementos de un conjunto de datos vectoriales se denominan "
-"**entidades** y contienen datos que describen su ubicación y propiedades."
+"como una tabla en QGIS). Por lo general, se usa para almacenar entidades "
+"discretas, como carreteras y edificios en ciudades. Cada uno de los "
+"elementos de un conjunto de datos vectoriales se denominan **entidades** y "
+"contienen datos que describen su ubicación y propiedades."
 
 #: ../../docs/training_manual/basic_map/vector_data.rst:15
 msgid ""
@@ -84,6 +85,8 @@ msgid ""
 "To see all the available data in the :guilabel:`rivers` layer, select it in "
 "the Layers panel and click the |openTable| button."
 msgstr ""
+"Para ver todos los datos disponibles en la capa :guilabel:`rivers`, "
+"selecciónelo en el panel Capas y haga click en el botón |openTable|."
 
 #: ../../docs/training_manual/basic_map/vector_data.rst:32
 msgid ""
@@ -92,6 +95,10 @@ msgid ""
 " and represents a river *feature*. A column is called a *field*, and "
 "represents a property of the river. Cells show *attributes*."
 msgstr ""
+"Le mostrará una tabla con más datos sobre la capa: guilabel: `rivers`. Esta "
+"es la capa :guilabel:`tabla de atributos`. Una fila se llama *registro* y "
+"representa una entidad *de río*. Una columna se llama *campo* y representa "
+"una propiedad del río. Las celdas muestran *atributos*."
 
 #: ../../docs/training_manual/basic_map/vector_data.rst:40
 msgid ""
@@ -107,23 +114,26 @@ msgstr "Ahora puedes cerrar la capa de atributos."
 
 #: ../../docs/training_manual/basic_map/vector_data.rst:47
 msgid "|basic| |TY| Exploring Vector Data Attributes"
-msgstr ""
+msgstr "|basic| |TY| Explorando Datos de Atributos Vectoriales"
 
 #: ../../docs/training_manual/basic_map/vector_data.rst:49
 msgid "How many fields are available in the :guilabel:`rivers` layer?"
-msgstr ""
+msgstr "¿Cuantos campos están disponibles en la capa :guilabel:`rivers`?"
 
 #: ../../docs/training_manual/basic_map/vector_data.rst:50
 msgid "Tell us a bit about the ``town`` places in your dataset."
 msgstr ""
+"Cuéntanos un poco sobre los lugares de ``town`` en tu conjunto de datos."
 
 #: ../../docs/training_manual/basic_map/vector_data.rst:52
 msgid ":ref:`Check your results <vector-explore-attribute-data>`"
-msgstr ""
+msgstr ":ref:`Check your results <vector-explore-attribute-data>`"
 
 #: ../../docs/training_manual/basic_map/vector_data.rst:58
 msgid "|basic| |FA| Loading Vector Data From GeoPackage Database"
 msgstr ""
+"|basic| |FA| Cargando Datos Vectoriales de un Geopaquete de una Base de "
+"Datos"
 
 #: ../../docs/training_manual/basic_map/vector_data.rst:60
 msgid ""
@@ -133,6 +143,12 @@ msgid ""
 "databases. GIS-specific DBMSes (such as PostGIS) have extra functions, "
 "because they need to handle spatial data."
 msgstr ""
+"Las bases de datos le permiten almacenar un gran volumen de datos asociados "
+"en un archivo. Es posible que ya esté familiarizado con un sistema de "
+"administración de bases de datos (DBMS) como Libreoffice Base o MS Access. "
+"Las aplicaciones SIG también pueden hacer uso de bases de datos. Los DBMS "
+"específicos de SIG (como PostGIS) tienen funciones adicionales, ya que "
+"necesitan manejar datos espaciales."
 
 #: ../../docs/training_manual/basic_map/vector_data.rst:66
 msgid ""
@@ -144,22 +160,36 @@ msgid ""
 "without spatial information; all these features allow you to share data "
 "easily and avoid file duplication."
 msgstr ""
+"El formato abierto `GeoPackage <https://www.geopackage.org/>`_ es un "
+"contenedor que le permite almacenar datos SIG (capas) en un solo archivo. A "
+"diferencia del formato de archivo ESRI Shapefile (por ejemplo, el dataset "
+":file:`protected_areas.shp` que cargó anteriormente), un solo archivo "
+"GeoPackage puede contener varios datos (datos vectoriales y rasterizados) en"
+" diferentes sistemas de referencia de coordenadas, así como tablas sin "
+"información espacial ; Todas estas características le permiten compartir "
+"datos fácilmente y evitar la duplicación de archivos."
 
 #: ../../docs/training_manual/basic_map/vector_data.rst:74
 msgid ""
 "In order to load a layer from a GeoPackage, you will first need to create "
 "the connection to it:"
 msgstr ""
+"Con el objetivo de cargar una capa desde un GeoPackage, primero deberá crear"
+" la conexión a ella:"
 
 #: ../../docs/training_manual/basic_map/vector_data.rst:77
 msgid ""
 "Click on the |dataSourceManager| :sup:`Open Data Source Manager` button."
 msgstr ""
+"Click en el botón |dataSourceManager| :sup:`Abrir Administrador de Fuentes "
+"de Datos`."
 
 #: ../../docs/training_manual/basic_map/vector_data.rst:78
 msgid ""
 "On the left click on the |newGeoPackageLayer| :guilabel:`GeoPackage` tab."
 msgstr ""
+"A la izquierda click en la etiqueta |newGeoPackageLayer| "
+":guilabel:`GeoPackage`."
 
 #: ../../docs/training_manual/basic_map/vector_data.rst:79
 msgid ""
@@ -167,16 +197,23 @@ msgid ""
 ":file:`training_data.gpkg` file in the :file:`exercise_data` folder you "
 "downloaded before."
 msgstr ""
+"Click en el botón :guilabel:`Nueva` y navegue al archivo "
+":file:`training_data.gpkg` en la carpeta :file:`exercise_data` que descargó "
+"antes."
 
 #: ../../docs/training_manual/basic_map/vector_data.rst:81
 msgid ""
 "Select the file and press :guilabel:`Open`. The file path is now added to "
 "the Geopackage connections list, and appears in the drop-down menu."
 msgstr ""
+"Selecciones el archivo y presione :guilabel:`Abrir`. La ruta del archivo "
+"ahora se agrega a la lista de conexiones de Geopackage y aparece en el menú "
+"desplegable."
 
 #: ../../docs/training_manual/basic_map/vector_data.rst:84
 msgid "You are now ready to add any layer from this GeoPackage to QGIS."
 msgstr ""
+"Ahora está listo para agregar cualquier capa de este GeoPackage a QGIS."
 
 #: ../../docs/training_manual/basic_map/vector_data.rst:86
 msgid ""
@@ -184,30 +221,39 @@ msgid ""
 "you should now see the list of all the layers contained in the GeoPackage "
 "file."
 msgstr ""
+"Click en el botón :guilabel:`Conectar`. En la parte central de la ventana, "
+"ahora debería ver la lista de todas las capas contenidas en el archivo "
+"GeoPackage."
 
 #: ../../docs/training_manual/basic_map/vector_data.rst:89
 msgid ""
 "Select the :guilabel:`roads` layer and click on the :guilabel:`Add` button."
 msgstr ""
+"Seleccione la capa :guilabel:`roads` y haga click en el botón "
+":guilabel:`Añadir`."
 
 #: ../../docs/training_manual/basic_map/vector_data.rst:94
 msgid ""
 "A :guilabel:`roads` layer is added to the :guilabel:`Layers` panel with "
 "features displayed on the map canvas."
 msgstr ""
+"Una capa :guilabel:`roads` es añadida al panel :guilabel:`Capas` con "
+"entidades que se muestran en el lienzo del mapa."
 
 #: ../../docs/training_manual/basic_map/vector_data.rst:96
 msgid "Click on :guilabel:`Close`."
-msgstr ""
+msgstr "Click en :guilabel:`Cerrar`."
 
 #: ../../docs/training_manual/basic_map/vector_data.rst:98
 msgid "Congratulations! You have loaded the first layer from a GeoPackage."
-msgstr ""
+msgstr "¡Felicidades! Ha cargado la primera capa de un GeoPackage."
 
 #: ../../docs/training_manual/basic_map/vector_data.rst:104
 msgid ""
 "|basic| |FA| Loading Vector Data From a SpatiaLite Database with the Browser"
 msgstr ""
+"|basic| |FA| Cargando Datos Vectoriales Desde una Base de Datos SpatiaLite "
+"con el Navegador"
 
 #: ../../docs/training_manual/basic_map/vector_data.rst:106
 msgid ""
@@ -216,22 +262,31 @@ msgid ""
 " a layer from a SpatiaLite provider follows the same rules as described "
 "above: Create the connection --> Enable it --> Add the layer(s)."
 msgstr ""
+"QGIS proporciona acceso a muchos otros formatos de bases de datos. Al igual "
+"que GeoPackage, el formato de base de datos SpatiaLite es una extensión de "
+"la biblioteca SQLite. Y agregar una capa de un proveedor de SpatiaLite sigue"
+" las mismas reglas que se describen arriba: Cree la conexión -> Habilítela "
+"-> Agregue las capas."
 
 #: ../../docs/training_manual/basic_map/vector_data.rst:111
 msgid ""
 "While this is one way to add SpatiaLite data to your map, let's explore "
 "another powerful way to add data: the :guilabel:`Browser`."
 msgstr ""
+"Si bien esta es una forma de agregar datos de SpatiaLite a su mapa, "
+"exploremos otra forma poderosa de agregar datos: el :guilabel:`Navegador`."
 
 #: ../../docs/training_manual/basic_map/vector_data.rst:115
 msgid ""
 "Click the |dataSourceManager| icon to open the :guilabel:`Data Source "
 "Manager` window."
 msgstr ""
+"Click en el icono |dataSourceManager| para abrir la ventana "
+":guilabel:`Administrado de Fuentes de Datos`."
 
 #: ../../docs/training_manual/basic_map/vector_data.rst:117
 msgid "Click on the |fileOpen| :guilabel:`Browser` tab."
-msgstr ""
+msgstr "Click on la etiqueta |fileOpen| :guilabel:`Navegador`."
 
 #: ../../docs/training_manual/basic_map/vector_data.rst:118
 msgid ""
@@ -239,6 +294,10 @@ msgid ""
 "well as entries for most of the tabs in the left. These allow quick access "
 "to connected databases or folders."
 msgstr ""
+"En esta etiqueta puede ver todos los discos de almacenamiento conectados a "
+"su computadora, así como las entradas para la mayoría de las etiquetas de la"
+" izquierda. Estas permiten un acceso rápido a las bases de datos o carpetas "
+"conectadas."
 
 #: ../../docs/training_manual/basic_map/vector_data.rst:122
 msgid ""
@@ -246,28 +305,38 @@ msgid ""
 ":guilabel:`GeoPackage` entry. You'll see the :file:`training-data.gpkg` file"
 " we previously connected to (and its layers, if expanded)."
 msgstr ""
+"Por ejemplo, click en el icono desplegable al lado de la entrada "
+"|geoPackage| :guilabel:`GeoPackage`. Verá el archivo :file:`training-"
+"data.gpkg` al que previamente nos conectamos (y sus capas, si se "
+"expandieron)."
 
 #: ../../docs/training_manual/basic_map/vector_data.rst:125
 msgid ""
 "Right-click the |spatialite| :guilabel:`SpatiaLite` entry and select "
 ":guilabel:`New Connection...`."
 msgstr ""
+"Click-derecho en la entrada |spatialite| :guilabel:`SpatiaLite` y seleccione"
+" :guilabel:`Conexión nueva...`."
 
 #: ../../docs/training_manual/basic_map/vector_data.rst:127
 msgid ""
 "Navigate to the :file:`exercise_data` folder, select the "
 ":file:`landuse.sqlite` file and click :guilabel:`Open`."
 msgstr ""
+"Navegue a la carpeta :file:`exercise_data`, seleccione el archivo "
+":file:`landuse.sqlite` y haga click en :guilabel:`Abrir`."
 
 #: ../../docs/training_manual/basic_map/vector_data.rst:130
 msgid ""
 "Notice that a |dbSchema| :guilabel:`landuse.sqlite` entry has been added "
 "under the :guilabel:`SpatiaLite` one."
 msgstr ""
+"Note que la entrada |dbSchema| :guilabel:`landuse.sqlite` ha sido agregada a"
+" :guilabel:`SpatiaLite`."
 
 #: ../../docs/training_manual/basic_map/vector_data.rst:132
 msgid "Expand the |dbSchema| :guilabel:`landuse.sqlite` entry."
-msgstr ""
+msgstr "Expanda la entrada |dbSchema| :guilabel:`landuse.sqlite`."
 
 #: ../../docs/training_manual/basic_map/vector_data.rst:133
 msgid ""
@@ -275,6 +344,9 @@ msgid ""
 "drag-and-drop it onto the map canvas. A new layer is added to the "
 ":guilabel:`Layers` panel and its features are displayed on the map canvas."
 msgstr ""
+"Haga doble clic en la capa |polygonLayer| :guilabel:`landuse` o selecciónela"
+" y arrástrela al lienzo del mapa. Se agrega una nueva capa al panel "
+":guilabel:`Capas` y sus características se muestran en el lienzo del mapa."
 
 #: ../../docs/training_manual/basic_map/vector_data.rst:140
 msgid ""
@@ -283,6 +355,10 @@ msgid ""
 ":menuselection:`Data Source Manager --> Browser` tab, with the same "
 "functionality."
 msgstr ""
+"Active el panel :guilabel:`Navegador` en :menuselection:` Ver -> Paneles -> "
+"`y úselo para agregar sus datos. Es un atajo útil a la etiqueta "
+":menuselection:`Administrador de Fuentes de Datos -> Navegador`, con la "
+"misma funcionalidad."
 
 #: ../../docs/training_manual/basic_map/vector_data.rst:144
 msgid ""
@@ -290,28 +366,33 @@ msgid ""
 "any of the data itself, but it remembers which layers you loaded into your "
 "map."
 msgstr ""
+"¡Recuerde guardar su proyecto con frecuencia! El archivo del proyecto no "
+"contiene ninguno de los datos en sí, pero recuerda qué capas cargó en su "
+"mapa."
 
 #: ../../docs/training_manual/basic_map/vector_data.rst:151
 msgid "|moderate| |TY| Load More Vector Data"
-msgstr ""
+msgstr "|moderate| |TY| Cargar Mas Datos Vectoriales"
 
 #: ../../docs/training_manual/basic_map/vector_data.rst:153
 msgid ""
 "Load the following datasets from the :file:`exercise_data` folder into your "
 "map using any of the methods explained above:"
 msgstr ""
+"Cargue los siguientes conjuntos de datos de la carpeta :file:`exercise_data`"
+" en su mapa utilizando cualquiera de los métodos explicados anteriormente:"
 
 #: ../../docs/training_manual/basic_map/vector_data.rst:156
 msgid ":guilabel:`buildings`"
-msgstr ""
+msgstr ":guilabel:`buildings`"
 
 #: ../../docs/training_manual/basic_map/vector_data.rst:157
 msgid ":guilabel:`water`"
-msgstr ""
+msgstr ":guilabel:`water`"
 
 #: ../../docs/training_manual/basic_map/vector_data.rst:159
 msgid ":ref:`Check your results <vector-load-more-data>`"
-msgstr ""
+msgstr ":ref:`Check your results <vector-load-more-data>`"
 
 #: ../../docs/training_manual/basic_map/vector_data.rst:162
 msgid "|FA| Reordering the Layers"

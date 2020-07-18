@@ -36,18 +36,22 @@ msgstr "Biblioteca de análise de rede"
 
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:35
 msgid "The network analysis library can be used to:"
-msgstr ""
+msgstr "A biblioteca de análise de rede pode ser usada para:"
 
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:37
 msgid ""
 "create mathematical graph from geographical data (polyline vector layers)"
 msgstr ""
+"criar gráfico matemático a partir de dados geográficos (camadas vetoriais de"
+" polilinhas)"
 
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:38
 msgid ""
 "implement basic methods from graph theory (currently only Dijkstra's "
 "algorithm)"
 msgstr ""
+"implementar métodos básicos da teoria dos gráficos (atualmente apenas o "
+"algoritmo de Dijkstra)"
 
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:41
 msgid ""
@@ -55,6 +59,9 @@ msgid ""
 "the RoadGraph core plugin and now you can use it's methods in plugins or "
 "directly from the Python console."
 msgstr ""
+"A biblioteca de análise de rede foi criada exportando funções básicas do "
+"complemento principal RoadGraph e agora você pode usar seus métodos em "
+"complementos ou diretamente do console do Python."
 
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:46
 msgid "General information"
@@ -97,6 +104,11 @@ msgid ""
 "several nodes have the same coordinates then they are the same graph vertex."
 " So two lines that have a common node become connected to each other."
 msgstr ""
+"Como fonte, podemos usar qualquer camada vetorial de polilinha. Os nós das "
+"polilinhas se tornam vértices do gráfico e os segmentos das polilinhas são "
+"arestas do gráfico. Se vários nós tiverem as mesmas coordenadas, serão o "
+"mesmo vértice do gráfico. Portanto, duas linhas que possuem um nó comum se "
+"conectam."
 
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:66
 msgid ""
@@ -105,6 +117,11 @@ msgid ""
 "point a match will be found --- the closest graph vertex or closest graph "
 "edge. In the latter case the edge will be split and a new vertex added."
 msgstr ""
+"Além disso, durante a criação do gráfico, é possível \"fixar\" "
+"(\"vincular\") à camada vetorial de entrada qualquer número de pontos "
+"adicionais. Para cada ponto adicional, uma correspondência será encontrada -"
+" o vértice do gráfico mais próximo ou a aresta do gráfico mais próxima. "
+"Neste último caso, a aresta será dividida e um novo vértice será adicionado."
 
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:71
 msgid ""

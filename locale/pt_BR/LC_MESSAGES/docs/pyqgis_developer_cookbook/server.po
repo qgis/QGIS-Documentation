@@ -405,6 +405,13 @@ msgid ""
 "(or other plugin filters) that might have called :meth:`sendResponse "
 "<qgis.server.QgsServerFilter.sendResponse>` earlier."
 msgstr ""
+"Isso é chamado uma vez quando os serviços principais (se atingidos) concluem"
+" o processo e a solicitação está pronta para ser enviada ao cliente. Como "
+"discutido acima, isso normalmente é chamado antes :meth:`sendResponse "
+"<qgis.server.QgsServerFilter.sendResponse>` exceto para serviços de "
+"streaming (ou outros filtros de complementos) que podem ter chamado "
+":meth:`sendResponse <qgis.server.QgsServerFilter.sendResponse> "
+"`anteriormente."
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:270
 msgid ""
@@ -437,7 +444,7 @@ msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:293
 msgid "Writing a server plugin"
-msgstr ""
+msgstr "Escrevendo um complemento de servidor"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:295
 msgid ""
@@ -479,6 +486,8 @@ msgstr "Arquivos de complementos"
 #: ../../docs/pyqgis_developer_cookbook/server.rst:318
 msgid "Here's the directory structure of our example server plugin"
 msgstr ""
+"Aqui está a estrutura de diretórios do nosso complemento de servidor de "
+"exemplo"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:331
 #: ../../docs/pyqgis_developer_cookbook/server.rst:556
@@ -679,6 +688,13 @@ msgid ""
 "plugin's class. This is how the example plugin :file:`__init__.py` looks "
 "like:"
 msgstr ""
+"Este arquivo é requerido pelo sistema de importação do Python. Como para "
+"todos os complementos de servidor QGIS, este arquivo contém uma função "
+":func:`serverClassFactory()`, chamada quando o complemento é carregado no "
+"QGIS Server na inicialização. Ele recebe uma referência a uma instância de "
+":class:`QgsServerInterface <qgis.server.QgsServerInterface>` e deve retornar"
+" uma instância da classe do seu complemento. É assim que o exemplo do "
+"complemento :file:`__init__.py` se parece com:"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:574
 msgid "AccessControl.py"
@@ -690,7 +706,7 @@ msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:616
 msgid "It's the role of the plugin to know who is logged on."
-msgstr ""
+msgstr "É papel do complemento saber quem está conectado."
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:618
 msgid ""
@@ -700,11 +716,12 @@ msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:623
 msgid "layerFilterExpression"
-msgstr ""
+msgstr "layerFilterExpression"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:625
 msgid "Used to add an Expression to limit the results, e.g.:"
 msgstr ""
+"Usado para adicionar uma Expressão para limitar os resultados, por exemplo:"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:632
 #: ../../docs/pyqgis_developer_cookbook/server.rst:645

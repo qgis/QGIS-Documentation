@@ -5,8 +5,8 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
-# Kayama Yoichi <yoichi.kayama@gmail.com>, 2020
 # mnamihdk, 2020
+# Kayama Yoichi <yoichi.kayama@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:31+0000\n"
-"Last-Translator: mnamihdk, 2020\n"
+"Last-Translator: Kayama Yoichi <yoichi.kayama@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,6 +37,10 @@ msgid ""
 "whether as a single process or as a batch process involving several "
 "executions of the same algorithm on different sets of inputs."
 msgstr ""
+" :guilabel:`Processing Toolbox` はプロセッシングのメインGUIで,あなたが日常業務で最も利用するもののひとつでしょう."
+"  *Providers* と呼ばれるグループに分けられたすべての利用可能な **algorithms** のリストを表示します.そしてカスタムの "
+"**models** と**scripts** を使うとツールの拡張を行うことができます. "
+"したがってツールボックスはそれらを実行する場所です、そして単一プロセスとしてでも異なる入力データセットに対するバッチ処理としても実行できます."
 
 #: ../../docs/user_manual/processing/toolbox.rst:24
 msgid "Processing Toolbox"
@@ -51,17 +55,23 @@ msgid ""
 "additional configuration. Configuring providers is explained in a "
 ":ref:`later chapter <processing.results>` in this manual."
 msgstr ""
+"プロバイダは :ref:`Processing settings dialog <processing.options>` "
+"で有効化（無効化)することができます. デフォルトサードパーティアプリケーションに依存しないプロバイダで (QGIS エレメントのみに依存する) "
+"が有効です. 外部アプリケーションが必要なアルゴリズムについては追加の構成が必要な場合があります. プロバイダの設定についてはこのマニュアルの "
+":ref:`later chapter <processing.results>` を参照して下さい."
 
 #: ../../docs/user_manual/processing/toolbox.rst:34
 msgid ""
 "In the upper part of the toolbox dialog, you will find a set of tools to:"
-msgstr ""
+msgstr "ツールボックスの上部には次のようなツールがあります:"
 
 #: ../../docs/user_manual/processing/toolbox.rst:36
 msgid ""
 "work with |processingModel| :sup:`Models`: :guilabel:`Create New Model...`, "
 ":guilabel:`Open Existing Model...` and :guilabel:`Add Model to Toolbox...`;"
 msgstr ""
+" |processingModel| :sup:`モデル`:  では :guilabel:`新しいモデルを作成...`, "
+":guilabel:`既存のモデルを開く...` and :guilabel:`ツールボックスにモデルを追加...` の作業ができます;"
 
 #: ../../docs/user_manual/processing/toolbox.rst:38
 msgid ""
@@ -69,14 +79,17 @@ msgid ""
 ":guilabel:`Create New Script from Template...`, :guilabel:`Open Existing "
 "Script...` and :guilabel:`Add Script to Toolbox...`;"
 msgstr ""
+" |pythonFile| :sup:`スクリプト`: では :guilabel:`新しいスクリプトを作成...`, "
+":guilabel:`テンプレートからスクリプトを作成...`, :guilabel:`既存のスクリプトを開く...`  とand "
+":guilabel:`ツールボックスにスクリプトを追加...` の作業ができます;"
 
 #: ../../docs/user_manual/processing/toolbox.rst:41
 msgid "open the |processingHistory| :sup:`History` panel;"
-msgstr ""
+msgstr " |processingHistory| :sup:`履歴` パネルを開きます;"
 
 #: ../../docs/user_manual/processing/toolbox.rst:42
 msgid "open the |processingResult| :sup:`Results Viewer` panel;"
-msgstr ""
+msgstr "|processingResult| :sup:`結果ビューア` パネルを開きます;"
 
 #: ../../docs/user_manual/processing/toolbox.rst:43
 msgid ""
@@ -85,10 +98,13 @@ msgid ""
 "In-Place` button: only the algorithms that are suitable to be executed on "
 "the active layer without outputting a new layer are displayed;"
 msgstr ""
+" |processSelected| :sup:`In-Place編集` button: を使うとツールボックスを :ref:`in-place "
+"modification mode <processing_inplace_edit>` "
+"に切り替えます.そうするとアクティブレイヤ上で動作して新しいレイヤの出力がないようなアルゴリズムのみが表示されます;"
 
 #: ../../docs/user_manual/processing/toolbox.rst:47
 msgid "open the |options| :sup:`Options` dialog."
-msgstr ""
+msgstr "|options| :sup:`オプション` ダイアログを開きます."
 
 #: ../../docs/user_manual/processing/toolbox.rst:49
 msgid ""

@@ -47,6 +47,8 @@ msgid ""
 "To launch GRASS from within QGIS, you need to activate it as with any other "
 "plugin"
 msgstr ""
+"Para iniciar o GRASS a partir do QGIS, é necessário ativá-lo como em "
+"qualquer outro complemento"
 
 #: ../../docs/training_manual/grass/grass_setup.rst:17
 msgid "First, open a new QGIS project."
@@ -65,11 +67,11 @@ msgstr ""
 
 #: ../../docs/training_manual/grass/grass_setup.rst:29
 msgid "GRASS toolbar"
-msgstr ""
+msgstr "Barra de ferramentas GRASS"
 
 #: ../../docs/training_manual/grass/grass_setup.rst:34
 msgid "GRASS Panel"
-msgstr ""
+msgstr "Painel GRASS"
 
 #: ../../docs/training_manual/grass/grass_setup.rst:36
 msgid ""
@@ -78,6 +80,10 @@ msgid ""
 "means that you need to import all the data you want to use into a GRASS "
 "database."
 msgstr ""
+"O painel GRASS não está ativo porque, antes que você possa usar o GRASS, é "
+"necessário criar um ``Mapset``. O GRASS sempre funciona em um ambiente de "
+"banco de dados, o que significa que você precisa importar todos os dados que"
+" deseja usar em um banco de dados GRASS."
 
 #: ../../docs/training_manual/grass/grass_setup.rst:40
 msgid ""
@@ -96,6 +102,9 @@ msgid ""
 "more information visit the `GRASS website "
 "<https://grass.osgeo.org/grass77/manuals/grass_database.html>`_."
 msgstr ""
+"Lembre-se: ``Location`` contém ``Mapset`` que contém os dados. Para mais "
+"informações, visite o site do `GRASS "
+"<https://grass.osgeo.org/grass77/manuals/grass_database.html>`_."
 
 #: ../../docs/training_manual/grass/grass_setup.rst:54
 msgid "GRASS database structure (from GRASS docs)"
@@ -107,7 +116,7 @@ msgstr "|basic| |FA| Comienza un Nuevo Proyecto GRASS"
 
 #: ../../docs/training_manual/grass/grass_setup.rst:59
 msgid "Click on the :guilabel:`Plugins --> GRASS --> New Mapset` menu:"
-msgstr ""
+msgstr "Clique no menu :guilabel:`Complementos --> GRASS --> Novo Mapset`:"
 
 #: ../../docs/training_manual/grass/grass_setup.rst:64
 msgid "You'll be asked to choose the location of the GRASS database."
@@ -194,6 +203,10 @@ msgid ""
 "``Mapset``. You cannot use GRASS tools with layer that are not loaded into a"
 " GRASS ``Mapset``."
 msgstr ""
+"Agora você tem um mapa em branco e, antes de começar a usar todas as "
+"ferramentas GRASS, precisa carregar dados no banco de dados GRASS, "
+"especificamente no ``Mapset``. Você não pode usar ferramentas GRASS com "
+"camadas que não são carregadas em um ``Mapset`` GRASS."
 
 #: ../../docs/training_manual/grass/grass_setup.rst:124
 msgid ""
@@ -241,6 +254,8 @@ msgid ""
 "Go to the Browser, and simply drag the :file:`roads` layer  from the "
 ":file:`training_data.gpkg` GeoPackage file into the ``grass_mapset`` Mapset."
 msgstr ""
+"Vá para o Navegador e simplesmente arraste a camada :file:`roads` do arquivo"
+" GeoPackage :file:`training_data.gpkg` para o Mapset ``grass_mapset``."
 
 #: ../../docs/training_manual/grass/grass_setup.rst:157
 msgid ""
@@ -291,6 +306,10 @@ msgid ""
 "data, and ``qgis`` means that the tool will look for a vector from among the"
 " vectors already loaded into QGIS."
 msgstr ""
+"O ``v`` significa *vetor*, ``in`` significa uma função para importar dados "
+"para o banco de dados GRASS, ``ogr`` é a biblioteca de software usada para "
+"ler dados vetoriais e ``qgis`` significa que a ferramenta procurará um vetor"
+" dentre os vetores já carregados no QGIS."
 
 #: ../../docs/training_manual/grass/grass_setup.rst:186
 msgid ""
@@ -298,6 +317,9 @@ msgid ""
 " the :guilabel:`rivers` layer in the :guilabel:`Loaded Layer` box and type "
 "and name it :file:`g_rivers` to prevent confusion:"
 msgstr ""
+"Depois de encontrar essa ferramenta, clique nela para abrir a própria "
+"ferramenta. Escolha a camada :guilabel:`rivers` na caixa :guilabel:`Camada "
+"Carregada` e digite e nomeie-o :file:`g_rivers` para evitar confusão:"
 
 #: ../../docs/training_manual/grass/grass_setup.rst:193
 msgid ""
@@ -351,6 +373,8 @@ msgstr "|basic| |FA| Cargando Datos Ráster en GRASS"
 msgid ""
 "You can import a raster layer in the same ways we imported vector layers."
 msgstr ""
+"Você pode importar uma camada raster da mesma maneira que importamos as "
+"camadas vetoriais."
 
 #: ../../docs/training_manual/grass/grass_setup.rst:213
 msgid "We are going to import in the GRASS Mapset the layer |srtmFileName|."
@@ -454,6 +478,9 @@ msgid ""
 ":guilabel:`Plugins --> GRASS --> New Mapset` menu that we saw in the "
 "previous section."
 msgstr ""
+"Clique no menu :guilabel:`Complements --> GRASS --> Abrir Mapset` ao lado do"
+" menu :guilabel:`Complementos --> GRASS --> Novo Mapset` que vimos na seção "
+"anterior."
 
 #: ../../docs/training_manual/grass/grass_setup.rst:270
 msgid ""
@@ -500,7 +527,7 @@ msgstr ""
 
 #: ../../docs/training_manual/grass/grass_setup.rst:294
 msgid "Click on :guilabel:`Open mapset`:"
-msgstr ""
+msgstr "Clique em :guilabel:`Abrir mapset`:"
 
 #: ../../docs/training_manual/grass/grass_setup.rst:299
 msgid "The Mapset is now open and ready to use!"

@@ -3,6 +3,9 @@
 # This file is distributed under the same license as the QGIS Documentation package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# tomoyuki arai <tarai.3367@gmail.com>, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -10,6 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:31+0000\n"
+"Last-Translator: tomoyuki arai <tarai.3367@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,11 +23,11 @@ msgstr ""
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:6
 msgid "Topology Checker Plugin"
-msgstr ""
+msgstr "トポロジチェッカープラグイン"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:13
 msgid "The Topology Checker Plugin"
-msgstr ""
+msgstr "トポロジチェッカープラグイン"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:15
 msgid ""
@@ -38,6 +42,7 @@ msgid ""
 "if they depict dead-end streets you won't remove them from your vector "
 "layer)."
 msgstr ""
+"トポロジは、地理的領域の地物を表すポイント、ライン、およびポリゴン間の関係を表します。トポロジチェッカープラグインを使用すると、ベクターファイルを調べて、いくつかのトポロジルールでトポロジを確認することができます。これらのルールは、地物の空間関係がお互いに「等しい」か、「含んでいる」か、「覆っている」か、「覆われている」か、「交差している」か、「離れている」か、「交差している」か、「重複している」か、「接触している」か、または「範囲内にある」かどうかをチェックします。これは、どのトポロジルールをベクターデータに適用するのかという個別の質問によります。（たとえば、線レイヤーのオーバーシュートは通常は容認しないでしょうが、これが道路の行き止まりを表している場合には、ベクターレイヤーからそれらを削除することはしないでしょう）。"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:25
 msgid ""
@@ -46,15 +51,16 @@ msgid ""
 "errors are hard to find. This plugin helps you find such errors through a "
 "list of rules."
 msgstr ""
+"QGISには、新たな地物をエラーなしで作成するのに最適な、組み込みのトポロジ編集機能があります。しかし、既存のデータエラーやユーザに起因するエラーを見つけるのは困難です。このプラグインは、ルールのリストを通じてこのようなエラーを見つけるのに役立ちます。"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:29
 msgid ""
 "It is very simple to create topology rules with the Topology Checker plugin."
-msgstr ""
+msgstr "トポロジチェッカープラグインを使ってトポロジルールを作成するのは非常に簡単です。"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:31
 msgid "On **point layers** the following rules are available:"
-msgstr ""
+msgstr "**ポイントレイヤー**に対しては、次のルールが利用可能です:"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:33
 msgid ""
@@ -62,12 +68,16 @@ msgid ""
 "project. Points that aren't covered by the given vector layer occur in the "
 "'Error' field."
 msgstr ""
+"**次の地物に重ならなければならない**: "
+"プロジェクトのベクターレイヤー1つを選択できます。そのレイヤーのセグメント上にないポイントは「エラー」フィールドに挙げられます。"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:35
 msgid ""
 "**Must be covered by endpoints of**: Here you can choose a line layer from "
 "your project."
 msgstr ""
+"**次の線の地物の両端に重ならなければならない**: "
+"プロジェクトのラインレイヤー1つを選択できます。ポイントはそのラインの端点と一致している必要があります。"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:36
 msgid ""
@@ -75,46 +85,50 @@ msgid ""
 "The points must be inside a polygon. Otherwise, QGIS writes an 'Error' for "
 "the point."
 msgstr ""
+"**次のポリゴンの内側でなくてはならない**: "
+"プロジェクトのポリゴンレイヤー1つを選択できます。ポイントはそのポリゴンの内側にある必要があります。そうでない場合には、QGISはそのポイントを「エラー」に挙げます。"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:38
 msgid ""
 "**Must not have duplicates**: Whenever a point is represented twice or more,"
 " it will occur in the 'Error' field."
-msgstr ""
+msgstr "**重複ジオメトリの地物があってはならない**: 同じ位置にポイントが2つ以上表示される場合には、「エラー」フィールドに挙げられます。"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:40
 #: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:50
 msgid ""
 "**Must not have invalid geometries**: Checks whether the geometries are "
 "valid."
-msgstr ""
+msgstr "**不正なジオメトリがあってはならない**: ジオメトリが有効であるかどうかをチェックします。"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:41
 msgid ""
 "**Must not have multi-part-geometries**: All multi-part points are written "
 "into the 'Error' field."
-msgstr ""
+msgstr "**マルチパートがあってはならない**: マルチパートポイントは全て「エラー」フィールドに挙げられます。"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:44
 msgid "On **line layers**, the following rules are available:"
-msgstr ""
+msgstr "**ラインレイヤー**に対しては、次のルールが利用可能です:"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:46
 msgid ""
 "**End points must be covered by**: Here you can select a point layer from "
 "your project."
 msgstr ""
+"**両端は次の点地物に重ならなければならない**: "
+"プロジェクトのポイントレイヤー1つを選択できます。ラインの両端はそのポイントと一致している必要があります。"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:47
 msgid ""
 "**Must not have dangles**: This will show the overshoots in the line layer."
-msgstr ""
+msgstr "**ダングル（懸垂線）があってはならない**: ラインレイヤー内の線のはみ出しを表示します。"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:48
 msgid ""
 "**Must not have duplicates**: Whenever a line feature is represented twice "
 "or more, it will occur in the 'Error' field."
-msgstr ""
+msgstr "**重複ジオメトリの地物があってはならない**: 同じ位置にラインが2つ以上重なって表示される場合には、「エラー」フィールドに挙げます。"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:51
 msgid ""
@@ -124,6 +138,8 @@ msgid ""
 "call it multi-point, multi-linestring or multi-polygon. All multi-part lines"
 " are written into the 'Error' field."
 msgstr ""
+"**マルチパートがあってはならない**: "
+"あるジオメトリが、実際には単純な（シングルパート）ジオメトリの集合となっていることがあります。このようなジオメトリはマルチパートジオメトリと呼ばれています。単純なジオメトリが1種類だけ含まれている場合には、これをマルチポイント、マルチラインまたはマルチポリゴンと呼んでいます。マルチパートのラインは全て「エラー」フィールドに挙げられます。"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:56
 msgid ""
@@ -134,7 +150,7 @@ msgstr ""
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:60
 msgid "On **polygon layers**, the following rules are available:"
-msgstr ""
+msgstr "**ポリゴンレイヤー**に対しては、次のルールが利用可能です:"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:62
 msgid ""

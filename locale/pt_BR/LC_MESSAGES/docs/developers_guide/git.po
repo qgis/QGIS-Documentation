@@ -145,6 +145,8 @@ msgid ""
 "See the INSTALL file in the source tree for specific instructions on "
 "building development versions."
 msgstr ""
+"Consulte o arquivo INSTALL na árvore de origem para obter instruções "
+"específicas sobre a construção de versões de desenvolvimento."
 
 #: ../../docs/developers_guide/git.rst:106
 msgid "QGIS documentation sources"
@@ -153,38 +155,45 @@ msgstr "Fontes de documentação QGIS"
 #: ../../docs/developers_guide/git.rst:108
 msgid "If you're interested in checking out QGIS documentation sources:"
 msgstr ""
+"Se você estiver interessado em verificar as fontes de documentação do QGIS:"
 
 #: ../../docs/developers_guide/git.rst:114
 msgid ""
 "You can also take a look at the readme included with the documentation repo "
 "for more information."
 msgstr ""
+"Você também pode dar uma olhada no leiame incluso no repositório de "
+"documentação para mais informações."
 
 #: ../../docs/developers_guide/git.rst:119
 msgid "QGIS website sources"
-msgstr ""
+msgstr "Fontes do website QGIS"
 
 #: ../../docs/developers_guide/git.rst:121
 msgid "If you're interested in checking out QGIS website sources:"
-msgstr ""
+msgstr "Se você estiver interessado em verificar as fontes do website QGIS:"
 
 #: ../../docs/developers_guide/git.rst:127
 msgid ""
 "You can also take a look at the readme included with the website repo for "
 "more information."
 msgstr ""
+"Você também pode dar uma olhada no leiame incluído no repositório do website"
+" para mais informações."
 
 #: ../../docs/developers_guide/git.rst:132
 msgid "GIT Documentation"
-msgstr ""
+msgstr "Documentação GIT"
 
 #: ../../docs/developers_guide/git.rst:135
 msgid "See the following sites for information on becoming a GIT master."
 msgstr ""
+"Consulte os sites a seguir para obter informações sobre como se tornar um "
+"mestre do GIT."
 
 #: ../../docs/developers_guide/git.rst:137
 msgid "https://git-scm.com/book/en/v2"
-msgstr ""
+msgstr "https://git-scm.com/book/en/v2"
 
 #: ../../docs/developers_guide/git.rst:138
 msgid "http://gitready.com"
@@ -192,11 +201,11 @@ msgstr "http://gitready.com"
 
 #: ../../docs/developers_guide/git.rst:139
 msgid "https://help.github.com/en"
-msgstr ""
+msgstr "https://help.github.com/en"
 
 #: ../../docs/developers_guide/git.rst:143
 msgid "Development in branches"
-msgstr ""
+msgstr "Desenvolvimento em branches"
 
 #: ../../docs/developers_guide/git.rst:146
 msgid "Purpose"
@@ -214,14 +223,23 @@ msgid ""
 "finished and stable. This section describes the procedure for branching and "
 "merging in the QGIS project."
 msgstr ""
+"A complexidade do código fonte do QGIS aumentou consideravelmente nos "
+"últimos anos. Portanto, é difícil prever os efeitos colaterais que a adição "
+"de um recurso terá. No passado, o projeto QGIS apresentava ciclos de "
+"lançamento muito longos, porque era muito trabalhoso restabelecer a "
+"estabilidade do sistema de software após a adição de novos recursos. Para "
+"superar esses problemas, o QGIS mudou para um modelo de desenvolvimento no "
+"qual os novos recursos são codificados primeiro nos branches GIT e mesclados"
+" para master (o branch principal) quando eles são finalizados e estáveis. "
+"Esta seção descreve o procedimento para branching e mescla no projeto QGIS."
 
 #: ../../docs/developers_guide/git.rst:160
 msgid "Procedure"
-msgstr ""
+msgstr "Procedimento"
 
 #: ../../docs/developers_guide/git.rst:167
 msgid "Initial announcement on mailing list:"
-msgstr ""
+msgstr "Comunicado inicial na lista de discussão:"
 
 #: ../../docs/developers_guide/git.rst:163
 msgid ""
@@ -231,12 +249,19 @@ msgid ""
 "feature requires any changes to the QGIS architecture, a request for comment"
 " (RFC) is needed."
 msgstr ""
+"Antes de começar, faça um comunicado na lista de discussão do desenvolvedor "
+"para verificar se outro desenvolvedor já está trabalhando no mesmo recurso. "
+"Entre em contato também com o consultor técnico do Comitê Diretor do Projeto"
+" (CDP). Se o novo recurso exigir alterações na arquitetura QGIS, será "
+"necessário um pedido de comentário (PDC)."
 
 #: ../../docs/developers_guide/git.rst:169
 msgid ""
 "Create a branch: Create a new GIT branch for the development of the new "
 "feature."
 msgstr ""
+"Criar um branch: crie um novo branch GIT para o desenvolvimento do novo "
+"recurso."
 
 #: ../../docs/developers_guide/git.rst:176
 msgid ""
@@ -245,10 +270,14 @@ msgid ""
 " the upstream repo, you can push your repo up to the QGIS official repo by "
 "doing:"
 msgstr ""
+"Agora você pode começar a desenvolver. Se você planeja fazer várias "
+"atividades nesse branch, gostaria de compartilhar o trabalho com outros "
+"desenvolvedores e ter acesso de gravação ao repositório upstream, você pode "
+"enviar seu repositório para o repositório oficial do QGIS fazendo:"
 
 #: ../../docs/developers_guide/git.rst:185
 msgid "If the branch already exists your changes will be pushed into it."
-msgstr ""
+msgstr "Se o branch já existir, suas alterações serão inseridas nele."
 
 #: ../../docs/developers_guide/git.rst:187
 msgid ""
@@ -263,10 +292,12 @@ msgid ""
 "Never ``git push -f`` to the origin repository! Only use this for your "
 "working branch."
 msgstr ""
+"Nunca use ``git push -f`` no repositório de origem! Use isso apenas para o "
+"seu branch de trabalho."
 
 #: ../../docs/developers_guide/git.rst:200
 msgid "Testing before merging back to master"
-msgstr ""
+msgstr "Teste antes de mesclar de volta ao master"
 
 #: ../../docs/developers_guide/git.rst:202
 msgid ""
@@ -274,6 +305,9 @@ msgid ""
 "make an announcement on the developer list. Before merging back, the changes"
 " will be tested by developers and users."
 msgstr ""
+"Quando você terminar o novo recurso e ficar satisfeito com a estabilidade, "
+"faça um comunicado na lista de desenvolvedores. Antes de mesclar novamente, "
+"as alterações serão testadas por desenvolvedores e usuários."
 
 #: ../../docs/developers_guide/git.rst:209
 msgid "Submitting Patches and Pull Requests"

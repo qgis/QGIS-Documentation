@@ -62,7 +62,7 @@ msgstr ""
 "France)이 정의한 좌표계에 기반하며, 기저 \"Proj\" 투영체 라이브러리를 통해 QGIS에서 사용할 수 있습니다. 일반적으로 이"
 " 표준 좌표계들은 \"EPSG\" 또는 \"IGNF\" 같은 조직명이 기관(authority)이고 특정 좌표계에 할당된 유일한 숫자가 "
 "코드인 기관:코드(authority:code) 조합을 사용해서 식별됩니다. 예를 들어, 흔히 쓰이는 WGS 84 위도/경도 좌표계는 "
-"식별자 ``EPSG:4326`` 로 알려져 있으며, 웹 맵핑 표준 좌표계는 ``EPSG:3857`` 입니다."
+"식별자 ``EPSG:4326`` 으로 알려져 있으며, 웹 맵핑 표준 좌표계는 ``EPSG:3857`` 입니다."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:37
 msgid ""
@@ -272,12 +272,12 @@ msgid ""
 "saved for use in subsequent QGIS sessions."
 msgstr ""
 "QGIS는 기본적으로 새 프로젝트를 시작할 때 전체 수준 기본 투영체를 사용합니다. 전체 수준 기본 좌표계는 (\"WGS 84\"로도 "
-"알려진) ``EPSG:4326``으로, 지구 경도/위도 기반 좌표계입니다. 이 기본 좌표계는 :menuselection:`Settings"
-" -->` |options| :menuselection:`Options...` 메뉴를 클릭하면 열리는 대화창의 "
-":guilabel:`CRS` 탭에 있는 :guilabel:`CRS for New Projects` 설정을 통해 변경할 수 있습니다. "
-"(figure_projection_options_ 그림 참조) 프로젝트 좌표계를 새 프로젝트에 처음으로 불러온 레이어의 좌표계에 "
-"자동적으로 일치시키도록 설정할 수도 있고, 다른 방법으로는 새로 생성할 프로젝트에 사용할 다른 기본 좌표계를 선택할 수도 있습니다. "
-"이렇게 선택한 좌표계는 이후 새로 시작되는 QGIS 세션이 사용하도록 저장될 것입니다."
+"알려진) ``EPSG:4326`` 으로, 지구 경도/위도 기반 좌표계입니다. 이 기본 좌표계는 "
+":menuselection:`Settings -->` |options| :menuselection:`Options...` 메뉴를 클릭하면"
+" 열리는 대화창의 :guilabel:`CRS` 탭에 있는 :guilabel:`CRS for New Projects` 설정을 통해 변경할 "
+"수 있습니다. (figure_projection_options_ 그림 참조) 프로젝트 좌표계를 새 프로젝트에 처음으로 불러온 레이어의 "
+"좌표계에 자동적으로 일치시키도록 설정할 수도 있고, 다른 방법으로는 새로 생성할 프로젝트에 사용할 다른 기본 좌표계를 선택할 수도 "
+"있습니다. 이렇게 선택한 좌표계는 이후 새로 시작되는 QGIS 세션이 사용하도록 저장될 것입니다."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:151
 msgid ""
@@ -320,7 +320,7 @@ msgstr "레이어를 렌더링하는 동안 어떤 재투영도 이루어지지 
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:174
 msgid "The ellipsoid is locked out and forced to ``None/Planimetric``."
-msgstr "타원체를 무시하고 ``None/Planimetric``으로 강제합니다."
+msgstr "타원체를 무시하고 ``None/Planimetric`` 으로 강제합니다."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:175
 msgid ""
@@ -328,8 +328,8 @@ msgid ""
 "forced to \"unknown units\"; all measurements are done in unknown map units,"
 " and no conversion is possible."
 msgstr ""
-"거리 및 면적 단위와 좌표 표시를 무시하고 \"unknown units\"로 강제합니다. 모든 측정은 알 수 없는 맵 단위로 이루어지며,"
-" 어떤 변환도 할 수 없습니다."
+"거리 및 면적 단위와 좌표 표시를 무시하고 \"unknown units\" 로 강제합니다. 모든 측정은 알 수 없는 맵 단위로 "
+"이루어지며, 어떤 변환도 할 수 없습니다."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:179
 msgid ""
@@ -340,7 +340,7 @@ msgid ""
 "regardless their original CRS. Use of units and ellipsoid setting are "
 "available and make sense and you can perform calculations accordingly."
 msgstr ""
-"또는 기존 좌표계에서 *지리(geographic)*, *투영(projected)*이나 *사용자 정의(user-defined)* 좌표계 "
+"또는 기존 좌표계에서 *지리(geographic)*, *투영(projected)* 이나 *사용자 정의(user-defined)* 좌표계 "
 "가운데 하나를 선택할 수도 있습니다. 사용자가 적절한 좌표계를 선택하는 것을 돕기 위해 지표면 상의 좌표계 범위의 미리보기를 표시합니다."
 " 프로젝트에 추가한 레이어를, 원래 좌표계와 상관없이 중첩시키기 위해, 선택한 좌표계로 실시간(on-the-fly) 재투영합니다. 단위 "
 "및 타원체 설정을 사용할 수 있고, 의미가 통하며, 사용자가 설정에 따라 계산을 수행할 수 있습니다."
@@ -489,7 +489,7 @@ msgid ""
 "utilities. The cartographic parameters used with ``proj`` are described in "
 "the user manual and are the same as those used by QGIS."
 msgstr ""
-"이 문서는 ``proj`` 및 관련 명령 줄 유틸리티의 사용법을 설명하고 있습니다. 이 문서가 설명하는 ``proj``에 쓰이는 지도 "
+"이 문서는 ``proj`` 및 관련 명령 줄 유틸리티의 사용법을 설명하고 있습니다. 이 문서가 설명하는 ``proj`` 에 쓰이는 지도 "
 "제작 관련 파라미터는 QGIS에서 쓰이는 파라미터와 동일합니다."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:267
@@ -561,7 +561,7 @@ msgid ""
 msgstr ""
 ":menuselection:`Settings --> Custom Projections...` 대화창의 :guilabel:`Custom "
 "Coordinate Reference System Definition` 부분의 :guilabel:`Parameters` 란에 있는 "
-"PROJ 정의에 **nadgrids**(``+nadgrids=nameofthefile.gsb``)를 추가하십시오."
+"PROJ 정의에 **nadgrids** (``+nadgrids=nameofthefile.gsb``)를 추가하십시오."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:300
 msgid "Setting an NTv2 transformation"

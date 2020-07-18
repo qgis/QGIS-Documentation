@@ -31,68 +31,81 @@ msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/legend.rst:35
 msgid "Accessing the Table Of Contents (TOC)"
-msgstr ""
+msgstr "Acessando o sumário (TOC)"
 
 #: ../../docs/pyqgis_developer_cookbook/legend.rst:41
 msgid ""
 "You can use different classes to access all the loaded layers in the TOC and"
 " use them to retrieve information:"
 msgstr ""
+"Você pode usar diferentes classes para acessar todas as camadas carregadas "
+"no sumário e usá-las para recuperar informações:"
 
 #: ../../docs/pyqgis_developer_cookbook/legend.rst:44
 msgid ":class:`QgsProject <qgis.core.QgsProject>`"
-msgstr ""
+msgstr ":class:`QgsProject <qgis.core.QgsProject>`"
 
 #: ../../docs/pyqgis_developer_cookbook/legend.rst:45
 msgid ":class:`QgsLayerTreeGroup <qgis.core.QgsLayerTreeGroup>`"
-msgstr ""
+msgstr ":class:`QgsLayerTreeGroup <qgis.core.QgsLayerTreeGroup>`"
 
 #: ../../docs/pyqgis_developer_cookbook/legend.rst:48
 msgid "The QgsProject class"
-msgstr ""
+msgstr "A classe QgsProject"
 
 #: ../../docs/pyqgis_developer_cookbook/legend.rst:50
 msgid ""
 "You can use :class:`QgsProject <qgis.core.QgsProject>` to retrieve "
 "information about the TOC and all the layers loaded."
 msgstr ""
+"Você pode usar :class:`QgsProject <qgis.core.QgsProject>` para recuperar "
+"informações sobre o sumário e todas as camadas carregadas."
 
 #: ../../docs/pyqgis_developer_cookbook/legend.rst:53
 msgid ""
 "You have to create an ``instance`` of :class:`QgsProject "
 "<qgis.core.QgsProject>` and use its methods to get the loaded layers."
 msgstr ""
+"Você precisa criar uma ``instância`` de :class:`QgsProject "
+"<qgis.core.QgsProject>` e usar seus métodos para obter as camadas "
+"carregadas."
 
 #: ../../docs/pyqgis_developer_cookbook/legend.rst:56
 msgid ""
 "The main method is :meth:`mapLayers() <qgis.core.QgsProject.mapLayers>`. It "
 "will return a dictionary of the loaded layers:"
 msgstr ""
+"O método principal é :meth:`mapLayers() <qgis.core.QgsProject.mapLayers>`. "
+"Ele retornará um dicionário das camadas carregadas:"
 
 #: ../../docs/pyqgis_developer_cookbook/legend.rst:69
 msgid ""
 "The dictionary ``keys`` are the unique layer ids while the ``values`` are "
 "the related objects."
 msgstr ""
+"As ``chaves`` de dicionário são os IDs exclusivos da camada, enquanto os "
+"``valores`` são os objetos relacionados."
 
 #: ../../docs/pyqgis_developer_cookbook/legend.rst:72
 msgid ""
 "It is now straightforward to obtain any other information about the layers:"
-msgstr ""
+msgstr "Agora é fácil obter qualquer outra informação sobre as camadas:"
 
 #: ../../docs/pyqgis_developer_cookbook/legend.rst:90
 msgid "You can also query the TOC using the name of the layer:"
-msgstr ""
+msgstr "Você também pode consultar o sumário usando o nome da camada"
 
 #: ../../docs/pyqgis_developer_cookbook/legend.rst:96
 msgid ""
 "A list with all the matching layers is returned, so we index with ``[0]`` to"
 " get the first layer with this name."
 msgstr ""
+"Uma lista com todas as camadas correspondentes é retornada, portanto "
+"indexamos com ``[0]`` para obter a primeira camada com esse nome."
 
 #: ../../docs/pyqgis_developer_cookbook/legend.rst:101
 msgid "QgsLayerTreeGroup class"
-msgstr ""
+msgstr "Classe QgsLayerTreeGroup"
 
 #: ../../docs/pyqgis_developer_cookbook/legend.rst:103
 msgid ""
@@ -101,6 +114,10 @@ msgid ""
 "<qgis.core.QgsLayerTreeGroup>`) and layer nodes (:class:`QgsLayerTreeLayer "
 "<qgis.core.QgsLayerTreeLayer>`)."
 msgstr ""
+"A árvore de camadas é uma estrutura de árvore clássica construída de nós. "
+"Atualmente, existem dois tipos de nós: nós de grupo "
+"(:class:`QgsLayerTreeGroup <qgis.core.QgsLayerTreeGroup>`) e nós de camada "
+"(:class:`QgsLayerTreeLayer <qgis.core.QgsLayerTreeLayer>`)."
 
 #: ../../docs/pyqgis_developer_cookbook/legend.rst:107
 msgid ""
@@ -111,6 +128,12 @@ msgid ""
 "<https://www.lutraconsulting.co.uk/blog/2015/01/30/qgis-layer-tree-api-"
 "part-3/>`_"
 msgstr ""
+"para mais informações, você pode ler essas postagens de Martin Dobias: "
+"`Parte 1 <https://www.lutraconsulting.co.uk/blog/2014/07/06/qgis-layer-tree-"
+"api-part-1/>`_ `Parte 2 <https://www.lutraconsulting.co.uk/blog/2014/07/25"
+"/qgis-layer-tree-api-part-2/>`_ `Parte 3 "
+"<https://www.lutraconsulting.co.uk/blog/2015/01/30/qgis-layer-tree-api-"
+"part-3/>`_"
 
 #: ../../docs/pyqgis_developer_cookbook/legend.rst:112
 msgid ""
@@ -118,40 +141,50 @@ msgid ""
 ":meth:`layerTreeRoot() <qgis.core.QgsProject.layerTreeRoot>` of the "
 ":class:`QgsProject <qgis.core.QgsProject>` class:"
 msgstr ""
+"A árvore da camada do projeto pode ser acessada facilmente com o método "
+":meth:`layerTreeRoot() <qgis.core.QgsProject.layerTreeRoot>` da classe "
+":class:`QgsProject <qgis.core.QgsProject>`:"
 
 #: ../../docs/pyqgis_developer_cookbook/legend.rst:119
 msgid "``root`` is a group node and has *children*:"
-msgstr ""
+msgstr "``root`` é um nó de grupo e tem *filhos*:"
 
 #: ../../docs/pyqgis_developer_cookbook/legend.rst:125
 msgid ""
 "A list of direct children is returned. Sub group children should be accessed"
 " from their own direct parent."
 msgstr ""
+"Uma lista de filhos diretos é retornada. Os filhos do subgrupo devem ser "
+"acessados ​​de seus próprios pais diretos."
 
 #: ../../docs/pyqgis_developer_cookbook/legend.rst:128
 msgid "We can retrieve one of the children:"
-msgstr ""
+msgstr "Podemos recuperar um dos filhos:"
 
 #: ../../docs/pyqgis_developer_cookbook/legend.rst:139
 msgid "Layers can also be retrieved using their (unique) ``id``:"
-msgstr ""
+msgstr "As camadas também podem ser recuperadas usando seu (único) ``id``:"
 
 #: ../../docs/pyqgis_developer_cookbook/legend.rst:147
 msgid "And groups can also be searched using their names:"
-msgstr ""
+msgstr "E os grupos também podem ser pesquisados ​​usando seus nomes:"
 
 #: ../../docs/pyqgis_developer_cookbook/legend.rst:154
 msgid ""
 ":class:`QgsLayerTreeGroup <qgis.core.QgsLayerTreeGroup>` has many other "
 "useful methods that can be used to obtain more information about the TOC:"
 msgstr ""
+":class:`QgsLayerTreeGroup <qgis.core.QgsLayerTreeGroup>` possui muitos "
+"outros métodos úteis que podem ser usados ​​para obter mais informações "
+"sobre o sumário:"
 
 #: ../../docs/pyqgis_developer_cookbook/legend.rst:167
 msgid ""
 "Now let’s add some layers to the project’s layer tree. There are two ways of"
 " doing that:"
 msgstr ""
+"Agora vamos adicionar algumas camadas à árvore de camadas do projeto. "
+"Existem duas maneiras de fazer isso:"
 
 #: ../../docs/pyqgis_developer_cookbook/legend.rst:170
 msgid ""
@@ -159,18 +192,26 @@ msgid ""
 "<qgis.core.QgsLayerTreeGroup.addLayer>` or :meth:`insertLayer() "
 "<qgis.core.QgsLayerTreeGroup.insertLayer>` functions:"
 msgstr ""
+"**Adição explícita** usando as funções "
+":meth:`addLayer()<qgis.core.QgsLayerTreeGroup.addLayer>` ou "
+":meth:`insertLayer() <qgis.core.QgsLayerTreeGroup.insertLayer>`:"
 
 #: ../../docs/pyqgis_developer_cookbook/legend.rst:183
 msgid ""
 "**Implicit addition**: since the project's layer tree is connected to the "
 "layer registry it is enough to add a layer to the map layer registry:"
 msgstr ""
+"**Adição implícita**: como a árvore da camada do projeto está conectada ao "
+"registro da camada, basta adicionar uma camada ao registro da camada do "
+"mapa:"
 
 #: ../../docs/pyqgis_developer_cookbook/legend.rst:191
 msgid ""
 "You can switch between :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` "
 "and :class:`QgsLayerTreeLayer <qgis.core.QgsLayerTreeLayer>` easily:"
 msgstr ""
+"Você pode alternar entre :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` "
+"e :class:`QgsLayerTreeLayer <qgis.core.QgsLayerTreeLayer>` facilmente:"
 
 #: ../../docs/pyqgis_developer_cookbook/legend.rst:207
 msgid ""
@@ -179,36 +220,42 @@ msgid ""
 "former will add a group to the end of the TOC while for the latter you can "
 "add another group within an existing one:"
 msgstr ""
+"Grupos podem ser adicionados com o método :meth:`addGroup() "
+"<qgis.core.QgsLayerTreeGroup.addGroup>`. No exemplo abaixo, o primeiro "
+"adicionará um grupo ao final do sumário, enquanto no último você poderá "
+"adicionar outro grupo dentro de um existente:"
 
 #: ../../docs/pyqgis_developer_cookbook/legend.rst:218
 msgid "To moving nodes and groups there are many useful methods."
-msgstr ""
+msgstr "Para mover nós e grupos, existem muitos métodos úteis."
 
 #: ../../docs/pyqgis_developer_cookbook/legend.rst:220
 msgid "Moving an existing node is done in three steps:"
-msgstr ""
+msgstr "A movimentação de um nó existente é feita em três etapas:"
 
 #: ../../docs/pyqgis_developer_cookbook/legend.rst:222
 msgid "cloning the existing node"
-msgstr ""
+msgstr "clonando o nó existente"
 
 #: ../../docs/pyqgis_developer_cookbook/legend.rst:223
 msgid "moving the cloned node to the desired position"
-msgstr ""
+msgstr "movendo o nó clonado para a posição desejada"
 
 #: ../../docs/pyqgis_developer_cookbook/legend.rst:224
 msgid "deleting the original node"
-msgstr ""
+msgstr "excluindo o nó original"
 
 #: ../../docs/pyqgis_developer_cookbook/legend.rst:235
 msgid ""
 "It is a little bit more *complicated* to move a layer around in the legend:"
-msgstr ""
+msgstr "É um pouco mais *complicado* mover uma camada na legenda:"
 
 #: ../../docs/pyqgis_developer_cookbook/legend.rst:252
 msgid "or moving it to an existing group:"
-msgstr ""
+msgstr "ou movê-la para um grupo existente:"
 
 #: ../../docs/pyqgis_developer_cookbook/legend.rst:272
 msgid "Some other methods that can be used to modify the groups and layers:"
 msgstr ""
+"Alguns outros métodos que podem ser usados ​​para modificar os grupos e "
+"camadas:"

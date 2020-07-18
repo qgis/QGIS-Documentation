@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:25+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2020\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -42,6 +43,10 @@ msgid ""
 "complete list of `supported vector formats "
 "<https://gdal.org/drivers/vector/index.html>`_."
 msgstr ""
+"GeoPackage, GML, GeoJSON, GPX, KML, 쉼표 구분 값, ESRI 포맷(shapefile, Geodatabase "
+"등등), MapInfo 및 MicroStation 파일 포맷, AutoCAD DWG/DXF, GRASS, 그 외에도 많은 포맷들을 "
+"포함하는 벡터 데이터 유형을 지원합니다. `지원 벡터 유형 "
+"<https://gdal.org/drivers/vector/index.html>`_ 의 전체 목록을 읽어보세요."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:26
 msgid ""
@@ -50,12 +55,18 @@ msgid ""
 "Binary Grid, ArcInfo ASCII Grid, and many more... Read the complete list of "
 "`supported raster formats <https://gdal.org/drivers/raster/index.html>`_."
 msgstr ""
+"GeoTIFF, JPEG, ASCII Gridded XYZ, MBTiles, R 또는 Idrisi 래스터, GDAL Virtual, "
+"SRTM, Sentinel Data, ERDAS IMAGINE, ArcInfo Binary Grid, ArcInfo ASCII Grid,"
+" 그 외에도 많은 포맷들을 포함하는 래스터 데이터 유형을 지원합니다. `지원 래스터 유형 "
+"<https://gdal.org/drivers/raster/index.html>`_ 의 전체 목록을 읽어보세요."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:32
 msgid ""
 "Database formats include PostgreSQL/PostGIS, SQLite/SpatiaLite, Oracle, DB2 "
 "or MSSQL Spatial, MySQL..."
 msgstr ""
+"PostgreSQL/PostGIS, SQLite/SpatiaLite, Oracle, DB2 또는 MSSQL Spatial, MySQL, "
+"그 외에도 많은 데이터베이스를 포함하는 데이터베이스 유형을 지원합니다."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:34
 msgid ""
@@ -63,6 +74,8 @@ msgid ""
 "services, ...) are also handled by QGIS providers. See "
 ":ref:`working_with_ogc` for more information about some of these."
 msgstr ""
+"QGIS 제공자는 WM(T)S, WFS, WCS, CSW, XYZ 타일, ArcGIS 서비스 등의 웹 맵 및 데이터 서비스 지원도 "
+"처리하고 있습니다. 자세한 정보를 알고 싶다면 :ref:`working_with_ogc` 를 참조하세요."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:37
 msgid ""
@@ -70,12 +83,16 @@ msgid ""
 "formats such as QML files (:ref:`qgisstylefile`) and virtual and memory "
 "layers."
 msgstr ""
+"보존된(archived) 폴더에서 지원하는 파일을 읽어올 수 있고, QML 파일(:ref:`qgisstylefile`), "
+"가상(virtual) 및 메모리 레이어 같은 QGIS 자체 포맷도 사용할 수 있습니다."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:41
 msgid ""
 "More than 80 vector and 140 raster formats are supported by `GDAL "
 "<https://gdal.org/>`_ and QGIS native providers."
 msgstr ""
+"`GDAL <https://gdal.org/>`_ 과 QGIS 자체 제공자는 벡터 포맷 80개 이상, 래스터 포맷 140개 이상을 "
+"지원하고 있습니다."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:46
 msgid ""
@@ -87,6 +104,10 @@ msgid ""
 "or check :menuselection:`Settings --> Options --> GDAL` menu (for raster) in"
 " QGIS."
 msgstr ""
+"목록에 있는 포맷 가운데 여러 가지 이유로 인해 QGIS에서 작동하지 않는 포맷이 있을 수도 있습니다. 예를 들어 일부 포맷은 외부 "
+"상표등록 라이브러리가 필요할 수도 있고, 사용자 OS에 GDAL/OGR을 설치했을 때 사용자가 원하는 유형을 지원하도록 빌드되지 않았을 "
+"수도 있습니다. 사용할 수 있는 포맷 목록을 얻으려면, QGIS에서 (벡터의 경우) ``ogrinfo --formats`` 명령어를 "
+"실행하거나 (래스터의 경우) :menuselection:`Settings --> Options --> GDAL` 메뉴를 확인하십시오."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:58
 msgid ""
@@ -103,10 +124,19 @@ msgid ""
 "|checkbox| :guilabel:`Modeless data source manager dialog` in the "
 ":menuselection:`Settings --> Options --> General` menu."
 msgstr ""
+"QGIS는 데이터 유형에 따라 서로 다른 도구로 데이터셋을 열 수 있습니다. 주로 :menuselection:`Layer --> Add "
+"Layer -->` 메뉴나 (:menuselection:`View --> Toolbars` 메뉴에서 활성화할 수 있는) "
+":guilabel:`Manage Layers` 툴바를 사용합니다. 하지만 이 모든 도구들은 결국 :guilabel:`Data Source"
+" Manager Toolbar` 에 있는 |dataSourceManager| :sup:`Open Data Source Manager` "
+"버튼이나 :kbd:`Ctrl+L` 조합키로 열 수 있는 단일한 :guilabel:`Data Source Manager` 대화창으로 "
+"연결됩니다. 이 :guilabel:`Data Source Manager` 대화창은 벡터 또는 래스터 파일 기반 데이터는 물론 QGIS가 "
+"지원하는 데이터베이스나 웹 서비스도 열 수 있는 통합 인터페이스를 제공합니다. :menuselection:`Settings --> "
+"Options --> General` 메뉴의 |checkbox| :guilabel:`Modeless data source manager "
+"dialog` 옵션을 켜면 모달리스 대화창으로, 끄면 모달 대화창으로 설정할 수 있습니다."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:79
 msgid "QGIS Data Source Manager dialog"
-msgstr ""
+msgstr "QGIS 데이터소스 관리자 대화창"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:82
 msgid ""
@@ -115,12 +145,15 @@ msgid ""
 "connected databases. More information on DB Manager capabilities can be "
 "found in :ref:`dbmanager`."
 msgstr ""
+"이런 주 진입점(entry point) 외에, 연결된 데이터베이스를 분석하고 처리할 수 있는 고급 성능을 제공하는 |dbManager| "
+":guilabel:`DB Manager` 플러그인도 있습니다. DB 관리자 성능에 대한 자세한 정보는 :ref:`dbmanager` 에서"
+" 찾아볼 수 있습니다. "
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:87
 msgid ""
 "There are many other tools, native or third-party plugins, that help you "
 "open various data formats."
-msgstr ""
+msgstr "사용자가 다양한 데이터 유형들을 열 수 있도록 해주는 다른 도구들, 자체 또는 제3자 플러그인들도 다수 존재합니다."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:90
 msgid ""
@@ -129,6 +162,9 @@ msgid ""
 "dialog but more than describing each tab, it will also explore the tools "
 "based on the data provider or format specificities."
 msgstr ""
+"이 장에서는 QGIS가 데이터를 불러올 때 기본적으로 제공하는 도구들에 대해서만 설명할 것입니다. 주로 :guilabel:`Data "
+"Source Manager` 대화창에 집중하겠지만, 각 탭을 설명하는 데 그치지 않고 데이터 제공자 또는 포맷 사양에 기반한 도구들에 "
+"대해서도 알아볼 것입니다."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:101
 msgid "The Browser Panel"
@@ -139,12 +175,16 @@ msgid ""
 "The :guilabel:`Browser` is one of the main ways to quickly and easily add "
 "your data to projects. It's available as:"
 msgstr ""
+":guilabel:`Browser` 는 프로젝트에 사용자 데이터를 쉽고 빠르게 추가할 수 있는 주된 방법 가운데 하나입니다. 다음 "
+"방법으로 사용할 수 있습니다:"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:106
 msgid ""
 "a :guilabel:`Data Source Manager` tab, enabled pressing the "
 "|dataSourceManager| :sup:`Open Data Source Manager` button (:kbd:`Ctrl+L`);"
 msgstr ""
+"|dataSourceManager| :sup:`Open Data Source Manager` 버튼을 누르면 (:kbd:`Ctrl+L` "
+"조합키를 누르면) :guilabel:`Data Source Manager` 탭이 활성화됩니다."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:108
 msgid ""
@@ -152,6 +192,9 @@ msgid ""
 "(or |kde| :menuselection:`Settings --> Panels`) or by pressing "
 ":kbd:`Ctrl+2`."
 msgstr ""
+"QGIS의 패널이므로, :menuselection:`View --> Panels` (또는 |kde| "
+":menuselection:`Settings --> Panels`) 메뉴를 통해 또는 :kbd:`Ctrl+2` 조합키를 눌러 열 수 "
+"있습니다."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:111
 msgid ""
@@ -160,21 +203,25 @@ msgid ""
 "table), or the datasource format (plain or compressed files, databases, web "
 "services)."
 msgstr ""
+"어떻게 열든, :guilabel:`Browser` 를 통해 사용자 파일 시스템을 둘러보고 레이어 유형 (래스터, 벡터, 테이블) 또는 "
+"데이터소스 유형(일반 또는 압축 파일, 데이터베이스, 웹 서비스)에 상관없이 지리 데이터(geodata)를 관리할 수 있습니다."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:116
 msgid "Exploring the Interface"
-msgstr ""
+msgstr "인터페이스 탐구"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:118
 msgid ""
 "At the top of the Browser panel, you find some buttons that help you to:"
-msgstr ""
+msgstr "탐색기 패널 상단에 있는 아이콘의 기능은 다음과 같습니다:"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:120
 msgid ""
 "|addLayer| :sup:`Add Selected Layers`: you can also add data to the map "
 "canvas by selecting **Add selected layer(s)** from the layer's context menu;"
 msgstr ""
+"|addLayer| :sup:`Add Selected Layers`: 레이어의 컨텍스트 메뉴에서 **Add selected "
+"layer(s)** 를 선택해도 맵 캔버스에 데이터를 추가할 수 있습니다."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:122
 msgid "|draw| :sup:`Refresh` the browser tree;"
@@ -189,20 +236,26 @@ msgid ""
 "figure_browser_panels_. The comparison can be case-sensitive or not. It can "
 "also be set to:"
 msgstr ""
+"|filterMap| :sup:`Filter Browser`: 특정 데이터를 검색합니다. 검색어 또는 임의 문자 기호(wildcard)를"
+" 입력하면 탐색기가 트리를 필터링해서 입력 문자열과 일치하는 데이터베이스 테이블, 파일명 또는 폴더를 가리키는 경로만 표시합니다. "
+"일치하지 않는 다른 데이터 또는 폴더는 숨깁니다. figure_browser_panels_ 그림의 Browser Panel(2) 예시를 "
+"참조하십시오. 필터링 작업은 대소문자를 구분할 수도 있고 안 할 수도 있습니다. 다음 옵션으로 필터링을 설정할 수도 있습니다:"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:129
 msgid ":guilabel:`Normal`: show items containing the search text"
-msgstr ""
+msgstr ":guilabel:`Normal`: 검색어를 포함하는 모든 항목을 반환합니다."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:130
 msgid ""
 ":guilabel:`Wildcard(s)`: fine tune the search using the ``?`` and/or ``*`` "
 "characters to specify the position of the search text"
 msgstr ""
+":guilabel:`Wildcard(s)`: 검색 문자열에서 위치를 지정하는 ``?`` 그리고/또는 ``*`` 문자를 이용해서 검색을 "
+"세밀하게 조정합니다."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:132
 msgid ":guilabel:`Regular expression`"
-msgstr ""
+msgstr ":guilabel:`Regular expression`: 정규 표현식을 이용합니다."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:134
 msgid "|collapseTree| :sup:`Collapse All` the whole tree;"
@@ -214,6 +267,8 @@ msgid ""
 "widget is added at the bottom of the panel showing, if applicable, metadata "
 "for the selected item."
 msgstr ""
+"|metadata| :sup:`Enable/disable properties widget`: 속성 위젯을 켜고 끕니다. 활성화하면, 패널"
+" 하단에 선택한 항목의 (메타데이터가 있는 경우) 메타데이터를 표시하는 새 위젯을 추가합니다."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:139
 msgid ""

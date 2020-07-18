@@ -84,6 +84,9 @@ msgid ""
 "Add your :guilabel:`roads` layer, as well as the :guilabel:`srtm_41_19` "
 "raster file (elevation data) found in :file:`exercise_data/raster/SRTM/`."
 msgstr ""
+"Adicione sua camada :guilabel:`roads`, bem como o arquivo raster "
+":guilabel:`srtm_41_19` (dados de elevação) encontrado em "
+":file:`exercise_data/raster/SRTM/`."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:29
 msgid ""
@@ -177,10 +180,14 @@ msgid ""
 "new field is ``rvalue_N``, where ``N`` is the number of the raster band. You"
 " can change the name of the prefix if you want:"
 msgstr ""
+"Selecione :guilabel:`random_points` como a camada que contém pontos de "
+"amostragem, e o SRTM raster como a banda para obter valores. O nome padrão "
+"do novo campo é ``rvalue_N``, onde ``N`` é o número da banda raster. Você "
+"pode alterar o nome do prefixo, se desejar:"
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:84
 msgid "Press :guilabel:`Run`"
-msgstr ""
+msgstr "Pressione :guilabel:`Executar`"
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:86
 msgid ""
@@ -201,6 +208,8 @@ msgid ""
 "The sample points are classified by their ``rvalue_1`` field such that red "
 "points are at a higher altitude."
 msgstr ""
+"Os pontos de amostra são classificados pelo campo ``rvalue_1``, de modo que "
+"os pontos vermelhos estejam em uma altitude maior."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:98
 msgid ""
@@ -406,10 +415,12 @@ msgstr ""
 msgid ""
 "To generate statistics on the distances between points in the two layers:"
 msgstr ""
+"Para gerar estatísticas sobre as distâncias entre pontos nas duas camadas:"
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:175
 msgid "Open the tool :menuselection:`Vector Analysis --> Distance matrix`."
 msgstr ""
+"Abra a ferramenta :menuselection:`Análise vetorial --> Matriz de Distância`."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:176
 msgid ""
@@ -440,6 +451,9 @@ msgid ""
 "distances between the :guilabel:`distance_points` features and their two "
 "nearest points in the :guilabel:`Sampled Points` layer:"
 msgstr ""
+"Abra a tabela de atributos da camada gerada: valores referem-se às "
+"distâncias entre as feições :guilabel:`distance_points` e seus dois pontos "
+"mais próximos na camada :guilabel:`Pontos de amostra`"
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:194
 msgid ""
@@ -449,20 +463,28 @@ msgid ""
 "mean, standard deviation, minimum and maximum for the distances to the "
 "nearest neighbors of the points in the input layer."
 msgstr ""
+"Com esses parâmetros, a ferramenta ``Matriz de Distância`` calcula as "
+"estatísticas de distância para cada ponto da camada de entrada em relação "
+"aos pontos mais próximos da camada de destino. Os campos da camada de saída "
+"contêm a média, desvio padrão, mínimo e máximo para as distâncias até os "
+"vizinhos mais próximos dos pontos na camada de entrada."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:202
 msgid "|basic| |FA| Nearest Neighbor Analysis (within layer)"
-msgstr ""
+msgstr "|basic| |FA| Análise de Vizinhos mais Próximos (dentro da camada)"
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:204
 msgid "To do a nearest neighbor analysis of a point layer:"
 msgstr ""
+"Para fazer uma análise de vizinho mais próximo de uma camada de pontos:"
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:206
 msgid ""
 "Click on the menu item :menuselection:`Vector analysis --> Nearest neighbor "
 "analysis`."
 msgstr ""
+"Clique no item de menu :menuselection:`Análise vetorial --> Análise de "
+"vizinhos mais próximos`."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:208
 msgid ""
@@ -502,6 +524,8 @@ msgid ""
 "In the dialog that appears, specify :guilabel:`Random points` as the input "
 "layer, but leave the optional choices unchanged."
 msgstr ""
+"Na caixa de diálogo exibida, especifique :guilabel:`Pontos aleatórios` como "
+"a camada de entrada, mas deixe as opções opcionais inalteradas."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:228
 msgid "Click :guilabel:`Run`."
@@ -565,6 +589,8 @@ msgid ""
 "In your :guilabel:`Layers` panel, right-click on the :guilabel:`srtm_41_19` "
 "layer."
 msgstr ""
+"No seu painel :guilabel:`Camadas`, clique com o botão direito do mouse na "
+"camada :guilabel:`srtm_41_19`."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:256
 msgid "Select :menuselection:`Properties`."
@@ -646,11 +672,16 @@ msgid ""
 "with nearest neighbor searching)` tool within :guilabel:`Processing` "
 "toolbox."
 msgstr ""
+"Para começar, inicie a ferramenta :menuselection:`GDAL --> Análise de dados "
+"raster --> Grade (IDW com a pesquisa de vizinhos mais próximos)` dentro de "
+":guilabel:`Caixa de ferramentas de Processamento`."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:292
 msgid ""
 "In the :guilabel:`Point layer` parameter, select :guilabel:`Sampled points`"
 msgstr ""
+"No parâmetro :guilabel:`Camada de pontos`, selecione :guilabel:`Pontos de "
+"amostra`"
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:293
 msgid "Set ``5.0`` as the :guilabel:`Weighting power`"
@@ -661,6 +692,8 @@ msgid ""
 "In the :guilabel:`Advanced parameters` set :guilabel:`rvalue_1` for the "
 ":guilabel:`Z value from field` parameter"
 msgstr ""
+"Em :guilabel:`Parâmetros avançados` defina :guilabel:`rvalue_1` para o "
+":guilabel:`valor Z do campo`"
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:296
 msgid "Finally click on :guilabel:`Run` and wait until the algorithm ends"
@@ -687,6 +720,9 @@ msgid ""
 "impression of the terrain. It gives a very general idea, but it can be "
 "misleading as well."
 msgstr ""
+"Como você pode ver, 100 pontos de amostra não são suficientes para obter uma"
+" impressão detalhada do terreno. Dá uma ideia muito geral, mas também pode "
+"ser enganosa."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:311
 msgid "|moderate| |TY| Different interpolation methods"
@@ -736,6 +772,9 @@ msgid ""
 "This is a much better representation of the terrain, due to the much greater"
 " density of sample points. Remember, bigger samples give better results."
 msgstr ""
+"Essa é uma representação muito melhor do terreno, devido à densidade muito "
+"maior dos pontos de amostra. Lembre-se, amostras maiores fornecem melhores "
+"resultados."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:335
 msgid "|IC|"
