@@ -645,7 +645,6 @@ If settings are correct, OTB algorithms will be available in the
 Documentation of OTB settings available in QGIS Processing
 ...........................................................
 
-
 * **Activate**: This is a checkbox to activate or deactivate the OTB provider.
   An invalid OTB setting will uncheck this when saved.
 
@@ -688,7 +687,10 @@ Documentation of OTB settings available in QGIS Processing
 Compatibility between QGIS and OTB versions
 ...........................................
 
-All OTB versions (from OTB 6.6.1) are compatible with the latest QGIS version.
+OTB compiled with GDAL 3.X is not compatible with QGIS 3.10.
+This is the case for the binary packages of OTB 7.1 and above.
+Therefore QGIS 3.10 is only compatible with OTB official binary
+packages 6.6.1 and 7.0.0.
 
 Troubleshoot
 ............
