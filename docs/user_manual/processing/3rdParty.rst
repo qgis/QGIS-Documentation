@@ -608,3 +608,97 @@ LAStools is activated and configured in the Processing options
 location of LAStools (:guilabel:`LAStools folder`) and Wine
 (:guilabel:`Wine folder`).
 On Ubuntu, the default Wine folder is :file:`/usr/bin`.
+
+.. index:: OTB
+.. _otb_configure:
+
+OTB Applications
+-----------------
+
+OTB applications are fully supported within the QGIS Processing framework. 
+
+
+`OTB <https://www.orfeo-toolbox.org>`_ (Orfeo ToolBox) is an image  
+processing library for remote sensing data. It also provides
+applications that provide image processing functionalities. 
+The list of applications and their documentation are available in
+`OTB CookBook <https://www.orfeo-toolbox.org/CookBook/Applications.html>`_
+
+.. note::
+   Note that OTB is not distributed with QGIS and needs to be installed 
+   separately. Binary packages for OTB can be found on the 
+   `download page <https://www.orfeo-toolbox.org/download>`_.
+
+To configure QGIS processing to find the OTB library:
+
+#. Open the processing settings: :menuselection:`Settings --> Options --> Processing` (left panel)*
+#. You can see OTB under "Providers":
+
+   #. Expand the :guilabel:`OTB` tab
+   #. Tick the :guilabel:`Activate` option
+   #. Set the :guilabel:`OTB folder`. This is the location of your OTB installation.
+   #. Set the :guilabel:`OTB application folder`. This is the location of your OTB
+      applications ( :file:`<PATH_TO_OTB_INSTALLATION>/lib/otb/applications`)
+   #. Click "ok" to save the settings and close the dialog. 
+   
+If settings are correct, OTB algorithms will be available in the
+:guilabel:`Processing Toolbox`.
+
+Documentation of OTB settings available in QGIS Processing
+...........................................................
+
+
+* **Activate**: This is a checkbox to activate or deactivate the OTB provider.
+  An invalid OTB setting will uncheck this when saved.
+
+* **OTB folder**: This is the directory where OTB is available. 
+
+* **OTB application folder**: This is the location(s) of OTB applications. 
+
+  Multiple paths are allowed.
+
+* **Logger level** (optional): Level of logger to use by OTB applications. 
+
+  The level of logging controls the amount of detail printed during
+  algorithm execution. Possible values for logger level are ``INFO``,
+  ``WARNING``, ``CRITICAL``, ``DEBUG``. This value is ``INFO`` by default. This is an
+  advanced user configuration.
+
+* **Maximum RAM to use** (optional): by default, OTB applications use
+  all available system RAM.
+
+  You can, however, instruct OTB to use a specific amount of RAM (in MB)
+  using this option. A value of 256 is ignored by the OTB processing provider.
+  This is an advanced user configuration.
+
+* **Geoid file** (optional): Path to the geoid file.
+
+  This option sets the value of the elev.dem.geoid and elev.geoid
+  parameters in OTB applications.
+  Setting this value globally enables users to share it across multiple
+  processing algorithms. Empty by default.
+
+* **SRTM tiles folder** (optional): Directory where SRTM tiles are
+  available. 
+
+  SRTM data can be stored locally to avoid downloading of
+  files during processing. This option sets the value of elev.dem.path
+  and elev.dem parameters in OTB applications. Setting this value
+  globally enables users to share it across multiple processing algorithms.
+  Empty by default.
+
+Compatibility between QGIS and OTB versions
+...........................................
+
+All OTB versions (from OTB 6.6.1) are compatible with the latest QGIS version.
+
+Troubleshoot
+............
+If you have issues with OTB applications in QGIS Processing, please open an issue
+on the `OTB bug tracker <https://gitlab.orfeo-toolbox.org/orfeotoolbox/otb/-/issues>`_, 
+using the ``qgis`` label.
+
+Additional information about OTB and QGIS can be found 
+`here <https://www.orfeo-toolbox.org/CookBook-develop/QGISInterface.html>`_
+
+.. the previous link will be modify to be coherent with this page cf. https://gitlab.orfeo-toolbox.org/orfeotoolbox/otb/-/merge_requests/722
