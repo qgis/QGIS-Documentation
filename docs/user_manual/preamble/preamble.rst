@@ -35,8 +35,6 @@ https://qgis.org/en/site/getinvolved/index.html.
 This document contains internal and external links.
 Clicking on an internal link moves within the document, while
 clicking on an external link opens an internet address.
-In PDF form, internal and external links are shown in blue and are
-handled by the system browser.
 
 **Documentation Authors and Editors**
 
