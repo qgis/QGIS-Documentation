@@ -21,7 +21,7 @@ QGIS aims to be a user-friendly GIS, providing common functions and
 features.
 The initial goal of the project was to provide a GIS data viewer.
 QGIS has reached the point in its evolution where it is being used
-for their daily GIS data-viewing needs, for data capture, for
+for daily GIS data-viewing needs, for data capture, for
 advanced GIS analysis, and for presentations in the form of
 sophisticated maps, atlases and reports.
 QGIS supports a wealth of raster and vector data formats, with new
