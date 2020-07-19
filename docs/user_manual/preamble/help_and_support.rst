@@ -122,7 +122,8 @@ Blog
 The QGIS community also runs a weblog at
 https://planet.qgis.org/planet/, which has some interesting articles
 for users and developers.
-Many other QGIS blogs exist, and you are invited to contribute with your own QGIS blog!
+Many other QGIS blogs exist, and you are invited to contribute
+with your own QGIS blog!
 
 Plugins
 =======
