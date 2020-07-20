@@ -60,10 +60,7 @@ What's new in QGIS |version|
 ----------------------------
 
 This release of QGIS includes hundreds of bug fixes and many new
-features and enhancements, compared to |QGIS_CURRENT|_.
+features and enhancements.
 We recommend that you use this version over previous releases.
 For a list of new features, visit the visual changelogs at
 https://qgis.org/en/site/forusers/visualchangelogs.html.
-
-.. |QGIS_CURRENT| replace:: QGIS 3.10
-.. _QGIS_CURRENT: https://docs.qgis.org/3.10/en/docs/
