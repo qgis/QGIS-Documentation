@@ -810,8 +810,8 @@ Here it is possible to digitize a polygon for the region layer using the |signPl
 if you chose the option ``Allow adding new features`` in the 
 :menuselection:`Properties --> Attributes Form` menu of the airport layer.
 
-Child layer can be used also with the :ref:`select_by_value` tool in
-order to select features of the parent layer depending on children attributes.
+The child layer can also be used in the :ref:`select_by_value` tool in
+order to select features of the parent layer based on attributes of their children.
 
 As an example, the :ref:`figure_select_by_value` selects all the regions where 
 the altitude of the airports is greater than 500 meters above sea level. 
