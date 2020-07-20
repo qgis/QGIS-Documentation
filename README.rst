@@ -32,7 +32,7 @@ To check/create the venv and use it in the build:
 
  make -f venv.mk html
 
-The venv.mk will create/update a virtual env (if not available ) in current dir/venv AND run the html build in it.
+The venv.mk will create/update a virtual env (if not available) in current dir/venv AND run the html build in it.
 
 You can also use that virtual environment later doing:
 
