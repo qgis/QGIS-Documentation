@@ -816,7 +816,7 @@ order to select features of the parent layer based on attributes of their childr
 In :ref:`figure_select_by_value`, all the regions where the mean altitude of
 the airports is greater than 500 meters above sea level are selected. 
 
-Many different aggregation functions are available in the form:
+You will find that many different aggregation functions are available in the form.
 
 .. _figure_select_by_value:
 
