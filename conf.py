@@ -62,6 +62,7 @@ exclude_patterns = [
     'venv',
     'README.rst',
     'readme_old.rst',
+    'docs/user_manual/working_with_vector/expression_help/*'
 ]
 
 # -- Internationalisation ----------------------------------------------------
@@ -250,6 +251,8 @@ latex_elements = {
     \\newunicodechar{≥}{$\geq$}
     \\newunicodechar{≤}{$\leq$}
     \\newunicodechar{π}{$\pi$}
+    \\newunicodechar{′}{'}
+    \\newunicodechar{″}{''}
     \\newunicodechar{​}{ }'''
 }
 
