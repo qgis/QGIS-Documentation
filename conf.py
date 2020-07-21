@@ -247,6 +247,8 @@ latex_elements = {
     \\newunicodechar{≥}{$\geq$}
     \\newunicodechar{≤}{$\leq$}
     \\newunicodechar{π}{$\pi$}
+    \\newunicodechar{′}{'}
+    \\newunicodechar{″}{''}
     \\newunicodechar{​}{ }'''
 }
 
