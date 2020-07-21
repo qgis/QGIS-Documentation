@@ -6,6 +6,7 @@ QGIS User Guide
 
 .. toctree::
     :maxdepth: 2
+    :numbered:
 
     preamble/preamble
     preamble/foreword
