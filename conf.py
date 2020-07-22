@@ -69,6 +69,8 @@ language = 'en'
 locale_dirs = ['locale/']   # path is example but recommended.
 gettext_compact = False     # optional.
 
+# Enable numeric figure references
+numfig = True
 
 # -- Options for HTML output -------------------------------------------------
 
@@ -209,6 +211,7 @@ latex_documents = [
   ('docs/user_manual/index', 'QGISUserGuide.tex', f'QGIS {version} User Guide', u'QGIS Project', 'manual'),
   ('docs/pyqgis_developer_cookbook/index', 'PyQGISDeveloperCookbook.tex', f'PyQGIS {version} developer cookbook', u'QGIS Project', 'manual'),
   ('docs/training_manual/index', 'QGISTrainingManual.tex', u'QGIS Training Manual', u'QGIS Project', 'manual'),
+  ('docs/documentation_guidelines/index', 'QGISDocumentationGuidelines.tex', u'QGIS Documentation Guidelines', u'QGIS Project', 'manual'),
   #('docs/developers_guide/index', 'QGISDevelopersGuide.tex', u'QGIS Developers Guide', u'QGIS Project', 'manual'),
 ]
 

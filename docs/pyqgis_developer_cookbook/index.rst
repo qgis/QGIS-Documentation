@@ -6,6 +6,7 @@ PyQGIS Developer Cookbook
 
 .. toctree::
    :maxdepth: 2
+   :numbered:
 
    intro
    loadproject

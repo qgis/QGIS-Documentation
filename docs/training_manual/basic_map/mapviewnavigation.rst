@@ -16,10 +16,15 @@ layers that we can explore during this tutorial.
 #. Open a new blank project and using the steps learnt in :ref:`Create a Map
    <tm_pepare_a_map>`, load the previously seen ``protected_areas``, ``roads``
    and ``buildings`` layers to the project.
-   The result view should look similar to the snippet below (colors do not matter): 
+   The result view should look similar to the snippet in
+   :numref:`figure_roads_buildings_added` below (colors do not matter): 
+
+   .. _figure_roads_buildings_added:
 
    .. figure:: img/roads_buildings_added.png
-     :align: center
+      :align: center
+
+      Protected areas, roads and buildings added
 
 Let's first learn how to use the Pan Tool.
 
@@ -34,10 +39,14 @@ Next, let's zoom in and take a closer look at the layers we imported.
    density of buildings and roads.
 #. Left click and hold. 
 #. Then drag the mouse, which will create a rectangle, and cover the dense area of 
-   buildings and roads.
+   buildings and roads (:ref:`figure_zoom_in_mapview`).
+
+   .. _figure_zoom_in_mapview:
 
    .. figure:: img/zoom_in.png
-     :align: center
+      :align: center
+
+      Zoom in
 
 #. Release the left click.  This will zoom in to include the area that you
    selected with your rectangle.
