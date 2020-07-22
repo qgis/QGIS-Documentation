@@ -688,15 +688,17 @@ between the layers. This is done in :menuselection:`Project --> Project Properti
 Open the :guilabel:`Relations` tab and click on :guilabel:`Add Relation`.
 
 * **Name** is going to be used as a title. It should be a human readable string,
-  describing, what the relation is used for. We will just call say **Airports**
+  describing, what the relation is used for. We will just call say **airport_relation**
   in this case.
 * **Referenced Layer (Parent)** also considered as parent layer, is the one with
-  the primary key, pointed to, so here it is the ``regions`` layer
-* **Referenced Field** is the primary key of the referenced layer so it is ``ID``
+  the primary key, pointed to, so here it is the ``regions`` layer. You can define
+  the primary key of the referenced layer, so it is ``ID``. For this layer
+  you can define multiple referenced fields by using the |signPlus| button.
 * **Referencing Layer (Child)** also considered as child layer, is the one with
-  the foreign key field on it. In our case, this is the ``airports`` layer
-* **Referencing Field** will say, which field points to the other layer so this
-  is ``fk_region`` in this case
+  the foreign key field on it. In our case, this is the ``airports`` layer. For
+  this layer you need to add a referencing field which points to the other
+  layer, so this is ``fk_region``. When using multiple field relations you can
+  add another referencing field by using the |signPlus| button.
 * **Id** will be used for internal purposes and has to be unique. You may need
   it to build :ref:`custom forms <customize_form>`. If
   you leave it empty, one will be generated for you but you can assign one
@@ -810,6 +812,20 @@ Here it is possible to digitize a polygon for the region layer using the |signPl
 if you chose the option ``Allow adding new features`` in the 
 :menuselection:`Properties --> Attributes Form` menu of the airport layer.
 
+The child layer can also be used in the :ref:`select_by_value` tool in
+order to select features of the parent layer based on attributes of their children.
+
+In :ref:`figure_select_by_value`, all the regions where the mean altitude of
+the airports is greater than 500 meters above sea level are selected. 
+
+You will find that many different aggregation functions are available in the form.
+
+.. _figure_select_by_value:
+
+.. figure:: img/relation_select_by_value.png
+   :align: center
+
+   Select parent features with child values
 
 
 .. index:: Many-to-many relation; Relation

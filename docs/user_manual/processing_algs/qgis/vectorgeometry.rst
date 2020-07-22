@@ -7323,7 +7323,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:voronoipolygons```
+**Algorithm ID**: ``qgis:voronoipolygons``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**

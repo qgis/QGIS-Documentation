@@ -115,15 +115,15 @@ or to validate output of a spatial analysis.
 .. |IC| replace:: In Conclusion
 .. |LS| replace:: Lesson:
 .. |basic| image:: /static/common/basic.png
-.. |zoomIn| image:: /static/common/mActionZoomIn.png
+.. |pan| image:: /static/common/mActionPan.png
    :width: 1.5em
-.. |zoomOut| image:: /static/common/mActionZoomOut.png
+.. |zoomFullExtent| image:: /static/common/mActionZoomFullExtent.png
+   :width: 1.5em
+.. |zoomIn| image:: /static/common/mActionZoomIn.png
    :width: 1.5em
 .. |zoomLast| image:: /static/common/mActionZoomLast.png
    :width: 1.5em
 .. |zoomNext| image:: /static/common/mActionZoomNext.png
    :width: 1.5em
-.. |zoomFullExtent| image:: /static/common/mActionZoomFullExtent.png
-   :width: 1.5em
-.. |pan| image:: /static/common/mActionPan.png
+.. |zoomOut| image:: /static/common/mActionZoomOut.png
    :width: 1.5em

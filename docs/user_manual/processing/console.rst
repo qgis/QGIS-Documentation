@@ -259,7 +259,7 @@ list gives a quick review of how to introduce values for each type of input para
 * Enumeration. If an algorithm has an enumeration parameter, the value of that
   parameter should be entered using an integer value. To know the available
   options, you can use the ``algorithmHelp()`` command, as above.
-  For instance, the "native.buffer" algorithm has an enumeration called JOIN_STYLE:
+  For instance, the ``native:buffer`` algorithm has an enumeration called JOIN_STYLE:
 
   ::
 
@@ -332,6 +332,39 @@ You can load feature output by passing the corresponding file paths to
 the ``load()`` method.
 Or you could use ``runAndLoadResults()`` instead of ``run()`` to load
 them immediately.
+
+If you want to open an algorithm dialog from the console you can use the 
+``createAlgorithmDialog`` method. The only mandatory parameter is the algorithm 
+name, but you can also define the dictionary of parameters so that the dialog 
+will be filled automatically:
+
+::
+
+    >>> my_dialog = processing.createAlgorithmDialog("native:buffer", {
+                  'INPUT': '/data/lines.shp',
+                  'DISTANCE': 100.0,
+                  'SEGMENTS': 10,
+                  'DISSOLVE': True,
+                  'END_CAP_STYLE': 0,
+                  'JOIN_STYLE': 0,
+                  'MITER_LIMIT': 10,
+                  'OUTPUT': '/data/buffers.shp'})
+    >>> my_dialog.show()
+
+The ``execAlgorithmDialog`` method opens the dialog immediately:
+
+::
+
+    >>> processing.execAlgorithmDialog("native:buffer", {
+                  'INPUT': '/data/lines.shp',
+                  'DISTANCE': 100.0,
+                  'SEGMENTS': 10,
+                  'DISSOLVE': True,
+                  'END_CAP_STYLE': 0,
+                  'JOIN_STYLE': 0,
+                  'MITER_LIMIT': 10,
+                  'OUTPUT': '/data/buffers.shp'})
+
 
 Creating scripts and running them from the toolbox
 --------------------------------------------------

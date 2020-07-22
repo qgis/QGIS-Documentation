@@ -10,6 +10,7 @@ Layout Items
 
    composer_items_options
    composer_map
+   composer_map3d
    composer_label
    composer_legend
    composer_scale_bar
