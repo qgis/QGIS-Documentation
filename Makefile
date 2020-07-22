@@ -61,11 +61,14 @@ pdf: latex
 	pdflatex PyQGISDeveloperCookbook.tex; \
 	pdflatex PyQGISDeveloperCookbook.tex; \
 	pdflatex QGISTrainingManual.tex; \
-	pdflatex QGISTrainingManual.tex;)
+	pdflatex QGISTrainingManual.tex; \
+	pdflatex QGISDocumentationGuidelines.tex; \
+	pdflatex QGISDocumentationGuidelines.tex;)
 	mkdir -p $(BUILDDIR)/pdf/$(LANG);
 	mv $(BUILDDIR)/latex/$(LANG)/QGISUserGuide.pdf $(BUILDDIR)/pdf/$(LANG)/;
 	mv $(BUILDDIR)/latex/$(LANG)/PyQGISDeveloperCookbook.pdf $(BUILDDIR)/pdf/$(LANG)/;
 	mv $(BUILDDIR)/latex/$(LANG)/QGISTrainingManual.pdf $(BUILDDIR)/pdf/$(LANG)/;
+	mv $(BUILDDIR)/latex/$(LANG)/QGISDocumentationGuidelines.pdf $(BUILDDIR)/pdf/$(LANG)/;
 
 site: html #pdf
 	rsync -az $(BUILDDIR)/html/$(LANG) $(SITEDIR)/
