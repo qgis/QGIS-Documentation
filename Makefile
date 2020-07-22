@@ -74,12 +74,16 @@ pdf: latex
 	$(LATEXCOMPILER) -shell-escape QGISTrainingManual.tex; \
 	$(LATEXCOMPILER) -shell-escape QGISTrainingManual.tex; \
 	if [ "$(LATEXCOMPILER)" != "xelatex" ]; then dvipdfmx QGISTrainingManual.dvi; fi;
+	$(LATEXCOMPILER) -shell-escape QGISDocumentationGuidelines.tex; \
+	$(LATEXCOMPILER) -shell-escape QGISDocumentationGuidelines.tex; \
+	if [ "$(LATEXCOMPILER)" != "xelatex" ]; then dvipdfmx QGISDocumentationGuidelines.dvi; fi;
 
 	# copy and rename PDF files to the pdf folder
 	mkdir -p $(BUILDDIR)/pdf/$(LANG);
 	mv $(BUILDDIR)/latex/$(LANG)/QGISUserGuide.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-UserGuide-$(LANG).pdf;
 	mv $(BUILDDIR)/latex/$(LANG)/PyQGISDeveloperCookbook.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-PyQGISDeveloperCookbook-$(LANG).pdf;
 	mv $(BUILDDIR)/latex/$(LANG)/QGISTrainingManual.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-TrainingManual-$(LANG).pdf;
+	mv $(BUILDDIR)/latex/$(LANG)/QGISDocumentationGuidelines.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-DocumentationGuidelines-$(LANG).pdf;
 
 zip:
 	mkdir -p $(BUILDDIR)/zip;

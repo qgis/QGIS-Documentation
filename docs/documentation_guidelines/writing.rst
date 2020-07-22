@@ -205,7 +205,7 @@ file:
 .. code-block:: rst
 
    .. |nice_logo| image:: /static/common/logo.png
-                  :width: 2 em
+                  :width: 1 em
 
 and then call it in your paragraph:
 
@@ -216,7 +216,7 @@ and then call it in your paragraph:
 This is how the example will be displayed:
 
 .. |nice_logo| image:: /static/common/logo.png
-               :width: 2 em
+               :width: 1 em
 
 My paragraph begins here with a nice logo |nice_logo|.
 
@@ -263,7 +263,7 @@ feel free to use any other options for figures (such as ``width``,
 ``height``, ``scale``...) if needed.
 
 The scripts will insert an automatically generated number before the caption of
-the figure in the generated PDF version of the documentation.
+the figure in the generated HTML and PDF versions of the documentation.
 
 To use a caption (*see My caption*) just insert indented text after a blank line
 in the figure block.
@@ -272,26 +272,47 @@ A figure can be referenced using the reference label like this:
 
 .. code-block:: rst
 
-   (see Figure_logo_).
+   see :numref:`figure_logo`
 
-It will show the anchor Figure_logo_. You can use uppercase if you want.
-This mechanism can only be used in the same :file:`.rst` file.
-From other :file:`.rst` files you can use ``:ref:`` for reference, but
-keep in mind that this returns the full caption of the image.
+renders like this:
+
+see :numref:`figure_logo`
+
+This is the preferred way of referencing figures.
+
+.. note::
+
+   For ``:numref:`` to work, the figure **must have a caption**.
+
+It is possible to use ``:ref:`` instead of ``:numref:`` for reference, but
+this returns the full caption of the image.
 
 .. code-block:: rst
 
    see :ref:`figure_logo`
 
-returns:
+renders like this:
 
 see :ref:`figure_logo`
+
+It is also possible (but not recommended) to use the following mechanism:
+
+.. code-block:: rst
+
+   (see Figure_logo_).
+
+It will render like this:
+
+(see Figure_logo_).
+
+You can use uppercase if you want.
+This mechanism can only be used in the same :file:`.rst` file.
 
 
 Tables
 ......
 
-To create a simple table
+A simple table can be coded like this
 
 .. code-block:: rst
 
@@ -299,12 +320,21 @@ To create a simple table
    x        y        z
    =======  =======  =======
    1        2        3
-   2        4
+   4                 5
    =======  =======  =======
 
-Use a ``\`` followed by an empty space to leave an empty space.
+It will render like this:
 
-You can also use more complicated tables by drawing them using references and all
+=======  =======  =======
+x        y        z
+=======  =======  =======
+1        2        3
+4                 5
+=======  =======  =======
+
+Use a ``\`` (backslash) followed by an empty space to leave an empty space.
+
+You can also make more complicated tables and reference them:
 
 .. code-block:: rst
 
@@ -358,7 +388,6 @@ For even more complex tables, it is easier to use ``list-table``:
           * Point
           * Line
 
-
 The result:
 
 .. list-table::
@@ -401,7 +430,7 @@ within normal text:
 
 .. code-block:: rst
 
-   QGIS allows to load several :index:`Vector formats` supported by GDAL/OGR ...
+   QGIS can load several :index:`Vector formats` supported by GDAL/OGR ...
 
 Or you can use the ``.. index::`` block-level markup which links to the
 beginning of the next paragraph. Because of the rules mentioned above, it
