@@ -43,18 +43,13 @@ The solution will involve:
 Setting up the Map
 -------------------------------------------------------------------------------
 
-#. Click on the "CRS status" button in the extreme lower right corner of the
-   screen. Under the :guilabel:`CRS` tab of the screen that appears, you will
-   see the box :guilabel:`Coordinate reference systems of the world.`
-#. In this box, navigate to :menuselection:`Projected Coordinate Systems -->
-   Universal Transverse Mercator (UTM)`.
-#. Select the entry :guilabel:`WGS 84 / UTM zone 33S` (with the EPSG code
-   ``32733``).
+#. Click on the "EPSG" button in the extreme lower right corner of the
+   screen. Under the :guilabel:`CRS` tab of the screen that appears, use the "Filter" tool to search for :guilabel:`WGS 84 / UTM zone 33S`. Select the entry :guilabel:`WGS 84 / UTM zone 33S` (with the EPSG code ``32733``). 
 #. Click :guilabel:`OK`. The map is now in the ``UTM33S`` coordinate
    reference system.
-#. Save the map by clicking on the :guilabel:`Save Project As` toolbar button,
-   or use the :menuselection:`File --> Save Project As...` menu item.
-#. Save the map in a directory called :file:`Rasterprac` that you should create
+#. Save the map by clicking on the :guilabel:`Save Project` toolbar button,
+   or use the :menuselection:`File --> Save As...` menu item.
+#. Save the map in a new directory called :file:`Rasterprac` that you should create
    somewhere on your computer. You will save whatever layers you create in this
    directory as well.
 
