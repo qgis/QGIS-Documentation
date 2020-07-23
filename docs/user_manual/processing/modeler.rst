@@ -51,28 +51,42 @@ Definition of inputs
 
 The first step is to define the inputs for the model.
 The following elements are found in the :guilabel:`Inputs` tab on
-the left side of the modeler window:
+the left side of the modeler window. Hoovering with the mouse on the inputs will 
+show a tooltip with additional information:
 
+* Authentication Configuration
 * Boolean
+* Color
+* Connection Name
+* Coordinate Operation
 * CRS
+* Database Schema
+* Database Table
+* Datetime
 * Distance
 * Enum
 * Expression
 * Extent
+* Fields Aggregate
 * Fields Mapper
 * File/Folder
 * Map Layer
+* Map Theme
 * Matrix
 * Multiple Input
 * Number
 * Point
+* Print Layout
+* Print Layout Item
 * Range
 * Raster Band
 * Raster Layer
+* Scale
 * String
 * Vector Features
 * Vector Field
 * Vector Layer
+* Vector Tile Writer Layers
 
 When double-clicking on an element, a dialog is shown that lets
 you define its characteristics.
