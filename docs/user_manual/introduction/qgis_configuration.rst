@@ -952,27 +952,6 @@ For each filter, you can customize the filter, set whether it is enabled by defa
 The set of default locator filters can be extended by plugins, eg for OSM
 nominatim searches, direct database searching, layer catalog searches.
 
-The locator search bar can be activated pressing :kbd:`Ctrl+K`. Type your text
-to perform a search. By default, results are returned for all enabled locator
-filters but you can limit the search to a certain filter by prefixing your
-text with the locator filter prefix, ie. typing ``l cad`` will return only the
-layers whose name contains ``cad``. Click on the result to execute the
-corresponding action, depending on the type of item.
-
-Searching is handled using threads, so that results always become available as
-quickly as possible, regardless of whether any slow search filters may be
-installed. They also appear as soon as each result is encountered by each
-filter, which means that e.g. a file search filter will show results one by one
-as the file tree is scanned. This ensures that the UI is always responsive even
-if a very slow search filter is present (e.g. one which uses an online service).
-
-.. tip:: **Quick access to the locator's configurations**
-
-  Click on the |search| icon inside the locator widget on the status bar to
-  display the list of filters you can use and a :guilabel:`Configure` entry that
-  opens the :guilabel:`Locator` tab of the :menuselection:`Settings -->
-  Options...` menu.
-
 
 .. _figure_locator_settings:
 

@@ -2513,13 +2513,36 @@ manage the map view.
 .. _`locator_bar`:
 
 On the left side of the status bar, the locator bar, a quick search
-widget, helps you find and run any feature or options in QGIS.
-Simply type text associated with the item you are looking for (name,
-tag, keyword...) and you get a list that updates as you write.
-You can also limit the search scope using
-:ref:`locator filters <locator_options>`.
-Click the |search| button to select any of them and press the
-:guilabel:`Configure` entry for global settings.
+widget, helps you find and run any feature or options in QGIS:
+
+#. Click in the text widget to activate the locator search bar or press
+   :kbd:`Ctrl+K`.
+#. Type associated with the item you are looking for (name, tag, keyword...).
+   By default, results are returned for the enabled locator filters but
+   you can limit the search to a certain scope by prefixing your text
+   with the :ref:`locator filters <locator_options>` prefix,
+   ie. typing ``l cad`` will return only the layers whose name contains ``cad``.
+
+   The filter can also be selected with a double-click in the menu that shows
+   when accessing the locator widget.
+
+#. Click on a result to execute the corresponding action, depending on the type
+   of item.
+
+Searching is handled using threads, so that results always become available as
+quickly as possible, regardless of whether any slow search filters may be
+installed. They also appear as soon as each result is encountered by each
+filter, which means that e.g. a file search filter will show results one by one
+as the file tree is scanned. This ensures that the UI is always responsive even
+if a very slow search filter is present (e.g. one which uses an online service).
+
+.. tip:: **Quick access to the locator's configurations**
+
+  Click on the |search| icon inside the locator widget on the status bar to
+  display the list of filters you can use and a :guilabel:`Configure` entry that
+  opens the :guilabel:`Locator` tab of the :menuselection:`Settings -->
+  Options...` menu.
+
 
 In the area next to the locator bar, a summary of actions you've
 carried out will be shown when needed  (such as selecting features in
