@@ -15,22 +15,24 @@ investigation in the Cape Peninsula is: south of Melkbosstrand, west of Strand.
 Botanists have provided you with the following preferences exhibited by the
 species in question:
 
-* It grows on east facing slopes.
+* It grows on east-facing slopes.
 * It grows on slopes with a gradient between 15% and 60%.
 * It grows in areas that have a total annual rainfall of > 1000 mm.
 * It will only be found at least 250 m away from any human settlement.
-* The area of vegetation in which it occurs should be at least 6000m^2 in area.
+* The area of vegetation in which it occurs should be at least 6000 m^2 in area.
 
 As a student at the University, you have agreed to search for the plant in four different 
-suitable areas of land.  You want those four areas to be the ones that are to the University 
-of Cape Town where you live. Use your GIS skills to determine where you should look.
+suitable areas of land.  You want those four suitable areas to be the ones that are closest 
+to the University of Cape Town where you live. Use your GIS skills to determine where you 
+should look.
 
 Solution Outline
 -------------------------------------------------------------------------------
 
 The data for this exercise can be found in the
 :file:`exercise_data/more_analysis` folder.
-You are going to find the candidate area that is closest to a house of your choice.
+You are going to find the four suitable areas that are closest to the University
+of Cape Town.
 The solution will involve:
 
 #. analysing the DEM to find the east facing slopes and the slopes with the
@@ -84,7 +86,7 @@ For vectors...
    the file path in this field manually, should you wish to do so.
 
 #. Click :guilabel:`Add`. The vector layer will load in your map. Its color is
-   automatically assigned. It will be changed later.
+   automatically assigned. You will change it later.
 #. Rename the layer to :guilabel:`Streets`.
 
    #. Right-click on it in the :guilabel:`Layers` panel (by default, the pane along
@@ -115,7 +117,8 @@ Changing the layer order
 -------------------------------------------------------------------------------
 
 #. In the :guilabel:`Layers` panel, click and drag layers up and down to change
-   the order they appear in on the map so that you can see all of the layers.
+   the order they appear in on the map so that you can see as many of the layers
+   as possible.
 
 Now that all the data is loaded and properly visible, the analysis can begin.
 It is best if the clipping operation is done first. This is so that no
@@ -133,26 +136,23 @@ Clip the Rasters
 #. :guilabel:`Districts` must be on top so that they are visible.
 #. Open the clipping dialog by selecting the menu item :menuselection:`Raster
    --> Extraction --> Clip Raster by Mask Layer`.
-#. In the :guilabel:`Input file` dropdown list, select the
-   :guilabel:`DEM` layer.
-#. In the :guilabel:`Mask layer` dropdown list, select the
-   :guilabel:`Districts` layer.
-#. Scroll down and specify an output location in the :guilabel:`Clipped (mask)` text field by
-   clicking the :guilabel:`...` button.
+#. In the :guilabel:`Input file` dropdown list, select the :guilabel:`DEM` layer.
+#. In the :guilabel:`Mask layer` dropdown list, select the :guilabel:`Districts` layer.
+#. Scroll down and specify an output location in the :guilabel:`Clipped (mask)` 
+   text field by clicking the :guilabel:`...` button.
 #. Navigate to your :file:`Rasterprac` directory.
 #. Enter :file:`DEM_clipped` as your file name.
 #. Save the file. 
 #. Make sure the :guilabel:`Open output file after running algorithm` box is checked
 #. Click :guilabel:`Run`.
 #. After the clipping operation is completed, DO NOT CLOSE the
-   :guilabel:`Clip by Mask Layer` dialog box. (Doing so would cause you to lose the clipping
-   area that you have already defined.)
+   :guilabel:`Clip by Mask Layer` dialog box, yet. 
 #. Select the :guilabel:`Rainfall` raster in the :guilabel:`Input file`
    dropdown list and save your output as :file:`Rainfall_clipped`.
 #. Do not change any other options. Leave everything the same and click
    :guilabel:`Run`.
 #. After the second clipping operation has completed, you may close the
-   :guilabel:`Clip by Mask Layer` dialog.
+   :guilabel:`Clip Raster by Mask Layer` dialog.
 #. Save the map.
 
 In order to properly see what's going on, the symbology for the layers needs to
@@ -164,8 +164,7 @@ Changing the symbology of vector layers
 #. In the :guilabel:`Layers` panel, right-click on the :guilabel:`Streets` layer.
 #. Select :guilabel:`Properties` from the menu that appears.
 #. Switch to the :guilabel:`Symbology` tab in the dialog that appears.
-#. Click on the button labelled :guilabel:`Change`, with a square showing the
-   current color of the :guilabel:`Streets` layer.
+#. Click on the :guilabel:`Color` dropdown.
 #. Select a new color in the dialog that appears.
 #. Click :guilabel:`OK`.
 #. Click :guilabel:`OK` again in the :guilabel:`Layer Properties` dialog. This
@@ -214,21 +213,20 @@ written for this purpose.
 Create the hillshade
 -------------------------------------------------------------------------------
 
-#. In the :guilabel:`Layers` panel, ensure that the :guilabel:`DEM_clipped` is the active
-   layer (i.e., it is highlighted by having been clicked on).
+#. In the :guilabel:`Layers` panel, ensure that the :guilabel:`DEM_clipped` is the 
+   active layer (i.e., it is highlighted by having been clicked on).
 #. Click on the :menuselection:`Raster --> Analysis --> Hillshade` menu
    item to open the :guilabel:`Hillshade` dialog.
 #. Scroll down to :guilabel:`Hillshade` and save the output in your :file:`Rasterprac`
    directory as :file:`hillshade`. 
-#. Check the :guilabel:`Open output file after running algorithm` box.
+#. Make sure that the :guilabel:`Open output file after running algorithm` box is checked.
 #. Click :guilabel:`Run`.
 #. Wait for it to finish processing.
 
-The new :guilabel:`hillshade` layer has appeared in your :guilabel:`Layers
-list`.
+The new :guilabel:`hillshade` layer has appeared in your :guilabel:`Layers` panel.
 
-#. Right-click on the :guilabel:`hillshade` layer in your :guilabel:`Layers
-   list` and bring up the :guilabel:`Properties` dialog.
+#. Right-click on the :guilabel:`hillshade` layer in your :guilabel:`Layers` panel
+   and bring up the :guilabel:`Properties` dialog.
 #. Click on the :guilabel:`Transparency` tab and set the transparency slider to
    ``80%``.
 #. Click :guilabel:`Run` on the dialog.
@@ -242,9 +240,9 @@ Slope
 #. Click on the menu item :menuselection:`Raster --> Analysis --> Slope`.
 #. Select the the clipped DEM as the input layer.
 #. Click the :guilabel:`Slope expressed as percent instead of degrees` box. Slope 
-   can be expressed as a percent on in degrees.  Our criteria suggest that the plant 
-   grows on slopes with a gradient between 15% and 60%. So we need to make sure to our 
-   slope data is expressed as a percent.
+   can be expressed in different units (percent or degrees).  Our criteria suggest 
+   that the plant of interest grows on slopes with a gradient between 15% and 60%. 
+   So we need to make sure to our slope data is expressed as a percent.
 #. Specify an appropriate file name and location for your output.
 #. Make sure the :guilabel:`Open output file after running algorithm` box is checked.
 #. Click :guilabel:`Run`.
@@ -305,8 +303,8 @@ Now that you have all three criteria each in separate rasters, you need to
 combine them to see which areas satisfy all the criteria. To do so, the rasters
 will be multiplied with each other. When this happens, all overlapping pixels
 with a value of ``1`` will retain the value of ``1`` (i.e. the location meets 
-the criteria), but if a pixel has the value of ``0`` (i.e. the location does not 
-meet the criteria), in any of the three rasters, then it will be ``0`` in
+the criteria), but if a pixel in any of the three rasters has the value of ``0`` 
+(i.e. the location does not meet the criteria), then it will be ``0`` in
 the result. In this way, the result will contain only the overlapping areas
 that meet all of the appropriate criteria.
     
@@ -329,7 +327,7 @@ Combining rasters
 #. Save the map.
 
 The next criterion that needs to be satisfied is that the area must be 
-``250m`` away fromurban areas. We will satisfy this requirement by ensuring 
+``250m`` away from urban areas. We will satisfy this requirement by ensuring 
 that the areas we compute are ``250m`` or more from the edge of a rural area. 
 Hence, we need to find all rural areas first.
 
@@ -371,9 +369,9 @@ Creating a negative buffer
 #. In the dialog that appears, select the :guilabel:`rural` layer as
    your input vector layer (:guilabel:`Selected features only` should not be
    checked).
-#. In :guilabel:`Distance` and enter the value ``-250``
-   into the associated field; the negative value means that the buffer must be
-   an internal buffer.  Make sure that the units are meters in the dropdown menu.
+#. In :guilabel:`Distance` and enter the value ``-250``into the associated field; 
+   the negative value means that the buffer must be an internal buffer.  
+   Make sure that the units are meters in the dropdown menu.
 #. Check the :guilabel:`Dissolve result` box.
 #. In :guilabel:`Buffered`, set the output file to the :file:`Rasterprac` directory.
 #. Name the output file :file:`rural_buffer.gpkg`.
@@ -518,12 +516,12 @@ Digitize the University of Cape Town
 #. Hide all layers except the new :guilabel:`university` layer and the :guilabel:`streets` 
    layer.
    
-Look up the location of the University of Cape Town.  Given Cape Town's unique topography,
-the university is in a very recognizable location.  Take note of where it is located, and 
-what is nearby.
+Using your internet browser, look up the location of the University of Cape Town.  Given 
+Cape Town's unique topography, the university is in a very recognizable location.  
+Before you return to QGIS, take note of where the university is located, and what is nearby.
    
-#. Ensure that the :guilabel:`university` layer is highlighted in the :guilabel:`Layers` 
-   panel.
+#. Ensure that the :guilabel:`Streets` layer clicked on, and that the :guilabel:`university`
+   layer is highlighted in the :guilabel:`Layers` panel.
 #. Navigate to the :menuselection:`View > Toolbars` menu item and ensure that
    :guilabel:`Digitizing` is selected. You should then see a toolbar icon with a
    pencil on it. This is the :guilabel:`Toggle editing` button.
@@ -540,7 +538,7 @@ what is nearby.
 #. Save the map.
 
 Now you will need to find the centroids ("centers of mass") for the suitable area
-polygons in order to decide which areas are closest to the University of Cape Town.
+polygons in order to decide which four areas are closest to the University of Cape Town.
 
 Calculate polygon centroids
 -------------------------------------------------------------------------------
@@ -565,8 +563,8 @@ Calculate which centroids are closest to the University of Cape Town
 #. The output matrix type should be the default :guilabel:`Linear (N*k x 3) distance matrix`.
 #. Set an appropriate Distance matrix output location and name.
 #. Click :guilabel:`Run`.
-#. Open the attribute table of the new layer. Note which target ID is associated with the shortest
-   :guilabel:`Distance`. There may be more than one at the same distance.
+#. Open the attribute table of the new layer. Note which target IDs are associated with the shortest
+   :guilabel:`Distance`. We want to identify the four points that are closest to the University of Cape Town.
 #. Build a filter in QGIS to select only the four points that are closest to the University of Cape 
    Town.
 
