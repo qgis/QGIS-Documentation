@@ -266,7 +266,8 @@ Reclassifying rasters
 
 In the :guilabel:`Raster bands` list on the left, you will see all the raster
 layers in your :guilabel:`Layers` panel. If your Slope layer is called
-:guilabel:`slope`, it will be listed as :guilabel:`slope@1`. Indicating band 1 of the slope raster.
+:guilabel:`slope`, it will be listed as :guilabel:`slope@1`. Indicating band 1 
+of the slope raster.
 
 The slope needs to be between ``15`` and ``60`` percent. Everything less
 than ``15`` or greater than ``60`` must therefore be excluded.
@@ -366,35 +367,37 @@ Creating a negative buffer
 -------------------------------------------------------------------------------
 
 #. Click the menu item :menuselection:`Vector --> Geoprocessing Tools -->
-   Buffer(s)`.
-#. In the dialog that appears, select the :guilabel:`rural_dissolve` layer as
-   your input vector layer (:guilabel:`Use only selected features` should not be
+   Buffer`.
+#. In the dialog that appears, select the :guilabel:`rural` layer as
+   your input vector layer (:guilabel:`Selected features only` should not be
    checked).
-#. Select the :guilabel:`Buffer distance` button and enter the value ``-250``
+#. In :guilabel:`Distance` and enter the value ``-250``
    into the associated field; the negative value means that the buffer must be
-   an internal buffer.
-#. Check the :guilabel:`Dissolve buffer results` box.
-#. Set the output file to the same directory as the other rural vector files.
-#. Name the output file :file:`rural_buffer.shp`.
+   an internal buffer.  Make sure that the units are meters in the dropdown menu.
+#. Check the :guilabel:`Dissolve result` box.
+#. In :guilabel:`Buffered`, set the output file to the :file:`Rasterprac` directory.
+#. Name the output file :file:`rural_buffer.gpkg`.
 #. Click :guilabel:`Save`.
-#. Click :guilabel:`OK` and wait for the processing to complete.
-#. Select :guilabel:`Yes` on the dialog that appears.
-#. Close the :guilabel:`Buffer` dialog.
-#. Remove the :guilabel:`rural_dissolve` layer.
+#. Click :guilabel:`Run` and wait for the processing to complete.
+#. Close the :guilabel:`Buffer` dialog.  Make sure that your buffer worked correctly 
+   by noting how the :guilabel:`rural_buffer` layer is different than the :guilabel:`rural` 
+   layer. You may need to change the drawing order in order to observe the difference.
+#. Remove the :guilabel:`rural` layer.
 #. Save the map.
 
-
-To get the final result, you need to select the areas that are greater than
-``6000m^2``. However, computing these areas accurately is only possible for
-a vector layer, so you will need to vectorize the raster.
+Now, you need to combine your :guilabel:`rural_buffer` vector layer with the 
+:guilabel:`aspect_slope_rainfall` raster.  To combine them, we will need to change 
+the data format of one of the layers. In this case, you will vectorize the raster.
 
 Vectorizing the raster
 -------------------------------------------------------------------------------
 
-#. Click on the menu item :menuselection:`Raster --> Conversion --> Polygonize`.
-#. Select the :file:`cross_product.tif` raster.
-#. Set the output location to :file:`Rasterprac`.
-#. Name the file :file:`candidate_areas.shp`.
+#. Click on the menu item 
+   :menuselection:`Raster --> Conversion --> Polygonize(Raster to  Vector`.
+#. For the Input layer, select the :file:`aspect_slope_rainfall` raster.
+#. Save the output. Under :guilabel:`Vectorized`, select :guilabel:`Save file as`. 
+   Set the location to:file:`Rasterprac` and name the file
+   :file:`aspect_slope_rainfall_all.gpkg`.
 #. Ensure that :guilabel:`Open output file after running algorithm` is checked.
 #. Click :guilabel:`Run`.
 #. Close the dialog when processing is complete.
@@ -402,7 +405,7 @@ Vectorizing the raster
 All areas of the raster have been vectorized, so you need to select only the
 areas that have a value of ``1``.
 
-#. Open the :guilabel:`Query` dialog for the new vector.
+#. Open the :guilabel:`Filter` dialog for the new vector.
 #. Build this query:
 
    ::
@@ -410,179 +413,52 @@ areas that have a value of ``1``.
     "DN" = 1
 
 #. Click :guilabel:`OK`.
-#. Create a new vector file from the results by saving the
-   :guilabel:`candidate_areas` vector after the query is complete (and only the
-   areas with a value of ``1`` are visible). Use the :guilabel:`Save as...`
-   function in the layer's right-click menu for this.
+#. After you are sure the query is complete (and only the areas that meet all three criteria,
+   i.e. with a value of ``1`` are visible), create a new vector file from the results by using
+   the :guilabel:`Export --> Save file as...` function in the layer's right-click menu for this.
 #. Save the file in the :file:`Rasterprac` directory.
-#. Name the file :guilabel:`candidate_areas_only.shp`.
+#. Name the file :file:`aspect_slope_rainfall_1.gpkg`.
+#. Remove the :guilabel:`aspect_slope_rainfall_all` layer from your map.
 #. Save your map.
 
+When we use an algorithm to vectorize a raster, sometimes the algorithm yields what is
+called "Invalid geometry", i.e. there are empty polygons, or polygons with mistakes in them, that
+will be difficult to analyze in the future.  So, we need to use the "Fix Geometry" tool.
 
-
-
-Finding rural areas
+Fixing geometry
 -------------------------------------------------------------------------------
 
-#. Hide all layers in the :guilabel:`Layers` panel.
-#. Unhide the :guilabel:`Zoning` vector layer.
-#. Right-click on it and bring up the :guilabel:`Query` dialog.
-#. Build the following query:
-
-   ::
-
-    "Gen_Zoning" = 'Rural'
-
-   See the earlier instructions for building the :guilabel:`Streets` query if
-   you get stuck.
-#. When you're done, close the :guilabel:`Query` dialog.
-
-You should see a collection of polygons from the :guilabel:`Zoning` layer. You
-will need to save these to a new layer file.
-
-#. On the right-click menu for :guilabel:`Zoning`, select :guilabel:`Save
-   as...`.
-#. Save your layer under the :guilabel:`Zoning` directory.
-#. Name the output file :file:`rural.shp`.
-#. Click :guilabel:`OK`.
-#. Add the layer to your map.
-#. Click the menu item :menuselection:`Vector --> Geoprocessing Tools -->
-   Dissolve`.
-#. Select the :guilabel:`rural` layer as your input vector layer, while leaving
-   the :guilabel:`Use only selected features` box unchecked.
-#. Leave empty the :guilabel:`Dissolve field(s)` option to combine all selected
-   features in a single one.
-#. Save your layer under the :guilabel:`Zoning` directory.
-#. Check the :guilabel:`Open output file after running algorithm` box.
+#. In the :guilabel:`Processing Toolbox`, search for "Fix geometries", and open the dialog box.
+#. For the Input layer, select the :guilabel:`aspect_slope_rainfall_1`.
+#. Under :guilabel:`Fixed geometries`, select :guilabel:`Save file as`. and save the output
+   to :file:`Rasterprac` and name the file :file:`fixed_aspect_slope_rainfall.gpkg`.
+#. Ensure that :guilabel:`Open output file after running algorithm` is checked.
 #. Click :guilabel:`Run`.
-#. Close the :guilabel:`Dissolve` dialog.
-#. Remove the :guilabel:`rural` and :guilabel:`Zoning` layers.
-#. Save the map.
+#. Close the dialog when processing is complete.
 
-Now you need to exclude the areas that are within ``250m`` from the edge of
-the rural areas. Do this by creating a negative buffer, as explained below.
+Now that you have vectorized the raster, and fixed the resulting geometry, you can combine the 
+aspect, slope, and rainfall criteria, with the distance from human settlement criteria by finding 
+the intersection of the :guilabel:`fixed_aspect_slope_rainfall` layer and the 
+:guilabel:`rural_buffer` layer.
 
-Creating a negative buffer
+Determining the Intersection of vectors
 -------------------------------------------------------------------------------
 
 #. Click the menu item :menuselection:`Vector --> Geoprocessing Tools -->
-   Buffer(s)`.
-#. In the dialog that appears, select the :guilabel:`rural_dissolve` layer as
-   your input vector layer (:guilabel:`Use only selected features` should not be
-   checked).
-#. Select the :guilabel:`Buffer distance` button and enter the value ``-250``
-   into the associated field; the negative value means that the buffer must be
-   an internal buffer.
-#. Check the :guilabel:`Dissolve buffer results` box.
-#. Set the output file to the same directory as the other rural vector files.
-#. Name the output file :file:`rural_buffer.shp`.
+   Intersection`.
+#. In the dialog that appears, for your Input layer, select the :guilabel:`rural_buffer` layer.
+#. For the Overlay layer Select the :guilabel:`fixed_aspect_slope_rainfall` layer.
+#. In :guilabel:`Insersection`, set the output file to the :file:`Rasterprac` directory.
+#. Name the output file :file:`rural_aspect_slope_rainfall.gpkg`.
 #. Click :guilabel:`Save`.
-#. Click :guilabel:`OK` and wait for the processing to complete.
-#. Select :guilabel:`Yes` on the dialog that appears.
-#. Close the :guilabel:`Buffer` dialog.
-#. Remove the :guilabel:`rural_dissolve` layer.
+#. Click :guilabel:`Run` and wait for the processing to complete.
+#. Close the :guilabel:`Intersection` dialog.  Make sure that your intersection worked correctly 
+   by noting that only the overlapping areas remain. 
 #. Save the map.
 
-In order to incorporate the rural zones into the same analysis with the three
-existing rasters, it will need to be rasterized as well. But in order for the
-rasters to be compatible for analysis, they will need to be the same size.
-Therefore, before you can rasterize, you'll need to clip the vector to the same
-area as the three rasters. A vector can only be clipped by another vector, so
-you will first need to create a bounding box polygon the same size as the
-rasters.
-
-Creating a bounding box vector
--------------------------------------------------------------------------------
-
-#. Click on the menu item :menuselection:`Layer --> New --> New Shapefile Layer...`.
-#. Under the :guilabel:`Type` heading, select the :guilabel:`Polygon` button.
-#. Click :guilabel:`Specify CRS` and set the coordinate reference system
-   :guilabel:`WGS 84 / UTM zone 33S : EPSG:32733`.
-#. Click OK.
-#. Click :guilabel:`OK` on the :guilabel:`New Vector Layer` dialog as well.
-#. Save the vector in the :guilabel:`Zoning` directory.
-#. Name the output file :file:`bbox.shp`.
-#. Hide all layers except the new :guilabel:`bbox` layer and one of the
-   reclassified rasters.
-#. Ensure that the :guilabel:`bbox` layer is highlighted in the
-   :guilabel:`Layers` panel.
-#. Navigate to the :menuselection:`View > Toolbars` menu item and ensure that
-   :guilabel:`Digitizing` is selected. You should then see a toolbar icon with a
-   pencil or koki on it. This is the :guilabel:`Toggle editing` button.
-#. Click the :guilabel:`Toggle editing` button to enter *edit mode*. This allows
-   you to edit a vector layer.
-#. Click the :guilabel:`Add feature` button, which should be nearby the
-   :guilabel:`Toggle editing` button. It may be hidden behind a double arrow
-   button; if so, click the double arrows to show the :guilabel:`Digitizing`
-   toolbar's hidden buttons.
-#. With the :guilabel:`Add feature` tool activated, left-click on the corners of
-   the raster. You may need to zoom in with the mouse wheel to ensure that it is
-   accurate. To pan across the map in this mode, click and drag in the map with
-   the middle mouse button or mouse wheel.
-#. For the fourth and final point, right-click to finalize the shape.
-#. Enter any arbitrary number for the shape ID.
-#. Click :guilabel:`OK`.
-#. Click the :guilabel:`Save edits` button.
-#. Click the :guilabel:`Toggle editing` button to stop your editing session.
-#. Save the map.
-
-Now that you have a bounding box, you can use it to clip the rural buffer
-layer.
-
-Clipping a vector layer
--------------------------------------------------------------------------------
-
-#. Ensure that only the :guilabel:`bbox` and :guilabel:`rural_buffer` layers are
-   visible, with the latter on top.
-#. Click the menu item :menuselection:`Vector > Geoprocessing Tools > Clip`.
-#. In the dialog that appears, set the input vector layer to
-   :guilabel:`rural_buffer` and the clip layer to :guilabel:`bbox`, with both
-   :guilabel:`Use only selected features` boxes unchecked.
-#. Put the output file under the :guilabel:`Zoning` directory.
-#. Name the output file :guilabel:`rural_clipped`.
-#. Click :guilabel:`OK`.
-#. When prompted to add the layer to the TOC, click :guilabel:`Yes`.
-#. Close the dialog.
-#. Compare the three vectors and see the results for yourself.
-#. Remove the :guilabel:`bbox` and :guilabel:`rural_buffer` layers, then save
-   your map.
-
-Now it's ready to be rasterized.
-
-Rasterizing a vector layer
--------------------------------------------------------------------------------
-
-You'll need to specify a pixel size for a new raster that you create, so first
-you'll need to know the size of one of your existing rasters.
-
-#. Open the :guilabel:`Properties` dialog of any of the three existing rasters.
-#. Switch to the :guilabel:`Metadata` tab.
-#. Make a note of the :guilabel:`X` and :guilabel:`Y` values under the heading
-   :guilabel:`Dimensions` in the Metadata table.
-#. Close the :guilabel:`Properties` dialog.
-#. Click on the :menuselection:`Raster --> Conversion --> Rasterize` menu item.
-   You may receive a warning about a dataset being unsupported. Click it away
-   and ignore it.
-#. Select :guilabel:`rural_clipped` as your input layer.
-#. Set an output file location inside the :guilabel:`Zoning` directory.
-#. Name the output file :file:`rural_raster.tif`.
-#. Check the :guilabel:`New size` box and enter the :guilabel:`X` and
-   :guilabel:`Y` values you made a note of earlier.
-#. Check the :guilabel:`Load into canvas` box.
-#. Click the pencil icon next to the text field which shows the command that
-   will be run. At the end of the existing text, add a space and then the text
-   ``-burn 1``. This tells the Rasterize function to "burn" the existing
-   vector into the new raster and give the areas covered by the vector the new
-   value of ``1`` (as opposed to the rest of the image, which will
-   automatically be ``0``).
-#. Click :guilabel:`OK`.
-#. The new raster should show up in your map once it has been computed.
-#. The new raster will look like a grey rectangle – you may change the display
-   style as you did for the reclassified rasters.
-#. Save your map.
-
-
-
+The last criteria on the list is that the area must be greater than ``6000m^2``. 
+You will now calculate the polygon areas in order to identify the areas that are 
+the appropriate size for this project. 
 
 Calculating the area for each polygon
 -------------------------------------------------------------------------------
