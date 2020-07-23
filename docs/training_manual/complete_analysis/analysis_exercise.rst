@@ -21,9 +21,9 @@ species in question:
 * It will only be found at least 250 m away from any human settlement.
 * The area of vegetation in which it occurs should be at least 6000m2 in area.
 
-As a volunteer for Cape Nature, you have agreed to search for the plant on the
-closest suitable piece of land to your house. Use your GIS skills to determine
-where you should go to look.
+As a student at the University, you have agreed to search for the plant on the
+closest suitable piece of land to the University of Cape Town. Use your GIS skills 
+to determine where you should go to look.
 
 Solution Outline
 -------------------------------------------------------------------------------
@@ -465,14 +465,13 @@ Calculating the area for each polygon
 
 #. Open the new vector layer's right-click menu.
 #. Select :guilabel:`Open attribute table`.
-#. Click the :guilabel:`Toggle editing mode` button along the bottom of the
+#. Click the :guilabel:`Toggle editing mode` button in the top left corner of the
    table, or press :kbd:`Ctrl+E`.
-#. Click the :guilabel:`Open field calculator` button along the bottom of the
-   table, or press :kbd:`Ctrl+I`.
-#. Under the :guilabel:`New field` heading in the dialog that appears, enter the
-   field name ``area``. The output field type should be an integer, and the
-   field width should be ``10``.
-#. In :guilabel:`Field calculator expression`, type:
+#. Click the :guilabel:`Open field calculator` button in the toolbar along the top 
+   of the table, or press :kbd:`Ctrl+I`.
+#. In the dialog that appears, make sure that the :guilabel:`Create new field` box is checked, enter the
+   Output field name ``area``. The output field type should be a Whole number (integer).
+#. In :guilabel:`Expression`, type:
 
    ::
 
@@ -483,14 +482,7 @@ Calculating the area for each polygon
    :guilabel:`area`) with the computed value.
 
 #. Click :guilabel:`OK`.
-#. Do the same thing for another new field called :guilabel:`id`. In
-   :guilabel:`Field calculator expression`, type:
 
-   ::
-
-    $id
-
-   This ensures that each polygon has a unique ID for identification purposes.
 #. Click :guilabel:`Toggle editing mode` again, and save your edits if prompted
    to do so.
 
@@ -506,12 +498,14 @@ Now that the areas are known:
 
     "area" > 6000
 
-#. Save the selection as a new vector layer called :file:`solution.shp`.
+#. Save the in the selection in the :file:`Rasterprac` directory as a new vector 
+layer called :file:`suitable_areas.gpkg`.
 
-You now have your solution areas, from which you will pick the one nearest to
-your house.
+You now have the suitable areas that meet all of the habitat criteria for the 
+rare fynbos plant, from which you will pick the one nearest to the University of 
+Cape Town.
 
-Digitize your house
+Digitize the University of Cape Town
 -------------------------------------------------------------------------------
 
 #. Create a new vector layer as before, but this time, select the
