@@ -337,7 +337,11 @@ Finding rural areas
 
 #. Hide all layers in the :guilabel:`Layers` panel.
 #. Unhide the :guilabel:`Zoning` vector layer.
-#. Right-click on it and bring up the :guilabel:`Filter` dialog.
+#. Right-click on it and bring up the :guilabel:`Attribute Table` dialog.
+   Note the many different ways that the land is zoned here.  We want to isolate
+   the rural areas.  Close the Attribute table.
+#. Right-click on the :guilabel:`Zoning` vector layer again and bring up the 
+   :guilabel:`Filter` dialog.
 #. Build the following query:
 
    ::
