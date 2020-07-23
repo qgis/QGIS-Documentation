@@ -17,7 +17,7 @@ species in question:
 
 * It grows on east facing slopes.
 * It grows on slopes with a gradient between 15% and 60%.
-* It grows in areas that have a total annual rainfall of > 1200 mm.
+* It grows in areas that have a total annual rainfall of > 1000 mm.
 * It will only be found at least 250 m away from any human settlement.
 * The area of vegetation in which it occurs should be at least 6000m2 in area.
 
@@ -278,7 +278,7 @@ than ``15`` or greater than ``60`` must therefore be excluded.
 
     ((slope@1 < 15) OR (slope@1 > 60)) = 0
 
-#. Click :guilabel:`Run`.
+#. Click :guilabel:`OK`.
 
 Now find the correct aspect (east-facing: between ``45`` and ``135``
 degrees) using the same approach.
@@ -289,14 +289,25 @@ degrees) using the same approach.
 
     ((aspect@1 < 45) OR (aspect@1 > 135)) = 0
 
-#. Find the correct rainfall (greater than ``1200mm``) the same way. Build
+You will know it worked when all of the east-facing slopes are white 
+in the resulting raster.  (It's almost as if they are being lit by the 
+morning sunlight.)
+
+#. Find the correct rainfall (greater than ``1000mm``) the same way. Build
    the following expression:
 
    ::
 
-    (rainfall@1 < 1200) = 0
+    (rainfall_clipped@1 < 1000) = 0
 
-Now, we can combine all three criteria into one raster.  
+Now that you have all three criteria each in separate rasters, you need to
+combine them to see which areas satisfy all the criteria. To do so, the rasters
+will be multiplied with each other. When this happens, all overlapping pixels
+with a value of ``1`` will retain the value of ``1`` (i.e. the location meets 
+the criteria), but if a pixel has the value of ``0`` (i.e. the location does not 
+meet the criteria), in any of the three rasters, then it will be ``0`` in
+the result. In this way, the result will contain only the overlapping areas
+that meet all of the appropriate criteria.
     
 Combining rasters
 -------------------------------------------------------------------------------
@@ -307,17 +318,67 @@ Combining rasters
 
    ::
 
-    [Rural raster] * [Reclassified aspect] * [Reclassified slope] *
-    [Reclassified rainfall]
+    [aspect45_135] * [slope15_60] * [rainfall_1000]
 
 #. Set the output location to the :file:`Rasterprac` directory.
-#. Name the output raster :file:`cross_product.tif`.
-#. Ensure that the :guilabel:`Open output file after running algorithm` box is
-   checked.
-#. Click :guilabel:`Run`.
-#. Change the symbology of the new raster in the same way as you set the style
-   for the other reclassified rasters.  The new raster now properly displays the
-   areas where all the criteria are satisfied.
+#. Name the output raster :file:`aspect_slope_rainfall.tif`.
+#. Click :guilabel:`OK`.
+#. The new raster now properly displays the areas where all three criteria 
+   are satisfied.
+#. Save the map.
+
+The next criterion that needs to be satisfied is that the area must be 
+``250m`` away fromurban areas. We will satisfy this requirement by ensuring 
+that the areas we compute are ``250m`` or more from the edge of a rural area. 
+Hence, we need to find all rural areas first.
+
+Finding rural areas
+-------------------------------------------------------------------------------
+
+#. Hide all layers in the :guilabel:`Layers` panel.
+#. Unhide the :guilabel:`Zoning` vector layer.
+#. Right-click on it and bring up the :guilabel:`Filter` dialog.
+#. Build the following query:
+
+   ::
+
+    "Gen_Zoning" = 'Rural'
+
+#. Click OK. The query should return 1 result.
+
+You should see the rural polygons from the :guilabel:`Zoning` layer. You
+will need to save these to a new layer file.
+
+#. On the right-click menu for :guilabel:`Zoning`, select :guilabel:`Export --> Save
+   Feature as...`.
+#. Save your layer under the :guilabel:`Rasterprac` directory.
+#. Name the output file :file:`rural.gpkg`.
+#. Save the map.
+
+Now you need to exclude the areas that are within ``250m`` from the edge of
+the rural areas. Do this by creating a negative buffer, as explained below.
+
+Creating a negative buffer
+-------------------------------------------------------------------------------
+
+#. Click the menu item :menuselection:`Vector --> Geoprocessing Tools -->
+   Buffer(s)`.
+#. In the dialog that appears, select the :guilabel:`rural_dissolve` layer as
+   your input vector layer (:guilabel:`Use only selected features` should not be
+   checked).
+#. Select the :guilabel:`Buffer distance` button and enter the value ``-250``
+   into the associated field; the negative value means that the buffer must be
+   an internal buffer.
+#. Check the :guilabel:`Dissolve buffer results` box.
+#. Set the output file to the same directory as the other rural vector files.
+#. Name the output file :file:`rural_buffer.shp`.
+#. Click :guilabel:`Save`.
+#. Click :guilabel:`OK` and wait for the processing to complete.
+#. Select :guilabel:`Yes` on the dialog that appears.
+#. Close the :guilabel:`Buffer` dialog.
+#. Remove the :guilabel:`rural_dissolve` layer.
+#. Save the map.
+
 
 To get the final result, you need to select the areas that are greater than
 ``6000m^2``. However, computing these areas accurately is only possible for
@@ -354,10 +415,7 @@ areas that have a value of ``1``.
 #. Save your map.
 
 
-The only criterion that remains is that the area must be ``250m`` away from
-urban areas. We will satisfy this requirement by ensuring that the areas we
-compute are ``250m`` or more from the edge of a rural area. Hence, we need
-to find all rural areas first.
+
 
 Finding rural areas
 -------------------------------------------------------------------------------
@@ -519,12 +577,7 @@ you'll need to know the size of one of your existing rasters.
    style as you did for the reclassified rasters.
 #. Save your map.
 
-Now that you have all four criteria each in a separate raster, you need to
-combine them to see which areas satisfy all the criteria. To do so, the rasters
-will be multiplied with each other. When this happens, all overlapping pixels
-with a value of ``1`` will retain the value of ``1``, but if a pixel has
-the value of ``0`` in any of the four rasters, then it will be ``0`` in
-the result. In this way, the result will contain only the overlapping areas.
+
 
 
 Calculating the area for each polygon
