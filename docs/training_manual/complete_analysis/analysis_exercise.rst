@@ -51,7 +51,7 @@ Setting up the Map
    or use the :menuselection:`File --> Save As...` menu item.
 #. Save the map in a new directory called :file:`Rasterprac` that you should create
    somewhere on your computer. You will save whatever layers you create in this
-   directory as well.
+   directory as well. Save the map as :file:`your_name_fynbos`
 
    .. it could be worth indicating a real location for this output folder as
     it's later reused in exercises.
@@ -107,8 +107,50 @@ For rasters...
    :file:`DEM/reproject/DEM.tif` and
    :file:`Rainfall/reprojected/rainfall.tif`.
 #. Rename the rainfall raster to ``Rainfall`` (with an initial capital).
-   Initially when you load them, the images will be gray rectangles. Don't
-   worry, this will be changed later.
+#. Save the map.
+
+Changing the layer order
+-------------------------------------------------------------------------------
+
+#. In the :guilabel:`Layers` panel, click and drag layers up and down to change
+   the order they appear in on the map so that you can see all of the layers.
+
+Now that all the data is loaded and properly visible, the analysis can begin.
+It is best if the clipping operation is done first. This is so that no
+processing power is wasted on computing values in areas that aren't going to be
+used anyway.
+
+Clip the Rasters
+-------------------------------------------------------------------------------
+
+#. Load the vector layer :file:`Western_Cape_UTM33S/Western_Cape_UTM33S.shp` into
+   your map.
+#. Rename it to :guilabel:`Districts`.
+#. Ensure that the only layers that are visible are the :guilabel:`DEM`,
+   :guilabel:`Rainfall` and :guilabel:`Districts` layers.
+#. :guilabel:`Districts` must be on top so that they are visible.
+#. Open the clipping dialog by selecting the menu item :menuselection:`Raster
+   --> Extraction --> Clip Raster by Mask Layer`.
+#. In the :guilabel:`Input file` dropdown list, select the
+   :guilabel:`DEM` layer.
+#. In the :guilabel:`Mask layer` dropdown list, select the
+   :guilabel:`Districts` layer.
+#. Scroll down and specify an output location in the :guilabel:`Clipped (mask)` text field by
+   clicking the :guilabel:`...` button.
+#. Navigate to your :file:`Rasterprac` directory.
+#. Enter :file:`DEM_clipped` as your file name.
+#. Save the file. 
+#. Make sure the :guilabel:`Open output file after running algorithm` box is checked
+#. Click :guilabel:`Run`.
+#. After the clipping operation is completed, DO NOT CLOSE the
+   :guilabel:`Clip by Mask Layer` dialog box. (Doing so would cause you to lose the clipping
+   area that you have already defined.)
+#. Select the :guilabel:`Rainfall` raster in the :guilabel:`Input file`
+   dropdown list and save your output as :file:`Rainfall_clipped`.
+#. Do not change any other options. Leave everything the same and click
+   :guilabel:`Run`.
+#. After the second clipping operation has completed, you may close the
+   :guilabel:`Clip by Mask Layer` dialog.
 #. Save the map.
 
 In order to properly see what's going on, the symbology for the layers needs to
@@ -136,121 +178,20 @@ Changing the symbology of raster layers
 
 Raster layer symbology is somewhat different.
 
-#. Open the :guilabel:`Properties` dialog for the :guilabel:`Rainfall` raster.
+#. Open the :guilabel:`Properties` dialog for the :guilabel:`Rainfall_clipped` raster.
 #. Switch to the :guilabel:`Symbology` tab. You'll notice that this dialog is
    very different from the version used for vector layers.
-#. Ensure that the button :guilabel:`Use standard deviation` is selected.
-#. Change the value in the associated box to ``2.00`` (it should be set to
-   ``0.00`` by default).
-#. Under the heading :guilabel:`Contrast enhancement`, change the value of the
-   :guilabel:`Current` dropdown list to :guilabel:`Stretch to MinMax`.
-#. Click :guilabel:`OK`. The "Rainfall" raster, if visible, should change
+#. Open the dropdown "Min/Max Value Settings".
+#. Ensure that the button :guilabel:`Mean +/- standard deviation` is selected.
+#. Make sure that the value in the associated box is ``2.00``.
+#. Under the heading :guilabel:`Contrast enhancement`, make sure it says
+    :guilabel:`Stretch to MinMax`.
+#. Under the heading :guilabel:`Color gradient`, change it to 
+    :guilabel:`White to Black`.
+#. Click :guilabel:`OK`. The :guilabel:`Rainfall_clipped` raster, if visible, should change
    colors, allowing you to see different brightness values for each pixel.
 #. Repeat this process for the DEM, but set the standard deviations used for
    stretching to ``4.00``.
-
-Changing the layer order
--------------------------------------------------------------------------------
-
-#. In the :guilabel:`Layers` panel, click and drag layers up and down to change
-   the order they appear in on the map.
-#. Newer versions of QGIS may have a :guilabel:`Control rendering order`
-   checkbox beneath the :guilabel:`Layers` panel. Ensure that it is checked.
-
-Now that all the data is loaded and properly visible, the analysis can begin.
-It is best if the clipping operation is done first. This is so that no
-processing power is wasted on computing values in areas that aren't going to be
-used anyway.
-
-Find the Correct Districts
--------------------------------------------------------------------------------
-
-#. Load the vector layer :file:`admin_boundaries/Western_Cape_UTM33S.shp` into
-   your map.
-#. Rename it to :guilabel:`Districts`.
-#. Right-click on the :guilabel:`Districts` layer in the :guilabel:`Layers` panel.
-#. In the menu that appears,  select the :guilabel:`Query...` menu item. The
-   :guilabel:`Query Builder` dialog appears.
-
-You will now build a query to select only the following list of districts:
-
-* ``Bellville``
-* ``Cape``
-* ``Goodwood``
-* ``Kuils River``
-* ``Mitchells Plain``
-* ``Simons Town`` and
-* ``Wynberg``.
-
-#. In the :guilabel:`Fields` list, double-click on the :guilabel:`NAME_2`
-   field. It appears in the :guilabel:`SQL where clause` text field below.
-#. Click the :guilabel:`=` button; an ``=`` sign is added to the SQL query.
-#. Click the :guilabel:`All` button below the (currently empty)
-   :guilabel:`Values` list. After a short delay, this will populate the
-   :guilabel:`Values` list with the values of the selected field
-   (:guilabel:`NAME_2`).
-#. Double-click the value :guilabel:`Bellville` in the :guilabel:`Values`
-   list. As before, this will be added to the SQL query.
-
-In order to select more than one district, you'll need to use the
-:guilabel:`OR` boolean operator.
-
-#. Click the :guilabel:`OR` button and it will be added to the SQL query.
-#. Using a process similar to the above, add the following to the existing SQL
-   query:
-
-   ::
-
-    "NAME_2" = 'Cape'
-
-#. Add another :guilabel:`OR` operator, then work your way through the list of
-   districts above in a similar fashion.
-
-   The final query should be
-
-   ::
-
-    "NAME_2" = 'Bellville' OR "NAME_2" = 'Cape' OR "NAME_2" = 'Goodwood' OR
-    "NAME_2" = 'Kuils River' OR "NAME_2" = 'Mitchells Plain' OR "NAME_2" =
-    'Simons Town' OR "NAME_2" = 'Wynberg'
-
-#. Click :guilabel:`OK`. The districts shown in your map are now limited to
-   those in the list above.
-
-Clip the Rasters
--------------------------------------------------------------------------------
-
-Now that you have an area of interest, you can clip the rasters to this area.
-
-#. Ensure that the only layers that are visible are the :guilabel:`DEM`,
-   :guilabel:`Rainfall` and :guilabel:`Districts` layers.
-#. :guilabel:`Districts` must be on top so that they are visible.
-#. Open the clipping dialog by selecting the menu item :menuselection:`Raster
-   --> Extraction --> Clipper`.
-#. In the :guilabel:`Input file (raster)` dropdown list, select the
-   :guilabel:`DEM` layer.
-#. Specify an output location in the :guilabel:`Output file` text field by
-   clicking the :guilabel:`Select...` button.
-#. Navigate to your :file:`Rasterprac` directory.
-#. Enter a file name.
-#. Save the file. Leave the :guilabel:`No data value` checkbox unchecked.
-#. Use the :guilabel:`Extent` clipping mode by ensuring the correct radio button
-   is selected.
-#. Click and drag an area in the canvas, so that the area which includes the
-   districts is selected.
-#. Check the :guilabel:`Open output file after running algorithm` box.
-#. Click :guilabel:`Run`.
-#. After the clipping operation is completed, DO NOT CLOSE the
-   :guilabel:`Clipper` dialog. (Doing so would cause you to lose the clipping
-   area that you have already defined.)
-#. Select the :guilabel:`Rainfall` raster in the :guilabel:`Input file (raster)`
-   dropdown list and choose a different output file name.
-#. Do not change any other options. Do not alter the existing clipping area
-   which you drew previously. Leave everything the same and click
-   :guilabel:`Run`.
-#. After the second clipping operation has completed, you may close the
-   :guilabel:`Clipper` dialog.
-#. Save the map.
 
 Clean up the map
 -------------------------------------------------------------------------------
@@ -261,22 +202,6 @@ Clean up the map
 
    .. note:: This will not remove the data from your storage device, it will
     merely take it out of your map.
-
-#. Deactivate the labels on the :guilabel:`Streets` layer:
-
-   #. Click the :guilabel:`Labeling` button.
-   #. Uncheck the :guilabel:`Label this layer with` box.
-   #. Click :guilabel:`OK`.
-
-#. Show all the :guilabel:`Streets` again:
-
-   #. Right-click on the layer in the :guilabel:`Layers` panel.
-   #. Select :guilabel:`Query`.
-   #. In the :guilabel:`Query` dialog that appears, click the :guilabel:`Clear`
-      button, then click :guilabel:`OK`.
-   #. Wait while the data is loaded. All the streets will now be visible.
-
-#. Change the raster symbology as before (see :ref:`changing_raster_symbology`).
 #. Save the map.
 #. You can now hide the vector layers by unchecking the box next to them in the
    :guilabel:`Layers` panel. This will make the map render faster and will save
@@ -289,12 +214,12 @@ written for this purpose.
 Create the hillshade
 -------------------------------------------------------------------------------
 
-#. In the :guilabel:`Layers` panel, ensure that the :guilabel:`DEM` is the active
+#. In the :guilabel:`Layers` panel, ensure that the :guilabel:`DEM_clipped` is the active
    layer (i.e., it is highlighted by having been clicked on).
 #. Click on the :menuselection:`Raster --> Analysis --> Hillshade` menu
    item to open the :guilabel:`Hillshade` dialog.
-#. Specify an appropriate location for the output layer and call it
-   :guilabel:`hillshade`.
+#. Scroll down to :guilabel:`Hillshade` and specify an appropriate location for the output 
+   layer and save it in your :file:`Rasterprac` directory as :file:`hillshade`. 
 #. Check the :guilabel:`Open output file after running algorithm` box.
 #. Click :guilabel:`Run`.
 #. Wait for it to finish processing.
@@ -308,7 +233,8 @@ list`.
    ``80%``.
 #. Click :guilabel:`Run` on the dialog.
 #. Note the effect when the transparent hillshade is superimposed over the
-   clipped DEM.
+   clipped DEM.  You may have to change the order of your layers, or click off the
+   :guilabel:`rainfall_clipped` layer in order to see the effect.
 
 Slope
 -------------------------------------------------------------------------------
