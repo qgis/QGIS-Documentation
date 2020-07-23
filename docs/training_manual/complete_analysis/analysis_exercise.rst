@@ -44,7 +44,9 @@ Setting up the Map
 -------------------------------------------------------------------------------
 
 #. Click on the "EPSG" button in the extreme lower right corner of the
-   screen. Under the :guilabel:`CRS` tab of the screen that appears, use the "Filter" tool to search for :guilabel:`WGS 84 / UTM zone 33S`. Select the entry :guilabel:`WGS 84 / UTM zone 33S` (with the EPSG code ``32733``). 
+   screen. Under the :guilabel:`CRS` tab of the screen that appears, use 
+   the "Filter" tool to search for :guilabel:`WGS 84 / UTM zone 33S`. Select 
+   the entry :guilabel:`WGS 84 / UTM zone 33S` (with the EPSG code ``32733``). 
 #. Click :guilabel:`OK`. The map is now in the ``UTM33S`` coordinate
    reference system.
 #. Save the map by clicking on the :guilabel:`Save Project` toolbar button,
@@ -184,10 +186,8 @@ Raster layer symbology is somewhat different.
 #. Open the dropdown "Min/Max Value Settings".
 #. Ensure that the button :guilabel:`Mean +/- standard deviation` is selected.
 #. Make sure that the value in the associated box is ``2.00``.
-#. Under the heading :guilabel:`Contrast enhancement`, make sure it says
-    :guilabel:`Stretch to MinMax`.
-#. Under the heading :guilabel:`Color gradient`, change it to 
-    :guilabel:`White to Black`.
+#. For :guilabel:`Contrast enhancement`, make sure it says :guilabel:`Stretch to MinMax`.
+#. For :guilabel:`Color gradient`, change it to :guilabel:`White to Black`.
 #. Click :guilabel:`OK`. The :guilabel:`Rainfall_clipped` raster, if visible, should change
    colors, allowing you to see different brightness values for each pixel.
 #. Repeat this process for the DEM, but set the standard deviations used for
@@ -218,8 +218,8 @@ Create the hillshade
    layer (i.e., it is highlighted by having been clicked on).
 #. Click on the :menuselection:`Raster --> Analysis --> Hillshade` menu
    item to open the :guilabel:`Hillshade` dialog.
-#. Scroll down to :guilabel:`Hillshade` and specify an appropriate location for the output 
-   layer and save it in your :file:`Rasterprac` directory as :file:`hillshade`. 
+#. Scroll down to :guilabel:`Hillshade` and save the output in your :file:`Rasterprac`
+   directory as :file:`hillshade`. 
 #. Check the :guilabel:`Open output file after running algorithm` box.
 #. Click :guilabel:`Run`.
 #. Wait for it to finish processing.
@@ -239,29 +239,21 @@ list`.
 Slope
 -------------------------------------------------------------------------------
 
-#. Click on the menu item :menuselection:`Raster --> Terrain analysis`.
-#. Select the :guilabel:`Slope` analysis type, with the clipped DEM as the input
-   layer.
-#. Specify an appropriate file name and location for output purposes.
-#. Check the :guilabel:`Open output file after running algorithm` box.
+#. Click on the menu item :menuselection:`Raster --> Analysis --> Slope`.
+#. Select the the clipped DEM as the input layer.
+#. Click the :guilabel:`Slope expressed as percent instead of degrees` box. Slope 
+   can be expressed as a percent on in degrees.  Our criteria suggest that the plant 
+   grows on slopes with a gradient between 15% and 60%. So we need to make sure to our 
+   slope data is expressed as a percent.
+#. Specify an appropriate file name and location for your output.
+#. Make sure the :guilabel:`Open output file after running algorithm` box is checked.
 #. Click :guilabel:`Run`.
-
-The slope image has been calculated and added to the map. However, as usual it
-is just a gray rectangle. To properly see what's going on, change the symbology
-as follows.
-
-#. Open the layer :guilabel:`Properties` dialog (as usual, via the right-click
-   menu of the layer).
-#. Click on the :guilabel:`Symbology` tab.
-#. Where it says :guilabel:`Grayscale` (in the :guilabel:`Color map` dropdown
-   menu), change it to :guilabel:`Pseudocolor`.
-#. Ensure that the :guilabel:`Use standard deviation` radio button is selected.
 
 Aspect
 -------------------------------------------------------------------------------
 
-Use the same approach as for calculating the slope, but select
-:guilabel:`Aspect` in the initial dialog box.
+Use the same approach as for calculating the slope, but use the
+:guilabel:`Aspect` algorithm.
 
 Remember to save the map periodically.
 
@@ -269,15 +261,14 @@ Reclassifying rasters
 -------------------------------------------------------------------------------
 
 #. Click the menu item :menuselection:`Raster --> Raster calculator`.
-#. Specify your :file:`Rasterprac` directory as the location for the output
-   layer.
-#. Ensure that the :guilabel:`Open output file after running algorithm` box is selected.
+#. For the Output layer, click on the :guilabel:`...` button, specify your :file:`Rasterprac`
+   directory as the location for the output layer, and save it as :file:`slope15_60`
 
 In the :guilabel:`Raster bands` list on the left, you will see all the raster
 layers in your :guilabel:`Layers` panel. If your Slope layer is called
-:guilabel:`slope`, it will be listed as :guilabel:`slope@1`.
+:guilabel:`slope`, it will be listed as :guilabel:`slope@1`. Indicating band 1 of the slope raster.
 
-The slope needs to be between ``15`` and ``60`` degrees. Everything less
+The slope needs to be between ``15`` and ``60`` percent. Everything less
 than ``15`` or greater than ``60`` must therefore be excluded.
 
 #. Using the list items and buttons in the interface, build the following
@@ -287,8 +278,6 @@ than ``15`` or greater than ``60`` must therefore be excluded.
 
     ((slope@1 < 15) OR (slope@1 > 60)) = 0
 
-#. Set the :guilabel:`Output layer` field to an appropriate location and file
-   name.
 #. Click :guilabel:`Run`.
 
 Now find the correct aspect (east-facing: between ``45`` and ``135``
@@ -307,29 +296,63 @@ degrees) using the same approach.
 
     (rainfall@1 < 1200) = 0
 
-Having reclassified all the rasters, you will now see them displayed as gray
-rectangles in your map (assuming that they have been added to the map
-correctly). To properly display raster data with only two classes (``1`` and
-``0``, meaning true or false), you will need to change their symbology.
-
-Setting the style for the reclassified layers
+Now, we can combine all three criteria into one raster.  
+    
+Combining rasters
 -------------------------------------------------------------------------------
 
-#. Open the :guilabel:`Symbology` tab in the layer's :guilabel:`Properties` dialog
-   as usual.
-#. Under the heading :guilabel:`Load min / max values from band`, select the
-   :guilabel:`Actual (slower)` radio button.
-#. Click the :guilabel:`Load` button.
+#. Click the :menuselection:`Raster --> Raster calculator` menu item.
+#. Build the following expression (with the appropriate names for your layers,
+   depending on what you called them):
 
-The :guilabel:`Custom min / max values` fields should now populate with
-``0`` and ``1``, respectively. (If they do not, then there was a mistake
-with your reclassification of the data, and you will need to go over that part
-again.)
+   ::
 
-#. Under the heading :guilabel:`Contrast enhancement`, set the
-   :guilabel:`Current` dropdown list to :guilabel:`Stretch To MinMax`.
+    [Rural raster] * [Reclassified aspect] * [Reclassified slope] *
+    [Reclassified rainfall]
+
+#. Set the output location to the :file:`Rasterprac` directory.
+#. Name the output raster :file:`cross_product.tif`.
+#. Ensure that the :guilabel:`Open output file after running algorithm` box is
+   checked.
+#. Click :guilabel:`Run`.
+#. Change the symbology of the new raster in the same way as you set the style
+   for the other reclassified rasters.  The new raster now properly displays the
+   areas where all the criteria are satisfied.
+
+To get the final result, you need to select the areas that are greater than
+``6000m^2``. However, computing these areas accurately is only possible for
+a vector layer, so you will need to vectorize the raster.
+
+Vectorizing the raster
+-------------------------------------------------------------------------------
+
+#. Click on the menu item :menuselection:`Raster --> Conversion --> Polygonize`.
+#. Select the :file:`cross_product.tif` raster.
+#. Set the output location to :file:`Rasterprac`.
+#. Name the file :file:`candidate_areas.shp`.
+#. Ensure that :guilabel:`Open output file after running algorithm` is checked.
+#. Click :guilabel:`Run`.
+#. Close the dialog when processing is complete.
+
+All areas of the raster have been vectorized, so you need to select only the
+areas that have a value of ``1``.
+
+#. Open the :guilabel:`Query` dialog for the new vector.
+#. Build this query:
+
+   ::
+
+    "DN" = 1
+
 #. Click :guilabel:`OK`.
-#. Do this for all three reclassified rasters, and remember to save your work!
+#. Create a new vector file from the results by saving the
+   :guilabel:`candidate_areas` vector after the query is complete (and only the
+   areas with a value of ``1`` are visible). Use the :guilabel:`Save as...`
+   function in the layer's right-click menu for this.
+#. Save the file in the :file:`Rasterprac` directory.
+#. Name the file :guilabel:`candidate_areas_only.shp`.
+#. Save your map.
+
 
 The only criterion that remains is that the area must be ``250m`` away from
 urban areas. We will satisfy this requirement by ensuring that the areas we
@@ -503,60 +526,6 @@ with a value of ``1`` will retain the value of ``1``, but if a pixel has
 the value of ``0`` in any of the four rasters, then it will be ``0`` in
 the result. In this way, the result will contain only the overlapping areas.
 
-Combining rasters
--------------------------------------------------------------------------------
-
-#. Click the :menuselection:`Raster --> Raster calculator` menu item.
-#. Build the following expression (with the appropriate names for your layers,
-   depending on what you called them):
-
-   ::
-
-    [Rural raster] * [Reclassified aspect] * [Reclassified slope] *
-    [Reclassified rainfall]
-
-#. Set the output location to the :file:`Rasterprac` directory.
-#. Name the output raster :file:`cross_product.tif`.
-#. Ensure that the :guilabel:`Open output file after running algorithm` box is
-   checked.
-#. Click :guilabel:`Run`.
-#. Change the symbology of the new raster in the same way as you set the style
-   for the other reclassified rasters.  The new raster now properly displays the
-   areas where all the criteria are satisfied.
-
-To get the final result, you need to select the areas that are greater than
-``6000m^2``. However, computing these areas accurately is only possible for
-a vector layer, so you will need to vectorize the raster.
-
-Vectorizing the raster
--------------------------------------------------------------------------------
-
-#. Click on the menu item :menuselection:`Raster --> Conversion --> Polygonize`.
-#. Select the :file:`cross_product.tif` raster.
-#. Set the output location to :file:`Rasterprac`.
-#. Name the file :file:`candidate_areas.shp`.
-#. Ensure that :guilabel:`Open output file after running algorithm` is checked.
-#. Click :guilabel:`Run`.
-#. Close the dialog when processing is complete.
-
-All areas of the raster have been vectorized, so you need to select only the
-areas that have a value of ``1``.
-
-#. Open the :guilabel:`Query` dialog for the new vector.
-#. Build this query:
-
-   ::
-
-    "DN" = 1
-
-#. Click :guilabel:`OK`.
-#. Create a new vector file from the results by saving the
-   :guilabel:`candidate_areas` vector after the query is complete (and only the
-   areas with a value of ``1`` are visible). Use the :guilabel:`Save as...`
-   function in the layer's right-click menu for this.
-#. Save the file in the :file:`Rasterprac` directory.
-#. Name the file :guilabel:`candidate_areas_only.shp`.
-#. Save your map.
 
 Calculating the area for each polygon
 -------------------------------------------------------------------------------
