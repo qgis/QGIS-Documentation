@@ -592,3 +592,7 @@ Follow all the best practices for cartography in creating your output map.
    :width: 1.3em
 .. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
    :width: 1.5em
+.. |fileSave| image:: /static/common/mActionFileSave.png
+   :width: 1.5em
+.. |projectionEnabled| image:: /static/common/mIconProjectionEnabled.png
+   :width: 1.5em
