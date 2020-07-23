@@ -369,7 +369,7 @@ Creating a negative buffer
 #. In the dialog that appears, select the :guilabel:`rural` layer as
    your input vector layer (:guilabel:`Selected features only` should not be
    checked).
-#. In :guilabel:`Distance` and enter the value ``-250``into the associated field; 
+#. In :guilabel:`Distance` and enter the value ``-250`` into the associated field; 
    the negative value means that the buffer must be an internal buffer.  
    Make sure that the units are meters in the dropdown menu.
 #. Check the :guilabel:`Dissolve result` box.
