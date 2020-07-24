@@ -422,7 +422,8 @@ Layer` tabs allow loading of layers from source types other than :guilabel:`File
   Supported protocol types are:
 
   * ``HTTP/HTTPS/FTP``, with a :guilabel:`URI` and, if required,
-    an authentication
+    an authentication. See :ref:`authentication_index` for further details 
+    about the authentication methods.
   * Cloud storage such as ``AWS S3``, ``Google Cloud Storage``, ``Microsoft
     Azure Blob``, ``Alibaba OSS Cloud``, ``Open Stack Swift Storage``.
     You need to fill in the :guilabel:`Bucket or container` and the
@@ -430,7 +431,9 @@ Layer` tabs allow loading of layers from source types other than :guilabel:`File
   * service supporting OGC ``WFS 3`` (still experimental),
     using ``GeoJSON`` or ``GEOJSON - Newline Delimited`` format or based on
     ``CouchDB`` database.
-    A :guilabel:`URI` is required, with optional authentication.
+    A :guilabel:`URI` is required, with optional authentication. See 
+    :ref:`authentication_index` for further details about the authentication 
+    methods.
 
 .. _mesh_loading:
 
