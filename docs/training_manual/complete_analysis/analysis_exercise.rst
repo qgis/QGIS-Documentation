@@ -51,7 +51,7 @@ Setting up the Map
    the entry :guilabel:`WGS 84 / UTM zone 33S` (with the EPSG code ``32733``). 
 #. Click :guilabel:`OK`. The map is now in the ``UTM33S`` coordinate
    reference system.
-#. Save the map by clicking on the :guilabel:`Save Project` toolbar button,
+#. Save the map by clicking on the |fileSave| :sup:``Save Project`` toolbar button,
    or use the :menuselection:`File --> Save As...` menu item.
 #. Save the map in a new directory called :file:`Rasterprac` that you should create
    somewhere on your computer. You will save whatever layers you create in this
