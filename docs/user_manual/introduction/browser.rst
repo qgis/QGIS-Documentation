@@ -15,10 +15,11 @@ browser.
 Using the Browser panel you can locate, inspect and add data, as
 described in :ref:`browser_panel`.
 In addition, the Browser panel supports drag and drop of many QGIS
-resources, such as project files, processing scripts and processing
-models.
-Processing scripts and models can also be opened for editing in an
-external editor and the graphical modeller respectively.
+resources, such as project files, python scripts, processing scripts and 
+processing models.
+
+Python scripts, Processing scripts and Processing Models can also be opened for 
+editing in an external editor and the graphical modeller respectively.
 
 You can drag and drop layers from the :guilabel:`Layers` panel
 to the :guilabel:`Browser` panel, for instance into a GeoPackage or a
