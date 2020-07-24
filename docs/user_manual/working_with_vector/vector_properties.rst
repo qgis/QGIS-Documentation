@@ -495,18 +495,22 @@ Back to the Classes tab, you can specify the number of classes and also the
 mode for classifying features within the classes (using the Mode list). The
 available modes are:
 
-* Equal Interval: each class has the same size (e.g. values from 0 to 16 and
-  4 classes, each class has a size of 4).
-* Quantile: each class will have the same number of element inside
+* Equal Count (Quantile): each class will have the same number of elements
   (the idea of a boxplot).
-* Natural Breaks (Jenks): the variance within each class is minimal while the
-  variance between classes is maximal.
-* Standard Deviation: classes are built depending on the standard deviation of
-  the values.
-* Pretty Breaks: Computes a sequence of about n+1 equally spaced nice values
+* Equal Interval: each class will have the same size (e.g. with the values
+  from 1 to 16 and four classes, each class will have a size of four).
+* Logarithmic scale: suitable for data with a wide range of values.
+  Narrow classes for low values and wide classes for large values (e.g. for
+  decimal numbers with range [0..100] and two classes, the first class will
+  be from 0 to 10 and the second class from 10 to 100).
+* Natural Breaks (Jenks): the variance within each class is minimized while
+  the variance between classes is maximized.
+* Pretty Breaks: computes a sequence of about n+1 equally spaced nice values
   which cover the range of the values in x. The values are chosen so that they
   are 1, 2 or 5 times a power of 10. (based on pretty from the R statistical
-  environment https://astrostatistics.psu.edu/datasets/R/html/base/html/pretty.html)
+  environment https://www.rdocumentation.org/packages/base/topics/pretty).
+* Standard Deviation: classes are built depending on the standard deviation of
+  the values.
 
 The listbox in the center part of the :guilabel:`Symbology` tab lists the classes
 together with their ranges, labels and symbols that will be rendered.
@@ -1753,7 +1757,7 @@ Size
 :guilabel:`Size` is the main tab to set how the selected statistics are
 represented. The diagram size :ref:`units <unit_selector>` can be 'Millimeters',
 'Points', 'Pixels', 'Map Units' or 'Inches'.
-You can use :
+You can use:
 
 * :guilabel:`Fixed size`, a unique size to represent the graphic of all the
   features (not available for histograms)
@@ -1795,18 +1799,26 @@ placement (more details at :ref:`Placement <labels_placement>`):
   and you can specify the diagram placement relative to the feature
   ('above', 'on' and/or 'below' the line)
   It's possible to select several options at once.
-  In that case, QGIS will look for the optimal position of the diagram. Remember that
-  here you can also use the line orientation for the position of the diagram.
-* :guilabel:`Around centroid' (with a distance set)`, :guilabel:`Over centroid`,
-  :guilabel:`Using perimeter` and :guilabel:`Inside polygon`
-  are the options for polygon features.
+  In that case, QGIS will look for the optimal position of the diagram.
+  Remember that you can also use the line orientation for the position
+  of the diagram.
+* :guilabel:`Around centroid` (at a set :guilabel:`Distance`),
+  :guilabel:`Over centroid`, :guilabel:`Using perimeter` and
+  :guilabel:`Inside polygon` are the options for polygon features.
 
-The diagram can also be placed by data-defining the :guilabel:`X` and
-:guilabel:`Y` coordinate fields.
+The :guilabel:`Coordinate` group provides direct control on diagram
+placement, on a feature-by-feature basis, using their attributes
+or an expression to set the :guilabel:`X` and :guilabel:`Y` coordinate.
+The information can also be filled using the :ref:`Move labels and diagrams
+<label_toolbar>` tool.
 
-The placement of the diagrams can interact with the labeling, so you can
-detect and solve position conflicts between diagrams and labels by setting
-the :guilabel:`Priority` slider value.
+In the :guilabel:`Priority` section, you can define the placement priority rank
+of each diagram, ie if there are different diagrams or labels candidates for the
+same location, the item with the higher priority will be displayed and the
+others could be left out.
+
+The priority rank is also used to evaluate whether a diagram could be omitted
+due to a greater weighted :ref:`obstacle feature <labels_obstacles>`.
 
 .. _figure_diagrams_placement:
 
@@ -1847,69 +1859,6 @@ in the :ref:`Layers panel <label_legend>`, and in the :ref:`print layout legend
 When set, the diagram legend items (attributes with color and diagram size)
 are also displayed in the print layout legend, next to the layer symbology.
 
-
-Case Study
-----------
-
-We will demonstrate an example and overlay on the Alaska boundary layer a
-text diagram showing temperature data from a climate vector layer.
-Both vector layers are part of the QGIS sample dataset (see section
-:ref:`label_sampledata`).
-
-#. First, click on the |addOgrLayer| :sup:`Load Vector` icon, browse
-   to the QGIS sample dataset folder, and load the two vector shape layers
-   :file:`alaska.shp` and :file:`climate.shp`.
-#. Double click the ``climate`` layer in the map legend to open the
-   :guilabel:`Layer Properties` dialog.
-#. Click on the :guilabel:`Diagrams` tab and from the :guilabel:`Diagram type`
-   |selectString| combo box, select 'Text diagram'.
-#. In the :guilabel:`Appearance` tab, we choose a light blue as background color,
-   and in the :guilabel:`Size` tab, we set a fixed size to 18 mm.
-#. In the :guilabel:`Position` tab, placement could be set to 'Around Point'.
-#. In the diagram, we want to display the values of the three columns
-   ``T_F_JAN``, ``T_F_JUL`` and ``T_F_MEAN``. So, in the :guilabel:`Attributes` tab
-   first select ``T_F_JAN`` and click the |signPlus| button, then repeat with
-   ``T_F_JUL`` and finally ``T_F_MEAN``.
-#. Now click :guilabel:`Apply` to display the diagram in the QGIS main window.
-#. You can adapt the chart size in the :guilabel:`Size` tab. Activate the
-   |radioButtonOn| :guilabel:`Scaled size` and set the size of the diagrams on
-   the basis of the :guilabel:`maximum value` of an attribute and the
-   :guilabel:`Size` option.
-   If the diagrams appear too small on the screen, you can activate the
-   |checkbox| :guilabel:`Increase size of small diagrams` checkbox and define
-   the minimum size of the diagrams.
-#. Change the attribute colors by double clicking on the color values in the
-   :guilabel:`Assigned attributes` field.
-   Figure_diagrams_mapped_ gives an idea of the result.
-#. Finally, click :guilabel:`OK`.
-
-.. _figure_diagrams_mapped:
-
-.. figure:: img/climate_diagram.png
-   :align: center
-   :width: 25em
-
-   Diagram from temperature data overlayed on a map
-
-Remember that in the :guilabel:`Position` tab, a |checkbox| :guilabel:`Data
-defined position` of the diagrams is possible. Here, you can use attributes
-to define the position of the diagram.
-You can also set a scale-dependent visibility in the :guilabel:`Appearance` tab.
-
-The size and the attributes can also be an expression.
-Use the |expression| button to add an expression.
-See :ref:`vector_expressions` chapter for more information and example.
-
-Using data-defined override
----------------------------
-
-As mentioned above, you can use some custom data-defined to tune the diagrams
-rendering:
-
-* position in :guilabel:`Placement` tab by filling ``X`` and ``Y`` fields
-* visibility in :guilabel:`Appearance` tab by filling the ``Visibility`` field
-
-See :ref:`data_defined_labeling` for more information.
 
 .. index:: 3d view properties
 .. _`sec_3_d_view`:

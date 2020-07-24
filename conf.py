@@ -62,6 +62,7 @@ exclude_patterns = [
     'venv',
     'README.rst',
     'readme_old.rst',
+    'docs/user_manual/working_with_vector/expression_help/*'
 ]
 
 # -- Internationalisation ----------------------------------------------------
@@ -70,6 +71,8 @@ language = 'en'
 locale_dirs = ['locale/']   # path is example but recommended.
 gettext_compact = False     # optional.
 
+# Enable numeric figure references
+numfig = True
 
 # -- Options for HTML output -------------------------------------------------
 
@@ -174,7 +177,7 @@ context = {
     'version_downloads': True,
     'versions': [ [v, docs_url+v] for v in version_list],
     'supported_languages': [ [l, docs_url+version+'/'+l] for l in supported_languages],
-    'downloads': [ ['PDF', docs_url+version+'/pdf'] ], # ['HTML', '/builders.tgz'] ],
+    'downloads': [ ['PDF', docs_url+version+'/pdf'] , ['HTML', docs_url+version+'/zip'] ],
 
     'display_github': not html_context['outdated'], # Do not display for outdated releases
     'github_user': 'qgis',
@@ -196,6 +199,8 @@ else:
 
 # -- Options for LaTeX output --------------------------------------------------
 
+latex_engine = 'xelatex'
+
 # The paper size ('letter' or 'a4').
 latex_paper_size = 'a4'
 
@@ -208,6 +213,7 @@ latex_documents = [
   ('docs/user_manual/index', 'QGISUserGuide.tex', f'QGIS {version} User Guide', u'QGIS Project', 'manual'),
   ('docs/pyqgis_developer_cookbook/index', 'PyQGISDeveloperCookbook.tex', f'PyQGIS {version} developer cookbook', u'QGIS Project', 'manual'),
   ('docs/training_manual/index', 'QGISTrainingManual.tex', u'QGIS Training Manual', u'QGIS Project', 'manual'),
+  ('docs/documentation_guidelines/index', 'QGISDocumentationGuidelines.tex', u'QGIS Documentation Guidelines', u'QGIS Project', 'manual'),
   #('docs/developers_guide/index', 'QGISDevelopersGuide.tex', u'QGIS Developers Guide', u'QGIS Project', 'manual'),
 ]
 
@@ -229,14 +235,15 @@ latex_use_parts = False
 #latex_use_modindex = True
 
 latex_elements = {
-# The paper size ('letterpaper' or 'a4paper').
- 'papersize': 'a4paper',
+  # The paper size ('letterpaper' or 'a4paper').
+    'papersize': 'a4paper',
 
-  # The font size ('10pt', '11pt' or '12pt').
-  #'pointsize': '10pt',
+    # The font size ('10pt', '11pt' or '12pt').
+    #'pointsize': '10pt',
 
-  # Additional stuff for the LaTeX preamble.
-  'preamble': u'''\\usepackage{combelow}
+    # Additional stuff for the LaTeX preamble.
+    'preamble': u'''
+    \\usepackage{combelow}
     \\setcounter{tocdepth}{2}
     \\usepackage{newunicodechar}
     \\newunicodechar{Ș}{\\cb{S}}
@@ -247,8 +254,32 @@ latex_elements = {
     \\newunicodechar{≥}{$\geq$}
     \\newunicodechar{≤}{$\leq$}
     \\newunicodechar{π}{$\pi$}
+    \\newunicodechar{′}{\ensuremath{^{\prime}}}
+    \\newunicodechar{″}{\ensuremath{^{\prime\prime}}}
     \\newunicodechar{​}{ }'''
 }
+
+# Special case of korean that need different latex settings to work
+if tags.has('ko'):
+    latex_elements = {
+        'inputenc': '',
+        'utf8extra': '',
+        'preamble': '''
+        \\usepackage{fontspec}
+        \\usepackage[space]{xeCJK}
+        \\renewcommand\CJKglue{}
+        \\setCJKmainfont{NanumMyeongjo}''',
+        }
+
+# Special case for hindi that need different setting and typeset
+if tags.has('hi'):
+    latex_elements = {
+        'inputenc': '',
+        'utf8extra': '',
+        'preamble': '''
+        \\usepackage{fontspec}
+        \\setmainfont[Script=Devanagari]{Nakula}''',
+        }
 
 
 # -- Settings for Python code samples testing --------------------------------
@@ -405,4 +436,3 @@ class BetterOutputChecker(doctest.OutputChecker):
         return doctest.OutputChecker.check_output(self, want, got, optionflags)
 
 ext_doctest.SphinxDocTestRunner = BetterDocTestRunner
-

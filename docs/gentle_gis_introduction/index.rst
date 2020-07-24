@@ -7,6 +7,7 @@ A Gentle Introduction to GIS
 
 .. toctree::
    :maxdepth: 2
+   :numbered:
 
    preamble
    introducing_gis

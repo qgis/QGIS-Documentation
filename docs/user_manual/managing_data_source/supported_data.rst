@@ -92,41 +92,43 @@ GeoPackage layers can have JSON fields.
 
 GeoPackage is the default format for vector data in QGIS.
 
-.. index:: ESRI, Shapefile format, OGR
+.. index:: ESRI Shapefile format, OGR
 .. _vector_shapefiles:
 
 ESRI Shapefile format
 ---------------------
-The ESRI Shapefile format is still one of the most used vector file
-formats in QGIS.
-However, this file format has some limitation that some other file
-formats do not have (like GeoPackage and SpatiaLite).
+The ESRI Shapefile format is still one of the most used vector
+file formats, even if it has some limitations compared to for
+instance GeoPackage and SpatiaLite.
 
-A Shapefile format dataset consists of several files.
+An ESRI Shapefile format dataset consists of several files.
 The following three are required:
 
 #. :file:`.shp` file containing the feature geometries
 #. :file:`.dbf` file containing the attributes in dBase format
 #. :file:`.shx` index file
 
-A Shapefile format dataset can also include a file with a :file:`.prj`
-suffix, which contains the projection information.
+An ESRI Shapefile format dataset can also include a file with a
+:file:`.prj` suffix, which contains projection information.
 While it is very useful to have a projection file, it is not
 mandatory.
 A Shapefile format dataset can contain additional files.
-For further details, see the ESRI technical specification at
+For further details, see the the ESRI technical specification at
 https://www.esri.com/library/whitepapers/pdfs/shapefile.pdf.
 
-**Improving Performance for Shapefile format datasets**
+GDAL 3.1 has read-write support for compressed ESRI Shapefile
+format (:file:`shz` and :file:`shp.zip`).
 
-To improve the performance of drawing a Shapefile format dataset,
-you can create a spatial index.
+**Improving Performance for ESRI Shapefile format datasets**
+
+To improve the drawing performance for an ESRI Shapefile format
+dataset, you can create a spatial index.
 A spatial index will improve the speed of both zooming and panning.
 Spatial indexes used by QGIS have a :file:`.qix` extension.
 
 Use these steps to create the index:
 
-#. Load a Shapefile format dataset (see :ref:`browser_panel`)
+#. Load an ESRI Shapefile format dataset (see :ref:`browser_panel`)
 #. Open the :guilabel:`Layer Properties` dialog by double-clicking on
    the layer name in the legend or by right-clicking and choosing
    :menuselection:`Properties...` from the context menu
@@ -135,19 +137,20 @@ Use these steps to create the index:
 
 **Problem loading a .prj file**
 
-If you load a Shapefile format dataset with a :file:`.prj` file and
-QGIS is not able to read the coordinate reference system from that
-file, you will need to define the proper projection manually in
+If you load an ESRI Shapefile format dataset with a :file:`.prj` file
+and QGIS is not able to read the coordinate reference system from
+that file, you will need to define the proper projection manually in
 the :menuselection:`Layer Properties --> Source` tab of the layer by
 clicking the |setProjection| :sup:`Select CRS` button.
 This is due to the fact that :file:`.prj` files often do not provide
 the complete projection parameters as used in QGIS and listed in the
 :guilabel:`CRS` dialog.
 
-For the same reason, if you create a new Shapefile format dataset with
-QGIS, two different projection files are created: a :file:`.prj` file
-with limited projection parameters, compatible with ESRI software, and
-a :file:`.qpj` file, providing all the parameters of the CRS.
+For the same reason, if you create a new ESRI Shapefile format dataset
+with QGIS, two different projection files are created: a :file:`.prj`
+file with limited projection parameters, compatible with ESRI
+software, and a :file:`.qpj` file, providing all the parameters of the
+CRS.
 Whenever QGIS finds a :file:`.qpj` file, it will be used instead of
 the :file:`.prj`.
 
