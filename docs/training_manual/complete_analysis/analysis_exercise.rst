@@ -55,7 +55,7 @@ Setting up the Map
    or use the :menuselection:`File --> Save As...` menu item.
 #. Save the map in a new directory called :file:`Rasterprac` that you should create
    somewhere on your computer. You will save whatever layers you create in this
-   directory as well. Save the map as :file:`your_name_fynbos`
+   directory as well. Save the map as ``your_name_fynbos``.
 
    .. it could be worth indicating a real location for this output folder as
     it's later reused in exercises.
