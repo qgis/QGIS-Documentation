@@ -45,7 +45,7 @@ The solution will involve:
 Setting up the Map
 -------------------------------------------------------------------------------
 
-#. Click on the "EPSG" button in the extreme lower right corner of the
+#. Click on the |projectionEnabled| :sup:`Current CRS` button in the lower right corner of the
    screen. Under the :guilabel:`CRS` tab of the screen that appears, use 
    the "Filter" tool to search for "33S". Select 
    the entry :guilabel:`WGS 84 / UTM zone 33S` (with the EPSG code ``32733``). 
