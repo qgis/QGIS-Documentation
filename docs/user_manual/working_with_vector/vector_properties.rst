@@ -1574,8 +1574,9 @@ same way with diagrams:
   you get the text rotated.
 * |changeLabelProperties| :sup:`Change Label`. It opens a dialog to change the
   clicked label properties; it can be the label itself, its coordinates, angle,
-  font, size... as long as this property has been mapped to a field. Here you can
-  set the option to |checkbox| :guilabel:`Label every part of a feature`.
+  font, size, multiline alignment ... as long as this property has been mapped
+  to a field. Here you can set the option to |checkbox| :guilabel:`Label every
+  part of a feature`.
 
 .. warning:: **Label tools overwrite current field values**
 
