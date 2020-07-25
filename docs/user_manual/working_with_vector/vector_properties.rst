@@ -1553,10 +1553,6 @@ While for readability, ``label`` has been used below to describe the Label
 toolbar, note that when mentioned in their name, the tools work almost the
 same way with diagrams:
 
-* |pinLabels| :sup:`Pin/Unpin Labels And Diagrams`. By clicking or draging an
-  area, you pin label(s). If you click or drag an area holding :kbd:`Shift`,
-  label(s) are unpinned. Finally, you can also click or drag an area holding
-  :kbd:`Ctrl` to toggle the pin status of label(s).
 * |showPinnedLabels| :sup:`Highlight Pinned Labels And Diagrams`. If the
   vector layer of the label is editable, then the highlighting is green,
   otherwise it's blue.
@@ -1564,6 +1560,10 @@ same way with diagrams:
   determine whether any important labels are missing from the maps (e.g. due
   to overlaps or other constraints). They are displayed with a customizable
   color (see :ref:`automated_placement`).
+* |pinLabels| :sup:`Pin/Unpin Labels And Diagrams`. By clicking or draging an
+  area, you pin label(s). If you click or drag an area holding :kbd:`Shift`,
+  label(s) are unpinned. Finally, you can also click or drag an area holding
+  :kbd:`Ctrl` to toggle the pin status of label(s).
 * |showHideLabels| :sup:`Show/Hide Labels And Diagrams`. If you click on the labels,
   or click and drag an area holding :kbd:`Shift`, they are hidden.
   When a label is hidden, you just have to click on the feature to restore its
@@ -1572,7 +1572,7 @@ same way with diagrams:
   the desired place.
 * |rotateLabel| :sup:`Rotate Label`. Click the label and move around and
   you get the text rotated.
-* |changeLabelProperties| :sup:`Change Label`. It opens a dialog to change the
+* |changeLabelProperties| :sup:`Change Label Properties`. It opens a dialog to change the
   clicked label properties; it can be the label itself, its coordinates, angle,
   font, size, multiline alignment ... as long as this property has been mapped
   to a field. Here you can set the option to |checkbox| :guilabel:`Label every
