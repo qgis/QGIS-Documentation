@@ -1534,26 +1534,26 @@ While for readability, ``label`` has been used below to describe the Label
 toolbar, note that when mentioned in their name, the tools work almost the
 same way with diagrams:
 
-* |pinLabels| :sup:`Pin/Unpin Labels And Diagrams`. By clicking or draging an
-  area, you pin label(s). If you click or drag an area holding :kbd:`Shift`,
-  label(s) are unpinned. Finally, you can also click or drag an area holding
-  :kbd:`Ctrl` to toggle the pin status of label(s).
-* |showPinnedLabels| :sup:`Highlight Pinned Labels And Diagrams`. If the
+* |showPinnedLabels| :sup:`Highlight Pinned Labels and Diagrams`. If the
   vector layer of the label is editable, then the highlighting is green,
   otherwise it's blue.
 * |showUnplacedLabel| :sup:`Toggles Display of Unplaced Labels`: Allows to
   determine whether any important labels are missing from the maps (e.g. due
   to overlaps or other constraints). They are displayed with a customizable
   color (see :ref:`automated_placement`).
-* |showHideLabels| :sup:`Show/Hide Labels And Diagrams`. If you click on the labels,
+* |pinLabels| :sup:`Pin/Unpin Labels and Diagrams`. By clicking or draging an
+  area, you pin label(s). If you click or drag an area holding :kbd:`Shift`,
+  label(s) are unpinned. Finally, you can also click or drag an area holding
+  :kbd:`Ctrl` to toggle the pin status of label(s).
+* |showHideLabels| :sup:`Show/Hide Labels and Diagrams`. If you click on the labels,
   or click and drag an area holding :kbd:`Shift`, they are hidden.
   When a label is hidden, you just have to click on the feature to restore its
   visibility. If you drag an area, all the labels in the area will be restored.
-* |moveLabel| :sup:`Move Label And Diagram`. You just have to drag the label to
+* |moveLabel| :sup:`Moves a Label or Diagram`. You just have to drag the label to
   the desired place.
-* |rotateLabel| :sup:`Rotate Label`. Click the label and move around and
+* |rotateLabel| :sup:`Rotates a Label`. Click the label and move around and
   you get the text rotated.
-* |changeLabelProperties| :sup:`Change Label`. It opens a dialog to change the
+* |changeLabelProperties| :sup:`Change Label Properties`. It opens a dialog to change the
   clicked label properties; it can be the label itself, its coordinates, angle,
   font, size, multiline alignment ... as long as this property has been mapped
   to a field. Here you can set the option to |checkbox| :guilabel:`Label every
