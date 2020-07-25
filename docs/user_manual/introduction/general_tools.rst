@@ -1826,8 +1826,8 @@ to duplicate any layer in the map legend.
 
 .. tip:: **Manage styles from layer context menu**
 
-   Right-click on the layer in the :guilabel:`Layers` panel to add, rename
-   or remove layer styles.
+   Right-click on the layer in the :guilabel:`Layers` panel to copy, paste, add
+   or rename layer styles.
 
 .. _store_style:
 
