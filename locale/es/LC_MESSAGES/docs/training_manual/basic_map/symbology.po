@@ -669,7 +669,7 @@ msgid ""
 " types allow you to customize your symbols even further."
 msgstr ""
 "Además de establecer colores de relleno y usar patrones predefinidos, puede "
-"usar diferentes tipos de capas de símbolos por completo. El único tipo que "
+"usar totalmente diferentes tipos de capas de símbolos. El único tipo que "
 "hemos estado usando hasta ahora era tipo :guilabel:`Relleno Simple`. Los "
 "tipos de capa de símbolos más avanzados le permiten personalizar sus "
 "símbolos aún más."
@@ -792,6 +792,8 @@ msgid ""
 "Change the :guilabel:`Symbol layer type` for the :guilabel:`water` layer, as"
 " before for the other layers."
 msgstr ""
+"Cambie el :guilabel:`tipo de capa de símbolos` para la capa "
+":guilabel:`water`, como antes en las otras capas."
 
 #: ../../docs/training_manual/basic_map/symbology.rst:393
 msgid "Investigate what the different options on the list can do."
@@ -842,14 +844,16 @@ msgid ""
 "Apply a green transparent fill color to the :guilabel:`protected_areas` "
 "layer, and change the outline to look like this:"
 msgstr ""
+"Aplique un color de relleno transparente verde a la capa "
+":guilabel:`protected_areas` y cambie el contorno para que se vea así:"
 
 #: ../../docs/training_manual/basic_map/symbology.rst:429
 msgid ":ref:`Check your results <symbology-marker-line>`"
-msgstr ""
+msgstr ":ref:`Comprueba tus resultados <symbology-marker-line>`"
 
 #: ../../docs/training_manual/basic_map/symbology.rst:433
 msgid "|hard| |FA| Geometry generator symbology"
-msgstr ""
+msgstr "|hard| |FA| Simbología del generador de geometría"
 
 #: ../../docs/training_manual/basic_map/symbology.rst:435
 msgid ""
@@ -857,6 +861,9 @@ msgid ""
 "lines and polygons). The resulting symbol depends directly on the layer "
 "type."
 msgstr ""
+"Puede usar la simbología del generador de geometría con todos los tipos de "
+"capas (puntos, líneas y polígonos). El símbolo resultante depende "
+"directamente del tipo de capa."
 
 #: ../../docs/training_manual/basic_map/symbology.rst:438
 msgid ""
@@ -865,26 +872,34 @@ msgid ""
 "real centroid spatial operation on a polygon layer without creating a point "
 "layer."
 msgstr ""
+"Muy resumidamente, la simbología del generador de geometría le permite "
+"ejecutar algunas operaciones espaciales dentro de la simbología misma. Por "
+"ejemplo, puede ejecutar una operación espacial de centroide real en una capa"
+" de polígono sin crear una capa de puntos."
 
 #: ../../docs/training_manual/basic_map/symbology.rst:442
 msgid ""
 "Moreover, you have all the styling options to change the appearance of the "
 "resulting symbol."
 msgstr ""
+"Además, tiene todas las opciones de estilo para cambiar la apariencia del "
+"símbolo resultante."
 
 #: ../../docs/training_manual/basic_map/symbology.rst:445
 msgid "Let's give it a try!"
-msgstr ""
+msgstr "¡Hagamos un intento!"
 
 #: ../../docs/training_manual/basic_map/symbology.rst:447
 msgid "Select the :guilabel:`water` layer."
-msgstr ""
+msgstr "Seleccione la capa :guilabel:`water`."
 
 #: ../../docs/training_manual/basic_map/symbology.rst:448
 msgid ""
 "Click on :guilabel:`Simple fill` and change the :guilabel:`Symbol layer "
 "type` to :guilabel:`Geometry generator`."
 msgstr ""
+"Click en :guilabel:`Relleno Sencillo` y cambie el :guilabel:`tipo de capa de"
+" símbolo` a :guilabel:`Generador de Geometrías`."
 
 #: ../../docs/training_manual/basic_map/symbology.rst:454
 msgid ""
@@ -892,10 +907,14 @@ msgid ""
 "Type in output. In this example we are going to create centroids for each "
 "feature, so change the Geometry Type to :guilabel:`Point / Multipoint`."
 msgstr ""
+"Antes de comenzar a escribir la consulta espacial, debemos elegir el tipo de"
+" geometría en la salida. En este ejemplo, vamos a crear centroides para cada"
+" entidad, así que cambie el Tipo de geometría a :guilabel:`Punto / "
+"Multipunto`."
 
 #: ../../docs/training_manual/basic_map/symbology.rst:457
 msgid "Now let's write the query in the query panel::"
-msgstr ""
+msgstr "Ahora escribamos la consulta en el panel de consulta::"
 
 #: ../../docs/training_manual/basic_map/symbology.rst:464
 msgid ""
@@ -903,32 +922,42 @@ msgid ""
 "layer is rendered as a point layer! We have just run a spatial operation "
 "within the layer symbology itself, isn't that amazing?"
 msgstr ""
+"Cuando haga click en :guilabel:`Aceptar`, verá que la capa :guilabel:`water`"
+" se representa como una capa de puntos. Acabamos de ejecutar una operación "
+"espacial dentro de la simbología de la capa, ¿no es sorprendente?"
 
 #: ../../docs/training_manual/basic_map/symbology.rst:471
 msgid ""
 "With the Geometry generator symbology you can really go over the edge of "
 "*normal* symbology."
 msgstr ""
+"Con la simbología del generador de geometría, realmente puede superar el "
+"límite de la simbología *normal*."
 
 #: ../../docs/training_manual/basic_map/symbology.rst:480
 msgid ""
 "Geometry generator are just another symbol level. Try to add another "
 ":guilabel:`Simple fill` underneath the :guilabel:`Geometry generator` one."
 msgstr ""
+"El generador de geometría es solo otro nivel de símbolo. Intente agregar "
+"otro :guilabel:`Relleno simple` debajo de un :guilabel:` Generador de "
+"geometría`."
 
 #: ../../docs/training_manual/basic_map/symbology.rst:483
 msgid ""
 "Change also the appearance of the Simple marker of the Geometry generator "
 "symbology."
 msgstr ""
+"Cambie también la apariencia del marcador simple de la simbología del "
+"generador de geometría."
 
 #: ../../docs/training_manual/basic_map/symbology.rst:485
 msgid "The final result should look like this:"
-msgstr ""
+msgstr "El resultado final debería verse así:"
 
 #: ../../docs/training_manual/basic_map/symbology.rst:490
 msgid ":ref:`Check your results <symbology-geom_generator>`"
-msgstr ""
+msgstr ":ref:`Comprueba tus resultados <symbology-geom_generator>`"
 
 #: ../../docs/training_manual/basic_map/symbology.rst:494
 msgid "|hard| |FA| Creating a Custom SVG Fill"
@@ -944,7 +973,7 @@ msgstr ""
 
 #: ../../docs/training_manual/basic_map/symbology.rst:499
 msgid "Start the Inkscape program. You will see the following interface:"
-msgstr ""
+msgstr "Inicie el programa Inkscape. Verá la siguiente interfaz:"
 
 #: ../../docs/training_manual/basic_map/symbology.rst:505
 msgid ""
@@ -952,7 +981,7 @@ msgid ""
 "programs, like Corel."
 msgstr ""
 "Deberías encontrarlo familiar si has utilizado otros programas de edición de"
-" imágenes vector, como Corel."
+" imágenes vectoriales, como Corel."
 
 #: ../../docs/training_manual/basic_map/symbology.rst:508
 msgid ""
@@ -965,7 +994,7 @@ msgid ""
 "Click on the menu item :menuselection:`File --> Document Properties`. This "
 "will give you the :guilabel:`Document Properties` dialog."
 msgstr ""
-"Clic en el elemento del menú :menuselection:`Archivo --> Propiedades del "
+"Click en el elemento del menú :menuselection:`Archivo --> Propiedades del "
 "documento`. Esto te dará el cuadro de diálogo :guilabel:`Propiedades del "
 "documento`."
 
@@ -975,7 +1004,7 @@ msgstr "Cambia :guilabel:`Unidades predet.` a :guilabel:`px`."
 
 #: ../../docs/training_manual/basic_map/symbology.rst:513
 msgid "Change the :guilabel:`Width` and :guilabel:`Height` to ``100``."
-msgstr ""
+msgstr "Cambia la :guilabel:`Anchura` y :guilabel:`Altura` to ``100``."
 
 #: ../../docs/training_manual/basic_map/symbology.rst:514
 msgid "Close the dialog when you are done."
@@ -986,7 +1015,7 @@ msgid ""
 "Click on the menu item :menuselection:`View --> Zoom --> Page` to see the "
 "page you are working with."
 msgstr ""
-"Clic en el elemento del menú :menuselection:`Ver --> Zoom --> Página` para "
+"Click en el elemento del menú :menuselection:`Ver --> Zoom --> Página` para "
 "ver la página con la que estás trabajando."
 
 #: ../../docs/training_manual/basic_map/symbology.rst:517
@@ -998,8 +1027,8 @@ msgid ""
 "Click and drag on the page to draw an ellipse. To make the ellipse turn into"
 " a circle, hold the :kbd:`Ctrl` button while you're drawing it."
 msgstr ""
-"Haga clic y arrastre en la página para dibujar un elipse. Para convertir el "
-"elipse en un circulo, mantenga el botón :kbd:`Ctrl` mientras está "
+"Haga click y arrastre en la página para dibujar un elipse. Para convertir el"
+" elipse en un circulo, mantenga el botón :kbd:`Ctrl` mientras está "
 "dibujándolo."
 
 #: ../../docs/training_manual/basic_map/symbology.rst:524
@@ -1033,6 +1062,8 @@ msgid ""
 "Click once to start the line. Hold :kbd:`Ctrl` to make it snap to increments"
 " of 15 degrees."
 msgstr ""
+"Haga click una vez para comenzar la línea. Mantenga presionada :kbd:`Ctrl` "
+"para que se ajuste a incrementos de 15 grados."
 
 #: ../../docs/training_manual/basic_map/symbology.rst:538
 msgid "Move the pointer horizontally and place a point with a simple click."
@@ -1067,6 +1098,9 @@ msgid ""
 ":guilabel:`landuse_symbol` under the directory that the course is in, under "
 ":file:`exercise_data/symbols`, as SVG file."
 msgstr ""
+"Si el símbolo que obtiene le satisface, guárdelo como "
+":guilabel:`landuse_symbol` en el directorio en el que se encuentra el curso,"
+" en :file:`exercise_data/symbols`, como archivo SVG."
 
 #: ../../docs/training_manual/basic_map/symbology.rst:552
 msgid "In QGIS:"
@@ -1083,18 +1117,25 @@ msgid ""
 " changing the :guilabel:`Symbol Layer Type` to :guilabel:`SVG Fill```` shown"
 " below."
 msgstr ""
+"En la etiqueta |symbology| :guilabel:`Simbología`, cambie la estructura del "
+"símbolo cambiando el :guilabel:`Tipo de Capa de Símbolos` a "
+":guilabel:`Relleno SVG```` mostrado abajo."
 
 #: ../../docs/training_manual/basic_map/symbology.rst:558
 msgid ""
 "Click the :guilabel:`...` button and then :guilabel:`Select File...` to "
 "select your SVG image."
 msgstr ""
+"Click en el botón :guilabel:`...` y despues :guilabel:`Seleccionar "
+"Archivo...` para seleccionar su Imagen SVG."
 
 #: ../../docs/training_manual/basic_map/symbology.rst:561
 msgid ""
 "It's added to the symbol tree and you can now customize its different "
 "characteristics (colors, angle, effects, units...)."
 msgstr ""
+"Se agrega al árbol de símbolos y ahora puede personalizar sus diferentes "
+"propiedades (colores, ángulos, efectos, unidades ...)."
 
 #: ../../docs/training_manual/basic_map/symbology.rst:567
 msgid ""
@@ -1103,6 +1144,11 @@ msgid ""
 "following map. If textures are not visible, you may need to zoom in the map "
 "canvas or set in the layer properties a bigger :guilabel:`Texture width`."
 msgstr ""
+"Una vez que valide el diálogo, las características en la capa "
+":guilabel:`landuse` ahora deben estar cubiertas por un conjunto de símbolos,"
+" que muestran una textura como la del siguiente mapa. Si las texturas no son"
+" visibles, es posible que deba hacer zoom en el lienzo del mapa o establecer"
+" en las propiedades de la capa un tamaño mayor :guilabel:`Ancho de textura`."
 
 #: ../../docs/training_manual/basic_map/symbology.rst:576
 msgid "|IC|"
@@ -1127,6 +1173,8 @@ msgid ""
 "`Examples of Beautiful Maps <https://gis.stackexchange.com/questions/3083"
 "/seeking-examples-of-beautiful-maps>`_"
 msgstr ""
+"`Ejemlpos de Hermosos Mapas <https://gis.stackexchange.com/questions/3083"
+"/seeking-examples-of-beautiful-maps>`_"
 
 #: ../../docs/training_manual/basic_map/symbology.rst:589
 msgid "|WN|"
@@ -1150,4 +1198,4 @@ msgstr ""
 
 #: ../../docs/training_manual/basic_map/symbology.rst:598
 msgid "Did you remember to save your map recently?"
-msgstr "¿Te acordaste de guardar tu mapa recientemente?"
+msgstr "¿Recordaste de guardar tu mapa recientemente?"

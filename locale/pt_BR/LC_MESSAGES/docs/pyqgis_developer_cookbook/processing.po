@@ -35,6 +35,13 @@ msgid ""
 "the modeler or the batch processing interface), and a quicker development "
 "time (since Processing will take of a large part of the work)."
 msgstr ""
+"Dependendo do tipo de plug-in que você desenvolverá, pode ser uma opção "
+"melhor adicionar sua funcionalidade como um algoritmo de Processar (ou um "
+"conjunto deles). Isso proporcionaria uma melhor integração ao QGIS, "
+"funcionalidade adicional (já que pode ser executada nos componentes do "
+"Processar, como o modelador ou a interface de processamento em lote) e um "
+"tempo de desenvolvimento mais rápido (já que o Processar consumirá grande "
+"parte do trabalhos)."
 
 #: ../../docs/pyqgis_developer_cookbook/processing.rst:30
 msgid ""
@@ -42,20 +49,26 @@ msgid ""
 "them to the Processing Toolbox. The plugin should contain an algorithm "
 "provider, which has to be registered when the plugin is instantiated."
 msgstr ""
+"Para distribuir esses algoritmos, você deve criar um nov complemento que os "
+"adicione à Caixa de Ferramentas de Processar. O complemento deve conter um "
+"provedor de algoritmos, que deve ser registrado quando o complemento é "
+"instanciado."
 
 #: ../../docs/pyqgis_developer_cookbook/processing.rst:35
 msgid "Creating from scratch"
-msgstr ""
+msgstr "Criando do zero"
 
 #: ../../docs/pyqgis_developer_cookbook/processing.rst:37
 msgid ""
 "To create a plugin from scratch which contains an algorithm provider, you "
 "can follow these steps using the Plugin Builder:"
 msgstr ""
+"Para criar um complemento do zero que contém um provedor de algoritmos, siga"
+" estas etapas usando o Plugin Builder:"
 
 #: ../../docs/pyqgis_developer_cookbook/processing.rst:40
 msgid "Install the **Plugin Builder** plugin"
-msgstr ""
+msgstr "Instale o complemento **Plugin Builder**"
 
 #: ../../docs/pyqgis_developer_cookbook/processing.rst:41
 msgid ""
@@ -72,6 +85,10 @@ msgid ""
 "information about how to modify the provider and add additional algorithms. "
 "Refer to them for more information."
 msgstr ""
+"O complemento criado contém um provedor com um único algoritmo. O arquivo do"
+" provedor e o arquivo do algoritmo são totalmente comentados e contêm "
+"informações sobre como modificar o provedor e adicionar algoritmos "
+"adicionais. Consulte-os para obter mais informações."
 
 #: ../../docs/pyqgis_developer_cookbook/processing.rst:48
 msgid "Updating a plugin"
@@ -82,33 +99,43 @@ msgid ""
 "If you want to add your existing plugin to Processing, you need to add some "
 "code."
 msgstr ""
+"Se você deseja adicionar seu complemento existente ao Processar, precisará "
+"adicionar algum código."
 
 #: ../../docs/pyqgis_developer_cookbook/processing.rst:52
 msgid "In your :file:`metadata.txt` file, you need to add a variable:"
 msgstr ""
+"No seu arquivo :file:`metadata.txt`, você precisa adicionar uma variável:"
 
 #: ../../docs/pyqgis_developer_cookbook/processing.rst:58
 msgid ""
 "In the Python file where your plugin is setup with the ``initGui`` method, "
 "you need to adapt some lines like this:"
 msgstr ""
+"No arquivo Python em que seu complemento está configurado com o método "
+"``initGui``, você precisa adaptar algumas linhas como esta:"
 
 #: ../../docs/pyqgis_developer_cookbook/processing.rst:82
 msgid ""
 "You can create a folder :file:`processing_provider` with three files in it:"
 msgstr ""
+"Você pode criar uma pasta :file:`processing_provider` com três arquivos:"
 
 #: ../../docs/pyqgis_developer_cookbook/processing.rst:84
 msgid ""
 ":file:`__init__.py` with nothing in it. This is necessary to make a valid "
 "Python package."
 msgstr ""
+":file:`__init__.py` com nada nele. Isso é necessário para criar um pacote "
+"Python válido."
 
 #: ../../docs/pyqgis_developer_cookbook/processing.rst:86
 msgid ""
 ":file:`provider.py` which will create the Processing provider and expose "
 "your algorithms."
 msgstr ""
+":file:`provider.py` que criará o Provedor de Processamento e exporá seus "
+"algoritmos."
 
 #: ../../docs/pyqgis_developer_cookbook/processing.rst:126
 msgid ""
@@ -117,9 +144,15 @@ msgid ""
 "<python/plugins/processing/script/ScriptTemplate.py>` and update it "
 "according to your needs."
 msgstr ""
+":file:`example_processing_algorithm.py` que contém o arquivo de algoritmo de"
+" exemplo. Copie/cole o conteúdo do arquivo :source:`script template "
+"<python/plugins/processing/script/ScriptTemplate.py>` e atualize-o de acordo"
+" com suas necessidades."
 
 #: ../../docs/pyqgis_developer_cookbook/processing.rst:131
 msgid ""
 "Now you can reload your plugin in QGIS and you should see your example "
 "script in the Processing toolbox and modeler."
 msgstr ""
+"Agora você pode recarregar seu complemento no QGIS e deverá ver o seu "
+"exemplo de script na caixa de ferramentas Processar e modelador."

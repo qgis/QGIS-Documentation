@@ -24,7 +24,7 @@ msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:29
 msgid "QGIS Server and Python"
-msgstr ""
+msgstr "Servidor QGIS e Python"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:32
 msgid "Introduction"
@@ -32,13 +32,15 @@ msgstr "Introdução"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:34
 msgid "QGIS Server is three different things:"
-msgstr ""
+msgstr "O Servidor QGIS é três coisas diferentes:"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:36
 msgid ""
 "QGIS Server library: a library that provides an API for creating OGC web "
 "services"
 msgstr ""
+"Biblioteca do Servidor QGIS: uma biblioteca que fornece uma API para criar "
+"serviços da web OGC"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:37
 msgid ""
@@ -46,6 +48,9 @@ msgid ""
 "together with a web server implements a set of OCG services (WMS, WFS, WCS "
 "etc.) and OGC APIs (WFS3/OAPIF)"
 msgstr ""
+"Servidor QGIS FCGI: um aplicativo binário FCGI :file:`qgis_maserv.fcgi` que,"
+" juntamente com um servidor web, implementa um conjunto de serviços OCG "
+"(WMS, WFS, WCS etc.) e APIs OGC (WFS3/OAPIF)"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:38
 msgid ""
@@ -53,6 +58,9 @@ msgid ""
 ":file:`qgis_mapserver` that implements a set of OCG services (WMS, WFS, WCS "
 "etc.) and OGC APIs (WFS3/OAPIF)"
 msgstr ""
+"Servidor de Desenvolvimento QGIS: um aplicativo binário do servidor de "
+"desenvolvimento :file:`qgis_mapserver` que implementa um conjunto de "
+"serviços OCG (WMS, WFS, WCS etc.) e APIs OGC (WFS3/OAPIF)"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:40
 msgid ""
@@ -61,6 +69,11 @@ msgid ""
 "extend, enhance or customize the server behavior or how to use the QGIS "
 "Server API to embed QGIS server into another application."
 msgstr ""
+"Este capítulo do livro de receitas se concentra no primeiro tópico e, ao "
+"explicar o uso da API do Servidor QGIS, mostra como é possível usar o Python"
+" para estender, aprimorar ou personalizar o comportamento do servidor ou "
+"como usar a API do Servidor QGIS para incorporar o servidor QGIS ao outra "
+"aplicação."
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:44
 msgid ""
@@ -68,26 +81,34 @@ msgid ""
 "extend its capabilities to offer new custom services or APIs, these are the "
 "main scenarios you may face:"
 msgstr ""
+"Existem algumas maneiras diferentes de alterar o comportamento do Servidor "
+"QGIS ou estender seus recursos para oferecer novos serviços ou APIs "
+"personalizados; estes são os principais cenários que você pode encontrar:"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:48
 msgid "EMBEDDING |rarr| Use QGIS Server API from another Python application"
 msgstr ""
+"EMBEDDING |rarr| Usa a API do Servidor QGIS de outro aplicativo Python"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:49
 msgid "STANDALONE |rarr| Run QGIS Server as a standlone WSGI/HTTP service"
 msgstr ""
+"STANDALONE |rarr| Executa o Servidor QGIS como um serviço WSGI/HTTP "
+"independente"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:50
 msgid "FILTERS |rarr| Enhance/Customize QGIS Server with filter plugins"
 msgstr ""
+"FILTERS |rarr| Aprimora/personaliza o Servidor QGIS com complementos de "
+"filtro"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:51
 msgid "SERVICES |rarr| Add a new *SERVICE*"
-msgstr ""
+msgstr "SERVICES |rarr| Adiciona um novo *SERVICE*"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:52
 msgid "OGC APIs |rarr| Add a new *OGC API*"
-msgstr ""
+msgstr "OGC APIs |rarr| Adiciona um novo *OGC API*"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:54
 msgid ""
@@ -98,33 +119,48 @@ msgid ""
 "this case you'll need to write a Python plugin for the server application "
 "and register your custom filters, services or APIs."
 msgstr ""
+"Aplicativos de incorporação e independentes exigem o uso da API Python do "
+"Servidor QGIS diretamente de outro script ou aplicativo Python, enquanto as "
+"opções restantes são mais adequadas para quando você deseja adicionar "
+"recursos personalizados a um aplicativo binário padrão do Servidor QGIS "
+"(FCGI ou servidor de desenvolvimento): neste caso você precisará escrever um"
+" complemento Python para o aplicativo do servidor e registrar seus filtros, "
+"serviços ou APIs personalizados."
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:61
 msgid "Server API basics"
-msgstr ""
+msgstr "Noções básicas da API do servidor"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:63
 msgid ""
 "The fundamental classes involved in a typical QGIS Server application are:"
 msgstr ""
+"As classes fundamentais envolvidas em um aplicativo típico do Servidor QGIS "
+"são:"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:65
 msgid ""
 ":class:`QgsServer <qgis.server.QgsServer>` the server instance (typically a "
 "single instance for the whole application life)"
 msgstr ""
+":class:`QgsServer <qgis.server.QgsServer>` a instância do servidor "
+"(geralmente uma instância única para toda a vida do aplicativo)"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:66
 msgid ""
 ":class:`QgsServerRequest <qgis.server.QgsServerRequest>` the request object "
 "(typically recreated on each request)"
 msgstr ""
+":class:`QgsServerRequest <qgis.server.QgsServerRequest>`o objeto de "
+"solicitação (normalmente recriado em cada solicitação)"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:67
 msgid ""
 ":class:`QgsServerResponse <qgis.server.QgsServerResponse>` the response "
 "object (typically recreated on each request)"
 msgstr ""
+":class:`QgsServerResponse <qgis.server.QgsServerResponse>` o objeto de "
+"resposta (normalmente recriado em cada solicitação)"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:68
 msgid ""
@@ -132,12 +168,17 @@ msgid ""
 "<qgis.server.QgsServer.handleRequest>` processes the request and populates "
 "the response"
 msgstr ""
+":meth:`QgsServer.handleRequest(request, response) "
+"<qgis.server.QgsServer.handleRequest>` processa a solicitação e preenche a "
+"resposta"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:71
 msgid ""
 "The QGIS Server FCGI or development server workflow can be summarized as "
 "follows:"
 msgstr ""
+"O Servidor QGIS FCGI ou o fluxo de trabalho do servidor de desenvolvimento "
+"pode ser resumido da seguinte maneira:"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:86
 msgid ""
@@ -148,6 +189,12 @@ msgid ""
 "available to the plugins through the :class:`QgsServerInterface "
 "<qgis.server.QgsServerInterface>`."
 msgstr ""
+"Dentro do método :meth:`QgsServer.handleRequest (request, response) "
+"<qgis.server.QgsServer.handleRequest>`, os callbacks dos complementos de "
+"filtro são chamados e :class:`QgsServerRequest "
+"<qgis.server.QgsServerRequest>` e :class:`QgsServerResponse "
+"<qgis.server.QgsServerResponse>` são disponibilizados para os complementos "
+"através da :class:`QgsServerInterface <qgis.server.QgsServerInterface>`."
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:93
 msgid ""
@@ -155,10 +202,13 @@ msgid ""
 "multiprocessing model or containers when building scalable applications "
 "based on QGIS Server API."
 msgstr ""
+"As classes de servidor QGIS não são seguras para threads, você sempre deve "
+"usar um modelo ou contêineres de multiprocessamento ao criar aplicativos "
+"escaláveis ​​com base na API do Servidor QGIS."
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:98
 msgid "Standalone or embedding"
-msgstr ""
+msgstr "Independente ou incorporado"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:100
 msgid ""
@@ -173,6 +223,8 @@ msgid ""
 "A minimal example of the QGIS Server API usage (without the HTTP part) "
 "follows:"
 msgstr ""
+"Um exemplo mínimo do uso da API do Servidor QGIS (sem a parte HTTP) é a "
+"seguir:"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:139
 msgid ""
@@ -187,16 +239,20 @@ msgstr ""
 msgid ""
 "https://github.com/qgis/QGIS/blob/master/tests/src/python/qgis_wrapped_server.py"
 msgstr ""
+"https://github.com/qgis/QGIS/blob/master/tests/src/python/qgis_wrapped_server.py"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:149
 msgid "Server plugins"
-msgstr ""
+msgstr "Complementos do servidor"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:151
 msgid ""
 "Server python plugins are loaded once when the QGIS Server application "
 "starts and can be used to register filters, services or APIs."
 msgstr ""
+"Os complementos de servidor python são carregados uma vez quando o "
+"aplicativo Servidor QGIS é iniciado e podem ser usados ​​para registrar "
+"filtros, serviços ou APIs."
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:154
 msgid ""
@@ -206,6 +262,12 @@ msgid ""
 "more custom filters, services or APIs to the corresponding registry by using"
 " one of the methods exposed by the server interface."
 msgstr ""
+"A estrutura de um complemento de servidor é muito semelhante à sua "
+"contraparte na área de trabalho, um objeto :class:`QgsServerInterface "
+"<qgis.server.QgsServerInterface>` é disponibilizado para os complemento e os"
+" complemento podem registrar um ou mais filtros, serviços ou APIs "
+"personalizados para o registro correspondente usando um dos métodos expostos"
+" pela interface do servidor."
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:161
 msgid "Server filter plugins"
@@ -220,59 +282,64 @@ msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:168
 msgid "Filter Type"
-msgstr ""
+msgstr "Tipo de Filtro"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:168
 msgid "Base Class"
-msgstr ""
+msgstr "Classe Básica"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:168
 msgid "QgsServerInterface registration"
-msgstr ""
+msgstr "Registro da QgsServerInterface"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:170
 msgid "I/O"
-msgstr ""
+msgstr "I/O"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:170
 msgid ":class:`QgsServerFilter <qgis.server.QgsServerFilter>`"
-msgstr ""
+msgstr ":class:`QgsServerFilter <qgis.server.QgsServerFilter>`"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:170
 msgid ":meth:`registerFilter <qgis.server.QgsServerInterface.registerFilter>`"
 msgstr ""
+":meth:`registerFilter <qgis.server.QgsServerInterface.registerFilter>`"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:171
 msgid "Access Control"
-msgstr ""
+msgstr "Controle de Acesso"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:171
 msgid ":class:`QgsAccessControlFilter <qgis.server.QgsAccessControlFilter>`"
-msgstr ""
+msgstr ":class:`QgsAccessControlFilter <qgis.server.QgsAccessControlFilter>`"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:171
 msgid ""
 ":meth:`registerAccessControl "
 "<qgis.server.QgsServerInterface.registerAccessControl>`"
 msgstr ""
+":meth:`registerAccessControl "
+"<qgis.server.QgsServerInterface.registerAccessControl>`"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:172
 msgid "Cache"
-msgstr ""
+msgstr "Cache"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:172
 msgid ":class:`QgsServerCacheFilter <qgis.server.QgsServerCacheFilter>`"
-msgstr ""
+msgstr ":class:`QgsServerCacheFilter <qgis.server.QgsServerCacheFilter>`"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:172
 msgid ""
 ":meth:`registerServerCache "
 "<qgis.server.QgsServerInterface.registerServerCache>`"
 msgstr ""
+":meth:`registerServerCache "
+"<qgis.server.QgsServerInterface.registerServerCache>`"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:177
 msgid "I/O filters"
-msgstr ""
+msgstr "Filtros I/O"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:179
 msgid ""
@@ -282,32 +349,42 @@ msgid ""
 "restrict the access to selected layers, to inject an XSL stylesheet to the "
 "XML response, to add a watermark to a generated WMS image and so on."
 msgstr ""
+"Os filtros  I/O podem modificar a entrada e saída do servidor (a solicitação"
+" e a resposta) dos serviços principais (WMS, WFS etc.), permitindo fazer "
+"qualquer tipo de manipulação do fluxo de trabalho dos serviços; é possível, "
+"por exemplo, restringir o acesso nas camadas selecionadas, injetar uma folha"
+" de estilo XSL na resposta XML, adicionar uma marca d'água a uma imagem WMS "
+"gerada e assim por diante."
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:185
 msgid ""
 "From this point, you might find useful a quick look to the :api:`server "
 "plugins API docs <group__server.html>`."
 msgstr ""
+"A partir deste ponto, você pode achar útil uma rápida olhada no :api:`server"
+" plugins API docs <group__server.html>`."
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:188
 msgid "Each filter should implement at least one of three callbacks:"
 msgstr ""
+"Cada filtro deve implementar pelo menos um dos três retornos de chamada:"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:190
 #: ../../docs/pyqgis_developer_cookbook/server.rst:361
 msgid ":meth:`requestReady() <qgis.server.QgsServerFilter.requestReady>`"
-msgstr ""
+msgstr ":meth:`requestReady() <qgis.server.QgsServerFilter.requestReady>`"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:191
 #: ../../docs/pyqgis_developer_cookbook/server.rst:362
 msgid ""
 ":meth:`responseComplete() <qgis.server.QgsServerFilter.responseComplete>`"
 msgstr ""
+":meth:`responseComplete() <qgis.server.QgsServerFilter.responseComplete>`"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:192
 #: ../../docs/pyqgis_developer_cookbook/server.rst:363
 msgid ":meth:`sendResponse() <qgis.server.QgsServerFilter.sendResponse>`"
-msgstr ""
+msgstr ":meth:`sendResponse() <qgis.server.QgsServerFilter.sendResponse>`"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:194
 msgid ""
@@ -316,6 +393,10 @@ msgid ""
 "manipulate all its properties (input/output) and raise exceptions (while in "
 "a quite particular way as we’ll see below)."
 msgstr ""
+"Todos os filtros têm acesso ao objeto de solicitação/resposta "
+"(:class:`QgsRequestHandler <qgis.server.QgsRequestHandler>`) e podem "
+"manipular todas as suas propriedades (entrada/saída) e gerar exceções "
+"(embora de uma maneira bastante específica, como iremos ver abaixo)."
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:198
 msgid ""
@@ -329,7 +410,7 @@ msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:220
 msgid "requestReady"
-msgstr ""
+msgstr "requestReady"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:222
 msgid ""
@@ -340,7 +421,7 @@ msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:226
 msgid "authentication/authorization"
-msgstr ""
+msgstr "autenticação/autorização"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:227
 msgid "redirects"
@@ -363,7 +444,7 @@ msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:237
 msgid "sendResponse"
-msgstr ""
+msgstr "sendResponse"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:239
 msgid ""
@@ -391,10 +472,16 @@ msgid ""
 "<qgis.server.QgsServerFilter.sendResponse>` is the only viable option in "
 "case of streaming services."
 msgstr ""
+":meth:`sendResponse <qgis.server.QgsServerFilter.sendResponse>` é o melhor "
+"local para manipulação direta da saída do serviço principal e enquanto "
+":meth:`responseComplete <qgis.server.QgsServerFilter.responseComplete>` "
+"tipicamente também é uma opção, :meth:`sendResponse "
+"<qgis.server.QgsServerFilter.sendResponse>` é a única opção viável no caso "
+"de serviços de streaming."
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:261
 msgid "responseComplete"
-msgstr ""
+msgstr "responseComplete"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:263
 msgid ""
@@ -420,6 +507,11 @@ msgid ""
 "services) and to perform direct manipulation of the output coming from core "
 "services (for example to add a watermark upon a WMS image)."
 msgstr ""
+":meth:`responseComplete <qgis.server.QgsServerFilter.responseComplete>` é o "
+"local ideal para fornecer a implementação de novos serviços (WPS ou serviços"
+" personalizados) e executar a manipulação direta da saída proveniente dos "
+"serviços principais (por exemplo, para adicionar uma marca d'água em uma "
+"imagem WMS)."
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:276
 msgid "Raising exceptions from a plugin"

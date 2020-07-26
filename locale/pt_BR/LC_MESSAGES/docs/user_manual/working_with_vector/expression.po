@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Aline Furlanetto Viero <afviero@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:32+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Aline Furlanetto Viero <afviero@gmail.com>, 2020\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,6 +34,12 @@ msgid ""
 "of the label, the value for diagram, the height of a layout item, select "
 "some features, create virtual field ..."
 msgstr ""
+"Com base nos dados da camada e nas funções predefinidas ou definidas pelo "
+"usuário, **Expressões** oferece uma maneira poderosa de manipular valor, "
+"geometria e variáveis ​​de atributos, a fim de alterar dinamicamente o "
+"estilo da geometria, o conteúdo ou a posição do rótulo, o valor do diagrama,"
+" a altura de um item de layout, selecionar alguns recursos, criar um campo "
+"virtual ..."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:23
 msgid "The Expression string builder"
@@ -72,6 +79,9 @@ msgid ""
 "manipulating symbology, label or layout item parameters with the "
 "|dataDefined| :sup:`Data defined override` tool (see :ref:`data_defined`);"
 msgstr ""
+"manipulação de parâmetros de simbologia, rótulo ou item de layout com a "
+"ferramenta |dataDefined| :sup:`Substituição de dados definida` (veja "
+":ref:`data_defined`);"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:35
 msgid ""
@@ -191,12 +201,18 @@ msgid ""
 "expressions using functions, layer's fields and values. It contains "
 "following widgets:"
 msgstr ""
+"A guia :guilabel:`Expressão` fornece a interface principal para escrever "
+"expressões usando funções, campos e valores da camada. Ele contém os "
+"seguintes widgets:"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:98
 msgid ""
 "An expression editor area to type or paste expressions. Autocompletion is "
 "available to speed expression writing:"
 msgstr ""
+"Uma área do editor de expressão para digitar ou colar expressões. O "
+"preenchimento automático está disponível para acelerar a escrita de "
+"expressões:"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:101
 msgid ""
@@ -205,26 +221,35 @@ msgid ""
 "items and press :kbd:`Tab` to insert in the expression or simply click on "
 "the wished item."
 msgstr ""
+"Variáveis ​​correspondentes, nomes de funções e nomes de campos para o texto"
+" de entrada são mostrados abaixo: use as setas :kbd:`Up` e :kbd:`Down` para "
+"navegar pelos itens e pressione :kbd:`Tab` para inserir na expressão ou "
+"basta clicar no item desejado."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:105
 msgid "Function parameters are shown while filling them."
-msgstr ""
+msgstr "Os parâmetros de função são mostrados ao preenchê-los."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:107
 msgid ""
 "QGIS also checks the expression rightness and highlights all the errors "
 "using:"
 msgstr ""
+"O QGIS também verifica a correção da expressão e destaca todos os erros "
+"usando:"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:109
 msgid "*Underline*: for unknown functions, wrong or invalid arguments;"
 msgstr ""
+"*Sublinhado*: para funções desconhecidas, argumentos errados ou inválidos;"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:110
 msgid ""
 "*Marker*: for every other error (eg, missing parenthesis, unexpected "
 "character) at a single location."
 msgstr ""
+"*Marcador*: para todos os outros erros (por exemplo, parênteses ausentes, "
+"caracteres inesperados) em um único local."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:113
 msgid "**Document your expression with comments**"
@@ -235,6 +260,9 @@ msgid ""
 "When using complex expression, it is good practice to add text either as a "
 "multiline comment or inline comments to help you remember."
 msgstr ""
+"Ao usar expressões complexas, é uma boa prática adicionar texto como um "
+"comentário com várias linhas ou comentários embutidos para ajudá-lo a se "
+"lembrar."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:144
 msgid ""
@@ -243,6 +271,10 @@ msgid ""
 "case of error, it indicates it and you can access details with the provided "
 "hyperlink."
 msgstr ""
+"Sob o editor de expressão, :guilabel:`Pré-visualização da Saída` exibe o "
+"resultado da expressão avaliada na primeira feição da camada. Em caso de "
+"erro, este é indicado e você pode acessar os detalhes com o hiperlink "
+"fornecido."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:147
 msgid ""
@@ -251,17 +283,25 @@ msgid ""
 "quickly find a particular function or field. Double-clicking an item adds it"
 " to the expression editor."
 msgstr ""
+"Um seletor de funções exibe a lista de funções, variáveis, campos ... "
+"organizados em grupos. Está disponível uma caixa de pesquisa para filtrar a "
+"lista e encontrar rapidamente uma função ou campo específico. Clicar duas "
+"vezes em um item o adiciona ao editor de expressão."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:151
 msgid ""
 "A help panel displays help for each selected item in the function selector."
 msgstr ""
+"Um painel de ajuda exibe ajuda para cada item selecionado no seletor de "
+"funções."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:155
 msgid ""
 "Press :kbd:`Ctrl+Click` when hovering a function name in an expression to "
 "automatically display its help in the dialog."
 msgstr ""
+"Pressione :kbd:`Ctrl+Click` ao passar com o mouse sobre o nome de uma função"
+" em uma expressão para exibir automaticamente sua ajuda na caixa de diálogo."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:158
 msgid ""
@@ -269,6 +309,9 @@ msgid ""
 "selector helps to fetch features attributes. Double-clicking a value adds it"
 " to the expression editor."
 msgstr ""
+"O widget de valores de um campo mostrado quando um campo é selecionado no "
+"seletor de funções ajuda a buscar atributos de feições. Clicar duas vezes em"
+" um valor adiciona-o ao editor de expressão."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:164
 msgid ""
@@ -276,19 +319,22 @@ msgid ""
 "(invisible) in the dialog. Press the :guilabel:`Show Values` or "
 ":guilabel:`Show Help` button to get it back."
 msgstr ""
+"O painel direito, mostrando as funções de ajuda ou valores de campo, pode "
+"ser recolhido (invisível) na caixa de diálogo. Pressione o botão "
+":guilabel:`Mostrar valores` ou :guilabel:`Mostrar ajuda` para recuperá-lo."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:173
 msgid "The Expression tab"
-msgstr ""
+msgstr "A guia Expressão"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:180
 msgid "Aggregates Functions"
-msgstr ""
+msgstr "Funções Agregadas"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:182
 msgid ""
 "This group contains functions which aggregate values over layers and fields."
-msgstr ""
+msgstr "Este grupo contém funções que agregam valores em camadas e campos."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
@@ -338,149 +384,158 @@ msgstr "Descrição"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "aggregate"
-msgstr ""
+msgstr "aggregate"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns an aggregate value calculated using features from another layer"
-msgstr ""
+msgstr "Retorna um valor agregado calculado usando feições de outra camada"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "array_agg"
-msgstr ""
+msgstr "array_agg"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns an array of aggregated values from a field or expression"
-msgstr ""
+msgstr "Retorna uma matriz de valores agregados de um campo ou expressão"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "collect"
-msgstr ""
+msgstr "collect"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns the multipart geometry of aggregated geometries from an expression"
 msgstr ""
+"Retorna a geometria multipartes de geometrias agregadas de uma expressão"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "concatenate"
-msgstr ""
+msgstr "concatenate"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns all aggregated strings from a field or expression joined by a "
 "delimiter"
 msgstr ""
+"Retorna todas as strings de caracteres agregadas de um campo ou expressão "
+"unida por um delimitador"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "concatenate_unique"
-msgstr ""
+msgstr "concatenate_unique"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns all unique aggregated strings from a field or expression joined by a"
 " delimiter"
 msgstr ""
+"Retorna todas as strings agregadas exclusivas de um campo ou expressão unida"
+" por um delimitador"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "count"
-msgstr ""
+msgstr "count"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns the count of matching features"
-msgstr ""
+msgstr "Retorna a contagem de feições correspondentes"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "count_distinct"
-msgstr ""
+msgstr "count_distinct"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns the count of distinct values"
-msgstr ""
+msgstr "Retorna a contagem de valores distintos"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "count_missing"
-msgstr ""
+msgstr "count_missing"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns the count of missing (null) values"
-msgstr ""
+msgstr "Retorna a contagem de valores ausentes (nulos)"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "iqr"
-msgstr ""
+msgstr "iqr"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns the calculated inter quartile range from a field or expression"
-msgstr ""
+msgstr "Retorna o intervalo interquartil calculado de um campo ou expressão"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "majority"
-msgstr "Majoritário "
+msgstr "majority"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns the aggregate majority of values (most commonly occurring value) "
 "from a field or expression"
 msgstr ""
+"Retorna a maioria agregada dos valores (valor que ocorre com mais "
+"frequência) de um campo ou expressão"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "max_length"
-msgstr ""
+msgstr "max_length"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns the maximum length of strings from a field or expression"
-msgstr ""
+msgstr "Retorna o comprimento máximo de strings de um campo ou expressão"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "maximum"
-msgstr "máximo "
+msgstr "maximum"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns the aggregate maximum value from a field or expression"
-msgstr ""
+msgstr "Retorna o valor máximo agregado de um campo ou expressão"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "mean"
-msgstr ""
+msgstr "mean"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns the aggregate mean value from a field or expression"
-msgstr ""
+msgstr "Retorna o valor médio agregado de um campo ou expressão"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "median"
-msgstr ""
+msgstr "median"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns the aggregate median value from a field or expression"
-msgstr ""
+msgstr "Retorna a mediana agregada de um campo ou expressão"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "min_length"
-msgstr ""
+msgstr "min_length"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns the minimum length of strings from a field or expression"
-msgstr ""
+msgstr "Retorna o comprimento mínimo de strings de um campo ou expressão"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "minimum"
-msgstr ""
+msgstr "minimum"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns the aggregate minimum value from a field or expression"
-msgstr ""
+msgstr "Retorna o valor mínimo agregado de um campo ou expressão"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "minority"
-msgstr ""
+msgstr "minority"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns the aggregate minority of values (least commonly occurring value) "
 "from a field or expression"
 msgstr ""
+"Retorna a minoria agregada de valores (valor que ocorre menos "
+"frequentemente) de um campo ou expressão"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "q1"
@@ -488,7 +543,7 @@ msgstr "q1"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns the calculated first quartile from a field or expression"
-msgstr ""
+msgstr "Retorna o primeiro quartil calculado de um campo ou expressão"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "q3"
@@ -496,44 +551,48 @@ msgstr "q3"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns the calculated third quartile from a field or expression"
-msgstr ""
+msgstr "Retorna o terceiro quartil calculado de um campo ou expressão"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "range"
-msgstr ""
+msgstr "range"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns the aggregate range of values (maximum - minimum) from a field or "
 "expression"
 msgstr ""
+"Retorna o intervalo agregado de valores (máximo - mínimo) de um campo ou "
+"expressão"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "relation_aggregate"
-msgstr ""
+msgstr "relation_aggregate"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns an aggregate value calculated using all matching child features from"
 " a layer relation"
 msgstr ""
+"Retorna um valor agregado calculado usando todas as feições filhas "
+"correspondentes de uma relação de camada"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "stdev"
-msgstr ""
+msgstr "stdev"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns the aggregate standard deviation value from a field or expression"
-msgstr ""
+msgstr "Retorna o valor agregado do desvio padrão de um campo ou expressão"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "sum"
-msgstr "soma"
+msgstr "sum"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns the aggregate summed value from a field or expression"
-msgstr ""
+msgstr "Retorna o valor agregado agregado de um campo ou expressão"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:217
 msgid "**Examples:**"
@@ -544,18 +603,24 @@ msgid ""
 "Return the maximum of the \"passengers\" field from features in the layer "
 "grouped by \"station_class\" field::"
 msgstr ""
+"Retorne o máximo do campo \"passengers\" dos recursos da camada agrupada "
+"pelo campo \"station_class\":"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:224
 msgid ""
 "Calculate the total number of passengers for the stations inside the current"
 " atlas feature::"
 msgstr ""
+"Calcule o número total de passageiros para as estações dentro da feição "
+"atlas atual::"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:230
 msgid ""
 "Return the mean of the \"field_from_related_table\" field for all matching "
 "child features using the 'my_relation' relation from the layer::"
 msgstr ""
+"Retorne a média do campo \"field_from_related_table\" para todos os recursos"
+" filhos correspondentes usando a relação 'my_relation' da camada::"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:235
 msgid "or::"
@@ -563,7 +628,7 @@ msgstr "ou::"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:245
 msgid "Array Functions"
-msgstr ""
+msgstr "Funções Array"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:247
 msgid ""
@@ -572,202 +637,217 @@ msgid ""
 " the :ref:`'map' data structure <maps_functions>`, where the order of key-"
 "value pairs is irrelevant and values are identified by their keys."
 msgstr ""
+"Este grupo contém funções para criar e manipular arrays (também conhecidas "
+"como estruturas de dados da lista). A ordem dos valores no array é "
+"importante, diferentemente da :ref:`'map' data structure <maps_functions>`, "
+"onde a ordem dos pares chave-valor é irrelevante e os valores são "
+"identificados por suas chaves."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "array"
-msgstr ""
+msgstr "array"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns an array containing all the values passed as parameter"
-msgstr ""
+msgstr "Retorna um array contendo todos os valores passados ​​como parâmetro"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "array_all"
-msgstr ""
+msgstr "array_all"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns true if an array contains all the values of a given array"
 msgstr ""
+"Retorna true se um array contiver todos os valores de um determinado array"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "array_append"
-msgstr ""
+msgstr "array_append"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns an array with the given value added at the end"
-msgstr ""
+msgstr "Retorna um array com o valor agregado adicionado no final"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "array_cat"
-msgstr ""
+msgstr "array_cat"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns an array containing all the given arrays concatenated"
-msgstr ""
+msgstr "Retorna um array contendo todos os arrays fornecidos concatenados"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "array_contains"
-msgstr ""
+msgstr "array_contains"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns true if an array contains the given value"
-msgstr ""
+msgstr "Retorna true se um array contiver o valor especificado"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "array_distinct"
-msgstr ""
+msgstr "array_distinct"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns an array containing distinct values of the given array"
-msgstr ""
+msgstr "Retorna um array contendo valores distintos do array especificado"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "array_filter"
-msgstr ""
+msgstr "array_filter"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns an array with only the items for which an expression evaluates to "
 "true"
 msgstr ""
+"Retorna um array com apenas os itens para os quais uma expressão é avaliada "
+"como verdadeira"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "array_find"
-msgstr ""
+msgstr "array_find"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns the index (0 for the first one) of a value within an array. Returns "
 "-1 if the value is not found."
 msgstr ""
+"Retorna o índice (0 para o primeiro) de um valor dentro de um array. Retorna"
+" -1 se o valor não for encontrado."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "array_first"
-msgstr ""
+msgstr "array_first"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns the first value of an array"
-msgstr ""
+msgstr "Retorna o primeiro valor de um array"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "array_foreach"
-msgstr ""
+msgstr "array_foreach"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns an array with the given expression evaluated on each item"
-msgstr ""
+msgstr "Retorna um array com a expressão especificada avaliada em cada item"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "array_get"
-msgstr ""
+msgstr "array_get"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns the Nth value (0 for the first one) of an array"
-msgstr ""
+msgstr "Retorna o valor enésimo (0 para o primeiro) de um array"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "array_insert"
-msgstr ""
+msgstr "array_insert"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns an array with the given value added at the given position"
 msgstr ""
+"Retorna um array com o valor agregado especificado na posição especificada"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "array_intersect"
-msgstr ""
+msgstr "array_intersect"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns true if any element of array_1 exists in array_2"
-msgstr ""
+msgstr "Retorna true se qualquer elemento do array_1 existir no array_2"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "array_last"
-msgstr ""
+msgstr "array_last"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns the last element of an array"
-msgstr ""
+msgstr "Retorna o último elemento de um array"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "array_length"
-msgstr ""
+msgstr "array_length"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns the number of elements of an array"
-msgstr ""
+msgstr "Retorna o número de elementos de um array"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "array_prepend"
-msgstr ""
+msgstr "array_prepend"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns an array with the given value added at the beginning"
-msgstr ""
+msgstr "Retorna um array com o valor dado adicionado no início"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "array_remove_all"
-msgstr ""
+msgstr "array_remove_all"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns an array with all the entries of the given value removed"
-msgstr ""
+msgstr "Retorna um array com todas as entradas do valor dado removidas"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "array_remove_at"
-msgstr ""
+msgstr "array_remove_at"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns an array with the given index removed"
-msgstr ""
+msgstr "Retorna um array com o índice dado removido"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "array_reverse"
-msgstr ""
+msgstr "array_reverse"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns the given array with array values in reversed order"
-msgstr ""
+msgstr "Retorna o array dado com os valores do array em ordem inversa"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "array_slice"
-msgstr ""
+msgstr "array_slice"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns the values of the array from the start_pos argument up to and "
 "including the end_pos argument"
 msgstr ""
+"Retorna os valores do array do argumento start_pos até e incluindo o "
+"argumento end_pos"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "array_sort"
-msgstr ""
+msgstr "array_sort"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns the provided array with its elements sorted"
-msgstr ""
+msgstr "Retorna o array fornecido com seus elementos classificados"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "array_to_string"
-msgstr ""
+msgstr "array_to_string"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Concatenates array elements into a string separated by a delimiter and using"
 " optional string for empty values"
 msgstr ""
+"Concatena elementos do array em uma string separada por um delimitador e "
+"usando a string opcional para valores vazios"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "generate_series"
-msgstr ""
+msgstr "generate_series"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Creates an array containing a sequence of numbers"
-msgstr ""
+msgstr "Cria um array contendo uma sequência de números"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "regexp_matches"
-msgstr ""
+msgstr "regexp_matches"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
@@ -775,16 +855,21 @@ msgid ""
 "the groups themselves appear in the supplied regular expression against a "
 "string"
 msgstr ""
+"Retorna um array de todas as strings capturadas pela captura de grupos, na "
+"ordem em que os próprios grupos aparecem na expressão regular fornecida em "
+"uma string"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "string_to_array"
-msgstr ""
+msgstr "string_to_array"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Splits string into an array using supplied delimiter and optional string for"
 " empty values"
 msgstr ""
+"Divide a string em um array usando o delimitador fornecido e a string "
+"opcional para valores vazios"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:293
 msgid "Color Functions"
@@ -796,167 +881,194 @@ msgstr "Este grupo contém funções para manipulação de cores."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "color_cmyk"
-msgstr ""
+msgstr "color_cmyk"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns a string representation of a color based on its cyan, magenta, "
 "yellow and black components"
 msgstr ""
+"Retorna uma representação de string de caracteres de uma cor com base em "
+"seus componentes ciano, magenta, amarelo e preto"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "color_cmyka"
-msgstr ""
+msgstr "color_cmyka"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns a string representation of a color based on its cyan, magenta, "
 "yellow, black and alpha (transparency) components"
 msgstr ""
+"Retorna uma representação de string de caracteres de uma cor com base em "
+"seus componentes ciano, magenta, amarelo, preto e alfa (transparência)"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "color_grayscale_average"
-msgstr ""
+msgstr "color_grayscale_average"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Applies a grayscale filter and returns a string representation from a "
 "provided color"
 msgstr ""
+"Aplica um filtro em escala de cinza e retorna uma representação de string de"
+" uma cor fornecida"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "color_hsl"
-msgstr ""
+msgstr "color_hsl"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns a string representation of a color based on its hue, saturation, and"
 " lightness attributes"
 msgstr ""
+"Retorna uma representação de string de uma cor com base em seus atributos de"
+" matiz, saturação e brilho"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "color_hsla"
-msgstr ""
+msgstr "color_hsla"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns a string representation of a color based on its hue, saturation, "
 "lightness and alpha (transparency) attributes"
 msgstr ""
+"Retorna uma representação de string de uma cor com base em seus atributos de"
+" matiz, saturação, brilho e alfa (transparência)"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "color_hsv"
-msgstr ""
+msgstr "color_hsv"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns a string representation of a color based on its hue, saturation, and"
 " value attributes"
 msgstr ""
+"Retorna uma representação de string de uma cor com base em seus atributos de"
+" matiz, saturação e valor"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "color_hsva"
-msgstr ""
+msgstr "color_hsva"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns a string representation of a color based on its hue, saturation, "
 "value and alpha (transparency) attributes"
 msgstr ""
+"Retorna uma representação de string de uma cor com base em seus atributos de"
+" matiz, saturação, valor e alfa (transparência)"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "color_mix_rgb"
-msgstr ""
+msgstr "color_mix_rgb"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns a string representing a color mixing the red, green, blue, and alpha"
 " values of two provided colors based on a given ratio"
 msgstr ""
+"Retorna uma string que representa uma cor que mistura os valores vermelho, "
+"verde, azul e alfa de duas cores fornecidas com base em uma determinada "
+"proporção"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "color_part"
-msgstr ""
+msgstr "color_part"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns a specific component from a color string, eg the red component or "
 "alpha component"
 msgstr ""
+"Retorna um componente específico de uma string de cor, por exemplo, o "
+"componente vermelho ou o componente alfa"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "color_rgb"
-msgstr ""
+msgstr "color_rgb"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns a string representation of a color based on its red, green, and blue"
 " components"
 msgstr ""
+"Retorna uma representação de string de uma cor com base em seus componentes "
+"vermelho, verde e azul"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "color_rgba"
-msgstr ""
+msgstr "color_rgba"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns a string representation of a color based on its red, green, blue, "
 "and alpha (transparency) components"
 msgstr ""
+"Retorna uma representação de string de uma cor com base em seus componentes "
+"vermelho, verde, azul e alfa (transparência)"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "create_ramp"
-msgstr ""
+msgstr "create_ramp"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns a gradient ramp from a map of color strings and steps"
 msgstr ""
+"Retorna uma rampa de gradiente a partir de um mapa de strings de cores e "
+"incrementos"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "darker"
-msgstr "mais escuro"
+msgstr "darker"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns a darker (or lighter) color string"
-msgstr ""
+msgstr "Retorna uma string de cor mais escura (ou mais clara)"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "lighter"
-msgstr "mais leve"
+msgstr "lighter"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns a lighter (or darker) color string"
-msgstr ""
+msgstr "Retorna uma string de cor mais clara (ou mais escura)"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "project_color"
-msgstr ""
+msgstr "project_color"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns a color from the project's color scheme"
-msgstr ""
+msgstr "Retorna uma cor do esquema de cores do projeto"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "ramp_color"
-msgstr ""
+msgstr "ramp_color"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns a string representing a color from a color ramp"
-msgstr ""
+msgstr "Retorna uma string que representa uma cor de uma rampa de cores"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "set_color_part"
-msgstr ""
+msgstr "set_color_part"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Sets a specific color component for a color string, eg the red component or "
 "alpha component"
 msgstr ""
+"Define um componente de cor específico para uma string de cor, por exemplo, "
+"o componente vermelho ou o componente alfa"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:330
 msgid "Conditional Functions"
-msgstr ""
+msgstr "Funções Condicionais"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:332
 msgid ""
@@ -967,61 +1079,72 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "CASE WHEN ... THEN ... END"
-msgstr ""
+msgstr "CASE WHEN ... THEN ... END"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Evaluates an expression and returns a result if true. You can test multiple "
 "conditions"
 msgstr ""
+"Avalia uma expressão e retorna um resultado se verdadeiro. Você pode testar "
+"várias condições"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "CASE WHEN ... THEN ... ELSE ... END"
-msgstr ""
+msgstr "CASE WHEN ... THEN ... ELSE ... END"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Evaluates an expression and returns a different result whether it's true or "
 "false. You can test multiple conditions"
 msgstr ""
+"Avalia uma expressão e retorna um resultado diferente, se for verdadeiro ou "
+"falso. Você pode testar várias condições"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "coalesce"
-msgstr ""
+msgstr "coalesce"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns the first non-NULL value from the expression list"
-msgstr ""
+msgstr "Retorna o primeiro valor diferente de NULL da lista de expressões"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "if"
-msgstr ""
+msgstr "if"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Tests a condition and returns a different result depending on the "
 "conditional check"
 msgstr ""
+"Testa uma condição e retorna um resultado diferente, dependendo da "
+"verificação condicional"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "nullif(value1, value2)"
-msgstr ""
+msgstr "nullif(value1, value2)"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns a null value if value1 equals value2 otherwise it returns value1. "
 "This can be used to conditionally substitute values with NULL."
 msgstr ""
+"Retorna um valor nulo se value1 for igual a value2, caso contrário, "
+"retornará value1. Isso pode ser usado para substituir condicionalmente "
+"valores por NULL."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "try"
-msgstr ""
+msgstr "try"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Tries an expression and returns its value if error-free, an alternative "
 "value (if provided) or Null if an error occurs"
 msgstr ""
+"Tenta uma expressão e retorna seu valor se estiver livre de erros, um valor "
+"alternativo (se fornecido) ou Nulo se ocorrer um erro"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:348
 msgid "**Some example:**"
@@ -1035,7 +1158,7 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:358
 msgid "Conversions Functions"
-msgstr ""
+msgstr "Funções de Conversão"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:360
 msgid ""
@@ -1047,91 +1170,95 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "to_date"
-msgstr ""
+msgstr "to_date"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Converts a string into a date object"
-msgstr ""
+msgstr "Converte uma string em um objeto de data"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "to_datetime"
-msgstr ""
+msgstr "to_datetime"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Converts a string into a datetime object"
-msgstr ""
+msgstr "Converte uma string em um objeto de date e hora"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "to_dm"
-msgstr ""
+msgstr "to_dm"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Converts a coordinate to degree, minute"
-msgstr ""
+msgstr "Converte uma coordenada em grau, minuto"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "to_dms"
-msgstr ""
+msgstr "to_dms"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Converts coordinate to degree, minute, second"
-msgstr ""
+msgstr "Converte coordenadas em graus, minutos, segundos"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "to_int"
-msgstr ""
+msgstr "to_int"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Converts a string to integer number"
-msgstr ""
+msgstr "Converte uma string em número inteiro"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "to_interval"
-msgstr ""
+msgstr "to_interval"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Converts a string to an interval type (can be used to take days, hours, "
 "months, etc. of a date)"
 msgstr ""
+"Converte uma string em um tipo de intervalo (pode ser usado para dias, "
+"horas, meses etc. de uma data)"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "to_real"
-msgstr ""
+msgstr "to_real"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Converts a string to a real number"
-msgstr ""
+msgstr "Converte uma string em um número real"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "to_string"
-msgstr ""
+msgstr "to_string"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Converts number to string"
-msgstr ""
+msgstr "Converte número para string"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "to_time"
-msgstr ""
+msgstr "to_time"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Converts a string into a time object"
-msgstr ""
+msgstr "Converte uma string em um objeto de tempo"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:380
 msgid "Custom Functions"
-msgstr ""
+msgstr "Funções Personalizadas"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:382
 msgid ""
 "This group contains functions created by the user. See "
 ":ref:`function_editor` for more details."
 msgstr ""
+"Este grupo contém funções criadas pelo usuário. Veja :ref:`function_editor` "
+"para mais detalhes."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:387
 msgid "Date and Time Functions"
-msgstr "Funções Data e hora"
+msgstr "Funções Data e Hora"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:389
 msgid "This group contains functions for handling date and time data."
@@ -1139,109 +1266,126 @@ msgstr "Este grupo contém funções para trabalhar datas e hora data."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "age"
-msgstr "era"
+msgstr "age"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns as an interval the difference between two dates or datetimes"
-msgstr ""
+msgstr "Retorna como intervalo a diferença entre duas datas ou data/hora"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "day"
-msgstr "dia"
+msgstr "day"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Extracts the day from a date or datetime, or the number of days from an "
 "interval"
 msgstr ""
+"Extrai o dia de uma data ou data/hora, ou o número de dias de um intervalo"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "day_of_week"
-msgstr "dia_da_semana"
+msgstr "day_of_week"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns a number corresponding to the day of the week for a specified date "
 "or datetime"
 msgstr ""
+"Retorna um número correspondente ao dia da semana para uma data ou data/hora"
+" especificada"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "epoch"
-msgstr ""
+msgstr "epoch"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns the interval in milliseconds between the unix epoch and a given date"
 " value"
 msgstr ""
+"Retorna o intervalo em milissegundos entre a época unix e um determinado "
+"valor de data"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "hour"
-msgstr "hora"
+msgstr "hour"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Extracts the hour from a datetime or time, or the number of hours from an "
 "interval"
 msgstr ""
+"Extrai a parte da hora de uma data/hora ou tempo, ou o número de horas de um"
+" intervalo"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "minute"
-msgstr "minuto"
+msgstr "minute"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Extracts the minute from a datetime or time, or the number of minutes from "
 "an interval"
 msgstr ""
+"Extrai a parte dos minutos de uma data/hora ou tempo, ou o número de minutos"
+" de um intervalo"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "month"
-msgstr "mês"
+msgstr "month"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Extracts the month part from a date or datetime, or the number of months "
 "from an interval"
 msgstr ""
+"Extrai a parte do mês de uma data ou data/hora ou o número de meses de um "
+"intervalo"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "now"
-msgstr ""
+msgstr "now"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns current date and time"
-msgstr ""
+msgstr "Retorna data e hora atuais"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "second"
-msgstr "segundo"
+msgstr "second"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Extracts the second from a datetime or time, or the number of seconds from "
 "an interval"
 msgstr ""
+"Extrai a parte dos segundo de uma data/hora ou horário, ou o número de "
+"segundos de um intervalo"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "week"
-msgstr "semana"
+msgstr "week"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Extracts the week number from a date or datetime, or the number of weeks "
 "from an interval"
 msgstr ""
+"Extrai o número da semana de uma data ou data/hora ou o número de semanas de"
+" um intervalo"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "year"
-msgstr "ano"
+msgstr "year"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Extracts the year part from a date or datetime, or the number of years from "
 "an interval"
 msgstr ""
+"Extrai a parte do ano de uma data ou data/hora ou o número de anos de um "
+"intervalo"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:407
 msgid ""
@@ -1249,6 +1393,9 @@ msgid ""
 ":ref:`conversion_functions` ( to_date, to_time, to_datetime, to_interval) "
 "and :ref:`string_functions` (format_date) groups."
 msgstr ""
+"Este grupo também compartilha várias funções com os grupos "
+":ref:`conversion_functions` ( to_date, to_time, to_datetime, to_interval) e "
+":ref:`string_functions` (format_date)."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:411
 #: ../../docs/user_manual/working_with_vector/expression.rst:731
@@ -1260,35 +1407,39 @@ msgstr "**Alguns exemplos:**"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:413
 msgid "Get today's month and year in the \"month_number/year\" format:"
-msgstr ""
+msgstr "Obtenha o mês e o ano de hoje no formato \"month_number/year\":"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:420
 msgid ""
 "Besides these functions, subtracting dates, datetimes or times using the "
 "``-`` (minus) operator will return an interval."
 msgstr ""
+"Além dessas funções, subtrair datas, datas ou horas usando o operador ``-`` "
+"(menos) retornará um intervalo."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:423
 msgid ""
 "Adding or subtracting an interval to dates, datetimes or times, using the "
 "``+`` (plus) and ``-`` (minus) operators, will return a datetime."
 msgstr ""
+"Adicionar ou subtrair um intervalo a datas, data/hora ou horas, usando os "
+"operadores ``+`` (mais) e ``-`` (menos), retornará uma data/hora."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:426
 msgid "Get the number of days until QGIS 3.0 release:"
-msgstr ""
+msgstr "Obtenha o número de dias até o lançamento do QGIS 3.0:"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:433
 msgid "The same with time:"
-msgstr ""
+msgstr "O mesmo com o tempo:"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:440
 msgid "Get the datetime of 100 days from now:"
-msgstr ""
+msgstr "Obtenha a data/hora de 100 dias a partir de agora:"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:447
 msgid "**Storing date and datetime and intervals on fields**"
-msgstr ""
+msgstr "**Armazenando data e data/hora e intervalos em campos**"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:449
 msgid ""
@@ -1297,12 +1448,18 @@ msgid ""
 "format, but not *datetime* or *time* format). The following are some "
 "suggestions to overcome this limitation:"
 msgstr ""
+"A capacidade de armazenar *data*, *hora* e *data/hora* diretamente nos "
+"campos pode depender do provedor da fonte de dados (por exemplo, o Shapefile"
+" aceita o formato *data*, mas não o formato *data/hora* ou *hora*). A "
+"seguir, são apresentadas algumas sugestões para superar essa limitação:"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:454
 msgid ""
 "*date*, *Datetime* and *time* can be stored in text type fields after using "
 "the ``to_format()`` function."
 msgstr ""
+"*data*, *date/hora* e *hora* podem ser armazenados nos campos de tipo de "
+"texto após o uso da função ``to_format()``."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:457
 msgid ""
@@ -1310,14 +1467,17 @@ msgid ""
 "of the date extraction functions (e.g., ``day()`` to get the interval "
 "expressed in days)"
 msgstr ""
+"*Intervalos* podem ser armazenados em campos do tipo inteiro ou decimal após"
+" o uso de uma das funções de extração de data (por exemplo, ``day()`` para "
+"obter o intervalo expresso em dias)"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:464
 msgid "Fields and Values"
-msgstr "Campo e Valores"
+msgstr "Campos e Valores"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:466
 msgid "Contains a list of fields from the layer."
-msgstr ""
+msgstr "Contém uma lista de campos da camada."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:468
 msgid ""
@@ -1325,6 +1485,9 @@ msgid ""
 "type the field name (preferably inside double quotes) or its :ref:`alias "
 "<configure_field>`."
 msgstr ""
+"Clique duas vezes no nome de um campo para adicioná-lo à sua expressão. Você"
+" também pode digitar o nome do campo (de preferência entre aspas duplas) ou "
+"seu :ref:`alias <configure_field>`."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:472
 msgid ""
@@ -1334,6 +1497,12 @@ msgid ""
 "the :guilabel:`Search` box at the top of the list to filter the result. "
 "Sample values can also be accessed via right-clicking on a field."
 msgstr ""
+"Para recuperar os valores dos campos a serem usados ​​em uma expressão, "
+"selecione o campo apropriado e, no widget mostrado, escolha entre "
+":guilabel:`10 Amostras` e :guilabel:`Todos os Únicos`. Os valores "
+"solicitados são exibidos e você pode usar a caixa :guilabel:`Pesquisar` na "
+"parte superior da lista para filtrar o resultado. Valores de amostra também "
+"podem ser acessados ​​clicando com o botão direito do mouse em um campo."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:478
 msgid ""
@@ -1341,81 +1510,88 @@ msgid ""
 "list. If the value is of a string type, it should be simple quoted, "
 "otherwise no quote is needed."
 msgstr ""
+"Para adicionar um valor à expressão que você está escrevendo, clique duas "
+"vezes nela na lista. Se o valor for de um tipo de string, deve ser simples "
+"entre aspas, caso contrário, nenhuma citação será necessária."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:484
 msgid "Files and Paths Functions"
-msgstr ""
+msgstr "Funções de Arquivos e Caminhos"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:486
 msgid "This group contains functions which manipulate file and path names."
-msgstr ""
+msgstr "Este grupo contém funções que manipulam nomes de arquivos e caminhos."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "base_file_name"
-msgstr ""
+msgstr "base_file_name"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns the base name of the file without the directory or file suffix."
-msgstr ""
+msgstr "Retorna o nome base do arquivo sem o diretório ou sufixo do arquivo."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "file_exists"
-msgstr ""
+msgstr "file_exists"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns true if a file path exists."
-msgstr ""
+msgstr "Retorna verdadeiro se existir um caminho de arquivo."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "file_name"
-msgstr ""
+msgstr "file_name"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns the name of a file (including the file extension), excluding the "
 "directory."
 msgstr ""
+"Retorna o nome de um arquivo (incluindo a extensão do arquivo), excluindo o "
+"diretório."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "file_path"
-msgstr ""
+msgstr "file_path"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns the directory component of a file path, without the file name"
 msgstr ""
+"Retorna o componente de diretório de um caminho de arquivo, sem o nome do "
+"arquivo"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "file_size"
-msgstr ""
+msgstr "file_size"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns the size (in bytes) of a file."
-msgstr ""
+msgstr "Retorna o tamanho (em bytes) de um arquivo."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "file_suffix"
-msgstr ""
+msgstr "file_suffix"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns the file extension from a file path."
-msgstr ""
+msgstr "Retorna a extensão do arquivo de um caminho."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "is_directory"
-msgstr ""
+msgstr "is_directory"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns true if a path corresponds to a directory."
-msgstr ""
+msgstr "Retorna verdadeiro se um caminho corresponder a um diretório."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "is_file"
-msgstr ""
+msgstr "is_file"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns true if a path corresponds to a file."
-msgstr ""
+msgstr "Retorna verdadeiro se um caminho corresponder a um arquivo."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:503
 msgid "Fuzzy Matching Functions"
@@ -1427,17 +1603,19 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "hamming_distance"
-msgstr ""
+msgstr "hamming_distance"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns the number of characters at corresponding positions within the input"
 " strings where the characters are different"
 msgstr ""
+"Retorna o número de caracteres nas posições correspondentes nas strings de "
+"entrada em que os caracteres são diferentes"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "levensheim"
-msgstr ""
+msgstr "levensheim"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
@@ -1445,83 +1623,94 @@ msgid ""
 "substitutions) required to change one string to another. Measure the "
 "similarity between two strings"
 msgstr ""
+"Retorna o número mínimo de edições de caracteres (inserções, exclusões ou "
+"substituições) necessárias para alterar uma string para outra. Mede a "
+"semelhança entre duas strings"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "longest_common_substring"
-msgstr ""
+msgstr "longest_common_substring"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns the longest common substring between two strings"
-msgstr ""
+msgstr "Retorna a substring comum mais longa entre duas strings"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "soundex"
-msgstr ""
+msgstr "soundex"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns the Soundex representation of a string"
-msgstr ""
+msgstr "Retorna a representação Soundex de uma string"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:521
 msgid "General Functions"
-msgstr ""
+msgstr "Funções Gerais"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:523
 msgid "This group contains general assorted functions."
-msgstr ""
+msgstr "Este grupo contém funções gerais variadas."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "env"
-msgstr ""
+msgstr "env"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Gets an environment variable and returns its content as a string. If the "
 "variable is not found, ``NULL`` will be returned."
 msgstr ""
+"Obtém uma variável de ambiente e retorna seu conteúdo como uma string. Se a "
+"variável não for encontrada, ``NULL`` será retornado."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "eval"
-msgstr ""
+msgstr "eval"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Evaluates an expression which is passed in a string. Useful to expand "
 "dynamic parameters passed as context variables or fields."
 msgstr ""
+"Avalia uma expressão que é passada em uma string. Útil para expandir "
+"parâmetros dinâmicos passados ​​como campos ou variáveis ​​de contexto."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "is_layer_visible"
-msgstr ""
+msgstr "is_layer_visible"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns true if a specified layer is visible"
-msgstr ""
+msgstr "Retorna verdadeiro se uma camada especificada estiver visível"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "layer_property"
-msgstr ""
+msgstr "layer_property"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns a property of a layer or a value of its metadata. It can be layer "
 "name, crs, geometry type, feature count..."
 msgstr ""
+"Retorna uma propriedade de uma camada ou um valor de seus metadados. Pode "
+"ser o nome da camada, src, tipo de geometria, contagem de feições..."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "var"
-msgstr ""
+msgstr "var"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns the value stored within a specified variable. See variable functions"
 " below"
 msgstr ""
+"Retorna o valor armazenado em uma variável especificada. Veja funções "
+"variáveis ​​abaixo"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "with_variable"
-msgstr "com_variável"
+msgstr "with_variable"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
@@ -1529,6 +1718,9 @@ msgid ""
 " a third argument. Useful to avoid repetition in expressions where the same "
 "value needs to be used more than once."
 msgstr ""
+"Cria e define uma variável para qualquer código de expressão que será "
+"fornecido como um terceiro argumento. Útil para evitar repetições em "
+"expressões em que o mesmo valor precisa ser usado mais de uma vez."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:545
 msgid "Geometry Functions"
@@ -1548,111 +1740,122 @@ msgstr "$area"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns the area size of the current feature"
-msgstr ""
+msgstr "Retorna o tamanho da área da feição atual"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "$geometry"
-msgstr ""
+msgstr "$geometry"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns the geometry of the current feature (can be used for processing with"
 " other functions)"
 msgstr ""
+"Retorna a geometria da feição atual (pode ser usado para processamento com "
+"outras funções)"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "$length"
-msgstr ""
+msgstr "$length"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns the length of the current line feature"
-msgstr ""
+msgstr "Retorna o comprimento da feição de linha atual"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "$perimeter"
-msgstr ""
+msgstr "$perimeter"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns the perimeter of the current polygon feature"
-msgstr ""
+msgstr "Retorna o perímetro da feição de polígono atual"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "$x"
-msgstr ""
+msgstr "$x"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns the X coordinate of the current feature"
-msgstr ""
+msgstr "Retorna a coordenada X da feição atual"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "$x_at(n)"
-msgstr ""
+msgstr "$x_at(n)"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns the X coordinate of the nth node of the current feature's geometry"
-msgstr ""
+msgstr "Retorna a coordenada X do enésimo nó da geometria da feição atual"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "$y"
-msgstr ""
+msgstr "$y"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns the Y coordinate of the current feature"
-msgstr ""
+msgstr "Retorna a coordenada Y da feição atual"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "$y_at(n)"
-msgstr ""
+msgstr "$y_at(n)"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns the Y coordinate of the nth node of the current feature's geometry"
-msgstr ""
+msgstr "Retorna a coordenada Y do enésimo nó da geometria da feição atual"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "angle_at_vertex"
-msgstr ""
+msgstr "angle_at_vertex"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns the bisector angle (average angle) to the geometry for a specified "
 "vertex on a linestring geometry. Angles are in degrees clockwise from north"
 msgstr ""
+"Retorna o ângulo da bissetriz (ângulo médio) para a geometria para um "
+"vértice especificado em uma geometria de linhas. Os ângulos estão em graus "
+"no sentido horário do norte"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "area"
-msgstr "área"
+msgstr "area"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns the area of a geometry polygon feature. Calculations are in the "
 "Spatial Reference System of this geometry"
 msgstr ""
+"Retorna a área de uma feição de geometria de polígono . Os cálculos estão no"
+" Sistema de Referência Espacial desta geometria"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "azimuth"
-msgstr "azimute"
+msgstr "azimuth"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns the north-based azimuth as the angle in radians measured clockwise "
 "from the vertical on point_a to point_b"
 msgstr ""
+"Retorna o azimute baseado no norte como o ângulo em radianos medido no "
+"sentido horário da vertical em point_a a point_b"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "boundary"
-msgstr "fronteira"
+msgstr "boundary"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns the closure of the combinatorial boundary of the geometry (ie the "
 "topological boundary of the geometry - see also :ref:`qgisboundary`)."
 msgstr ""
+"Retorna o fechamento do limite combinatório da geometria (isto é, o limite "
+"topológico da geometria - veja também :ref:`qgisboundary`)."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "bounds"
-msgstr "limites"
+msgstr "bounds"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
@@ -1660,30 +1863,37 @@ msgid ""
 "Calculations are in the Spatial Reference System of this geometry (see also "
 ":ref:`qgisboundingboxes`)"
 msgstr ""
+"Retorna uma geometria que representa a caixa delimitadora de uma geometria "
+"de entrada. Os cálculos estão no Sistema de Referência Espacial desta "
+"geometria (veja também :ref:`qgisboundingboxes`)"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "bounds_height"
-msgstr ""
+msgstr "bounds_height"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns the height of the bounding box of a geometry. Calculations are in "
 "the Spatial Reference System of this geometry"
 msgstr ""
+"Retorna a altura da caixa delimitadora de uma geometria. Os cálculos estão "
+"no Sistema de Referência Espacial desta geometria"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "bounds_width"
-msgstr ""
+msgstr "bounds_width"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns the width of the bounding box of a geometry. Calculations are in the"
 " Spatial Reference System of this geometry"
 msgstr ""
+"Retorna a largura da caixa delimitadora de uma geometria. Os cálculos estão "
+"no Sistema de Referência Espacial desta geometria"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "buffer"
-msgstr ""
+msgstr "buffer"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
@@ -1691,10 +1901,13 @@ msgid ""
 "geometry is less than or equal to distance. Calculations are in the Spatial "
 "Reference System of this geometry (see also :ref:`qgisbuffer`)"
 msgstr ""
+"Retorna uma geometria que representa todos os pontos cuja distância dessa "
+"geometria é menor ou igual à distância. Os cálculos estão no sistema de "
+"referência espacial desta geometria (veja também :ref:`qgisbuffer`)"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "buffer_by_m"
-msgstr ""
+msgstr "buffer_by_m"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
@@ -1702,55 +1915,65 @@ msgid ""
 "according to the M values at the line vertices (see also "
 ":ref:`qgisbufferbym`)"
 msgstr ""
+"Cria um buffer ao longo de uma geometria de linha em que o diâmetro do "
+"buffer varia de acordo com os valores M nos vértices da linha (veja também "
+":ref:`qgisbufferbym`)"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "centroid"
-msgstr ""
+msgstr "centroid"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns the geometric center of a geometry (see also :ref:`qgiscentroids`)"
 msgstr ""
+"Retorna o centro geométrico de uma geometria (veja também "
+":ref:`qgiscentroids`)"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "closest_point"
-msgstr ""
+msgstr "closest_point"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns the point on a geometry that is closest to a second geometry"
 msgstr ""
+"Retorna o ponto em uma geometria mais próxima de uma segunda geometria"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "collect_geometries"
-msgstr ""
+msgstr "collect_geometries"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Collects a set of geometries into a multi-part geometry object (see also "
 ":ref:`qgiscollect`)"
 msgstr ""
+"Coleta um conjunto de geometrias em um objeto de geometria com várias partes"
+" (veja também :ref:`qgiscollect`)"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "combine"
-msgstr "combinar"
+msgstr "combine"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns the combination of two geometries"
-msgstr ""
+msgstr "Retorna a combinação de duas geometrias"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "contains(a,b)"
-msgstr "contém(a,b)"
+msgstr "contains(a,b)"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns 1 (true) if and only if no points of b lie in the exterior of a, and"
 " at least one point of the interior of b lies in the interior of a"
 msgstr ""
+"Retorna 1 (verdadeiro) se e somente se nenhum ponto de b estiver no exterior"
+" de a e pelo menos um ponto do interior de b estiver no interior de a"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "convex_hull"
-msgstr ""
+msgstr "convex_hull"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
@@ -1761,121 +1984,143 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "crosses"
-msgstr ""
+msgstr "crosses"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns 1 (true) if the supplied geometries have some, but not all, interior"
 " points in common"
 msgstr ""
+"Retorna 1 (verdadeiro) se as geometrias fornecidas tiverem alguns, mas não "
+"todos, pontos interiores em comum"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "difference(a,b)"
-msgstr ""
+msgstr "difference(a,b)"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns a geometry that represents that part of geometry a that does not "
 "intersect with geometry b (see also :ref:`qgisdifference`)"
 msgstr ""
+"Retorna uma geometria que representa a parte da geometria a que não se cruza"
+" com a geometria b (veja tambéms :ref:`qgisdifference`)"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "disjoint"
-msgstr ""
+msgstr "disjoint"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns 1 (true) if the geometries do not share any space together"
 msgstr ""
+"Retorna 1 (verdadeiro) se as geometrias não compartilharem nenhum espaço "
+"juntas"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "distance"
-msgstr ""
+msgstr "distance"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns the minimum distance (based on Spatial Reference System) between two"
 " geometries in projected units"
 msgstr ""
+"Retorna a distância mínima (com base no Sistema de Referência Espacial) "
+"entre duas geometrias em unidades projetadas"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "distance_to_vertex"
-msgstr ""
+msgstr "distance_to_vertex"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns the distance along the geometry to a specified vertex"
 msgstr ""
+"Retorna a distância ao longo da geometria para um vértice especificado"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "end_point"
-msgstr ""
+msgstr "end_point"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns the last node from a geometry (see also "
 ":ref:`qgisextractspecificvertices`)"
 msgstr ""
+"Retorna o último nó de uma geometria (veja também "
+":ref:`qgisextractspecificvertices`)"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "extend"
-msgstr ""
+msgstr "extend"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Extends the start and end of a linestring geometry by a specified amount "
 "(see also :ref:`qgisextendlines`)"
 msgstr ""
+"Aumenta o início e o fim de uma geometria de uma linha em uma quantidade "
+"especificada (veja também :ref:`qgisextendlines`)"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "exterior_ring"
-msgstr ""
+msgstr "exterior_ring"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns a line string representing the exterior ring of a polygon geometry, "
 "or null if the geometry is not a polygon"
 msgstr ""
+"Retorna uma string de linhas que representa o anel externo de uma geometria "
+"de polígono ou nula se a geometria não for um polígono"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "extrude(geom,x,y)"
-msgstr ""
+msgstr "extrude(geom,x,y)"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns an extruded version of the input (Multi-) Curve or "
 "(Multi-)Linestring geometry with an extension specified by X and Y"
 msgstr ""
+"Retorna uma versão extrudida da geometria de entrada (Multi) Curva ou "
+"(Multi) Linhas com uma extensão especificada por X e Y"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "flip_coordinates"
-msgstr ""
+msgstr "flip_coordinates"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns a copy of the geometry with the X and Y coordinates swapped (see "
 "also :ref:`qgisswapxy`)"
 msgstr ""
+"Retorna uma cópia da geometria com as coordenadas X e Y trocadas (veja "
+"também :ref:`qgisswapxy`)"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "force_rhr"
-msgstr ""
+msgstr "force_rhr"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Forces a geometry to respect the Right-Hand-Rule (see also "
 ":ref:`qgisforcerhr`)"
 msgstr ""
+"Força uma geometria a respeitar a Regra da Mão Direita (veja também "
+":ref:`qgisforcerhr`)"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "geom_from_gml"
-msgstr ""
+msgstr "geom_from_gml"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns a geometry created from a GML representation of geometry"
 msgstr ""
+"Retorna uma geometria criada a partir de uma representação GML da geometria"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "geom_from_wkt"
-msgstr ""
+msgstr "geom_from_wkt"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns a geometry created from a well-known text (WKT) representation"
@@ -1893,66 +2138,76 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "geometry"
-msgstr ""
+msgstr "geometry"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns a feature's geometry"
-msgstr ""
+msgstr "Retorna a geometria de uma feição"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "geometry_n"
-msgstr ""
+msgstr "geometry_n"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns the nth geometry from a geometry collection, or null if the input "
 "geometry is not a collection"
 msgstr ""
+"Retorna a enésima geometria de uma coleção de geometrias ou nula se a "
+"geometria de entrada não for uma coleção"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "hausdorff_distance"
-msgstr ""
+msgstr "hausdorff_distance"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns basically a measure of how similar or dissimilar two geometries are,"
 " with a lower distance indicating more similar geometries"
 msgstr ""
+"Retorna basicamente uma medida de quão semelhantes ou diferentes são duas "
+"geometrias, com uma distância menor indicando geometrias mais semelhantes"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "inclination"
-msgstr ""
+msgstr "inclination"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns the inclination measured from the zenith (0) to the nadir (180) on "
 "point_a to point_b"
 msgstr ""
+"Retorna a inclinação medida do zênite (0) ao nadir (180) no ponto_a ao "
+"ponto_b"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "interior_ring_n"
-msgstr ""
+msgstr "interior_ring_n"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns the geometry of the nth interior ring from a polygon geometry, or "
 "null if the geometry is not a polygon"
 msgstr ""
+"Retorna a geometria do enésimo anel interno de uma geometria de polígono ou "
+"nula se a geometria não for um polígono"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "intersection"
-msgstr ""
+msgstr "intersection"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns a geometry that represents the shared portion of two geometries (see"
 " also  :ref:`qgisintersection`)"
 msgstr ""
+"Retorna uma geometria que representa a parte compartilhada de duas "
+"geometrias (veja também :ref:`qgisintersection`)"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "intersects"
-msgstr ""
+msgstr "intersects"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
@@ -1960,10 +2215,13 @@ msgid ""
 "geometries spatially intersect (share any portion of space) and 0 if they "
 "don't"
 msgstr ""
+"Testa se uma geometria cruza outra. Retorna 1 (verdadeiro) se as geometrias "
+"se cruzam espacialmente (compartilham qualquer parte do espaço) e 0 se não o"
+" fizerem"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "intersects_bbox"
-msgstr ""
+msgstr "intersects_bbox"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
@@ -1971,10 +2229,14 @@ msgid ""
 " box. Returns 1 (true) if the geometries spatially intersect (share any "
 "portion of space) their bounding box, or 0 if they don't"
 msgstr ""
+"Testa se a caixa delimitadora de uma geometria se sobrepõe à caixa "
+"delimitadora de outra geometria. Retorna 1 (verdadeiro) se as geometrias se "
+"cruzam espacialmente (compartilham qualquer parte do espaço) sua caixa "
+"delimitadora ou 0 se não o fizerem"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "is_closed"
-msgstr ""
+msgstr "is_closed"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
@@ -1982,49 +2244,61 @@ msgid ""
 "coincident), false if a line string is not closed, or null if the geometry "
 "is not a line string"
 msgstr ""
+"Retorna true se uma string de linha estiver fechada (os pontos inicial e "
+"final são coincidentes), false se uma string de linha não estiver fechada ou"
+" null se a geometria não for uma string de linha"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "length"
-msgstr ""
+msgstr "length"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns length of a line geometry feature (or length of a string)"
 msgstr ""
+"Retorna o comprimento de uma feição de geometria de linha (ou o comprimento "
+"de uma string)"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "line_interpolate_angle"
-msgstr ""
+msgstr "line_interpolate_angle"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns the angle parallel to the geometry at a specified distance along a "
 "linestring geometry. Angles are in degrees clockwise from north."
 msgstr ""
+"Retorna o ângulo paralelo à geometria a uma distância especificada ao longo "
+"de uma geometria de linhas. Os ângulos estão em graus no sentido horário do "
+"norte."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "line_interpolate_point"
-msgstr ""
+msgstr "line_interpolate_point"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns the point interpolated by a specified distance along a linestring "
 "geometry. (see also :ref:`qgisinterpolatepoint`)"
 msgstr ""
+"Retorna o ponto interpolado por uma distância especificada ao longo de uma "
+"geometria de linhas. (veja também :ref:`qgisinterpolatepoint`)"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "line_locate_point"
-msgstr ""
+msgstr "line_locate_point"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns the distance along a linestring corresponding to the closest "
 "position the linestring comes to a specified point geometry."
 msgstr ""
+"Retorna a distância ao longo de uma linha correspondente à posição mais "
+"próxima da linha a uma geometria de ponto especificada."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "line_merge"
-msgstr ""
+msgstr "line_merge"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
@@ -2034,7 +2308,7 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "line_substring"
-msgstr ""
+msgstr "line_substring"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
@@ -2042,130 +2316,146 @@ msgid ""
 "start and end distances (measured from the beginning of the line) (see also "
 ":ref:`qgislinesubstring`)"
 msgstr ""
+"Retorna a parte de uma geometria de linha ou curva que cai entre as "
+"distâncias inicial e final especificadas (medidas desde o início da linha) "
+"(veja também :ref:`qgislinesubstring`)"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "m"
-msgstr ""
+msgstr "m"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns the M value of a point geometry"
-msgstr ""
+msgstr "Retorna o valor M de uma geometria de ponto"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "make_circle"
-msgstr ""
+msgstr "make_circle"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Creates a circular geometry based on center point and radius"
-msgstr ""
+msgstr "Cria uma geometria circular com base no ponto central e raio"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "make_ellipse"
-msgstr "fazer_elipse"
+msgstr "make_ellipse"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Creates an elliptical geometry based on center point, axes and azimuth"
 msgstr ""
+"Cria uma geometria elíptica com base no ponto central, eixos e azimute"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "make_line"
-msgstr "fazer_linha"
+msgstr "make_line"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Creates a line geometry from a series or an array of point geometries"
 msgstr ""
+"Cria uma geometria de linha a partir de uma série ou de um array de "
+"geometrias de pontos"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "make_point(x,y,z,m)"
-msgstr ""
+msgstr "make_point(x,y,z,m)"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns a point geometry from X and Y (and optional Z or M) values"
 msgstr ""
+"Retorna uma geometria de ponto a partir dos valores X e Y (e Z ou M "
+"opcionais)"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "make_point_m(x,y,m)"
-msgstr "fazer_ponto_m(x,y,m)"
+msgstr "make_point_m(x,y,m)"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns a point geometry from X and Y coordinates and M values"
-msgstr ""
+msgstr "Retorna uma geometria de ponto das coordenadas X e Y e valores M"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "make_polygon"
-msgstr "fazer_polígono"
+msgstr "make_polygon"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Creates a polygon geometry from an outer ring and optional series of inner "
 "ring geometries"
 msgstr ""
+"Cria uma geometria de polígono a partir de um anel externo e uma série "
+"opcional de geometrias de anel interno"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "make_rectangle_3points"
-msgstr ""
+msgstr "make_rectangle_3points"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Creates a rectangle from 3 points"
-msgstr ""
+msgstr "Cria um retângulo a partir de 3 pontos"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "make_regular_polygon"
-msgstr "fazer_polígono_regular"
+msgstr "make_regular_polygon"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Creates a regular polygon"
-msgstr "Criar um polígono regular"
+msgstr "Cria um polígono regular"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "make_square"
-msgstr ""
+msgstr "make_square"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Creates a square from a diagonal"
-msgstr ""
+msgstr "Cria um quadrado a partir de uma diagonal"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "make_triangle"
-msgstr "fazer_triângulo "
+msgstr "make_triangle"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Creates a triangle polygon"
-msgstr "Criar um polígono triangular"
+msgstr "Cria um polígono triangular"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "minimal_circle"
-msgstr "círculo_mínimo"
+msgstr "minimal_circle"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns the minimal enclosing circle of an input geometry (see also "
 ":ref:`qgisminimumenclosingcircle`)"
 msgstr ""
+"Retorna o círculo mínimo de uma geometria de entrada (veja também "
+":ref:`qgisminimumenclosingcircle`)"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "nodes_to_points"
-msgstr ""
+msgstr "nodes_to_points"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns a multipoint geometry consisting of every node in the input geometry"
 " (see also :ref:`qgisextractvertices`)"
 msgstr ""
+"Retorna uma geometria multiponto que consiste em cada nó na geometria de "
+"entrada (veja também :ref:`qgisextractvertices`)"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "num_geometries"
-msgstr ""
+msgstr "num_geometries"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns the number of geometries in a geometry collection, or null if the "
 "input geometry is not a collection"
 msgstr ""
+"Retorna o número de geometrias em uma coleção de geometrias ou nulo se a "
+"geometria de entrada não for uma coleção"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "num_interior_rings"
-msgstr ""
+msgstr "num_interior_rings"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
@@ -2237,7 +2527,7 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "perimeter"
-msgstr "perímetro"
+msgstr "perimeter"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
@@ -2319,7 +2609,7 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "shortest_line"
-msgstr "linha_mais curta"
+msgstr "shortest_line"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
@@ -2329,7 +2619,7 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "simplify"
-msgstr "simplificar"
+msgstr "simplify"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
