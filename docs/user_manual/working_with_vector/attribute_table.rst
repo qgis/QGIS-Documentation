@@ -680,12 +680,12 @@ for editing and QGIS takes care of the setup. It works with different
 providers (so you can also use it with shape and csv files) and all you have
 to do is to tell QGIS the relations between your tables.
 
-Defining 1-N relations (Relation Manager)
-.........................................
+Defining 1-N relations
+......................
 
 The first thing we are going to do is to let QGIS know about the relations
-between the layers. This is done in :menuselection:`Project --> Project Properties...`.
-Open the :guilabel:`Relations` tab and click on :guilabel:`Add Relation`.
+between the layers. This is done in :menuselection:`Project --> Properties...`.
+Open the :guilabel:`Relations` tab and click on |signPlus| :guilabel:`Add Relation`.
 
 * **Name** is going to be used as a title. It should be a human readable string,
   describing, what the relation is used for. We will just call say **airport_relation**
@@ -714,7 +714,12 @@ Open the :guilabel:`Relations` tab and click on :guilabel:`Add Relation`.
 .. figure:: img/relations2.png
    :align: center
 
-   Relation Manager
+   Adding a relation between regions and airports layers
+
+From the :guilabel:`Relations` tab, you can also press the |signPlus|
+:guilabel:`Discover Relation` button to fetch the relations available from
+the providers of the current layers. This is possible for layers stored in
+data providers like PostgreSQL or SpatiaLite.
 
 .. index:: Feature form, Linked forms, Embedded form
 
