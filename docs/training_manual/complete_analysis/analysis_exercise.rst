@@ -455,26 +455,28 @@ symbology.
 Setting the style for the reclassified layers
 ----------------------------------------------------------------------
 
-#. Open the :guilabel:`Symbology` tab in the layer's :guilabel:`Properties` dialog
-   as usual.
-#. Under the heading :guilabel:`Load min / max values from band`, select the
-   :guilabel:`Actual (slower)` radio button.
-#. Click the :guilabel:`Load` button.
+#. Open the :guilabel:`Symbology` tab in the layer's
+   :guilabel:`Properties` dialog as usual
+#. Under the heading :guilabel:`Load min / max values from band`,
+   select the :guilabel:`Actual (slower)` radio button
+#. Click the :guilabel:`Load` button
 
-The :guilabel:`Custom min / max values` fields should now populate with
-``0`` and ``1``, respectively. (If they do not, then there was a mistake
-with your reclassification of the data, and you will need to go over that part
-again.)
+The :guilabel:`Custom min / max values` fields should now populate
+with ``0`` and ``1``, respectively (if they do not, then there was a
+mistake with your reclassification of the data, and you will need to
+go over that part again).
 
 #. Under the heading :guilabel:`Contrast enhancement`, set the
-   :guilabel:`Current` dropdown list to :guilabel:`Stretch To MinMax`.
-#. Click :guilabel:`OK`.
-#. Do this for all three reclassified rasters, and remember to save your work!
+   :guilabel:`Current` dropdown list to :guilabel:`Stretch To MinMax`
+#. Click :guilabel:`OK`
+#. Do this for all three reclassified rasters, and remember to save
+   your work!
 
-The only criterion that remains is that the area must be ``250m`` away from
-urban areas. We will satisfy this requirement by ensuring that the areas we
-compute are ``250m`` or more from the edge of a rural area. Hence, we need
-to find all rural areas first.
+The only criterion that remains is that the area must be ``250m`` away
+from urban areas.
+We will satisfy this requirement by ensuring that the areas we compute
+are ``250m`` or more from the edge of a rural area.
+Hence, we need to find all rural areas first.
 
 Finding rural areas
 ----------------------------------------------------------------------
@@ -482,255 +484,272 @@ Finding rural areas
 #. Hide all layers in the :guilabel:`Layers` panel.
 #. Unhide the :guilabel:`Zoning` vector layer.
 #. Right-click on it and bring up the :guilabel:`Query` dialog.
-#. Build the following query:
-
-   ::
+#. Build the following query::
 
     "Gen_Zoning" = 'Rural'
 
-   See the earlier instructions for building the :guilabel:`Streets` query if
-   you get stuck.
-#. When you're done, close the :guilabel:`Query` dialog.
+   See the earlier instructions for building the :guilabel:`Streets`
+   query if you get stuck.
+#. When you're done, close the :guilabel:`Query` dialog
 
-You should see a collection of polygons from the :guilabel:`Zoning` layer. You
-will need to save these to a new layer file.
+You should see a collection of polygons from the :guilabel:`Zoning`
+layer.
+You will need to save these.
 
-#. On the right-click menu for :guilabel:`Zoning`, select :guilabel:`Save
-   as...`.
-#. Save your layer under the :guilabel:`Zoning` directory.
-#. Name the output file :file:`rural.shp`.
-#. Click :guilabel:`OK`.
-#. Add the layer to your map.
-#. Click the menu item :menuselection:`Vector --> Geoprocessing Tools -->
-   Dissolve`.
-#. Select the :guilabel:`rural` layer as your input vector layer, while leaving
-   the :guilabel:`Use only selected features` box unchecked.
-#. Leave empty the :guilabel:`Dissolve field(s)` option to combine all selected
-   features in a single one.
-#. Save your layer under the :guilabel:`Zoning` directory.
-#. Check the :guilabel:`Open output file after running algorithm` box.
-#. Click :guilabel:`Run`.
-#. Close the :guilabel:`Dissolve` dialog.
-#. Remove the :guilabel:`rural` and :guilabel:`Zoning` layers.
-#. Save the map.
+#. On the right-click menu for :guilabel:`Zoning`, select
+   :guilabel:`Save as...`
+#. Save your layer under the :guilabel:`Zoning` directory
+#. Name the output file :file:`rural.shp`
+#. Click :guilabel:`OK`
+#. Add the layer to your map
+#. Click the menu item
+   :menuselection:`Vector --> Geoprocessing Tools --> Dissolve`
+#. Select the :guilabel:`rural` layer as your input vector layer,
+   while leaving the :guilabel:`Use only selected features` box
+   unchecked
+#. Leave empty the :guilabel:`Dissolve field(s)` option to combine
+   all selected features in a single one
+#. Save your layer under the :guilabel:`Zoning` directory
+#. Check the :guilabel:`Open output file after running algorithm` box
+#. Click :guilabel:`Run`
+#. Close the :guilabel:`Dissolve` dialog
+#. Remove the :guilabel:`rural` and :guilabel:`Zoning` layers
+#. Save the map
 
-Now you need to exclude the areas that are within ``250m`` from the edge of
-the rural areas. Do this by creating a negative buffer, as explained below.
+Now you need to exclude the areas that are within ``250m`` from the
+edge of the rural areas.
+Do this by creating a negative buffer, as explained below.
 
 Creating a negative buffer
 ----------------------------------------------------------------------
 
-#. Click the menu item :menuselection:`Vector --> Geoprocessing Tools -->
-   Buffer(s)`.
-#. In the dialog that appears, select the :guilabel:`rural_dissolve` layer as
-   your input vector layer (:guilabel:`Use only selected features` should not be
-   checked).
-#. Select the :guilabel:`Buffer distance` button and enter the value ``-250``
-   into the associated field; the negative value means that the buffer must be
-   an internal buffer.
-#. Check the :guilabel:`Dissolve buffer results` box.
-#. Set the output file to the same directory as the other rural vector files.
-#. Name the output file :file:`rural_buffer.shp`.
-#. Click :guilabel:`Save`.
-#. Click :guilabel:`OK` and wait for the processing to complete.
-#. Select :guilabel:`Yes` on the dialog that appears.
-#. Close the :guilabel:`Buffer` dialog.
-#. Remove the :guilabel:`rural_dissolve` layer.
-#. Save the map.
+#. Click the menu item
+   :menuselection:`Vector --> Geoprocessing Tools --> Buffer(s)`
+#. In the dialog that appears, select the :guilabel:`rural_dissolve`
+   layer as your input vector laye
+   (:guilabel:`Use only selected features` should not be checked).
+#. Select the :guilabel:`Buffer distance` button and enter the value
+   ``-250`` into the associated field; the negative value means that
+   the buffer must be an internal buffer.
+#. Check the :guilabel:`Dissolve buffer results` box
+#. Set the output file to the same directory as the other rural vector
+   files
+#. Name the output file :file:`rural_buffer.shp`
+#. Click :guilabel:`Save`
+#. Click :guilabel:`OK` and wait for the processing to complete
+#. Select :guilabel:`Yes` on the dialog that appears
+#. Close the :guilabel:`Buffer` dialog
+#. Remove the :guilabel:`rural_dissolve` layer
+#. Save the map
 
-In order to incorporate the rural zones into the same analysis with the three
-existing rasters, it will need to be rasterized as well. But in order for the
-rasters to be compatible for analysis, they will need to be the same size.
-Therefore, before you can rasterize, you'll need to clip the vector to the same
-area as the three rasters. A vector can only be clipped by another vector, so
-you will first need to create a bounding box polygon the same size as the
-rasters.
+In order to incorporate the rural zones into the same analysis with
+the three existing rasters, it will need to be rasterized as well.
+But in order for the rasters to be compatible for analysis, they will
+need to be the same size.
+Therefore, before you can rasterize, you'll need to clip the vector
+to the same area as the three rasters.
+A vector can only be clipped by another vector, so you will first need
+to create a bounding box polygon the same size as the rasters.
 
 Creating a bounding box vector
 ----------------------------------------------------------------------
 
-#. Click on the menu item :menuselection:`Layer --> New --> New Shapefile Layer...`.
-#. Under the :guilabel:`Type` heading, select the :guilabel:`Polygon` button.
-#. Click :guilabel:`Specify CRS` and set the coordinate reference system
-   :guilabel:`WGS 84 / UTM zone 33S : EPSG:32733`.
-#. Click OK.
-#. Click :guilabel:`OK` on the :guilabel:`New Vector Layer` dialog as well.
-#. Save the vector in the :guilabel:`Zoning` directory.
-#. Name the output file :file:`bbox.shp`.
-#. Hide all layers except the new :guilabel:`bbox` layer and one of the
-   reclassified rasters.
+#. Click on the menu item
+   :menuselection:`Layer --> New --> New Shapefile Layer...`
+#. Under the :guilabel:`Type` heading, select the
+   :guilabel:`Polygon` button
+#. Click :guilabel:`Specify CRS` and set the coordinate reference
+   system :guilabel:`WGS 84 / UTM zone 33S : EPSG:32733`
+#. Click OK
+#. Click :guilabel:`OK` on the :guilabel:`New Vector Layer` dialog as
+   well
+#. Save the vector in the :guilabel:`Zoning` directory
+#. Name the output file :file:`bbox.shp`
+#. Hide all layers except the new :guilabel:`bbox` layer and one of
+   the reclassified rasters.
 #. Ensure that the :guilabel:`bbox` layer is highlighted in the
    :guilabel:`Layers` panel.
-#. Navigate to the :menuselection:`View > Toolbars` menu item and ensure that
-   :guilabel:`Digitizing` is selected. You should then see a toolbar icon with a
-   pencil or koki on it. This is the :guilabel:`Toggle editing` button.
-#. Click the :guilabel:`Toggle editing` button to enter *edit mode*. This allows
-   you to edit a vector layer.
-#. Click the :guilabel:`Add feature` button, which should be nearby the
-   :guilabel:`Toggle editing` button. It may be hidden behind a double arrow
-   button; if so, click the double arrows to show the :guilabel:`Digitizing`
-   toolbar's hidden buttons.
-#. With the :guilabel:`Add feature` tool activated, left-click on the corners of
-   the raster. You may need to zoom in with the mouse wheel to ensure that it is
-   accurate. To pan across the map in this mode, click and drag in the map with
+#. Navigate to the :menuselection:`View > Toolbars` menu item and
+   ensure that :guilabel:`Digitizing` is selected.
+   You should then see a toolbar icon with a pencil or koki on it.
+   This is the :guilabel:`Toggle editing` button.
+#. Click the :guilabel:`Toggle editing` button to enter *edit mode*.
+   This allows you to edit a vector layer.
+#. Click the :guilabel:`Add feature` button, which should be nearby
+   the :guilabel:`Toggle editing` button.
+   It may be hidden behind a double arrow button; if so, click the
+   double arrows to show the :guilabel:`Digitizing` toolbar's hidden
+   buttons.
+#. With the :guilabel:`Add feature` tool activated, left-click on the
+   corners of the raster.
+   You may need to zoom in with the mouse wheel to ensure that it is
+   accurate.
+   To pan across the map in this mode, click and drag in the map with
    the middle mouse button or mouse wheel.
-#. For the fourth and final point, right-click to finalize the shape.
-#. Enter any arbitrary number for the shape ID.
-#. Click :guilabel:`OK`.
-#. Click the :guilabel:`Save edits` button.
-#. Click the :guilabel:`Toggle editing` button to stop your editing session.
-#. Save the map.
+#. For the fourth and final point, right-click to finalize the shape
+#. Enter any arbitrary number for the shape ID
+#. Click :guilabel:`OK`
+#. Click the :guilabel:`Save edits` button
+#. Click the :guilabel:`Toggle editing` button to stop your editing
+   session
+#. Save the map
 
-Now that you have a bounding box, you can use it to clip the rural buffer
-layer.
+Now that you have a bounding box, you can use it to clip the rural
+buffer layer.
 
 Clipping a vector layer
 ----------------------------------------------------------------------
 
-#. Ensure that only the :guilabel:`bbox` and :guilabel:`rural_buffer` layers are
-   visible, with the latter on top.
-#. Click the menu item :menuselection:`Vector > Geoprocessing Tools > Clip`.
+#. Ensure that only the :guilabel:`bbox` and :guilabel:`rural_buffer`
+   layers are visible, with the latter on top.
+#. Click the menu item
+   :menuselection:`Vector > Geoprocessing Tools > Clip`.
 #. In the dialog that appears, set the input vector layer to
-   :guilabel:`rural_buffer` and the clip layer to :guilabel:`bbox`, with both
-   :guilabel:`Use only selected features` boxes unchecked.
-#. Put the output file under the :guilabel:`Zoning` directory.
-#. Name the output file :guilabel:`rural_clipped`.
-#. Click :guilabel:`OK`.
-#. When prompted to add the layer to the TOC, click :guilabel:`Yes`.
-#. Close the dialog.
-#. Compare the three vectors and see the results for yourself.
-#. Remove the :guilabel:`bbox` and :guilabel:`rural_buffer` layers, then save
-   your map.
+   :guilabel:`rural_buffer` and the clip layer to :guilabel:`bbox`,
+   with both :guilabel:`Use only selected features` boxes unchecked.
+#. Put the output file under the :guilabel:`Zoning` directory
+#. Name the output file :guilabel:`rural_clipped`
+#. Click :guilabel:`OK`
+#. When prompted to add the layer to the TOC, click :guilabel:`Yes`
+#. Close the dialog
+#. Compare the three vectors and see the results for yourself
+#. Remove the :guilabel:`bbox` and :guilabel:`rural_buffer` layers,
+   then save your map
 
 Now it's ready to be rasterized.
 
 Rasterizing a vector layer
 ----------------------------------------------------------------------
 
-You'll need to specify a pixel size for a new raster that you create, so first
-you'll need to know the size of one of your existing rasters.
+You'll need to specify a pixel size for a new raster that you create,
+so first you'll need to know the size of one of your existing rasters.
 
-#. Open the :guilabel:`Properties` dialog of any of the three existing rasters.
-#. Switch to the :guilabel:`Metadata` tab.
-#. Make a note of the :guilabel:`X` and :guilabel:`Y` values under the heading
-   :guilabel:`Dimensions` in the Metadata table.
-#. Close the :guilabel:`Properties` dialog.
-#. Click on the :menuselection:`Raster --> Conversion --> Rasterize` menu item.
-   You may receive a warning about a dataset being unsupported. Click it away
-   and ignore it.
-#. Select :guilabel:`rural_clipped` as your input layer.
-#. Set an output file location inside the :guilabel:`Zoning` directory.
-#. Name the output file :file:`rural_raster.tif`.
+#. Open the :guilabel:`Properties` dialog of any of the three existing
+   rasters
+#. Switch to the :guilabel:`Metadata` tab
+#. Make a note of the :guilabel:`X` and :guilabel:`Y` values under the
+   heading :guilabel:`Dimensions` in the Metadata table
+#. Close the :guilabel:`Properties` dialog
+#. Click on the
+   :menuselection:`Raster --> Conversion --> Rasterize` menu item
+   You may receive a warning about a dataset being unsupported.
+   Click it away and ignore it.
+#. Select :guilabel:`rural_clipped` as your input layer
+#. Set an output file location inside the
+   :guilabel:`Zoning` directory
+#. Name the output file :file:`rural_raster.tif`
 #. Check the :guilabel:`New size` box and enter the :guilabel:`X` and
-   :guilabel:`Y` values you made a note of earlier.
-#. Check the :guilabel:`Load into canvas` box.
-#. Click the pencil icon next to the text field which shows the command that
-   will be run. At the end of the existing text, add a space and then the text
-   ``-burn 1``. This tells the Rasterize function to "burn" the existing
-   vector into the new raster and give the areas covered by the vector the new
-   value of ``1`` (as opposed to the rest of the image, which will
+   :guilabel:`Y` values you made a note of earlier
+#. Check the :guilabel:`Load into canvas` box
+#. Click the pencil icon next to the text field which shows the
+   command that will be run.
+   At the end of the existing text, add a space and then the text
+   ``-burn 1``.
+   This tells the Rasterize function to "burn" the existing vector
+   into the new raster and give the areas covered by the vector the
+   new value of ``1`` (as opposed to the rest of the image, which will
    automatically be ``0``).
-#. Click :guilabel:`OK`.
-#. The new raster should show up in your map once it has been computed.
-#. The new raster will look like a grey rectangle – you may change the display
-   style as you did for the reclassified rasters.
-#. Save your map.
+#. Click :guilabel:`OK`
+#. The new raster should show up in your map once it has been computed
+#. The new raster will look like a grey rectangle – you may change the
+   display style as you did for the reclassified rasters
+#. Save your map
 
-Now that you have all four criteria each in a separate raster, you need to
-combine them to see which areas satisfy all the criteria. To do so, the rasters
-will be multiplied with each other. When this happens, all overlapping pixels
-with a value of ``1`` will retain the value of ``1``, but if a pixel has
-the value of ``0`` in any of the four rasters, then it will be ``0`` in
-the result. In this way, the result will contain only the overlapping areas.
+Now that you have all four criteria each in a separate raster, you
+need to combine them to see which areas satisfy all the criteria.
+To do so, the rasters will be multiplied with each other.
+When this happens, all overlapping pixels with a value of ``1`` will
+retain the value of ``1``, but if a pixel has the value of ``0`` in
+any of the four rasters, then it will be ``0`` in the result.
+In this way, the result will contain only the overlapping areas.
 
 Combining rasters
 ----------------------------------------------------------------------
 
 #. Click the :menuselection:`Raster --> Raster calculator` menu item.
-#. Build the following expression (with the appropriate names for your layers,
-   depending on what you called them):
-
-   ::
+#. Build the following expression (with the appropriate names for your
+   layers, depending on what you called them)::
 
     [Rural raster] * [Reclassified aspect] * [Reclassified slope] *
     [Reclassified rainfall]
 
-#. Set the output location to the :file:`Rasterprac` directory.
-#. Name the output raster :file:`cross_product.tif`.
-#. Ensure that the :guilabel:`Open output file after running algorithm` box is
-   checked.
-#. Click :guilabel:`Run`.
-#. Change the symbology of the new raster in the same way as you set the style
-   for the other reclassified rasters.  The new raster now properly displays the
-   areas where all the criteria are satisfied.
+#. Set the output location to the :file:`Rasterprac` directory
+#. Name the output raster :file:`cross_product.tif`
+#. Ensure that the
+   :guilabel:`Open output file after running algorithm` box is checked
+#. Click :guilabel:`Run`
+#. Change the symbology of the new raster in the same way as you set
+   the style for the other reclassified rasters.
+   The new raster now properly displays the areas where all the
+   criteria are satisfied.
 
-To get the final result, you need to select the areas that are greater than
-``6000m^2``. However, computing these areas accurately is only possible for
-a vector layer, so you will need to vectorize the raster.
+To get the final result, you need to select the areas that are greater
+than ``6000m^2``.
+However, computing these areas accurately is only possible for a
+vector layer, so you will need to vectorize the raster.
 
 Vectorizing the raster
 ----------------------------------------------------------------------
 
-#. Click on the menu item :menuselection:`Raster --> Conversion --> Polygonize`.
-#. Select the :file:`cross_product.tif` raster.
-#. Set the output location to :file:`Rasterprac`.
-#. Name the file :file:`candidate_areas.shp`.
-#. Ensure that :guilabel:`Open output file after running algorithm` is checked.
-#. Click :guilabel:`Run`.
-#. Close the dialog when processing is complete.
+#. Click on the menu item
+   :menuselection:`Raster --> Conversion --> Polygonize`
+#. Select the :file:`cross_product.tif` raster
+#. Set the output location to :file:`Rasterprac`
+#. Name the file :file:`candidate_areas.shp`
+#. Ensure that :guilabel:`Open output file after running algorithm` is
+   checked
+#. Click :guilabel:`Run`
+#. Close the dialog when processing is complete
 
-All areas of the raster have been vectorized, so you need to select only the
-areas that have a value of ``1``.
+All areas of the raster have been vectorized, so you need to select
+only the areas that have a value of ``1``.
 
-#. Open the :guilabel:`Query` dialog for the new vector.
-#. Build this query:
-
-   ::
+#. Open the :guilabel:`Query` dialog for the new vector
+#. Build this query::
 
     "DN" = 1
 
-#. Click :guilabel:`OK`.
+#. Click :guilabel:`OK`
 #. Create a new vector file from the results by saving the
-   :guilabel:`candidate_areas` vector after the query is complete (and only the
-   areas with a value of ``1`` are visible). Use the :guilabel:`Save as...`
-   function in the layer's right-click menu for this.
-#. Save the file in the :file:`Rasterprac` directory.
-#. Name the file :guilabel:`candidate_areas_only.shp`.
-#. Save your map.
+   :guilabel:`candidate_areas` vector after the query is complete (and
+   only the areas with a value of ``1`` are visible).
+   Use the :guilabel:`Save as...` function in the layer's right-click
+   menu for this.
+#. Save the file in the :file:`Rasterprac` directory
+#. Name the file :guilabel:`candidate_areas_only.shp`
+#. Save your map
 
 Calculating the area for each polygon
 ----------------------------------------------------------------------
 
-#. Open the new vector layer's right-click menu.
-#. Select :guilabel:`Open attribute table`.
-#. Click the :guilabel:`Toggle editing mode` button along the bottom of the
-   table, or press :kbd:`Ctrl+E`.
-#. Click the :guilabel:`Open field calculator` button along the bottom of the
-   table, or press :kbd:`Ctrl+I`.
-#. Under the :guilabel:`New field` heading in the dialog that appears, enter the
-   field name ``area``. The output field type should be an integer, and the
-   field width should be ``10``.
-#. In :guilabel:`Field calculator expression`, type:
-
-   ::
+#. Open the new vector layer's right-click menu
+#. Select :guilabel:`Open attribute table`
+#. Click the :guilabel:`Toggle editing mode` button along the bottom
+   of the table, or press :kbd:`Ctrl+E`
+#. Click the :guilabel:`Open field calculator` button along the
+   bottom of the table, or press :kbd:`Ctrl+I`
+#. Under the :guilabel:`New field` heading in the dialog that appears,
+   enter the field name ``area``.
+   The output field type should be an integer, and the field width
+   should be ``10``.
+#. In :guilabel:`Field calculator expression`, type::
 
     $area
 
-   This means that the field calculator will calculate the area of each polygon
-   in the vector layer and will then populate a new integer column (called
-   :guilabel:`area`) with the computed value.
+   This means that the field calculator will calculate the area of
+   each polygon in the vector layer and will then populate a new
+   integer column (called :guilabel:`area`) with the computed value.
 
-#. Click :guilabel:`OK`.
-#. Do the same thing for another new field called :guilabel:`id`. In
-   :guilabel:`Field calculator expression`, type:
-
-   ::
+#. Click :guilabel:`OK`
+#. Do the same thing for another new field called :guilabel:`id`.
+   In :guilabel:`Field calculator expression`, type::
 
     $id
 
-   This ensures that each polygon has a unique ID for identification purposes.
-#. Click :guilabel:`Toggle editing mode` again, and save your edits if prompted
-   to do so.
+   This ensures that each polygon has a unique ID for identification
+   purposes.
+#. Click :guilabel:`Toggle editing mode` again, and save your edits if
+   prompted to do so
 
 Selecting areas of a given size
 ----------------------------------------------------------------------
@@ -738,75 +757,82 @@ Selecting areas of a given size
 Now that the areas are known:
 
 #. Build a query (as usual) to select only the polygons larger than
-   ``6000m^2``.  The query is:
-
-   ::
+   ``6000m^2``.  The query is::
 
     "area" > 6000
 
-#. Save the selection as a new vector layer called :file:`solution.shp`.
+#. Save the selection as a new vector layer called
+   :file:`solution.shp`.
 
-You now have your solution areas, from which you will pick the one nearest to
-your house.
+You now have your solution areas, from which you will pick the one
+nearest to your house.
 
 Digitize your house
 ----------------------------------------------------------------------
 
 #. Create a new vector layer as before, but this time, select the
-   :guilabel:`Type` value as being a :guilabel:`Point`.
+   :guilabel:`Type` value as being a :guilabel:`Point`
 #. Ensure that it is in the correct CRS!
-#. Name the new layer :file:`house.shp`.
-#. Finish creating the new layer.
-#. Enter edit mode (while the new layer is selected).
-#. Click the point where your house or other current place of residence is,
-   using the streets as a guide. You might have to open other layers to help you
-   find your house. If you don't live anywhere nearby, just click somewhere
-   among the streets where a house could conceivably be.
-#. Enter any arbitrary number for the shape ID.
-#. Click :guilabel:`OK`.
-#. Save your edits and exit edit mode.
-#. Save the map.
+#. Name the new layer :file:`house.shp`
+#. Finish creating the new layer
+#. Enter edit mode (while the new layer is selected)
+#. Click the point where your house or other current place of
+   residence is, using the streets as a guide.
+   You might have to open other layers to help you find your house.
+   If you don't live anywhere nearby, just click somewhere among the
+   streets where a house could conceivably be.
+#. Enter any arbitrary number for the shape ID
+#. Click :guilabel:`OK`
+#. Save your edits and exit edit mode
+#. Save the map
 
-You will need to find the centroids ("centers of mass") for the solution area
-polygons in order to decide which is closest to your house.
+You will need to find the centroids ("centers of mass") for the
+solution area polygons in order to decide which is closest to your
+house.
 
 Calculate polygon centroids
 ----------------------------------------------------------------------
 
-#. Click on the :menuselection:`Vector --> Geometry Tools --> Centroids`
-   menu item.
-#. Specify the input layer as :guilabel:`solution.shp`.
-#. Provide the output location as :file:`Rasterprac`.
-#. Call the destination file :file:`solution_centroids.shp`.
-#. Check |checkbox| :guilabel:`Open output file after running algorithm` to add
-   the result to the TOC (:guilabel:`Layers` panel).
-#. Click :guilabel:`Run` and close the dialog.
-#. Drag the new layer to the top of the layer order so that you can see it.
+#. Click on the
+   :menuselection:`Vector --> Geometry Tools --> Centroids` menu item
+#. Specify the input layer as :guilabel:`solution.shp`
+#. Provide the output location as :file:`Rasterprac`
+#. Call the destination file :file:`solution_centroids.shp`
+#. Check
+   |checkbox| :guilabel:`Open output file after running algorithm` to
+   add the result to the TOC (:guilabel:`Layers` panel)
+#. Click :guilabel:`Run` and close the dialog
+#. Drag the new layer to the top of the layer order so that you can
+   see it
 
 Calculate which centroid is closest to your house
 ----------------------------------------------------------------------
 
-#. Click on the menu item :menuselection:`Vector --> Analysis Tools --> Distance
-   matrix`.
+#. Click on the menu item
+   :menuselection:`Vector --> Analysis Tools --> Distance matrix`
 #. The input layer should be your house, and the target layer
-   :guilabel:`solution_centroids`. Both of these should use the :guilabel:`id`
-   field as their unique ID field.
-#. The output matrix type should be :guilabel:`linear`.
-#. Set an appropriate output location and name.
-#. Click :guilabel:`OK`.
-#. Open the file in a text editor (or import it into a spreadsheet). Note which
-   target ID is associated with the shortest :guilabel:`Distance`. There may be
-   more than one at the same distance.
-#. Build a query in QGIS to select only the solution areas closest to your house
-   (selecting it using the :guilabel:`id` field).
+   :guilabel:`solution_centroids`.
+   Both of these should use the :guilabel:`id` field as their unique
+   ID field.
+#. The output matrix type should be :guilabel:`linear`
+#. Set an appropriate output location and name
+#. Click :guilabel:`OK`
+#. Open the file in a text editor (or import it into a spreadsheet).
+   Note which target ID is associated with the shortest
+   :guilabel:`Distance`.
+   There may be more than one at the same distance.
+#. Build a query in QGIS to select only the solution areas closest to
+   your house (selecting it using the :guilabel:`id` field)
 
 This is the final answer to the research question.
 
-For your submission, include the semi-transparent hillshade layer over an
-appealing raster of your choice (such as the :guilabel:`DEM` or the
-:guilabel:`slope` raster, for example). Also include the polygon of the closest
-solution area(s), as well as your house. Follow all the best practices for
-cartography in creating your output map.
+For your submission, include the semi-transparent hillshade layer over
+an appealing raster of your choice (such as the :guilabel:`DEM` or the
+:guilabel:`slope` raster, for example).
+Also include the polygon of the closest solution area(s), as well as
+your house.
+Follow all the best practices for cartography in creating your output
+map.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
