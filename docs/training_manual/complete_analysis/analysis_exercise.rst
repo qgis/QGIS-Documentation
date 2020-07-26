@@ -4,8 +4,8 @@
 In this lesson, you will be guided through a complete GIS analysis in
 QGIS.
 
-.. note:: Lesson developed by Linfiniti and S Motala (Cape Peninsula
-   University of Technology)
+.. note:: Lesson developed by Linfiniti Consulting (South Africa) and
+   Siddique Motala (Cape Peninsula University of Technology)
 
 Problem Statement
 ----------------------------------------------------------------------
@@ -17,12 +17,12 @@ south of Melkbosstrand, west of Strand.
 Botanists have provided you with the following preferences exhibited
 by the species in question:
 
-* It grows on east facing slopes.
-* It grows on slopes with a gradient between 15% and 60%.
-* It grows in areas that have a total annual rainfall of > 1200 mm.
-* It will only be found at least 250 m away from any human settlement.
+* It grows on east facing slopes
+* It grows on slopes with a gradient between 15% and 60%
+* It grows in areas that have a total annual rainfall of > 1200 mm
+* It will only be found at least 250 m away from any human settlement
 * The area of vegetation in which it occurs should be at least 6000 ㎡
-  in area.
+  in area
 
 As a volunteer for Cape Nature, you have agreed to search for the
 plant on the closest suitable piece of land to your house.
@@ -37,11 +37,11 @@ You are going to find the candidate area that is closest to a house
 of your choice.
 The solution will involve:
 
-#. analysing the DEM to find the east facing slopes and the slopes
-   with the correct gradients
-#. analysing the rainfall raster to find the areas with the correct
-   amount of rainfall
-#. analysing the Zoning vector layer to find areas that are away from
+#. Analysing a DEM raster layer to find the east facing slopes and the
+   slopes with the correct gradients
+#. Analysing a rainfall raster layer to find the areas with the
+   correct amount of rainfall
+#. Analysing a zoning vector layer to find areas that are away from
    human settlement and are of the correct size
 
 Setting up the Map
@@ -49,23 +49,20 @@ Setting up the Map
 
 #. Click on the |projectionEnabled| :sup:`Current CRS` button in the
    lower right corner of the screen.
-   Under the :guilabel:`CRS` tab of the screen that appears, you will
+   Under the :guilabel:`CRS` tab of the dialog that appears, you will
    find :guilabel:`Predefined Coordinate Reference Systems`.
 #. Navigate to :menuselection:`Projected Coordinate Systems -->
    Universal Transverse Mercator (UTM)`
-#. Select the entry :guilabel:`WGS 84 / UTM zone 33S` (with the EPSG
-   code ``32733``)
-#. Click :guilabel:`OK`
+#. Select the entry :guilabel:`WGS 84 / UTM zone 33S` (with EPSG code
+   ``32733``)
+#. Click :guilabel:`OK`.
    The map is now in the ``UTM33S`` coordinate reference system.
-#. Save the map by clicking on the :guilabel:`Save Project As`
+#. Save the map by clicking on the |fileSave| :sup:`Save Project`
    toolbar button, or use the
    :menuselection:`File --> Save Project As...` menu item.
 #. Save the map in a directory called :file:`Rasterprac` that you
    should create somewhere on your file system.
    You will save whatever layers you create in this directory as well.
-
-   .. it could be worth indicating a real location for this output folder as
-    it's later reused in exercises.
 
 Loading Data into the Map
 ----------------------------------------------------------------------
@@ -77,11 +74,11 @@ For vectors...
 ......................................................................
 
 #. Click on the |dataSourceManager| :sup:`Open Data Source Manager`
-   button and enable the |addOgrLayer| :guilabel:`Vector` tab in the
-   dialog that appears, or use the
-   :menuselection:`Layer --> Add Layer -->` |addOgrLayer|
+   button in the *Data Source Manager Toolbar*, and enable the
+   |addOgrLayer| :guilabel:`Vector` tab in the dialog that appears, or
+   use the :menuselection:`Layer --> Add Layer -->` |addOgrLayer|
    :menuselection:`Add Vector Layer...` menu item.
-#. Ensure that the :guilabel:`File` radio button is selected
+#. Ensure that |radioButtonOn| :guilabel:`File` is selected
 #. Click on the :guilabel:`...` button to browse for
    vector dataset(s)
 #. In the dialog that appears, open the
@@ -96,13 +93,13 @@ For vectors...
    It is also possible to enter the file path in this field manually,
    should you wish to do so.
 #. Click :guilabel:`Add`.
-   The vector layer will load in your map.
+   The vector layer will be loaded into your map.
    Its color is automatically assigned.
-   It will be changed later.
+   It can be changed later.
 #. Rename the layer to ``Streets``
 
    #. Right-click on it in the :guilabel:`Layers` panel (by default,
-      the pane along the left-hand side of the screen).
+      the pane along the left-hand side of the screen)
    #. Click :guilabel:`Rename` in the dialog that appears and rename
       it, pressing the :kbd:`Enter` key when done
 #. Repeat the vector adding process, but this time select the
@@ -118,7 +115,7 @@ For rasters...
    the dialog that appears, or use the
    :menuselection:`Layer --> Add Layer -->` |addRasterLayer|
    :menuselection:`Add Raster Layer...` menu item.
-#. Ensure that the :guilabel:`File` radio button is selected
+#. Ensure that |radioButtonOn| :guilabel:`File` is selected
 #. Navigate to the appropriate file, select it, and click
    :guilabel:`Open`
 #. Do this for each of the two raster files.
@@ -143,8 +140,8 @@ First we change the resolution of our rainfall data to 100 meters
    :menuselection:`Export--> Save As...` in the context menu.
 #. Set the :guilabel:`Horizontal` and :guilabel:`Vertical` resolution
    to 100 (meters).
-#. Save the file as file:`rainfall100.tif` in file:`Rainfall`
-   (:guilabel:`File name`)`
+#. Save the file as :file:`rainfall100.tif` in
+   :file:`rainfall/reprojected` (:guilabel:`File name`)`
 
 Then we align the DEM:
 
@@ -157,7 +154,7 @@ Then we align the DEM:
 #. Under :guilabel:`Extent`, click on
    :guilabel:`Calculate from Layer` and choose ``rainfall100``
 #. Save the file as file:`dem100.tif` in file:`DEM/reprojected`
-   (:guilabel:`File name`)`
+   (:guilabel:`File name`)
 
 In order to properly see what's going on, the symbology for the
 layers needs to be changed.
@@ -169,7 +166,7 @@ Changing the symbology of vector layers
 #. Select :guilabel:`Properties` from the menu that appears
 #. Switch to the :guilabel:`Symbology` tab in the dialog that appears
 #. Click on the button labelled :guilabel:`Change`, with a square
-   showing the current color of the :guilabel:`Streets` layer.
+   showing the current color of the :guilabel:`Streets` layer
 #. Select a new color in the dialog that appears
 #. Click :guilabel:`OK`
 #. Click :guilabel:`OK` again in the :guilabel:`Layer Properties`
@@ -187,9 +184,9 @@ Raster layer symbology is somewhat different.
 
 #. Open the :guilabel:`Properties` dialog for the
    :guilabel:`rainfall100` raster
-#. Switch to the :guilabel:`Symbology` tab
+#. Switch to the :guilabel:`Symbology` tab.
    You'll notice that this dialog is very different from the version
-   used for vector layers
+   used for vector layers.
 #. Ensure that the button :guilabel:`Use standard deviation` is
    selected
 #. Change the value in the associated box to ``2.00`` (it should be
@@ -201,13 +198,13 @@ Raster layer symbology is somewhat different.
    The "rainfall100" raster, if visible, should change colors,
    allowing you to see different brightness values for each pixel.
 #. Repeat this process for the ``dem100`` layer, but set the standard
-   deviations used for stretching to ``4.00``.
+   deviations used for stretching to ``4.00``
 
 Changing the layer order
 ----------------------------------------------------------------------
 
-#. In the :guilabel:`Layers` panel, click and drag layers up and down
-   to change the order they appear in on the map.
+Click and drag layers up and down in the :guilabel:`Layers` panel to
+change the order they appear in on the map.
 
 Now that all the data is loaded and properly visible, the analysis
 can begin.
@@ -220,43 +217,42 @@ Find the Correct Districts
 
 #. Load the vector layer
    :file:`admin_boundaries/western_cape_utm33s.shp` into your map.
-#. Rename it to :guilabel:`Districts`.
-#. Right-click on the :guilabel:`Districts` layer in the
+#. Rename it to ``Districts``.
+#. Right-click on the ``Districts`` layer in the
    :guilabel:`Layers` panel.
-#. In the menu that appears,  select the :guilabel:`Query...` menu
+#. In the menu that appears,  select the :guilabel:`Filter...` menu
    item.
    The :guilabel:`Query Builder` dialog appears.
 
-   You will now build a query to select only the following list of
-   districts:
+   You will now build a query to select only the following districts:
 
    * ``Bellville``
    * ``Cape``
    * ``Goodwood``
    * ``Kuils River``
    * ``Mitchells Plain``
-   * ``Simons Town`` and
-   * ``Wynberg``.
+   * ``Simon Town``
+   * ``Wynberg``
 
    #. In the :guilabel:`Fields` list, double-click on the
-      :guilabel:`NAME_2` field.
+      ``NAME_2`` field.
       It appears in the :guilabel:`SQL where clause` text field below.
-   #. Click the :guilabel:`=` button; an ``=`` sign is added to the
+   #. Click the :guilabel:`=` button; an ``=`` sign is appended to the
       SQL query.
    #. Click the :guilabel:`All` button below the (currently empty)
       :guilabel:`Values` list.
       After a short delay, this will populate the :guilabel:`Values`
       list with the values of the selected field
-      (:guilabel:`NAME_2`).
-   #. Double-click the value :guilabel:`Bellville` in the
+      (``NAME_2``).
+   #. Double-click the value ``Bellville`` in the
       :guilabel:`Values` list.
-      As before, this will be added to the SQL query.
+      As before, this will be appended to the SQL query.
 
       In order to select more than one district, you'll need to use
-      the :guilabel:`OR` boolean operator.
+      the *OR* boolean operator.
 
-   #. Click the :guilabel:`OR` button and it will be added to the SQL
-      query.
+   #. Click the :guilabel:`OR` button and it will be appended to the
+      SQL query.
    #. Using a process similar to the above, add the following to the
       existing SQL query::
 
@@ -267,9 +263,16 @@ Find the Correct Districts
 
       The final query should be::
 
-        "NAME_2" = 'Bellville' OR "NAME_2" = 'Cape' OR "NAME_2" = 'Goodwood' OR
-        "NAME_2" = 'Kuils River' OR "NAME_2" = 'Mitchells Plain' OR "NAME_2" =
-        'Simons Town' OR "NAME_2" = 'Wynberg'
+        "NAME_2" = 'Bellville' OR "NAME_2" = 'Cape' OR
+        "NAME_2" = 'Goodwood' OR "NAME_2" = 'Kuils River' OR
+        "NAME_2" = 'Mitchells Plain' OR "NAME_2" = 'Simon Town' OR
+        "NAME_2" = 'Wynberg'
+
+      .. note:: By using the ``IN`` operator, the query would look
+         like this::
+           
+           "NAME_2" in ('Bellville', 'Cape', 'Goodwood', 'Kuils River',
+                        'Mitchells Plain', 'Simon Town', 'Wynberg')
 
    #. Click :guilabel:`OK`.
       The districts shown in your map are now limited to those in the
@@ -283,31 +286,33 @@ Now that you have an area of interest, you can clip the rasters to this area.
 #. Ensure that the only layers that are visible are the
    :guilabel:`dem100`, :guilabel:`rainfall100` and
    :guilabel:`Districts` layers
-#. :guilabel:`Districts` must be on top so that they are visible
+#. :guilabel:`Districts` must be on top to be visible
 #. Open the clipping dialog by selecting the menu item
-   :menuselection:`Raster --> Extraction --> Clipper`.
-#. In the :guilabel:`Input file (raster)` dropdown list, select the
-   :guilabel:`dem100` layer.
-#. Specify an output location in the :guilabel:`Output file` text
-   field by clicking the :guilabel:`Select...` button
+   :menuselection:`Raster --> Extraction --> Clip Raster by Extent...`
+#. In the :guilabel:`Input layer` dropdown list, select the
+   :guilabel:`dem100` layer
+#. Specify an output location in the :guilabel:`Clipped (extent)` text
+   field by clicking the :guilabel:`...` button and choosing
+   :guilabel:`Save to File...`
 #. Navigate to your :file:`Rasterprac` directory
 #. Enter a file name
 #. Save the file.
-   Leave the :guilabel:`No data value` checkbox unchecked.
-#. Use the :guilabel:`Extent` clipping mode by ensuring the correct
-   radio button is selected.
-#. Click and drag an area in the canvas, so that the area which
-   includes the districts is selected.
-#. Check the :guilabel:`Open output file after running algorithm` box
+   Leave the :guilabel:`Assign a specified nodata value to output
+   bands [optional]` as ``Not set``.
+#. For :guilabel:`Clipping extent`, press the :guilabel:`...` button
+   and select :guilabel:`Calculate from Layer...`, choosing
+   :file:``western_cape_utm33s.shp``
+#. Make sure that
+   :guilabel:`Open output file after running algorithm` is checked
 #. Click :guilabel:`Run`
-#. After the clipping operation is completed, DO NOT CLOSE the
-   :guilabel:`Clipper` dialog (doing so would cause you to lose the
-   clipping area that you have already defined).
+#. After the clipping operation has completed, leave the
+   :guilabel:`Clip Raster by Extent` dialog open, to be able to reuse
+   the clipping area
 #. Select the :guilabel:`rainfall100` raster in the
-   :guilabel:`Input file (raster)` dropdown list and choose a
-   different output file name.
+   :guilabel:`Input layer` dropdown list
+#. Choose a different output file name.
 #. Do not change any other options.
-   Do not alter the existing clipping area which you drew previously.
+   Do not alter the clipping area which you selected previously.
    Leave everything the same and click :guilabel:`Run`.
 #. After the second clipping operation has completed, you may close
    the :guilabel:`Clipper` dialog
@@ -316,29 +321,32 @@ Now that you have an area of interest, you can clip the rasters to this area.
 Clean up the map
 ----------------------------------------------------------------------
 
-#. Remove the original :guilabel:`Rainfall` and :guilabel:`SRTM`
-   layers, as well as `rainfall100` and `dem100` from the
+#. Remove the original ``Rainfall`` and ``SRTM``
+   layers, as well as ``rainfall100`` and ``dem100`` from the
    :guilabel:`Layers` panel:
-#. Right-click on these layers and select :guilabel:`Remove`.
+
+   * Right-click on these layers and select :guilabel:`Remove`.
 
    .. note:: This will not remove the data from your storage device,
       it will merely take it out of your map.
 
 #. Deactivate the labels on the :guilabel:`Streets` layer:
 
-   #. Click the :guilabel:`Labeling` button.
-   #. Uncheck the :guilabel:`Label this layer with` box.
-   #. Click :guilabel:`OK`.
+   #. Open the layer properties and select ``No Labels`` in the
+      :guilabel:`Labels` tab
+   #. Click :guilabel:`OK`
 
 #. Show all the :guilabel:`Streets` again:
 
-   #. Right-click on the layer in the :guilabel:`Layers` panel.
-   #. Select :guilabel:`Query`.
-   #. In the :guilabel:`Query` dialog that appears, click the :guilabel:`Clear`
-      button, then click :guilabel:`OK`.
-   #. Wait while the data is loaded. All the streets will now be visible.
+   #. Right-click on the layer in the :guilabel:`Layers` panel
+   #. Select :guilabel:`Filter...`
+   #. In the :guilabel:`Query Builder` dialog that appears, click the
+      :guilabel:`Clear` button, then click :guilabel:`OK`
+   #. Wait while the data is loaded.
+      All the streets will now be visible.
 
-#. Change the raster symbology as before (see :ref:`changing_raster_symbology`).
+#. Change the raster symbology as before (see
+   :ref:`changing_raster_symbology`)
 #. Save the map
 #. You can now hide the vector layers by unchecking the box next to
    them in the :guilabel:`Layers` panel.
@@ -351,83 +359,82 @@ that was written for this purpose.
 Create the hillshade
 ----------------------------------------------------------------------
 
-#. In the :guilabel:`Layers` panel, ensure that the :guilabel:`dem100`
-   is the active layer (i.e., it is highlighted by having been clicked
-   on)
+#. In the :guilabel:`Layers` panel, make :guilabel:`dem100` the active
+   layer (i.e., it is highlighted by having been clicked on)
 #. Click on the :menuselection:`Raster --> Analysis --> Hillshade`
    menu item to open the :guilabel:`Hillshade` dialog
 #. Specify an appropriate location for the output layer and call it
    :guilabel:`hillshade`
-#. Check the :guilabel:`Open output file after running algorithm` box.
-#. Click :guilabel:`Run`.
+#. Make sure that
+   :guilabel:`Open output file after running algorithm` is checked
+#. Click :guilabel:`Run`
 #. Wait for it to finish processing.
 
-   The new :guilabel:`hillshade` layer has appeared in your
+   The :guilabel:`hillshade` layer will appear in your
    :guilabel:`Layers list`.
-
 #. Right-click on the :guilabel:`hillshade` layer in your
    :guilabel:`Layers list` and bring up the :guilabel:`Properties`
    dialog
-#. Click on the :guilabel:`Transparency` tab and set the transparency
-   slider to ``80%``
-#. Click :guilabel:`Run` on the dialog
+#. Click on the :guilabel:`Transparency` tab and set the
+   :guilabel:`Global Opacity` slider to ``20%``
+#. Click :guilabel:`OK`
 #. Note the effect when the transparent hillshade is superimposed over
    the clipped DEM.
 
 Slope
 ----------------------------------------------------------------------
 
-#. Click on the menu item
-   :menuselection:`Raster --> Terrain analysis`
-#. Select the :guilabel:`Slope` analysis type, with the clipped DEM as
-   the input layer
-#. Specify an appropriate file name and location for output purposes
-#. Check the :guilabel:`Open output file after running algorithm` box
+#. Click on the :menuselection:`Raster --> Analysis --> Slope...`
+   menu item to open the :guilabel:`Slope` algorithm dialog
+#. Set the clipped DEM as :guilabel:`Input layer`
+#. Specify an appropriate file name and location in :guilabel:`Slope`
+#. Make sure that
+   :guilabel:`Open output file after running algorithm` is checked
 #. Click :guilabel:`Run`
 
 The slope image has been calculated and added to the map.
-However, as usual it is just a gray rectangle.
-To properly see what's going on, change the symbology as follows.
+However, as usual, it is rendered in grayscale.
+Change the symbology to a more colorful one:
 
 #. Open the layer :guilabel:`Properties` dialog (as usual, via the
    right-click menu of the layer)
 #. Click on the :guilabel:`Symbology` tab
-#. Where it says :guilabel:`Grayscale` (in the :guilabel:`Color map`
-   dropdown menu), change it to :guilabel:`Pseudocolor`.
-#. Ensure that the :guilabel:`Use standard deviation` radio button is
-   selected
+#. Where it says :guilabel:`Singleband gray` (in the
+   :guilabel:`Render type` dropdown menu), change it to
+   :guilabel:`Singleband pseudocolor`
+#. Choose :guilabel:`Mean +/- standard deviation x` for
+   :guilabel:`Min / Max Value Settings` with a value of ``2.0``
+#. Select a suitable :guilabel:`Color ramp`
+#. Click :guilabel:`OK`
 
 Aspect
 ----------------------------------------------------------------------
 
-Use the same approach as for calculating the slope, but select
-:guilabel:`Aspect` in the initial dialog box.
+Use the same approach as for calculating the slope, choosing
+:guilabel:`Aspect...` in the
+:menuselection:`Raster --> Analysis` menu.
 
 Remember to save the map periodically.
 
 Reclassifying rasters
 ----------------------------------------------------------------------
 
-#. Click the menu item :menuselection:`Raster --> Raster calculator`
+#. Choose :menuselection:`Raster --> Raster calculator...`
 #. Specify your :file:`Rasterprac` directory as the location for the
-   output layer
+   :guilabel:`Output layer`
 #. Ensure that the
    :guilabel:`Open output file after running algorithm` box is
    selected.
-
 #. In the :guilabel:`Raster bands` list on the left, you will see all
    the raster layers in your :guilabel:`Layers` panel.
    If your Slope layer is called :guilabel:`slope`, it will be listed
    as :guilabel:`slope@1`.
+#. The slope needs to be between ``15`` and ``60`` degrees.
 
-   The slope needs to be between ``15`` and ``60`` degrees.
-   Everything less than ``15`` or greater than ``60`` must therefore
-   be excluded.
-
-#. Using the list items and buttons in the interface, build the
+   Using the list items and buttons in the interface, build the
    following expression::
 
-     ((slope@1 < 15) OR (slope@1 > 60)) = 0
+     (slope@1 > 15) AND (slope@1 < 60)
 
 #. Set the :guilabel:`Output layer` field to an appropriate location
    and file name.
@@ -438,79 +445,64 @@ degrees) using the same approach.
 
 #. Build the following expression::
 
-    ((aspect@1 < 45) OR (aspect@1 > 135)) = 0
+     (aspect@1 > 45) AND (aspect@1 < 135)
 
 #. Find the correct rainfall (greater than ``1200mm``) the same way.
    Build the following expression::
 
-    (rainfall100@1 < 1200) = 0
+     rainfall100@1 > 1200
 
-Having reclassified all the rasters, you will now see them displayed
-as gray rectangles in your map (assuming that they have been added to
-the map correctly).
-To properly display raster data with only two classes (``1`` and
-``0``, meaning true or false), you will need to change their
-symbology.
+Having reclassified the rasters to contain only two classes (``0`` and
+``1``, meaning false or true), they should be displayed in black /
+white.
+If they are not, you will need to change their symbology.
 
-Setting the style for the reclassified layers
+Setting the style for the reclassified (binary) layers
 ----------------------------------------------------------------------
 
 #. Open the :guilabel:`Symbology` tab in the layer's
    :guilabel:`Properties` dialog as usual
 #. Under the heading :guilabel:`Load min / max values from band`,
-   select the :guilabel:`Actual (slower)` radio button
-#. Click the :guilabel:`Load` button
+   select ``Whole raster`` for :guilabel:`Statistics extent` and
+   ``Actual (slower)`` for :guilabel:`Accuracy`
+#. Click the :guilabel:`Apply` button.
 
-The :guilabel:`Custom min / max values` fields should now populate
-with ``0`` and ``1``, respectively (if they do not, then there was a
-mistake with your reclassification of the data, and you will need to
-go over that part again).
+   The :guilabel:`Custom min / max values` fields should now be
+   populated with ``0`` and ``1``, respectively (if they do not, then
+   there was a mistake with your reclassification of the data, and you
+   will need to go over that part again).
 
-#. Under the heading :guilabel:`Contrast enhancement`, set the
-   :guilabel:`Current` dropdown list to :guilabel:`Stretch To MinMax`
+#. Under the heading :guilabel:`Contrast enhancement`, choose
+   :guilabel:`Stretch To MinMax`
 #. Click :guilabel:`OK`
-#. Do this for all three reclassified rasters, and remember to save
-   your work!
+
+Do this for all three reclassified rasters, and remember to save your
+work!
 
 The only criterion that remains is that the area must be ``250m`` away
 from urban areas.
 We will satisfy this requirement by ensuring that the areas we compute
 are ``250m`` or more from the edge of a rural area.
-Hence, we need to find all rural areas first.
 
 Finding rural areas
 ----------------------------------------------------------------------
 
-#. Hide all layers in the :guilabel:`Layers` panel.
-#. Unhide the :guilabel:`Zoning` vector layer.
-#. Right-click on it and bring up the :guilabel:`Query` dialog.
-#. Build the following query::
+The ``Zoning`` layer contains rural areas only, so rename it to
+``rural``.
+Before we continue, adjacent polygons should be combined using the
+*Dissolve* algorithm.
 
-    "Gen_Zoning" = 'Rural'
-
-   See the earlier instructions for building the :guilabel:`Streets`
-   query if you get stuck.
-#. When you're done, close the :guilabel:`Query` dialog
-
-You should see a collection of polygons from the :guilabel:`Zoning`
-layer.
-You will need to save these.
-
-#. On the right-click menu for :guilabel:`Zoning`, select
-   :guilabel:`Save as...`
-#. Save your layer under the :guilabel:`Zoning` directory
-#. Name the output file :file:`rural.shp`
-#. Click :guilabel:`OK`
-#. Add the layer to your map
 #. Click the menu item
    :menuselection:`Vector --> Geoprocessing Tools --> Dissolve`
-#. Select the :guilabel:`rural` layer as your input vector layer,
+#. Select the ``rural`` layer as your input vector layer,
    while leaving the :guilabel:`Use only selected features` box
    unchecked
 #. Leave empty the :guilabel:`Dissolve field(s)` option to combine
-   all selected features in a single one
+   all the features to a single one
 #. Save your layer under the :guilabel:`Zoning` directory
-#. Check the :guilabel:`Open output file after running algorithm` box
+#. Ensure that the
+   :guilabel:`Open output file after running algorithm` box is
+   selected.
 #. Click :guilabel:`Run`
 #. Close the :guilabel:`Dissolve` dialog
 #. Remove the :guilabel:`rural` and :guilabel:`Zoning` layers
@@ -525,12 +517,12 @@ Creating a negative buffer
 
 #. Click the menu item
    :menuselection:`Vector --> Geoprocessing Tools --> Buffer(s)`
-#. In the dialog that appears, select the :guilabel:`rural_dissolve`
-   layer as your input vector laye
+#. In the dialog that appears, select the dissolved rural areas
+   layer as your input vector layer
    (:guilabel:`Use only selected features` should not be checked).
-#. Select the :guilabel:`Buffer distance` button and enter the value
-   ``-250`` into the associated field; the negative value means that
-   the buffer must be an internal buffer.
+#. Set :guilabel:`Distance` to ``-250``.
+   The negative value means that the buffer must be an internal
+   buffer.
 #. Check the :guilabel:`Dissolve buffer results` box
 #. Set the output file to the same directory as the other rural vector
    files
@@ -576,18 +568,19 @@ Creating a bounding box vector
 #. Click the :guilabel:`Toggle editing` button to enter *edit mode*.
    This allows you to edit a vector layer.
 #. Click the :guilabel:`Add feature` button, which should be nearby
-   the :guilabel:`Toggle editing` button.
+   the |toggleEditing| :sup:`Toggle Editing` button.
    It may be hidden behind a double arrow button; if so, click the
    double arrows to show the :guilabel:`Digitizing` toolbar's hidden
    buttons.
-#. With the :guilabel:`Add feature` tool activated, left-click on the
-   corners of the raster.
+#. With the |capturePolygon| :sup:`Add Polygon Feature` tool
+   activated, left-click on the corners of the raster.
    You may need to zoom in with the mouse wheel to ensure that it is
    accurate.
    To pan across the map in this mode, click and drag in the map with
    the middle mouse button or mouse wheel.
-#. For the fourth and final point, right-click to finalize the shape
-#. Enter any arbitrary number for the shape ID
+#. After the fourth and final point has been entered, right-click to
+   finalize the shape
+#. Enter any number for the shape ID
 #. Click :guilabel:`OK`
 #. Click the :guilabel:`Save edits` button
 #. Click the :guilabel:`Toggle editing` button to stop your editing
@@ -843,13 +836,21 @@ map.
 
 .. |LS| replace:: Lesson:
 .. |addOgrLayer| image:: /static/common/mActionAddOgrLayer.png
-   :width: 1.5em
+   :width: 1.0em
 .. |addRasterLayer| image:: /static/common/mActionAddRasterLayer.png
+   :width: 1.0em
+.. |capturePolygon| image:: /static/common/mActionCapturePolygon.png
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
+   :width: 1.2em
+.. |fileSave| image:: /static/common/mActionFileSave.png
    :width: 1.5em
 .. |projectionEnabled| image:: /static/common/mIconProjectionEnabled.png
+   :width: 1.5em
+.. |radioButtonOn| image:: /static/common/radiobuttonon.png
+   :width: 1.0em
+.. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
 
