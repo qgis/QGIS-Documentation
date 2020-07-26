@@ -1,123 +1,99 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-10 11:07+0200\n"
+"POT-Creation-Date: 2020-07-26 13:13+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
 
 #: ../../docs/training_manual/processing/iterative_model.rst:2
 msgid "More iterative execution of algorithms"
-msgstr "More iterative execution of algorithms"
+msgstr ""
 
 #: ../../docs/training_manual/processing/iterative_model.rst:4
 msgid ""
-"This lesson shows how to combine the iterative execution of algorithms with "
-"the modeler to get more automation."
+"This lesson shows how to combine the iterative execution of algorithms "
+"with the modeler to get more automation."
 msgstr ""
-"This lesson shows how to combine the iterative execution of algorithms with "
-"the modeler to get more automation."
 
 #: ../../docs/training_manual/processing/iterative_model.rst:7
 msgid ""
 "The iterative execution of algorithms is available not just for built-in "
-"algorithms, but also for the algorithms that you can create yourself, such "
-"as models. We are going to see how to combine a model and the iterative "
-"execution of algorithms, so we can obtain more complex results with ease."
+"algorithms, but also for the algorithms that you can create yourself, "
+"such as models. We are going to see how to combine a model and the "
+"iterative execution of algorithms, so we can obtain more complex results "
+"with ease."
 msgstr ""
-"The iterative execution of algorithms is available not just for built-in "
-"algorithms, but also for the algorithms that you can create yourself, such "
-"as models. We are going to see how to combine a model and the iterative "
-"execution of algorithms, so we can obtain more complex results with ease."
 
 #: ../../docs/training_manual/processing/iterative_model.rst:10
 msgid ""
 "The data the we are going to use for this lesson is the same one that we "
-"already used for the last one. In this case, instead of just clipping the "
-"DEM with each watershed polygon, we will add some extra steps and calculate "
-"a hypsometric curve for each of them, to study how elevation is distributed "
-"within the watershed."
+"already used for the last one. In this case, instead of just clipping the"
+" DEM with each watershed polygon, we will add some extra steps and "
+"calculate a hypsometric curve for each of them, to study how elevation is"
+" distributed within the watershed."
 msgstr ""
-"The data the we are going to use for this lesson is the same one that we "
-"already used for the last one. In this case, instead of just clipping the "
-"DEM with each watershed polygon, we will add some extra steps and calculate "
-"a hypsometric curve for each of them, to study how elevation is distributed "
-"within the watershed."
 
 #: ../../docs/training_manual/processing/iterative_model.rst:12
 msgid ""
-"Since we have a workflow that involves several steps (clipping + computing "
-"the hypsometric curve), we should go to the modeler and create the "
-"corresponding model for that workflow."
+"Since we have a workflow that involves several steps (clipping + "
+"computing the hypsometric curve), we should go to the modeler and create "
+"the corresponding model for that workflow."
 msgstr ""
-"Since we have a workflow that involves several steps (clipping + computing "
-"the hypsometric curve), we should go to the modeler and create the "
-"corresponding model for that workflow."
 
 #: ../../docs/training_manual/processing/iterative_model.rst:14
 msgid ""
-"You can find the model already created in the data folder for this lesson, "
-"but it would be good if you first try to create it yourself. The clipped "
-"layer is not a final result in this case, since we are just interested in "
-"the curves, so this model will not generated any layers, but just a table "
-"with the curve data."
+"You can find the model already created in the data folder for this "
+"lesson, but it would be good if you first try to create it yourself. The "
+"clipped layer is not a final result in this case, since we are just "
+"interested in the curves, so this model will not generated any layers, "
+"but just a table with the curve data."
 msgstr ""
-"You can find the model already created in the data folder for this lesson, "
-"but it would be good if you first try to create it yourself. The clipped "
-"layer is not a final result in this case, since we are just interested in "
-"the curves, so this model will not generated any layers, but just a table "
-"with the curve data."
 
 #: ../../docs/training_manual/processing/iterative_model.rst:16
 msgid "The model should look like this:"
-msgstr "The model should look like this:"
+msgstr ""
 
 #: ../../docs/training_manual/processing/iterative_model.rst:20
 msgid ""
-"Add the model to you models folder, so it is available in the toolbox, and "
-"execute it."
+"Add the model to you models folder, so it is available in the toolbox, "
+"and execute it."
 msgstr ""
-"Add the model to you models folder, so it is available in the toolbox, and "
-"execute it."
 
 #: ../../docs/training_manual/processing/iterative_model.rst:22
 msgid "Select the DEM and watersheds basins."
-msgstr "Select the DEM and watersheds basins."
+msgstr ""
 
 #: ../../docs/training_manual/processing/iterative_model.rst:24
 msgid ""
-"The algorithm will generate tables for all the basins and place them in the "
-"output directory."
+"The algorithm will generate tables for all the basins and place them in "
+"the output directory."
 msgstr ""
-"The algorithm will generate tables for all the basins and place them in the "
-"output directory."
 
 #: ../../docs/training_manual/processing/iterative_model.rst:27
 msgid ""
-"We can make this example more complex by extending the model and computing "
-"some slope statistics. Add the *Slope* algorithm to the model, and then the "
-"*Raster statistics* algorithm, which should use the slope output as its only"
-" input."
+"We can make this example more complex by extending the model and "
+"computing some slope statistics. Add the *Slope* algorithm to the model, "
+"and then the *Raster statistics* algorithm, which should use the slope "
+"output as its only input."
 msgstr ""
-"We can make this example more complex by extending the model and computing "
-"some slope statistics. Add the *Slope* algorithm to the model, and then the "
-"*Raster statistics* algorithm, which should use the slope output as its only"
-" input."
 
 #: ../../docs/training_manual/processing/iterative_model.rst:34
 msgid ""
-"If you now run the model, apart from the tables you will get a set of pages "
-"with statistics. These pages will be available in the results dialog."
+"If you now run the model, apart from the tables you will get a set of "
+"pages with statistics. These pages will be available in the results "
+"dialog."
 msgstr ""
-"If you now run the model, apart from the tables you will get a set of pages "
-"with statistics. These pages will be available in the results dialog."
+
