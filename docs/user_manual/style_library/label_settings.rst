@@ -426,7 +426,9 @@ angle between curved characters` when selecting the |radioButtonOff|
 
 For all three placement options, in :guilabel:`Repeat`, you can set up a
 minimum distance for repeating labels. The distance can be in ``mm`` or in
-``map units``.
+``map units``. Also, in :guilabel:`Overrun feature` you can specify the
+maximal allowable distance a label may run past the end (or start) of
+line features.
 
 Placement for polygon layers
 ----------------------------
