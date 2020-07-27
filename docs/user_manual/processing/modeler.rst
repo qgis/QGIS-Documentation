@@ -87,7 +87,7 @@ the left side of the modeler window:
 * Vector Layer
 * Vector Tile Writer Layers
 
-.. note:: Hovering with the mouse on the inputs will show a tooltip with 
+.. note:: Hovering with the mouse over the inputs will show a tooltip with 
   additional information.
 
 When double-clicking on an element, a dialog is shown that lets
