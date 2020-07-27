@@ -487,8 +487,28 @@ are ``250m`` or more from the edge of a rural area.
 Finding rural areas
 ----------------------------------------------------------------------
 
-The ``Zoning`` layer contains rural areas only, so rename it to
-``rural``.
+#. Right-click on the ``Zoning`` layer and select
+   :guilabel:`Filter...` to bring up the :guilabel:`Query Builder`
+   dialog.
+#. Build the following query::
+
+     "Gen_Zoning" = 'Rural'
+
+   See the earlier instructions for building the :guilabel:`Streets`
+   query if you get stuck.
+#. When you're done, close the :guilabel:`Query Builder` dialog.
+
+   You should see a collection of polygons from the
+   :guilabel:`Zoning` layer.
+   You will need to save these.
+#. In the right-click menu for :guilabel:`Zoning`, select
+   :guilabel:`Save as...`
+#. Save your layer under the :guilabel:`Zoning` directory
+#. Name the output file :file:`rural.shp`
+#. Click :guilabel:`OK`
+
+
+The ``rural`` layer should contain rural areas only.
 Before we continue, adjacent polygons should be combined using the
 *Dissolve* algorithm.
 
