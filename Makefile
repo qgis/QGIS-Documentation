@@ -73,7 +73,7 @@ pdf: latex
 	if [ "$(LATEXCOMPILER)" != "xelatex" ]; then dvipdfmx PyQGISDeveloperCookbook.dvi; fi; \
 	$(LATEXCOMPILER) -shell-escape QGISTrainingManual.tex; \
 	$(LATEXCOMPILER) -shell-escape QGISTrainingManual.tex; \
-	if [ "$(LATEXCOMPILER)" != "xelatex" ]; then dvipdfmx QGISTrainingManual.dvi; fi;
+	if [ "$(LATEXCOMPILER)" != "xelatex" ]; then dvipdfmx QGISTrainingManual.dvi; fi; \
 	$(LATEXCOMPILER) -shell-escape QGISDocumentationGuidelines.tex; \
 	$(LATEXCOMPILER) -shell-escape QGISDocumentationGuidelines.tex; \
 	if [ "$(LATEXCOMPILER)" != "xelatex" ]; then dvipdfmx QGISDocumentationGuidelines.dvi; fi;
