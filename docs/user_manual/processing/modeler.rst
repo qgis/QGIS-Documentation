@@ -51,8 +51,7 @@ Definition of inputs
 
 The first step is to define the inputs for the model.
 The following elements are found in the :guilabel:`Inputs` tab on
-the left side of the modeler window. Hoovering with the mouse on the inputs will 
-show a tooltip with additional information:
+the left side of the modeler window:
 
 * Authentication Configuration
 * Boolean
@@ -87,6 +86,9 @@ show a tooltip with additional information:
 * Vector Field
 * Vector Layer
 * Vector Tile Writer Layers
+
+.. note:: Hovering with the mouse on the inputs will show a tooltip with 
+  additional information.
 
 When double-clicking on an element, a dialog is shown that lets
 you define its characteristics.
