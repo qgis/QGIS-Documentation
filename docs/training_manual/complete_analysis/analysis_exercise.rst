@@ -89,7 +89,7 @@ For vectors...
 #. Select the file :file:`Street_Names_UTM33S.shp`
 #. Click :guilabel:`Open`.
 
-  The dialog closes and shows the original dialog, with the file
+   The dialog closes and shows the original dialog, with the file
    path specified in the text field next to the
    :guilabel:`Vector dataset(s)` button.
    This allows you to ensure that the correct file is selected.
@@ -785,11 +785,10 @@ Find the locations that are closest to the University of Cape Town
 The resulting point layer will contain three features - they will
 all have the location of the university and its attributes, and in
 addition, the attributes of the nearby suitable areas (including the
-``id``), and the
-distance to that location.
+``id``), and the distance to that location.
 
 #. Open the attribute table of the result of the join
-#. Write down the ``id``s of the four nearests suitable areas, and
+#. Write down the ``id`` of the four nearests suitable areas, and
    then close it
 #. Open the attribute table of the ``suitable_areas`` layer
 #. Build a query to select the four suitable areas closest to the
