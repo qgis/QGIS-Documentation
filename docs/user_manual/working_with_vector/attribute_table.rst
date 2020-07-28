@@ -691,7 +691,7 @@ Open the :guilabel:`Relations` tab and click on |signPlus| :guilabel:`Add Relati
   describing, what the relation is used for. We will just call say **airport_relation**
   in this case.
 * **Referenced Layer (Parent)** also considered as parent layer, is the one with
-  the primary key, pointed to, so here it is the ``regions`` layer. You can define
+  the primary key, pointed to, so here it is the ``regions`` layer. You need to define
   the primary key of the referenced layer, so it is ``ID``.
 * **Referencing Layer (Child)** also considered as child layer, is the one with
   the foreign key field on it. In our case, this is the ``airports`` layer. For
@@ -700,9 +700,9 @@ Open the :guilabel:`Relations` tab and click on |signPlus| :guilabel:`Add Relati
 
   .. note:: Sometimes, you need more than a single field to uniquely identify
    features in a layer. Creating a relation with such a layer requires
-   a **composite key**, ie more than a single pair of referencing/referenced
-   fields. Use the |signPlus| :sup:`Add fields to pair` button
-   to add as many pairs as necessary.
+   a **composite key**, ie more than a single pair of matching
+   fields. Use the |signPlus| :sup:`Add new field pair as part of a composite
+   foreign key` button to add as many pairs as necessary.
 
 * **Id** will be used for internal purposes and has to be unique. You may need
   it to build :ref:`custom forms <customize_form>`. If
@@ -723,7 +723,7 @@ Open the :guilabel:`Relations` tab and click on |signPlus| :guilabel:`Add Relati
 
 From the :guilabel:`Relations` tab, you can also press the |signPlus|
 :guilabel:`Discover Relation` button to fetch the relations available from
-the providers of the current layers. This is possible for layers stored in
+the providers of the loaded layers. This is possible for layers stored in
 data providers like PostgreSQL or SpatiaLite.
 
 .. index:: Feature form, Linked forms, Embedded form
