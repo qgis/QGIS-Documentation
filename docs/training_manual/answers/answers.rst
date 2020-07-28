@@ -579,21 +579,21 @@ Your results:
 |moderate| *Raster to Vector*
 ...............................................................................
 
-* Open the :guilabel:`Query Builder` by right-clicking on the :guilabel:`all_terrain`
-  layer in the :guilabel:`Layers` panel, and selecting the :menuselection:`Properties
-  --> Source` tab.
-* Then build the query :kbd:`"suitable" = 1`.
-* Click :guilabel:`OK` to filter out all the polygons where this condition
-  isn't met.
+#. Open the :guilabel:`Query Builder` by right-clicking on the
+   :guilabel:`all_terrain` layer in the :guilabel:`Layers` panel, and selecting
+   the :menuselection:`Properties --> Source` tab.
+#. Then build the query ``"suitable" = 1``.
+#. Click :guilabel:`OK` to filter out all the polygons where this condition
+   isn't met.
 
-When viewed over the original raster, the areas should overlap perfectly:
+   When viewed over the original raster, the areas should overlap perfectly:
 
-.. figure:: img/polygonize_raster.png
-   :align: center
+   .. figure:: img/polygonize_raster.png
+      :align: center
 
-* You can save this layer by right-clicking on the :guilabel:`all_terrain`
-  layer in the :guilabel:`Layers` panel and choosing :guilabel:`Save As...`,
-  then continue as per the instructions.
+#. You can save this layer by right-clicking on the :guilabel:`all_terrain`
+   layer in the :guilabel:`Layers` panel and choosing :guilabel:`Save As...`,
+   then continue as per the instructions.
 
 :ref:`Back to text <backlink-complete-analysis-1>`
 
@@ -603,10 +603,10 @@ When viewed over the original raster, the areas should overlap perfectly:
 |moderate| *Inspecting the Results*
 ...............................................................................
 
-You may notice that some of the buildings in your :kbd:`new_solution` layer have
-been "sliced" by the :guilabel:`Intersect` tool. This shows that only part of the
+You may notice that some of the buildings in your :file:`new_solution` layer have
+been "sliced" by the :guilabel:`Intersection` tool. This shows that only part of the
 building - and therefore only part of the property - lies on suitable terrain.
-We can therefore sensibly eliminate those buildings from our dataset
+We can therefore sensibly eliminate those buildings from our dataset.
 
 :ref:`Back to text <backlink-complete-analysis-2>`
 
@@ -640,48 +640,48 @@ there is suitable terrain for 100 meters beyond.
 
 To demonstrate:
 
-* Go to :menuselection:`Vector --> Geoprocessing Tools --> Buffer(s)` to open
-  the Buffer(s) dialog.
-* Set it up like this:
+#. Go to :menuselection:`Vector --> Geoprocessing Tools --> Buffer(s)` to open
+   the Buffer(s) dialog.
+#. Set it up like this:
 
-  .. figure:: img/suitable_terrain_buffer.png
-     :align: center
+   .. figure:: img/suitable_terrain_buffer.png
+      :align: center
 
-* Use the :guilabel:`suitable_terrain` layer with :kbd:`10` segments and a
-  buffer distance of :kbd:`-100`. (The distance is automatically in meters
-  because your map is using a projected CRS.)
-* Save the output in :kbd:`exercise_data/residential_development/` as
-  :kbd:`suitable_terrain_continuous100m.shp`.
-* If necessary, move the new layer above your original :kbd:`suitable_terrain`
-  layer.
+#. Use the :guilabel:`suitable_terrain` layer with ``10`` segments and a
+   buffer distance of ``-100``. (The distance is automatically in meters
+   because your map is using a projected CRS.)
+#. Save the output in :file:`exercise_data/residential_development/` as
+   :file:`suitable_terrain_continuous100m.shp`.
+#. If necessary, move the new layer above your original
+   :guilabel:`suitable_terrain` layer.
 
-Your results will look like something like this:
+   Your results will look like something like this:
 
-.. figure:: img/suitable_buffer_results.png
-   :align: center
+   .. figure:: img/suitable_buffer_results.png
+      :align: center
 
-* Now use the :guilabel:`Select by Location` tool (:menuselection:`Vector -->
-  Research Tools --> Select by location`).
-* Set up like this:
+#. Now use the :guilabel:`Select by Location` tool (:menuselection:`Vector -->
+   Research Tools --> Select by location`).
+#. Set up like this:
 
-  .. figure:: img/select_by_location.png
-     :align: center
+   .. figure:: img/select_by_location.png
+      :align: center
 
-* Select features in :guilabel:`new_solution` that intersect features in
-  :guilabel:`suitable_terrain_continuous100m.shp`.
+#. Select features in :guilabel:`new_solution` that intersect features in
+   :guilabel:`suitable_terrain_continuous100m.shp`.
 
-This is the result:
+   This is the result:
 
-.. figure:: img/buffer_select_result.png
-   :align: center
+   .. figure:: img/buffer_select_result.png
+      :align: center
 
-The yellow buildings are selected. Although some of the buildings fall partly
-outside the new :kbd:`suitable_terrain_continuous100m` layer, they lie well
-within the original :kbd:`suitable_terrain` layer and therefore meet all of our
-requirements.
+   The yellow buildings are selected. Although some of the buildings fall
+   partly outside the new :guilabel:`suitable_terrain_continuous100m` layer,
+   they lie well within the original :guilabel:`suitable_terrain` layer and
+   therefore meet all of our requirements.
 
-* Save the selection under :kbd:`exercise_data/residential_development/` as
-  :kbd:`final_answer.shp`.
+#. Save the selection under :file:`exercise_data/residential_development/` as
+   :file:`final_answer.shp`.
 
 
 :ref:`Back to text <backlink-complete-analysis-3>`
