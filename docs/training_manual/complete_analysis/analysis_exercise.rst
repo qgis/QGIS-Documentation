@@ -607,6 +607,9 @@ Creating a bounding box vector
    session
 #. Save the map
 
+.. note:: The bounding box of a layer (raster or vector) can also be
+   generated using the *Extract Layer Extent* algorithm.
+
 Now that you have a bounding box, you can use it to clip the rural
 buffer layer.
 
@@ -614,74 +617,83 @@ Clipping a vector layer
 ----------------------------------------------------------------------
 
 #. Ensure that only the :guilabel:`bbox` and :guilabel:`rural_buffer`
-   layers are visible, with the latter on top.
-#. Click the menu item
-   :menuselection:`Vector > Geoprocessing Tools > Clip`.
-#. In the dialog that appears, set the input vector layer to
-   :guilabel:`rural_buffer` and the clip layer to :guilabel:`bbox`,
-   with both :guilabel:`Use only selected features` boxes unchecked.
-#. Put the output file under the :guilabel:`Zoning` directory
-#. Name the output file :guilabel:`rural_clipped`
-#. Click :guilabel:`OK`
-#. When prompted to add the layer to the TOC, click :guilabel:`Yes`
+   layers are visible, with the latter on top
+#. Run the *clip* algorithm
+   (:menuselection:`Vector > Geoprocessing Tools > Clip...`)
+#. In the dialog that appears, set the :guilabel:`Input layer` to
+   ``rural_buffer`` and the :guilabel:`Overlay layer` to
+   ``bbox``, with both :guilabel:`Selected features only`
+   boxes unchecked
+#. Put the output file under the :file:`Zoning` directory
+#. Name the output file ``rural_clipped``
+#. Make sure that
+   :guilabel:`Open output file after running algorithm` is checked
+#. Click :guilabel:`Run`
 #. Close the dialog
 #. Compare the three vectors and see the results for yourself
-#. Remove the :guilabel:`bbox` and :guilabel:`rural_buffer` layers,
-   then save your map
+#. Remove the ``bbox`` and ``rural_buffer`` layers, then save your map
 
 Now it's ready to be rasterized.
 
 Rasterizing a vector layer
 ----------------------------------------------------------------------
 
-You'll need to specify a pixel size for a new raster that you create,
-so first you'll need to know the size of one of your existing rasters.
+You'll need to specify a pixel size when creating a new raster, so
+first you will need to know the size of one of your existing rasters.
 
 #. Open the :guilabel:`Properties` dialog of any of the three existing
    rasters
-#. Switch to the :guilabel:`Metadata` tab
+#. Switch to the :guilabel:`Information` tab
 #. Make a note of the :guilabel:`X` and :guilabel:`Y` values under the
-   heading :guilabel:`Dimensions` in the Metadata table
+   heading :guilabel:`Dimensions` in the
+   :guilabel:`Information from provider` table
 #. Close the :guilabel:`Properties` dialog
 #. Click on the
-   :menuselection:`Raster --> Conversion --> Rasterize` menu item
+   :menuselection:`Raster --> Conversion --> Rasterize (Vector to Raster)...`
+   menu item.
    You may receive a warning about a dataset being unsupported.
    Click it away and ignore it.
-#. Select :guilabel:`rural_clipped` as your input layer
-#. Set an output file location inside the
-   :guilabel:`Zoning` directory
+#. Select :guilabel:`rural_clipped` as your :guilabel:`Input layer`
+#. Set an output file location inside the :file:`Zoning` directory
 #. Name the output file :file:`rural_raster.tif`
-#. Check the :guilabel:`New size` box and enter the :guilabel:`X` and
-   :guilabel:`Y` values you made a note of earlier
-#. Check the :guilabel:`Load into canvas` box
-#. Click the pencil icon next to the text field which shows the
-   command that will be run.
-   At the end of the existing text, add a space and then the text
-   ``-burn 1``.
+#. Choose ``Pixels`` as :guilabel:`Output raster size units`
+#. Set :guilabel:`Width/Horizontal resolution` to the *X* values you
+   made a note of earlier
+#. Set :guilabel:`Height/Vertical resolution` to the *Y* values you
+   made a note of earlier
+#. Make sure that
+   :guilabel:`Open output file after running algorithm` is checked
+
+#. Set the :guilabel:`Output extent` to ``Calculate from Layer`` with
+   one of the three raster layers
+#. Set :guilabel:`A fixed value to burn` to ``1``.
    This tells the Rasterize function to "burn" the existing vector
    into the new raster and give the areas covered by the vector the
    new value of ``1`` (as opposed to the rest of the image, which will
    automatically be ``0``).
-#. Click :guilabel:`OK`
-#. The new raster should show up in your map once it has been computed
-#. The new raster will look like a grey rectangle – you may change the
-   display style as you did for the reclassified rasters
-#. Save your map
+#. Click :guilabel:`Run`.
 
-Now that you have all four criteria each in a separate raster, you
-need to combine them to see which areas satisfy all the criteria.
-To do so, the rasters will be multiplied with each other.
-When this happens, all overlapping pixels with a value of ``1`` will
-retain the value of ``1``, but if a pixel has the value of ``0`` in
-any of the four rasters, then it will be ``0`` in the result.
+The new raster should show up in your map once it has been computed.
+The new raster should be black / white (false / true) – you may
+change the display style as you did for the reclassified rasters.
+
+Save your map.
+
+Now that you have the four criteria in separate raster layers, you
+can combine them to see which areas satisfy all the criteria.
+To do so, the rasters should be multiplied with each other.
+Pixels with a value of ``1`` for all the four raster layers will
+retain the value of ``1``, but if it has the value of ``0`` in
+any of the four raster layers, it will be ``0`` in the result.
 In this way, the result will contain only the overlapping areas.
 
 Combining rasters
 ----------------------------------------------------------------------
 
-#. Click the :menuselection:`Raster --> Raster calculator` menu item.
+#. Open the *Raster Calculator*
+   (:menuselection:`Raster --> Raster Calculator...`)
 #. Build the following expression (with the appropriate names for your
-   layers, depending on what you called them)::
+   layers)::
 
     [Rural raster] * [Reclassified aspect] * [Reclassified slope] *
     [Reclassified rainfall]
@@ -691,13 +703,12 @@ Combining rasters
 #. Ensure that the
    :guilabel:`Open output file after running algorithm` box is checked
 #. Click :guilabel:`Run`
-#. Change the symbology of the new raster in the same way as you set
-   the style for the other reclassified rasters.
-   The new raster now properly displays the areas where all the
-   criteria are satisfied.
+
+The new raster now properly displays the areas where all the criteria
+are satisfied.
 
 To get the final result, you need to select the areas that are greater
-than ``6000m^2``.
+than ``6000`` ㎡.
 However, computing these areas accurately is only possible for a
 vector layer, so you will need to vectorize the raster.
 
@@ -705,8 +716,9 @@ Vectorizing the raster
 ----------------------------------------------------------------------
 
 #. Click on the menu item
-   :menuselection:`Raster --> Conversion --> Polygonize`
-#. Select the :file:`cross_product.tif` raster
+   :menuselection:`Raster --> Conversion --> Polygonize (Raster to Vector)...`
+#. Select the :file:`cross_product.tif` raster as
+   :guilabel:`Input layer`
 #. Set the output location to :file:`Rasterprac`
 #. Name the file :file:`candidate_areas.shp`
 #. Ensure that :guilabel:`Open output file after running algorithm` is
@@ -717,14 +729,15 @@ Vectorizing the raster
 All areas of the raster have been vectorized, so you need to select
 only the areas that have a value of ``1``.
 
-#. Open the :guilabel:`Query` dialog for the new vector
+#. Open the :guilabel:`Query Builder` dialog (right-click - 
+   :guilabel:`Filter...`) for the new vector layer
 #. Build this query::
 
     "DN" = 1
 
 #. Click :guilabel:`OK`
 #. Create a new vector file from the results by saving the
-   :guilabel:`candidate_areas` vector after the query is complete (and
+   :guilabel:`candidate_areas` after the query is complete (and
    only the areas with a value of ``1`` are visible).
    Use the :guilabel:`Save as...` function in the layer's right-click
    menu for this.
@@ -738,9 +751,9 @@ Calculating the area for each polygon
 #. Open the new vector layer's right-click menu
 #. Select :guilabel:`Open attribute table`
 #. Click the :guilabel:`Toggle editing mode` button along the bottom
-   of the table, or press :kbd:`Ctrl+E`
+   of the table, or press :kbd:`Ctrl+e`
 #. Click the :guilabel:`Open field calculator` button along the
-   bottom of the table, or press :kbd:`Ctrl+I`
+   bottom of the table, or press :kbd:`Ctrl+i`
 #. Under the :guilabel:`New field` heading in the dialog that appears,
    enter the field name ``area``.
    The output field type should be an integer, and the field width
@@ -770,9 +783,10 @@ Selecting areas of a given size
 Now that the areas are known:
 
 #. Build a query (as usual) to select only the polygons larger than
-   ``6000m^2``.  The query is::
+   ``6000`` ㎡.
+   The query is::
 
-    "area" > 6000
+     "area" > 6000
 
 #. Save the selection as a new vector layer called
    :file:`solution.shp`.
@@ -794,48 +808,33 @@ Digitize your house
    You might have to open other layers to help you find your house.
    If you don't live anywhere nearby, just click somewhere among the
    streets where a house could conceivably be.
-#. Enter any arbitrary number for the shape ID
+#. Enter an arbitrary number for the shape ID
 #. Click :guilabel:`OK`
 #. Save your edits and exit edit mode
 #. Save the map
 
-You will need to find the centroids ("centers of mass") for the
-solution area polygons in order to decide which is closest to your
-house.
-
-Calculate polygon centroids
+Calculate which polygon is closest to your house
 ----------------------------------------------------------------------
 
-#. Click on the
-   :menuselection:`Vector --> Geometry Tools --> Centroids` menu item
-#. Specify the input layer as :guilabel:`solution.shp`
-#. Provide the output location as :file:`Rasterprac`
-#. Call the destination file :file:`solution_centroids.shp`
-#. Check
-   |checkbox| :guilabel:`Open output file after running algorithm` to
-   add the result to the TOC (:guilabel:`Layers` panel)
-#. Click :guilabel:`Run` and close the dialog
-#. Drag the new layer to the top of the layer order so that you can
-   see it
-
-Calculate which centroid is closest to your house
-----------------------------------------------------------------------
-
-#. Click on the menu item
-   :menuselection:`Vector --> Analysis Tools --> Distance matrix`
-#. The input layer should be your house, and the target layer
-   :guilabel:`solution_centroids`.
-   Both of these should use the :guilabel:`id` field as their unique
-   ID field.
-#. The output matrix type should be :guilabel:`linear`
+#. Go to the *Processing Toolbox*, locate the
+   *Join Attributes by Nearest* algoritm
+   (:menuselection:`Vector general --> Join Attributes by Nearest`)
+   and execute it
+#. :guilabel:`Input layer` should be your house, and
+   :guilabel:`Input layer 2` :guilabel:`solution_centroids`
 #. Set an appropriate output location and name
+   (:guilabel:`Joined layer`)
+#. Set the :guilabel:`Maximum nearest neighbors` to ``3`` (or the
+   number of nearby locations you would like to choose from)
+#. Leave the rest of the parameters with their default values
 #. Click :guilabel:`OK`
-#. Open the file in a text editor (or import it into a spreadsheet).
-   Note which target ID is associated with the shortest
-   :guilabel:`Distance`.
-   There may be more than one at the same distance.
+
+The resulting point layer will contain three features - they will consist of the location of your house and its attributes, with the
+attributes of a nearby potential location added and the distance to
+that location.
+
 #. Build a query in QGIS to select only the solution areas closest to
-   your house (selecting it using the :guilabel:`id` field)
+   your house (selecting them using the :guilabel:`id` field)
 
 This is the final answer to the research question.
 
