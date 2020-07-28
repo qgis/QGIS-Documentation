@@ -51,11 +51,11 @@ The solution will involve:
    the entry :guilabel:`WGS 84 / UTM zone 33S` (with the EPSG code ``32733``). 
 #. Click :guilabel:`OK`. The map is now in the ``UTM33S`` coordinate
    reference system.
-#. Save the map by clicking on the |fileSave| :sup:``Save Project`` toolbar button,
+#. Save the map by clicking on the |fileSave| :sup:`Save Project` toolbar button,
    or use the :menuselection:`File --> Save As...` menu item.
-#. Save the map in a new directory called :file:`Rasterprac` that you should create
+#. Save the project file in a new directory called :file:`Rasterprac` that you should create
    somewhere on your computer. You will save whatever layers you create in this
-   directory as well. Save the map as ``your_name_fynbos``.
+   directory as well. Save the project as :file:`your_name_fynbos.qgs`.
 
    .. it could be worth indicating a real location for this output folder as
     it's later reused in exercises.
@@ -117,7 +117,7 @@ Changing the layer order
 -------------------------------------------------------------------------------
 
 #. In the :guilabel:`Layers` panel, click and drag layers up and down to change
-   the order they appear in on the map so that you can see as many of the layers
+   the order they appear in the map so that you can see as many of the layers
    as possible.
 
 Now that all the data is loaded and properly visible, the analysis can begin.
@@ -218,7 +218,7 @@ Create the hillshade
 #. Click on the :menuselection:`Raster --> Analysis --> Hillshade` menu
    item to open the :guilabel:`Hillshade` dialog.
 #. Scroll down to :guilabel:`Hillshade` and save the output in your :file:`Rasterprac`
-   directory as :file:`hillshade`. 
+   directory as :file:`hillshade.tif`. 
 #. Make sure that the :guilabel:`Open output file after running algorithm` box is checked.
 #. Click :guilabel:`Run`.
 #. Wait for it to finish processing.
@@ -238,11 +238,11 @@ Slope
 -------------------------------------------------------------------------------
 
 #. Click on the menu item :menuselection:`Raster --> Analysis --> Slope`.
-#. Select the the clipped DEM as the input layer.
-#. Click the :guilabel:`Slope expressed as percent instead of degrees` box. Slope 
+#. Select the clipped DEM as the input layer.
+#. Check the :guilabel:`Slope expressed as percent instead of degrees` box. Slope 
    can be expressed in different units (percent or degrees).  Our criteria suggest 
    that the plant of interest grows on slopes with a gradient between 15% and 60%. 
-   So we need to make sure to our slope data is expressed as a percent.
+   So we need to make sure our slope data is expressed as a percent.
 #. Specify an appropriate file name and location for your output.
 #. Make sure the :guilabel:`Open output file after running algorithm` box is checked.
 #. Click :guilabel:`Run`.
@@ -260,7 +260,7 @@ Reclassifying rasters
 
 #. Click the menu item :menuselection:`Raster --> Raster calculator`.
 #. For the Output layer, click on the :guilabel:`...` button, specify your :file:`Rasterprac`
-   directory as the location for the output layer, and save it as :file:`slope15_60`
+   directory as the location for the output layer, and save it as :file:`slope15_60.tif`
 
 In the :guilabel:`Raster bands` list on the left, you will see all the raster
 layers in your :guilabel:`Layers` panel. If your Slope layer is called
@@ -347,14 +347,14 @@ Finding rural areas
 
     "Gen_Zoning" = 'Rural'
 
-#. Click OK. The query should return 1 result.
+#. Click :guilabel:`OK`. The query should return 1 result.
 
 You should see the rural polygons from the :guilabel:`Zoning` layer. You
 will need to save these to a new layer file.
 
 #. On the right-click menu for :guilabel:`Zoning`, select :guilabel:`Export --> Save
-   Feature as...`.
-#. Save your layer under the :guilabel:`Rasterprac` directory.
+   Features As...`.
+#. Save your layer under the :file:`Rasterprac` directory.
 #. Name the output file :file:`rural.gpkg`.
 #. Save the map.
 
@@ -369,7 +369,7 @@ Creating a negative buffer
 #. In the dialog that appears, select the :guilabel:`rural` layer as
    your input vector layer (:guilabel:`Selected features only` should not be
    checked).
-#. In :guilabel:`Distance` and enter the value ``-250`` into the associated field; 
+#. In :guilabel:`Distance`, enter the value ``-250``.
    the negative value means that the buffer must be an internal buffer.  
    Make sure that the units are meters in the dropdown menu.
 #. Check the :guilabel:`Dissolve result` box.
@@ -378,7 +378,7 @@ Creating a negative buffer
 #. Click :guilabel:`Save`.
 #. Click :guilabel:`Run` and wait for the processing to complete.
 #. Close the :guilabel:`Buffer` dialog.  Make sure that your buffer worked correctly 
-   by noting how the :guilabel:`rural_buffer` layer is different than the :guilabel:`rural` 
+   by noting how the :guilabel:`rural_buffer` layer is different from the :guilabel:`rural` 
    layer. You may need to change the drawing order in order to observe the difference.
 #. Remove the :guilabel:`rural` layer.
 #. Save the map.
@@ -391,10 +391,10 @@ Vectorizing the raster
 -------------------------------------------------------------------------------
 
 #. Click on the menu item 
-   :menuselection:`Raster --> Conversion --> Polygonize(Raster to  Vector`.
+   :menuselection:`Raster --> Conversion --> Polygonize (Raster to  Vector)...`
 #. For the Input layer, select the :file:`aspect_slope_rainfall` raster.
 #. Save the output. Under :guilabel:`Vectorized`, select :guilabel:`Save file as`. 
-   Set the location to:file:`Rasterprac` and name the file
+   Set the location to :file:`Rasterprac` and name the file
    :file:`aspect_slope_rainfall_all.gpkg`.
 #. Ensure that :guilabel:`Open output file after running algorithm` is checked.
 #. Click :guilabel:`Run`.
@@ -412,8 +412,8 @@ areas that have a value of ``1``.
 
 #. Click :guilabel:`OK`.
 #. After you are sure the query is complete (and only the areas that meet all three criteria,
-   i.e. with a value of ``1`` are visible), create a new vector file from the results by using
-   the :guilabel:`Export --> Save file as...` function in the layer's right-click menu for this.
+   i.e. with a value of ``1`` are visible), create a new vector file from the results, using
+   the :guilabel:`Export --> Save Features As...` in the layer's right-click menu.
 #. Save the file in the :file:`Rasterprac` directory.
 #. Name the file :file:`aspect_slope_rainfall_1.gpkg`.
 #. Remove the :guilabel:`aspect_slope_rainfall_all` layer from your map.
@@ -454,7 +454,7 @@ Determining the Intersection of vectors
    by noting that only the overlapping areas remain. 
 #. Save the map.
 
-The last criteria on the list is that the area must be greater than ``6000m^2``. 
+The next criteria on the list is that the area must be greater than ``6000`` m^2. 
 You will now calculate the polygon areas in order to identify the areas that are 
 the appropriate size for this project. 
 
@@ -496,7 +496,7 @@ Now that the areas are known:
 
     "area" > 6000
 
-#. Save the in the selection in the :file:`Rasterprac` directory as a new vector 
+#. Save the selection in the :file:`Rasterprac` directory as a new vector 
 layer called :file:`suitable_areas.gpkg`.
 
 You now have the suitable areas that meet all of the habitat criteria for the 
@@ -522,7 +522,7 @@ Before you return to QGIS, take note of where the university is located, and wha
    
 #. Ensure that the :guilabel:`Streets` layer clicked on, and that the :guilabel:`university`
    layer is highlighted in the :guilabel:`Layers` panel.
-#. Navigate to the :menuselection:`View > Toolbars` menu item and ensure that
+#. Navigate to the :menuselection:`View --> Toolbars` menu item and ensure that
    :guilabel:`Digitizing` is selected. You should then see a toolbar icon with a
    pencil on it. This is the :guilabel:`Toggle editing` button.
 #. Click the :guilabel:`Toggle editing` button to enter *edit mode*. This allows
@@ -557,7 +557,7 @@ Calculate which centroids are closest to the University of Cape Town
 
 #. Click on the menu item :menuselection:`Vector --> Analysis Tools --> Distance
    matrix`.
-#. The input layer should be the university, and the target layer
+#. The input layer should be ``university``, and the target layer
    :guilabel:`suitable_area_centroids`. Both of these should use the :guilabel:`fid`
    field as the :guilabel:`Target unique ID field.`
 #. The output matrix type should be the default :guilabel:`Linear (N*k x 3) distance matrix`.
