@@ -583,7 +583,9 @@ Follow all the best practices for cartography in creating your output map.
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |FA| replace:: Follow Along:
 .. |LS| replace:: Lesson:
+.. |TY| replace:: Try Yourself
 .. |addOgrLayer| image:: /static/common/mActionAddOgrLayer.png
    :width: 1.5em
 .. |addRasterLayer| image:: /static/common/mActionAddRasterLayer.png
