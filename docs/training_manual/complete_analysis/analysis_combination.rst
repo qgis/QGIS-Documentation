@@ -33,13 +33,6 @@ example:
 .. figure:: img/new_solution_example.png
    :align: center
 
-.. note:: If you find that the :guilabel:`Intersect` tool does not produce any
-  results, check the CRS settings of each of your layers. The CRS must be the
-  same for both the layers you are comparing. You may need to reproject one
-  layer by saving the layer as a new file with the required CRS. In our
-  example, the :file:`suitable_terrain` layer was reprojected to
-  |localCRS| and named :file:`suitable_terrain_34S.shp`.
-
 
 .. _backlink-complete-analysis-2:
 
@@ -94,5 +87,4 @@ Next you will present these results as part of your second assignment.
 .. |LS| replace:: Lesson:
 .. |TY| replace:: Try Yourself
 .. |WN| replace:: What's Next?
-.. |localCRS| replace:: ``WGS 84 / UTM 34S``
 .. |moderate| image:: /static/common/moderate.png
