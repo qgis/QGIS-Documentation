@@ -57,6 +57,9 @@ If you want to clear your session and start fresh, go to
 This will prompt you to save the existing project if
 changes have been made since it was opened or last saved.
 
+When you a fresh project the top bar will show ``Untitled Project`` until you
+save it.
+
 .. _figure_new_project:
 
 .. figure:: img/new_project.png

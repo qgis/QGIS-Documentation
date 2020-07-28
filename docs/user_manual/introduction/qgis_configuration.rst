@@ -1066,6 +1066,16 @@ But you can create as many user profiles as you want:
 #. A new instance of QGIS is started, using a clean
    configuration. You can then set your custom configurations.
 
+If you have more than one profile in your QGIS installation, the name of the
+active profile is showed in the top bar between square bracket:
+
+.. _figure_profile_top_bar:
+
+.. figure:: img/profile_topbar.png
+   :align: center
+
+   Profile name in the top bar
+
 As each user profile contains isolated settings, plugins and history they can be great for
 different workflows, demos, users of the same machine, or testing settings, etc.
 And you can switch from one to the other by selecting them in the :menuselection:`Settings -->
