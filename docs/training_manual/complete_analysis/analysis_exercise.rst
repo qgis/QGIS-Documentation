@@ -42,7 +42,7 @@ The solution will involve:
 #. analysing the Zoning vector layer to find areas that are away from human
    settlement and are of the correct size.
 
-Setting up the Map
+|FA| Setting up the Map
 -------------------------------------------------------------------------------
 
 #. Click on the |projectionEnabled| :sup:`Current CRS` button in the lower right corner of the
@@ -247,7 +247,7 @@ Slope
 #. Make sure the :guilabel:`Open output file after running algorithm` box is checked.
 #. Click :guilabel:`Run`.
 
-Aspect
+|TY| Aspect
 -------------------------------------------------------------------------------
 
 Use the same approach as for calculating the slope, but use the
