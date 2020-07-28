@@ -305,7 +305,7 @@ It is possible to use a sqlite db management system (e.g DB Browser) and add a l
 
 ```
 INSERT INTO "grid_transformation"
-VALUES ('PROJ','EPSG_6706_TO_EPSG_4265_GENOVA','RDN2008 TO Monte Mario (ROMA40) - Regione Veneto',
+VALUES ('PROJ','EPSG_6706_TO_EPSG_4265','RDN2008 TO Monte Mario (ROMA40) - Regione Veneto',
 'For the Veneto Region - Use of IGM proprietary grids',
 'LOCALE',
 'EPSG','9615','NTv2',
