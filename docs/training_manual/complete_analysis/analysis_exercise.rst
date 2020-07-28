@@ -355,7 +355,7 @@ will need to save these to a new layer file.
 #. On the right-click menu for :guilabel:`Zoning`, select :guilabel:`Export --> Save
    Features As...`.
 #. Save your layer under the :file:`Rasterprac` directory.
-#. Name the output file :file:`rural.gpkg`.
+#. Name the output file :file:`rural.shp`.
 #. Save the map.
 
 Now you need to exclude the areas that are within ``250m`` from the edge of
@@ -374,7 +374,7 @@ Creating a negative buffer
    Make sure that the units are meters in the dropdown menu.
 #. Check the :guilabel:`Dissolve result` box.
 #. In :guilabel:`Buffered`, set the output file to the :file:`Rasterprac` directory.
-#. Name the output file :file:`rural_buffer.gpkg`.
+#. Name the output file :file:`rural_buffer.shp`.
 #. Click :guilabel:`Save`.
 #. Click :guilabel:`Run` and wait for the processing to complete.
 #. Close the :guilabel:`Buffer` dialog.  Make sure that your buffer worked correctly 
@@ -395,7 +395,7 @@ Vectorizing the raster
 #. For the Input layer, select the :file:`aspect_slope_rainfall` raster.
 #. Save the output. Under :guilabel:`Vectorized`, select :guilabel:`Save file as`. 
    Set the location to :file:`Rasterprac` and name the file
-   :file:`aspect_slope_rainfall_all.gpkg`.
+   :file:`aspect_slope_rainfall_all.shp`.
 #. Ensure that :guilabel:`Open output file after running algorithm` is checked.
 #. Click :guilabel:`Run`.
 #. Close the dialog when processing is complete.
@@ -415,7 +415,7 @@ areas that have a value of ``1``.
    i.e. with a value of ``1`` are visible), create a new vector file from the results, using
    the :guilabel:`Export --> Save Features As...` in the layer's right-click menu.
 #. Save the file in the :file:`Rasterprac` directory.
-#. Name the file :file:`aspect_slope_rainfall_1.gpkg`.
+#. Name the file :file:`aspect_slope_rainfall_1.shp`.
 #. Remove the :guilabel:`aspect_slope_rainfall_all` layer from your map.
 #. Save your map.
 
@@ -429,7 +429,7 @@ Fixing geometry
 #. In the :guilabel:`Processing Toolbox`, search for "Fix geometries", and open the dialog box.
 #. For the Input layer, select the :guilabel:`aspect_slope_rainfall_1`.
 #. Under :guilabel:`Fixed geometries`, select :guilabel:`Save file as`. and save the output
-   to :file:`Rasterprac` and name the file :file:`fixed_aspect_slope_rainfall.gpkg`.
+   to :file:`Rasterprac` and name the file :file:`fixed_aspect_slope_rainfall.shp`.
 #. Ensure that :guilabel:`Open output file after running algorithm` is checked.
 #. Click :guilabel:`Run`.
 #. Close the dialog when processing is complete.
@@ -447,7 +447,7 @@ Determining the Intersection of vectors
 #. In the dialog that appears, for your Input layer, select the :guilabel:`rural_buffer` layer.
 #. For the Overlay layer Select the :guilabel:`fixed_aspect_slope_rainfall` layer.
 #. In :guilabel:`Insersection`, set the output file to the :file:`Rasterprac` directory.
-#. Name the output file :file:`rural_aspect_slope_rainfall.gpkg`.
+#. Name the output file :file:`rural_aspect_slope_rainfall.shp`.
 #. Click :guilabel:`Save`.
 #. Click :guilabel:`Run` and wait for the processing to complete.
 #. Close the :guilabel:`Intersection` dialog.  Make sure that your intersection worked correctly 
@@ -497,7 +497,7 @@ Now that the areas are known:
     "area" > 6000
 
 #. Save the selection in the :file:`Rasterprac` directory as a new vector 
-layer called :file:`suitable_areas.gpkg`.
+layer called :file:`suitable_areas.shp`.
 
 You now have the suitable areas that meet all of the habitat criteria for the 
 rare fynbos plant, from which you will pick the four areas that are nearest to the 
@@ -508,7 +508,7 @@ Digitize the University of Cape Town
 
 #. Click on the menu item :menuselection:`Layer --> Create --> New GeoPackage Layer...`.
 #. Next to Database, click the :guilabel:`...` button, and save the new vector in the 
-   :file:`Rasterprac` directory as :file:`university.gpkg`.
+   :file:`Rasterprac` directory as :file:`university.shp`.
 #. Under the :guilabel:`Geometry type` heading, select :guilabel:`Point`.
 #. In the dropdown menu, choose :guilabel:`Project CRS:EPSG:32733 - WGS 84 / UTM zone 33S` 
    to set the coordinate reference system.
@@ -545,9 +545,9 @@ Calculate polygon centroids
 
 #. Click on the :menuselection:`Vector --> Geometry Tools --> Centroids`
    menu item.
-#. Specify the input layer as :guilabel:`suitable_areas.gpkg`.
+#. Specify the input layer as :guilabel:`suitable_areas.shp`.
 #. Provide the output location as :file:`Rasterprac`.
-#. Call the destination file :file:`suitable_area_centroids.gpkg`.
+#. Call the destination file :file:`suitable_area_centroids.shp`.
 #. Make sure that :guilabel:`Open output file after running algorithm` is checked.
 #. Click :guilabel:`Run` and close the dialog.
 #. Drag the new layer to the top of the layer order so that you can see it.
