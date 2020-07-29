@@ -31,7 +31,7 @@ or
 
 .. note::
 
-  If the project has been modified the ``*`` symbol will appear in the top bar 
+  If the project has been modified the ``*`` symbol will appear in the title bar 
   and QGIS will, by default, ask you if you would like to save the changes.
   This behavior is controlled by the |checkbox|
   :guilabel:`Prompt to save project and data source changes when required`
