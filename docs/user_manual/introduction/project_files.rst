@@ -31,8 +31,8 @@ or
 
 .. note::
 
-  If the project has been modified QGIS will, by default, ask you
-  if you would like to save the changes.
+  If the project has been modified the ``*`` symbol will appear in the title bar 
+  and QGIS will, by default, ask you if you would like to save the changes.
   This behavior is controlled by the |checkbox|
   :guilabel:`Prompt to save project and data source changes when required`
   setting under :menuselection:`Settings --> Options --> General`.
@@ -56,6 +56,9 @@ If you want to clear your session and start fresh, go to
 :menuselection:`Project -->` |fileNew| :menuselection:`New`.
 This will prompt you to save the existing project if
 changes have been made since it was opened or last saved.
+
+When you open a fresh project, the title bar will show ``Untitled Project`` until you
+save it.
 
 .. _figure_new_project:
 
