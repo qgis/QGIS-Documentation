@@ -250,12 +250,9 @@ latex_elements = {
     \\newunicodechar{≥}{$\geq$}
     \\newunicodechar{≤}{$\leq$}
     \\newunicodechar{π}{$\pi$}
-<<<<<<< HEAD
-=======
     \\newunicodechar{㎡}{$m^2$}
     \\newunicodechar{′}{\ensuremath{^{\prime}}}
     \\newunicodechar{″}{\ensuremath{^{\prime\prime}}}
->>>>>>> 2b87719ea... Merge pull request #5919 from qgis/tm_suppl_exercise
     \\newunicodechar{​}{ }'''
 }
 
