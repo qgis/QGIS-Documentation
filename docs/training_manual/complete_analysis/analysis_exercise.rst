@@ -185,7 +185,7 @@ Find the Correct Districts
 
         "NAME_2" = 'Cape'
 
-   #. Add another :guilabel:`OR` operator, then work your way through
+   #. Add another *OR* operator, then work your way through
       the list of districts above in a similar fashion.
 
       The final query should be::
@@ -228,7 +228,7 @@ this area.
    #. Enter a file name - ``DEM_clipped.tif``
    #. Save
 
-#. Make sure that
+#. Make sure that |checkbox|
    :guilabel:`Open output file after running algorithm` is checked
 #. Click :guilabel:`Run`
 #. After the clipping operation has completed, leave the
@@ -347,15 +347,15 @@ that was written for this purpose.
    menu item to open the :guilabel:`Hillshade` dialog
 #. Scroll down to :guilabel:`Hillshade` and save the output in your
    :file:`Rasterprac` directory as :file:`hillshade.tif`
-#. Make sure that
+#. Make sure that |checkbox|
    :guilabel:`Open output file after running algorithm` is checked
 #. Click :guilabel:`Run`
 #. Wait for it to finish processing.
 
-The new :guilabel:`hillshade` layer has appeared in the
+The new ``hillshade`` layer has appeared in the
 :guilabel:`Layers` panel.
 
-#. Right-click on the :guilabel:`hillshade` layer in the
+#. Right-click on the ``hillshade`` layer in the
    :guilabel:`Layers` panel and bring up the :guilabel:`Properties`
    dialog
 #. Click on the :guilabel:`Transparency` tab and set the
@@ -364,7 +364,7 @@ The new :guilabel:`hillshade` layer has appeared in the
 #. Note the effect when the transparent hillshade is superimposed over
    the clipped DEM.
    You may have to change the order of your layers, or click off the
-   :guilabel:`rainfall_clipped` layer in order to see the effect.
+   ``rainfall_clipped`` layer in order to see the effect.
 
 Slope
 ----------------------------------------------------------------------
@@ -372,14 +372,14 @@ Slope
 #. Click on the :menuselection:`Raster --> Analysis --> Slope...`
    menu item to open the :guilabel:`Slope` algorithm dialog
 #. Select ``DEM100`` as :guilabel:`Input layer`
-#. Check the :guilabel:`Slope expressed as percent instead of degrees`
-   box.
+#. Check |checkbox|
+   :guilabel:`Slope expressed as percent instead of degrees`.
    Slope can be expressed in different units (percent or degrees).
    Our criteria suggest that the plant of interest grows on slopes with
    a gradient between 15% and 60%.
    So we need to make sure our slope data is expressed as a percent.
 #. Specify an appropriate file name and location for your output.
-#. Make sure that
+#. Make sure that |checkbox|
    :guilabel:`Open output file after running algorithm` is checked
 #. Click :guilabel:`Run`
 
@@ -421,7 +421,7 @@ Reclassifying rasters
    In the :guilabel:`Raster bands` list on the left, you will see all
    the raster layers in your :guilabel:`Layers` panel.
    If your Slope layer is called :guilabel:`slope`, it will be listed
-   as :guilabel:`slope@1`.
+   as ``slope@1``.
    Indicating band 1 of the slope raster.
 #. The slope needs to be between ``15`` and ``60`` degrees.
 
@@ -445,7 +445,7 @@ You will know it worked when all of the east-facing slopes are white
 in the resulting raster (it's almost as if they are being lit by the 
 morning sunlight).
 
-Find the correct rainfall (greater than ``1000mm``) the same way.
+Find the correct rainfall (greater than ``1000`` mm) the same way.
 Use the following expression:
 
   rainfall100@1 > 1000
@@ -475,8 +475,8 @@ Combining rasters
 
 #. Set the output location to the :file:`Rasterprac` directory
 #. Name the output raster :file:`aspect_slope_rainfall.tif`
-#. Ensure that the
-   :guilabel:`Open output file after running algorithm` box is checked
+#. Ensure that |checkbox|
+   :guilabel:`Open output file after running algorithm` is checked
 #. Click :guilabel:`Run`
 
 The new raster now properly displays the areas where all three criteria
@@ -494,7 +494,7 @@ Finding rural areas
 -------------------------------------------------------------------------------
 
 #. Hide all layers in the :guilabel:`Layers` panel
-#. Unhide the :guilabel:`Zoning` vector layer
+#. Unhide the ``Zoning`` vector layer
 #. Right-click on it and bring up the :guilabel:`Attribute Table` dialog.
    Note the many different ways that the land is zoned here.
    We want to isolate the rural areas.
@@ -505,15 +505,14 @@ Finding rural areas
 
      "Gen_Zoning" = 'Rural'
 
-   See the earlier instructions for building the :guilabel:`Streets`
-   query if you get stuck.
+   See the earlier instructions if you get stuck.
 #. Click :guilabel:`OK` to close the :guilabel:`Query Builder` dialog.
    The query should return one feature.
 
-You should see the rural polygons from the :guilabel:`Zoning` layer.
+You should see the rural polygons from the ``Zoning`` layer.
 You will need to save these to a new layer file.
 
-#. In the right-click menu for :guilabel:`Zoning`, select
+#. In the right-click menu for ``Zoning``, select
    :menuselection:`Export --> Save Features As...`.
 #. Save your layer under the :file:`Rasterprac` directory
 #. Name the output file :file:`rural.shp`
@@ -529,14 +528,14 @@ Creating a negative buffer
 
 #. Click the menu item
    :menuselection:`Vector --> Geoprocessing Tools --> Buffer...`
-#. In the dialog that appears, select the :guilabel:`rural` layer as
+#. In the dialog that appears, select the ``rural`` layer as
    your input vector layer (:guilabel:`Selected features only` should
    not be checked).
 #. Set :guilabel:`Distance` to ``-250``.
    The negative value means that the buffer will be an internal
    buffer.
    Make sure that the units are meters in the dropdown menu.
-#. Check the :guilabel:`Dissolve result` box
+#. Check |checkbox| :guilabel:`Dissolve result`
 #. In :guilabel:`Buffered`, place the output file in the
    :file:`Rasterprac` directory, and name it :file:`rural_buffer.shp`
 #. Click :guilabel:`Save`
@@ -544,16 +543,16 @@ Creating a negative buffer
 #. Close the :guilabel:`Buffer` dialog.
 
    Make sure that your buffer worked correctly by noting how the
-   :guilabel:`rural_buffer` layer is different from the
-   :guilabel:`rural` layer.
+   ``rural_buffer`` layer is different from the
+   ``rural`` layer.
    You may need to change the drawing order in order to observe the
    difference.
-#. Remove the :guilabel:`rural` layer
+#. Remove the ``rural`` layer
 #. Save the project
 
 
 Now, you need to combine your ``rural_buffer`` vector layer with the
-:guilabel:`aspect_slope_rainfall` raster.
+``aspect_slope_rainfall`` raster.
 To combine them, we will need to change the data format of one of the
 layers. In this case, you will vectorize the raster, since vector
 layers are more convenient when we want to calculate areas.
@@ -569,8 +568,8 @@ Vectorizing the raster
    Under :guilabel:`Vectorized`, select :guilabel:`Save file as`.
    Set the location to :file:`Rasterprac` and name the file
    :file:`aspect_slope_rainfall_all.shp`.
-#. Ensure that :guilabel:`Open output file after running algorithm` is
-   checked
+#. Ensure that |checkbox|
+   :guilabel:`Open output file after running algorithm` is checked
 #. Click :guilabel:`Run`
 #. Close the dialog when processing is complete
 
@@ -591,7 +590,7 @@ only the areas that have a value of ``1``.
    right-click menu
 #. Save the file in the :file:`Rasterprac` directory
 #. Name the file :file:`aspect_slope_rainfall_1.shp`
-#. Remove the :guilabel:`aspect_slope_rainfall_all` layer from your
+#. Remove the ``aspect_slope_rainfall_all`` layer from your
    map
 #. Save your project
 
@@ -610,16 +609,16 @@ Fixing geometry
 #. Under :guilabel:`Fixed geometries`, select
    :guilabel:`Save file as`, and save the output to :file:`Rasterprac`
    and name the file :file:`fixed_aspect_slope_rainfall.shp`.
-#. Ensure that :guilabel:`Open output file after running algorithm` is
-   checked
+#. Ensure that |checkbox|
+   :guilabel:`Open output file after running algorithm` is checked
 #. Click :guilabel:`Run`
 #. Close the dialog when processing is complete
 
 Now that you have vectorized the raster, and fixed the resulting
 geometry, you can combine the aspect, slope, and rainfall criteria,
 with the distance from human settlement criteria by finding the
-intersection of the :guilabel:`fixed_aspect_slope_rainfall` layer and
-the :guilabel:`rural_buffer` layer.
+intersection of the ``fixed_aspect_slope_rainfall`` layer and the
+``rural_buffer`` layer.
 
 Determining the Intersection of vectors
 ----------------------------------------------------------------------
@@ -628,9 +627,9 @@ Determining the Intersection of vectors
    :menuselection:`Vector --> Geoprocessing Tools -->
    Intersection`
 #. In the dialog that appears, for your Input layer, select the
-   :guilabel:`rural_buffer` layer
+   ``rural_buffer`` layer
 #. For the Overlay layer Select the
-   :guilabel:`fixed_aspect_slope_rainfall` layer
+   ``fixed_aspect_slope_rainfall`` layer
 #. In :guilabel:`Insersection`, place the output file in the
    :file:`Rasterprac` directory
 #. Name the output file :file:`rural_aspect_slope_rainfall.shp`
@@ -656,8 +655,8 @@ Calculating the area for each polygon
    corner of the table, or press :kbd:`Ctrl+e`
 #. Click the :guilabel:`Open field calculator` button in the toolbar
    along the top of the table, or press :kbd:`Ctrl+i`
-#. In the dialog that appears, make sure that the
-   :guilabel:`Create new field` box is checked, and set the
+#. In the dialog that appears, make sure that |checkbox|
+   :guilabel:`Create new field` is checked, and set the
    :guilabel:`Output field name` to ``area``
    The output field type should be a decimal number (real).
    Set :guilabel:`Precision` to ``1`` (one decimal).
@@ -667,10 +666,10 @@ Calculating the area for each polygon
 
    This means that the field calculator will calculate the area of
    each polygon in the vector layer and will then populate a new
-   integer column (called :guilabel:`area`) with the computed value.
+   integer column (called ``area``) with the computed value.
 
 #. Click :guilabel:`OK`
-#. Do the same thing for another new field called :guilabel:`id`.
+#. Do the same thing for another new field called ``id``.
    In :guilabel:`Field calculator expression`, type::
 
     $id
@@ -723,8 +722,8 @@ Digitize the University of Cape Town
    Before you return to QGIS, take note of where the university is
    located, and what is nearby.
    
-#. Ensure that the :guilabel:`Streets` layer clicked on, and that the
-   :guilabel:`university` layer is highlighted in the
+#. Ensure that the ``Streets`` layer clicked on, and that the
+   ``university`` layer is highlighted in the
    :guilabel:`Layers` panel
 #. Navigate to the :menuselection:`View --> Toolbars` menu item and
    ensure that :guilabel:`Digitizing` is selected.
@@ -744,7 +743,7 @@ Digitize the University of Cape Town
    session
 #. Save the project
 
-Calculate which polygons are closest to the university
+Find the locations that are closest to the University of Cape Town
 ----------------------------------------------------------------------
 
 #. Go to the *Processing Toolbox*, locate the
@@ -755,50 +754,29 @@ Calculate which polygons are closest to the university
    :guilabel:`Input layer 2` ``suitable_areas``
 #. Set an appropriate output location and name
    (:guilabel:`Joined layer`)
-#. Set the :guilabel:`Maximum nearest neighbors` to ``3`` (or the
-   number of nearby locations you would like to choose from)
-#. Leave the rest of the parameters with their default values
-#. Click :guilabel:`OK`
-
-The resulting point layer will contain three features - they will consist of the location of your house and its attributes, with the
-attributes of a nearby potential location added and the distance to
-that location.
-
-#. Build a query in QGIS to select only the solution areas closest to
-   your house (selecting them using the :guilabel:`id` field)
-
-Find the locations that are closest to the University of Cape Town
-----------------------------------------------------------------------
-
-#. Go to the *Processing Toolbox*, locate the
-   *Join Attributes by Nearest* algoritm
-   (:menuselection:`Vector general --> Join Attributes by Nearest`)
-   and execute it
-#. :guilabel:`Input layer` should be your house, and
-   :guilabel:`Input layer 2` ``solution_centroids``
-#. Set an appropriate output location and name
-   (:guilabel:`Joined layer`)
 #. Set the :guilabel:`Maximum nearest neighbors` to ``4``
+#. Ensure that |checkbox|
+   :guilabel:`Open output file after running algorithm` is checked
 #. Leave the rest of the parameters with their default values
 #. Click :guilabel:`Run`
 
-The resulting point layer will contain three features - they will
+The resulting point layer will contain four features - they will
 all have the location of the university and its attributes, and in
 addition, the attributes of the nearby suitable areas (including the
 ``id``), and the distance to that location.
 
 #. Open the attribute table of the result of the join
-#. Write down the ``id`` of the four nearests suitable areas, and
-   then close it
+#. Note of the ``id`` for the four nearests suitable areas, and
+   then close the attribute table
 #. Open the attribute table of the ``suitable_areas`` layer
 #. Build a query to select the four suitable areas closest to the
-   university (selecting them using the :guilabel:`id` field)
+   university (selecting them using the ``id`` field)
 
 This is the final answer to the research question.
 
 For your submission, create a fully labeled layout that includes the
 semi-transparent hillshade layer over an appealing raster of your
-choice (such as the :guilabel:`DEM` or the :guilabel:`slope` raster,
+choice (such as the ``DEM`` or the ``slope`` raster,
 for example).
 Also include the university and the ``suitable_areas`` layer, with
 the four suitable areas that are closest to the university
@@ -820,20 +798,18 @@ map.
 .. |addRasterLayer| image:: /static/common/mActionAddRasterLayer.png
    :width: 1.0em
 .. |capturePoint| image:: /static/common/mActionCapturePoint.png
-   :width: 1.5em
-.. |capturePolygon| image:: /static/common/mActionCapturePolygon.png
-   :width: 1.5em
+   :width: 1.0em
 .. |checkbox| image:: /static/common/checkbox.png
-   :width: 1.3em
+   :width: 1.0em
 .. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
    :width: 1.2em
 .. |fileSave| image:: /static/common/mActionFileSave.png
-   :width: 1.5em
+   :width: 1.0em
 .. |projectionEnabled| image:: /static/common/mIconProjectionEnabled.png
    :width: 1.5em
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
-   :width: 1.0em
+   :width: 0.75em
 .. |saveEdits| image:: /static/common/mActionSaveEdits.png
-   :width: 1.5em
+   :width: 1.0em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
-   :width: 1.5em
+   :width: 0.85em
