@@ -19,33 +19,61 @@ first tab (:guilabel:`Setup`):
 * :guilabel:`Input vector layers`: to select the layers to check. A |checkbox|
   :guilabel:`Only selected features` checkbox can be used to restrict the
   checking to the geometries of the selected features.
-* :guilabel:`Allowed geometry types`: to allow only some geometry types like
-  point, multipoint, line, multiline, polygon and multipolygon.
-* :guilabel:`Geometry validity`: depending on geometry types, the user can
-  choose |checkbox| :guilabel:`Self intersections`, |checkbox|
-  :guilabel:`Duplicate nodes`, |checkbox| :guilabel:`Self contacts` and
-  |checkbox| :guilabel:`Polygon with less than 3 nodes`.
-* :guilabel:`Geometry properties`: depending on geometry types, the user can
-  choose |checkbox| :guilabel:`Polygons and multipolygons may not contain any
-  holes`, |checkbox| :guilabel:`Multipart objects must consist of more than one
-  part` and |checkbox| :guilabel:`Lines must not have dangles`.
-* :guilabel:`Geometry conditions`: user can add some condition to validate the
-  geometries with a minimal segment length, a minimum angle between segment,
-  a minimal polygon area and sliver polygons detection.
-* :guilabel:`Topology checks`: depending on geometry types, the user can choose
-  |checkbox| :guilabel:`Checks for duplicates`, |checkbox| :guilabel:`Checks
-  for features within other features`, |checkbox| :guilabel:`Checks for
-  overlaps smaller than` |selectNumber|, |checkbox| :guilabel:`Checks
-  for gaps smaller than` |selectNumber|, |checkbox| :guilabel:`Points
-  must be covered by lines`, |checkbox| :guilabel:`Points must properly lie
-  inside a polygon`, |checkbox| :guilabel:`Lines must not intersect any other
-  lines`, |checkbox| :guilabel:`Lines must not intersect with features of
-  layer` |selectString|, |checkbox| :guilabel:`Polygons must follow boundaries
-  of layer` |selectString|.
-* :guilabel:`Tolerance`: you can define the tolerance of the check in map layer
+* :guilabel:`Allowed geometry types` gives the chance to restrict the geometry
+  type of the input layer(s) to:
+  
+  * |checkbox| Point
+  * |checkbox| Multipoint
+  * |checkbox| Line
+  * |checkbox| Multiline
+  * |checkbox| Polygon
+  * |checkbox| Multipolygon
+
+* :guilabel:`Geometry validity`. Depending on geometry types you can choose
+  between:
+  
+  * |checkbox| :guilabel:`Self intersections` 
+  * |checkbox| :guilabel:`Duplicate nodes` 
+  * |checkbox| :guilabel:`Self contacts`
+  * |checkbox| :guilabel:`Polygon with less than 3 nodes`.
+  
+* :guilabel:`Geometry properties`. Depending on geometry types, different 
+  options are available:
+  
+  * |checkbox| :guilabel:`Polygons and multipolygons may not contain any holes`
+  * |checkbox| :guilabel:`Multipart objects must consist of more than one part` 
+  * |checkbox| :guilabel:`Lines must not have dangles`
+
+* :guilabel:`Geometry conditions`. Allows you to add some condition to validate 
+  the geometries with:
+  
+  * |checkbox| :guilabel:`Minimal segment length (map units)` |selectNumber|
+  * |checkbox| :guilabel:`Minimum angle between segment (deg)` |selectNumber|
+  * |checkbox| :guilabel:`Minimal polygon area (map units sqr.)` |selectNumber| 
+  * |checkbox| :guilabel:`No sliver polygons` with a :guilabel:`Maximum thinness`
+    |selectNumber| and a |checkbox| :guilabel:`Max. area (map units sqr.)` 
+    |selectNumber| 
+
+* :guilabel:`Topology checks`. Depending on geometry types, many different
+  options are available:
+  
+  * |checkbox| :guilabel:`Checks for duplicates` 
+  * |checkbox| :guilabel:`Checks for features within other features`
+  * |checkbox| :guilabel:`Checks for overlaps smaller than` |selectNumber|
+  * |checkbox| :guilabel:`Checks for gaps smaller than` |selectNumber|
+  * |checkbox| :guilabel:`Points must be covered by lines` 
+  * |checkbox| :guilabel:`Points must properly lie inside a polygon`
+  * |checkbox| :guilabel:`Lines must not intersect any other lines` 
+  * |checkbox| :guilabel:`Lines must not intersect with features of layer` 
+    |selectString| 
+  * |checkbox| :guilabel:`Polygons must follow boundaries of layer` |selectString|
+
+* :guilabel:`Tolerance`. You can define the tolerance of the check in map layer
   units.
-* :guilabel:`Output vector layer` gives the choice to the user how get the
-  result between modify the current layer and create a new layer.
+* :guilabel:`Output vector layer` gives the choice to:
+  
+  * |radioButtonOn| :guilabel:`Modify input layer`
+  * |radioButtonOn| :guilabel:`Create new layers`
 
 When you are happy with the configuration, you can click on the :guilabel:`Run`
 button.
@@ -61,18 +89,18 @@ button.
 
 The *Geometry Checker Plugin* can find the following errors:
 
-* Self intersections: a polygon with a self intersection;
-* Duplicate nodes: two duplicates nodes in a segment;
-* Holes: hole in a polygon;
-* Segment length: a segment length lower than a threshold;
-* Minimum angle: two segments with an angle lower than a threshold;
-* Minimum area: polygon area lower than a threshold;
+* Self intersections: a polygon with a self intersection
+* Duplicate nodes: two duplicates nodes in a segment
+* Holes: hole in a polygon
+* Segment length: a segment length lower than a threshold
+* Minimum angle: two segments with an angle lower than a threshold
+* Minimum area: polygon area lower than a threshold
 * Silver polygon: this error come from very small polygon (with small area) with
-  a large perimeter;
-* Duplicates features;
-* Feature within feature;
-* Overlaps: polygon overlapping;
-* Gaps: gaps between polygons.
+  a large perimeter
+* Duplicates features
+* Feature within feature
+* Overlaps: polygon overlapping
+* Gaps: gaps between polygons
 
 The following figure shows the different checks made by the plugin.
 
@@ -104,28 +132,27 @@ features`.
 
 Below the zoom action when clicking on the table row, you can:
 
-* |fromSelectedFeature| :guilabel:`Show selected features in attribute table`;
-* |success| :guilabel:`Fix selected errors using default resolution`;
-* |success| :guilabel:`Fix selected errors, prompt for resolution method`.
+* |fromSelectedFeature| :guilabel:`Show selected features in attribute table`
+* |success| :guilabel:`Fix selected errors using default resolution`
+* |success| :guilabel:`Fix selected errors, prompt for resolution method`
   You will see a window to choose the resolution's method among which:
 
-  * Merge with neighboring polygon with longest shared edge;
-  * Merge with neighboring polygon with largest area;
+  * Merge with neighboring polygon with longest shared edge
+  * Merge with neighboring polygon with largest area
   * Merge with neighboring polygon with identical attribute value, if any, or
-    leave as is;
-  * Delete feature;
-  * No action.
+    leave as is
+  * Delete feature
+  * No action
+
+* |options| :guilabel:`Error resolution settings` allows you to change the 
+  default resolution method depending on the error type
 
 .. tip:: **Fix multiple errors**
 
    You can fix multiple errors by selecting more than one row in the table with
    the *CTRL + click* action.
 
-The default action can be changed with the last icon |options| :guilabel:`Error
-resolution settings` For some type of errors, you can change the default action
-between some specific action or :guilabel:`No action`.
-
-Finally, you can choose which :guilabel:`attribute to use when merging features
+Finally, you can choose which :guilabel:`Attribute to use when merging features
 by attribute value`.
 
 
