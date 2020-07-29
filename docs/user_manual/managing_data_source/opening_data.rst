@@ -422,8 +422,7 @@ Layer` tabs allow loading of layers from source types other than :guilabel:`File
   Supported protocol types are:
 
   * ``HTTP/HTTPS/FTP``, with a :guilabel:`URI` and, if required,
-    an authentication. See :ref:`authentication_index` for further details 
-    about the authentication methods.
+    an :ref:`authentication <authentication_index>`.
   * Cloud storage such as ``AWS S3``, ``Google Cloud Storage``, ``Microsoft
     Azure Blob``, ``Alibaba OSS Cloud``, ``Open Stack Swift Storage``.
     You need to fill in the :guilabel:`Bucket or container` and the
