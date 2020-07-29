@@ -430,9 +430,7 @@ Layer` tabs allow loading of layers from source types other than :guilabel:`File
   * service supporting OGC ``WFS 3`` (still experimental),
     using ``GeoJSON`` or ``GEOJSON - Newline Delimited`` format or based on
     ``CouchDB`` database.
-    A :guilabel:`URI` is required, with optional authentication. See 
-    :ref:`authentication_index` for further details about the authentication 
-    methods.
+    A :guilabel:`URI` is required, with optional :ref:`authentication <authentication_index>`.
 
 .. _mesh_loading:
 
