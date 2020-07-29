@@ -1067,7 +1067,7 @@ But you can create as many user profiles as you want:
    configuration. You can then set your custom configurations.
 
 If you have more than one profile in your QGIS installation, the name of the
-active profile is showed in the top bar between square bracket:
+active profile is shown in the application title bar between square brackets:
 
 .. _figure_profile_top_bar:
 
