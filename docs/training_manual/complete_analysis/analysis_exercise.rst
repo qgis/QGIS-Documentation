@@ -11,15 +11,15 @@ Problem Statement
 ----------------------------------------------------------------------
 
 You are tasked with finding areas in and around the Cape Peninsula
-that are a suitable habitat for a rare fynbos plant species.
-The extent of your area of investigation in the Cape Peninsula is:
-south of Melkbosstrand, west of Strand.
+that are suitable habitats for a rare fynbos plant species.
+The extent of your area of investigation covers Cape Town and the Cape
+Peninsula between Melkbosstrand in the north and Strand in the south.
 Botanists have provided you with the following preferences exhibited
 by the species in question:
 
 * It grows on east facing slopes
 * It grows on slopes with a gradient between 15% and 60%
-* It grows in areas that have a total annual rainfall of > 1200 mm
+* It grows in areas that have a total annual rainfall of > 1000 mm
 * It will only be found at least 250 m away from any human settlement
 * The area of vegetation in which it occurs should be at least 6000 ㎡
   in area
@@ -57,13 +57,13 @@ The solution will involve:
    "Filter" tool to search for "33S".
    Select the entry :guilabel:`WGS 84 / UTM zone 33S` (with EPSG code
    ``32733``). 
-#. Click :guilabel:`OK`.
-   The map is now in the ``UTM33S`` coordinate reference system.
-#. Save the map by clicking on the |fileSave| :sup:`Save Project`
-   toolbar button, or use the
+#. Click :guilabel:`OK`
+#. Save the project file by clicking on the |fileSave|
+   :sup:`Save Project` toolbar button, or use the
    :menuselection:`File --> Save As...` menu item.
-#. Save the project file in a new directory called :file:`Rasterprac`,
-   that you should create somewhere on your computer.
+
+   Save it in a new directory called :file:`Rasterprac`, that you
+   should create somewhere on your computer.
    You will save whatever layers you create in this directory as well.
    Save the project as :file:`your_name_fynbos.qgs`.
 
@@ -80,18 +80,18 @@ For vectors...
    button in the *Data Source Manager Toolbar*, and enable the
    |addOgrLayer| :guilabel:`Vector` tab in the dialog that appears, or
    use the :menuselection:`Layer --> Add Layer -->` |addOgrLayer|
-   :menuselection:`Add Vector Layer...` menu item.
+   :menuselection:`Add Vector Layer...` menu item
 #. Ensure that |radioButtonOn| :guilabel:`File` is selected
 #. Click on the :guilabel:`...` button to browse for
    vector dataset(s)
 #. In the dialog that appears, open the
-   :file:`exercise_data/more_analysis/streets` directory
+   :file:`exercise_data/more_analysis/Streets` directory
 #. Select the file :file:`Street_Names_UTM33S.shp`
 #. Click :guilabel:`Open`.
 
    The dialog closes and shows the original dialog, with the file
-   path specified in the text field next to the
-   :guilabel:`Vector dataset(s)` button.
+   path specified in the text field next to
+   :guilabel:`Vector dataset(s)`.
    This allows you to ensure that the correct file is selected.
    It is also possible to enter the file path in this field manually,
    should you wish to do so.
@@ -107,7 +107,7 @@ For vectors...
       it, pressing the :kbd:`Enter` key when done
 #. Repeat the vector adding process, but this time select the
    :file:`Generalised_Zoning_Dissolve_UTM33S.shp` file in the
-   :file:`zoning` directory.
+   :file:`Zoning` directory.
 #. Rename it to ``Zoning``.
 
 For rasters...
@@ -117,13 +117,12 @@ For rasters...
    button and enable the |addRasterLayer| :guilabel:`Raster` tab in
    the dialog that appears, or use the
    :menuselection:`Layer --> Add Layer -->` |addRasterLayer|
-   :menuselection:`Add Raster Layer...` menu item.
+   :menuselection:`Add Raster Layer...` menu item
 #. Ensure that |radioButtonOn| :guilabel:`File` is selected
 #. Navigate to the appropriate file, select it, and click
    :guilabel:`Open`
-#. Do this for each of the two raster files.
-   The files you want are :file:`DEM/SRTM.tif` and
-   :file:`rainfall/reprojected/rainfall.tif`.
+#. Do this for each of the following two raster files,
+   :file:`DEM/SRTM.tif` and :file:`rainfall/reprojected/rainfall.tif`
 #. Rename the SRTM raster to ``DEM`` and the rainfall raster to
    ``Rainfall`` (with an initial capital)
 
@@ -144,7 +143,7 @@ Find the Correct Districts
 ----------------------------------------------------------------------
 
 #. Load the vector layer
-   :file:`admin_boundaries/western_cape_utm33s.shp` into your map.
+   :file:`admin_boundaries/Western_Cape_UTM33S.shp` into your map.
 #. Rename it to ``Districts``.
 #. Right-click on the ``Districts`` layer in the
    :guilabel:`Layers` panel.
@@ -163,23 +162,22 @@ Find the Correct Districts
    * ``Wynberg``
 
    #. In the :guilabel:`Fields` list, double-click on the
-      ``NAME_2`` field.
-      It appears in the :guilabel:`SQL where clause` text field below.
+      ``NAME_2`` field to make it appear in the
+      :guilabel:`SQL where clause` text field below
    #. Click the :guilabel:`=` button; an ``=`` sign is appended to the
-      SQL query.
+      SQL query
    #. Click the :guilabel:`All` button below the (currently empty)
       :guilabel:`Values` list.
+
       After a short delay, this will populate the :guilabel:`Values`
-      list with the values of the selected field
-      (``NAME_2``).
+      list with the values of the selected field (``NAME_2``).
    #. Double-click the value ``Bellville`` in the
-      :guilabel:`Values` list.
-      As before, this will be appended to the SQL query.
+      :guilabel:`Values` list to append it to the SQL query.
 
       In order to select more than one district, you'll need to use
       the *OR* boolean operator.
    #. Click the :guilabel:`OR` button and it will be appended to the
-      SQL query.
+      SQL query
    #. Using a process similar to the above, add the following to the
       existing SQL query::
 
@@ -202,6 +200,7 @@ Find the Correct Districts
                         'Mitchells Plain', 'Simon Town', 'Wynberg')
 
    #. Click :guilabel:`OK`.
+
       The districts shown in your map are now limited to those in the
       list above.
 
@@ -219,25 +218,25 @@ this area.
 #. In the :guilabel:`Input layer` dropdown list, select the ``DEM``
    layer
 #. In the :guilabel:`Mask layer` dropdown list, select the
-   :guilabel:`Districts` layer
+   ``Districts`` layer
 #. Scroll down and specify an output location in the
    :guilabel:`Clipped (mask)` text field by clicking the
    :guilabel:`...` button and choosing :guilabel:`Save to File...`
    
-   #. Navigate to your :file:`Rasterprac` directory
+   #. Navigate to the :file:`Rasterprac` directory
    #. Enter a file name - ``DEM_clipped.tif``
    #. Save
 
 #. Make sure that |checkbox|
    :guilabel:`Open output file after running algorithm` is checked
 #. Click :guilabel:`Run`
-#. After the clipping operation has completed, leave the
+
+   After the clipping operation has completed, leave the
    :guilabel:`Clip Raster by Extent` dialog open, to be able to reuse
    the clipping area
 #. Select the ``Rainfall`` raster layer in the :guilabel:`Input layer`
    dropdown list and save your output as :file:`Rainfall_clipped.tif`
 #. Do not change any other options.
-   Do not change any other options.
    Leave everything the same and click :guilabel:`Run`.
 #. After the second clipping operation has completed, you may close
    the :guilabel:`Clip Raster by Mask Layer` dialog
@@ -246,17 +245,17 @@ this area.
 Align the rasters
 ......................................................................
 
-For our analysis we need the rasters to have the same CRS and be
-aligned.
+For our analysis we need the rasters to have the same CRS and they
+have to be aligned.
 
-First we change the resolution of our rainfall data to 100 meters
+First we change the resolution of our rainfall data to 30 meters
 (pixel size):
 
 #. Right-click on the ``Rainfall_clipped`` layer and select
    :menuselection:`Export--> Save As...` in the context menu.
 #. Set the :guilabel:`Horizontal` and :guilabel:`Vertical` resolution
-   to 100 (meters).
-#. Save the file as :file:`Rainfall100.tif` in
+   to ``30`` (meters).
+#. Save the file as :file:`Rainfall30.tif` in
    :file:`rainfall/reprojected` (:guilabel:`File name`)`
 
 Then we align the DEM:
@@ -266,10 +265,10 @@ Then we align the DEM:
 #. For :guilabel:`CRS`, choose *WGS 84 / UTM zone 33S* (EPSG code
    ``32733``)
 #. Set the :guilabel:`Horizontal` and :guilabel:`Vertical` resolution
-   to 100 (meters)
+   to 30 (meters)
 #. Under :guilabel:`Extent`, click on
-   :guilabel:`Calculate from Layer` and choose ``rainfall100``
-#. Save the file as file:`DEM100.tif` in file:`DEM/reprojected`
+   :guilabel:`Calculate from Layer` and choose ``rainfall30``
+#. Save the file as :file:`DEM30.tif` in :file:`DEM/reprojected`
    (:guilabel:`File name`)
 
 In order to properly see what's going on, the symbology for the
@@ -299,22 +298,23 @@ Changing the symbology of raster layers
 Raster layer symbology is somewhat different.
 
 #. Open the :guilabel:`Properties` dialog for the
-   :guilabel:`Rainfall100` raster layer
+   :guilabel:`Rainfall30` raster layer
 #. Switch to the :guilabel:`Symbology` tab.
    You'll notice that this dialog is very different from the version
    used for vector layers.
-#. Expand "Min/Max Value Settings"
+#. Expand :guilabel:`Min/Max Value Settings`
 #. Ensure that the button :guilabel:`Mean +/- standard deviation` is
-   selected.
-#. Make sure that the value in the associated box is ``2.00``.
+   selected
+#. Make sure that the value in the associated box is ``2.00``
 #. For :guilabel:`Contrast enhancement`, make sure it says
    :guilabel:`Stretch to MinMax`
 #. For :guilabel:`Color gradient`, change it to
-   :guilabel:`White to Black`.
+   :guilabel:`White to Black`
 #. Click :guilabel:`OK`
-   The ``Rainfall_clipped`` raster, if visible, should change colors,
-   allowing you to see different brightness values for each pixel.
-#. Repeat this process for the ``DEM100`` layer, but set the standard
+
+   The ``Rainfall30`` raster, if visible, should change colors,
+   allowing you to see different brightness values for each pixel
+#. Repeat this process for the ``DEM30`` layer, but set the standard
    deviations used for stretching to ``4.00``
 
 Clean up the map
@@ -341,7 +341,7 @@ In order to create the hillshade, you will need to use an algorithm
 that was written for this purpose.
 
 #. In the :guilabel:`Layers` panel, ensure that
-   ``DEM100`` is the active layer (i.e., it is highlighted by
+   ``DEM30`` is the active layer (i.e., it is highlighted by
    having been clicked on)
 #. Click on the :menuselection:`Raster --> Analysis --> Hillshade...`
    menu item to open the :guilabel:`Hillshade` dialog
@@ -364,14 +364,14 @@ The new ``hillshade`` layer has appeared in the
 #. Note the effect when the transparent hillshade is superimposed over
    the clipped DEM.
    You may have to change the order of your layers, or click off the
-   ``rainfall_clipped`` layer in order to see the effect.
+   ``rainfall30`` layer in order to see the effect.
 
 Slope
 ----------------------------------------------------------------------
 
 #. Click on the :menuselection:`Raster --> Analysis --> Slope...`
    menu item to open the :guilabel:`Slope` algorithm dialog
-#. Select ``DEM100`` as :guilabel:`Input layer`
+#. Select ``DEM30`` as :guilabel:`Input layer`
 #. Check |checkbox|
    :guilabel:`Slope expressed as percent instead of degrees`.
    Slope can be expressed in different units (percent or degrees).
@@ -448,9 +448,7 @@ morning sunlight).
 Find the correct rainfall (greater than ``1000`` mm) the same way.
 Use the following expression:
 
-  rainfall100@1 > 1000
-
-    (rainfall_clipped@1 < 1000) = 0
+  rainfall30@1 > 1000
 
 Now that you have all three criteria each in separate rasters, you
 need to combine them to see which areas satisfy all the criteria.
@@ -487,7 +485,7 @@ Save the project.
 The next criterion that needs to be satisfied is that the area must be 
 ``250`` m away from urban areas.
 We will satisfy this requirement by ensuring that the areas we compute
-are ``250`` m or more from the edge of a rural area. 
+are inside rural areas, and are ``250`` m or more from the edge of the area. 
 Hence, we need to find all rural areas first.
 
 Finding rural areas
@@ -510,14 +508,14 @@ Finding rural areas
    The query should return one feature.
 
 You should see the rural polygons from the ``Zoning`` layer.
-You will need to save these to a new layer file.
+You will need to save these.
 
 #. In the right-click menu for ``Zoning``, select
    :menuselection:`Export --> Save Features As...`.
 #. Save your layer under the :file:`Rasterprac` directory
 #. Name the output file :file:`rural.shp`
 #. Click :guilabel:`OK`
-#. Save the project.
+#. Save the project
 
 Now you need to exclude the areas that are within ``250m`` from the
 edge of the rural areas.
@@ -530,7 +528,7 @@ Creating a negative buffer
    :menuselection:`Vector --> Geoprocessing Tools --> Buffer...`
 #. In the dialog that appears, select the ``rural`` layer as
    your input vector layer (:guilabel:`Selected features only` should
-   not be checked).
+   not be checked)
 #. Set :guilabel:`Distance` to ``-250``.
    The negative value means that the buffer will be an internal
    buffer.
@@ -551,7 +549,7 @@ Creating a negative buffer
 #. Save the project
 
 
-Now, you need to combine your ``rural_buffer`` vector layer with the
+Now you need to combine your ``rural_buffer`` vector layer with the
 ``aspect_slope_rainfall`` raster.
 To combine them, we will need to change the data format of one of the
 layers. In this case, you will vectorize the raster, since vector
@@ -564,6 +562,8 @@ Vectorizing the raster
    :menuselection:`Raster --> Conversion --> Polygonize (Raster to  Vector)...`
 #. Select the :file:`aspect_slope_rainfall` raster  as
    :guilabel:`Input layer`
+#. Set :guilabel:`Name of the field to create` to ``suitable`` (the
+   default field name is ``DN`` - Digital number data)
 #. Save the output.
    Under :guilabel:`Vectorized`, select :guilabel:`Save file as`.
    Set the location to :file:`Rasterprac` and name the file
@@ -574,13 +574,14 @@ Vectorizing the raster
 #. Close the dialog when processing is complete
 
 All areas of the raster have been vectorized, so you need to select
-only the areas that have a value of ``1``.
+only the areas that have a value of ``1`` in the ``suitable`` field.
+(Digital Number.
 
 #. Open the :guilabel:`Query Builder` dialog (right-click - 
    :guilabel:`Filter...`) for the new vector layer
 #. Build this query::
 
-     "DN" = 1
+     "suitable" = 1
 
 #. Click :guilabel:`OK`
 #. After you are sure the query is complete (and only the areas that
@@ -604,7 +605,7 @@ Fixing geometry
 ----------------------------------------------------------------------
 
 #. In the :guilabel:`Processing Toolbox`, search for "Fix geometries",
-   and open the dialog box
+   and :guilabel:`Execute...` it
 #. For the :guilabel:`Input layer`, select ``aspect_slope_rainfall_1``
 #. Under :guilabel:`Fixed geometries`, select
    :guilabel:`Save file as`, and save the output to :file:`Rasterprac`
@@ -615,7 +616,7 @@ Fixing geometry
 #. Close the dialog when processing is complete
 
 Now that you have vectorized the raster, and fixed the resulting
-geometry, you can combine the aspect, slope, and rainfall criteria,
+geometry, you can combine the aspect, slope, and rainfall criteria
 with the distance from human settlement criteria by finding the
 intersection of the ``fixed_aspect_slope_rainfall`` layer and the
 ``rural_buffer`` layer.
@@ -625,12 +626,12 @@ Determining the Intersection of vectors
 
 #. Click the menu item
    :menuselection:`Vector --> Geoprocessing Tools -->
-   Intersection`
-#. In the dialog that appears, for your Input layer, select the
-   ``rural_buffer`` layer
-#. For the Overlay layer Select the
+   Intersection...`
+#. In the dialog that appears, select the ``rural_buffer`` layer as
+   :guilabel:`Input layer`
+#. For the :guilabel:`Overlay layer`, select the
    ``fixed_aspect_slope_rainfall`` layer
-#. In :guilabel:`Insersection`, place the output file in the
+#. In :guilabel:`Intersection`, place the output file in the
    :file:`Rasterprac` directory
 #. Name the output file :file:`rural_aspect_slope_rainfall.shp`
 #. Click :guilabel:`Save`
@@ -651,10 +652,10 @@ Calculating the area for each polygon
 
 #. Open the new vector layer's right-click menu
 #. Select :guilabel:`Open attribute table`
-#. Click the :guilabel:`Toggle editing mode` button in the top left
-   corner of the table, or press :kbd:`Ctrl+e`
-#. Click the :guilabel:`Open field calculator` button in the toolbar
-   along the top of the table, or press :kbd:`Ctrl+i`
+#. Click the |toggleEditing| :sup:`Toggle editing` button in the top
+   left corner of the table, or press :kbd:`Ctrl+e`
+#. Click the |calculateField| :sup:`Open field calculator` button in
+   the toolbar along the top of the table, or press :kbd:`Ctrl+i`
 #. In the dialog that appears, make sure that |checkbox|
    :guilabel:`Create new field` is checked, and set the
    :guilabel:`Output field name` to ``area``
@@ -676,8 +677,8 @@ Calculating the area for each polygon
 
    This ensures that each polygon has a unique ID for identification
    purposes.
-#. Click :guilabel:`Toggle editing mode` again, and save your edits if
-   prompted to do so
+#. Click |toggleEditing| :sup:`Toggle editing` again, and save your
+   edits if prompted to do so
 
 Selecting areas of a given size
 ----------------------------------------------------------------------
@@ -707,12 +708,12 @@ Digitize the University of Cape Town
    (``Project CRS:EPSG:32733 - WGS 84 / UTM zone 33S``)
 #. Finish creating the new layer (click :guilabel:`OK`)
 #. Hide all layers except the new ``university`` layer and the
-   ``streets`` layer.
+   ``Streets`` layer.
 #. Add a background map (OSM): 
    
-   #. Go to the Browser panel and navigate to
-      :menuselection:XYZ Tiles --> OpenStreetMap`
-   #. Drag and drop the `OpenStreetMap` entry to the bottom of the
+   #. Go to the :guilabel:`Browser` panel and navigate to
+      :menuselection:`XYZ Tiles --> OpenStreetMap`
+   #. Drag and drop the ``OpenStreetMap`` entry to the bottom of the
       :guilabel:`Layers` panel
 
    Using your internet browser, look up the location of the University
@@ -736,7 +737,7 @@ Digitize the University of Cape Town
    should be nearby the |toggleEditing| :sup:`Toggle editing` button
 #. With the :guilabel:`Add feature` tool activated, left-click on
    your best estimate of the location of the University of Cape Town
-#. Allow the id to be Autogenerated
+#. Supply an arbitrary integer when asked for the ``id``
 #. Click :guilabel:`OK`
 #. Click the |saveEdits| :sup:`Save Layer Edits` button
 #. Click the :guilabel:`Toggle editing` button to stop your editing
@@ -776,7 +777,7 @@ This is the final answer to the research question.
 
 For your submission, create a fully labeled layout that includes the
 semi-transparent hillshade layer over an appealing raster of your
-choice (such as the ``DEM`` or the ``slope`` raster,
+choice (such as the DEM or the slope raster,
 for example).
 Also include the university and the ``suitable_areas`` layer, with
 the four suitable areas that are closest to the university
@@ -796,6 +797,8 @@ map.
 .. |addOgrLayer| image:: /static/common/mActionAddOgrLayer.png
    :width: 1.0em
 .. |addRasterLayer| image:: /static/common/mActionAddRasterLayer.png
+   :width: 1.0em
+.. |calculateField| image:: /static/common/mActionCalculateField.png
    :width: 1.0em
 .. |capturePoint| image:: /static/common/mActionCapturePoint.png
    :width: 1.0em
