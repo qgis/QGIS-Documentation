@@ -3302,6 +3302,8 @@ This makes it possible to quickly flag gaps as allowed.
    :width: 2em
 .. |actionRun| image:: /static/common/mAction.png
    :width: 1.5em
+.. |addOgrLayer| image:: /static/common/mActionAddOgrLayer.png
+   :width: 1.5em
 .. |arrowDown| image:: /static/common/mActionArrowDown.png
    :width: 1.5em
 .. |arrowUp| image:: /static/common/mActionArrowUp.png
