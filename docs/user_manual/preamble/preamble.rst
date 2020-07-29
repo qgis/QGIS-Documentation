@@ -56,8 +56,8 @@ A copy of the license is included in Appendix :ref:`gfl_appendix`.
 
 .. _qgis.documentation.whatsnew:
 
-What's new in QGIS |version|
-----------------------------
+What is new in QGIS |version|
+-----------------------------
 
 This release of QGIS includes hundreds of bug fixes and many new
 features and enhancements.
