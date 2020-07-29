@@ -1067,7 +1067,7 @@ But you can create as many user profiles as you want:
    configuration. You can then set your custom configurations.
 
 If you have more than one profile in your QGIS installation, the name of the
-active profile is shown in the application title bar between square brackets:
+active profile is shown in the application title bar between square brackets.
 
 As each user profile contains isolated settings, plugins and history they can be great for
 different workflows, demos, users of the same machine, or testing settings, etc.
