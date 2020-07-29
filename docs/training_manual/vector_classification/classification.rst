@@ -394,7 +394,7 @@ QGIS and into a format we can print out, or make into an image or PDF? That's th
 .. |calculateField| image:: /static/common/mActionCalculateField.png
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
-   :width: 1.5em
+   :width: 1.3em
 .. |expression| image:: /static/common/mIconExpression.png
    :width: 1.5em
 .. |hard| image:: /static/common/hard.png

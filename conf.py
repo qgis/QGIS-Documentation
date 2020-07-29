@@ -250,6 +250,9 @@ latex_elements = {
     \\newunicodechar{≥}{$\geq$}
     \\newunicodechar{≤}{$\leq$}
     \\newunicodechar{π}{$\pi$}
+    \\newunicodechar{㎡}{$m^2$}
+    \\newunicodechar{′}{\ensuremath{^{\prime}}}
+    \\newunicodechar{″}{\ensuremath{^{\prime\prime}}}
     \\newunicodechar{​}{ }'''
 }
 
