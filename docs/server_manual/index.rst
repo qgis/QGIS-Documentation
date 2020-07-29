@@ -3,9 +3,9 @@
 .. _`label_qgisserver`:
 
 
-***********************
-QGIS as OGC Data Server
-***********************
+************************
+QGIS Server Guide/Manual
+************************
 
 QGIS Server is an open source WMS 1.3, WFS 1.0.0, WFS 1.1.0 and WCS 1.1.1
 implementation that, in addition, implements advanced cartographic features for

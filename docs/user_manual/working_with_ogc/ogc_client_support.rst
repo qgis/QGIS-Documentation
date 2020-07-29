@@ -1,8 +1,8 @@
 .. _working_with_ogc:
 
-***********************
-QGIS as OGC Data Client
-***********************
+*********************
+Working with OGC data
+*********************
 
 .. only:: html
 
