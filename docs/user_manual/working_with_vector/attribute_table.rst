@@ -680,25 +680,30 @@ for editing and QGIS takes care of the setup. It works with different
 providers (so you can also use it with shape and csv files) and all you have
 to do is to tell QGIS the relations between your tables.
 
-Defining 1-N relations (Relation Manager)
-.........................................
+Defining 1-N relations
+......................
 
 The first thing we are going to do is to let QGIS know about the relations
-between the layers. This is done in :menuselection:`Project --> Project Properties...`.
-Open the :guilabel:`Relations` tab and click on :guilabel:`Add Relation`.
+between the layers. This is done in :menuselection:`Project --> Properties...`.
+Open the :guilabel:`Relations` tab and click on |signPlus| :guilabel:`Add Relation`.
 
 * **Name** is going to be used as a title. It should be a human readable string,
   describing, what the relation is used for. We will just call say **airport_relation**
   in this case.
 * **Referenced Layer (Parent)** also considered as parent layer, is the one with
-  the primary key, pointed to, so here it is the ``regions`` layer. You can define
-  the primary key of the referenced layer, so it is ``ID``. For this layer
-  you can define multiple referenced fields by using the |signPlus| button.
+  the primary key, pointed to, so here it is the ``regions`` layer. You need to define
+  the primary key of the referenced layer, so it is ``ID``.
 * **Referencing Layer (Child)** also considered as child layer, is the one with
   the foreign key field on it. In our case, this is the ``airports`` layer. For
   this layer you need to add a referencing field which points to the other
-  layer, so this is ``fk_region``. When using multiple field relations you can
-  add another referencing field by using the |signPlus| button.
+  layer, so this is ``fk_region``.
+
+  .. note:: Sometimes, you need more than a single field to uniquely identify
+   features in a layer. Creating a relation with such a layer requires
+   a **composite key**, ie more than a single pair of matching
+   fields. Use the |signPlus| :sup:`Add new field pair as part of a composite
+   foreign key` button to add as many pairs as necessary.
+
 * **Id** will be used for internal purposes and has to be unique. You may need
   it to build :ref:`custom forms <customize_form>`. If
   you leave it empty, one will be generated for you but you can assign one
@@ -714,7 +719,12 @@ Open the :guilabel:`Relations` tab and click on :guilabel:`Add Relation`.
 .. figure:: img/relations2.png
    :align: center
 
-   Relation Manager
+   Adding a relation between regions and airports layers
+
+From the :guilabel:`Relations` tab, you can also press the |signPlus|
+:guilabel:`Discover Relation` button to fetch the relations available from
+the providers of the loaded layers. This is possible for layers stored in
+data providers like PostgreSQL or SpatiaLite.
 
 .. index:: Feature form, Linked forms, Embedded form
 
