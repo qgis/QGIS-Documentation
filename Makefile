@@ -65,9 +65,12 @@ pdf: latex
 	# notice that platex compiler needs an extra step to convert dvi to PDF
 	# using the dvipdfmx command
 	cd $(BUILDDIR)/latex/$(LANG); \
-	$(LATEXCOMPILER) -shell-escape QGISUserGuide.tex; \
-	$(LATEXCOMPILER) -shell-escape QGISUserGuide.tex; \
-	if [ "$(LATEXCOMPILER)" != "xelatex" ]; then dvipdfmx QGISUserGuide.dvi; fi; \
+	$(LATEXCOMPILER) -shell-escape QGISDesktopUserGuide.tex; \
+	$(LATEXCOMPILER) -shell-escape QGISDesktopUserGuide.tex; \
+	if [ "$(LATEXCOMPILER)" != "xelatex" ]; then dvipdfmx QGISDesktopUserGuide.dvi; fi; \
+	$(LATEXCOMPILER) -shell-escape QGISServerUserGuide.tex; \
+	$(LATEXCOMPILER) -shell-escape QGISServerUserGuide.tex; \
+	if [ "$(LATEXCOMPILER)" != "xelatex" ]; then dvipdfmx QGISServerUserGuide.dvi; fi; \
 	$(LATEXCOMPILER) -shell-escape PyQGISDeveloperCookbook.tex; \
 	$(LATEXCOMPILER) -shell-escape PyQGISDeveloperCookbook.tex; \
 	if [ "$(LATEXCOMPILER)" != "xelatex" ]; then dvipdfmx PyQGISDeveloperCookbook.dvi; fi; \
@@ -80,7 +83,8 @@ pdf: latex
 
 	# copy and rename PDF files to the pdf folder
 	mkdir -p $(BUILDDIR)/pdf/$(LANG);
-	mv $(BUILDDIR)/latex/$(LANG)/QGISUserGuide.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-UserGuide-$(LANG).pdf;
+	mv $(BUILDDIR)/latex/$(LANG)/QGISDesktopUserGuide.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-DesktopUserGuide-$(LANG).pdf;
+	mv $(BUILDDIR)/latex/$(LANG)/QGISServerUserGuide.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-ServerUserGuide-$(LANG).pdf;
 	mv $(BUILDDIR)/latex/$(LANG)/PyQGISDeveloperCookbook.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-PyQGISDeveloperCookbook-$(LANG).pdf;
 	mv $(BUILDDIR)/latex/$(LANG)/QGISTrainingManual.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-TrainingManual-$(LANG).pdf;
 	mv $(BUILDDIR)/latex/$(LANG)/QGISDocumentationGuidelines.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-DocumentationGuidelines-$(LANG).pdf;
