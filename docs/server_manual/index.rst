@@ -1,10 +1,10 @@
-.. index:: QGIS Server, WMS Server, WFS Server, WCS Server
-
-.. _`label_qgisserver`:
+.. _QGIS-Server-manual:
 
 ========================
 QGIS Server Guide/Manual
 ========================
+
+.. index:: QGIS Server, WMS Server, WFS Server, WCS Server
 
 .. toctree::
   :maxdepth: 2

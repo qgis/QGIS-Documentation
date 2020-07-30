@@ -564,7 +564,7 @@ details.
 .. tip:: **QGIS WMS Mapserver**
 
    Since Version 1.7.0, QGIS has its own implementation of a WMS 1.3.0 Mapserver.
-   Read more about this in chapter :ref:`label_qgisserver`.
+   Read more about this in :ref:`QGIS-Server-manual`.
 
 .. _`ogc-wcs`:
 
