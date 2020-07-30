@@ -10,7 +10,7 @@ Please have a look into one of the documents below.
 .. toctree::
    :maxdepth: 2
 
-   QGIS Desktop Guide/Manual (QGIS Testing) <user_manual/index>
+   QGIS Desktop User Guide/Manual (QGIS Testing) <user_manual/index>
    QGIS Server Guide/Manual (QGIS Testing) <server_manual/index>
    Documentation Guidelines <documentation_guidelines/index>
    PyQGIS Cookbook (QGIS Testing) <pyqgis_developer_cookbook/index>
