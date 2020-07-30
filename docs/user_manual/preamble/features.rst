@@ -118,7 +118,7 @@ Publish maps on the Internet
 
 QGIS can be used as a WMS, WMTS, WMS-C or WFS and WFS-T client (see
 section :ref:`working_with_ogc`), and as a WMS, WCS or WFS server (see
-section :ref:`label_qgisserver`). Additionally, you can publish your data on
+the :ref:`label_qgisserver`). Additionally, you can publish your data on
 the Internet using a webserver with QGIS Server, UMN MapServer or GeoServer installed.
 
 Extend QGIS functionality through plugins
