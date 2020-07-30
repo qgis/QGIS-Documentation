@@ -31,6 +31,8 @@ QGIS Server and Python
 Introduction
 ============
 
+For an introduction to what QGIS Server is (see the :ref:`QGIS-Server-manual`).
+
 QGIS Server is three different things:
 
 1. QGIS Server library: a library that provides an API for creating OGC web services
