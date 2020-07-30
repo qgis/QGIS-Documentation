@@ -539,9 +539,9 @@ labels placement can result in labels being placed over unrelated features.
 An obstacle is a feature over which QGIS avoids placing other features' labels
 or diagrams. This can be controlled from the :guilabel:`Obstacles` section:
 
-#. Activate the |checkbox| :guilabel:`Discourage labels from covering features`
+#. Activate the |checkbox| :guilabel:`Discourage labels and diagrams from covering features`
    option to decide whether features of the layer should act as obstacles for
-   any label (including labels from other features in the same layer).
+   any label and diagram (including items from other features in the same layer).
 
    Instead of the whole layer, you can select a subset of features to use as
    obstacles, using the |dataDefined| :sup:`data-defined override` control next
