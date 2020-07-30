@@ -41,7 +41,7 @@ specifications as a client, being **SFS** (through support of the PostgreSQL
 / PostGIS data provider, see section :ref:`label_postgis`).
 
 Note that you can also share your data through these OGC Services using a webserver
-with QGIS Server (see the :ref:`QGIS-Server-manual`), UMN MapServer or GeoServer installed.
+with :ref:`QGIS Server <QGIS-Server-manual>`, UMN MapServer or GeoServer installed.
 
 .. _`ogc-wms`:
 
