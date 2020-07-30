@@ -1739,9 +1739,6 @@ different options:
 * :guilabel:`Always Show`: selects specific diagrams to always render, even when
   they overlap other diagrams or map labels;
 * setting the :ref:`Scale dependent visibility <label_scaledepend>`;
-* :guilabel:`Discourage diagrams and labels from covering features`: defines
-  features to use as obstacles, ie QGIS will try to not place diagrams nor labels
-  over these features.
 
 .. _figure_diagrams_appearance:
 
@@ -1818,8 +1815,11 @@ of each diagram, ie if there are different diagrams or labels candidates for the
 same location, the item with the higher priority will be displayed and the
 others could be left out.
 
-The priority rank is also used to evaluate whether a diagram could be omitted
-due to a greater weighted :ref:`obstacle feature <labels_obstacles>`.
+:guilabel:`Discourage diagrams and labels from covering features` defines
+features to use as :ref:`obstacles <labels_obstacles>`, ie QGIS will try to not
+place diagrams nor labels over these features.
+The priority rank is then used to evaluate whether a diagram could be omitted
+due to a greater weighted obstacle feature.
 
 .. _figure_diagrams_placement:
 
