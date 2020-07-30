@@ -30,7 +30,7 @@ representation:
 .. figure:: img/greyscale_dem.png
    :align: center
 
-QGIS has automatically applied a stretch to the pixel values og the
+QGIS has automatically applied a stretch to the pixel values of the
 image for visualization purposes, and we will learn more about how
 this works as we continue.
 
@@ -151,7 +151,7 @@ To set these pixels as transparent, go to
   button is more useful
 * Click on the |contextHelp| :sup:`Add values from display` button.
   The dialog disappears, and you can interact with the map.
-* Click on on the homogeneous color in a corner of the DEM
+* Click on the homogeneous color in a corner of the DEM
 * You will see that the transparency table will be filled with the
   clicked values:
 
