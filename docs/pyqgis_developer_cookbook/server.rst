@@ -31,7 +31,7 @@ QGIS Server and Python
 Introduction
 ============
 
-For an introduction to what QGIS Server is (see the :ref:`QGIS-Server-manual`).
+For an introduction to what QGIS Server is, read the :ref:`QGIS-Server-manual`.
 
 QGIS Server is three different things:
 

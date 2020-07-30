@@ -3166,7 +3166,7 @@ layout legend <layout_legend_item>`. These options include:
 QGIS Server Properties
 ======================
 
-For an introduction to what QGIS Server is (see the :ref:`QGIS-Server-manual`).
+For an introduction to what QGIS Server is, read the :ref:`QGIS-Server-manual`.
 
 |overlay| The :guilabel:`QGIS Server` tab consists of :guilabel:`Description`,
 :guilabel:`Attribution`, :guilabel:`MetadataURL`, and :guilabel:`LegendUrl` sections.

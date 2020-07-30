@@ -8,7 +8,7 @@ Module contributed by Tudor Bărăscu.
 
 In this module, we'll cover how to install and use QGIS Server.
 
-For an introduction to what QGIS Server is (see the :ref:`QGIS-Server-manual`)
+For an introduction to what QGIS Server is, read the :ref:`QGIS-Server-manual`.
 
 .. toctree::
    :maxdepth: 2
