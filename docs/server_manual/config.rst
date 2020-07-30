@@ -186,6 +186,27 @@ The default behavior can be overridden by setting this variable to ``1`` or ``tr
 In this case, "bad" layers will just be ignored, and the project will be considered
 valid and available.
 
+QGIS_SERVER_WMS_MAX_HEIGHT / QGIS_SERVER_WMS_MAX_WIDTH
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Maximum height/width for a WMS request. The most conservative between this and the project one is used
+
+Default value is ``-1``, meaning that there is no maximum set.
+
+QGIS_SERVER_API_RESOURCES_DIRECTORY
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^	
+
+Base directory for all WFS3 static resources (HTML templates, CSS, JS etc.)
+	
+The default value depends on packaging.
+
+.. _`server_wfs3_max_limit_settings`:
+
+QGIS_SERVER_API_WFS3_MAX_LIMIT
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Maximum value for ``limit`` in a features request. The default value is ``10000``
+
 
 Settings summary
 ================
