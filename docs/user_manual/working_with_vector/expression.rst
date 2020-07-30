@@ -50,6 +50,10 @@ The Expression builder dialog offers access to the:
 
     "total_pop" / "area_km2"
 
+* Label or categorize features based on their area::
+
+    CASE WHEN $area > 10 000 THEN 'Larger' ELSE 'Smaller' END
+
 * Update the field "density_level" with categories according to the "pop_density" values::
 
     CASE WHEN "pop_density" < 50 THEN 'Low population density'
@@ -70,6 +74,23 @@ The Expression builder dialog offers access to the:
 
   Likewise, the previous expression could also be used to define which features
   should be labeled or shown in the map.
+
+* Render a different symbol (type) for the layer, using the geometry generator::
+
+    point_on_surface( $geometry )
+
+* Given a point feature, generate a closed line (using ``make_line``) around the
+  point's geometry::
+
+    make_line(
+      -- using an array of points placed around the original
+      array_foreach(
+        -- list of angles for placing the projected points (every 90°)
+        array:=generate_series( 0, 360, 90 ),
+        -- translate the point 20 units in the given direction (angle)
+        expression:=project( $geometry, distance:=20, azimuth:=radians( @element ) )
+      )
+    )
 
 Using expressions offers you a lot of possibilities.
 
@@ -217,29 +238,6 @@ This group contains functions which aggregate values over layers and fields.
 .. include:: expression_help/Aggregates.rst
    :start-after: :orphan:
 
-**Examples:**
-
-* Return the maximum of the "passengers" field from features in the layer
-  grouped by "station_class" field::
-
-   maximum("passengers", group_by:="station_class")
-
-* Calculate the total number of passengers for the stations inside the current
-  atlas feature::
-
-   aggregate('rail_stations','sum',"passengers",
-     intersects(@atlas_geometry, $geometry))
-
-* Return the mean of the "field_from_related_table" field for all matching
-  child features using the 'my_relation' relation from the layer::
-
-   relation_aggregate('my_relation', 'mean', "field_from_related_table")
-
-  or::
-
-   relation_aggregate(relation:='my_relation', aggregate := 'mean',
-     expression := "field_from_related_table")
-
 
 .. index:: Array, List data structure
 .. _array_functions:
@@ -313,6 +311,23 @@ Date and Time Functions
 ------------------------
 
 This group contains functions for handling date and time data.
+This group shares several functions with the :ref:`conversion_functions` (
+to_date, to_time, to_datetime, to_interval) and :ref:`string_functions`
+(format_date) groups.
+
+.. note:: **Storing date, datetime and intervals on fields**
+
+   The ability to store *date*, *time* and *datetime* values directly on
+   fields may depend on the data source's provider (e.g., Shapefile accepts
+   *date* format, but not *datetime* or *time* format). The following are some
+   suggestions to overcome this limitation:
+
+   * *date*, *Datetime* and *time* can be stored in text type fields after
+     using the ``to_format()`` function.
+
+   * *Intervals* can be stored in integer or decimal type fields after using
+     one of the date extraction functions (e.g., ``day()`` to get the interval
+     expressed in days)
 
 .. contents::
    :local:
@@ -321,18 +336,8 @@ This group contains functions for handling date and time data.
 .. include:: expression_help/Date_and_Time.rst
    :start-after: :orphan:
 
-This group shares several functions with the :ref:`conversion_functions` (
-to_date, to_time, to_datetime, to_interval) and :ref:`string_functions`
-(format_date) groups.
 
 **Some examples:**
-
-* Get today's month and year in the "month_number/year" format:
-
-  .. code-block:: sql
-
-     format_date(now(),'MM/yyyy')
-     -- Returns '03/2017'
 
 Besides these functions, subtracting dates, datetimes or times using the
 ``-`` (minus) operator will return an interval.
@@ -351,7 +356,7 @@ Adding or subtracting an interval to dates, datetimes or times, using the
 
   .. code-block:: sql
 
-     to_datetime('2017-09-29 12:00:00') - to_datetime(now())
+     to_datetime('2017-09-29 12:00:00') - now()
      -- Returns <interval: 202.49 days>
 
 * Get the datetime of 100 days from now:
@@ -360,20 +365,6 @@ Adding or subtracting an interval to dates, datetimes or times, using the
 
      now() + to_interval('100 days')
      -- Returns <datetime: 2017-06-18 01:00:00>
-
-.. note:: **Storing date and datetime and intervals on fields**
-
-   The ability to store *date*, *time* and *datetime* values directly on
-   fields may depend on the data source's provider (e.g., Shapefile accepts
-   *date* format, but not *datetime* or *time* format). The following are some
-   suggestions to overcome this limitation:
-
-   * *date*, *Datetime* and *time* can be stored in text type fields after
-     using the ``to_format()`` function.
-
-   * *Intervals* can be stored in integer or decimal type fields after using
-     one of the date extraction functions (e.g., ``day()`` to get the interval
-     expressed in days)
 
 .. _fields_values:
 
@@ -463,34 +454,6 @@ This group contains functions that operate on geometry objects
 .. include:: expression_help/GeometryGroup.rst
    :start-after: :orphan:
 
-**Some examples:**
-
-* Return the X coordinate of the current feature's centroid::
-
-    x( $geometry )
-
-* Send back a value according to feature's area::
-
-    CASE WHEN $area > 10 000 THEN 'Larger' ELSE 'Smaller' END
-
-* You can manipulate the current geometry using the variable ``$geometry`` to create
-  a buffer or get a point on the geometry's surface::
-
-    buffer( $geometry, 10 )
-    point_on_surface( $geometry )
-
-* Given a point feature, generate a closed line (using ``make_line``) around the
-  point's geometry::
-
-    make_line(
-      -- using an array of points placed around the original
-      array_foreach(
-        -- list of angles for placing the projected points (every 90°)
-        array:=generate_series( 0, 360, 90 ),
-        -- translate the point 20 units in the given direction (angle)
-        expression:=project( $geometry, distance:=20, azimuth:=radians( @element ) )
-      )
-    )
 
 
 Layout Functions
@@ -504,12 +467,6 @@ This group contains functions to manipulate print layout items properties.
 
 .. include:: expression_help/Layout.rst
    :start-after: :orphan:
-
-**An example:**
-
-* Get the scale of the 'Map 0' in the current print layout::
-
-    map_get( item_variables('Map 0'), 'map_scale')
 
 
 Map Layers
@@ -657,18 +614,6 @@ This group contains functions that operate on record identifiers.
 
 .. include:: expression_help/Record_and_Attributes.rst
    :start-after: :orphan:
-
-
-**Some examples:**
-
-* Return the first feature in layer "LayerA" whose field "id" has the same value
-  as the field "name" of the current feature (a kind of jointure)::
-
-    get_feature( 'layerA', 'id', attribute( $currentfeature, 'name') )
-
-* Calculate the area of the joined feature from the previous example::
-
-    area( geometry( get_feature( 'layerA', 'id', attribute( $currentfeature, 'name') ) ) )
 
 
 .. _string_functions:
