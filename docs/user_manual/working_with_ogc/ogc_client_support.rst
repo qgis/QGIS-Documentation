@@ -40,8 +40,9 @@ different GIS implementations and data stores. QGIS can deal with the above
 specifications as a client, being **SFS** (through support of the PostgreSQL
 / PostGIS data provider, see section :ref:`label_postgis`).
 
-You can also share your maps and data through these OGC Services using a webserver
-with :ref:`QGIS Server <QGIS-Server-manual>`, UMN MapServer or GeoServer installed.
+You can also share your maps and data through the WMS, WMTS, WFS, WFS-T and WCS protocols
+using a webserver with :ref:`QGIS Server <QGIS-Server-manual>`, UMN MapServer or
+GeoServer installed.
 
 .. _`ogc-wms`:
 
