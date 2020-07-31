@@ -13,7 +13,7 @@
 env
 ...
 
-Gets an environment variable and returns its content as a string. If the variable is not found, `NULL` will be returned. This is handy to inject system specific configuration like drive letters or path prefixes. Definition of environment variables depends on the operating system, please check with your system administrator or the operating system documentation how this can be set.
+Gets an environment variable and returns its content as a string. If the variable is not found, NULL will be returned. This is handy to inject system specific configuration like drive letters or path prefixes. Definition of environment variables depends on the operating system, please check with your system administrator or the operating system documentation how this can be set.
 
 .. list-table::
    :widths: 15 85

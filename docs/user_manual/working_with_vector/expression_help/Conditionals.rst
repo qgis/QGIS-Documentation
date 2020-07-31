@@ -109,7 +109,7 @@ Tests a condition and returns a different result depending on the conditional ch
 nullif
 ......
 
-Returns a null value if value1 equals value2; otherwise it returns value1. This can be used to conditionally substitute values with NULL.
+Returns a NULL value if value1 equals value2; otherwise it returns value1. This can be used to conditionally substitute values with NULL.
 
 .. list-table::
    :widths: 15 85
@@ -157,7 +157,7 @@ Return the first matching position matching a regular expression within a string
 try
 ...
 
-Tries an expression and returns its value if error-free. If the expression returns an error, an alternative value will be returned when provided otherwise the function will return null.
+Tries an expression and returns its value if error-free. If the expression returns an error, an alternative value will be returned when provided otherwise the function will return NULL.
 
 .. list-table::
    :widths: 15 85

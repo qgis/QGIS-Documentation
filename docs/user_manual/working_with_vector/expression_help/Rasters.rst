@@ -59,7 +59,7 @@ Returns the raster value found at the provided point.
    * - Arguments
      - * **layer** - the name or id of a raster layer
        * **band** - the band number to sample the value from.
-       * **point** - point geometry (for multipart geometries having more than one part, a null value will be returned)
+       * **point** - point geometry (for multipart geometries having more than one part, a NULL value will be returned)
    * - Examples
      - * raster_value('dem', 1, make_point(1,1)) → 25
 

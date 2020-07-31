@@ -102,7 +102,7 @@ Returns the north-based azimuth as the angle in radians measured clockwise from 
 boundary
 ........
 
-Returns the closure of the combinatorial boundary of the geometry (ie the topological boundary of the geometry). For instance, a polygon geometry will have a boundary consisting of the linestrings for each ring in the polygon. Some geometry types do not have a defined boundary, e.g., points or geometry collections, and will return null.
+Returns the closure of the combinatorial boundary of the geometry (ie the topological boundary of the geometry). For instance, a polygon geometry will have a boundary consisting of the linestrings for each ring in the polygon. Some geometry types do not have a defined boundary, e.g., points or geometry collections, and will return NULL.
 
 .. list-table::
    :widths: 15 85
@@ -130,11 +130,11 @@ Returns a geometry which represents the bounding box of an input geometry. Calcu
    :widths: 15 85
 
    * - Syntax
-     - bounds(geom)
+     - bounds(geometry)
    * - Arguments
-     - * **geom** - a geometry
+     - * **geometry** - a geometry
    * - Examples
-     - * bounds($geometry) → bounding box of $geometry
+     - * bounds($geometry) → bounding box of the current feature's geometry
 
 
 .. end_bounds_section
@@ -152,11 +152,11 @@ Returns the height of the bounding box of a geometry. Calculations are in the Sp
    :widths: 15 85
 
    * - Syntax
-     - bounds_height(geom)
+     - bounds_height(geometry)
    * - Arguments
-     - * **geom** - a geometry
+     - * **geometry** - a geometry
    * - Examples
-     - * bounds_height($geometry) → height of bounding box of $geometry
+     - * bounds_height($geometry) → height of bounding box of the current feature's geometry
 
 
 .. end_bounds_height_section
@@ -174,11 +174,11 @@ Returns the width of the bounding box of a geometry. Calculations are in the Spa
    :widths: 15 85
 
    * - Syntax
-     - bounds_width(geom)
+     - bounds_width(geometry)
    * - Arguments
-     - * **geom** - a geometry
+     - * **geometry** - a geometry
    * - Examples
-     - * bounds_width($geometry) → width of bounding box of $geometry
+     - * bounds_width($geometry) → width of bounding box of the current feature's geometry
 
 
 .. end_bounds_width_section
@@ -196,15 +196,15 @@ Returns a geometry that represents all points whose distance from this geometry 
    :widths: 15 85
 
    * - Syntax
-     - buffer(geom, distance, [segments=8])
+     - buffer(geometry, distance, [segments=8])
 
        [] marks optional arguments
    * - Arguments
-     - * **geom** - a geometry
+     - * **geometry** - a geometry
        * **distance** - buffer distance in layer units
        * **segments** - number of segments to use to represent a quarter circle when a round join style is used. A larger number results in a smoother buffer with more nodes.
    * - Examples
-     - * buffer($geometry, 10.5) → polygon of $geometry buffered by 10.5 units
+     - * buffer($geometry, 10.5) → polygon of the current feature's geometry buffered by 10.5 units
 
 
 .. end_buffer_section
@@ -247,9 +247,9 @@ Returns the geometric center of a geometry.
    :widths: 15 85
 
    * - Syntax
-     - centroid(geom)
+     - centroid(geometry)
    * - Arguments
-     - * **geom** - a geometry
+     - * **geometry** - a geometry
    * - Examples
      - * centroid($geometry) → a point geometry
 
@@ -263,7 +263,7 @@ Returns the geometric center of a geometry.
 close_line
 ..........
 
-Returns a closed line string of the input line string by appending the first point to the end of the line, if it is not already closed. If the geometry is not a line string or multi line string then the result will be null.
+Returns a closed line string of the input line string by appending the first point to the end of the line, if it is not already closed. If the geometry is not a line string or multi line string then the result will be NULL.
 
 .. list-table::
    :widths: 15 85
@@ -583,15 +583,15 @@ Extends the start and end of a linestring geometry by a specified amount. Lines 
 exterior_ring
 .............
 
-Returns a line string representing the exterior ring of a polygon geometry. If the geometry is not a polygon then the result will be null.
+Returns a line string representing the exterior ring of a polygon geometry. If the geometry is not a polygon then the result will be NULL.
 
 .. list-table::
    :widths: 15 85
 
    * - Syntax
-     - exterior_ring(geom)
+     - exterior_ring(geometry)
    * - Arguments
-     - * **geom** - a polygon geometry
+     - * **geometry** - a polygon geometry
    * - Examples
      - * geom_to_wkt(exterior_ring(geom_from_wkt('POLYGON((-1 -1, 4 0, 4 2, 0 2, -1 -1),( 0.1 0.1, 0.1 0.2, 0.2 0.2, 0.2, 0.1, 0.1 0.1))'))) → 'LineString (-1 -1, 4 0, 4 2, 0 2, -1 -1)'
 
@@ -611,9 +611,9 @@ Returns an extruded version of the input (Multi-)Curve or (Multi-)Linestring geo
    :widths: 15 85
 
    * - Syntax
-     - extrude(geom, x, y)
+     - extrude(geometry, x, y)
    * - Arguments
-     - * **geom** - a polygon geometry
+     - * **geometry** - a polygon geometry
        * **x** - x extension, numeric value
        * **y** - y extension, numeric value
    * - Examples
@@ -636,9 +636,9 @@ Returns a copy of the geometry with the x and y coordinates swapped. Useful for 
    :widths: 15 85
 
    * - Syntax
-     - flip_coordinates(geom)
+     - flip_coordinates(geometry)
    * - Arguments
-     - * **geom** - a geometry
+     - * **geometry** - a geometry
    * - Examples
      - * geom_to_wkt(flip_coordinates(make_point(1, 2))) → Point (2 1)
 
@@ -658,9 +658,9 @@ Forces a geometry to respect the Right-Hand-Rule, in which the area that is boun
    :widths: 15 85
 
    * - Syntax
-     - force_rhr(geom)
+     - force_rhr(geometry)
    * - Arguments
-     - * **geom** - a geometry. Any non-polygon geometries are returned unchanged.
+     - * **geometry** - a geometry. Any non-polygon geometries are returned unchanged.
    * - Examples
      - * geom_to_wkt(force_rhr(geometry:=geom_from_wkt('POLYGON((-1 -1, 4 0, 4 2, 0 2, -1 -1))'))) → Polygon ((-1 -1, 0 2, 4 2, 4 0, -1 -1))
 
@@ -830,7 +830,7 @@ Returns a feature's geometry.
 geometry_n
 ..........
 
-Returns a specific geometry from a geometry collection, or null if the input geometry is not a collection.
+Returns a specific geometry from a geometry collection, or NULL if the input geometry is not a collection.
 
 .. list-table::
    :widths: 15 85
@@ -919,7 +919,7 @@ Returns the inclination measured from the zenith (0) to the nadir (180) on point
 interior_ring_n
 ...............
 
-Returns a specific interior ring from a polygon geometry, or null if the geometry is not a polygon.
+Returns a specific interior ring from a polygon geometry, or NULL if the geometry is not a polygon.
 
 .. list-table::
    :widths: 15 85
@@ -1013,15 +1013,15 @@ Tests whether a geometry's bounding box overlaps another geometry's bounding box
 is_closed
 .........
 
-Returns true if a line string is closed (start and end points are coincident), or false if a line string is not closed. If the geometry is not a line string then the result will be null.
+Returns true if a line string is closed (start and end points are coincident), or false if a line string is not closed. If the geometry is not a line string then the result will be NULL.
 
 .. list-table::
    :widths: 15 85
 
    * - Syntax
-     - is_closed(geom)
+     - is_closed(geometry)
    * - Arguments
-     - * **geom** - a line string geometry
+     - * **geometry** - a line string geometry
    * - Examples
      - * is_closed(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2)')) → false
        * is_closed(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2, 0 0)')) → true
@@ -1036,15 +1036,15 @@ Returns true if a line string is closed (start and end points are coincident), o
 is_empty
 ........
 
-Returns true if a geometry is empty (without coordinates), false if the geometry is not empty and NULL if there is no geometry. See also `is_empty_or_null`.
+Returns true if a geometry is empty (without coordinates), false if the geometry is not empty and NULL if there is no geometry. See also is_empty_or_null.
 
 .. list-table::
    :widths: 15 85
 
    * - Syntax
-     - is_empty(geom)
+     - is_empty(geometry)
    * - Arguments
-     - * **geom** - a geometry
+     - * **geometry** - a geometry
    * - Examples
      - * is_empty(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2)')) → false
        * is_empty(geom_from_wkt('LINESTRING EMPTY')) → true
@@ -1067,9 +1067,9 @@ Returns true if a geometry is NULL or empty (without coordinates) or false other
    :widths: 15 85
 
    * - Syntax
-     - is_empty_or_null(geom)
+     - is_empty_or_null(geometry)
    * - Arguments
-     - * **geom** - a geometry
+     - * **geometry** - a geometry
    * - Examples
      - * is_empty_or_null(NULL) → true
        * is_empty_or_null(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2)')) → false
@@ -1116,9 +1116,9 @@ Returns true if a geometry is valid; if it is well-formed in 2D according to the
    :widths: 15 85
 
    * - Syntax
-     - is_valid(geom)
+     - is_valid(geometry)
    * - Arguments
-     - * **geom** - a geometry
+     - * **geometry** - a geometry
    * - Examples
      - * is_valid(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2, 0 0)')) → true
        * is_valid(geom_from_wkt('LINESTRING(0 0)')) → false
@@ -1263,7 +1263,7 @@ Returns the distance along a linestring corresponding to the closest position th
 line_merge
 ..........
 
-Returns a LineString or MultiLineString geometry, where any connected LineStrings from the input geometry have been merged into a single linestring. This function will return null if passed a geometry which is not a LineString/MultiLineString.
+Returns a LineString or MultiLineString geometry, where any connected LineStrings from the input geometry have been merged into a single linestring. This function will return NULL if passed a geometry which is not a LineString/MultiLineString.
 
 .. list-table::
    :widths: 15 85
@@ -1316,9 +1316,9 @@ Returns the m value of a point geometry.
    :widths: 15 85
 
    * - Syntax
-     - m(geom)
+     - m(geometry)
    * - Arguments
-     - * **geom** - a point geometry
+     - * **geometry** - a point geometry
    * - Examples
      - * m( geom_from_wkt( 'POINTM(2 5 4)' ) ) → 4
 
@@ -1736,7 +1736,7 @@ Returns a multipoint geometry consisting of every node in the input geometry.
 num_geometries
 ..............
 
-Returns the number of geometries in a geometry collection, or null if the input geometry is not a collection.
+Returns the number of geometries in a geometry collection, or NULL if the input geometry is not a collection.
 
 .. list-table::
    :widths: 15 85
@@ -1758,7 +1758,7 @@ Returns the number of geometries in a geometry collection, or null if the input 
 num_interior_rings
 ..................
 
-Returns the number of interior rings in a polygon or geometry collection, or null if the input geometry is not a polygon or collection.
+Returns the number of interior rings in a polygon or geometry collection, or NULL if the input geometry is not a polygon or collection.
 
 .. list-table::
    :widths: 15 85
@@ -1786,11 +1786,11 @@ Returns the number of vertices in a geometry.
    :widths: 15 85
 
    * - Syntax
-     - num_points(geom)
+     - num_points(geometry)
    * - Arguments
-     - * **geom** - a geometry
+     - * **geometry** - a geometry
    * - Examples
-     - * num_points($geometry) → number of vertices in $geometry
+     - * num_points($geometry) → number of vertices in the current feature's geometry
 
 
 .. end_num_points_section
@@ -1802,7 +1802,7 @@ Returns the number of vertices in a geometry.
 num_rings
 .........
 
-Returns the number of rings (including exterior rings) in a polygon or geometry collection, or null if the input geometry is not a polygon or collection.
+Returns the number of rings (including exterior rings) in a polygon or geometry collection, or NULL if the input geometry is not a polygon or collection.
 
 .. list-table::
    :widths: 15 85
@@ -1861,9 +1861,9 @@ Orders the parts of a MultiGeometry by a given criteria
    :widths: 15 85
 
    * - Syntax
-     - order_parts(geom, orderby, ascending)
+     - order_parts(geometry, orderby, ascending)
    * - Arguments
-     - * **geom** - a multi-type geometry
+     - * **geometry** - a multi-type geometry
        * **orderby** - an expression string defining the order criteria
        * **ascending** - boolean, True for ascending, False for descending
    * - Examples
@@ -1997,9 +1997,9 @@ Returns a point guaranteed to lie on the surface of a geometry.
    :widths: 15 85
 
    * - Syntax
-     - point_on_surface(geom)
+     - point_on_surface(geometry)
    * - Arguments
-     - * **geom** - a geometry
+     - * **geometry** - a geometry
    * - Examples
      - * point_on_surface($geometry) → a point geometry
 
@@ -2113,9 +2113,9 @@ Reverses the direction of a line string by reversing the order of its vertices.
    :widths: 15 85
 
    * - Syntax
-     - reverse(geom)
+     - reverse(geometry)
    * - Arguments
-     - * **geom** - a geometry
+     - * **geometry** - a geometry
    * - Examples
      - * geom_to_wkt(reverse(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2)'))) → 'LINESTRING(2 2, 1 1, 0 0)'
 
@@ -2135,11 +2135,11 @@ Returns a rotated version of a geometry. Calculations are in the Spatial Referen
    :widths: 15 85
 
    * - Syntax
-     - rotate(geom, rotation, [point])
+     - rotate(geometry, rotation, [point])
 
        [] marks optional arguments
    * - Arguments
-     - * **geom** - a geometry
+     - * **geometry** - a geometry
        * **rotation** - clockwise rotation in degrees
        * **point** - rotation center point. If not specified, the center of the geometry's bounding box is used.
    * - Examples
@@ -2408,9 +2408,9 @@ Returns the geometry transformed from a source CRS to a destination CRS.
    :widths: 15 85
 
    * - Syntax
-     - transform(geom, source_auth_id, dest_auth_id)
+     - transform(geometry, source_auth_id, dest_auth_id)
    * - Arguments
-     - * **geom** - a geometry
+     - * **geometry** - a geometry
        * **source_auth_id** - the source auth CRS ID
        * **dest_auth_id** - the destination auth CRS ID
    * - Examples
@@ -2432,9 +2432,9 @@ Returns a translated version of a geometry. Calculations are in the Spatial Refe
    :widths: 15 85
 
    * - Syntax
-     - translate(geom, dx, dy)
+     - translate(geometry, dx, dy)
    * - Arguments
-     - * **geom** - a geometry
+     - * **geometry** - a geometry
        * **dx** - delta x
        * **dy** - delta y
    * - Examples
@@ -2551,9 +2551,9 @@ Returns the x coordinate of a point geometry, or the x coordinate of the centroi
    :widths: 15 85
 
    * - Syntax
-     - x(geom)
+     - x(geometry)
    * - Arguments
-     - * **geom** - a geometry
+     - * **geometry** - a geometry
    * - Examples
      - * x( geom_from_wkt( 'POINT(2 5)' ) ) → 2
        * x( $geometry ) → x coordinate of the current feature's centroid
@@ -2596,9 +2596,9 @@ Returns the maximum x coordinate of a geometry. Calculations are in the spatial 
    :widths: 15 85
 
    * - Syntax
-     - x_max(geom)
+     - x_max(geometry)
    * - Arguments
-     - * **geom** - a geometry
+     - * **geometry** - a geometry
    * - Examples
      - * x_max( geom_from_wkt( 'LINESTRING(2 5, 3 6, 4 8)') ) → 4
 
@@ -2618,9 +2618,9 @@ Returns the minimum x coordinate of a geometry. Calculations are in the spatial 
    :widths: 15 85
 
    * - Syntax
-     - x_min(geom)
+     - x_min(geometry)
    * - Arguments
-     - * **geom** - a geometry
+     - * **geometry** - a geometry
    * - Examples
      - * x_min( geom_from_wkt( 'LINESTRING(2 5, 3 6, 4 8)') ) → 2
 
@@ -2660,9 +2660,9 @@ Returns the y coordinate of a point geometry, or the y coordinate of the centroi
    :widths: 15 85
 
    * - Syntax
-     - y(geom)
+     - y(geometry)
    * - Arguments
-     - * **geom** - a geometry
+     - * **geometry** - a geometry
    * - Examples
      - * y( geom_from_wkt( 'POINT(2 5)' ) ) → 5
        * y( $geometry ) → y coordinate of the current feature's centroid
@@ -2705,9 +2705,9 @@ Returns the maximum y coordinate of a geometry. Calculations are in the spatial 
    :widths: 15 85
 
    * - Syntax
-     - y_max(geom)
+     - y_max(geometry)
    * - Arguments
-     - * **geom** - a geometry
+     - * **geometry** - a geometry
    * - Examples
      - * y_max( geom_from_wkt( 'LINESTRING(2 5, 3 6, 4 8)') ) → 8
 
@@ -2727,9 +2727,9 @@ Returns the minimum y coordinate of a geometry. Calculations are in the spatial 
    :widths: 15 85
 
    * - Syntax
-     - y_min(geom)
+     - y_min(geometry)
    * - Arguments
-     - * **geom** - a geometry
+     - * **geometry** - a geometry
    * - Examples
      - * y_min( geom_from_wkt( 'LINESTRING(2 5, 3 6, 4 8)') ) → 5
 
@@ -2743,15 +2743,15 @@ Returns the minimum y coordinate of a geometry. Calculations are in the spatial 
 z
 .
 
-Returns the z coordinate of a point geometry, or Null if the geometry has no z value.
+Returns the z coordinate of a point geometry, or NULL if the geometry has no z value.
 
 .. list-table::
    :widths: 15 85
 
    * - Syntax
-     - z(geom)
+     - z(geometry)
    * - Arguments
-     - * **geom** - a point geometry
+     - * **geometry** - a point geometry
    * - Examples
      - * z( geom_from_wkt( 'POINTZ(2 5 7)' ) ) → 7
 
@@ -2765,7 +2765,7 @@ Returns the z coordinate of a point geometry, or Null if the geometry has no z v
 z_max
 .....
 
-Returns the maximum z coordinate of a geometry, or Null if the geometry has no z value.
+Returns the maximum z coordinate of a geometry, or NULL if the geometry has no z value.
 
 .. list-table::
    :widths: 15 85
@@ -2779,7 +2779,7 @@ Returns the maximum z coordinate of a geometry, or Null if the geometry has no z
        * z_max( geom_from_wkt( 'MULTIPOINT ( 0 0 1 , 1 1 3 )' ) ) → 3
        * z_max( make_line( make_point( 0,0,0 ), make_point( -1,-1,-2 ) ) ) → 0
        * z_max( geom_from_wkt( 'LINESTRING( 0 0 0, 1 0 2, 1 1 -1 )' ) ) → 2
-       * z_max( geom_from_wkt( 'POINT ( 0 0 )' ) ) → Null
+       * z_max( geom_from_wkt( 'POINT ( 0 0 )' ) ) → NULL
 
 
 .. end_z_max_section
@@ -2791,7 +2791,7 @@ Returns the maximum z coordinate of a geometry, or Null if the geometry has no z
 z_min
 .....
 
-Returns the minimum z coordinate of a geometry, or Null if the geometry has no z value.
+Returns the minimum z coordinate of a geometry, or NULL if the geometry has no z value.
 
 .. list-table::
    :widths: 15 85
@@ -2805,7 +2805,7 @@ Returns the minimum z coordinate of a geometry, or Null if the geometry has no z
        * z_min( geom_from_wkt( 'MULTIPOINT ( 0 0 1 , 1 1 3 )' ) ) → 1
        * z_min( make_line( make_point( 0,0,0 ), make_point( -1,-1,-2 ) ) ) → -2
        * z_min( geom_from_wkt( 'LINESTRING( 0 0 0, 1 0 2, 1 1 -1 )' ) ) → -1
-       * z_min( geom_from_wkt( 'POINT ( 0 0 )' ) ) → Null
+       * z_min( geom_from_wkt( 'POINT ( 0 0 )' ) ) → NULL
 
 
 .. end_z_min_section

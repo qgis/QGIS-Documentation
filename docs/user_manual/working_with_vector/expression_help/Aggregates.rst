@@ -234,7 +234,7 @@ Returns the count of distinct values.
 count_missing
 .............
 
-Returns the count of missing (null) values.
+Returns the count of missing (NULL) values.
 
 .. list-table::
    :widths: 15 85
@@ -248,7 +248,7 @@ Returns the count of missing (null) values.
        * **group_by** - optional expression to use to group aggregate calculations
        * **filter** - optional expression to use to filter features used to calculate aggregate
    * - Examples
-     - * count_missing("stations",group_by:="state") → count of missing (null) station values, grouped by state field
+     - * count_missing("stations",group_by:="state") → count of missing (NULL) station values, grouped by state field
 
 
 .. end_count_missing_section

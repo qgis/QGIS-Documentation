@@ -187,6 +187,28 @@ Converts a string into a datetime object. An optional format string can be provi
 
 .. end_to_datetime_section
 
+.. to_decimal_section
+
+.. _expression_function_Conversions_to_decimal:
+
+to_decimal
+..........
+
+Converts a degree, minute, second coordinate to its decimal equivalent.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - to_decimal(value)
+   * - Arguments
+     - * **value** - A degree, minute, second string.
+   * - Examples
+     - * to_decimal('6°21\'16.445') → 6.3545680555
+
+
+.. end_to_decimal_section
+
 .. to_dm_section
 
 .. _expression_function_Conversions_to_dm:

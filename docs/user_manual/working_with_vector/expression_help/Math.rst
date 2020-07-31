@@ -484,7 +484,7 @@ Returns a random integer within the range specified by the minimum and maximum a
    :widths: 15 85
 
    * - Syntax
-     - rand(min, max, [seed=null])
+     - rand(min, max, [seed=NULL])
 
        [] marks optional arguments
    * - Arguments
@@ -510,7 +510,7 @@ Returns a random float within the range specified by the minimum and maximum arg
    :widths: 15 85
 
    * - Syntax
-     - randf([min=0.0], [max=1.0], [seed=null])
+     - randf([min=0.0], [max=1.0], [seed=NULL])
 
        [] marks optional arguments
    * - Arguments
