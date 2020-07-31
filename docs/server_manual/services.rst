@@ -120,7 +120,11 @@ extra parameters:
    * FORCE_2D: Force 2D output. This is required for polyline width.
    "
    "TILED", "No", "Working in *tiled mode*"
-
+   "SLD", "No", "SLD file URL to be used for styling"
+   "SLD_BODY", "No", "SLD XML content to be used for styling"
+   "WMS_PRECISION", "No", "The precision (number of digits) to deal with when
+   passing float in request (e.g. BBOX parameters). The default value is ``-1``
+   meaning that precision defined in the project is used.
 
 URL example:
 
@@ -949,6 +953,8 @@ implementation:
   .. figure:: img/getfeaturecount_legend.png
     :align: center
 
+* **RULE** set it to a given rule name to get only the named rule symbol
+	    
 GetProjectSettings
 ------------------
 
@@ -2090,6 +2096,9 @@ You can see there are several parameters in this request:
 
 * **HIGHLIGHT_LABELSIZE**: This parameter controls the size of the
   label.
+
+* **HIGHLIGHT_LABELFONT**: This parameter controls the font of the
+  label (e.g. Arial)
 
 * **HIGHLIGHT_LABELCOLOR**: This parameter controls the label color.
 
