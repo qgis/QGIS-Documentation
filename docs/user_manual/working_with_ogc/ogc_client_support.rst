@@ -1,8 +1,8 @@
 .. _working_with_ogc:
 
-*********************
-Working with OGC data
-*********************
+**************************
+Working with OGC standards
+**************************
 
 .. only:: html
 
