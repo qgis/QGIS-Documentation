@@ -110,7 +110,7 @@ Also, the date of creation will adapt dynamically.
 
            @layout_pagewidth -  @sw_layout_margin * 3 - 53.5
 
-   #. For the first vertical line::
+   #. For the first vertical line:
 
       #. Set the expression for :guilabel:`X` to::
 
@@ -178,7 +178,7 @@ Also, the date of creation will adapt dynamically.
      printed on: [%format_date(now(),'dd.MM.yyyy')%]
 
    Here we used two ``Date and Time`` functions (``now`` and
-   ``format_date``.
+   ``format_date``).
 
    Set the position of the label.
 
