@@ -25,7 +25,7 @@ QGIS User Guide
     working_with_raster/index
     working_with_mesh/mesh_properties
     print_composer/index
-    working_with_ogc/index
+    working_with_ogc/ogc_client_support.rst
     working_with_gps/index
     auth_system/index
     grass_integration/grass_integration

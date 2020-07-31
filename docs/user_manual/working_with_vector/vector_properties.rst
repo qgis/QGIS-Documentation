@@ -3192,6 +3192,8 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
 
    QGIS Server tab in vector layers properties dialog
 
+To learn more about QGIS Server, read the :ref:`QGIS-Server-manual`.
+
 .. _digitizingmenu:
 
 Digitizing Properties
