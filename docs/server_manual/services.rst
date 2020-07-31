@@ -1773,7 +1773,7 @@ URL example:
 
     The maximum acceptable value for ``limit`` can be configured with
     the ``QGIS_SERVER_API_WFS3_MAX_LIMIT`` server configuration setting
-    (see: :ref:`server_wfs3_max_limit_settings`).
+    (see: :ref:`qgis-server-envvar`).
 
 
 Feature filtering
