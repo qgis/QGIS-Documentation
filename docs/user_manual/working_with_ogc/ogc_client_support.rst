@@ -1,8 +1,8 @@
 .. _working_with_ogc:
 
-**************************
-Working with OGC standards
-**************************
+********************************
+Working with OGC / ISO protocols
+********************************
 
 .. only:: html
 
