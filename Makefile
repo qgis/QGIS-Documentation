@@ -100,8 +100,12 @@ all:
 	@for LANG in $(LANGUAGES) ; do \
 		make LANG=$$LANG site; \
 	done
-#	rsync -az $(BUILDDIR)/pdf $(SITEDIR)/;
 	rsync -az $(BUILDDIR)/zip $(SITEDIR)/;
+
+	@for LANG in $(LANGUAGES) ; do \
+		make LANG=$$LANG pdf; \
+	done
+	rsync -az $(BUILDDIR)/pdf $(SITEDIR)/;
 
 # this will pull ALL translations (or at least from the languages we build for)
 # to your local disk, so it can be committed into github
