@@ -1,8 +1,8 @@
 .. _working_with_ogc:
 
-***********************
-QGIS as OGC Data Client
-***********************
+********************************
+Working with OGC / ISO protocols
+********************************
 
 .. only:: html
 
@@ -39,6 +39,10 @@ OGC services are increasingly being used to exchange geospatial data between
 different GIS implementations and data stores. QGIS can deal with the above
 specifications as a client, being **SFS** (through support of the PostgreSQL
 / PostGIS data provider, see section :ref:`label_postgis`).
+
+You can also share your maps and data through the WMS, WMTS, WFS, WFS-T and WCS protocols
+using a webserver with :ref:`QGIS Server <QGIS-Server-manual>`, UMN MapServer or
+GeoServer installed.
 
 .. _`ogc-wms`:
 
@@ -564,7 +568,7 @@ details.
 .. tip:: **QGIS WMS Mapserver**
 
    Since Version 1.7.0, QGIS has its own implementation of a WMS 1.3.0 Mapserver.
-   Read more about this in chapter :ref:`label_qgisserver`.
+   Read more about this in :ref:`QGIS-Server-manual`.
 
 .. _`ogc-wcs`:
 

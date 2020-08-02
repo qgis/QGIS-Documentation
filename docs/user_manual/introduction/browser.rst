@@ -447,6 +447,7 @@ Resources
    If you need to create a new substitution manually,
    please add it also to the substitutions.txt file in the
    source folder.
+
 .. |addLayer| image:: /static/common/mActionAddLayer.png
    :width: 1.5em
 .. |browserCollapse| image:: /static/common/browser_collapse.png
@@ -461,5 +462,3 @@ Resources
    :width: 1.5em
 .. |options| image:: /static/common/mActionOptions.png
    :width: 1em
-
-

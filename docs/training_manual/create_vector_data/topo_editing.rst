@@ -204,7 +204,7 @@ Extending:
    :sup:`Select Features by area or single click` tool.
 #. Left-click inside the polygon to start drawing.
 #. Draw a shape outside the polygon. The last vertex should be back
-   inside the polygon..
+   inside the polygon.
 #. Right-click to finish the shape:
 
    .. figure:: img/reshape_step_one.png

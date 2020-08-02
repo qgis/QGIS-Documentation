@@ -422,7 +422,7 @@ Layer` tabs allow loading of layers from source types other than :guilabel:`File
   Supported protocol types are:
 
   * ``HTTP/HTTPS/FTP``, with a :guilabel:`URI` and, if required,
-    an authentication
+    an :ref:`authentication <authentication_index>`.
   * Cloud storage such as ``AWS S3``, ``Google Cloud Storage``, ``Microsoft
     Azure Blob``, ``Alibaba OSS Cloud``, ``Open Stack Swift Storage``.
     You need to fill in the :guilabel:`Bucket or container` and the
@@ -430,7 +430,7 @@ Layer` tabs allow loading of layers from source types other than :guilabel:`File
   * service supporting OGC ``WFS 3`` (still experimental),
     using ``GeoJSON`` or ``GEOJSON - Newline Delimited`` format or based on
     ``CouchDB`` database.
-    A :guilabel:`URI` is required, with optional authentication.
+    A :guilabel:`URI` is required, with optional :ref:`authentication <authentication_index>`.
 
 .. _mesh_loading:
 
@@ -1139,7 +1139,7 @@ Connecting to web services
 With QGIS you can get access to different types of OGC web services (WM(T)S,
 WFS(-T), WCS, CSW, ...).
 Thanks to QGIS Server, you can also publish such services.
-Chapter :ref:`sec_ogc` contains descriptions of these capabilities.
+:ref:`QGIS-Server-manual` contains descriptions of these capabilities.
 
 .. index:: XYZ Tile services
 .. _xyz_tile:
