@@ -65,20 +65,20 @@ pdf: latex
 	# notice that platex compiler needs an extra step to convert dvi to PDF
 	# using the dvipdfmx command
 	cd $(BUILDDIR)/latex/$(LANG); \
-	$(LATEXCOMPILER) -shell-escape QGISDesktopUserGuide.tex; \
-	$(LATEXCOMPILER) -shell-escape QGISDesktopUserGuide.tex; \
+	$(LATEXCOMPILER) -interaction=batchmode -shell-escape QGISDesktopUserGuide.tex; \
+	$(LATEXCOMPILER) -interaction=batchmode -shell-escape QGISDesktopUserGuide.tex; \
 	if [ "$(LATEXCOMPILER)" != "xelatex" ]; then dvipdfmx QGISDesktopUserGuide.dvi; fi; \
-	$(LATEXCOMPILER) -shell-escape QGISServerUserGuide.tex; \
-	$(LATEXCOMPILER) -shell-escape QGISServerUserGuide.tex; \
+	$(LATEXCOMPILER) -interaction=batchmode -shell-escape QGISServerUserGuide.tex; \
+	$(LATEXCOMPILER) -interaction=batchmode -shell-escape QGISServerUserGuide.tex; \
 	if [ "$(LATEXCOMPILER)" != "xelatex" ]; then dvipdfmx QGISServerUserGuide.dvi; fi; \
-	$(LATEXCOMPILER) -shell-escape PyQGISDeveloperCookbook.tex; \
-	$(LATEXCOMPILER) -shell-escape PyQGISDeveloperCookbook.tex; \
+	$(LATEXCOMPILER) -interaction=batchmode -shell-escape PyQGISDeveloperCookbook.tex; \
+	$(LATEXCOMPILER) -interaction=batchmode -shell-escape PyQGISDeveloperCookbook.tex; \
 	if [ "$(LATEXCOMPILER)" != "xelatex" ]; then dvipdfmx PyQGISDeveloperCookbook.dvi; fi; \
-	$(LATEXCOMPILER) -shell-escape QGISTrainingManual.tex; \
-	$(LATEXCOMPILER) -shell-escape QGISTrainingManual.tex; \
+	$(LATEXCOMPILER) -interaction=batchmode -shell-escape QGISTrainingManual.tex; \
+	$(LATEXCOMPILER) -interaction=batchmode -shell-escape QGISTrainingManual.tex; \
 	if [ "$(LATEXCOMPILER)" != "xelatex" ]; then dvipdfmx QGISTrainingManual.dvi; fi; \
-	$(LATEXCOMPILER) -shell-escape QGISDocumentationGuidelines.tex; \
-	$(LATEXCOMPILER) -shell-escape QGISDocumentationGuidelines.tex; \
+	$(LATEXCOMPILER) -interaction=batchmode -shell-escape QGISDocumentationGuidelines.tex; \
+	$(LATEXCOMPILER) -interaction=batchmode -shell-escape QGISDocumentationGuidelines.tex; \
 	if [ "$(LATEXCOMPILER)" != "xelatex" ]; then dvipdfmx QGISDocumentationGuidelines.dvi; fi;
 
 	# copy and rename PDF files to the pdf folder
