@@ -215,6 +215,7 @@ This group contains functions which aggregate values over layers and fields.
    :class: toc_columns
 
 .. include:: expression_help/Aggregates.rst
+   :start-after: :orphan:
 
 **Examples:**
 
@@ -256,6 +257,7 @@ is irrelevant and values are identified by their keys.
    :class: toc_columns
 
 .. include:: expression_help/Arrays.rst
+   :start-after: :orphan:
 
 
 Color Functions
@@ -268,6 +270,7 @@ This group contains functions for manipulating colors.
    :class: toc_columns
 
 .. include:: expression_help/Color.rst
+   :start-after: :orphan:
 
 
 Conditional Functions
@@ -280,6 +283,7 @@ This group contains functions to handle conditional checks in expressions.
    :class: toc_columns
 
 .. include:: expression_help/Conditionals.rst
+   :start-after: :orphan:
 
 
 .. _conversion_functions:
@@ -295,6 +299,7 @@ This group contains functions to convert one data type to another
    :class: toc_columns
 
 .. include:: expression_help/Conversions.rst
+   :start-after: :orphan:
 
 
 Custom Functions
@@ -314,6 +319,7 @@ This group contains functions for handling date and time data.
    :class: toc_columns
 
 .. include:: expression_help/Date_and_Time.rst
+   :start-after: :orphan:
 
 This group shares several functions with the :ref:`conversion_functions` (
 to_date, to_time, to_datetime, to_interval) and :ref:`string_functions`
@@ -401,6 +407,7 @@ This group contains functions which manipulate file and path names.
    :class: toc_columns
 
 .. include:: expression_help/Files_and_Paths.rst
+   :start-after: :orphan:
 
 
 Form Functions
@@ -412,6 +419,7 @@ context. For example, in field's widgets settings.
 .. contents:: :local:
 
 .. include:: expression_help/Form.rst
+   :start-after: :orphan:
 
 
 Fuzzy Matching Functions
@@ -424,6 +432,7 @@ This group contains functions for fuzzy comparisons between values.
    :class: toc_columns
 
 .. include:: expression_help/Fuzzy_Matching.rst
+   :start-after: :orphan:
 
 
 General Functions
@@ -436,6 +445,7 @@ This group contains general assorted functions.
    :class: toc_columns
 
 .. include:: expression_help/General.rst
+   :start-after: :orphan:
 
 
 .. _geometry_functions:
@@ -451,6 +461,7 @@ This group contains functions that operate on geometry objects
    :class: toc_columns
 
 .. include:: expression_help/GeometryGroup.rst
+   :start-after: :orphan:
 
 **Some examples:**
 
@@ -492,6 +503,7 @@ This group contains functions to manipulate print layout items properties.
    :class: toc_columns
 
 .. include:: expression_help/Layout.rst
+   :start-after: :orphan:
 
 **An example:**
 
@@ -515,6 +527,7 @@ It also provides some convenient functions to manipulate layers.
    :class: toc_columns
 
 .. include:: expression_help/Map_Layers.rst
+   :start-after: :orphan:
 
 
 .. index:: Map data structure, Dictionary, Key-value pairs, Associative arrays
@@ -534,6 +547,7 @@ and values are identified by their keys.
    :class: toc_columns
 
 .. include:: expression_help/Maps.rst
+   :start-after: :orphan:
 
 
 Mathematical Functions
@@ -546,6 +560,7 @@ This group contains math functions (e.g., square root, sin and cos).
    :class: toc_columns
 
 .. include:: expression_help/Math.rst
+   :start-after: :orphan:
 
 
 Operators
@@ -613,6 +628,7 @@ This group contains functions that operate on processing algorithms.
 .. contents:: :local:
 
 .. include:: expression_help/Processing.rst
+   :start-after: :orphan:
 
 
 .. _raster_functions:
@@ -625,6 +641,7 @@ This group contains functions to operate on raster layer.
 .. contents:: :local:
 
 .. include:: expression_help/Rasters.rst
+   :start-after: :orphan:
 
 
 .. _record_attributes:
@@ -639,6 +656,7 @@ This group contains functions that operate on record identifiers.
    :class: toc_columns
 
 .. include:: expression_help/Record_and_Attributes.rst
+   :start-after: :orphan:
 
 
 **Some examples:**
@@ -666,6 +684,7 @@ This group contains functions that operate on strings
    :class: toc_columns
 
 .. include:: expression_help/String.rst
+   :start-after: :orphan:
 
 **About fields concatenation**
 
