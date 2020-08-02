@@ -95,7 +95,7 @@ zip:
 	zip -r QGIS-$(VERSION)-Documentation-$(LANG).zip $(LANG)/;)
 	mv $(BUILDDIR)/html/QGIS-$(VERSION)-Documentation-$(LANG).zip $(BUILDDIR)/zip/;
 
-site: html pdf zip
+site: html zip
 	rsync -az $(BUILDDIR)/html/$(LANG) $(SITEDIR)/;
 
 # this will build ALL languages, AND tries to rsync them to the web dir on qgis2
@@ -104,8 +104,12 @@ all:
 	@for LANG in $(LANGUAGES) ; do \
 		make LANG=$$LANG site; \
 	done
-	rsync -az $(BUILDDIR)/pdf $(SITEDIR)/;
 	rsync -az $(BUILDDIR)/zip $(SITEDIR)/;
+
+	@for LANG in $(LANGUAGES) ; do \
+		make LANG=$$LANG pdf; \
+	done
+	rsync -az $(BUILDDIR)/pdf $(SITEDIR)/;
 
 # this will pull ALL translations (or at least from the languages we build for)
 # to your local disk, so it can be committed into github
