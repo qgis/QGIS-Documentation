@@ -65,22 +65,11 @@ pdf: latex
 	# notice that platex compiler needs an extra step to convert dvi to PDF
 	# using the dvipdfmx command
 	cd $(BUILDDIR)/latex/$(LANG); \
-<<<<<<< HEAD
-	$(LATEXCOMPILER) -shell-escape QGISUserGuide.tex; \
-	$(LATEXCOMPILER) -shell-escape QGISUserGuide.tex; \
-	if [ "$(LATEXCOMPILER)" != "xelatex" ]; then dvipdfmx QGISUserGuide.dvi; fi; \
-	$(LATEXCOMPILER) -shell-escape PyQGISDeveloperCookbook.tex; \
-	$(LATEXCOMPILER) -shell-escape PyQGISDeveloperCookbook.tex; \
-=======
-	$(LATEXCOMPILER) -interaction=batchmode -shell-escape QGISDesktopUserGuide.tex; \
-	$(LATEXCOMPILER) -interaction=batchmode -shell-escape QGISDesktopUserGuide.tex; \
-	if [ "$(LATEXCOMPILER)" != "xelatex" ]; then dvipdfmx QGISDesktopUserGuide.dvi; fi; \
-	$(LATEXCOMPILER) -interaction=batchmode -shell-escape QGISServerUserGuide.tex; \
-	$(LATEXCOMPILER) -interaction=batchmode -shell-escape QGISServerUserGuide.tex; \
-	if [ "$(LATEXCOMPILER)" != "xelatex" ]; then dvipdfmx QGISServerUserGuide.dvi; fi; \
+	$(LATEXCOMPILER) -interaction=batchmode -shell-escape QGISUserGuide.tex; \
+	$(LATEXCOMPILER) -interaction=batchmode -shell-escape QGISUserGuide.tex; \
+	if [ "$(LATEXCOMPILER)" != "xelatex" ]; then dvipdfmx QGISUserGuide.tex; fi; \
 	$(LATEXCOMPILER) -interaction=batchmode -shell-escape PyQGISDeveloperCookbook.tex; \
 	$(LATEXCOMPILER) -interaction=batchmode -shell-escape PyQGISDeveloperCookbook.tex; \
->>>>>>> 586f460ea... Merge pull request #5952 from SrNetoChan/fix_pdf_creation
 	if [ "$(LATEXCOMPILER)" != "xelatex" ]; then dvipdfmx PyQGISDeveloperCookbook.dvi; fi; \
 	$(LATEXCOMPILER) -interaction=batchmode -shell-escape QGISTrainingManual.tex; \
 	$(LATEXCOMPILER) -interaction=batchmode -shell-escape QGISTrainingManual.tex; \
@@ -111,10 +100,6 @@ all:
 	@for LANG in $(LANGUAGES) ; do \
 		make LANG=$$LANG site; \
 	done
-<<<<<<< HEAD
-#	rsync -az $(BUILDDIR)/pdf $(SITEDIR)/;
-=======
->>>>>>> 586f460ea... Merge pull request #5952 from SrNetoChan/fix_pdf_creation
 	rsync -az $(BUILDDIR)/zip $(SITEDIR)/;
 
 	@for LANG in $(LANGUAGES) ; do \
