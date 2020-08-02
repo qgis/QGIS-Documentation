@@ -1249,6 +1249,8 @@ These colors are identified as :guilabel:`Project colors` and listed as part of
   #. Update the project color once and the change is reflected EVERYWHERE
      it's in use.
 
+.. _project_data_source_properties:
+
 Data Sources Properties
 -----------------------
 

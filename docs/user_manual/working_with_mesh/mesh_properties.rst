@@ -108,6 +108,8 @@ more details.
 Mesh Dataset Properties
 =======================
 
+.. _mesh_information:
+
 Information Properties
 ----------------------
 
