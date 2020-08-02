@@ -65,17 +65,17 @@ pdf: latex
 	# notice that platex compiler needs an extra step to convert dvi to PDF
 	# using the dvipdfmx command
 	cd $(BUILDDIR)/latex/$(LANG); \
-	$(LATEXCOMPILER) -shell-escape QGISUserGuide.tex; \
-	$(LATEXCOMPILER) -shell-escape QGISUserGuide.tex; \
+	$(LATEXCOMPILER) -interaction=batchmode -shell-escape QGISUserGuide.tex; \
+	$(LATEXCOMPILER) -interaction=batchmode -shell-escape QGISUserGuide.tex; \
 	if [ "$(LATEXCOMPILER)" != "xelatex" ]; then dvipdfmx QGISUserGuide.dvi; fi; \
-	$(LATEXCOMPILER) -shell-escape PyQGISDeveloperCookbook.tex; \
-	$(LATEXCOMPILER) -shell-escape PyQGISDeveloperCookbook.tex; \
+	$(LATEXCOMPILER) -interaction=batchmode -shell-escape PyQGISDeveloperCookbook.tex; \
+	$(LATEXCOMPILER) -interaction=batchmode -shell-escape PyQGISDeveloperCookbook.tex; \
 	if [ "$(LATEXCOMPILER)" != "xelatex" ]; then dvipdfmx PyQGISDeveloperCookbook.dvi; fi; \
-	$(LATEXCOMPILER) -shell-escape QGISTrainingManual.tex; \
-	$(LATEXCOMPILER) -shell-escape QGISTrainingManual.tex; \
+	$(LATEXCOMPILER) -interaction=batchmode -shell-escape QGISTrainingManual.tex; \
+	$(LATEXCOMPILER) -interaction=batchmode -shell-escape QGISTrainingManual.tex; \
 	if [ "$(LATEXCOMPILER)" != "xelatex" ]; then dvipdfmx QGISTrainingManual.dvi; fi; \
-	$(LATEXCOMPILER) -shell-escape QGISDocumentationGuidelines.tex; \
-	$(LATEXCOMPILER) -shell-escape QGISDocumentationGuidelines.tex; \
+	$(LATEXCOMPILER) -interaction=batchmode -shell-escape QGISDocumentationGuidelines.tex; \
+	$(LATEXCOMPILER) -interaction=batchmode -shell-escape QGISDocumentationGuidelines.tex; \
 	if [ "$(LATEXCOMPILER)" != "xelatex" ]; then dvipdfmx QGISDocumentationGuidelines.dvi; fi;
 
 	# copy and rename PDF files to the pdf folder
@@ -100,8 +100,12 @@ all:
 	@for LANG in $(LANGUAGES) ; do \
 		make LANG=$$LANG site; \
 	done
-#	rsync -az $(BUILDDIR)/pdf $(SITEDIR)/;
 	rsync -az $(BUILDDIR)/zip $(SITEDIR)/;
+
+	@for LANG in $(LANGUAGES) ; do \
+		make LANG=$$LANG pdf; \
+	done
+	rsync -az $(BUILDDIR)/pdf $(SITEDIR)/;
 
 # this will pull ALL translations (or at least from the languages we build for)
 # to your local disk, so it can be committed into github
