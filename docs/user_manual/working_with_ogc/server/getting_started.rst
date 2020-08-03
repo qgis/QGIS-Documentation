@@ -208,7 +208,7 @@ Install NGINX:
 NGINX Configuration
 ...................
 
-The **include fastcgi_params;** used in previous configuration is important
+The **include fastcgi_params;** used in the previous configuration is important,
 as it adds the parameters from :file:`/etc/nginx/fastcgi_params`:
 
 .. code-block:: nginx
