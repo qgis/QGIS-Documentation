@@ -501,7 +501,6 @@ Thanks to Oslandia for sharing `their tutorial <https://oslandia.com/en/2018/11/
 
 Xvfb
 ----
- 
 QGIS Server needs a running X Server to be fully usable, in particular for printing.
 On servers it is usually recommended not to install it, so you may use ``xvfb``
 to have a virtual X environment.
