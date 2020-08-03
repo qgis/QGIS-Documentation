@@ -552,7 +552,7 @@ Now restart Apache for the new configuration to be taken into account:
 
 .. code-block:: bash
 
- systemctl restart apache2
+  systemctl restart apache2
 
 With NGINX
 ..........
