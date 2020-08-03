@@ -71,8 +71,8 @@ Let's add a sample project. You can use your own, or one from
     mv QGIS-Training-Data-2.0/exercise_data/qgis-server-tutorial-data/world.qgs .
     mv QGIS-Training-Data-2.0/exercise_data/qgis-server-tutorial-data/naturalearth.sqlite .
   
-  Of course, you can use your favorite GIS software to open this file and
-  take a look on the configuration and available layers.
+Of course, you can use your favorite GIS software to open this file and
+take a look at the configuration and available layers.
 
 * To properly deploy QGIS server you need a HTTP server. Recommended choices are **Apache** or **NGINX**.
 
