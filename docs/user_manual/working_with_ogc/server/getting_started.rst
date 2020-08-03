@@ -34,7 +34,9 @@ Once the chosen repository is configured, installation is simply done with:
  # if you want to install server plugins, also:
  apt install python-qgis
 
-* To test the installation, run:
+Testing the installation
+-----------------------------
+To test the installation, run:
 
   .. code-block:: bash
 
