@@ -511,7 +511,7 @@ To install the package:
 
  apt install xvfb
 
-Create the service file :file:`/etc/systemd/system/xvfb.service` with this content:
+Create the service file, :file:`/etc/systemd/system/xvfb.service`, with this content:
 
 .. code-block:: ini
 
