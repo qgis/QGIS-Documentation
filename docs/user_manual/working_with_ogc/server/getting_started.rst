@@ -261,7 +261,7 @@ Fcgi wrappers
 
   **fcgiwrap** is easier to set up than **spawn-fcgi**, because it's already wrapped
   in a Systemd service. But it also leads to a solution that is much slower
-  than using spawn-fcgi. With fcgiwrap a new QGIS Server process is created
+  than using spawn-fcgi. With fcgiwrap, a new QGIS Server process is created
   on each request, meaning that the QGIS Server initialization process, which
   includes reading and parsing the QGIS project file, is done on each request.
   With spawn-fcgi, the QGIS Server process remains alive between requests,
