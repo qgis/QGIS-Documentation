@@ -312,8 +312,9 @@ QGIS Server is now available at http://localhost/qgisserver.
     before running the server. For example:
     ``export QGIS_SERVER_LOG_FILE=/var/log/qgis/qgisserver.log``
 
-Of course, you can add an init script to start QGIS Server at boot time or whenever you want. For example with **systemd**,
-edit the file :file:`/etc/systemd/system/qgis-server.service` with this content:
+Of course, you can add an init script to start QGIS Server at boot time or whenever you want.
+For example with **systemd**, edit the file
+:file:`/etc/systemd/system/qgis-server.service` with this content:
 
 .. code-block:: ini
 
