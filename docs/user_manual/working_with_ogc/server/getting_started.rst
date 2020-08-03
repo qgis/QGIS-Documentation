@@ -59,8 +59,8 @@ If you get the following output, the server is correctly installed
      <ServiceException code="Service configuration error">Service unknown or unsupported</ServiceException>
     </ServiceExceptionReport>
 
-  Let's add a sample project. You can use your own, or one from
-  `Training demo data <https://github.com/qgis/QGIS-Training-Data/>`_:
+Let's add a sample project. You can use your own, or one from
+`Training demo data <https://github.com/qgis/QGIS-Training-Data/>`_:
 
   .. code-block:: bash
   
