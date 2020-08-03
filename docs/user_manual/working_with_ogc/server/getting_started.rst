@@ -293,7 +293,7 @@ And restart NGINX to take into account the new configuration:
 
 .. code-block:: bash
 
- systemctl restart nginx
+  systemctl restart nginx
 
 Finally, considering that there is no default service file for spawn-fcgi, you
 have to manually start QGIS Server in your terminal:
