@@ -42,9 +42,9 @@ To test the installation, run:
 
     /usr/lib/cgi-bin/qgis_mapserv.fcgi
  
-  If you get the following output, the server is correctly installed
+If you get the following output, the server is correctly installed
 
-  .. code-block::
+.. code-block::
 
 	  QFSFileEngine::open: No file name specified
     Warning 1: Unable to find driver ECW to unload from GDAL_SKIP environment variable.
