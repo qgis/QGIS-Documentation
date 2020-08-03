@@ -239,8 +239,9 @@ as it adds the parameters from :file:`/etc/nginx/fastcgi_params`:
  fastcgi_param  REDIRECT_STATUS    200;
 
 Moreover, you can use some :ref:`qgis-server-envvar` to configure QGIS Server.
-In the NGINX configuration file :file:`/etc/nginx/nginx.conf`, you have to use ``fastcgi_param`` instruction to define
-these variables as shown below:
+0123456789012345678901234567890123456789012345678901234567890123456789
+In the NGINX configuration file, :file:`/etc/nginx/nginx.conf`, you have to use
+``fastcgi_param`` instruction to define these variables as shown below:
 
 .. code-block:: nginx
 
