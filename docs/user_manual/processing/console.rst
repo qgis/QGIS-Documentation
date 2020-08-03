@@ -482,7 +482,7 @@ functions are specified:
 There are a number of different parameter types available for
 input and output. Below is an alphabetically sorted list:
 
-* :class:`QgsProcessingParameterAggregate  <qgis.core.QgsProcessingParameterAggregate >`
+* :class:`QgsProcessingParameterAggregate <qgis.core.QgsProcessingParameterAggregate>`
 * :class:`QgsProcessingParameterAuthConfig <qgis.core.QgsProcessingParameterAuthConfig>`
 * :class:`QgsProcessingParameterBand <qgis.core.QgsProcessingParameterBand>`
 * :class:`QgsProcessingParameterBoolean <qgis.core.QgsProcessingParameterBoolean>`
@@ -510,7 +510,7 @@ input and output. Below is an alphabetically sorted list:
 * :class:`QgsProcessingParameterMapLayer <qgis.core.QgsProcessingParameterMapLayer>`
 * :class:`QgsProcessingParameterMapTheme <qgis.core.QgsProcessingParameterMapTheme>`
 * :class:`QgsProcessingParameterMatrix <qgis.core.QgsProcessingParameterMatrix>`
-* :class:`QgsProcessingParameterMeshLayer  <qgis.core.QgsProcessingParameterMeshLayer >`
+* :class:`QgsProcessingParameterMeshLayer <qgis.core.QgsProcessingParameterMeshLayer>`
 * :class:`QgsProcessingParameterMultipleLayers <qgis.core.QgsProcessingParameterMultipleLayers>`
 * :class:`QgsProcessingParameterNumber <qgis.core.QgsProcessingParameterNumber>`
 * :class:`QgsProcessingParameterPoint <qgis.core.QgsProcessingParameterPoint>`
