@@ -923,8 +923,8 @@ labels:
 * **LAYERTITLE** ``FALSE`` to get only the legend graphics without layer title
 * **RULELABEL**:
 
-    * ``FALSE`` get only the legend graphics without item labels
-    * ``AUTO`` hide item label for single legend and display item labels for any other legend type. This is useful to avoid having duplicated layer title and item label in case of single legend.
+    * ``FALSE`` legend graphics without item labels
+    * ``AUTO`` hide item label for layers with :guilabel:`Single symbol` rendering
 
 Content based legend. These parameters let the client request a legend
 showing only the symbols for the features falling into the requested
