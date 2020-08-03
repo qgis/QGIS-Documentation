@@ -38,7 +38,7 @@ Testing the installation
 -----------------------------
 To test the installation, run:
 
-  .. code-block:: bash
+.. code-block:: bash
 
     /usr/lib/cgi-bin/qgis_mapserv.fcgi
  
