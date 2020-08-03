@@ -104,13 +104,13 @@ We first need to load the data to work with.
 #. In the dialog that pops up we filter these features with the
    following expression::
 
-     "highway" NOT IN ('footway', 'path', 'unclassified', 'track') AND "highway" != NULL
+     "highway" NOT IN ('footway', 'path', 'unclassified', 'track') OR "highway" != NULL
 
    The concatenation of the two operators ``NOT`` and ``IN`` excludes
    all the features that have these attribute values in the
    ``highway`` field.
 
-   ``!= NULL`` combined with the ``AND`` operator excludes roads with
+   ``!= NULL`` combined with the ``OR`` operator excludes roads with
    no value in the ``highway`` field.
 
    Note the |indicatorFilter| icon next to the :guilabel:`roads`
