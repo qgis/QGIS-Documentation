@@ -137,7 +137,7 @@ Let's now add ``mod_fcgid`` configuration directives for QGIS Server:
 .. note::
 
   See the ``mod_fcgid`` documentation for more information on the ``Fcgid`` parameters
-  used. And see :ref:`xvfb` section to understand when and why the ``DISPLAY`` environment variable
+  used. And see the :ref:`xvfb` section to understand when and why the ``DISPLAY`` environment variable
   needs to be set.
 
 These directives can be added either to :file:`/etc/apache2/mods-enabled/fcgid.conf`
