@@ -1342,8 +1342,8 @@ the default format PNG is used instead.
 TILEMATRIXSET
 ^^^^^^^^^^^^^
 
-This parameter allows to define the CRS to use to compute the
-underlying pyramid and has to be formed like ``EPSG:XXXX``.
+This parameter defines the CRS to use when computing the underlying
+pyramid. Format: ``EPSG:XXXX``.
 
 
 TILEMATRIX
