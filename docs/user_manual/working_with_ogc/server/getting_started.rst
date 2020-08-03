@@ -545,7 +545,7 @@ With Apache you just add to your *FastCGI* configuration (see above):
 
 .. code-block:: apache
 
- FcgidInitialEnv DISPLAY       ":99"
+  FcgidInitialEnv DISPLAY       ":99"
 
 
 Now restart Apache for the new configuration to be taken into account:
