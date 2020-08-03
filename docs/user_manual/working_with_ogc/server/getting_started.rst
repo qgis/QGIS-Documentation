@@ -178,7 +178,7 @@ QGIS Server is now available at http://localhost/qgisserver. To check, type in a
 .. index:: nginx, spawn-fcgi, fcgiwrap
 
 NGINX HTTP Server
------------------
+.................
 
 .. note:: In the following, please replace ``localhost`` with the name or IP address of your server.
 
