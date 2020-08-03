@@ -83,7 +83,7 @@ To properly deploy QGIS server you need a HTTP server. Recommended choices are *
 .. _`httpserver`:
 
 Apache HTTP Server
-------------------
+..................
 
 .. note:: In the following, please replace ``localhost`` with the name or IP address of your server.
 
