@@ -541,7 +541,7 @@ With Apache
 
 Then you can configure the **DISPLAY** parameter.
 
-With Apache you just add to your ``Fcgi`` configuration (see above):
+With Apache you just add to your *FastCGI* configuration (see above):
 
 .. code-block:: apache
 
