@@ -193,8 +193,10 @@ Install NGINX:
  apt install nginx
 
 
-* As a first option, you can use **spawn-fcgi** or **fcgiwrap** to start and manage the QGIS Server
-  processes. Official Debian packages exist for both. When you have no X server running and you need, for example,
+* As a first option, you can use **spawn-fcgi** or **fcgiwrap** to start and manage the
+  QGIS Server processes.
+  Official Debian packages exist for both.
+  When you have no X server running and you need, for example,
   printing,	you can use :ref:`xvfb <xvfb>`.
 
 * Another option is to rely on **Systemd**, the init system for GNU/Linux that most
