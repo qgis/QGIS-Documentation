@@ -468,7 +468,7 @@ Now start socket service:
 
 .. code-block:: bash
 
- sudo systemctl start qgis-server@sockets.service
+  sudo systemctl start qgis-server@sockets.service
 
 Finally, for the NGINX HTTP server, lets introduce the configuration for this setup:
 
