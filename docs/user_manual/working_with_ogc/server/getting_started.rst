@@ -254,8 +254,8 @@ In the NGINX configuration file, :file:`/etc/nginx/nginx.conf`, you have to use
          fastcgi_pass   unix:/var/run/qgisserver.socket;
      }
 
-Fcgi wrappers
-.............
+FastCGI wrappers
+^^^^^^^^^^^^^^^^
 
 .. warning::
 
