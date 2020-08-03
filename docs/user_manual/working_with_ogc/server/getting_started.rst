@@ -74,7 +74,9 @@ Let's add a sample project. You can use your own, or one from
 Of course, you can use your favorite GIS software to open this file and
 take a look at the configuration and available layers.
 
-* To properly deploy QGIS server you need a HTTP server. Recommended choices are **Apache** or **NGINX**.
+Deploying QGIS server
+------------------------------------------------
+To properly deploy QGIS server you need a HTTP server. Recommended choices are **Apache** or **NGINX**.
 
 .. index:: Apache, mod_fcgid
 
