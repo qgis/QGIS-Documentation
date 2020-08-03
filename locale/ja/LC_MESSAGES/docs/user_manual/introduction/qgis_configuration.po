@@ -7,15 +7,16 @@
 # Richard Duivenvoorde <richard@duif.net>, 2020
 # fairtommy <fairtommy@gmail.com>, 2020
 # Kayama Yoichi <yoichi.kayama@gmail.com>, 2020
+# tomoyuki arai <tarai.3367@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-10 11:07+0200\n"
+"POT-Creation-Date: 2020-07-26 13:13+0200\n"
 "PO-Revision-Date: 2020-03-16 19:25+0000\n"
-"Last-Translator: Kayama Yoichi <yoichi.kayama@gmail.com>, 2020\n"
+"Last-Translator: tomoyuki arai <tarai.3367@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,19 +32,23 @@ msgstr "QGISの設定"
 msgid ""
 "QGIS is highly configurable. Through the :menuselection:`Settings` menu, it "
 "provides different tools to:"
-msgstr "QGISでは高度な設定が可能です。 :menuselection:`設定` メニューを通じ、さまざまなツールがあります："
+msgstr "QGISでは高度な設定が可能です。 :menuselection:`設定` メニューを通じて、以下のさまざまなツールを提供します。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:14
 msgid ""
 "|styleManager| :guilabel:`Style Manager...`: create and manage "
 ":ref:`symbols, styles and color ramps <vector_style_manager>`."
 msgstr ""
+"|styleManager| :guilabel:`スタイルマネージャ...` : は :ref:`シンボル、スタイル、カラーランプ "
+"<vector_style_manager>` を作成し、管理します。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:16
 msgid ""
 "|customProjection| :guilabel:`Custom Projections...`: create your own "
 ":ref:`coordinate reference systems <sec_custom_projections>`."
 msgstr ""
+"|customProjection| :guilabel:`カスタム投影法...`: では独自の "
+":ref:`座標参照系<sec_custom_projections>` を作成します。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:18
 msgid ""
@@ -62,8 +67,8 @@ msgid ""
 "the :ref:`application interface <sec_customization>`, hiding dialogs or "
 "tools you may not need."
 msgstr ""
-"|interfaceCustomization| :guilabel:`インターフェースのカスタマイズ...` では "
-":ref:`アプリケーションインターフェース <sec_customization>` を設定し、不要なダイアログやツールを非表示にできます。"
+"|interfaceCustomization| :guilabel:`インタフェースのカスタマイズ...` では "
+":ref:`アプリケーションインタフェース <sec_customization>` を設定し、不要なダイアログやツールを非表示にできます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:25
 msgid ""
@@ -72,6 +77,9 @@ msgid ""
 "the active :ref:`User profile <user_profiles>` settings and applied by "
 "default whenever you open a new project with this profile."
 msgstr ""
+"|options| :guilabel:`オプション...`: は、ソフトウェアのさまざまな領域に適用するグローバル :ref:`オプション "
+"<gui_options>` を設定します。これらの設定は、アクティブな :ref:`ユーザープロファイル <user_profiles>` "
+"設定に保存され、このプロファイルで新しいプロジェクトを開く場合にはデフォルトで適用されます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:35
 msgid "Options"
@@ -87,15 +95,15 @@ msgid ""
 msgstr ""
 "|options| QGISのいくつかの基本オプションは、:guilabel:`オプション` ダイアログを使用して選択できます。メニューオプション "
 ":menuselection:`設定 -->` |options| :menuselection:`オプション` "
-"を選択してください。必要に応じてオプションを変更できます。 QGISを有効にするには、QGISを再起動する必要があります。"
+"を選択してください。必要に応じてオプションを変更できます。 オプションが有効になるにはQGISの再起動が必要になるものもあります。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:43
 msgid "The tabs where you can customize your options are described below."
-msgstr "オプションをカスタマイズできるタブについては、以下で説明します。"
+msgstr "以下で、オプションをカスタマイズできる画面をタブごとに説明します。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:45
 msgid "**Plugins can embed their settings within the Options dialog**"
-msgstr "**プラグインについての設定はオプションダイアログに埋め込むことができます**"
+msgstr "**プラグインの設定はオプションダイアログに埋め込み可能**"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:47
 msgid ""
@@ -104,17 +112,16 @@ msgid ""
 "options into the standard Options dialog. This avoids each plugin having "
 "their own config dialog with extra menu items just for them..."
 msgstr ""
-"以下ではコア設定のみを示しますが、このリストは標準の[オプション]ダイアログに独自のオプションを実装することで :ref:`インストールされたプラグイン"
-" <plugins>` "
-"によって拡張できることに注意してください。これにより、それぞれのプラグインがそれらのためだけに追加のメニュー項目を持つ独自の設定ダイアログを持つことが避けられます..."
+"以下ではコア設定のみを紹介しますが、 :ref:`インストールされたプラグイン <plugins>` "
+"が独自のオプションを標準オプションダイアログに実装することでこのリストを拡張できることに注意してください。これにより、それぞれのプラグインが独自の設定ダイアログを持ち、それらのためだけに余分なメニュー項目を持つことを避けられます..."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:59
 msgid "General Settings"
-msgstr "一般設定"
+msgstr "一般情報"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:64
 msgid "**Override System Locale**"
-msgstr ""
+msgstr "**システムロケールを上書きする**"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:66
 msgid ""
@@ -122,28 +129,30 @@ msgid ""
 "language and manipulate numerical values. Enabling this group allows you to "
 "customize the behavior."
 msgstr ""
+"デフォルトでは、QGIS "
+"の言語の設定と数字の操作はオペレーティングシステムの設定に依存しています。このグループを有効にすると、動作をカスタマイズすることができます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:70
 msgid ""
 "Select from :guilabel:`User interface translation` the language to apply to "
 "the GUI"
-msgstr ""
+msgstr ":guilabel:`ユーザーインターフェースの言語` で、GUIに適用する言語を選択する"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:72
 msgid ""
 "Select in :guilabel:`Locale (number, date and currency formats)` the system "
 "on which date and numeric values should be input and rendered"
-msgstr ""
+msgstr ":guilabel:`ロケール（数字、日付、通貨の形式）` で、日付や数字の入力・表示形式を選択する"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:74
 msgid "|checkbox| :guilabel:`Show group (thousand) separator`"
-msgstr ""
+msgstr "|checkbox| :guilabel:`数字の3桁区切り（カンマ）を表示`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:76
 msgid ""
 "A summary of the selected settings and how they would be interpreted is "
 "displayed at the bottom of the frame."
-msgstr ""
+msgstr "選択された設定の概要とその設定がどのように解釈されるかについては、フレームの下部に表示されます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:80
 msgid "**Application**"
@@ -154,30 +163,36 @@ msgid ""
 "Select the :guilabel:`Style (QGIS restart required)` ie, the widgets look "
 "and placement in dialogs. Possible values depend on your Operating System."
 msgstr ""
+":guilabel:`スタイル (QGISの再起動が必要)` "
+"を選択します。つまり、ウィジェットの外観やダイアログ内の位置を設定します。可能な値はオペレーティングシステムによって異なります。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:84
 msgid ""
 "Define the :guilabel:`UI theme (QGIS restart required)` |selectString|. It "
 "can be 'default', 'Night Mapping', or 'Blend of Gray'"
 msgstr ""
+":guilabel:`UIテーマ (QGISの再起動が必要)` |selectString| を設定します。'default'、 'Night "
+"Mapping'、または 'Blend of Gray' を使用できます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:86
 msgid "Define the :guilabel:`Icon size` |selectString|"
-msgstr ""
+msgstr ":guilabel:`アイコンサイズ` |selectString| を定義します"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:87
 msgid ""
 "Define the :guilabel:`Font` and its :guilabel:`Size`. The font can be "
 "|radioButtonOn| :guilabel:`Qt default` or a user-defined one"
 msgstr ""
+"Define the :guilabel:`フォント` と :guilabel:`サイズ` を定義します。フォントは |radioButtonOn| "
+":guilabel:`Qt のデフォルト` か、ユーザ定義のフォントにすることができます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:89
 msgid "Change the :guilabel:`Timeout for timed messages or dialogs`"
-msgstr ""
+msgstr ":guilabel:`メッセージやダイアログのタイムアウト設定` を変更します"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:90
 msgid "|unchecked| :guilabel:`Hide splash screen at startup`"
-msgstr ""
+msgstr "|unchecked| :guilabel:`起動時にスプラッシュスクリーンを表示しない`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:91
 msgid ""
@@ -194,12 +209,14 @@ msgid ""
 "|checkbox| :guilabel:`Check QGIS version at startup` to keep you informed if"
 " a newer version is released"
 msgstr ""
+"|checkbox| :guilabel:`起動時にQGISバージョンを確認する` は、新しいバージョンがリリースされたときに知らせてくれます"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:97
 msgid ""
 "|unchecked| :guilabel:`Use native color chooser dialogs` (see :ref:`color-"
 "selector`)"
 msgstr ""
+"|unchecked| :guilabel:`ネイティブの色選択ダイアログを使用する` ( :ref:`color-selector` を参照)"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:99
 msgid ""
@@ -207,6 +224,8 @@ msgid ""
 ":ref:`data source manager <datasourcemanager>` dialog opened and allow "
 "interaction with QGIS interface while adding layers to project"
 msgstr ""
+"|unchecked| :guilabel:`モードレスデータソースマネージャダイアログ` は、プロジェクトにレイヤを追加する際に "
+":ref:`データソースマネージャ <datasourcemanager>` ダイアログが開いたままでQGIS インターフェースとの対話を可能にします。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:106
 msgid "**Project files**"
@@ -214,7 +233,7 @@ msgstr "**プロジェクトファイル**"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:108
 msgid ":guilabel:`Open project on launch`"
-msgstr ""
+msgstr ":guilabel:`起動時に開くプロジェクト`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:110
 msgid ""
@@ -222,20 +241,24 @@ msgid ""
 "template(s) and the most recent projects (with thumbnails) of the :ref:`user"
 " profile <user_profiles>`. No project is opened by default."
 msgstr ""
+"'ウェルカムページ' (デフォルト) は、can display the \"ニュース\" フィードやプロジェクトテンプレート、 "
+":ref:`ユーザープロファイル <user_profiles>` "
+"の最近使用したプロジェクト（とそのサムネイル画像）を表示します。デフォルトではプロジェクトは開かれません。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:113
 msgid "'New': opens a new project, based on the default template"
-msgstr ""
+msgstr "'新規': は、デフォルトのテンプレートに基づき新しいプロジェクトを開きます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:114
 msgid "'Most recent': reopens the last saved project"
-msgstr ""
+msgstr "'最近': は最後に保存したプロジェクトを再度開きます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:115
 msgid ""
 "and 'Specific': opens a particular project. Use the :guilabel:`...` button "
 "to define the project to use by default."
 msgstr ""
+"'指定': は特定のプロジェクトファイルを開きます。 :guilabel:`...` ボタンを押して、デフォルトで使用するプロジェクトを指定します。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:117
 msgid ""
@@ -247,25 +270,25 @@ msgid ""
 "activate |checkbox| :guilabel:`Create new project from default project` and "
 "then save a project in the project templates folder."
 msgstr ""
-"|checkbox| :guilabel:`既定のプロジェクトから新プロジェクトを作成する` 。 "
+"|checkbox| :guilabel:`既定のプロジェクトから新プロジェクトを作成する`  では、 "
 ":guilabel:`現在のプロジェクトを既定プロジェクトとして指定する` または  :guilabel:`既定を解除` "
-"ボタンをクリックすることができます。またユーザーが作成したプロジェクトテンプレートをファイルやディレクトリを指定するとブラウズすることができます。 "
-":menuselection:`プロジェクト --> テンプレートをもとに新規作成` "
-"というエントリでそれができます。プロジェクトテンプレートを保存したい場合は最初に |checkbox| "
+"ボタンをクリックすることができます。ファイルをブラウズして、ユーザー定義のプロジェクトテンプレートがあるディレクトリを指定することができます。これは "
+":menuselection:`プロジェクト --> テンプレートから新規作成` に追加されます。最初に |checkbox| "
 ":guilabel:`既定のプロジェクトから新プロジェクトを作成する` "
-"をアクティブにしてプロジェクトテンプレートフォルダーにプロジェクトを保存してください。"
+"をアクティブにしてから、プロジェクトテンプレートフォルダーにプロジェクトを保存してください。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:124
 msgid ""
 "|checkbox| :guilabel:`Prompt to save project and data source changes when "
 "required` to avoid losing changes you made."
 msgstr ""
-"行った変更が失われないようにする |checkbox| :guilabel:`必要なときにプロジェクトおよびデータソースの変更を保存するか尋ねる` 。"
+"|checkbox| :guilabel:`必要なときにプロジェクトおよびデータソースの変更を保存するか尋ねる`  "
+"は、変更が失われないよう必要な時に尋ねます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:126
 msgid ""
 "|checkbox| :guilabel:`Prompt for confirmation when a layer is to be removed`"
-msgstr "|checkbox| :guilabel:`レイヤーが削除される場合に確認のプロンプト`"
+msgstr "|checkbox| :guilabel:`レイヤが削除されるときに確認プロンプトを表示する`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:127
 msgid ""
@@ -274,7 +297,7 @@ msgid ""
 " QGIS but once the project is saved, trying to open with older release may "
 "fail because of features not available in that version."
 msgstr ""
-"|checkbox| :guilabel:`古いバージョンのQGISで保存されたプロジェクトファイルを開くときに警告します` 。 "
+"|checkbox| :guilabel:`古いバージョンのQGISで保存されたプロジェクトファイルを開く時に警告する`  "
 "QGISの古いバージョンで作成されたプロジェクトはいつでも開くことができますが、プロジェクトを保存すると、そのバージョンで使用できない機能のために古いリリースで開くことができなくなる場合があります。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:131
@@ -284,12 +307,12 @@ msgid ""
 "choose between 'Never', 'Ask', 'For this session only' and 'Always (not "
 "recommended)'."
 msgstr ""
-":guilabel:`マクロを有効` |selectString| "
-"。このオプションは、プロジェクトのイベントのアクションを実行するために書かれているマクロを処理するために作成されました。「常に（推奨されません）」「このセッションにのみ」、「尋ねる」、「決して」の中で選択できます。"
+":guilabel:`マクロを有効にする` |selectString| "
+"このオプションは、プロジェクトのイベントのアクションを実行するために書かれたマクロを扱うために作成されました。このオプションは、「利用しない」、「確認する」、「このセッションのみ」、「このセッションは無効」、「常に許可（非推奨）」の中で選択できます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:140
 msgid "System Settings"
-msgstr "システム設定"
+msgstr "システム"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:144
 msgid "**SVG paths**"
@@ -301,10 +324,12 @@ msgid ""
 " symbols`. These SVG files are then available to symbolize or label the "
 "features or decorate your map composition."
 msgstr ""
+":guilabel:`Scalable Vector Graphic (SVG) シンボルを探すパス` を追加・削除します。このSVG "
+"ファイルは地物のシンボルやラベル、マップコンポジションの装飾に利用できます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:150
 msgid "When using an SVG file in a symbol or a label, QGIS allows you to:"
-msgstr ""
+msgstr "シンボルやラベルにSVGファイルを使用する場合、QGISでは以下のことが可能です。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:152
 msgid ""
@@ -318,7 +343,7 @@ msgstr ""
 msgid ""
 "load the file from a remote URL: as above, the image will only be loaded on "
 "successful retrieval of the remote resource"
-msgstr ""
+msgstr "リモートURLからファイルをロード: 上と同様ですが、画像はリモートリソースの取得に成功した場合にのみロードされます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:156
 msgid ""
@@ -328,12 +353,16 @@ msgid ""
 "self-contained projects with custom SVG symbols which can be easily shared "
 "amongst different users and installations of QGIS."
 msgstr ""
+"SVG ファイルをアイテムに埋め込む: "
+"SVGファイルは現在のプロジェクト、スタイルデータベース、もしくは印刷レイアウトテンプレート内に埋め込まれます。これにより、このSVGファイルはアイテムの一部として常にレンダリングされます。"
+" "
+"これはカスタムSVGシンボルを持った自己完結型のプロジェクトを作成するのに便利な方法で、異なるユーザーやQGISインストール環境の間でカスタムSVGシンボルを簡単に共有できます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:162
 msgid ""
 "It is also possible to extract the embedded SVG file from a symbol or label "
 "and save it on disk."
-msgstr ""
+msgstr "埋め込まれたSVGファイルをシンボルやラベルから抽出して、ディスクに保存することもできます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:165
 msgid ""
@@ -351,11 +380,11 @@ msgstr "**プラグインパス**"
 msgid ""
 "Add or Remove :guilabel:`Path(s) to search for additional C++ plugin "
 "libraries`."
-msgstr ""
+msgstr ":guilabel:`追加のC++プラグインライブラリを探すパス` を追加・削除します。."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:174
 msgid "**Documentation paths**"
-msgstr ""
+msgstr "**ドキュメントのパス**"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:176
 msgid ""
@@ -366,10 +395,10 @@ msgid ""
 " a dialog, the topmost link is checked and if no corresponding page is "
 "found, the next one is tried, and so on."
 msgstr ""
-"QGISヘルプに使用する :guilabel:`ドキュメントパス（複数可）` "
-"を追加または削除します。デフォルトでは、使用されているバージョンに対応する公式オンラインユーザーマニュアルへのリンクが追加されています。ただし他のリンクを追加して上から下に優先順位を付けることができます。ダイアログの"
+":guilabel:`QGISのヘルプを探すパス` "
+"を追加・削除します。デフォルトでは、使用されているバージョンに対応する公式オンラインユーザーマニュアルへのリンクが追加されています。ただし、他のリンクを追加することもできます。ダイアログの"
 " :guilabel:`ヘルプ` "
-"ボタンをクリックするたびに、一番上のリンクがチェックされ、対応するページが見つからない場合は次のリンクが試されます。等々。"
+"ボタンをクリックするたびに一番上のリンクがチェックされ、対応するページが見つからない場合は次のリンクが順に試されるので、追加した他のリンクに上から下へと優先順位をつけられます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:184
 msgid ""
@@ -380,22 +409,22 @@ msgid ""
 "If no LTR documentation is available then the *testing* doc, with features "
 "from newer and development versions, is used."
 msgstr ""
-"ドキュメントはQGIS長期リリース（LTR）にのみバージョン管理され翻訳されています。つまり、通常のリリース（QGIS "
+"ドキュメントはQGIS長期リリース（LTR）に対してのみバージョン管理され翻訳されています。つまり、通常のリリース（QGIS "
 "3.0など）を実行している場合、ヘルプボタンはデフォルトで次のLTRマニュアルページ（3.4 "
-"LTR）を開きます。新しいリリース（3.2および3.4​​）の機能の説明が含まれる場合があります。 "
-"LTRドキュメントが利用できない場合は、新しいバージョンと開発バージョンの機能を備えた *testing* ドキュメントが使用されます。"
+"LTR）を開くため、新しいリリース（3.2および3.4​​）の機能の説明が含まれる場合があります。 "
+"LTRドキュメントが利用できない場合は、新しいバージョンと開発バージョンの機能が記載された *testing* ドキュメントが使用されます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:191
 msgid "**QSettings**"
-msgstr "**QSettings**"
+msgstr "**設定**"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:193
 msgid ""
 "It helps you :guilabel:`Reset user interface to default settings (restart "
 "required)` if you made any :ref:`customization <sec_customization>`."
 msgstr ""
-"何か :ref:`カスタマイズ <sec_customization>` をする場合に "
-":guilabel:`ユーザーインターフェイスをデフォルト設定へとリセット (再起動が必要)` するのに役立ちます"
+"何か :ref:`カスタマイズ <sec_customization>` をした後で、 "
+":guilabel:`ユーザーインターフェイスを既定の設定にリセット（QGISの再起動が必要）` する際に役立ちます"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:196
 msgid "**Environment**"
@@ -403,7 +432,7 @@ msgstr "**環境**"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:203
 msgid "System environment variables in QGIS"
-msgstr "QGISでのシステム環境変数"
+msgstr "QGISのシステム環境変数"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:205
 msgid ""
@@ -426,37 +455,40 @@ msgid ""
 "environment variables`, and it's possible to filter them by activating "
 "|checkbox| :guilabel:`Show only QGIS-specific variables`."
 msgstr ""
-"|checkbox| :guilabel: `カスタム変数を使用（再起動が必要-セパレータを含める）` 。変数を :guilabel:`追加` および "
-":guilabel:`削除` できます。定義済みの環境変数は :guilabel:`現在の環境変数` に表示され、 |checkbox| "
-":guilabel:`QGIS固有の変数のみを表示` を有効にするとそれらをフィルタできます。"
+"|checkbox| :guilabel: ` カスタム環境変数を用いる（区切り文字を含む - 再起動が必要）` 。変数を :guilabel:`追加`"
+" および :guilabel:`削除` できます。定義済みの環境変数は :guilabel:`現在の環境変数` に表示され、 |checkbox| "
+":guilabel:`QGIS固有の変数のみを表示する` を有効にするとそれらをフィルタできます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:223
 msgid "CRS Settings"
-msgstr "CRS 設定"
+msgstr "座標参照系（CRS ）"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:225
 msgid ""
 "For more information on how QGIS handles layer projection, please read the "
 "dedicated section at :ref:`label_projections`."
 msgstr ""
+"QGIS がレイヤの投影をどのように扱っているかについての詳細は、 :ref:`label_projections` の専用セクションを読んでください。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:233
 msgid "CRS Settings in QGIS"
-msgstr ""
+msgstr "QGISでのCRS設定"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:235
 msgid "**CRS for projects**"
-msgstr ""
+msgstr "**プロジェクトのCRS**"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:237
 msgid "There is an option to automatically set new project’s CRS:"
-msgstr ""
+msgstr "新しいプロジェクトのCRSを自動的に設定するオプションがあります。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:239
 msgid ""
 "|radioButtonOn|:guilabel:`Use CRS from first layer added`: the CRS of the "
 "project will be set to the CRS of the first layer loaded into it"
 msgstr ""
+"|radioButtonOn|:guilabel:`最初のレイヤのCRSを使う` : "
+"プロジェクトのCRSは、ロードされた最初のレイヤのCRSに設定されます"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:241
 msgid ""
@@ -464,8 +496,8 @@ msgid ""
 "by default to any new project and is left unchanged when adding layers to "
 "the project."
 msgstr ""
-"|radioButtonOff| :guilabel:`デフォルトのCRSを使用する` "
-"：事前に選択されたCRSはデフォルトで新しいプロジェクトに適用され、プロジェクトにレイヤを追加するときに変更されません。"
+"|radioButtonOff| :guilabel:`デフォルトのCRSを使う` "
+"：事前に選択されたCRSがデフォルトで新しいプロジェクトに適用され、プロジェクトにレイヤを追加しても変更されません。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:245
 msgid ""
@@ -473,81 +505,85 @@ msgid ""
 " Reference System of the project can still be overridden from the "
 ":menuselection:`Project --> Properties... --> CRS` tab."
 msgstr ""
+"この選択内容は保存され、以降のQGISセッションでも使われます。プロジェクトの座標参照系はなおも :menuselection:`プロジェクト --> "
+"プロパティ... --> 座標参照系` タブからオーバーライドすることができます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:249
 msgid "**CRS for layers**"
-msgstr ""
+msgstr "**レイヤのCRS**"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:251
 msgid ""
 ":guilabel:`Default CRS for layers`: select a default CRS to use when you "
 "create a layer"
-msgstr ""
+msgstr ":guilabel:`レイヤのデフォルトCRS` は、レイヤを作成した時のデフォルトのCRSを選択します"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:254
 msgid ""
 "You can also define the action to take when a new layer is created, or when "
 "a layer without a CRS is loaded."
-msgstr ""
+msgstr "新しいレイヤが作成されるか、座標参照系のないレイヤが読み込まれた時に実行するアクションを定義することもできます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:257
 msgid "|radioButtonOn| :guilabel:`Leave as unknown CRS (take no action)`"
-msgstr ""
+msgstr "|radioButtonOn| :guilabel:`未知のCRSのまま`  （何もしない）"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:258
 msgid "|radioButtonOff| :guilabel:`Prompt for CRS`"
-msgstr ""
+msgstr "|radioButtonOff| :guilabel:`CRSダイアログを表示`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:259
 msgid "|radioButtonOff| :guilabel:`Use project CRS`"
-msgstr "|radioButtonOff| :guilabel:`利用プロジェクトCRS`"
+msgstr "|radioButtonOff| :guilabel:`プロジェクトCRSを使う`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:260
 msgid "|radioButtonOff| :guilabel:`Use a default CRS`"
-msgstr ""
+msgstr "|radioButtonOff| :guilabel:`デフォルトCRSを使う`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:262
 msgid "**Default datum transformations**"
-msgstr "**デフォルトデータム変換**"
+msgstr "**デフォルトのデータ変換**"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:264
 msgid ""
 "In this group, you can control whether reprojecting layers to another CRS "
 "should be:"
-msgstr ""
+msgstr "このグループでは、レイヤを別のCRSに再投影するかどうかを制御できます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:266
 msgid "automatically processed using QGIS default transformations settings;"
-msgstr ""
+msgstr "QGIS のデフォルト変換設定を使用して自動的に処理します"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:267
 msgid "and/or more controlled by you with custom preferences such as:"
-msgstr ""
+msgstr "かつ/または、次のようなカスタム設定でユーザがより制御します"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:269
 msgid ""
 "|checkbox| :guilabel:`Ask for datum transformation if several are available`"
-msgstr "|checkbox| :guilabel:`複数ある場合はデータム変換するか尋ねる`"
+msgstr "|checkbox| :guilabel:`測地系変換が複数利用可能な場合は尋ねる`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:270
 msgid ""
 "a predefined list of datum transformations to apply by default. See "
 ":ref:`datum_transformation` for more details."
-msgstr "デフォルトで適用するデータム変換の事前定義リスト。詳細は :ref:`datum_transformation` 参照。"
+msgstr "デフォルトで適用する測地系変換の事前定義リスト。詳細は :ref:`datum_transformation` を参照してください。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:274
 msgid ""
 "|unchecked| :guilabel:`Planimetric measurements`: sets the default for the "
 "\"planimetric measurements\" property for newly created projects."
 msgstr ""
+"|unchecked| :guilabel:`平面計測`: は、新しく作成したプロジェクトに対する \"平面計測\" "
+"プロパティのデフォルトを設定します。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:281
 msgid "Data Sources Settings"
-msgstr "データソース設定"
+msgstr "データソース"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:288
 msgid "Data Sources Settings in QGIS"
-msgstr ""
+msgstr "QGISのデータソース設定"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:291
 msgid "**Feature attributes and table**"
@@ -555,15 +591,15 @@ msgstr "**地物属性とテーブル**"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:293
 msgid "|checkbox| :guilabel:`Open new attribute tables as docked windows`"
-msgstr ""
+msgstr "|checkbox| :guilabel:`ドックウィンドウとして新しい属性テーブルを開く`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:294
 msgid ""
 ":guilabel:`Copy features as` 'Plain text, no geometry', 'Plain text, WKT "
 "geometry', or 'GeoJSON' when pasting features in other applications."
 msgstr ""
-":guilabel:`形式を選択して地物をコピー` "
-"他のアプリケーションで地物を貼り付けるときに、「プレーンテキスト、ジオメトリなし」、「プレーンテキスト、WKTジオメトリ」、または「GeoJSON」。"
+":guilabel:`地物のコピー` は、地物をコピーして他のアプリケーションに貼り付けるときの形式として、 "
+"「プレーンテキスト（ジオメトリなし）」、「プレーンテキスト（WKTジオメトリ）」もしくは、「GeoJSON」のどれかを設定します。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:296
 msgid ""
@@ -571,8 +607,8 @@ msgid ""
 "attribute table at the opening. There are three possibilities: 'Show all "
 "features', 'Show selected features' and 'Show features visible on map'."
 msgstr ""
-":guilabel:`属性テーブルの動作` |selectString| ：開口部の属性テーブルのフィルタを設定します。 "
-"「すべての地物を表示」、「選択した地物を表示」、「地図上に表示される地物を表示」の3つの可能性があります。"
+":guilabel:`属性テーブルの動作` |selectString| ：属性テーブルを開いた時のフィルタを設定します。 "
+"「全ての地物を表示」、「選択した地物を表示」、「地図上に表示されている地物を表示」の3つうちのどれかです。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:299
 msgid ""
@@ -580,7 +616,7 @@ msgid ""
 "every opening. It can be 'Remember last view', 'Table view' or 'Form view'."
 msgstr ""
 ":guilabel:`デフォルトビュー` "
-"：毎回のオープン時の属性テーブルのビューモードを定義します。「最後のビューを保存する」、「テーブルビュー」、または「フォームビュー」にすることができます。"
+"：属性テーブルを開いた時のビューモードを定義します。「最後のビューを記憶する」、「テーブルビュー」、または「フォームビュー」のどれかです。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:301
 msgid ""
@@ -589,18 +625,18 @@ msgid ""
 "the attribute table will be quicker. The cache will be deleted when closing "
 "the attribute table."
 msgstr ""
-":guilabel:`属性テーブルの行キャッシュ` |selectNumber| "
-"。この行キャッシュでは、属性テーブルでの作業は速くなるように、最後にロードされた属性をN行分を保存することが可能となります。このキャッシュは属性テーブルを閉じるときに削除されます。"
+":guilabel:`属性テーブル行キャッシュ` |selectNumber| "
+"。この行キャッシュは最後にロードされた属性をN行分保存することで、属性テーブルでの作業をより速くできるようにします。キャッシュは属性テーブルを閉じるときに削除されます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:305
 msgid ""
 ":guilabel:`Representation for NULL values`. Here, you can define a value for"
 " data fields containing a NULL value."
-msgstr ":guilabel:`NULL値の表現` 。ここでは、NULL値を含むデータフィールドの値を定義できます。"
+msgstr ":guilabel:`NULL値の表示方法` 。NULL値を含んだデータフィールドの値を定義できます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:310
 msgid "**Improve opening of big data attribute table**"
-msgstr "**ビッグデータ属性テーブルを開くのを改善する**"
+msgstr "**巨大な属性テーブルを開く際の動作を改善する**"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:312
 msgid ""
@@ -611,8 +647,8 @@ msgid ""
 "opening the table, allowing a quick data loading."
 msgstr ""
 "大量のレコードを含むレイヤーを操作する場合、ダイアログがレイヤー内のすべての行を要求するため、属性テーブルを開くのが遅くなることがあります。 "
-":guilabel:`属性テーブルの振る舞い` を **地図に表示された地物を表示** "
-"に設定すると、QGISはテーブルを開くときに現在の地図キャンバス内にある地物だけを要求します。"
+":guilabel:`属性テーブルの動作` を **地図上に表示されている地物を表示** "
+"に設定すると、QGISはテーブルを開くときに現在の地図キャンバス内にある地物だけを要求するため、データの読み込みが早くなります。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:318
 msgid ""
@@ -636,8 +672,8 @@ msgid ""
 ":guilabel:`Scan for valid items in the browser dock` |selectString|. You can"
 " choose between 'Check extension' and 'Check file contents'."
 msgstr ""
-":guilabel:`ブラウザdock中で有効な項目をスキャン`  |selectString| "
-"。「拡張子をチェック」と「ファイル内容をチェック」のどちらかを選択できます。"
+":guilabel:`ブラウザドック内で有効なアイテムをスキャンする`  |selectString| "
+"。「拡張子のチェック」と「ファイルの内容のチェック」のどちらかを選択できます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:329
 msgid ""
@@ -646,9 +682,9 @@ msgid ""
 "of the Browser panel when querying such files. 'No', 'Basic scan' and 'Full "
 "scan' are possible options."
 msgstr ""
-":guilabel:`ブラウザドック内の圧縮ファイル（.zip）の内容をスキャンする` |selectString| "
-"では、このようなファイルを照会するときに、ブラウザパネルの下部にあるウィジェット情報の詳細度を定義します。 "
-"「なし」、「基本スキャン」、「完全スキャン」が可能なオプションです。"
+":guilabel:`ブラウザドック内で圧縮ファイル（.zip）にあるコンテンツをスキャンする` |selectString| "
+"では、圧縮ファイルを照会する際に、ブラウザパネルの下部に表示できるプロパティウィジェットでの情報をどの程度詳細に表示するかを定義します。 "
+"「いいえ」、「ベーシックスキャン」、「フルスキャン」の選択肢があります。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:333
 msgid ""
@@ -658,25 +694,25 @@ msgid ""
 "subdataset. The option allows you to control how to deal with sublayers when"
 " a file with sublayers is opened. You have the following choices:"
 msgstr ""
-":guilabel:`開くときにラスタサブレイヤーのプロンプト` 。いくつかのラスター・サポート・サブレイヤーは---"
-"それらはGDALでサブデータセットと呼ばれます。多くのnetCDF変数がある場合などは--- "
-"netCDFファイルで、GDALはサブデータセットとして、すべての変数を見ています。オプションは、サブレイヤーでファイルを開いたときのサブレイヤーに対処する方法を制御できます。次の選択肢があります。"
+":guilabel:`ラスタサブレイヤを開くときにプロンプトを表示する` 。ラスタファイルの一部はサブレイヤをサポートしています。 --- "
+"GDALでは「サブデータセット」と呼ばれています。一例としては、netCDF ファイルがあります。--- netCDF変数が多数ある場合、GDAL "
+"はすべての変数をサブデータセットとみなします。このオプションでは、サブレイヤを含むファイルを開いたときにサブレイヤをどのように扱うかを制御できます。これには次の選択肢があります。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:339
 msgid "‘Always’: Always ask (if there are existing sublayers)"
-msgstr "‘常に’:毎回確認 (サブレイヤーが存在する場合)"
+msgstr "‘常に’: 毎回、確認プロンプトを表示します（サブレイヤが存在する場合）"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:340
 msgid "‘If needed’: Ask if layer has no bands, but has sublayers"
-msgstr "‘必要な場合’:バンドがなくサブレイヤーをもつかを尋ねます"
+msgstr "‘必要な場合’: レイヤがバンドは無いがサブレイヤを持っている場合にプロンプトを表示します"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:341
 msgid "‘Never’: Never prompt, will not load anything"
-msgstr "‘利用しない’:確認せず何もロードしません"
+msgstr "‘利用しない’:プロンプトを表示せず、何もロードしません"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:342
 msgid "‘Load all’: Never prompt, but load all sublayers"
-msgstr "'‘すべてをロード':確認せず,すべてのサブレイヤーをロードします "
+msgstr "'‘すべてをロード':プロンプトは表示しませんが、すべてのサブレイヤをロードします "
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:344
 msgid ""
@@ -698,6 +734,10 @@ msgid ""
 "database compatible SQL. In those cases, QGIS will download the whole data "
 "and filter locally to be on the safe side, which is much less performant."
 msgstr ""
+"|checkbox| :guilabel:`可能であればサーバ側で式を実行する`: "
+"データソースから地物をリクエストする場合、QGISはフィルタ条件式を直接サーバに送信することでリクエストを最適化し、条件に一致する地物のみをダウンロードするようにします。例えば、ユーザーインターフェース上のリストで農家のうち「ベルンに住む人」のみをリストアップする場合、QGISは``WHERE"
+" \"ホームタウン\" = 'ベルン'`` "
+"をデータベースに送信します。場合によっては、フィルタ条件が複雑すぎてQGIS式からデータベース互換のSQLに変換できないことがあります。そのような場合は、QGISはデータ全体をダウンロードし、安全のためにローカルでフィルタリングを行いますが、これははるかにパフォーマンスが低下します。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:357
 msgid ""
@@ -706,6 +746,8 @@ msgid ""
 "option is meant as a safety break and should only be deactivated if you "
 "identify a misbehavior of the QGIS expression translation engine."
 msgstr ""
+"このオプションを無効にすると、QGISは常にデータ全体をダウンロードしてローカルでフィルタリングせざるを得なくなり、パフォーマンスが犠牲となります。この選択肢は安全のための措置であり、オプションを無効にするのはQGIS"
+" 式変換エンジンの誤動作を確認した場合のみにしてください。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:361
 msgid ""
@@ -718,7 +760,7 @@ msgstr ""
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:366
 msgid "**Hidden Browser Path**"
-msgstr "**隠しブラウザのパス**"
+msgstr "**ブラウザに表示しないパス**"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:368
 msgid ""
@@ -726,14 +768,17 @@ msgid ""
 "panel <browser_panel>`. Removing a folder from the list will make it "
 "available in the :guilabel:`Browser` panel."
 msgstr ""
+"このウィジェットは :ref:`ブラウザパネル <browser_panel>` "
+"から非表示にすることを選択したすべてのフォルダをリストアップします。リストからフォルダパスを削除すると、 :guilabel:`ブラウザ` "
+"パネルで表示できるようになります。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:378
 msgid "Rendering Settings"
-msgstr "レンダリング設定"
+msgstr "レンダリング"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:385
 msgid "Rendering tab of Project Properties dialog"
-msgstr "[プロジェクトのプロパティ]ダイアログの[レンダリング]タブ"
+msgstr "レンダリングタブ"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:387
 msgid "**Rendering behavior**"
@@ -746,33 +791,35 @@ msgid ""
 " to avoid each new layer being rendered in the canvas and slow down the "
 "process"
 msgstr ""
+"|checkbox| :guilabel:`追加レイヤのデフォルトで表示`: "
+"このオプションのチェックを外すと、新しいレイヤが読み込まれたときにキャンバスにレンダリングされてプロセスが遅くなるのを避けられるため、複数のレイヤを読み込む際に便利です。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:392
 msgid ""
 "|checkbox| :guilabel:`Use render caching where possible to speed up redraws`"
-msgstr "|checkbox| :guilabel:`再描画の速度を上げられる場合はレンダリングのキャッシュを利用`"
+msgstr "|checkbox| :guilabel:`再描画の速度を上げられる時にレンダリングのキャッシュを利用する`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:393
 msgid "|checkbox| :guilabel:`Render layers in parallel using many CPU cores`"
-msgstr "|checkbox| :guilabel:`多くのCPUコアを使用して並行でレイヤーをレンダリングする`"
+msgstr "|checkbox| :guilabel:`レイヤの描画を複数のCPUコアを使って並列に行う`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:394
 msgid "|checkbox| :guilabel:`Max cores to use`"
-msgstr "|checkbox| :guilabel:`使用する最大コア`"
+msgstr "|checkbox| :guilabel:`最大コア数`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:395
 msgid ":guilabel:`Map update interval (default to 250 ms)`"
-msgstr ":guilabel:`地図更新時間間隔(デフォルトは250 ms)`"
+msgstr ":guilabel:`更新間隔（デフォルトは250 msです）`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:399
 msgid ""
 "|checkbox| :guilabel:`Enable feature simplification by default for newly "
 "added layers`"
-msgstr "|checkbox| :guilabel:`新しく追加されたレイヤーにデフォルトで地物の簡素化を有効にする`"
+msgstr "|checkbox| :guilabel:`新規追加レイヤの地物の簡素化をデフォルトで有効にする`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:400
 msgid ":guilabel:`Simplification threshold`"
-msgstr ":guilabel:`単純化の閾値`"
+msgstr ":guilabel:`簡素化しきい値`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:401
 msgid ""
@@ -785,8 +832,9 @@ msgid ""
 "provides three algorithms: 'Distance' (default), 'SnapToGrid' and "
 "'Visvalingam'."
 msgstr ""
-":guilabel:`単純化アルゴリズム` "
-"：このオプションは、地物のローカルで「その場で」簡略化を実行し、ジオメトリレンダリングを高速化します。データプロバイダーからフェッチされたジオメトリは変更されません。これは、地物ジオメトリ（領域の計算など）を使用する式を持つ場合に重要です。これらの計算は、単純化されたジオメトリではなく元のジオメトリに対して実行されます。この目的のために、QGISは3つのアルゴリズムを提供します：「距離」（デフォルト）、「SnapToGrid」および「Visvalingam」。"
+":guilabel:`簡素化のアルゴリズム`: このオプションは、地物のローカルな簡素化を \"オンザフライ\" "
+"で実行し、ジオメトリのレンダリングを高速化します。この簡素化は、データプロバイダからフェッチされたジオメトリを変更することはしません。この違いは地物ジオメトリを使用する式（面積の計算など）を使用する場合に重要です。地物ジオメトリを使用する計算は、簡素化されたジオメトリではなく元のジオメトリに対して行われることが保証されます。地物の簡素化のためにQGISでは"
+" '距離' （デフォルトの設定）、 'グリッドにスナップ' 、そして 'Visvalingam' の3つのアルゴリズムを提供しています。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:408
 msgid ""
@@ -794,16 +842,18 @@ msgid ""
 "geometries are simplified by the provider (PostGIS, Oracle...) and unlike "
 "the local-side simplification, geometry-based calculations may be affected"
 msgstr ""
+"|unchecked| :guilabel:`可能であればプロバイダ側で簡素化する`: "
+"ジオメトリはプロバイダ（PostGIS、Oracle...）によって簡素化されます。ローカル側での簡素化と異なり、ジオメトリに関連する計算は簡素化の影響を受けます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:411
 msgid ":guilabel:`Maximum scale at which the layer should be simplified`"
-msgstr ":guilabel:`レイヤーを単純化する最大縮尺`"
+msgstr ":guilabel:`レイヤーを簡素化する最大スケール`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:412
 msgid ""
 "|doubleSpinBox| :guilabel:`Magnification level` (see the :ref:`magnifier "
 "<magnifier>`)"
-msgstr ""
+msgstr "|doubleSpinBox| :guilabel:`拡大レベル` (詳細は :ref:`拡大 <magnifier>` を参照)"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:414
 msgid ""
@@ -811,18 +861,18 @@ msgid ""
 "specific layer from its :menuselection:`Layer properties --> Rendering` "
 "menu."
 msgstr ""
-"グローバル設定に加えて、 :menuselection:`レイヤーのプロパティ --> レンダリング` "
-"メニューから特定のレイヤーについて地物単純化を設定できます。"
+"グローバル設定に加えて、特定のレイヤに対しても :menuselection:`レイヤのプロパティ --> レンダリング` "
+"メニューから地物の簡素化の設定をできます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:417
 msgid "**Rendering quality**"
-msgstr "**描画品質**"
+msgstr "**レンダリング品質**"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:419
 msgid ""
 "|checkbox| :guilabel:`Make lines appear less jagged at the expense of some "
 "drawing performance`"
-msgstr "|checkbox| :guilabel:`線のぎざぎざを目立たなくします(描画パフォーマンスが低下します)`"
+msgstr "|checkbox| :guilabel:`線のジャギーを目立たなくする（描画速度が若干低下します）`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:422
 msgid "**Curve segmentation**"
@@ -837,25 +887,24 @@ msgid ""
 "map units), the **more straight line** segments will be used during "
 "rendering."
 msgstr ""
-":guilabel:`セグメント描画許容誤差`：この設定は、円弧の描画方法を制御します。 **より小さい** "
-"最大角度（2つの連続した頂点と曲線の中心の間の角度）または最大の差（地図単位での2つの頂点のセグメントと曲線との間の距離）、 **より直線的な線** "
-"セグメントがレンダリング中に使用されます。"
+":guilabel:`分割の許容差`：この設定は、円弧の描画方法を制御します。最大角度（2つの連続した頂点と曲線の中心の間の角度を度単位で指定）または最大差（2つの頂点のセグメントと曲線との間の距離を地図単位で指定）が"
+" **より小さい** ほど、 **より多くの直線** セグメントがレンダリング中に使用されます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:429
 msgid ""
 ":guilabel:`Tolerance type`: it can be *Maximum angle* or *Maximum "
 "difference* between approximation and curve."
-msgstr ":guilabel:`許容誤差のタイプ` ：近似と曲線の *最大角度* または *最大差* になります。"
+msgstr ":guilabel:`許容誤差のタイプ` ：近似直線と曲線の間での *最大角度* または *最大差* を指定します。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:432
 msgid "**Rasters**"
-msgstr "**ラスター**"
+msgstr "**ラスタ**"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:434
 msgid ""
 "With :guilabel:`RGB band selection`, you can define the number for the Red, "
 "Green and Blue band."
-msgstr ":guilabel:`RGB バンド選択` で、赤、緑、青のバンドの数を定義できます。"
+msgstr ":guilabel:`RGB バンド選択` で、赤、緑、青のバンドの番号を定義できます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:436
 msgid ""
@@ -867,15 +916,16 @@ msgid ""
 ":guilabel:`Oversampling` value (between 0.0 and 99.99 - a large value means "
 "more work for QGIS - the default value is 2.0)."
 msgstr ""
-":guilabel:`ズームインの再サンプリング` と :guilabel:`ズームアウトの再サンプリング` の方法を定義できます。 "
-":guilabel:`ズームインの再サンプリング` の場合、「最近傍」、「双線形」、「立方」の3つのリサンプリング方法から選択できます。  "
-":guilabel:`ズームアウトの再サンプリング` の場合、「最近傍」と「平均」のどちらかを選択できます。 "
-":guilabel:`オーバーサンプリング` "
-"値も設定できます（0.0と99.99の間。値が大きほどQGISの処理がより多くなります。デフォルト値は2.0です）。"
+":guilabel:`拡大リサンプリング` と :guilabel:`縮小リサンプリング` の方法を定義できます。 "
+":guilabel:`拡大リサンプリング` "
+"の場合、「最近傍」、「バイリニア（Bilinear）」、「キュービック（Cubic）」の3つのリサンプリング方法から選択できます。  "
+":guilabel:`縮小リサンプリング` の場合、「最近傍」と「平均（Average）」のどちらかを選択できます。 "
+":guilabel:`オーバーサンプリング` 値も設定できます（0.0 から 99.99 "
+"の間。値が大きほどQGISの処理がより多くなります。デフォルト値は2.0です）。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:445
 msgid "*Contrast enhancement*"
-msgstr "*コントラスト強調*"
+msgstr "*コントラスト*"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:447
 msgid ""
@@ -883,15 +933,16 @@ msgid ""
 " :guilabel:`Multi band color (byte/band)` or :guilabel:`Multi band color "
 "(>byte/band)`. For each, you can set:"
 msgstr ""
-"コントラスト強調オプションは、 can be applied to :guilabel:`シングルバンドグレー`, "
-":guilabel:`マルチバンドカラー（バイト/バンド）` または :guilabel:`マルチバンドカラー（>バイト/バンド）` "
-"に適用できます。それぞれについて、次を設定できます："
+"コントラストの強調オプションを :guilabel:`単バンドグレー` 、 :guilabel:`マルチバンドカラー（1バイト/バンド）` または "
+":guilabel:`マルチバンドカラー（1バイト超/バンド）` のラスタファイルに適用できます。それぞれについて、次を設定できます："
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:451
 msgid ""
 "the :guilabel:`Algorithm` to use, whose values can be 'No stretch', 'Stretch"
 " to MinMax', 'Stretch and Clip to MinMax' or 'Clip to MinMax'"
 msgstr ""
+"使用する :guilabel:`アルゴリズム` "
+"の値は、「強調なし」、「最小最大範囲に引き伸ばす」、「最小最大範囲に引き伸ばしカット」、あるいは「最小最大範囲以外はカット」のどれかです。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:453
 msgid ""
@@ -899,10 +950,11 @@ msgid ""
 "'Cumulative pixel count cut', 'Minimum/Maximum', 'Mean +/- standard "
 "deviation'."
 msgstr ""
+"適用する :guilabel:`制限（最小/最大）` の値は、「累積ピクセル数のカット」、「最小 / 最大」、「平均 +/- 標準偏差」のどれかです。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:456
 msgid "For rasters rendering, you can also define the following options:"
-msgstr ""
+msgstr "ラスタファイルのレンダリングに対しては、次のオプションも定義することができます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:458
 msgid ":guilabel:`Cumulative pixel count cut limits`"
@@ -921,11 +973,12 @@ msgid ""
 "|checkbox| :guilabel:`Map canvas refresh` to debug rendering duration in the"
 " :guilabel:`Log Messages` panel."
 msgstr ""
+"|checkbox| :guilabel:`キャンバスの更新`  :guilabel:`ログメッセージ` パネルでレンダリング時間のデバッグを行えます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:469
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:476
 msgid "Canvas and Legend Settings"
-msgstr "キャンバスと凡例設定"
+msgstr "キャンバスと凡例"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:478
 msgid "These properties let you set:"
@@ -936,12 +989,11 @@ msgid ""
 "the **Default map appearance (overridden by project properties)**: the "
 ":guilabel:`Selection color` and :guilabel:`Background color`."
 msgstr ""
-"**デフォルトの地図の外観（プロジェクトのプロパティによって上書きされます）** ： :guilabel:`選択色` および "
-":guilabel:`背景色` 。"
+"**デフォルトの体裁（プロジェクトプロパティに上書きされます）** ： :guilabel:`選択物の色` および :guilabel:`背景色` 。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:483
 msgid "**Layer legend** interaction:"
-msgstr ""
+msgstr "**レイヤの凡例**  に対するインタラクション"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:485
 msgid ""
@@ -949,8 +1001,8 @@ msgid ""
 "'Open layer properties', 'Open attribute table' or 'Open layer styling dock'"
 " with the double click."
 msgstr ""
-":guilabel:`凡例のダブルクリックアクション` |selectString| "
-"ダブルクリックで[レイヤープロパティを開く]、[属性テーブルを開く]、[レイヤースタイリングドックを開く]のいずれかを行うことができます。"
+":guilabel:`凡例をダブルクリックした場合の動作` |selectString| "
+"ダブルクリックで、「レイヤのプロパティを開く」、「属性テーブルを開く」、「レイヤスタイルドックを開く」のいずれかを行うことができます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:488
 msgid ""
@@ -958,32 +1010,33 @@ msgid ""
 "panel, e.g. when applying a categorized or rule-based renderer (see "
 ":ref:`vector_style_menu` for more information)."
 msgstr ""
-"レイヤパネルにチェックボックス |checkbox| :guilabel:`分類属性名を表示` "
-"、たとえば分類された、またはルールベースのレンダラーを適用する場合（詳細は :ref:`vector_style_menu` を参照）。"
+"|checkbox| :guilabel:`レイヤタイトルに分類属性を表示する` "
+"たとえばカテゴリ値による定義やルールによる定義のレンダラを適用する場合、レイヤパネルに分類に使用した属性名を表示します（詳細は "
+":ref:`vector_style_menu` を参照）。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:491
 msgid "the :guilabel:`WMS getLegendGraphic Resolution`"
-msgstr ""
+msgstr "the :guilabel:`WMS getLegendGraphic 解像度`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:492
 msgid ""
 "the :guilabel:`Delay` in milliseconds of layers :ref:`map tips <maptips>` "
 "display"
-msgstr ""
+msgstr ":guilabel:`表示までの遅延（ミリ秒）` レイヤの :ref:`地図のtips <maptips>` が表示されるまでの遅延です。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:498
 msgid "Map tools Settings"
-msgstr "地図ツールの設定"
+msgstr "ツール"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:505
 msgid "Map tools Settings in QGIS"
-msgstr ""
+msgstr "QGISのマップツール設定"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:507
 msgid ""
 "This tab offers some options regarding the behavior of the :ref:`Identify "
 "tool <identify>`."
-msgstr "このタブは :ref:`識別ツール <identify>` の動作に関するいくつかのオプションを提供しています 。"
+msgstr "このタブは :ref:`地物情報表示ツール <identify>` の動作に関するいくつかのオプションを提供しています 。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:509
 msgid ""
@@ -991,25 +1044,25 @@ msgid ""
 "is a tolerance distance within which the identify tool will depict results "
 "as long as you click within this tolerance."
 msgstr ""
-":guilabel:`地物を識別し地図ヒントを表示するための検索半径` は、この許容範囲内でクリックする限り識別ツールが結果を表示する許容距離です。"
+":guilabel:`地物検索・Tips表示のための検索半径` は、この許容範囲内でクリックする限り地物情報表示ツールが結果を表示する許容距離です。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:512
 msgid ""
 ":guilabel:`Highlight color` allows you to choose with which color features "
 "being identified should be highlighted."
-msgstr ":guilabel:`強調表示の色` を使用すると、識別される地物を強調表示する色を選択できます。"
+msgstr ":guilabel:`ハイライト色` を使用すると、地物情報表示されている地物を強調表示する色を選択できます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:514
 msgid ""
 ":guilabel:`Buffer` determines a buffer distance to be rendered from the "
 "outline of the identify highlight."
-msgstr ":guilabel:`バッファ` は、特定のハイライトの概要からレンダリングされるバッファ距離を決定します。"
+msgstr ":guilabel:`バッファ` は、地物情報表示でハイライトされている地物の輪郭に表示するバッファの距離を決定します。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:516
 msgid ""
 ":guilabel:`Minimum width` determines how thick should the outline of a "
 "highlighted object be."
-msgstr ":guilabel:`最小幅` 強調表示されるオブジェクトの輪郭がどれだけの厚さであるべきかを決定。"
+msgstr ":guilabel:`最小幅` ハイライト表示されるオブジェクトの輪郭がどれだけの厚さであるべきかを決定します。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:519
 msgid "**Measure tool**"
@@ -1021,13 +1074,14 @@ msgstr "計測ツールの :guilabel:`ラバーバンド色` を定義します�
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:522
 msgid "Define :guilabel:`Decimal places`"
-msgstr ":guilabel:`小数位` を定義"
+msgstr ":guilabel:`小数点以下桁数` を定義します"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:523
 msgid ""
 "|checkbox| :guilabel:`Keep base unit` to not automatically convert large "
 "numbers (e.g., meters to kilometers)"
-msgstr "|checkbox|  :guilabel:`ベース単位を維持` は、大きい数を自動的に変換しません（例えば、メートルをキロメートルに）"
+msgstr ""
+"|checkbox|  :guilabel:`基本単位の維持` は、大きい数を自動的に変換しません（例えば、メートルをキロメートルに変換するなど）"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:525
 msgid ""
@@ -1035,6 +1089,8 @@ msgid ""
 "'Feet', 'Yards', 'Miles', 'Nautical Miles', 'Centimeters', 'Millimeters', "
 "'Degrees' or 'Map Units'"
 msgstr ""
+":guilabel:`優先される距離の単位`: "
+"は、「メートル」、「キロメートル」、「フィート」、「ヤード」、「マイル」、「海里」、「センチメートル」、「ミリメートル」、「度」、「地図上の単位」のいずれかです。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:528
 msgid ""
@@ -1043,6 +1099,8 @@ msgid ""
 "'Acres', 'Square nautical miles', 'Square centimeters', 'Square "
 "millimeters', 'Square degrees' or 'Map Units'"
 msgstr ""
+":guilabel:`優先される面積の単位`: "
+"は、「平方メートル」、「平方キロメートル」、「兵法フィート」、「平方ヤード」、「平方マイル」、「ヘクタール」、「エーカー」、「平方海里」、「平方センチメートル」、「平方ミリメートル」、「平方度」、「地図上の単位」のいずれかです。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:532
 msgid ""
@@ -1050,14 +1108,16 @@ msgid ""
 "'Gon/gradians', 'Minutes of arc', 'Seconds of arc', 'Turns/revolutions', "
 "milliradians (SI definition) or mil (NATO/military definition)"
 msgstr ""
+":guilabel:`優先される角度の単位`: "
+"は、「度」、「ラジアン」、「グラード」、「弧の分」、「弧の秒」、「Turns/revolutions」、「ミリラジアン（SI定義）」、「ミル（NATO定義）」のいずれかです。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:536
 msgid "**Panning and zooming**"
-msgstr "**パンとズーム**"
+msgstr "**ズーム**"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:538
 msgid "Define a :guilabel:`Zoom factor` for zoom tools or wheel mouse"
-msgstr "ズームツールまたはホイールマウスの :guilabel:`ズーム倍率` を定義"
+msgstr "ズームツールまたはホイールマウスの :guilabel:`ズーム倍率` を定義します。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:542
 msgid "**Predefined scales**"
@@ -1072,12 +1132,12 @@ msgid ""
 msgstr ""
 "ここには、あらかじめ定義された縮尺のリストがあります。 |signPlus| と |signMinus| "
 "ボタンで個人用の縮尺を追加または削除できます。また、縮尺を ``.XML`` "
-"ファイルに読み込みまたは書き出しできます。変更を削除し、定義済みリストにリセットする可能性をまだ持っていることに注意してください。"
+"ファイルに読み込みまたは書き出しできます。なお、変更した内容を削除して定義済みのリストに戻すこともできます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:555
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:562
 msgid "Colors Settings"
-msgstr "色の設定"
+msgstr "色"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:564
 msgid ""
@@ -1090,29 +1150,32 @@ msgstr ""
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:568
 msgid ":guilabel:`Recent colors` showing recently used colors"
-msgstr ":guilabel:`最近使用した色` ：最近使用した色を表示する"
+msgstr ":guilabel:`最近使った色` ：最近使用した色を表示します"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:569
 msgid ":guilabel:`Standard colors`, the default palette of colors"
-msgstr ""
+msgstr ":guilabel:`標準色` ：デフォルトの色パレットです"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:570
 msgid ""
 ":guilabel:`Project colors`, a set of colors specific to the current project "
 "(see :ref:`default_styles_properties` for more details)"
 msgstr ""
+":guilabel:`プロジェクトの色` ：現在のプロジェクトに固有の色のセットです（詳細は "
+":ref:`default_styles_properties` を参照してください）。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:572
 msgid ""
 ":guilabel:`New layer colors`, a set of colors to use by default when new "
 "layers are added to QGIS"
-msgstr ":guilabel:`新しいレイヤの色` 、新しいレイヤがQGISに追加されたときにデフォルトで使用する色のセット"
+msgstr ":guilabel:`新しいレイヤの色`  ：新しいレイヤがQGISに追加されたときにデフォルトで使用される色のセットです。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:574
 msgid ""
 "or custom palette(s) you can create or import using the :guilabel:`...` "
 "button next to the palette combobox."
 msgstr ""
+"あるいは、パレットコンボボックスの横にある :guilabel:`...` ボタンを押して、カスタムパレットを新規作成もしくはインポートできます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:577
 msgid ""
@@ -1121,25 +1184,25 @@ msgid ""
 " in the color button drop-down. Custom palettes can also be added to this "
 "widget thanks to the :guilabel:`Show in Color Buttons` option."
 msgstr ""
-"デフォルトでは、 :guilabel:`最近使用した色` 、 :guilabel:`標準色`、および :guilabel:`プロジェクトの色` "
-"パレットは削除できず、カラーボタンドロップダウンに表示されるように設定されています。  :guilabel:`カラーボタンで表示` "
-"オプションのおかげで、このウィジェットにカスタムパレットを追加することもできます。"
+"デフォルトでは、 :guilabel:`最近使った色` 、 :guilabel:`標準色`、および :guilabel:`プロジェクトの色` "
+"パレットは削除できず、色ボタンドロップダウンに表示されるように設定されています。カスタムパレットは :guilabel:`色ボタンに表示` "
+"オプションで、ウィジェットに追加できます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:582
 msgid ""
 "For any of the palettes, you can manage the list of colors using the set of "
 "tools next to the frame, ie:"
-msgstr ""
+msgstr "どのパレットでも、フレームの横にあるツールセットを使って色のリストを管理することができます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:585
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1201
 msgid "|signPlus| :guilabel:`Add` or |signMinus| :guilabel:`Remove` color"
-msgstr ""
+msgstr "|signPlus| :guilabel:`色の追加` あるいは |signMinus| :guilabel:`色の削除`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:586
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1202
 msgid "|editCopy| :guilabel:`Copy` or |editPaste| :guilabel:`Paste` color"
-msgstr ""
+msgstr "|editCopy| :guilabel:`色のコピー` あるいは |editPaste| :guilabel:`色の貼り付け`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:587
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1203
@@ -1147,6 +1210,8 @@ msgid ""
 "|fileOpen| :guilabel:`Import` or |fileSave| :guilabel:`Export` the set of "
 "colors from/to :file:`.gpl` file."
 msgstr ""
+"|fileOpen| :guilabel:`ファイルから色のインポート` あるいは |fileSave| :guilabel:`色のエクスポート` "
+"で色のセットを  :file:`.gpl` ファイルからインポート / ファイルへエクスポート"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:590
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1206
@@ -1155,21 +1220,22 @@ msgid ""
 "Selector <color-selector>` dialog. You can also rename it by double-clicking"
 " in the :guilabel:`Label` column."
 msgstr ""
+"リスト内の色をダブルクリックして :ref:`カラーセレクタ <color-selector>` ダイアログで色を調整したり、置き換えたりできます。 "
+":guilabel:`ラベル` 列をダブルクリックして、色の名前を変更することもできます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:599
 msgid "Digitizing Settings"
-msgstr "デジタイズの設定"
+msgstr "デジタイズ"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:606
 msgid "Digitizing Settings in QGIS"
-msgstr ""
+msgstr "QGISのデジタイズ設定"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:608
 msgid ""
 "This tab helps you configure general settings when :ref:`editing vector "
 "layer <editingvector>` (attributes and geometry)."
-msgstr ""
-"このタブは、 :ref:`ベクターレイヤーを編集する <editingvector>` （属性とジオメトリ）ときに一般的な設定を行うのに役立ちます。"
+msgstr "このタブでは、 :ref:`ベクタレイヤを編集する <editingvector>` （属性とジオメトリ）際の一般的な設定を行います。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:611
 msgid "**Feature creation**"
@@ -1180,11 +1246,12 @@ msgid ""
 "|checkbox| :guilabel:`Suppress attribute form pop-up after feature "
 "creation`: this choice can be overridden in each layer properties dialog."
 msgstr ""
-"|checkbox| :guilabel:`地物作成後に属性フォームをポップアップしない` ：この選択は各レイヤプロパティダイアログで上書きできます。"
+"|checkbox| :guilabel:`地物作成後に属性フォームをポップアップさせない` "
+"：この選択は各レイヤのプロパティダイアログで上書きできます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:615
 msgid "|checkbox| :guilabel:`Reuse last entered attribute values`."
-msgstr "|checkbox| :guilabel:`最後に入力した属性値を再利用する`"
+msgstr "|checkbox| :guilabel:`最後に入力した値を利用する`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:616
 msgid ""
@@ -1195,20 +1262,22 @@ msgid ""
 "or to switch it off. GEOS geometry validation is much faster, but the "
 "disadvantage is that only the first geometry problem will be reported."
 msgstr ""
-":guilabel:`ジオメトリを検証` "
-"。多くのノードを持つ複雑なラインとポリゴンを編集すると、レンダリングが非常に遅くなる可能性があります。QGISでのデフォルトの検証手順は多くの時間がかかることがあるからです。レンダリングを速くするために、（GEOS"
+":guilabel:`ジオメトリの検証` "
+"。多くのノードを持つ複雑なラインとポリゴンを編集すると、レンダリングが非常に遅くなる可能性があります。これは、QGISでのデフォルトの検証手順は多くの時間がかかることがあるためです。レンダリングを高速化するために、GEOSジオメトリ検証を選択する（GEOS"
 " "
-"3.3から始まる）GEOSジオメトリ検証を選択するか、またはそれをオフにすることが可能です。GEOSジオメトリの検証ははるかに高速ですが、欠点は、最初のジオメトリの問題だけが報告されることです。"
+"3.3以降）か、または検証をオフにすることが可能です。GEOSジオメトリの検証ははるかに高速ですが、最初に見つかったジオメトリの問題しか報告されないという欠点があります。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:623
 msgid ""
 "Note that depending on the selection, reports of geometry errors may differ "
 "(see :ref:`typesofgeomerrors`)"
 msgstr ""
+"選択範囲によっては、ジオメトリエラーの報告が他と異なる場合があることに注意してください（詳細は :ref:`typesofgeomerrors` "
+"を参照）"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:625
 msgid ":guilabel:`Default Z value` to use when creating new 3D features."
-msgstr ""
+msgstr ":guilabel:`デフォルトのZ値` は、新しい3次元地物を作成するときに使うZ値のデフォルト値です。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:627
 msgid "**Rubberband**"
@@ -1219,10 +1288,11 @@ msgid ""
 "Define Rubberband :guilabel:`Line width`, :guilabel:`Line color` and "
 ":guilabel:`Fill color`."
 msgstr ""
+"ラバーバンドの :guilabel:`線幅` 、 :guilabel:`線の色` および :guilabel:`塗りつぶし色` を定義します。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:631
 msgid ":guilabel:`Don't update rubberband during vertex editing`."
-msgstr ""
+msgstr ":guilabel:`頂点の編集中にラバーバンドを更新しない`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:633
 msgid "**Snapping**"
@@ -1232,46 +1302,49 @@ msgstr "**スナップ**"
 msgid ""
 "|checkbox| :guilabel:`Enable snapping by default` activates snapping when a "
 "project is opened"
-msgstr ""
+msgstr "|checkbox| :guilabel:`デフォルトでスナップを有効にする` プロジェクトを開いたときにスナップを有効にします"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:637
 msgid ""
 "Define :guilabel:`Default snap mode` |selectString| ('Vertex', 'Vertex and "
 "segment', 'Segment')"
 msgstr ""
+":guilabel:`既定のスナップモード` を定義します。  |selectString| ('点'、 '点とセグメント', 'セグメント')"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:639
 msgid "Define :guilabel:`Default snapping tolerance` in map units or pixels"
-msgstr ":guilabel:`デフォルトスナップ許容値` を地図の単位またはピクセルで指定します"
+msgstr ":guilabel:`既定のスナップ許容量` を地図上の単位またはピクセルで指定します"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:640
 msgid ""
 "Define the :guilabel:`Search radius for vertex edits` in map units or pixels"
-msgstr ":guilabel:`頂点編集用の検索半径` を地図単位またはピクセルで指定して下さい"
+msgstr ":guilabel:`頂点編集用検索半径` を地図上の単位またはピクセルで指定します"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:641
 msgid ""
 ":guilabel:`Display main dialog as (restart required)`: set whether the "
 "Advanced Snapping dialog should be shown as 'Dialog' or 'Dock'."
 msgstr ""
+":guilabel:`メインダイアログの表示（再起動が必要）` : は、スナップオプションが 'ダイアログ' として開かれるか、’ドック’ "
+"として開かれるかを設定します。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:643
 msgid ":guilabel:`Snapping marker color`"
-msgstr ""
+msgstr ":guilabel:`スナップマーカーの色`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:644
 msgid ""
 "|checkbox| :guilabel:`Show snapping tooltips` such as name of the layer "
 "whose feature you are about to snap. Helpful when multiple features overlap."
 msgstr ""
-"スナップしようとしている地物のあるレイヤーの名前など、 |checkbox| :guilabel:`スナップツールチップを表示` "
-"します。複数の地物が重なり合っている場合に役立ちます。"
+"|checkbox| :guilabel:`スナップツールチップを表示する` "
+"スナップしようとしている地物のあるレイヤの名前などを表示します。複数の地物が重なり合っている場合に役立ちます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:646
 msgid ""
 "|checkbox| :guilabel:`Enable snapping on invisible features (not shown on "
 "the map canvas)`"
-msgstr ""
+msgstr "|checkbox| :guilabel:`非表示の地物に対してもスナップを有効にする` （マップキャンバス上に現れていない地物）"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:650
 msgid "**Vertex markers**"
@@ -1279,22 +1352,23 @@ msgstr "**頂点マーカー**"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:652
 msgid "|checkbox| :guilabel:`Show markers only for selected features`"
-msgstr "|checkbox| :guilabel:`選択された地物のみマーカーを表示する`"
+msgstr "|checkbox| :guilabel:`選択地物のみマーカーを表示する`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:653
 msgid ""
 "Define vertex :guilabel:`Marker style` |selectString| ('Cross' (default), "
 "'Semi transparent circle' or 'None')"
 msgstr ""
-":guilabel:`マーカースタイル` |selectString| 頂点を定義します（「クロス」（デフォルト）、「半透明の円」または「なし」）"
+":guilabel:`マーカースタイル` |selectString| "
+"頂点マーカースタイルを定義します（「クロス」（デフォルト）、「半透明の円」または「なし」）"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:655
 msgid "Define vertex :guilabel:`Marker size (in millimeter)`"
-msgstr ""
+msgstr ":guilabel:`マーカーの大きさ（単位ミリ）` 頂点マーカーの大きさを定義します"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:657
 msgid "**Curve offset tool**"
-msgstr "**カーブオフセットツール**"
+msgstr "**曲線のオフセットツール**"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:659
 msgid ""
@@ -1303,8 +1377,9 @@ msgid ""
 "influence the shape of the line offset. These options are possible starting "
 "from GEOS 3.3."
 msgstr ""
-"次の3つのオプションは :ref:`sec_advanced_edit` 中の |offsetCurve| :sup:`オフセット曲線` "
-"ツールを参照してください。各種設定を通じ、オフセット線の形状に影響を与えることが可能です。これらのオプションはGEOS 3.3から始まり可能です。"
+"次の3つのオプションについては、 :ref:`sec_advanced_edit` 中の |offsetCurve| :sup:`オフセット曲線` "
+"ツールを参照してください。さまざまな設定により、オフセット線の形状に影響を与えることができます。これらのオプションはGEOS 3.3 "
+"以降で使用可能です。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:664
 msgid ":guilabel:`Join style`: 'Round', 'Mitre' or 'Bevel'"
@@ -1312,40 +1387,40 @@ msgstr ":guilabel:`継ぎ目スタイル` ：「ラウンド」「マイター�
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:665
 msgid ":guilabel:`Quadrant segments`"
-msgstr ":guilabel:`Quadrantセグメント`"
+msgstr ":guilabel:`象限セグメント`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:666
 msgid ":guilabel:`Miter limit`"
-msgstr ":guilabel:`継ぎ目制限`"
+msgstr ":guilabel:`miter 制限`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:672
 msgid "Layouts Settings"
-msgstr ""
+msgstr "レイアウト"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:679
 msgid "Layouts Settings in QGIS"
-msgstr ""
+msgstr "QGISのレイアウト設定"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:682
 msgid "**Composition defaults**"
-msgstr "**コンポジションデフォルト**"
+msgstr "**レイアウトのデフォルト**"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:684
 msgid ""
 "You can define the :guilabel:`Default font` used within the :ref:`print "
 "layout <label_printlayout>`."
 msgstr ""
+":ref:`プリントレイアウト <label_printlayout>` で使用される :guilabel:`デフォルトフォント`  を定義できます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:687
 msgid "**Grid appearance**"
-msgstr "**グリッドの外観**"
+msgstr "**グリッドの外見**"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:689
 msgid ""
 "Define the :guilabel:`Grid style` |selectString| ('Solid', 'Dots', "
 "'Crosses')"
-msgstr ""
-":guilabel:`グリッドのスタイル` |selectString| ('Solid', 'Dots', 'Crosses')を定義します。"
+msgstr ":guilabel:`グリッドスタイル` |selectString| ('ソリッド'、 '点'、 '十字') を定義します。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:690
 msgid "Define the :guilabel:`Grid color`"
@@ -1353,33 +1428,35 @@ msgstr ":guilabel:`グリッド色` を定義します"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:692
 msgid "**Grid and guide defaults**"
-msgstr "**グリッドとガイドデフォルト**"
+msgstr "**グリッドとガイドのデフォルト**"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:694
 msgid "Define the :guilabel:`Grid spacing` |selectNumber|"
-msgstr ":guilabel:`グリッド間隔` |selectNumber| を定義"
+msgstr ":guilabel:`グリッド間隔` |selectNumber| を定義します"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:695
 msgid "Define the :guilabel:`Grid offset` |selectNumber| for X and Y"
-msgstr ""
+msgstr ":guilabel:`グリッドオフセット` |selectNumber| を X方向とY方向で定義します"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:696
 msgid "Define the :guilabel:`Snap tolerance` |selectNumber|"
-msgstr ":guilabel:`スナップ許容誤差` |selectNumber| を定義"
+msgstr ":guilabel:`スナップ許容量` |selectNumber| を定義します"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:699
 msgid "**Layout Paths**"
-msgstr ""
+msgstr "**レイアウトのパス**"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:701
 msgid ""
 "Define :guilabel:`Path(s) to search for extra print templates`: a list of "
 "folders with custom layout templates to use while creating new one."
 msgstr ""
+":guilabel:`追加のプリントテンプレートを探すパス` "
+"新しいレイアウトを作成する際に使用するカスタムのレイアウトテンプレートが保存されたフォルダの一覧を定義します。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:708
 msgid "GDAL Settings"
-msgstr "GDAL 設定"
+msgstr "GDAL"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:710
 msgid ""
@@ -1388,16 +1465,19 @@ msgid ""
 "The :guilabel:`GDAL` tab currently exposes the drivers for raster formats "
 "with their capabilities."
 msgstr ""
+"`GDAL <https://gdal.org>`_ とは、ベクタファイルやラスタファイルのデータ変換ライブラリです。GDAL "
+"はさまざまなフォーマットでデータを読み書きするためのドライバを提供します。The :guilabel:`GDAL` "
+"タブでは今のところ、ラスタ形式に対するドライバとその機能を公開しています。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:716
 msgid "GDAL driver options"
-msgstr ""
+msgstr "GDAL ドライバオプション"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:718
 msgid ""
 "This frame provides ways to customize the behavior of drivers that support "
 "read and write access:"
-msgstr ""
+msgstr "このフレームでは、読み取りおよび書き込みアクセスをサポートするドライバの動作をカスタマイズする方法を提供します。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:723
 msgid ""
@@ -1407,10 +1487,13 @@ msgid ""
 "colorimetry, alpha...) to use when outputting raster files. The parameters "
 "depend on the driver."
 msgstr ""
+":guilabel:`作成オプションを編集`: "
+"ファイル変換の際に使う別のプロファイルを編集または追加することができます。すなわち、ラスタファイルを出力する際に使用するパラメータ（圧縮の種類とレベル、ブロックサイズ、全体図、測色、アルファ..."
+" ）の事前に定義された組み合わせのセットを編集・追加できます。パラメータはドライバに依存します。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:733
 msgid "Sample of create options profile (for GeoTiff)"
-msgstr ""
+msgstr "オプションプロファイルの作成サンプル (GeoTiff 用)"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:735
 msgid ""
@@ -1419,26 +1502,28 @@ msgid ""
 "default parameters if you have changed them. Some drivers (eg, GeoTiff) have"
 " some sample of profiles you can work with."
 msgstr ""
+"ダイアログの上部には現在のプロファイルが一覧表示され、新しいプロファイルを追加したり、削除したりできます。プロファイルを変更した場合に、デフォルトのパラメータにリセットすることもできます。一部のドライバ（GeoTiff"
+" など）には、プロファイルのサンプルがあります。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:740
 msgid "At the bottom of the dialog:"
-msgstr ""
+msgstr "ダイアログの下部："
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:742
 msgid ""
 "The |signPlus| button lets you add rows to fill with the parameter name and "
 "value"
-msgstr ""
+msgstr "|signPlus| ボタンを押すと、パラメータの名称と値を入力できる行を追加します"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:743
 msgid "The |signMinus| button deletes the selected parameter"
-msgstr ""
+msgstr "|signMinus| ボタンを押すと、選択したパラメータを削除します"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:744
 msgid ""
 "Click the :guilabel:`Validate` button to check that the creation options "
 "entered for the given format are valid"
-msgstr ""
+msgstr ":guilabel:`検証` ボタンをクリックすると、指定されたフォーマットに対して入力された作成オプションが有効であるかを確認します"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:746
 msgid ""
@@ -1446,18 +1531,20 @@ msgid ""
 "the `GDAL raster drivers documentation "
 "<https://gdal.org/drivers/raster/index.html>`_."
 msgstr ""
+":guilabel:`ヘルプ` ボタンを押して使用するパラメータを見つけるか、 `GDAL raster drivers documentation "
+"<https://gdal.org/drivers/raster/index.html>`_ を参照してください。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:752
 msgid ":guilabel:`Edit Pyramids Options`"
-msgstr ""
+msgstr ":guilabel:`Edit ピラミッドオプションを編集`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:759
 msgid "Sample of Pyramids profile"
-msgstr ""
+msgstr "ピラミッドプロファイルのサンプル"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:762
 msgid "GDAL drivers"
-msgstr ""
+msgstr "GDAL ドライバ"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:764
 msgid ""
@@ -1468,7 +1555,7 @@ msgstr ""
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:772
 msgid "GDAL Settings in QGIS"
-msgstr ""
+msgstr "QGIS の GDAL 設定"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:774
 msgid ""
@@ -1476,10 +1563,12 @@ msgid ""
 "the :ref:`Edit Create options <gdal_createoptions>` dialog for "
 "customization."
 msgstr ""
+"読み取り・書き込みアクセスが可能 (``rw+(v)``) なドライバをダブルクリックして :ref:`作成オプションの編集 "
+"<gdal_createoptions>` ダイアログを開き、作成オプションをカスタマイズすることができます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:782
 msgid "Variables Settings"
-msgstr "変数設定"
+msgstr "変数"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:784
 msgid ""
@@ -1502,15 +1591,15 @@ msgstr ""
 msgid ""
 "More information about variables in the :ref:`general_tools_variables` "
 "section."
-msgstr ":ref:`general_tools_variables` セクションの変数の詳細。"
+msgstr "変数の詳細については、 :ref:`general_tools_variables` セクションを参照してください。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:801
 msgid "Variables Settings in QGIS"
-msgstr ""
+msgstr "QGIS の変数設定"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:808
 msgid "Authentication Settings"
-msgstr "認証設定"
+msgstr "認証"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:810
 msgid ""
@@ -1527,7 +1616,7 @@ msgstr "QGISの認証設定"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:827
 msgid "Network Settings"
-msgstr ""
+msgstr "ネットワーク"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:829
 msgid "**General**"

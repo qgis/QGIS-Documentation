@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-10 11:07+0200\n"
+"POT-Creation-Date: 2020-07-26 13:13+0200\n"
 "PO-Revision-Date: 2020-03-16 19:16+0000\n"
 "Last-Translator: Dick Groskamp, 2020\n"
 "Language-Team: Dutch (https://www.transifex.com/qgis/teams/6144/nl/)\n"
@@ -354,10 +354,10 @@ msgstr ""
 #: ../../docs/documentation_guidelines/writing.rst:265
 msgid ""
 "The scripts will insert an automatically generated number before the caption"
-" of the figure in the generated PDF version of the documentation."
+" of the figure in the generated HTML and PDF versions of the documentation."
 msgstr ""
 "De scripts zullen een automatisch gegenereerd nummer invoegen vóór het "
-"bijschrift van de afbeelding in de gemaakte versie voor PDF van de "
+"bijschrift van de afbeelding in de gemaakte versies voor HTML en PDF van de "
 "documentatie."
 
 #: ../../docs/documentation_guidelines/writing.rst:268
@@ -374,134 +374,199 @@ msgstr ""
 "Naar een afbeelding kan worden verwezen met het verwijzingslabel, zoals dit:"
 
 #: ../../docs/documentation_guidelines/writing.rst:277
-msgid ""
-"It will show the anchor Figure_logo_. You can use uppercase if you want. "
-"This mechanism can only be used in the same :file:`.rst` file. From other "
-":file:`.rst` files you can use ``:ref:`` for reference, but keep in mind "
-"that this returns the full caption of the image."
+#: ../../docs/documentation_guidelines/writing.rst:294
+msgid "renders like this:"
+msgstr "rendert als dit:"
+
+#: ../../docs/documentation_guidelines/writing.rst:279
+msgid "see :numref:`figure_logo`"
+msgstr "zie :numref:`figure_logo`"
+
+#: ../../docs/documentation_guidelines/writing.rst:281
+msgid "This is the preferred way of referencing figures."
+msgstr "Dit is de aanbevolen manier om naar afbeeldingen te verwijzen."
+
+#: ../../docs/documentation_guidelines/writing.rst:285
+msgid "For ``:numref:`` to work, the figure **must have a caption**."
 msgstr ""
-"Het zal het anker Figure_logo_ weergeven. U mag hoofdletters gebruiken als u"
-" dat wilt. Dit mechanisme kan alleen worden gebruikt in hetzelfde bestand "
-":file:`.rst`. Vanuit andere bestanden :file:`.rst` kunt u ``:ref:`` "
-"gebruiken als verwijzing, maar onthoud dat dat het volledige bijschrift van "
-"de afbeelding weer zal geven."
+"De afbeelding **moet een bijschrift hebben** om ``:numref:`` te kunnen laten"
+" werken."
 
-#: ../../docs/documentation_guidelines/writing.rst:286
-msgid "returns:"
-msgstr "geeft terug:"
+#: ../../docs/documentation_guidelines/writing.rst:287
+msgid ""
+"It is possible to use ``:ref:`` instead of ``:numref:`` for reference, but "
+"this returns the full caption of the image."
+msgstr ""
+"Het is mogelijk om voor verwijzing ``:ref:`` te gebruiken in plaats van "
+"``:numref:``, maar dat geeft het volledige bijschrift van de afbeelding "
+"terug."
 
-#: ../../docs/documentation_guidelines/writing.rst:288
+#: ../../docs/documentation_guidelines/writing.rst:296
 msgid "see :ref:`figure_logo`"
 msgstr "zie :ref:`figure_logo`"
 
-#: ../../docs/documentation_guidelines/writing.rst:292
+#: ../../docs/documentation_guidelines/writing.rst:298
+msgid ""
+"It is also possible (but not recommended) to use the following mechanism:"
+msgstr ""
+"Het is ook mogelijk (maar wordt niet aanbevolen) om het volgende mechanisme "
+"te gebruiken:"
+
+#: ../../docs/documentation_guidelines/writing.rst:304
+#: ../../docs/documentation_guidelines/writing.rst:326
+msgid "It will render like this:"
+msgstr "Het zal renderen zoals dit:"
+
+#: ../../docs/documentation_guidelines/writing.rst:306
+msgid "(see Figure_logo_)."
+msgstr "(zie Figure_logo_)."
+
+#: ../../docs/documentation_guidelines/writing.rst:308
+msgid ""
+"You can use uppercase if you want. This mechanism can only be used in the "
+"same :file:`.rst` file."
+msgstr ""
+"U mag hoofdletters gebruiken als u dat wilt. Dit mechanisme kan alleen "
+"worden gebruikt in hetzelfde bestand :file:`.rst`."
+
+#: ../../docs/documentation_guidelines/writing.rst:313
 msgid "Tables"
 msgstr "Tabellen"
 
-#: ../../docs/documentation_guidelines/writing.rst:294
-msgid "To create a simple table"
-msgstr "Een eenvoudige tabel maken"
+#: ../../docs/documentation_guidelines/writing.rst:315
+msgid "A simple table can be coded like this"
+msgstr "Een eenvoudige tabel kan als volgt worden gecodeerd"
 
-#: ../../docs/documentation_guidelines/writing.rst:305
-msgid "Use a ``\\`` followed by an empty space to leave an empty space."
-msgstr ""
-"gebruik een ``\\`` gevolgd door een lege spatie om een lege spatie te laten."
+#: ../../docs/documentation_guidelines/writing.rst:329
+msgid "x"
+msgstr "x"
 
-#: ../../docs/documentation_guidelines/writing.rst:307
+#: ../../docs/documentation_guidelines/writing.rst:329
+msgid "y"
+msgstr "y"
+
+#: ../../docs/documentation_guidelines/writing.rst:329
+msgid "z"
+msgstr "z"
+
+#: ../../docs/documentation_guidelines/writing.rst:331
+msgid "1"
+msgstr "1"
+
+#: ../../docs/documentation_guidelines/writing.rst:331
+msgid "2"
+msgstr "2"
+
+#: ../../docs/documentation_guidelines/writing.rst:331
+msgid "3"
+msgstr "3"
+
+#: ../../docs/documentation_guidelines/writing.rst:332
+msgid "4"
+msgstr "4"
+
+#: ../../docs/documentation_guidelines/writing.rst:332
+msgid "5"
+msgstr "5"
+
+#: ../../docs/documentation_guidelines/writing.rst:335
 msgid ""
-"You can also use more complicated tables by drawing them using references "
-"and all"
+"Use a ``\\`` (backslash) followed by an empty space to leave an empty space."
 msgstr ""
-"U kunt ook meer gecompliceerde tabellen maken door ze te  tekenen met behulp"
-" van verwijzingen en zo"
+"Gebruik een ``\\`` (backslash) gevolgd door een lege spatie om een lege "
+"spatie te laten."
 
-#: ../../docs/documentation_guidelines/writing.rst:325
-#: ../../docs/documentation_guidelines/writing.rst:363
+#: ../../docs/documentation_guidelines/writing.rst:337
+msgid "You can also make more complicated tables and reference them:"
+msgstr "U kunt ook meer gecompliceerde tabellen maken en naar ze verwijzen:"
+
+#: ../../docs/documentation_guidelines/writing.rst:355
+#: ../../docs/documentation_guidelines/writing.rst:391
 msgid "The result:"
 msgstr "Het resultaat:"
 
-#: ../../docs/documentation_guidelines/writing.rst:330
+#: ../../docs/documentation_guidelines/writing.rst:360
 msgid "Windows"
 msgstr "Windows"
 
-#: ../../docs/documentation_guidelines/writing.rst:330
+#: ../../docs/documentation_guidelines/writing.rst:360
 msgid "macOS"
 msgstr "MacOS"
 
-#: ../../docs/documentation_guidelines/writing.rst:332
+#: ../../docs/documentation_guidelines/writing.rst:362
 msgid "|win|"
 msgstr "|win|"
 
-#: ../../docs/documentation_guidelines/writing.rst:332
+#: ../../docs/documentation_guidelines/writing.rst:362
 msgid "|osx|"
 msgstr "|osx|"
 
-#: ../../docs/documentation_guidelines/writing.rst:334
+#: ../../docs/documentation_guidelines/writing.rst:364
 msgid "and of course not to forget |nix|"
 msgstr "en natuurlijk, niet te vergeten, |nix|"
 
-#: ../../docs/documentation_guidelines/writing.rst:337
+#: ../../docs/documentation_guidelines/writing.rst:367
 msgid ""
 "My drawn table, mind you this is unfortunately not regarded as a caption"
 msgstr "Helaas is voor de door mij getekende tabel geen bijschrift toegelaten"
 
-#: ../../docs/documentation_guidelines/writing.rst:339
+#: ../../docs/documentation_guidelines/writing.rst:369
 msgid "You can reference to it like this my_drawn_table_."
 msgstr "U kunt er op deze manier naar verwijzen my_drawn_table_."
 
-#: ../../docs/documentation_guidelines/writing.rst:341
+#: ../../docs/documentation_guidelines/writing.rst:371
 msgid "For even more complex tables, it is easier to use ``list-table``:"
 msgstr ""
 "Voor nog meer complexere tabellen is het gemakkelijker om ``list-table`` te "
 "gebruiken:"
 
-#: ../../docs/documentation_guidelines/writing.rst:370
+#: ../../docs/documentation_guidelines/writing.rst:397
 msgid "What"
 msgstr "Wat"
 
-#: ../../docs/documentation_guidelines/writing.rst:371
+#: ../../docs/documentation_guidelines/writing.rst:398
 msgid "Purpose"
 msgstr "Doel"
 
-#: ../../docs/documentation_guidelines/writing.rst:372
+#: ../../docs/documentation_guidelines/writing.rst:399
 msgid "Key word"
 msgstr "Sleutelwoord"
 
-#: ../../docs/documentation_guidelines/writing.rst:373
-#: ../../docs/documentation_guidelines/writing.rst:599
+#: ../../docs/documentation_guidelines/writing.rst:400
+#: ../../docs/documentation_guidelines/writing.rst:626
 msgid "Description"
 msgstr "Beschrijving"
 
-#: ../../docs/documentation_guidelines/writing.rst:374
+#: ../../docs/documentation_guidelines/writing.rst:401
 msgid "**Test**"
 msgstr "**Test**"
 
-#: ../../docs/documentation_guidelines/writing.rst:375
+#: ../../docs/documentation_guidelines/writing.rst:402
 msgid "``Useful test``"
 msgstr "``Nuttige test``"
 
-#: ../../docs/documentation_guidelines/writing.rst:376
+#: ../../docs/documentation_guidelines/writing.rst:403
 msgid "complexity"
 msgstr "complexiteit"
 
-#: ../../docs/documentation_guidelines/writing.rst:377
+#: ../../docs/documentation_guidelines/writing.rst:404
 msgid "Geometry.  One of:"
 msgstr "Geometrie.  Één van:"
 
-#: ../../docs/documentation_guidelines/writing.rst:379
-#: ../../docs/documentation_guidelines/writing.rst:627
+#: ../../docs/documentation_guidelines/writing.rst:406
+#: ../../docs/documentation_guidelines/writing.rst:654
 msgid "Point"
 msgstr "Punt"
 
-#: ../../docs/documentation_guidelines/writing.rst:380
+#: ../../docs/documentation_guidelines/writing.rst:407
 msgid "Line"
 msgstr "Lijn"
 
-#: ../../docs/documentation_guidelines/writing.rst:383
+#: ../../docs/documentation_guidelines/writing.rst:410
 msgid "Index"
 msgstr "Index"
 
-#: ../../docs/documentation_guidelines/writing.rst:385
+#: ../../docs/documentation_guidelines/writing.rst:412
 msgid ""
 "An index is a handy way to help the reader find information in a document. "
 "QGIS documentation provides some essential indices. There are a few rules "
@@ -513,7 +578,7 @@ msgstr ""
 " Er zijn een aantal regels die ons helpen een set indices te verschaffen die"
 " echt nuttig zijn (samenhangend, consistent en echt met elkaar verbonden):"
 
-#: ../../docs/documentation_guidelines/writing.rst:390
+#: ../../docs/documentation_guidelines/writing.rst:417
 msgid ""
 "An index should be human readable, understandable and translatable; an index"
 " can be made from many words but you should avoid any unneeded ``_``, "
@@ -525,7 +590,7 @@ msgstr ""
 "``_``, ``-``… moeten vermijden om ze te koppelen, d.i., ``Laden lagen`` in "
 "plaats van ``laden_lagen`` of ``ladenLagen``."
 
-#: ../../docs/documentation_guidelines/writing.rst:394
+#: ../../docs/documentation_guidelines/writing.rst:421
 msgid ""
 "Capitalize only the first letter of the index unless the word has a "
 "particular spelling. E.g., ``Loading layers``, ``Atlas generation``, "
@@ -535,7 +600,7 @@ msgstr ""
 "een bijzondere spelling heeft. Bijv. ``Lagen laden``, ``Atlas genereren``, "
 "``WMS``, ``pgsql2shp``."
 
-#: ../../docs/documentation_guidelines/writing.rst:397
+#: ../../docs/documentation_guidelines/writing.rst:424
 msgid ""
 "Keep an eye on the existing `Index list "
 "<https://docs.qgis.org/testing/en/genindex.html>`_ in order to reuse the "
@@ -547,7 +612,7 @@ msgstr ""
 "uitdrukking met de juiste spelling opnieuw te gebruiken en onnodige "
 "duplicaten te vermijden."
 
-#: ../../docs/documentation_guidelines/writing.rst:401
+#: ../../docs/documentation_guidelines/writing.rst:428
 msgid ""
 "Several index tags exist in RST. You can use the inline ``:index:`` tag "
 "within normal text:"
@@ -555,7 +620,7 @@ msgstr ""
 "Verscheidene tags voor indexen bestaan in RST. U kunt de inregelige tag "
 "``:index:`` gebruiken in normale tekst:"
 
-#: ../../docs/documentation_guidelines/writing.rst:408
+#: ../../docs/documentation_guidelines/writing.rst:435
 msgid ""
 "Or you can use the ``.. index::`` block-level markup which links to the "
 "beginning of the next paragraph. Because of the rules mentioned above, it is"
@@ -565,7 +630,7 @@ msgstr ""
 " begin van de volgende alinea. Vanwege de hierboven vermelde regels wordt "
 "aanbevolen de block-level tag te gebruiken:"
 
-#: ../../docs/documentation_guidelines/writing.rst:416
+#: ../../docs/documentation_guidelines/writing.rst:443
 msgid ""
 "It is also recommended to use index parameters such as ``single``, ``pair`` "
 "and ``see``, in order to build a more structured and interconnected index "
@@ -579,11 +644,11 @@ msgstr ""
 ".sphinx-doc.org/en/master/usage/restructuredtext/directives.html#index-"
 "generating-markup>`_ voor meer informatie over het maken van een index."
 
-#: ../../docs/documentation_guidelines/writing.rst:423
+#: ../../docs/documentation_guidelines/writing.rst:450
 msgid "Special Comments"
 msgstr "Speciale opmerkingen"
 
-#: ../../docs/documentation_guidelines/writing.rst:425
+#: ../../docs/documentation_guidelines/writing.rst:452
 msgid ""
 "Sometimes, you may want to emphasize some points of the description, either "
 "to warn, remind or give some hints to the user. In QGIS Documentation, we "
@@ -604,11 +669,11 @@ msgstr ""
 "markup>`_ voor meer informatie. Een heldere en van toepassing zijnde titel "
 "is vereist voor zowel waarschuwingen als tips."
 
-#: ../../docs/documentation_guidelines/writing.rst:443
+#: ../../docs/documentation_guidelines/writing.rst:470
 msgid "Code Snippets"
 msgstr "Codesnippers"
 
-#: ../../docs/documentation_guidelines/writing.rst:445
+#: ../../docs/documentation_guidelines/writing.rst:472
 msgid ""
 "You may also want to give examples and insert code snippets. In this case, "
 "write the comment below a line with the ``::`` directive inserted.  For a "
@@ -626,7 +691,7 @@ msgstr ""
 "doc.org/en/master/usage/restructuredtext/directives.html#showing-code-"
 "examples>`_."
 
-#: ../../docs/documentation_guidelines/writing.rst:454
+#: ../../docs/documentation_guidelines/writing.rst:481
 msgid ""
 "While texts in note, tip and warning frames are translatable, be aware that "
 "code block frames do not allow translation. So avoid comments not related to"
@@ -637,11 +702,11 @@ msgstr ""
 "dus opmerkingen die niet gerelateerd zijn aan de code en houd opmerkingen zo"
 " kort mogelijk."
 
-#: ../../docs/documentation_guidelines/writing.rst:459
+#: ../../docs/documentation_guidelines/writing.rst:486
 msgid "Footnotes"
 msgstr "Voetnoten"
 
-#: ../../docs/documentation_guidelines/writing.rst:461
+#: ../../docs/documentation_guidelines/writing.rst:488
 msgid ""
 "Please note: Footnotes are not recognized by any translation software and it"
 " is also not converted to pdf format properly. So, if possible, don't use "
@@ -651,28 +716,28 @@ msgstr ""
 "en ze worden ook niet correct geconverteerd naar de indeling PDF. Gebruik "
 "dus, indien mogelijk, geen voetnoten binnen documentatie."
 
-#: ../../docs/documentation_guidelines/writing.rst:465
+#: ../../docs/documentation_guidelines/writing.rst:492
 msgid "This is for creating a footnote (showing as example [1]_)"
 msgstr ""
 "Dit is voor het maken van een voetnoot (weergegeven als voorbeeld [1]_)"
 
-#: ../../docs/documentation_guidelines/writing.rst:471
+#: ../../docs/documentation_guidelines/writing.rst:498
 msgid "Which will point to:"
 msgstr "Die zal wijzen naar:"
 
-#: ../../docs/documentation_guidelines/writing.rst:473
+#: ../../docs/documentation_guidelines/writing.rst:500
 msgid "Updates of core plugins"
 msgstr "Bijwerken van plug-ins van de bron"
 
-#: ../../docs/documentation_guidelines/writing.rst:477
+#: ../../docs/documentation_guidelines/writing.rst:504
 msgid "Managing Screenshots"
 msgstr "Schermafdrukken beheren"
 
-#: ../../docs/documentation_guidelines/writing.rst:480
+#: ../../docs/documentation_guidelines/writing.rst:507
 msgid "Add new Screenshots"
 msgstr "Nieuwe schermafdrukken toevoegen"
 
-#: ../../docs/documentation_guidelines/writing.rst:482
+#: ../../docs/documentation_guidelines/writing.rst:509
 msgid ""
 "Here are some hints to create new, nice looking screenshots. The images "
 "should be placed in an image (:file:`img/`) folder that is located in the "
@@ -683,7 +748,7 @@ msgstr ""
 "image (:file:`img/`), die is geplaatst in dezelfde map als war het "
 "betreffende bestand :file:`.rst` staat."
 
-#: ../../docs/documentation_guidelines/writing.rst:486
+#: ../../docs/documentation_guidelines/writing.rst:513
 msgid ""
 "You can find some prepared QGIS-projects that are used to create screenshots"
 " in the :file:`./qgis-projects` folder of this repository. This makes it "
@@ -700,7 +765,7 @@ msgstr ""
 "die moet worden geplaatst in dezelfde map als de QGIS-Documentation "
 "Repository."
 
-#: ../../docs/documentation_guidelines/writing.rst:492
+#: ../../docs/documentation_guidelines/writing.rst:519
 msgid ""
 "Reduce the window to the minimal space needed to show the feature (taking "
 "the whole screen for a small modal window > overkill)"
@@ -709,13 +774,13 @@ msgstr ""
 " weer te geven (het gehele scherm nemen voor een klein modaal venster > "
 "overkill)"
 
-#: ../../docs/documentation_guidelines/writing.rst:494
+#: ../../docs/documentation_guidelines/writing.rst:521
 msgid "The less clutter, the better (no need to activate all the toolbars)"
 msgstr ""
 "Hoe minder vervuiling, hoe beter (niet nodig om alle werkbalken te "
 "activeren)"
 
-#: ../../docs/documentation_guidelines/writing.rst:495
+#: ../../docs/documentation_guidelines/writing.rst:522
 msgid ""
 "Don't resize them in an image editor; the size will be set into the "
 ":file:`.rst` files if necessary (downscaling the dimensions without properly"
@@ -725,15 +790,15 @@ msgstr ""
 "de grootte zal in de :file:`.rst`-bestanden worden ingesteld (verkleinen van"
 " de dimensies zonder de resolutie juist omhoog te brengen > lelijk)"
 
-#: ../../docs/documentation_guidelines/writing.rst:498
+#: ../../docs/documentation_guidelines/writing.rst:525
 msgid "Cut the background"
 msgstr "Snij de achtergrond bij"
 
-#: ../../docs/documentation_guidelines/writing.rst:499
+#: ../../docs/documentation_guidelines/writing.rst:526
 msgid "Make the top corners transparent if the background is not white"
 msgstr "Maak de bovenste hoeken transparant als de achtergrond niet wit is"
 
-#: ../../docs/documentation_guidelines/writing.rst:500
+#: ../../docs/documentation_guidelines/writing.rst:527
 msgid ""
 "Set print size resolution to ``135 dpi`` (e.g. in Gimp set the print "
 "resolution :menuselection:`Image --> Print size` and save). This way, images"
@@ -747,11 +812,11 @@ msgstr ""
 "opdracht voor ImageMagick convert gebruiken om een batch met afbeeldingen te"
 " verwerken:"
 
-#: ../../docs/documentation_guidelines/writing.rst:509
+#: ../../docs/documentation_guidelines/writing.rst:536
 msgid "Save them as :file:`.png` (to avoid :file:`.jpeg` artifacts)"
 msgstr "Sla ze op als :file:`.png` (om :file:`.jpeg`-artefacten te voorkomen)"
 
-#: ../../docs/documentation_guidelines/writing.rst:510
+#: ../../docs/documentation_guidelines/writing.rst:537
 msgid ""
 "The screenshot should show the content according to what is described in the"
 " text"
@@ -759,7 +824,7 @@ msgstr ""
 "De schermafdruk zou als inhoud moeten tonen wat overeenkomstig wordt "
 "beschreven in de tekst"
 
-#: ../../docs/documentation_guidelines/writing.rst:513
+#: ../../docs/documentation_guidelines/writing.rst:540
 msgid ""
 "If you are on Ubuntu, you can use the following command to remove the global"
 " menu function and create smaller application screens with menus:"
@@ -768,11 +833,11 @@ msgstr ""
 "menufunctie te verwijderen en kleinere schermen voor de toepassing te maken "
 "met menu's:"
 
-#: ../../docs/documentation_guidelines/writing.rst:522
+#: ../../docs/documentation_guidelines/writing.rst:549
 msgid "Translated Screenshots"
 msgstr "Vertaalde schermafdrukken"
 
-#: ../../docs/documentation_guidelines/writing.rst:524
+#: ../../docs/documentation_guidelines/writing.rst:551
 msgid ""
 "Here are some additional hints for those that want to create screenshots for"
 " a translated user guide:"
@@ -780,7 +845,7 @@ msgstr ""
 "Hier zijn enkele aanvullende hints voor hen die schermafdrukken willen maken"
 " voor een vertaalde gebruikershandleiding:"
 
-#: ../../docs/documentation_guidelines/writing.rst:527
+#: ../../docs/documentation_guidelines/writing.rst:554
 msgid ""
 "Translated images should be placed in a :file:`img/<your_language>/` folder."
 "  Use the same filename as the english 'original' screenshot."
@@ -789,11 +854,11 @@ msgstr ""
 ":file:`img/<your_language>/`.  Gebruik dezelfde naam als de Engelse "
 "'originele' schermafdruk."
 
-#: ../../docs/documentation_guidelines/writing.rst:532
+#: ../../docs/documentation_guidelines/writing.rst:559
 msgid "Documenting Processing algorithms"
 msgstr "Algoritmen voor Processing documenteren"
 
-#: ../../docs/documentation_guidelines/writing.rst:534
+#: ../../docs/documentation_guidelines/writing.rst:561
 msgid ""
 "If you want to write documentation for Processing algorithms, consider these"
 " guidelines:"
@@ -801,7 +866,7 @@ msgstr ""
 "Als u documentatie wilt schrijven voor algoritmen van Processing, denk dan "
 "aan deze richtlijnen:"
 
-#: ../../docs/documentation_guidelines/writing.rst:537
+#: ../../docs/documentation_guidelines/writing.rst:564
 msgid ""
 "Processing algorithm help files are part of QGIS User Guide, so use the same"
 " formatting as User Guide and other documentation."
@@ -810,7 +875,7 @@ msgstr ""
 "gebruikershandleiding en gebruiken dus dezelfde opmaak als de "
 "gebruikershandleiding en andere documentatie."
 
-#: ../../docs/documentation_guidelines/writing.rst:540
+#: ../../docs/documentation_guidelines/writing.rst:567
 msgid ""
 "Each algorithm documentation should be placed in the corresponding "
 "**provider** folder and **group** file, e.g. the algorithm `Voronoi polygon`"
@@ -825,7 +890,7 @@ msgstr ""
 "voegen: "
 ":file:`source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst`."
 
-#: ../../docs/documentation_guidelines/writing.rst:545
+#: ../../docs/documentation_guidelines/writing.rst:572
 msgid ""
 "Before starting to write the guide, check if the algorithm is already "
 "described. In this case, you can enhance the existing description."
@@ -834,7 +899,7 @@ msgstr ""
 " reeds is beschreven. In dat geval zou u de bestaande beschrijving kunnen "
 "uitbreiden."
 
-#: ../../docs/documentation_guidelines/writing.rst:548
+#: ../../docs/documentation_guidelines/writing.rst:575
 msgid ""
 "It is **extremely** important that each algorithm has an *anchor* that "
 "corresponds to the provider name + the unique name of the algorithm itself. "
@@ -848,7 +913,7 @@ msgstr ""
 "juiste gedeelte te openen. Het anker zou moeten worden geplaatst **boven** "
 "de titel, bijv. (zie ook het gedeelte :ref:`my_anchor`)::"
 
-#: ../../docs/documentation_guidelines/writing.rst:558
+#: ../../docs/documentation_guidelines/writing.rst:585
 msgid ""
 "To find out the algorithm name you can just hover the mouse on the algorithm"
 " in the Processing toolbox."
@@ -856,7 +921,7 @@ msgstr ""
 "U hoeft slechts met de muis over het algoritme in de Toolbox van Processing "
 "te gaan om de naam van het algoritme te kunnen zien."
 
-#: ../../docs/documentation_guidelines/writing.rst:560
+#: ../../docs/documentation_guidelines/writing.rst:587
 msgid ""
 "Avoid using \"This algorithm does this and that...\" as the first sentence "
 "in the algorithm description. Try to use more general expressions like::"
@@ -865,7 +930,7 @@ msgstr ""
 "zin in de beschrijving van het algoritme. Probeer meer algemene "
 "uitdrukkingen te gebruiken, zoals::"
 
-#: ../../docs/documentation_guidelines/writing.rst:565
+#: ../../docs/documentation_guidelines/writing.rst:592
 msgid ""
 "Avoid describing what the algorithm does by replicating its name and please "
 "don't replicate the name of the parameter in the description of the "
@@ -879,7 +944,7 @@ msgstr ""
 "polygoon``, overweeg dan om de ``Invoerlaag`` te beschrijven als ``Laag om "
 "de polygoon uit te berekenen``."
 
-#: ../../docs/documentation_guidelines/writing.rst:569
+#: ../../docs/documentation_guidelines/writing.rst:596
 msgid ""
 "Indicate in the description whether the algorithm has a default shortcut in "
 "QGIS or supports in-place editing."
@@ -887,7 +952,7 @@ msgstr ""
 "Geef in de beschrijving aan of het algoritme een standaard sneltoets heeft "
 "in QGIS of Op de plaats bewerken ondersteunt."
 
-#: ../../docs/documentation_guidelines/writing.rst:571
+#: ../../docs/documentation_guidelines/writing.rst:598
 msgid ""
 "Add images! A picture is worth a thousand words! Use :file:`.png` format and"
 " follow the general guidelines for documentation (see the :ref:`image` "
@@ -900,7 +965,7 @@ msgstr ""
 " afbeelding in de juiste map, d.i. de map :file:`img` naast het bestand "
 ":file:`.rst` dat u bewerkt."
 
-#: ../../docs/documentation_guidelines/writing.rst:575
+#: ../../docs/documentation_guidelines/writing.rst:602
 msgid ""
 "If necessary, add links in the \"See also\" section that provide additional "
 "information about the algorithm  (e.g., publications or web-pages).  Only "
@@ -914,7 +979,7 @@ msgstr ""
 "Als een goede praktijk kan het gedeelte \"Zie ook\" ook worden gevuld met "
 "links naar soortgelijke algoritmen."
 
-#: ../../docs/documentation_guidelines/writing.rst:579
+#: ../../docs/documentation_guidelines/writing.rst:606
 msgid ""
 "Give clear explanation for algorithm parameters and outputs: take "
 "inspiration from existing algorithms."
@@ -922,7 +987,7 @@ msgstr ""
 "Geef duidelijke uitleg over de parameters en de resultaten van algoritmen: "
 "haal inspiratie uit bestaande algoritmen."
 
-#: ../../docs/documentation_guidelines/writing.rst:581
+#: ../../docs/documentation_guidelines/writing.rst:608
 msgid ""
 "Avoid duplicating detailed description of algorithm options. Add this "
 "information in the parameter description."
@@ -930,7 +995,7 @@ msgstr ""
 "Vermijd het dupliceren van gedetailleerde beschrijvingen van opties van het "
 "algoritme. Voeg deze informatie toe in de beschrijving van de parameter."
 
-#: ../../docs/documentation_guidelines/writing.rst:583
+#: ../../docs/documentation_guidelines/writing.rst:610
 msgid ""
 "Avoid adding information about the vector geometry type in the algorithm or "
 "parameter description, as this information is already available in the "
@@ -940,11 +1005,11 @@ msgstr ""
 "in het algoritme of beschrijving van de parameter, omdat deze informatie al "
 "beschikbaar is in de beschrijvingen van de parameter."
 
-#: ../../docs/documentation_guidelines/writing.rst:586
+#: ../../docs/documentation_guidelines/writing.rst:613
 msgid "Add the default value of the parameter, e.g.::"
 msgstr "Voeg de standaardwaarde van de parameter toe, bijv.::"
 
-#: ../../docs/documentation_guidelines/writing.rst:595
+#: ../../docs/documentation_guidelines/writing.rst:622
 msgid ""
 "Describe the *type* of input supported the parameters. There are several "
 "types available you can pick one from:"
@@ -952,343 +1017,343 @@ msgstr ""
 "Beschrijf het *type* invoer dat de parameters ondersteunen. Er zijn "
 "verschillende types beschikbaar waaruit u kunt kiezen:"
 
-#: ../../docs/documentation_guidelines/writing.rst:599
+#: ../../docs/documentation_guidelines/writing.rst:626
 msgid "Parameter/Output type"
 msgstr "Type parameter/uitvoer "
 
-#: ../../docs/documentation_guidelines/writing.rst:599
+#: ../../docs/documentation_guidelines/writing.rst:626
 msgid "Visual indicator"
 msgstr "Visuele indicatie"
 
-#: ../../docs/documentation_guidelines/writing.rst:601
+#: ../../docs/documentation_guidelines/writing.rst:628
 msgid "Point vector layer"
 msgstr "Puntvectorlaag"
 
-#: ../../docs/documentation_guidelines/writing.rst:601
+#: ../../docs/documentation_guidelines/writing.rst:628
 msgid "``vector: point``"
 msgstr "``vector: punt``"
 
-#: ../../docs/documentation_guidelines/writing.rst:601
+#: ../../docs/documentation_guidelines/writing.rst:628
 msgid "|pointLayer|"
 msgstr "|pointLayer|"
 
-#: ../../docs/documentation_guidelines/writing.rst:602
+#: ../../docs/documentation_guidelines/writing.rst:629
 msgid "Line vector layer"
 msgstr "Lijnvectorlaag"
 
-#: ../../docs/documentation_guidelines/writing.rst:602
+#: ../../docs/documentation_guidelines/writing.rst:629
 msgid "``vector: line``"
 msgstr "``vector: lijn``"
 
-#: ../../docs/documentation_guidelines/writing.rst:602
+#: ../../docs/documentation_guidelines/writing.rst:629
 msgid "|lineLayer|"
 msgstr "|lineLayer|"
 
-#: ../../docs/documentation_guidelines/writing.rst:603
+#: ../../docs/documentation_guidelines/writing.rst:630
 msgid "Polygon vector layer"
 msgstr "Polygoon-vectorlaag"
 
-#: ../../docs/documentation_guidelines/writing.rst:603
+#: ../../docs/documentation_guidelines/writing.rst:630
 msgid "``vector: polygon``"
 msgstr "``vector: polygoon``"
 
-#: ../../docs/documentation_guidelines/writing.rst:603
+#: ../../docs/documentation_guidelines/writing.rst:630
 msgid "|polygonLayer|"
 msgstr "|polygonLayer|"
 
-#: ../../docs/documentation_guidelines/writing.rst:604
+#: ../../docs/documentation_guidelines/writing.rst:631
 msgid "Generic vector layer"
 msgstr "Algemene vectorlaag"
 
-#: ../../docs/documentation_guidelines/writing.rst:604
+#: ../../docs/documentation_guidelines/writing.rst:631
 msgid "``vector: any``"
 msgstr "``vector: elke``"
 
-#: ../../docs/documentation_guidelines/writing.rst:605
+#: ../../docs/documentation_guidelines/writing.rst:632
 msgid "Vector field numeric"
 msgstr "Numeriek vectorveld"
 
-#: ../../docs/documentation_guidelines/writing.rst:605
+#: ../../docs/documentation_guidelines/writing.rst:632
 msgid "``tablefield: numeric``"
 msgstr "``tabelveld: numeriek``"
 
-#: ../../docs/documentation_guidelines/writing.rst:605
+#: ../../docs/documentation_guidelines/writing.rst:632
 msgid "|fieldFloat|"
 msgstr "|fieldFloat|"
 
-#: ../../docs/documentation_guidelines/writing.rst:606
+#: ../../docs/documentation_guidelines/writing.rst:633
 msgid "Vector field string"
 msgstr "String vectorveld "
 
-#: ../../docs/documentation_guidelines/writing.rst:606
+#: ../../docs/documentation_guidelines/writing.rst:633
 msgid "``tablefield: string``"
 msgstr "``tabelveld: string``"
 
-#: ../../docs/documentation_guidelines/writing.rst:606
+#: ../../docs/documentation_guidelines/writing.rst:633
 msgid "|fieldText|"
 msgstr "|fieldText|"
 
-#: ../../docs/documentation_guidelines/writing.rst:607
+#: ../../docs/documentation_guidelines/writing.rst:634
 msgid "Vector field generic"
 msgstr "Algemeen vectorveld"
 
-#: ../../docs/documentation_guidelines/writing.rst:607
+#: ../../docs/documentation_guidelines/writing.rst:634
 msgid "``tablefield: any``"
 msgstr "``tabelveld: elk``"
 
-#: ../../docs/documentation_guidelines/writing.rst:608
+#: ../../docs/documentation_guidelines/writing.rst:635
 msgid "Raster layer"
 msgstr "Rasterlaag"
 
-#: ../../docs/documentation_guidelines/writing.rst:608
+#: ../../docs/documentation_guidelines/writing.rst:635
 msgid "``raster``"
 msgstr "``raster``"
 
-#: ../../docs/documentation_guidelines/writing.rst:608
+#: ../../docs/documentation_guidelines/writing.rst:635
 msgid "|rasterLayer|"
 msgstr "|rasterLayer|"
 
-#: ../../docs/documentation_guidelines/writing.rst:609
+#: ../../docs/documentation_guidelines/writing.rst:636
 msgid "Raster band"
 msgstr "Rasterband"
 
-#: ../../docs/documentation_guidelines/writing.rst:609
+#: ../../docs/documentation_guidelines/writing.rst:636
 msgid "``raster band``"
 msgstr "``rasterband``"
 
-#: ../../docs/documentation_guidelines/writing.rst:610
+#: ../../docs/documentation_guidelines/writing.rst:637
 msgid "HTML file"
 msgstr "HTML-bestand"
 
-#: ../../docs/documentation_guidelines/writing.rst:610
+#: ../../docs/documentation_guidelines/writing.rst:637
 msgid "``html``"
 msgstr "``html``"
 
-#: ../../docs/documentation_guidelines/writing.rst:611
+#: ../../docs/documentation_guidelines/writing.rst:638
 msgid "Table layer"
 msgstr "Tabellaag"
 
-#: ../../docs/documentation_guidelines/writing.rst:611
+#: ../../docs/documentation_guidelines/writing.rst:638
 msgid "``table``"
 msgstr "``tabel``"
 
-#: ../../docs/documentation_guidelines/writing.rst:611
+#: ../../docs/documentation_guidelines/writing.rst:638
 msgid "|tableLayer|"
 msgstr "|tableLayer|"
 
-#: ../../docs/documentation_guidelines/writing.rst:612
+#: ../../docs/documentation_guidelines/writing.rst:639
 msgid "Expression"
 msgstr "Expressie"
 
-#: ../../docs/documentation_guidelines/writing.rst:612
+#: ../../docs/documentation_guidelines/writing.rst:639
 msgid "``expression``"
 msgstr "``expressie``"
 
-#: ../../docs/documentation_guidelines/writing.rst:612
+#: ../../docs/documentation_guidelines/writing.rst:639
 msgid "|expression|"
 msgstr "|expression|"
 
-#: ../../docs/documentation_guidelines/writing.rst:613
+#: ../../docs/documentation_guidelines/writing.rst:640
 msgid "Point geometry"
 msgstr "Geometrie punt"
 
-#: ../../docs/documentation_guidelines/writing.rst:613
+#: ../../docs/documentation_guidelines/writing.rst:640
 msgid "``coordinates``"
 msgstr "``coördinaten``"
 
-#: ../../docs/documentation_guidelines/writing.rst:614
+#: ../../docs/documentation_guidelines/writing.rst:641
 msgid "Extent"
 msgstr "Bereik"
 
-#: ../../docs/documentation_guidelines/writing.rst:614
+#: ../../docs/documentation_guidelines/writing.rst:641
 msgid "``extent``"
 msgstr "``bereik``"
 
-#: ../../docs/documentation_guidelines/writing.rst:615
+#: ../../docs/documentation_guidelines/writing.rst:642
 msgid "CRS"
 msgstr "CRS"
 
-#: ../../docs/documentation_guidelines/writing.rst:615
+#: ../../docs/documentation_guidelines/writing.rst:642
 msgid "``crs``"
 msgstr "``crs``"
 
-#: ../../docs/documentation_guidelines/writing.rst:615
+#: ../../docs/documentation_guidelines/writing.rst:642
 msgid "|setProjection|"
 msgstr "|setProjection|"
 
-#: ../../docs/documentation_guidelines/writing.rst:616
+#: ../../docs/documentation_guidelines/writing.rst:643
 msgid "Enumeration"
 msgstr "Enumeratie"
 
-#: ../../docs/documentation_guidelines/writing.rst:616
+#: ../../docs/documentation_guidelines/writing.rst:643
 msgid "``enumeration``"
 msgstr "``enumeratie``"
 
-#: ../../docs/documentation_guidelines/writing.rst:616
+#: ../../docs/documentation_guidelines/writing.rst:643
 msgid "|selectString|"
 msgstr "|selectString|"
 
-#: ../../docs/documentation_guidelines/writing.rst:617
+#: ../../docs/documentation_guidelines/writing.rst:644
 msgid "List"
 msgstr "Lijst"
 
-#: ../../docs/documentation_guidelines/writing.rst:617
+#: ../../docs/documentation_guidelines/writing.rst:644
 msgid "``list``"
 msgstr "``lijst``"
 
-#: ../../docs/documentation_guidelines/writing.rst:618
+#: ../../docs/documentation_guidelines/writing.rst:645
 msgid "Number"
 msgstr "Getal"
 
-#: ../../docs/documentation_guidelines/writing.rst:618
+#: ../../docs/documentation_guidelines/writing.rst:645
 msgid "``number``"
 msgstr "``getal``"
 
-#: ../../docs/documentation_guidelines/writing.rst:618
+#: ../../docs/documentation_guidelines/writing.rst:645
 msgid "|selectNumber|"
 msgstr "|selectNumber|"
 
-#: ../../docs/documentation_guidelines/writing.rst:619
+#: ../../docs/documentation_guidelines/writing.rst:646
 msgid "String"
 msgstr "String"
 
-#: ../../docs/documentation_guidelines/writing.rst:619
+#: ../../docs/documentation_guidelines/writing.rst:646
 msgid "``string``"
 msgstr "``string``"
 
-#: ../../docs/documentation_guidelines/writing.rst:619
+#: ../../docs/documentation_guidelines/writing.rst:646
 msgid "|inputText|"
 msgstr "|inputText|"
 
-#: ../../docs/documentation_guidelines/writing.rst:620
+#: ../../docs/documentation_guidelines/writing.rst:647
 msgid "Boolean"
 msgstr "Boolean"
 
-#: ../../docs/documentation_guidelines/writing.rst:620
+#: ../../docs/documentation_guidelines/writing.rst:647
 msgid "``boolean``"
 msgstr "``boolean``"
 
-#: ../../docs/documentation_guidelines/writing.rst:620
+#: ../../docs/documentation_guidelines/writing.rst:647
 msgid "|checkbox|"
 msgstr "|checkbox|"
 
-#: ../../docs/documentation_guidelines/writing.rst:621
+#: ../../docs/documentation_guidelines/writing.rst:648
 msgid "Folder path"
 msgstr "Pad map"
 
-#: ../../docs/documentation_guidelines/writing.rst:621
+#: ../../docs/documentation_guidelines/writing.rst:648
 msgid "``folder``"
 msgstr "``map``"
 
-#: ../../docs/documentation_guidelines/writing.rst:622
+#: ../../docs/documentation_guidelines/writing.rst:649
 msgid "File"
 msgstr "Bestand"
 
-#: ../../docs/documentation_guidelines/writing.rst:622
+#: ../../docs/documentation_guidelines/writing.rst:649
 msgid "``file``"
 msgstr "``bestand``"
 
-#: ../../docs/documentation_guidelines/writing.rst:623
+#: ../../docs/documentation_guidelines/writing.rst:650
 msgid "Matrix"
 msgstr "Matrix"
 
-#: ../../docs/documentation_guidelines/writing.rst:623
+#: ../../docs/documentation_guidelines/writing.rst:650
 msgid "``matrix``"
 msgstr "``matrix``"
 
-#: ../../docs/documentation_guidelines/writing.rst:624
+#: ../../docs/documentation_guidelines/writing.rst:651
 msgid "Layer"
 msgstr "Laag"
 
-#: ../../docs/documentation_guidelines/writing.rst:624
+#: ../../docs/documentation_guidelines/writing.rst:651
 msgid "``layer``"
 msgstr "``laag``"
 
-#: ../../docs/documentation_guidelines/writing.rst:625
+#: ../../docs/documentation_guidelines/writing.rst:652
 msgid "Same output type as input type"
 msgstr "Hetzelfde type uitvoer als type invoer"
 
-#: ../../docs/documentation_guidelines/writing.rst:625
+#: ../../docs/documentation_guidelines/writing.rst:652
 msgid "``same as input``"
 msgstr "``hetzelfde als invoer``"
 
-#: ../../docs/documentation_guidelines/writing.rst:626
+#: ../../docs/documentation_guidelines/writing.rst:653
 msgid "Definition"
 msgstr "Definitie"
 
-#: ../../docs/documentation_guidelines/writing.rst:626
+#: ../../docs/documentation_guidelines/writing.rst:653
 msgid "``definition``"
 msgstr "``definition``"
 
-#: ../../docs/documentation_guidelines/writing.rst:627
+#: ../../docs/documentation_guidelines/writing.rst:654
 msgid "``point``"
 msgstr "``point``"
 
-#: ../../docs/documentation_guidelines/writing.rst:628
+#: ../../docs/documentation_guidelines/writing.rst:655
 msgid "MultipleLayers"
 msgstr "MultipleLayers"
 
-#: ../../docs/documentation_guidelines/writing.rst:628
+#: ../../docs/documentation_guidelines/writing.rst:655
 msgid "``multipleLayers``"
 msgstr "``multipleLayers``"
 
-#: ../../docs/documentation_guidelines/writing.rst:629
+#: ../../docs/documentation_guidelines/writing.rst:656
 msgid "Range"
 msgstr "Bereik"
 
-#: ../../docs/documentation_guidelines/writing.rst:629
+#: ../../docs/documentation_guidelines/writing.rst:656
 msgid "``range``"
 msgstr "``range``"
 
-#: ../../docs/documentation_guidelines/writing.rst:630
+#: ../../docs/documentation_guidelines/writing.rst:657
 msgid "AuthConfig"
 msgstr "AuthConfig"
 
-#: ../../docs/documentation_guidelines/writing.rst:630
+#: ../../docs/documentation_guidelines/writing.rst:657
 msgid "``authconfig``"
 msgstr "``authconfig``"
 
-#: ../../docs/documentation_guidelines/writing.rst:631
+#: ../../docs/documentation_guidelines/writing.rst:658
 msgid "Mesh"
 msgstr "Mazen"
 
-#: ../../docs/documentation_guidelines/writing.rst:631
+#: ../../docs/documentation_guidelines/writing.rst:658
 msgid "``mesh``"
 msgstr "``mesh``"
 
-#: ../../docs/documentation_guidelines/writing.rst:632
+#: ../../docs/documentation_guidelines/writing.rst:659
 msgid "Layout"
 msgstr "Lay-out"
 
-#: ../../docs/documentation_guidelines/writing.rst:632
+#: ../../docs/documentation_guidelines/writing.rst:659
 msgid "``layout``"
 msgstr "``layout``"
 
-#: ../../docs/documentation_guidelines/writing.rst:633
+#: ../../docs/documentation_guidelines/writing.rst:660
 msgid "LayoutItem"
 msgstr "Lay-outItem"
 
-#: ../../docs/documentation_guidelines/writing.rst:633
+#: ../../docs/documentation_guidelines/writing.rst:660
 msgid "``layoutitem``"
 msgstr "``layoutitem``"
 
-#: ../../docs/documentation_guidelines/writing.rst:634
+#: ../../docs/documentation_guidelines/writing.rst:661
 msgid "Color"
 msgstr "Kleur"
 
-#: ../../docs/documentation_guidelines/writing.rst:634
+#: ../../docs/documentation_guidelines/writing.rst:661
 msgid "``color``"
 msgstr "``color``"
 
-#: ../../docs/documentation_guidelines/writing.rst:635
+#: ../../docs/documentation_guidelines/writing.rst:662
 msgid "Scale"
 msgstr "Schaal"
 
-#: ../../docs/documentation_guidelines/writing.rst:635
+#: ../../docs/documentation_guidelines/writing.rst:662
 msgid "``scale``"
 msgstr "``scale``"
 
-#: ../../docs/documentation_guidelines/writing.rst:639
+#: ../../docs/documentation_guidelines/writing.rst:666
 msgid ""
 "Study an existing and well documented algorithm, and copy all the useful "
 "layouts."
@@ -1296,7 +1361,7 @@ msgstr ""
 "Bestudeer een bestaand en goed gedocumenteerd algoritme, en kopieer alle "
 "nuttige lay-outs."
 
-#: ../../docs/documentation_guidelines/writing.rst:641
+#: ../../docs/documentation_guidelines/writing.rst:668
 msgid ""
 "When you are finished, just follow the guidelines described in "
 ":ref:`step_by_step` to commit your changes and make a Pull Request"
@@ -1304,7 +1369,7 @@ msgstr ""
 "Wanneer u gereed bent, volg dan gewoon de richtlijnen die zijn beschreven in"
 " :ref:`step_by_step` om uw wijzigingen in te dienen en maak een Pull Request"
 
-#: ../../docs/documentation_guidelines/writing.rst:644
+#: ../../docs/documentation_guidelines/writing.rst:671
 msgid ""
 "Here is an example of an :ref:`existing algorithm "
 "<qgiscountpointsinpolygon>` to help you with the layout and the "

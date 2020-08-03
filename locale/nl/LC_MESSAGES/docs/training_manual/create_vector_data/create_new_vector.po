@@ -4,17 +4,17 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
 # Dick Groskamp, 2020
+# Richard Duivenvoorde <richard@duif.net>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-10 11:07+0200\n"
+"POT-Creation-Date: 2020-07-26 13:13+0200\n"
 "PO-Revision-Date: 2020-03-16 19:19+0000\n"
-"Last-Translator: Dick Groskamp, 2020\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
 "Language-Team: Dutch (https://www.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -61,26 +61,31 @@ msgstr ""
 "definiëren."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:18
-msgid ""
-"You'll need to open a :guilabel:`Create Layer` dialog that will allow you to"
-" define a new layer."
+msgid "Open QGIS and create a new blank project."
 msgstr ""
-"U moet een dialoogvenster van :guilabel:`Laag maken` openen, dat u in staat "
-"stelt een nieuwe laag te definiëren."
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:21
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:22
 msgid ""
 "Navigate to and click on the menu entry :menuselection:`Layer --> Create "
-"Layer --> New Shapefile Layer`."
+"Layer --> New Shapefile Layer`. You'll be presented with the :guilabel:`New "
+"Shapefile Layer` dialog, which will allow you to define a new layer."
 msgstr ""
-"Navigeer naar en klik op het menu-item :menuselection:`Kaartlagen --> Laag "
-"maken --> Nieuwe Shapefile-laag`."
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:24
-msgid "You'll be presented with the following dialog:"
-msgstr "U zult het volgende dialoogvenster gepresenteerd krijgen:"
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:30
+msgid ""
+"Click :guilabel:`...` for the :guilabel:`File name` field. A save dialog "
+"will appear."
+msgstr ""
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:29
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:32
+msgid "Navigate to the :file:`exercise_data` directory."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:33
+msgid "Save your new layer as :file:`school_property.shp`."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:35
 msgid ""
 "It's important to decide which kind of dataset you want at this stage. Each "
 "different vector layer type is \"built differently\" in the background, so "
@@ -91,19 +96,19 @@ msgstr ""
 "achtergrond, dus als u de laag eenmaal hebt gemaakt, kunt u het type niet "
 "meer wijzigen."
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:33
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:39
 msgid ""
-"For the next exercise, we're going to be creating new features which "
-"describe areas. For such features, you'll need to create a polygon dataset."
+"For the next exercise, we're going to create new features which describe "
+"areas. For such features, you'll need to create a polygon dataset."
 msgstr ""
-"Voor de volgende oefening zullen we nieuwe objecten gaan maken die gebieden "
-"beschrijven. Voor dergelijke objecten moet u een polygoon gegevensset maken."
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:36
-msgid "Click on the :guilabel:`Polygon` radio button:"
-msgstr "Klik op de keuzeknop :guilabel:`Polygoon`:"
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:42
+msgid ""
+"For :guilabel:`Geometry Type`, select :guilabel:`Polygon` from the drop down"
+" menu:"
+msgstr ""
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:41
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:47
 msgid ""
 "This has no impact on the rest of the dialog, but it will cause the correct "
 "type of geometry to be used when the vector dataset is created."
@@ -112,71 +117,54 @@ msgstr ""
 "voor dat het juiste type geometrie zal worden gebruikt als de vector "
 "gegevensset wordt gemaakt."
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:44
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:50
 msgid ""
 "The next field allows you to specify the Coordinate Reference System, or "
-"CRS. A CRS specifies how to describe a point on Earth in terms of "
-"coordinates, and because there are many different ways to do this, there are"
-" many different CRSs. The CRS of this project is WGS84, so it's already "
-"correct by default:"
+"CRS. CRS is a method of associating numerical coordinates with a position on"
+" the surface of the Earth. See the User Manual on :ref:`Working with "
+"Projections <label_projections>` to learn more."
 msgstr ""
-"Het volgende veld stelt u in staat het Coördinaten Referentie Systeem of CRS"
-" te specificeren. Een CRS specificeert hoe een punt op de Aarde moet worden "
-"beschreven in termen van coördinaten, en omdat er vele verschillende "
-"manieren zijn om dit te doen, zijn er vele verschillende CRS-en. Het CRS "
-"voor dit project is WGS84, dus is het standaard al juist ingevuld:"
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:52
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:56
 msgid ""
-"Next there is a collection of fields grouped under :guilabel:`New "
-"attribute`. By default, a new layer has only one attribute, the :kbd:`id` "
-"field (which you should see in the :guilabel:`Attributes list`) below. "
-"However, in order for the data you create to be useful, you actually need to"
-" say something about the features you'll be creating in this new layer. For "
-"our current purposes, it will be enough to add one field called :kbd:`name`."
+"For this example we will use the default CRS associated with this project, "
+"which is WGS84."
 msgstr ""
-"Vervolgens is er een collectie van velden gegroepeerd onder :guilabel:`Nieuw"
-" attribuut`. Standaard heeft een nieuwe laag slechts één attribuut, het veld"
-" :kbd:`id` (wat u zou moeten zien in de :guilabel:`Lijst met velden`) "
-"onderin. Echter, om de gegevens die u gaat maken bruikbaar te maken, dient u"
-" in feite iets te zeggen over de objecten die u gaat maken in deze nieuwe "
-"laag. Voor onze huidige doelen is het voldoende om één veld, genaamd "
-":kbd:`name`, toe te voegen."
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:59
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:62
 msgid ""
-"Replicate the setup below, then click the :guilabel:`Add to attributes list`"
-" button:"
+"Next there is a collection of fields grouped under :guilabel:`New Field`. By"
+" default, a new layer has only one attribute, the ``id`` field (which you "
+"should see in the :guilabel:`Fields list`) below. However, in order for the "
+"data you create to be useful, you actually need to say something about the "
+"features you'll be creating in this new layer. For our current purposes, it "
+"will be enough to add one field called ``name`` that will hold ``Text data``"
+" and will be limited to text length of ``80`` characters."
 msgstr ""
-"Repliceer onderstaande instellingen en klik op de knop :guilabel:`Aan lijst "
-"met velden toevoegen`:"
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:65
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:70
+msgid ""
+"Replicate the setup below, then click the :guilabel:`Add to Fields List` "
+"button:"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:75
 msgid "Check that your dialog now looks like this:"
 msgstr "Controleer of uw dialoogvenster zou er nu ongeveer zo uit ziet:"
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:70
-msgid "Click :guilabel:`OK`. A save dialog will appear."
-msgstr ""
-"Klik op :guilabel:`OK`. Een dialoogvenster om op te slaan zal verschijnen."
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:80
+msgid "Click :guilabel:`OK`"
+msgstr "Klik op :guilabel:`OK`"
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:71
-msgid "Navigate to the :kbd:`exercise_data` directory."
-msgstr "Navigeer naar de map :kbd:`exercise_data`."
-
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:72
-msgid "Save your new layer as :kbd:`school_property.shp`."
-msgstr "Sla uw nieuwe laag op als :kbd:`school_property.shp`."
-
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:74
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:82
 msgid "The new layer should appear in your :guilabel:`Layers` panel."
 msgstr "De nieuwe laag zou moeten verschijnen in uw paneel :guilabel:`Lagen`."
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:79
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:87
 msgid "|basic| |FA| Data Sources"
 msgstr "|basic| |FA| Gegevensbronnen"
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:81
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:89
 msgid ""
 "When you create new data, it obviously has to be about objects that really "
 "exist on the ground. Therefore, you'll need to get your information from "
@@ -186,7 +174,7 @@ msgstr ""
 "objecten die echt op de grond bestaan. Daarom dient u uw informatie ergens "
 "vandaan te halen."
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:85
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:93
 msgid ""
 "There are many different ways to obtain data about objects. For example, you"
 " could use a GPS to capture points in the real world, then import the data "
@@ -203,7 +191,7 @@ msgstr ""
 "voor digitaliseren kunnen gebruiken om objecten te traceren vanaf gegevens "
 "die vanaf afstand zijn opgenomen, zoals satellietbeelden of luchtfotografie."
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:92
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:100
 msgid ""
 "For our example, you'll be using the digitizing approach. Sample raster "
 "datasets are provided, so you'll need to import them as necessary."
@@ -212,56 +200,65 @@ msgstr ""
 "Voorbeelden van raster gegevenssets worden meegeleverd, dus u dient ze te "
 "importeren als dat nodig is."
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:95
-msgid "Click on the :guilabel:`Add Raster Layer` button: |addRasterLayer|"
-msgstr "Klik op de knop :guilabel:`Rasterlaag toevoegen`: |addRasterLayer|"
-
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:97
-msgid "Navigate to :kbd:`exercise_data/raster/`."
-msgstr "Navigeer naar :kbd:`exercise_data/raster/`."
-
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:98
-msgid "Select the file :kbd:`3420C_2010_327_RGB_LATLNG.tif`."
-msgstr "Selecteer het bestand :kbd:`3420C_2010_327_RGB_LATLNG.tif`."
-
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:99
-msgid "Click :guilabel:`Open`. An image will load into your map."
-msgstr ""
-"Klik op :guilabel:`Openen`. Een afbeelding zal in uw kaart worden geladen."
-
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:100
-msgid "Find the new image in the :guilabel:`Layers` panel."
-msgstr "Zoek de nieuwe afbeelding op in het paneel :guilabel:`Lagen`."
-
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:101
-msgid ""
-"Click and drag it to the bottom of the list so that you can still see your "
-"other layers."
-msgstr ""
-"Klik en sleep het naar de onderste plaats van de lijst zodat u nog steeds uw"
-" andere lagen kunt zien."
-
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:103
-msgid "Find and zoom to this area:"
-msgstr "Zoek en zoom naar dit gebied:"
+msgid "Click on |dataSourceManager| :sup:`Data Source Manager` button."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:104
+msgid "Select |raster| :guilabel:`Raster` on the left side."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:105
+msgid "In the :guilabel:`Source` panel, click on the :guilabel:`...` button:"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:106
+msgid "Navigate to :file:`exercise_data/raster/`."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:107
+msgid "Select the file :file:`3420C_2010_327_RGB_LATLNG.tif`."
+msgstr ""
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:108
-msgid ""
-"If your :guilabel:`buildings` layer symbology is covering part or all of the"
-" raster layer, you can temporarily disable the layer by deselecting it in "
-"the :guilabel:`Layers panel`. You may also wish to hide the "
-":guilabel:`roads` symbology if you find it distracting."
+msgid "Click :guilabel:`Open` to close the dialogue window."
 msgstr ""
-"Als de symbologie van uw laag :guilabel:`buildings` een deel of alles van de"
-" rasterlaag bedekt, kunt u die laag tijdelijk uitschakelen door die te "
-"deselecteren in het :guilabel:`paneel Lagen`. U wilt misschien ook de "
-"symbologie van :guilabel:`roads` verbergen als u vindt dat die u afleid."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:113
-msgid "You'll be digitizing these three fields:"
-msgstr "U zult deze drie velden gaan digitaliseren:"
+msgid ""
+"Click :guilabel:`Add` and :guilabel:`Close`. An image will load into your "
+"map."
+msgstr ""
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:118
+msgid ""
+"If you don't see an aerial image appear, select the new layer, right click, "
+"and choose :guilabel:`Zoom to Layer` in the context menu."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:124
+msgid ""
+"Click on the |zoomIn| :sup:`Zoom In` button, and zoom to the area "
+"highlighted in blue below:"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:130
+msgid "Now you are ready to digitize these three fields:"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:135
+msgid ""
+"Before starting to digitize, let's move the ``school_property`` layer above "
+"the aerial image."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:137
+msgid ""
+"Select ``school_property`` layer in the :guilabel:`Layers` pane and drag it "
+"to the top."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:142
 msgid ""
 "In order to begin digitizing, you'll need to enter **edit mode**. GIS "
 "software commonly requires this to prevent you from accidentally editing or "
@@ -273,25 +270,21 @@ msgstr ""
 "u per ongeluk belangrijke gegevens bewerkt of verwijdert. De modus Bewerken "
 "wordt individueel in- of uitgeschakeld voor elke laag."
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:122
-msgid "To enter edit mode for the :guilabel:`school_property` layer:"
-msgstr "Modus bewerken inschakelen voor de laag :guilabel:`school_property`:"
-
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:124
-msgid ""
-"Click on the layer in the :guilabel:`Layer list` to select it. (Make very "
-"sure that the correct layer is selected, otherwise you'll edit the wrong "
-"layer!)"
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:146
+msgid "To enter edit mode for the ``school_property`` layer:"
 msgstr ""
-"Klik op de laag in de :guilabel:`Lagenlijst` om die te selecteren. (Wees er "
-"erg zeker van dat de juiste laag is geselecteerd, anders zult u de verkeerde"
-" laag bewerken!)"
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:127
-msgid "Click on the :guilabel:`Toggle Editing` button: |edit|"
-msgstr "Klik op de knop :guilabel:`Bewerken aan/uitzetten`: |edit|"
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:148
+msgid ""
+"Click on the ``school_property`` layer in the :guilabel:`Layers` panel to "
+"select it."
+msgstr ""
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:129
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:149
+msgid "Click on the |toggleEditing| :sup:`Toggle Editing` button."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:151
 msgid ""
 "If you can't find this button, check that the :guilabel:`Digitizing` toolbar"
 " is enabled. There should be a check mark next to the :menuselection:`View "
@@ -301,108 +294,52 @@ msgstr ""
 ":guilabel:`Digitaliseren` is ingeschakeld. Er zou een vinkje moeten staan "
 "naast het menu-item :menuselection:`Beeld --> Werkbalken --> Digitaliseren`."
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:133
-msgid ""
-"As soon as you are in edit mode, you'll see the digitizing tools are now "
-"active:"
-msgstr ""
-"Zodra u in de modus Bewerken bent, zult u zien dat de gereedschappen voor "
-"digitaliseren actief zijn:"
-
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:136
-msgid "|capturePolygon| |moveFeature| |vertexToolActiveLayer|"
-msgstr "|capturePolygon| |moveFeature| |vertexToolActiveLayer|"
-
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:138
-msgid ""
-"Four other relevant buttons are still inactive, but will become active when "
-"we start interacting with our new data:"
-msgstr ""
-"Vijf andere relevante knoppen zijn nog steeds inactief, maar zullen actief "
-"worden wanneer we beginnen met interacties op onze nieuwe gegevens:"
-
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:141
-msgid "|saveEdits| |deleteSelectedFeatures| |editCut| |editCopy| |editPaste|"
-msgstr "|saveEdits| |deleteSelectedFeatures| |editCut| |editCopy| |editPaste|"
-
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:144
-msgid "From left to right on the toolbar, they are:"
-msgstr "Van links naar rechts op de werkbalk zijn dit:"
-
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:146
-msgid ":guilabel:`Save Edits`: saves changes made to the layer."
-msgstr ""
-":guilabel:`Opslaan wijzigingen laag`: slaat de wijzigingen die op de laag "
-"gemaakt zijn op."
-
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:147
-msgid ":guilabel:`Add Feature`: start digitizing a new feature."
-msgstr ""
-":guilabel:`Object toevoegen`: begint het digitaliseren van een nieuw object."
-
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:148
-msgid ":guilabel:`Move Feature(s)`: move an entire feature around."
-msgstr ":guilabel:`Object(en) verplaatsen`: verplaatst een geheel object."
-
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:149
-msgid ":guilabel:`Vertex Tool`: move only one part of a feature."
-msgstr ""
-":guilabel:`Gereedschap Punten`: verplaats slechts één deel van een object."
-
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:150
-msgid ":guilabel:`Delete Selected`: delete the selected feature."
-msgstr ""
-":guilabel:`Geselecteerde object verwijderen`: verwijdert het/de "
-"geselecteerde object(en)."
-
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:151
-msgid ":guilabel:`Cut Features`: cut the selected feature."
-msgstr ":guilabel:`Kaartobjecten knippen`: knipt het geselecteerde object."
-
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:152
-msgid ":guilabel:`Copy Features`: copy the selected feature."
-msgstr ""
-":guilabel:`Kaartobjecten kopiëren`: kopieert het geselecteerde object."
-
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:153
-msgid ""
-":guilabel:`Paste Features`: paste a cut or copied feature back into the map."
-msgstr ""
-":guilabel:`Kaartobjecten plakken`: plakt een geknipt of gekopieerd object "
-"terug op de kaart."
-
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:155
-msgid "You want to add a new feature."
-msgstr "U wilt een nieuw object toevoegen."
-
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:157
 msgid ""
-"Click on the :guilabel:`Add Feature` button now to begin digitizing our "
-"school fields."
+"As soon as you are in edit mode, you'll see that some digitizing tools have "
+"become active:"
 msgstr ""
-"Klik nu op de knop :guilabel:`Object toevoegen` om te beginnen met het "
-"digitaliseren van de velden van de school."
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:160
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:158
+msgid "|capturePolygon| :sup:`Capture Polygon`"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:159
+msgid "|vertexToolActiveLayer| :sup:`Vertex Tool`"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:161
+msgid ""
+"Other relevant buttons are still inactive, but will become active when we "
+"start interacting with our new data."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:164
+msgid ""
+"Notice that the layer ``school_property`` in the :guilabel:`Layers` panel "
+"now has the pencil icon, indicating that it is in edit mode."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:167
+msgid ""
+"Click on the |capturePolygon| :sup:`Capture Polygon` button to begin "
+"digitizing our school fields."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:170
 msgid ""
 "You'll notice that your mouse cursor has become a crosshair. This allows you"
 " to more accurately place the points you'll be digitizing. Remember that "
-"even as you're using the digitizing tool, you can zoom in and out on your "
+"even when you're using the digitizing tool, you can zoom in and out on your "
 "map by rolling the mouse wheel, and you can pan around by holding down the "
 "mouse wheel and dragging around in the map."
 msgstr ""
-"Het zal u opgevallen zijn dat uw muiscursor een kruisdraad is geworden. Dit "
-"stelt u in staat om de punten die u zult digitaliseren nauwkeuriger te "
-"plaatsen. Onthoud dat u, zelfs wanneer u het gereedschap Digitaliseren "
-"gebruikt, op uw kaart kunt in- en uitzoomen door het draaien van het "
-"muiswiel, en u kunt verschuiven door het muiswiel ingedrukt te houden en "
-"over de kaart te slepen."
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:166
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:176
 msgid "The first feature you'll be digitizing is the |schoolAreaType1|:"
 msgstr "Het eerste object dat u zult digitaliseren is het |schoolAreaType1|:"
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:171
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:181
 msgid ""
 "Start digitizing by clicking on a point somewhere along the edge of the "
 "field."
@@ -410,7 +347,7 @@ msgstr ""
 "Start het digitaliseren door te klikken op een punt ergens langs de rand van"
 " het veld."
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:173
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:182
 msgid ""
 "Place more points by clicking further along the edge, until the shape you're"
 " drawing completely covers the field."
@@ -418,25 +355,48 @@ msgstr ""
 "Plaats meer punten door te klikken verder langs de rand, totdat de vorm die "
 "u tekent het veld volledig bedekt."
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:175
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:187
 msgid ""
-"After placing your last point, *right-click* to finish drawing the polygon. "
+"After placing your last point, right click to finish drawing the polygon. "
 "This will finalize the feature and show you the :guilabel:`Attributes` "
 "dialog."
 msgstr ""
-"*Klik met rechts* na het plaatsen van uw laatste punt om het tekenen van de "
-"polygoon te voltooien. Dit zal het object voltooien en u het dialoogvenster "
-":guilabel:`Attributen` laten zien."
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:177
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:189
 msgid "Fill in the values as below:"
 msgstr "Vul de waarden in zoals hieronder:"
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:182
-msgid "Click :guilabel:`OK` and you've created a new feature!"
-msgstr "Klik op :guilabel:`OK` en u heeft een nieuw object gemaakt!"
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:194
+msgid "Click :guilabel:`OK`, and you have created a new feature!"
+msgstr ""
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:184
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:199
+msgid "In the :guilabel:`Layers` panel select the ``school_property`` layer."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:200
+msgid ""
+"Right click and choose :guilabel:`Open Attribute Table` in the context menu."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:205
+msgid ""
+"In the table you will see the feature you just added. While in edit mode you"
+" can update the attributes data by double click on the cell you want to "
+"update."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:212
+msgid "Close the attribute table."
+msgstr "Sluit de attributentabel."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:213
+msgid ""
+"To save the new feature we just created, click on |saveEdits| :sup:`Save "
+"Edits` button."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:215
 msgid ""
 "Remember, if you've made a mistake while digitizing a feature, you can "
 "always edit it after you're done creating it. If you've made a mistake, "
@@ -447,51 +407,75 @@ msgstr ""
 " Als u een fout maakte, ga dan door met digitaliseren totdat u klaar bent "
 "met het maken van het object hierboven. Dan:"
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:188
-msgid "Select the feature with the :guilabel:`Select Single Feature` tool:"
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:219
+msgid "Click on |vertexToolActiveLayer| :sup:`Vertex Tool` button."
 msgstr ""
-"Selecteer het object met het gereedschap :guilabel:`Eén object selecteren`:"
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:193
-msgid "You can use:"
-msgstr "U kunt gebruiken:"
-
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:195
-msgid "the :guilabel:`Move Feature(s)` tool to move the entire feature,"
-msgstr ""
-"het gereedschap :guilabel:`Object(en) verplaatsen` om het gehele object te "
-"verplaatsen,"
-
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:196
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:220
 msgid ""
-"the :guilabel:`Vertex Tool` to move only one point where you may have miss-"
-"clicked,"
+"Hover the mouse over a vertex you want to move and left click on the vertex."
 msgstr ""
-"het :guilabel:`Gereedschap Punten` om slechts één punt te verplaatsen waar u"
-" misschien verkeerd geklikt hebt,"
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:198
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:221
 msgid ""
-":guilabel:`Delete Selected` to get rid of the feature entirely so you can "
-"try again, and"
+"Move the mouse to the correct location of the vertex, and left click. This "
+"will move the vertex to the new location."
 msgstr ""
-":guilabel:`Geselecteerd object(en) verwijderen` om een object geheel te "
-"verwijderen zodat u opnieuw kunt beginnen, en"
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:200
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:229
 msgid ""
-"the :menuselection:`Edit --> Undo` menu item or the :kbd:`Ctrl+Z` keyboard "
-"shortcut to undo mistakes."
+"The same procedure can be used to move a line segment, but you will need to "
+"hover over the midpoint of the line segment."
 msgstr ""
-"het menu-item :menuselection:`Bewerken --> Ongedaan maken`  of de sneltoets "
-"voor het toetsenbord :kbd:`Ctrl + Z` om vergissingen ongedaan te maken."
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:204
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:224
-msgid "|basic| |TY|"
-msgstr "|basic| |TY|"
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:232
+msgid ""
+"If you want to undo a change, you can press the |undo| :sup:`Undo` button or"
+" :kbd:`Ctrl+Z`."
+msgstr ""
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:206
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:234
+msgid ""
+"Remember to save your changes by clicking the |saveEdits| :sup:`Save Edits` "
+"button."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:236
+msgid ""
+"To enable the remaining feature editing tools, one needs to select the "
+"feature."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:238
+msgid ""
+"Click on the |selectRectangle| :sup:`Select Features` button in the "
+"Attributes Toolbar."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:239
+msgid ""
+"Click on the feature that was just created and the remaining buttons will "
+"become enabled."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:246
+msgid ""
+"See :ref:`User Manual<sec_edit_existing_layer>` for description of the other"
+" buttons in this toolbar."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:249
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:319
+msgid ""
+"When done editing, click the |toggleEditing| :sup:`Toggle Editing` button to"
+" get out of edit mode, and save your edits."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:254
+msgid "|basic| |TY| Digitizing Polygons"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:256
 msgid ""
 "Digitize the school itself and the upper field. Use this image to assist "
 "you:"
@@ -499,11 +483,11 @@ msgstr ""
 "Digitaliseer de school zelf en het bovenste veld. Gebruik deze afbeelding om"
 " u te helpen:"
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:211
-msgid "Remember that each new feature needs to have a unique :kbd:`id` value!"
-msgstr "Onthoud dat elk nieuw object een unieke waarde :kbd:`id` moet hebben!"
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:261
+msgid "Remember that each new feature needs to have a unique ``id`` value!"
+msgstr ""
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:213
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:263
 msgid ""
 "When you're done adding features to a layer, remember to save your edits and"
 " then exit edit mode."
@@ -511,88 +495,145 @@ msgstr ""
 "Wanneer u klaar bent met het toevoegen van objecten aan een laag, onthoud "
 "dan om de bewerkingen op te slaan en de modus Bewerken te verlaten."
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:216
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:266
 msgid ""
 "You can style the fill, outline and label placement and formatting of the "
-":guilabel:`school_property` using techniques learnt in earlier lessons. In "
-"our example, we will use a dashed outline of light purple color with no "
-"fill."
+"``school_property`` using techniques learnt in earlier lessons."
 msgstr ""
-"U kunt de vulling opmaken, de omtrek en plaatsen van labels en "
-":guilabel:`school_property` opmaken met behulp van de technieken de werden "
-"geleerd in eerdere lessen. In ons voorbeeld zullen we een gestreepte omtrek "
-"gebruiken van een lichtpaarse kleur zonder vulling."
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:226
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:273
+msgid "|moderate| |FA| Using Vertex Editor Table"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:275
 msgid ""
-"Create a new line feature called :kbd:`routes.shp` with attributes :kbd:`id`"
-" and :kbd:`type`. (Use the approach above to guide you.)"
+"Another way to edit a feature is to manually enter the actual coordinate "
+"values for each vertex using the :guilabel:`Vertex Editor` table."
 msgstr ""
-"Maak een nieuw lijnobject genaamd :kbd:`routes.shp` met de attributen "
-":kbd:`id` en :kbd:`type`. (Gebruik de benadering hierboven om u te leiden.)"
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:228
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:279
+msgid "Make sure you are in edit mode on layer ``school_property``."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:280
 msgid ""
-"We're going to digitize two routes which are not already marked on the roads"
-" layer; one is a path, the other is a track."
+"If not already activated, click on |vertexToolActiveLayer| :sup:`Vertex "
+"Tool` button."
 msgstr ""
-"We gaan twee routes digitaliseren die nog niet zijn gemarkeerd op de laag "
-"roads; één is een pad de ander is een spoor."
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:231
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:282
 msgid ""
-"Our path runs along the southern edge of the suburb of Railton, starting and"
-" ending at marked roads:"
+"Move the mouse over one of the polygon features you created in the "
+"``school_property`` layer and right click on it. This will select the "
+"feature and a :guilabel:`Vertex Editor` pane will appear."
 msgstr ""
-"Ons pad loopt langs de zuidelijke rand van de wijk Railton, beginnend en "
-"eindigend op gemarkeerde wegen:"
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:237
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:289
+msgid ""
+"This table contains the coordinates for the vertices of the feature. Notice "
+"there are seven vertices for this feature, but only six are visually "
+"identified in the map area. Upon closer inspection, one will notice that row"
+" 0 and 6 have identical coordinates. These are the start and end vertices of"
+" the feature geometry, and are required in order to create a closed polygon "
+"feature."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:297
+msgid ""
+"Click and drag a box over a vertex, or multiple vertices, of the selected "
+"feature."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:302
+msgid ""
+"The selected vertices will change to a color blue and the :guilabel:`Vertex "
+"Editor` table will have the corresponding rows highlighted, which contain "
+"the coordinates of the vertices."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:309
+msgid ""
+"To update a coordinate, double left click on the cell in the table that you "
+"want to edit and enter the updated value. In this example, the x coordinate "
+"of row ``4`` is updated from ``20.4450`` to ``20.4444``."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:317
+msgid ""
+"After entering the updated value, hit the enter key to apply the change. You"
+" will see the vertex move to the new location in the map window."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:323
+msgid "|basic| |TY| Digitizing Lines"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:324
+msgid ""
+"We are going to digitize two routes which are not already marked on the "
+"roads layer; one is a path, the other is a track. Our path runs along the "
+"southern edge of the suburb of Railton, starting and ending at marked roads:"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:332
 msgid "Our track is a little further to the south:"
 msgstr "Ons spoor is iets meer naar het zuiden:"
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:242
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:337
 msgid ""
-"One at a time, digitize the path and the track on the :guilabel:`routes` "
-"layer. Try to follow the routes as accurately as possible, using points "
-"(left-click) at any corners or turns."
+"Create a new ESRI Shapefile line dataset called ``routes.shp``, with "
+"attributes ``id`` and ``type`` (use the approach above to guide you.)"
 msgstr ""
-"Digitaliseer, één per keer, het pad en het spoor op de laag "
-":guilabel:`routes`. Probeer de routes zo nauwkeurig mogelijk te volgen met "
-"behulp van punten (links klikken) op elke bocht of koerswijziging."
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:246
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:340
 msgid ""
-"When creating each route, give them the :kbd:`type` attribute value of "
-":kbd:`path` or :kbd:`track`."
+"If the roads layer is not in your map, then add it from the GeoPackage file "
+":file:`training-data.gpkg` included in the :file:`exercise_data` folder of "
+"the training data you downloaded."
 msgstr ""
-"Bij het maken van elke route, geef het attribuut :kbd:`type` de waarde "
-":kbd:`path` of :kbd:`track`."
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:249
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:343
+msgid "Activate edit mode."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:344
 msgid ""
-"You'll probably find that only the points are marked; use the "
-":guilabel:`Layer Properties` dialog to add styling to your routes. Feel free"
-" to give different styles to the path and track."
+"Since you are working with a line feature, click on the |addLineFeature| "
+":sup:`Add Line` button to initiate line digitizing mode."
 msgstr ""
-"U zult waarschijnlijk merken dat alleen de punten zijn gemarkeerd; gebruik "
-"het dialoogvenster :guilabel:`Laageigenschappen` om stijl aan uw routes toe "
-"te voegen. Het staat u vrij verschillende stijlen te gebruiken voor het pad "
-"en het spoor."
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:253
-msgid "Save your edits and toggle :guilabel:`Edit` mode."
-msgstr "Sla uw bewerkingen op en schakel met de modus :guilabel:`Bewerken`."
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:347
+msgid ""
+"One at a time, digitize the path and the track on the ``routes`` layer. Try "
+"to follow the routes as accurately as possible, adding additional points "
+"along corners or turns."
+msgstr ""
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:255
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:350
+msgid "Set the ``type`` attribute value to ``path`` or ``track``."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:351
+msgid ""
+"Use the :guilabel:`Layer Properties` dialog to add styling to your routes. "
+"Feel free to use different styles for paths and tracks."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:353
+msgid ""
+"Save your edits and toggle off editing mode by pressing the |toggleEditing| "
+":sup:`Toggle Editing` button."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:356
 msgid ":ref:`Check your results <create-vector-digitize-1>`"
 msgstr ":ref:`Controleer uw resultaten <create-vector-digitize-1>`"
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:258
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:359
 msgid "|IC|"
 msgstr "|IC|"
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:260
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:361
 msgid ""
 "Now you know how to create features! This course doesn't cover adding point "
 "features, because that's not really necessary once you've worked with more "
@@ -607,7 +648,7 @@ msgstr ""
 "plaatsen, geef het zoals gewoonlijk zijn attributen en dan is het object "
 "gemaakt."
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:266
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:367
 msgid ""
 "Knowing how to digitize is important because it's a very common activity in "
 "GIS programs."
@@ -615,18 +656,14 @@ msgstr ""
 "Weten hoe digitaliseren werkt is belangrijk omdat het een veel voorkomende "
 "activiteit in programma's van GIS is."
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:270
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:371
 msgid "|WN|"
 msgstr "|WN|"
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:272
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:373
 msgid ""
 "Features in a GIS layer aren't just pictures, but objects in space. For "
 "example, adjacent polygons know where they are in relation to one another. "
-"This is called *topology*. In the next lesson you'll see an example of why "
-"this can be useful."
+"This is called **topology**. In the next lesson you'll see an example of why"
+" this can be useful."
 msgstr ""
-"Objecten in een laag van GIS zijn niet slechts afbeeldingen, maar objecten "
-"in de ruimte. Bijvoorbeeld: aaneensluitende polygonen weten waar zij in "
-"relatie tot elkaar staan. Dit wordt *topologie* genoemd. In de volgende les "
-"zult u een voorbeeld zien van waarom dit handig kan zijn."

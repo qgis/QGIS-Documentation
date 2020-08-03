@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-10 11:07+0200\n"
+"POT-Creation-Date: 2020-07-26 13:13+0200\n"
 "PO-Revision-Date: 2020-03-16 19:25+0000\n"
 "Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2020\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
@@ -224,8 +224,8 @@ msgstr ""
 "layer(s)** 를 선택해도 맵 캔버스에 데이터를 추가할 수 있습니다."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:122
-msgid "|draw| :sup:`Refresh` the browser tree;"
-msgstr "|draw| :sup:`Refresh`: 탐색 트리를 새로고칩니다."
+msgid "|refresh| :sup:`Refresh` the browser tree;"
+msgstr ""
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:123
 msgid ""
@@ -273,37 +273,104 @@ msgstr ""
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:139
 msgid ""
 "The entries in the :guilabel:`Browser` panel are organised hierarchically, "
-"and there are several top level entries. First comes :guilabel:`Favorites` "
-"(where you can place shortcuts to often used locations). Then comes "
-":guilabel:`Spatial Bookmarks`, followed by your :guilabel:`Project Home` "
-"(the default is the directory where your project file resides), your "
-":guilabel:`Home` directory in the file system and the filesystem root "
-"directory (:guilabel:`/`). Then comes a number of container / database types"
-" and service protocols (that may or may not be relevant to you): "
-":guilabel:`GeoPackage`, :guilabel:`SpatiaLite`, :guilabel:`PostGIS`, "
-":guilabel:`MSSQL`, :guilabel:`DB2`, :guilabel:`WMS/WMTS`, :guilabel:`XYZ "
-"Tiles`, :guilabel:`WCS`, :guilabel:`WFS`, :guilabel:`OWS`, "
-":guilabel:`ArcGISMapServer`, :guilabel:`ArcGISFeatureServer` and "
-":guilabel:`GeoNode`."
+"and there are several top level entries:"
 msgstr ""
-":guilabel:`Browser` 패널에 있는 항목들은 계층적으로 조직되어 있으며, 최상위 수준 항목이 몇 개 있습니다. 먼저 "
-":guilabel:`Favorites` 는 자주 사용하는 위치를 가리키는 단축키를 배치할 수 있습니다. 그 다음 "
-":guilabel:`Spatial Bookmarks` 는 자주 사용하는 맵 범위를 저장할 수 있고, :guilabel:`Project "
-"Home` 은 사용자 프로젝트와 관련된 (대부분의) 데이터를 저장하고 있는 폴더에 빠르게 접근할 수 있습니다. 기본값은 사용자 프로젝트 "
-"파일이 위치한 디렉터리입니다. :guilabel:`Home` 디렉터리는 파일 시스템에 있는 홈 디렉터리 및 파일 시스템의 루트 "
-"디렉터리(:guilabel:`/`)입니다. 연결돼 있는 로컬 또는 네트워크 드라이브도 있습니다. 마지막으로 사용자 플랫폼 및 기저 "
-"라이브러리에 따라 다음 컨테이너/데이터베이스 유형 가운데 일부분이 표시될 수도 있습니다: :guilabel:`GeoPackage`, "
-":guilabel:`SpatiaLite`, :guilabel:`PostGIS`, :guilabel:`MSSQL`, "
-":guilabel:`DB2`, :guilabel:`WMS/WMTS`, :guilabel:`XYZ Tiles`, "
-":guilabel:`WCS`, :guilabel:`WFS`, :guilabel:`OWS`, "
-":guilabel:`ArcGISMapServer`, :guilabel:`ArcGISFeatureServer` and "
-":guilabel:`GeoNode`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:142
+msgid ""
+":guilabel:`Favorites` where you can place shortcuts to often used locations"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:143
+msgid ""
+":guilabel:`Spatial Bookmarks` where you can store often used map extents "
+"(see :ref:`sec_bookmarks`)"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:145
+msgid ""
+":guilabel:`Project Home`: for a quick access to the folder in which (most "
+"of) the data related to your project are stored. The default value is the "
+"directory where your project file resides."
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:148
+msgid ""
+":guilabel:`Home` directory in the file system and the filesystem root "
+"directory."
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:149
+msgid "Connected local or network drives"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:150
+msgid ""
+"Then comes a number of container / database types and service protocols, "
+"depending on your platform and underlying libraries:"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:153
+msgid "|geoPackage| :guilabel:`GeoPackage`"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:154
+msgid "|spatialite| :guilabel:`SpatiaLite`"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:155
+msgid "|postgis| :guilabel:`PostGIS`"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:156
+msgid "|mssql| :guilabel:`MSSQL`"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:157
+msgid "|oracle| :guilabel:`Oracle`"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:158
+msgid "|db2| :guilabel:`DB2`"
+msgstr ""
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:159
+msgid "|wms| :guilabel:`WMS/WMTS`"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:160
+msgid "|wms| :guilabel:`XYZ Tiles`"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:161
+msgid "|wcs| :guilabel:`WCS`"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:162
+msgid "|wfs| :guilabel:`WFS`"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:163
+msgid "|ows| :guilabel:`OWS`"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:164
+msgid "|ams| :guilabel:`ArcGISMapServer`"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:165
+msgid "|afs| :guilabel:`ArcGISFeatureServer`"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:166
+msgid "|geonode| :guilabel:`GeoNode`"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:169
 msgid "Interacting with the Browser items"
 msgstr "탐색기 항목과 대화형 작업"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:161
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:171
 msgid ""
 "The browser supports drag and drop within the browser, from the browser to "
 "the canvas and :guilabel:`Layers` panel, and from the :guilabel:`Layers` "
@@ -312,7 +379,7 @@ msgstr ""
 "탐색기는 드래그&드롭을 지원합니다. 탐색기 내부에서, 탐색기에서 캔버스 및 :guilabel:`Layers` 패널로, 그리고 "
 ":guilabel:`Layers` 패널에서 탐색기에 있는 (GeoPackage 같은) 레이어 컨테이너로 드래그&드롭할 수 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:165
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:175
 msgid ""
 "Project file items inside the browser can be expanded, showing the full "
 "layer tree (including groups) contained within that project. Project items "
@@ -325,74 +392,74 @@ msgstr ""
 "항목을 브라우저의 다른 모든 항목과 마찬가지로 취급하기 때문에, 탐색기 안에서 드래그&드롭하거나 (예를 들어 레이어 항목을 "
 "GeoPackage 파일로 복사하거나) 현재 프로젝트에 드래그&드롭 또는 더블 클릭을 통해 추가할 수도 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:172
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:182
 msgid ""
 "The context menu for an element in the :guilabel:`Browser` panel is opened "
 "by right-clicking on it."
 msgstr ":guilabel:`Browser` 패널에 있는 요소를 오른쪽 클릭하면 컨텍스트 메뉴가 열립니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:175
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:185
 msgid ""
 "For file system directory entries, the context menu offers the following:"
 msgstr "파일 시스템 디렉터리 항목의 경우, 컨텍스트 메뉴에서 다음 옵션을 선택할 수 있습니다:"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:177
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:187
 msgid ":guilabel:`New` -->"
 msgstr ":guilabel:`New` -->"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:179
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:189
 msgid ":guilabel:`Directory...`"
 msgstr ":guilabel:`Directory...`"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:180
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:190
 msgid ":guilabel:`GeoPackage...`"
 msgstr ":guilabel:`GeoPackage...`"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:181
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:191
 msgid ":guilabel:`ShapeFile...`"
 msgstr ":guilabel:`ShapeFile...`"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:182
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:192
 msgid ":guilabel:`Add as a Favorite`"
 msgstr ":guilabel:`Add as a Favorite`"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:183
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:193
 msgid ":guilabel:`Hide from Browser`"
 msgstr ":guilabel:`Hide from Browser`"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:184
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:194
 msgid ":guilabel:`Fast Scan this Directory`"
 msgstr ":guilabel:`Fast Scan this Directory`"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:185
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:195
 msgid ":guilabel:`Open Directory`"
 msgstr ":guilabel:`Open Directory`"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:186
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:196
 msgid ":guilabel:`Open in Terminal`"
 msgstr ":guilabel:`Open in Terminal`"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:187
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:197
 msgid ":guilabel:`Properties...`"
 msgstr ":guilabel:`Properties...`"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:188
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:198
 msgid ":guilabel:`Directory Properties...`"
 msgstr ":guilabel:`Directory Properties...`"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:190
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:200
 msgid ":guilabel:`Favourites`, can also be removed and renamed:"
 msgstr ":guilabel:`Favourites`, can also be removed and renamed:"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:192
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:202
 msgid ":guilabel:`Rename favourite...`"
 msgstr ":guilabel:`Rename favourite...`"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:193
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:203
 msgid ":guilabel:`Remove favourite`"
 msgstr ":guilabel:`Remove favourite`"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:195
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:205
 msgid ""
 "For leaf entries that can act as layers in the project, the context menu "
 "will have supporting entries. For example, for non-database, non-service-"
@@ -401,27 +468,27 @@ msgstr ""
 "프로젝트에서 레이어로 동작할 수 있는 리프(leaf; 맨 마지막 끝 노드) 항목의 경우, 컨텍스트 메뉴에 지원하는 옵션을 표시할 "
 "것입니다. 예를 들어 데이터베이스나 서비스 기반이 아닌 벡터, 래스터 및 메시 데이터소스의 경우:"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:200
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:210
 msgid ":guilabel:`Delete File \"<name of file>\"...`"
 msgstr ":guilabel:`Delete File \"<name of file>\"...`"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:201
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:211
 msgid ":guilabel:`Export Layer` --> :guilabel:`To File...`"
 msgstr ":guilabel:`Export Layer` --> :guilabel:`To File...`"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:202
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:212
 msgid ":guilabel:`Add Layer to Project`"
 msgstr ":guilabel:`Add Layer to Project`"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:203
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:213
 msgid ":guilabel:`Layer Properties`"
 msgstr ":guilabel:`Layer Properties`"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:204
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:214
 msgid ":guilabel:`File Properties`"
 msgstr ":guilabel:`File Properties`"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:206
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:216
 msgid ""
 "In the :guilabel:`Layer properties` entry, you will find (similar to what "
 "you will find in the :ref:`vector <vector_properties_dialog>` and "
@@ -432,7 +499,7 @@ msgstr ""
 "<vector_properties_dialog>` 및 :ref:`래스터 <raster_properties_dialog>` 레이어 속성에서"
 " 찾을 수 있는 것과 비슷한) 다음 옵션을 표시할 것입니다:"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:212
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:222
 msgid ""
 ":guilabel:`Metadata` for the layer. Metadata groups: :guilabel:`Information "
 "from provider` (if possible, :guilabel:`Path` will be a hyperlink to the "
@@ -448,21 +515,21 @@ msgstr ""
 ":guilabel:`Contacts`, :guilabel:`Links` (벡터 레이어 용), :guilabel:`References` "
 "(래스터 레이어 용), :guilabel:`History` 입니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:219
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:229
 msgid "A :guilabel:`Preview` panel"
 msgstr ":guilabel:`Preview` 패널"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:220
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:230
 msgid ""
 "The attribute table for vector sources (in the :guilabel:`Attributes` "
 "panel)."
 msgstr "(:guilabel:`Attributes` 패널에 있는) 벡터 소스 용 속성 테이블"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:223
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:233
 msgid "To add a layer to the project using the :guilabel:`Browser`:"
 msgstr ":guilabel:`Browser` 를 사용해서 프로젝트에 레이어를 추가하려면:"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:225
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:235
 msgid ""
 "Enable the :guilabel:`Browser` as described above. A browser tree with your "
 "file system, databases and web services is displayed. You may need to "
@@ -473,11 +540,11 @@ msgstr ""
 "표시될 것입니다. 데이터베이스나 웹 서비스를 표시하려면 먼저 연결해야 할 수도 있습니다. (데이터베이스 또는 웹 서비스 절을 "
 "참조하세요.)"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:230
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:240
 msgid "Find the layer in the list."
 msgstr "목록에서 레이어를 찾으십시오."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:231
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:241
 msgid ""
 "Use the context menu, double-click its name, or drag-and-drop it into the "
 ":ref:`map canvas <label_mapview>`. Your layer is now added to the "
@@ -486,17 +553,17 @@ msgstr ""
 "컨텍스트 메뉴를 사용해서 레이어 명칭을 더블 클릭하거나 :ref:`맵 캔버스 <label_mapview>` 로 레이어를 "
 "드래그&드롭하십시오. :ref:`레이어 패널 <label_legend>`에 사용자 레이어를 추가하고 맵 캔버스 상에 표시할 것입니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:236
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:246
 msgid "**Open a QGIS project directly from the browser**"
 msgstr "**탐색기에서 QGIS 프로젝트를 직접 열기**"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:238
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:248
 msgid ""
 "You can also open a QGIS project directly from the Browser panel by double-"
 "clicking its name or by drag-and-drop into the map canvas."
 msgstr "프로젝트 명칭을 더블 클릭하거나 맵 캔버스로 드래그&드롭하면 탐색기 패널에서 QGIS 프로젝트도 직접 열 수 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:241
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:251
 msgid ""
 "Once a file is loaded, you can zoom around it using the map navigation "
 "tools. To change the style of a layer, open the :guilabel:`Layer Properties`"
@@ -510,11 +577,11 @@ msgstr ""
 " :guilabel:`Layer Properties` 대화창을 여십시오. 벡터 레이어의 심볼을 설정하는 데 대한 자세한 내용을 알고 "
 "싶다면 :ref:`vector_style_menu` 절을 참조하세요."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:249
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:259
 msgid "Right-clicking an item in the browser tree helps you to:"
 msgstr "탐색 트리에 있는 항목을 오른쪽 클릭하면 다음 작업을 할 수 있습니다:"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:251
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:261
 msgid ""
 "for a file or a table, display its metadata or open it in your project. "
 "Tables can even be renamed, deleted or truncated."
@@ -522,7 +589,7 @@ msgstr ""
 "파일 또는 테이블인 경우, 해당 항목의 메타데이터를 표시하거나 사용자의 프로젝트에 항목을 열 수 있습니다. 테이블의 경우 재명명하거나, "
 "삭제하거나, 추출할 수도(truncate) 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:253
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:263
 msgid ""
 "for a folder, bookmark it into your favourites or hide it from the browser "
 "tree. Hidden folders can be managed from the :menuselection:`Settings --> "
@@ -531,7 +598,7 @@ msgstr ""
 "폴더인 경우, 사용자의 즐겨찾기에 북마크해두고 탐색 트리에서 숨길 수 있습니다. :menuselection:`Settings --> "
 "Options --> Data Sources` 탭에서 이렇게 숨긴 풀더들을 관리할 수 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:256
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:266
 msgid ""
 "manage your :ref:`spatial bookmarks <sec_bookmarks>`: bookmarks can be "
 "created, exported and imported as ``XML`` files."
@@ -539,15 +606,15 @@ msgstr ""
 "사용자의 :ref:`공간 북마크 <sec_bookmarks>` 관리: 북마크를 생성하거나, ``XML`` 파일로 내보내거나 가져올 수 "
 "있습니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:258
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:268
 msgid "create a connection to a database or a web service."
 msgstr "데이터베이스 또는 웹 서비스로의 연결을 생성할 수 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:259
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:269
 msgid "refresh, rename or delete a schema."
 msgstr "스키마를 새로고침하거나, 재명명하거나 삭제할 수 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:261
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:271
 msgid ""
 "You can also import files into databases or copy tables from one "
 "schema/database to another with a simple drag-and-drop. There is a second "
@@ -558,16 +625,16 @@ msgstr ""
 "복사할 수 있습니다. 드래그하는 동안 오래 스크롤을 해야 하는 일을 피하기 위해 두 번째 탐색 패널을 사용할 수 있습니다. 그냥 파일을 "
 "선택한 다음 한쪽 패널에서 다른 패널로 드래그&드롭하십시오."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:271
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:281
 msgid "QGIS Browser panels side-by-side"
 msgstr "나란히 있는 QGIS 탐색기 패널"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:274
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:284
 msgid ""
 "**Add layers to QGIS by simple drag-and-drop from your OS file browser**"
 msgstr "**사용자 OS의 파일 탐색기에서 단순히 드래그&드롭하는 것만으로 QGIS에 레이어 추가**"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:276
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:286
 msgid ""
 "You can also add file(s) to the project by drag-and-dropping them from your "
 "operating system file browser to the :guilabel:`Layers Panel` or the map "
@@ -576,11 +643,11 @@ msgstr ""
 "사용자의 운영체제 파일 탐색기에서 :guilabel:`Layers Panel` 또는 맵 캔버스로 파일(들)을 드래그&드롭해서 프로젝트에 "
 "추가할 수도 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:283
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:293
 msgid "The DB Manager"
 msgstr "데이터베이스 관리자"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:285
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:295
 msgid ""
 "The :guilabel:`DB Manager` Plugin is another tool for integrating and "
 "managing spatial database formats supported by QGIS (PostGIS, SpatiaLite, "
@@ -592,50 +659,50 @@ msgstr ""
 ":menuselection:`Plugins --> Manage and Install Plugins...` 메뉴에서 이 플러그인을 "
 "활성화시킬 수 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:291
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:301
 msgid "The |dbManager| :sup:`DB Manager` Plugin provides several features:"
 msgstr "|dbManager| :sup:`DB Manager` 플러그인은 다음 여러 기능들을 제공합니다:"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:293
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:303
 msgid "connect to databases and display their structure and contents"
 msgstr "데이터베이스에 연결해서 그 구조 및 내용을 표시합니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:294
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:304
 msgid "preview tables of databases"
 msgstr "데이터베이스의 테이블을 미리보기합니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:295
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:305
 msgid ""
 "add layers to the map canvas, either by double-clicking or drag-and-drop."
 msgstr "맵 캔버스에 레이어를 더블 클릭 또는 드래그&드롭으로 추가합니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:296
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:306
 msgid ""
 "add layers to a database from the QGIS Browser or from another database"
 msgstr "QGIS 탐색기에서 또는 다른 데이터베이스로부터 데이터베이스에 레이어를 추가합니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:297
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:307
 msgid "create SQL queries and add their output to the map canvas"
 msgstr "SQL 쿼리를 생성하고 맵 캔버스에 그 산출물을 추가합니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:298
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:308
 msgid "create :ref:`virtual layers <vector_virtual_layers>`"
 msgstr ":ref:`가상 레이어 <vector_virtual_layers>` 를 생성합니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:300
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:310
 msgid ""
 "More information on DB Manager capabilities is found in :ref:`dbmanager`."
 msgstr ":ref:`dbmanager` 에서 데이터베이스 관리자 성능에 관한 더 자세한 정보를 설명하고 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:307
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:317
 msgid "DB Manager dialog"
 msgstr "데이터베이스 관리자 대화창"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:311
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:321
 msgid "Provider-based loading tools"
 msgstr "제공자 기반 불러오기 도구"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:313
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:323
 msgid ""
 "Beside the Browser Panel and the DB Manager, the main tools provided by QGIS"
 " to add layers, you'll also find tools that are specific to data providers."
@@ -643,21 +710,21 @@ msgstr ""
 "QGIS가 레이어를 추가하기 위해 제공하는 주 도구인 탐색기 패널 및 데이터베이스 관리자 이외에도, 데이터 제공자에 특화된 도구들이 "
 "존재합니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:318
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:328
 msgid ""
 "Some :ref:`external plugins <plugins>` also provide tools to open specific "
 "format files in QGIS."
 msgstr "일부 :ref:`외부 플러그인 <plugins>` 도 QGIS에서 특정 파일 포맷을 열기 위한 도구를 제공합니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:326
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:336
 msgid "Loading a layer from a file"
 msgstr "파일에서 레이어 불러오기"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:328
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:338
 msgid "To load a layer from a file:"
 msgstr "파일에서 레이어를 불러오려면:"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:330
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:340
 msgid ""
 "Open the layer type tab in the :guilabel:`Data Source Manager` dialog, ie "
 "click the |dataSourceManager| :sup:`Open Data Source Manager` button (or "
@@ -667,7 +734,7 @@ msgstr ""
 "|dataSourceManager| :sup:`Open Data Source Manager` 버튼을 클릭하고 (또는 "
 ":kbd:`Ctrl+L` 조합키를 누르고) 레이어 유형 탭을 선택하거나:"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:334
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:344
 msgid ""
 "for vector data (like GML, ESRI Shapefile, Mapinfo and DXF layers): press "
 ":kbd:`Ctrl+Shift+V`, select the :menuselection:`Layer --> Add Layer -->` "
@@ -679,11 +746,11 @@ msgstr ""
 ":guilabel:`Add Vector Layer` 메뉴 옵션을 선택하거나, |addOgrLayer| :sup:`Add Vector "
 "Layer` 툴바 버튼을 클릭하십시오."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:344
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:354
 msgid "Add Vector Layer Dialog"
 msgstr "벡터 레이어 추가 대화창"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:346
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:356
 msgid ""
 "for raster data (like GeoTiff, MBTiles, GRIdded Binary and DWG layers): "
 "press :kbd:`Ctrl+Shift+R`, select the :menuselection:`Layer --> Add Layer "
@@ -695,19 +762,19 @@ msgstr ""
 "|addRasterLayer| :guilabel:`Add Raster Layer` 메뉴 옵션을 선택하거나, |addRasterLayer|"
 " :sup:`Add Raster Layer` 툴바 버튼을 클릭하십시오."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:356
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:366
 msgid "Add Raster Layer Dialog"
 msgstr "래스터 레이어 추가 대화창"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:358
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:368
 msgid "Check |radioButtonOn| :guilabel:`File` source type"
 msgstr "|radioButtonOn| :guilabel:`File` 소스 유형을 확인하십시오."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:359
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:369
 msgid "Click on the :guilabel:`...` :sup:`Browse` button"
 msgstr ":guilabel:`...` :sup:`Browse` 버튼을 클릭하십시오."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:360
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:370
 msgid ""
 "Navigate the file system and load a supported data source. More than one "
 "layer can be loaded at the same time by holding down the :kbd:`Ctrl` key and"
@@ -722,7 +789,7 @@ msgstr ""
 "있습니다. 잘 검증된 포맷들만 포맷 필터에 표시됩니다. (풀다운 메뉴에서 맨 위에 있는) ``All files`` 를 선택하면 다른 "
 "포맷들도 불러올 수 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:368
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:378
 msgid ""
 "Press :guilabel:`Open` to load the selected file into :guilabel:`Data Source"
 " Manager` dialog"
@@ -730,11 +797,11 @@ msgstr ""
 ":guilabel:`Open` 을 클릭하면 :guilabel:`Data Source Manager` 대화창으로 선택한 파일을 "
 "불러들입니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:370
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:380
 msgid "You can specify the encoding for vector file if desired"
 msgstr "필요한 경우 벡터 파일용 인코딩을 지정할 수 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:371
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:381
 msgid ""
 "Press :guilabel:`Add` to load the file in QGIS and display them in the map "
 "view. figure_vector_loaded_ shows QGIS after loading the :file:`alaska.shp` "
@@ -743,11 +810,11 @@ msgstr ""
 ":guilabel:`Add` 를 클릭하면 QGIS로 파일을 불러와서 맵 뷰에 표시합니다. figure_vector_loaded_ 그림은 "
 "QGIS가 :file:`alaska.shp` 파일을 불러들인 모습입니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:379
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:389
 msgid "QGIS with Shapefile of Alaska loaded"
 msgstr "알래스카 shapefile을 불러들인 QGIS"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:383
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:393
 msgid ""
 "Because some formats like MapInfo (e.g., :file:`.tab`) or Autocad "
 "(:file:`.dxf`) allow mixing different types of geometry in a single file, "
@@ -758,7 +825,7 @@ msgstr ""
 "다른 도형 유형을 함께 담을 수 있기 때문에 QGIS에 이런 포맷을 불러올 경우 레이어 하나 당 도형 유형 하나만 보유할 수 있도록, "
 "사용할 도형을 선택할 수 있는 대화창이 열립니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:391
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:401
 msgid ""
 "The |addOgrLayer| :sup:`Add Vector Layer` and |addRasterLayer| :sup:`Add "
 "Raster Layer` tabs allow loading of layers from source types other than "
@@ -767,7 +834,7 @@ msgstr ""
 "|addOgrLayer| :sup:`Add Vector Layer` 및 |addRasterLayer| :sup:`Add Raster "
 "Layer` 탭에서는 :guilabel:`File` 이 아닌 소스 유형으로부터도 레이어를 불러올 수 있습니다:"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:394
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:404
 msgid ""
 "You can load specific vector formats like ``ArcInfo Binary Coverage``, ``UK."
 " National Transfer Format``, as well as the raw TIGER format of the ``US "
@@ -780,7 +847,7 @@ msgstr ""
 "이를 위해서는 :guilabel:`Source type` 으로 |radioButtonOn| :guilabel:`Directory` 를 "
 "선택해야합니다. 이때 :guilabel:`...` :sup:`Browse` 를 누르면 대화창에서 디렉토리를 선택할 수 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:400
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:410
 msgid ""
 "With the |radioButtonOn| :guilabel:`Database` source type you can select an "
 "existing database connection or create one to the selected database type. "
@@ -791,7 +858,7 @@ msgstr ""
 "데이터베이스 유형의 연결을 생성할 수 있습니다. ``ODBC``, ``Esri Personal Geodatabase``, "
 "``MSSQL`` 은 물론 ``PostgreSQL`` 또는 ``MySQL`` 등 많은 데이터베이스 유형을 선택할 수 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:405
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:415
 msgid ""
 "Pressing the :guilabel:`New` button opens the :guilabel:`Create a New OGR "
 "Database Connection` dialog whose parameters are among the ones you can find"
@@ -804,7 +871,7 @@ msgstr ""
 "볼 수 있습니다. :guilabel:`Open` 을 클릭하면, 예를 들어 PostGIS 활성 데이터베이스에서 사용 가능한 데이터베이스 "
 "테이블을 고를 수 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:410
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:420
 msgid ""
 "The |radioButtonOn| :guilabel:`Protocol: HTTP(S), cloud, etc.` source type "
 "opens data stored locally or on the network, either publicly accessible, or "
@@ -815,13 +882,13 @@ msgstr ""
 " 네트워크 상에 있는 데이터를 엽니다. 이때 네트워크를 공개적으로 접속할 수도 있고, 상용 클라우드 저장소 서비스의 비공개 "
 "버킷(private bucket)을 사용할 수도 있습니다. 다음과 같은 프로토콜 유형을 지원합니다:"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:415
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:425
 msgid ""
 "``HTTP/HTTPS/FTP``, with a :guilabel:`URI` and, if required, an "
 "authentication"
 msgstr "``HTTP/HTTPS/FTP``: :guilabel:`URI` 와 함께 필요한 경우 인증 정보를 입력해야 합니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:417
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:427
 msgid ""
 "Cloud storage such as ``AWS S3``, ``Google Cloud Storage``, ``Microsoft "
 "Azure Blob``, ``Alibaba OSS Cloud``, ``Open Stack Swift Storage``. You need "
@@ -832,7 +899,7 @@ msgstr ""
 "OSS Cloud``, ``Open Stack Swift Storage`` 와 같은 클라우드 저장소: :guilabel:`Bucket "
 "or container` 와 :guilabel:`Object key` 를 입력해야 합니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:421
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:431
 msgid ""
 "service supporting OGC ``WFS 3`` (still experimental), using ``GeoJSON`` or "
 "``GEOJSON - Newline Delimited`` format or based on ``CouchDB`` database. A "
@@ -842,11 +909,11 @@ msgstr ""
 "기반의 (아직 실험 단계인) OGC ``WFS 3`` 를 지원하는 서비스: :guilabel:`URI` 와 함께 필요한 경우 인증 정보를"
 " 입력해야 합니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:429
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:439
 msgid "Loading a mesh layer"
 msgstr "메시 레이어 불러오기"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:431
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:441
 msgid ""
 "A mesh is an unstructured grid usually with temporal and other components. "
 "The spatial component contains a collection of vertices, edges and faces in "
@@ -856,11 +923,11 @@ msgstr ""
 "있는 꼭짓점, 경계(edge) 및 면(face)의 집합을 담고 있습니다. 메시 레이어에 대한 더 자세한 내용은 "
 ":ref:`label_meshdata` 을 참조하세요."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:435
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:445
 msgid "To add a mesh layer to QGIS:"
 msgstr "QGIS에 메시 레이어를 추가하려면:"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:437
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:447
 msgid ""
 "Open the :menuselection:`Data Source Manager` dialog, either by selecting it"
 " from the :menuselection:`Layer -->` menu or clicking the "
@@ -869,11 +936,11 @@ msgstr ""
 ":menuselection:`Layer -->` 메뉴에서 선택하거나 |dataSourceManager| :sup:`Open Data "
 "Source Manager` 버튼을 클릭해서 :menuselection:`Data Source Manager` 대화창을 여십시오."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:440
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:450
 msgid "Enable the |addMeshLayer| :guilabel:`Mesh` tab on the left panel"
 msgstr "왼쪽 패널에 있는 |addMeshLayer| :guilabel:`Mesh` 탭을 선택하십시오."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:441
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:451
 msgid ""
 "Press the :guilabel:`...` :sup:`Browse` button to select the file. "
 ":ref:`Various formats <mesh_supported_formats>` are supported."
@@ -881,21 +948,21 @@ msgstr ""
 ":guilabel:`...` :sup:`Browse` 버튼을 눌러 파일을 선택하십시오. :ref:`여러 유형 "
 "<mesh_supported_formats>` 을 지원합니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:443
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:453
 msgid ""
 "Select the layer and press :guilabel:`Add`. The layer will be added using "
 "the native mesh rendering."
 msgstr "레이어를 선택한 다음 :guilabel:`Add` 를 클릭하십시오. 자체 메시 렌더링을 사용해서 레이어를 추가할 것입니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:451
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:461
 msgid "Mesh tab in Data Source Manager"
 msgstr "데이터소스 관리자의 메시 탭"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:459
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:469
 msgid "Importing a delimited text file"
 msgstr "구분 텍스트 파일 가져오기"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:461
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:471
 msgid ""
 "Delimited text files (e.g. :file:`.txt`, :file:`.csv`, :file:`.dat`, "
 ":file:`.wkt`) can be loaded using the tools described above. This way, they "
@@ -908,7 +975,7 @@ msgstr ""
 "텍스트 파일이 사용자가 가시화하려는 좌표/도형 데이터를 담고 있는 경우도 있습니다. 이것이 "
 "|addDelimitedTextLayer|:guilabel:`Add Delimited Text Layer` 를 개발한 이유입니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:469
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:479
 msgid ""
 "Click the |dataSourceManager| :sup:`Open Data Source Manager` icon to open "
 "the :guilabel:`Data Source Manager` dialog"
@@ -916,11 +983,11 @@ msgstr ""
 "|dataSourceManager| :sup:`Open Data Source Manager` 아이콘을 클릭해서 "
 ":guilabel:`Data Source Manager` 대화창을 여십시오."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:471
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:481
 msgid "Enable the |addDelimitedTextLayer| :guilabel:`Delimited Text` tab"
 msgstr "|addDelimitedTextLayer| :guilabel:`Delimited Text` 탭을 선택하십시오."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:472
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:482
 msgid ""
 "Select the delimited text file to import (e.g., "
 ":file:`qgis_sample_data/csv/elevp.csv`) by clicking on the :guilabel:`...` "
@@ -929,7 +996,7 @@ msgstr ""
 ":guilabel:`...` :sup:`Browse` 버튼을 클릭해서 가져올 구분 텍스트 파일을 (예를 들어 "
 ":file:`qgis_sample_data/csv/elevp.csv` 파일을) 선택하십시오."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:474
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:484
 msgid ""
 "In the :guilabel:`Layer name` field, provide the name to use for the layer "
 "in the project (e.g. :file:`Elevation`)."
@@ -937,20 +1004,20 @@ msgstr ""
 ":guilabel:`Layer name` 필드에 프로젝트에서 레이어용으로 사용할 명칭을 (예를 들어 :file:`Elevation` 을)"
 " 입력하십시오."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:476
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:486
 msgid ""
 "Configure the settings to meet your dataset and needs, as explained below."
 msgstr "다음에 설명하는 내용처럼 사용자 데이터셋 및 필요를 만족시키는 환경을 설정하십시오."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:483
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:493
 msgid "Delimited Text Dialog"
 msgstr "구분 텍스트 대화창"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:486
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:496
 msgid "File format"
 msgstr "파일 포맷"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:488
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:498
 msgid ""
 "Once the file is selected, QGIS attempts to parse the file with the most "
 "recently used delimiter, identifying fields and rows. To enable QGIS to "
@@ -960,14 +1027,14 @@ msgstr ""
 "파일을 선택하면,  QGIS가 가장 최근에 사용한 구분자로 필드와 행을 식별해서 파일을 파싱하려 할 겁니다. QGIS가 파일을 제대로 "
 "파싱하게 하려면, 정확한 구분자를 선택하는 것이 중요합니다. 다음 옵션 가운데 하나를 선택해서 구분자를 지정할 수 있습니다:"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:493
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:503
 msgid ""
 "|radioButtonOn|:guilabel:`CSV (comma separated values)` to use the comma "
 "character."
 msgstr ""
 "|radioButtonOn|:guilabel:`CSV (comma separated values)`: 쉼표 문자를 구분자로 사용합니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:495
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:505
 msgid ""
 "|radioButtonOff|:guilabel:`Regular expression delimiter` and enter text into"
 " the :guilabel:`Expression` field. For example, to change the delimiter to "
@@ -978,7 +1045,7 @@ msgstr ""
 ":guilabel:`Expression` 란에 구분자로 이용할 텍스트를 입력합니다. 예를 들어 구분자를 탭으로 변경하려면, (정규 "
 "표현식에서 탭 문자를 나타내는) ``\\t`` 를 입력하세요."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:499
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:509
 msgid ""
 "|radioButtonOff|:guilabel:`Custom delimiters`, choosing among some "
 "predefined delimiters like ``comma``, ``space``, ``tab``, ``semicolon``, ..."
@@ -987,15 +1054,15 @@ msgstr ""
 "|radioButtonOff|:guilabel:`Custom delimiters`: ``comma``, ``space``, "
 "``tab``, ``semicolon`` 등등 사전 정의된 여러 구분자들 가운데 선택합니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:503
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:513
 msgid "Records and fields"
 msgstr "레코드와 필드"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:505
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:515
 msgid "Some other convenient options can be used for data recognition:"
 msgstr "데이터 식별을 위한 몇몇 다른 편리한 옵션을 사용할 수 있습니다:"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:507
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:517
 msgid ""
 ":guilabel:`Number of header lines to discard`: convenient when you want to "
 "avoid the first lines in the file in the import, either because those are "
@@ -1004,7 +1071,7 @@ msgstr ""
 ":guilabel:`Number of header lines to discard`: 가져온 파일의 첫 줄이 빈 줄이거나 다른 서식으로 돼"
 " 있기 때문에 첫 줄을 파싱하지 않고자 하는 경우 편리합니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:510
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:520
 msgid ""
 "|checkbox|:guilabel:`First record has field names`: values in the first line"
 " are used as field names, otherwise QGIS uses the field names ``field_1``, "
@@ -1013,7 +1080,7 @@ msgstr ""
 "|checkbox|:guilabel:`First record has field names`: 첫 줄에 있는 값들을 필드명으로 사용합니다."
 " 이 옵션을 선택하지 않는다면 QGIS는 필드명으로 ``field_1``, ``field_2``, ...를 사용할 것입니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:513
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:523
 msgid ""
 "|checkbox|:guilabel:`Detect field types`: automatically recognizes the field"
 " type. If unchecked then all attributes are treated as text fields."
@@ -1021,38 +1088,38 @@ msgstr ""
 "|checkbox|:guilabel:`Detect field types`: 필드 유형을 자동으로 식별합니다. 이 옵션을 선택하지 않는다면"
 " 모든 속성을 텍스트 필드로 취급합니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:515
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:525
 msgid ""
 "|checkbox|:guilabel:`Decimal separator is comma`: you can force decimal "
 "separator to be a comma."
 msgstr ""
 "|checkbox|:guilabel:`Decimal separator is comma`: 소수 구분 기호를 쉼표로 강제할 수 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:517
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:527
 msgid ""
 "|checkbox|:guilabel:`Trim fields`: allows you to trim leading and trailing "
 "spaces from fields."
 msgstr "|checkbox|:guilabel:`Trim fields`: 필드에서 처음 및 마지막 부분의 공백을 잘라낼 수 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:519
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:529
 msgid "|checkbox|:guilabel:`Discard empty fields`."
 msgstr "|checkbox|:guilabel:`Discard empty fields`: 비어 있는 필드를 무시할 수도 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:521
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:531
 msgid ""
 "As you set the parser properties, a sample data preview updates at the "
 "bottom of the dialog."
 msgstr "파싱 작업자 속성을 설정하는 대로, 대화창 하단에 예시 데이터 미리보기가 업데이트됩니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:525
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:535
 msgid "Geometry definition"
 msgstr "도형 정의"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:527
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:537
 msgid "Once the file is parsed, set :guilabel:`Geometry definition` to"
 msgstr "파일 파싱 작업이 끝나면 :guilabel:`Geometry definition` 을 다음 가운데 하나로 설정하십시오."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:529
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:539
 msgid ""
 "|radioButtonOn|:guilabel:`Point coordinates` and provide the :guilabel:`X "
 "field`, :guilabel:`Y field`, :guilabel:`Z field` (for 3-dimensional data) "
@@ -1068,7 +1135,7 @@ msgstr ""
 "|checkbox|:guilabel:`DMS coordinates` 체크박스를 체크하십시오. |setProjection| "
 ":sup:`Select CRS` 위젯을 이용해서 적절한 :guilabel:`Geometry CRS` 를 지정하십시오."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:537
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:547
 msgid ""
 "|radioButtonOn|:guilabel:`Well known text (WKT)` option if the spatial "
 "information is represented as WKT: select the :guilabel:`Geometry field` "
@@ -1081,7 +1148,7 @@ msgstr ""
 ":guilabel:`Geometry field` 를 선택하거나 QGIS가 자동으로 식별하게 하십시오. |setProjection| "
 ":sup:`Select CRS` 위젯을 이용해서 적절한 :guilabel:`Geometry CRS` 를 지정하십시오."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:543
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:553
 msgid ""
 "If the file contains non-spatial data, activate |radioButtonOn| "
 ":guilabel:`No geometry (attribute only table)` and it will be loaded as an "
@@ -1090,22 +1157,22 @@ msgstr ""
 "파일이 비공간 데이터를 담고 있는 경우, :guilabel:`No geometry (attribute only table)` 옵션을 "
 "활성화하면 파일을 서수(序數) 테이블로 불러들일 것입니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:547
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:557
 msgid "Layer settings"
 msgstr "레이어 설정"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:549
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:559
 msgid "Additionally, you can enable:"
 msgstr "여기에 더해, 다음 옵션을 활성화시킬 수 있습니다:"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:551
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:561
 msgid ""
 "|checkbox|:guilabel:`Use spatial index` to improve the performance of "
 "displaying and spatially selecting features."
 msgstr ""
 "|checkbox|:guilabel:`Use spatial index`: 피처를 공간적으로 선택하고 화면에 표시하는 성능을 향상시킵니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:553
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:563
 msgid ""
 "|checkbox|:guilabel:`Use subset index` to improve performance of "
 ":ref:`subset filters <vector_query_builder>` (when defined in the layer "
@@ -1114,7 +1181,7 @@ msgstr ""
 "|checkbox|:guilabel:`Use subset index`: (레이어 속성에 하위 집합을 정의한 경우) :ref:`하위 집합 "
 "필터 <vector_query_builder>` 의 성능을 향상시킵니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:555
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:565
 msgid ""
 "|checkbox|:guilabel:`Watch file` to watch for changes to the file by other "
 "applications while QGIS is running."
@@ -1122,7 +1189,7 @@ msgstr ""
 "|checkbox|:guilabel:`Watch file`: QGIS 실행 중에 다른 응용 프로그램이 파일을 변경하지는 않는지 "
 "감시합니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:559
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:569
 msgid ""
 "At the end, click :guilabel:`Add` to add the layer to the map. In our "
 "example, a point layer named ``Elevation`` is added to the project and "
@@ -1136,11 +1203,11 @@ msgstr ""
 ":file:`.csv` 소스 파일을 쿼리한 결과물로 (즉 해당 파일과 연결돼 있기 때문에) 디스크 상에 공간 레이어를 만들려면 "
 ":ref:`저장 <general_saveas>` 해야만 합니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:570
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:580
 msgid "Importing a DXF or DWG file"
 msgstr "DXF 또는 DWG 파일 가져오기"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:572
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:582
 msgid ""
 ":file:`DXF` and :file:`DWG` files can be added to QGIS by simple drag-and-"
 "drop from the Browser Panel. You will be prompted to select the sublayers "
@@ -1150,7 +1217,7 @@ msgstr ""
 "탐색기 패널에서 :file:`DXF` 및 :file:`DWG` 파일을 드래그&드롭하기만 하면 QGIS에 추가할 수 있습니다. 프로젝트에 "
 "추가하고 싶은 하위 레이어를 선택할 수 있는 창이 뜰 겁니다. 레이어 추가 시 스타일 속성은 랜덤하게 적용됩니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:577
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:587
 msgid ""
 "For DXF files containing several geometry types (point, line and/or "
 "polygon), the name of the layers will be generated as *<filename.dxf> "
@@ -1159,7 +1226,7 @@ msgstr ""
 "포인트, 라인 그리고/또는 폴리곤 등 여러 도형 유형을 담고 있는 DXF 파일의 경우, *<filename.dxf> entities "
 "<geometry type>* 형식으로 레이어를 명명합니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:581
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:591
 msgid ""
 "To keep the dxf/dwg file structure and its symbology in QGIS, you may want "
 "to use the dedicated :menuselection:`Project --> Import/Export --> Import "
@@ -1169,21 +1236,21 @@ msgstr ""
 "Import/Export --> Import Layers from DWG/DXF...` 도구를 사용해야 할 수도 있습니다. 이 도구를 "
 "사용하면:"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:586
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:596
 msgid "import elements from the drawing file into a GeoPackage database."
 msgstr "그리기 파일(drawing file)에서 GeoPackage 데이터베이스로 요소들을 가져올 수 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:587
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:597
 msgid "add imported elements to the project."
 msgstr "프로젝트에 가져온 요소들을 추가할 수 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:589
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:599
 msgid ""
 "In the :guilabel:`DWG/DXF Import` dialog, to import the drawing file "
 "contents:"
 msgstr ":guilabel:`DWG/DXF Import` 대화창에서 그리기 파일의 내용을 가져오려면:"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:592
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:602
 msgid ""
 "Input the location of the :guilabel:`Target package`, i.e. the new "
 "GeoPackage file that will store the data. If an existing file is provided, "
@@ -1192,12 +1259,12 @@ msgstr ""
 "데이터를 저장할 새 GeoPackage 파일 같은, :guilabel:`Target package` 의 위치를 입력하십시오. 기존 파일을"
 " 입력하면 해당 파일을 덮어 쓸 것입니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:595
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:605
 msgid ""
 "Specify the coordinate reference system of the data in the drawing file."
 msgstr "그리기 파일에 있는 데이터의 좌표계를 지정하십시오."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:596
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:606
 msgid ""
 "Check |checkbox| :guilabel:`Expand block references` to import the blocks in"
 " the drawing file as normal elements."
@@ -1205,7 +1272,7 @@ msgstr ""
 "그리기 파일의 블록(block)을 일반적인 요소로 가져오려면 |checkbox| :guilabel:`Expand block "
 "references` 를 체크하십시오."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:598
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:608
 msgid ""
 "Check |checkbox| :guilabel:`Use curves` to promote the imported layers to a "
 "``curved`` geometry type."
@@ -1213,7 +1280,7 @@ msgstr ""
 "가져온 레이어를 ``curved`` 만곡 도형 유형으로 승격시키려면 |checkbox| :guilabel:`Use curves` 를 "
 "체크하십시오."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:600
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:610
 msgid ""
 "Use the :guilabel:`Import` button to select the DWG/DXF file to use (one per"
 " geopackage). The GeoPackage database will be automatically populated with "
@@ -1223,7 +1290,7 @@ msgstr ""
 ":guilabel:`Import` 버튼을 클릭해서 사용할 DWG/DXF 파일을 (GeoPackage 당 하나씩) 선택하십시오. 그리기 "
 "파일 내용이 GeoPackage 데이터베이스를 자동으로 채울 것입니다. 파일 용량에 따라 시간이 걸릴 수도 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:606
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:616
 msgid ""
 "After the :file:`.dwg` or :file:`.dxf` data has been imported into the "
 "GeoPackage database, the frame in the lower half of the dialog is populated "
@@ -1233,13 +1300,13 @@ msgstr ""
 ":file:`.dwg` 또는 :file:`.dxf` 데이터를 GeoPackage 데이터베이스로 가져왔다면, 가져온 파일에 있는 레이어의 "
 "목록이 대화창 프레임의 하단을 채울 것입니다. 이 목록에서 QGIS 프로젝트에 추가할 레이어를 선택할 수 있습니다:"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:611
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:621
 msgid ""
 "At the top, set a :guilabel:`Group name` to group the drawing files in the "
 "project."
 msgstr "맨 위 :guilabel:`Group name` 에서, 프로젝트에 그리기 파일을 그룹화할 그룹명을 설정하십시오."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:613
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:623
 msgid ""
 "Check layers to show: Each selected layer is added to an ad hoc group which "
 "contains vector layers for the point, line, label and area features of the "
@@ -1249,29 +1316,29 @@ msgstr ""
 "가시화할 레이어를 체크하십시오: 그리기 레이어의 포인트, 라인, 라벨 및 영역 피처를 위한 벡터 레이어들을 담고 있는 즉석 그룹에 선택한"
 " 각 레이어를 추가합니다. 선택한 레이어의 스타일은 \\*CAD에서 원래 가지고 있던 모양을 닮게 될 것입니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:618
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:628
 msgid "Choose if the layer should be visible at opening."
 msgstr "레이어를 열 때 가시화할 것인지 여부를 선택하십시오."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:619
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:629
 msgid ""
 "Checking the |checkbox| :guilabel:`Merge layers` option places all layers in"
 " a single group."
 msgstr "모든 레이어를 단일 그룹으로 배치하려면 |checkbox| :guilabel:`Merge layers` 를 체크하십시오."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:621
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:631
 msgid "Press :guilabel:`OK` to open the layers in QGIS."
 msgstr ":guilabel:`OK` 를 클릭하면 QGIS에서 레이어가 열립니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:629
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:639
 msgid "Import dialog for DWG/DXF files"
 msgstr "DWG/DXF 파일 가져오기 대화창"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:636
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:646
 msgid "Importing OpenStreetMap Vectors"
 msgstr "OpenStreetMap 벡터 가져오기"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:638
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:648
 msgid ""
 "The OpenStreetMap project is popular because in many countries no free "
 "geodata such as digital road maps are available. The objective of the OSM "
@@ -1283,7 +1350,7 @@ msgstr ""
 "GPS 데이터, 항공사진 또는 현지인의 지식으로부터 편집 가능하고 무료인 세계 지도를 생성하는 것이 OSM 프로젝트의 목표입니다. 이 "
 "목표를 돕기 위해, QGIS는 OSM 데이터를 지원하고 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:645
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:655
 msgid ""
 "Using the :guilabel:`Browser Panel`, you can load an :file:`.osm` file to "
 "the map canvas, in which case you'll get a dialog to select sublayers based "
@@ -1295,11 +1362,11 @@ msgstr ""
 "바탕으로 하위 레이어를 선택할 수 있는 대화창이 열립니다. 불러온 레이어는 :file:`.osm` 파일에 있는 모든 도형 유형의 데이터를"
 " 담고 있으며 :file:`.osm` 파일 데이터 구조를 유지할 것입니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:657
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:667
 msgid "SpatiaLite Layers"
 msgstr "SpatiaLite 레이어"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:659
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:669
 msgid ""
 "|addSpatiaLiteLayer| The first time you load data from a SpatiaLite "
 "database, begin by:"
@@ -1307,13 +1374,13 @@ msgstr ""
 "|addSpatiaLiteLayer| 처음으로 SpatiaLite 데이터베이스에서 데이터를 불러오는 경우, 다음 가운데 한 방법으로 "
 "시작하십시오:"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:662
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:672
 msgid ""
 "clicking on the |addSpatiaLiteLayer| :sup:`Add SpatiaLite Layer` toolbar "
 "button"
 msgstr "|addSpatiaLiteLayer| :sup:`Add SpatiaLite Layer` 툴바 버튼을 클릭합니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:664
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:674
 msgid ""
 "selecting the |addSpatiaLiteLayer| :menuselection:`Add SpatiaLite Layer...` "
 "option from the :menuselection:`Layer --> Add Layer` menu"
@@ -1321,11 +1388,11 @@ msgstr ""
 ":menuselection:`Layer --> Add Layer` 메뉴에서 |addSpatiaLiteLayer| "
 ":menuselection:`Add SpatiaLite Layer...` 옵션을 선택합니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:666
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:676
 msgid "or by typing :kbd:`Ctrl+Shift+L`"
 msgstr ":kbd:`Ctrl+Shift+L` 조합키를 누릅니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:668
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:678
 msgid ""
 "This will bring up a window that will allow you either to connect to a "
 "SpatiaLite database already known to QGIS (which you choose from the drop-"
@@ -1337,15 +1404,15 @@ msgstr ""
 "연결을 정의할 수 있는 대화창이 열립니다. 새 연결을 정의하려면, :guilabel:`New` 를 클릭한 다음 파일 탐색기에서 사용자 "
 "SpatiaLite 데이터베이스를 지정하십시오. SpatiaLite 데이터베이스는 :file:`.sqlite` 확장자를 가진 파일입니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:674
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:684
 msgid "QGIS also supports editable views in SpatiaLite."
 msgstr "QGIS는 SpatiaLite에서 편집할 수 있는 뷰도 지원합니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:678
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:688
 msgid "GPS"
 msgstr "GPS"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:680
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:690
 msgid ""
 "Loading GPS data in QGIS can be done using the core plugin ``GPS Tools``. "
 "Instructions are found in section :ref:`plugin_gps`."
@@ -1353,24 +1420,24 @@ msgstr ""
 "핵심 플러그인인 ``GPS Tools`` 를 이용하면 QGIS에 GPS 데이터를 불러올 수 있습니다. :ref:`plugin_gps` "
 "에서 해당 지침을 설명하고 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:685
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:695
 msgid "GRASS"
 msgstr "GRASS"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:687
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:697
 msgid ""
 "Working with GRASS vector data is described in section :ref:`sec_grass`."
 msgstr ":ref:`sec_grass` 에서 GRASS 벡터 데이터 작업을 설명하고 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:694
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:704
 msgid "Database related tools"
 msgstr "데이터베이스 관련 도구"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:700
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:710
 msgid "Creating a stored Connection"
 msgstr "저장된 연결 생성하기"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:702
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:712
 msgid ""
 "In order to read and write tables from a database format QGIS supports you "
 "have to create a connection to that database. While :ref:`QGIS Browser Panel"
@@ -1382,7 +1449,7 @@ msgstr ""
 ":ref:`QGIS 탐색기 패널 <browser_panel>` 이 데이터베이스를 연결하고 사용하는 데 가장 간단하고 추천받는 방법이긴 "
 "하지만, QGIS는 각 데이터베이스 유형에 연결하고 테이블을 불러올 수 있는 다른 도구들도 제공하고 있습니다:"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:708
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:718
 msgid ""
 "|addPostgisLayer| :menuselection:`Add PostGIS Layer...` or by typing "
 ":kbd:`Ctrl+Shift+D`"
@@ -1390,11 +1457,11 @@ msgstr ""
 "|addPostgisLayer| :menuselection:`Add PostGIS Layer...` 또는 "
 ":kbd:`Ctrl+Shift+D`"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:710
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:720
 msgid "|addMssqlLayer| :menuselection:`Add MSSQL Spatial Layer`"
 msgstr "|addMssqlLayer| :menuselection:`Add MSSQL Spatial Layer`"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:711
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:721
 msgid ""
 "|addOracleLayer| :menuselection:`Add Oracle Spatial Layer...` or by typing "
 ":kbd:`Ctrl+Shift+O`"
@@ -1402,7 +1469,7 @@ msgstr ""
 "|addOracleLayer| :menuselection:`Add Oracle Spatial Layer...` 또는 "
 ":kbd:`Ctrl+Shift+O`"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:713
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:723
 msgid ""
 "|addDb2Layer| :menuselection:`Add DB2 Spatial Layer...` or by typing "
 ":kbd:`Ctrl+Shift+2`"
@@ -1410,7 +1477,7 @@ msgstr ""
 "|addDb2Layer| :menuselection:`Add DB2 Spatial Layer...` 또는 "
 ":kbd:`Ctrl+Shift+2`"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:716
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:726
 msgid ""
 "These tools are accessible either from the :guilabel:`Manage Layers Toolbar`"
 " and the :menuselection:`Layer --> Add Layer -->` menu. Connecting to "
@@ -1420,11 +1487,11 @@ msgstr ""
 "-->` 메뉴를 통해 이 도구들에 접근할 수 있습니다. SpatiaLite 데이터베이스 연결 방법은 "
 ":ref:`label_spatialite` 에서 설명하고 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:720
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:730
 msgid "**Create connection to database from the QGIS Browser Panel**"
 msgstr "**QGIS 탐색기 패널에서 데이터베이스 연결 생성**"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:722
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:732
 msgid ""
 "Selecting the corresponding database format in the Browser tree, right-"
 "clicking and choosing connect will provide you with the database connection "
@@ -1433,7 +1500,7 @@ msgstr ""
 "탐색 트리에서 대응하는 데이터베이스 유형을 선택해서 오른쪽 클릭한 다음, :guilabel:`Connect` 를 선택하면 데이터베이스 "
 "연결 대화창이 열릴 겁니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:726
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:736
 msgid ""
 "Most of the connection dialogs follow a common basis that will be described "
 "below using the PostgreSQL database tool as an example. For additional "
@@ -1443,19 +1510,19 @@ msgstr ""
 "연결 대화창 대부분은 PostGreSQL 데이터베이스 도구를 예시 삼아 다음에 설명할 공통 기초를 따릅니다. 다른 제공자들에 특화된 추가"
 " 설정에 대한 설명은 각각 다음 절에서 찾아볼 수 있습니다:"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:731
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:741
 msgid ":ref:`create_mssql_connection`;"
 msgstr ":ref:`create_mssql_connection`"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:732
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:742
 msgid ":ref:`create_oracle_connection`;"
 msgstr ":ref:`create_oracle_connection`"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:733
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:743
 msgid ":ref:`create_db2_connection`."
 msgstr ":ref:`create_db2_connection`"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:735
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:745
 msgid ""
 "The first time you use a PostGIS data source, you must create a connection "
 "to a database that contains the data. Begin by clicking the appropriate "
@@ -1469,11 +1536,11 @@ msgstr ""
 "(figure_add_postgis_tables_ 그림 참조) 연결 관리자에 접근하려면, :guilabel:`New` 버튼을 클릭해서 "
 ":guilabel:`Create a New PostGIS Connection` 대화창을 여십시오."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:748
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:758
 msgid "Create a New PostGIS Connection Dialog"
 msgstr "새 PostGIS 연결 생성 대화창"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:751
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:761
 msgid ""
 "The parameters required for a PostGIS connection are explained below. For "
 "the other database types, see their differences at :ref:`db_requirements`."
@@ -1481,14 +1548,14 @@ msgstr ""
 "PostGIS 연결에 필요한 파라미터를 설명하겠습니다. 다른 데이터베이스 유형의 경우, :ref:`db_requirements` 에서 "
 "차이점들을 참조하세요."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:755
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:765
 msgid ""
 ":guilabel:`Name`: A name for this connection. It can be the same as "
 ":guilabel:`Database`."
 msgstr ""
 ":guilabel:`Name`: 해당 연결을 위한 명칭입니다. :guilabel:`Database` 파라미터와 동일해도 됩니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:756
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:766
 msgid ""
 ":guilabel:`Service`: Service parameter to be used alternatively to "
 "hostname/port (and potentially database). This can be defined in "
@@ -1499,7 +1566,7 @@ msgstr ""
 ":file:`pg_service.conf` 파일 안에 정의할 수도 있습니다. 더 자세한 내용은 :ref:`pg-service-file` "
 "을 참조하세요."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:759
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:769
 msgid ""
 ":guilabel:`Host`: Name of the database host. This must be a resolvable host "
 "name such as would be used to open a TCP/IP connection or ping the host. If "
@@ -1509,7 +1576,7 @@ msgstr ""
 "있기 때문에 분해할 수 있는(resolvable) 호스트명이어야만 합니다. 데이터베이스가 QGIS와 동일한 컴퓨터에 있는 경우, 그냥 "
 "*localhost* 라고 입력하십시오."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:762
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:772
 msgid ""
 ":guilabel:`Port`: Port number the PostgreSQL database server listens on. The"
 " default port for PostGIS is ``5432``."
@@ -1517,17 +1584,17 @@ msgstr ""
 ":guilabel:`Port`: PostgreSQL 데이터베이스 서버가 열어 놓은 포트 번호입니다. PostGIS 용 기본 포트는 "
 "``5432`` 입니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:764
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:774
 msgid ":guilabel:`Database`: Name of the database."
 msgstr ":guilabel:`Database`: 데이터베이스의 명칭입니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:765
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:775
 msgid ""
 ":guilabel:`SSL mode`: SSL encryption setup The following options are "
 "available:"
 msgstr ":guilabel:`SSL mode`: SSL 암호화 설정입니다. 다음 옵션 가운데 하나를 선택할 수 있습니다:"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:768
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:778
 msgid ""
 ":guilabel:`Prefer` (the default): I don't care about encryption, but I wish "
 "to pay the overhead of encryption if the server supports it."
@@ -1535,7 +1602,7 @@ msgstr ""
 ":guilabel:`Prefer` (기본값): 암호화에 신경을 쓰지는 않지만, 서버가 암호화를 지원한다면 암호화 "
 "오버헤드(overhead)를 감당할 용의가 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:770
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:780
 msgid ""
 ":guilabel:`Require`: I want my data to be encrypted, and I accept the "
 "overhead. I trust that the network will make sure I always connect to the "
@@ -1544,7 +1611,7 @@ msgstr ""
 ":guilabel:`Require`: 내 데이터를 암호화하고 싶습니다. 오버헤드도 감당하겠습니다. 네트워크가 내가 원하는 서버에 항상 "
 "연결하도록 보장할 것을 믿습니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:772
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:782
 msgid ""
 ":guilabel:`Verify CA`: I want my data encrypted, and I accept the overhead. "
 "I want to be sure that I connect to a server that I trust."
@@ -1552,7 +1619,7 @@ msgstr ""
 ":guilabel:`Verify CA`: 내 데이터를 암호화하고 싶습니다. 오버헤드도 감당하겠습니다. 내가 신뢰하는 서버에 연결된다고 "
 "확신하고 싶습니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:774
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:784
 msgid ""
 ":guilabel:`Verify Full`: I want my data encrypted, and I accept the "
 "overhead. I want to be sure that I connect to a server I trust, and that "
@@ -1561,34 +1628,34 @@ msgstr ""
 ":guilabel:`Verify Full`: 내 데이터를 암호화하고 싶습니다. 오버헤드도 감당하겠습니다. 내가 지정한 신뢰하는 서버에 "
 "연결된다고 확신하고 싶습니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:776
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:786
 msgid ""
 ":guilabel:`Allow`: I don't care about security, but I will pay the overhead "
 "of encryption if the server insists on it."
 msgstr ""
 ":guilabel:`Allow`: 보안에 신경을 쓰지는 않지만, 서버가 암호화를 고집한다면 암호화 오버헤드를 감당할 용의가 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:778
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:788
 msgid ""
 ":guilabel:`Disable`: I don't care about security, and I don't want to pay "
 "the overhead of encryption."
 msgstr ":guilabel:`Disable`: 보안에 신경을 쓰지도 않고, 암호화 오버헤드를 감당할 용의도 없습니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:781
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:791
 msgid ":guilabel:`Authentication`, basic."
 msgstr ":guilabel:`Authentication`: 기본적인 인증 정보"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:783
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:793
 msgid ":guilabel:`User name`: User name used to log in to the database."
 msgstr ":guilabel:`User name`: 데이터베이스에 로그인하는 데 쓰이는 사용자명"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:784
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:794
 msgid ""
 ":guilabel:`Password`: Password used with *Username* to connect to the "
 "database."
 msgstr ":guilabel:`Password`: 데이터베이스에 연결하기 위해 *사용자명* 과 함께 쓰이는 비밀번호"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:786
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:796
 msgid ""
 "You can save any or both of the ``User name`` and ``Password`` parameters, "
 "in which case they will be used by default each time you need to connect to "
@@ -1603,11 +1670,11 @@ msgstr ""
 "인증 정보를 제공하라는 알림을 띄울 것입니다. 현재 세션을 종료할 때까지, QGIS는 사용자가 입력한 연결 파라미터를 임시 내부 캐시에 "
 "저장해서 동일한 데이터베이스가 이를 요구할때마다 사용자명/비밀번호를 반환합니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:794
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:804
 msgid "**QGIS User Settings and Security**"
 msgstr "**QGIS 사용자 설정 및 보안**"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:796
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:806
 msgid ""
 "In the :guilabel:`Authentication` tab, saving **username** and **password** "
 "will keep unprotected credentials in the connection configuration. Those "
@@ -1623,7 +1690,7 @@ msgstr ""
 ":ref:`authentication_index` 참조) 또는 서비스 연결 파일(예시를 보려면 :ref:`pg-service-file` "
 "참조)에 사용자 인증 정보를 대신 저장하는 편이 좋습니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:804
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:814
 msgid ""
 ":guilabel:`Authentication`, configurations. Choose an authentication "
 "configuration. You can add configurations using the |signPlus| button. "
@@ -1632,51 +1699,51 @@ msgstr ""
 ":guilabel:`Authentication`: 인증 환경을 설정합니다. 인증 환경 설정을 선택하십시오. |signPlus| 버튼으로 "
 "환경 설정을 추가할 수 있습니다. 다음 가운데 하나를 선택할 수 있습니다:"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:808
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:818
 msgid "Basic authentication"
 msgstr "기본 인증"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:809
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:819
 msgid "PKI PKCS#12 authentication"
 msgstr "PKI PKCS#12 인증"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:810
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:820
 msgid "PKI paths authentication"
 msgstr "PKI 경로 인증"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:811
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:821
 msgid "PKI stored identity certificate"
 msgstr "개인식별인증서(identity certificate)를 저장한 PKI"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:813
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:823
 msgid ""
 "Optionally, depending on the type of database, you can activate the "
 "following checkboxes:"
 msgstr "데이터베이스 유형에 따라 다음 체크박스들을 선택적으로 활성화할 수 있습니다:"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:816
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:826
 msgid "|checkbox| :guilabel:`Only show layers in the layer registries`"
 msgstr "|checkbox| :guilabel:`Only show layers in the layer registries`"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:817
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:827
 msgid ""
 "|checkbox| :guilabel:`Don't resolve type of unrestricted columns (GEOMETRY)`"
 msgstr ""
 "|checkbox| :guilabel:`Don't resolve type of unrestricted columns (GEOMETRY)`"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:818
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:828
 msgid "|checkbox| :guilabel:`Only look in the 'public' schema`"
 msgstr "|checkbox| :guilabel:`Only look in the 'public' schema`"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:819
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:829
 msgid "|checkbox| :guilabel:`Also list tables with no geometry`"
 msgstr "|checkbox| :guilabel:`Also list tables with no geometry`"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:820
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:830
 msgid "|checkbox| :guilabel:`Use estimated table metadata`"
 msgstr "|checkbox| :guilabel:`Use estimated table metadata`"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:821
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:831
 msgid ""
 "|checkbox| :guilabel:`Allow saving/loading QGIS projects in the database` - "
 "more details :ref:`here <saveprojecttodb>`"
@@ -1684,11 +1751,11 @@ msgstr ""
 "|checkbox| :guilabel:`Allow saving/loading QGIS projects in the database` - "
 "자세한 내용은 :ref:`여기를 <saveprojecttodb>` 참조"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:824
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:834
 msgid "**Use estimated table metadata to speed up operations**"
 msgstr "**수행 속도 향상을 위해 예측된 테이블 메타데이터 이용**"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:826
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:836
 msgid ""
 "When initializing layers, various queries may be needed to establish the "
 "characteristics of the geometries stored in the database table. When the "
@@ -1706,7 +1773,7 @@ msgstr ""
 "부정확하게 표시할 수도 있고 (예를 들어 필터링된 레이어의 피처 개수가 부정확할 것입니다) 유일(unique)하다고 간주한 열이 사실은 "
 "그렇지 않은 경우 이상하게 동작할 가능성조차 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:836
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:846
 msgid ""
 "Once all parameters and options are set, you can test the connection by "
 "clicking the :guilabel:`Test Connection` button or apply it by clicking the "
@@ -1719,11 +1786,11 @@ msgstr ""
 ":guilabel:`Connect` 를 클릭하면 대화창에 (figure_add_postgis_tables_ 그림처럼) 선택한 "
 "데이터베이스에 있는 테이블이 표시됩니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:847
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:857
 msgid "Particular Connection requirements"
 msgstr "특정 연결 요구사항"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:849
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:859
 msgid ""
 "Because of database type particularities, provided options are not the same."
 " Database specific options are described below."
@@ -1731,11 +1798,11 @@ msgstr ""
 "데이터베이스 유형의 특성이 각각 다르기 때문에, 모든 데이터베이스 연결 옵션이 동일하지는 않습니다. 다음은 데이터베이스별 특화 옵션에 "
 "대한 설명입니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:855
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:865
 msgid "PostgreSQL Service connection file"
 msgstr "PostgreSQL 서비스 연결 파일"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:857
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:867
 msgid ""
 "The service connection file allows PostgreSQL connection parameters to be "
 "associated with a single service name. That service name can then be "
@@ -1744,7 +1811,7 @@ msgstr ""
 "서비스 연결 파일을 이용하면 PostgreSQL 연결 파라미터들을 단일 서비스명으로 묶을 수 있습니다. 그러면 클라이언트가 해당 "
 "서비스명을 지정해서 관련 설정을 사용할 수 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:861
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:871
 msgid ""
 "It's called :file:`.pg_service.conf` under \\*nix systems (GNU/Linux, macOS "
 "etc.) and :file:`pg_service.conf` on Windows."
@@ -1752,11 +1819,11 @@ msgstr ""
 "서비스 연결 파일명은 GNU/리눅스, 맥OS 등 \\*닉스 시스템에서는 :file:`.pg_service.conf` 이며 윈도우에서는 "
 ":file:`pg_service.conf` 입니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:864
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:874
 msgid "The service file can look like this::"
 msgstr "서비스 파일의 내용은 다음과 비슷합니다:"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:878
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:888
 msgid ""
 "There are two services in the above example: ``water_service`` and "
 "``wastewater_service``. You can use these to connect from QGIS, pgAdmin, "
@@ -1770,7 +1837,7 @@ msgstr ""
 "서비스를 이용하고자 하는 경우, psql 명령어를 실행하기 전에 ``export PGSERVICE=water_service`` 같은 "
 "명령어를 입력해야 합니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:885
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:895
 msgid ""
 "You can find all the PostgreSQL parameters `here "
 "<https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-"
@@ -1779,7 +1846,7 @@ msgstr ""
 "`여기 <https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-"
 "PARAMKEYWORDS>`_ 에서 모든 PostgreSQL 파라미터들을 찾아볼 수 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:888
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:898
 msgid ""
 "If you don't want to save the passwords in the service file you can use the "
 "`.pg_pass <https://www.postgresql.org/docs/current/libpq-pgpass.html>`_ "
@@ -1788,7 +1855,7 @@ msgstr ""
 "서비스 파일에 비밀번호를 저장하고 싶지 않다면 `.pg_pass <https://www.postgresql.org/docs/current"
 "/libpq-pgpass.html>`_ 옵션을 이용할 수 있습니다. "
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:894
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:904
 msgid ""
 "On \\*nix operating systems (GNU/Linux, macOS etc.) you can save the "
 ":file:`.pg_service.conf` file in the user's home directory and PostgreSQL "
@@ -1802,7 +1869,7 @@ msgstr ""
 "환경 변수를 지정하지 않고) 직접 작업하려면 :file:`/home/web/` 디렉터리에 :file:`.pg_service.conf` "
 "파일을 저장해야 합니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:901
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:911
 msgid ""
 "You can specify the location of the service file by creating a "
 "``PGSERVICEFILE`` environment variable (e.g. run the ``export "
@@ -1813,7 +1880,7 @@ msgstr ""
 "일시적으로 ``PGSERVICEFILE`` 변수를 설정하려면 ``export "
 "PGSERVICEFILE=/home/web/.pg_service.conf`` 명령어를 실행하십시오.)"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:907
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:917
 msgid ""
 "You can also make the service file available system-wide (all users) either "
 "by placing the :file:`.pg_service.conf` file in ``pg_config --sysconfdir`` "
@@ -1826,18 +1893,18 @@ msgstr ""
 "연결 파일을 이용할 수 있도록 할 수도 있습니다. 동일한 명칭의 서비스 정의가 사용자 파일과 시스템 파일 양쪽에 모두 있을 경우, 사용자"
 " 파일을 우선합니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:915
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:925
 msgid "There are some caveats under Windows:"
 msgstr "윈도우의 경우 다음과 같은 위험 부담이 있습니다:"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:917
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:927
 msgid ""
 "The service file should be saved as :file:`pg_service.conf` and not as "
 ":file:`.pg_service.conf`."
 msgstr ""
 "서비스 파일을 :file:`.pg_service.conf` 가 아니라 :file:`pg_service.conf` 로 저장해야 합니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:919
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:929
 msgid ""
 "The service file should be saved in Unix format in order to work. One way to"
 " do it is to open it with `Notepad++ <https://notepad-plus-plus.org/>`_ and "
@@ -1847,7 +1914,7 @@ msgstr ""
 "://notepad-plus-plus.org/>`_ 로 파일을 연 다음 :menuselection:`Edit --> EOL "
 "Conversion --> UNIX Format --> File save` 메뉴 옵션을 선택하면 됩니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:924
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:934
 msgid ""
 "You can add environmental variables in various ways; a tested one, known to "
 "work reliably, is :menuselection:`Control Panel --> System and Security --> "
@@ -1860,17 +1927,17 @@ msgstr ""
 "Environment Variables` 메뉴에서 ``PGSERVICEFILE`` 과 그 경로를, 예를 들어 "
 ":file:`C:\\\\Users\\\\John\\\\pg_service.conf` 를 입력해서 추가하는 것입니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:929
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:939
 msgid ""
 "After adding an environment variable you may also need to restart the "
 "computer."
 msgstr "환경 변수를 추가한 다음 컴퓨터를 재시작해야 할 수도 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:936
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:946
 msgid "Connecting to Oracle Spatial"
 msgstr "Oracle 데이터베이스를 연결하기"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:938
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:948
 msgid ""
 "The spatial features in Oracle Spatial aid users in managing geographic and "
 "location data in a native type within an Oracle database. In addition to "
@@ -1881,25 +1948,25 @@ msgstr ""
 "있습니다. :ref:`vector_create_stored_connection` 에 있는 몇몇 옵션 이외에도, 연결 대화창은 다음을 "
 "제안합니다:"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:943
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:953
 msgid "**Database**: SID or SERVICE_NAME of the Oracle instance;"
 msgstr "**Database**: Oracle 인스턴스의 SID 또는 SERVICE_NAME입니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:944
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:954
 msgid ""
 "**Port**: Port number the Oracle database server listens on. The default "
 "port is ``1521``;"
 msgstr "**Port**: Oracle 데이터베이스 서버가 열어 놓은 포트 번호입니다. 기본 포트는 ``1521`` 입니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:946
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:956
 msgid "**Workspace**: Workspace to switch to."
 msgstr "**Workspace**: 전환할 작업 공간입니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:948
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:958
 msgid "Optionally, you can activate the following checkboxes:"
 msgstr "다음 체크박스를 선택적으로 활성화할 수 있습니다:"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:950
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:960
 msgid ""
 "|checkbox| :guilabel:`Only look in metadata table`: restricts the displayed "
 "tables to those that are in the ``all_sdo_geom_metadata`` view. This can "
@@ -1909,7 +1976,7 @@ msgstr ""
 "``all_sdo_geom_metadata`` 뷰에 있는 테이블만 표시하도록 제한합니다. 이 옵션을 활성화하면 공간 테이블의 초기 표시 "
 "속도를 향상시킬 수 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:953
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:963
 msgid ""
 "|checkbox| :guilabel:`Only look for user's tables`: when searching for "
 "spatial tables, restricts the search to tables that are owned by the user."
@@ -1917,7 +1984,7 @@ msgstr ""
 "|checkbox| :guilabel:`Only look for user's tables`: 공간 테이블 검색 시 사용자가 소유한 "
 "테이블만 검색하도록 제한합니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:955
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:965
 msgid ""
 "|checkbox| :guilabel:`Also list tables with no geometry`: indicates that "
 "tables without geometry should also be listed by default."
@@ -1925,7 +1992,7 @@ msgstr ""
 "|checkbox| :guilabel:`Also list tables with no geometry`: 도형이 없는 테이블도 기본적으로 "
 "목록에 표시할지 말지를 나타냅니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:957
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:967
 msgid ""
 "|checkbox| :guilabel:`Use estimated table statistics for the layer "
 "metadata`: when the layer is set up, various metadata are required for the "
@@ -1946,7 +2013,7 @@ msgstr ""
 "SDO_TUNE.EXTENTS_OF 함수로 테이블 범위를 결정합니다. 테이블에 있는 NULL이 아닌 도형 행 처음 100줄로부터 테이블 "
 "도형을 결정합니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:967
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:977
 msgid ""
 "|checkbox| :guilabel:`Only existing geometry types`: only lists the existing"
 " geometry types and don't offer to add others."
@@ -1954,32 +2021,32 @@ msgstr ""
 "|checkbox| :guilabel:`Only existing geometry types`: 기존 도형 유형만 목록에 표시하고 다른 "
 "유형을 추가하려 하지 않습니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:969
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:979
 msgid "|checkbox| :guilabel:`Include additional geometry attributes`."
 msgstr "|checkbox| :guilabel:`Include additional geometry attributes`"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:973
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:983
 msgid "**Oracle Spatial Layers**"
 msgstr "**Oracle 공간 레이어**"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:975
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:985
 msgid ""
 "Normally, an Oracle Spatial layer is defined by an entry in the "
 "**USER_SDO_METADATA** table."
 msgstr "일반적으로, ``USER_SDO_METADATA`` 테이블의 항목이 Oracle 레이어를 정의합니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:978
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:988
 msgid ""
 "To ensure that selection tools work correctly, it is recommended that your "
 "tables have a **primary key**."
 msgstr ""
 "선택 도구가 정확하게 작동하도록 보장하려면, 사용자 테이블이 **기본 키(primary key)** 를 가지고 있는 편이 좋습니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:985
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:995
 msgid "Connecting to DB2 Spatial"
 msgstr "DB2 데이터베이스를 연결하기"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:987
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:997
 msgid ""
 "In addition to some of the options described in "
 ":ref:`vector_create_stored_connection`, the connection to a DB2 database "
@@ -1992,23 +2059,23 @@ msgstr ""
 ":guilabel:`Port` 정보를 이용해서 DB2 데이터베이스(자세한 정보는 :ref:`label_db2_spatial` 참조)로의 "
 "연결을 지정할 수 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:993
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1003
 msgid ""
 "An ODBC **Service/DSN** connection requires the service name defined to "
 "ODBC."
 msgstr "ODBC **Service/DSN** 연결은 ODBC에 정의된 서비스명을 필요로 합니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:995
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1005
 msgid "A driver/host/port connection requires:"
 msgstr "드라이버/호스트/포트 연결은 다음을 필요로 합니다:"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:997
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1007
 msgid ""
 "**Driver**: Name of the DB2 driver. Typically this would be IBM DB2 ODBC "
 "DRIVER."
 msgstr "**Driver**: DB2 드라이버의 명칭입니다. 일반적으로 ``IBM DB2 ODBC DRIVER`` 일 겁니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:999
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1009
 msgid ""
 "**DB2 Host**: Name of the database host. This must be a resolvable host name"
 " such as would be used to open a TCP/IP connection or ping the host. If the "
@@ -2018,7 +2085,7 @@ msgstr ""
 "때문에 분해할 수 있는(resolvable) 호스트명이어야만 합니다. 데이터베이스가 QGIS와 동일한 컴퓨터에 있는 경우, 그냥 "
 "*localhost* 라고 입력하십시오."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1004
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1014
 msgid ""
 "**DB2 Port**: Port number the DB2 database server listens on. The default "
 "DB2 LUW port is ``50000``. The default DB2 z/OS port is ``446``."
@@ -2026,17 +2093,17 @@ msgstr ""
 "**DB2 Port**: DB2 데이터베이스 서버가 열어 놓은 포트 번호입니다. 기본 DB2 LUW 포트는 ``50000`` 입니다. "
 "기본 DB2 z/OS 포트는 ``446`` 입니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1010
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1020
 msgid "**DB2 Spatial Layers**"
 msgstr "**DB2 공간 레이어**"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1012
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1022
 msgid ""
 "A DB2 Spatial layer is defined by a row in the "
 "**DB2GSE.ST_GEOMETRY_COLUMNS** view."
 msgstr "**DB2GSE.ST_GEOMETRY_COLUMNS** 뷰에 있는 행이 DB2 공간 레이어를 정의합니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1017
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1027
 msgid ""
 "In order to work effectively with DB2 spatial tables in QGIS, it is "
 "important that tables have an INTEGER or BIGINT column defined as PRIMARY "
@@ -2046,7 +2113,7 @@ msgstr ""
 "QGIS에서 DB2 공간 테이블을 효과적으로 작업하려면, 테이블이 *PRIMARY KEY* 로 정의된 *INTEGER* 또는 "
 "*BIGINT* 열을 가지고 있어야만 합니다. 새 피처를 추가하려 할 경우, 이 열은 *GENERATED* 특성도 가지고 있어야 합니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1022
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1032
 msgid ""
 "It is also helpful for the spatial column to be registered with a specific "
 "spatial reference identifier (most often ``4326`` for WGS84 coordinates). A "
@@ -2057,11 +2124,11 @@ msgstr ""
 "``ST_Register_Spatial_Column`` `저장 프로시저 "
 "<https://ko.wikipedia.org/wiki/저장_프로시저>`_ 를 호출하면 공간 열을 등록할 수 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1031
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1041
 msgid "Connecting to MSSQL Spatial"
 msgstr "MSSQL Spatial을 연결하기"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1033
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1043
 msgid ""
 "In addition to some of the options in "
 ":ref:`vector_create_stored_connection`, creating a new MSSQL connection "
@@ -2071,11 +2138,11 @@ msgstr ""
 ":ref:`vector_create_stored_connection` 에 있는 몇몇 옵션 이외에도, 새 MSSQL 연결 생성 대화창에서 "
 "**Provider/DSN** 명칭을 입력할 수 있습니다. 사용할 수 있는 데이터베이스도 표시할 수 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1041
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1051
 msgid "Loading a Database Layer"
 msgstr "데이터베이스 레이어 불러오기"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1043
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1053
 msgid ""
 "Once you have one or more connections defined to a database (see section "
 ":ref:`vector_create_stored_connection`), you can load layers from it. Of "
@@ -2087,11 +2154,11 @@ msgstr ""
 "데이터베이스에서 레이어를 불러올 수 있습니다. 물론 불러올 데이터가 있어야만 합니다. 예를 들어 PostGIS 데이터베이스로 데이터를 "
 "가져오는 작업에 대한 내용은 :ref:`vector_import_data_in_postgis` 를 참조하십시오."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1049
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1059
 msgid "To load a layer from a database, you can perform the following steps:"
 msgstr "데이터베이스에서 레이어를 불러오려면 다음 단계를 거쳐야 합니다:"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1051
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1061
 msgid ""
 "Open the \"Add <database> table(s)\" dialog (see "
 ":ref:`vector_create_stored_connection`)."
@@ -2099,19 +2166,19 @@ msgstr ""
 "\"Add <database> table(s)\" 대화창을 엽니다. "
 "(:ref:`vector_create_stored_connection` 참조)"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1053
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1063
 msgid ""
 "Choose the connection from the drop-down list and click :guilabel:`Connect`."
 msgstr "드롭다운 목록에서 연결을 선택한 다음 :guilabel:`Connect` 를 클릭합니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1054
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1064
 msgid ""
 "Select or unselect |checkbox| :guilabel:`Also list tables with no geometry`."
 msgstr ""
 "|checkbox| :guilabel:`Also list tables with no geometry` 체크박스를 활성화하거나 "
 "비활성화합니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1055
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1065
 msgid ""
 "Optionally, use some |checkbox| :guilabel:`Search Options` to reduce the "
 "list of tables to those matching your search. You can also set this option "
@@ -2122,11 +2189,11 @@ msgstr ""
 " 수 있습니다. :guilabel:`Connect` 버튼을 누르기 전에 이 옵션을 설정하면, 데이터베이스를 불러오는 시간을 줄일 수도 "
 "있습니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1059
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1069
 msgid "Find the layer(s) you wish to add in the list of available layers."
 msgstr "이용할 수 있는 레이어 목록에서 사용자가 추가하려 하는 레이어(들)를 찾습니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1060
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1070
 msgid ""
 "Select it by clicking on it. You can select multiple layers by holding down "
 "the :kbd:`Shift` or :kbd:`Ctrl` key while clicking."
@@ -2134,7 +2201,7 @@ msgstr ""
 "그 레이어를 클릭해서 선택하십시오. :kbd:`Shift` 또는 :kbd:`Ctrl` 키를 누른 채 클릭하면 레이어 여러 개를 선택할 수"
 " 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1062
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1072
 msgid ""
 "If applicable, use the :guilabel:`Set Filter` button (or double-click the "
 "layer) to start the :guilabel:`Query Builder` dialog (see section "
@@ -2148,7 +2215,7 @@ msgstr ""
 "정의합니다. 필터 표현식은 ``sql`` 열에 표시됩니다. :menuselection:`Layer Properties --> "
 "General --> Provider Feature Filter` 프레임에서 이 제약 조건을 제거하거나 편집할 수 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1068
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1078
 msgid ""
 "The checkbox in the ``Select at id`` column that is activated by default "
 "gets the feature ids without the attributes and generally speeds up the data"
@@ -2157,19 +2224,19 @@ msgstr ""
 "``Select at id`` 열에 있는 체크박스는 기본적으로 활성화돼 있는데, 이를 통해 속성 없이 피처 ID만 얻게 되기 때문에 "
 "대부분의 경우 데이터를 불러오는 속도가 향상됩니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1071
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1081
 msgid "Click on the :guilabel:`Add` button to add the layer to the map."
 msgstr ":guilabel:`Add` 버튼을 클릭해서 맵에 레이어를 추가합니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1079
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1089
 msgid "Add PostGIS Table(s) Dialog"
 msgstr "PostGIS 테이블 추가 대화창"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1082
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1092
 msgid "**Use the Browser Panel to speed up loading of database table(s)**"
 msgstr "**탐색기 패널을 사용해서 데이터베이스 테이블 불러오기 속도 향상**"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1084
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1094
 msgid ""
 "Adding DB tables from the :guilabel:`Data Source Manager` may sometimes be "
 "time consuming as QGIS fetches statistics and properties (e.g. geometry type"
@@ -2185,15 +2252,15 @@ msgstr ""
 "<browser_panel>` 또는 :ref:`데이터베이스 관리자 <dbmanager>` 를 사용해서 맵 캔버스로 데이터베이스 테이블을 "
 "드래그&드롭하는 편이 좋습니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1096
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1106
 msgid "QGIS Custom formats"
 msgstr "QGIS 사용자 지정 포맷"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1098
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1108
 msgid "QGIS proposes two custom formats:"
 msgstr "QGIS는 2개의 사용자 지정 포맷을 제안합니다:"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1100
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1110
 msgid ""
 "Temporary Scratch Layer: a memory layer that is bound to the project (see "
 ":ref:`vector_new_scratch_layer` for more information)"
@@ -2201,7 +2268,7 @@ msgstr ""
 "임시 스크래치 레이어(Temporary Scratch Layer): 프로젝트에 종속된 메모리 레이어 (자세한 내용은 "
 ":ref:`vector_new_scratch_layer` 참조)"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1102
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1112
 msgid ""
 "Virtual Layers: a layer resulting from a query on other layer(s) (see "
 ":ref:`vector_virtual_layers` for more information)"
@@ -2209,11 +2276,11 @@ msgstr ""
 "가상 레이어(Virtual Layer): 다른 레이어(들)에 대한 쿼리에서 산출된 레이어 (자세한 내용은 "
 ":ref:`vector_virtual_layers` 참조)"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1109
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1119
 msgid "QLR - QGIS Layer Definition File"
 msgstr "QLR - QGIS 레이어 정의 파일"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1111
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1121
 msgid ""
 "Layer definitions can be saved as a :ref:`Layer Definition File "
 "<qgislayerdefinitionfile>` (QLR - :file:`.qlr`) using :menuselection:`Export"
@@ -2223,7 +2290,7 @@ msgstr ""
 "메뉴를 통해 레이어 정의를 :ref:`레이어 정의 파일 <qgislayerdefinitionfile>` (QLR - "
 ":file:`.qlr`)로 저장할 수 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1117
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1127
 msgid ""
 "The QLR format makes it possible to share \"complete\" QGIS layers with "
 "other QGIS users. QLR files contain links to the data sources and all the "
@@ -2232,7 +2299,7 @@ msgstr ""
 "QLR 포맷은 \"완전한\" QGIS 레이어를 다른 QGIS 사용자들과 공유할 수 있게 해줍니다. QLR 파일은 데이터소스를 가리키는 "
 "링크 및 레이어 스타일 작업에 필요한 모든 QGIS 스타일 정보를 담고 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1122
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1132
 msgid ""
 "QLR files are shown in the Browser Panel and can be used to add layers (with"
 " their saved styles) to the Layers Panel. You can also drag and drop QLR "
@@ -2241,11 +2308,11 @@ msgstr ""
 "QLR 파일은 탐색기 패널에 표시되며, 레이어 패널에 레이어를 (저장된 레이어 스타일과 함께) 추가하는 데 사용할 수 있습니다. 시스템 "
 "파일 관리자에서 맵 캔버스로 QLR 파일을 드래그&드롭할 수도 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1128
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1138
 msgid "Connecting to web services"
 msgstr "웹 서비스 연결"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1130
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1140
 msgid ""
 "With QGIS you can get access to different types of OGC web services (WM(T)S,"
 " WFS(-T), WCS, CSW, ...). Thanks to QGIS Server, you can also publish such "
@@ -2255,11 +2322,11 @@ msgstr ""
 "QGIS를 통해 서로 다른 OGC 웹 서비스 유형(WM(T)S, WFS(-T), WCS, CSW 등등)에 접근할 수 있습니다. QGIS "
 "서버 덕분에, 이 서비스들을 웹 상에 공개할 수도 있습니다. :ref:`sec_ogc` 에서 이런 성능에 대해 설명하고 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1139
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1149
 msgid "Using XYZ Tile services"
 msgstr "XYZ 타일 서비스 사용하기"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1141
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1151
 msgid ""
 "XYZ Tile services can be found in the :guilabel:`XYZ Tiles` top level entry "
 "in the :guilabel:`Browser`. By default, the OpenStreetMap XYZ Tile service "
@@ -2274,11 +2341,11 @@ msgstr ""
 "있습니다. figure_xyz_tiles_openstreetmap_ 그림은 OpenStreetMap XYZ 타일 서비스 환경 설정을 담고"
 " 있는 대화창입니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1155
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1165
 msgid "XYZ Tiles - OpenStreetMap configuration"
 msgstr "XYZ 타일 - OpenStreetMap 환경 설정"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1157
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1167
 msgid ""
 "Configurations can be saved (:guilabel:`Save Connections`) to XML and loaded"
 " (:guilabel:`Load Connections`) through the context menu. Authentication "
@@ -2288,21 +2355,21 @@ msgstr ""
 "(:guilabel:`Load Connections`) 불러올 수 있습니다. 인증 환경 설정도 지원합니다. OpenStreetMap 용 "
 "XML 파일은 다음과 비슷한 내용을 담고 있습니다:"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1171
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1181
 msgid ""
 "Once a connection to a XYZ tile service is set, right-click over the entry "
 "to:"
 msgstr "XYZ 타일 서비스 연결을 설정한 다음, 해당 항목을 오른쪽 클릭하면:"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1173
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1183
 msgid ":guilabel:`Edit...` the XYZ connection settings"
 msgstr ":guilabel:`Edit...`: XYZ 연결 설정을 편집합니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1174
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1184
 msgid ":guilabel:`Delete` the connection"
 msgstr ":guilabel:`Delete`: 연결을 삭제합니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1175
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1185
 msgid ""
 ":menuselection:`Export layer... --> To File`, :ref:`saving it as a raster "
 "<general_saveas>`"
@@ -2310,11 +2377,11 @@ msgstr ""
 ":menuselection:`Export layer... --> To File`: XYZ 타일 레이어를 :ref:`래스터로 저장 "
 "<general_saveas>` 합니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1177
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1187
 msgid ":guilabel:`Add layer to project`: a double-click also adds the layer"
 msgstr ":guilabel:`Add layer to project`: 이 메뉴는 물론 더블 클릭으로도 레이어를 추가할 수 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1178
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1188
 msgid ""
 "View the :guilabel:`Layer Properties...` and get access to metadata and a "
 "preview of the data provided by the service. More settings are available "
@@ -2323,11 +2390,11 @@ msgstr ""
 ":guilabel:`Layer Properties...`: 레이어 속성을 표시해서 서비스가 제공하는 데이터의 메타데이터 및 미리보기에 "
 "접근할 수 있습니다. 프로젝트에 레이어를 불러온 후라면 더 많은 설정을 사용할 수 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1183
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1193
 msgid "Examples of XYZ Tile services:"
 msgstr "XYZ 타일 서비스 예시:"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1185
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1195
 msgid ""
 "OpenStreetMap Monochrome: :guilabel:`URL`: ``http://tiles.wmflabs.org/bw-"
 "mapnik/{z}/{x}/{y}.png``, :guilabel:`Min. Zoom Level`: 0, :guilabel:`Max. "
@@ -2337,7 +2404,7 @@ msgstr ""
 "mapnik/{z}/{x}/{y}.png``, :guilabel:`Min. Zoom Level`: 0, :guilabel:`Max. "
 "Zoom Level`: 19"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1188
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1198
 msgid ""
 "Google Maps: :guilabel:`URL`: "
 "``https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}``, :guilabel:`Min. Zoom"
@@ -2347,7 +2414,7 @@ msgstr ""
 "``https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}``, :guilabel:`Min. Zoom"
 " Level`: 0, :guilabel:`Max. Zoom Level`: 19"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1191
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1201
 msgid ""
 "Open Weather Map Temperature: :guilabel:`URL`: "
 "``http://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?appid={api_key}``"

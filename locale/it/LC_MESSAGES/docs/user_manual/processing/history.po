@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-10 11:07+0200\n"
+"POT-Creation-Date: 2020-07-26 13:13+0200\n"
 "PO-Revision-Date: 2020-03-16 19:31+0000\n"
 "Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
 "Language-Team: Italian (https://www.transifex.com/qgis/teams/6144/it/)\n"
@@ -32,110 +32,68 @@ msgstr "La cronologia di Processing"
 #: ../../docs/user_manual/processing/history.rst:14
 msgid ""
 "Every time you execute an algorithm, information about the process is stored"
-" in the history manager. Along with the parameters used, the date and time "
-"of the execution are also saved."
+" in the history manager. The date and time of the execution are saved, along"
+" with the parameters used, making it is easy to track and control all the "
+"work that has been developed using the Processing framework, and to "
+"reproduce it."
 msgstr ""
-"Ogni volta che esegui un algoritmo, le informazioni sul processo sono "
-"salvate dal gestore della cronologia. Vengono salvati anche i parametri "
-"usati, la data ed il tempo di esecuzione."
 
-#: ../../docs/user_manual/processing/history.rst:18
-msgid ""
-"This way, it is easy to track and control all the work that has been "
-"developed using the Processing framework, and to reproduce it."
-msgstr ""
-"In questo modo è facile tenere traccia e controllare tutto il lavoro "
-"eseguito tramite l'ambiente di Processing, e riprodurlo."
-
-#: ../../docs/user_manual/processing/history.rst:21
-msgid ""
-"The history manager is a set of registry entries grouped according to their "
-"date of execution, making it easier to find information about an algorithm "
-"executed at any particular moment."
-msgstr ""
-"Il gestore della cronologia è un insieme di registri raggruppati per data di"
-" esecuzione: in questo modo è molto facile trovare l'informazione su uno "
-"specifico algoritmo eseguito in un particolare momento."
-
-#: ../../docs/user_manual/processing/history.rst:30
+#: ../../docs/user_manual/processing/history.rst:26
 msgid "History"
 msgstr "Cronologia"
 
-#: ../../docs/user_manual/processing/history.rst:32
+#: ../../docs/user_manual/processing/history.rst:28
 msgid ""
 "Process information is kept as a command-line expression, even if the "
-"algorithm was launched from the toolbox. This makes it also useful for those"
-" learning how to use the command-line interface, since they can call an "
-"algorithm using the toolbox and then check the history manager to see how "
-"that same algorithm could be called from the command line."
+"algorithm was launched from the toolbox. This makes it useful for those "
+"learning how to use the command-line interface, since they can call an "
+"algorithm using the toolbox and then check the history manager to see how it"
+" could be called from the command line."
 msgstr ""
-"L'informazione sul processo è conservata come una espressione a riga di "
-"comando, anche se l'algoritmo è stato avviato tramite Strumenti. Questo è "
-"molto utile se stai imparando ad usare la riga di comando perché puoi vedere"
-" il comando di un algoritmo eseguito tramite Strumenti."
 
-#: ../../docs/user_manual/processing/history.rst:38
+#: ../../docs/user_manual/processing/history.rst:35
 msgid ""
 "Apart from browsing the entries in the registry, you can also re-execute "
-"processes by simply double-clicking on the corresponding entry: the "
-"algorithm dialog opens with parameters already filled; you can then change "
-"any of them to fit your needs and re-run the algorithm."
+"processes by simply double-clicking on the entry. The algorithm dialog then "
+"opens with parameters already set, and you can change any of them to fit "
+"your needs and re-run the algorithm."
 msgstr ""
-"Oltre a poter scorrere l'elenco del registro, puoi rieseguire i processi "
-"semplicemente facendo doppio click sul loro nome: la finestra di dialogo "
-"dell'algoritmo si apre con i parametri già riempiti; puoi cambiarne "
-"qualsiasi per adattarli ai tuoi bisogni ed eseguire di nuovo l'algoritmo."
 
-#: ../../docs/user_manual/processing/history.rst:43
+#: ../../docs/user_manual/processing/history.rst:40
 msgid ""
 "The :guilabel:`History` dialog also provides a convenient way to contribute "
 "to the consolidation of the testing infrastructure of QGIS Processing "
-"algorithms and scripts. Right-click on a command you previously executed and"
-" you can :guilabel:`Create Test...` for the concerned algorithm, following "
-"instructions at :source:`python/plugins/processing/tests/README.md`."
+"algorithms and scripts. When you right-click on an entry, you can "
+":guilabel:`Create Test...` using the concerned algorithm and parameters, "
+"following instructions at "
+":source:`python/plugins/processing/tests/README.md`."
 msgstr ""
 
-#: ../../docs/user_manual/processing/history.rst:51
+#: ../../docs/user_manual/processing/history.rst:49
 msgid "The processing log"
 msgstr "Il log di Processing"
 
-#: ../../docs/user_manual/processing/history.rst:53
+#: ../../docs/user_manual/processing/history.rst:51
 msgid ""
 "The history dialog only contains the execution calls, but not the "
 "information produced by the algorithm when executed. That information is "
 "written to the QGIS log (:menuselection:`View --> Panels --> Log Messages "
-"Panel`), in a :guilabel:`Processing` tab."
+"Panel`)."
 msgstr ""
-"La finestra di dialogo della cronologia contiene solo le chiamate in "
-"esecuzione, ma non le informazioni prodotte dall'algoritmo quando eseguite. "
-"Tale informazione viene scritta nel log di QGIS (:menuselection:`Visualizza "
-"--> Pannelli --> Messaggi di Log`), in una scheda :guilabel:`Processing`."
 
-#: ../../docs/user_manual/processing/history.rst:58
+#: ../../docs/user_manual/processing/history.rst:56
 msgid ""
-"Third-party algorithms are usually executed by calling their command-line "
+"Third-party algorithms are usually executed by using their command-line "
 "interfaces, which communicate with the user via the console. Although that "
 "console is not shown, usually a full dump of it is written to the log each "
 "time you run one of those algorithms. To avoid cluttering the log with that "
-"information, you can disable it for each provider, looking for the "
-"corresponding option in the provider entry of the settings dialog."
+"information, you can disable it for each provider in the settings dialog."
 msgstr ""
-"Gli algoritmi di terze parti vengono solitamente eseguiti chiamando le loro "
-"interfacce della riga di comando, che comunicano con l'utente tramite la "
-"console. Sebbene tale console non sia mostrata, una copia completa di essa "
-"viene scritta nel log ogni volta che si esegue uno di questi algoritmi. Per "
-"evitare di ingombrare il registro con tali informazioni, è possibile "
-"disabilitarlo per ciascun provider, cercando l'opzione corrispondente nella "
-"voce del provider della finestra di dialogo delle impostazioni."
 
-#: ../../docs/user_manual/processing/history.rst:65
+#: ../../docs/user_manual/processing/history.rst:64
 msgid ""
 "Some algorithms, even if they can produce a result with the given input "
-"data, might add comments or additional information to log if they detect "
+"data, output comments or additional information to log when they detect "
 "potential problems with the data, in order to warn you. Make sure you check "
-"those messages in the log if you are having unexpected results."
+"those messages in the log if you get unexpected results."
 msgstr ""
-"Alcuni algoritmi, anche se vengono correttamente eseguiti e forniscono un "
-"risultato, possono aggiungere delle informazioni nel log se rilevano "
-"potenziali problemi con i dati. Guarda i messaggi se vedi che il risultato "
-"non è quello atteso."

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-10 11:07+0200\n"
+"POT-Creation-Date: 2020-07-26 13:13+0200\n"
 "PO-Revision-Date: 2020-03-16 19:19+0000\n"
 "Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
@@ -55,22 +55,31 @@ msgstr ""
 "데이터를 생성해보려 합니다. 따라서 사용자 자신의 새 데이터셋을 먼저 정의해야 합니다."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:18
-msgid ""
-"You'll need to open a :guilabel:`Create Layer` dialog that will allow you to"
-" define a new layer."
+msgid "Open QGIS and create a new blank project."
 msgstr ""
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:21
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:22
 msgid ""
 "Navigate to and click on the menu entry :menuselection:`Layer --> Create "
-"Layer --> New Shapefile Layer`."
+"Layer --> New Shapefile Layer`. You'll be presented with the :guilabel:`New "
+"Shapefile Layer` dialog, which will allow you to define a new layer."
 msgstr ""
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:24
-msgid "You'll be presented with the following dialog:"
-msgstr "다음 대화 창이 나타날 것입니다."
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:30
+msgid ""
+"Click :guilabel:`...` for the :guilabel:`File name` field. A save dialog "
+"will appear."
+msgstr ""
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:29
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:32
+msgid "Navigate to the :file:`exercise_data` directory."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:33
+msgid "Save your new layer as :file:`school_property.shp`."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:35
 msgid ""
 "It's important to decide which kind of dataset you want at this stage. Each "
 "different vector layer type is \"built differently\" in the background, so "
@@ -79,78 +88,72 @@ msgstr ""
 "이 단계에서 어떤 유형의 데이터셋을 생성할지 결정하는 것이 중요합니다. 서로 다른 벡터 레이어 유형은 백그라운드에서 \"서로 다르게\" "
 "구성되기 때문에 레이어를 생성한 후에는 유형을 변경할 수 없기 때문입니다."
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:33
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:39
 msgid ""
-"For the next exercise, we're going to be creating new features which "
-"describe areas. For such features, you'll need to create a polygon dataset."
-msgstr "다음 예제에서 지역을 나타내는 새 피처들을 생성할 예정입니다. 이런 피처의 경우, 폴리곤 데이터셋을 생성해야 합니다."
+"For the next exercise, we're going to create new features which describe "
+"areas. For such features, you'll need to create a polygon dataset."
+msgstr ""
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:36
-msgid "Click on the :guilabel:`Polygon` radio button:"
-msgstr ":guilabel:`Polygon` 라디오 버튼을 클릭하십시오."
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:42
+msgid ""
+"For :guilabel:`Geometry Type`, select :guilabel:`Polygon` from the drop down"
+" menu:"
+msgstr ""
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:41
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:47
 msgid ""
 "This has no impact on the rest of the dialog, but it will cause the correct "
 "type of geometry to be used when the vector dataset is created."
 msgstr "대화 창의 다른 항목에 아무런 영향도 미치지 않지만, 벡터 데이터셋을 생성했을 때 정확한 도형 유형을 사용하게 해줍니다."
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:44
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:50
 msgid ""
 "The next field allows you to specify the Coordinate Reference System, or "
-"CRS. A CRS specifies how to describe a point on Earth in terms of "
-"coordinates, and because there are many different ways to do this, there are"
-" many different CRSs. The CRS of this project is WGS84, so it's already "
-"correct by default:"
+"CRS. CRS is a method of associating numerical coordinates with a position on"
+" the surface of the Earth. See the User Manual on :ref:`Working with "
+"Projections <label_projections>` to learn more."
 msgstr ""
-"다음 항목을 통해 좌표계, 또는 CRS를 설정할 수 있습니다. CRS는 지구 상의 한 점을 좌표 형태로 표현하는 방법을 설정하는데, 아주"
-" 많은 방법이 있기 때문에 아주 많은 CRS들이 있습니다. 이 프로젝트의 CRS는 WGS84로, 기본값을 그대로 쓰면 됩니다."
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:52
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:56
 msgid ""
-"Next there is a collection of fields grouped under :guilabel:`New "
-"attribute`. By default, a new layer has only one attribute, the :kbd:`id` "
-"field (which you should see in the :guilabel:`Attributes list`) below. "
-"However, in order for the data you create to be useful, you actually need to"
-" say something about the features you'll be creating in this new layer. For "
-"our current purposes, it will be enough to add one field called :kbd:`name`."
+"For this example we will use the default CRS associated with this project, "
+"which is WGS84."
 msgstr ""
-"다음으로 :guilabel:`New attribute` 아래 모여 있는 항목 집합이 있습니다. 기본적으로 새 레이어는 단일 속성, 즉 "
-"다음 그림에 보이는 (:guilabel:`Attributes list` 에서 볼 수 있는) :kbd:`id` 항목만을 가집니다. 그러나 "
-"여러분이 생성하는 데이터를 유용하게 만들려면 이 새 레이어 안에 생성할 피처에 대해 뭔가 정보를 부여할 필요가 있습니다. 이 예제의 "
-"목표에 따라, :kbd:`name` 이라는 항목 하나를 추가하는 것으로 충분할 것입니다."
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:59
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:62
 msgid ""
-"Replicate the setup below, then click the :guilabel:`Add to attributes list`"
-" button:"
-msgstr "아래 설정을 그대로 따라한 다음 :guilabel:`Add to attributes list` 버튼을 클릭하십시오."
+"Next there is a collection of fields grouped under :guilabel:`New Field`. By"
+" default, a new layer has only one attribute, the ``id`` field (which you "
+"should see in the :guilabel:`Fields list`) below. However, in order for the "
+"data you create to be useful, you actually need to say something about the "
+"features you'll be creating in this new layer. For our current purposes, it "
+"will be enough to add one field called ``name`` that will hold ``Text data``"
+" and will be limited to text length of ``80`` characters."
+msgstr ""
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:65
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:70
+msgid ""
+"Replicate the setup below, then click the :guilabel:`Add to Fields List` "
+"button:"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:75
 msgid "Check that your dialog now looks like this:"
 msgstr "대화 창이 다음 그림처럼 보이는지 확인하십시오."
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:70
-msgid "Click :guilabel:`OK`. A save dialog will appear."
-msgstr ":guilabel:`OK` 를 클릭합니다. 저장 대화 창이 나타납니다."
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:80
+msgid "Click :guilabel:`OK`"
+msgstr ":guilabel:`OK` 를 클릭합니다."
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:71
-msgid "Navigate to the :kbd:`exercise_data` directory."
-msgstr ":kbd:`exercise_data` 디렉터리를 찾아갑니다."
-
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:72
-msgid "Save your new layer as :kbd:`school_property.shp`."
-msgstr "사용자가 만든 새 레이어를 :kbd:`school_property.shp` 으로 저장합니다."
-
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:74
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:82
 msgid "The new layer should appear in your :guilabel:`Layers` panel."
 msgstr ""
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:79
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:87
 msgid "|basic| |FA| Data Sources"
 msgstr "|basic| |FA| 데이터소스"
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:81
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:89
 msgid ""
 "When you create new data, it obviously has to be about objects that really "
 "exist on the ground. Therefore, you'll need to get your information from "
@@ -158,7 +161,7 @@ msgid ""
 msgstr ""
 "새 데이터를 생성하는 작업은 당연히 지표면에 실재하는 오브젝트에 관련된 것이어야 합니다. 따라서 어딘가에서 해당 정보를 구해야 합니다."
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:85
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:93
 msgid ""
 "There are many different ways to obtain data about objects. For example, you"
 " could use a GPS to capture points in the real world, then import the data "
@@ -171,58 +174,71 @@ msgstr ""
 "QGIS로 불러들일 수 있습니다. 또는 경위의 측량계를 통해 포인트를 측정한 다음 좌표를 직접 입력해서 새 피처를 생성할 수도 있습니다."
 " 아니면 위성영상이나 항공사진 같은 원격탐사 데이터로부터 오브젝트를 따오는 디지털라이즈 작업을 할 수도 있습니다."
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:92
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:100
 msgid ""
 "For our example, you'll be using the digitizing approach. Sample raster "
 "datasets are provided, so you'll need to import them as necessary."
 msgstr "이 예제에서는 디지털라이즈 작업을 이용합니다. 래스터 데이터셋 샘플을 갖추고 있으므로, 필요한 대로 불러들여야 합니다."
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:95
-msgid "Click on the :guilabel:`Add Raster Layer` button: |addRasterLayer|"
-msgstr ""
-
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:97
-msgid "Navigate to :kbd:`exercise_data/raster/`."
-msgstr ":kbd:`exercise_data/raster/` 디렉터리를 찾아가십시오."
-
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:98
-msgid "Select the file :kbd:`3420C_2010_327_RGB_LATLNG.tif`."
-msgstr ":kbd:`3420C_2010_327_RGB_LATLNG.tif` 파일을 선택합니다."
-
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:99
-msgid "Click :guilabel:`Open`. An image will load into your map."
-msgstr ":guilabel:`Open` 을 클릭합니다. 사용자 맵에 이미지가 로드될 것입니다."
-
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:100
-msgid "Find the new image in the :guilabel:`Layers` panel."
-msgstr ""
-
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:101
-msgid ""
-"Click and drag it to the bottom of the list so that you can still see your "
-"other layers."
-msgstr "목록 맨 아래로 이미지를 클릭 & 드래그해서 사용자의 다른 레이어를 볼 수 있도록 합니다."
-
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:103
-msgid "Find and zoom to this area:"
-msgstr "다음 지역을 찾아 줌인/줌아웃하십시오."
+msgid "Click on |dataSourceManager| :sup:`Data Source Manager` button."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:104
+msgid "Select |raster| :guilabel:`Raster` on the left side."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:105
+msgid "In the :guilabel:`Source` panel, click on the :guilabel:`...` button:"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:106
+msgid "Navigate to :file:`exercise_data/raster/`."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:107
+msgid "Select the file :file:`3420C_2010_327_RGB_LATLNG.tif`."
+msgstr ""
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:108
-msgid ""
-"If your :guilabel:`buildings` layer symbology is covering part or all of the"
-" raster layer, you can temporarily disable the layer by deselecting it in "
-"the :guilabel:`Layers panel`. You may also wish to hide the "
-":guilabel:`roads` symbology if you find it distracting."
+msgid "Click :guilabel:`Open` to close the dialogue window."
 msgstr ""
-":guilabel:`buildings` 레이어 심볼이 래스터 레이어의 일부 또는 전체를 덮고 있다면, :guilabel:`Layers "
-"panel` 에서 해당 레이어를 선택 해제해서 일시적으로 비활성화시킬 수 있습니다. 또 :guilabel:`roads` 심볼이 방해가 "
-"된다면 마찬가지로 숨길 수도 있습니다."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:113
-msgid "You'll be digitizing these three fields:"
-msgstr "다음 세 군데 학교 부지를 디지타이즈할 것입니다."
+msgid ""
+"Click :guilabel:`Add` and :guilabel:`Close`. An image will load into your "
+"map."
+msgstr ""
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:118
+msgid ""
+"If you don't see an aerial image appear, select the new layer, right click, "
+"and choose :guilabel:`Zoom to Layer` in the context menu."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:124
+msgid ""
+"Click on the |zoomIn| :sup:`Zoom In` button, and zoom to the area "
+"highlighted in blue below:"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:130
+msgid "Now you are ready to digitize these three fields:"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:135
+msgid ""
+"Before starting to digitize, let's move the ``school_property`` layer above "
+"the aerial image."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:137
+msgid ""
+"Select ``school_property`` layer in the :guilabel:`Layers` pane and drag it "
+"to the top."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:142
 msgid ""
 "In order to begin digitizing, you'll need to enter **edit mode**. GIS "
 "software commonly requires this to prevent you from accidentally editing or "
@@ -232,24 +248,21 @@ msgstr ""
 "디지타이즈를 시작하려면 **편집 모드** 로 들어가야 합니다. GIS 소프트웨어는 우연히 중요한 데이터를 편집하거나 삭제하는 일을 막기 "
 "위해 일반적으로 이런 단계를 거치게 합니다. 각 레이어에 대해 개별적으로 편집 모드를 켜거나 끌 수 있습니다."
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:122
-msgid "To enter edit mode for the :guilabel:`school_property` layer:"
-msgstr ":guilabel:`school_property` 레이어에 대해 편집 모드로 들어가려면,"
-
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:124
-msgid ""
-"Click on the layer in the :guilabel:`Layer list` to select it. (Make very "
-"sure that the correct layer is selected, otherwise you'll edit the wrong "
-"layer!)"
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:146
+msgid "To enter edit mode for the ``school_property`` layer:"
 msgstr ""
-":guilabel:`Layer list` 에 있는 해당 레이어를 클릭해서 선택하십시오. (정확한 레이어를 선택했는지 확인하십시오. 다른 "
-"레이어를 편집하게 될 수도 있습니다!)"
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:127
-msgid "Click on the :guilabel:`Toggle Editing` button: |edit|"
-msgstr ":guilabel:`Toggle Editing` 버튼 |edit| 을 클릭합니다."
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:148
+msgid ""
+"Click on the ``school_property`` layer in the :guilabel:`Layers` panel to "
+"select it."
+msgstr ""
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:129
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:149
+msgid "Click on the |toggleEditing| :sup:`Toggle Editing` button."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:151
 msgid ""
 "If you can't find this button, check that the :guilabel:`Digitizing` toolbar"
 " is enabled. There should be a check mark next to the :menuselection:`View "
@@ -258,119 +271,105 @@ msgstr ""
 "이 버튼을 찾을 수 없을 경우, :guilabel:`Digitizing` 툴바가 활성화돼 있는지 확인해보십시오. "
 ":menuselection:`View --> Toolbars --> Digitizing` 메뉴 항목 옆에 체크 표시가 있어야 합니다."
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:133
-msgid ""
-"As soon as you are in edit mode, you'll see the digitizing tools are now "
-"active:"
-msgstr "편집 모드로 들어간 순간 디지타이즈 작업 도구가 활성화되는 것을 볼 수 있습니다."
-
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:136
-msgid "|capturePolygon| |moveFeature| |vertexToolActiveLayer|"
-msgstr ""
-
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:138
-msgid ""
-"Four other relevant buttons are still inactive, but will become active when "
-"we start interacting with our new data:"
-msgstr "다른 관련 버튼 네 개가 아직 활성화되지 않았지만, 새 데이터와 상호작용을 시작하면 활성화될 것입니다."
-
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:141
-msgid "|saveEdits| |deleteSelectedFeatures| |editCut| |editCopy| |editPaste|"
-msgstr ""
-
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:144
-msgid "From left to right on the toolbar, they are:"
-msgstr "툴바의 왼쪽에서 오른쪽 방향으로 각각 다음과 같습니다."
-
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:146
-msgid ":guilabel:`Save Edits`: saves changes made to the layer."
-msgstr ":guilabel:`Save Edits`: 레이어의 변경 사항을 저장합니다."
-
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:147
-msgid ":guilabel:`Add Feature`: start digitizing a new feature."
-msgstr ":guilabel:`Add Feature`: 새 피처의 디지타이즈 작업을 시작합니다."
-
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:148
-msgid ":guilabel:`Move Feature(s)`: move an entire feature around."
-msgstr ":guilabel:`Move Feature(s)`: 피처 전체를 이동합니다."
-
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:149
-msgid ":guilabel:`Vertex Tool`: move only one part of a feature."
-msgstr ""
-
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:150
-msgid ":guilabel:`Delete Selected`: delete the selected feature."
-msgstr ":guilabel:`Delete Selected`: 선택한 피처를 삭제합니다."
-
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:151
-msgid ":guilabel:`Cut Features`: cut the selected feature."
-msgstr ":guilabel:`Cut Features`: 선택한 피처를 잘라냅니다."
-
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:152
-msgid ":guilabel:`Copy Features`: copy the selected feature."
-msgstr ":guilabel:`Copy Features`: 선택한 피처를 복사합니다."
-
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:153
-msgid ""
-":guilabel:`Paste Features`: paste a cut or copied feature back into the map."
-msgstr ":guilabel:`Paste Features`: 잘라낸 또는 복사한 피처를 다시 맵에 붙여넣습니다."
-
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:155
-msgid "You want to add a new feature."
-msgstr "새 피처를 추가할 차례입니다."
-
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:157
 msgid ""
-"Click on the :guilabel:`Add Feature` button now to begin digitizing our "
-"school fields."
-msgstr ":guilabel:`Add Feature` 버튼을 클릭해서 학교 운동장을 디지타이즈하는 작업을 시작하겠습니다."
+"As soon as you are in edit mode, you'll see that some digitizing tools have "
+"become active:"
+msgstr ""
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:160
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:158
+msgid "|capturePolygon| :sup:`Capture Polygon`"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:159
+msgid "|vertexToolActiveLayer| :sup:`Vertex Tool`"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:161
+msgid ""
+"Other relevant buttons are still inactive, but will become active when we "
+"start interacting with our new data."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:164
+msgid ""
+"Notice that the layer ``school_property`` in the :guilabel:`Layers` panel "
+"now has the pencil icon, indicating that it is in edit mode."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:167
+msgid ""
+"Click on the |capturePolygon| :sup:`Capture Polygon` button to begin "
+"digitizing our school fields."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:170
 msgid ""
 "You'll notice that your mouse cursor has become a crosshair. This allows you"
 " to more accurately place the points you'll be digitizing. Remember that "
-"even as you're using the digitizing tool, you can zoom in and out on your "
+"even when you're using the digitizing tool, you can zoom in and out on your "
 "map by rolling the mouse wheel, and you can pan around by holding down the "
 "mouse wheel and dragging around in the map."
 msgstr ""
-"마우스 커서가 십자 모양으로 변한 것을 눈치채셨습니까? 여러분이 좀 더 정확하게 포인트의 위치를 디지타이즈할 수 있도록 해줍니다. "
-"디지타이즈 작업 도중이라도 마우스 휠을 돌려 맵을 줌인/줌아웃할 수 있고, 마우스 휠을 누른 채 드래그해서 맵을 이동할 수 있다는 것을 "
-"기억하십시오."
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:166
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:176
 msgid "The first feature you'll be digitizing is the |schoolAreaType1|:"
 msgstr "여러분이 디지타이즈할 첫 번째 피처는 다음 |schoolAreaType1| 입니다."
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:171
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:181
 msgid ""
 "Start digitizing by clicking on a point somewhere along the edge of the "
 "field."
 msgstr "운동장의 경계 어딘가의 포인트를 클릭해서 디지타이즈 작업을 시작합니다."
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:173
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:182
 msgid ""
 "Place more points by clicking further along the edge, until the shape you're"
 " drawing completely covers the field."
 msgstr "여러분이 그리는 도형이 운동장을 완전히 가릴 때까지 경계를 따라 계속 포인트를 클릭합니다."
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:175
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:187
 msgid ""
-"After placing your last point, *right-click* to finish drawing the polygon. "
+"After placing your last point, right click to finish drawing the polygon. "
 "This will finalize the feature and show you the :guilabel:`Attributes` "
 "dialog."
 msgstr ""
-"마지막 포인트의 위치를 디지타이즈한 다음, *오른쪽 클릭* 으로 폴리곤 그리기를 완료합니다. 피처가 완성되고 "
-":guilabel:`Attributes` 대화 창이 나타날 것입니다."
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:177
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:189
 msgid "Fill in the values as below:"
 msgstr "다음과 같이 값을 입력하십시오."
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:182
-msgid "Click :guilabel:`OK` and you've created a new feature!"
-msgstr ":guilabel:`OK` 를 클릭하면 새 피처가 생성됩니다!"
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:194
+msgid "Click :guilabel:`OK`, and you have created a new feature!"
+msgstr ""
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:184
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:199
+msgid "In the :guilabel:`Layers` panel select the ``school_property`` layer."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:200
+msgid ""
+"Right click and choose :guilabel:`Open Attribute Table` in the context menu."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:205
+msgid ""
+"In the table you will see the feature you just added. While in edit mode you"
+" can update the attributes data by double click on the cell you want to "
+"update."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:212
+msgid "Close the attribute table."
+msgstr "속성 테이블을 닫습니다."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:213
+msgid ""
+"To save the new feature we just created, click on |saveEdits| :sup:`Save "
+"Edits` button."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:215
 msgid ""
 "Remember, if you've made a mistake while digitizing a feature, you can "
 "always edit it after you're done creating it. If you've made a mistake, "
@@ -379,128 +378,229 @@ msgstr ""
 "피처를 디지타이즈할 때 실수를 했을 경우, 피처 생성 후에 언제라도 편집/수정할 수 있다는 사실을 기억하십시오. 실수를 했다 하더라도 "
 "앞의 지침대로 피처를 완성할 때까지 디지타이즈 작업을 계속한 다음,"
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:188
-msgid "Select the feature with the :guilabel:`Select Single Feature` tool:"
-msgstr ":guilabel:`Select Single Feature` 도구로 해당 피처를 선택합니다."
-
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:193
-msgid "You can use:"
-msgstr "다음 도구를 사용할 수 있습니다."
-
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:195
-msgid "the :guilabel:`Move Feature(s)` tool to move the entire feature,"
-msgstr ":guilabel:`Move Feature(s)` 도구로 전체 피처를 이동할 수 있고,"
-
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:196
-msgid ""
-"the :guilabel:`Vertex Tool` to move only one point where you may have miss-"
-"clicked,"
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:219
+msgid "Click on |vertexToolActiveLayer| :sup:`Vertex Tool` button."
 msgstr ""
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:198
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:220
 msgid ""
-":guilabel:`Delete Selected` to get rid of the feature entirely so you can "
-"try again, and"
-msgstr ":guilabel:`Delete Selected` 도구로 피처를 완전히 삭제하고 다시 디지타이즈 작업을 시작하거나,"
-
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:200
-msgid ""
-"the :menuselection:`Edit --> Undo` menu item or the :kbd:`Ctrl+Z` keyboard "
-"shortcut to undo mistakes."
+"Hover the mouse over a vertex you want to move and left click on the vertex."
 msgstr ""
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:204
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:224
-msgid "|basic| |TY|"
-msgstr "|basic| |TY|"
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:221
+msgid ""
+"Move the mouse to the correct location of the vertex, and left click. This "
+"will move the vertex to the new location."
+msgstr ""
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:206
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:229
+msgid ""
+"The same procedure can be used to move a line segment, but you will need to "
+"hover over the midpoint of the line segment."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:232
+msgid ""
+"If you want to undo a change, you can press the |undo| :sup:`Undo` button or"
+" :kbd:`Ctrl+Z`."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:234
+msgid ""
+"Remember to save your changes by clicking the |saveEdits| :sup:`Save Edits` "
+"button."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:236
+msgid ""
+"To enable the remaining feature editing tools, one needs to select the "
+"feature."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:238
+msgid ""
+"Click on the |selectRectangle| :sup:`Select Features` button in the "
+"Attributes Toolbar."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:239
+msgid ""
+"Click on the feature that was just created and the remaining buttons will "
+"become enabled."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:246
+msgid ""
+"See :ref:`User Manual<sec_edit_existing_layer>` for description of the other"
+" buttons in this toolbar."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:249
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:319
+msgid ""
+"When done editing, click the |toggleEditing| :sup:`Toggle Editing` button to"
+" get out of edit mode, and save your edits."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:254
+msgid "|basic| |TY| Digitizing Polygons"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:256
 msgid ""
 "Digitize the school itself and the upper field. Use this image to assist "
 "you:"
 msgstr "이제 학교와 그 위에 있는 운동장을 디지타이즈해보겠습니다. 다음 이미지를 참고하십시오."
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:211
-msgid "Remember that each new feature needs to have a unique :kbd:`id` value!"
-msgstr "새 피처에 각각 유일한 :kbd:`id` 값을 부여해야 한다는 점을 기억하십시오!"
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:261
+msgid "Remember that each new feature needs to have a unique ``id`` value!"
+msgstr ""
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:213
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:263
 msgid ""
 "When you're done adding features to a layer, remember to save your edits and"
 " then exit edit mode."
 msgstr "레이어에 피처를 추가하는 작업이 끝나면, 편집한 내용을 저장하고 편집 모드에서 나와야 한다는 사실을 잊지 마십시오."
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:216
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:266
 msgid ""
 "You can style the fill, outline and label placement and formatting of the "
-":guilabel:`school_property` using techniques learnt in earlier lessons. In "
-"our example, we will use a dashed outline of light purple color with no "
-"fill."
+"``school_property`` using techniques learnt in earlier lessons."
 msgstr ""
-"이전 강의에서 배운 기술을 이용해서 :guilabel:`school_property` 의 면, 윤곽선, 라벨 위치 및 서식에 스타일을 "
-"적용할 수 있습니다. 이 예제에서는 투명한 면에 밝은 보라색 점선의 윤곽선을 적용해봅시다."
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:226
-msgid ""
-"Create a new line feature called :kbd:`routes.shp` with attributes :kbd:`id`"
-" and :kbd:`type`. (Use the approach above to guide you.)"
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:273
+msgid "|moderate| |FA| Using Vertex Editor Table"
 msgstr ""
-":kbd:`routes.shp` 라는 파일명으로 :kbd:`id` 와 :kbd:`type` 속성을 가진 새 라인 피처를 생성합니다. "
-"(앞에 나왔던 지침을 따르십시오.)"
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:228
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:275
 msgid ""
-"We're going to digitize two routes which are not already marked on the roads"
-" layer; one is a path, the other is a track."
-msgstr "현재 도로 레이어에 표시되지 않은 경로 두 개를 디지타이즈해보겠습니다. 하나는 길이고, 다른 하나는 산길입니다."
+"Another way to edit a feature is to manually enter the actual coordinate "
+"values for each vertex using the :guilabel:`Vertex Editor` table."
+msgstr ""
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:231
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:279
+msgid "Make sure you are in edit mode on layer ``school_property``."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:280
 msgid ""
-"Our path runs along the southern edge of the suburb of Railton, starting and"
-" ending at marked roads:"
-msgstr "이 길은 Railton 의 교외 남쪽 경계를 따라, 표시된 두 도로에서 시작하고 끝납니다."
+"If not already activated, click on |vertexToolActiveLayer| :sup:`Vertex "
+"Tool` button."
+msgstr ""
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:237
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:282
+msgid ""
+"Move the mouse over one of the polygon features you created in the "
+"``school_property`` layer and right click on it. This will select the "
+"feature and a :guilabel:`Vertex Editor` pane will appear."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:289
+msgid ""
+"This table contains the coordinates for the vertices of the feature. Notice "
+"there are seven vertices for this feature, but only six are visually "
+"identified in the map area. Upon closer inspection, one will notice that row"
+" 0 and 6 have identical coordinates. These are the start and end vertices of"
+" the feature geometry, and are required in order to create a closed polygon "
+"feature."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:297
+msgid ""
+"Click and drag a box over a vertex, or multiple vertices, of the selected "
+"feature."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:302
+msgid ""
+"The selected vertices will change to a color blue and the :guilabel:`Vertex "
+"Editor` table will have the corresponding rows highlighted, which contain "
+"the coordinates of the vertices."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:309
+msgid ""
+"To update a coordinate, double left click on the cell in the table that you "
+"want to edit and enter the updated value. In this example, the x coordinate "
+"of row ``4`` is updated from ``20.4450`` to ``20.4444``."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:317
+msgid ""
+"After entering the updated value, hit the enter key to apply the change. You"
+" will see the vertex move to the new location in the map window."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:323
+msgid "|basic| |TY| Digitizing Lines"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:324
+msgid ""
+"We are going to digitize two routes which are not already marked on the "
+"roads layer; one is a path, the other is a track. Our path runs along the "
+"southern edge of the suburb of Railton, starting and ending at marked roads:"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:332
 msgid "Our track is a little further to the south:"
 msgstr "산길은 좀 더 남쪽에 있습니다."
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:242
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:337
 msgid ""
-"One at a time, digitize the path and the track on the :guilabel:`routes` "
-"layer. Try to follow the routes as accurately as possible, using points "
-"(left-click) at any corners or turns."
+"Create a new ESRI Shapefile line dataset called ``routes.shp``, with "
+"attributes ``id`` and ``type`` (use the approach above to guide you.)"
 msgstr ""
-":guilabel:`routes` 레이어에 이 길과 산길을 차례로 디지타이즈해보십시오. 갈림길이나 굽이마다 (왼쪽 클릭으로) 포인트를 "
-"찍으며 이 경로들을 최대한 정확히 따라가보십시오."
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:246
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:340
 msgid ""
-"When creating each route, give them the :kbd:`type` attribute value of "
-":kbd:`path` or :kbd:`track`."
-msgstr "각 경로를 생성한 다음, :kbd:`path` 와 :kbd:`track` 이라는 :kbd:`type` 속성값을 부여하십시오."
-
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:249
-msgid ""
-"You'll probably find that only the points are marked; use the "
-":guilabel:`Layer Properties` dialog to add styling to your routes. Feel free"
-" to give different styles to the path and track."
+"If the roads layer is not in your map, then add it from the GeoPackage file "
+":file:`training-data.gpkg` included in the :file:`exercise_data` folder of "
+"the training data you downloaded."
 msgstr ""
-"아마도 포인트만 표시되었을 수도 있습니다. :guilabel:`Layer Properties` 대화 창을 통해 경로에 스타일을 "
-"적용하십시오. 사용자 마음대로 길과 산길에 각각 다른 스타일을 적용해보십시오."
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:253
-msgid "Save your edits and toggle :guilabel:`Edit` mode."
-msgstr "편집 내용을 저장하고 편집 모드를 끕니다."
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:343
+msgid "Activate edit mode."
+msgstr ""
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:255
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:344
+msgid ""
+"Since you are working with a line feature, click on the |addLineFeature| "
+":sup:`Add Line` button to initiate line digitizing mode."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:347
+msgid ""
+"One at a time, digitize the path and the track on the ``routes`` layer. Try "
+"to follow the routes as accurately as possible, adding additional points "
+"along corners or turns."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:350
+msgid "Set the ``type`` attribute value to ``path`` or ``track``."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:351
+msgid ""
+"Use the :guilabel:`Layer Properties` dialog to add styling to your routes. "
+"Feel free to use different styles for paths and tracks."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:353
+msgid ""
+"Save your edits and toggle off editing mode by pressing the |toggleEditing| "
+":sup:`Toggle Editing` button."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:356
 msgid ":ref:`Check your results <create-vector-digitize-1>`"
 msgstr ":ref:`결과 확인 <create-vector-digitize-1>`"
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:258
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:359
 msgid "|IC|"
 msgstr "|IC|"
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:260
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:361
 msgid ""
 "Now you know how to create features! This course doesn't cover adding point "
 "features, because that's not really necessary once you've worked with more "
@@ -512,22 +612,20 @@ msgstr ""
 " 더 복잡한 피처를 다루는 법을 안다면 포인트 피처도 쉽게 생성할 수 있기 때문입니다. 포인트 위치를 딱 한 번 클릭하는 것만 제외하면,"
 " 속성을 부여하고 피처를 생성하는 방법은 똑같습니다."
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:266
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:367
 msgid ""
 "Knowing how to digitize is important because it's a very common activity in "
 "GIS programs."
 msgstr "디지타이즈는 GIS 프로그램을 사용하면서 매우 일상적인 작업이기 때문에 그 방법을 아는 것은 매우 중요합니다."
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:270
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:371
 msgid "|WN|"
 msgstr "|WN|"
 
-#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:272
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:373
 msgid ""
 "Features in a GIS layer aren't just pictures, but objects in space. For "
 "example, adjacent polygons know where they are in relation to one another. "
-"This is called *topology*. In the next lesson you'll see an example of why "
-"this can be useful."
+"This is called **topology**. In the next lesson you'll see an example of why"
+" this can be useful."
 msgstr ""
-"GIS 레이어 안의 피처는 그냥 그림이 아니라 공간에 있는 오브젝트입니다. 예를 들어 인접한 폴리곤들은 서로의 상대적인 위치를 알고 "
-"있습니다. 이것을 *위상(topology)* 이라고 합니다. 다음 강의에서 이 위상이 어떻게 유용한지에 대한 예제를 배울 것입니다."

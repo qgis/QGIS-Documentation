@@ -5,16 +5,15 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
-# Kayama Yoichi <yoichi.kayama@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-10 11:07+0200\n"
+"POT-Creation-Date: 2020-07-26 13:13+0200\n"
 "PO-Revision-Date: 2020-03-16 19:30+0000\n"
-"Last-Translator: Kayama Yoichi <yoichi.kayama@gmail.com>, 2020\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -28,18 +27,23 @@ msgstr "機能"
 
 #: ../../docs/user_manual/preamble/features.rst:12
 msgid ""
-"QGIS offers many common GIS functions provided by core features and plugins."
-" A short summary of six general categories of features and plugins is "
+"QGIS offers a wealth of GIS functions, provided by core features and "
+"plugins. The locator bar makes it easy to search for functions, datasets and"
+" more."
+msgstr ""
+
+#: ../../docs/user_manual/preamble/features.rst:17
+msgid ""
+"A short summary of six general categories of features and plugins is "
 "presented below, followed by first insights into the integrated Python "
 "console."
 msgstr ""
-"QGISではコア機能とプラグインによって多くの一般的なGIS機能を提供しています。以下の機能とプラグインを6種類に分けた説明を行います。続いて最初に統合されたPythonコンソールについての説明を行います。"
 
-#: ../../docs/user_manual/preamble/features.rst:18
+#: ../../docs/user_manual/preamble/features.rst:22
 msgid "View data"
 msgstr "データを見る"
 
-#: ../../docs/user_manual/preamble/features.rst:20
+#: ../../docs/user_manual/preamble/features.rst:24
 msgid ""
 "You can view combinations of vector and raster data (in 2D or 3D) in "
 "different formats and projections without conversion to an internal or "
@@ -47,7 +51,7 @@ msgid ""
 msgstr ""
 "内部形式や共通形式に変換することなく異なる形式と投影法のベクタとラスタデータ(2Dと３Dで）の組み合わせを表示することができます。サポートされている形式は以下のものです:"
 
-#: ../../docs/user_manual/preamble/features.rst:24
+#: ../../docs/user_manual/preamble/features.rst:29
 msgid ""
 "Spatially-enabled tables and views using PostGIS, SpatiaLite and MS SQL "
 "Spatial, Oracle Spatial, vector formats supported by the installed OGR "
@@ -59,7 +63,7 @@ msgstr ""
 " Shapefile, MapInfo, SDTS, GML等その他多くのものも含まれます。 :ref:`label_workingvector` "
 "のセクションを参照してください。"
 
-#: ../../docs/user_manual/preamble/features.rst:29
+#: ../../docs/user_manual/preamble/features.rst:34
 msgid ""
 "Raster and imagery formats supported by the installed GDAL (Geospatial Data "
 "Abstraction Library) library, such as GeoTIFF, ERDAS IMG, ArcInfo ASCII "
@@ -69,14 +73,19 @@ msgstr ""
 "のようなラスターと画像の形式はインストールされているGDAL(Geospatial Data Abstraction Library) "
 "ライブラリにサポートされています,詳しくは :ref:`working_with_raster` セクションを参照して下さい."
 
-#: ../../docs/user_manual/preamble/features.rst:32
+#: ../../docs/user_manual/preamble/features.rst:37
+msgid ""
+"Mesh data (TINs and regular grids are supported). See :ref:`label_meshdata`."
+msgstr ""
+
+#: ../../docs/user_manual/preamble/features.rst:38
 msgid ""
 "GRASS raster and vector data from GRASS databases (location/mapset). See "
 "section :ref:`sec_grass`."
 msgstr ""
 "GRASSデータベース(location/mapset)から提供されるGRASSラスタとベクタ. :ref:`sec_grass`  を参照して下さい."
 
-#: ../../docs/user_manual/preamble/features.rst:34
+#: ../../docs/user_manual/preamble/features.rst:40
 msgid ""
 "Online spatial data served as OGC Web Services, including WMS, WMTS, WCS, "
 "WFS, and WFS-T. See section :ref:`sec_ogc`."
@@ -84,96 +93,110 @@ msgstr ""
 "オンライン空間データは WMS, WMTS, WCS, WFS, WFS-TのようなOGC Webサービスとして提供されます, "
 ":ref:`sec_ogc` を参照して下さい."
 
-#: ../../docs/user_manual/preamble/features.rst:39
+#: ../../docs/user_manual/preamble/features.rst:43
+msgid ""
+"The QGIS authentication infrastructure helps you manage user/password, "
+"certificates and keys for web services and other resources."
+msgstr ""
+
+#: ../../docs/user_manual/preamble/features.rst:46
+msgid "Spreadsheets (ODS / XLSX)"
+msgstr ""
+
+#: ../../docs/user_manual/preamble/features.rst:50
 msgid "Explore data and compose maps"
 msgstr "データの検索と表示地図の構成"
 
-#: ../../docs/user_manual/preamble/features.rst:41
+#: ../../docs/user_manual/preamble/features.rst:52
 msgid ""
 "You can compose maps and interactively explore spatial data with a friendly "
 "GUI. The many helpful tools available in the GUI include:"
 msgstr "親しみやすいGUIによって地図の作成ができ、インタラクティブに空間データを検索できます。GUIで多くの便利なツールが利用可能です。例えば："
 
-#: ../../docs/user_manual/preamble/features.rst:44
+#: ../../docs/user_manual/preamble/features.rst:55
 msgid "QGIS browser"
 msgstr "QGISブラウザ"
 
-#: ../../docs/user_manual/preamble/features.rst:45
+#: ../../docs/user_manual/preamble/features.rst:56
 msgid "On-the-fly reprojection"
 msgstr "オンザフライ再投影"
 
-#: ../../docs/user_manual/preamble/features.rst:46
+#: ../../docs/user_manual/preamble/features.rst:57
 msgid "DB Manager"
 msgstr "DB マネージャ"
 
-#: ../../docs/user_manual/preamble/features.rst:47
+#: ../../docs/user_manual/preamble/features.rst:58
 msgid "Print layout"
 msgstr "印刷レイアウト"
 
-#: ../../docs/user_manual/preamble/features.rst:48
+#: ../../docs/user_manual/preamble/features.rst:59
+msgid "Report"
+msgstr ""
+
+#: ../../docs/user_manual/preamble/features.rst:60
 msgid "Overview panel"
 msgstr "全体図パネル"
 
-#: ../../docs/user_manual/preamble/features.rst:49
+#: ../../docs/user_manual/preamble/features.rst:61
 msgid "Spatial bookmarks"
 msgstr "空間ブックマーク"
 
-#: ../../docs/user_manual/preamble/features.rst:50
+#: ../../docs/user_manual/preamble/features.rst:62
 msgid "Annotation tools"
 msgstr "注記ツール"
 
-#: ../../docs/user_manual/preamble/features.rst:51
+#: ../../docs/user_manual/preamble/features.rst:63
 msgid "Identify/select features"
 msgstr "地物特定/地物選択"
 
-#: ../../docs/user_manual/preamble/features.rst:52
+#: ../../docs/user_manual/preamble/features.rst:64
 msgid "Edit/view/search attributes"
 msgstr "属性の編集/表示/検索"
 
-#: ../../docs/user_manual/preamble/features.rst:53
+#: ../../docs/user_manual/preamble/features.rst:65
 msgid "Data-defined feature labeling"
 msgstr "データ定義地物ラベリング"
 
-#: ../../docs/user_manual/preamble/features.rst:54
+#: ../../docs/user_manual/preamble/features.rst:66
 msgid "Data-defined vector and raster symbology tools"
 msgstr "データで定義されたベクターおよびラスターの地図記号ツール"
 
-#: ../../docs/user_manual/preamble/features.rst:55
+#: ../../docs/user_manual/preamble/features.rst:67
 msgid "Atlas map composition with graticule layers"
 msgstr "グリッドレイヤを使った地図帳の構成"
 
-#: ../../docs/user_manual/preamble/features.rst:56
+#: ../../docs/user_manual/preamble/features.rst:68
 msgid "North arrow, scale bar and copyright label for maps"
 msgstr "地図に表示する北向き矢印,スケールバー,著作権表示"
 
-#: ../../docs/user_manual/preamble/features.rst:57
+#: ../../docs/user_manual/preamble/features.rst:69
 msgid "Support for saving and restoring projects"
 msgstr "プロジェクトの保存と読み込みのサポート"
 
-#: ../../docs/user_manual/preamble/features.rst:60
+#: ../../docs/user_manual/preamble/features.rst:73
 msgid "Create, edit, manage and export data"
 msgstr "データの作成、編集、管理と出力"
 
-#: ../../docs/user_manual/preamble/features.rst:62
+#: ../../docs/user_manual/preamble/features.rst:75
 msgid ""
 "You can create, edit, manage and export vector and raster layers in several "
 "formats. QGIS offers the following:"
 msgstr "ベクタとラスタのレイヤを作成、編集、管理して多くの形式でエクスポートできます。QGISは以下のものを提供しています："
 
-#: ../../docs/user_manual/preamble/features.rst:65
-msgid "Digitizing tools for OGR-supported formats and GRASS vector layers"
-msgstr "OGRでサポートされる形式とGRASSベクタレイヤ用のデジタイジングツール"
+#: ../../docs/user_manual/preamble/features.rst:78
+msgid "Vector digitizing tools"
+msgstr ""
 
-#: ../../docs/user_manual/preamble/features.rst:66
+#: ../../docs/user_manual/preamble/features.rst:79
 msgid ""
 "Ability to create and edit multiple file formats and GRASS vector layers"
 msgstr "複数の形式のファイルとGRASSベクタレイヤを作成と編集する機能"
 
-#: ../../docs/user_manual/preamble/features.rst:67
+#: ../../docs/user_manual/preamble/features.rst:80
 msgid "Georeferencer plugin to geocode images"
 msgstr "画像をジオコードするジオレファレンサプラグイン"
 
-#: ../../docs/user_manual/preamble/features.rst:68
+#: ../../docs/user_manual/preamble/features.rst:81
 msgid ""
 "GPS tools to import and export GPX format, and convert other GPS formats to "
 "GPX or down/upload directly to a GPS unit (on Linux, usb: has been added to "
@@ -182,75 +205,76 @@ msgstr ""
 "GPSツールはGPX形式のインポートとエキスポートができます。またその他のGPS形式をGPXに変換したりGPSユニットから直接ダウンロード/アップロードができます(Linuxでは"
 " usb: はGPSデバイスのリストに追加されています）"
 
-#: ../../docs/user_manual/preamble/features.rst:71
+#: ../../docs/user_manual/preamble/features.rst:84
 msgid "Support for visualizing and editing OpenStreetMap data"
 msgstr "OpenStreetMapデータの可視化と編集のサポート"
 
-#: ../../docs/user_manual/preamble/features.rst:72
+#: ../../docs/user_manual/preamble/features.rst:85
 msgid ""
 "Ability to create spatial database tables from files with the DB Manager "
 "plugin"
 msgstr "DBマネージャプラグインを利用するとファイルから空間データベースを作ることができます"
 
-#: ../../docs/user_manual/preamble/features.rst:73
+#: ../../docs/user_manual/preamble/features.rst:87
 msgid "Improved handling of spatial database tables"
 msgstr "空間データベーステーブルの扱い改善"
 
-#: ../../docs/user_manual/preamble/features.rst:74
+#: ../../docs/user_manual/preamble/features.rst:88
 msgid "Tools for managing vector attribute tables"
 msgstr "ベクタ属性テーブルを管理するツール"
 
-#: ../../docs/user_manual/preamble/features.rst:75
+#: ../../docs/user_manual/preamble/features.rst:89
 msgid "Option to save screenshots as georeferenced images"
 msgstr "スクリーンショットをジオリファレンスされた画像として保存するオプション"
 
-#: ../../docs/user_manual/preamble/features.rst:76
+#: ../../docs/user_manual/preamble/features.rst:90
 msgid ""
 "DXF-Export tool with enhanced capabilities to export styles and plugins to "
 "perform CAD-like functions"
 msgstr "スタイルを出力する性能や,CADのような機能が備わったプラグインが強化されたDXF出力ツール"
 
-#: ../../docs/user_manual/preamble/features.rst:80
+#: ../../docs/user_manual/preamble/features.rst:94
 msgid "Analyze data"
 msgstr "データ解析"
 
-#: ../../docs/user_manual/preamble/features.rst:82
+#: ../../docs/user_manual/preamble/features.rst:96
 msgid ""
 "You can perform spatial data analysis on spatial databases and other OGR-"
-"supported formats. QGIS currently offers vector analysis, sampling, "
-"geoprocessing, geometry and database management tools. You can also use the "
-"integrated GRASS tools, which include the complete GRASS functionality of "
-"more than 400 modules. (See section :ref:`sec_grass`.) Or, you can work with"
-" the Processing Plugin, which provides a powerful geospatial analysis "
-"framework to call native and third-party algorithms from QGIS, such as GDAL,"
-" SAGA, GRASS and more. (See section :ref:`sec_processing_intro`.)"
+"supported formats. QGIS currently offers vector analysis, raster analysis, "
+"sampling, geoprocessing, geometry and database management tools. You can "
+"also use the integrated GRASS tools, which include the complete GRASS "
+"functionality of more than 400 modules (see section :ref:`sec_grass`). Or, "
+"you can work with the Processing plugin, which provides a powerful "
+"geospatial analysis framework to call native and third-party algorithms from"
+" QGIS, such as GDAL, SAGA, GRASS, R, and more (see section "
+":ref:`sec_processing_intro`). All analysis functions are run in the "
+"background, allowing you to continue your work before the processing has "
+"finished."
 msgstr ""
-"空間データベースやその他のOGRにサポートされているフォーマットを用いて空間データ解析を行うことが出来ます. "
-"QGISは現在ベクタ分析、サンプリング、ジオプロセッシング、ジオメトリとデータベースのマネジメントツールを提供しています。また400以上のモジュールによる完全なGRASS機能を内蔵されているGRASSツールで利用することも出来ます"
-" ( :ref:`sec_grass` "
-"セクションを参照してください)。またGDALやSAGA、GRASSなどの機能をQGISからネイティブまたはサードパーティのアルゴリズムで呼び出すための強力な地理空間分析フレームワークを提供するプロセッシングプラグインを使用することもできます"
-" ( :ref:`sec_processing_intro` セクションを参照してください)。"
 
-#: ../../docs/user_manual/preamble/features.rst:93
+#: ../../docs/user_manual/preamble/features.rst:109
+msgid ""
+"The graphical modeller allows you to combine / chain functions into a "
+"complete workflow in an intuitive graphical environment."
+msgstr ""
+
+#: ../../docs/user_manual/preamble/features.rst:114
 msgid "Publish maps on the Internet"
 msgstr "インターネットへの地図公開"
 
-#: ../../docs/user_manual/preamble/features.rst:95
+#: ../../docs/user_manual/preamble/features.rst:116
 msgid ""
 "QGIS can be used as a WMS, WMTS, WMS-C or WFS and WFS-T client, and as a "
 "WMS, WCS or WFS server (see section :ref:`sec_ogc`). Additionally, you can "
-"publish your data on the Internet using a webserver with UMN MapServer or "
-"GeoServer installed."
+"publish your data on the Internet using a webserver with QGIS Server, UMN "
+"MapServer or GeoServer installed."
 msgstr ""
-"QGIS は WMS, WMTS, WMS-C または WFS と WFS-T クライアントとして利用できます.また WMS, WCS or WFS "
-"サーバーとして利用できます ( :ref:`sec_ogc` 参照). 加えてあなたのデータをUMN MapServer や GeoServer "
-"がインストールされているウェッブサーバで公開できます."
 
-#: ../../docs/user_manual/preamble/features.rst:101
+#: ../../docs/user_manual/preamble/features.rst:122
 msgid "Extend QGIS functionality through plugins"
 msgstr "プラグインを利用したQGIS機能の拡張"
 
-#: ../../docs/user_manual/preamble/features.rst:103
+#: ../../docs/user_manual/preamble/features.rst:124
 msgid ""
 "QGIS can be adapted to your special needs with the extensible plugin "
 "architecture and libraries that can be used to create plugins. You can even "
@@ -259,68 +283,64 @@ msgstr ""
 "QGISは拡張可能なプラグインアーキテクチャとプラグインをつくるためのライブラリによってあなたの特別な要求にも答えられるようになっています.  "
 "あなたはC++やPythonを使って新たなアプリケーションを作ることさえ可能です!"
 
-#: ../../docs/user_manual/preamble/features.rst:108
+#: ../../docs/user_manual/preamble/features.rst:129
 msgid "Core Plugins"
 msgstr "コアプラグイン"
 
-#: ../../docs/user_manual/preamble/features.rst:110
+#: ../../docs/user_manual/preamble/features.rst:131
 msgid "Core plugins include:"
 msgstr "コアプラグインに含まれるもの:"
 
-#: ../../docs/user_manual/preamble/features.rst:112
-msgid "Coordinate Capture (capture mouse coordinates in different CRSs)"
-msgstr "座標取得 (マウスで指示した位置の座標を異なるCRSで返します)"
-
-#: ../../docs/user_manual/preamble/features.rst:113
+#: ../../docs/user_manual/preamble/features.rst:133
 msgid ""
 "DB Manager (exchange, edit and view layers and tables from/to databases; "
 "execute SQL queries)"
 msgstr "DBマネージャ（レイヤの交換、編集と表示とテーブルとデータベースの相互変換；SQLクエリの実行）"
 
-#: ../../docs/user_manual/preamble/features.rst:114
+#: ../../docs/user_manual/preamble/features.rst:134
 msgid "eVIS (visualize events)"
 msgstr "eVIS (イベントの可視化)"
 
-#: ../../docs/user_manual/preamble/features.rst:115
+#: ../../docs/user_manual/preamble/features.rst:135
 msgid "Geometry Checker (check geometries for errors)"
 msgstr "ジオメトリチェッカー(ジオメトリのエラーをチェックします)"
 
-#: ../../docs/user_manual/preamble/features.rst:116
+#: ../../docs/user_manual/preamble/features.rst:136
 msgid "Georeferencer GDAL (add projection information to rasters using GDAL)"
 msgstr "ジオリファレンサーGDAL (GDALを利用してラスタにプロジェクション情報を付加します)"
 
-#: ../../docs/user_manual/preamble/features.rst:117
+#: ../../docs/user_manual/preamble/features.rst:137
 msgid "GPS Tools (load and import GPS data)"
 msgstr "GPS ツール (GPS データのロードとインポート)"
 
-#: ../../docs/user_manual/preamble/features.rst:118
+#: ../../docs/user_manual/preamble/features.rst:138
 msgid "GRASS 7 (integrate GRASS GIS)"
 msgstr "GRASS 7 (統合されたGRASS GIS)"
 
-#: ../../docs/user_manual/preamble/features.rst:119
+#: ../../docs/user_manual/preamble/features.rst:139
 msgid ""
 "MetaSearch Catalogue Client (interacting with metadata catalog services "
 "supporting the OGC Catalog Service for the Web (CSW) standard)"
 msgstr "メタサーチカタログクライアント(Web用のOGCカタログサービス（CSW)規格をサポートするメタデータカタログサービスの操作)"
 
-#: ../../docs/user_manual/preamble/features.rst:121
+#: ../../docs/user_manual/preamble/features.rst:141
 msgid ""
 "Offline Editing (allow offline editing and synchronizing with databases)"
 msgstr "オフライン編集(データベースのオフライン編集と同期を行います)"
 
-#: ../../docs/user_manual/preamble/features.rst:122
+#: ../../docs/user_manual/preamble/features.rst:142
 msgid "Processing (the spatial data processing framework for QGIS)"
 msgstr "プロセッシング(QGIS用空間データプロセッシングフレームワーク)"
 
-#: ../../docs/user_manual/preamble/features.rst:123
+#: ../../docs/user_manual/preamble/features.rst:143
 msgid "Topology Checker (find topological errors in vector layers)"
 msgstr "トポロジチェッカー（ベクタレイヤ内のトポロジーエラーを検出する）"
 
-#: ../../docs/user_manual/preamble/features.rst:127
+#: ../../docs/user_manual/preamble/features.rst:147
 msgid "External Python Plugins"
 msgstr "外部Pythonプラグイン"
 
-#: ../../docs/user_manual/preamble/features.rst:129
+#: ../../docs/user_manual/preamble/features.rst:149
 msgid ""
 "QGIS offers a growing number of external Python plugins that are provided by"
 " the community. These plugins reside in the official Plugins Repository and "
@@ -330,11 +350,11 @@ msgstr ""
 "QGISは、コミュニティによって提供される多くの外部Pythonプラグインを提供しています。これらのプラグインは公式のプラグインリポジトリにあり、Python"
 " プラグインインストーラを使用して簡単にインストールできます。セクション :ref:`managing_plugins` を参照。"
 
-#: ../../docs/user_manual/preamble/features.rst:135
+#: ../../docs/user_manual/preamble/features.rst:156
 msgid "Python Console"
 msgstr "Python コンソール"
 
-#: ../../docs/user_manual/preamble/features.rst:137
+#: ../../docs/user_manual/preamble/features.rst:158
 msgid ""
 "For scripting, it is possible to take advantage of an integrated Python "
 "console, which can be opened with: :menuselection:`Plugins --> Python "
@@ -352,7 +372,7 @@ msgstr ""
 ":data:`qgis.utils.iface` "
 "という変数が利用できます。このインターフェイスでは地図キャンバス、メニュー、ツールバー及びQGISアプリケーションの他の部分へのアクセスを提供します。スクリプトを作成して、その後QGISウィンドウにドラッグアンドドロップすると自動的に実行できます。"
 
-#: ../../docs/user_manual/preamble/features.rst:147
+#: ../../docs/user_manual/preamble/features.rst:168
 msgid ""
 "For further information about working with the Python console and "
 "programming QGIS plugins and applications, please refer to :ref:`console` "
@@ -361,15 +381,15 @@ msgstr ""
 "PythonのコンソールおよびQGISのプラグインやアプリケーションのプログラミングに詳細については :ref:`PyQGIS-Developer-"
 "Cookbook` を参照して下さい。"
 
-#: ../../docs/user_manual/preamble/features.rst:152
+#: ../../docs/user_manual/preamble/features.rst:174
 msgid "Known Issues"
 msgstr "既知の問題"
 
-#: ../../docs/user_manual/preamble/features.rst:155
+#: ../../docs/user_manual/preamble/features.rst:177
 msgid "Number of open files limitation"
 msgstr "ファイル数の制限"
 
-#: ../../docs/user_manual/preamble/features.rst:157
+#: ../../docs/user_manual/preamble/features.rst:179
 msgid ""
 "If you are opening a large QGIS project and you are sure that all layers are"
 " valid, but some layers are flagged as bad, you are probably faced with this"
@@ -383,27 +403,27 @@ msgstr ""
 "OSでも同様）ではあるプロセスが開けるファイルの数の制限があります。プロセスごとのリソースの制限は継承されます。シェルに組み込まれている "
 "``ulimit`` コマンドを使うと、現在のシェルプロセスについてその制限を変更できます；あたらしい制限はすべての子プロセスに継承されます。"
 
-#: ../../docs/user_manual/preamble/features.rst:165
+#: ../../docs/user_manual/preamble/features.rst:187
 msgid "You can see all current ulimit info by typing:"
 msgstr "このようにキーボード入力するとすべての現状の ulimit を見ることができます :"
 
-#: ../../docs/user_manual/preamble/features.rst:171
+#: ../../docs/user_manual/preamble/features.rst:193
 msgid ""
 "You can see the current allowed number of opened files per process with the "
 "following command on a console:"
 msgstr "コンソール上で以下のコマンドを使用すると、現在許容されているプロセスあたりの開かれたファイルの数を見ることができます:"
 
-#: ../../docs/user_manual/preamble/features.rst:178
+#: ../../docs/user_manual/preamble/features.rst:200
 msgid ""
 "To change the limits for an **existing session**, you may be able to use "
 "something like:"
 msgstr "**既存のセッション** の制限を変更したい場合, 次のような操作で可能です :"
 
-#: ../../docs/user_manual/preamble/features.rst:187
+#: ../../docs/user_manual/preamble/features.rst:209
 msgid "**To fix it forever**"
 msgstr "**問題をずっと解決するためには**"
 
-#: ../../docs/user_manual/preamble/features.rst:189
+#: ../../docs/user_manual/preamble/features.rst:211
 msgid ""
 "On most Linux systems, resource limits are set on login by the "
 "``pam_limits`` module according to the settings contained in "
@@ -416,11 +436,11 @@ msgstr ""
 "の記述にしたがっています. もしあなたがルート権限を持っているなら (または sudoを使って)それらのファイルを編集するべきです, "
 "しかし再度ログインするまで変更は有効になりません."
 
-#: ../../docs/user_manual/preamble/features.rst:196
+#: ../../docs/user_manual/preamble/features.rst:218
 msgid "More info:"
 msgstr "更なる情報:"
 
-#: ../../docs/user_manual/preamble/features.rst:198
+#: ../../docs/user_manual/preamble/features.rst:220
 msgid ""
 "https://www.cyberciti.biz/faq/linux-increase-the-maximum-number-of-open-"
 "files/ https://linuxaria.com/article/open-files-in-linux"

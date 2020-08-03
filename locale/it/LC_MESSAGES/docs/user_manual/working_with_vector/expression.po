@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-10 11:07+0200\n"
+"POT-Creation-Date: 2020-07-26 13:13+0200\n"
 "PO-Revision-Date: 2020-03-16 19:32+0000\n"
 "Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
 "Language-Team: Italian (https://www.transifex.com/qgis/teams/6144/it/)\n"
@@ -1417,7 +1417,7 @@ msgstr ""
 #: ../../docs/user_manual/working_with_vector/expression.rst:731
 #: ../../docs/user_manual/working_with_vector/expression.rst:919
 #: ../../docs/user_manual/working_with_vector/expression.rst:987
-#: ../../docs/user_manual/working_with_vector/expression.rst:1204
+#: ../../docs/user_manual/working_with_vector/expression.rst:1215
 msgid "**Some examples:**"
 msgstr "**Alcuni esempi:**"
 
@@ -1712,11 +1712,9 @@ msgstr "var"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
-"Returns the value stored within a specified variable. See variable functions"
-" below"
+"Returns the value stored within a specified variable. See "
+":ref:`expression_variables` below"
 msgstr ""
-"Restituisce il valore memorizzato all'interno di una variabile specificata. "
-"Vedi funzioni variabili di seguito"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
@@ -1739,11 +1737,9 @@ msgstr "Funzioni Geometria"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:547
 msgid ""
-"This group contains functions that operate on geometry objects (e.g., "
-"length, area)."
+"This group contains functions that operate on geometry objects (e.g. buffer,"
+" transform, $area)."
 msgstr ""
-"Questo gruppo contiene funzioni che operano su caratteristiche geometriche "
-"(ad es. Lunghezza, area)."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "$area"
@@ -4093,18 +4089,15 @@ msgid "For other cases, do at your convenience::"
 msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1069
-msgid "Variables Functions"
-msgstr "Funzioni Variabili"
+msgid "Variables"
+msgstr "Variabili"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1071
 msgid ""
 "This group contains dynamic variables related to the application, the "
-"project file and other settings. It means that some functions may not be "
-"available according to the context:"
+"project file and other settings. The availability of variables depends on "
+"the context:"
 msgstr ""
-"Questo gruppo contiene variabili dinamiche relative all'applicazione, al "
-"file di progetto e ad altre impostazioni. Significa che alcune funzioni "
-"potrebbero non essere disponibili in base al contesto:"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1075
 msgid "from the |expressionSelect| :sup:`Select by expression` dialog"
@@ -4126,91 +4119,89 @@ msgstr "dal layout di stampa"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1080
 msgid ""
-"To use these functions in an expression, they should be preceded by @ "
-"character (e.g, @row_number). Are concerned:"
+"To use these variables in an expression, they should be preceded by the "
+"``@`` character (e.g, ``@row_number``)."
 msgstr ""
-"Per utilizzare queste funzioni in un'espressione, dovrebbero essere "
-"precedute da un carattere @ (ad esempio, @row_number). Riguardano:"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "algorithm_id"
 msgstr "algorithm_id"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the unique ID of an algorithm"
-msgstr "Restituisce l'ID univoco di un algoritmo"
+msgid "The unique ID of an algorithm"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "atlas_feature"
 msgstr "atlas_feature"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the current atlas feature (as feature object)"
-msgstr "Restituisce la geometria atlante corrente (come oggetto geometria)"
+msgid "The current atlas feature (as feature object)"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "atlas_featureid"
 msgstr "atlas_featureid"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the current atlas feature ID"
-msgstr "Restituisce l'ID della geometria atlante corrente"
+msgid "The current atlas feature ID"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "atlas_featurenumber"
 msgstr "atlas_featurenumber"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the current atlas feature number in the layout"
-msgstr "Restituisce il numero dell'oggetto corrente dell'atlante nel layout"
+msgid "The current atlas feature number in the layout"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "atlas_filename"
 msgstr "atlas_filename"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the current atlas file name"
-msgstr "Restituisce il nome del file atlante corrente"
+msgid "The current atlas file name"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "atlas_geometry"
 msgstr "atlas_geometry"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the current atlas feature geometry"
-msgstr "Restituisce la geometria dell'elemento corrente dell'atlante"
+msgid "The current atlas feature geometry"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "atlas_layerid"
 msgstr "atlas_layerid"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the current atlas coverage layer ID"
-msgstr "Restituisce l'ID del layer corrente di copertura dell'atlante."
+msgid "The current atlas coverage layer ID"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "atlas_layername"
 msgstr "atlas_layername"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the current atlas coverage layer name"
-msgstr "Restituisce il nome del layer corrente di copertura dell'atlante."
+msgid "The current atlas coverage layer name"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "atlas_pagename"
 msgstr "atlas_pagename"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the current atlas page name"
-msgstr "Restituisce il nome della pagina atlante corrente"
+msgid "The current atlas page name"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "atlas_totalfeatures"
 msgstr "atlas_totalfeatures"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the total number of features in atlas"
-msgstr "Restituisce il numero totale di geometrie nell'atlante"
+msgid "The total number of features in atlas"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "canvas_cursor_point"
@@ -4218,11 +4209,9 @@ msgstr "canvas_cursor_point"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
-"Returns the last cursor position on the canvas in the project's geographical"
-" coordinates"
+"The last cursor position on the canvas in the project's geographical "
+"coordinates"
 msgstr ""
-"Restituisce l'ultima posizione del cursore sulla mappa nelle coordinate "
-"geografiche del progetto"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "cluster_color"
@@ -4230,31 +4219,24 @@ msgstr "cluster_color"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
-"Returns the color of symbols within a cluster, or NULL if symbols have mixed"
-" colors"
+"The color of symbols within a cluster, or NULL if symbols have mixed colors"
 msgstr ""
-"Restituisce il colore dei simboli all'interno di un gruppo, o NULL se i "
-"simboli hanno colori misti."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "cluster_size"
 msgstr "cluster_size"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the number of symbols contained within a cluster"
-msgstr "Restituisce il numero di simboli contenuti in un gruppo"
+msgid "The number of symbols contained within a cluster"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "current_feature"
 msgstr "current_feature"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid ""
-"Returns the feature currently being edited in the attribute form or table "
-"row"
+msgid "The feature currently being edited in the attribute form or table row"
 msgstr ""
-"Restituisce l'oggetto attualmente in fase di modifica nel modulo attributo o"
-" nella riga della tabella."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "current_geometry"
@@ -4262,11 +4244,9 @@ msgstr "current_geometry"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
-"Returns the geometry of the feature currently being edited in the form or "
-"the table row"
+"The geometry of the feature currently being edited in the form or the table "
+"row"
 msgstr ""
-"Restituisce la geometria dell'oggetto attualmente in fase di modifica nel "
-"modulo o nella riga della tabella."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "fullextent_maxx"
@@ -4305,38 +4285,32 @@ msgid "geometry_part_count"
 msgstr "geometry_part_count"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the number of parts in rendered feature's geometry"
+msgid "The number of parts in rendered feature's geometry"
 msgstr ""
-"Restituisce il numero di parti nella geometria dell'oggetto visualizzato"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "geometry_part_num"
 msgstr "geometry_part_num"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the current geometry part number for feature being rendered"
+msgid "The current geometry part number for feature being rendered"
 msgstr ""
-"Restituisce il numero della parte della geometria corrente dell'oggetto che "
-"sarà visualizzato"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "geometry_point_count"
 msgstr "geometry_point_count"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the number of points in the rendered geometry's part"
+msgid "The number of points in the rendered geometry's part"
 msgstr ""
-"Restituisce il numero di punti nella parte della geometria visualizzata"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "geometry_point_num"
 msgstr "geometry_point_num"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the current point number in the rendered geometry's part"
+msgid "The current point number in the rendered geometry's part"
 msgstr ""
-"Restituisce il numero del punto corrente nella parte della geometria "
-"visualizzata"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "grid_axis"
@@ -4344,116 +4318,111 @@ msgstr "grid_axis"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
-"Returns the current grid annotation axis (eg, 'x' for longitude, 'y' for "
-"latitude)"
+"The current grid annotation axis (eg, 'x' for longitude, 'y' for latitude)"
 msgstr ""
-"Restituisce l'annotazione corrente dell'asse del reticolo (ad esempio 'X' "
-"per longitudine, 'y' per latitudine)"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "grid_number"
 msgstr "grid_number"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the current grid annotation value"
-msgstr "Restituisce il valore corrente dell'annotazione del reticolo"
+msgid "The current grid annotation value"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "item_id"
 msgstr "item_id"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the layout item user ID (not necessarily unique)"
+msgid "The layout item user ID (not necessarily unique)"
 msgstr ""
-"Restituisce l'ID utente dell'oggetto del layout (non necessariamente "
-"univoco)"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "item_uuid"
 msgstr "item_uuid"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the layout item unique ID"
-msgstr "Restituisce l'ID univoco dell'oggetto del layout"
+msgid "The layout item unique ID"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "layer"
 msgstr "layer"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the current layer"
-msgstr "Restituisce il layer corrente"
+msgid "The current layer"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "layer_id"
 msgstr "layer_id"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the ID of current layer"
-msgstr "Restituisce l'ID del layer corrente"
+msgid "The ID of current layer"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "layer_name"
 msgstr "layer_name"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the name of current layer"
-msgstr "Restituisce il nome del layer corrente"
+msgid "The name of current layer"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "layout_dpi"
 msgstr "layout_dpi"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the composition resolution (DPI)"
-msgstr "Restituisce la risoluzione della composizione di stampa (DPI)"
+msgid "The composition resolution (DPI)"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "layout_name"
 msgstr "layout_name"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the layout name"
-msgstr "Restituisce il nome del layout"
+msgid "The layout name"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "layout_numpages"
 msgstr "layout_numpages"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the number of pages in the layout"
-msgstr "Restituisce il numero di pagine nel layout"
+msgid "The number of pages in the layout"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "layout_page"
 msgstr "layout_page"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the page number of the current item in the layout"
-msgstr "Restituisce il numero di pagina dell'oggetto corrente nel layout"
+msgid "The page number of the current item in the layout"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "layout_pageheight"
 msgstr "layout_pageheight"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the active page height in the layout (in mm)"
-msgstr "Restituisce l'altezza della pagina attiva nel layout (in mm)"
+msgid "The active page height in the layout (in mm)"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "layout_pagewidth"
 msgstr "layout_pagewidth"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the active page width in the layout (in mm)"
-msgstr "Restituisce la larghezza della pagina attiva nel layout (in mm)"
+msgid "The active page width in the layout (in mm)"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "legend_column_count"
 msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the number of columns in the legend"
+msgid "The number of columns in the legend"
 msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
@@ -4485,7 +4454,7 @@ msgid "legend_title"
 msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the title of the legend"
+msgid "The title of the legend"
 msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
@@ -4493,7 +4462,7 @@ msgid "legend_wrap_string"
 msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the character(s) used to wrap the legend text"
+msgid "The character(s) used to wrap the legend text"
 msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
@@ -4501,17 +4470,15 @@ msgid "map_crs"
 msgstr "map_crs"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the Coordinate reference system of the current map"
+msgid "The Coordinate reference system of the current map"
 msgstr ""
-"Restituisce il sistema di riferimento delle coordinate della mappa corrente"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "map_crs_acronym"
 msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid ""
-"Returns the acronym of the Coordinate reference system of the current map"
+msgid "The acronym of the Coordinate reference system of the current map"
 msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
@@ -4520,18 +4487,15 @@ msgstr "map_crs_definition"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
-"Returns the full definition of the Coordinate reference system of the "
-"current map"
+"The full definition of the Coordinate reference system of the current map"
 msgstr ""
-"Restituisce la definizione completa del sistema di riferimento delle "
-"Coordinate della mappa corrente "
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "map_crs_description"
 msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the name of the Coordinate reference system of the current map"
+msgid "The name of the Coordinate reference system of the current map"
 msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
@@ -4540,8 +4504,8 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
-"Returns the acronym of the ellipsoid of the Coordinate reference system of "
-"the current map"
+"The acronym of the ellipsoid of the Coordinate reference system of the "
+"current map"
 msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
@@ -4550,8 +4514,7 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
-"Returns the Proj4 definition of the Coordinate reference system of the "
-"current map"
+"The Proj4 definition of the Coordinate reference system of the current map"
 msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
@@ -4560,8 +4523,7 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
-"Returns the WKT definition of the Coordinate reference system of the current"
-" map"
+"The WKT definition of the Coordinate reference system of the current map"
 msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
@@ -4569,33 +4531,32 @@ msgid "map_extent"
 msgstr "map_extent"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the geometry representing the current extent of the map"
+msgid "The geometry representing the current extent of the map"
 msgstr ""
-"Restituisce la geometria che rappresenta l'estensione corrente della mappa"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "map_extent_center"
 msgstr "map_extent_center"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the point feature at the center of the map"
-msgstr "Restituisce il punto centrale della mappa"
+msgid "The point feature at the center of the map"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "map_extent_height"
 msgstr "map_extent_height"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the current height of the map"
-msgstr "Restituisce l'altezza corrente della mappa"
+msgid "The current height of the map"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "map_extent_width"
 msgstr "map_extent_width"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the current width of the map"
-msgstr "Restituisce la larghezza corrente della mappa"
+msgid "The current width of the map"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "map_id"
@@ -4603,52 +4564,49 @@ msgstr "map_id"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
-"Returns the ID of current map destination. This will be 'canvas' for canvas "
-"renders, and the item ID for layout map renders"
+"The ID of current map destination. This will be 'canvas' for canvas renders,"
+" and the item ID for layout map renders"
 msgstr ""
-"Restituisce l'ID della destinazione della mappa corrente. Questo sarà "
-"'canvas' per la visualizzazione della mappa e l'ID dell'oggetto per le "
-"visualizzazioni in mappa del layout"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "map_layer_ids"
 msgstr "map_layer_ids"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the list of map layer IDs visible in the map"
-msgstr "Restituisce l'elenco degli ID dei layer visibili nella mappa"
+msgid "The list of map layer IDs visible in the map"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "map_layers"
 msgstr "map_layers"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the list of map layers visible in the map"
-msgstr "Restituisce l'elenco dei layer visibili nella mappa"
+msgid "The list of map layers visible in the map"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "map_rotation"
 msgstr "map_rotation"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the current rotation of the map"
-msgstr "Restituisce la rotazione corrente della mappa"
+msgid "The current rotation of the map"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "map_scale"
 msgstr "map_scale"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the current scale of the map"
-msgstr "Restituisce la scala corrente della mappa"
+msgid "The current scale of the map"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "map_units"
 msgstr "map_units"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the units of map measurements"
-msgstr "Restituisce le unità di misura della mappa"
+msgid "The units of map measurements"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "notification_message"
@@ -4681,8 +4639,8 @@ msgid "project_abstract"
 msgstr "project_abstract"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the project abstract, taken from project metadata"
-msgstr "Restituisce l'abstract del progetto, tratto dai metadati del progetto"
+msgid "The project abstract, taken from project metadata"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "project_area_units"
@@ -4690,8 +4648,8 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
-"Returns the area unit for the current project, used when calculating areas "
-"of geometries"
+"The area unit for the current project, used when calculating areas of "
+"geometries"
 msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
@@ -4699,8 +4657,8 @@ msgid "project_author"
 msgstr "project_author"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the project author, taken from project metadata"
-msgstr "Restituisce l'autore del progetto, tratto dai metadati del progetto"
+msgid "The project author, taken from project metadata"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "project_basename"
@@ -4708,41 +4666,75 @@ msgstr "project_basename"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
-"Returns the basename of current project's filename (without path and "
-"extension)"
+"The basename of current project's filename (without path and extension)"
 msgstr ""
-"Restituisce il nome di base del nome del file del progetto corrente (senza "
-"percorso ed estensione)"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "project_creation_date"
 msgstr "project_creation_date"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the project creation date, taken from project metadata"
+msgid "The project creation date, taken from project metadata"
 msgstr ""
-"Restituisce la data di creazione del progetto, ricavata dai metadati del "
-"progetto"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "project_crs"
 msgstr "project_crs"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the Coordinate reference system of the project"
-msgstr "Restituisce il sistema di riferimento delle Coordinate del progetto"
+msgid "The Coordinate reference system of the project"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:1
+msgid "project_crs_arconym"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:1
+msgid "The acronym of the Coordinate reference system of the project"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "project_crs_definition"
 msgstr "project_crs_definition"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid ""
-"Returns the full definition of the Coordinate reference system of the "
-"project"
+msgid "The full definition of the Coordinate reference system of the project"
 msgstr ""
-"Restituisce la definizione completa del sistema di riferimento delle "
-"Coordinate del progetto "
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:1
+msgid "project_crs_description"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:1
+msgid "The description of the Coordinate reference system of the project"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:1
+msgid "project_crs_ellipsoid"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:1
+msgid "The ellipsoid of the Coordinate reference system of the project"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:1
+msgid "project_crs_proj4"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:1
+msgid ""
+"The Proj4 representation of the Coordinate reference system of the project"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:1
+msgid "project_crs_wkt"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:1
+msgid ""
+"The WKT (well known text) representation of the coordinate reference system "
+"of the project"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "project_distance_units"
@@ -4750,8 +4742,8 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
-"Returns the distance unit for the current project, used when calculating "
-"lengths of geometries and distances"
+"The distance unit for the current project, used when calculating lengths of "
+"geometries and distances"
 msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
@@ -4760,8 +4752,8 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
-"Returns the name of the ellipsoid of the current project, used when "
-"calculating geodetic areas or lengths of geometries"
+"The name of the ellipsoid of the current project, used when calculating "
+"geodetic areas or lengths of geometries"
 msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
@@ -4769,119 +4761,136 @@ msgid "project_filename"
 msgstr "project_filename"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the filename of the current project"
-msgstr "Restituisce il nome del file del progetto corrente "
+msgid "The filename of the current project"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "project_folder"
 msgstr "project_folder"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the folder of the current project"
-msgstr "Restituisce la cartella del progetto corrente"
+msgid "The folder of the current project"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "project_home"
 msgstr "project_home"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the home path of the current project"
-msgstr "Restituisce il percorso della cartella per il progetto corrente"
+msgid "The home path of the current project"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "project_identifier"
 msgstr "project_identifier"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the project identifier, taken from the project's metadata"
+msgid "The project identifier, taken from the project's metadata"
 msgstr ""
-"Restituisce l'identificatore del progetto, tratto dai metadati del progetto"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "project_keywords"
 msgstr "project_keywords"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the project keywords, taken from the project's metadata"
+msgid "The project keywords, taken from the project's metadata"
 msgstr ""
-"Restituisce le parole chiave del progetto, tratte dai metadati del progetto"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:1
+msgid "project_last_saved"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:1
+msgid "Date/time when project was last saved."
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "project_path"
 msgstr "project_path"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the full path (including file name) of the current project"
+msgid "The full path (including file name) of the current project"
 msgstr ""
-"Restituisce il percorso completo (incluso il nome del file) del progetto "
-"corrente"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "project_title"
 msgstr "project_title"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the title of current project"
-msgstr "Restituisce il titolo del progetto corrente"
+msgid "The title of current project"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:1
+msgid "project_units"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:1
+msgid "The units of the project's CRS"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "qgis_locale"
 msgstr "qgis_locale"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the current language of QGIS"
-msgstr "Restituisce la lingua corrente di QGIS"
+msgid "The current language of QGIS"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "qgis_os_name"
 msgstr "qgis_os_name"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid ""
-"Returns the current Operating system name, eg 'windows', 'linux' or 'osx'"
+msgid "The current Operating system name, eg 'windows', 'linux' or 'osx'"
 msgstr ""
-"Restituisce il nome corrente del sistema operativo, ad esempio \"windows\", "
-"\"linux\" o \"osx\""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "qgis_platform"
 msgstr "qgis_platform"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns QGIS platform, eg 'desktop' or 'server'"
-msgstr "Restituisce la piattaforma QGIS, ad esempio 'desktop' o 'server'"
+msgid "The QGIS platform, eg 'desktop' or 'server'"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "qgis_release_name"
 msgstr "qgis_release_name"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns current QGIS release name"
-msgstr "Restituisce il nome della versione corrente di QGIS"
+msgid "The current QGIS release name"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "qgis_short_version"
 msgstr "qgis_short_version"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns current QGIS version short string"
-msgstr "Restituisce la stringa della versione corrente di QGIS"
+msgid "The current QGIS version short string"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "qgis_version"
 msgstr "qgis_version"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns current QGIS version string"
-msgstr "Restituisce la stringa della versione corrente di QGIS"
+msgid "The current QGIS version string"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "qgis_version_no"
 msgstr "qgis_version_no"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns current QGIS version number"
-msgstr "Restituisce il numero di versione corrente di QGIS"
+msgid "The current QGIS version number"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:1
+msgid "row_number"
+msgstr "row_number"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:1
+msgid "Stores the number of the current row"
+msgstr "Memorizza il numero della riga corrente"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "snapping_results"
@@ -4900,7 +4909,7 @@ msgid "scale_value"
 msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns current scale bar distance value"
+msgid "The current scale bar distance value"
 msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
@@ -4909,18 +4918,43 @@ msgstr "symbol_angle"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
-"Returns the angle of the symbol used to render the feature (valid for marker"
-" symbols only)"
+"The angle of the symbol used to render the feature (valid for marker symbols"
+" only)"
 msgstr ""
-"Restituisce l'angolo del simbolo utilizzato per la visualizzazione "
-"dell'elemento (valido solo per i simboli marker)"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "symbol_color"
 msgstr "symbol_color"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the color of the symbol used to render the feature"
+msgid "The color of the symbol used to render the feature"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:1
+msgid "symbol_count"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:1
+msgid ""
+"The number of features represented by the symbol (in the layout legend)"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:1
+msgid "symbol_id"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:1
+msgid "The Internal ID of the symbol (in the layout legend)"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:1
+msgid "symbol_label"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:1
+msgid ""
+"The label for the symbol (either a user defined label or the default "
+"autogenerated label - in the layout legend)"
 msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
@@ -4928,33 +4962,24 @@ msgid "user_account_name"
 msgstr "user_account_name"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the current user's operating system account name"
+msgid "The current user's operating system account name"
 msgstr ""
-"Restituisce il nome corrente dell'account utente nel sistema operativo"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "user_full_name"
 msgstr "user_full_name"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the current user's operating system user name"
-msgstr "Restituisce il nome corrente dell'utente nel sistema operativo"
-
-#: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "row_number"
-msgstr "row_number"
-
-#: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Stores the number of the current row"
-msgstr "Memorizza il numero della riga corrente"
+msgid "The current user's operating system user name"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "value"
 msgstr "value"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the current value"
-msgstr "Restituisce il valore corrente"
+msgid "The current value"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
@@ -4964,50 +4989,38 @@ msgstr ""
 "Consente di impostare una variabile da utilizzare all'interno di "
 "un'espressione ed evitare di ricalcolare ripetutamente lo stesso valore"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1206
-msgid ""
-"Return the X coordinate of a map item center to insert into a label in "
-"layout::"
+#: ../../docs/user_manual/working_with_vector/expression.rst:1217
+msgid "Return the X coordinate of a map item center in layout::"
 msgstr ""
-"Restituisce la coordinata X di un oggetto della mappa da inserire in "
-"un'etichetta nel layout: "
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1210
+#: ../../docs/user_manual/working_with_vector/expression.rst:1221
 msgid ""
-"Return for each feature in the current layer the number of overlapping "
-"airports features::"
+"Return, for each feature in the current layer, the number of overlapping "
+"airport features::"
 msgstr ""
-"Restituisce per ogni geometria del layer corrente il numero di aeroporti che"
-" si sovrappongono:"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1216
+#: ../../docs/user_manual/working_with_vector/expression.rst:1227
 msgid "Get the object_id of the first snapped point of a line::"
 msgstr "Ottenere l'object_id del primo punto agganciato di una linea:"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1232
+#: ../../docs/user_manual/working_with_vector/expression.rst:1243
 msgid "Recent Functions"
 msgstr "Funzioni recenti"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1234
+#: ../../docs/user_manual/working_with_vector/expression.rst:1245
 msgid ""
 "This group contains recently used functions. Depending on the context of its"
-" usage (feature selection, field calculator, generic), any applied "
-"expression is added to the corresponding list (up to ten expressions), "
-"sorted from the more recent to the less one. This helps to quickly retrieve "
-"and reapply any previously used expression."
+" usage (feature selection, field calculator, generic), recently applied "
+"expressions are added to the corresponding list (up to ten expressions), "
+"sorted from more to less recent. This makes it easy to quickly retrieve and "
+"reapply previously used expressions."
 msgstr ""
-"Questo gruppo contiene le funzioni utilizzate di recente. A seconda del "
-"contesto del suo utilizzo (selezione delle geometrie, calcolatore di campo, "
-"generico), ogni espressione applicata viene aggiunta alla lista "
-"corrispondente (fino a dieci espressioni), ordinata dalla più recente alla "
-"meno recente. Questo aiuta a recuperare e riapplicare rapidamente qualsiasi "
-"espressione usata in precedenza."
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1245
+#: ../../docs/user_manual/working_with_vector/expression.rst:1256
 msgid "Function Editor"
 msgstr "Editor delle Funzioni"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1247
+#: ../../docs/user_manual/working_with_vector/expression.rst:1258
 msgid ""
 "With the :guilabel:`Function Editor` tab, you are able to write your own "
 "functions in Python language. This provides a handy and comfortable way to "
@@ -5019,25 +5032,25 @@ msgstr ""
 "affrontare esigenze particolari che non sarebbero coperte dalle funzioni "
 "predefinite."
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1256
+#: ../../docs/user_manual/working_with_vector/expression.rst:1267
 msgid "The Function Editor tab"
 msgstr "La scheda Editor delle funzioni"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1258
+#: ../../docs/user_manual/working_with_vector/expression.rst:1269
 msgid "To create a new function:"
 msgstr "Per creare una nuova funzione:"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1260
+#: ../../docs/user_manual/working_with_vector/expression.rst:1271
 msgid "Press the |signPlus| :sup:`New File` button."
 msgstr "Premi il pulsante |signPlus| :sup:`New File`."
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1261
+#: ../../docs/user_manual/working_with_vector/expression.rst:1272
 msgid "Enter a name to use in the form that pops up and press :guilabel:`OK`."
 msgstr ""
 "Inserisci un nome da utilizzare nel modulo che compare e premi "
 ":guilabel:`OK`."
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1263
+#: ../../docs/user_manual/working_with_vector/expression.rst:1274
 msgid ""
 "A new item of the name you provide is added in the left panel of the "
 ":guilabel:`Function Editor` tab; this is a Python :file:`.py` file based on "
@@ -5050,7 +5063,7 @@ msgstr ""
 "memorizzato nella cartella :file:`/python/expressions` sotto la directory "
 "attiva :ref:`user profile `."
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1267
+#: ../../docs/user_manual/working_with_vector/expression.rst:1278
 msgid ""
 "The right panel displays the content of the file: a python script template. "
 "Update the code and its help according to your needs."
@@ -5058,7 +5071,7 @@ msgstr ""
 "Il pannello di destra mostra il contenuto del file: un template di script "
 "python. Aggiorna il codice e il suo aiuto in base alle tue esigenze."
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1269
+#: ../../docs/user_manual/working_with_vector/expression.rst:1280
 msgid ""
 "Press the |start| :guilabel:`Save and Load Functions` button. The function "
 "you wrote is added to the functions tree in the :guilabel:`Expression` tab, "
@@ -5068,11 +5081,11 @@ msgstr ""
 "scritta viene aggiunta all'albero delle funzioni nella scheda "
 ":guilabel:`Espressione`, di default nel gruppo ``Custom``."
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1272
+#: ../../docs/user_manual/working_with_vector/expression.rst:1283
 msgid "Enjoy your new function."
 msgstr "Goditi la tua nuova funzione."
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1273
+#: ../../docs/user_manual/working_with_vector/expression.rst:1284
 msgid ""
 "If the function requires improvements, enable the :guilabel:`Function "
 "Editor` tab, do the changes and press again the |start| :guilabel:`Save and "
@@ -5084,7 +5097,7 @@ msgstr ""
 "pulsante |start| :guilabel:`Salva e Carica Funzioni` per renderle "
 "disponibili nel file, quindi in qualsiasi scheda di espressione."
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1278
+#: ../../docs/user_manual/working_with_vector/expression.rst:1289
 msgid ""
 "Custom Python functions are stored under the user profile directory, meaning"
 " that at each QGIS startup, it will auto load all the functions defined with"
@@ -5101,11 +5114,11 @@ msgstr ""
 "progetto che utilizza una delle tue funzioni personalizzate, dovrai anche "
 "condividere il file :file:`.py` nella cartella :file:`/python/expressions`."
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1285
+#: ../../docs/user_manual/working_with_vector/expression.rst:1296
 msgid "Here's a short example on how to create your own functions:"
 msgstr "Ecco un breve esempio su come creare proprie funzioni: "
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1305
+#: ../../docs/user_manual/working_with_vector/expression.rst:1316
 msgid ""
 "The short example creates a function ``my_sum`` that will give you a "
 "function with two values. When using the ``args='auto'`` function argument "
@@ -5118,15 +5131,15 @@ msgstr ""
 " richiesti per la funzione sarà calcolato dal numero di argomenti con cui la"
 " funzione è stata definita in Python (minus 2 - ``feature``, e ``parent``)."
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1311
+#: ../../docs/user_manual/working_with_vector/expression.rst:1322
 msgid "This function can then be used in expressions:"
 msgstr "Questa funzione può quindi essere utilizzata nell'espressione:"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1318
+#: ../../docs/user_manual/working_with_vector/expression.rst:1329
 msgid "Custom Function added to the Expression tab"
 msgstr "Funzione personalizzata aggiunta alla scheda Espressione"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1321
+#: ../../docs/user_manual/working_with_vector/expression.rst:1332
 msgid ""
 "Further information about creating Python code can be found in the :ref"
 ":`PyQGIS-Developer-Cookbook`."

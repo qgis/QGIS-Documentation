@@ -3,13 +3,17 @@
 # This file is distributed under the same license as the QGIS Documentation package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Manuela Silva <manuelarodsilva@gmail.com>, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-10 11:07+0200\n"
+"POT-Creation-Date: 2020-07-26 13:13+0200\n"
 "PO-Revision-Date: 2020-03-16 19:24+0000\n"
+"Last-Translator: Manuela Silva <manuelarodsilva@gmail.com>, 2020\n"
 "Language-Team: Portuguese (Portugal) (https://www.transifex.com/qgis/teams/6144/pt_PT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,7 +23,7 @@ msgstr ""
 
 #: ../../docs/developers_guide/unittesting.rst:6
 msgid "Unit Testing"
-msgstr ""
+msgstr "Teste de Unidade"
 
 #: ../../docs/developers_guide/unittesting.rst:11
 msgid ""
@@ -32,7 +36,7 @@ msgstr ""
 
 #: ../../docs/developers_guide/unittesting.rst:19
 msgid "The QGIS testing framework - an overview"
-msgstr ""
+msgstr "A estrutura de testes de QGIS - um resumo"
 
 #: ../../docs/developers_guide/unittesting.rst:21
 msgid ""
@@ -113,7 +117,7 @@ msgstr ""
 
 #: ../../docs/developers_guide/unittesting.rst:70
 msgid "Creating a unit test"
-msgstr ""
+msgstr "Criação de um teste de unidade"
 
 #: ../../docs/developers_guide/unittesting.rst:72
 msgid ""
@@ -193,7 +197,7 @@ msgstr ""
 
 #: ../../docs/developers_guide/unittesting.rst:193
 msgid "Implementing a regression test"
-msgstr ""
+msgstr "Implementação de um teste de regressão"
 
 #: ../../docs/developers_guide/unittesting.rst:195
 msgid ""
@@ -316,51 +320,51 @@ msgstr ""
 
 #: ../../docs/developers_guide/unittesting.rst:313
 msgid "QCOMPARE ( *actual, expected* )"
-msgstr ""
+msgstr "QCOMPARE ( *atual, experado* )"
 
 #: ../../docs/developers_guide/unittesting.rst:314
 msgid "QEXPECT_FAIL ( *dataIndex, comment, mode* )"
-msgstr ""
+msgstr "QEXPECT_FAIL ( *dataIndex,, comentário, modo* )"
 
 #: ../../docs/developers_guide/unittesting.rst:315
 msgid "QFAIL ( *message* )"
-msgstr ""
+msgstr "QFAIL ( *mensagem* )"
 
 #: ../../docs/developers_guide/unittesting.rst:316
 msgid "QFETCH ( *type, name* )"
-msgstr ""
+msgstr "QFETCH ( *tipo, nome* )"
 
 #: ../../docs/developers_guide/unittesting.rst:317
 msgid "QSKIP ( *description, mode* )"
-msgstr ""
+msgstr "QSKIP ( *descrição, modo* )"
 
 #: ../../docs/developers_guide/unittesting.rst:318
 msgid "QTEST ( *actual, testElement* )"
-msgstr ""
+msgstr "QTEST ( *atual, testElement* )"
 
 #: ../../docs/developers_guide/unittesting.rst:319
 msgid "QTEST_APPLESS_MAIN ( *TestClass* )"
-msgstr ""
+msgstr "QTEST_APPLESS_MAIN ( *TestClass* )"
 
 #: ../../docs/developers_guide/unittesting.rst:320
 msgid "QTEST_MAIN ( *TestClass* )"
-msgstr ""
+msgstr "QTEST_MAIN ( *TestClass* )"
 
 #: ../../docs/developers_guide/unittesting.rst:321
 msgid "QTEST_NOOP_MAIN ()"
-msgstr ""
+msgstr "QTEST_NOOP_MAIN ()"
 
 #: ../../docs/developers_guide/unittesting.rst:322
 msgid "QVERIFY2 ( *condition, message* )"
-msgstr ""
+msgstr "QVERIFY2 ( *condição, mensagem* )"
 
 #: ../../docs/developers_guide/unittesting.rst:323
 msgid "QVERIFY ( *condition* )"
-msgstr ""
+msgstr "QVERIFY ( *condição* )"
 
 #: ../../docs/developers_guide/unittesting.rst:324
 msgid "QWARN ( *message* )"
-msgstr ""
+msgstr "QWARN ( *mensagem* )"
 
 #: ../../docs/developers_guide/unittesting.rst:326
 msgid ""
@@ -399,7 +403,7 @@ msgstr ""
 
 #: ../../docs/developers_guide/unittesting.rst:369
 msgid "Comparing images for rendering tests"
-msgstr ""
+msgstr "Comparação de imagens para os testes de renderização"
 
 #: ../../docs/developers_guide/unittesting.rst:371
 msgid ""
@@ -444,7 +448,7 @@ msgstr ""
 
 #: ../../docs/developers_guide/unittesting.rst:397
 msgid "E.g."
-msgstr ""
+msgstr "Por exemplo,"
 
 #: ../../docs/developers_guide/unittesting.rst:403
 msgid ""
@@ -489,10 +493,12 @@ msgid ""
 "To compare images in QGIS unit tests you should use the class "
 "``QgsMultiRenderChecker`` or one of its subclasses."
 msgstr ""
+"Para comparar imagens nos testes de unidade de QGIS, deveria utilizar a "
+"classe ``QgsMultiRenderChecker``  ou uma das suas subclasses."
 
 #: ../../docs/developers_guide/unittesting.rst:431
 msgid "To improve tests robustness here are few tips:"
-msgstr ""
+msgstr "Para melhorar a robustez dos testes, aqui estão algumas dicas:"
 
 #: ../../docs/developers_guide/unittesting.rst:433
 msgid ""
@@ -530,28 +536,36 @@ msgid ""
 "``QgsFontUtils::standardTestFontFamily()`` (\"QGIS Vera Sans\")."
 msgstr ""
 
-#: ../../docs/developers_guide/unittesting.rst:452
-msgid "Adding your unit test to CMakeLists.txt"
+#: ../../docs/developers_guide/unittesting.rst:450
+msgid ""
+"If travis reports errors for new images (for instance due to antialiasing or"
+" font differences), the script :source:`parse_dash_results.py "
+"<scripts/parse_dash_results.py>` can help you when you are updating the "
+"local test masks."
 msgstr ""
 
-#: ../../docs/developers_guide/unittesting.rst:455
+#: ../../docs/developers_guide/unittesting.rst:456
+msgid "Adding your unit test to CMakeLists.txt"
+msgstr "Adição do seu teste de unidade em CMakeLists.txt"
+
+#: ../../docs/developers_guide/unittesting.rst:458
 msgid ""
 "Adding your unit test to the build system is simply a matter of editing the "
 ":file:`CMakeLists.txt` in the test directory, cloning one of the existing "
 "test blocks, and then replacing your test class name into it. For example:"
 msgstr ""
 
-#: ../../docs/developers_guide/unittesting.rst:466
+#: ../../docs/developers_guide/unittesting.rst:469
 msgid "The ADD_QGIS_TEST macro explained"
-msgstr ""
+msgstr "A macro ADD_QGIS_TEST explicada"
 
-#: ../../docs/developers_guide/unittesting.rst:468
+#: ../../docs/developers_guide/unittesting.rst:471
 msgid ""
 "We'll run through these lines briefly to explain what they do, but if you "
 "are not interested, just do the step explained in the above section."
 msgstr ""
 
-#: ../../docs/developers_guide/unittesting.rst:503
+#: ../../docs/developers_guide/unittesting.rst:506
 msgid ""
 "Let's look a little more in detail at the individual lines. First we define "
 "the list of sources for our test. Since we have only one source file "
@@ -559,13 +573,13 @@ msgid ""
 "definition are in the same file) its a simple statement:"
 msgstr ""
 
-#: ../../docs/developers_guide/unittesting.rst:512
+#: ../../docs/developers_guide/unittesting.rst:515
 msgid ""
 "Since our test class needs to be run through the Qt meta object compiler "
 "(moc) we need to provide a couple of lines to make that happen too:"
 msgstr ""
 
-#: ../../docs/developers_guide/unittesting.rst:521
+#: ../../docs/developers_guide/unittesting.rst:524
 msgid ""
 "Next we tell cmake that it must make an executable from the test class. "
 "Remember in the previous section on the last line of the class "
@@ -574,7 +588,7 @@ msgid ""
 "compiled as an executable:"
 msgstr ""
 
-#: ../../docs/developers_guide/unittesting.rst:532
+#: ../../docs/developers_guide/unittesting.rst:535
 msgid ""
 "Next we need to specify any library dependencies. At the moment, classes "
 "have been implemented with a catch-all QT_LIBRARIES dependency, but we will "
@@ -583,14 +597,14 @@ msgid ""
 "as required by your unit test."
 msgstr ""
 
-#: ../../docs/developers_guide/unittesting.rst:542
+#: ../../docs/developers_guide/unittesting.rst:545
 msgid ""
 "Next we tell cmake to install the tests to the same place as the qgis "
 "binaries itself. This is something we plan to remove in the future so that "
 "the tests can run directly from inside the source tree."
 msgstr ""
 
-#: ../../docs/developers_guide/unittesting.rst:569
+#: ../../docs/developers_guide/unittesting.rst:572
 msgid ""
 "Finally the above uses ``ADD_TEST`` to register the test with cmake / ctest."
 " Here is where the best magic happens - we register the class with ctest. If"
@@ -605,98 +619,98 @@ msgid ""
 " we use."
 msgstr ""
 
-#: ../../docs/developers_guide/unittesting.rst:582
+#: ../../docs/developers_guide/unittesting.rst:585
 msgid "Building your unit test"
-msgstr ""
+msgstr "Criação do seu teste de unidade"
 
-#: ../../docs/developers_guide/unittesting.rst:584
+#: ../../docs/developers_guide/unittesting.rst:587
 msgid ""
 "To build the unit test you need only to make sure that ``ENABLE_TESTS=true``"
 " in the cmake configuration. There are two ways to do this:"
 msgstr ""
 
-#: ../../docs/developers_guide/unittesting.rst:587
+#: ../../docs/developers_guide/unittesting.rst:590
 msgid ""
 "Run ``ccmake ..`` ( or ``cmakesetup ..`` under windows) and interactively "
 "set the ``ENABLE_TESTS`` flag to ``ON``."
 msgstr ""
 
-#: ../../docs/developers_guide/unittesting.rst:589
+#: ../../docs/developers_guide/unittesting.rst:592
 msgid "Add a command line flag to cmake e.g. ``cmake -DENABLE_TESTS=true ..``"
 msgstr ""
 
-#: ../../docs/developers_guide/unittesting.rst:591
+#: ../../docs/developers_guide/unittesting.rst:594
 msgid ""
 "Other than that, just build QGIS as per normal and the tests should build "
 "too."
 msgstr ""
 
-#: ../../docs/developers_guide/unittesting.rst:595
-msgid "Run your tests"
-msgstr ""
-
 #: ../../docs/developers_guide/unittesting.rst:598
+msgid "Run your tests"
+msgstr "Executar os seus testes"
+
+#: ../../docs/developers_guide/unittesting.rst:601
 msgid ""
 "The simplest way to run the tests is as part of your normal build process:"
 msgstr ""
 
-#: ../../docs/developers_guide/unittesting.rst:604
+#: ../../docs/developers_guide/unittesting.rst:607
 msgid ""
 "The ``make test`` command will invoke CTest which will run each test that "
 "was registered using the ADD_TEST CMake directive described above. Typical "
 "output from ``make test`` will look like this:"
 msgstr ""
 
-#: ../../docs/developers_guide/unittesting.rst:624
+#: ../../docs/developers_guide/unittesting.rst:627
 msgid ""
 "If a test fails, you can use the ctest command to examine more closely why "
 "it failed. Use the ``-R`` option to specify a regex for which tests you want"
 " to run and ``-V`` to get verbose output:"
 msgstr ""
 
-#: ../../docs/developers_guide/unittesting.rst:669
+#: ../../docs/developers_guide/unittesting.rst:672
 msgid "Running individual tests"
-msgstr ""
+msgstr "Execução de testes individuais"
 
-#: ../../docs/developers_guide/unittesting.rst:671
+#: ../../docs/developers_guide/unittesting.rst:674
 msgid ""
 "C++ tests are ordinary applications. You can run them from the build folder "
 "like any executable."
 msgstr ""
 
-#: ../../docs/developers_guide/unittesting.rst:687
+#: ../../docs/developers_guide/unittesting.rst:690
 msgid ""
 "These tests also take `command line arguments <https://doc-"
 "snapshots.qt.io/qt5-5.9/qtest-overview.html#qt-test-command-line-"
 "arguments>`_. This makes it possible to run a specific subset of tests:"
 msgstr ""
 
-#: ../../docs/developers_guide/unittesting.rst:703
-msgid "Debugging unit tests"
-msgstr ""
-
 #: ../../docs/developers_guide/unittesting.rst:706
-msgid "C++ Tests"
-msgstr ""
+msgid "Debugging unit tests"
+msgstr "Depuração dos testes de unidade"
 
-#: ../../docs/developers_guide/unittesting.rst:708
+#: ../../docs/developers_guide/unittesting.rst:709
+msgid "C++ Tests"
+msgstr "Testes de C++"
+
+#: ../../docs/developers_guide/unittesting.rst:711
 msgid ""
 "For C++ unit tests, QtCreator automatically adds run targets, so you can "
 "start them from the debugger."
 msgstr ""
 
-#: ../../docs/developers_guide/unittesting.rst:711
+#: ../../docs/developers_guide/unittesting.rst:714
 msgid ""
 "If you go to *Projects* and there to the *Build & Run* --> Desktop *Run* "
 "tab, you can also specify command line parameters that will allow a subset "
 "of the tests to be run inside a .cpp file in the debugger."
 msgstr ""
 
-#: ../../docs/developers_guide/unittesting.rst:716
+#: ../../docs/developers_guide/unittesting.rst:719
 msgid "Python Tests"
 msgstr ""
 
-#: ../../docs/developers_guide/unittesting.rst:718
+#: ../../docs/developers_guide/unittesting.rst:721
 msgid ""
 "It's also possible to start Python unit tests from QtCreator with GDB. For "
 "this, you need to go to :guilabel:`Projects` and choose :guilabel:`Run` "
@@ -706,54 +720,55 @@ msgid ""
 ":file:`/home/user/dev/qgis/QGIS/tests/src/python/test_qgsattributeformeditorwidget.py`."
 msgstr ""
 
-#: ../../docs/developers_guide/unittesting.rst:726
+#: ../../docs/developers_guide/unittesting.rst:729
 msgid "Now also change the ``Run Environment`` and add 3 new variables:"
 msgstr ""
 
-#: ../../docs/developers_guide/unittesting.rst:729
+#: ../../docs/developers_guide/unittesting.rst:732
 msgid "Variable"
-msgstr ""
+msgstr "Variável"
 
-#: ../../docs/developers_guide/unittesting.rst:729
+#: ../../docs/developers_guide/unittesting.rst:732
 msgid "Value"
-msgstr ""
+msgstr "Valor"
 
-#: ../../docs/developers_guide/unittesting.rst:731
+#: ../../docs/developers_guide/unittesting.rst:734
 msgid "PYTHONPATH"
-msgstr ""
+msgstr "CAMINHO PYTHON"
 
-#: ../../docs/developers_guide/unittesting.rst:731
+#: ../../docs/developers_guide/unittesting.rst:734
 msgid ""
 "[build]/output/python/:[build]/output/python/plugins:[source]/tests/src/python"
 msgstr ""
+"[build]/output/python/:[build]/output/python/plugins:[source]/tests/src/python"
 
-#: ../../docs/developers_guide/unittesting.rst:733
+#: ../../docs/developers_guide/unittesting.rst:736
 msgid "QGIS_PREFIX_PATH"
-msgstr ""
+msgstr "QGIS_PREFIX_PATH"
 
-#: ../../docs/developers_guide/unittesting.rst:733
+#: ../../docs/developers_guide/unittesting.rst:736
 msgid "[build]/output"
-msgstr ""
+msgstr "[build]/output"
 
-#: ../../docs/developers_guide/unittesting.rst:735
+#: ../../docs/developers_guide/unittesting.rst:738
 msgid "LD_LIBRARY_PATH"
-msgstr ""
+msgstr "LD_LIBRARY_PATH"
 
-#: ../../docs/developers_guide/unittesting.rst:735
+#: ../../docs/developers_guide/unittesting.rst:738
 msgid "[build]/output/lib"
 msgstr ""
 
-#: ../../docs/developers_guide/unittesting.rst:738
+#: ../../docs/developers_guide/unittesting.rst:741
 msgid ""
 "Replace ``[build]`` with your build directory and ``[source]`` with your "
 "source directory."
 msgstr ""
 
-#: ../../docs/developers_guide/unittesting.rst:742
+#: ../../docs/developers_guide/unittesting.rst:745
 msgid "Have fun"
-msgstr ""
+msgstr "Divirta-se"
 
-#: ../../docs/developers_guide/unittesting.rst:744
+#: ../../docs/developers_guide/unittesting.rst:747
 msgid ""
 "Well that concludes this section on writing unit tests in QGIS. We hope you "
 "will get into the habit of writing test to test new functionality and to "

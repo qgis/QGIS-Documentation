@@ -5,15 +5,16 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-10 11:07+0200\n"
+"POT-Creation-Date: 2020-07-26 13:13+0200\n"
 "PO-Revision-Date: 2020-03-16 19:20+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -28,167 +29,194 @@ msgstr "|LS| Trabajando con Datos Ráster"
 #: ../../docs/training_manual/rasters/data_manipulation.rst:4
 msgid ""
 "Raster data is quite different from vector data. Vector data has discrete "
-"features constructed out of vertices, and perhaps connected with lines "
-"and/or areas. Raster data, however, is like any image. Although it may "
-"portray various properties of objects in the real world, these objects don't"
-" exist as separate objects; rather, they are represented using pixels of "
-"various different color values."
+"features with geometries constructed out of vertices, and perhaps connected "
+"with lines and/or areas. Raster data, however, is like any image. Although "
+"it may portray various properties of objects in the real world, these "
+"objects don't exist as separate objects. Rather, they are represented using "
+"pixels with different values."
 msgstr ""
 "Los datos ráster son bastante diferentes de los datos vectoriales. Los datos"
-" vectoriales tienen elementos discretos construidos a partir de vértices, y "
-"puede que conectados con líneas y/o áreas. Los datos ráster, sin embargo, "
-"son como cualquier imagen. Aunque pueden describir propiedades de los "
-"objetos en el mundo real, esos objetos no existen como objetos delimitados, "
-"en lugar de ello están representados utilizando píxeles de distintos valores"
-" de color."
+" vectoriales tienen entidades discretas con geometrías construidas a partir "
+"de vértices, y tal vez conectadas con líneas y/o áreas. Sin embargo, los "
+"datos ráster son como cualquier imagen. Aunque puede representar varias "
+"propiedades de los objetos en el mundo real, estos objetos no existen como "
+"objetos separados. Más bien, se representan utilizando píxeles con "
+"diferentes valores."
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:11
+#: ../../docs/training_manual/rasters/data_manipulation.rst:12
 msgid ""
-"During this module you're going to use raster data to supplement your "
+"During this module you are going to use raster data to supplement your "
 "existing GIS analysis."
 msgstr ""
-"Durante este módulo utilizarás datos ráster para suplementar el análisis SIG"
-" que has hecho hasta ahora."
+"Durante este módulo, utilizará datos ráster para complementar su análisis "
+"SIG existente."
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:14
+#: ../../docs/training_manual/rasters/data_manipulation.rst:15
 msgid ""
-"**The goal for this lesson:** To learn how to work with raster data in the "
-"QGIS environment."
+"**The goal for this lesson:** To learn how to work with raster data in QGIS."
 msgstr ""
-"**El objetivo de esta lección:** Aprender como trabajar con datos ráster en "
-"el entorno del QGIS."
+"**Objetivo para esta lección:** Aprender a trabajar con datos ráster en "
+"QGIS."
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:18
+#: ../../docs/training_manual/rasters/data_manipulation.rst:19
 msgid "|basic| |FA| Loading Raster Data"
 msgstr "|basic| |FA| Cargando Datos Ráster"
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:20
+#: ../../docs/training_manual/rasters/data_manipulation.rst:21
 msgid ""
 "Raster data can be loaded with the same methods we used for vector data. "
 "However we suggest to use the :guilabel:`Browser` Panel."
 msgstr ""
+"Los datos ráster se pueden cargar con los mismos métodos que utilizamos para"
+" los datos vectoriales. Sin embargo, sugerimos utilizar el panel "
+":guilabel:`Navegador`."
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:23
+#: ../../docs/training_manual/rasters/data_manipulation.rst:25
 msgid ""
 "Open the :guilabel:`Browser` Panel and expand the "
 ":file:`exercise_data/raster` folder."
 msgstr ""
+"Abra el Panel :guilabel:`Navegador` y expanda el directorio "
+":file:`exercise_data/raster`."
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:25
+#: ../../docs/training_manual/rasters/data_manipulation.rst:27
 msgid "Load all the data in this folder:"
 msgstr "Cargue todos los datos de esta carpeta:"
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:27
+#: ../../docs/training_manual/rasters/data_manipulation.rst:29
 msgid ":file:`3320C_2010_314_RGB_LATLNG.tif`"
 msgstr ":file:`3320C_2010_314_RGB_LATLNG.tif`"
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:28
+#: ../../docs/training_manual/rasters/data_manipulation.rst:30
 msgid ":file:`3320D_2010_315_RGB_LATLNG.tif`"
 msgstr ":file:`3320D_2010_315_RGB_LATLNG.tif`"
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:29
+#: ../../docs/training_manual/rasters/data_manipulation.rst:31
 msgid ":file:`3420B_2010_328_RGB_LATLNG.tif`"
 msgstr ":file:`3420B_2010_328_RGB_LATLNG.tif`"
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:30
+#: ../../docs/training_manual/rasters/data_manipulation.rst:32
 msgid ":file:`3420C_2010_327_RGB_LATLNG.tif`"
 msgstr ":file:`3420C_2010_327_RGB_LATLNG.tif`"
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:32
+#: ../../docs/training_manual/rasters/data_manipulation.rst:34
 msgid "You should see the following map:"
-msgstr ""
+msgstr "Debería ver el siguiente mapa:"
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:37
-msgid ""
-"There we have it - four aerial photographs covering our whole study area."
+#: ../../docs/training_manual/rasters/data_manipulation.rst:39
+msgid "There we have it - four aerial images covering our study area."
 msgstr ""
-"Ahí lo tenemos - cuatro fotografías aéreas cubriendo toda nuestra área de "
-"estudio."
-
-#: ../../docs/training_manual/rasters/data_manipulation.rst:42
-msgid "|basic| |FA| Create a Virtual Raster"
-msgstr "|basic| |FA| Creación de un Ráster Virtual"
+"Ahí lo tenemos: cuatro imágenes aéreas que cubren nuestra área de estudio."
 
 #: ../../docs/training_manual/rasters/data_manipulation.rst:44
+msgid "|basic| |FA| Create a Virtual Raster"
+msgstr "|basic| |FA| Crear un Ráster Virtual"
+
+#: ../../docs/training_manual/rasters/data_manipulation.rst:46
 msgid ""
 "Now as you can see from this, your solution layer lies across all four "
-"photographs. What this means is that you're going to have to work with four "
-"rasters all the time. That's not ideal; it would be better to have one file "
-"for one (composite) image, right?"
+"images. What this means is that you are going to have to work with four "
+"rasters all the time. That's not ideal. It would be better to have one file "
+"to work with."
 msgstr ""
-"Ahora como puedes ver, tu capa de soluciones se encuentra sobre las cuatro "
-"fotografías. Lo que significa que vas a trabajar con los cuatro ráster al "
-"mismo tiempo. Esto no es ideal; sería mejor tener un solo archivo por cada "
-"imagen (composición), ¿No?"
+"Ahora, como puede ver en esta, su capa de solución se encuentra en las "
+"cuatro imágenes. Lo que esto significa es que tendrá que trabajar con cuatro"
+" rásteres todo el tiempo. Eso no es lo ideal. Sería mejor tener un archivo "
+"para trabajar."
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:49
+#: ../../docs/training_manual/rasters/data_manipulation.rst:52
 msgid ""
 "Luckily, QGIS allows you to do exactly this, and without needing to actually"
-" create a new raster file, which could take up a lot of space. Instead, you "
-"can create a **Virtual Raster**. This is also often called a *Catalog*, "
-"which explains its function. It's not really a new raster. Rather, it's a "
-"way to organize your existing rasters into one catalog: one file for easy "
-"access."
+" create a new raster file. You can create a **Virtual Raster**. This is also"
+" often called a *Catalog*, which explains its function. It's not really a "
+"new raster. Rather, it is a way to organize your existing rasters into one "
+"catalog: one file for easy access."
 msgstr ""
+"Afortunadamente, QGIS le permite hacer exactamente esto, y sin necesidad de "
+"crear un nuevo archivo ráster. Puede crear un **Ráster virtual**. Esto "
+"también se llama a menudo *Catálogo*, lo que explica su función. No es "
+"realmente una nueva trama. Más bien, es una forma de organizar sus rásteres "
+"existentes en un catálogo: un archivo para facilitar el acceso."
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:55
+#: ../../docs/training_manual/rasters/data_manipulation.rst:60
 msgid ""
 "To make a catalog we will use the :menuselection:`Processing --> Toolbox`."
 msgstr ""
+"Para hacer un catálogo usaremos el :menuselection:`Proceso --> Caja de "
+"Herramientas`."
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:57
+#: ../../docs/training_manual/rasters/data_manipulation.rst:63
 msgid ""
 "Open the :guilabel:`Build virtual raster` algorithm from the "
 ":menuselection:`GDAL --> Raster miscellaneous`;"
 msgstr ""
+"Abra el algoritmo :guilabel:`Construir ráster virtual` desde el "
+":menuselection:`GDAL --> Miscelánea Raster`;"
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:59
+#: ../../docs/training_manual/rasters/data_manipulation.rst:65
 msgid ""
-"In the dialog that appears click on the :guilabel:`...` button next to the "
+"In the dialog that appears, click on the :guilabel:`...` button next to the "
 ":guilabel:`Input layers` parameter and check all the layers or use the "
 ":guilabel:`Select All` button;"
 msgstr ""
+"En el diálogo emergente, click en el botón :guilabel:`...` al lado del "
+"parámetro :guilabel:`Capas de entrada` y marque todas las capas o use el "
+"botón :guilabel:`Seleccionar todo`;"
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:62
+#: ../../docs/training_manual/rasters/data_manipulation.rst:68
 msgid ""
-"Uncheck the :guilabel:`Place each input file into a separate band` "
-"parameter- Notice the text field below. What this dialog is actually doing "
-"is that it's writing that text for you. It's a long command that QGIS is "
-"going to run."
+"Uncheck :guilabel:`Place each input file into a separate band`. Notice the "
+"text field below. What this dialog is actually doing is that it is writing "
+"that text for you. It is a long command that QGIS is going to run."
 msgstr ""
+"Desmarque :guilabel:`Place each input file into a separate band`. Observe el"
+" campo de texto a continuación. Lo que realmente está haciendo este diálogo "
+"es que está escribiendo ese texto para usted. Es un comando largo que QGIS "
+"va a ejecutar."
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:66
+#: ../../docs/training_manual/rasters/data_manipulation.rst:74
 msgid ""
 "Keep in mind that you can copy and paste the text in the ``OSGeo Shell`` "
 "(Windows user) or ``Terminal`` (Linux and OSX users) to run the command. You"
 " can also create a script for each GDAL command. This is very handy when the"
 " procedure is taking a long time or when you want to schedule specific "
-"tasks. Use the :guilabel:`Help` button to get more help on the syntax of "
-"GDAL commands."
+"tasks. Use the :guilabel:`Help` button to get more help on the syntax of the"
+" command."
 msgstr ""
+"Tenga en cuenta que puede copiar y pegar el texto en el ``OSGeo Shell`` "
+"(usuario de Windows) o ``Terminal`` (usuarios de Linux y OSX) para ejecutar "
+"el comando. También puede crear una secuencia de comandos para cada comando "
+"GDAL. Esto es muy útil cuando el procedimiento lleva mucho tiempo o cuando "
+"desea programar tareas específicas. Use el botón :guilabel:`Ayuda` para "
+"obtener más ayuda sobre la sintaxis del comando."
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:73
+#: ../../docs/training_manual/rasters/data_manipulation.rst:83
 msgid "Finally click on :guilabel:`Run`."
-msgstr ""
+msgstr "Finalmente haga click en :guilabel:`Ejecutar`."
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:75
+#: ../../docs/training_manual/rasters/data_manipulation.rst:85
 msgid ""
 "As you know from the previous modules, :guilabel:`Processing` creates "
 "temporary layers by default. To save the file click on the :guilabel:`...` "
 "button."
 msgstr ""
+"Como sabes de los módulos anteriores, :guilabel:`Proceso` crea capas "
+"temporales por defecto. Para guardar el archivo, haga click en el botón "
+":guilabel: `...`."
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:82
+#: ../../docs/training_manual/rasters/data_manipulation.rst:92
 msgid ""
 "You can now remove the original four rasters from the :guilabel:`Layers` "
 "Panel and leave only the output virtual catalog raster."
 msgstr ""
+"Ahora puede eliminar los cuatro rásteres originales del panel "
+":guilabel:`Capas` y dejar solo el ráster del catálogo virtual de salida."
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:87
+#: ../../docs/training_manual/rasters/data_manipulation.rst:98
 msgid "|hard| Transforming Raster Data"
 msgstr "|hard| Transformando Datos Ráster"
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:89
+#: ../../docs/training_manual/rasters/data_manipulation.rst:100
 msgid ""
 "The above methods allow you to virtually merge datasets using a catalog, and"
 " to reproject them \"on the fly\". However, if you are setting up data that "
@@ -204,77 +232,95 @@ msgstr ""
 "rendimiento cuando utilizas rásters en un mapa, pero puede que lleve algún "
 "tiempo para ajustarlo inicialmente."
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:96
+#: ../../docs/training_manual/rasters/data_manipulation.rst:109
 msgid "Reprojecting rasters"
 msgstr "Reproyectando Ráster"
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:98
+#: ../../docs/training_manual/rasters/data_manipulation.rst:111
 msgid ""
 "Open :guilabel:`Warp (reproject)` from :menuselection:`GDAL --> Raster "
 "projections`."
 msgstr ""
+"Abra :guilabel:`Combar (reproyectar)` en :menuselection:`GDAL --> "
+"Proyecciones ráster`."
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:101
+#: ../../docs/training_manual/rasters/data_manipulation.rst:114
 msgid ""
 "You can also reproject virtual rasters (catalogs), enable multithreaded "
 "processing, and more."
 msgstr ""
+"También puede reproyectar rásteres virtuales (catálogos), habilitar el "
+"procesamiento multiproceso y más."
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:108
+#: ../../docs/training_manual/rasters/data_manipulation.rst:121
 msgid "Merging rasters"
 msgstr "Uniendo rásters"
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:110
+#: ../../docs/training_manual/rasters/data_manipulation.rst:123
 msgid ""
 "If you need to create a new raster layer and save it to disk you can use the"
 " merge algorithm."
 msgstr ""
+"Si necesita crear una nueva capa ráster y guardarla en el disco, puede usar "
+"el algoritmo de fusión."
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:113
+#: ../../docs/training_manual/rasters/data_manipulation.rst:126
 msgid ""
 "Depending on how many raster files you are merging and their resolution, the"
 " new raster file created can be really big. Consider instead to create a "
 "raster catalog as described in the :ref:`Create a Virtual Raster "
 "<tm_virtual_raster>` section."
 msgstr ""
+"Dependiendo de cuántos archivos ráster esté fusionando y su resolución, el "
+"nuevo archivo ráster creado puede ser realmente grande. Considere en su "
+"lugar crear un catálogo de ráster como se describe en la sección :ref:`Crear"
+" un ráster virtual <tm_virtual_raster>`."
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:118
+#: ../../docs/training_manual/rasters/data_manipulation.rst:131
 msgid ""
 "Click on the :guilabel:`Merge` algorithm from the :menuselection:`GDAL --> "
 "Raster miscellaneous` menu."
 msgstr ""
+"Click en el algoritmo :guilabel:`Combinar` en el menú :menuselection:`GDAL "
+"--> Miscelánea Ráster`."
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:120
+#: ../../docs/training_manual/rasters/data_manipulation.rst:133
 msgid ""
 "As we did for the :ref:`Create a Virtual raster <tm_virtual_raster>`, use "
 "the :guilabel:`...` button to choose which layers you want to merge."
 msgstr ""
+"Como lo hicimos para :ref:`Crear un ráster virtual <tm_virtual_raster>`, use"
+" el botón :guilabel:`...` para elegir que capas quiere combinar."
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:123
+#: ../../docs/training_manual/rasters/data_manipulation.rst:137
 msgid ""
 "You can also specify a Virtual raster as input, and then all of the rasters "
 "that it consists of will be processed."
 msgstr ""
+"También puede especificar un ráster virtual como entrada, y luego se "
+"procesarán todos los rásteres que lo componen."
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:125
+#: ../../docs/training_manual/rasters/data_manipulation.rst:139
 msgid ""
 "If you know the GDAL library, you can also add your own options by opening "
 "the :guilabel:`Advanced parameters` menu."
 msgstr ""
+"Si conoce la biblioteca GDAL, también puede agregar sus propias opciones "
+"abriendo :guilabel:`parámetros avanzados`."
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:132
+#: ../../docs/training_manual/rasters/data_manipulation.rst:146
 msgid "|IC|"
 msgstr "|IC|"
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:134
+#: ../../docs/training_manual/rasters/data_manipulation.rst:148
 msgid "QGIS makes it easy to include raster data into your existing projects."
 msgstr "QGIS facilita inlcuir datos ráster a tus proyectos ya existentes."
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:137
+#: ../../docs/training_manual/rasters/data_manipulation.rst:151
 msgid "|WN|"
 msgstr "|WN|"
 
-#: ../../docs/training_manual/rasters/data_manipulation.rst:139
+#: ../../docs/training_manual/rasters/data_manipulation.rst:153
 msgid ""
 "Next, we'll use raster data that isn't aerial imagery, and see how "
 "symbolization is useful in the case of rasters as well."

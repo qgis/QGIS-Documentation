@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-10 11:07+0200\n"
+"POT-Creation-Date: 2020-07-26 13:13+0200\n"
 "PO-Revision-Date: 2020-03-16 19:31+0000\n"
 "Last-Translator: Aline Furlanetto Viero <afviero@gmail.com>, 2020\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
@@ -180,7 +180,7 @@ msgid ""
 "Enumeration. If an algorithm has an enumeration parameter, the value of that"
 " parameter should be entered using an integer value. To know the available "
 "options, you can use the ``algorithmHelp()`` command, as above. For "
-"instance, the \"native.buffer\" algorithm has an enumeration called "
+"instance, the ``native:buffer`` algorithm has an enumeration called "
 "JOIN_STYLE:"
 msgstr ""
 
@@ -284,11 +284,23 @@ msgid ""
 "``run()`` to load them immediately."
 msgstr ""
 
-#: ../../docs/user_manual/processing/console.rst:337
+#: ../../docs/user_manual/processing/console.rst:336
+msgid ""
+"If you want to open an algorithm dialog from the console you can use the "
+"``createAlgorithmDialog`` method. The only mandatory parameter is the "
+"algorithm name, but you can also define the dictionary of parameters so that"
+" the dialog will be filled automatically:"
+msgstr ""
+
+#: ../../docs/user_manual/processing/console.rst:354
+msgid "The ``execAlgorithmDialog`` method opens the dialog immediately:"
+msgstr ""
+
+#: ../../docs/user_manual/processing/console.rst:370
 msgid "Creating scripts and running them from the toolbox"
 msgstr "Criando scripts e correndo-os a partir da caixa de ferramentas"
 
-#: ../../docs/user_manual/processing/console.rst:339
+#: ../../docs/user_manual/processing/console.rst:372
 msgid ""
 "You can create your own algorithms by writing Python code. Processing "
 "scripts extend :class:`QgsProcessingAlgorithm "
@@ -304,13 +316,13 @@ msgid ""
 "extension should create the corresponding algorithm."
 msgstr ""
 
-#: ../../docs/user_manual/processing/console.rst:354
+#: ../../docs/user_manual/processing/console.rst:387
 msgid ""
 "The name of the algorithm (the one you will see in the toolbox) is defined "
 "within the code."
 msgstr ""
 
-#: ../../docs/user_manual/processing/console.rst:357
+#: ../../docs/user_manual/processing/console.rst:390
 msgid ""
 "Let's have a look at the following code, which defines a Processing "
 "algorithm that performs a buffer operation with a user defined buffer "
@@ -318,51 +330,51 @@ msgid ""
 "smoothing the layer."
 msgstr ""
 
-#: ../../docs/user_manual/processing/console.rst:421
+#: ../../docs/user_manual/processing/console.rst:454
 msgid ""
 "After doing the necessary imports, the following "
 ":class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>` functions"
 " are specified:"
 msgstr ""
 
-#: ../../docs/user_manual/processing/console.rst:425
+#: ../../docs/user_manual/processing/console.rst:458
 msgid ""
 ":meth:`name <qgis.core.QgsProcessingAlgorithm.name>`: The id of the "
 "algorithm (lowercase)."
 msgstr ""
 
-#: ../../docs/user_manual/processing/console.rst:427
+#: ../../docs/user_manual/processing/console.rst:460
 msgid ""
 ":meth:`displayName <qgis.core.QgsProcessingAlgorithm.displayName>`: A human "
 "readable name for the algorithm."
 msgstr ""
 
-#: ../../docs/user_manual/processing/console.rst:429
+#: ../../docs/user_manual/processing/console.rst:462
 msgid ""
 ":meth:`createInstance <qgis.core.QgsProcessingAlgorithm.createInstance>`: "
 "Create a new instance of the algorithm class."
 msgstr ""
 
-#: ../../docs/user_manual/processing/console.rst:431
+#: ../../docs/user_manual/processing/console.rst:464
 msgid ""
 ":meth:`initAlgorithm <qgis.core.QgsProcessingAlgorithm.initAlgorithm>`: "
 "Configure the parameterDefinitions and outputDefinitions."
 msgstr ""
 
-#: ../../docs/user_manual/processing/console.rst:434
+#: ../../docs/user_manual/processing/console.rst:467
 msgid ""
 "Here you describe the parameters and output of the algorithm.  In this case,"
 " a feature source for the input, a feature sink for the result and a number "
 "for the buffer distance."
 msgstr ""
 
-#: ../../docs/user_manual/processing/console.rst:437
+#: ../../docs/user_manual/processing/console.rst:470
 msgid ""
 ":meth:`processAlgorithm "
 "<qgis.core.QgsProcessingAlgorithm.processAlgorithm>`: Do the work."
 msgstr ""
 
-#: ../../docs/user_manual/processing/console.rst:440
+#: ../../docs/user_manual/processing/console.rst:473
 msgid ""
 "Here we first run the ``smoothgeometry`` algorithm to smooth the geometry, "
 "and then we run the ``buffer`` algorithm on the smoothed output. To be able "
@@ -372,19 +384,19 @@ msgid ""
 "are used as parameters to the ``smoothgeometry`` and ``buffer`` algorithms."
 msgstr ""
 
-#: ../../docs/user_manual/processing/console.rst:449
+#: ../../docs/user_manual/processing/console.rst:482
 msgid ""
 "There are a number of different parameter types available for input and "
 "output. Below is an alphabetically sorted list:"
 msgstr ""
 
-#: ../../docs/user_manual/processing/console.rst:452
+#: ../../docs/user_manual/processing/console.rst:485
 msgid ""
 ":class:`QgsProcessingParameterBand <qgis.core.QgsProcessingParameterBand>`"
 msgstr ""
 ":class:`QgsProcessingParameterBand <qgis.core.QgsProcessingParameterBand>`"
 
-#: ../../docs/user_manual/processing/console.rst:453
+#: ../../docs/user_manual/processing/console.rst:486
 msgid ""
 ":class:`QgsProcessingParameterBoolean "
 "<qgis.core.QgsProcessingParameterBoolean>`"
@@ -392,19 +404,19 @@ msgstr ""
 ":class:`QgsProcessingParameterBoolean "
 "<qgis.core.QgsProcessingParameterBoolean>`"
 
-#: ../../docs/user_manual/processing/console.rst:454
+#: ../../docs/user_manual/processing/console.rst:487
 msgid ""
 ":class:`QgsProcessingParameterColor <qgis.core.QgsProcessingParameterColor>`"
 msgstr ""
 ":class:`QgsProcessingParameterColor <qgis.core.QgsProcessingParameterColor>`"
 
-#: ../../docs/user_manual/processing/console.rst:455
+#: ../../docs/user_manual/processing/console.rst:488
 msgid ""
 ":class:`QgsProcessingParameterCrs <qgis.core.QgsProcessingParameterCrs>`"
 msgstr ""
 ":class:`QgsProcessingParameterCrs <qgis.core.QgsProcessingParameterCrs>`"
 
-#: ../../docs/user_manual/processing/console.rst:456
+#: ../../docs/user_manual/processing/console.rst:489
 msgid ""
 ":class:`QgsProcessingParameterDistance "
 "<qgis.core.QgsProcessingParameterDistance>`"
@@ -412,13 +424,13 @@ msgstr ""
 ":class:`QgsProcessingParameterDistance "
 "<qgis.core.QgsProcessingParameterDistance>`"
 
-#: ../../docs/user_manual/processing/console.rst:457
+#: ../../docs/user_manual/processing/console.rst:490
 msgid ""
 ":class:`QgsProcessingParameterEnum <qgis.core.QgsProcessingParameterEnum>`"
 msgstr ""
 ":class:`QgsProcessingParameterEnum <qgis.core.QgsProcessingParameterEnum>`"
 
-#: ../../docs/user_manual/processing/console.rst:458
+#: ../../docs/user_manual/processing/console.rst:491
 msgid ""
 ":class:`QgsProcessingParameterExpression "
 "<qgis.core.QgsProcessingParameterExpression>`"
@@ -426,7 +438,7 @@ msgstr ""
 ":class:`QgsProcessingParameterExpression "
 "<qgis.core.QgsProcessingParameterExpression>`"
 
-#: ../../docs/user_manual/processing/console.rst:459
+#: ../../docs/user_manual/processing/console.rst:492
 msgid ""
 ":class:`QgsProcessingParameterExtent "
 "<qgis.core.QgsProcessingParameterExtent>`"
@@ -434,7 +446,7 @@ msgstr ""
 ":class:`QgsProcessingParameterExtent "
 "<qgis.core.QgsProcessingParameterExtent>`"
 
-#: ../../docs/user_manual/processing/console.rst:460
+#: ../../docs/user_manual/processing/console.rst:493
 msgid ""
 ":class:`QgsProcessingParameterFeatureSink "
 "<qgis.core.QgsProcessingParameterFeatureSink>`"
@@ -442,7 +454,7 @@ msgstr ""
 ":class:`QgsProcessingParameterFeatureSink "
 "<qgis.core.QgsProcessingParameterFeatureSink>`"
 
-#: ../../docs/user_manual/processing/console.rst:461
+#: ../../docs/user_manual/processing/console.rst:494
 msgid ""
 ":class:`QgsProcessingParameterFeatureSource "
 "<qgis.core.QgsProcessingParameterFeatureSource>`"
@@ -450,20 +462,20 @@ msgstr ""
 ":class:`QgsProcessingParameterFeatureSource "
 "<qgis.core.QgsProcessingParameterFeatureSource>`"
 
-#: ../../docs/user_manual/processing/console.rst:462
+#: ../../docs/user_manual/processing/console.rst:495
 msgid ""
 ":class:`QgsProcessingParameterField <qgis.core.QgsProcessingParameterField>`"
 " - A field in the attributes table of a vector layer. The name of the layer "
 "has to be specified."
 msgstr ""
 
-#: ../../docs/user_manual/processing/console.rst:465
+#: ../../docs/user_manual/processing/console.rst:498
 msgid ""
 ":class:`QgsProcessingParameterFile <qgis.core.QgsProcessingParameterFile>`"
 msgstr ""
 ":class:`QgsProcessingParameterFile <qgis.core.QgsProcessingParameterFile>`"
 
-#: ../../docs/user_manual/processing/console.rst:466
+#: ../../docs/user_manual/processing/console.rst:499
 msgid ""
 ":class:`QgsProcessingParameterFileDestination "
 "<qgis.core.QgsProcessingParameterFileDestination>`"
@@ -471,7 +483,7 @@ msgstr ""
 ":class:`QgsProcessingParameterFileDestination "
 "<qgis.core.QgsProcessingParameterFileDestination>`"
 
-#: ../../docs/user_manual/processing/console.rst:467
+#: ../../docs/user_manual/processing/console.rst:500
 msgid ""
 ":class:`QgsProcessingParameterFolderDestination "
 "<qgis.core.QgsProcessingParameterFolderDestination>`"
@@ -479,7 +491,7 @@ msgstr ""
 ":class:`QgsProcessingParameterFolderDestination "
 "<qgis.core.QgsProcessingParameterFolderDestination>`"
 
-#: ../../docs/user_manual/processing/console.rst:468
+#: ../../docs/user_manual/processing/console.rst:501
 msgid ""
 ":class:`QgsProcessingParameterMapLayer "
 "<qgis.core.QgsProcessingParameterMapLayer>`"
@@ -487,7 +499,7 @@ msgstr ""
 ":class:`QgsProcessingParameterMapLayer "
 "<qgis.core.QgsProcessingParameterMapLayer>`"
 
-#: ../../docs/user_manual/processing/console.rst:469
+#: ../../docs/user_manual/processing/console.rst:502
 msgid ""
 ":class:`QgsProcessingParameterMatrix "
 "<qgis.core.QgsProcessingParameterMatrix>`"
@@ -495,7 +507,7 @@ msgstr ""
 ":class:`QgsProcessingParameterMatrix "
 "<qgis.core.QgsProcessingParameterMatrix>`"
 
-#: ../../docs/user_manual/processing/console.rst:470
+#: ../../docs/user_manual/processing/console.rst:503
 msgid ""
 ":class:`QgsProcessingParameterMultipleLayers "
 "<qgis.core.QgsProcessingParameterMultipleLayers>`"
@@ -503,7 +515,7 @@ msgstr ""
 ":class:`QgsProcessingParameterMultipleLayers "
 "<qgis.core.QgsProcessingParameterMultipleLayers>`"
 
-#: ../../docs/user_manual/processing/console.rst:471
+#: ../../docs/user_manual/processing/console.rst:504
 msgid ""
 ":class:`QgsProcessingParameterNumber "
 "<qgis.core.QgsProcessingParameterNumber>`"
@@ -511,19 +523,19 @@ msgstr ""
 ":class:`QgsProcessingParameterNumber "
 "<qgis.core.QgsProcessingParameterNumber>`"
 
-#: ../../docs/user_manual/processing/console.rst:472
+#: ../../docs/user_manual/processing/console.rst:505
 msgid ""
 ":class:`QgsProcessingParameterPoint <qgis.core.QgsProcessingParameterPoint>`"
 msgstr ""
 ":class:`QgsProcessingParameterPoint <qgis.core.QgsProcessingParameterPoint>`"
 
-#: ../../docs/user_manual/processing/console.rst:473
+#: ../../docs/user_manual/processing/console.rst:506
 msgid ""
 ":class:`QgsProcessingParameterRange <qgis.core.QgsProcessingParameterRange>`"
 msgstr ""
 ":class:`QgsProcessingParameterRange <qgis.core.QgsProcessingParameterRange>`"
 
-#: ../../docs/user_manual/processing/console.rst:474
+#: ../../docs/user_manual/processing/console.rst:507
 msgid ""
 ":class:`QgsProcessingParameterRasterDestination "
 "<qgis.core.QgsProcessingParameterRasterDestination>`"
@@ -531,7 +543,7 @@ msgstr ""
 ":class:`QgsProcessingParameterRasterDestination "
 "<qgis.core.QgsProcessingParameterRasterDestination>`"
 
-#: ../../docs/user_manual/processing/console.rst:475
+#: ../../docs/user_manual/processing/console.rst:508
 msgid ""
 ":class:`QgsProcessingParameterRasterLayer "
 "<qgis.core.QgsProcessingParameterRasterLayer>`"
@@ -539,7 +551,7 @@ msgstr ""
 ":class:`QgsProcessingParameterRasterLayer "
 "<qgis.core.QgsProcessingParameterRasterLayer>`"
 
-#: ../../docs/user_manual/processing/console.rst:476
+#: ../../docs/user_manual/processing/console.rst:509
 msgid ""
 ":class:`QgsProcessingParameterString "
 "<qgis.core.QgsProcessingParameterString>`"
@@ -547,7 +559,7 @@ msgstr ""
 ":class:`QgsProcessingParameterString "
 "<qgis.core.QgsProcessingParameterString>`"
 
-#: ../../docs/user_manual/processing/console.rst:477
+#: ../../docs/user_manual/processing/console.rst:510
 msgid ""
 ":class:`QgsProcessingParameterVectorDestination "
 "<qgis.core.QgsProcessingParameterVectorDestination>`"
@@ -555,7 +567,7 @@ msgstr ""
 ":class:`QgsProcessingParameterVectorDestination "
 "<qgis.core.QgsProcessingParameterVectorDestination>`"
 
-#: ../../docs/user_manual/processing/console.rst:478
+#: ../../docs/user_manual/processing/console.rst:511
 msgid ""
 ":class:`QgsProcessingParameterVectorLayer "
 "<qgis.core.QgsProcessingParameterVectorLayer>`"
@@ -563,14 +575,14 @@ msgstr ""
 ":class:`QgsProcessingParameterVectorLayer "
 "<qgis.core.QgsProcessingParameterVectorLayer>`"
 
-#: ../../docs/user_manual/processing/console.rst:480
+#: ../../docs/user_manual/processing/console.rst:513
 msgid ""
 "The first parameter to the constructors is the name of the parameter, and "
 "the second is the description of the parameter (for the user interface). The"
 " rest of the constructor parameters are parameter type specific."
 msgstr ""
 
-#: ../../docs/user_manual/processing/console.rst:485
+#: ../../docs/user_manual/processing/console.rst:518
 msgid ""
 "The input can be turned into QGIS classes using the ``parameterAs`` "
 "functions of :class:`QgsProcessingAlgorithm "
@@ -578,7 +590,7 @@ msgid ""
 " for the buffer distance as a double::"
 msgstr ""
 
-#: ../../docs/user_manual/processing/console.rst:491
+#: ../../docs/user_manual/processing/console.rst:524
 msgid ""
 "The ``processAlgorithm`` function should return a dictionary containing "
 "values for every output defined by the algorithm. This allows access to "
@@ -586,7 +598,7 @@ msgid ""
 "within the same model."
 msgstr ""
 
-#: ../../docs/user_manual/processing/console.rst:496
+#: ../../docs/user_manual/processing/console.rst:529
 msgid ""
 "Well behaved algorithms should define and return as many outputs as makes "
 "sense. Non-feature outputs, such as numbers and strings, are very useful "
@@ -598,11 +610,11 @@ msgid ""
 "algorithm becomes!"
 msgstr ""
 
-#: ../../docs/user_manual/processing/console.rst:506
+#: ../../docs/user_manual/processing/console.rst:539
 msgid "Feedback"
 msgstr ""
 
-#: ../../docs/user_manual/processing/console.rst:508
+#: ../../docs/user_manual/processing/console.rst:541
 msgid ""
 "The :class:`feedback <qgis.core.QgsProcessingFeedback>` object passed to "
 ":meth:`processAlgorithm <qgis.core.QgsProcessingAlgorithm.processAlgorithm>`"
@@ -614,7 +626,7 @@ msgid ""
 "complete."
 msgstr ""
 
-#: ../../docs/user_manual/processing/console.rst:516
+#: ../../docs/user_manual/processing/console.rst:549
 msgid ""
 "The :class:`feedback <qgis.core.QgsProcessingFeedback>` object provides an "
 ":meth:`isCanceled <qgis.core.QgsFeedback.isCanceled>` method that should be "
@@ -626,7 +638,7 @@ msgid ""
 "fatal errors to users."
 msgstr ""
 
-#: ../../docs/user_manual/processing/console.rst:524
+#: ../../docs/user_manual/processing/console.rst:557
 msgid ""
 "Algorithms should avoid using other forms of providing feedback to users, "
 "such as print statements or logging to :class:`QgsMessageLog "
@@ -636,11 +648,11 @@ msgid ""
 "background thread)."
 msgstr ""
 
-#: ../../docs/user_manual/processing/console.rst:533
+#: ../../docs/user_manual/processing/console.rst:566
 msgid "Handling errors"
 msgstr ""
 
-#: ../../docs/user_manual/processing/console.rst:535
+#: ../../docs/user_manual/processing/console.rst:568
 msgid ""
 "If your algorithm encounters an error which prevents it from executing, such"
 " as invalid input values or some other condition from which it cannot or "
@@ -648,7 +660,7 @@ msgid ""
 "<qgis.core.QgsProcessingException>`. E.g.::"
 msgstr ""
 
-#: ../../docs/user_manual/processing/console.rst:544
+#: ../../docs/user_manual/processing/console.rst:577
 msgid ""
 "Try to avoid raising :class:`QgsProcessingException "
 "<qgis.core.QgsProcessingException>` for non-fatal errors (e.g. when a "
@@ -658,17 +670,17 @@ msgid ""
 "entire algorithm when a non-fatal error is encountered."
 msgstr ""
 
-#: ../../docs/user_manual/processing/console.rst:554
+#: ../../docs/user_manual/processing/console.rst:587
 msgid "Documenting your scripts"
 msgstr "Documentando os seus scripts"
 
-#: ../../docs/user_manual/processing/console.rst:556
+#: ../../docs/user_manual/processing/console.rst:589
 msgid ""
 "As in the case of models, you can create additional documentation for your "
 "scripts, to explain what they do and how to use them."
 msgstr ""
 
-#: ../../docs/user_manual/processing/console.rst:559
+#: ../../docs/user_manual/processing/console.rst:592
 msgid ""
 ":class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>` provides "
 "the :meth:`helpString <qgis.core.QgsProcessingAlgorithm.helpString>`, "
@@ -677,24 +689,24 @@ msgid ""
 " that purpose. Specify / override these to provide more help to the user."
 msgstr ""
 
-#: ../../docs/user_manual/processing/console.rst:565
+#: ../../docs/user_manual/processing/console.rst:598
 msgid ""
 ":meth:`shortDescription <qgis.core.QgsProcessingAlgorithm.shortDescription>`"
 " is used in the tooltip when hovering over the algorithm in the toolbox."
 msgstr ""
 
-#: ../../docs/user_manual/processing/console.rst:569
+#: ../../docs/user_manual/processing/console.rst:602
 msgid "Pre- and post-execution script hooks"
 msgstr "Pré- e pós-execução de encaixe da script"
 
-#: ../../docs/user_manual/processing/console.rst:571
+#: ../../docs/user_manual/processing/console.rst:604
 msgid ""
 "Scripts can also be used as pre- and post-execution hooks that are run "
 "before and after an algorithm is run, respectively. This can be used to "
 "automate tasks that should be performed whenever an algorithm is executed."
 msgstr ""
 
-#: ../../docs/user_manual/processing/console.rst:575
+#: ../../docs/user_manual/processing/console.rst:608
 msgid ""
 "The syntax is identical to the syntax explained above, but an additional "
 "global variable named ``alg`` is available, representing the algorithm that "
@@ -704,7 +716,7 @@ msgstr ""
 "``alg`` está disponível, representando o algoritmo que foi (ou está prestes "
 "a ser) executado."
 
-#: ../../docs/user_manual/processing/console.rst:579
+#: ../../docs/user_manual/processing/console.rst:612
 msgid ""
 "In the :guilabel:`General` group of the processing options dialog, you will "
 "find two entries named :guilabel:`Pre-execution script` and :guilabel:`Post-"

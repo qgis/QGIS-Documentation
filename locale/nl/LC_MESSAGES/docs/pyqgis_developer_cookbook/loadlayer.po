@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-10 11:07+0200\n"
+"POT-Creation-Date: 2020-07-26 13:13+0200\n"
 "PO-Revision-Date: 2020-03-16 19:24+0000\n"
 "Last-Translator: Dick Groskamp, 2020\n"
 "Language-Team: Dutch (https://www.transifex.com/qgis/teams/6144/nl/)\n"
@@ -196,10 +196,10 @@ msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:219
 msgid ""
-"WFS connection:. the connection is defined with a URI and using the ``WFS`` "
+"WFS connection: the connection is defined with a URI and using the ``WFS`` "
 "provider:"
 msgstr ""
-"WFS-verbinding:. de verbinding wordt gedefinieerd met een URI en het "
+"WFS-verbinding: de verbinding wordt gedefinieerd met een URI en het "
 "gebruiken van de provider ``WFS``:"
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:227
@@ -208,7 +208,7 @@ msgstr ""
 "De URI kan worden gemaakt met behulp van de standaard bibliotheek "
 "``urllib``:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:243
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:242
 msgid ""
 "You can change the data source of an existing layer by calling "
 ":meth:`setDataSource() <qgis.core.QgsVectorLayer.setDataSource>` on a "
@@ -261,16 +261,35 @@ msgstr ""
 "Dit maakt een nieuwe laag en voegt die in één stap toe aan het huidige "
 "project (waardoor het verschijnt in de lagenlijst)."
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:301
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:302
+msgid "To load a PostGIS raster:"
+msgstr "Een raster van PostGIS laden:"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:304
+msgid ""
+"PostGIS rasters, similar to PostGIS vectors, can be added to a project using"
+" a URI string. It is efficient to create a dictionary of strings for the "
+"database connection parameters. The dictionary is then loaded into an empty "
+"URI, before adding the raster. Note that None should be used when it is "
+"desired to leave the parameter blank:"
+msgstr ""
+"Rasters van PostGIS kunnen, soortgelijk aan vectors van PostGIS, aan een "
+"project worden toegevoegd met een tekenreeks URI. Het is efficiënt om een "
+"woordenboek van tekenreeksen te maken voor de parameters van de verbinding "
+"voor de database. Het woordenboek wordt dan geladen in een lege URI, vóór "
+"het toevoegen van het raster. Onthoud dat None zou moeten worden gebruikt "
+"als het gewenst is de parameter leeg te laten:"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:352
 msgid "Raster layers can also be created from a WCS service:"
 msgstr "Rasterlagen kunnen ook worden gemaakt vanuit een service voor WCS:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:309
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:360
 msgid "Here is a description of the parameters that the WCS URI can contain:"
 msgstr ""
 "Hier is een beschrijving van de parameters die de URI voor WCS mag bevatten:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:311
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:362
 msgid ""
 "WCS URI is composed of **key=value** pairs separated by ``&``. It is the "
 "same format like query string in URL, encoded the same way. "
@@ -284,7 +303,7 @@ msgstr ""
 "construeren om er voor te zorgen dat speciale tekens op de juiste manier "
 "worden gecodeerd."
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:317
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:368
 msgid ""
 "**url** (required) : WCS Server URL. Do not use VERSION in URL, because each"
 " version of WCS is using different parameter name for **GetCapabilities** "
@@ -294,11 +313,11 @@ msgstr ""
 "versie van WCS een andere naam voor de parameter voor de versie "
 "**GetCapabilities** gebruikt, zie param versie."
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:320
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:371
 msgid "**identifier** (required) : Coverage name"
 msgstr "**identifier** (vereist) : Bedekkingsnaam"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:321
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:372
 msgid ""
 "**time** (optional) : time position or time period "
 "(beginPosition/endPosition[/timeResolution])"
@@ -306,7 +325,7 @@ msgstr ""
 "**time** (optioneel) : tijdspositie of tijdsperiode "
 "(beginPosition/endPosition[/timeResolution])"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:323
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:374
 msgid ""
 "**format** (optional) : Supported format name. Default is the first "
 "supported format with tif in name or the first supported format."
@@ -315,7 +334,7 @@ msgstr ""
 "eerste ondersteunde indeling met tif in de naam of de eerste ondersteunde "
 "indeling."
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:325
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:376
 msgid ""
 "**crs** (optional) : CRS in form AUTHORITY:ID, e.g. EPSG:4326. Default is "
 "EPSG:4326 if supported or the first supported CRS."
@@ -323,15 +342,15 @@ msgstr ""
 "**crs** (optioneel) : CRS in de vorm AUTHORITY:ID, bijv. EPSG:4326. "
 "Standaard is EPSG:4326 indien ondersteund of het eerste ondersteunde CRS."
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:327
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:378
 msgid "**username** (optional) : Username for basic authentication."
 msgstr "**username** (optioneel) : Gebruikersnaam voor basisauthenticatie."
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:328
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:379
 msgid "**password** (optional) : Password for basic authentication."
 msgstr "**password** (optioneel) : Wachtwoord voor basisauthenticatie."
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:329
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:380
 msgid ""
 "**IgnoreGetMapUrl** (optional, hack) : If specified (set to 1), ignore "
 "GetCoverage URL advertised by GetCapabilities. May be necessary if a server "
@@ -341,7 +360,7 @@ msgstr ""
 "1), negeer GetCoverage URL aangeboden door GetCapabilities. Kan nodig zijn "
 "als een server niet juist is geconfigureerd."
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:332
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:383
 msgid ""
 "**InvertAxisOrientation** (optional, hack) : If specified (set to 1), switch"
 " axis in GetCoverage request. May be necessary for geographic CRS if a "
@@ -352,7 +371,7 @@ msgstr ""
 "voor geografisch CRS als een server de verkeerde volgorde voor assen "
 "gebruikt."
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:335
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:386
 msgid ""
 "**IgnoreAxisOrientation** (optional, hack) : If specified (set to 1), do not"
 " invert axis orientation according to WCS standard for geographic CRS."
@@ -361,7 +380,7 @@ msgstr ""
 "(ingesteld op 1), as-oriëntatie niet omdraaien overeenkomstig de standaard "
 "van WCS voor geografisch CRS."
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:337
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:388
 msgid ""
 "**cache** (optional) : cache load control, as described in "
 "QNetworkRequest::CacheLoadControl, but request is resend as PreferCache if "
@@ -373,7 +392,7 @@ msgstr ""
 "PreferCache indien mislukt met AlwaysCache. Toegestane waarden: AlwaysCache,"
 " PreferCache, PreferNetwork, AlwaysNetwork. Standaard is AlwaysCache."
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:345
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:396
 msgid ""
 "Alternatively you can load a raster layer from WMS server. However currently"
 " it's not possible to access GetCapabilities response from API --- you have "
@@ -383,11 +402,11 @@ msgstr ""
 "Momenteel is het echter niet mogelijk om toegang te krijgen tot het antwoord"
 " van GetCapabilities van de API --- u moet weten welke lagen u wilt:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:359
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:410
 msgid "QgsProject instance"
 msgstr "Instance QgsProject "
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:361
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:412
 msgid ""
 "If you would like to use the opened layers for rendering, do not forget to "
 "add them to the :class:`QgsProject <qgis.core.QgsProject>` instance. The "
@@ -407,7 +426,7 @@ msgstr ""
 "in de interface van QGIS interface, of via Python met de methode "
 ":meth:`removeMapLayer() <qgis.core.QgsProject.removeMapLayer>`."
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:370
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:421
 msgid ""
 "Adding a layer to the current project is done using the :meth:`addMapLayer()"
 " <qgis.core.QgsProject.addMapLayer>` method:"
@@ -415,11 +434,11 @@ msgstr ""
 "Toevoegen van een laag aan het huidige project wordt gedaan met de methode "
 ":meth:`addMapLayer() <qgis.core.QgsProject.addMapLayer>`:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:376
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:427
 msgid "To add a layer at an absolute position:"
 msgstr "Een laag op een absolute positie toevoegen:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:387
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:438
 msgid ""
 "If you want to delete the layer use the :meth:`removeMapLayer() "
 "<qgis.core.QgsProject.removeMapLayer>` method:"
@@ -427,7 +446,7 @@ msgstr ""
 "Als u de laag wilt verwijderen, gebruik dan de methode "
 ":meth:`removeMapLayer() <qgis.core.QgsProject.removeMapLayer>`:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:394
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:445
 msgid ""
 "In the above code, the layer id is passed (you can get it calling the "
 ":meth:`id() <qgis.core.QgsMapLayer.id>` method of the layer), but you can "
@@ -437,7 +456,7 @@ msgstr ""
 "het aanroepen van de methode  :meth:`id() <qgis.core.QgsMapLayer.id>` van de"
 " laag), maar u kunt ook het object laag zelf doorgeven."
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:397
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:448
 msgid ""
 "For a list of loaded layers and layer ids, use the :meth:`mapLayers() "
 "<qgis.core.QgsProject.mapLayers>` method:"

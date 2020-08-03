@@ -4,17 +4,18 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
 # mnamihdk, 2020
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# Kayama Yoichi <yoichi.kayama@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-10 11:07+0200\n"
+"POT-Creation-Date: 2020-07-26 13:13+0200\n"
 "PO-Revision-Date: 2020-03-16 19:31+0000\n"
-"Last-Translator: mnamihdk, 2020\n"
+"Last-Translator: Kayama Yoichi <yoichi.kayama@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,11 +38,40 @@ msgstr ""
 
 #: ../../docs/user_manual/processing/intro.rst:10
 msgid ""
+"As a :ref:`Core plugin <core_plugins>`, Processing is installed by default "
+"but you need to activate it:"
+msgstr ""
+"プロセッシングは :ref:`Core plugin <core_plugins>`, としてインストールされますが有効化する必要があります:"
+
+#: ../../docs/user_manual/processing/intro.rst:13
+msgid "Go to :menuselection:`Plugins --> Manage and install plugins...`"
+msgstr ""
+
+#: ../../docs/user_manual/processing/intro.rst:14
+msgid "Click on the :guilabel:`Installed` tab at the left"
+msgstr ""
+
+#: ../../docs/user_manual/processing/intro.rst:15
+msgid "Check the box next to the |processing| :guilabel:`Processing` entry"
+msgstr ""
+
+#: ../../docs/user_manual/processing/intro.rst:16
+msgid "Close the dialog."
+msgstr "ダイアログを閉じます。"
+
+#: ../../docs/user_manual/processing/intro.rst:18
+msgid ""
+"A :menuselection:`Processing` menu is now available in the top menu bar. "
+"From there you can reach the main components of this framework."
+msgstr ""
+
+#: ../../docs/user_manual/processing/intro.rst:21
+msgid ""
 "In the following sections, we will review how to use the graphical elements "
 "of this framework and make the most out of each one of them."
 msgstr "以降のセクションではこのフレームワークのグラフィカルなツールをどのように使うのかを説明してそれぞれのツールを最大限に活用します。"
 
-#: ../../docs/user_manual/processing/intro.rst:13
+#: ../../docs/user_manual/processing/intro.rst:24
 msgid ""
 "There are four basic elements in the framework GUI, which are used to run "
 "algorithms for different purposes. Choosing one tool or another will depend "
@@ -57,7 +87,7 @@ msgstr ""
 " :menuselection:`プロセッシング` "
 "メニュー項目からアクセスすることができます（バッチ処理は、後で見るように、ツールボックスかアルゴリズム実行ダイアログから呼ばれます）。メニューにはその他の選択肢も表示されると思いますが、それらはアルゴリズムの実行には使われませんので、この章の後の方で説明します。"
 
-#: ../../docs/user_manual/processing/intro.rst:22
+#: ../../docs/user_manual/processing/intro.rst:33
 msgid ""
 "The :guilabel:`Toolbox`: The main element of the GUI, it is used to execute "
 "a single algorithm or run a batch process based on that algorithm."
@@ -65,11 +95,11 @@ msgstr ""
 ":guilabel:`ツールボックス`： "
 "このGUIの主要要素です。単一のアルゴリズムか、もしくはそのアルゴリズムに基づいたバッチ処理を走らせるために使われます。"
 
-#: ../../docs/user_manual/processing/intro.rst:30
+#: ../../docs/user_manual/processing/intro.rst:41
 msgid "Processing Toolbox"
 msgstr "プロセッシングツールボックス"
 
-#: ../../docs/user_manual/processing/intro.rst:32
+#: ../../docs/user_manual/processing/intro.rst:43
 msgid ""
 "The :guilabel:`Graphical Modeler`: Several algorithms can be combined "
 "graphically using the modeler to define a workflow, creating a single "
@@ -78,11 +108,11 @@ msgstr ""
 ":guilabel:`グラフィカルモデラー`： "
 "複数のアルゴリズムをモデラーを用いてグラフィカルに組み合わせることにより、ワークフローを定義することができます。これによって複数のサブプロセスを伴って実行されるひとつのプロセスを作成します。"
 
-#: ../../docs/user_manual/processing/intro.rst:42
+#: ../../docs/user_manual/processing/intro.rst:53
 msgid "Processing Modeler"
 msgstr "プロセッシングモデラー"
 
-#: ../../docs/user_manual/processing/intro.rst:44
+#: ../../docs/user_manual/processing/intro.rst:55
 msgid ""
 "The :guilabel:`History` manager: All actions performed using any of the "
 "aforementioned elements are stored in a history file and can be later easily"
@@ -91,11 +121,11 @@ msgstr ""
 ":guilabel:`履歴` マネージャ： "
 "先の2つの要素で行われた操作はすべて履歴ファイルに格納され、履歴マネージャを使って後から簡単に繰り返すことができます。"
 
-#: ../../docs/user_manual/processing/intro.rst:53
+#: ../../docs/user_manual/processing/intro.rst:64
 msgid "Processing History"
 msgstr "プロセッシング履歴"
 
-#: ../../docs/user_manual/processing/intro.rst:55
+#: ../../docs/user_manual/processing/intro.rst:66
 msgid ""
 "The :guilabel:`Batch Processing` interface: This interface allows you to "
 "execute batch processes and automate the execution of a single algorithm on "
@@ -104,11 +134,11 @@ msgstr ""
 ":guilabel:`バッチ処理` インターフェイス： "
 "このインターフェイスでバッチ処理を行うことにより、複数のデータセットに対する単一のアルゴリズムの実行を自動化することができます。"
 
-#: ../../docs/user_manual/processing/intro.rst:65
+#: ../../docs/user_manual/processing/intro.rst:76
 msgid "Batch Processing interface"
 msgstr "バッチ処理インターフェイス"
 
-#: ../../docs/user_manual/processing/intro.rst:67
+#: ../../docs/user_manual/processing/intro.rst:78
 msgid ""
 "In the following sections, we will review each one of these elements in "
 "detail."

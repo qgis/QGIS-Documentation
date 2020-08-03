@@ -5,16 +5,16 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
-# Arnaud Vandecasteele <arnaud.sig@gmail.com>, 2020
+# MarieSilvestre, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-10 11:07+0200\n"
+"POT-Creation-Date: 2020-07-26 13:13+0200\n"
 "PO-Revision-Date: 2020-03-16 19:20+0000\n"
-"Last-Translator: Arnaud Vandecasteele <arnaud.sig@gmail.com>, 2020\n"
+"Last-Translator: MarieSilvestre, 2020\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,8 +23,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: ../../docs/training_manual/vector_classification/label_tool.rst:2
-msgid "|LS| The Label Tool"
-msgstr "|LS| L'outil Étiquette"
+msgid "|LS| Labels"
+msgstr ""
 
 #: ../../docs/training_manual/vector_classification/label_tool.rst:4
 msgid ""
@@ -39,114 +39,100 @@ msgstr ""
 
 #: ../../docs/training_manual/vector_classification/label_tool.rst:8
 msgid ""
-"The :guilabel:`Layer Properties` dialog does have a :guilabel:`Labels` tab, "
-"which now offers the same functionality, but for this example we'll use the "
-":guilabel:`Label tool`, accessed via a toolbar button."
-msgstr ""
-"La fenêtre :guilabel:`Propriétés de la couche` dispose d'un onglet "
-":guilabel:`Étiquettes` qui offre maintenant les mêmes fonctionnalités, mais "
-"pour cet exemple, nous utiliserons l'outil :guilabel:`Étiquette` accessible "
-"via une barre d'outils."
-
-#: ../../docs/training_manual/vector_classification/label_tool.rst:13
-msgid ""
 "**The goal for this lesson:** To apply useful and good-looking labels to a "
 "layer."
 msgstr ""
 "**Le but de ce cours:** Appliquer des étiquettes utiles, jolies et lisibles "
 "à une couche."
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:17
+#: ../../docs/training_manual/vector_classification/label_tool.rst:13
 msgid "|basic| |FA| Using Labels"
 msgstr "|basic| |FA| Utilisation d'étiquettes"
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:19
-msgid ""
-"Before being able to access the Label tool, you will need to ensure that it "
-"has been activated."
+#: ../../docs/training_manual/vector_classification/label_tool.rst:15
+msgid "First, ensure that the |labeling| button is visible in the GUI:"
 msgstr ""
-"Avant de pouvoir accéder à l'outil Étiquette, vous devez vous assurer de "
-"l'avoir activé."
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:17
+msgid "Go to the menu item :menuselection:`View --> Toolbars`"
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:18
+msgid ""
+"Ensure that the :guilabel:`Label Toolbar` item has a check mark next to it. "
+"If it doesn't, click on the :guilabel:`Label Toolbar` item to activate it."
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:20
+msgid ""
+"Click on the ``places`` layer in the :guilabel:`Layers` panel so that it is "
+"highlighted"
+msgstr ""
 
 #: ../../docs/training_manual/vector_classification/label_tool.rst:22
-msgid "Go to the menu item :menuselection:`View --> Toolbars`."
-msgstr "Allez au menu :menuselection:`Vue --> Barres d'outils`."
-
-#: ../../docs/training_manual/vector_classification/label_tool.rst:23
 msgid ""
-"Ensure that the :guilabel:`Label` item has a check mark next to it. If it "
-"doesn't, click on the :guilabel:`Label` item, and it will be activated."
+"Click on the |labeling| toolbar button to open the :guilabel:`Labels` tab of"
+" the :guilabel:`Layer Styling` panel"
 msgstr ""
-"Assurez-vous que la case à côté du libellé :guilabel:`Étiquette` est cochée."
-" Si elle ne l'est pas, Cliquez sur le libellé :guilabel:`Étiquette` et ce "
-"sera activé."
 
 #: ../../docs/training_manual/vector_classification/label_tool.rst:25
 msgid ""
-"Click on the :guilabel:`places` layer in the :guilabel:`Layers` panel, so "
-"that it is highlighted."
+"Switch from :guilabel:`No Labels` to |labeling| :guilabel:`Single Labels`"
 msgstr ""
-"Depuis le panneau des :guilabel:`couches`, cliquez sur la couche "
-":guilabel:`places` afin de mettre celle-ci en évidence."
 
 #: ../../docs/training_manual/vector_classification/label_tool.rst:27
-msgid "Click on the following toolbar button: |labeling|"
-msgstr "Cliquez sur le bouton suivant: |labeling|"
-
-#: ../../docs/training_manual/vector_classification/label_tool.rst:29
-msgid "This gives you the :guilabel:`Layer labeling settings` dialog."
-msgstr ""
-"Ceci vous ouvre la fenêtre :guilabel:`Paramètres d'étiquetage de la couche`."
-
-#: ../../docs/training_manual/vector_classification/label_tool.rst:31
-msgid "Check the box next to :guilabel:`Label this layer with...`."
-msgstr "Cochez la case à côté de :guilabel:`Étiqueter cette couche avec...`."
-
-#: ../../docs/training_manual/vector_classification/label_tool.rst:33
 msgid ""
 "You'll need to choose which field in the attributes will be used for the "
-"labels. In the previous lesson, you decided that the :kbd:`NAME` field was "
-"the most suitable one for this purpose."
+"labels. In the previous lesson, you decided that the ``name`` field was the "
+"most suitable one for this purpose."
 msgstr ""
-"Il vous faudra choisir le champ de la table d'attributs qui sera utilisé "
-"pour les étiquettes. Dans le cours précédent, vous avez décidé que le champ "
-":kbd:`NAME` était le plus approprié pour un tel objectif."
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:37
-msgid "Select :guilabel:`name` from the list:"
-msgstr "Sélectionnez :guilabel:`name` dans la liste:"
+#: ../../docs/training_manual/vector_classification/label_tool.rst:31
+msgid "Select ``name`` from the Value list:"
+msgstr ""
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:42
-msgid "Click :guilabel:`OK`."
-msgstr "Cliquez sur :guilabel:`OK`."
+#: ../../docs/training_manual/vector_classification/label_tool.rst:36
+#: ../../docs/training_manual/vector_classification/label_tool.rst:66
+#: ../../docs/training_manual/vector_classification/label_tool.rst:79
+#: ../../docs/training_manual/vector_classification/label_tool.rst:97
+msgid "Click :guilabel:`Apply`"
+msgstr "Cliquez sur :guilabel:`Appliquer`"
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:44
+#: ../../docs/training_manual/vector_classification/label_tool.rst:38
 msgid "The map should now have labels like this:"
 msgstr "La carte devrait maintenant afficher des étiquettes comme ceci:"
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:50
+#: ../../docs/training_manual/vector_classification/label_tool.rst:45
 msgid "|basic| |FA| Changing Label Options"
 msgstr "|basic| |FA| Modification des Options d’Étiquetage"
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:52
+#: ../../docs/training_manual/vector_classification/label_tool.rst:47
 msgid ""
-"Depending on the styles you chose for your map in earlier lessons, you'll "
-"might find that the labels are not appropriately formatted and either "
-"overlap or are too far away from their point markers."
+"Depending on the styles you chose for your map in earlier lessons, you might"
+" find that the labels are not appropriately formatted and either overlap or "
+"are too far away from their point markers."
 msgstr ""
-"Selon les styles que vous avez choisis pour votre carte dans les leçons "
-"précédentes, vous trouverez peut-être que les étiquettes ne sont pas "
-"correctement formatés ou se chevauchent ou encore sont trop éloignés de "
-"leurs points de référence."
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:56
+#: ../../docs/training_manual/vector_classification/label_tool.rst:51
 msgid ""
-"Open the :guilabel:`Label tool` again by clicking on its button as before."
+"Above, you used the |labeling| button in the :guilabel:`Label Toolbar` to "
+"open the :guilabel:`Layer Styling` panel. As with :guilabel:`Symbology`, the"
+" same label options are available via both the :guilabel:`Layer Styling` "
+"panel and the :guilabel:`Layer Properties` dialog. Here, you'll use the "
+":guilabel:`Layer Properties` dialog."
 msgstr ""
-"Ouvrez la fenêtre :guilabel:`Paramètres d'étiquetage de la couche` une "
-"nouvelle fois en cliquant sur le bouton comme précédemment."
 
 #: ../../docs/training_manual/vector_classification/label_tool.rst:57
+msgid ""
+"Open the :guilabel:`Layer Properties` dialog by double-clicking on the "
+"``places`` layer"
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:59
+msgid "Select the |labeling| :guilabel:`Labels` tab"
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:60
 msgid ""
 "Make sure :guilabel:`Text` is selected in the left-hand options list, then "
 "update the text formatting options to match those shown here:"
@@ -155,26 +141,18 @@ msgstr ""
 " gauche, puis mettez à jour les options de formattage de texte pour les "
 "faire correspondre à celles montrées ci-dessous:"
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:64
-msgid ""
-"That's the font problem solved! Now let's look at the problem of the labels "
-"overlapping the points, but before we do that, let's take a look at the "
-":guilabel:`Buffer` option."
-msgstr ""
-"Le problème de la police est résolu! Maintenant, examinons la question des "
-"étiquettes qui chevauchent les points, mais avant cela, jetons un coup "
-"d'oeil à l'option :guilabel:`Tampon`."
-
 #: ../../docs/training_manual/vector_classification/label_tool.rst:68
-msgid "Open the :guilabel:`Label tool` dialog."
-msgstr "Ouvrez la fenêtre :guilabel:`Paramètres d'étiquetage de la couche`."
-
-#: ../../docs/training_manual/vector_classification/label_tool.rst:69
-msgid "Select :guilabel:`Buffer` from the left-hand options list."
+msgid ""
+"That font may be larger and more familiar to users, but its readability is "
+"still dependent on what layers are rendered beneath it. To solve this, let's"
+" take a look at the :guilabel:`Buffer` option."
 msgstr ""
-"Sélectionnez :guilabel:`Tampon` dans la liste d'options en partie gauche."
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:70
+#: ../../docs/training_manual/vector_classification/label_tool.rst:72
+msgid "Select :guilabel:`Buffer` from the left-hand options list"
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:73
 msgid ""
 "Select the checkbox next to :guilabel:`Draw text buffer`, then choose "
 "options to match those shown here:"
@@ -182,12 +160,7 @@ msgstr ""
 "Sélectionnez la case à cocher à côté de :guilabel:`Affiche un tampon`, puis "
 "choisissez les options qui correspondent aux suivantes:"
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:77
-#: ../../docs/training_manual/vector_classification/label_tool.rst:97
-msgid "Click :guilabel:`Apply`."
-msgstr "Cliquez sur :guilabel:`Appliquer`."
-
-#: ../../docs/training_manual/vector_classification/label_tool.rst:80
+#: ../../docs/training_manual/vector_classification/label_tool.rst:81
 msgid ""
 "You'll see that this adds a colored buffer or border to the place labels, "
 "making them easier to pick out on the map:"
@@ -195,7 +168,7 @@ msgstr ""
 "Vous constaterez que cela ajoute une bordure ou un tampon coloré autour des "
 "étiquettes des places, les rendant plus faciles à repérer sur la carte:"
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:86
+#: ../../docs/training_manual/vector_classification/label_tool.rst:87
 msgid ""
 "Now we can address the positioning of the labels in relation to their point "
 "markers."
@@ -203,48 +176,37 @@ msgstr ""
 "Maintenant, nous pouvons aborder le positionnement des étiquettes par "
 "rapport à leurs points de repères."
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:89
-msgid ""
-"In the :guilabel:`Label tool` dialog, go to the :guilabel:`Placement` tab."
-msgstr ""
-"Dans la fenêtre :guilabel:`Paramètres d'étiquetage de la couche`, allez à "
-"l'onglet :guilabel:`Emplacement`."
-
 #: ../../docs/training_manual/vector_classification/label_tool.rst:90
-msgid ""
-"Change the value of :guilabel:`Distance` to :kbd:`2mm` and make sure that "
-":guilabel:`Around point` is selected:"
+msgid "Select :guilabel:`Placement` from the left-hand options list"
 msgstr ""
-"Modifiez la valeur :guilabel:`Distance` à :kbd:`2mm` et assurez-vous que "
-":guilabel:`Autour du point` est sélectionné:"
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:100
+#: ../../docs/training_manual/vector_classification/label_tool.rst:91
+msgid ""
+"Select :guilabel:`Around point` and change the value of :guilabel:`Distance`"
+" to ``2.0`` Millimeters:"
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:99
 msgid ""
 "You'll see that the labels are no longer overlapping their point markers."
 msgstr ""
 "Vous verrez que les étiquettes ne chevauchent plus désormais les points."
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:104
+#: ../../docs/training_manual/vector_classification/label_tool.rst:103
 msgid "|moderate| |FA| Using Labels Instead of Layer Symbology"
 msgstr ""
 "|moderate| |FA| Utiliser des étiquettes à la place de symboles de couche"
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:106
+#: ../../docs/training_manual/vector_classification/label_tool.rst:105
 msgid ""
 "In many cases, the location of a point doesn't need to be very specific. For"
-" example, most of the points in the :guilabel:`places` layer refer to entire"
-" towns or suburbs, and the specific point associated with such features is "
-"not that specific on a large scale. In fact, giving a point that is too "
-"specific is often confusing for someone reading a map."
+" example, most of the points in the ``places`` layer refer to entire towns "
+"or suburbs, and the specific point associated with such features is not that"
+" specific on a large scale. In fact, giving a point that is too specific is "
+"often confusing for someone reading a map."
 msgstr ""
-"Dans de nombreux cas, l'emplacement d'un point n'a pas besoin d'être très "
-"précis. Par exemple, la plupart des points dans la couche :guilabel:`places`"
-" se réfère à des villes entières ou des banlieues, et le point "
-"spécifiquement associé à de telles entités n'est pas si précis à une grande "
-"échelle. En fait, donner un point trop précis est souvent déroutant pour "
-"quelqu'un qui lit une carte."
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:112
+#: ../../docs/training_manual/vector_classification/label_tool.rst:111
 msgid ""
 "To name an example: on a map of the world, the point given for the European "
 "Union may be somewhere in Poland, for instance. To someone reading the map, "
@@ -256,7 +218,7 @@ msgstr ""
 "carte, voir un point marqué *Union Européenne* en Pologne peut sembler "
 "vouloir dire que la capitale de l'Union Européenne est donc en Pologne."
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:117
+#: ../../docs/training_manual/vector_classification/label_tool.rst:116
 msgid ""
 "So, to prevent this kind of misunderstanding, it's often useful to "
 "deactivate the point symbols and replace them completely with labels."
@@ -265,7 +227,7 @@ msgstr ""
 "désactiver les symboles de points et les remplacer complètement par les "
 "étiquettes."
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:120
+#: ../../docs/training_manual/vector_classification/label_tool.rst:119
 msgid ""
 "In QGIS, you can do this by changing the position of the labels to be "
 "rendered directly over the points they refer to."
@@ -273,24 +235,21 @@ msgstr ""
 "Dans QGIS, vous pouvez faire ça en positionnant l'étiquette directement à la"
 " place du point auquel elle se réfère."
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:123
+#: ../../docs/training_manual/vector_classification/label_tool.rst:122
 msgid ""
-"Open the :guilabel:`Layer labeling settings` dialog for the "
-":guilabel:`places` layer."
+"Open the |labeling| :guilabel:`Labels` tab of the :guilabel:`Layer "
+"Properties` dialog for the ``places`` layer"
 msgstr ""
-"Ouvrez la fenêtre :guilabel:`Paramètres d'étiquetage de la couche` de la "
-"couche :guilabel:`places`."
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:124
+msgid "Select the :guilabel:`Placement` option from the options list"
+msgstr ""
 
 #: ../../docs/training_manual/vector_classification/label_tool.rst:125
-msgid "Select the :guilabel:`Placement` option from the options list."
+msgid "Click on the :guilabel:`Offset from point` button"
 msgstr ""
-"Sélectionnez l'option :guilabel:`Emplacement` dans la liste d'options."
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:126
-msgid "Click on the :guilabel:`Offset from point` button."
-msgstr "Cliquez sur le bouton :guilabel:`Autour du point`."
-
-#: ../../docs/training_manual/vector_classification/label_tool.rst:128
+#: ../../docs/training_manual/vector_classification/label_tool.rst:127
 msgid ""
 "This will reveal the :guilabel:`Quadrant` options which you can use to set "
 "the position of the label in relation to the point marker. In this case, we "
@@ -301,49 +260,36 @@ msgstr ""
 "Dans le cas-ci, nous souhaitons centrer l'étiquette sur le point donc "
 "choisissez le centre du quadrant:"
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:135
+#: ../../docs/training_manual/vector_classification/label_tool.rst:134
 msgid ""
-"Hide the point symbols by editing the layer style as usual, and setting the "
-"size of the :guilabel:`Ellipse marker` width and height to :kbd:`0`:"
+"Hide the point symbols by editing the layer :guilabel:`Symbology` as usual, "
+"and setting the size of the :guilabel:`Marker` size to ``0.0``:"
 msgstr ""
-"Cachez les symboles de point en éditant le style de couche comme d'habitude,"
-" et en mettant la hauteur et la largeur du :guilabel:`symbole d'ellipse` à "
-":kbd:`0`:"
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:141
-msgid "Click :guilabel:`OK` and you'll see this result:"
-msgstr "Cliquez sur :guilabel:`OK` et vous obtiendrez ce résultat:"
+#: ../../docs/training_manual/vector_classification/label_tool.rst:140
+msgid "Click :guilabel:`Apply` and you'll see this result:"
+msgstr ""
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:146
+#: ../../docs/training_manual/vector_classification/label_tool.rst:145
 msgid ""
 "If you were to zoom out on the map, you would see that some of the labels "
 "disappear at larger scales to avoid overlapping. Sometimes this is what you "
 "want when dealing with datasets that have many points, but at other times "
 "you will lose useful information this way. There is another possibility for "
 "handling cases like this, which we'll cover in a later exercise in this "
-"lesson."
+"lesson. For now, zoom out and click on the |showUnplacedLabel| button in the"
+" toolbar and see what happens."
 msgstr ""
-"Si vous effectuiez un zoom arrière sur la carte, vous verriez que la plupart"
-" des étiquettes disparaissent à une échelle plus grande afin d'éviter les "
-"chevauchements. Parfois, c'est ce qui est souhaité lorsqu'il s'agit de "
-"données avec beaucoup de points, mais d'autres fois cette façon vous fera "
-"perdre des informations utiles. Il y a une autre possibilité pour le "
-"traitement de cas comme celui-ci, que nous verrons dans un exercice plus "
-"tard dans cette leçon."
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:156
+#: ../../docs/training_manual/vector_classification/label_tool.rst:157
 msgid "|moderate| |TY| Customize the Labels"
 msgstr "|moderate| |TY| Personnaliser les étiquettes"
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:158
+#: ../../docs/training_manual/vector_classification/label_tool.rst:159
 msgid ""
-"Return the label and symbol settings to have a point marker and a label "
-"offset of :kbd:`2.00mm`. You may like to adjust the styling of the point "
-"marker or labels at this stage."
+"Reset the label and symbol settings to have a point marker and a label "
+"offset of ``2.0`` Millimeters."
 msgstr ""
-"Revenez dans les préférences des étiquettes et des symboles pour mettre un "
-"symbole en point et un décalage des étiquettes de :kbd:`2.00mm`. Vous pouvez"
-" ajuster le style du symbole en point ou les étiquettes à ce stade."
 
 #: ../../docs/training_manual/vector_classification/label_tool.rst:162
 msgid ":ref:`Check your results <label-tool-1>`"
@@ -351,18 +297,10 @@ msgstr ":ref:`Vérifiez vos résultats <label-tool-1>`"
 
 #: ../../docs/training_manual/vector_classification/label_tool.rst:164
 msgid ""
-"Set the map to the scale :kbd:`1:100000`. You can do this by typing it into "
-"the :guilabel:`Scale` box in the :guilabel:`Status Bar`."
+"Set the map to the scale ``1:100000``. You can do this by typing it into the"
+" :guilabel:`Scale` box in the :guilabel:`Status Bar`. Modify your labels to "
+"be suitable for viewing at this scale."
 msgstr ""
-"Définissez l'échelle de carte à :kbd:`1:100000`. Vous pouvez le faire en le "
-"saisissant directement dans la case :guilabel:`Échelle` de la "
-":guilabel:`Barre d'Etat`."
-
-#: ../../docs/training_manual/vector_classification/label_tool.rst:166
-msgid "Modify your labels to be suitable for viewing at this scale."
-msgstr ""
-"Modifiez vos étiquettes pour les rendre cohérentes avec cette échelle de "
-"lecture."
 
 #: ../../docs/training_manual/vector_classification/label_tool.rst:168
 msgid ":ref:`Check your results <label-tool-2>`"
@@ -385,56 +323,48 @@ msgstr ""
 
 #: ../../docs/training_manual/vector_classification/label_tool.rst:181
 msgid ""
-"We will now reformat the :guilabel:`roads` layer labels so that they are "
-"easy to understand."
+"We will now reformat the ``roads`` layer labels so that they are easy to "
+"understand."
 msgstr ""
-"Nous allons reparamétrer les étiquettes de la couche :guilabel:`roads` afin "
-"qu'elles soient faciles à comprendre."
 
 #: ../../docs/training_manual/vector_classification/label_tool.rst:184
-msgid "Hide the :guilabel:`Places` layer so that it doesn't distract you."
+msgid "Hide the ``places`` layer so that it doesn't distract you"
 msgstr ""
-"Cachez la couche :guilabel:`Places` afin qu'elle ne vous perturbe pas."
 
 #: ../../docs/training_manual/vector_classification/label_tool.rst:185
-msgid "Activate labels for the :guilabel:`streets` layer as before."
-msgstr "Activez les étiquettes de la couche :guilabel:`streets` comme avant."
-
-#: ../../docs/training_manual/vector_classification/label_tool.rst:186
 msgid ""
-"Set the font :guilabel:`Size` to :kbd:`10` so that you can see more labels."
+"Activate |labeling| :guilabel:`Single Labels` for the ``roads`` layer as you"
+" did above for ``places``"
 msgstr ""
-"Mettez la :guilabel:`Taille` de police à :kbd:`10` afin de voir le plus "
-"d'étiquettes."
 
 #: ../../docs/training_manual/vector_classification/label_tool.rst:187
-msgid "Zoom in on the |majorUrbanName| town area."
-msgstr "Zoomez sur l'étendue de la ville |majorUrbanName|."
+msgid ""
+"Set the font :guilabel:`Size` to ``10`` so that you can see more labels"
+msgstr ""
 
 #: ../../docs/training_manual/vector_classification/label_tool.rst:188
+msgid "Zoom in on the |majorUrbanName| town area"
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:189
 msgid ""
-"In the :guilabel:`Label tool` dialog's :guilabel:`Advanced` tab, choose the "
+"In the :guilabel:`Labels` tab's :guilabel:`Placement` tab, choose the "
 "following settings:"
 msgstr ""
-"Dans la fenêtre :guilabel:`Etiquette`, allez à l'onglet "
-":guilabel:`Emplacement` et choisissez les paramètres suivants."
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:194
+#: ../../docs/training_manual/vector_classification/label_tool.rst:195
 msgid ""
 "You'll probably find that the text styling has used default values and the "
-"labels are consequently very hard to read. Set the label text format to have"
-" a dark-grey or black :kbd:`Color` and a light-yellow :kbd:`buffer`."
+"labels are consequently very hard to read. Update the :guilabel:`Text` to "
+"use a dark-grey or black :guilabel:`Color` and the :guilabel:`Buffer` to use"
+" a light-yellow :guilabel:`Color`."
 msgstr ""
-"Vous verrez probablement que le style de texte a utilisé les valeurs par "
-"défaut et les étiquettes sont par conséquent très difficiles à lire. "
-"Définissez le format de texte d'étiquette avec une :kbd:`Couleur` gris foncé"
-" ou noir et un :kbd:`Tampon` jaune clair."
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:198
+#: ../../docs/training_manual/vector_classification/label_tool.rst:200
 msgid "The map will look somewhat like this, depending on scale:"
 msgstr "Selon l'échelle, la carte devrait ressembler à peu près à ceci:"
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:203
+#: ../../docs/training_manual/vector_classification/label_tool.rst:205
 msgid ""
 "You'll see that some of the road names appear more than once and that's not "
 "always necessary. To prevent this from happening:"
@@ -442,21 +372,18 @@ msgstr ""
 "Vous verrez que certains noms de voies apparaissent plus d'une fois sans que"
 " ce ne soit toujours nécessaire. Pour empêcher cela:"
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:206
+#: ../../docs/training_manual/vector_classification/label_tool.rst:208
 msgid ""
-"In the :guilabel:`Label labelling settings` dialog, choose the "
-":guilabel:`Rendering` option and select the :guilabel:`Merge connected lines"
-" to avoid duplicate labels`:"
+"In the :guilabel:`Labels` tab of the :guilabel:`Layer Properties` dialog, "
+"choose the :guilabel:`Rendering` option and select :guilabel:`Merge "
+"connected lines to avoid duplicate labels` as shown:"
 msgstr ""
-"Dans la fenêtre :guilabel:`Paramètres d'étiquetage de la couche`, choisissez"
-" l'option :guilabel:`Rendu` et sélectionnez :guilabel:`Fusionner les lignes "
-"connectées pour éviter la duplication d'étiquettes`:"
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:213
+#: ../../docs/training_manual/vector_classification/label_tool.rst:215
 msgid "Click :guilabel:`OK`"
 msgstr "Cliquez sur :guilabel:`OK`."
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:215
+#: ../../docs/training_manual/vector_classification/label_tool.rst:217
 msgid ""
 "Another useful function is to prevent labels being drawn for features too "
 "short to be of notice."
@@ -464,113 +391,105 @@ msgstr ""
 "Une autre fonction utile permet d'empêcher l'affichage des entités trop "
 "courtes pour être indiquées."
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:218
+#: ../../docs/training_manual/vector_classification/label_tool.rst:220
 msgid ""
 "In the same :guilabel:`Rendering` panel, set the value of "
-":guilabel:`Suppress labeling of features smaller than ...` to :kbd:`5mm` and"
-" note the results when you click :guilabel:`Apply`."
+":guilabel:`Suppress labeling of features smaller than ...` to ``5.00 mm`` "
+"and note the results when you click :guilabel:`Apply`"
 msgstr ""
-"Dans le même panneau :guilabel:`Rendu`, définissez à :kbd:`5mm` la valeur de"
-" :guilabel:`Ne pas afficher d'étiquettes pour les entités plus petites que` "
-"et regardez le résultat lorsque vous cliquez sur :guilabel:`Appliquer`."
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:222
+#: ../../docs/training_manual/vector_classification/label_tool.rst:224
 msgid ""
 "Try out different :guilabel:`Placement` settings as well. As we've seen "
-"before, the :guilabel:`horizontal` option is not a good idea in this case, "
-"so let's try the :guilabel:`curved` option instead."
+"before, the :guilabel:`Horizontal` option is not a good idea in this case, "
+"so let's try the :guilabel:`Curved` option instead."
 msgstr ""
-"Essayez d'autres options :guilabel:`Emplacement`. Comme vu précédemment, "
-"l'option :guilabel:`horizontal` n'est pas approprié dans ce cas-ci, alors "
-"essayons l'option :guilabel:`Courbé` à la place."
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:226
+#: ../../docs/training_manual/vector_classification/label_tool.rst:228
 msgid ""
 "Select the :guilabel:`Curved` option in the :guilabel:`Placement` panel of "
-"the :guilabel:`Layer labeling settings` dialog."
+"the :guilabel:`Layers` tab"
 msgstr ""
-"Sélectionnez l'option :guilabel:`Courbé` du panneau :guilabel:`Placement` de"
-" la fenêtre :guilabel:`Paramètres d'étiquetage de la couche`. "
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:229
+#: ../../docs/training_manual/vector_classification/label_tool.rst:231
 msgid "Here's the result:"
 msgstr "Voici le résultat:"
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:234
+#: ../../docs/training_manual/vector_classification/label_tool.rst:236
 msgid ""
-"As you can see, this hides a lot of the labels that were previously visible,"
-" because of the difficulty of making some of them follow twisting street "
-"lines and still be legible. You can decide which of these options to use, "
-"depending on what you think seems more useful or what looks better."
+"As you can see, this hides some labels that were previously visible, because"
+" of the difficulty of making some of them follow twisting street lines while"
+" still being legible. It makes other labels much more useful since they "
+"track the roads rather than float in space between them. You can decide "
+"which of these options to use, depending on what you think seems more useful"
+" or what looks better."
 msgstr ""
-"Comme vous pouvez le constater, cela cache un grand nombre des étiquettes "
-"qui étaient précédemment visible à cause de la difficulté de les faire "
-"suivre les lignes tordues des rues et être suffisamment lisibles. Vous "
-"pouvez choisir d'utiliser une de ces options selon ce que vous pensez être "
-"le plus utile ou ce qui rend le mieux."
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:240
+#: ../../docs/training_manual/vector_classification/label_tool.rst:245
 msgid "|hard| |FA| Data Defined Settings"
 msgstr "|hard| |FA| Valeurs définies par des données"
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:242
-msgid "Deactivate labeling for the :guilabel:`Streets` layer."
-msgstr "Désactivez l'étiquetage pour la couche :guilabel:`Streets`."
-
-#: ../../docs/training_manual/vector_classification/label_tool.rst:243
-msgid "Reactivate labeling for the :guilabel:`Places` layer."
-msgstr "Réactivez l'étiquetage pour la couche :guilabel:`Places`."
-
-#: ../../docs/training_manual/vector_classification/label_tool.rst:244
-msgid ""
-"Open the attribute table for :guilabel:`Places` via the |openTable| button."
+#: ../../docs/training_manual/vector_classification/label_tool.rst:247
+msgid "Deactivate labeling for the ``roads`` layer"
 msgstr ""
-"Par l'intermédiaire du bouton |openTable|, ouvrez la table d'attributs de la"
-" couche :guilabel:`Places`."
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:246
+#: ../../docs/training_manual/vector_classification/label_tool.rst:248
+msgid "Reactivate labeling for the ``places`` layer"
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:249
+msgid "Open the attribute table for ``places`` via the |openTable| button"
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:251
 msgid ""
-"It has one fields which is of interest to us now: :kbd:`place` which defines"
-" the type of urban area for each object. We can use this data to influence "
+"It has one *field* which is of interest to us now: ``place`` which defines "
+"the type of urban area for each *record*. We can use this data to influence "
 "the label styles."
 msgstr ""
-"Il contient un champ qui nous intéresse maintenant: :kbd:`place` qui définit"
-" le type d'espace urbain de chaque entité. Nous pouvons utiliser cette "
-"donnée pour influencer le style des étiquettes."
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:250
+#: ../../docs/training_manual/vector_classification/label_tool.rst:255
 msgid ""
-"Navigate to the :guilabel:`Text` panel in the :guilabel:`places` "
-":guilabel:`Labels` panel."
+"Navigate to the :guilabel:`Text` panel in the ``places`` :guilabel:`Labels` "
+"panel"
 msgstr ""
-"Naviguez jusqu'au panneau :guilabel:`Texte` dans le panneau "
-":guilabel:`places` :guilabel:`Étiquette`."
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:252
+#: ../../docs/training_manual/vector_classification/label_tool.rst:257
 msgid ""
-"In the :guilabel:`Italic` dropdown, select :kbd:`Edit...` to open the "
-":guilabel:`Expression string builder`:"
+"Click the |dataDefined| button next to the Italic text button beneath "
+":guilabel:`Style` and select :menuselection:`Edit...` to open the "
+":guilabel:`Expression String Builder`:"
 msgstr ""
-"Dans la liste déroulante :guilabel:`Italique`, sélectionnez :kbd:`Editer` "
-"afin d'ouvrir la fenêtre  :guilabel:`Constructeur de chaine d'expression`:"
-
-#: ../../docs/training_manual/vector_classification/label_tool.rst:258
-msgid ""
-"In the text input, type: :kbd:`\"place\"  =  'town'` and click "
-":guilabel:`Ok` twice:"
-msgstr ""
-"Dans la zone de texte, saisissez : :kbd:`\"place\" = 'town'` et cliquez deux"
-" fois sur :guilabel:`Ok`:"
 
 #: ../../docs/training_manual/vector_classification/label_tool.rst:264
-msgid "Notice its effects:"
-msgstr "Remarquez ces effets:"
+msgid ""
+"Under :menuselection:`Fields and Values`, double click on ``place`` and then"
+" click :guilabel:`All Unique`. This will list all unique values of the "
+"``place`` field of this layer. Add a ``=`` in the text editor and then "
+"double click on ``town``."
+msgstr ""
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:273
+#: ../../docs/training_manual/vector_classification/label_tool.rst:269
+msgid ""
+"Alternatively, you can type: ``\"place\" = 'town'`` directly in the text "
+"editor."
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:272
+msgid "Click :guilabel:`OK` twice:"
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:277
+msgid ""
+"Notice that the labels for all places whose ``place`` field matches ``town``"
+" are displayed in italics."
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:288
 msgid "|hard| |TY| Using Data Defined Settings"
 msgstr "|hard| |TY| Utiliser les Valeurs définies par des données"
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:275
+#: ../../docs/training_manual/vector_classification/label_tool.rst:290
 msgid ""
 "We're jumping ahead a bit here to demonstrate some advanced labeling "
 "settings. At the advanced level, it's assumed that you'll know what the "
@@ -583,60 +502,48 @@ msgstr ""
 "suivre. Si ce n'est pas le cas, quittez cette section et revenez plus tard "
 "lorsque vous aurez étudiez les pré-requis."
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:280
-msgid "Open the Attribute Table for :guilabel:`places`."
-msgstr "Ouvrez la table d'attributs de la couche :guilabel:`Places`."
+#: ../../docs/training_manual/vector_classification/label_tool.rst:295
+msgid "Open the Attribute Table for ``places``"
+msgstr ""
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:281
-msgid "Enter edit mode by clicking this button: |toggleEditing|"
-msgstr "Passez en mode édition en cliquant sur le bouton: |toggleEditing|"
+#: ../../docs/training_manual/vector_classification/label_tool.rst:296
+msgid "Enter edit mode by clicking the |toggleEditing| button"
+msgstr ""
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:282
+#: ../../docs/training_manual/vector_classification/label_tool.rst:297
 msgid "Add a new column with the |newAttribute| button"
 msgstr ""
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:283
+#: ../../docs/training_manual/vector_classification/label_tool.rst:298
 msgid "Configure it like this:"
 msgstr "Configurez-le comme ceci:"
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:288
+#: ../../docs/training_manual/vector_classification/label_tool.rst:303
 msgid ""
-"Use this to set custom font sizes for each different type of place (i.e., "
-"each key in the :kbd:`PLACE` field)."
+"Use this to set custom font sizes for each different type of place (each key"
+" in the ``place`` field)"
 msgstr ""
-"Utilisez ceci pour définir des tailles de police personnalisées pour chaque "
-"différent type de place (c'est-à-dire, pour chaque valeur clé du champ "
-":kbd:`PLACE`)."
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:291
+#: ../../docs/training_manual/vector_classification/label_tool.rst:306
 msgid ":ref:`Check your results <label-data-defined-1>`"
 msgstr ":ref:`Vérifiez vos résultats <label-data-defined-1>`"
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:295
+#: ../../docs/training_manual/vector_classification/label_tool.rst:310
 msgid "|hard| Further Possibilities With Labeling"
 msgstr "|hard| Possibilités Avancées de l'étiquetage"
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:297
+#: ../../docs/training_manual/vector_classification/label_tool.rst:312
 msgid ""
 "We can't cover every option in this course, but be aware that the "
-":guilabel:`Label tool` has many other useful functions. You can set scale-"
+":guilabel:`Label` tab has many other useful functions. You can set scale-"
 "based rendering, alter the rendering priority for labels in a layer, and set"
 " every label option using layer attributes. You can even set the rotation, "
 "XY position, and other properties of a label (if you have attribute fields "
 "allocated for the purpose), then edit these properties using the tools "
-"adjacent to the main :guilabel:`Label tool`:"
+"adjacent to the main :guilabel:`Layer Labeling Options` button:"
 msgstr ""
-"Nous ne pouvons couvrir toutes les options dans ce cours mais sachez que "
-"l'outil :guilabel:`Etiquette` offre beaucoup d'autres fonctions utiles. Vous"
-" pouvez définir le rendu selon l'échelle, modifier les propriétés de redu "
-"des étiquettes d'une couche et chaque option d'étiquette à l'aide des "
-"attributs de la couche. Vous pouvez même définir une rotation, une position "
-"XY et d'autres propriétés de l'étiquette (si vous avez des champs "
-"attributaires qui s'y prêtent), puis modifier ces propriétés à l'aide des "
-"outils adjacents à l'outil principal de la barre d'outils "
-":guilabel:`Etiquette`:"
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:305
+#: ../../docs/training_manual/vector_classification/label_tool.rst:320
 msgid ""
 "|labeling| |showPinnedLabels| |pinLabels| |showHideLabels| |moveLabel| "
 "|rotateLabel| |changeLabelProperties|"
@@ -644,7 +551,7 @@ msgstr ""
 "|labeling| |showPinnedLabels| |pinLabels| |showHideLabels| |moveLabel| "
 "|rotateLabel| |changeLabelProperties|"
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:309
+#: ../../docs/training_manual/vector_classification/label_tool.rst:324
 msgid ""
 "(These tools will be active if the required attribute fields exist and you "
 "are in edit mode.)"
@@ -652,17 +559,17 @@ msgstr ""
 "(Ces outils seront actifs tant que les champs requis existent dans la table "
 "d'attributs et que vous êtes en mode édition.)"
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:312
+#: ../../docs/training_manual/vector_classification/label_tool.rst:327
 msgid "Feel free to explore more possibilities of the labeling system."
 msgstr ""
 "N'hésitez pas à explorer les diverses possibilités offertes par le système "
 "d'étiquetage."
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:315
+#: ../../docs/training_manual/vector_classification/label_tool.rst:331
 msgid "|IC|"
 msgstr "|IC|"
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:317
+#: ../../docs/training_manual/vector_classification/label_tool.rst:333
 msgid ""
 "You've learned how to use layer attributes to create dynamic labels. This "
 "can make your map a lot more informative and stylish!"
@@ -671,11 +578,11 @@ msgstr ""
 "étiquettes dynamiques. Cela peut rendre votre carte plus informative et plus"
 " élégante."
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:321
+#: ../../docs/training_manual/vector_classification/label_tool.rst:338
 msgid "|WN|"
 msgstr "|WN|"
 
-#: ../../docs/training_manual/vector_classification/label_tool.rst:323
+#: ../../docs/training_manual/vector_classification/label_tool.rst:340
 msgid ""
 "Now that you know how attributes can make a visual difference for your map, "
 "how about using them to change the symbology of objects themselves? That's "

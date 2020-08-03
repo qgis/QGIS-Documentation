@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-10 11:07+0200\n"
+"POT-Creation-Date: 2020-07-26 13:13+0200\n"
 "PO-Revision-Date: 2020-03-16 19:19+0000\n"
 "Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
@@ -27,32 +27,30 @@ msgstr "|LS| アクション"
 
 #: ../../docs/training_manual/create_vector_data/actions.rst:4
 msgid ""
-"Now that you've seen a default action in the previous lesson, it's time to "
-"define your own actions. An action is something that happens when you click "
-"on a feature. It can add a lot of extra functionality to your map, allowing "
-"you to retrieve additional information about an object, for example. "
-"Assigning actions can add a whole new dimension to your map!"
+"Now that you have seen a default action in the previous lesson, it is time "
+"to define your own actions."
 msgstr ""
-"前のレッスンでは既定のアクションを見てきました。今度はあなた独自のアクションを定義します。アクションは地物をクリックしたときに起きるものです。それは地図に多くの特別な機能を追加できます。たとえば、オブジェクトに関する追加情報を取得することができます。アクションを割り当てることで地図に全く新しい次元を追加できます!"
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:10
+#: ../../docs/training_manual/create_vector_data/actions.rst:7
+msgid ""
+"An action is something that happens when you click on a feature. It can add "
+"a lot of extra functionality to your map, allowing you to retrieve "
+"additional information about an object, for example. Assigning actions can "
+"add a whole new dimension to your map!"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:12
 msgid "**The goal for this lesson:** To learn how to add custom actions."
 msgstr "**このレッスンの目標:** カスタムアクションを追加する方法を学びます。"
 
 #: ../../docs/training_manual/create_vector_data/actions.rst:14
-msgid "|basic| |FA| Open an Image"
-msgstr "|basic| |FA| 画像を開く"
-
-#: ../../docs/training_manual/create_vector_data/actions.rst:16
 msgid ""
-"Use the :guilabel:`school_property` layer you created previously. The course"
-" materials include photos of each of the three properties you digitized. "
-"What we're going to do next is to associate each property with its image. "
-"Then we'll create an action that will open the image for a property when "
-"clicking on the property."
+"In this lesson you will use the :guilabel:`school_property` layer you "
+"created previously. The sample data include photos of each of the three "
+"properties you digitized. What we are going to do is to associate each "
+"property with its image. Then we will create an action that will open the "
+"image for a property when clicking on the property."
 msgstr ""
-"以前作成した :guilabel:`school_property` "
-"レイヤーを使用します。コース資料にはあなたがデジタイズした3つの地所のそれぞれの写真が含まれます。私たちが次にやろうとしていることはそれぞれの地所とその画像を関連付けることです。それでは、地所をクリックした時にその画像を開くアクションを作成しましょう。"
 
 #: ../../docs/training_manual/create_vector_data/actions.rst:23
 msgid "|basic| |FA| Add a Field for Images"
@@ -60,11 +58,9 @@ msgstr "|basic| |FA| 画像のためのフィールドの追加"
 
 #: ../../docs/training_manual/create_vector_data/actions.rst:25
 msgid ""
-"The :guilabel:`school_property` layer has no way to associate an image with "
-"a property yet. First we'll create a field for this purpose."
+"The ``school_property`` layer has no way to associate an image with a "
+"property yet. First we will create a field for this purpose."
 msgstr ""
-":guilabel:`school_property` "
-"レイヤーにはまだ画像と地所を関連付ける方法がありません。まずこの目的のためのフィールドを作成します。"
 
 #: ../../docs/training_manual/create_vector_data/actions.rst:28
 msgid "Open the :guilabel:`Layer Properties` dialog."
@@ -88,19 +84,17 @@ msgstr "下記の値を入力します:"
 
 #: ../../docs/training_manual/create_vector_data/actions.rst:45
 msgid ""
-"After the field has been created, click on the :guilabel:`Line edit` button "
-"next to the new field."
-msgstr "フィールドを作成した後、新しいフィールドの横にある :guilabel:`行編集` ボタンをクリックします。"
+"After the field has been created, move to the :guilabel:`Attributes Form` "
+"tab and select the ``image`` field."
+msgstr ""
 
 #: ../../docs/training_manual/create_vector_data/actions.rst:47
-msgid "Set it up for a :guilabel:`File name`:"
-msgstr "そこで :guilabel:`ファイル名` を設定します:"
+msgid "Set :guilabel:`Widget Type` to :guilabel:`Attachment`:"
+msgstr ""
 
 #: ../../docs/training_manual/create_vector_data/actions.rst:52
-#: ../../docs/training_manual/create_vector_data/actions.rst:123
-#: ../../docs/training_manual/create_vector_data/actions.rst:228
-msgid "Click :guilabel:`OK` on the :guilabel:`Layer Properties` dialog."
-msgstr ":guilabel:`レイヤーのプロパティ` ダイアログの :guilabel:`OK` をクリックします。"
+msgid "Click :guilabel:`OK` in the :guilabel:`Layer Properties` dialog."
+msgstr ""
 
 #: ../../docs/training_manual/create_vector_data/actions.rst:53
 msgid ""
@@ -112,9 +106,9 @@ msgstr ""
 
 #: ../../docs/training_manual/create_vector_data/actions.rst:56
 msgid ""
-"Since you're still in edit mode, the dialog should be active and look like "
+"Since you are still in edit mode, the dialog should be active and look like "
 "this:"
-msgstr "編集モードのままなので、ダイアログがアクティブになり、このようになるはずです:"
+msgstr ""
 
 #: ../../docs/training_manual/create_vector_data/actions.rst:62
 msgid ""
@@ -125,11 +119,9 @@ msgstr "参照ボタンをクリックします (:guilabel:`image` フィール�
 #: ../../docs/training_manual/create_vector_data/actions.rst:64
 msgid ""
 "Select the path for your image. The images are in "
-":kbd:`exercise_data/school_property_photos/` and are named the same as the "
+":file:`exercise_data/school_property_photos/` and are named the same as the "
 "features they should be associated with."
 msgstr ""
-"画像のパスを選択します。画像は :kbd:`exercise_data/school_property_photos/` "
-"にあり、関連付けられるべき地物と同じ名前が付けられています。"
 
 #: ../../docs/training_manual/create_vector_data/actions.rst:67
 msgid "Click :guilabel:`OK`."
@@ -140,176 +132,197 @@ msgid ""
 "Associate all of the images with the correct features using this method."
 msgstr "この方法ですべての画像と地物を正しく関連付けます。"
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:69
+#: ../../docs/training_manual/create_vector_data/actions.rst:70
 msgid "Save your edits and exit edit mode."
 msgstr "編集内容を保存し、編集モードを終了します。"
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:73
+#: ../../docs/training_manual/create_vector_data/actions.rst:74
 msgid "|basic| |FA| Creating an Action"
 msgstr "|basic| |FA| アクションの作成"
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:75
-msgid ""
-"Open the :guilabel:`Actions` form for the :guilabel:`school_property` layer."
-msgstr ":guilabel:`school_property` レイヤーの :guilabel:`アクション` フォームを開きます。"
-
 #: ../../docs/training_manual/create_vector_data/actions.rst:76
 msgid ""
-"In the :kbd:`Action properties` panel, enter the words :kbd:`Show Image` "
-"into the :guilabel:`Name` field:"
-msgstr ":kbd:`アクションプロパティ` パネルで :guilabel:`名称` フィールドに :kbd:`画像表示` と入力します:"
+"Open the :guilabel:`Actions` tab for the :guilabel:`school_property` layer, "
+"and click on the |signPlus| :sup:`Add a new action` button."
+msgstr ""
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:82
-#: ../../docs/training_manual/create_vector_data/actions.rst:159
+#: ../../docs/training_manual/create_vector_data/actions.rst:83
+msgid ""
+"In the :guilabel:`Add New Action` dialog, enter the words ``Show Image`` "
+"into the :guilabel:`Description` field:"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:89
+#: ../../docs/training_manual/create_vector_data/actions.rst:175
 msgid ""
 "What to do next varies according to your operating system, so choose the "
 "appropriate course to follow:"
 msgstr "次に何をすべきかはオペレーティングシステムによって異なりますので、次で適切なコースを選択して下さい:"
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:87
-#: ../../docs/training_manual/create_vector_data/actions.rst:163
+#: ../../docs/training_manual/create_vector_data/actions.rst:92
+#: ../../docs/training_manual/create_vector_data/actions.rst:178
 msgid "Windows"
 msgstr "Windows"
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:89
+#: ../../docs/training_manual/create_vector_data/actions.rst:94
 msgid "Click on the :guilabel:`Type` dropdown and choose :guilabel:`Open`."
 msgstr ":guilabel:`タイプ` ドロップダウンリストをクリックし、 :guilabel:`開く` を選択します。"
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:93
-#: ../../docs/training_manual/create_vector_data/actions.rst:169
+#: ../../docs/training_manual/create_vector_data/actions.rst:97
+#: ../../docs/training_manual/create_vector_data/actions.rst:184
 msgid "Ubuntu Linux"
 msgstr "Ubuntu Linux"
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:95
+#: ../../docs/training_manual/create_vector_data/actions.rst:99
 msgid ""
-"Under :guilabel:`Action`, write :kbd:`eog` for the *Gnome Image Viewer*, or "
-"write :kbd:`display` to use *ImageMagick*. Remember to put a space after the"
-" command!"
+"Under :guilabel:`Action`, write ``eog`` for the *Gnome Image Viewer*, or "
+"write ``display`` to use *ImageMagick*. Remember to put a space after the "
+"command!"
 msgstr ""
-"*Gnome Image Viewer* を使用する場合は :guilabel:`Action` に :kbd:`eog` と入力します。 "
-"*ImageMagick* を使用する場合は :kbd:`display` と入力します。コマンドの後に空白を1つ入れることを覚えておいて下さい!"
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:101
-#: ../../docs/training_manual/create_vector_data/actions.rst:175
+#: ../../docs/training_manual/create_vector_data/actions.rst:104
+#: ../../docs/training_manual/create_vector_data/actions.rst:190
 msgid "MacOS"
 msgstr "MacOS"
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:103
+#: ../../docs/training_manual/create_vector_data/actions.rst:106
 msgid "Click on the :guilabel:`Type` dropdown and choose :guilabel:`Mac`."
 msgstr ":guilabel:`タイプ` ドロップダウンリストをクリックし、 :guilabel:`Mac` を選択します。"
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:104
+#: ../../docs/training_manual/create_vector_data/actions.rst:108
 msgid ""
-"Under :guilabel:`Action`, write :kbd:`open`. Remember to put a space after "
-"the command!"
-msgstr ":guilabel:`アクション` に :kbd:`open` と入力します。コマンドの後に空白を1つ入れることを覚えておいて下さい!"
+"Under :guilabel:`Action`, write ``open``. Remember to put a space after the "
+"command!"
+msgstr ""
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:109
-#: ../../docs/training_manual/create_vector_data/actions.rst:181
-msgid "Continue writing the command"
-msgstr "コマンドの入力の続き"
+#: ../../docs/training_manual/create_vector_data/actions.rst:112
+msgid "Now you can continue writing the command."
+msgstr ""
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:111
+#: ../../docs/training_manual/create_vector_data/actions.rst:114
 msgid ""
 "You want to open the image, and QGIS knows where the image is. All it needs "
 "to do is to tell the :guilabel:`Action` where the image is."
 msgstr ""
 "あなたは画像を開きたい。そしてQGISは画像の場所を知っている。あとは :guilabel:`アクション` に画像がどこにあるかを知らせるだけです。"
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:115
+#: ../../docs/training_manual/create_vector_data/actions.rst:118
 msgid "Select :guilabel:`image` from the list:"
 msgstr "リストから :guilabel:`image` を選択します:"
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:120
+#: ../../docs/training_manual/create_vector_data/actions.rst:123
 msgid ""
-"Click the :guilabel:`Insert field` button. QGIS will add the phrase :kbd:`[%"
-" \"image\" %]` in the :guilabel:`Action` field."
+"Click the :guilabel:`Insert field` button. QGIS will add the phrase ``[% "
+"\"image\" %]`` in the :guilabel:`Action Text` field."
 msgstr ""
-":guilabel:`フィールドを挿入` ボタンをクリックします。QGISは :guilabel:`アクション` フィールドに :kbd:`[% "
-"\"image\" %]` の句を追加します。"
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:122
-msgid "Click the :guilabel:`Add to action list` button."
-msgstr ":guilabel:`アクションリストへの追加` ボタンをクリックします。"
+#: ../../docs/training_manual/create_vector_data/actions.rst:126
+#: ../../docs/training_manual/create_vector_data/actions.rst:242
+msgid ""
+"Click the :guilabel:`OK` button to close the :guilabel:`Add New Action` "
+"dialog"
+msgstr ""
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:125
-msgid "Now we will test the new Action:"
-msgstr "さて新しいアクションをテストしましょう:"
+#: ../../docs/training_manual/create_vector_data/actions.rst:128
+#: ../../docs/training_manual/create_vector_data/actions.rst:244
+msgid "Click :guilabel:`OK` to close the :guilabel:`Layer Properties` dialog"
+msgstr ""
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:127
+#: ../../docs/training_manual/create_vector_data/actions.rst:131
+msgid "Now it is time to test the new action:"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:133
 msgid ""
 "Click on the :guilabel:`school_property` layer in the :guilabel:`Layers` "
 "panel so that it is highlighted."
 msgstr ""
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:129
+#: ../../docs/training_manual/create_vector_data/actions.rst:135
 msgid ""
-"Find the :guilabel:`Run feature action` button (on the same toolbar as the "
-":guilabel:`Open Attribute Table` button):"
+"Find the |actionRun| :sup:`Run feature action` button (in the "
+":guilabel:`Attributes Toolbar`)."
 msgstr ""
-":guilabel:`地物アクションの実行` ボタンを見つけます (:guilabel:`属性テーブルを開く` ボタンと同じツールバーにあります):"
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:132
-msgid "|actionRun|"
-msgstr "|actionRun|"
-
-#: ../../docs/training_manual/create_vector_data/actions.rst:134
+#: ../../docs/training_manual/create_vector_data/actions.rst:137
 msgid ""
-"Click on the down arrow to the right of this button. There's only one action"
-" defined for this layer so far, which is the one you just created."
-msgstr "このボタンの右にある下向き矢印をクリックします。これまでのところ、このレイヤーにはあなたが今定義した1つのアクションだけがあります。"
+"Click on the down arrow to the right of this button. There is only one "
+"action defined for this layer so far, which is the one you just created."
+msgstr ""
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:136
+#: ../../docs/training_manual/create_vector_data/actions.rst:144
 msgid "Click the button itself to activate the tool."
 msgstr "ボタン自体をクリックしてツールをアクティブにします。"
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:137
+#: ../../docs/training_manual/create_vector_data/actions.rst:145
 msgid "Using this tool, click on any of the three school properties."
 msgstr "このツールを使用して、3つの地所のいずれかをクリックします。"
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:138
-msgid "The image for that property will now open."
-msgstr "その地所の画像が表示されます。"
+#: ../../docs/training_manual/create_vector_data/actions.rst:147
+msgid "The image for that property should open."
+msgstr ""
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:141
+#: ../../docs/training_manual/create_vector_data/actions.rst:150
 msgid "|moderate| |FA| Searching the Internet"
 msgstr "|moderate| |FA| インターネットを検索する"
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:143
+#: ../../docs/training_manual/create_vector_data/actions.rst:152
 msgid ""
-"Let's say we're looking at the map and want to know more about the area that"
-" a farm is in. Suppose you know nothing of the area in question and want to "
-"find general information about it. Your first impulse, considering that "
+"Let's say we are looking at the map and want to know more about the area "
+"that a farm is in. Suppose you know nothing of the area in question and want"
+" to find general information about it. Your first impulse, considering that "
 "you're using a computer right now, would probably be to Google the name of "
 "the area. So let's tell QGIS to do that automatically for us!"
 msgstr ""
-"私たちは地図を見ていて農場がある地域についてもっと知りたくなったとしましょう。その地域について何も知らず、それについての一般的な情報を見つけたいとします。あなたが今コンピュータを使用しているならば、あなたの最初の衝動はおそらく地域の名前をGoogleで検索することでしょう。では、QGISにそれを自動的にさせてみましょう!"
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:149
+#: ../../docs/training_manual/create_vector_data/actions.rst:158
 msgid "Open the attribute table for the :guilabel:`landuse` layer."
 msgstr ":guilabel:`landuse` レイヤーの属性テーブルを開きます。"
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:151
+#: ../../docs/training_manual/create_vector_data/actions.rst:160
 msgid ""
-"We'll be using the :kbd:`name` field for each of our landuse areas to search"
-" Google."
-msgstr ":kbd:`name` フィールドを使ってそれぞれの土地利用地域をGoogleで検索するようにします。"
+"We will be using the ``name`` field for each of our landuse areas to search "
+"Google."
+msgstr ""
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:154
+#: ../../docs/training_manual/create_vector_data/actions.rst:162
 msgid "Close the attribute table."
 msgstr "属性テーブルを閉じます。"
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:155
+#: ../../docs/training_manual/create_vector_data/actions.rst:163
 msgid "Go back to :guilabel:`Actions` in :guilabel:`Layer Properties`."
 msgstr ":guilabel:`レイヤープロパティ` の :guilabel:`アクション` に戻ります。"
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:156
+#: ../../docs/training_manual/create_vector_data/actions.rst:164
 msgid ""
-"In the field :menuselection:`Action Properties --> Name`, write :kbd:`Google"
-" Search`."
-msgstr ":menuselection:`アクションプロパティ --> 名称` フィールドに :kbd:`Google検索` と入力します。"
+"Click on the :guilabel:`Create Default Actions` button to add a number of "
+"pre-defined actions."
+msgstr ""
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:165
+#: ../../docs/training_manual/create_vector_data/actions.rst:166
+msgid ""
+"Remove all the actions but the :guilabel:`Open URL` action with the short "
+"name :guilabel:`Search Web` using the |signMinus| :sup:`Remove the selected "
+"action` button below."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:169
+msgid "Double-click on the remaining action to edit it"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:170
+msgid ""
+"Change the :guilabel:`Description` to ``Google Search``, and remove the "
+"content of the :guilabel:`Short Name` field."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:172
+msgid ""
+"Make sure that :guilabel:`Canvas` is among the checked :guilabel:`Action "
+"scopes`."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:180
 msgid ""
 "Under :guilabel:`Type`, choose :guilabel:`Open`. This will tell Windows to "
 "open an Internet address in your default browser, such as Internet Explorer."
@@ -317,23 +330,23 @@ msgstr ""
 ":guilabel:`タイプ` で :guilabel:`開く` を選択します。これはWindowsにInternet "
 "Explorer等の既定のブラウザでインターネットアドレスを開かせます。"
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:171
+#: ../../docs/training_manual/create_vector_data/actions.rst:186
 msgid ""
-"Under :guilabel:`Action`, write :kbd:`xdg-open`. This will tell Ubuntu to "
-"open an Internet address in your default browser, such as Chrome or Firefox."
+"Under :guilabel:`Action`, write ``xdg-open``. This will tell Ubuntu to open "
+"an Internet address in your default browser, such as Chrome or Firefox."
 msgstr ""
-":guilabel:`アクション` に :kbd:`xdg-open` "
-"と入力します。これはUbuntuにChromeやFirefox等の既定のブラウザでインターネットアドレスを開かせます。"
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:177
+#: ../../docs/training_manual/create_vector_data/actions.rst:192
 msgid ""
-"Under :guilabel:`Action`, write :kbd:`open`. This will tell MacOS to open an"
-" Internet address in your default browser, such as Safari."
+"Under :guilabel:`Action`, write ``open``. This will tell MacOS to open an "
+"Internet address in your default browser, such as Safari."
 msgstr ""
-":guilabel:`アクション` に :kbd:`open` "
-"と入力します。これはMacOSにSafari等の既定のブラウザでインターネットアドレスを開かせます。"
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:183
+#: ../../docs/training_manual/create_vector_data/actions.rst:196
+msgid "Now you can continue writing the command"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:198
 msgid ""
 "Whichever command you used above, you need to tell it which Internet address"
 " to open next. You want it to visit Google, and to search for a phrase "
@@ -341,188 +354,172 @@ msgid ""
 msgstr ""
 "上でどのコマンドを使った場合でも次に、開くべきインターネットアドレスを知らせなければいけません。Googleを訪問させて語句を自動的に検索させます。"
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:187
+#: ../../docs/training_manual/create_vector_data/actions.rst:203
 msgid ""
 "Usually when you use Google, you enter your search phrase into the Google "
 "Search bar. But in this case, you want your computer to do this for you. The"
 " way you tell Google to search for something (if you don't want to use its "
 "search bar directly) is by giving your Internet browser the address "
-"``https://www.google.com/search?q=SEARCH_PHRASE``, where ``SEARCH_PHRASE`` "
+"``https://www.google.com/search?q=SEARCH_PHRASE``, where ``SEARCH_PHRASE``` "
 "is what you want to search for. Since we don't know what phrase to search "
-"for yet, we'll just enter the first part (without the search phrase)."
+"for yet, we will just enter the first part (without the search phrase)."
 msgstr ""
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:196
+#: ../../docs/training_manual/create_vector_data/actions.rst:214
 msgid ""
 "In the :guilabel:`Action` field, write ``https://www.google.com/search?q=``."
 " Remember to add a space after your initial command before writing this in!"
 msgstr ""
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:200
+#: ../../docs/training_manual/create_vector_data/actions.rst:219
 msgid ""
 "Now you want QGIS to tell the browser to tell Google to search for the value"
-" of :kbd:`name` for any feature that you could click on."
-msgstr "QGISでクリックされた地物の :kbd:`name` の値をブラウザで Google検索するようにしましょう。"
+" of ``name`` for any feature that you could click on."
+msgstr ""
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:203
+#: ../../docs/training_manual/create_vector_data/actions.rst:222
 msgid "Select the :guilabel:`name` field."
 msgstr ":guilabel:`名称` フィールドを選択します。"
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:204
-msgid "Click :guilabel:`Insert field`:"
-msgstr ":guilabel:`フィールドを挿入` をクリックします:"
-
-#: ../../docs/training_manual/create_vector_data/actions.rst:209
-msgid "This will tell QGIS to add the phrase next:"
-msgstr "これはQGISに次の句を追加させます:"
-
-#: ../../docs/training_manual/create_vector_data/actions.rst:214
-msgid ""
-"What this means is that QGIS is going to open the browser and send it to the"
-" address ``https://www.google.com/search?q=[% \"name\" %]``. But :kbd:`[% "
-"\"name\" %]` tells QGIS to use the contents of the :kbd:`name` field as the "
-"phrase to search for."
+#: ../../docs/training_manual/create_vector_data/actions.rst:223
+msgid "Click :guilabel:`Insert` button:"
 msgstr ""
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:219
+#: ../../docs/training_manual/create_vector_data/actions.rst:228
+msgid ""
+"What this means is that QGIS is going to open the browser and send it to the"
+" address ``https://www.google.com/search?q=[% \"name\" %]``. ``[% \"name\" "
+"%]`` tells QGIS to use the contents of the ``name`` field as the phrase to "
+"search for."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:234
 msgid ""
 "So if, for example, the landuse area you click on is named ``Marloth Nature "
-"Reserve``, then QGIS is going to send the browser to "
+"Reserve``, QGIS is going to send the browser to "
 "``https://www.google.com/search?q=Marloth%20Nature%20Reserve``, which will "
 "cause your browser to visit Google, which will in turn search for \"Marloth "
 "Nature Reserve\"."
 msgstr ""
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:225
-msgid "If you haven't done so already, set everything up as explained above."
-msgstr "もしまだ出来ていないなら、上で説明したように設定して下さい。"
+#: ../../docs/training_manual/create_vector_data/actions.rst:240
+msgid "If you have not done so already, set everything up as explained above."
+msgstr ""
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:226
-msgid ""
-"Click the :guilabel:`Add to action list` button. The new action will appear "
-"in the list above."
-msgstr ":guilabel:`アクションリストへの追加` ボタンをクリックします。新しいアクションが上のリストに表示されます。"
-
-#: ../../docs/training_manual/create_vector_data/actions.rst:230
+#: ../../docs/training_manual/create_vector_data/actions.rst:247
 msgid "Now to test the new action."
 msgstr "では新しいアクションをためします。"
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:232
+#: ../../docs/training_manual/create_vector_data/actions.rst:249
 msgid ""
 "With the :guilabel:`landuse` layer active in the :guilabel:`Layers` panel, "
-"click on the :guilabel:`Run feature action` button."
+"click on the down arrow to the right of the |actionRun| :sup:`Run feature "
+"action` button, and select the only action (``Google Search``) defined for "
+"this layer."
 msgstr ""
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:234
+#: ../../docs/training_manual/create_vector_data/actions.rst:253
 msgid ""
 "Click on any landuse area you can see on the map. Your browser will now "
-"open, and will automatically start a Google search for the town that is "
-"recorded as that area's :kbd:`name` value."
+"open, and will start a Google search for the place that is recorded as that "
+"area's ``name`` value."
 msgstr ""
-"地図上の任意の土地利用地域をクリックします。ブラウザが起動し、自動的に、地域の :kbd:`name` の値として記録されている町の "
-"Google検索が開始されます。"
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:238
+#: ../../docs/training_manual/create_vector_data/actions.rst:257
 msgid ""
 "If your action doesn't work, check that everything was entered correctly; "
 "typos are common with this kind of work!"
 msgstr "アクションがうまく動作しない場合は、すべてが正しく入力されたことをチェックしてください。タイプミスはこの種の作業でよくあることです!"
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:242
+#: ../../docs/training_manual/create_vector_data/actions.rst:261
 msgid "|hard| |FA| Open a Webpage Directly in QGIS"
 msgstr "|hard| |FA| QGISで直接Webページを開く"
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:244
+#: ../../docs/training_manual/create_vector_data/actions.rst:263
 msgid ""
 "Above, you've seen how to open a webpage in an external browser. There are "
 "some shortcomings with this approach in that it adds an unknowable "
 "dependency – will the end-user have the software required to execute the "
 "action on their system? As you've seen, they don't necessarily even have the"
 " same kind of base command for the same kind of action, if you don't know "
-"which OS they'll be using. With some OS versions, the above commands to open"
-" the browser might not work at all. This could be an insurmountable problem."
+"which OS they will be using. With some OS versions, the above commands to "
+"open the browser might not work at all. This could be an insurmountable "
+"problem."
 msgstr ""
-"これまで外部のブラウザでWebページを開く方法を見てきました。このアプローチには不可知な依存関係を追加するという点で若干の欠点があります。エンドユーザーが自分のシステムでアクションを実行するのに必要なソフトウェアを持っているでしょうか?"
-" "
-"これまで見てきたように、どのOSを使っているかわからなければ同じようなアクションのための同じような基本コマンドでさえあるとは限りません。OSのバージョンによってはブラウザを開く上記コマンドがまったく動作しないかもしれません。これは克服できない問題である可能性があります。"
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:252
+#: ../../docs/training_manual/create_vector_data/actions.rst:271
 msgid ""
 "However, QGIS sits on top of the incredibly powerful and versatile Qt "
 "library. Also, QGIS actions can be arbitrary, tokenized (i.e. using variable"
 " information based on the contents of a field attribute) Python commands!"
 msgstr ""
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:256
+#: ../../docs/training_manual/create_vector_data/actions.rst:275
 msgid ""
-"Now you'll see how to use a python action to show a web page. It's the same "
-"general idea as opening a site in an external browser, but it requires no "
-"browser on the user’s system since it uses the Qt QWebView class (which is a"
-" webkit based html widget) to display the content in a pop up window."
+"Now you will see how to use a python action to show a web page. It is the "
+"same general idea as opening a site in an external browser, but it requires "
+"no browser on the user’s system since it uses the Qt QWebView class (which "
+"is a webkit based html widget) to display the content in a pop-up window."
 msgstr ""
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:261
+#: ../../docs/training_manual/create_vector_data/actions.rst:281
 msgid ""
-"Instead of Google, let's use Wikipedia this time. So the URL you request "
-"will look like this:"
-msgstr "今回はGoogleの代わりにWikipediaを使ってみましょう。そうするとリクエストのURLは次のようになります:"
+"Let us use Wikipedia this time. So the URL you request will look like this:"
+msgstr ""
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:264
+#: ../../docs/training_manual/create_vector_data/actions.rst:284
 msgid "``https://wikipedia.org/wiki/SEARCH_PHRASE``"
 msgstr ""
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:266
+#: ../../docs/training_manual/create_vector_data/actions.rst:286
 msgid "To create the layer action:"
 msgstr "レイヤーアクションを作成するには:"
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:268
+#: ../../docs/training_manual/create_vector_data/actions.rst:288
 msgid ""
 "Open the :guilabel:`Layer Properties` dialog and head over to the "
 ":guilabel:`Actions` tab."
 msgstr ":guilabel:`レイヤープロパティ` ダイアログを開いて :guilabel:`アクション` タブへ向かいます。"
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:270
+#: ../../docs/training_manual/create_vector_data/actions.rst:290
 msgid "Set up a new action using the following properties for the action:"
 msgstr "次のアクションのプロパティを使って新しいアクションを設定します。"
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:272
-msgid ":guilabel:`Type`: :kbd:`Python`"
-msgstr ":guilabel:`Type`: :kbd:`Python`"
-
-#: ../../docs/training_manual/create_vector_data/actions.rst:273
-msgid ":guilabel:`Name`: :kbd:`Wikipedia`"
-msgstr ":guilabel:`Name`: :kbd:`Wikipedia`"
-
-#: ../../docs/training_manual/create_vector_data/actions.rst:274
-msgid ":guilabel:`Action` (all on one line)::"
+#: ../../docs/training_manual/create_vector_data/actions.rst:292
+msgid ":guilabel:`Type`: ``Python``"
 msgstr ""
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:281
+#: ../../docs/training_manual/create_vector_data/actions.rst:293
+msgid ":guilabel:`Description`: ``Wikipedia``"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:294
+msgid ":guilabel:`Action Text` (all on one line)::"
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:301
 msgid "There are a couple of things going on here:"
 msgstr "ここでは:"
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:283
+#: ../../docs/training_manual/create_vector_data/actions.rst:303
 msgid ""
 "All the python code is in a single line with semi-colons separating commands"
 " (instead of newlines, the usual way of separating Python commands)."
 msgstr "すべてのPythonのコードはコマンドがセミコロンで区切られて1行になっています(通常Pythonのコマンドは改行で区切ります)。"
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:285
+#: ../../docs/training_manual/create_vector_data/actions.rst:306
 msgid ""
-":kbd:`[% \"name\" %]` will be replaced by the actual attribute value when "
-"the action is invoked (as before)."
-msgstr ":kbd:`[% \"name\" %]` はアクションが呼び出される時に実際の属性値と置き換えられます(これまでのように)。"
-
-#: ../../docs/training_manual/create_vector_data/actions.rst:287
-msgid ""
-"The code simply creates a new :kbd:`QWebView` instance, sets its URL, and "
-"then calls :kbd:`show()` on it to make it visible as a window on the user’s "
-"desktop."
+"``[%name%]`` will be replaced by the actual attribute value when the action "
+"is invoked (as before)."
 msgstr ""
-"コードは単に新しい :kbd:`QWebView` インスタンスを作成し、そのURLを設定し、ユーザーのデスクトップ上のウィンドウとして表示させる "
-":kbd:`show()` を呼び出します。"
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:291
+#: ../../docs/training_manual/create_vector_data/actions.rst:308
+msgid ""
+"The code simply creates a new ``QWebView`` instance, sets its URL, and then "
+"calls ``show()`` on it to make it visible as a window on the user’s desktop."
+msgstr ""
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:312
 msgid ""
 "Note that this is a somewhat contrived example. Python works with "
 "semantically significant indentation, so separating things with semicolons "
@@ -532,38 +529,36 @@ msgid ""
 msgstr ""
 "これはいくぶん不自然な例であることに注意してください。Pythonでは意味的に重要なインデントが使われますので、セミコロンで区切ることは記述の最良の方法ではありません。ですから現実の世界では、Pythonモジュールからロジックをインポートして、引数にフィールド属性をとる関数を呼び出す可能性が高いと思います。"
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:297
+#: ../../docs/training_manual/create_vector_data/actions.rst:319
 msgid ""
-"You could equally use the approach to display an image without requiring "
-"that the user has a particular image viewer on their system."
-msgstr "同様にしてユーザーのシステムに特定のイメージビューアがあることを要求せずに画像を表示するアプローチを使用できるでしょう。"
+"You could also use this approach to display an image without requiring that "
+"the users have a particular image viewer on their system."
+msgstr ""
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:300
+#: ../../docs/training_manual/create_vector_data/actions.rst:323
 msgid ""
-"Try using the methods described above to load a Wikipedia page using the "
+"Try to use the methods described above to load a Wikipedia page using the "
 "Wikipedia action you just created."
-msgstr "今しがた作成したWikipediaアクションを使用してWikipediaのページを読み込む上記の方法を試して下さい。"
+msgstr ""
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:304
+#: ../../docs/training_manual/create_vector_data/actions.rst:327
 msgid "|IC|"
 msgstr "|IC|"
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:306
+#: ../../docs/training_manual/create_vector_data/actions.rst:329
 msgid ""
 "Actions allow you to give your map extra functionality, useful to the end-"
 "user who views the same map in QGIS. Due to the fact that you can use shell "
-"commands for any operating system, as well as Python, the sky's the limit in"
-" terms of the functions you could incorporate!"
+"commands for any operating system, as well as Python, the sky is the limit "
+"in terms of the functions you could incorporate!"
 msgstr ""
-"アクションを使えば地図に特別な機能を与えることができます。それはQGISで同じ地図を見るエンドユーザーに役立ちます。Pythonだけでなく任意のオペレーティングシステムのシェルコマンドも使用することができます。あなたが具体化できる機能に関して不可能はありません!"
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:312
+#: ../../docs/training_manual/create_vector_data/actions.rst:336
 msgid "|WN|"
 msgstr "|WN|"
 
-#: ../../docs/training_manual/create_vector_data/actions.rst:314
+#: ../../docs/training_manual/create_vector_data/actions.rst:338
 msgid ""
-"Now that you've done all kinds of vector data creation, you'll learn how to "
-"analyze this data to solve problems. That's the topic of the next module."
+"Now that you've done all kinds of vector data creation, you will learn how "
+"to analyze the data to solve problems. That is the topic of the next module."
 msgstr ""
-"あなたはあらゆる種類のベクターデータ作成を行いました。問題を解決するためにこのデータを分析する方法を学びます。それは次のモジュールのトピックです。"

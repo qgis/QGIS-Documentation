@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-10 11:07+0200\n"
+"POT-Creation-Date: 2020-07-26 13:13+0200\n"
 "PO-Revision-Date: 2020-03-16 19:25+0000\n"
 "Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2020\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
@@ -748,18 +748,17 @@ msgid ""
 ":guilabel:`Custom Options` which allow you to configure advanced parameters "
 "depending on the output format. Some are described in "
 ":ref:`supported_format` but for full details, see the `GDAL "
-"<https://gdal.org>`_ driver documentation."
+"<https://gdal.org>`_ driver documentation. Each file format has its own "
+"custom parameters, e.g. for the ``GeoJSON`` format have a look at the `GDAL "
+"GeoJSON <https://gdal.org/drivers/vector/geojson.html#layer-creation-"
+"options>`_ documentation."
 msgstr ""
-":guilabel:`Datasource Options`, :guilabel:`Layer Options` 또는 "
-":guilabel:`Custom Options`: 산출물 포맷에 따라 고급 파라미터들을 환경 설정할 수 있습니다. 일부는 "
-":ref:`supported_format` 에서 설명하고 있지만, 전체 내용을 알고 싶다면 `GDAL "
-"<https://gdal.org>`_ 드라이버 문서를 참조하세요."
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:393
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:397
 msgid "Saving as a new vector layer"
 msgstr "새 벡터 레이어로 저장하기"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:397
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:401
 msgid ""
 "When saving a vector layer into an existing file, depending on the "
 "capabilities of the output format (Geopackage, SpatiaLite, FileGDB...), the "
@@ -768,33 +767,33 @@ msgstr ""
 "벡터 레이어를 기존 파일로 저장하는 경우, 사용자가 산출물 포맷(Geopackage, SpatiaLite, FileGDB 등등)의 성능에"
 " 따라 다음을 결정할 수 있습니다:"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:401
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:405
 msgid "overwrite the whole file"
 msgstr "파일 전체를 덮어 쓰기"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:402
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:406
 msgid "overwrite only the target layer (the layer name is configurable)"
 msgstr "대상 레이어만 덮어 쓰기 (레이어명 설정 가능)"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:403
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:407
 msgid "append features to the existing target layer"
 msgstr "기존 대상 레이어에 피처 추가"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:404
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:408
 msgid "append features, add new fields if there are any."
 msgstr "새 필드가 있을 경우 필드와 함께 피처 추가"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:406
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:410
 msgid ""
 "For formats like ESRI Shapefile, MapInfo .tab, feature append is also "
 "available."
 msgstr "ESRI Shapefile, MapInfo .tab 같은 포맷의 경우도 피처를 추가할 수 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:413
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:417
 msgid "Creating new DXF files"
 msgstr "새 DXF 파일 생성하기"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:415
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:419
 msgid ""
 "Besides the :guilabel:`Save As...` dialog which provides options to export a"
 " single layer to another format, including :file:`*.DXF`, QGIS provides "
@@ -807,31 +806,31 @@ msgstr ""
 ":menuselection:`Project --> Import/Export --> Export Project to DXF...` 메뉴로 "
 "이 도구를 이용할 수 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:420
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:424
 msgid "In the :guilabel:`DXF Export` dialog:"
 msgstr ":guilabel:`DXF Export` 대화창에서 사용자는 다음 작업을 할 수 있습니다:"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:422
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:426
 msgid "Provide the destination file."
 msgstr "대상(destination) 파일 지정"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:423
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:427
 msgid ""
 "Choose the symbology mode and scale (see the :ref:`OGR Feature Styles "
 "<ogr_features_note>` note), if applicable."
 msgstr "가능한 경우 심볼 모드 및 척도 선택 (:ref:`OGR 피처 스타일 <ogr_features_note>` 참고 참조)"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:425
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:429
 msgid "Select the data :guilabel:`Encoding`."
 msgstr ":guilabel:`Encoding`: 데이터 인코딩 선택"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:426
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:430
 msgid ""
 "Select the :guilabel:`CRS` to apply: the selected layers will be reprojected"
 " to the given CRS."
 msgstr ":guilabel:`CRS`: 적용할 좌표계 선택: 선택한 레이어를 지정한 좌표계로 재투영합니다."
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:428
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:432
 msgid ""
 "Select the layers to include in the DXF files either by checking them in the"
 " table widget or automatically picking them from an existing :ref:`map theme"
@@ -842,7 +841,7 @@ msgstr ""
 "레이어를 선택합니다. :guilabel:`Select All` 및 :guilabel:`Deselect All` 버튼을 사용하면 내보낼 "
 "데이터를 신속하게 설정할 수 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:434
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:438
 msgid ""
 "For each layer, you can choose whether to export all the features in a "
 "single DXF layer or rely on a field whose values are used to split the "
@@ -851,11 +850,11 @@ msgstr ""
 "각 레이어에 대해, 모든 피처를 단일 DXF 레이어로 내보낼지 또는 피처들을 DXF 산출물에 생성된 레이어들로 분할하는 데 쓰이는 값을 "
 "보유한 필드를 의존할지 선택할 수 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:438
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:442
 msgid "Optionally, you can also choose to:"
 msgstr "다음 체크박스들도 선택적으로 사용할 수 있습니다:"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:440
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:444
 msgid ""
 "|checkbox| :guilabel:`Use the layer title as name if set` instead of the "
 "layer name itself;"
@@ -863,36 +862,36 @@ msgstr ""
 "|checkbox| :guilabel:`Use the layer title as name if set`: 이 옵션을 활성화하면 레이어명 "
 "대신 레이어 제목을 사용합니다."
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:442
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:446
 msgid ""
 "|checkbox| :guilabel:`Export features intersecting the current map extent`;"
 msgstr ""
 "|checkbox| :guilabel:`Export features intersecting the current map extent`: "
 "이 옵션을 활성화하면 현재 맵 캔버스 범위를 가로지르는 피처도 내보냅니다."
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:443
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:447
 msgid ""
 "|unchecked| :guilabel:`Force 2d output (eg. to support polyline width)`;"
 msgstr ""
 "|unchecked| :guilabel:`Force 2d output (eg. to support polyline width)`: 이 "
 "옵션을 활성화하면 산출물을 2차원으로 강제합니다."
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:444
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:448
 msgid ""
 "|checkbox| :guilabel:`Export label as MTEXT elements` or TEXT elements."
 msgstr ""
 "|checkbox| :guilabel:`Export label as MTEXT elements`: 이 옵션을 활성화하면 라벨을 "
 "MTEXT(다중행 텍스트)로 내보냅니다. 체크를 해제할 경우 일반 텍스트로 내보냅니다."
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:451
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:455
 msgid "Exporting a project to DXF dialog"
 msgstr "프로젝트를 DXF로 내보내기 대화창"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:457
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:461
 msgid "Creating new layers from the clipboard"
 msgstr "클립보드로부터 새 레이어 생성"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:459
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:463
 msgid ""
 "Features that are on the clipboard can be pasted into a new layer. To do "
 "this, Select some features, copy them to the clipboard, and then paste them "
@@ -903,7 +902,7 @@ msgstr ""
 ":menuselection:`Edit --> Paste Features as -->` 메뉴의 다음 메뉴 옵션 가운데 하나를 선택해서 새 "
 "레이어에 붙여넣으십시오:"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:463
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:467
 msgid ""
 ":guilabel:`New Vector Layer...`: the :guilabel:`Save vector layer as...` "
 "dialog appears (see :ref:`general_saveas` for parameters)"
@@ -911,19 +910,19 @@ msgstr ""
 ":guilabel:`New Vector Layer...`: :guilabel:`Save vector layer as...` 대화창이 "
 "열립니다. (파라미터에 대한 설명은 :ref:`general_saveas` 참조)"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:465
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:469
 msgid ""
 "or :guilabel:`Temporary Scratch Layer...`: you need to provide a name for "
 "the layer"
 msgstr ":guilabel:`Temporary Scratch Layer...`: 레이어 명칭을 입력해야 합니다."
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:468
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:472
 msgid ""
 "A new layer, filled with selected features and their attributes is created "
 "(and added to map canvas)."
 msgstr "선택한 피처 및 그 속성을 가진 새 레이어를 생성합니다. (그리고 맵 캔버스에 추가합니다.)"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:471
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:475
 msgid ""
 "Creating layers from the clipboard is possible with features selected and "
 "copied within QGIS as well as features from another application, as long as "
@@ -932,11 +931,11 @@ msgstr ""
 "QGIS 안에서 선택하고 복사한 피처는 물론, 다른 응용 프로그램에서 ─ WKT(Well-Known Text)를 이용해서 정의된 "
 "도형이라면 ─ 도형을 복사해도 클립보드로부터 레이어를 생성할 수 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:481
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:485
 msgid "Creating virtual layers"
 msgstr "가상 레이어 생성"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:483
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:487
 msgid ""
 "A virtual layer is a special kind of vector layer. It allows you to define a"
 " layer as the result of an SQL query involving any number of other vector "
@@ -946,31 +945,27 @@ msgstr ""
 "가상 레이어는 특별한 종류의 벡터 레이어입니다. QGIS가 지원하는 여러 다른 벡터 레이어 포맷을 대상으로 한 SQL 쿼리의 산출물로 "
 "레이어를 정의할 수 있게 해줍니다. 가상 레이어는 자체적으로 데이터를 보유하지 않으며, 뷰로 표시할 수 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:489
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:493
 msgid "To create a virtual layer, open the virtual layer creation dialog by:"
 msgstr "가상 레이어를 생성하려면, 다음 방법으로 가상 레이어 생성 대화창을 여십시오:"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:491
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:495
 msgid ""
-"choosing the |virtualLayer| :guilabel:`Add/Edit Virtual Layer` entry in the "
-":menuselection:`Layer --> Add Layer -->` menu;"
+"choosing the |addVirtualLayer| :guilabel:`Add/Edit Virtual Layer` entry in "
+"the :menuselection:`Layer --> Add Layer -->` menu;"
 msgstr ""
-":menuselection:`Layer --> Add Layer -->` 메뉴에서 |virtualLayer| "
-":guilabel:`Add/Edit Virtual Layer` 항목을 선택하거나"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:493
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:497
 msgid ""
-"enabling the |virtualLayer| :guilabel:`Add Virtual Layer` tab in the "
+"enabling the |addVirtualLayer| :guilabel:`Add Virtual Layer` tab in the "
 ":guilabel:`Data Source Manager` dialog;"
 msgstr ""
-":guilabel:`Data Source Manager` 대화창에서 |virtualLayer| :guilabel:`Add Virtual "
-"Layer` 탭을 선택하거나"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:495
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:499
 msgid "or using the :guilabel:`DB Manager` dialog tree."
 msgstr ":guilabel:`DB Manager` 대화창의 트리를 사용합니다."
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:497
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:501
 msgid ""
 "The dialog allows you to specify a :guilabel:`Layer name` and an SQL "
 ":guilabel:`Query`. The query can use the name (or id) of loaded vector "
@@ -979,7 +974,7 @@ msgstr ""
 "대화창에서 :guilabel:`Layer name` 및 SQL :guilabel:`Query` 를 지정할 수 있습니다. 쿼리는 불러온 "
 "벡터 레이어의 명칭(또는 ID)을 테이블처럼 이용할 수 있으며, 테이블의 필드명을 열처럼 사용할 수도 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:501
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:505
 msgid ""
 "For example, if you have a layer called ``airports``, you can create a new "
 "virtual layer called ``public_airports`` with an SQL query like:"
@@ -987,7 +982,7 @@ msgstr ""
 "예를 들면, ``airports`` 라는 레이어가 있을 경우 다음과 같은 SQL 쿼리를 통해 ``public_airports`` 라는 "
 "가상 레이어를 생성할 수 있습니다:"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:510
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:514
 msgid ""
 "The SQL query will be executed, regardless of the underlying provider of the"
 " ``airports`` layer, even if this provider does not directly support SQL "
@@ -996,27 +991,27 @@ msgstr ""
 "``airports`` 레이어의 기저 제공자가 어떤 것이든, 심지어 해당 제공자가 SQL 쿼리를 직접 지원하지 않는다고 해도, SQL "
 "쿼리는 실행될 것입니다."
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:517
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:521
 msgid "Create virtual layers dialog"
 msgstr "가상 레이어 생성 대화창"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:519
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:523
 msgid ""
 "Joins and complex queries can also be created, for example, to join airports"
 " and country information:"
 msgstr "예를 들어 공항과 국가 정보를 결합시키려면, 다음과 같이 결합(join) 및 복잡 쿼리를 생성할 수도 있습니다:"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:531
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:535
 msgid ""
 "It's also possible to create virtual layers using the SQL window of "
 ":ref:`dbmanager`."
 msgstr ":ref:`dbmanager` 의 SQL 창을 이용해서 가상 레이어를 생성할 수도 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:535
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:539
 msgid "Embedding layers for use in queries"
 msgstr "쿼리에 사용하기 위해 레이어를 삽입하기"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:537
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:541
 msgid ""
 "Besides the vector layers available in the map canvas, the user can add "
 "layers to the :guilabel:`Embedded layers` list, which can be used in queries"
@@ -1025,7 +1020,7 @@ msgstr ""
 "맵 캔버스에서 작업할 수 있는 벡터 레이어 이외에도, 사용자가 :guilabel:`Embedded layers` 목록에 레이어를 추가할 "
 "수 있습니다. 이렇게 추가한 레이어는 맵 캔버스 또는 레이어 패널에 표시될 필요 없이 사용자가 쿼리에 이용할 수 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:541
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:545
 msgid ""
 "To embed a layer, click :guilabel:`Add` and provide the :guilabel:`Local "
 "name`, :guilabel:`Provider`, :guilabel:`Encoding` and the path to the "
@@ -1035,7 +1030,7 @@ msgstr ""
 ":guilabel:`Provider`, :guilabel:`Encoding` 그리고 :guilabel:`Source` 를 가리키는 경로를"
 " 입력하십시오."
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:545
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:549
 msgid ""
 "The :guilabel:`Import` button allows adding layers in the map canvas into "
 "the Embedded layers list. Those layers can then be removed from the Layers "
@@ -1044,21 +1039,21 @@ msgstr ""
 ":guilabel:`Import` 버튼을 누르면 맵 캔버스에 불러온 레이어를 삽입 레이어 목록에 추가할 수 있습니다. 이렇게 하면 향후 "
 "기존 쿼리를 고장내지 않고 레이어 패널에서 해당 레이어를 제거할 수 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:550
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:554
 msgid "Supported query language"
 msgstr "지원하는 쿼리 언어"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:552
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:556
 msgid "The underlying engine uses SQLite and SpatiaLite to operate."
 msgstr "기저 엔진은 작업 수행에 SQLite 및 SpatiaLite를 이용합니다."
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:554
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:558
 msgid ""
 "It means you can use all of the SQL your local installation of SQLite "
 "understands."
 msgstr "즉 사용자가 로컬 설치한 SQLite가 지원하는 모든 SQL을 이용할 수 있다는 뜻입니다."
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:557
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:561
 msgid ""
 "Functions from SQLite and spatial functions from SpatiaLite can also be used"
 " in a virtual layer query. For instance, creating a point layer out of an "
@@ -1067,17 +1062,17 @@ msgstr ""
 "가상 레이어 쿼리에 SQLite의 기능 및 SpatiaLite의 공간 기능을 이용할 수도 있습니다. 예를 들어, 다음과 같은 쿼리를 통해"
 " 속성만 가지고 있는 레이어로부터 포인트 레이어를 생성할 수 있습니다:"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:566
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:570
 msgid ""
 ":ref:`Functions of QGIS expressions<functions_list>` can also be used in a "
 "virtual layer query."
 msgstr "가상 레이어 쿼리에 :ref:`QGIS 표현식 함수 <functions_list>` 를 이용할 수도 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:569
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:573
 msgid "To refer the geometry column of a layer, use the name ``geometry``."
 msgstr "레이어의 도형 열을 참조하려면, ``geometry`` 명칭을 이용하십시오."
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:571
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:575
 msgid ""
 "Contrary to a pure SQL query, all the fields of a virtual layer query must "
 "be named. Don't forget to use the ``as`` keyword to name your columns if "
@@ -1086,11 +1081,11 @@ msgstr ""
 "순수한 SQL 쿼리와는 반대로, 가상 레이어 쿼리의 모든 필드는 명칭을 가지고 있어야만 합니다. 사용자가 이용하는 열이 계산식 또는 함수"
 " 호출의 산출물인경우 사용자 열을 명명하는 데 ``as`` 키워드를 사용해야 한다는 사실을 기억하십시오."
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:576
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:580
 msgid "Performance issues"
 msgstr "성능 문제"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:578
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:582
 msgid ""
 "With default parameters, the virtual layer engine will try its best to "
 "detect the type of the different columns of the query, including the type of"
@@ -1099,7 +1094,7 @@ msgstr ""
 "기본 파라미터를 설정하고 나면, 가상 레이어 엔진은 최선을 다해 쿼리의 서로 다른 열들의 유형을 ─ 도형 열이 존재할 경우 도형 열의 "
 "유형도 포함해서 ─ 탐지하려 할 것입니다."
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:582
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:586
 msgid ""
 "This is done by introspecting the query when possible or by fetching the "
 "first row of the query (LIMIT 1) as a last resort. Fetching the first row of"
@@ -1109,11 +1104,11 @@ msgstr ""
 "이 탐지 작업은 가능한 경우 쿼리를 내부 검사하거나 또는 불가능할 경우 마지막 수단으로 쿼리의 첫 행(LIMIT 1)을 불러와서 "
 "이루어집니다. 레이어를 생성하기 위해서만 쿼리 결과의 첫 행을 불러오는 것은 성능 관련 이유 때문에 바람직하지 않을 수도 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:587
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:591
 msgid "The creation dialog parameters:"
 msgstr "가상 레이어 생성 대화창의 파라미터는 다음과 같습니다:"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:589
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:593
 msgid ""
 ":guilabel:`Unique identifier column`: specifies a field of the query that "
 "represents unique integer values that QGIS can use as row identifiers. By "
@@ -1124,7 +1119,7 @@ msgstr ""
 " 나타내는 쿼리 필드를 지정할 수 있습니다. 기본적으로, 자동 증가하는 정수 값이 쓰입니다. 유일 식별자 열을 정의하면 ID로 행을 "
 "선택하는 작업 속도를 향상시킬 수 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:596
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:600
 msgid ""
 ":guilabel:`No geometry`: forces the virtual layer to ignore any geometry "
 "field. The resulting layer is an attribute-only layer."
@@ -1132,26 +1127,26 @@ msgstr ""
 ":guilabel:`No geometry`: 이 옵션으로 가상 레이어가 모든 도형 필드를 강제로 무시하도록 만들 수 있습니다. 속성만 "
 "가지고 있는 레이어를 산출합니다."
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:599
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:603
 msgid ""
 "Geometry :guilabel:`Column`: specifies the name of the geometry column."
 msgstr "도형 :guilabel:`Column`: 이 옵션으로 레이어의 도형으로 쓰일 열의 명칭을 지정할 수 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:601
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:605
 msgid "Geometry :guilabel:`Type`: specifies the type of the geometry."
 msgstr "도형 :guilabel:`Type`: 이 옵션으로 가상 레이어의 도형 유형을 지정할 수 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:603
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:607
 msgid ""
 "Geometry :guilabel:`CRS`: specifies the coordinate reference system of the "
 "virtual layer."
 msgstr "도형 :guilabel:`CRS`: 이 옵션으로 가상 레이어의 좌표계를 지정할 수 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:607
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:611
 msgid "Special comments"
 msgstr "특별 주석"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:609
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:613
 msgid ""
 "The virtual layer engine tries to determine the type of each column of the "
 "query. If it fails, the first row of the query is fetched to determine "
@@ -1159,13 +1154,13 @@ msgid ""
 msgstr ""
 "가상 레이어 엔진은 쿼리의 각 열의 유형을 결정하려 합니다. 실패할 경우, 열 유형을 결정하기 위해 쿼리의 첫 행을 불러옵니다."
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:613
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:617
 msgid ""
 "The type of a particular column can be specified directly in the query by "
 "using some special comments."
 msgstr "몇몇 특별 주석을 이용하면 쿼리 안에서 특정 열의 유형을 직접 지정할 수 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:616
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:620
 msgid ""
 "The syntax is the following: ``/*:type*/``. It has to be placed just after "
 "the name of a column. ``type`` can be either ``int`` for integers, ``real`` "
@@ -1174,11 +1169,11 @@ msgstr ""
 "특별 주석의 문법은 ``/*:type*/`` 입니다. 열 명칭의 바로 뒤에 이 주석을 달아야 합니다. ``type`` 자리에 정수의 경우"
 " ``int``, 부동소수점 실수의 경우 ``real``, 또는 문자열의 경우 ``text`` 를 넣을 수 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:620
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:624
 msgid "For instance:"
 msgstr "다음은 예시입니다:"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:627
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:631
 msgid ""
 "The type and coordinate reference system of the geometry column can also be "
 "set thanks to special comments with the following syntax ``/*:gtype:srid*/``"
@@ -1192,17 +1187,17 @@ msgstr ""
 "``multilinestring`` 또는 ``multipolygon``)을 넣을 수 있으며, ``srid`` 자리엔 좌표계의 EPSG "
 "코드를 나타내는 정수값을 넣을 수 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:634
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:638
 msgid "Use of indexes"
 msgstr "인덱스 사용"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:636
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:640
 msgid ""
 "When requesting a layer through a virtual layer, the source layer indices "
 "will be used in the following ways:"
 msgstr "가상 레이어를 통해 레이어를 호출하는 경우, 소스 레이어의 인덱스를 다음 방식으로 이용할 것입니다:"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:639
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:643
 msgid ""
 "if an ``=`` predicate is used on the primary key column of the layer, the "
 "underlying data provider will be asked for a particular id (FilterFid)"
@@ -1210,7 +1205,7 @@ msgstr ""
 "레이어의 기본 키 열에 대해 ``=`` 서술자(predicate)가 쓰인 경우, 기저 데이터 제공자에게 해당 특정 "
 "ID(FilterFid)를 물을 것입니다."
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:642
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:646
 msgid ""
 "for any other predicates (``>``, ``<=``, ``!=``, etc.) or on a column "
 "without a primary key, a request built from an expression will be used to "
@@ -1221,7 +1216,7 @@ msgstr ""
 "요청하는 데 표현식에서 생성된 요청을 이용할 것입니다. 즉 인덱스가 존재하는 경우 데이터베이스 제공자에 대해 인덱스를 이용할 수도 있다는"
 " 뜻입니다."
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:647
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:651
 msgid ""
 "A specific syntax exists to handle spatial predicates in requests and "
 "triggers the use of a spatial index: a hidden column named "
@@ -1232,7 +1227,7 @@ msgstr ""
 "``_search_frame_`` 이라는 숨은 열이 존재합니다. 이 열과 경계 상자와의 동일성을 비교할 수 있습니다. 다음은 그 "
 "예시입니다:"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:658
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:662
 msgid ""
 "Spatial binary predicates like ``ST_Intersects`` are sped up significantly "
 "when used in conjunction with this spatial index syntax."
