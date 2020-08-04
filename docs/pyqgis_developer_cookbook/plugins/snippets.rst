@@ -107,3 +107,62 @@ How to access attribute table of selected features
     # The method requires one parameter (the new value for the second
     # field of the selected feature(s)) and can be called by
     change_value(50)
+
+.. index:: Plugins; Customization
+
+Interface for plugin in the options dialog
+------------------------------------------
+
+You can add a custom plugin options tab to :guilabel:`Settings -> Options`. The 
+following snippet will just add the plugin tab without any option accessible.
+You can split the following classes in a different file, in this example we are
+adding two classes into the main :file:`mainPlugin.py` file.
+
+.. testcode:: plugin_snippets
+
+    class MyPluginOptionsFactory(QgsOptionsWidgetFactory):
+
+        def __init__(self):
+            super(QgsOptionsWidgetFactory, self).__init__()
+
+        def icon(self):
+            return QgsApplication.getThemeIcon('icon.svg')
+
+        def createWidget(self, parent):
+            return ConfigOptionsPage(parent)
+
+
+    class ConfigOptionsPage(QgsOptionsPageWidget):
+
+        def __init__(self, parent):
+            super(ConfigOptionsPage, self).__init__(parent)
+            layout = QHBoxLayout()
+            layout.setContentsMargins(0, 0, 0, 0)
+            layout.setMargin(0)
+            self.setLayout(layout)
+
+Finally we are adding the imports and modifying the ``__init__`` function:
+
+.. testcode:: plugin_snippets
+
+    from qgis.PyQt.QtWidgets import QHBoxLayout
+    from qgis.gui import QgsOptionsWidgetFactory, QgsOptionsPageWidget
+
+
+    class MyPlugin:
+        """QGIS Plugin Implementation."""
+
+        def __init__(self, iface):
+            """Constructor.
+
+            :param iface: An interface instance that will be passed to this class
+                which provides the hook by which you can manipulate the QGIS
+                application at run time.
+            :type iface: QgsInterface
+            """
+            # Save reference to the QGIS interface
+            self.iface = iface
+
+            self.options_factory = MyPluginOptionsFactory()
+            self.options_factory.setTitle(self.tr('My Plugin'))
+            iface.registerOptionsWidgetFactory(self.options_factory)
