@@ -459,7 +459,6 @@ return the next error:
   word / special character is mandatory. Allowed Keywords and special
   characters are 'AND','OR','IN','=','<','>=','>','>=','!=*,'(',')'.
   Semicolons in string expressions are not allowed.
-  
 
 URL example:
 
@@ -918,8 +917,13 @@ labels:
 * **LAYERFONTITALIC / ITEMFONTITALIC** ``TRUE`` to use italic font
 * **LAYERFONTCOLOR / ITEMFONTCOLOR** Hex color code (e.g. ``#FF0000``
   for red)
-* **LAYERTITLE / RULELABEL** set them to ``FALSE`` to get only
-  the legend graphics without labels
+* **LAYERTITLE** ``FALSE`` to get only the legend graphics without the
+  layer title
+* **RULELABEL**:
+
+    * ``FALSE`` legend graphics without item labels
+    * ``AUTO`` hide item label for layers with
+      :guilabel:`Single symbol` rendering
 
 Content based legend. These parameters let the client request a legend
 showing only the symbols for the features falling into the requested
@@ -1337,9 +1341,8 @@ the default format PNG is used instead.
 TILEMATRIXSET
 ^^^^^^^^^^^^^
 
-This parameter allows to define the CRS to use to compute the 
-underlying pyramid and has to be formed like ``EPSG:XXXX``.
-
+This parameter defines the CRS to use when computing the underlying
+pyramid. Format: ``EPSG:XXXX``.
 
 TILEMATRIX
 ^^^^^^^^^^
@@ -1527,8 +1530,9 @@ WFS3 (OGC API Features)
 
 WFS3 is the first implementation of the new generation of OGC
 protocols.
-It is described by the `OGC API - Features - Part 1: Core 
-<http://docs.opengeospatial.org/is/17-069r3/17-069r3.html>`_ document.
+It is described by the
+`OGC API - Features - Part 1: Core <http://docs.opengeospatial.org/is/17-069r3/17-069r3.html>`_
+document.
 
 Here is a quick informal summary of the most important differences
 between the well known WFS protocol and WFS3:
@@ -1917,8 +1921,8 @@ The HTML representation uses a set of HTML templates to generate the
 response.
 The template is parsed by a template engine called
 `inja <https://github.com/pantor/inja#tutorial>`_.
-The templates can be customized by overriding them (see: 
-:ref:`server_wfs3_template_override`).
+The templates can be customized by overriding them
+(see: :ref:`server_wfs3_template_override`).
 The template has access to the same data that are available to the
 ``JSON`` representation and a few additional functions are available to
 the template:
