@@ -1067,7 +1067,15 @@ Python code
 
 Nearest neighbour analysis
 --------------------------
-Performs nearest neighbor analysis for a point layer.
+Performs nearest neighbor analysis for a point layer. Comparing the Z-Score 
+with the normal distribution tells you how your data are distributed.
+
+A low Z-Score means that the data are unlikely distributed randomly
+while a high Z-Score means that your data are very likely
+distributed in a dispersed way.
+
+.. figure:: img/normal_distribution.png
+  :align: center
 
 Output is generated as an HTML file with the computed statistical
 values:
