@@ -34,8 +34,6 @@ Once the chosen repository is configured, installation is simply done with:
  # if you want to install server plugins, also:
  apt install python-qgis
 
-Testing the installation
------------------------------
 To test the installation, run:
 
 .. code-block:: bash
@@ -74,8 +72,6 @@ Let's add a sample project. You can use your own, or one from
 Of course, you can use your favorite GIS software to open this file and
 take a look at the configuration and available layers.
 
-Deploying QGIS server
-------------------------------------------------
 To properly deploy QGIS server you need a HTTP server. Recommended choices are **Apache** or **NGINX**.
 
 .. index:: Apache, mod_fcgid
@@ -83,7 +79,7 @@ To properly deploy QGIS server you need a HTTP server. Recommended choices are *
 .. _`httpserver`:
 
 Apache HTTP Server
-..................
+------------------
 
 .. note:: In the following, please replace ``localhost`` with the name or IP address of your server.
 
@@ -178,7 +174,7 @@ QGIS Server is now available at http://localhost/qgisserver. To check, type in a
 .. index:: nginx, spawn-fcgi, fcgiwrap
 
 NGINX HTTP Server
-.................
+-----------------
 
 .. note:: In the following, please replace ``localhost`` with the name or IP address of your server.
 
@@ -255,7 +251,7 @@ In the NGINX configuration file, :file:`/etc/nginx/nginx.conf`, you have to use
      }
 
 FastCGI wrappers
-^^^^^^^^^^^^^^^^
+................
 
 .. warning::
 
