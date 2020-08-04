@@ -295,7 +295,7 @@ You can find it in :menuselection:`Vector Overlay` group in the
 
 #. Use the two buffer layers as :guilabel:`Input layer` and
    :guilabel:`Overlay layer`, choose :file:`vector_analysis.gpkg`
-   GeoPackage in :guilabel:`Intersection` with :guilabel:`Labe name`
+   GeoPackage in :guilabel:`Intersection` with :guilabel:`Layer name`
    ``road_school_buffers_intersect``.
    Leave the rest as suggested (default).
 
