@@ -482,6 +482,7 @@ functions are specified:
 There are a number of different parameter types available for
 input and output. Below is an alphabetically sorted list:
 
+* :class:`QgsProcessingParameterAuthConfig <qgis.core.QgsProcessingParameterAuthConfig>`
 * :class:`QgsProcessingParameterBand <qgis.core.QgsProcessingParameterBand>`
 * :class:`QgsProcessingParameterBoolean <qgis.core.QgsProcessingParameterBoolean>`
 * :class:`QgsProcessingParameterColor <qgis.core.QgsProcessingParameterColor>`
@@ -492,20 +493,23 @@ input and output. Below is an alphabetically sorted list:
 * :class:`QgsProcessingParameterExtent <qgis.core.QgsProcessingParameterExtent>`
 * :class:`QgsProcessingParameterFeatureSink <qgis.core.QgsProcessingParameterFeatureSink>`
 * :class:`QgsProcessingParameterFeatureSource <qgis.core.QgsProcessingParameterFeatureSource>`
-* :class:`QgsProcessingParameterField <qgis.core.QgsProcessingParameterField>` -
-  A field in the attributes table of a vector layer. The name of the
-  layer has to be specified.
+* :class:`QgsProcessingParameterField <qgis.core.QgsProcessingParameterField>`
 * :class:`QgsProcessingParameterFile <qgis.core.QgsProcessingParameterFile>`
 * :class:`QgsProcessingParameterFileDestination <qgis.core.QgsProcessingParameterFileDestination>`
 * :class:`QgsProcessingParameterFolderDestination <qgis.core.QgsProcessingParameterFolderDestination>`
+* :class:`QgsProcessingParameterLayout <qgis.core.QgsProcessingParameterLayout>`
+* :class:`QgsProcessingParameterLayoutItem <qgis.core.QgsProcessingParameterLayoutItem>`
 * :class:`QgsProcessingParameterMapLayer <qgis.core.QgsProcessingParameterMapLayer>`
+* :class:`QgsProcessingParameterMapTheme <qgis.core.QgsProcessingParameterMapTheme>`
 * :class:`QgsProcessingParameterMatrix <qgis.core.QgsProcessingParameterMatrix>`
+* :class:`QgsProcessingParameterMeshLayer <qgis.core.QgsProcessingParameterMeshLayer>`
 * :class:`QgsProcessingParameterMultipleLayers <qgis.core.QgsProcessingParameterMultipleLayers>`
 * :class:`QgsProcessingParameterNumber <qgis.core.QgsProcessingParameterNumber>`
 * :class:`QgsProcessingParameterPoint <qgis.core.QgsProcessingParameterPoint>`
 * :class:`QgsProcessingParameterRange <qgis.core.QgsProcessingParameterRange>`
 * :class:`QgsProcessingParameterRasterDestination <qgis.core.QgsProcessingParameterRasterDestination>`
 * :class:`QgsProcessingParameterRasterLayer <qgis.core.QgsProcessingParameterRasterLayer>`
+* :class:`QgsProcessingParameterScale <qgis.core.QgsProcessingParameterScale>`
 * :class:`QgsProcessingParameterString <qgis.core.QgsProcessingParameterString>`
 * :class:`QgsProcessingParameterVectorDestination <qgis.core.QgsProcessingParameterVectorDestination>`
 * :class:`QgsProcessingParameterVectorLayer <qgis.core.QgsProcessingParameterVectorLayer>`
