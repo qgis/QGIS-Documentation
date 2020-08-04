@@ -8,8 +8,13 @@
         QgsProject,
     )
 
+    from qgis.gui import (
+        QgsOptionsWidgetFactory,
+        QgsOptionsPageWidget
+    )
+
     from qgis.PyQt.QtCore import Qt
-    from qgis.PyQt.QtWidgets import QMessageBox, QAction
+    from qgis.PyQt.QtWidgets import QMessageBox, QAction, QHBoxLayout
 
     import mock
 
