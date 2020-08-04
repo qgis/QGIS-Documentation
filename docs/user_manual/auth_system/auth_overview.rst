@@ -41,12 +41,15 @@ Master password
 To store or access sensitive information within the database, a user must define
 a `master password`. A new master password is requested and verified when
 initially storing any encrypted data to the database. Only when sensitive
-information is accessed is the user prompted for the master password, which is
+information is accessed the user is prompted for the master password, which is
 then cached for the remainder of the session (until application is quit), unless
 the user manually chooses an action to clear its cached value. Some instances of
 using the authentication system do not require input of the master password,
 such as when selecting an existing authentication configuration, or applying a
 configuration to a server configuration (such as when adding a WMS layer).
+
+You can choose whether to save the password in the ``Wallet/Keyring`` of your
+computer.
 
 .. _figure_masterpass:
 
@@ -224,32 +227,35 @@ authentication database and configurations:
 
    Utilities menu
 
-* **Input master password**:
-  
-  * Opens the master password input dialog, independent of performing any
-    authentication database command.
-    
-* **Clear cached master password**:
-
-  * Unsets the master password if it has been set via input dialog.
-  
-* **Reset master password**:
-
-  * Opens a dialog to change the master password (the current password
-    must be known) and optionally back up the current database.
-
-* **Clear cached authentication configurations**: Clears the internal lookup cache
+* **Input master password**: opens the master password input dialog, independent 
+  of performing any authentication database command.
+* **Clear cached master password**: unsets the master password if it has been 
+  set via input dialog
+* **Reset master password**: opens a dialog to change the master password (the 
+  current password must be known) and optionally back up the current database
+* **Clear network authentication access cache**: clears the authentication cache
+  of all connections
+* **Automatically clear network authentication access cache on SSL errors**: the
+  connection cache stores all authentication connections data even when the 
+  connection fails. If you make any change to the authentication configurations 
+  or to the certification authorities, you should clear the authentication cache 
+  or restart QGIS. When this option is checked, the authentication cache will be
+  automatically cleared every time an SSL error occurs and you choose to abort 
+  the connection
+* **Integrate master password with your Wallet/Keyring**: adds the master 
+  password to your personal Wallet/Keyring
+* **Store/update the master password in your Wallet/Keyring**: updates the 
+  changed master password in your Wallet/Keyring
+* **Clear the master password from your Wallet/Keyring**: deletes the master
+  password from your Wallet/Keyring
+* **Enable password helper debug log**: enables a debug tool that will contains
+  all the log information of the authentication methods
+* **Clear cached authentication configurations**: clears the internal lookup cache
   for configurations used to speed up network connections. This does not clear
   QGIS’s core network access manager’s cache, which requires a relaunch of QGIS.
-
-* **Reset master password**: Replaces the current master password for a new one.
-  The current master password will be needed prior to resetting and a backup of
-  database can be done.
-
-* **Remove all authentication configurations**: Clears the database of all
+* **Remove all authentication configurations**: clears the database of all
   configuration records, without removing other stored records.
-
-* **Erase authentication database**: Schedules a backup of the current database
+* **Erase authentication database**: schedules a backup of the current database
   and complete rebuild of the database table structure. These actions are
   scheduled for a later time, so as to ensure other operations like project
   loading do not interrupt the operation or cause errors due to a temporarily
