@@ -499,8 +499,6 @@ input and output. Below is an alphabetically sorted list:
 * :class:`QgsProcessingParameterFeatureSink <qgis.core.QgsProcessingParameterFeatureSink>`
 * :class:`QgsProcessingParameterFeatureSource <qgis.core.QgsProcessingParameterFeatureSource>`
 * :class:`QgsProcessingParameterField <qgis.core.QgsProcessingParameterField>`
-  A field in the attributes table of a vector layer. The name of the
-  layer has to be specified.
 * :class:`QgsProcessingParameterFieldMapping  <qgis.core.QgsProcessingParameterFieldMapping>`
 * :class:`QgsProcessingParameterFile <qgis.core.QgsProcessingParameterFile>`
 * :class:`QgsProcessingParameterFileDestination <qgis.core.QgsProcessingParameterFileDestination>`

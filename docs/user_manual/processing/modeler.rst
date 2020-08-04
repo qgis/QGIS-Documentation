@@ -72,6 +72,7 @@ the left side of the modeler window:
 * Map Layer
 * Map Theme
 * Matrix
+* Mesh Layer
 * Multiple Input
 * Number
 * Point
