@@ -94,9 +94,7 @@ and this and this and this, and this and this and this.
 that, and that and that and that, and that and that.
 
 Screenshots that appear throughout the user guide have been created on
-different platforms; the platform is indicated by the
-platform-specific icon at the end of the figure caption.
-
+different platforms.
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
