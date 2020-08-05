@@ -80,7 +80,7 @@ allow you to edit data in various different ways.
    .. figure:: img/fields_panel.png
       :align: center
 
-#. Switch to the :guilabel:`Attribute Form` tab. You'll see this:
+#. Switch to the :guilabel:`Attributes Form` tab. You'll see this:
 
    .. figure:: img/attributes_form.png
       :align: center
@@ -185,7 +185,7 @@ the person who creates the forms).
 #. Go back to QGIS
 #. Double click the :guilabel:`test-data` layer in the legend to
    access its properties.
-#. Click on the :guilabel:`Fields` tab in the
+#. Click on the :guilabel:`Attributes Form` tab in the
    :guilabel:`Layer Properties` dialog
 #. In the :guilabel:`Attribute editor layout` dropdown, select
    :guilabel:`Provide ui-file`.

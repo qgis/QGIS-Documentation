@@ -64,26 +64,38 @@ pdf: latex
 	# Compile the tex files into PDF, it runs 2x to fix hyperlinks
 	# notice that platex compiler needs an extra step to convert dvi to PDF
 	# using the dvipdfmx command
+	# -interaction=batchmode in latex compiler and -q im dvipdfmx will hide errors
+	# for debugging you need to remove them
 	cd $(BUILDDIR)/latex/$(LANG); \
-	$(LATEXCOMPILER) -shell-escape QGISUserGuide.tex; \
-	$(LATEXCOMPILER) -shell-escape QGISUserGuide.tex; \
-	if [ "$(LATEXCOMPILER)" != "xelatex" ]; then dvipdfmx QGISUserGuide.dvi; fi; \
-	$(LATEXCOMPILER) -shell-escape PyQGISDeveloperCookbook.tex; \
-	$(LATEXCOMPILER) -shell-escape PyQGISDeveloperCookbook.tex; \
-	if [ "$(LATEXCOMPILER)" != "xelatex" ]; then dvipdfmx PyQGISDeveloperCookbook.dvi; fi; \
-	$(LATEXCOMPILER) -shell-escape QGISTrainingManual.tex; \
-	$(LATEXCOMPILER) -shell-escape QGISTrainingManual.tex; \
-	if [ "$(LATEXCOMPILER)" != "xelatex" ]; then dvipdfmx QGISTrainingManual.dvi; fi; \
-	$(LATEXCOMPILER) -shell-escape QGISDocumentationGuidelines.tex; \
-	$(LATEXCOMPILER) -shell-escape QGISDocumentationGuidelines.tex; \
-	if [ "$(LATEXCOMPILER)" != "xelatex" ]; then dvipdfmx QGISDocumentationGuidelines.dvi; fi;
+	$(LATEXCOMPILER) -interaction=batchmode -shell-escape QGISDesktopUserGuide.tex; \
+	$(LATEXCOMPILER) -interaction=batchmode -shell-escape QGISDesktopUserGuide.tex; \
+	if [ "$(LATEXCOMPILER)" != "xelatex" ] && [ -f "QGISDesktopUserGuide.dvi" ]; then \
+		dvipdfmx -q QGISDesktopUserGuide.dvi; fi; \
+	$(LATEXCOMPILER) -interaction=batchmode -shell-escape QGISServerUserGuide.tex; \
+	$(LATEXCOMPILER) -interaction=batchmode -shell-escape QGISServerUserGuide.tex; \
+	if [ "$(LATEXCOMPILER)" != "xelatex" ] && [ -f "QGISServerUserGuide.dvi" ]; then \
+		dvipdfmx -q QGISServerUserGuide.dvi; fi; \
+	$(LATEXCOMPILER) -interaction=batchmode -shell-escape PyQGISDeveloperCookbook.tex; \
+	$(LATEXCOMPILER) -interaction=batchmode -shell-escape PyQGISDeveloperCookbook.tex; \
+	if [ "$(LATEXCOMPILER)" != "xelatex" ] && [ -f "PyQGISDeveloperCookbook.dvi" ]; then \
+		dvipdfmx -q PyQGISDeveloperCookbook.dvi; fi; \
+	$(LATEXCOMPILER) -interaction=batchmode -shell-escape QGISTrainingManual.tex; \
+	$(LATEXCOMPILER) -interaction=batchmode -shell-escape QGISTrainingManual.tex; \
+	if [ "$(LATEXCOMPILER)" != "xelatex" ] && [ -f "QGISTrainingManual.dvi" ]; then \
+		dvipdfmx -q QGISTrainingManual.dvi; fi; \
+	$(LATEXCOMPILER) -interaction=batchmode -shell-escape QGISDocumentationGuidelines.tex; \
+	$(LATEXCOMPILER) -interaction=batchmode -shell-escape QGISDocumentationGuidelines.tex; \
+	if [ "$(LATEXCOMPILER)" != "xelatex" ]  && [ -f "QGISDocumentationGuidelines.dvi" ]; then \
+		dvipdfmx -q QGISDocumentationGuidelines.dvi; fi;
 
 	# copy and rename PDF files to the pdf folder
+	# || true allows the job to continue even if one of the files is missing
 	mkdir -p $(BUILDDIR)/pdf/$(LANG);
-	mv $(BUILDDIR)/latex/$(LANG)/QGISUserGuide.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-UserGuide-$(LANG).pdf;
-	mv $(BUILDDIR)/latex/$(LANG)/PyQGISDeveloperCookbook.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-PyQGISDeveloperCookbook-$(LANG).pdf;
-	mv $(BUILDDIR)/latex/$(LANG)/QGISTrainingManual.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-TrainingManual-$(LANG).pdf;
-	mv $(BUILDDIR)/latex/$(LANG)/QGISDocumentationGuidelines.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-DocumentationGuidelines-$(LANG).pdf;
+	mv $(BUILDDIR)/latex/$(LANG)/QGISDesktopUserGuide.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-DesktopUserGuide-$(LANG).pdf || true;
+	mv $(BUILDDIR)/latex/$(LANG)/QGISServerUserGuide.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-ServerUserGuide-$(LANG).pdf || true;
+	mv $(BUILDDIR)/latex/$(LANG)/PyQGISDeveloperCookbook.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-PyQGISDeveloperCookbook-$(LANG).pdf || true;
+	mv $(BUILDDIR)/latex/$(LANG)/QGISTrainingManual.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-TrainingManual-$(LANG).pdf || true;
+	mv $(BUILDDIR)/latex/$(LANG)/QGISDocumentationGuidelines.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-DocumentationGuidelines-$(LANG).pdf || true;
 
 zip:
 	mkdir -p $(BUILDDIR)/zip;
@@ -91,7 +103,7 @@ zip:
 	zip -r QGIS-$(VERSION)-Documentation-$(LANG).zip $(LANG)/;)
 	mv $(BUILDDIR)/html/QGIS-$(VERSION)-Documentation-$(LANG).zip $(BUILDDIR)/zip/;
 
-site: html pdf zip
+site: html zip
 	rsync -az $(BUILDDIR)/html/$(LANG) $(SITEDIR)/;
 
 # this will build ALL languages, AND tries to rsync them to the web dir on qgis2
@@ -100,8 +112,12 @@ all:
 	@for LANG in $(LANGUAGES) ; do \
 		make LANG=$$LANG site; \
 	done
-	rsync -az $(BUILDDIR)/pdf $(SITEDIR)/;
 	rsync -az $(BUILDDIR)/zip $(SITEDIR)/;
+
+	@for LANG in $(LANGUAGES) ; do \
+		make LANG=$$LANG pdf; \
+	done
+	rsync -az $(BUILDDIR)/pdf $(SITEDIR)/;
 
 # this will pull ALL translations (or at least from the languages we build for)
 # to your local disk, so it can be committed into github

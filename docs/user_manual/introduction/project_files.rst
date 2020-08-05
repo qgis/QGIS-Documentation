@@ -129,7 +129,7 @@ implementations (PostgreSQL and GeoPackage).
 Clicking the action will open a dialog to pick a GeoPackage connection
 and project or a PostgreSQL connection, schema and project.
 
-Projects stored in Geopackage or PostgreSQL can be also be loaded
+Projects stored in Geopackage or PostgreSQL can also be loaded
 through the QGIS browser panel, either by double-clicking them or by
 dragging them to the map canvas.
 

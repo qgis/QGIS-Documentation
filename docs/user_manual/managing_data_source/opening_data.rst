@@ -1139,7 +1139,7 @@ Connecting to web services
 With QGIS you can get access to different types of OGC web services (WM(T)S,
 WFS(-T), WCS, CSW, ...).
 Thanks to QGIS Server, you can also publish such services.
-Chapter :ref:`sec_ogc` contains descriptions of these capabilities.
+:ref:`QGIS-Server-manual` contains descriptions of these capabilities.
 
 .. index:: XYZ Tile services
 .. _xyz_tile:

@@ -1659,7 +1659,8 @@ default it will display the following information:
   * general information about the feature's geometry:
 
     * depending on the geometry type, the cartesian measurements of length,
-      perimeter or area in the layer's CRS units
+      perimeter or area in the layer's CRS units.
+      For 3D line vectors the cartesian line length is available.
     * depending on the geometry type and if an ellipsoid is set in the project
       properties dialog for :guilabel:`Measurements`, the ellipsoidal values of
       length, perimeter or area using the specified units
