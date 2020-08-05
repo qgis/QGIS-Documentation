@@ -100,7 +100,7 @@ site: html zip
 
 # this will build ALL languages, AND tries to rsync them to the web dir on qgis2
 # to be able to run this you will need a key on the server
-all:
+all: springclean
 	@for LANG in $(LANGUAGES) ; do \
 		make LANG=$$LANG site; \
 	done
