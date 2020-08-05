@@ -23,7 +23,7 @@ Only usable in an embedded form context, this function returns the current, unsa
    * - Arguments
      - * **field_name** - a field name in the current parent form
    * - Examples
-     - * current_parent_value( 'FIELD_NAME' ) → The current value of a field 'FIELD_NAME' in the parent form.
+     - * ``current_parent_value( 'FIELD_NAME' )`` → The current value of a field 'FIELD_NAME' in the parent form.
 
 
 .. end_current_parent_value_section
@@ -45,7 +45,7 @@ Returns the current, unsaved value of a field in the form or table row currently
    * - Arguments
      - * **field_name** - a field name in the current form or table row
    * - Examples
-     - * current_value( 'FIELD_NAME' ) → The current value of field 'FIELD_NAME'.
+     - * ``current_value( 'FIELD_NAME' )`` → The current value of field 'FIELD_NAME'.
 
 
 .. end_current_value_section

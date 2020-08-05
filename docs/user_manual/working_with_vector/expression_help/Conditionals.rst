@@ -39,8 +39,8 @@ END
        * **THEN result** - If *condition* evaluates to True then *result* is evaluated and returned.
        * **ELSE result** - If none of the above conditions evaluated to True then *result* is evaluated and returned.
    * - Examples
-     - * CASE WHEN "name" IS NULL THEN 'None' END →  Returns the string 'none' if the "name" field is NULL
-       * CASE WHEN $area > 10000 THEN 'Big property' WHEN $area > 5000 THEN 'Medium property' ELSE 'Small property' END →  Returns the string 'Big property' if the area is bigger than 10000, 'Medium property' if the area is between 5000 and 10000, and 'Small property' for others
+     - * ``CASE WHEN "name" IS NULL THEN 'None' END`` →  Returns the string 'none' if the "name" field is NULL
+       * ``CASE WHEN $area > 10000 THEN 'Big property' WHEN $area > 5000 THEN 'Medium property' ELSE 'Small property' END`` →  Returns the string 'Big property' if the area is bigger than 10000, 'Medium property' if the area is between 5000 and 10000, and 'Small property' for others
 
 
 .. end_CASE_section
@@ -64,10 +64,10 @@ This function can take any number of arguments.
    * - Arguments
      - * **expression** - any valid expression or value, regardless of type.
    * - Examples
-     - * coalesce(NULL, 2) → 2
-       * coalesce(NULL, 2, 3) → 2
-       * coalesce(7, NULL, 3*2) → 7
-       * coalesce("fieldA", "fallbackField", 'ERROR') → value of fieldA if it is non-NULL else the value of "fallbackField" or the string 'ERROR' if both are NULL
+     - * ``coalesce(NULL, 2)`` → 2
+       * ``coalesce(NULL, 2, 3)`` → 2
+       * ``coalesce(7, NULL, 3*2)`` → 7
+       * ``coalesce("fieldA", "fallbackField", 'ERROR')`` → value of fieldA if it is non-NULL else the value of "fallbackField" or the string 'ERROR' if both are NULL
 
 
 .. end_coalesce_section
@@ -91,13 +91,13 @@ Tests a condition and returns a different result depending on the conditional ch
        * **result_when_true** - the result which will be returned when the condition is true or another value that does not convert to false.
        * **result_when_false** - the result which will be returned when the condition is false or another value that converts to false like 0 or ''. NULL will also be converted to false.
    * - Examples
-     - * if( 1+1=2, 'Yes', 'No' ) → 'Yes'
-       * if( 1+1=3, 'Yes', 'No' ) → 'No'
-       * if( 5 > 3, 1, 0) → 1
-       * if( '', 'It is true (not empty)', 'It is false (empty)' ) → 'It is false (empty)'
-       * if( ' ', 'It is true (not empty)', 'It is false (empty)' ) → 'It is true (not empty)'
-       * if( 0, 'One', 'Zero' ) → 'Zero'
-       * if( 10, 'One', 'Zero' ) → 'One'
+     - * ``if( 1+1=2, 'Yes', 'No' )`` → 'Yes'
+       * ``if( 1+1=3, 'Yes', 'No' )`` → 'No'
+       * ``if( 5 > 3, 1, 0)`` → 1
+       * ``if( '', 'It is true (not empty)', 'It is false (empty)' )`` → 'It is false (empty)'
+       * ``if( ' ', 'It is true (not empty)', 'It is false (empty)' )`` → 'It is true (not empty)'
+       * ``if( 0, 'One', 'Zero' )`` → 'Zero'
+       * ``if( 10, 'One', 'Zero' )`` → 'One'
 
 
 .. end_if_section
@@ -120,9 +120,9 @@ Returns a NULL value if value1 equals value2; otherwise it returns value1. This 
      - * **value1** - The value that should either be used or substituted with NULL.
        * **value2** - The control value that will trigger the NULL substitution.
    * - Examples
-     - * nullif('(none)', '(none)') → NULL
-       * nullif('text', '(none)') → 'text'
-       * nullif("name", '') → NULL, if name is an empty string (or already NULL), the name in any other case.
+     - * ``nullif('(none)', '(none)')`` → NULL
+       * ``nullif('text', '(none)')`` → 'text'
+       * ``nullif("name", '')`` → NULL, if name is an empty string (or already NULL), the name in any other case.
 
 
 .. end_nullif_section
@@ -145,7 +145,7 @@ Return the first matching position matching a regular expression within a string
      - * **input_string** - the string to test against the regular expression
        * **regex** - The regular expression to test against. Backslash characters must be double escaped (e.g., "\\\\s" to match a white space character).
    * - Examples
-     - * regexp_match('QGIS ROCKS','\\\\sROCKS') → 4
+     - * ``regexp_match('QGIS ROCKS','\\\\sROCKS')`` → 4
 
 
 .. end_regexp_match_section
@@ -170,9 +170,9 @@ Tries an expression and returns its value if error-free. If the expression retur
      - * **expression** - the expression which should be run
        * **alternative** - the result which will be returned if the expression returns an error.
    * - Examples
-     - * try( to_int( '1' ), 0 ) → 1
-       * try( to_int( 'a' ), 0 ) → 0
-       * try( to_date( 'invalid_date' ) ) → NULL
+     - * ``try( to_int( '1' ), 0 )`` → 1
+       * ``try( to_int( 'a' ), 0 )`` → 0
+       * ``try( to_date( 'invalid_date' ) )`` → NULL
 
 
 .. end_try_section

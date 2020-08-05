@@ -27,7 +27,7 @@ Returns the value of an attribute from the current feature.
    * - Arguments
      - * **attribute_name** - name of attribute to be returned
    * - Examples
-     - * attribute( 'name' ) → value stored in 'name' attribute for the current feature
+     - * ``attribute( 'name' )`` → value stored in 'name' attribute for the current feature
 
 
 **Variant 2**
@@ -43,7 +43,7 @@ Allows the target feature and attribute name to be specified.
      - * **feature** - a feature
        * **attribute_name** - name of attribute to be returned
    * - Examples
-     - * attribute( @atlas_feature, 'name' ) → value stored in 'name' attribute for the current atlas feature
+     - * ``attribute( @atlas_feature, 'name' )`` → value stored in 'name' attribute for the current atlas feature
 
 
 .. end_attribute_section
@@ -67,7 +67,7 @@ Returns a map of all attributes from the current feature.
    * - Syntax
      - attributes()
    * - Examples
-     - * attributes()['name'] → value stored in 'name' attribute for the current feature
+     - * ``attributes()['name']`` → value stored in 'name' attribute for the current feature
 
 
 **Variant 2**
@@ -82,7 +82,7 @@ Allows the target feature to be specified.
    * - Arguments
      - * **feature** - a feature
    * - Examples
-     - * attributes( @atlas_feature )['name'] → value stored in 'name' attribute for the current atlas feature
+     - * ``attributes( @atlas_feature )['name']`` → value stored in 'name' attribute for the current atlas feature
 
 
 .. end_attributes_section
@@ -102,7 +102,7 @@ Returns the current feature being evaluated. This can be used with the 'attribut
    * - Syntax
      - $currentfeature
    * - Examples
-     - * attribute( $currentfeature, 'name' ) → value stored in 'name' attribute for the current feature
+     - * ``attribute( $currentfeature, 'name' )`` → value stored in 'name' attribute for the current feature
 
 
 .. end_$currentfeature_section
@@ -126,7 +126,7 @@ If called with no parameters, the function will evaluate the display expression 
    * - Syntax
      - display_expression()
    * - Examples
-     - * display_expression() → The display expression of the current feature in the current layer.
+     - * ``display_expression()`` → The display expression of the current feature in the current layer.
 
 
 **One 'feature' parameter**
@@ -141,7 +141,7 @@ If called with a 'feature' parameter only, the function will evaluate the specif
    * - Arguments
      - * **feature** - The feature which should be evaluated.
    * - Examples
-     - * display_expression(@atlas_feature) → The display expression of the current atlas feature.
+     - * ``display_expression(@atlas_feature)`` → The display expression of the current atlas feature.
 
 
 **Layer and feature parameters**
@@ -160,8 +160,8 @@ If the function is called with both a layer and a feature, it will evaluate the 
        * **feature** - The feature which should be evaluated.
        * **evaluate** - If the expression must be evaluated. If false, the expression will be returned as a string literal only (which could potentially be later evaluated using the 'eval' function).
    * - Examples
-     - * display_expression( 'streets', get_feature_by_id('streets', 1)) → The display expression of the feature with the ID 1 on the layer 'streets'.
-       * display_expression('a_layer_id', $currentfeature, 'False') → The display expression of the given feature not evaluated.
+     - * ``display_expression( 'streets', get_feature_by_id('streets', 1))`` → The display expression of the feature with the ID 1 on the layer 'streets'.
+       * ``display_expression('a_layer_id', $currentfeature, 'False')`` → The display expression of the given feature not evaluated.
 
 
 .. end_display_expression_section
@@ -185,7 +185,7 @@ Returns the first feature of a layer matching a given attribute value.
        * **attribute** - attribute name
        * **value** - attribute value to match
    * - Examples
-     - * get_feature('streets','name','main st') → first feature found in "streets" layer with "main st" value in the "name" field
+     - * ``get_feature('streets','name','main st')`` → first feature found in "streets" layer with "main st" value in the "name" field
 
 
 .. end_get_feature_section
@@ -208,7 +208,7 @@ Returns the feature with an id on a layer.
      - * **layer** - layer, layer name or layer id
        * **feature_id** - the id of the feature which should be returned
    * - Examples
-     - * get_feature('streets', 1) → the feature with the id 1 on the layer "streets"
+     - * ``get_feature('streets', 1)`` → the feature with the id 1 on the layer "streets"
 
 
 .. end_get_feature_by_id_section
@@ -228,7 +228,7 @@ Returns the feature id of the current row.
    * - Syntax
      - $id
    * - Examples
-     - * $id → 42
+     - * ``$id`` → 42
 
 
 .. end_$id_section
@@ -252,7 +252,7 @@ If called with no parameters, the function will return true if the current featu
    * - Syntax
      - is_selected()
    * - Examples
-     - * is_selected() → True if the current feature in the current layer is selected.
+     - * ``is_selected()`` → True if the current feature in the current layer is selected.
 
 
 **One 'feature' parameter**
@@ -267,7 +267,7 @@ If called with a 'feature' parameter only, the function returns true if the spec
    * - Arguments
      - * **feature** - The feature which should be checked for selection.
    * - Examples
-     - * is_selected(@atlas_feature) → True if the current atlas feature is selected.
+     - * ``is_selected(@atlas_feature)`` → True if the current atlas feature is selected.
 
 
 **Two parameters**
@@ -283,7 +283,7 @@ If the function is called with both a layer and a feature, it will return true i
      - * **layer** - The layer (or its ID or name) on which the selection will be checked.
        * **feature** - The feature which should be checked for selection.
    * - Examples
-     - * is_selected( 'streets', get_feature('streets', 'name', "street_name")) → True if the current building's street is selected (assuming the building layer has a field named 'street_name' and the 'streets' layer has a field called 'name').
+     - * ``is_selected( 'streets', get_feature('streets', 'name', "street_name"))`` → True if the current building's street is selected (assuming the building layer has a field named 'street_name' and the 'streets' layer has a field called 'name').
 
 
 .. end_is_selected_section
@@ -307,7 +307,7 @@ If called with no parameters, the function will evaluate the maptip of the curre
    * - Syntax
      - maptip()
    * - Examples
-     - * maptip() → The maptip of the current feature in the current layer.
+     - * ``maptip()`` → The maptip of the current feature in the current layer.
 
 
 **One 'feature' parameter**
@@ -322,7 +322,7 @@ If called with a 'feature' parameter only, the function will evaluate the specif
    * - Arguments
      - * **feature** - The feature which should be evaluated.
    * - Examples
-     - * maptip(@atlas_feature) → The maptip of the current atlas feature.
+     - * ``maptip(@atlas_feature)`` → The maptip of the current atlas feature.
 
 
 **Layer and feature parameters**
@@ -341,8 +341,8 @@ If the function is called with both a layer and a feature, it will evaluate the 
        * **feature** - The feature which should be evaluated.
        * **evaluate** - If the expression must be evaluated. If false, the expression will be returned as a string literal only (which could potentially be later evaluated using the 'eval_template' function).
    * - Examples
-     - * maptip('streets', get_feature_by_id('streets', 1)) → The maptip of the feature with the ID 1 on the layer 'streets'.
-       * maptip('a_layer_id', $currentfeature, 'False') → The maptip of the given feature not evaluated.
+     - * ``maptip('streets', get_feature_by_id('streets', 1))`` → The maptip of the feature with the ID 1 on the layer 'streets'.
+       * ``maptip('a_layer_id', $currentfeature, 'False')`` → The maptip of the given feature not evaluated.
 
 
 .. end_maptip_section
@@ -366,8 +366,8 @@ Returns the number of selected features on a given layer. By default works on th
    * - Arguments
      - * **layer** - The layer (or its id or name) on which the selection will be checked.
    * - Examples
-     - * num_selected() → The number of selected features on the current layer.
-       * num_selected('streets') → The number of selected features on the layer streets
+     - * ``num_selected()`` → The number of selected features on the current layer.
+       * ``num_selected('streets')`` → The number of selected features on the layer streets
 
 
 .. end_num_selected_section
@@ -390,8 +390,8 @@ Returns the configured representation value for a field value. It depends on the
      - * **value** - The value which should be resolved. Most likely a field.
        * **fieldName** - The field name for which the widget configuration should be loaded. (Optional)
    * - Examples
-     - * represent_value("field_with_value_map") → Description for value
-       * represent_value('static value', 'field_name') → Description for static value
+     - * ``represent_value("field_with_value_map")`` → Description for value
+       * ``represent_value('static value', 'field_name')`` → Description for static value
 
 
 .. end_represent_value_section
@@ -446,8 +446,8 @@ When the database parameter is a layer and the layer is in transaction mode, the
        * **filter_value** - Name of the sequence to use.
        * **default_values** - Map with default values for additional columns on the table. The values need to be fully quoted. Functions are allowed.
    * - Examples
-     - * sqlite_fetch_and_increment(@layer, 'sequence_table', 'last_unique_id', 'sequence_id', 'global', map('last_change','date(''now'')','user','''' || @user_account_name || '''')) → 0
-       * sqlite_fetch_and_increment(layer_property(@layer, 'path'), 'sequence_table', 'last_unique_id', 'sequence_id', 'global', map('last_change','date(''now'')','user','''' || @user_account_name || '''')) → 0
+     - * ``sqlite_fetch_and_increment(@layer, 'sequence_table', 'last_unique_id', 'sequence_id', 'global', map('last_change','date(''now'')','user','''' || @user_account_name || ''''))`` → 0
+       * ``sqlite_fetch_and_increment(layer_property(@layer, 'path'), 'sequence_table', 'last_unique_id', 'sequence_id', 'global', map('last_change','date(''now'')','user','''' || @user_account_name || ''''))`` → 0
 
 
 .. end_sqlite_fetch_and_increment_section
@@ -467,7 +467,7 @@ Generates a Universally Unique Identifier (UUID) for each row using the Qt `QUui
    * - Syntax
      - uuid()
    * - Examples
-     - * uuid() → '{0bd2f60f-f157-4a6d-96af-d4ba4cb366a1}'
+     - * ``uuid()`` → '{0bd2f60f-f157-4a6d-96af-d4ba4cb366a1}'
 
 
 .. end_uuid_section

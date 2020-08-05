@@ -24,9 +24,9 @@ Returns the Hamming distance between two strings. This equates to the number of 
      - * **string1** - a string
        * **string2** - a string
    * - Examples
-     - * hamming_distance('abc','xec') → 2
-       * hamming_distance('abc','ABc') → 2
-       * hamming_distance(upper('abc'),upper('ABC')) → 0
+     - * ``hamming_distance('abc','xec')`` → 2
+       * ``hamming_distance('abc','ABc')`` → 2
+       * ``hamming_distance(upper('abc'),upper('ABC'))`` → 0
 
 
 .. end_hamming_distance_section
@@ -51,9 +51,9 @@ The Levenshtein distance is a measure of the similarity between two strings. Sma
      - * **string1** - a string
        * **string2** - a string
    * - Examples
-     - * levenshtein('kittens','mitten') → 2
-       * levenshtein('Kitten','kitten') → 1
-       * levenshtein(upper('Kitten'),upper('kitten')) → 0
+     - * ``levenshtein('kittens','mitten')`` → 2
+       * ``levenshtein('Kitten','kitten')`` → 1
+       * ``levenshtein(upper('Kitten'),upper('kitten'))`` → 0
 
 
 .. end_levenshtein_section
@@ -76,9 +76,9 @@ Returns the longest common substring between two strings. This substring is the 
      - * **string1** - a string
        * **string2** - a string
    * - Examples
-     - * longest_common_substring('ABABC','BABCA') → 'ABC'
-       * longest_common_substring('abcDeF','abcdef') → 'abc'
-       * longest_common_substring(upper('abcDeF'),upper('abcdex')) → 'ABCDE'
+     - * ``longest_common_substring('ABABC','BABCA')`` → 'ABC'
+       * ``longest_common_substring('abcDeF','abcdef')`` → 'abc'
+       * ``longest_common_substring(upper('abcDeF'),upper('abcdex'))`` → 'ABCDE'
 
 
 .. end_longest_common_substring_section
@@ -100,9 +100,9 @@ Returns the Soundex representation of a string. Soundex is a phonetic matching a
    * - Arguments
      - * **string** - a string
    * - Examples
-     - * soundex('robert') → 'R163'
-       * soundex('rupert') → 'R163'
-       * soundex('rubin') → 'R150'
+     - * ``soundex('robert')`` → 'R163'
+       * ``soundex('rupert')`` → 'R163'
+       * ``soundex('rubin')`` → 'R150'
 
 
 .. end_soundex_section

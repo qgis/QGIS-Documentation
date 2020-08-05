@@ -26,9 +26,9 @@ Takes a layer and decodes the uri of the underlying data provider. It depends on
      - * **layer** - The layer for which the uri should be decoded.
        * **part** - The part of the uri to return. If unspecified, a map with all uri parts will be returned.
    * - Examples
-     - * decode_uri(@layer) → {'layerId': '0', 'layerName': '', 'path': '/home/qgis/shapefile.shp'}
-       * decode_uri(@layer) → {'layerId': NULL, 'layerName': 'layer', 'path': '/home/qgis/geopackage.gpkg'}
-       * decode_uri(@layer, 'path') → 'C:\\my_data\\qgis\\shape.shp'
+     - * ``decode_uri(@layer)`` → {'layerId': '0', 'layerName': '', 'path': '/home/qgis/shapefile.shp'}
+       * ``decode_uri(@layer)`` → {'layerId': NULL, 'layerName': 'layer', 'path': '/home/qgis/geopackage.gpkg'}
+       * ``decode_uri(@layer, 'path')`` → 'C:\\my_data\\qgis\\shape.shp'
 
 
 .. end_decode_uri_section

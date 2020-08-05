@@ -38,8 +38,8 @@ The difference is returned as an ``Interval`` and needs to be used with one of t
      - * **datetime1** - a string, date or datetime representing the later date
        * **datetime2** - a string, date or datetime representing the earlier date
    * - Examples
-     - * day(age('2012-05-12','2012-05-02')) → 10
-       * hour(age('2012-05-12','2012-05-02')) → 240
+     - * ``day(age('2012-05-12','2012-05-02'))`` → 10
+       * ``hour(age('2012-05-12','2012-05-02'))`` → 240
 
 
 .. end_age_section
@@ -61,7 +61,7 @@ Returns a datetime whose date and time are the number of milliseconds, msecs, th
    * - Arguments
      - * **int** - number (milliseconds)
    * - Examples
-     - * datetime_from_epoch(1483225200000) → 2017-01-01T00:00:00
+     - * ``datetime_from_epoch(1483225200000)`` → 2017-01-01T00:00:00
 
 
 .. end_datetime_from_epoch_section
@@ -87,7 +87,7 @@ Extracts the day from a date or datetime.
    * - Arguments
      - * **date** - a date or datetime value
    * - Examples
-     - * day('2012-05-12') → 12
+     - * ``day('2012-05-12')`` → 12
 
 
 **Interval variant**
@@ -102,9 +102,9 @@ Calculates the length in days of an interval.
    * - Arguments
      - * **interval** - interval value to return number of days from
    * - Examples
-     - * day(to_interval('3 days')) → 3
-       * day(to_interval('3 weeks 2 days')) → 23
-       * day(age('2012-01-01','2010-01-01')) → 730
+     - * ``day(to_interval('3 days'))`` → 3
+       * ``day(to_interval('3 weeks 2 days'))`` → 23
+       * ``day(age('2012-01-01','2010-01-01'))`` → 730
 
 
 .. end_day_section
@@ -126,7 +126,7 @@ Returns the day of the week for a specified date or datetime. The returned value
    * - Arguments
      - * **date** - date or datetime value
    * - Examples
-     - * day_of_week(to_date('2015-09-21')) → 1
+     - * ``day_of_week(to_date('2015-09-21'))`` → 1
 
 
 .. end_day_of_week_section
@@ -148,7 +148,7 @@ Returns the interval in milliseconds between the unix epoch and a given date val
    * - Arguments
      - * **date** - a date or datetime value
    * - Examples
-     - * epoch(to_date('2017-01-01')) → 1483203600000
+     - * ``epoch(to_date('2017-01-01'))`` → 1483203600000
 
 
 .. end_epoch_section
@@ -213,8 +213,8 @@ Formats a date type or string into a custom string format. Uses Qt date/time for
 
        * **language** - language (lowercase, two- or three-letter, ISO 639 language code) used to format the date into a custom string
    * - Examples
-     - * format_date('2012-05-15','dd.MM.yyyy') → '15.05.2012'
-       * format_date('2012-05-15','d MMMM yyyy','fr') → '15 juin 2012'
+     - * ``format_date('2012-05-15','dd.MM.yyyy')`` → '15.05.2012'
+       * ``format_date('2012-05-15','d MMMM yyyy','fr')`` → '15 juin 2012'
 
 
 .. end_format_date_section
@@ -240,7 +240,7 @@ Extracts the hour part from a time or datetime.
    * - Arguments
      - * **datetime** - a time or datetime value
    * - Examples
-     - * hour('2012-07-22T13:24:57') → 13
+     - * ``hour('2012-07-22T13:24:57')`` → 13
 
 
 **Interval variant**
@@ -255,9 +255,9 @@ Calculates the length in hours of an interval.
    * - Arguments
      - * **interval** - interval value to return number of hours from
    * - Examples
-     - * hour(tointerval('3 hours')) → 3
-       * hour(age('2012-07-22T13:00:00','2012-07-22T10:00:00')) → 3
-       * hour(age('2012-01-01','2010-01-01')) → 17520
+     - * ``hour(tointerval('3 hours'))`` → 3
+       * ``hour(age('2012-07-22T13:00:00','2012-07-22T10:00:00'))`` → 3
+       * ``hour(age('2012-01-01','2010-01-01'))`` → 17520
 
 
 .. end_hour_section
@@ -281,7 +281,7 @@ Creates a date value from year, month and day numbers.
        * **month** - Month number, where 1=January
        * **day** - Day number, beginning with 1 for the first day in the month
    * - Examples
-     - * make_date(2020,5,4) → date value 2020-05-04
+     - * ``make_date(2020,5,4)`` → date value 2020-05-04
 
 
 .. end_make_date_section
@@ -308,7 +308,7 @@ Creates a datetime value from year, month, day, hour, minute and second numbers.
        * **minute** - Minutes
        * **second** - Seconds (fractional values include milliseconds)
    * - Examples
-     - * make_datetime(2020,5,4,13,45,30.5) → datetime value 2020-05-04 13:45:30.500
+     - * ``make_datetime(2020,5,4,13,45,30.5)`` → datetime value 2020-05-04 13:45:30.500
 
 
 .. end_make_datetime_section
@@ -338,8 +338,8 @@ Creates an interval value from year, month, weeks, days, hours, minute and secon
        * **minutes** - Number of minutes
        * **seconds** - Number of seconds
    * - Examples
-     - * make_interval(hours:=3) → 3 hour interval
-       * make_interval(days:=2, hours:=3) → 2 day, 3 hour interval
+     - * ``make_interval(hours:=3)`` → 3 hour interval
+       * ``make_interval(days:=2, hours:=3)`` → 2 day, 3 hour interval
 
 
 .. end_make_interval_section
@@ -363,7 +363,7 @@ Creates a time value from hour, minute and second numbers.
        * **minute** - Minutes
        * **second** - Seconds (fractional values include milliseconds)
    * - Examples
-     - * make_time(13,45,30.5) → time value 13:45:30.500
+     - * ``make_time(13,45,30.5)`` → time value 13:45:30.500
 
 
 .. end_make_time_section
@@ -389,7 +389,7 @@ Extracts the minutes part from a time or datetime.
    * - Arguments
      - * **datetime** - a time or datetime value
    * - Examples
-     - * minute('2012-07-22T13:24:57') → 24
+     - * ``minute('2012-07-22T13:24:57')`` → 24
 
 
 **Interval variant**
@@ -404,9 +404,9 @@ Calculates the length in minutes of an interval.
    * - Arguments
      - * **interval** - interval value to return number of minutes from
    * - Examples
-     - * minute(tointerval('3 minutes')) → 3
-       * minute(age('2012-07-22T00:20:00','2012-07-22T00:00:00')) → 20
-       * minute(age('2012-01-01','2010-01-01')) → 1051200
+     - * ``minute(tointerval('3 minutes'))`` → 3
+       * ``minute(age('2012-07-22T00:20:00','2012-07-22T00:00:00'))`` → 20
+       * ``minute(age('2012-01-01','2010-01-01'))`` → 1051200
 
 
 .. end_minute_section
@@ -432,7 +432,7 @@ Extracts the month part from a date or datetime.
    * - Arguments
      - * **date** - a date or datetime value
    * - Examples
-     - * month('2012-05-12') → 05
+     - * ``month('2012-05-12')`` → 05
 
 
 **Interval variant**
@@ -447,8 +447,8 @@ Calculates the length in months of an interval.
    * - Arguments
      - * **interval** - interval value to return number of months from
    * - Examples
-     - * month(to_interval('3 months')) → 3
-       * month(age('2012-01-01','2010-01-01')) → 4.03333
+     - * ``month(to_interval('3 months'))`` → 3
+       * ``month(age('2012-01-01','2010-01-01'))`` → 4.03333
 
 
 .. end_month_section
@@ -468,7 +468,7 @@ Returns the current date and time. The function is static and will return consis
    * - Syntax
      - now()
    * - Examples
-     - * now() → 2012-07-22T13:24:57
+     - * ``now()`` → 2012-07-22T13:24:57
 
 
 .. end_now_section
@@ -494,7 +494,7 @@ Extracts the seconds part from a time or datetime.
    * - Arguments
      - * **datetime** - a time or datetime value
    * - Examples
-     - * second('2012-07-22T13:24:57') → 57
+     - * ``second('2012-07-22T13:24:57')`` → 57
 
 
 **Interval variant**
@@ -509,8 +509,8 @@ Calculates the length in seconds of an interval.
    * - Arguments
      - * **interval** - interval value to return number of seconds from
    * - Examples
-     - * second(age('2012-07-22T00:20:00','2012-07-22T00:00:00')) → 1200
-       * second(age('2012-01-01','2010-01-01')) → 63072000
+     - * ``second(age('2012-07-22T00:20:00','2012-07-22T00:00:00'))`` → 1200
+       * ``second(age('2012-01-01','2010-01-01'))`` → 63072000
 
 
 .. end_second_section
@@ -536,9 +536,9 @@ Converts a string into a date object. An optional format string can be provided 
        * **format** - format used to convert the string into a date
        * **language** - language (lowercase, two- or three-letter, ISO 639 language code) used to convert the string into a date
    * - Examples
-     - * to_date('2012-05-04') → 2012-05-04
-       * to_date('June 29, 2019','MMMM d, yyyy') → 2019-06-29
-       * to_date('29 juin, 2019','d MMMM, yyyy','fr') → 2019-06-29
+     - * ``to_date('2012-05-04')`` → 2012-05-04
+       * ``to_date('June 29, 2019','MMMM d, yyyy')`` → 2019-06-29
+       * ``to_date('29 juin, 2019','d MMMM, yyyy','fr')`` → 2019-06-29
 
 
 .. end_to_date_section
@@ -564,9 +564,9 @@ Converts a string into a datetime object. An optional format string can be provi
        * **format** - format used to convert the string into a datetime
        * **language** - language (lowercase, two- or three-letter, ISO 639 language code) used to convert the string into a datetime
    * - Examples
-     - * to_datetime('2012-05-04 12:50:00') → 2012-05-04T12:50:00
-       * to_datetime('June 29, 2019 @ 12:34','MMMM d, yyyy @ HH:mm') → 2019-06-29T12:34
-       * to_datetime('29 juin, 2019 @ 12:34','d MMMM, yyyy @ HH:mm','fr') → 2019-06-29T12:34
+     - * ``to_datetime('2012-05-04 12:50:00')`` → 2012-05-04T12:50:00
+       * ``to_datetime('June 29, 2019 @ 12:34','MMMM d, yyyy @ HH:mm')`` → 2019-06-29T12:34
+       * ``to_datetime('29 juin, 2019 @ 12:34','d MMMM, yyyy @ HH:mm','fr')`` → 2019-06-29T12:34
 
 
 .. end_to_datetime_section
@@ -588,7 +588,7 @@ Converts a string to a interval type. Can be used to take days, hours, month, et
    * - Arguments
      - * **string** - a string representing an interval. Allowable formats include {n} days {n} hours {n} months.
    * - Examples
-     - * to_datetime('2012-05-05 12:00:00') - to_interval('1 day 2 hours') → 2012-05-04T10:00:00
+     - * ``to_datetime('2012-05-05 12:00:00') - to_interval('1 day 2 hours')`` → 2012-05-04T10:00:00
 
 
 .. end_to_interval_section
@@ -614,9 +614,9 @@ Converts a string into a time object. An optional format string can be provided 
        * **format** - format used to convert the string into a time
        * **language** - language (lowercase, two- or three-letter, ISO 639 language code) used to convert the string into a time
    * - Examples
-     - * to_time('12:30:01') → 12:30:01
-       * to_time('12:34','HH:mm') → 12:34:00
-       * to_time('12:34','HH:mm','fr') → 12:34:00
+     - * ``to_time('12:30:01')`` → 12:30:01
+       * ``to_time('12:34','HH:mm')`` → 12:34:00
+       * ``to_time('12:34','HH:mm','fr')`` → 12:34:00
 
 
 .. end_to_time_section
@@ -642,7 +642,7 @@ Extracts the week number from a date or datetime.
    * - Arguments
      - * **date** - a date or datetime value
    * - Examples
-     - * week('2012-05-12') → 19
+     - * ``week('2012-05-12')`` → 19
 
 
 **Interval variant**
@@ -657,8 +657,8 @@ Calculates the length in weeks of an interval.
    * - Arguments
      - * **interval** - interval value to return number of months from
    * - Examples
-     - * week(to_interval('3 weeks')) → 3
-       * week(age('2012-01-01','2010-01-01')) → 104.285
+     - * ``week(to_interval('3 weeks'))`` → 3
+       * ``week(age('2012-01-01','2010-01-01'))`` → 104.285
 
 
 .. end_week_section
@@ -684,7 +684,7 @@ Extracts the year part from a date or datetime.
    * - Arguments
      - * **date** - a date or datetime value
    * - Examples
-     - * year('2012-05-12') → 2012
+     - * ``year('2012-05-12')`` → 2012
 
 
 **Interval variant**
@@ -699,8 +699,8 @@ Calculates the length in years of an interval.
    * - Arguments
      - * **interval** - interval value to return number of years from
    * - Examples
-     - * year(to_interval('3 years')) → 3
-       * year(age('2012-01-01','2010-01-01')) → 1.9986
+     - * ``year(to_interval('3 years'))`` → 3
+       * ``year(age('2012-01-01','2010-01-01'))`` → 1.9986
 
 
 .. end_year_section
