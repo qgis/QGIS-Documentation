@@ -2151,9 +2151,8 @@ combobox...) to the layer's fields, you need to give them the same name.
 
 Use the :guilabel:`Edit UI` to define the path to the file to use.
 
-UI-files can also be hosted on a remote server. In this case, instead of providing
-the path of the file in :guilabel:`Edit UI`, you just have to add the URL of the
-form.
+UI-files can also be hosted on a remote server.
+In this case, you provide the URL of the form instead of the file path in :guilabel:`Edit UI`.
 
 You'll find some example in the :ref:`Creating a new form <creating-new-form>`
 lesson of the :ref:`QGIS-training-manual-index-reference`. For more advanced information,
