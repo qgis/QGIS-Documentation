@@ -331,9 +331,10 @@ A coordinate reference system (CRS) is the OGC terminology for a QGIS projection
 Each WMS layer can be presented in multiple CRSs, depending on the capability of
 the WMS server.
 
-To choose a CRS, select :guilabel:`Change...` and a dialog similar to :ref:`figure_projection_custom`
-will appear. The main difference with the WMS version
-of the dialog is that only those CRSs supported by the WMS server will be shown.
+To choose a CRS, select :guilabel:`Change...` and a dialog similar to
+the one shown in :numref:`figure_projection_custom` will appear.
+The main difference with the WMS version of the dialog is that only
+those CRSs supported by the WMS server will be shown.
 
 .. _`serversearch`:
 
