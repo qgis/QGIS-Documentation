@@ -30,7 +30,7 @@ elements of the QGIS GUI, and are discussed below).
    Your window decorations (title bar, etc.) may appear different
    depending on your operating system and window manager.
 
-The main QGIS GUI (:ref:`figure_startup`) consists of five components /
+The main QGIS GUI (:numref:`figure_startup`) consists of five components /
 component types:
 
 #. :ref:`Menu Bar <label_menubar>`
