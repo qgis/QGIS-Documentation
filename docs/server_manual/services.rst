@@ -707,7 +707,9 @@ Available values are (not case sensitive):
 WITH_GEOMETRY
 ^^^^^^^^^^^^^
 
-This parameter specifies whether to add geometries to the output.
+This parameter specifies whether to add geometries to the output. To use
+this feature you must first enable :guilabel:`Add geometry to feature response`
+option in QGIS project. See :ref:`Configure your project <Creatingwmsfromproject>`.
 
 Available values are (not case sensitive):
 
