@@ -171,6 +171,20 @@ For further information about working with the Python console and
 programming QGIS plugins and applications, please refer to
 :ref:`console` and :ref:`PyQGIS-Developer-Cookbook`.
 
+.. _qgis.documentation.whatsnew:
+
+What is new in QGIS |version|
+-----------------------------
+
+This release of QGIS includes hundreds of bug fixes and many new
+features and enhancements, compared to |QGIS_CURRENT|_.
+We recommend that you use this version over previous releases.
+For a list of new features, visit the visual changelogs at
+https://qgis.org/en/site/forusers/visualchangelogs.html.
+
+.. |QGIS_CURRENT| replace:: QGIS 3.10
+.. _QGIS_CURRENT: https://docs.qgis.org/3.10/en/docs/
+
 
 Known Issues
 ----------------------------------------------------------------------

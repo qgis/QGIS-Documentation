@@ -53,17 +53,3 @@ under the terms of the GNU Free Documentation License, Version 1.3 or
 any later version published by the Free Software Foundation; with no
 Invariant Sections, no Front-Cover Texts and no Back-Cover Texts.
 A copy of the license is included in Appendix :ref:`gfl_appendix`.
-
-.. _qgis.documentation.whatsnew:
-
-What is new in QGIS |version|
------------------------------
-
-This release of QGIS includes hundreds of bug fixes and many new
-features and enhancements, compared to |QGIS_CURRENT|_.
-We recommend that you use this version over previous releases.
-For a list of new features, visit the visual changelogs at
-https://qgis.org/en/site/forusers/visualchangelogs.html.
-
-.. |QGIS_CURRENT| replace:: QGIS 3.10
-.. _QGIS_CURRENT: https://docs.qgis.org/3.10/en/docs/
