@@ -21,7 +21,7 @@ You can set the properties of the 3D view and customize it in the
 :guilabel:`Item Properties` panel.
 In addition to the
 :ref:`common properties <item_common_properties>`, this feature
-has the following functionalities (:ref:`figure_layout_3dmap_prop`):
+has the following functionalities (:numref:`figure_layout_3dmap_prop`):
 
 .. _figure_layout_3dmap_prop:
 

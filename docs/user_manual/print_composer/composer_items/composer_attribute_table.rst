@@ -51,7 +51,7 @@ following functionalities (see figure_layout_table_ppt_):
   allows you to dynamically change the layer which is used to populate the table,
   e.g. you could fill the attribute table with different layer attributes per
   atlas page.
-  Note that the table structure used (:ref:`column settings <figure_layout_table_select>`)
+  Note that the table structure used (:numref:`figure_layout_table_select`)
   is the one of the layer shown in the :guilabel:`Layer` drop-down list and it is
   left intact, meaning that setting a data defined table to a layer with different
   field(s) will result in empty column(s) in the table.
