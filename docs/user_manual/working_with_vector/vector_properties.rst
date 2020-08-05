@@ -2151,9 +2151,13 @@ combobox...) to the layer's fields, you need to give them the same name.
 
 Use the :guilabel:`Edit UI` to define the path to the file to use.
 
+UI-files can also be hosted on a remote server. In this case, instead of providing
+the path of the file in :guilabel:`Edit UI`, you just have to add the URL of the
+form.
+
 You'll find some example in the :ref:`Creating a new form <creating-new-form>`
 lesson of the :ref:`QGIS-training-manual-index-reference`. For more advanced information,
-see https://nathanw.net/2011/09/05/qgis-tips-custom-feature-forms-with-python-logic/.
+see https://woostuff.wordpress.com/2011/09/05/qgis-tips-custom-feature-forms-with-python-logic/.
 
 .. _form_custom_functions:
 
