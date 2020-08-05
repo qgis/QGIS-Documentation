@@ -23,7 +23,7 @@ Returns a map of variables from a composer item inside this composition.
    * - Arguments
      - * **id** - composer item ID
    * - Examples
-     - * map_get(item_variables('main_map'), 'map_scale') → 2000
+     - * ``map_get(item_variables('main_map'), 'map_scale')`` → 2000
 
 
 .. end_item_variables_section

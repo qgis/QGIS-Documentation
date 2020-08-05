@@ -23,7 +23,7 @@ Returns the value of a processing algorithm input parameter.
    * - Arguments
      - * **name** - name of the corresponding input parameter
    * - Examples
-     - * parameter('BUFFER_SIZE') → 5.6
+     - * ``parameter('BUFFER_SIZE')`` → 5.6
 
 
 .. end_parameter_section

@@ -23,7 +23,7 @@ Returns the unicode code associated with the first character of a string.
    * - Arguments
      - * **string** - the string to convert to unicode code
    * - Examples
-     - * ascii('Q') → 81
+     - * ``ascii('Q')`` → 81
 
 
 .. end_ascii_section
@@ -45,7 +45,7 @@ Returns the character associated with a unicode code.
    * - Arguments
      - * **code** - a unicode code number
    * - Examples
-     - * char(81) → 'Q'
+     - * ``char(81)`` → 'Q'
 
 
 .. end_char_section
@@ -67,10 +67,10 @@ Concatenates several strings to one. NULL values are converted to empty strings.
    * - Arguments
      - * **string** - a string value
    * - Examples
-     - * concat('sun', 'set') → 'sunset'
-       * concat('a','b','c','d','e') → 'abcde'
-       * concat('Anno ', 1984) → 'Anno 1984'
-       * concat('The Wall', NULL) → 'The Wall'
+     - * ``concat('sun', 'set')`` → 'sunset'
+       * ``concat('a','b','c','d','e')`` → 'abcde'
+       * ``concat('Anno ', 1984)`` → 'Anno 1984'
+       * ``concat('The Wall', NULL)`` → 'The Wall'
 
 
 .. end_concat_section
@@ -93,7 +93,7 @@ Format a string using supplied arguments.
      - * **string** - A string with place holders for the arguments. Use %1, %2, etc for placeholders. Placeholders can be repeated.
        * **arg** - any type. Any number of arguments.
    * - Examples
-     - * format('This %1 a %2','is', 'test') → 'This is a test''
+     - * ``format('This %1 a %2','is', 'test')`` → 'This is a test''
 
 
 .. end_format_section
@@ -158,8 +158,8 @@ Formats a date type or string into a custom string format. Uses Qt date/time for
 
        * **language** - language (lowercase, two- or three-letter, ISO 639 language code) used to format the date into a custom string
    * - Examples
-     - * format_date('2012-05-15','dd.MM.yyyy') → '15.05.2012'
-       * format_date('2012-05-15','d MMMM yyyy','fr') → '15 juin 2012'
+     - * ``format_date('2012-05-15','dd.MM.yyyy')`` → '15.05.2012'
+       * ``format_date('2012-05-15','d MMMM yyyy','fr')`` → '15 juin 2012'
 
 
 .. end_format_date_section
@@ -185,7 +185,7 @@ Returns a number formatted with the locale separator for thousands. Also truncat
        * **places** - integer representing the number of decimal places to truncate the string to.
        * **language** - language (lowercase, two- or three-letter, ISO 639 language code) used to format the number into a string
    * - Examples
-     - * format_number(10000000.332,2) → '10,000,000.33'
+     - * ``format_number(10000000.332,2)`` → '10,000,000.33'
 
 
 .. end_format_number_section
@@ -208,7 +208,7 @@ Returns a substring that contains the *n* leftmost characters of the string.
      - * **string** - a string
        * **length** - integer. The number of characters from the left of the string to return.
    * - Examples
-     - * left('Hello World',5) → 'Hello'
+     - * ``left('Hello World',5)`` → 'Hello'
 
 
 .. end_left_section
@@ -234,7 +234,7 @@ Returns the number of characters in a string.
    * - Arguments
      - * **string** - string to count length of
    * - Examples
-     - * length('hello') → 5
+     - * ``length('hello')`` → 5
 
 
 **Geometry variant**
@@ -249,7 +249,7 @@ Calculate the length of a geometry line object. Calculations are always planimet
    * - Arguments
      - * **geometry** - line geometry object
    * - Examples
-     - * length(geom_from_wkt('LINESTRING(0 0, 4 0)')) → 4.0
+     - * ``length(geom_from_wkt('LINESTRING(0 0, 4 0)'))`` → 4.0
 
 
 .. end_length_section
@@ -271,7 +271,7 @@ Converts a string to lower case letters.
    * - Arguments
      - * **string** - the string to convert to lower case
    * - Examples
-     - * lower('HELLO World') → 'hello world'
+     - * ``lower('HELLO World')`` → 'hello world'
 
 
 .. end_lower_section
@@ -295,8 +295,8 @@ Returns a string padded on the left to the specified width, using a fill charact
        * **width** - length of new string
        * **fill** - character to pad the remaining space with
    * - Examples
-     - * lpad('Hello', 10, 'x') → 'xxxxxHello'
-       * lpad('Hello', 3, 'x') → 'Hel'
+     - * ``lpad('Hello', 10, 'x')`` → 'xxxxxHello'
+       * ``lpad('Hello', 3, 'x')`` → 'Hel'
 
 
 .. end_lpad_section
@@ -319,7 +319,7 @@ Return the first matching position matching a regular expression within a string
      - * **input_string** - the string to test against the regular expression
        * **regex** - The regular expression to test against. Backslash characters must be double escaped (e.g., "\\\\s" to match a white space character).
    * - Examples
-     - * regexp_match('QGIS ROCKS','\\\\sROCKS') → 4
+     - * ``regexp_match('QGIS ROCKS','\\\\sROCKS')`` → 4
 
 
 .. end_regexp_match_section
@@ -343,7 +343,7 @@ Returns a string with the supplied regular expression replaced.
        * **regex** - The regular expression to replace. Backslash characters must be double escaped (e.g., "\\\\s" to match a white space character).
        * **replacement** - The string that will replace any matching occurrences of the supplied regular expression. Captured groups can be inserted into the replacement string using \\\\1, \\\\2, etc.
    * - Examples
-     - * regexp_replace('QGIS SHOULD ROCK','\\\\sSHOULD\\\\s',' DOES ') → 'QGIS DOES ROCK'
+     - * ``regexp_replace('QGIS SHOULD ROCK','\\\\sSHOULD\\\\s',' DOES ')`` → 'QGIS DOES ROCK'
 
 
 .. end_regexp_replace_section
@@ -366,7 +366,7 @@ Returns the portion of a string which matches a supplied regular expression.
      - * **input_string** - the string to find matches in
        * **regex** - The regular expression to match against. Backslash characters must be double escaped (e.g., "\\\\s" to match a white space character).
    * - Examples
-     - * regexp_substr('abc123','(\\\\d+)') → '123'
+     - * ``regexp_substr('abc123','(\\\\d+)')`` → '123'
 
 
 .. end_regexp_substr_section
@@ -394,9 +394,9 @@ Returns a string with the supplied string or array of strings replaced by a stri
        * **before** - the string or array of strings to replace
        * **after** - the string or array of strings to use as a replacement
    * - Examples
-     - * replace('QGIS SHOULD ROCK','SHOULD','DOES') → 'QGIS DOES ROCK'
-       * replace('QGIS ABC',array('A','B','C'),array('X','Y','Z')) → 'QGIS XYZ'
-       * replace('QGIS',array('Q','S'),'') → 'GI'
+     - * ``replace('QGIS SHOULD ROCK','SHOULD','DOES')`` → 'QGIS DOES ROCK'
+       * ``replace('QGIS ABC',array('A','B','C'),array('X','Y','Z'))`` → 'QGIS XYZ'
+       * ``replace('QGIS',array('Q','S'),'')`` → 'GI'
 
 
 **Map variant**
@@ -412,7 +412,7 @@ Returns a string with the supplied map keys replaced by paired values.
      - * **string** - the input string
        * **map** - the map containing keys and values
    * - Examples
-     - * replace('APP SHOULD ROCK',map('APP','QGIS','SHOULD','DOES')) → 'QGIS DOES ROCK'
+     - * ``replace('APP SHOULD ROCK',map('APP','QGIS','SHOULD','DOES'))`` → 'QGIS DOES ROCK'
 
 
 .. end_replace_section
@@ -435,7 +435,7 @@ Returns a substring that contains the *n* rightmost characters of the string.
      - * **string** - a string
        * **length** - integer. The number of characters from the right of the string to return.
    * - Examples
-     - * right('Hello World',5) → 'World'
+     - * ``right('Hello World',5)`` → 'World'
 
 
 .. end_right_section
@@ -459,8 +459,8 @@ Returns a string padded on the right to the specified width, using a fill charac
        * **width** - length of new string
        * **fill** - character to pad the remaining space with
    * - Examples
-     - * rpad('Hello', 10, 'x') → 'Helloxxxxx'
-       * rpad('Hello', 3, 'x') → 'Hel'
+     - * ``rpad('Hello', 10, 'x')`` → 'Helloxxxxx'
+       * ``rpad('Hello', 3, 'x')`` → 'Hel'
 
 
 .. end_rpad_section
@@ -483,8 +483,8 @@ Return the first matching position of a substring within another string, or 0 if
      - * **haystack** - string that is to be searched
        * **needle** - string to search for
    * - Examples
-     - * strpos('HELLO WORLD','WORLD') → 7
-       * strpos('HELLO WORLD','GOODBYE') → 0
+     - * ``strpos('HELLO WORLD','WORLD')`` → 7
+       * ``strpos('HELLO WORLD','GOODBYE')`` → 0
 
 
 .. end_strpos_section
@@ -510,12 +510,12 @@ Returns a part of a string.
        * **start** - integer representing start position to extract beginning with 1; if start is negative, the return string will begin at the end of the string minus the start value
        * **length** - integer representing length of string to extract; if length is negative, the return string will omit the given length of characters from the end of the string
    * - Examples
-     - * substr('HELLO WORLD',3,5) → 'LLO W'
-       * substr('HELLO WORLD',6) → ' WORLD'
-       * substr('HELLO WORLD',-5) → 'WORLD'
-       * substr('HELLO',3,-1) → 'LL'
-       * substr('HELLO WORLD',-5,2) → 'WO'
-       * substr('HELLO WORLD',-5,-1) → 'WORL'
+     - * ``substr('HELLO WORLD',3,5)`` → 'LLO W'
+       * ``substr('HELLO WORLD',6)`` → ' WORLD'
+       * ``substr('HELLO WORLD',-5)`` → 'WORLD'
+       * ``substr('HELLO',3,-1)`` → 'LL'
+       * ``substr('HELLO WORLD',-5,2)`` → 'WO'
+       * ``substr('HELLO WORLD',-5,-1)`` → 'WORL'
 
 
 .. end_substr_section
@@ -537,7 +537,7 @@ Converts all words of a string to title case (all words lower case with leading 
    * - Arguments
      - * **string** - the string to convert to title case
    * - Examples
-     - * title('hello WOrld') → 'Hello World'
+     - * ``title('hello WOrld')`` → 'Hello World'
 
 
 .. end_title_section
@@ -559,7 +559,7 @@ Converts a number to string.
    * - Arguments
      - * **number** - Integer or real value. The number to convert to string.
    * - Examples
-     - * to_string(123) → '123'
+     - * ``to_string(123)`` → '123'
 
 
 .. end_to_string_section
@@ -581,7 +581,7 @@ Removes all leading and trailing whitespace (spaces, tabs, etc) from a string.
    * - Arguments
      - * **string** - string to trim
    * - Examples
-     - * trim('   hello world    ') → 'hello world'
+     - * ``trim('   hello world    ')`` → 'hello world'
 
 
 .. end_trim_section
@@ -603,7 +603,7 @@ Converts a string to upper case letters.
    * - Arguments
      - * **string** - the string to convert to upper case
    * - Examples
-     - * upper('hello WOrld') → 'HELLO WORLD'
+     - * ``upper('hello WOrld')`` → 'HELLO WORLD'
 
 
 .. end_upper_section
@@ -629,8 +629,8 @@ Returns a string wrapped to a maximum/minimum number of characters.
        * **wrap_length** - an integer. If wrap_length is positive the number represents the ideal maximum number of characters to wrap; if negative, the number represents the minimum number of characters to wrap.
        * **delimiter_string** - Optional delimiter string to wrap to a new line.
    * - Examples
-     - * wordwrap('UNIVERSITY OF QGIS',13) → 'UNIVERSITY OF<br>QGIS'
-       * wordwrap('UNIVERSITY OF QGIS',-3) → 'UNIVERSITY<br>OF QGIS'
+     - * ``wordwrap('UNIVERSITY OF QGIS',13)`` → 'UNIVERSITY OF<br>QGIS'
+       * ``wordwrap('UNIVERSITY OF QGIS',-3)`` → 'UNIVERSITY<br>OF QGIS'
 
 
 .. end_wordwrap_section

@@ -23,7 +23,7 @@ Returns an array containing all the values passed as parameter.
    * - Arguments
      - * **value** - a value
    * - Examples
-     - * array(2,10) → [ 2, 10 ]
+     - * ``array(2,10)`` → [ 2, 10 ]
 
 
 .. end_array_section
@@ -46,8 +46,8 @@ Returns true if an array contains all the values of a given array.
      - * **array_a** - an array
        * **array_b** - the array of values to search
    * - Examples
-     - * array_all(array(1,2,3),array(2,3)) → true
-       * array_all(array(1,2,3),array(1,2,4)) → false
+     - * ``array_all(array(1,2,3),array(2,3))`` → true
+       * ``array_all(array(1,2,3),array(1,2,4))`` → false
 
 
 .. end_array_all_section
@@ -70,7 +70,7 @@ Returns an array with the given value added at the end.
      - * **array** - an array
        * **value** - the value to add
    * - Examples
-     - * array_append(array(1,2,3),4) → [ 1, 2, 3, 4 ]
+     - * ``array_append(array(1,2,3),4)`` → [ 1, 2, 3, 4 ]
 
 
 .. end_array_append_section
@@ -92,7 +92,7 @@ Returns an array containing all the given arrays concatenated.
    * - Arguments
      - * **array** - an array
    * - Examples
-     - * array_cat(array(1,2),array(2,3)) → [ 1, 2, 2, 3 ]
+     - * ``array_cat(array(1,2),array(2,3))`` → [ 1, 2, 2, 3 ]
 
 
 .. end_array_cat_section
@@ -115,7 +115,7 @@ Returns true if an array contains the given value.
      - * **array** - an array
        * **value** - the value to search
    * - Examples
-     - * array_contains(array(1,2,3),2) → true
+     - * ``array_contains(array(1,2,3),2)`` → true
 
 
 .. end_array_contains_section
@@ -137,7 +137,7 @@ Returns an array containing distinct values of the given array.
    * - Arguments
      - * **array** - an array
    * - Examples
-     - * array_distinct(array(1,2,3,2,1)) → [ 1, 2, 3 ]
+     - * ``array_distinct(array(1,2,3,2,1))`` → [ 1, 2, 3 ]
 
 
 .. end_array_distinct_section
@@ -160,7 +160,7 @@ Returns an array with only the items for which the expression evaluates to true.
      - * **array** - an array
        * **expression** - an expression to evaluate on each item. The variable `@element` will be replaced by the current value.
    * - Examples
-     - * array_filter(array(1,2,3),@element &lt; 3) → [ 1, 2 ]
+     - * ``array_filter(array(1,2,3),@element &lt; 3)`` → [ 1, 2 ]
 
 
 .. end_array_filter_section
@@ -183,7 +183,7 @@ Returns the index (0 for the first one) of a value within an array. Returns -1 i
      - * **array** - an array
        * **value** - the value to search
    * - Examples
-     - * array_find(array(1,2,3),2) → 1
+     - * ``array_find(array(1,2,3),2)`` → 1
 
 
 .. end_array_find_section
@@ -205,7 +205,7 @@ Returns the first value of an array.
    * - Arguments
      - * **array** - an array
    * - Examples
-     - * array_first(array('a','b','c')) → 'a'
+     - * ``array_first(array('a','b','c'))`` → 'a'
 
 
 .. end_array_first_section
@@ -228,8 +228,8 @@ Returns an array with the given expression evaluated on each item.
      - * **array** - an array
        * **expression** - an expression to evaluate on each item. The variable `@element` will be replaced by the current value.
    * - Examples
-     - * array_foreach(array('a','b','c'),upper(@element)) → [ 'A', 'B', 'C' ]
-       * array_foreach(array(1,2,3),@element + 10) → [ 11, 12, 13 ]
+     - * ``array_foreach(array('a','b','c'),upper(@element))`` → [ 'A', 'B', 'C' ]
+       * ``array_foreach(array(1,2,3),@element + 10)`` → [ 11, 12, 13 ]
 
 
 .. end_array_foreach_section
@@ -252,7 +252,7 @@ Returns the Nth value (0 for the first one) of an array.
      - * **array** - an array
        * **index** - the index to get (0 based)
    * - Examples
-     - * array_get(array('a','b','c'),1) → 'b'
+     - * ``array_get(array('a','b','c'),1)`` → 'b'
 
 
 .. end_array_get_section
@@ -276,7 +276,7 @@ Returns an array with the given value added at the given position.
        * **pos** - the position where to add (0 based)
        * **value** - the value to add
    * - Examples
-     - * array_insert(array(1,2,3),1,100) → [ 1, 100, 2, 3 ]
+     - * ``array_insert(array(1,2,3),1,100)`` → [ 1, 100, 2, 3 ]
 
 
 .. end_array_insert_section
@@ -299,7 +299,7 @@ Returns true if at least one element of array1 exists in array2.
      - * **array1** - an array
        * **array2** - another array
    * - Examples
-     - * array_intersect(array(1,2,3,4),array(4,0,2,5)) → true
+     - * ``array_intersect(array(1,2,3,4),array(4,0,2,5))`` → true
 
 
 .. end_array_intersect_section
@@ -321,7 +321,7 @@ Returns the last value of an array.
    * - Arguments
      - * **array** - an array
    * - Examples
-     - * array_last(array('a','b','c')) → 'c'
+     - * ``array_last(array('a','b','c'))`` → 'c'
 
 
 .. end_array_last_section
@@ -343,7 +343,7 @@ Returns the number of elements of an array.
    * - Arguments
      - * **array** - an array
    * - Examples
-     - * array_length(array(1,2,3)) → 3
+     - * ``array_length(array(1,2,3))`` → 3
 
 
 .. end_array_length_section
@@ -366,7 +366,7 @@ Returns an array with the given value added at the beginning.
      - * **array** - an array
        * **value** - the value to add
    * - Examples
-     - * array_prepend(array(1,2,3),0) → [ 0, 1, 2, 3 ]
+     - * ``array_prepend(array(1,2,3),0)`` → [ 0, 1, 2, 3 ]
 
 
 .. end_array_prepend_section
@@ -389,7 +389,7 @@ Returns an array with all the entries of the given value removed.
      - * **array** - an array
        * **value** - the values to remove
    * - Examples
-     - * array_remove_all(array('a','b','c','b'),'b') → [ 'a', 'c' ]
+     - * ``array_remove_all(array('a','b','c','b'),'b')`` → [ 'a', 'c' ]
 
 
 .. end_array_remove_all_section
@@ -412,7 +412,7 @@ Returns an array with the given index removed.
      - * **array** - an array
        * **pos** - the position to remove (0 based)
    * - Examples
-     - * array_remove_at(array(1,2,3),1) → [ 1, 3 ]
+     - * ``array_remove_at(array(1,2,3),1)`` → [ 1, 3 ]
 
 
 .. end_array_remove_at_section
@@ -434,7 +434,7 @@ Returns the given array with array values in reversed order.
    * - Arguments
      - * **array** - an array
    * - Examples
-     - * array_reverse(array(2,4,0,10)) → [ 10, 0, 4, 2 ]
+     - * ``array_reverse(array(2,4,0,10))`` → [ 10, 0, 4, 2 ]
 
 
 .. end_array_reverse_section
@@ -458,14 +458,14 @@ Returns a portion of the array. The slice is defined by the start_pos and end_po
        * **start_pos** - the index of the start position of the slice (0 based). The start_pos index is included in the slice. If you use a negative start_pos, the index is counted from the end of the list (-1 based).
        * **end_pos** - the index of the end position of the slice (0 based). The end_pos index is included in the slice. If you use a negative end_pos, the index is counted from the end of the list (-1 based).
    * - Examples
-     - * array_slice(array(1,2,3,4,5),0,3) → [ 1, 2, 3, 4 ]
-       * array_slice(array(1,2,3,4,5),0,-1) → [ 1, 2, 3, 4, 5 ]
-       * array_slice(array(1,2,3,4,5),-5,-1) → [ 1, 2, 3, 4, 5 ]
-       * array_slice(array(1,2,3,4,5),0,0) → [ 1 ]
-       * array_slice(array(1,2,3,4,5),-2,-1) → [ 4, 5 ]
-       * array_slice(array(1,2,3,4,5),-1,-1) → [ 5 ]
-       * array_slice(array('Dufour','Valmiera','Chugiak','Brighton'),1,2) → [ 'Valmiera', 'Chugiak' ]
-       * array_slice(array_slice(array('Dufour','Valmiera','Chugiak','Brighton'),-2,-1) → [ 'Chugiak', 'Brighton' ]
+     - * ``array_slice(array(1,2,3,4,5),0,3)`` → [ 1, 2, 3, 4 ]
+       * ``array_slice(array(1,2,3,4,5),0,-1)`` → [ 1, 2, 3, 4, 5 ]
+       * ``array_slice(array(1,2,3,4,5),-5,-1)`` → [ 1, 2, 3, 4, 5 ]
+       * ``array_slice(array(1,2,3,4,5),0,0)`` → [ 1 ]
+       * ``array_slice(array(1,2,3,4,5),-2,-1)`` → [ 4, 5 ]
+       * ``array_slice(array(1,2,3,4,5),-1,-1)`` → [ 5 ]
+       * ``array_slice(array('Dufour','Valmiera','Chugiak','Brighton'),1,2)`` → [ 'Valmiera', 'Chugiak' ]
+       * ``array_slice(array_slice(array('Dufour','Valmiera','Chugiak','Brighton'),-2,-1)`` → [ 'Chugiak', 'Brighton' ]
 
 
 .. end_array_slice_section
@@ -490,7 +490,7 @@ Returns the provided array with its elements sorted.
      - * **array** - an array
        * **ascending** - set this parameter to false to sort the array in descending order
    * - Examples
-     - * array_sort(array(3,2,1)) → [ 1, 2, 3 ]
+     - * ``array_sort(array(3,2,1))`` → [ 1, 2, 3 ]
 
 
 .. end_array_sort_section
@@ -516,9 +516,9 @@ Concatenates array elements into a string separated by a delimiter and using opt
        * **delimiter** - the string delimiter used to separate concatenated array elements
        * **empty_value** - the optional string to use as replacement for empty (zero length) matches
    * - Examples
-     - * array_to_string(array('1','2','3')) → '1,2,3'
-       * array_to_string(array(1,2,3),'-') → '1-2-3'
-       * array_to_string(array('1','','3'),',','0') → '1,0,3'
+     - * ``array_to_string(array('1','2','3'))`` → '1,2,3'
+       * ``array_to_string(array(1,2,3),'-')`` → '1-2-3'
+       * ``array_to_string(array('1','','3'),',','0')`` → '1,0,3'
 
 
 .. end_array_to_string_section
@@ -544,8 +544,8 @@ Creates an array containing a sequence of numbers.
        * **stop** - value that ends the sequence once reached
        * **step** - value used as the increment between values
    * - Examples
-     - * generate_series(1,5) → [ 1, 2, 3, 4, 5 ]
-       * generate_series(5,1,-1) → [ 5, 4, 3, 2, 1 ]
+     - * ``generate_series(1,5)`` → [ 1, 2, 3, 4, 5 ]
+       * ``generate_series(5,1,-1)`` → [ 5, 4, 3, 2, 1 ]
 
 
 .. end_generate_series_section
@@ -571,8 +571,8 @@ Returns an array of all strings captured by capturing groups, in the order the g
        * **regex** - the regular expression used to capture groups
        * **empty_value** - the optional string to use as replacement for empty (zero length) matches
    * - Examples
-     - * regexp_matches('QGIS=>rocks','(.*)=>(.*)') → [ 'QGIS', 'rocks' ]
-       * regexp_matches('key=>','(.*)=>(.*)','empty value') → [ 'key', 'empty value' ]
+     - * ``regexp_matches('QGIS=>rocks','(.*)=>(.*)')`` → [ 'QGIS', 'rocks' ]
+       * ``regexp_matches('key=>','(.*)=>(.*)','empty value')`` → [ 'key', 'empty value' ]
 
 
 .. end_regexp_matches_section
@@ -598,8 +598,8 @@ Splits string into an array using supplied delimiter and optional string for emp
        * **delimiter** - the string delimiter used to split the input string
        * **empty_value** - the optional string to use as replacement for empty (zero length) matches
    * - Examples
-     - * string_to_array('1,2,3',',') → [ '1', '2', '3' ]
-       * string_to_array('1,,3',',','0') → [ '1', '0', '3' ]
+     - * ``string_to_array('1,2,3',',')`` → [ '1', '2', '3' ]
+       * ``string_to_array('1,,3',',','0')`` → [ '1', '0', '3' ]
 
 
 .. end_string_to_array_section

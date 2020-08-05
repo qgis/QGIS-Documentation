@@ -23,8 +23,8 @@ Loads a JSON formatted string.
    * - Arguments
      - * **string** - JSON string
    * - Examples
-     - * from_json('{"qgis":"rocks"}') → { "qgis" : "rocks" }
-       * from_json('[1,2,3]') → [1,2,3]
+     - * ``from_json('{"qgis":"rocks"}')`` → { "qgis" : "rocks" }
+       * ``from_json('[1,2,3]')`` → [1,2,3]
 
 
 .. end_from_json_section
@@ -46,7 +46,7 @@ Creates a map from a hstore-formatted string.
    * - Arguments
      - * **string** - the input string
    * - Examples
-     - * hstore_to_map('qgis=>rocks') → { "qgis" : "rocks" }
+     - * ``hstore_to_map('qgis=>rocks')`` → { "qgis" : "rocks" }
 
 
 .. end_hstore_to_map_section
@@ -68,7 +68,7 @@ Creates a map from a json-formatted string.
    * - Arguments
      - * **string** - the input string
    * - Examples
-     - * json_to_map('{"qgis":"rocks"}') → { "qgis" : "rocks" }
+     - * ``json_to_map('{"qgis":"rocks"}')`` → { "qgis" : "rocks" }
 
 
 .. end_json_to_map_section
@@ -91,7 +91,7 @@ Returns a map containing all the keys and values passed as pair of parameters.
      - * **key** - a key (string)
        * **value** - a value
    * - Examples
-     - * map('1','one','2', 'two') → { '1': 'one', '2': 'two' }
+     - * ``map('1','one','2', 'two')`` → { '1': 'one', '2': 'two' }
 
 
 .. end_map_section
@@ -113,7 +113,7 @@ Returns all the keys of a map as an array.
    * - Arguments
      - * **map** - a map
    * - Examples
-     - * map_akeys(map('1','one','2','two')) → [ '1', '2' ]
+     - * ``map_akeys(map('1','one','2','two'))`` → [ '1', '2' ]
 
 
 .. end_map_akeys_section
@@ -135,7 +135,7 @@ Returns all the values of a map as an array.
    * - Arguments
      - * **map** - a map
    * - Examples
-     - * map_avals(map('1','one','2','two')) → [ 'one', 'two' ]
+     - * ``map_avals(map('1','one','2','two'))`` → [ 'one', 'two' ]
 
 
 .. end_map_avals_section
@@ -157,7 +157,7 @@ Returns a map containing all the entries of the given maps. If two maps contain 
    * - Arguments
      - * **map** - a map
    * - Examples
-     - * map_concat(map('1','one', '2','overridden'),map('2','two', '3','three')) → { '1': 'one, '2': 'two', '3': 'three' }
+     - * ``map_concat(map('1','one', '2','overridden'),map('2','two', '3','three'))`` → { '1': 'one, '2': 'two', '3': 'three' }
 
 
 .. end_map_concat_section
@@ -180,7 +180,7 @@ Returns a map with the given key and its corresponding value deleted.
      - * **map** - a map
        * **key** - the key to delete
    * - Examples
-     - * map_delete(map('1','one','2','two'),'2') → { '1': 'one' }
+     - * ``map_delete(map('1','one','2','two'),'2')`` → { '1': 'one' }
 
 
 .. end_map_delete_section
@@ -203,7 +203,7 @@ Returns true if the given key exists in the map.
      - * **map** - a map
        * **key** - the key to lookup
    * - Examples
-     - * map_exist(map('1','one','2','two'),'3') → false
+     - * ``map_exist(map('1','one','2','two'),'3')`` → false
 
 
 .. end_map_exist_section
@@ -226,7 +226,7 @@ Returns the value of a map, given it's key.
      - * **map** - a map
        * **key** - the key to lookup
    * - Examples
-     - * map_get(map('1','one','2','two'),'2') → 'two'
+     - * ``map_get(map('1','one','2','two'),'2')`` → 'two'
 
 
 .. end_map_get_section
@@ -250,7 +250,7 @@ Returns a map with an added key/value.
        * **key** - the key to add
        * **value** - the value to add
    * - Examples
-     - * map_insert(map('1','one'),'3','three') → { '1': 'one', '3': 'three' }
+     - * ``map_insert(map('1','one'),'3','three')`` → { '1': 'one', '3': 'three' }
 
 
 .. end_map_insert_section
@@ -272,7 +272,7 @@ Merge map elements into a hstore-formatted string.
    * - Arguments
      - * **map** - the input map
    * - Examples
-     - * map_to_hstore(map('qgis','rocks')) → "qgis"=>"rocks"}
+     - * ``map_to_hstore(map('qgis','rocks'))`` → "qgis"=>"rocks"}
 
 
 .. end_map_to_hstore_section
@@ -294,7 +294,7 @@ Merge map elements into a json-formatted string.
    * - Arguments
      - * **map** - the input map
    * - Examples
-     - * map_to_json(map('qgis','rocks')) → {"qgis":"rocks"}
+     - * ``map_to_json(map('qgis','rocks'))`` → {"qgis":"rocks"}
 
 
 .. end_map_to_json_section
@@ -316,8 +316,8 @@ Create a JSON formatted string from a map, array or other value.
    * - Arguments
      - * **value** - The input value
    * - Examples
-     - * to_json(map('qgis','rocks')) → {"qgis":"rocks"}
-       * to_json(array(1,2,3)) → [1,2,3]
+     - * ``to_json(map('qgis','rocks'))`` → {"qgis":"rocks"}
+       * ``to_json(array(1,2,3))`` → [1,2,3]
 
 
 .. end_to_json_section

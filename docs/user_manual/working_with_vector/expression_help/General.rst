@@ -23,9 +23,9 @@ Gets an environment variable and returns its content as a string. If the variabl
    * - Arguments
      - * **name** - The name of the environment variable which should be retrieved.
    * - Examples
-     - * env( 'LANG' ) → 'en_US.UTF-8'
-       * env( 'MY_OWN_PREFIX_VAR' ) → 'Z:'
-       * env( 'I_DO_NOT_EXIST' ) → NULL
+     - * ``env( 'LANG' )`` → 'en_US.UTF-8'
+       * ``env( 'MY_OWN_PREFIX_VAR' )`` → 'Z:'
+       * ``env( 'I_DO_NOT_EXIST' )`` → NULL
 
 
 .. end_env_section
@@ -47,8 +47,8 @@ Evaluates an expression which is passed in a string. Useful to expand dynamic pa
    * - Arguments
      - * **expression** - an expression string
    * - Examples
-     - * eval('\'nice\'') → 'nice'
-       * eval(@expression_var) → [whatever the result of evaluating @expression_var might be…]
+     - * ``eval('\'nice\'')`` → 'nice'
+       * ``eval(@expression_var)`` → [whatever the result of evaluating @expression_var might be…]
 
 
 .. end_eval_section
@@ -70,7 +70,7 @@ Evaluates a template which is passed in a string. Useful to expand dynamic param
    * - Arguments
      - * **template** - a template string
    * - Examples
-     - * eval_template('QGIS [% upper(\\'rocks\\') %]') → QGIS ROCKS
+     - * ``eval_template('QGIS [% upper(\\'rocks\\') %]')`` → QGIS ROCKS
 
 
 .. end_eval_template_section
@@ -92,7 +92,7 @@ Returns true if a specified layer is visible.
    * - Arguments
      - * **layer** - a string, representing either a layer name or layer ID
    * - Examples
-     - * is_layer_visible('baseraster') → True
+     - * ``is_layer_visible('baseraster')`` → True
 
 
 .. end_is_layer_visible_section
@@ -142,9 +142,9 @@ Returns a matching layer property or metadata value.
          
 
    * - Examples
-     - * layer_property('streets','title') → 'Basemap Streets'
-       * layer_property('airports','feature_count') → 120
-       * layer_property('landsat','crs') → 'EPSG:4326'
+     - * ``layer_property('streets','title')`` → 'Basemap Streets'
+       * ``layer_property('airports','feature_count')`` → 120
+       * ``layer_property('landsat','crs')`` → 'EPSG:4326'
 
 
 .. end_layer_property_section
@@ -166,7 +166,7 @@ Returns the value stored within a specified variable.
    * - Arguments
      - * **name** - a variable name
    * - Examples
-     - * var('qgis_version') → '2.12'
+     - * ``var('qgis_version')`` → '2.12'
 
 
 .. end_var_section
@@ -190,7 +190,7 @@ This function sets a variable for any expression code that will be provided as 3
        * **value** - the value to set
        * **expression** - the expression for which the variable will be available
    * - Examples
-     - * with_variable('my_sum', 1 + 2 + 3, @my_sum * 2 + @my_sum * 5) → 42
+     - * ``with_variable('my_sum', 1 + 2 + 3, @my_sum * 2 + @my_sum * 5)`` → 42
 
 
 .. end_with_variable_section

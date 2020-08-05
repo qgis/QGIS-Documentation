@@ -23,7 +23,7 @@ Returns the base name of the file without the directory or file suffix.
    * - Arguments
      - * **path** - a file path
    * - Examples
-     - * base_file_name('/home/qgis/data/country_boundaries.shp') → 'country_boundaries'
+     - * ``base_file_name('/home/qgis/data/country_boundaries.shp')`` → 'country_boundaries'
 
 
 .. end_base_file_name_section
@@ -45,7 +45,7 @@ Returns true if a file path exists.
    * - Arguments
      - * **path** - a file path
    * - Examples
-     - * file_exists('/home/qgis/data/country_boundaries.shp') → true
+     - * ``file_exists('/home/qgis/data/country_boundaries.shp')`` → true
 
 
 .. end_file_exists_section
@@ -67,7 +67,7 @@ Returns the name of a file (including the file extension), excluding the directo
    * - Arguments
      - * **path** - a file path
    * - Examples
-     - * file_name('/home/qgis/data/country_boundaries.shp') → 'country_boundaries.shp'
+     - * ``file_name('/home/qgis/data/country_boundaries.shp')`` → 'country_boundaries.shp'
 
 
 .. end_file_name_section
@@ -89,7 +89,7 @@ Returns the directory component of a file path. This does not include the file n
    * - Arguments
      - * **path** - a file path
    * - Examples
-     - * file_path('/home/qgis/data/country_boundaries.shp') → '/home/qgis/data'
+     - * ``file_path('/home/qgis/data/country_boundaries.shp')`` → '/home/qgis/data'
 
 
 .. end_file_path_section
@@ -111,7 +111,7 @@ Returns the size (in bytes) of a file.
    * - Arguments
      - * **path** - a file path
    * - Examples
-     - * file_size('/home/qgis/data/country_boundaries.geojson') → 5674
+     - * ``file_size('/home/qgis/data/country_boundaries.geojson')`` → 5674
 
 
 .. end_file_size_section
@@ -133,7 +133,7 @@ Returns the file suffix (extension) from a file path.
    * - Arguments
      - * **path** - a file path
    * - Examples
-     - * file_suffix('/home/qgis/data/country_boundaries.shp') → 'shp'
+     - * ``file_suffix('/home/qgis/data/country_boundaries.shp')`` → 'shp'
 
 
 .. end_file_suffix_section
@@ -155,8 +155,8 @@ Returns true if a path corresponds to a directory.
    * - Arguments
      - * **path** - a file path
    * - Examples
-     - * is_directory('/home/qgis/data/country_boundaries.shp') → false
-       * is_directory('/home/qgis/data/') → true
+     - * ``is_directory('/home/qgis/data/country_boundaries.shp')`` → false
+       * ``is_directory('/home/qgis/data/')`` → true
 
 
 .. end_is_directory_section
@@ -178,8 +178,8 @@ Returns true if a path corresponds to a file.
    * - Arguments
      - * **path** - a file path
    * - Examples
-     - * is_file('/home/qgis/data/country_boundaries.shp') → true
-       * is_file('/home/qgis/data/') → false
+     - * ``is_file('/home/qgis/data/country_boundaries.shp')`` → true
+       * ``is_file('/home/qgis/data/')`` → false
 
 
 .. end_is_file_section
