@@ -417,14 +417,7 @@ Now enable and start sockets:
 
 .. code-block:: bash
 
- systemctl enable qgis-server@1.socket
- systemctl start qgis-server@1.socket
- systemctl enable qgis-server@2.socket
- systemctl start qgis-server@2.socket
- systemctl enable qgis-server@3.socket
- systemctl start qgis-server@3.socket
- systemctl enable qgis-server@4.socket
- systemctl start qgis-server@4.socket
+ for i in 1 2 3 4; do systemctl enable qgis-server@$i.socket && systemctl start qgis-server@$i.socket; done
 
 The **QGIS Server Service unit** defines and starts the QGIS Server process.
 The important part is that the Service process’ standard input is connected to
@@ -464,7 +457,7 @@ Now start socket service:
 
 .. code-block:: bash
 
-  sudo systemctl start qgis-server@sockets.service
+ for i in 1 2 3 4; do systemctl enable qgis-server@$i.service && systemctl start qgis-server@$i.service; done
 
 Finally, for the NGINX HTTP server, lets introduce the configuration for this setup:
 
