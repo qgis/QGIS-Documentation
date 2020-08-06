@@ -2415,10 +2415,14 @@ fine-tune the 3D scene:
     scene light(s) and the terrain material's :guilabel:`Ambient` and
     :guilabel:`Specular` colors and :guilabel:`Shininess`
 
-* :guilabel:`Lights`: You can add up to eight point lights, each with a
-  particular position (in :guilabel:`X`, :guilabel:`Y` and
-  :guilabel:`Z`), :guilabel:`Color`, :guilabel:`Intensity` and
-  :guilabel:`Attenuation`.
+* :guilabel:`Lights`: you can add
+
+  * up to eight :guilabel:`Point lights`, each with a particular position
+    (at :guilabel:`X`, :guilabel:`Y` and :guilabel:`Z`), :guilabel:`Color`,
+    :guilabel:`Intensity` and :guilabel:`Attenuation`
+  * up to four :guilabel:`Directional lights`, with the line direction
+    (as :guilabel:`X`, :guilabel:`Y` and :guilabel:`Z`), :guilabel:`Color`,
+    and :guilabel:`Intensity`
 
   .. _figure_3dmap_configlights:
 
@@ -2453,6 +2457,9 @@ fine-tune the 3D scene:
 * |unchecked| :guilabel:`Show bounding boxes`: Show 3D bounding boxes
   of the terrain tiles (useful for troubleshooting terrain issues)
 * |unchecked| :guilabel:`Show camera's view center`
+* |unchecked| :guilabel:`Show light sources`: shows a sphere at light source
+  origins, allowing easier repositioning and placement of light sources relative
+  to the scene contents
 
 3D vector layers
 ----------------
