@@ -30,22 +30,25 @@ The vector :guilabel:`Layer Properties` dialog provides the following sections:
      - |system| :ref:`Source <vectorsourcemenu>`
      - |symbology| :ref:`Symbology <vector_style_menu>`:sup:`[1]`
    * - |labeling| :ref:`Labels <vector_labels_tab>`:sup:`[1]`
-     - |diagram| :ref:`Diagrams <sec_diagram>`
+     - |labelmask| :guilabel:`Mask`:sup:`[1]`
      - |3d| :ref:`3D View <sec_3_d_view>`:sup:`[1]`
-   * - |sourceFields| :ref:`Fields <vector_fields_menu>`
+   * - |diagram| :ref:`Diagrams <sec_diagram>`
+     - |sourceFields| :ref:`Fields <vector_fields_menu>`
      - |formView| :ref:`Attributes Form <vector_attributes_menu>`
-     - |join| :ref:`Joins <sec_joins>`
-   * - |auxiliaryStorage| :ref:`Auxiliary Storage <vector_auxiliary_storage>`
+   * - |join| :ref:`Joins <sec_joins>`
+     - |auxiliaryStorage| :ref:`Auxiliary Storage <vector_auxiliary_storage>`
      - |action| :ref:`Actions <actions_menu>`
-     - |display| :ref:`Display <maptips>`
-   * - |rendering| :ref:`Rendering <vectorrenderingmenu>`
-     - |expression| :ref:`Variables <vectorvariablesmenu>`
+   * - |display| :ref:`Display <maptips>`
+     - |rendering| :ref:`Rendering <vectorrenderingmenu>`
+     - |temporal| :guilabel:`Temporal`
+   * - |expression| :ref:`Variables <vectorvariablesmenu>`
      - |editMetadata| :ref:`Metadata <vectormetadatamenu>`
-   * - |dependencies| :ref:`Dependencies <vectordependenciesmenu>`
-     - |legend| :ref:`Legend <vectorlegendmenu>`
+     - |dependencies| :ref:`Dependencies <vectordependenciesmenu>`
+   * - |legend| :ref:`Legend <vectorlegendmenu>`
      - |overlay| :ref:`QGIS Server <vectorservermenu>`
-   * - |digitizing| :ref:`Digitizing <digitizingmenu>`
-     - :ref:`External plugins <plugins>`:sup:`[2]` tabs
+     - |digitizing| :ref:`Digitizing <digitizingmenu>`
+   * - :ref:`External plugins <plugins>`:sup:`[2]` tabs
+     -
      -
 
 :sup:`[1]` Also available in the :ref:`Layer styling panel <layer_styling_panel>`
@@ -3383,6 +3386,8 @@ This makes it possible to quickly flag gaps as allowed.
    :width: 1.5em
 .. |labelingRuleBased| image:: /static/common/labelingRuleBased.png
    :width: 1.5em
+.. |labelmask| image:: /static/common/labelmask.png
+   :width: 1.5em
 .. |labelplacement| image:: /static/common/labelplacement.png
    :width: 1.5em
 .. |labelshadow| image:: /static/common/labelshadow.png
@@ -3459,6 +3464,8 @@ This makes it possible to quickly flag gaps as allowed.
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
 .. |system| image:: /static/common/system.png
+   :width: 1.5em
+.. |temporal| image:: /static/common/temporal.png
    :width: 1.5em
 .. |text| image:: /static/common/text.png
    :width: 1.5em
