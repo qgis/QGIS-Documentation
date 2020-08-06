@@ -2248,6 +2248,19 @@ The following tools are provided at the top of the 3D map view panel:
   <create_animation>` widget
 * |saveMapAsImage| :sup:`Save as image...`: exports the current view to
   an image file format
+* |3d| :sup:`Export 3D Scene...`: exports the current view as a 3D scene
+  (:file:`.obj` file), allowing post-processing in applications like Blender...
+  The terrain and vector features are exported as 3D objects.
+  The export settings, overriding the layers :ref:`properties <sec_3_d_view>`
+  or map view `configuration <scene_configuration>`, include:
+
+  * :guilabel:`Scene name` and destination :guilabel:`Folder`
+  * :guilabel:`Terrain resolution`
+  * :guilabel:`Terrain texture resolution`
+  * :guilabel:`Model scale`
+  * |checkbox| :guilabel:`Smooth edges`
+  * |checkbox| :guilabel:`Export normals`
+  * |checkbox| :guilabel:`Export textures`
 * |showMapTheme| :sup:`Set View Theme`: Allows you to select the set of layers to
   display in the map view from predefined :ref:`map themes <map_themes>`.
 * |options| :sup:`Configure` the map view :ref:`settings <scene_configuration>`
@@ -2571,6 +2584,8 @@ Click the icon to open the Plugin Manager dialog.
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |3d| image:: /static/common/3d.png
+   :width: 1.5em
 .. |3dNavigation| image:: /static/common/mAction3DNavigation.png
    :width: 1.3em
 .. |addAfsLayer| image:: /static/common/mActionAddAfsLayer.png
