@@ -105,6 +105,7 @@ Icon                            Substitution                        Icon        
 |hideSelectedLayers|            ``|hideSelectedLayers|``            |hideDeselectedLayers|          ``|hideDeselectedLayers|``
 |toggleAllLayers|               ``|toggleAllLayers|``               |toggleSelectedLayers|          ``|toggleSelectedLayers|``
 |addLayer|                      ``|addLayer|``
+|indicatorTemporal|             ``|indicatorTemporal|``             |indicatorNonRemovable|         ``|indicatorNonRemovable|``
 |indicatorEmbedded|             ``|indicatorEmbedded|``             |indicatorFilter|               ``|indicatorFilter|``
 |indicatorMemory|               ``|indicatorMemory|``               |indicatorNoCRS|                ``|indicatorNoCRS|``
 |indicatorBadLayer|             ``|indicatorBadLayer|``             |favourites|                    ``|favourites|``
@@ -871,6 +872,10 @@ Icon                            Substitution                        Icon        
 .. |indicatorMemory| image:: /static/common/mIndicatorMemory.png
    :width: 1.5em
 .. |indicatorNoCRS| image:: /static/common/mIndicatorNoCRS.png
+   :width: 1.5em
+.. |indicatorNonRemovable| image:: /static/common/mIndicatorNonRemovable.png
+   :width: 1.5em
+.. |indicatorTemporal| image:: /static/common/mIndicatorTemporal.png
    :width: 1.5em
 .. |inputText| image:: /static/common/inputtext.png
 .. |installPluginFromZip| image:: /static/common/mActionInstallPluginFromZip.png
