@@ -390,6 +390,7 @@ Icon                                Substitution                            Icon
 |metadata|                          ``|metadata|``                          |action|                       ``|action|``
 |display|                           ``|display|``                           |rendering|                    ``|rendering|``
 |join|                              ``|join|``                              |diagram|                      ``|diagram|``
+|labelmask|                         ``|labelmask|``                         |temporal|                     ``|temporal|``
 |legend|                            ``|legend|``                            |dependencies|                 ``|dependencies|``
 |3d|                                ``|3d|``                                |system|                       ``|system|``
 |editMetadata|                      ``|editMetadata|``                      |overlay|                      ``|overlay|``
@@ -915,6 +916,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |labelingRuleBased| image:: /static/common/labelingRuleBased.png
    :width: 1.5em
+.. |labelmask| image:: /static/common/labelmask.png
+   :width: 1.5em
 .. |labelplacement| image:: /static/common/labelplacement.png
    :width: 1.5em
 .. |labelshadow| image:: /static/common/labelshadow.png
@@ -1261,6 +1264,8 @@ Icon                            Substitution                        Icon        
 .. |system| image:: /static/common/system.png
    :width: 1.5em
 .. |tab| image:: /static/common/tab.png
+   :width: 1.5em
+.. |temporal| image:: /static/common/temporal.png
    :width: 1.5em
 .. |text| image:: /static/common/text.png
    :width: 1.5em
