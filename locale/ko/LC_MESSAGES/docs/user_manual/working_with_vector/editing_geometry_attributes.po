@@ -31,12 +31,14 @@ msgid ""
 "QGIS has various capabilities for editing OGR, SpatiaLite, PostGIS, MSSQL "
 "Spatial and Oracle Spatial vector layers and tables."
 msgstr ""
+"QGIS는 OGR, SpatiaLite, PostGIS, MSSQL Spatial 및 Oracle Spatial 벡터 레이어와 테이블을 "
+"편집할 수 있는 다양한 기능을 보유하고 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:16
 msgid ""
 "The procedure for editing GRASS layers is different - see section "
 ":ref:`grass_digitizing` for details."
-msgstr "GRASS 레이어 편집 과정은 조금 다릅니다. 자세한 내용은 :ref:`grass_digitizing` 을 참조하세요."
+msgstr "GRASS 레이어 편집 과정은 조금 다릅니다. 자세한 내용은 :ref:`grass_digitizing` 을 참조하세요."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:21
 msgid "**Concurrent Edits**"
@@ -47,6 +49,8 @@ msgid ""
 "This version of QGIS does not track if somebody else is editing the same "
 "feature at the same time as you are. The last person to save the edits wins."
 msgstr ""
+"QGIS 이번 버전은 사용자가 피처를 편집하는 도중에 다른 사용자가 동일한 피처를 편집하고 있지는 않은지 추적하지 않습니다. 마지막에 "
+"저장하는 변경 사항이 적용될 것입니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:34
 msgid "Setting the Snapping Tolerance and Search Radius"
@@ -58,6 +62,7 @@ msgid ""
 "an appropriate value of snapping tolerance and search radius for features "
 "vertices."
 msgstr ""
+"벡터 레이어 도형을 정확하게, 최적으로 편집하기 위해 피처 꼭짓점에 대한 스냅 허용 오차 및 검색 반경을 적절한 값으로 설정해야 합니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:43
 msgid "Snapping tolerance"
@@ -71,11 +76,14 @@ msgid ""
 "will leave the vertex where you release the mouse button, instead of "
 "snapping it to an existing vertex or segment."
 msgstr ""
+"스냅 허용 오차란 사용자가 새 꼭짓점을 설정하거나 또는 기존 꼭짓점을 이동시킬 때 연결하려는 가장 가까운 꼭짓점 또는 선분을 검색하기 "
+"위해 QGIS가 사용하는 거리를 말합니다. 스냅 허용 오차 안이 아닌 경우, QGIS는 기존 꼭짓점 또는 선분에 스냅시키는 대신 사용자가"
+" 마우스 버튼을 놓은 위치에 꼭짓점을 둘 것입니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:52
 msgid ""
 "The snapping tolerance setting affects all tools that work with tolerance."
-msgstr ""
+msgstr "스냅 허용 오차 설정은 허용 오차를 사용하는 모든 도구에 적용됩니다. "
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:54
 msgid ""
@@ -84,16 +92,20 @@ msgid ""
 "The snapping mode, tolerance value, and units can also be configured in this"
 " toolbar."
 msgstr ""
+":guilabel:`Snapping Toolbar` 에 있는 |snapping| :sup:`Enable snapping` 버튼을 "
+"클릭하거나 :kbd:`s` 키를 누르면 스냅 모드를 활성화/비활성화할 수 있습니다. 이 툴바에서 스냅 모드, 허용 오차 값, 단위도 환경"
+" 설정할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:59
 msgid ""
 "The snapping configuration can also be set in :menuselection:`Project --> "
 "Snapping Options...`."
 msgstr ""
+":menuselection:`Project --> Snapping Options...` 에서도 스냅 모드 환경을 설정할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:62
 msgid "There are three options to select the layer(s) to snap to:"
-msgstr ""
+msgstr "스냅을 활성화할 레이어(들)를 선택하는 데 다음 세 가지 옵션이 있습니다:"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:64
 msgid ""
@@ -102,12 +114,17 @@ msgid ""
 " is sufficient to use this snapping mode, but beware when using it for "
 "projects with many vector layers, as it may affect performance."
 msgstr ""
+":guilabel:`All layers`: 프로젝트에 있는 가시화된 모든 레이어를 선택합니다. 모든 꼭짓점 그리고/또는 선분에 포인터를 "
+"스냅시키는 빠르고 간단한 설정입니다. 대부분의 경우 이 스냅 모드를 사용하면 충분하지만, 수많은 벡터 레이어를 가진 프로젝트의 경우 "
+"사용에 주의를 요합니다. 성능에 영향을 줄 수도 있기 때문입니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:69
 msgid ""
 ":guilabel:`Current layer`: only the active layer is used, a convenient way "
 "to ensure topological consistency within the layer being edited."
 msgstr ""
+":guilabel:`Current layer`: 활성화된 레이어만 선택합니다. 편집 중인 레이어 내부의 위상(topology)의 일관성을"
+" 보장할 수 있는 편리한 방법입니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:71
 msgid ""
@@ -118,12 +135,18 @@ msgid ""
 "value. Snapping will not occur to a layer that is not checked in the "
 "snapping options dialog."
 msgstr ""
+":guilabel:`Advanced Configuration`: 스냅 모드 및 허용 오차를 레이어 기반으로 활성화하고 조정할 수 "
+"있습니다. (:ref:`figure_edit_snapping` 그림을 참조하세요.) 어떤 레이어를 편집하고 있는데 다른 레이어에 꼭짓점을"
+" 스냅시켜야 하는 경우, 대상 레이어가 체크된 상태인지 확인하고 스냅 허용 오차를 훨씬 큰 값으로 올리십시오. 스냅 옵션 대화창에서 "
+"체크되지 않은 레이어에서는 스냅이 결코 일어나지 않을 것입니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:79
 msgid ""
 "As for snapping mode, you can choose between ``To vertex``, ``To segment``, "
 "and ``To vertex and segment``."
 msgstr ""
+"스냅 모드를 ``To vertex``, ``To segment``, 그리고 ``To vertex and segment`` 가운데 하나로 "
+"선택할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:82
 msgid ""
@@ -135,10 +158,14 @@ msgid ""
 "have a minimum distance between elements, this option can be useful to "
 "ensure that you don’t add vertices too close to each other."
 msgstr ""
+"허용 오차를 ``map units`` 또는 ``pixels`` 로 설정할 수 있습니다. ``pixels`` 로 설정하면, 맵 축척을 "
+"변경하더라도 일정하게 스냅할 수 있다는 장점이 있습니다.  일반적으로 10~12픽셀이면 괜찮은 값이지만, 사용자 스크린의 해상도에 따라 "
+"달라집니다. 맵 단위로 설정하면 허용 오차를 실제 지표 거리와 비례하도록 만들 수 있습니다. 예를 들어 요소들 사이에 최소 거리를 두어야"
+" 한다면, 꼭짓점들을 서로 너무 가깝지 않게 추가하는 데 이 옵션이 유용할 것입니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:99
 msgid "Snapping options (Advanced Configuration mode)"
-msgstr ""
+msgstr "스냅 옵션 (고급 환경 설정 모드)"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:103
 msgid ""
@@ -148,10 +175,14 @@ msgid ""
 ":guilabel:`Enable snapping on invisible features` under the "
 ":menuselection:`Settings --> Options --> Digitizing` tab."
 msgstr ""
+"기본적으로, 가시화된 (레이어 심볼이 \"No symbols\" 인 경우를 제외하고, 피처 스타일이 표시된) 피처에만 스냅할 수 "
+"있습니다. :menuselection:`Settings --> Options --> Digitizing` 탭에 있는 |unchecked|"
+" :guilabel:`Enable snapping on invisible features` 옵션을 체크하면 가시화되지 않은 피처에도 "
+"스냅할 수 있게 됩니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:109
 msgid "**Enable snapping by default**"
-msgstr ""
+msgstr "**기본적으로 스냅을 활성화하기**"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:111
 msgid ""
@@ -160,6 +191,9 @@ msgid ""
 "the default snapping mode, tolerance value, and units, which will populate "
 "the :guilabel:`Snapping Options` dialog."
 msgstr ""
+":menuselection:`Settings --> Options --> Digitizing` 탭에서 모든 새 프로젝트가 기본적으로 "
+"스냅을 활성화시키도록 설정할 수 있습니다. 기본 스냅 모드, 허용 오차 값, 그리고 단위도 설정할 수 있습니다. 여기서 설정한 값들이 "
+":guilabel:`Snapping Options` 대화창에 표시될 것입니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:119
 msgid "Enable snapping on intersections"
@@ -172,6 +206,8 @@ msgid ""
 "intersections of snapping enabled layers, even if there are no vertices at "
 "the intersections."
 msgstr ""
+"또다른 옵션은 |snappingIntersection| :guilabel:`snapping on intersection` 을 선택하는 "
+"것입니다. 이 옵션은 스냅이 활성화된 레이어의 도형 교차점에 ─ 설령 교차점에 꼭짓점이 없는 경우라도 ─ 스냅할 수 있게 해줍니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:128
 msgid "Search radius"
@@ -186,6 +222,11 @@ msgid ""
 ":menuselection:`Settings -->` |options| :menuselection:`Options --> "
 "Digitizing` tab (this is where you define the snapping default values)."
 msgstr ""
+":guilabel:`Search radius for vertex edits` 는 맵을 클릭했을 때 사용자가 선택하려는 가장 가까운 "
+"꼭짓점을 \"검색\"하기 위해 QGIS가 사용하는 거리를 말합니다. 검색 반경 안이 아닌 경우, QGIS가 아무것도 찾지 못 하고 편집 "
+"작업을 위한 어떤 꼭짓점도 선택하지 못 할 것입니다. :menuselection:`Settings -->` |options| "
+":menuselection:`Options --> Digitizing` 탭에서 꼭짓점 편집 용 검색 반경을 정의할 수 있습니다. (이 "
+"탭이 스냅 기본 값을 정의하는 곳입니다.)"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:139
 msgid ""
@@ -195,6 +236,9 @@ msgid ""
 "with a large number of vertices in close proximity. The smaller the search "
 "radius, the more difficult it will be to hit what you want to move."
 msgstr ""
+"스냅 허용 오차 및 검색 반경은 ``map units`` 또는 ``pixels`` 로 설정되기 때문에, 알맞은 설정값을 찾기 위해 "
+"시행착오를 거쳐야 할 수도 있습니다. 허용 오차를 너무 길게 설정하면, QGIS가 틀린 꼭짓점에 스냅할 수도 있습니다. 특히 대량의 "
+"인접한 꼭짓점들을 다루고 있을 경우엔 말입니다. 검색 반경을 짧게 설정할수록, 사용자가 원하는 꼭짓점을 찾기 힘들어질 것입니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:152
 msgid "Topological editing"
@@ -207,6 +251,9 @@ msgid ""
 ":guilabel:`Snapping` toolbar allow you to enable / disable some other "
 "topological functionalities."
 msgstr ""
+"이런 스냅 옵션 이외에도, :guilabel:`Snapping options...` 대화창(:menuselection:`Project "
+"--> Snapping options`) 및 :guilabel:`Snapping` 툴바에서 몇몇 다른 위상 기능들을 활성화/비활성화할 수"
+" 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:164
 msgid "Enable topological editing"
@@ -220,16 +267,19 @@ msgid ""
 "vertices/segments, QGIS will also move them in the geometries of the "
 "neighboring features."
 msgstr ""
+"|topopologicalEditing| :sup:`Topological editing` 버튼은 공통 경계선을 공유하는 피처를 편집하고 "
+"유지보수할 수 있게 해줍니다. 이 옵션을 활성화하면, QGIS가 피처들이 공유하는 경계선을 '탐지' 합니다. 공통 꼭짓점/선분을 "
+"이동시키면, QGIS가 인접 피처 도형의 꼭짓점/선분도 이동시킬 것입니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:172
 msgid ""
 "Topological editing works with features from different layers, as long as "
 "the layers are visible and in editing mode."
-msgstr ""
+msgstr "위상 편집 작업은 서로 다른 레이어들의 피처들과 작동합니다. 해당 레이어들이 가시화되어 있고 편집 모드라면 말이죠."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:180
 msgid "Avoid overlap of new polygons"
-msgstr ""
+msgstr "새 폴리곤의 중첩을 피하기"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:182
 msgid ""
@@ -238,6 +288,9 @@ msgid ""
 "option prevents you from drawing new features that overlap existing ones in "
 "the selected layer, speeding up digitizing of adjacent polygons."
 msgstr ""
+"스냅 모드를 ``Advanced configuration`` 으로 설정했을 때, 폴리곤 레이어의 경우 |checkbox| "
+":guilabel:`Avoid overlap` 이라는 옵션이 존재합니다. 이 옵션은 선택한 레이어에서 기존 피처에 중첩하는 새 피처를 "
+"그리지 못 하도록 막습니다. 다른 폴리곤과 인접한 폴리곤을 디지타이징할 때 속도를 향상시키는 효과가 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:187
 msgid ""
@@ -246,16 +299,19 @@ msgid ""
 "second polygon to the boundary of the existing one. The advantage is that "
 "you don't have to digitize all vertices of the common boundary."
 msgstr ""
+"이미 폴리곤이 하나 있는 경우, 이 옵션을 활성화한 상태로 두 번째 폴리곤을 기존 폴리곤과 서로 교차하도록 디지타이즈할 수 있는데, 이때"
+" QGIS가 두 번째 폴리곤을 기존 폴리곤의 경계선에 맞춰 자를 것입니다. 공통 경계선의 꼭짓점을 모두 디지타이즈하지 않아도 된다는 "
+"장점이 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:192
 msgid ""
 "If the new geometry is totally covered by existing ones, it gets cleared, "
 "and QGIS will show an error message."
-msgstr ""
+msgstr "기존 도형이 새 도형을 완전히 덮는 경우, 새 도형은 제거되며 QGIS가 오류 메시지를 띄울 것입니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:195
 msgid "**Use cautiously the** :guilabel:`Avoid overlap` **option**"
-msgstr ""
+msgstr ":guilabel:`Avoid overlap` **옵션을 조심해서 사용해야 합니다**"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:197
 msgid ""
@@ -263,6 +319,8 @@ msgid ""
 "you can get unexpected geometries if you forget to uncheck it when no longer"
 " needed."
 msgstr ""
+"이 옵션은 모든 폴리곤 레이어에서 중첩하는 새 도형을 자르기 때문에, 더 이상 이 옵션이 필요하지 않게 되자마자 반드시 체크 해제해야 "
+"합니다. 그렇지 않을 경우 기대하지 않은 도형을 얻게 될 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:203
 msgid "Geometry Checker"
@@ -278,7 +336,7 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:215
 msgid "Automatic Tracing"
-msgstr "자동 투사하기"
+msgstr "자동 투사"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:217
 msgid ""
@@ -287,18 +345,23 @@ msgid ""
 "automatic tracing mode, you can speed up the digitization process as you no "
 "longer need to manually place all the vertices during digitization:"
 msgstr ""
+"보통, 캡처 작업 맵 도구(피처 추가, 부분 추가, 고리 추가, 재형성 및 분할) 이용시 사용자가 피처의 각 꼭짓점을 클릭해야 합니다. "
+"자동 투사(automatic tracing) 모드를 사용하면 디지타이즈 작업 과정의 속도를 향상시킬 수 있습니다. 디지타이즈 작업 도중 "
+"모든 꼭짓점을 직접 배치해야 할 필요가 없어지기 때문이죠:"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:223
 msgid ""
 "Enable the |tracing| :sup:`Tracing` tool (in the :guilabel:`Snapping` "
 "toolbar) by pushing the icon or pressing :kbd:`T` key."
 msgstr ""
+"(:guilabel:`Snapping` 툴바에 있는) |tracing| 아이콘을 클릭하거나 :kbd:`T` 키를 눌러 |tracing| "
+":sup:`Tracing` 도구를 활성화하십시오."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:226
 msgid ""
 ":ref:`Snap to <snapping_tolerance>` a vertex or segment of a feature you "
 "want to trace along."
-msgstr ""
+msgstr "사용자가 투사하고자 하는 피처의 꼭짓점이나 선분에 :ref:`스냅 <snapping_tolerance>` 하십시오."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:228
 msgid ""
@@ -306,6 +369,8 @@ msgid ""
 "instead of the usual straight line, the digitizing rubber band represents a "
 "path from the last point you snapped to the current position."
 msgstr ""
+"스냅하고 싶은 또다른 꼭짓점 또는 선분으로 마우스를 가져가면 일반적인 직선이 아니라 디지타이즈 작업 고무줄이 마지막으로 스냅한 포인트에서"
+" 현재 위치까지의 경로를 나타냅니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:233
 msgid ""
@@ -316,12 +381,16 @@ msgid ""
 "topologically connectable through existing features edges, otherwise QGIS is"
 " unable to connect them and thus traces a single straight line."
 msgstr ""
+"QGIS는 사실 기저 피처 위상을 이용해서 두 포인트 사이의 최단 경로를 생성합니다. 투사 기능을 이용하려면 경로를 생성하기 위해 투사가"
+" 가능한 레이어의 스냅 기능이 활성화된 상태여야 합니다. 또 디지타이즈 작업 중 기존 꼭짓점 또는 선분에 스냅해야 하며, 두 노드가 기존"
+" 피처 경계를 통해 위상적으로 연결될 수 있는지도 확실히 해야 합니다. 그렇지 않으면 QGIS가 두 노드를 연결할 수 없으므로 단일 "
+"직선을 투사하게 됩니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:241
 msgid ""
 "Click and QGIS places the intermediate vertices following the displayed "
 "path."
-msgstr ""
+msgstr "클릭하면 QGIS가 표시된 경로를 따라 중간 단계 꼭짓점들을 배치합니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:244
 msgid ""
@@ -331,6 +400,9 @@ msgid ""
 "the left side of the tracing direction and a negative value does the "
 "opposite."
 msgstr ""
+"피처 경계를 따라 투사하는 것이 아니라 피처 경계와 평행하는 경로를 디지타이즈하려면 |tracing| :sup:`Enable "
+"Tracing` 아이콘을 펼쳐 :guilabel:`Offset` 옵션을 설정하십시오. 양의 값은 투사 방향의 왼쪽으로 새로 그리도록 "
+"이동시키고, 음의 값은 그 반대로 투사 방향의 오른쪽으로 새로 그리게 이동시킵니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:250
 msgid "**Adjust map scale or snapping settings for an optimal tracing**"
@@ -347,7 +419,7 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:256
 msgid "**Does not add topological points**"
-msgstr ""
+msgstr "**위상 포인트를 추가하지 않습니다**"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:258
 msgid ""
@@ -356,12 +428,14 @@ msgid ""
 "activated on the edited layer, the resulting geometry might not exactly "
 "follow an existing geometry."
 msgstr ""
+"이 도구는 :guilabel:`Topological editing` 옵션을 활성화한 상태이더라도 기존 폴리곤 도형에 포인트를 추가하지 "
+"않습니다. 편집 중인 레이어에 도형 정밀도를 활성화한 경우라면, 새로 그린 도형이 기존 도형과 정확하게 일치하지 않을 수도 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:263
 msgid ""
 "**Quickly enable or disable automatic tracing by pressing the** :kbd:`T` "
 "**key**"
-msgstr ""
+msgstr ":kbd:`T` **키를 눌러 자동 투사를 빠르게 활성화/비활성화하기**"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:266
 msgid ""
@@ -370,6 +444,9 @@ msgid ""
 "feature with tracing enabled and other parts with tracing disabled. Tools "
 "behave as usual when tracing is disabled."
 msgstr ""
+":kbd:`T` 키를 누르면, (피처를 디지타이즈하는 도중이라도) 투사를 활성화/비활성화할 수 있습니다. 따라서 투사를 활성화한 상태로 "
+"피처의 일부분을 디지타이즈하고 다른 부분은 비활성화한 상태로 디지타이즈할 수도 있습니다. 투사를 비활성화해도 도구들은 아무 일 없이 "
+"작동합니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:280
 msgid "Digitizing an existing layer"
@@ -400,6 +477,10 @@ msgid ""
 "(e.g., Shapefile), hence potentially corrupt data. Note that this setting "
 "only applies inside the current project."
 msgstr ""
+":menuselection:`Project --> Properties... --> Data Sources --> Layers "
+"Capabilities` 테이블에서, 제공자의 권한 허가 여부에 상관없이 어떤 레이어든 읽기 전용으로 설정할 수 있습니다. 이것은 다중 "
+"사용자 환경에서 승인받지 않은 사용자가 실수로 레이어를 (예: Shapefile을) 편집해서 혹시라도 데이터를 변질시키는 일을 막기 위한"
+" 간편한 방법이 될 수 있습니다. 이 설정은 현재 프로젝트 안에서만 적용된다는 사실을 기억하십시오."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:299
 msgid ""
@@ -408,11 +489,14 @@ msgid ""
 ":ref:`sec_advanced_edit`. You can select and unselect both under "
 ":menuselection:`View --> Toolbars -->`."
 msgstr ""
+"일반적으로, 벡터 레이어를 편집하기 위한 도구는 :ref:`sec_advanced_edit` 에서 설명하는 대로 디지타이즈 작업과 고급 "
+"디지타이즈 작업 툴바로 나뉘어져 있습니다. :menuselection:`View --> Toolbars -->` 메뉴에서 둘 다 선택하고"
+" 선택 해제할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:305
 msgid ""
 "Using the basic digitizing tools, you can perform the following functions:"
-msgstr ""
+msgstr "기본 디지타이즈 작업 도구를 사용하면, 다음 기능들을 수행할 수 있습니다:"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:311
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:311
@@ -458,7 +542,7 @@ msgstr "|newTableRow|"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:317
 msgid "Add new record"
-msgstr ""
+msgstr "새 레코드 추가"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:317
 msgid "|capturePoint|"
@@ -486,19 +570,19 @@ msgstr "피처 추가: 폴리곤 캡처"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:321
 msgid "|vertexTool|"
-msgstr ""
+msgstr "|vertexTool|"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:321
 msgid "Vertex Tool (All Layers)"
-msgstr ""
+msgstr "꼭짓점 도구 (모든 레이어)"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:321
 msgid "|vertexToolActiveLayer|"
-msgstr ""
+msgstr "|vertexToolActiveLayer|"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:321
 msgid "Vertex Tool (Current Layer)"
-msgstr ""
+msgstr "꼭짓점 도구 (현재 레이어)"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:323
 msgid "|multiEdit|"
@@ -506,11 +590,11 @@ msgstr "|multiEdit|"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:323
 msgid "Modify the attributes of all selected features simultaneously"
-msgstr ""
+msgstr "선택한 모든 피처의 속성을 동시에 수정"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:326
 msgid "|deleteSelectedFeatures|"
-msgstr ""
+msgstr "|deleteSelectedFeatures|"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:326
 msgid "Delete Selected"
@@ -614,6 +698,9 @@ msgid ""
 "Line Feature` or |capturePolygon| :sup:`Add Polygon Feature` icons on the "
 "toolbar to add new features into the current layer."
 msgstr ""
+"레이어 유형에 따라, 툴바에 있는 |newTableRow| :sup:`Add Record`, |capturePoint| :sup:`Add"
+" Point Feature`, |captureLine| :sup:`Add Line Feature` 또는 |capturePolygon| "
+":sup:`Add Polygon Feature` 아이콘을 통해 현재 레이어에 새 피처를 추가할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:368
 msgid ""
@@ -622,6 +709,8 @@ msgid ""
 "create features with the spatially enabled tools, you first digitize the "
 "geometry then enter its attributes. To digitize the geometry:"
 msgstr ""
+"비도형 피처를 추가하려면, |newTableRow| :sup:`Add Record` 버튼을 클릭하면 열리는 피처 양식에 속성을 입력할 수"
+" 있습니다. 공간 활성화된 도구로 피처를 생성하려면, 먼저 도형을 디지타이즈한 다음 그 속성을 입력해야 합니다. 도형을 디지타이즈하려면:"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:373
 msgid ""
@@ -631,6 +720,9 @@ msgid ""
 "precision <digitizingmenu>` in the layer properties you can use :ref:`snap "
 "to grid <snap_to_grid>` here to create features based on a regular distance."
 msgstr ""
+"맵 영역을 왼쪽 클릭해서 사용자의 새 피처의 첫 번째 포인트를 생성하십시오. 포인트 피처의 경우 이것만으로 충분하며, 필요한 경우 피처 "
+"속성을 입력할 수 있는 피처 양식이 열릴 것입니다. 레이어 속성에서 :ref:`도형 정밀도 <digitizingmenu>` 를 설정했다면"
+" 정규 거리를 기반으로 피처를 생성하는 :ref:`그리드에 스냅 <snap_to_grid>` 기능을 사용할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:379
 msgid ""
@@ -639,18 +731,20 @@ msgid ""
 "capability to accelerate the digitization. This will create consecutive "
 "straight lines between the vertices you place."
 msgstr ""
+"라인 또는 폴리곤 도형의 경우, 사용자가 캡처하려는 각 추가 포인트를 왼쪽 클릭하거나 또는 :ref:`자동 투사 <tracing>` "
+"기능을 이용해서 디지타이즈 작업 속도를 올릴 수 있습니다. 이렇게 하면 사용자가 배치한 꼭짓점들 사이에 연속적인 직선을 생성할 것입니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:386
 msgid ""
 "Pressing :kbd:`Delete` or :kbd:`Backspace` key reverts the last node you "
 "add."
-msgstr ""
+msgstr "마지막으로 추가한 노드를 되돌리려면 :kbd:`Delete` 또는 :kbd:`Backspace` 키를 누르십시오."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:389
 msgid ""
 "When you have finished adding points, right-click anywhere on the map area "
 "to confirm you have finished entering the geometry of that feature."
-msgstr ""
+msgstr "포인트 추가 작업을 완료했다면, 맵 영역 어디든 오른쪽 클릭해서 해당 피처의 도형 입력 작업이 끝났다고 확인하십시오."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:393
 msgid ""
@@ -658,6 +752,8 @@ msgid ""
 "between the linear :guilabel:`Add feature` tools and :ref:`circular string "
 "tools <add_circular_string>` to create compound curved geometries."
 msgstr ""
+"라인 또는 폴리곤 도형을 디지타이즈하는 도중 선형 :guilabel:`Add feature` 도구와 :ref:`원호 스트링 도구 "
+"<add_circular_string>` 사이를 전환해가며 복합 만곡 도형을 생성할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:397
 msgid "**Customize the digitizing rubber band**"
@@ -672,9 +768,9 @@ msgid ""
 "Digitizing` menu. You can also avoid the use of the rubber band by checking "
 ":guilabel:`Don't update rubber band during node editing`."
 msgstr ""
-"폴리곤을 캡처하는 도중에 기본값인 빨강색 고무줄이 아래에 있는 -- 사용자가 포인트를 캡처하고자 하는 -- 피처 또는 장소를 가릴 수가 "
-"있습니다. :menuselection:`Settings --> Options --> Digitizing` 대화창에서 고무줄의 "
-":guilabel:`Fill Color` 에 대한 투명도(또는 알파 채널)를 높이면 이 문제를 해결할 수 있습니다. 또는 "
+"폴리곤을 캡처하는 도중에 기본값인 빨강색 고무줄이 아래에 있는 ─ 사용자가 포인트를 캡처하고자 하는 ─ 피처 또는 장소를 가릴 수가 "
+"있습니다. :menuselection:`Settings --> Options --> Digitizing` 대화창에서 고무줄의 "
+":guilabel:`Fill Color` 에 대한 투명도(또는 알파 채널)를 높이면 이 문제를 해결할 수 있습니다. 또는 "
 ":guilabel:`Don't update rubber band during node editing` 옵션을 체크해서 고무줄을 사용하지 "
 "않을 수도 있습니다."
 
@@ -694,6 +790,8 @@ msgid ""
 "|checkbox| :guilabel:`Suppress attributes pop-up windows after each created "
 "feature` to avoid the form opening;"
 msgstr ""
+"|checkbox| :guilabel:`Suppress attributes pop-up windows after each created "
+"feature`: 속성 입력 양식 대화창을 열지 않도록 합니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:413
 msgid ""
@@ -710,11 +808,11 @@ msgstr "새 벡터 피처를 디지타이즈한 후의 속성 입력 양식 대�
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:429
 msgid "Vertex tool"
-msgstr ""
+msgstr "꼭짓점 도구"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:431
 msgid "**QGIS 3 major changes**"
-msgstr ""
+msgstr "**QGIS 3 버전의 주요 변경 사항**"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:433
 msgid ""
@@ -724,6 +822,10 @@ msgid ""
 "taking profit of the advanced digitizing panel with the vertex tool while "
 "digitizing or editing objects of multiple layers at the same time."
 msgstr ""
+"QGIS 3 버전에서, 노드 도구를 완전히 새로 설계하고 *꼭짓점 도구* 로 명칭을 변경했습니다. 이전에는 \"클릭&드래그\" "
+"인간공학(ergonomy)으로 작동했지만, 지금은 \"클릭-클릭\" 워크플로(workflow)를 사용합니다. 이렇게 해서 여러 레이어의 "
+"객체들을 동시에 디지타이즈하거나 편집하는 동안 꼭짓점 도구가 있는 고급 디지타이즈 작업 패널의 장점을 취하는 것과 같은 중요한 개선을 "
+"이룰 수 있었습니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:441
 msgid ""
@@ -735,6 +837,10 @@ msgid ""
 " so when some operation is done, selection stays active for this feature and"
 " tool."
 msgstr ""
+"편집 가능 상태의 모든 벡터 레이어에 대해, |vertexToolActiveLayer| :sup:`Vertex tool (Current "
+"Layer)` 은 CAD 소프트웨어와 유사한 피처 꼭짓점 수정 기능을 제공합니다. 그냥 한 번에 여러 꼭짓점을 선택해서 한꺼번에 이동, "
+"추가 또는 삭제할 수 있습니다. 꼭짓점 도구는 피처 위상 편집 작업도 지원합니다. 이 도구는 선택 지속적이기 때문에 일부 작업이 완료된 "
+"후에도 해당 피처 및 도구에 대한 선택 집합의 활성화 상태가 유지됩니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:450
 msgid ""
@@ -773,6 +879,8 @@ msgid ""
 "Start by activating the |vertexToolActiveLayer| :sup:`Vertex Tool (Current "
 "Layer)`. Red circles will appear when hovering vertices."
 msgstr ""
+"먼저 |vertexToolActiveLayer| :sup:`Vertex Tool (Current Layer)` 를 활성화하십시오. "
+"꼭짓점에 마우스를 가져가면 빨간색 원이 표시될 것입니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:473
 msgid ""
@@ -783,6 +891,10 @@ msgid ""
 ":kbd:`Shift` key while clicking. To remove vertices from the selection, hold"
 " down :kbd:`Ctrl`."
 msgstr ""
+"**꼭짓점 선택하기**: :kbd:`Shift` 키를 누른 채 한 번에 하나씩 클릭하거나, 여러 꼭짓점을 감싸는 직사각형을 "
+"클릭&드래그해서 꼭짓점을 선택할 수 있습니다. 꼭짓점을 선택하면, 그 색상이 파란색으로 변합니다. 현재 선택 집합에 더 많은 꼭짓점을 "
+"추가하려면, :kbd:`Shift` 키를 누른 채 클릭하십시오. :kbd:`Ctrl` 키를 누른 채 클릭하면 선택 집합에서 꼭짓점을 "
+"제거할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:480
 msgid ""
@@ -791,10 +903,13 @@ msgid ""
 "then hover **without clicking** another vertex. This will dynamically select"
 " all the nodes in between using the shortest path (for polygons)."
 msgstr ""
+"**배치(Batch) 꼭짓점 선택 모드**: :kbd:`Shift+R` 조합키를 누르면 배치 선택 모드를 활성화시킬 수 있습니다. 한 번"
+" 클릭해서 첫 번째 꼭짓점을 선택한 다음, 또다른 꼭짓점에 마우스를 **클릭하지 말고** 가져가십시오. 이렇게 하면 두 꼭짓점 사이의 "
+"모든 꼭짓점을 (폴리곤의 경우) 최단 경로를 사용해서 동적으로 선택할 것입니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:491
 msgid "Batch vertex selection using :kbd:`Shift+R`"
-msgstr ""
+msgstr ":kbd:`Shift+R` 로 배치 꼭짓점 선택하기"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:494
 msgid ""
@@ -802,6 +917,8 @@ msgid ""
 "along the feature boundary. Ending your node selection with a second click, "
 "or pressing :kbd:`Esc` will escape the batch mode."
 msgstr ""
+":kbd:`Ctrl` 키를 누르면 피처 경계선을 따라 최장 경로를 선택해서 선택을 반전할 것입니다. 두 번째 클릭으로 노드 선택을 완료할"
+" 수 있고, 또는 :kbd:`Esc` 키를 누르면 배치 모드에서 벗어나게 됩니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:499
 msgid ""
@@ -810,10 +927,13 @@ msgid ""
 "location of the boundary also creates a new node. For lines, a virtual node "
 "is also proposed at both extremities of a line to extend it."
 msgstr ""
+"**꼭짓점 추가하기**: 꼭짓점을 추가하려 할 때, 선분 중앙에 새 가상 노드가 나타납니다. 그냥 이 노드를 잡아 새 꼭짓점을 "
+"추가하십시오. 경계선 상의 어느 위치를 더블클릭해도 새 노드를 생성합니다. 라인 도형의 경우, 양극단에 라인을 연장할 수 있는 가상 "
+"노드가 나타납니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:512
 msgid "Virtual nodes for adding vertices"
-msgstr ""
+msgstr "꼭짓점을 추가하기 위한 가상 노드"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:514
 msgid ""
@@ -823,6 +943,9 @@ msgid ""
 "complete feature, just the geometry part. To delete a complete feature use "
 "the |deleteSelectedFeatures| :sup:`Delete Selected` tool."
 msgstr ""
+"**꼭짓점 삭제하기**: 꼭짓점을 선택한 다음 :kbd:`Delete` 키를 누르십시오. 피처의 모든 꼭짓점을 삭제하면 – 데이터소스와 "
+"호환되는 경우 – 도형이 없는 피처를 생성합니다. 피처를 완전히 삭제하는 것이 아니라 도형 부분만 삭제한다는 점을 기억하십시오. 피처를 "
+"완전히 삭제하려면 |deleteSelectedFeatures| :sup:`Delete Selected` 도구를 사용해야 합니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:522
 msgid ""
@@ -833,6 +956,10 @@ msgid ""
 "Digitizing Panel constraints for distance, angles, exact X Y location before"
 " the second click."
 msgstr ""
+"**꼭짓점 이동하기**: 이동시키고자 하는 모든 꼭짓점을 선택한 다음, 선택한 꼭짓점 또는 경계를 클릭하고 다시 이동하려는 위치를 "
+"클릭하십시오. 선택한 모든 꼭짓점이 함께 움직일 것입니다. 스냅이 활성화돼 있는 경우, 전체 집합을 가장 가까운 꼭짓점 또는 라인으로 "
+"점프시킬 수 있습니다. 두 번째로 클릭하기 전에 거리, 각도, 정확한 X, Y 위치를 위한 고급 디지타이즈 작업 패널의 제약조건을 이용할"
+" 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:532
 msgid ""
@@ -840,10 +967,12 @@ msgid ""
 ":ref:`geometry precision <digitizingmenu>` in the layer properties, a grid "
 "appears on a zoom level according to the Geometry precision."
 msgstr ""
+"이때 그리드에 스냅 기능을 사용할 수 있습니다. 레이어 속성에서 :ref:`도형 정밀도 <digitizingmenu>` 용 값을 "
+"설정했다면, 도형 정밀도를 따르는 확대/축소 수준에서 그리드가 나타납니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:541
 msgid "Selecting a vertex and moving the vertices to grid"
-msgstr ""
+msgstr "꼭짓점을 선택해서 그리드로 이동시키기"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:543
 msgid ""
@@ -853,10 +982,13 @@ msgid ""
 " the vertex tool provides tooltips to identify a vertex by hovering the "
 "pointer over it."
 msgstr ""
+"꼭짓점의 각 변경 사항은 :guilabel:`Undo` 대화창에 개별 항목으로 각각 저장됩니다. 이 설정이 켜져 있는 동안 모든 작업이 "
+"위상 편집을 지원한다는 사실을 기억하십시오. 실시간 재투영도 지원합니다. 포인터를 꼭짓점 위에 가져가면 꼭짓점 도구가 꼭짓점을 식별할 수"
+" 있는 도움말 말풍선(tooltip)을 표시합니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:552
 msgid "The Vertex Editor Panel"
-msgstr ""
+msgstr "꼭짓점 편집기 패널"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:554
 msgid ""
@@ -869,10 +1001,15 @@ msgid ""
 "coordinate in the table and your vertex position is updated. You can also "
 "select multiple rows and delete them altogether."
 msgstr ""
+"피처에 :guilabel:`Vertex tool` 을 사용할 때, 꼭짓점을 오른쪽 클릭하면 QGIS가 피처의 모든 꼭짓점과 각 꼭짓점의 "
+":guilabel:`x`, :guilabel:`y` (존재하는 경우 :guilabel:`z`, :guilabel:`m`) 좌표 및 (원호"
+" 도형의 경우 반경을 나타내는) :guilabel:`r` 목록을 담은 :guilabel:`Vertex Editor` 패널을 엽니다. 이 "
+"테이블에서 어느 행을 선택하기만 하면 맵 캔버스에 있는 해당 꼭짓점이 선택되며, 그 반대의 경우도 가능합니다. 테이블에서 좌표를 "
+"변경하기만 하면 해당 꼭짓점의 위치가 업데이트됩니다. 여러 행을 선택해서 한꺼번에 삭제할 수도 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:565
 msgid "**Changed behavior in QGIS 3.4**"
-msgstr ""
+msgstr "**QGIS 3.4에서 변경된 습성**"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:567
 msgid ""
@@ -884,6 +1021,10 @@ msgid ""
 "panel now opens itself automatically upon activating the vertex tool, and "
 "its position/docked state remembered across uses."
 msgstr ""
+"피처를 오른쪽 클릭하는 즉시 꼭짓점 편집기를 열고 해당 피처를 잠급니다. 즉 다른 모든 피처의 편집 모드를 비활성화시킵니다. 이렇게 잠겨"
+" 있는 동안, 해당 피처만 편집할 수 있습니다: 이 피처의 꼭짓점 및 선분만 클릭 또는 드래그해서 선택하거나 이동시킬 수 있습니다. 이 "
+"잠긴 피처에만 새 꼭짓점을 추가할 수 있습니다. 또한 이제 꼭짓점 도구를 활성화시킬 때 자동적으로 꼭짓점 편집기 패널이 스스로 열리고, "
+"꼭짓점 편집기를 사용할 때마다 그 위치/도킹 상태를 기억합니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:584
 msgid "Vertex editor panel showing selected nodes"
@@ -996,7 +1137,7 @@ msgid ""
 msgstr ""
 "원본과 대상 레이어가 서로 다른 스키마를 가지고 있다면 (필드명과 유형이 동일하지 않다면) 어떻게 될까요? QGIS는 일치하는 데이터를 "
 "붙여넣고 나머지는 무시합니다. 대상 레이어에 속성을 복사해 넣을 필요가 없는 경우, 필드 및 데이터 유형을 어떻게 구성하든 상관없습니다."
-" 하지만 전체를 -- 피처와 그 속성까지 -- 복사하고자 하는 경우, 원본과 대상 레이어의 스키마가 일치하는지 확인해야 합니다."
+" 하지만 전체를 ─ 피처와 그 속성까지 ─ 복사하고자 하는 경우, 원본과 대상 레이어의 스키마가 일치하는지 확인해야 합니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:645
 msgid "**Congruency of Pasted Features**"
@@ -1028,7 +1169,7 @@ msgid ""
 "length of the data to be inserted."
 msgstr ""
 "사용자의 속성 테이블에 문자열 유형의 새 열을 생성했는데, 더 긴 길이를 가진 다른 속성 열로 그 값을 붙여넣으려는 경우, 열의 길이가 "
-"대상 열의 길이로 늘어날 것입니다. GDAL/OGR 1.10과 함께 구동되는 GDAL shapefile 드라이버가 삽입될 데이터의 길이를"
+"대상 열의 길이로 늘어날 것입니다. GDAL/OGR 1.10과 함께 구동되는 GDAL Shapefile 드라이버가 삽입될 데이터의 길이를"
 " 동적으로 수용하기 위해 문자열 및 정수형 필드를 자동 확장하기 때문입니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:668
@@ -1045,6 +1186,10 @@ msgid ""
 ":sup:`Delete Selected` tool to delete the features. Multiple selected "
 "features can be deleted at once."
 msgstr ""
+"어떤 피처 전체(속성 및 도형)를 삭제하려는 경우, 먼저 표준적인 |selectRectangle| :sup:`Select Features"
+" by area or single click` 도구를 사용해서 도형을 선택할 수 있습니다. 속성 테이블에서 선택할 수도 있습니다. 선택을"
+" 마치고 나면, :kbd:`Delete` 또는 :kbd:`Backspace` 키를 누르거나 |deleteSelectedFeatures| "
+":sup:`Delete Selected` 도구를 클릭해서 피처를 삭제하십시오. 선택한 피처 여러 개를 한 번에 삭제할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:677
 msgid ""
@@ -1092,9 +1237,9 @@ msgid ""
 " example, changes done by a plugin) may or may not be reverted, depending on"
 " how the changes were performed."
 msgstr ""
-"**[Undo]** 버튼을 클릭하거나 :kbd:`Ctrl+Z` (또는 |osx| :kbd:`Cmd+Z`) 조합키를 누르면, 모든 피처와 "
-"속성의 상태가 되돌린 작업 이전의 상태로 돌아갑니다. 일반적인 벡터 편집 작업이 아닌 변경 사항(예: 플러그인을 통한 변경 사항)은 해당"
-" 변경 사항이 어떻게 수행됐는지에 따라 되돌릴 수도 있고 되돌리지 못 할 수도 있습니다."
+":guilabel:`Undo` 버튼을 클릭하거나 :kbd:`Ctrl+Z` (또는 |osx| :kbd:`Cmd+Z`) 조합키를 누르면, "
+"모든 피처와 속성의 상태가 되돌린 작업 이전의 상태로 돌아갑니다. 일반적인 벡터 편집 작업이 아닌 변경 사항(예: 플러그인을 통한 변경 "
+"사항)은 해당 변경 사항이 어떻게 수행됐는지에 따라 되돌릴 수도 있고 되돌리지 못 할 수도 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:712
 msgid ""
@@ -1121,7 +1266,7 @@ msgid ""
 msgstr ""
 "레이어가 편집 모드 상태인 경우, 모든 변경 사항이 QGIS의 메모리에 남아 있습니다. 즉 변경 사항이 즉시 데이터소스 또는 디스크에 "
 "커밋 또는 저장되는 것이 아닙니다. 현재 레이어에 편집 사항을 저장하고 싶지만 편집 모드를 해제하지 않고 계속 편집 작업을 하고 싶은 "
-"경우, |saveEdits| :sup:`Save Layer Edits` 아이콘을 클릭하면 됩니다. |toggleEditing| "
+"경우, |saveEdits| :sup:`Save Layer Edits` 아이콘을 클릭하면 됩니다. |toggleEditing| "
 ":sup:`Toggle editing` 아이콘으로 편집 모드를 끄는 경우 (또는 QGIS를 종료하는 경우) 사용자의 변경 사항을 저장할 "
 "거냐 또는 무시할 거냐를 묻는 대화창이 열립니다."
 
@@ -1162,10 +1307,10 @@ msgid ""
 "way."
 msgstr ""
 "이 기능은 여러 레이어를 디지타이즈할 수 있게 해줍니다. 사용자가 여러 레이어에서 만든 모든 변경 사항을 저장하려면 "
-"|fileSaveAs| :sup:`Save for Selected Layers` 를 선택하십시오. |rollbackEdits| "
+"|fileSaveAs| :sup:`Save for Selected Layers` 를 선택하십시오. |rollbackEdits| "
 ":sup:`Rollback for Selected Layers` 를 클릭하면, 선택한 모든 레이어에 대한 디지타이즈 작업을 되돌릴 수도 "
 "있습니다. 선택한 레이어에 대한 편집 작업을 종료하려면, |cancelEdits| :sup:`Cancel for Selected "
-"Layer(s)` 를 통해 쉽게 끝낼 수 있습니다."
+"Layer(s)` 를 통해 쉽게 끝낼 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:754
 msgid ""
@@ -1186,6 +1331,10 @@ msgid ""
 "behavior (enter or exit the edit mode, save or rollback changes at the same "
 "time)."
 msgstr ""
+"동일한 PostGreSQL 데이터베이스로부터 나온 레이어들을 작업하는 경우, :menuselection:`Project --> "
+"Properties... --> Data Sources` 메뉴의 :guilabel:`Automatically create "
+"transaction groups where possible` 옵션을 활성화시키면 레이어들의 습성(편집 모드 시작/종료, 변경사항을 "
+"동시에 저장 또는 되돌리기)을 동기화합니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:766
 msgid "Advanced digitizing"
@@ -1215,20 +1364,20 @@ msgstr "투사 활성화"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:781
 msgid "|moveFeature| |moveFeatureLine| |moveFeaturePoint|"
-msgstr ""
+msgstr "|moveFeature| |moveFeatureLine| |moveFeaturePoint|"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:781
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:813
 msgid "Move Feature(s)"
-msgstr ""
+msgstr "피처(들) 이동"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:781
 msgid "|moveFeatureCopy| |moveFeatureCopyLine| |moveFeatureCopyPoint|"
-msgstr ""
+msgstr "|moveFeatureCopy| |moveFeatureCopyLine| |moveFeatureCopyPoint|"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:781
 msgid "Copy and Move Feature(s)"
-msgstr ""
+msgstr "피처(들) 복사 및 이동"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:785
 msgid "|rotateFeature|"
@@ -1277,11 +1426,11 @@ msgstr "고리 채우기"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:789
 msgid "|reverseLine|"
-msgstr ""
+msgstr "|reverseLine|"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:789
 msgid "Swap direction"
-msgstr ""
+msgstr "방향 바꾸기"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:791
 msgid "|deleteRing|"
@@ -1371,11 +1520,11 @@ msgstr "오프셋 포인트 심볼"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:801
 msgid "|trimExtend|"
-msgstr ""
+msgstr "|trimExtend|"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:801
 msgid "Trim or Extend Feature"
-msgstr ""
+msgstr "피처 다듬기(Trim) 또는 연장하기"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:804
 msgid "Table Advanced Editing: Vector layer advanced editing toolbar"
@@ -1385,17 +1534,18 @@ msgstr "표: 고급 편집 작업 - 벡터 레이어 고급 편집 작업 툴바
 msgid ""
 "The |moveFeature| :sup:`Move Feature(s)` tool allows you to move existing "
 "features:"
-msgstr ""
+msgstr "|moveFeature| :sup:`Move Feature(s)` 도구는 기존 피처를 이동시킬 수 있습니다:"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:817
 msgid "Select the feature(s) to move."
-msgstr ""
+msgstr "이동시킬 피처(들)를 선택하십시오."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:818
 msgid ""
 "Click on the map canvas to indicate the origin point of the displacement; "
 "you can rely on snapping capabilities to select an accurate point."
 msgstr ""
+"맵 캔버스 상에서 변위의 원점을 나타내는 위치를 클릭하십시오. 정확한 포인트를 선택하기 위해 스냅 기능을 사용할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:821
 msgid ""
@@ -1403,10 +1553,12 @@ msgid ""
 "<advanced_digitizing_panel>` to accurately set the origin point coordinates."
 " In that case:"
 msgstr ""
+"원점 좌표를 정확하게 설정하기 위해 :ref:`고급 디지타이즈 작업 제약조건 <advanced_digitizing_panel>` 을 "
+"이용할 수도 있습니다. 이런 경우:"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:825
 msgid "First click on the |cad| button to enable the panel."
-msgstr ""
+msgstr "먼저 |cad| 버튼을 클릭해서 패널을 활성화시킵니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:826
 msgid ""
@@ -1414,16 +1566,18 @@ msgid ""
 " to use. Then press the |locked| button next to the option to lock the "
 "value."
 msgstr ""
+"``x`` 를 입력한 다음 사용자가 원하는 원점에 대응하는 값을 입력합니다. 그리고 옵션 옆에 있는 |locked| 버튼을 눌러 값을 "
+"고정시킵니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:828
 msgid "Do the same for the ``y`` coordinate."
-msgstr ""
+msgstr "``y`` 좌표도 동일한 방법으로 설정합니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:829
 msgid ""
 "Click on the map canvas and your origin point is placed at the indicated "
 "coordinates."
-msgstr ""
+msgstr "맵 캔버스를 클릭하면 지정한 좌표에 사용자의 원점을 배치합니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:832
 msgid ""
@@ -1432,16 +1586,21 @@ msgid ""
 "digitizing panel which would provide complementary ``distance`` and "
 "``angle`` placement constraints to place the end point of the translation."
 msgstr ""
+"맵 캔버스를 이동해서 변위의 대상 포인트를 가리키십시오. 계속 스냅 모드를 사용할 수도 있고, 또는 앞에서 설명한대로 고급 디지타이즈 "
+"작업 패널을 사용해서 전이(轉移)의 종단점을 배치하기 위한 상호보완적인 ``distance`` 및 ``angle`` 배치 제약조건을 "
+"지정할 수도 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:836
 msgid "Click on the map canvas: the whole features are moved to new location."
-msgstr ""
+msgstr "맵 캔버스를 클릭하십시오: 전체 피처가 새 위치로 이동합니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:838
 msgid ""
 "Likewise, you can create a translated copy of the feature(s) using the "
 "|moveFeatureCopy| :sup:`Copy and Move Feature(s)` tool."
 msgstr ""
+"|moveFeatureCopy| :sup:`Copy and Move Feature(s)` 도구를 사용하면 피처(들)의 전이된 복사본을 "
+"마찬가지로 생성할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:843
 msgid ""
@@ -1450,16 +1609,21 @@ msgid ""
 "tools, then only the feature under the mouse is affected by the action. So, "
 "if you want to move several features, they should be selected first."
 msgstr ""
+":guilabel:`Move Feature(s)` 또는 :guilabel:`Copy and Move Feature(s)` 도구로 맵 "
+"캔버스를 처음 클릭했을 때 어떤 피처도 선택되지 않은 경우, 액션의 영향을 받는 것은 포인터 아래 있는 피처뿐입니다. 따라서 여러 피처를"
+" 이동시키려면 먼저 피처들을 선택해야 합니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:855
 msgid ""
 "Use the |rotateFeature| :sup:`Rotate Feature(s)` tool to rotate one or "
 "multiple features in the map canvas:"
 msgstr ""
+"맵 캔버스에 있는 하나 이상의 피처를 기울이려면 |rotateFeature| :sup:`Rotate Feature(s)` 도구를 "
+"사용하십시오:"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:858
 msgid "Press the |rotateFeature| :sup:`Rotate Feature(s)` icon"
-msgstr ""
+msgstr "|rotateFeature| :sup:`Rotate Feature(s)` 아이콘을 클릭합니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:859
 msgid ""
@@ -1467,6 +1631,8 @@ msgid ""
 " rotation center, a preview of the rotated feature is displayed and a widget"
 " opens showing the current :guilabel:`Rotation` angle."
 msgstr ""
+"기울이려는 피처를 클릭하십시오. 피처의 중심을 기울기 중심으로 참조하고, 기울인 피처의 미리보기를 표시하며, 현재 "
+":guilabel:`Rotation` 각도를 표시하는 위젯이 열립니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:862
 msgid ""
@@ -1474,6 +1640,8 @@ msgid ""
 "manually enter the rotation angle in the text box. You can also use the "
 ":guilabel:`Snap to °` box to constrain the rotation values."
 msgstr ""
+"새 배치에 만족한다면 맵 캔버스를 클릭하십시오. 또는 텍스트란에 기울기 각도를 직접 입력해도 됩니다. :guilabel:`Snap to "
+"°` 박스를 이용해서 기울기 값에 제약조건을 걸 수도 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:865
 msgid ""
@@ -1481,6 +1649,7 @@ msgid ""
 "first, and the rotation is by default around the centroid of their combined "
 "geometries."
 msgstr ""
+"여러 피처를 한번에 기울이려면, 먼저 피처들을 선택해야 합니다. 기본적으로 결합된 도형들의 중심을 기준으로 기울어질 것입니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:869
 msgid ""
@@ -1488,6 +1657,8 @@ msgid ""
 "centroid: press the :kbd:`Ctrl` button, click on the map canvas and that "
 "point will be used as the new rotation center."
 msgstr ""
+"기본적인 피처 중심점 대신 고정점(anchor point)을 사용할 수도 있습니다. :kbd:`Ctrl` 키를 누른 채 맵 캔버스를 "
+"클릭하면, 해당 포인트를 새 기울기 중심점으로 사용할 것입니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:873
 msgid ""
@@ -1503,6 +1674,8 @@ msgid ""
 "To abort feature rotation, press the :kbd:`ESC` button or click on the "
 "|rotateFeature| :sup:`Rotate Feature(s)` icon."
 msgstr ""
+"피처 기울이기를 끝내려면, :kbd:`ESC` 키를 누르거나 다시 |rotateFeature| :sup:`Rotate "
+"Feature(s)` 아이콘을 클릭하면 됩니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:886
 msgid ""
@@ -1510,20 +1683,22 @@ msgid ""
 "interactively reshape a line or polygon geometry by reducing or densifying "
 "the number of vertices, as long as the geometry remains valid:"
 msgstr ""
+"|simplifyFeatures| :sup:`Simplify Feature` 도구는 도형의 유효성이 유지되는 한 꼭짓점 개수를 줄이거나 "
+"밀도를 높여서 라인 또는 폴리곤 도형의 형태를 대화형 작업으로 변형시킬 수 있습니다:"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:890
 msgid "Select the |simplifyFeatures| :sup:`Simplify Feature` tool."
-msgstr ""
+msgstr "|simplifyFeatures| :sup:`Simplify Feature` 도구를 선택하십시오."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:891
 msgid "Click on the feature or drag a rectangle over the features."
-msgstr ""
+msgstr "피처를 클릭하거나 피처 위로 직사각형을 드래그하십시오."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:892
 msgid ""
 "A dialog pops up allowing you to define the :guilabel:`Method` to apply, ie "
 "whether you would like to:"
-msgstr ""
+msgstr "적용할 :guilabel:`Method` 를 정의할 수 있는 대화창이 열립니다. 다음과 같은 방법을 선택할 수 있습니다:"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:895
 msgid ""
@@ -1534,6 +1709,11 @@ msgid ""
 "units``, ``Pixels`` or ``map units`` to use for simplification. The higher "
 "the tolerance is the more vertices can be deleted."
 msgstr ""
+":ref:`도형을 단순화 <qgissimplifygeometries>` 하는, 즉 꼭짓점을 원본보다 줄이는 방법입니다. "
+"``Simplify by distance``, ``Simplify by snapping to grid`` 또는 ``Simplify by "
+"area (Visvalingam)`` 를 사용할 수 있습니다. 그 다음 단순화에 사용할 :guilabel:`Tolerance` 단위를 "
+"``Layer units``, ``Pixels`` 또는 ``Map units`` 가운데 하나로 지정해야 합니다. 허용 오차가 클수록 더 "
+"많은 꼭짓점을 삭제할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:905
 msgid ""
@@ -1544,6 +1724,10 @@ msgid ""
 " the number of :guilabel:`Iterations` the placement would be processed: the "
 "more iterations, the more vertices and smoother is the feature."
 msgstr ""
+"또는 ``Smooth`` 옵션의 도움으로 새 꼭짓점을 추가해서 :ref:`도형의 밀도를 높이는 <qgissmoothgeometry>` "
+"방법도 있습니다. 기존의 각 꼭짓점에서 시작하는 두 선분 상의 선분 길이의 백분율을 나타내는 :guilabel:`Offset` 거리에 "
+"각각 꼭짓점을 배치합니다. :guilabel:`Iterations` 옵션에서 새 꼭짓점을 배치하는 과정의 반복 횟수도 설정할 수 "
+"있습니다. 반복 횟수가 높을수록 꼭짓점도 늘어나서 피처가 더 평탄화됩니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:913
 msgid ""
@@ -1551,6 +1735,8 @@ msgid ""
 "session. So you can go back to the same parameters the next time you "
 "simplify a feature."
 msgstr ""
+"사용자가 사용한 설정은 편집 작업을 또는 프로젝트를 종료해도 저장될 것입니다. 따라서 다음에 피처를 단순화하는 경우에도 동일한 설정을 "
+"사용할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:916
 msgid ""
@@ -1560,6 +1746,8 @@ msgid ""
 "canvas, the expected geometry is displayed over the existing one, using the "
 "rubberband color."
 msgstr ""
+"대화창 하단에 적용될 수정 사항을 요약해서 (작업 전후의) 피처 및 꼭짓점 개수의 목록과 (변경되는 비율을) 함께 표시합니다. 또 맵 "
+"캔버스의 기존 피처 위에 예상 피처를 고무줄 색상으로 표시합니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:921
 msgid ""
@@ -1567,6 +1755,8 @@ msgid ""
 "the modification. Otherwise, to abort the operation, you can either press "
 ":guilabel:`Cancel` or right-click in the map canvas."
 msgstr ""
+"예상 피처가 사용자의 필요를 만족시킨다면, :guilabel:`OK` 를 클릭해서 수정 사항을 적용하십시오. 그렇지 않을 경우, "
+":guilabel:`Cancel` 을 클릭하거나 맵 캔버스를 오른쪽 클릭하면 작업을 중단할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:926
 msgid ""
@@ -1627,10 +1817,12 @@ msgid ""
 "totally falls within another one without any overlapping area; that is the "
 "new feature covers a hole within the existing one. To create such a feature:"
 msgstr ""
+"|fillRing| :sup:`Fill Ring` 도구는 다른 폴리곤 안에 중첩되는 영역 없이 완전히 들어가는 폴리곤 피처를 생성할 수 "
+"있습니다. 즉 기존 피처 안에 있는 구멍을 덮는 새 피처를 말이죠. 이런 피처를 생성하려면:"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:991
 msgid "Select the |fillRing| :sup:`Fill Ring` tool."
-msgstr ""
+msgstr "|fillRing| :sup:`Fill Ring` 도구를 선택하십시오."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:992
 msgid ""
@@ -1640,6 +1832,9 @@ msgid ""
 "<tracing>` over the interior boundaries with the |capturePolygon| :sup:`Add "
 "polygon feature` tool)."
 msgstr ""
+"기존 피처 위로 새 폴리곤을 그리십시오: QGIS가 새 폴리곤 도형에 (|addRing| :sup:`Add Ring` 도구를 사용하듯이)"
+" 고리를 추가한 다음 그 고리와 일치하는 도형을 가진 새 피처를 (|capturePolygon| :sup:`Add polygon "
+"feature` 도구로 내곽 경계선을 :ref:`투사 <tracing>` 하듯이) 생성합니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:997
 msgid ""
@@ -1647,6 +1842,8 @@ msgid ""
 " over the ring and left-click while pressing :kbd:`Shift`: a new feature "
 "filling the hole is drawn at that place."
 msgstr ""
+"또는, 고리가 피처에 이미 존재하는 경우 고리 위로 마우스를 가져가 :kbd:`Shift` 키를 누른 채 왼쪽 클릭하십시오: 해당 위치에"
+" 구멍을 채우는 새 피처가 그려집니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1001
 msgid ""
@@ -1654,6 +1851,8 @@ msgid ""
 " with values of the \"parent\" feature and/or :ref:`fields constraints "
 "<configure_field>`."
 msgstr ""
+"새 피처의 :guilabel:`Feature Attributes` 양식이 \"부모\" 피처의 값 그리고/또는 :ref:`필드 제약조건 "
+"<configure_field>` 과 함께 열립니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1013
 msgid ""
@@ -1773,27 +1972,27 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1103
 msgid "Reverse Line"
-msgstr ""
+msgstr "라인 반전"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1104
 msgid ""
 "Changing the direction of a line geometry can be useful for cartographical "
 "purposes or when preparing for network analysis."
-msgstr ""
+msgstr "라인 도형의 방향을 변경하는 것은 지도제작 목적 또는 네트워크 분석 준비에 유용할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1107
 msgid "To change a line direction:"
-msgstr ""
+msgstr "라인 방향을 변경하려면:"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1109
 msgid ""
 "Activate the reverse line tool by clicking |reverseLine| :sup:`Reverse "
 "line`."
-msgstr ""
+msgstr "|reverseLine| :sup:`Reverse line` 아이콘을 클릭해서 라인 반전 도구를 활성화하십시오."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1111
 msgid "Click on the line. The direction of the line is reversed."
-msgstr ""
+msgstr "라인을 클릭하십시오. 라인의 방향이 반전됩니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1121
 msgid ""
@@ -1801,14 +2000,16 @@ msgid ""
 "two or more new and independent features, ie. each geometry corresponding to"
 " a new row in the attribute table."
 msgstr ""
+"|splitFeatures| :sup:`Split Features` 도구를 사용해서 피처를 두 개 이상의 독립적인 새 피처들로 분할할 수"
+" 있습니다. 예를 들면 분할된 각 도형은 속성 테이블의 새 행과 대응합니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1125
 msgid "To split line or polygon features:"
-msgstr ""
+msgstr "라인 또는 폴리곤 피처를 분할하려면:"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1127
 msgid "Select the |splitFeatures| :sup:`Split Features` tool."
-msgstr ""
+msgstr "|splitFeatures| :sup:`Split Features` 도구를 선택하십시오."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1128
 msgid ""
@@ -1817,16 +2018,19 @@ msgid ""
 "clauses <configure_field>` are applied to corresponding fields and other "
 "attributes of the parent feature are by default copied to the new features."
 msgstr ""
+"분할하고자 하는 피처(들)를 가로지르는 라인을 그리십시오. 선택 집합이 활성화돼 있다면 선택한 피처들만 분할됩니다. 분할이 되면, "
+":ref:`기본 값 또는 절(clause) <configure_field>` 이 대응하는 필드에 적용되며 기본적으로 부모 피처의 다른 "
+"속성들도 새 피처에 복사됩니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1133
 msgid ""
 "You can then as usually modify any of the attributes of any resulting "
 "feature."
-msgstr ""
+msgstr "이제 산출되는 모든 피처의 모든 속성을 평소대로 수정할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1135
 msgid "**Split a polyline into new features in one-click**"
-msgstr ""
+msgstr "**클릭 한 번으로 폴리라인을 새 피처들로 분할하기**"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1137
 msgid ""
@@ -1834,6 +2038,8 @@ msgid ""
 "existing vertex of a polyline feature to split that feature into two new "
 "features."
 msgstr ""
+"|splitFeatures| :sup:`Split Features` 도구로 폴리라인 피처의 기존 꼭짓점에 스냅하고 클릭하면, 해당 피처를"
+" 새 피처 2개로 분할합니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1147
 msgid "Split parts"
@@ -1850,7 +2056,7 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1153
 msgid "**Split a polyline into new parts in one-click**"
-msgstr ""
+msgstr "**클릭 한 번으로 폴리라인을 새 부분들로 분할하기**"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1155
 msgid ""
@@ -1858,6 +2064,8 @@ msgid ""
 "existing vertex of a polyline feature to split the feature into two new "
 "polylines belonging to the same feature."
 msgstr ""
+"|splitParts| :sup:`Split Parts` 도구로 폴리라인 피처의 기존 꼭짓점에 스냅하고 클릭하면, 해당 피처를 동일한 "
+"피처에 속해 있는 새 폴리라인 2개로 분할합니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1166
 msgid "Merge selected features"
@@ -1876,11 +2084,11 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1173
 msgid "First, select the features you'd like to combine."
-msgstr ""
+msgstr "먼저, 결합하고자 하는 피처들을 선택하십시오."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1174
 msgid "Then press the |mergeFeatures| :sup:`Merge Selected Features` button."
-msgstr ""
+msgstr "그 다음 |mergeFeatures| :sup:`Merge Selected Features` 아이콘을 클릭하십시오."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1175
 msgid ""
@@ -1888,20 +2096,24 @@ msgid ""
 "shows the attributes of the resulting feature. You can alter any of these "
 "values either by:"
 msgstr ""
+"새 대화창의 테이블 하단에 있는 :guilabel:`Merge` 행이 산출되는 피처의 속성들을 표시합니다. 이 값들을 다음과 같이 수정할"
+" 수 있습니다:"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1179
 msgid "manually replacing the value in the corresponding cell;"
-msgstr ""
+msgstr "대응하는 셀에서 값을 직접 대체합니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1180
 msgid ""
 "selecting a row in the table and pressing :guilabel:`Take attributes from "
 "selected feature` to use the values of this initial feature;"
 msgstr ""
+"테이블에서 행을 선택하고 :guilabel:`Take attributes from selected feature` 를 클릭하면 선택한 "
+"최초 피처의 값을 사용합니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1182
 msgid "pressing :guilabel:`Skip all fields` to use empty attributes;"
-msgstr ""
+msgstr ":guilabel:`Skip all fields` 를 클릭하면 빈 속성을 사용합니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1183
 msgid ""
@@ -1911,18 +2123,23 @@ msgid ""
 "Median, Sum, Count, Concatenation... depending on the type of the field. see"
 " :ref:`statistical_summary` for the full list of functions)."
 msgstr ""
+"또는, 테이블 상단에 있는 드롭다운 메뉴를 펼쳐 앞의 옵션들 가운데 하나를 선택하면 대응하는 필드에만 적용됩니다. 또 최초 피처들의 "
+"속성을 집계하도록 (필드 유형에 따라 최소, 최대, 평균, 합계, 개수, 연결 등등) 선택할 수도 있습니다. (함수들의 완전한 목록은 "
+":ref:`statistical_summary` 을 참조하세요.)"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1190
 msgid ""
 "If the layer has default values or clauses present on fields, these are used"
 " as the initial value for the merged feature."
-msgstr ""
+msgstr "레이어가 필드에 기본값 또는 절을 가지고 있을 경우, 이를 병합된 피처의 초기 값으로 사용합니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1193
 msgid ""
 "Press :guilabel:`OK` to apply the modifications. A single (multi)feature is "
 "created in the layer, replacing the previously selected ones."
 msgstr ""
+"수정 사항을 적용시키려면 :guilabel:`OK` 를 클릭하십시오. 레이어에 이전에 선택한 피처들을 대체하는 단일 [멀티]피처를 "
+"생성합니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1201
 msgid "Merge attributes of selected features"
@@ -1946,18 +2163,21 @@ msgid ""
 "The |rotatePointSymbols| :sup:`Rotate Point Symbols` allows you to change "
 "the rotation of point symbols in the map canvas."
 msgstr ""
+"|rotatePointSymbols| :sup:`Rotate Point Symbols` 도구를 통해 맵 캔버스에 있는 포인트 심볼의 "
+"기울기를 변경할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1220
 msgid ""
 "First of all, apply to the symbol a :ref:`data-defined <data_defined>` "
 "rotation:"
-msgstr ""
+msgstr "먼저, 심볼에 :ref:`데이터 정의 <data_defined>` 기울기를 적용하십시오:"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1223
 msgid ""
 "In the :menuselection:`Layer Properties --> Symbology` dialog, browse to the"
 " symbol editor dialog."
 msgstr ""
+":menuselection:`Layer Properties --> Symbology` 대화창에서 심볼 편집기 대화창을 찾으십시오."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1225
 msgid ""
@@ -1965,16 +2185,19 @@ msgid ""
 ":guilabel:`Rotation` option of the top :guilabel:`Marker` level (preferably)"
 " of the symbol layers."
 msgstr ""
+"심볼 레이어의 (되도록) 최상위 :guilabel:`Marker` 심볼의 :guilabel:`Rotation` 옵션 옆에 있는 "
+"|dataDefined| :guilabel:`Data-defined override` 위젯을 클릭하십시오."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1228
 msgid ""
 "Choose a field in the :guilabel:`Field Type` combobox. Values of this field "
 "are hence used to rotate each feature's symbol accordingly."
 msgstr ""
+":guilabel:`Field Type` 콤보박스에서 필드를 선택하십시오. 이 필드의 값들을 따라 각 피처의 심볼을 기울일 것입니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1231
 msgid "**Make sure that the same field is assigned to all the symbol layers**"
-msgstr ""
+msgstr "**반드시 동일한 필드가 모든 심볼 레이어에 할당되도록 하십시오**"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1233
 msgid ""
@@ -1984,10 +2207,13 @@ msgid ""
 " tool. Indeed, if a symbol layer does not have the same field attached to "
 "its rotation property, the tool will not work."
 msgstr ""
+"최상위 심볼 트리에서 데이터 정의 기울기 필드를 설정하면 모든 심볼 레이어에 해당 필드를 적용합니다. 이는 "
+":guilabel:`Rotate Point Symbols` 도구로 그래픽 심볼을 기울이기 위한 전제조건입니다. 실제로, 동일한 필드가 "
+"심볼 레이어의 기울기 속성에 첨부되지 않았을 경우, 이 도구는 작동하지 않을 것입니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1244
 msgid "Rotating a point symbol"
-msgstr ""
+msgstr "포인트 심볼 기울이기"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1246
 msgid ""
@@ -1996,12 +2222,15 @@ msgid ""
 "holding the left button pressed. A red arrow with the rotation value will be"
 " visualized (see Figure_rotate_point_)."
 msgstr ""
+"그 다음 |rotatePointSymbols| :sup:`Rotate Point Symbols` 도구로 맵 캔버스에 있는 포인트 피처를 "
+"클릭하고 왼쪽 마우스 버튼을 누른 채 이리저리 움직여보십시오. 빨간색 화살표가 기울기 값과 함께 가시화될 것입니다. "
+"(:ref:`Figure_rotate_point` 그림 참조)"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1251
 msgid ""
 "Release the left mouse button again, the symbol is defined with this new "
 "rotation and the rotation field is updated in the layer's attribute table."
-msgstr ""
+msgstr "왼쪽 마우스 버튼을 떼면, 심볼을 이 새 기울기로 설정하고 레이어의 속성 테이블에서도 기울기 필드가 업데이트됩니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1256
 msgid ""
@@ -2031,10 +2260,13 @@ msgid ""
 ":sup:`Vertex Tool (Current Layer)` or |moveFeaturePoint| :sup:`Move Feature`"
 " tool for this purpose."
 msgstr ""
+"|offsetPointSymbols| :sup:`Offset Point Symbols` 도구는 포인트 심볼 자체를 이동시키지 않습니다. "
+"그러려면 |vertexToolActiveLayer| :sup:`Vertex Tool (Current Layer)` 또는 "
+"|moveFeaturePoint| :sup:`Move Feature` 도구를 사용해야 합니다. "
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1281
 msgid "Trim/Extend Feature"
-msgstr ""
+msgstr "피처 다듬기/연장하기"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1283
 msgid ""
@@ -2042,6 +2274,8 @@ msgid ""
 "(missing or crossing the line), it is necessary to be able to extend or "
 "shorten the segment."
 msgstr ""
+"디지타이즈한 라인이 또다른 라인에 스냅하기엔 너무 짧거나 너무 긴 경우 (라인이 빠졌거나 라인과 교차하는 경우) 선분을 연장하거나 짧게 "
+"만들 수 있어야 합니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1286
 msgid ""
@@ -2049,14 +2283,16 @@ msgid ""
 "(multi)lines AND (multi)polygons. Moreover, it is not necessarily the end of"
 " the lines that is concerned; any segment of a geometry can be modified."
 msgstr ""
+"|trimExtend| :sup:`Trim/Extend` 도구는 [멀티]라인은 물론 [멀티]폴리곤도 수정할 수 있습니다. 게다가 라인의 "
+"종단만 대상으로 삼을 필요도 없습니다. 도형의 어떤 선분도 수정할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1291
 msgid "This can lead to invalid geometries."
-msgstr ""
+msgstr "도형의 유효성이 망가질 수도 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1293
 msgid "You must activate segment snapping for this tool to work."
-msgstr ""
+msgstr "이 도구가 작동하려면 선분 스냅 모드를 활성화시켜야만 합니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1295
 msgid ""
@@ -2064,32 +2300,34 @@ msgid ""
 "another segment will be extended or trimmed. Unlike the vertex tool, a check"
 " is performed to modify only the layer being edited."
 msgstr ""
+"이 도구는 사용자에게 또다른 선분을 연장할지 또는 다듬을지에 대한 제한(선분)을 선택할 것을 요청합니다. 꼭짓점 도구와는 달리, 편집 "
+"중인 레이어만 수정하는지 검사합니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1300
 msgid ""
 "When both segments are in 3D, the tool performs an interpolation on the "
 "limit segment to get the Z value."
-msgstr ""
+msgstr "두 선분 모두 3차원인 경우, 제한 선분이 Z값을 가지도록 보간합니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1303
 msgid ""
 "In the case of a trim, you must select the part that will be shortened by "
 "clicking on it."
-msgstr ""
+msgstr "다듬기의 경우, 클릭해서 짧게 만들 부분을 선택해야만 합니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1309
 msgid "Shape digitizing"
-msgstr ""
+msgstr "형태 디지타이즈 작업"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1311
 msgid ""
 "The :guilabel:`Shape Digitizing` toolbar offers a set of tools to draw "
 "regular shapes and curved geometries."
-msgstr ""
+msgstr ":guilabel:`Shape Digitizing` 툴바의 도구들로 정규 형태 및 만곡 도형을 그릴 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1318
 msgid "Add Circular string"
-msgstr ""
+msgstr "원호 스트링 추가"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1320
 msgid ""
@@ -2097,6 +2335,9 @@ msgid ""
 "|circularStringRadius| :sup:`Add circular string by radius` buttons allow "
 "users to add line or polygon features with a circular geometry."
 msgstr ""
+"|circularStringCurvePoint| :sup:`Add circular string` 또는 "
+"|circularStringRadius| :sup:`Add circular string by radius` 버튼으로 원호 도형을 가진 "
+"라인 또는 폴리곤 피처를 추가할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1324
 msgid ""
@@ -2106,6 +2347,9 @@ msgid ""
 "other as well as to the :ref:`linear geometry tools <add_feature>`, creating"
 " some coumpound geometries."
 msgstr ""
+"이 도구들로 피처를 생성하는 작업은 다른 디지타이즈 작업 도구들과 동일한 규칙을 따릅니다: 꼭짓점을 배치하려면 왼쪽 클릭, 도형을 "
+"완료하려면 오른쪽 클릭하십시오. 도형을 그리는 동안, 두 원호 스트링 도구 사이를 전환하는 것은 물론 :ref:`선형 도형 도구 "
+"<add_feature>` 로도 전환해서 복합 도형을 생성할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1330
 msgid ""
@@ -2119,15 +2363,18 @@ msgid ""
 "GML or WFS) that supports curves to have features stored as curved, "
 "otherwise QGIS segmentizes the circular arcs."
 msgstr ""
+"QGIS가 모든 편집 가능한 데이터 유형 내에서 만곡 도형을 디지타이즈하는 것을 허용하고 있기는 하지만, 피처를 만곡 도형으로 저장하려면"
+" 곡선을 지원하는 (예를 들어 PostGIS, 메모리 레이어, GML 또는 WFS 같은) 데이터 제공자를 사용해야 합니다. 그렇지 않을 "
+"경우 QGIS가 원호를 선분화시킬 것입니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1341
 msgid "Draw Circles"
-msgstr ""
+msgstr "원 그리기"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1343
 msgid ""
 "There is a set of tools for drawing circles. The tools are described below."
-msgstr ""
+msgstr "원을 그릴 수 있는 도구들의 집합이 있습니다. 다음은 그 도구들의 설명입니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1346
 msgid ""
@@ -2135,18 +2382,24 @@ msgid ""
 ":ref:`add_circular_string`, if allowed by the data provider, it will be "
 "saved as a curved geometry, if not, QGIS will segmentize the circular arcs."
 msgstr ""
+"원은 원호 스트링으로 변환됩니다. 따라서 :ref:`add_circular_string` 에서 설명한대로 데이터 제공자가 허용하는 경우 "
+"만곡 도형으로 저장될 것이고, 아닌 경우 QGIS가 원호를 선분화할 것입니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1350
 msgid ""
 "|circle2Points| :sup:`Add circle from 2 points`: The two points define the "
 "diameter and the orientation of  the circle. (Left-click, right-click)"
 msgstr ""
+"|circle2Points| :sup:`Add circle from 2 points`: 포인트 2개로 지름 및 원의 방향을 정의합니다. "
+"(왼쪽 클릭, 오른쪽 클릭)"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1352
 msgid ""
 "|circle3Points| :sup:`Add circle from 3 points`: Draws a circle from three "
 "known points on the circle. (Left-click, left-click, right-click)"
 msgstr ""
+"|circle3Points| :sup:`Add circle from 3 points`: 포인트 3개가 원의 경계선 상에 있다고 가정하고 "
+"원을 그립니다. (왼쪽 클릭, 왼쪽 클릭, 오른쪽 클릭)"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1354
 msgid ""
@@ -2156,6 +2409,10 @@ msgid ""
 "become a \"Add circle from center and radius\" tool by setting and locking "
 "the distance value after first click."
 msgstr ""
+"|circleCenterPoint| :sup:`Add circle from center and a point`: 중심 포인트와 원의 "
+"경계선 상에 있다고 가정한 포인트로 원을 그립니다. (왼쪽 클릭, 오른쪽 클릭) "
+":ref:`advanced_digitizing_panel` 과 함께 사용하는 경우, 첫 번째 클릭 이후 거리값을 설정하고 고정해서 이 "
+"도구를 \"Add circle from center and radius\" 도구로 사용할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1359
 msgid ""
@@ -2165,6 +2422,10 @@ msgid ""
 "tangent. If two tangents are parallel, an error message appears and the "
 "input is cleared. (Left-click, left-click, right-click)"
 msgstr ""
+"|circle3Tangents| :sup:`Add circle from 3 tangents`: 선분 3개를 접선으로 하는 원을 그립니다."
+" **선분 스냅 모드를 활성화해야만 한다는 사실을 기억하십시오**. (:ref:`snapping_tolerance` 을 참조하세요.) "
+"접선으로 추가할 선분을 클릭하십시오. 접선 2개가 평행하는 경우, 오류 메시지를 표시하고 입력을 초기화합니다. (왼쪽 클릭, 왼쪽 클릭,"
+" 오른쪽 클릭)"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1364
 msgid ""
@@ -2172,6 +2433,8 @@ msgid ""
 "Similar to circle from 3 tangents, except that you have to select two "
 "tangents, enter a radius and select the desired center."
 msgstr ""
+"|circle2TangentsPoint| :sup:`Add circle from 2 tangents and a point`: 접선 3개로"
+" 원을 그리는 도구와 유사하지만, 접선 2개를 선택한 다음 반경을 입력하고 원하는 중심을 선택해야 한다는 점이 다릅니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1373
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1386
@@ -2197,6 +2460,9 @@ msgid ""
 "pressing :kbd:`Ctrl+4`. Once the panel is visible, click the |cad| "
 ":sup:`Enable advanced digitizing tools` button to activate the set of tools."
 msgstr ""
+"툴바를 오른쪽 클릭하거나, :menuselection:`View --> Panels -->` 메뉴로부터, 또는 :kbd:`Ctrl+4` "
+"키를 누르면 :guilabel:`Advanced Digitizing` 패널을 열 수 있습니다. 패널이 가시화되고 나면, |cad| "
+":sup:`Enable advanced digitizing tools` 아이콘을 클릭해서 고급 다지타이즈 작업 도구를 활성화하십시오."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1393
 msgid ""
@@ -2276,7 +2542,7 @@ msgstr "키보드 단축키"
 msgid ""
 "To speed up the use of Advanced Digitizing Panel, there are a couple of "
 "keyboard shortcuts available:"
-msgstr ""
+msgstr "고급 디지타이즈 작업 패널의 활용 속도를 높이려면, 다음과 같은 키보드 단축키를 사용할 수 있습니다:"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1429
 msgid "Key"
@@ -2288,15 +2554,15 @@ msgstr "간단한 설명"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1429
 msgid ":kbd:`Ctrl+` or :kbd:`Alt+`"
-msgstr ""
+msgstr ":kbd:`Ctrl+` 또는 :kbd:`Alt+` 키조합"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1429
 msgid ":kbd:`Shift+`"
-msgstr ""
+msgstr ":kbd:`Shift+` 키조합"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1431
 msgid ":kbd:`D`"
-msgstr ""
+msgstr ":kbd:`D`"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1431
 msgid "Set distance"
@@ -2308,7 +2574,7 @@ msgstr "거리 고정"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1433
 msgid ":kbd:`A`"
-msgstr ""
+msgstr ":kbd:`A`"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1433
 msgid "Set angle"
@@ -2324,39 +2590,39 @@ msgstr "마지막 선분에 상대적인 각도 켜고끄기"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1435
 msgid ":kbd:`X`"
-msgstr ""
+msgstr ":kbd:`X`"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1435
 msgid "Set X coordinate"
-msgstr ""
+msgstr "X 좌표 설정"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1435
 msgid "Lock X coordinate"
-msgstr ""
+msgstr "X 좌표 고정"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1435
 msgid "Toggle relative X to last vertex"
-msgstr ""
+msgstr "마지막 꼭짓점에 상대적인 X 켜고끄기"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1437
 msgid ":kbd:`Y`"
-msgstr ""
+msgstr ":kbd:`Y`"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1437
 msgid "Set Y coordinate"
-msgstr ""
+msgstr "Y 좌표 설정"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1437
 msgid "Lock Y coordinate"
-msgstr ""
+msgstr "Y 좌표 고정"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1437
 msgid "Toggle relative Y to last vertex"
-msgstr ""
+msgstr "마지막 꼭짓점에 상대적인 Y 켜고끄기"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1439
 msgid ":kbd:`C`"
-msgstr ""
+msgstr ":kbd:`C`"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1439
 msgid "Toggle construction mode"
@@ -2364,7 +2630,7 @@ msgstr "작성 모드 켜고끄기"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1441
 msgid ":kbd:`P`"
-msgstr ""
+msgstr ":kbd:`P`"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1441
 msgid "Toggle perpendicular and parallel modes"
@@ -2392,7 +2658,7 @@ msgstr ""
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1454
 msgid ""
 "Click the :guilabel:`x` text box (or use the :kbd:`X` keyboard shortcut)."
-msgstr ""
+msgstr ":guilabel:`x` 텍스트 란을 클릭합니다. (또는 :kbd:`X` 단축키를 누릅니다.)"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1455
 msgid ""
@@ -2406,7 +2672,7 @@ msgstr ""
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1458
 msgid ""
 "Click the :guilabel:`y` text box (or use the :kbd:`Y` keyboard shortcut)."
-msgstr ""
+msgstr ":guilabel:`y` 텍스트 란을 클릭합니다. (또는 :kbd:`Y` 단축키를 누릅니다.)"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1459
 msgid ""
@@ -2447,6 +2713,10 @@ msgid ""
 "the map canvas, the clicked point is surrounded by a circle whose radius is "
 "the value entered in the distance text box."
 msgstr ""
+"지정 길이로 선분을 그리고 싶다면, :guilabel:`d (distance)` 텍스트란을 클릭하고 (또는 :kbd:`D` 단축키를 "
+"누르고) 거리 값을 (맵 단위로) 입력한 다음 :kbd:`Enter` 키를 누르거나 오른쪽에 있는 |locked| 아이콘을 클릭하면 맵 "
+"캔버스에 있는 마우스를 선분의 길이로 고정시킵니다. 맵 캔버스에서는, 거리 텍스트란에 입력한 값이 반경인 원이 클릭한 포인트를 둘러싸고 "
+"있습니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1485
 msgid "Fixed length segment"
@@ -2460,6 +2730,9 @@ msgid ""
 "buttons on the right to lock it. In this way the segment will follow the "
 "desired angle:"
 msgstr ""
+"마지막으로, 선분의 각도도 설정할 수 있습니다. 앞에서 설명한 바와 마찬가지로, :guilabel:`a (angle)` 텍스트란을 "
+"클릭하고 (또는 :kbd:`A` 단축키를 누르고) 각도 값을 (도 단위로) 입력한 다음 :kbd:`Enter` 키를 누르거나 오른쪽에 "
+"있는 |locked| 아이콘을 클릭하면 각도가 고정됩니다. 이렇게 하면 선분이 원하는 각도대로 꺾일 것입니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1495
 msgid "Fixed angle segment"
@@ -2482,6 +2755,8 @@ msgid ""
 "to the previous segment. With that option on, angles are measured between "
 "the last segment and the mouse pointer."
 msgstr ""
+"각도의 경우, :guilabel:`a` 텍스트란 왼쪽에 있는 |delta| 버튼을 클릭해서 (또는 :kbd:`Shift+A` 조합키를 "
+"눌러서) 이전 선분에 상대적인 각도를 켜고 끌 수 있습니다. 이 옵션을 켜면, 직전 선분과 마우스 포인터 사이의 각도를 측정합니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1508
 msgid ""
@@ -2491,6 +2766,9 @@ msgid ""
 "coordinates measurement will consider the last vertex to be the X and Y axes"
 " origin."
 msgstr ""
+"좌표의 경우, :guilabel:`x` 또는 :guilabel:`y` 텍스트란 왼쪽에 있는 |delta| 아이콘을 클릭해서 (혹은 "
+":kbd:`Shift+X` 또는 :kbd:`Shift+Y` 조합키를 눌러서) 이전 꼭짓점에 상대적인 좌표를 켜고 끌 수 있습니다. 이 "
+"옵션을 켜면, 직전 꼭짓점을 원점으로 삼아 X 및 Y 좌표를 측정합니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1515
 msgid "Continuous lock"
@@ -2503,10 +2781,13 @@ msgid ""
 ":guilabel:`Continuous lock` buttons. Using continuous lock allows you to "
 "digitize several points or vertexes using the same constraints."
 msgstr ""
+"|lockedRepeat| :guilabel:`Continuous lock` 버튼을 클릭하면 디지타이즈 작업, 각도, 거리, X 및 Y "
+"좌표에 대한 절대 또는 상대 참조 제약 조건 모두 지속적으로 고정시킬 수 있습니다. 지속 고정을 사용하면 여러 포인트 또는 꼭짓점을 "
+"동일한 제약 조건으로 디지타이즈할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1524
 msgid "Parallel and perpendicular lines"
-msgstr ""
+msgstr "평행 및 수직 라인"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1526
 msgid ""
@@ -2516,7 +2797,7 @@ msgid ""
 "segment."
 msgstr ""
 "앞에서 설명한 모든 도구들은 |cadPerpendicular| :sup:`Perpendicular` 및 |cadParallel| "
-":sup:`Parallel` 도구와 결합해서 사용할 수 있습니다. 이 두 도구는 선분을 또다른 선분에 완벽히 직각으로 또는 평행하게 그릴"
+":sup:`Parallel` 도구와 결합해서 사용할 수 있습니다. 이 두 도구는 선분을 또다른 선분에 완벽히 직각으로 또는 평행하게 그릴"
 " 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1530
@@ -2528,6 +2809,9 @@ msgid ""
 "existing feature will be colored in light orange); you should see a blue "
 "dotted line where your feature will be snapped:"
 msgstr ""
+"*수직* 선분을 그리려면, 편집 도중에 |cadPerpendicular| :sup:`Perpendicular` 아이콘을 클릭해서 (또는 "
+":kbd:`P` 단축키를 눌러서) 활성화시키십시오. 수직 라인을 그리기 전에, 직각의 기준이 될 기존 피처의 선분을 클릭하십시오. (기존"
+" 피처의 라인이 밝은 주황색으로 강조될 것입니다.) 사용자의 라인이 스냅될 위치에 다음과 같이 파랑색 점선이 보일 겁니다:"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1540
 msgid "Perpendicular digitizing"
@@ -2539,6 +2823,8 @@ msgid ""
 "|cadParallel| :sup:`Parallel` icon (keyboard shortcut :kbd:`P` twice), click"
 " on the segment you want to use as reference and start drawing your feature:"
 msgstr ""
+"평행 라인을 그리는 방법도 동일합니다. |cadParallel| :sup:`Parallel` 아이콘을 클릭해서 (또는 :kbd:`P` "
+"단축키를 두 번 눌러서) 활성화한 다음, 참조 라인으로 사용하려는 선분을 클릭하고 사용자 피처를 다음과 같이 그리십시오:"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1549
 msgid "Parallel digitizing"
@@ -2562,12 +2848,15 @@ msgid ""
 "vertexes, but will capture the clicks' positions so that you can use them as"
 " reference points to then lock distance, angle or X and Y relative values."
 msgstr ""
+"|cadConstruction| :sup:`Construction` 아이콘을 클릭하거나 또는 :kbd:`C` 단축키를 누르면 *작성* "
+"모드를 활성화/비활성화할 수 있습니다. 작성 모드 상태에서 맵 캔버스를 클릭하면 새 꼭짓점을 추가하지는 않지만, 클릭한 위치를 캡처해서 "
+"이후 거리, 각도, 또는 X 및 Y 좌표의 상대값을 고정시킬 참조 포인트로 이용할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1563
 msgid ""
 "As an example, the construction mode can be used to draw some point at an "
 "exact distance from an existing point."
-msgstr "예를 들어, 기존 포인트에서 정확이 동일 거리에 있는 포인트를 몇 개 그리는 데 작성 모드를 사용할 수 있습니다."
+msgstr "예를 들어, 기존 포인트에서 정확히 동일한 거리에 있는 포인트를 몇 개 그리는 데 작성 모드를 사용할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1566
 msgid ""
@@ -2577,6 +2866,9 @@ msgid ""
 "*construction* mode by clicking the |cadConstruction| :sup:`Construction` "
 "icon or with the :kbd:`C` keyboard shortcut."
 msgstr ""
+"맵 캔버스에 있는 기존 포인트와 올바르게 활성화된 스냅 모드를 통해, 기존 포인트에서 지정 거리 및 각도에 있는 다른 포인트를 쉽게 그릴"
+" 수 있습니다. |cad| 버튼을 클릭한 다음, |cadConstruction| :sup:`Construction` 아이콘을 클릭하거나 "
+":kbd:`C` 단축키를 눌러서 *작성* 모드도 활성화시켜야 합니다. "
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1572
 msgid ""
@@ -2584,6 +2876,9 @@ msgid ""
 "click on the :guilabel:`d` box (:kbd:`D` shortcut) type the desired distance"
 " and press :kbd:`Enter` to lock the mouse position in the map canvas:"
 msgstr ""
+"사용자가 해당 포인트로부터 거리를 계산하고자 하는 포인트 옆을 클릭하고 :guilabel:`d` 텍스트란을 클릭한 다음 (또는 "
+":kbd:`D` 단축키를 누른 다음) 원하는 거리를 입력하고 :kbd:`Enter` 키를 눌러 다음과 같이 맵 캔버스에 마우스 위치를 "
+"고정하십시오:"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1579
 msgid "Distance from point"
@@ -2595,6 +2890,8 @@ msgid ""
 "Now, you can click on the map canvas, and the point will be placed at the "
 "distance entered."
 msgstr ""
+"새 포인트를 추가하기 전에, :kbd:`C` 단축키를 눌러 작성 모드를 끄십시오. 이제 맵 캔버스를 클릭하면, 입력한 거리에 포인트가 "
+"배치될 것입니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1585
 msgid ""
@@ -2608,6 +2905,12 @@ msgid ""
 "(:kbd:`A` shortcut) type the angle you want and press :kbd:`Enter`. The "
 "mouse position will be locked both in distance and angle."
 msgstr ""
+"예를 들자면 원점 포인트로부터 동일한 거리에 있지만, 새로 추가한 포인트에서 특정 각도에 있는 다른 포인트를 생성하는 데 각도 제약조건을"
+" 사용할 수도 있습니다. |cadConstruction| :sup:`Construction` 아이콘을 클릭하거나 :kbd:`C` 단축키를"
+" 눌러서 작성 모드를 켜십시오. 새로 추가한 포인트를 클릭한 다음 다른 포인트도 클릭해서 방향 선분을 설정하십시오. 다음으로 "
+":guilabel:`d` 텍스트란을 클릭하고 (또는 :kbd:`D` 단축키를 누르고) 원하는 거리를 입력한 다음 :kbd:`Enter` "
+"키를 누르십시오. :guilabel:`a` 텍스트란을 클릭하고 (또는 :kbd:`A` 단축키를 누르고) 원하는 각도를 입력한 다음 "
+":kbd:`Enter` 키를 누르십시오. 마우스 위치의 거리 및 각도 둘 다 고정될 것입니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1598
 msgid "Distance and angle from points"
@@ -2620,6 +2923,8 @@ msgid ""
 "distance and angle entered. Repeating the process, several points can be "
 "added."
 msgstr ""
+"새 포인트를 추가하기 전에, :kbd:`C` 단축키를 눌러 작성 모드를 끄십시오. 이제 맵 캔버스를 클릭하면, 입력한 거리에 포인트가 "
+"배치될 것입니다. 이 과정을 반복하면 여러 포인트를 추가할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1607
 msgid "Points at given distance and angle"
@@ -2627,7 +2932,7 @@ msgstr "지정 거리 및 각도에 있는 포인트들"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1613
 msgid "The Processing in-place layer modifier"
-msgstr ""
+msgstr "제자리(in-place) 공간 처리 레이어 수정자"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1615
 msgid ""
@@ -2639,20 +2944,24 @@ msgid ""
 " to automate multiple features modification using advanced and complex "
 "operations."
 msgstr ""
+":ref:`공간 처리 메뉴 <label_processing>` 는 입력 피처 또는 입력 피처와 (동일 레이어 안에 있을 수도 있고 아닐 "
+"수도 있는) 다른 피처의 관계의 속성을 기반으로 새 피처를 생성하고 분석할 수 있는 수많은 도구를 제공합니다. 새 레이어를 산출물로 "
+"생성하는 것이 공통된 습성이지만, 몇몇 알고리즘은 입력 레이어를 수정할 수도 있습니다. 이를 사용하면 고급의 복잡한 작업을 통해 다중 "
+"피처 수정을 간편하게 자동화할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1622
 msgid "To edit features in-place:"
-msgstr ""
+msgstr "피처를 제자리에서 편집하려면:"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1624
 msgid "Select the layer to edit in the :guilabel:`Layers` panel."
-msgstr ""
+msgstr ":guilabel:`Layers` 패널에서 편집할 레이어를 선택하십시오."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1625
 msgid ""
 "Select the concerned features. You can skip this step, in which case the "
 "modification will apply to the whole layer."
-msgstr ""
+msgstr "관심이 있는 피처를 선택하십시오. 이 단계를 건너뛰어도 되는데, 그럴 경우 레이어 전체에 수정 사항을 적용할 것입니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1627
 msgid ""
@@ -2661,27 +2970,30 @@ msgid ""
 "algorithms is filtered, showing only those compatible with in-place "
 "modifications, i.e.:"
 msgstr ""
+":ref:`공간 처리 툴박스 <processing.toolbox>` 상단에 있는 |processSelected| :sup:`Edit "
+"Features In-Place` 버튼을 클릭하십시오. 알고리즘 목록을 필터링해서 제자리 수정을 지원하는 알고리즘만 표시할 것입니다. "
+"예를 들면:"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1631
 msgid "They work at the feature source and not at the layer level."
-msgstr ""
+msgstr "레이어 수준에서가 아니라 피처 소스 수준에서 작동하는 알고리즘"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1632
 msgid ""
 "They do not change the layer structure, e.g. adding or removing fields."
-msgstr ""
+msgstr "필드를 추가하거나 제거하는 등 레이어 구조를 변경하지 않는 알고리즘"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1633
 msgid "They do not change the geometry type, e.g. from line to point layer."
-msgstr ""
+msgstr "라인 레이어를 포인트 레이어로 바꾸는 등 도형 유형을 변경하지 않는 알고리즘"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1638
 msgid "Processing algorithms: all (left) vs polygon in-place editors (right)"
-msgstr ""
+msgstr "공간 처리 알고리즘: 전체(왼쪽) 대 제자리 폴리곤 편집기(오른쪽)"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1640
 msgid "Find the algorithm you'd like to run and double-click it."
-msgstr ""
+msgstr "사용자가 실행하려는 알고리즘을 찾아 더블클릭하십시오."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1642
 msgid ""
@@ -2689,18 +3001,23 @@ msgid ""
 " the usual input and output layer parameters), then the algorithm is run "
 "immediately without any dialog popup."
 msgstr ""
+"알고리즘이 (일반적인 입력/산출 레이어 파라미터를 제외하면) 사용자가 설정한 어떤 파라미터도 필요로 하지 않는 경우, 어떤 대화창도 "
+"열리지 않고 알고리즘이 즉시 실행됩니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1646
 msgid ""
 "If parameters other than the usual input or output layers are needed, the "
 "algorithm dialog pops up. Fill in the required information."
 msgstr ""
+"일반적인 입력/산출 레이어 파라미터가 아닌 다른 파라미터가 필요한 경우, 알고리즘 대화창이 열립니다. 필요한 정보를 입력하십시오."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1648
 msgid ""
 "Click :guilabel:`Modify Selected Features` or :guilabel:`Modify All "
 "Features` depending on whether there's an active selection."
 msgstr ""
+"활성화된 선택 집합이 있는지 여부에 따라 :guilabel:`Modify Selected Features` 또는 "
+":guilabel:`Modify All Features` 를 클릭하십시오."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1651
 msgid ""
@@ -2708,6 +3025,8 @@ msgid ""
 " indeed toggled to editing mode with unsaved modification as indicated by "
 "the |editableEdits| icon next to the layer name."
 msgstr ""
+"변경 사항을 레이어에 적용하고 편집 버퍼에 저장합니다. 레이어는 자동으로 편집 모드로 넘어가며, 레이어명 옆에 표시되는 "
+"|editableEdits| 아이콘은 저장하지 않은 수정 사항이 있다는 사실을 나타냅니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1654
 msgid ""
@@ -2715,3 +3034,5 @@ msgid ""
 " the layer. You can also press |undo| :sup:`Undo` to rollback the whole "
 "modification."
 msgstr ""
+"다른 작업과 마찬가지로, |saveEdits| :sup:`Save layer edits` 버튼을 클릭하면 레이어에 변경 사항을 "
+"저장합니다. 물론 |undo| :sup:`Undo` 버튼을 클릭해서 모든 수정 사항을 되돌릴 수도 있습니다."

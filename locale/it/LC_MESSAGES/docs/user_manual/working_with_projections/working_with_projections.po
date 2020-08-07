@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Marco Tagliabue <mark.taglia@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-26 13:13+0200\n"
 "PO-Revision-Date: 2020-03-16 19:26+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Marco Tagliabue <mark.taglia@gmail.com>, 2020\n"
 "Language-Team: Italian (https://www.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -113,6 +114,8 @@ msgid ""
 "Open :menuselection:`Settings -->` |options| :menuselection:`Options... --> "
 "CRS`"
 msgstr ""
+"Apri :menuselection:`Impostazioni -->` |options| :menuselection:`Opzioni... "
+"--> SR`"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:71
 msgid "The CRS tab in the QGIS Options Dialog"
@@ -124,6 +127,9 @@ msgid ""
 ":guilabel:`when a new layer is created, or when a layer is loaded that has "
 "no CRS`. One of:"
 msgstr ""
+"Nel gruppo :guilabel:`SR per i layer`, imposta l'azione da realizzare "
+":guilabel:`quando si crea un  nuovo layer, o quando si carica un layer privo"
+" di SR`. Uno tra:"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:77
 msgid ""
@@ -136,6 +142,15 @@ msgid ""
 "values, i.e. the same behavior as all layers get when :ref:`a project is set"
 " to have no CRS <project_crs>`."
 msgstr ""
+"|radioButtonOn| :guilabel:`Lascia come SR sconosciuto (nessuna azione)`: non"
+" esegue nessuna richiesta di selezione del SR quando viene caricato un layer"
+" senza SR, rimandando la scelta del SR ad un secondo momento. Utile quando "
+"si caricano molti layer in una volta sola. Questi layer saranno "
+"identificabili nel pannello :guilabel:`Layers` con l'icona |indicatorNoCRS| "
+"vicina. Saranno anche non georeferenziati, con le coordinate del layer "
+"trattate come puramente numeriche, non come valori coerenti con coordinate "
+"terrestri, i.e. lo stesso comportamento di tutti i livelli quando un "
+"progetto è impostato per non avere SR. <project_crs>`."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:85
 msgid ""
@@ -146,6 +161,12 @@ msgid ""
 "in other cases you will need to contact the original author of the data to "
 "determine the correct CRS to use."
 msgstr ""
+"|radioButtonOff| :guilabel:`Richiedi SR`: richiede di selezionare "
+"manualmente il SR. Selezionare la scelta corretta è cruciale, poiché una "
+"scelta errata posizionerà il tuo layer nel punto sbagliato sulla Terra! "
+"Talvolta, i medadata associati descrivono il corretto SR di un layer, in "
+"altri casi avrai bisogno di contattare l'autore del data per determinare il "
+"corretto SR da associare."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:91
 msgid "|radioButtonOff| :guilabel:`Use project CRS`"
@@ -156,6 +177,8 @@ msgid ""
 "|radioButtonOff| :guilabel:`Use default layer CRS`, as set in the "
 ":guilabel:`Default CRS for layers` combobox above."
 msgstr ""
+"|radioButtonOff| :guilabel:`Usa SR del layer predefinito`, come impostato "
+"nel menu a tendina :guilabel:`SR predefinito per i layer` sopra."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:97
 msgid ""

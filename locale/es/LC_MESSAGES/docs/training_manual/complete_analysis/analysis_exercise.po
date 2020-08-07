@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-26 13:13+0200\n"
 "PO-Revision-Date: 2020-03-16 19:18+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -52,10 +53,10 @@ msgid ""
 " by the species in question:"
 msgstr ""
 "Eres el encargado de encontrar áreas en Península del Cabo que sean "
-"adecuadas para el hábitat de especies de plantas fynbos raras. La extensión "
-"de tu área de investigación en Península del Cabo es: Sur de Melkbosstrand, "
-"Oeste de Strand. Botánicos te han proporcionado las preferencias exhibidas "
-"por las especies en cuestion: "
+"adecuadas para el hábitat de unas raras especies de plantas fynbos. La "
+"extensión de tu área de investigación en Península del Cabo es: Sur de "
+"Melkbosstrand, Oeste de Strand. Botánicos te han proporcionado las "
+"preferencias exhibidas por las especies en cuestion: "
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:18
 msgid "It grows on east facing slopes."
@@ -79,8 +80,7 @@ msgstr ""
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:22
 msgid ""
 "The area of vegetation in which it occurs should be at least 6000m2 in area."
-msgstr ""
-"El área de vegetación en la que ocurre debería ser de al menos 6000m2."
+msgstr "El área de vegetación en la que se dá debería ser de al menos 6000m2."
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:24
 msgid ""
@@ -103,6 +103,9 @@ msgid ""
 "candidate area that is closest to a house of your choice. The solution will "
 "involve:"
 msgstr ""
+"Los datos para este ejercicio se pueden encontrar en la carpeta "
+":file:`exercise_data/more_analysis`. Encontrará el área candidata más "
+"cercana a la casa de su elección. La solución implicará:"
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:36
 msgid ""
@@ -155,12 +158,16 @@ msgid ""
 "Select the entry :guilabel:`WGS 84 / UTM zone 33S` (with the EPSG code "
 "``32733``)."
 msgstr ""
+"Seleccione la entrada :guilabel:`WGS 84 / UTM zone 33S` (con el código EPSG "
+"``32733``)."
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:53
 msgid ""
 "Click :guilabel:`OK`. The map is now in the ``UTM33S`` coordinate reference "
 "system."
 msgstr ""
+"Click en :guilabel:`Aceptar`. El mapa estará ahora en Sistema de Coordenadas"
+" de Referencia ``UTM33S``."
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:55
 msgid ""
@@ -177,6 +184,9 @@ msgid ""
 " somewhere on your computer. You will save whatever layers you create in "
 "this directory as well."
 msgstr ""
+"Guarde el mapa en un directorio llamado :file:`Rasterprac` que deberías "
+"crear en algún lugar de tu computadora. También guardará las capas que cree "
+"en este directorio."
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:65
 msgid "Loading Data into the Map"
@@ -192,7 +202,7 @@ msgstr ""
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:71
 msgid "For vectors..."
-msgstr ""
+msgstr "Para vectores..."
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:73
 msgid ""
@@ -201,27 +211,37 @@ msgid ""
 "or use the :menuselection:`Layer --> Add Layer -->` |addOgrLayer| "
 ":menuselection:`Add Vector Layer...` menu item."
 msgstr ""
+"Haga click en el botón |dataSourceManager| : sup:`Abrir el Administrador de "
+"fuente de datos` y habilite la pestaña |addOgrLayer| :guilabel:`Vector` en "
+"el cuadro de diálogo que aparece, o use el elemento de menú "
+":menuselection:`Capa -> Añadir capa -> `|addOgrLayer| "
+":menuselection:`Agregar capa vectorial ... '."
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:77
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:109
 msgid "Ensure that the :guilabel:`File` radio button is selected."
 msgstr ""
+"Compruebe que el botón de opción :guilabel:`Archivo` está seleccionado."
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:78
 msgid ""
 "Click on the :guilabel:`...` button to browse for :guilabel:`Vector "
 "dataset(s)`."
 msgstr ""
+"Click en el botón :guilabel:`...` para buscar :guilabel:`Conjunto(s) de "
+"datos vectoriales`."
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:79
 msgid ""
 "In the dialog that appears, open the "
 ":file:`exercise_data/more_analysis/streets` directory."
 msgstr ""
+"En el diálogo que aparece, abre el directorio "
+":file:`exercise_data/more_analysis/streets`."
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:81
 msgid "Select the file :file:`Street_Names_UTM33S.shp`."
-msgstr ""
+msgstr "Selecciona el archivo :file:`Street_Names_UTM33S.shp`."
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:82
 msgid "Click :guilabel:`Open`."
@@ -235,28 +255,39 @@ msgid ""
 "also possible to enter the file path in this field manually, should you wish"
 " to do so."
 msgstr ""
+"El cuadro de diálogo se cierra y muestra el cuadro de diálogo original, con "
+"la ruta del archivo especificada en el campo de texto junto al botón "
+":guilabel:`Conjunto(s) de datos vectoriales`. Esto le permite asegurarse de "
+"que esté seleccionado el archivo correcto. También es posible ingresar "
+"manualmente la ruta del archivo en este campo, si lo desea."
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:89
 msgid ""
 "Click :guilabel:`Add`. The vector layer will load in your map. Its color is "
 "automatically assigned. It will be changed later."
 msgstr ""
+"Click :guilabel:`Añadir`. La capa vectorial se cargará en su mapa. Su color "
+"se asigna automáticamente. Será cambiado más tarde."
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:91
 msgid "Rename the layer to :guilabel:`Streets`."
-msgstr ""
+msgstr "Renombre la capa a :guilabel:`Streets`."
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:93
 msgid ""
 "Right-click on it in the :guilabel:`Layers` panel (by default, the pane "
 "along the left-hand side of the screen)."
 msgstr ""
+"Click derecho en el panel de :guilabel:`Capas` (por defecto, el panel a lo "
+"largo del lado izquierdo de la pantalla)."
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:95
 msgid ""
 "Click :guilabel:`Rename` in the dialog that appears and rename it, pressing "
 "the :kbd:`Enter` key when done."
 msgstr ""
+"Click :guilabel:`Renombrar` en el cuadro de diálogo que aparece y cámbiele "
+"el nombre, presionando la tecla :kbd:`Enter` cuando haya terminado."
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:97
 msgid ""
@@ -264,14 +295,17 @@ msgid ""
 ":file:`Generalised_Zoning_Dissolve_UTM33S.shp` file in the :file:`Zoning` "
 "directory."
 msgstr ""
+"Repita el proceso de adición de vectores, pero esta vez seleccione el "
+"archivo :file:`Generalised_Zoning_Dissolve_UTM33S.shp` en el direcotorio "
+":file:`Zoning`."
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:100
 msgid "Rename it to ``Zoning``."
-msgstr ""
+msgstr "Renómbralo a ``Zoning``."
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:103
 msgid "For rasters..."
-msgstr ""
+msgstr "Para rásters..."
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:105
 msgid ""
@@ -280,12 +314,16 @@ msgid ""
 "appears, or use the :menuselection:`Layer --> Add Layer -->` "
 "|addRasterLayer| :menuselection:`Add Raster Layer...` menu item."
 msgstr ""
+"Click en el botón |dataSourceManager| :sup:`Abrir Administrador de fuentes "
+"de datos` y active la pestaña |addRasterLayer| :guilabel:`Ráster` en el "
+"diálogo emergente, o use el elemento de menú :menuselection:`Capa --> Añadir"
+" capa -->` |addRasterLayer| :menuselection:`Añadir capa ráster...`."
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:110
 msgid ""
 "Navigate to the appropriate file, select it, and click :guilabel:`Open`."
 msgstr ""
-"Navega hasta el archivo apropiado, selecciónalo y haz clic en "
+"Navega hasta el archivo apropiado, selecciónalo y haz click en "
 ":guilabel:`Abrir`."
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:111
@@ -293,6 +331,9 @@ msgid ""
 "Do this for each of the two raster files. The files you want are "
 ":file:`DEM/reproject/DEM.tif` and :file:`Rainfall/reprojected/rainfall.tif`."
 msgstr ""
+"Haga esto para cada uno de los dos archivos ráster. Los archivos que quieres"
+" son :file:`DEM/reproject/DEM.tif` y "
+":file:`Rainfall/reprojected/rainfall.tif`."
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:114
 msgid ""
@@ -300,6 +341,9 @@ msgid ""
 "Initially when you load them, the images will be gray rectangles. Don't "
 "worry, this will be changed later."
 msgstr ""
+"Renombre el ráster rainfall como ``Rainfall`` (con mayúscula al principio). "
+"Inicialmente, cuando las cargue, las imágenes serán rectángulos grises. No "
+"te preocupes, esto se cambiará más tarde."
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:117
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:258
@@ -328,6 +372,7 @@ msgid ""
 "In the :guilabel:`Layers` panel, right-click on the :guilabel:`Streets` "
 "layer."
 msgstr ""
+"En el panel :guilabel:`Capas`, click derecho en la capa :guilabel:`Streets`."
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:126
 msgid "Select :guilabel:`Properties` from the menu that appears."
@@ -335,14 +380,14 @@ msgstr "Selecciona :guilabel:`Propiedades` del menú que aparece."
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:127
 msgid "Switch to the :guilabel:`Symbology` tab in the dialog that appears."
-msgstr ""
+msgstr "Active la pestaña :guilabel:`Simbología` en el diálogo emergente."
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:128
 msgid ""
 "Click on the button labelled :guilabel:`Change`, with a square showing the "
 "current color of the :guilabel:`Streets` layer."
 msgstr ""
-"Haga clic sobre el botón etiquetado :guilabel:`Cambiar`, con un cuadro "
+"Haga click sobre el botón etiquetado :guilabel:`Color`, con un cuadro "
 "mostrando el color actual de la capa :guilabel:`Streets`."
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:130
@@ -393,13 +438,15 @@ msgid ""
 "Open the :guilabel:`Properties` dialog for the :guilabel:`Rainfall` raster."
 msgstr ""
 "Abre el cuadro de diálogo :guilabel:`Propiedades` para el ráster "
-":guilabel:`Precipitación`."
+":guilabel:`Rainfall`."
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:145
 msgid ""
 "Switch to the :guilabel:`Symbology` tab. You'll notice that this dialog is "
 "very different from the version used for vector layers."
 msgstr ""
+"Cambie a la pestaña :guilabel:`Simbología`. Notarás que este diálogo es muy "
+"diferente de la versión utilizada para las capas vectoriales."
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:147
 msgid "Ensure that the button :guilabel:`Use standard deviation` is selected."
@@ -412,13 +459,15 @@ msgid ""
 "Change the value in the associated box to ``2.00`` (it should be set to "
 "``0.00`` by default)."
 msgstr ""
+"Cambie el valor en el cuadro asociado a ``2.00`` (debería estar fijado en "
+"``0.00`` por defecto)."
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:150
 msgid ""
 "Under the heading :guilabel:`Contrast enhancement`, change the value of the "
 ":guilabel:`Current` dropdown list to :guilabel:`Stretch to MinMax`."
 msgstr ""
-"En el título :guilabel:`Mejora de contraste`, cambia el valor del menú "
+"En el apartado :guilabel:`Mejora de contraste`, cambia el valor del menú "
 "desplegable a :guilabel:`Estirar a MinMax`."
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:152
@@ -426,15 +475,17 @@ msgid ""
 "Click :guilabel:`OK`. The \"Rainfall\" raster, if visible, should change "
 "colors, allowing you to see different brightness values for each pixel."
 msgstr ""
-"Haz clic en :guilabel:`Aceptar`. El ráster \"Precipitación\", si está "
-"visible, debería cambiar de colores, permitiendote ver diferentes valores de"
-" brillo para cada píxel."
+"Haz clic en :guilabel:`Aceptar`. El ráster \"Rainfall\", si está visible, "
+"debería cambiar de colores, permitiendote ver diferentes valores de brillo "
+"para cada píxel."
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:154
 msgid ""
 "Repeat this process for the DEM, but set the standard deviations used for "
 "stretching to ``4.00``."
 msgstr ""
+"Repite este proceso para el MDE, pero establece las desviaciones estándar "
+"usada para el estiramiento a ``4.00``."
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:158
 msgid "Changing the layer order"
@@ -445,12 +496,17 @@ msgid ""
 "In the :guilabel:`Layers` panel, click and drag layers up and down to change"
 " the order they appear in on the map."
 msgstr ""
+"En el panel :guilabel:`Capas`, haga click y arrastre capas arriba y abajo "
+"para cambiar el orden en que aparecen en el mapa."
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:162
 msgid ""
 "Newer versions of QGIS may have a :guilabel:`Control rendering order` "
 "checkbox beneath the :guilabel:`Layers` panel. Ensure that it is checked."
 msgstr ""
+"Las versiones más recientes de QGIS pueden tener una casilla de verificación"
+" :guilabel:`Control de orden de representación` debajo del panel "
+":guilabel:`Capas`. Asegúrese de que esté marcado."
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:165
 msgid ""
@@ -473,16 +529,20 @@ msgid ""
 "Load the vector layer :file:`admin_boundaries/Western_Cape_UTM33S.shp` into "
 "your map."
 msgstr ""
+"Cargue la capa vectorial :file:`admin_boundaries/Western_Cape_UTM33S.shp` en"
+" su mapa."
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:175
 msgid "Rename it to :guilabel:`Districts`."
-msgstr ""
+msgstr "Renómbrela como :guilabel:`Districts`."
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:176
 msgid ""
 "Right-click on the :guilabel:`Districts` layer in the :guilabel:`Layers` "
 "panel."
 msgstr ""
+"Click derecho en la capa :guilabel:`Districts` en el panel "
+":guilabel:`Capas`."
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:177
 msgid ""
@@ -490,8 +550,8 @@ msgid ""
 ":guilabel:`Query Builder` dialog appears."
 msgstr ""
 "En el menú que aparece, selecciona el elemento del menú "
-":guilabel:`Filtrar...`. El cuadro de diálogo :guilabel:`Constructor de "
-"Consultas` aparecerá. "
+":guilabel:`Filtrar...`. Aparecerá el cuadro de diálogo "
+":guilabel:`Constructor de Consultas`. "
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:180
 msgid ""
@@ -502,38 +562,38 @@ msgstr ""
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:182
 msgid "``Bellville``"
-msgstr ""
+msgstr "``Bellville``"
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:183
 msgid "``Cape``"
-msgstr ""
+msgstr "``Cape``"
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:184
 msgid "``Goodwood``"
-msgstr ""
+msgstr "``Goodwood``"
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:185
 msgid "``Kuils River``"
-msgstr ""
+msgstr "``Kuils River``"
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:186
 msgid "``Mitchells Plain``"
-msgstr ""
+msgstr "``Mitchells Plain``"
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:187
 msgid "``Simons Town`` and"
-msgstr ""
+msgstr "``Simons Town`` and"
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:188
 msgid "``Wynberg``."
-msgstr ""
+msgstr "``Wynberg``."
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:190
 msgid ""
 "In the :guilabel:`Fields` list, double-click on the :guilabel:`NAME_2` "
 "field. It appears in the :guilabel:`SQL where clause` text field below."
 msgstr ""
-"En la lista :guilabel:`Campos`, haz doble clic en el campo "
+"En la lista :guilabel:`Campos`, haz doble click en el campo "
 ":guilabel:`NAME_2`. Aparece en el campo de texto inferior "
 ":guilabel:`Expresión de filtrado específica del proveedor`."
 
@@ -541,6 +601,7 @@ msgstr ""
 msgid ""
 "Click the :guilabel:`=` button; an ``=`` sign is added to the SQL query."
 msgstr ""
+"Click en el botón :guilabel:`=`; un signo ``=`` se añade a la consulta SQL."
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:193
 msgid ""
@@ -567,10 +628,12 @@ msgid ""
 "In order to select more than one district, you'll need to use the "
 ":guilabel:`OR` boolean operator."
 msgstr ""
+"Para seleccionar más de un distrito, deberá utilizar el operador booleano: "
+"guilabel:`OR`."
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:203
 msgid "Click the :guilabel:`OR` button and it will be added to the SQL query."
-msgstr "Haz clic en el botón :guilabel:`O` y será añadido a la consulta SQL."
+msgstr "Haz click en el botón :guilabel:`O` y será añadido a la consulta SQL."
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:204
 msgid ""

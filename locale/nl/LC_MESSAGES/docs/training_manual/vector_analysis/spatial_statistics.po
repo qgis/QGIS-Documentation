@@ -4,8 +4,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Dick Groskamp, 2020
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Dick Groskamp, 2020
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-26 13:13+0200\n"
 "PO-Revision-Date: 2020-03-16 19:18+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Dick Groskamp, 2020\n"
 "Language-Team: Dutch (https://www.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -40,12 +40,17 @@ msgid ""
 "a given vector dataset. QGIS includes many useful tools for statistical "
 "analysis."
 msgstr ""
+"Ruimtelijke statistieken stellen u in staat te analyseren en te begrijpen "
+"wat er gaande is in een bepaalde vector gegevensset. QGIS bevat vele nuttige"
+" gereedschappen voor statistische analyses."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:11
 msgid ""
 "**The goal for this lesson:** To know how to use QGIS' spatial statistics "
 "tools within the :guilabel:`Processing Toolbox`."
 msgstr ""
+"**Het doel voor deze les:** Weten hoe de ruimtelijke statistische "
+"gereedschappen in de :guilabel:`Toolbox van Processing` te gebruiken."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:15
 msgid "|basic| |FA| Create a Test Dataset"
@@ -54,16 +59,20 @@ msgstr "|basic| |FA| Een test-gegevensset maken"
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:17
 msgid "We will create a random set of points, to get a dataset to work with."
 msgstr ""
+"We zullen een willekeurige set punten maken, om een gegevensset te krijgen "
+"waar we mee kunnen werken."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:19
 msgid ""
 "To do so, you will need a polygon dataset to define the area you want to "
 "create the points in."
 msgstr ""
+"U heeft, om dat te doen, een polygoon gegevensset nodig die het bereik van "
+"het gebied, waarin u de punten wilt maken, definieert."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:22
 msgid "We will use the area covered by streets."
-msgstr ""
+msgstr "We zullen het gebied gebruiken dat wordt bedekt door straten."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:24
 msgid "Start a new project"
@@ -74,6 +83,8 @@ msgid ""
 "Add your ``roads`` dataset, as well as ``srtm_41_19`` (elevation data) found"
 " in :file:`exercise_data/raster/SRTM/`."
 msgstr ""
+"Voeg uw laag ``roads`` toe, als ook ``srtm_41_19`` (hoogtegegevens) te "
+"vinden in :file:`exercise_data/raster/SRTM/`."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:28
 msgid ""
@@ -82,10 +93,14 @@ msgid ""
 "following exercises this difference does not matter, but feel free to "
 "reproject (as shown earlier in this module)."
 msgstr ""
+"U zou kunnen merken dat de laag SRTM DEM een ander CRS heeft dan die van de "
+"laag roads. QGIS projecteert beide lagen in één enkel CRS. Voor de volgende "
+"oefeningen is dit verschil niet van belang, maar het staat u vrij een laag "
+"opnieuw te projecteren (zoals eerder weergegeven in deze module)."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:34
 msgid "Open :guilabel:`Processing` toolbox"
-msgstr ""
+msgstr "Open de Toolbox van :guilabel:`Processing`"
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:35
 msgid ""
@@ -93,12 +108,18 @@ msgid ""
 "to generate an area enclosing all the roads by selecting ``Convex Hull`` as "
 "the :guilabel:`Geometry Type`:"
 msgstr ""
+"Gebruik het gereedschap :menuselection:`Vector geometrie --> Minimum "
+"begrenzing geometrie` om een gebied te maken dat alle wegen omsluit door "
+"``Convex Hull`` te kiezen als :guilabel:`Type geometrie`:"
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:43
 msgid ""
 "As you know, if you don't specify the output, *Processing* creates temporary"
 " layers. It is up to you to save the layers immediately or at a later stage."
 msgstr ""
+"Zoals u weet maakt *Processing* , als u geen uitvoer specificeert, "
+"tijdelijke lagen. Het is aan u om de lagen onmiddellijk op te slaan of op "
+"een later moment."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:48
 msgid "Creating random points"
@@ -110,6 +131,9 @@ msgid ""
 ":menuselection:`Vector Creation --> Random points in layer bounds`, with a "
 "minimum distance of ``0.0``:"
 msgstr ""
+"Maak in dit gebied 100 willekeurige punten met het gereedschap "
+":menuselection:`Vector maken --> Willekeurige punten binnen grenzen van "
+"laag`, met een minimum afstand van ``0.0``:"
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:57
 msgid ""
@@ -118,12 +142,18 @@ msgid ""
 "System and the algorithm is just reminding you this. For this example we "
 "won't use this parameter so you can ignore it."
 msgstr ""
+"Het gele waarschuwingsteken vertelt u dat die parameter afstanden betreft. "
+"De laag :guilabel:`Begrenzing geometrie` staat in een Geografisch "
+"coördinatensysteem en het algoritme herinnert u daar slechts aan. Voor dit "
+"voorbeeld zullen we deze parameter niet gebruiken, dus kunt u het negeren."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:64
 msgid ""
 "If needed, move the generated random point to the top of the legend to see "
 "them better:"
 msgstr ""
+"Verplaats, indien nodig, de gemaakte willekeurige punten naar bovenaan in de"
+" legenda om hem beter te kunnen zien:"
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:71
 msgid "Sampling the data"
@@ -136,6 +166,11 @@ msgid ""
 "tool samples the raster at the locations of the points and adds the raster "
 "values in new field(s) depending on the number of bands in the raster."
 msgstr ""
+"U dient het algoritme :menuselection:`Rasteranalye --> Monster "
+"rasterwaarden` te gebruiken om een gegevensset met monsters uit het raster "
+"te nemen. Dit gereedschap neemt monsters uit het raster op de locaties van "
+"de punten en voegt de rasterwaarden toe in nieuwe veld(en), afhankelijk van "
+"het aantal banden in het raster."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:77
 msgid "Open the :guilabel:`Sample raster values` algorithm dialog"
@@ -150,6 +185,11 @@ msgid ""
 "field is ``rvalue_N``, where ``N`` is the number of the raster band. You can"
 " change the name of the prefix if you want."
 msgstr ""
+"Selecteer ``Willekeurige punten`` als de laag die de monsterpunten bevat en "
+"het SRTM-raster als de band waaruit de waarden moeten komen. De "
+"standaardnaam voor het nieuwe veld is ``rvalue_N``, waar ``N`` het nummer is"
+" van de rasterband. U kunt de naam van het voorvoegsel wijzigen als u dat "
+"wilt."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:87
 msgid "Press :guilabel:`Run`"
@@ -161,6 +201,9 @@ msgid ""
 "table of the ``Sampled Points`` layer. They will be in a new field with the "
 "name you have chosen."
 msgstr ""
+"Nu kunt u de gegevens voor het monster uit het rasterbestand controleren in "
+"de attributentabel van de laag ``Monsterpunten``.Zij zullen in een nieuw "
+"veld staan, met de naam die u hebt gekozen."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:93
 msgid "A possible sample layer is shown here:"
@@ -171,12 +214,16 @@ msgid ""
 "The sample points are classified using the ``rvalue_1`` field such that red "
 "points are at a higher altitude."
 msgstr ""
+"De monsterpunten zijn op hun veld ``rvalue_1`` geclassificeerd, zodat rode "
+"punten op een hogere hoogte liggen."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:101
 msgid ""
 "You will be using this sample layer for the rest of the statistical "
 "exercises."
 msgstr ""
+"U zult deze monsterlaag gaan gebruiken voor de rest van de statistische "
+"oefeningen."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:105
 msgid "|basic| |FA| Basic Statistics"
@@ -191,18 +238,24 @@ msgid ""
 "Click on the |sum| :sup:`Show statistical summary` icon in the "
 ":guilabel:`Attributes Toolbar`. A new panel will pop up."
 msgstr ""
+"Klik op het pictogram |sum| :sup:`Statistisch overzicht weergeven`  op de "
+":guilabel:`werkbalk Attributen`. Een nieuw paneel zal openen."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:112
 msgid ""
 "In the dialog that appears, specify the ``Sampled Points`` layer as the "
 "source."
 msgstr ""
+"Specificeer, in het dialoogvenster dat verschijnt, de laag ``Monsterpunten``"
+" als de bron."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:114
 msgid ""
 "Select the *rvalue_1* field in the field combo box. This is the field you "
 "will calculate statistics for."
 msgstr ""
+"Selecteer het veld *rvalue_1* in het combinatievak voor velden. Dit is het "
+"veld waarvoor u de statistieken wilt berekenen."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:116
 msgid ""
@@ -217,14 +270,17 @@ msgid ""
 "You can copy the values by clicking on the |editCopy| :sup:`Copy Statistics "
 "To Clipboard` button and paste the results into a spreadsheet."
 msgstr ""
+"U kunt de waarden kopiëren door te klikken op de knop |editCopy| "
+":sup:`Statistieken naar klembord kopiëren` en de resultaten in een werkblad "
+"plakken."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:126
 msgid "Close the :guilabel:`Statistics` Panel when done"
-msgstr ""
+msgstr "Sluit het paneel :guilabel:`Statistieken` indien gereed"
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:128
 msgid "Many different statistics are available:"
-msgstr ""
+msgstr "Veel verschillende statistieken zijn beschikbaar:"
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:131
 msgid "Count"
@@ -232,7 +288,7 @@ msgstr "Telling"
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:131
 msgid "The number of samples/values."
-msgstr ""
+msgstr "Het aantal monsters/waarden."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:134
 msgid "Sum"
@@ -240,7 +296,7 @@ msgstr "Som"
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:134
 msgid "The values added together."
-msgstr ""
+msgstr "De waarden bij elkaar opgeteld."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:138
 msgid "Mean"
@@ -251,6 +307,8 @@ msgid ""
 "The mean (average) value is simply the sum of the values divided by the "
 "number of values."
 msgstr ""
+"De gemiddelde waarde is eenvoudigweg de som van de waarden, gedeeld door het"
+" aantal waarden."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:143
 msgid "Median"
@@ -262,6 +320,9 @@ msgid ""
 "(or the average of the two middle values, if N is an even number) is the "
 "median of the values."
 msgstr ""
+"Als u alle waarden schikt van de kleinste tot de grootste, is de middelste "
+"waarde (of het gemiddelde van de twee middelste waarden als N een even getal"
+" is) de mediaan van de waarden."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:150
 msgid "St Dev (pop)"
@@ -323,20 +384,22 @@ msgstr "Ontbrekende (null) waarden"
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:168
 msgid "The number of missing values."
-msgstr ""
+msgstr "Het aantal ontbrekende waarden."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:172
 msgid "|basic| |FA| Compute statistics on distances between points"
-msgstr ""
+msgstr "|basic| |FA| Statistieken berekenen van afstanden tussen punten"
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:174
 msgid "Create a new temporary point layer."
-msgstr ""
+msgstr "Maak een nieuwe tijdelijke puntenlaag."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:175
 msgid ""
 "Enter edit mode, and digitize three points somewhere among the other points."
 msgstr ""
+"Ga naar modus Bewerken en digitaliseer drie punten ergens tussen de andere "
+"punten."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:178
 msgid ""
@@ -361,12 +424,15 @@ msgstr "Statistieken maken over de afstand tussen punten in de twee lagen:"
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:186
 msgid "Open the :menuselection:`Vector Analysis --> Distance matrix` tool."
 msgstr ""
+"Open het gereedschap :menuselection:`Vector-analyse --> Afstandsmatrix`."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:187
 msgid ""
 "Select the ``distance_points`` layer as the input layer, and the ``Sampled "
 "Points`` layer as the target layer."
 msgstr ""
+"Selecteer de laag ``distance_points`` als de invoerlaag en de laag "
+"``Monsterpunten`` als de doellaag."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:189
 msgid "Set it up like this:"
@@ -377,6 +443,8 @@ msgid ""
 "If you want you can save the output layer as a file or just run the "
 "algorithm and save the temporary output layer later."
 msgstr ""
+"Als u wilt, kunt u de uitvoerlaag opslaan als een bestand of alleen het "
+"algoritme uitvoeren en de tijdelijke uitvoerlaag later opslaan."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:196
 msgid "Click :guilabel:`Run` to generate the distance matrix layer."
@@ -401,6 +469,11 @@ msgid ""
 " standard deviation, minimum and maximum for the distances to the nearest "
 "neighbors of the points in the input layer."
 msgstr ""
+"Met deze parameters berekent het gereedschap *Afstandsmatrix* statistieken "
+"over de afstanden voor elk punt van de invoerlaag, ten opzichte van de "
+"dichtstbijzijnde punten van de doellaag. De velden van de uitvoerlaag "
+"bevatten gemiddelde, standaardafwijking, minimum en maximum voor de "
+"afstanden tot de dichtstbij gelegen buren van de punten op de invoerlaag."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:213
 msgid "|basic| |FA| Nearest Neighbor Analysis (within layer)"
@@ -413,6 +486,7 @@ msgstr "Een 'Dichtstbijzijnde buur'-analyse uitvoeren op een puntenlaag:"
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:217
 msgid "Choose :menuselection:`Vector analysis --> Nearest neighbor analysis`."
 msgstr ""
+"Kies :menuselection:`Vector-analyse --> 'Dichtstbijzijnde buur'-analyse`."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:219
 msgid ""
@@ -444,13 +518,15 @@ msgstr "De gemiddelde coördinaten van een gegevensset verkrijgen:"
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:237
 msgid "Start :menuselection:`Vector analysis --> Mean coordinate(s)`"
-msgstr ""
+msgstr "Start :menuselection:`Vector-analyse --> Gemiddelde coördin(a)t(en)`"
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:238
 msgid ""
 "In the dialog that appears, specify :guilabel:`Random points` as "
 ":guilabel:`Input layer`, and leave the optional choices unchanged."
 msgstr ""
+"Specificeer, in het dialoogvenster dat verschijnt, :guilabel:`Willekeurige "
+"punten` als :guilabel:`Invoerlaag`, en laat de optionele keuzen ongewijzigd."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:240
 msgid "Click :guilabel:`Run`."
@@ -461,21 +537,28 @@ msgid ""
 "Let us compare this to the central coordinate of the polygon that was used "
 "to create the random sample."
 msgstr ""
+"Laten we dit eens vergelijken met de centrale coördinaat van de polygoon die"
+" werd gebruikt om het willekeurige monster te maken."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:245
 msgid "Start :menuselection:`Vector geometry --> Centroids`"
-msgstr ""
+msgstr "Start :menuselection:`Vector geometrie --> Zwaartepunten`"
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:246
 msgid ""
 "In the dialog that appears, select ``Bounding geometry`` as the input layer."
 msgstr ""
+"Selecteer, in het dialoogvenster dat verschijnt, ``Begrenzing geometrie`` "
+"als de invoerlaag."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:249
 msgid ""
 "As you can see, the mean coordinates (pink point) and the center of the "
 "study area (in green) don't necessarily coincide."
 msgstr ""
+"Zoals u kunt zien vallen de gemiddelde coördinaten (roze punt) en het "
+"middelpunt van het gebruikte gebied (in groen) niet noodzakelijkerwijze "
+"samen."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:252
 msgid ""
@@ -507,10 +590,11 @@ msgstr ""
 msgid ""
 "In your :guilabel:`Layers` panel, right-click on the ``srtm_41_19`` layer"
 msgstr ""
+"Klik, in uw  paneel :guilabel:`Lagen`, met rechts op de laag ``srtm_41_19``."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:269
 msgid "Select :menuselection:`Properties`"
-msgstr ""
+msgstr "Selecteer :menuselection:`Eigenschappen`"
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:270
 msgid ""
@@ -518,12 +602,18 @@ msgid ""
 ":guilabel:`Compute Histogram` button to generate the graphic. You will see a"
 " graph that shows the frequency distribution for the raster values."
 msgstr ""
+"Kies de tab :guilabel:`Histogram`. U moet misschien op de knop "
+":guilabel:`Histogram herberekenen` klikken om de grafiek te maken. U zult "
+"een grafiek zien die verdeling van de frequentie van de rasterwaarden "
+"weergeeft."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:279
 msgid ""
 "The graph can be exported as an image with the |fileSave| :sup:`Save plot` "
 "button"
 msgstr ""
+"De grafiek kan met de knop |fileSave| :sup:`Plot opslaan` worden "
+"geëxporteerd als een afbeelding"
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:282
 msgid ""
@@ -531,6 +621,9 @@ msgid ""
 ":guilabel:`Information` tab (the mean and max values are estimated, and may "
 "not be exact)."
 msgstr ""
+"U kunt meer gedetailleerde informatie over de laag vinden op de tab "
+":guilabel:`Informatie` (het gemiddelde en maximum waarde zijn geschat, en "
+"zouden niet exact kunnen zijn)."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:286
 msgid ""
@@ -540,6 +633,11 @@ msgid ""
 "vertically. By zooming in to cover everything but the peak at ``0``, you "
 "will see more details:"
 msgstr ""
+"De gemiddelde waarde is ``332.8`` (geschat op 324.3), en de maximum waarde "
+"is ``1699`` (geschat op 1548)! U kunt zoomen in het histogram. Het histogram"
+" ziet er verticaal gecomprimeerd uit, omdat er heel veel pixels met de "
+"waarde ``0`` zijn. Door in te zoomen om alles, behalve de piek op ``0``, te "
+"bedekken zult u meer details zien:"
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:297
 msgid ""
@@ -548,12 +646,19 @@ msgid ""
 " the :guilabel:`Min / Max Value Settings` menu. Choose "
 "|radioButtonOn|:guilabel:`Min / max` and click on :guilabel:`Apply`."
 msgstr ""
+"Als de waarden gemiddelde en maximum niet hetzelfde zijn als hierboven, kan "
+"dat komen door de berekening van de waarden min/max. Open de tab "
+":guilabel:`Symbologie` en vergroot het menu :guilabel:`Instellingen min / "
+"max waarden`. Kies |radioButtonOn| :guilabel:`Min / max` en klik op "
+":guilabel:`Apply`."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:304
 msgid ""
 "Keep in mind that a histogram shows you the distribution of values, and not "
 "all values are necessarily visible on the graph."
 msgstr ""
+"Onthoud dat een histogram u de verdeling van de waarden laat zien en dat "
+"niet alle waarden noodzakelijkerwijze ook zichtbaar zijn in de grafiek."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:309
 msgid "|basic| |FA| Spatial Interpolation"
@@ -577,24 +682,31 @@ msgid ""
 "with nearest neighbor searching)` tool in the :guilabel:`Processing "
 "Toolbox`."
 msgstr ""
+"Start, om te beginnen, het gereedschap :menuselection:`GDAL --> "
+"Rasteranalyse --> Raster (IDW met zoeken naar Nearest neighbor)` in de "
+"Toolbox van :guilabel:`Processing`."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:320
 msgid "For :guilabel:`Point layer` select ``Sampled points``"
-msgstr ""
+msgstr "Selecteer  ``Monsterpunten``als :guilabel:`Puntenlaag` "
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:321
 msgid "Set :guilabel:`Weighting power` to ``5.0``"
-msgstr ""
+msgstr "Stel :guilabel:`Gewogen macht` in op ``5.0``"
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:322
 msgid ""
 "In :guilabel:`Advanced parameters`, set :guilabel:`Z value from field` to "
 "``rvalue_1``"
 msgstr ""
+"Stel, in :guilabel:`Gevorderde parameters`, ``rvalue_1`` in voor "
+":guilabel:`Z-waarde uit veld`"
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:324
 msgid "Finally click on :guilabel:`Run` and wait until the processing ends"
 msgstr ""
+"Klik tenslotte op :guilabel:`Uitvoeren` en wacht tot de verwerking is "
+"voltooid."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:325
 msgid "Close the dialog"
@@ -606,6 +718,10 @@ msgid ""
 "from our sample points (right). Yours may look different due to the random "
 "nature of the location of the sample points."
 msgstr ""
+"Hier is een vergelijking van de originele gegevensset (links) met die welke "
+"we hebben gemaakt uit onze monsterpunten (rechts). Die van u kan er anders "
+"uitzien vanwege de willekeurige herkomst van de locatie van de "
+"monsterpunten."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:335
 msgid ""
@@ -624,28 +740,36 @@ msgstr "|moderate| |TY| Verschillende methoden voor interpolatie"
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:342
 msgid "Use the processes shown above to create a set of 10 000 random points"
 msgstr ""
+"Gebruik de hierboven weergegeven processen om een nieuwe set van 10.000 "
+"willekeurige punten te maken"
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:345
 msgid ""
 "If the number of points is really big, the processing time can take a long "
 "time."
 msgstr ""
+"Als het aantal punten echt heel groot is kan de verwerkingstijd behoorlijk "
+"oplopen."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:348
 msgid "Use these points to sample the original DEM"
-msgstr ""
+msgstr "Gebruik deze punten om een monster te nemen uit de originele DEM"
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:349
 msgid ""
 "Use the :guilabel:`Grid (IDW with nearest neighbor searching)` tool on this "
 "dataset."
 msgstr ""
+"Gebruik het gereedschap :guilabel:`Raster (IDW met zoeken naar Nearest "
+"neighbor)` op deze gegevensset"
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:351
 msgid ""
 "Set :guilabel:`Power` and :guilabel:`Smoothing` to ``5.0`` and ``2.0``, "
 "respectively."
 msgstr ""
+"Stel :guilabel:`Macht` en :guilabel:`Afvlakken` respectievelijk in op "
+"``5.0`` en ``2.0``."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:354
 msgid ""
@@ -660,6 +784,8 @@ msgid ""
 "This is a better representation of the terrain, due to the greater density "
 "of sample points. Remember, larger samples give better results."
 msgstr ""
+"Dit is een betere weergave van het terrein, vanwege de hogere dichtheid van "
+"monsterpunten. Onthoud: meer monsters geven betere resultaten."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:366
 msgid "|IC|"
@@ -670,6 +796,8 @@ msgid ""
 "QGIS has a number of tools for analyzing the spatial statistical properties "
 "of datasets."
 msgstr ""
+"QGIS heeft een aantal gereedschappen voor het analyseren van ruimtelijke "
+"statistische eigenschappen van gegevenssets."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:373
 msgid "|WN|"
@@ -680,3 +808,6 @@ msgid ""
 "Now that we have covered vector analysis, why not see what can be done with "
 "rasters? That is what we will do in the next module!"
 msgstr ""
+"Nu we vectoranalyse hebben behandeld, waarom niet eens kijken wat er met "
+"rasters gedaan kan worden? Dat is wat we zullen gaan doen in de volgende "
+"module!"

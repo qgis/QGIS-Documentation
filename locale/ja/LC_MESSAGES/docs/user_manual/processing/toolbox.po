@@ -174,8 +174,8 @@ msgid ""
 "right-hand side, to let you select filenames that represent layers currently"
 " not loaded in QGIS."
 msgstr ""
-"**ラスターレイヤー** "
-",QGISで利用可能なすべてのこのようなレイヤーのリスト（現在開いている）から選択します。セレクタを使用すると、その右側にボタンも含まれ、現在QGISにロードされていないレイヤーを表すファイル名を選択できるようになります。"
+"**ラスタレイヤ** "
+",QGISで利用可能なすべてのこのようなレイヤのリスト（現在開いている）から選択します。セレクタを使用すると、その右側にボタンも含まれ、現在QGISにロードされていないレイヤーを表すファイル名を選択できるようになります。"
 
 #: ../../docs/user_manual/processing/toolbox.rst:97
 msgid ""
@@ -186,18 +186,18 @@ msgid ""
 "layers can be selected, since they need to be open so as to retrieve the "
 "list of field names available."
 msgstr ""
-"**ベクターレイヤー** "
-"は、QGISで利用可能なすべてのベクターレイヤーのリストから選択します。QGISにロードされていないレイヤーは、ラスターレイヤーの場合のように、同様に選択できますが、このアルゴリズムは、レイヤーの属性テーブルから選択したテーブルのフィールドを必要としない場合にのみ。その場合には、彼らは利用できるフィールド名のリストを取得するように開く必要があるため、開かれたレイヤーだけが選択できます。"
+"**ベクタレイヤ** "
+"はQGISで利用可能なすべてのベクタレイヤのリストから選択します。QGISにロードされていないレイヤは,ラスタレイヤの場合のように、同様に選択できますが、このアルゴリズムはレイヤの属性テーブルから選択したテーブルのフィールドを必要としない場合にのみ。その場合には、彼らは利用できるフィールド名のリストを取得するように開く必要があるため、開かれたレイヤだけが選択できます。"
 
 #: ../../docs/user_manual/processing/toolbox.rst:104
 msgid ""
 "You will see an iterator button by each vector layer selector, as shown in "
 "the figure below."
-msgstr "以下の図のように、各ベクターレイヤーにイテレータボタンが表示されるでしょう."
+msgstr "以下の図のように各ベクタレイヤにイテレータボタンが表示されるでしょう."
 
 #: ../../docs/user_manual/processing/toolbox.rst:112
 msgid "Vector iterator button"
-msgstr "ベクターイテレータボタン"
+msgstr "ベクタイテレータボタン"
 
 #: ../../docs/user_manual/processing/toolbox.rst:114
 msgid ""
@@ -218,10 +218,8 @@ msgid ""
 "dialog, unchecking the :menuselection:`General --> Show layer CRS definition"
 " in selection boxes` option."
 msgstr ""
-"デフォルトでパラメータダイアログでは各レイヤのCRS説明と名前が表示されます.この追加情報を表示したくない場合は If you do not want "
-"to see this additional information, you can disable this functionality in "
-"the プロセッシング設定ダイアログで非表示設定ができます. :menuselection:`一般情報 --> "
-"選択ボックス内にレイヤCRS定義情報を表示する` オプションのチェックをはずして下さい."
+"デフォルトでパラメータダイアログでは各レイヤのCRS説明と名前が表示されます.この追加情報を表示したくない場合はプロセッシング設定ダイアログで非表示設定ができます."
+" :menuselection:`一般情報 --> 選択ボックス内にレイヤCRS定義情報を表示する` オプションのチェックをはずして下さい."
 
 #: ../../docs/user_manual/processing/toolbox.rst:128
 msgid ""
@@ -252,6 +250,12 @@ msgid ""
 "derived from any of these variables, such as the cell size of a layer or the"
 " northernmost coordinate of another one."
 msgstr ""
+"**数値** ではスピンボックスが利用されます. いくつかのコンテキスト (レイヤレベルのものではなく地物レベルに影響するパラメータ)では "
+"|dataDefined| :sup:`Data-defined override` ボタンが横に表示されます, そこでは "
+":ref:`expression builder <vector_expressions>`  "
+"を使って数式を入力してパラメータの変数の値を作成することができます. "
+"QGISにロードされたデータに関係するいくつかの便利な変数をあなたの数式に利用することができます, "
+"あなたはレイヤのセルのサイズや他のレイヤの最も北の座標のような値を変数として使うことができます."
 
 #: ../../docs/user_manual/processing/toolbox.rst:149
 msgid "Expression based input"
@@ -279,6 +283,8 @@ msgid ""
 "<crs_selector>` dialog that appears when you click on the button on the "
 "right-hand side."
 msgstr ""
+" **座標参照システム**. ドロップダウンリストか右ボタンクリックで表示される :ref:`CRS selection <crs_selector>`"
+" ダイアログに表示される最近利用したものの中から選択できます."
 
 #: ../../docs/user_manual/processing/toolbox.rst:158
 msgid ""
@@ -287,14 +293,16 @@ msgid ""
 "hand side of the value selector, a pop-up menu will appear, giving you "
 "options:"
 msgstr ""
+" **領域**,  ``xmin``, ``xmax``, ``ymin``, ``ymax`` の限界を示す４つの数値を入力します. "
+"値セレクタの右側にあるボタンをクリックするとポップアップメニューが表示されオプションを選択できます:"
 
 #: ../../docs/user_manual/processing/toolbox.rst:163
 msgid "to select the value from a layer or the current canvas extent;"
-msgstr ""
+msgstr "レイヤまたは現在のキャンバスの領域を選択する;"
 
 #: ../../docs/user_manual/processing/toolbox.rst:164
 msgid "or to define it by dragging directly onto the map canvas."
-msgstr ""
+msgstr "または地図キャンバスの上を直接ドラッギングして指定をする."
 
 #: ../../docs/user_manual/processing/toolbox.rst:171
 msgid "Extent selector"
@@ -480,11 +488,11 @@ msgstr "アルゴリズムによって生成されるデータオブジェクト
 
 #: ../../docs/user_manual/processing/toolbox.rst:305
 msgid "A raster layer"
-msgstr "ラスターレイヤー"
+msgstr "ラスタレイヤ"
 
 #: ../../docs/user_manual/processing/toolbox.rst:306
 msgid "A vector layer"
-msgstr "ベクターレイヤー"
+msgstr "ベクタレイヤ"
 
 #: ../../docs/user_manual/processing/toolbox.rst:307
 msgid "A table"
