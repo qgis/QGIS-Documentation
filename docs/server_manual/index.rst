@@ -15,3 +15,4 @@ QGIS Server Guide/Manual
   plugins
   config
   development_server
+  containerized_deployement
