@@ -195,7 +195,7 @@ To create the .tx/config to push/pull using tx client do:
  sphinx-intl update-txconfig-resources --transifex-project-name qgis-documentation
 
  # Then (only Transifex admin) can push the po source files to Transifex
- tx push -fs --no-interactive (push the source (-f) files forcing (-f) overwriting the ones their without asking (--no-interactive)
+ tx push -fs --no-interactive (push the source (-s) files forcing (-f) overwriting the ones their without asking (--no-interactive)
 
 
 To update all po files of all languages (Which we do not use here! This is done by Transifex):
