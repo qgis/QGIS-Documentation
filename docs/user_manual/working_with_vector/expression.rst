@@ -259,6 +259,35 @@ Some use cases of expressions
     )
 
 
+.. _user_expressions_functions:
+
+Saving Expressions
+------------------
+
+Using the |fileSave| :sup:`Add current expression to user expressions` button
+above the expression editor frame, you can save important expressions you want
+to have quick access to. These are available from the **User expressions** group
+in the middle panel.
+They are saved under the user profile (:file:`<userprofile>/QGIS/QGIS3.ini`
+file) and available in all expression dialogs inside all projects of the
+current user profile.
+
+A set of tools available above the expression editor frame helps you manage
+the user expressions:
+
+* |fileSave|:sup:`Add the current expression to user expressions`: store the
+  expression in the user profile. A label and a help text can be added for
+  easy identification.
+* |symbologyEdit| :sup:`Edit selected expression from user expressions`,
+  as well as their help and label
+* |deleteSelected| :sup:`Remove selected expression from user expressions`
+* |sharingImport| :sup:`Import user expressions` from a ``.json`` file
+  into the active user profile folder
+* |sharingExport| :sup:`Export user expressions` as a ``.json`` file;
+  all the user expressions in the user profile :file:`QGIS3.ini` file are
+  shared
+
+
 .. index:: Custom functions
 .. _function_editor:
 
@@ -365,15 +394,25 @@ Further information about creating Python code can be found in the
    :width: 1.3em
 .. |dataDefined| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
+.. |deleteSelected| image:: /static/common/mActionDeleteSelected.png
+   :width: 1.5em
 .. |expression| image:: /static/common/mIconExpression.png
    :width: 1.5em
 .. |expressionSelect| image:: /static/common/mIconExpressionSelect.png
    :width: 1.5em
 .. |fileNew| image:: /static/common/mActionFileNew.png
    :width: 1.5em
+.. |fileSave| image:: /static/common/mActionFileSave.png
+   :width: 1.5em
+.. |sharingExport| image:: /static/common/mActionSharingExport.png
+   :width: 1.5em
+.. |sharingImport| image:: /static/common/mActionSharingImport.png
+   :width: 1.5em
 .. |signMinus| image:: /static/common/symbologyRemove.png
    :width: 1.5em
 .. |signPlus| image:: /static/common/symbologyAdd.png
    :width: 1.5em
 .. |start| image:: /static/common/mActionStart.png
+   :width: 1.5em
+.. |symbologyEdit| image:: /static/common/symbologyEdit.png
    :width: 1.5em
