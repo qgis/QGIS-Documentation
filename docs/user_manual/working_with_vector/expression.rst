@@ -98,18 +98,6 @@ The Expression builder dialog offers access to the:
 
 Using expressions offers you a lot of possibilities.
 
-.. index:: Named parameters
-   single: Expressions; Named parameters
-   single: Functions; Named parameters
-
-.. tip:: **Use named parameters to improve the expression reading**
-
-  Some functions require many parameters to be set. The expression engine supports the
-  use of named parameters. This means that instead of writing the cryptic expression
-  ``clamp( 1, 2, 9)``, you can use ``clamp( min:=1, value:=2, max:=9)``. This also allows
-  arguments to be switched, e.g. ``clamp( value:=2, max:=9, min:=1)``. Using named parameters
-  helps clarify what the arguments for an expression function refer to, which is helpful
-  when you are trying to interpret an expression at a later date!
 
 
 .. index:: Functions
@@ -263,6 +251,17 @@ Writing an expression in QGIS follows some rules:
 
 
 .. index:: Named parameters
+   single: Expressions; Named parameters
+   single: Functions; Named parameters
+
+.. tip:: **Use named parameters to improve the expression reading**
+
+  Some functions require many parameters to be set. The expression engine supports the
+  use of named parameters. This means that instead of writing the cryptic expression
+  ``clamp( 1, 2, 9)``, you can use ``clamp( min:=1, value:=2, max:=9)``. This also allows
+  arguments to be switched, e.g. ``clamp( value:=2, max:=9, min:=1)``. Using named parameters
+  helps clarify what the arguments for an expression function refer to, which is helpful
+  when you are trying to interpret an expression at a later date!
    The Expression tab
 
 
