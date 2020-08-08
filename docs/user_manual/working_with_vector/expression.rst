@@ -218,7 +218,7 @@ This group contains functions which aggregate values over layers and fields.
    :start-after: :orphan:
    :end-before: .. end_relation_aggregate_section
 
-|FR|: :ref:`vector_relations`
+Further reading: :ref:`vector_relations`
 
 .. include:: expression_help/Aggregates.rst
    :start-after: .. end_relation_aggregate_section
@@ -279,25 +279,25 @@ This group contains functions for manipulating colors.
    :start-after: :orphan:
    :end-before: .. end_darker_section
 
-|FR|: :ref:`expression_function_Color_lighter`
+Further reading: :ref:`expression_function_Color_lighter`
 
 .. include:: expression_help/Color.rst
    :start-after: .. end_darker_section
    :end-before: .. end_lighter_section
 
-|FR|: :ref:`expression_function_Color_darker`
+Further reading: :ref:`expression_function_Color_darker`
 
 .. include:: expression_help/Color.rst
    :start-after: .. end_lighter_section
    :end-before: .. end_project_color_section
 
-|FR|: :ref:`setting project colors <project_colors>`
+Further reading: :ref:`setting project colors <project_colors>`
 
 .. include:: expression_help/Color.rst
    :start-after: .. end_project_color_section
    :end-before: .. end_ramp_color_section
 
-|FR|: :ref:`color-ramp`, :ref:`color_ramp_widget`
+Further reading: :ref:`color-ramp`, :ref:`color_ramp_widget`
 
 .. include:: expression_help/Color.rst
    :start-after: .. end_ramp_color_section
@@ -478,14 +478,14 @@ This group contains general assorted functions.
    :start-after: :orphan:
    :end-before: .. end_layer_property_section
 
-|FR|: :ref:`vector <vectorinformationmenu>`, :ref:`raster <raster_information>`
+Further reading: :ref:`vector <vectorinformationmenu>`, :ref:`raster <raster_information>`
 and :ref:`mesh <mesh_information>` layer properties
 
 .. include:: expression_help/General.rst
    :start-after: .. end_layer_property_section
    :end-before: .. end_var_section
 
-|FR|: List of default :ref:`variables <expression_variables>`
+Further reading: List of default :ref:`variables <expression_variables>`
 
 .. include:: expression_help/General.rst
    :start-after: .. end_var_section
@@ -507,211 +507,211 @@ This group contains functions that operate on geometry objects
    :start-after: :orphan:
    :end-before: .. end_boundary_section
 
-|FR|: :ref:`qgisboundary` algorithm
+Further reading: :ref:`qgisboundary` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_boundary_section
    :end-before: .. end_bounds_section
 
-|FR|: :ref:`qgisboundingboxes` algorithm
+Further reading: :ref:`qgisboundingboxes` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: end_bounds_section
    :end-before: .. end_buffer_section
 
-|FR|: :ref:`qgisbuffer` algorithm
+Further reading: :ref:`qgisbuffer` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_buffer_section
    :end-before: .. end_buffer_by_m_section
 
-|FR|: :ref:`qgisbufferbym` algorithm
+Further reading: :ref:`qgisbufferbym` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_buffer_by_m_section
    :end-before: .. end_centroid_section
 
-|FR|: :ref:`qgiscentroids` algorithm
+Further reading: :ref:`qgiscentroids` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_centroid_section
    :end-before: .. end_collect_geometries_section
 
-|FR|: :ref:`qgiscollect` algorithm
+Further reading: :ref:`qgiscollect` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_collect_geometries_section
    :end-before: .. end_convex_hull_section
 
-|FR|: :ref:`qgisconvexhull` algorithm
+Further reading: :ref:`qgisconvexhull` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_convex_hull_section
    :end-before: .. end_difference_section
 
-|FR|: :ref:`qgisdifference` algorithm
+Further reading: :ref:`qgisdifference` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_difference_section
    :end-before: .. end_end_point_section
 
-|FR|: :ref:`qgisextractspecificvertices` algorithm
+Further reading: :ref:`qgisextractspecificvertices` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_end_point_section
    :end-before: .. end_extend_section
 
-|FR|: :ref:`qgisextendlines` algorithm
+Further reading: :ref:`qgisextendlines` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_extend_section
    :end-before: .. end_flip_coordinates_section
 
-|FR|: :ref:`qgisswapxy` algorithm
+Further reading: :ref:`qgisswapxy` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_flip_coordinates_section
    :end-before: .. end_force_rhr_section
 
-|FR|: :ref:`qgisforcerhr` algorithm
+Further reading: :ref:`qgisforcerhr` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_force_rhr_section
    :end-before: .. end_intersection_section
 
-|FR|: :ref:`qgisintersection` algorithm
+Further reading: :ref:`qgisintersection` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_intersection_section
    :end-before: .. end_line_interpolate_point_section
 
-|FR|: :ref:`qgisinterpolatepoint` algorithm
+Further reading: :ref:`qgisinterpolatepoint` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_line_interpolate_point_section
    :end-before: .. end_line_substring_section
 
-|FR|: :ref:`qgislinesubstring` algorithm
+Further reading: :ref:`qgislinesubstring` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_line_substring_section
    :end-before: .. end_minimal_circle_section
 
-|FR|: :ref:`qgisminimumenclosingcircle` algorithm
+Further reading: :ref:`qgisminimumenclosingcircle` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_minimal_circle_section
    :end-before: .. end_nodes_to_points_section
 
-|FR|: :ref:`qgisextractvertices` algorithm
+Further reading: :ref:`qgisextractvertices` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_nodes_to_points_section
    :end-before: .. end_offset_curve_section
 
-|FR|: :ref:`qgisoffsetline` algorithm
+Further reading: :ref:`qgisoffsetline` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_offset_curve_section
    :end-before: .. end_oriented_bbox_section
 
-|FR|: :ref:`qgisorientedminimumboundingbox` algorithm
+Further reading: :ref:`qgisorientedminimumboundingbox` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_oriented_bbox_section
    :end-before: .. end_point_n_section
 
-|FR|: :ref:`qgisextractspecificvertices` algorithm
+Further reading: :ref:`qgisextractspecificvertices` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_point_n_section
    :end-before: .. end_point_on_surface_section
 
-|FR|: :ref:`qgispointonsurface` algorithm
+Further reading: :ref:`qgispointonsurface` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_point_on_surface_section
    :end-before: .. end_pole_of_inaccessibility_section
 
-|FR|: :ref:`qgispoleofinaccessibility` algorithm
+Further reading: :ref:`qgispoleofinaccessibility` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_pole_of_inaccessibility_section
    :end-before: .. end_project_section
 
-|FR|: :ref:`qgisprojectpointcartesian` algorithm
+Further reading: :ref:`qgisprojectpointcartesian` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_project_section
    :end-before: .. end_reverse_section
 
-|FR|: :ref:`qgisreverselinedirection` algorithm
+Further reading: :ref:`qgisreverselinedirection` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_reverse_section
    :end-before: .. end_segments_to_lines_section
 
-|FR|: :ref:`qgisexplodelines` algorithm
+Further reading: :ref:`qgisexplodelines` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_segments_to_lines_section
    :end-before: .. end_simplify_section
 
-|FR|: :ref:`qgissimplifygeometries` algorithm
+Further reading: :ref:`qgissimplifygeometries` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_simplify_section
    :end-before: .. end_simplify_vw_section
 
-|FR|: :ref:`qgissimplifygeometries` algorithm
+Further reading: :ref:`qgissimplifygeometries` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_simplify_vw_section
    :end-before: .. end_single_sided_buffer_section
 
-|FR|: :ref:`qgissinglesidedbuffer` algorithm
+Further reading: :ref:`qgissinglesidedbuffer` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_single_sided_buffer_section
    :end-before: .. end_smooth_section
 
-|FR|: :ref:`qgissmoothgeometry` algorithm
+Further reading: :ref:`qgissmoothgeometry` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_smooth_section
    :end-before: .. end_start_point_section
 
-|FR|: :ref:`qgisextractspecificvertices` algorithm
+Further reading: :ref:`qgisextractspecificvertices` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_start_point_section
    :end-before: .. end_sym_difference_section
 
-|FR|: :ref:`qgissymmetricaldifference` algorithm
+Further reading: :ref:`qgissymmetricaldifference` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_sym_difference_section
    :end-before: .. end_tapered_buffer_section
 
-|FR|: :ref:`qgistaperedbuffer` algorithm
+Further reading: :ref:`qgistaperedbuffer` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_tapered_buffer_section
    :end-before: .. end_transform_section
 
-|FR|: :ref:`qgisreprojectlayer` algorithm
+Further reading: :ref:`qgisreprojectlayer` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_transform_section
    :end-before: .. end_translate_section
 
-|FR|: :ref:`qgistranslategeometry` algorithm
+Further reading: :ref:`qgistranslategeometry` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_translate_section
    :end-before: .. end_wedge_buffer_section
 
-|FR|: :ref:`qgiswedgebuffers` algorithm
+Further reading: :ref:`qgiswedgebuffers` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_wedge_buffer_section
@@ -759,7 +759,7 @@ This group contains functions to manipulate print layout items properties.
    :start-after: :orphan:
    :end-before: .. end_item_variables_section
 
-|FR|: List of default :ref:`variables <expression_variables>`
+Further reading: List of default :ref:`variables <expression_variables>`
 
 .. include:: expression_help/Layout.rst
    :start-after: .. end_item_variables_section
@@ -917,19 +917,19 @@ This group contains functions that operate on record identifiers.
    :start-after: :orphan:
    :end-before: .. end_attributes_section
 
-|FR|: :ref:`maps_functions`
+Further reading: :ref:`maps_functions`
 
 .. include:: expression_help/Record_and_Attributes.rst
    :start-after: .. end_attributes_section
    :end-before: .. end_represent_value_section
 
-|FR|: :ref:`widget types <edit_widgets>` 
+Further reading: :ref:`widget types <edit_widgets>` 
 
 .. include:: expression_help/Record_and_Attributes.rst
    :start-after: .. end_represent_value_section
    :end-before: .. end_sqlite_fetch_and_increment_section
 
-|FR|: :ref:`project_data_source_properties`, :ref:`vector_relations`
+Further reading: :ref:`project_data_source_properties`, :ref:`vector_relations`
 
 .. include:: expression_help/Record_and_Attributes.rst
    :start-after: .. end_sqlite_fetch_and_increment_section
@@ -1309,7 +1309,6 @@ Further information about creating Python code can be found in the
 
 .. |312| replace:: ``NEW in 3.12``
 .. |314| replace:: ``NEW in 3.14``
-.. |FR| replace:: Further Reading
 .. |calculateField| image:: /static/common/mActionCalculateField.png
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
