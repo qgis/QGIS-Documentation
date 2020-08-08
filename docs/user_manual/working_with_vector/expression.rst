@@ -43,62 +43,6 @@ The Expression builder dialog offers access to the:
 * :ref:`Function Editor tab <function_editor>` which helps to extend the list of
   functions by creating custom ones.
 
-**Some use cases of expressions:**
-
-* From Field Calculator, calculate a "pop_density" field using existing "total_pop"
-  and "area_km2" fields::
-
-    "total_pop" / "area_km2"
-
-* Label or categorize features based on their area::
-
-    CASE WHEN $area > 10 000 THEN 'Larger' ELSE 'Smaller' END
-
-* Update the field "density_level" with categories according to the "pop_density" values::
-
-    CASE WHEN "pop_density" < 50 THEN 'Low population density'
-         WHEN "pop_density" >= 50 and "pop_density" < 150 THEN 'Medium population density'
-         WHEN "pop_density" >= 150 THEN 'High population density'
-    END
-
-* Update a region layer field with the names (comma separated) of contained airports::
-
-    aggregate('airport_layer', 'concatenate', "name", within($geometry, geometry(@parent)), ', ')
-
-* Apply a categorized style to all the features according to whether their average house
-  price is smaller or higher than 10000€ per square metre::
-
-    "price_m2" > 10000
-
-* Using the "Select By Expression..." tool, select all the features representing
-  areas of “High population density” and whose average house price is higher than
-  10000€ per square metre::
-
-    "density_level" = 'High population density' and "price_m2" > 10000
-
-  Likewise, the previous expression could also be used to define which features
-  should be labeled or shown in the map.
-
-* Render a different symbol (type) for the layer, using the geometry generator::
-
-    point_on_surface( $geometry )
-
-* Given a point feature, generate a closed line (using ``make_line``) around the
-  point's geometry::
-
-    make_line(
-      -- using an array of points placed around the original
-      array_foreach(
-        -- list of angles for placing the projected points (every 90°)
-        array:=generate_series( 0, 360, 90 ),
-        -- translate the point 20 units in the given direction (angle)
-        expression:=project( $geometry, distance:=20, azimuth:=radians( @element ) )
-      )
-    )
-
-Using expressions offers you a lot of possibilities.
-
-
 
 .. index:: Functions
 .. _functions_list:
@@ -264,6 +208,55 @@ Writing an expression in QGIS follows some rules:
   when you are trying to interpret an expression at a later date!
    The Expression tab
 
+Some use cases of expressions
+.............................
+
+* From Field Calculator, calculate a "pop_density" field using existing "total_pop"
+  and "area_km2" fields::
+
+    "total_pop" / "area_km2"
+
+* Label or categorize features based on their area::
+
+    CASE WHEN $area > 10 000 THEN 'Larger' ELSE 'Smaller' END
+
+* Update the field "density_level" with categories according to the "pop_density" values::
+
+    CASE WHEN "pop_density" < 50 THEN 'Low population density'
+         WHEN "pop_density" >= 50 and "pop_density" < 150 THEN 'Medium population density'
+         WHEN "pop_density" >= 150 THEN 'High population density'
+    END
+
+* Apply a categorized style to all the features according to whether their average house
+  price is smaller or higher than 10000€ per square metre::
+
+    "price_m2" > 10000
+
+* Using the "Select By Expression..." tool, select all the features representing
+  areas of “High population density” and whose average house price is higher than
+  10000€ per square metre::
+
+    "density_level" = 'High population density' and "price_m2" > 10000
+
+  Likewise, the previous expression could also be used to define which features
+  should be labeled or shown in the map.
+
+* Create a different symbol (type) for the layer, using the geometry generator::
+
+    point_on_surface( $geometry )
+
+* Given a point feature, generate a closed line (using ``make_line``) around the
+  point's geometry::
+
+    make_line(
+      -- using an array of points placed around the original
+      array_foreach(
+        -- list of angles for placing the projected points (every 90°)
+        array:=generate_series( 0, 360, 90 ),
+        -- translate the point 20 units in the given direction (angle)
+        expression:=project( $geometry, distance:=20, azimuth:=radians( @element ) )
+      )
+    )
 
 .. index:: Aggregates
 .. _aggregates_function:
