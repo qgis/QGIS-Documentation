@@ -16,7 +16,7 @@ Based on layer data and prebuilt or user defined functions, **Expressions**
 offer a powerful way to manipulate attribute value, geometry and variables
 in order to dynamically change the geometry style, the content or position
 of the label, the value for diagram, the height of a layout item,
-select some features, create virtual field ...
+select some features, create virtual field...
 
 .. _expression_builder:
 
@@ -43,15 +43,19 @@ The Expression builder dialog offers access to the:
 * :ref:`Function Editor tab <function_editor>` which helps to extend the list of
   functions by creating custom ones.
 
-
-.. index:: Functions
-.. _functions_list:
-
-List of functions
-=================
+The Interface
+-------------
 
 The :guilabel:`Expression` tab provides the main interface to write expressions
 using functions, layer's fields and values. It contains following widgets:
+
+.. _figure_expression_tab:
+
+.. figure:: img/function_list.png
+   :align: center
+   :width: 100%
+
+   The Expression tab
 
 * An expression editor area to type or paste expressions. Autocompletion is
   available to speed expression writing:
@@ -150,13 +154,9 @@ using functions, layer's fields and values. It contains following widgets:
    collapsed (invisible) in the dialog. Press the :guilabel:`Show Values`
    or :guilabel:`Show Help` button to get it back.
 
-.. _figure_expression_tab:
 
 Writing an expression
-.....................
-.. figure:: img/function_list.png
-   :align: center
-   :width: 100%
+---------------------
 
 QGIS expressions are used to select features or set values.
 Writing an expression in QGIS follows some rules:
@@ -176,10 +176,10 @@ Writing an expression in QGIS follows some rules:
      button and choosing "height" as :guilabel:`Update existing field`, you already
      provide the command "update buildings set height = ??? where height > 20".
      The only remaining bits you have to fill in this case is the **new value**,
-     eg just enter ``50`` to raise previously selected buildings height.
+     eg just enter ``50`` to set rhe height of the previously selected buildings.
 
-#. **To the quotes you'll pay attention**: single quote returns a litteral, so
-   placing a text between single quotes (``'mytext'``) is interpreted as string.
+#. **Pay attention to quotes**: single quote returns a literal, so a text
+   placed between single quotes (``'145'``) is interpreted as a string.
    Double quotes will give you the value of that text so use it for fields
    (ie ``"myfield"``). Field can also be used without quotes (``myfield``).
    No quotes for numbers (``3.16``).
@@ -206,10 +206,9 @@ Writing an expression in QGIS follows some rules:
   arguments to be switched, e.g. ``clamp( value:=2, max:=9, min:=1)``. Using named parameters
   helps clarify what the arguments for an expression function refer to, which is helpful
   when you are trying to interpret an expression at a later date!
-   The Expression tab
 
 Some use cases of expressions
-.............................
+-----------------------------
 
 * From Field Calculator, calculate a "pop_density" field using existing "total_pop"
   and "area_km2" fields::
@@ -257,6 +256,15 @@ Some use cases of expressions
         expression:=project( $geometry, distance:=20, azimuth:=radians( @element ) )
       )
     )
+
+.. index:: Functions
+.. _functions_list:
+
+List of functions
+=================
+
+The functions, operators and variables available in QGIS are listed below,
+grouped by categories.
 
 .. index:: Aggregates
 .. _aggregates_function:
