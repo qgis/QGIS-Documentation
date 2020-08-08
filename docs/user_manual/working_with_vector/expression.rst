@@ -220,10 +220,49 @@ using functions, layer's fields and values. It contains following widgets:
 
 .. _figure_expression_tab:
 
+Writing an expression
+.....................
 .. figure:: img/function_list.png
    :align: center
    :width: 100%
 
+QGIS expressions are used to select features or set values.
+Writing an expression in QGIS follows some rules:
+
+#. **The dialog defines the context**: if you are used to SQL, you probably
+   know queries of the type *select features from layer where condition*
+   or *update layer set field = new_value where condition*.
+   A QGIS expression also needs all these information but the tool you use
+   to open the expression builder dialog provides parts of them.
+   For example, giving a layer (building) with a field (height):
+
+   * pressing the |expressionSelect|:sup:`Select by expression` tool means that
+     you want to "select features from buildings". The **condition** is the
+     remaining and single information you need to fill in the expression text widget,
+     eg type ``height > 20`` to select buildings of height greater than 20.
+   * with this selection made, pressing the |calculateField| :sup:`Field calculator`
+     button and choosing "height" as :guilabel:`Update existing field`, you already
+     provide the command "update buildings set height = ??? where height > 20".
+     The only remaining bits you have to fill in this case is the **new value**,
+     eg just enter ``50`` to raise previously selected buildings height.
+
+#. **To the quotes you'll pay attention**: single quote returns a litteral, so
+   placing a text between single quotes (``'mytext'``) is interpreted as string.
+   Double quotes will give you the value of that text so use it for fields
+   (ie ``"myfield"``). Field can also be used without quotes (``myfield``).
+   No quotes for numbers (``3.16``).
+
+   .. note:: Functions normally take as argument a string for field name.
+       Do::
+
+        attribute( @atlas_feature, 'height' ) -- returns value stored in "height" attribute for the current atlas feature
+
+       And not::
+
+        attribute( @atlas_feature, "height" ) -- fetches the value of the attribute named "height", and then gets the attribute from atlasfeature which is called that value. Probably wrong.
+
+
+.. index:: Named parameters
    The Expression tab
 
 
