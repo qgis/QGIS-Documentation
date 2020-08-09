@@ -620,6 +620,13 @@ msgid ""
 "You can find it in :menuselection:`Vector Overlay` group in the "
 ":guilabel:`Processing Toolbox`."
 msgstr ""
+"Nu hebben we gebieden geïdentificeerd waar de weg minder dan 50 m verwijderd"
+" is en gebieden waar een school binnen 1 km ligt (directe lijn, niet via de "
+"weg). Maar natuurlijk willen we alleen de gebieden waar aan beide criteria "
+"wordt voldaan. We zullen het gereedschap :guilabel:`Kruising` moeten "
+"gebruiken om dat te kunnen doen. U vindt het onder de groep "
+":menuselection:`Vector op elkaar leggen` in :guilabel:`Processing --> "
+"Toolbox`."
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:296
 msgid ""
@@ -628,6 +635,11 @@ msgid ""
 ":guilabel:`Intersection` with :guilabel:`Labe name` "
 "``road_school_buffers_intersect``. Leave the rest as suggested (default)."
 msgstr ""
+"Gebruik de twee lagen met buffers als :guilabel:`Invoerlaag` en "
+":guilabel:`Overleglaag`, kies :file:`vector_analysis.gpkg` GeoPackage in "
+":guilabel:`Kruising` met :guilabel:`Laagnaam` "
+"``road_school_buffers_intersect``. Laat de rest zoals wordt voorgesteld "
+"(standaard)."
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:305
 msgid "Click :guilabel:`Run`."
@@ -638,6 +650,8 @@ msgid ""
 "In the image below, the blue areas are where both of the distance criteria "
 "are satisfied."
 msgstr ""
+"In de afbeelding hieronder, de blauwe gebieden zijn waar aan beide criteria "
+"voor de afstand wordt voldaan."
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:313
 msgid ""
@@ -664,6 +678,8 @@ msgid ""
 "Look for the menu entry :menuselection:`Vector Selection --> Extract by "
 "location` within the *Processing Toolbox*"
 msgstr ""
+"Zoek naar het menuitem :menuselection:`Vector selectie --> Extract by "
+"location` in de *Toolbox* van Processing "
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:331
 msgid ""
@@ -673,10 +689,15 @@ msgid ""
 " to the features from`. Save to the :file:`vector_analysis.gpkg`, and name "
 "the layer ``well_located_houses``."
 msgstr ""
+"Selecteer ``buildings_34S`` in :guilabel:`Objecten uitnemen uit`. Selecteer "
+":guilabel:`kruisen met` in :guilabel:`Waar de objecten (geometrisch "
+"voorvoegsel)`, selecteer de laag met de kruisingen van de buffers in "
+":guilabel:`Door objecten te vergelijken van`. Sla op naar "
+":file:`vector_analysis.gpkg`, en noem de laag ``well_located_houses``."
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:342
 msgid "Click :guilabel:`Run` and close the dialog"
-msgstr ""
+msgstr "Klik op :guilabel:`Uitvoeren` en sluit het dialoogvenster"
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:343
 msgid ""
@@ -684,6 +705,9 @@ msgid ""
 ":guilabel:`well_located_houses` layer to the top of the layers list, then "
 "zoom in."
 msgstr ""
+"U zult waarschijnlijk vinden dat er niet veel lijkt te zijn veranderd. Als "
+"dat zo is, verplaats dan de laag :guilabel:`well_located_houses` tot boven "
+"in de lagenlijst en zoom dan in."
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:350
 msgid ""
@@ -698,6 +722,8 @@ msgid ""
 "Now you have two separated layers and can remove ``buildings_34S`` from the "
 "layer list."
 msgstr ""
+"Nu heeft u twee afzonderlijke lagen en kunt u ``buildings_34S`` uit de "
+"lagenlijst verwijderen."
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:358
 msgid "|moderate| |TY| Further Filter our Buildings"
@@ -738,6 +764,8 @@ msgid ""
 "To see which buildings are of the correct size (more than 100 square "
 "meters), we need to calculate their size."
 msgstr ""
+"We moeten hun grootte berekenen om te zien welke gebouwen de juiste grootte "
+"hebben (groter dan 100 vierkante meter)."
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:378
 msgid ""
@@ -745,6 +773,10 @@ msgid ""
 "Calculator* by clicking on the |calculateField| :sup:`Open Field Calculator`"
 " button in the main toolbar or in the attribute table window"
 msgstr ""
+"Selecteer de laag :guilabel:`houses_restaurants_500m` en open "
+"*Veldberekening* door te klikken op de knop |calculateField| "
+":sup:`Veldberekening openen` in de hoofdwerkbalk of in het venster van de "
+"attributentabel"
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:382
 msgid ""
@@ -752,30 +784,42 @@ msgid ""
 " to ``AREA``, choose :guilabel:`Decimal number (real)` as :guilabel:`Output "
 "field type`, and choose ``$area`` from the :menuselection:`Geometry` group."
 msgstr ""
+"Selecteer :guilabel:`Nieuw veld aanmaken`, stel de :guilabel:`Naam voor "
+"veld` in op ``AREA``, kies :guilabel:`Decimaal getal (real)` als "
+":guilabel:`Type voor veld`, en kies ``$area`` uit de groep "
+":menuselection:`Geometrie`."
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:391
 msgid ""
 "The new field ``AREA`` will contain the area of each building in square "
 "meters."
 msgstr ""
+"Het nieuwe veld ``AREA`` zal de oppervlakte van elk gebouw in vierkante "
+"meters bevatten."
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:393
 msgid ""
 "Click :guilabel:`OK`. The ``AREA`` field has been added at the end of the "
 "attribute table."
 msgstr ""
+"Klik op :guilabel:`OK`. Het veld ``AREA`` is toegevoegd aan het einde van de"
+" attributentabel."
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:396
 msgid ""
 "Click the |toggleEditing| :sup:`Toggle Editing` button to finish editing, "
 "and save your edits when prompted."
 msgstr ""
+"Klik opnieuw op de knop |toggleEditing| :sup:`Bewerken aan/uitzetten` om het"
+" bewerken te voltooien en sla uw gegevens op als daarnaar gevraagd wordt."
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:398
 msgid ""
 "In the :menuselection:`Source` tab of the layer properties, set the "
 ":guilabel:`Provider Feature Filter` to ``\"AREA >= 100``."
 msgstr ""
+"Stel, op de tab :menuselection:`Bron` van de laageigenschappen, het "
+":guilabel:`Provider objectfilter` in op ``\"AREA >= 100``."
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:404
 msgid "Click :guilabel:`OK`."
@@ -786,6 +830,8 @@ msgid ""
 "Your map should now only show you those buildings which match our starting "
 "criteria and which are more than 100 square meters in size."
 msgstr ""
+"Uw kaart zou nu alleen die gebouwen moeten laten zien die overeenkomen met "
+"uw begincriteria en die groter zijn dan 100 vierkante meter."
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:411
 msgid "|basic| |TY|"
@@ -797,6 +843,9 @@ msgid ""
 "doing so. The file should be saved within the same GeoPackage database, with"
 " the name ``solution``."
 msgstr ""
+"Sla uw oplossing op als een nieuwe laag, met de benadering die u hierboven "
+"hebt geleerd om dat te doen. Het bestand zou moeten worden opgeslagen in "
+"dezelfde database van GeoPackage, met de naam ``solution``."
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:419
 msgid "|IC|"
@@ -808,6 +857,9 @@ msgid ""
 "tools, you were able to solve a problem with multiple criteria quickly and "
 "easily."
 msgstr ""
+"Met de benadering van probleemoplossing voor GIS, samen met de "
+"gereedschappen voor vectoranalyse van QGIS, was u in staat een probleem met "
+"meerdere criteria snel en gemakkelijk op te lossen."
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:426
 msgid "|WN|"
@@ -818,3 +870,5 @@ msgid ""
 "In the next lesson, we will look at how to calculate the shortest distance "
 "along roads from one point to another."
 msgstr ""
+"In de volgende les, zullen we kijken naar de berekening van de kortste "
+"afstand over wegen, van het ene punt naar een ander."

@@ -2154,9 +2154,12 @@ combobox...) to the layer's fields, you need to give them the same name.
 
 Use the :guilabel:`Edit UI` to define the path to the file to use.
 
+UI-files can also be hosted on a remote server.
+In this case, you provide the URL of the form instead of the file path in :guilabel:`Edit UI`.
+
 You'll find some example in the :ref:`Creating a new form <creating-new-form>`
 lesson of the :ref:`QGIS-training-manual-index-reference`. For more advanced information,
-see https://nathanw.net/2011/09/05/qgis-tips-custom-feature-forms-with-python-logic/.
+see https://woostuff.wordpress.com/2011/09/05/qgis-tips-custom-feature-forms-with-python-logic/.
 
 .. _form_custom_functions:
 
@@ -2519,13 +2522,14 @@ correctly:
    Data-defined properties automatically created
 
 
-Otherwise, there's another way to create an auxiliary field for a specific
-property thanks to the |dataDefined| :sup:`data-defined override` button. By
-clicking on :guilabel:`Store data in the project`, an auxiliary field is
-automatically created for the :guilabel:`Opacity` field. If you click on this
-button whereas the auxiliary layer is not created yet, then the window
-:ref:`figure_auxiliary_layer_creation` is first displayed to select the
-primary key to use for joining.
+Otherwise, there's another way to create an auxiliary field for a
+specific property thanks to the
+|dataDefined| :sup:`data-defined override` button.
+By clicking on :guilabel:`Store data in the project`, an auxiliary
+field is automatically created for the :guilabel:`Opacity` field.
+If you click on this button and the auxiliary layer is not created
+yet, a window (:numref:`figure_auxiliary_layer_creation`) is first
+displayed to select the primary key to use for joining.
 
 
 Symbology

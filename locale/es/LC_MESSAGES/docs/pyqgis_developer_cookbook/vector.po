@@ -7,6 +7,7 @@
 # Richard Duivenvoorde <richard@duif.net>, 2020
 # micirculopolar <lfernandez@geosistec.com>, 2020
 # Néstor, 2020
+# Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-26 13:13+0200\n"
 "PO-Revision-Date: 2020-03-16 19:23+0000\n"
-"Last-Translator: Néstor, 2020\n"
+"Last-Translator: Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1287,6 +1288,11 @@ msgid ""
 "<qgis.core.QgsSymbol.dump>` method which returns a brief description of the "
 "symbol. To get a list of symbol layers:"
 msgstr ""
+"Teniendo una instancia de un símbolo (por ejemplo, de un renderizador), es "
+"posible explorarlo: el método :meth:`type <qgis.core.QgsSymbol.type>` dice "
+"si es un símbolo de marcador, línea o relleno. Hay un método :meth:`dump "
+"<qgis.core.QgsSymbol.dump>` que devuelve una breve descripción del símbolo. "
+"Para obtener una lista de capas de símbolos:"
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:1224
 msgid ""
@@ -1298,6 +1304,14 @@ msgid ""
 "the :meth:`width <qgis.core.QgsLineSymbol.width>` method returns the line "
 "width."
 msgstr ""
+"Para averiguar el método de uso del color del símbolo :meth:`color "
+"<qgis.core.QgsSymbol.color>` y :meth:`setColor "
+"<qgis.core.QgsSymbol.setColor>` para cambiar su color. Con los símbolos de "
+"marcador, además, puede consultar el tamaño y la rotación del símbolo con "
+"los métodos :meth:`size <qgis.core.QgsMarkerSymbol.size>` y :meth:`angle "
+"<qgis.core.QgsMarkerSymbol.angle>`. Para los símbolos lineales el método "
+":meth:`width <qgis.core.QgsLineSymbol.width>` devuelve el grosor de la "
+"línea."
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:1229
 msgid "Size and width are in millimeters by default, angles are in degrees."
@@ -1307,7 +1321,7 @@ msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:1234
 msgid "Working with Symbol Layers"
-msgstr ""
+msgstr "Trabajando con capas de símbolos"
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:1236
 msgid ""
@@ -1320,18 +1334,33 @@ msgid ""
 "layer class --- the basic and default ones are ``SimpleMarker``, "
 "``SimpleLine`` and ``SimpleFill`` symbol layers types."
 msgstr ""
+"Como se dijo antes, las capas de símbolo (subclases de "
+":class:`QgsSymbolLayer <qgis.core.QgsSymbolLayer>`) determinar la apariencia"
+" de las entidades. Hay varias clases de capas de símbolos básicas para uso "
+"general. Es posible implementar nuevos tipos de capas de símbolos y así "
+"personalizar arbitrariamente cómo se renderizarán las entidades. El método "
+":meth:`layerType() <qgis.core.QgsSymbolLayer.layerType>` identifica de forma"
+" única la clase de capa de símbolo --- las básicas y predeterminadas son los"
+" tipos de capas de símbolo `` SimpleMarker '', `` SimpleLine '' y `` "
+"SimpleFill ''."
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:1243
 msgid ""
 "You can get a complete list of the types of symbol layers you can create for"
 " a given symbol layer class with the following code:"
 msgstr ""
+"identifica de forma única la clase de capa de símbolo --- las básicas y "
+"predeterminadas son los tipos de capas de símbolo `` SimpleMarker '', `` "
+"SimpleLine '' y `` SimpleFill ''."
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:1265
 msgid ""
 "The :class:`QgsSymbolLayerRegistry <qgis.core.QgsSymbolLayerRegistry>` class"
 " manages a database of all available symbol layer types."
 msgstr ""
+"La clase :class:`QgsSymbolLayerRegistry <qgis.core.QgsSymbolLayerRegistry>` "
+"gestiona una base de datos de todos los tipos de capas de símbolos "
+"disponibles."
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:1268
 msgid ""
@@ -1346,10 +1375,20 @@ msgid ""
 "size and angle are available only for marker symbol layers and width for "
 "line symbol layers."
 msgstr ""
+"Para acceder a los datos de la capa de símbolo, use su método "
+":meth:`properties() <qgis.core.QgsSymbolLayer.properties>` que devuelve un "
+"diccionario de propiedades clave-valor que determina la apariencia. Cada "
+"tipo de capa de símbolo tiene un conjunto específico de propiedades que "
+"utiliza. Además, existen los métodos genéricos :meth:`color "
+"<qgis.core.QgsSymbol.color>`, :meth:`size <qgis.core.QgsMarkerSymbol.size>`,"
+" :meth:`angle <qgis.core.QgsMarkerSymbol.angle>` y :meth:`width "
+"<qgis.core.QgsLineSymbol.width>`, con sus contrapartes setter. Por supuesto,"
+" el tamaño y el ángulo solo están disponibles para las capas de símbolo de "
+"marcador y el ancho para las capas de símbolo de línea."
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:1280
 msgid "Creating Custom Symbol Layer Types"
-msgstr ""
+msgstr "Crear tipos de capas de símbolos personalizados"
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:1282
 msgid ""
@@ -1358,6 +1397,10 @@ msgid ""
 "as you wish. Here is an example of a marker that draws red circles with "
 "specified radius"
 msgstr ""
+"Imagine que le gustaría personalizar la forma en que se procesan los datos. "
+"Puede crear su propia clase de capa de símbolo que dibujará las entidades "
+"exactamente como lo desee. Aquí hay un ejemplo de un marcador que dibuja "
+"círculos rojos con un radio especificado"
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:1322
 msgid ""

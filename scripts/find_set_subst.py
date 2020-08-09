@@ -28,7 +28,7 @@ def get_subst_from_file(file):
     with open(file, 'r+') as f:
         pos = f.tell()
         line = f.readline()
-        while line is not "":
+        while line != "":
             if s_title.match(line) is not None:
                 f.seek(pos-2)
                 f.truncate()

@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-26 13:13+0200\n"
 "PO-Revision-Date: 2020-03-16 19:32+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2020\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -32,10 +33,13 @@ msgid ""
 "each column contains a particular piece of information about the feature. "
 "Features in the table can be searched, selected, moved or even edited."
 msgstr ""
+"속성 테이블은 선택한 레이어의 피처에 관한 정보를 표시합니다. 테이블에 있는 각 행은 (도형을 지닌 또는 지니지 않은) 피처를 나타내며,"
+" 각 열은 피처에 관한 한 가지 특정 정보를 담고 있습니다. 테이블에 있는 피처를 검색하고, 선택하고, 이동시키거나 편집할 수도 "
+"있습니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:22
 msgid "Foreword: Spatial and non-spatial tables"
-msgstr ""
+msgstr "서문: 공간 및 비공간 테이블"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:24
 msgid ""
@@ -45,6 +49,10 @@ msgid ""
 "are listed in the :guilabel:`Layers` panel. Whether a layer is spatially "
 "enabled or not determines whether you can interact with it on the map."
 msgstr ""
+"QGIS는 공간 및 비공간 레이어를 불러올 수 있습니다. 현재 PostgreSQL, MSSQL, SpatiaLite, DB2 및 "
+"Oracle 제공자는 물론, 구분 텍스트와 OGR이 지원하는 테이블도 포함합니다. 레이어를 불러오면, :guilabel:`Layers` "
+"패널에 있는 목록에 레이어가 추가됩니다. 레이어가 공간적으로 활성화됐는지 아닌지 여부가 사용자가 맵 상에서 레이어와 대화형 작업을 할 수"
+" 있는지 없는지 여부를 결정합니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:30
 msgid ""
@@ -55,10 +63,13 @@ msgid ""
 "digitizing. Have a closer look at the edit widget in section "
 ":ref:`vector_attributes_menu` to find out more."
 msgstr ""
+"속성 테이블 뷰를 통해 비공간 테이블을 둘러보고 편집할 수 있습니다. 거기에, 비공간 테이블을 사용해서 필드 검색을 할 수도 있습니다. "
+"예를 들면, 디지타이즈 작업 중에 비공간 테이블의 열을 이용해서 속성값 또는 허용되는 값의 범위를 정의한 다음 특정 벡터 레이어에 추가할"
+" 수 있습니다. 자세한 내용은 :ref:`vector_attributes_menu` 에 있는 편집 위젯을 자세히 살펴보세요."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:40
 msgid "Introducing the attribute table interface"
-msgstr ""
+msgstr "속성 테이블 인터페이스 소개"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:42
 msgid ""
@@ -73,6 +84,13 @@ msgid ""
 "selected features and :kbd:`Ctrl+F6` will open the attribute table filtered "
 "to visible features."
 msgstr ""
+"벡터 레이어의 속성 테이블을 열려면, :ref:`label_legend` 에서 해당 레이어를 클릭해서 활성화시키십시오. 그 다음 메인 "
+":menuselection:`Layer` 메뉴에서 |openTable| :menuselection:`Open Attribute "
+"Table` 메뉴 옵션을 선택하십시오. 레이어를 오른쪽 클릭한 다음 컨텍스트 메뉴에서 |openTable| "
+":menuselection:`Open Attribute Table` 을 선택하거나, 속성 툴바에 있는 |openTable| "
+":menuselection:`Open Attribute Table` 아이콘을 클릭해도 됩니다. 단축키를 선호한다면, :kbd:`F6` "
+"키를 누르면 속성 테이블이 열릴 것입니다. :kbd:`Shift+F6` 키 조합을 누르면 선택한 피처로 필터링한 속성 테이블이 열리고, "
+":kbd:`Ctrl+F6` 키 조합을 누르면 가시화 피처로 필터링한 속성 테이블이 열릴 것입니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:53
 msgid ""
@@ -84,6 +102,10 @@ msgid ""
 " are shown in the attribute table title, as well as if the layer is "
 "spatially limited."
 msgstr ""
+"이렇게 하면 레이어의 피처 속성을 표시하는 새 창이 열립니다. (figure_attributes_table_ 그림 참조) "
+":menuselection:`Settings --> Options --> Data sources` 메뉴의 설정에 따라, 도킹 "
+"창(docked window) 또는 일반 창에서 속성 테이블을 열 것입니다. 속성 테이블 제목에 레이어가 공간적으로 제한됐는지는 물론, "
+"레이어에 있는 피처의 총 개수 및 현재 선택한/필터링한 피처의 개수도 표시됩니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:66
 msgid "Attribute Table for regions layer"
@@ -97,7 +119,7 @@ msgstr "속성 테이블 창 상단에 있는 아이콘들은 다음과 같은 �
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:73
 msgid "Available Tools"
-msgstr ""
+msgstr "사용할 수 있는 도구들"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Icon"
@@ -157,7 +179,7 @@ msgstr "현재 수정 사항을 저장"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "|refresh|"
-msgstr ""
+msgstr "|refresh|"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Reload the table"
@@ -177,7 +199,7 @@ msgstr "도형 없는 새 피처를 추가"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "|deleteSelectedFeatures|"
-msgstr ""
+msgstr "|deleteSelectedFeatures|"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Delete selected features"
@@ -193,7 +215,7 @@ msgstr "|editCut|"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Cut selected features to clipboard"
-msgstr ""
+msgstr "Cut selected features to clipboard"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid ":kbd:`Ctrl+X`"
@@ -205,7 +227,7 @@ msgstr "|copySelected|"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Copy selected features to clipboard"
-msgstr ""
+msgstr "Copy selected features to clipboard"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid ":kbd:`Ctrl+C`"
@@ -389,15 +411,15 @@ msgstr "테이블 서식 작업 활성화"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "|dock|"
-msgstr ""
+msgstr "|dock|"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Dock attribute table"
-msgstr ""
+msgstr "Dock attribute table"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Allows to dock/undock the attribute table"
-msgstr ""
+msgstr "속성 테이블 도킹/언도킹을 토글"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "|actionRun|"
@@ -405,11 +427,11 @@ msgstr "|actionRun|"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Actions"
-msgstr ""
+msgstr "Actions"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Lists the actions related to the layer"
-msgstr ""
+msgstr "레이어 관련 액션 목록"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:103
 msgid ""
@@ -445,6 +467,8 @@ msgid ""
 "The |openTable| :sup:`Table view`, displays values of multiple features in a"
 " tabular mode, each row representing a feature and each column a field."
 msgstr ""
+"|openTable| :sup:`Table view`: 각 행이 피처를 나타내고 각 열이 필드를 나타내는 표 서식으로 여러 피처의 값을 "
+"표시합니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:121
 msgid ""
@@ -462,12 +486,20 @@ msgid ""
 "using the rectangles) makes a feature flash in red color once so you can see"
 " where it is situated."
 msgstr ""
+"|formView| :sup:`Form view`: 첫 번째 패널에 :ref:`피처 식별자 <maptips>` 를 표시하고 두 번째 "
+"패널에는 클릭한 식별자의 속성만 표시합니다. 첫 번째 패널 상단에 있는 풀다운 메뉴에서 속성(:guilabel:`Column "
+"preview`) 또는 표현식(:guilabel:`Expression`)을 사용해서 \"식별자(identifier)\"를 지정할 수 "
+"있습니다. 이 풀다운 메뉴는 최근 사용한 표현식 10개도 재사용하기 위해 포함하고 있습니다. 양식 뷰는 레이어 필드 환경 "
+"설정(:ref:`vector_attributes_menu` 참조)을 이용합니다. 첫 번째 패널 하단에 있는 화살표를 가지고 피처 식별자를"
+" 탐색할 수 있습니다. 목록에서 피처를 노란색 마커로 선택하면, 캔버스 상에서도 해당 피처가 노란색으로 선택됩니다. 속성 테이블 상단에 "
+"있는 |zoomToSelected| 버튼을 클릭하면 해당 피처로 확대/축소합니다. (체크 사각형을 사용하지 않고) 목록에 있는 항목을 "
+"클릭하면 해당 피처가 어디에 있는지 알 수 있도록 빨간색으로 한번 번쩍입니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:137
 msgid ""
 "You can switch from one mode to the other by clicking the corresponding icon"
 " at the bottom right of the dialog."
-msgstr ""
+msgstr "대화창 우하단에 있는 대응하는 아이콘을 클릭해서 두 뷰 모드 사이를 전환할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:140
 msgid ""
@@ -481,11 +513,11 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:149
 msgid "Attribute table in table view (top) vs form view (bottom)"
-msgstr ""
+msgstr "속성 테이블의 테이블 뷰(위) 대 양식 뷰(아래)"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:157
 msgid "Configuring the columns"
-msgstr ""
+msgstr "열 환경 설정하기"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:159
 msgid ""
@@ -497,7 +529,7 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:163
 msgid "Hiding and organizing columns and enabling actions"
-msgstr ""
+msgstr "열 숨기기와 정리하기 및 액션 활성화하기"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:165
 msgid ""
@@ -529,12 +561,12 @@ msgid ""
 "drop-down box or button list of actions for each row, see "
 ":ref:`actions_menu` for more information about actions."
 msgstr ""
-"각 행에 액션의 드롭다운 상자 또는 버튼 목록을 표시하는 새로운 가상 :guilabel:`Actions` 열을 활성화할 수 있습니다. "
-"액션에 관한 자세한 정보는 :ref:`actions_menu` 을 참조하세요."
+"각 행에 액션의 드롭다운 상자 또는 버튼 목록을 표시하는 새로운 가상 :guilabel:`Actions` 열을 활성화할 수 있습니다. "
+"액션에 관한 자세한 정보는 :ref:`actions_menu` 을 참조하세요."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:179
 msgid "Resizing columns widths"
-msgstr ""
+msgstr "열 너비 설정하기"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:181
 msgid ""
@@ -563,7 +595,7 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:193
 msgid "Sorting columns"
-msgstr ""
+msgstr "열 정렬하기"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:195
 msgid ""
@@ -585,12 +617,12 @@ msgid ""
 "In form view, features identifier can be sorted using the |sort| "
 ":guilabel:`Sort by preview expression` option."
 msgstr ""
-"양식 뷰에서는, |sort| :guilabel:`Sort by preview expression` 옵션을 통해 피처 식별자를 정렬할 수 "
+"양식 뷰에서는, |sort| :guilabel:`Sort by preview expression` 옵션을 통해 피처 식별자를 정렬할 수 "
 "있습니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:208
 msgid "**Sorting based on columns of different types**"
-msgstr ""
+msgstr "**서로 다른 유형의 열을 기반으로 정렬하기**"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:210
 msgid ""
@@ -600,10 +632,14 @@ msgid ""
 "'Borough6'``). You can workaround this by using eg ``concat(\"USE\", "
 "lpad(\"ID\", 3, 0))`` which returns ``'Borough105' > 'Borough006'``."
 msgstr ""
+"문자열과 숫자 유형의 열들을 기반으로 속성 테이블을 정렬하려 할 때, ``concat(\"USE\", \"ID\")`` 표현식이 문자열 "
+"값을 (예를 들어 ``'Borough105' < 'Borough6'``) 반환하기 때문에 예기치 못한 결과로 이어질 수도 있습니다. 대신"
+" ``concat(\"USE\", lpad(\"ID\", 3, 0))`` 과 같은 표현식을 사용하면 ``'Borough105' > "
+"'Borough006'`` 을 반환하므로 이런 오류를 해결할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:220
 msgid "Formatting of table cells using conditions"
-msgstr ""
+msgstr "테이블 셀의 조건부 서식 작업"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:222
 msgid ""
@@ -611,6 +647,8 @@ msgid ""
 "table features you may want to put a particular focus on, using custom "
 "conditions on feature's:"
 msgstr ""
+"조건부 서식을 설정하면, 피처에 대해 사용자 지정 조건을 적용시켜 사용자가 특별히 집중하고자 하는 속성 테이블 항목을 강조할 수 "
+"있습니다:"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:226
 msgid ""
@@ -622,7 +660,7 @@ msgstr "도형 (예를 들어 다중 부분 피처, 작은 면적을 가진 피�
 msgid ""
 "or field value (e.g., comparing values to a threshold, identifying empty "
 "cells...)."
-msgstr ""
+msgstr "필드 값 (예를 들어 값을 한계값과 비교하거나, 비어 있는 셀을 식별하거나 등등)"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:231
 msgid ""
@@ -825,12 +863,15 @@ msgid ""
 "table using more than one field. When applied, the filter expression will "
 "show up at the bottom of the form."
 msgstr ""
+":guilabel:`Advanced filter (Expression)`: 표현식 작성기 대화창을 엽니다. 이 대화창에서 테이블 행들과 "
+"일치시킬 :ref:`복잡 표현식 <vector_expressions>` 을 생성할 수 있습니다. 예를 들어 하나 이상의 필드를 이용해서 "
+"테이블을 필터링할 수 있습니다. 이를 적용하면, 필터 표현식이 양식 하단에 표시될 것입니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:334
 msgid ""
 "It is also possible to :ref:`filter features using forms "
 "<filter_select_form>`."
-msgstr ""
+msgstr ":ref:`양식을 이용해서도 <filter_select_form>` 피처를 필터링할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:338
 msgid ""
@@ -862,7 +903,7 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:355
 msgid "Filtering and selecting features using forms"
-msgstr ""
+msgstr "양식을 이용해서 피처 필터링하기/선택하기"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:357
 msgid ""
@@ -870,6 +911,8 @@ msgid ""
 "pressing :kbd:`Ctrl+F` will make the attribute table dialog switch to form "
 "view and replace each widget with its search variant."
 msgstr ""
+"|filterMap| :sup:`Filter/Select features using form` 을 클릭하거나 :kbd:`Ctrl+F` "
+"조합키를 누르면 속성 테이블 대화창이 양식 뷰로 전환되고 모든 위젯도 해당 위젯의 검색형으로 대체될 것입니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:361
 msgid ""
@@ -877,6 +920,8 @@ msgid ""
 "described in :ref:`select_by_value`, where you can find descriptions of all "
 "operators and selecting modes."
 msgstr ""
+"이 다음부터 설명할 도구 기능은 :ref:`select_by_value` 에서 설명한 것과 유사합니다. 이 항에서 모든 연산자 및 선택 "
+"모드에 대한 설명을 찾아볼 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:370
 msgid "Attribute table filtered by the filter form"
@@ -890,6 +935,9 @@ msgid ""
 "option and displays the corresponding filter expression in an editable text "
 "widget at the bottom of the form."
 msgstr ""
+"속성 테이블에서 피처를 필터링/선택하는 경우, 필터를 정의하고 미세 조정할 수 있는 :guilabel:`Filter features` "
+"버튼이 존재합니다. 이 버튼을 사용하면 :guilabel:`Advanced filter (Expression)` 옵션을 촉발해서 양식 "
+"하단에 있는 편집 가능한 텍스트 위젯에 대응하는 필터 표현식을 표시합니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:377
 msgid ""
@@ -897,7 +945,7 @@ msgid ""
 "drop-down list next to the :guilabel:`Filter features` button. The options "
 "are:"
 msgstr ""
-"이미 필터링한 피처가 있는 경우, :guilabel:`Filter features` 버튼 옆에 있는 드롭다운 목록을 이용해서 필터를 미세"
+"이미 필터링한 피처가 있는 경우, :guilabel:`Filter features` 버튼 옆에 있는 드롭다운 목록을 이용해서 필터를 미세"
 " 조정할 수 있습니다. 다음 옵션을 선택할 수 있습니다:"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:380
@@ -914,10 +962,12 @@ msgid ""
 "from the bottom left pull-down menu, or clear the expression and click "
 ":guilabel:`Apply` or press :kbd:`Enter`."
 msgstr ""
+"필터를 적용 해제하려면, 좌하단의 풀다운 메뉴에서 :guilabel:`Show all features` 메뉴 옵션을 선택하거나 또는 "
+"표현식을 삭제한 다음 :guilabel:`Apply` 버튼을 클릭하거나 :kbd:`Enter` 키를 누르십시오."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:388
 msgid "Using action on features"
-msgstr ""
+msgstr "피처에 대한 액션 사용"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:390
 msgid ""
@@ -927,31 +977,31 @@ msgstr "컨텍스트 메뉴를 통해 피처를 다음과 같이 처리할 수 �
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:393
 msgid ":guilabel:`Select all` (:kbd:`Ctrl+A`) the features;"
-msgstr ""
+msgstr ":guilabel:`Select all`: 피처를 모두 선택(:kbd:`Ctrl+A`)할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:394
 msgid ""
 "Copy the content of a cell in the clipboard with :guilabel:`Copy cell "
 "content`;"
-msgstr ""
+msgstr ":guilabel:`Copy cell content`: 클립보드로 셀의 내용을 복사할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:395
 msgid ":guilabel:`Zoom to feature` without having to select it beforehand;"
-msgstr ""
+msgstr ":guilabel:`Zoom to feature`: 피처를 먼저 선택하지 않고서도 피처로 확대/축소할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:396
 msgid ":guilabel:`Pan to feature` without having to select it beforehand;"
-msgstr ""
+msgstr ":guilabel:`Pan to feature`: 피처를 먼저 선택하지 않고서도 피처로 이동할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:397
 msgid ":guilabel:`Flash feature`, to highlight it in the map canvas;"
-msgstr ""
+msgstr ":guilabel:`Flash feature`: 맵 캔버스에 있는 피처를 강조할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:398
 msgid ""
 ":guilabel:`Open form`: it toggles attribute table into form view with a "
 "focus on the clicked feature."
-msgstr ""
+msgstr ":guilabel:`Open form`: 클릭한 피처의 속성 테이블을 양식 뷰로 켜고 끕니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:406
 msgid "Copy cell content button"
@@ -1000,7 +1050,7 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:428
 msgid "Saving selected features as new layer"
-msgstr ""
+msgstr "선택한 피처를 새 레이어로 저장하기"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:430
 msgid ""
@@ -1013,6 +1063,12 @@ msgid ""
 "only selected features` is checked. It is also possible to specify OGR "
 "creation options within the dialog."
 msgstr ""
+"선택한 피처를 모든 OGR 지원 벡터 포맷으로 저장할 수 있고, 또다른 좌표계로 변형시킬 수도 있습니다. "
+":guilabel:`Layers` 패널에 있는 레이어의 컨텍스트 메뉴에서, :menuselection:`Export --> Save "
+"selected features as...` 를 클릭해서 산출물 데이터셋의 명칭, 포맷 및 좌표계를 정의할 수 있습니다. "
+"(:ref:`general_saveas` 을 참조하세요.) 선택한 피처만 저장하는 |checkbox| "
+":menuselection:`Save only selected features` 옵션이 체크돼 있을 것입니다. 이 대화창에서 OGR 생성"
+" 옵션도 설정할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:442
 msgid "Editing attribute values"
@@ -1037,12 +1093,16 @@ msgid ""
 " a field that may already exist or to be created but for multiple features. "
 "It can be used to create virtual fields;"
 msgstr ""
+":ref:`필드 계산기 <vector_field_calculator>` 이용하기: 행에 이미 존재할 수도 있는 필드를 업데이트하거나, "
+"여러 피처에 대해 필드를 생성합니다. 필드 계산기를 이용해서 가상 필드도 생성할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:451
 msgid ""
 "using the quick field :ref:`calculation bar <quick_field_calculation_bar>`: "
 "same as above but for only existing field;"
 msgstr ""
+":ref:`간편 필드 계산 막대 <quick_field_calculation_bar>` 이용하기: 필드 계산기와 동일하지만 기존 필드에 "
+"대해서만 사용할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:453
 msgid ""
@@ -1053,7 +1113,7 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:459
 msgid "Using the Field Calculator"
-msgstr ""
+msgstr "필드 계산기 이용하기"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:461
 msgid ""
@@ -1063,6 +1123,10 @@ msgid ""
 " features. The results can be used to update an existing field, or written "
 "to a new field (that can be a :ref:`virtual <virtual_field>` one)."
 msgstr ""
+"속성 테이블에 있는 |calculateField| :sup:`Field Calculator` 아이콘으로 기존 속성값을 기반으로 "
+"계산하거나, 또는 ─ 예를 들어 도형 피처의 길이 또는 면적을 계산하는 ─ 함수를 정의할 수 있습니다. 계산 결과를 (:ref:`가상 "
+"필드 <virtual_field>` 일 수도 있는) 새 속성 필드에 저장할 수도 있고, 기존 필드에 있는 값을 업데이트하는 데 쓸 수도 "
+"있습니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:467
 msgid ""
@@ -1083,14 +1147,17 @@ msgid ""
 "apply it to an existing or a newly created field. To use the field "
 "calculator dialog, you must select whether you want to:"
 msgstr ""
+"필드 계산기 대화창은 :ref:`표현식 작성기 <functions_list>` 대화창을 바탕으로 표현식을 정의하고 계산 결과를 기존 또는"
+" 새로 생성한 필드에 적용할 수 있는 완전한 인터페이스를 제공합니다. 필드 계산기 대화창을 이용하려면, 먼저 다음 가운데 어떤 작업을 "
+"하기 원하는지 선택해야만 합니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:478
 msgid "apply calculation on the whole layer or on selected features only"
-msgstr ""
+msgstr "레이어 전체에 계산 결과를 적용할지 또는 선택한 피처에만 계산 결과를 적용할지"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:479
 msgid "create a new field for the calculation or update an existing one."
-msgstr ""
+msgstr "계산 결과를 추가할 새 필드를 생성할지 또는 기존 필드를 업데이트할지"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:486
 msgid "Field Calculator"
@@ -1104,6 +1171,9 @@ msgid ""
 " a field precision of 3, it means you have 7 digits before the dot, and 3 "
 "digits for the decimal part."
 msgstr ""
+"새 필드를 추가하기로 결정한 경우, 필드명, 필드 유형(정수형, 실수형, 날짜 또는 문자열), 그리고 필요한 경우 필드의 총 길이 및 "
+"정밀도를 입력해야 합니다. 예를 들면, 필드 길이를 10으로 그리고 필드 정밀도를 3으로 선택한 경우 소수점 앞에 7자리, 소수점, "
+"그리고 소수점 아래 3자리를 입력할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:494
 msgid ""
@@ -1111,7 +1181,7 @@ msgid ""
 ":guilabel:`Expression` tab. We want to calculate the length in km of the "
 "``railroads`` layer from the QGIS sample dataset:"
 msgstr ""
-"다음은 :guilabel:`Expression` 탭을 이용하는 경우 필드 계산기가 어떻게 작동하는지 보여주는 짧은 예시입니다. QGIS "
+"다음은 :guilabel:`Expression` 탭을 이용하는 경우 필드 계산기가 어떻게 작동하는지 보여주는 짧은 예시입니다. QGIS "
 "예시 데이터셋의 ``railroads`` 레이어의 길이를 킬로미터 단위로 계산하려 합니다:"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:498
@@ -1128,7 +1198,7 @@ msgid ""
 "|calculateField| :sup:`Field Calculator` dialog."
 msgstr ""
 "|toggleEditing| :sup:`Toggle editing mode` 아이콘을 클릭한 다음 |calculateField| "
-":sup:`Field Calculator` 아이콘으로 필드 계산기 대화창을 엽니다."
+":sup:`Field Calculator` 아이콘으로 필드 계산기 대화창을 엽니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:502
 msgid ""
@@ -1140,38 +1210,44 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:504
 msgid "Set :guilabel:`Output field name` to  ``length_km``"
-msgstr ""
+msgstr ":guilabel:`Output field name` 산출 필드명을 ``length_km`` 으로 설정하십시오."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:505
 msgid "Select ``Decimal number (real)`` as :guilabel:`Output field type`"
 msgstr ""
+":guilabel:`Output field type` 산출 필드 유형을 ``Decimal number (real)`` 로 선택하십시오."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:506
 msgid ""
 "Set the :guilabel:`Output field length` to ``10`` and the "
 ":guilabel:`Precision` to ``3``"
 msgstr ""
+":guilabel:`Output field length` 산출 필드 길이를 ``10`` 으로, :guilabel:`Precision` "
+"정밀도를 ``3`` 으로 설정하십시오."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:508
 msgid ""
 "Double click on ``$length`` in the :guilabel:`Geometry` group to add the "
 "length of the geometry into the Field calculator expression box."
 msgstr ""
+":guilabel:`Geometry` 그룹에 있는 ``$length`` 함수를 더블클릭해서 필드 계산기의 표현식 란에 도형의 길이를 "
+"추가하십시오."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:510
 msgid ""
 "Complete the expression by typing ``/ 1000`` in the Field calculator "
 "expression box and click :guilabel:`OK`."
 msgstr ""
+"필드 계산기 표현식 란에 ``/ 1000`` 을 입력해서 표현식을 완성한 다음 :guilabel:`OK` 버튼을 클릭하십시오."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:512
 msgid ""
 "You can now find a new :guilabel:`length_km` field in the attribute table."
-msgstr ""
+msgstr "이제 속성 테이블에서 새 필드 :guilabel:`length_km` 를 찾아볼 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:517
 msgid "Creating a Virtual Field"
-msgstr ""
+msgstr "가상 필드 생성하기"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:519
 msgid ""
@@ -1183,6 +1259,10 @@ msgid ""
 "digitize features or to automatically calculate a duration between dates "
 "that may change (e.g., using ``now()`` function)."
 msgstr ""
+"가상 필드란 실시간으로 계산되는 표현식을 기반으로 한 필드를 말합니다. 즉 기저 파라미터가 변하자마자 그 값을 자동적으로 업데이트한다는 "
+"뜻입니다. 표현식은 한 번만 설정하면 됩니다. 기저 값이 변할 때마다 필드를 다시 계산해야 할 필요가 없습니다. 예를 들어, 사용자가 "
+"피처를 디지타이즈하는 과정에서 면적을 평가해야 하는 경우 또는 변할 수도 있는 (예: ``now()`` 함수 이용 시) 날짜들 사이의 "
+"기간을 자동으로 계산해야 하는 경우 가상 필드를 이용할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:527
 msgid "**Use of Virtual Fields**"
@@ -1205,10 +1285,13 @@ msgid ""
 " An expression editor window will be opened to adjust the expression of the "
 "virtual field."
 msgstr ""
+"필드 생성 시에만 가상 필드로 설정할 수 있습니다. 가상 필드는 레이어 속성 대화창의 필드 탭에서 정규 물리 또는 결합 필드와 구분하기 "
+"위해 보라색 배경으로 표시됩니다. 가상 필드를 생성한 다음에도 코멘트 열에 있는 표현식 버튼을 누르면 가상 필드의 표현식을 편집할 수 "
+"있습니다. 가상 필드의 표현식을 수정할 수 있는 표현식 편집기 창이 열릴 것입니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:541
 msgid "Using the Quick Field Calculation Bar"
-msgstr ""
+msgstr "간편 필드 계산 막대 사용하기"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:543
 msgid ""
@@ -1217,30 +1300,35 @@ msgid ""
 "Thanks to the expression engine, it offers a quicker access to edit an "
 "already existing field:"
 msgstr ""
+"언제든 사용할 수 있는 필드 계산기와는 달리, 속성 테이블 상단에 있는 간편 필드 계산 막대는 레이어가 편집 모드인 경우에만 표시됩니다."
+" 간편 필드 계산 막대는 표현식 엔진의 도움을 받아 이미 존재하는 필드를 더 빨리 편집할 수 있습니다:"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:548
 msgid "Select the field to update in the drop-down list."
-msgstr ""
+msgstr "드롭다운 목록에서 업데이트할 필드를 선택하십시오."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:549
 msgid ""
 "Fill the textbox with a value, an expression you directly write or build "
 "using the |expression| expression button."
 msgstr ""
+"사용자가 표현식을 직접 입력하거나 또는 |expression| 표현식 버튼을 이용해서 표현식을 작성해서 텍스트란을 채우십시오."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:551
 msgid ""
 "Click on :guilabel:`Update All`, :guilabel:`Update Selected` or "
 ":guilabel:`Update Filtered` button according to your need."
 msgstr ""
+"사용자의 필요에 따라 :guilabel:`Update All`, :guilabel:`Update Selected` 또는 "
+":guilabel:`Update Filtered` 버튼 가운데 하나를 클릭하십시오."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:559
 msgid "Quick Field Calculation Bar"
-msgstr ""
+msgstr "간편 필드 계산 막대"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:566
 msgid "Editing multiple fields"
-msgstr ""
+msgstr "다중 필드 편집하기"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:568
 msgid ""
@@ -1256,6 +1344,7 @@ msgid ""
 "using the |multiEdit| :sup:`Toggle multi edit mode` button from the toolbar "
 "inside the attribute table dialog;"
 msgstr ""
+"속성 테이블 대화창에 있는 툴바에서 |multiEdit| :sup:`Toggle multi edit mode` 버튼을 클릭하십시오."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:574
 msgid ""
@@ -1263,7 +1352,7 @@ msgid ""
 "attributes of selected features` menu."
 msgstr ""
 ":menuselection:`Edit -->` |multiEdit| :menuselection:`Modify attributes of "
-"selected features` 메뉴를 선택합니다."
+"selected features` 메뉴를 선택하십시오."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:579
 msgid ""
@@ -1282,7 +1371,7 @@ msgstr "행에서 여러 필드를 편집하려면:"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:586
 msgid "Select the features you want to edit."
-msgstr ""
+msgstr "편집하고자 하는 피처를 선택합니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:587
 msgid ""
@@ -1290,6 +1379,8 @@ msgid ""
 "toggle the dialog to its form view. Feature selection could also be made at "
 "this step."
 msgstr ""
+"속성 테이블 툴바에서 |multiEdit| 버튼을 클릭하면 대화창이 양식 뷰로 전환될 것입니다. 이 단계에서 피처를 선택할 수도 "
+"있습니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:590
 msgid ""
@@ -1297,6 +1388,8 @@ msgid ""
 "features are shown. New widgets appear next to each field allowing for "
 "display of the current multi edit state:"
 msgstr ""
+"속성 테이블의 오른쪽에 선택한 피처의 필드들(및 값들)이 표시됩니다. 각 필드 옆에 현재 다중 편집 상태를 표시해주는 다음과 같은 새 "
+"위젯들이 나타납니다:"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:594
 msgid ""
@@ -1304,12 +1397,15 @@ msgid ""
 "features. It's shown empty and each feature will keep its original value. "
 "You can reset the value of the field from the drop-down list of the widget."
 msgstr ""
+"|multiEditMixedValues| 선택한 피처들이 이 필드에 서로 다른 값들을 담고 있습니다. 텅 빈 것으로 표시되며 각 피처가 "
+"원본 값을 유지할 것입니다. 위젯의 드롭다운 목록에서 필드의 값을 리셋할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:597
 msgid ""
 "|multiEditSameValues| All selected features have the same value for this "
 "field and the value displayed in the form will be kept."
 msgstr ""
+"|multiEditSameValues| 선택한 모든 피처들이 이 필드에 동일한 값을 지니며 양식에 표시된 값이 유지될 것입니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:599
 msgid ""
@@ -1317,6 +1413,8 @@ msgid ""
 "will be applied to all the selected features. A message appears at the top "
 "of the dialog, inviting you to either apply or reset your modification."
 msgstr ""
+"|multiEditChangedValues| 필드 편집이 끝나 선택한 모든 피처에 입력한 값을 적용할 것입니다. 대화창 상단에 사용자 "
+"변경 사항을 적용할지 또는 리셋할지를 묻는 메시지를 표시합니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:603
 msgid ""
@@ -1333,13 +1431,13 @@ msgstr "여러 피처의 필드들을 편집하기"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:614
 msgid "Make the changes to the fields you want."
-msgstr ""
+msgstr "사용자가 원하는 필드를 변경합니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:615
 msgid ""
 "Click on **Apply changes** in the upper message text or any other feature in"
 " the left panel."
-msgstr ""
+msgstr "상단의 메시지 텍스트 또는 왼쪽 패널의 다른 모든 피처에 있는 **Apply changes** 버튼을 클릭합니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:618
 msgid ""
@@ -1373,7 +1471,7 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:641
 msgid "Introducing 1-N relations"
-msgstr ""
+msgstr "1대다(1-N) 관계 소개"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:643
 msgid ""
@@ -1402,7 +1500,7 @@ msgstr "알래스카의 지역과 공항"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:660
 msgid "Layers in 1-N relations"
-msgstr ""
+msgstr "1대다(1-N) 관계의 레이어들"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:662
 msgid ""
@@ -1422,7 +1520,7 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:671
 msgid "Foreign keys in 1-N relations"
-msgstr ""
+msgstr "1대다(1-N) 관계의 외래 키"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:673
 msgid ""
@@ -1449,7 +1547,7 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:684
 msgid "Defining 1-N relations (Relation Manager)"
-msgstr ""
+msgstr "1대다(1-N) 관계 정의하기 (관계 관리자)"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:686
 msgid ""
@@ -1458,6 +1556,9 @@ msgid ""
 "Properties...`. Open the :guilabel:`Relations` tab and click on "
 ":guilabel:`Add Relation`."
 msgstr ""
+"가장 먼저 할 일은 QGIS 에 두 레이어 간의 관계를 알려주는 것입니다. :menuselection:`Project --> "
+"Project Properties...` 메뉴에서 이 작업을 할 수 있습니다. :guilabel:`Relations` 탭을 선택한 다음 "
+":guilabel:`Add Relation` 버튼을 클릭하십시오."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:690
 msgid ""
@@ -1465,6 +1566,8 @@ msgid ""
 "string, describing, what the relation is used for. We will just call say "
 "**airport_relation** in this case."
 msgstr ""
+"**명칭(Name)**: 제목으로 사용됩니다. 사람이 읽을 수 있는 문자열이어야 하며, 관계의 목적을 설명합니다. 이 예시에서는 그냥 "
+"**airport_relation** 라고 하겠습니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:693
 msgid ""
@@ -1474,6 +1577,9 @@ msgid ""
 "this layer you can define multiple referenced fields by using the |signPlus|"
 " button."
 msgstr ""
+"**참조되는 레이어(Referenced Layer) (부모)**: 부모 레이어로도 간주되는 이 레이어는 외래 키가 가리키는 기본 키를 "
+"가지고 있습니다. 즉 이 예시에서는 ``regions`` 레이어입니다. 참조되는 레이어의 기본 키를 정의할 수 있는데, 이 예시에서는 "
+"``ID`` 입니다. 이 레이어의 경우 |signPlus| 버튼으로 여러 참조되는 필드를 정의할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:697
 msgid ""
@@ -1484,6 +1590,10 @@ msgid ""
 "relations you can add another referencing field by using the |signPlus| "
 "button."
 msgstr ""
+"**참조하는 레이어(Referencing Layer) (자식)**: 자식 레이어로도 간주되는 이 레이어가 외래 키 필드를 담고 있습니다."
+" 이 예시에서는 ``airports`` 레이어입니다. 이 레이어의 경우 다른 레이어를 가리키는 참조하는 필드를 추가해야 합니다. 이 "
+"예시에서는 ``fk_region`` 입니다. 다중 필드 관계를 사용하는 경우 |signPlus| 버튼으로 또다른 참조하는 필드를 추가할 "
+"수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:702
 msgid ""
@@ -1492,6 +1602,9 @@ msgid ""
 "one will be generated for you but you can assign one yourself to get one "
 "that is easier to handle"
 msgstr ""
+"**ID**: 내부 목적으로 사용되며, 유일한 값이어야 합니다.  :ref:`사용자 지정 양식 <customize_form>` 을 "
+"작성하기 위해 필요할 수도 있습니다. 이 항목을 비워둘 경우, 자동적으로 생성되지만 사용자가 더 쉽게 다룰 수 있는 ID를 직접 할당할 "
+"수도 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:706
 msgid ""
@@ -1501,6 +1614,9 @@ msgid ""
 ":guilabel:`Composition` type allows you to duplicate also the child features"
 " when duplicating the parent ones."
 msgstr ""
+"**관계 강도(Relationship strength)**: 부모와 자식 레이어 관계의 강도를 설정합니다. 기본 "
+":guilabel:`Association` 유형은 부모 레이어가 자식 레이어에 *단순히* 링크돼 있다는 의미인 반면, "
+":guilabel:`Composition` 유형은 부모 레이어의 피처를 복제하는 경우 자식 피처도 복제되도록 할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:717
 msgid "Relation Manager"
@@ -1508,7 +1624,7 @@ msgstr "관계 관리자"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:722
 msgid "Forms for 1-N relations"
-msgstr ""
+msgstr "1대다(1-N) 관계용 양식"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:724
 msgid ""
@@ -1533,6 +1649,8 @@ msgid ""
 "shown in a table. And there are also some buttons available. Let's review "
 "them shortly:"
 msgstr ""
+"그림에서 보이듯이, 이 특정 지역에 할당된 공항이 테이블에 전부 표시됩니다. 또 사용할 수 있는 버튼도 몇 개 있습니다. 이 버튼들을 "
+"간단히 설명하겠습니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:741
 msgid ""
@@ -1541,13 +1659,13 @@ msgid ""
 "form of a feature from the region layer. But the table is representing "
 "features of the airport layer."
 msgstr ""
-"|toggleEditing| 아이콘은 편집 모드를 켜고 끕니다. 현재 ``regions`` 레이어에 있는 피처의 피처 양식을 보고 있긴 "
-"하지만, 이 아이콘은 ``airports`` 레이어의 편집 모드를 켜고 끈다는 점을 조심하십시오. 왜냐하면 테이블이 "
-"``airports`` 레이어의 피처를 표시하고 있기 때문입니다."
+"|toggleEditing| 버튼은 편집 모드를 켜고 끕니다. 현재 ``regions`` 레이어에 있는 피처의 피처 양식을 보고 있긴 "
+"하지만, 이 버튼은 ``airports`` 레이어의 편집 모드를 켜고 끈다는 점을 조심하십시오. 왜냐하면 테이블이 ``airports``"
+" 레이어의 피처를 표시하고 있기 때문입니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:745
 msgid "The |saveEdits| button is for saving all the edits."
-msgstr ""
+msgstr "|saveEdits| 버튼은 모든 편집 내용을 저장합니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:746
 msgid ""
@@ -1555,17 +1673,19 @@ msgid ""
 "attribute table. And it will assign the new airport to the current region by"
 " default."
 msgstr ""
+"|newTableRow| 버튼은 공항 레이어 속성 테이블에 새 레코드를 추가할 것입니다. 또 기본적으로 현재 지역에 새 공항을 할당할 "
+"것입니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:748
 msgid ""
 "The |duplicateFeature| button allows you to copy one or more child features."
-msgstr ""
+msgstr "|duplicateFeature| 버튼은 하나 이상의 자식 피처를 복사할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:749
 msgid ""
 "The |deleteSelectedFeatures| button will delete the selected airport "
 "permanently."
-msgstr ""
+msgstr "|deleteSelectedFeatures| 버튼은 선택한 공항을 영구적으로 삭제할 것입니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:751
 msgid ""
@@ -1573,7 +1693,7 @@ msgid ""
 "airport which will then be assigned to the current region. This may be handy"
 " if you created the airport on the wrong region by accident."
 msgstr ""
-"|link| 아이콘은 기존의 어떤 공항이라도 선택해서 현재 지역에 할당시킬 수 있는 새 대화창을 엽니다. 사용자가 잘못된 지역에 공항을 "
+"|link| 버튼은 기존의 어떤 공항이라도 선택해서 현재 지역에 할당시킬 수 있는 새 대화창을 엽니다. 사용자가 잘못된 지역에 공항을 "
 "실수로 생성한 경우 이 기능이 유용할 겁니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:754
@@ -1582,14 +1702,14 @@ msgid ""
 "region, leaving them unassigned (the foreign key is set to NULL) "
 "effectively."
 msgstr ""
-"|unlink| 아이콘은 현재 지역에서 선택한 공항을 할당 해제시켜, 사실상 비할당 상태로 (외래 키가 NULL로 설정된 상태로) "
+"|unlink| 버튼은 현재 지역에서 선택한 공항을 할당 해제시켜, 사실상 비할당 상태로 (외래 키가 NULL로 설정된 상태로) "
 "남겨둡니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:756
 msgid ""
 "With the |zoomToSelected| button you can zoom the map to the selected child "
 "features."
-msgstr ""
+msgstr "|zoomToSelected| 버튼을 사용하면 선택한 자식 피처로 맵을 확대/축소할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:758
 msgid ""
@@ -1597,6 +1717,8 @@ msgid ""
 " view and form view where the later let's you view all the airports in their"
 " respective form."
 msgstr ""
+"오른쪽에 있는 |formView| 와 |openTable| 두 버튼은 테이블 뷰와 양식 뷰를 서로 전환하는데, 양식 뷰에서는 모든 공항을"
+" 각각의 양식대로 살펴볼 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:762
 msgid ""
@@ -1605,24 +1727,28 @@ msgid ""
 "attribute table that has no corresponding geometric feature. To add the "
 "geometry:"
 msgstr ""
+"앞의 예시에서 참조하는 레이어가 도형을 보유하고 있기 (즉 그저 문자와 숫자를 조합한 테이블이 아니기) 때문에, 앞의 단계를 수행하면 "
+"레이어 속성 테이블에 대응 도형 피처가 없는 항목을 생성할 것입니다. 도형을 추가하려면:"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:767
 msgid ""
 "Choose |openTable| :menuselection:`Open Attribute Table` for the referencing"
 " layer."
 msgstr ""
+"|openTable| :menuselection:`Open Attribute Table`: 참조하는 레이어의 속성 테이블을 여십시오."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:768
 msgid ""
 "Select the record that has been added previously within the feature form of "
 "the referenced layer."
-msgstr ""
+msgstr "참조되는 레이어의 피처 양식 안에서 이전에 추가된 레코드를 선택하십시오."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:770
 msgid ""
 "Use the |addPart| :sup:`Add Part` digitizing tool to attach a geometry to "
 "the selected attributes table record."
 msgstr ""
+"|addPart| :sup:`Add Part` 디지타이즈 작업 도구를 사용해서 선택한 속성 테이블 레코드에 도형을 첨부하십시오."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:773
 msgid ""
@@ -1630,6 +1756,8 @@ msgid ""
 "automatically set up for the ``fk_region`` field (the one used to create the"
 " relation), see :ref:`Relation Reference widget <configure_field>`."
 msgstr ""
+"공항 테이블을 작업하는 경우, (관계를 생성하기 위해 사용된) ``fk_region`` 필드를 대상으로 관계 참조 위젯을 자동으로 "
+"설정합니다. :ref:`관계 참조 위젯 <configure_field>` 을 참조하세요."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:779
 msgid ""
@@ -1638,6 +1766,8 @@ msgid ""
 "layer will be opened. This widget allows you to easily and quickly open the "
 "forms of the linked parent features."
 msgstr ""
+"공항 양식의 ``fk_region`` 필드 오른쪽에 |formView| 버튼이 있을 겁니다. 이 버튼을 클릭하면 지역 레이어의 양식이 "
+"열릴 것입니다. 이 위젯에서 링크된 부모 피처의 양식을 쉽고 빠르게 열 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:789
 msgid "Identification dialog airport with relation to regions"
@@ -1650,6 +1780,9 @@ msgid ""
 ":menuselection:`Properties --> Attributes Form` menu of the airport layer: "
 "select the ``fk_region`` field and check the ``Show embedded form`` option."
 msgstr ""
+"관계 참조 위젯은 자식 레이어의 양식 안에 부모 레이어의 양식을 삽입할 수 있는 옵션도 가지고 있습니다. 공항 레이어의 "
+":menuselection:`Properties --> Attributes Form` 메뉴를 선택하고, ``fk_region`` 필드를 "
+"선택한 다음 ``Show embedded form`` 옵션을 활성화하십시오."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:796
 msgid ""
@@ -1669,6 +1802,10 @@ msgid ""
 "button if you chose the option ``Allow adding new features`` in the "
 ":menuselection:`Properties --> Attributes Form` menu of the airport layer."
 msgstr ""
+"게다가 공항 레이어의 편집 모드를 켜고 끌 경우, ``fk_region`` 필드도 자동 완성 기능을 지원합니다. 사용자가 입력하는 중에 "
+"지역 레이어의 ``id`` 필드의 모든 값을 보게 될 것입니다. 이때 공항 레이어의 :menuselection:`Properties "
+"--> Attributes Form` 메뉴에서 ``Allow adding new features`` 옵션을 선택했다면 |signPlus|"
+" 버튼을 눌러 폴리곤을 디지타이징할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:812
 msgid ""
@@ -1676,26 +1813,29 @@ msgid ""
 " to select features of the parent layer based on attributes of their "
 "children."
 msgstr ""
+"자식 피처의 속성을 기반으로 부모 레이어의 피처를 선택하기 위해 :ref:`select_by_value` 도구에서 자식 레이어를 사용할 "
+"수도 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:815
 msgid ""
 "In :ref:`figure_select_by_value`, all the regions where the mean altitude of"
 " the airports is greater than 500 meters above sea level are selected."
 msgstr ""
+":ref:`figure_select_by_value` 그림에서, 공항의 평균 해발고도가 500m를 초과하는 모든 지역을 선택합니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:818
 msgid ""
 "You will find that many different aggregation functions are available in the"
 " form."
-msgstr ""
+msgstr "이 양식에서 여러 서로 다른 집계 함수들을 사용할 수 있을 것입니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:825
 msgid "Select parent features with child values"
-msgstr ""
+msgstr "자식 값으로 부모 피처 선택"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:832
 msgid "Introducing many-to-many (N-M) relations"
-msgstr ""
+msgstr "다대다(N-M) 관계 소개"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:834
 msgid ""
@@ -1703,6 +1843,8 @@ msgid ""
 "the ``airports`` and ``airlines`` layers: an airport receives several "
 "airline companies and an airline company flies to several airports."
 msgstr ""
+"N-M 관계란 두 테이블 간의 다대다 관계를 말합니다. ``airports`` 와 ``airlines`` 레이어를 예로 들 수 있습니다."
+" 공항은 여러 항공사의 노선을 받아들이고 항공사는 여러 공항에 이착륙합니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:838
 msgid ""
@@ -1717,6 +1859,14 @@ msgid ""
 "The *constraints* in this table force that an airport can be associated with"
 " an airline only if both already exist in their layers."
 msgstr ""
+"다음 SQL 코드는 PostgreSQL/PostGIS 스키마에 *locations* 라는 명칭의 N-M 관계를 위해 필요한 테이블 3개를"
+" 생성합니다. PostGIS의 경우 :menuselection:`Database --> DB Manager…` 메뉴를 통해, 또는 "
+"`pgAdmin <https://www.pgadmin.org>`_ 같은 외부 도구들을 통해 코드를 실행할 수 있습니다. 공항 테이블은 "
+"``airports`` 레이어를, 항공사 테이블은 ``airlines`` 레이어를 저장하고 있습니다. 이 두 테이블에서 관계를 분명히 "
+"하기 위해 사용되는 필드는 몇 개 되지 않습니다. *까다로운* 부분은 ``airports_airlines`` 테이블입니다. 이 테이블에 "
+"모든 공항에 대해 모든 항공사를 (그리고 그 반대도) 전부 목록화해야 합니다. 이런 유형의 테이블을 *피벗(pivot) 테이블* 이라고 "
+"합니다. 공항과 항공사 둘 다 이미 각각의 레이어에 존재하는 경우에만 공항을 항공사와 관련지을 수 있도록 강제하는 것이 이 테이블의 "
+"*제약조건* 입니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:890
 msgid ""
@@ -1725,6 +1875,9 @@ msgid ""
 "Manager…`. In GeoPackage there are no schemas so the *locations* prefix is "
 "not needed."
 msgstr ""
+"PostgreSQL 대신 GeoPackage도 사용할 수 있습니다. 이 경우, 사용자가 :menuselection:`Database "
+"--> DB Manager…` 메뉴를 통해 세 테이블을 직접 생성할 수 있습니다. GeoPackage에는 스키마가 존재하지 않기 때문에 "
+"접두어 *locations* 을 붙일 필요도 없습니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:894
 msgid ""
@@ -1734,24 +1887,33 @@ msgid ""
 "SQL Window…`. GeoPackage doesn't support *ADD CONSTRAINT* statements so the "
 "``airports_airlines`` table should be created in two steps:"
 msgstr ""
+":menuselection:`Table --> Create Table…` 또는 :menuselection:`Table --> Edit "
+"Table…` 메뉴로는 ``airports_airlines`` 테이블의 외래 키 제약조건을 생성할 수 없기 때문에, "
+":menuselection:`Database --> SQL Window…` 를 사용해서 생성해야 합니다. GeoPackage는 *ADD "
+"CONSTRAINT* 선언문을 지원하지 않으므로 ``airports_airlines`` 테이블을 다음 두 단계를 거쳐 생성해야 합니다:"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:899
 msgid ""
 "Set up the table only with the ``id`` field using :menuselection:`Table --> "
 "Create Table…`"
 msgstr ""
+":menuselection:`Table --> Create Table…` 메뉴를 사용해서 ``id`` 필드만 보유한 테이블을 설정합니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:900
 msgid ""
 "Using :menuselection:`Database --> SQL Window…`, type and execute this SQL "
 "code:"
 msgstr ""
+":menuselection:`Database --> SQL Window…` 메뉴로 SQL 창을 열고, 다음 SQL 코드를 입력하고 "
+"실행합니다:"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:918
 msgid ""
 "Then in QGIS, you should set up two :ref:`one-to-many relations "
 "<one_to_many_relation>` as explained above:"
 msgstr ""
+"그 다음 QGIS에서, 앞에서 설명한 대로 :ref:`일대다(1-N) 관계 <one_to_many_relation>` 2개를 설정해야 "
+"합니다:"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:921
 msgid "a relation between ``airlines`` table and the pivot table;"
@@ -1769,10 +1931,14 @@ msgid ""
 " you only have to select the two you need. Remember to load the three tables"
 " in the QGIS project first."
 msgstr ""
+":menuselection:`Project --> Properties --> Relations` 메뉴에서 "
+":guilabel:`Discover Relations` 메뉴 옵션을 사용하면 (PostgreSQL인 경우에만) 이 작업을 더 쉽게 할 수"
+" 있습니다. QGIS가 사용자 데이터베이스의 모든 관계를 자동으로 읽어들여, 사용자는 필요한 두 관계만 선택하면 됩니다. 먼저 QGIS "
+"프로젝트에 세 테이블을 불러와야 한다는 것을 잊지마세요."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:934
 msgid "Relations and autodiscover"
-msgstr ""
+msgstr "관계와 자동검색"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:936
 msgid ""
@@ -1781,10 +1947,13 @@ msgid ""
 "will be made by the database if we specify the right *constraints* in the "
 "pivot table creation as in the current example."
 msgstr ""
+"사용자가 ``airport`` 또는 ``airline`` 을 제거하고자 하는 경우, QGIS는 ``airports_airlines`` "
+"테이블에서 관련 레코드(들)를 제거하지 않을 것입니다. 현재 예시에서처럼 피벗 테이블 생성 시 올바른 *제약조건* 을 지정한 경우 "
+"데이터베이스가 관련 레코드(들)를 제거할 것입니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:941
 msgid "**Combining N-M relation with automatic transaction group**"
-msgstr ""
+msgstr "**다대다 관계를 자동 트랜잭션(transaction) 그룹과 결합하기**"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:943
 msgid ""
@@ -1804,10 +1973,13 @@ msgid ""
 "and ``airlines`` layers. For the first one we should choose the **airlines "
 "(id)** option and for the second one the **airports (id)** option."
 msgstr ""
+"마지막으로 :menuselection:`Layer Properties --> Attributes Form` 메뉴에서 "
+"``airports`` 및 ``airlines`` 레이어를 위한 올바른 기수성(cardinality)을 선택해야 합니다. 전자의 경우 "
+"**airlines (id)** 옵션을, 후자의 경우 **airports (id)** 옵션을 선택해야 합니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:957
 msgid "Set relationship cardinality"
-msgstr ""
+msgstr "관계 기수성 설정"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:959
 msgid ""
@@ -1816,14 +1988,17 @@ msgid ""
 "child feature` in the subforms. A record will automatically be inserted in "
 "the ``airports_airlines`` table."
 msgstr ""
+"이제 :guilabel:`Add child feature` 또는 하위 양식에 있는 :guilabel:`Link existing child"
+" feature` 를 통해 공항을 항공사와 (또는 항공사를 공항과) 관련시킬 수 있습니다. 레코드가 "
+"``airports_airlines`` 테이블에 자동적으로 삽입될 것입니다."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:969
 msgid "N-M relationship between airports and airlines"
-msgstr ""
+msgstr "공항과 항공사 사이의 N-M 관계"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:971
 msgid "Using **Many to one relation** cardinality"
-msgstr ""
+msgstr "**다대일 관계** 기수성 사용하기"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:973
 msgid ""
@@ -1835,10 +2010,14 @@ msgid ""
 " --> Available widgets --> Fields`) for the foreign key fields in the pivot "
 "table."
 msgstr ""
+"N-M 관계에서 피벗 테이블을 숨기는 것이 바람직하지 않을 때가 있습니다. 주로 관계가 확정된 후에야 값을 가질 수 있는 관계에 있는 "
+"속성이 존재하기 때문입니다. 사용자 테이블이 레이어인 (도형 필드를 보유하고 있는) 경우 피벗 테이블의 외래 키 필드에 대해 "
+":guilabel:`On map identification` 옵션을 (:menuselection:`Layer Properties --> "
+"Attributes Form --> Available widgets --> Fields`) 활성화시켜보면 재미있을 수도요."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:980
 msgid "**Pivot table primary key**"
-msgstr ""
+msgstr "**피벗 테이블의 기본 키**"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:982
 msgid ""
@@ -1846,3 +2025,6 @@ msgid ""
 "assumes a single primary key so a constraint like ``constraint "
 "airports_airlines_pkey primary key (airport_fk, airline_fk)`` will not work."
 msgstr ""
+"피벗 테이블의 기본 키에 여러 필드를 사용하는 일을 피하십시오. QGIS는 단일 기본 키를 가정하기 때문에 ``constraint "
+"airports_airlines_pkey primary key (airport_fk, airline_fk)`` 같은 제약조건은 작동하지 "
+"않을 것입니다."
