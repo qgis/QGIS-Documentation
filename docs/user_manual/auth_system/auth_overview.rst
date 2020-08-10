@@ -251,7 +251,7 @@ authentication database and configurations:
 * **Enable password helper debug log**: enables a debug tool that will contain
   all the log information of the authentication methods
 * **Clear cached authentication configurations**: clears the internal lookup cache
-  for configurations used to speed up network connections. This does not clear
+  for configurations, used to speed up network connections. This does not clear
   QGIS’s core network access manager’s cache, which requires a relaunch of QGIS.
 * **Remove all authentication configurations**: clears the database of all
   configuration records, without removing other stored records.
