@@ -236,9 +236,9 @@ authentication database and configurations:
 * **Clear network authentication access cache**: clears the authentication cache
   of all connections
 * **Automatically clear network authentication access cache on SSL errors**: the
-  connection cache stores all authentication connections data even when the 
-  connection fails. If you make any change to the authentication configurations 
-  or to the certification authorities, you should clear the authentication cache 
+  connection cache stores all authentication data for connections, also when the
+  connection fails. If you change authentication configurations or certification authorities,
+  you should clear the authentication cache 
   or restart QGIS. When this option is checked, the authentication cache will be
   automatically cleared every time an SSL error occurs and you choose to abort 
   the connection
