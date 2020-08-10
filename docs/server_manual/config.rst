@@ -46,7 +46,7 @@ several ways to define these variables. This is fully described in
 
 .. list-table::
    :header-rows: 1
-   :widths: auto
+   :widths: 30 40 15 15
 
    * - Name
      - Description
