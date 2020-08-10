@@ -230,7 +230,7 @@ authentication database and configurations:
 * **Input master password**: opens the master password input dialog, independent 
   of performing any authentication database command.
 * **Clear cached master password**: unsets the master password if it has been 
-  set via input dialog
+  set
 * **Reset master password**: opens a dialog to change the master password (the 
   current password must be known) and optionally back up the current database
 * **Clear network authentication access cache**: clears the authentication cache
