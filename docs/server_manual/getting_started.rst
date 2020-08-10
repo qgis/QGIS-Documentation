@@ -784,6 +784,8 @@ to faster loading times on the client side.
 You can receive requested GetFeatureInfo as plain text, XML and GML. Default is XML,
 text or GML format depends the output format chosen for the GetFeatureInfo request.
 
+.. _`addGeometryToFeatureResponse` : 
+
 If you wish, you can check |checkbox| :guilabel:`Add geometry to feature response`.
 This will include the bounding box for each feature in the GetFeatureInfo response.
 See also the :ref:`WITH_GEOMETRY <server_wms_getfeatureinfo>` parameter.

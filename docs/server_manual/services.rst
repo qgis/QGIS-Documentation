@@ -122,9 +122,6 @@ extra parameters:
    "TILED", "No", "Working in *tiled mode*"
    "SLD", "No", "SLD file URL to be used for styling"
    "SLD_BODY", "No", "SLD XML content to be used for styling"
-   "WMS_PRECISION", "No", "The precision (number of digits) to deal with when
-   passing float in request (e.g. BBOX parameters). The default value is ``-1``
-   meaning that precision defined in the project is used.
 
 URL example:
 
@@ -564,6 +561,9 @@ the OGC WMS 1.1.0 and 1.3.0 specifications:
    "X", "No", "Same as `I` parameter, but in WMS 1.1.0"
    "J", "No", "Pixel row of the point to query"
    "Y", "No", "Same as `J` parameter, but in WMS 1.1.0"
+   "WMS_PRECISION", "No", "The precision (number of digits) to be used
+   when returning geometry (see :ref:`how to add geometry to feature response<addGeometryToFeatureResponse>`).
+   The default value is ``-1`` meaning that precision defined in the project is used."
 
 
 In addition to the standard ones, QGIS Server supports the following
