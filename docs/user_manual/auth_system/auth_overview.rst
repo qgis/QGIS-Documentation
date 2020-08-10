@@ -48,7 +48,7 @@ using the authentication system do not require input of the master password,
 such as when selecting an existing authentication configuration, or applying a
 configuration to a server configuration (such as when adding a WMS layer).
 
-You can choose whether to save the password in the ``Wallet/Keyring`` of your
+You can choose to save the password in the ``Wallet/Keyring`` of your
 computer.
 
 .. _figure_masterpass:
