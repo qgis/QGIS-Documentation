@@ -40,7 +40,7 @@ Master password
 
 To store or access sensitive information within the database, a user must define
 a `master password`. A new master password is requested and verified when
-initially storing any encrypted data to the database. Only when sensitive
+initially storing any encrypted data to the database. When sensitive
 information is accessed the user is prompted for the master password, which is
 then cached for the remainder of the session (until application is quit), unless
 the user manually chooses an action to clear its cached value. Some instances of
