@@ -228,7 +228,7 @@ authentication database and configurations:
    Utilities menu
 
 * **Input master password**: opens the master password input dialog, independent 
-  of performing any authentication database command.
+  of performing any authentication database command
 * **Clear cached master password**: unsets the master password if it has been 
   set
 * **Reset master password**: opens a dialog to change the master password (the 
