@@ -382,9 +382,9 @@ panel.
 
 It is possible to use localized paths for any kind of file based data source. 
 They are a list of paths which are used to abstract the data source location.
-For instance, if :file:`C:\my_maps` is listed in the localized paths,
-a layer having :file:`C:\my_maps\my_country\ortho.tif` as data source
-will be saved in the project using :file:`localized:my_country\ortho.tif`.
+For instance, if :file:`C:\\my_maps` is listed in the localized paths,
+a layer having :file:`C:\\my_maps\\my_country\\ortho.tif` as data source
+will be saved in the project using :file:`localized:my_country\\ortho.tif`.
 
 The paths are listed by order of preference, in other words QGIS will first look
 for the file in the first path, then in the second one, etc.
