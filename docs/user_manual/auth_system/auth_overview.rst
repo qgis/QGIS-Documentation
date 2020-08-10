@@ -256,9 +256,9 @@ authentication database and configurations:
 * **Remove all authentication configurations**: clears the database of all
   configuration records, without removing other stored records.
 * **Erase authentication database**: schedules a backup of the current database
-  and complete rebuild of the database table structure. These actions are
-  scheduled for a later time, so as to ensure other operations like project
-  loading do not interrupt the operation or cause errors due to a temporarily
+  and complete rebuild of the database table structure. The actions are
+  scheduled for a later time, to ensure that other operations, like project
+  loading, do not interrupt the operation or cause errors due to a temporarily
   missing database.
 
   .. _figure_authconfiutilsdb:
