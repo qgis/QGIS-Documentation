@@ -248,7 +248,7 @@ authentication database and configurations:
   changed master password in your Wallet/Keyring
 * **Clear the master password from your Wallet/Keyring**: deletes the master
   password from your Wallet/Keyring
-* **Enable password helper debug log**: enables a debug tool that will contains
+* **Enable password helper debug log**: enables a debug tool that will contain
   all the log information of the authentication methods
 * **Clear cached authentication configurations**: clears the internal lookup cache
   for configurations used to speed up network connections. This does not clear
