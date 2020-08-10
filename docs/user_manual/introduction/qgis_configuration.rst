@@ -865,12 +865,10 @@ Network Settings
 
 **General**
 
-* Define :guilabel:`WMS search address`, default is
-  ``http://geopole.org/wms/search?search=\%1\&type=rss``
 * Define :guilabel:`Timeout for network requests (ms)` - default is 60000
 * Define :guilabel:`Default expiration period for WMS Capabilities (hours)` -
   default is 24
-* Define :guilabel:`Default expiration period for WMSC/WMTS tiles (hours)` -
+* Define :guilabel:`Default expiration period for WMS-C/WMTS tiles (hours)` -
   default is 24
 * Define :guilabel:`Max retry in case of tile or feature request errors`
 * Define :guilabel:`User-Agent`
