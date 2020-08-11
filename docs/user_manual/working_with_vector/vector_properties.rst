@@ -3178,11 +3178,11 @@ QGIS Server Properties
 |overlay| The :guilabel:`QGIS Server` tab consists of :guilabel:`Description`,
 :guilabel:`Attribution`, :guilabel:`MetadataURL`, and :guilabel:`LegendUrl` sections.
 
-You can add or edit a title and abstract for the layer in the
-:guilabel:`Description` section. It's also possible to define a
-:guilabel:`Keyword list` here. These keyword lists can be used in a
-metadata catalog. If you want to use a title from an XML metadata file,
-you have to fill in a link in the :guilabel:`DataUrl` field.
+From the :guilabel:`Description` section, you can change the :guilabel:`Short name` used to
+reference the layer in requests. You can also add or edit a :guilabel:`Title` and
+:guilabel:`Abstract` for the layer, or define a :guilabel:`Keyword list` here. These
+keyword lists can be used in a metadata catalog. If you want to use a title from an
+XML metadata file, you have to fill in a link in the :guilabel:`DataUrl` field.
 
 Use :guilabel:`Attribution` to get attribute data from an XML metadata catalog.
 

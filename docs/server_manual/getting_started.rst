@@ -781,6 +781,11 @@ It is recommended that you exclude from publishing the layers that you don't
 need as this reduces the size of the WMS GetCapabilities response which leads
 to faster loading times on the client side.
 
+If you check |checkbox| :guilabel:`Use layer ids as name`, layer ids will be
+used to reference layer in **GetCapabilities** request output or **GetMap LAYERS**
+parameters. If not, layer name or short name if defined (see :ref:`vectorservermenu`)
+is used instead.
+
 You can receive requested GetFeatureInfo as plain text, XML and GML. Default is XML,
 text or GML format depends the output format chosen for the GetFeatureInfo request.
 
