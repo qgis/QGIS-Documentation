@@ -268,6 +268,8 @@ The corresponding entries in the ini file are **/qgis/max_threads** and
 **/qgis/parallel_rendering** and their values are **true** and **4** threads.
 
 
+.. _server_short_name:
+
 Short name for layers, groups and project
 =========================================
 
@@ -280,17 +282,18 @@ For example, a dataset might have the descriptive Title
 Name “ATMAX”. User can already set title for layers, groups and project.
 
 OWS name is based on the name used in layer tree. This name is more a label
-for humans than a name for machine-to-machine communication.
+for humans than a name for machine-to-machine communication. You can set a
+**Short name** for layers, groups or project, so it is used by QGIS Sever as
+the layer name.
 
-QGIS Server supports:
+You can set short name for:
 
-* short name line edits to layers properties
-  You can change this by right clicking on a layer, choose
-  :menuselection:`Properties --> Metadata tab --> Description --> Short name`.
+* **Layers**: You can change this by right clicking on a layer, choose
+  :menuselection:`Properties --> QGIS Server --> Description --> Short name`.
 
-* WMS data dialog to layer tree group (short name, title, abstract)
-
-  By right clicking on a layer group and selecting the :guilabel:`Set Group WMS data` option you will get:
+* **Groups**: You can open a WMS data dialog (short name, title, abstract) by
+  right clicking on a layer group and selecting the :guilabel:`Set Group WMS data`
+  option.
 
   .. _figure_group_wms_data:
 
@@ -299,19 +302,10 @@ QGIS Server supports:
 
      Set group WMS data dialog
 
-* short name line edits to project properties - add a regexp validator
-  ``"^[A-Za-z][A-Za-z0-9\._-]*"`` to short name line edit accessible through a
-  static method
-* add a regexp validator ``"^[A-Za-z][A-Za-z0-9\._-]*"`` to short name line
-  edit accessible through a static method
+* **Project**: You can choose a short name for the project root by going
+  to :menuselection:`Project properties --> QGIS Server --> Service capabilities
+  --> Short name`.
 
-  You can choose a short name for the project root by going to :menuselection:`Project properties -->
-  OWS Server --> Service capabilities --> Short name`.
-
-* add a ``TreeName`` element in the ``fullProjectSettings``
-
-If a short name has been set for layers, groups or project it is used by
-QGIS Sever as the layer name.
 
 Connection to service file
 ==========================

@@ -3179,7 +3179,8 @@ QGIS Server Properties
 :guilabel:`Attribution`, :guilabel:`MetadataURL`, and :guilabel:`LegendUrl` sections.
 
 From the :guilabel:`Description` section, you can change the :guilabel:`Short name` used to
-reference the layer in requests. You can also add or edit a :guilabel:`Title` and
+reference the layer in requests (to learn more about short names, read
+:ref:`server_short_name`). You can also add or edit a :guilabel:`Title` and
 :guilabel:`Abstract` for the layer, or define a :guilabel:`Keyword list` here. These
 keyword lists can be used in a metadata catalog. If you want to use a title from an
 XML metadata file, you have to fill in a link in the :guilabel:`DataUrl` field.
