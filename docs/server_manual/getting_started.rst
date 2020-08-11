@@ -763,7 +763,7 @@ to add the CRSs used in the QGIS project to the list.
 
 If you have print layouts defined in your project, they will be listed in the
 `GetProjectSettings` response, and they can be used by the GetPrint request to
-create prints, using one of the print layout layouts as a template.
+create prints, using one of the print layouts as a template.
 This is a QGIS-specific extension to the WMS 1.3.0 specification.
 If you want to exclude any print layout from being published by the WMS,
 check |checkbox| :guilabel:`Exclude layouts` and click the
