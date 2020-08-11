@@ -517,13 +517,20 @@ and **Romania** they're highlighted in yellow.
 
   Server response to a GetMap request with SELECTION parameter
 
+.. _server_wms_tiled:
 
 TILED
 ^^^^^
 
+For performance reasons, QGIS Server can be used in tiled mode. In this
+mode, client requests several small fixed size tiles in order to assemble
+them and form the whole map. Doing this, some symbols who live at the
+boundary between two tiles may appeared cut, because they live in one tile,
+not the other.
+
 Set the ``TILED`` parameter to ``TRUE`` to tell QGIS Server to work in
 *tiled* mode, and to apply the *Tile buffer* configured in the QGIS
-project.
+project (see :ref:`Creatingwmsfromproject`).
 
 When ``TILED`` is ``TRUE`` and when a non-zero Tile buffer is
 configured in the QGIS project, features outside the tile extent are

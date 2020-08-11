@@ -807,9 +807,6 @@ If you want QGIS Server to advertise specific request URLs
 in the WMS GetCapabilities response, enter the corresponding URL in the
 :guilabel:`Advertised URL` field.
 
-You can change the limit of altas features printed in one request by setting the
-:guilabel:`Maximum features for Atlas print requests` gfield.
-
 Furthermore, you can restrict the maximum size of the maps returned by the
 GetMap request by entering the maximum width and height into the respective
 fields under :guilabel:`Maximums for GetMap request`.
@@ -817,6 +814,13 @@ fields under :guilabel:`Maximums for GetMap request`.
 You can change the :guilabel:`Quality for JPEG images` factor. The quality factor must be
 in the range 0 to 100. Specify 0 to obtain small compressed files, 100 for large
 uncompressed files.
+
+You can change the limit of altas features printed in one request by setting the
+:guilabel:`Maximum features for Atlas print requests` gfield.
+
+When QGIS Server is used in tiled mode (see :ref:`TILED parameter<server_wms_tiled>`), you can set the
+:guilabel:`Tile buffer in pixels`. The recommended value is the size of the largest
+symbol or line width in your QGIS project.
 
 If one of your layers uses the :ref:`Map Tip display <maptips>` (i.e. to show text using
 expressions) this will be listed inside the GetFeatureInfo output. If the
