@@ -782,9 +782,9 @@ need as this reduces the size of the WMS GetCapabilities response which leads
 to faster loading times on the client side.
 
 If you check |checkbox| :guilabel:`Use layer ids as name`, layer ids will be
-used to reference layer in **GetCapabilities** request output or **GetMap LAYERS**
-parameters. If not, layer name or short name if defined (see :ref:`vectorservermenu`)
-is used instead.
+used to reference layer in `GetCapabilities` response or `GetMap LAYERS`
+parameter. If not, layer name or short name if defined (see :ref:`vectorservermenu`)
+is used.
 
 You can receive requested GetFeatureInfo as plain text, XML and GML. Default is XML,
 text or GML format depends the output format chosen for the GetFeatureInfo request.
@@ -816,7 +816,7 @@ in the range 0 to 100. Specify 0 to obtain small compressed files, 100 for large
 uncompressed files.
 
 You can change the limit of altas features printed in one request by setting the
-:guilabel:`Maximum features for Atlas print requests` gfield.
+:guilabel:`Maximum features for Atlas print requests` field.
 
 When QGIS Server is used in tiled mode (see :ref:`TILED parameter<server_wms_tiled>`), you can set the
 :guilabel:`Tile buffer in pixels`. The recommended value is the size of the largest
