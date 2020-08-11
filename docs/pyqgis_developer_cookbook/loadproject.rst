@@ -106,9 +106,9 @@ original file path or data source) and return a processed version of this path.
 
 The path pre-processor function is called **before** any bad layer handler. 
 
-Here following a list of useful use cases:
+Some use cases:
 
-#. replace an outdated folder path with a new one:
+#. replace an outdated path:
 
    .. testcode:: loadproject
 
@@ -117,7 +117,7 @@ Here following a list of useful use cases:
 
         QgsPathResolver.setPathPreprocessor(my_processor)
 
-#. replace a stored database host with a new one:
+#. replace a database host address with a new one:
 
    .. testcode:: loadproject
 
