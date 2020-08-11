@@ -970,7 +970,7 @@ Parameters
      - [number]
 
        Default: 200
-     - Maximum number of attempts if minimum distance it too small
+     - Maximum number of attempts to place the points
    * - **Random points**
      - ``OUTPUT``
      - [vector: point]
