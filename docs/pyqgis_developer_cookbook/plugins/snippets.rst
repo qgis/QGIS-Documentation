@@ -118,9 +118,9 @@ How to access attribute table of selected features
 Interface for plugin in the options dialog
 ------------------------------------------
 
-You can add a custom plugin options tab to :guilabel:`Settings -> Options`. The 
+You can add a custom plugin options tab to :menuselection:`Settings --> Options`. The 
 following snippet will just add the plugin tab without any option accessible.
-You can split the following classes in a different file, in this example we are
+You can split the following classes into different files. In this example, we are
 adding two classes into the main :file:`mainPlugin.py` file.
 
 .. testcode:: plugin_snippets
@@ -143,7 +143,6 @@ adding two classes into the main :file:`mainPlugin.py` file.
             super(ConfigOptionsPage, self).__init__(parent)
             layout = QHBoxLayout()
             layout.setContentsMargins(0, 0, 0, 0)
-            layout.setMargin(0)
             self.setLayout(layout)
 
 Finally we are adding the imports and modifying the ``__init__`` function:
