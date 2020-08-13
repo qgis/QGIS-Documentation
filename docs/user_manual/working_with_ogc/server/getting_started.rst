@@ -756,8 +756,8 @@ You can receive requested GetFeatureInfo as plain text, XML and GML. Default is 
 text or GML format depends the output format chosen for the GetFeatureInfo request.
 
 If you wish, you can check |checkbox| :guilabel:`Add geometry to feature response`.
-This will include in the GetFeatureInfo response the geometries of the
-features in a text format.
+This will include the bounding box for each feature in the GetFeatureInfo response.
+See also the :ref:`WITH_GEOMETRY <server_wms_getfeatureinfo>` parameter.
 
 As many web clients can’t display circular arcs in geometries you have the option
 to segmentize the geometry before sending it to the client in a GetFeatureInfo
