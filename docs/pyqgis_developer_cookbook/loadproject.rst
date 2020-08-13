@@ -101,11 +101,9 @@ return a boolean value that you can use to check if the operation was successful
     # Now you can safely load your project and see it in the canvas
     project.read('testdata/my_new_qgis_project.qgs')
 
-<<<<<<< HEAD
    .. testoutput:: loadproject
 
     ...
-=======
 
 Resolving bad paths
 ===================
@@ -154,4 +152,3 @@ Some use cases:
             return path
 
         QgsPathResolver.setPathPreprocessor(my_processor)
->>>>>>> a0270ce74... [pyqgis] Add broken path handling with QgsPathResolver (#5980)
