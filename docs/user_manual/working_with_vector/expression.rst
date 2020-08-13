@@ -16,7 +16,7 @@ Based on layer data and prebuilt or user defined functions, **Expressions**
 offer a powerful way to manipulate attribute value, geometry and variables
 in order to dynamically change the geometry style, the content or position
 of the label, the value for diagram, the height of a layout item,
-select some features, create virtual field...
+select some features, create virtual field, ...
 
 .. _expression_builder:
 
@@ -47,7 +47,7 @@ The Interface
 -------------
 
 The :guilabel:`Expression` tab provides the main interface to write expressions
-using functions, layer's fields and values. It contains following widgets:
+using functions, layer fields and values. It contains the following widgets:
 
 .. _figure_expression_tab:
 
@@ -57,7 +57,7 @@ using functions, layer's fields and values. It contains following widgets:
 
    The Expression tab
 
-* An expression editor area to type or paste expressions. Autocompletion is
+* An expression editor area for typing or pasting expressions. Autocompletion is
   available to speed expression writing:
 
   * Corresponding variables, function names and field names to the input text
@@ -170,47 +170,48 @@ Writing an expression in QGIS follows some rules:
 
    * pressing the |expressionSelect|:sup:`Select by expression` tool means that
      you want to "select features from buildings". The **condition** is the
-     remaining and single information you need to fill in the expression text widget,
-     eg type ``height > 20`` to select buildings of height greater than 20.
+     only information you need to provide in the expression text widget,
+     e.g. type ``"height" > 20`` to select buildings that are higher than 20.
    * with this selection made, pressing the |calculateField| :sup:`Field calculator`
      button and choosing "height" as :guilabel:`Update existing field`, you already
      provide the command "update buildings set height = ??? where height > 20".
-     The only remaining bits you have to fill in this case is the **new value**,
-     eg just enter ``50`` to set rhe height of the previously selected buildings.
+     The only remaining bits you have to provide in this case is the **new value**,
+     e.g. just enter ``50`` to set the height of the previously selected buildings.
 
-#. **Pay attention to quotes**: single quote returns a literal, so a text
-   placed between single quotes (``'145'``) is interpreted as a string.
-   Double quotes will give you the value of that text so use it for fields
-   (ie ``"myfield"``). Field can also be used without quotes (``myfield``).
+#. **Pay attention to quotes**: single quotes return a literal, so a
+   text placed between single quotes (``'145'``) is interpreted as a string.
+   Double quotes will give you the value of that text so use them for fields
+   (``"myfield"``). Fields can also be used without quotes (``myfield``).
    No quotes for numbers (``3.16``).
 
    .. note:: Functions normally take as argument a string for field name.
        Do::
 
-        attribute( @atlas_feature, 'height' ) -- returns value stored in "height" attribute for the current atlas feature
+        attribute( @atlas_feature, 'height' ) -- returns the value stored in the "height" attribute of the current atlas feature
 
        And not::
 
-        attribute( @atlas_feature, "height" ) -- fetches the value of the attribute named "height", and then gets the attribute from atlasfeature which is called that value. Probably wrong.
+        attribute( @atlas_feature, "height" ) -- fetches the value of the attribute named "height" (e.g. 100), and use that value as a field
+                                              -- from which to return the atlas feature value. Probably wrong as a field named "100" may not exist.
 
 
 .. index:: Named parameters
    single: Expressions; Named parameters
    single: Functions; Named parameters
 
-.. tip:: **Use named parameters to improve the expression reading**
+.. tip:: **Use named parameters to ease expression reading**
 
   Some functions require many parameters to be set. The expression engine supports the
   use of named parameters. This means that instead of writing the cryptic expression
   ``clamp( 1, 2, 9)``, you can use ``clamp( min:=1, value:=2, max:=9)``. This also allows
   arguments to be switched, e.g. ``clamp( value:=2, max:=9, min:=1)``. Using named parameters
   helps clarify what the arguments for an expression function refer to, which is helpful
-  when you are trying to interpret an expression at a later date!
+  when you are trying to interpret an expression later!
 
 Some use cases of expressions
 -----------------------------
 
-* From Field Calculator, calculate a "pop_density" field using existing "total_pop"
+* From the Field Calculator, calculate a "pop_density" field using the existing "total_pop"
   and "area_km2" fields::
 
     "total_pop" / "area_km2"
@@ -237,15 +238,15 @@ Some use cases of expressions
 
     "density_level" = 'High population density' and "price_m2" > 10000
 
-  Likewise, the previous expression could also be used to define which features
-  should be labeled or shown in the map.
+  The previous expression could also be used to define which features
+  to label or show on the map.
 
 * Create a different symbol (type) for the layer, using the geometry generator::
 
     point_on_surface( $geometry )
 
-* Given a point feature, generate a closed line (using ``make_line``) around the
-  point's geometry::
+* Given a point feature, generate a closed line (using ``make_line``) around its
+  geometry::
 
     make_line(
       -- using an array of points placed around the original
