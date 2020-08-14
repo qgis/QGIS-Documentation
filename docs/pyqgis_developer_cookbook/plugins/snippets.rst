@@ -10,11 +10,14 @@
 
     from qgis.gui import (
         QgsOptionsWidgetFactory,
-        QgsOptionsPageWidget
+        QgsOptionsPageWidget,
+        QgsMapLayerConfigWidgetFactory,
+        QgsMapLayerConfigWidget
     )
 
     from qgis.PyQt.QtCore import Qt
     from qgis.PyQt.QtWidgets import QMessageBox, QAction, QHBoxLayout
+    from qgis.PyQt.QtGui import QIcon
 
     import mock
 
@@ -181,3 +184,7 @@ Finally we are adding the imports and modifying the ``__init__`` function:
 
         def unload(self):
             iface.unregisterOptionsWidgetFactory(self.options_factory)
+
+.. tip:: You can apply a similar logic to add the plugin custom option to the layer 
+    properties dialog using the classes :class:`QgsMapLayerConfigWidgetFactory <qgis.gui.QgsMapLayerConfigWidgetFactory>` 
+    and :class:`QgsMapLayerConfigWidget <qgis.gui.QgsMapLayerConfigWidget>`.
