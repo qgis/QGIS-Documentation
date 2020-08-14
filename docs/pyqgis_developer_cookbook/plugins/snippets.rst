@@ -10,9 +10,7 @@
 
     from qgis.gui import (
         QgsOptionsWidgetFactory,
-        QgsOptionsPageWidget,
-        QgsMapLayerConfigWidgetFactory,
-        QgsMapLayerConfigWidget
+        QgsOptionsPageWidget
     )
 
     from qgis.PyQt.QtCore import Qt
@@ -124,11 +122,11 @@ Interface for plugin in the options dialog
 You can add a custom plugin options tab to :menuselection:`Settings --> Options`.
 This is preferable over adding a specific main menu entry for your plugin's 
 options, as it keeps all of the QGIS application settings and plugin settings in 
-a single place which is easy for user's to discover and navigate.
+a single place which is easy for users to discover and navigate.
+
 The following snippet will just add a new blank tab for the plugin's settings, 
 ready for you to populate with all the options and settings specific to your 
 plugin.
-
 You can split the following classes into different files. In this example, we are
 adding two classes into the main :file:`mainPlugin.py` file.
 
