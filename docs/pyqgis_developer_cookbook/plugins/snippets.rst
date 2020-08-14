@@ -135,7 +135,7 @@ adding two classes into the main :file:`mainPlugin.py` file.
             super().__init__()
 
         def icon(self):
-            return QgsApplication.getThemeIcon('icon.svg')
+            return QIcon('icons/my_plugin_icon.svg')
 
         def createWidget(self, parent):
             return ConfigOptionsPage(parent)
