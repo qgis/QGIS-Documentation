@@ -500,7 +500,6 @@ input and output. Below is an alphabetically sorted list:
 * :class:`QgsProcessingParameterLayout <qgis.core.QgsProcessingParameterLayout>`
 * :class:`QgsProcessingParameterLayoutItem <qgis.core.QgsProcessingParameterLayoutItem>`
 * :class:`QgsProcessingParameterMapLayer <qgis.core.QgsProcessingParameterMapLayer>`
-* :class:`QgsProcessingParameterMapTheme <qgis.core.QgsProcessingParameterMapTheme>`
 * :class:`QgsProcessingParameterMatrix <qgis.core.QgsProcessingParameterMatrix>`
 * :class:`QgsProcessingParameterMeshLayer <qgis.core.QgsProcessingParameterMeshLayer>`
 * :class:`QgsProcessingParameterMultipleLayers <qgis.core.QgsProcessingParameterMultipleLayers>`
