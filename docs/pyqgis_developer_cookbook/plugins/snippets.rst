@@ -118,8 +118,12 @@ How to access attribute table of selected features
 Interface for plugin in the options dialog
 ------------------------------------------
 
-You can add a custom plugin options tab to :menuselection:`Settings --> Options`. The 
-following snippet will just add the plugin tab without any option accessible.
+You can add a custom plugin options tab to :menuselection:`Settings --> Options`.
+This is preferable over adding a specific main menu entry for your plugin's options, as it keeps all of the 
+QGIS application settings and plugin settings in a single place which is easy for user's to discover and navigate.
+  The 
+following snippet will just add a new blank tab for the plugin's settings, ready for you to populate with all the
+options and settings specific to your plugin.
 You can split the following classes into different files. In this example, we are
 adding two classes into the main :file:`mainPlugin.py` file.
 
@@ -128,7 +132,7 @@ adding two classes into the main :file:`mainPlugin.py` file.
     class MyPluginOptionsFactory(QgsOptionsWidgetFactory):
 
         def __init__(self):
-            super(QgsOptionsWidgetFactory, self).__init__()
+            super().__init__()
 
         def icon(self):
             return QgsApplication.getThemeIcon('icon.svg')
@@ -140,7 +144,7 @@ adding two classes into the main :file:`mainPlugin.py` file.
     class ConfigOptionsPage(QgsOptionsPageWidget):
 
         def __init__(self, parent):
-            super(ConfigOptionsPage, self).__init__(parent)
+            super().__init__(parent)
             layout = QHBoxLayout()
             layout.setContentsMargins(0, 0, 0, 0)
             self.setLayout(layout)
@@ -167,6 +171,11 @@ Finally we are adding the imports and modifying the ``__init__`` function:
             # Save reference to the QGIS interface
             self.iface = iface
 
+
+        def initGui(self):
             self.options_factory = MyPluginOptionsFactory()
             self.options_factory.setTitle(self.tr('My Plugin'))
             iface.registerOptionsWidgetFactory(self.options_factory)
+
+        def unload(self):
+            iface.unregisterOptionsWidgetFactory(self.options_factory)
