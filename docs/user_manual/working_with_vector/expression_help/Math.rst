@@ -562,9 +562,9 @@ Transforms a given value from an input domain to an output range using an expone
    :widths: 15 85
 
    * - Syntax
-     - scale_exp(val, domain_min, domain_max, range_min, range_max, exponent)
+     - scale_exp(value, domain_min, domain_max, range_min, range_max, exponent)
    * - Arguments
-     - * **val** - A value in the input domain. The function will return a corresponding scaled value in the output range.
+     - * **value** - A value in the input domain. The function will return a corresponding scaled value in the output range.
        * **domain_min** - Specifies the minimum value in the input domain, the smallest value the input value should take.
        * **domain_max** - Specifies the maximum value in the input domain, the largest value the input value should take.
        * **range_min** - Specifies the minimum value in the output range, the smallest value which should be output by the function.
@@ -594,9 +594,9 @@ Transforms a given value from an input domain to an output range using linear in
    :widths: 15 85
 
    * - Syntax
-     - scale_linear(val, domain_min, domain_max, range_min, range_max)
+     - scale_linear(value, domain_min, domain_max, range_min, range_max)
    * - Arguments
-     - * **val** - A value in the input domain. The function will return a corresponding scaled value in the output range.
+     - * **value** - A value in the input domain. The function will return a corresponding scaled value in the output range.
        * **domain_min** - Specifies the minimum value in the input domain, the smallest value the input value should take.
        * **domain_max** - Specifies the maximum value in the input domain, the largest value the input value should take.
        * **range_min** - Specifies the minimum value in the output range, the smallest value which should be output by the function.

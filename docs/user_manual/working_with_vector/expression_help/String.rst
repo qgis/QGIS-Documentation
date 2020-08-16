@@ -159,7 +159,7 @@ Formats a date type or string into a custom string format. Uses Qt date/time for
        * **language** - language (lowercase, two- or three-letter, ISO 639 language code) used to format the date into a custom string
    * - Examples
      - * ``format_date('2012-05-15','dd.MM.yyyy')`` → '15.05.2012'
-       * ``format_date('2012-05-15','d MMMM yyyy','fr')`` → '15 juin 2012'
+       * ``format_date('2012-05-15','d MMMM yyyy','fr')`` → '15 mai 2012'
 
 
 .. end_format_date_section

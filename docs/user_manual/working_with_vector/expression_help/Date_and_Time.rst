@@ -214,7 +214,7 @@ Formats a date type or string into a custom string format. Uses Qt date/time for
        * **language** - language (lowercase, two- or three-letter, ISO 639 language code) used to format the date into a custom string
    * - Examples
      - * ``format_date('2012-05-15','dd.MM.yyyy')`` → '15.05.2012'
-       * ``format_date('2012-05-15','d MMMM yyyy','fr')`` → '15 juin 2012'
+       * ``format_date('2012-05-15','d MMMM yyyy','fr')`` → '15 mai 2012'
 
 
 .. end_format_date_section
@@ -240,7 +240,7 @@ Extracts the hour part from a time or datetime.
    * - Arguments
      - * **datetime** - a time or datetime value
    * - Examples
-     - * ``hour('2012-07-22T13:24:57')`` → 13
+     - * ``hour( to_datetime('2012-07-22 13:24:57') )`` → 13
 
 
 **Interval variant**
@@ -255,7 +255,7 @@ Calculates the length in hours of an interval.
    * - Arguments
      - * **interval** - interval value to return number of hours from
    * - Examples
-     - * ``hour(tointerval('3 hours'))`` → 3
+     - * ``hour(to_interval('3 hours'))`` → 3
        * ``hour(age('2012-07-22T13:00:00','2012-07-22T10:00:00'))`` → 3
        * ``hour(age('2012-01-01','2010-01-01'))`` → 17520
 
@@ -389,7 +389,7 @@ Extracts the minutes part from a time or datetime.
    * - Arguments
      - * **datetime** - a time or datetime value
    * - Examples
-     - * ``minute('2012-07-22T13:24:57')`` → 24
+     - * ``minute( to_datetime('2012-07-22 13:24:57') )`` → 24
 
 
 **Interval variant**
@@ -404,7 +404,7 @@ Calculates the length in minutes of an interval.
    * - Arguments
      - * **interval** - interval value to return number of minutes from
    * - Examples
-     - * ``minute(tointerval('3 minutes'))`` → 3
+     - * ``minute(to_interval('3 minutes'))`` → 3
        * ``minute(age('2012-07-22T00:20:00','2012-07-22T00:00:00'))`` → 20
        * ``minute(age('2012-01-01','2010-01-01'))`` → 1051200
 
@@ -494,7 +494,7 @@ Extracts the seconds part from a time or datetime.
    * - Arguments
      - * **datetime** - a time or datetime value
    * - Examples
-     - * ``second('2012-07-22T13:24:57')`` → 57
+     - * ``second( to_datetime('2012-07-22 13:24:57') )`` → 57
 
 
 **Interval variant**
@@ -509,7 +509,8 @@ Calculates the length in seconds of an interval.
    * - Arguments
      - * **interval** - interval value to return number of seconds from
    * - Examples
-     - * ``second(age('2012-07-22T00:20:00','2012-07-22T00:00:00'))`` → 1200
+     - * ``second(to_interval('3 minutes'))`` → 180
+       * ``second(age('2012-07-22T00:20:00','2012-07-22T00:00:00'))`` → 1200
        * ``second(age('2012-01-01','2010-01-01'))`` → 63072000
 
 
@@ -578,7 +579,7 @@ Converts a string into a datetime object. An optional format string can be provi
 to_interval
 ...........
 
-Converts a string to a interval type. Can be used to take days, hours, month, etc of a date.
+Converts a string to an interval type. Can be used to take days, hours, month, etc of a date.
 
 .. list-table::
    :widths: 15 85

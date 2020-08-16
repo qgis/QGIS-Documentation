@@ -335,13 +335,13 @@ Returns a darker (or lighter) color string
      - * **color** - a color string
        * **factor** - an integer corresponding to the darkening factor:
 
-         * if the factor is greater than 100, this functions returns a darker color (e.g., setting factor to 300 returns a color that has one-third the brightness);
+         * if the factor is greater than 100, this function returns a darker color (e.g., setting factor to 200 returns a color that is half the brightness);
          * if the factor is less than 100, the return color is lighter, but using the lighter() function for this purpose is recommended;
          * if the factor is 0 or negative, the return value is unspecified.
          
 
    * - Examples
-     - * ``darker('200,10,30',300)`` → '66,3,10,255'
+     - * ``darker('200,10,30', 200)`` → '100,5,15,255'
 
 
 .. end_darker_section
@@ -362,15 +362,15 @@ Returns a lighter (or darker) color string
      - lighter(color, factor)
    * - Arguments
      - * **color** - a color string
-       * **factor** - a integer number corresponding to the lightening factor:
+       * **factor** - an integer corresponding to the lightening factor:
 
-         * if the factor is greater than 100, this functions returns a lighter color (for e.g., setting factor to 150 returns a color that is 50% brighter);
+         * if the factor is greater than 100, this function returns a lighter color (e.g., setting factor to 150 returns a color that is 50% brighter);
          * if the factor is less than 100, the return color is darker, but using the darker() function for this purpose is recommended;
          * if the factor is 0 or negative, the return value is unspecified.
          
 
    * - Examples
-     - * ``lighter('200,10,30',200)`` → '255,158,168,255'
+     - * ``lighter('200,10,30', 200)`` → '255,158,168,255'
 
 
 .. end_lighter_section

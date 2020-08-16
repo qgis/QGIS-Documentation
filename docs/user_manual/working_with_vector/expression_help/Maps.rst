@@ -227,6 +227,7 @@ Returns the value of a map, given it's key.
        * **key** - the key to lookup
    * - Examples
      - * ``map_get(map('1','one','2','two'),'2')`` → 'two'
+       * ``map_get( item_variables('Map 0'), 'map_scale')`` → scale of the item 'Map 0' in the current print layout
 
 
 .. end_map_get_section

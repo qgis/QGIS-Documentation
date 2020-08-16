@@ -13,7 +13,7 @@
 CASE
 ....
 
-CASE is used to evaluate a series of conditions and return a result for the first condition that is met. The conditions are evaluated sequentially, and if a condition is true, the evaluation will stop, and the corresponding result will be returned. If none of the conditions are true, the value in the ELSE clause is returned. Furthermore, if no ELSE clause is set and none of the conditions are met, NULL is returned.
+CASE is used to evaluate a series of conditions and return a result for the first condition met. The conditions are evaluated sequentially, and if a condition is true, the evaluation stops, and the corresponding result is returned. If none of the conditions are true, the value in the ELSE clause is returned. Furthermore, if no ELSE clause is set and none of the conditions are met, NULL is returned.
 
 
 
@@ -39,8 +39,8 @@ END
        * **THEN result** - If *condition* evaluates to True then *result* is evaluated and returned.
        * **ELSE result** - If none of the above conditions evaluated to True then *result* is evaluated and returned.
    * - Examples
-     - * ``CASE WHEN "name" IS NULL THEN 'None' END`` →  Returns the string 'none' if the "name" field is NULL
-       * ``CASE WHEN $area > 10000 THEN 'Big property' WHEN $area > 5000 THEN 'Medium property' ELSE 'Small property' END`` →  Returns the string 'Big property' if the area is bigger than 10000, 'Medium property' if the area is between 5000 and 10000, and 'Small property' for others
+     - * ``CASE WHEN "name" IS NULL THEN 'None' END`` → Returns the string 'None' if the "name" field is NULL
+       * ``CASE WHEN $area > 10000 THEN 'Big property' WHEN $area > 5000 THEN 'Medium property' ELSE 'Small property' END`` → Returns the string 'Big property' if the area is bigger than 10000, 'Medium property' if the area is between 5000 and 10000, and 'Small property' for others
 
 
 .. end_CASE_section

@@ -420,7 +420,7 @@ To get around this limitation, this function can be used to manage sequence valu
 The sequence table will be filtered for a sequence id (filter_attribute and filter_value) and the current value of the id_field will be incremented by 1 and the incremented value returned.
 
 
-If additional columns require values to be specified, the default_value map can be used for this purpose.
+If additional columns require values to be specified, the default_values map can be used for this purpose.
 
 
 **Note**
@@ -446,8 +446,8 @@ When the database parameter is a layer and the layer is in transaction mode, the
        * **filter_value** - Name of the sequence to use.
        * **default_values** - Map with default values for additional columns on the table. The values need to be fully quoted. Functions are allowed.
    * - Examples
-     - * ``sqlite_fetch_and_increment(@layer, 'sequence_table', 'last_unique_id', 'sequence_id', 'global', map('last_change','date(''now'')','user','''' || @user_account_name || ''''))`` → 0
-       * ``sqlite_fetch_and_increment(layer_property(@layer, 'path'), 'sequence_table', 'last_unique_id', 'sequence_id', 'global', map('last_change','date(''now'')','user','''' || @user_account_name || ''''))`` → 0
+     - * ``sqlite_fetch_and_increment(@layer, 'sequence_table', 'last_unique_id', 'sequence_id', 'global', map('last_change', 'date(''now'')', 'user', '''' || @user_account_name || ''''))`` → 0
+       * ``sqlite_fetch_and_increment(layer_property(@layer, 'path'), 'sequence_table', 'last_unique_id', 'sequence_id', 'global', map('last_change', 'date(''now'')', 'user', '''' || @user_account_name || ''''))`` → 0
 
 
 .. end_sqlite_fetch_and_increment_section
@@ -459,7 +459,7 @@ When the database parameter is a layer and the layer is in transaction mode, the
 uuid
 ....
 
-Generates a Universally Unique Identifier (UUID) for each row using the Qt `QUuid::createUuid <http://qt-project.org/doc/qt-4.8/quuid.html#createUuid>`_  method.  Each UUID is 38 characters long.
+Generates a Universally Unique Identifier (UUID) for each row using the Qt `QUuid::createUuid <https://doc.qt.io/qt-5/quuid.html#createUuid>`_ method. Each UUID is 38 characters long.
 
 .. list-table::
    :widths: 15 85

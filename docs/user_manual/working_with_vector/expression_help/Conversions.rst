@@ -216,7 +216,7 @@ Converts a degree, minute, second coordinate to its decimal equivalent.
 to_dm
 .....
 
-Convert a coordinate to degree, minute.
+Converts a coordinate to degree, minute.
 
 .. list-table::
    :widths: 15 85
@@ -244,7 +244,7 @@ Convert a coordinate to degree, minute.
 to_dms
 ......
 
-Convert a coordinate to degree, minute, second.
+Converts a coordinate to degree, minute, second.
 
 .. list-table::
    :widths: 15 85
@@ -294,7 +294,7 @@ Converts a string to integer number. Nothing is returned if a value cannot be co
 to_interval
 ...........
 
-Converts a string to a interval type. Can be used to take days, hours, month, etc of a date.
+Converts a string to an interval type. Can be used to take days, hours, month, etc of a date.
 
 .. list-table::
    :widths: 15 85

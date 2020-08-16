@@ -374,16 +374,16 @@ Returns the combination of two geometries.
 contains
 ........
 
-Tests whether a geometry contains another. Returns true if and only if no points of geometry b lie in the exterior of geometry a, and at least one point of the interior of b lies in the interior of a.
+Tests whether a geometry contains another. Returns true if and only if no points of geometry2 lie in the exterior of geometry1, and at least one point of the interior of geometry2 lies in the interior of geometry1.
 
 .. list-table::
    :widths: 15 85
 
    * - Syntax
-     - contains(geometry a, geometry b)
+     - contains(geometry1, geometry2)
    * - Arguments
-     - * **geometry a** - a geometry
-       * **geometry b** - a geometry
+     - * **geometry1** - a geometry
+       * **geometry2** - a geometry
    * - Examples
      - * ``contains( geom_from_wkt( 'POLYGON((0 0, 0 1, 1 1, 1 0, 0 0))' ), geom_from_wkt( 'POINT(0.5 0.5 )' ) )`` → true
        * ``contains( geom_from_wkt( 'POLYGON((0 0, 0 1, 1 1, 1 0, 0 0))' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → false
@@ -426,10 +426,10 @@ Tests whether a geometry crosses another. Returns true if the supplied geometrie
    :widths: 15 85
 
    * - Syntax
-     - crosses(geometry a, geometry b)
+     - crosses(geometry1, geometry2)
    * - Arguments
-     - * **geometry a** - a geometry
-       * **geometry b** - a geometry
+     - * **geometry1** - a geometry
+       * **geometry2** - a geometry
    * - Examples
      - * ``crosses( geom_from_wkt( 'LINESTRING(3 5, 4 4, 5 3)' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → true
        * ``crosses( geom_from_wkt( 'POINT(4 5)' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → false
@@ -444,16 +444,16 @@ Tests whether a geometry crosses another. Returns true if the supplied geometrie
 difference
 ..........
 
-Returns a geometry that represents that part of geometry_a that does not intersect with geometry_b.
+Returns a geometry that represents that part of geometry1 that does not intersect with geometry2.
 
 .. list-table::
    :widths: 15 85
 
    * - Syntax
-     - difference(geometry_a, geometry_b)
+     - difference(geometry1, geometry2)
    * - Arguments
-     - * **geometry_a** - a geometry
-       * **geometry_b** - a geometry
+     - * **geometry1** - a geometry
+       * **geometry2** - a geometry
    * - Examples
      - * ``geom_to_wkt( difference( geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ), geom_from_wkt( 'LINESTRING(3 3, 4 4)' ) ) )`` → LINESTRING(4 4, 5 5)
 
@@ -473,10 +473,10 @@ Tests whether geometries do not spatially intersect. Returns true if the geometr
    :widths: 15 85
 
    * - Syntax
-     - disjoint(geometry a, geometry b)
+     - disjoint(geometry1, geometry2)
    * - Arguments
-     - * **geometry a** - a geometry
-       * **geometry b** - a geometry
+     - * **geometry1** - a geometry
+       * **geometry2** - a geometry
    * - Examples
      - * ``disjoint( geom_from_wkt( 'POLYGON((0 0, 0 1, 1 1, 1 0, 0 0 ))' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → true
        * ``disjoint( geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ), geom_from_wkt( 'POINT(4 4)' ))`` → false
@@ -497,10 +497,10 @@ Returns the minimum distance (based on spatial ref) between two geometries in pr
    :widths: 15 85
 
    * - Syntax
-     - distance(geometry a, geometry b)
+     - distance(geometry1, geometry2)
    * - Arguments
-     - * **geometry a** - a geometry
-       * **geometry b** - a geometry
+     - * **geometry1** - a geometry
+       * **geometry2** - a geometry
    * - Examples
      - * ``distance( geom_from_wkt( 'POINT(4 4)' ), geom_from_wkt( 'POINT(4 8)' ) )`` → 4
 
@@ -871,12 +871,12 @@ If the default approximate provided by this method is insufficient, specify the 
    :widths: 15 85
 
    * - Syntax
-     - hausdorff_distance(geometry a, geometry b, [densify_fraction])
+     - hausdorff_distance(geometry1, geometry2, [densify_fraction])
 
        [] marks optional arguments
    * - Arguments
-     - * **geometry a** - a geometry
-       * **geometry b** - a geometry
+     - * **geometry1** - a geometry
+       * **geometry2** - a geometry
        * **densify_fraction** - densify fraction amount
    * - Examples
      - * ``hausdorff_distance( geometry1:= geom_from_wkt('LINESTRING (0 0, 2 1)'),geometry2:=geom_from_wkt('LINESTRING (0 0, 2 0)'))`` → 2
@@ -971,10 +971,10 @@ Tests whether a geometry intersects another. Returns true if the geometries spat
    :widths: 15 85
 
    * - Syntax
-     - intersects(geometry a, geometry b)
+     - intersects(geometry1, geometry2)
    * - Arguments
-     - * **geometry a** - a geometry
-       * **geometry b** - a geometry
+     - * **geometry1** - a geometry
+       * **geometry2** - a geometry
    * - Examples
      - * ``intersects( geom_from_wkt( 'POINT(4 4)' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → true
        * ``intersects( geom_from_wkt( 'POINT(4 5)' ), geom_from_wkt( 'POINT(5 5)' ) )`` → false
@@ -995,10 +995,10 @@ Tests whether a geometry's bounding box overlaps another geometry's bounding box
    :widths: 15 85
 
    * - Syntax
-     - intersects_bbox(geometry, geometry)
+     - intersects_bbox(geometry1, geometry2)
    * - Arguments
-     - * **geometry** - a geometry
-       * **geometry** - a geometry
+     - * **geometry1** - a geometry
+       * **geometry2** - a geometry
    * - Examples
      - * ``intersects_bbox( geom_from_wkt( 'POINT(4 5)' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → true
        * ``intersects_bbox( geom_from_wkt( 'POINT(6 5)' ), geom_from_wkt( 'POLYGON((3 3, 4 4, 5 5, 3 3))' ) )`` → false
@@ -1406,13 +1406,13 @@ Creates a circular polygon.
    :widths: 15 85
 
    * - Syntax
-     - make_circle(center, radius, [segment=36])
+     - make_circle(center, radius, [segments=36])
 
        [] marks optional arguments
    * - Arguments
      - * **center** - center point of the circle
        * **radius** - radius of the circle
-       * **segment** - optional argument for polygon segmentation. By default this value is 36
+       * **segments** - optional argument for polygon segmentation. By default this value is 36
    * - Examples
      - * ``geom_to_wkt(make_circle(make_point(10,10), 5, 4))`` → 'Polygon ((10 15, 15 10, 10 5, 5 10, 10 15))'
        * ``geom_to_wkt(make_circle(make_point(10,10,5), 5, 4))`` → 'PolygonZ ((10 15 5, 15 10 5, 10 5 5, 5 10 5, 10 15 5))'
@@ -1434,7 +1434,7 @@ Creates an elliptical polygon.
    :widths: 15 85
 
    * - Syntax
-     - make_ellipse(center, semi_major_axis, semi_minor_axis, azimuth, [segment=36])
+     - make_ellipse(center, semi_major_axis, semi_minor_axis, azimuth, [segments=36])
 
        [] marks optional arguments
    * - Arguments
@@ -1442,7 +1442,7 @@ Creates an elliptical polygon.
        * **semi_major_axis** - semi-major axis of the ellipse
        * **semi_minor_axis** - semi-minor axis of the ellipse
        * **azimuth** - orientation of the ellipse
-       * **segment** - optional argument for polygon segmentation. By default this value is 36
+       * **segments** - optional argument for polygon segmentation. By default this value is 36
    * - Examples
      - * ``geom_to_wkt(make_ellipse(make_point(10,10), 5, 2, 90, 4))`` → 'Polygon ((15 10, 10 8, 5 10, 10 12, 15 10))'
        * ``geom_to_wkt(make_ellipse(make_point(10,10,5), 5, 2, 90, 4))`` → 'PolygonZ ((15 10 5, 10 8 5, 5 10 5, 10 12 5, 15 10 5))'
@@ -1643,8 +1643,8 @@ Creates a square from a diagonal.
    * - Syntax
      - make_square(point1, point2)
    * - Arguments
-     - * **point1** - First point of the regular polygon
-       * **point2** - Second point
+     - * **point1** - First point of the diagonal
+       * **point2** - Last point of the diagonal
    * - Examples
      - * ``geom_to_wkt(make_square( make_point(0,0), make_point(5,5)))`` → 'Polygon ((0 0, -0 5, 5 5, 5 0, 0 0))'
        * ``geom_to_wkt(make_square( make_point(5,0), make_point(5,5)))`` → 'Polygon ((5 0, 2.5 2.5, 5 5, 7.5 2.5, 5 0))'
@@ -1665,11 +1665,11 @@ Creates a triangle polygon.
    :widths: 15 85
 
    * - Syntax
-     - make_triangle(point 1, point 2, point 3)
+     - make_triangle(point1, point2, point3)
    * - Arguments
-     - * **point 1** - first point of the triangle
-       * **point 2** - second point of the triangle
-       * **point 3** - third point of the triangle
+     - * **point1** - first point of the triangle
+       * **point2** - second point of the triangle
+       * **point3** - third point of the triangle
    * - Examples
      - * ``geom_to_wkt(make_triangle(make_point(0,0), make_point(5,5), make_point(0,10)))`` → 'Triangle ((0 0, 5 5, 0 10, 0 0))'
        * ``geom_to_wkt(boundary(make_triangle(make_point(0,0), make_point(5,5), make_point(0,10))))`` → 'LineString (0 0, 5 5, 0 10, 0 0)'
@@ -1908,10 +1908,10 @@ Tests whether a geometry overlaps another. Returns true if the geometries share 
    :widths: 15 85
 
    * - Syntax
-     - overlaps(geometry a, geometry b)
+     - overlaps(geometry1, geometry2)
    * - Arguments
-     - * **geometry a** - a geometry
-       * **geometry b** - a geometry
+     - * **geometry1** - a geometry
+       * **geometry2** - a geometry
    * - Examples
      - * ``overlaps( geom_from_wkt( 'LINESTRING(3 5, 4 4, 5 5, 5 3)' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → true
        * ``overlaps( geom_from_wkt( 'LINESTRING(0 0, 1 1)' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → false
@@ -2135,13 +2135,13 @@ Returns a rotated version of a geometry. Calculations are in the Spatial Referen
    :widths: 15 85
 
    * - Syntax
-     - rotate(geometry, rotation, [point])
+     - rotate(geometry, rotation, [center])
 
        [] marks optional arguments
    * - Arguments
      - * **geometry** - a geometry
        * **rotation** - clockwise rotation in degrees
-       * **point** - rotation center point. If not specified, the center of the geometry's bounding box is used.
+       * **center** - rotation center point. If not specified, the center of the geometry's bounding box is used.
    * - Examples
      - * ``rotate($geometry, 45, make_point(4, 5))`` → geometry rotated 45 degrees clockwise around the (4, 5) point
        * ``rotate($geometry, 45)`` → geometry rotated 45 degrees clockwise around the center of its bounding box
@@ -2384,10 +2384,10 @@ Tests whether a geometry touches another. Returns true if the geometries have at
    :widths: 15 85
 
    * - Syntax
-     - touches(geometry a, geometry b)
+     - touches(geometry1, geometry2)
    * - Arguments
-     - * **geometry a** - a geometry
-       * **geometry b** - a geometry
+     - * **geometry1** - a geometry
+       * **geometry2** - a geometry
    * - Examples
      - * ``touches( geom_from_wkt( 'LINESTRING(5 3, 4 4)' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → true
        * ``touches( geom_from_wkt( 'POINT(4 4)' ), geom_from_wkt( 'POINT(5 5)' ) )`` → false
@@ -2501,16 +2501,16 @@ Returns a wedge shaped buffer originating from a point geometry.
 within
 ......
 
-Tests whether a geometry is within another. Returns true if the geometry a is completely within geometry b.
+Tests whether a geometry is within another. Returns true if the geometry1 is completely within geometry2.
 
 .. list-table::
    :widths: 15 85
 
    * - Syntax
-     - within(geometry a, geometry b)
+     - within(geometry1, geometry2)
    * - Arguments
-     - * **geometry a** - a geometry
-       * **geometry b** - a geometry
+     - * **geometry1** - a geometry
+       * **geometry2** - a geometry
    * - Examples
      - * ``within( geom_from_wkt( 'POINT( 0.5 0.5)' ), geom_from_wkt( 'POLYGON((0 0, 0 1, 1 1, 1 0, 0 0))' ) )`` → true
        * ``within( geom_from_wkt( 'POINT( 5 5 )' ), geom_from_wkt( 'POLYGON((0 0, 0 1, 1 1, 1 0, 0 0 ))' ) )`` → false

@@ -19,7 +19,7 @@ Returns an aggregate value calculated using features from another layer.
    :widths: 15 85
 
    * - Syntax
-     - aggregate(layer, aggregate, expression, [filter], [concatenator], [order_by])
+     - aggregate(layer, aggregate, expression, [filter], [concatenator=''], [order_by])
 
        [] marks optional arguments
    * - Arguments
@@ -55,13 +55,14 @@ Returns an aggregate value calculated using features from another layer.
        * **expression** - sub expression or field name to aggregate
        * **filter** - optional filter expression to limit the features used for calculating the aggregate. Fields and geometry are from the features on the joined layer. The source feature can be accessed with the variable @parent.
        * **concatenator** - optional string to use to join values for 'concatenate' aggregate
-       * **order_by** - optional filter expression to order the features used for calculating the aggregate. Fields and geometry are from the features on the joined layer.
+       * **order_by** - optional filter expression to order the features used for calculating the aggregate. Fields and geometry are from the features on the joined layer. By default, the features will be returned in an unspecified order.
    * - Examples
      - * ``aggregate(layer:='rail_stations',aggregate:='sum',expression:="passengers")`` → sum of all values from the passengers field in the rail_stations layer
        * ``aggregate('rail_stations','sum', "passengers"/7)`` → calculates a daily average of "passengers" by dividing the "passengers" field by 7 before summing the values
        * ``aggregate(layer:='rail_stations',aggregate:='sum',expression:="passengers",filter:="class">3)`` → sums up all values from the "passengers" field from features where the "class" attribute is greater than 3 only
        * ``aggregate(layer:='rail_stations',aggregate:='concatenate', expression:="name", concatenator:=',')`` → comma separated list of the name field for all features in the rail_stations layer
        * ``aggregate(layer:='countries', aggregate:='max', expression:="code", filter:=intersects( $geometry, geometry(@parent) ) )`` → The country code of an intersecting country on the layer 'countries'
+       * ``aggregate(layer:='rail_stations',aggregate:='sum',expression:="passengers",filter:=contains( @atlas_geometry, $geometry ) )`` → sum of all values from the passengers field in the rail_stations within the current atlas feature
 
 
 .. end_aggregate_section
@@ -86,7 +87,7 @@ Returns an array of aggregated values from a field or expression.
      - * **expression** - sub expression of field to aggregate
        * **group_by** - optional expression to use to group aggregate calculations
        * **filter** - optional expression to use to filter features used to calculate aggregate
-       * **order_by** - optional expression to use to order features used to calculate aggregate
+       * **order_by** - optional expression to use to order features used to calculate aggregate. By default, the features will be returned in an unspecified order.
    * - Examples
      - * ``array_agg("name",group_by:="state")`` → list of name values, grouped by state field
 
@@ -132,7 +133,7 @@ Returns all aggregated strings from a field or expression joined by a delimiter.
    :widths: 15 85
 
    * - Syntax
-     - concatenate(expression, [group_by], [filter], [concatenator], [order_by])
+     - concatenate(expression, [group_by], [filter], [concatenator=''], [order_by])
 
        [] marks optional arguments
    * - Arguments
@@ -140,7 +141,7 @@ Returns all aggregated strings from a field or expression joined by a delimiter.
        * **group_by** - optional expression to use to group aggregate calculations
        * **filter** - optional expression to use to filter features used to calculate aggregate
        * **concatenator** - optional string to use to join values
-       * **order_by** - optional expression to use to order features used to calculate aggregate
+       * **order_by** - optional expression to use to order features used to calculate aggregate. By default, the features will be returned in an unspecified order.
    * - Examples
      - * ``concatenate("town_name",group_by:="state",concatenator:=',')`` → comma separated list of town_names, grouped by state field
 
@@ -160,7 +161,7 @@ Returns all unique strings from a field or expression joined by a delimiter.
    :widths: 15 85
 
    * - Syntax
-     - concatenate_unique(expression, [group_by], [filter], [concatenator], [order_by])
+     - concatenate_unique(expression, [group_by], [filter], [concatenator=''], [order_by])
 
        [] marks optional arguments
    * - Arguments
@@ -168,7 +169,7 @@ Returns all unique strings from a field or expression joined by a delimiter.
        * **group_by** - optional expression to use to group aggregate calculations
        * **filter** - optional expression to use to filter features used to calculate aggregate
        * **concatenator** - optional string to use to join values
-       * **order_by** - optional expression to use to order features used to calculate aggregate
+       * **order_by** - optional expression to use to order features used to calculate aggregate. By default, the features will be returned in an unspecified order.
    * - Examples
      - * ``concatenate("town_name",group_by:="state",concatenator:=',')`` → comma separated list of unique town_names, grouped by state field
 
@@ -578,7 +579,7 @@ Returns an aggregate value calculated using all matching child features from a l
    :widths: 15 85
 
    * - Syntax
-     - relation_aggregate(relation, aggregate, expression, [concatenator], [order_by])
+     - relation_aggregate(relation, aggregate, expression, [concatenator=''], [order_by])
 
        [] marks optional arguments
    * - Arguments
@@ -613,7 +614,7 @@ Returns an aggregate value calculated using all matching child features from a l
 
        * **expression** - sub expression or field name to aggregate
        * **concatenator** - optional string to use to join values for 'concatenate' aggregate
-       * **order_by** - optional expression to order the features used for calculating the aggregate. Fields and geometry are from the features on the joined layer.
+       * **order_by** - optional expression to order the features used for calculating the aggregate. Fields and geometry are from the features on the joined layer. By default, the features will be returned in an unspecified order.
    * - Examples
      - * ``relation_aggregate(relation:='my_relation',aggregate:='mean',expression:="passengers")`` → mean value of all matching child features using the 'my_relation' relation
        * ``relation_aggregate('my_relation','sum', "passengers"/7)`` → sum of the passengers field divided by 7 for all matching child features using the 'my_relation' relation
