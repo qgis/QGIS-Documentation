@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-26 13:13+0200\n"
 "PO-Revision-Date: 2020-03-16 19:27+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2020\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,6 +35,10 @@ msgid ""
 "new map item that you can later manipulate the same way as exposed in "
 ":ref:`interact_layout_item`."
 msgstr ""
+"인쇄 조판기는 프로젝트의 모든 레이어의 속성을 표시할 수 있습니다. 이 기능을 사용하면 사용자 맵을 기저 데이터 관련 정보로 장식하고 "
+"설명할 수 있습니다. |addMap| :guilabel:`Add Attribute Table` 도구를 :ref:`항목 생성 지침 "
+"<create_layout_item>` 을 따라 사용해서 새 속성 테이블 항목을 추가하십시오. 이후 "
+":ref:`interact_layout_item` 에서 설명한 내용과 동일한 방법으로 새 맵 항목을 수정할 수 있습니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:19
 msgid ""
@@ -43,6 +48,10 @@ msgid ""
 "than the :ref:`items common properties <item_common_properties>`, this "
 "feature has the following functionalities (see figure_layout_table_):"
 msgstr ""
+"새 속성 테이블 항목은 기본적으로 (알파벳순으로 정렬된) 첫 번째 레이어의 첫 번째 행을 모든 필드와 함께 불러옵니다. 하지만 속성 "
+"테이블의 :guilabel:`Item Properties` 패널에서 테이블을 사용자 지정할 수 있습니다. 이 항목은 :ref:`공통 속성"
+" <item_common_properties>` 이외에도 다음과 같은 기능을 가지고 "
+"있습니다(:ref:`figure_layout_table` 그림 참조):"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:30
 msgid "Attribute table Item Properties Panel"
@@ -57,10 +66,12 @@ msgid ""
 "The :guilabel:`Main properties` group of the attribute table provides the "
 "following functionalities (see figure_layout_table_ppt_):"
 msgstr ""
+"속성 테이블 :guilabel:`Item Properties` 패널의 :guilabel:`Main properties` 그룹은 다음 "
+"기능을 제공하고 있습니다. (:ref:`figure_layout_table_ppt` 그림을 참조하세요.):"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:44
 msgid "Attribute table Main properties Group"
-msgstr ""
+msgstr "속성 테이블 주요 속성 그룹"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:46
 msgid ""
@@ -68,6 +79,8 @@ msgid ""
 "allowing you to select a :guilabel:`Layer` from the vector layers loaded in "
 "the project."
 msgstr ""
+":guilabel:`Source`: 기본적으로 프로젝트에 불러온 벡터 레이어들 가운데 :guilabel:`Layer` 를 선택할 수 있게"
+" 해주는 **Layer features** 만 선택할 수 있습니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:50
 msgid ""
@@ -80,6 +93,11 @@ msgid ""
 "setting a data defined table to a layer with different field(s) will result "
 "in empty column(s) in the table."
 msgstr ""
+"레이어 목록 가까이 있는 |dataDefined| :sup:`data-defined override` 버튼으로 테이블을 채우는 데 사용된"
+" 레이어를 동적으로 변경할 수 있습니다. 예를 들어 지도책 페이지마다 속성 테이블을 서로 다른 레이어 속성으로 채울 수 있습니다. 사용된"
+" 테이블 구조(:ref:`열 설정 <figure_layout_table_select>`)가 :guilabel:`Layer` 드롭다운 "
+"목록에 표시된 레이어의 테이블 구조이며 그대로 남아 있다는 사실을 기억하십시오. 즉 서로 다른 필드(들)을 가진 레이어에 데이터 정의 "
+"테이블을 설정하면 테이블에 비어 있는 열(들)이 생길 것입니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:59
 msgid ""
@@ -87,6 +105,8 @@ msgid ""
 "the :guilabel:`Atlas` panel (see :ref:`atlas_generation`), there are two "
 "additional :guilabel:`Source` possible:"
 msgstr ""
+":guilabel:`Atlas` 패널에서 |checkbox|:guilabel:`Generate an atlas` 옵션을 활성화한 경우 "
+"(:ref:`atlas_generation` 참조) 다음과 같은 :guilabel:`Source` 2개를 추가로 선택할 수 있습니다:"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:63
 msgid ""
@@ -94,6 +114,8 @@ msgid ""
 "any option to choose the layer, and the table item will only show a row with"
 " the attributes from the current feature of the atlas coverage layer."
 msgstr ""
+"**Current atlas feature** (:ref:`figure_layout_table_atlas` 그림 참조): 레이어를 선택할"
+" 수 있는 옵션은 표시되지 않으며, 테이블 항목은 지도책 커버리지 레이어의 현재 피처에서 나온 속성을 가진 행만 표시할 것입니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:66
 msgid ""
@@ -103,20 +125,24 @@ msgid ""
 "layer as parent, and the table will show the children rows of the atlas "
 "coverage layer's current feature."
 msgstr ""
+"**Relation children** (:ref:`figure_layout_table_relation` 그림 참조): 관계명을 담은 "
+"옵션이 표시될 것입니다. 사용자가 지도책 커버리지 레이어를 부모 레이어로 사용해서 :ref:`관계 <vector_relations>` 를"
+" 정의한 경우에만 이 옵션을 사용할 수 있으며, 테이블 항목은 지도책 커버리지 레이어의 현재 객체에서 나온 자식 행만 표시할 것입니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:72
 msgid ""
 "The button :guilabel:`Refresh Table Data` can be used to refresh the table "
 "when the actual contents of the table has changed."
 msgstr ""
+":guilabel:`Refresh Table Data`: 속성 테이블의 실제 내용이 변경된 경우 테이블을 새로고침할 수 있습니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:81
 msgid "Attribute table Main properties for 'Current atlas feature'"
-msgstr "'Current atlas feature'에 대한 속성 테이블 주요 속성"
+msgstr "'Current atlas feature' 에 대한 속성 테이블 주요 속성"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:89
 msgid "Attribute table Main properties for 'Relation children'"
-msgstr "'Relation children'에 대한 속성 테이블 주요 속성"
+msgstr "'Relation children' 에 대한 속성 테이블 주요 속성"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:92
 msgid ""
@@ -126,6 +152,9 @@ msgid ""
 " the list of the attributes to display and the lower part helps you sort the"
 " data."
 msgstr ""
+":guilabel:`Attributes...`: :guilabel:`Select Attributes` 대화창을 엽니다. "
+"(:ref:`figure_layout_table_select` 그림을 참조하세요.) 이 대화창에서 테이블에서 보이는 내용을 변경할 수 "
+"있습니다. 대화창 상단은 표시할 속성 목록을 담고 있으며, 하단에서 데이터가 정렬되는 방식을 설정할 수 있습니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:102
 msgid "Attribute table Select attributes Dialog"
@@ -141,6 +170,8 @@ msgid ""
 " |arrowUp| and |arrowDown| buttons to shift the rows. Multiple rows can be "
 "selected and moved at any one time."
 msgstr ""
+"행을 선택한 다음 |arrowUp| 및 |arrowDown| 버튼을 사용해서 이동시켜 목록에서 속성의 순서를 변경할 수 있습니다. 여러 "
+"행을 한 번에 선택해서 이동시킬 수 있습니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:109
 msgid ""
@@ -148,18 +179,20 @@ msgid ""
 "the bottom of the table where you can select a field to be the attribute "
 "value or create an attribute via a regular expression."
 msgstr ""
+"|signPlus| 버튼으로 새 속성을 추가할 수 있습니다. 테이블 하단에 비어 있는 새 행을 추가하는데, 속성 값이 될 필드를 "
+"선택하거나 또는 정규 표현식을 통해 새 속성을 생성할 수 있습니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:112
 msgid ""
 "Remove an attribute with the |signMinus| button. Multiple rows can be "
 "selected and removed at any one time."
-msgstr ""
+msgstr "|signMinus| 버튼으로 속성을 제거할 수 있습니다. 여러 행을 한 번에 선택해서 이동시킬 수 있습니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:114
 msgid ""
 "Reset the attribute table back to its default state with the "
 ":guilabel:`Reset` button."
-msgstr ""
+msgstr ":guilabel:`Reset` 버튼을 눌러 속성 테이블을 기본 상태로 복구시킬 수 있습니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:115
 msgid ""
@@ -168,24 +201,27 @@ msgid ""
 "Instead of manually removing each row, it may be quicker to clear the table "
 "and add the rows needed."
 msgstr ""
+":guilabel:`Clear` 버튼을 사용하면 테이블을 비울 수 있습니다. 대용량 테이블에서 몇 개 안 되는 속성만 표시하고자 할 때 "
+"유용합니다. 각 행을 하나씩 제거하는 대신, 전체 테이블을 비운 다음 필요한 행들을 추가하는 것이 빠를 수도 있으니까요."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:119
 msgid ""
 "Cell headings can be altered by adding the custom text in the "
 ":guilabel:`Heading` column."
 msgstr ""
+":guilabel:`Heading` 열에 사용자 지정 텍스트를 추가해서 셀 제목(cell heading)을 변경할 수 있습니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:120
 msgid ""
 "Cell alignment can be managed with the :guilabel:`Alignment` column which "
 "will dictate the texts position within the table cell."
-msgstr ""
+msgstr "테이블 셀 내부의 텍스트 위치를 지시하는 :guilabel:`Alignment` 열을 통해 셀 정렬을 관리할 수 있습니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:122
 msgid ""
 "Cell width can be manually managed by adding custom values to the "
 ":guilabel:`width` column."
-msgstr ""
+msgstr ":guilabel:`width` 열에 사용자 지정 값을 추가하면 셀 너비를 직접 관리할 수 있습니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:124
 msgid "In the :guilabel:`Sorting` section you can:"
@@ -197,6 +233,8 @@ msgid ""
 "sorting order to **Ascending** or **Descending** and press the |signPlus| "
 "button. A new line is added to the sort order list."
 msgstr ""
+"테이블을 정렬할 속성을 추가할 수 있습니다. 속성을 선택하고 정렬 순서를 **오름차순(Ascending)** 또는 "
+"**내림차순(Descending)** 으로 설정한 다음 |signPlus| 버튼을 누르면 정렬 순서 목록에 새로운 행을 추가합니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:129
 msgid ""
@@ -205,25 +243,29 @@ msgid ""
 ":guilabel:`Sort Order` column helps you change the sorting order of the "
 "attribute field."
 msgstr ""
+"이 목록에서 행을 선택한 다음 |arrowUp| 및 |arrowDown| 버튼을 사용하면 속성 수준에서의 정렬 우선 순위를 변경할 수 "
+"있습니다. :guilabel:`Sort Order` 열에서 셀을 선택하면 속성 필드의 정렬 순서를 변경할 수 있습니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:133
 msgid ""
 "use the |signMinus| button to remove an attribute from the sort order list."
-msgstr ""
+msgstr "|signMinus| 버튼을 사용하면 정렬 순서 목록에서 속성을 제거할 수 있습니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:137
 msgid "Feature filtering"
-msgstr "객체 필터링"
+msgstr "피처 필터링"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:139
 msgid ""
 "The :guilabel:`Feature filtering` group of the attribute table provides the "
 "following functionalities (see figure_layout_table_filter_):"
 msgstr ""
+"속성 테이블 :guilabel:`Item Properties` 패널의 :guilabel:`Feature filtering` 그룹은 다음 "
+"기능을 제공하고 있습니다. (:ref:`figure_layout_table_filter` 그림을 참조하세요.):"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:147
 msgid "Attribute table Feature filtering Group"
-msgstr ""
+msgstr "속성 테이블 피처 필터링 그룹"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:149
 msgid "You can:"
@@ -247,6 +289,8 @@ msgid ""
 "select the corresponding :guilabel:`Linked map` whose visible features "
 "attributes will be displayed."
 msgstr ""
+"|checkbox| :guilabel:`Show only visible features within a map` 옵션을 활성화하고 "
+"대응하는 :guilabel:`Linked map` 을 선택하십시오. 링크된 맵의 가시화된 피처의 속성만 표시할 것입니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:155
 msgid ""
@@ -255,6 +299,9 @@ msgid ""
 "activated. When activated it will show a table with only the features which "
 "intersect the current atlas feature."
 msgstr ""
+"|checkbox| :guilabel:`Generate an atlas` 옵션을 활성화한 경우에만 |checkbox| "
+":guilabel:`Show only features intersecting Atlas feature` 를 활성화할 수 있습니다. 이 "
+"옵션을 활성화하면, 현재 지도책 피처와 교파하는 피처만 가진 테이블을 표시할 것입니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:158
 msgid ""
@@ -298,10 +345,12 @@ msgid ""
 "The :guilabel:`Appearance` group of the attribute table provides the "
 "following functionalities  (see figure_layout_table_appearance_):"
 msgstr ""
+"속성 테이블 :guilabel:`Item Properties` 패널의 :guilabel:`Appearance` 그룹은 다음 기능을 "
+"제공하고 있습니다. (:ref:`figure_layout_table_appearance` 그림을 참조하세요.):"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:182
 msgid "Attribute table appearance Group"
-msgstr ""
+msgstr "속성 테이블 모양 그룹"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:184
 msgid ""
@@ -337,7 +386,7 @@ msgid ""
 "**Draw headers only**, will only draw the header except if you have chosen "
 "'No header' for :guilabel:`Display header`."
 msgstr ""
-"**Draw headers only**: :guilabel:`Display header` 옵션에서 'No header'를 선택하지 "
+"**Draw headers only**: :guilabel:`Display header` 옵션에서 'No header' 를 선택하지 "
 "않았다면, 헤더만 렌더링합니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:193
@@ -376,6 +425,9 @@ msgid ""
 ":guilabel:`Advanced customization` option helps you define different "
 "background colors for each cell (see figure_layout_table_background_)"
 msgstr ""
+":guilabel:`Background color` 옵션에서 :ref:`색상 선택기 <color-selector>` 위젯을 사용해서 "
+"테이블의 배경색을 설정할 수 있습니다. :guilabel:`Advanced customization` 옵션으로 누르면 각 셀 별로 서로 "
+"다른 배경색을 정의할 수 있습니다. (:ref:`figure_layout_table_background` 그림을 참조하세요.)"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:212
 msgid "Attribute table Advanced Background Dialog"
@@ -393,6 +445,8 @@ msgid ""
 "for a column is  smaller than its content's length. It can be **Wrap text** "
 "or **Truncate text**."
 msgstr ""
+":guilabel:`Oversized text` 옵션에서 열에 대해 설정한 너비가 그 내용의 길이보다 짧을 경우의 습성을 정의할 수 "
+"있습니다. **Wrap text** 는 내용을 행갈이하고, **Truncate text** 는 열의 너비보다 긴 부분을 잘라버립니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:222
 msgid "Show grid"
@@ -403,10 +457,12 @@ msgid ""
 "The :guilabel:`Show grid` group of the attribute table provides the "
 "following functionalities (see figure_layout_table_grid_):"
 msgstr ""
+"속성 테이블 :guilabel:`Item Properties` 패널의 :guilabel:`Show grid` 그룹은 다음 기능을 제공하고"
+" 있습니다. (:ref:`figure_layout_table_grid` 그림을 참조하세요.):"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:232
 msgid "Attribute table Show grid Group"
-msgstr ""
+msgstr "속성 테이블 그리드 표시 그룹"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:234
 msgid ""
@@ -415,6 +471,9 @@ msgid ""
 ":guilabel:`Draw horizontal lines` or :guilabel:`Draw vertical lines` or "
 "both."
 msgstr ""
+"|checkbox| :guilabel:`Show grid`: 테이블 셀의 윤곽선인 그리드를 표시하고 싶은 경우 이 옵션을 활성화하십시오."
+" :guilabel:`Draw horizontal lines` 또는 :guilabel:`Draw vertical lines` 가운데 "
+"하나를 선택하거나, 둘 다 선택할 수도 있습니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:237
 msgid ""
@@ -426,21 +485,23 @@ msgstr ":guilabel:`Line width`: 그리드에 사용되는 라인의 두께를 �
 msgid ""
 "The :guilabel:`Color` of the grid can be set using the color selection "
 "widget."
-msgstr ""
+msgstr ":guilabel:`Color`: 색상 선택기 위젯을 사용해서 그리드의 색상을 설정합니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:242
 msgid "Fonts and text styling"
-msgstr "폰트 및 텍스트 스타일"
+msgstr "글꼴 및 텍스트 스타일"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:244
 msgid ""
 "The :guilabel:`Fonts and text styling` group of the attribute table provides"
 " the following functionalities (see figure_layout_table_fonts_):"
 msgstr ""
+"속성 테이블 :guilabel:`Item Properties` 패널의 :guilabel:`Fonts and text styling` "
+"그룹은 다음 기능을 제공하고 있습니다. (:ref:`figure_layout_table_fonts` 그림을 참조하세요.):"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:252
 msgid "Attribute table Fonts and text styling Group"
-msgstr ""
+msgstr "속성 테이블 글꼴 및 텍스트 스타일 그룹"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:254
 msgid ""
@@ -448,6 +509,8 @@ msgid ""
 "heading` and :guilabel:`Table contents`, using font and color selector "
 "widgets."
 msgstr ""
+":guilabel:`Table heading` 및 :guilabel:`Table contents` 부분에서 글꼴 및 색상 선택기 위젯을 "
+"통해 테이블 제목 및 내용에 대한 :guilabel:`Font` 및 :guilabel:`Color` 를 정의할 수 있습니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:256
 msgid ""
@@ -457,6 +520,10 @@ msgid ""
 "is set using the :guilabel:`Select Attributes` dialog (see "
 "figure_layout_table_select_ )."
 msgstr ""
+":guilabel:`Table heading` 의 경우 추가적으로 :guilabel:`Alignment` 옵션에서 ``Follow "
+"column alignment`` 를 선택하거나, 또는 ``Left``, ``Center``, ``Right`` 가운데 하나를 선택해서 "
+"열 정렬 설정을 무시할 수 있습니다. :guilabel:`Select Attributes` 대화창에서 열 정렬을 설정합니다. "
+"(:ref:`figure_layout_table_select` 그림을 참조하세요.)"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:263
 msgid "Frames"
@@ -467,10 +534,12 @@ msgid ""
 "The :guilabel:`Frames` group of the attribute table properties provides the "
 "following functionalities (see figure_layout_table_frames_):"
 msgstr ""
+"속성 테이블 :guilabel:`Item Properties` 패널의 :guilabel:`Frames` 그룹은 다음 기능을 제공하고 "
+"있습니다. (:ref:`figure_layout_table_frames` 그림을 참조하세요.):"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:273
 msgid "Attribute table Frames Group"
-msgstr ""
+msgstr "속성 테이블 프레임 그룹"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:275
 msgid ""
@@ -482,7 +551,7 @@ msgstr ":guilabel:`Resize mode` 콤보박스 목록에서 속성 테이블의 �
 msgid ""
 "``Use existing frames`` displays the result in the first frame and added "
 "frames only."
-msgstr ""
+msgstr "``Use existing frames``: 첫 번째 프레임과 추가된 프레임에만 산출물을 표시합니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:279
 msgid ""
@@ -492,12 +561,17 @@ msgid ""
 "table will be divided up between the other frames. The last frame will be "
 "trimmed to fit the table."
 msgstr ""
+"``Extend to next page``: 속성 테이블의 전체 집합을 표시하는 데 필요한 만큼 많은 프레임(과 대응하는 페이지)을 "
+"생성합니다. 조판 상에서 각 프레임을 이리저리 옮길 수 있습니다. 프레임의 크기를 조정하는 경우, 산출 테이블이 다른 프레임들 사이로 "
+"나뉠 것입니다. 마지막 프레임은 테이블에 맞춰 빈 부분을 잘라냅니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:284
 msgid ""
 "``Repeat until finished`` will also create as many frames as the `Extend to "
 "next page` option, except all frames will have the same size."
 msgstr ""
+"``Repeat until finished``: 'Extend to next page' 옵션과 마찬가지로 필요한 만큼 프레임을 "
+"생성합니다. 다만 모든 프레임의 크기가 동일할 것입니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:287
 msgid ""
@@ -506,6 +580,9 @@ msgid ""
 "frame will continue in the next frame when you use the Resize mode ``Use "
 "existing frames``."
 msgstr ""
+":guilabel:`Add Frame` 버튼을 클릭하면 선택한 프레임과 동일한 크기의 새 프레임을 추가합니다. "
+":guilabel:`Resize mode` 또는 ``Use existing frames`` 를 선택한 경우, 첫 번째 프레임에 다 "
+"들어가지 않은 산출 테이블을 다음 프레임으로 넘길 것입니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:290
 msgid ""
@@ -514,6 +591,9 @@ msgid ""
 "all other layout items, maps, scalebars, legends etc. will not be visible in"
 " the result."
 msgstr ""
+"|checkbox| :guilabel:`Don't export page if frame is empty` 옵션을 활성화하면, 테이블 "
+"프레임에 아무 내용도 없을 때 페이지를 내보낼 수 없게 됩니다. 즉 산출물에 다른 모든 조판기 항목들 ─ 맵, 축척 막대, 범례 등등 ─"
+" 이 보이지 않을 것이라는 뜻입니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:293
 msgid ""
@@ -521,4 +601,4 @@ msgid ""
 "prevents the background to be drawn when the table frame has no contents."
 msgstr ""
 "|checkbox| :guilabel:`Don't draw background if frame is empty` 옵션을 활성화하면, "
-"테이블 프레임에 아무 내용도 없을 때 배경을 렌더링할 수 없게 됩니다."
+"테이블 프레임에 아무 내용도 없을 때 배경을 렌더링할 수 없게 됩니다."

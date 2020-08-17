@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-26 13:13+0200\n"
 "PO-Revision-Date: 2020-03-16 19:27+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2020\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,6 +35,10 @@ msgid ""
 "<create_layout_item>` and manipulate it the same way as exposed in "
 ":ref:`interact_layout_item`."
 msgstr ""
+":guilabel:`Label` 항목은 사용자의 맵을 이해할 수 있도록 돕는 텍스트로 장식할 수 있는 도구입니다. 라벨은 제목, 작성자,"
+" 데이터소스 또는 기타 모든 정보를 담을 수 있습니다. :ref:`항목 생성 지침 <create_layout_item>` 을 따라 "
+"|label| :guilabel:`Add Label` 도구로 라벨을 추가하고 :ref:`interact_layout_item` 에서 "
+"설명한 내용과 동일한 방법으로 수정할 수 있습니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:19
 msgid ""
@@ -42,6 +47,9 @@ msgid ""
 "common properties <item_common_properties>`, this feature has the following "
 "functionalities (see figure_layout_label_):"
 msgstr ""
+"라벨 항목은 기본적으로 라벨의 :guilabel:`Item Properties` 패널에서 사용자 지정할 수 있는 기본 텍스트를 "
+"제공합니다. 이 항목은 :ref:`공통 속성 <item_common_properties>` 이외에도 다음과 같은 기능을 가지고 "
+"있습니다(:ref:`figure_layout_label` 그림 참조):"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:29
 msgid "Label Item Properties Panel"
@@ -57,6 +65,8 @@ msgid ""
 "can be in HTML) or the expression to build the label. Expressions need to be"
 " surrounded by ``[%`` and ``%]`` in order to be interpreted as such."
 msgstr ""
+":guilabel:`Main properties` 그룹에서 라벨 작성에 필요한 텍스트(HTML도 가능) 또는 표현식을 작성할 수 "
+"있습니다. 표현식을 표현식으로 해석되게 하려면, 표현식을 ``[%`` 와 ``%]`` 로 둘러싸야 합니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:38
 msgid ""
@@ -74,6 +84,8 @@ msgid ""
 "when the dialog is applied, QGIS automatically adds the surrounding "
 "characters."
 msgstr ""
+":guilabel:`Insert an expression` 버튼을 클릭하면 :ref:`표현식 <expression_builder>` 도 "
+"사용할 수 있습니다. 대화창이 열리면 동일한 방법으로 공식을 작성하십시오. QGIS가 괄호 문자를 자동적으로 추가합니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:45
 msgid ""
@@ -82,17 +94,22 @@ msgid ""
 "you want to update an existing text, you need to select it the part of "
 "interest beforehand."
 msgstr ""
+"텍스트란에서 아무것도 선택하지 않았을 때 :guilabel:`Insert an Expression` 버튼을 클릭하면 기존 텍스트에 새 "
+"표현식을 덧붙일 것입니다. 기존 텍스트를 업데이트하고 싶다면, :guilabel:`Insert an Expression` 버튼을 클릭하기"
+" 전에 텍스트에서 관심 부분을 선택해야 합니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:50
 msgid ""
 "You can combine HTML rendering and expressions, leading to e.g. a text like:"
-msgstr ""
+msgstr "HTML 렌더링과 표현식을 결합해서, 예를 들어 다음과 같은 텍스트를 작성하면:"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:56
 msgid ""
 "which will render: **Check out the new logo for** `QGIS 3.0 "
 "<https://www.qgis.org>`_ **:** |logo|"
 msgstr ""
+"다음과 같이 렌더링될 것입니다: **Check out the new logo for** `QGIS 3.0 "
+"<https://www.qgis.org>`_ **:** |logo|"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:63
 msgid "Appearance"
@@ -103,6 +120,8 @@ msgid ""
 "Define :guilabel:`Font` by clicking on the :guilabel:`Font...` button or a "
 ":guilabel:`Font color` by pushing the :ref:`color widget <color-selector>`."
 msgstr ""
+":guilabel:`Font...` 버튼을 눌러서 :guilabel:`Font` 를 정의하거나, 또는 :ref:`색상 위젯 <color-"
+"selector>` 을 눌러 :guilabel:`Font color` 를 선택하십시오."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:67
 msgid ""
@@ -111,27 +130,35 @@ msgid ""
 "outside the bounds of the label e.g. to align label items with other items. "
 "In this case you have to use negative values for the margin."
 msgstr ""
+"서로 다른 수직 및 수평 여백을 ``mm`` 단위로 지정할 수 있습니다. 조판 항목의 경계로부터의 여백입니다. 라벨 경계 바깥쪽에 ─ "
+"예를 들어 라벨 항목을 다른 항목과 정렬시키기 위해 ─ 라벨을 배치할 수 있습니다. 이 경우 여백에 음의 값을 사용해야 합니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:71
 msgid ""
 "Using the text alignment is another way to position your label. It can be:"
 msgstr ""
+"텍스트 :guilabel:`alignment` 옵션은 사용자 라벨을 배치하기 위한 또다른 방법입니다. 다음 가운데 하나를 선택할 수 "
+"있습니다:"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:73
 msgid ""
 ":guilabel:`Left`, :guilabel:`Center`, :guilabel:`Right` or "
 ":guilabel:`Justify` for :guilabel:`Horizontal alignment`"
 msgstr ""
+":guilabel:`Horizontal alignment` 의 경우 :guilabel:`Left`, :guilabel:`Center`, "
+":guilabel:`Right` 또는 :guilabel:`Justify`"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:75
 msgid ""
 "and :guilabel:`Top`, :guilabel:`Middle`, :guilabel:`Bottom` for "
 ":guilabel:`Vertical alignment`."
 msgstr ""
+":guilabel:`Vertical alignment` 의 경우 :guilabel:`Top`, :guilabel:`Middle`, "
+":guilabel:`Bottom`"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:81
 msgid "Exploring expressions in a label item"
-msgstr ""
+msgstr "라벨 항목에서의 표현식 탐구"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:83
 msgid ""
@@ -140,25 +167,27 @@ msgid ""
 "calculated part, should be surrounded by ``[%`` and ``%]`` in the "
 ":guilabel:`Main properties` frame:"
 msgstr ""
+"다음은 사용자가 라벨 항목을 흥미로운 정보로 채우는 데 사용할 수 있는 몇몇 표현식 예시입니다. :guilabel:`Main "
+"properties` 프레임에서 코드를, 또는 적어도 계산식 부분을 ``[%`` 와 ``%]`` 로 둘러싸야 한다는 점을 기억하십시오."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:87
 msgid "Display a title with the current atlas feature value in \"field1\":"
-msgstr ""
+msgstr "제목을 \"field1\" 에 있는 현재 지도책 피처값과 함께 표시합니다:"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:93
 msgid "or, written in the :guilabel:`Main properties` section:"
-msgstr ""
+msgstr "또는 :guilabel:`Main properties` 부분에서 작성하면:"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:99
 msgid "Add a pagination for processed atlas features (eg, ``Page 1/10``):"
-msgstr ""
+msgstr "공간 처리된 지도책 피처용 페이지 번호를 (예: ``Page 1/10``) 추가합니다:"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:105
 msgid "Return the lower X coordinate of the ``Map 1`` item's extent:"
-msgstr ""
+msgstr "``Map 1`` 항목 범위의 하단 X 좌표를 반환합니다:"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:111
 msgid ""
 "Retrieve the name of the layers in the current layout ``Map 1`` item, and "
 "formats in one name by line:"
-msgstr ""
+msgstr "현재 조판기 ``Map 1`` 항목에 있는 레이어명들을 추출해서, 한 줄 서식으로 표시합니다:"

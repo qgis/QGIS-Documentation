@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-26 13:13+0200\n"
 "PO-Revision-Date: 2020-03-16 19:27+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2020\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,6 +34,9 @@ msgid ""
 "following :ref:`items creation instructions <create_layout_item>` and "
 "manipulate it the same way as exposed in :ref:`interact_layout_item`."
 msgstr ""
+":guilabel:`Legend` 항목은 맵 상에서 사용되는 심볼의 의미를 설명하는 상자 또는 표입니다. 범례는 맵 항목에 귀속됩니다. "
+":ref:`항목 생성 지침 <create_layout_item>` 을 따라 |label| :guilabel:`Add Legend` 도구로"
+" 범례를 추가하고 :ref:`interact_layout_item` 에서 설명한 내용과 동일한 방법으로 수정할 수 있습니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:19
 msgid ""
@@ -41,6 +45,9 @@ msgid ""
 "common properties <item_common_properties>`, this feature has the following "
 "functionalities (see figure_layout_legend_):"
 msgstr ""
+"범례 항목은 기본적으로 범례의 :guilabel:`Item Properties` 패널에서 미세 조정할 수 있는 사용 가능한 모든 레이어를"
+" 표시합니다. 이 항목은 :ref:`공통 속성 <item_common_properties>` 이외에도 다음과 같은 기능을 가지고 "
+"있습니다(:ref:`figure_layout_legend` 그림 참조):"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:32
 msgid "Legend Item Properties Panel"
@@ -56,14 +63,16 @@ msgid ""
 "Properties` panel provides the following functionalities (see "
 "figure_layout_legend_ppt_):"
 msgstr ""
+"범례 :guilabel:`Item Properties` 패널의 :guilabel:`Main properties` 그룹은 다음 기능을 "
+"제공하고 있습니다. (:ref:`figure_layout_legend_ppt` 그림을 참조하세요.): "
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:45
 msgid "Legend Main properties group"
-msgstr ""
+msgstr "범례 주요 속성 그룹"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:47
 msgid "In Main properties you can:"
-msgstr "주요 속성 대화창에서 다음 작업을 할 수 있습니다:"
+msgstr "주요 속성 그룹에서 다음 작업을 할 수 있습니다:"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:49
 msgid ""
@@ -71,6 +80,8 @@ msgid ""
 " :ref:`data-defined override <data_defined>` setting, useful for example "
 "when generating an atlas;"
 msgstr ""
+"범례 :guilabel:`Title` 을 변경할 수 있습니다. :ref:`데이터 정의 무시 <data_defined>` 설정을 이용하면 "
+"동적인 제목을 만들 수 있습니다. 예를 들자면 지도책을 생성하는 경우 유용한 기능이죠."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:52
 msgid ""
@@ -78,6 +89,8 @@ msgid ""
 "default, the map over which the legend item is drawn is picked. If none, "
 "then it falls back to the :ref:`reference map <reference_map>`."
 msgstr ""
+"현재 범례가 어떤 :guilabel:`Map` 항목을 참조할지 선택할 수 있습니다. 범례 항목을 렌더링할 맵이 기본적으로 선택됩니다. "
+"기본 선택된 맵이 없다면, :ref:`참조 맵 <reference_map>` 으로 돌아가게 됩니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:56
 msgid ""
@@ -85,12 +98,14 @@ msgid ""
 "@map_scale, @map_extent...) are also accessible from data-defined properties"
 " of the legend."
 msgstr ""
+"범례의 데이터 정의된 속성에서 연결된 맵 항목의 (@map_id, @map_scale, @map_extent 등의) :ref:`변수 "
+"<expression_variables>` 에도 접근할 수 있습니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:60
 msgid ""
 "Wrap the text of the legend on a given character: each time the character "
 "appears, it's replaced with a line break;"
-msgstr ""
+msgstr "범례의 텍스트에 행갈이 문자를 설정할 수 있습니다. 해당 문자가 나타날 때마다 행을 바꿀 것입니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:62
 msgid ""
@@ -99,6 +114,9 @@ msgid ""
 ":guilabel:`Symbols on right`. The default value depends on the locale in use"
 " (right-to-left based or not)."
 msgstr ""
+"범례에 심볼과 텍스트를 어떻게 배치할지 설정할 수 있습니다: :guilabel:`Arrangement` 옵션을 "
+":guilabel:`Symbols on left` 또는 :guilabel:`Symbols on right` 가운데 하나로 선택할 수 "
+"있습니다. 사용 중인 로케일에 따라 (우에서 좌로 기반인지 또는 그 반대인지에 따라) 기본값이 달라집니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:65
 msgid ""
@@ -107,6 +125,9 @@ msgid ""
 "then the legend will never resize and instead just stick to whatever size "
 "the user has set. Any content which doesn't fit the size is cropped out."
 msgstr ""
+"|checkbox| :guilabel:`Resize to fit contents` 옵션을 활성화하면 범례 크기를 그 내용물에 맞춰 "
+"자동적으로 조정합니다. 체크를 해제한 경우, 사용자가 설정한 크기로 고정되어 크기가 변하지 않을 것입니다. 내용물이 범례 크기에 맞지 "
+"않는 경우 잘려나가게 됩니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:72
 msgid "Legend items"
@@ -118,10 +139,12 @@ msgid ""
 " panel provides the following functionalities (see "
 "figure_layout_legend_items_):"
 msgstr ""
+"범례 :guilabel:`Item Properties` 패널의 :guilabel:`Legend items` 그룹은 다음 기능을 제공하고 "
+"있습니다. (:ref:`figure_layout_legend_items` 그림을 참조하세요.): "
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:82
 msgid "Legend Items group"
-msgstr ""
+msgstr "범례 항목 그룹"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:84
 msgid ""
@@ -130,6 +153,9 @@ msgid ""
 " you more control over the legend items. All the icons below the legend "
 "items list will be activated."
 msgstr ""
+"|checkbox| :guilabel:`Auto-update` 옵션을 활성화한 경우 범례를 자동적으로 업데이트할 것입니다. "
+":guilabel:`Auto-update` 옵션을 비활성화하면 범례 항목을 좀 더 사용자 마음대로 제어할 수 있습니다. 이 경우 범례 "
+"항목 목록 아래에 있는 아이콘들이 모두 활성화될 것입니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:88
 msgid ""
@@ -168,7 +194,7 @@ msgid ""
 "also opens the text box to rename it."
 msgstr ""
 "레이어, 그룹명, 또는 제목을 편집하려면, 먼저 범례 항목을 선택한 다음 |projectProperties| 아이콘을 클릭하십시오. "
-"항목을 더블클릭해도 재명명할 수 있는 텍스트 상자가 열립니다."
+"항목을 더블클릭해도 재명명할 수 있는 텍스트란이 열립니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:101
 msgid ""
@@ -176,30 +202,35 @@ msgid ""
 "layer. New variables (``@symbol_label``, ``@symbol_id`` and "
 "``@symbol_count``) help you interact with the legend entry."
 msgstr ""
+"|expression| 도구는 지정한 레이어의 각 심볼 라벨에 표현식을 추가할 수 있습니다. 새 변수들(``@symbol_label``,"
+" ``@symbol_id`` 및 ``@symbol_count``)로 범례 항목과 대화형 작업을 할 수 있습니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:105
 msgid ""
 "For example, given a categorized layer, you can append to each class in the "
 "legend their number of features, ie *class (number)*:"
 msgstr ""
+"예를 들어 범주 레이어의 경우, 범례에 있는 각 범주 단계에 *범주 단계 (개수)* 같은 각 범주 단계의 피처 개수를 추가할 수 "
+"있습니다:"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:108
 msgid "Select the layer entry in the legend tree"
-msgstr ""
+msgstr "범례 트리에서 레이어 항목을 선택하십시오."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:109
 msgid ""
 "Press the |expression| button, opening the :guilabel:`Expression String "
 "Builder` dialog"
 msgstr ""
+"|expression| 버튼을 클릭해서 :guilabel:`Expression String Builder` 대화창을 여십시오."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:111
 msgid "Enter the following expression::"
-msgstr ""
+msgstr "다음 표현식을 입력하십시오::"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:115
 msgid "Press :guilabel:`OK`"
-msgstr ""
+msgstr ":guilabel:`OK` 를 클릭하십시오."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:117
 msgid "The |sum| button adds a feature count for each class of vector layer."
@@ -214,6 +245,10 @@ msgid ""
 "tree, styles that have no feature satisfying a condition. Note that the "
 "features are nevertheless kept and shown in the layout map item."
 msgstr ""
+"|expressionFilter| :sup:`Filter legend by expression` 아이콘을 클릭하면, 범례에 레이어의 범례"
+" 항목 가운데 어떤 항목을 표시할지 필터링할 수 있습니다. 예를 들면 (규칙 기반 또는 범주 심볼에서 나온) 서로 다른 범례 항목을 가진"
+" 레이어를 사용하는 경우, 범례 트리에서 조건을 만족하는 피처가 없는 스타일을 제거하는 불(boolean) 표현식을 지정할 수 있습니다."
+" 다만 이런 경우에도 해당 피처는 조판기 맵 항목에 유지되고 표시된다는 사실을 기억하십시오."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:125
 msgid ""
@@ -224,6 +259,10 @@ msgid ""
 "changes to a layer, you can revert them by choosing :guilabel:`Reset to "
 "defaults` from the contextual menu of the legend entry."
 msgstr ""
+"범례 항목의 기본 습성이 :guilabel:`Layers` 패널 트리를 흉내내어 동일한 그룹, 레이어 및 심볼의 범주를 표시하기는 해도,"
+" 어떤 항목을 오른쪽 클릭하면 레이어명을 숨기거나 레이어를 그룹 또는 하위 그룹으로 옮길 수 있는 옵션을 제공합니다. 레이어에 몇몇 변경"
+" 사항을 만든 경우, 범례 항목의 컨텍스트 메뉴에서 :guilabel:`Reset to defaults` 액션을 선택하면 변경 사항들을 "
+"되돌릴 수 있습니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:132
 msgid ""
@@ -231,6 +270,8 @@ msgid ""
 ":guilabel:`Update All` to adapt the changes in the legend element of the "
 "print layout."
 msgstr ""
+"QGIS 메인 창에서 심볼을 변경한 다음, :guilabel:`Update All` 버튼을 클릭하면 인쇄 조판기의 범례 항목에 해당 변경"
+" 사항을 적용할 수 있습니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:136
 msgid ""
@@ -238,6 +279,9 @@ msgid ""
 "legend items visible in the linked map will be listed in the legend. This "
 "tool remains available when |checkbox| :guilabel:`Auto-update` is active"
 msgstr ""
+"|checkbox| :guilabel:`Only show items inside linked map` 옵션을 활성화하면, 링크된 맵에 "
+"가시화된 범례 항목들만 범례 목록에 표시될 것입니다. 이 도구는 |checkbox| :guilabel:`Auto-update` 옵션을 "
+"활성화한 상태에서만 사용할 수 있습니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:139
 msgid ""
@@ -250,17 +294,18 @@ msgstr ""
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:145
 msgid "Fonts"
-msgstr ""
+msgstr "글꼴"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:147
 msgid ""
 "The :guilabel:`Fonts` group of the legend :guilabel:`Item Properties` panel "
 "provides the following functionalities:"
 msgstr ""
+"범례 :guilabel:`Item Properties` 패널의 :guilabel:`Fonts` 그룹은 다음 기능을 제공하고 있습니다:"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:155
 msgid "Legend Fonts properties"
-msgstr ""
+msgstr "범례 글꼴 속성"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:157
 msgid ""
@@ -268,6 +313,8 @@ msgid ""
 "(feature) in the legend item using the :ref:`font selector <font_selector>` "
 "widget"
 msgstr ""
+":ref:`글꼴 선택기 <font_selector>` 위젯을 사용해서 범례 항목에 있는 범례 제목, 그룹, 하위 그룹 및 항목(피처)의 "
+"글꼴을 변경할 수 있습니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:159
 msgid ""
@@ -276,6 +323,9 @@ msgid ""
 ":guilabel:`Center` or :guilabel:`Right` (default for right-to-left based "
 "locales)."
 msgstr ""
+"이 각 수준에서 텍스트 :guilabel:`Alignment` 방식을 :guilabel:`Left` (좌에서 우로 기반 로케일의 "
+"기본값), :guilabel:`Center` 또는 :guilabel:`Right` (우에서 좌로 기반 로케일의 기본값) 가운데 하나로 "
+"설정할 수 있습니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:163
 msgid ""
@@ -283,16 +333,20 @@ msgid ""
 "<color-selector>` widget. The selected color will apply to all the font "
 "items in the legend."
 msgstr ""
+":ref:`색상 선택기 <color-selector>` 를 이용해서 라벨의 :guilabel:`Color` 를 설정할 수 있습니다. "
+"선택한 색상이 범례에 있는 모든 글꼴 항목에 적용될 것입니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:169
 msgid "Columns"
-msgstr ""
+msgstr "열"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:171
 msgid ""
 "Under the :guilabel:`Columns` group of the legend :guilabel:`Item "
 "Properties` panel, legend items can be arranged over several columns:"
 msgstr ""
+"범례 :guilabel:`Item Properties` 패널의 :guilabel:`Columns` 그룹에서 범례 항목을 여러 열에 걸쳐 "
+"배열할 수 있습니다:"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:174
 msgid ""
@@ -300,6 +354,8 @@ msgid ""
 "This value can be made dynamic e.g., following atlas features, legend "
 "contents, the frame size..."
 msgstr ""
+":guilabel:`Count` |selectNumber| 란에서 열 개수를 설정하십시오. 지도책 피처, 범례 내용물, 프레임 크기 등에"
+" 따라 이 값을 동적으로 설정할 수 있습니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:177
 msgid ""
@@ -318,11 +374,11 @@ msgstr ""
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:187
 msgid "Legend Columns settings"
-msgstr ""
+msgstr "범례 열 설정"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:191
 msgid "Symbol"
-msgstr ""
+msgstr "심볼"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:193
 msgid ""
@@ -330,10 +386,14 @@ msgid ""
 " configures the size of symbols displayed next to the legend labels. You "
 "can:"
 msgstr ""
+"범례 :guilabel:`Item Properties` 패널의 :guilabel:`Symbol` 그룹에서 범례 라벨 옆에 표시되는 심볼의"
+" 크기를 환경 설정할 수 있습니다:"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:197
 msgid "Set the :guilabel:`Symbol width` and :guilabel:`Symbol height`"
 msgstr ""
+":guilabel:`Symbol width` 및 :guilabel:`Symbol height`: 심볼의 너비 및 높이를 설정할 수 "
+"있습니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:198
 msgid ""
@@ -341,10 +401,13 @@ msgid ""
 "to the symbol representing the band color of the raster layer; you can set "
 "both the :guilabel:`Stroke color` and :guilabel:`Tickness`."
 msgstr ""
+"|checkbox| :guilabel:`Draw stroke for raster symbols`: 래스터 레이어의 밴드 색상을 나타내는 "
+"심볼에 윤곽선(outline)을 추가할 수 있습니다. :guilabel:`Stroke color` 획의 색상과 "
+":guilabel:`Tickness` 두께 둘 다 설정할 수 있습니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:207
 msgid "Legend Symbol configuration"
-msgstr ""
+msgstr "범례 심볼 환경 설정"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:211
 msgid "WMS LegendGraphic and Spacing"
@@ -356,10 +419,13 @@ msgid ""
 "legend :guilabel:`Item Properties` panel provide the following "
 "functionalities (see figure_layout_legend_wms_):"
 msgstr ""
+"범례 :guilabel:`Item Properties` 패널의 :guilabel:`WMS LegendGraphic` 및 "
+":guilabel:`Spacing` 그룹은 다음 기능을 제공하고 있습니다. (:ref:`figure_layout_legend_wms` "
+"그림을 참조하세요.):"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:222
 msgid "WMS LegendGraphic and Spacing groups"
-msgstr ""
+msgstr "WMS LegendGraphic 및 간격 그룹"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:224
 msgid ""
@@ -368,6 +434,8 @@ msgid ""
 " shown if the WMS server provides the GetLegendGraphic capability. The WMS "
 "legend content will be provided as a raster image."
 msgstr ""
+"WMS 레이어를 추가한 다음 범례 항목을 삽입한 경우, WMS 서버에 WMS 범례를 제공하라는 요청을 전송할 것입니다. WMS 서버가 "
+"GetLegendGraphic 기능을 제공하는 경우에만 이 범례가 표시될 것입니다. WMS 범례 내용은 래스터 이미지로 제공될 것입니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:229
 msgid ""
@@ -376,10 +444,12 @@ msgid ""
 " raster image."
 msgstr ""
 ":guilabel:`WMS LegendGraphic` 옵션에서 :guilabel:`Legend width` 및 "
-":guilabel:`Legend height` 를 설정해서 WMS 범례 래스터 이미지의 너비 및 높이를 조정할 수 있습니다."
+":guilabel:`Legend height` 를 설정해서 WMS 범례 래스터 이미지의 너비 및 높이를 조정할 수 있습니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:232
 msgid ""
 ":guilabel:`Spacing` around title, groups, subgroups, symbols, labels, boxes,"
 " columns and lines can be customized through this dialog."
 msgstr ""
+"이 대화창에서 제목, 그룹, 하위 그룹, 심볼, 라벨, 박스, 열 및 선 주위의 :guilabel:`Spacing` 을 사용자 지정할 수"
+" 있습니다."

@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-26 13:13+0200\n"
 "PO-Revision-Date: 2020-03-16 19:26+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2020\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -43,6 +44,9 @@ msgid ""
 "interoperable location and geospatial technology, including GIS. Further "
 "information can be found at https://www.opengeospatial.org/."
 msgstr ""
+"지리적 객체에 대한 기본 데이터 모델을 형성하면서, OGC는 상호 정보 교환이 가능한 위치 및 GIS를 비롯한 지리공간 기술에 대한 "
+"특정한 필요를 만족시키기 위해 수많은 사양을 개발해왔고, 개발하고 있습니다. https://www.opengeospatial.org/ "
+"사이트에서 더 자세한 정보를 찾아볼 수 있습니다."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:26
 msgid "Important OGC specifications supported by QGIS are:"
@@ -158,6 +162,11 @@ msgid ""
 "corresponding WMS tiles will be loaded from the cache the next time the "
 "project is opened as long as they are no older than 24H."
 msgstr ""
+"또한, QGIS는 GetCapabilities 요청이 전송되지 않는 한 사용자의 WMS 응답(예: 이미지)을 24 시간 동안 캐시에 "
+"담아둘 것입니다. GetCapabilities 요청은 WMS 서버 기능을 받아오기 위해 :guilabel:`Add Layer(s) "
+"from WMS(T) Server` 대화창에 있는 :guilabel:`Connect` 버튼을 누를 때마다 전송됩니다. 프로젝트를 불러오는"
+" 시간을 최적화하기 위한 자동 기능입니다. 프로젝트를 WMS 레이어와 함께 저장하는 경우, 24시간이 넘지 않은 한, 다음 번에 이 "
+"프로젝트를 열 때 캐시에서 대응하는 WMS 타일을 불러올 것입니다."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:86
 msgid "Overview of WMTS Support"
@@ -240,6 +249,10 @@ msgid ""
 "of an Austrian basemap is "
 "https://maps.wien.gv.at/basemap/1.0.0/WMTSCapabilities.xml."
 msgstr ""
+"이 서식으로 해당 URL이 RESTful 주소라는 사실을 알 수 있습니다. QGIS의 WMS 설정 양식에 있는 URL 란에 RESTful"
+" WMTS 주소를 추가하는 것만으로도 RESTful WMTS 웹서비스에 접근할 수 있습니다. 오스트리아의 기본도(basemap)의 경우,"
+" 이런 주소 유형의 예시가 바로 https://maps.wien.gv.at/basemap/1.0.0/WMTSCapabilities.xml"
+" 입니다."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:142
 msgid ""
@@ -250,6 +263,10 @@ msgid ""
 "https://wiki.osgeo.org/wiki/Tile_Map_Service_Specification for more "
 "information about this specification."
 msgstr ""
+"지금도 WMS-C라는 구식 서비스를 몇 개 찾을 수 있습니다. 이 서비스는 WMTS와 매우 비슷합니다. (목적은 동일하지만 작동 방식이 "
+"약간 다릅니다.) WMTS 서비스를 관리하는 것과 동일한 방식으로 이 서비스를 관리할 수 있습니다. URL 끝에 "
+"``?tiled=true`` 문자열만 추가하면 됩니다. 이 서비스의 사양에 대해 더 알고 싶다면 `타일 맵 서비스 사양 "
+"<https://wiki.osgeo.org/wiki/Tile_Map_Service_Specification>`_ 을 참조하세요."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:148
 msgid "When you read WMTS, you can often think WMS-C also."
@@ -270,6 +287,8 @@ msgid ""
 "Begin by clicking the |addWmsLayer| :sup:`Add WMS layer` button on the "
 "toolbar, or selecting :menuselection:`Layer --> Add WMS Layer...`."
 msgstr ""
+"툴바에 있는 |addWmsLayer| :sup:`Add WMS layer` 버튼을 누르거나, 또는 :menuselection:`Layer"
+" --> Add WMS Layer...` 메뉴 옵션을 선택하십시오."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:160
 msgid ""
@@ -281,6 +300,11 @@ msgid ""
 ":guilabel:`New` button. Then enter the parameters to connect to your desired"
 " WMS server, as listed in table_OGC_wms_:"
 msgstr ""
+"WMS 서버에서 레이어를 추가하기 위한 :guilabel:`Add Layer(s) from a Server` 대화창이 열립니다. "
+":guilabel:`Add Default Servers` 버튼을 클릭하면 예제용 서버를 몇 개 추가할 수 있습니다. 이 버튼은 사용자가 "
+"사용할 수 있는 WMS 데모 서버 2개를 추가할 것입니다. DM 솔루션 그룹과 리자드테크의 WMS 서버입니다. 새 WMS 서버를 "
+"정의하려면, :guilabel:`Layers` 탭에서 :guilabel:`New` 버튼을 누르십시오. 그 다음 "
+":,ref:`table_OGC_wms` 표에 정리된 대로, 원하는 WMS 서버에 연결하기 위한 파라미터를 입력하십시오:"
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:167
 msgid "\\"
@@ -402,6 +426,10 @@ msgid ""
 "*Authentication configuration* instead (:guilabel:`configurations` tab). See"
 " :ref:`authentication_index` for more details."
 msgstr ""
+":guilabel:`Authentication` 탭에서 **사용자명** 과 **비밀번호** 를 입력하면 연결 환경 설정에 보안되지 않은 "
+"인증 정보를 유지하게 됩니다. 예를 들면, 다른 사용자와 프로젝트 파일을 공유하는 경우, 이런 **인증 정보가 노출될 것입니다**. "
+"따라서 *인증 환경 설정* (:guilabel:`Configurations` 탭)에 사용자 인증 정보를 대신 저장하는 편이 좋습니다. 더"
+" 자세한 내용은 :ref:`authentication_index` 를 참조하세요."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:227
 msgid "Loading WMS/WMTS Layers"
@@ -417,6 +445,10 @@ msgid ""
 "downloading data from the WMS server, the download progress is visualized in"
 " the lower left of the WMS dialog."
 msgstr ""
+"사용자 파라미터를 성공적으로 입력하고 나면, :guilabel:`Connect` 버튼을 클릭해서 선택한 서버의 "
+"기능(capability)을 받아올 수 있습니다. 이 기능은 이미지 인코딩, 레이어, 레이어 스타일 그리고 투영체를 담고 있습니다. "
+"네트워크 작업이기 때문에, WMS 서버에 연결된 사용자 네트워크의 품질에 따라 응답 속도가 달라집니다. WMS 서버에서 데이터를 "
+"다운로드하는 동안, WMS 대화창 좌하단에 다운로드 진행 상태를 표시합니다."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:238
 msgid ""
@@ -424,7 +456,7 @@ msgid ""
 "response provided by the European Soil Portal WMS server."
 msgstr ""
 "사용자의 스크린이 이제 :ref:`figure_OGC_add_wms` 그림과 비슷하게 보일 것입니다. 이 그림은 유럽 토양 포털의 WMS"
-" 서버가 제공하는 응답을 보여주고 있습니다."
+" 서버의 응답을 보여주고 있습니다."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:246
 msgid "Dialog for adding a WMS server, showing its available layers"
@@ -479,7 +511,7 @@ msgid ""
 "legend after loading the layer."
 msgstr ""
 "대화창의 :guilabel:`Options` 부분에 사용자가 WMS 레이어를 위한 레이어명을 추가할 수 있는 "
-":guilabel:`Layer name` 텍스트 란이 있습니다. 레이어를 불러온 다음 범례에 이 명칭이 표시될 것입니다."
+":guilabel:`Layer name` 텍스트란이 있습니다. 레이어를 불러온 다음 범례에 이 명칭이 표시될 것입니다."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:273
 msgid ""
@@ -504,6 +536,8 @@ msgid ""
 "active, you can click on it and change the default projection of the WMS to "
 "another CRS provided by the WMS server."
 msgstr ""
+"목록에서 WMS를 선택했다면, 맵 서버가 제공한 기본 투영체를 가진 필드가 나타납니다. :guilabel:`Change...` 버튼이 "
+"활성화된 경우, 버튼을 클릭해서 WMS의 기본 투영체를 WMS 서버가 제공하는 다른 좌표계로 변경할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:284
 msgid ""
@@ -591,7 +625,7 @@ msgstr "좌표계란 QGIS 투영체를 뜻하는 OGC 용어입니다."
 msgid ""
 "Each WMS layer can be presented in multiple CRSs, depending on the "
 "capability of the WMS server."
-msgstr "WMS 서버의 능력에 따라, 각 WMS 레이어를 여러 좌표계로 표현할 수 있습니다."
+msgstr "WMS 서버의 기능에 따라, 각 WMS 레이어를 여러 좌표계로 표현할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:330
 msgid ""
@@ -600,6 +634,9 @@ msgid ""
 "WMS version of the dialog is that only those CRSs supported by the WMS "
 "server will be shown."
 msgstr ""
+"좌표계를 선택하려면, :guilabel:`Change...` 버튼을 누르십시오. :ref:`figure_projection_custom`"
+" 그림과 비슷한 대화창이 열릴 것입니다. WMS 버전의 대화창이 다른 점이라면 WMS 서버가 지원하는 좌표계만 표시될 것이라는 "
+"점이겠지요."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:337
 msgid "Server search"
@@ -632,6 +669,13 @@ msgid ""
 ":guilabel:`Connect` button. This option is quite handy when you want to "
 "search maps by specific keywords."
 msgstr ""
+"그림에서 알 수 있듯이, 텍스트란에 검색 문자열을 입력하고 :guilabel:`Search` 버튼을 클릭하면 됩니다. 잠시 후, 텍스트란"
+" 아래에 있는 목록에 검색 결과가 표시될 것입니다. 결과 목록을 훑어보고 테이블 안에 있는 검색 결과를 검토하십시오. 결과를 "
+"가시화하려면, 테이블 항목을 선택하고 :guilabel:`Add Selected Row to WMS List` 버튼을 누른 다음 "
+":guilabel:`Layers` 탭으로 가십시오. QGIS가 사용자의 서버 목록을 자동으로 업데이트해서, 벌써 "
+":guilabel:`Layers` 탭에 있는 저장된 WMS 서버 목록에 선택한 검색 결과를 선택된 상태로 추가해놓았을 겁니다. "
+":guilabel:`Connect` 버튼을 클릭해서 레이어 목록을 요청하기만 하면 됩니다. 사용자가 특정 키워드로 맵을 검색하고 싶을 때"
+" 매우 유용한 기능입니다."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:360
 msgid ""
@@ -736,7 +780,7 @@ msgid ""
 "(see OPEN-GEOSPATIAL-CONSORTIUM in :ref:`literature_and_web`), but here are "
 "a few handy definitions:"
 msgstr ""
-":guilabel:`Metadata` 탭은 WMS 서버에 관한 풍부한 정보를 표시합니다. 일반적으로 해당 서버가 반환한 능력 선언문에서 "
+":guilabel:`Metadata` 탭은 WMS 서버에 관한 풍부한 정보를 표시합니다. 일반적으로 해당 서버가 반환한 기능 선언문에서 "
 "수집한 정보입니다. WMS 표준 사양(:ref:`literature_and_web` 에 있는 OPEN-GEOSPATIAL-"
 "CONSORTIUM을 참조하세요)을 읽어보면 많은 정의들을 얻을 수 있지만, 사용자의 편의를 위해 다음 정의들을 모아봤습니다:"
 
@@ -746,7 +790,7 @@ msgstr "**서버 속성**"
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:467
 msgid "**WMS Version** --- The WMS version supported by the server."
-msgstr "**WMS Version** -- 서버가 지원하는 WMS 버전입니다."
+msgstr "**WMS Version** ─ 서버가 지원하는 WMS 버전입니다."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:468
 msgid ""
@@ -755,8 +799,8 @@ msgid ""
 "libraries were built with, which is typically at least ``image/png`` and "
 "``image/jpeg``."
 msgstr ""
-"**Image Formats** -- 맵 렌더링 시 서버가 응답할 수 있는 MIME 유형의 목록입니다. QGIS는 기저 Qt 라이브러리와"
-" 함께 빌드된 어떤 포맷이든 지원하고 있습니다. 일반적으로, 최소한 ``image/png`` 및 ``image/jpeg`` 유형은 "
+"**Image Formats** ─ 맵 렌더링 시 서버가 응답할 수 있는 MIME 유형의 목록입니다. QGIS는 기저 Qt 라이브러리와 "
+"함께 빌드된 어떤 포맷이든 지원하고 있습니다. 일반적으로, 최소한 ``image/png`` 및 ``image/jpeg`` 유형은 "
 "지원합니다."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:472
@@ -765,7 +809,7 @@ msgid ""
 "when you use the Identify tool. Currently, QGIS supports the ``text-plain`` "
 "type."
 msgstr ""
-"**Identity Formats** -- 식별 도구 사용 시 서버가 응답할 수 있는 MIME 유형의 목록입니다. QGIS는 현재 "
+"**Identity Formats** ─ 식별 도구 사용 시 서버가 응답할 수 있는 MIME 유형의 목록입니다. QGIS는 현재 "
 "``text-plain`` 유형을 지원하고 있습니다."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:476
@@ -776,14 +820,14 @@ msgstr "**레이어 속성**"
 msgid ""
 "**Selected** --- Whether or not this layer was selected when its server was "
 "added to this project."
-msgstr "**Selected** -- 현재 프로젝트에 서버를 추가했을 때 현재 레이어를 선택했는지 여부를 결정합니다."
+msgstr "**Selected** ─ 현재 프로젝트에 서버를 추가했을 때 현재 레이어를 선택했는지 여부를 결정합니다."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:480
 msgid ""
 "**Visible** --- Whether or not this layer is selected as visible in the "
 "legend (not yet used in this version of QGIS)."
 msgstr ""
-"**Visible** -- 범례에 현재 레이어를 가시화하도록 선택했는지 여부를 결정합니다. (QGIS 현재 버전에서는 아직 사용되지 "
+"**Visible** ─ 범례에 현재 레이어를 가시화하도록 선택했는지 여부를 결정합니다. (QGIS 현재 버전에서는 아직 사용되지 "
 "않습니다.)"
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:482
@@ -791,7 +835,7 @@ msgid ""
 "**Can Identify** --- Whether or not this layer will return any results when "
 "the Identify tool is used on it."
 msgstr ""
-"**Can Identify** -- 현재 레이어에 식별 도구를 사용했을 때 레이어가 어떤 결과든 반환할 것인지 여부를 결정합니다."
+"**Can Identify** ─ 현재 레이어에 식별 도구를 사용했을 때 레이어가 어떤 결과든 반환할 것인지 여부를 결정합니다."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:484
 msgid ""
@@ -799,7 +843,7 @@ msgid ""
 "transparency. This version of QGIS will always use transparency if this is "
 "``Yes`` and the image encoding supports transparency."
 msgstr ""
-"**Can be Transparent** -- 현재 레이어를 투명도를 적용해서 렌더링할 수 있는지 여부를 결정합니다. 이 속성이 "
+"**Can be Transparent** ─ 현재 레이어를 투명도를 적용해서 렌더링할 수 있는지 여부를 결정합니다. 이 속성이 "
 "``Yes`` 이고 이미지 인코딩이 투명도를 지원하는 경우 QGIS 현재 버전은 언제나 투명도를 적용할 것입니다."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:487
@@ -808,8 +852,8 @@ msgid ""
 "server. This version of QGIS assumes all WMS layers have this set to "
 "``Yes``. Deficient layers may be rendered strangely."
 msgstr ""
-"**Can Zoom In** -- 서버가 현재 레이어를 확대할 수 있는지 여부를 결정합니다. QGIS 현재 버전은 모든 WMS 레이어의 "
-"이 속성이 ``Yes`` 로 설정돼 있다고 가정합니다. 이 속성이 ``No`` 인 레이어는 이상하게 렌더링될 수도 있습니다."
+"**Can Zoom In** ─ 서버가 현재 레이어를 확대할 수 있는지 여부를 결정합니다. QGIS 현재 버전은 모든 WMS 레이어의 이"
+" 속성이 ``Yes`` 로 설정돼 있다고 가정합니다. 이 속성이 ``No`` 인 레이어는 이상하게 렌더링될 수도 있습니다."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:490
 msgid ""
@@ -817,8 +861,8 @@ msgid ""
 " get the raster data for a layer. This entry shows how many times the "
 "request for this layer is forwarded to peer WMS servers for a result."
 msgstr ""
-"**Cascade Count** -- WMS 서버는 레이어를 위한 래스터 데이터를 얻기 위해 다른 WMS 서버에 대한 프록시 역할을 할 "
-"수 있습니다. 이 속성은 피어 WMS 서버가 반환하기 전에 현재 레이어에 대한 요청을 몇 번이나 포워딩했는지를 알려줍니다."
+"**Cascade Count** ─ WMS 서버는 레이어를 위한 래스터 데이터를 얻기 위해 다른 WMS 서버에 대한 프록시 역할을 할 수"
+" 있습니다. 이 속성은 피어 WMS 서버가 반환하기 전에 현재 레이어에 대한 요청을 몇 번이나 포워딩했는지를 알려줍니다."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:493
 msgid ""
@@ -826,7 +870,7 @@ msgid ""
 " pixel dimensions. This version of QGIS assumes all WMS layers have this set"
 " to nothing. Deficient layers may be rendered strangely."
 msgstr ""
-"**Fixed Width, Fixed Height** -- 현재 레이어가 고정된 소스 픽셀 크기를 가지고 있는지 여부를 결정합니다. "
+"**Fixed Width, Fixed Height** ─ 현재 레이어가 고정된 소스 픽셀 크기를 가지고 있는지 여부를 결정합니다. "
 "QGIS 현재 버전은 모든 WMS 레이어의 이 속성이 설정돼 있지 않다고 가정합니다. 설정돼 있는 레이어는 이상하게 렌더링될 수도 "
 "있습니다."
 
@@ -840,7 +884,7 @@ msgid ""
 "WMS XML elements ``LatLonBoundingBox``, ``EX_GeographicBoundingBox`` or the "
 "CRS:84 ``BoundingBox``."
 msgstr ""
-"**WGS 84 Bounding Box** -- 레이어의 WGS 84 좌표가 적용된 경계 상자입니다. 일부 WMS 서버에서는 이 속성이 "
+"**WGS 84 Bounding Box** ─ 레이어의 WGS 84 좌표가 적용된 경계 상자입니다. 일부 WMS 서버에서는 이 속성이 "
 "올바로 설정돼 있지 않습니다. (예를 들면 UTM 좌표를 대신 적용한 경우가 있습니다.) 만약 이런 경우라면, QGIS가 해당 레이어의 "
 "초기 뷰를 굉장히 '축소된' 모습으로 렌더링할 수도 있습니다. 이런 오류는 WMS 웹마스터에게 반드시 알려야 합니다. WMS XML 항목"
 " 가운데 ``LatLonBoundingBox``, ``EX_GeographicBoundingBox`` 또는 CRS:84 "
@@ -851,18 +895,18 @@ msgid ""
 "**Available in CRS** --- The projections that this layer can be rendered in "
 "by the WMS server. These are listed in the WMS-native format."
 msgstr ""
-"**Available in CRS** -- WMS 서버가 현재 레이어를 렌더링할 수 있는 투영체를 결정합니다. 이 투영체들은 WMS 고유"
-" 서식으로 정리돼 있습니다."
+"**Available in CRS** ─ WMS 서버가 현재 레이어를 렌더링할 수 있는 투영체를 결정합니다. 이 투영체들은 WMS 고유 "
+"서식으로 정리돼 있습니다."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:504
 msgid ""
 "**Available in style** --- The image styles that this layer can be rendered "
 "in by the WMS server."
-msgstr "**Available in style** -- WMS 서버가 현재 레이어를 렌더링할 수 있는 이미지 스타일을 결정합니다."
+msgstr "**Available in style** ─ WMS 서버가 현재 레이어를 렌더링할 수 있는 이미지 스타일을 결정합니다."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:510
 msgid "Show WMS legend graphic in table of contents and layout"
-msgstr ""
+msgstr "차례 및 조판기에 WMS 범례 그래픽 표시하기"
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:512
 msgid ""
@@ -872,6 +916,9 @@ msgid ""
 "has getCapability url specified, so you additionally have to select a "
 "styling for the layer."
 msgstr ""
+"QGIS WMS 데이터 제공자는 차례(table of content)의 레이어 목록 및 인쇄 조판기에 WMS 범례 그래픽을 표시할 수 "
+"있습니다. WMS 서버가 ``GetLegendGraphic`` 기능을 보유하고 있고 레이어에 ``getCapability`` URL을 "
+"설정한 경우에만 WMS 범례를 표시할 것입니다. 따라서 해당 레이어를 위한 스타일을 따로 선택해야 합니다."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:518
 msgid ""
@@ -880,9 +927,9 @@ msgid ""
 "QgsLegendInterface architectural limitation). Clicking on the layer's legend"
 " will open a frame with the legend at full resolution."
 msgstr ""
-"LegendGraphic을 사용할 수 있는 경우, 범례 레이어 아래에 표시합니다. LegendGraphic이 매우 작기 때문에 "
+"LegendGraphic을 사용할 수 있는 경우, 레이어 아래에 표시합니다. LegendGraphic이 매우 작기 때문에 "
 "(``QgsLegendInterface`` 의 구조적 제약 때문에) 실제 크기로 열려면 LegendGraphic을 클릭해야 합니다. "
-"레이어의 범례를 클릭하면 전체 해상도의 범례를 담은 플레임이 열릴 것입니다."
+"레이어의 범례를 클릭하면 전체 해상도의 범례를 담은 프레임이 열릴 것입니다."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:523
 msgid ""
@@ -891,6 +938,8 @@ msgid ""
 "item properties under :menuselection:`Legend --> WMS LegendGraphic` to match"
 " your printing requirements."
 msgstr ""
+"인쇄 조판기에서는, 범례가 원본 (다운로드된) 크기로 통합될 것입니다. :menuselection:`Legend --> WMS "
+"LegendGraphic` 메뉴의 항목 속성 패널에서 범례 그래픽의 해상도를 사용자의 인쇄 작업 요구 사항에 맞게 설정할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:528
 msgid ""
@@ -899,7 +948,7 @@ msgid ""
 "capability and the layer has getCapability url specified, so you have to "
 "select a styling."
 msgstr ""
-"이 범례는 사용자의 현재 축척을 기반으로 맥락에 맞는 정보를 표시할 것입니다. WMS 서버가 ``GetLegendGraphic`` 능력을"
+"이 범례는 사용자의 현재 축척을 기반으로 맥락에 맞는 정보를 표시할 것입니다. WMS 서버가 ``GetLegendGraphic`` 기능을"
 " 보유하고 있고 레이어에 ``getCapability`` URL을 설정한 경우에만 WMS 범례를 표시할 것입니다. 따라서 해당 레이어를 "
 "위한 스타일을 따로 선택해야 합니다."
 
@@ -925,6 +974,8 @@ msgid ""
 "there is no way to change the settings. A work-around is to delete the layer"
 " completely and start again."
 msgstr ""
+"|addWmsLayer| :sup:`Add WMS layer` 아이콘으로 WMS 레이어 추가 작업을 완료한 후에 설정을 변경할 방법은 "
+"없습니다. 설정을 변경하려면 레이어를 완전히 삭제한 다음 다시 시작해야 합니다."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:546
 msgid "**WMS Servers Requiring Authentication**"
@@ -952,6 +1003,9 @@ msgid ""
 "support several authentication methods. More information can be found in the"
 " InteProxy manual at https://inteproxy.wald.intevation.org."
 msgstr ""
+"보안된 레이어에 기본 인증이 아닌 보안 방식으로 접근해야 하는 경우, 여러 인증 방식을 지원하고 있는 InteProxy를 투명 프록시 "
+"모드로 사용할 수 있습니다. 더 자세한 정보는 https://inteproxy.wald.intevation.org/ 에 있는 "
+"InteProxy 사용자 설명서를 살펴보세요."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:564
 msgid "**QGIS WMS Mapserver**"
@@ -1004,7 +1058,7 @@ msgid ""
 msgstr ""
 "내장 WCS 제공자는 모든 네트워크 요청을 처리하며 모든 표준 QGIS 네트워크 설정을 (특히 프록시 설정을) 사용합니다. 제공자가 캐시"
 " 모드('always cache', 'prefer cache', 'prefer network', 'always network')를 사용할"
-" 수도 있고, 서버가 시간 영역(temporal domain)을 제공하는 경우 시점(time position) 선택도 지원합니다."
+" 수도 있고, 서버가 시간 영역(temporal domain)을 제공하는 경우 시점(time position)도 선택할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:603
 msgid "WFS and WFS-T Client"
@@ -1038,68 +1092,80 @@ msgid ""
 "https://demo.gatewaygeomatics.com/cgi-"
 "bin/wfs_gateway?REQUEST=GetCapabilities&VERSION=1.0.0&SERVICE=WFS"
 msgstr ""
+"게이트웨이 지오매틱스(Gateway Geomatics)의 WFS 서버를 예제로 삼아 레이어를 표시해보겠습니다. WFS 서버의 URL은 "
+"https://demo.gatewaygeomatics.com/cgi-"
+"bin/wfs_gateway?REQUEST=GetCapabilities&VERSION=1.0.0&SERVICE=WFS 입니다."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:619
 msgid ""
 "To be able to load a WFS Layer we create a connection to the WFS server "
 "first."
-msgstr ""
+msgstr "WFS 레이어를 불러오려면 먼저 WFS 서버와의 연결을 생성해야 합니다."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:621
 msgid ""
 "Open the :guilabel:`Data Source Manager` dialog by pressing the "
 "|dataSourceManager| :sup:`Open Data Source Manager` button"
 msgstr ""
+"|dataSourceManager| :sup:`Open Data Source Manager` 버튼을 클릭해서 :guilabel:`Data"
+" Source Manager` 대화창을 여십시오."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:623
 msgid "Enable the |addWfsLayer| :guilabel:`WFS` tab"
-msgstr ""
+msgstr "|addWfsLayer| :guilabel:`WFS` 탭을 선택하십시오."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:624
 msgid ""
 "Click on :guilabel:`New...` to open the :guilabel:`Create a New WFS "
 "Connection` dialog"
 msgstr ""
+":guilabel:`New...` 버튼을 클릭해서 :guilabel:`Create a New WFS Connection` 대화창을 "
+"여십시오."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:626
 msgid "Enter ``Gateway Geomatics`` as name"
-msgstr ""
+msgstr "``Gateway Geomatics`` 를 명칭으로 입력하십시오."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:627
 msgid "Enter the URL (see above)"
-msgstr ""
+msgstr "(앞에서 언급한) URL을 입력하십시오."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:634
 msgid "Creating a connection to a WFS server"
-msgstr ""
+msgstr "WFS 서버와의 연결 생성하기"
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:636
 msgid "In the WFS settings dialog, you can:"
-msgstr ""
+msgstr "WFS 설정 대화창에서 다음과 같은 작업을 할 수 있습니다:"
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:638
 msgid ""
 "Indicate the WFS version of the server. If unknown, press the "
 ":guilabel:`Detect` button to automatically retrieve it."
 msgstr ""
+"서버의 WFS 버전을 알 수 있습니다. 표시되지 않는 경우, :guilabel:`Detect` 버튼을 클릭하면 자동으로 받아옵니다."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:640
 msgid ""
 "Define the :guilabel:`maximum number of features` retrieved in a single "
 "GetFetFeature request. If empty, no limit is set."
 msgstr ""
+":guilabel:`maximum number of features`: ``GetFetFeature`` 요청 한 번으로 받아오는 피처의 "
+"최대 개수를 정의합니다. 비워놓는 경우, 제한을 두지 않습니다."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:642
 msgid ":guilabel:`Invert axis orientation`."
-msgstr ""
+msgstr ":guilabel:`Invert axis orientation`: 축의 방향을 반전시킵니다."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:643
 msgid "And depending on the WFS version:"
-msgstr ""
+msgstr "그리고 WFS 버전에 따라:"
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:645
 msgid "Force to :guilabel:`Ignore axis orientation (WFS 1.1/WFS 2.0)`"
 msgstr ""
+":guilabel:`Ignore axis orientation (WFS 1.1/WFS 2.0)`: 버전 1.1, 2.0인 경우 축의 "
+"방향을 무시하도록 강제할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:646
 msgid ""
@@ -1107,6 +1173,8 @@ msgid ""
 " to retrieve with :guilabel:`Page size`. If no limit is defined, then the "
 "server default is applied."
 msgstr ""
+"|checkbox| :guilabel:`Enable feature paging` 옵션을 활성화하면 :guilabel:`Page size`"
+" 란에 받아올 피처의 최대 개수를 지정할 수 있습니다. 비워놓는 경우, 서버 기본값을 적용합니다."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:652
 msgid ""
@@ -1117,10 +1185,14 @@ msgid ""
 "*Authentication configuration* instead (:guilabel:`Configurations` tab). See"
 " :ref:`authentication_index` for more details."
 msgstr ""
+":guilabel:`Authentication` 탭에서 **사용자명** 과 **비밀번호** 를 입력하면 연결 환경 설정에 보안되지 않은 "
+"인증 정보를 유지하게 됩니다. 예를 들면, 다른 사용자와 프로젝트 파일을 공유하는 경우, 이런 **인증 정보가 노출될 것입니다**. "
+"따라서 *인증 환경 설정* (:guilabel:`Configurations` 탭)에 사용자 인증 정보를 대신 저장하는 편이 좋습니다. 더"
+" 자세한 내용은 :ref:`authentication_index` 를 참조하세요."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:660
 msgid "Press :guilabel:`OK` to create the connection."
-msgstr ""
+msgstr ":guilabel:`OK`를 클릭해서 연결을 생성하십시오."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:662
 msgid ""
@@ -1130,25 +1202,27 @@ msgstr "사용자가 설정했을 수도 있는 어떤 프록시 설정이라도
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:664
 msgid "Now we are ready to load WFS layers from the above connection."
-msgstr ""
+msgstr "이제 앞에서 설정한 연결로부터 WFS 레이어를 불러올 수 있습니다."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:666
 msgid ""
 "Choose 'Gateway Geomatics' from the :guilabel:`Server Connections` "
 "|selectString| drop-down list."
 msgstr ""
+":guilabel:`Server Connections` |selectString| 드롭다운 목록에서 'Gateway Geomatics' "
+"를 선택하십시오."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:668
 msgid "Click :guilabel:`Connect`"
-msgstr ""
+msgstr ":guilabel:`Connect` 를 클릭하십시오."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:669
 msgid "Select the :guilabel:`Parks` layer in the list"
-msgstr ""
+msgstr "목록에서 :guilabel:`Parks` 레이어를 선택하십시오."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:670
 msgid "You can also choose whether to:"
-msgstr ""
+msgstr "다음 옵션 가운데 하나를 선택할 수 있습니다:"
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:672
 msgid ""
@@ -1156,25 +1230,31 @@ msgid ""
 "as defined on the server in the :guilabel:`Layers` panel instead of its "
 ":guilabel:`Name`"
 msgstr ""
+"|unchecked| :guilabel:`Use title for layer name`: 이 옵션을 체크하면 레이어의 "
+":guilabel:`Name` 대신 :guilabel:`Layers` 패널에 있는 서버 상에서 정의된 레이어의 제목을 표시합니다."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:675
 msgid ""
 "|checkbox| :guilabel:`Only request features overlapping the view extent`"
 msgstr ""
+"|checkbox| :guilabel:`Only request features overlapping the view extent`: 이 "
+"옵션을 체크하면 뷰 범위와 겹치는 피처만 요청합니다."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:676
 msgid "|unchecked| :guilabel:`Change` the layer's CRS"
-msgstr ""
+msgstr ":guilabel:`Change`: 이 버튼을 클릭하면 레이어의 좌표계를 변경할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:677
 msgid ""
 "or :guilabel:`Build query` to specify particular features to retrieve, by "
 "either using the corresponding button or double-clicking the target layer."
 msgstr ""
+":guilabel:`Build query` : 특정 피처를 받아오려면 이 버튼을 클릭해서, 또는 대상 레이어를 더블클릭해서 쿼리를 "
+"작성하십시오."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:681
 msgid "Click :guilabel:`Add` to add the layer to the map."
-msgstr ""
+msgstr ":guilabel:`Add` 버튼을 클릭하면 맵에 레이어를 추가합니다."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:689
 msgid "Adding a WFS layer"
@@ -1186,6 +1266,8 @@ msgid ""
 "QGIS main window. Once the layer is loaded, you can identify and select a "
 "couple of features and view the attribute table."
 msgstr ""
+"QGIS 메인 창 좌하단에 다운로드 진행 상태가 가시화된다는 걸 볼 수 있을 것입니다. 레이어를 불러오고 나면, 피처를 한두 개 식별하고"
+" 선택해서 속성 테이블을 살펴볼 수 있습니다."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:697
 msgid ""
@@ -1193,6 +1275,8 @@ msgid ""
 "download and progressive rendering, on-disk caching of downloaded features "
 "and version autodetection."
 msgstr ""
+"QGIS는 백그라운드 다운로드, 점진적인 렌더링, 다운로드한 피처의 디스크 캐시(on-disk caching), 그리고 자동 버전 탐지 "
+"등 여러 버전의 WFS 프로토콜을 지원합니다."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:701
 msgid "**Finding WFS Servers**"

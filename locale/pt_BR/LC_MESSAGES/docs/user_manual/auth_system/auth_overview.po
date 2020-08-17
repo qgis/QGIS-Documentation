@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Aline Furlanetto Viero <afviero@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-26 13:13+0200\n"
 "PO-Revision-Date: 2020-03-16 19:26+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Aline Furlanetto Viero <afviero@gmail.com>, 2020\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,7 +24,7 @@ msgstr ""
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:4
 msgid "Authentication System Overview"
-msgstr ""
+msgstr "Visão Geral do Sistema de Autenticação"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:16
 msgid "Anatomy of authentication system"
@@ -31,7 +32,7 @@ msgstr "Anatomia do sistema de autenticação"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:19
 msgid "Authentication database"
-msgstr ""
+msgstr "Banco de Dados de Autenticação"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:21
 msgid ""
@@ -39,6 +40,9 @@ msgid ""
 "SQLite database file located, by default, at :file:`<user home>/.qgis3/qgis-"
 "auth.db`."
 msgstr ""
+"O novo sistema de autenticação armazena configurações de autenticação em um "
+"arquivo de banco de dados SQLite localizado, por padrão, em :file:`<user "
+"home>/.qgis3/qgis-auth.db`."
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:24
 msgid ""
@@ -50,6 +54,14 @@ msgid ""
 "be stored in plain text application components, (such as project, plugin, or"
 " settings files) without disclosure of its associated credentials."
 msgstr ""
+"Este banco de dados de autenticação pode ser movido entre as instalações do "
+"QGIS sem afetar outras preferências do usuário QGIS atuais, já que é "
+"completamente separado das configurações normais do QGIS. Um ID de "
+"configuração (uma strig alfanumérica aleatória de 7 caracteres) é gerado ao "
+"armazenar inicialmente uma configuração no banco de dados. Isso representa a"
+" configuração, permitindo que o ID seja armazenado em componentes de "
+"aplicativo de texto simples (como arquivos de projeto, complemento ou "
+"configurações) sem a divulgação de suas credenciais associadas."
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:34
 msgid ""
@@ -57,10 +69,13 @@ msgid ""
 "environment variable, ``QGIS_AUTH_DB_DIR_PATH``, or set on the command line "
 "during launch with the ``--authdbdirectory`` option."
 msgstr ""
+"O diretório pai do `qgis-auth.db` pode ser definido usando a seguinte "
+"variável de ambiente,``QGIS_AUTH_DB_DIR_PATH``, ou definido na linha de "
+"comando durante o lançamento com a opção ``--authdbdirectory``."
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:39
 msgid "Master password"
-msgstr ""
+msgstr "Senha mestra"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:41
 msgid ""
@@ -75,16 +90,29 @@ msgid ""
 "authentication configuration, or applying a configuration to a server "
 "configuration (such as when adding a WMS layer)."
 msgstr ""
+"Para armazenar ou acessar informações confidenciais no banco de dados, o "
+"usuário deve definir uma `senha mestra`. Uma nova senha mestra é solicitada "
+"e verificada ao armazenar inicialmente quaisquer dados criptografados no "
+"banco de dados. Somente quando informações confidenciais são acessadas, o "
+"usuário solicita a senha mestra, que é então armazenada em cache pelo "
+"restante da sessão (até que o aplicativo seja encerrado), a menos que o "
+"usuário escolha manualmente uma ação para limpar seu valor armazenado em "
+"cache. Algumas instâncias de uso do sistema de autenticação não requerem a "
+"entrada da senha mestra, como ao selecionar uma configuração de autenticação"
+" existente ou ao aplicar uma configuração a uma configuração de servidor "
+"(como ao adicionar uma camada WMS)."
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:56
 msgid "Input new master password"
-msgstr ""
+msgstr "Insira uma nova senha mestra"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:60
 msgid ""
 "A path to a file containing the master password can be set using the "
 "following environment variable, ``QGIS_AUTH_PASSWORD_FILE``."
 msgstr ""
+"Um caminho para um arquivo contendo a senha mestra pode ser definido usando "
+"a seguinte variável de ambiente, ``QGIS_AUTH_PASSWORD_FILE``."
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:64
 msgid "Managing the master password"
@@ -96,6 +124,9 @@ msgid ""
 " be needed prior to resetting. During this process, there is an option to "
 "generate a complete backup of the current database."
 msgstr ""
+"Uma vez definida, a senha mestra pode ser redefinida; a senha mestra atual "
+"será necessária antes da redefinição. Durante este processo, existe a opção "
+"de gerar um backup completo do banco de dados atual."
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:75
 msgid "Resetting master password"
@@ -107,20 +138,25 @@ msgid ""
 "override it. There is also no means of retrieving encrypted information "
 "without knowing the master password."
 msgstr ""
+"Se o usuário esquecer a senha mestra, não haverá como recuperá-la ou "
+"substituí-la. Também não há meio de recuperar informações criptografadas sem"
+" saber a senha mestra."
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:81
 msgid ""
 "If a user inputs their existing password incorrectly three times, the dialog"
 " will offer to erase the database."
 msgstr ""
+"Se um usuário inserir sua senha existente incorretamente três vezes, a caixa"
+" de diálogo se oferecerá para apagar o banco de dados."
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:89
 msgid "Password prompt after three invalid attempts"
-msgstr ""
+msgstr "Solicitação de senha após três tentativas inválidas"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:92
 msgid "Authentication Configurations"
-msgstr ""
+msgstr "Configurações de Autenticação"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:94
 msgid ""
@@ -128,6 +164,9 @@ msgid ""
 " in the :guilabel:`Authentication` tab of the QGIS Options dialog "
 "(:menuselection:`Settings --> Options`)."
 msgstr ""
+"Você pode gerenciar as configurações de autenticação de "
+":guilabel:`Configurações` na guia :guilabel:`Autenticação` da caixa de "
+"diálogo Opções do QGIS (:menuselection:`Configurações --> Opções`)."
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:103
 msgid "Configurations editor"
