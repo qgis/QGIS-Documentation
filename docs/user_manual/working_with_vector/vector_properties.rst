@@ -2963,11 +2963,13 @@ feature identification:
   <vector_expressions>`. This is:
 
   * the label shown on top of the feature information in the :ref:`Identify
-    tool <identify>` results;
+    tool <identify>` results
   * the field used in the :ref:`locator bar <locator_options>` when looking for
-    features in all layers;
+    features in all layers
   * the feature identifier in the attribute table :ref:`form view
-    <attribute_table_view>`;
+    <attribute_table_view>`
+  * the feature identifier when the map or layout is exported to a layered
+    output format such as GeoPDF
   * the map tip information, i.e. the message displayed in the map canvas when
     hovering over a feature of the active layer with the |mapTips| :sup:`Show
     Map Tips` icon pressed. Applicable when no :guilabel:`HTML Map Tip` is set.
