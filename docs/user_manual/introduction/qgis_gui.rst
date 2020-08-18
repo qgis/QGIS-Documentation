@@ -2420,9 +2420,8 @@ fine-tune the 3D scene:
   * up to eight :guilabel:`Point lights`, each with a particular position
     (at :guilabel:`X`, :guilabel:`Y` and :guilabel:`Z`), :guilabel:`Color`,
     :guilabel:`Intensity` and :guilabel:`Attenuation`
-  * up to four :guilabel:`Directional lights`, with the line direction
-    (as :guilabel:`X`, :guilabel:`Y` and :guilabel:`Z`), :guilabel:`Color`,
-    and :guilabel:`Intensity`
+  * up to four :guilabel:`Directional lights`, with direction vector (:guilabel:`X`,
+    :guilabel:`Y`, :guilabel:`Z`), :guilabel:`Color` and :guilabel:`Intensity`.
 
   .. _figure_3dmap_configlights:
 
