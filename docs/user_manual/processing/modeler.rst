@@ -53,8 +53,10 @@ The first step is to define the inputs for the model.
 The following elements are found in the :guilabel:`Inputs` tab on
 the left side of the modeler window:
 
+* Authentication Configuration
 * Boolean
 * CRS
+* Color
 * Distance
 * Enum
 * Expression
@@ -66,9 +68,12 @@ the left side of the modeler window:
 * Multiple Input
 * Number
 * Point
+* Print Layout
+* Print Layout Item
 * Range
 * Raster Band
 * Raster Layer
+* Scale
 * String
 * Vector Features
 * Vector Field
