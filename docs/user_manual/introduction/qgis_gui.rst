@@ -2252,7 +2252,7 @@ The following tools are provided at the top of the 3D map view panel:
   (:file:`.obj` file), allowing post-processing in applications like Blender...
   The terrain and vector features are exported as 3D objects.
   The export settings, overriding the layers :ref:`properties <sec_3_d_view>`
-  or map view `configuration <scene_configuration>`, include:
+  or map view :ref:`configuration <scene_configuration>`, include:
 
   * :guilabel:`Scene name` and destination :guilabel:`Folder`
   * :guilabel:`Terrain resolution`
