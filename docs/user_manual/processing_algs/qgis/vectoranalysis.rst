@@ -1067,8 +1067,8 @@ Python code
 
 Nearest neighbour analysis
 --------------------------
-Performs nearest neighbor analysis for a point layer. The output allows to
-understand how your data are distributed (clustered, randomly or distributed).
+Performs nearest neighbor analysis for a point layer. The output tells you
+how your data are distributed (clustered, randomly or distributed).
 
 Output is generated as an HTML file with the computed statistical
 values:
@@ -1079,9 +1079,9 @@ values:
 * Number of points
 * Z-Score: Comparing the Z-Score with the normal distribution tells
   you how your data are distributed.
-  A low Z-Score means that the data are unlikely distributed randomly
-  while a high Z-Score means that your data are very likely
-  distributed in a dispersed way.
+  A low Z-Score means that the data are unlikely to be the result of a
+  spatially random process, while a high Z-Score means that your data
+  are likely to be a result of a spatially random process.
 
   .. figure:: img/normal_distribution.png
      :align: center
