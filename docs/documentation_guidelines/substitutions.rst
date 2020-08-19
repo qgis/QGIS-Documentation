@@ -428,8 +428,10 @@ Icon                            Substitution                        Icon        
 ==============================  ==================================  ==============================  ==================================
 |processing|                    ``|processing|``                    |processingModel|               ``|processingModel|``
 |processingHistory|             ``|processingHistory|``             |processingResult|              ``|processingResult|``
-|processSelected|               ``|processSelected|``
+|processSelected|               ``|processSelected|``               |processingHelp|                ``|processingHelp|``  
+|saveAsPython|                  ``|saveAsPython|``                  |processingOutput|              ``|processingOutput|``  
 |qgsProjectFile|                ``|qgsProjectFile|``                |addToProject|                  ``|addToProject|``
+|integer|                       ``|integer|``
 |mean|                          ``|mean|``                          |layerExtent|                   ``|layerExtent|``
 |randomSelection|               ``|randomSelection|``               |vectorGrid|                    ``|vectorGrid|``
 |convexHull|                    ``|convexHull|``                    |buffer|                        ``|buffer|``
@@ -439,9 +441,8 @@ Icon                            Substitution                        Icon        
 |checkGeometry|                 ``|checkGeometry|``                 |exportGeometry|                ``|exportGeometry|``
 |delaunay|                      ``|delaunay|``                      |centroids|                     ``|centroids|``
 |toLines|                       ``|toLines|``                       |extractNodes|                  ``|extractNodes|``
-|splitLayer|                    ``|splitLayer|``
-|showRasterCalculator|          ``|showRasterCalculator|``          |heatmap|                       ``|heatmap|``
-|showMeshCalculator|            ``|showMeshCalculator|``
+|splitLayer|                    ``|splitLayer|``                    |heatmap|                       ``|heatmap|``
+|showRasterCalculator|          ``|showRasterCalculator|``          |showMeshCalculator|            ``|showMeshCalculator|``  
 ==============================  ==================================  ==============================  ==================================
 
 Various Core Plugins
@@ -881,6 +882,8 @@ Icon                            Substitution                        Icon        
 .. |inputText| image:: /static/common/inputtext.png
 .. |installPluginFromZip| image:: /static/common/mActionInstallPluginFromZip.png
    :width: 1.5em
+.. |integer| image:: /static/common/mIconFieldInteger.png
+   :width: 1.5em
 .. |interfaceCustomization| image:: /static/common/mActionInterfaceCustomization.png
    :width: 1.5em
 .. |interpolation| image:: /static/common/interpolation.png
@@ -1073,9 +1076,13 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |processing| image:: /static/common/processingAlgorithm.png
    :width: 1.5em
+.. |processingHelp| image:: /static/common/mActionEditHelpContent.png
+   :width: 1.5em
 .. |processingHistory| image:: /static/common/history.png
    :width: 1.5em
 .. |processingModel| image:: /static/common/processingModel.png
+   :width: 1.5em
+.. |processingOutput| image:: /static/common/mIconModelOutput.png
    :width: 1.5em
 .. |processingResult| image:: /static/common/processingResult.png
    :width: 1.5em
@@ -1154,6 +1161,8 @@ Icon                            Substitution                        Icon        
 .. |runConsole| image:: /static/common/iconRunConsole.png
    :width: 1.5em
 .. |saveAsPDF| image:: /static/common/mActionSaveAsPDF.png
+   :width: 1.5em
+.. |saveAsPython| image:: /static/common/mActionSaveAsPython.png
    :width: 1.5em
 .. |saveAsSVG| image:: /static/common/mActionSaveAsSVG.png
    :width: 1.5em
