@@ -56,7 +56,7 @@ The Expression builder dialog offers access to the:
          WHEN "pop_density" >= 150 THEN 'High population density'
     END
 
-* Update a region layer field with comma separated name of the overlapping airports::
+* Update a region layer field with the names (comma separated) of contained airports::
 
     aggregate('airport_layer', 'concatenate', "name", within($geometry, geometry(@parent)), ', ')
 
