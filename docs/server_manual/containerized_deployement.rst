@@ -435,8 +435,13 @@ the stages explained previously
 AWS usecase
 -----------
 
-With Amazon AWS, through `ECS (Elastic Container Service) <https://console.aws.amazon.com/ecs/home>`_ functionalities, you can use docker-compose or Kubernetes
-compatible wrappers to manage your stack. You will have to create an `image registry <https://console.aws.amazon.com/ecr/home>`_ to push your custom images.
+With Amazon AWS, through
+`ECS (Elastic Container Service) <https://console.aws.amazon.com/ecs/home>`_
+functionalities, you can use docker-compose or Kubernetes compatible wrappers to
+manage your stack.
+You will have to create an
+`image registry <https://console.aws.amazon.com/ecr/home>`_ for your custom
+images.
 
 To use docker-compose alike functionalities you need to install the **ecs-cli** client and have the good
 permissions/roles. Then with the help of the `ecs-cli compose` commands (see `ecs-cli compose manual
