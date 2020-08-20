@@ -264,6 +264,7 @@ Deployment manifests
 Create a file :file:`deployments.yaml` with this content:
 
 .. code-block:: yaml
+
   apiVersion: apps/v1
   kind: Deployment
   metadata:
