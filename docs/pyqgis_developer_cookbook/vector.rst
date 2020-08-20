@@ -95,8 +95,8 @@ methods you can easily get both:
 .. testcode:: vectors
 
     vlayer = iface.addVectorLayer("testdata/airports.shp", "airports", "ogr")
-    vlayer.displayField()
-    vlayer.mapTipTemplate()
+    print(vlayer.displayField())
+    print(vlayer.mapTipTemplate())
 
 
 .. testoutput:: vectors
