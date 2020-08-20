@@ -85,8 +85,8 @@ by calling :meth:`fields() <qgis.core.QgsVectorLayer.fields>` on a :class:`QgsVe
 
 The :meth:`displayField() <qgis.core.QgsVectorLayer.displayField>` and 
 :meth:`mapTipTemplate() <qgis.core.QgsVectorLayer.mapTipTemplate>` methods of
-the :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` class allows you to get
-information of the field and template used in the :ref:`maptips` tab.
+the :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` class provide
+information on the field and template used in the :ref:`maptips` tab.
 
 When you load a vector layer, a field is always chosen by QGIS as the 
 ``Display Name`` while the ``HTML Map Tip`` is empty by default. With these 
