@@ -94,7 +94,7 @@ methods you can easily get both information:
 
 .. testcode:: vectors
 
-    vlayer = QgsVectorLayer("testdata/airports.shp", "airports", "ogr")
+    vlayer = iface.addVectorLayer("testdata/airports.shp", "airports", "ogr")
     vlayer.displayField()
     vlayer.mapTipTemplate()
 
