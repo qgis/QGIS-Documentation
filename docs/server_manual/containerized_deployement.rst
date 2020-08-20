@@ -427,8 +427,10 @@ job. You have to handle multiple problematic as hardware, bandwidths and securit
 Cloud deployment solutions can be a good alternative when you do not want to focus on
 infrastructure management.
 
-Cloud deployment may use proprietary mechanisms but they are also compatibles with the stages explained previously
-(:ref:`docker images <simple-docker-images>` and :ref:`stack management <docker-stacks>`).
+A cloud deployment may use proprietary mechanisms, but they are also compatible with
+the stages explained previously
+(:ref:`docker images <simple-docker-images>` and
+:ref:`stack management <docker-stacks>`).
 
 AWS usecase
 -----------
