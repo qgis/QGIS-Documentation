@@ -46,15 +46,15 @@ You can run the server with:
                 -e "QGIS_PROJECT_FILE=/data/osm.qgs" \
                 qgis-server
 
-.. note:: Options used explanation:
-          **-d**: run in background
-          **--rm**: remove container when it will be stopped
-          **--name**: container name to be created
-          **--net**: sub network created previously
-          **--hostname**: container hostname, can be referenced later
-          **-v**: mount local data directory into container
+.. note:: Options used:
+          **-d**: run in the background
+          **--rm**: remove the container when it is stopped
+          **--name**: name of the container to be created
+          **--net**: (previously created) sub network
+          **--hostname**: container hostname, for later referencing
+          **-v**: local data directory to be mounted in the container
           **-p**: host/container port mapping
-          **-e**: env var to be used in container
+          **-e**: environment variable to be used in the container
 
 To check, type and you should see a line with **qgis-server**:
 
@@ -66,7 +66,8 @@ To check, type and you should see a line with **qgis-server**:
 Usable sample
 -------------
 
-As the server is only accepting fastcgi connections, you have to had an http server to handle this protocol.
+As the server is only accepting fastcgi connections, you have to have an HTTP server
+that handles this protocol.
 To do so we have to create a simple Nginx configuration file and start a Nginx image.
 
 Create a file :file:`nginx.conf` in the current directory with this content:
@@ -97,13 +98,14 @@ And type this command:
                 -v $(pwd)/nginx.conf:/etc/nginx/conf.d/default.conf:ro -p 8080:80 \
                 nginx:1.13
 
-To check capabilities availability, type in a browser: `http://localhost:8080/qgis-server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities <http://localhost:8080/qgis-server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities>`_
+To check capabilities availability, type in a browser:
+`http://localhost:8080/qgis-server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities <http://localhost:8080/qgis-server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities>`_
 
 
 Cleanup
 -------
 
-To cleanup the running images you should type:
+To cleanup the running images, type:
 
 .. code-block:: bash
 
@@ -115,28 +117,36 @@ To cleanup the running images you should type:
 Docker stacks
 =============
 
-The previous way is scriptable but not easily packageable nor standardized neither easily manageable.
+The previous method is scriptable, but not easily packageable nor standardized or easily
+manageable.
 
-To work with a docker image set you could use a docker stack managed by an orchestrator. In a stack, the images are
-working in the same private network, you can start/stop a whole stack in the good order or deploy stack to other
-workers. They are many orchestrators, for example Swarm (lately docker-compose), Kubernetes, Mesos.
+To work with a docker image set you could use a docker stack managed by an
+orchestrator.
+In a stack, the images are working in the same private network, and you can start / stop
+the whole stack or deploy the stack to other workers.
+There are many orchestrators, for example Swarm (lately docker-compose), Kubernetes
+and Mesos.
 
-In the following, we will present simple configurations for testing purposes. They will not be valid for production!
+In the following, we will present simple configurations for testing purposes.
+They are not suitable for production.
 
 
 Swarm/docker-compose
 --------------------
 
-Docker, by eating docker-compose, has now its own orchestrator: Swarm. You have to `enable it
-<https://docs.docker.com/get-started/orchestration/#enable-docker-swarm>`_ (Mac version will also work with Linux).
+Docker, by acquiring docker-compose, now has its own orchestrator: Swarm.
+You have to
+`enable it <https://docs.docker.com/get-started/orchestration/#enable-docker-swarm>`_
+(the Mac version will also work with Linux).
 
 .. _docker-compose-file:
 
 Stack description
 ^^^^^^^^^^^^^^^^^
 
-Now you have Swarm working, create the service file (see `deploy swarm
-<https://docs.docker.com/get-started/swarm-deploy/>`_) :file:`qgis-stack.yaml`:
+Now that you have Swarm working, create the service file (see
+`deploy swarm <https://docs.docker.com/get-started/swarm-deploy/>`_)
+:file:`qgis-stack.yaml`:
 
 .. code-block:: yaml
     
@@ -170,7 +180,7 @@ To deploy (or update) the stack, type:
 
   docker stack deploy -c qgis-stack.yaml qgis-stack
 
-Check stack deployment status until you obtain **1/1** in **replicas** column, type:
+Check the stack deployment status until you obtain **1/1** in the **replicas** column:
 
 .. code-block:: bash
 
@@ -185,7 +195,8 @@ Something like:
   l0v2e7cl43u3        qgis_qgis-server      replicated          1/1                 qgis-server:latest    
 
 
-To check capabilities availability, type in a browser: `http://localhost:8080/qgis-server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities <http://localhost:8080/qgis-server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities>`_
+To check WMS capabilities, type in a web browser:
+`http://localhost:8080/qgis-server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities <http://localhost:8080/qgis-server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities>`_
 
 Cleanup
 ^^^^^^^
@@ -203,21 +214,24 @@ Kubernetes
 Installation
 ^^^^^^^^^^^^
 
-If you have a **Docker Desktop** installation, using Kubernetes (aka k8s) is pretty straight forward: `enable k8s
-<https://docs.docker.com/get-started/orchestration/#enable-Kubernetes>`_. 
+If you have a **Docker Desktop** installation, using Kubernetes (aka k8s) is pretty
+straight forward:
+`enable k8s <https://docs.docker.com/get-started/orchestration/#enable-Kubernetes>`_. 
 
-Else follow `minikube tutorial <https://Kubernetes.io/docs/tutorials/hello-minikube/>`_ or `microk8s for Ubuntu
-<https://ubuntu.com/tutorials/install-a-local-Kubernetes-with-microk8s>`_.
+If not, follow `minikube tutorial <https://Kubernetes.io/docs/tutorials/hello-minikube/>`_ or
+`microk8s for Ubuntu <https://ubuntu.com/tutorials/install-a-local-Kubernetes-with-microk8s>`_.
 
-As Kubernetes installation can be really complex, we will only focus on aspects used by this demo. For further/deeper
-information, check the `official documentation <https://Kubernetes.io/docs/home/>`_. 
+As Kubernetes installation can be really complex, we will only focus on aspects used by
+this demo.
+For further / deeper information, check the
+`official documentation <https://Kubernetes.io/docs/home/>`_. 
 
 
 microk8s
 """"""""
 
-microk8s needs extra steps: you have to enable the registry and tag the qgis-server image in order to have Kubernetes to
-find the created images. 
+microk8s needs extra steps: you have to enable the registry and tag the qgis-server
+image in order to have Kubernetes to find the created images. 
 
 First, enable registry:
 
@@ -231,8 +245,8 @@ Then, tag and push the image to your newly created registry:
 
   docker tag qgis-server 127.0.0.1:32000/qgis-server && docker push 127.0.0.1:32000/qgis-server
 
-Finally, add or complete the :file:`/etc/docker/daemon.json` to have your registry **127.0.0.1:32000** listed in the
-**insecure-registries** field. Thus, at least:
+Finally, add or complete the :file:`/etc/docker/daemon.json` to have your registry
+**127.0.0.1:32000** listed in the **insecure-registries** fieldt:
 
 .. code-block:: json
 
@@ -246,8 +260,10 @@ Finally, add or complete the :file:`/etc/docker/daemon.json` to have your regist
 Creating manifests
 ^^^^^^^^^^^^^^^^^^
 
-Kubernetes describes its objects to deploy in yaml manifests. They are many different kind but we will only use
-deployments (handle pods ie. docker images) and services to expose the deployments to internal or external purposes.
+Kubernetes describes the objects to deploy in yaml manifests.
+There are many different kinds, but we will only use deployments (handle pods, i.e.
+docker images) and services to expose the deployments to internal or external
+purposes.
 
 
 Deployment manifests
@@ -256,7 +272,6 @@ Deployment manifests
 Create a file :file:`deployments.yaml` with this content:
 
 .. code-block:: yaml
-				 
   apiVersion: apps/v1
   kind: Deployment
   metadata:
@@ -324,7 +339,6 @@ Create a file :file:`deployments.yaml` with this content:
             hostPath:
               path: REPLACE_WITH_FULL_PATH/nginx.conf
 
-							
 Service manifests
 """""""""""""""""
 
@@ -363,19 +377,20 @@ Create a file :file:`services.yaml` with this content:
 Deploying manifests
 ^^^^^^^^^^^^^^^^^^^
 
-To deploy the images and services in Kubernetes one can use the dashboard (click on the **+** on the upper right) or the
-command line.
+To deploy the images and services in Kubernetes, one can use the dashboard (click on
+the **+** on the upper right) or the command line.
 
 .. note::
-  By using the command line with microk8s you will have to prefix each command by `microk8s`
+   When using the command line with microk8s you will have to prefix each command
+   with `microk8s`.
 
-To deploy or update your manifests, type:
+To deploy or update your manifests:
 
 .. code-block:: bash
 
   kubectl apply -k ./
 
-To check what is currently deployed use:
+To check what is currently deployed:
 
 .. code-block:: bash
 
@@ -406,7 +421,8 @@ To read nginx/qgis logs, type:
   kubectl logs -f POD_NAME
 
 
-To check capabilities availability, type in a browser: `http://localhost:30080/qgis-server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities <http://localhost:30080/qgis-server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities>`_
+To check WMS capabilities, type in a web browser:
+`http://localhost:30080/qgis-server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities <http://localhost:30080/qgis-server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities>`_
 
 Cleanup
 ^^^^^^^
@@ -421,8 +437,10 @@ To clean up, type:
 Cloud deployment
 ================
 
-Managing its own cluster of servers to handle the deployment of containerized applications, is a full part and complex
-job. You have to handle multiple problematic as hardware, bandwidths and security at different levels.
+Managing your own cluster of servers to handle the deployment of containerized
+applications, is a complex job.
+You have to handle multiple issues, such as hardware, bandwidth and security at
+different levels.
 
 Cloud deployment solutions can be a good alternative when you do not want to focus on
 infrastructure management.
