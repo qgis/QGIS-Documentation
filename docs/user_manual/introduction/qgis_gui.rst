@@ -30,7 +30,7 @@ elements of the QGIS GUI, and are discussed below).
    Your window decorations (title bar, etc.) may appear different
    depending on your operating system and window manager.
 
-The main QGIS GUI (:ref:`figure_startup`) consists of five components /
+The main QGIS GUI (:numref:`figure_startup`) consists of five components /
 component types:
 
 #. :ref:`Menu Bar <label_menubar>`
@@ -2248,6 +2248,19 @@ The following tools are provided at the top of the 3D map view panel:
   <create_animation>` widget
 * |saveMapAsImage| :sup:`Save as image...`: exports the current view to
   an image file format
+* |3d| :sup:`Export 3D Scene...`: exports the current view as a 3D scene
+  (:file:`.obj` file), allowing post-processing in applications like Blender...
+  The terrain and vector features are exported as 3D objects.
+  The export settings, overriding the layers :ref:`properties <sec_3_d_view>`
+  or map view :ref:`configuration <scene_configuration>`, include:
+
+  * :guilabel:`Scene name` and destination :guilabel:`Folder`
+  * :guilabel:`Terrain resolution`
+  * :guilabel:`Terrain texture resolution`
+  * :guilabel:`Model scale`
+  * |checkbox| :guilabel:`Smooth edges`
+  * |checkbox| :guilabel:`Export normals`
+  * |checkbox| :guilabel:`Export textures`
 * |showMapTheme| :sup:`Set View Theme`: Allows you to select the set of layers to
   display in the map view from predefined :ref:`map themes <map_themes>`.
 * |options| :sup:`Configure` the map view :ref:`settings <scene_configuration>`
@@ -2415,10 +2428,13 @@ fine-tune the 3D scene:
     scene light(s) and the terrain material's :guilabel:`Ambient` and
     :guilabel:`Specular` colors and :guilabel:`Shininess`
 
-* :guilabel:`Lights`: You can add up to eight point lights, each with a
-  particular position (in :guilabel:`X`, :guilabel:`Y` and
-  :guilabel:`Z`), :guilabel:`Color`, :guilabel:`Intensity` and
-  :guilabel:`Attenuation`.
+* :guilabel:`Lights`: you can add
+
+  * up to eight :guilabel:`Point lights`, each with a particular position
+    (at :guilabel:`X`, :guilabel:`Y` and :guilabel:`Z`), :guilabel:`Color`,
+    :guilabel:`Intensity` and :guilabel:`Attenuation`
+  * up to four :guilabel:`Directional lights`, with direction vector (:guilabel:`X`,
+    :guilabel:`Y`, :guilabel:`Z`), :guilabel:`Color` and :guilabel:`Intensity`.
 
   .. _figure_3dmap_configlights:
 
@@ -2453,6 +2469,9 @@ fine-tune the 3D scene:
 * |unchecked| :guilabel:`Show bounding boxes`: Show 3D bounding boxes
   of the terrain tiles (useful for troubleshooting terrain issues)
 * |unchecked| :guilabel:`Show camera's view center`
+* |unchecked| :guilabel:`Show light sources`: shows a sphere at light source
+  origins, allowing easier repositioning and placement of light sources relative
+  to the scene contents
 
 3D vector layers
 ----------------
@@ -2571,6 +2590,8 @@ Click the icon to open the Plugin Manager dialog.
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |3d| image:: /static/common/3d.png
+   :width: 1.5em
 .. |3dNavigation| image:: /static/common/mAction3DNavigation.png
    :width: 1.3em
 .. |addAfsLayer| image:: /static/common/mActionAddAfsLayer.png

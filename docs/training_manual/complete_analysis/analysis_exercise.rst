@@ -795,24 +795,24 @@ map.
 .. |LS| replace:: Lesson:
 .. |TY| replace:: Try Yourself
 .. |addOgrLayer| image:: /static/common/mActionAddOgrLayer.png
-   :width: 1.0em
+   :width: 1.5em
 .. |addRasterLayer| image:: /static/common/mActionAddRasterLayer.png
-   :width: 1.0em
+   :width: 1.5em
 .. |calculateField| image:: /static/common/mActionCalculateField.png
-   :width: 1.0em
+   :width: 1.5em
 .. |capturePoint| image:: /static/common/mActionCapturePoint.png
-   :width: 1.0em
+   :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
-   :width: 1.0em
+   :width: 1.3em
 .. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
-   :width: 1.2em
+   :width: 1.5em
 .. |fileSave| image:: /static/common/mActionFileSave.png
-   :width: 1.0em
+   :width: 1.5em
 .. |projectionEnabled| image:: /static/common/mIconProjectionEnabled.png
    :width: 1.5em
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
-   :width: 0.75em
+   :width: 1.5em
 .. |saveEdits| image:: /static/common/mActionSaveEdits.png
-   :width: 1.0em
+   :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
-   :width: 0.85em
+   :width: 1.5em

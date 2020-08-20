@@ -30,22 +30,25 @@ The vector :guilabel:`Layer Properties` dialog provides the following sections:
      - |system| :ref:`Source <vectorsourcemenu>`
      - |symbology| :ref:`Symbology <vector_style_menu>`:sup:`[1]`
    * - |labeling| :ref:`Labels <vector_labels_tab>`:sup:`[1]`
-     - |diagram| :ref:`Diagrams <sec_diagram>`
+     - |labelmask| :guilabel:`Mask`:sup:`[1]`
      - |3d| :ref:`3D View <sec_3_d_view>`:sup:`[1]`
-   * - |sourceFields| :ref:`Fields <vector_fields_menu>`
+   * - |diagram| :ref:`Diagrams <sec_diagram>`
+     - |sourceFields| :ref:`Fields <vector_fields_menu>`
      - |formView| :ref:`Attributes Form <vector_attributes_menu>`
-     - |join| :ref:`Joins <sec_joins>`
-   * - |auxiliaryStorage| :ref:`Auxiliary Storage <vector_auxiliary_storage>`
+   * - |join| :ref:`Joins <sec_joins>`
+     - |auxiliaryStorage| :ref:`Auxiliary Storage <vector_auxiliary_storage>`
      - |action| :ref:`Actions <actions_menu>`
-     - |display| :ref:`Display <maptips>`
-   * - |rendering| :ref:`Rendering <vectorrenderingmenu>`
-     - |expression| :ref:`Variables <vectorvariablesmenu>`
+   * - |display| :ref:`Display <maptips>`
+     - |rendering| :ref:`Rendering <vectorrenderingmenu>`
+     - |temporal| :guilabel:`Temporal`
+   * - |expression| :ref:`Variables <vectorvariablesmenu>`
      - |editMetadata| :ref:`Metadata <vectormetadatamenu>`
-   * - |dependencies| :ref:`Dependencies <vectordependenciesmenu>`
-     - |legend| :ref:`Legend <vectorlegendmenu>`
+     - |dependencies| :ref:`Dependencies <vectordependenciesmenu>`
+   * - |legend| :ref:`Legend <vectorlegendmenu>`
      - |overlay| :ref:`QGIS Server <vectorservermenu>`
-   * - |digitizing| :ref:`Digitizing <digitizingmenu>`
-     - :ref:`External plugins <plugins>`:sup:`[2]` tabs
+     - |digitizing| :ref:`Digitizing <digitizingmenu>`
+   * - :ref:`External plugins <plugins>`:sup:`[2]` tabs
+     -
      -
 
 :sup:`[1]` Also available in the :ref:`Layer styling panel <layer_styling_panel>`
@@ -2151,9 +2154,12 @@ combobox...) to the layer's fields, you need to give them the same name.
 
 Use the :guilabel:`Edit UI` to define the path to the file to use.
 
+UI-files can also be hosted on a remote server.
+In this case, you provide the URL of the form instead of the file path in :guilabel:`Edit UI`.
+
 You'll find some example in the :ref:`Creating a new form <creating-new-form>`
 lesson of the :ref:`QGIS-training-manual-index-reference`. For more advanced information,
-see https://nathanw.net/2011/09/05/qgis-tips-custom-feature-forms-with-python-logic/.
+see https://woostuff.wordpress.com/2011/09/05/qgis-tips-custom-feature-forms-with-python-logic/.
 
 .. _form_custom_functions:
 
@@ -2516,13 +2522,14 @@ correctly:
    Data-defined properties automatically created
 
 
-Otherwise, there's another way to create an auxiliary field for a specific
-property thanks to the |dataDefined| :sup:`data-defined override` button. By
-clicking on :guilabel:`Store data in the project`, an auxiliary field is
-automatically created for the :guilabel:`Opacity` field. If you click on this
-button whereas the auxiliary layer is not created yet, then the window
-:ref:`figure_auxiliary_layer_creation` is first displayed to select the
-primary key to use for joining.
+Otherwise, there's another way to create an auxiliary field for a
+specific property thanks to the
+|dataDefined| :sup:`data-defined override` button.
+By clicking on :guilabel:`Store data in the project`, an auxiliary
+field is automatically created for the :guilabel:`Opacity` field.
+If you click on this button and the auxiliary layer is not created
+yet, a window (:numref:`figure_auxiliary_layer_creation`) is first
+displayed to select the primary key to use for joining.
 
 
 Symbology
@@ -2956,11 +2963,13 @@ feature identification:
   <vector_expressions>`. This is:
 
   * the label shown on top of the feature information in the :ref:`Identify
-    tool <identify>` results;
+    tool <identify>` results
   * the field used in the :ref:`locator bar <locator_options>` when looking for
-    features in all layers;
+    features in all layers
   * the feature identifier in the attribute table :ref:`form view
-    <attribute_table_view>`;
+    <attribute_table_view>`
+  * the feature identifier when the map or layout is exported to a layered
+    output format such as GeoPDF
   * the map tip information, i.e. the message displayed in the map canvas when
     hovering over a feature of the active layer with the |mapTips| :sup:`Show
     Map Tips` icon pressed. Applicable when no :guilabel:`HTML Map Tip` is set.
@@ -3379,6 +3388,8 @@ This makes it possible to quickly flag gaps as allowed.
    :width: 1.5em
 .. |labelingRuleBased| image:: /static/common/labelingRuleBased.png
    :width: 1.5em
+.. |labelmask| image:: /static/common/labelmask.png
+   :width: 1.5em
 .. |labelplacement| image:: /static/common/labelplacement.png
    :width: 1.5em
 .. |labelshadow| image:: /static/common/labelshadow.png
@@ -3455,6 +3466,8 @@ This makes it possible to quickly flag gaps as allowed.
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
 .. |system| image:: /static/common/system.png
+   :width: 1.5em
+.. |temporal| image:: /static/common/temporal.png
    :width: 1.5em
 .. |text| image:: /static/common/text.png
    :width: 1.5em

@@ -36,8 +36,8 @@ Returns statistics from a raster layer.
          
 
    * - Examples
-     - * raster_statistic('lc',1,'avg') → Average value from band 1 from 'lc' raster layer
-       * raster_statistic('ac2010',3,'min') → Minimum value from band 3 from 'ac2010' raster layer
+     - * ``raster_statistic('lc',1,'avg')`` → Average value from band 1 from 'lc' raster layer
+       * ``raster_statistic('ac2010',3,'min')`` → Minimum value from band 3 from 'ac2010' raster layer
 
 
 .. end_raster_statistic_section
@@ -61,7 +61,7 @@ Returns the raster value found at the provided point.
        * **band** - the band number to sample the value from.
        * **point** - point geometry (for multipart geometries having more than one part, a NULL value will be returned)
    * - Examples
-     - * raster_value('dem', 1, make_point(1,1)) → 25
+     - * ``raster_value('dem', 1, make_point(1,1))`` → 25
 
 
 .. end_raster_value_section

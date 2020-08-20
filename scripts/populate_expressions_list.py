@@ -126,7 +126,7 @@ def format_variant(function_dict, f_name):
     if 'examples' in function_dict:
         ex_list = []
         for ex in function_dict['examples']:
-            example = f"{ex['expression']} → {ex['returns']}"
+            example = f"``{ex['expression']}`` → {ex['returns']}"
             if 'note' in ex:
                 example += f"\n\n         {sphynxify_html(ex['note'])}"
 

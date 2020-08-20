@@ -108,6 +108,8 @@ more details.
 Mesh Dataset Properties
 =======================
 
+.. _mesh_information:
+
 Information Properties
 ----------------------
 
@@ -202,8 +204,8 @@ Under :guilabel:`Groups`, click on |meshcontoursoff| to show contours with
 default visualization parameters.
 
 In the tab |meshcontours| you can see and change the current visualization
-options of contours for the selected group, as shown in the image
-:ref:`Styling contours in a mesh <figure_mesh_symbology_contours>` below:
+options of contours for the selected group, as shown in
+:numref:`figure_mesh_symbology_contours` below:
 
 .. _figure_mesh_symbology_contours:
 
@@ -278,7 +280,7 @@ Rendering
 .........
 
 In the tab |meshframe|,  QGIS offers two possibilities to display the grid,
-as shown in the image :ref:`Mesh rendering <figure_mesh_symbology_grid>`:
+as shown in :numref:`figure_mesh_symbology_grid`:
 
 *	``Native Mesh Rendering`` that shows quadrants
 *	``Triangular Mesh Rendering`` that display triangles

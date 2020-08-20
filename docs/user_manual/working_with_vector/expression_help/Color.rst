@@ -26,7 +26,7 @@ Returns a string representation of a color based on its cyan, magenta, yellow an
        * **yellow** - yellow component of the color, as a percentage integer value from 0 to 100
        * **black** - black component of the color, as a percentage integer value from 0 to 100
    * - Examples
-     - * color_cmyk(100,50,0,10) → '0,115,230'
+     - * ``color_cmyk(100,50,0,10)`` → '0,115,230'
 
 
 .. end_color_cmyk_section
@@ -52,7 +52,7 @@ Returns a string representation of a color based on its cyan, magenta, yellow, b
        * **black** - black component of the color, as a percentage integer value from 0 to 100
        * **alpha** - alpha component as an integer value from 0 (completely transparent) to 255 (opaque).
    * - Examples
-     - * color_cmyk(100,50,0,10,200) → '0,115,230,200'
+     - * ``color_cmyk(100,50,0,10,200)`` → '0,115,230,200'
 
 
 .. end_color_cmyka_section
@@ -74,7 +74,7 @@ Applies a grayscale filter and returns a string representation from a provided c
    * - Arguments
      - * **color** - a color string
    * - Examples
-     - * color_grayscale_average('255,100,50') → '135,135,135,255'
+     - * ``color_grayscale_average('255,100,50')`` → '135,135,135,255'
 
 
 .. end_color_grayscale_average_section
@@ -98,7 +98,7 @@ Returns a string representation of a color based on its hue, saturation, and lig
        * **saturation** - saturation percentage of the color as an integer value from 0 to 100
        * **lightness** - lightness percentage of the color as an integer value from 0 to 100
    * - Examples
-     - * color_hsl(100,50,70) → '166,217,140'
+     - * ``color_hsl(100,50,70)`` → '166,217,140'
 
 
 .. end_color_hsl_section
@@ -123,7 +123,7 @@ Returns a string representation of a color based on its hue, saturation, lightne
        * **lightness** - lightness percentage of the color as an integer value from 0 to 100
        * **alpha** - alpha component as an integer value from 0 (completely transparent) to 255 (opaque).
    * - Examples
-     - * color_hsla(100,50,70,200) → '166,217,140,200'
+     - * ``color_hsla(100,50,70,200)`` → '166,217,140,200'
 
 
 .. end_color_hsla_section
@@ -147,7 +147,7 @@ Returns a string representation of a color based on its hue, saturation, and val
        * **saturation** - saturation percentage of the color as an integer value from 0 to 100
        * **value** - value percentage of the color as an integer from 0 to 100
    * - Examples
-     - * color_hsv(40,100,100) → '255,170,0'
+     - * ``color_hsv(40,100,100)`` → '255,170,0'
 
 
 .. end_color_hsv_section
@@ -172,7 +172,7 @@ Returns a string representation of a color based on its hue, saturation, value a
        * **value** - value percentage of the color as an integer from 0 to 100
        * **alpha** - alpha component as an integer value from 0 (completely transparent) to 255 (opaque)
    * - Examples
-     - * color_hsva(40,100,100,200) → '255,170,0,200'
+     - * ``color_hsva(40,100,100,200)`` → '255,170,0,200'
 
 
 .. end_color_hsva_section
@@ -196,7 +196,7 @@ Returns a string representing a color mixing the red, green, blue, and alpha val
        * **color2** - a color string
        * **ratio** - a ratio
    * - Examples
-     - * color_mix_rgb('0,0,0','255,255,255',0.5) → '127,127,127,255'
+     - * ``color_mix_rgb('0,0,0','255,255,255',0.5)`` → '127,127,127,255'
 
 
 .. end_color_mix_rgb_section
@@ -238,7 +238,7 @@ Returns a specific component from a color string, e.g., the red component or alp
          
 
    * - Examples
-     - * color_part('200,10,30','green') → 10
+     - * ``color_part('200,10,30','green')`` → 10
 
 
 .. end_color_part_section
@@ -262,7 +262,7 @@ Returns a string representation of a color based on its red, green, and blue com
        * **green** - green component as an integer value from 0 to 255
        * **blue** - blue component as an integer value from 0 to 255
    * - Examples
-     - * color_rgb(255,127,0) → '255,127,0'
+     - * ``color_rgb(255,127,0)`` → '255,127,0'
 
 
 .. end_color_rgb_section
@@ -287,7 +287,7 @@ Returns a string representation of a color based on its red, green, blue, and al
        * **blue** - blue component as an integer value from 0 to 255
        * **alpha** - alpha component as an integer value from 0 (completely transparent) to 255 (opaque).
    * - Examples
-     - * color_rgba(255,127,0,200) → '255,127,0,200'
+     - * ``color_rgba(255,127,0,200)`` → '255,127,0,200'
 
 
 .. end_color_rgba_section
@@ -312,7 +312,7 @@ Returns a gradient ramp from a map of color strings and steps.
      - * **map** - a map of color strings and steps
        * **discrete** - set this parameter to true to create a discrete color ramp
    * - Examples
-     - * ramp_color(create_ramp(map(0,'0,0,0',1,'255,0,0')),1) → '255,0,0,255'
+     - * ``ramp_color(create_ramp(map(0,'0,0,0',1,'255,0,0')),1)`` → '255,0,0,255'
 
 
 .. end_create_ramp_section
@@ -335,13 +335,13 @@ Returns a darker (or lighter) color string
      - * **color** - a color string
        * **factor** - an integer corresponding to the darkening factor:
 
-         * if the factor is greater than 100, this functions returns a darker color (e.g., setting factor to 300 returns a color that has one-third the brightness);
+         * if the factor is greater than 100, this function returns a darker color (e.g., setting factor to 200 returns a color that is half the brightness);
          * if the factor is less than 100, the return color is lighter, but using the lighter() function for this purpose is recommended;
          * if the factor is 0 or negative, the return value is unspecified.
          
 
    * - Examples
-     - * darker('200,10,30',300) → '66,3,10,255'
+     - * ``darker('200,10,30', 200)`` → '100,5,15,255'
 
 
 .. end_darker_section
@@ -362,15 +362,15 @@ Returns a lighter (or darker) color string
      - lighter(color, factor)
    * - Arguments
      - * **color** - a color string
-       * **factor** - a integer number corresponding to the lightening factor:
+       * **factor** - an integer corresponding to the lightening factor:
 
-         * if the factor is greater than 100, this functions returns a lighter color (for e.g., setting factor to 150 returns a color that is 50% brighter);
+         * if the factor is greater than 100, this function returns a lighter color (e.g., setting factor to 150 returns a color that is 50% brighter);
          * if the factor is less than 100, the return color is darker, but using the darker() function for this purpose is recommended;
          * if the factor is 0 or negative, the return value is unspecified.
          
 
    * - Examples
-     - * lighter('200,10,30',200) → '255,158,168,255'
+     - * ``lighter('200,10,30', 200)`` → '255,158,168,255'
 
 
 .. end_lighter_section
@@ -392,7 +392,7 @@ Returns a color from the project's color scheme.
    * - Arguments
      - * **name** - a color name
    * - Examples
-     - * project_color('Logo color') → '20,140,50'
+     - * ``project_color('Logo color')`` → '20,140,50'
 
 
 .. end_project_color_section
@@ -419,7 +419,7 @@ Returns a string representing a color from a saved ramp
      - * **ramp_name** - the name of the color ramp as a string, for example 'Spectral'
        * **value** - the position on the ramp to select the color from as a real number between 0 and 1
    * - Examples
-     - * ramp_color('Spectral',0.3) → '253,190,115,255'
+     - * ``ramp_color('Spectral',0.3)`` → '253,190,115,255'
 
 .. note:: The color ramps available vary between QGIS installations. This function may not give the expected results if you move your QGIS project between installations.
 
@@ -437,7 +437,7 @@ Returns a string representing a color from an expression-created ramp
      - * **ramp** - the color ramp
        * **value** - the position on the ramp to select the color from as a real number between 0 and 1
    * - Examples
-     - * ramp_color(create_ramp(map(0,'0,0,0',1,'255,0,0')),1) → '255,0,0,255'
+     - * ``ramp_color(create_ramp(map(0,'0,0,0',1,'255,0,0')),1)`` → '255,0,0,255'
 
 
 .. end_ramp_color_section
@@ -480,7 +480,7 @@ Sets a specific color component for a color string, e.g., the red component or a
 
        * **value** - new value for color component, respecting the ranges listed above
    * - Examples
-     - * set_color_part('200,10,30','green',50) → '200,50,30,255'
+     - * ``set_color_part('200,10,30','green',50)`` → '200,50,30,255'
 
 
 .. end_set_color_part_section

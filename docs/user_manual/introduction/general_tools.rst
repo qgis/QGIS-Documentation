@@ -292,6 +292,8 @@ symbols are:
 * |indicatorFilter| to indicate :ref:`a filter <vector_query_builder>` applied
   to the layer. Hover over the icon to see the filter expression and double-click
   to update the setting
+* |indicatorNonRemovable| to identify layers that are
+  :ref:`required <project_layer_capabilities>` in the project, hence non removable
 * |indicatorEmbedded| to identify an :ref:`embedded group or layer
   <nesting_projects>` and the path to their original project file
 * |indicatorBadLayer| to identify a layer whose data source was not available
@@ -301,6 +303,7 @@ symbols are:
   close this project. To avoid data loss and make the layer permanent, click
   the icon to store the layer in any of the OGR vector formats supported by QGIS.
 * |indicatorNoCRS| to identify a layer that has no/unknown CRS
+* |indicatorTemporal| to identify a temporal layer controlled by canvas animation
 
 .. index:: Style
 
@@ -509,7 +512,7 @@ on any vector layer. This panel allows you to select:
 ================================== ============ ============  ============  ============
 Count                               |checkbox|   |checkbox|    |checkbox|    |checkbox|
 Count Distinct Value                |checkbox|                               |checkbox|
-Count Missing value                 |checkbox|                               |checkbox|
+Count Missing value                 |checkbox|   |checkbox|    |checkbox|    |checkbox|
 Sum                                              |checkbox|    |checkbox|
 Mean                                             |checkbox|    |checkbox|    |checkbox|
 Standard Deviation                               |checkbox|    |checkbox|
@@ -517,14 +520,15 @@ Standard Deviation on Sample                     |checkbox|    |checkbox|
 Minimal value                       |checkbox|   |checkbox|    |checkbox|    |checkbox|
 Maximal value                       |checkbox|   |checkbox|    |checkbox|    |checkbox|
 Range                                            |checkbox|    |checkbox|    |checkbox|
-Minority                                         |checkbox|    |checkbox|
-Majority                                         |checkbox|    |checkbox|
+Minority                            |checkbox|   |checkbox|    |checkbox|
+Majority                            |checkbox|   |checkbox|    |checkbox|
 Variety                                          |checkbox|    |checkbox|
 First Quartile                                   |checkbox|    |checkbox|
 Third Quartile                                   |checkbox|    |checkbox|
 Inter Quartile Range                             |checkbox|    |checkbox|
 Minimum Length                      |checkbox|
 Maximum Length                      |checkbox|
+Mean Length                         |checkbox|
 ================================== ============ ============  ============  ============
 
 Table: Statistics available for each field type
@@ -2562,6 +2566,10 @@ The values presented in the varying size assistant above will set the size
 .. |indicatorMemory| image:: /static/common/mIndicatorMemory.png
    :width: 1.5em
 .. |indicatorNoCRS| image:: /static/common/mIndicatorNoCRS.png
+   :width: 1.5em
+.. |indicatorNonRemovable| image:: /static/common/mIndicatorNonRemovable.png
+   :width: 1.5em
+.. |indicatorTemporal| image:: /static/common/mIndicatorTemporal.png
    :width: 1.5em
 .. |invertSelection| image:: /static/common/mActionInvertSelection.png
    :width: 1.5em

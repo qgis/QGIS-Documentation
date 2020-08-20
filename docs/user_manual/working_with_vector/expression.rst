@@ -50,12 +50,20 @@ The Expression builder dialog offers access to the:
 
     "total_pop" / "area_km2"
 
+* Label or categorize features based on their area::
+
+    CASE WHEN $area > 10 000 THEN 'Larger' ELSE 'Smaller' END
+
 * Update the field "density_level" with categories according to the "pop_density" values::
 
     CASE WHEN "pop_density" < 50 THEN 'Low population density'
          WHEN "pop_density" >= 50 and "pop_density" < 150 THEN 'Medium population density'
          WHEN "pop_density" >= 150 THEN 'High population density'
     END
+
+* Update a region layer field with the names (comma separated) of contained airports::
+
+    aggregate('airport_layer', 'concatenate', "name", within($geometry, geometry(@parent)), ', ')
 
 * Apply a categorized style to all the features according to whether their average house
   price is smaller or higher than 10000€ per square metre::
@@ -70,6 +78,23 @@ The Expression builder dialog offers access to the:
 
   Likewise, the previous expression could also be used to define which features
   should be labeled or shown in the map.
+
+* Render a different symbol (type) for the layer, using the geometry generator::
+
+    point_on_surface( $geometry )
+
+* Given a point feature, generate a closed line (using ``make_line``) around the
+  point's geometry::
+
+    make_line(
+      -- using an array of points placed around the original
+      array_foreach(
+        -- list of angles for placing the projected points (every 90°)
+        array:=generate_series( 0, 360, 90 ),
+        -- translate the point 20 units in the given direction (angle)
+        expression:=project( $geometry, distance:=20, azimuth:=radians( @element ) )
+      )
+    )
 
 Using expressions offers you a lot of possibilities.
 
@@ -216,29 +241,12 @@ This group contains functions which aggregate values over layers and fields.
 
 .. include:: expression_help/Aggregates.rst
    :start-after: :orphan:
+   :end-before: .. end_relation_aggregate_section
 
-**Examples:**
+Further reading: :ref:`vector_relations`
 
-* Return the maximum of the "passengers" field from features in the layer
-  grouped by "station_class" field::
-
-   maximum("passengers", group_by:="station_class")
-
-* Calculate the total number of passengers for the stations inside the current
-  atlas feature::
-
-   aggregate('rail_stations','sum',"passengers",
-     intersects(@atlas_geometry, $geometry))
-
-* Return the mean of the "field_from_related_table" field for all matching
-  child features using the 'my_relation' relation from the layer::
-
-   relation_aggregate('my_relation', 'mean', "field_from_related_table")
-
-  or::
-
-   relation_aggregate(relation:='my_relation', aggregate := 'mean',
-     expression := "field_from_related_table")
+.. include:: expression_help/Aggregates.rst
+   :start-after: .. end_relation_aggregate_section
 
 
 .. index:: Array, List data structure
@@ -271,6 +279,30 @@ This group contains functions for manipulating colors.
 
 .. include:: expression_help/Color.rst
    :start-after: :orphan:
+   :end-before: .. end_darker_section
+
+Further reading: :ref:`expression_function_Color_lighter`
+
+.. include:: expression_help/Color.rst
+   :start-after: .. end_darker_section
+   :end-before: .. end_lighter_section
+
+Further reading: :ref:`expression_function_Color_darker`
+
+.. include:: expression_help/Color.rst
+   :start-after: .. end_lighter_section
+   :end-before: .. end_project_color_section
+
+Further reading: :ref:`setting project colors <project_colors>`
+
+.. include:: expression_help/Color.rst
+   :start-after: .. end_project_color_section
+   :end-before: .. end_ramp_color_section
+
+Further reading: :ref:`color-ramp`, :ref:`color_ramp_widget`
+
+.. include:: expression_help/Color.rst
+   :start-after: .. end_ramp_color_section
 
 
 Conditional Functions
@@ -292,7 +324,7 @@ Conversions Functions
 ---------------------
 
 This group contains functions to convert one data type to another
-(e.g., string to integer, integer to string).
+(e.g., string from/to integer, binary from/to string, string to date...).
 
 .. contents::
    :local:
@@ -313,6 +345,23 @@ Date and Time Functions
 ------------------------
 
 This group contains functions for handling date and time data.
+This group shares several functions with the :ref:`conversion_functions` (
+to_date, to_time, to_datetime, to_interval) and :ref:`string_functions`
+(format_date) groups.
+
+.. note:: **Storing date, datetime and intervals on fields**
+
+   The ability to store *date*, *time* and *datetime* values directly on
+   fields may depend on the data source's provider (e.g., Shapefile accepts
+   *date* format, but not *datetime* or *time* format). The following are some
+   suggestions to overcome this limitation:
+
+   * *date*, *Datetime* and *time* can be stored in text type fields after
+     using the ``to_format()`` function.
+
+   * *Intervals* can be stored in integer or decimal type fields after using
+     one of the date extraction functions (e.g., ``day()`` to get the interval
+     expressed in days)
 
 .. contents::
    :local:
@@ -321,18 +370,8 @@ This group contains functions for handling date and time data.
 .. include:: expression_help/Date_and_Time.rst
    :start-after: :orphan:
 
-This group shares several functions with the :ref:`conversion_functions` (
-to_date, to_time, to_datetime, to_interval) and :ref:`string_functions`
-(format_date) groups.
 
 **Some examples:**
-
-* Get today's month and year in the "month_number/year" format:
-
-  .. code-block:: sql
-
-     format_date(now(),'MM/yyyy')
-     -- Returns '03/2017'
 
 Besides these functions, subtracting dates, datetimes or times using the
 ``-`` (minus) operator will return an interval.
@@ -351,7 +390,7 @@ Adding or subtracting an interval to dates, datetimes or times, using the
 
   .. code-block:: sql
 
-     to_datetime('2017-09-29 12:00:00') - to_datetime(now())
+     to_datetime('2017-09-29 12:00:00') - now()
      -- Returns <interval: 202.49 days>
 
 * Get the datetime of 100 days from now:
@@ -360,20 +399,6 @@ Adding or subtracting an interval to dates, datetimes or times, using the
 
      now() + to_interval('100 days')
      -- Returns <datetime: 2017-06-18 01:00:00>
-
-.. note:: **Storing date and datetime and intervals on fields**
-
-   The ability to store *date*, *time* and *datetime* values directly on
-   fields may depend on the data source's provider (e.g., Shapefile accepts
-   *date* format, but not *datetime* or *time* format). The following are some
-   suggestions to overcome this limitation:
-
-   * *date*, *Datetime* and *time* can be stored in text type fields after
-     using the ``to_format()`` function.
-
-   * *Intervals* can be stored in integer or decimal type fields after using
-     one of the date extraction functions (e.g., ``day()`` to get the interval
-     expressed in days)
 
 .. _fields_values:
 
@@ -414,7 +439,7 @@ Form Functions
 --------------
 
 This group contains functions that operate exclusively under the attribute form
-context. For example, in field's widgets settings.
+context. For example, in :ref:`field's widgets <vector_attributes_menu>` settings.
 
 .. contents:: :local:
 
@@ -446,6 +471,19 @@ This group contains general assorted functions.
 
 .. include:: expression_help/General.rst
    :start-after: :orphan:
+   :end-before: .. end_layer_property_section
+
+Further reading: :ref:`vector <vectorinformationmenu>`, :ref:`raster <raster_information>`
+and :ref:`mesh <mesh_information>` layer properties
+
+.. include:: expression_help/General.rst
+   :start-after: .. end_layer_property_section
+   :end-before: .. end_var_section
+
+Further reading: List of default :ref:`variables <expression_variables>`
+
+.. include:: expression_help/General.rst
+   :start-after: .. end_var_section
 
 
 .. _geometry_functions:
@@ -462,35 +500,217 @@ This group contains functions that operate on geometry objects
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: :orphan:
+   :end-before: .. end_boundary_section
 
-**Some examples:**
+Further reading: :ref:`qgisboundary` algorithm
 
-* Return the X coordinate of the current feature's centroid::
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_boundary_section
+   :end-before: .. end_bounds_section
 
-    x( $geometry )
+Further reading: :ref:`qgisboundingboxes` algorithm
 
-* Send back a value according to feature's area::
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: end_bounds_section
+   :end-before: .. end_buffer_section
 
-    CASE WHEN $area > 10 000 THEN 'Larger' ELSE 'Smaller' END
+Further reading: :ref:`qgisbuffer` algorithm
 
-* You can manipulate the current geometry using the variable ``$geometry`` to create
-  a buffer or get a point on the geometry's surface::
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_buffer_section
+   :end-before: .. end_buffer_by_m_section
 
-    buffer( $geometry, 10 )
-    point_on_surface( $geometry )
+Further reading: :ref:`qgisbufferbym` algorithm
 
-* Given a point feature, generate a closed line (using ``make_line``) around the
-  point's geometry::
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_buffer_by_m_section
+   :end-before: .. end_centroid_section
 
-    make_line(
-      -- using an array of points placed around the original
-      array_foreach(
-        -- list of angles for placing the projected points (every 90°)
-        array:=generate_series( 0, 360, 90 ),
-        -- translate the point 20 units in the given direction (angle)
-        expression:=project( $geometry, distance:=20, azimuth:=radians( @element ) )
-      )
-    )
+Further reading: :ref:`qgiscentroids` algorithm
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_centroid_section
+   :end-before: .. end_collect_geometries_section
+
+Further reading: :ref:`qgiscollect` algorithm
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_collect_geometries_section
+   :end-before: .. end_convex_hull_section
+
+Further reading: :ref:`qgisconvexhull` algorithm
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_convex_hull_section
+   :end-before: .. end_difference_section
+
+Further reading: :ref:`qgisdifference` algorithm
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_difference_section
+   :end-before: .. end_end_point_section
+
+Further reading: :ref:`qgisextractspecificvertices` algorithm
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_end_point_section
+   :end-before: .. end_extend_section
+
+Further reading: :ref:`qgisextendlines` algorithm
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_extend_section
+   :end-before: .. end_flip_coordinates_section
+
+Further reading: :ref:`qgisswapxy` algorithm
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_flip_coordinates_section
+   :end-before: .. end_force_rhr_section
+
+Further reading: :ref:`qgisforcerhr` algorithm
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_force_rhr_section
+   :end-before: .. end_intersection_section
+
+Further reading: :ref:`qgisintersection` algorithm
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_intersection_section
+   :end-before: .. end_line_interpolate_point_section
+
+Further reading: :ref:`qgisinterpolatepoint` algorithm
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_line_interpolate_point_section
+   :end-before: .. end_line_substring_section
+
+Further reading: :ref:`qgislinesubstring` algorithm
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_line_substring_section
+   :end-before: .. end_minimal_circle_section
+
+Further reading: :ref:`qgisminimumenclosingcircle` algorithm
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_minimal_circle_section
+   :end-before: .. end_nodes_to_points_section
+
+Further reading: :ref:`qgisextractvertices` algorithm
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_nodes_to_points_section
+   :end-before: .. end_offset_curve_section
+
+Further reading: :ref:`qgisoffsetline` algorithm
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_offset_curve_section
+   :end-before: .. end_oriented_bbox_section
+
+Further reading: :ref:`qgisorientedminimumboundingbox` algorithm
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_oriented_bbox_section
+   :end-before: .. end_point_n_section
+
+Further reading: :ref:`qgisextractspecificvertices` algorithm
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_point_n_section
+   :end-before: .. end_point_on_surface_section
+
+Further reading: :ref:`qgispointonsurface` algorithm
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_point_on_surface_section
+   :end-before: .. end_pole_of_inaccessibility_section
+
+Further reading: :ref:`qgispoleofinaccessibility` algorithm
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_pole_of_inaccessibility_section
+   :end-before: .. end_project_section
+
+Further reading: :ref:`qgisprojectpointcartesian` algorithm
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_project_section
+   :end-before: .. end_reverse_section
+
+Further reading: :ref:`qgisreverselinedirection` algorithm
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_reverse_section
+   :end-before: .. end_segments_to_lines_section
+
+Further reading: :ref:`qgisexplodelines` algorithm
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_segments_to_lines_section
+   :end-before: .. end_simplify_section
+
+Further reading: :ref:`qgissimplifygeometries` algorithm
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_simplify_section
+   :end-before: .. end_simplify_vw_section
+
+Further reading: :ref:`qgissimplifygeometries` algorithm
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_simplify_vw_section
+   :end-before: .. end_single_sided_buffer_section
+
+Further reading: :ref:`qgissinglesidedbuffer` algorithm
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_single_sided_buffer_section
+   :end-before: .. end_smooth_section
+
+Further reading: :ref:`qgissmoothgeometry` algorithm
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_smooth_section
+   :end-before: .. end_start_point_section
+
+Further reading: :ref:`qgisextractspecificvertices` algorithm
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_start_point_section
+   :end-before: .. end_sym_difference_section
+
+Further reading: :ref:`qgissymmetricaldifference` algorithm
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_sym_difference_section
+   :end-before: .. end_tapered_buffer_section
+
+Further reading: :ref:`qgistaperedbuffer` algorithm
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_tapered_buffer_section
+   :end-before: .. end_transform_section
+
+Further reading: :ref:`qgisreprojectlayer` algorithm
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_transform_section
+   :end-before: .. end_translate_section
+
+Further reading: :ref:`qgistranslategeometry` algorithm
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_translate_section
+   :end-before: .. end_wedge_buffer_section
+
+Further reading: :ref:`qgiswedgebuffers` algorithm
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_wedge_buffer_section
+
 
 
 Layout Functions
@@ -504,12 +724,12 @@ This group contains functions to manipulate print layout items properties.
 
 .. include:: expression_help/Layout.rst
    :start-after: :orphan:
+   :end-before: .. end_item_variables_section
 
-**An example:**
+Further reading: List of default :ref:`variables <expression_variables>`
 
-* Get the scale of the 'Map 0' in the current print layout::
-
-    map_get( item_variables('Map 0'), 'map_scale')
+.. include:: expression_help/Layout.rst
+   :start-after: .. end_item_variables_section
 
 
 Map Layers
@@ -654,22 +874,26 @@ This group contains functions that operate on record identifiers.
 .. contents::
    :local:
    :class: toc_columns
-
 .. include:: expression_help/Record_and_Attributes.rst
    :start-after: :orphan:
+   :end-before: .. end_attributes_section
 
+Further reading: :ref:`maps_functions`
 
-**Some examples:**
+.. include:: expression_help/Record_and_Attributes.rst
+   :start-after: .. end_attributes_section
+   :end-before: .. end_represent_value_section
 
-* Return the first feature in layer "LayerA" whose field "id" has the same value
-  as the field "name" of the current feature (a kind of jointure)::
+Further reading: :ref:`widget types <edit_widgets>` 
 
-    get_feature( 'layerA', 'id', attribute( $currentfeature, 'name') )
+.. include:: expression_help/Record_and_Attributes.rst
+   :start-after: .. end_represent_value_section
+   :end-before: .. end_sqlite_fetch_and_increment_section
 
-* Calculate the area of the joined feature from the previous example::
+Further reading: :ref:`project_data_source_properties`, :ref:`vector_relations`
 
-    area( geometry( get_feature( 'layerA', 'id', attribute( $currentfeature, 'name') ) ) )
-
+.. include:: expression_help/Record_and_Attributes.rst
+   :start-after: .. end_sqlite_fetch_and_increment_section
 
 .. _string_functions:
 
@@ -685,33 +909,29 @@ This group contains functions that operate on strings
 
 .. include:: expression_help/String.rst
    :start-after: :orphan:
+   :end-before: .. end_concat_section
 
 **About fields concatenation**
 
-You can concatenate strings or field values using either ``||`` or ``+``
-operators or the ``concat`` function, with some special characteristics:
+You can also concatenate strings or field values using either ``||`` or ``+``
+operators, with some special characteristics:
 
 * The ``+`` operator also means sum up expression, so if you have an integer
   (field or numeric value) operand, this can be error prone and you better use
   the others::
 
-   'My feature''s id is: ' + "gid" => triggers an error as gid is an integer
+   'My feature id is: ' + "gid" => triggers an error as gid is an integer
 
 * When any of the arguments is a NULL value, either ``||`` or ``+`` will
   return a NULL value. To return the other arguments regardless the NULL value,
   you may want to use the ``concat`` function::
 
-   "country_name" || NULL => NULL
-   concat('My feature''s id is: ', NULL) => My feature's id is
-   concat("firstname", "nickname", "lastname") => Chuck Norris (if empty nickname)
-   "firstname" + "nickname" + "lastname" => NULL (if one field is empty)
+   'My feature id is: ' + NULL ==> NULL
+   'My feature id is: ' || NULL => NULL
+   concat('My feature id is: ', NULL) => My feature's id is
 
-* For other cases, do at your convenience::
-
-   'My country is ' + "country_name" + ' (' + "country_code" + ')'
-   'My country is ' || "country_name" || ' (' || "country_code" || ')'
-   concat('My country is ', "country_name", ' (', "country_code", ')')
-   # All the above return: My country is France (FR)
+.. include:: expression_help/String.rst
+   :start-after: .. end_concat_section
 
 
 .. _user_expressions_functions:
@@ -764,6 +984,9 @@ To use these variables in an expression, they should be preceded by the
    :widths: 25, 70
 
    "algorithm_id", "The unique ID of an algorithm"
+   "animation_end_time |314|", "End of the animation's overall temporal time range (as a datetime value)"
+   "animation_interval |314|", "Duration of the animation's overall temporal time range (as an interval value)"
+   "animation_start_time |314|", "Start of the animation's overall temporal time range (as a datetime value)"
    "atlas_feature", "The current atlas feature (as feature object)"
    "atlas_featureid", "The current atlas feature ID"
    "atlas_featurenumber", "The current atlas feature number in the layout"
@@ -782,6 +1005,14 @@ To use these variables in an expression, they should be preceded by the
    form or table row"
    "current_geometry", "The geometry of the feature currently being edited
    in the form or the table row"
+   "current_parent_feature |314|", "represents the feature currently being
+   edited in the parent form. Only usable in an embedded form context."
+   "current_parent_geometry |314|", "represents the geometry of the feature currently being
+   edited in the parent form. Only usable in an embedded form context."
+   "form_mode", "What the form is used for, like AddFeatureMode, SingleEditMode, MultiEditMode, SearchMode, AggregateSearchMode or IdentifyMode as string."
+   "frame_duration |314|", "Temporal duration of each animation frame (as an interval value)"
+   "frame_number |314|", "Current frame number during animation playback"
+   "frame_rate |314|", "Number of frames per second during animation playback"
    "fullextent_maxx", "Maximum x value from full canvas extent (including all layers)"
    "fullextent_maxy", "Maximum y value from full canvas extent (including all layers)"
    "fullextent_minx", "Minimum x value from full canvas extent (including all layers)"
@@ -842,6 +1073,12 @@ To use these variables in an expression, they should be preceded by the
    "map_start_time |314|", "The start of the map's temporal time range
    (as a datetime value)"
    "map_units", "The units of map measurements"
+   "model_path", "Full path (including file name) of current model
+   (or project path if model is embedded in a project)."
+   "model_folder", "Folder containing current model (or project folder 
+   if model is embedded in a project)."
+   "model_name", "Name of current model"
+   "model_group", "Group for current model"
    "notification_message", "Content of the notification message sent by the provider
    (available only for actions triggered by provider notifications)."
    "parent", "Refers to the current feature in the parent layer, providing access to
@@ -893,11 +1130,17 @@ To use these variables in an expression, they should be preceded by the
    "symbol_id", "The Internal ID of the symbol (in the layout legend)"
    "symbol_label", "The label for the symbol (either a user defined
    label or the default autogenerated label - in the layout legend)"
+   "symbol_layer_count |314|", "Total number of symbol layers in the symbol"
+   "symbol_layer_index |314|", "Current symbol layer index"
+   "symbol_marker_column |314|", "Column number for marker (valid for point pattern fills only)."
+   "symbol_marker_row |314|", "Row number for marker (valid for point pattern fills only)."
    "user_account_name", "The current user's operating system account name"
    "user_full_name", "The current user's operating system user name"
    "value", "The current value"
    "with_variable", "Allows setting a variable for usage within an expression
    and avoid recalculating the same value repeatedly"
+   "zoom_level |314|", "Zoom level of the tile that is being rendered (derived from the current
+   map scale). Normally in interval [0, 20]."
 
 **Some examples:**
 
