@@ -104,6 +104,9 @@ methods you can easily get both:
     NAME
     ''
 
+.. note:: If you change the ``Display Name`` from a field to an expression than 
+  you have to use :meth:`displayExpression() <qgis.core.QgsVectorLayer.displayExpression>`
+  instead of :meth:`displayField() <qgis.core.QgsVectorLayer.displayField>`.
 
 .. index:: Iterating features
 
