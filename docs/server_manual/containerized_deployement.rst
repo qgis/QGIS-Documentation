@@ -8,7 +8,8 @@ Containerized deployment
       :local:
       :depth: 3
 
-There are many ways to use containerised application, from the most simple (simple Docker images) to sophisticated (Kubernetes and so on).
+There are many ways to use containerised application, from the most simple (simple
+Docker images) to sophisticated (Kubernetes and so on).
 
 .. note:: This kind of deployment needs the `docker application <http://docker.com>`_ to be installed and running. Check
           this `tutorial <https://www.docker.com/101-tutorial>`_ to begin.
@@ -440,5 +441,4 @@ description <docker-compose-file>`.
 To use Kubernetes, you can use the AWS web console or the command line tool `eksctl
 <https://docs.aws.amazon.com/eks/latest/userguide/getting-started.html>`_ and have the good permissions/roles. Then with
 a well configured kubectl environment, you can reuse the :ref:`Kubernetes manifests <k8s-manifests>`.
-
 
