@@ -256,7 +256,7 @@ Deployment manifests
 Create a file :file:`deployments.yaml` with this content:
 
 .. code-block:: yaml
-
+				 
   apiVersion: apps/v1
   kind: Deployment
   metadata:
@@ -441,14 +441,14 @@ functionalities, you can use docker-compose or Kubernetes compatible wrappers to
 manage your stack.
 You will have to create an
 `image registry <https://console.aws.amazon.com/ecr/home>`_ for your custom
-images.
+images to be accessible.
 
 To use docker-compose alike functionalities, you need to install the **ecs-cli** client and
-have proper permissions / roles.
+have `proper permissions / roles <https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_execution_IAM_role.html>`_.
 Then, with the help of the `ecs-cli compose` commands (see the
-`ecs-cli compose manual <https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-compose.html>`_),
+`ecs-cli compose manual <https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-compose.html>`_ and `ecs-cli tutorial <https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-cli-tutorial-fargate.html>`_),
 you can reuse the :ref:`stack description <docker-compose-file>`.
 
 To use Kubernetes, you can use the AWS web console or the command line tool `eksctl
-<https://docs.aws.amazon.com/eks/latest/userguide/getting-started.html>`_ and have the good permissions/roles. Then with
+<https://docs.aws.amazon.com/eks/latest/userguide/getting-started.html>`_ and have the proper permissions / roles. Then with
 a well configured kubectl environment, you can reuse the :ref:`Kubernetes manifests <k8s-manifests>`.
