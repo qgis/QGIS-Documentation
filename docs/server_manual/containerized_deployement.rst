@@ -24,7 +24,7 @@ Docker images) to sophisticated (Kubernetes and so on).
 Simple docker images
 ====================
 
-Dockerfile samples and build instructions are available on `OSLANDIA docker-qgis repository
+Dockerfile samples and build instructions are available on the `OSLANDIA docker-qgis repository
 <https://gitlab.com/Oslandia/qgis/docker-qgis/-/tree/master/qgis-exec>`_.
 
 Download or clone the repository then, in the retrieved directory, build the image with:
