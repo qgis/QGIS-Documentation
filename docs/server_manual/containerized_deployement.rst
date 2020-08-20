@@ -424,7 +424,8 @@ Cloud deployment
 Managing its own cluster of servers to handle the deployment of containerized applications, is a full part and complex
 job. You have to handle multiple problematic as hardware, bandwidths and security at different levels.
 
-Cloud deployment solutions can be a good alternative when you do not want to focus on infrastructure management.
+Cloud deployment solutions can be a good alternative when you do not want to focus on
+infrastructure management.
 
 Cloud deployment may use proprietary mechanisms but they are also compatibles with the stages explained previously
 (:ref:`docker images <simple-docker-images>` and :ref:`stack management <docker-stacks>`).
