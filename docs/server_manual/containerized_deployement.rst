@@ -443,10 +443,11 @@ You will have to create an
 `image registry <https://console.aws.amazon.com/ecr/home>`_ for your custom
 images.
 
-To use docker-compose alike functionalities you need to install the **ecs-cli** client and have the good
-permissions/roles. Then with the help of the `ecs-cli compose` commands (see `ecs-cli compose manual
-<https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-compose.html>`_) you can reuse the :ref:`stack
-description <docker-compose-file>`.
+To use docker-compose alike functionalities, you need to install the **ecs-cli** client and
+have proper permissions / roles.
+Then, with the help of the `ecs-cli compose` commands (see the
+`ecs-cli compose manual <https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-compose.html>`_),
+you can reuse the :ref:`stack description <docker-compose-file>`.
 
 To use Kubernetes, you can use the AWS web console or the command line tool `eksctl
 <https://docs.aws.amazon.com/eks/latest/userguide/getting-started.html>`_ and have the good permissions/roles. Then with
