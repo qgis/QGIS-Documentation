@@ -6,12 +6,17 @@ Containerized deployment
 
    .. contents::
       :local:
-      :depth: 2
+      :depth: 3
 
 There are many ways to use containerised application, from the most simple (simple Docker images) to sophisticated (Kubernetes and so on).
 
 .. note:: This kind of deployment needs the `docker application <http://docker.com>`_ to be installed and running. Check
           this `tutorial <https://www.docker.com/101-tutorial>`_ to begin.
+
+.. note:: Glossary: Docker run pre packaged application (aka images) which can be retrieved as sources
+					(Dockerfile and resources) to build or already built from registries (private or public).
+
+.. _simple-docker-images:
 
 Simple docker images
 ====================
@@ -89,7 +94,7 @@ And type this command:
                 -v $(pwd)/nginx.conf:/etc/nginx/conf.d/default.conf:ro -p 8080:80 \
                 nginx:1.13
 
-To check, type in a browser: `http://localhost:8080/qgis-server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities <http://localhost:8080/qgis-server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities>`_
+To check capabilities availability, type in a browser: `http://localhost:8080/qgis-server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities <http://localhost:8080/qgis-server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities>`_
 
 
 Cleanup
@@ -102,8 +107,10 @@ To cleanup the running images you should type:
   docker stop qgis-server nginx
 
 
-Docker stack
-============
+.. _docker-stacks:
+
+Docker stacks
+=============
 
 The previous way is scriptable but not easily packageable nor standardized neither easily manageable.
 
@@ -111,14 +118,21 @@ To work with a docker image set you could use a docker stack managed by an orche
 working in the same private network, you can start/stop a whole stack in the good order or deploy stack to other
 workers. They are many orchestrators, for example Swarm (lately docker-compose), Kubernetes, Mesos.
 
+In the following, we will present simple configurations for testing purposes. They will not be valid for production!
+
 
 Swarm/docker-compose
 --------------------
 
-Docker, by eating docker-compose, has now its own orchestrator: Swarm.
+Docker, by eating docker-compose, has now its own orchestrator: Swarm. You have to `enable it
+<https://docs.docker.com/get-started/orchestration/#enable-docker-swarm>`_ (Mac version will also work with Linux).
 
-`Enable it <https://docs.docker.com/get-started/orchestration/#enable-docker-swarm>`_ (Mac version will also work with
-Linux).  Now you have Swarm working, create the service file (see `deploy swarm
+.. _docker-compose-file:
+
+Stack description
+^^^^^^^^^^^^^^^^^
+
+Now you have Swarm working, create the service file (see `deploy swarm
 <https://docs.docker.com/get-started/swarm-deploy/>`_) :file:`qgis-stack.yaml`:
 
 .. code-block:: yaml
@@ -130,7 +144,7 @@ Linux).  Now you have Swarm working, create the service file (see `deploy swarm
       # Should use version with utf-8 locale support:
       image: qgis-server:latest
       volumes:
-      - ./data:/data:ro
+      - REPLACE_WITH_FULL_PATH/data:/data:ro
       environment:
       - LANG=en_EN.UTF-8
       - QGIS_PROJECT_FILE=/data/osm.qgs
@@ -142,7 +156,7 @@ Linux).  Now you have Swarm working, create the service file (see `deploy swarm
       ports:
       - 8080:80
       volumes:
-      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - REPLACE_WITH_FULL_PATH/nginx.conf:/etc/nginx/conf.d/default.conf:ro
       depends_on:
       - qgis-server
   
@@ -165,10 +179,13 @@ Something like:
 
   ID                  NAME                MODE                REPLICAS            IMAGE               PORTS
   gmx7ewlvwsqt        qgis_nginx          replicated          1/1                 nginx:1.13          *:8080->80/tcp
-  l0v2e7cl43u3        qgis_qgis-exec      replicated          1/1                 qgis-exec:latest    
+  l0v2e7cl43u3        qgis_qgis-server      replicated          1/1                 qgis-server:latest    
 
 
-To check, type in a browser: `http://localhost:8080/qgis-server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities <http://localhost:8080/qgis-server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities>`_
+To check capabilities availability, type in a browser: `http://localhost:8080/qgis-server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities <http://localhost:8080/qgis-server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities>`_
+
+Cleanup
+^^^^^^^
 
 To cleanup, type:
 
@@ -180,4 +197,248 @@ To cleanup, type:
 Kubernetes
 ----------
 
-If you are using Docker Desktop installation, using Kubernetes is pretty straight forward 
+Installation
+^^^^^^^^^^^^
+
+If you have a **Docker Desktop** installation, using Kubernetes (aka k8s) is pretty straight forward: `enable k8s
+<https://docs.docker.com/get-started/orchestration/#enable-Kubernetes>`_. 
+
+Else follow `minikube tutorial <https://Kubernetes.io/docs/tutorials/hello-minikube/>`_ or `microk8s for Ubuntu
+<https://ubuntu.com/tutorials/install-a-local-Kubernetes-with-microk8s>`_.
+
+As Kubernetes installation can be really complex, we will only focus on aspects used by this demo. For further/deeper
+information, check the `official documentation <https://Kubernetes.io/docs/home/>`_. 
+
+
+microk8s
+""""""""
+
+microk8s needs extra steps: you have to enable the registry and tag the qgis-server image in order to have Kubernetes to
+find the created images. 
+
+First, enable registry:
+
+.. code-block:: bash
+
+  microk8s enable dashboard dns registry
+
+Then, tag and push the image to your newly created registry:
+
+.. code-block:: bash
+
+  docker tag qgis-server 127.0.0.1:32000/qgis-server && docker push 127.0.0.1:32000/qgis-server
+
+Finally, add or complete the :file:`/etc/docker/daemon.json` to have your registry **127.0.0.1:32000** listed in the
+**insecure-registries** field. Thus, at least:
+
+.. code-block:: json
+
+  {
+    "insecure-registries": ["127.0.0.1:32000"]
+  }
+
+
+.. _k8s-manifests:
+
+Creating manifests
+^^^^^^^^^^^^^^^^^^
+
+Kubernetes describes its objects to deploy in yaml manifests. They are many different kind but we will only use
+deployments (handle pods ie. docker images) and services to expose the deployments to internal or external purposes.
+
+
+Deployment manifests
+""""""""""""""""""""
+
+Create a file :file:`deployments.yaml` with this content:
+
+.. code-block:: yaml
+
+  apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    name: qgis-server
+    namespace: default
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        myLabel: qgis-server
+    template:
+      metadata:
+        labels:
+          myLabel: qgis-server
+      spec:
+        containers:
+          - name: qgis-server
+            image: localhost:32000/qgis-server:latest
+            imagePullPolicy: IfNotPresent
+            env:
+              - name: LANG
+                value: en_EN.UTF-8
+              - name: QGIS_PROJECT_FILE
+                value: /data/osm.qgs
+              - name: QGIS_SERVER_LOG_LEVEL
+                value: "0"
+              - name: DEBUG
+                value: "1"
+            ports:
+              - containerPort: 5555
+            volumeMounts:
+              - name: qgis-data
+                mountPath: /data/
+        volumes:
+          - name: qgis-data
+            hostPath:
+              path: REPLACE_WITH_FULL_PATH/data
+  
+  ---
+  apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    name: qgis-nginx
+    namespace: default
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        myLabel: qgis-nginx
+    template:
+      metadata:
+        labels:
+          myLabel: qgis-nginx
+      spec:
+        containers:
+          - name: qgis-nginx
+            image: nginx:1.13
+            ports:
+              - containerPort: 80
+            volumeMounts:
+              - name: nginx-conf
+                mountPath: /etc/nginx/conf.d/default.conf
+        volumes:
+          - name: nginx-conf
+            hostPath:
+              path: REPLACE_WITH_FULL_PATH/nginx.conf
+
+							
+Service manifests
+"""""""""""""""""
+
+Create a file :file:`services.yaml` with this content:
+
+.. code-block:: yaml
+
+  apiVersion: v1
+  kind: Service
+  metadata:
+    name: qgis-server
+    namespace: default
+  spec:
+    type: ClusterIP
+    selector:
+      myLabel: qgis-server
+    ports:
+      - port: 5555
+        targetPort: 5555
+  ---
+  apiVersion: v1
+  kind: Service
+  metadata:
+    name: qgis-nginx
+    namespace: default
+  spec:
+    type: NodePort
+    selector:
+      myLabel: qgis-nginx
+    ports:
+      - port: 80
+        targetPort: 80
+        nodePort: 30080
+
+
+Deploying manifests
+^^^^^^^^^^^^^^^^^^^
+
+To deploy the images and services in Kubernetes one can use the dashboard (click on the **+** on the upper right) or the
+command line.
+
+.. note::
+  By using the command line with microk8s you will have to prefix each command by `microk8s`
+
+To deploy or update your manifests, type:
+
+.. code-block:: bash
+
+  kubectl apply -k ./
+
+To check what is currently deployed use:
+
+.. code-block:: bash
+
+  kubectl get pods,services,deployment
+
+You should obtain something like:
+
+::
+
+  NAME                               READY   STATUS    RESTARTS   AGE
+  pod/qgis-nginx-54845ff6f6-8skp9    1/1     Running   0          27m
+  pod/qgis-server-75df8ddd89-c7t7s   1/1     Running   0          27m
+  
+  NAME                       TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)        AGE
+  service/Kubernetes         ClusterIP   10.152.183.1     <none>        443/TCP        5h51m
+  service/qgis-exec-server   ClusterIP   10.152.183.218   <none>        5555/TCP       35m
+  service/qgis-nginx         NodePort    10.152.183.234   <none>        80:30080/TCP   27m
+  service/qgis-server        ClusterIP   10.152.183.132   <none>        5555/TCP       27m
+  
+  NAME                          READY   UP-TO-DATE   AVAILABLE   AGE
+  deployment.apps/qgis-nginx    1/1     1            1           27m
+  deployment.apps/qgis-server   1/1     1            1           27m
+  
+To read nginx/qgis logs, type:
+
+.. code-block:: bash
+
+  kubectl logs -f POD_NAME
+
+
+To check capabilities availability, type in a browser: `http://localhost:30080/qgis-server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities <http://localhost:30080/qgis-server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities>`_
+
+Cleanup
+^^^^^^^
+
+To clean up, type:
+
+.. code-block:: bash
+
+  kubectl delete -n default service/qgis-server service/qgis-nginx deployment/qgis-nginx deployment/qgis-server
+
+
+Cloud deployment
+================
+
+Managing its own cluster of servers to handle the deployment of containerized applications, is a full part and complex
+job. You have to handle multiple problematic as hardware, bandwidths and security at different levels.
+
+Cloud deployment solutions can be a good alternative when you do not want to focus on infrastructure management.
+
+Cloud deployment may use proprietary mechanisms but they are also compatibles with the stages explained previously
+(:ref:`docker images <simple-docker-images>` and :ref:`stack management <docker-stacks>`).
+
+AWS usecase
+-----------
+
+With Amazon AWS, through `ECS (Elastic Container Service) <https://console.aws.amazon.com/ecs/home>`_ functionalities, you can use docker-compose or Kubernetes
+compatible wrappers to manage your stack. You will have to create an `image registry <https://console.aws.amazon.com/ecr/home>`_ to push your custom images.
+
+To use docker-compose alike functionalities you need to install the **ecs-cli** client and have the good
+permissions/roles. Then with the help of the `ecs-cli compose` commands (see `ecs-cli compose manual
+<https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-compose.html>`_) you can reuse the :ref:`stack
+description <docker-compose-file>`.
+
+To use Kubernetes, you can use the AWS web console or the command line tool `eksctl
+<https://docs.aws.amazon.com/eks/latest/userguide/getting-started.html>`_ and have the good permissions/roles. Then with
+a well configured kubectl environment, you can reuse the :ref:`Kubernetes manifests <k8s-manifests>`.
+
+
