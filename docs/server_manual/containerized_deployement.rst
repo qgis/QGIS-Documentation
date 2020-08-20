@@ -15,8 +15,9 @@ Docker images) to sophisticated (Kubernetes and so on).
    be installed and running.
    Check this `tutorial <https://www.docker.com/101-tutorial>`_.
 
-.. note:: Glossary: Docker run pre packaged application (aka images) which can be retrieved as sources
-					(Dockerfile and resources) to build or already built from registries (private or public).
+.. note:: Glossary: Docker run pre packaged application (aka images) which can be
+   retrieved as sources (Dockerfile and resources) to build or already built from registries
+   (private or public).
 
 .. _simple-docker-images:
 
