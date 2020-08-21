@@ -241,7 +241,7 @@ Then, tag and push the image to your newly created registry:
   docker tag qgis-server 127.0.0.1:32000/qgis-server && docker push 127.0.0.1:32000/qgis-server
 
 Finally, add or complete the :file:`/etc/docker/daemon.json` to have your registry
-**127.0.0.1:32000** listed in the **insecure-registries** fieldt:
+**127.0.0.1:32000** listed in the **insecure-registries** field:
 
 .. code-block:: json
 
@@ -450,12 +450,16 @@ You will have to create an
 `image registry <https://console.aws.amazon.com/ecr/home>`_ for your custom
 images to be accessible.
 
-To use docker-compose alike functionalities, you need to install the **ecs-cli** client and
-have `proper permissions / roles <https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_execution_IAM_role.html>`_.
-Then, with the help of the `ecs-cli compose` commands (see the
-`ecs-cli compose manual <https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-compose.html>`_ and `ecs-cli tutorial <https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-cli-tutorial-fargate.html>`_),
+To use docker-compose alike functionalities, you need to install the **ecs-cli** client
+and have `proper permissions / roles
+<https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_execution_IAM_role.html>`_.
+Then, with the help of the `ecs-cli compose` commands (see the `ecs-cli compose manual
+<https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-compose.html>`_
+and `ecs-cli tutorial
+<https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-cli-tutorial-fargate.html>`_),
 you can reuse the :ref:`stack description <docker-compose-file>`.
 
-To use Kubernetes, you can use the AWS web console or the command line tool `eksctl
-<https://docs.aws.amazon.com/eks/latest/userguide/getting-started.html>`_ and have the proper permissions / roles. Then with
-a well configured kubectl environment, you can reuse the :ref:`Kubernetes manifests <k8s-manifests>`.
+To use Kubernetes, you can use the AWS web console or the command line tool
+`eksctl <https://docs.aws.amazon.com/eks/latest/userguide/getting-started.html>`_
+and have the proper permissions / roles. Then with a well configured kubectl environment,
+you can reuse the :ref:`Kubernetes manifests <k8s-manifests>`.
