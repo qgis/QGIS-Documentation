@@ -1740,8 +1740,9 @@ combo boxes.
 The :guilabel:`View` can be set as **Tree**, **Table** or **Graph**.
 'Table' and 'Graph' views can only be set for raster layers.
 
-The identify tool allows you to |checkbox|:guilabel:`Auto open form` by using the
-|options|:guilabel:`Identify Settings` button.
+The identify tool allows you to |checkbox|
+:guilabel:`Auto open form for single feature results`, found under |options|
+:sup:`Identify Settings`.
 If checked, each time a single feature is identified, a form opens
 showing its attributes. This is a handy way to quickly edit a feature's attributes.
 
