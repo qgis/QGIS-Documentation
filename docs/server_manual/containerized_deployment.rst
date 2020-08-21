@@ -132,7 +132,7 @@ To check, type ``docker ps | grep qgis-server`` and you should see a
 line with **qgis-server**::
 
   CONTAINER ID        IMAGE                 COMMAND                  CREATED             STATUS              PORTS                                            NAMES
-  4de8192da76e        qgis-server             "/tini -- /home/qgis…"   3 seconds ago       Up 2 seconds        0.0.0.0:5555->5555/tcp                           qgis-server
+  4de8192da76e        qgis-server           "/tini -- /home/qgis…"   3 seconds ago       Up 2 seconds        0.0.0.0:5555->5555/tcp                           qgis-server
 
 
 Usable sample
@@ -265,7 +265,7 @@ Something like:
 
   ID                  NAME                MODE                REPLICAS            IMAGE               PORTS
   gmx7ewlvwsqt        qgis_nginx          replicated          1/1                 nginx:1.13          *:8080->80/tcp
-  l0v2e7cl43u3        qgis_qgis-server      replicated          1/1                 qgis-server:latest    
+  l0v2e7cl43u3        qgis_qgis-server    replicated          1/1                 qgis-server:latest    
 
 
 To check WMS capabilities, type in a web browser 
