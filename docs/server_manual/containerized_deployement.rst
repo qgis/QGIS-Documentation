@@ -56,7 +56,8 @@ You can run the server with:
           **-p**: host/container port mapping
           **-e**: environment variable to be used in the container
 
-To check, type and you should see a line with **qgis-server**:
+To check, type ``docker ps | grep qgis-server`` and you should see a line with
+**qgis-server**:
 
 .. code-block:: bash
 
