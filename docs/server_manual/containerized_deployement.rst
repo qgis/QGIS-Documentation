@@ -426,16 +426,16 @@ To clean up, type:
 Cloud deployment
 ================
 
-Managing your own cluster of servers to handle the deployment of containerized
-applications, is a complex job.
-You have to handle multiple issues, such as hardware, bandwidth and security at
-different levels.
+Managing your own cluster of servers to handle the deployment of
+containerized applications, is a complex job.
+You have to handle multiple issues, such as hardware, bandwidth and
+security at different levels.
 
-Cloud deployment solutions can be a good alternative when you do not want to focus on
-infrastructure management.
+Cloud deployment solutions can be a good alternative when you do not
+want to focus on infrastructure management.
 
-A cloud deployment may use proprietary mechanisms, but they are also compatible with
-the stages explained previously
+A cloud deployment may use proprietary mechanisms, but they are also
+compatible with the stages explained previously
 (:ref:`docker images <simple-docker-images>` and
 :ref:`stack management <docker-stacks>`).
 
@@ -444,22 +444,25 @@ AWS usecase
 
 With Amazon AWS, through
 `ECS (Elastic Container Service) <https://console.aws.amazon.com/ecs/home>`_
-functionalities, you can use docker-compose or Kubernetes compatible wrappers to
-manage your stack.
+functionalities, you can use docker-compose or Kubernetes compatible
+wrappers to manage your stack.
 You will have to create an
-`image registry <https://console.aws.amazon.com/ecr/home>`_ for your custom
-images to be accessible.
+`image registry <https://console.aws.amazon.com/ecr/home>`_ for your
+custom images to be accessible.
 
-To use docker-compose alike functionalities, you need to install the **ecs-cli** client
-and have `proper permissions / roles
+To use docker-compose alike functionalities, you need to install the
+**ecs-cli** client and have `proper permissions / roles
 <https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_execution_IAM_role.html>`_.
-Then, with the help of the `ecs-cli compose` commands (see the `ecs-cli compose manual
+Then, with the help of the `ecs-cli compose` commands (see the
+`ecs-cli compose manual
 <https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-compose.html>`_
-and `ecs-cli tutorial
-<https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-cli-tutorial-fargate.html>`_),
+and
+`ecs-cli tutorial <https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-cli-tutorial-fargate.html>`_),
 you can reuse the :ref:`stack description <docker-compose-file>`.
 
-To use Kubernetes, you can use the AWS web console or the command line tool
+To use Kubernetes, you can use the AWS web console or the command line
+tool
 `eksctl <https://docs.aws.amazon.com/eks/latest/userguide/getting-started.html>`_
-and have the proper permissions / roles. Then with a well configured kubectl environment,
-you can reuse the :ref:`Kubernetes manifests <k8s-manifests>`.
+and have the proper permissions / roles. Then with a well configured
+kubectl environment, you can reuse the :ref:`Kubernetes manifests
+<k8s-manifests>`.
