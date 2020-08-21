@@ -8,7 +8,7 @@ Containerized deployment
       :local:
       :depth: 3
 
-There are many ways to use containerised application, from the most
+There are many ways to use containerized application, from the most
 simple (simple Docker images) to sophisticated (Kubernetes and so on).
 
 .. note:: This kind of deployment needs the
