@@ -8,26 +8,29 @@ Containerized deployment
       :local:
       :depth: 3
 
-There are many ways to use containerised application, from the most simple (simple
-Docker images) to sophisticated (Kubernetes and so on).
+There are many ways to use containerised application, from the most
+simple (simple Docker images) to sophisticated (Kubernetes and so on).
 
-.. note:: This kind of deployment needs the `docker application <http://docker.com>`_ to
-   be installed and running.
+.. note:: This kind of deployment needs the
+   `docker application <http://docker.com>`_ to be installed and
+   running.
    Check this `tutorial <https://www.docker.com/101-tutorial>`_.
 
-.. note:: Glossary: Docker run pre packaged application (aka images) which can be
-   retrieved as sources (Dockerfile and resources) to build or already built from registries
-   (private or public).
+.. note:: Glossary: Docker run pre packaged application (aka images)
+   which can be retrieved as sources (Dockerfile and resources) to
+   build or already built from registries (private or public).
 
 .. _simple-docker-images:
 
 Simple docker images
 ====================
 
-Dockerfile samples and build instructions are available on the `OSLANDIA docker-qgis repository
+Dockerfile samples and build instructions are available on the
+`OSLANDIA docker-qgis repository
 <https://gitlab.com/Oslandia/qgis/docker-qgis/-/tree/master/qgis-exec>`_.
 
-Download or clone the repository, and build the image in the retrieved directory with:
+Download or clone the repository, and build the image in the retrieved
+directory with:
 
 .. code-block:: bash
 
@@ -56,8 +59,8 @@ You can run the server with:
           **-p**: host/container port mapping
           **-e**: environment variable to be used in the container
 
-To check, type ``docker ps | grep qgis-server`` and you should see a line with
-**qgis-server**:
+To check, type ``docker ps | grep qgis-server`` and you should see a
+line with **qgis-server**:
 
 .. code-block:: bash
 
@@ -66,11 +69,13 @@ To check, type ``docker ps | grep qgis-server`` and you should see a line with
 Usable sample
 -------------
 
-As the server is only accepting fastcgi connections, you have to have an HTTP server
-that handles this protocol.
-To do so we have to create a simple Nginx configuration file and start a Nginx image.
+As the server is only accepting fastcgi connections, you have to have
+an HTTP server that handles this protocol.
+To do so we have to create a simple Nginx configuration file and start
+a Nginx image.
 
-Create a file :file:`nginx.conf` in the current directory with this content:
+Create a file :file:`nginx.conf` in the current directory with this
+content:
 
 .. code-block:: nginx
 
@@ -115,23 +120,26 @@ To cleanup the running images, type:
 Docker stacks
 =============
 
-The previous method is scriptable, but not easily packageable nor standardized or easily
-manageable.
+The previous method is scriptable, but not easily packageable nor
+standardized or easily manageable.
 
-To work with a docker image set you could use a docker stack managed by an
-orchestrator.
-In a stack, the images are working in the same private network, and you can start / stop
-the whole stack or deploy the stack to other workers.
-There are many orchestrators, for example Swarm (lately docker-compose), Kubernetes
-and Mesos.
+To work with a docker image set you could use a docker stack managed
+by an orchestrator.
+In a stack, the images are working in the same private network, and
+you can start / stop the whole stack or deploy the stack to other
+workers.
+There are many orchestrators, for example Swarm (lately
+docker-compose), Kubernetes and Mesos.
 
-In the following, we will present simple configurations for testing purposes.
+In the following, we will present simple configurations for testing
+purposes.
 They are not suitable for production.
 
 Swarm/docker-compose
 --------------------
 
-Docker, by acquiring docker-compose, now has its own orchestrator: Swarm.
+Docker, by acquiring docker-compose, now has its own orchestrator:
+Swarm.
 You have to
 `enable it <https://docs.docker.com/get-started/orchestration/#enable-docker-swarm>`_
 (the Mac version will also work with Linux).
@@ -177,7 +185,8 @@ To deploy (or update) the stack, type:
 
   docker stack deploy -c qgis-stack.yaml qgis-stack
 
-Check the stack deployment status until you obtain **1/1** in the **replicas** column:
+Check the stack deployment status until you obtain **1/1** in the
+**replicas** column:
 
 .. code-block:: bash
 
@@ -210,23 +219,26 @@ Kubernetes
 Installation
 ^^^^^^^^^^^^
 
-If you have a **Docker Desktop** installation, using Kubernetes (aka k8s) is pretty
-straight forward:
+If you have a **Docker Desktop** installation, using Kubernetes (aka
+k8s) is pretty straight forward:
 `enable k8s <https://docs.docker.com/get-started/orchestration/#enable-Kubernetes>`_. 
 
-If not, follow `minikube tutorial <https://Kubernetes.io/docs/tutorials/hello-minikube/>`_ or
+If not, follow the
+`minikube tutorial <https://Kubernetes.io/docs/tutorials/hello-minikube/>`_
+or
 `microk8s for Ubuntu <https://ubuntu.com/tutorials/install-a-local-Kubernetes-with-microk8s>`_.
 
-As Kubernetes installation can be really complex, we will only focus on aspects used by
-this demo.
+As Kubernetes installation can be really complex, we will only focus
+on aspects used by this demo.
 For further / deeper information, check the
 `official documentation <https://Kubernetes.io/docs/home/>`_. 
 
 microk8s
 """"""""
 
-microk8s needs extra steps: you have to enable the registry and tag the qgis-server
-image in order to have Kubernetes to find the created images. 
+microk8s needs extra steps: you have to enable the registry and tag
+the qgis-server image in order to have Kubernetes to find the created
+images. 
 
 First, enable the registry:
 
@@ -240,8 +252,9 @@ Then, tag and push the image to your newly created registry:
 
   docker tag qgis-server 127.0.0.1:32000/qgis-server && docker push 127.0.0.1:32000/qgis-server
 
-Finally, add or complete the :file:`/etc/docker/daemon.json` to have your registry
-**127.0.0.1:32000** listed in the **insecure-registries** field:
+Finally, add or complete the :file:`/etc/docker/daemon.json` to have
+your registry **127.0.0.1:32000** listed in the
+**insecure-registries** field:
 
 .. code-block:: json
 
@@ -255,9 +268,9 @@ Creating manifests
 ^^^^^^^^^^^^^^^^^^
 
 Kubernetes describes the objects to deploy in yaml manifests.
-There are many different kinds, but we will only use deployments (handle pods, i.e.
-docker images) and services to expose the deployments to internal or external
-purposes.
+There are many different kinds, but we will only use deployments
+(handle pods, i.e. docker images) and services to expose the
+deployments to internal or external purposes.
 
 Deployment manifests
 """"""""""""""""""""
@@ -370,12 +383,12 @@ Create a file :file:`services.yaml` with this content:
 Deploying manifests
 ^^^^^^^^^^^^^^^^^^^
 
-To deploy the images and services in Kubernetes, one can use the dashboard (click on
-the **+** on the upper right) or the command line.
+To deploy the images and services in Kubernetes, one can use the
+dashboard (click on the **+** on the upper right) or the command line.
 
 .. note::
-   When using the command line with microk8s you will have to prefix each command
-   with `microk8s`.
+   When using the command line with microk8s you will have to prefix
+   each command with `microk8s`.
 
 To deploy or update your manifests:
 
