@@ -128,7 +128,7 @@ by an orchestrator.
 In a stack, the images are working in the same private network, and
 you can start / stop the whole stack or deploy the stack to other
 workers.
-There are many orchestrators, for example Swarm (lately
+There are many orchestrators, for example Swarm (previously known as
 docker-compose), Kubernetes and Mesos.
 
 In the following, we will present simple configurations for testing
