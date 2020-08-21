@@ -12,7 +12,7 @@ There are many ways to use containerized application, from the most
 simple (simple Docker images) to sophisticated (Kubernetes and so on).
 
 .. note:: This kind of deployment needs the
-   `docker application <http://docker.com>`_ to be installed and
+   `docker application <https://www.docker.com>`_ to be installed and
    running.
    Check this `tutorial <https://www.docker.com/101-tutorial>`_.
 
