@@ -227,7 +227,7 @@ microk8s
 microk8s needs extra steps: you have to enable the registry and tag the qgis-server
 image in order to have Kubernetes to find the created images. 
 
-First, enable registry:
+First, enable the registry:
 
 .. code-block:: bash
 
