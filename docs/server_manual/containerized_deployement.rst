@@ -202,7 +202,7 @@ Something like:
 
 
 To check WMS capabilities, type in a web browser:
-`http://localhost:8080/qgis-server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities <http://localhost:8080/qgis-server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities>`_
+http://localhost:8080/qgis-server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities 
 
 Cleanup
 ^^^^^^^
