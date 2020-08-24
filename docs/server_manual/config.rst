@@ -193,8 +193,10 @@ This is an option at the project level to improve project read time by using the
 layer extents defined in the project metadata and disabling the check for
 PostgreSQL/PostGIS layer primary key uniqueness.
 
-The trust layer metadata can be forced by setting this variable to ``1`` or ``true``.
-In this case, the vector layer's extent will be the one defined in the project and Postgres/Postgis layers' primary key defined in the datasource are considered as unique without check.
+Trusting layer metadata can be forced by setting this variable to ``1`` or ``true``.
+The vector layer's extent will then be the one defined in the project, and the
+PostgreSQL/PostGIS layer's primary key defined in the data source is
+considered as unique without a check.
 
 Do not use it if layers' extent is not fixed during the project's use.
 
