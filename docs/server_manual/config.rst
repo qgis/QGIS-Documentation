@@ -186,6 +186,20 @@ The default behavior can be overridden by setting this variable to ``1`` or ``tr
 In this case, "bad" layers will just be ignored, and the project will be considered
 valid and available.
 
+QGIS_SERVER_TRUST_LAYER_METADATA
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+This is an option at the project level to improve project read time by using the vector
+layer extents defined in the project metadata and disabling the check for
+PostgreSQL/PostGIS layer primary key uniqueness.
+
+Trusting layer metadata can be forced by setting this variable to ``1`` or ``true``.
+The vector layer's extent will then be the one defined in the project, and the
+PostgreSQL/PostGIS layer's primary key defined in the data source is
+considered as unique without a check.
+
+Do not use it if layers' extent is not fixed during the project's use.
+
 
 Settings summary
 ================
