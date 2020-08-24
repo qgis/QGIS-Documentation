@@ -12,7 +12,7 @@ Grass support.
 -------------------------------------------------------------------------------
 
 When you install QGIS, depending on your OS you have to click on the
-``QGIS Desktop with GRASS`` to open a QGIS session with GRASS available.
+``QGIS Desktop with GRASS`` icon to open a QGIS session with GRASS available.
 
 To launch GRASS from within QGIS, you need to activate it as with any other
 plugin:
