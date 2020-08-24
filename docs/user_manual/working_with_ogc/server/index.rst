@@ -37,3 +37,4 @@ For more information about server plugin development, please read :ref:`server_p
   services
   plugins
   config
+  containerized_deployment
