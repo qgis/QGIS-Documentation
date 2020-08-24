@@ -17,3 +17,4 @@ QGIS Server Guide/Manual
   config
   development_server
   containerized_deployment
+  comparaison_matrix
