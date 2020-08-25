@@ -6,13 +6,13 @@ different way. Remember that you're not working in QGIS directly, but working
 in GRASS *via* QGIS. Hence, make sure you have installed QGIS Desktop with
 Grass support.
 
+|win| To open a QGIS session with GRASS available on Windows you have to click
+on the ``QGIS Desktop with GRASS`` icon.
+
 **The goal for this lesson:** To begin a GRASS project in QGIS.
 
 |basic| |FA| Start a New GRASS Session
 -------------------------------------------------------------------------------
-
-When you install QGIS, depending on your OS you have to click on the
-``QGIS Desktop with GRASS`` icon to open a QGIS session with GRASS available.
 
 To launch GRASS from within QGIS, you need to activate it as with any other
 plugin:
@@ -338,3 +338,5 @@ operations that GRASS offers.
    :width: 1.5em
 .. |hard| image:: /static/common/hard.png
 .. |srtmFileName| replace:: :file:`srtm_41_19_4326.tif`
+.. |win| image:: /static/common/win.png
+   :width: 1em
