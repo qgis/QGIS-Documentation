@@ -89,7 +89,7 @@ the :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` class provide
 information on the field and template used in the :ref:`maptips` tab.
 
 When you load a vector layer, a field is always chosen by QGIS as the 
-``Display Name`,` while the ``HTML Map Tip`` is empty by default. With these 
+``Display Name``, while the ``HTML Map Tip`` is empty by default. With these 
 methods you can easily get both:
 
 .. testcode:: vectors
