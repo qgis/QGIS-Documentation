@@ -660,6 +660,11 @@ guidelines:
   LayoutItem                                ``layoutitem``
   Color                                     ``color``
   Scale                                     ``scale``
+  Aggregates                                ``aggregates``
+  ExecuteSql                                ``executesql``
+  InterpolationData                         ``interpolationdata``
+  FieldsMapping                             ``fieldsmapping``
+  ReliefColors                              ``reliefcolors``
   ========================================  =========================  ====================
 
 
