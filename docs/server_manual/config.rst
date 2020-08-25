@@ -200,6 +200,14 @@ considered as unique without a check.
 
 Do not use it if layers' extent is not fixed during the project's use.
 
+QGIS_SERVER_DISABLE_GETPRINT
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+This is an option at the project level to improve project read time by disabling loading of
+layouts.
+
+Activating this option disables the QGIS WMS GetPrint request.
+Set this QGIS project flag to not load layouts.
 
 Settings summary
 ================
