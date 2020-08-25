@@ -1200,6 +1200,19 @@ Examples of XYZ Tile services:
 * Open Weather Map Temperature:
   :guilabel:`URL`: ``http://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?appid={api_key}``
   :guilabel:`Min. Zoom Level`: 0, :guilabel:`Max. Zoom Level`: 19.
+  
+Handling broken file paths
+==========================
+
+When the file path to a data source is broken, QGIS opens a dialog :guilabel:`Handle Unavailable Layers`.
+You can double-click into the :guilabel:`Datasource` field or click 
+:guilabel:`Browse` to fix the path. It is possible to work with your project
+without this layer by clicking :guilabel:`Keep Unavailable Layers´. Another possibility is to
+|deleteSelected|:guilabel:`Remove Unavailable Layers`. As a last step, click :guilabel:`Apply changes`.
+
+When a layer path is fixed, QGIS auto-scans through all other broken paths and tries to auto-fix them 
+when they are pointing to the same broken file path.
+
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
@@ -1241,6 +1254,8 @@ Examples of XYZ Tile services:
 .. |db2| image:: /static/common/mIconDb2.png
    :width: 1.5em
 .. |dbManager| image:: /static/common/dbmanager.png
+   :width: 1.5em
+.. |deleteSelected| image:: /static/common/mActionDeleteSelected.png
    :width: 1.5em
 .. |filterMap| image:: /static/common/mActionFilterMap.png
    :width: 1.5em
