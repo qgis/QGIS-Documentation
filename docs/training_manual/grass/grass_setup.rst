@@ -17,7 +17,6 @@ on the ``QGIS Desktop with GRASS`` icon.
 To launch GRASS from within QGIS, you need to activate it as with any other
 plugin:
 
-
 #. First, open a new QGIS project.
 #. In the :guilabel:`Plugin Manager`, enable :guilabel:`GRASS` in the list:
 
