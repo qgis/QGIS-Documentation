@@ -3109,7 +3109,7 @@ A summary of the filled information is provided in the :guilabel:`Validation`
 tab and helps you identify potential issues related to the form. You can then
 either fix them or ignore them.
 
-Metadata are currently saved in the project file. It can also be saved as an
+Metadata are currently saved in the project file. It can also be saved as a
 :file:`.qmd` file alongside file based layers or in a local :file:`.sqlite`
 database for remote layers (e.g. PostGIS).
 
