@@ -1204,11 +1204,14 @@ Examples of XYZ Tile services:
 Handling broken file paths
 ==========================
 
-When the file path to a data source is broken, QGIS opens a dialog :guilabel:`Handle Unavailable Layers`.
-You can double-click into the :guilabel:`Datasource` field or click 
-:guilabel:`Browse` to fix the path. It is possible to work with your project
-without this layer by clicking :guilabel:`Keep Unavailable Layers´. Another possibility is to
-|deleteSelected|:guilabel:`Remove Unavailable Layers`. As a last step, click :guilabel:`Apply changes`.
+When the file path to a data source is wrong, QGIS opens the
+:guilabel:`Handle Unavailable Layers` dialog.
+You can double-click in the :guilabel:`Datasource` field or click :guilabel:`Browse` to fix
+the path.
+It is possible to continue working with your project with the broken path by clicking
+:guilabel:`Keep Unavailable Layers´ (your layer will then be broken).
+Another possibility is to |deleteSelected| :guilabel:`Remove Unavailable Layers`.
+As the last step, click :guilabel:`Apply changes`.
 
 When a layer path is fixed, QGIS auto-scans through all other broken paths and tries to auto-fix them 
 when they are pointing to the same broken file path.
