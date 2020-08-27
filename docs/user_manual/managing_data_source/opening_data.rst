@@ -1213,8 +1213,8 @@ It is possible to continue working with your project with the broken path by cli
 Another possibility is to |deleteSelected| :guilabel:`Remove Unavailable Layers`.
 As the last step, click :guilabel:`Apply changes`.
 
-When a layer path is fixed, QGIS auto-scans through all other broken paths and tries to auto-fix them 
-when they are pointing to the same broken file path.
+When a layer path has been fixed, QGIS scans through all other broken paths and tries
+to auto-fix those that have the same broken file path.
 
 
 
