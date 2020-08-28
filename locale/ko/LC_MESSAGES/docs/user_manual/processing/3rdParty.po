@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-26 13:13+0200\n"
 "PO-Revision-Date: 2020-03-16 19:30+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2020\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -32,6 +33,8 @@ msgid ""
 "algorithm providers. Additional providers can be found as separate plugins, "
 "and installed using the QGIS Plugin Manager."
 msgstr ""
+"추가적인 응용 프로그램을 사용하면 공간 처리 프레임워크를 확장할 수 있습니다. 외부 응용 프로그램에 의존하는 알고리즘은 각각 고유의 "
+"알고리즘 제공자가 관리합니다. QGIS 플러그인 관리자를 사용하면 추가 제공자를 개별 플러그인으로 찾아서 설치할 수 있습니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:18
 msgid ""
@@ -42,6 +45,9 @@ msgid ""
 "component like the toolbox or the graphical modeler, just like you do with "
 "any other algorithm."
 msgstr ""
+"여기에서는 이런 추가적인 응용 프로그램을 포함시키려면 공간 처리 프레임워크를 어떻게 환경 설정해야 하는지, 그리고 추가 응용 프로그램을 "
+"기반으로 한 알고리즘의 몇몇 특정 기능에 관해 설명할 것입니다. 시스템을 정확하게 환경 설정하고 나면, 다른 모든 알고리즘과 마찬가지로 "
+"툴박스 또는 그래픽 모델 생성기 같은 어떤 구성 요소에서도 외부 알고리즘을 실행할 수 있을 것입니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:25
 msgid ""
@@ -49,6 +55,8 @@ msgid ""
 " QGIS are not enabled. You can enable them in the Processing settings dialog"
 " if they are installed on your system."
 msgstr ""
+"기본적으로, QGIS가 내장하지 않은 외부 응용 프로그램에 의존하는 모든 알고리즘은 활성화된 상태가 아닙니다. 공간 처리 설정 대화창에서"
+" 이런 알고리즘을 활성화시킬 수 있지만, 사용자 시스템에 해당 응용 프로그램이 이미 설치돼 있어야 합니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:32
 msgid "A note for Windows users"
@@ -65,6 +73,10 @@ msgid ""
 "with the OSGeo4W application, make sure that you also select SAGA and GRASS "
 "for installation."
 msgstr ""
+"사용자가 고급 사용자가 아니며 윈도우 상에서 QGIS를 실행하고 있는 경우, 이 장의 나머지 부분을 읽어보지 않아도 괜찮습니다. 단독형 "
+"설치 관리자를 사용해서 사용자 시스템에 QGIS를 설치하십시오. 그러면 사용자 시스템에 자동적으로 SAGA와 GRASS를 설치하고 "
+"QGIS에서 실행할 수 있도록 환경 설정하기 때문에, 별다른 환경 설정을 하지 않아도 이 제공자들의 모든 알고리즘을 사용할 수 있습니다."
+" OSGeo4W 응용 프로그램을 통해 설치하는 경우, SAGA 및 GRASS도 함께 설치하도록 선택했는지 확인하십시오."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:47
 msgid "A note on file formats"
@@ -81,6 +93,11 @@ msgid ""
 "programs, and check the console output (in the log panel) to find out what "
 "is going wrong."
 msgstr ""
+"외부 소프트웨어 사용시, QGIS가 파일을 열 수 있다는 것이 다른 소프트웨어도 해당 파일을 열고 처리할 수 있다는 의미는 아닙니다. "
+"대부분의 경우 다른 소프트웨어도 QGIS가 연 파일을 읽을 수 있지만, 어떤 경우 읽을 수 없을 수도 있습니다. 데이터베이스 또는 흔하지"
+" 않은 파일 포맷을 사용하는 경우, 그것이 래스터 레이어든 벡터 레이어든, 문제가 발생할 수도 있습니다. 이런 경우 QGIS와 외부 "
+"소프트웨어 둘 다 지원하고 있는 것이 확실한, 잘 알려진 파일 포맷으로 바꿔서 해본 다음, (로그 패널에서) 콘솔 산출물을 확인해서 뭐가"
+" 잘못된 건지 자세히 알아보십시오."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:59
 msgid ""
@@ -88,6 +105,8 @@ msgid ""
 "you call an external algorithm with a GRASS raster layers as input. For this"
 " reason, such layers will not appear as available to algorithms."
 msgstr ""
+"예를 들면 GRASS 래스터 레이어를 입력받는 외부 알고리즘을 호출했는데 문제가 발생해서 작업을 완료할 수 없는 경우가 있을 수도 "
+"있습니다. 이런 이유로, 이런 레이어는 알고리즘에 사용할 수 있다고 나타나지 않을 것입니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:65
 msgid ""
@@ -98,6 +117,10 @@ msgid ""
 "surprised if it takes more time to process a layer from a DB connection than"
 " a layer from a Shapefile format dataset of similar size."
 msgstr ""
+"하지만 벡터 레이어 사용 시엔 이런 문제가 전혀 없을 것입니다. 외부 응용 프로그램에 레이어를 넘겨주기 전에 QGIS가 원본 파일 포맷을"
+" 외부 응용 프로그램이 지원하는 파일 포맷으로 자동 변환하기 때문입니다. 이 습성 때문에 공간 처리 작업 시간이 늘어나게 되는데, 대용량"
+" 레이어의 경우 특히 시간이 오래 걸릴 것입니다. 그러므로 Shapefile 포맷 데이터셋의 레이어를 처리하는 데 드는 시간보다 "
+"데이터베이스 연결로부터 비슷한 용량의 레이어를 처리하는 데 드는 시간이 더 오래 걸려도 너무 놀라지 마십시오."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:73
 msgid ""
@@ -115,6 +138,9 @@ msgid ""
 " input layers, if a conversion is needed, that might increase the processing"
 " time."
 msgstr ""
+"QGIS가 생성한 모든 래스터 및 벡터 레이어 산출물 포맷을 입력 레이어로 사용할 수 있습니다. 일부 제공자가 특정 포맷을 지원하지 않는"
+" 경우에도, 모든 제공자가 QGIS가 나중에 자동 변환할 수 있는 공통 포맷으로 내보낼 수 있기 때문입니다. 입력 레이어에 이런 변환 "
+"작업이 필요한 경우 공간 처리 작업 시간이 늘어날 수도 있습니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:85
 msgid "A note on vector layer selections"
@@ -138,7 +164,7 @@ msgstr ""
 msgid ""
 "In other cases, exporting only selected features is needed, which causes "
 "longer execution times."
-msgstr ""
+msgstr "그 외의 경우, 선택한 객체만 내보내야 하는데 이렇게 되면 실행 시간이 늘어나게 됩니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:104
 msgid "SAGA"
@@ -148,13 +174,13 @@ msgstr "SAGA"
 msgid ""
 "SAGA algorithms can be run from QGIS if SAGA included in the QGIS "
 "installation."
-msgstr ""
+msgstr "SAGA가 QGIS 설치 관리자에 포함된 경우 QGIS에서 SAGA 알고리즘을 실행할 수 있습니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:109
 msgid ""
 "If you are running Windows, both the stand-alone installer and the OSGeo4W "
 "installer include SAGA."
-msgstr ""
+msgstr "사용자가 윈도우를 실행 중이라면, 단독형 설치 관리자와 OSGeo4W 설치 관리자 모두 SAGA를 포함하고 있습니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:113
 msgid "About SAGA grid system limitations"
@@ -299,6 +325,10 @@ msgid ""
 "You will find two settings, namely :guilabel:`Log console output` and "
 ":guilabel:`Log execution commands`, to activate that logging mechanism."
 msgstr ""
+"QGIS가 전송한 명령어는 물론 SAGA가 출력한 부가 정보도 기타 공간 처리 로그 메시지와 함께 로그에 작성될 수 있습니다. QGIS가"
+" SAGA 알고리즘을 실행하는 과정에서 어떤 일이 일어나는지를 추적할 수 있는 유용한 정보입니다. 이런 로그 작업 기제를 활성화하려면, "
+":guilabel:`Log console output` 및 :guilabel:`Log execution commands` 두 옵션을 "
+"활성화하십시오."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:193
 msgid ""
@@ -306,28 +336,35 @@ msgid ""
 "the command-line have similar options, so you will find them as well in "
 "other places in the processing settings list."
 msgstr ""
+"명령 줄 인터페이스를 통해 외부 응용 프로그램을 호출해서 사용하는 다른 제공자들 대부분도 비슷한 옵션을 가지고 있습니다. 공간 처리 설정"
+" 목록의 해당 제공자 부분에서 이런 옵션을 찾을 수 있을 겁니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:201
 msgid "R scripts"
-msgstr ""
+msgstr "R 스크립트"
 
 #: ../../docs/user_manual/processing/3rdParty.rst:203
 msgid ""
 "To enable R in Processing you need to install the **Processing R Provider** "
 "plugin and configure R for QGIS."
 msgstr ""
+"공간 처리 프레임워크에서 R을 활성화하려면 **공간 처리 R 제공자** 플러그인을 설치하고 QGIS에 맞게 R을 환경 설정해야 합니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:206
 msgid ""
 "Configuration is done in :menuselection:`Provider --> R` in the "
 ":guilabel:`Processing` tab of :menuselection:`Settings --> Options`."
 msgstr ""
+"QGIS 옵션 대화창의 (:menuselection:`Settings --> Options`) :guilabel:`Processing` "
+"탭에 있는 :menuselection:`Provider --> R` 에서 환경 설정할 수 있습니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:210
 msgid ""
 "Depending on your operating system, you may have to use :guilabel:`R folder`"
 " to specify where your R binaries are located."
 msgstr ""
+"사용자의 운영 체제에 따라, :guilabel:`R folder` 를 통해 사용자의 R 바이너리가 있는 위치를 지정해야 할 수도 "
+"있습니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:213
 msgid ""
@@ -335,6 +372,8 @@ msgid ""
 "(``R-<version>``) under :file:`C:\\\\Program Files\\\\R\\\\`. Specify the "
 "folder and **NOT** the binary!"
 msgstr ""
+"**윈도우** 상에서는 R 실행 파일이 보통 :file:`C:\\\\Program Files\\\\R\\\\` 아래 있는 "
+"폴더(``R-<version>``)에 있습니다. 바이너리 파일이 **아니라** 폴더를 지정하세요!"
 
 #: ../../docs/user_manual/processing/3rdParty.rst:217
 msgid ""
@@ -342,18 +381,25 @@ msgid ""
 "environment variable. If ``R`` in a terminal window starts R, then you are "
 "ready to go."
 msgstr ""
+"**리눅스** 상에서는 R 폴더가 PATH 환경 변수에 포함돼 있는지 확인만 해주면 됩니다. 터미널 창에서 ``R`` 명령어로 R을 "
+"실행할 수 있다면, 모든 준비가 끝난 겁니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:221
 msgid ""
 "After installing the **Processing R Provider** plugin, you will find some "
 "example scripts in the :guilabel:`Processing Toolbox`:"
 msgstr ""
+"**공간 처리 R 제공자** 플러그인을 설치했다면, :guilabel:`Processing Toolbox` 에서 다음과 같은 몇몇 예시 "
+"스크립트를 볼 수 있을 것입니다:"
 
 #: ../../docs/user_manual/processing/3rdParty.rst:224
 msgid ""
 ":guilabel:`Scatterplot` runs an R function that produces a scatter plot from"
 " two numerical fields of the provided vector layer."
 msgstr ""
+":guilabel:`Scatterplot`: 지정한 벡터 레이어의 숫자 필드 2개로부터 `산점도(scatter plot) "
+"<https://ko.wikipedia.org/wiki/%EC%82%B0%EC%A0%90%EB%8F%84>`_ 를 생성하는 R 함수를 "
+"실행합니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:226
 msgid ""
@@ -364,6 +410,11 @@ msgid ""
 ":menuselection:`Provider --> R` in the Processing options. The default is "
 "`http://cran.at.r-project.org/`. Installing may take some time..."
 msgstr ""
+":guilabel:`test_sf`: ``sf`` 패키지에 의존하는 몇몇 작업을 수행합니다. R 패키지 ``sf`` 가 설치되었는지 "
+"확인하는 데 사용할 수 있습니다. 해당 패키지가 설치되지 않았다면, R이 공간 처리 옵션 대화창의 "
+":menuselection:`Provider --> R` 에서 지정한 :guilabel:`Package repository` 를 통해 "
+"(이 패키지가 의존하는 모든 패키지와 함께) 해당 패키지를 설치하려 할 것입니다. 기본 저장소는 "
+"http://cran.at.r-project.org/ 입니다. 설치에 시간이 걸릴 수도 있습니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:235
 msgid ""
@@ -371,16 +422,18 @@ msgid ""
 "installed. If the package is not installed, R will try to install it for "
 "you."
 msgstr ""
+":guilabel:`test_sp`: R 패키지 ``sp`` 가 설치되었는지 확인하는 데 사용할 수 있습니다. 해당 패키지가 설치되지 "
+"않았다면, R이 설치하려 할 것입니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:242
 msgid ""
 "If you have R configured correctly for QGIS, you should be able to run these"
 " scripts."
-msgstr ""
+msgstr "QGIS에 맞게 R을 정확히 환경 설정했다면, 이 스크립트들을 실행할 수 있을 것입니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:251
 msgid "Adding R scripts from the QGIS collection"
-msgstr ""
+msgstr "QGIS 저장소에서 R 스크립트 추가하기"
 
 #: ../../docs/user_manual/processing/3rdParty.rst:253
 msgid ""
@@ -388,6 +441,8 @@ msgid ""
 "predefined set of algorithms you can run (except for some example script "
 "that come with the *Processing R Provider* plugin)."
 msgstr ""
+"QGIS에서의 R 통합은 사용자가 실행할 수 있는 사전 정의된 알고리즘 집합이 (*공간 처리 R 제공자* 플러그인과 함께 설치되는 몇몇 "
+"예시 스크립트를 제외하면) 없다는 점에서 SAGA 통합과는 다릅니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:257
 msgid ""
@@ -395,6 +450,8 @@ msgid ""
 "following steps to load and enable them using the *QGIS Resource Sharing* "
 "plugin."
 msgstr ""
+"QGIS 저장소에서 예시 R 스크립트 집합을 사용할 수 있습니다. *QGIS 리소스 공유* 플러그인을 사용해 이 예시 스크립트를 불러와서"
+" 활성화하려면 다음 단계들을 수행하십시오."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:261
 msgid ""
@@ -402,36 +459,42 @@ msgid ""
 ":guilabel:`Show also experimental plugins` in the Plugin Manager "
 ":guilabel:`Settings`)"
 msgstr ""
+"*QGIS 리소스 공유* 플러그인을 추가하십시오. (플러그인 관리자의 :guilabel:`Settings` 에서 "
+":guilabel:`Show also experimental plugins` 옵션을 활성화해야 할 수도 있습니다.)"
 
 #: ../../docs/user_manual/processing/3rdParty.rst:264
 msgid "Open it (Plugins --> Resource Sharing --> Resource Sharing)"
 msgstr ""
+"QGIS 리소스 공유 플러그인을 여십시오. (:menuselection:`Plugins --> Resource Sharing --> "
+"Resource Sharing`)"
 
 #: ../../docs/user_manual/processing/3rdParty.rst:265
 msgid "Choose the :guilabel:`Settings` tab"
-msgstr ""
+msgstr ":guilabel:`Settings` 탭을 선택하십시오."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:266
 msgid "Click :guilabel:`Reload repositories`"
-msgstr ""
+msgstr ":guilabel:`Reload repositories` 를 클릭하십시오."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:267
 msgid "Choose the :guilabel:`All` tab"
-msgstr ""
+msgstr ":guilabel:`All` 탭을 선택하십시오."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:268
 msgid ""
 "Select :guilabel:`QGIS R script collection` in the list and click on the "
 ":guilabel:`Install` button"
 msgstr ""
+"목록에서 :guilabel:`QGIS R script collection` 을 선택한 다음 :guilabel:`Install` 버튼을 "
+"클릭하십시오."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:270
 msgid "The collection should now be listed in the :guilabel:`Installed` tab"
-msgstr ""
+msgstr "이제 :guilabel:`Installed` 탭의 목록에 R 스크립트가 추가되었을 것입니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:272
 msgid "Close the plugin"
-msgstr ""
+msgstr "플러그인을 종료하십시오."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:273
 msgid ""
@@ -439,52 +502,61 @@ msgid ""
 "example scripts will be present under R, in various groups (only some of the"
 " groups are expanded in the screenshot below)."
 msgstr ""
+":guilabel:`Processing Toolbox` 를 여십시오. 모든 것이 제대로 되었다면, 예시 스크립트가 R 아래 여러 그룹으로"
+" 나타나 있을 것입니다. (다음 스크린샷에서는 몇몇 그룹만 펼쳐져 있습니다.)"
 
 #: ../../docs/user_manual/processing/3rdParty.rst:281
 msgid "The :guilabel:`Processing Toolbox` with some R scripts shown"
-msgstr ""
+msgstr "몇몇 R 스크립트가 표시된 :guilabel:`Processing Toolbox`"
 
 #: ../../docs/user_manual/processing/3rdParty.rst:283
 msgid ""
 "The scripts at the top are the example scripts from the *Processing R "
 "Provider* plugin."
-msgstr ""
+msgstr "가장 위에 있는 스크립트들은 *공간 처리 R 제공자* 플러그인의 예시 스크립트들입니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:286
 msgid ""
 "If, for some reason, the scripts are not available in the "
 ":guilabel:`Processing Toolbox`, you can try to:"
 msgstr ""
+"만약 어떤 이유로든 :guilabel:`Processing Toolbox` 에 스크립트가 추가되지 않았다면, 다음 작업을 해볼 수 "
+"있습니다:"
 
 #: ../../docs/user_manual/processing/3rdParty.rst:289
 msgid ""
 "Open the Processing settings (:menuselection:`Settings --> Options --> "
 "Processing` tab)"
 msgstr ""
+"공간 처리 설정 대화창을 엽니다. (:menuselection:`Settings --> Options --> Processing` 탭)"
 
 #: ../../docs/user_manual/processing/3rdParty.rst:292
 msgid "Go to :menuselection:`Providers --> R --> R scripts folder`"
-msgstr ""
+msgstr ":menuselection:`Providers --> R --> R scripts folder` 를 선택합니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:294
 msgid "On Ubuntu, set the path to (or, better, include in the path):"
-msgstr ""
+msgstr "우분투의 경우, 다음을 가리키는 경로를 설정하십시오(또는, 더 나은 방법으로, PATH에 포함시키십시오):"
 
 #: ../../docs/user_manual/processing/3rdParty.rst:296
 msgid ""
 "/home/<user>/.local/share/QGIS/QGIS3/profiles/default/resource_sharing/repositories/github.com/qgis"
 "/QGIS-Resources/collections/rscripts"
 msgstr ""
+"/home/<user>/.local/share/QGIS/QGIS3/profiles/default/resource_sharing/repositories/github.com/qgis"
+"/QGIS-Resources/collections/rscripts"
 
 #: ../../docs/user_manual/processing/3rdParty.rst:301
 msgid "On Windows, set the path to (or, better, include in the path):"
-msgstr ""
+msgstr "윈도우의 경우, 다음을 가리키는 경로를 설정하십시오(또는, 더 나은 방법으로, PATH에 포함시키십시오):"
 
 #: ../../docs/user_manual/processing/3rdParty.rst:303
 msgid ""
 "C:\\\\Users\\\\<user>\\\\AppData\\\\Roaming\\\\QGIS\\\\QGIS3\\\\profiles\\\\default\\\\resource_sharing\\\\repositories\\\\github.com\\\\qgis"
 "\\\\QGIS-Resources\\\\collections\\\\rscripts"
 msgstr ""
+"C:\\\\Users\\\\<user>\\\\AppData\\\\Roaming\\\\QGIS\\\\QGIS3\\\\profiles\\\\default\\\\resource_sharing\\\\repositories\\\\github.com\\\\qgis"
+"\\\\QGIS-Resources\\\\collections\\\\rscripts"
 
 #: ../../docs/user_manual/processing/3rdParty.rst:305
 msgid ""
@@ -494,6 +566,9 @@ msgid ""
 " provide several directories here. They will be separated by a semicolon "
 "(\";\")."
 msgstr ""
+"경로를 편집하려면 더블 클릭하십시오. 이제 경로를 그냥 붙여넣기/입력하거나, 또는 :guilabel:`...` 버튼을 클릭하면 열리는 "
+"대화창에서 디렉터리를 찾은 다음 :guilabel:`Add` 버튼을 클릭하면 됩니다. 여러 디렉터리를 지정할 수도 있습니다. 각 "
+"디렉터리는 쌍반점(``;``)으로 구분됩니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:315
 msgid ""
@@ -502,10 +577,13 @@ msgid ""
 "of *QGIS R script collection*. You will probably find that scripts that "
 "depend on vector data input or output will not work."
 msgstr ""
+"QGIS 2 버전 온라인 저장소에서 모든 R 스크립트를 가져오고 싶다면, *QGIS R script collection* 대신 *QGIS"
+" R script collection (from QGIS 2)* 를 선택하면 됩니다. 벡터 데이터 입력물 또는 산출물에 의존하는 "
+"스크립트는 아마도 작동하지 않을 것입니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:327
 msgid "Creating R scripts"
-msgstr ""
+msgstr "R 스크립트 생성하기"
 
 #: ../../docs/user_manual/processing/3rdParty.rst:329
 msgid ""
@@ -513,6 +591,8 @@ msgid ""
 "section shows you the syntax for using R commands in QGIS, and how to use "
 "QGIS objects (layers, tables) in them."
 msgstr ""
+"R을 실행하는 것과 동일한 방법으로 스크립트를 작성하고 R 명령어를 호출할 수 있습니다. 이 절에서는 QGIS에서 R 명령어를 사용하기 "
+"위한 문법과, R 명령어에 QGIS 객체(레이어, 테이블)를 사용하는 방법을 설명합니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:333
 msgid ""
@@ -520,6 +600,8 @@ msgid ""
 "that you have developed and you would like to have available from QGIS), you"
 " have to create a script file that performs the R commands."
 msgstr ""
+"R 함수를 (또는 사용자가 개발해서 QGIS에서 사용하고자 하는 좀 더 복잡한 R 스크립트를) 호출하는 알고리즘을 추가하려면, R "
+"명령어를 수행하는 스크립트 파일을 생성해야 합니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:338
 msgid ""
@@ -529,6 +611,9 @@ msgid ""
 "(:guilabel:`R scripts folder`) in the :guilabel:`R` settings group in "
 "Processing settings dialog)."
 msgstr ""
+"R 스크립트 파일의 확장자는 :file:`.rsx` 이며, R 문법 및 R 스크립트 작성에 대한 기초 지식만 있다면 R 스크립트를 꽤 "
+"간단하게 생성할 수 있습니다. R 스크립트 파일은 R 스크립트 폴더에 저장해야 합니다. 공간 처리 설정 대화창에 있는 "
+":guilabel:`R` 설정 그룹에서 해당 폴더를 (:guilabel:`R scripts folder`) 지정할 수 있습니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:345
 msgid ""
@@ -539,6 +624,10 @@ msgid ""
 " will use or generate spatial data, knowledge of spatial packages like "
 "``maptools`` and ``sp``/``sf``, is very useful."
 msgstr ""
+"입력 폴리곤 레이어에 있는 폴리곤의 경계 내부에 랜덤한 그리드를 생성하는 R 메소드 ``spsample`` 을 호출하는 아주 간단한 "
+"스크립트 파일을 살펴보겠습니다. 이 메소드는 ``maptools`` 패키지에 속해 있습니다. 사용자가 QGIS에 통합하고 싶을 거의 모든"
+" 알고리즘이 공간 데이터를 사용하거나 생성하기 때문에, 사용자는 ``maptools`` 그리고 ``sp``/``sf`` 같은 공간 "
+"패키지에 대해 잘 알고 있어야 합니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:366
 msgid ""
@@ -546,6 +635,8 @@ msgid ""
 "define the display name and group of the script, and tell QGIS about its "
 "inputs and outputs."
 msgstr ""
+"2중 파이썬 주석 기호(``##``)로 시작하는 첫 몇 행이 스크립트의 표시 명칭 및 그룹을 정의하고, QGIS에 입력물 및 산출물을 "
+"알려줍니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:371
 msgid ""
@@ -553,6 +644,8 @@ msgid ""
 ":ref:`R Intro <r-intro>` section in the training manual and consult the "
 ":ref:`QGIS R Syntax <r-syntax>` section."
 msgstr ""
+"사용자 고유의 R 스크립트를 어떻게 작성하는지에 대한 자세한 정보를 알고 싶다면 QGIS 교육 교재의 :ref:`R 소개 "
+"<r-intro>` 에서 :ref:`R 문법 <r-syntax>` 을 살펴보시기 바랍니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:375
 msgid ""
@@ -561,6 +654,8 @@ msgid ""
 "parameter, and creating a corresponding R variable that can be used as R "
 "function input."
 msgstr ""
+"입력물 파라미터를 선언하는 경우, QGIS 는 해당 정보를 사용자에게 해당 파라미터의 값을 요청하기 위한 사용자 인터페이스를 생성하고, "
+"나중에 R 함수에 입력할 수 있는 대응하는 R 변수를 생성한다는 두 가지 목적을 위해 사용합니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:380
 msgid ""
@@ -571,6 +666,10 @@ msgid ""
 "accessing the value of that parameter (you should therefore avoid using "
 "reserved R words as parameter names)."
 msgstr ""
+"앞의 예시에서, ``Vector_layer`` 라는 ``vector`` 입력물 유형을 선언하고 있습니다. 이 알고리즘을 실행하면, "
+"QGIS가 사용자가 선택한 레이어를 열어서 역시 ``Vector_layer`` 라는 명칭을 가진 변수에 저장할 것입니다. 즉, "
+"파라미터명이 R에서 해당 파라미터의 값에 접근하기 위해 사용하는 변수명이기도 합니다. (따라서 예비된 R 단어를 파라미터명으로 사용해서는"
+" 안 됩니다.)"
 
 #: ../../docs/user_manual/processing/3rdParty.rst:388
 msgid ""
@@ -580,12 +679,15 @@ msgid ""
 "file -- QGIS will do it), and they are stored as ``sf`` (or "
 "``Spatial*DataFrame``) objects."
 msgstr ""
+"벡터 및 래스터 레이어 같은 공간 파라미터는 ``st_read()`` (또는 ``readOGR()``) 및 ``brick()`` (또는 "
+"``readGDAL``) 명령어를 사용해서 (사용자 설명 파일에 이런 명령어를 추가하지 않아도 됩니다 ─ QGIS 가 처리할 테니까요) "
+"읽어들여 ``sf`` (또는 ``Spatial*DataFrame``) 객체로 저장합니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:394
 msgid ""
 "Table fields are stored as strings containing the name of the selected "
 "field."
-msgstr ""
+msgstr "테이블 필드 유형은 선택한 필드의 명칭을 담고 있는 문자열로 저장됩니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:397
 msgid ""
@@ -593,12 +695,17 @@ msgid ""
 "``st_read()`` by specifying ``##load_vector_using_rgdal``. This will produce"
 " a ``Spatial*DataFrame`` object instead of an ``sf`` object."
 msgstr ""
+"``##load_vector_using_rgdal`` 을 지정하면 ``st_read()`` 대신 ``readOGR()`` 명령어를 "
+"사용해서 벡터 파일을 읽어들일 수 있습니다. 이렇게 하면 ``sf`` 객체 대신 ``Spatial*DataFrame`` 객체를 생성할 "
+"것입니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:402
 msgid ""
 "Raster files can be read using the ``readGDAL()`` command instead of "
 "``brick()`` by specifying ``##load_raster_using_rgdal``."
 msgstr ""
+"``##load_raster_using_rgdal`` 을 지정하면 ``brick()`` 대신 ``readGDAL()`` 명령어를 사용해서"
+" 래스터 파일을 읽어들일 수 있습니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:405
 msgid ""
@@ -607,12 +714,15 @@ msgid ""
 "string with the filename. In this case, it is up to you to open the file "
 "before performing any operation on the data it contains."
 msgstr ""
+"사용자가 고급 사용자이며 QGIS가 레이어용 객체를 생성하기를 원하지 않는다면, 객체 대신 파일명을 담은 문자열을 선호한다고 알려주는 "
+"``##pass_filenames`` 태그를 사용하면 됩니다. 이 태그를 사용할 경우, 파일이 담고 있는 데이터에 대해 어느 작업도 하기"
+" 전에 사용자가 해당 파일을 열어야 합니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:411
 msgid ""
 "With the above information, it is possible to understand the first lines of "
 "the R script (the first line not starting with a Python comment character)."
-msgstr ""
+msgstr "이런 정보를 바탕으로, 이제 R 스크립트의 (파이썬 주석 기호로 시작하지 않는) 첫 줄들을 이해할 수 있습니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:421
 msgid ""
@@ -622,6 +732,10 @@ msgid ""
 "the *sp* library, we must convert the ``sf`` object to a "
 "``SpatialPolygonsDataFrame`` object using the ``as`` function."
 msgstr ""
+"``sp`` 라이브러리가 ``spsample`` 함수를 제공하기 때문에, 가장 먼저 해당 라이브러리를 불러와야 합니다. "
+"``Vector_layer`` 변수가 ``sf`` 객체를 담고 있습니다. ``sp`` 라이브러리에서 함수(``spsample``)를 "
+"사용할 것이기 때문에, ``as`` 함수를 이용해서 ``sf`` 객체를 ``SpatialPolygonsDataFrame`` 객체로 "
+"변환해야만 합니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:428
 msgid ""
@@ -629,12 +743,16 @@ msgid ""
 "``numpoints`` input parameter (which specifies the number of points to "
 "generate)."
 msgstr ""
+"그 다음 이 객체 및 (생성할 포인트의 개수를 지정하는) ``numpoints`` 입력 파라미터와 함께 ``spsample`` 함수를 "
+"호출합니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:432
 msgid ""
 "Since we have declared a vector output named ``Output``, we have to create a"
 " variable named ``Output`` containing an ``sf`` object."
 msgstr ""
+"이미 ``Output`` 이라는 벡터 산출물을 선언했기 때문에, ``sf`` 객체를 담고 있는 ``Output`` 이라는 변수를 생성해야"
+" 합니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:435
 msgid ""
@@ -643,6 +761,9 @@ msgid ""
 "function, and then we convert that object to an ``sf`` object using the "
 "``st_as_sf`` function (of the *sf* library)."
 msgstr ""
+"이 변수를 생성하기 위해서는 두 단계를 거쳐야 합니다. 먼저 *SpatialPointsDataFrame* 함수를 통해 함수의 결과물에서 "
+"``SpatialPolygonsDataFrame`` 객체를 생성합니다. 그 다음, (``sf`` 라이브러리의) ``st_as_sf`` "
+"함수를 사용해서 해당 객체를 ``sf`` 객체로 변환합니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:441
 msgid ""
@@ -651,6 +772,9 @@ msgid ""
 "(in this case ``Output``), and that it contains a suitable value (an ``sf`` "
 "object for vector layer output)."
 msgstr ""
+"중간 단계 변수는 사용자 마음대로 명명해도 됩니다. 단 최종 산출물을 저장하는 변수가 정의된 명칭과 (이 경우 ``Output``) "
+"동일한 명칭을 가지고 있는지, 그리고 해당 변수가 적합한 값을 (벡터 레이어 산출물에 대한 ``sf`` 객체를) 담고 있는지 "
+"확인하십시오."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:447
 msgid ""
@@ -659,6 +783,8 @@ msgid ""
 "object, since it is itself an object of class ``ppp``, which can not be "
 "returned to QGIS."
 msgstr ""
+"이 경우, ``spsample`` 메소드의 산출물을 ``SpatialPointsDataFrame`` 객체를 통해 명백하게 ``sf`` "
+"객체로 변환해야 합니다. 산출물 자체가 QGIS에 그대로 반환하기에 적합하지 않은 ``ppp`` 클래스의 객체이기 때문입니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:452
 msgid ""
@@ -677,6 +803,8 @@ msgid ""
 "If you have used the ``##pass_filenames`` option, outputs are generated "
 "using the ``raster`` package (with ``writeRaster()``)."
 msgstr ""
+"``##pass_filenames`` 옵션을 사용한 경우, ``raster`` 패키지를 (``writeRaster()`` 메소드를 통해)"
+" 사용해서 산출물을 생성합니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:463
 msgid ""
@@ -688,6 +816,10 @@ msgid ""
 "the description file of an algorithm that performs a normality test on a "
 "given field (column) of the attributes of a vector layer:"
 msgstr ""
+"사용자 알고리즘이 어떤 레이어도 생성하지 않지만, 그 대신 콘솔에 텍스트 산출물을 생성하는 경우 알고리즘 실행이 완료된 후 콘솔을 열고 "
+"싶다는 표현을 해야 합니다. 그렇게 하려면 사용자가 출력하고자 하는 산출물을 생성하는 명령어 줄 앞에 ``>`` ('초과') 기호를 "
+"삽입하기만 하면 됩니다. 다른 명령어 줄의 산출물은 표시되지 않을 것입니다. 예를 들면, 다음은 벡터 레이어의 속성에서 선택한 "
+"필드(열)에 대해 정규성 검정(normality test)을 수행하는 알고리즘의 설명 파일입니다:"
 
 #: ../../docs/user_manual/processing/3rdParty.rst:481
 msgid ""
@@ -704,6 +836,8 @@ msgid ""
 "method), add the following line (``output_plots_to_html`` used to be "
 "``showplots``):"
 msgstr ""
+"사용자 알고리즘이 (``plot()`` 메소드를 사용해서) 어느 종류의 그래픽이라도 생성하는 경우, 다음 줄을 "
+"추가하십시오(``output_plots_to_html`` 이 예전 ``showplots`` 입니다):"
 
 #: ../../docs/user_manual/processing/3rdParty.rst:493
 msgid ""
@@ -715,7 +849,7 @@ msgstr "이 태그를 사용하면, QGIS가 모든 R 그래픽 산출물을 임�
 msgid ""
 "Both graphics and console results will be available through the processing "
 "results manager."
-msgstr ""
+msgstr "콘솔 및 그래픽 산출물 둘 다 공간 처리 산출물 관리자를 통해 사용할 수 있습니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:499
 msgid ""
@@ -724,6 +858,9 @@ msgid ""
 "plugin, as explained elsewhere). Most of them are rather simple and will "
 "greatly help you understand how to create your own scripts."
 msgstr ""
+"더 자세한 정보를 원한다면, 공식 QGIS 저장소에 있는 R 스크립트 파일을 확인해보십시오. (앞에서 설명한대로 *QGIS 리소스 공유*"
+" 플러그인을 사용해서 다운로드하고 설치하십시오.) 대부분 단순한 편이라 사용자 고유의 스크립트를 어떻게 생성하는지 이해하는 데 큰 도움을"
+" 줄 것입니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:506
 msgid ""
@@ -736,19 +873,25 @@ msgid ""
 "Standalone. **Be aware** that if the package has to be downloaded, the "
 "script may take a long time to run the first time."
 msgstr ""
+"기본적으로 ``sf``, ``rgdal`` 및 ``raster`` 라이브러리를 불러오기 때문에, 사용자가 대응하는 "
+"``library()`` 명령어를 추가하지 않아도 됩니다. 하지만, 필요할 수도 있는 기타 추가 라이브러리는, 예를 들어 "
+"(``ggplot2`` 라이브러리를 불러오기 위한) ``library(ggplot2)`` 와 같이 직접 입력해서 명시적으로 불러와야 "
+"합니다. 해당 패키지가 사용자 시스템 상에 설치돼 있지 않다면, 공간 처리 프레임워크가 다운로드해서 설치하려 할 것입니다. 이렇게 하면 "
+"R 단독형 소프트웨어도 해당 패키지를 사용할 수 있습니다. 패키지를 다운로드해야 할 경우, 스크립트를 처음 실행할 때 시간이 오래 걸릴 "
+"수도 있다는 사실을 **명심하십시오**."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:520
 msgid "R libraries"
-msgstr ""
+msgstr "R 라이브러리"
 
 #: ../../docs/user_manual/processing/3rdParty.rst:522
 msgid ""
 "The R script ``sp_test`` tries to load the R packages ``sp`` and ``raster``."
-msgstr ""
+msgstr "R 스크립트 ``sp_test`` 는 ``sp`` 및 ``raster`` R 패키지를 불러오려 합니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:527
 msgid "R libraries installed when running sf_test"
-msgstr ""
+msgstr "sf_test 실행시 설치되는 R 라이브러리"
 
 #: ../../docs/user_manual/processing/3rdParty.rst:529
 msgid ""
@@ -756,6 +899,8 @@ msgid ""
 "packages are not installed, R may try to load and install them (and all the "
 "libraries that they depend on)."
 msgstr ""
+"R 스크립트 ``sf_test`` 는 ``sf`` 및 ``raster`` R 패키지를 불러오려 합니다. 이 두 패키지가 설치되지 않은 "
+"경우, R이 이들을 (그리고 이들이 의존하는 모든 라이브러리를) 불러와서 설치하려 할 수도 있습니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:533
 msgid ""
@@ -765,6 +910,10 @@ msgid ""
 " 2.0 of the *Processing R Provider* plugin and a fresh install of *R* 3.4.4 "
 "(*apt* package ``r-base-core`` only):"
 msgstr ""
+"우분투 상에 *R* 3.4.4 버전을 처음 설치한 다음 공간 처리 툴박스에서 *공간 처리 R 제공자* 플러그인 2.0 버전으로 "
+"``sf_test`` 를 실행했다면, 다음 R 라이브러리들이 "
+":file:`~/.local/share/QGIS/QGIS3/profiles/default/processing/rscripts` 폴더에 "
+"설치되었을 겁니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:539
 msgid ""
@@ -784,6 +933,29 @@ msgid ""
 "tidyselect, tinytex, units, utf8, uuid, vctrs, viridis, viridisLite, "
 "webshot, withr, xfun, XML, xtable``"
 msgstr ""
+"``abind``, ``askpass``, ``assertthat``, ``backports``, ``base64enc``, "
+"``BH``, ``bit``, ``bit64``, ``blob``, ``brew``, ``callr``, ``classInt``, "
+"``cli``, ``colorspace``, ``covr``, ``crayon``, ``crosstalk``, ``curl``, "
+"``DBI``, ``deldir``, ``desc``, ``dichromat``, ``digest``, ``dplyr``, "
+"``e1071``, ``ellipsis``, ``evaluate``, ``fansi``, ``farver``, ``fastmap``, "
+"``gdtools``, ``ggplot2``, ``glue``, ``goftest``, ``gridExtra``, ``gtable``, "
+"``highr``, ``hms``, ``htmltools``, ``htmlwidgets``, ``httpuv``, ``httr``, "
+"``jsonlite``, ``knitr``, ``labeling``, ``later``, ``lazyeval``, ``leafem``, "
+"``leaflet``, ``leaflet.providers``, ``leafpop``, ``leafsync``, "
+"``lifecycle``, ``lwgeom``, ``magrittr``, ``maps``, ``mapview``, "
+"``markdown``, ``memoise``, ``microbenchmark``, ``mime``, ``munsell``, "
+"``odbc``, ``openssl``, ``pillar``, ``pkgbuild``, ``pkgconfig``, ``pkgload``,"
+" ``plogr``, ``plyr``, ``png``, ``polyclip``, ``praise``, ``prettyunits``, "
+"``processx``, ``promises``, ``ps``, ``purrr``, ``R6``, ``raster``, "
+"``RColorBrewer``, ``Rcpp``, ``reshape2``, ``rex``, ``rgeos``, ``rlang``, "
+"``rmarkdown``, ``RPostgres``, ``RPostgreSQL``, ``rprojroot``, ``RSQLite``, "
+"``rstudioapi``, ``satellite``, ``scales``, ``sf``, ``shiny``, "
+"``sourcetools``, ``sp``, ``spatstat``, ``spatstat.data``, "
+"``spatstat.utils``, ``stars``, ``stringi``, ``stringr``, ``svglite``, "
+"``sys``, ``systemfonts``, ``tensor``, ``testthat``, ``tibble``, "
+"``tidyselect``, ``tinytex``, ``units``, ``utf8``, ``uuid``, ``vctrs``, "
+"``viridis``, ``viridisLite``, ``webshot``, ``withr``, ``xfun``, ``XML``, "
+"``xtable``"
 
 #: ../../docs/user_manual/processing/3rdParty.rst:562
 msgid "GRASS"
@@ -795,6 +967,8 @@ msgid ""
 "path to the GRASS folder has to be defined, but only if you are running "
 "Windows."
 msgstr ""
+"GRASS 환경 설정은 SAGA 환경 설정과 그렇게 다르지 않습니다. 먼저, 윈도우 환경인 경우 GRASS 폴더를 가리키는 경로를 "
+"정의해야 합니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:568
 msgid ""
@@ -806,12 +980,16 @@ msgid ""
 "folder where the other version is installed. GRASS 7 is needed for "
 "algorithms to work correctly."
 msgstr ""
+"기본적으로, 공간 처리 프레임워크는 QGIS와 함께 빌드된 GRASS 배포판을 사용하기 위해 GRASS 연결기(connector)를 환경"
+" 설정하려 합니다. 대부분의 시스템에서 문제없이 설정되지만, 문제가 발생한다면 사용자가 GRASS 연결기를 직접 환경 설정해야 할 수도 "
+"있습니다. 또 서로 다른 버전의 GRASS들을 사용하고자 하는 경우, 해당 설정을 변경해서 다른 버전이 설치돼 있는 폴더를 가리키게 할 "
+"수도 있습니다. 알고리즘이 정확하게 작동하려면 GRASS 7 버전이 필요합니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:578
 msgid ""
 "If you are running Linux, you just have to make sure that GRASS is correctly"
 " installed, and that it can be run without problem from a terminal window."
-msgstr ""
+msgstr "리눅스 환경인 경우, GRASS가 정확하게 설치됐는지 그리고 터미널 창에서 문제없이 실행할 수 있는지만 확인해주면 됩니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:582
 msgid ""
@@ -825,11 +1003,11 @@ msgstr ""
 "GRASS 알고리즘은 계산 시 영역(region)을 사용합니다. SAGA 환경 설정에서와 비슷한 값들을 사용해서 이 영역을 직접 정의할 "
 "수도 있고, 또는 알고리즘 실행 시 사용되는 모든 입력 레이어를 커버하는 최소 범위를 받아 자동으로 정의하도록 할 수도 있습니다. 만약 "
 "두 번째 습성을 선호한다면, GRASS 환경 설정 파라미터 가운데 |checkbox| :guilabel:`Use min covering "
-"region` 옵션을 체크하면 됩니다."
+"region` 옵션을 체크하면 됩니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:596
 msgid "LAStools"
-msgstr ""
+msgstr "LAStools"
 
 #: ../../docs/user_manual/processing/3rdParty.rst:598
 msgid ""
@@ -837,12 +1015,14 @@ msgid ""
 "download and install LAStools on your computer and install the LAStools "
 "plugin (available from the official repository) in QGIS."
 msgstr ""
+"QGIS에서 `LAStools <https://rapidlasso.com/lastools/>`_ 를 사용하려면, 사용자 컴퓨터에 "
+"LAStools를 다운로드해서 설치한 다음 QGIS에 LAStools 플러그인을 (QGIS 공식 저장소에 있습니다) 설치해야 합니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:602
 msgid ""
 "On Linux platforms, you will need `Wine <https://www.winehq.org/>`_ to be "
 "able to run some of the tools."
-msgstr ""
+msgstr "리눅스 플랫폼에서 몇몇 도구를 실행하려면 `Wine <https://www.winehq.org/>`_ 이 필요할 것입니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:605
 msgid ""
@@ -852,10 +1032,14 @@ msgid ""
 " of LAStools (:guilabel:`LAStools folder`) and Wine (:guilabel:`Wine "
 "folder`). On Ubuntu, the default Wine folder is :file:`/usr/bin`."
 msgstr ""
+"공간 처리 옵션 대화창(:menuselection:`Settings --> Options`, :guilabel:`Processing` "
+"탭, :menuselection:`Providers --> LAStools`)에서 LAStools를 활성화하고 환경 설정합니다. 여기에서"
+" LAStools의 위치(:guilabel:`LAStools folder`) 및 Wine의 위치(:guilabel:`Wine "
+"folder`)를 지정할 수 있습니다. 우분투의 경우, 기본 Wine 폴더는 :file:`/usr/bin` 입니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:617
 msgid "OTB Applications"
-msgstr ""
+msgstr "OTB 응용 프로그램"
 
 #: ../../docs/user_manual/processing/3rdParty.rst:619
 msgid ""
@@ -865,6 +1049,10 @@ msgid ""
 "their documentation are available in `OTB CookBook <https://www.orfeo-"
 "toolbox.org/CookBook/Applications.html>`_"
 msgstr ""
+"`OTB <https://www.orfeo-toolbox.org>`_ (Orfeo ToolBox)는 원격탐사(remote sensing)"
+" 데이터용 영상 처리 라이브러리입니다. OTB는 영상 처리 기능을 사용할 수 있는 응용 프로그램도 제공합니다. `OTB 쿡북 "
+"<https://www.orfeo-toolbox.org/CookBook/Applications.html>`_ 에서 응용 프로그램 목록과 "
+"그 문서들을 볼 수 있습니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:626
 msgid ""
@@ -872,78 +1060,85 @@ msgid ""
 "separately. Binary packages for OTB can be found on the `download page "
 "<https://www.orfeo-toolbox.org/download>`_."
 msgstr ""
+"OTB는 QGIS와 함께 배포되지 않으며 개별적으로 설치해야 한다는 사실을 기억하십시오. OTB 바이너리 패키지는 `다운로드 페이지 "
+"<https://www.orfeo-toolbox.org/download>`_ 에서 찾을 수 있습니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:630
 msgid "To configure QGIS processing to find the OTB library:"
-msgstr ""
+msgstr "QGIS 공간 처리 프레임워크가 OTB 라이브러리를 찾을 수 있도록 환경 설정하려면:"
 
 #: ../../docs/user_manual/processing/3rdParty.rst:632
 msgid ""
 "Open the processing settings: :menuselection:`Settings --> Options --> "
 "Processing` (left panel)*"
 msgstr ""
+"공간 처리 설정 대화창을 여십시오. (:menuselection:`Settings --> Options --> Processing` 탭)"
 
 #: ../../docs/user_manual/processing/3rdParty.rst:633
 msgid "You can see OTB under \"Providers\":"
-msgstr ""
+msgstr "OTB가 :guilabel:`Providers` 아래 있습니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:635
 msgid "Expand the :guilabel:`OTB` tab"
-msgstr ""
+msgstr ":guilabel:`OTB` 탭을 펼치십시오."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:636
 msgid "Tick the :guilabel:`Activate` option"
-msgstr ""
+msgstr "|checkbox| :guilabel:`Activate` 옵션을 체크하십시오."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:637
 msgid ""
 "Set the :guilabel:`OTB folder`. This is the location of your OTB "
 "installation."
-msgstr ""
+msgstr ":guilabel:`OTB folder` 를 사용자가 OTB를 설치한 위치로 설정하십시오."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:638
 msgid ""
 "Set the :guilabel:`OTB application folder`. This is the location of your OTB"
 " applications ( :file:`<PATH_TO_OTB_INSTALLATION>/lib/otb/applications`)"
 msgstr ""
+":guilabel:`OTB application folder` 를 사용자가 OTB 응용 프로그램을 설치한 "
+"위치(:file:`<PATH_TO_OTB_INSTALLATION>/lib/otb/applications`)로 설정하십시오."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:640
 msgid "Click \"ok\" to save the settings and close the dialog."
-msgstr ""
+msgstr ":guilabel:`OK` 를 클릭해서 설정을 저장하고 대화 창을 닫습니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:642
 msgid ""
 "If settings are correct, OTB algorithms will be available in the "
 ":guilabel:`Processing Toolbox`."
-msgstr ""
+msgstr "정확하게 설정했다면, :guilabel:`Processing Toolbox` 에서 OTB 알고리즘을 사용할 수 있습니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:646
 msgid "Documentation of OTB settings available in QGIS Processing"
-msgstr ""
+msgstr "QGIS 공간 처리 프레임워크에서 사용할 수 있는 OTB 설정 문서"
 
 #: ../../docs/user_manual/processing/3rdParty.rst:648
 msgid ""
 "**Activate**: This is a checkbox to activate or deactivate the OTB provider."
 " An invalid OTB setting will uncheck this when saved."
 msgstr ""
+"**Activate**: OTB 제공자를 활성화하거나 비활성화하는 체크박스입니다. 유효하지 않은 OTB 설정을 저장하면 이 옵션을 "
+"비활성화할 것입니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:651
 msgid "**OTB folder**: This is the directory where OTB is available."
-msgstr ""
+msgstr "**OTB folder**: OTB를 사용할 수 있는 디렉터리입니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:653
 msgid ""
 "**OTB application folder**: This is the location(s) of OTB applications."
-msgstr ""
+msgstr "**OTB application folder**: OTB 응용 프로그램의 위치(들)입니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:655
 msgid "Multiple paths are allowed."
-msgstr ""
+msgstr "경로를 여러 개 지정할 수 있습니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:657
 msgid ""
 "**Logger level** (optional): Level of logger to use by OTB applications."
-msgstr ""
+msgstr "**Logger level** (부가적): OTB 응용 프로그램이 사용할 로그 작업자(logger)의 수준을 설정합니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:659
 msgid ""
@@ -952,12 +1147,16 @@ msgid ""
 "``CRITICAL``, ``DEBUG``. This value is ``INFO`` by default. This is an "
 "advanced user configuration."
 msgstr ""
+"로그 작업의 수준은 알고리즘 실행 도중 출력되는 상세 내용의 양을 제어합니다. 로그 작업자 수준을 위한 값으로 ``INFO``, "
+"``WARNING``, ``CRITICAL``, ``DEBUG`` 가운데 하나를 사용할 수 있습니다. 기본값은 ``INFO`` 입니다. "
+"이 옵션은 고급 사용자용 환경 설정입니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:664
 msgid ""
 "**Maximum RAM to use** (optional): by default, OTB applications use all "
 "available system RAM."
 msgstr ""
+"**Maximum RAM to use** (부가적): OTB 응용 프로그램은 기본적으로 모든 가용 시스템 RAM을 사용합니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:667
 msgid ""
@@ -965,10 +1164,12 @@ msgid ""
 " this option. A value of 256 is ignored by the OTB processing provider. This"
 " is an advanced user configuration."
 msgstr ""
+"하지만 이 옵션을 통해 OTB가 RAM을 (MB 단위의) 특정 용량만 사용하도록 할 수 있습니다. 256으로 설정하면 OTB 처리 "
+"제공자가 무시할 것입니다. 이 옵션은 고급 사용자용 환경 설정입니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:671
 msgid "**Geoid file** (optional): Path to the geoid file."
-msgstr ""
+msgstr "**Geoid file** (부가적): 지오이드(geoid) 파일을 가리키는 경로를 지정합니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:673
 msgid ""
@@ -976,11 +1177,13 @@ msgid ""
 "in OTB applications. Setting this value globally enables users to share it "
 "across multiple processing algorithms. Empty by default."
 msgstr ""
+"이 옵션은 OTB 응용 프로그램에서 사용하는 ``elev.dem.geoid`` 와 ``elev.geoid`` 파라미터의 값을 설정합니다."
+" 이 값을 전체 수준으로 설정하면 여러 처리 알고리즘이 공통으로 사용하게 할 수 있습니다. 기본값은 비어 있습니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:678
 msgid ""
 "**SRTM tiles folder** (optional): Directory where SRTM tiles are available."
-msgstr ""
+msgstr "**SRTM tiles folder** (부가적): SRTM 타일을 사용할 수 있는 디렉터리입니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:681
 msgid ""
@@ -989,10 +1192,13 @@ msgid ""
 "parameters in OTB applications. Setting this value globally enables users to"
 " share it across multiple processing algorithms. Empty by default."
 msgstr ""
+"처리 과정 동안 파일 다운로드를 막기 위해 SRTM 데이터를 사용자 시스템에 저장할 수 있습니다. 이 옵션은 OTB 응용 프로그램에서 "
+"사용하는 ``elev.dem.path`` 와 ``elev.dem`` 파라미터의 값을 설정합니다. 이 값을 전체 수준으로 설정하면 여러 "
+"처리 알고리즘이 공통으로 사용하게 할 수 있습니다. 기본값은 비어 있습니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:688
 msgid "Compatibility between QGIS and OTB versions"
-msgstr ""
+msgstr "QGIS와 OTB 버전 사이의 호환성"
 
 #: ../../docs/user_manual/processing/3rdParty.rst:690
 msgid ""
@@ -1000,10 +1206,12 @@ msgid ""
 "case for the binary packages of OTB 7.1 and above. Therefore QGIS 3.10 is "
 "only compatible with OTB official binary packages 6.6.1 and 7.0.0."
 msgstr ""
+"GDAL 3.X 버전으로 컴파일한 OTB는 QGIS 3.10 버전과 호환되지 않습니다. OTB 바이너리 패키지 7.1 버전 이상일 "
+"경우입니다. 따라서 QGIS 3.10 버전은 OTB 공식 바이너리 패키지 6.6.1 및 7.0.0 버전과만 호환됩니다."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:696
 msgid "Troubleshoot"
-msgstr ""
+msgstr "문제 해결"
 
 #: ../../docs/user_manual/processing/3rdParty.rst:697
 msgid ""
@@ -1011,9 +1219,14 @@ msgid ""
 "issue on the `OTB bug tracker <https://gitlab.orfeo-"
 "toolbox.org/orfeotoolbox/otb/-/issues>`_, using the ``qgis`` label."
 msgstr ""
+"QGIS 공간 처리 프레임워크에서 OTB 응용 프로그램 사용에 문제가 발생한 경우, `OTB 버그 트래커 <https://gitlab"
+".orfeo-toolbox.org/orfeotoolbox/otb/-/issues>`_ 에 ``qgis`` 라벨을 사용해서 스레드를 "
+"여십시오."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:701
 msgid ""
 "Additional information about OTB and QGIS can be found `here <https://www"
 ".orfeo-toolbox.org/CookBook-develop/QGISInterface.html>`_"
 msgstr ""
+"OTB 및 QGIS 관련 추가 정보는 `여기 <https://www.orfeo-toolbox.org/CookBook-"
+"develop/QGISInterface.html>`_ 에서 찾아볼 수 있습니다."

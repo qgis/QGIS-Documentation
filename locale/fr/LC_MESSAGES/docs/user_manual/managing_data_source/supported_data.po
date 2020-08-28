@@ -5,9 +5,9 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
-# Francis Gasc <francisgasc@gmail.com>, 2020
 # MarieSilvestre, 2020
 # Sant-anna <delazj@gmail.com>, 2020
+# Francis Gasc <francisgasc@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-26 13:13+0200\n"
 "PO-Revision-Date: 2020-03-16 19:25+0000\n"
-"Last-Translator: Sant-anna <delazj@gmail.com>, 2020\n"
+"Last-Translator: Francis Gasc <francisgasc@gmail.com>, 2020\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -189,12 +189,17 @@ msgid ""
 " even if it has some limitations compared to for instance GeoPackage and "
 "SpatiaLite."
 msgstr ""
+"Le format ESRI Shapefile est toujours l'un des formats de fichiers "
+"vectoriels les plus utilisés, même s'il présente certaines limites par "
+"rapport à GeoPackage et SpatiaLite, par exemple."
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:104
 msgid ""
 "An ESRI Shapefile format dataset consists of several files. The following "
 "three are required:"
 msgstr ""
+"Un ensemble de données au format ESRI Shapefile est constitué de plusieurs "
+"fichiers. Les trois suivants sont nécessaires :"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:107
 msgid ":file:`.shp` file containing the feature geometries"
@@ -217,16 +222,27 @@ msgid ""
 "specification at "
 "https://www.esri.com/library/whitepapers/pdfs/shapefile.pdf."
 msgstr ""
+"Un ensemble de données au format ESRI Shapefile peut également inclure un "
+"fichier avec un suffixe :file:`.prj`, qui contient des informations sur la "
+"projection. Bien qu'il soit très utile d'avoir un fichier de projection, ce "
+"n'est pas obligatoire. Un ensemble de données au format Shapefile peut "
+"contenir des fichiers supplémentaires. Pour plus de détails, voir la "
+"spécification technique d'ESRI à l'adresse "
+"https://www.esri.com/library/whitepapers/pdfs/shapefile.pdf."
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:119
 msgid ""
 "GDAL 3.1 has read-write support for compressed ESRI Shapefile format "
 "(:file:`shz` and :file:`shp.zip`)."
 msgstr ""
+"GDAL 3.1 supporte en lecture-écriture le format ESRI Shapefile compressé "
+"(:file:`shz` et :file:`shp.zip`)."
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:122
 msgid "**Improving Performance for ESRI Shapefile format datasets**"
 msgstr ""
+"**Amélioration des performances des ensembles de données au format Shapefile"
+" d'ESRI**"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:124
 msgid ""
@@ -235,6 +251,10 @@ msgid ""
 "zooming and panning. Spatial indexes used by QGIS have a :file:`.qix` "
 "extension."
 msgstr ""
+"Pour améliorer les performances de dessin d'un ensemble de données au format"
+" ESRI Shapefile, vous pouvez créer un index spatial. Un index spatial "
+"améliorera la vitesse des zooms et des panoramiques. Les index spatiaux "
+"utilisés par QGIS ont une extension :file:`.qix`."
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:129
 msgid "Use these steps to create the index:"
@@ -243,6 +263,8 @@ msgstr "Voici les étapes de création d'un index spatial :"
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:131
 msgid "Load an ESRI Shapefile format dataset (see :ref:`browser_panel`)"
 msgstr ""
+"Charger un ensemble de données au format ESRI Shapefile (voir "
+":ref:`browser_panel`)"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:132
 msgid ""
@@ -277,6 +299,15 @@ msgid ""
 ":file:`.prj` files often do not provide the complete projection parameters "
 "as used in QGIS and listed in the :guilabel:`CRS` dialog."
 msgstr ""
+"Si vous chargez un ensemble de données au format ESRI Shapefile avec un "
+"fichier :file:`.prj` et que QGIS n'est pas capable de lire le système de "
+"référence de coordonnées à partir de ce fichier, vous devrez définir la "
+"projection correcte manuellement dans l'onglet :menuselection:`Layer "
+"Properties --> Source` de la couche en cliquant sur le bouton "
+"|setProjection| :sup:`Select CRS`. Ceci est dû au fait que les fichiers "
+":file:`.prj` ne fournissent souvent pas les paramètres de projection "
+"complets tels qu'utilisés dans QGIS et listés dans le dialogue "
+":guilabel:`CRS`."
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:149
 msgid ""
@@ -286,6 +317,12 @@ msgid ""
 ":file:`.qpj` file, providing all the parameters of the CRS. Whenever QGIS "
 "finds a :file:`.qpj` file, it will be used instead of the :file:`.prj`."
 msgstr ""
+"Pour la même raison, si vous créez un nouvel ensemble de données au format "
+"ESRI Shapefile avec QGIS, deux fichiers de projection différents sont créés "
+": un fichier :file:`.prj` avec des paramètres de projection limités, "
+"compatible avec le logiciel ESRI, et un fichier :file:`.qpj`, fournissant "
+"tous les paramètres du CRS. Chaque fois que QGIS trouve un fichier "
+":file:`.qpj`, il sera utilisé à la place du fichier :file:`.prj`."
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:162
 msgid "Delimited Text Files"

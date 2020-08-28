@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-26 13:13+0200\n"
 "PO-Revision-Date: 2020-03-16 19:31+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2020\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,6 +38,8 @@ msgid ""
 "work that has been developed using the Processing framework, and to "
 "reproduce it."
 msgstr ""
+"어느 알고리즘을 실행할 때마다, 이력 관리자에 해당 공간 처리 관련 정보가 저장됩니다. 사용한 파라미터는 물론 실행 일시도 저장됩니다. "
+"이력 관리자를 사용하면 공간 처리 프레임워크를 통해 처리했던 모든 작업을 쉽게 추적하고 제어할 수 있으며, 또 재실행할 수도 있습니다."
 
 #: ../../docs/user_manual/processing/history.rst:26
 msgid "History"
@@ -50,6 +53,9 @@ msgid ""
 "algorithm using the toolbox and then check the history manager to see how it"
 " could be called from the command line."
 msgstr ""
+"공간 처리 정보는 ─ 툴박스에서 알고리즘을 실행했다 하더라도 ─ 명령 줄 표현식으로 저장됩니다. 이 습성은 명령 줄 인터페이스 사용법을 "
+"배우는 사용자에게 유용합니다. 툴박스를 통해 알고리즘을 호출한 다음 이력 관리자를 확인하면 명령 줄에서 어떻게 동일 알고리즘을 호출할 수"
+" 있는지 알 수 있기 때문입니다."
 
 #: ../../docs/user_manual/processing/history.rst:35
 msgid ""
@@ -58,6 +64,8 @@ msgid ""
 "opens with parameters already set, and you can change any of them to fit "
 "your needs and re-run the algorithm."
 msgstr ""
+"레지스트리 항목 탐색 이외에도, 어느 항목을 더블클릭하는 것만으로도 해당 공간 처리를 재실행할 수 있습니다. 그러면 이미 설정된 "
+"파라미터를 담은 알고리즘 대화창이 열립니다. 사용자 필요에 따라 어느 파라미터든 변경한 다음 알고리즘을 재실행할 수 있습니다."
 
 #: ../../docs/user_manual/processing/history.rst:40
 msgid ""
@@ -68,6 +76,10 @@ msgid ""
 "following instructions at "
 ":source:`python/plugins/processing/tests/README.md`."
 msgstr ""
+":guilabel:`History` 대화창에서 QGIS 공간 처리 알고리즘 및 스크립트의 하부 구조(infrastructure)도 "
+"간단하게 통합해서 점검할 수 있습니다. 어느 항목을 오른쪽 클릭하고 :guilabel:`Create Test...` 메뉴를 선택하면, "
+":source:`python/plugins/processing/tests/README.md` 에 있는 지침에 따라 해당 알고리즘 및 "
+"파라미터를 사용해서 점검을 시작합니다."
 
 #: ../../docs/user_manual/processing/history.rst:49
 msgid "The processing log"
@@ -80,6 +92,8 @@ msgid ""
 "written to the QGIS log (:menuselection:`View --> Panels --> Log Messages "
 "Panel`)."
 msgstr ""
+"이력 관리자 대화창은 알고리즘 실행시 생산된 정보가 아니라 실행 호출만 담고 있습니다. 해당 정보는 QGIS 로그에 "
+"(:menuselection:`View --> Panels --> Log Messages Panel`) 작성됩니다."
 
 #: ../../docs/user_manual/processing/history.rst:56
 msgid ""
@@ -89,6 +103,9 @@ msgid ""
 "time you run one of those algorithms. To avoid cluttering the log with that "
 "information, you can disable it for each provider in the settings dialog."
 msgstr ""
+"제 3자 알고리즘은 보통 명령 줄 인터페이스를 통해 실행됩니다. 명령 줄이란 콘솔을 통해 사용자와 소통하는 인터페이스입니다. 사용자가 "
+"해당 콘솔을 볼 수는 없어도, 사용자가 이런 알고리즘을 실행할 때마다 로그에 콘솔의 전체 덤프를 작성합니다. 로그가 이런 정보로 채워지는"
+" 일을 피하기 위해, 공간 처리 설정 대화창에서 각 제공자별로 이 습성을 비활성화시킬 수 있습니다."
 
 #: ../../docs/user_manual/processing/history.rst:64
 msgid ""
@@ -97,3 +114,6 @@ msgid ""
 "potential problems with the data, in order to warn you. Make sure you check "
 "those messages in the log if you get unexpected results."
 msgstr ""
+"몇몇 알고리즘은 ─ 지정한 입력 데이터로 결과물을 산출할 수 있다고 해도 ─ 데이터에 잠재적인 문제가 있다고 탐지한 경우 사용자에게 "
+"경고하기 위해 로그에 산출물 주석 또는 부가 정보를 추가할 수도 있습니다. 기대하지 않았던 산출물이 나온 경우 로그에 있는 해당 메시지를"
+" 반드시 확인하십시오."

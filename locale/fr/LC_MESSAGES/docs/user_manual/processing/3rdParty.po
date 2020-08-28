@@ -6,9 +6,9 @@
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
 # MarieSilvestre, 2020
-# Francis Gasc <francisgasc@gmail.com>, 2020
 # Sant-anna <delazj@gmail.com>, 2020
 # Michel Zevort <michel.zevort@developpement-durable.gouv.fr>, 2020
+# Francis Gasc <francisgasc@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-26 13:13+0200\n"
 "PO-Revision-Date: 2020-03-16 19:30+0000\n"
-"Last-Translator: Michel Zevort <michel.zevort@developpement-durable.gouv.fr>, 2020\n"
+"Last-Translator: Francis Gasc <francisgasc@gmail.com>, 2020\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -667,6 +667,11 @@ msgid ""
 "of *QGIS R script collection*. You will probably find that scripts that "
 "depend on vector data input or output will not work."
 msgstr ""
+"Si vous souhaitez obtenir tous les scripts R de la collection en ligne de "
+"QGIS 2, vous pouvez sélectionner *QGIS R script collection (from QGIS 2)* au"
+" lieu de *QGIS R script collection*. Vous constaterez probablement que les "
+"scripts qui dépendent de l'entrée ou de la sortie de données vectorielles ne"
+" fonctionneront pas."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:327
 msgid "Creating R scripts"
@@ -859,6 +864,9 @@ msgid ""
 "``numpoints`` input parameter (which specifies the number of points to "
 "generate)."
 msgstr ""
+"Ensuite, nous appelons la fonction \"spsample\" avec cet objet et le "
+"paramètre d'entrée \"numpoints\" (qui spécifie le nombre de points à "
+"générer)."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:432
 msgid ""
@@ -1006,6 +1014,15 @@ msgid ""
 "Standalone. **Be aware** that if the package has to be downloaded, the "
 "script may take a long time to run the first time."
 msgstr ""
+"Les bibliothèques \"sf\", \"rgdal\" et \"raster\" sont chargées par défaut, "
+"vous n'avez donc pas à ajouter les commandes \"library()`\" correspondantes."
+" Cependant, les autres bibliothèques dont vous pourriez avoir besoin doivent"
+" être explicitement chargées en tapant : ``ggplot2`` library (pour charger "
+"la bibliothèque ``ggplot2``). Si le paquet n'est pas déjà installé sur votre"
+" machine, Processing essaiera de le télécharger et de l'installer. De cette "
+"façon, le paquet sera également disponible dans R Standalone. **Soyez "
+"conscient** que si le paquet doit être téléchargé, le script peut prendre "
+"beaucoup de temps pour s'exécuter la première fois."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:520
 msgid "R libraries"
@@ -1179,7 +1196,7 @@ msgstr ""
 
 #: ../../docs/user_manual/processing/3rdParty.rst:617
 msgid "OTB Applications"
-msgstr ""
+msgstr "OTB Applications"
 
 #: ../../docs/user_manual/processing/3rdParty.rst:619
 msgid ""
@@ -1202,78 +1219,98 @@ msgid ""
 "separately. Binary packages for OTB can be found on the `download page "
 "<https://www.orfeo-toolbox.org/download>`_."
 msgstr ""
+"Notez que l'OTB n'est pas distribué avec QGIS et doit être installé "
+"séparément. Les paquets binaires pour OTB peuvent être trouvés sur la page "
+"de téléchargement <https://www.orfeo-toolbox.org/download>`_."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:630
 msgid "To configure QGIS processing to find the OTB library:"
 msgstr ""
+"Pour configurer le traitement QGIS afin de trouver la bibliothèque  OTB :"
 
 #: ../../docs/user_manual/processing/3rdParty.rst:632
 msgid ""
 "Open the processing settings: :menuselection:`Settings --> Options --> "
 "Processing` (left panel)*"
 msgstr ""
+"Ouvrez les paramètres de traitement : :menuselection:`Settings --> Options "
+"--> Processing` (panneau de gauche)*"
 
 #: ../../docs/user_manual/processing/3rdParty.rst:633
 msgid "You can see OTB under \"Providers\":"
-msgstr ""
+msgstr "Vous pouvez consulter l'OTB sous la rubrique \"Providers\" :"
 
 #: ../../docs/user_manual/processing/3rdParty.rst:635
 msgid "Expand the :guilabel:`OTB` tab"
-msgstr ""
+msgstr "Développer l'onglet :guilabel:`OTB`"
 
 #: ../../docs/user_manual/processing/3rdParty.rst:636
 msgid "Tick the :guilabel:`Activate` option"
-msgstr ""
+msgstr "Cochez l'option :guilabel:`Activer`"
 
 #: ../../docs/user_manual/processing/3rdParty.rst:637
 msgid ""
 "Set the :guilabel:`OTB folder`. This is the location of your OTB "
 "installation."
 msgstr ""
+"Définissez le dossier :guilabel:`OTB`. C'est l'emplacement de votre "
+"installation OTB."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:638
 msgid ""
 "Set the :guilabel:`OTB application folder`. This is the location of your OTB"
 " applications ( :file:`<PATH_TO_OTB_INSTALLATION>/lib/otb/applications`)"
 msgstr ""
+"Définissez le dossier d'application :guilabel:`OTB`. C'est l'emplacement de "
+"vos applications OTB ( :file:`1/lib/otb/applications`)"
 
 #: ../../docs/user_manual/processing/3rdParty.rst:640
 msgid "Click \"ok\" to save the settings and close the dialog."
 msgstr ""
+"Cliquez sur \"ok\" pour enregistrer les paramètres et fermer la boîte de "
+"dialogue."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:642
 msgid ""
 "If settings are correct, OTB algorithms will be available in the "
 ":guilabel:`Processing Toolbox`."
 msgstr ""
+"Si les paramètres sont corrects, les algorithmes OTB seront disponibles dans"
+" la :guilabel:`Processing Toolbox`."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:646
 msgid "Documentation of OTB settings available in QGIS Processing"
-msgstr ""
+msgstr "Documentation des paramètres OTB disponibles dans le traitement QGIS"
 
 #: ../../docs/user_manual/processing/3rdParty.rst:648
 msgid ""
 "**Activate**: This is a checkbox to activate or deactivate the OTB provider."
 " An invalid OTB setting will uncheck this when saved."
 msgstr ""
+"**Activer** : C'est une case à cocher pour activer ou désactiver le "
+"fournisseur  OTB. Un paramètre OTB non valide décochera cette case lors de "
+"la sauvegarde."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:651
 msgid "**OTB folder**: This is the directory where OTB is available."
-msgstr ""
+msgstr "**Dossier OTB** : Il s'agit du répertoire où  OTB est disponible."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:653
 msgid ""
 "**OTB application folder**: This is the location(s) of OTB applications."
 msgstr ""
+"**Dossier OTB** : C'est le(s) lieu(x) où se trouvent les demandes  OTB."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:655
 msgid "Multiple paths are allowed."
-msgstr ""
+msgstr "Plusieurs chemins sont autorisés."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:657
 msgid ""
 "**Logger level** (optional): Level of logger to use by OTB applications."
 msgstr ""
+"**Niveau du logger** (facultatif) : Niveau de l'enregistreur à utiliser par "
+"les applications OTB."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:659
 msgid ""
@@ -1282,12 +1319,19 @@ msgid ""
 "``CRITICAL``, ``DEBUG``. This value is ``INFO`` by default. This is an "
 "advanced user configuration."
 msgstr ""
+"Le niveau d'enregistrement contrôle la quantité de détails imprimés pendant "
+"l'exécution de l'algorithme. Les valeurs possibles pour le niveau de "
+"journalisation sont \"INFO\", \"AVERTISSEMENT\", \"CRITICAL\", \"DÉBUG\". "
+"Cette valeur est \"INFO\" par défaut. Il s'agit d'une configuration "
+"utilisateur avancée."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:664
 msgid ""
 "**Maximum RAM to use** (optional): by default, OTB applications use all "
 "available system RAM."
 msgstr ""
+"**Maximum de RAM à utiliser** (facultatif) : par défaut, les applications "
+"OTB utilisent toute la RAM système disponible."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:667
 msgid ""
@@ -1295,10 +1339,14 @@ msgid ""
 " this option. A value of 256 is ignored by the OTB processing provider. This"
 " is an advanced user configuration."
 msgstr ""
+"Vous pouvez toutefois demander a OTB d'utiliser une quantité spécifique de "
+"mémoire vive (en Mo) en utilisant cette option. Une valeur de 256 est "
+"ignorée par le fournisseur de traitement  OTB. Il s'agit d'une configuration"
+" utilisateur avancée."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:671
 msgid "**Geoid file** (optional): Path to the geoid file."
-msgstr ""
+msgstr "**Fichier Geoid** (facultatif) : Chemin d'accès au fichier géoïd."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:673
 msgid ""
@@ -1306,11 +1354,17 @@ msgid ""
 "in OTB applications. Setting this value globally enables users to share it "
 "across multiple processing algorithms. Empty by default."
 msgstr ""
+"Cette option définit la valeur des paramètres elev.dem.geoid et elev.geoid "
+"dans les applications OTB. Le fait de définir cette valeur globalement "
+"permet aux utilisateurs de la partager entre plusieurs algorithmes de "
+"traitement. Vide par défaut."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:678
 msgid ""
 "**SRTM tiles folder** (optional): Directory where SRTM tiles are available."
 msgstr ""
+"**Dossier de tuiles SRTM** (facultatif) : Répertoire où les tuiles SRTM sont"
+" disponibles."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:681
 msgid ""
@@ -1319,10 +1373,16 @@ msgid ""
 "parameters in OTB applications. Setting this value globally enables users to"
 " share it across multiple processing algorithms. Empty by default."
 msgstr ""
+"Les données SRTM peuvent être stockées localement pour éviter le "
+"téléchargement de fichiers pendant le traitement. Cette option permet de "
+"définir la valeur des paramètres elev.dem.path et elev.dem dans les "
+"applications OTB. Le fait de définir cette valeur globalement permet aux "
+"utilisateurs de la partager entre plusieurs algorithmes de traitement. Vide "
+"par défaut."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:688
 msgid "Compatibility between QGIS and OTB versions"
-msgstr ""
+msgstr "Compatibilité entre les versions QGIS et OTB"
 
 #: ../../docs/user_manual/processing/3rdParty.rst:690
 msgid ""
@@ -1330,10 +1390,13 @@ msgid ""
 "case for the binary packages of OTB 7.1 and above. Therefore QGIS 3.10 is "
 "only compatible with OTB official binary packages 6.6.1 and 7.0.0."
 msgstr ""
+"OTB compilé avec GDAL 3.X n'est pas compatible avec QGIS 3.10. C'est le cas "
+"des paquets binaires de OTB 7.1 et plus. C'est pourquoi QGIS 3.10 n'est "
+"compatible qu'avec les paquets binaires officiels de l'OTB 6.6.1 et 7.0.0."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:696
 msgid "Troubleshoot"
-msgstr ""
+msgstr "Troubleshoot"
 
 #: ../../docs/user_manual/processing/3rdParty.rst:697
 msgid ""
@@ -1341,9 +1404,15 @@ msgid ""
 "issue on the `OTB bug tracker <https://gitlab.orfeo-"
 "toolbox.org/orfeotoolbox/otb/-/issues>`_, using the ``qgis`` label."
 msgstr ""
+"Si vous avez des problèmes avec les applications  OTB dans le traitement du "
+"QGIS, veuillez ouvrir un problème sur le \"bug tracker\" du OTB "
+"<https://gitlab.orfeo-toolbox.org/orfeotoolbox/otb/-/issues>`_, en utilisant"
+" le label \"qgis\"."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:701
 msgid ""
 "Additional information about OTB and QGIS can be found `here <https://www"
 ".orfeo-toolbox.org/CookBook-develop/QGISInterface.html>`_"
 msgstr ""
+"Des informations complémentaires sur OTB et le QGIS sont disponibles `ici "
+"<https://www.orfeo-toolbox.org/CookBook-develop/QGISInterface.html>`_"

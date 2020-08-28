@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-26 13:13+0200\n"
 "PO-Revision-Date: 2020-03-16 19:32+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2020\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -111,12 +112,17 @@ msgid ""
 ":sup:`GPS Tools` icon in the toolbar and open the :guilabel:`Load GPX file` "
 "tab (see figure_GPS_)."
 msgstr ""
+":menuselection:`Vector --> GPS Tools` 메뉴 옵션을 선택하거나 툴바에 있는 |importGPX| "
+":sup:`GPS Tools` 아이콘을 클릭한 다음 :guilabel:`Load GPX file` 탭을 선택하십시오. "
+"(:ref:`figure_GPS` 그림을 참조하세요.)"
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:57
 msgid ""
 "Browse to the folder :file:`qgis_sample_data/gps/`, select the GPX file "
 ":file:`national_monuments.gpx` and click :guilabel:`Open`."
 msgstr ""
+":guilabel:`Browse...` 버튼을 눌러 :file:`qgis_sample_data/gps/` 폴더를 찾은 다음, "
+":file:`national_monuments.gpx` GPX 파일을 선택하고 :guilabel:`Open` 버튼을 클릭하십시오."
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:65
 msgid "The *GPS Tools* dialog window"
@@ -130,6 +136,9 @@ msgid ""
 ":guilabel:`OK`. The file :file:`national_monuments.gpx` only includes "
 "waypoints."
 msgstr ""
+":guilabel:`Browse...` 버튼으로 GPX 파일을 선택한 다음, 체크박스를 통해 해당 GPX 파일에서 불러오고자 하는 피처 "
+"유형을 선택하십시오. :guilabel:`OK` 버튼을 누르면 각 피처 유형을 개별 레이어로 불러올 것입니다. "
+":file:`national_monuments.gpx` 파일은 웨이포인트만 담고 있습니다."
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:73
 msgid ""
@@ -139,6 +148,10 @@ msgid ""
 "(latitude/longitude). QGIS expects this, and it is the official GPX "
 "specification. See https://www.topografix.com/GPX/1/1/."
 msgstr ""
+"GPS 장치는 데이터를 서로 다른 좌표계로 저장할 수 있습니다. 사용자의 GPS 장치 또는 웹사이트에서 GPX 파일을 다운로드해서 "
+"QGIS로 불러올 때, GPX 파일에 저장된 데이터가 WGS 84(위도/경도) 좌표계를 사용하고 있는지 확인해야 합니다. QGIS가 이 "
+"좌표계를 기대하고 있고, 또 WGS 84가 공식 GPX 사양이기도 합니다. `GPX 1.1 사양 "
+"<https://www.topografix.com/GPX/1/1/>`_ 을 참조하세요."
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:80
 msgid "GPSBabel"
@@ -155,6 +168,12 @@ msgid ""
 "1.2.3 of GPSBabel is known to work with QGIS, but you should be able to use "
 "later versions without any problems."
 msgstr ""
+"QGIS가 GPX 파일을 사용하기 때문에, 다른 GPS 파일 포맷을 GPX로 변환할 방법이 필요합니다. 자유 소프트웨어 GPSBabel을"
+" 이용하면 많은 포맷들을 변환할 수 있습니다. GPSBabel은 https://www.gpsbabel.org 에서 다운로드할 수 "
+"있습니다. 이 프로그램은 사용자 컴퓨터와 GPS 기기 간에 GPS 데이터를 전송할 수도 있습니다. QGIS는 이런 작업에 "
+"GPSBabel을 사용하므로, 이 프로그램을 설치하도록 권장합니다. 하지만, 단순히 GPX 파일에서 GPS 데이터를 불러오는 것만이 "
+"목적인 경우 이 프로그램이 필요하진 않습니다. GPSBabel 1.2.3 버전이 QGIS가 공식적으로 지원하는 버전이지만, 이후 "
+"버전이라도 아무 문제없이 사용할 수 있을 것입니다."
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:92
 msgid "Importing GPS data"
@@ -231,7 +250,7 @@ msgstr "|win| 윈도우 상에서는 ``COM1`` 또는 ``COM2`` 처럼 보일 것�
 msgid ""
 "When you click :guilabel:`OK`, the data will be downloaded from the device "
 "and appear as a layer in QGIS."
-msgstr ""
+msgstr ":guilabel:`OK` 버튼을 누르면, 데이터가 기기에서 다운로드되어 QGIS에 레이어로 나타날 것입니다."
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:134
 msgid "Uploading GPS data to a device"
@@ -273,6 +292,11 @@ msgid ""
 " You do this by using the GPS device editor, which you start by clicking the"
 " :guilabel:`Edit Devices` button in the download or the upload tab."
 msgstr ""
+"수많은 유형의 GPS 기기들이 있습니다. QGIS 개발자들이 모든 유형을 테스트할 수는 없으므로, :guilabel:`Download "
+"from GPS` 및 :guilabel:`Upload to GPS` 탭에 있는 기기 유형 목록에서 사용자의 GPS 기기와 호환되는 유형을"
+" 찾을 수 없는 경우, :guilabel:`Download from GPS` 및 :guilabel:`Upload to GPS` 탭에 있는"
+" :guilabel:`Edit Devices` 버튼을 클릭하면 열리는 GPS 기기 편집기를 통해 사용자 자신의 기기를 정의해서 목록에 "
+"추가할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:159
 msgid ""
@@ -286,6 +310,12 @@ msgid ""
 "replace the keywords ``%type``, ``%in``, and ``%out`` when it runs the "
 "command."
 msgstr ""
+"새 기기를 정의하려면, :guilabel:`New Device` 버튼을 눌러 기기 명칭과 사용자 기기용 다운로드 및 업로드 명령어를 "
+"입력한 다음, :guilabel:`Update Device` 버튼을 클릭하기만 하면 됩니다. 이 명칭은 ─ 어떤 문자열을 입력하더라도 ─"
+" :guilabel:`Download from GPS` 및 :guilabel:`Upload to GPS` 탭에 있는 기기 유형 목록에 "
+"추가될 것입니다. 다운로드 명령어란 기기에서 데이터를 다운로드해서 GPX 파일로 저장하는 데 사용되는 명령어입니다. 대부분의 경우 "
+"GPSBabel 명령어일 테지만, GPX 파일을 생성할 수 있는 명령 줄 프로그램이라면 어떤 명령어라도 사용할 수 있습니다. QGIS가 "
+"명령어를 실행하는 경우 ``%type``, ``%in``, and ``%out`` 키워드를 대체할 것입니다."
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:168
 msgid ""
@@ -310,8 +340,8 @@ msgid ""
 msgstr ""
 "``%in`` 은 :guilabel:`Download from GPS` 탭에서 선택한 포트명으로, ``%out`` 은 다운로드한 데이터를"
 " 저장할 GPX 파일명으로 대체될 것입니다. 따라서, ``gpsbabel %type -i garmin -o gpx %in %out`` "
-"라는 다운로드 명령어로 ('Garmin serial'이라는 사전 정의된 기기 유형에 쓰이는 실제 다운로드 명령어입니다) 새 기기 유형을 "
-"생성한 다음 ``/dev/ttyS0`` 포트에서 웨이포인트 데이터를 다운로드해서 ``output.gpx`` 파일로 저장하는 경우, "
+"라는 다운로드 명령어로 ('Garmin serial' 이라는 사전 정의된 기기 유형에 쓰이는 실제 다운로드 명령어입니다) 새 기기 유형을"
+" 생성한 다음 ``/dev/ttyS0`` 포트에서 웨이포인트 데이터를 다운로드해서 ``output.gpx`` 파일로 저장하는 경우, "
 "QGIS 키워드를 대체해서 ``gpsbabel -w -i garmin -o gpx /dev/ttyS0 output.gpx`` 라는 "
 "명령어를 실행할 것입니다."
 
@@ -330,6 +360,8 @@ msgid ""
 "You can learn more about GPSBabel and its available command line options at "
 "https://www.gpsbabel.org."
 msgstr ""
+"https://www.gpsbabel.org 웹사이트에서 GPSBabel 및 사용할 수 있는 명령 줄 옵션에 관해 더 많은 것을 알 수 "
+"있습니다."
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:189
 msgid ""
@@ -352,6 +384,10 @@ msgid ""
 "create other profiles, so downloading directly in QGIS using the GPS Tools "
 "is at the moment limited to Garmin USB units."
 msgstr ""
+"QGIS는 앞에서 설명한 대로 GPSBabel을 사용해서 프로젝트에 포인트/트랙을 직접 다운로드합니다. QGIS는 처음부터 Garmin "
+"기기에서 다운로드할 수 있는 사전 정의된 프로파일을 보유하고 있습니다. 안타깝게도 다른 프로파일을 생성하지 못 하게 하는 `버그 "
+"#6318 <https://issues.qgis.org/issues/6318>`_ 이 있기 때문에, QGIS가 GPS 도구를 통해 직접 "
+"다운로드할 수 있는 기기는 현재 Garmin USB 장치뿐입니다."
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:203
 msgid "Garmin GPSMAP 60cs"
@@ -368,6 +404,8 @@ msgid ""
 "Install the Garmin USB drivers from "
 "https://www8.garmin.com/support/download_details.jsp?id=591"
 msgstr ""
+"https://www8.garmin.com/support/download_details.jsp?id=591 에서 Garmin USB "
+"드라이버를 다운로드해서 설치하십시오."
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:210
 msgid ""
@@ -409,6 +447,9 @@ msgid ""
 "#7182 <https://issues.qgis.org/issues/7182>`_ and usually QGIS freezes "
 "several times before the operation work fine."
 msgstr ""
+"이제 GPS 도구를 사용할 수 있습니다. 안타깝게도 `버그 #7182 "
+"<https://issues.qgis.org/issues/7182>`_ 때문에 QGIS가 제대로 작동하기 전에 보통 몇 번 정도 멈출 "
+"겁니다."
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:237
 msgid "BTGP-38KM datalogger (only Bluetooth)"
@@ -437,14 +478,14 @@ msgstr "이때 그냥 기기를 껐다가 켠 다음 다시 시도해보면 됩�
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:261
 msgid "BlueMax GPS-4044 datalogger (both BT and USB)"
-msgstr "BlueMax GPS-4044 DataLogger (블루투스 및 USB 둘 다)"
+msgstr "BlueMax GPS-4044 DataLogger (블루투스 및 USB 모두)"
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:267
 msgid ""
 "It needs to install its drivers before using it on Windows 7. See in the "
 "manufacturer site for the proper download."
 msgstr ""
-"윈도우 7 상에서 이 기기를 이용하려면 먼저 드라이버를 설치해야 합니다. http://blu-max.com/downloads.html "
+"윈도우 7에서 이 기기를 이용하려면 먼저 드라이버를 설치해야 합니다. http://blu-max.com/downloads.html "
 "페이지에서 알맞은 드라이버를 다운로드하십시오."
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:270

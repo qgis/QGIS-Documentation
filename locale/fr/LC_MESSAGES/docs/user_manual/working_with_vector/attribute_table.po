@@ -6,9 +6,9 @@
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
 # Arnaud Vandecasteele <arnaud.sig@gmail.com>, 2020
-# Francis Gasc <francisgasc@gmail.com>, 2020
 # MarieSilvestre, 2020
 # Sant-anna <delazj@gmail.com>, 2020
+# Francis Gasc <francisgasc@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-26 13:13+0200\n"
 "PO-Revision-Date: 2020-03-16 19:32+0000\n"
-"Last-Translator: Sant-anna <delazj@gmail.com>, 2020\n"
+"Last-Translator: Francis Gasc <francisgasc@gmail.com>, 2020\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -199,7 +199,7 @@ msgstr "Enregistrer les modifications en cours"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "|refresh|"
-msgstr ""
+msgstr "|refresh|"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Reload the table"
@@ -513,6 +513,20 @@ msgid ""
 "using the rectangles) makes a feature flash in red color once so you can see"
 " where it is situated."
 msgstr ""
+"La |formView| :sup:`Form view` montre :ref:`feature identifiers 1` dans un "
+"premier panneau et n'affiche que les attributs de l'identifiant cliqué dans "
+"le second. Il y a un menu déroulant en haut du premier panneau où "
+"l'\"identifiant\" peut être spécifié en utilisant un attribut "
+"(:guilabel:`Aperçu de colonne`) ou une :guilabel:`Expression`. Le menu "
+"déroulant comprend également les 10 dernières expressions à réutiliser. "
+"L'affichage du formulaire utilise la configuration des champs de la couche "
+"(voir :ref:`vector_attributes_menu`). Vous pouvez parcourir les "
+"identificateurs d'entite avec les flèches en bas du premier panneau. Une "
+"fois que vous avez marqué l'élément en jaune dans la liste, il est "
+"sélectionné en jaune sur le canevas . Utilisez le |zoomToSelected| en haut "
+"de  table d'attributs pour zoomer sur l'élément. En cliquant sur une entrée "
+"de la liste (sans utiliser les rectangles), une caractéristique clignote une"
+" fois en rouge pour que vous puissiez voir où elle se situe."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:137
 msgid ""
@@ -1432,6 +1446,13 @@ msgid ""
 " An expression editor window will be opened to adjust the expression of the "
 "virtual field."
 msgstr ""
+"Un champ ne peut être rendu virtuel qu'à sa création. Les champs virtuels "
+"sont marqués d'un fond violet dans l'onglet champs de la boîte de dialogue "
+"des propriétés de la couche pour les distinguer des champs physiques ou "
+"joints réguliers. Leur expression peut être modifiée ultérieurement en "
+"appuyant sur le bouton d'expression dans la colonne Commentaire. Une fenêtre"
+" d'édition d'expression s'ouvrira pour ajuster l'expression du champ "
+"virtuel."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:541
 msgid "Using the Quick Field Calculation Bar"
@@ -1757,6 +1778,11 @@ msgid ""
 "this layer you can define multiple referenced fields by using the |signPlus|"
 " button."
 msgstr ""
+"**Couche référencée (Parent)** également considérée comme couche parent, est"
+" celle dont la clé primaire est pointée, donc ici c'est la couche "
+"\"régions\". Vous pouvez définir la clé primaire de la couche référencée, "
+"c'est donc \"ID\". Pour cette couche, vous pouvez définir plusieurs champs "
+"référencés en utilisant le bouton |signPlus|."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:697
 msgid ""
@@ -1767,6 +1793,13 @@ msgid ""
 "relations you can add another referencing field by using the |signPlus| "
 "button."
 msgstr ""
+"**Référencement de la couche (enfant)** également considéré comme la couche "
+"enfant, est celle sur laquelle se trouve le champ clé étranger. Dans notre "
+"cas, il s'agit de la couche \"aéroports\". Pour cette couche, vous devez "
+"ajouter un champ de référencement qui pointe vers l'autre couche, c'est donc"
+" la \"fk_region\". Lorsque vous utilisez des relations à champs multiples, "
+"vous pouvez ajouter un autre champ de référence en utilisant le bouton "
+"|signPlus|."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:702
 msgid ""
@@ -2025,22 +2058,30 @@ msgid ""
 " to select features of the parent layer based on attributes of their "
 "children."
 msgstr ""
+"La couche enfant peut également être utilisée dans l'outil "
+":ref:`select_by_value` afin de sélectionner les entites de la couche parent "
+"en fonction des attributs de leurs enfants."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:815
 msgid ""
 "In :ref:`figure_select_by_value`, all the regions where the mean altitude of"
 " the airports is greater than 500 meters above sea level are selected."
 msgstr ""
+"Dans :ref:`figure_select_by_value`, toutes les régions où l'altitude moyenne"
+" des aéroports est supérieure à 500 mètres au-dessus du niveau de la mer "
+"sont sélectionnées."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:818
 msgid ""
 "You will find that many different aggregation functions are available in the"
 " form."
 msgstr ""
+"Vous constaterez que de nombreuses fonctions d'agrégation différentes sont "
+"disponibles dans le formulaire."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:825
 msgid "Select parent features with child values"
-msgstr ""
+msgstr "Sélectionner les entites des parents avec les valeurs des enfants"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:832
 msgid "Introducing many-to-many (N-M) relations"

@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-26 13:13+0200\n"
 "PO-Revision-Date: 2020-03-16 19:32+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2020\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -32,16 +33,19 @@ msgid ""
 "Panel` or press :kbd:`Ctrl+0`. You will get a new docked window on the left "
 "side of the canvas."
 msgstr ""
+"QGIS에서 실시간 GPS 추적 도구를 활성화하려면, :menuselection:`View --> Panels` |checkbox| "
+":guilabel:`GPS Information Panel` 패널 체크박스를 체크하거나 :kbd:`Ctrl+0` 조합키를 눌러야 합니다."
+" 캔버스 좌측에 새 도킹 창이 열릴 것입니다."
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:16
 msgid "There are four possible screens in this GPS tracking window:"
-msgstr "이 GPS 추적 창에서 다음 4개 화면을 볼 수 있습니다:"
+msgstr "이 GPS 추적 창에서 다음 3개 화면을 볼 수 있습니다:"
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:18
 msgid ""
 "|metadata| GPS position coordinates and an interface for manually entering "
 "vertices and features"
-msgstr ""
+msgstr "|metadata| GPS 위치 좌표를 표시하며 수동으로 꼭짓점 및 피처를 입력할 수 있는 인터페이스가 있습니다."
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:20
 msgid "|gpsTrackBarChart| GPS signal strength of satellite connections"
@@ -60,6 +64,10 @@ msgid ""
 "connection to most GPS receivers. Therefore, you first have to configure "
 "gpsd properly to connect QGIS to it."
 msgstr ""
+"GPS 수신기를 컴퓨터와 연결한 다음 (사용자 OS가 해당 기기를 지원해야만 합니다) :guilabel:`Connect` 버튼을 누르면 "
+"QGIS에 GPS 기기를 연결합니다. (이제 :guilabel:`Disconnect` 로 바뀐) 해당 버튼을 다시 클릭하면 사용자 "
+"컴퓨터에서 GPS 수신기를 연결 해제합니다. GNU/리눅스의 경우, 대부분의 GPS 수신기와의 연결을 지원하기 위해 'gpsd' 지원이 "
+"통합돼 있습니다. 따라서, QGIS에 수신기를 연결하려면 먼저 'gpsd' 를 알맞게 환경 설정해야 합니다."
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:30
 msgid ""
@@ -80,10 +88,12 @@ msgid ""
 "your position in latitude, longitude and altitude together with additional "
 "attributes."
 msgstr ""
+"|metadata| GPS가 위성으로부터 신호를 받고 있다면, 사용자의 위치를 위도, 경도 그리고 고도로 ─ 추가 속성들과 함께 ─ 볼 "
+"수 있을 것입니다."
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:46
 msgid "GPS tracking position and additional attributes"
-msgstr "GPS 추적 - 위치 및 추가 속성"
+msgstr "GPS 위치 추적 및 추가 속성"
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:49
 msgid "GPS signal strength"
@@ -97,7 +107,7 @@ msgstr "|gpsTrackBarChart| 이 화면에서 신호를 받고 있는 위성의 �
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:59
 msgid "GPS tracking signal strength"
-msgstr "GPS 추적 - 신호 강도"
+msgstr "GPS 추적 신호 강도"
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:63
 msgid "GPS options"
@@ -129,11 +139,11 @@ msgstr "|radioButtonOff| :guilabel:`gpsd` (사용자 GPS가 연결돼 있는 호
 msgid ""
 "A click on :guilabel:`Connect` again initiates the connection to the GPS "
 "receiver."
-msgstr ""
+msgstr ":guilabel:`Connect` 버튼을 다시 클릭하면 GPS 수신기로 연결을 시작합니다."
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:80
 msgid "GPS tracking options window"
-msgstr "GPS 추적 - 옵션"
+msgstr "GPS 추적 옵션 창"
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:82
 msgid ""
@@ -160,6 +170,8 @@ msgid ""
 ":guilabel:`Distance threshold (meters)` parameters to keep the cursor still "
 "active when the receiver is in static conditions."
 msgstr ""
+"수신기가 정적 상태일 때도 커서를 활성화 상태로 유지하려면, :guilabel:`Acquisition interval (seconds)`"
+" 및 :guilabel:`Distance threshold (meters)` 파라미터도 설정하면 됩니다."
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:94
 msgid ""
@@ -186,6 +198,8 @@ msgid ""
 ":sup:`Position` and click on :guilabel:`Add Point` or :guilabel:`Add Track "
 "Point`."
 msgstr ""
+"피처를 수동으로 설정하고 싶은 경우, |metadata| :sup:`Position` 아이콘을 다시 클릭한 다음 "
+":guilabel:`Add Feature` 또는 :guilabel:`Add Track Point` 버튼을 클릭해야 합니다."
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:106
 msgid "Connect to a Bluetooth GPS for live tracking"
@@ -216,6 +230,9 @@ msgid ""
 " the next step a serial connection service should be available, select it "
 "and click on :guilabel:`Configure` button."
 msgstr ""
+"장치 선택 화면의 우측에서 모든 장치 유형을 선택해서 사용자의 GPS 기기가 연결할 수 있는 장치 목록에 나타나도록 하십시오. 다음 "
+"단계에서 시리얼 연결 서비스를 선택할 수 있을 겁니다. 해당 연결을 선택한 다음 :guilabel:`Configure` 버튼을 "
+"누르십시오."
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:121
 msgid ""
@@ -236,6 +253,9 @@ msgid ""
 " the :guilabel:`Connect`. After a while a cursor indicating your position "
 "should appear."
 msgstr ""
+"이제 QGIS에서 :guilabel:`GPS information` 패널을 열고 |options| GPS 옵션 화면으로 전환하십시오. "
+"GPS 연결에 할당된 COM 포트 번호를 선택한 다음 :guilabel:`Connect` 버튼을 클릭하십시오. 잠시 후 사용자의 위치를 "
+"나타내는 커서가 나타날 것입니다."
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:132
 msgid ""
@@ -255,13 +275,15 @@ msgstr "GPSMAP 60cs 사용법"
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:141
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:184
 msgid "MS Windows"
-msgstr "|win| **MS 윈도우**"
+msgstr "MS 윈도우"
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:143
 msgid ""
 "Easiest way to make it work is to use a middleware (freeware, not open) "
 "called `GPSGate <https://gpsgate.com/download/gpsgate_client>`_."
 msgstr ""
+"`GPSGate <https://gpsgate.com/download/gpsgate_client>`_ 라는 (공개 S/W 는 아니지만 "
+"자유 S/W 인) 미들웨어를 사용하면 이 GPS 기기를 가장 쉽게 사용할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:146
 msgid ""
@@ -269,11 +291,14 @@ msgid ""
 "ones) and then in QGIS just click :guilabel:`Connect` in the Live tracking "
 "panel using the |radioButtonOn| :guilabel:`Autodetect` mode."
 msgstr ""
+"프로그램을 구동해서 GPS 기기를 스캔하도록 하십시오. (USB 및 블루투스 둘 다 인식할 수 있습니다.) 그리고 QGIS에서 "
+":guilabel:`GPS Information Panel` 을 열고 GPS 옵션 화면에서 |radioButtonOn| "
+":guilabel:`Autodetect` 모드를 선택한 다음 :guilabel:`Connect` 버튼을 누르면 됩니다."
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:151
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:192
 msgid "Ubuntu/Mint GNU/Linux"
-msgstr "|nix| **우분투/민트 GNU/리눅스**"
+msgstr "우분투/민트 GNU/리눅스"
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:153
 msgid ""
@@ -304,7 +329,7 @@ msgstr "BTGP-38KM DataLogger (블루투스만)"
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:178
 msgid "Using GPSD (under Linux) or GPSGate (under Windows) is effortless."
-msgstr "|nix| ``gpsd`` 또는 |win| GPSGate 프로그램을 사용하는 것이 가장 쉬운 방법입니다."
+msgstr "``gpsd`` (리눅스) 또는 GPSGate (윈도우) 프로그램을 사용하는 것이 가장 쉬운 방법입니다."
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:181
 msgid "Using BlueMax GPS-4044 datalogger (both BT and USB)"

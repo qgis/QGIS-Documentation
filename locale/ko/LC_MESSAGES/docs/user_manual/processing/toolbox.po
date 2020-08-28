@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-26 13:13+0200\n"
 "PO-Revision-Date: 2020-03-16 19:31+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2020\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,7 +24,7 @@ msgstr ""
 
 #: ../../docs/user_manual/processing/toolbox.rst:4
 msgid "The Toolbox"
-msgstr ""
+msgstr "툴박스"
 
 #: ../../docs/user_manual/processing/toolbox.rst:11
 msgid ""
@@ -35,6 +36,10 @@ msgid ""
 "whether as a single process or as a batch process involving several "
 "executions of the same algorithm on different sets of inputs."
 msgstr ""
+":guilabel:`Processing Toolbox` 는 공간 처리 GUI 의 주요 항목으로, 사용자가 일상적으로 사용하게 될 가능성이"
+" 높습니다. 사용할 수 있는 모든 **알고리즘** 을 서로 다른 *제공자*, 도구 집합을 확장하기 위해 추가할 수 있는 **모델** "
+"그리고 **스크립트** 로 그룹화한 목록을 표시합니다. 단일 프로세스이든 동일 알고리즘을 서로 다른 입력물에 대해 여러 번 실행하는 배치"
+" 프로세스이든 바로 이 툴박스에서 알고리즘을 실행하게 됩니다."
 
 #: ../../docs/user_manual/processing/toolbox.rst:24
 msgid "Processing Toolbox"
@@ -49,17 +54,23 @@ msgid ""
 "additional configuration. Configuring providers is explained in a "
 ":ref:`later chapter <processing.results>` in this manual."
 msgstr ""
+":ref:`공간 처리 설정 대화창 <processing.options>` 에서 이 제공자들을 (비)활성화할 수 있습니다. 기본적으로, 제"
+" 3자 응용 프로그램에 의존하지 않는 (즉 실행하는 데 QGIS 요소만 요구하는) 제공자만 활성화된 상태입니다. 외부 응용 프로그램이 "
+"필요한 알고리즘은 추가 환경 설정이 필요할 수도 있습니다. 제공자 환경 설정에 대해서는 이 사용자 지침서의 :ref:`이후 부분 "
+"<processing.results>` 에서 설명하겠습니다."
 
 #: ../../docs/user_manual/processing/toolbox.rst:34
 msgid ""
 "In the upper part of the toolbox dialog, you will find a set of tools to:"
-msgstr ""
+msgstr "툴박스 대화창 상단에는 다음과 같은 작업을 하기 위한 도구들이 있습니다:"
 
 #: ../../docs/user_manual/processing/toolbox.rst:36
 msgid ""
 "work with |processingModel| :sup:`Models`: :guilabel:`Create New Model...`, "
 ":guilabel:`Open Existing Model...` and :guilabel:`Add Model to Toolbox...`;"
 msgstr ""
+"|processingModel| :sup:`Models` 작업: :guilabel:`Create New Model...`, "
+":guilabel:`Open Existing Model...` 및 :guilabel:`Add Model to Toolbox...`"
 
 #: ../../docs/user_manual/processing/toolbox.rst:38
 msgid ""
@@ -67,14 +78,17 @@ msgid ""
 ":guilabel:`Create New Script from Template...`, :guilabel:`Open Existing "
 "Script...` and :guilabel:`Add Script to Toolbox...`;"
 msgstr ""
+"|pythonFile| :sup:`Scripts` 작업: :guilabel:`Create New Script...`, "
+":guilabel:`Create New Script from Template...`, :guilabel:`Open Existing "
+"Script...` 및 :guilabel:`Add Script to Toolbox...`"
 
 #: ../../docs/user_manual/processing/toolbox.rst:41
 msgid "open the |processingHistory| :sup:`History` panel;"
-msgstr ""
+msgstr "|processingHistory| :sup:`History`: 이력 패널 열기"
 
 #: ../../docs/user_manual/processing/toolbox.rst:42
 msgid "open the |processingResult| :sup:`Results Viewer` panel;"
-msgstr ""
+msgstr "|processingResult| :sup:`Results Viewer`: 결과물 뷰어 패널 열기"
 
 #: ../../docs/user_manual/processing/toolbox.rst:43
 msgid ""
@@ -83,10 +97,13 @@ msgid ""
 "In-Place` button: only the algorithms that are suitable to be executed on "
 "the active layer without outputting a new layer are displayed;"
 msgstr ""
+"|processSelected| :sup:`Edit Features In-Place`: 툴박스의 :ref:`제자리(in-place) 수정"
+" 모드 <processing_inplace_edit>` 를 켜고 끕니다. 새 레이어를 산출하지 않고, 활성 레이어에 대해서 실행하는 데 "
+"적합한 알고리즘만 표시됩니다."
 
 #: ../../docs/user_manual/processing/toolbox.rst:47
 msgid "open the |options| :sup:`Options` dialog."
-msgstr ""
+msgstr "|options| :sup:`Options`: 옵션 대화창 열기"
 
 #: ../../docs/user_manual/processing/toolbox.rst:49
 msgid ""
@@ -96,12 +113,15 @@ msgid ""
 "in the toolbox is reduced to just those that contain the text you have "
 "entered in their names or keywords."
 msgstr ""
+"이 툴바 아래에는 필요한 도구를 쉽게 찾을 수 있게 해주는 |search| :guilabel:`Search...` 란이 있습니다. 이 "
+"텍스트란에 어떤 단어 또는 문구라도 입력할 수 있습니다. 사용자가 입력하는 동안, 사용자가 입력한 텍스트 또는 키워드가 포함된 알고리즘,"
+" 모델 및 스크립트만 필터링해서 툴박스에 표시된다는 사실을 알 수 있을 겁니다."
 
 #: ../../docs/user_manual/processing/toolbox.rst:55
 msgid ""
 "At the top of the list of algorithms are displayed the most recent used "
 "tools; handy if you want to reexecute any."
-msgstr ""
+msgstr "알고리즘 목록 최상단에는 가장 최근에 사용한 도구를 표시합니다. 어떤 도구를 재실행하려는 경우 유용합니다."
 
 #: ../../docs/user_manual/processing/toolbox.rst:63
 msgid "Processing Toolbox showing search results"
@@ -109,7 +129,7 @@ msgstr "검색 결과를 표시하는 공간 처리 툴박스"
 
 #: ../../docs/user_manual/processing/toolbox.rst:66
 msgid "To execute a tool, just double-click on its name in the toolbox."
-msgstr ""
+msgstr "어느 도구를 실행하려면, 툴박스에 있는 해당 명칭을 더블클릭하기만 하면 됩니다."
 
 #: ../../docs/user_manual/processing/toolbox.rst:69
 msgid "The algorithm dialog"
@@ -121,10 +141,12 @@ msgid ""
 " a dialog similar to that in the figure below is shown (in this case, the "
 "dialog corresponds to the ``Centroids`` algorithm)."
 msgstr ""
+"사용자가 실행하고자 하는 알고리즘의 명칭을 더블클릭하고 나면, 다음 그림과 비슷한 대화창이 열립니다. (이 그림은 "
+"``Centroids`` 알고리즘에 대응하는 대화창입니다.)"
 
 #: ../../docs/user_manual/processing/toolbox.rst:80
 msgid "Algorithm Dialog - Parameters"
-msgstr ""
+msgstr "알고리즘 대화창 ─ 파라미터 탭"
 
 #: ../../docs/user_manual/processing/toolbox.rst:83
 msgid ""
@@ -154,8 +176,7 @@ msgid ""
 " not loaded in QGIS."
 msgstr ""
 "**래스터 레이어**: QGIS에서 (현재 열려 있는) 사용할 수 있는 모든 래스터 레이어의 목록 가운데 선택할 수 있습니다. 이 "
-"선택기의 오른쪽에 있는 |browseButton| 버튼을 누르면 현재 QGIS가 불러오지 않은 레이어를 나타내는 파일명을 선택할 수도 "
-"있습니다."
+"선택기의 오른쪽에 있는 |browse| 버튼을 누르면 현재 QGIS가 불러오지 않은 레이어를 나타내는 파일명을 선택할 수도 있습니다."
 
 #: ../../docs/user_manual/processing/toolbox.rst:97
 msgid ""
@@ -202,6 +223,9 @@ msgid ""
 "dialog, unchecking the :menuselection:`General --> Show layer CRS definition"
 " in selection boxes` option."
 msgstr ""
+"기본적으로, 파라미터 탭은 각 레이어의 명칭과 함께 좌표계 설명도 표시할 것입니다. 이 추가 정보를 보기 싫다면, 공간 처리 설정 "
+"대화창에서 :menuselection:`General --> Show layer CRS definition in selection "
+"boxes` 체크박스를 체크 해제해서 이 기능을 비활성화시킬 수 있습니다."
 
 #: ../../docs/user_manual/processing/toolbox.rst:128
 msgid ""
@@ -232,6 +256,11 @@ msgid ""
 "derived from any of these variables, such as the cell size of a layer or the"
 " northernmost coordinate of another one."
 msgstr ""
+"**숫자 값**: 스핀박스에서 선택할 수 있습니다. 어떤 맥락에서는 (파라미터가 피처 수준에서 적용되고 레이어 수준에서는 적용되지 않는 "
+"경우) 스핀박스 옆에 있는 |dataDefined| :sup:`Data-defined override` 버튼을 누르면 수학 표현식을 "
+"입력해서 파라미터를 위한 여러 값을 생성할 수 있는 :ref:`표현식 작성기 <vector_expressions>` 가 열립니다. "
+"QGIS가 불러온 데이터에 관련된 몇몇 유용한 변수들을 표현식에 추가할 수 있습니다. 즉 어떤 레이어의 셀 크기 또는 다른 레이어의 "
+"최북단 좌표 같은, 이런 변수들에서 파생된 어떤 값이라도 선택할 수 있다는 뜻입니다."
 
 #: ../../docs/user_manual/processing/toolbox.rst:149
 msgid "Expression based input"
@@ -240,11 +269,11 @@ msgstr "표현식 기반 입력"
 #: ../../docs/user_manual/processing/toolbox.rst:151
 msgid ""
 "A **range**, with min and max values to be introduced in two text boxes."
-msgstr "**범위(range)**: 텍스트 란 2개를 통해 최소 및 최대 값을 설정할 수 있습니다."
+msgstr "**범위(range)**: 텍스트란 2개에서 최소 및 최대 값을 설정할 수 있습니다."
 
 #: ../../docs/user_manual/processing/toolbox.rst:152
 msgid "A **text string**, to be introduced in a text box."
-msgstr "**텍스트 문자열**: 텍스트 상자에 문자열을 입력할 수 있습니다."
+msgstr "**텍스트 문자열**: 텍스트란에 문자열을 입력할 수 있습니다."
 
 #: ../../docs/user_manual/processing/toolbox.rst:153
 msgid ""
@@ -259,6 +288,8 @@ msgid ""
 "<crs_selector>` dialog that appears when you click on the button on the "
 "right-hand side."
 msgstr ""
+"**좌표계**: 드롭다운 목록에서 최근 사용한 좌표계 가운데 선택하거나 또는 목록 오른쪽에 있는 |browse| 버튼을 누르면 열리는 "
+":ref:`좌표계 선택기 <crs_selector>` 에서 선택할 수 있습니다."
 
 #: ../../docs/user_manual/processing/toolbox.rst:158
 msgid ""
@@ -267,14 +298,16 @@ msgid ""
 "hand side of the value selector, a pop-up menu will appear, giving you "
 "options:"
 msgstr ""
+"**범위**: 범위를 제한하는 ``xmin``, ``xmax``, ``ymin``, ``ymax`` 숫자 4개를 입력할 수 있습니다. 값"
+" 선택기 오른쪽에 있는 |browse| 버튼을 클릭하면, 다음 옵션을 제공하는 팝업 메뉴가 나타납니다:"
 
 #: ../../docs/user_manual/processing/toolbox.rst:163
 msgid "to select the value from a layer or the current canvas extent;"
-msgstr ""
+msgstr "레이어 또는 현재 캔버스 범위로부터 값을 선택"
 
 #: ../../docs/user_manual/processing/toolbox.rst:164
 msgid "or to define it by dragging directly onto the map canvas."
-msgstr ""
+msgstr "맵 캔버스 위를 클릭&드래그해서 범위를 정의"
 
 #: ../../docs/user_manual/processing/toolbox.rst:171
 msgid "Extent selector"
@@ -311,6 +344,9 @@ msgid ""
 "when the dialog is closed, number of selected items is displayed in the "
 "parameter text box widget."
 msgstr ""
+"**항목 목록**: (래스터 레이어든 벡터 레이어든 또는 테이블이든 필드든) 해당 유형의 목록 가운데 선택할 수 있습니다. 옵션 왼쪽에 "
+"있는 |browse| 버튼을 클릭하면 다음 그림과 같은 대화창이 열립니다. 다중 선택도 가능하며, 대화창이 닫혔을 때 선택한 항목의 "
+"개수가 파라미터 텍스트란 위젯에 표시됩니다."
 
 #: ../../docs/user_manual/processing/toolbox.rst:205
 msgid "Multiple Selection"
@@ -350,6 +386,10 @@ msgid ""
 "you can choose the reference layer and all its properties (cell size, "
 "extent, CRS) will be used."
 msgstr ""
+"일부 알고리즘은 실행하는 데 많은 파라미터를 필요로 합니다. 예를 들어 :ref:`qgisrastercalculator` 에서는 사용자가"
+" 직접 셀 크기, 범위 및 좌표계를 지정해야 합니다. 알고리즘이 ``Reference layers`` 파라미터를 가지고 있을 경우 모든 "
+"파라미터를 직접 지정하는 일을 피할 수 있습니다. 이 파라미터를 사용하면 참조 레이어와 사용할 모든 레이어 속성(셀 크기, 범위, "
+"좌표계)을 선택할 수 있습니다."
 
 #: ../../docs/user_manual/processing/toolbox.rst:231
 msgid ""
@@ -361,10 +401,14 @@ msgid ""
 "them might run silently without producing any output other than the final "
 "files."
 msgstr ""
+":guilabel:`Log` 라는 또다른 탭이 :guilabel:`Parameters` 탭 옆에 있습니다. (다음 그림 참조) 이 탭은 "
+"알고리즘 실행 도중 알고리즘이 제공하는 정보를 표시해서 사용자가 그 과정을 추적하고 더 자세한 정보를 알 수 있게 해줍니다. 하지만 모든"
+" 알고리즘이 이 탭에 정보를 표시하지는 않습니다. 사실 알고리즘이 최종 파일 이외에는 어떤 정보도 출력하지 않은 채 조용히 실행되는 "
+"경우가 많습니다."
 
 #: ../../docs/user_manual/processing/toolbox.rst:244
 msgid "Algorithm Dialog - Log"
-msgstr ""
+msgstr "알고리즘 대화창 ─ 로그 탭"
 
 #: ../../docs/user_manual/processing/toolbox.rst:246
 msgid ""
@@ -373,6 +417,10 @@ msgid ""
 "particularly handy when you have checked the ``Keep dialog open after "
 "running algorithm`` in the ``General`` part of the Processing options."
 msgstr ""
+":guilabel:`Log` 탭 하단에 |save| :sup:`Save Log to File`, |copy| :sup:`Copy Log "
+"to Clipboard` 및 |clear| :sup:`Clear Log` 버튼이 있습니다. 공간 처리 옵션 대화창의 "
+":guilabel:`General` 그룹에서 |checkbox| :guilabel:`Keep dialog open after "
+"running algorithm` 옵션을 활성화한 경우 이 도구들이 특히 유용합니다."
 
 #: ../../docs/user_manual/processing/toolbox.rst:252
 msgid ""
@@ -381,6 +429,8 @@ msgid ""
 "ideas. If such a description is not available, the description panel will "
 "not be shown."
 msgstr ""
+"알고리즘 대화창 우측에 해당 알고리즘에 관한 간단한 설명을 표시해서 사용자가 알고리즘의 목적 및 기본 개념을 이해할 수 있도록 해주고 "
+"있습니다. 이런 설명이 존재하지 않는 경우, 설명 패널은 나타나지 않을 것입니다."
 
 #: ../../docs/user_manual/processing/toolbox.rst:256
 msgid ""
@@ -390,6 +440,9 @@ msgid ""
 "documentation <processing_algs>` or to the provider documentation (for some "
 "third-party providers)."
 msgstr ""
+"알고리즘이 사용하는 모든 파라미터에 대한 설명이나 예시를 포함할 수도 있는 더 자세한 도움말 파일이 필요한 경우, 대화창 하단에 있는 "
+":guilabel:`Help` 버튼을 클릭하면 :ref:`공간 처리 알고리즘 문서 <processing_algs>` 또는 (몇몇 제 3자"
+" 제공자의 경우) 제공자 문서를 볼 수 있습니다."
 
 #: ../../docs/user_manual/processing/toolbox.rst:264
 msgid "A note on projections"
@@ -406,6 +459,10 @@ msgid ""
 " whether vector or raster, the layers will all be reprojected to match the "
 "coordinate reference system of the first input layer."
 msgstr ""
+"공간 처리 알고리즘의 실행은 언제나 입력 레이어의 좌표계에서 수행됩니다. QGIS의 실시간(on-the-fly) 재투영 기능 때문에, 두"
+" 레이어가 중첩해서 일치하는 것처럼 보일 수도 있지만 공통 좌표계로 재투영하지 않고 원본 좌표를 사용하는 경우 일치하지 않을 수도 있다는"
+" 사실을 기억하십시오. :ref:`QGIS 내장 알고리즘 <qgis_algorithms>` 에 하나 이상의 레이어를 입력할 때마다, 모든"
+" 입력 레이어를 ─ 벡터이든 래스터이든 간에 ─ 첫 번째 입력 레이어의 좌표계와 일치하도록 재투영할 것입니다."
 
 #: ../../docs/user_manual/processing/toolbox.rst:275
 msgid ""
@@ -414,6 +471,8 @@ msgid ""
 "all of the layers are already in a common coordinate system and ready to be "
 "analyzed."
 msgstr ""
+"하지만 공간 처리 프레임워크를 통해 실행되는 외부 응용 프로그램 알고리즘 대부분은 모든 입력 레이어가 이미 동일한 좌표계를 사용하고 분석"
+" 준비가 끝났다고 가정하기 때문에, 재투영 작업을 하지 않습니다."
 
 #: ../../docs/user_manual/processing/toolbox.rst:279
 msgid ""
@@ -424,6 +483,10 @@ msgid ""
 " settings dialog, unchecking the :guilabel:`Show layer CRS definition in "
 "selection boxes` option."
 msgstr ""
+"기본적으로 알고리즘 대화창의 파라미터 탭은 각 레이어의 명칭과 함께 좌표계 설명도 표시하기 때문에 동일한 좌표계를 공유하는 레이어들을 "
+"쉽게 입력 레이어로 선택할 수 있습니다. 이 추가 정보를 보기 싫다면, 공간 처리 설정 대화창에서 "
+":menuselection:`General --> Show layer CRS definition in selection boxes` "
+"체크박스를 체크 해제해서 이 기능을 비활성화시킬 수 있습니다."
 
 #: ../../docs/user_manual/processing/toolbox.rst:285
 msgid ""
@@ -431,6 +494,8 @@ msgid ""
 "unmatching CRSs, a warning dialog will be shown. This occurs thanks to the "
 ":guilabel:`Warn before executing if layer CRS's do not match` option."
 msgstr ""
+"서로 일치하지 않는 좌표계가 적용된 2개 이상의 레이어를 입력해서 알고리즘을 실행하려는 경우, :guilabel:`Warn before "
+"executing if layer CRS's do not match` 옵션을 활성화한 상태라면 경고 메시지가 나타날 것입니다."
 
 #: ../../docs/user_manual/processing/toolbox.rst:289
 msgid ""
@@ -443,7 +508,7 @@ msgstr ""
 
 #: ../../docs/user_manual/processing/toolbox.rst:292
 msgid "**Use Processing algorithms to do intermediate reprojection**"
-msgstr ""
+msgstr "**공간 처리 알고리즘을 사용해서 중간 단계 재투영하기**"
 
 #: ../../docs/user_manual/processing/toolbox.rst:294
 msgid ""
@@ -452,6 +517,9 @@ msgid ""
 ":ref:`qgisreprojectlayer` to perform layers' reprojection to the same CRS "
 "before executing the algorithm using these outputs."
 msgstr ""
+"좌표계가 일치하지 않아 여러 입력 레이어에 대해 알고리즘을 성공적으로 실행할 수 없는 경우, "
+":ref:`qgisreprojectlayer` 같은 QGIS 내장 알고리즘을 사용해서 레이어들을 동일한 좌표계로 재투영한 다음 그 "
+"산출물을 사용해서 알고리즘을 실행하십시오."
 
 #: ../../docs/user_manual/processing/toolbox.rst:301
 msgid "Data objects generated by algorithms"
@@ -489,6 +557,10 @@ msgid ""
 "applications) you can also save to a PostGIS, GeoPackage or SpatiaLite "
 "database, or a memory layer."
 msgstr ""
+"이런 데이터 객체들은 모두 디스크에 저장되며, 파라미터 탭에는 이런 각각의 산출물에 대응하는 텍스트란이 표시되어 사용자가 저장을 위한 "
+"산출물 채널을 입력할 수 있습니다. 산출물 채널은 산출되는 객체를 저장하기 위해 필요한 정보를 담고 있습니다. 거의 대부분은 파일로 "
+"저장되지만, 내장 알고리즘이 (외부 응용 프로그램을 사용하지 않는 알고리즘이) 생성한 벡터 레이어의 경우 PostGIS 또는 "
+"SpatiaLite 데이터베이스나 메모리 레이어로도 저장할 수 있습니다."
 
 #: ../../docs/user_manual/processing/toolbox.rst:318
 msgid ""
@@ -496,8 +568,8 @@ msgid ""
 "the text box, and you will see a small context menu with the available "
 "options."
 msgstr ""
-"산출물 채널을 선택하려면, 텍스트 란 오른쪽에 있는 |browseButton| 버튼을 누르기만 하면 됩니다. 사용 가능한 옵션을 표시한 "
-"작은 컨텍스트 메뉴가 나타날 것입니다."
+"산출물 채널을 선택하려면, 텍스트 란 오른쪽에 있는 |browse| 버튼을 누르기만 하면 됩니다. 사용 가능한 옵션을 표시한 작은 "
+"컨텍스트 메뉴가 나타날 것입니다."
 
 #: ../../docs/user_manual/processing/toolbox.rst:321
 msgid ""
@@ -507,7 +579,7 @@ msgid ""
 "format selector of the dialog, depending on the kind of output and the "
 "algorithm."
 msgstr ""
-"거의 대부분의 경우, '파일로 저장하기'를 선택하게 됩니다. 해당 옵션을 선택했다면, 원하는 파일 경로를 선택할 수 있는 파일 저장 "
+"거의 대부분의 경우, '파일로 저장하기' 를 선택하게 됩니다. 해당 옵션을 선택했다면, 원하는 파일 경로를 선택할 수 있는 파일 저장 "
 "대화창이 열릴 것입니다. 대화창의 파일 포맷 선택기에 산출물 유형 및 실행 알고리즘에 따라 지원되는 파일 확장자가 표시됩니다."
 
 #: ../../docs/user_manual/processing/toolbox.rst:326
@@ -523,6 +595,12 @@ msgid ""
 ":file:`.gpkg` for vector layers. These can be modified in the setting "
 "dialog, selecting any other of the formats supported by QGIS."
 msgstr ""
+"파일 확장자가 산출물의 포맷을 정의합니다. 지원 포맷은 알고리즘 자체가 어떤 포맷을 지원하느냐에 따라 달라집니다. 어떤 포맷을 "
+"선택하려면, 해당하는 파일 확장자를 선택하기만 하면 됩니다. (또는 파일 경로를 직접 입력하는 경우, 파일명에 추가하면 됩니다.) "
+"사용자가 입력한 파일 경로의 확장자가 지원 포맷 가운데 어느 것과도 일치하지 않을 경우, 파일 경로에 기본 확장자가 붙어서 레이어 또는 "
+"테이블을 해당 확장자의 포맷으로 저장할 것입니다. 테이블의 경우 :file:`.dbf`, 래스터 레이어의 경우 :file:`.tif`, "
+"벡터 레이어의 경우 :file:`.gpkg` 가 기본 확장자입니다. 알고리즘 설정 대화창에서 QGIS가 지원하는 다른 모든 포맷 가운데 "
+"하나를 선택해서 기본 확장자를 변경할 수 있습니다."
 
 #: ../../docs/user_manual/processing/toolbox.rst:337
 msgid ""
@@ -532,6 +610,9 @@ msgid ""
 "default file format, and it will be deleted once you exit QGIS (take care "
 "with that, in case you save your project and it contains temporary layers)."
 msgstr ""
+"산출물 텍스트란에 어떤 파일명도 입력하지 않을 경우 (또는 컨텍스트 메뉴에 있는 해당 옵션을 선택하지 않는 경우) 산출물을 해당 기본 "
+"파일 포맷의 :ref:`임시 파일 <vector_new_scratch_layer>` 로 저장하고, QGIS 종료시 삭제할 것입니다. "
+"(임시 레이어를 담고 있는 프로젝트를 저장하는 경우 이를 처리하십시오.)"
 
 #: ../../docs/user_manual/processing/toolbox.rst:343
 msgid ""
@@ -542,6 +623,10 @@ msgid ""
 " default path in case you type just a filename with no path (i.e., "
 ":file:`myfile.shp`) when executing an algorithm."
 msgstr ""
+"산출 데이터 객체를 위한 기본 폴더를 설정할 수 있습니다. 공간 처리 설정 대화창에서 (:menuselection:`Settings "
+"--> Options --> Processing`) :guilabel:`General` 그룹을 살펴보면 :guilabel:`Output "
+"folder` 라는 파라미터가 있을 겁니다. 알고리즘 실행시 사용자가 파일 경로 없이 파일명만 (예: :file:`myfile.shp`)"
+" 입력하는 경우 이 산출물 폴더를 기본 경로로 사용합니다."
 
 #: ../../docs/user_manual/processing/toolbox.rst:350
 msgid ""
@@ -564,6 +649,10 @@ msgid ""
 "selecting :menuselection:`Processing --> Results Viewer` from the QGIS main "
 "menu."
 msgstr ""
+"일부 알고리즘은 래스터 레이어 및 테이블 말고도, 그래픽 및 텍스트를 HTML 파일 포맷으로 생성할 수 있습니다. 이런 산출물은 알고리즘"
+" 실행 완료시 새 대화창에 표시됩니다. 이 대화창은 현재 세션 동안은 어느 알고리즘이 생성한 산출물이든 계속 가지고 있기 때문에, "
+"언제든지 QGIS 메인 메뉴에서 :menuselection:`Processing --> Results Viewer` 메뉴 옵션을 선택하면"
+" 볼 수 있습니다."
 
 #: ../../docs/user_manual/processing/toolbox.rst:361
 msgid ""

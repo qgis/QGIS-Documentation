@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-26 13:13+0200\n"
 "PO-Revision-Date: 2020-03-16 19:26+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2020\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -39,6 +40,8 @@ msgid ""
 "SQLite database file located, by default, at :file:`<user home>/.qgis3/qgis-"
 "auth.db`."
 msgstr ""
+"새 인증 시스템은 기본적으로 :file:`<user home>/.qgis3/qgis-auth.db` 위치에 있는 SQLite 데이터베이스"
+" 파일에 인증 환경 설정을 저장합니다."
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:24
 msgid ""
@@ -187,6 +190,8 @@ msgid ""
 "WMS connection dialog showing :guilabel:`Add`, :guilabel:`Edit`, and "
 ":guilabel:`Remove` authentication configuration buttons"
 msgstr ""
+":guilabel:`Add`, :guilabel:`Edit` 및 :guilabel:`Remove` 인증 환경 설정 버튼이 표시된 WMS "
+"연결 대화창"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:131
 msgid ""
@@ -215,6 +220,12 @@ msgid ""
 ":menuselection:`Settings --> Options` and, in the :guilabel:`Authentication`"
 " tab, click the |options| :guilabel:`Installed Plugins` button."
 msgstr ""
+"QGIS가 데이터 제공자 플러그인을 지원하는것과 거의 동일한 방식으로 C++ 플러그인이 사용 가능한 인증을 제공합니다. QGIS 코드와 "
+"플러그인을 둘 다 지원하는지 여부와 HTTP(S), 데이터베이스 같은 리소스/제공자에 필요한 접근 권한에 따라 인증 방법을 선택할 수 "
+"있습니다. 따라서 일부 인증 방법 플러그인은 인증 환경 설정 선택기가 표시된 모든 위치에 적용이 안 될 수도 있습니다. "
+":menuselection:`Settings --> Options` 메뉴를 선택한 다음 :guilabel:`Authentication` "
+"탭에 있는 |options| :guilabel:`Installed Plugins` 버튼을 클릭하면 사용 가능한 인증 방법 플러그인과 호환"
+" 가능한 리소스/제공자 목록을 볼 수 있습니다."
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:157
 msgid "Available method plugins list"
@@ -229,18 +240,21 @@ msgid ""
 "target version of QGIS if you intend to add it to an existing target "
 "install."
 msgstr ""
+"QGIS를 다시 컴파일할 필요가 없는 경우 새 인증 방법을 위한 플러그인을 생성할 수 있습니다. 현재 C++ 플러그인만을 지원하고 있기 "
+"때문에, 새로 추가한 플러그인을 사용하려면 QGIS를 재시작해야 합니다. 기존 QGIS 설치본에 플러그인을 추가할 생각이라면, 사용자 "
+"플러그인이 기존 설치본과 동일한 버전을 대상으로 컴파일됐는지 확인하십시오."
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:170
 msgid "Basic HTTP authentication configs"
-msgstr "HTTP BASIC 인증 환경 설정"
+msgstr "HTTP 기본 인증 환경 설정"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:177
 msgid "ESRI Token authentication configs"
-msgstr ""
+msgstr "ESRI 토큰 인증 환경 설정"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:184
 msgid "OAuth2 authentication configs"
-msgstr ""
+msgstr "OAuth2 인증 환경 설정"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:191
 msgid "PKI paths authentication configs"
@@ -283,31 +297,32 @@ msgstr "유틸리티 목록"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:227
 msgid "**Input master password**:"
-msgstr ""
+msgstr "**Input master password**:"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:229
 msgid ""
 "Opens the master password input dialog, independent of performing any "
 "authentication database command."
-msgstr ""
+msgstr "인증 데이터베이스 명령어 수행과는 무관하게 마스터 비밀번호 입력 대화창을 엽니다."
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:232
 msgid "**Clear cached master password**:"
-msgstr ""
+msgstr "**Clear cached master password**:"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:234
 msgid "Unsets the master password if it has been set via input dialog."
-msgstr ""
+msgstr "마스터 비밀번호가 입력 대화창을 통해 설정되어있다면 이를 해제합니다."
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:236
 msgid "**Reset master password**:"
-msgstr ""
+msgstr "**Reset master password**:"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:238
 msgid ""
 "Opens a dialog to change the master password (the current password must be "
 "known) and optionally back up the current database."
 msgstr ""
+"마스터 비밀번호를 바꾸기 위한 (현재 비밀번호를 알고 있어야만 합니다) 대화창을 열고, 선택적으로 현재 데이터베이스를 백업합니다."
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:241
 msgid ""
@@ -316,6 +331,9 @@ msgid ""
 " clear QGIS’s core network access manager’s cache, which requires a relaunch"
 " of QGIS."
 msgstr ""
+"**Clear cached authentication configurations**: 네트워크 연결 속도를 높이는데 사용되는 환경 설정용"
+" 내부 조회 캐시를 지웁니다. QGIS의 핵심 네트워크 접근 관리자의 캐시는 지워지지 않습니다. QGIS를 다시 시작해야 하기 "
+"때문입니다."
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:245
 msgid ""
@@ -323,12 +341,16 @@ msgid ""
 "one. The current master password will be needed prior to resetting and a "
 "backup of database can be done."
 msgstr ""
+"**Reset master password**: 현재 마스터 비밀번호를 새 마스터 비밀번호로 바꿉니다. 재설정 전에 현재 마스터 "
+"비밀번호가 필요하며, 데이터베이스를 백업할 수 있습니다."
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:249
 msgid ""
 "**Remove all authentication configurations**: Clears the database of all "
 "configuration records, without removing other stored records."
 msgstr ""
+"**Remove all authentication configurations**: 저장된 다른 레코드는 삭제하지 않은 채, 모든 환경 "
+"설정 레코드의 데이터베이스를 지웁니다."
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:252
 msgid ""
@@ -338,6 +360,9 @@ msgid ""
 "project loading do not interrupt the operation or cause errors due to a "
 "temporarily missing database."
 msgstr ""
+"**Erase authentication database**: 현재 데이터베이스의 백업과 데이터베이스 테이블 구조의 완전한 리빌딩을 "
+"예약합니다. 이런 작업들은 나중에 실행되도록 예약됩니다. 프로젝트 불러오기와 같은 다른 작업이 이를 방해하지 않도록 하거나 일시적으로 "
+"누락된 데이터베이스로 인해 오류가 발생하지 않도록 하기 위해서입니다."
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:263
 msgid "DB erase verification menu"
@@ -367,16 +392,16 @@ msgid ""
 "authentication method and the config’s ID respectively."
 msgstr ""
 "선택기 위젯을 사용할 때, 아무것도 선택하지 않았거나 선택할 인증 환경 설정이 없거나 또는 데이터베이스에서 이전에 할당한 환경 설정을 "
-"찾을 수 없는 경우 팝업 메뉴의 콤보박스에 'No authentication'이라고 표시됩니다. :guilabel:`Method` 및 "
+"찾을 수 없는 경우 팝업 메뉴의 콤보박스에 'No authentication' 이라고 표시됩니다. :guilabel:`Method` 및 "
 ":guilabel:`Id` 텍스트 란은 읽기 전용으로, 선택한 인증 방법의 설명 및 환경 설정 ID를 각각 표시합니다."
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:285
 msgid "Authentication configuration selector with no authentication"
-msgstr ""
+msgstr "아무 인증도 없는 인증 환경 설정 선택기"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:292
 msgid "Authentication configuration selector with selected config"
-msgstr ""
+msgstr "선택한 환경 설정을 표시한 인증 환경 설정 선택기"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:295
 msgid "Python bindings"

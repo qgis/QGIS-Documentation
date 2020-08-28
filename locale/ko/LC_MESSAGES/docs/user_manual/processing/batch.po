@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-26 13:13+0200\n"
 "PO-Revision-Date: 2020-03-16 19:31+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2020\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,6 +38,9 @@ msgid ""
 "when processing large amounts of data, since it is not necessary to launch "
 "the algorithm many times from the toolbox."
 msgstr ""
+"모든 (모델 포함) 알고리즘을 배치(batch) 프로세스로 실행할 수 있습니다. 단일 입력물 집합이 아니라 여러 집합을 사용해서 필요한 "
+"만큼 여러 번 알고리즘을 실행할 수 있다는 뜻입니다. 대용량 데이터를 공간 처리하는 경우 이 배치 작업이 유리합니다. 툴박스에서 "
+"알고리즘을 여러 번 구동시킬 필요가 없기 때문입니다."
 
 #: ../../docs/user_manual/processing/batch.rst:20
 msgid ""
@@ -133,6 +137,11 @@ msgid ""
 "represents a multiple input, all the selected files will be added to a "
 "single cell, separated by semicolons (``;``)."
 msgstr ""
+"입력 데이터 객체를 위한 파일명은 직접 입력하거나 또는, 좀 더 간편하게, 셀 우측에 있는 :guilabel:`...` 버튼을 클릭하면 "
+"나타나는 컨텍스트 메뉴에서 현재 불러온 레이어에서 선택하는 옵션과 파일 시스템에서 선택하는 옵션 가운데 하나를 선택하면 됩니다. 두 번째"
+" 옵션을 선택하면 전형적인 파일 선택기 대화창이 열립니다. 파일 여러 개를 한 번에 선택할 수 있습니다. 입력 파라미터가 단일 데이터 "
+"객체를 받는데 파일 여러 개를 선택한 경우, 선택한 파일들을 각각 다른 행에 ─ 필요한 경우 행을 새로 추가해가면서 ─ 입력할 것입니다."
+" 입력 파라미터가 다중 데이터 객체를 받는 경우, 셀 하나에 선택한 모든 파일을 쌍반점(``;``)으로 구분해서 입력할 것입니다."
 
 #: ../../docs/user_manual/processing/batch.rst:86
 msgid ""
@@ -204,3 +213,5 @@ msgid ""
 "values, just click on :guilabel:`OK`. Progress of the global batch task will"
 " be shown in the progress bar in the lower part of the dialog."
 msgstr ""
+"필요한 모든 값을 설정한 다음 배치 프로세스를 실행하려면, :guilabel:`OK` 버튼만 누르면 됩니다. 대화창 하단에 있는 진행 "
+"상태 막대에 전체 배치 작업의 진행도가 표시될 것입니다."

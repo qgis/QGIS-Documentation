@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-26 13:13+0200\n"
 "PO-Revision-Date: 2020-03-16 19:26+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2020\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -64,6 +65,9 @@ msgid ""
 "system, the ``key=value`` will be an abstracted representation of the "
 "credentials, e.g. ``authfg=81t21b9``."
 msgstr ""
+"인증 환경 설정을 사용하지 *않는다면*, 데이터베이스 리소스에 대한 연결은 일반적으로 사용자 이름과 (선택적으로) 암호를 노출하게 되는 "
+"``key=value`` 쌍으로 저장됩니다. 새로운 인증 시스템으로 구성할 때, ``key=value`` 는 "
+"``authfg=81t21b9`` 처럼 인증 정보의 추상적인 표현이 될 것입니다."
 
 #: ../../docs/user_manual/auth_system/auth_workflows.rst:50
 msgid "Configuring a Postgres SSL-with-PKI connection"
@@ -99,6 +103,10 @@ msgid ""
 "(:menuselection:`Settings --> Options`) by clicking the :guilabel:`Manage "
 "Certificates` button."
 msgstr ""
+"**인증서 관리자** 안에 있는 개별 편집기에서 모든 PKI 항목들을 관리할 수 있습니다. 인증서 관리자는 "
+":menuselection:`Settings --> Options` 메뉴를 클릭하면 열리는 QGIS :guilabel:`Options` "
+"대화창의 :guilabel:`Authentication` 탭에 있는 :guilabel:`Manage Certificates` 버튼을 "
+"클릭하면 열 수 있습니다."
 
 #: ../../docs/user_manual/auth_system/auth_workflows.rst:79
 msgid "Opening the Certificate Manager"
@@ -112,6 +120,9 @@ msgid ""
 "encountered in the workflow chart above. The tab order is relative to "
 "frequently accessed editors once you are accustomed to the workflow."
 msgstr ""
+":guilabel:`Certificate Manager` 에 **식별 정보(Identities)**, **서버(Servers)** 그리고"
+" **권한(Authorities)** 에 대한 편집기가 있습니다. 각각 각자의 탭이 있으며, 위의 작업 흐름도에서 발생하는 순서대로 "
+"아래에서 설명하고 있습니다. 탭 순서는 사용자가 작업 흐름에 익숙해지면 자주 사용하는 편집기 기준입니다."
 
 #: ../../docs/user_manual/auth_system/auth_workflows.rst:89
 msgid ""
@@ -120,6 +131,9 @@ msgid ""
 "dialog :guilabel:`OK` button for any changes to be saved. This is unlike "
 "other settings in the Options dialog."
 msgstr ""
+"모든 인증 시스템 편집 작업은 인증 데이터베이스에 바로 작성되기 때문에, 변경 사항을 저장하기 위해 :guilabel:`Options` "
+"대화창에서 :guilabel:`OK` 버튼을 클릭해야 할 필요는 없습니다. :guilabel:`Options` 대화창에 있는 다른 "
+"설정들과 다른 점이죠."
 
 #: ../../docs/user_manual/auth_system/auth_workflows.rst:95
 msgid "Authorities"
@@ -165,6 +179,11 @@ msgid ""
 "trust policy. To see the QGIS-discoverable trust chain for any certificate, "
 "select it and click the |metadata| :sup:`Show information for certificate`."
 msgstr ""
+"기본적으로, 사용자 OS의 루트 인증서 권한을 사용할 수 있습니다. 하지만 OS 인증서 권한의 신뢰 설정은 상속되지 않습니다. 사용자가 "
+"인증서 신뢰 정책의 설정을 검토해야 합니다. 특히 사용자 OS의 루트 인증서 권한의 정책이 수정됐을 경우엔 말이죠. 사용 기한이 지난 "
+"모든 인증서는, 사용자가 특별히 그 신뢰 정책을 무시하지 않는 한, 신뢰할 수 없다고 설정되어 보안된 서버 연결에 사용되지 않을 "
+"것입니다. 어느 인증서에 대해서든 QGIS가 찾을 수 있는 신뢰 연결고리를 살펴보려면, 해당 인증서를 선택한 다음 |metadata| "
+":sup:`Show information for certificate` 아이콘을 클릭하십시오."
 
 #: ../../docs/user_manual/auth_system/auth_workflows.rst:129
 msgid "Certificate info dialog"
@@ -179,6 +198,10 @@ msgid ""
 "*per* selected certification. Closing the dialog will **not** apply the "
 "policy changes."
 msgstr ""
+":guilabel:`Trust policy` |selectString| 옵션을 사용하면 신뢰 연결고리 내에서 선택한 어떤 인증서든 신뢰 "
+"정책을 편집할 수 있습니다. 선택한 인증서에 대한 신뢰 정책을 어떻게 변경하든 간에, 선택한 인증서 *별로* |fileSave| "
+":sup:`Save certificate trust policy change to database` 아이콘을 클릭하지 않는 한 "
+"데이터베이스에 변경 사항을 저장하지 않을 것입니다. 대화창을 닫는다고 해도 신뢰 정책의 변경 사항은 적용되지 **않을** 것입니다."
 
 #: ../../docs/user_manual/auth_system/auth_workflows.rst:143
 msgid "Saving the trust policy changes"
@@ -359,6 +382,7 @@ msgid ""
 "that is associated with accessing a resource. There are instances where this"
 " is useful:"
 msgstr ""
+"때때로, 리소스 접근에 관련된 인증 환경 설정 ID를 변경해야 하는 경우가 있습니다. ID 변경이 유용한 다음과 같은 경우들이 있습니다:"
 
 #: ../../docs/user_manual/auth_system/auth_workflows.rst:271
 msgid ""
@@ -366,6 +390,8 @@ msgid ""
 " switched auth databases add need to *align* a new configuration to the ID "
 "already associated with a resource."
 msgstr ""
+"**리소스 인증 환경 설정 ID가 더 이상 유효하지 않습니다**: 이는 이미 리소스와 연관돼 있는 ID에 새로운 환경 설정을 *할당*하기"
+" 위해 인증 데이터베이스를 전환했을 때 발생할 수 있습니다."
 
 #: ../../docs/user_manual/auth_system/auth_workflows.rst:274
 msgid ""
@@ -377,6 +403,10 @@ msgid ""
 "the ID is found in the authentication database, but the credentials are "
 "different per user."
 msgstr ""
+"**공유한 프로젝트 파일**: 사용자 사이에, 예를 들어 파일 공유 서버를 통해 프로젝트를 공유하려는 경우, 리소스와 연관된 "
+"(**a-z** 그리고/또는 **0-9** 를 포함할 수 있는) 문자 7개 길이의 문자열을 *사전에 정의할* 수 있습니다. 그런 다음 "
+"개별 사용자는 리소스의 자격 증명과 관련된 인증 환경 설정 ID를 변경합니다. 프로젝트가 공개됐을 때, ID는 인증 데이터베이스에서 찾을"
+" 수 있지만 자격 증명은 사용자마다 다릅니다."
 
 #: ../../docs/user_manual/auth_system/auth_workflows.rst:286
 msgid ""
@@ -445,7 +475,7 @@ msgstr ""
 msgid ""
 "``QGIS_AUTH_PASSWORD_FILE`` variable will be removed from the Server "
 "environment immediately after accessing."
-msgstr ""
+msgstr "접근 후 바로 서버 환경에서 ``QGIS_AUTH_PASSWORD_FILE`` 환경 변수를 제거할 것입니다."
 
 #: ../../docs/user_manual/auth_system/auth_workflows.rst:324
 msgid "SSL server exceptions"
@@ -540,6 +570,9 @@ msgid ""
 "connection via the **Python Console** by running the following code (replace"
 " ``https://bugreports.qt-project.org`` with the URL of your server):"
 msgstr ""
+"SSL 환경 설정을 사전 설정하고자 하는데 사용자의 서버 연결에 대해 가져오기 대화창이 작동하지 않는 경우, 다음 코드를 실행하면 "
+"**파이썬 콘솔** 을 통해 연결을 직접 촉발할 수 있습니다. (``https://bugreports.qt-project.org`` "
+"문자열을 사용자 서버의 URL로 교체하십시오):"
 
 #: ../../docs/user_manual/auth_system/auth_workflows.rst:402
 msgid ""
