@@ -12,10 +12,11 @@ Vector conversion
 
 Convert format
 --------------
-Converts any OGR-supported vector layer into another OGR-supported format.
+Converts any OGR-supported vector layer into another OGR-supported
+format.
 
 This algorithm is derived from the
-`ogr2ogr utility <https://gdal.org/ogr2ogr.html>`_ .
+`ogr2ogr utility <https://gdal.org/ogr2ogr.html>`_.
 
 Parameters
 ..........
@@ -23,7 +24,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -63,7 +63,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -73,6 +72,15 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - The output vector layer
+
+Python code
+...........
+
+**Algorithm ID**: ``gdal:convertformat``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _gdalrasterize_over:
@@ -84,7 +92,7 @@ New values are assigned based on the attribute value of
 the overlapping vector feature.
 
 This algorithm is derived from the
-`GDAL rasterize utility <https://gdal.org/gdal_rasterize.html>`_ .
+`GDAL rasterize utility <https://gdal.org/gdal_rasterize.html>`_.
 
 Parameters
 ..........
@@ -92,7 +100,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    *  - Label
       - Name
@@ -135,7 +143,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    *  - Label
       - Name
@@ -145,6 +152,15 @@ Outputs
       - ``OUTPUT``
       - [raster]
       - The overwritten input raster layer
+
+Python code
+...........
+
+**Algorithm ID**: ``gdal:rasterize_over``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _gdalrasterize_over_fixed_value:
@@ -156,7 +172,7 @@ The pixels to overwrite are chosen based on the supplied (overlapping)
 vector layer.
 
 This algorithm is derived from the
-`GDAL rasterize utility <https://gdal.org/gdal_rasterize.html>`_ .
+`GDAL rasterize utility <https://gdal.org/gdal_rasterize.html>`_.
 
 Parameters
 ..........
@@ -164,7 +180,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    *  - Label
       - Name
@@ -207,7 +223,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    *  - Label
       - Name
@@ -218,17 +233,27 @@ Outputs
       - [raster]
       - The overwritten input raster layer
 
+Python code
+...........
+
+**Algorithm ID**: ``gdal:rasterize_over_fixed_value``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _gdalrasterize:
 
 Rasterize (vector to raster)
 ----------------------------
-Converts vector geometries (points, lines and polygons) into a raster image.
+Converts vector geometries (points, lines and polygons) into a raster
+image.
 
 This algorithm is derived from the
-`GDAL rasterize utility <https://gdal.org/gdal_rasterize.html>`_ .
+`GDAL rasterize utility <https://gdal.org/gdal_rasterize.html>`_.
 
-``Default menu``: :menuselection:`Raster --> Conversion`
+**Default menu**: :menuselection:`Raster --> Conversion`
 
 Parameters
 ..........
@@ -236,7 +261,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -266,7 +291,8 @@ Parameters
      - [enumeration]
 
        Default: 0
-     - Units to use when defining the output raster size/resolution. One of:
+     - Units to use when defining the output raster size/resolution.
+       One of:
 
        * 0 --- Pixels
        * 1 --- Georeferenced units
@@ -290,9 +316,9 @@ Parameters
    * - **Output extent**
      - ``EXTENT``
      - [extent]
-     - Extent of the output raster layer. If the extent is not specified,
-       the minimum extent that covers the selected reference layer(s)
-       will be used.
+     - Extent of the output raster layer.
+       If the extent is not specified, the minimum extent that covers
+       the selected reference layer(s) will be used.
    * - **Assign a specified nodata value to output bands**
 
        Optional
@@ -373,7 +399,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -383,3 +408,12 @@ Outputs
      - ``OUTPUT``
      - [raster]
      - Output raster layer
+
+Python code
+...........
+
+**Algorithm ID**: ``gdal:rasterize``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**

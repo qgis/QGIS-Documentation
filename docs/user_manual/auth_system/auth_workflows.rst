@@ -38,7 +38,7 @@ Database authentication
 
 Connections to database resources are generally stored as ``key=value`` pairs,
 which will expose usernames and (optionally) passwords, if *not* using an
-authentication configuration. When configuring with the new auth system, the
+authentication configuration. When configuring with the auth system, the
 ``key=value`` will be an abstracted representation of the credentials, e.g.
 ``authfg=81t21b9``.
 

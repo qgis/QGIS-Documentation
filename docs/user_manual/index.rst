@@ -6,15 +6,16 @@ QGIS User Guide
 
 .. toctree::
     :maxdepth: 2
+    :numbered:
 
     preamble/preamble
     preamble/foreword
     preamble/conventions
     preamble/features
-    preamble/whats_new
     introduction/getting_started
     introduction/project_files
     introduction/qgis_gui
+    introduction/browser
     introduction/qgis_configuration
     working_with_projections/working_with_projections
     introduction/general_tools
@@ -24,7 +25,7 @@ QGIS User Guide
     working_with_raster/index
     working_with_mesh/mesh_properties
     print_composer/index
-    working_with_ogc/index
+    working_with_ogc/ogc_client_support.rst
     working_with_gps/index
     auth_system/index
     grass_integration/grass_integration

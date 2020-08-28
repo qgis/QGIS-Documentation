@@ -31,6 +31,8 @@ QGIS Server and Python
 Introduction
 ============
 
+To learn more about QGIS Server, read the :ref:`QGIS-Server-manual`.
+
 QGIS Server is three different things:
 
 1. QGIS Server library: a library that provides an API for creating OGC web services
@@ -396,7 +398,7 @@ The filters must be registered into the **serverIface** as in the following exam
 
     class HelloServerServer:
         def __init__(self, serverIface):
-            serverIface.registerFilter(HelloFilter(), 100)
+            serverIface.registerFilter(HelloFilter(serverIface), 100)
 
 The second parameter of
 :meth:`registerFilter <qgis.server.QgsServerInterface.registerFilter>` sets a priority which

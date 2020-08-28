@@ -30,22 +30,25 @@ The vector :guilabel:`Layer Properties` dialog provides the following sections:
      - |system| :ref:`Source <vectorsourcemenu>`
      - |symbology| :ref:`Symbology <vector_style_menu>`:sup:`[1]`
    * - |labeling| :ref:`Labels <vector_labels_tab>`:sup:`[1]`
-     - |diagram| :ref:`Diagrams <sec_diagram>`
+     - |labelmask| :guilabel:`Mask`:sup:`[1]`
      - |3d| :ref:`3D View <sec_3_d_view>`:sup:`[1]`
-   * - |sourceFields| :ref:`Fields <vector_fields_menu>`
+   * - |diagram| :ref:`Diagrams <sec_diagram>`
+     - |sourceFields| :ref:`Fields <vector_fields_menu>`
      - |formView| :ref:`Attributes Form <vector_attributes_menu>`
-     - |join| :ref:`Joins <sec_joins>`
-   * - |auxiliaryStorage| :ref:`Auxiliary Storage <vector_auxiliary_storage>`
+   * - |join| :ref:`Joins <sec_joins>`
+     - |auxiliaryStorage| :ref:`Auxiliary Storage <vector_auxiliary_storage>`
      - |action| :ref:`Actions <actions_menu>`
-     - |display| :ref:`Display <maptips>`
-   * - |rendering| :ref:`Rendering <vectorrenderingmenu>`
-     - |expression| :ref:`Variables <vectorvariablesmenu>`
+   * - |display| :ref:`Display <maptips>`
+     - |rendering| :ref:`Rendering <vectorrenderingmenu>`
+     - |temporal| :guilabel:`Temporal`
+   * - |expression| :ref:`Variables <vectorvariablesmenu>`
      - |editMetadata| :ref:`Metadata <vectormetadatamenu>`
-   * - |dependencies| :ref:`Dependencies <vectordependenciesmenu>`
-     - |legend| :ref:`Legend <vectorlegendmenu>`
+     - |dependencies| :ref:`Dependencies <vectordependenciesmenu>`
+   * - |legend| :ref:`Legend <vectorlegendmenu>`
      - |overlay| :ref:`QGIS Server <vectorservermenu>`
-   * - |digitizing| :ref:`Digitizing <digitizingmenu>`
-     - :ref:`External plugins <plugins>`:sup:`[2]` tabs
+     - |digitizing| :ref:`Digitizing <digitizingmenu>`
+   * - :ref:`External plugins <plugins>`:sup:`[2]` tabs
+     -
      -
 
 :sup:`[1]` Also available in the :ref:`Layer styling panel <layer_styling_panel>`
@@ -283,15 +286,6 @@ See :ref:`symbol-selector` for further information about symbol representation.
 
    Single symbol line properties
 
-.. tip:: **Edit symbol directly from layer panel**
-
-   If in your **Layers Panel** you have layers with categories defined through
-   categorized, graduated or rule-based symbology mode, you can quickly change the
-   fill color of the symbol of the categories by right-clicking on a category
-   and choose the color you prefer from a |colorWheel| :sup:`color wheel` menu.
-   Right-clicking on a category will also give you access to the options **Hide
-   all items**, **Show all items** and **Edit symbol**.
-
 
 .. index::
    single: Symbology; No symbols renderer
@@ -449,6 +443,23 @@ or fine-tune the symbols rendering:
   value of the category
 * :ref:`Symbol levels... <Symbols_levels>` to define the order of symbols rendering.
 
+.. tip:: **Edit categories directly from the** :guilabel:`Layers` **panel**
+
+   When a layer symbology is based on a :ref:`categorized <categorized_renderer>`,
+   :ref:`graduated <graduated_renderer>` or :ref:`rule-based <rule_based_rendering>`
+   symbology mode, you can edit each of the categories from the :guilabel:`Layers`
+   Panel. Right-click on a sub-item of the layer and you will:
+
+   * |toggleAllLayers| :guilabel:`Toggle items` visibility
+   * |showAllLayers| :guilabel:`Show all items`
+   * |hideAllLayers| :guilabel:`Hide all items`
+   * Modify the symbol color thanks to the :ref:`color selector
+     <color-selector>` wheel
+   * :guilabel:`Edit symbol...` from the :ref:`symbol selector
+     <symbol-selector>` dialog
+   * :guilabel:`Copy symbol`
+   * :guilabel:`Paste symbol`
+
 
 .. index:: Natural Breaks (Jenks), Pretty Breaks, Equal Interval, Quantile, Histogram
    single: Symbology; Graduated renderer
@@ -487,18 +498,22 @@ Back to the Classes tab, you can specify the number of classes and also the
 mode for classifying features within the classes (using the Mode list). The
 available modes are:
 
-* Equal Interval: each class has the same size (e.g. values from 0 to 16 and
-  4 classes, each class has a size of 4).
-* Quantile: each class will have the same number of element inside
+* Equal Count (Quantile): each class will have the same number of elements
   (the idea of a boxplot).
-* Natural Breaks (Jenks): the variance within each class is minimal while the
-  variance between classes is maximal.
-* Standard Deviation: classes are built depending on the standard deviation of
-  the values.
-* Pretty Breaks: Computes a sequence of about n+1 equally spaced nice values
+* Equal Interval: each class will have the same size (e.g. with the values
+  from 1 to 16 and four classes, each class will have a size of four).
+* Logarithmic scale: suitable for data with a wide range of values.
+  Narrow classes for low values and wide classes for large values (e.g. for
+  decimal numbers with range [0..100] and two classes, the first class will
+  be from 0 to 10 and the second class from 10 to 100).
+* Natural Breaks (Jenks): the variance within each class is minimized while
+  the variance between classes is maximized.
+* Pretty Breaks: computes a sequence of about n+1 equally spaced nice values
   which cover the range of the values in x. The values are chosen so that they
   are 1, 2 or 5 times a power of 10. (based on pretty from the R statistical
-  environment https://astrostatistics.psu.edu/datasets/R/html/base/html/pretty.html)
+  environment https://www.rdocumentation.org/packages/base/topics/pretty).
+* Standard Deviation: classes are built depending on the standard deviation of
+  the values.
 
 The listbox in the center part of the :guilabel:`Symbology` tab lists the classes
 together with their ranges, labels and symbols that will be rendered.
@@ -1236,7 +1251,7 @@ Description of how to set each property is exposed at :ref:`showlabels`.
 Setting the automated placement engine
 --------------------------------------
 
-You can use the automated placement settings to configure a global and
+You can use the automated placement settings to configure a project-level
 automated behavior of the labels. In the top right corner of the
 :guilabel:`Labels` tab, click the |autoPlacement| :sup:`Automated placement
 settings (applies to all layers)` button, opening a dialog with the following
@@ -1249,11 +1264,10 @@ options:
 
    The labels automated placement engine
 
-* The :guilabel:`Number of candidates` controls how many label placement
-  candidates should be generated for each feature type. The more candidates
-  generated, the better the labeling will be - but at a cost of rendering
-  speed. Smaller number of candidates results in less labels placed but faster
-  redraws.
+* :guilabel:`Number of candidates`: calculates and assigns to line and
+  polygon features the number of possible labels placement based on their size.
+  The longer or wider a feature is, the more candidates it has, and its labels
+  can be better placed with less risk of collision.
 * :guilabel:`Text rendering`: sets the default value for label rendering
   widgets when :ref:`exporting a map canvas <exportingmapcanvas>` or
   :ref:`a layout <create-output>` to PDF or SVG.
@@ -1280,7 +1294,23 @@ options:
   Like the label says, it's useful only for debugging and testing the effect different
   labeling settings have. This could be handy for a better manual placement with
   tools from the :ref:`label toolbar <label_toolbar>`.
+* :guilabel:`Project labeling version`: QGIS supports two different versions of
+  label automatic placement:
 
+  * :guilabel:`Version 1`: the old system (used by QGIS versions 3.10 and earlier,
+    and when opening projects created in these versions in QGIS 3.12 or later).
+    Version 1 treats label and obstacle priorities as "rough guides" only,
+    and it's possible that a low-priority label will be placed over a high-priority
+    obstacle in this version. Accordingly, it can be difficult to obtain the
+    desired labeling results when using this version and it is thus
+    recommended only for compatibility with older projects.
+  * :guilabel:`Version 2 (recommended)`: this is the default system in new
+    projects created in QGIS 3.12 or later. In version 2, the logic dictating
+    when labels are allowed to overlap :ref:`obstacles <labels_obstacles>`
+    has been reworked. The newer logic forbids any labels from overlapping
+    any obstacles with a greater obstacle weight compared to the label's
+    priority. As a result, this version results in much more predictable
+    and easier to understand labeling results.
 
 .. _rule_based_labeling:
 
@@ -1526,29 +1556,30 @@ While for readability, ``label`` has been used below to describe the Label
 toolbar, note that when mentioned in their name, the tools work almost the
 same way with diagrams:
 
-* |pinLabels| :sup:`Pin/Unpin Labels And Diagrams`. By clicking or draging an
-  area, you pin label(s). If you click or drag an area holding :kbd:`Shift`,
-  label(s) are unpinned. Finally, you can also click or drag an area holding
-  :kbd:`Ctrl` to toggle the pin status of label(s).
-* |showPinnedLabels| :sup:`Highlight Pinned Labels And Diagrams`. If the
+* |showPinnedLabels| :sup:`Highlight Pinned Labels and Diagrams`. If the
   vector layer of the label is editable, then the highlighting is green,
   otherwise it's blue.
 * |showUnplacedLabel| :sup:`Toggles Display of Unplaced Labels`: Allows to
   determine whether any important labels are missing from the maps (e.g. due
   to overlaps or other constraints). They are displayed with a customizable
   color (see :ref:`automated_placement`).
-* |showHideLabels| :sup:`Show/Hide Labels And Diagrams`. If you click on the labels,
+* |pinLabels| :sup:`Pin/Unpin Labels and Diagrams`. By clicking or draging an
+  area, you pin label(s). If you click or drag an area holding :kbd:`Shift`,
+  label(s) are unpinned. Finally, you can also click or drag an area holding
+  :kbd:`Ctrl` to toggle the pin status of label(s).
+* |showHideLabels| :sup:`Show/Hide Labels and Diagrams`. If you click on the labels,
   or click and drag an area holding :kbd:`Shift`, they are hidden.
   When a label is hidden, you just have to click on the feature to restore its
   visibility. If you drag an area, all the labels in the area will be restored.
-* |moveLabel| :sup:`Move Label And Diagram`. You just have to drag the label to
+* |moveLabel| :sup:`Moves a Label or Diagram`. You just have to drag the label to
   the desired place.
-* |rotateLabel| :sup:`Rotate Label`. Click the label and move around and
+* |rotateLabel| :sup:`Rotates a Label`. Click the label and move around and
   you get the text rotated.
-* |changeLabelProperties| :sup:`Change Label`. It opens a dialog to change the
+* |changeLabelProperties| :sup:`Change Label Properties`. It opens a dialog to change the
   clicked label properties; it can be the label itself, its coordinates, angle,
-  font, size... as long as this property has been mapped to a field. Here you can
-  set the option to |checkbox| :guilabel:`Label every part of a feature`.
+  font, size, multiline alignment ... as long as this property has been mapped
+  to a field. Here you can set the option to |checkbox| :guilabel:`Label every
+  part of a feature`.
 
 .. warning:: **Label tools overwrite current field values**
 
@@ -1711,9 +1742,6 @@ different options:
 * :guilabel:`Always Show`: selects specific diagrams to always render, even when
   they overlap other diagrams or map labels;
 * setting the :ref:`Scale dependent visibility <label_scaledepend>`;
-* :guilabel:`Discourage diagrams and labels from covering features`: defines
-  features to use as obstacles, ie QGIS will try to not place diagrams nor labels
-  over these features.
 
 .. _figure_diagrams_appearance:
 
@@ -1730,7 +1758,7 @@ Size
 :guilabel:`Size` is the main tab to set how the selected statistics are
 represented. The diagram size :ref:`units <unit_selector>` can be 'Millimeters',
 'Points', 'Pixels', 'Map Units' or 'Inches'.
-You can use :
+You can use:
 
 * :guilabel:`Fixed size`, a unique size to represent the graphic of all the
   features (not available for histograms)
@@ -1772,18 +1800,29 @@ placement (more details at :ref:`Placement <labels_placement>`):
   and you can specify the diagram placement relative to the feature
   ('above', 'on' and/or 'below' the line)
   It's possible to select several options at once.
-  In that case, QGIS will look for the optimal position of the diagram. Remember that
-  here you can also use the line orientation for the position of the diagram.
-* :guilabel:`Around centroid' (with a distance set)`, :guilabel:`Over centroid`,
-  :guilabel:`Using perimeter` and :guilabel:`Inside polygon`
-  are the options for polygon features.
+  In that case, QGIS will look for the optimal position of the diagram.
+  Remember that you can also use the line orientation for the position
+  of the diagram.
+* :guilabel:`Around centroid` (at a set :guilabel:`Distance`),
+  :guilabel:`Over centroid`, :guilabel:`Using perimeter` and
+  :guilabel:`Inside polygon` are the options for polygon features.
 
-The diagram can also be placed by data-defining the :guilabel:`X` and
-:guilabel:`Y` coordinate fields.
+The :guilabel:`Coordinate` group provides direct control on diagram
+placement, on a feature-by-feature basis, using their attributes
+or an expression to set the :guilabel:`X` and :guilabel:`Y` coordinate.
+The information can also be filled using the :ref:`Move labels and diagrams
+<label_toolbar>` tool.
 
-The placement of the diagrams can interact with the labeling, so you can
-detect and solve position conflicts between diagrams and labels by setting
-the :guilabel:`Priority` slider value.
+In the :guilabel:`Priority` section, you can define the placement priority rank
+of each diagram, ie if there are different diagrams or labels candidates for the
+same location, the item with the higher priority will be displayed and the
+others could be left out.
+
+:guilabel:`Discourage diagrams and labels from covering features` defines
+features to use as :ref:`obstacles <labels_obstacles>`, ie QGIS will try to not
+place diagrams nor labels over these features.
+The priority rank is then used to evaluate whether a diagram could be omitted
+due to a greater weighted obstacle feature.
 
 .. _figure_diagrams_placement:
 
@@ -1824,69 +1863,6 @@ in the :ref:`Layers panel <label_legend>`, and in the :ref:`print layout legend
 When set, the diagram legend items (attributes with color and diagram size)
 are also displayed in the print layout legend, next to the layer symbology.
 
-
-Case Study
-----------
-
-We will demonstrate an example and overlay on the Alaska boundary layer a
-text diagram showing temperature data from a climate vector layer.
-Both vector layers are part of the QGIS sample dataset (see section
-:ref:`label_sampledata`).
-
-#. First, click on the |addOgrLayer| :sup:`Load Vector` icon, browse
-   to the QGIS sample dataset folder, and load the two vector shape layers
-   :file:`alaska.shp` and :file:`climate.shp`.
-#. Double click the ``climate`` layer in the map legend to open the
-   :guilabel:`Layer Properties` dialog.
-#. Click on the :guilabel:`Diagrams` tab and from the :guilabel:`Diagram type`
-   |selectString| combo box, select 'Text diagram'.
-#. In the :guilabel:`Appearance` tab, we choose a light blue as background color,
-   and in the :guilabel:`Size` tab, we set a fixed size to 18 mm.
-#. In the :guilabel:`Position` tab, placement could be set to 'Around Point'.
-#. In the diagram, we want to display the values of the three columns
-   ``T_F_JAN``, ``T_F_JUL`` and ``T_F_MEAN``. So, in the :guilabel:`Attributes` tab
-   first select ``T_F_JAN`` and click the |signPlus| button, then repeat with
-   ``T_F_JUL`` and finally ``T_F_MEAN``.
-#. Now click :guilabel:`Apply` to display the diagram in the QGIS main window.
-#. You can adapt the chart size in the :guilabel:`Size` tab. Activate the
-   |radioButtonOn| :guilabel:`Scaled size` and set the size of the diagrams on
-   the basis of the :guilabel:`maximum value` of an attribute and the
-   :guilabel:`Size` option.
-   If the diagrams appear too small on the screen, you can activate the
-   |checkbox| :guilabel:`Increase size of small diagrams` checkbox and define
-   the minimum size of the diagrams.
-#. Change the attribute colors by double clicking on the color values in the
-   :guilabel:`Assigned attributes` field.
-   Figure_diagrams_mapped_ gives an idea of the result.
-#. Finally, click :guilabel:`OK`.
-
-.. _figure_diagrams_mapped:
-
-.. figure:: img/climate_diagram.png
-   :align: center
-   :width: 25em
-
-   Diagram from temperature data overlayed on a map
-
-Remember that in the :guilabel:`Position` tab, a |checkbox| :guilabel:`Data
-defined position` of the diagrams is possible. Here, you can use attributes
-to define the position of the diagram.
-You can also set a scale-dependent visibility in the :guilabel:`Appearance` tab.
-
-The size and the attributes can also be an expression.
-Use the |expression| button to add an expression.
-See :ref:`vector_expressions` chapter for more information and example.
-
-Using data-defined override
----------------------------
-
-As mentioned above, you can use some custom data-defined to tune the diagrams
-rendering:
-
-* position in :guilabel:`Placement` tab by filling ``X`` and ``Y`` fields
-* visibility in :guilabel:`Appearance` tab by filling the ``Visibility`` field
-
-See :ref:`data_defined_labeling` for more information.
 
 .. index:: 3d view properties
 .. _`sec_3_d_view`:
@@ -2178,9 +2154,12 @@ combobox...) to the layer's fields, you need to give them the same name.
 
 Use the :guilabel:`Edit UI` to define the path to the file to use.
 
+UI-files can also be hosted on a remote server.
+In this case, you provide the URL of the form instead of the file path in :guilabel:`Edit UI`.
+
 You'll find some example in the :ref:`Creating a new form <creating-new-form>`
 lesson of the :ref:`QGIS-training-manual-index-reference`. For more advanced information,
-see https://nathanw.net/2011/09/05/qgis-tips-custom-feature-forms-with-python-logic/.
+see https://woostuff.wordpress.com/2011/09/05/qgis-tips-custom-feature-forms-with-python-logic/.
 
 .. _form_custom_functions:
 
@@ -2543,13 +2522,14 @@ correctly:
    Data-defined properties automatically created
 
 
-Otherwise, there's another way to create an auxiliary field for a specific
-property thanks to the |dataDefined| :sup:`data-defined override` button. By
-clicking on :guilabel:`Store data in the project`, an auxiliary field is
-automatically created for the :guilabel:`Opacity` field. If you click on this
-button whereas the auxiliary layer is not created yet, then the window
-:ref:`figure_auxiliary_layer_creation` is first displayed to select the
-primary key to use for joining.
+Otherwise, there's another way to create an auxiliary field for a
+specific property thanks to the
+|dataDefined| :sup:`data-defined override` button.
+By clicking on :guilabel:`Store data in the project`, an auxiliary
+field is automatically created for the :guilabel:`Opacity` field.
+If you click on this button and the auxiliary layer is not created
+yet, a window (:numref:`figure_auxiliary_layer_creation`) is first
+displayed to select the primary key to use for joining.
 
 
 Symbology
@@ -2983,11 +2963,13 @@ feature identification:
   <vector_expressions>`. This is:
 
   * the label shown on top of the feature information in the :ref:`Identify
-    tool <identify>` results;
+    tool <identify>` results
   * the field used in the :ref:`locator bar <locator_options>` when looking for
-    features in all layers;
+    features in all layers
   * the feature identifier in the attribute table :ref:`form view
-    <attribute_table_view>`;
+    <attribute_table_view>`
+  * the feature identifier when the map or layout is exported to a layered
+    output format such as GeoPDF
   * the map tip information, i.e. the message displayed in the map canvas when
     hovering over a feature of the active layer with the |mapTips| :sup:`Show
     Map Tips` icon pressed. Applicable when no :guilabel:`HTML Map Tip` is set.
@@ -3127,8 +3109,8 @@ A summary of the filled information is provided in the :guilabel:`Validation`
 tab and helps you identify potential issues related to the form. You can then
 either fix them or ignore them.
 
-Metadata are currently saved in the project file. It can also be saved as an
-:file:`.XML` file alongside file based layers or in a local :file:`.sqlite`
+Metadata are currently saved in the project file. They can also be saved in a
+:file:`.qmd` file alongside file based layers or in a local :file:`.sqlite`
 database for remote layers (e.g. PostGIS).
 
 .. index:: Dependencies
@@ -3218,6 +3200,8 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
    :align: center
 
    QGIS Server tab in vector layers properties dialog
+
+To learn more about QGIS Server, read the :ref:`QGIS-Server-manual`.
 
 .. _digitizingmenu:
 
@@ -3326,8 +3310,6 @@ This makes it possible to quickly flag gaps as allowed.
    :width: 2em
 .. |actionRun| image:: /static/common/mAction.png
    :width: 1.5em
-.. |addOgrLayer| image:: /static/common/mActionAddOgrLayer.png
-   :width: 1.5em
 .. |arrowDown| image:: /static/common/mActionArrowDown.png
    :width: 1.5em
 .. |arrowUp| image:: /static/common/mActionArrowUp.png
@@ -3342,8 +3324,6 @@ This makes it possible to quickly flag gaps as allowed.
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
-.. |colorWheel| image:: /static/common/mIconColorWheel.png
-   :width: 1.5em
 .. |dataDefineExpressionOn| image:: /static/common/mIconDataDefineExpressionOn.png
    :width: 1.5em
 .. |dataDefineOn| image:: /static/common/mIconDataDefineOn.png
@@ -3373,6 +3353,8 @@ This makes it possible to quickly flag gaps as allowed.
 .. |graduatedSymbol| image:: /static/common/rendererGraduatedSymbol.png
    :width: 1.5em
 .. |heatmapSymbol| image:: /static/common/rendererHeatmapSymbol.png
+   :width: 1.5em
+.. |hideAllLayers| image:: /static/common/mActionHideAllLayers.png
    :width: 1.5em
 .. |histogram| image:: /static/common/histogram.png
    :width: 1.5em
@@ -3405,6 +3387,8 @@ This makes it possible to quickly flag gaps as allowed.
 .. |labelingObstacle| image:: /static/common/labelingObstacle.png
    :width: 1.5em
 .. |labelingRuleBased| image:: /static/common/labelingRuleBased.png
+   :width: 1.5em
+.. |labelmask| image:: /static/common/labelmask.png
    :width: 1.5em
 .. |labelplacement| image:: /static/common/labelplacement.png
    :width: 1.5em
@@ -3458,6 +3442,8 @@ This makes it possible to quickly flag gaps as allowed.
    :width: 2.5em
 .. |setProjection| image:: /static/common/mActionSetProjection.png
    :width: 1.5em
+.. |showAllLayers| image:: /static/common/mActionShowAllLayers.png
+   :width: 1.5em
 .. |showHideLabels| image:: /static/common/mActionShowHideLabels.png
    :width: 1.5em
 .. |showPinnedLabels| image:: /static/common/mActionShowPinnedLabels.png
@@ -3481,7 +3467,11 @@ This makes it possible to quickly flag gaps as allowed.
    :width: 2em
 .. |system| image:: /static/common/system.png
    :width: 1.5em
+.. |temporal| image:: /static/common/temporal.png
+   :width: 1.5em
 .. |text| image:: /static/common/text.png
+   :width: 1.5em
+.. |toggleAllLayers| image:: /static/common/mActionToggleAllLayers.png
    :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em

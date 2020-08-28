@@ -118,9 +118,14 @@ QGIS provides two view modes to easily manipulate data in the attribute table:
 
 * The |openTable| :sup:`Table view`, displays values of multiple features in a
   tabular mode, each row representing a feature and each column a field.
-* And the |formView| :sup:`Form view` shows :ref:`feature identifiers
+* The |formView| :sup:`Form view` shows :ref:`feature identifiers
   <maptips>` in a first panel and displays only the attributes of the clicked
-  identifier in the second one. Form view uses the layer fields configuration
+  identifier in the second one.
+  There is a pull-down menu at the top of the first panel where the "identifier"
+  can be specified using an attribute (:guilabel:`Column preview`) or an
+  :guilabel:`Expression`.
+  The pull-down also includes the last 10 expressions for re-use.
+  Form view uses the layer fields configuration
   (see :ref:`vector_attributes_menu`).
   You can browse through the feature identifiers with the arrows on the bottom
   of the first panel. Once you markered the feature in yellow in the list it
@@ -523,8 +528,12 @@ that may change (e.g., using ``now()`` function).
 
    * Virtual fields are not permanent in the layer attributes, meaning that
      they're only saved and available in the project file they've been created.
-   * A field can be set virtual only at its creation and the expression used
-     can't be changed later: you'll need to delete and recreate that field.
+   * A field can be set virtual only at its creation.
+     Virtual fields are marked with a purple background in the fields tab of
+     the layer properties dialog to distinguish them from regular physical
+     or joined fields. Their expression can be edited later by pressing the
+     expression button in the Comment column. An expression editor window will
+     be opened to adjust the expression of the virtual field.
 
 .. _quick_field_calculation_bar:
 
@@ -671,23 +680,30 @@ for editing and QGIS takes care of the setup. It works with different
 providers (so you can also use it with shape and csv files) and all you have
 to do is to tell QGIS the relations between your tables.
 
-Defining 1-N relations (Relation Manager)
-.........................................
+Defining 1-N relations
+......................
 
 The first thing we are going to do is to let QGIS know about the relations
-between the layers. This is done in :menuselection:`Project --> Project Properties...`.
-Open the :guilabel:`Relations` tab and click on :guilabel:`Add Relation`.
+between the layers. This is done in :menuselection:`Project --> Properties...`.
+Open the :guilabel:`Relations` tab and click on |signPlus| :guilabel:`Add Relation`.
 
 * **Name** is going to be used as a title. It should be a human readable string,
-  describing, what the relation is used for. We will just call say **Airports**
+  describing, what the relation is used for. We will just call say **airport_relation**
   in this case.
 * **Referenced Layer (Parent)** also considered as parent layer, is the one with
-  the primary key, pointed to, so here it is the ``regions`` layer
-* **Referenced Field** is the primary key of the referenced layer so it is ``ID``
+  the primary key, pointed to, so here it is the ``regions`` layer. You need to define
+  the primary key of the referenced layer, so it is ``ID``.
 * **Referencing Layer (Child)** also considered as child layer, is the one with
-  the foreign key field on it. In our case, this is the ``airports`` layer
-* **Referencing Field** will say, which field points to the other layer so this
-  is ``fk_region`` in this case
+  the foreign key field on it. In our case, this is the ``airports`` layer. For
+  this layer you need to add a referencing field which points to the other
+  layer, so this is ``fk_region``.
+
+  .. note:: Sometimes, you need more than a single field to uniquely identify
+   features in a layer. Creating a relation with such a layer requires
+   a **composite key**, ie more than a single pair of matching
+   fields. Use the |signPlus| :sup:`Add new field pair as part of a composite
+   foreign key` button to add as many pairs as necessary.
+
 * **Id** will be used for internal purposes and has to be unique. You may need
   it to build :ref:`custom forms <customize_form>`. If
   you leave it empty, one will be generated for you but you can assign one
@@ -703,7 +719,12 @@ Open the :guilabel:`Relations` tab and click on :guilabel:`Add Relation`.
 .. figure:: img/relations2.png
    :align: center
 
-   Relation Manager
+   Adding a relation between regions and airports layers
+
+From the :guilabel:`Relations` tab, you can also press the |signPlus|
+:guilabel:`Discover Relation` button to fetch the relations available from
+the providers of the loaded layers. This is possible for layers stored in
+data providers like PostgreSQL or SpatiaLite.
 
 .. index:: Feature form, Linked forms, Embedded form
 
@@ -801,6 +822,21 @@ Here it is possible to digitize a polygon for the region layer using the |signPl
 if you chose the option ``Allow adding new features`` in the 
 :menuselection:`Properties --> Attributes Form` menu of the airport layer.
 
+The child layer can also be used in the :ref:`select_by_value` tool in
+order to select features of the parent layer based on attributes of their children.
+
+In :numref:`figure_select_by_value`, all the regions where the mean
+altitude of the airports is greater than 500 meters above sea level
+are selected. 
+
+You will find that many different aggregation functions are available in the form.
+
+.. _figure_select_by_value:
+
+.. figure:: img/relation_select_by_value.png
+   :align: center
+
+   Select parent features with child values
 
 
 .. index:: Many-to-many relation; Relation

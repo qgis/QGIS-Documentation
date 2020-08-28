@@ -7,20 +7,22 @@ Raster tools
       :local:
       :depth: 1
 
+
 .. _qgisrasterize:
 
 Convert map to raster
 ---------------------
 Creates a raster image of map canvas content.
 
-A :ref:`map theme <map_themes>` can be selected to render a predetermined set of
-layers with a defined style for each layer.
+A :ref:`map theme <map_themes>` can be selected to render a
+predetermined set of layers with a defined style for each layer.
 
 Alternatively, a single layer can be selected if no map theme is set.
 
-If neither map theme nor layer is set, the current map content will be rendered.
-The minimum extent entered will internally be extended to be a multiple of the
-tile size.
+If neither map theme nor layer is set, the current map content will be
+rendered.
+The minimum extent entered will internally be extended to be a
+multiple of the tile size.
 
 Parameters
 ..........
@@ -28,7 +30,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -69,7 +71,8 @@ Parameters
        Optional
      - ``MAP_THEME``
      - [enumeration]
-     - Use an existing :ref:`map theme <map_themes>` for the rendering.
+     - Use an existing :ref:`map theme <map_themes>` for the
+       rendering.
    * - **Single layer to render**
        
        Optional
@@ -94,7 +97,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -105,6 +107,15 @@ Outputs
      - [raster]
      - Output raster layer
   
+Python code
+...........
+
+**Algorithm ID**: ``qgis:rasterize``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgiscreateconstantrasterlayer:
 
@@ -118,7 +129,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -169,7 +179,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -180,6 +189,15 @@ Outputs
      - [raster]
      - Raster covering the desired extent with the specified pixel
        size and value.
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:createconstantrasterlayer``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgistilesxyzdirectory:
@@ -196,7 +214,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -265,8 +283,9 @@ Parameters
 
        Default: 4
      - Specify a custom metatile size when generating XYZ tiles.
-       Larger values may speed up the rendering of tiles and provide better labelling
-       (fewer gaps without labels) at the expense of using more memory.
+       Larger values may speed up the rendering of tiles and provide
+       better labelling (fewer gaps without labels) at the expense of
+       using more memory.
        Minimum 1, maximum 20.
    * - **Tile width**
 
@@ -321,7 +340,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -335,6 +353,15 @@ Outputs
      - ``OUTPUT_HTML``
      - [html]
      - The output HTML (Leaflet) file
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:tilesxyzdirectory``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgistilesxyzmbtiles:
@@ -351,7 +378,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -420,8 +447,9 @@ Parameters
 
        Default: 4
      - Specify a custom metatile size when generating XYZ tiles.
-       Larger values may speed up the rendering of tiles and provide better labelling
-       (fewer gaps without labels) at the expense of using more memory.
+       Larger values may speed up the rendering of tiles and provide
+       better labelling (fewer gaps without labels) at the expense of
+       using more memory.
        Minimum 1, maximum 20.
    * - **Output file (for MBTiles)**
      - ``OUTPUT_FILE``
@@ -442,7 +470,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -453,14 +480,25 @@ Outputs
      - [file]
      - The output file.
 
+Python code
+...........
+
+**Algorithm ID**: ``qgis:tilesxyzmbtiles``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgissetstyleforrasterlayer:
 
 Set style for raster layer
 --------------------------
-Sets the style of a raster layer. The style must be defined as a ``QML`` file.
+Sets the style of a raster layer. The style must be defined as a
+``QML`` file.
 
-No new output are created: the ``QML`` style is assigned to the raster layer chosen.
+No new output are created: the ``QML`` style is assigned to the raster
+layer chosen.
 
 .. seealso:: :ref:`qgissetstyleforvectorlayer`
 
@@ -470,7 +508,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -491,7 +528,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -501,3 +537,12 @@ Outputs
      - ``INPUT``
      - [raster]
      - The raster layer with the chosen style
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:setstyleforrasterlayer``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**

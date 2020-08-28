@@ -10,35 +10,28 @@ suitable plots.
 |moderate| |TY|
 -------------------------------------------------------------------------------
 
-* Save your current map (:kbd:`raster_analysis.qgs`).
-* Open the map in which you created during the vector analysis earlier
-  (you should have saved the file as :kbd:`analysis.qgs`).
-* In the :guilabel:`Layers` panel, enable these layers:
+#. Save your current map (:file:`raster_analysis.qgs`).
+#. Open the map which you created during the vector analysis earlier
+   (you should have saved the file as :file:`analysis.qgs`).
+#. In the :guilabel:`Layers` panel, enable these layers:
 
-  * :guilabel:`hillshade`,
-  * :guilabel:`solution` (or :guilabel:`buildings_over_100`)
+   * :guilabel:`hillshade`,
+   * :guilabel:`solution` (or :guilabel:`buildings_over_100`)
 
-* In addition to these layers, which should already be loaded in the map from
-  when you worked on it before, also add the :kbd:`suitable_terrain.shp`
-  dataset.
-* If you are missing some layers, you should find them in
-  :kbd:`exercise_data/residential_development/`
-* Use the :guilabel:`Intersect` tool (:menuselection:`Vector --> Geoprocessing Tools`)
-  to create a new vector layer called :kbd:`new_solution.shp` which contains
-  only those buildings which intersect the :kbd:`suitable_terrain` layer.
+#. In addition to these layers, which should already be loaded in the map from
+   when you worked on it before, also add the :file:`suitable_terrain.shp`
+   dataset.
+#. If you are missing some layers, you should find them in
+   :file:`exercise_data/residential_development/`
+#. Use the :guilabel:`Intersection` tool (:menuselection:`Vector --> Geoprocessing Tools`)
+   to create a new vector layer called :file:`new_solution.shp` which contains
+   only those buildings which intersect the :guilabel:`suitable_terrain` layer.
 
 You should now have a layer showing certain buildings as your solution, for
 example:
 
 .. figure:: img/new_solution_example.png
    :align: center
-
-.. note:: If you find that the :guilabel:`Intersect` tool does not produce any
-  results, check the CRS settings of each of your layers. The CRS must be the
-  same for both the layers you are comparing. You may need to reproject one
-  layer by saving the layer as a new file with the required CRS. In our
-  example, the :file:`suitable_terrain` layer was reprojected to
-  |localCRS| and named :file:`suitable_terrain_34S.shp`.
 
 
 .. _backlink-complete-analysis-2:
@@ -65,7 +58,7 @@ You can see from the results that some buildings which were included were
 not really suitable, so we can now refine the analysis.
 
 We want to ensure that our analysis returns only those buildings which fall
-entirely within the :kbd:`suitable_terrain` layer. How would you achieve this?
+entirely within the :guilabel:`suitable_terrain` layer. How would you achieve this?
 Use one or more Vector Analysis tools and remember that our buildings are all
 over 100m squared in size.
 
@@ -94,5 +87,4 @@ Next you will present these results as part of your second assignment.
 .. |LS| replace:: Lesson:
 .. |TY| replace:: Try Yourself
 .. |WN| replace:: What's Next?
-.. |localCRS| replace:: ``WGS 84 / UTM 34S``
 .. |moderate| image:: /static/common/moderate.png

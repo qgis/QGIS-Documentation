@@ -12,33 +12,36 @@ Vector overlay
 
 Clip
 ----
-Clips a vector layer using the features of an additional polygon layer.
+Clips a vector layer using the features of an additional polygon
+layer.
 
-Only the parts of the features in the input layer that fall within the polygons
-of the overlay layer will be added to the resulting layer.
+Only the parts of the features in the input layer that fall within the
+polygons of the overlay layer will be added to the resulting layer.
 
 .. _warning_difference:
 
 .. warning:: **Feature modification**
 
-   The attributes of the features are **not modified**, although properties
-   such as area or length of the features will be modified by the clipping operation.
-   If such properties are stored as attributes, those attributes will have to be
-   manually updated.
+   The attributes of the features are **not modified**, although
+   properties such as area or length of the features will be modified
+   by the clipping operation.
+   If such properties are stored as attributes, those attributes will
+   have to be manually updated.
 
-This algorithm uses spatial indexes on the providers, prepared geometries and
-apply a clipping operation if the geometry isn't wholly contained by the
-mask geometry.
+This algorithm uses spatial indexes on the providers, prepared
+geometries and apply a clipping operation if the geometry isn't wholly
+contained by the mask geometry.
 
 .. figure:: img/clip.png
   :align: center
 
-  Clipping operation between a two-features input layer and a single feature
-  overlay layer (left) - resulting features are moved for clarity (right)
+  Clipping operation between a two-features input layer and a single
+  feature overlay layer (left) - resulting features are moved for
+  clarity (right)
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
-``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
+**Default menu**: :menuselection:`Vector --> Geoprocessing Tools`
 
 .. seealso:: :ref:`qgisintersection`, :ref:`qgisdifference`
 
@@ -48,7 +51,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -84,7 +86,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -93,31 +94,42 @@ Outputs
    * - **Clipped**
      - ``OUTPUT``
      - [same as input]
-     - Layer containing features from the input layer split by the overlay layer.
+     - Layer containing features from the input layer split by the
+       overlay layer.
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:clip``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisdifference:
 
 Difference
 ----------
-Extracts features from the input layer that don't fall within the boundaries of
-the overlay layer.
+Extracts features from the input layer that don't fall within the
+boundaries of the overlay layer.
 
-Input layer features that partially overlap the overlay layer feature(s) are
-split along the boundary of those feature(s) and only the portions
-outside the overlay layer features are retained.
+Input layer features that partially overlap the overlay layer
+feature(s) are split along the boundary of those feature(s) and only
+the portions outside the overlay layer features are retained.
 
 Attributes are not modified (see :ref:`warning <warning_difference>`).
 
 .. figure:: img/difference.png
   :align: center
 
-  Difference operation between a two-features input layer and a single feature
-  overlay layer (left) - resulting features are moved for clarity (right)
+  Difference operation between a two-features input layer and a single
+  feature overlay layer (left) - resulting features are moved for
+  clarity (right)
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
-``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
+**Default menu**: :menuselection:`Vector --> Geoprocessing Tools`
 
 .. seealso:: :ref:`qgissymmetricaldifference`, :ref:`qgisclip`
 
@@ -127,7 +139,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -141,17 +152,18 @@ Parameters
      - ``OVERLAY``
      - [vector: any]
      
-     - Layer containing the geometries that will be subtracted from the
-       input layer geometries. It is expected to have at least as many
-       dimensions (point: 0D, line: 1D, polygon: 2D, volume: 3D) as the input
-       layer geometries.
+     - Layer containing the geometries that will be subtracted from
+       the input layer geometries.
+       It is expected to have at least as many dimensions (point: 0D,
+       line: 1D, polygon: 2D, volume: 3D) as the input layer
+       geometries.
    * - **Difference**
      - ``OUTPUT``
      - [same as input]
        
        Default: ``[Create temporary layer]``
-     - Specify the layer to contain the (parts of) features from the input
-       layer that are not inside the overlay layer.
+     - Specify the layer to contain the (parts of) features from the
+       input layer that are not inside the overlay layer.
        One of:
 
        * Create Temporary Layer
@@ -167,7 +179,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -179,13 +190,22 @@ Outputs
      - Layer containing (parts of) features from the input layer
        not overlapping the overlay layer.
 
+Python code
+...........
+
+**Algorithm ID**: ``qgis:difference``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisextractbyextent:
 
 Extract/clip by extent
 ----------------------
-Creates a new vector layer that only contains features which fall within a specified
-extent.
+Creates a new vector layer that only contains features which fall
+within a specified extent.
 
 Any features which intersect the extent will be included.
 
@@ -197,7 +217,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -242,7 +261,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -253,26 +271,36 @@ Outputs
      - [same as input]
      - Layer containing the clipped features.
 
+Python code
+...........
+
+**Algorithm ID**: ``qgis:extractbyextent``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisintersection:
 
 Intersection
 ------------
-Extracts the portions of features from the input layer that overlap features in
-the overlay layer.
+Extracts the portions of features from the input layer that overlap
+features in the overlay layer.
 
-Features in the intersection layer are assigned the attributes of the overlapping
-features from both the input and overlay layers.
+Features in the intersection layer are assigned the attributes of the
+overlapping features from both the input and overlay layers.
 
 Attributes are not modified (see :ref:`warning <warning_difference>`).
 
 .. figure:: img/intersection.png
   :align: center
 
-  The intersection operation: A two-features input layer and a single feature
-  overlay layer (left) - resulting features are moved for clarity (right)
+  The intersection operation: A two-features input layer and a single
+  feature overlay layer (left) - resulting features are moved for
+  clarity (right)
 
-``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
+**Default menu**: :menuselection:`Vector --> Geoprocessing Tools`
 
 .. seealso:: :ref:`qgisclip`, :ref:`qgisdifference`
 
@@ -282,7 +310,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -348,7 +376,7 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -359,6 +387,15 @@ Outputs
      - [same as input]
      - Layer containing (parts of) features from the input
        layer that overlap the overlay layer.
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:intersection``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgislineintersections:
@@ -372,7 +409,7 @@ Creates point features where the lines from the two layers intersect.
 
   Points of intersection
 
-``Default menu``: :menuselection:`Vector --> Analysis Tools`
+**Default menu**: :menuselection:`Vector --> Analysis Tools`
 
 Parameters
 ..........
@@ -380,7 +417,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -425,8 +462,8 @@ Parameters
      - [vector: point]
        
        Default: ``[Create temporary layer]``
-     - Specify the layer to contain the intersection points of the lines
-       from the input and overlay layers.
+     - Specify the layer to contain the intersection points of the
+       lines from the input and overlay layers.
        One of:
 
        * Create Temporary Layer
@@ -442,7 +479,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -453,14 +489,24 @@ Outputs
      - [vector: point]
      - Point vector layer with the intersections.
 
+Python code
+...........
+
+**Algorithm ID**: ``qgis:lineintersections``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgissplitwithlines:
 
 Split with lines
 ----------------
-Splits the lines or polygons in one layer using the lines in another layer to
-define the breaking points. Intersection between geometries in both layers are
-considered as split points.
+Splits the lines or polygons in one layer using the lines in another
+layer to define the breaking points.
+Intersection between geometries in both layers are considered as split
+points.
 
 Output will contain multi geometries for split features.
 
@@ -477,7 +523,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -514,7 +559,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -523,30 +567,42 @@ Outputs
    * - **Split**
      - ``OUTPUT``
      - [same as input]
-     - Output vector layer with split lines or polygons from input layer.
+     - Output vector layer with split lines or polygons from input
+       layer.
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:splitwithlines``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgissymmetricaldifference:
 
 Symmetrical difference
 -----------------------
-Creates a layer containing features from both the input and overlay layers but
-with the overlapping areas between the two layers removed.
+Creates a layer containing features from both the input and overlay
+layers but with the overlapping areas between the two layers removed.
 
-The attribute table of the symmetrical difference layer contains attributes and fields
-from both the input and overlay layers.
+The attribute table of the symmetrical difference layer contains
+attributes and fields from both the input and overlay layers.
 
 Attributes are not modified (see :ref:`warning <warning_difference>`).
 
 .. figure:: img/symmetrical_difference.png
   :align: center
 
-  Symmetrical difference operation between a two-features input layer and a single
-  feature overlay layer (left) - resulting features are moved for clarity (right)
+  Symmetrical difference operation between a two-features input layer
+  and a single feature overlay layer (left) - resulting features are
+  moved for clarity (right)
 
-``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
+**Default menu**: :menuselection:`Vector --> Geoprocessing Tools`
 
-.. seealso:: :ref:`qgisdifference`, :ref:`qgisclip`, :ref:`qgisintersection`
+.. seealso:: :ref:`qgisdifference`, :ref:`qgisclip`,
+   :ref:`qgisintersection`
 
 Parameters
 ..........
@@ -554,7 +610,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -583,8 +638,8 @@ Parameters
        
        Default: ``[Create temporary layer]``
      - Specify the layer to contain (the parts of) the features from
-       the input and overlay layers that do not overlap features from the
-       other layer.
+       the input and overlay layers that do not overlap features from
+       the other layer.
        One of:
 
        * Create Temporary Layer
@@ -600,7 +655,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -612,45 +666,57 @@ Outputs
      - Layer containing (parts of) features from each layer
        not overlapping the other layer.
 
+Python code
+...........
+
+**Algorithm ID**: ``qgis:symmetricaldifference``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisunion:
 
 Union
 -----
-Checks overlaps between features within the input layer and creates separate
-features for overlapping and non-overlapping parts. The area of overlap will
-create as many identical overlapping features as there are features that
-participate in that overlap.
+Checks overlaps between features within the input layer and creates
+separate features for overlapping and non-overlapping parts.
+The area of overlap will create as many identical overlapping features
+as there are features that participate in that overlap.
 
 .. figure:: img/union.png
   :align: center
 
-  Union operation with a single input layer of three overlapping features (left)
-  - resulting features are moved for clarity (right)
+  Union operation with a single input layer of three overlapping
+  features (left) - resulting features are moved for clarity (right)
 
-An overlay layer can also be used, in which case features from each layer
-are split at their overlap with features from the other one, creating a
-layer containing all the portions from both input and overlay layers.
-The attribute table of the union layer is filled with attribute values from the
-respective original layer for non-overlapping features, and attribute values
-from both layers for overlapping features.
+An overlay layer can also be used, in which case features from each
+layer are split at their overlap with features from the other one,
+creating a layer containing all the portions from both input and
+overlay layers.
+The attribute table of the union layer is filled with attribute values
+from the respective original layer for non-overlapping features, and
+attribute values from both layers for overlapping features.
 
 .. figure:: img/union_with_overlay.png
   :align: center
 
-  Union operation between a two-features input layer and a single feature
-  overlay layer (left) - resulting features are moved for clarity (right)
+  Union operation between a two-features input layer and a single
+  feature overlay layer (left) - resulting features are moved for
+  clarity (right)
 
 .. note::
+   For ``union(A,B)`` algorithm, if there are overlaps among
+   geometries of layer A or among geometries of layer B, these are not
+   resolved: you need to do ``union(union(A,B))`` to resolve all
+   overlaps, i.e. run single layer ``union(X)`` on the produced result
+   ``X=union(A,B)``.
 
- For ``union(A,B)`` algorithm, if there are overlaps among geometries of layer A
- or among geometries of layer B, these are not resolved: you need to do
- ``union(union(A,B))`` to resolve all overlaps, i.e. run single layer ``union(X)``
- on the produced result ``X=union(A,B)``.
+**Default menu**: :menuselection:`Vector --> Geoprocessing Tools`
 
-``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
-
-.. seealso:: :ref:`qgisclip`, :ref:`qgisdifference`, :ref:`qgisintersection`
+.. seealso:: :ref:`qgisclip`, :ref:`qgisdifference`,
+   :ref:`qgisintersection`
 
 Parameters
 ..........
@@ -658,7 +724,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -688,8 +753,8 @@ Parameters
      - [same as input]
        
        Default: ``[Create temporary layer]``
-     - Specify the layer to contain the (split and duplicated) features
-       from the input layer and the overlay layer.
+     - Specify the layer to contain the (split and duplicated)
+       features from the input layer and the overlay layer.
        One of:
 
        * Create Temporary Layer
@@ -705,7 +770,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -716,6 +780,15 @@ Outputs
      - [same as input]
      - Layer containing all the overlapping and
        non-overlapping parts from the processed layer(s).
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:union``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE

@@ -23,7 +23,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -44,7 +43,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -54,6 +52,15 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - The (renamed) loaded layer
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:loadlayer``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisrenamelayer:
@@ -68,7 +75,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -89,7 +95,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -100,12 +105,21 @@ Outputs
      - [same as input]
      - The (renamed) output layer
 
+Python code
+...........
+
+**Algorithm ID**: ``qgis:renamelayer``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisstringconcatenation:
 
 String concatenation
 --------------------
-Concatenates two strings into a single one in the Processing Modeler
+Concatenates two strings into a single one in the Processing Modeler.
 
 Parameters
 ..........
@@ -113,7 +127,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -134,7 +147,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -144,3 +156,12 @@ Outputs
      - ``CONCATENATION``
      - [string]
      - The concatenated string
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:stringconcatenation``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**

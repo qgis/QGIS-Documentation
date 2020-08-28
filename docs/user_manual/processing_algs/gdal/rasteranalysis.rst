@@ -22,9 +22,9 @@ On the northern hemisphere, the north side of slopes is often shaded
 solar radiation (higher azimuth from 180°-270°).
 
 This algorithm is derived from the
-`GDAL DEM utility <https://gdal.org/gdaldem.html>`_ .
+`GDAL DEM utility <https://gdal.org/gdaldem.html>`_.
 
-``Default menu``: :menuselection:`Raster --> Analysis`
+**Default menu**: :menuselection:`Raster --> Analysis`
 
 Parameters
 ..........
@@ -32,7 +32,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -112,7 +112,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -122,6 +121,15 @@ Outputs
      - ``OUTPUT``
      - [raster]
      - Output raster with angle values in degrees
+
+Python code
+...........
+
+**Algorithm ID**: ``gdal:aspect``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _gdalcolorrelief:
@@ -136,7 +144,7 @@ By default, the colors between the given elevation values are blended
 smoothly and the result is a nice colorized elevation raster.
 
 This algorithm is derived from the
-`GDAL DEM utility <https://gdal.org/gdaldem.html>`_ .
+`GDAL DEM utility <https://gdal.org/gdaldem.html>`_.
 
 Parameters
 ..........
@@ -144,7 +152,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -219,7 +227,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -229,6 +236,15 @@ Outputs
      - ``OUTPUT``
      - [raster]
      - A 4-band output raster
+
+Python code
+...........
+
+**Algorithm ID**: ``gdal:colorrelief``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _gdalfillnodata:
@@ -248,9 +264,9 @@ It is generally not so great for interpolating a raster from sparse
 point data.
 
 This algorithm is derived from the
-`GDAL fillnodata utility <https://gdal.org/gdal_fillnodata.html>`_ .
+`GDAL fillnodata utility <https://gdal.org/gdal_fillnodata.html>`_.
 
-``Default menu``: :menuselection:`Raster --> Analysis`
+**Default menu**: :menuselection:`Raster --> Analysis`
 
 Parameters
 ..........
@@ -258,7 +274,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -337,7 +353,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -348,6 +363,15 @@ Outputs
      - [raster]
      - Output raster
 
+Python code
+...........
+
+**Algorithm ID**: ``gdal:fillnodata``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _gdalgriddatametrics:
 
@@ -357,9 +381,9 @@ Computes some data metrics using the specified window and output grid
 geometry.
 
 This algorithm is derived from the
-`GDAL grid utility <https://gdal.org/gdal_grid.html>`_ .
+`GDAL grid utility <https://gdal.org/gdal_grid.html>`_.
 
-``Default menu``: :menuselection:`Raster --> Analysis`
+**Default menu**: :menuselection:`Raster --> Analysis`
 
 .. seealso:: `GDAL grid tutorial <https://gdal.org/tutorials/gdal_grid_tut.html>`_
 
@@ -369,7 +393,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -504,7 +528,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -514,6 +537,15 @@ Outputs
      - ``OUTPUT``
      - [raster]
      - Output raster with interpolated values
+
+Python code
+...........
+
+**Algorithm ID**: ``gdal:griddatametrics``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _gdalgridinversedistancenearestneighbor:
@@ -526,7 +558,7 @@ nearest neighbor method.
 Ideal when a maximum number of data points to use is required.
 
 This algorithm is derived from the
-`GDAL grid utility <https://gdal.org/gdal_grid.html>`_ .
+`GDAL grid utility <https://gdal.org/gdal_grid.html>`_.
 
 .. seealso:: `GDAL grid tutorial <https://gdal.org/tutorials/gdal_grid_tut.html>`_
 
@@ -536,7 +568,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -650,7 +682,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -660,6 +691,15 @@ Outputs
      - ``OUTPUT``
      - [raster]
      - Output raster with interpolated values
+
+Python code
+...........
+
+**Algorithm ID**: ``gdal:gridinversedistancenearestneighbor``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _gdalgridinversedistance:
@@ -674,9 +714,9 @@ including coordinates of every data point and output grid geometry.
 The function will compute interpolated value for the given position in output grid.
 
 This algorithm is derived from the
-`GDAL grid utility <https://gdal.org/gdal_grid.html>`_ .
+`GDAL grid utility <https://gdal.org/gdal_grid.html>`_.
 
-``Default menu``: :menuselection:`Raster --> Analysis`
+**Default menu**: :menuselection:`Raster --> Analysis`
 
 .. seealso:: `GDAL grid tutorial <https://gdal.org/tutorials/gdal_grid_tut.html>`_
 
@@ -687,7 +727,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -816,7 +856,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -826,6 +865,15 @@ Outputs
      - ``OUTPUT``
      - [raster]
      - Output raster with interpolated values
+
+Python code
+...........
+
+**Algorithm ID**: ``gdal:gridinversedistance``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _gdalgridlinear:
@@ -840,7 +888,7 @@ If the point is not in any triangle, depending on the radius, the
 algorithm will use the value of the nearest point or the NODATA value.
 
 This algorithm is derived from the
-`GDAL grid utility <https://gdal.org/gdal_grid.html>`_ .
+`GDAL grid utility <https://gdal.org/gdal_grid.html>`_.
 
 Parameters
 ..........
@@ -848,7 +896,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -940,7 +988,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -950,6 +997,15 @@ Outputs
      - ``OUTPUT``
      - [raster]
      - Output raster with interpolated values
+
+Python code
+...........
+
+**Algorithm ID**: ``gdal:gridlinear``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _gdalgridaverage:
@@ -966,9 +1022,9 @@ are not enough points in window, the grid node considered empty and
 will be filled with specified NODATA value.
 
 This algorithm is derived from the
-`GDAL grid utility <https://gdal.org/gdal_grid.html>`_ .
+`GDAL grid utility <https://gdal.org/gdal_grid.html>`_.
 
-``Default menu``: :menuselection:`Raster --> Analysis`
+**Default menu**: :menuselection:`Raster --> Analysis`
 
 .. seealso:: `GDAL grid tutorial <https://gdal.org/tutorials/gdal_grid_tut.html>`_
 
@@ -978,7 +1034,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -1088,7 +1144,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1098,6 +1153,15 @@ Outputs
      - ``OUTPUT``
      - [raster]
      - Output raster with interpolated values
+
+Python code
+...........
+
+**Algorithm ID**: ``gdal:gridaverage``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _gdalgridnearestneighbor:
@@ -1111,9 +1175,9 @@ If there are no points found, the specified NODATA value will be
 returned.
 
 This algorithm is derived from the
-`GDAL grid utility <https://gdal.org/gdal_grid.html>`_ .
+`GDAL grid utility <https://gdal.org/gdal_grid.html>`_.
 
-``Default menu``: :menuselection:`Raster --> Analysis`
+**Default menu**: :menuselection:`Raster --> Analysis`
 
 .. seealso:: `GDAL grid tutorial <https://gdal.org/tutorials/gdal_grid_tut.html>`_
 
@@ -1123,7 +1187,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -1225,7 +1289,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1235,6 +1298,15 @@ Outputs
      - ``OUTPUT``
      - [raster]
      - Output raster with interpolated values
+
+Python code
+...........
+
+**Algorithm ID**: ``gdal:gridnearestneighbor``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _gdalhillshade:
@@ -1250,7 +1322,7 @@ for differences between vertical and horizontal units.
 This algorithm is derived from the
 `GDAL DEM utility <https://gdal.org/gdaldem.html>`__ .
 
-``Default menu``: :menuselection:`Raster --> Analysis`
+**Default menu**: :menuselection:`Raster --> Analysis`
 
 Parameters
 ..........
@@ -1258,7 +1330,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -1367,7 +1439,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1377,6 +1448,15 @@ Outputs
      - ``OUTPUT``
      - [raster]
      - Output raster with interpolated values
+
+Python code
+...........
+
+**Algorithm ID**: ``gdal:hillshade``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _gdalnearblack:
@@ -1392,9 +1472,9 @@ This is often used to "fix up" lossy compressed airphotos so that
 color pixels can be treated as transparent when mosaicking.
 
 This algorithm is derived from the
-`GDAL nearblack utility <https://gdal.org/nearblack.html>`_ .
+`GDAL nearblack utility <https://gdal.org/nearblack.html>`_.
 
-``Default menu``: :menuselection:`Raster --> Analysis`
+**Default menu**: :menuselection:`Raster --> Analysis`
 
 Parameters
 ..........
@@ -1402,7 +1482,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -1465,7 +1545,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1475,6 +1554,15 @@ Outputs
      - ``OUTPUT``
      - [raster]
      - Output raster
+
+Python code
+...........
+
+**Algorithm ID**: ``gdal:nearblack``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _gdalproximity:
@@ -1488,9 +1576,9 @@ Target pixels are those in the source raster for which the raster
 pixel value is in the set of target pixel values.
 
 This algorithm is derived from the
-`GDAL proximity utility <https://gdal.org/gdal_proximity.html>`_ .
+`GDAL proximity utility <https://gdal.org/gdal_proximity.html>`_.
 
-``Default menu``: :menuselection:`Raster --> Analysis`
+**Default menu**: :menuselection:`Raster --> Analysis`
 
 Parameters
 ..........
@@ -1498,7 +1586,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -1629,7 +1717,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1639,6 +1726,15 @@ Outputs
      - ``OUTPUT``
      - [raster]
      - Output raster
+
+Python code
+...........
+
+**Algorithm ID**: ``gdal:proximity``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _gdalroughness:
@@ -1654,9 +1750,9 @@ terrain elevation data, it's useful for calculations of the river
 morphology, in climatology and physical geography in general.
 
 This algorithm is derived from the
-`GDAL DEM utility <https://gdal.org/gdaldem.html>`_ .
+`GDAL DEM utility <https://gdal.org/gdaldem.html>`_.
 
-``Default menu``: :menuselection:`Raster --> Analysis`
+**Default menu**: :menuselection:`Raster --> Analysis`
 
 Parameters
 ..........
@@ -1664,7 +1760,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -1716,7 +1812,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1727,6 +1822,15 @@ Outputs
      - [raster]
      - Single-band output roughness raster.
        The value -9999 is used as nodata value.
+
+Python code
+...........
+
+**Algorithm ID**: ``gdal:roughness``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _gdalsieve:
@@ -1740,9 +1844,9 @@ It is useful if you have a large amount of small areas on your raster
 map.
 
 This algorithm is derived from the
-`GDAL sieve utility <https://gdal.org/gdal_sieve.html>`_ .
+`GDAL sieve utility <https://gdal.org/gdal_sieve.html>`_.
 
-``Default menu``: :menuselection:`Raster --> Analysis`
+**Default menu**: :menuselection:`Raster --> Analysis`
 
 Parameters
 ..........
@@ -1750,7 +1854,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -1811,7 +1915,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1821,6 +1924,15 @@ Outputs
      - ``OUTPUT``
      - [raster]
      - Output raster layer.
+
+Python code
+...........
+
+**Algorithm ID**: ``gdal:sieve``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _gdalslope:
@@ -1833,9 +1945,9 @@ You have the option of specifying the type of slope value you want:
 degrees or percent slope.
 
 This algorithm is derived from the
-`GDAL DEM utility <https://gdal.org/gdaldem.html>`_ .
+`GDAL DEM utility <https://gdal.org/gdaldem.html>`_.
 
-``Default menu``: :menuselection:`Raster --> Analysis`
+**Default menu**: :menuselection:`Raster --> Analysis`
 
 Parameters
 ..........
@@ -1843,7 +1955,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -1921,7 +2033,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1931,6 +2042,15 @@ Outputs
      - ``OUTPUT``
      - [raster]
      - Output raster
+
+Python code
+...........
+
+**Algorithm ID**: ``gdal:slope``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _gdaltriterrainruggednessindex:
@@ -1944,9 +2064,9 @@ as the mean difference between a central pixel and its
 surrounding cells.
 
 This algorithm is derived from the
-`GDAL DEM utility <https://gdal.org/gdaldem.html>`_ .
+`GDAL DEM utility <https://gdal.org/gdaldem.html>`_.
 
-``Default menu``: :menuselection:`Raster --> Analysis`
+**Default menu**: :menuselection:`Raster --> Analysis`
 
 Parameters
 ..........
@@ -1954,7 +2074,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -2006,7 +2126,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -2017,6 +2136,15 @@ Outputs
      - [raster]
      - Output ruggedness raster.
        The value -9999 is used as nodata value.
+
+Python code
+...........
+
+**Algorithm ID**: ``gdal:triterrainruggednessindex``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _gdaltpitopographicpositionindex:
@@ -2029,9 +2157,9 @@ difference between a central pixel and the mean of its surrounding
 cells.
 
 This algorithm is derived from the
-`GDAL DEM utility <https://gdal.org/gdaldem.html>`_ .
+`GDAL DEM utility <https://gdal.org/gdaldem.html>`_.
 
-``Default menu``: :menuselection:`Raster --> Analysis`
+**Default menu**: :menuselection:`Raster --> Analysis`
 
 Parameters
 ..........
@@ -2039,7 +2167,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -2091,7 +2219,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -2101,3 +2228,12 @@ Outputs
      - ``OUTPUT``
      - [raster]
      - Output raster.
+
+Python code
+...........
+
+**Algorithm ID**: ``gdal:tpitopographicpositionindex``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**

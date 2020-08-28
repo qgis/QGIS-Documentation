@@ -35,7 +35,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -165,7 +165,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -175,6 +174,16 @@ Outputs
      - ``OUTPUT_RASTER``
      - [raster]
      - The output raster
+
+Python code
+...........
+
+**Algorithm ID**: ``lastools:blast2dem``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _lastoolsblast2iso:
 
@@ -198,7 +207,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -290,7 +299,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -300,6 +308,15 @@ Outputs
      - ``OUTPUT_VECTOR``
      - [vector: line]
      - The output line vector layer with contours
+
+Python code
+...........
+
+**Algorithm ID**: ``lastools:blast2iso``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _lastoolslas2dem:
@@ -325,7 +342,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -466,7 +483,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -476,6 +492,15 @@ Outputs
      - ``OUTPUT_RASTER``
      - [raster]
      - The output raster
+
+Python code
+...........
+
+**Algorithm ID**: ``lastools:las2dem``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _lastoolslas2iso:
@@ -501,7 +526,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -599,7 +624,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -609,6 +633,15 @@ Outputs
      - ``OUTPUT_VECTOR``
      - [vector: line]
      - The output line vector layer with contours
+
+Python code
+...........
+
+**Algorithm ID**: ``lastools:las2iso``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _lastoolslas2las_filter:
@@ -633,7 +666,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -842,7 +875,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -852,6 +884,15 @@ Outputs
      - ``OUTPUT_LASLAZ``
      - [file]
      - The output LAS/LAZ format file
+
+Python code
+...........
+
+**Algorithm ID**: ``lastools:las2las_filter``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _lastoolslas2las_project:
@@ -866,7 +907,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -1485,7 +1526,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1495,6 +1535,15 @@ Outputs
      - ``OUTPUT_LASLAZ``
      - [file]
      - The output LAS/LAZ format file
+
+Python code
+...........
+
+**Algorithm ID**: ``lastools:las2las_project``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _lastoolslas2las_transform:
@@ -1519,7 +1568,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -1722,7 +1771,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1732,6 +1780,15 @@ Outputs
      - ``OUTPUT_LASLAZ``
      - [file]
      - The output (merged) LAS/LAZ format file
+
+Python code
+...........
+
+**Algorithm ID**: ``lastools:las2las_transform``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _lastoolslas2txt:
@@ -1750,7 +1807,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -1813,7 +1870,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1823,6 +1879,15 @@ Outputs
      - ``OUTPUT_GENERIC``
      - [file]
      - The output file
+
+Python code
+...........
+
+**Algorithm ID**: ``lastools:las2txt``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _lastoolslasindex:
@@ -1841,7 +1906,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -1896,19 +1961,17 @@ Parameters
 Outputs
 .......
 
-.. list-table::
-   :header-rows: 1
-   :widths: 20 20 20 40
-   :stub-columns: 0
+The algorithm has no output.
 
-   * - Label
-     - Name
-     - Type
-     - Description
-   * - 
-     - 
-     - 
-     - No output
+
+Python code
+...........
+
+**Algorithm ID**: ``lastools:lasindex``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _lastoolslasgrid:
@@ -1916,7 +1979,7 @@ Outputs
 lasgrid
 -------
 Grids a selected attribute (e.g. elevation, intensity, classification,
-scan angle, ...) of a large point clouds with a user-defined step size 
+scan angle, ...) of a large point clouds with a user-defined step size
 onto raster using a particular method (e.g. min, max, average).
 
 For more info see the
@@ -1930,7 +1993,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -2068,7 +2131,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -2078,6 +2140,15 @@ Outputs
      - ``OUTPUT_RASTER``
      - [raster]
      - The output raster
+
+Python code
+...........
+
+**Algorithm ID**: ``lastools:lasgrid``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _lastoolslasinfo:
@@ -2091,7 +2162,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -2259,7 +2330,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -2269,6 +2339,15 @@ Outputs
      - ``OUTPUT_GENERIC``
      - [file]
      - The file with the output
+
+Python code
+...........
+
+**Algorithm ID**: ``lastools:lasinfo``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _lastoolslasmerge:
@@ -2283,7 +2362,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -2390,7 +2469,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -2400,6 +2478,15 @@ Outputs
      - ``OUTPUT_LASLAZ``
      - [file]
      - The output (merged) LAS/LAZ format file
+
+Python code
+...........
+
+**Algorithm ID**: ``lastools:lasmerge``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _lastoolslasprecision:
@@ -2413,7 +2500,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -2464,7 +2551,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -2474,6 +2560,15 @@ Outputs
      - ``OUTPUT_GENERIC``
      - [file]
      - The output ASCII file
+
+Python code
+...........
+
+**Algorithm ID**: ``lastools:lasprecision``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _lastoolslasquery:
@@ -2492,7 +2587,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -2531,6 +2626,15 @@ Parameters
 Outputs
 .......
 
+Python code
+...........
+
+**Algorithm ID**: ``lastools:lasquery``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _lastoolslasvalidate:
 
@@ -2543,7 +2647,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -2586,7 +2690,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -2596,6 +2699,15 @@ Outputs
      - ``OUTPUT_GENERIC``
      - [file]
      - The output XML file
+
+Python code
+...........
+
+**Algorithm ID**: ``lastools:lasvalidate``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _lastoolslaszip:
@@ -2609,7 +2721,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -2686,7 +2798,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -2696,6 +2807,15 @@ Outputs
      - ``OUTPUT_LASLAZ``
      - [file]
      - The output file
+
+Python code
+...........
+
+**Algorithm ID**: ``lastools:laszip``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _lastoolstxt2las:
@@ -2709,7 +2829,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -3083,7 +3203,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -3093,3 +3212,12 @@ Outputs
      - ``OUTPUT_LASLAZ``
      - [file]
      - The output file
+
+Python code
+...........
+
+**Algorithm ID**: ``lastools:txt2las``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**

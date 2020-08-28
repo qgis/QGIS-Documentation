@@ -7,13 +7,15 @@ Network analysis
       :local:
       :depth: 1
 
+
 .. _qgisserviceareafromlayer:
 
 Service area (from layer)
 -------------------------
-Returns all the edges or parts of edges of a network that can be reached within a distance
-or a time, starting from a point layer. This allows evaluation of accessibility within
-a network, eg what are the places I can navigate to on a road network without spending
+Returns all the edges or parts of edges of a network that can be
+reached within a distance or a time, starting from a point layer.
+This allows evaluation of accessibility within a network, e.g. what
+are the places I can navigate to on a road network without spending
 cost greater than a given value (the cost can be distance or time).
 
 Parameters
@@ -22,7 +24,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -63,7 +65,7 @@ Parameters
 .. list-table::
    :header-rows: 0
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - **Include upper/lower bound points**
      - ``INCLUDE_BOUNDS``
@@ -110,7 +112,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -129,15 +130,27 @@ Outputs
        that can be serviced by the start points, for the
        given cost.
 
+Python code
+...........
+
+**Algorithm ID**: ``qgis:serviceareafromlayer``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisserviceareafrompoint:
 
 Service area (from point)
 -------------------------
-Returns all the edges or parts of edges of a network that can be reached within a given distance
-or time, starting from a point feature. This allows the evaluation of accessibility within
-a network, eg what are the places I can navigate to on a road network without spending
-a cost greater than a given value (the cost can be distance or time).
+Returns all the edges or parts of edges of a network that can be
+reached within a given distance or time, starting from a point
+feature.
+This allows the evaluation of accessibility within a network, e.g.
+what are the places I can navigate to on a road network without
+spending a cost greater than a given value (the cost can be distance
+or time).
 
 Parameters
 ..........
@@ -145,7 +158,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -223,7 +236,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -242,13 +254,22 @@ Outputs
        that can be serviced by the start point, for the
        given cost.
 
+Python code
+...........
+
+**Algorithm ID**: ``qgis:serviceareafrompoint``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisshortestpathlayertopoint:
 
 Shortest path (layer to point)
 ------------------------------
-Computes the optimal (shortest or fastest) routes from multiple start points defined
-by a vector layer and a given end point.
+Computes the optimal (shortest or fastest) routes from multiple start
+points defined by a vector layer and a given end point.
 
 Parameters
 ..........
@@ -256,7 +277,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -401,7 +422,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -414,13 +434,22 @@ Outputs
      - Line layer of the shortest or fastest path
        from each of the start points to the end point
 
+Python code
+...........
+
+**Algorithm ID**: ``qgis:shortestpathlayertopoint``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisshortestpathpointtolayer:
 
 Shortest path (point to layer)
 ------------------------------
-Computes the optimal (shortest or fastest) routes between a given start point and multiple
-end points defined by a point vector layer.
+Computes the optimal (shortest or fastest) routes between a given
+start point and multiple end points defined by a point vector layer.
 
 Parameters
 ..........
@@ -428,7 +457,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -565,7 +594,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -578,12 +606,22 @@ Outputs
      - Line layer of the shortest or fastest path
        from each of the start points to the end point
 
+Python code
+...........
+
+**Algorithm ID**: ``qgis:shortestpathpointtolayer``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisshortestpathpointtopoint:
 
 Shortest path (point to point)
 ------------------------------
-Computes the optimal (shortest or fastest) route between a given start point and a given end point.
+Computes the optimal (shortest or fastest) route between a given start
+point and a given end point.
 
 Parameters
 ..........
@@ -591,7 +629,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 15 15 20 30
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -742,7 +780,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -754,3 +791,12 @@ Outputs
      - [vector: line]
      - Line layer of the shortest or fastest path
        from each of the start point to the end point
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:shortestpathpointtopoint``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**

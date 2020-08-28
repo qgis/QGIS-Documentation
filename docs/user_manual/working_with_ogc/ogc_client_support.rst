@@ -1,8 +1,8 @@
 .. _working_with_ogc:
 
-***********************
-QGIS as OGC Data Client
-***********************
+********************************
+Working with OGC / ISO protocols
+********************************
 
 .. only:: html
 
@@ -39,6 +39,10 @@ OGC services are increasingly being used to exchange geospatial data between
 different GIS implementations and data stores. QGIS can deal with the above
 specifications as a client, being **SFS** (through support of the PostgreSQL
 / PostGIS data provider, see section :ref:`label_postgis`).
+
+You can also share your maps and data through the WMS, WMTS, WFS, WFS-T and WCS protocols
+using a webserver with :ref:`QGIS Server <QGIS-Server-manual>`, UMN MapServer or
+GeoServer installed.
 
 .. _`ogc-wms`:
 
@@ -154,7 +158,7 @@ Selecting WMS/WMTS Servers
 
 The first time you use the WMS feature in QGIS, there are no servers defined.
 
-Begin by clicking the |wms| :sup:`Add WMS layer` button on the
+Begin by clicking the |addWmsLayer| :sup:`Add WMS layer` button on the
 toolbar, or selecting :menuselection:`Layer --> Add WMS Layer...`.
 
 The dialog :guilabel:`Add Layer(s) from a Server` for adding layers from
@@ -327,9 +331,10 @@ A coordinate reference system (CRS) is the OGC terminology for a QGIS projection
 Each WMS layer can be presented in multiple CRSs, depending on the capability of
 the WMS server.
 
-To choose a CRS, select :guilabel:`Change...` and a dialog similar to :ref:`figure_projection_custom`
-will appear. The main difference with the WMS version
-of the dialog is that only those CRSs supported by the WMS server will be shown.
+To choose a CRS, select :guilabel:`Change...` and a dialog similar to
+the one shown in :numref:`figure_projection_custom` will appear.
+The main difference with the WMS version of the dialog is that only
+those CRSs supported by the WMS server will be shown.
 
 .. _`serversearch`:
 
@@ -539,7 +544,7 @@ of QGIS. Some of the more noteworthy exceptions follow.
 
 **Editing WMS Layer Settings**
 
-Once you've completed the |wms| :sup:`Add WMS layer` procedure,
+Once you've completed the |addWmsLayer| :sup:`Add WMS layer` procedure,
 there is no way to change the settings. A work-around is to delete the layer
 completely and start again.
 
@@ -564,7 +569,7 @@ details.
 .. tip:: **QGIS WMS Mapserver**
 
    Since Version 1.7.0, QGIS has its own implementation of a WMS 1.3.0 Mapserver.
-   Read more about this in chapter :ref:`label_qgisserver`.
+   Read more about this in :ref:`QGIS-Server-manual`.
 
 .. _`ogc-wcs`:
 
@@ -604,23 +609,28 @@ WFS and WFS-T Client
 
 .. index:: WFS, WFS-T (WFS Transactional)
 
-In QGIS, a WFS layer behaves pretty much like any other vector layer. You can
-identify and select features, and view the attribute table. Since QGIS 1.6, editing
-WFS-T is also supported.
+In QGIS, a WFS layer behaves pretty much like any other vector layer.
+You can identify and select features, and view the attribute table.
+QGIS supports WFS 1.0.0, 1.1.0, 2.0 and WFS3 (OGC API - Features),
+including editing (through WFS-T).
 
 In general, adding a WFS layer is very similar to the procedure used with WMS.
-The difference is that there are no default servers defined, so we have to add our own.
+There are no default servers defined, so you have to add your own.
+You can find WFS servers by using the :ref:`MetaSearch plugin <metasearch>`
+or your favourite web search engine.
+There are a number of lists with public URLs, some of them maintained
+and some not.
 
 **Loading a WFS Layer**
 
 As an example, we use the Gateway Geomatics WFS server and display a layer.
 https://demo.gatewaygeomatics.com/cgi-bin/wfs_gateway?REQUEST=GetCapabilities&VERSION=1.0.0&SERVICE=WFS
 
-To be able to load a WFS Layer we create a connection to the WFS server first.
+To be able to load a WFS Layer, first create a connection to the WFS server:
 
 #. Open the :guilabel:`Data Source Manager` dialog by pressing the
    |dataSourceManager| :sup:`Open Data Source Manager` button
-#. Enable the |wfs| :guilabel:`WFS` tab
+#. Enable the |addWfsLayer| :guilabel:`WFS/OGC API-Features` tab
 #. Click on :guilabel:`New...` to open the :guilabel:`Create a New WFS
    Connection` dialog
 #. Enter ``Gateway Geomatics`` as name
@@ -632,6 +642,10 @@ To be able to load a WFS Layer we create a connection to the WFS server first.
       :align: center
    
       Creating a connection to a WFS server
+
+   .. note:: In case of an OGC API - Features (WFS3), the URL to provide should
+     be the :ref:`landing page <wfs3_endpoints>`, ie the main page from which
+     it is possible to navigate to all the available service endpoints.
 
 #. In the WFS settings dialog, you can:
 
@@ -698,12 +712,6 @@ features and view the attribute table.
   download and progressive rendering, on-disk caching of downloaded features
   and version autodetection.
 
-.. tip:: **Finding WFS Servers**
-
-   You can find additional WFS servers by using Google or your favourite search
-   engine. There are a number of lists with public URLs, some of them maintained
-   and some not.
-
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
@@ -711,6 +719,10 @@ features and view the attribute table.
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |addWfsLayer| image:: /static/common/mActionAddWfsLayer.png
+   :width: 1.5em
+.. |addWmsLayer| image:: /static/common/mActionAddWmsLayer.png
+   :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
@@ -723,9 +735,5 @@ features and view the attribute table.
    :width: 2.5em
 .. |unchecked| image:: /static/common/checkbox_unchecked.png
    :width: 1.3em
-.. |wcs| image:: /static/common/mActionAddWcsLayer.png
-   :width: 1.5em
-.. |wfs| image:: /static/common/mActionAddWfsLayer.png
-   :width: 1.5em
-.. |wms| image:: /static/common/mActionAddWmsLayer.png
+.. |wcs| image:: /static/common/mIconWcs.png
    :width: 1.5em

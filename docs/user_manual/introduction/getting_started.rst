@@ -40,7 +40,7 @@ Installing from source
 If you need to build QGIS from source, please refer to the installation
 instructions. They are distributed with the QGIS source code in a file
 called :file:`INSTALL`. You can also find them online at
-https://htmlpreview.github.io/?https://raw.github.com/qgis/QGIS/master/doc/INSTALL.html.
+https://github.com/qgis/QGIS/blob/master/INSTALL.md.
 
 
 If you want to build a particular release and not the version in development,
@@ -78,7 +78,8 @@ you may do one of the following:
 
 * Use GIS data that you already have
 * Download sample data from
-  https://qgis.org/downloads/data/qgis_sample_data.zip
+  https://github.com/qgis/QGIS-Sample-Data/archive/master.zip and unzip the archive
+  on any convenient location on your system.
 * Uninstall QGIS and reinstall with the data download option checked (only
   recommended if the above solutions are unsuccessful)
 

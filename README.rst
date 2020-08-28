@@ -32,7 +32,7 @@ To check/create the venv and use it in the build:
 
  make -f venv.mk html
 
-The venv.mk will create/update a virtual env (if not available ) in current dir/venv AND run the html build in it.
+The venv.mk will create/update a virtual env (if not available) in current dir/venv AND run the html build in it.
 
 You can also use that virtual environment later doing:
 
@@ -51,6 +51,22 @@ If you want for some reason start from scratch:
 .. code-block:: bash
 
  make -f venv.mk cleanall
+
+Build PDFs
+..........
+
+In Linux, you can also build the PDF versions of the main documents:
+
+.. code-block:: bash
+
+ make -f venv.mk pdf
+
+For building PDFs you will need to install the XeLaTex compiler package
+``textlive-xetex`` and GNU Freefont.
+
+.. code-block:: bash
+
+ sudo apt install textlive-xetex fonts-freefont
 
 Build on macOS or Linux
 -----------------------
@@ -83,12 +99,31 @@ And run the build from within that venv:
 
  make html
 
-Want to build your own language? Note that you will use the translations from the 
+Want to build your own language? Note that you will use the translations from the
 po files from git! For example for 'nl' do:
 
 .. code-block:: bash
 
  make LANG=nl html
+
+If you want to build PDFs in another language, you can use a similar syntax:
+
+.. code-block:: bash
+
+ make LANG=fr pdf
+
+For building translated PDFs, you may have to install the texlive extra package
+for your specific language (e.g. ``texlive-lang-french``). For japanese, it's
+crucial to install ``texlive-lang-japanese``, which will install the platex
+compiler. If you plan to build all languages, it might be easier to install all
+languages packages (``texlive-lang-all``), but it will use a considerable amount
+of disk space.
+
+Some languages will also need specific fonts installed:
+
+* Korea (ko) - NanumMyeongjo from the ``fonts-nanum`` package
+* Hindi (hi) - Nakula from the ``fonts-nakula`` package
+
 
 Build on Windows
 ----------------
@@ -101,7 +136,7 @@ use the module 'venv' to create a virtual environment called 'venv'
 
  # in dos box:
  python -m venv venv
- 
+
 Then activate the venv:
 
 .. code-block:: bash
@@ -121,7 +156,7 @@ with the html argument to locally build the docs:
 .. code-block:: bash
 
  make.bat html
- 
+
 Want to build your own language? Note that you will use the translations from the
 po files from git! For example 'nl' do:
 
@@ -160,7 +195,7 @@ To create the .tx/config to push/pull using tx client do:
  sphinx-intl update-txconfig-resources --transifex-project-name qgis-documentation
 
  # Then (only Transifex admin) can push the po source files to Transifex
- tx push -fs --no-interactive (push the source (-f) files forcing (-f) overwriting the ones their without asking (--no-interactive)
+ tx push -fs --no-interactive (push the source (-s) files forcing (-f) overwriting the ones their without asking (--no-interactive)
 
 
 To update all po files of all languages (Which we do not use here! This is done by Transifex):
@@ -178,4 +213,3 @@ BUT we do not do this yet as there were some technical issues...
 .. code-block:: bash
 
  .\scripts\create_transifex_yaml.sh
-

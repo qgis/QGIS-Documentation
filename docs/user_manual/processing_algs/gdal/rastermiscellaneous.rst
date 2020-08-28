@@ -7,6 +7,7 @@ Raster miscellaneous
       :local:
       :depth: 1
 
+
 .. _gdaloverviews:
 
 Build overviews (pyramids)
@@ -15,9 +16,10 @@ To speed up rendering time of raster layers overviews (pyramids) can
 be created. Overviews are lower resolution copies of the data which
 QGIS uses depending of the level of zoom.
 
-This algorithm is derived from the `GDAL addo utility <https://gdal.org/gdaladdo.html>`_ .
+This algorithm is derived from the
+`GDAL addo utility <https://gdal.org/gdaladdo.html>`_.
 
-``Default menu``: :menuselection:`Raster --> Miscellaneous`
+**Default menu**: :menuselection:`Raster --> Miscellaneous`
 
 Parameters
 ..........
@@ -25,7 +27,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -40,8 +42,8 @@ Parameters
      - [string]
 
        Default: '2 4 8 16'
-     - Defines the number of overview levels calculated by the original
-       resolution of the input raster layer.
+     - Defines the number of overview levels calculated by the
+       original resolution of the input raster layer.
        By default 4 levels will be taken into consideration.
    * - **Remove all existing overviews**
      - ``CLEAN``
@@ -105,7 +107,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -116,17 +117,28 @@ Outputs
      - [raster]
      - Output raster layer with overviews
 
+Python code
+...........
+
+**Algorithm ID**: ``gdal:overviews``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _gdalbuildvirtualraster:
 
 Build virtual raster
 --------------------
-Builds a VRT (Virtual Dataset) that is a mosaic of the list of input GDAL-supported rasters.
+Builds a VRT (Virtual Dataset) that is a mosaic of the list of input
+GDAL-supported rasters.
 With a mosaic you can merge several raster files.
 
-This algorithm is derived from the `GDAL buildvrt utility <https://gdal.org/gdalbuildvrt.html>`_ .
+This algorithm is derived from the
+`GDAL buildvrt utility <https://gdal.org/gdalbuildvrt.html>`_.
 
-``Default menu``: :menuselection:`Raster --> Miscellaneous`
+**Default menu**: :menuselection:`Raster --> Miscellaneous`
 
 Parameters
 ..........
@@ -134,7 +146,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -187,7 +199,8 @@ Parameters
      - [crs]
 
        Default: None
-     - Overrides the projection for the output file. No reprojection is done.
+     - Overrides the projection for the output file.
+       No reprojection is done.
 
    * - **Resampling algorithm**
      - ``RESAMPLING``
@@ -239,7 +252,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -251,29 +263,41 @@ Outputs
      - [raster]
      - Output raster layer
 
+Python code
+...........
+
+**Algorithm ID**: ``gdal:buildvirtualraster``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _gdalgdal2tiles:
 
 gdal2tiles
 ----------
 
-Generates a directory with small tiles and metadata, following the `OSGeo
-Tile Map Service Specification <https://wiki.osgeo.org/wiki/Tile_Map_Service_Specification>`_.
-
-See also  the `OpenGIS Web Map Tile Service Implementation Standard
+Generates a directory with small tiles and metadata, following the
+`OSGeo Tile Map Service Specification <https://wiki.osgeo.org/wiki/Tile_Map_Service_Specification>`_.
+See also the
+`OpenGIS Web Map Tile Service Implementation Standard
 <https://www.opengeospatial.org/standards/wmts>`_.
 Simple web pages with viewers based on Google Maps, OpenLayers and
 Leaflet are generated as well.
-To explore your maps on-line in the web browser, you only need to upload
-the generated directory onto a web server.
+To explore your maps on-line in the web browser, you only need to
+upload the generated directory onto a web server.
 
 This algorithm also creates the necessary metadata for Google Earth
-(KML SuperOverlay), in case the supplied map uses ``EPSG:4326`` projection.
+(KML SuperOverlay), in case the supplied map uses ``EPSG:4326``
+projection.
 
-ESRI world files and embedded georeferencing is used during tile generation,
-but you can publish a picture without proper georeferencing too.
+ESRI world files and embedded georeferencing is used during tile
+generation, but you can publish a picture without proper
+georeferencing too.
 
-This algorithm is derived from the `GDAL gdal2tiles utility <https://gdal.org/programs/gdal2tiles.html>`_.
+This algorithm is derived from the
+`GDAL gdal2tiles utility <https://gdal.org/programs/gdal2tiles.html>`_.
 
 Parameters
 ..........
@@ -281,7 +305,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -425,7 +449,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -437,6 +460,15 @@ Outputs
      - [folder]
      - The output folder (for the tiles)
 
+Python code
+...........
+
+**Algorithm ID**: ``gdal:gdal2tiles``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _gdalmerge:
 
@@ -446,9 +478,10 @@ Merges raster files in a simple way. Here you can use a pseudocolor
 table from an input raster and define the output raster type. All
 the images must be in the same coordinate system.
 
-This algorithm is derived from the `GDAL merge utility <https://gdal.org/gdal_merge.html>`_ .
+This algorithm is derived from the
+`GDAL merge utility <https://gdal.org/gdal_merge.html>`_.
 
-``Default menu``: :menuselection:`Raster --> Miscellaneous`
+**Default menu**: :menuselection:`Raster --> Miscellaneous`
 
 Parameters
 ..........
@@ -456,7 +489,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -553,7 +586,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -564,6 +596,15 @@ Outputs
      - [raster]
      - Output raster layer
 
+Python code
+...........
+
+**Algorithm ID**: ``gdal:merge``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _gdalpansharp:
 
@@ -573,7 +614,8 @@ Performs a pan-sharpening operation.
 It can create a "classic" output dataset (such as GeoTIFF),
 or a VRT dataset describing the pan-sharpening operation.
 
-See `GDAL Pansharpen <https://gdal.org/programs/gdal_pansharpen.html>`_.
+See
+`GDAL Pansharpen <https://gdal.org/programs/gdal_pansharpen.html>`_.
 
 Parameters
 ..........
@@ -581,7 +623,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -649,7 +691,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -659,6 +700,15 @@ Outputs
      - ``OUTPUT``
      - [raster]
      - Output (sharpened) raster layer
+
+Python code
+...........
+
+**Algorithm ID**: ``gdal:pansharp``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _gdalrastercalculator:
@@ -672,7 +722,8 @@ such as >.
 Note that all input rasters must have the same
 dimensions, but no projection checking is performed.
 
-See the `GDAL Raster Calculator utility docs <https://gdal.org/programs/gdal_calc.html>`_.
+See the
+`GDAL Raster Calculator utility docs <https://gdal.org/programs/gdal_calc.html>`_.
 
 .. seealso:: :ref:`qgisrastercalculator`
 
@@ -682,7 +733,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -849,7 +900,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -860,16 +910,27 @@ Outputs
      - [raster]
      - Output (calculated) raster layer
 
+Python code
+...........
+
+**Algorithm ID**: ``gdal:rastercalculator``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _gdalgdalinfo:
 
 Raster information
 ------------------
-The gdalinfo program lists various information about a GDAL supported raster dataset.
+The gdalinfo program lists various information about a GDAL supported
+raster dataset.
 
-This algorithm is derived from the `GDAL info utility <https://gdal.org/gdalinfo.html>`_ .
+This algorithm is derived from the
+`GDAL info utility <https://gdal.org/gdalinfo.html>`_.
 
-``Default menu``: :menuselection:`Raster --> Miscellaneous`
+**Default menu**: :menuselection:`Raster --> Miscellaneous`
 
 Parameters
 ..........
@@ -877,7 +938,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -941,7 +1002,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -950,7 +1010,17 @@ Outputs
    * - **Layer information**
      - ``OUTPUT``
      - [html]
-     - The HTML file containing information about the input raster layer
+     - The HTML file containing information about the input raster
+       layer
+
+Python code
+...........
+
+**Algorithm ID**: ``gdal:gdalinfo``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _gdalretile:
@@ -963,7 +1033,7 @@ coordinate system and have a matching number of bands.
 Optionally pyramid levels are generated.
 
 This algorithm is derived from the
-`GDAL Retile utility <https://gdal.org/gdal_retile.html>`_ .
+`GDAL Retile utility <https://gdal.org/gdal_retile.html>`_.
 
 Parameters
 ..........
@@ -971,7 +1041,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -1033,7 +1103,8 @@ Parameters
      - [string]
 
        Default: ';'
-     - Delimiter to use in the CSV file containing the tile(s) georeferencing information
+     - Delimiter to use in the CSV file containing the tile(s)
+       georeferencing information
    * - **Additional creation options**
 
        Optional
@@ -1119,7 +1190,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1134,19 +1204,29 @@ Outputs
      - [file]
      - The CSV file with georeferencing information for the tiles.
 
+Python code
+...........
+
+**Algorithm ID**: ``gdal:retile``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _gdaltileindex:
 
 Tile index
 ----------
 Builds a vector layer with a record for each input raster file, an
-attribute containing the filename, and a polygon geometry outlining the raster.
+attribute containing the filename, and a polygon geometry outlining
+the raster.
 This output is suitable for use with MapServer as a raster tileindex.
 
 This algorithm is derived from the
-`GDAL Tile Index utility <https://gdal.org/gdaltindex.html>`_ .
+`GDAL Tile Index utility <https://gdal.org/gdaltindex.html>`_.
 
-``Default menu``: :menuselection:`Raster --> Miscellaneous`
+**Default menu**: :menuselection:`Raster --> Miscellaneous`
 
 Parameters
 ..........
@@ -1154,7 +1234,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -1234,7 +1314,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1244,3 +1323,13 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - The polygon vector layer with the tile index.
+
+Python code
+...........
+
+**Algorithm ID**: ``gdal:tileindex``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+

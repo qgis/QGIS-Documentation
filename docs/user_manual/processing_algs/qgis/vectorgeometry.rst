@@ -29,8 +29,7 @@ dimension of the input layer:
   distance (``straightdis``)
 * for **polygon** layers: ``perimeter`` and ``area``
 
-``Default menu``: :menuselection:`Vector --> Geometry Tools`
-
+**Default menu**: :menuselection:`Vector --> Geometry Tools`
 
 Parameters
 ..........
@@ -38,7 +37,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -81,7 +80,7 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -91,6 +90,15 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - Copy of the input vector layer with the addition of the geometry fields
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:exportaddgeometrycolumns``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisaggregate:
@@ -125,7 +133,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -227,7 +235,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -237,6 +244,15 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - Multigeometry vector layer with the aggregated values
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:aggregate``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisboundary:
@@ -269,7 +285,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -300,7 +315,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -311,6 +325,15 @@ Outputs
      - [vector: point, line]
      - Boundaries from the input layer (point for line, and line
        for polygon)
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:boundary``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisboundingboxes:
@@ -336,7 +359,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -367,7 +389,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -377,6 +398,15 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - Bounding boxes of input layer
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:boundingboxes``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisbuffer:
@@ -397,7 +427,7 @@ In this case the buffer will result in a smaller polygon (setback).
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
 
-``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
+**Default menu**: :menuselection:`Vector --> Geoprocessing Tools`
 
 .. seealso:: :ref:`qgisvariabledistancebuffer`,
    :ref:`qgismultiringconstantbuffer`, :ref:`qgisbufferbym`
@@ -408,7 +438,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -508,7 +538,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -518,6 +547,15 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - Output (buffer) polygon layer
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:buffer``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgiscentroids:
@@ -543,7 +581,7 @@ as for the original features.
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
 
-``Default menu``: :menuselection:`Vector --> Geometry Tools`
+**Default menu**: :menuselection:`Vector --> Geometry Tools`
 
 .. seealso:: :ref:`qgispointonsurface`
 
@@ -553,7 +591,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -591,7 +628,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -601,6 +637,15 @@ Outputs
      - ``OUTPUT``
      - [vector: point]
      - Output point vector layer (centroids)
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:centroids``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgischeckvalidity:
@@ -634,7 +679,7 @@ additional information (number of errors found and types of error):
    Left: the input layer. Right: the valid layer (green), the invalid
    layer (orange)
 
-``Default menu``: :menuselection:`Vector --> Geometry Tools`
+**Default menu**: :menuselection:`Vector --> Geometry Tools`
 
 .. seealso:: :ref:`qgisfixgeometries` and the core plugin
    :ref:`geometry_checker`
@@ -645,7 +690,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -726,7 +771,7 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -762,6 +807,15 @@ Outputs
      - Vector layer containing a copy of the valid features of
        the source layer.
 
+Python code
+...........
+
+**Algorithm ID**: ``qgis:checkvalidity``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 .. index:: GEOS, QGIS
 .. _typesofgeomerrors:
 
@@ -771,6 +825,7 @@ Types of error messages and their meanings
 .. list-table:: If the GEOS method is used the following error messages can occur:
    :widths: 30 30 40
    :header-rows: 1
+   :class: longtable
 
    * - Error message
      - Explanation
@@ -840,6 +895,7 @@ Types of error messages and their meanings
 .. list-table:: If the QGIS method is used the following error messages can occur:
    :widths: 50 50 50
    :header-rows: 1
+   :class: longtable
 
    * - Error message
      - Explanation
@@ -911,7 +967,7 @@ part.
 See the 'Promote to multipart' or 'Aggregate' algorithms for
 alternative options.
 
-``Default menu``: :menuselection:`Vector --> Geometry Tools`
+**Default menu**: :menuselection:`Vector --> Geometry Tools`
 
 .. seealso:: :ref:`qgisaggregate`, :ref:`qgispromotetomulti`,
    :ref:`qgisdissolve`
@@ -922,7 +978,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -947,7 +1002,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -967,6 +1021,15 @@ Outputs
        * Save to PostGIS Table...
 
        The file encoding can also be changed here.
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:collect``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisconcavehull:
@@ -989,7 +1052,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -1038,7 +1101,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1048,6 +1110,15 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - The output vector layer
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:concavehull``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisknearestconcavehull:
@@ -1078,7 +1149,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1130,7 +1200,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1140,6 +1209,15 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - The output vector layer
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:knearestconcavehull``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisconvertgeometrytype:
@@ -1161,7 +1239,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1206,7 +1283,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1216,6 +1292,15 @@ Outputs
      - ``OUTPUT``
      - [vector: any]
      - Output vector layer - the type depends on the parameters
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:convertgeometrytype``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisconvexhull:
@@ -1236,7 +1321,7 @@ features.
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
 
-``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
+**Default menu**: :menuselection:`Vector --> Geoprocessing Tools`
 
 .. seealso:: :ref:`qgisminimumboundinggeometry`,
    :ref:`qgisconcavehull`
@@ -1247,7 +1332,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1277,7 +1361,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1287,6 +1370,15 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - The output (convex hull) vector layer
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:convexhull``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisextenttolayer:
@@ -1308,7 +1400,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1338,7 +1429,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1348,6 +1438,15 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - The output (extent) vector layer
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:extenttolayer``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgispointtolayer:
@@ -1368,7 +1467,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1404,7 +1502,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1414,6 +1511,15 @@ Outputs
      - ``OUTPUT``
      - [vector: point]
      - The output point vector layer containing the input point.
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:pointtolayer``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgiswedgebuffers:
@@ -1440,7 +1546,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -1507,7 +1613,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1517,6 +1622,15 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - The output (wedge buffer) vector layer
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:wedgebuffers``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisdelaunaytriangulation:
@@ -1531,7 +1645,7 @@ to the input point layer.
 
    Delaunay triangulation on points
 
-``Default menu``: :menuselection:`Vector --> Geometry Tools`
+**Default menu**: :menuselection:`Vector --> Geometry Tools`
 
 Parameters
 ..........
@@ -1539,7 +1653,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1569,7 +1682,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1579,6 +1691,15 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - The output (Delaunay triangulation) vector layer
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:delaunaytriangulation``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisdeleteholes:
@@ -1608,7 +1729,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1648,7 +1768,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1658,6 +1777,15 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - The output (cleaned) vector layer
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:deleteholes``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisdensifygeometries:
@@ -1681,7 +1809,7 @@ input parameter.
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
 
-``Default menu``: :menuselection:`Vector --> Geometry Tools`
+**Default menu**: :menuselection:`Vector --> Geometry Tools`
 
 .. seealso:: :ref:`qgisdensifygeometriesgivenaninterval`
 
@@ -1691,7 +1819,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1727,7 +1854,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1737,6 +1863,15 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - The output (densified) vector layer
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:densifygeometries``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisdensifygeometriesgivenaninterval:
@@ -1777,7 +1912,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1813,7 +1947,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1823,6 +1956,15 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - The output (densified) vector layer
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:densifygeometriesgivenaninterval``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisdissolve:
@@ -1849,7 +1991,7 @@ input feature that happens to be processed.
 
    Dissolve the polygon layer on a common attribute
 
-``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
+**Default menu**: :menuselection:`Vector --> Geoprocessing Tools`
 
 .. seealso:: :ref:`qgisaggregate`, :ref:`qgiscollect`
 
@@ -1859,7 +2001,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1883,7 +2024,7 @@ Parameters
        If no field is provided then all the
        features are dissolved, resulting in a
        single (multipart) feature.
-   * - ***Dissolved**
+   * - **Dissolved**
      - ``OUTPUT``
      - [same as input]
 
@@ -1903,7 +2044,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1913,6 +2053,15 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - The output vector layer with dissolved geometries
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:dissolve``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgissetzfromraster:
@@ -1936,7 +2085,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -1991,7 +2140,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -2002,6 +2150,15 @@ Outputs
      - [same as input]
      - The output vector layer with Z values from the
        raster layer
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:setzfromraster``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisdropmzvalues:
@@ -2018,7 +2175,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -2060,7 +2216,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -2072,6 +2227,15 @@ Outputs
      - The output vector layer (identical to the input layer,
        except that the M and/or Z dimensions have been removed
        from the geometries).
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:dropmzvalues``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgiseliminateselectedpolygons:
@@ -2088,7 +2252,7 @@ Eliminate is normally used to get rid of sliver polygons, i.e. tiny
 polygons that are a result of polygon intersection processes where
 boundaries of the inputs are similar but not identical.
 
-``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
+**Default menu**: :menuselection:`Vector --> Geoprocessing Tools`
 
 .. seealso:: :ref:`qgisfixgeometries`
 
@@ -2098,7 +2262,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -2140,7 +2303,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -2150,6 +2312,15 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - The output polygon vector layer.
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:eliminateselectedpolygons``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisexplodelines:
@@ -2180,7 +2351,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -2210,7 +2380,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -2221,6 +2390,15 @@ Outputs
      - [vector: line]
      - The output line vector layer with features representing
        each segment of the input layer.
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:explodelines``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisextendlines:
@@ -2250,7 +2428,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -2290,7 +2467,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -2300,6 +2476,15 @@ Outputs
      - ``OUTPUT``
      - [vector: line]
      - The output (extended) line vector layer.
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:extendlines``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisextractmvalues:
@@ -2322,7 +2507,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -2384,7 +2569,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -2394,6 +2578,15 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - The output vector layer (with M values)
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:extractmvalues``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisextractspecificvertices:
@@ -2430,7 +2623,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -2467,7 +2659,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -2478,6 +2669,15 @@ Outputs
      - [vector: point]
      - The output (point) vector layer containing the specified
        vertices from the input layer geometries.
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:extractspecificvertices``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisextractvertices:
@@ -2500,7 +2700,7 @@ geometry and bisector angle of vertex for original geometry.
 
    Vertices extracted for line and polygon layer
 
-``Default menu``: :menuselection:`Vector --> Geometry Tools`
+**Default menu**: :menuselection:`Vector --> Geometry Tools`
 
 .. seealso:: :ref:`qgisextractspecificvertices`,
    :ref:`qgisfilterverticesbym`, :ref:`qgisfilterverticesbyz`
@@ -2511,7 +2711,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -2541,7 +2740,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -2552,6 +2750,15 @@ Outputs
      - [vector: point]
      - The output (point) vector layer containing the vertices from
        the input layer geometries.
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:extractvertices``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisextractzvalues:
@@ -2575,7 +2782,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -2637,7 +2844,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -2647,6 +2853,15 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - The output vector layer (with Z values)
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:extractzvalues``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisfilterverticesbym:
@@ -2681,7 +2896,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -2728,7 +2942,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -2739,6 +2952,15 @@ Outputs
      - [same as input]
      - The output vector layer of features
        with only the filtered vertices.
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:filterverticesbym``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisfilterverticesbyz:
@@ -2775,7 +2997,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -2822,7 +3043,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -2833,6 +3053,15 @@ Outputs
      - [same as input]
      - The output vector layer of features
        with only the filtered vertices.
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:filterverticesbyz``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisfixgeometries:
@@ -2857,7 +3086,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -2887,7 +3115,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -2897,6 +3124,15 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - The output vector layer with fixed geometries.
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:fixgeometries``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisforcerhr:
@@ -2915,7 +3151,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -2945,7 +3180,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -2955,6 +3189,16 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - The output vector layer with reoriented geometries.
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:forcerhr``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisantimeridiansplit:
 
@@ -2984,7 +3228,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -3014,7 +3257,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -3024,6 +3266,15 @@ Outputs
      - ``OUTPUT``
      - [vector: line]
      - The output line vector layer split at the antimeridian.
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:antimeridiansplit``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisgeometrybyexpression:
@@ -3046,7 +3297,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -3111,7 +3362,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -3121,6 +3371,15 @@ Outputs
      - ``OUTPUT``
      - [vector: any]
      - The output vector layer
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:geometrybyexpression``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisinterpolatepoint:
@@ -3151,7 +3410,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -3187,7 +3446,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -3198,6 +3456,16 @@ Outputs
      - [vector: point]
      - The output point vector layer with features
        at a set distance along the line or polygon boundary
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:interpolatepoint``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgiskeepnbiggestparts:
 
@@ -3220,7 +3488,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -3257,7 +3524,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -3268,6 +3534,15 @@ Outputs
      - [vector: polygon]
      - The output polygon vector layer with the N biggest parts of
        each feature
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:keepnbiggestparts``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgislinesubstring:
@@ -3299,7 +3574,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -3339,7 +3613,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -3349,6 +3622,15 @@ Outputs
      - ``OUTPUT``
      - [vector: line]
      - The output line vector layer.
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:linesubstring``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgislinestopolygons:
@@ -3361,7 +3643,7 @@ input line layer.
 The attribute table of the output layer is the same as the one from of
 the input line layer.
 
-``Default menu``: :menuselection:`Vector --> Geometry Tools`
+**Default menu**: :menuselection:`Vector --> Geometry Tools`
 
 .. seealso:: :ref:`qgispolygonstolines`, :ref:`qgispolygonize`
 
@@ -3371,7 +3653,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -3401,7 +3682,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -3411,6 +3691,15 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - The output polygon vector layer.
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:linestopolygons``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgismergelines:
@@ -3433,7 +3722,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -3463,7 +3751,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -3473,6 +3760,15 @@ Outputs
      - ``OUTPUT``
      - [vector: line]
      - The output (merged) line vector layer.
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:mergelines``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisminimumboundinggeometry:
@@ -3506,7 +3802,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -3557,7 +3853,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -3567,6 +3862,15 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - The output (bounding) polygon vector layer.
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:minimumboundinggeometry``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisminimumenclosingcircle:
@@ -3592,7 +3896,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -3629,7 +3932,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -3639,6 +3941,15 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - The output polygon vector layer.
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:minimumenclosingcircle``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgismultiringconstantbuffer:
@@ -3667,7 +3978,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -3715,7 +4026,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -3725,6 +4035,15 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - The output polygon vector layer.
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:multiringconstantbuffer``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgismultiparttosingleparts:
@@ -3746,7 +4065,7 @@ but divided into single features.
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
 
-``Default menu``: :menuselection:`Vector --> Geometry Tools`
+**Default menu**: :menuselection:`Vector --> Geometry Tools`
 
 .. seealso:: :ref:`qgiscollect`, :ref:`qgispromotetomulti`
 
@@ -3756,7 +4075,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -3786,7 +4104,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -3796,6 +4113,15 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - The output vector layer.
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:multiparttosingleparts``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisoffsetline:
@@ -3823,7 +4149,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -3893,7 +4219,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -3903,6 +4228,15 @@ Outputs
      - ``OUTPUT``
      - [vector: line]
      - Output (offset) line layer
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:offsetline``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisorientedminimumboundingbox:
@@ -3928,7 +4262,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -3958,7 +4291,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -3968,6 +4300,15 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - The output polygon vector layer.
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:orientedminimumboundingbox``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisorthogonalize:
@@ -3994,7 +4335,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -4043,7 +4384,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -4053,6 +4393,15 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - The output polygon vector layer with adjusted angles.
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:orthogonalize``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgispointonsurface:
@@ -4073,7 +4422,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -4108,7 +4456,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -4118,6 +4465,15 @@ Outputs
      - ``OUTPUT``
      - [vector: point]
      - The output point vector layer.
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:pointonsurface``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgispointsalonglines:
@@ -4145,7 +4501,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -4195,7 +4551,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -4206,6 +4561,15 @@ Outputs
      - [vector: point]
      - Point vector layer with features placed along lines or polygon
        boundaries of the input layer.
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:pointsalonglines``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgispointsdisplacement:
@@ -4223,7 +4587,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -4275,7 +4639,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -4285,6 +4648,15 @@ Outputs
      - ``OUTPUT``
      - [vector: point]
      - Output point vector layer
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:pointsdisplacement``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgispoleofinaccessibility:
@@ -4314,7 +4686,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -4350,7 +4721,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -4360,6 +4730,15 @@ Outputs
      - ``OUTPUT``
      - [vector: point]
      - The output point vector layer
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:poleofinaccessibility``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgispolygonize:
@@ -4385,7 +4764,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -4423,7 +4801,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -4433,6 +4810,15 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - The output polygon vector layer from lines
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:polygonize``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgispolygonstolines:
@@ -4447,7 +4833,7 @@ representing the boundaries of the polygons in the input layer.
 
    Black lines as the result of the algorithm
 
-``Default menu``: :menuselection:`Vector --> Geometry Tools`
+**Default menu**: :menuselection:`Vector --> Geometry Tools`
 
 .. seealso:: :ref:`qgispolygonize`
 
@@ -4457,7 +4843,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -4487,7 +4872,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -4497,6 +4881,15 @@ Outputs
      - ``OUTPUT``
      - [vector: line]
      - The output line vector layer from polygons
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:polygonstolines``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisprojectpointcartesian:
@@ -4514,7 +4907,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -4556,7 +4949,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -4566,6 +4958,16 @@ Outputs
      - ``OUTPUT``
      - [vector: point]
      - The output (projected) point vector layer
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:projectpointcartesian``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgispromotetomulti:
 
@@ -4592,7 +4994,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -4622,7 +5023,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -4632,6 +5032,15 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - The output multipart vector layer
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:promotetomulti``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisrectanglesovalsdiamonds:
@@ -4655,7 +5064,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -4720,7 +5129,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -4730,6 +5138,15 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - The output vector layer (with the buffer shapes)
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:rectanglesovalsdiamonds``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisremoveduplicatevertices:
@@ -4766,7 +5183,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -4811,7 +5228,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -4821,6 +5237,15 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - The output vector layer (without duplicate vertices)
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:removeduplicatevertices``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisremovenullgeometries:
@@ -4846,7 +5271,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -4897,7 +5322,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -4911,6 +5335,15 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - The output vector layer (without NULL and, if chosen, empty geometries)
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:removenullgeometries``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisreverselinedirection:
@@ -4932,7 +5365,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -4963,7 +5395,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -4973,6 +5404,15 @@ Outputs
      - ``OUTPUT``
      - [vector: line]
      - The output line vector layer (with reversed lines)
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:reverselinedirection``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisrotatefeatures:
@@ -4994,7 +5434,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -5042,7 +5481,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -5052,6 +5490,15 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - The output vector layer with rotated geometries
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:rotatefeatures``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgissegmentizebymaxangle:
@@ -5076,7 +5523,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -5114,7 +5560,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -5124,6 +5569,15 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - The output vector layer with segmentized geometries
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:segmentizebymaxangle``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgissegmentizebymaxdistance:
@@ -5147,7 +5601,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -5186,7 +5639,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -5196,6 +5648,15 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - The output vector layer with segmentized geometries
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:segmentizebymaxdistance``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgissetmvalue:
@@ -5223,7 +5684,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -5260,7 +5720,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -5271,6 +5730,15 @@ Outputs
      - [same as input]
      - The output vector layer (with M values assigned to the
        geometries)
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:setmvalue``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgissetmfromraster:
@@ -5295,7 +5763,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -5349,7 +5817,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -5359,6 +5826,15 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - The output vector layer (with updated M values)
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:setmfromraster``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgissetzvalue:
@@ -5386,7 +5862,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -5423,7 +5898,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -5434,6 +5908,14 @@ Outputs
      - [same as input]
      - The output vector layer (with Z values assigned)
 
+Python code
+...........
+
+**Algorithm ID**: ``qgis:setzvalue``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 .. _qgissimplifygeometries:
 
@@ -5455,7 +5937,7 @@ distance based (the "Douglas-Peucker" algorithm), area based
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
-``Default menu``: :menuselection:`Vector --> Geometry Tools`
+**Default menu**: :menuselection:`Vector --> Geometry Tools`
 
 .. seealso:: :ref:`qgissmoothgeometry`, :ref:`qgisdensifygeometries`,
  :ref:`qgisdensifygeometriesgivenaninterval`
@@ -5466,7 +5948,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -5517,7 +5999,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -5527,6 +6008,15 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - The output (simplified) vector layer
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:simplifygeometries``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgissinglesidedbuffer:
@@ -5551,7 +6041,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -5624,7 +6114,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -5634,6 +6123,15 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - Output (buffer) polygon layer
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:singlesidedbuffer``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgissmoothgeometry:
@@ -5682,7 +6180,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -5733,7 +6231,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -5743,6 +6240,15 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - Output (smoothed) vector layer
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:smoothgeometry``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgissnapgeometries:
@@ -5764,7 +6270,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -5826,7 +6332,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -5836,6 +6341,15 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - Output (snapped) vector layer
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:snapgeometries``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgissnappointstogrid:
@@ -5865,7 +6379,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -5920,7 +6434,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -5930,6 +6443,15 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - Output (snapped) vector layer
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:snappointstogrid``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgissplitlinesbylength:
@@ -5947,7 +6469,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -5984,7 +6505,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -5997,6 +6517,15 @@ Outputs
      - The new line vector layer - the length of the feature geometries
        is less than or equal to the length specified in
        the LENGTH parameter.
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:splitlinesbylength``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgissubdivide:
@@ -6032,7 +6561,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -6072,7 +6600,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -6083,6 +6610,15 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - Output vector layer
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:subdivide``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisswapxy:
@@ -6105,7 +6641,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -6137,7 +6672,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -6148,6 +6682,15 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - Output (swapped) vector layer
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:swapxy``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgistaperedbuffer:
@@ -6171,7 +6714,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -6223,7 +6766,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -6233,6 +6775,15 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - Output (buffer) polygon layer
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:taperedbuffer``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgistessellate:
@@ -6260,7 +6811,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -6291,7 +6841,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -6301,6 +6850,15 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - Output multipolygonZ layer
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:tessellate``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgistransect:
@@ -6334,7 +6892,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -6386,7 +6944,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -6396,6 +6953,15 @@ Outputs
      - ``OUTPUT``
      - [vector: line]
      - Output line layer
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:transect``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgistranslategeometry:
@@ -6424,7 +6990,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -6479,7 +7045,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -6489,6 +7054,15 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - Output vector layer
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:translategeometry``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisvariabledistancebuffer:
@@ -6512,7 +7086,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -6574,7 +7148,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -6584,6 +7157,15 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - Buffer polygon vector layer.
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:variabledistancebuffer``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisbufferbym:
@@ -6607,7 +7189,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -6647,7 +7228,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -6657,6 +7237,15 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - Variable buffer polygon layer
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:bufferbym``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisvoronoipolygons:
@@ -6675,7 +7264,7 @@ point than to any other point.
 
    Voronoi polygons
 
-``Default menu``: :menuselection:`Vector --> Geometry Tools`
+**Default menu**: :menuselection:`Vector --> Geometry Tools`
 
 Parameters
 ..........
@@ -6683,7 +7272,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -6722,7 +7310,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -6732,6 +7319,15 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - Voronoi polygons of the input point vector layer
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:voronoipolygons``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE

@@ -50,6 +50,12 @@ Outputs
   A grid giving the horizontal distance along the flow path as defined by the
   D8 Flow Directions Grid to the streams in the Stream Raster Grid.
 
+**Algorithm ID**: ``taudem:d8hdisttostrm``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 D-Infinity Avalanche Runout
 ---------------------------
@@ -71,7 +77,7 @@ All points downslope from the source area are potentially in the affected area,
 but not beyond a point where the slope from the source to the affected area is
 less than a threshold angle called the Alpha Angle.
 
-.. figure:: img/arexample.gif
+.. figure:: img/arexample.png
    :align: center
 
 Slope is to be measured using the straight line distance from source point to
@@ -178,6 +184,12 @@ Outputs
   This is a grid of the flow distance from the source site that has the highest
   angle to each cell.
 
+**Algorithm ID**: ``taudem:dinfavalanche``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 D-Infinity Concentration Limited Accumulation
 ---------------------------------------------
@@ -225,7 +237,7 @@ Discharge Grid. Over the substance supply area concentration is at the threshold
 where ``L(x)`` denotes the load being carried by the flow. At remaining locations,
 the load is determined by load accumulation and the concentration by dilution:
 
-.. figure:: img/claeqn.gif
+.. figure:: img/claeqn.png
    :align: center
 
 Here ``d(x) = d(i, j)`` is a decay multiplier giving the fractional (first order)
@@ -236,7 +248,7 @@ order decay parameter. The Concentration grid output is ``C(x)``. If the outlets
 shapefile is used, the tool only evaluates the part of the domain that contributes
 flow to the locations given by the shapefile.
 
-.. figure:: img/clafig.gif
+.. figure:: img/clafig.png
    :align: center
 
 Useful for a tracking a contaminant released or partitioned to flow at a fixed
@@ -293,6 +305,12 @@ Outputs
   A grid giving the resulting concentration of the compound of interest in
   the flow.
 
+**Algorithm ID**: ``taudem:dinfconclimaccum``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 D-Infinity Decaying Accumulation
 --------------------------------
@@ -315,7 +333,7 @@ with the flow field but is subject to first order decay in moving from cell to
 cell. The output is the accumulated mass at each location ``DA(x)``. The
 accumulation of ``m`` at each grid cell can be numerically evaluated.
 
-.. figure:: img/decayeqn.gif
+.. figure:: img/decayeqn.png
    :align: center
 
 Here ``d(x) = d(i ,j)`` is a decay multiplier giving the fractional (first order)
@@ -327,7 +345,7 @@ order decay parameter. The weight grid is used to represent the mass loading
 the function is only evaluated on that part of the domain that contributes flow
 to the locations given by the shapefile.
 
-.. figure:: img/decay.gif
+.. figure:: img/decay.png
    :align: center
 
 Useful for a tracking contaminant or compound subject to decay or attenuation.
@@ -374,6 +392,12 @@ Outputs
   The D-Infinity Decaying Accumulation tool creates a grid of the accumulated
   mass at each location in the domain where mass moves with the D-infinity flow
   field, but is subject to first order decay in moving from cell to cell.
+
+**Algorithm ID**: ``taudem:dinfdecayaccum``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 D-Infinity Distance Down
@@ -479,6 +503,12 @@ Outputs
   Grid containing the distance to stream calculated using the D-infinity flow
   model and the statistical and path methods chosen.
 
+**Algorithm ID**: ``taudem:dinfdistdown``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 D-Infinity Distance Up
 ----------------------
@@ -580,6 +610,12 @@ Outputs
   Grid containing the distances up to the ridge calculated using the D-Infinity
   flow model and the statistical and path methods chosen.
 
+**Algorithm ID**: ``taudem:dinfdistup``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 D-Infinity Reverse Accumulation
 -------------------------------
@@ -593,7 +629,7 @@ reverse of the flow directions to accumulate the quantity of weight loading
 downslope from each grid cell. The function also reports the maximum value of
 the weight loading downslope from each grid cell in the Maximum Downslope grid.
 
-.. figure:: img/raccfig.gif
+.. figure:: img/raccfig.png
    :align: center
 
 This function is designed to evaluate and map the hazard due to activities that
@@ -629,6 +665,12 @@ Outputs
   The grid giving the maximum of the weight loading grid downslope from each
   grid cell.
 
+**Algorithm ID**: ``taudem:dinfrevaccum``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 D-Infinity Transport Limited Accumulation - 2
 ---------------------------------------------
@@ -645,7 +687,7 @@ a grid cell is calculated as the sum of the transport in from upslope grid cells
 ``Tin``, plus the local supply contribution, ``E`` (e.g. erosion). This function
 also outputs deposition, ``D``, calculated as total supply minus actual transport.
 
-.. figure:: img/tlaeqn.gif
+.. figure:: img/tlaeqn.png
    :align: center
 
 Here ``E`` is the supply. ``Tout`` at each grid cell becomes ``Tin`` for downslope
@@ -654,31 +696,31 @@ is deposition (``tdep``). The function provides the option to evaluate
 concentration of a compound (contaminant) adhered to the transported substance.
 This is evaluated as follows:
 
-.. figure:: img/tlaceqn1.gif
+.. figure:: img/tlaceqn1.png
    :align: center
 
 Where ``Lin`` is the total incoming compound loading and ``Cin`` and ``Tin``
 refer to the Concentration and Transport entering from each upslope grid cell.
 
-.. figure:: img/tlaceqn2.gif
+.. figure:: img/tlaceqn2.png
    :align: center
 
 If
 
 
-.. figure:: img/tlaceqn3.gif
+.. figure:: img/tlaceqn3.png
    :align: center
 
 else
 
-.. figure:: img/tlaceqn4.gif
+.. figure:: img/tlaceqn4.png
    :align: center
 
 where ``Cs`` is the concentration supplied locally and the difference in the
 second term on the right represents the additional supply from the local grid
 cell. Then,
 
-.. figure:: img/tlaceqn5.gif
+.. figure:: img/tlaceqn5.png
    :align: center
 
 ``Cout`` at each grid cell comprises is the concentration grid output from this
@@ -751,6 +793,12 @@ Outputs
   output and gives the concentration of a compound (contaminant) adhered or
   bound to the transported substance (e.g. sediment) is calculated.
 
+**Algorithm ID**: unknown
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 D-Infinity Transport Limited Accumulation
 -----------------------------------------
@@ -767,7 +815,7 @@ a grid cell is calculated as the sum of the transport in from upslope grid cells
 ``Tin``, plus the local supply contribution, ``E`` (e.g. erosion). This function
 also outputs deposition, ``D``, calculated as total supply minus actual transport.
 
-.. figure:: img/tlaeqn.gif
+.. figure:: img/tlaeqn.png
    :align: center
 
 Here ``E`` is the supply. ``Tout`` at each grid cell becomes ``Tin`` for downslope
@@ -776,31 +824,31 @@ is deposition (``tdep``). The function provides the option to evaluate
 concentration of a compound (contaminant) adhered to the transported substance.
 This is evaluated as follows:
 
-.. figure:: img/tlaceqn1.gif
+.. figure:: img/tlaceqn1.png
    :align: center
 
 Where ``Lin`` is the total incoming compound loading and ``Cin`` and ``Tin``
 refer to the Concentration and Transport entering from each upslope grid cell.
 
-.. figure:: img/tlaceqn2.gif
+.. figure:: img/tlaceqn2.png
    :align: center
 
 If
 
 
-.. figure:: img/tlaceqn3.gif
+.. figure:: img/tlaceqn3.png
    :align: center
 
 else
 
-.. figure:: img/tlaceqn4.gif
+.. figure:: img/tlaceqn4.png
    :align: center
 
 where ``Cs`` is the concentration supplied locally and the difference in the
 second term on the right represents the additional supply from the local grid
 cell. Then,
 
-.. figure:: img/tlaceqn5.gif
+.. figure:: img/tlaceqn5.png
    :align: center
 
 ``Cout`` at each grid cell comprises is the concentration grid output from this
@@ -862,6 +910,12 @@ Outputs
   minus the transport capacity out of the grid cell. The deposition grid is
   calculated as the transport in + the local supply - the tranport out.
 
+**Algorithm ID**: ``taudem:dinftranslimaccum``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 D-Infinity Upslope Dependence
 -----------------------------
@@ -884,7 +938,7 @@ weighted contributing area function is denoted ``I(y; x)`` giving the weighted
 contribution using a unit value (1) from specific grid cells ``y`` to grid cells
 ``x``, then the upslope dependence is: ``D(x; y) = I(y; x)``.
 
-.. figure:: img/dependence.gif
+.. figure:: img/dependence.png
    :align: center
 
 This is useful for example to track where flow or a flow related substance or
@@ -910,6 +964,12 @@ Outputs
 ``Output Upslope Dependence Grid`` [raster]
   A grid quantifing the amount each source point in the domain contributes to
   the zone defined by the destination grid.
+
+**Algorithm ID**: ``taudem:dinfupdependence``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 Slope Average Down
@@ -951,6 +1011,12 @@ Outputs
   This output is a grid of slopes calculated in the D8 downslope direction,
   averaged over the selected distance.
 
+**Algorithm ID**: ``taudem:slopeavedown``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 Slope Over Area Ratio
 ---------------------
@@ -985,3 +1051,45 @@ Outputs
   This is algebraically related to the more common ``ln(a/tan beta)`` wetness
   index, but contributing area is in the denominator to avoid divide by 0
   errors when slope is 0.
+
+**Algorithm ID**: ``taudem:slopearearatio``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+Topographic wetness index
+-------------------------
+
+Description
+...........
+
+Calculates the topographic wetness index (TWI).
+
+Parameters
+..........
+
+``Slope`` [raster]
+  A grid of slope. This grid can be generated using ether the
+  **"D8 Flow Directions"** tool or the **"D-Infinity Flow Directions"** tool.
+
+``Specific catchment area`` [raster]
+  A grid giving the contributing area value for each cell taken as its own
+  contribution plus the contribution from upslope neighbors that drain in to it.
+  Contributing area is counted in terms of the number of grid cells (or
+  summation of weights). This grid can be generated using either the
+  **"D8 Contributing Area"** tool or the **"D-Infinity Contributing Area"** tool.
+
+Outputs
+.......
+
+``Wetness index`` [raster]
+  A grid of the wetness index (TWI).
+
+**Algorithm ID**: ``taudem:twi``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+

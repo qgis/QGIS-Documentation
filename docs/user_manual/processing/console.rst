@@ -259,7 +259,7 @@ list gives a quick review of how to introduce values for each type of input para
 * Enumeration. If an algorithm has an enumeration parameter, the value of that
   parameter should be entered using an integer value. To know the available
   options, you can use the ``algorithmHelp()`` command, as above.
-  For instance, the "native.buffer" algorithm has an enumeration called JOIN_STYLE:
+  For instance, the ``native:buffer`` algorithm has an enumeration called JOIN_STYLE:
 
   ::
 
@@ -332,6 +332,39 @@ You can load feature output by passing the corresponding file paths to
 the ``load()`` method.
 Or you could use ``runAndLoadResults()`` instead of ``run()`` to load
 them immediately.
+
+If you want to open an algorithm dialog from the console you can use the 
+``createAlgorithmDialog`` method. The only mandatory parameter is the algorithm 
+name, but you can also define the dictionary of parameters so that the dialog 
+will be filled automatically:
+
+::
+
+    >>> my_dialog = processing.createAlgorithmDialog("native:buffer", {
+                  'INPUT': '/data/lines.shp',
+                  'DISTANCE': 100.0,
+                  'SEGMENTS': 10,
+                  'DISSOLVE': True,
+                  'END_CAP_STYLE': 0,
+                  'JOIN_STYLE': 0,
+                  'MITER_LIMIT': 10,
+                  'OUTPUT': '/data/buffers.shp'})
+    >>> my_dialog.show()
+
+The ``execAlgorithmDialog`` method opens the dialog immediately:
+
+::
+
+    >>> processing.execAlgorithmDialog("native:buffer", {
+                  'INPUT': '/data/lines.shp',
+                  'DISTANCE': 100.0,
+                  'SEGMENTS': 10,
+                  'DISSOLVE': True,
+                  'END_CAP_STYLE': 0,
+                  'JOIN_STYLE': 0,
+                  'MITER_LIMIT': 10,
+                  'OUTPUT': '/data/buffers.shp'})
+
 
 Creating scripts and running them from the toolbox
 --------------------------------------------------
@@ -449,33 +482,45 @@ functions are specified:
 There are a number of different parameter types available for
 input and output. Below is an alphabetically sorted list:
 
+* :class:`QgsProcessingParameterAggregate <qgis.core.QgsProcessingParameterAggregate>`
+* :class:`QgsProcessingParameterAuthConfig <qgis.core.QgsProcessingParameterAuthConfig>`
 * :class:`QgsProcessingParameterBand <qgis.core.QgsProcessingParameterBand>`
 * :class:`QgsProcessingParameterBoolean <qgis.core.QgsProcessingParameterBoolean>`
 * :class:`QgsProcessingParameterColor <qgis.core.QgsProcessingParameterColor>`
+* :class:`QgsProcessingParameterCoordinateOperation <qgis.core.QgsProcessingParameterCoordinateOperation>`
 * :class:`QgsProcessingParameterCrs <qgis.core.QgsProcessingParameterCrs>`
+* :class:`QgsProcessingParameterDatabaseSchema <qgis.core.QgsProcessingParameterDatabaseSchema>`
+* :class:`QgsProcessingParameterDatabaseTable <qgis.core.QgsProcessingParameterDatabaseTable>`
+* :class:`QgsProcessingParameterDateTime <qgis.core.QgsProcessingParameterDateTime>`
 * :class:`QgsProcessingParameterDistance <qgis.core.QgsProcessingParameterDistance>`
 * :class:`QgsProcessingParameterEnum <qgis.core.QgsProcessingParameterEnum>`
 * :class:`QgsProcessingParameterExpression <qgis.core.QgsProcessingParameterExpression>`
 * :class:`QgsProcessingParameterExtent <qgis.core.QgsProcessingParameterExtent>`
 * :class:`QgsProcessingParameterFeatureSink <qgis.core.QgsProcessingParameterFeatureSink>`
 * :class:`QgsProcessingParameterFeatureSource <qgis.core.QgsProcessingParameterFeatureSource>`
-* :class:`QgsProcessingParameterField <qgis.core.QgsProcessingParameterField>` -
-  A field in the attributes table of a vector layer. The name of the
-  layer has to be specified.
+* :class:`QgsProcessingParameterField <qgis.core.QgsProcessingParameterField>`
+* :class:`QgsProcessingParameterFieldMapping  <qgis.core.QgsProcessingParameterFieldMapping>`
 * :class:`QgsProcessingParameterFile <qgis.core.QgsProcessingParameterFile>`
 * :class:`QgsProcessingParameterFileDestination <qgis.core.QgsProcessingParameterFileDestination>`
 * :class:`QgsProcessingParameterFolderDestination <qgis.core.QgsProcessingParameterFolderDestination>`
+* :class:`QgsProcessingParameterLayout <qgis.core.QgsProcessingParameterLayout>`
+* :class:`QgsProcessingParameterLayoutItem <qgis.core.QgsProcessingParameterLayoutItem>`
 * :class:`QgsProcessingParameterMapLayer <qgis.core.QgsProcessingParameterMapLayer>`
+* :class:`QgsProcessingParameterMapTheme <qgis.core.QgsProcessingParameterMapTheme>`
 * :class:`QgsProcessingParameterMatrix <qgis.core.QgsProcessingParameterMatrix>`
+* :class:`QgsProcessingParameterMeshLayer <qgis.core.QgsProcessingParameterMeshLayer>`
 * :class:`QgsProcessingParameterMultipleLayers <qgis.core.QgsProcessingParameterMultipleLayers>`
 * :class:`QgsProcessingParameterNumber <qgis.core.QgsProcessingParameterNumber>`
 * :class:`QgsProcessingParameterPoint <qgis.core.QgsProcessingParameterPoint>`
+* :class:`QgsProcessingParameterProviderConnection <qgis.core.QgsProcessingParameterProviderConnection>`
 * :class:`QgsProcessingParameterRange <qgis.core.QgsProcessingParameterRange>`
 * :class:`QgsProcessingParameterRasterDestination <qgis.core.QgsProcessingParameterRasterDestination>`
 * :class:`QgsProcessingParameterRasterLayer <qgis.core.QgsProcessingParameterRasterLayer>`
+* :class:`QgsProcessingParameterScale <qgis.core.QgsProcessingParameterScale>`
 * :class:`QgsProcessingParameterString <qgis.core.QgsProcessingParameterString>`
 * :class:`QgsProcessingParameterVectorDestination <qgis.core.QgsProcessingParameterVectorDestination>`
 * :class:`QgsProcessingParameterVectorLayer <qgis.core.QgsProcessingParameterVectorLayer>`
+* :class:`QgsProcessingParameterVectorTileWriterLayers <qgis.core.QgsProcessingParameterVectorTileWriterLayers>`
 
 The first parameter to the constructors is the name of the parameter,
 and the second is the description of the parameter (for the user

@@ -29,7 +29,7 @@ and update the whole QGIS documentation.
 
    "Tim Sutton", "Yves Jacolin", "Jacob Lanstorp", "Gary E. Sherman", "Richard Duivenvoorde"
    "Tara Athan", "Anita Graser", "Arnaud Morvan",  "Gavin Macaulay", "Luca Casagrande"
-   "K\. Koy", "Hugo Mercier", "Akgar Gumbira", "Marie Silvestre", "Jürgen E. Fischer"
+   "K\. Koy", "Hugo Mercier", "Akbar Gumbira", "Marie Silvestre", "Jürgen E. Fischer"
    "Fran Raga", "Eric Goddard", "Martin Dobias", "Diethard Jansen", "Saber Razmjooei"
    "Ko Nagase", "Nyall Dawson", "Matthias Kuhn", "Andreas Neumann", "Harrissou Sant-anna"
    "Manel Clos", "David Willis", "Larissa Junek", "Paul Blottière", "Sebastian Dietrich"
@@ -43,7 +43,7 @@ and update the whole QGIS documentation.
    "Andy Schmid", "Vincent Mora", "Alexandre Neto", "Hien Tran-Quang", "Alexandre Busquets"
    "João Gaspar", "Tom Kralidis", "Alexander Bruy", "Paolo Cavallini", "Milo Van der Linden"
    "Peter Ersts", "Ujaval Gandhi", "Dominic Keller", "Giovanni Manghi", "Maximilian Krambach"
-   "Anne Ghisla", "Dick Groskamp", "Uros Preloznik", "Stéphane Brunner", "QGIS Koran Translator"
+   "Anne Ghisla", "Dick Groskamp", "Uros Preloznik", "Stéphane Brunner", "QGIS Korean Translator"
    "Zoltan Siki", "Håvard Tveite", "Mattheo Ghetta", "Salvatore Larosa", "Konstantinos Nikolaou"
    "Tom Chadwin", "Larry Shaffer", "Nathan Woodrow", "Martina Savarese", "Godofredo Contreras"
    "Astrid Emde", "Luigi Pirelli", "Thomas Gratier", "Giovanni Allegri", "GiordanoPezzola"

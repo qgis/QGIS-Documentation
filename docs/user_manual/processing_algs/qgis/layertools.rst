@@ -7,22 +7,24 @@ Layer tools
       :local:
       :depth: 1
 
+
 .. _qgispolygonfromlayerextent:
 
 Extract layer extent
 --------------------
 
-Generates a vector layer with the minimum bounding box (rectangle with N-S orientation)
-that covers all the input features.
+Generates a vector layer with the minimum bounding box (rectangle with
+N-S orientation) that covers all the input features.
 
-The output layer contains a single bounding box for the whole input layer.
+The output layer contains a single bounding box for the whole input
+layer.
 
 .. figure:: img/extract_layer_extent.png
    :align: center
 
    In red the bounding box of the source layer
 
-``Default menu``: :menuselection:`Vector --> Research Tools`
+**Default menu**: :menuselection:`Vector --> Research Tools`
 
 Parameters
 ..........
@@ -30,7 +32,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -60,7 +61,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    *  - Label
       - Name
@@ -71,3 +71,13 @@ Outputs
       - [vector: polygon]
       - Output (polygon) vector layer with the extent
         (minimum bounding box)
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:polygonfromlayerextent``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+

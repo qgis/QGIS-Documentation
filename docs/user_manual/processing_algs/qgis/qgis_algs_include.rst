@@ -12,7 +12,7 @@ Advanced parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -119,7 +119,7 @@ Advanced parameters
 .. list-table::
    :header-rows: 0
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - **Direction field**
 
@@ -225,7 +225,7 @@ Advanced parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -416,3 +416,20 @@ Available geometric predicates are:
     UPDATE your_table SET area=ST_AREA(geom);
 
 **end_postgisexecutesqlexample**
+
+**algorithm_code_section**
+
+.. The following section is used to load python code sample in algs help
+
+.. code-block:: python
+
+    import processing
+    processing.run("algorithm_id", {parameter_dictionary})
+
+The *algorithm id* is displayed when you hover over the algorithm in
+the Processing Toolbox.
+The *parameter dictionary* provides the parameter NAMEs and values.
+See :ref:`processing_console` for details on how to run processing algorithms
+from the Python console.
+
+**end_algorithm_code_section**

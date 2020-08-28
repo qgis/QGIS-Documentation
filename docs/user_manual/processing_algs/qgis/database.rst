@@ -11,11 +11,12 @@ Database
 
 Export to PostgreSQL
 --------------------
-Exports a vector layer to a PostgreSQL database, creating a new relation.
+Exports a vector layer to a PostgreSQL database, creating a new
+relation.
 If a relation with the same name exists, it can be removed before the
 new relation is created.
-Prior to this a connection between QGIS and the PostgreSQL database has to
-be created (see eg :ref:`vector_create_stored_connection`).
+Prior to this a connection between QGIS and the PostgreSQL database
+has to be created (see eg :ref:`vector_create_stored_connection`).
 
 Parameters
 ..........
@@ -23,7 +24,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -128,15 +129,23 @@ Outputs
 
 The algorithm has no output.
 
+Python code
+...........
+
+**Algorithm ID**: ``qgis:importintopostgis``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisimportintospatialite:
 
 Export to SpatiaLite
 --------------------
 Exports a vector layer to a SpatiaLite database.
-Prior to this a connection between QGIS and the SpatiaLite database has to
-be created (see eg :ref:`label_spatialite`).
-
+Prior to this a connection between QGIS and the SpatiaLite database
+has to be created (see eg :ref:`label_spatialite`).
 
 Parameters
 ..........
@@ -144,7 +153,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -237,6 +246,15 @@ Outputs
 
 The algorithm has no output.
 
+Python code
+...........
+
+**Algorithm ID**: ``qgis:importintospatialite``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgispackage:
 
@@ -255,7 +273,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -296,7 +313,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -308,15 +324,25 @@ Outputs
      - [string] [list]
      - The list of layers added to the GeoPackage.
 
+Python code
+...........
+
+**Algorithm ID**: ``qgis:package``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgispostgisexecuteandloadsql:
 
 PostgreSQL execute and load SQL
 -------------------------------
 
-Allows a SQL database query to be performed on a PostgreSQL database connected to QGIS
-and loads the result. The algorithm **won't** create any new layer: it is designed to
-run queries on the layer itself.
+Allows a SQL database query to be performed on a PostgreSQL database
+connected to QGIS and loads the result.
+The algorithm **won't** create a new layer: it is designed to run
+queries on the layer itself.
 
 .. _qgis_postgis_execute_sql_example:
 
@@ -333,7 +359,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -371,7 +396,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -383,22 +407,32 @@ Outputs
      - [vector: any]
      - The resulting vector layer to be loaded into QGIS.
 
+Python code
+...........
+
+**Algorithm ID**: ``qgis:postgisexecuteandloadsql``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgispostgisexecutesql:
 
 PostgreSQL execute SQL
 ----------------------
 
-Allows a SQL database query to be performed on a PostgreSQL database connected to QGIS.
-The algorithm **won't** create any new layer: it is designed to run queries on
-the layer itself.
+Allows a SQL database query to be performed on a PostgreSQL database
+connected to QGIS.
+The algorithm **won't** create a new layer: it is designed to run
+queries on the layer itself.
 
 .. include:: qgis_algs_include.rst
    :start-after: **postgisexecutesqlexample**
    :end-before: **end_postgisexecutesqlexample**
 
-.. seealso:: :ref:`qgispostgisexecuteandloadsql`, :ref:`qgisexecutesql`,
- :ref:`qgisspatialiteexecutesql`
+.. seealso:: :ref:`qgispostgisexecuteandloadsql`,
+   :ref:`qgisexecutesql`, :ref:`qgisspatialiteexecutesql`
 
 
 Parameters
@@ -407,7 +441,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -431,15 +464,25 @@ Outputs
 No output is created.
 The SQL query is executed in place.
 
+Python code
+...........
+
+**Algorithm ID**: ``qgis:postgisexecutesql``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisspatialiteexecutesql:
 
 SpatiaLite execute SQL
 ----------------------
 
-Allows a SQL database query to be performed on a SpatiaLite database connected to QGIS.
-The algorithm **won't** create any new layer: it is designed to run queries on
-the layer itself.
+Allows a SQL database query to be performed on a SpatiaLite database
+connected to QGIS.
+The algorithm **won't** create a new layer: it is designed to run
+queries on the layer itself.
 
 .. seealso:: :ref:`qgispostgisexecutesql`, :ref:`qgisexecutesql`
 
@@ -452,7 +495,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -478,3 +520,12 @@ Outputs
 
 No output is created.
 The SQL query is executed in place.
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:spatialiteexecutesql``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**

@@ -1,24 +1,6 @@
 Answer Sheet
 ===============================================================================
 
-|RF| *Adding Your First Layer*
--------------------------------------------------------------------------------
-
-.. _interface-preparation-1:
-
-|basic| *Preparation*
-...............................................................................
-
-In the main area of the dialog you should see many shapes with different
-colors. Each shape belongs to a layer you can identify by its color in the
-left panel (your colors may be different from the ones below):
-
-.. figure:: img/basic_map.png
-   :align: center
-
-:ref:`Back to text <backlink-interface-preparation-1>`
-
-
 |RF| *An Overview of the Interface*
 -------------------------------------------------------------------------------
 
@@ -47,31 +29,23 @@ remember the names and functions of the screen elements.
 :ref:`Back to text <backlink-interface-overview-2>`
 
 
-|RF| *Working with Vector Data*
+|RF| *Adding Your First Layer*
 -------------------------------------------------------------------------------
 
-.. _vector-explore-attribute-data:
+.. _interface-preparation-1:
 
-|basic| *Attribute data*
+|basic| *Preparation*
 ...............................................................................
 
-* There should be 9 fields in the :guilabel:`rivers` layer:
+In the main area of the dialog you should see many shapes with different
+colors. Each shape belongs to a layer you can identify by its color in the
+left panel (your colors may be different from the ones below):
 
-  #. Select the layer in the :guilabel:`Layers` panel.
-  #. Right-click and choose :guilabel:`Open Attribute Table`, or press the |openTable|
-     button on the :guilabel:`Attributes Toolbar`.
-  #. Count the number of columns.
+.. figure:: img/basic_map.png
+   :align: center
 
-  .. tip:: A quicker approach could be to double-click the
-   :guilabel:`rivers` layer, open the :menuselection:`Layer properties -->
-   Fields` tab, where you will find a numbered list of the table's fields.
+:ref:`Back to text <backlink-interface-preparation-1>`
 
-* Information about towns is available in the :guilabel:`places` layer. Open its
-  attribute table as you did with the :guilabel:`rivers` layer: there are two features whose :guilabel:`place`
-  attribute is set to ``town``: *Swellendam* and *Buffeljagsrivier*.
-  You can add comment on other fields from these two records, if you like.
-
-:ref:`Back to text <backlink-vector-explore-attribute-data>`
 
 .. _vector-load-more-data:
 
@@ -231,20 +205,37 @@ Here are examples of the symbol structure:
 
 :ref:`Back to text <backlink-symbology-geom_generator>`
 
-|RF| *Attribute Data*
+|RF| *Vector Attribute Data*
 -------------------------------------------------------------------------------
 
-.. _labels-attribute-data-1:
+.. _vector-explore-attribute-data:
 
-|basic| *Attribute Data*
+|basic| *Exploring Vector Data Attributes*
 ...............................................................................
 
-The ``name`` field is the most useful to show as labels. This is because all its
-values are unique for every object and are very unlikely to contain *NULL*
-values. If your data contains some *NULL* values, do not worry as long as most
-of your places have names.
+* There should be 9 fields in the :guilabel:`rivers` layer:
 
-:ref:`Back to text <backlink-labels-attribute-data-1>`
+  #. Select the layer in the :guilabel:`Layers` panel.
+  #. Right-click and choose :guilabel:`Open Attribute Table`, or press the |openTable|
+     button on the :guilabel:`Attributes Toolbar`.
+  #. Count the number of columns.
+
+  .. tip:: A quicker approach could be to double-click the
+   :guilabel:`rivers` layer, open the :menuselection:`Layer properties -->
+   Fields` tab, where you will find a numbered list of the table's fields.
+
+* Information about towns is available in the :guilabel:`places` layer. Open its
+  attribute table as you did with the :guilabel:`rivers` layer:
+  there are two features whose :guilabel:`place`
+  attribute is set to ``town``: *Swellendam* and *Buffeljagsrivier*.
+  You can add comment on other fields from these two records, if you like.
+
+* The ``name`` field is the most useful to show as labels. This is because all its
+  values are unique for every object and are very unlikely to contain *NULL*
+  values. If your data contains some *NULL* values, do not worry as long as most
+  of your places have names.
+
+:ref:`Back to text <backlink-vector-explore-attribute-data>`
 
 
 |RF| *Labels*
@@ -588,21 +579,21 @@ Your results:
 |moderate| *Raster to Vector*
 ...............................................................................
 
-* Open the :guilabel:`Query Builder` by right-clicking on the :guilabel:`all_terrain`
-  layer in the :guilabel:`Layers` panel, and selecting the :menuselection:`Properties
-  --> Source` tab.
-* Then build the query :kbd:`"suitable" = 1`.
-* Click :guilabel:`OK` to filter out all the polygons where this condition
-  isn't met.
+#. Open the :guilabel:`Query Builder` by right-clicking on the
+   :guilabel:`all_terrain` layer in the :guilabel:`Layers` panel, and selecting
+   the :menuselection:`Properties --> Source` tab.
+#. Then build the query ``"suitable" = 1``.
+#. Click :guilabel:`OK` to filter out all the polygons where this condition
+   isn't met.
 
-When viewed over the original raster, the areas should overlap perfectly:
+   When viewed over the original raster, the areas should overlap perfectly:
 
-.. figure:: img/polygonize_raster.png
-   :align: center
+   .. figure:: img/polygonize_raster.png
+      :align: center
 
-* You can save this layer by right-clicking on the :guilabel:`all_terrain`
-  layer in the :guilabel:`Layers` panel and choosing :guilabel:`Save As...`,
-  then continue as per the instructions.
+#. You can save this layer by right-clicking on the :guilabel:`all_terrain`
+   layer in the :guilabel:`Layers` panel and choosing :guilabel:`Save As...`,
+   then continue as per the instructions.
 
 :ref:`Back to text <backlink-complete-analysis-1>`
 
@@ -612,10 +603,10 @@ When viewed over the original raster, the areas should overlap perfectly:
 |moderate| *Inspecting the Results*
 ...............................................................................
 
-You may notice that some of the buildings in your :kbd:`new_solution` layer have
-been "sliced" by the :guilabel:`Intersect` tool. This shows that only part of the
+You may notice that some of the buildings in your :file:`new_solution` layer have
+been "sliced" by the :guilabel:`Intersection` tool. This shows that only part of the
 building - and therefore only part of the property - lies on suitable terrain.
-We can therefore sensibly eliminate those buildings from our dataset
+We can therefore sensibly eliminate those buildings from our dataset.
 
 :ref:`Back to text <backlink-complete-analysis-2>`
 
@@ -649,48 +640,48 @@ there is suitable terrain for 100 meters beyond.
 
 To demonstrate:
 
-* Go to :menuselection:`Vector --> Geoprocessing Tools --> Buffer(s)` to open
-  the Buffer(s) dialog.
-* Set it up like this:
+#. Go to :menuselection:`Vector --> Geoprocessing Tools --> Buffer(s)` to open
+   the Buffer(s) dialog.
+#. Set it up like this:
 
-  .. figure:: img/suitable_terrain_buffer.png
-     :align: center
+   .. figure:: img/suitable_terrain_buffer.png
+      :align: center
 
-* Use the :guilabel:`suitable_terrain` layer with :kbd:`10` segments and a
-  buffer distance of :kbd:`-100`. (The distance is automatically in meters
-  because your map is using a projected CRS.)
-* Save the output in :kbd:`exercise_data/residential_development/` as
-  :kbd:`suitable_terrain_continuous100m.shp`.
-* If necessary, move the new layer above your original :kbd:`suitable_terrain`
-  layer.
+#. Use the :guilabel:`suitable_terrain` layer with ``10`` segments and a
+   buffer distance of ``-100``. (The distance is automatically in meters
+   because your map is using a projected CRS.)
+#. Save the output in :file:`exercise_data/residential_development/` as
+   :file:`suitable_terrain_continuous100m.shp`.
+#. If necessary, move the new layer above your original
+   :guilabel:`suitable_terrain` layer.
 
-Your results will look like something like this:
+   Your results will look like something like this:
 
-.. figure:: img/suitable_buffer_results.png
-   :align: center
+   .. figure:: img/suitable_buffer_results.png
+      :align: center
 
-* Now use the :guilabel:`Select by Location` tool (:menuselection:`Vector -->
-  Research Tools --> Select by location`).
-* Set up like this:
+#. Now use the :guilabel:`Select by Location` tool (:menuselection:`Vector -->
+   Research Tools --> Select by location`).
+#. Set up like this:
 
-  .. figure:: img/select_by_location.png
-     :align: center
+   .. figure:: img/select_by_location.png
+      :align: center
 
-* Select features in :guilabel:`new_solution` that intersect features in
-  :guilabel:`suitable_terrain_continuous100m.shp`.
+#. Select features in :guilabel:`new_solution` that intersect features in
+   :guilabel:`suitable_terrain_continuous100m.shp`.
 
-This is the result:
+   This is the result:
 
-.. figure:: img/buffer_select_result.png
-   :align: center
+   .. figure:: img/buffer_select_result.png
+      :align: center
 
-The yellow buildings are selected. Although some of the buildings fall partly
-outside the new :kbd:`suitable_terrain_continuous100m` layer, they lie well
-within the original :kbd:`suitable_terrain` layer and therefore meet all of our
-requirements.
+   The yellow buildings are selected. Although some of the buildings fall
+   partly outside the new :guilabel:`suitable_terrain_continuous100m` layer,
+   they lie well within the original :guilabel:`suitable_terrain` layer and
+   therefore meet all of our requirements.
 
-* Save the selection under :kbd:`exercise_data/residential_development/` as
-  :kbd:`final_answer.shp`.
+#. Save the selection under :file:`exercise_data/residential_development/` as
+   :file:`final_answer.shp`.
 
 
 :ref:`Back to text <backlink-complete-analysis-3>`

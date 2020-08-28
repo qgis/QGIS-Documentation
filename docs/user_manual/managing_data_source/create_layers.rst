@@ -110,10 +110,10 @@ figure_create_shapefile_.
    :guilabel:`...` button next to :guilabel:`File name`. QGIS will
    automatically add the right extension to the name you provide.
 #. Next, indicate the :guilabel:`File encoding` of the data
-#. Choose the :guilabel:`Geometry type` of the layer (point, multipoint, line
-   or polygon)
-#. Specify whether the geometry should have :guilabel:`Z (+ M
-   values)` or :guilabel:`M values`
+#. Choose the :guilabel:`Geometry type` of the layer: No Geometry (resulting
+   in a :file:`.DBF` format file), point, multipoint, line or polygon
+#. Specify whether the geometry should have additional dimensions:
+   :guilabel:`None`, :guilabel:`Z (+ M values)` or :guilabel:`M values`
 #. Specify the coordinate reference system using the |setProjection| button
 
 .. _figure_create_shapefile:
@@ -242,7 +242,8 @@ figure_create_temporary_. Then:
    #. Enter the :guilabel:`Name` of the field
    #. Select the data :guilabel:`Type`: :guilabel:`Text`, :guilabel:`Whole number`,
       :guilabel:`Decimal number`, :guilabel:`Boolean`, :guilabel:`Date`,
-      :guilabel:`Time` and :guilabel:`Date & Time` are supported.
+      :guilabel:`Time`, :guilabel:`Date & Time` and :guilabel:`Binary (BLOB)`
+      are supported.
    #. Depending on the selected data format, enter the :guilabel:`Length` and
       :guilabel:`Precision`
    #. Click on the |newAttribute| :guilabel:`Add to Fields List` button
@@ -398,6 +399,10 @@ Depending on the format of export, some of these options may be available:
   :guilabel:`Custom Options` which allow you to configure advanced parameters
   depending on the output format. Some are described in :ref:`supported_format`
   but for full details, see the `GDAL <https://gdal.org>`_ driver documentation.
+  Each file format has its own custom parameters, e.g. for the ``GeoJSON`` format
+  have a look at the
+  `GDAL GeoJSON <https://gdal.org/drivers/vector/geojson.html#layer-creation-options>`_
+  documentation.
 
 .. _figure_save_vector:
 
@@ -502,9 +507,9 @@ data by themselves and can be seen as views.
 
 To create a virtual layer, open the virtual layer creation dialog by:
 
-* choosing the |virtualLayer| :guilabel:`Add/Edit Virtual Layer` entry
+* choosing the |addVirtualLayer| :guilabel:`Add/Edit Virtual Layer` entry
   in the :menuselection:`Layer --> Add Layer -->` menu;
-* enabling the |virtualLayer| :guilabel:`Add Virtual Layer` tab in the
+* enabling the |addVirtualLayer| :guilabel:`Add Virtual Layer` tab in the
   :guilabel:`Data Source Manager` dialog;
 * or using the :guilabel:`DB Manager` dialog tree.
 
@@ -681,6 +686,8 @@ when used in conjunction with this spatial index syntax.
 
 .. |addPart| image:: /static/common/mActionAddPart.png
    :width: 1.5em
+.. |addVirtualLayer| image:: /static/common/mActionAddVirtualLayer.png
+   :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |createGPX| image:: /static/common/create_gpx.png
@@ -703,5 +710,3 @@ when used in conjunction with this spatial index syntax.
    :width: 1.5em
 .. |unchecked| image:: /static/common/checkbox_unchecked.png
    :width: 1.3em
-.. |virtualLayer| image:: /static/common/mActionAddVirtualLayer.png
-   :width: 1.5em

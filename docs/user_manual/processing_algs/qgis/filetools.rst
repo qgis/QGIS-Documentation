@@ -7,13 +7,12 @@ File tools
       :local:
       :depth: 1
 
-
 .. _qgisfiledownloader:
 
 Download file
 --------------
-Downloads a file specified using a URL (using for instance ``http:`` or
-``file:``).
+Downloads a file specified using a URL (using for instance ``http:``
+or ``file:``).
 In other words you can copy/paste a URL and download the file.
 
 Parameters
@@ -22,7 +21,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -53,7 +51,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -63,3 +60,14 @@ Outputs
      - ``OUTPUT``
      - [string]
      - The location of the downloaded file
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:filedownloader``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+

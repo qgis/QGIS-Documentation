@@ -134,10 +134,11 @@ displayed at the bottom of the frame.
   'Always (not recommended)'.
 * :guilabel:`Default project file format`
 
-  * |radioButtonOn| :guilabel:`QGZ Archive file format, supports auxiliary data`
+  * |radioButtonOn| :guilabel:`QGZ Archive file format, embeds auxiliary data`
     (see :ref:`auxiliary data <vector_auxiliary_storage>`)
   * |radioButtonOff| :guilabel:`QGS Project saved in a clear text, does not
-    support auxiliary data`
+    embed auxiliary data`: the auxiliary data is stored in a separate :file:`.qgd`
+    file along with the project file.
 
 
 .. index:: Environment variables
@@ -376,6 +377,17 @@ This widget lists all the folders you chose to hide from the :ref:`Browser panel
 <browser_panel>`.
 Removing a folder from the list will make it available in the :guilabel:`Browser`
 panel.
+
+**Localized paths**
+
+It is possible to use localized paths for any kind of file based data source. 
+They are a list of paths which are used to abstract the data source location.
+For instance, if :file:`C:\\my_maps` is listed in the localized paths,
+a layer having :file:`C:\\my_maps\\my_country\\ortho.tif` as data source
+will be saved in the project using :file:`localized:my_country\\ortho.tif`.
+
+The paths are listed by order of preference, in other words QGIS will first look
+for the file in the first path, then in the second one, etc.
 
 
 .. index:: Rendering
@@ -1054,6 +1066,9 @@ But you can create as many user profiles as you want:
 #. A new instance of QGIS is started, using a clean
    configuration. You can then set your custom configurations.
 
+If you have more than one profile in your QGIS installation, the name of the
+active profile is shown in the application title bar between square brackets.
+
 As each user profile contains isolated settings, plugins and history they can be great for
 different workflows, demos, users of the same machine, or testing settings, etc.
 And you can switch from one to the other by selecting them in the :menuselection:`Settings -->
@@ -1233,6 +1248,8 @@ These colors are identified as :guilabel:`Project colors` and listed as part of
   #. Repeat steps 2 and 3 as much as needed
   #. Update the project color once and the change is reflected EVERYWHERE
      it's in use.
+
+.. _project_data_source_properties:
 
 Data Sources Properties
 -----------------------

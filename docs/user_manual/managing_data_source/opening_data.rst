@@ -150,20 +150,21 @@ hierarchically, and there are several top level entries:
 #. Then comes a number of container / database types and service protocols,
    depending on your platform and underlying libraries:
 
-   * :guilabel:`GeoPackage`
-   * :guilabel:`SpatiaLite`
-   * :guilabel:`PostGIS`
-   * :guilabel:`MSSQL`
-   * :guilabel:`Oracle`
-   * :guilabel:`DB2`
-   * :guilabel:`WMS/WMTS`
-   * :guilabel:`XYZ Tiles`
-   * :guilabel:`WCS`
-   * :guilabel:`WFS`
-   * :guilabel:`OWS`
-   * :guilabel:`ArcGISMapServer`
-   * :guilabel:`ArcGISFeatureServer`
-   * :guilabel:`GeoNode`
+   * |geoPackage| :guilabel:`GeoPackage`
+   * |spatialite| :guilabel:`SpatiaLite`
+   * |postgis| :guilabel:`PostGIS`
+   * |mssql| :guilabel:`MSSQL`
+   * |oracle| :guilabel:`Oracle`
+   * |db2| :guilabel:`DB2`
+   * |wms| :guilabel:`WMS/WMTS`
+   * |vectorTileLayer| :guilabel:`Vector Tiles`
+   * |xyz| :guilabel:`XYZ Tiles`
+   * |wcs| :guilabel:`WCS`
+   * |wfs| :guilabel:`WFS/OGC API-Features`
+   * |ows| :guilabel:`OWS`
+   * |ams| :guilabel:`ArcGIS Map Service`
+   * |afs| :guilabel:`ArcGIS Feature Service`
+   * |geonode| :guilabel:`GeoNode`
 
 Interacting with the Browser items
 ----------------------------------
@@ -421,7 +422,7 @@ Layer` tabs allow loading of layers from source types other than :guilabel:`File
   Supported protocol types are:
 
   * ``HTTP/HTTPS/FTP``, with a :guilabel:`URI` and, if required,
-    an authentication
+    an :ref:`authentication <authentication_index>`.
   * Cloud storage such as ``AWS S3``, ``Google Cloud Storage``, ``Microsoft
     Azure Blob``, ``Alibaba OSS Cloud``, ``Open Stack Swift Storage``.
     You need to fill in the :guilabel:`Bucket or container` and the
@@ -429,7 +430,7 @@ Layer` tabs allow loading of layers from source types other than :guilabel:`File
   * service supporting OGC ``WFS 3`` (still experimental),
     using ``GeoJSON`` or ``GEOJSON - Newline Delimited`` format or based on
     ``CouchDB`` database.
-    A :guilabel:`URI` is required, with optional authentication.
+    A :guilabel:`URI` is required, with optional :ref:`authentication <authentication_index>`.
 
 .. _mesh_loading:
 
@@ -1138,7 +1139,7 @@ Connecting to web services
 With QGIS you can get access to different types of OGC web services (WM(T)S,
 WFS(-T), WCS, CSW, ...).
 Thanks to QGIS Server, you can also publish such services.
-Chapter :ref:`sec_ogc` contains descriptions of these capabilities.
+:ref:`QGIS-Server-manual` contains descriptions of these capabilities.
 
 .. index:: XYZ Tile services
 .. _xyz_tile:
@@ -1227,19 +1228,37 @@ Examples of XYZ Tile services:
    :width: 1.5em
 .. |addSpatiaLiteLayer| image:: /static/common/mActionAddSpatiaLiteLayer.png
    :width: 1.5em
+.. |afs| image:: /static/common/mIconAfs.png
+   :width: 1.5em
+.. |ams| image:: /static/common/mIconAms.png
+   :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |collapseTree| image:: /static/common/mActionCollapseTree.png
    :width: 1.5em
 .. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
    :width: 1.5em
+.. |db2| image:: /static/common/mIconDb2.png
+   :width: 1.5em
 .. |dbManager| image:: /static/common/dbmanager.png
    :width: 1.5em
 .. |filterMap| image:: /static/common/mActionFilterMap.png
    :width: 1.5em
+.. |geoPackage| image:: /static/common/mGeoPackage.png
+   :width: 1.5em
+.. |geonode| image:: /static/common/mIconGeonode.png
+   :width: 1.5em
 .. |kde| image:: /static/common/kde.png
    :width: 1.5em
 .. |metadata| image:: /static/common/metadata.png
+   :width: 1.5em
+.. |mssql| image:: /static/common/mIconMssql.png
+   :width: 1.5em
+.. |oracle| image:: /static/common/mIconOracle.png
+   :width: 1.5em
+.. |ows| image:: /static/common/mIconOws.png
+   :width: 1.5em
+.. |postgis| image:: /static/common/mIconPostgis.png
    :width: 1.5em
 .. |radioButtonOff| image:: /static/common/radiobuttonoff.png
    :width: 1.5em
@@ -1250,4 +1269,16 @@ Examples of XYZ Tile services:
 .. |setProjection| image:: /static/common/mActionSetProjection.png
    :width: 1.5em
 .. |signPlus| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |spatialite| image:: /static/common/mIconSpatialite.png
+   :width: 1.5em
+.. |vectorTileLayer| image:: /static/common/mIconVectorTileLayer.png
+   :width: 1.5em
+.. |wcs| image:: /static/common/mIconWcs.png
+   :width: 1.5em
+.. |wfs| image:: /static/common/mIconWfs.png
+   :width: 1.5em
+.. |wms| image:: /static/common/mIconWms.png
+   :width: 1.5em
+.. |xyz| image:: /static/common/mIconXyz.png
    :width: 1.5em
