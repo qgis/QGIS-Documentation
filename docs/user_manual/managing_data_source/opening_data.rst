@@ -1211,7 +1211,11 @@ When the path to a data source is wrong, QGIS opens the
 You can double-click in the :guilabel:`Datasource` field or click :guilabel:`Browse` to fix
 the path.
 It is possible to continue working with your project with the broken path by clicking
-:guilabel:`Keep Unavailable Layers´ (your layer will then be broken).
+:guilabel:`Keep Unavailable Layers`. Your layer is then displayed in the
+:guilabel:`Layers` panel, but without any data until you fix the path using
+the |indicatorBadLayer| :sup:`Unavailable layer!` icon next to it in the
+:guilabel:`Layers` panel, or :guilabel:`Change Data Source...` in the
+layer contextual menu.
 Another possibility is to |deleteSelected| :guilabel:`Remove Unavailable Layers`.
 As the last step, click :guilabel:`Apply changes`.
 
