@@ -1201,6 +1201,8 @@ Examples of XYZ Tile services:
   :guilabel:`URL`: ``http://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?appid={api_key}``
   :guilabel:`Min. Zoom Level`: 0, :guilabel:`Max. Zoom Level`: 19.
   
+.. _handle_broken_paths:
+
 Handling broken file paths
 ==========================
 
