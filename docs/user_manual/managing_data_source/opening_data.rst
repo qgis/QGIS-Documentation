@@ -1201,6 +1201,28 @@ Examples of XYZ Tile services:
 * Open Weather Map Temperature:
   :guilabel:`URL`: ``http://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?appid={api_key}``
   :guilabel:`Min. Zoom Level`: 0, :guilabel:`Max. Zoom Level`: 19.
+  
+.. _handle_broken_paths:
+
+Handling broken file paths
+==========================
+
+When the path to a data source is wrong, QGIS opens the
+:guilabel:`Handle Unavailable Layers` dialog.
+You can double-click in the :guilabel:`Datasource` field or click :guilabel:`Browse` to fix
+the path.
+It is possible to continue working with your project with the broken path by clicking
+:guilabel:`Keep Unavailable Layers`. Your layer is then displayed in the
+:guilabel:`Layers` panel, but without any data until you fix the path using
+the |indicatorBadLayer| :sup:`Unavailable layer!` icon next to it in the
+:guilabel:`Layers` panel, or :guilabel:`Change Data Source...` in the
+layer contextual menu.
+Another possibility is to |deleteSelected| :guilabel:`Remove Unavailable Layers`.
+As the last step, click :guilabel:`Apply changes`.
+
+When a layer path has been fixed, QGIS scans through all other broken paths and tries
+to auto-fix those that have the same broken file path.
+
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
@@ -1243,11 +1265,15 @@ Examples of XYZ Tile services:
    :width: 1.5em
 .. |dbManager| image:: /static/common/dbmanager.png
    :width: 1.5em
+.. |deleteSelected| image:: /static/common/mActionDeleteSelected.png
+   :width: 1.5em
 .. |filterMap| image:: /static/common/mActionFilterMap.png
    :width: 1.5em
 .. |geoPackage| image:: /static/common/mGeoPackage.png
    :width: 1.5em
 .. |geonode| image:: /static/common/mIconGeonode.png
+   :width: 1.5em
+.. |indicatorBadLayer| image:: /static/common/mIndicatorBadLayer.png
    :width: 1.5em
 .. |kde| image:: /static/common/kde.png
    :width: 1.5em
