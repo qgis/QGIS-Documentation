@@ -1206,7 +1206,7 @@ Examples of XYZ Tile services:
 Handling broken file paths
 ==========================
 
-When the file path to a data source is wrong, QGIS opens the
+When the path to a data source is wrong, QGIS opens the
 :guilabel:`Handle Unavailable Layers` dialog.
 You can double-click in the :guilabel:`Datasource` field or click :guilabel:`Browse` to fix
 the path.
