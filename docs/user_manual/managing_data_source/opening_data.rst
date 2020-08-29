@@ -1215,7 +1215,9 @@ It is possible to continue working with your project with the broken path by cli
 :guilabel:`Layers` panel, but without any data until you fix the path using
 the |indicatorBadLayer| :sup:`Unavailable layer!` icon next to it in the
 :guilabel:`Layers` panel, or :guilabel:`Change Data Source...` in the
-layer contextual menu.
+layer contextual menu. To fix the broken path automatically click
+:guilabel:`Auto-Find`. Be aware that in this version of QGIS the browsing 
+takes some time.
 Another possibility is to |deleteSelected| :guilabel:`Remove Unavailable Layers`.
 As the last step, click :guilabel:`Apply changes`.
 
@@ -1271,6 +1273,8 @@ to auto-fix those that have the same broken file path.
 .. |geoPackage| image:: /static/common/mGeoPackage.png
    :width: 1.5em
 .. |geonode| image:: /static/common/mIconGeonode.png
+   :width: 1.5em
+.. |indicatorBadLayer| image:: /static/common/mIndicatorBadLayer.png
    :width: 1.5em
 .. |kde| image:: /static/common/kde.png
    :width: 1.5em
