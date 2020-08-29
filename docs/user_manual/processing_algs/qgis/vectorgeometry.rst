@@ -11,11 +11,12 @@ Vector geometry
 
 Affine transform
 ----------------
-Applies an affine transformation to the geometries from a layer.
-Affine transformations can include translation, scaling and rotation.
-The operations are performed in order: scale, rotation, and translation.
 
-Z and M values (if present) can also be translated and scaled independently.
+Applies an affine transformation to the layer geometries.
+Affine transformations can include translation, scaling and rotation.
+The operations are performed in the following order: scale, rotation, and translation.
+
+Z and M values (if present) can be translated and scaled.
 
 .. figure:: img/affinetransform.png
    :align: center
