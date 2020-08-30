@@ -21,7 +21,8 @@ Z and M values (if present) can be translated and scaled.
 .. figure:: img/affinetransform.png
    :align: center
 
-   Vector layers before (on the left), and after an affine transformation (on the rigth). 
+            Vector point layer (green dots) before (left), and after (rigth) an affine
+            transformation (translation). 
 
 .. seealso:: :ref:`qgistranslategeometry` 
 
