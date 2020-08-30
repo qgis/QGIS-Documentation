@@ -9,8 +9,8 @@ Vector geometry
 
 .. _qgisaffinetransform:
 
-Affine transform
-----------------
+Affine transform |312|
+----------------------
 
 Applies an affine transformation to the layer geometries.
 Affine transformations can include translation, scaling and rotation.
@@ -7466,6 +7466,7 @@ Python code
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |312| replace:: ``NEW in 3.12``
 .. |314| replace:: ``NEW in 3.14``
 .. |arrowDown| image:: /static/common/mActionArrowDown.png
    :width: 1.5em
