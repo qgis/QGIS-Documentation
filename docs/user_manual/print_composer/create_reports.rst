@@ -170,7 +170,7 @@ Our body now consists of a map and a label showing the name of the
 state.
 To include the name of the state, we selected
 :menuselection:`Add Item --> Add Label` and data defined the text under :guilabel:`Main Properties` with the help of
-:guilabel:`Insert an Expression...`.
+:guilabel:`Insert or Edit an Expression...`.
 
 The result was the following expression (`name` is the name
 of the attribute in the `Admin Level 1` layer that contains the
