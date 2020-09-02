@@ -174,6 +174,8 @@ REQUEST
 This parameter is ``GetMap`` in case of the **GetMap** request.
 
 
+.. _server_layers_param:
+
 LAYERS
 ^^^^^^
 

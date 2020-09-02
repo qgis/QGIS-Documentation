@@ -284,7 +284,7 @@ Name “ATMAX”. User can already set title for layers, groups and project.
 OWS name is based on the name used in layer tree. This name is more a label
 for humans than a name for machine-to-machine communication. You can set a
 **Short name** for layers, groups or projects, to be used by QGIS Server as
-the layer name.
+the layer identification name (in :ref:`LAYERS <server_layers_param>` parameter for instance ).
 
 You can set title, short name and abstract for:
 
