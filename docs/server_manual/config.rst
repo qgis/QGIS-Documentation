@@ -286,7 +286,7 @@ for humans than a name for machine-to-machine communication. You can set a
 **Short name** for layers, groups or projects, to be used by QGIS Server as
 the layer name.
 
-You can set short name for:
+You can set title, short name and abstract for:
 
 * **Layers**: You can change this by right clicking on a layer, choose
   :menuselection:`Properties --> QGIS Server --> Description --> Short name`.
