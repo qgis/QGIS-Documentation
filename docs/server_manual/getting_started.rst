@@ -762,7 +762,7 @@ from the Coordinate Reference System Selector, or click :guilabel:`Used`
 to add the CRSs used in the QGIS project to the list.
 
 If you have print layouts defined in your project, they will be listed in the
-`GetProjectSettings` response, and they can be used by the GetPrint request to
+``GetProjectSettings`` response, and they can be used by the GetPrint request to
 create prints, using one of the print layouts as a template.
 This is a QGIS-specific extension to the WMS 1.3.0 specification.
 If you want to exclude any print layout from being published by the WMS,
@@ -782,7 +782,7 @@ need as this reduces the size of the WMS GetCapabilities response which leads
 to faster loading times on the client side.
 
 If you check |checkbox| :guilabel:`Use layer ids as name`, layer ids will be
-used to reference layers in the `GetCapabilities` response or `GetMap LAYERS`
+used to reference layers in the ``GetCapabilities`` response or ``GetMap LAYERS``
 parameter. If not, layer name or short name if defined (see :ref:`vectorservermenu`)
 is used.
 
