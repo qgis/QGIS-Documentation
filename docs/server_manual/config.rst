@@ -302,9 +302,8 @@ You can set title, short name and abstract for:
 
      Set group WMS data dialog
 
-* **Project**: You can choose a short name for the project root by going
-  to :menuselection:`Project properties --> QGIS Server --> Service capabilities
-  --> Short name`.
+* **Project**: go to :menuselection:`Project --> Properties... --> QGIS Server -->
+  Service Capabilities`.
 
 
 Connection to service file
