@@ -186,7 +186,7 @@ several ways to define these variables. This is fully described in
      - WMS
 
    * - QGIS_SERVER_API_RESOURCES_DIRECTORY
-     - Base directory for all WFS3 static resources (HTML templates, CSS, JS etc.)
+     - Base directory for all OGC API (such as OAPIF/WFS3) static resources (HTML templates, CSS, JS etc.)
      - depends on packaging
      - WFS
 
