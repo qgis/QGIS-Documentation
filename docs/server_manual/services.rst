@@ -524,11 +524,11 @@ and **Romania** they're highlighted in yellow.
 TILED
 ^^^^^
 
-For performance reasons, QGIS Server can be used in tiled mode. In this
-mode, client requests several small fixed size tiles in order to assemble
-them and form the whole map. Doing this, some symbols who live at the
-boundary between two tiles may appeared cut, because they live in one tile,
-not the other.
+For performance reasons, QGIS Server can be used in tiled mode.
+In this mode, the client requests several small fixed size tiles, and assembles
+them to form the whole map. Doing this, symbols at or near the
+boundary between two tiles may appeared cut, because they are only present in
+one of the tile.
 
 Set the ``TILED`` parameter to ``TRUE`` to tell QGIS Server to work in
 *tiled* mode, and to apply the *Tile buffer* configured in the QGIS
