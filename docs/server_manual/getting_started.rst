@@ -815,7 +815,7 @@ You can change the :guilabel:`Quality for JPEG images` factor. The quality facto
 in the range 0 to 100. Specify 0 to obtain small compressed files, 100 for large
 uncompressed files.
 
-You can change the limit of altas features printed in one request by setting the
+You can change the limit for atlas features to be printed in one request by setting the
 :guilabel:`Maximum features for Atlas print requests` field.
 
 When QGIS Server is used in tiled mode (see :ref:`TILED parameter<server_wms_tiled>`), you can set the
