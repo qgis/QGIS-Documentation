@@ -186,7 +186,8 @@ several ways to define these variables. This is fully described in
      - WMS
 
    * - QGIS_SERVER_API_RESOURCES_DIRECTORY
-     - Base directory for all OGC API (such as OAPIF/WFS3) static resources (HTML templates, CSS, JS etc.)
+     - Base directory for all OGC API (such as OAPIF/WFS3) static resources (HTML
+       templates, CSS, JS, ...)
      - depends on packaging
      - WFS
 
@@ -210,8 +211,8 @@ several ways to define these variables. This is fully described in
      - All
 
    * - QGIS_SERVER_DISABLE_GETPRINT
-     - This is an option at the project level to improve project read time by disabling loading of
-       layouts.
+     - This is an option at the project level to improve project read time by disabling
+       loading of layouts.
 
        Activating this option disables the QGIS WMS GetPrint request.
        Set this QGIS project flag to not load layouts.
