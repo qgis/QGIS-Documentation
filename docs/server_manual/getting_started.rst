@@ -782,7 +782,7 @@ need as this reduces the size of the WMS GetCapabilities response which leads
 to faster loading times on the client side.
 
 If you check |checkbox| :guilabel:`Use layer ids as name`, layer ids will be
-used to reference layer in `GetCapabilities` response or `GetMap LAYERS`
+used to reference layers in the `GetCapabilities` response or `GetMap LAYERS`
 parameter. If not, layer name or short name if defined (see :ref:`vectorservermenu`)
 is used.
 
