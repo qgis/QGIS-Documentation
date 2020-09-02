@@ -291,9 +291,7 @@ You can set title, short name and abstract for:
 * **Layers**: right-click on a layer and choose
   :menuselection:`Properties... --> QGIS Server --> Description`.
 
-* **Groups**: You can open a WMS data dialog (short name, title, abstract) by
-  right clicking on a layer group and selecting the :guilabel:`Set Group WMS data`
-  option.
+* **Groups**: right-click on a group and select :guilabel:`Set Group WMS data`
 
   .. _figure_group_wms_data:
 
