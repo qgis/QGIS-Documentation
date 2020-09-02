@@ -1771,7 +1771,7 @@ URL example:
 
     The maximum acceptable value for ``limit`` can be configured with
     the ``QGIS_SERVER_API_WFS3_MAX_LIMIT`` server configuration setting
-    (see: :ref:`server_wfs3_settings`).
+    (see: :ref:`qgis-server-envvar`).
 
 
 Feature filtering
@@ -1896,24 +1896,6 @@ returns only the ``name`` attribute
 .. code-block:: none
 
     http://localhost/qgisserver/wfs3/collection_one/items.json?properties=name
-
-
-.. _`server_wfs3_settings`:
-
-Configuration and settings
---------------------------
-
-Server settings recognized by the QGIS WFS3 implementation are:
-
-.. csv-table::
-   :header: "Name", "Description", "Default"
-   :widths: auto
-
-   "``QGIS_SERVER_API_RESOURCES_DIRECTORY``", "Base directory for all WFS3
-   static resources (HTML templates, CSS, JS etc.)", "depends on packaging"
-   "``QGIS_SERVER_API_WFS3_MAX_LIMIT``", "Maximum value for ``limit``
-   in a features request", "10000"
-
 
 
 The HTML template language
