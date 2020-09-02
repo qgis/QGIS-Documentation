@@ -786,8 +786,7 @@ used to reference layers in the `GetCapabilities` response or `GetMap LAYERS`
 parameter. If not, layer name or short name if defined (see :ref:`vectorservermenu`)
 is used.
 
-You can receive requested GetFeatureInfo as plain text, XML and GML. Default is XML,
-text or GML format depends the output format chosen for the GetFeatureInfo request.
+You can receive requested GetFeatureInfo as plain text, XML and GML. The default is XML.
 
 If you wish, you can check |checkbox| :guilabel:`Add geometry to feature response`.
 This will include the bounding box for each feature in the GetFeatureInfo response.
