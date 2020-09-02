@@ -195,28 +195,28 @@ several ways to define these variables. This is fully described in
      - 10000
      - WFS
 
-QGIS_SERVER_TRUST_LAYER_METADATA
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   * - QGIS_SERVER_TRUST_LAYER_METADATA
+     - This is an option at the project level to improve project read time by using the vector
+       layer extents defined in the project metadata and disabling the check for
+       PostgreSQL/PostGIS layer primary key uniqueness.
 
-This is an option at the project level to improve project read time by using the vector
-layer extents defined in the project metadata and disabling the check for
-PostgreSQL/PostGIS layer primary key uniqueness.
+       Trusting layer metadata can be forced by setting this variable to ``1`` or ``true``.
+       The vector layer's extent will then be the one defined in the project, and the
+       PostgreSQL/PostGIS layer's primary key defined in the data source is
+       considered as unique without a check.
 
-Trusting layer metadata can be forced by setting this variable to ``1`` or ``true``.
-The vector layer's extent will then be the one defined in the project, and the
-PostgreSQL/PostGIS layer's primary key defined in the data source is
-considered as unique without a check.
+       Do not use it if layers' extent is not fixed during the project's use.
+     - false
+     - All
 
-Do not use it if layers' extent is not fixed during the project's use.
+   * - QGIS_SERVER_DISABLE_GETPRINT
+     - This is an option at the project level to improve project read time by disabling loading of
+       layouts.
 
-QGIS_SERVER_DISABLE_GETPRINT
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-This is an option at the project level to improve project read time by disabling loading of
-layouts.
-
-Activating this option disables the QGIS WMS GetPrint request.
-Set this QGIS project flag to not load layouts.
+       Activating this option disables the QGIS WMS GetPrint request.
+       Set this QGIS project flag to not load layouts.
+     - false
+     - WMS
 
 Settings summary
 ================
