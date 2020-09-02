@@ -113,11 +113,6 @@ several ways to define these variables. This is fully described in
      - 100
      - All
 
-   * - DISPLAY
-     - This is used to pass (fake) X server display number (needed on Unix-like systems).
-     - ''
-     - All
-
    * - QGIS_PLUGINPATH
      - Useful if you are using Python plugins for the server, this sets the folder
        that is searched for Python plugins.
@@ -191,7 +186,8 @@ several ways to define these variables. This is fully described in
      - WMS
 
    * - QGIS_SERVER_API_RESOURCES_DIRECTORY
-     - Base directory for all WFS3 static resources (HTML templates, CSS, JS etc.)
+     - Base directory for all OGC API (such as OAPIF/WFS3) static
+       resources (HTML templates, CSS, JS, ...)
      - depends on packaging
      - WFS
 
