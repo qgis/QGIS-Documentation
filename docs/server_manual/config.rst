@@ -113,11 +113,6 @@ several ways to define these variables. This is fully described in
      - 100
      - All
 
-   * - DISPLAY
-     - This is used to pass (fake) X server display number (needed on Unix-like systems).
-     - ''
-     - All
-
    * - QGIS_PLUGINPATH
      - Useful if you are using Python plugins for the server, this sets the folder
        that is searched for Python plugins.
@@ -191,7 +186,8 @@ several ways to define these variables. This is fully described in
      - WMS
 
    * - QGIS_SERVER_API_RESOURCES_DIRECTORY
-     - Base directory for all WFS3 static resources (HTML templates, CSS, JS etc.)
+     - Base directory for all OGC API (such as OAPIF/WFS3) static resources (HTML
+       templates, CSS, JS, ...)
      - depends on packaging
      - WFS
 
@@ -200,28 +196,28 @@ several ways to define these variables. This is fully described in
      - 10000
      - WFS
 
-QGIS_SERVER_TRUST_LAYER_METADATA
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   * - QGIS_SERVER_TRUST_LAYER_METADATA
+     - This is an option at the project level to improve project read time by using the vector
+       layer extents defined in the project metadata and disabling the check for
+       PostgreSQL/PostGIS layer primary key uniqueness.
 
-This is an option at the project level to improve project read time by using the vector
-layer extents defined in the project metadata and disabling the check for
-PostgreSQL/PostGIS layer primary key uniqueness.
+       Trusting layer metadata can be forced by setting this variable to ``1`` or ``true``.
+       The vector layer's extent will then be the one defined in the project, and the
+       PostgreSQL/PostGIS layer's primary key defined in the data source is
+       considered as unique without a check.
 
-Trusting layer metadata can be forced by setting this variable to ``1`` or ``true``.
-The vector layer's extent will then be the one defined in the project, and the
-PostgreSQL/PostGIS layer's primary key defined in the data source is
-considered as unique without a check.
+       Do not use it if layers' extent is not fixed during the project's use.
+     - false
+     - All
 
-Do not use it if layers' extent is not fixed during the project's use.
+   * - QGIS_SERVER_DISABLE_GETPRINT
+     - This is an option at the project level to improve project read time by disabling
+       loading of layouts.
 
-QGIS_SERVER_DISABLE_GETPRINT
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-This is an option at the project level to improve project read time by disabling loading of
-layouts.
-
-Activating this option disables the QGIS WMS GetPrint request.
-Set this QGIS project flag to not load layouts.
+       Activating this option disables the QGIS WMS GetPrint request.
+       Set this QGIS project flag to not load layouts.
+     - false
+     - WMS
 
 Settings summary
 ================
