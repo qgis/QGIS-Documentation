@@ -811,8 +811,7 @@ GetMap request by entering the maximum width and height into the respective
 fields under :guilabel:`Maximums for GetMap request`.
 
 You can change the :guilabel:`Quality for JPEG images` factor. The quality factor must be
-in the range 0 to 100. Specify 0 to obtain small compressed files, 100 for large
-uncompressed files.
+in the range 0 to 100. Specify 0 for maximum compression, 100 for no compression.
 
 You can change the limit for atlas features to be printed in one request by setting the
 :guilabel:`Maximum features for Atlas print requests` field.
