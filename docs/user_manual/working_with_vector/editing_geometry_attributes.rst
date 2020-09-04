@@ -165,6 +165,43 @@ proximity.
 The smaller the search radius, the more difficult it will be to hit
 what you want to move.
 
+.. index:: Limit snapping to a scale range
+
+
+Limit snapping to a scale range
+-------------------------------
+
+In some cases snapping can become very slow. This is often caused by the
+amount of features in some layers that require a heavy index to compute 
+and maintain. Some parameters exist to enable snapping only when the map 
+view is inside a relevant scale range. This allows to only do the costly index 
+computation related to snapping at a scale where drawing is relevant.
+
+Scale limit to snapping is configured in
+:menuselection:`Project --> Snapping Options...`.
+Limiting snapping to scale is only available in
+:guilabel:`Advanced Configuration` mode.
+
+To limit snapping to scale you have three modes available : 
+
+* :guilabel:`Disabled`: Snapping is enabled whatever the current map scale
+  is. This is the default mode.
+* :guilabel:`Global`: Snapping is limited and only enabled when the current
+  scale of the map is between a global minimum and a global maximum value.
+* :guilabel:`PerLayer`: Snapping is limited and only enabled when the current
+  scale of the map is between a minimum and a maximum value each one of these
+  defined for each layer.
+
+
+When selecting :guilabel:`Global` mode two widgets become available
+to configure the minimum and maximum scale.
+
+When selecting :guilabel:`PerLayer` mode two columns become available to
+configure the minimum and maximum scale for each layer.
+
+Please note that the minimum and maximum scales follow the qgis convention :
+minimum scale is the most "zoom out" scale while maximum scale is the most "zoomed in".
+A minimum or maximum scale that is set to "0" or "not set" is considered not limiting.
 
 .. index:: Topological editing
    single: Digitizing; Topology
