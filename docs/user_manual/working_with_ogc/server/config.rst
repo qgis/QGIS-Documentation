@@ -253,7 +253,7 @@ communication while the **Title** is for the benefit of humans.
 
 For example, a dataset might have the descriptive Title
 “Maximum Atmospheric Temperature” and be requested using the abbreviated
-Name “ATMAX”. User can already set title for layers, groups and project.
+**Name** “ATMAX”. User can already set title for layers, groups and project.
 
 OWS name is based on the name used in layer tree. This name is more a label
 for humans than a name for machine-to-machine communication.
