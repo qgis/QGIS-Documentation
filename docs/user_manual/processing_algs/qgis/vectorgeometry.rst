@@ -7,6 +7,136 @@ Vector geometry
       :local:
       :depth: 1
 
+.. _qgisaffinetransform:
+
+Affine transform |312|
+----------------------
+
+Applies an affine transformation to the layer geometries.
+Affine transformations can include translation, scaling and rotation.
+The operations are performed in the following order: scale, rotation, and translation.
+
+Z and M values (if present) can be translated and scaled.
+
+.. figure:: img/affinetransform.png
+   :align: center
+
+   Vector point layer (green dots) before (left), and after (rigth) an affine transformation (translation). 
+
+.. seealso:: :ref:`qgistranslategeometry` 
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Translation (x-axis)**
+     - ``DELTA_X``
+     - [number |dataDefined|]
+
+       Default: 0
+     - Displacement to apply on the X axis.
+   * - **Translation (y-axis)**
+     - ``DELTA_Y``
+     - [number |dataDefined|]
+
+       Default: 0
+     - Displacement to apply on the Y axis.
+   * - **Translation (z-axis)**
+     - ``DELTA_Z``
+     - [number |dataDefined|]
+
+       Default: 0
+     - Displacement to apply on the Z axis.
+   * - **Translation (m-values)**
+     - ``DELTA_M``
+     - [number |dataDefined|]
+
+       Default: 0
+     - Offset to apply on m values.
+   * - **Scale factor (x-axis)**
+     - ``SCALE_X``
+     - [number |dataDefined|]
+
+       Default: 1
+     - Scaling value (expansion or contraction) to apply on the X axis. 
+   * - **Scale factor (y-axis)**
+     - ``SCALE_Y``
+     - [number |dataDefined|]
+
+       Default: 1
+     - Scaling value (expansion or contraction) to apply on the Y axis.
+   * - **Scale factor (z-axis)**
+     - ``SCALE_Z``
+     - [number |dataDefined|]
+
+       Default: 1
+     - Scaling value (expansion or contraction) to apply on the Z axis.
+   * - **Scale factor (m-values)**
+     - ``SCALE_M``
+     - [number |dataDefined|]
+
+       Default: 1
+     - Scaling value (expansion or contraction) to apply on m values.
+   * - **Rotation around z-axis (degrees counter-clockwise)**
+     - ``ROTATION_Z``
+     - [number |dataDefined|]
+
+       Default: 0
+     - Angle of the rotation in degrees.	
+
+   * - **Transformed**
+     - ``OUTPUT``
+     - [same as input]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer.
+       One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table...
+
+       The file encoding can also be changed here.
+   
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Transformed**
+     - ``OUTPUT``
+     - [same as input]
+     - Output (transformed) vector layer.
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:affinetransform``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisexportaddgeometrycolumns:
 
@@ -7336,6 +7466,7 @@ Python code
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |312| replace:: ``NEW in 3.12``
 .. |314| replace:: ``NEW in 3.14``
 .. |arrowDown| image:: /static/common/mActionArrowDown.png
    :width: 1.5em

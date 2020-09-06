@@ -229,10 +229,11 @@ Converts a coordinate to degree, minute.
      - * **coordinate** - A latitude or longitude value.
        * **axis** - The axis of the coordinate. Either 'x' or 'y'.
        * **precision** - Number of decimals.
-       * **formatting** - Designates the formatting type. Acceptable values are NULL, 'aligned' or 'suffix'.
+       * **formatting** - Designates the formatting type. Acceptable values are NULL (default), 'aligned' or 'suffix'.
    * - Examples
-     - * ``to_dm(6.3545681, 'x', 3)`` → 6°21.274′
-       * ``to_dm(6.3545681, 'y', 4, 'suffix')`` → 6°21.2741′N
+     - * ``to_dm(6.1545681, 'x', 3)`` → 6°9.274′
+       * ``to_dm(6.1545681, 'y', 4, 'aligned')`` → 6°09.2741′N
+       * ``to_dm(6.1545681, 'y', 4, 'suffix')`` → 6°9.2741′N
 
 
 .. end_to_dm_section
@@ -257,10 +258,11 @@ Converts a coordinate to degree, minute, second.
      - * **coordinate** - A latitude or longitude value.
        * **axis** - The axis of the coordinate. Either 'x' or 'y'.
        * **precision** - Number of decimals.
-       * **formatting** - Designates the formatting type. Acceptable values are NULL, 'aligned' or 'suffix'.
+       * **formatting** - Designates the formatting type. Acceptable values are NULL (default), 'aligned' or 'suffix'.
    * - Examples
-     - * ``to_dms(6.3545681, 'x', 3)`` → 6°21′16.445″
-       * ``to_dms(6.3545681, 'y', 4, 'suffix')`` → 6°21′16.4452″N
+     - * ``to_dms(6.1545681, 'x', 3)`` → 6°9′16.445″
+       * ``to_dms(6.1545681, 'y', 4, 'aligned')`` → 6°09′16.4452″N
+       * ``to_dms(6.1545681, 'y', 4, 'suffix')`` → 6°9′16.4452″N
 
 
 .. end_to_dms_section

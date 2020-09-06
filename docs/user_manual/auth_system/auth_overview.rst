@@ -19,7 +19,7 @@ Authentication database
 -----------------------
 
 The new authentication system stores authentication configurations in an SQLite
-database file located, by default, at :file:`<user home>/.qgis3/qgis-auth.db`.
+database file located, by default, at :file:`<profile directory>/qgis-auth.db`.
 
 This authentication database can be moved between QGIS installations without
 affecting other current QGIS user preferences, as it is completely separate from

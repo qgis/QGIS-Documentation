@@ -16,7 +16,7 @@ Based on layer data and prebuilt or user defined functions, **Expressions**
 offer a powerful way to manipulate attribute value, geometry and variables
 in order to dynamically change the geometry style, the content or position
 of the label, the value for diagram, the height of a layout item,
-select some features, create virtual field ...
+select some features, create virtual field, ...
 
 .. _expression_builder:
 
@@ -43,85 +43,21 @@ The Expression builder dialog offers access to the:
 * :ref:`Function Editor tab <function_editor>` which helps to extend the list of
   functions by creating custom ones.
 
-**Some use cases of expressions:**
-
-* From Field Calculator, calculate a "pop_density" field using existing "total_pop"
-  and "area_km2" fields::
-
-    "total_pop" / "area_km2"
-
-* Label or categorize features based on their area::
-
-    CASE WHEN $area > 10 000 THEN 'Larger' ELSE 'Smaller' END
-
-* Update the field "density_level" with categories according to the "pop_density" values::
-
-    CASE WHEN "pop_density" < 50 THEN 'Low population density'
-         WHEN "pop_density" >= 50 and "pop_density" < 150 THEN 'Medium population density'
-         WHEN "pop_density" >= 150 THEN 'High population density'
-    END
-
-* Update a region layer field with the names (comma separated) of contained airports::
-
-    aggregate('airport_layer', 'concatenate', "name", within($geometry, geometry(@parent)), ', ')
-
-* Apply a categorized style to all the features according to whether their average house
-  price is smaller or higher than 10000€ per square metre::
-
-    "price_m2" > 10000
-
-* Using the "Select By Expression..." tool, select all the features representing
-  areas of “High population density” and whose average house price is higher than
-  10000€ per square metre::
-
-    "density_level" = 'High population density' and "price_m2" > 10000
-
-  Likewise, the previous expression could also be used to define which features
-  should be labeled or shown in the map.
-
-* Render a different symbol (type) for the layer, using the geometry generator::
-
-    point_on_surface( $geometry )
-
-* Given a point feature, generate a closed line (using ``make_line``) around the
-  point's geometry::
-
-    make_line(
-      -- using an array of points placed around the original
-      array_foreach(
-        -- list of angles for placing the projected points (every 90°)
-        array:=generate_series( 0, 360, 90 ),
-        -- translate the point 20 units in the given direction (angle)
-        expression:=project( $geometry, distance:=20, azimuth:=radians( @element ) )
-      )
-    )
-
-Using expressions offers you a lot of possibilities.
-
-.. index:: Named parameters
-   single: Expressions; Named parameters
-   single: Functions; Named parameters
-
-.. tip:: **Use named parameters to improve the expression reading**
-
-  Some functions require many parameters to be set. The expression engine supports the
-  use of named parameters. This means that instead of writing the cryptic expression
-  ``clamp( 1, 2, 9)``, you can use ``clamp( min:=1, value:=2, max:=9)``. This also allows
-  arguments to be switched, e.g. ``clamp( value:=2, max:=9, min:=1)``. Using named parameters
-  helps clarify what the arguments for an expression function refer to, which is helpful
-  when you are trying to interpret an expression at a later date!
-
-
-.. index:: Functions
-.. _functions_list:
-
-List of functions
-=================
+The Interface
+-------------
 
 The :guilabel:`Expression` tab provides the main interface to write expressions
-using functions, layer's fields and values. It contains following widgets:
+using functions, layer fields and values. It contains the following widgets:
 
-* An expression editor area to type or paste expressions. Autocompletion is
+.. _figure_expression_tab:
+
+.. figure:: img/function_list.png
+   :align: center
+   :width: 100%
+
+   The Expression tab
+
+* An expression editor area for typing or pasting expressions. Autocompletion is
   available to speed expression writing:
 
   * Corresponding variables, function names and field names to the input text
@@ -218,14 +154,118 @@ using functions, layer's fields and values. It contains following widgets:
    collapsed (invisible) in the dialog. Press the :guilabel:`Show Values`
    or :guilabel:`Show Help` button to get it back.
 
-.. _figure_expression_tab:
 
-.. figure:: img/function_list.png
-   :align: center
-   :width: 100%
+Writing an expression
+---------------------
 
-   The Expression tab
+QGIS expressions are used to select features or set values.
+Writing an expression in QGIS follows some rules:
 
+#. **The dialog defines the context**: if you are used to SQL, you probably
+   know queries of the type *select features from layer where condition*
+   or *update layer set field = new_value where condition*.
+   A QGIS expression also needs all these information but the tool you use
+   to open the expression builder dialog provides parts of them.
+   For example, giving a layer (building) with a field (height):
+
+   * pressing the |expressionSelect|:sup:`Select by expression` tool means that
+     you want to "select features from buildings". The **condition** is the
+     only information you need to provide in the expression text widget,
+     e.g. type ``"height" > 20`` to select buildings that are higher than 20.
+   * with this selection made, pressing the |calculateField| :sup:`Field calculator`
+     button and choosing "height" as :guilabel:`Update existing field`, you already
+     provide the command "update buildings set height = ??? where height > 20".
+     The only remaining bits you have to provide in this case is the **new value**,
+     e.g. just enter ``50`` to set the height of the previously selected buildings.
+
+#. **Pay attention to quotes**: single quotes return a literal, so a
+   text placed between single quotes (``'145'``) is interpreted as a string.
+   Double quotes will give you the value of that text so use them for fields
+   (``"myfield"``). Fields can also be used without quotes (``myfield``).
+   No quotes for numbers (``3.16``).
+
+   .. note:: Functions normally take as argument a string for field name.
+       Do::
+
+        attribute( @atlas_feature, 'height' ) -- returns the value stored in the "height" attribute of the current atlas feature
+
+       And not::
+
+        attribute( @atlas_feature, "height" ) -- fetches the value of the attribute named "height" (e.g. 100), and use that value as a field
+                                              -- from which to return the atlas feature value. Probably wrong as a field named "100" may not exist.
+
+
+.. index:: Named parameters
+   single: Expressions; Named parameters
+   single: Functions; Named parameters
+
+.. tip:: **Use named parameters to ease expression reading**
+
+  Some functions require many parameters to be set. The expression engine supports the
+  use of named parameters. This means that instead of writing the cryptic expression
+  ``clamp( 1, 2, 9)``, you can use ``clamp( min:=1, value:=2, max:=9)``. This also allows
+  arguments to be switched, e.g. ``clamp( value:=2, max:=9, min:=1)``. Using named parameters
+  helps clarify what the arguments for an expression function refer to, which is helpful
+  when you are trying to interpret an expression later!
+
+Some use cases of expressions
+-----------------------------
+
+* From the Field Calculator, calculate a "pop_density" field using the existing "total_pop"
+  and "area_km2" fields::
+
+    "total_pop" / "area_km2"
+
+* Label or categorize features based on their area::
+
+    CASE WHEN $area > 10 000 THEN 'Larger' ELSE 'Smaller' END
+
+* Update the field "density_level" with categories according to the "pop_density" values::
+
+    CASE WHEN "pop_density" < 50 THEN 'Low population density'
+         WHEN "pop_density" >= 50 and "pop_density" < 150 THEN 'Medium population density'
+         WHEN "pop_density" >= 150 THEN 'High population density'
+    END
+
+* Apply a categorized style to all the features according to whether their average house
+  price is smaller or higher than 10000€ per square metre::
+
+    "price_m2" > 10000
+
+* Using the "Select By Expression..." tool, select all the features representing
+  areas of “High population density” and whose average house price is higher than
+  10000€ per square metre::
+
+    "density_level" = 'High population density' and "price_m2" > 10000
+
+  The previous expression could also be used to define which features
+  to label or show on the map.
+
+* Create a different symbol (type) for the layer, using the geometry generator::
+
+    point_on_surface( $geometry )
+
+* Given a point feature, generate a closed line (using ``make_line``) around its
+  geometry::
+
+    make_line(
+      -- using an array of points placed around the original
+      array_foreach(
+        -- list of angles for placing the projected points (every 90°)
+        array:=generate_series( 0, 360, 90 ),
+        -- translate the point 20 units in the given direction (angle)
+        expression:=project( $geometry, distance:=20, azimuth:=radians( @element ) )
+      )
+    )
+
+.. index:: Functions
+.. _functions_list:
+
+List of functions
+=================
+
+The functions, operators and variables available in QGIS are listed below,
+grouped by categories.
 
 .. index:: Aggregates
 .. _aggregates_function:

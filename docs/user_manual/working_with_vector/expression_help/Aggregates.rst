@@ -63,6 +63,7 @@ Returns an aggregate value calculated using features from another layer.
        * ``aggregate(layer:='rail_stations',aggregate:='concatenate', expression:="name", concatenator:=',')`` → comma separated list of the name field for all features in the rail_stations layer
        * ``aggregate(layer:='countries', aggregate:='max', expression:="code", filter:=intersects( $geometry, geometry(@parent) ) )`` → The country code of an intersecting country on the layer 'countries'
        * ``aggregate(layer:='rail_stations',aggregate:='sum',expression:="passengers",filter:=contains( @atlas_geometry, $geometry ) )`` → sum of all values from the passengers field in the rail_stations within the current atlas feature
+       * ``aggregate(layer:='rail_stations', aggregate:='collect', expression:=centroid($geometry), filter:="region_name" = attribute(@parent,'name') )`` → aggregates centroid geometries of the rail_stations of the same region as current feature
 
 
 .. end_aggregate_section
@@ -116,6 +117,7 @@ Returns the multipart geometry of aggregated geometries from an expression
        * **filter** - optional expression to use to filter features used to calculate aggregate
    * - Examples
      - * ``collect( $geometry )`` → multipart geometry of aggregated geometries
+       * ``collect( centroid($geometry), group_by:="region", filter:= "use" = 'civilian' )`` → aggregated centroids of the civilian features based on their region value
 
 
 .. end_collect_section
@@ -133,14 +135,14 @@ Returns all aggregated strings from a field or expression joined by a delimiter.
    :widths: 15 85
 
    * - Syntax
-     - concatenate(expression, [group_by], [filter], [concatenator=''], [order_by])
+     - concatenate(expression, [group_by], [filter], [concatenator], [order_by])
 
        [] marks optional arguments
    * - Arguments
      - * **expression** - sub expression of field to aggregate
        * **group_by** - optional expression to use to group aggregate calculations
        * **filter** - optional expression to use to filter features used to calculate aggregate
-       * **concatenator** - optional string to use to join values
+       * **concatenator** - optional string to use to join values. Empty by default.
        * **order_by** - optional expression to use to order features used to calculate aggregate. By default, the features will be returned in an unspecified order.
    * - Examples
      - * ``concatenate("town_name",group_by:="state",concatenator:=',')`` → comma separated list of town_names, grouped by state field
@@ -161,17 +163,17 @@ Returns all unique strings from a field or expression joined by a delimiter.
    :widths: 15 85
 
    * - Syntax
-     - concatenate_unique(expression, [group_by], [filter], [concatenator=''], [order_by])
+     - concatenate_unique(expression, [group_by], [filter], [concatenator], [order_by])
 
        [] marks optional arguments
    * - Arguments
      - * **expression** - sub expression of field to aggregate
        * **group_by** - optional expression to use to group aggregate calculations
        * **filter** - optional expression to use to filter features used to calculate aggregate
-       * **concatenator** - optional string to use to join values
+       * **concatenator** - optional string to use to join values. Empty by default.
        * **order_by** - optional expression to use to order features used to calculate aggregate. By default, the features will be returned in an unspecified order.
    * - Examples
-     - * ``concatenate("town_name",group_by:="state",concatenator:=',')`` → comma separated list of unique town_names, grouped by state field
+     - * ``concatenate_unique("town_name",group_by:="state",concatenator:=',')`` → comma separated list of unique town_names, grouped by state field
 
 
 .. end_concatenate_unique_section

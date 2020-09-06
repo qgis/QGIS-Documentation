@@ -988,7 +988,8 @@ To add a Title Label decoration:
 
 #. Make sure |checkbox| :guilabel:`Enable Title Label` is checked
 #. Enter the title text you want to place on the map.
-   You can make it dynamic using the :guilabel:`Insert an Expression` button.
+   You can make it dynamic using the :guilabel:`Insert or Edit an Expression...`
+   button.
 #. Choose the :guilabel:`Font` for the label using the :ref:`font selector
    widget <font_selector>` with full access to QGIS :ref:`text formatting
    <text_format>` options. Quickly set the font color and opacity by clicking
@@ -1028,7 +1029,8 @@ To add this decoration:
 
 #. Make sure |checkbox| :guilabel:`Enable Copyright Label` is checked
 #. Enter the copyright text you want to place on the map.
-   You can make it dynamic using the :guilabel:`Insert an Expression` button.
+   You can make it dynamic using the :guilabel:`Insert or Edit an Expression...`
+   button.
 #. Choose the :guilabel:`Font` for the label using the :ref:`font selector
    widget <font_selector>` with full access to QGIS :ref:`text formatting
    <text_format>` options. Quickly set the font color and opacity by clicking

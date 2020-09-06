@@ -113,6 +113,7 @@ Returns the closure of the combinatorial boundary of the geometry (ie the topolo
      - * **geometry** - a geometry
    * - Examples
      - * ``geom_to_wkt(boundary(geom_from_wkt('Polygon((1 1, 0 0, -1 1, 1 1))')))`` → 'LineString(1 1,0 0,-1 1,1 1)'
+       * ``geom_to_wkt(boundary(geom_from_wkt('LineString(1 1,0 0,-1 1)')))`` → 'MultiPoint ((1 1),(-1 1))'
 
 
 .. end_boundary_section
@@ -135,6 +136,7 @@ Returns a geometry which represents the bounding box of an input geometry. Calcu
      - * **geometry** - a geometry
    * - Examples
      - * ``bounds($geometry)`` → bounding box of the current feature's geometry
+       * ``geom_to_wkt(bounds(geom_from_wkt('Polygon((1 1, 0 0, -1 1, 1 1))')))`` → 'Polygon ((-1 0, 1 0, 1 1, -1 1, -1 0))'
 
 
 .. end_bounds_section
@@ -157,6 +159,7 @@ Returns the height of the bounding box of a geometry. Calculations are in the Sp
      - * **geometry** - a geometry
    * - Examples
      - * ``bounds_height($geometry)`` → height of bounding box of the current feature's geometry
+       * ``bounds_height(geom_from_wkt('Polygon((1 1, 0 0, -1 1, 1 1))'))`` → 1
 
 
 .. end_bounds_height_section
@@ -179,6 +182,7 @@ Returns the width of the bounding box of a geometry. Calculations are in the Spa
      - * **geometry** - a geometry
    * - Examples
      - * ``bounds_width($geometry)`` → width of bounding box of the current feature's geometry
+       * ``bounds_width(geom_from_wkt('Polygon((1 1, 0 0, -1 1, 1 1))'))`` → 2
 
 
 .. end_bounds_width_section
@@ -273,8 +277,8 @@ Returns a closed line string of the input line string by appending the first poi
    * - Arguments
      - * **geometry** - a line string geometry
    * - Examples
-     - * ``geom_to_wkt(close_line(geom_from_wkt('LINESTRING(0 0, 1 0, 1 1)')))`` → LineString (0 0, 1 0, 1 1, 0 0)
-       * ``geom_to_wkt(close_line(geom_from_wkt('LINESTRING(0 0, 1 0, 1 1, 0 0)')))`` → LineString (0 0, 1 0, 1 1, 0 0)
+     - * ``geom_to_wkt(close_line(geom_from_wkt('LINESTRING(0 0, 1 0, 1 1)')))`` → 'LineString (0 0, 1 0, 1 1, 0 0)'
+       * ``geom_to_wkt(close_line(geom_from_wkt('LINESTRING(0 0, 1 0, 1 1, 0 0)')))`` → 'LineString (0 0, 1 0, 1 1, 0 0)'
 
 
 .. end_close_line_section
@@ -297,7 +301,7 @@ Returns the point on geometry1 that is closest to geometry2.
      - * **geometry1** - geometry to find closest point on
        * **geometry2** - geometry to find closest point to
    * - Examples
-     - * ``geom_to_wkt(closest_point(geom_from_wkt('LINESTRING (20 80, 98 190, 110 180, 50 75 )'),geom_from_wkt('POINT(100 100)')))`` → Point(73.0769 115.384)
+     - * ``geom_to_wkt(closest_point(geom_from_wkt('LINESTRING (20 80, 98 190, 110 180, 50 75 )'),geom_from_wkt('POINT(100 100)')))`` → 'Point(73.0769 115.384)'
 
 
 .. end_closest_point_section
@@ -361,8 +365,8 @@ Returns the combination of two geometries.
      - * **geometry1** - a geometry
        * **geometry2** - a geometry
    * - Examples
-     - * ``geom_to_wkt( combine( geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 2 1)' ) ) )`` → MULTILINESTRING((4 4, 2 1), (3 3, 4 4), (4 4, 5 5))
-       * ``geom_to_wkt( combine( geom_from_wkt( 'LINESTRING(3 3, 4 4)' ), geom_from_wkt( 'LINESTRING(3 3, 6 6, 2 1)' ) ) )`` → LINESTRING(3 3, 4 4, 6 6, 2 1)
+     - * ``geom_to_wkt( combine( geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 2 1)' ) ) )`` → 'MULTILINESTRING((4 4, 2 1), (3 3, 4 4), (4 4, 5 5))'
+       * ``geom_to_wkt( combine( geom_from_wkt( 'LINESTRING(3 3, 4 4)' ), geom_from_wkt( 'LINESTRING(3 3, 6 6, 2 1)' ) ) )`` → 'LINESTRING(3 3, 4 4, 6 6, 2 1)'
 
 
 .. end_combine_section
@@ -408,7 +412,7 @@ Returns the convex hull of a geometry. It represents the minimum convex geometry
    * - Arguments
      - * **geometry** - a geometry
    * - Examples
-     - * ``geom_to_wkt( convex_hull( geom_from_wkt( 'LINESTRING(3 3, 4 4, 4 10)' ) ) )`` → POLYGON((3 3,4 10,4 4,3 3))
+     - * ``geom_to_wkt( convex_hull( geom_from_wkt( 'LINESTRING(3 3, 4 4, 4 10)' ) ) )`` → 'POLYGON((3 3, 4 10, 4 4, 3 3))'
 
 
 .. end_convex_hull_section
@@ -455,7 +459,7 @@ Returns a geometry that represents that part of geometry1 that does not intersec
      - * **geometry1** - a geometry
        * **geometry2** - a geometry
    * - Examples
-     - * ``geom_to_wkt( difference( geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ), geom_from_wkt( 'LINESTRING(3 3, 4 4)' ) ) )`` → LINESTRING(4 4, 5 5)
+     - * ``geom_to_wkt( difference( geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ), geom_from_wkt( 'LINESTRING(3 3, 4 4)' ) ) )`` → 'LINESTRING(4 4, 5 5)'
 
 
 .. end_difference_section
@@ -559,7 +563,7 @@ Returns the last node from a geometry.
 extend
 ......
 
-Extends the start and end of a linestring geometry by a specified amount. Lines are extended using the bearing of the first and last segment in the line. Distances are in the Spatial Reference System of this geometry.
+Extends the start and end of a linestring geometry by a specified amount. Lines are extended using the bearing of the first and last segment in the line. For a multilinestring, all the parts are extended. Distances are in the Spatial Reference System of this geometry.
 
 .. list-table::
    :widths: 15 85
@@ -571,7 +575,8 @@ Extends the start and end of a linestring geometry by a specified amount. Lines 
        * **start_distance** - distance to extend the start of the line
        * **end_distance** - distance to extend the end of the line.
    * - Examples
-     - * ``geom_to_wkt(extend(geom_from_wkt('LineString(0 0, 1 0, 1 1)'),1,2))`` → LineString (-1 0, 1 0, 1 3)
+     - * ``geom_to_wkt(extend(geom_from_wkt('LineString(0 0, 1 0, 1 1)'),1,2))`` → 'LineString (-1 0, 1 0, 1 3)'
+       * ``geom_to_wkt(extend(geom_from_wkt('MultiLineString((0 0, 1 0, 1 1), (2 2, 0 2, 0 5))'),1,2))`` → 'MultiLineString ((-1 0, 1 0, 1 3),(3 2, 0 2, 0 7))'
 
 
 .. end_extend_section
@@ -617,8 +622,8 @@ Returns an extruded version of the input (Multi-)Curve or (Multi-)Linestring geo
        * **x** - x extension, numeric value
        * **y** - y extension, numeric value
    * - Examples
-     - * ``extrude(geom_from_wkt('LineString(1 2, 3 2, 4 3)'), 1, 2)`` → Polygon ((1 2, 3 2, 4 3, 5 5, 4 4, 2 4, 1 2))
-       * ``extrude(geom_from_wkt('MultiLineString((1 2, 3 2), (4 3, 8 3)'), 1, 2)`` → MultiPolygon (((1 2, 3 2, 4 4, 2 4, 1 2)),((4 3, 8 3, 9 5, 5 5, 4 3)))
+     - * ``geom_to_wkt(extrude(geom_from_wkt('LineString(1 2, 3 2, 4 3)'), 1, 2))`` → 'Polygon ((1 2, 3 2, 4 3, 5 5, 4 4, 2 4, 1 2))'
+       * ``geom_to_wkt(extrude(geom_from_wkt('MultiLineString((1 2, 3 2), (4 3, 8 3))'), 1, 2))`` → 'MultiPolygon (((1 2, 3 2, 4 4, 2 4, 1 2)),((4 3, 8 3, 9 5, 5 5, 4 3)))'
 
 
 .. end_extrude_section
@@ -640,7 +645,7 @@ Returns a copy of the geometry with the x and y coordinates swapped. Useful for 
    * - Arguments
      - * **geometry** - a geometry
    * - Examples
-     - * ``geom_to_wkt(flip_coordinates(make_point(1, 2)))`` → Point (2 1)
+     - * ``geom_to_wkt(flip_coordinates(make_point(1, 2)))`` → 'Point (2 1)'
 
 
 .. end_flip_coordinates_section
@@ -662,7 +667,7 @@ Forces a geometry to respect the Right-Hand-Rule, in which the area that is boun
    * - Arguments
      - * **geometry** - a geometry. Any non-polygon geometries are returned unchanged.
    * - Examples
-     - * ``geom_to_wkt(force_rhr(geometry:=geom_from_wkt('POLYGON((-1 -1, 4 0, 4 2, 0 2, -1 -1))')))`` → Polygon ((-1 -1, 0 2, 4 2, 4 0, -1 -1))
+     - * ``geom_to_wkt(force_rhr(geometry:=geom_from_wkt('POLYGON((-1 -1, 4 0, 4 2, 0 2, -1 -1))')))`` → 'Polygon ((-1 -1, 0 2, 4 2, 4 0, -1 -1))'
 
 
 .. end_force_rhr_section
@@ -768,14 +773,16 @@ Returns the Well-Known Text (WKT) representation of the geometry without SRID me
    :widths: 15 85
 
    * - Syntax
-     - geom_to_wkt(geometry, [precision])
+     - geom_to_wkt(geometry, [precision=8])
 
        [] marks optional arguments
    * - Arguments
      - * **geometry** - a geometry
        * **precision** - numeric precision
    * - Examples
-     - * ``geom_to_wkt( $geometry )`` → POINT(6 50)
+     - * ``geom_to_wkt( make_point(6, 50) )`` → 'POINT(6 50)'
+       * ``geom_to_wkt(centroid(geom_from_wkt('Polygon((1 1, 0 0, -1 1, 1 1))')))`` → 'POINT(0 0.66666667)'
+       * ``geom_to_wkt(centroid(geom_from_wkt('Polygon((1 1, 0 0, -1 1, 1 1))')), 2)`` → 'POINT(0 0.67)'
 
 
 .. end_geom_to_wkt_section
@@ -795,7 +802,7 @@ Returns the geometry of the current feature. Can be used for processing with oth
    * - Syntax
      - $geometry
    * - Examples
-     - * ``geomToWKT( $geometry )`` → POINT(6 50)
+     - * ``geom_to_wkt( $geometry )`` → 'POINT(6 50)'
 
 
 .. end_$geometry_section
@@ -953,7 +960,8 @@ Returns a geometry that represents the shared portion of two geometries.
      - * **geometry1** - a geometry
        * **geometry2** - a geometry
    * - Examples
-     - * ``geom_to_wkt( intersection( geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ), geom_from_wkt( 'LINESTRING(3 3, 4 4)' ) ) )`` → LINESTRING(3 3, 4 4)
+     - * ``geom_to_wkt( intersection( geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ), geom_from_wkt( 'LINESTRING(3 3, 4 4)' ) ) )`` → 'LINESTRING(3 3, 4 4)'
+       * ``geom_to_wkt( intersection( geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ), geom_from_wkt( 'MULTIPOINT(3.5 3.5, 4 5)' ) ) )`` → 'POINT(3.5 3.5)'
 
 
 .. end_intersection_section
@@ -1690,15 +1698,15 @@ Returns the minimal enclosing circle of a geometry. It represents the minimum ci
    :widths: 15 85
 
    * - Syntax
-     - minimal_circle(geometry, [segment=36])
+     - minimal_circle(geometry, [segments=36])
 
        [] marks optional arguments
    * - Arguments
      - * **geometry** - a geometry
-       * **segment** - optional argument for polygon segmentation. By default this value is 36
+       * **segments** - optional argument for polygon segmentation. By default this value is 36
    * - Examples
-     - * ``geom_to_wkt( minimal_circle( geom_from_wkt( 'LINESTRING(0 5, 0 -5, 2 1)' ), 4 ) )`` → Polygon ((0 5, 5 -0, -0 -5, -5 0, 0 5))
-       * ``geom_to_wkt( minimal_circle( geom_from_wkt( 'MULTIPOINT(1 2, 3 4, 3 2)' ), 4 ) )`` → Polygon ((3 4, 3 2, 1 2, 1 4, 3 4))
+     - * ``geom_to_wkt( minimal_circle( geom_from_wkt( 'LINESTRING(0 5, 0 -5, 2 1)' ), 4 ) )`` → 'Polygon ((0 5, 5 -0, -0 -5, -5 0, 0 5))'
+       * ``geom_to_wkt( minimal_circle( geom_from_wkt( 'MULTIPOINT(1 2, 3 4, 3 2)' ), 4 ) )`` → 'Polygon ((3 4, 3 2, 1 2, 1 4, 3 4))'
 
 
 .. end_minimal_circle_section
@@ -1867,8 +1875,8 @@ Orders the parts of a MultiGeometry by a given criteria
        * **orderby** - an expression string defining the order criteria
        * **ascending** - boolean, True for ascending, False for descending
    * - Examples
-     - * ``order_parts(geom_from_wkt('MultiPolygon (((1 1, 5 1, 5 5, 1 5, 1 1)),((1 1, 9 1, 9 9, 1 9, 1 1)))'), 'area($geometry)', False)`` → MultiPolygon (((1 1, 9 1, 9 9, 1 9, 1 1)),((1 1, 5 1, 5 5, 1 5, 1 1)))
-       * ``order_parts(geom_from_wkt('LineString(1 2, 3 2, 4 3)'), '1', True)`` → LineString(1 2, 3 2, 4 3)
+     - * ``geom_to_wkt(order_parts(geom_from_wkt('MultiPolygon (((1 1, 5 1, 5 5, 1 5, 1 1)),((1 1, 9 1, 9 9, 1 9, 1 1)))'), 'area($geometry)', False))`` → 'MultiPolygon (((1 1, 9 1, 9 9, 1 9, 1 1)),((1 1, 5 1, 5 5, 1 5, 1 1)))'
+       * ``geom_to_wkt(order_parts(geom_from_wkt('LineString(1 2, 3 2, 4 3)'), '1', True))`` → 'LineString(1 2, 3 2, 4 3)'
 
 
 .. end_order_parts_section
@@ -1890,7 +1898,7 @@ Returns a geometry which represents the minimal oriented bounding box of an inpu
    * - Arguments
      - * **geometry** - a geometry
    * - Examples
-     - * ``geom_to_wkt( oriented_bbox( geom_from_wkt( 'MULTIPOINT(1 2, 3 4, 3 2)' ) ) )`` → Polygon ((1 4, 1 2, 3 2, 3 4, 1 4))
+     - * ``geom_to_wkt( oriented_bbox( geom_from_wkt( 'MULTIPOINT(1 2, 3 4, 3 2)' ) ) )`` → 'Polygon ((3 2, 3 4, 1 4, 1 2, 3 2))'
 
 
 .. end_oriented_bbox_section
@@ -2024,7 +2032,7 @@ Calculates the approximate pole of inaccessibility for a surface, which is the m
      - * **geometry** - a geometry
        * **tolerance** - maximum distance between the returned point and the true pole location
    * - Examples
-     - * ``geom_to_wkt(pole_of_inaccessibility( geom_from_wkt('POLYGON((0 1,0 9,3 10,3 3, 10 3, 10 1, 0 1))'), 0.1))`` → Point(1.55, 1.55)
+     - * ``geom_to_wkt(pole_of_inaccessibility( geom_from_wkt('POLYGON((0 1, 0 9, 3 10, 3 3, 10 3, 10 1, 0 1))'), 0.1))'`` → 'Point(1.546875 2.546875)'
 
 
 .. end_pole_of_inaccessibility_section
@@ -2051,7 +2059,7 @@ Returns a point projected from a start point using a distance, a bearing (azimut
        * **azimuth** - azimuth in radians clockwise, where 0 corresponds to north
        * **elevation** - angle of inclination in radians
    * - Examples
-     - * ``geom_to_wkt(project(make_point(1, 2), 3, radians(270)))`` → Point(-2, 2)
+     - * ``geom_to_wkt(project(make_point(1, 2), 3, radians(270)))`` → 'Point(-2, 2)'
 
 
 .. end_project_section
@@ -2189,7 +2197,7 @@ Returns the shortest line joining geometry1 to geometry2. The resultant line wil
      - * **geometry1** - geometry to find shortest line from
        * **geometry2** - geometry to find shortest line to
    * - Examples
-     - * ``geom_to_wkt(shortest_line(geom_from_wkt('LINESTRING (20 80, 98 190, 110 180, 50 75 )'),geom_from_wkt('POINT(100 100)')))`` → LineString(73.0769 115.384, 100 100)
+     - * ``geom_to_wkt(shortest_line(geom_from_wkt('LINESTRING (20 80, 98 190, 110 180, 50 75 )'),geom_from_wkt('POINT(100 100)')))`` → 'LineString(73.0769 115.384, 100 100)'
 
 
 .. end_shortest_line_section
@@ -2284,7 +2292,7 @@ Smooths a geometry by adding extra nodes which round off corners in the geometry
    :widths: 15 85
 
    * - Syntax
-     - smooth(geometry, [iterations], [offset], [min_length], [max_angle])
+     - smooth(geometry, [iterations=1], [offset=0.25], [min_length=-1], [max_angle=180])
 
        [] marks optional arguments
    * - Arguments
@@ -2339,7 +2347,7 @@ Returns a geometry that represents the portions of two geometries that do not in
      - * **geometry1** - a geometry
        * **geometry2** - a geometry
    * - Examples
-     - * ``geom_to_wkt( sym_difference( geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ), geom_from_wkt( 'LINESTRING(3 3, 8 8)' ) ) )`` → LINESTRING(5 5, 8 8)
+     - * ``geom_to_wkt( sym_difference( geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ), geom_from_wkt( 'LINESTRING(3 3, 8 8)' ) ) )`` → 'LINESTRING(5 5, 8 8)'
 
 
 .. end_sym_difference_section
@@ -2414,7 +2422,7 @@ Returns the geometry transformed from a source CRS to a destination CRS.
        * **source_auth_id** - the source auth CRS ID
        * **dest_auth_id** - the destination auth CRS ID
    * - Examples
-     - * ``geom_to_wkt( transform( $geometry, 'EPSG:2154', 'EPSG:4326' ) )`` → POINT(0 51)
+     - * ``geom_to_wkt( transform( make_point(488995.53240249, 7104473.38600835), 'EPSG:2154', 'EPSG:4326' ) )`` → 'POINT(0 51)'
 
 
 .. end_transform_section
@@ -2461,7 +2469,7 @@ Returns a geometry that represents the point set union of the geometries.
      - * **geometry1** - a geometry
        * **geometry2** - a geometry
    * - Examples
-     - * ``geom_to_wkt( union( geom_from_wkt( 'POINT(4 4)' ), geom_from_wkt( 'POINT(5 5)' ) ) )`` → MULTIPOINT(4 4, 5 5)
+     - * ``geom_to_wkt( union( make_point(4, 4), make_point(5, 5) ) )`` → 'MULTIPOINT(4 4, 5 5)'
 
 
 .. end_union_section

@@ -109,7 +109,7 @@ Output:
    PostGIS SRID: 4326
    Description: WGS 84
    Projection Acronym: longlat
-   Ellipsoid Acronym: WGS84
+   Ellipsoid Acronym: EPSG:7030
    Proj String: +proj=longlat +datum=WGS84 +no_defs
    Is geographic: True
    Map units: 6

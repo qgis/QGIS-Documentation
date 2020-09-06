@@ -19,7 +19,7 @@ The code snippets on this page need the following imports if you're outside the 
       QgsVectorLayer
     )
 
-.. settings:
+.. _settings:
 
 ****************************
 Reading And Storing Settings
@@ -90,8 +90,8 @@ We can differentiate between several types of settings:
     # store values
     proj.writeEntry("myplugin", "mytext", "hello world")
     proj.writeEntry("myplugin", "myint", 10)
-    proj.writeEntry("myplugin", "mydouble", 0.01)
-    proj.writeEntry("myplugin", "mybool", True)
+    proj.writeEntryDouble("myplugin", "mydouble", 0.01)
+    proj.writeEntryBool("myplugin", "mybool", True)
 
     # read values (returns a tuple with the value, and a status boolean
     # which communicates whether the value retrieved could be converted to
@@ -112,7 +112,7 @@ We can differentiate between several types of settings:
                                                     123)
 
   As you can see, the :meth:`writeEntry() <qgis.core.QgsProject.writeEntry>`
-  method is used for all data types, but
+  method is used for many data types (integer, string, list), but
   several methods exist for reading the setting value back, and the
   corresponding one has to be selected for each data type.
 
