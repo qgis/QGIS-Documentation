@@ -1258,7 +1258,7 @@ In the :guilabel:`Data Sources` tab, you can:
 
 * |unchecked| :guilabel:`Automatically create transaction groups where possible`:
   When this mode is turned on, all
-  (postgres) layers from the same database are synchronised in their edit state,
+  layers from the same database are synchronised in their edit state,
   i.e. when one layer is put into edit state, all are, when one layer is committed
   or one layer is rolled back, so are the others. Also, instead of buffering edit
   changes locally, they are directly sent to a transaction in the database which
