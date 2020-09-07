@@ -447,7 +447,7 @@ header file. Some macros are available for such definition:
   of the python method. If the type contains a comma ``,``, the type should be
   surrounded by single quotes ``'``
 
-A demo file can be found in :file:`tests/scripts/sipifyheader.h`.
+A demo file can be found in :file:`tests/code_layout/sipifyheader.h`.
 
 Generating the SIP file
 -----------------------
@@ -458,12 +458,16 @@ The SIP file can be generated using a dedicated script. For instance:
 
     scripts/sipify.pl src/core/qgsvectorlayer.h > python/core/qgsvectorlayer.sip
     
-    
+To automatically generate the SIP file of a newly added C++ file :file:`scripts/sip_include.sh` 
+needs to be executed.
+
 As soon as a SIP file is added to one of the source file
 (:file:`python/core/core.sip`, :file:`python/gui/gui.sip` or
 :file:`python/analysis/analysis.sip`), it will be considered as generated
 automatically. A test on Travis will ensure that this file is up to date with
 its corresponding header.
+
+To force recreation of SIP files, :file:`scripts/sipify_all.sh` shall be executed.
 
 Older files for which the automatic creation is not enabled yet are listed in
 :file:`python/auto_sip.blacklist`.
