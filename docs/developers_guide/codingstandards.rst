@@ -469,15 +469,12 @@ its corresponding header.
 
 To force recreation of SIP files, :file:`scripts/sipify_all.sh` shall be executed.
 
-Older files for which the automatic creation is not enabled yet are listed in
-:file:`python/auto_sip.blacklist`.
-
 Improving sipify script
 -----------------------
 
 If some improvements are required for sipify script, please add the missing bits
-to the demo file :file:`tests/scripts/sipifyheader.h` and create the expected
-header :file:`tests/scripts/sipifyheader.expected.si`. This will also be
+to the demo file :file:`tests/code_layout/sipifyheader.h` and create the expected
+header :file:`tests/code_layout/sipifyheader.expected.sip`. This will also be
 automatically tested on Travis as a unit test of the script itself.
 
 
