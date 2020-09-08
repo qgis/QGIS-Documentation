@@ -195,6 +195,7 @@ Option                                                             Vector Layer 
 |allEdits| :menuselection:`Current Edits -->`                      |checkbox|          \                  \
 :guilabel:`Filter...`                                              |checkbox|          \                  \
 :guilabel:`Change Data Source...`                                  |checkbox|          \                  \
+:guilabel:`Repair Data Source...`                                  |checkbox|          \                  \
 :menuselection:`Actions on selections -->` (in edit mode)          |checkbox|          \                  \
 :menuselection:`--> Duplicate Feature`                             |checkbox|          \                  \
 :menuselection:`--> Duplicate Feature and Digitize`                |checkbox|          \                  \
@@ -297,7 +298,9 @@ symbols are:
 * |indicatorEmbedded| to identify an :ref:`embedded group or layer
   <nesting_projects>` and the path to their original project file
 * |indicatorBadLayer| to identify a layer whose data source was not available
-  at the project file opening. Click the icon to update the source path.
+  at the project file opening (see :ref:`handle_broken_paths`).
+  Click the icon to update the source path or select :guilabel:`Repair Data Source...`
+  entry from the layer contextual menu.
 * |indicatorMemory| to remind you that the layer is a :ref:`temporary scratch
   layer <vector_new_scratch_layer>` and its content will be discarded when you
   close this project. To avoid data loss and make the layer permanent, click
