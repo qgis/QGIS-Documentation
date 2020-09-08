@@ -72,17 +72,17 @@ WMS 1.1.0 and 1.3.0 specifications:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   "SERVICE", "Yes", "Name of the service (WMS)"
-   "VERSION", "No", "Version of the service"
-   "REQUEST", "Yes", "Name of the request (GetMap)"
-   "LAYERS", "No", "Layers to display"
-   "STYLES", "No", "Layers' style"
-   "SRS / CRS", "Yes", "Coordinate reference system"
-   "BBOX", "No", "Map extent"
-   "WIDTH", "Yes", "Width of the image in pixels"
-   "HEIGHT", "Yes", "Height of the image in pixels"
-   "FORMAT", "No", "Image format"
-   "TRANSPARENT", "No", "Transparent background"
+   "SERVICE", "Yes", "Name of the service (**WMS**)"
+   "VERSION", "No", ":ref:`Version <wms-getmap-service>` of the service"
+   "REQUEST", "Yes", "Name of the request (**GetMap**)"
+   "LAYERS", "No", ":ref:`Layers <wms-getmap-layers>` to display"
+   "STYLES", "No", "Layers' :ref:`style <wms-getmap-styles>`"
+   "SRS / CRS", "Yes", "Coordinate reference system (:ref:`details <wms-getmap-srs>`)"
+   "BBOX", "No", "Map :ref:`extent <wms-getmap-bbox>`"
+   "WIDTH", "Yes", ":ref:`Width <wms-getmap-width>` of the image in pixels"
+   "HEIGHT", "Yes", ":ref:`Height <wms-getmap-height>` of the image in pixels"
+   "FORMAT", "No", "Image :ref:`format <wms-getmap-format>`"
+   "TRANSPARENT", "No", ":ref:`Transparent <wms-getmap-transparent>` background"
    "SLD", "No", "URL of an SLD to be used for styling"
    "SLD_BODY", "No", "In-line SLD (XML) to be used for styling"
 
@@ -145,11 +145,15 @@ URL example:
   &TILED=TRUE
 
 
+.. _`wms-getmap-service`:
+
 SERVICE
 ^^^^^^^
 
 This parameter has to be ``WMS`` in case of the **GetMap** request.
 
+
+.. _`wms-getmap-version`:
 
 VERSION
 ^^^^^^^
@@ -170,13 +174,15 @@ as explained later for the next parameters:
 - ``BBOX``
 
 
+.. _`wms-getmap-request`:
+
 REQUEST
 ^^^^^^^
 
 This parameter is ``GetMap`` in case of the **GetMap** request.
 
 
-.. _server_layers_param:
+.. _`wms-getmap-layers`:
 
 LAYERS
 ^^^^^^
@@ -216,6 +222,9 @@ To activate this option, the checkbox
   &LAYERS=mylayerid1,mylayerid2
   &...
 
+
+.. _`wms-getmap-styles`:
+
 STYLES
 ^^^^^^
 
@@ -224,6 +233,8 @@ rendering step.
 Styles have to be separated by a comma. The name of the default style
 is ``default``.
 
+
+.. _`wms-getmap-srs`:
 
 SRS / CRS
 ^^^^^^^^^
@@ -278,6 +289,8 @@ because of the ``VERSION`` parameter:
   &...
 
 
+.. _`wms-getmap-bbox`:
+
 BBOX
 ^^^^
 
@@ -317,6 +330,8 @@ For example:
   &...
 
 
+.. _`wms-getmap-width`:
+
 WIDTH
 ^^^^^
 
@@ -324,12 +339,16 @@ This parameter allows to specify the width in pixels of the output
 image.
 
 
+.. _`wms-getmap-height`:
+
 HEIGHT
 ^^^^^^
 
 This parameter allows to specify the height in pixels of the output
 image.
 
+
+.. _`wms-getmap-format`:
 
 FORMAT
 ^^^^^^
@@ -363,6 +382,8 @@ Available values are:
    &HEIGHT=811
    &FORMAT_OPTIONS=MODE:SYMBOLLAYERSYMBOLOGY;SCALE:250&FILE_NAME=plan.dxf
 
+.. _`wms-getmap-transparent`:
+
 TRANSPARENT
 ^^^^^^^^^^^
 
@@ -377,6 +398,8 @@ However, this parameter is ignored if the format of the map image
 indicated with ``FORMAT`` is different from PNG.
 
 
+.. _`wms-getmap-map`:
+
 MAP
 ^^^
 
@@ -390,6 +413,8 @@ define a default QGIS project.
 In this specific case, ``MAP`` is not longer a required parameter.
 For further information you may refer to :ref:`server_env_variables`.
 
+
+.. _`wms-getmap-bgcolor`:
 
 BGCOLOR
 ^^^^^^^
@@ -422,11 +447,15 @@ URL example with the hexadecimal notation:
   &...
 
 
+.. _`wms-getmap-dpi`:
+
 DPI
 ^^^
 
 This parameter can be used to specify the requested output resolution.
 
+
+.. _`wms-getmap-imagequality`:
 
 IMAGE_QUALITY
 ^^^^^^^^^^^^^
@@ -441,12 +470,16 @@ If you want to override it in a ``GetMap`` request you can do it using
 the ``IMAGE_QUALITY`` parameter.
 
 
+.. _`wms-getmap-opacities`:
+
 OPACITIES
 ^^^^^^^^^
 
 Opacity can be set on layer or group level. Allowed values range from
 0 (fully transparent) to 255 (fully opaque).
 
+
+.. _`wms-getmap-filter`:
 
 FILTER
 ^^^^^^
@@ -491,6 +524,8 @@ the filter on ``col1`` is only applied to ``mylayer1``.
   the XML output.
 
 
+.. _`wms-getmap-selection`:
+
 SELECTION
 ^^^^^^^^^
 
@@ -524,6 +559,8 @@ and **Romania** they're highlighted in yellow.
 
 .. _server_wms_tiled:
 
+.. _`wms-getmap-tiled`:
+
 TILED
 ^^^^^
 
@@ -556,15 +593,15 @@ the OGC WMS 1.1.0 and 1.3.0 specifications:
    :widths: auto
 
    "SERVICE", "Yes", "Name of the service (WMS)"
-   "VERSION", "No", ":ref:`See GetMap <qgisserver-wms-getmap>`"
-   "REQUEST", "Yes", ":ref:`See GetMap <qgisserver-wms-getmap>`"
-   "LAYERS", "No", ":ref:`See GetMap <qgisserver-wms-getmap>`"
-   "STYLES", "No", ":ref:`See GetMap <qgisserver-wms-getmap>`"
-   "SRS / CRS", "Yes", ":ref:`See GetMap <qgisserver-wms-getmap>`"
-   "BBOX", "No", ":ref:`See GetMap <qgisserver-wms-getmap>`"
-   "WIDTH", "Yes", ":ref:`See GetMap <qgisserver-wms-getmap>`"
-   "HEIGHT", "Yes", ":ref:`See GetMap <qgisserver-wms-getmap>`"
-   "TRANSPARENT", "No", ":ref:`See GetMap <qgisserver-wms-getmap>`"
+   "VERSION", "No", "Version of the service (:ref:`details <wms-getmap-version>`)"
+   "REQUEST", "Yes", "Name of the request (GetFeatureInfo)"
+   "LAYERS", "No", "Layers to display (:ref:`details <wms-getmap-layers>`)"
+   "STYLES", "No", "Layers' style (:ref:`details <wms-getmap-styles>`)"
+   "SRS / CRS", "Yes", "Coordinate reference system (:ref:`details <wms-getmap-srs>`)"
+   "BBOX", "No", "Map extent (:ref:`details <wms-getmap-bbox>`)"
+   "WIDTH", "Yes", "Width of the image in pixels (:ref:`details <wms-getmap-width>`)"
+   "HEIGHT", "Yes", "Height of the image in pixels (:ref:`details <wms-getmap-height>`)"
+   "TRANSPARENT", "No", "Transparent background (:ref:`details <wms-getmap-transparent>`)"
    "INFO_FORMAT", "No", "Output format"
    "QUERY_LAYERS", "Yes", "Layers to query"
    "FEATURE_COUNT", "No", "Maximum number of features to return"
@@ -576,7 +613,6 @@ the OGC WMS 1.1.0 and 1.3.0 specifications:
    when returning geometry (see :ref:`how to add geometry to feature response<addGeometryToFeatureResponse>`).
    The default value is ``-1`` meaning that the precision defined in the project is used."
 
-
 In addition to the standard ones, QGIS Server supports the following
 extra parameters:
 
@@ -585,8 +621,8 @@ extra parameters:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   "MAP", "Yes", ":ref:`See GetMap <qgisserver-wms-getmap>`"
-   "FILTER", "No", ":ref:`See GetMap <qgisserver-wms-getmap>`"
+   "MAP", "Yes", "Specify the QGIS project file (:ref:`details <wms-getmap-map>`)"
+   "FILTER", "No", "Subset of features (:ref:`details <wms-getmap-filter>`)"
    "FI_POINT_TOLERANCE", "No", "Tolerance in pixels for point layers"
    "FI_LINE_TOLERANCE", "No", "Tolerance in pixels for line layers"
    "FI_POLYGON_TOLERANCE", "No", "Tolerance in pixels for polygon layers"
@@ -641,7 +677,7 @@ In addition, QGIS Server introduces options to select layers by:
 * layer id
 
 See the ``LAYERS`` parameter defined in
-:ref:`See GetMap <qgisserver-wms-getmap>` for more information.
+:ref:`GetMap <wms-getmap-layers>` for more information.
 
 
 FEATURE_COUNT
@@ -749,19 +785,19 @@ Parameters for the **GetPrint** request:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   "MAP", "Yes", "Specify the QGIS project file"
+   "MAP", "Yes", "Specify the QGIS project file (:ref:`details <wms-getmap-map>`)"
    "SERVICE", "Yes", "Name of the service (WMS)"
-   "VERSION", "No", ":ref:`See GetMap <qgisserver-wms-getmap>`"
+   "VERSION", "No", "Version of the service (:ref:`details <wms-getmap-version>`)"
    "REQUEST", "Yes", "Name of the request (GetPrint)"
-   "LAYERS", "No", ":ref:`See GetMap <qgisserver-wms-getmap>`"
+   "LAYERS", "No", "Layers to display (:ref:`details <wms-getmap-layers>`)"
    "TEMPLATE", "Yes", "Layout template to use"
-   "SRS / CRS", "Yes", ":ref:`See GetMap <qgisserver-wms-getmap>`"
+   "SRS / CRS", "Yes", "Coordinate reference system (:ref:`details <wms-getmap-srs>`)"
    "FORMAT", "Yes", "Output format"
    "ATLAS_PK", "No", "Atlas features"
-   "STYLES", "No", ":ref:`See GetMap <qgisserver-wms-getmap>`"
-   "TRANSPARENT", "No", ":ref:`See GetMap <qgisserver-wms-getmap>`"
-   "OPACITIES", "No", ":ref:`See GetMap <qgisserver-wms-getmap>`"
-   "SELECTION", "No", ":ref:`See GetMap <qgisserver-wms-getmap>`"
+   "STYLES", "No", "Layers' style (:ref:`details <wms-getmap-styles>`)"
+   "TRANSPARENT", "No", "Transparent background (:ref:`details <wms-getmap-transparent>`)"
+   "OPACITIES", "No", "Opacity for layer or group (:ref:`details <wms-getmap-opacities>`)"
+   "SELECTION", "No", "Highlight features (:ref:`details <wms-getmap-selection>`)"
    "mapX:EXTENT", "No", "Extent of the map 'X'"
    "mapX:LAYERS", "No", "Layers of the map 'X'"
    "mapX:STYLES", "No", "Layers' style of the map 'X'"
@@ -897,7 +933,7 @@ mapX:LAYERS
 ^^^^^^^^^^^
 
 This parameter specifies the layers for a layout map item. See
-:ref:`See GetMap <qgisserver-wms-getmap>` for more information on
+:ref:`GetMap <wms-getmap-layers>` for more information on
 this parameter.
 
 
@@ -906,7 +942,7 @@ mapX:STYLES
 
 This parameter specifies the layers' styles defined in a specific
 layout map item.
-See :ref:`See GetMap <qgisserver-wms-getmap>` for more information on
+See :ref:`GetMap <wms-getmap-styles>` for more information on
 this parameter.
 
 
@@ -940,8 +976,8 @@ labels:
 * **LAYERTITLE** ``FALSE`` to get only the legend graphics without layer title
 * **RULELABEL**:
 
-    * ``FALSE`` legend graphics without item labels
-    * ``AUTO`` hide item label for layers with :guilabel:`Single symbol` rendering
+  * ``FALSE`` legend graphics without item labels
+  * ``AUTO`` hide item label for layers with :guilabel:`Single symbol` rendering
 
 Content based legend. These parameters let the client request a legend
 showing only the symbols for the features falling into the requested

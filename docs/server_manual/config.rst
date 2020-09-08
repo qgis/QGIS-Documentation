@@ -284,7 +284,7 @@ For example, a dataset might have the descriptive Title
 OWS name is based on the name used in the layer tree. This name is more a label
 for humans than a name for machine-to-machine communication. You can set a
 **Short name** for layers, groups or projects, to be used by QGIS Server as
-the layer identification name (in :ref:`LAYERS <server_layers_param>` parameter for instance ).
+the layer identification name (in :ref:`LAYERS <wms-getmap-layers>` parameter for instance ).
 
 You can set title, short name and abstract for:
 
