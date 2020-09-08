@@ -1206,24 +1206,29 @@ Examples of XYZ Tile services:
 Handling broken file paths
 ==========================
 
-When the path to a data source is wrong, QGIS opens the
-:guilabel:`Handle Unavailable Layers` dialog.
-You can double-click in the :guilabel:`Datasource` field or click :guilabel:`Browse` to fix
-the path.
-It is possible to continue working with your project with the broken path by clicking
-:guilabel:`Keep Unavailable Layers`. Your layer is then displayed in the
-:guilabel:`Layers` panel, but without any data until you fix the path using
-the |indicatorBadLayer| :sup:`Unavailable layer!` icon next to it in the
-:guilabel:`Layers` panel, or :guilabel:`Change Data Source...` in the
-layer contextual menu. To fix the broken path automatically click
-:guilabel:`Auto-Find`. Be aware that in this version of QGIS the browsing 
-takes some time.
-Another possibility is to |deleteSelected| :guilabel:`Remove Unavailable Layers`.
-As the last step, click :guilabel:`Apply changes`.
+When opening a project, QGIS may fail to reach some data sources due to
+unavailable service/database, or to a renamed or moved file.
+QGIS then opens the :guilabel:`Handle Unavailable Layers` dialog, referencing
+the unfound layers.
+You can:
 
-When a layer path has been fixed, QGIS scans through all other broken paths and tries
-to auto-fix those that have the same broken file path.
+* Double-click in the :guilabel:`Datasource` field, adjust the path of
+  each layer and click :guilabel:`Apply changes`;
+* Select a row, press :guilabel:`Browse` to indicate the correct location
+  and click :guilabel:`Apply changes`;
+* Press :guilabel:`Auto-Find` to browse the folders and try to automatically fix
+  all or selected broken path(s). Be aware that the browsing may take some time.
+* Ignore the message and open your project with the broken path(s) by clicking
+  :guilabel:`Keep Unavailable Layers`. Your layer is then displayed in the
+  :guilabel:`Layers` panel, but without any data until you fix the path using
+  the |indicatorBadLayer| :sup:`Unavailable layer!` icon next to it in the
+  :guilabel:`Layers` panel, or :guilabel:`Repair Data Source...` in the
+  layer contextual menu.
 
+  With the :guilabel:`Repair Data Source...` tool, once a layer path has been
+  fixed, QGIS scans through all other broken paths and tries
+  to auto-fix those that have the same broken file path.
+* |deleteSelected| :guilabel:`Remove Unavailable Layers` from the project.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
