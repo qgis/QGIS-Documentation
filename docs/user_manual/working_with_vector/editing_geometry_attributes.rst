@@ -182,7 +182,7 @@ Scale limit to snapping is configured in
 Limiting snapping to scale is only available in
 :guilabel:`Advanced Configuration` mode.
 
-To limit snapping to a scale range you have three modes available :
+To limit snapping to a scale range you have three modes available:
 
 * :guilabel:`Disabled`: Snapping is enabled whatever the current map scale
   is. This is the default mode.
