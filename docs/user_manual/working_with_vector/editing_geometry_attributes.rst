@@ -188,19 +188,19 @@ To limit snapping to a scale range you have three modes available :
   is. This is the default mode.
 * :guilabel:`Global`: Snapping is limited and only enabled when the current
   scale of the map is between a global minimum and a global maximum value.
-* :guilabel:`PerLayer`: Snapping is limited and only enabled when the current
+* :guilabel:`Per layer`: Snapping is limited and only enabled when the current
   scale of the map is between a minimum and a maximum value each one of these
   defined for each layer.
 
 
 When selecting :guilabel:`Global` mode two widgets become available
-to configure the minimum and maximum scales between which snapping is enabledS.
+to configure the range of scales in which snapping is enabled.
 
-When selecting :guilabel:`PerLayer` mode two columns become available to
+When selecting :guilabel:`Per layer` mode two columns become available to
 configure the minimum and maximum scales for each layer.
 
-Please note that the minimum and maximum scales follow the qgis convention :
-minimum scale is the most "zoom out" scale while maximum scale is the most "zoomed in".
+Please note that the minimum and maximum scales follow the QGIS convention:
+minimum scale is the most "zoomed out" scale while maximum scale is the most "zoomed in".
 A minimum or maximum scale that is set to "0" or "not set" is considered not limiting.
 
 .. index:: Topological editing
