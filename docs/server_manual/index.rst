@@ -8,6 +8,7 @@ QGIS Server Guide/Manual
 
 .. toctree::
   :maxdepth: 2
+  :numbered:
 
   introduction
   getting_started
