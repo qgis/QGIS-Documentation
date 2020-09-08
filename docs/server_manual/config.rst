@@ -24,11 +24,9 @@ Logging
 To log requests sent to the server, you have to set the following environment
 variables:
 
-- **QGIS_SERVER_LOG_LEVEL**
-- **QGIS_SERVER_LOG_FILE**
-- **QGIS_SERVER_LOG_STDERR**
-
-Take a look on :ref:`qgis-server-envvar` to understand their meanings.
+- :ref:`QGIS_SERVER_LOG_LEVEL <qgis_server_log_level>`
+- :ref:`QGIS_SERVER_LOG_FILE <qgis_server_log_file>`
+- :ref:`QGIS_SERVER_LOG_STDERR <qgis_server_log_stderr>`
 
 
 .. _`qgis-server-envvar`:
@@ -89,17 +87,21 @@ several ways to define these variables. This is fully described in
      - ''
      - All
 
-   * - QGIS_SERVER_LOG_FILE
+   * - .. _qgis_server_log_file:
+
+       QGIS_SERVER_LOG_FILE
      - Specify path and filename. Make sure that server has proper permissions for
        writing to file. File should be created automatically, just send some requests
        to server. If it's not there, check permissions.
 
-       QGIS_SERVER_LOG_FILE is deprecated since QGIS 3.4. File logging support will
-       be removed in QGIS 4.0.
+       .. warning:: QGIS_SERVER_LOG_FILE is deprecated since QGIS 3.4.
+         File logging support will be removed in QGIS 4.0.
      - ''
      - All
 
-   * - QGIS_SERVER_LOG_STDERR
+   * - .. _qgis_server_log_stderr:
+
+       QGIS_SERVER_LOG_STDERR
      - Activate logging to stderr. This variable  has no effect when ``QGIS_SERVER_LOG_FILE``
        is set.
 
@@ -119,7 +121,9 @@ several ways to define these variables. This is fully described in
      - ''
      - All
 
-   * - QGIS_SERVER_LOG_LEVEL
+   * - .. _qgis_server_log_level:
+
+       QGIS_SERVER_LOG_LEVEL
      - Specify desired log level. Available values are:
 
        * ``0`` or ``INFO`` (log all requests)
