@@ -456,11 +456,12 @@ return the next error:
 
 .. code-block:: none
 
-  Indeed, text strings need to be enclosed with quotes (single quotes
-  for strings, double quotes for attributes). A space between each
-  word / special character is mandatory. Allowed Keywords and special
-  characters are 'AND','OR','IN','=','<','>=','>','>=','!=*,'(',')'.
-  Semicolons in string expressions are not allowed.
+  <ServiceExceptionReport>
+    <ServiceException code="Security">The filter string XXXXXXXXX has been rejected because of security reasons.
+    Note: Text strings have to be enclosed in single or double quotes. A space between each word / special character is mandatory.
+    Allowed Keywords and special characters are IS,NOT,NULL,AND,OR,IN,=,<,=<,>,>=,!=,',',(,),DMETAPHONE,SOUNDEX.
+    Not allowed are semicolons in the filter expression.</ServiceException>
+  </ServiceExceptionReport>
 
 
 URL example:
