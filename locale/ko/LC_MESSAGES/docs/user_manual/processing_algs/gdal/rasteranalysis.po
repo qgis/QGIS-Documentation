@@ -39,6 +39,9 @@ msgid ""
 " from 0°-90°), while the southern side receives more solar radiation (higher"
 " azimuth from 180°-270°)."
 msgstr ""
+"GDAL이 지원하는 모든 표고 래스터로부터 향(aspect) 맵을 생성합니다. 향이란 경사면이 마주보는 나침반 방향을 말합니다. 각 "
+"픽셀은 북쪽으로부터 측정한, 방위각을 나타내는 도 단위 0°-360° 값을 가지게 됩니다. 북반구에서 경사면의 북측은 주로 음영이 "
+"지고(0°-90° 사이의 작은 방위각), 남측은 태양 복사를 더 많이 받습니다(180°-270° 사이의 큰 방위각)."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:24
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:146
@@ -49,7 +52,7 @@ msgstr ""
 msgid ""
 "This algorithm is derived from the `GDAL DEM utility "
 "<https://gdal.org/gdaldem.html>`_."
-msgstr ""
+msgstr "이 알고리즘은 `GDAL DEM 유틸리티 <https://gdal.org/gdaldem.html>`_ 에서 파생되었습니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:27
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:269
@@ -66,7 +69,7 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2069
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2162
 msgid "**Default menu**: :menuselection:`Raster --> Analysis`"
-msgstr ""
+msgstr "**기본 메뉴**: :menuselection:`Raster --> Analysis`"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:30
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:150
@@ -160,7 +163,7 @@ msgstr "라벨"
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2173
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2224
 msgid "Name"
-msgstr "Name"
+msgstr "명칭"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:39
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:118
@@ -327,7 +330,7 @@ msgstr "[raster]"
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2086
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2179
 msgid "Input elevation raster layer"
-msgstr ""
+msgstr "입력 표고 래스터 레이어"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:45
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:165
@@ -383,15 +386,15 @@ msgstr "기본값: 1"
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1778
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2092
 msgid "The number of the band to use as elevation"
-msgstr ""
+msgstr "표고로 사용할 밴드의 번호"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:51
 msgid "**Return trigonometric angle instead of azimuth**"
-msgstr ""
+msgstr "**Return trigonometric angle instead of azimuth**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:52
 msgid "``TRIG_ANGLE``"
-msgstr ""
+msgstr "``TRIG_ANGLE``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:53
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:60
@@ -442,20 +445,21 @@ msgid ""
 "Activating the trigonometric angle results in different categories: 0° "
 "(East), 90° (North), 180° (West), 270° (South)."
 msgstr ""
+"서로 다른 범주를 산출하는 삼각법에 의한 각도를 활성화합니다: 0° (동), 90° (북), 180° (서), 270° (남)"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:58
 msgid "**Return 0 for flat instead of -9999**"
-msgstr ""
+msgstr "**Return 0 for flat instead of -9999**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:59
 msgid "``ZERO_FLAT``"
-msgstr ""
+msgstr "``ZERO_FLAT``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:63
 msgid ""
 "Activating this option will insert a 0-value for the value -9999 on flat "
 "areas."
-msgstr ""
+msgstr "이 옵션을 활성화하면 평야 지대에 -9999 값 대신 0 값을 삽입할 것입니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:65
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:171
@@ -465,7 +469,7 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2093
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2186
 msgid "**Compute edges**"
-msgstr ""
+msgstr "**Compute edges**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:66
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:172
@@ -475,7 +479,7 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2094
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2187
 msgid "``COMPUTE_EDGES``"
-msgstr ""
+msgstr "``COMPUTE_EDGES``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:70
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:176
@@ -485,23 +489,23 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2098
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2191
 msgid "Generates edges from the elevation raster"
-msgstr ""
+msgstr "표고 래스터에서 경계를 생성합니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:71
 msgid "**Use Zevenbergen&Thorne formula instead of the Horn's one**"
-msgstr ""
+msgstr "**Use Zevenbergen&Thorne formula instead of the Horn's one**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:72
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1386
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1993
 msgid "``ZEVENBERGEN``"
-msgstr ""
+msgstr "``ZEVENBERGEN``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:76
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1390
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1997
 msgid "Activates Zevenbergen&Thorne formula for smooth landscapes"
-msgstr ""
+msgstr "매끄러운 풍경을 위해 체벤베르겐&손(Zevenbergen&Thorne) 공식을 활성화합니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:77
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:192
@@ -520,7 +524,7 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2099
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2192
 msgid "**Additional creation options**"
-msgstr ""
+msgstr "**Additional creation options**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:79
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:91
@@ -583,7 +587,7 @@ msgstr "부가적"
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2102
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2195
 msgid "``OPTIONS``"
-msgstr ""
+msgstr "``OPTIONS``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:81
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:93
@@ -661,6 +665,8 @@ msgid ""
 "rely on predefined profiles (see :ref:`GDAL driver options section "
 "<gdal_createoptions>`)."
 msgstr ""
+"래스터를 생성하기 위한 (색상, 블록 크기, 파일 압축 등등) 하나 이상의 생성 옵션을 추가하기 위한 파라미터입니다. 사용자 편의를 "
+"위해, 사전 정의 프로파일을 사용할 수 있습니다. (:ref:`GDAL 드라이버 옵션 <gdal_createoptions>` 참조)"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:89
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:204
@@ -677,7 +683,7 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1892
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2010
 msgid "**Additional command-line parameters**"
-msgstr ""
+msgstr "**Additional command-line parameters**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:92
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:207
@@ -694,7 +700,7 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1895
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2013
 msgid "``EXTRA``"
-msgstr ""
+msgstr "``EXTRA``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:95
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:210
@@ -728,7 +734,7 @@ msgstr "기본값: None"
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1899
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2017
 msgid "Add extra GDAL command line options"
-msgstr ""
+msgstr "부가적인 GDAL 명령 줄 옵션을 추가합니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:97
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:120
@@ -795,7 +801,7 @@ msgstr "기본값: ``[Save to temporary file]``"
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:102
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:217
 msgid "Output raster layer. One of:"
-msgstr ""
+msgstr "산출 향 래스터 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:104
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:219
@@ -879,7 +885,7 @@ msgstr "산출물"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:123
 msgid "Output raster with angle values in degrees"
-msgstr ""
+msgstr "도 단위 각도 값을 가진 산출 래스터"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:126
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:241
@@ -903,7 +909,7 @@ msgstr "파이썬 코드"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:128
 msgid "**Algorithm ID**: ``gdal:aspect``"
-msgstr ""
+msgstr "**Algorithm ID**: ``gdal:aspect``"
 
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
@@ -934,7 +940,7 @@ msgstr ""
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:138
 msgid "Color relief"
-msgstr ""
+msgstr "색상 기복"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:139
 msgid ""
@@ -945,14 +951,17 @@ msgid ""
 "elevation values are blended smoothly and the result is a nice colorized "
 "elevation raster."
 msgstr ""
+"GDAL이 지원하는 모든 표고 레이어로부터 색상 기복(color relief) 맵을 생성합니다. 색상 기복은 특히 표고를 묘사하기 위해 "
+"사용될 수 있습니다. 이 알고리즘은 표고 및 텍스트 기반 색상 환경 설정 파일로부터 계산한 값을 가진 밴드 4개의 래스터를 산출합니다. "
+"지정한 표고 값 사이의 색상은 기본적으로 부드럽게 혼합되어, 보기 좋게 색상화된 표고 래스터를 산출합니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:177
 msgid "**Color configuration file**"
-msgstr ""
+msgstr "**Color configuration file**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:178
 msgid "``COLOR_TABLE``"
-msgstr ""
+msgstr "``COLOR_TABLE``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:179
 msgid "[file]"
@@ -960,15 +969,15 @@ msgstr "[file]"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:180
 msgid "A text-based color configuration file"
-msgstr ""
+msgstr "텍스트 기반 색상 환경 설정 파일"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:181
 msgid "**Matching mode**"
-msgstr ""
+msgstr "**Matching mode**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:182
 msgid "``MATCH_MODE``"
-msgstr ""
+msgstr "``MATCH_MODE``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:183
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:408
@@ -994,32 +1003,32 @@ msgstr "다음 가운데 하나로 지정할 수 있습니다:"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:188
 msgid "0 --- Use strict color matching"
-msgstr ""
+msgstr "0 --- 색상을 엄격하게 맞춤"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:189
 msgid "1 --- Use closest RGBA quadruples"
-msgstr ""
+msgstr "1 --- 최근접 RGBA 4배수(quadruple) 사용"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:190
 msgid "2 --- Use smoothly blended colours"
-msgstr ""
+msgstr "2 --- 부드럽게 혼합된 색상 사용"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:212
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:235
 msgid "**Color relief**"
-msgstr ""
+msgstr "**Color relief**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:238
 msgid "A 4-band output raster"
-msgstr ""
+msgstr "밴드 4개의 산출 래스터"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:243
 msgid "**Algorithm ID**: ``gdal:colorrelief``"
-msgstr ""
+msgstr "**Algorithm ID**: ``gdal:colorrelief``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:253
 msgid "Fill nodata"
-msgstr ""
+msgstr "NODATA 채우기"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:254
 msgid ""
@@ -1033,12 +1042,20 @@ msgid ""
 "varying images (like airphotos). It is generally not so great for "
 "interpolating a raster from sparse point data."
 msgstr ""
+"데이터 값이 없는 래스터 영역을 경계로부터 보간해서 채웁니다. NODATA 영역을 둘러싸고 있는 픽셀들의 값을 역거리 "
+"가중치법(inverse distance weighting)으로 보간해서 NODATA 영역의 값을 계산합니다. 보간 작업 완료 후 그 "
+"결과를 평탄화합니다. GDAL이 지원하는 모든 래스터 레이어를 입력할 수 있습니다. 이 알고리즘은 일반적으로 상당히 연속적으로 변화하는 "
+"(예를 들어 표고 모델 같은) 래스터에서 빠진 영역을 보간하는 데 적합합니다. 좀 더 불규칙적으로 변화하는 (항공사진 같은) 이미지의 "
+"작은 구멍이나 금이 간 부분을 채우는 데에도 적합합니다. 다만 희박하게 분포한 포인트 데이터로부터 래스터를 보간하는 데에는 이 알고리즘을"
+" 사용하지 않는 편이 좋습니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:266
 msgid ""
 "This algorithm is derived from the `GDAL fillnodata utility "
 "<https://gdal.org/gdal_fillnodata.html>`_."
 msgstr ""
+"이 알고리즘은 `GDAL NODATA 채우기 유틸리티 <https://gdal.org/gdal_fillnodata.html>`_ 에서 "
+"파생되었습니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:286
 msgid "Input raster layer"
@@ -1047,12 +1064,13 @@ msgstr "입력 래스터 레이어"
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:292
 msgid ""
 "The band to operate on. Nodata values must be represented by the value 0."
-msgstr ""
+msgstr "작업할 밴드. NODATA 값은 0 값으로 표현되어야만 합니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:294
 msgid ""
 "**Maximum distance (in pixels) to search out for values to interpolate**"
 msgstr ""
+"**Maximum distance (in pixels) to search out for values to interpolate**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:295
 msgid "``DISTANCE``"
@@ -1112,15 +1130,15 @@ msgstr "기본값: 10"
 msgid ""
 "The number of pixels to search in all directions to find values to "
 "interpolate from"
-msgstr ""
+msgstr "모든 방향에서 보간할 값을 찾기 위해 검색할 픽셀들의 개수"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:301
 msgid "**Number of smoothing iterations to run after the interpolation**"
-msgstr ""
+msgstr "**Number of smoothing iterations to run after the interpolation**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:302
 msgid "``ITERATIONS``"
-msgstr ""
+msgstr "``ITERATIONS``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:305
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:410
@@ -1134,39 +1152,39 @@ msgstr "기본값: 0"
 msgid ""
 "The number of 3x3 filter passes to run (0 or more) to smoothen the results "
 "of the interpolation."
-msgstr ""
+msgstr "보간 작업의 결과를 평탄화하기 위해 (0번 이상) 실행할 3x3 필터링의 횟수"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:308
 msgid "**Do not use default validity mask for the input band**"
-msgstr ""
+msgstr "**Do not use default validity mask for the input band**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:309
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1881
 msgid "``NO_MASK``"
-msgstr ""
+msgstr "``NO_MASK``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:313
 msgid "Activates the user-defined validity mask"
-msgstr ""
+msgstr "사용자 정의 유효성 마스크를 활성화합니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:314
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1886
 msgid "**Validity mask**"
-msgstr ""
+msgstr "**Validity mask**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:315
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1889
 msgid "``MASK_LAYER``"
-msgstr ""
+msgstr "``MASK_LAYER``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:317
 msgid "A raster layer that defines the areas to fill."
-msgstr ""
+msgstr "채워야 할 영역을 정의하는 래스터 레이어"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:338
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:361
 msgid "**Filled**"
-msgstr ""
+msgstr "**Filled**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:343
 msgid "Specification of the output raster layer. One of:"
@@ -1177,21 +1195,21 @@ msgstr "산출 래스터 레이어를 지정합니다. 다음 가운데 하나�
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1728
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2044
 msgid "Output raster"
-msgstr ""
+msgstr "산출 래스터"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:369
 msgid "**Algorithm ID**: ``gdal:fillnodata``"
-msgstr ""
+msgstr "**Algorithm ID**: ``gdal:fillnodata``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:379
 msgid "Grid (Data metrics)"
-msgstr ""
+msgstr "그리드 (데이터 메트릭)"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:380
 msgid ""
 "Computes some data metrics using the specified window and output grid "
 "geometry."
-msgstr ""
+msgstr "지정한 창과 산출 그리드 도형을 사용해서 몇몇 데이터 메트릭(data metrics)을 계산합니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:383
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:560
@@ -1203,6 +1221,7 @@ msgid ""
 "This algorithm is derived from the `GDAL grid utility "
 "<https://gdal.org/gdal_grid.html>`_."
 msgstr ""
+"이 알고리즘은 `GDAL 그리드 유틸리티 <https://gdal.org/gdal_grid.html>`_ 에서 파생되었습니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:388
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:563
@@ -1210,7 +1229,7 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1029
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1182
 msgid "`GDAL grid tutorial <https://gdal.org/tutorials/gdal_grid_tut.html>`_"
-msgstr ""
+msgstr "`GDAL 그리드 예제 <https://gdal.org/tutorials/gdal_grid_tut.html>`_"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:402
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:577
@@ -1241,29 +1260,29 @@ msgstr "입력 포인트 벡터 레이어"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:406
 msgid "**Data metric to use**"
-msgstr ""
+msgstr "**Data metric to use**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:407
 msgid "``METRIC``"
-msgstr ""
+msgstr "``METRIC``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:413
 msgid "0 --- Minimum, minimum value found in grid node search ellipse"
-msgstr ""
+msgstr "0 --- 최소값: 그리드 노드 검색 타원에서 발견된 최소값"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:415
 msgid "1 --- Maximum, maximum value found in grid node search ellipse"
-msgstr ""
+msgstr "1 --- 최대값: 그리드 노드 검색 타원에서 발견된 최대값"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:417
 msgid ""
 "2 --- Range, a difference between the minimum and maximum values found in "
 "grid node search ellipse"
-msgstr ""
+msgstr "2 --- 범위: 그리드 노드 검색 타원에서 발견된 최소값 및 최대값의 차"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:419
 msgid "3 --- Count, a number of data points found in grid node search ellipse"
-msgstr ""
+msgstr "3 --- 개수: 그리드 노드 검색 타원에서 발견된 데이터 포인트의 개수"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:421
 msgid ""
@@ -1271,6 +1290,7 @@ msgid ""
 " the search ellipse) and all of the data points found in grid node search "
 "ellipse"
 msgstr ""
+"4 --- 평균 거리: 그리드 노드(검색 타원의 중심)와 그리드 노드 검색 타원에서 발견된 모든 데이터 포인트 사이의 평균 거리"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:424
 msgid ""
@@ -1279,20 +1299,22 @@ msgid ""
 "points within ellipse is calculated and average of all distances is set as a"
 " grid node value"
 msgstr ""
+"5 --- 포인트 사이의 평균 거리: 그리드 노드 검색 타원에서 발견된 데이터 포인트들 사이의 평균 거리. 타원 내부에 있는 각 포인트쌍"
+" 사이의 거리를 계산하고 모든 거리의 평균을 그리드 노드 값으로 설정합니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:430
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:752
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1047
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1200
 msgid "**The first radius of search ellipse**"
-msgstr ""
+msgstr "**The first radius of search ellipse**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:431
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:753
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1048
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1201
 msgid "``RADIUS_1``"
-msgstr ""
+msgstr "``RADIUS_1``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:434
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:441
@@ -1327,21 +1349,21 @@ msgstr "기본값: 0.0"
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1052
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1205
 msgid "The first radius (X axis if rotation angle is 0) of the search ellipse"
-msgstr ""
+msgstr "검색 타원의 첫 번째 (기울기 각도가 0인 경우 X축) 반경"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:437
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:759
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1054
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1207
 msgid "**The second radius of search ellipse**"
-msgstr ""
+msgstr "**The second radius of search ellipse**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:438
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:760
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1055
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1208
 msgid "``RADIUS_2``"
-msgstr ""
+msgstr "``RADIUS_2``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:442
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:764
@@ -1349,21 +1371,21 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1212
 msgid ""
 "The second radius (Y axis if rotation angle is 0) of the search ellipse"
-msgstr ""
+msgstr "검색 타원의 두 번째 (기울기 각도가 0인 경우 Y축) 반경"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:444
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:766
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1061
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1214
 msgid "**Angle of search ellipse rotation in degrees (counter clockwise)**"
-msgstr ""
+msgstr "**Angle of search ellipse rotation in degrees (counter clockwise)**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:445
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:767
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1062
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1215
 msgid "``ANGLE``"
-msgstr ""
+msgstr "``ANGLE``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:449
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:771
@@ -1371,21 +1393,21 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1219
 msgid ""
 "Angle of ellipse rotation in degrees. Ellipse rotated counter clockwise."
-msgstr ""
+msgstr "타원 기울기의 도 단위 각도. 타원은 반시계 방향으로 기울어집니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:451
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:605
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:779
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1068
 msgid "**Minimum number of data points to use**"
-msgstr ""
+msgstr "**Minimum number of data points to use**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:452
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:606
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:780
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1069
 msgid "``MIN_POINTS``"
-msgstr ""
+msgstr "``MIN_POINTS``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:456
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:610
@@ -1395,6 +1417,8 @@ msgid ""
 "Minimum number of data points to average. If less amount of points found the"
 " grid node considered empty and will be filled with NODATA marker."
 msgstr ""
+"평균을 낼 데이터 포인트의 최소 개수. 이 값보다 적은 포인트가 발견된 그리드 노드는 비어 있다고 간주되어 NODATA 마커로 채워질 "
+"것입니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:460
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:614
@@ -1403,7 +1427,7 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1077
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1221
 msgid "**Nodata**"
-msgstr ""
+msgstr "**Nodata**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:461
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:615
@@ -1422,7 +1446,7 @@ msgstr "``NODATA``"
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1082
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1226
 msgid "No data marker to fill empty points"
-msgstr ""
+msgstr "비어 있는 포인트를 채울 NODATA 마커"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:466
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:620
@@ -1431,7 +1455,7 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1083
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1227
 msgid "**Z value from field**"
-msgstr ""
+msgstr "**Z value from field**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:469
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:623
@@ -1440,7 +1464,7 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1086
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1230
 msgid "``Z_FIELD``"
-msgstr ""
+msgstr "``Z_FIELD``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:470
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:624
@@ -1458,7 +1482,7 @@ msgstr "[tablefield: numeric]"
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1088
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1232
 msgid "Field for the interpolation"
-msgstr ""
+msgstr "보간 작업용 필드"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:492
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:646
@@ -1613,7 +1637,7 @@ msgstr "10 --- 복잡 부동소수점 64비트 실수형(CFloat64)"
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:512
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:536
 msgid "**Interpolated (data metrics)**"
-msgstr ""
+msgstr "**Interpolated (data metrics)**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:517
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:671
@@ -1622,7 +1646,7 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1278
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1428
 msgid "Specify the output raster layer with interpolated values. One of:"
-msgstr ""
+msgstr "보간된 값을 가진 산출 래스터 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:539
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:693
@@ -1632,15 +1656,15 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1300
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1450
 msgid "Output raster with interpolated values"
-msgstr ""
+msgstr "보간된 값을 가진 산출 래스터"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:544
 msgid "**Algorithm ID**: ``gdal:griddatametrics``"
-msgstr ""
+msgstr "**Algorithm ID**: ``gdal:griddatametrics``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:554
 msgid "Grid (IDW with nearest neighbor searching)"
-msgstr ""
+msgstr "그리드 (최근접 이웃을 검색하는 역거리 가중치법)"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:556
 msgid ""
@@ -1648,16 +1672,18 @@ msgid ""
 "neighbor method. Ideal when a maximum number of data points to use is "
 "required."
 msgstr ""
+"최근접 이웃 메소드와 결합된 역거리 제곱(Inverse Distance to a Power) 그리드 작업을 계산합니다. 최대 개수의 "
+"데이터 포인트를 사용해야 하는 경우 이상적입니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:581
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:740
 msgid "**Weighting power**"
-msgstr ""
+msgstr "**Weighting power**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:582
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:741
 msgid "``POWER``"
-msgstr ""
+msgstr "``POWER``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:585
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:744
@@ -1667,25 +1693,25 @@ msgstr "Default: 2.0"
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:586
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:745
 msgid "Weighting power"
-msgstr ""
+msgstr "가중치 제곱지수"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:587
 msgid "**Smoothing**"
-msgstr ""
+msgstr "**Smoothing**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:588
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:747
 msgid "``SMOOTHING``"
-msgstr ""
+msgstr "``SMOOTHING``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:592
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:751
 msgid "Smoothing parameter"
-msgstr ""
+msgstr "평탄화 파라미터"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:593
 msgid "**The radius of the search circle**"
-msgstr ""
+msgstr "**The radius of the search circle**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:594
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:910
@@ -1701,17 +1727,17 @@ msgstr "기본값: 1.0"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:598
 msgid "The radius of the search circle"
-msgstr ""
+msgstr "검색 원의 반경"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:599
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:773
 msgid "**Maximum number of data points to use**"
-msgstr ""
+msgstr "**Maximum number of data points to use**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:600
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:774
 msgid "``MAX_POINTS``"
-msgstr ""
+msgstr "``MAX_POINTS``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:603
 msgid "Default: 12"
@@ -1720,26 +1746,26 @@ msgstr "기본값: 12"
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:604
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:778
 msgid "Do not search for more points than this number."
-msgstr ""
+msgstr "이 값을 초과하는 개수의 포인트를 검색하지 않습니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:666
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:690
 msgid "**Interpolated (IDW with NN search)**"
-msgstr ""
+msgstr "**Interpolated (IDW with NN search)**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:698
 msgid "**Algorithm ID**: ``gdal:gridinversedistancenearestneighbor``"
-msgstr ""
+msgstr "**Algorithm ID**: ``gdal:gridinversedistancenearestneighbor``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:708
 msgid "Grid (Inverse distance to a power)"
-msgstr ""
+msgstr "그리드 (역거리 제곱)"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:709
 msgid ""
 "The Inverse Distance to a Power gridding method is a weighted average "
 "interpolator."
-msgstr ""
+msgstr "역거리 제곱 그리드 작업 방법이란 가중치를 부여한 평균 보간기(interpolator)를 말합니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:712
 msgid ""
@@ -1747,23 +1773,25 @@ msgid ""
 "coordinates of every data point and output grid geometry. The function will "
 "compute interpolated value for the given position in output grid."
 msgstr ""
+"모든 데이터 포인트 및 산출 그리드 도형의 좌표를 포함하는 산포(scatter)된 데이터 값을 담은 입력 배열을 지정해야 합니다. 이 "
+"알고리즘 함수는 산출 그리드에 지정한 위치에 대한 보간값을 계산할 것입니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:746
 msgid "**Smothing**"
-msgstr ""
+msgstr "**Smothing**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:840
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:864
 msgid "**Interpolated (IDW)**"
-msgstr ""
+msgstr "**Interpolated (IDW)**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:872
 msgid "**Algorithm ID**: ``gdal:gridinversedistance``"
-msgstr ""
+msgstr "**Algorithm ID**: ``gdal:gridinversedistance``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:882
 msgid "Grid (Linear)"
-msgstr ""
+msgstr "그리드 (선형)"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:883
 msgid ""
@@ -1774,14 +1802,18 @@ msgid ""
 "triangle, depending on the radius, the algorithm will use the value of the "
 "nearest point or the NODATA value."
 msgstr ""
+"선형(linear) 방법은 점구름(point cloud)의 들로네 삼각분할(Delaunay triangulation)을 계산해서 선형 "
+"보간을 수행합니다. 포인트가 삼각분할의 어느 삼각형 안에 있는지 찾은 다음, 해당 삼각형 내부의 무게중심 좌표로부터 선형 보간을 "
+"수행합니다. 포인트가 어떤 삼각형에도 들어가지 않는 경우, 이 알고리즘은 검색 반경에 따라 최근접 포인트의 값 또는 NODATA 값을 "
+"사용할 것입니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:909
 msgid "**Search distance**"
-msgstr ""
+msgstr "**Search distance**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:913
 msgid "Default: -1.0"
-msgstr ""
+msgstr "Default: -1.0"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:914
 msgid ""
@@ -1790,19 +1822,22 @@ msgid ""
 "neighbour, or use nodata otherwise. If set to ``-1``, the search distance is"
 " infinite. If set to ``0``, no data value will be used."
 msgstr ""
+"보간할 포인트가 들로네 삼각분할의 삼각형 안에 들어가지 않는 경우, 이 최대 거리를 사용해서 최근접 이웃을 찾거나 또는 최대 거리 안에 "
+"최근접 이웃이 없다면 NODATA를 사용합니다. 이 파라미터를 ``-1`` 로 설정하면, 검색 반경이 무한대가 됩니다. ``0`` 으로 "
+"설정하면 NODATA 값을 사용할 것입니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:972
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:996
 msgid "**Interpolated (Linear)**"
-msgstr ""
+msgstr "**Interpolated (Linear)**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1004
 msgid "**Algorithm ID**: ``gdal:gridlinear``"
-msgstr ""
+msgstr "**Algorithm ID**: ``gdal:gridlinear``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1014
 msgid "Grid (Moving average)"
-msgstr ""
+msgstr "그리드 (이동 평균)"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1015
 msgid ""
@@ -1813,11 +1848,15 @@ msgid ""
 " average can be set, if there are not enough points in window, the grid node"
 " considered empty and will be filled with specified NODATA value."
 msgstr ""
+"이동 평균(Moving Average)은 간단한 데이터 평균 알고리즘입니다. 이 알고리즘은 타원 형태의 이동 창을 사용해서 값을 검색하고"
+" 창 안에 들어오는 모든 데이터 포인트의 평균을 계산합니다. 지정한 각도로 검색 타원을 기울일 수 있고, 타원의 중심은 그리드 노드에 "
+"위치합니다. 또 평균을 계산하기 위한 데이터 포인트의 최소 개수도 설정할 수 있어서, 창 안에 충분한 포인트가 없을 경우 해당 그리드 "
+"노드가 비어 있다고 간주하고 지정한 NODATA 값으로 채울 것입니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1129
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1152
 msgid "**Interpolated (moving average)**"
-msgstr ""
+msgstr "**Interpolated (moving average)**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1134
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1535
@@ -1828,15 +1867,15 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2116
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2209
 msgid "Specify the output raster layer. One of:"
-msgstr ""
+msgstr "산출 래스터 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1160
 msgid "**Algorithm ID**: ``gdal:gridaverage``"
-msgstr ""
+msgstr "**Algorithm ID**: ``gdal:gridaverage``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1170
 msgid "Grid (Nearest neighbor)"
-msgstr ""
+msgstr "그리드 (최근접 이웃)"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1171
 msgid ""
@@ -1845,15 +1884,18 @@ msgid ""
 "and returns it as a result. If there are no points found, the specified "
 "NODATA value will be returned."
 msgstr ""
+"최근접 이웃(Nearest Neighbor) 방법은 어떤 보간이나 평탄화도 수행하지 않습니다. 그냥 그리드 노드 검색 타원에서 발견된 "
+"최근접 포인트의 값을 받아서 이를 결과물로 반환할 뿐입니다. 어떤 포인트도 발견하지 못 한 경우, 지정한 NODATA 값을 반환할 "
+"것입니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1273
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1297
 msgid "**Interpolated (Nearest neighbour)**"
-msgstr ""
+msgstr "**Interpolated (Nearest neighbour)**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1305
 msgid "**Algorithm ID**: ``gdal:gridnearestneighbor``"
-msgstr ""
+msgstr "**Algorithm ID**: ``gdal:gridnearestneighbor``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1315
 msgid "Hillshade"
@@ -1866,29 +1908,32 @@ msgid ""
 " of the light source, a vertical exaggeration factor and a scaling factor to"
 " account for differences between vertical and horizontal units."
 msgstr ""
+"보기 좋게 그림자가 진 기복(shaded relief) 효과를 준 래스터를 산출합니다. 이 알고리즘은 지형을 가시화하는 데 매우 "
+"유용합니다. 광원의 방위각 및 고도, 수직 강조 인자, 수직 및 수평 단위 사이의 차이를 처리하기 위한 척도 인자를 지정할 수 있는 "
+"옵션이 있습니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1322
 msgid ""
 "This algorithm is derived from the `GDAL DEM utility "
 "<https://gdal.org/gdaldem.html>`__ ."
-msgstr ""
+msgstr "이 알고리즘은 `GDAL DEM 유틸리티 <https://gdal.org/gdaldem.html>`_ 에서 파생되었습니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1342
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1494
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1598
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1967
 msgid "Input Elevation raster layer"
-msgstr ""
+msgstr "입력 표고 래스터 레이어"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1348
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1604
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1973
 msgid "Band containing the elevation information"
-msgstr ""
+msgstr "표고 정보를 담고 있는 밴드"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1349
 msgid "**Z factor (vertical exaggeration)**"
-msgstr ""
+msgstr "**Z factor (vertical exaggeration)**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1350
 msgid "``Z_FACTOR``"
@@ -1896,11 +1941,11 @@ msgstr "``Z_FACTOR``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1354
 msgid "The factor exaggerates the height of the output elevation raster"
-msgstr ""
+msgstr "산출 표고 래스터의 높이를 강조하는 인자"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1356
 msgid "**Scale (ratio of vert. units to horiz.)**"
-msgstr ""
+msgstr "**Scale (ratio of vert. units to horiz.)**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1357
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1975
@@ -1910,11 +1955,11 @@ msgstr "``SCALE``"
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1361
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1979
 msgid "The ratio of vertical units to horizontal units"
-msgstr ""
+msgstr "수직 단위와 수평 단위의 비율"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1362
 msgid "**Azimuth of the light**"
-msgstr ""
+msgstr "**Azimuth of the light**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1363
 msgid "``AZIMUTH``"
@@ -1922,7 +1967,7 @@ msgstr "``AZIMUTH``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1366
 msgid "Default: 315.0"
-msgstr ""
+msgstr "기본값: 315.0"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1367
 msgid ""
@@ -1930,14 +1975,16 @@ msgid ""
 " If it comes from the top of the raster the value is 0, if it comes from the"
 " east it is 90 a.s.o."
 msgstr ""
+"표고 래스터를 비추는 광원의 방위각을 도 단위로 정의합니다. 래스터의 상단(북)에서 비추는 경우 값은 0이고, 동쪽에서 비추는 경우 값은"
+" 90이고 등등."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1371
 msgid "**Altitude of the light**"
-msgstr ""
+msgstr "**Altitude of the light**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1372
 msgid "``ALTITUDE``"
-msgstr ""
+msgstr "``ALTITUDE``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1375
 msgid "Default: 45.0"
@@ -1948,27 +1995,28 @@ msgid ""
 "Defines the altitude of the light, in degrees. 90 if the light comes from "
 "above the elevation raster, 0 if it is raking light."
 msgstr ""
+"광원의 고도를 도 단위로 정의합니다. 표고 래스터 바로 위에서 비추는 경우 값은 90이고, 표면에 평행하게 비추는 경우 값은 0입니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1385
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1992
 msgid "**Use Zevenbergen&Thorne formula (instead of the Horn's one)**"
-msgstr ""
+msgstr "**Use Zevenbergen&Thorne formula (instead of the Horn's one)**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1391
 msgid "**Combined shading**"
-msgstr ""
+msgstr "**Combined shading**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1392
 msgid "``COMBINED``"
-msgstr ""
+msgstr "``COMBINED``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1397
 msgid "**Multidirectional shading**"
-msgstr ""
+msgstr "**Multidirectional shading**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1398
 msgid "``MULTIDIRECTIONAL``"
-msgstr ""
+msgstr "``MULTIDIRECTIONAL``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1423
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1447
@@ -1977,15 +2025,15 @@ msgstr "**Hillshade**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1455
 msgid "**Algorithm ID**: ``gdal:hillshade``"
-msgstr ""
+msgstr "**Algorithm ID**: ``gdal:hillshade``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1465
 msgid "Near black"
-msgstr ""
+msgstr "근사 검은색"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1466
 msgid "Converts nearly black/white borders to black."
-msgstr ""
+msgstr "검은색/하얀색에 가까운 경계를 검은색으로 변환합니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1468
 msgid ""
@@ -1994,20 +2042,24 @@ msgid ""
 "black or white. This is often used to \"fix up\" lossy compressed airphotos "
 "so that color pixels can be treated as transparent when mosaicking."
 msgstr ""
+"이 알고리즘은 이미지를 스캔해서, 가장자리 주변의 검은색/하얀색/하나 이상의 사용자 지정 색상에 근사하거나 검은색/하얀색/하나 이상의 "
+"사용자 지정 색상인 모든 픽셀을 검은색 또는 하얀색으로 설정합니다. 이 알고리즘은 손실 있는 압축 항공사진을 \"고쳐서\" 모자이크 "
+"작업시 색상 픽셀을 투명하게 처리할 수 있도록 하는 데 자주 사용됩니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1474
 msgid ""
 "This algorithm is derived from the `GDAL nearblack utility "
 "<https://gdal.org/nearblack.html>`_."
 msgstr ""
+"이 알고리즘은 `GDAL 근사 검은색 유틸리티 <https://gdal.org/nearblack.html>`_ 에서 파생되었습니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1495
 msgid "**How far from black (white)**"
-msgstr ""
+msgstr "**How far from black (white)**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1496
 msgid "``NEAR``"
-msgstr ""
+msgstr "``NEAR``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1499
 msgid "Default: 15"
@@ -2017,32 +2069,32 @@ msgstr "기본값: 15"
 msgid ""
 "Select how far from black, white or custom colors the pixel values can be "
 "and still considered near black, white or custom color."
-msgstr ""
+msgstr "픽셀값이 검은색/하얀색/사용자 지정 색상으로 간주되려면 검은색/하얀색/사용자 지정 색상과 얼마나 다를 수 있는지 선택합니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1503
 msgid "**Search for nearly white pixels instead of nearly black**"
-msgstr ""
+msgstr "**Search for nearly white pixels instead of nearly black**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1504
 msgid "``WHITE``"
-msgstr ""
+msgstr "``WHITE``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1508
 msgid "Search for nearly white (255) pixels instead of nearly black pixels"
-msgstr ""
+msgstr "근사 검정색 픽셀 대신 근사 하얀색(255) 픽셀을 검색합니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1530
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1553
 msgid "**Nearblack**"
-msgstr ""
+msgstr "**Nearblack**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1561
 msgid "**Algorithm ID**: ``gdal:nearblack``"
-msgstr ""
+msgstr "**Algorithm ID**: ``gdal:nearblack``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1571
 msgid "Proximity (raster distance)"
-msgstr ""
+msgstr "근접성 (래스터 거리)"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1572
 msgid ""
@@ -2051,22 +2103,27 @@ msgid ""
 "Target pixels are those in the source raster for which the raster pixel "
 "value is in the set of target pixel values."
 msgstr ""
+"각 픽셀의 중심(center)에서 대상 픽셀로 식별된 최근접 픽셀의 중심까지의 거리를 나타내는 래스터 근접성(proximity) 맵을 "
+"생성합니다. 대상 픽셀은 래스터 픽셀값이 대상 픽셀값 집합에 있는 소스 래스터의 픽셀입니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1578
 msgid ""
 "This algorithm is derived from the `GDAL proximity utility "
 "<https://gdal.org/gdal_proximity.html>`_."
 msgstr ""
+"이 알고리즘은 `GDAL 근접성 유틸리티 <https://gdal.org/gdal_proximity.html>`_ 에서 파생되었습니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1605
 msgid ""
 "**A list of pixel values in the source image to be considered target "
 "pixels**"
 msgstr ""
+"**A list of pixel values in the source image to be considered target "
+"pixels**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1608
 msgid "``VALUES``"
-msgstr ""
+msgstr "``VALUES``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1612
 msgid ""
@@ -2074,32 +2131,34 @@ msgid ""
 "pixels. If not specified, all non-zero pixels will be considered target "
 "pixels."
 msgstr ""
+"소스 이미지에서 대상 픽셀로 간주되기 위한 대상 픽셀값의 목록입니다. 이 파라미터를 지정하지 않는 경우, 0값이 아닌 모든 픽셀을 대상 "
+"픽셀로 간주할 것입니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1616
 msgid "**Distance units**"
-msgstr ""
+msgstr "**Distance units**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1617
 msgid "``UNITS``"
-msgstr ""
+msgstr "``UNITS``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1621
 msgid ""
 "Indicate whether distances generated should be in pixel or georeferenced "
 "coordinates. One of:"
-msgstr ""
+msgstr "생성된 거리를 픽셀 단위로 나타낼지 또는 지리참조 좌표로 나타낼지 설정합니다. 다음 가운데 하나를 선택할 수 있습니다:"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1624
 msgid "0 --- Georeferenced coordinates"
-msgstr ""
+msgstr "0 --- 지리참조 좌표"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1625
 msgid "1 --- Pixel coordinates"
-msgstr ""
+msgstr "1 --- 픽셀 좌표"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1627
 msgid "**The maximum distance to be generated**"
-msgstr ""
+msgstr "**The maximum distance to be generated**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1630
 msgid "``MAX_DISTANCE``"
@@ -2113,44 +2172,49 @@ msgid ""
 "a nodata value, then the value 65535 will be used. Distance is interpreted "
 "according to the value of *Distance units*."
 msgstr ""
+"생성할 거리의 최대값입니다. 이 거리를 초과하는 픽셀에 대해서는 NODATA 값을 사용할 것입니다. NODATA 값을 지정하지 않는 "
+"경우, 산출 밴드에 산출 밴드의 NODATA 값을 쿼리할 것입니다. 산출 밴드가 NODATA 값을 가지고 있지 않은 경우, 65535값을"
+" 사용할 것입니다. *Distance units* 의 값에 따라 거리를 해석합니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1643
 msgid ""
 "**Value to be applied to all pixels that are within the maxdist of target "
 "pixels**"
 msgstr ""
+"**Value to be applied to all pixels that are within the maxdist of target "
+"pixels**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1646
 msgid "``REPLACE``"
-msgstr ""
+msgstr "``REPLACE``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1650
 msgid ""
 "Specify a value to be applied to all pixels that are closer than the maximum"
 " distance from target pixels (including the target pixels) instead of a "
 "distance value."
-msgstr ""
+msgstr "대상 픽셀에서 최대 거리보다 가까이 있는 모든 픽셀에 거리 값 대신 적용할 값을 지정합니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1654
 msgid "**Nodata value to use for the destination proximity raster**"
-msgstr ""
+msgstr "**Nodata value to use for the destination proximity raster**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1661
 msgid "Specify the nodata value to use for the output raster"
-msgstr ""
+msgstr "산출 래스터에 사용할 NODATA 값을 지정합니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1702
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1725
 msgid "**Proximity map**"
-msgstr ""
+msgstr "**Proximity map**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1733
 msgid "**Algorithm ID**: ``gdal:proximity``"
-msgstr ""
+msgstr "**Algorithm ID**: ``gdal:proximity``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1743
 msgid "Roughness"
-msgstr ""
+msgstr "거칠기"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1744
 msgid ""
@@ -2161,25 +2225,29 @@ msgid ""
 "terrain elevation data, it's useful for calculations of the river "
 "morphology, in climatology and physical geography in general."
 msgstr ""
+"표고로부터 계산한 값을 가진 단일 밴드 래스터를 산출합니다. 거칠기(roughness)란 표면의 불규칙한 정도를 말합니다. 거칠기는 중앙"
+" 픽셀과 그를 둘러싼 셀들 사이의 가장 큰 차이로 계산됩니다. 거칠기를 결정하는 작업은 지형 표고 데이터 분석에서 일정 역할을 합니다. "
+"이 알고리즘은 하천 형태학(river morphology), 기후학(climatology), 자연 지리학(physical "
+"geography) 전반의 계산에 유용합니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1797
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1820
 msgid "**Roughness**"
-msgstr ""
+msgstr "**Roughness**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1823
 msgid ""
 "Single-band output roughness raster. The value -9999 is used as nodata "
 "value."
-msgstr ""
+msgstr "단일 밴드 산출 거칠기 래스터. -9999값을 NODATA 값으로 사용합니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1829
 msgid "**Algorithm ID**: ``gdal:roughness``"
-msgstr ""
+msgstr "**Algorithm ID**: ``gdal:roughness``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1839
 msgid "Sieve"
-msgstr ""
+msgstr "거르기"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1840
 msgid ""
@@ -2187,12 +2255,16 @@ msgid ""
 "and replaces them with the pixel value of the largest neighbour polygon. It "
 "is useful if you have a large amount of small areas on your raster map."
 msgstr ""
+"지정한 (픽셀 단위) 한계 크기보다 작은 래스터 폴리곤을 제거하고 최대 이웃 폴리곤의 픽셀값으로 대체합니다. 이 알고리즘은 사용자 래스터"
+" 맵에 수많은 작은 영역이 있을 경우 유용합니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1846
 msgid ""
 "This algorithm is derived from the `GDAL sieve utility "
 "<https://gdal.org/gdal_sieve.html>`_."
 msgstr ""
+"이 알고리즘은 `GDAL 거르기(sieve) 유틸리티 <https://gdal.org/gdal_sieve.html>`_ 에서 "
+"파생되었습니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1867
 msgid "**Threshold**"
@@ -2200,44 +2272,46 @@ msgstr "**Threshold**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1868
 msgid "``THRESHOLD``"
-msgstr ""
+msgstr "``THRESHOLD``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1872
 msgid "Only raster polygons smaller than this size will be removed"
-msgstr ""
+msgstr "이 크기보다 작은 래스터 폴리곤만 제거할 것입니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1874
 msgid "**Use 8-connectedness**"
-msgstr ""
+msgstr "**Use 8-connectedness**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1875
 msgid "``EIGHT_CONNECTEDNESS``"
-msgstr ""
+msgstr "``EIGHT_CONNECTEDNESS``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1879
 msgid "Use eight connectedness instead of four connectedness"
 msgstr ""
+"4 `연결성(connectedness) <https://en.wikipedia.org/wiki/Pixel_connectivity>`_ "
+"대신 8 연결성을 사용"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1880
 msgid "**Do not use the default validity mask for the input band**"
-msgstr ""
+msgstr "**Do not use the default validity mask for the input band**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1891
 msgid "Validity mask to use instead of the default"
-msgstr ""
+msgstr "기본값 대신 사용할 유효성 마스크"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1900
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1923
 msgid "**Sieved**"
-msgstr ""
+msgstr "**Sieved**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1926
 msgid "Output raster layer."
-msgstr ""
+msgstr "산출 래스터 레이어"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1931
 msgid "**Algorithm ID**: ``gdal:sieve``"
-msgstr ""
+msgstr "**Algorithm ID**: ``gdal:sieve``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1941
 msgid "Slope"
@@ -2249,22 +2323,24 @@ msgid ""
 " angle of inclination to the horizontal. You have the option of specifying "
 "the type of slope value you want: degrees or percent slope."
 msgstr ""
+"GDAL이 지원하는 모든 표고 래스터로부터 경사도(slope) 맵을 생성합니다. 경사도란 수평에 대한 경사각(angle of "
+"inclination)을 말합니다. 경사도 값의 유형을 도 단위 또는 백분율로 지정할 수 있는 옵션이 있습니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1974
 msgid "**Ratio of vertical units to horizontal**"
-msgstr ""
+msgstr "**Ratio of vertical units to horizontal**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1980
 msgid "**Slope expressed as percent (instead of degrees)**"
-msgstr ""
+msgstr "**Slope expressed as percent (instead of degrees)**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1981
 msgid "``AS_PERCENT``"
-msgstr ""
+msgstr "``AS_PERCENT``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1985
 msgid "Express slope as percent instead of degrees"
-msgstr ""
+msgstr "경사도를 도 단위 대신 백분율로 표현합니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2018
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2041
@@ -2273,11 +2349,11 @@ msgstr "**Slope**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2049
 msgid "**Algorithm ID**: ``gdal:slope``"
-msgstr ""
+msgstr "**Algorithm ID**: ``gdal:slope``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2059
 msgid "Terrain Ruggedness Index (TRI)"
-msgstr ""
+msgstr "지형 험상 지수 (TRI)"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2060
 msgid ""
@@ -2285,25 +2361,27 @@ msgid ""
 "stands for Terrain Ruggedness Index, which is defined as the mean difference"
 " between a central pixel and its surrounding cells."
 msgstr ""
+"표고로부터 계산한 값을 가진 단일 밴드 래스터를 산출합니다. TRI란 지형 험상 지수(Terrain Ruggedness Index)의 "
+"약자로, 중앙 픽셀과 그를 둘러싼 셀 사이의 평균 차(mean difference)로 정의됩니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2111
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2134
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2204
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2227
 msgid "**Terrain Ruggedness Index**"
-msgstr ""
+msgstr "**Terrain Ruggedness Index**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2137
 msgid "Output ruggedness raster. The value -9999 is used as nodata value."
-msgstr ""
+msgstr "산출 험상 래스터. -9999값을 NODATA 값으로 사용합니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2143
 msgid "**Algorithm ID**: ``gdal:triterrainruggednessindex``"
-msgstr ""
+msgstr "**Algorithm ID**: ``gdal:triterrainruggednessindex``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2153
 msgid "Topographic Position Index (TPI)"
-msgstr ""
+msgstr "위상 위치 지수 (TPI)"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2154
 msgid ""
@@ -2311,15 +2389,17 @@ msgid ""
 "stands for Topographic Position Index, which is defined as the difference "
 "between a central pixel and the mean of its surrounding cells."
 msgstr ""
+"표고로부터 계산한 값을 가진 단일 밴드 래스터를 산출합니다. TPI란 위상 위치 지수(Topographic Position Index)의"
+" 약자로, 중앙 픽셀과 그를 둘러싼 셀 사이의 차(difference)로 정의됩니다."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2185
 msgid "The number of the band to use for elevation values"
-msgstr ""
+msgstr "표고 값으로 사용할 밴드의 번호"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2230
 msgid "Output raster."
-msgstr ""
+msgstr "산출 래스터"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2235
 msgid "**Algorithm ID**: ``gdal:tpitopographicpositionindex``"
-msgstr ""
+msgstr "**Algorithm ID**: ``gdal:tpitopographicpositionindex``"

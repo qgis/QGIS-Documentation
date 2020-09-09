@@ -24,17 +24,17 @@ msgstr ""
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:2
 msgid "Vector table"
-msgstr ""
+msgstr "벡터 테이블"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:14
 msgid "Add autoincremental field"
-msgstr ""
+msgstr "자동 증가 필드 추가하기"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:15
 msgid ""
 "Adds a new integer field to a vector layer, with a sequential value for each"
 " feature."
-msgstr ""
+msgstr "벡터 레이어에 각 피처에 대해 연속 값을 가지는 새 정수형 필드를 추가합니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:18
 msgid ""
@@ -42,6 +42,8 @@ msgid ""
 "attribute is not added to the input layer but a new layer is generated "
 "instead."
 msgstr ""
+"이 필드는 레이어에 있는 피처를 위한 유일 ID로 사용할 수 있습니다. 입력 레이어에는 새 속성을 추가하지 않지만 그 대신 새 레이어를 "
+"생성할 것입니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:22
 msgid ""
@@ -49,6 +51,8 @@ msgid ""
 "Optionally, the incremental series can be based on grouping fields and a "
 "sort order for features can also be specified."
 msgstr ""
+"증가하는 일련의 숫자의 맨 처음 시작값을 지정할 수 있습니다. 증가하는 일련의 숫자는 그룹화 필드를 바탕으로 할 수 있고, 피처의 정렬 "
+"순서도 지정할 수 있습니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:28
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:144
@@ -117,7 +121,7 @@ msgstr "라벨"
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:1068
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:1102
 msgid "Name"
-msgstr "Name"
+msgstr "명칭"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:37
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:114
@@ -225,7 +229,7 @@ msgstr "[vector: any]"
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:42
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:1074
 msgid "The input vector layer."
-msgstr ""
+msgstr "입력 벡터 레이어"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:43
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:160
@@ -254,15 +258,15 @@ msgstr "[string]"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:47
 msgid "Default: 'AUTO'"
-msgstr ""
+msgstr "기본값: 'AUTO'"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:48
 msgid "Name of the field with autoincremental values"
-msgstr ""
+msgstr "자동 증가하는 값을 가진 필드의 명칭"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:49
 msgid "**Start values at**"
-msgstr ""
+msgstr "**Start values at**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:51
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:59
@@ -275,7 +279,7 @@ msgstr "부가적"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:52
 msgid "``START``"
-msgstr ""
+msgstr "``START``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:53
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:177
@@ -297,15 +301,15 @@ msgstr "기본값: 0"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:56
 msgid "Choose the initial number of the incremental count"
-msgstr ""
+msgstr "증가하는 번호의 맨 처음 숫자를 선택합니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:57
 msgid "**Group values by**"
-msgstr ""
+msgstr "**Group values by**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:60
 msgid "``GROUP_FIELDS``"
-msgstr ""
+msgstr "``GROUP_FIELDS``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:61
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:556
@@ -318,14 +322,16 @@ msgid ""
 " a separate count is processed for each value returned by the combination of"
 " these fields."
 msgstr ""
+"그룹화할 필드(들)를 선택합니다. 전체 레이어에 대해 연속되는 번호 한 무리를 적용하는 대신, 이 필드(들)의 결합으로 반환되는 각 값에"
+" 대해 개별 번호 무리(들)을 적용합니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:66
 msgid "**Sort expression**"
-msgstr ""
+msgstr "**Sort expression**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:69
 msgid "``SORT_EXPRESSION``"
-msgstr ""
+msgstr "``SORT_EXPRESSION``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:70
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:718
@@ -338,6 +344,7 @@ msgid ""
 "Use an expression to sort the features in the layer either globally or if "
 "set, based on group fields."
 msgstr ""
+"표현식을 사용해서 레이어 전체 수준에서 피처들을 정렬하거나, 필드 그룹을 설정한 경우 필드 그룹을 기반으로 피처를 정렬합니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:73
 msgid "**Sort ascending**"
@@ -345,7 +352,7 @@ msgstr "**Sort ascending**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:74
 msgid "``SORT_ASCENDING``"
-msgstr ""
+msgstr "``SORT_ASCENDING``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:75
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:83
@@ -362,7 +369,7 @@ msgstr "기본값: True"
 msgid ""
 "When a ``sort expression`` is set, use this option to control the order in "
 "which features are assigned values."
-msgstr ""
+msgstr "``sort expression`` 을 설정한 경우, 이 옵션을 사용해서 피처에 값을 할당하는 순서를 제어할 수 있습니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:81
 msgid "**Sort nulls first**"
@@ -370,7 +377,7 @@ msgstr "**Sort nulls first**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:82
 msgid "``SORT_NULLS_FIRST``"
-msgstr ""
+msgstr "``SORT_NULLS_FIRST``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:85
 msgid "Default: False"
@@ -381,11 +388,13 @@ msgid ""
 "When a ``sort expression`` is set, use this option to set whether *Null* "
 "values are counted first or last."
 msgstr ""
+"``sort expression`` 을 설정한 경우, 이 옵션을 사용해서 *NULL* 값을 맨 처음 정렬시킬시 또는 마지막으로 정렬시킬지"
+" 설정할 수 있습니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:89
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:116
 msgid "**Incremented**"
-msgstr ""
+msgstr "**Incremented**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:90
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:117
@@ -441,7 +450,7 @@ msgstr "기본값: ``[Create temporary layer]``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:94
 msgid "Specify the output vector layer with the auto increment field. One of:"
-msgstr ""
+msgstr "자동 증가 필드를 가질 산출 벡터 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:98
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:195
@@ -510,7 +519,7 @@ msgstr "산출물"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:119
 msgid "Vector layer with auto incremental field"
-msgstr ""
+msgstr "자동 증가 필드를 가진 벡터 레이어"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:122
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:219
@@ -529,7 +538,7 @@ msgstr "파이썬 코드"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:124
 msgid "**Algorithm ID**: ``qgis:addautoincrementalfield``"
-msgstr ""
+msgstr "**Algorithm ID**: ``qgis:addautoincrementalfield``"
 
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
@@ -555,23 +564,23 @@ msgstr ""
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:134
 msgid "Add field to attributes table"
-msgstr ""
+msgstr "속성 테이블에 필드 추가하기"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:135
 msgid "Adds a new field to a vector layer."
-msgstr ""
+msgstr "벡터 레이어에 새 필드를 추가합니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:137
 msgid ""
 "The name and characteristics of the attribute are defined as parameters."
-msgstr ""
+msgstr "속성의 명칭 및 특성은 파라미터로 정의합니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:140
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:241
 msgid ""
 "The new attribute is not added to the input layer but a new layer is "
 "generated instead."
-msgstr ""
+msgstr "입력 레이어에는 새 속성을 추가하지 않지만 그 대신 새 레이어를 생성할 것입니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:159
 msgid "The input layer"
@@ -580,18 +589,18 @@ msgstr "입력 레이어"
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:163
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:447
 msgid "Name of the new field"
-msgstr ""
+msgstr "새 필드의 명칭"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:164
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:448
 msgid "**Field type**"
-msgstr ""
+msgstr "**Field type**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:165
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:449
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:855
 msgid "``FIELD_TYPE``"
-msgstr ""
+msgstr "``FIELD_TYPE``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:166
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:450
@@ -601,34 +610,34 @@ msgstr "[enumeration]"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:169
 msgid "Type of the new field. You can choose between:"
-msgstr ""
+msgstr "새 필드의 유형을 다음 가운데 선택할 수 있습니다:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:171
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:455
 msgid "0 --- Integer"
-msgstr ""
+msgstr "0 --- 정수형"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:172
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:456
 msgid "1 --- Float"
-msgstr ""
+msgstr "1 --- 부동소수점 실수형"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:173
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:457
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:863
 msgid "2 --- String"
-msgstr ""
+msgstr "2 --- 문자열"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:175
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:459
 msgid "**Field length**"
-msgstr ""
+msgstr "**Field length**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:176
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:460
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:867
 msgid "``FIELD_LENGTH``"
-msgstr ""
+msgstr "``FIELD_LENGTH``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:179
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:463
@@ -639,29 +648,29 @@ msgstr "기본값: 10"
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:180
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:464
 msgid "Length of the field"
-msgstr ""
+msgstr "필드의 길이"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:181
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:465
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:872
 msgid "**Field precision**"
-msgstr ""
+msgstr "**Field precision**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:182
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:466
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:873
 msgid "``FIELD_PRECISION``"
-msgstr ""
+msgstr "``FIELD_PRECISION``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:186
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:470
 msgid "Precision of the field. Useful with Float field type."
-msgstr ""
+msgstr "필드의 정밀도. 부동소수점 필드 유형에 유용합니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:187
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:213
 msgid "**Added**"
-msgstr ""
+msgstr "**Added**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:192
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:653
@@ -681,19 +690,19 @@ msgstr "PostGIS 테이블로 저장"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:216
 msgid "Vector layer with new field added"
-msgstr ""
+msgstr "새 필드를 추가한 벡터 레이어"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:221
 msgid "**Algorithm ID**: ``qgis:addfieldtoattributestable``"
-msgstr ""
+msgstr "**Algorithm ID**: ``qgis:addfieldtoattributestable``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:231
 msgid "Add unique value index field"
-msgstr ""
+msgstr "유일값 인덱스 필드 추가하기"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:232
 msgid "Takes a vector layer and an attribute and adds a new numeric field."
-msgstr ""
+msgstr "벡터 레이어를 받아 그 속성에 새 숫자 필드를 추가합니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:234
 msgid ""
@@ -701,12 +710,13 @@ msgid ""
 "features with the same value for the attribute will have the same value in "
 "the new numeric field."
 msgstr ""
+"이 필드의 값은 지정한 속성의 값에 대응합니다. 따라서 동일한 속성값을 가진 피처는 새 필드에 동일한 값을 가지게 될 것입니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:238
 msgid ""
 "This creates a numeric equivalent of the specified attribute, which defines "
 "the same classes."
-msgstr ""
+msgstr "이 알고리즘은 지정한 속성과 동등한, 동일한 범주를 정의하는 숫자 필드를 생성합니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:259
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:360
@@ -734,29 +744,29 @@ msgstr "[tablefield: any]"
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:263
 msgid ""
 "Features that have the same value for this field will get the same index."
-msgstr ""
+msgstr "이 필드에 동일한 값을 가진 피처는 동일한 인덱스를 얻게 될 것입니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:265
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:850
 msgid "**Output field name**"
-msgstr ""
+msgstr "**Output field name**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:269
 msgid "Default: 'NUM_FIELD'"
-msgstr ""
+msgstr "기본값: 'NUM_FIELD'"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:270
 msgid "Name of the new field containing the indexes."
-msgstr ""
+msgstr "인덱스를 담고 있는 새 필드의 명칭"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:271
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:314
 msgid "**Layer with index field**"
-msgstr ""
+msgstr "**Layer with index field**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:276
 msgid "Vector layer with the numeric field containing indexes. One of:"
-msgstr ""
+msgstr "인덱스를 담고 있는 숫자 필드를 가질 벡터 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:279
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:295
@@ -777,12 +787,12 @@ msgstr "임시 레이어 생성"
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:286
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:318
 msgid "**Class summary**"
-msgstr ""
+msgstr "**Class summary**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:287
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:319
 msgid "``SUMMARY_OUTPUT``"
-msgstr ""
+msgstr "``SUMMARY_OUTPUT``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:288
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:320
@@ -797,29 +807,29 @@ msgstr "기본값: ``[Skip output]``"
 msgid ""
 "Specify the table to contain the summary of the class field mapped to the "
 "corresponding unique value. One of:"
-msgstr ""
+msgstr "대응하는 유일값에 맵핑된 범주 필드의 요약을 담을 테이블을 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:317
 msgid "Vector layer with the numeric field containing indexes."
-msgstr ""
+msgstr "인덱스를 담고 있는 숫자 필드를 가진 벡터 레이어"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:322
 msgid "Default: ``[Skip Output]``"
-msgstr ""
+msgstr "기본값: ``[Skip Output]``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:323
 msgid ""
 "Table with summary of the class field mapped to the corresponding unique "
 "value."
-msgstr ""
+msgstr "대응하는 유일값에 맵핑된 범주 필드의 요약을 담은 테이블"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:329
 msgid "**Algorithm ID**: ``qgis:adduniquevalueindexfield``"
-msgstr ""
+msgstr "**Algorithm ID**: ``qgis:adduniquevalueindexfield``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:339
 msgid "Add X/Y fields to layer"
-msgstr ""
+msgstr "레이어에 X/Y 필드 추가하기"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:340
 msgid ""
@@ -827,6 +837,8 @@ msgid ""
 " can be calculated in a different CRS to the layer (e.g. creating "
 "latitude/longitude fields for a layer in a projected CRS)."
 msgstr ""
+"포인트 레이어에 X 및 Y(또는 위도 및 경도) 필드를 추가합니다. X/Y 필드는 레이어와 다른 좌표계로 계산할 수 있습니다. (예를 "
+"들면 투영된 좌표계에서 레이어를 위한 위도/경도 필드를 생산할 수 있습니다.)"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:359
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:377
@@ -836,7 +848,7 @@ msgstr "[vector: point]"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:361
 msgid "**Coordinate system**"
-msgstr ""
+msgstr "**Coordinate system**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:362
 msgid "``CRS``"
@@ -848,15 +860,15 @@ msgstr "[crs]"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:365
 msgid "Default: \"EPSG:4326\""
-msgstr ""
+msgstr "기본값: \"EPSG:4326\""
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:366
 msgid "Coordinate reference system to use for the generated x and y fields."
-msgstr ""
+msgstr "생성된 X 및 Y 필드에 사용할 좌표계"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:368
 msgid "**Field prefix**"
-msgstr ""
+msgstr "**Field prefix**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:371
 msgid "``PREFIX``"
@@ -866,12 +878,12 @@ msgstr "``PREFIX``"
 msgid ""
 "Prefix to add to the new field names to avoid name collisions with fields in"
 " the input layer."
-msgstr ""
+msgstr "입력 레이어 필드와 명칭 충돌을 피하기 위해 새 필드명 앞에 붙일 접두어"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:375
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:401
 msgid "**Added fields**"
-msgstr ""
+msgstr "**Added fields**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:380
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:1085
@@ -882,25 +894,25 @@ msgstr "산출 레이어를 지정합니다. 다음 가운데 하나로 저장�
 msgid ""
 "The output layer - identical to the input layer but with two new double "
 "fields, ``x`` and ``y``."
-msgstr ""
+msgstr "입력 레이어와 동일하지만 새 ``x`` 및 ``y`` 필드 2개를 가진 산출 레이어"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:410
 msgid "**Algorithm ID**: ``qgis:addxyfieldstolayer``"
-msgstr ""
+msgstr "**Algorithm ID**: ``qgis:addxyfieldstolayer``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:420
 msgid "Advanced Python field calculator"
-msgstr ""
+msgstr "고급 파이썬 필드 계산기"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:421
 msgid ""
 "Adds a new attribute to a vector layer, with values resulting from applying "
 "an expression to each feature."
-msgstr ""
+msgstr "벡터 레이어에 각 피처에 표현식을 적용해서 나온 값을 새 속성으로 추가합니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:424
 msgid "The expression is defined as a Python function."
-msgstr ""
+msgstr "이 표현식은 파이썬 함수로 정의됩니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:441
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:633
@@ -909,15 +921,15 @@ msgstr "입력 벡터 레이어"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:442
 msgid "**Result field name**"
-msgstr ""
+msgstr "**Result field name**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:446
 msgid "Default: 'NewField'"
-msgstr ""
+msgstr "기본값: 'NewField'"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:453
 msgid "Type of the new field. One of:"
-msgstr ""
+msgstr "새 필드의 데이터 유형입니다. 다음 가운데 하나로 지정할 수 있습니다:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:469
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:876
@@ -926,11 +938,11 @@ msgstr "기본값: 3"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:471
 msgid "**Global expression**"
-msgstr ""
+msgstr "**Global expression**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:474
 msgid "``GLOBAL``"
-msgstr ""
+msgstr "``GLOBAL``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:476
 msgid ""
@@ -939,94 +951,96 @@ msgid ""
 " Therefore, this is the correct place to import necessary modules or to "
 "calculate variables that will be used in subsequent calculations."
 msgstr ""
+"계산기가 입력 레이어의 모든 피처에 대해 반복 작업을 시작하기 전에 전체 수준(global) 표현식 부분의 코드를 한번만 실행할 "
+"것입니다. 따라서, 필요한 모듈을 가져오거나 차후의 계산에 사용될 변수를 계산하는 표현식을 여기에 작성해야 합니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:482
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:884
 msgid "**Formula**"
-msgstr ""
+msgstr "**Formula**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:483
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:885
 msgid "``FORMULA``"
-msgstr ""
+msgstr "``FORMULA``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:485
 msgid ""
 "The Python formula to evaluate. Example: To calculate the area of an input "
 "polygon layer you can add::"
-msgstr ""
+msgstr "값을 구할 파이썬 공식입니다. 예를 들어 입력 폴리곤 레이어의 면적을 계산하려면 다음 공식을 추가하면 됩니다::"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:491
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:517
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:906
 msgid "**Calculated**"
-msgstr ""
+msgstr "**Calculated**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:496
 msgid "Specify the vector layer with the new calculated field. One of:"
-msgstr ""
+msgstr "새로 계산된 필드를 가질 산출 벡터 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:520
 msgid "Vector layer with the new calculated field"
-msgstr ""
+msgstr "새로 계산된 필드를 가진 산출 벡터 레이어"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:525
 msgid "**Algorithm ID**: ``qgis:advancedpythonfieldcalculator``"
-msgstr ""
+msgstr "**Algorithm ID**: ``qgis:advancedpythonfieldcalculator``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:535
 msgid "Drop field(s)"
-msgstr ""
+msgstr "필드(들) 삭제하기"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:536
 msgid ""
 "Takes a vector layer and generates a new one that has the same features but "
 "without the selected columns."
-msgstr ""
+msgstr "벡터 레이어를 받아 입력 레이어와 동일하지만 선택한 열을 삭제(drop)한 새 벡터 레이어를 생성합니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:553
 msgid "Input vector layer to drop field(s) from"
-msgstr ""
+msgstr "필드(들)를 삭제할 입력 벡터 레이어"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:554
 msgid "**Fields to drop**"
-msgstr ""
+msgstr "**Fields to drop**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:555
 msgid "``COLUMN``"
-msgstr ""
+msgstr "``COLUMN``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:557
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:637
 msgid "The field(s) to drop"
-msgstr ""
+msgstr "삭제할 필드(들)"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:558
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:584
 msgid "**Remaining fields**"
-msgstr ""
+msgstr "**Remaining fields**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:563
 msgid "Specify the output vector layer with the remaining fields. One of:"
-msgstr ""
+msgstr "남아 있는 필드를 담을 산출 벡터 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:587
 msgid "Vector layer with the remaining fields"
-msgstr ""
+msgstr "남아 있는 필드를 담은 벡터 레이어"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:592
 msgid "**Algorithm ID**: ``qgis:deletecolumn``"
-msgstr ""
+msgstr "**Algorithm ID**: ``qgis:deletecolumn``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:602
 msgid "Explode HStore Field"
-msgstr ""
+msgstr "HStore 필드 조각내기"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:603
 msgid ""
 "Creates a copy of the input layer and adds a new field for every unique key "
 "in the HStore field."
-msgstr ""
+msgstr "HStore 필드에 있는 모든 유일 키마다 새 필드를 추가한 입력 레이어의 복사본을 생성합니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:606
 msgid ""
@@ -1034,6 +1048,8 @@ msgid ""
 " specified, only these fields are added and the HStore field is updated. By "
 "default, all unique keys are added."
 msgstr ""
+"예상 필드 목록은 쉼표로 구분된 부가적인 목록입니다. 이 목록을 설정한 경우, 이 목록에 있는 필드만 추가하고 HStore 필드를 "
+"업데이트합니다. 유일 키는 기본적으로 모두 추가됩니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:612
 msgid ""
@@ -1042,18 +1058,22 @@ msgid ""
 "file <https://gdal.org/drivers/vector/osm.html#other-tags-field>`_ with the "
 "``other_tags`` field."
 msgstr ""
+"PostgreSQL `HStore <https://www.postgresql.org/docs/10/hstore.html>`_ 는 "
+"PostgreSQL 및 OGR에서 (``other_tags`` 필드를 가진 `OSM 파일 "
+"<https://gdal.org/drivers/vector/osm.html#other-tags-field>`_ 을 읽어오는 경우) "
+"사용되는 단순 키-값 저장소입니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:634
 msgid "**HStore field**"
-msgstr ""
+msgstr "**HStore field**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:638
 msgid "**Expected list of fields separated by a comma**"
-msgstr ""
+msgstr "**Expected list of fields separated by a comma**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:641
 msgid "``EXPECTED_FIELDS``"
-msgstr ""
+msgstr "``EXPECTED_FIELDS``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:644
 msgid "Default: ''"
@@ -1063,7 +1083,7 @@ msgstr "기본값: ''"
 msgid ""
 "Comma-separated list of fields to extract. The HStore field will be updated "
 "by removing these keys."
-msgstr ""
+msgstr "추출할 필드의 쉼표 구분 목록입니다. 이 키들을 제거해서 HStore 필드를 업데이트할 것입니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:648
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:673
@@ -1072,15 +1092,15 @@ msgstr "**Exploded**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:676
 msgid "Output vector layer"
-msgstr ""
+msgstr "산출 벡터 레이어"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:681
 msgid "**Algorithm ID**: ``qgis:explodehstorefield``"
-msgstr ""
+msgstr "**Algorithm ID**: ``qgis:explodehstorefield``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:691
 msgid "Extract binary field"
-msgstr ""
+msgstr "바이너리 필드 추출하기"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:692
 msgid ""
@@ -1088,34 +1108,36 @@ msgid ""
 "Filenames can be generated using values taken from an attribute in the "
 "source table or based on a more complex expression."
 msgstr ""
+"바이너리 필드의 내용을 개별 파일로 저장해서 추출합니다. 소스 테이블에 있는 속성에서, 또는 좀 더 복잡한 표현식을 바탕으로 나온 값을 "
+"사용해서 파일명을 생성할 수 있습니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:711
 msgid "Input vector layer containing the binary data"
-msgstr ""
+msgstr "바이너리 데이터를 담고 있는 입력 벡터 레이어"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:712
 msgid "**Binary field**"
-msgstr ""
+msgstr "**Binary field**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:715
 msgid "Field containing the binary data"
-msgstr ""
+msgstr "바이너리 데이터를 담고 있는 필드"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:716
 msgid "**File name**"
-msgstr ""
+msgstr "**File name**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:717
 msgid "``FILENAME``"
-msgstr ""
+msgstr "``FILENAME``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:719
 msgid "Field or expression-based text to name each output file"
-msgstr ""
+msgstr "각 산출 파일을 명명하기 위한 필드 또는 표현식 기반 텍스트"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:720
 msgid "**Destination folder**"
-msgstr ""
+msgstr "**Destination folder**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:721
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:744
@@ -1129,11 +1151,11 @@ msgstr "[folder]"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:724
 msgid "Default: ``[Save to a temporary folder]``"
-msgstr ""
+msgstr "기본값: ``[Save to a temporary folder]``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:725
 msgid "Folder in which to store the output files.  One of:"
-msgstr ""
+msgstr "산출 파일을 저장할 폴더를 지정합니다. 다음 가운데 하나로 선택할 수 있습니다:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:727
 msgid "Save to a Temporary Directory"
@@ -1145,19 +1167,19 @@ msgstr "디렉터리에 저장"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:743
 msgid "**Folder**"
-msgstr ""
+msgstr "**Folder**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:746
 msgid "The folder that contains the output files."
-msgstr ""
+msgstr "산출 파일을 담고 있는 폴더"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:751
 msgid "**Algorithm ID**: ``qgis:extractbinary``"
-msgstr ""
+msgstr "**Algorithm ID**: ``qgis:extractbinary``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:761
 msgid "Feature filter"
-msgstr ""
+msgstr "피처 필터링하기"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:762
 msgid ""
@@ -1166,29 +1188,32 @@ msgid ""
 " possible input layers, filtering is only possible on the feature geometry "
 "and general record mechanisms, such as ``$id`` and ``uuid``."
 msgstr ""
+"입력 레이어에서 피처를 필터링해서 하나 또는 여러 개의 산출물로 전용합니다. 가능한 모든 입력 레이어들이 공통으로 가지고 있는 속성명을 "
+"하나도 모르는 경우, 가능한 방법은 ``$id`` 및 ``uuid`` 같은 피처 도형 및 일반 레코드 기제(mechanism)에 대한 "
+"필터링뿐입니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:768
 msgid ""
 "This algorithm is only available from the :ref:`Graphical modeler "
 "<processing.modeler>`."
-msgstr ""
+msgstr "이 알고리즘은 :ref:`그래픽 모델 생성기 <processing.modeler>` 에서만 사용할 수 있습니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:786
 msgid "**Outputs and filters**"
-msgstr ""
+msgstr "**Outputs and filters**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:788
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:806
 msgid "(one or more)"
-msgstr ""
+msgstr "(하나 이상)"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:789
 msgid "``OUTPUT_<name of the filter>``"
-msgstr ""
+msgstr "``OUTPUT_<name of the filter>``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:791
 msgid "The output layers with filters (as many as there are filters)."
-msgstr ""
+msgstr "필터링된 (사용한 필터 개수의) 산출 레이어들"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:804
 msgid "**Output**"
@@ -1196,95 +1221,97 @@ msgstr "**산출물**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:807
 msgid "``native:filter_1:OUTPUT_<name of filter>``"
-msgstr ""
+msgstr "``native:filter_1:OUTPUT_<name of filter>``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:809
 msgid ""
 "The output layers with filtered features (as many as there are filters)."
-msgstr ""
+msgstr "필터링된 피처를 가진 (사용한 필터 개수의) 산출 레이어들"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:815
 msgid "**Algorithm ID**: ``qgis:featurefilter``"
-msgstr ""
+msgstr "**Algorithm ID**: ``qgis:featurefilter``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:825
 msgid "Field calculator"
-msgstr ""
+msgstr "필드 계산기"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:826
 msgid ""
 "Opens the field calculator (see :ref:`vector_expressions`). You can use all "
 "the supported expressions and functions."
 msgstr ""
+"필드 계산기를 엽니다. (:ref:`vector_expressions` 을 참조하세요.) 지원되는 표현식과 함수를 모두 사용할 수 "
+"있습니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:829
 msgid "A new layer is created with the result of the expression."
-msgstr ""
+msgstr "표현식의 결과물로 새 레이어를 생성합니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:831
 msgid ""
 "The field calculator is very useful when used in :ref:`processing.modeler`."
-msgstr ""
+msgstr "필드 계산기는 :ref:`processing.modeler` 에서 매우 유용하게 사용됩니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:849
 msgid "The layer to calculate on"
-msgstr ""
+msgstr "계산할 레이어"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:853
 msgid "The name of the field for the results"
-msgstr ""
+msgstr "계산 결과를 저장할 필드의 명칭"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:854
 msgid "**Output field type**"
-msgstr ""
+msgstr "**Output field type**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:859
 msgid "The type of the field.  One of:"
-msgstr ""
+msgstr "필드의 데이터 유형입니다. 다음 가운데 하나로 지정할 수 있습니다:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:861
 msgid "0 --- Float"
-msgstr ""
+msgstr "0 --- 부동소수점 실수형"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:862
 msgid "1 --- Integer"
-msgstr ""
+msgstr "1 --- 정수형"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:864
 msgid "3 --- Date"
-msgstr ""
+msgstr "3 --- 날짜"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:866
 msgid "**Output field width**"
-msgstr ""
+msgstr "**Output field width**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:871
 msgid "The length of the result field (minimum 0)"
-msgstr ""
+msgstr "산출 필드의 길이 (최소값 0)"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:877
 msgid "The precision of the result field (minimum 0, maximum 15)"
-msgstr ""
+msgstr "산출 필드의 정밀도 (최소 0, 최대 15)"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:878
 msgid "**Create new field**"
-msgstr ""
+msgstr "**Create new field**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:879
 msgid "``NEW_FIELD``"
-msgstr ""
+msgstr "``NEW_FIELD``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:883
 msgid "Should the result field be a new field"
-msgstr ""
+msgstr "산출 필드를 새 필드로 생성할지 여부"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:887
 msgid "The formula to use to calculate the result"
-msgstr ""
+msgstr "결과를 계산하는 데 사용할 공식"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:888
 msgid "**Output file**"
-msgstr ""
+msgstr "**Output file**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:892
 msgid "Default: ``[Save to temporary file]``"
@@ -1292,73 +1319,73 @@ msgstr "기본값: ``[Save to temporary file]``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:893
 msgid "Specification of the output layer."
-msgstr ""
+msgstr "산출 레이어를 지정합니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:909
 msgid "Output layer with the calculated field values"
-msgstr ""
+msgstr "계산된 필드 값을 가진 산출 레이어"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:914
 msgid "**Algorithm ID**: ``qgis:fieldcalculator``"
-msgstr ""
+msgstr "**Algorithm ID**: ``qgis:fieldcalculator``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:924
 msgid "Refactor fields"
-msgstr ""
+msgstr "필드 재구성하기"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:925
 msgid "Allows editing the structure of the attribute table of a vector layer."
-msgstr ""
+msgstr "벡터 레이어의 속성 테이블 구조를 편집할 수 있습니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:927
 msgid "Fields can be modified in their type and name, using a fields mapping."
-msgstr ""
+msgstr "필드 맵핑을 사용해서 필드의 유형 및 명칭을 수정할 수 있습니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:929
 msgid ""
 "The original layer is not modified. A new layer is generated, which contains"
 " a modified attribute table, according to the provided fields mapping."
-msgstr ""
+msgstr "원본 레이어는 수정하지 않습니다. 지정한 필드 맵핑에 따라 수정된 속성 테이블을 담고 있는 새 레이어를 생성합니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:933
 msgid "Refactor layer fields allows to:"
-msgstr ""
+msgstr "레이어 필드를 재구성(refactor)하면:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:935
 msgid "Change field names and types"
-msgstr ""
+msgstr "필드 명칭 및 유형을 변경할 수 있습니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:936
 msgid "Add and remove fields"
-msgstr ""
+msgstr "필드를 추가하거나 제거할 수 있습니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:937
 msgid "Reorder fields"
-msgstr ""
+msgstr "필드를 재정렬시킬 수 있습니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:938
 msgid "Calculate new fields based on expressions"
-msgstr ""
+msgstr "표현식을 기반으로 새 필드를 계산할 수 있습니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:939
 msgid "Load field list from another layer"
-msgstr ""
+msgstr "다른 레이어에서 필드 목록을 불러올 수 있습니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:944
 msgid "Refactor fields dialog"
-msgstr ""
+msgstr "필드 재구성 대화창"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:961
 msgid "The layer to modify"
-msgstr ""
+msgstr "수정할 레이어"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:962
 msgid "**Fields mapping**"
-msgstr ""
+msgstr "**Fields mapping**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:963
 msgid "``FIELDS_MAPPING``"
-msgstr ""
+msgstr "``FIELDS_MAPPING``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:964
 msgid "[list]"
@@ -1369,32 +1396,34 @@ msgid ""
 "List of output fields with their definitions. The embedded table lists all "
 "the fields of the source layer and allows you to edit them:"
 msgstr ""
+"산출 필드와 그 정의를 담은 목록입니다. 내장된 테이블은 소스 레이어의 모든 필드의 목록을 담고 있으며, 이 필드들을 편집할 수 "
+"있습니다:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:969
 msgid "Click |newAttribute| to create a new field."
-msgstr ""
+msgstr "|newAttribute| 버튼을 클릭해서 새 필드를 추가할 수 있습니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:970
 msgid "Click |deleteAttribute| to remove a field."
-msgstr ""
+msgstr "|deleteAttribute| 버튼을 클릭해서 선택한 필드를 삭제할 수 있습니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:971
 msgid "Use |arrowUp| and |arrowDown| to change the selected field order."
-msgstr ""
+msgstr "|arrowUp| 및 |arrowDown| 버튼을 클릭해서 선택한 필드의 순서를 변경할 수 있습니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:973
 msgid "Click |clearText| to reset to the default view."
-msgstr ""
+msgstr "|clearText| 버튼을 클릭해서 기본 뷰로 리셋할 수 있습니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:975
 msgid ""
 "For each of the fields you'd like to reuse, you need to fill the following "
 "options:"
-msgstr ""
+msgstr "재사용하고 싶은 각 필드마다, 다음 옵션을 설정해줘야 합니다:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:979
 msgid ":guilabel:`Source expression` (``expression``) [expression]"
-msgstr ""
+msgstr ":guilabel:`Source expression` (``expression``) [expression]"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:979
 msgid "Field or expression from the input layer."
@@ -1402,16 +1431,16 @@ msgstr "입력 레이어에서 나온 필드 또는 표현식"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:983
 msgid ":guilabel:`Field name` (``name``) [string]"
-msgstr ""
+msgstr ":guilabel:`Field name` (``name``) [string]"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:982
 msgid ""
 "Name of the field in the output layer. By default input field name is kept."
-msgstr ""
+msgstr "산출 레이어의 필드명입니다. 기본적으로 입력 필드명을 그대로 유지합니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:995
 msgid ":guilabel:`Type` (``type``) [enumeration]"
-msgstr ""
+msgstr ":guilabel:`Type` (``type``) [enumeration]"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:986
 msgid "Data type of the output field. One of:"
@@ -1419,35 +1448,35 @@ msgstr "산출 필드의 데이터 유형입니다. 다음 가운데 하나로 �
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:989
 msgid "Date (14)"
-msgstr ""
+msgstr "Date (14): 날짜"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:990
 msgid "DateTime (16)"
-msgstr ""
+msgstr "DateTime (16): 날짜&시간"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:991
 msgid "Double (6)"
-msgstr ""
+msgstr "Double (6): 64비트 실수형"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:992
 msgid "Integer (2)"
-msgstr ""
+msgstr "Integer (2): 정수형"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:993
 msgid "Integer64 (4)"
-msgstr ""
+msgstr "Integer64 (4): 64비트 정수형"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:994
 msgid "String (10)"
-msgstr ""
+msgstr "String (10): 문자열"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:995
 msgid "Boolean (1)"
-msgstr ""
+msgstr "Boolean (1): 불"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:998
 msgid ":guilabel:`Length` (``length``) [number]"
-msgstr ""
+msgstr ":guilabel:`Length` (``length``) [number]"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:998
 msgid "Length of the output field."
@@ -1455,7 +1484,7 @@ msgstr "산출 필드의 길이"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:1001
 msgid ":guilabel:`Precision` (``precision``) [number]"
-msgstr ""
+msgstr ":guilabel:`Precision` (``precision``) [number]"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:1001
 msgid "Precision of the output field."
@@ -1465,28 +1494,28 @@ msgstr "산출 필드의 정밀도"
 msgid ""
 "Fields from another layer can be loaded into the field list in "
 ":guilabel:`Load fields from layer`."
-msgstr ""
+msgstr ":guilabel:`Load fields from layer` 에서 다른 레이어의 필드를 필드 목록으로 불러올 수 있습니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:1005
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:1031
 msgid "**Refactored**"
-msgstr ""
+msgstr "**Refactored**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:1010
 msgid "Specification of the output layer. One of:"
-msgstr ""
+msgstr "산출 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:1034
 msgid "Output layer with refactored fields"
-msgstr ""
+msgstr "재구성된 필드를 가진 산출 레이어"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:1039
 msgid "**Algorithm ID**: ``qgis:refactorfields``"
-msgstr ""
+msgstr "**Algorithm ID**: ``qgis:refactorfields``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:1049
 msgid "Text to float"
-msgstr ""
+msgstr "텍스트를 부정소수점 실수형으로"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:1050
 msgid ""
@@ -1494,21 +1523,23 @@ msgid ""
 "attribute containing numeric strings into a numeric attribute (e.g. '1' to "
 "``1.0``)."
 msgstr ""
+"벡터 레이어의 지정한 속성 유형을 수정해서, 숫자열을 담고 있는 텍스트 속성을 숫자 속성으로 (예: '1' 을 ``1.0`` 으로) "
+"변환합니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:1054
 msgid ""
 "The algorithm creates a new vector layer so the source one is not modified."
-msgstr ""
+msgstr "이 알고리즘은 소스 레이어를 수정하지 않고 새 벡터 레이어를 생성합니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:1057
 msgid ""
 "If the conversion is not possible the selected column will have ``NULL`` "
 "values."
-msgstr ""
+msgstr "변환 작업이 불가능한 경우 선택한 열이 ``NULL`` 값을 가질 것입니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:1075
 msgid "**Text attribute to convert to float**"
-msgstr ""
+msgstr "**Text attribute to convert to float**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:1077
 msgid "[tablefield: string]"
@@ -1518,21 +1549,21 @@ msgstr "[tablefield: string]"
 msgid ""
 "The string field for the input layer that is to be converted to a float "
 "field."
-msgstr ""
+msgstr "부동소수점 필드로 변환될 입력 레이어의 문자열 필드"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:1080
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:1105
 msgid "**Float from text**"
-msgstr ""
+msgstr "**Float from text**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:1084
 msgid "Default: ``[Create Temporary Layer]``"
-msgstr ""
+msgstr "기본값: ``[Create Temporary Layer]``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:1108
 msgid "Output vector layer with the string field converted into a float field"
-msgstr ""
+msgstr "문자열 필드를 부동소수점 필드로 변환한 산출 벡터 레이어"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:1114
 msgid "**Algorithm ID**: ``qgis:texttofloat``"
-msgstr ""
+msgstr "**Algorithm ID**: ``qgis:texttofloat``"

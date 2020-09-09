@@ -24,26 +24,26 @@ msgstr ""
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:2
 msgid "Vector overlay"
-msgstr ""
+msgstr "벡터 중첩"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:14
 msgid "Clip"
-msgstr ""
+msgstr "잘라내기(Clip)"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:15
 msgid ""
 "Clips a vector layer using the features of an additional polygon layer."
-msgstr ""
+msgstr "추가 폴리곤 레이어의 피처를 사용해서 벡터 레이어를 잘라냅니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:18
 msgid ""
 "Only the parts of the features in the input layer that fall within the "
 "polygons of the overlay layer will be added to the resulting layer."
-msgstr ""
+msgstr "산출 레이어는 입력 레이어의 피처 가운데 중첩 레이어의 폴리곤 내부에 들어오는 부분만 담을 것입니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:23
 msgid "**Feature modification**"
-msgstr ""
+msgstr "**피처 수정**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:25
 msgid ""
@@ -52,6 +52,9 @@ msgid ""
 "operation. If such properties are stored as attributes, those attributes "
 "will have to be manually updated."
 msgstr ""
+"잘라내기 작업으로 피처의 면적 또는 길이와 같은 속성(property)이 변경되긴 하지만, 피처의 속성(attribute)은 **수정되지"
+" 않습니다**. 이런 속성(property)을 속성(attribute)으로 저장하고 있다면, 속성(attribute)을 직접 업데이트해야"
+" 할 것입니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:31
 msgid ""
@@ -59,12 +62,16 @@ msgid ""
 "and apply a clipping operation if the geometry isn't wholly contained by the"
 " mask geometry."
 msgstr ""
+"마스크 도형이 도형 전체를 담고 있지 않은 경우, 이 알고리즘은 제공자 편에서 공간 인덱스를 사용해서 도형을 준비하고 잘라내기 작업을 "
+"수행합니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:38
 msgid ""
 "Clipping operation between a two-features input layer and a single feature "
 "overlay layer (left) - resulting features are moved for clarity (right)"
 msgstr ""
+"잘라내기 작업: 피처 2개를 가진 입력 레이어와 피처 1개를 가진 중첩 레이어(왼쪽) 및 명확하게 보여주기 위해 이동시킨 산출 "
+"피처들(오른쪽)"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:42
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:130
@@ -84,7 +91,7 @@ msgstr "**기본 메뉴**: :menuselection:`Vector --> Geoprocessing Tools`"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:46
 msgid ":ref:`qgisintersection`, :ref:`qgisdifference`"
-msgstr ""
+msgstr ":ref:`qgisintersection`, :ref:`qgisdifference`"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:49
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:137
@@ -133,7 +140,7 @@ msgstr "라벨"
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:729
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:775
 msgid "Name"
-msgstr "Name"
+msgstr "명칭"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:57
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:92
@@ -210,7 +217,7 @@ msgstr "[vector: any]"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:62
 msgid "Layer containing the features to be clipped"
-msgstr ""
+msgstr "잘라낼 피처를 담고 있는 레이어"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:63
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:151
@@ -218,7 +225,7 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:622
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:736
 msgid "**Overlay layer**"
-msgstr ""
+msgstr "**Overlay layer**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:64
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:152
@@ -226,7 +233,7 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:623
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:739
 msgid "``OVERLAY``"
-msgstr ""
+msgstr "``OVERLAY``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:65
 msgid "[vector: polygon]"
@@ -234,12 +241,12 @@ msgstr "[vector: polygon]"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:66
 msgid "Layer containing the clipping features"
-msgstr ""
+msgstr "잘라내기 피처를 담고 있는 레이어"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:67
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:94
 msgid "**Clipped**"
-msgstr ""
+msgstr "**Clipped**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:68
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:95
@@ -293,6 +300,7 @@ msgid ""
 "Specify the layer to contain the features from the input layer that are "
 "inside the overlay (clipping) layer. One of:"
 msgstr ""
+"중첩(잘라내기) 레이어 안에 들어오는 입력 레이어의 피처를 담을 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:76
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:169
@@ -363,7 +371,7 @@ msgstr "산출물"
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:97
 msgid ""
 "Layer containing features from the input layer split by the overlay layer."
-msgstr ""
+msgstr "중첩 레이어가 잘라낸 입력 레이어의 피처를 담고 있는 레이어"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:101
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:194
@@ -378,7 +386,7 @@ msgstr "파이썬 코드"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:103
 msgid "**Algorithm ID**: ``qgis:clip``"
-msgstr ""
+msgstr "**Algorithm ID**: ``qgis:clip``"
 
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
@@ -400,13 +408,13 @@ msgstr ""
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:113
 msgid "Difference"
-msgstr ""
+msgstr "차감하기(Difference)"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:114
 msgid ""
 "Extracts features from the input layer that don't fall within the boundaries"
 " of the overlay layer."
-msgstr ""
+msgstr "입력 레이어에서 중첩 레이어의 경계선 내부에 들어오지 않는 피처를 추출합니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:117
 msgid ""
@@ -414,28 +422,32 @@ msgid ""
 " split along the boundary of those feature(s) and only the portions outside "
 "the overlay layer features are retained."
 msgstr ""
+"중첩 레이어의 피처(들)와 일부분 중첩하는 입력 레이어의 피처를 중첩 레이어 피처(들)의 경계선을 따라 분할한 다음, 중첩 레이어 "
+"피처(들) 외부에 있는 부분을 남깁니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:121
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:294
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:593
 msgid "Attributes are not modified (see :ref:`warning <warning_difference>`)."
-msgstr ""
+msgstr "속성은 수정하지 않습니다. (:ref:`경고 <warning_difference>` 참조)"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:126
 msgid ""
 "Difference operation between a two-features input layer and a single feature"
 " overlay layer (left) - resulting features are moved for clarity (right)"
 msgstr ""
+"차감 작업: 피처 2개를 가진 입력 레이어와 피처 1개를 가진 중첩 레이어(왼쪽) 및 명확하게 보여주기 위해 이동시킨 산출 "
+"피처들(오른쪽)"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:134
 msgid ":ref:`qgissymmetricaldifference`, :ref:`qgisclip`"
-msgstr ""
+msgstr ":ref:`qgissymmetricaldifference`, :ref:`qgisclip`"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:150
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:228
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:322
 msgid "Layer to extract (parts of) features from."
-msgstr ""
+msgstr "피처(의 일부분)를 추출할 레이어"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:155
 msgid ""
@@ -443,41 +455,44 @@ msgid ""
 " geometries. It is expected to have at least as many dimensions (point: 0D, "
 "line: 1D, polygon: 2D, volume: 3D) as the input layer geometries."
 msgstr ""
+"입력 레이어 도형에서 차감할 도형을 담고 있는 레이어입니다. 이 중첩 레이어는 최소한 입력 레이어 도형만큼의 차원(포인트: 0차원, "
+"라인: 1차원, 폴리곤: 2차원, 부피: 3차원)을 가질 것을 요구합니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:160
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:187
 msgid "**Difference**"
-msgstr ""
+msgstr "**Difference**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:165
 msgid ""
 "Specify the layer to contain the (parts of) features from the input layer "
 "that are not inside the overlay layer. One of:"
 msgstr ""
+"중첩 레이어 안에 들어오지 않는 입력 레이어의 피처(의 일부분)를 담을 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:190
 msgid ""
 "Layer containing (parts of) features from the input layer not overlapping "
 "the overlay layer."
-msgstr ""
+msgstr "중첩 레이어와 중첩하지 않는 입력 레이어의 피처(의 일부분)를 담은 레이어"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:196
 msgid "**Algorithm ID**: ``qgis:difference``"
-msgstr ""
+msgstr "**Algorithm ID**: ``qgis:difference``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:206
 msgid "Extract/clip by extent"
-msgstr ""
+msgstr "범위로 추출/잘라내기"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:207
 msgid ""
 "Creates a new vector layer that only contains features which fall within a "
 "specified extent."
-msgstr ""
+msgstr "지정한 범위 안에 들어오는 피처만 담고 있는 새 벡터 레이어를 생성합니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:210
 msgid "Any features which intersect the extent will be included."
-msgstr ""
+msgstr "범위와 교차하는 모든 피처를 포함할 것입니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:212
 msgid ":ref:`qgisclip`"
@@ -497,15 +512,15 @@ msgstr "[extent]"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:232
 msgid "Extent for clipping."
-msgstr ""
+msgstr "잘라내기용 범위"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:233
 msgid "**Clip features to extent**"
-msgstr ""
+msgstr "**Clip features to extent**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:234
 msgid "``CLIP``"
-msgstr ""
+msgstr "``CLIP``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:235
 msgid "[boolean]"
@@ -521,6 +536,8 @@ msgid ""
 "geometries to ensure uniform output types. Moreover the geometries will be "
 "clipped to the extent chosen instead of taking the whole geometry as output."
 msgstr ""
+"이 파라미터를 활성화하면 산출물 유형을 통일하기 위해 산출 도형을 자동적으로 다중 도형으로 변환할 것입니다. 거기에 도형 전체를 산출하는"
+" 대신, 도형을 범위로 잘라낼 것입니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:242
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:269
@@ -531,41 +548,43 @@ msgstr "**Extracted**"
 msgid ""
 "Specify the layer to contain the features from the input layer that are "
 "inside the clip extent. One of:"
-msgstr ""
+msgstr "잘라내기 범위 안에 들어오는 입력 레이어의 피처를 담을 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:272
 msgid "Layer containing the clipped features."
-msgstr ""
+msgstr "잘라낸 피처를 담고 있는 레이어"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:277
 msgid "**Algorithm ID**: ``qgis:extractbyextent``"
-msgstr ""
+msgstr "**Algorithm ID**: ``qgis:extractbyextent``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:287
 msgid "Intersection"
-msgstr ""
+msgstr "교차(Intersection)"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:288
 msgid ""
 "Extracts the portions of features from the input layer that overlap features"
 " in the overlay layer."
-msgstr ""
+msgstr "입력 레이어의 피처에서 중첩 레이어에 있는 피처와 중첩하는 부분을 추출합니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:291
 msgid ""
 "Features in the intersection layer are assigned the attributes of the "
 "overlapping features from both the input and overlay layers."
-msgstr ""
+msgstr "(산출) 교차 레이어에 있는 피처는 입력 및 중첩 레이어에 있는 중첩하는 피처들의 속성을 모두 가질 것입니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:299
 msgid ""
 "The intersection operation: A two-features input layer and a single feature "
 "overlay layer (left) - resulting features are moved for clarity (right)"
 msgstr ""
+"교차 작업: 피처 2개를 가진 입력 레이어와 피처 1개를 가진 중첩 레이어(왼쪽) 및 명확하게 보여주기 위해 이동시킨 산출 "
+"피처들(오른쪽)"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:305
 msgid ":ref:`qgisclip`, :ref:`qgisdifference`"
-msgstr ""
+msgstr ":ref:`qgisclip`, :ref:`qgisdifference`"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:326
 msgid ""
@@ -573,11 +592,13 @@ msgid ""
 "is expected to have at least as many dimensions (point: 0D, line: 1D, "
 "polygon: 2D, volume: 3D) as the input layer's."
 msgstr ""
+"중첩을 확인할 피처를 담고 있는 레이어입니다. 이 중첩 레이어의 도형은 최소한 입력 레이어 도형만큼의 차원(포인트: 0차원, 라인: "
+"1차원, 폴리곤: 2차원, 부피: 3차원)을 가질 것을 요구합니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:330
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:434
 msgid "**Input fields to keep (leave empty to keep all fields)**"
-msgstr ""
+msgstr "**Input fields to keep (leave empty to keep all fields)**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:332
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:341
@@ -594,7 +615,7 @@ msgstr "부가적"
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:333
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:437
 msgid "``INPUT_FIELDS``"
-msgstr ""
+msgstr "``INPUT_FIELDS``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:334
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:343
@@ -615,34 +636,34 @@ msgstr "기본값: None"
 msgid ""
 "Field(s) of the input layer to keep in the output. If no fields are chosen "
 "all fields are taken."
-msgstr ""
+msgstr "산출물에 남길 입력 레이어의 필드(들). 아무 필드도 선택하지 않을 경우 모든 필드를 복사합니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:339
 msgid "**Overlay fields to keep (leave empty to keep all fields)**"
-msgstr ""
+msgstr "**Overlay fields to keep (leave empty to keep all fields)**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:342
 msgid "``OVERLAY_FIELDS``"
-msgstr ""
+msgstr "``OVERLAY_FIELDS``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:346
 msgid ""
 "Field(s) of the overlay layer to keep in the output. If no fields are chosen"
 " all fields are taken."
-msgstr ""
+msgstr "산출물에 남길 중첩 레이어의 필드(들). 아무 필드도 선택하지 않을 경우 모든 필드를 복사합니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:348
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:627
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:743
 msgid "**Overlay fields prefix**"
-msgstr ""
+msgstr "**Overlay fields prefix**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:351
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:455
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:630
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:746
 msgid "``OVERLAY_FIELDS_PREFIX``"
-msgstr ""
+msgstr "``OVERLAY_FIELDS_PREFIX``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:352
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:456
@@ -656,41 +677,43 @@ msgstr "[string]"
 msgid ""
 "Prefix to add to the field names of the intersect layer's fields to avoid "
 "name collisions with fields in the input layer."
-msgstr ""
+msgstr "입력 레이어 필드와 명칭 충돌을 피하기 위해 교차 레이어의 필드명 앞에 붙일 접두어"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:356
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:385
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:460
 msgid "**Intersection**"
-msgstr ""
+msgstr "**Intersection**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:361
 msgid ""
 "Specify the layer to contain (the parts of) the features from the input "
 "layer that overlap one or more features from the overlay layer. One of:"
 msgstr ""
+"중첩 레이어의 하나 이상의 피처와 중첩하는 입력 레이어의 피처(의 일부분)를 담을 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 "
+"있습니다:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:388
 msgid ""
 "Layer containing (parts of) features from the input layer that overlap the "
 "overlay layer."
-msgstr ""
+msgstr "중첩 레이어와 중첩하는 입력 레이어의 피처(의 일부분)를 담은 레이어"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:394
 msgid "**Algorithm ID**: ``qgis:intersection``"
-msgstr ""
+msgstr "**Algorithm ID**: ``qgis:intersection``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:404
 msgid "Line intersections"
-msgstr ""
+msgstr "라인 교차"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:405
 msgid "Creates point features where the lines from the two layers intersect."
-msgstr ""
+msgstr "두 레이어의 라인들이 교차하는 위치의 포인트 피처를 생성합니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:410
 msgid "Points of intersection"
-msgstr ""
+msgstr "교차점 포인트"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:412
 msgid "**Default menu**: :menuselection:`Vector --> Analysis Tools`"
@@ -704,37 +727,37 @@ msgstr "[vector: line]"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:429
 msgid "Input line layer."
-msgstr ""
+msgstr "입력 라인 벡터 레이어"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:430
 msgid "**Intersect layer**"
-msgstr ""
+msgstr "**Intersect layer**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:431
 msgid "``INTERSECT``"
-msgstr ""
+msgstr "``INTERSECT``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:433
 msgid "Layer to use to find line intersections."
-msgstr ""
+msgstr "라인 교차점을 찾는 데 사용할 레이어"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:443
 msgid "**Intersect fields to keep (leave empty to keep all fields)**"
-msgstr ""
+msgstr "**Intersect fields to keep (leave empty to keep all fields)**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:446
 msgid "``INTERSECT_FIELDS``"
-msgstr ""
+msgstr "``INTERSECT_FIELDS``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:450
 msgid ""
 "Field(s) of the intersect layer to keep in the output. If no fields are "
 "chosen all fields are taken."
-msgstr ""
+msgstr "산출물에 남길 교차 레이어의 필드(들). 아무 필드도 선택하지 않을 경우 모든 필드를 복사합니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:452
 msgid "**Intersect fields prefix**"
-msgstr ""
+msgstr "**Intersect fields prefix**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:462
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:489
@@ -745,23 +768,23 @@ msgstr "[vector: point]"
 msgid ""
 "Specify the layer to contain the intersection points of the lines from the "
 "input and overlay layers. One of:"
-msgstr ""
+msgstr "입력 및 중첩 레이어의 라인들의 교차점 포인트를 담을 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:487
 msgid "**Intersections**"
-msgstr ""
+msgstr "**Intersections**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:490
 msgid "Point vector layer with the intersections."
-msgstr ""
+msgstr "교차점 포인트를 담은 포인트 벡터 레이어"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:495
 msgid "**Algorithm ID**: ``qgis:lineintersections``"
-msgstr ""
+msgstr "**Algorithm ID**: ``qgis:lineintersections``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:505
 msgid "Split with lines"
-msgstr ""
+msgstr "라인으로 분할하기"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:506
 msgid ""
@@ -769,14 +792,16 @@ msgid ""
 "to define the breaking points. Intersection between geometries in both "
 "layers are considered as split points."
 msgstr ""
+"레이어에 있는 라인 또는 폴리곤을 분절점(breaking point)을 정의하기 위한 또다른 레이어의 라인을 이용해서 분할합니다. 두 "
+"레이어에 있는 도형들 사이의 교차점을 분할점으로 삼습니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:511
 msgid "Output will contain multi geometries for split features."
-msgstr ""
+msgstr "산출물은 분할된 피처를 위한 다중 도형을 담을 것입니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:516
 msgid "Split lines"
-msgstr ""
+msgstr "라인 분할하기"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:533
 msgid "[vector: line, polygon]"
@@ -784,11 +809,11 @@ msgstr "[vector: line, polygon]"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:534
 msgid "Layer containing the lines or polygons to split."
-msgstr ""
+msgstr "분할할 라인 또는 폴리곤을 담고 있는 레이어"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:535
 msgid "**Split layer**"
-msgstr ""
+msgstr "**Split layer**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:536
 msgid "``LINES``"
@@ -796,7 +821,7 @@ msgstr "``LINES``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:538
 msgid "Line layer whose lines are used to define the breaking points."
-msgstr ""
+msgstr "분절점을 정의하는 데 사용되는 라인을 가진 라인 레이어"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:539
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:567
@@ -809,30 +834,32 @@ msgid ""
 " line in the split layer) line/polygon features from the input layer. One "
 "of:"
 msgstr ""
+"입력 레이어에서 분할된 (분할 레이어의 라인과 교차하는) 라인/폴리곤 피처를 담을 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 "
+"있습니다:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:570
 msgid "Output vector layer with split lines or polygons from input layer."
-msgstr ""
+msgstr "입력 레이어에서 분할된 라인 또는 폴리곤을 가진 산출 벡터 레이어"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:576
 msgid "**Algorithm ID**: ``qgis:splitwithlines``"
-msgstr ""
+msgstr "**Algorithm ID**: ``qgis:splitwithlines``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:586
 msgid "Symmetrical difference"
-msgstr ""
+msgstr "대칭 차감"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:587
 msgid ""
 "Creates a layer containing features from both the input and overlay layers "
 "but with the overlapping areas between the two layers removed."
-msgstr ""
+msgstr "입력 및 중첩 레이어 양쪽의 피처들 가운데 두 레이어가 중첩하는 영역을 제거한 피처를 담고 있는 레이어를 생성합니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:590
 msgid ""
 "The attribute table of the symmetrical difference layer contains attributes "
 "and fields from both the input and overlay layers."
-msgstr ""
+msgstr "대칭 차감 레이어의 속성 테이블은 입력 및 중첩 레이어 양쪽의 속성과 필드를 모두 담고 있습니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:598
 msgid ""
@@ -840,52 +867,55 @@ msgid ""
 "single feature overlay layer (left) - resulting features are moved for "
 "clarity (right)"
 msgstr ""
+"대칭 차감 작업: 피처 2개를 가진 입력 레이어와 피처 1개를 가진 중첩 레이어(왼쪽) 및 명확하게 보여주기 위해 이동시킨 산출 "
+"피처들(오른쪽)"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:604
 msgid ":ref:`qgisdifference`, :ref:`qgisclip`, :ref:`qgisintersection`"
-msgstr ""
+msgstr ":ref:`qgisdifference`, :ref:`qgisclip`, :ref:`qgisintersection`"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:621
 msgid "First layer to extract (parts of) features from."
-msgstr ""
+msgstr "피처(의 일부분)를 추출할 첫 번째 레이어"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:625
 msgid ""
 "Second layer to extract (parts of) features from. Ideally the geometry type "
 "should be the same as input layer."
-msgstr ""
+msgstr "피처(의 일부분)를 추출할 두 번째 레이어. 도형 유형이 입력 레이어와 동일한 편이 좋습니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:632
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:748
 msgid ""
 "Prefix to add to the field names of the overlay layer's fields to avoid name"
 " collisions with fields in the input layer."
-msgstr ""
+msgstr "입력 레이어 필드와 명칭 충돌을 피하기 위해 중첩 레이어의 필드명 앞에 붙일 접두어"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:635
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:663
 msgid "**Symmetrical difference**"
-msgstr ""
+msgstr "**Symmetrical difference**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:640
 msgid ""
 "Specify the layer to contain (the parts of) the features from the input and "
 "overlay layers that do not overlap features from the other layer. One of:"
 msgstr ""
+"입력 및 중첩 레이어에서 서로 중첩하지 않는 피처(의 일부분)를 담을 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:666
 msgid ""
 "Layer containing (parts of) features from each layer not overlapping the "
 "other layer."
-msgstr ""
+msgstr "각 레이어에서 다른 레이어와 중첩하지 않은 피처(의 일부분)를 담은 레이어"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:672
 msgid "**Algorithm ID**: ``qgis:symmetricaldifference``"
-msgstr ""
+msgstr "**Algorithm ID**: ``qgis:symmetricaldifference``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:682
 msgid "Union"
-msgstr ""
+msgstr "통합(Union)"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:683
 msgid ""
@@ -894,12 +924,14 @@ msgid ""
 "will create as many identical overlapping features as there are features "
 "that participate in that overlap."
 msgstr ""
+"입력 레이어 내부에서 피처들 사이의 중첩을 검사하고, 중첩하는 그리고 중첩하지 않는 부분들을 개별 피처로 생성합니다. 중첩하는 영역은 "
+"동일한 중첩하는 피처를 해당 중첩 영역에 걸친 피처들의 개수만큼 생성할 것입니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:691
 msgid ""
 "Union operation with a single input layer of three overlapping features "
 "(left) - resulting features are moved for clarity (right)"
-msgstr ""
+msgstr "통합 작업: 중첩하는 피처 3개를 가진 단일 입력 레이어(왼쪽) 및 명확하게 보여주기 위해 이동시킨 산출 피처들(오른쪽)"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:694
 msgid ""
@@ -910,12 +942,17 @@ msgid ""
 "respective original layer for non-overlapping features, and attribute values"
 " from both layers for overlapping features."
 msgstr ""
+"각 레이어의 피처를 다른 레이어의 피처와 중첩하는 부분에서 분할한 다음 입력 및 중첩 레이어의 모든 부분들을 담은 레이어를 생성하는 "
+"경우, 중첩 레이어도 사용할 수 있습니다. 통합 레이어의 속성 테이블은 중첩하지 않는 피처의 경우 각 원본 레이어의 속성값으로, 중첩하는"
+" 피처의 경우 두 레이어의 속성값을 담게 됩니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:705
 msgid ""
 "Union operation between a two-features input layer and a single feature "
 "overlay layer (left) - resulting features are moved for clarity (right)"
 msgstr ""
+"통합 작업: 피처 2개를 가진 입력 레이어와 피처 1개를 가진 중첩 레이어(왼쪽) 및 명확하게 보여주기 위해 이동시킨 산출 "
+"피처들(오른쪽)"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:710
 msgid ""
@@ -924,38 +961,42 @@ msgid ""
 "do ``union(union(A,B))`` to resolve all overlaps, i.e. run single layer "
 "``union(X)`` on the produced result ``X=union(A,B)``."
 msgstr ""
+"``union(A,B)`` 알고리즘의 경우, 레이어 A의 도형들 또는 레이어 B의 도형들 가운데 중첩하는 것이 있다면 오류가 발생합니다."
+" 모든 중첩하는 부분들을 처리하려면 ``union(union(A,B))`` 와 같이 실행해야 합니다. 예를 들면 산출된 단일 레이어 "
+"``X=union(A,B)`` 에 대해 ``union(X)`` 를 실행하듯이 말이죠."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:718
 msgid ":ref:`qgisclip`, :ref:`qgisdifference`, :ref:`qgisintersection`"
-msgstr ""
+msgstr ":ref:`qgisclip`, :ref:`qgisdifference`, :ref:`qgisintersection`"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:735
 msgid "Input vector layer to split at any intersections."
-msgstr ""
+msgstr "모든 교차점에서 분할할 입력 벡터 레이어"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:741
 msgid ""
 "Layer that will be combined to the first one. Ideally the geometry type "
 "should be the same as input layer."
-msgstr ""
+msgstr "첫 번째 레이어로 결합될 레이어들. 도형 유형이 입력 레이어와 동일한 편이 좋습니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:751
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:778
 msgid "**Union**"
-msgstr ""
+msgstr "**Union**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:756
 msgid ""
 "Specify the layer to contain the (split and duplicated) features from the "
 "input layer and the overlay layer. One of:"
 msgstr ""
+"입력 레이어 및 중첩 레이어에서 (분할된 그리고 복제된) 피처를 담을 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:781
 msgid ""
 "Layer containing all the overlapping and non-overlapping parts from the "
 "processed layer(s)."
-msgstr ""
+msgstr "공간 처리된 레이어(들)에서 나온 중첩하는 그리고 중첩하지 않는 부분들을 모두 담고 있는 레이어"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:787
 msgid "**Algorithm ID**: ``qgis:union``"
-msgstr ""
+msgstr "**Algorithm ID**: ``qgis:union``"

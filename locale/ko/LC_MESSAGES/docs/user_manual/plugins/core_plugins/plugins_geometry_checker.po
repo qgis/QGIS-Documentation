@@ -3,6 +3,9 @@
 # This file is distributed under the same license as the QGIS Documentation package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Kwon.Yongchan <ruvyn@naver.com>, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -10,6 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-26 13:13+0200\n"
 "PO-Revision-Date: 2020-03-16 19:31+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2020\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,7 +23,7 @@ msgstr ""
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:7
 msgid "Geometry Checker Plugin"
-msgstr ""
+msgstr "도형 점검기 플러그인"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:9
 msgid ""
@@ -27,16 +31,21 @@ msgid ""
 "validity of a layer. It is available from the :menuselection:`Vector` menu "
 "(|geometryChecker| :menuselection:`Check Geometries...`)."
 msgstr ""
+"도형 점검기는 레이어의 도형 무결성을 점검하고 수정할 수 있는 강력한 핵심 플러그인입니다. :menuselection:`Vector "
+"-->` |geometryChecker| :menuselection:`Check Geometries...` 메뉴에서 이 플러그인을 사용할"
+" 수 있습니다."
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:14
 msgid "Configuring the checks"
-msgstr ""
+msgstr "점검 환경 설정"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:16
 msgid ""
 "The :guilabel:`Check Geometries` dialog shows different grouped settings in "
 "the first tab (:guilabel:`Setup`):"
 msgstr ""
+":guilabel:`Check Geometries` 대화창의 첫 번째 :guilabel:`Setup` 탭은 서로 다른 설정 그룹을 "
+"표시합니다:"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:19
 msgid ""
@@ -44,12 +53,16 @@ msgid ""
 " :guilabel:`Only selected features` checkbox can be used to restrict the "
 "checking to the geometries of the selected features."
 msgstr ""
+":guilabel:`Input vector layers`: 점검할 레이어를 선택합니다. |checkbox| :guilabel:`Only "
+"selected features` 체크박스를 체크하면 선택한 피처의 도형만 점검하도록 제약할 수 있습니다."
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:22
 msgid ""
 ":guilabel:`Allowed geometry types`: to allow only some geometry types like "
 "point, multipoint, line, multiline, polygon and multipolygon."
 msgstr ""
+":guilabel:`Allowed geometry types`: 포인트, 멀티포인트, 라인, 멀티라인, 폴리곤, 멀티폴리곤과 같은 몇몇 "
+"도형 유형만 점검하도록 할 수 있습니다."
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:24
 msgid ""
@@ -58,6 +71,10 @@ msgid ""
 ":guilabel:`Duplicate nodes`, |checkbox| :guilabel:`Self contacts` and "
 "|checkbox| :guilabel:`Polygon with less than 3 nodes`."
 msgstr ""
+":guilabel:`Geometry validity`: 도형 유형에 따라, |checkbox| :guilabel:`Self "
+"intersections`, |checkbox| :guilabel:`Duplicate nodes`, |checkbox| "
+":guilabel:`Self contacts` 및 |checkbox| :guilabel:`Polygon with less than 3 "
+"nodes` 옵션들 가운데 선택할 수 있습니다."
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:28
 msgid ""
@@ -66,6 +83,10 @@ msgid ""
 "holes`, |checkbox| :guilabel:`Multipart objects must consist of more than "
 "one part` and |checkbox| :guilabel:`Lines must not have dangles`."
 msgstr ""
+":guilabel:`Geometry properties`: 도형 유형에 따라, |checkbox| :guilabel:`Polygons "
+"and multipolygons may not contain any holes`, |checkbox| "
+":guilabel:`Multipart objects must consist of more than one part` 및 "
+"|checkbox| :guilabel:`Lines must not have dangles` 옵션들 가운데 선택할 수 있습니다."
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:32
 msgid ""
@@ -73,6 +94,8 @@ msgid ""
 " geometries with a minimal segment length, a minimum angle between segment, "
 "a minimal polygon area and sliver polygons detection."
 msgstr ""
+":guilabel:`Geometry conditions`: 사용자가 최소 선분 길이, 두 선분이 이루는 최소 각도, 최소 폴리곤 면적, "
+"그리고 조각 폴리곤 탐지 등의 도형을 점검하기 위한 조건을 추가할 수 있습니다."
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:35
 msgid ""
@@ -87,90 +110,102 @@ msgid ""
 "with features of layer` |selectString|, |checkbox| :guilabel:`Polygons must "
 "follow boundaries of layer` |selectString|."
 msgstr ""
+":guilabel:`Topology checks`: 도형 유형에 따라, |checkbox| :guilabel:`Checks for "
+"duplicates`, |checkbox| :guilabel:`Checks for features within other "
+"features`, |checkbox| :guilabel:`Checks for overlaps smaller than` "
+"|selectNumber|, |checkbox| :guilabel:`Checks for gaps smaller than` "
+"|selectNumber|, |checkbox| :guilabel:`Points must be covered by lines`, "
+"|checkbox| :guilabel:`Points must properly lie inside a polygon`, |checkbox|"
+" :guilabel:`Lines must not intersect any other lines`, |checkbox| "
+":guilabel:`Lines must not intersect with features of layer` |selectString|, "
+"|checkbox| :guilabel:`Polygons must follow boundaries of layer` "
+"|selectString| 옵션들 가운데 선택할 수 있습니다."
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:45
 msgid ""
 ":guilabel:`Tolerance`: you can define the tolerance of the check in map "
 "layer units."
-msgstr ""
+msgstr ":guilabel:`Tolerance`: 점검을 위한 허용 오차를 맵 레이어 단위로 정의할 수 있습니다."
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:47
 msgid ""
 ":guilabel:`Output vector layer` gives the choice to the user how get the "
 "result between modify the current layer and create a new layer."
 msgstr ""
+":guilabel:`Output vector layer`: 점검 결과를 현재 레이어에 덮어 쓸지, 또는 새 레이어로 생성할지를 선택할 수"
+" 있습니다."
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:50
 msgid ""
 "When you are happy with the configuration, you can click on the "
 ":guilabel:`Run` button."
-msgstr ""
+msgstr "환경 설정에 만족하는 경우, :guilabel:`Run` 버튼을 클릭하면 됩니다."
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:59
 msgid "The Geometry Checker Plugin"
-msgstr ""
+msgstr "도형 점검기 플러그인"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:62
 msgid "The *Geometry Checker Plugin* can find the following errors:"
-msgstr ""
+msgstr "*도형 점검기 플러그인* 은 다음과 같은 오류를 찾아낼 수 있습니다:"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:64
 msgid "Self intersections: a polygon with a self intersection;"
-msgstr ""
+msgstr "자체 교차: 스스로 교차하는 폴리곤"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:65
 msgid "Duplicate nodes: two duplicates nodes in a segment;"
-msgstr ""
+msgstr "복제 노드: 한 선분에 2 개의 복제 노드"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:66
 msgid "Holes: hole in a polygon;"
-msgstr ""
+msgstr "구멍: 폴리곤 내부의 구멍"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:67
 msgid "Segment length: a segment length lower than a threshold;"
-msgstr ""
+msgstr "선분 길이: 한계값 미만의 선분 길이 "
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:68
 msgid "Minimum angle: two segments with an angle lower than a threshold;"
-msgstr ""
+msgstr "최소 각도: 한계값 미만의 각도를 이루는 2 개의 선분"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:69
 msgid "Minimum area: polygon area lower than a threshold;"
-msgstr ""
+msgstr "최소 면적: 한계값 미만의 폴리곤 면적"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:70
 msgid ""
 "Silver polygon: this error come from very small polygon (with small area) "
 "with a large perimeter;"
-msgstr ""
+msgstr "조각 폴리곤: 긴 둘레를 가진 (아주 작은 면적의) 아주 작은 폴리곤에서 발생하는 오류"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:72
 msgid "Duplicates features;"
-msgstr ""
+msgstr "복제 피처"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:73
 msgid "Feature within feature;"
-msgstr ""
+msgstr "피처 내부의 피처"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:74
 msgid "Overlaps: polygon overlapping;"
-msgstr ""
+msgstr "중첩: 중첩하는 폴리곤"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:75
 msgid "Gaps: gaps between polygons."
-msgstr ""
+msgstr "틈: 폴리곤 사이의 틈"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:77
 msgid "The following figure shows the different checks made by the plugin."
-msgstr ""
+msgstr "다음 그림은 이 플러그인의 서로 다른 점검 결과를 보여줍니다."
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:84
 msgid "Some checks supported by the plugin"
-msgstr ""
+msgstr "도형 점검기 플러그인이 지원하는 서로 다른 점검들"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:87
 msgid "Analysing the results"
-msgstr ""
+msgstr "점검 결과 분석하기"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:89
 msgid ""
@@ -184,6 +219,11 @@ msgid ""
 "error into different file formats. You also have a counter with the number "
 "of total errors and fixed ones."
 msgstr ""
+"점검 결과는 두 번째 :guilabel:`Result` 탭에 표시되며, 캔버스에 오류의 오버뷰 레이어로서 표시됩니다. (레이어명은 "
+"기본적으로 앞에 접두어 :file:`checked_` 가 붙습니다.) :guilabel:`Geometry check result` 표는 "
+"한 행에 오류 하나를 담고, 그 행의 열은 각각 레이어명, 레이어ID, 오류 유형, 오류 위치의 좌표, (오류 유형에 따라 달라지는) "
+"값, 그리고 마지막으로 오류의 해결 방법을 담게 됩니다. 이 표의 하단에 있는 :guilabel:`Export` 버튼을 클릭하면 오류를 "
+"서로 다른 파일 포맷으로 내보낼 수 있습니다. 오류의 총 개수 및 수정된 오류의 개수도 볼 수 있습니다."
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:99
 msgid ""
@@ -193,57 +233,67 @@ msgid ""
 "|radioButtonOff| :guilabel:`Don't move`, and |checkbox| :guilabel:`Highlight"
 " contour of selected features`."
 msgstr ""
+"어떤 행을 선택하면 오류의 위치를 볼 수 있습니다. |radioButtonOn| :guilabel:`Error` (default), "
+"|radioButtonOff| :guilabel:`Feature`, |radioButtonOff| :guilabel:`Don't "
+"move`, 및 |checkbox| :guilabel:`Highlight contour of selected features` 액션들 "
+"가운데 하나를 선택하면 이 습성을 변경할 수 있습니다."
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:105
 msgid "Below the zoom action when clicking on the table row, you can:"
-msgstr ""
+msgstr "확대/축소 액션 아래에서 테이블의 행을 클릭하면:"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:107
 msgid ""
 "|fromSelectedFeature| :guilabel:`Show selected features in attribute table`;"
 msgstr ""
+"|fromSelectedFeature| :guilabel:`Show selected features in attribute table`:"
+" 속성 테이블에 선택한 피처를 표시할 수 있습니다."
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:108
 msgid "|success| :guilabel:`Fix selected errors using default resolution`;"
 msgstr ""
+"|success| :guilabel:`Fix selected errors using default resolution`: 기본 해결 "
+"방법을 사용해서 선택한 오류를 수정할 수 있습니다."
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:109
 msgid ""
 "|success| :guilabel:`Fix selected errors, prompt for resolution method`. You"
 " will see a window to choose the resolution's method among which:"
 msgstr ""
+"|success| :guilabel:`Fix selected errors, prompt for resolution method`: 해결 "
+"방법을 선택해서 선택한 오류를 수정할 수 있습니다. 다음 해결 방법 가운데 하나를 선택할 수 있는 창이 뜰 것입니다:"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:112
 msgid "Merge with neighboring polygon with longest shared edge;"
-msgstr ""
+msgstr "최장 공유 경계를 가진 인접 폴리곤과 병합하기"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:113
 msgid "Merge with neighboring polygon with largest area;"
-msgstr ""
+msgstr "최대 면적을 가진 인접 폴리곤과 병합하기"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:114
 msgid ""
 "Merge with neighboring polygon with identical attribute value, if any, or "
 "leave as is;"
-msgstr ""
+msgstr "인접 폴리곤이 동일한 속성값을 가지고 있을 경우 인접 폴리곤과 병합, 없을 경우 내버려두기"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:116
 msgid "Delete feature;"
-msgstr ""
+msgstr "피처 삭제하기"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:117
 msgid "No action."
-msgstr ""
+msgstr "어떤 액션도 취하지 않기"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:119
 msgid "**Fix multiple errors**"
-msgstr ""
+msgstr "한번에 오류 수정하기"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:121
 msgid ""
 "You can fix multiple errors by selecting more than one row in the table with"
 " the *CTRL + click* action."
-msgstr ""
+msgstr "표에서 :kdb:`Ctrl` & 클릭을 사용해서 하나 이상의 행을 선택하면 여러 오류들을 한 번에 수정할 수 있습니다."
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:124
 msgid ""
@@ -252,9 +302,13 @@ msgid ""
 "change the default action between some specific action or :guilabel:`No "
 "action`."
 msgstr ""
+"맨 끝에 있는 :guilabel:`Error resolution settings` 아이콘을 클릭하면 기본 액션을 변경할 수 있습니다. "
+"일부 오류 유형의 경우, 몇몇 특정 액션 또는 :guilabel:`No action` 가운데 기본 액션을 변경할 수 있습니다."
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:128
 msgid ""
 "Finally, you can choose which :guilabel:`attribute to use when merging "
 "features by attribute value`."
 msgstr ""
+"마지막으로, :guilabel:`attribute to use when merging features by attribute value`"
+" 옵션을 통해 어떤 속성을 사용해서 피처들을 병합할지 선택할 수 있습니다."

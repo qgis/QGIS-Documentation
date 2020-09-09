@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-26 13:13+0200\n"
 "PO-Revision-Date: 2020-03-16 19:31+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2020\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -65,6 +66,11 @@ msgid ""
 "external plugins themselves. External plugins documentation is not included "
 "in this manual."
 msgstr ""
+"외부 플러그인 대부분은 현재 파이썬으로 작성됩니다. 외부 플러그인은 '공식' QGIS 저장소 "
+"https://plugins.qgis.org/plugins/ 에 저장되거나 또는 개인 작성자들이 관리하는 외부 저장소에 저장됩니다. 공식"
+" 저장소는 플러그인 사용법, 최저 QGIS 버전, 홈페이지, 작성자 및 기타 중요 정보에 대한 상세 문서를 제공합니다. 기타 외부 "
+"저장소의 경우, 외부 플러그인 자체에 문서가 포함돼 있을 수도 있습니다. QGIS 사용자 지침서는 외부 플러그인 문서를 포함하고 있지 "
+"않습니다."
 
 #: ../../docs/user_manual/plugins/plugins.rst:38
 msgid ""
@@ -74,6 +80,10 @@ msgid ""
 ":file:`python/plugins` folder of the active :ref:`user profile "
 "<user_profiles>` path."
 msgstr ""
+"플러그인을 설치하거나 활성화하려면, :menuselection:`Plugins` 메뉴에서 |showPluginManager| "
+":menuselection:`Manage and install plugins...` 항목을 클릭해서 플러그인 관리자 대화창을 여십시오. "
+"외부 파이썬 플러그인은 활성화된 :ref:`사용자 프로파일 <user_profiles>` 경로의 :file:`python/plugins`"
+" 폴더 아래 설치됩니다."
 
 #: ../../docs/user_manual/plugins/plugins.rst:43
 msgid ""
@@ -89,6 +99,8 @@ msgid ""
 " interface can display an icon on the right of the status bar to inform you "
 "that there are updates for your installed plugins or new plugins available."
 msgstr ""
+":ref:`플러그인 관리자 설정 <setting_plugins>` 에 따르면, QGIS 주 인터페이스는 설치된 플러그인용 업데이트 또는 "
+"새 플러그인을 사용할 수 있는 경우 상태 바 오른쪽에 그 사실을 알려주는 아이콘을 표시할 수 있습니다."
 
 #: ../../docs/user_manual/plugins/plugins.rst:58
 msgid "The Plugins Dialog"
@@ -100,6 +112,8 @@ msgid ""
 "upgrade plugins in different ways. Each plugin has some metadata displayed "
 "in the right panel:"
 msgstr ""
+"사용자는 플러그인 대화창의 메뉴를 통해 플러그인을 서로 다른 방식으로 설치, 설치 제거, 업그레이드할 수 있습니다. 각 플러그인은 오른쪽"
+" 패널에 표시되는 다음 메타데이터를 보유하고 있습니다:"
 
 #: ../../docs/user_manual/plugins/plugins.rst:64
 msgid "information on whether the plugin is experimental"
@@ -136,6 +150,9 @@ msgid ""
 "available in nearly every tab (except |transformSettings| "
 ":guilabel:`Settings`)."
 msgstr ""
+"대화창 상단에 있는 :guilabel:`Search` 기능으로 메타데이터 정보(작성자, 명칭, 설명 등등)를 사용해서 어떤 플러그인이라도"
+" 찾을 수 있습니다. (|transformSettings| :guilabel:`Settings` 탭을 제외한) 거의 모든 탭에서 검색 "
+"기능을 사용할 수 있습니다. "
 
 #: ../../docs/user_manual/plugins/plugins.rst:79
 msgid "The Settings tab"
@@ -147,6 +164,8 @@ msgid ""
 "configure which plugins can be displayed in your application. You can use "
 "the following options:"
 msgstr ""
+"사용자는 |transformSettings| :guilabel:`Settings` 탭에서 사용자 응용 프로그램에 어떤 플러그인을 표시할 "
+"수 있는지 환경 설정할 수 있습니다. 다음 옵션들을 사용할 수 있습니다:"
 
 #: ../../docs/user_manual/plugins/plugins.rst:85
 msgid ""
@@ -189,6 +208,11 @@ msgid ""
 " Details` form with a name and the URL. The URL can be of ``http://`` or "
 "``file://`` protocol type."
 msgstr ""
+"QGIS는 기본적으로 (QGIS 3.0의 경우) :guilabel:`Plugin repositories` 부분에 "
+"https://plugins.qgis.org/plugins/plugins.xml?qgis=3.0 이라는 URL과 함께 공식 플러그인 "
+"저장소를 가지고 있습니다. 외부 작성자 저장소를 추가하려면, :guilabel:`Add...` 버튼을 클릭하고 "
+":guilabel:`Repository Details` 양식에 명칭과 URL을 입력하십시오. 이때 URL은 ``http://`` 또는 "
+"``file://`` 프로토콜 유형일 수 있습니다."
 
 #: ../../docs/user_manual/plugins/plugins.rst:102
 msgid ""
@@ -208,6 +232,8 @@ msgid ""
 "disabled from the Settings tab via the :guilabel:`Edit...` button, or "
 "completely removed with the :guilabel:`Delete` button."
 msgstr ""
+"추가한 저장소 가운데 하나 이상을 더 이상 원하지 않을 경우, 설정 탭에서 :guilabel:`Edit...` 버튼으로 비활성화시키거나 "
+"또는 :guilabel:`Delete` 버튼으로 완전히 삭제할 수 있습니다."
 
 #: ../../docs/user_manual/plugins/plugins.rst:116
 msgid "The |transformSettings| :guilabel:`Settings` tab"
@@ -227,6 +253,11 @@ msgid ""
 "plugin is installed. An installed plugin can be temporarily de/activated "
 "using the checkbox."
 msgstr ""
+"|showPluginManager| :guilabel:`All` 탭은 핵심 및 외부 플러그인 둘 다를 포함한 사용할 수 있는 모든 "
+"플러그인의 목록을 담고 있습니다. 플러그인의 새 버전을 찾으려면 :guilabel:`Upgrade All` 버튼을 클릭하십시오. 또, "
+"플러그인이 목록에 있지만 설치돼 있지 않은 경우 :guilabel:`Install Plugin` 버튼을 클릭하면 됩니다. 이미 설치돼 "
+"있는 경우 :guilabel:`Uninstall Plugin` 버튼을 클릭한 다음 :guilabel:`Reinstall Plugin` "
+"버튼을 클릭하십시오. 설치한 플러그인은 체크박스를 사용해서 일시적으로 비/활성화시킬 수 있습니다."
 
 #: ../../docs/user_manual/plugins/plugins.rst:134
 msgid "The |showPluginManager| :guilabel:`All` tab"
@@ -244,6 +275,10 @@ msgid ""
 " :guilabel:`Uninstall Plugin` and :guilabel:`Reinstall Plugin` buttons. You "
 "can :guilabel:`Upgrade All` the plugins here as well."
 msgstr ""
+"|pluginInstalled| :guilabel:`Installed` 탭은 사용자가 설치 제거할 수 없는 핵심 플러그인 목록을 담고 "
+"있습니다. :guilabel:`Uninstall Plugin` 과 :guilabel:`Reinstall Plugin` 버튼을 사용해서 "
+"언제나 외부 플러그인을 삭제하고 재설치해서 이 목록을 늘릴 수 있습니다. 이 탭에서도 :guilabel:`Upgrade All` 버튼을 "
+"사용할 수 있습니다. "
 
 #: ../../docs/user_manual/plugins/plugins.rst:151
 msgid "The |pluginInstalled| :guilabel:`Installed` tab"
@@ -259,6 +294,8 @@ msgid ""
 "are not installed. You can use the :guilabel:`Install Plugin` button to "
 "implement a plugin into QGIS."
 msgstr ""
+"|plugin| :guilabel:`Not installed` 탭은 설치되지 않았지만 사용할 수 있는 모든 플러그인의 목록을 담고 "
+"있습니다. :guilabel:`Install Plugin` 버튼을 사용해서 QGIS에 플러그인을 구현할 수 있습니다."
 
 #: ../../docs/user_manual/plugins/plugins.rst:165
 msgid "The |plugin| :guilabel:`Not installed` tab"
@@ -277,16 +314,23 @@ msgid ""
 "|transformSettings| :guilabel:`Settings` menu, those also appear in the list"
 " giving you opportunity to early test upcoming tools."
 msgstr ""
+"새 플러그인이 저장소에 추가되거나 또는 설치한 플러그인의 새 버전이 배포된 경우 |plugin-upgrade| "
+":guilabel:`Upgradeable` 및 |plugin-new| :guilabel:`New` 탭이 활성화됩니다. "
+"|transformSettings| :guilabel:`Settings` 메뉴에서 |checkbox| :guilabel:`Show "
+"also experimental plugins` 옵션을 체크한 경우, 실험적인 플러그인도 목록에 표시돼 사용자가 새로 나올 도구를 미리 "
+"테스트해볼 수 있습니다."
 
 #: ../../docs/user_manual/plugins/plugins.rst:177
 msgid ""
 "Installation can be done with the :guilabel:`Install Plugin`, "
 ":guilabel:`Upgrade Plugin` or :guilabel:`Upgrade All` buttons."
 msgstr ""
+":guilabel:`Install Plugin`, :guilabel:`Upgrade Plugin` 또는 :guilabel:`Upgrade"
+" All` 버튼을 사용해서 플러그인을 설치할 수 있습니다."
 
 #: ../../docs/user_manual/plugins/plugins.rst:185
 msgid "The |plugin-upgrade| :guilabel:`Upgradeable` tab"
-msgstr ""
+msgstr "|plugin-upgrade| :guilabel:`Upgradeable` 탭"
 
 #: ../../docs/user_manual/plugins/plugins.rst:188
 msgid "The Invalid tab"
@@ -301,6 +345,10 @@ msgid ""
 " the times the fix will be elsewhere (install some libraries, look for "
 "another compatible plugin or help to upgrade the broken one)."
 msgstr ""
+"|pluginInvalid| :guilabel:`Invalid` 탭은 설치돼 있지만 어떤 이유로든 (의존성 상실, 불러오는 중 오류 "
+"발생, 현재 QGIS 버전과 호환되지 않는 함수 등등) 현재 작동하지 않는 모든 플러그인의 목록을 담고 있습니다. "
+":guilabel:`Reinstall Plugin` 버튼을 클릭해서 인식 불가능해진 플러그인을 고쳐볼 수도 있지만, 다른 방법으로 (새 "
+"라이브러리 설치, 호환되는 또다른 플러그인 탐색, 또는 망가진 플러그인을 업그레이드해서) 문제를 해결해야 하는 경우가 대부분입니다."
 
 #: ../../docs/user_manual/plugins/plugins.rst:202
 msgid "The |pluginInvalid| :guilabel:`Invalid` tab"
@@ -308,7 +356,7 @@ msgstr "|pluginInvalid| :guilabel:`Invalid` 탭"
 
 #: ../../docs/user_manual/plugins/plugins.rst:205
 msgid "The Install from ZIP tab"
-msgstr ""
+msgstr "ZIP 탭에서 설치하기"
 
 #: ../../docs/user_manual/plugins/plugins.rst:207
 msgid ""
@@ -316,7 +364,9 @@ msgid ""
 "selector widget to import plugins in a zipped format, e.g. plugins "
 "downloaded directly from their repository."
 msgstr ""
+"|installPluginFromZip| :guilabel:`Install from ZIP` 탭은 ZIP으로 압축된 포맷에서 플러그인을 "
+"가져올 수 있는, 예를 들어 저장소에서 플러그인을 직접 다운로드할 수 있는 파일 선택기 위젯을 제공합니다."
 
 #: ../../docs/user_manual/plugins/plugins.rst:216
 msgid "The |installPluginFromZip| :guilabel:`Install from zip` tab"
-msgstr ""
+msgstr "|installPluginFromZip| :guilabel:`Install from zip` 탭"

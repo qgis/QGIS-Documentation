@@ -160,7 +160,7 @@ msgstr ""
 
 #: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:53
 msgid "**Algorithm ID**: ``taudem:d8hdisttostrm``"
-msgstr ""
+msgstr "**Algorithm ID**: ``taudem:d8hdisttostrm``"
 
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
@@ -376,6 +376,9 @@ msgid ""
 "cells that might overstate the affected area, so a threshold proportion can "
 "be set to avoid this excess dispersion."
 msgstr ""
+"이 값은 유수 방향을 결정하기 위한 D-infinity 다중 유수 방향 메소드를 사용함으로써 발생하는 유수의 분산을 제약하는 데 쓰이는 "
+"한계값 비율입니다. D-infinity 다중 유수 방향 메소드는 종종 영향 영역을 과장할 수도 있는 일부 내리막 셀들로 유수를 극소량 "
+"분산시키기 하기 때문에, 이런 과장된 분산을 피하기 위해 한계값 비율을 설정할 수 있습니다."
 
 #: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:153
 msgid "Default: *0.2*"
@@ -453,7 +456,7 @@ msgstr "이 그리드는 각 셀에 대한 가장 급한 각도를 보유한 소
 
 #: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:187
 msgid "**Algorithm ID**: ``taudem:dinfavalanche``"
-msgstr ""
+msgstr "**Algorithm ID**: ``taudem:dinfavalanche``"
 
 #: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:195
 msgid "D-Infinity Concentration Limited Accumulation"
@@ -481,6 +484,17 @@ msgid ""
 "concentration or solubility threshold over a zone and flow from the zone may"
 " be subject to decay or attenuation."
 msgstr ""
+"이 알고리즘은 표시자(indicator) 그리드(gd)가 표시하는 지역에 걸쳐 어떤 물질이 농도(concentration) 또는 "
+"용해도(solubility) 한계값 Csol로 유수에 무제한 공급되는 상황에 적용됩니다. 공급 영역에 있는 어떤 물질이 유수에 농도 또는"
+" 용해도 한계값으로 흘러드는 경우, 영역 내 각 위치의 해당 물질 농도 그리드를 산출합니다. 먼저 유수를 입력 유효 유출 가중치 "
+"그리드(Effective Runoff Weight Grid)(개념상 과잉 침전)의 D-infinity 가중치 기여 영역으로 계산합니다. "
+"공급 영역(표시자 그리드) 전체의 물질 농도는 농도 한계값입니다. 해당 물질이 D-infinity 유수 방향으로 내리막 이동하는 동안, "
+"유수 변화에 따라 희석되는 것은 물론 셀에서 셀로 이동하면서 부분적으로 (1차) 감퇴(decay)하게 됩니다. 감퇴 곱수 "
+"그리드(decay multiplier grid)는 그리드 셀 ``x`` 에서 다음 내리막 셀로 이동하면서 부분적으로 (1차) 감소되는 "
+"양을 지정합니다. 배출 shapefile을 사용하는 경우, 이 도구는 shapefile이 지정하는 위치에 유수를 기여하는 영역 부분만을 "
+"평가합니다. 어느 화합물이 어느 구역에 걸쳐 유수에 농도 또는 용해도 한계값으로 흘러들고 해당 구역에서 나오는 유수가 감퇴(decay) "
+"또는 감쇠(attenuation)될 수도 있는 경우, 이 알고리즘은 해당 화합물을 무제한 공급할 수 있는 지역에서 오염 물질 또는 해당 "
+"화합물을 추적하는 데 쓸모가 있습니다."
 
 #: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:218
 msgid ""
@@ -664,7 +678,7 @@ msgstr "유수 속 관심 화합물의 농도를 산출해서 지정하는 그�
 
 #: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:308
 msgid "**Algorithm ID**: ``taudem:dinfconclimaccum``"
-msgstr ""
+msgstr "**Algorithm ID**: ``taudem:dinfconclimaccum``"
 
 #: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:316
 msgid "D-Infinity Decaying Accumulation"
@@ -766,7 +780,7 @@ msgstr ""
 
 #: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:396
 msgid "**Algorithm ID**: ``taudem:dinfdecayaccum``"
-msgstr ""
+msgstr "**Algorithm ID**: ``taudem:dinfdecayaccum``"
 
 #: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:404
 msgid "D-Infinity Distance Down"
@@ -840,7 +854,7 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:466
 #: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:571
 msgid "``Statistical Method`` [enumeration]"
-msgstr ""
+msgstr "``Statistical Method`` [enumeration]"
 
 #: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:452
 #: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:557
@@ -888,7 +902,7 @@ msgstr "기본값: *2*"
 #: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:482
 #: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:587
 msgid "``Distance Method`` [enumeration]"
-msgstr ""
+msgstr "``Distance Method`` [enumeration]"
 
 #: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:469
 #: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:574
@@ -963,7 +977,7 @@ msgstr ""
 
 #: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:506
 msgid "**Algorithm ID**: ``taudem:dinfdistdown``"
-msgstr ""
+msgstr "**Algorithm ID**: ``taudem:dinfdistdown``"
 
 #: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:514
 msgid "D-Infinity Distance Up"
@@ -988,6 +1002,14 @@ msgid ""
 "straight line path, the vertical component of the straight line path, or the"
 " total surface flow path."
 msgstr ""
+"이 알고리즘은 각 셀에서 능선(ridge) 셀까지의 거리를 D-infinity 유수 역방향을 따라 계산합니다. 능선 셀이란 더 이상 "
+"오르막 방향으로 기여하지 않는 그리드 셀을 말합니다. 다중 유수 경로가 어떤 그리드 셀에 수렴하는 경우, 어떤 그리드 셀을 지정하더라도 "
+"해당 셀은 오르막 능선 셀을 여럿 보유할 수 있습니다. 이 도구는 이런 유수 경로에 대한 최장 거리, 최단 거리, 그리고 대기 유수 "
+"평균(waited flow average) 3개의 통계법을 사용할 수 있습니다. 이런 통계법에서 사용되는 변수는 지정한 모든 셀에 대해 "
+"사용자가 지정한 한계값(t)을 초과하는 비율의 유수를 기여하는 그리드 셀만 오르막으로 간주합니다. t=0.5로 설정하면 모든 그리드 "
+"셀에서 유수 경로 하나만 선택할 것입니다. 이렇게 되면 유수가 내리막 그리드 셀 2개로 나뉘는 D-infinity 유수 모델보다는 D8 "
+"유수 모델에 더 가까워질 것입니다. 마지막으로, 총 직선 경로(피타고라스), 직선 경로의 수평 구성 요소, 직선 경로의 수직 구성 요소,"
+" 또는 총 지표 유수 경로와 같은, 측정할 수 있는 부가적인 경로가 몇 개 존재합니다."
 
 #: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:554
 #: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1037
@@ -1043,7 +1065,7 @@ msgstr ""
 
 #: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:613
 msgid "**Algorithm ID**: ``taudem:dinfdistup``"
-msgstr ""
+msgstr "**Algorithm ID**: ``taudem:dinfdistup``"
 
 #: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:621
 msgid "D-Infinity Reverse Accumulation"
@@ -1109,7 +1131,7 @@ msgstr "각 그리드 셀에서 내리막 가중 하중의 최대값을 나타�
 
 #: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:668
 msgid "**Algorithm ID**: ``taudem:dinfrevaccum``"
-msgstr ""
+msgstr "**Algorithm ID**: ``taudem:dinfrevaccum``"
 
 #: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:676
 msgid "D-Infinity Transport Limited Accumulation - 2"
@@ -1288,6 +1310,8 @@ msgid ""
 "minus the transport capacity out of the grid cell. The deposition grid is "
 "calculated as the transport in + the local supply - the transport out."
 msgstr ""
+"이송 제약 집적에서 산출된 퇴적량을 제공하는 그리드입니다. 퇴적량이란 각 그리드 셀로 들어오는 이송량에서 그리드 셀에서 나가는 이송 "
+"능력을 뺀 나머지를 말합니다. 퇴적 그리드는 들어오는 이송량과 해당 셀의 공급량을 더한 값에서 나가는 이송량을 뺀 값으로 계산합니다."
 
 #: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:794
 msgid "``Output Concentration Grid`` [raster]"
@@ -1299,10 +1323,12 @@ msgid ""
 "output and gives the concentration of a compound (contaminant) adhered or "
 "bound to the transported substance (e.g. sediment) is calculated."
 msgstr ""
+"공급량 그리드에 입력 농도를 지정한 경우, (침전물과 같은) 이송되는 물질에 부착 또는 결합돼 있는 화합물(오염물질)의 농도를 계산해서 "
+"지정한 이 그리드도 산출합니다."
 
 #: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:796
 msgid "**Algorithm ID**: unknown"
-msgstr ""
+msgstr "**Algorithm ID**: unknown"
 
 #: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:804
 msgid "D-Infinity Transport Limited Accumulation"
@@ -1320,7 +1346,7 @@ msgstr ""
 
 #: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:913
 msgid "**Algorithm ID**: ``taudem:dinftranslimaccum``"
-msgstr ""
+msgstr "**Algorithm ID**: ``taudem:dinftranslimaccum``"
 
 #: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:921
 msgid "D-Infinity Upslope Dependence"
@@ -1401,7 +1427,7 @@ msgstr "영역 내부에 있는 각 소스 포인트가 대상 그리드가 정�
 
 #: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:968
 msgid "**Algorithm ID**: ``taudem:dinfupdependence``"
-msgstr ""
+msgstr "**Algorithm ID**: ``taudem:dinfupdependence``"
 
 #: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:976
 msgid "Slope Average Down"
@@ -1436,7 +1462,7 @@ msgstr "사용자 지정 거리 범위 안에서 D8 내리막 방향으로 경�
 
 #: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1014
 msgid "**Algorithm ID**: ``taudem:slopeavedown``"
-msgstr ""
+msgstr "**Algorithm ID**: ``taudem:slopeavedown``"
 
 #: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1022
 msgid "Slope Over Area Ratio"
@@ -1500,32 +1526,32 @@ msgstr ""
 
 #: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1055
 msgid "**Algorithm ID**: ``taudem:slopearearatio``"
-msgstr ""
+msgstr "**Algorithm ID**: ``taudem:slopearearatio``"
 
 #: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1063
 msgid "Topographic wetness index"
-msgstr ""
+msgstr "지형 습윤 지수 (TWI)"
 
 #: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1068
 msgid "Calculates the topographic wetness index (TWI)."
-msgstr ""
+msgstr "지형 습윤 지수(Topographic Wetness Index)를 계산합니다."
 
 #: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1075
 msgid "``Slope`` [raster]"
-msgstr ""
+msgstr "``Slope`` [raster]"
 
 #: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1082
 msgid "``Specific catchment area`` [raster]"
-msgstr ""
+msgstr "``Specific catchment area`` [raster]"
 
 #: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1088
 msgid "``Wetness index`` [raster]"
-msgstr ""
+msgstr "``Wetness index`` [raster]"
 
 #: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1088
 msgid "A grid of the wetness index (TWI)."
-msgstr ""
+msgstr "A grid of the wetness index (TWI)."
 
 #: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1090
 msgid "**Algorithm ID**: ``taudem:twi``"
-msgstr ""
+msgstr "**Algorithm ID**: ``taudem:twi``"

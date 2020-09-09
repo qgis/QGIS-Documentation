@@ -28,7 +28,7 @@ msgstr "하천망 분석"
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:11
 msgid "Connect down"
-msgstr ""
+msgstr "하류 연결하기"
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:14
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:55
@@ -65,7 +65,7 @@ msgstr "파라미터"
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:24
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:459
 msgid "``D8 flow directions`` [raster]"
-msgstr ""
+msgstr "``D8 flow directions`` [raster]"
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:21
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:81
@@ -86,20 +86,20 @@ msgstr ""
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:26
 msgid "``D8 contribution area`` [raster]"
-msgstr ""
+msgstr "``D8 contribution area`` [raster]"
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:28
 msgid "``Watershed`` [raster]"
-msgstr ""
+msgstr "``Watershed`` [raster]"
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:30
 msgid "``Grid cells move to downstream`` [number]"
-msgstr ""
+msgstr "``Grid cells move to downstream`` [number]"
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:36
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:473
 msgid "``Outlets`` [vector: point]"
-msgstr ""
+msgstr "``Outlets`` [vector: point]"
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:33
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:92
@@ -145,7 +145,7 @@ msgstr "오르막 경사의 최대값/최소값 그리드입니다."
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:44
 msgid "**Algorithm ID**: ``taudem:connectdown``"
-msgstr ""
+msgstr "**Algorithm ID**: ``taudem:connectdown``"
 
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
@@ -268,7 +268,7 @@ msgstr "오르막 경사의 최대값 또는 최소값 가운데 어느 쪽을 �
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:114
 msgid "**Algorithm ID**: ``taudem:d8flowpathextremeup``"
-msgstr ""
+msgstr "**Algorithm ID**: ``taudem:d8flowpathextremeup``"
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:122
 msgid "Gage Watershed"
@@ -319,7 +319,7 @@ msgstr "유역의 내리막 연결성을 지정하는 텍스트 파일입니다.
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:156
 msgid "**Algorithm ID**: ``taudem:gagewatershed``"
-msgstr ""
+msgstr "**Algorithm ID**: ``taudem:gagewatershed``"
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:164
 msgid "Length Area Stream Source"
@@ -441,7 +441,7 @@ msgstr ""
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:222
 msgid "**Algorithm ID**: ``taudem:lengtharea``"
-msgstr ""
+msgstr "**Algorithm ID**: ``taudem:lengtharea``"
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:230
 msgid "Move Outlets To Streams"
@@ -524,6 +524,8 @@ msgid ""
 "the input outlet shapefile will be moved before they are saved to the output"
 " outlet shapefile."
 msgstr ""
+"이 입력 파라미터는 입력 배출 shapefile 안에 있는 포인트들이 산출 배출 shapefile로 저장되기 전에 이동할 최대 그리드 셀"
+" 개수입니다."
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:279
 msgid "Default: *50*"
@@ -531,7 +533,7 @@ msgstr "기본값: *50*"
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:293
 msgid "``Output Outlet Shapefile`` [vector: point]"
-msgstr ""
+msgstr "``Output Outlet Shapefile`` [vector: point]"
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:285
 msgid ""
@@ -546,21 +548,27 @@ msgid ""
 "not a stream within the maximum distance, or some positive value if it was "
 "moved."
 msgstr ""
+"관심 포인트 또는 배출 포인트를 정의하는 포인트 shapefile입니다. 이 파일이 보유한 포인트 개수는 입력 배출 shapefile 이"
+" 보유한 포인트 개수와 동일합니다. 입력 포인트가 하천 위에 존재하는 경우, 포인트는 이동하지 않습니다. 입력 포인트가 하천 위에 "
+"존재하지 않는 경우, 포인트를 내리막 D8 유수 방향을 따라 하천을 만날 때까지 또는 최장 거리까지 이동시킵니다. "
+"``dist_moved`` 필드가 이 파일에 추가되는데, 포인트가 이동한 셀 개수를 담고 있습니다. 포인트가 원래 하천 위에 위치한 경우"
+" 이 필드의 값은 0이며, 하천이 최장 거리 내에 없기 때문에 이동하지 않았을 경우 -1이고, 또는 포인트가 이동한 경우 이동한 셀 "
+"개수입니다."
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:295
 msgid "**Algorithm ID**: ``taudem:moveoutletstostreams``"
-msgstr ""
+msgstr "**Algorithm ID**: ``taudem:moveoutletstostreams``"
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:303
 msgid "Peuker Douglas"
-msgstr "더글러스-패커"
+msgstr "더글러스-포이커"
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:308
 msgid ""
 "Creates an indicator grid (1, 0) of upward curved grid cells according to "
 "the Peuker and Douglas algorithm."
 msgstr ""
-"`더글러스-패커 알고리즘 "
+"`더글러스-포이커 알고리즘 "
 "<https://en.wikipedia.org/wiki/Ramer%E2%80%93Douglas%E2%80%93Peucker_algorithm>`_"
 " 이 생성한 오르막 만곡 그리드 셀들의 지표(indicator) 그리드 (1, 0)을 생성합니다."
 
@@ -593,9 +601,8 @@ msgid ""
 "A grid of elevation values. This is usually the output of the **\"Pit "
 "Remove\"** tool, in which case it is elevations with pits removed."
 msgstr ""
-"표고 값을 보유한 그리드를 지정합니다. 일반적으로 이 그리드는 `구덩이 제거 "
-"<http://docs.qgis.org/2.18/ko/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.html"
-"#pit-remove>`_ 도구의 산출물로, 구덩이를 제거한 표고입니다."
+"표고 값을 보유한 그리드를 지정합니다. 일반적으로 이 그리드는 `함몰부 제거 <#pit-remove>`_ 도구의 산출물로, 구덩이를 "
+"제거한 표고입니다."
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:331
 msgid "``Center Smoothing Weight`` [number]"
@@ -648,8 +655,8 @@ msgid ""
 "proto-channel network generally lacks connectivity and requires thinning, "
 "issues that were discussed in detail by Band (1986)."
 msgstr ""
-"더글러스-패커 알고리즘이 생성한 오르막 만곡 그리드 셀들의 지표(indicator) 그리드 (1, 0)로, 이를 살펴보면 수로망과 닮아 "
-"있습니다. 이 원시 수로망은 일반적으로 연결성이 부족해서 솎아내기(thinning)를 해야 합니다. Band (1986)에서 이런 "
+"더글러스-포이커 알고리즘이 생성한 오르막 만곡 그리드 셀들의 지표(indicator) 그리드 (1, 0)로, 이를 살펴보면 수로망과 닮아"
+" 있습니다. 이 원시 수로망은 일반적으로 연결성이 부족해서 솎아내기(thinning)를 해야 합니다. Band (1986)에서 이런 "
 "문제들을 자세하게 논의하고 있습니다."
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:355
@@ -677,19 +684,19 @@ msgstr ""
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:363
 msgid "**Algorithm ID**: ``taudem:peukerdouglas``"
-msgstr ""
+msgstr "**Algorithm ID**: ``taudem:peukerdouglas``"
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:371
 msgid "Peuker Douglas stream"
-msgstr ""
+msgstr "포이커 더글러스 하천"
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:387
 msgid "``Stream source`` [raster]"
-msgstr ""
+msgstr "``Stream source`` [raster]"
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:389
 msgid "**Algorithm ID**: ``taudem:peukerdouglasstreamdef``"
-msgstr ""
+msgstr "**Algorithm ID**: ``taudem:peukerdouglasstreamdef``"
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:397
 msgid "Slope Area Combination"
@@ -784,51 +791,51 @@ msgstr ""
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:439
 msgid "**Algorithm ID**: ``taudem:slopearea``"
-msgstr ""
+msgstr "**Algorithm ID**: ``taudem:slopearea``"
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:447
 msgid "Slope area stream definition"
-msgstr ""
+msgstr "경사 면적 하천 정의"
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:465
 msgid "``D-infinity Contributing Area`` [raster]"
-msgstr ""
+msgstr "``D-infinity Contributing Area`` [raster]"
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:469
 msgid "``Slope`` [raster]"
-msgstr ""
+msgstr "``Slope`` [raster]"
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:471
 msgid "``Mask grid`` [raster]"
-msgstr ""
+msgstr "``Mask grid`` [raster]"
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:475
 msgid "``Pit-filled grid for drop analysis`` [raster]"
-msgstr ""
+msgstr "``Pit-filled grid for drop analysis`` [raster]"
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:477
 msgid "``D8 contributing area for drop analysis`` [raster]"
-msgstr ""
+msgstr "``D8 contributing area for drop analysis`` [raster]"
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:491
 msgid "``Accumulation threshold`` [number]"
-msgstr ""
+msgstr "``Accumulation threshold`` [number]"
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:493
 msgid "``Minimum threshold`` [number]"
-msgstr ""
+msgstr "``Minimum threshold`` [number]"
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:495
 msgid "``Maximum threshold`` [number]"
-msgstr ""
+msgstr "``Maximum threshold`` [number]"
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:497
 msgid "``Number of drop thresholds`` [number]"
-msgstr ""
+msgstr "``Number of drop thresholds`` [number]"
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:499
 msgid "``Type of threshold step`` [enumeration]."
-msgstr ""
+msgstr "``Type of threshold step`` [enumeration]."
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:501
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:715
@@ -852,27 +859,27 @@ msgstr "기본값: *0*"
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:510
 msgid "``Select threshold by drop analysis`` [boolean]"
-msgstr ""
+msgstr "``Select threshold by drop analysis`` [boolean]"
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:514
 msgid "``Stream raster`` [raster]"
-msgstr ""
+msgstr "``Stream raster`` [raster]"
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:519
 msgid "``Slope area`` [raster]"
-msgstr ""
+msgstr "``Slope area`` [raster]"
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:521
 msgid "``Maximum upslope`` [raster]"
-msgstr ""
+msgstr "``Maximum upslope`` [raster]"
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:523
 msgid "``Drop analysis`` [file]"
-msgstr ""
+msgstr "``Drop analysis`` [file]"
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:525
 msgid "**Algorithm ID**: ``taudem:slopeareastreamdef``"
-msgstr ""
+msgstr "**Algorithm ID**: ``taudem:slopeareastreamdef``"
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:533
 msgid "Stream Definition By Threshold"
@@ -888,6 +895,10 @@ msgid ""
 "use a D-infinity contributing area grid (:file:`*sca`) as the mask grid, it "
 "functions as an edge contamination mask. The threshold logic is:"
 msgstr ""
+"어떤 그리드를 입력받아 입력값이 한계값 이상인 셀들을 식별하는 지표(indicator) 그리드 (1, 0)을 산출합니다. 일반적으로 "
+"집적원(accumulated source) 영역 그리드를 입력받아 하천 래스터 그리드를 생성합니다. 부가적인 입력 마스크 그리드를 "
+"사용하는 경우, 마스크 값이 0 이상인 셀 영역만 평가하도록 제한합니다. D-infinity 기여 영역 "
+"그리드(:file:`*.sca`)를 마스크 그리드로 사용하는 경우, 경계 오염 마스크로 기능합니다. 한계값 논리는 다음과 같습니다:"
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:560
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:678
@@ -951,15 +962,15 @@ msgstr ""
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:586
 msgid "**Algorithm ID**: ``taudem:threshold``"
-msgstr ""
+msgstr "**Algorithm ID**: ``taudem:threshold``"
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:594
 msgid "Stream definition with drop analysis"
-msgstr ""
+msgstr "낙차 분석으로 하천 정의"
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:608
 msgid "**Algorithm ID**: ``taudem:streamdefdropanalysis``"
-msgstr ""
+msgstr "**Algorithm ID**: ``taudem:streamdefdropanalysis``"
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:616
 msgid "Stream Drop Analysis"
@@ -1121,13 +1132,15 @@ msgstr "기본값: *10*"
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:720
 msgid "``Spacing for Threshold Values`` [enumeration]"
-msgstr ""
+msgstr "``Spacing for Threshold Values`` [enumeration]"
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:712
 msgid ""
 "This parameter indicates whether logarithmic or linear spacing should be "
 "used when looking for possible threshold values using drop analysis."
 msgstr ""
+"이 파라미터는 낙차 분석으로 가능한 한계값을 탐색할 때 로그 간격(logarithmic spacing)을 사용해야 할지 또는 선형 간격을"
+" 사용해야 할지를 나타내는 파라미터입니다."
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:736
 msgid "``D-Infinity Drop to Stream Grid`` [file]"
@@ -1161,7 +1174,7 @@ msgstr ""
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:738
 msgid "**Algorithm ID**: ``taudem:dropanalysis``"
-msgstr ""
+msgstr "**Algorithm ID**: ``taudem:dropanalysis``"
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:747
 msgid ""
@@ -1200,6 +1213,10 @@ msgid ""
 "Resources Congress, Orlando, Florida, May 20-24, ASCE, "
 "https://www.researchgate.net/publication/2329568_Advances_in_the_Mapping_of_Flow_Networks_From_Digital_Elevation_Data."
 msgstr ""
+"Tarboton, D. G. and D. P. Ames, (2001), \"Advances in the mapping of flow "
+"networks from digital elevation data\", World Water and Environmental "
+"Resources Congress, Orlando, Florida, May 20-24, ASCE, "
+"https://www.researchgate.net/publication/2329568_Advances_in_the_Mapping_of_Flow_Networks_From_Digital_Elevation_Data."
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:762
 msgid "Stream Reach and Watershed"
@@ -1308,6 +1325,10 @@ msgid ""
 " field \"id\" in the Outlets Shapefile, because the \"id\" values are used "
 "as identifiers in the Network Tree file."
 msgstr ""
+"관심 지점을 정의하는 포인트 shapefile입니다. 이 파일을 사용하는 경우, 알고리즘이 이 배출 지점 상류의 하천망만을 묘사할 "
+"것입니다. 또한, 관측 지점의 상류 및 하류 유역을 쉽게 표현하기 위해 하천 구간을 논리적으로 나누는 데 배출 shapefile에 있는 "
+"포인트들을 사용합니다. 이 알고리즘은 배출 shapefile이 정수형 속성 필드 ``id`` 를 가지고 있을 것을 요구합니다. 하천망 "
+"트리 파일이 ``id`` 값을 식별자로 사용하기 때문입니다."
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:843
 msgid "``Delineate Single Watershed`` [boolean]"
@@ -1365,7 +1386,7 @@ msgstr ""
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:902
 msgid "``Stream Reach Shapefile`` [vector: line]"
-msgstr ""
+msgstr "``Stream Reach Shapefile`` [vector: line]"
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:866
 msgid ""
@@ -1583,4 +1604,4 @@ msgstr "기여 영역"
 
 #: ../../docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:937
 msgid "**Algorithm ID**: ``taudem:streamnet``"
-msgstr ""
+msgstr "**Algorithm ID**: ``taudem:streamnet``"
