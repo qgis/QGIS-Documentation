@@ -1843,11 +1843,11 @@ URL example:
 
     http://localhost/qgisserver/wfs3/collection_one/items.json?bbox=-180,-90,180,90
 
-If the *CRS* of the bounding box is not WGS84
-(*http://www.opengis.net/def/crs/OGC/1.3/CRS84*), a different CRS can
+If the *CRS* of the bounding box is not
+`WGS 84 <https://www.opengis.net/def/crs/OGC/1.3/CRS84>`_, a different CRS can
 be specified by using the optional parameter ``bbox-crs``.
 The CRS format identifier must be in the
-`OGC URI <http://www.opengis.net/def/crs/>`_ format:
+`OGC URI <https://www.opengis.net/def/crs/>`_ format:
 
 URL example:
 
