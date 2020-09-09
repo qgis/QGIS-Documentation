@@ -1391,8 +1391,6 @@ GetFeatureInfo
 Standard parameters for the **GetFeatureInfo** request according to
 the OGC WMTS 1.0.0 specifications:
 
-- `WMS 1.1.0 <https://portal.opengeospatial.org/files/?artifact_id=1081&version=1&format=pdf>`_
-
 .. csv-table::
    :header: "Parameter", "Required", "Description"
    :widths: auto
