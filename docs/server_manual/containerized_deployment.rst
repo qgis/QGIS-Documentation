@@ -99,7 +99,7 @@ it. To do so create a directory :file:`qgis-server` and within its directory:
 First run
 ---------
 
-To run the server you will need a QGis project file. You can use one of yours or pick
+To run the server you will need a QGIS project file. You can use one of yours or pick
 `this sample <https://gitlab.com/Oslandia/qgis/docker-qgis/-/blob/cc1798074d4a66a472721352f3984bb318777a5a/qgis-exec/data/osm.qgs>`_.
 
 To do so, create a directory :file:`data` within the directory
