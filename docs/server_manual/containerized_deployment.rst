@@ -96,7 +96,7 @@ it. To do so create a directory :file:`qgis-server` and within its directory:
   docker build -f Dockerfile -t qgis-server ./
 
 
-First try
+First run
 ---------
 
 To run the server you will need a QGis project file. You can use one of yours or pick
@@ -131,14 +131,14 @@ Options used:
 To check, type ``docker ps | grep qgis-server`` and you should see a
 line with **qgis-server**::
 
-  CONTAINER ID        IMAGE                 COMMAND                  CREATED             STATUS              PORTS                                            NAMES
-  4de8192da76e        qgis-server           "/tini -- /home/qgis…"   3 seconds ago       Up 2 seconds        0.0.0.0:5555->5555/tcp                           qgis-server
+  CONTAINER ID     IMAGE           COMMAND                  CREATED          STATUS           PORTS                            NAMES
+  4de8192da76e     qgis-server     "/tini -- /home/qgis…"   3 seconds ago    Up 2 seconds     0.0.0.0:5555->5555/tcp           qgis-server
 
 
 Usable sample
 -------------
 
-As the server is only accepting fastcgi connections, you have to have
+As the server is only accepting fastcgi connections, you need
 an HTTP server that handles this protocol.
 To do so we have to create a simple Nginx configuration file and start
 a Nginx image.
