@@ -2023,9 +2023,6 @@ Zonal statistics
 Calculates statistics of a raster layer for each feature of an
 overlapping polygon vector layer.
 
-.. warning:: No new output file will be created.
-   The algorithm adds new columns to the source vector layer.
-
 Parameters
 ..........
 
@@ -2090,10 +2087,10 @@ Outputs
      - Name
      - Type
      - Description
-   * - **Vector layer containing zones**
-     - ``INPUT_VECTOR``
+   * - **Vector layer containing zones and statistics**
+     - ``OUTPUT``
      - [vector: polygon]
-     - The input zone vector layer with added statistics.
+     - The zone vector layer with added statistics.
 
 Python code
 ...........
