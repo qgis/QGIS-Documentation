@@ -96,10 +96,10 @@ it. To do so create a directory :file:`qgis-server` and within its directory:
   docker build -f Dockerfile -t qgis-server ./
 
 
-First try
+First run
 ---------
 
-To run the server you will need a QGis project file. You can use one of yours or pick
+To run the server you will need a QGIS project file. You can use one of yours or pick
 `this sample <https://gitlab.com/Oslandia/qgis/docker-qgis/-/blob/cc1798074d4a66a472721352f3984bb318777a5a/qgis-exec/data/osm.qgs>`_.
 
 To do so, create a directory :file:`data` within the directory
@@ -131,14 +131,14 @@ Options used:
 To check, type ``docker ps | grep qgis-server`` and you should see a
 line with **qgis-server**::
 
-  CONTAINER ID        IMAGE                 COMMAND                  CREATED             STATUS              PORTS                                            NAMES
-  4de8192da76e        qgis-server           "/tini -- /home/qgis…"   3 seconds ago       Up 2 seconds        0.0.0.0:5555->5555/tcp                           qgis-server
+  CONTAINER ID   IMAGE         COMMAND                  CREATED         STATUS         PORTS                    NAMES
+  4de8192da76e   qgis-server   "/tini -- /home/qgis…"   3 seconds ago   Up 2 seconds   0.0.0.0:5555->5555/tcp   qgis-server
 
 
 Usable sample
 -------------
 
-As the server is only accepting fastcgi connections, you have to have
+As the server is only accepting fastcgi connections, you need
 an HTTP server that handles this protocol.
 To do so we have to create a simple Nginx configuration file and start
 a Nginx image.
@@ -217,7 +217,7 @@ Stack description
 ^^^^^^^^^^^^^^^^^
 
 Now that you have Swarm working, create the service file (see
-`deploy swarm <https://docs.docker.com/get-started/swarm-deploy/>`_)
+`Deploy to Swarm <https://docs.docker.com/get-started/swarm-deploy/>`_)
 :file:`qgis-stack.yaml`:
 
 .. code-block:: yaml
