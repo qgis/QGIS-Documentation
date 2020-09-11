@@ -467,7 +467,7 @@ As we will see in a later chapter, Processing algorithms can be called
 from the QGIS Python console, and new Processing algorithms can be
 created using Python.
 A quick way to create such a Python script is to create a model and
-then export is as a Python file.
+then export it as a Python file.
 
 To do so, click on the |saveAsPython|:sup:`Export as Script Algorithm...`
 in the modeler canvas or right click on the name of the model in the Processing
