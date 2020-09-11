@@ -1389,7 +1389,7 @@ GetFeatureInfo
 --------------
 
 Standard parameters for the **GetFeatureInfo** request according to
-the OGC WMTS 1.0.0 specifications:
+the OGC WMTS 1.0.0 specification:
 
 .. csv-table::
    :header: "Parameter", "Required", "Description"
