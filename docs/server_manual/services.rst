@@ -174,6 +174,8 @@ REQUEST
 This parameter is ``GetMap`` in case of the **GetMap** request.
 
 
+.. _server_layers_param:
+
 LAYERS
 ^^^^^^
 
@@ -518,13 +520,20 @@ and **Romania** they're highlighted in yellow.
 
   Server response to a GetMap request with SELECTION parameter
 
+.. _server_wms_tiled:
 
 TILED
 ^^^^^
 
+For performance reasons, QGIS Server can be used in tiled mode.
+In this mode, the client requests several small fixed size tiles, and assembles
+them to form the whole map. Doing this, symbols at or near the
+boundary between two tiles may appeared cut, because they are only present in
+one of the tile.
+
 Set the ``TILED`` parameter to ``TRUE`` to tell QGIS Server to work in
 *tiled* mode, and to apply the *Tile buffer* configured in the QGIS
-project.
+project (see :ref:`Creatingwmsfromproject`).
 
 When ``TILED`` is ``TRUE`` and when a non-zero Tile buffer is
 configured in the QGIS project, features outside the tile extent are
