@@ -561,16 +561,16 @@ For deletion of fields just provide a list of field indexes.
 
  if caps & QgsVectorDataProvider.DeleteAttributes:
      res = layer.dataProvider().deleteAttributes([0])
-     
+
 .. testcode:: vectors
 
- # Alternate methods for removing fields 
+ # Alternate methods for removing fields
  # first create temporary fields to be removed (f1-3)
  layer.dataProvider().addAttributes([QgsField("f1",QVariant.Int),QgsField("f2",QVariant.Int),QgsField("f3",QVariant.Int)])
  layer.updateFields()
  count=layer.fields().count() # count of layer fields
  ind_list=list((count-3, count-2)) # create list
- 
+
  # remove a single field with an index
  layer.dataProvider().deleteAttributes([count-1])
 
@@ -1413,7 +1413,11 @@ We will have to create metadata for the symbol layer
       radius = float(props["radius"]) if "radius" in props else 4.0
       return FooSymbolLayer(radius)
 
-  QgsApplication.symbolLayerRegistry().addSymbolLayerType(FooSymbolLayerMetadata())
+  fslmetadata = FooSymbolLayerMetadata()
+
+.. code-block:: python
+
+  QgsApplication.symbolLayerRegistry().addSymbolLayerType(fslmetadata)
 
 You should pass layer type (the same as returned by the layer) and symbol type
 (marker/line/fill) to the constructor of the parent class. The :meth:`createSymbolLayer()
@@ -1551,7 +1555,11 @@ RandomRenderer example
     def createRendererWidget(self, layer, style, renderer):
       return RandomRendererWidget(layer, style, renderer)
 
-  QgsApplication.rendererRegistry().addRenderer(RandomRendererMetadata())
+  rrmetadata = RandomRendererMetadata()
+
+.. code-block:: python
+
+  QgsApplication.rendererRegistry().addRenderer(rrmetadata)
 
 Similarly as with symbol layers, abstract metadata constructor awaits renderer
 name, name visible for users and optionally name of renderer's icon.
