@@ -217,7 +217,7 @@ Stack description
 ^^^^^^^^^^^^^^^^^
 
 Now that you have Swarm working, create the service file (see
-`deploy swarm <https://docs.docker.com/get-started/swarm-deploy/>`_)
+`Deploy to Swarm <https://docs.docker.com/get-started/swarm-deploy/>`_)
 :file:`qgis-stack.yaml`:
 
 .. code-block:: yaml
