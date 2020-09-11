@@ -168,16 +168,45 @@ You can also create your own projections.
    This projection represents the Earth on a circular field instead of
    a rectangular one, as most other projections do.
 
+#. In :guilabel:`Format`, select :guilabel:`WKT (Recommended)`
 #. Add the following string in the :guilabel:`Parameters` field::
 
-     +proj=vandg +lon_0=0 +x_0=0 +y_0=0 +R_A +a=6371000 +b=6371000 +units=m +no_defs
+    PROJCRS["unknown",
+        BASEGEOGCRS["unknown",
+            DATUM["unknown",
+                ELLIPSOID["unknown",6371000,0,
+                    LENGTHUNIT["metre",1,
+                        ID["EPSG",9001]]]],
+            PRIMEM["Greenwich",0,
+                ANGLEUNIT["degree",0.0174532925199433],
+                ID["EPSG",8901]]],
+        CONVERSION["unknown",
+            METHOD["Van Der Grinten"],
+            PARAMETER["Longitude of natural origin",0,
+                ANGLEUNIT["degree",0.0174532925199433],
+                ID["EPSG",8802]],
+            PARAMETER["False easting",0,
+                LENGTHUNIT["metre",1],
+                ID["EPSG",8806]],
+            PARAMETER["False northing",0,
+                LENGTHUNIT["metre",1],
+                ID["EPSG",8807]]],
+        CS[Cartesian,2],
+            AXIS["(E)",east,
+                ORDER[1],
+                LENGTHUNIT["metre",1,
+                    ID["EPSG",9001]]],
+            AXIS["(N)",north,
+                ORDER[2],
+                LENGTHUNIT["metre",1,
+                    ID["EPSG",9001]]]]
 
    .. figure:: img/new_crs_parameters.png
       :align: center
 
 #. Click :guilabel:`OK`
-#. Click on the |projectionEnabled| :sup:`Current CRS` button to
-   change the project CRS
+#. Click on the |projectionEnabled| :sup:`Current CRS` button at the
+   right of the status bar to change the project CRS
 #. Choose your newly defined projection (search for its name in the
    :guilabel:`Filter` field)
 #. On applying this projection, the map will be reprojected thus:

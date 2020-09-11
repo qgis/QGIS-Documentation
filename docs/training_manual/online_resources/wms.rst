@@ -91,7 +91,7 @@ symbology:
       Mercator`.
 
       #. Enter the value ``pseudo`` in the :guilabel:`Filter` field:
-      #. Choose :guilabel:`WGS 84 / Pseudo Mercator` from the list.
+      #. Choose :guilabel:`WGS 84 / Pseudo Mercator` (with epsg:3857) from the list.
 
          .. figure:: img/pseudo_mercator_selected.png
             :align: center
