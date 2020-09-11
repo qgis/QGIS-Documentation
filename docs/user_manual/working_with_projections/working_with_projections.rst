@@ -161,7 +161,7 @@ It will also be shown in the lower-right of the QGIS status bar.
 
 Available options are:
 
-* |unchecked| :guilabel:`No projection (or unknown/non-Earth projection)`:
+* |unchecked| :guilabel:`No CRS (or unknown/non-Earth projection)`:
   Checking this setting will disable ALL projection handling within the QGIS
   project, causing all layers and map coordinates to be treated as simple 2D
   Cartesian coordinates, with no relation to positions on the Earth's surface.

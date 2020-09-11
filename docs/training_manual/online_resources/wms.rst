@@ -32,7 +32,7 @@ symbology:
    layers visible.
 #. Before starting to add the WMS layer, deactivate "on the fly"
    projection (:menuselection:`Project --> Properties... --> CRS` tab,
-   check :guilabel:`No projection (or unknown/non-Earth projection)`.
+   check :guilabel:`No CRS (or unknown/non-Earth projection)`.
    This may cause the layers to no longer overlap properly, but
    don't worry: we'll fix that later.
 #. To add WMS layers, click on the |dataSourceManager| button to open the
@@ -115,7 +115,7 @@ symbology:
    :guilabel:`OpenStreetMap WMS` layer, which is :guilabel:`WGS 84 / Pseudo Mercator`.
 
    #. Open the :menuselection:`Project --> Properties... --> CRS` tab
-   #. Uncheck :guilabel:`No projection (or unknown/non-Earth projection)`
+   #. Uncheck :guilabel:`No CRS (or unknown/non-Earth projection)`
    #. Choose :guilabel:`WGS 84 / Pseudo Mercator` from the list.
 
       .. figure:: img/enable_projection.png
