@@ -456,11 +456,12 @@ return the next error:
 
 .. code-block:: none
 
-  Indeed, text strings need to be enclosed with quotes (single quotes
-  for strings, double quotes for attributes). A space between each
-  word / special character is mandatory. Allowed Keywords and special
-  characters are 'AND','OR','IN','=','<','>=','>','>=','!=*,'(',')'.
-  Semicolons in string expressions are not allowed.
+  <ServiceExceptionReport>
+    <ServiceException code="Security">The filter string XXXXXXXXX has been rejected because of security reasons.
+    Note: Text strings have to be enclosed in single or double quotes. A space between each word / special character is mandatory.
+    Allowed Keywords and special characters are IS,NOT,NULL,AND,OR,IN,=,<,=<,>,>=,!=,',',(,),DMETAPHONE,SOUNDEX.
+    Not allowed are semicolons in the filter expression.</ServiceException>
+  </ServiceExceptionReport>
 
 
 URL example:
@@ -1388,9 +1389,7 @@ GetFeatureInfo
 --------------
 
 Standard parameters for the **GetFeatureInfo** request according to
-the OGC WMTS 1.0.0 specifications:
-
-- `WMS 1.1.0 <https://portal.opengeospatial.org/files/?artifact_id=1081&version=1&format=pdf>`_
+the OGC WMTS 1.0.0 specification:
 
 .. csv-table::
    :header: "Parameter", "Required", "Description"
@@ -1844,11 +1843,11 @@ URL example:
 
     http://localhost/qgisserver/wfs3/collection_one/items.json?bbox=-180,-90,180,90
 
-If the *CRS* of the bounding box is not WGS84
-(*http://www.opengis.net/def/crs/OGC/1.3/CRS84*), a different CRS can
+If the *CRS* of the bounding box is not
+`WGS 84 <https://www.opengis.net/def/crs/OGC/1.3/CRS84>`_, a different CRS can
 be specified by using the optional parameter ``bbox-crs``.
 The CRS format identifier must be in the
-`OGC URI <http://www.opengis.net/def/crs/>`_ format:
+`OGC URI <https://www.opengis.net/def/crs/>`_ format:
 
 URL example:
 
