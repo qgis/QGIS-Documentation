@@ -190,8 +190,7 @@ To limit snapping to a scale range you have three modes available:
   scale of the map is between a global minimum and a global maximum value.
   When selecting this mode two widgets become available
   to configure the range of scales in which snapping is enabled.
-* :guilabel:`Per layer`: Snapping is enabled on a per layer basis.
-  The snapping scale range is defined for each layer.
+* :guilabel:`Per layer`: The snapping scale range limit is defined for each layer.
   When selecting this mode two columns become available
   to configure the minimum and maximum scales for each layer.
 
