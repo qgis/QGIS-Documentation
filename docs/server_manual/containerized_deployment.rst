@@ -131,8 +131,8 @@ Options used:
 To check, type ``docker ps | grep qgis-server`` and you should see a
 line with **qgis-server**::
 
-  CONTAINER ID     IMAGE           COMMAND                  CREATED          STATUS           PORTS                            NAMES
-  4de8192da76e     qgis-server     "/tini -- /home/qgis…"   3 seconds ago    Up 2 seconds     0.0.0.0:5555->5555/tcp           qgis-server
+  CONTAINER ID   IMAGE         COMMAND                  CREATED         STATUS         PORTS                    NAMES
+  4de8192da76e   qgis-server   "/tini -- /home/qgis…"   3 seconds ago   Up 2 seconds   0.0.0.0:5555->5555/tcp   qgis-server
 
 
 Usable sample
