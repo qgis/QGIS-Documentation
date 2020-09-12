@@ -8,6 +8,7 @@ PyQGIS Developer Cookbook
    :maxdepth: 2
    :numbered:
 
+..
    intro
    loadproject
    loadlayer
