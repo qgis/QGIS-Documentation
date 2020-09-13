@@ -105,23 +105,9 @@ extra parameters:
    "FILE_NAME", "No", "File name of the downloaded file
 
    Only for ``FORMAT=application/dxf``"
-   "FORMAT_OPTIONS", "No", "Only for ``FORMAT=application/dxf``
-   key:value pairs separated by semicolon.
+   ":ref:`FORMAT_OPTIONS <wms-formatoptions>`", "No", "Options of the specified file format
 
-   * SCALE: to be used for symbology rules, filters and styles (not
-     actual scaling of the data - data remains in the original scale).
-   * MODE: corresponds to the export options offered in the QGIS
-     Desktop DXF export dialog. Possible values are ``NOSYMBOLOGY``,
-     ``FEATURESYMBOLOGY`` and ``SYMBOLLAYERSYMBOLOGY``.
-   * LAYERSATTRIBUTES: specify a field that contains values for DXF
-     layer names - if not specified, the original QGIS layer names are used.
-   * USE_TITLE_AS_LAYERNAME: if enabled, the title of the layer will
-     be used as layer name.
-   * CODEC: specify a codec to be used for encoding. Default is ``ISO-8859-1``
-     check the QGIS desktop DXF export dialog for valid values.
-   * NO_MTEXT: Use TEXT instead of MTEXT for labels.
-   * FORCE_2D: Force 2D output. This is required for polyline width.
-   "
+   Only for ``FORMAT=application/dxf``"
    ":ref:`TILED <wms-tiled>`", "No", "Working in *tiled mode*"
 
 URL example:
@@ -565,6 +551,28 @@ and **Romania** they're highlighted in yellow.
 
   Server response to a GetMap request with SELECTION parameter
 
+.. _`wms-formatoptions`:
+
+FORMAT-OPTIONS
+^^^^^^^^^^^^^^
+
+This parameter can be used to specify options for the selected format.
+Only for ``FORMAT=application/dxf``.
+A list of key:value pairs separated by semicolon:
+
+* SCALE: to be used for symbology rules, filters and styles (not
+  actual scaling of the data - data remains in the original scale).
+* MODE: corresponds to the export options offered in the QGIS
+  Desktop DXF export dialog. Possible values are ``NOSYMBOLOGY``,
+  ``FEATURESYMBOLOGY`` and ``SYMBOLLAYERSYMBOLOGY``.
+* LAYERSATTRIBUTES: specify a field that contains values for DXF
+  layer names - if not specified, the original QGIS layer names are used.
+* USE_TITLE_AS_LAYERNAME: if enabled, the title of the layer will
+  be used as layer name.
+* CODEC: specify a codec to be used for encoding. Default is ``ISO-8859-1``
+  check the QGIS desktop DXF export dialog for valid values.
+* NO_MTEXT: Use TEXT instead of MTEXT for labels.
+* FORCE_2D: Force 2D output. This is required for polyline width.
 
 .. _`wms-tiled`:
 
