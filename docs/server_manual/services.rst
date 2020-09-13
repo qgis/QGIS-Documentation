@@ -73,8 +73,8 @@ WMS 1.1.0 and 1.3.0 specifications:
    :widths: auto
 
    ":ref:`SERVICE <wms-service>`", "Yes", "Name of the service (**WMS**)"
-   "REQUEST", "Yes", "Name of the request (**GetMap**)"
    ":ref:`VERSION <wms-version>`", "No", "Version of the service"
+   ":ref:`REQUEST <wms-getmap-request>`", "Yes", "Name of the request (**GetMap**)"
    ":ref:`LAYERS <wms-layers>` ", "No", "Layers to display"
    ":ref:`STYLES <wms-styles>`", "No", "Layers' style"
    ":ref:`SRS / CRS <wms-srs>`", "Yes", "Coordinate reference system"
@@ -601,7 +601,7 @@ the OGC WMS 1.1.0 and 1.3.0 specifications:
 
    ":ref:`SERVICE <wms-service>`", "Yes", "Name of the service (**WMS**)"
    ":ref:`VERSION <wms-version>`", "No", "Version of the service"
-   "REQUEST", "Yes", "Name of the request (GetFeatureInfo)"
+   ":ref:`REQUEST <wms-getfeatureinfo-request>`", "Yes", "Name of the request (**GetFeatureInfo**)"
    ":ref:`LAYERS <wms-layers>`", "No", "Layers to display"
    ":ref:`STYLES <wms-styles>`", "No", "Layers' style"
    ":ref:`SRS / CRS <wms-srs>`", "Yes", "Coordinate reference system"
@@ -658,6 +658,13 @@ URL example:
   &I=250
   &J=250
 
+
+.. _`wms-getfeatureinfo-request`:
+
+REQUEST
+^^^^^^^
+
+This parameter is ``GetFeatureInfo`` in case of the **GetFeatureInfo** request.
 
 .. _`wms-infoformat`:
 
@@ -809,7 +816,7 @@ Parameters for the **GetPrint** request:
    ":ref:`MAP <wms-map>`", "Yes", "Specify the QGIS project file"
    ":ref:`SERVICE <wms-service>`", "Yes", "Name of the service (**WMS**)"
    ":ref:`VERSION <wms-version>`", "No", "Version of the service"
-   "REQUEST", "Yes", "Name of the request (GetPrint)"
+   ":ref:`REQUEST <wms-getprint-request>`", "Yes", "Name of the request (**GetPrint**)"
    ":ref:`LAYERS <wms-layers>`", "No", "Layers to display"
    ":ref:`TEMPLATE <wms-template>`", "Yes", "Layout template to use"
    ":ref:`SRS / CRS <wms-srs>`", "Yes", "Coordinate reference system"
@@ -864,6 +871,7 @@ For example:
     </WMS_Capabilities>
 
 
+.. _`wms-getprint-request`:
 
 REQUEST
 ^^^^^^^
