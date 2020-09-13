@@ -45,9 +45,9 @@ Standard requests provided by QGIS Server:
    :widths: auto
 
    "GetCapabilities", "Returns XML metadata with information about the server"
-   "GetMap", "Returns a map"
-   "GetFeatureInfo", "Retrieves data (geometry and values) for a pixel location"
-   "GetLegendGraphics", "Returns legend symbols"
+   ":ref:`GetMap <qgisserver-wms-getmap>`", "Returns a map"
+   ":ref:`GetFeatureInfo <server_wms_getfeatureinfo>`", "Retrieves data (geometry and values) for a pixel location"
+   ":ref:`GetLegendGraphics <server_wms_getlegendgraphics>`", "Returns legend symbols"
 
 
 Vendor requests provided by QGIS Server:
@@ -56,8 +56,8 @@ Vendor requests provided by QGIS Server:
    :header: "Request", "Description"
    :widths: auto
 
-   "GetPrint", "Returns a QGIS composition"
-   "GetProjectSettings", "Returns specific information about QGIS Server"
+   ":ref:`GetPrint <server_wms_getprint>`", "Returns a QGIS composition"
+   ":ref:`GetProjectSettings <server_wms_getprojectsettings>`", "Returns specific information about QGIS Server"
 
 
 .. _`qgisserver-wms-getmap`:
@@ -768,7 +768,7 @@ Available values are (not case sensitive):
 - ``FALSE``
 
 
-.. _server_getprint:
+.. _server_wms_getprint:
 
 GetPrint
 --------
@@ -946,6 +946,8 @@ See :ref:`GetMap <wms-getmap-styles>` for more information on
 this parameter.
 
 
+.. _server_wms_getlegendgraphics:
+
 GetLegendGraphics
 -----------------
 
@@ -1001,7 +1003,10 @@ implementation:
     :align: center
 
 * **RULE** set it to a given rule name to get only the named rule symbol
-	    
+
+
+.. _server_wms_getprojectsettings:
+
 GetProjectSettings
 ------------------
 
