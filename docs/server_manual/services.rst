@@ -72,7 +72,7 @@ WMS 1.1.0 and 1.3.0 specifications:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   "SERVICE", "Yes", "Name of the service (**WMS**)"
+   ":ref:`SERVICE <wms-service>`", "Yes", "Name of the service (**WMS**)"
    "REQUEST", "Yes", "Name of the request (**GetMap**)"
    ":ref:`VERSION <wms-version>`", "No", "Version of the service"
    ":ref:`LAYERS <wms-layers>` ", "No", "Layers to display"
@@ -145,12 +145,20 @@ URL example:
   &TILED=TRUE
 
 
-.. _`wms-getmap-service`:
+.. _`wms-service`:
 
 SERVICE
 ^^^^^^^
 
-This parameter has to be ``WMS`` in case of the **GetMap** request.
+This parameter has to be ``WMS``.
+
+For example:
+
+.. code-block:: none
+
+  http://localhost/qgisserver?
+  SERVICE=WMS
+  &...
 
 
 .. _`wms-version`:
@@ -591,7 +599,7 @@ the OGC WMS 1.1.0 and 1.3.0 specifications:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   "SERVICE", "Yes", "Name of the service (WMS)"
+   ":ref:`SERVICE <wms-service>`", "Yes", "Name of the service (**WMS**)"
    ":ref:`VERSION <wms-version>`", "No", "Version of the service"
    "REQUEST", "Yes", "Name of the request (GetFeatureInfo)"
    ":ref:`LAYERS <wms-layers>`", "No", "Layers to display"
@@ -798,8 +806,8 @@ Parameters for the **GetPrint** request:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   "SERVICE", "Yes", "Name of the service (WMS)"
    ":ref:`MAP <wms-map>`", "Yes", "Specify the QGIS project file"
+   ":ref:`SERVICE <wms-service>`", "Yes", "Name of the service (**WMS**)"
    ":ref:`VERSION <wms-version>`", "No", "Version of the service"
    "REQUEST", "Yes", "Name of the request (GetPrint)"
    ":ref:`LAYERS <wms-layers>`", "No", "Layers to display"
@@ -855,11 +863,6 @@ For example:
     ...
     </WMS_Capabilities>
 
-
-SERVICE
-^^^^^^^
-
-This parameter has to be ``WMS``.
 
 
 REQUEST
