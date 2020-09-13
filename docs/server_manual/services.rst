@@ -73,16 +73,16 @@ WMS 1.1.0 and 1.3.0 specifications:
    :widths: auto
 
    "SERVICE", "Yes", "Name of the service (**WMS**)"
-   "VERSION", "No", ":ref:`Version <wms-getmap-service>` of the service"
    "REQUEST", "Yes", "Name of the request (**GetMap**)"
-   "LAYERS", "No", ":ref:`Layers <wms-getmap-layers>` to display"
-   "STYLES", "No", "Layers' :ref:`style <wms-getmap-styles>`"
-   "SRS / CRS", "Yes", "Coordinate reference system (:ref:`details <wms-getmap-srs>`)"
-   "BBOX", "No", "Map :ref:`extent <wms-getmap-bbox>`"
-   "WIDTH", "Yes", ":ref:`Width <wms-getmap-width>` of the image in pixels"
-   "HEIGHT", "Yes", ":ref:`Height <wms-getmap-height>` of the image in pixels"
-   "FORMAT", "No", "Image :ref:`format <wms-getmap-format>`"
-   "TRANSPARENT", "No", ":ref:`Transparent <wms-getmap-transparent>` background"
+   ":ref:`VERSION <wms-version>`", "No", "Version of the service"
+   ":ref:`LAYERS <wms-layers>` ", "No", "Layers to display"
+   ":ref:`STYLES <wms-styles>`", "No", "Layers' style"
+   ":ref:`SRS / CRS <wms-srs>`", "Yes", "Coordinate reference system"
+   ":ref:`BBOX <wms-bbox>`", "No", "Map extent"
+   ":ref:`WIDTH <wms-width>`", "Yes", "Width of the image in pixels"
+   ":ref:`HEIGHT <wms-height>`", "Yes", "Height of the image in pixels"
+   ":ref:`FORMAT <wms-getmap-format>`", "No", "Image format"
+   ":ref:`TRANSPARENT <wms-transparent>`", "No", "Transparent background"
    "SLD", "No", "URL of an SLD to be used for styling"
    "SLD_BODY", "No", "In-line SLD (XML) to be used for styling"
 
@@ -95,16 +95,16 @@ extra parameters:
    :header: "Parameter", "Required", "Description"
    :widths: 20, 10, 65
 
-   "MAP", "Yes", "Specify the QGIS project file"
-   "BGCOLOR", "No", "Specify the background color"
-   "DPI", "No", "Specify the output resolution"
-   "IMAGE_QUALITY", "No", "JPEG compression"
-   "OPACITIES", "No", "Opacity for layer or group"
-   "FILTER", "No", "Subset of features"
-   "SELECTION", "No", "Highlight features"
-   "FILE_NAME", "No", "Only for ``FORMAT=application/dxf``
+   ":ref:`MAP <wms-map>`", "Yes", "Specify the QGIS project file"
+   ":ref:`BGCOLOR <wms-bgcolor>`", "No", "Specify the background color"
+   ":ref:`DPI <wms-dpi>`", "No", "Specify the output resolution"
+   ":ref:`IMAGE_QUALITY <wms-imagequality>`", "No", "JPEG compression"
+   ":ref:`OPACITIES <wms-opacities>`", "No", "Opacity for layer or group"
+   ":ref:`FILTER <wms-filter>`", "No", "Subset of features"
+   ":ref:`SELECTION <wms-selection>`", "No", "Highlight features"
+   "FILE_NAME", "No", "File name of the downloaded file
 
-   File name of the downloaded file"
+   Only for ``FORMAT=application/dxf``"
    "FORMAT_OPTIONS", "No", "Only for ``FORMAT=application/dxf``
    key:value pairs separated by semicolon.
 
@@ -122,7 +122,7 @@ extra parameters:
    * NO_MTEXT: Use TEXT instead of MTEXT for labels.
    * FORCE_2D: Force 2D output. This is required for polyline width.
    "
-   "TILED", "No", "Working in *tiled mode*"
+   ":ref:`TILED <wms-tiled>`", "No", "Working in *tiled mode*"
 
 URL example:
 
@@ -153,7 +153,7 @@ SERVICE
 This parameter has to be ``WMS`` in case of the **GetMap** request.
 
 
-.. _`wms-getmap-version`:
+.. _`wms-version`:
 
 VERSION
 ^^^^^^^
@@ -182,7 +182,7 @@ REQUEST
 This parameter is ``GetMap`` in case of the **GetMap** request.
 
 
-.. _`wms-getmap-layers`:
+.. _`wms-layers`:
 
 LAYERS
 ^^^^^^
@@ -223,7 +223,7 @@ To activate this option, the checkbox
   &...
 
 
-.. _`wms-getmap-styles`:
+.. _`wms-styles`:
 
 STYLES
 ^^^^^^
@@ -234,7 +234,7 @@ Styles have to be separated by a comma. The name of the default style
 is ``default``.
 
 
-.. _`wms-getmap-srs`:
+.. _`wms-srs`:
 
 SRS / CRS
 ^^^^^^^^^
@@ -289,7 +289,7 @@ because of the ``VERSION`` parameter:
   &...
 
 
-.. _`wms-getmap-bbox`:
+.. _`wms-bbox`:
 
 BBOX
 ^^^^
@@ -330,7 +330,7 @@ For example:
   &...
 
 
-.. _`wms-getmap-width`:
+.. _`wms-width`:
 
 WIDTH
 ^^^^^
@@ -339,7 +339,7 @@ This parameter allows to specify the width in pixels of the output
 image.
 
 
-.. _`wms-getmap-height`:
+.. _`wms-height`:
 
 HEIGHT
 ^^^^^^
@@ -382,7 +382,7 @@ Available values are:
    &HEIGHT=811
    &FORMAT_OPTIONS=MODE:SYMBOLLAYERSYMBOLOGY;SCALE:250&FILE_NAME=plan.dxf
 
-.. _`wms-getmap-transparent`:
+.. _`wms-transparent`:
 
 TRANSPARENT
 ^^^^^^^^^^^
@@ -398,7 +398,7 @@ However, this parameter is ignored if the format of the map image
 indicated with ``FORMAT`` is different from PNG.
 
 
-.. _`wms-getmap-map`:
+.. _`wms-map`:
 
 MAP
 ^^^
@@ -414,7 +414,7 @@ In this specific case, ``MAP`` is not longer a required parameter.
 For further information you may refer to :ref:`server_env_variables`.
 
 
-.. _`wms-getmap-bgcolor`:
+.. _`wms-bgcolor`:
 
 BGCOLOR
 ^^^^^^^
@@ -447,7 +447,7 @@ URL example with the hexadecimal notation:
   &...
 
 
-.. _`wms-getmap-dpi`:
+.. _`wms-dpi`:
 
 DPI
 ^^^
@@ -455,7 +455,7 @@ DPI
 This parameter can be used to specify the requested output resolution.
 
 
-.. _`wms-getmap-imagequality`:
+.. _`wms-imagequality`:
 
 IMAGE_QUALITY
 ^^^^^^^^^^^^^
@@ -470,7 +470,7 @@ If you want to override it in a ``GetMap`` request you can do it using
 the ``IMAGE_QUALITY`` parameter.
 
 
-.. _`wms-getmap-opacities`:
+.. _`wms-opacities`:
 
 OPACITIES
 ^^^^^^^^^
@@ -479,7 +479,7 @@ Opacity can be set on layer or group level. Allowed values range from
 0 (fully transparent) to 255 (fully opaque).
 
 
-.. _`wms-getmap-filter`:
+.. _`wms-filter`:
 
 FILTER
 ^^^^^^
@@ -524,7 +524,7 @@ the filter on ``col1`` is only applied to ``mylayer1``.
   the XML output.
 
 
-.. _`wms-getmap-selection`:
+.. _`wms-selection`:
 
 SELECTION
 ^^^^^^^^^
@@ -557,9 +557,8 @@ and **Romania** they're highlighted in yellow.
 
   Server response to a GetMap request with SELECTION parameter
 
-.. _server_wms_tiled:
 
-.. _`wms-getmap-tiled`:
+.. _`wms-tiled`:
 
 TILED
 ^^^^^
@@ -593,24 +592,24 @@ the OGC WMS 1.1.0 and 1.3.0 specifications:
    :widths: auto
 
    "SERVICE", "Yes", "Name of the service (WMS)"
-   "VERSION", "No", "Version of the service (:ref:`details <wms-getmap-version>`)"
+   ":ref:`VERSION <wms-version>`", "No", "Version of the service"
    "REQUEST", "Yes", "Name of the request (GetFeatureInfo)"
-   "LAYERS", "No", "Layers to display (:ref:`details <wms-getmap-layers>`)"
-   "STYLES", "No", "Layers' style (:ref:`details <wms-getmap-styles>`)"
-   "SRS / CRS", "Yes", "Coordinate reference system (:ref:`details <wms-getmap-srs>`)"
-   "BBOX", "No", "Map extent (:ref:`details <wms-getmap-bbox>`)"
-   "WIDTH", "Yes", "Width of the image in pixels (:ref:`details <wms-getmap-width>`)"
-   "HEIGHT", "Yes", "Height of the image in pixels (:ref:`details <wms-getmap-height>`)"
-   "TRANSPARENT", "No", "Transparent background (:ref:`details <wms-getmap-transparent>`)"
-   "INFO_FORMAT", "No", "Output format"
-   "QUERY_LAYERS", "Yes", "Layers to query"
-   "FEATURE_COUNT", "No", "Maximum number of features to return"
-   "I", "No", "Pixel column of the point to query"
-   "X", "No", "Same as `I` parameter, but in WMS 1.1.0"
-   "J", "No", "Pixel row of the point to query"
-   "Y", "No", "Same as `J` parameter, but in WMS 1.1.0"
+   ":ref:`LAYERS <wms-layers>`", "No", "Layers to display"
+   ":ref:`STYLES <wms-styles>`", "No", "Layers' style"
+   ":ref:`SRS / CRS <wms-srs>`", "Yes", "Coordinate reference system"
+   ":ref:`BBOX <wms-bbox>`", "No", "Map extent"
+   ":ref:`WIDTH <wms-width>`", "Yes", "Width of the image in pixels"
+   ":ref:`HEIGHT <wms-height>`", "Yes", "Height of the image in pixels"
+   ":ref:`TRANSPARENT <wms-transparent>`", "No", "Transparent background"
+   ":ref:`INFO_FORMAT <wms-infoformat>`", "No", "Output format"
+   ":ref:`QUERY_LAYERS <wms-querylayers>`", "Yes", "Layers to query"
+   ":ref:`FEATURE_COUNT <wms-featurecount>`", "No", "Maximum number of features to return"
+   ":ref:`I <wms-i>`", "No", "Pixel column of the point to query"
+   ":ref:`X <wms-x>`", "No", "Same as `I` parameter, but in WMS 1.1.0"
+   ":ref:`J <wms-j>`", "No", "Pixel row of the point to query"
+   ":ref:`Y <wms-y>`", "No", "Same as `J` parameter, but in WMS 1.1.0"
    "WMS_PRECISION", "No", "The precision (number of digits) to be used
-   when returning geometry (see :ref:`how to add geometry to feature response<addGeometryToFeatureResponse>`).
+   when returning geometry (see :ref:`how to add geometry to feature response <addGeometryToFeatureResponse>`).
    The default value is ``-1`` meaning that the precision defined in the project is used."
 
 In addition to the standard ones, QGIS Server supports the following
@@ -621,14 +620,14 @@ extra parameters:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   "MAP", "Yes", "Specify the QGIS project file (:ref:`details <wms-getmap-map>`)"
-   "FILTER", "No", "Subset of features (:ref:`details <wms-getmap-filter>`)"
-   "FI_POINT_TOLERANCE", "No", "Tolerance in pixels for point layers"
-   "FI_LINE_TOLERANCE", "No", "Tolerance in pixels for line layers"
-   "FI_POLYGON_TOLERANCE", "No", "Tolerance in pixels for polygon layers"
-   "FILTER_GEOM", "No", "Geometry filtering"
-   "WITH_MAPTIP", "No", "Add map tips to the output"
-   "WITH_GEOMETRY", "No", "Add geometry to the output"
+   ":ref:`MAP <wms-map>`", "Yes", "Specify the QGIS project file"
+   ":ref:`FILTER <wms-filter>`", "No", "Subset of features"
+   ":ref:`FI_POINT_TOLERANCE <wms-fipointtolerance>`", "No", "Tolerance in pixels for point layers"
+   ":ref:`FI_LINE_TOLERANCE <wms-filinetolerance>`", "No", "Tolerance in pixels for line layers"
+   ":ref:`FI_POLYGON_TOLERANCE <wms-fipolygontolerance>`", "No", "Tolerance in pixels for polygon layers"
+   ":ref:`FILTER_GEOM <wms-filtergeom>`", "No", "Geometry filtering"
+   ":ref:`WITH_MAPTIP <wms-withmaptip>`", "No", "Add map tips to the output"
+   ":ref:`WITH_GEOMETRY <wms-withgeometry>`", "No", "Add geometry to the output"
 
 
 URL example:
@@ -652,6 +651,8 @@ URL example:
   &J=250
 
 
+.. _`wms-infoformat`:
+
 INFO_FORMAT
 ^^^^^^^^^^^
 
@@ -664,6 +665,7 @@ Available values are:
 - ``application/vnd.ogc.gml``
 - ``application/json``
 
+.. _`wms-querylayers`:
 
 QUERY_LAYERS
 ^^^^^^^^^^^^
@@ -677,8 +679,9 @@ In addition, QGIS Server introduces options to select layers by:
 * layer id
 
 See the ``LAYERS`` parameter defined in
-:ref:`GetMap <wms-getmap-layers>` for more information.
+:ref:`GetMap <wms-layers>` for more information.
 
+.. _`wms-featurecount`:
 
 FEATURE_COUNT
 ^^^^^^^^^^^^^
@@ -692,6 +695,7 @@ Likewise a maximun of 3 features from layer2 will be returned.
 
 By default, only 1 feature per layer is returned.
 
+.. _`wms-i`:
 
 I
 ^
@@ -699,12 +703,14 @@ I
 This parameter, defined in WMS 1.3.0, allows you to specify the pixel
 column of the query point.
 
+.. _`wms-x`:
 
 X
 ^
 
 Same parameter as ``I``, but defined in WMS 1.1.0.
 
+.. _`wms-j`:
 
 J
 ^
@@ -712,30 +718,35 @@ J
 This parameter, defined in WMS 1.3.0, allows you to specify the pixel
 row of the query point.
 
+.. _`wms-y`:
 
 Y
 ^
 
 Same parameter as ``J``, but defined in WMS 1.1.0.
 
+.. _`wms-fipointtolerance`:
 
 FI_POINT_TOLERANCE
 ^^^^^^^^^^^^^^^^^^
 
 This parameter specifies the tolerance in pixels for point layers.
 
+.. _`wms-filinetolerance`:
 
 FI_LINE_TOLERANCE
 ^^^^^^^^^^^^^^^^^
 
 This parameter specifies the tolerance in pixels for line layers.
 
+.. _`wms-fipolygontolerance`:
 
 FI_POLYGON_TOLERANCE
 ^^^^^^^^^^^^^^^^^^^^
 
 This parameter specifies the tolerance in pixels for polygon layers.
 
+.. _`wms-filtergeom`:
 
 FILTER_GEOM
 ^^^^^^^^^^^
@@ -743,6 +754,7 @@ FILTER_GEOM
 This parameter specifies a WKT geometry with which features have to
 intersect.
 
+.. _`wms-withmaptip`:
 
 WITH_MAPTIP
 ^^^^^^^^^^^
@@ -754,6 +766,7 @@ Available values are (not case sensitive):
 - ``TRUE``
 - ``FALSE``
 
+.. _`wms-withgeometry`:
 
 WITH_GEOMETRY
 ^^^^^^^^^^^^^
@@ -785,26 +798,26 @@ Parameters for the **GetPrint** request:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   "MAP", "Yes", "Specify the QGIS project file (:ref:`details <wms-getmap-map>`)"
    "SERVICE", "Yes", "Name of the service (WMS)"
-   "VERSION", "No", "Version of the service (:ref:`details <wms-getmap-version>`)"
+   ":ref:`MAP <wms-map>`", "Yes", "Specify the QGIS project file"
+   ":ref:`VERSION <wms-version>`", "No", "Version of the service"
    "REQUEST", "Yes", "Name of the request (GetPrint)"
-   "LAYERS", "No", "Layers to display (:ref:`details <wms-getmap-layers>`)"
-   "TEMPLATE", "Yes", "Layout template to use"
-   "SRS / CRS", "Yes", "Coordinate reference system (:ref:`details <wms-getmap-srs>`)"
-   "FORMAT", "Yes", "Output format"
-   "ATLAS_PK", "No", "Atlas features"
-   "STYLES", "No", "Layers' style (:ref:`details <wms-getmap-styles>`)"
-   "TRANSPARENT", "No", "Transparent background (:ref:`details <wms-getmap-transparent>`)"
-   "OPACITIES", "No", "Opacity for layer or group (:ref:`details <wms-getmap-opacities>`)"
-   "SELECTION", "No", "Highlight features (:ref:`details <wms-getmap-selection>`)"
-   "mapX:EXTENT", "No", "Extent of the map 'X'"
-   "mapX:LAYERS", "No", "Layers of the map 'X'"
-   "mapX:STYLES", "No", "Layers' style of the map 'X'"
-   "mapX:SCALE", "No", "Layers' scale of the map 'X'"
-   "mapX:ROTATION", "No", "Rotation  of the map 'X'"
-   "mapX:GRID_INTERVAL_X", "No", "Grid interval on x axis of the map 'X'"
-   "mapX:GRID_INTERVAL_Y", "No", "Grid interval on y axis of the map 'X'"
+   ":ref:`LAYERS <wms-layers>`", "No", "Layers to display"
+   ":ref:`TEMPLATE <wms-template>`", "Yes", "Layout template to use"
+   ":ref:`SRS / CRS <wms-srs>`", "Yes", "Coordinate reference system"
+   ":ref:`FORMAT <wms-getprint-format>`", "Yes", "Output format"
+   ":ref:`ATLAS_PK <wms-atlaspk>`", "No", "Atlas features"
+   ":ref:`STYLES <wms-styles>`", "No", "Layers' style"
+   ":ref:`TRANSPARENT <wms-transparent>`", "No", "Transparent background"
+   ":ref:`OPACITIES <wms-opacities>`", "No", "Opacity for layer or group"
+   ":ref:`SELECTION <wms-selection>`", "No", "Highlight features"
+   ":ref:`mapX:EXTENT <wms-mapextent>`", "No", "Extent of the map 'X'"
+   ":ref:`mapX:LAYERS <wms-maplayers>`", "No", "Layers of the map 'X'"
+   ":ref:`mapX:STYLES <wms-mapstyles>`", "No", "Layers' style of the map 'X'"
+   ":ref:`mapX:SCALE <wms-mapscale>`", "No", "Layers' scale of the map 'X'"
+   ":ref:`mapX:ROTATION <wms-maprotation>`", "No", "Rotation  of the map 'X'"
+   ":ref:`mapX:GRID_INTERVAL_X <wms-mapgridintervalx>`", "No", "Grid interval on x axis of the map 'X'"
+   ":ref:`mapX:GRID_INTERVAL_Y <wms-mapgridintervaly>`", "No", "Grid interval on y axis of the map 'X'"
 
 
 URL example:
@@ -854,6 +867,7 @@ REQUEST
 
 This parameter has to be ``GetPrint`` for the **GetPrint** request.
 
+.. _`wms-template`:
 
 TEMPLATE
 ^^^^^^^^
@@ -861,6 +875,7 @@ TEMPLATE
 This parameter can be used to specify the name of a layout template
 to use for printing.
 
+.. _`wms-getprint-format`:
 
 FORMAT
 ^^^^^^
@@ -881,6 +896,7 @@ This parameter specifies the format of map image. Available values are:
 If the ``FORMAT`` parameter is different from one of these values,
 then an exception is returned.
 
+.. _`wms-atlaspk`:
 
 ATLAS_PK
 ^^^^^^^^
@@ -895,30 +911,36 @@ When ``FORMAT`` is ``pdf``, a single PDF document combining the feature
 pages is returned.
 For all other formats, a single page is returned.
 
+.. _`wms-mapextent`:
+
 mapX:EXTENT
 ^^^^^^^^^^^
 
 This parameter specifies the extent for a layout map item as
 xmin,ymin,xmax,ymax.
 
+.. _`wms-maprotation`:
 
 mapX:ROTATION
 ^^^^^^^^^^^^^
 
 This parameter specifies the map rotation in degrees.
 
+.. _`wms-mapgridintervalx`:
 
 mapX:GRID_INTERVAL_X
 ^^^^^^^^^^^^^^^^^^^^
 
 This parameter specifies the grid line density in the X direction.
 
+.. _`wms-mapgridintervaly`:
 
 mapX:GRID_INTERVAL_Y
 ^^^^^^^^^^^^^^^^^^^^
 
 This parameter specifies the grid line density in the Y direction.
 
+.. _`wms-mapscale`:
 
 mapX:SCALE
 ^^^^^^^^^^
@@ -928,21 +950,23 @@ This is useful to ensure scale based visibility of layers and
 labels even if client and server may have different algorithms to
 calculate the scale denominator.
 
+.. _`wms-maplayers`:
 
 mapX:LAYERS
 ^^^^^^^^^^^
 
 This parameter specifies the layers for a layout map item. See
-:ref:`GetMap <wms-getmap-layers>` for more information on
+:ref:`GetMap Layers <wms-layers>` for more information on
 this parameter.
 
+.. _`wms-mapstyles`:
 
 mapX:STYLES
 ^^^^^^^^^^^
 
 This parameter specifies the layers' styles defined in a specific
 layout map item.
-See :ref:`GetMap <wms-getmap-styles>` for more information on
+See :ref:`GetMap Styles <wms-styles>` for more information on
 this parameter.
 
 
