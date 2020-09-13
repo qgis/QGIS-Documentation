@@ -309,8 +309,7 @@ For example:
   &...
 
 But the axis is reversed in WMS **1.3.0**, so coordinates are formed
-like:
-``miny,minx,maxy,maxx`` or ``minlat,minlong,maxlat,maxlong``.
+like ``miny,minx,maxy,maxx`` or ``minlat,minlong,maxlat,maxlong``.
 For example:
 
 .. code-block:: none

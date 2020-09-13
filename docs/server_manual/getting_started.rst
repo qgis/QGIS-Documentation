@@ -818,7 +818,7 @@ in the range 0 to 100. Specify 0 for maximum compression, 100 for no compression
 You can change the limit for atlas features to be printed in one request by setting the
 :guilabel:`Maximum features for Atlas print requests` field.
 
-When QGIS Server is used in tiled mode (see :ref:`TILED parameter<server_wms_tiled>`), you can set the
+When QGIS Server is used in tiled mode (see :ref:`TILED parameter <wms-tiled>`), you can set the
 :guilabel:`Tile buffer in pixels`. The recommended value is the size of the largest
 symbol or line width in your QGIS project.
 
