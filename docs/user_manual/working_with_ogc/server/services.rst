@@ -29,13 +29,14 @@ Web Map Service (WMS)
 The **1.1.0** and **1.3.0** WMS standards implemented in QGIS Server provide
 a HTTP interface to request map or legend images generated from a QGIS project.
 A typical WMS request defines the QGIS project to use, the layers to render as
-well as the image format to generate. Basic support is also available for the
-**Styled Layer Descriptor (SLD)** standard.
+well as the image format to generate. Basic support is also available for
+**Styled Layer Descriptor (SLD)**.
 
-Specifications document according to the version number of the service:
+Specifications:
 
 - `WMS 1.1.0 <https://portal.opengeospatial.org/files/?artifact_id=1081&version=1&format=pdf>`_
-- `WMS 1.3.0 <https://portal.opengeospatial.org/files/?artifact_id=14416>`_
+- `WMS 1.3.0 <https://portal.opengeospatial.org/files/?artifact_id=14416&format=pdf>`_
+- `SLD 1.1.0 WMS profile <http://portal.opengeospatial.org/files/?artifact_id=22364&format=pdf>`_
 
 Standard requests provided by QGIS Server:
 
@@ -82,7 +83,8 @@ WMS 1.1.0 and 1.3.0 specifications:
    "HEIGHT", "Yes", "Height of the image in pixels"
    "FORMAT", "No", "Image format"
    "TRANSPARENT", "No", "Transparent background"
-
+   "SLD", "No", "URL of an SLD to be used for styling"
+   "SLD_BODY", "No", "In-line SLD (XML) to be used for styling"
 
 In addition to the standard ones, QGIS Server supports the following
 extra parameters:
