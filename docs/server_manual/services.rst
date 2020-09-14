@@ -120,7 +120,8 @@ extra parameters:
    * FORCE_2D: Force 2D output. This is required for polyline width.
    "
    "TILED", "No", "Working in *tiled mode*"
-
+   "SLD", "No", "SLD file URL to be used for styling"
+   "SLD_BODY", "No", "SLD XML content to be used for styling"
 
 URL example:
 
@@ -570,6 +571,9 @@ the OGC WMS 1.1.0 and 1.3.0 specifications:
    "X", "No", "Same as `I` parameter, but in WMS 1.1.0"
    "J", "No", "Pixel row of the point to query"
    "Y", "No", "Same as `J` parameter, but in WMS 1.1.0"
+   "WMS_PRECISION", "No", "The precision (number of digits) to be used
+   when returning geometry (see :ref:`how to add geometry to feature response<addGeometryToFeatureResponse>`).
+   The default value is ``-1`` meaning that the precision defined in the project is used."
 
 
 In addition to the standard ones, QGIS Server supports the following
@@ -959,6 +963,8 @@ implementation:
   .. figure:: img/getfeaturecount_legend.png
     :align: center
 
+* **RULE** set it to a given rule name to get only the named rule symbol
+	    
 GetProjectSettings
 ------------------
 
@@ -2080,6 +2086,9 @@ You can see there are several parameters in this request:
 
 * **HIGHLIGHT_LABELSIZE**: This parameter controls the size of the
   label.
+
+* **HIGHLIGHT_LABELFONT**: This parameter controls the font of the
+  label (e.g. Arial)
 
 * **HIGHLIGHT_LABELCOLOR**: This parameter controls the label color.
 
