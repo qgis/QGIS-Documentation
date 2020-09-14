@@ -563,7 +563,7 @@ the OGC WMS 1.1.0 and 1.3.0 specifications:
    "Y", "No", "Same as `J` parameter, but in WMS 1.1.0"
    "WMS_PRECISION", "No", "The precision (number of digits) to be used
    when returning geometry (see :ref:`how to add geometry to feature response<addGeometryToFeatureResponse>`).
-   The default value is ``-1`` meaning that precision defined in the project is used."
+   The default value is ``-1`` meaning that the precision defined in the project is used."
 
 
 In addition to the standard ones, QGIS Server supports the following
