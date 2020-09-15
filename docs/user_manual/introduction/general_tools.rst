@@ -956,14 +956,11 @@ annotations to the map canvas.
        grid mark it refers to
      * :guilabel:`Boundary direction`, ie each label follows the canvas
        boundary, and is perpendicular to the grid mark it refers to
-   * The :guilabel:`Annotation font` using the OS :ref:`font selector widget
-     <font_selector>`
+   * The :guilabel:`Annotation font` (text formatting, buffer, shadow...) using
+     the :ref:`font selector widget <font_selector>`
    * The :guilabel:`Distance to map frame`, margin between annotations and map
-     canvas limits. Convenient when exporting the map canvas eg to an image
-     format or PDF, and avoid annotations to be on the "paper" limits.
-
-     .. Todo: Add a reference link to export map canvas to image or pdf section when done
-
+     canvas limits. Convenient when :ref:`exporting the map canvas <exportingmapcanvas>`
+     eg to an image format or PDF, and avoid annotations to be on the "paper" limits.
    * The :guilabel:`Coordinate precision`
 
 #. Click :guilabel:`Apply` to verify that it looks as expected or :guilabel:`OK`
@@ -2200,7 +2197,8 @@ Font Selector
 
 The :guilabel:`Font` selector widget is a convenient shortcut when you want to
 set font properties for textual information (feature labels, decoration labels,
-map legend text, ...). Clicking the drop-down arrow shows the following options:
+map legend text, ...). Clicking the drop-down arrow shows some or all of the
+following options:
 
 .. _figure_fontselector_widget:
 
@@ -2217,7 +2215,8 @@ map legend text, ...). Clicking the drop-down arrow shows the following options:
   with advanced formatting options (opacity, orientation, buffer, background,
   shadow, ...) as described in section :ref:`text_format`.
 * :guilabel:`Copy Format` of the text
-* and :guilabel:`Paste Format` to the text, speeding configuration.
+* :guilabel:`Paste Format` to the text, speeding configuration
+* the :ref:`color widget <color_widget>` for quick color setting
 
 
 .. index:: Unit selection; Map scale
