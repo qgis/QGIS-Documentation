@@ -950,7 +950,7 @@ area:
 * **BBOX** the geographical area for which the legend should be built
 * **CRS / SRS** the coordinate reference system adopted to define the
   BBOX coordinates
-* **WIDTH / HEIGHT** if set these should match those defined for the
+* **SRCWIDTH / SRCHEIGHT** if set these should match those defined for the
   GetMap request, to let QGIS Server scale symbols according to the
   map view image size.
 
@@ -965,6 +965,7 @@ implementation:
     :align: center
 
 * **RULE** set it to a given rule name to get only the named rule symbol
+* **WIDTH/HEIGHT** the generated legend image size if the **RULE** parameter is set
 	    
 GetProjectSettings
 ------------------
