@@ -468,7 +468,7 @@ the ``IMAGE_QUALITY`` parameter.
 OPACITIES
 ^^^^^^^^^
 
-List of pacity values.
+Comma separated list of opacity values.
 Opacity can be set on layer or group level. Allowed values range from
 0 (fully transparent) to 255 (fully opaque).
 
