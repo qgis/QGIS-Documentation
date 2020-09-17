@@ -34,8 +34,8 @@ virtual environment:
 WMS 1.3.0 test suite
 ====================
 
-To run the WMS 1.3.0 test suite with success, test data is necessary and may
-be downloaded using **pyogctest**:
+To run the WMS 1.3.0 test suite with success, a test dataset is needed.
+It can be downloaded using **pyogctest**:
 
 .. code-block:: bash
 
