@@ -1501,7 +1501,9 @@ be selected on the map canvas too):
   features in the current layer
 * |invertSelection| :sup:`Invert Feature Selection` to invert the selection in
   the current layer
-
+* |algorithmSelectLocation| :sup:`Select by Location` to select the features
+  based on their spatial relationship with other features (in the same or
+  another layer - see :ref:`qgisselectbylocation`)
 
 For example, if you want to find regions that are boroughs from
 :file:`regions.shp` of the QGIS sample data, you can:
@@ -2473,6 +2475,8 @@ The values presented in the varying size assistant above will set the size
 .. |addImage| image:: /static/common/mActionAddImage.png
    :width: 1.5em
 .. |addMap| image:: /static/common/mActionAddMap.png
+   :width: 1.5em
+.. |algorithmSelectLocation| image:: /static/common/mAlgorithmSelectLocation.png
    :width: 1.5em
 .. |allEdits| image:: /static/common/mActionAllEdits.png
    :width: 1.5em
