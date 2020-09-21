@@ -28,33 +28,37 @@ msgstr "Creando capas"
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:13
 msgid "Layers can be created in many ways, including:"
-msgstr ""
+msgstr "Las capas pueden ser creadas de muchas formas, incluyendo:"
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:15
 msgid "empty layers from scratch"
-msgstr ""
+msgstr "capas vacías desde cero"
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:16
 msgid "layers from existing layers"
-msgstr ""
+msgstr "capas desde capas existentes"
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:17
 msgid "layers from the clipboard"
-msgstr ""
+msgstr "capas desde el portapapeles"
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:18
 msgid ""
 "layers as a result of an SQL-like query based on one or many layers "
 "(:ref:`virtual layers <vector_virtual_layers>`)"
 msgstr ""
+"capas como resultado de una consultas SQL basada en una o mas capas "
+"(:ref:`virtual layers <vector_virtual_layers>`)"
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:21
 msgid "QGIS also provides tools to import/export from/to different formats."
 msgstr ""
+"QGIS también proporciona herramientas para importar/exportar desde/a "
+"diferentes formatos."
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:29
 msgid "Creating new vector layers"
-msgstr ""
+msgstr "Creando nuevas capas vectoriales"
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:31
 msgid ""
@@ -63,10 +67,15 @@ msgid ""
 "Scratch layers (aka memory layers). Creation of a :ref:`new GRASS layer "
 "<creating_new_grass_vectors>` is supported within the GRASS plugin."
 msgstr ""
+"QGIS le permite crear nuevas capas en diferentes formatos. Proporciona "
+"herramientas para crear GeoPackage, Shapefile, SpatiaLite, formato GPX y "
+"capas temporales de Scratch (también conocidas como capas de memoria). La "
+"creación de una :ref: `nueva capa GRASS<creating_new_grass_vectors>` es "
+"compatible con el complemento GRASS."
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:42
 msgid "Creating a new GeoPackage layer"
-msgstr ""
+msgstr "Creando una nueva capa de GeoPackage"
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:44
 msgid ""
@@ -76,10 +85,16 @@ msgid ""
 "toolbar. The :guilabel:`New GeoPackage Layer` dialog will be displayed as "
 "shown in figure_create_geopackage_."
 msgstr ""
+"Para crear una nueva capa de GeoPackage, presione el botón "
+"|newGeoPackageLayer| :menuselection:`Nueva Capa GeoPackage...` en el menú "
+":menuselection:`Capa -> Crear capa ->` o desde la barra de herramientas "
+":guilabel:`Administrador de Fuente de Datos`. Se mostrará el diálogo "
+":guilabel:`Nueva Capa Geopaquete` como se muestra en "
+"figure_create_geopackage_."
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:56
 msgid "Creating a New GeoPackage layer dialog"
-msgstr ""
+msgstr "Crear un nuevo diálogo de capa GeoPackage"
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:58
 msgid ""
@@ -89,10 +104,15 @@ msgid ""
 "a new one. QGIS will automatically add the right extension to the name you "
 "provide."
 msgstr ""
+"El primer paso es indicar la ubicación del archivo de la base de datos. Esto"
+" se puede hacer presionando el botón :guilabel:`...` a la derecha del campo "
+":guilabel:`Base de datos` y seleccione un archivo GeoPackage existente o "
+"cree uno nuevo. QGIS agregará automáticamente la extensión correcta al "
+"nombre que proporcione."
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:63
 msgid "Give the new layer / table a name (:guilabel:`Table name`)"
-msgstr ""
+msgstr "Dá un nombre a la nueva capa/tabla (:guilabel:`Nombre Tabla`)"
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:64
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:168
@@ -101,24 +121,29 @@ msgid ""
 "specify whether it should :guilabel:`Include Z dimension` and/or "
 ":guilabel:`Include M values`."
 msgstr ""
+"Defina el :guilabel:`Tipo de geometría`. Si no es una capa sin geometría, "
+"puede especificar si debe :guilabel:`Incluir dimensión Z` y/o "
+":guilabel:`Incluir valores M`."
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:67
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:117
 msgid ""
 "Specify the coordinate reference system using the |setProjection| button"
 msgstr ""
+"Especificar el sistema de coordenadas de referencia usando el botón "
+"|setProjection|"
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:69
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:126
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:173
 msgid "To add fields to the layer you are creating:"
-msgstr ""
+msgstr "Para añadir campos a una capa que estás creando:"
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:71
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:128
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:175
 msgid "Enter the :guilabel:`Name` of the field"
-msgstr ""
+msgstr "Introduce el :guilabel:`Nombre` del campo"
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:72
 msgid ""
@@ -127,24 +152,30 @@ msgid ""
 "number`, :guilabel:`Date` and :guilabel:`Date and time`, :guilabel:`Binary "
 "(BLOB)` and :guilabel:`Boolean`."
 msgstr ""
+"Seleccione los datos :guilabel:`Tipo`. Los tipos admitidos son "
+":guilabel:`Datos de texto`, :guilabel:` Número entero` (tanto entero como "
+"entero64), :guilabel:`Número decimal`, :guilabel:` Fecha` y :guilabel:`Fecha"
+" y hora`, :guilabel:`Binario (BLOB)` y :guilabel:`Booleano`."
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:76
 msgid ""
 "Depending on the selected data format, enter the :guilabel:`Maximum length` "
 "of values."
 msgstr ""
+"Dependiendo del formato de datos seleccionado :guilabel:`longitud Máxima` de"
+" valores."
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:78
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:134
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:178
 msgid "Click on the |newAttribute| :guilabel:`Add to Fields List` button"
-msgstr ""
+msgstr "Click en el botón |newAttribute| :guilabel:`Añadir a Lista de campos`"
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:79
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:135
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:179
 msgid "Reproduce the steps above for each field you need to add"
-msgstr ""
+msgstr "Repite los pasos anteriores para cada campo que necesites añadir"
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:80
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:136
@@ -154,6 +185,9 @@ msgid ""
 "the new layer to the legend, and you can edit it as described in section "
 ":ref:`sec_edit_existing_layer`."
 msgstr ""
+"Una vez contento con los atributos, click :guilabel:`Aceptar`. QGIS añadirá "
+"la nueva capa a la leyenda, y puede editarla como se describe en la sección "
+":ref:`sec_edit_existing_layer`."
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:84
 msgid ""
@@ -165,12 +199,22 @@ msgid ""
 "together with the :guilabel:`Layer identifier` (short human readable name of"
 " the layer) and the :guilabel:`Layer description`."
 msgstr ""
+"Por defecto, al crear una capa de GeoPackage, QGIS genera una "
+":guilabel:`columna de identificación de entidad` llamada ``fid`` que actúa "
+"como la clave principal de la capa. El nombre se puede cambiar. El campo de "
+"geometría, si está disponible, se denomina ``geometría`` y puede elegir "
+":guilabel:`Crear un índice espacial` en él. Estas opciones se pueden "
+"encontrar en: guilabel: `Opciones avanzadas` junto con "
+":guilabel:`Identificador de capa` (nombre corto legible por humanos de la "
+"capa) y :guilabel:`Descripción de capa`."
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:93
 msgid ""
 "Further management of GeoPackage layers can be done with the :ref:`DB "
 "Manager <dbmanager>`."
 msgstr ""
+"Se puede administrar más capas de GeoPackage con el :ref:`DB Manager "
+"<dbmanager>`."
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:100
 msgid "Creating a new Shapefile layer"
@@ -184,6 +228,12 @@ msgid ""
 "toolbar. The :guilabel:`New Shapefile Layer` dialog will be displayed as "
 "shown in figure_create_shapefile_."
 msgstr ""
+"Para crear una nueva capa de formato ESRI Shapefile, presione el botón "
+"|newVectorLayer| :menuselection:`Nueva capa de archivo shape...` en "
+":menuselection:`Capa -> Crear capa ->` o desde la barra de herramientas "
+":guilabel:`Administrador de fuentes de datos`. El diálogo :guilabel:`Nueva "
+"capa de archivo shape` se mostrará como se muestra en "
+"figure_create_shapefile_."
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:109
 msgid ""
@@ -191,26 +241,34 @@ msgid ""
 ":guilabel:`File name`. QGIS will automatically add the right extension to "
 "the name you provide."
 msgstr ""
+"Proporcione una ruta y un nombre de archivo usando el botón :guilabel:`...` "
+"junto a :guilabel:`Nombre de archivo`. QGIS agregará automáticamente la "
+"extensión correcta al nombre que proporcione."
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:112
 msgid "Next, indicate the :guilabel:`File encoding` of the data"
 msgstr ""
+"A continuación, indica el :guilabel:`codificación de archivo` de los datos"
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:113
 msgid ""
 "Choose the :guilabel:`Geometry type` of the layer (point, multipoint, line "
 "or polygon)"
 msgstr ""
+"Escoge el :guilabel:`tipo de Geometría` de la capa (punto, multipunto, "
+"líneal o poligonal)"
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:115
 msgid ""
 "Specify whether the geometry should have :guilabel:`Z (+ M values)` or "
 ":guilabel:`M values`"
 msgstr ""
+"Especifique si la geometría debe tener :guilabel:`Z (+ M valores)` o "
+":guilabel:`valores M`"
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:124
 msgid "Creating a new Shapefile layer dialog"
-msgstr ""
+msgstr "Diálogo Creando una nueva capa de archivo shape"
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:129
 msgid ""
@@ -218,16 +276,23 @@ msgid ""
 ":guilabel:`Whole number`, :guilabel:`Text data` and :guilabel:`Date` "
 "attributes are supported."
 msgstr ""
+"Selecciona el :guilabel:`Tipo` de datos. Solo los atributos "
+":guilabel:`número decimal`, :guilabel:`número entero`, :guilabel:`datos de "
+"texto` y :guilabel:`Fecha` son soportados."
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:132
 msgid ""
 "Depending on the selected data format, enter the :guilabel:`Length` and "
 ":guilabel:`Precision`."
 msgstr ""
+"En función del formato de datos, introduce la :guilabel:`Longitud` y "
+":guilabel:`Precisión`."
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:140
 msgid "By default, a first integer ``id`` column is added but can be removed."
 msgstr ""
+"Por defecto, una primera columna de enteros ``id`` se añade pero puede ser "
+"borrada."
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:147
 msgid "Creating a new SpatiaLite layer"
@@ -241,10 +306,15 @@ msgid ""
 "toolbar. The :guilabel:`New SpatiaLite Layer` dialog will be displayed as "
 "shown in Figure_create_spatialite_."
 msgstr ""
+"Para crear una nueva capa SpatiaLite, presione el botón |newSpatiaLiteLayer|"
+" :menuselection:`Nueva capa SpatiaLite...` en el menú :menuselection:`Capa "
+"-> Crear Capa ->` o desde la barra de herramientas :guilabel:`Administrador "
+"de fuentes de datos`. Se mostrará el cuadro de diálogo :guilabel:`Nueva capa"
+" SpatiaLite` como se muestra en Figure_create_spatialite_."
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:160
 msgid "Creating a New SpatiaLite layer dialog"
-msgstr ""
+msgstr "Diálogo de Crear una nueva capa SpatiaLite"
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:162
 msgid ""

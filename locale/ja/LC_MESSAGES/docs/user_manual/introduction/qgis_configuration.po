@@ -454,7 +454,7 @@ msgid ""
 "environment variables`, and it's possible to filter them by activating "
 "|checkbox| :guilabel:`Show only QGIS-specific variables`."
 msgstr ""
-"|checkbox| :guilabel:` カスタム環境変数を用いる（区切り文字を含む - 再起動が必要）` 。変数を :guilabel:`追加` "
+"|checkbox| :guilabel:`カスタム環境変数を用いる（区切り文字を含む - 再起動が必要）` 。変数を :guilabel:`追加` "
 "および :guilabel:`削除` できます。定義済みの環境変数は :guilabel:`現在の環境変数` に表示され、 |checkbox| "
 ":guilabel:`QGIS固有の変数のみを表示する` を有効にするとそれらをフィルタできます。"
 
@@ -699,19 +699,19 @@ msgstr ""
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:339
 msgid "‘Always’: Always ask (if there are existing sublayers)"
-msgstr "‘常に’: 毎回、確認プロンプトを表示します（サブレイヤが存在する場合）"
+msgstr "「常に」: 毎回、確認プロンプトを表示します（サブレイヤが存在する場合）"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:340
 msgid "‘If needed’: Ask if layer has no bands, but has sublayers"
-msgstr "‘必要な場合’: レイヤがバンドは無いがサブレイヤを持っている場合にプロンプトを表示します"
+msgstr "「必要な場合」: レイヤがバンドは無いがサブレイヤを持っている場合にプロンプトを表示します"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:341
 msgid "‘Never’: Never prompt, will not load anything"
-msgstr "‘利用しない’:プロンプトを表示せず、何もロードしません"
+msgstr "「利用しない」:プロンプトを表示せず、何もロードしません"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:342
 msgid "‘Load all’: Never prompt, but load all sublayers"
-msgstr "'‘すべてをロード':プロンプトは表示しませんが、すべてのサブレイヤをロードします "
+msgstr "「すべてをロード」:プロンプトは表示しませんが、すべてのサブレイヤをロードします "
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:344
 msgid ""
@@ -754,7 +754,7 @@ msgid ""
 "values from database provider should be calculated when digitizing the new "
 "feature (checked status) or when saving the changes."
 msgstr ""
-"|checkbox| :guilabel:`デフォルト値を評価` "
+"|checkbox| :guilabel:`デフォルト値の評価` "
 "は、データベースプロバイダからのデフォルト値を、新しい地物のデジタル化（チェックされたステータス）または変更の保存時に計算するかどうかを定義します。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:366
@@ -832,8 +832,7 @@ msgid ""
 "'Visvalingam'."
 msgstr ""
 ":guilabel:`簡素化のアルゴリズム`: このオプションは、地物のローカルな簡素化を \"オンザフライ\" "
-"で実行し、ジオメトリのレンダリングを高速化します。この簡素化は、データプロバイダからフェッチされたジオメトリを変更することはしません。この違いは地物ジオメトリを使用する式（面積の計算など）を使用する場合に重要です。地物ジオメトリを使用する計算は、簡素化されたジオメトリではなく元のジオメトリに対して行われることが保証されます。地物の簡素化のためにQGISでは"
-" '距離' （デフォルトの設定）、 'グリッドにスナップ' 、そして 'Visvalingam' の3つのアルゴリズムを提供しています。"
+"で実行し、ジオメトリのレンダリングを高速化します。この簡素化は、データプロバイダからフェッチされたジオメトリを変更することはしません。この違いは地物ジオメトリを使用する式（面積の計算など）を使用する場合に重要です。地物ジオメトリを使用する計算は、簡素化されたジオメトリではなく元のジオメトリに対して行われることが保証されます。地物の簡素化のためにQGISでは「距離」（デフォルトの設定）、「グリッドにスナップ」、そして「Visvalingam」の3つのアルゴリズムを提供しています。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:408
 msgid ""
@@ -988,7 +987,8 @@ msgid ""
 "the **Default map appearance (overridden by project properties)**: the "
 ":guilabel:`Selection color` and :guilabel:`Background color`."
 msgstr ""
-"**デフォルトの体裁（プロジェクトプロパティに上書きされます）** ： :guilabel:`選択物の色` および :guilabel:`背景色` 。"
+"**デフォルトの体裁（プロジェクトプロパティによって上書きされます）** ： :guilabel:`選択物の色` および :guilabel:`背景色`"
+" 。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:483
 msgid "**Layer legend** interaction:"
@@ -1262,9 +1262,9 @@ msgid ""
 "disadvantage is that only the first geometry problem will be reported."
 msgstr ""
 ":guilabel:`ジオメトリの検証` "
-"。多くのノードを持つ複雑なラインとポリゴンを編集すると、レンダリングが非常に遅くなる可能性があります。これは、QGISでのデフォルトの検証手順は多くの時間がかかることがあるためです。レンダリングを高速化するために、GEOSジオメトリ検証を選択する（GEOS"
+"。多数のノードを持つ複雑なラインやポリゴンを編集すると、レンダリングが非常に遅くなる可能性があります。これは、QGISでのデフォルトの検証手順は長時間かかることがあるためです。レンダリングを高速化するために、GEOSジオメトリ検証を選択する（GEOS"
 " "
-"3.3以降）か、または検証をオフにすることが可能です。GEOSジオメトリの検証ははるかに高速ですが、最初に見つかったジオメトリの問題しか報告されないという欠点があります。"
+"3.3以降）か、または検証をオフにすることが可能です。GEOSジオメトリの検証ははるかに高速ですが、最初に見つかったジオメトリ問題しか報告されないという欠点があります。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:623
 msgid ""
@@ -1359,7 +1359,7 @@ msgid ""
 "'Semi transparent circle' or 'None')"
 msgstr ""
 ":guilabel:`マーカースタイル` |selectString| "
-"頂点マーカースタイルを定義します（「クロス」（デフォルト）、「半透明の円」または「なし」）"
+"頂点マーカースタイルを定義します（「クロス」（デフォルト）、「半透明円」または「なし」）"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:655
 msgid "Define vertex :guilabel:`Marker size (in millimeter)`"
@@ -1382,7 +1382,7 @@ msgstr ""
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:664
 msgid ":guilabel:`Join style`: 'Round', 'Mitre' or 'Bevel'"
-msgstr ":guilabel:`継ぎ目スタイル` ：「ラウンド」「マイター」「べベル」"
+msgstr ":guilabel:`継ぎ目スタイル` ：「Round」「Miter」「Bevel」"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:665
 msgid ":guilabel:`Quadrant segments`"
@@ -1464,7 +1464,7 @@ msgid ""
 "The :guilabel:`GDAL` tab currently exposes the drivers for raster formats "
 "with their capabilities."
 msgstr ""
-"`GDAL <https://gdal.org>`_ とは、ベクタファイルやラスタファイルのデータ変換ライブラリです。GDAL "
+"`GDAL <https://gdal.org>`_ は、ベクタファイルやラスタファイルのデータ変換ライブラリです。GDAL "
 "はさまざまなフォーマットでデータを読み書きするためのドライバを提供します。 :guilabel:`GDAL` "
 "タブでは今のところ、ラスタ形式に対するドライバとその機能を公開しています。"
 
@@ -1535,7 +1535,7 @@ msgstr ""
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:752
 msgid ":guilabel:`Edit Pyramids Options`"
-msgstr ":guilabel:`Edit ピラミッドオプションを編集`"
+msgstr ":guilabel:`ピラミッドオプションを編集`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:759
 msgid "Sample of Pyramids profile"
@@ -2162,7 +2162,7 @@ msgid ""
 ":guilabel:`Measurements` frame lets you control these parameters. You can "
 "indeed choose:"
 msgstr ""
-"GISでは面積や距離の計算がよく必要になります。しかしながら、これらの値は実際には基礎となる投影設定に関連付けられています。 "
+"GISでは面積や距離の計算がしばしば必要になります。しかしながら、これらの値は実際には基礎となる投影設定に関連付けられています。 "
 ":guilabel:`計測` フレームではこれらのパラメータを制御できます。以下が選択できます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1106
@@ -2317,20 +2317,24 @@ msgid ""
 " to apply depending on the layer geometry type as well as a default "
 ":guilabel:`Color Ramp`"
 msgstr ""
+"レイヤーのジオメトリタイプに応じて適用するデフォルトのシンボル (:guilabel:`マーカー` 、 :guilabel:`ライン` 、 "
+":guilabel:`塗りつぶし`) と、デフォルトの :guilabel:`カラーランプ` を設定します。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1181
 msgid "Apply a default :guilabel:`Opacity` to new layers"
-msgstr ""
+msgstr "デフォルトの :guilabel:`不透明度` を新しいレイヤーに適用します"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1182
 msgid ""
 "|checkbox| :guilabel:`Assign random colors to symbols`, modifying the "
 "symbols fill colors, hence avoiding same rendering for all layers."
 msgstr ""
+"|checkbox| :guilabel:`ランダムな色をシンボルに設定する`  "
+"は、シンボルの塗りつぶし色を変えることで、すべてのレイヤが同じように描画されるのを避けられます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1190
 msgid "Default Styles tab"
-msgstr ""
+msgstr "規定スタイルタブ"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1192
 msgid ""
@@ -2338,6 +2342,8 @@ msgid ""
 "quickly access the :ref:`Style Manager <vector_style_manager>` dialog and "
 "configure symbols and color ramps."
 msgstr ""
+"|styleManager| :guilabel:`スタイルマネージャ` ボタンを押すと、 :ref:`スタイルマネージャ "
+"<vector_style_manager>` ダイアログに素早くアクセスし、シンボルやカラーランプの設定が行えます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1198
 msgid ""
@@ -2345,16 +2351,20 @@ msgid ""
 " the running project. Like the :ref:`global colors <colors_options>`, you "
 "can:"
 msgstr ""
+"また、実行中のプロジェクトの特定の色を定義するセクションもあります。:ref:`グローバルの色設定 <colors_options>` "
+"と同様に、以下の設定ができます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1210
 msgid ""
 "These colors are identified as :guilabel:`Project colors` and listed as part"
 " of :ref:`color widgets <color-selector>`."
 msgstr ""
+"これらの色は :guilabel:`プロジェクトの色` として識別され、 :ref:`色ウィジェット <color-selector>` "
+"の一部としてリストに表示されます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1213
 msgid "**Use project colors to quickly assign and update color widgets**"
-msgstr ""
+msgstr "**プロジェクトカラーを使用してカラーウィジェットを素早く割り当てて更新する**"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1215
 msgid ""
@@ -2363,17 +2373,18 @@ msgid ""
 "setting the same color for many properties and, to avoid a cumbersome update"
 " you can:"
 msgstr ""
-"プロジェクトの色はそれらのラベルを使用することで参照でき、それらが使用されるカラーウィジェットはそれらにバインドされます。これが意味するのは、多くのプロパティに同じ色を繰り返し設定する代わりに、面倒な更新を避けるために以下が可能であることです："
+"プロジェクトの色はそのラベルを使って参照することができ、それらが使用されているカラーウィジェットはそれらにバインドされます。これによって、多くのプロパティに同じ色を繰り返し設定したり面倒な更新を避けるために、以下のようにすることができます："
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1220
 msgid "Define the color as a project color"
-msgstr ""
+msgstr "色をプロジェクトの色として定義します"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1221
 msgid ""
 "Click the :ref:`data defined override widget <data_defined>` next to the "
 "color property you want to set"
 msgstr ""
+"設定したい色プロパティの隣にある、 :ref:`データによって定義された上書きウィジェット <data_defined>` をクリックします"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1223
 msgid ""
@@ -2381,24 +2392,26 @@ msgid ""
 "property is then assigned the expression ``project_color('color_label')`` "
 "and the color widget reflects that color."
 msgstr ""
+":guilabel:`色` メニューの上にマウスカーソルを置き、プロジェクトの色を選択します。このプロパティには式 "
+"``project_color('color_label')`` が指定され、カラーウィジェットにはその色が反映されます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1226
 msgid "Repeat steps 2 and 3 as much as needed"
-msgstr ""
+msgstr "ステップ2とステップ3を必要なだけ繰り返します"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1227
 msgid ""
 "Update the project color once and the change is reflected EVERYWHERE it's in"
 " use."
-msgstr ""
+msgstr "プロジェクトの色を一度更新するだけで、その色が使われている箇所「全て」に変更が反映されます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1231
 msgid "Data Sources Properties"
-msgstr ""
+msgstr "データソース"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1233
 msgid "In the :guilabel:`Data Sources` tab, you can:"
-msgstr ":guilabel:`データソース` タブでは、できることは:"
+msgstr ":guilabel:`データソース` タブでは、以下の設定ができます:"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1235
 msgid ""
@@ -2411,9 +2424,10 @@ msgid ""
 " when the user clicks save layer. Note that you can (de)activate this option"
 " only if no layer is being edited in the project."
 msgstr ""
-"|unchecked| :guilabel:`可能であればトランザクショングループを自動的に作成する` "
-"：このモードをオンにすると、同じデータベースのすべての（postgres）レイヤーが編集状態で同期されます。つまり、あるレイヤーが編集状態になると、 "
-"1つのレイヤーがコミットされるか、または1つのレイヤーがロールバックされます。また、編集変更をローカルでバッファリングする代わりに、データベース内のトランザクションに直接送信され、ユーザーが保存レイヤーをクリックしたときにコミットされます。プロジェクトでレイヤーが編集されていない場合にのみ、このオプションを有効にできます。"
+"|unchecked| :guilabel:`可能な場合には自動的にトランザクショングループを作成する` "
+"：このモードをオンにすると、同じデータベースのすべての（postgres）レイヤーが編集状態で同期されます。つまり、あるレイヤーが編集状態になるとすべてのレイヤが編集状態となり、"
+" "
+"1つのレイヤーがコミットされるか、または1つのレイヤーがロールバックされると、そのほかも同様にコミットもしくはロールバックされます。また、編集した変更をローカルでバッファリングする代わりに、変更はデータベース内のトランザクションに直接送信され、ユーザがレイヤの保存をクリックしたときにコミットされます。プロジェクトでレイヤーが編集されていない場合にのみ、このオプションを有効（無効）にできます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1244
 msgid ""
@@ -2424,10 +2438,10 @@ msgid ""
 "``nextval('serial')``, the field in the :guilabel:`Add Feature` form will "
 "display expected value (e.g., ``25``)."
 msgstr ""
-"|unchecked|  :guilabel:`プロバイダー側でのデフォルト値の評価` "
-"：PostgreSQLのテーブルに新しい地物を追加すると、デフォルト値の制約を持つフィールドが評価され、コミットの瞬間ではなく、フォームのオープン時に読み込まれます。これは、"
-" ``nextval（ 'serial'）`` のような式の代わりに :guilabel:`地物を追加` フォームのフィールドが期待値（例えば "
-"``25`` ）を表示することを意味します。"
+"|unchecked|  :guilabel:`プロバイダ側でデフォルト値を評価する` "
+"：PostgreSQLのテーブルに新しい地物を追加すると、デフォルト値の制約を持つフィールドは、コミット時ではなくフォームを開いた際に値が評価され入力されます。これは、"
+" :guilabel:`地物を追加` フォームのフィールドに ``nextval（ 'serial'）`` のような式ではなく期待された値（例えば "
+"``25`` ）が表示されることを意味します。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1249
 msgid ""
@@ -2444,13 +2458,15 @@ msgstr ""
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1258
 msgid "Configure the :guilabel:`Layers Capabilities`, i.e.:"
-msgstr ""
+msgstr ":guilabel:`レイヤのCapabilities` の構成は："
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1260
 msgid ""
 "Set (or disable) which layers are ``identifiable``, i.e. will respond to the"
 " :ref:`identify tool <identify>`. By default, layers are set queryable."
 msgstr ""
+"どのレイヤを ``情報表示可能`` （あるいは不可）とするか、すなわち、 :ref:`地物情報表示ツール <identify>` "
+"に反応するかを設定します。デフォルトでは、レイヤは問合せ可能に設定されています。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1262
 msgid ""
@@ -2460,7 +2476,8 @@ msgid ""
 "configuration to avoid end-users modifying data when working with file-based"
 " layers."
 msgstr ""
-"レイヤーを「読み取り専用」として、つまり、データプロバイダーの機能に関係なくユーザーは編集できないように、表示するかどうか設定します。これは弱い保護ですが、ファイルベースのレイヤーで作業しているときにエンドユーザーがデータを変更するのを避けるための迅速かつ便利な構成のままです。"
+"レイヤを ``読取専用`` "
+"として表示するかどうかを設定します。つまり、データプロバイダの機能に関係なく、ユーザが編集できなくなります。これは弱い保護ですが、ファイルベースのレイヤで作業しているときにエンドユーザがデータを変更しないようにするための簡単で便利な設定であることに変わりはありません。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1266
 msgid ""
@@ -2468,43 +2485,46 @@ msgid ""
 ":ref:`locator widget <locator_options>`. By default, layers are set "
 "searchable."
 msgstr ""
+"どのレイヤを ``検索可能`` とするか、すなわち、 :ref:`ロケータウィジェット <locator_options>` "
+"を使って問合せ可能かを定義します。デフォルトでは、レイヤは検索可能に設定されています。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1268
 msgid ""
 "Define which layers are defined as ``required``. Checked layers in this list"
 " are protected from inadvertent removal from the project."
-msgstr "どのレイヤーを「必須」として定義するかを定義します。このリスト内でチェックされたレイヤは、プロジェクトからの不注意な削除から保護されます。"
+msgstr ""
+"どのレイヤーを ``必須`` とするかを定義します。このリスト内でチェックされたレイヤは、不注意なプロジェクトからの削除に対して保護されます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1271
 msgid ""
 "The :guilabel:`Layers Capabilities` table provides some convenient tools to:"
-msgstr ""
+msgstr ":guilabel:`レイヤのCapabilities` テーブルには便利なツールがあります："
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1273
 msgid ""
 "Select multiple cells and press :guilabel:`Toggle Selection` to have them "
 "change their checkbox state;"
-msgstr "複数のセルを選択し、 :guilabel:`選択の切り替え` を押して、チェックボックスの状態を変更します。"
+msgstr "複数のセルを選択し、 :guilabel:`選択切替` を押して、チェックボックスの状態を変更します。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1275
 msgid ""
 "|unchecked| :guilabel:`Show spatial layers only`, filtering out non-spatial "
 "layers from the layers list;"
-msgstr ""
+msgstr "|unchecked| :guilabel:`空間レイヤのみ表示` は空間レイヤでないものをレイヤのリストから除外します。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1277
 msgid ""
 "|search| :guilabel:`Filter layers...` and quickly find a particular layer to"
 " configure."
-msgstr ""
+msgstr "|search| :guilabel:`レイヤのフィルタ...` で設定したい特定のレイヤを素早く探し出せます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1285
 msgid "Data Sources tab"
-msgstr ""
+msgstr "データソースタブ"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1288
 msgid "Relations Properties"
-msgstr ""
+msgstr "リレーション"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1290
 msgid ""
@@ -2516,17 +2536,17 @@ msgid ""
 "of pipeline or road segment. You can find out more about 1:n relations "
 "support in Section :ref:`vector_relations`."
 msgstr ""
-":guilabel:`関係` "
-"タブは1:nの関係を定義するために使用されます。関係は、プロジェクトのプロパティダイアログで定義されています。関係は、レイヤーに存在すると、フォームビュー（例えば、地物を識別し、そのフォームを開くとき）で、新しいユーザーインターフェイス要素は、関連するエンティティのリストが表示されます。これは、例えばパイプラインや道路区間の長さの検査履歴を表現するための強力な方法を提供します。1:n関係のサポートについての詳細はセクション"
-" :ref:`vector_relations` にあります。"
+":guilabel:`リレーション` "
+"タブは1:nの関係を定義するために使用されます。リレーションは、プロジェクトのプロパティダイアログで定義されます。あるレイヤにリレーションが存在すると、フォームビューの新しいユーザーインターフェース要素（例えば、地物を特定し、そのフォームを開くとき）に関連するエンティティのリストが表示されます。これは、例えばパイプラインの長さや道路区間の検査履歴を表現するための強力な方法を提供します。1:n関係のサポートについての詳細はセクション"
+" :ref:`vector_relations` を参照してください。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1302
 msgid "Relations tab"
-msgstr ""
+msgstr "リレーションタブ"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1305
 msgid "Variables Properties"
-msgstr "変数のプロパティ"
+msgstr "変数"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1307
 msgid ""
@@ -2539,15 +2559,15 @@ msgid ""
 ":ref:`general_tools_variables` section."
 msgstr ""
 ":guilabel:`変数` "
-"タブには、プロジェクトのレベルで使用可能なすべての変数（すべてのグローバル変数を含む）がリストされます。また、プロジェクトレベルの変数を管理することもできます。"
+"タブには、プロジェクトレベルで使用可能なすべての変数（すべてのグローバル変数を含む）がリストされています。また、プロジェクトレベルの変数を管理することもできます。"
 " |signPlus| "
 "ボタンをクリックして、新しいカスタムプロジェクトレベル変数を追加します。同様に、リストからカスタムプロジェクトレベルの変数を選択し、 "
 "|signMinus| ボタンを押して削除します。変数の使用法の詳細は一般ツール :ref:`general_tools_variables` "
-"セクションで。"
+"のセクションを参照してください。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1317
 msgid "Macros Properties"
-msgstr ""
+msgstr "マクロ"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1319
 msgid ""
@@ -2555,16 +2575,16 @@ msgid ""
 "Currently, only three macros are available: ``openProject()``, "
 "``saveProject()`` and ``closeProject()``."
 msgstr ""
-":guilabel:`マクロ` タブはPythonマクロの編集のために使います. 現時点では: ``openProject()``, "
-"``saveProject()`` そして ``closeProject()`` の3つのマクロのみ使用可能です."
+":guilabel:`マクロ` タブは、プロジェクトのPythonマクロの編集のために使います。 現時点では: ``openProject()``, "
+"``saveProject()`` そして ``closeProject()`` の3つのマクロのみ使用可能です。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1328
 msgid "Macro settings in QGIS"
-msgstr "QGISでマクロの設定"
+msgstr "QGISでのマクロ設定"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1331
 msgid "QGIS Server Properties"
-msgstr ""
+msgstr "QGISサーバー"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1333
 msgid ""
@@ -2574,17 +2594,17 @@ msgid ""
 "information available in section :ref:`Creatingwmsfromproject` and "
 "subsequent."
 msgstr ""
-"タブ :guilabel:`QGISサーバー` "
-"では、プロジェクトをオンラインで公開するために設定することを可能にします。ここでは、QGISサーバーのWMSとWFSの機能、範囲、およびCRSの制限に関する情報を定義できます。より詳しい情報は"
-" :ref:`Creatingwmsfromproject` 以降にあります。"
+" :guilabel:`QGISサーバー` "
+"タブでは、プロジェクトをオンラインで公開するための設定を行うことができます。ここでは、QGISサーバーのWMSとWFSの機能、範囲、およびCRSの制限に関する情報を定義できます。より詳しい情報は"
+" :ref:`Creatingwmsfromproject` 以降を参照してください。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1344
 msgid "QGIS Server settings tab"
-msgstr ""
+msgstr "QGISサーバー設定タブ"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1350
 msgid "Customization"
-msgstr "カスタマイズ"
+msgstr "インタフェースのカスタマイズ"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1352
 msgid ""
@@ -2593,7 +2613,8 @@ msgid ""
 "end-users with a 'light' version of QGIS, containing only the icons, menus "
 "or panels they need."
 msgstr ""
-"カスタマイズダイアログでは、QGISのユーザーインターフェイスのほぼすべての要素を有効(無効)にできます。彼らが必要とする唯一のアイコン、メニューやパネルを含む、QGISの「光」バージョンを使用して、エンドユーザーに提供したい場合、これは非常に便利です。"
+"インタフェースのカスタマイズダイアログでは、QGISのユーザーインターフェースのほぼすべての要素を有効（無効）にできます。これは、必要なアイコン、メニュー、またはパネルのみを含む「軽量な」バージョンの"
+" QGIS をエンドユーザーに提供したい場合に非常に便利です。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1357
 msgid "Before your changes are applied, you need to restart QGIS."
@@ -2609,33 +2630,34 @@ msgid ""
 "first step on the way to QGIS customization. This enables the toolbar and "
 "the widget panel from which you can uncheck and thus disable some GUI items."
 msgstr ""
-"|checkbox| :guilabel:`カスタマイズ` "
-"チェックボックスを切り替えるのは、QGISのカスタマイズへの道の最初のステップです。これはツールバーやウィジェットパネルを有効にし、それらからチェックを外していくつかのGUIの項目を無効にできます。"
+"|checkbox| :guilabel:`カスタマイズ` チェックボックスにチェックを入れることは、QGIS "
+"のカスタマイズへの第一歩です。これによりツールバーとウィジェットパネルが有効になり、いくつかの GUI "
+"アイテムのチェックを外して無効にすることができます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1370
 msgid "The configurable item can be:"
-msgstr "設定可能な項目があることができます："
+msgstr "設定可能な項目には以下のものがあります。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1372
 msgid "a **Menu** or some of its sub-menus from the :ref:`label_menubar`"
-msgstr "**メニュー** または :ref:`label_menubar` からのそのサブメニューのいくつか"
+msgstr ":ref:`label_menubar` にある **メニュー** やそのサブメニュー"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1373
 msgid "a whole **Panel** (see :ref:`sec_panels_and_toolbars`)"
-msgstr "全体 **パネル** ( :ref:`sec_panels_and_toolbars` 参照)"
+msgstr "**パネル** の全て（ :ref:`sec_panels_and_toolbars` 参照）"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1374
 msgid ""
 "the **Status bar** described in :ref:`label_statusbar` or some of its items"
-msgstr ":ref:`label_statusbar` で説明される **ステータスバー** またはその項目の何か"
+msgstr ":ref:`label_statusbar` で説明されている **ステータスバー** やその項目"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1375
 msgid "a **Toolbar**: the whole bar or some of its icons"
-msgstr "**ツールバー** : バー全体またはそのアイコンの何か"
+msgstr "**ツールバー** : バー全体やアイコン"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1376
 msgid "or any **widget** from any dialog in QGIS: label, button, combobox..."
-msgstr "または任意の **ウィジェット** QGISで任意のダイアログから：ラベル、ボタン、コンボボックス..."
+msgstr "またはラベル、ボタン、コンボボックス... といったQGISのダイアログにある **ウィジェット**"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1378
 msgid ""
@@ -2645,6 +2667,9 @@ msgid ""
 "You can also use the :guilabel:`Search` box to find items by their name or "
 "label."
 msgstr ""
+"|select| :sup:`メインアプリケーションのウィジェットのキャッチを切り替える` "
+"を使用すると、QGISインタフェース内で非表示にしたい項目をクリックしたときに自動的にカスタマイズダイアログで対応する項目のチェックを外します。また、 "
+":guilabel:`検索` ボックスを使用して項目の名前やラベルから項目を検索することもできます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1383
 msgid ""
@@ -2652,8 +2677,8 @@ msgid ""
 " to validate your changes. This configuration becomes the one used by "
 "default by QGIS at the next startup."
 msgstr ""
-"設定をセットアップしたら、 :guilabel:`適用` または :guilabel:`OK` "
-"をクリックして変更を検証します。この構成は、次回の起動時にQGISによってデフォルトで使用される構成になります。"
+"設定を行ったら、 :guilabel:`適用` または :guilabel:`OK` "
+"をクリックして変更内容を確認します。この設定は、次回の起動時にQGISがデフォルトで使用するものになります。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1386
 msgid ""
@@ -2664,10 +2689,10 @@ msgid ""
 "You can also run :ref:`command line tools <custom_commandline>` and save "
 "various setups for different use cases as well."
 msgstr ""
-"変更は |fileSave| :sup:`ファイルに保存` ボタン使用して ``.ini`` ファイルにも保存できます "
+"変更は |fileSave| :sup:`ファイルへ保存` ボタン使用して ``.ini`` ファイルにも保存できます "
 "。これは、複数のユーザー間で共通のQGISインターフェイスを共有するための便利な方法です。 ``.ini`` "
-"ファイルをインポートするためには、先のコンピュータから |fileOpen| :sup:`ファイルからロード` をクリックするだけです。また同様に、 "
-":ref:`コマンドラインツール <custom_commandline>` を実行してさまざまなユースケースのための各種設定を保存できます。 "
+"ファイルをインポートするには、先のコンピュータから |fileOpen| :sup:`ファイルからのロード` をクリックするだけです。また同様に、 "
+":ref:`コマンドラインツール <custom_commandline>` を実行してさまざまなユースケースに応じた各種設定を保存できます。 "
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1395
 msgid "**Easily restore predefined QGIS**"
@@ -2677,7 +2702,7 @@ msgstr "**簡単に定義済みのQGISを復元**"
 msgid ""
 "The initial QGIS GUI configuration can be restored by one of the methods "
 "below:"
-msgstr "初期QGISのGUI構成は、以下のいずれかの方法で復元できます。"
+msgstr "QGISのGUIの初期構成は、以下のいずれかの方法で復元できます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1399
 msgid ""
@@ -2685,19 +2710,21 @@ msgid ""
 "Customization dialog or click the |selectAllTree| :sup:`Check All` button"
 msgstr ""
 "カスタマイズダイアログで |checkbox| :guilabel:`カスタマイズを有効にする` オプションのチェックを外すか、 "
-"|selectAllTree| :sup:`すべてチェック` ボタンをクリック"
+"|selectAllTree| :sup:`全てをチェック` ボタンをクリックする"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1401
 msgid ""
 "pressing the :guilabel:`Reset` button in the **QSettings** frame under "
 ":menuselection:`Settings --> Options` menu, :guilabel:`System` tab"
 msgstr ""
+":menuselection:`設定 --> オプション` メニューの :guilabel:`システム` タブ内、 **設定** フレームにある "
+":guilabel:`リセット` ボタンを押す "
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1403
 msgid ""
 "launching QGIS at a command prompt with the following command line ``qgis "
 "--nocustomization``"
-msgstr "次のコマンドラインを使用してコマンドプロンプトでQGISを起動します： ``qgis --nocustomization``"
+msgstr "コマンドプロンプトで次のコマンドラインを使用してQGISを起動する： ``qgis --nocustomization``"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1405
 msgid ""
@@ -2705,9 +2732,9 @@ msgid ""
 "Enabled` variable under :menuselection:`Settings --> Options` menu, "
 ":guilabel:`Advanced` tab (see the :ref:`warning <optionsadvanced>`)."
 msgstr ""
-"``false`` に :menuselection:`設定-->オプション` メニュー、 :guilabel:`高度な` タブの下の "
-":menuselection:`UI --> カスタマイズ -->有効化` 変数の値を設定すると、( :ref:`警告 "
-"<optionsadvanced>` 参照) 。"
+":menuselection:`設定--> オプション` メニューの :guilabel:`高度な設定` タブ（ :ref:`警告 "
+"<optionsadvanced>` 参照）内で、 :menuselection:`UI --> Customization --> Enabled` "
+"変数の値を ``false`` に設定する"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1409
 msgid ""
@@ -2726,36 +2753,37 @@ msgid ""
 "Shortcuts...` allows you to change the default keyboard shortcuts and add "
 "new ones to QGIS features."
 msgstr ""
-"QGISは多くの機能にデフォルトのキーボードショートカットを提供します。それらはセクション :ref:`label_menubar` "
-"で見ることができます。さらに、メニューオプション :menuselection:`設定->` |keyboardShortcuts| "
+"QGISには多数の機能のためのデフォルトのキーボードショートカットが用意されています。これらは :ref:`label_menubar` "
+"のセクションにあります。さらに、 :menuselection:`設定->` |keyboardShortcuts| "
 ":menuselection:`キーボードショートカット...` "
-"を使用すると、デフォルトのキーボードショートカットを変更し、QGIS機能に新しいショートカットを追加できます。"
+"のメニューオプションを使用すると、デフォルトのキーボードショートカットを変更したり、QGISの機能に新しいショートカットを追加したりすることができます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1428
 msgid "Define shortcut options"
-msgstr "ショートカットオプションを定義"
+msgstr "キーボードショートカットの定義オプション"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1430
 msgid ""
 "Configuration is very simple. Use the search box at the top of the dialog to"
 " find a particular action, select it from the list and click on :"
-msgstr "構成は非常に簡単です。ダイアログの上部にある検索ボックスを使用して特定のアクションを見つけ、リストからそれを選択してをクリックします："
+msgstr ""
+"設定するのは非常に簡単です。ダイアログの上部にある検索ボックスを使用して特定のアクションを見つけ、リストからそれを選択して以下のボタンをクリックします："
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1433
 msgid ""
 ":guilabel:`Change` and press the new combination you want to assign as new "
 "shortcut"
-msgstr ":guilabel:`変更` して、新しいショートカットとして割り当てる新しい組み合わせを押します"
+msgstr ":guilabel:`変更`  ボタンを押し、新しいショートカットとして割り当てる新しい組み合わせを押す"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1434
 msgid ":guilabel:`Set None` to clear any assigned shortcut"
-msgstr ""
+msgstr ":guilabel:`設定解除` ボタンを押し、割り当てられているショートカットを解除する"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1435
 msgid ""
 "or :guilabel:`Set Default` to backup the shortcut to its original and "
 "default value."
-msgstr ""
+msgstr ":guilabel:`デフォルトの設定` ボタンを押し、ショートカットをもとのデフォルト値にバックアップする"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1437
 msgid ""
@@ -2764,8 +2792,8 @@ msgid ""
 "your changes applied. You can also :guilabel:`Save` the changes as an "
 ":file:`.XML` file and :guilabel:`Load` them into another QGIS installation."
 msgstr ""
-"カスタマイズする他のツールについては、上記の手順に従ってください。設定が完了したら、ダイアログを単に :guilabel:`閉じる` "
-"して変更を適用します。変更を:file:`.XML` ファイルとして :guilabel:`保存` し、それらを別のQGISインストールに "
+"カスタマイズしたい他のツールについては、上記の手順に従ってください。設定が完了したら、ダイアログを :guilabel:`閉じる` "
+"だけで変更が適用されます。また、変更内容を :file:`.XML` ファイルとして :guilabel:`保存` し、それらを別のQGIS環境に "
 ":guilabel:`ロード` することもできます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1446
@@ -2784,8 +2812,8 @@ msgid ""
 "instead of the command line option). To get a list of the options, enter "
 "``qgis --help`` on the command line, which returns::"
 msgstr ""
-":ref:`QGISを起動する <label_startingqgis>` のはOS上のどのアプリケーションに関しても行われることを見てきました。 "
-"QGISでは、より高度な使用例のためのコマンドラインオプションを提供しています（場合によっては、コマンドラインオプションの代わりに環境変数を使用できます）。オプションのリストを取得するには、コマンドラインで"
+":ref:`QGISの起動 <label_startingqgis>` はOS上の他のアプリケーションと同様に実行されることを見てきました。 "
+"QGISでは、より高度な使用例のためにコマンドラインオプションを提供しています（場合によっては、コマンドラインオプションの代わりに環境変数を使用できます）。オプションのリストを取得するには、コマンドラインで"
 " ``qgis --help`` と入力します："
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1503
@@ -2800,8 +2828,8 @@ msgid ""
 "startup using the following command: ``qgis ./raster/landcover.img "
 "./gml/lakes.gml``"
 msgstr ""
-"コマンドラインで1つまたは複数のデータファイルを指定することで、QGISを起動できます。たとえば、 :file:`qgis_sample_data` "
-"ディレクトリにいると仮定すると、次のコマンドを使用することで、起動時にベクタレイヤとラスタファイルをロードするように設定されたQGISを起動できます： "
+"コマンドラインで1つまたは複数のデータファイルを指定してQGISを起動できます。たとえば、 :file:`qgis_sample_data` "
+"ディレクトリにいると仮定すると、次のコマンドを使用して、起動時にベクタレイヤとラスタファイルをロードするように設定されたQGISを起動できます： "
 "``qgis ./raster/landcover.img ./gml/lakes.gml``"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1512
@@ -2864,8 +2892,8 @@ msgid ""
 "like to change your language, you can specify a language code. For example, "
 "``qgis --lang it`` starts QGIS in Italian localization."
 msgstr ""
-"地域に基づいて、QGISは正しい言語対応を選択します。言語を変更したいならば言語コードを指定できます。例えば、 ``qgis --lang it`` "
-"であればイタリア語対応でQGISを起動します。"
+"ロケールに基づいて、QGISは正しい言語対応を選択します。言語を変更したいならば言語コードを指定できます。例えば、 ``qgis --lang it``"
+" であればイタリア語対応でQGISを起動します。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1548
 msgid "``--project``"
@@ -2877,8 +2905,8 @@ msgid ""
 "command line option ``--project`` followed by your project name and QGIS "
 "will open with all layers in the given file loaded."
 msgstr ""
-"既存のプロジェクトファイルをQGISを起動することも可能です。プロジェクト名の後に ``--project`` "
-"コマンドラインオプションを追加するだけで、QGISは与えられたファイル内のすべてのレイヤーがロードされて開きます。"
+"既存のプロジェクトファイルからQGISを起動することも可能です。プロジェクト名の後に ``--project`` "
+"コマンドラインオプションを追加するだけで、指定されたファイル内のすべてのレイヤが読み込まれた状態で QGIS が開きます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1555
 msgid "``--extent``"
@@ -2889,15 +2917,15 @@ msgid ""
 "To start with a specific map extent use this option. You need to add the "
 "bounding box of your extent in the following order separated by a comma::"
 msgstr ""
-"ある地図の領域を指定してQGISを起動する場合はこのオプションを使います.この場合 "
-"下記のようにカンマで区切られた書式の領域指定で領域を包含する長方形を指定する 必要があります:"
+"ある地図の領域を指定してQGISを起動する場合はこのオプションを使います。この場合、下記のようにカンマで区切られた書式の領域指定で領域を包含する長方形を指定する必要があります。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1562
 msgid ""
 "This option probably makes more sense when paired with the ``--project`` "
 "option to open a specific project at the desired extent."
 msgstr ""
-"このオプションは ``-project`` オプションと組み合わせて、特定のプロジェクトを目的の範囲で開くときにおそらくより意味があります。"
+"このオプションは ``-project`` "
+"オプションと組み合わせて、特定のプロジェクトを目的の範囲で開くようにすれば、より意味のあるものになるでしょう。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1566
 msgid "``--nologo``"
@@ -2971,7 +2999,7 @@ msgid ""
 "is located in :file:`your_QGIS_PKG_path/resources/qgis_global_settings.ini`."
 msgstr ""
 "このオプションを使用して、デフォルト設定とも呼ばれるグローバル設定ファイル（ ``.ini`` "
-"）のパスを指定できます。指定されたファイルの設定は、元のインラインのデフォルト設定を置き換えますが、ユーザープロファイルの設定はそれらの最上に設定されます。デフォルトのグローバル設定は"
+"）のパスを指定できます。指定されたファイルの設定は、元のインラインのデフォルト設定を置き換えますが、ユーザープロファイルの設定はそれらの上に設定されます。デフォルトのグローバル設定は"
 "  :file:`your_QGIS_PKG_path/resources/qgis_global_settings.ini` にあります。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1611
@@ -2992,11 +3020,11 @@ msgstr ""
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1618
 msgid "The equivalent environment variable is ``QGIS_GLOBAL_SETTINGS_FILE``."
-msgstr ""
+msgstr "これと同等な環境変数は、 ``QGIS_GLOBAL_SETTINGS_FILE`` です。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1621
 msgid "``--authdbdirectory``"
-msgstr ""
+msgstr "``--authdbdirectory``"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1623
 msgid ""
@@ -3008,19 +3036,19 @@ msgstr ""
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1627
 msgid "``--code``"
-msgstr ""
+msgstr "``--code``"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1629
 msgid ""
 "This option can be used to run a given python file directly after QGIS has "
 "started."
-msgstr ""
+msgstr "このオプションを使用すると、指定したpython ファイルを QGIS を開始した直後に実行します。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1632
 msgid ""
 "For example, when you have a python file named :file:`load_alaska.py` with "
 "following content:"
-msgstr ""
+msgstr "例えば、以下の内容の :file:`load_alaska.py` という名前の python ファイルがあるとします。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1642
 msgid ""
@@ -3029,8 +3057,8 @@ msgid ""
 "give the layer the name 'Alaska' using the following command::"
 msgstr ""
 "ファイル :file:`load_alaska.py` "
-"が配置されているディレクトリにいると仮定して、QGISを起動し、ラスターファイルをロードできます。 :file:`landcover.img` "
-"をし、次のコマンドを使用してレイヤーに名前「アラスカ」を付ける::"
+"が配置されているディレクトリにいると仮定して、次のコマンドを使用することで、QGISを起動し、ラスターファイル "
+":file:`landcover.img` をロードし、レイヤーに「アラスカ」という名前を付けることができます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1649
 msgid "``--defaultui``"
@@ -3053,6 +3081,9 @@ msgid ""
 "the status bar) will remain hidden even using the ``--defaultui`` option. "
 "See also the ``--nocustomization`` option."
 msgstr ""
+"このオプションは :ref:`GUI のカスタマイズ <sec_customization>` には何の影響もないことに注意してください。GUI "
+"のカスタマイズによって隠されたアイテム（例えばステータスバー）は、 ``--defaultui`` "
+"オプションを使ったとしても隠されたままです。``--nocustomization`` オプションについても参照してください。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1662
 msgid "``--hide-browser``"
@@ -3073,7 +3104,7 @@ msgstr ""
 msgid ""
 "Unless it's enabled again, the Browser panel will remain hidden in the "
 "following sessions."
-msgstr ""
+msgstr "ブラウザパネルが再度有効にならない限り、次のセッションでもパネルは隠されたままになります。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1673
 msgid "``--dxf-*``"
@@ -3091,7 +3122,7 @@ msgstr "*--dxf-export* : レイヤーを出力するDXFファイル名;"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1679
 msgid "*--dxf-extent*: the extent of the final DXF file;"
-msgstr "*--dxf-extent* : 最終DXFファイルの範囲;"
+msgstr "*--dxf-extent* : 最終的なDXFファイルの範囲;"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1680
 msgid ""
@@ -3108,13 +3139,13 @@ msgstr "*--dxf-scale-denom*: シンボルの縮尺分母;"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1684
 msgid "*--dxf-encoding*: the file encoding;"
-msgstr "*--dxf-encoding*: ファイルのエンコード"
+msgstr "*--dxf-encoding*: ファイルのエンコーディング"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1685
 msgid ""
 "*--dxf-map-theme*: choose a :ref:`map theme <map_themes>` from the layer "
 "tree configuration."
-msgstr ""
+msgstr "*--dxf-map-theme*: レイヤツリー設定から :ref:`地図テーマ <map_themes>` を選択"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1689
 msgid "``--take-screenshots``"
@@ -3166,7 +3197,7 @@ msgstr ""
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1714
 msgid "The equivalent environment variable is ``QGIS_CUSTOM_CONFIG_PATH``."
-msgstr ""
+msgstr "これと同等な環境変数は、``QGIS_CUSTOM_CONFIG_PATH`` です。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1717
 msgid "``--version-migration``"
@@ -3177,6 +3208,8 @@ msgid ""
 "If settings from an older version are found (*e.g.*, the ``.qgis2`` folder "
 "from QGIS 2.18), this option will import them into the default QGIS profile."
 msgstr ""
+"古いバージョンの設定（ *例えば* 、 QGIS 2.18 の ``.qgis2`` "
+"フォルダ）が見つかったときに、このオプションはデフォルトのQGISプロファイルに設定をインポートします。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1723
 msgid "``--openclprogramfolder``"
@@ -3196,7 +3229,7 @@ msgstr "同等の環境変数は :menuselection: ``QGIS_OPENCL_PROGRAM_FOLDER`` 
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1735
 msgid "Deploying QGIS within an organization"
-msgstr ""
+msgstr "組織内でのQGISの導入"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1737
 msgid ""
@@ -3212,13 +3245,13 @@ msgstr ""
 "カスタム構成ファイルを使用して組織内にQGISをデプロイする必要がある場合、最初に "
 ":file:`your_QGIS_PKG_path/resources/qgis_global_settings.ini` "
 "にあるデフォルト設定ファイルの内容をコピーして貼り付ける必要があります。このファイルには、 ``[]`` "
-"で始まるブロックで識別されるデフォルトのセクションがすでに含まれています。これらのデフォルト値を保持し、ファイルの下部に独自のセクションを追加することをお勧めします。ファイル内でセクションが重複している場合、QGISは上から下に最後のセクションを取得します。"
+"で始まるブロックで識別されるデフォルトのセクションがすでに含まれています。これらのデフォルト値を保持し、ファイルの下部に独自のセクションを追加することをお勧めします。ファイル内でセクションが重複している場合、QGISは上から下に向かって最後のセクションを使用します。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1745
 msgid ""
 "You can change ``allowVersionCheck=false`` to disable the QGIS version "
 "check."
-msgstr ""
+msgstr "QGIS のバージョンチェックを無効にするには ``allowVersionCheck=false`` と変更します。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1748
 msgid ""
@@ -3228,7 +3261,7 @@ msgstr "新規インストール後に移行ウィンドウを表示したくな
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1757
 msgid "If you want to add a custom variable in the global scope:"
-msgstr ""
+msgstr "グローバルスコープのカスタム変数を追加したい場合は、以下が必要です。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1764
 msgid ""
@@ -3238,12 +3271,15 @@ msgid ""
 "settings can be set using the ``INI`` file such as WMS/WMTS, PostGIS "
 "connections, proxy settings, maptips…"
 msgstr ""
+"``INI`` ファイルの設定による可能性について理解するため、QGIS デスクトップ で設定を行った後、プロファイルにある ``INI`` "
+"ファイルをテキストエディタを使って検索することをお勧めします。 WMS/WMTS、PostGIS 接続、プロキシ設定、地図のtipsなど、数多くの設定を"
+" ``INI`` ファイルを使用して行うことができます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1769
 msgid ""
 "Finally, you need to set the environment variable "
 "``QGIS_GLOBAL_SETTINGS_FILE`` to the path of your customized file."
-msgstr ""
+msgstr "最後に、カスタマイズしたファイルのパスを環境変数 ``QGIS_GLOBAL_SETTINGS_FILE`` に設定する必要があります。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1772
 msgid ""
@@ -3257,14 +3293,14 @@ msgstr ""
 msgid ""
 "Layout templates must be deployed in the :file:`composer_templates` "
 "directory."
-msgstr ""
+msgstr "レイアウトテンプレートは :file:`composer_templates` ディレクトリ内に配置する必要があります。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1777
 msgid ""
 "Project templates must be deployed in the :file:`project_templates` "
 "directory."
-msgstr ""
+msgstr "プロジェクトテンプレートは :file:`project_templates` ディレクトリ内に配置する必要があります。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1778
 msgid "Custom Python macros must be deployed in the :file:`python` directory."
-msgstr ""
+msgstr "カスタム Python マクロは :file:`python` ディレクトリ内に配置する必要があります。"

@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# tomoyuki arai <tarai.3367@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-26 13:13+0200\n"
 "PO-Revision-Date: 2020-03-16 19:26+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: tomoyuki arai <tarai.3367@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -36,11 +37,11 @@ msgid ""
 "accurate as possible."
 msgstr ""
 "座標参照系（CRS）は、数値座標を地球の表面上の位置に関連付ける方法です。 "
-"QGISでは、約7,000の標準CRSに対応しており、それぞれそれぞれに異なる使途、長短があります！実際のQGISプロジェクトおよびデータに対して適切な参照系を選択するのは複雑な作業になることがありますが、幸いQGISではこの選択を導き、さまざまなCRSをできるだけ透明かつ正確に使用できるようにしています。"
+"QGISでは、約7,000の標準CRSに対応しており、それぞれ異なる使用例や長所・短所があります！QGISプロジェクトやデータに対して適切な参照系を選択するのは複雑な作業になることがありますが、幸いなことにQGISではこの選択の手引きとなり、さまざまなCRSをできるだけ透過的かつ正確に使用できるようにしています。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:25
 msgid "Overview of Projection Support"
-msgstr "投影法サポート概要"
+msgstr "投影法サポートの概要"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:27
 msgid ""
@@ -56,7 +57,7 @@ msgid ""
 msgstr ""
 "QGISでは約7,000の既知のCRSをサポートしています。これらの標準CRSは、欧州石油探査グループ（European Petroleum "
 "Search Group：EPSG）およびフランス国土地理院（Institut Geographique National de "
-"France：IGNF）によって定義されたものに基づいており、基礎となる「Proj」投影ライブラリを通じてQGISで利用できます。通常、これらの標準的な予測は、組織：コードの組み合わせを使用して識別されます。ここで、組織は「EPSG」や「IGNF」などの組織名であり、コードは特定のCRSに関連付けられた一意の番号です。たとえば、一般的なWGS"
+"France：IGNF）によって定義されたものに基づいており、基礎となる「Proj」投影ライブラリを通じてQGISで利用できます。通常、これらの標準的な投影法は、組織：コードの組み合わせを使用して識別されます。ここで、組織は「EPSG」や「IGNF」などの組織名であり、コードは特定のCRSに関連付けられた一意の番号です。たとえば、一般的なWGS"
 " 84緯度/経度CRSは識別子「EPSG：4326」で知られており、Webマッピング標準CRSは「EPSG：3857」です。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:37
@@ -65,12 +66,12 @@ msgid ""
 ":ref:`sec_custom_projections` for information on managing your custom "
 "coordinate reference systems."
 msgstr ""
-"ユーザが作成したカスタムCRSは、ユーザCRSデータベースに保存されます。カスタム座標参照システムの管理についてはセクション "
-":ref:`sec_custom_projections` 参照。"
+"ユーザが作成したカスタムCRSは、ユーザCRSデータベースに保存されます。カスタム座標参照システムの管理については "
+":ref:`sec_custom_projections` のセクションを参照してください。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:44
 msgid "Layer Coordinate Reference Systems"
-msgstr "レイヤ座標参照系"
+msgstr "レイヤの座標参照系"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:46
 msgid ""
@@ -86,6 +87,13 @@ msgid ""
 "extension. For example, :file:`alaska.shp` would have a corresponding "
 "projection file named :file:`alaska.prj`."
 msgstr ""
+"特定のターゲットCRSにデータを正しく投影するためには、データにその座標参照系に関する情報が含まれている必要があるか、またはレイヤに正しい "
+"CRSを手動で割り当てる必要があります。PostGISレイヤの場合は、QGISはその "
+"PostGISレイヤの作成時に指定された空間参照識別子を使用します。OGRまたは "
+"GDALでサポートされているデータの場合、QGISはCRSを指定するための認識された手段の存在に依存します。例えば、シェープファイル形式の場合はレイヤの"
+" CRS のESRI Well-Known Text (:index:`WKT`) 表現を含むファイルがこれに当たります。この投影法ファイルは "
+":file:`.shp` ファイルと同じベース名で、 :file:`.prj` 拡張子を持っています。例を挙げると、 "
+":file:`alaska.shp` ファイルに対応する投影法ファイルは :file:`alaska.prj` という名前のファイルです。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:58
 msgid ""
@@ -95,16 +103,21 @@ msgid ""
 "information. You can configure QGIS behavior whenever it cannot "
 "automatically determine the correct CRS for a layer:"
 msgstr ""
+"QGIS にレイヤが読み込まれるたびに、QGISはそのレイヤの正しい CRS "
+"を自動的に判断しようと試みます。ただし、CRS情報を持たずにレイヤが読み込まれた場合など、 "
+"場合によっては自動判別が不可能な場合もあります。レイヤの正しいCRSを自動的に判断できない場合のQGISの動作を以下の手順で設定することができます。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:64
 msgid ""
 "Open :menuselection:`Settings -->` |options| :menuselection:`Options... --> "
 "CRS`"
 msgstr ""
+":menuselection:`設定 -->` |options| :menuselection:`オプション... --> 座標参照系（CRS）` "
+"を開く"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:71
 msgid "The CRS tab in the QGIS Options Dialog"
-msgstr ""
+msgstr "QGISオプションダイアログの座標参照系（CRS）タブ"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:73
 msgid ""
@@ -112,6 +125,8 @@ msgid ""
 ":guilabel:`when a new layer is created, or when a layer is loaded that has "
 "no CRS`. One of:"
 msgstr ""
+":guilabel:`レイヤのCRS` グループで、 :guilabel:`新しいレイヤが作成されるか、座標参照系のないレイヤが読み込まれた時... `"
+" のアクションとして以下のうちどれかを設定します。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:77
 msgid ""
@@ -124,6 +139,11 @@ msgid ""
 "values, i.e. the same behavior as all layers get when :ref:`a project is set"
 " to have no CRS <project_crs>`."
 msgstr ""
+"|radioButtonOn| :guilabel:`未知のCRSのまま`: "
+"CRSを持たないレイヤがロードされた時にCRSを選択するプロンプトを表示せず、CRSの選択は後回しにされます。一度にたくさんのレイヤを読み込むときに便利です。CRSの選択が後回しになっているレイヤは、"
+" :guilabel:`レイヤ` パネル内でレイヤの横にある |indicatorNoCRS| "
+"アイコンで識別可能です。これらのレイヤは参照されず、レイヤの座標は純粋な数値の非地球投影の値として扱われます。これはつまり "
+":ref:`プロジェクトのCRSが「投影なし」に設定された場合 <project_crs>` と同じ動作です。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:85
 msgid ""
@@ -134,42 +154,50 @@ msgid ""
 "in other cases you will need to contact the original author of the data to "
 "determine the correct CRS to use."
 msgstr ""
+"|radioButtonOff| :guilabel:`CRSダイアログを表示`: "
+"CRSを手動で選択するよう、ダイアログが表示されます。正しい選択をすることは非常に重要です。なぜなら、間違ったCRSを選択をすると、レイヤが地表の間違った位置に置かれてしまいます！付随するメタデータにレイヤの正しいCRSが記述されていることもありますが、場合によっては、使用すべき正しいCRSを決定するためにデータの元の作成者に連絡する必要があるでしょう。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:91
 msgid "|radioButtonOff| :guilabel:`Use project CRS`"
-msgstr "|radioButtonOff| :guilabel:`プロジェクトCRSを使用する`"
+msgstr "|radioButtonOff| :guilabel:`プロジェクトCRSを使う`"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:92
 msgid ""
 "|radioButtonOff| :guilabel:`Use default layer CRS`, as set in the "
 ":guilabel:`Default CRS for layers` combobox above."
 msgstr ""
+"|radioButtonOff| :guilabel:`デフォルトCRSを使う` 上にある :guilabel:`レイヤのデフォルトCRS` "
+"コンボボックスで設定されたものを使います。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:97
 msgid ""
 "To assign the same CRS to multiple layers that have no crs or have a wrong "
 "one in one operation:"
-msgstr ""
+msgstr "CRSのない、あるいはCRSを間違った複数のレイヤに対して、同じCRSを一度の操作で設定するには、"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:100
 msgid "Select the layers in the :guilabel:`Layers` panel"
-msgstr ""
+msgstr ":guilabel:`レイヤ` パネルで複数のレイヤを選択します"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:101
 msgid ""
 "Press :kbd:`Ctrl+Shift+C`. You could also right-click over one of the "
 "selected layers or go to :menuselection:`Layer --> Set CRS of layer(s)`"
 msgstr ""
+":kbd:`Ctrl+Shift+C` を押します。あるいは選択したレイヤのうち一つを右クリックするか、 :menuselection:`レイヤ -->"
+" レイヤCRSの設定` メニューをクリックします。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:103
 msgid "Find and select the right CRS to use"
-msgstr ""
+msgstr "使用する正しいCRSを探し、選択します"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:104
 msgid ""
 "And press :guilabel:`OK`. You can confirm that it has been set correctly in "
 "the :guilabel:`Source` tab of the layers' properties dialog."
 msgstr ""
+":guilabel:`OK` ボタンを押します。レイヤのプロパティダイアログの :guilabel:`ソース` "
+"タブで、CRSが正しく設定されていることを確認できます。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:107
 msgid ""
@@ -177,6 +205,8 @@ msgid ""
 "data source in any way, rather it just changes how QGIS interprets the raw "
 "coordinates from the layer in the current QGIS project."
 msgstr ""
+"この設定で CRS "
+"を変更しても、基礎となっているデータソースは全く変更されないことに留意してください。QGISがレイヤの生座標を現在のQGISプロジェクト内においてどのように解釈するかを変更するだけです。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:117
 msgid "Project Coordinate Reference Systems"
@@ -188,6 +218,8 @@ msgid ""
 "The project CRS determines how data is projected from its underlying raw "
 "coordinates to the flat map rendered within your QGIS map canvas."
 msgstr ""
+"QGIS の各プロジェクトも、関連づけられた座標参照システムを持っています。プロジェクトの CRS "
+"は、データがその基礎となる生の座標からQGISのマップキャンバス内にレンダリングされる地図平面に投影される方法を決定します。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:123
 msgid ""
@@ -199,6 +231,11 @@ msgid ""
 "project's CRS, so that they will all be rendered in the correct position "
 "with respect to each other!"
 msgstr ""
+"QGIS はラスタデータとベクタデータの両方に対して「オンザフライ」の CRS "
+"変換をサポートしています。これは、プロジェクト内の特定のマップレイヤの本来のCRS "
+"に関係なく、レイヤのCRSを常にプロジェクト用に定義された共通のCRSに自動的に変換します。舞台裏では、QGIS "
+"はプロジェクト内に含まれるすべてのレイヤを透過的にプロジェクトの CRS "
+"に再投影します。これによって、全てのレイヤがお互いに対して正しい位置にレンダリングされるのです！"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:131
 msgid ""
@@ -211,7 +248,7 @@ msgid ""
 "for the area you are mapping, and ensure that your QGIS project follows "
 "these standards."
 msgstr ""
-"QGISプロジェクトに適切なCRSを選択することが大切です。不適切なCRSを選択すると、地図は歪んで表示され、現実世界の相対的なサイズと地物の位置が正しく反映されない可能性があります。通常、狭い地理的領域で作業している間、特定の国または行政区域内で使用される多くの標準CRSがあります。どのCRSが図化する地域に適当または標準の選択であるかを調査し、QGISプロジェクトがこれらの標準に従っていることを確認することが大切です。"
+"QGISプロジェクトに適切なCRSを選択することが大切です。不適切なCRSを選択すると、地図が歪んで表示されたり、現実世界の地物の相対的な大きさや位置が正しく反映されない可能性があります。通常、狭い地理的領域での作業では、特定の国や行政区域内で使用される標準的なCRSが多数存在します。図化する地域にどのCRSが適当か、あるいは標準的な選択であるかを調査し、QGISプロジェクトがこれらの標準に従っていることを確認することが重要です。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:140
 msgid ""
@@ -226,6 +263,13 @@ msgid ""
 " default CRS to use for all newly created projects. This choice will be "
 "saved for use in subsequent QGIS sessions."
 msgstr ""
+"デフォルトでは、QGIS はグローバルなデフォルトの投影法を使用して新しいプロジェクトを開始します。このデフォルトの CRS は "
+"``EPSG:4326`` （「WGS 84」としても知られています）であり、グローバルな緯度/経度ベースの参照システムです。このデフォルトCRSは "
+":menuselection:`設定 -->` |options| :menuselection:`オプション...` （ "
+"figure_projection_options_ を参照）の :guilabel:`座標参照系（CRS）` タブで、 "
+":guilabel:`新しいプロジェクトが作られた時のCRS` "
+"の設定で変更することができます。プロジェクトのCRSを、新規プロジェクトに読み込まれた最初のレイヤーのCRSに合わせて自動的に設定するオプションと、新規作成されたすべてのプロジェクトで使用するデフォルトのCRSを選択するオプションがあります。この選択はその後の"
+" QGIS セッションで使用するために保存されます。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:151
 msgid ""
@@ -233,14 +277,16 @@ msgid ""
 ":menuselection:`Project --> Properties...` dialog. It will also be shown in "
 "the lower-right of the QGIS status bar."
 msgstr ""
+"プロジェクトのCRSは :menuselection:`プロジェクト --> プロパティ...` ダイアログの :guilabel:`座標参照系` "
+"タブからも設定できます。また、QGISのステータスバーの右下にも表示されます。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:160
 msgid "Project Properties Dialog"
-msgstr "[プロジェクトのプロパティ]ダイアログ"
+msgstr "プロジェクトのプロパティダイアログ"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:162
 msgid "Available options are:"
-msgstr ""
+msgstr "利用可能なオプションは次のとおりです。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:164
 msgid ""
@@ -252,6 +298,8 @@ msgid ""
 "using QGIS for non earth uses like role-playing game maps, building mapping "
 "or microscopic stuff. In this case:"
 msgstr ""
+"|unchecked| :guilabel:`投影なし（または未知/非地球投影）`: "
+"この設定をチェックすると、QGISプロジェクト内の全ての投影処理が無効となり、全てのレイヤとマップ座標が単純な2Dデカルト座標として扱われ、地表上の位置とは無関係になります。この設定はレイヤのCRSを（生の座標に基づいて）推測したり、ロールプレイングゲームのマップや建物のマップ、微視的な事柄のような地球以外の用途でQGISを使ったりする場合に使用できます。この場合、以下のような設定が適用されます。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:172
 msgid ""
