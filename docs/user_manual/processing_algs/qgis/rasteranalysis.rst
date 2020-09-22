@@ -7,6 +7,158 @@ Raster analysis
       :local:
       :depth: 1
 
+.. _qgiscellstatistics:
+
+Cell statistics |316|
+------------------------------------------
+
+The Cell statistics algorithm computes a value for each 
+cell of the output raster. At each cell location, the 
+output value is defined as a function of all overlaid 
+cell values of the input rasters.
+
+By default, a NoData cell in ANY of the input layers will result in a
+NoData cell in the output raster.
+If the :guilabel:`Ignore NoData values` option is checked,
+then NoData inputs will be ignored in the statistic calculation. This
+may result in NoData output for locations where all cells are NoData.
+
+The :guilabel:`reference layer` parameter specifies an existing raster layer to
+use as a reference when creating the output raster.
+The output raster will have the same extent, CRS, and pixel dimensions
+as this layer.
+
+Input raster layers that do not match the cell size of the reference 
+raster layer will be resampled using ``nearest neighbor resampling``. 
+The output raster data type will be set to the most complex 
+data type present in the input datasets except when using the 
+functions ``Mean`` and ``Standard deviation`` (data type is always ``Float32``) 
+or ``Count`` and ``Variety`` (data type is always ``Int32``).
+
+Statistics details:
+
+- ``Count``: The count statistic will always result in the number of cells without NoData values at the current cell location.
+
+- ``Median``: If the number of input layers is even, the median will be calculated as the arithmetic mean of the two middle values of the ordered cell input values.
+
+- ``Minority/Majority``: If no unique minority or majority could be found, the result is NoData, except all input cell values are equal.
+
+
+.. figure:: img/cellstatistics_mean.png
+  :align: center
+
+  Example for the cell statistics operation ``mean`` on three input rasters,
+  taking NoData cells (grey) into account.
+   
+  
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layers**
+     - ``INPUT``
+     - [multipleLayers]
+     - Input raster layers
+   * - **Statistic**
+     - ``STATISTIC``
+     - [enumeration]
+       Default: 0
+     - Available statistics. Options:
+
+       * 0 --- Sum
+       * 1 --- Count 
+       * 2 --- Mean
+       * 3 --- Median 
+       * 4 --- Standard deviation
+       * 5 --- Variance
+       * 6 --- Maximum
+       * 7 --- Minimum
+       * 8 --- Minority
+       * 9 --- Majority
+       * 10 --- Range (max - min)
+       * 11 --- Variety (unique value count)
+   * - **Ignore NoData values**
+     - ``IGNORE_NODATA``
+     - [boolean]
+     - Calculate statistics also for all cells stacks, ignoring NoData occurrence.
+   * - **Reference layer**
+     - ``REF_LAYER``
+     - [raster]
+     - The reference layer to create the output layer
+       from (extent, CRS, pixel dimensions)
+   * - **Output no data value**
+   
+       Optional
+     - ``OUTPUT_NO_DATA_VALUE``
+     - [number]
+
+       Default: -9999.0
+     - Value to use for nodata in the output layer
+   * - **Output layer**
+     - ``OUTPUT``
+     - [same as input]
+     - Specification of the output raster. One of:
+
+       * Save to a Temporary File
+       * Save to File...
+
+       The file encoding can also be changed here.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output raster**
+     - ``OUTPUT``
+     - [same as input]
+     - Output raster layer containing the result
+
+   * - **Extent**
+     - ``EXTENT``
+     - [extent]
+     - The spatial extent of the output raster layer
+   * - **CRS authority identifier**
+     - ``CRS_AUTHID``
+     - [crs]
+     - The coordinate reference system of the output raster layer
+   * - **Width in pixels**
+     - ``WIDTH_IN_PIXELS``
+     - [integer]
+     - The width in pixels of the output raster layer
+   * - **Height in pixels**
+     - ``HEIGHT_IN_PIXELS``
+     - [integer]
+     - The height in pixels of the output raster layer
+   * - **Total pixel count**
+     - ``TOTAL_PIXEL_COUNT``
+     - [integer]
+     - The count of pixels in the output raster layer
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:cellstatistics``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
 .. _qgisfuzzifyrastergaussianmembership:
 
 Fuzzify raster (gaussian membership) |312|
