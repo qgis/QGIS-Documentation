@@ -26,8 +26,8 @@ QGIS Documentation is written in English with :file:`.rst` files.
 In order to provide translations:
 
 #. A prebuild script creates translation files named :file:`.po` files for the
-   English language in the folder :file:`/QGIS-Documentation/i18n/en`.
-#. These "originals" are then copied by the script to the :file:`i18n` folders for
+   English language in the folder :file:`/QGIS-Documentation/locale/en`.
+#. These "originals" are then copied by the script to the :file:`locale` folders for
    other languages.
 #. The sentences in the :file:`.po` files are pushed to the Transifex web platform,
    and made available for translators who can begin to translate from English to their
@@ -85,11 +85,11 @@ So why did I choose this document?
 
 The build process has created the English :file:`.po` file which can be found here::
 
- QGIS-Documentation/i18n/en/LC_MESSAGES/docs/user_manual/plugins/plugins_heatmap.po
+ QGIS-Documentation/locale/en/LC_MESSAGES/docs/user_manual/plugins/plugins_heatmap.po
 
 The equivalent Dutch :file:`.po` file (basically a copy) can be found here::
 
- QGIS-Documentation/i18n/nl/LC_MESSAGES/docs/user_manual/plugins/plugins_heatmap.po
+ QGIS-Documentation/locale/nl/LC_MESSAGES/docs/user_manual/plugins/plugins_heatmap.po
 
 Along this file you will see a tiny :file:`.mo` file which indicates that it
 does not hold any translations yet.
@@ -146,7 +146,7 @@ With Qt Linguist, you need to:
 
 #. manually grab the :file:`.po` or :file:`.ts`  file(s). This can be achieved
    by downloading the file(s) either from Transifex platform or from the
-   :file:`i18n/$language` folder of the source repository (in GitHub),
+   :file:`locale/$language` folder of the source repository (in GitHub),
 #. proceed to the translation locally
 #. upload the modified files to their sources (Transifex or GitHub).
 
