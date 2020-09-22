@@ -767,7 +767,7 @@ addition, the attributes of the nearby suitable areas (including the
 ``id``), and the distance to that location.
 
 #. Open the attribute table of the result of the join
-#. Note of the ``id`` for the four nearests suitable areas, and
+#. Note the ``id`` of the four nearest suitable areas, and
    then close the attribute table
 #. Open the attribute table of the ``suitable_areas`` layer
 #. Build a query to select the four suitable areas closest to the
