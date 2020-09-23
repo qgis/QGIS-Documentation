@@ -10,7 +10,7 @@ Raster analysis
 .. _qgiscellstatistics:
 
 Cell statistics |316|
-------------------------------------------
+---------------------
 
 The Cell statistics algorithm computes a value for each 
 cell of the output raster. At each cell location, the 
@@ -28,14 +28,13 @@ use as a reference when creating the output raster.
 The output raster will have the same extent, CRS, and pixel dimensions
 as this layer.
 
+**Calculation details:**
 Input raster layers that do not match the cell size of the reference 
 raster layer will be resampled using ``nearest neighbor resampling``. 
 The output raster data type will be set to the most complex 
 data type present in the input datasets except when using the 
 functions ``Mean`` and ``Standard deviation`` (data type is always ``Float32``) 
 or ``Count`` and ``Variety`` (data type is always ``Int32``).
-
-Statistics details:
 
 - ``Count``: The count statistic will always result in the number of cells without NoData values at the current cell location.
 
@@ -48,7 +47,7 @@ Statistics details:
   :align: center
 
   Example for the cell statistics operation ``mean`` on three input rasters,
-  taking NoData cells (grey) into account.
+  taking NoData cells (grey) into account. Raster data is based on `ESRI Cell statistics example. <https://pro.arcgis.com/en/pro-app/tool-reference/spatial-analyst/how-cell-statistics-works.htm>`_
    
   
 
@@ -81,8 +80,8 @@ Parameters
        * 5 --- Variance
        * 6 --- Maximum
        * 7 --- Minimum
-       * 8 --- Minority
-       * 9 --- Majority
+       * 8 --- Minority (least common value)
+       * 9 --- Majority (most common value)
        * 10 --- Range (max - min)
        * 11 --- Variety (unique value count)
    * - **Ignore NoData values**
@@ -2274,3 +2273,4 @@ Python code
    source folder.
 
 .. |312| replace:: ``NEW in 3.12``
+.. |316| replace:: ``NEW in 3.16``
