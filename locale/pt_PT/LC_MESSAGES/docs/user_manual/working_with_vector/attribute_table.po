@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-26 13:13+0200\n"
+"POT-Creation-Date: 2020-09-24 11:25+0200\n"
 "PO-Revision-Date: 2020-03-16 19:32+0000\n"
 "Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
 "Language-Team: Portuguese (Portugal) (https://www.transifex.com/qgis/teams/6144/pt_PT/)\n"
@@ -1557,32 +1557,32 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:815
 msgid ""
-"In :ref:`figure_select_by_value`, all the regions where the mean altitude of"
-" the airports is greater than 500 meters above sea level are selected."
+"In :numref:`figure_select_by_value`, all the regions where the mean altitude"
+" of the airports is greater than 500 meters above sea level are selected."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:818
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:819
 msgid ""
 "You will find that many different aggregation functions are available in the"
 " form."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:825
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:826
 msgid "Select parent features with child values"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:832
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:833
 msgid "Introducing many-to-many (N-M) relations"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:834
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:835
 msgid ""
 "N-M relations are many-to-many relations between two tables. For instance, "
 "the ``airports`` and ``airlines`` layers: an airport receives several "
 "airline companies and an airline company flies to several airports."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:838
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:839
 msgid ""
 "This SQL code creates the three tables we need for an N-M relationship in a "
 "PostgreSQL/PostGIS schema named *locations*. You can run the code using the "
@@ -1596,7 +1596,7 @@ msgid ""
 " an airline only if both already exist in their layers."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:890
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:891
 msgid ""
 "Instead of PostgreSQL you can also use GeoPackage. In this case, the three "
 "tables can be created manually using the :menuselection:`Database --> DB "
@@ -1604,7 +1604,7 @@ msgid ""
 "not needed."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:894
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:895
 msgid ""
 "Foreign key constraints in ``airports_airlines`` table can´t be created "
 "using :menuselection:`Table --> Create Table…` or :menuselection:`Table --> "
@@ -1613,33 +1613,33 @@ msgid ""
 "``airports_airlines`` table should be created in two steps:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:899
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:900
 msgid ""
 "Set up the table only with the ``id`` field using :menuselection:`Table --> "
 "Create Table…`"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:900
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:901
 msgid ""
 "Using :menuselection:`Database --> SQL Window…`, type and execute this SQL "
 "code:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:918
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:919
 msgid ""
 "Then in QGIS, you should set up two :ref:`one-to-many relations "
 "<one_to_many_relation>` as explained above:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:921
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:922
 msgid "a relation between ``airlines`` table and the pivot table;"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:922
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:923
 msgid "and a second one between ``airports`` table and the pivot table."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:924
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:925
 msgid ""
 "An easier way to do it (only for PostgreSQL) is using the "
 ":guilabel:`Discover Relations` in :menuselection:`Project --> Properties -->"
@@ -1648,11 +1648,11 @@ msgid ""
 " in the QGIS project first."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:934
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:935
 msgid "Relations and autodiscover"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:936
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:937
 msgid ""
 "In case you want to remove an ``airport`` or an ``airline``, QGIS won't "
 "remove the associated record(s) in ``airports_airlines`` table. This task "
@@ -1660,11 +1660,11 @@ msgid ""
 "pivot table creation as in the current example."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:941
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:942
 msgid "**Combining N-M relation with automatic transaction group**"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:943
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:944
 msgid ""
 "You should enable the transaction mode in :menuselection:`Project Properties"
 " --> Data Sources -->` when working on such context. QGIS should be able to "
@@ -1672,7 +1672,7 @@ msgid ""
 "tables)."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:947
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:948
 msgid ""
 "Finally we have to select the right cardinalilty in the "
 ":menuselection:`Layer Properties --> Attributes Form` for the ``airports`` "
@@ -1680,11 +1680,11 @@ msgid ""
 "(id)** option and for the second one the **airports (id)** option."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:957
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:958
 msgid "Set relationship cardinality"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:959
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:960
 msgid ""
 "Now you can associate an airport with an airline (or an airline with an "
 "airport) using :guilabel:`Add child feature` or :guilabel:`Link existing "
@@ -1692,15 +1692,15 @@ msgid ""
 "the ``airports_airlines`` table."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:969
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:970
 msgid "N-M relationship between airports and airlines"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:971
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:972
 msgid "Using **Many to one relation** cardinality"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:973
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:974
 msgid ""
 "Sometimes hiding the pivot table in an N-M relationship is not desirable. "
 "Mainly because there are attributes in the relationship that can only have "
@@ -1711,11 +1711,11 @@ msgid ""
 "table."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:980
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:981
 msgid "**Pivot table primary key**"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:982
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:983
 msgid ""
 "Avoid using multiple fields in the primary key in a pivot table. QGIS "
 "assumes a single primary key so a constraint like ``constraint "

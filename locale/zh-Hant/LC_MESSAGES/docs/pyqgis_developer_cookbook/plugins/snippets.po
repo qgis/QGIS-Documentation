@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-26 13:13+0200\n"
+"POT-Creation-Date: 2020-09-24 11:25+0200\n"
 "PO-Revision-Date: 2020-03-16 19:24+0000\n"
 "Language-Team: Chinese Traditional (https://www.transifex.com/qgis/teams/6144/zh-Hant/)\n"
 "MIME-Version: 1.0\n"
@@ -17,40 +17,75 @@ msgstr ""
 "Language: zh-Hant\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:30
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:36
 msgid "Code Snippets"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:35
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:41
 msgid "This section features code snippets to facilitate plugin development."
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:40
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:46
 msgid "How to call a method by a key shortcut"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:42
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:48
 msgid "In the plug-in add to the :func:`initGui()`"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:51
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:57
 msgid "To :func:`unload()` add"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:57
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:63
 msgid "The method that is called when CTRL+I is pressed"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:67
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:73
 msgid "How to toggle Layers"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:69
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:75
 msgid ""
 "There is an API to access layers in the legend. Here is an example that "
 "toggles the visibility of the active layer"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:83
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:89
 msgid "How to access attribute table of selected features"
+msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:120
+msgid "Interface for plugin in the options dialog"
+msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:122
+msgid ""
+"You can add a custom plugin options tab to :menuselection:`Settings --> "
+"Options`. This is preferable over adding a specific main menu entry for your"
+" plugin's options, as it keeps all of the QGIS application settings and "
+"plugin settings in a single place which is easy for users to discover and "
+"navigate."
+msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:127
+msgid ""
+"The following snippet will just add a new blank tab for the plugin's "
+"settings, ready for you to populate with all the options and settings "
+"specific to your plugin. You can split the following classes into different "
+"files. In this example, we are adding two classes into the main "
+":file:`mainPlugin.py` file."
+msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:155
+msgid ""
+"Finally we are adding the imports and modifying the ``__init__`` function:"
+msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:186
+msgid ""
+"You can apply a similar logic to add the plugin custom option to the layer "
+"properties dialog using the classes :class:`QgsMapLayerConfigWidgetFactory "
+"<qgis.gui.QgsMapLayerConfigWidgetFactory>` and "
+":class:`QgsMapLayerConfigWidget <qgis.gui.QgsMapLayerConfigWidget>`."
 msgstr ""

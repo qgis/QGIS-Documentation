@@ -5,15 +5,16 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# mnamihdk, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-26 13:13+0200\n"
+"POT-Creation-Date: 2020-09-24 11:25+0200\n"
 "PO-Revision-Date: 2020-03-16 19:26+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: mnamihdk, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -68,115 +69,157 @@ msgid ""
 ":ref:`httpserver`."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:48
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:51
+msgid "Name"
+msgstr "名前"
+
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:52
+msgid "Description"
+msgstr "説明"
+
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:53
+msgid "Default"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:54
+msgid "Services"
+msgstr "サービス"
+
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:56
 msgid "QGIS_OPTIONS_PATH"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:50
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:57
 msgid ""
 "Specifies the path to the directory with settings. It works the same way as "
 "QGIS application ``--optionspath`` option. It is looking for settings file "
 "in ``<QGIS_OPTIONS_PATH>/QGIS/QGIS3.ini``."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:56
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:60
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:79
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:89
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:99
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:119
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:160
+msgid "''"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:61
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:80
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:90
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:100
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:109
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:114
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:120
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:129
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:144
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:149
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:154
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:161
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:180
+msgid "All"
+msgstr "All"
+
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:63
 msgid "QUERY_STRING"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:58
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:64
 msgid ""
 "The query string, normally passed by the web server. This variable can be "
 "useful while testing QGIS server binary from the command line."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:61
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:67
 msgid ""
 "For example for testing a GetCapabilities request on the command line to a "
 "project that also requires a PostgreSQL connection defined in a "
 "pg_service.conf file:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:69
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:77
 msgid ""
 "The result should be either the content of the GetCapabilities response or, "
 "if something is wrong, an error message."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:73
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:82
 msgid "QGIS_PROJECT_FILE"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:75
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:83
 msgid ""
 "The ``.qgs`` or ``.qgz`` project file, normally passed as a parameter in the"
 " query string (with *MAP*), you can also set it as an environment variable "
 "(for example by using ``mod_rewrite`` Apache module)."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:79
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:87
 msgid ""
 "Note that you may also indicate a project stored in PostgreSQL, e.g. "
 "``postgresql://localhost:5432?sslmode=disable&dbname=mydb&schema=myschema&project=myproject``."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:84
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:92
 msgid "QGIS_SERVER_LOG_FILE"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:86
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:93
 msgid ""
 "Specify path and filename. Make sure that server has proper permissions for "
 "writing to file. File should be created automatically, just send some "
 "requests to server. If it's not there, check permissions."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:90
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:97
 msgid ""
 "QGIS_SERVER_LOG_FILE is deprecated since QGIS 3.4. File logging support will"
 " be removed in QGIS 4.0."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:94
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:102
 msgid "QGIS_SERVER_LOG_STDERR"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:96
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:103
 msgid ""
-"Activate logging to stderr. It's disabled by default. This variable has no "
-"effect when ``QGIS_SERVER_LOG_FILE`` is set."
+"Activate logging to stderr. This variable  has no effect when "
+"``QGIS_SERVER_LOG_FILE`` is set."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:99
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:137
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:175
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:106
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:135
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:167
 msgid "``0`` or ``false`` (case insensitive)"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:100
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:138
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:176
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:107
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:136
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:168
 msgid "``1`` or ``true`` (case insensitive)"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:103
-msgid "MAX_CACHE_LAYERS"
-msgstr ""
-
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:105
-msgid "Specify the maximum number of cached layers (default: ``100``)."
-msgstr ""
-
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:109
-msgid "DISPLAY"
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:108
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:137
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:169
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:179
+msgid "false"
 msgstr ""
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:111
-msgid ""
-"This is used to pass (fake) X server display number (needed on Unix-like "
-"systems)."
+msgid "MAX_CACHE_LAYERS"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:115
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:112
+msgid "Specify the maximum number of cached layers (default: ``100``)."
+msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:113
+msgid "100"
+msgstr "100"
+
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:116
 msgid "QGIS_PLUGINPATH"
 msgstr ""
 
@@ -190,121 +233,184 @@ msgstr ""
 msgid "QGIS_SERVER_LOG_LEVEL"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:124
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:123
 msgid "Specify desired log level. Available values are:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:126
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:125
 msgid "``0`` or ``INFO`` (log all requests)"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:127
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:126
 msgid "``1`` or ``WARNING``"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:128
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:127
 msgid ""
 "``2`` or ``CRITICAL`` (log just critical errors, suitable for production "
 "purposes)"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:132
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:128
+msgid "0"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:131
 msgid "QGIS_SERVER_PARALLEL_RENDERING"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:134
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:132
 msgid ""
 "Activates parallel rendering for WMS GetMap requests. It's disabled "
 "(``false``) by default. Available values are:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:142
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:138
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:170
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:186
+msgid "WMS"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:140
 msgid "QGIS_SERVER_MAX_THREADS"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:144
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:141
 msgid ""
-"Number of threads to use when parallel rendering is activated. Default value"
-" is ``-1`` to use the number of processor cores."
+"Number of threads to use when parallel rendering is activated. If value is "
+"``-1`` it uses the number of processor cores."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:149
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:143
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:185
+msgid "-1"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:146
 msgid "QGIS_SERVER_CACHE_DIRECTORY"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:151
-msgid ""
-"Specifies the network cache directory on the filesystem. The default "
-"directory is named ``cache`` and located in the profile directory."
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:147
+msgid "Specifies the network cache directory on the filesystem."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:156
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:148
+msgid "``cache`` in profile directory"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:151
 msgid "QGIS_SERVER_CACHE_SIZE"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:158
-msgid "Sets the network cache size in MB. The default value is ``50`` MB."
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:152
+msgid "Sets the network cache size in MB."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:162
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:153
+msgid "50 MB"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:156
 msgid "QGIS_SERVER_OVERRIDE_SYSTEM_LOCALE"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:164
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:157
 msgid ""
 "Sets LOCALE to be used by QGIS server. The default value is empty (no "
 "override)."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:166
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:159
 msgid "Example: ``de_CH.utf8``"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:170
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:163
 msgid "QGIS_SERVER_SHOW_GROUP_SEPARATOR"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:172
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:164
 msgid ""
 "Defines whether a group separator (e.g. thousand separator) should be used "
 "for numeric values (e.g. in GetFeatureInfo responses). The default value is "
 "``0``."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:180
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:172
 msgid "QGIS_SERVER_IGNORE_BAD_LAYERS"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:182
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:173
 msgid ""
 "\"Bad\" layers are layers that cannot be loaded. The default behavior of "
 "QGIS Server is to consider the project as not available if it contains a bad"
 " layer."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:185
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:176
 msgid ""
 "The default behavior can be overridden by setting this variable to ``1`` or "
 "``true``. In this case, \"bad\" layers will just be ignored, and the project"
 " will be considered valid and available."
 msgstr ""
 
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:182
+msgid "QGIS_SERVER_WMS_MAX_HEIGHT / QGIS_SERVER_WMS_MAX_WIDTH"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:183
+msgid ""
+"Maximum height/width for a WMS request. The most conservative between this "
+"and the project one is used. If the value is ``-1``, it means that there is "
+"no maximum set."
+msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:188
+msgid "QGIS_SERVER_API_RESOURCES_DIRECTORY"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:189
+msgid ""
+"Base directory for all OGC API (such as OAPIF/WFS3) static resources (HTML "
+"templates, CSS, JS, ...)"
+msgstr ""
+
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:191
+msgid "depends on packaging"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:192
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:197
+msgid "WFS"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:194
+msgid "QGIS_SERVER_API_WFS3_MAX_LIMIT"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:195
+msgid "Maximum value for ``limit`` in a features request."
+msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:196
+msgid "10000"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:203
 msgid "Settings summary"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:193
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:205
 msgid ""
 "When QGIS Server is starting, you have a summary of all configurable "
 "parameters thanks to environment variables. Moreover, the value currently "
 "used and the origin is also displayed."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:197
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:209
 msgid "For example with spawn-fcgi:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:228
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:240
 msgid ""
 "In this particular case, we know that **QGIS_SERVER_MAX_THREADS** and "
 "**QGIS_SERVER_PARALLEL_RENDERING** values are read from the ini file found "
@@ -314,11 +420,11 @@ msgid ""
 "**true** and **4** threads."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:236
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:248
 msgid "Short name for layers, groups and project"
 msgstr "レイヤー、グループ、およびプロジェクトの短い名前"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:238
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:250
 msgid ""
 "A number of elements have both a ``<Name>`` and a ``<Title>``. The **Name** "
 "is a text string used for machine-to-machine communication while the "
@@ -327,25 +433,24 @@ msgstr ""
 "要素の数は、 ``<Name>`` と ``<Title>`` の両方を有します。 **名** "
 "は、マシン・ツー・マシンの通信に使用するテキスト文字列で、 **タイトル** は人間の利益のものです。"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:242
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:254
 msgid ""
 "For example, a dataset might have the descriptive Title “Maximum Atmospheric"
-" Temperature” and be requested using the abbreviated Name “ATMAX”. User can "
-"already set title for layers, groups and project."
+" Temperature” and be requested using the abbreviated **Name** “ATMAX”. User "
+"can already set title for layers, groups and project."
 msgstr ""
-"例えば、データセットは、説明のタイトル「最高気温」を持っているかもしれないと略称「ATMAX」を使用して要求します。ユーザーはすでにレイヤー、グループやプロジェクトのタイトルを設定できます。"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:246
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:258
 msgid ""
 "OWS name is based on the name used in layer tree. This name is more a label "
 "for humans than a name for machine-to-machine communication."
 msgstr "OWS名はレイヤーツリーに使用される名前に基づいています。この名前は、マシン間通信のための名前よりもより人間のためのラベルです。"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:249
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:261
 msgid "QGIS Server supports:"
 msgstr "QGISサーバーがサポートするのは："
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:251
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:263
 msgid ""
 "short name line edits to layers properties You can change this by right "
 "clicking on a layer, choose :menuselection:`Properties --> Metadata tab --> "
@@ -354,21 +459,21 @@ msgstr ""
 "レイヤープロパティへの短い名前の行編集　これを変更するには、レイヤーを右クリックして、 :menuselection:`プロパティ --> "
 "[メタデータ]タブ --> 説明 --> 短い名前` を選択します。"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:255
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:267
 msgid "WMS data dialog to layer tree group (short name, title, abstract)"
 msgstr "レイヤーツリーグループへのWMSデータダイアログ（短い名前、タイトル、要約）"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:257
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:269
 msgid ""
 "By right clicking on a layer group and selecting the :guilabel:`Set Group "
 "WMS data` option you will get:"
 msgstr "レイヤーグループを右クリックし、 :guilabel:`グループWMS データを設定` オプションを選択すると、次のようになります："
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:264
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:276
 msgid "Set group WMS data dialog"
 msgstr "グループWMSデータダイアログを設定する"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:266
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:278
 msgid ""
 "short name line edits to project properties - add a regexp validator "
 "``\"^[A-Za-z][A-Za-z0-9\\._-]*\"`` to short name line edit accessible "
@@ -377,7 +482,7 @@ msgstr ""
 "プロジェクトプロパティへの短い名前の行編集 - 静的メソッドを介して短い名前の行編集にアクセス可能な正規表現バリデータ "
 "``「^[A-Za-z][A-Za-z0-9\\._-]*」`` を追加します"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:269
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:281
 msgid ""
 "add a regexp validator ``\"^[A-Za-z][A-Za-z0-9\\._-]*\"`` to short name line"
 " edit accessible through a static method"
@@ -385,7 +490,7 @@ msgstr ""
 "静的メソッドを介して短い名前のラインエディットにアクセス可能な正規表現のバリデータ ``「^[A-ZA-z][A-ZA-Z0-9\\._-]*」`` "
 "を追加します"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:272
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:284
 msgid ""
 "You can choose a short name for the project root by going to "
 ":menuselection:`Project properties --> OWS Server --> Service capabilities "
@@ -394,21 +499,21 @@ msgstr ""
 ":menuselection:`プロジェクトのプロパティ --> OWSサーバー --> サービスの機能 --> 短い名前` "
 "の順に選択すると、プロジェクトルートの短い名前を選択できます。"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:275
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:287
 msgid "add a ``TreeName`` element in the ``fullProjectSettings``"
 msgstr "``fullProjectSettings`` に ``TreeName`` 要素を追加"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:277
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:289
 msgid ""
 "If a short name has been set for layers, groups or project it is used by "
 "QGIS Sever as the layer name."
 msgstr "短い名前がレイヤー、グループやプロジェクトのために設定されている場合には、レイヤー名としてQGISサーバーによって使用されます。"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:281
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:293
 msgid "Connection to service file"
 msgstr "サービスファイルへの接続"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:283
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:295
 msgid ""
 "In order to make apache aware of the PostgreSQL service file (see the :ref"
 ":`pg-service-file` section) you need to make your :file:`*.conf` file look "
@@ -417,11 +522,11 @@ msgstr ""
 "PostgreSQLのサービス・ファイルのApacheが認識できるようにするために（ :ref:`PGサービスファイル` セクションを参照） "
 ":file:`*.conf` ファイルのようなを見て、確認する必要があり:"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:299
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:311
 msgid "Add fonts to your linux server"
 msgstr "お使いのLinuxサーバーにフォントを追加"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:301
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:313
 msgid ""
 "Keep in mind that you may use QGIS projects that point to fonts that may not"
 " exist by default on other machines. This means that if you share the "
@@ -430,7 +535,7 @@ msgid ""
 msgstr ""
 "他のマシン上のデフォルトでは存在しないかもしれないフォントを指すQGISプロジェクトを使用するかもしれないことに注意してください。これは、プロジェクトを共有する場合（フォントがターゲットマシン上に存在しない場合）、それは他のマシン上で異なって見える可能性があることを意味します。"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:305
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:317
 msgid ""
 "In order to ensure this does not happen you just need to install the missing"
 " fonts on the target machine. Doing this on desktop systems is usually "
@@ -438,16 +543,16 @@ msgid ""
 msgstr ""
 "これが起こらないようにするために、単にターゲットマシン上で不足しているフォントをインストールする必要があります。デスクトップシステム上でこれを行うのは通常は自明です（フォントをダブルクリック）。"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:308
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:320
 msgid ""
 "For linux, if you don't have a desktop environment installed (or you prefer "
 "the command line) you need to:"
 msgstr "Linuxに対しては、デスクトップ環境をインストールしていない（または、コマンドラインを好む）場合、する必要があります："
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:310
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:322
 msgid "On Debian based systems:"
 msgstr "Debianのベースのシステム:"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:323
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:335
 msgid "On Fedora based systems:"
 msgstr "Fedoraのベースのシステム:"

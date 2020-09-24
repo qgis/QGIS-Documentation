@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-26 13:13+0200\n"
+"POT-Creation-Date: 2020-09-24 11:25+0200\n"
 "PO-Revision-Date: 2020-03-16 19:32+0000\n"
 "Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2020\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
@@ -1818,26 +1818,25 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:815
 msgid ""
-"In :ref:`figure_select_by_value`, all the regions where the mean altitude of"
-" the airports is greater than 500 meters above sea level are selected."
+"In :numref:`figure_select_by_value`, all the regions where the mean altitude"
+" of the airports is greater than 500 meters above sea level are selected."
 msgstr ""
-":numref:`figure_select_by_value` 에서, 공항의 평균 해발고도가 500m를 초과하는 모든 지역을 선택합니다."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:818
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:819
 msgid ""
 "You will find that many different aggregation functions are available in the"
 " form."
 msgstr "이 양식에서 여러 서로 다른 집계 함수들을 사용할 수 있을 것입니다."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:825
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:826
 msgid "Select parent features with child values"
 msgstr "자식 값으로 부모 피처 선택"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:832
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:833
 msgid "Introducing many-to-many (N-M) relations"
 msgstr "다대다(N-M) 관계 소개"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:834
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:835
 msgid ""
 "N-M relations are many-to-many relations between two tables. For instance, "
 "the ``airports`` and ``airlines`` layers: an airport receives several "
@@ -1846,7 +1845,7 @@ msgstr ""
 "N-M 관계란 두 테이블 간의 다대다 관계를 말합니다. ``airports`` 와 ``airlines`` 레이어를 예로 들 수 있습니다."
 " 공항은 여러 항공사의 노선을 받아들이고 항공사는 여러 공항에 이착륙합니다."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:838
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:839
 msgid ""
 "This SQL code creates the three tables we need for an N-M relationship in a "
 "PostgreSQL/PostGIS schema named *locations*. You can run the code using the "
@@ -1868,7 +1867,7 @@ msgstr ""
 "합니다. 공항과 항공사 둘 다 이미 각각의 레이어에 존재하는 경우에만 공항을 항공사와 관련지을 수 있도록 강제하는 것이 이 테이블의 "
 "*제약조건* 입니다."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:890
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:891
 msgid ""
 "Instead of PostgreSQL you can also use GeoPackage. In this case, the three "
 "tables can be created manually using the :menuselection:`Database --> DB "
@@ -1879,7 +1878,7 @@ msgstr ""
 "--> DB Manager…` 메뉴를 통해 세 테이블을 직접 생성할 수 있습니다. GeoPackage에는 스키마가 존재하지 않기 때문에 "
 "접두어 *locations* 을 붙일 필요도 없습니다."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:894
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:895
 msgid ""
 "Foreign key constraints in ``airports_airlines`` table can´t be created "
 "using :menuselection:`Table --> Create Table…` or :menuselection:`Table --> "
@@ -1892,14 +1891,14 @@ msgstr ""
 ":menuselection:`Database --> SQL Window…` 를 사용해서 생성해야 합니다. GeoPackage는 *ADD "
 "CONSTRAINT* 선언문을 지원하지 않으므로 ``airports_airlines`` 테이블을 다음 두 단계를 거쳐 생성해야 합니다:"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:899
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:900
 msgid ""
 "Set up the table only with the ``id`` field using :menuselection:`Table --> "
 "Create Table…`"
 msgstr ""
 ":menuselection:`Table --> Create Table…` 메뉴를 사용해서 ``id`` 필드만 보유한 테이블을 설정합니다."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:900
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:901
 msgid ""
 "Using :menuselection:`Database --> SQL Window…`, type and execute this SQL "
 "code:"
@@ -1907,7 +1906,7 @@ msgstr ""
 ":menuselection:`Database --> SQL Window…` 메뉴로 SQL 창을 열고, 다음 SQL 코드를 입력하고 "
 "실행합니다:"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:918
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:919
 msgid ""
 "Then in QGIS, you should set up two :ref:`one-to-many relations "
 "<one_to_many_relation>` as explained above:"
@@ -1915,15 +1914,15 @@ msgstr ""
 "그 다음 QGIS에서, 앞에서 설명한 대로 :ref:`일대다(1-N) 관계 <one_to_many_relation>` 2개를 설정해야 "
 "합니다:"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:921
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:922
 msgid "a relation between ``airlines`` table and the pivot table;"
 msgstr "``airlines`` 테이블과 피벗 테이블 간의 관계"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:922
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:923
 msgid "and a second one between ``airports`` table and the pivot table."
 msgstr "``airports`` 테이블과 피벗 테이블 간의 두 번째 관계"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:924
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:925
 msgid ""
 "An easier way to do it (only for PostgreSQL) is using the "
 ":guilabel:`Discover Relations` in :menuselection:`Project --> Properties -->"
@@ -1936,11 +1935,11 @@ msgstr ""
 " 있습니다. QGIS가 사용자 데이터베이스의 모든 관계를 자동으로 읽어들여, 사용자는 필요한 두 관계만 선택하면 됩니다. 먼저 QGIS "
 "프로젝트에 세 테이블을 불러와야 한다는 것을 잊지마세요."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:934
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:935
 msgid "Relations and autodiscover"
 msgstr "관계와 자동검색"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:936
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:937
 msgid ""
 "In case you want to remove an ``airport`` or an ``airline``, QGIS won't "
 "remove the associated record(s) in ``airports_airlines`` table. This task "
@@ -1951,11 +1950,11 @@ msgstr ""
 "테이블에서 관련 레코드(들)를 제거하지 않을 것입니다. 현재 예시에서처럼 피벗 테이블 생성 시 올바른 *제약조건* 을 지정한 경우 "
 "데이터베이스가 관련 레코드(들)를 제거할 것입니다."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:941
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:942
 msgid "**Combining N-M relation with automatic transaction group**"
 msgstr "**다대다 관계를 자동 트랜잭션(transaction) 그룹과 결합하기**"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:943
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:944
 msgid ""
 "You should enable the transaction mode in :menuselection:`Project Properties"
 " --> Data Sources -->` when working on such context. QGIS should be able to "
@@ -1966,7 +1965,7 @@ msgstr ""
 "옵션에서 트랜잭션 모드를 활성화시켜야 합니다. QGIS가 모든 테이블(``airlines``, ``airports`` 및 피벗 테이블)에"
 " 있는 행(들)을 추가하거나 업데이트할 수 있어야 하기 때문입니다."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:947
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:948
 msgid ""
 "Finally we have to select the right cardinalilty in the "
 ":menuselection:`Layer Properties --> Attributes Form` for the ``airports`` "
@@ -1977,11 +1976,11 @@ msgstr ""
 "``airports`` 및 ``airlines`` 레이어를 위한 올바른 기수성(cardinality)을 선택해야 합니다. 전자의 경우 "
 "**airlines (id)** 옵션을, 후자의 경우 **airports (id)** 옵션을 선택해야 합니다."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:957
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:958
 msgid "Set relationship cardinality"
 msgstr "관계 기수성 설정"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:959
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:960
 msgid ""
 "Now you can associate an airport with an airline (or an airline with an "
 "airport) using :guilabel:`Add child feature` or :guilabel:`Link existing "
@@ -1992,15 +1991,15 @@ msgstr ""
 " feature` 를 통해 공항을 항공사와 (또는 항공사를 공항과) 관련시킬 수 있습니다. 레코드가 "
 "``airports_airlines`` 테이블에 자동적으로 삽입될 것입니다."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:969
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:970
 msgid "N-M relationship between airports and airlines"
 msgstr "공항과 항공사 사이의 N-M 관계"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:971
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:972
 msgid "Using **Many to one relation** cardinality"
 msgstr "**다대일 관계** 기수성 사용하기"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:973
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:974
 msgid ""
 "Sometimes hiding the pivot table in an N-M relationship is not desirable. "
 "Mainly because there are attributes in the relationship that can only have "
@@ -2015,11 +2014,11 @@ msgstr ""
 ":guilabel:`On map identification` 옵션을 (:menuselection:`Layer Properties --> "
 "Attributes Form --> Available widgets --> Fields`) 활성화시켜보면 재미있을 수도요."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:980
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:981
 msgid "**Pivot table primary key**"
 msgstr "**피벗 테이블의 기본 키**"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:982
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:983
 msgid ""
 "Avoid using multiple fields in the primary key in a pivot table. QGIS "
 "assumes a single primary key so a constraint like ``constraint "

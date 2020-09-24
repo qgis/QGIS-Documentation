@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-26 13:13+0200\n"
+"POT-Creation-Date: 2020-09-24 11:25+0200\n"
 "PO-Revision-Date: 2020-03-16 19:32+0000\n"
 "Last-Translator: Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
@@ -52,6 +52,9 @@ msgid ""
 "This version of QGIS does not track if somebody else is editing the same "
 "feature at the same time as you are. The last person to save the edits wins."
 msgstr ""
+"Esta versión de QGIS no rastrea si alguien más está editando la misma "
+"función al mismo tiempo que usted. La última persona que guarde las "
+"ediciones gana."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:34
 msgid "Setting the Snapping Tolerance and Search Radius"
@@ -63,6 +66,9 @@ msgid ""
 "an appropriate value of snapping tolerance and search radius for features "
 "vertices."
 msgstr ""
+"Para una edición óptima y precisa de las geometrías de capas vectoriales, "
+"necesitamos establecer un valor apropiado de tolerancia de ajuste y radio de"
+" búsqueda para los vértices de las entidades."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:43
 msgid "Snapping tolerance"
@@ -76,6 +82,11 @@ msgid ""
 "will leave the vertex where you release the mouse button, instead of "
 "snapping it to an existing vertex or segment."
 msgstr ""
+"Cuando agrega un nuevo vértice o mueve uno existente, la tolerancia de "
+"ajuste es la distancia que usa QGIS para buscar el vértice o segmento más "
+"cercano al que está tratando de conectarse. Si no se encuentra dentro de la "
+"tolerancia de ajuste, QGIS dejará el vértice donde suelta el botón del "
+"mouse, en lugar de ajustarlo a un vértice o segmento existente."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:52
 msgid ""
@@ -91,6 +102,10 @@ msgid ""
 "The snapping mode, tolerance value, and units can also be configured in this"
 " toolbar."
 msgstr ""
+"Puede habilitar / deshabilitar el ajuste mediante el botón |snapping| "
+":sup:`Habilitar ajuste` en :guilabel:` Barra de herramientas de ajuste` o "
+"presionando :kbd:`s`. El modo de ajuste, el valor de tolerancia y las "
+"unidades también se pueden configurar en esta barra de herramientas."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:59
 msgid ""
@@ -111,12 +126,20 @@ msgid ""
 " is sufficient to use this snapping mode, but beware when using it for "
 "projects with many vector layers, as it may affect performance."
 msgstr ""
+":guilabel:`Todas las capas`: configuración rápida para todas las capas "
+"visibles en el proyecto para que el puntero se ajuste a todos los vértices "
+"y/o segmentos. En la mayoría de los casos, es suficiente usar este modo de "
+"ajuste, pero tenga cuidado al usarlo para proyectos con muchas capas "
+"vectoriales, ya que puede afectar el rendimiento."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:69
 msgid ""
 ":guilabel:`Current layer`: only the active layer is used, a convenient way "
 "to ensure topological consistency within the layer being edited."
 msgstr ""
+":guilabel:`capa actual`: solo se utiliza la capa activa, una forma "
+"conveniente de garantizar la coherencia topológica dentro de la capa que se "
+"está editando."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:71
 msgid ""
@@ -157,6 +180,12 @@ msgid ""
 ":guilabel:`Enable snapping on invisible features` under the "
 ":menuselection:`Settings --> Options --> Digitizing` tab."
 msgstr ""
+"De forma predeterminada, solo las entidades visibles (las entidades cuyo "
+"estilo se muestra, excepto las capas donde la simbología es \"Sin "
+"símbolos\") se pueden ajustar. Puede habilitar el ajuste de entidades "
+"invisibles marcando |unchecked| :guilabel:`Habilitar el ajuste en entidades "
+"invisibles` bajo la :menuselection:` Configuración -> Opciones -> Ficha "
+"Digitalización`."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:109
 msgid "**Enable snapping by default**"
@@ -229,6 +258,10 @@ msgid ""
 "vertices/segments, QGIS will also move them in the geometries of the "
 "neighboring features."
 msgstr ""
+"El botón |topopologicalEditing| :sup:`Edición topológica` ayuda al editar y "
+"mantener entidades con límites comunes. Con esta opción habilitada, QGIS "
+"'detecta' límites compartidos. Cuando mueva vértices / segmentos comunes, "
+"QGIS también los moverá en las geometrías de las entidades vecinas."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:172
 msgid ""
@@ -261,6 +294,8 @@ msgid ""
 "If the new geometry is totally covered by existing ones, it gets cleared, "
 "and QGIS will show an error message."
 msgstr ""
+"Si la nueva geometría está totalmente cubierta por las existentes, se borra "
+"y QGIS mostrará un mensaje de error."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:195
 msgid "**Use cautiously the** :guilabel:`Avoid overlap` **option**"
@@ -323,6 +358,13 @@ msgid ""
 "topologically connectable through existing features edges, otherwise QGIS is"
 " unable to connect them and thus traces a single straight line."
 msgstr ""
+"QGIS en realidad usa la topología de entidades subyacentes para construir la"
+" ruta más corta entre los dos puntos. El rastreo requiere que se active el "
+"ajuste en capas rastreables para construir el camino. También debe ajustar a"
+" un vértice o segmento existente mientras digitaliza y asegurarse de que los"
+" dos nodos se puedan conectar topológicamente a través de los bordes de "
+"entidades existentes; de lo contrario, QGIS no puede conectarlos y, por lo "
+"tanto, traza una sola línea recta."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:241
 msgid ""
@@ -352,7 +394,7 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:256
 msgid "**Does not add topological points**"
-msgstr ""
+msgstr "** No agrega puntos topológicos **"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:258
 msgid ""
@@ -388,6 +430,12 @@ msgid ""
 ":ref:`supported_format`), and the underlying data source is writable (i.e., "
 "its files are not read-only)."
 msgstr ""
+"De forma predeterminada, QGIS carga capas de solo lectura. Esta es una "
+"protección para evitar editar accidentalmente una capa si se produce un "
+"deslizamiento del ratón. Sin embargo, puede optar por editar cualquier capa "
+"siempre que el proveedor de datos lo admita (consulte "
+":ref:`supported_format`) y la fuente de datos subyacente se pueda escribir "
+"(es decir, sus archivos no son de solo lectura)."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:288
 msgid "**Restrict edit permission on layers within a project**"
@@ -484,7 +532,7 @@ msgstr "|capturePolygon|"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:319
 msgid "Add Feature: Capture Polygon"
-msgstr ""
+msgstr "Añadir entidad: Capturar Polígono"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:321
 msgid "|vertexTool|"
@@ -492,7 +540,7 @@ msgstr "|vertexTool|"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:321
 msgid "Vertex Tool (All Layers)"
-msgstr ""
+msgstr "Herramienta Vértices (Todas las capas)"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:321
 msgid "|vertexToolActiveLayer|"
@@ -500,7 +548,7 @@ msgstr "|vertexToolActiveLayer|"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:321
 msgid "Vertex Tool (Current Layer)"
-msgstr ""
+msgstr "Herramienta vértices (capa actual)"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:323
 msgid "|multiEdit|"
@@ -509,6 +557,7 @@ msgstr "|multiEdit|"
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:323
 msgid "Modify the attributes of all selected features simultaneously"
 msgstr ""
+"Modificar los atributos de todas las entidades seleccionadas simultáneamente"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:326
 msgid "|deleteSelectedFeatures|"
@@ -568,6 +617,9 @@ msgid ""
 "Note that while using any of the digitizing tools, you can still :ref:`zoom "
 "or pan <zoom_pan>` in the map canvas without losing the focus on the tool."
 msgstr ""
+"Tenga en cuenta que mientras utiliza cualquiera de las herramientas de "
+"digitalización, aún puede :ref:`zoom o navegar <zoom_pan>` en el lienzo del "
+"mapa sin perder el foco en la herramienta."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:339
 msgid ""
@@ -638,6 +690,8 @@ msgid ""
 "Pressing :kbd:`Delete` or :kbd:`Backspace` key reverts the last node you "
 "add."
 msgstr ""
+"Presionando las teclas :kbd:`Delete` o :kbd:`Backspace` revierte el último "
+"nodo que agrega."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:389
 msgid ""
@@ -946,7 +1000,7 @@ msgstr "Hacer la capa de destino activa haciendo clic en la leyenda."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:633
 msgid "Click on the |editPaste| :sup:`Paste Features` tool"
-msgstr ""
+msgstr "Click en la herramienta |editPaste| :sup:`Pegar entidades`"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:634
 msgid "Stop editing and save the changes"
@@ -1187,20 +1241,20 @@ msgstr "Habilitar Trazado"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:781
 msgid "|moveFeature| |moveFeatureLine| |moveFeaturePoint|"
-msgstr ""
+msgstr "|moveFeature| |moveFeatureLine| |moveFeaturePoint|"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:781
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:813
 msgid "Move Feature(s)"
-msgstr ""
+msgstr "Mover Entidad(es)"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:781
 msgid "|moveFeatureCopy| |moveFeatureCopyLine| |moveFeatureCopyPoint|"
-msgstr ""
+msgstr "|moveFeatureCopy| |moveFeatureCopyLine| |moveFeatureCopyPoint|"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:781
 msgid "Copy and Move Feature(s)"
-msgstr ""
+msgstr "Copiar y mover Entidad(es)"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:785
 msgid "|rotateFeature|"
@@ -1209,7 +1263,7 @@ msgstr "|rotateFeature|"
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:785
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:853
 msgid "Rotate Feature(s)"
-msgstr "Rotar objeto(s) espacial(es)"
+msgstr "Rotar entidad(es)"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:785
 msgid "|simplifyFeatures|"
@@ -1253,7 +1307,7 @@ msgstr "|reverseLine|"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:789
 msgid "Swap direction"
-msgstr ""
+msgstr "Cambiar dirección"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:791
 msgid "|deleteRing|"
@@ -1343,11 +1397,11 @@ msgstr "Símbolos de punto de desplazamiento"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:801
 msgid "|trimExtend|"
-msgstr ""
+msgstr "|trimExtend|"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:801
 msgid "Trim or Extend Feature"
-msgstr ""
+msgstr "Función de recorte o extensión"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:804
 msgid "Table Advanced Editing: Vector layer advanced editing toolbar"
@@ -1363,7 +1417,7 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:817
 msgid "Select the feature(s) to move."
-msgstr ""
+msgstr "Selecciona la entidad(es) a mover."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:818
 msgid ""

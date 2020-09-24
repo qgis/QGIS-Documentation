@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-26 13:13+0200\n"
+"POT-Creation-Date: 2020-09-24 11:25+0200\n"
 "PO-Revision-Date: 2020-03-16 19:26+0000\n"
 "Last-Translator: Dick Groskamp, 2020\n"
 "Language-Team: Dutch (https://www.transifex.com/qgis/teams/6144/nl/)\n"
@@ -76,23 +76,15 @@ msgid ""
 " a HTTP interface to request map or legend images generated from a QGIS "
 "project. A typical WMS request defines the QGIS project to use, the layers "
 "to render as well as the image format to generate. Basic support is also "
-"available for the **Styled Layer Descriptor (SLD)** standard."
+"available for **Styled Layer Descriptor (SLD)**."
 msgstr ""
-"De WMS standaarden **1.1.0** en **1.3.0**, geïmplementeerd in QGIS Server, "
-"verschaffen een interface voor HTTP voor het verzoeken van kaart- of "
-"legendaafbeeldingen gegenereerd uit een project van QGIS. Een typisch WMS-"
-"verzoek definieert het te gebruiken project van QGIS, de te renderen lagen "
-"als ook de te genereren indeling van de afbeelding. Basisondersteuning is "
-"ook beschikbaar voor de standaard **Styled Layer Descriptor (SLD)**."
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:35
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:967
-msgid ""
-"Specifications document according to the version number of the service:"
-msgstr "Specificatiedocument overeenkomstig het versienummer van de service:"
+msgid "Specifications:"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:37
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1386
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1393
 msgid ""
 "`WMS 1.1.0 "
 "<https://portal.opengeospatial.org/files/?artifact_id=1081&version=1&format=pdf>`_"
@@ -102,13 +94,19 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:38
 msgid ""
-"`WMS 1.3.0 <https://portal.opengeospatial.org/files/?artifact_id=14416>`_"
+"`WMS 1.3.0 "
+"<https://portal.opengeospatial.org/files/?artifact_id=14416&format=pdf>`_"
 msgstr ""
-"`WMS 1.3.0 <https://portal.opengeospatial.org/files/?artifact_id=14416>`_"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:40
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:972
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1156
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:39
+msgid ""
+"`SLD 1.1.0 WMS profile "
+"<http://portal.opengeospatial.org/files/?artifact_id=22364&format=pdf>`_"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:41
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:980
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1164
 msgid "Standard requests provided by QGIS Server:"
 msgstr "Standaardverzoeken verschaft door QGIS Server:"
 
@@ -137,14 +135,13 @@ msgstr "Verzoek"
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
 msgid "Description"
 msgstr "Beschrijving"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1170
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1178
 msgid "GetCapabilities"
 msgstr "GetCapabilities"
 
@@ -155,7 +152,7 @@ msgid "Returns XML metadata with information about the server"
 msgstr "Geeft XML-metadata terug met informatie over de server"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:65
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:66
 msgid "GetMap"
 msgstr "GetMap"
 
@@ -164,9 +161,9 @@ msgid "Returns a map"
 msgstr "Geeft een kaart terug"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:535
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:536
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1381
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1388
 msgid "GetFeatureInfo"
 msgstr "GetFeatureInfo"
 
@@ -176,7 +173,7 @@ msgid "Retrieves data (geometry and values) for a pixel location"
 msgstr "Haal gegevens op (geometrie en waarden) voor de locatie van een pixel"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:895
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:898
 msgid "GetLegendGraphics"
 msgstr "GetLegendGraphics"
 
@@ -184,12 +181,12 @@ msgstr "GetLegendGraphics"
 msgid "Returns legend symbols"
 msgstr "Geeft symbolen voor legenda terug"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:52
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:53
 msgid "Vendor requests provided by QGIS Server:"
 msgstr "Leverancier-verzoeken verschaft door QGIS Server:"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:719
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:722
 msgid "GetPrint"
 msgstr "GetPrint"
 
@@ -198,7 +195,7 @@ msgid "Returns a QGIS composition"
 msgstr "Geeft een lay-out van QGIS terug"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:946
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:954
 msgid "GetProjectSettings"
 msgstr "GetProjectSettings"
 
@@ -206,7 +203,7 @@ msgstr "GetProjectSettings"
 msgid "Returns specific information about QGIS Server"
 msgstr "Geeft specifieke informatie terug over QGIS Server"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:67
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:68
 msgid ""
 "Standard parameters for the **GetMap** request according to the OGC WMS "
 "1.1.0 and 1.3.0 specifications:"
@@ -247,18 +244,18 @@ msgid "Required"
 msgstr "Vereist"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:145
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:147
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:792
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:795
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1026
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1034
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1205
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1213
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1273
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1281
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1430
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1437
 msgid "SERVICE"
 msgstr "SERVICE"
 
@@ -314,14 +311,16 @@ msgid "Name of the service (WMS)"
 msgstr "Naam van de service (WMS)"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:151
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:153
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1041
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1049
 msgid "VERSION"
 msgstr "VERSION"
 
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
@@ -395,18 +394,18 @@ msgid "Version of the service"
 msgstr "Versie van de service"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:170
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:172
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:798
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:801
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1063
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1071
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1212
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1220
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1279
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1287
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1437
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1444
 msgid "REQUEST"
 msgstr "REQUEST"
 
@@ -415,7 +414,7 @@ msgid "Name of the request (GetMap)"
 msgstr "Naam van het verzoek (GetMap)"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:176
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:178
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
 msgid "LAYERS"
@@ -426,7 +425,7 @@ msgid "Layers to display"
 msgstr "Weer te geven lagen"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:214
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:216
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
 msgid "STYLES"
@@ -437,7 +436,7 @@ msgid "Layers' style"
 msgstr "Stijl van de laag"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:223
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:225
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
 msgid "SRS / CRS"
@@ -449,7 +448,7 @@ msgid "Coordinate reference system"
 msgstr "Coördinaten referentiesysteem"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:276
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:278
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
 msgid "BBOX"
@@ -460,7 +459,7 @@ msgid "Map extent"
 msgstr "Kaartbereik"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:315
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:317
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
 msgid "WIDTH"
 msgstr "WIDTH"
@@ -470,7 +469,7 @@ msgid "Width of the image in pixels"
 msgstr "Breedte van de afbeelding in pixels"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:322
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:324
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
 msgid "HEIGHT"
 msgstr "HEIGHT"
@@ -480,11 +479,11 @@ msgid "Height of the image in pixels"
 msgstr "Hoogte van de afbeelding in pixels"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:329
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:331
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:811
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:814
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1323
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1331
 msgid "FORMAT"
 msgstr "FORMAT"
 
@@ -493,7 +492,7 @@ msgid "Image format"
 msgstr "Indeling afbeelding"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:361
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:363
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
 msgid "TRANSPARENT"
@@ -503,12 +502,28 @@ msgstr "TRANSPARENT"
 msgid "Transparent background"
 msgstr "Transparante achtergrond"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:87
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:563
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1011
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1183
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1246
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1404
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "SLD"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "URL of an SLD to be used for styling"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "SLD_BODY"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "In-line SLD (XML) to be used for styling"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:89
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:564
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1019
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1191
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1254
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1411
 msgid ""
 "In addition to the standard ones, QGIS Server supports the following extra "
 "parameters:"
@@ -517,16 +532,16 @@ msgstr ""
 "parameters:"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:375
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:377
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1219
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1227
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1365
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1372
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1444
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1451
 msgid "MAP"
 msgstr "MAP"
 
@@ -540,7 +555,7 @@ msgid "Specify the QGIS project file"
 msgstr "Specificeer het QGIS-projectbestand"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:389
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:391
 msgid "BGCOLOR"
 msgstr "BGCOLOR"
 
@@ -549,7 +564,7 @@ msgid "Specify the background color"
 msgstr "Specificeer de achtergrondkleur"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:420
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:422
 msgid "DPI"
 msgstr "DPI"
 
@@ -558,7 +573,7 @@ msgid "Specify the output resolution"
 msgstr "Specificeer de uitvoerresolutie"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:426
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:428
 msgid "IMAGE_QUALITY"
 msgstr "IMAGE_QUALITY"
 
@@ -567,7 +582,7 @@ msgid "JPEG compression"
 msgstr "JPEG-compressie"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:439
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:441
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
 msgid "OPACITIES"
 msgstr "OPACITIES"
@@ -577,7 +592,7 @@ msgid "Opacity for layer or group"
 msgstr "Doorzichtbaarheid van laag of groep"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:446
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:448
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
 msgid "FILTER"
@@ -588,7 +603,7 @@ msgid "Subset of features"
 msgstr "Subset van objecten"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:488
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:489
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
 msgid "SELECTION"
 msgstr "SELECTION"
@@ -666,7 +681,7 @@ msgstr ""
 "Desktop voor geldige waarden."
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:520
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:521
 msgid "TILED"
 msgstr "TILED"
 
@@ -674,35 +689,35 @@ msgstr "TILED"
 msgid "Working in *tiled mode*"
 msgstr "Werken in *modus Getegeld*"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:123
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:345
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:464
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:581
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:755
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1052
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1068
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1088
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1110
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1132
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1194
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1257
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1415
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1758
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1833
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1845
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1859
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1870
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1886
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:125
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:347
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:465
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:582
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:758
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1060
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1076
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1096
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1118
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1140
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1202
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1265
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1422
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1766
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1841
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1853
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1867
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1878
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1894
 msgid "URL example:"
 msgstr "Voorbeeld URL:"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:147
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:149
 msgid "This parameter has to be ``WMS`` in case of the **GetMap** request."
 msgstr ""
 "Deze parameter moet ``WMS`` zijn in het geval van het verzoek **GetMap**."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:153
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1043
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:155
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1051
 msgid ""
 "This parameter allows to specify the version of the service to use. "
 "Available values for the ``VERSION`` parameter are:"
@@ -710,16 +725,16 @@ msgstr ""
 "Deze parameter maakt het mogelijk de versie van de te gebruiken service te "
 "specificeren. Beschikbare waarden voor de parameter ``VERSION`` zijn:"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:156
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1047
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:158
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1055
 msgid "``1.1.0``"
 msgstr "``1.1.0``"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:157
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:159
 msgid "``1.3.0``"
 msgstr "``1.3.0``"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:159
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:161
 msgid ""
 "If no version is indicated in the request, then ``1.3.0`` is used by "
 "default."
@@ -727,7 +742,7 @@ msgstr ""
 "Indien geen versie wordt aangegeven in het verzoek , dan wordt standaard "
 "``1.3.0`` gebruikt."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:162
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:164
 msgid ""
 "According to the version number, slight differences have to be expected as "
 "explained later for the next parameters:"
@@ -735,19 +750,19 @@ msgstr ""
 "Overeenkomstig het versienummer kunnen kleine verschillen worden verwacht, "
 "zoals later uitgelegd, voor de volgende parameters:"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:165
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:167
 msgid "``CRS`` / ``SRS``"
 msgstr "``CRS`` / ``SRS``"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:166
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:168
 msgid "``BBOX``"
 msgstr "``BBOX``"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:172
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:174
 msgid "This parameter is ``GetMap`` in case of the **GetMap** request."
 msgstr "Deze parameter is ``GetMap`` in het geval van het verzoek **GetMap**."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:178
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:180
 msgid ""
 "This parameter allows to specify the layers to display on the map. Names "
 "have to be separated by a comma."
@@ -755,27 +770,27 @@ msgstr ""
 "Deze parameter maakt het mogelijk de weer te geven lagen op de kaart te "
 "specificeren. Namen moeten zijn gescheiden door een komma."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:181
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:183
 msgid "In addition, QGIS Server introduced some options to select layers by:"
 msgstr ""
 "In aanvulling daarop introduceert QGIS Server enkele opties om op lagen te "
 "selecteren:"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:183
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1292
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1464
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:185
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1300
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1471
 msgid "a short name"
 msgstr "een verkorte naam"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:184
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1293
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1465
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:186
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1301
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1472
 msgid "the layer id"
 msgstr "de laag-ID"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:186
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1295
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1467
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:188
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1303
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1474
 msgid ""
 "The short name of a layer may be configured through "
 ":menuselection:`Properties --> Metadata` in layer menu. If the short name is"
@@ -786,7 +801,7 @@ msgstr ""
 "verkorte naam is gedefinieerd, dan wordt die standaard gebruikt in plaats "
 "van de naam van de laag:"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:199
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:201
 msgid ""
 "Moreover, there's a project option allowing to select layers by their id in "
 ":menuselection:`OWS Server --> WMS capabilities` menu of the "
@@ -799,7 +814,7 @@ msgstr ""
 "keuzevak :guilabel:`Laag-ID's als namen gebruiken` moet zijn geselecteerd om"
 " deze optie te activeren."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:216
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:218
 msgid ""
 "This parameter can be used to specify a layer's style for the rendering "
 "step. Styles have to be separated by a comma. The name of the default style "
@@ -809,7 +824,7 @@ msgstr ""
 "renderen te specificeren. Stijlen moeten worden gescheiden door een komma. "
 "De naam van de standaard stijl is ``default``."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:225
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:227
 msgid ""
 "This parameter allows to indicate the map output Spatial Reference System in"
 " WMS **1.1.0** and has to be formed like ``EPSG:XXXX``. Note that ``CRS`` is"
@@ -820,7 +835,7 @@ msgstr ""
 "``EPSG:XXXX``. Onthoud dat ``CRS`` ook wordt ondersteund als de huidige "
 "versie **1.1.0** is."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:229
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:231
 msgid ""
 "For WMS **1.3.0**, ``CRS`` parameter is preferable but ``SRS`` is also "
 "supported."
@@ -828,7 +843,7 @@ msgstr ""
 "Voor WMS **1.3.0** heeft de parameter ``CRS`` de voorkeur maar ``SRS`` wordt"
 " ook ondersteund."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:232
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:234
 msgid ""
 "Note that if both ``CRS`` and ``SRS`` parameters are indicated in the "
 "request, then it's the current version indicated in ``VERSION`` parameter "
@@ -838,7 +853,7 @@ msgstr ""
 "worden aangegeven, dan is het de huidige versie die wordt aangegeven met de "
 "parameter ``VERSION`` die beslissend is."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:236
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:238
 msgid ""
 "In the next case, the ``SRS`` parameter is kept whatever the ``VERSION`` "
 "parameter because ``CRS`` is not indicated:"
@@ -846,7 +861,7 @@ msgstr ""
 "In het volgende geval wordt de parameter ``SRS`` behouden, ongeacht de "
 "parameter ``VERSION``, omdat ``CRS`` niet wordt aangegeven:"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:248
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:250
 msgid ""
 "In the next case, the ``SRS`` parameter is kept instead of ``CRS`` because "
 "of the ``VERSION`` parameter:"
@@ -854,7 +869,7 @@ msgstr ""
 "In het volgende geval wordt de parameter ``SRS`` behouden in plaats van "
 "``CRS`` vanwege de parameter ``VERSION``:"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:261
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:263
 msgid ""
 "In the next case, the ``CRS`` parameter is kept instead of ``SRS`` because "
 "of the ``VERSION`` parameter:"
@@ -862,7 +877,7 @@ msgstr ""
 "In het volgende geval wordt de parameter ``CRS`` behouden in plaats van "
 "``SRS`` vanwege de parameter ``VERSION``:"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:278
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:280
 msgid ""
 "This parameter allows to specify the map extent with units according to the "
 "current CRS. Coordinates have to be separated by a comma."
@@ -871,7 +886,7 @@ msgstr ""
 "kaarteenheden overeenkomstig het huidige CRS. Coördinaten moeten worden "
 "gescheiden door een komma."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:282
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:284
 msgid ""
 "However, a slight difference has to be noticed according to the current "
 "``VERSION`` parameter. In WMS **1.1.0**, coordinates are formed like "
@@ -881,7 +896,7 @@ msgstr ""
 " parameter ``VERSION``. In WMS **1.1.0** worden coördinaten gevormd als "
 "``minx,miny,maxx,maxy`` of ``minlong,minlat,maxlong,maxlat``. Bijvoorbeeld:"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:298
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:300
 msgid ""
 "But the axis is reversed in WMS **1.3.0**, so coordinates are formed like: "
 "``miny,minx,maxy,maxx`` or ``minlat,minlong,maxlat,maxlong``. For example:"
@@ -890,21 +905,21 @@ msgstr ""
 "als: ``miny,minx,maxy,maxx`` of ``minlat,minlong,maxlat,maxlong``. "
 "Bijvoorbeeld:"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:317
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:319
 msgid ""
 "This parameter allows to specify the width in pixels of the output image."
 msgstr ""
 "Deze parameter maakt het mogelijk de breedte van de uit te voeren afbeelding"
 " in pixels te specificeren."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:324
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:326
 msgid ""
 "This parameter allows to specify the height in pixels of the output image."
 msgstr ""
 "Deze parameter maakt het mogelijk de hoogte van de uit te voeren afbeelding "
 "in pixels te specificeren."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:331
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:333
 msgid ""
 "This parameter may be used to specify the format of map image. Available "
 "values are:"
@@ -912,43 +927,43 @@ msgstr ""
 "Deze parameter kan worden gebruikt om de indeling van de kaartafbeelding te "
 "specificeren. Beschikbare waarden zijn:"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:334
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:815
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1328
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:336
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:818
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1336
 msgid "``jpg``"
 msgstr "``jpg``"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:335
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:816
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1329
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:337
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:819
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1337
 msgid "``jpeg``"
 msgstr "``jpeg``"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:336
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:817
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1330
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:338
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:820
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1338
 msgid "``image/jpeg``"
 msgstr "``image/jpeg``"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:337
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:819
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1331
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:339
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:822
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1339
 msgid "``image/png``"
 msgstr "``image/png``"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:338
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:340
 msgid "``image/png; mode=1bit``"
 msgstr "``image/png; mode=1bit``"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:339
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:341
 msgid "``image/png; mode=8bit``"
 msgstr "``image/png; mode=8bit``"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:340
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:342
 msgid "``image/png; mode=16bit``"
 msgstr "``image/png; mode=16bit``"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:341
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:343
 msgid ""
 "``application/dxf`` Only layers that have read access in the WFS service are"
 " exported in the DXF format."
@@ -956,7 +971,7 @@ msgstr ""
 "``application/dxf`` Alleen lagen die leestoegang hebben in de WFS-service "
 "worden geëxporteerd in de indeling DXF."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:363
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:365
 msgid ""
 "This boolean parameter can be used to specify the background transparency. "
 "Available values are (not case sensitive):"
@@ -965,19 +980,19 @@ msgstr ""
 "achtergrond te specificeren. Beschikbare waarden zijn (niet "
 "hoofdlettergevoelig):"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:367
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:701
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:712
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:369
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:702
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:715
 msgid "``TRUE``"
 msgstr "``TRUE``"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:368
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:702
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:713
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:370
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:703
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:716
 msgid "``FALSE``"
 msgstr "``FALSE``"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:370
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:372
 msgid ""
 "However, this parameter is ignored if the format of the map image indicated "
 "with ``FORMAT`` is different from PNG."
@@ -985,18 +1000,18 @@ msgstr ""
 "Deze parameter wordt echter genegeerd indien de indeling van de kaart, "
 "aangegeven met ``FORMAT``, anders is dan PNG."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:377
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1221
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1367
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1446
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:379
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1229
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1374
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1453
 msgid "This parameter allows to define the QGIS project file to use."
 msgstr ""
 "Deze parameter maakt het mogelijk het te gebruiken projectbestand van QGIS "
 "te definiëren."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:379
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1369
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1448
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:381
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1376
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1455
 msgid ""
 "As mentioned in :ref:`GetMap parameters table <qgisserver-wms-getmap>`, "
 "``MAP`` is mandatory because a request needs a QGIS project to actually "
@@ -1013,7 +1028,7 @@ msgstr ""
 "parameter. Voor meer informatie kunt u kijken naar "
 ":ref:`server_env_variables`."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:391
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:393
 msgid ""
 "This parameter allows to indicate a background color for the map image. "
 "However it cannot be combined with ``TRANSPARENT`` parameter in case of PNG "
@@ -1025,21 +1040,21 @@ msgstr ""
 "parameter ``TRANSPARENT`` in geval van afbeeldingen PNG (transparantie heeft"
 " prioriteit). De kleur mag letterlijk zijn of in hexadecimale notatie."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:396
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:398
 msgid "URL example with the literal notation:"
 msgstr "Voorbeeld URL met de letterlijke notatie:"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:407
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:409
 msgid "URL example with the hexadecimal notation:"
 msgstr "Voorbeeld URL met de hexadecimale notatie:"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:422
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:424
 msgid "This parameter can be used to specify the requested output resolution."
 msgstr ""
 "Deze parameter kan worden gebruikt om de resolutie voor de verzochte uitvoer"
 " te specificeren."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:428
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:430
 msgid ""
 "This parameter is only used for JPEG images. By default, the JPEG "
 "compression is ``-1``."
@@ -1047,7 +1062,7 @@ msgstr ""
 "Deze parameter wordt alleen gebruikt voor afbeeldingen JPEG. Standaard is de"
 " compressie voor JPEG ``-1``."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:431
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:433
 msgid ""
 "You can change the default per QGIS project in the :menuselection:`OWS "
 "Server --> WMS capabilities` menu of the :menuselection:`Project --> "
@@ -1060,7 +1075,7 @@ msgstr ""
 "in een verzoek ``GetMap`` kunt u dat doen met behulp van de parameter "
 "``IMAGE_QUALITY``."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:441
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:443
 msgid ""
 "Opacity can be set on layer or group level. Allowed values range from 0 "
 "(fully transparent) to 255 (fully opaque)."
@@ -1069,7 +1084,7 @@ msgstr ""
 " Toegestane waarden reiken van 0 (volledig transparant) tot en met 255 "
 "(ondoorzichtig)."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:448
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:450
 msgid ""
 "A subset of layers can be selected with the ``FILTER`` parameter. The syntax"
 " is basically the same as for the QGIS subset string. However, there are "
@@ -1083,7 +1098,7 @@ msgstr ""
 " QGIS Server te vermijden. Als een gevaarlijke tekenreeks wordt gevonden in "
 "de parameter, zal QGIS Server de volgende fout teruggeven:"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:475
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:476
 msgid ""
 "In this example, the same filter (field ``col2`` equals the string "
 "``blabla``) is applied to layers ``mylayer1`` and ``mylayer2``, while the "
@@ -1093,7 +1108,7 @@ msgstr ""
 "tekenreeks ``blabla``) toegepast op de lagen ``mylayer1`` en ``mylayer2``, "
 "terwijl het filter op ``col1`` alleen wordt toegepast op ``mylayer1``."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:481
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:482
 msgid ""
 "It is possible to make attribute searches via GetFeatureInfo and omit the "
 "X/Y parameter if a FILTER is there. QGIS Server then returns info about the "
@@ -1104,7 +1119,7 @@ msgstr ""
 " informatie terug over de overeenkomende objecten en maakt een gecombineerd "
 "begrenzingsvak in de uitvoer XML."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:490
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:491
 msgid ""
 "The ``SELECTION`` parameter can highlight features from one or more layers. "
 "Vector features can be selected by passing comma separated lists with "
@@ -1114,7 +1129,7 @@ msgstr ""
 "Vectorobjecten kunnen worden geselecteerd door middel van kommagescheiden "
 "lijsten met object-ID's."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:504
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:505
 msgid ""
 "The following image presents the response from a GetMap request using the "
 "``SELECTION`` option e.g. "
@@ -1124,7 +1139,7 @@ msgstr ""
 "behulp van de optie ``SELECTION``, bijv. "
 "``http://myserver.com/...&SELECTION=countries:171,65``."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:508
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:509
 msgid ""
 "As those features id's correspond in the source dataset to **France** and "
 "**Romania** they're highlighted in yellow."
@@ -1132,12 +1147,12 @@ msgstr ""
 "Omdat deze object-ID's in de gegevensset van de bron corresponderen met "
 "**Frankrijk** en **Roemenië** zijn zij in geel geaccentueerd."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:516
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:517
 msgid "Server response to a GetMap request with SELECTION parameter"
 msgstr ""
 "Antwoord van de server voor een verzoek GetMap met parameter SELECTION"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:522
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:523
 msgid ""
 "Set the ``TILED`` parameter to ``TRUE`` to tell QGIS Server to work in "
 "*tiled* mode, and to apply the *Tile buffer* configured in the QGIS project."
@@ -1146,7 +1161,7 @@ msgstr ""
 " werken in de modus *getegeld*, en de *Tegelbuffer* toe te passen die is "
 "geconfigureerd in het project van QGIS."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:526
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:527
 msgid ""
 "When ``TILED`` is ``TRUE`` and when a non-zero Tile buffer is configured in "
 "the QGIS project, features outside the tile extent are drawn to avoid cut "
@@ -1157,11 +1172,11 @@ msgstr ""
 "tegelbereik getekend om het afbreken van symbolen op grenzen van tegels te "
 "vermijden."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:530
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:531
 msgid "``TILED`` defaults to ``FALSE``."
 msgstr "``TILED`` is standaard ``FALSE``."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:537
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:538
 msgid ""
 "Standard parameters for the **GetFeatureInfo** request according to the OGC "
 "WMS 1.1.0 and 1.3.0 specifications:"
@@ -1191,7 +1206,7 @@ msgid ":ref:`See GetMap <qgisserver-wms-getmap>`"
 msgstr ":ref:`Bekijk GetMap <qgisserver-wms-getmap>`"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:603
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:604
 msgid "INFO_FORMAT"
 msgstr "INFO_FORMAT"
 
@@ -1202,7 +1217,7 @@ msgid "Output format"
 msgstr "Indeling uitvoer"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:616
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:617
 msgid "QUERY_LAYERS"
 msgstr "QUERY_LAYERS"
 
@@ -1211,7 +1226,7 @@ msgid "Layers to query"
 msgstr "Te bevragen lagen"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:631
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:632
 msgid "FEATURE_COUNT"
 msgstr "FEATURE_COUNT"
 
@@ -1221,9 +1236,9 @@ msgid "Maximum number of features to return"
 msgstr "Maximale aantal terug te geven objecten"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:644
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:645
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1510
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1517
 msgid "I"
 msgstr "I"
 
@@ -1232,7 +1247,7 @@ msgid "Pixel column of the point to query"
 msgstr "Pixelkolom van het te bevragen punt"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:651
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:652
 msgid "X"
 msgstr "X"
 
@@ -1241,9 +1256,9 @@ msgid "Same as `I` parameter, but in WMS 1.1.0"
 msgstr "Hetzelfde als parameter `I`, maar in WMS 1.1.0"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:657
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:658
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1517
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1524
 msgid "J"
 msgstr "J"
 
@@ -1252,7 +1267,7 @@ msgid "Pixel row of the point to query"
 msgstr "Pixelrij van het te bevragen punt"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:664
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:665
 msgid "Y"
 msgstr "Y"
 
@@ -1261,7 +1276,7 @@ msgid "Same as `J` parameter, but in WMS 1.1.0"
 msgstr "Hetzelfde als parameter `J`, maar in WMS 1.1.0"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:670
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:671
 msgid "FI_POINT_TOLERANCE"
 msgstr "FI_POINT_TOLERANCE"
 
@@ -1270,7 +1285,7 @@ msgid "Tolerance in pixels for point layers"
 msgstr "Tolerantie in pixels voor puntlagen"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:676
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:677
 msgid "FI_LINE_TOLERANCE"
 msgstr "FI_LINE_TOLERANCE"
 
@@ -1279,7 +1294,7 @@ msgid "Tolerance in pixels for line layers"
 msgstr "Tolerantie in pixels voor lijnlagen"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:682
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:683
 msgid "FI_POLYGON_TOLERANCE"
 msgstr "FI_POLYGON_TOLERANCE"
 
@@ -1288,7 +1303,7 @@ msgid "Tolerance in pixels for polygon layers"
 msgstr "Tolerantie in pixels voor polygoonlagen"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:688
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:689
 msgid "FILTER_GEOM"
 msgstr "FILTER_GEOM"
 
@@ -1297,7 +1312,7 @@ msgid "Geometry filtering"
 msgstr "Filteren van geometrie"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:695
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:696
 msgid "WITH_MAPTIP"
 msgstr "WITH_MAPTIP"
 
@@ -1306,7 +1321,7 @@ msgid "Add map tips to the output"
 msgstr "Kaarttips toevoegen aan de uitvoer"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:706
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:707
 msgid "WITH_GEOMETRY"
 msgstr "WITH_GEOMETRY"
 
@@ -1314,7 +1329,7 @@ msgstr "WITH_GEOMETRY"
 msgid "Add geometry to the output"
 msgstr "Geometrie toevoegen aan de uitvoer"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:605
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:606
 msgid ""
 "This parameter may be used to specify the format of the result. Available "
 "values are:"
@@ -1322,31 +1337,31 @@ msgstr ""
 "Deze parameter kan worden gebruikt om de indeling van het resultaat te "
 "specificeren. Beschikbare waarden zijn:"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:608
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1501
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:609
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1508
 msgid "``text/xml``"
 msgstr "``text/xml``"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:609
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1502
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:610
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1509
 msgid "``text/html``"
 msgstr "``text/html``"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:610
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1503
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:611
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1510
 msgid "``text/plain``"
 msgstr "``text/plain``"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:611
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1504
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:612
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1511
 msgid "``application/vnd.ogc.gml``"
 msgstr "``application/vnd.ogc.gml``"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:612
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:613
 msgid "``application/json``"
 msgstr "``application/json``"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:618
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:619
 msgid ""
 "This parameter specifies the layers to display on the map. Names are "
 "separated by a comma."
@@ -1354,21 +1369,21 @@ msgstr ""
 "Deze parameter specificeert de weer te geven lagen op de kaart. Namen moeten"
 " zijn gescheiden door een komma."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:621
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:622
 msgid "In addition, QGIS Server introduces options to select layers by:"
 msgstr ""
 "In aanvulling daarop introduceert QGIS Server enkele opties om op lagen te "
 "selecteren:"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:623
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:624
 msgid "short name"
 msgstr "verkorte naam"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:624
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:625
 msgid "layer id"
 msgstr "laag-ID"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:626
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:627
 msgid ""
 "See the ``LAYERS`` parameter defined in :ref:`See GetMap <qgisserver-wms-"
 "getmap>` for more information."
@@ -1376,7 +1391,7 @@ msgstr ""
 "Bekijk de paramater ``LAYERS`` gedefinieerd in :ref:`Bekijk GetMap "
 "<qgisserver-wms-getmap>` voor meer informatie."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:633
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:634
 msgid ""
 "This parameter specifies the maximum number of features per layer to return."
 " For example if ``QUERY_LAYERS`` is set to ``layer1,layer2`` and "
@@ -1390,11 +1405,11 @@ msgstr ""
 "uit laag1 worden teruggegeven. Op dezelfde wijze zal een maximum van 3 "
 "objecten van laag2 worden teruggegeven."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:640
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:641
 msgid "By default, only 1 feature per layer is returned."
 msgstr "Standaard wordt slechts 1 object per laag teruggegeven."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:646
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:647
 msgid ""
 "This parameter, defined in WMS 1.3.0, allows you to specify the pixel column"
 " of the query point."
@@ -1402,11 +1417,11 @@ msgstr ""
 "Deze parameter, gedefinieerd in WMS 1.3.0, stelt u in staat de pixelkolom "
 "van het te bevragen punt te specificeren."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:653
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:654
 msgid "Same parameter as ``I``, but defined in WMS 1.1.0."
 msgstr "Dezelfde parameter als ``I``, maar gedefinieerd in WMS 1.1.0"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:659
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:660
 msgid ""
 "This parameter, defined in WMS 1.3.0, allows you to specify the pixel row of"
 " the query point."
@@ -1414,24 +1429,24 @@ msgstr ""
 "Deze parameter, gedefinieerd in WMS 1.3.0, stelt u in staat de pixelrij van "
 "het te bevragen punt te specificeren."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:666
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:667
 msgid "Same parameter as ``J``, but defined in WMS 1.1.0."
 msgstr "Dezelfde parameter als ``J``, maar gedefinieerd in WMS 1.1.0"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:672
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:673
 msgid "This parameter specifies the tolerance in pixels for point layers."
 msgstr "Deze parameter specificeert de tolerantie in pixels voor puntlagen."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:678
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:679
 msgid "This parameter specifies the tolerance in pixels for line layers."
 msgstr "Deze parameter specificeert de tolerantie in pixels voor lijnlagen."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:684
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:685
 msgid "This parameter specifies the tolerance in pixels for polygon layers."
 msgstr ""
 "Deze parameter specificeert de tolerantie in pixels voor polygoonlagen."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:690
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:691
 msgid ""
 "This parameter specifies a WKT geometry with which features have to "
 "intersect."
@@ -1439,24 +1454,26 @@ msgstr ""
 "Deze parameter specificeert een geometrie WKT waarmee objecten moeten "
 "kruisen."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:697
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:698
 msgid "This parameter specifies whether to add map tips to the output."
 msgstr ""
 "Deze parameter specificeert of kaarttips aan de uitvoer moeten worden "
 "toegevoegd."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:699
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:710
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:700
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:713
 msgid "Available values are (not case sensitive):"
 msgstr "Beschikbare waarden zijn (niet hoofdlettergevoelig):"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:708
-msgid "This parameter specifies whether to add geometries to the output."
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:709
+msgid ""
+"This parameter specifies whether to add geometries to the output. To use "
+"this feature you must first enable the :guilabel:`Add geometry to feature "
+"response` option in the QGIS project. See :ref:`Configure your project "
+"<Creatingwmsfromproject>`."
 msgstr ""
-"Deze parameter specificeert of geometrieën aan de uitvoer moeten worden "
-"toegevoegd."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:721
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:724
 msgid ""
 "QGIS Server has the capability to create print layout output in pdf or pixel"
 " format. Print layout windows in the published project are used as "
@@ -1469,7 +1486,7 @@ msgstr ""
 "cliënt de mogelijkheid om parameters te specificeren van de opgenomen "
 "kaarten en labels."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:727
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:730
 msgid "Parameters for the **GetPrint** request:"
 msgstr "Parameters voor het verzoek **GetPrint** zijn:"
 
@@ -1478,7 +1495,7 @@ msgid "Name of the request (GetPrint)"
 msgstr "Naam van het verzoek (GetPrint)"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:804
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:807
 msgid "TEMPLATE"
 msgstr "TEMPLATE"
 
@@ -1487,7 +1504,7 @@ msgid "Layout template to use"
 msgstr "Te gebruiken lay-outsjabloon"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:831
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:834
 msgid "ATLAS_PK"
 msgstr "ATLAS_PK"
 
@@ -1496,7 +1513,7 @@ msgid "Atlas features"
 msgstr "Objecten van Atlas"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:844
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:847
 msgid "mapX:EXTENT"
 msgstr "mapX:EXTENT"
 
@@ -1505,7 +1522,7 @@ msgid "Extent of the map 'X'"
 msgstr "Bereik van de kaart 'X'"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:878
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:881
 msgid "mapX:LAYERS"
 msgstr "mapX:LAYERS"
 
@@ -1514,7 +1531,7 @@ msgid "Layers of the map 'X'"
 msgstr "Lagen van de kaart 'X'"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:886
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:889
 msgid "mapX:STYLES"
 msgstr "mapX:STYLES"
 
@@ -1523,7 +1540,7 @@ msgid "Layers' style of the map 'X'"
 msgstr "Stijl van de lagen van de kaart 'X'"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:869
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:872
 msgid "mapX:SCALE"
 msgstr "mapX:SCALE"
 
@@ -1532,7 +1549,7 @@ msgid "Layers' scale of the map 'X'"
 msgstr "Schaal van de lagen van de kaart 'X'"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:851
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:854
 msgid "mapX:ROTATION"
 msgstr "mapX:ROTATION"
 
@@ -1541,7 +1558,7 @@ msgid "Rotation  of the map 'X'"
 msgstr "Rotatie van de kaart 'X'"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:857
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:860
 msgid "mapX:GRID_INTERVAL_X"
 msgstr "mapX:GRID_INTERVAL_X"
 
@@ -1550,7 +1567,7 @@ msgid "Grid interval on x axis of the map 'X'"
 msgstr "Raster-interval op de X-as van de kaart 'X'"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:863
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:866
 msgid "mapX:GRID_INTERVAL_Y"
 msgstr "mapX:GRID_INTERVAL_Y"
 
@@ -1558,7 +1575,7 @@ msgstr "mapX:GRID_INTERVAL_Y"
 msgid "Grid interval on y axis of the map 'X'"
 msgstr "Raster-interval op de Y-as van de kaart 'X'"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:771
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:774
 msgid ""
 "Note that the layout template may contain more than one map. In this way, if"
 " you want to configure a specific map, you have to use ``mapX:`` parameters "
@@ -1570,22 +1587,22 @@ msgstr ""
 "parameters ``mapX:`` te gebruiken, waar ``X`` een positief getal is dat u "
 "kunt ophalen met het verzoek **GetProjectSettings**."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:776
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1031
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:779
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1039
 msgid "For example:"
 msgstr "Bijvoorbeeld:"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:794
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:797
 msgid "This parameter has to be ``WMS``."
 msgstr "Deze parameter moet ``WMS`` zijn."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:800
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:803
 msgid "This parameter has to be ``GetPrint`` for the **GetPrint** request."
 msgstr ""
 "Deze parameter moet ``GetPrint`` zijn in het geval van het verzoek "
 "**GetPrint**."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:806
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:809
 msgid ""
 "This parameter can be used to specify the name of a layout template to use "
 "for printing."
@@ -1593,38 +1610,38 @@ msgstr ""
 "Deze parameter kan worden gebruikt om de naam van een sjabloon van lay-out "
 "te specificeren voor het afdrukken."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:813
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:816
 msgid ""
 "This parameter specifies the format of map image. Available values are:"
 msgstr ""
 "Deze parameter specificeert de indeling van de kaartafbeelding. Beschikbare "
 "waarden zijn:"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:818
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:821
 msgid "``png``"
 msgstr "``png``"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:820
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:823
 msgid "``svg``"
 msgstr "``svg``"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:821
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:824
 msgid "``image/svg``"
 msgstr "``image/svg``"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:822
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:825
 msgid "``image/svg+xml``"
 msgstr "``image/svg+xml``"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:823
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:826
 msgid "``pdf``"
 msgstr "``pdf``"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:824
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:827
 msgid "``application/pdf``"
 msgstr "``application/pdf``"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:826
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:829
 msgid ""
 "If the ``FORMAT`` parameter is different from one of these values, then an "
 "exception is returned."
@@ -1632,7 +1649,7 @@ msgstr ""
 "Als de parameter ``FORMAT`` anders is dan een van deze waarden dan zal een "
 "uitzondering worden teruggegeven."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:833
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:836
 msgid ""
 "This parameter allows activation of Atlas rendering by indicating which "
 "features we want to print. In order to retrieve an atlas with all features, "
@@ -1644,7 +1661,7 @@ msgstr ""
 "worden gebruikt (overeenkomstig het maximum aantal toegestane objecten in de"
 " configuratie van het project), om een atlas met alle objecten op te halen."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:839
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:842
 msgid ""
 "When ``FORMAT`` is ``pdf``, a single PDF document combining the feature "
 "pages is returned. For all other formats, a single page is returned."
@@ -1653,7 +1670,7 @@ msgstr ""
 " objecten combineert, teruggegeven. Voor alle andere indelingen wordt één "
 "enkele pagina teruggegeven."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:846
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:849
 msgid ""
 "This parameter specifies the extent for a layout map item as "
 "xmin,ymin,xmax,ymax."
@@ -1661,21 +1678,21 @@ msgstr ""
 "Deze parameter specificeert het bereik van een kaartitem van een lay-out als"
 " xmin,ymin,xmax,ymax."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:853
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:856
 msgid "This parameter specifies the map rotation in degrees."
 msgstr "Deze parameter specificeert de kaartrotatie in graden."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:859
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:862
 msgid "This parameter specifies the grid line density in the X direction."
 msgstr ""
 "Deze parameter specificeert de dichtheid van de rasterlijn in de richting X."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:865
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:868
 msgid "This parameter specifies the grid line density in the Y direction."
 msgstr ""
 "Deze parameter specificeert de dichtheid van de rasterlijn in de richting Y."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:871
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:874
 msgid ""
 "This parameter specifies the map scale for a layout map item. This is useful"
 " to ensure scale based visibility of layers and labels even if client and "
@@ -1686,7 +1703,7 @@ msgstr ""
 "zichtbaarheid van de lagen en labels, zelfs als cliënt en server "
 "verschillende algoritmen hebben om de noemer voor de schaal te berekenen."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:880
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:883
 msgid ""
 "This parameter specifies the layers for a layout map item. See :ref:`See "
 "GetMap <qgisserver-wms-getmap>` for more information on this parameter."
@@ -1695,7 +1712,7 @@ msgstr ""
 " :ref:`Bekijk GetMap <qgisserver-wms-getmap>` voor meer informatie over deze"
 " parameter."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:888
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:891
 msgid ""
 "This parameter specifies the layers' styles defined in a specific layout map"
 " item. See :ref:`See GetMap <qgisserver-wms-getmap>` for more information on"
@@ -1705,7 +1722,7 @@ msgstr ""
 "kaartitem van lay-out.  Bekijk :ref:`Bekijk GetMap <qgisserver-wms-getmap>` "
 "voor meer informatie over deze parameter."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:897
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:900
 msgid ""
 "Several additional parameters are available to change the size of the legend"
 " elements:"
@@ -1713,15 +1730,15 @@ msgstr ""
 "Verscheidene aanvullende parameters zijn beschikbaar om de grootte van de "
 "elementen van de Legenda te wijzigen:"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:900
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:903
 msgid "**BOXSPACE** space between legend frame and content (mm)"
 msgstr "**BOXSPACE** ruimte tussen frame van Legenda en inhoud (mm)"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:901
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:904
 msgid "**LAYERSPACE** vertical space between layers (mm)"
 msgstr "**LAYERSPACE** verticale ruimte tussen lagen (mm)"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:902
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:905
 msgid ""
 "**LAYERTITLESPACE** vertical space between layer title and items following "
 "(mm)"
@@ -1729,26 +1746,26 @@ msgstr ""
 "**LAYERTITLESPACE** verticale ruimte tussen titel van de laag en de daarop "
 "volgende items (mm)"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:904
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:907
 msgid "**SYMBOLSPACE** vertical space between symbol and item following (mm)"
 msgstr ""
 "**SYMBOLSPACE** verticale ruimte tussen symbool en daarop volgende item (mm)"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:906
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:909
 msgid "**ICONLABELSPACE** horizontal space between symbol and label text (mm)"
 msgstr ""
 "**ICONLABELSPACE** horizontale ruimte tussen symbool en tekst voor label "
 "(mm)"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:908
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:911
 msgid "**SYMBOLWIDTH** width of the symbol preview (mm)"
 msgstr "**SYMBOLWIDTH** breedte van voorbeeld van het symbool (mm)"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:909
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:912
 msgid "**SYMBOLHEIGHT** height of the symbol preview (mm)"
 msgstr "**SYMBOLHEIGHT** hoogte van het voorbeeld van het symbool (mm)"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:911
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:914
 msgid ""
 "These parameters change the font properties for layer titles and item "
 "labels:"
@@ -1756,44 +1773,55 @@ msgstr ""
 "Deze parameters wijzigen de eigenschappen van het lettertype voor titels van"
 " lagen en labels van items:"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:914
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:917
 msgid ""
 "**LAYERFONTFAMILY / ITEMFONTFAMILY** font family for layer title / item text"
 msgstr ""
 "**LAYERFONTFAMILY / ITEMFONTFAMILY** familie lettertype voor titel van laag "
 "/ tekst van item"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:916
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:919
 msgid "**LAYERFONTBOLD / ITEMFONTBOLD** ``TRUE`` to use a bold font"
 msgstr ""
 "**LAYERFONTBOLD / ITEMFONTBOLD** ``TRUE`` om een vet lettertype te gebruiken"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:917
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:920
 msgid "**LAYERFONTSIZE / ITEMFONTSIZE** Font size in point"
 msgstr "**LAYERFONTSIZE / ITEMFONTSIZE** Grootte lettertype in punten"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:918
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:921
 msgid "**LAYERFONTITALIC / ITEMFONTITALIC** ``TRUE`` to use italic font"
 msgstr ""
 "**LAYERFONTITALIC / ITEMFONTITALIC** ``TRUE`` om cursief lettertype te "
 "gebruiken"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:919
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:922
 msgid ""
 "**LAYERFONTCOLOR / ITEMFONTCOLOR** Hex color code (e.g. ``#FF0000`` for red)"
 msgstr ""
 "**LAYERFONTCOLOR / ITEMFONTCOLOR** Hexadecimale kleurcode (bijv. ``#FF0000``"
 " voor rood)"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:921
-msgid ""
-"**LAYERTITLE / RULELABEL** set them to ``FALSE`` to get only the legend "
-"graphics without labels"
-msgstr ""
-"**LAYERTITLE / RULELABEL** stel ze in op ``FALSE`` om alleen de afbeeldingen"
-" van de Legenda te verkrijgen, zonder labels"
-
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:924
+msgid ""
+"**LAYERTITLE** ``FALSE`` to get only the legend graphics without the layer "
+"title"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:926
+msgid "**RULELABEL**:"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:928
+msgid "``FALSE`` legend graphics without item labels"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:929
+msgid ""
+"``AUTO`` hide item label for layers with :guilabel:`Single symbol` rendering"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:932
 msgid ""
 "Content based legend. These parameters let the client request a legend "
 "showing only the symbols for the features falling into the requested area:"
@@ -1802,13 +1830,13 @@ msgstr ""
 "verzoeken die alleen de symbolen voor de objecten laat zien die binnen het "
 "verzochte gebied vallen:"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:928
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:936
 msgid "**BBOX** the geographical area for which the legend should be built"
 msgstr ""
 "**BBOX** het geografische gebied waarvoor de legenda zou moeten worden "
 "opgebouwd"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:929
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:937
 msgid ""
 "**CRS / SRS** the coordinate reference system adopted to define the BBOX "
 "coordinates"
@@ -1816,7 +1844,7 @@ msgstr ""
 "**CRS / SRS** het gebruikte coördinaten referentiesysteem om de coördinaten "
 "voor de BBOX te definiëren"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:931
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:939
 msgid ""
 "**WIDTH / HEIGHT** if set these should match those defined for the GetMap "
 "request, to let QGIS Server scale symbols according to the map view image "
@@ -1826,7 +1854,7 @@ msgstr ""
 " welke zijn gedefinieerd voor het verzoek GetMap, om QGIS Server symbolen te"
 " laten schalen overeenkomstig de afbeeldingsgrootte van de kaartweergave."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:935
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:943
 msgid ""
 "Content based legend features are based on the `UMN MapServer "
 "implementation: <https://www.mapserver.org/development/rfc/ms-"
@@ -1836,7 +1864,7 @@ msgstr ""
 "`implementatie UMN MapServer: <https://www.mapserver.org/development/rfc/ms-"
 "rfc-101.html>`_"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:939
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:947
 msgid ""
 "**SHOWFEATURECOUNT** if set to ``TRUE`` adds in the legend the feature count"
 " of the features like in the following image:"
@@ -1844,7 +1872,7 @@ msgstr ""
 "**SHOWFEATURECOUNT** indien ingesteld op ``TRUE`` voegt het in de legenda "
 "het aantal objecten toe, zoals in de volgende afbeelding:"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:948
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:956
 msgid ""
 "This request type works similar to **GetCapabilities**, but it is more "
 "specific to QGIS Server and allows a client to read additional information "
@@ -1855,27 +1883,27 @@ msgstr ""
 "informatie te lezen die niet beschikbaar is in de uitvoer van de "
 "GetCapabilities:"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:952
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:960
 msgid "initial visibility of layers"
 msgstr "initiële zichtbaarheid van lagen"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:953
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:961
 msgid "information about vector attributes and their edit types"
 msgstr "informatie over vectorattributen en hun typen bewerking"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:954
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:962
 msgid "information about layer order and drawing order"
 msgstr "informatie over laagvolgorde en volgorde van tekenen"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:955
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:963
 msgid "list of layers published in WFS"
 msgstr "lijst van in WFS gepubliceerde lagen"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:959
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:967
 msgid "Web Feature Service (WFS)"
 msgstr "Web Feature Service (WFS)"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:961
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:969
 msgid ""
 "The **1.0.0** and **1.1.0** WFS standards implemented in QGIS Server provide"
 " a HTTP interface to query geographic features from a QGIS project. A "
@@ -1886,20 +1914,25 @@ msgstr ""
 "objecten uit een project van QGIS. Een typisch WFS-verzoek definieert het te"
 " gebruiken project van QGIS, en de te bevragen laag."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:969
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:975
+msgid ""
+"Specifications document according to the version number of the service:"
+msgstr "Specificatiedocument overeenkomstig het versienummer van de service:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:977
 msgid ""
 "`WFS 1.0.0 <http://portal.opengeospatial.org/files/?artifact_id=7176>`_"
 msgstr ""
 "`WFS 1.0.0 <http://portal.opengeospatial.org/files/?artifact_id=7176>`_"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:970
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:978
 msgid ""
 "`WFS 1.1.0 <http://portal.opengeospatial.org/files/?artifact_id=8339>`_"
 msgstr ""
 "`WFS 1.1.0 <http://portal.opengeospatial.org/files/?artifact_id=8339>`_"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:987
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:995
 msgid "GetFeature"
 msgstr "GetFeature"
 
@@ -1923,7 +1956,7 @@ msgstr "Transaction"
 msgid "Allows features to be inserted, updated or deleted"
 msgstr "Staat toe dat objecten worden ingevoegd, bijgewerkt of verwijderd"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:989
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:997
 msgid ""
 "Standard parameters for the **GetFeature** request according to the OGC WFS "
 "1.0.0 and 1.1.0 specifications:"
@@ -1956,7 +1989,7 @@ msgid "Output Format"
 msgstr "Indeling uitvoer"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1080
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1088
 msgid "RESULTTYPE"
 msgstr "RESULTTYPE"
 
@@ -2005,7 +2038,7 @@ msgid "Sort the results"
 msgstr "Sorteer de resultaten"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1124
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1132
 msgid "STARTINDEX"
 msgstr "STARTINDEX"
 
@@ -2014,7 +2047,7 @@ msgid "Paging"
 msgstr "Paginanummer"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1101
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1109
 msgid "GEOMETRYNAME"
 msgstr "GEOMETRYNAME"
 
@@ -2030,18 +2063,18 @@ msgstr "EXP_FILTER"
 msgid "Expression filtering"
 msgstr "Expressie filteren"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1028
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1036
 msgid ""
 "This parameter has to be ``WFS`` in case of the **GetFeature** request."
 msgstr ""
 "Deze parameter moet ``WFS`` zijn in het geval van het verzoek "
 "**GetFeature**."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1046
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1054
 msgid "``1.0.0``"
 msgstr "``1.0.0``"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1049
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1057
 msgid ""
 "If no version is indicated in the request, then ``1.1.0`` is used by "
 "default."
@@ -2049,14 +2082,14 @@ msgstr ""
 "Indien geen versie wordt aangegeven in het verzoek, dan wordt standaard "
 "``1.1.0`` gebruikt."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1065
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1073
 msgid ""
 "This parameter is ``GetFeature`` in case of the **GetFeature** request."
 msgstr ""
 "Deze parameter is ``GetFeature`` in het geval van het verzoek "
 "**GetFeature**."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1082
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1090
 msgid ""
 "This parameter may be used to specify the kind of result to return. "
 "Available values are:"
@@ -2064,15 +2097,15 @@ msgstr ""
 "Deze parameter kan worden gebruikt om het terug te geven resultaat te "
 "specificeren. Beschikbare waarden zijn:"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1085
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1093
 msgid "``results``: the default behavior"
 msgstr "``results``: het standaard gedrag"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1086
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1094
 msgid "``hits``: returns only a feature count"
 msgstr "``hits``: geeft alleen het aantal objecten terug"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1103
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1111
 msgid ""
 "This parameter can be used to specify the kind of geometry to return for "
 "features. Available values are:"
@@ -2080,19 +2113,19 @@ msgstr ""
 "Deze parameter kan worden gebruikt om het terug te geven soort geometrie te "
 "specificeren. Beschikbare waarden zijn:"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1106
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1114
 msgid "``extent``"
 msgstr "``extent``"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1107
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1115
 msgid "``centroid``"
 msgstr "``centroid``"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1108
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1116
 msgid "``none``"
 msgstr "``none``"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1126
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1134
 msgid ""
 "This parameter is standard in WFS 2.0, but it's an extension for WFS 1.0.0. "
 "Actually, it can be used to skip some features in the result set and in "
@@ -2104,11 +2137,11 @@ msgstr ""
 "resultaatset over te slaan en, in combinatie met ``MAXFEATURES``, verschaft "
 "het de mogelijkheid door de resultaten te bladeren."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1145
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1153
 msgid "Web Map Tile Service (WMTS)"
 msgstr "Web Map Tile Service (WMTS)"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1147
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1155
 msgid ""
 "The **1.0.0** WMTS standard implemented in QGIS Server provides a HTTP "
 "interface to request tiled map images generated from a QGIS project. A "
@@ -2121,18 +2154,18 @@ msgstr ""
 "project van QGIS, enkele parameters voor WMS zoals te renderen lagen en ook "
 "parameters voor de tegels."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1152
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1160
 msgid "Specifications document of the service:"
 msgstr "Specificatiedocument van de service:"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1154
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1162
 msgid ""
 "`WMTS 1.0.0 <http://portal.opengeospatial.org/files/?artifact_id=35326>`_"
 msgstr ""
 "`WMTS 1.0.0 <http://portal.opengeospatial.org/files/?artifact_id=35326>`_"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1227
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1235
 msgid "GetTile"
 msgstr "GetTile"
 
@@ -2140,7 +2173,7 @@ msgstr "GetTile"
 msgid "Returns a tile"
 msgstr "Geeft een tegel terug"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1172
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1180
 msgid ""
 "Standard parameters for the **GetCapabilities** request according to the OGC"
 " WMTS 1.0.0 specifications:"
@@ -2158,7 +2191,7 @@ msgstr "Naam van de service (WMTS)"
 msgid "Name of the request (GetCapabilities)"
 msgstr "Naam van het verzoek (GetCapabilities)"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1207
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1215
 msgid ""
 "This parameter has to be ``WMTS`` in case of the **GetCapabilities** "
 "request."
@@ -2166,7 +2199,7 @@ msgstr ""
 "Deze parameter moet ``WMTS`` zijn in het geval van het verzoek "
 "**GetCapabilities**."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1214
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1222
 msgid ""
 "This parameter is ``GetCapabilities`` in case of the **GetCapabilities** "
 "request."
@@ -2174,7 +2207,7 @@ msgstr ""
 "Deze parameter is ``GetCapabilities`` in het geval van het verzoek "
 "**GetCapabilities**."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1229
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1237
 msgid ""
 "Standard parameters for the **GetTile** request according to the OGC WMTS "
 "1.0.0 specifications:"
@@ -2187,9 +2220,9 @@ msgid "Name of the request (GetTile)"
 msgstr "Naam van het verzoek (GetTile)"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1285
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1293
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1458
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1465
 msgid "LAYER"
 msgstr "LAYER"
 
@@ -2203,7 +2236,7 @@ msgid "Output format of the tile"
 msgstr "Indeling uitvoer van de tegel"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1338
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1346
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
 msgid "TILEMATRIXSET"
 msgstr "TILEMATRIXSET"
@@ -2213,7 +2246,7 @@ msgid "Name of the pyramid"
 msgstr "Naam van de piramide"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1345
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1352
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
 msgid "TILEMATRIX"
 msgstr "TILEMATRIX"
@@ -2223,7 +2256,7 @@ msgid "Meshing"
 msgstr "Mazen"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1351
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1358
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
 msgid "TILEROW"
 msgstr "TILEROW"
@@ -2233,7 +2266,7 @@ msgid "Row coordinate in the mesh"
 msgstr "Rijcoördinaat in de mazen"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1358
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1365
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
 msgid "TILECOL"
 msgstr "TILECOL"
@@ -2242,32 +2275,32 @@ msgstr "TILECOL"
 msgid "Column coordinate in the mesh"
 msgstr "Kolomcoördinaat in de mazen"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1275
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1283
 msgid "This parameter has to be ``WMTS`` in case of the **GetTile** request."
 msgstr ""
 "Deze parameter moet ``WMTS`` zijn in het geval van het verzoek **GetTile**."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1281
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1289
 msgid "This parameter is ``GetTile`` in case of the **GetTile** request."
 msgstr ""
 "Deze parameter is ``GetTile`` in het geval van het verzoek **GetTile**."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1287
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1460
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1295
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1467
 msgid "This parameter allows to specify the layer to display on the tile."
 msgstr ""
 "Deze parameter maakt het mogelijk de op de tegel weer te geven laag te "
 "specificeren."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1289
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1462
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1297
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1469
 msgid "In addition, QGIS Server introduced some options to select a layer by:"
 msgstr ""
 "In aanvulling daarop introduceert QGIS Server enkele opties om lagen te "
 "selecteren op:"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1307
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1480
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1315
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1487
 msgid ""
 "Moreover, there's a project option allowing to select layers by their id in "
 ":menuselection:`OWS Server --> WMS capabilities` menu of the "
@@ -2280,7 +2313,7 @@ msgstr ""
 "keuzevak :guilabel:`Laag-ID's als namen gebruiken` moet zijn geselecteerd om"
 " deze optie te activeren."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1325
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1333
 msgid ""
 "This parameter may be used to specify the format of tile image. Available "
 "values are:"
@@ -2288,7 +2321,7 @@ msgstr ""
 "Deze parameter kan worden gebruikt om de indeling van de tegelafbeelding te "
 "specificeren. Beschikbare waarden zijn:"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1333
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1341
 msgid ""
 "If the ``FORMAT`` parameter is different from one of these values, then the "
 "default format PNG is used instead."
@@ -2296,22 +2329,19 @@ msgstr ""
 "Als de parameter ``FORMAT`` anders is dan een van deze waarden dan zal in "
 "plaats daarvan de standaard indeling PNG worden gebruikt."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1340
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1348
 msgid ""
-"This parameter allows to define the CRS to use to compute the underlying "
-"pyramid and has to be formed like ``EPSG:XXXX``."
+"This parameter defines the CRS to use when computing the underlying pyramid."
+" Format: ``EPSG:XXXX``."
 msgstr ""
-"Deze parameter maakt het mogelijk het te gebruiken CRS te definiëren om de "
-"onderliggende piramide te berekenen en moet worden gevormd als "
-"``EPSG:XXXX``."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1347
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1354
 msgid "This parameter allows to define the matrix to use for the output tile."
 msgstr ""
 "Deze parameter maakt het mogelijk de te gebruiken matrix voor het "
 "uitvoerbestand te specificeren."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1353
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1360
 msgid ""
 "This parameter allows to select the row of the tile to get within the "
 "matrix."
@@ -2319,7 +2349,7 @@ msgstr ""
 "Deze parameter maakt het mogelijk de rij van de op te halen tegel in de "
 "matrix te selecteren."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1360
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1367
 msgid ""
 "This parameter allows to select the column of the tile to get within the "
 "matrix."
@@ -2327,7 +2357,7 @@ msgstr ""
 "Deze parameter maakt het mogelijk de kolom van de op te halen tegel in de "
 "matrix te selecteren."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1383
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1390
 msgid ""
 "Standard parameters for the **GetFeatureInfo** request according to the OGC "
 "WMTS 1.0.0 specifications:"
@@ -2340,7 +2370,7 @@ msgid "Name of the request (GetFeatureInfo)"
 msgstr "Naam van het verzoek (GetFeatureInfo)"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1496
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1503
 msgid "INFOFORMAT"
 msgstr "INFOFORMAT"
 
@@ -2359,14 +2389,14 @@ msgstr "Y-coördinaat van een pixel"
 msgid ":ref:`See GetTile <qgisserver-wmts-gettile>`"
 msgstr ":ref:`Bekijk GetTile <qgisserver-wmts-gettile>`"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1432
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1439
 msgid ""
 "This parameter has to be ``WMTS`` in case of the **GetFeatureInfo** request."
 msgstr ""
 "Deze parameter moet ``WMTS`` zijn in het geval van het verzoek "
 "**GetFeatureInfo**."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1439
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1446
 msgid ""
 "This parameter is ``GetFeatureInfo`` in case of the **GetFeatureInfo** "
 "request."
@@ -2374,7 +2404,7 @@ msgstr ""
 "Deze parameter is ``GetFeatureInfo`` in het geval van het verzoek "
 "**GetFeatureInfo**."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1498
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1505
 msgid ""
 "This parameter allows to define the output format of the result. Available "
 "values are:"
@@ -2382,11 +2412,11 @@ msgstr ""
 "Deze parameter kan worden gebruikt om de indeling van de uitvoer van het "
 "resultaat te definiëren. Beschikbare waarden zijn:"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1506
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1513
 msgid "The default value is ``text/plain``."
 msgstr "De standaardwaarde is ``text/plain``."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1512
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1519
 msgid ""
 "This parameter allows to define the X coordinate of the pixel for which we "
 "want to retrieve underlying information."
@@ -2394,7 +2424,7 @@ msgstr ""
 "Deze parameter maakt het mogelijk de X-coördinaat van de pixel te definiëren"
 " waarvoor we de onderliggende informatie willen ophalen."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1519
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1526
 msgid ""
 "This parameter allows to define the Y coordinate of the pixel for which we "
 "want to retrieve underlying information."
@@ -2402,11 +2432,11 @@ msgstr ""
 "Deze parameter maakt het mogelijk de Y-coördinaat van de pixel te definiëren"
 " waarvoor we de onderliggende informatie willen ophalen."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1526
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1533
 msgid "WFS3 (OGC API Features)"
 msgstr "WFS3 (OGC API Features)"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1528
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1535
 msgid ""
 "WFS3 is the first implementation of the new generation of OGC protocols. It "
 "is described by the `OGC API - Features - Part 1: Core "
@@ -2416,7 +2446,7 @@ msgstr ""
 " Het is beschreven in het document `OGC API - Features - Part 1: Core "
 "<http://docs.opengeospatial.org/is/17-069r3/17-069r3.html>`_."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1533
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1541
 msgid ""
 "Here is a quick informal summary of the most important differences between "
 "the well known WFS protocol and WFS3:"
@@ -2424,7 +2454,7 @@ msgstr ""
 "Hier is een snel informeel overzicht van de meest belangrijke verschillen "
 "tussen het welbekende protocol WFS en WFS3:"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1536
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1544
 msgid ""
 "WFS3 is based on a `REST "
 "<https://en.wikipedia.org/wiki/Representational_state_transfer>`_ API"
@@ -2432,7 +2462,7 @@ msgstr ""
 "WFS3 is gebaseerd op een `REST "
 "<https://en.wikipedia.org/wiki/Representational_state_transfer>`_ API"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1539
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1547
 msgid ""
 "WFS3 API must follow the `OPENAPI "
 "<https://en.wikipedia.org/wiki/OpenAPI_Specification>`_ specifications"
@@ -2440,7 +2470,7 @@ msgstr ""
 "WFS3 API moet de specificaties volgen van `OPENAPI "
 "<https://en.wikipedia.org/wiki/OpenAPI_Specification>`_"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1542
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1550
 msgid ""
 "WFS3 supports multiple output formats but it does not dictate any (only "
 "GeoJSON and HTML are currently available in QGIS WFS3) and it uses `content "
@@ -2453,19 +2483,19 @@ msgstr ""
 "<https://en.wikipedia.org/wiki/Content_negotiation>`_ om te bepalen welke "
 "indeling aan de cliënt moet worden geserveerd"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1547
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1555
 msgid "JSON and HTML are first class citizens in WFS3"
 msgstr "JSON en HTML zijn eerste klas burgers in WFS3"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1548
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1556
 msgid "WFS3 is self-documenting (through the ``/api`` endpoint)"
 msgstr "WFS3 is zelf-gedocumenteerd (via het eindpunt ``/api``)"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1549
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1557
 msgid "WFS3 is fully navigable (through links) and browsable"
 msgstr "WFS3 is volledig te navigeren (via links) en door te bladeren"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1553
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1561
 msgid ""
 "While the WFS3 implementation in QGIS can make use of the ``MAP`` parameter "
 "to specify the project file, no extra query parameters are allowed by the "
@@ -2482,7 +2512,7 @@ msgstr ""
 " instellen van ``QGIS_PROJECT_FILE`` in de omgeving met een regel rewrite "
 "voor een webserver)."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1564
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1572
 msgid ""
 "The **API** endpoint provides comprehensive documentation of all supported "
 "parameters and output formats of your service. The following paragraphs will"
@@ -2492,11 +2522,11 @@ msgstr ""
 "ondersteunde parameters en indelingen voor de uitvoer van uw service. De "
 "volgende alinea's zullen alleen de meest belangrijke beschrijven."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1570
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1578
 msgid "Resource representation"
 msgstr "Weergavebronnen"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1572
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1580
 msgid ""
 "The QGIS Server WFS3 implementation currently supports the following "
 "resource representation (output) formats:"
@@ -2504,15 +2534,15 @@ msgstr ""
 "De QGIS Server WFS3 implementatie ondersteunt momenteel de volgende "
 "weergavebronnen (uitvoer) indelingen:"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1575
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1583
 msgid "HTML"
 msgstr "HTML"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1576
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1584
 msgid "JSON"
 msgstr "JSON"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1578
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1586
 msgid ""
 "The format that is actually served will depend on content negotiation, but a"
 " specific format can be explicitly requested by appending a format specifier"
@@ -2523,31 +2553,31 @@ msgstr ""
 "worden verzocht door een specificatie voor de indeling toe te voegen aan de "
 "eindpunten."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1582
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1590
 msgid "Supported format specifier extensions are:"
 msgstr "Ondersteunde extensies voor specificatie van de indeling zijn:"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1584
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1592
 msgid "``.json``"
 msgstr "``.json``"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1585
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1593
 msgid "``.html``"
 msgstr "``.html``"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1587
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1595
 msgid ""
 "Additional format specifier aliases may be defined by specific endpoints:"
 msgstr ""
 "Aanvullende aliassen voor specificaties van indelingen mogen worden "
 "gedefinieerd voor specifieke eindpunten:"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1590
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1598
 msgid "``.openapi``: alias for ``.json`` supported by the **API** endpoint"
 msgstr ""
 "``.openapi``: alias voor ``.json`` ondersteund door het eindpunt **API**"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1591
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1599
 msgid ""
 "``.geojson``: alias for ``.json`` supported by the **Features** and "
 "**Feature** endpoints"
@@ -2555,11 +2585,11 @@ msgstr ""
 "``.geojson``: alias voor ``.json`` ondersteund door de eindpunten "
 "**Features** en **Feature**"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1596
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1604
 msgid "Endpoints"
 msgstr "Eindpunten"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1598
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1606
 msgid ""
 "The API provides a list of endpoints that the clients can retrieve. The "
 "system is designed in such a way that every response provides a set of links"
@@ -2569,11 +2599,10 @@ msgstr ""
 "Het systeem is op een dusdanige manier ontworpen dat elk antwoord een set "
 "links verschaft om te navigeren door alle verschafte bronnen."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1602
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1610
 msgid "Endpoints points provided by the QGIS implementation are:"
 msgstr "Punten voor eindpunten, verschaft door de QGIS implementatie zijn:"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
 msgid "Name"
 msgstr "Naam"
@@ -2583,7 +2612,7 @@ msgid "Path"
 msgstr "Pad"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1625
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1633
 msgid "Landing Page"
 msgstr "Startpagina"
 
@@ -2676,7 +2705,7 @@ msgstr "``/collections/{collectionId}/items/{featureId}``"
 msgid "Information about a single feature"
 msgstr "Informatie over één enkel object"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1627
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1635
 msgid ""
 "The main endpoint is the **Landing Page**. From that page it is possible to "
 "navigate to all the available service endpoints. The **Landing Page** must "
@@ -2686,7 +2715,7 @@ msgstr ""
 "mogelijk om naar alle beschikbare eindpunten van de service te navigeren. De"
 " **Startpagina** moet links verschaffen naar"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1631
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1639
 msgid ""
 "the API definition (path ``/api`` link relations ``service-desc`` and "
 "``service-doc``),"
@@ -2694,7 +2723,7 @@ msgstr ""
 "de definitie van de API (pad ``/api`` linkrelaties ``service-desc`` en "
 "``service-doc``),"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1633
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1641
 msgid ""
 "the Conformance declaration (path ``/conformance``, link relation "
 "``conformance``), and"
@@ -2702,19 +2731,19 @@ msgstr ""
 "de declaratie voor Conformance (pad ``/conformance``, linkrelatie "
 "``conformance``), en"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1635
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1643
 msgid "the Collections (path ``/collections``, link relation ``data``)."
 msgstr "de Collecties (pad ``/collections``, linkrelatie ``data``)."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1642
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1650
 msgid "Server WFS3 landing page"
 msgstr "Server WFS3 startpagina"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1647
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1655
 msgid "API Definition"
 msgstr "API Definitie"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1649
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1657
 msgid ""
 "The **API Definition** is an OPENAPI-compliant description of the API "
 "provided by the service. In its HTML representation it is a browsable page "
@@ -2727,7 +2756,7 @@ msgstr ""
 "nauwgezet zijn vermeld en gedocumenteerd. Het pad van dit eindpunt is "
 "``/api``."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1656
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1664
 msgid ""
 "The API definition provides a comprehensive and authoritative documentation "
 "of the service, including all supported parameters and returned formats."
@@ -2736,15 +2765,15 @@ msgstr ""
 "de service, inclusief alle ondersteunde parameters en teruggegeven "
 "indelingen."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1662
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1670
 msgid "This endpoint is analogue to WFS's ``GetCapabilities``"
 msgstr "Dit eindpunt is analoog aan WFS's ``GetCapabilities``"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1665
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1673
 msgid "Collections list"
 msgstr "Lijst Collecties"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1667
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1675
 msgid ""
 "The collections endpoint provides a list of all the collections available in"
 " the service. Since the service \"serves\" a single QGIS project the "
@@ -2758,15 +2787,15 @@ msgstr ""
 "gepubliceerd als WFS in de projecteigenschappen). Het pad van dit eindpunt "
 "is ``/collections/``."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1679
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1687
 msgid "Server WFS3 collections list page"
 msgstr "Server WFS3 pagina met lijst van collecties"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1683
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1691
 msgid "Collection detail"
 msgstr "Detail collectie "
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1685
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1693
 msgid ""
 "While the collections endpoint does not provide detailed information about "
 "each available collection, that information is available in the "
@@ -2778,8 +2807,8 @@ msgstr ""
 "``/collections/{collectionId}``. Typische informatie omvat het bereik, een "
 "beschrijving, CRSen en andere metadata."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1691
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1712
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1699
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1720
 msgid ""
 "The HTML representation also provides a browsable map with the available "
 "features."
@@ -2787,15 +2816,15 @@ msgstr ""
 "De weergave HTML verschaft ook een door te bladeren kaart met de beschikbare"
 " objecten."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1700
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1708
 msgid "Server WFS3 collection detail page"
 msgstr "Server WFS3 pagina met detail collectie"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1706
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1714
 msgid "Features list"
 msgstr "Lijst met objecten"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1708
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1716
 msgid ""
 "This endpoint provides a list of all features in a collection knowing the "
 "collection ID. The path of this endpoint is "
@@ -2805,19 +2834,19 @@ msgstr ""
 " de ID voor de collectie bekend is. Het pad van dit eindpunt is "
 "``/collections/{collectionId}/items``."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1718
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1726
 msgid "This endpoint is analogue to ``GetFeature`` in  WFS 1 and WFS 2."
 msgstr "Dit eindpunt is analoog aan ``GetFeature`` in WFS 1 en WFS 2."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1726
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1734
 msgid "Server WFS3 features list page"
 msgstr "Server WFS3 pagina met lijst met objecten"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1730
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1738
 msgid "Feature detail"
 msgstr "Detail object"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1732
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1740
 msgid ""
 "This endpoint provides all the available information about a single feature,"
 " including the feature attributes and its geometry. The path of this "
@@ -2827,7 +2856,7 @@ msgstr ""
 "inclusief de attributen van het object en zijn geometrie. Het pad van dit "
 "eindpunt is ``/collections/{collectionId}/items/{itemId}``."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1737
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1745
 msgid ""
 "The HTML representation also provides a browsable map with the feature "
 "geometry."
@@ -2835,15 +2864,15 @@ msgstr ""
 "De weergave HTML verschaft ook een door te bladeren kaart met de geometrie "
 "van het object."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1746
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1754
 msgid "Server WFS3 feature detail page"
 msgstr "Server WFS3 pagina detail object"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1751
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1759
 msgid "Pagination"
 msgstr "Paginering"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1753
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1761
 msgid ""
 "Pagination of a long list of features is implemented in the OGC API through "
 "``next`` and ``prev`` links, QGIS server constructs these links by appending"
@@ -2854,21 +2883,18 @@ msgstr ""
 "links door het toevoegen van ``limit`` en ``offset`` als parameters voor de "
 "tekenreeks van de query."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1766
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1774
 msgid ""
 "The maximum acceptable value for ``limit`` can be configured with the "
-"``QGIS_SERVER_API_WFS3_MAX_LIMIT`` server configuration setting (see: "
-":ref:`server_wfs3_settings`)."
+"``QGIS_SERVER_API_WFS3_MAX_LIMIT`` server configuration setting (see: :ref"
+":`qgis-server-envvar`)."
 msgstr ""
-"De maximale te accepteren waarde voor ``limit`` kan worden geconfigureerd "
-"met de instelling voor de configuratie van de server "
-"``QGIS_SERVER_API_WFS3_MAX_LIMIT`` (zie: :ref:`server_wfs3_settings`)."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1772
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1780
 msgid "Feature filtering"
 msgstr "Objecten filteren"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1774
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1782
 msgid ""
 "The features available in a collection can be filtered/searched by "
 "specifying one or more filters."
@@ -2876,11 +2902,11 @@ msgstr ""
 "De beschikbare objecten in een collectie kunnen worden gefilterd/doorzocht "
 "door één of meer filters te specificeren."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1779
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1787
 msgid "Date and time filter"
 msgstr "Filter Datum en tijd "
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1780
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1788
 msgid ""
 "Collections with date and/or datetime attributes can be filtered by "
 "specifying a ``datetime`` argument in the query string. By default the first"
@@ -2895,7 +2921,7 @@ msgstr ""
 "\"Date\" of \"Time\" in het gedeelte :menuselection:`QGIS Server --> "
 "Dimension` van het dialoogvenster Laageigenschappen."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1787
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1795
 msgid ""
 "The date and time filtering syntax is fully described in the "
 ":ref:`ogc_api_features_api_definition` and also supports ranges (begin and "
@@ -2905,17 +2931,17 @@ msgstr ""
 ":ref:`ogc_api_features_api_definition` en ondersteunt ook bereiken (begin- "
 "en eindwaarden inbegrepen) in aanvulling op enkele waarden."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1792
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1800
 msgid "URL examples:"
 msgstr "Voorbeelden URL:"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1794
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1802
 msgid "Returns only the features with date dimension matching ``2019-01-01``"
 msgstr ""
 "Geeft alleen de objecten terug met de dimensie date die overeenkomt met "
 "``2019-01-01``"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1800
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1808
 msgid ""
 "Returns only the features with datetime dimension matching "
 "``2019-01-01T01:01:01``"
@@ -2923,7 +2949,7 @@ msgstr ""
 "Geeft alleen de objecten terug met de dimensie datetime die overeenkomt met "
 "``2019-01-01T01:01:01``"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1807
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1815
 msgid ""
 "Returns only the features with datetime dimension in the range "
 "``2019-01-01T01:01:01`` - ``2019-01-01T12:00:00``"
@@ -2931,38 +2957,38 @@ msgstr ""
 "Geeft alleen de objecten terug met de dimensie datetime in het bereik "
 "``2019-01-01T01:01:01`` - ``2019-01-01T12:00:00``"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1816
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1824
 msgid "Bounding box filter"
 msgstr "Filter Begrenzingsvak"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1818
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1826
 msgid ""
 "A bounding box spatial filter can be specified with the ``bbox`` parameter:"
 msgstr ""
 "Een ruimtelijk filter voor een begrenzingsvak kan worden gespecificeerd met "
 "de parameter ``bbox``:"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1820
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1828
 msgid "The order of the comma separated elements is:"
 msgstr "De volgorde van de door komma's gescheiden elementen is:"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1822
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1830
 msgid "Lower left corner, WGS 84 longitude"
 msgstr "Linkerbenedenhoek, WGS 84 longitude"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1823
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1831
 msgid "Lower left corner, WGS 84 latitude"
 msgstr "Linkerbenedenhoek, WGS 84 latitude"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1824
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1832
 msgid "Upper right corner, WGS 84 longitude"
 msgstr "Rechterbovenhoek, WGS 84 longitude"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1825
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1833
 msgid "Upper right corner, WGS 84 latitude"
 msgstr "Rechterbovenhoek, WGS 84 latitude"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1828
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1836
 msgid ""
 "The OGC specifications also allow a 6 item bbox specifier where the third "
 "and sixth items are the Z components, this is not yet supported by QGIS "
@@ -2972,7 +2998,7 @@ msgstr ""
 "begrenzingsvak toe, waarbij de derde en zesde items de componenten Z zijn, "
 "dit wordt nog niet ondersteund door QGIS server."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1839
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1847
 msgid ""
 "If the *CRS* of the bounding box is not WGS84 "
 "(*http://www.opengis.net/def/crs/OGC/1.3/CRS84*), a different CRS can be "
@@ -2986,11 +3012,11 @@ msgstr ""
 "identificatie voor de indeling van het CRS moet zijn in de indeling `OGC URI"
 " <http://www.opengis.net/def/crs/>`_:"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1853
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1861
 msgid "Attribute filters"
 msgstr "Filters voor attributen "
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1855
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1863
 msgid ""
 "Attribute filters can be combined with the bounding box filter and they are "
 "in the general form: ``<attribute name>=<attribute value>``. Multiple "
@@ -3001,27 +3027,27 @@ msgstr ""
 "name>=<attribute value>`` zijn. Meerdere filters mogen worden gecombineerd "
 "met de operator ``AND``."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1861
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1869
 msgid "filters all features where attribute ``name`` equals \"my value\""
 msgstr ""
 "filtert alle objecten waarvan het attribuut ``name`` gelijk is aan \"my "
 "value\""
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1868
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1876
 msgid "Partial matches are also supported by using a ``*`` (\"star\") operator:"
 msgstr ""
 "Gedeeltelijke overeenkomsten worden ook ondersteund door een operator ``*`` "
 "(\"ster\"):"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1872
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1880
 msgid "filters all features where attribute ``name`` ends with \"value\""
 msgstr "filtert alle objecten waarvan het attribuut ``name`` eindigt op \"value\""
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1880
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1888
 msgid "Attribute selection"
 msgstr "Selecteren van attributen "
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1882
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1890
 msgid ""
 "The feature attributes returned by a :ref:`ogc_api_features_features_list` "
 "call can be limited by adding a comma separated list of attribute names in "
@@ -3032,55 +3058,15 @@ msgstr ""
 "kommagescheiden lijst met namen van attributen toe te voegen in het "
 "optionele argument ``properties`` van de tekenreeks voor de query."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1888
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1896
 msgid "returns only the ``name`` attribute"
 msgstr "geeft alleen het attribuut ``name`` terug"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1898
-msgid "Configuration and settings"
-msgstr "Configuratie en instellingen"
-
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1900
-msgid "Server settings recognized by the QGIS WFS3 implementation are:"
-msgstr ""
-"Instellingen voor de server, die worden herkend door de WFS3 implementatie "
-"van QGIS zijn:"
-
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-msgid "Default"
-msgstr "Standaard"
-
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-msgid "``QGIS_SERVER_API_RESOURCES_DIRECTORY``"
-msgstr "``QGIS_SERVER_API_RESOURCES_DIRECTORY``"
-
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-msgid ""
-"Base directory for all WFS3 static resources (HTML templates, CSS, JS etc.)"
-msgstr ""
-"Basismap voor alle WFS3 statische bronnen (HTML-sjablonen, CSS, JS etc.)"
-
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-msgid "depends on packaging"
-msgstr "afhankelijk van verpakken"
-
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-msgid "``QGIS_SERVER_API_WFS3_MAX_LIMIT``"
-msgstr "``QGIS_SERVER_API_WFS3_MAX_LIMIT``"
-
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-msgid "Maximum value for ``limit`` in a features request"
-msgstr "Maximum waarde voor ``limit`` in een verzoek voor features"
-
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
-msgid "10000"
-msgstr "10000"
-
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1914
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1904
 msgid "The HTML template language"
 msgstr "De HTML sjabloontaal"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1916
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1906
 msgid ""
 "The HTML representation uses a set of HTML templates to generate the "
 "response. The template is parsed by a template engine called `inja "
@@ -3097,16 +3083,16 @@ msgstr ""
 "dezelfde gegevens, als die welke beschikbaar zijn voor de weergave ``JSON``,"
 " en een aantal aanvullende functies zijn voor de sjabloon beschikbaar:"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1928
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1918
 msgid "Custom template functions"
 msgstr "Aangepaste functies voor sjabloon"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1930
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1920
 msgid "``path_append( path )``: appends a directory path to the current url"
 msgstr ""
 "``path_append( path )``: voegt een pad naar een map toe aan de huidige URL"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1931
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1921
 msgid ""
 "``path_chomp( n )``: removes the specified number \"n\" of directory "
 "components from the current url path"
@@ -3114,13 +3100,13 @@ msgstr ""
 "``path_chomp( n )``: verwijdert het gespecificeerde aantal \"n\" "
 "mapcomponenten uit het huidige pad voor de URL"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1933
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1923
 msgid "``json_dump( )``: prints the JSON data passed to the template"
 msgstr ""
 "``json_dump( )``: drukt de gegevens voor JSON af die zijn doorgegeven aan de"
 " sjabloon"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1934
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1924
 msgid ""
 "``static( path )``: returns the full URL to the specified static path. For "
 "example: \"static( \"/style/black.css\" )\" with a root path "
@@ -3132,7 +3118,7 @@ msgstr ""
 "bronpad \"http://localhost/qgisserver/wfs3\" zal teruggeven "
 "\"http://localhost/qgisserver/wfs3/static/style/black.css\"."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1938
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1928
 msgid ""
 "``links_filter( links, key, value )``: Returns filtered links from a link "
 "list"
@@ -3140,7 +3126,7 @@ msgstr ""
 "``links_filter( links, key, value )``: Geeft gefilterde links terug uit een "
 "lijst met links"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1940
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1930
 msgid ""
 "``content_type_name( content_type )``: Returns a short name from a content "
 "type, for example \"text/html\" will return \"HTML\""
@@ -3148,11 +3134,11 @@ msgstr ""
 "``content_type_name( content_type )``: Geeft een verkorte naam terug uit een"
 " type inhoud, bijvoorbeeld \"text/html\" zal \"HTML\" teruggeven"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1947
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1937
 msgid "Template overrides"
 msgstr "Overschrijven van sjabloon"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1949
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1939
 msgid ""
 "Templates and static assets are stored in subdirectories of the QGIS server "
 "default API resource directory "
@@ -3166,13 +3152,13 @@ msgstr ""
 " basismap kan worden aangepast door de omgevingsvariabele "
 "``QGIS_SERVER_API_RESOURCES_DIRECTORY`` te wijzigen."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1955
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1945
 msgid "A typical Linux installation will have the following directory tree:"
 msgstr ""
 "Een typische installatie voor Linux zal de volgende boom voor de mappen "
 "hebben:"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1980
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1970
 msgid ""
 "To override the templates you can copy the whole tree to another location "
 "and point ``QGIS_SERVER_API_RESOURCES_DIRECTORY`` to the new location."
@@ -3181,15 +3167,15 @@ msgstr ""
 "andere locatie en ``QGIS_SERVER_API_RESOURCES_DIRECTORY`` laten verwijzen "
 "naar de nieuwe locatie."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1987
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1977
 msgid "Extra parameters supported by all request types"
 msgstr "Extra parameters ondersteund door alle typen verzoeken"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1989
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1979
 msgid "The following extra parameters are supported by all protocols."
 msgstr "De volgende extra parameters worden ondersteund door alle protocollen"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1991
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1981
 msgid ""
 "**FILE_NAME**: if set, the server response will be sent to the client as a "
 "file attachment with the specified file name."
@@ -3198,11 +3184,11 @@ msgstr ""
 "verzonden naar de cliënt als een bestandsbijlage met de gespecificeerde "
 "bestandsnaam."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1996
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1986
 msgid "Not available for WFS3."
 msgstr "Niet beschikbaar voor WFS3."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:1998
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1988
 msgid ""
 "**MAP**: Similar to MapServer, the ``MAP`` parameter can be used to specify "
 "the path to the QGIS project file. You can specify an absolute path or a "
@@ -3217,11 +3203,11 @@ msgstr ""
 " zoekt QGIS Server naar bestanden .qgs in de map waar het uitvoerende "
 "programma van de server is geplaatst."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:2005
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1995
 msgid "Example::"
 msgstr "Voorbeeld::"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:2012
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:2002
 msgid ""
 "You can define a **QGIS_PROJECT_FILE** as an environment variable to tell "
 "the server executable where to find the QGIS project file. This variable "
@@ -3236,11 +3222,11 @@ msgstr ""
 "parameter MAP in het verzoek gebruiken en tenslotte zoeken in de map van het"
 " uitvoerende programma van de server."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:2023
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:2013
 msgid "REDLINING"
 msgstr "REDLINING"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:2025
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:2015
 msgid ""
 "This feature is available and can be used with ``GetMap`` and ``GetPrint`` "
 "requests."
@@ -3248,7 +3234,7 @@ msgstr ""
 "Deze mogelijkheid is beschikbaar en kan worden gebruikt met verzoeken "
 "``GetMap``, ``GetPrint``."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:2028
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:2018
 msgid ""
 "The redlining feature can be used to pass geometries and labels in the "
 "request which are overlapped by the server over the standard returned image "
@@ -3261,11 +3247,11 @@ msgstr ""
 "nadruk te leggen of misschien enkele opmerkingen (labels) toe te voegen aan "
 "sommige gebieden, locaties etc. die niet op de standaard kaart staan."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:2034
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:2024
 msgid "The request is in the format::"
 msgstr "Het verzoek is in de indeling::"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:2047
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:2037
 msgid ""
 "Here is the image outputed by the above request in which a polygon and a "
 "label are drawn on top of the normal map:"
@@ -3273,16 +3259,16 @@ msgstr ""
 "Hier is de afbeelding die is uitgevoerd door het bovenstaande verzoek waarin"
 " een polygoon en een label zijn getekend bovenop de normale kaart:"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:2055
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:2045
 msgid "Server response to a GetMap request with redlining parameters"
 msgstr ""
 "Antwoord van de server voor een verzoek GetMap met parameters redlining"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:2057
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:2047
 msgid "You can see there are several parameters in this request:"
 msgstr "U kunt zien dat er verscheidene parameters in dit verzoek staan:"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:2059
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:2049
 msgid ""
 "**HIGHLIGHT_GEOM**: You can add POINT, MULTILINESTRING, POLYGON etc. It "
 "supports multipart geometries. Here is an example: "
@@ -3294,7 +3280,7 @@ msgstr ""
 "``HIGHLIGHT_GEOM=MULTILINESTRING((0 0, 0 1, 1 1))``. De coördinaten zouden "
 "in het CRS van het verzoek GetMap/GetPrint moeten zijn."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:2064
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:2054
 msgid ""
 "**HIGHLIGHT_SYMBOL**: This controls how the geometry is outlined and you can"
 " change the stroke width, color and opacity."
@@ -3302,7 +3288,7 @@ msgstr ""
 "**HIGHLIGHT_SYMBOL**: Dit beheert hoe de omtrek van de geometrie zal zijn en"
 " u kunt de breedte van de lijn, kleur en doorzichtbaarheid wijzigen."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:2067
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:2057
 msgid ""
 "**HIGHLIGHT_LABELSTRING**: You can pass your labeling text to this "
 "parameter."
@@ -3310,18 +3296,18 @@ msgstr ""
 "**HIGHLIGHT_LABELSTRING**: U kunt de tekst voor uw labels doorgeven met deze"
 " parameter."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:2070
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:2060
 msgid ""
 "**HIGHLIGHT_LABELSIZE**: This parameter controls the size of the label."
 msgstr ""
 "**HIGHLIGHT_LABELSIZE**: Deze parameter beheert de grootte van het label."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:2073
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:2063
 msgid "**HIGHLIGHT_LABELCOLOR**: This parameter controls the label color."
 msgstr ""
 "**HIGHLIGHT_LABELCOLOR**: Deze parameter beheert de kleur van het label."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:2075
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:2065
 msgid ""
 "**HIGHLIGHT_LABELBUFFERCOLOR**: This parameter controls the label buffer "
 "color."
@@ -3329,7 +3315,7 @@ msgstr ""
 "**HIGHLIGHT_LABELBUFFERCOLOR**: Deze parameter beheert de kleur van de "
 "buffer van het label."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:2078
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:2068
 msgid ""
 "**HIGHLIGHT_LABELBUFFERSIZE**: This parameter controls the label buffer "
 "size."
@@ -3337,11 +3323,11 @@ msgstr ""
 "**HIGHLIGHT_LABELBUFFERSIZE**: Deze parameter beheert de grootte van de "
 "buffer van het label."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:2082
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:2072
 msgid "External WMS layers"
 msgstr "Externe WMS-lagen"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:2084
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:2074
 msgid ""
 "QGIS Server allows including layers from external WMS servers in WMS GetMap "
 "and WMS GetPrint requests. This is especially useful if a web client uses an"
@@ -3358,7 +3344,7 @@ msgstr ""
 "deze lagen moeten worden gestapeld via QGIS server om te kunnen verschijnen "
 "op de afgedrukte kaart."
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:2091
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:2081
 msgid ""
 "External layers can be added to the LAYERS parameter as "
 "EXTERNAL_WMS:<layername>. The parameters for the external WMS layers (e.g. "
@@ -3372,7 +3358,7 @@ msgstr ""
 "als parameters voor de service <layername>:<parameter>. In een verzoek "
 "GetMap zou dit er uit kunnen zien als:"
 
-#: ../../docs/user_manual/working_with_ogc/server/services.rst:2112
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:2102
 msgid "Similarly, external layers can be used in GetPrint requests:"
 msgstr ""
 "Soortgelijk kunnen externe lagen worden gebruikt in verzoeken GetPrint:"

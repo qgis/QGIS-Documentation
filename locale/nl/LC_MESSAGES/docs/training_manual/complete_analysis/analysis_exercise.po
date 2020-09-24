@@ -5,16 +5,15 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
-# Dick Groskamp, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-26 13:13+0200\n"
+"POT-Creation-Date: 2020-09-24 11:25+0200\n"
 "PO-Revision-Date: 2020-03-16 19:18+0000\n"
-"Last-Translator: Dick Groskamp, 2020\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
 "Language-Team: Dutch (https://www.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,170 +30,133 @@ msgid ""
 "In this lesson, you will be guided through a complete GIS analysis in QGIS."
 msgstr "In deze les zult u door een volledige analyse in QGIS worden geleid."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:6
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:7
 msgid ""
-"Lesson developed by Linfiniti and S Motala (Cape Peninsula University of "
-"Technology)"
+"Lesson developed by Linfiniti Consulting (South Africa) and Siddique Motala "
+"(Cape Peninsula University of Technology)"
 msgstr ""
-"Les ontwikkeld door Linfiniti en S Motala (Cape Peninsula University of "
-"Technology)"
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:10
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:11
 msgid "Problem Statement"
 msgstr "Definitie van het probleem"
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:12
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:13
 msgid ""
 "You are tasked with finding areas in and around the Cape Peninsula that are "
-"a suitable habitat for a rare fynbos plant species. The extent of your area "
-"of investigation in the Cape Peninsula is: south of Melkbosstrand, west of "
-"Strand. Botanists have provided you with the following preferences exhibited"
-" by the species in question:"
+"suitable habitats for a rare fynbos plant species. The extent of your area "
+"of investigation covers Cape Town and the Cape Peninsula between "
+"Melkbosstrand in the north and Strand in the south. Botanists have provided "
+"you with the following preferences exhibited by the species in question:"
 msgstr ""
-"U krijgt de taak om gebieden in en rondom Cape Peninsula te vinden die een "
-"geschikte woonomgeving zijn voor een een zeldzame fijnbos plantensoort. Het "
-"bereik van uw onderzoeksgebied Cape Peninsula is: ten zuiden van "
-"Melkbosstrand, ten westen Strand. Botanisten hebben u voorzien van de "
-"volgende voorkeuren voor de betreffende plantensoort:"
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:18
-msgid "It grows on east facing slopes."
-msgstr "Het groeit op hellingen die uitkijken op het oosten."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:19
-msgid "It grows on slopes with a gradient between 15% and 60%."
-msgstr "Het groeit op hellingen met een verloop tussen 15% en 60%."
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:20
-msgid "It grows in areas that have a total annual rainfall of > 1200 mm."
+msgid "It grows on east facing slopes"
 msgstr ""
-"Het groeit in gebieden die een totale jaarlijkse regenval hebben van > 1200 "
-"mm."
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:21
-msgid "It will only be found at least 250 m away from any human settlement."
+msgid "It grows on slopes with a gradient between 15% and 60%"
 msgstr ""
-"Het kan alleen worden gevonden op een afstand van tenminste 250 m van een "
-"menselijke nederzetting."
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:22
-msgid ""
-"The area of vegetation in which it occurs should be at least 6000m2 in area."
+msgid "It grows in areas that have a total annual rainfall of > 1000 mm"
 msgstr ""
-"Het gebied met vegetatie waarin het voorkomt zou tenminste een omvang moeten"
-" hebben van 6000m2."
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:23
+msgid "It will only be found at least 250 m away from any human settlement"
+msgstr ""
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:24
 msgid ""
-"As a volunteer for Cape Nature, you have agreed to search for the plant on "
-"the closest suitable piece of land to your house. Use your GIS skills to "
-"determine where you should go to look."
+"The area of vegetation in which it occurs should be at least 6000 ㎡ in area"
 msgstr ""
-"Als een vrijwilliger voor Cape Nature, heeft u er in toegestemd de plant te "
-"zoeken op het dichtstbij gelegen geschikte stuk land vanaf uw huis. Gebruik "
-"uw vaardigheden in GIS om te bepalen waar u zou moeten zoeken."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:29
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:27
+msgid ""
+"As a student at the University, you have agreed to search for the plant in "
+"four different suitable areas of land. You want those four suitable areas to"
+" be the ones that are closest to the University of Cape Town where you live."
+" Use your GIS skills to determine where you should go to look."
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:34
 msgid "Solution Outline"
 msgstr "Overzicht van de oplossing"
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:31
-msgid ""
-"The data for this exercise can be found in the "
-":file:`exercise_data/more_analysis` folder. You are going to find the "
-"candidate area that is closest to a house of your choice. The solution will "
-"involve:"
-msgstr ""
-"De gegevens voor deze oefening zijn te vinden in de map "
-":file:`exercise_data/more_analysis`. U gaat het kandidaatgebied zoeken dat "
-"het dichtst bij het huis van uw keuze ligt. De oplossing zal betreffen:"
-
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:36
 msgid ""
-"analysing the DEM to find the east facing slopes and the slopes with the "
-"correct gradients;"
+"The data for this exercise can be found in the "
+":file:`exercise_data/more_analysis` folder."
 msgstr ""
-"analyseren van de DEM om de hellingen te zoeken die uitkijken op het oosten "
-"en de hellingen met het juiste verloop;"
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:38
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:39
 msgid ""
-"analysing the rainfall raster to find the areas with the correct amount of "
-"rainfall;"
+"You are going to find the four suitable areas that are closest to the "
+"University of Cape Town."
 msgstr ""
-"analyseren van het raster voor de regenval om de gebieden te vinden met de "
-"juiste hoeveelheid regen;"
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:40
-msgid ""
-"analysing the Zoning vector layer to find areas that are away from human "
-"settlement and are of the correct size."
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:42
+msgid "The solution will involve:"
 msgstr ""
-"analyseren van de vectorlaag Zoning om gebieden te vinden die verwijderd "
-"liggen van menselijke nederzettingen en van de juiste grootte zijn."
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:44
-msgid "Setting up the Map"
-msgstr "Instellen van de kaart"
+msgid ""
+"Analysing a DEM raster layer to find the east facing slopes and the slopes "
+"with the correct gradients"
+msgstr ""
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:46
 msgid ""
-"Click on the \"CRS status\" button in the extreme lower right corner of the "
-"screen. Under the :guilabel:`CRS` tab of the screen that appears, you will "
-"see the box :guilabel:`Coordinate reference systems of the world.`"
+"Analysing a rainfall raster layer to find the areas with the correct amount "
+"of rainfall"
 msgstr ""
-"Klik op de knop \"CRS-status\" in de uiterste rechter benedenhoek van het "
-"scherm. Onder de tab :guilabel:`CRS` van het scherm dat verschijnt, zult u "
-"het vak :guilabel:`Coördinatenreferentiesystemen van de wereld` zien."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:49
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:48
 msgid ""
-"In this box, navigate to :menuselection:`Projected Coordinate Systems --> "
-"Universal Transverse Mercator (UTM)`."
+"Analysing a zoning vector layer to find areas that are away from human "
+"settlement and are of the correct size"
 msgstr ""
-"Navigeer, in dat vak, naar :menuselection:`Geprojecteerd Coördinaatsysteem "
-"--> Universal Transverse Mercator (UTM)`."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:51
-msgid ""
-"Select the entry :guilabel:`WGS 84 / UTM zone 33S` (with the EPSG code "
-"``32733``)."
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:52
+msgid "|FA| Setting up the Map"
 msgstr ""
-"Selecteer het item :guilabel:`WGS 84 / UTM zone 33S` (met de EPSG-code "
-"`32733`)."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:53
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:54
 msgid ""
-"Click :guilabel:`OK`. The map is now in the ``UTM33S`` coordinate reference "
-"system."
+"Click on the |projectionEnabled| :sup:`Current CRS` button in the lower "
+"right corner of the screen. Under the :guilabel:`CRS` tab of the dialog that"
+" appears, use the \"Filter\" tool to search for \"33S\". Select the entry "
+":guilabel:`WGS 84 / UTM zone 33S` (with EPSG code ``32733``)."
 msgstr ""
-"Klik op :guilabel:`OK`. De kaart heeft nu het coördinaten referentiesysteem "
-"`UTM33S`."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:55
-msgid ""
-"Save the map by clicking on the :guilabel:`Save Project As` toolbar button, "
-"or use the :menuselection:`File --> Save Project As...` menu item."
-msgstr ""
-"Sla de kaart op door te klikken op de knop op de werkbalk :guilabel:`Opslaan"
-" als`, of gebruikt het menu-item :menuselection:`Project --> Opslaan "
-"als...`."
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:60
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:286
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:313
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:363
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:517
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:586
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:672
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:741
+msgid "Click :guilabel:`OK`"
+msgstr "Klik op :guilabel:`OK`"
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:57
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:61
 msgid ""
-"Save the map in a directory called :file:`Rasterprac` that you should create"
-" somewhere on your computer. You will save whatever layers you create in "
-"this directory as well."
+"Save the project file by clicking on the |fileSave| :sup:`Save Project` "
+"toolbar button, or use the :menuselection:`File --> Save As...` menu item."
 msgstr ""
-"Sla de kaart op in een map genaamd :file:`Rasterprac` die u ergens op uw "
-"computer zou moeten maken. U zou in die map ook alle lagen die u maakt "
-"moeten opslaan."
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:65
+msgid ""
+"Save it in a new directory called :file:`Rasterprac`, that you should create"
+" somewhere on your computer. You will save whatever layers you create in "
+"this directory as well. Save the project as :file:`your_name_fynbos.qgs`."
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:71
 msgid "Loading Data into the Map"
 msgstr "Gegevens in de kaart laden"
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:67
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:73
 msgid ""
 "In order to process the data, you will need to load the necessary layers "
 "(street names, zones, rainfall, DEM) into the map canvas."
@@ -202,95 +164,73 @@ msgstr ""
 " U zult de benodigde lagen (straatnamen, zones, regenval, DEM) moeten laden "
 "in het kaartvenster om de gegevens te kunnen verwerken,"
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:71
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:77
 msgid "For vectors..."
 msgstr "Voor vectors…"
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:73
-msgid ""
-"Click on the |dataSourceManager| :sup:`Open Data Source Manager` button and "
-"enable the |addOgrLayer| :guilabel:`Vector` tab in the dialog that appears, "
-"or use the :menuselection:`Layer --> Add Layer -->` |addOgrLayer| "
-":menuselection:`Add Vector Layer...` menu item."
-msgstr ""
-"Klik op de knop |dataSourceManager| :sup:`Databronnen beheren openen` en "
-"schakel naar de tab |addOgrLayer| :guilabel:`Vector` in het dialoogvenster "
-"dat verschijnt, of gebruik het menuitem :menuselection:`Kaartlagen --> Laag "
-"toevoegen -->` |addOgrLayer| :menuselection:`Vectorlaag toevoegen…`."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:77
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:109
-msgid "Ensure that the :guilabel:`File` radio button is selected."
-msgstr "Zorg er voor dat de radioknop :guilabel:`Bestand` is geselecteerd."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:78
-msgid ""
-"Click on the :guilabel:`...` button to browse for :guilabel:`Vector "
-"dataset(s)`."
-msgstr ""
-"Klik op de knop :guilabel:`…` en blader naar :guilabel:`Vector "
-"databron(nen)`"
-
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:79
 msgid ""
-"In the dialog that appears, open the "
-":file:`exercise_data/more_analysis/streets` directory."
+"Click on the |dataSourceManager| :sup:`Open Data Source Manager` button in "
+"the *Data Source Manager Toolbar*, and enable the |addOgrLayer| "
+":guilabel:`Vector` tab in the dialog that appears, or use the "
+":menuselection:`Layer --> Add Layer -->` |addOgrLayer| :menuselection:`Add "
+"Vector Layer...` menu item"
 msgstr ""
-"Open, in het dialoogvenster dat verschijnt, de map "
-":file:`exercise_data/more_analysis/streets`."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:81
-msgid "Select the file :file:`Street_Names_UTM33S.shp`."
-msgstr "Selecteer het bestand :file:`Street_Names_UTM33S.shp`."
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:84
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:121
+msgid "Ensure that |radioButtonOn| :guilabel:`File` is selected"
+msgstr ""
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:82
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:85
+msgid "Click on the :guilabel:`...` button to browse for vector dataset(s)"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:87
+msgid ""
+"In the dialog that appears, open the "
+":file:`exercise_data/more_analysis/Streets` directory"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:89
+msgid "Select the file :file:`Street_Names_UTM33S.shp`"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:90
 msgid "Click :guilabel:`Open`."
 msgstr "Klik op :guilabel:`Openen`."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:84
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:92
 msgid ""
 "The dialog closes and shows the original dialog, with the file path "
-"specified in the text field next to the :guilabel:`Vector dataset(s)` "
-"button. This allows you to ensure that the correct file is selected. It is "
-"also possible to enter the file path in this field manually, should you wish"
-" to do so."
+"specified in the text field next to :guilabel:`Vector dataset(s)`. This "
+"allows you to ensure that the correct file is selected. It is also possible "
+"to enter the file path in this field manually, should you wish to do so."
 msgstr ""
-"Het dialoogvenster sluit en geeft het originele dialoogvenster weer, met het"
-" bestandspad gespecificeerd in het tekstveld naast de knop :guilabel:`Vector"
-" databron(nen)`. Dit stelt u in staat er voor te zorgen dat het juiste "
-"bestand is geselecteerd. Het is ook mogelijk het bestandspad handmatig in "
-"het veld in te voeren, als u dat zou willen."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:89
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:98
 msgid ""
-"Click :guilabel:`Add`. The vector layer will load in your map. Its color is "
-"automatically assigned. It will be changed later."
+"Click :guilabel:`Add`. The vector layer will be loaded into your map. Its "
+"color is automatically assigned. You will change it later."
 msgstr ""
-"Klik op :guilabel:`Toevoegen`. De vectorlaag zal worden geladen in uw kaart."
-" De kleur ervan wordt automatisch toegewezen, die zal later worden "
-"gewijzigd."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:91
-msgid "Rename the layer to :guilabel:`Streets`."
-msgstr "Hernoem de laag naar :guilabel:`Streets`."
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:102
+msgid "Rename the layer to ``Streets``"
+msgstr ""
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:93
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:104
 msgid ""
 "Right-click on it in the :guilabel:`Layers` panel (by default, the pane "
-"along the left-hand side of the screen)."
+"along the left-hand side of the screen)"
 msgstr ""
-"Klik er met rechts op in het paneel :guilabel:`Lagen` (standaard is dat het "
-"paneel aan de linkerkant van het scherm)."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:95
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:106
 msgid ""
 "Click :guilabel:`Rename` in the dialog that appears and rename it, pressing "
-"the :kbd:`Enter` key when done."
+"the :kbd:`Enter` key when done"
 msgstr ""
-"Klik op :guilabel:`Laag hernoemen` in het dialoogvenster dat verschijnt en "
-"hernoem het, druk op de toets :kbd:`Enter` indien gereed."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:97
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:108
 msgid ""
 "Repeat the vector adding process, but this time select the "
 ":file:`Generalised_Zoning_Dissolve_UTM33S.shp` file in the :file:`Zoning` "
@@ -300,64 +240,357 @@ msgstr ""
 " het bestand :file:`Generalised_Zoning_Dissolve_UTM33S.shp` in de map "
 ":file:`Zoning`."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:100
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:111
 msgid "Rename it to ``Zoning``."
 msgstr "Hernoem het naar ``Zoning``."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:103
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:114
 msgid "For rasters..."
 msgstr "Voor rasters…"
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:105
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:116
 msgid ""
 "Click on the |dataSourceManager| :sup:`Open Data Source Manager` button and "
 "enable the |addRasterLayer| :guilabel:`Raster` tab in the dialog that "
 "appears, or use the :menuselection:`Layer --> Add Layer -->` "
-"|addRasterLayer| :menuselection:`Add Raster Layer...` menu item."
+"|addRasterLayer| :menuselection:`Add Raster Layer...` menu item"
 msgstr ""
-"Klik op de knop |dataSourceManager| :sup:`Databronnen beheren openen` en "
-"schakel naar de tab |addRasterLayer| :guilabel:`Raster` in het "
-"dialoogvenster dat verschijnt, of gebruik het menuitem "
-":menuselection:`Kaartlagen --> Laag toevoegen -->` |addRasterLayer| "
-":menuselection:`Rasterlaag toevoegen…`."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:110
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:122
 msgid ""
-"Navigate to the appropriate file, select it, and click :guilabel:`Open`."
+"Navigate to the appropriate file, select it, and click :guilabel:`Open`"
 msgstr ""
-"Navigeer naar het toepasselijke bestand, selecteer het en klik op "
-":guilabel:`Openen`."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:111
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:124
 msgid ""
-"Do this for each of the two raster files. The files you want are "
-":file:`DEM/reproject/DEM.tif` and :file:`Rainfall/reprojected/rainfall.tif`."
+"Do this for each of the following two raster files, :file:`DEM/SRTM.tif` and"
+" :file:`rainfall/reprojected/rainfall.tif`"
 msgstr ""
-"Doe dit voor elk van de twee rasterbestanden. De bestanden die u nodig hebt "
-"zijn :file:`DEM/reproject/DEM.tif` en "
-":file:`Rainfall/reprojected/rainfall.tif`."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:114
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:126
 msgid ""
-"Rename the rainfall raster to ``Rainfall`` (with an initial capital). "
-"Initially when you load them, the images will be gray rectangles. Don't "
-"worry, this will be changed later."
+"Rename the SRTM raster to ``DEM`` and the rainfall raster to ``Rainfall`` "
+"(with an initial capital)"
 msgstr ""
-"Hernoem het raster rainfall naar ``Rainfall`` (met een hoofdletter aan het "
-"begin). Initieel, als u ze laadt, zullen de afbeeldingen grijze rechthoeken "
-"zijn. Geen zorgen, dit zal later gewijzigd worden."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:117
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:258
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:285
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:454
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:130
+msgid "Changing the layer order"
+msgstr "Wijzigen van de volgorde van lagen"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:132
+msgid ""
+"Click and drag layers up and down in the :guilabel:`Layers` panel to change "
+"the order they appear in on the map so that you can see as many of the "
+"layers as possible."
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:136
+msgid ""
+"Now that all the data is loaded and properly visible, the analysis can "
+"begin. It is best if the clipping operation is done first. This is so that "
+"no processing power is wasted on computing values in areas that are not "
+"going to be used anyway."
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:143
+msgid "Find the Correct Districts"
+msgstr "Zoek naar de juiste districten"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:145
+msgid ""
+"Load the vector layer :file:`admin_boundaries/Western_Cape_UTM33S.shp` into "
+"your map."
+msgstr ""
+"Laad de vectorlaag :file:`admin_boundaries/Western_Cape_UTM33S.shp` in uw "
+"kaart."
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:147
+msgid "Rename it to ``Districts``."
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:148
+msgid ""
+"Right-click on the ``Districts`` layer in the :guilabel:`Layers` panel."
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:150
+msgid ""
+"In the menu that appears,  select the :guilabel:`Filter...` menu item. The "
+":guilabel:`Query Builder` dialog appears."
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:154
+msgid "You will now build a query to select only the following districts:"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:156
+msgid "``Bellville``"
+msgstr "``Bellville``"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:157
+msgid "``Cape``"
+msgstr "``Cape``"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:158
+msgid "``Goodwood``"
+msgstr "``Goodwood``"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:159
+msgid "``Kuils River``"
+msgstr "``Kuils River``"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:160
+msgid "``Mitchells Plain``"
+msgstr "``Mitchells Plain``"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:161
+msgid "``Simon Town``"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:162
+msgid "``Wynberg``"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:164
+msgid ""
+"In the :guilabel:`Fields` list, double-click on the ``NAME_2`` field to make"
+" it appear in the :guilabel:`SQL where clause` text field below"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:167
+msgid ""
+"Click the :guilabel:`=` button; an ``=`` sign is appended to the SQL query"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:169
+msgid ""
+"Click the :guilabel:`All` button below the (currently empty) "
+":guilabel:`Values` list."
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:172
+msgid ""
+"After a short delay, this will populate the :guilabel:`Values` list with the"
+" values of the selected field (``NAME_2``)."
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:174
+msgid ""
+"Double-click the value ``Bellville`` in the :guilabel:`Values` list to "
+"append it to the SQL query."
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:177
+msgid ""
+"In order to select more than one district, you'll need to use the *OR* "
+"boolean operator."
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:179
+msgid ""
+"Click the :guilabel:`OR` button and it will be appended to the SQL query"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:181
+msgid ""
+"Using a process similar to the above, add the following to the existing SQL "
+"query::"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:186
+msgid ""
+"Add another *OR* operator, then work your way through the list of districts "
+"above in a similar fashion."
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:189
+msgid "The final query should be::"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:196
+msgid "By using the ``IN`` operator, the query would look like this::"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:202
+msgid "Click :guilabel:`OK`."
+msgstr "Klik op :guilabel:`OK`."
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:204
+msgid ""
+"The districts shown in your map are now limited to those in the list above."
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:208
+msgid "Clip the Rasters"
+msgstr "Clippen van de rasters"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:210
+msgid ""
+"Now that you have an area of interest, you can clip the rasters to this "
+"area."
+msgstr ""
+"Nu u een beperkt gebied heeft, kunt u de rasters tot dit gebied clippen."
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:213
+msgid ""
+"Ensure that the only layers that are visible are the ``DEM``, ``Rainfall`` "
+"and ``Districts`` layers"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:215
+msgid "``Districts`` must be on top to be visible"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:216
+msgid ""
+"Open the clipping dialog by selecting the menu item :menuselection:`Raster "
+"--> Extraction --> Clip Raster by Mask Layer...`"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:218
+msgid "In the :guilabel:`Input layer` dropdown list, select the ``DEM`` layer"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:220
+msgid ""
+"In the :guilabel:`Mask layer` dropdown list, select the ``Districts`` layer"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:222
+msgid ""
+"Scroll down and specify an output location in the :guilabel:`Clipped (mask)`"
+" text field by clicking the :guilabel:`...` button and choosing "
+":guilabel:`Save to File...`"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:226
+msgid "Navigate to the :file:`Rasterprac` directory"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:227
+msgid "Enter a file name - ``DEM_clipped.tif``"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:228
+msgid "Save"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:230
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:350
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:382
+msgid ""
+"Make sure that |checkbox| :guilabel:`Open output file after running "
+"algorithm` is checked"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:232
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:352
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:384
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:399
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:478
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:521
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:707
-msgid "Save the map."
-msgstr "Sla de kaart op."
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:573
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:615
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:762
+msgid "Click :guilabel:`Run`"
+msgstr "Klik op :guilabel:`Uitvoeren`"
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:119
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:234
+msgid ""
+"After the clipping operation has completed, leave the :guilabel:`Clip Raster"
+" by Extent` dialog open, to be able to reuse the clipping area"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:237
+msgid ""
+"Select the ``Rainfall`` raster layer in the :guilabel:`Input layer` dropdown"
+" list and save your output as :file:`Rainfall_clipped.tif`"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:239
+msgid ""
+"Do not change any other options. Leave everything the same and click "
+":guilabel:`Run`."
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:241
+msgid ""
+"After the second clipping operation has completed, you may close the "
+":guilabel:`Clip Raster by Mask Layer` dialog"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:243
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:332
+msgid "Save the map"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:246
+msgid "Align the rasters"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:248
+msgid ""
+"For our analysis we need the rasters to have the same CRS and they have to "
+"be aligned."
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:251
+msgid ""
+"First we change the resolution of our rainfall data to 30 meters (pixel "
+"size):"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:254
+msgid ""
+"Right-click on the ``Rainfall_clipped`` layer and select "
+":menuselection:`Export--> Save As...` in the context menu."
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:256
+msgid ""
+"Set the :guilabel:`Horizontal` and :guilabel:`Vertical` resolution to ``30``"
+" (meters)."
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:258
+msgid ""
+"Save the file as :file:`Rainfall30.tif` in :file:`rainfall/reprojected` "
+"(:guilabel:`File name`)`"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:261
+msgid "Then we align the DEM:"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:263
+msgid ""
+"Right-click on the ``DEM_clipped`` layer and select "
+":menuselection:`Export--> Save As...` in the context menu"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:265
+msgid ""
+"For :guilabel:`CRS`, choose *WGS 84 / UTM zone 33S* (EPSG code ``32733``)"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:267
+msgid ""
+"Set the :guilabel:`Horizontal` and :guilabel:`Vertical` resolution to 30 "
+"(meters)"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:269
+msgid ""
+"Under :guilabel:`Extent`, click on :guilabel:`Calculate from Layer` and "
+"choose ``rainfall30``"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:271
+msgid ""
+"Save the file as :file:`DEM30.tif` in :file:`DEM/reprojected` "
+"(:guilabel:`File name`)"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:274
 msgid ""
 "In order to properly see what's going on, the symbology for the layers needs"
 " to be changed."
@@ -365,56 +598,33 @@ msgstr ""
 "De symbologie voor de lagen moet gewijzigd worden om op de juiste wijze te "
 "kunen zien wat er gebeurt, "
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:123
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:278
 msgid "Changing the symbology of vector layers"
 msgstr "Wijzigen van de symbologie van vectorlagen"
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:125
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:280
 msgid ""
 "In the :guilabel:`Layers` panel, right-click on the :guilabel:`Streets` "
-"layer."
+"layer"
 msgstr ""
-"Klik met rechts, in het paneel :guilabel:`Lagen`, op de laag "
-":guilabel:`Streets`."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:126
-msgid "Select :guilabel:`Properties` from the menu that appears."
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:282
+msgid "Select :guilabel:`Properties` from the menu that appears"
 msgstr ""
-"Selecteer :guilabel:`Eigenschappen` uit het menu dat tevoorschijn komt."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:127
-msgid "Switch to the :guilabel:`Symbology` tab in the dialog that appears."
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:283
+msgid "Switch to the :guilabel:`Symbology` tab in the dialog that appears"
 msgstr ""
-"Schakel naar de tab :guilabel:`Symbologie` in het dialoogvenster dat "
-"verschijnt."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:128
-msgid ""
-"Click on the button labelled :guilabel:`Change`, with a square showing the "
-"current color of the :guilabel:`Streets` layer."
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:284
+msgid "Click on the :guilabel:`Color` dropdown"
 msgstr ""
-"Klik op de knop, gelabeld :guilabel:`Wijzigen`, met een vierkant dat de "
-"huidige kleur van de laag :guilabel:`Streets` weergeeft."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:130
-msgid "Select a new color in the dialog that appears."
-msgstr "Selecteer een nieuwe kleur in het dialoogvenster dat verschijnt."
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:285
+msgid "Select a new color in the dialog that appears"
+msgstr ""
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:131
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:274
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:410
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:441
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:518
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:537
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:572
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:631
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:662
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:705
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:735
-msgid "Click :guilabel:`OK`."
-msgstr "Klik op :guilabel:`OK`."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:132
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:287
 msgid ""
 "Click :guilabel:`OK` again in the :guilabel:`Layer Properties` dialog. This "
 "will change the color of the :guilabel:`Streets` layer."
@@ -423,30 +633,27 @@ msgstr ""
 ":guilabel:`Laageigenschappen`. Dit zal de kleur van de laag "
 ":guilabel:`Streets` wijzigen."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:134
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:290
 msgid ""
 "Follow a similar process for the :guilabel:`Zoning` layer and choose an "
-"appropriate color for it."
+"appropriate color for it"
 msgstr ""
-"Volg een soortgelijk proces voor de laag :guilabel:`Zoning` en kies er een "
-"toepasselijke kleur voor."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:140
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:296
 msgid "Changing the symbology of raster layers"
 msgstr "Wijzigen van de symbologie van rasterlagen"
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:142
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:298
 msgid "Raster layer symbology is somewhat different."
 msgstr "Symbologie voor rasterlagen is enigszins anders."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:144
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:300
 msgid ""
-"Open the :guilabel:`Properties` dialog for the :guilabel:`Rainfall` raster."
+"Open the :guilabel:`Properties` dialog for the :guilabel:`Rainfall30` raster"
+" layer"
 msgstr ""
-"Open het dialoogvenster :guilabel:`Laageigenschappen` voor het raster "
-":guilabel:`Rainfall`."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:145
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:302
 msgid ""
 "Switch to the :guilabel:`Symbology` tab. You'll notice that this dialog is "
 "very different from the version used for vector layers."
@@ -455,376 +662,57 @@ msgstr ""
 "dialoogvenster voor de stijl heel anders is dan de versie die werd gebruikt "
 "voor vectorlagen."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:147
-msgid "Ensure that the button :guilabel:`Use standard deviation` is selected."
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:305
+msgid "Expand :guilabel:`Min/Max Value Settings`"
 msgstr ""
-"Zorg er voor dat de knop :guilabel:`Standaard afwijking gebruiken` is "
-"geselecteerd."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:148
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:306
 msgid ""
-"Change the value in the associated box to ``2.00`` (it should be set to "
-"``0.00`` by default)."
+"Ensure that the button :guilabel:`Mean +/- standard deviation` is selected"
 msgstr ""
-"Wijzig de waarde in het bijbehorende vak naar ``2.00`` (het zou standaard "
-"moeten zijn ingesteld op ``0.00``)."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:150
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:308
+msgid "Make sure that the value in the associated box is ``2.00``"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:309
 msgid ""
-"Under the heading :guilabel:`Contrast enhancement`, change the value of the "
-":guilabel:`Current` dropdown list to :guilabel:`Stretch to MinMax`."
+"For :guilabel:`Contrast enhancement`, make sure it says :guilabel:`Stretch "
+"to MinMax`"
 msgstr ""
-"Wijzig, onder de kop :guilabel:`Contrastverbetering`, de waarde van de "
-"keuzelijst :guilabel:`Geen verbetering` naar :guilabel:`'Stretch' tot "
-"MinMax`."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:152
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:311
 msgid ""
-"Click :guilabel:`OK`. The \"Rainfall\" raster, if visible, should change "
-"colors, allowing you to see different brightness values for each pixel."
+"For :guilabel:`Color gradient`, change it to :guilabel:`White to Black`"
 msgstr ""
-"Klik op :guilabel:`OK`. Het raster \"Rainfall\", indien zichtbaar, zou van "
-"kleur moeten veranderen, wat u in staat stelt de verschillende waarden voor "
-"helderheid voor elke pixel te zien."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:154
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:315
 msgid ""
-"Repeat this process for the DEM, but set the standard deviations used for "
-"stretching to ``4.00``."
+"The ``Rainfall30`` raster, if visible, should change colors, allowing you to"
+" see different brightness values for each pixel"
 msgstr ""
-"Herhaal dit proces voor de DEM, maar stel de standaard afwijking die moet "
-"worden gebruikt voor het uitrekken in op ``4.00``."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:158
-msgid "Changing the layer order"
-msgstr "Wijzigen van de volgorde van lagen"
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:160
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:317
 msgid ""
-"In the :guilabel:`Layers` panel, click and drag layers up and down to change"
-" the order they appear in on the map."
+"Repeat this process for the ``DEM30`` layer, but set the standard deviations"
+" used for stretching to ``4.00``"
 msgstr ""
-"Klik en sleep, in het paneel :guilabel:`Lagen`, lagen naar boven en beneden "
-"om de volgorde waarin zij op de kaart verschijnen te wijzigen."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:162
-msgid ""
-"Newer versions of QGIS may have a :guilabel:`Control rendering order` "
-"checkbox beneath the :guilabel:`Layers` panel. Ensure that it is checked."
-msgstr ""
-"Nieuwere versies van QGIS zouden een keuzevak :guilabel:`Volgorde van "
-"renderen beheren` onder in het paneel :guilabel:`Lagen` kunnen hebben. Zorg "
-"er voor dat het is geselecteerd."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:165
-msgid ""
-"Now that all the data is loaded and properly visible, the analysis can "
-"begin. It is best if the clipping operation is done first. This is so that "
-"no processing power is wasted on computing values in areas that aren't going"
-" to be used anyway."
-msgstr ""
-"Nu alle gegevens zijn geladen en op de juiste wijze zichtbaar zijn, kan de "
-"analyse beginnen. Het is het beste als de bewerking clippen als eerste wordt"
-" uitgevoerd. Dit om er voor te zorgen dat er geen verwerkingskracht wordt "
-"verspilt in het berekenen van waarden in gebieden die toch niet gebruikt "
-"gaan worden."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:171
-msgid "Find the Correct Districts"
-msgstr "Zoek naar de juiste districten"
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:173
-msgid ""
-"Load the vector layer :file:`admin_boundaries/Western_Cape_UTM33S.shp` into "
-"your map."
-msgstr ""
-"Laad de vectorlaag :file:`admin_boundaries/Western_Cape_UTM33S.shp` in uw "
-"kaart."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:175
-msgid "Rename it to :guilabel:`Districts`."
-msgstr "Hernoem die naar :guilabel:`Districts`."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:176
-msgid ""
-"Right-click on the :guilabel:`Districts` layer in the :guilabel:`Layers` "
-"panel."
-msgstr ""
-"Klik met rechts op de laag :guilabel:`Districts` in het paneel "
-":guilabel:`Lagen`."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:177
-msgid ""
-"In the menu that appears,  select the :guilabel:`Query...` menu item. The "
-":guilabel:`Query Builder` dialog appears."
-msgstr ""
-"Selecteer, in het menu dat verschijnt, het menu-item :guilabel:`Query...`. "
-"Het dialoogvenster :guilabel:`Query bouwer` verschijnt."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:180
-msgid ""
-"You will now build a query to select only the following list of districts:"
-msgstr ""
-"U zult nu een query gaan bouwen om alleen de volgende lijst met districten "
-"te selecteren:"
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:182
-msgid "``Bellville``"
-msgstr "``Bellville``"
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:183
-msgid "``Cape``"
-msgstr "``Cape``"
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:184
-msgid "``Goodwood``"
-msgstr "``Goodwood``"
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:185
-msgid "``Kuils River``"
-msgstr "``Kuils River``"
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:186
-msgid "``Mitchells Plain``"
-msgstr "``Mitchells Plain``"
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:187
-msgid "``Simons Town`` and"
-msgstr "``Simons Town`` en"
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:188
-msgid "``Wynberg``."
-msgstr "``Wynberg``."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:190
-msgid ""
-"In the :guilabel:`Fields` list, double-click on the :guilabel:`NAME_2` "
-"field. It appears in the :guilabel:`SQL where clause` text field below."
-msgstr ""
-"Dubbelklik, in de lijst :guilabel:`Velden`, op het veld :guilabel:`NAME_2`. "
-"Het verschijnt in het tekstveld :guilabel:`Provider-specifieke filter "
-"expressie` onderin."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:192
-msgid ""
-"Click the :guilabel:`=` button; an ``=`` sign is added to the SQL query."
-msgstr ""
-"Klik op de knop :guilabel:`=`; een teken ``=`` wordt aan de SQL-guery "
-"toegevoegd."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:193
-msgid ""
-"Click the :guilabel:`All` button below the (currently empty) "
-":guilabel:`Values` list. After a short delay, this will populate the "
-":guilabel:`Values` list with the values of the selected field "
-"(:guilabel:`NAME_2`)."
-msgstr ""
-"Klik op de knop :guilabel:`Alles` onder de (momenteel lege) lijst "
-":guilabel:`Waarden`. Na korte tijd zal dit de lijst :guilabel:`Waarden` "
-"vullen met de waarden van het geselecteerde veld (:guilabel:`NAME_2`)."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:197
-msgid ""
-"Double-click the value :guilabel:`Bellville` in the :guilabel:`Values` list."
-" As before, this will be added to the SQL query."
-msgstr ""
-"Dubbelklik op de waarde :guilabel:`Bellville` in de lijst "
-":guilabel:`Waarden`. Zoals eerder zal dit worden toegevoegd aan de SQL-"
-"query."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:200
-msgid ""
-"In order to select more than one district, you'll need to use the "
-":guilabel:`OR` boolean operator."
-msgstr ""
-"U moet de Booleaanse operator :guilabel:`OR` gebruiken om meer dan één "
-"district te kiezen, "
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:203
-msgid "Click the :guilabel:`OR` button and it will be added to the SQL query."
-msgstr ""
-"Klik op de knop :guilabel:`OR` en het zal worden toegevoegd aan de SQL-"
-"query."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:204
-msgid ""
-"Using a process similar to the above, add the following to the existing SQL "
-"query:"
-msgstr ""
-"Voeg, met een soortgelijk proces als hierboven, het volgende toe aan de "
-"bestaande SQL-query:"
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:211
-msgid ""
-"Add another :guilabel:`OR` operator, then work your way through the list of "
-"districts above in a similar fashion."
-msgstr ""
-"Voeg nog een operator :guilabel:`OR` toe, en verwerk dan de bovenstaande "
-"lijst met districten op een soortgelijke manier."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:214
-msgid "The final query should be"
-msgstr "De uiteindelijke query zou moeten zijn"
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:222
-msgid ""
-"Click :guilabel:`OK`. The districts shown in your map are now limited to "
-"those in the list above."
-msgstr ""
-"Klik op :guilabel:`OK`. De in uw kaart weergegeven districten beperken zich "
-"nu tot die in de lijst hierboven."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:226
-msgid "Clip the Rasters"
-msgstr "Clippen van de rasters"
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:228
-msgid ""
-"Now that you have an area of interest, you can clip the rasters to this "
-"area."
-msgstr ""
-"Nu u een beperkt gebied heeft, kunt u de rasters tot dit gebied clippen."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:230
-msgid ""
-"Ensure that the only layers that are visible are the :guilabel:`DEM`, "
-":guilabel:`Rainfall` and :guilabel:`Districts` layers."
-msgstr ""
-"Zorg er voor dat de zichtbare lagen alleen de lagen :guilabel:`DEM`, "
-":guilabel:`Rainfall` en :guilabel:`Districts` zijn."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:232
-msgid ":guilabel:`Districts` must be on top so that they are visible."
-msgstr ":guilabel:`Districts` moet bovenop liggen zodat zij zichtbaar zijn."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:233
-msgid ""
-"Open the clipping dialog by selecting the menu item :menuselection:`Raster "
-"--> Extraction --> Clipper`."
-msgstr ""
-"Open het dialoogvenster om te clippen door het menuitem "
-":menuselection:`Raster --> Extractie --> Raster op bereik clippen` te "
-"selecteren."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:235
-msgid ""
-"In the :guilabel:`Input file (raster)` dropdown list, select the "
-":guilabel:`DEM` layer."
-msgstr ""
-"Selecteer, in de keuzelijst :guilabel:`Invoerbestand (raster)`, de laag "
-":guilabel:`DEM`."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:237
-msgid ""
-"Specify an output location in the :guilabel:`Output file` text field by "
-"clicking the :guilabel:`Select...` button."
-msgstr ""
-"Specificeer een locatie voor de uitvoer in het tekstveld "
-":guilabel:`Uitvoerbestand` door te klikken op de knop "
-":guilabel:`Selecteren...`."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:239
-msgid "Navigate to your :file:`Rasterprac` directory."
-msgstr "Navigeer naar uw map :file:`Rasterprac`."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:240
-msgid "Enter a file name."
-msgstr "Voer een bestandsnaam in."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:241
-msgid "Save the file. Leave the :guilabel:`No data value` checkbox unchecked."
-msgstr ""
-"Sla het bestand op. Laat het keuzevak :guilabel:`Waarde voor 'geen data'` "
-"leeg."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:242
-msgid ""
-"Use the :guilabel:`Extent` clipping mode by ensuring the correct radio "
-"button is selected."
-msgstr ""
-"Gebruik de clip-modus :guilabel:`Bereik in kaartvenster selecteren` door er "
-"voor te zorgen dat de juiste keuzeknop is geselecteerd."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:244
-msgid ""
-"Click and drag an area in the canvas, so that the area which includes the "
-"districts is selected."
-msgstr ""
-"Klik en sleep een gebied in het kaartvenster, zodat het gebied dat de "
-"districten bevat is geselecteerd."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:246
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:303
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:325
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:450
-msgid "Check the :guilabel:`Open output file after running algorithm` box."
-msgstr ""
-"Selecteer het vak :guilabel:`Uitvoerbestand openen na uitvoeren algoritme`."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:247
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:304
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:326
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:371
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:451
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:601
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:618
-msgid "Click :guilabel:`Run`."
-msgstr "Klik op :guilabel:`Uitvoeren`."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:248
-msgid ""
-"After the clipping operation is completed, DO NOT CLOSE the "
-":guilabel:`Clipper` dialog. (Doing so would cause you to lose the clipping "
-"area that you have already defined.)"
-msgstr ""
-"Nadat de bewerking clippen is voltooid, SLUIT N I E T HET dialoogvenster "
-":guilabel:`Clippen`.  (Door dat wel te doen zou u het geclipte gebied "
-"verliezen dat u al gedefinieerd heeft.)"
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:251
-msgid ""
-"Select the :guilabel:`Rainfall` raster in the :guilabel:`Input file "
-"(raster)` dropdown list and choose a different output file name."
-msgstr ""
-"Selecteer het raster :guilabel:`Rainfall` in de keuzelijst "
-":guilabel:`Invoerbestand (raster)` en kies een andere naam voor het "
-"uitvoerbestand."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:253
-msgid ""
-"Do not change any other options. Do not alter the existing clipping area "
-"which you drew previously. Leave everything the same and click "
-":guilabel:`Run`."
-msgstr ""
-"Wijzig geen van de andere opties. Wijzig niets aan het bestaande gebied om "
-"te clippen dat u eerder tekende. Laat alles hetzelfde en klik op "
-":guilabel:`Uitvoeren`."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:256
-msgid ""
-"After the second clipping operation has completed, you may close the "
-":guilabel:`Clipper` dialog."
-msgstr ""
-"Nadat de tweede bewerking om te clippen is voltooid, kunt u het "
-"dialoogvenster :guilabel:`Clippen` sluiten."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:261
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:321
 msgid "Clean up the map"
 msgstr "De kaart opruimen"
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:263
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:323
 msgid ""
-"Remove the original :guilabel:`Rainfall` and :guilabel:`DEM` layers from the"
-" :guilabel:`Layers` panel:"
+"Remove the original ``Rainfall`` and ``DEM`` layers, as well as "
+"``Rainfall_clipped`` and ``DEM_clipped`` from the :guilabel:`Layers` panel:"
 msgstr ""
-"Verwijder de originele lagen :guilabel:`Rainfall` en :guilabel:`DEM` uit het"
-" paneel :guilabel:`Lagen`:"
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:265
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:327
 msgid "Right-click on these layers and select :guilabel:`Remove`."
 msgstr "Klik met rechts op deze lagen en selecteer :guilabel:`Verwijder`."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:267
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:329
 msgid ""
 "This will not remove the data from your storage device, it will merely take "
 "it out of your map."
@@ -832,53 +720,7 @@ msgstr ""
 "Dit zal niet de gegevens uit uw opslagapparaat verwijderen, ze worden alleen"
 " uit uw kaart verwijderd."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:270
-msgid "Deactivate the labels on the :guilabel:`Streets` layer:"
-msgstr "Deactiveer de labels op de laag :guilabel:`Streets`:"
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:272
-msgid "Click the :guilabel:`Labeling` button."
-msgstr "Klik op de knop :guilabel:`Labels`."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:273
-msgid "Uncheck the :guilabel:`Label this layer with` box."
-msgstr "Deselecteer het vak :guilabel:`Deze laag labelen met`."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:276
-msgid "Show all the :guilabel:`Streets` again:"
-msgstr "Geef opnieuw alle :guilabel:`Streets` weer:"
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:278
-msgid "Right-click on the layer in the :guilabel:`Layers` panel."
-msgstr "Klik met rechts op de laag in het paneel :guilabel:`Lagen`."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:279
-msgid "Select :guilabel:`Query`."
-msgstr "Selecteer :guilabel:`Query`."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:280
-msgid ""
-"In the :guilabel:`Query` dialog that appears, click the :guilabel:`Clear` "
-"button, then click :guilabel:`OK`."
-msgstr ""
-"Klik, in het dialoogvenster :guilabel:`Query` dat verschijnt, op de knop "
-":guilabel:`Leegmaken`, klik dan op :guilabel:`OK`."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:282
-msgid "Wait while the data is loaded. All the streets will now be visible."
-msgstr ""
-"Wacht terwijl de gegevens worden geladen. Alle straten zullen nu zichtbaar "
-"zijn."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:284
-msgid ""
-"Change the raster symbology as before (see "
-":ref:`changing_raster_symbology`)."
-msgstr ""
-"Wijzig de symbologie voor het raster zoals eerder (zie "
-":ref:`changing_raster_symbology`)."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:286
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:333
 msgid ""
 "You can now hide the vector layers by unchecking the box next to them in the"
 " :guilabel:`Layers` panel. This will make the map render faster and will "
@@ -888,7 +730,11 @@ msgstr ""
 ":guilabel:`Lagen` leeg te maken. Dit zorgt er voor dat de kaart sneller "
 "wordt gerenderd en u enige tijd bespaart."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:290
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:338
+msgid "Create the hillshade"
+msgstr "De schaduw voor heuvels maken"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:340
 msgid ""
 "In order to create the hillshade, you will need to use an algorithm that was"
 " written for this purpose."
@@ -896,165 +742,141 @@ msgstr ""
 "U zult een algoritme moeten gebruiken dat speciaal werd geschreven voor dit "
 "doel om de schaduw voor heuvels te maken. "
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:295
-msgid "Create the hillshade"
-msgstr "De schaduw voor heuvels maken"
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:297
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:343
 msgid ""
-"In the :guilabel:`Layers` panel, ensure that the :guilabel:`DEM` is the "
-"active layer (i.e., it is highlighted by having been clicked on)."
+"In the :guilabel:`Layers` panel, ensure that ``DEM30`` is the active layer "
+"(i.e., it is highlighted by having been clicked on)"
 msgstr ""
-"Zorg er voor dat, in het paneel :guilabel:`Lagen`, :guilabel:`DEM` de "
-"actieve laag is (d.i. hij is geaccentueerd door erop te klikken)."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:299
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:346
 msgid ""
-"Click on the :menuselection:`Raster --> Analysis --> Hillshade` menu item to"
-" open the :guilabel:`Hillshade` dialog."
+"Click on the :menuselection:`Raster --> Analysis --> Hillshade...` menu item"
+" to open the :guilabel:`Hillshade` dialog"
 msgstr ""
-"Klik op het menu-item :menuselection:`Raster --> Analyse --> Schaduw voor "
-"heuvels'` om het dialoogvenster :guilabel:`Schaduw voor heuvels` te openen."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:301
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:348
 msgid ""
-"Specify an appropriate location for the output layer and call it "
-":guilabel:`hillshade`."
+"Scroll down to :guilabel:`Hillshade` and save the output in your "
+":file:`Rasterprac` directory as :file:`hillshade.tif`"
 msgstr ""
-"Specificeer een toepasselijke locatie voor de uitvoerlaag en noem die "
-":guilabel:`hillshade`."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:305
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:353
 msgid "Wait for it to finish processing."
 msgstr "Wacht tot de verwerking is voltooid."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:307
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:355
 msgid ""
-"The new :guilabel:`hillshade` layer has appeared in your :guilabel:`Layers "
-"list`."
+"The new ``hillshade`` layer has appeared in the :guilabel:`Layers` panel."
 msgstr ""
-"De nieuwe laag :guilabel:`hillshade` is verschenen in uw "
-":guilabel:`Lagenlijst`."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:310
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:358
 msgid ""
-"Right-click on the :guilabel:`hillshade` layer in your :guilabel:`Layers "
-"list` and bring up the :guilabel:`Properties` dialog."
+"Right-click on the ``hillshade`` layer in the :guilabel:`Layers` panel and "
+"bring up the :guilabel:`Properties` dialog"
 msgstr ""
-"Klik met rechts op de laag :guilabel:`hillshade` in uw "
-":guilabel:`Lagenlijst` en roep het dialoogvenster "
-":guilabel:`Laageigenschappen` op."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:312
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:361
 msgid ""
-"Click on the :guilabel:`Transparency` tab and set the transparency slider to"
-" ``80%``."
+"Click on the :guilabel:`Transparency` tab and set the :guilabel:`Global "
+"Opacity` slider to ``20%``"
 msgstr ""
-"Klik op de tab :guilabel:`Transparantie` en stel de schuifbalk voor de "
-"transparantie in op ``80%``."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:314
-msgid "Click :guilabel:`Run` on the dialog."
-msgstr "Klik op :guilabel:`Uitvoeren` in het dialoogvenster."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:315
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:364
 msgid ""
 "Note the effect when the transparent hillshade is superimposed over the "
-"clipped DEM."
+"clipped DEM. You may have to change the order of your layers, or click off "
+"the ``rainfall30`` layer in order to see the effect."
 msgstr ""
-"Let op het effect wanneer de transparante hillshade over de geclipte DEM "
-"wordt gelegd."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:319
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:370
 msgid "Slope"
 msgstr "Helling"
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:321
-msgid "Click on the menu item :menuselection:`Raster --> Terrain analysis`."
-msgstr "Klik op het menu-item :menuselection:`Raster --> Analyse`."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:322
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:372
 msgid ""
-"Select the :guilabel:`Slope` analysis type, with the clipped DEM as the "
-"input layer."
+"Click on the :menuselection:`Raster --> Analysis --> Slope...` menu item to "
+"open the :guilabel:`Slope` algorithm dialog"
 msgstr ""
-"Selecteer het type analyse :guilabel:`Helling`, met de geclipte DEM als de "
-"invoerlaag."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:324
-msgid "Specify an appropriate file name and location for output purposes."
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:374
+msgid "Select ``DEM30`` as :guilabel:`Input layer`"
 msgstr ""
-"Specificeer een toepasselijke bestandsnaam en locatie voor de uitvoer."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:328
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:375
 msgid ""
-"The slope image has been calculated and added to the map. However, as usual "
-"it is just a gray rectangle. To properly see what's going on, change the "
-"symbology as follows."
+"Check |checkbox| :guilabel:`Slope expressed as percent instead of degrees`. "
+"Slope can be expressed in different units (percent or degrees). Our criteria"
+" suggest that the plant of interest grows on slopes with a gradient between "
+"15% and 60%. So we need to make sure our slope data is expressed as a "
+"percent."
 msgstr ""
-"De afbeelding voor de helling wordt berekend en toegevoegd aan de kaart. "
-"Echter, zoals gewoonlijk is het slechts een grijze rechthoek. Wijzig de "
-"symbologie als volgt om goed te kunnen zien wat er gebeurt."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:332
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:381
+msgid "Specify an appropriate file name and location for your output."
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:386
+msgid ""
+"The slope image has been calculated and added to the map. As usual, it is "
+"rendered in grayscale. Change the symbology to a more colorful one:"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:390
 msgid ""
 "Open the layer :guilabel:`Properties` dialog (as usual, via the right-click "
-"menu of the layer)."
+"menu of the layer)"
 msgstr ""
-"Open het dialoogvenster :guilabel:`Laageigenschappen` voor de laag (zoals "
-"gewoonlijk via het menu voor rechts-klikken van de laag)."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:334
-msgid "Click on the :guilabel:`Symbology` tab."
-msgstr "Klik op de tab :guilabel:`Symbologie`."
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:392
+msgid "Click on the :guilabel:`Symbology` tab"
+msgstr ""
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:335
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:393
 msgid ""
-"Where it says :guilabel:`Grayscale` (in the :guilabel:`Color map` dropdown "
-"menu), change it to :guilabel:`Pseudocolor`."
+"Where it says :guilabel:`Singleband gray` (in the :guilabel:`Render type` "
+"dropdown menu), change it to :guilabel:`Singleband pseudocolor`"
 msgstr ""
-"Waar het zegt :guilabel:`Grijswaarden` (in de keuzelijst :guilabel:`Kleuren "
-"kaart`), wijzig die naar :guilabel:`Pseudokleur`."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:337
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:396
 msgid ""
-"Ensure that the :guilabel:`Use standard deviation` radio button is selected."
+"Choose :guilabel:`Mean +/- standard deviation x` for :guilabel:`Min / Max "
+"Value Settings` with a value of ``2.0``"
 msgstr ""
-"Zorg er voor dat de keuzeknop :guilabel:`Standaard afwijking gebruiken` is "
-"geselecteerd."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:340
-msgid "Aspect"
-msgstr "Aspect"
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:398
+msgid "Select a suitable :guilabel:`Color ramp`"
+msgstr ""
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:342
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:402
+msgid "|TY| Aspect"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:404
 msgid ""
-"Use the same approach as for calculating the slope, but select "
-":guilabel:`Aspect` in the initial dialog box."
+"Use the same approach as for calculating the slope, choosing "
+":guilabel:`Aspect...` in the :menuselection:`Raster --> Analysis` menu."
 msgstr ""
-"Gebruik dezelfde benadering als voor het berekenen van de helling, maar "
-"selecteer :guilabel:`Aspect` in het initiële vak van het dialoogvenster."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:345
-msgid "Remember to save the map periodically."
-msgstr "Denk er aan om de kaart regelmatig op te slaan."
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:408
+msgid "Remember to save the project periodically."
+msgstr ""
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:348
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:411
 msgid "Reclassifying rasters"
 msgstr "Rasters opnieuw classificeren"
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:350
-msgid "Click the menu item :menuselection:`Raster --> Raster calculator`."
-msgstr "Klik op het menu-item :menuselection:`Raster --> Rasterberekeningen`."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:351
-msgid ""
-"Specify your :file:`Rasterprac` directory as the location for the output "
-"layer."
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:413
+msgid "Choose :menuselection:`Raster --> Raster calculator...`"
 msgstr ""
-"Specificeer uw map :file:`Rasterprac` als de locatie voor de uitvoerlaag."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:353
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:414
+msgid ""
+"Specify your :file:`Rasterprac` directory as the location for the "
+":guilabel:`Output layer` (click on the :guilabel:`...` button), and save it "
+"as :file:`slope15_60.tif`"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:417
 msgid ""
 "Ensure that the :guilabel:`Open output file after running algorithm` box is "
 "selected."
@@ -1062,33 +884,25 @@ msgstr ""
 "Zorg er voor dat het vak :guilabel:`Uitvoerbestand openen na uitvoeren "
 "algoritme` is geselecteerd."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:355
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:421
 msgid ""
 "In the :guilabel:`Raster bands` list on the left, you will see all the "
 "raster layers in your :guilabel:`Layers` panel. If your Slope layer is "
-"called :guilabel:`slope`, it will be listed as :guilabel:`slope@1`."
+"called :guilabel:`slope`, it will be listed as ``slope@1``. Indicating band "
+"1 of the slope raster."
 msgstr ""
-"In de lijst :guilabel:`Rasterbanden` aan de linkerkant, ziet u alle "
-"rasterlagen in uw paneel :guilabel:`Lagen`. Als uw laag voor de helling is "
-"genaamd :guilabel:`slope`, zal die zijn vermeld als :guilabel:`slope@1`."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:359
-msgid ""
-"The slope needs to be between ``15`` and ``60`` degrees. Everything less "
-"than ``15`` or greater than ``60`` must therefore be excluded."
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:426
+msgid "The slope needs to be between ``15`` and ``60`` degrees."
 msgstr ""
-"De helling dient te liggen tussen ``15`` en ``60``graden. Alles minder dan "
-"``15`` of groter dan ``60`` moet daarom worden uitgesloten."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:362
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:428
 msgid ""
 "Using the list items and buttons in the interface, build the following "
-"expression:"
+"expression::"
 msgstr ""
-"Bouw, met behulp van de items in de lijst en de knoppen in de interface, de "
-"volgende expressie:"
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:369
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:433
 msgid ""
 "Set the :guilabel:`Output layer` field to an appropriate location and file "
 "name."
@@ -1096,7 +910,11 @@ msgstr ""
 "Stel het veld :guilabel:`Uitvoerbestand` in op een toepasselijke locatie en "
 "bestandsnaam."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:373
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:435
+msgid "Click :guilabel:`Run`."
+msgstr "Klik op :guilabel:`Uitvoeren`."
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:437
 msgid ""
 "Now find the correct aspect (east-facing: between ``45`` and ``135`` "
 "degrees) using the same approach."
@@ -1104,190 +922,159 @@ msgstr ""
 "Zoek nu naar het juiste aspect (uitkijkend op het oosten: tussen ``45`` en "
 "``135`graden) met behulp van dezelfde benadering."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:376
-msgid "Build the following expression:"
-msgstr "Bouw de volgende expressie:"
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:440
+msgid "Build the following expression::"
+msgstr ""
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:382
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:444
 msgid ""
-"Find the correct rainfall (greater than ``1200mm``) the same way. Build the "
+"You will know it worked when all of the east-facing slopes are white in the "
+"resulting raster (it's almost as if they are being lit by the morning "
+"sunlight)."
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:448
+msgid ""
+"Find the correct rainfall (greater than ``1000`` mm) the same way. Use the "
 "following expression:"
 msgstr ""
-"Zoek op dezelfde manier naar de juiste regenval (groter dan ``1200mm``. Bouw"
-" de volgende expressie:"
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:389
-msgid ""
-"Having reclassified all the rasters, you will now see them displayed as gray"
-" rectangles in your map (assuming that they have been added to the map "
-"correctly). To properly display raster data with only two classes (``1`` and"
-" ``0``, meaning true or false), you will need to change their symbology."
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:451
+msgid "rainfall30@1 > 1000"
 msgstr ""
-"Door alle rasters opnieuw te classificeren, zult u ze nu als grijze "
-"rechthoeken zien weergegeven in uw kaart (aangenomen dat zij op de juiste "
-"manier aan de kaart zijn toegevoegd). U dient hun symbologie te wijzigen om "
-"de rastergegevens juist weer te geven in slechts twee klassen (``1`` en "
-"``0``, betekent: true of false), ."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:395
-msgid "Setting the style for the reclassified layers"
-msgstr "Instellen van de stijl voor opnieuw geclassificeerde lagen"
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:397
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:453
 msgid ""
-"Open the :guilabel:`Symbology` tab in the layer's :guilabel:`Properties` "
-"dialog as usual."
+"Now that you have all three criteria each in separate rasters, you need to "
+"combine them to see which areas satisfy all the criteria. To do so, the "
+"rasters will be multiplied with each other. When this happens, all "
+"overlapping pixels with a value of ``1`` will retain the value of ``1`` "
+"(i.e. the location meets the criteria), but if a pixel in any of the three "
+"rasters has the value of ``0`` (i.e. the location does not meet the "
+"criteria), then it will be ``0`` in the result. In this way, the result will"
+" contain only the overlapping areas that meet all of the appropriate "
+"criteria."
 msgstr ""
-"Open de tab :guilabel:`Symbologie` in het dialoogvenster "
-":guilabel:`Laageigenschappen` zoals gewoonlijk."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:399
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:465
+msgid "Combining rasters"
+msgstr "Rasters combineren"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:467
 msgid ""
-"Under the heading :guilabel:`Load min / max values from band`, select the "
-":guilabel:`Actual (slower)` radio button."
+"Open the *Raster Calculator* (:menuselection:`Raster --> Raster "
+"Calculator...`)"
 msgstr ""
-"Selecteer, onder de kop :guilabel:`Min / max waarden laden`, de keuzeknop "
-":guilabel:`Actueel (langzamer)`."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:401
-msgid "Click the :guilabel:`Load` button."
-msgstr "Klik op de knop :guilabel:`Laden`."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:403
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:469
 msgid ""
-"The :guilabel:`Custom min / max values` fields should now populate with "
-"``0`` and ``1``, respectively. (If they do not, then there was a mistake "
-"with your reclassification of the data, and you will need to go over that "
-"part again.)"
+"Build the following expression (with the appropriate names for your "
+"layers)::"
 msgstr ""
-"De velden :guilabel:`Aangepaste waarden min / max` zouden nu met "
-"respectievelijk ``0`` en ``1`` moeten worden gevuld. (Als dat niet gebeurt "
-"was er een vergissing met het opnieuw classificeren van de gegevens, en zult"
-" u dat gedeelte opnieuw moeten uitvoeren.)"
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:408
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:474
+msgid "Set the output location to the :file:`Rasterprac` directory"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:475
+msgid "Name the output raster :file:`aspect_slope_rainfall.tif`"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:476
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:571
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:613
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:759
 msgid ""
-"Under the heading :guilabel:`Contrast enhancement`, set the "
-":guilabel:`Current` dropdown list to :guilabel:`Stretch To MinMax`."
+"Ensure that |checkbox| :guilabel:`Open output file after running algorithm` "
+"is checked"
 msgstr ""
-"Stel, onder de kop :guilabel:`Contrastverbetering`, de keuzelijst "
-":guilabel:`Geen verbetering` in op :guilabel:`'Stretch' tot MinMax`."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:411
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:480
 msgid ""
-"Do this for all three reclassified rasters, and remember to save your work!"
+"The new raster now properly displays the areas where all three criteria are "
+"satisfied."
 msgstr ""
-"Doe dit voor alle drie de opnieuw geclassificeerde rasters, en vergeet niet "
-"uw werk op te slaan!"
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:413
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:483
+msgid "Save the project."
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:485
 msgid ""
-"The only criterion that remains is that the area must be ``250m`` away from "
-"urban areas. We will satisfy this requirement by ensuring that the areas we "
-"compute are ``250m`` or more from the edge of a rural area. Hence, we need "
-"to find all rural areas first."
+"The next criterion that needs to be satisfied is that the area must be "
+"``250`` m away from urban areas. We will satisfy this requirement by "
+"ensuring that the areas we compute are inside rural areas, and are ``250`` m"
+" or more from the edge of the area. Hence, we need to find all rural areas "
+"first."
 msgstr ""
-"Het enige criterium dat overblijft is dat het gebied ``250m``  van "
-"stedelijke gebieden moet liggen. We zullen aan dit vereiste voldoen door er "
-"voor te zorgen dat de gebieden die we berekenen ``250m`` of meer vanaf de "
-"rand van een landelijk gebied ligt. Maar, dan moeten we wel eerst de "
-"landelijke gebieden zoeken."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:419
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:492
 msgid "Finding rural areas"
 msgstr "Landelijke gebieden zoeken"
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:421
-msgid "Hide all layers in the :guilabel:`Layers` panel."
-msgstr "Verberg alle lagen in het paneel :guilabel:`Lagen`."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:422
-msgid "Unhide the :guilabel:`Zoning` vector layer."
-msgstr "Geef de vectorlaag :guilabel:`Zoning` weer."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:423
-msgid "Right-click on it and bring up the :guilabel:`Query` dialog."
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:494
+msgid "Hide all layers in the :guilabel:`Layers` panel"
 msgstr ""
-"Klik er met rechts op en roep het dialoogvenster :guilabel:`Query` op."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:424
-msgid "Build the following query:"
-msgstr "Bouw de volgende query:"
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:495
+msgid "Unhide the ``Zoning`` vector layer"
+msgstr ""
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:430
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:496
 msgid ""
-"See the earlier instructions for building the :guilabel:`Streets` query if "
-"you get stuck."
+"Right-click on it and bring up the :guilabel:`Attribute Table` dialog. Note "
+"the many different ways that the land is zoned here. We want to isolate the "
+"rural areas. Close the Attribute table."
 msgstr ""
-"Bekijk de eerdere instructies voor het bouwen van de query "
-":guilabel:`Streets` als u het even niet weet."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:432
-msgid "When you're done, close the :guilabel:`Query` dialog."
-msgstr "Sluit het dialoogvenster :guilabel:`Query` als u gereed bent."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:434
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:500
 msgid ""
-"You should see a collection of polygons from the :guilabel:`Zoning` layer. "
-"You will need to save these to a new layer file."
+"Right-click on the ``Zoning`` layer and select :guilabel:`Filter...` to "
+"bring up the :guilabel:`Query Builder` dialog"
 msgstr ""
-"U zou een verzameling polygonen moeten zien uit de laag :guilabel:`Zoning`. "
-"U zult deze op moeten slaan naar een nieuw laagbestand."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:437
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:502
+msgid "Build the following query::"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:506
+msgid "See the earlier instructions if you get stuck."
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:507
 msgid ""
-"On the right-click menu for :guilabel:`Zoning`, select :guilabel:`Save "
-"as...`."
+"Click :guilabel:`OK` to close the :guilabel:`Query Builder` dialog. The "
+"query should return one feature."
 msgstr ""
-"Selecteer :guilabel:`Opslaan als...`. in het menu voor rechtsklikken van "
-":guilabel:`Zoning`."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:439
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:449
-msgid "Save your layer under the :guilabel:`Zoning` directory."
-msgstr "Sla uw laag op in de map :guilabel:`Zoning`."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:440
-msgid "Name the output file :file:`rural.shp`."
-msgstr "Noem het uitvoerbestand :file:`rural.shp`."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:442
-msgid "Add the layer to your map."
-msgstr "Voeg de laag toe aan uw kaart."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:443
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:510
 msgid ""
-"Click the menu item :menuselection:`Vector --> Geoprocessing Tools --> "
-"Dissolve`."
+"You should see the rural polygons from the ``Zoning`` layer. You will need "
+"to save these."
 msgstr ""
-"Klik op het menu-item :menuselection:`Vector --> Geoprocessing-gereedschap "
-"--> Samensmelten`."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:445
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:513
 msgid ""
-"Select the :guilabel:`rural` layer as your input vector layer, while leaving"
-" the :guilabel:`Use only selected features` box unchecked."
+"In the right-click menu for ``Zoning``, select :menuselection:`Export --> "
+"Save Features As...`."
 msgstr ""
-"Selecteer de laag :guilabel:`rural` als uw invoer-vectorlaag, waarbij u het "
-"vak :guilabel:`Alleen geselecteerde objecten gebruiken` niet selecteert."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:447
-msgid ""
-"Leave empty the :guilabel:`Dissolve field(s)` option to combine all selected"
-" features in a single one."
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:515
+msgid "Save your layer under the :file:`Rasterprac` directory"
 msgstr ""
-"Laat de optie :guilabel:`Veld(en losmaken` leeg om alle geselecteerde "
-"objecten te combineren tot slechts één."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:452
-msgid "Close the :guilabel:`Dissolve` dialog."
-msgstr "Sluit het dialoogvenster :guilabel:`Dissolve`."
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:516
+msgid "Name the output file :file:`rural.shp`"
+msgstr ""
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:453
-msgid "Remove the :guilabel:`rural` and :guilabel:`Zoning` layers."
-msgstr "Verwijder de lagen :guilabel:`rural` en :guilabel:`Zoning` ."
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:518
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:549
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:643
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:745
+msgid "Save the project"
+msgstr ""
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:456
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:520
 msgid ""
 "Now you need to exclude the areas that are within ``250m`` from the edge of "
 "the rural areas. Do this by creating a negative buffer, as explained below."
@@ -1296,805 +1083,484 @@ msgstr ""
 "landelijke gebieden liggen. Doe dat door een negatieve buffer te maken, "
 "zoals hieronder uitgelegd."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:460
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:525
 msgid "Creating a negative buffer"
 msgstr "Een negatieve buffer maken"
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:462
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:527
 msgid ""
 "Click the menu item :menuselection:`Vector --> Geoprocessing Tools --> "
-"Buffer(s)`."
+"Buffer...`"
 msgstr ""
-"Klik op het menu-item :menuselection:`Vector --> Geoprocessing-gereedschap "
-"--> Buffer`."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:464
-msgid ""
-"In the dialog that appears, select the :guilabel:`rural_dissolve` layer as "
-"your input vector layer (:guilabel:`Use only selected features` should not "
-"be checked)."
-msgstr ""
-"Selecteer, in het dialoogvenster dat verschijnt, de laag "
-":guilabel:`rural_dissolve` als uw invoer vectorlaag (:guilabel:`Alleen "
-"geselecteerde objecten gebruiken` zou niet moeten zijn geselecteerd)."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:467
-msgid ""
-"Select the :guilabel:`Buffer distance` button and enter the value ``-250`` "
-"into the associated field; the negative value means that the buffer must be "
-"an internal buffer."
-msgstr ""
-"Selecteer de knop :guilabel:`Bufferafstand` en voer de waarde ``-250`` in "
-"het geassocieerde veld in; de negatieve waarde betekent dat de buffer een "
-"interne buffer moet zijn."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:470
-msgid "Check the :guilabel:`Dissolve buffer results` box."
-msgstr "Selecteer het vak :guilabel:`Dissolve buffer resultaten`."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:471
-msgid ""
-"Set the output file to the same directory as the other rural vector files."
-msgstr ""
-"Stel het uitvoerbestand in voor dezelfde map als de andere landelijke "
-"vectorbestanden."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:472
-msgid "Name the output file :file:`rural_buffer.shp`."
-msgstr "Noem het uitvoerbestand :file:`rural_buffer.shp`."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:473
-msgid "Click :guilabel:`Save`."
-msgstr "Klik op :guilabel:`Opslaan`."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:474
-msgid "Click :guilabel:`OK` and wait for the processing to complete."
-msgstr "Klik op :guilabel:`OK` en wacht tot de verwerking is voltooid."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:475
-msgid "Select :guilabel:`Yes` on the dialog that appears."
-msgstr "Selecteer :guilabel:`Ja` in het dialoogvenster dat verschijnt."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:476
-msgid "Close the :guilabel:`Buffer` dialog."
-msgstr "Sluit het dialoogvenster :guilabel:`Buffer`."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:477
-msgid "Remove the :guilabel:`rural_dissolve` layer."
-msgstr "Verwijder de laag :guilabel:`rural_dissolve`."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:480
-msgid ""
-"In order to incorporate the rural zones into the same analysis with the "
-"three existing rasters, it will need to be rasterized as well. But in order "
-"for the rasters to be compatible for analysis, they will need to be the same"
-" size. Therefore, before you can rasterize, you'll need to clip the vector "
-"to the same area as the three rasters. A vector can only be clipped by "
-"another vector, so you will first need to create a bounding box polygon the "
-"same size as the rasters."
-msgstr ""
-"Het moet ook worden gerasteriseerd om de landelijke zones in dezelfde "
-"analyse met de drie bestaande rasters te kunnen verwerken. Maar zij moeten "
-"van dezelfde grootte zijn om de rasters compatibel te laten zijn voor de "
-"analyse. Daarom moet u, voordat u kunt rasteriseren, de vector clippen naar "
-"hetzelfde gebied als de drie rasters. Een vector kan alleen worden geclipt "
-"naar een andere vector, dus moet u eerst een polygoon begrenzingsvak maken "
-"van dezelfde grootte als de rasters."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:489
-msgid "Creating a bounding box vector"
-msgstr "Een vector begrenzingsvak maken"
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:491
-msgid ""
-"Click on the menu item :menuselection:`Layer --> New --> New Shapefile "
-"Layer...`."
-msgstr ""
-"Klik op het menu-item :menuselection:`Kaartlagen --> Laag maken --> Nieuwe "
-"Shapefile-laag…`."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:492
-msgid ""
-"Under the :guilabel:`Type` heading, select the :guilabel:`Polygon` button."
-msgstr ""
-"Selecteer, onder de kop :guilabel:`Type`, de knop :guilabel:`Polygoon`."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:493
-msgid ""
-"Click :guilabel:`Specify CRS` and set the coordinate reference system "
-":guilabel:`WGS 84 / UTM zone 33S : EPSG:32733`."
-msgstr ""
-"Klik op :guilabel:`CRS selecteren` en stel het coördinaten referentiesysteem"
-" in op :kbd:`WGS 84 / UTM zone 33S : EPSG:32733`."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:495
-msgid "Click OK."
-msgstr "Klik op OK."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:496
-msgid ""
-"Click :guilabel:`OK` on the :guilabel:`New Vector Layer` dialog as well."
-msgstr ""
-"Klik ook op :guilabel:`OK` in het dialoogvenster :guilabel:`Nieuwe "
-"vectorlaag` ."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:497
-msgid "Save the vector in the :guilabel:`Zoning` directory."
-msgstr "Sla de vector op in de map :guilabel:`Zoning`."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:498
-msgid "Name the output file :file:`bbox.shp`."
-msgstr "Noem het uitvoerbestand :file:`bbox.shp`."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:499
-msgid ""
-"Hide all layers except the new :guilabel:`bbox` layer and one of the "
-"reclassified rasters."
-msgstr ""
-"Verberg alle lagen met uitzondering van de nieuwe laag :guilabel:`bbox` en "
-"één van de opnieuw geclassificeerde rasters."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:501
-msgid ""
-"Ensure that the :guilabel:`bbox` layer is highlighted in the "
-":guilabel:`Layers` panel."
-msgstr ""
-"Zorg er voor dat de laag :guilabel:`bbox` is geaccentueerd in het paneel "
-":guilabel:`Lagen`."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:503
-msgid ""
-"Navigate to the :menuselection:`View > Toolbars` menu item and ensure that "
-":guilabel:`Digitizing` is selected. You should then see a toolbar icon with "
-"a pencil or koki on it. This is the :guilabel:`Toggle editing` button."
-msgstr ""
-"Navigeer naar het menu-item :menuselection:`Beeld > Werkbalken` en zorg er "
-"voor dat :guilabel:`Digitaliseren` is geselecteerd. U zou dan een pictogram "
-"voor de werkbalk moeten zien met een potlood erop. Dat is de knop "
-":guilabel:`Bewerken aan-/uitzetten`."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:506
-msgid ""
-"Click the :guilabel:`Toggle editing` button to enter *edit mode*. This "
-"allows you to edit a vector layer."
-msgstr ""
-"Klik op de knop :guilabel:`Bewerken aan-/uitzetten`  om naar de *modus "
-"Bewerken* te gaan. Dat stelt u in staat een vectorlaag t ebewerken."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:508
-msgid ""
-"Click the :guilabel:`Add feature` button, which should be nearby the "
-":guilabel:`Toggle editing` button. It may be hidden behind a double arrow "
-"button; if so, click the double arrows to show the :guilabel:`Digitizing` "
-"toolbar's hidden buttons."
-msgstr ""
-"Klik op de knop :guilabel:`Object toevoegen`, die nabij de knop "
-":guilabel:`Bewerken aan-/uitzetten` zou moeten staan. Hij kan zijn verborgen"
-" achter een knop met een dubbele pijl; als dat zo is klik dan op de knop met"
-" de dubbele pijl om de verborgen pictogrammen van de werkbalk "
-":guilabel:`Digitaliseren` weer te geven."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:512
-msgid ""
-"With the :guilabel:`Add feature` tool activated, left-click on the corners "
-"of the raster. You may need to zoom in with the mouse wheel to ensure that "
-"it is accurate. To pan across the map in this mode, click and drag in the "
-"map with the middle mouse button or mouse wheel."
-msgstr ""
-"Klik met links, met het gereedschap :guilabel:`Object toevoegen` "
-"geactiveerd, op de hoeken van het raster. U moet misschien inzoomen met het "
-"muiswiel om er voor te zorgen dat het nauwkeurig is. Klik en sleep in de "
-"kaart met de middelste muisknop of het muiswiel om in deze modus over de "
-"kaart te schuiven."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:516
-msgid "For the fourth and final point, right-click to finalize the shape."
-msgstr ""
-"Klik met rechts, op het vierde en laatste punt, om de vorm te voltooien."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:517
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:704
-msgid "Enter any arbitrary number for the shape ID."
-msgstr "Voer een willekeurig getal in voor de ID van de vorm."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:519
-msgid "Click the :guilabel:`Save edits` button."
-msgstr "Klik op de knop :guilabel:`Wijzigingen laag opslaan`."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:520
-msgid ""
-"Click the :guilabel:`Toggle editing` button to stop your editing session."
-msgstr ""
-"Klik op de knop :guilabel:`Bewerken aan-/uitzetten` om uw sessie voor "
-"bewerkingen te beëindigen."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:523
-msgid ""
-"Now that you have a bounding box, you can use it to clip the rural buffer "
-"layer."
-msgstr ""
-"Nu u een begrenzingsvak heeft, kunt u die gebruiken om de laag rural buffer "
-"te clippen."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:527
-msgid "Clipping a vector layer"
-msgstr "Een vectorlaag clippen"
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:529
 msgid ""
-"Ensure that only the :guilabel:`bbox` and :guilabel:`rural_buffer` layers "
-"are visible, with the latter on top."
+"In the dialog that appears, select the ``rural`` layer as your input vector "
+"layer (:guilabel:`Selected features only` should not be checked)"
 msgstr ""
-"Zorg er voor dat alleen de lagen :guilabel:`bbox` en "
-":guilabel:`rural_buffer` zichtbaar zijn, met de laatste bovenop."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:531
-msgid ""
-"Click the menu item :menuselection:`Vector > Geoprocessing Tools > Clip`."
-msgstr ""
-"Klik op het menu-item :menuselection:`Vector > Geoprocessing-gereedschap > "
-"Clippen`."
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:532
 msgid ""
-"In the dialog that appears, set the input vector layer to "
-":guilabel:`rural_buffer` and the clip layer to :guilabel:`bbox`, with both "
-":guilabel:`Use only selected features` boxes unchecked."
+"Set :guilabel:`Distance` to ``-250``. The negative value means that the "
+"buffer will be an internal buffer. Make sure that the units are meters in "
+"the dropdown menu."
 msgstr ""
-"Stel, in het dialoogvenster dat verschijnt, de invoer vectorlaag in op "
-":guilabel:`rural_buffer` en de cliplaag op :guilabel:`bbox`, met in beide "
-"het vak :guilabel:`Alleen geselecteerde objecten gebruiken` niet "
-"geselecteerd."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:535
-msgid "Put the output file under the :guilabel:`Zoning` directory."
-msgstr "Plaats het uitvoerbestand in de map :guilabel:`Zoning`."
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:536
-msgid "Name the output file :guilabel:`rural_clipped`."
-msgstr "Noem het uitvoerbestand :file:`rural_clipped`."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:538
-msgid "When prompted to add the layer to the TOC, click :guilabel:`Yes`."
+msgid "Check |checkbox| :guilabel:`Dissolve result`"
 msgstr ""
-"Klik op :guilabel:`Ja`. als gevraagd wordt of de laag moet worden toegevoegd"
-" aan de inhoudsopgave."
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:537
+msgid ""
+"In :guilabel:`Buffered`, place the output file in the :file:`Rasterprac` "
+"directory, and name it :file:`rural_buffer.shp`"
+msgstr ""
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:539
-msgid "Close the dialog."
-msgstr "Sluit het dialoogvenster."
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:637
+msgid "Click :guilabel:`Save`"
+msgstr ""
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:540
-msgid "Compare the three vectors and see the results for yourself."
-msgstr "Vergelijk de drie vectoren bekijk zelf de resultaten."
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:638
+msgid "Click :guilabel:`Run` and wait for the processing to complete"
+msgstr ""
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:541
+msgid "Close the :guilabel:`Buffer` dialog."
+msgstr "Sluit het dialoogvenster :guilabel:`Buffer`."
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:543
 msgid ""
-"Remove the :guilabel:`bbox` and :guilabel:`rural_buffer` layers, then save "
-"your map."
+"Make sure that your buffer worked correctly by noting how the "
+"``rural_buffer`` layer is different from the ``rural`` layer. You may need "
+"to change the drawing order in order to observe the difference."
 msgstr ""
-"Verwijder de lagen :guilabel:`bbox` en :guilabel:`rural_buffer`, en sla dan "
-"uw kaart op."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:544
-msgid "Now it's ready to be rasterized."
-msgstr "Nu is die gereed om te worden gerasteriseerd."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:547
-msgid "Rasterizing a vector layer"
-msgstr "Een vectorlaag rasteriseren"
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:549
-msgid ""
-"You'll need to specify a pixel size for a new raster that you create, so "
-"first you'll need to know the size of one of your existing rasters."
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:548
+msgid "Remove the ``rural`` layer"
 msgstr ""
-"U zult een pixelgrootte moeten specificeren voor een nieuw raster dat u "
-"maakt, dus u zult eerst de grootte van een van uw bestaande rasters moeten "
-"weten."
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:552
 msgid ""
-"Open the :guilabel:`Properties` dialog of any of the three existing rasters."
+"Now you need to combine your ``rural_buffer`` vector layer with the "
+"``aspect_slope_rainfall`` raster. To combine them, we will need to change "
+"the data format of one of the layers. In this case, you will vectorize the "
+"raster, since vector layers are more convenient when we want to calculate "
+"areas."
 msgstr ""
-"Open het dialoogvenster :guilabel:`Laageigenschappen` van één van de drie "
-"bestaande rasters."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:553
-msgid "Switch to the :guilabel:`Metadata` tab."
-msgstr "Schakel naar de tab :guilabel:`Metadata`."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:554
-msgid ""
-"Make a note of the :guilabel:`X` and :guilabel:`Y` values under the heading "
-":guilabel:`Dimensions` in the Metadata table."
-msgstr ""
-"Maak een notitie van de waarden :guilabel:`X` en :guilabel:`Y` onder de kop "
-":guilabel:`Dimensies` in de tabel Metadata."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:556
-msgid "Close the :guilabel:`Properties` dialog."
-msgstr "Sluit het dialoogvenster :guilabel:`Laageigenschappen`."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:557
-msgid ""
-"Click on the :menuselection:`Raster --> Conversion --> Rasterize` menu item."
-" You may receive a warning about a dataset being unsupported. Click it away "
-"and ignore it."
-msgstr ""
-"Klik op het menu-item :menuselection:`Raster --> Conversie --> "
-"Rasteriseren`. U zou een waarschuwing kunnen krijgen over een gegevensset "
-"die niet wordt ondersteund. Klik het weg en negeer het."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:560
-msgid "Select :guilabel:`rural_clipped` as your input layer."
-msgstr "Selecteer :guilabel:`rural_clipped` als uw invoerlaag."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:561
-msgid "Set an output file location inside the :guilabel:`Zoning` directory."
-msgstr ""
-"Stel een locatie in voor het uitvoerbestand binnen de map "
-":guilabel:`Zoning`."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:562
-msgid "Name the output file :file:`rural_raster.tif`."
-msgstr "Noem het uitvoerbestand :file:`rural_raster.tif`."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:563
-msgid ""
-"Check the :guilabel:`New size` box and enter the :guilabel:`X` and "
-":guilabel:`Y` values you made a note of earlier."
-msgstr ""
-"Selecteer het vak :guilabel:`Rastergrootte in pixels` en voer de waarden "
-":guilabel:`X` en :guilabel:`Y` in waarvan u eerder een notitie heeft "
-"gemaakt."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:565
-msgid "Check the :guilabel:`Load into canvas` box."
-msgstr ""
-"Selecteer het vak :guilabel:`Uitvoerbestand openen na uitvoeren algoritme`."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:566
-msgid ""
-"Click the pencil icon next to the text field which shows the command that "
-"will be run. At the end of the existing text, add a space and then the text "
-"``-burn 1``. This tells the Rasterize function to \"burn\" the existing "
-"vector into the new raster and give the areas covered by the vector the new "
-"value of ``1`` (as opposed to the rest of the image, which will "
-"automatically be ``0``)."
-msgstr ""
-"Klik op het pictogram van het potlood naast het tekstveld dat de opdracht "
-"weergeeft die zal worden uitgevoerd. Voeg, aan het einde van de bestaande "
-"tekst, een spatie toe en dan de tekst ``-burn 1``. Dit vertelt de functie "
-"Rasteriseren om de bestaande vector in het nieuwe raster te \"branden\" en "
-"geeft de gebieden die worden bedekt door de vector de nieuwe waarde ``1`` "
-"(in tegenstelling tot de rest van de afbeelding die automatisch ``0``zal "
-"zijn)."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:573
-msgid "The new raster should show up in your map once it has been computed."
-msgstr ""
-"Het nieuwe raster zou in uw kaart moeten verschijnen als het eenmaal is "
-"berekend."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:574
-msgid ""
-"The new raster will look like a grey rectangle – you may change the display "
-"style as you did for the reclassified rasters."
-msgstr ""
-"Het nieuwe raster zal er uitzien als een grijze rechthoek – u moet misschien"
-" de stijl voor de weergave wijzigen zoals u deed voor de opnieuw "
-"geclassificeerde rasters."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:576
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:638
-msgid "Save your map."
-msgstr "Sla uw kaart op."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:578
-msgid ""
-"Now that you have all four criteria each in a separate raster, you need to "
-"combine them to see which areas satisfy all the criteria. To do so, the "
-"rasters will be multiplied with each other. When this happens, all "
-"overlapping pixels with a value of ``1`` will retain the value of ``1``, but"
-" if a pixel has the value of ``0`` in any of the four rasters, then it will "
-"be ``0`` in the result. In this way, the result will contain only the "
-"overlapping areas."
-msgstr ""
-"Nu u alle vier criteria elk in een afzonderlijk raster heeft, moet u ze "
-"combineren om te zien welke gebieden voldoen aan alle criteria. De rasters "
-"zullen met elkaar worden vermenigvuldigd om dat te doen. Wanneer dit gebeurt"
-" zullen alle overlappende pixels met de waarde ``1`` de waarde ``1`` "
-"behouden, maar als een pixel in één van de vier rasters de waarde ``0`` "
-"heeft, dan zal het ``0`` zijn in het resultaat. Op deze manier zal het "
-"resultaat alleen de overlappende gebieden bevatten."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:586
-msgid "Combining rasters"
-msgstr "Rasters combineren"
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:588
-msgid "Click the :menuselection:`Raster --> Raster calculator` menu item."
-msgstr "Klik op het menu-item :menuselection:`Raster --> Rasterberekeningen`."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:589
-msgid ""
-"Build the following expression (with the appropriate names for your layers, "
-"depending on what you called them):"
-msgstr ""
-"Bouw de volgende expressie (met de toepasselijke namen voor uw lagen, "
-"afhankelijk van hoe u ze genoemd heeft):"
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:597
-msgid "Set the output location to the :file:`Rasterprac` directory."
-msgstr "Stel de locatie voor de uitvoer in op de map :file:`Rasterprac`."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:598
-msgid "Name the output raster :file:`cross_product.tif`."
-msgstr "Noem het uitvoerraster :file:`cross_product.tif`."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:599
-msgid ""
-"Ensure that the :guilabel:`Open output file after running algorithm` box is "
-"checked."
-msgstr ""
-"Zorg er voor dat het vak :guilabel:`Uitvoerbestand openen na uitvoeren "
-"algoritme` is geselecteerd."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:602
-msgid ""
-"Change the symbology of the new raster in the same way as you set the style "
-"for the other reclassified rasters.  The new raster now properly displays "
-"the areas where all the criteria are satisfied."
-msgstr ""
-"Wijzig de symbologie van het nieuwe raster op dezelfde manier als waarop u "
-"de stijl voor de andere opnieuw geclassificeerde rasters heeft ingesteld. "
-"Het nieuwe raster geeft nu op de juiste wijze de gebieden weer waar aan alle"
-" criteria wordt voldaan."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:606
-msgid ""
-"To get the final result, you need to select the areas that are greater than "
-"``6000m^2``. However, computing these areas accurately is only possible for "
-"a vector layer, so you will need to vectorize the raster."
-msgstr ""
-"U moet de gebieden selecteren die groter zijn dan ``6000m²`` om het "
-"uiteindelijke resultaat te krijgen. Het berekenen van deze gebieden is "
-"echter alleen mogelijk in een vectorlaag, dus zult u het raster moeten "
-"vectoriseren."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:611
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:559
 msgid "Vectorizing the raster"
 msgstr "Het raster vectoriseren "
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:613
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:561
 msgid ""
-"Click on the menu item :menuselection:`Raster --> Conversion --> "
-"Polygonize`."
+"Click on the menu item :menuselection:`Raster --> Conversion --> Polygonize "
+"(Raster to  Vector)...`"
 msgstr ""
-"Klik op het menu-item :menuselection:`Raster --> Conversie --> "
-"Vectoriseren`."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:614
-msgid "Select the :file:`cross_product.tif` raster."
-msgstr "Selecteer het raster :file:`cross_product.tif`."
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:563
+msgid ""
+"Select the :file:`aspect_slope_rainfall` raster  as :guilabel:`Input layer`"
+msgstr ""
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:615
-msgid "Set the output location to :file:`Rasterprac`."
-msgstr "Stel de locatie voor de uitvoer in op :file:`Rasterprac`."
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:565
+msgid ""
+"Set :guilabel:`Name of the field to create` to ``suitable`` (the default "
+"field name is ``DN`` - Digital number data)"
+msgstr ""
 
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:567
+msgid ""
+"Save the output. Under :guilabel:`Vectorized`, select :guilabel:`Save file "
+"as`. Set the location to :file:`Rasterprac` and name the file "
+":file:`aspect_slope_rainfall_all.shp`."
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:574
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:616
-msgid "Name the file :file:`candidate_areas.shp`."
-msgstr "Noem het bestand :file:`candidate_areas.shp`."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:617
-msgid ""
-"Ensure that :guilabel:`Open output file after running algorithm` is checked."
+msgid "Close the dialog when processing is complete"
 msgstr ""
-"Zorg er voor dat het vak :guilabel:`Uitvoerbestand openen na uitvoeren "
-"algoritme` is geselecteerd."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:619
-msgid "Close the dialog when processing is complete."
-msgstr "Sluit het dialoogvenster als de verwerking voltooid is."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:621
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:576
 msgid ""
 "All areas of the raster have been vectorized, so you need to select only the"
-" areas that have a value of ``1``."
+" areas that have a value of ``1`` in the ``suitable`` field. (Digital "
+"Number."
 msgstr ""
-"Alle gebieden van het raster zijn gevectoriseerd, dus u moet alleen de "
-"gebieden selecteren die de waarde ``1`` hebben."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:624
-msgid "Open the :guilabel:`Query` dialog for the new vector."
-msgstr "Open het dialoogvenster :guilabel:`Query` voor de nieuwe vector."
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:580
+msgid ""
+"Open the :guilabel:`Query Builder` dialog (right-click - "
+":guilabel:`Filter...`) for the new vector layer"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:582
+msgid "Build this query::"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:587
+msgid ""
+"After you are sure the query is complete (and only the areas that meet all "
+"three criteria, i.e. with a value of ``1`` are visible), create a new vector"
+" file from the results, using the :guilabel:`Export --> Save Features As...`"
+" in the layer's right-click menu"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:592
+msgid "Save the file in the :file:`Rasterprac` directory"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:593
+msgid "Name the file :file:`aspect_slope_rainfall_1.shp`"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:594
+msgid "Remove the ``aspect_slope_rainfall_all`` layer from your map"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:596
+msgid "Save your project"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:598
+msgid ""
+"When we use an algorithm to vectorize a raster, sometimes the algorithm "
+"yields what is called \"Invalid geometries\", i.e. there are empty polygons,"
+" or polygons with mistakes in them, that will be difficult to analyze in the"
+" future. So, we need to use the \"Fix Geometry\" tool."
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:605
+msgid "Fixing geometry"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:607
+msgid ""
+"In the :guilabel:`Processing Toolbox`, search for \"Fix geometries\", and "
+":guilabel:`Execute...` it"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:609
+msgid "For the :guilabel:`Input layer`, select ``aspect_slope_rainfall_1``"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:610
+msgid ""
+"Under :guilabel:`Fixed geometries`, select :guilabel:`Save file as`, and "
+"save the output to :file:`Rasterprac` and name the file "
+":file:`fixed_aspect_slope_rainfall.shp`."
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:618
+msgid ""
+"Now that you have vectorized the raster, and fixed the resulting geometry, "
+"you can combine the aspect, slope, and rainfall criteria with the distance "
+"from human settlement criteria by finding the intersection of the "
+"``fixed_aspect_slope_rainfall`` layer and the ``rural_buffer`` layer."
+msgstr ""
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:625
-msgid "Build this query:"
-msgstr "Bouw deze query:"
+msgid "Determining the Intersection of vectors"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:627
+msgid ""
+"Click the menu item :menuselection:`Vector --> Geoprocessing Tools --> "
+"Intersection...`"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:630
+msgid ""
+"In the dialog that appears, select the ``rural_buffer`` layer as "
+":guilabel:`Input layer`"
+msgstr ""
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:632
 msgid ""
-"Create a new vector file from the results by saving the "
-":guilabel:`candidate_areas` vector after the query is complete (and only the"
-" areas with a value of ``1`` are visible). Use the :guilabel:`Save as...` "
-"function in the layer's right-click menu for this."
+"For the :guilabel:`Overlay layer`, select the "
+"``fixed_aspect_slope_rainfall`` layer"
 msgstr ""
-"Maak een nieuw vectorbestand uit de resultaten door de vector "
-":guilabel:`candidate_areas` op te slaan nadat de query voltooid is (en "
-"alleen de gebieden met de waarde ``1`` zichtbaar zijn). Gebruik hiervoor de "
-"functie :guilabel:`Opslaan als…` in het contextmenu van de laag."
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:634
+msgid ""
+"In :guilabel:`Intersection`, place the output file in the :file:`Rasterprac`"
+" directory"
+msgstr ""
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:636
-msgid "Save the file in the :file:`Rasterprac` directory."
-msgstr "Sla het bestand op in de map :file:`Rasterprac`."
+msgid "Name the output file :file:`rural_aspect_slope_rainfall.shp`"
+msgstr ""
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:637
-msgid "Name the file :guilabel:`candidate_areas_only.shp`."
-msgstr "Noem het bestand :guilabel:`candidate_areas_only.shp`."
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:639
+msgid "Close the :guilabel:`Intersection` dialog."
+msgstr ""
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:641
-msgid "Calculating the area for each polygon"
-msgstr "Het gebied voor elke polygoon berekenen"
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:643
-msgid "Open the new vector layer's right-click menu."
-msgstr "Open het rechtsklik-menu van de nieuwe vectorlaag."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:644
-msgid "Select :guilabel:`Open attribute table`."
-msgstr "Selecteer :guilabel:`Attributentabel openen`."
+msgid ""
+"Make sure that your intersection worked correctly by noting that only the "
+"overlapping areas remain."
+msgstr ""
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:645
 msgid ""
-"Click the :guilabel:`Toggle editing mode` button along the bottom of the "
-"table, or press :kbd:`Ctrl+E`."
+"The next criteria on the list is that the area must be greater than ``6000``"
+" ㎡. You will now calculate the polygon areas in order to identify the areas "
+"that are the appropriate size for this project."
 msgstr ""
-"Klik op de knop :guilabel:`modus Bewerken aan-/uitzetten` aan de onderzijde "
-"van de tabel, of druk op :kbd:`Ctrl+E`."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:647
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:651
+msgid "Calculating the area for each polygon"
+msgstr "Het gebied voor elke polygoon berekenen"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:653
+msgid "Open the new vector layer's right-click menu"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:654
+msgid "Select :guilabel:`Open attribute table`"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:655
 msgid ""
-"Click the :guilabel:`Open field calculator` button along the bottom of the "
-"table, or press :kbd:`Ctrl+I`."
+"Click the |toggleEditing| :sup:`Toggle editing` button in the top left "
+"corner of the table, or press :kbd:`Ctrl+e`"
 msgstr ""
-"Klik op de knop :guilabel:`Veldberekening openen`  aan de onderzijde van de "
-"tabel, of druk op :kbd:`Ctrl+I`."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:649
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:657
 msgid ""
-"Under the :guilabel:`New field` heading in the dialog that appears, enter "
-"the field name ``area``. The output field type should be an integer, and the"
-" field width should be ``10``."
+"Click the |calculateField| :sup:`Open field calculator` button in the "
+"toolbar along the top of the table, or press :kbd:`Ctrl+i`"
 msgstr ""
-"Voer, onder de kop :guilabel:`Nieuw veld` in het dialoogvenster dat "
-"verschijnt, de veldnaam ``area`` in. Het type uitvoerveld zou een geheel "
-"getal moeten zijn, en de veldbreedte zou ``10`` moeten zijn."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:652
-msgid "In :guilabel:`Field calculator expression`, type:"
-msgstr "In :guilabel:`Field calculator expression`, type:"
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:659
+msgid ""
+"In the dialog that appears, make sure that |checkbox| :guilabel:`Create new "
+"field` is checked, and set the :guilabel:`Output field name` to ``area`` The"
+" output field type should be a decimal number (real). Set "
+":guilabel:`Precision` to ``1`` (one decimal)."
+msgstr ""
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:658
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:664
+msgid "In the :guilabel:`Expression` area, type::"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:668
 msgid ""
 "This means that the field calculator will calculate the area of each polygon"
 " in the vector layer and will then populate a new integer column (called "
-":guilabel:`area`) with the computed value."
+"``area``) with the computed value."
 msgstr ""
-"Dit betekent dat de veldberekening het gebied van elke polygoon in de "
-"vectorlaag zal berekenen en ze dan zal vermelden in een nieuwe kolom met een"
-" geheel getal (genaamd :guilabel:`area`) met de berekende waarde."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:663
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:673
 msgid ""
-"Do the same thing for another new field called :guilabel:`id`. In "
-":guilabel:`Field calculator expression`, type:"
+"Do the same thing for another new field called ``id``. In :guilabel:`Field "
+"calculator expression`, type::"
 msgstr ""
-"Herhaal deze stap voor een ander veld genaamd :guilabel:`id`. In "
-":guilabel:`Field calculator expression`, type:"
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:670
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:678
 msgid ""
 "This ensures that each polygon has a unique ID for identification purposes."
 msgstr ""
 "Dit zorgt er voor dat elke polygoon een unieke ID heeft ter identificatie."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:671
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:680
 msgid ""
-"Click :guilabel:`Toggle editing mode` again, and save your edits if prompted"
-" to do so."
+"Click |toggleEditing| :sup:`Toggle editing` again, and save your edits if "
+"prompted to do so"
 msgstr ""
-"Klik opnieuw op de knop :guilabel:`modus Bewerken aan-/uitzetten` en sla uw "
-"gegevens op als daarnaar gevraagd wordt."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:675
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:684
 msgid "Selecting areas of a given size"
 msgstr "Gebieden met een bepaalde grootte selecteren"
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:677
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:686
 msgid "Now that the areas are known:"
 msgstr "Nu de gebieden bekend zijn:"
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:679
-msgid ""
-"Build a query (as usual) to select only the polygons larger than "
-"``6000m^2``.  The query is:"
-msgstr ""
-"Bouw een query (zoals gewoonlijk) om alleen de polygonen te selecteren die "
-"groter zijn dan ``6000m²``. De query is:"
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:686
-msgid "Save the selection as a new vector layer called :file:`solution.shp`."
-msgstr ""
-"Sla de selectie op als een nieuwe vectorlaag, genaamd :file:`solution.shp`."
-
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:688
 msgid ""
-"You now have your solution areas, from which you will pick the one nearest "
-"to your house."
+"Build a query (as usual) to select only the polygons that are larger than "
+"``6000`` ㎡. The query is::"
 msgstr ""
-"U heeft nu uw gebieden voor de oplossing, van waaruit u dat moet kiezen dat "
-"het dihtst bij uw huis ligt."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:692
-msgid "Digitize your house"
-msgstr "Uw huis digitaliseren"
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:694
 msgid ""
-"Create a new vector layer as before, but this time, select the "
-":guilabel:`Type` value as being a :guilabel:`Point`."
+"Save the selection in the :file:`Rasterprac` directory as a new vector layer"
+" called :file:`suitable_areas.shp`."
 msgstr ""
-"Maak, net als eerder, een nieuwe vectorlaag, maar selecteer deze keer de "
-"waarde :guilabel:`Type` als :guilabel:`Punt`."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:696
-msgid "Ensure that it is in the correct CRS!"
-msgstr "Zorg er voor dat het in het juiste CRS is!"
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:697
-msgid "Name the new layer :file:`house.shp`."
-msgstr "Noem de nieuwe laag :file:`house.shp`."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:698
-msgid "Finish creating the new layer."
-msgstr "Voltooi het maken van de nieuwe laag."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:699
-msgid "Enter edit mode (while the new layer is selected)."
-msgstr "Ga naar de modus Bewerken (terwijl de nieuwe laag is geselecteerd)."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:700
 msgid ""
-"Click the point where your house or other current place of residence is, "
-"using the streets as a guide. You might have to open other layers to help "
-"you find your house. If you don't live anywhere nearby, just click somewhere"
-" among the streets where a house could conceivably be."
+"You now have the suitable areas that meet all of the habitat criteria for "
+"the rare fynbos plant, from which you will pick the four areas that are "
+"nearest to the University of Cape Town."
 msgstr ""
-"Klik op het punt waar uw huis of andere huidige verblijfplaats is, met "
-"behulp van de starten als een hulplijn. U moet misschien andere lagen openen"
-" om u te helpen uw huis te vinden. Als u niet ergens dichtbij woont, klik "
-"dan ergens langs de straat waar een mogelijk huis zou kunnen zijn."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:706
-msgid "Save your edits and exit edit mode."
-msgstr "Sla uw bewerkingen op en verlaat de modus Bewerken."
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:702
+msgid "Digitize the University of Cape Town"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:704
+msgid ""
+"Create a new vector layer in the :file:`Rasterprac` directory as before, but"
+" this time, use :guilabel:`Point` as :guilabel:`Geometry type` and name it "
+":file:`university.shp`"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:707
+msgid ""
+"Ensure that it is in the correct CRS (``Project CRS:EPSG:32733 - WGS 84 / "
+"UTM zone 33S``)"
+msgstr ""
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:709
-msgid ""
-"You will need to find the centroids (\"centers of mass\") for the solution "
-"area polygons in order to decide which is closest to your house."
+msgid "Finish creating the new layer (click :guilabel:`OK`)"
 msgstr ""
-"U zult de centroïden (\"zwaartepunten\") voor de polygonen in het "
-"oplossingsgebied moeten zoeken om te kunnen bepalen welk het dichtst bij uw "
-"huis ligt."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:713
-msgid "Calculate polygon centroids"
-msgstr "Centroïden voor polygonen berekenen"
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:715
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:710
 msgid ""
-"Click on the :menuselection:`Vector --> Geometry Tools --> Centroids` menu "
-"item."
+"Hide all layers except the new ``university`` layer and the ``Streets`` "
+"layer."
 msgstr ""
-"Klik op het menu-item :menuselection:`Vector --> Geometrie-gereedschappen "
-"--> Zwaartepunten`."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:717
-msgid "Specify the input layer as :guilabel:`solution.shp`."
-msgstr "Specificeer de invoerlaag als :guilabel:`solution.shp`."
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:712
+msgid "Add a background map (OSM):"
+msgstr ""
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:718
-msgid "Provide the output location as :file:`Rasterprac`."
-msgstr "Geef als uitvoerlocatie op :file:`Rasterprac`."
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:714
+msgid ""
+"Go to the :guilabel:`Browser` panel and navigate to :menuselection:`XYZ "
+"Tiles --> OpenStreetMap`"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:716
+msgid ""
+"Drag and drop the ``OpenStreetMap`` entry to the bottom of the "
+":guilabel:`Layers` panel"
+msgstr ""
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:719
-msgid "Call the destination file :file:`solution_centroids.shp`."
-msgstr "Noem het doelbestand :file:`solution_centroids.shp`."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:720
 msgid ""
-"Check |checkbox| :guilabel:`Open output file after running algorithm` to add"
-" the result to the TOC (:guilabel:`Layers` panel)."
+"Using your internet browser, look up the location of the University of Cape "
+"Town. Given Cape Town's unique topography, the university is in a very "
+"recognizable location. Before you return to QGIS, take note of where the "
+"university is located, and what is nearby."
 msgstr ""
-"Selecteer het vak |checkbox| :guilabel:`Uitvoerbestand openen na uitvoeren "
-"algoritme` om het resultaat toe te voegen aan de inhoudsopgave (paneel "
-":guilabel:`Lagen`)."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:722
-msgid "Click :guilabel:`Run` and close the dialog."
-msgstr "Klik op :guilabel:`Uitvoeren` en sluit het dialoogvenster."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:723
-msgid ""
-"Drag the new layer to the top of the layer order so that you can see it."
-msgstr ""
-"Sleep de nieuwe laag tot boven in de laagvolgorde zodat u hem kunt zien."
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:726
-msgid "Calculate which centroid is closest to your house"
-msgstr "Berekenen welke centroïde het dichtst bij uw huis ligt"
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:728
 msgid ""
-"Click on the menu item :menuselection:`Vector --> Analysis Tools --> "
-"Distance matrix`."
+"Ensure that the ``Streets`` layer clicked on, and that the ``university`` "
+"layer is highlighted in the :guilabel:`Layers` panel"
 msgstr ""
-"Klik op het menu-item :menuselection:`Vector --> Analyse-gereedschap --> "
-"Afstandsmatrix`."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:730
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:729
 msgid ""
-"The input layer should be your house, and the target layer "
-":guilabel:`solution_centroids`. Both of these should use the :guilabel:`id` "
-"field as their unique ID field."
+"Navigate to the :menuselection:`View --> Toolbars` menu item and ensure that"
+" :guilabel:`Digitizing` is selected. You should then see a toolbar icon with"
+" a pencil on it (|toggleEditing| :sup:`Toggle editing`). This is the *Toggle"
+" Editing* button."
 msgstr ""
-"De invoerlaag zou uw huis moeten zijn, en de doellaag "
-":guilabel:`solution_centroids`. Beide zouden het veld :guilabel:`ID` als hun"
-" unieke veld ID moeten gebruiken."
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:733
-msgid "The output matrix type should be :guilabel:`linear`."
-msgstr "Het type uitvoermatrix zou :guilabel:`lineair` moeten zijn."
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:734
-msgid "Set an appropriate output location and name."
-msgstr "Stel een toepasselijke locatie voor de uitvoer en een naam in."
+msgid ""
+"Click the :guilabel:`Toggle editing` button to enter *edit mode*. This "
+"allows you to edit a vector layer"
+msgstr ""
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:736
 msgid ""
-"Open the file in a text editor (or import it into a spreadsheet). Note which"
-" target ID is associated with the shortest :guilabel:`Distance`. There may "
-"be more than one at the same distance."
+"Click the |capturePoint| :sup:`Add Point Feature` button, which should be "
+"nearby the |toggleEditing| :sup:`Toggle editing` button"
 msgstr ""
-"Open het bestand in een tekstbewerker (of importeer het in een werkblad). "
-"Onthoud welk doel-ID is geassocieerd met de kortste :guilabel:`Afstand`. Er "
-"zouden er meer dan één op dezelfde afstand kunnen zijn."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:739
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:738
 msgid ""
-"Build a query in QGIS to select only the solution areas closest to your "
-"house (selecting it using the :guilabel:`id` field)."
+"With the :guilabel:`Add feature` tool activated, left-click on your best "
+"estimate of the location of the University of Cape Town"
 msgstr ""
-"Bouw een query in QGIS om alleen de oplossingsgebieden te selecteren die het"
-" dichtst bij uw huis liggen (selecteer ze met het veld :guilabel:`ID`)."
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:740
+msgid "Supply an arbitrary integer when asked for the ``id``"
+msgstr ""
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:742
+msgid "Click the |saveEdits| :sup:`Save Layer Edits` button"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:743
+msgid ""
+"Click the :guilabel:`Toggle editing` button to stop your editing session"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:748
+msgid "Find the locations that are closest to the University of Cape Town"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:750
+msgid ""
+"Go to the *Processing Toolbox*, locate the *Join Attributes by Nearest* "
+"algoritm (:menuselection:`Vector general --> Join Attributes by Nearest`) "
+"and execute it"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:754
+msgid ""
+":guilabel:`Input layer` should be ``university``, and :guilabel:`Input layer"
+" 2` ``suitable_areas``"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:756
+msgid "Set an appropriate output location and name (:guilabel:`Joined layer`)"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:758
+msgid "Set the :guilabel:`Maximum nearest neighbors` to ``4``"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:761
+msgid "Leave the rest of the parameters with their default values"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:764
+msgid ""
+"The resulting point layer will contain four features - they will all have "
+"the location of the university and its attributes, and in addition, the "
+"attributes of the nearby suitable areas (including the ``id``), and the "
+"distance to that location."
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:769
+msgid "Open the attribute table of the result of the join"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:770
+msgid ""
+"Note the ``id`` of the four nearest suitable areas, and then close the "
+"attribute table"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:772
+msgid "Open the attribute table of the ``suitable_areas`` layer"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:773
+msgid ""
+"Build a query to select the four suitable areas closest to the university "
+"(selecting them using the ``id`` field)"
+msgstr ""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:776
 msgid "This is the final answer to the research question."
 msgstr "Dit is het uiteindelijke antwoord op de onderzoeksvraag."
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:744
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:778
 msgid ""
-"For your submission, include the semi-transparent hillshade layer over an "
-"appealing raster of your choice (such as the :guilabel:`DEM` or the "
-":guilabel:`slope` raster, for example). Also include the polygon of the "
-"closest solution area(s), as well as your house. Follow all the best "
-"practices for cartography in creating your output map."
+"For your submission, create a fully labeled layout that includes the semi-"
+"transparent hillshade layer over an appealing raster of your choice (such as"
+" the DEM or the slope raster, for example). Also include the university and "
+"the ``suitable_areas`` layer, with the four suitable areas that are closest "
+"to the university highlighted. Follow all the best practices for cartography"
+" in creating your output map."
 msgstr ""
-"Leg, voor als u het inlevert, de semi-transparante laag hillshade over een "
-"aantrekkelijk raster van uw keuze (zoals de :guilabel:`DEM` of de laag "
-":guilabel:`slope` bijvoorbeeld). Neem ook de polygoon van het dichtstbij "
-"gelegen oplossingsgebied en uw huis op. Volg alle best practices voor "
-"cartografie bij het maken van uw uitvoerkaart."

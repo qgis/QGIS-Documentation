@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-26 13:13+0200\n"
+"POT-Creation-Date: 2020-09-24 11:25+0200\n"
 "PO-Revision-Date: 2020-03-16 19:26+0000\n"
 "Last-Translator: Dick Groskamp, 2020\n"
 "Language-Team: Dutch (https://www.transifex.com/qgis/teams/6144/nl/)\n"
@@ -37,12 +37,9 @@ msgstr "Authenticatie-database"
 #: ../../docs/user_manual/auth_system/auth_overview.rst:21
 msgid ""
 "The new authentication system stores authentication configurations in an "
-"SQLite database file located, by default, at :file:`<user home>/.qgis3/qgis-"
-"auth.db`."
+"SQLite database file located, by default, at :file:`<profile directory"
+">/qgis-auth.db`."
 msgstr ""
-"Het nieuwe authenticatiesysteem slaat configuraties voor authenticatie "
-"standaard op in een databasebestand van SQLite, :file:`<user home>/.qgis3"
-"/qgis-auth.db`."
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:24
 msgid ""
@@ -83,33 +80,27 @@ msgstr "Hoofdwachtwoord"
 msgid ""
 "To store or access sensitive information within the database, a user must "
 "define a `master password`. A new master password is requested and verified "
-"when initially storing any encrypted data to the database. Only when "
-"sensitive information is accessed is the user prompted for the master "
-"password, which is then cached for the remainder of the session (until "
-"application is quit), unless the user manually chooses an action to clear "
-"its cached value. Some instances of using the authentication system do not "
-"require input of the master password, such as when selecting an existing "
+"when initially storing any encrypted data to the database. When sensitive "
+"information is accessed, the user is prompted for the master password. The "
+"password is then cached for the remainder of the session (until application "
+"is quit), unless the user manually chooses an action to clear its cached "
+"value. Some instances of using the authentication system do not require "
+"input of the master password, such as when selecting an existing "
 "authentication configuration, or applying a configuration to a server "
 "configuration (such as when adding a WMS layer)."
 msgstr ""
-"Een gebruiker moet een `hoofdwachtwoord` definiëren om gevoelige informatie "
-"in de database op te slaan of er toegang tot te verkrijgen. Een nieuw "
-"hoofdwachtwoord wordt verzocht en geverifieerd bij het initieel opslaan van "
-"versleutelde informatie in de database. Alleen wanneer toegang wordt gezocht"
-" tot gevoelige informatie wordt de gebruiker gevraagd het hoofdwachtwoord in"
-" te voeren, dat dan wordt opgeslagen voor de rest van die sessie (totdat de "
-"toepassing wordt afgesloten), tenzij de gebruiker handmatig een actie kiest "
-"om de opgeslagen waarde te verwijderen. Sommige instances van het gebruik "
-"van het authenticatiesysteem vereisen geen invoer van het hoofdwachtwoord, "
-"zoals bij het kiezen van een bestaande configuratie voor authenticatie, of "
-"het toepassen van een configuratie op een configuratie voor een server "
-"(zoals bij het toevoegen van een WMS-laag)."
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:56
+#: ../../docs/user_manual/auth_system/auth_overview.rst:51
+msgid ""
+"You can choose to save the password in the ``Wallet/Keyring`` of your "
+"computer."
+msgstr ""
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:59
 msgid "Input new master password"
 msgstr "Nieuw hoofdwachtwoord invoeren"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:60
+#: ../../docs/user_manual/auth_system/auth_overview.rst:63
 msgid ""
 "A path to a file containing the master password can be set using the "
 "following environment variable, ``QGIS_AUTH_PASSWORD_FILE``."
@@ -117,11 +108,11 @@ msgstr ""
 "Een pad naar een bestand dat het hoofdwachtwoord bevat kan worden ingesteld "
 "met behulp van de volgende omgevingsvariabele, ``QGIS_AUTH_PASSWORD_FILE``."
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:64
+#: ../../docs/user_manual/auth_system/auth_overview.rst:67
 msgid "Managing the master password"
 msgstr "Hoofdwachtwoord beheren"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:66
+#: ../../docs/user_manual/auth_system/auth_overview.rst:69
 msgid ""
 "Once set, the master password can be reset; the current master password will"
 " be needed prior to resetting. During this process, there is an option to "
@@ -132,11 +123,11 @@ msgstr ""
 "proces bestaat er een optie om een volledige back-up van de huidige database"
 " te genereren."
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:75
+#: ../../docs/user_manual/auth_system/auth_overview.rst:78
 msgid "Resetting master password"
 msgstr "Hoofdwachtwoord opnieuw instellen"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:77
+#: ../../docs/user_manual/auth_system/auth_overview.rst:80
 msgid ""
 "If the user forgets the master password, there is no way to retrieve or "
 "override it. There is also no means of retrieving encrypted information "
@@ -146,7 +137,7 @@ msgstr ""
 "terug te vinden of te overschrijven. Er bestaat ook geen manier om "
 "versleutelde informatie terug te halen zonder het hoofdwachtwoord te kennen."
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:81
+#: ../../docs/user_manual/auth_system/auth_overview.rst:84
 msgid ""
 "If a user inputs their existing password incorrectly three times, the dialog"
 " will offer to erase the database."
@@ -154,15 +145,15 @@ msgstr ""
 "Als een gebruiker zijn bestaande hoofdwachtwoord drie keer foutief invoert, "
 "zal een dialoogvenster aanbieden om de database te wissen."
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:89
+#: ../../docs/user_manual/auth_system/auth_overview.rst:92
 msgid "Password prompt after three invalid attempts"
 msgstr "Na drie ongeldige pogingen wordt naar het wachtwoord gevraagd"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:92
+#: ../../docs/user_manual/auth_system/auth_overview.rst:95
 msgid "Authentication Configurations"
 msgstr "Configuraties voor authenticatie"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:94
+#: ../../docs/user_manual/auth_system/auth_overview.rst:97
 msgid ""
 "You can manage authentication configurations from :guilabel:`Configurations`"
 " in the :guilabel:`Authentication` tab of the QGIS Options dialog "
@@ -172,11 +163,11 @@ msgstr ""
 ":guilabel:`Configuraties` op de tab :guilabel:`Authenticatie` van het "
 "dialoogvenster QGIS Opties (:menuselection:`Extra --> Opties`)."
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:103
+#: ../../docs/user_manual/auth_system/auth_overview.rst:106
 msgid "Configurations editor"
 msgstr "Configuraties bewerken"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:105
+#: ../../docs/user_manual/auth_system/auth_overview.rst:108
 msgid ""
 "Use the |signPlus| button to add a new configuration, the |signMinus| button"
 " to remove configurations, and the |symbologyEdit| button to modify existing"
@@ -186,11 +177,11 @@ msgstr ""
 " |signMinus| om configuraties te verwijderen, en de knop |symbologyEdit| om "
 "bestaande aan te passen."
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:113
+#: ../../docs/user_manual/auth_system/auth_overview.rst:116
 msgid "Adding config from within Configuration editor"
 msgstr "Configuraties vanuit de bewerker voor Configuraties toevoegen"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:115
+#: ../../docs/user_manual/auth_system/auth_overview.rst:118
 msgid ""
 "The same type of operations for authentication configuration management "
 "(Add, Edit and Remove) can be done when configuring a given service "
@@ -211,7 +202,7 @@ msgstr ""
 "op de tab :guilabel:`Authenticatie` van Opties van QGIS, tenzij u meer "
 "uitgebreid beheer van de configuraties wilt uitvoeren."
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:128
+#: ../../docs/user_manual/auth_system/auth_overview.rst:131
 msgid ""
 "WMS connection dialog showing :guilabel:`Add`, :guilabel:`Edit`, and "
 ":guilabel:`Remove` authentication configuration buttons"
@@ -220,7 +211,7 @@ msgstr ""
 "authenticatie :guilabel:`Toevoegen`, :guilabel:`Bewerken`, en "
 ":guilabel:`Verwijderen` weergeeft"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:131
+#: ../../docs/user_manual/auth_system/auth_overview.rst:134
 msgid ""
 "When creating or editing an authentication configuration, the info required "
 "is a name, an authentication method and any other info that the "
@@ -232,11 +223,11 @@ msgstr ""
 "info die nodig is voor de authenticatiemethode (vind meer over de "
 "beschikbare typen authenticatie in :ref:`authentication_methods`)."
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:139
+#: ../../docs/user_manual/auth_system/auth_overview.rst:142
 msgid "Authentication Methods"
 msgstr "Authenticatiemethoden"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:141
+#: ../../docs/user_manual/auth_system/auth_overview.rst:144
 msgid ""
 "Available authentications are provided by C++ plugins much in the same way "
 "data provider plugins are supported by QGIS. The method of authentication "
@@ -262,11 +253,11 @@ msgstr ""
 "op de tab :guilabel:`Authenticatie`, klik op de knop |options| "
 ":guilabel:`Geïnstalleerde plug-ins`."
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:157
+#: ../../docs/user_manual/auth_system/auth_overview.rst:160
 msgid "Available method plugins list"
 msgstr "Lijst met beschikbare plug-ins voor methoden"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:159
+#: ../../docs/user_manual/auth_system/auth_overview.rst:162
 msgid ""
 "Plugins can be created for new authentication methods that do not require "
 "QGIS to be recompiled. Since the support for plugins is currently C++-only, "
@@ -283,31 +274,31 @@ msgstr ""
 "doelversie van QGIS als u van plan bent om hem toe te voegen aan een "
 "bestaande doelinstallatie."
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:170
+#: ../../docs/user_manual/auth_system/auth_overview.rst:173
 msgid "Basic HTTP authentication configs"
 msgstr "Configuraties voor basis HTTP-authenticatie "
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:177
+#: ../../docs/user_manual/auth_system/auth_overview.rst:180
 msgid "ESRI Token authentication configs"
 msgstr "Configuraties authenticatie voor tokens van ESRI"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:184
+#: ../../docs/user_manual/auth_system/auth_overview.rst:187
 msgid "OAuth2 authentication configs"
 msgstr "Configuraties voor authenticatie voor OAuth2"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:191
+#: ../../docs/user_manual/auth_system/auth_overview.rst:194
 msgid "PKI paths authentication configs"
 msgstr "Configuraties voor authenticatie PKI-paden "
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:198
+#: ../../docs/user_manual/auth_system/auth_overview.rst:201
 msgid "PKI PKCS#12 file paths authentication configs"
 msgstr "Configuraties voor authenticatie PKI PKCS#12 bestandspaden"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:205
+#: ../../docs/user_manual/auth_system/auth_overview.rst:208
 msgid "Stored Identity authentication configs"
 msgstr "Opgeslagen identiteit configuraties voor authenticatie"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:209
+#: ../../docs/user_manual/auth_system/auth_overview.rst:212
 msgid ""
 "The Resource URL is currently an *unimplemented* feature that will "
 "eventually allow a particular configuration to be auto-chosen when "
@@ -317,12 +308,12 @@ msgstr ""
 "uiteindelijk toe moet leiden dat een bepaalde configuratie automatisch wordt"
 " gekozen bij het verbinden met bronnen op een opgegeven URL."
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:214
+#: ../../docs/user_manual/auth_system/auth_overview.rst:217
 msgid "Master Password and Auth Config Utilities"
 msgstr ""
 "Gereedschappen voor hoofdwachtwoord en configuratie voor authenticatie"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:216
+#: ../../docs/user_manual/auth_system/auth_overview.rst:219
 msgid ""
 "Under the Options menu (:menuselection:`Settings --> Options`) in the "
 ":guilabel:`Authentication` tab, there are several utility actions to manage "
@@ -332,100 +323,101 @@ msgstr ""
 ":guilabel:`Authenticatie`, staan verschillende acties voor gereedschappen om"
 " de authenticatiedatabase en de configuraties te beheren:"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:225
+#: ../../docs/user_manual/auth_system/auth_overview.rst:228
 msgid "Utilities menu"
 msgstr "menu Gereedschappen"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:227
-msgid "**Input master password**:"
-msgstr "**Hoofdwachtwoord invoeren**:"
-
-#: ../../docs/user_manual/auth_system/auth_overview.rst:229
+#: ../../docs/user_manual/auth_system/auth_overview.rst:230
 msgid ""
-"Opens the master password input dialog, independent of performing any "
-"authentication database command."
+"**Input master password**: opens the master password input dialog, "
+"independent of performing any authentication database command"
 msgstr ""
-"Opent het dialoogvenster voor het invoeren van het hoofdwachtwoord, "
-"onafhankelijk van een opdracht voor de database voor authenticatie."
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:232
-msgid "**Clear cached master password**:"
-msgstr "**Hoofdwachtwoord uit cache verwijderen**."
+msgid ""
+"**Clear cached master password**: unsets the master password if it has been "
+"set"
+msgstr ""
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:234
-msgid "Unsets the master password if it has been set via input dialog."
+msgid ""
+"**Reset master password**: opens a dialog to change the master password (the"
+" current password must be known) and optionally back up the current database"
 msgstr ""
-"Verwijdert het hoofdwachtwoord als dat is ingesteld via het dialoogvenster "
-"voor invoer."
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:236
-msgid "**Reset master password**:"
-msgstr "**Hoofdwachtwoord opnieuw instellen**"
+msgid ""
+"**Clear network authentication access cache**: clears the authentication "
+"cache of all connections"
+msgstr ""
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:238
 msgid ""
-"Opens a dialog to change the master password (the current password must be "
-"known) and optionally back up the current database."
+"**Automatically clear network authentication access cache on SSL errors**: "
+"the connection cache stores all authentication data for connections, also "
+"when the connection fails. If you change authentication configurations or "
+"certification authorities, you should clear the authentication cache or "
+"restart QGIS. When this option is checked, the authentication cache will be "
+"automatically cleared every time an SSL error occurs and you choose to abort"
+" the connection"
 msgstr ""
-"Opent een dialoogvenster om het hoofdwachtwoord te wijzigen (het huidige "
-"hoofdwachtwoord moet bekend zijn) en optioneel een back-up te maken van de "
-"huidige database."
-
-#: ../../docs/user_manual/auth_system/auth_overview.rst:241
-msgid ""
-"**Clear cached authentication configurations**: Clears the internal lookup "
-"cache for configurations used to speed up network connections. This does not"
-" clear QGIS’s core network access manager’s cache, which requires a relaunch"
-" of QGIS."
-msgstr ""
-"**Opgeslagen configuraties voor authenticatie verwijderen**: Leegt de "
-"interne cache voor opzoeken van configuraties gebruikt om "
-"netwerkverbindingen te versnellen. Dit schoont niet de beheerscache van het "
-"bronnetwerk van QGIS op, die een herstart van QGIS vereist."
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:245
 msgid ""
-"**Reset master password**: Replaces the current master password for a new "
-"one. The current master password will be needed prior to resetting and a "
-"backup of database can be done."
+"**Integrate master password with your Wallet/Keyring**: adds the master "
+"password to your personal Wallet/Keyring"
 msgstr ""
-"**Hoofdwachtwoord opnieuw instellen**: Vervangt het huidige hoofdwachtwoord "
-"door een nieuw. Het huidige hoofdwachtwoord is, voorafgaand aan het "
-"herstellen, nodig voor het herstellen en een back-up van de database kan "
-"worden uitgevoerd."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:247
+msgid ""
+"**Store/update the master password in your Wallet/Keyring**: updates the "
+"changed master password in your Wallet/Keyring"
+msgstr ""
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:249
 msgid ""
-"**Remove all authentication configurations**: Clears the database of all "
+"**Clear the master password from your Wallet/Keyring**: deletes the master "
+"password from your Wallet/Keyring"
+msgstr ""
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:251
+msgid ""
+"**Enable password helper debug log**: enables a debug tool that will contain"
+" all the log information of the authentication methods"
+msgstr ""
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:253
+msgid ""
+"**Clear cached authentication configurations**: clears the internal lookup "
+"cache for configurations, used to speed up network connections. This does "
+"not clear QGIS’s core network access manager’s cache, which requires a "
+"relaunch of QGIS."
+msgstr ""
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:256
+msgid ""
+"**Remove all authentication configurations**: clears the database of all "
 "configuration records, without removing other stored records."
 msgstr ""
-"**Alle configuraties voor authenticatie verwijderen**: Schoont de database "
-"van alle records voor configuratie, zonder andere opgeslagen records te "
-"verwijderen."
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:252
+#: ../../docs/user_manual/auth_system/auth_overview.rst:258
 msgid ""
-"**Erase authentication database**: Schedules a backup of the current "
-"database and complete rebuild of the database table structure. These actions"
-" are scheduled for a later time, so as to ensure other operations like "
-"project loading do not interrupt the operation or cause errors due to a "
+"**Erase authentication database**: schedules a backup of the current "
+"database and complete rebuild of the database table structure. The actions "
+"are scheduled for a later time, to ensure that other operations, like "
+"project loading, do not interrupt the operation or cause errors due to a "
 "temporarily missing database."
 msgstr ""
-"**Authenticatiedatabase wissen**: Maakt een taak aan voor een volledige "
-"back-up van de huidige database en een volledige herbouw van de "
-"tabelstructuur van de database. Deze acties worden later gepland, zodat "
-"andere bewerkingen, zoals het laden van een project, de bewerking niet "
-"onderbreken of fouten veroorzaken door een tijdelijk ontbrekende database."
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:263
+#: ../../docs/user_manual/auth_system/auth_overview.rst:269
 msgid "DB erase verification menu"
 msgstr "Verificatiemenu Database wissen"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:266
+#: ../../docs/user_manual/auth_system/auth_overview.rst:272
 msgid "Using authentication configurations"
 msgstr "Configuratie voor authenticatie gebruiken"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:268
+#: ../../docs/user_manual/auth_system/auth_overview.rst:274
 msgid ""
 "Typically, an authentication configuration is selected in a configuration "
 "dialog for a network services (such as WMS). However, the selector widget "
@@ -438,7 +430,7 @@ msgstr ""
 " authenticatie nodig is of in niet-bron functionaliteit, zoals in derde-"
 "partij PyQGIS of plug-ins voor C++."
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:273
+#: ../../docs/user_manual/auth_system/auth_overview.rst:279
 msgid ""
 "When using the selector, :guilabel:`No authentication` is displayed in the "
 "pop-up menu control when nothing is selected, when there are no "
@@ -455,20 +447,20 @@ msgstr ""
 "en geven respectievelijk een beschrijving van de authenticatiemethode en de "
 "ID van de configuratie."
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:285
+#: ../../docs/user_manual/auth_system/auth_overview.rst:291
 msgid "Authentication configuration selector with no authentication"
 msgstr "Selectie voor configuratie voor authenticatie zonder authenticatie"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:292
+#: ../../docs/user_manual/auth_system/auth_overview.rst:298
 msgid "Authentication configuration selector with selected config"
 msgstr ""
 "Selectie voor configuratie voor authenticatie met geselecteerde configuratie"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:295
+#: ../../docs/user_manual/auth_system/auth_overview.rst:301
 msgid "Python bindings"
 msgstr "Python-bindingen"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:297
+#: ../../docs/user_manual/auth_system/auth_overview.rst:303
 msgid ""
 "All classes and public functions have sip bindings, except "
 "``QgsAuthCrypto``, since management of the master password hashing and auth "

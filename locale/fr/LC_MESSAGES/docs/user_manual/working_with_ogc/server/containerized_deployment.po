@@ -1,0 +1,527 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# Sylvain POULAIN <kikiesttoujoursla@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-24 11:25+0200\n"
+"PO-Revision-Date: 2020-09-24 10:26+0000\n"
+"Last-Translator: Sylvain POULAIN <kikiesttoujoursla@gmail.com>, 2020\n"
+"Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:3
+msgid "Containerized deployment"
+msgstr "Déploiement conteneurisé"
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:11
+msgid ""
+"There are many ways to use containerized application, from the most simple "
+"(simple Docker images) to sophisticated (Kubernetes and so on)."
+msgstr ""
+"Il existe de nombreuses façons d'utiliser les applications conteneurisées, "
+"des plus simples (simples images Docker) aux plus sophistiquées (Kubernetes,"
+" etc.)."
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:14
+msgid ""
+"This kind of deployment needs the `docker application "
+"<https://www.docker.com>`_ to be installed and running. Check this `tutorial"
+" <https://www.docker.com/101-tutorial>`_."
+msgstr ""
+"Ce type de déploiement nécessite l'installation et l'exécution de "
+"l'application `docker <https://www.docker.com>`_. Consultez ce `tutoriel "
+"<https://www.docker.com/101-tutorial>`_."
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:19
+msgid ""
+"Docker run pre packaged application (aka images) which can be retrieved as "
+"sources (Dockerfile and resources) to build or already built from registries"
+" (private or public)."
+msgstr ""
+"Docker exécute des applications pré-packagées (alias images) qui peuvent "
+"être récupérées comme sources (Dockerfile et ressources) à construire ou "
+"déjà construites à partir de registres (privés ou publics)."
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:26
+msgid "Simple docker images"
+msgstr "Simples images docker"
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:28
+msgid ""
+"As the docker image does not exist in a public registry. you will need to "
+"build it. To do so create a directory :file:`qgis-server` and within its "
+"directory:"
+msgstr ""
+"Comme l'image du docker n'existe pas dans un dépôt public, vous devrez la "
+"construire. Pour ce faire, créez un dossier :file:`qgis-server` et à "
+"l'intérieur de ce dossier :"
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:31
+msgid "create a file :file:`Dockerfile` with this content:"
+msgstr "créer un fichier :file:`Dockerfile` avec ce contenu :"
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:81
+msgid "create a file :file:`cmd.sh` with this content:"
+msgstr "créer un fichier :file:`cmd.sh` avec ce contenu :"
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:92
+msgid "build the image with:"
+msgstr "construire l'image avec:"
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:100
+msgid "First try"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:102
+msgid ""
+"To run the server you will need a QGis project file. You can use one of "
+"yours or pick `this sample <https://gitlab.com/Oslandia/qgis/docker-"
+"qgis/-/blob/cc1798074d4a66a472721352f3984bb318777a5a/qgis-"
+"exec/data/osm.qgs>`_."
+msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:105
+msgid ""
+"To do so, create a directory :file:`data` within the directory :file:`qgis-"
+"server` and copy your file in it. To comply with the following explanations,"
+" rename it to :file:`osm.qgs`."
+msgstr ""
+"Pour ce faire, créez un dossier :file:`data` dans le dossier :file:`qgis-"
+"server` et copiez votre fichier dedans. Pour respecter les explications "
+"suivantes, renommez-le en :file:`osm.qgs`."
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:109
+msgid "Now, you can run the server with:"
+msgstr "Maintenant, vous pouvez faire fonctionner le serveur avec :"
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:119
+msgid "Options used:"
+msgstr "Options utilisées :"
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:121
+msgid "**-d**: run in the background"
+msgstr "**-d** : exécuter en arrière-plan"
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:122
+msgid "**--rm**: remove the container when it is stopped"
+msgstr "**--rm** : supprimer le conteneur lorsqu'il est arrêté"
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:123
+msgid "**--name**: name of the container to be created"
+msgstr "**--name** : nom du conteneur à créer"
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:124
+msgid "**--net**: (previously created) sub network"
+msgstr "**--net** : (précédemment créé) nom du sous-réseau"
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:125
+msgid "**--hostname**: container hostname, for later referencing"
+msgstr "**--hostname** : nom d'hôte du conteneur, pour référence ultérieure"
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:126
+msgid "**-v**: local data directory to be mounted in the container"
+msgstr "**-v** : dossier de données locales à monter dans le conteneur"
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:127
+msgid "**-p**: host/container port mapping"
+msgstr "**-p** : mappage des ports hôtes/conteneurs"
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:128
+msgid "**-e**: environment variable to be used in the container"
+msgstr "**-e** : variable d'environnement à utiliser dans le conteneur"
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:131
+msgid ""
+"To check, type ``docker ps | grep qgis-server`` and you should see a line "
+"with **qgis-server**::"
+msgstr ""
+"Pour vérifier, tapez ``docker ps | grep qgis-server`` et vous devriez voir "
+"une ligne avec **qgis-server**: :"
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:139
+msgid "Usable sample"
+msgstr "Exemple fonctionnel"
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:141
+msgid ""
+"As the server is only accepting fastcgi connections, you have to have an "
+"HTTP server that handles this protocol. To do so we have to create a simple "
+"Nginx configuration file and start a Nginx image."
+msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:146
+msgid ""
+"Create a file :file:`nginx.conf` in the current directory with this content:"
+msgstr ""
+"Créez un fichier :file:`nginx.conf` dans le dossier courant avec ce contenu "
+":"
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:167
+msgid "And type this command:"
+msgstr "Et taper cette commande:"
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:175
+msgid ""
+"To check capabilities availability, type in a browser http://localhost:8080"
+"/qgis-server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities"
+msgstr ""
+"Pour vérifier la disponibilité des capacités du serveur, tapez dans l'url "
+"d'un navigateur http://localhost:8080/qgis-"
+"server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities"
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:179
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:275
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:498
+msgid "Cleanup"
+msgstr "Nettoyage"
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:181
+msgid "To cleanup the running images, type:"
+msgstr "Pour nettoyer les images en cours, tapez :"
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:190
+msgid "Docker stacks"
+msgstr "Docker stacks"
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:192
+msgid ""
+"The previous method is scriptable, but not easily packageable nor "
+"standardized or easily manageable."
+msgstr ""
+"La méthode précédente est scriptable, mais elle n'est ni facile à mettre en "
+"œuvre, ni standardisée, ni facilement gérable."
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:195
+msgid ""
+"To work with a docker image set you could use a docker stack managed by an "
+"orchestrator. In a stack, the images are working in the same private "
+"network, and you can start / stop the whole stack or deploy the stack to "
+"other workers. There are many orchestrators, for example Swarm, Kubernetes "
+"and Mesos."
+msgstr ""
+"Pour travailler avec un jeu d'images Docker, vous pourriez utiliser une "
+"stack Docker gérée par un orchestrateur. Dans une pile, les images "
+"fonctionnent dans le même réseau privé, et vous pouvez démarrer/arrêter "
+"toute la pile ou déployer la pile à d'autres workers. Il existe de nombreux "
+"orchestrateurs, par exemple Swarm, Kubernetes et Mesos."
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:202
+msgid ""
+"In the following, we will present simple configurations for testing "
+"purposes. They are not suitable for production."
+msgstr ""
+"Dans ce qui suit, nous présenterons des configurations simples à des fins de"
+" test. Elles ne sont pas adaptées à la production."
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:207
+msgid "Swarm/docker-compose"
+msgstr "Swarm/docker-compose"
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:209
+msgid ""
+"Docker now has its own orchestrator: Swarm (compatible with docker-compose "
+"files). You have to `enable it <https://docs.docker.com/get-"
+"started/orchestration/#enable-docker-swarm>`_ (the Mac version will also "
+"work with Linux)."
+msgstr ""
+"Docker a maintenant son propre orchestrateur : Swarm (compatible avec les "
+"fichiers docker-compose). Vous devez l'activer <https://docs.docker.com/get-"
+"started/orchestration/#enable-docker-swarm>`_ (la version Mac fonctionnera "
+"également avec des conteneurs Linux)."
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:217
+msgid "Stack description"
+msgstr "Description de la Stack"
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:219
+msgid ""
+"Now that you have Swarm working, create the service file (see `deploy swarm "
+"<https://docs.docker.com/get-started/swarm-deploy/>`_) :file:`qgis-"
+"stack.yaml`:"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:249
+msgid "To deploy (or update) the stack, type:"
+msgstr "Pour déployer (ou mettre à jour) la stack, tapez :"
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:255
+msgid ""
+"Check the stack deployment status until you obtain **1/1** in the "
+"**replicas** column:"
+msgstr ""
+"Vérifiez le statut de déploiement de la stack jusqu'à ce que vous obteniez "
+"**1/1** dans la colonne **replicas** :"
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:262
+msgid "Something like:"
+msgstr "Quelque chose comme :"
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:271
+msgid ""
+"To check WMS capabilities, type in a web browser http://localhost:8080/qgis-"
+"server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities"
+msgstr ""
+"Pour vérifier les capacités du serveur WMS, tapez dans un navigateur web "
+"http://localhost:8080/qgis-"
+"server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities"
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:277
+msgid "To cleanup, type:"
+msgstr "Pour nettoyer, tapez :"
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:284
+msgid "Kubernetes"
+msgstr "Kubernetes"
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:287
+msgid "Installation"
+msgstr "Installation"
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:289
+msgid ""
+"If you have a **Docker Desktop** installation, using Kubernetes (aka k8s) is"
+" pretty straight forward: `enable k8s <https://docs.docker.com/get-"
+"started/orchestration/#enable-Kubernetes>`_."
+msgstr ""
+"Si vous avez une installation **Docker Desktop**, l'utilisation de "
+"Kubernetes (alias k8s) est assez simple : `enable k8s "
+"<https://docs.docker.com/get-started/orchestration/#enable-Kubernetes>`_."
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:293
+msgid ""
+"If not, follow the `minikube tutorial <https://Kubernetes.io/docs/tutorials"
+"/hello-minikube/>`_ or `microk8s for Ubuntu "
+"<https://ubuntu.com/tutorials/install-a-local-Kubernetes-with-microk8s>`_."
+msgstr ""
+"Sinon, suivez le tutoriel `minikube <https://Kubernetes.io/docs/tutorials"
+"/hello-minikube/>`_ ou `microk8s pour Ubuntu "
+"<https://ubuntu.com/tutorials/install-a-local-Kubernetes-with-microk8s>`_."
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:298
+msgid ""
+"As Kubernetes installation can be really complex, we will only focus on "
+"aspects used by this demo. For further / deeper information, check the "
+"`official documentation <https://Kubernetes.io/docs/home/>`_."
+msgstr ""
+"Comme l'installation de Kubernetes peut être vraiment complexe, nous nous "
+"concentrerons uniquement sur les aspects utilisés dans cette démo. Pour de "
+"plus amples informations, consultez la documentation officielle "
+"<https://Kubernetes.io/docs/home/>`_."
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:304
+msgid "microk8s"
+msgstr "microk8s"
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:306
+msgid ""
+"microk8s needs extra steps: you have to enable the registry and tag the "
+"qgis-server image in order to have Kubernetes to find the created images."
+msgstr ""
+"microk8s nécessite des étapes supplémentaires : vous devez activer le "
+"registre et marquer l'image du serveur qgis afin que Kubernetes puisse "
+"trouver les images créées."
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:310
+msgid "First, enable the registry:"
+msgstr "Tout d'abord, activez le dépôt :"
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:316
+msgid "Then, tag and push the image to your newly created registry:"
+msgstr ""
+"Ensuite, vous devez étiqueter et pousser l'image vers votre dépôt "
+"nouvellement créé :"
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:322
+msgid ""
+"Finally, add or complete the :file:`/etc/docker/daemon.json` to have your "
+"registry **127.0.0.1:32000** listed in the **insecure-registries** field:"
+msgstr ""
+"Enfin, ajoutez ou complétez le fichier :file:`/etc/docker/daemon.json` pour "
+"que votre dépôt **127.0.0.1:32000** soit listé dans le champ **insecure-"
+"registries** :"
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:335
+msgid "Creating manifests"
+msgstr "Créer des manifests"
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:337
+msgid ""
+"Kubernetes describes the objects to deploy in yaml manifests. There are many"
+" different kinds, but we will only use deployments (handle pods, i.e. docker"
+" images) and services to expose the deployments to internal or external "
+"purposes."
+msgstr ""
+"Kubernetes décrit les objets à déployer dans les manifestes yaml. Il en "
+"existe de nombreux types différents, mais nous n'utiliserons que les "
+"déploiements (handle pods, c'est-à-dire les images de docker) et les "
+"services pour exposer les déploiements à des fins internes ou externes."
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:343
+msgid "Deployment manifests"
+msgstr "Déploiement des manifests"
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:345
+msgid "Create a file :file:`deployments.yaml` with this content:"
+msgstr "Créez un fichier :file:`deployments.yaml` avec ce contenu :"
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:417
+msgid "Service manifests"
+msgstr "Service manifests"
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:419
+msgid "Create a file :file:`services.yaml` with this content:"
+msgstr "Créez un fichier :file:`services.yaml` avec ce contenu :"
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:451
+msgid "Deploying manifests"
+msgstr "Déploiement des manifests"
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:453
+msgid ""
+"To deploy the images and services in Kubernetes, one can use the dashboard "
+"(click on the **+** on the upper right) or the command line."
+msgstr ""
+"Pour déployer les images et les services dans Kubernetes, on peut utiliser "
+"le tableau de bord (cliquez sur le **+** en haut à droite) ou la ligne de "
+"commande."
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:457
+msgid ""
+"When using the command line with microk8s you will have to prefix each "
+"command with `microk8s`."
+msgstr ""
+"Lorsque vous utilisez la ligne de commande avec microk8s, vous devez "
+"préfixer chaque commande par \"microk8s\"."
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:460
+msgid "To deploy or update your manifests:"
+msgstr "Pour déployer ou mettre à jour vos manifests :"
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:466
+msgid "To check what is currently deployed:"
+msgstr "Pour vérifier ce qui est actuellement déployé :"
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:472
+msgid "You should obtain something like::"
+msgstr "Vous devriez obtenir quelque chose comme: :"
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:488
+msgid "To read nginx/qgis logs, type:"
+msgstr "Pour lire les journaux nginx/qgis, tapez :"
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:494
+msgid ""
+"To check WMS capabilities, type in a web browser http://localhost:30080"
+"/qgis-server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities"
+msgstr ""
+"Pour vérifier les capacités du serveur WMS, tapez dans un navigateur web "
+"http://localhost:30080/qgis-"
+"server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities"
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:500
+msgid "To clean up, type:"
+msgstr "Pour nettoyer, tapez :"
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:507
+msgid "Cloud deployment"
+msgstr "Déploiement en Cloud"
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:509
+msgid ""
+"Managing your own cluster of servers to handle the deployment of "
+"containerized applications, is a complex job. You have to handle multiple "
+"issues, such as hardware, bandwidth and security at different levels."
+msgstr ""
+"La gestion de votre propre grappe de serveurs pour assurer le déploiement "
+"d'applications conteneurisées est une tâche complexe. Vous devez gérer de "
+"multiples questions, telles que le matériel, la bande passante et la "
+"sécurité à différents niveaux."
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:514
+msgid ""
+"Cloud deployment solutions can be a good alternative when you do not want to"
+" focus on infrastructure management."
+msgstr ""
+"Les solutions de déploiement dans le Cloud peuvent être une bonne "
+"alternative lorsque vous ne voulez pas vous concentrer sur la gestion de "
+"l'infrastructure."
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:517
+msgid ""
+"A cloud deployment may use proprietary mechanisms, but they are also "
+"compatible with the stages explained previously (:ref:`docker images "
+"<simple-docker-images>` and :ref:`stack management <docker-stacks>`)."
+msgstr ""
+"Un déploiement dans le Cloud peut utiliser des mécanismes propriétaires, "
+"mais ils sont également compatibles avec les étapes expliquées précédemment "
+"(:ref:`docker images <simple-docker-images>` and :ref:`stack management "
+"<docker-stacks>`)."
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:523
+msgid "AWS usecase"
+msgstr "Cas d'utilisation avec AWS"
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:525
+msgid ""
+"With Amazon AWS, through `ECS (Elastic Container Service) "
+"<https://console.aws.amazon.com/ecs/home>`_ functionalities, you can use "
+"docker-compose or Kubernetes compatible wrappers to manage your stack. You "
+"will have to create an `image registry "
+"<https://console.aws.amazon.com/ecr/home>`_ for your custom images to be "
+"accessible."
+msgstr ""
+"Avec Amazon AWS, grâce aux fonctionnalités de l'ECS (Elastic Container "
+"Service) <https://console.aws.amazon.com/ecs/home>`_, vous pouvez utiliser "
+"docker-compose ou Kubernetes pour gérer votre stack. Vous devrez créer un "
+"`registre d'images <https://console.aws.amazon.com/ecr/home>`_ pour que vos "
+"images personnalisées soient accessibles."
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:533
+msgid ""
+"To use docker-compose alike functionalities, you need to install the **ecs-"
+"cli** client and have `proper permissions / roles "
+"<https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_execution_IAM_role.html>`_."
+" Then, with the help of the `ecs-cli compose` commands (see the `ecs-cli "
+"compose manual <https://docs.aws.amazon.com/AmazonECS/latest/developerguide"
+"/cmd-ecs-cli-compose.html>`_ and `ecs-cli tutorial "
+"<https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-cli-"
+"tutorial-fargate.html>`_), you can reuse the :ref:`stack description "
+"<docker-compose-file>`."
+msgstr ""
+"Pour utiliser les mêmes fonctionnalités que docker-compose, vous devez "
+"installer le client **ecs-cli** et avoir les `permissions / rôles "
+"<https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_execution_IAM_role.html>`_."
+" Ensuite, à l'aide des commandes `ecs-cli compose` (voir le manuel `ecs-cli "
+"compose` <https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-"
+"ecs-cli-compose.html>`_ et le tutoriel `ecs-cli "
+"<https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-cli-"
+"tutorial-fargate.html>`_), vous pouvez réutiliser la description de "
+":ref:`stack <docker-compose-file>`."
+
+#: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:543
+msgid ""
+"To use Kubernetes, you can use the AWS web console or the command line tool "
+"`eksctl <https://docs.aws.amazon.com/eks/latest/userguide/getting-"
+"started.html>`_ and have the proper permissions / roles. Then with a well "
+"configured kubectl environment, you can reuse the :ref:`Kubernetes manifests"
+" <k8s-manifests>`."
+msgstr ""
+"Pour utiliser Kubernetes, vous pouvez utiliser la console web AWS ou l'outil"
+" en ligne de commande `eksctl "
+"<https://docs.aws.amazon.com/eks/latest/userguide/getting-started.html>`_ et"
+" avoir les permissions / rôles appropriés. Ensuite, avec un environnement "
+"kubectl bien configuré, vous pouvez réutiliser les :ref:`Kubernetes "
+"manifests <k8s-manifests>`."

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-26 13:13+0200\n"
+"POT-Creation-Date: 2020-09-24 11:25+0200\n"
 "PO-Revision-Date: 2020-03-16 19:26+0000\n"
 "Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2020\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
@@ -71,11 +71,27 @@ msgstr ""
 "HTTP 서버 및 사용자가 QGIS 서버를 어떻게 실행하느냐에 따라, 이런 변수들을 여러 방법으로 정의할 수 있습니다. "
 ":ref:`httpserver` 에서 그 방법들을 자세히 설명하고 있습니다."
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:48
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:51
+msgid "Name"
+msgstr "명칭"
+
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:52
+msgid "Description"
+msgstr "설명"
+
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:53
+msgid "Default"
+msgstr "기본값"
+
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:54
+msgid "Services"
+msgstr "서비스"
+
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:56
 msgid "QGIS_OPTIONS_PATH"
 msgstr "QGIS_OPTIONS_PATH"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:50
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:57
 msgid ""
 "Specifies the path to the directory with settings. It works the same way as "
 "QGIS application ``--optionspath`` option. It is looking for settings file "
@@ -84,11 +100,36 @@ msgstr ""
 "설정 파일이 있는 디렉터리를 가리키는 경로를 지정합니다. QGIS 응용 프로그램의 ``--optionspath`` 옵션과 동일하게 "
 "작동합니다. ``<QGIS_OPTIONS_PATH>/QGIS/QGIS3.ini`` 에 있는 설정 파일을 찾을 것입니다."
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:56
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:60
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:79
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:89
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:99
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:119
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:160
+msgid "''"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:61
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:80
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:90
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:100
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:109
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:114
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:120
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:129
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:144
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:149
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:154
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:161
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:180
+msgid "All"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:63
 msgid "QUERY_STRING"
 msgstr "QUERY_STRING"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:58
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:64
 msgid ""
 "The query string, normally passed by the web server. This variable can be "
 "useful while testing QGIS server binary from the command line."
@@ -96,7 +137,7 @@ msgstr ""
 "일반적으로 웹 서버가 전송하는 쿼리 문자열을 정의합니다. 이 환경 변수는 명령 줄 인터페이스에서 QGIS 서버 파일을 검증하는 데 "
 "유용합니다."
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:61
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:67
 msgid ""
 "For example for testing a GetCapabilities request on the command line to a "
 "project that also requires a PostgreSQL connection defined in a "
@@ -105,18 +146,18 @@ msgstr ""
 "예를 들어 다음은 :file:`pg_service.conf` 파일에 정의된 PostgreSQL 연결도 필요로 하는 프로젝트에 명령 줄 "
 "인터페이스에서 ``GetCapabilities`` 요청을 검증하는 예입니다:"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:69
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:77
 msgid ""
 "The result should be either the content of the GetCapabilities response or, "
 "if something is wrong, an error message."
 msgstr ""
 "이 요청에 대한 결과는 ``GetCapabilities`` 응답의 내용이거나, 또는 무언가 오류가 발생한 경우 오류 메시지여야 합니다."
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:73
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:82
 msgid "QGIS_PROJECT_FILE"
 msgstr "QGIS_PROJECT_FILE"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:75
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:83
 msgid ""
 "The ``.qgs`` or ``.qgz`` project file, normally passed as a parameter in the"
 " query string (with *MAP*), you can also set it as an environment variable "
@@ -125,7 +166,7 @@ msgstr ""
 "일반적으로 (*MAP* 을 보유한) 쿼리 문자열 내에서 파라미터로 전송되는 ``.qgs`` 또는 ``.qgz`` 프로젝트 파일을 (예를 "
 "들어 ``mod_rewrite`` 아파치 모듈을 사용해서) 환경 변수로 설정할 수도 있습니다."
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:79
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:87
 msgid ""
 "Note that you may also indicate a project stored in PostgreSQL, e.g. "
 "``postgresql://localhost:5432?sslmode=disable&dbname=mydb&schema=myschema&project=myproject``."
@@ -134,11 +175,11 @@ msgstr ""
 "``postgresql://localhost:5432?sslmode=disable&dbname=mydb&schema=myschema&project=myproject``"
 " 와 같이 지정해야 할 수도 있다는 사실을 기억하십시오."
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:84
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:92
 msgid "QGIS_SERVER_LOG_FILE"
 msgstr "QGIS_SERVER_LOG_FILE"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:86
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:93
 msgid ""
 "Specify path and filename. Make sure that server has proper permissions for "
 "writing to file. File should be created automatically, just send some "
@@ -147,7 +188,7 @@ msgstr ""
 "경로 및 파일명을 지정합니다. 서버가 파일을 작성하기 위한 적절한 권한을 가지고 있는지 확인하십시오. 서버에 요청을 보내기만 하면 파일을"
 " 자동적으로 생성할 것입니다. 파일이 생성되지 않을 경우, 권한을 확인해보십시오."
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:90
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:97
 msgid ""
 "QGIS_SERVER_LOG_FILE is deprecated since QGIS 3.4. File logging support will"
 " be removed in QGIS 4.0."
@@ -155,49 +196,48 @@ msgstr ""
 "QGIS_SERVER_LOG_FILE 환경 변수는 QGIS 3.4 버전부터 사용하지 않게 되었습니다. 파일 로그 작업은 QGIS 4.0 "
 "버전에서 지원하지 않게 될 것입니다."
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:94
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:102
 msgid "QGIS_SERVER_LOG_STDERR"
 msgstr "QGIS_SERVER_LOG_STDERR"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:96
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:103
 msgid ""
-"Activate logging to stderr. It's disabled by default. This variable has no "
-"effect when ``QGIS_SERVER_LOG_FILE`` is set."
+"Activate logging to stderr. This variable  has no effect when "
+"``QGIS_SERVER_LOG_FILE`` is set."
 msgstr ""
-"'stderr' 로의 로그 작업을 활성화합니다. 기본적으로 비활성화 상태입니다. ``QGIS_SERVER_LOG_FILE`` 을 설정한 "
-"경우 이 환경 변수는 아무 영향도 주지 못 합니다."
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:99
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:137
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:175
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:106
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:135
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:167
 msgid "``0`` or ``false`` (case insensitive)"
 msgstr "``0`` 또는 ``false`` (대소문자 구분 안 함)"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:100
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:138
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:176
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:107
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:136
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:168
 msgid "``1`` or ``true`` (case insensitive)"
 msgstr "``1`` 또는 ``true`` (대소문자 구분 안 함)"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:103
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:108
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:137
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:169
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:179
+msgid "false"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:111
 msgid "MAX_CACHE_LAYERS"
 msgstr "MAX_CACHE_LAYERS"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:105
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:112
 msgid "Specify the maximum number of cached layers (default: ``100``)."
 msgstr "캐시되는 레이어의 최대 개수를 지정합니다. (기본값은 ``100`` 입니다.)"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:109
-msgid "DISPLAY"
-msgstr "DISPLAY"
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:113
+msgid "100"
+msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:111
-msgid ""
-"This is used to pass (fake) X server display number (needed on Unix-like "
-"systems)."
-msgstr "이 환경 변수는 (가짜) X 서버 디스플레이 번호를 전송하는 데 사용됩니다. (유닉스 호환 시스템 상에서 필요합니다.)"
-
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:115
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:116
 msgid "QGIS_PLUGINPATH"
 msgstr "QGIS_PLUGINPATH"
 
@@ -212,29 +252,33 @@ msgstr ""
 msgid "QGIS_SERVER_LOG_LEVEL"
 msgstr "QGIS_SERVER_LOG_LEVEL"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:124
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:123
 msgid "Specify desired log level. Available values are:"
 msgstr "원하는 로그 수준을 지정합니다. 다음 수준 가운데 하나를 선택할 수 있습니다:"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:126
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:125
 msgid "``0`` or ``INFO`` (log all requests)"
 msgstr "``0`` 또는 ``INFO``: 모든 요청을 로그에 기록합니다."
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:127
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:126
 msgid "``1`` or ``WARNING``"
 msgstr "``1`` 또는 ``WARNING``"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:128
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:127
 msgid ""
 "``2`` or ``CRITICAL`` (log just critical errors, suitable for production "
 "purposes)"
 msgstr "``2`` 또는 ``CRITICAL``:  치명적인 오류만 로그에 기록합니다. 제품 목적으로 적합합니다."
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:132
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:128
+msgid "0"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:131
 msgid "QGIS_SERVER_PARALLEL_RENDERING"
 msgstr "QGIS_SERVER_PARALLEL_RENDERING"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:134
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:132
 msgid ""
 "Activates parallel rendering for WMS GetMap requests. It's disabled "
 "(``false``) by default. Available values are:"
@@ -242,56 +286,70 @@ msgstr ""
 "WMS GetMap 요청에 대해 병렬 렌더링을 활성화합니다. 기본적으로 비활성화(``false``) 상태입니다. 다음 값을 사용할 수 "
 "있습니다:"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:142
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:138
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:170
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:186
+msgid "WMS"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:140
 msgid "QGIS_SERVER_MAX_THREADS"
 msgstr "QGIS_SERVER_MAX_THREADS"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:144
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:141
 msgid ""
-"Number of threads to use when parallel rendering is activated. Default value"
-" is ``-1`` to use the number of processor cores."
+"Number of threads to use when parallel rendering is activated. If value is "
+"``-1`` it uses the number of processor cores."
 msgstr ""
-"병렬 렌더링을 활성화한 경우 사용할 스레드의 개수를 지정합니다. 기본값은 ``-1`` 입니다. 사용할 프로세서 코어의 개수를 "
-"지정하십시오."
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:149
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:143
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:185
+msgid "-1"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:146
 msgid "QGIS_SERVER_CACHE_DIRECTORY"
 msgstr "QGIS_SERVER_CACHE_DIRECTORY"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:151
-msgid ""
-"Specifies the network cache directory on the filesystem. The default "
-"directory is named ``cache`` and located in the profile directory."
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:147
+msgid "Specifies the network cache directory on the filesystem."
 msgstr ""
-"파일 시스템 상에 네트워크 캐시 디렉터리를 지정합니다. 기본 디렉터리의 명칭은 ``cache`` 이며 프로파일 디렉터리 안에 있습니다."
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:156
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:148
+msgid "``cache`` in profile directory"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:151
 msgid "QGIS_SERVER_CACHE_SIZE"
 msgstr "QGIS_SERVER_CACHE_SIZE"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:158
-msgid "Sets the network cache size in MB. The default value is ``50`` MB."
-msgstr "네트워크 캐시의 용량을 MB 단위로 설정합니다. 기본값은 ``50`` MB입니다."
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:152
+msgid "Sets the network cache size in MB."
+msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:162
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:153
+msgid "50 MB"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:156
 msgid "QGIS_SERVER_OVERRIDE_SYSTEM_LOCALE"
 msgstr "QGIS_SERVER_OVERRIDE_SYSTEM_LOCALE"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:164
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:157
 msgid ""
 "Sets LOCALE to be used by QGIS server. The default value is empty (no "
 "override)."
 msgstr "QGIS 서버가 사용할 LOCALE을 설정합니다. 기본값은 비어 있습니다(무시하지 않습니다)."
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:166
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:159
 msgid "Example: ``de_CH.utf8``"
 msgstr "예시: ``de_CH.utf8``"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:170
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:163
 msgid "QGIS_SERVER_SHOW_GROUP_SEPARATOR"
 msgstr "QGIS_SERVER_SHOW_GROUP_SEPARATOR"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:172
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:164
 msgid ""
 "Defines whether a group separator (e.g. thousand separator) should be used "
 "for numeric values (e.g. in GetFeatureInfo responses). The default value is "
@@ -300,11 +358,11 @@ msgstr ""
 "숫자 값에 대해 (예를 들어 ``GetFeatureInfo`` 응답에서) 그룹 구분자(예: 천 단위 구분자)를 사용해야 할지 여부를 "
 "정의합니다. 기본값은 ``0`` 입니다."
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:180
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:172
 msgid "QGIS_SERVER_IGNORE_BAD_LAYERS"
 msgstr "QGIS_SERVER_IGNORE_BAD_LAYERS"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:182
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:173
 msgid ""
 "\"Bad\" layers are layers that cannot be loaded. The default behavior of "
 "QGIS Server is to consider the project as not available if it contains a bad"
@@ -313,7 +371,7 @@ msgstr ""
 "\"불량(bad)\" 레이어란 불러올 수 없는 레이어입니다. 프로젝트가 불량 레이어를 담고 있는 경우 해당 프로젝트를 사용할 수 없다고 "
 "인식하는 것이 QGIS 서버의 기본 습성입니다."
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:185
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:176
 msgid ""
 "The default behavior can be overridden by setting this variable to ``1`` or "
 "``true``. In this case, \"bad\" layers will just be ignored, and the project"
@@ -322,11 +380,53 @@ msgstr ""
 "이 환경 변수를 ``1`` 또는 ``true`` 로 설정하면 이런 기본 습성을 무시할 수 있습니다. 이렇게 설정하면 \"불량\" 레이어를"
 " 그냥 무시해버리고, 프로젝트를 유효하고 사용 가능한 것으로 인식할 것입니다."
 
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:182
+msgid "QGIS_SERVER_WMS_MAX_HEIGHT / QGIS_SERVER_WMS_MAX_WIDTH"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:183
+msgid ""
+"Maximum height/width for a WMS request. The most conservative between this "
+"and the project one is used. If the value is ``-1``, it means that there is "
+"no maximum set."
+msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:188
+msgid "QGIS_SERVER_API_RESOURCES_DIRECTORY"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:189
+msgid ""
+"Base directory for all OGC API (such as OAPIF/WFS3) static resources (HTML "
+"templates, CSS, JS, ...)"
+msgstr ""
+
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:191
+msgid "depends on packaging"
+msgstr "패키지에 따라 다름"
+
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:192
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:197
+msgid "WFS"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:194
+msgid "QGIS_SERVER_API_WFS3_MAX_LIMIT"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:195
+msgid "Maximum value for ``limit`` in a features request."
+msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:196
+msgid "10000"
+msgstr "10000"
+
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:203
 msgid "Settings summary"
 msgstr "설정 요약"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:193
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:205
 msgid ""
 "When QGIS Server is starting, you have a summary of all configurable "
 "parameters thanks to environment variables. Moreover, the value currently "
@@ -335,11 +435,11 @@ msgstr ""
 "QGIS 서버 실행 시, 환경 설정할 수 있는 모든 파라미터의 요약을 환경 변수 덕분에 볼 수 있습니다. 게다가, 현재 사용되는 값과 그"
 " 기원까지 표시됩니다."
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:197
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:209
 msgid "For example with spawn-fcgi:"
 msgstr "예를 들어 'spawn-fcgi' 의 경우:"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:228
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:240
 msgid ""
 "In this particular case, we know that **QGIS_SERVER_MAX_THREADS** and "
 "**QGIS_SERVER_PARALLEL_RENDERING** values are read from the ini file found "
@@ -353,11 +453,11 @@ msgstr ""
 "읽어왔다는 사실을 알 수 있습니다. :file:`.ini` 파일의 대응 항목들은 **/qgis/max_threads** 및 "
 "**/qgis/parallel_rendering** 이며 그 값은 각각 **true** 와 스레드 **4** 개입니다."
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:236
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:248
 msgid "Short name for layers, groups and project"
 msgstr "레이어, 그룹 및 프로젝트를 위한 약칭"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:238
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:250
 msgid ""
 "A number of elements have both a ``<Name>`` and a ``<Title>``. The **Name** "
 "is a text string used for machine-to-machine communication while the "
@@ -366,17 +466,14 @@ msgstr ""
 "많은 요소가 ``<Name>`` 과 ``<Title>`` 을 보유하고 있습니다. **Name** 은 사물통신에 쓰이는 텍스트 문자열인 "
 "반면 **Title** 은 사람이 읽고 이해하기 위한 문자열입니다."
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:242
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:254
 msgid ""
 "For example, a dataset might have the descriptive Title “Maximum Atmospheric"
-" Temperature” and be requested using the abbreviated Name “ATMAX”. User can "
-"already set title for layers, groups and project."
+" Temperature” and be requested using the abbreviated **Name** “ATMAX”. User "
+"can already set title for layers, groups and project."
 msgstr ""
-"예를 들어, 어느 데이터셋이 \"최대 기온(Maximum Atmospheric Temperature)\"이란 서술적 제목을 보유한 동시에"
-" 약칭 \"ATMAX\"를 사용한 요청을 받을 수도 있습니다. 사용자는 이미 레이어, 그룹 및 프로젝트를 위한 제목을 설정할 수 "
-"있습니다."
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:246
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:258
 msgid ""
 "OWS name is based on the name used in layer tree. This name is more a label "
 "for humans than a name for machine-to-machine communication."
@@ -384,11 +481,11 @@ msgstr ""
 "OWS 명칭은 레이어 트리에서 사용되는 명칭을 기반으로 합니다. 이 명칭은 사물통신을 위한 명칭이라기보다는 사람을 위한 라벨에 더 "
 "가깝습니다."
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:249
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:261
 msgid "QGIS Server supports:"
 msgstr "QGIS 서버는 다음을 지원하고 있습니다:"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:251
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:263
 msgid ""
 "short name line edits to layers properties You can change this by right "
 "clicking on a layer, choose :menuselection:`Properties --> Metadata tab --> "
@@ -397,22 +494,22 @@ msgstr ""
 "레이어 속성에서 약칭을 편집할 수 있습니다. 레이어를 오른쪽 클릭한 다음 :menuselection:`Properties --> "
 "Metadata tab --> Description --> Short name` 을 선택하면 변경할 수 있습니다."
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:255
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:267
 msgid "WMS data dialog to layer tree group (short name, title, abstract)"
 msgstr "레이어 트리 그룹의 WMS 데이터 대화창 (약칭, 제목, 요약)"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:257
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:269
 msgid ""
 "By right clicking on a layer group and selecting the :guilabel:`Set Group "
 "WMS data` option you will get:"
 msgstr ""
 "레이어 그룹을 오른쪽 클릭한 다음 :guilabel:`Set Group WMS data` 메뉴 옵션을 선택하면 다음 대화창이 열립니다:"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:264
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:276
 msgid "Set group WMS data dialog"
 msgstr "그룹 WMS 데이터 대화창 설정하기"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:266
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:278
 msgid ""
 "short name line edits to project properties - add a regexp validator "
 "``\"^[A-Za-z][A-Za-z0-9\\._-]*\"`` to short name line edit accessible "
@@ -421,7 +518,7 @@ msgstr ""
 "프로젝트 속성에서 약칭을 편집할 수 있습니다. 정적 방식(static method)으로 접근할 수 있는 약칭 편집 란에 정규 표현식 "
 "유효성 검사 문자(validator) ``\"^[A-Za-z][A-Za-z0-9\\._-]*\"`` 를 추가하십시오."
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:269
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:281
 msgid ""
 "add a regexp validator ``\"^[A-Za-z][A-Za-z0-9\\._-]*\"`` to short name line"
 " edit accessible through a static method"
@@ -429,7 +526,7 @@ msgstr ""
 "정적 방식(static method)으로 접근할 수 있는 약칭 편집 란에 정규 표현식 유효성 검사 문자(validator) "
 "``\"^[A-Za-z][A-Za-z0-9\\._-]*\"`` 를 추가하십시오."
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:272
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:284
 msgid ""
 "You can choose a short name for the project root by going to "
 ":menuselection:`Project properties --> OWS Server --> Service capabilities "
@@ -438,21 +535,21 @@ msgstr ""
 ":menuselection:`Project properties --> OWS Server --> Service capabilities "
 "--> Short name` 메뉴 옵션을 선택하면 프로젝트 루트를 위한 약칭을 선택할 수 있습니다."
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:275
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:287
 msgid "add a ``TreeName`` element in the ``fullProjectSettings``"
 msgstr "``fullProjectSettings`` 에 ``TreeName`` 항목을 추가할 수 있습니다."
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:277
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:289
 msgid ""
 "If a short name has been set for layers, groups or project it is used by "
 "QGIS Sever as the layer name."
 msgstr "레이어, 그룹 또는 프로젝트를 위한 약칭을 설정했다면, QGIS 서버가 해당 약칭을 레이어명으로 사용할 것입니다."
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:281
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:293
 msgid "Connection to service file"
 msgstr "서비스 파일에 연결"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:283
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:295
 msgid ""
 "In order to make apache aware of the PostgreSQL service file (see the :ref"
 ":`pg-service-file` section) you need to make your :file:`*.conf` file look "
@@ -461,11 +558,11 @@ msgstr ""
 "Apache가 PostgreSQL 서비스 파일(:ref:`pg-service-file` 참조)을 인지하도록 하려면, 사용자의 "
 ":file:`*.conf` 파일을 다음과 같이 추가해야 합니다:"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:299
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:311
 msgid "Add fonts to your linux server"
 msgstr "사용자 리눅스 서버에 글꼴 추가"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:301
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:313
 msgid ""
 "Keep in mind that you may use QGIS projects that point to fonts that may not"
 " exist by default on other machines. This means that if you share the "
@@ -475,7 +572,7 @@ msgstr ""
 "사용자의 QGIS 프로젝트가 가리키는 글꼴이 다른 시스템 상에는 기본적으로 존재하지 않을 수도 있다는 사실을 기억하고 있어야 합니다. 즉"
 " 프로젝트를 공유하는 경우, (대상 컴퓨터에 해당 글꼴이 없다면) 다른 컴퓨터에서는 다르게 보일 수도 있다는 뜻입니다."
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:305
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:317
 msgid ""
 "In order to ensure this does not happen you just need to install the missing"
 " fonts on the target machine. Doing this on desktop systems is usually "
@@ -484,17 +581,17 @@ msgstr ""
 "이런 일이 일어나지 않도록 보장하려면, 대상 컴퓨터에 빠진 글꼴을 설치하기만 하면 됩니다. 데스크탑 시스템인 경우 보통 이 작업은 어렵지"
 " 않습니다. (글꼴 파일을 더블클릭하면 됩니다.)"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:308
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:320
 msgid ""
 "For linux, if you don't have a desktop environment installed (or you prefer "
 "the command line) you need to:"
 msgstr ""
 "리눅스의 경우, 데스크탑 환경이 설치되지 않았다면 (또는 사용자가 명령 줄 인터페이스를 선호한다면) 다음 명령어를 실행하면 됩니다:"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:310
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:322
 msgid "On Debian based systems:"
 msgstr "데비안 기반 시스템인 경우:"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:323
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:335
 msgid "On Fedora based systems:"
 msgstr "페도라 기반 시스템인 경우:"

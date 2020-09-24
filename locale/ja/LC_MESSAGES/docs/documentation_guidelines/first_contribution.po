@@ -5,15 +5,16 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# mnamihdk, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-26 13:13+0200\n"
+"POT-Creation-Date: 2020-09-24 11:25+0200\n"
 "PO-Revision-Date: 2020-03-16 19:16+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: mnamihdk, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -39,6 +40,9 @@ msgid ""
 "the different ways to achieve this objective, showing you the main steps to "
 "follow, the tricks you can use and the traps you should be aware of."
 msgstr ""
+"この文章を読まれているということは、きっとあなたはQGISドキュメンテーションに貢献しようという気持ちがあって、その方法を探されているのだと思います。 "
+"はい、まさしくここはそのための場所です！　"
+"現在この文書では、目的を達成するための複数の方法を一通り案内し、従うべき主な手順を示し、使用可能な小技と知っておくべき落とし穴を教えています。"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:20
 msgid ""
@@ -48,10 +52,14 @@ msgid ""
 "details at `Get involved in documentation "
 "<https://qgis.org/en/site/getinvolved/document.html>`_."
 msgstr ""
+"何か助けが必要なときには迷わず、修正しようとしているIssueレポートのコメントに書き込むか、 `QGISコミュニティチーム・メーリングリスト "
+"<https://lists.osgeo.org/mailman/listinfo/qgis-community-team>`_ "
+"に投稿をしてください。より詳しくは `ドキュメントを書く "
+"<https://qgis.org/ja/site/getinvolved/document.html>`_ をご覧ください。"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:25
 msgid "Let's now dive into the process."
-msgstr ""
+msgstr "さあ、では集中して始めてみましょう。"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:27
 msgid ""
@@ -59,6 +67,9 @@ msgid ""
 "are available on GitHub at https://github.com/qgis/QGIS-Documentation. There"
 " are two main ways, not mutually exclusive, to modify the files:"
 msgstr ""
+"ドキュメントのソースはGitバージョンコントロールシステムを使用して保存されいて、GitHub https://github.com/qgis"
+"/QGIS-Documentation "
+"で利用することができます。ファイルに変更を加えるには主に2つの方法がありますが、これらは互いに排他的なわけではありません。"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:31
 msgid ":ref:`Using the GitHub web interface <github_interface>`"
@@ -100,10 +111,13 @@ msgid ""
 "world/>`_ project to learn some basic vocabulary and actions that will be "
 "used below."
 msgstr ""
+"gitやGitHubで使われる言葉にまだ馴染みがない場合は、GitHubの `Hello-world "
+"<https://guides.github.com/activities/hello-world/>`_ "
+"プロジェクトを読んで、以下でも使われる基本的な語彙と操作について学んだ方がいいでしょう。"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:50
 msgid "**If you are fixing a reported issue**"
-msgstr ""
+msgstr "**報告されたIssueをあなたが修正中なら**"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:52
 msgid ""
@@ -112,20 +126,20 @@ msgid ""
 "yourself. This will prevent more than one person from working on the same "
 "issue."
 msgstr ""
-"あなたが `問題 <https://github.com/qgis/QGIS- Documentation / issues>`_ "
-"を修正するために変更を加えているなら、それをあなた自身に割り当てるためにissueレポートにコメントを加えてください。これにより、複数の人が同じ問題に取り組むことを防ぐことができます。"
+"もしあなたが `issue <https://github.com/qgis/QGIS- Documentation / issues>`_ "
+"を修正するための変更を加えている最中なら、issueレポートにコメントをして、それをあなた自身に割り当ててください。これにより、複数の人が同じissueに取り組むことを防ぐことができます。"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:58
 msgid "1. Fork QGIS-Documentation"
-msgstr ""
+msgstr "1. QGIS-Documentationをフォークする"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:60
 msgid ""
 "Assuming you already have a `GitHub account <https://github.com/join>`_, you"
 " first need to fork the source files of the documentation."
 msgstr ""
-"あなたが既に `GitHubアカウント <https://github.com/join>`_ "
-"を持っていると仮定すると、まずドキュメントのソースファイルをフォークする必要があります。"
+"あなたは既に `GitHubアカウント <https://github.com/join>`_ "
+"を持っていると仮定します。まず最初にするべきは、ドキュメントのソースファイルをフォークすることです。"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:63
 msgid ""
@@ -144,13 +158,13 @@ msgid ""
 "write access and you can make changes without affecting the official "
 "documentation."
 msgstr ""
-"ご自身のGitHubアカウントにQGIS-Documentationリポジトリ（ ``https://github.com/<YourName"
-">/QGIS-Documentation`` ）があるでしょう。このリポジトリは公式のQGIS-"
-"Documentationリポジトリのコピーですが、完全な書込権限が与えられていて、公式のドキュメントに影響を与えることなく変更を加えることができます。"
+"ご自身のGitHubアカウントに、QGIS-Documentationリポジトリ ( ``https://github.com/<YourName"
+">/QGIS-Documentation`` ) が作られていると思います。このリポジトリは公式のQGIS-"
+"Documentationリポジトリのコピーですが、あなたに完全な書込権限が与えられていて、公式のドキュメントに影響を与えることなく変更を加えることができます。"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:74
 msgid "2. Make changes"
-msgstr ""
+msgstr "2. 変更を行う"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:76
 msgid ""
@@ -158,11 +172,11 @@ msgid ""
 "separately below, but you can switch from one process to the other without "
 "any harm."
 msgstr ""
-"QGISドキュメンテーションに貢献するにはさまざまな方法があります。以下に別々に示しますが、害を及ぼすことなく、あるプロセスから別のプロセスに切り替えることができます。"
+"QGISドキュメンテーションに貢献するにはいくつかの異なった方法があります。以下ではそれらを別々に示しますが、あるプロセスから別のプロセスに切り替えることに何ら問題はありません。"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:81
 msgid "Alternative 1: Use the ``Edit on GitHub`` shortcut"
-msgstr ""
+msgstr "選択肢 1： ``Edit on GitHub`` ショートカットを使用する"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:83
 msgid ""
@@ -185,6 +199,9 @@ msgid ""
 "reStructureText syntax, depending on your changes, you may need to rely on "
 "the :ref:`writing guidelines <QGIS-documentation-guidelines>`."
 msgstr ""
+"あなたの変更を行ってください。ドキュメントはreStructureTextシンタックスを使用して書かれていますので、変更の内容によっては、 "
+":ref:`writing guidelines <QGIS-documentation-guidelines>` "
+"を参照しながら行う必要があるかもしれません。"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:94
 msgid ""
@@ -193,7 +210,7 @@ msgid ""
 "<https://help.github.com/articles/about-branches/>`_ (``patch-xxx``) in your"
 " repository."
 msgstr ""
-"終了したら、あなたの変更について短いコメントを書いて :guilabel:`ファイル変更を提案` "
+"終了したら、あなたの変更について短いコメントを書いて :guilabel:`Propose file change` "
 "をクリックしてください。これはあなたのリポジトリに新しい `ブランチ <https://help.github.com/articles/about-"
 "branches/>`_ （ ``patch-xxx`` ）を作成します。"
 
@@ -201,7 +218,9 @@ msgstr ""
 msgid ""
 "After you click on :guilabel:`Propose file change` github will navigate to "
 "the :guilabel:`Comparing changes` page."
-msgstr ":guilabel:`ファイルの変更を提案` をクリックした後、githubは :guilabel:`変更の比較` ページに移動します。"
+msgstr ""
+":guilabel:`Propose file change` をクリックすると、GitHubは :guilabel:`Comparing "
+"changes` ページに移動します。"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:101
 msgid ""
@@ -223,6 +242,8 @@ msgid ""
 "Navigate to your fork of QGIS-Documentation (``https://github.com/<YourName"
 ">/QGIS-Documentation``)"
 msgstr ""
+"フォークしたあなたのQGIS-Documentation (``https://github.com/<YourName>/QGIS-"
+"Documentation``) リポジトリに移動してください。"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:107
 msgid ""
@@ -235,18 +256,18 @@ msgstr ""
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:110
 msgid "Jump down to :ref:`Modify files <modify_files>` below."
-msgstr ""
+msgstr "下の :ref:`Modify files <modify_files>` に従ってください。"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:112
 msgid ""
 "The ``Edit on GitHub`` shortcut is also available in the drop-down menu at "
 "the bottom of the left sidebar."
-msgstr ""
+msgstr "``Edit on GitHub`` ショートカットは左サイドバーの一番下のドロップダウンメニューからも利用することができます。"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:116
 msgid ""
 "Alternative 2: Create an ad hoc branch in your documentation repository"
-msgstr "代替案2：ドキュメンテーションレポジトリにアドホックブランチを作成する"
+msgstr "選択肢 2：あなたのドキュメンテーションレポジトリに一時的な専用ブランチを作成する"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:118
 msgid "You can edit files directly from your fork of the QGIS Documentation."
@@ -262,13 +283,13 @@ msgid ""
 msgstr ""
 "フォークしたQGISドキュメントリポジトリの左上隅にある |githubBranch| をクリックして、テキストフィールドに一意の名前を入力して新しい "
 "`ブランチ <https://help.github.com/articles/about-branches/>`_ "
-"を作成してください。新しいブランチの名前は、修正しようとしている問題に関連しているはずです。すると |githubBranch| ボタンはnow say"
-" :guilabel:`Branch: branch_name` となるはずです。"
+"を作成してください。新しいブランチの名前は、修正しようとしている問題に関連していなければなりません。すると |githubBranch| ボタンは "
+":guilabel:`Branch: branch_name` となるはずです。"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:126
 msgid ""
 "**Do your changes in an ad hoc branch, never in the** ``master`` **branch**"
-msgstr ""
+msgstr "**変更はこの一時的な専用ブランチで行うこと。絶対に** ``master`` **ブランチでは行わないこと**"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:128
 msgid ""
@@ -280,25 +301,26 @@ msgid ""
 "always delete a branch and start over by creating a new one from the master "
 "branch."
 msgstr ""
-"慣習的に、 ``qgis/QGIS-Documentation`` の ``master`` ブランチからQGIS-"
-"Documentationリポジトリのコピーに変更をマージする場合を除いて、 ``master`` "
-"ブランチを変更しないでください。別々のブランチを使用すると、他のブランチに干渉することなく、同時に複数の問題に取り組むことができます。間違えた場合は、いつでもブランチを削除してから、マスターブランチから新しいブランチを作成することからやり直すことができます。"
+"``qgis/QGIS-Documentation`` の ``master`` ブランチからあなたのQGIS-"
+"Documentationリポジトリに変更をマージする場合を除いて、 慣例として ``master`` "
+"ブランチでは変更を行わないでください。問題ごとに別々のブランチを使用することによって、他のブランチに干渉することなく、同時に複数の問題に取り組むことができます。間違えた場合は、いつでもブランチを削除して、masterブランチから新しいブランチを作成してやり直すことができます。"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:139
 msgid "3. Modify files"
-msgstr ""
+msgstr "3. ファイルを修正する"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:141
 msgid ""
 "Browse the source files of your fork of QGIS-Documentation to the file that "
 "needs to be modified"
-msgstr "QGIS-Documentationのあなたのフォークのソースファイルを修正する必要があるファイルにブラウズしてください"
+msgstr "フォークしたQGIS-Documentationのソースファイルをブラウズして、修正する必要があるファイルに移動してください"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:143
 msgid ""
 "Make your modifications following the :ref:`writing guidelines <QGIS-"
 "documentation-guidelines>`"
 msgstr ""
+":ref:`writing guidelines <QGIS-documentation-guidelines>` に従いながら修正を行ってください。"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:145
 msgid ""
@@ -308,9 +330,9 @@ msgid ""
 "Make sure :guilabel:`Commit directly to the branch_name branch.` is "
 "selected."
 msgstr ""
-"終了したら、ページの一番下にある **変更をコミット** フレームにナビゲートし、行った変更について短いコメントを書き、そして "
-":guilabel:`変更をコミット` をクリックしてあなたのブランチに直接変更をコミットしてください。 "
-":guilabel:`branch_nameブランチに直接コミットする` が選択されていることを確認してください。"
+"終了したら、ページの一番下にある **Commit Changes** フレームに移動し、行った変更について短いコメントを書き、そして "
+":guilabel:`Commit Changes` をクリックしてあなたのブランチに直接変更をコミットしてください。 "
+":guilabel:`Commit directly to the branch_name branch.` が選択されていることを確認してください。"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:149
 msgid ""
@@ -320,17 +342,17 @@ msgstr "問題を修正するために更新する必要がある他のファイ
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:155
 msgid "4. Share your changes via Pull Request"
-msgstr ""
+msgstr "4. あなたの行った変更をプルリクエストを通して共有する"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:157
 msgid ""
 "You need to make a pull request to integrate your changes into the official "
 "documentation."
-msgstr "変更を公式文書に統合するためにはpull requestをする必要があります。"
+msgstr "あなたの変更を公式ドキュメントに統合するためにはpull requestをする必要があります。"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:159
 msgid "**If you used an** ``Edit on GitHub`` **link**"
-msgstr ""
+msgstr "``Edit on GitHub`` **リンクを使用して始めた場合は**"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:161
 msgid ""
@@ -343,11 +365,11 @@ msgstr ""
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:165
 msgid "Skip to :ref:`Step 2 <compare_changes>` below."
-msgstr ""
+msgstr "下の :ref:`Step 2 <compare_changes>` にスキップしてください。"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:168
 msgid "1. Start a new pull request"
-msgstr ""
+msgstr "1. 新しくpull requestを始める"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:170
 msgid ""
@@ -356,11 +378,11 @@ msgid ""
 ":guilabel:`New pull request`."
 msgstr ""
 "`QGIS-Documentation <https://github.com/qgis/QGIS-Documentation>`_ "
-"リポジトリのメインページに行き、 :guilabel:`新しいpull request` をクリックしてください。"
+"リポジトリのメインページに行き、 :guilabel:`New pull request` をクリックしてください。"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:176
 msgid "2. Compare changes"
-msgstr ""
+msgstr "2. 変更を比較する"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:178
 msgid ""
@@ -370,15 +392,16 @@ msgid ""
 ":guilabel:`compare across forks` link."
 msgstr ""
 "一方が ``base:master`` 、もう一方が ``compare:branch_name` "
-"（図を参照）という2つのダイアログボックスが表示されている場合、これは一方のブランチからのマスターブランチへの変更をマージするだけです。この問題を解決するには"
-" :guilabel:`フォークを越えて比較` リンクをクリックしてください。"
+"（図を参照）という2つのダイアログボックスが表示されている場合は、あなたが変更を加えたブランチからあなたのマスターブランチへ、変更がマージされるだけです。これを修正するために"
+" :guilabel:`compare across forks` リンクをクリックします。"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:186
 msgid ""
 "If your :guilabel:`Comparing changes` page looks like this, click on the "
 ":guilabel:`compare across forks` link."
 msgstr ""
-":guilabel:`変更の比較` ページがこのようなものであれば、 :guilabel:`フォーク全体の比較` リンクをクリックしてください。"
+":guilabel:`Comparing changes` ページがこのようなものであれば、 :guilabel:`compare across "
+"forks` リンクをクリックしてください。"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:189
 msgid ""
@@ -386,27 +409,27 @@ msgid ""
 "changes that you have made in your branch with the master branch that you "
 "want to merge into. They are:"
 msgstr ""
-"4つのドロップダウンメニューが見えるはずです。これらはあなたがあなたのブランチで行った変更をマージしたいマスターブランチと比較することを可能にします。それらは："
+"4つのドロップダウンメニューが見えるはずです。このドロップダウンメニューによって、あなたのブランチで行った変更を、変更をマージしたい相手である公式のマスターブランチと比較することが可能になります。4つのドロップダウンメニューは以下の通りです。"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:193
 msgid "**base fork**: the fork that you want to merge your changes into"
-msgstr "**ベースフォーク** ：変更をマージしたいフォーク"
+msgstr "**base fork** ：あなたの変更をマージしたい相手先のフォーク"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:194
 msgid ""
 "**base**: the branch of the base fork that you want to merge your changes "
 "into"
-msgstr "**base** ：変更をマージしたいベースフォークのブランチ"
+msgstr "**base** ：あなたの変更をマージしたいbase forkのブランチ"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:195
 msgid ""
 "**head fork**: the fork that has changes that you want to incorporate into "
 "the base fork"
-msgstr "**ヘッドフォーク** ：ベースフォークに組み込みたい変更があるフォーク"
+msgstr "**head fork** ：base forkに組み込みたい変更があるフォーク"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:196
 msgid "**compare**: the branch with those changes"
-msgstr ""
+msgstr "**compare** ： 変更が行われたブランチ"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:198
 msgid ""
@@ -414,28 +437,30 @@ msgid ""
 " set the head fork to your repository ``<YourName>/QGIS-Documentation``, and"
 " set compare to your modified branch."
 msgstr ""
-"``qgis/QGIS-Documentation`` をas the base fork with ``master`` "
-"をベースとするベースフォークとして選択し、ヘッドフォークを あなたのリポジトリ ``<YourName>/QGIS-Documentation`` "
-"に設定して、変更したブランチと比較してください。"
+"base fork で ``qgis/QGIS-Documentation`` を、base で ``master`` を選択してください。head "
+"fork をあなたのリポジトリ ``<YourName>/QGIS-Documentation`` に、compare  "
+"をあなたが変更を行ったブランチに設定してください。"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:205
 msgid ""
 "Comparing changes between ``qgis/QGIS-Documentation`` and your repository"
-msgstr ""
+msgstr "``qgis/QGIS-Documentation`` とあなたのリポジトリとの間で変更を比較している"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:207
 msgid ""
 "A green check with the words **Able to merge** shows that your changes can "
 "be merged into the official documentation without conflicts."
-msgstr "**マージ可能** という単語の付いた緑色のチェックマークは、あなたの変更が衝突することなく公式の文書にマージできることを示しています。"
+msgstr ""
+"**Able to merge** "
+"と書いてある緑色のチェックマークは、あなたの変更が衝突することなく公式のドキュメントにマージできることを示しています。"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:210
 msgid "Click the :guilabel:`Create pull request` button."
-msgstr ""
+msgstr ":guilabel:`Create pull request` ボタンをクリックします。"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:212
 msgid "**If you see** |githubCantMerge|"
-msgstr ""
+msgstr "|githubCantMerge| **と表示されたら**"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:214
 msgid ""
@@ -447,7 +472,7 @@ msgid ""
 "complete the merge."
 msgstr ""
 "これは `衝突 <https://help.github.com/articles/addressing-merge-conflicts/>`_ "
-"があることを意味します。他の誰かがあなたの変更と衝突するコミットをしたので、修正中のファイルはターゲットとしているブランチを持つ最新ではありません。それでもプルリクエストは作成できますが、マージを完了するには"
+"があることを意味します。他の誰かがあなたの変更と衝突するコミットをしたので、あなたが修正中のファイルは対象のブランチの最新の状態を反映していません。それでもプルリクエストは作成できますが、マージを完了するには"
 " :ref:`conflicts <fix_conflicts>` を修正する必要があります。"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:220
@@ -463,7 +488,7 @@ msgstr ""
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:226
 msgid "3. Describe your pull request"
-msgstr ""
+msgstr "3. pull requestを説明する"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:228
 msgid ""
@@ -479,21 +504,22 @@ msgid ""
 " like ``fix`` or ``close``, the concerned issue will be closed as soon as "
 "the pull request is merged."
 msgstr ""
-"これが特定の `問題 <https://github.com/qgis/QGIS-Documentation/issues>`_ "
-"に関連する場合は、コメントに問題番号を追加してください。これは＃と問題番号 （ *例* ``#1234`` ）を入力することによって行われます。 "
-"``fix`` や ``close`` のような用語が先行している場合は、プルリクエストがマージされるとすぐにその問題は解決されます。"
+"これが特定の `issue <https://github.com/qgis/QGIS-Documentation/issues>`_ "
+"に関連する場合は、コメントにissue番号を追加してください。これは＃とissue番号 ( *例* ``#1234`` ) "
+"を入力することによって行われます。 ``fix`` や ``close`` "
+"のような語が先行している場合は、プルリクエストがマージされるとすぐにそのissueはクローズされます。"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:236
 msgid "Add links to any documentation pages that you are changing."
-msgstr ""
+msgstr "あなたが変更を行ったすべてのドキュメントのページへのリンクを含めてください。"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:238
 msgid "Click on :guilabel:`Create pull request`."
-msgstr ""
+msgstr ":guilabel:`Create pull request` をクリックします。"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:241
 msgid "4. Review and comment pull request"
-msgstr ""
+msgstr "4. pull requestをレビューしコメントする"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:243
 msgid ""
@@ -505,10 +531,13 @@ msgid ""
 "everything looks great and is in order. Reviewing helps to improve the "
 "quality of the contribution, both in form and substance."
 msgstr ""
+"上で見たように、誰でもプルリクエストを通してドキュメントの修正を提案することができます。同様に、誰でもプルリクエストを質問や `コメント "
+"<https://help.github.com/articles/commenting-on-a-pull-request/>`_ "
+"でレビューすることが可能です。おそらくそれは、プロジェクトのガイドラインに沿っていない執筆スタイルだったり、重要な細部やスクリーンショットが変更に欠けていたり、あるいはすべてが素晴らしくて申し分なさそうだ、ということだったりするでしょう。レビューはドキュメントの形式と実質の両面において、貢献の質を高める助けになります。"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:251
 msgid "To review a pull request:"
-msgstr ""
+msgstr "プルリクエストをレビューするには"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:253
 msgid ""
@@ -516,32 +545,38 @@ msgid ""
 "Documentation/pulls>`_ and click on the pull request that you want to "
 "comment on."
 msgstr ""
+"`pull requests のページ <https://github.com/qgis/QGIS-Documentation/pulls>`_ "
+"へ移動して、コメントをしたいプルリクエストをクリックしてください。"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:255
 msgid ""
 "At the bottom of the page you will find a text box where you can leave "
 "general comments about the pull request."
-msgstr ""
+msgstr "ページの一番下に、このプルリクエストについて全体的なコメントを残すことのできるテキストボックスがあるのがわかると思います。"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:257
 msgid "To add comments about specific lines,"
-msgstr ""
+msgstr "特定の行についてコメントをするには、"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:259
 msgid ""
 "Click on |githubFilesChanged| and find the file you want to comment on. You "
 "may have to click on :guilabel:`Display the source diff` to see the changes."
 msgstr ""
+"|githubFilesChanged| をクリックして、コメントをしたいファイルを探してください。 変更を確認するために "
+":guilabel:`Display the source diff` をクリックしないといけないかもしれません。"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:262
 msgid ""
 "Scroll to the line you want to comment on and click on the |githubBluePlus|."
 " That will open a text box allowing you to leave a comment."
 msgstr ""
+"コメントしたい行までスクロールして、 |githubBluePlus| "
+"をクリックしてください。テキストボックスが開きますので、コメントを残すことができます。"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:265
 msgid "Specific line comments can be published either:"
-msgstr ""
+msgstr "特定の行に対するコメントは、次のいずれかの方法で公開することができます。"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:267
 msgid ""
@@ -549,6 +584,8 @@ msgid ""
 "are published as you go. Use this only if you have few comments to add or "
 "when replying to another comment."
 msgstr ""
+":guilabel:`Add single comment` "
+"ボタンを使って、単独のコメントとして公開する。この場合コメントはその都度即座に公開されます。コメント数が少ない場合や他のコメントにコメントする場合にのみ、この方法を使ってください。"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:270
 msgid ""
@@ -563,10 +600,14 @@ msgid ""
 "<https://help.github.com/en/articles/reviewing-proposed-changes-in-a-pull-"
 "request>`."
 msgstr ""
+":guilabel:`Start a review` "
+"ボタンを押して、レビューの一部として公開する。コメントは検証後に自動的に送信されないため、後で編集やキャンセルしたり、レビューの主要な点を要約したりそのプルリクエストについての全体的な指示を追加したり、そのプルリクエストを承認するかどうかを述べたりすることができます。こちらの方がよりよい方法でしょう。より柔軟ですし、レビューを構造化したりコメントを編集したりして準備ができたら公開することができますし、リポジトリのフォロワーにコメントごとに通知を送るのではなく、ひとつだけ通知を送ることができるからです。"
+" `より詳しくは <https://help.github.com/en/articles/reviewing-proposed-changes-"
+"in-a-pull-request>` を参照してください。"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:283
 msgid "Commenting a line with a change suggestion"
-msgstr ""
+msgstr "変更提案とともに行に対するコメントを行う"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:286
 msgid ""
@@ -575,10 +616,13 @@ msgid ""
 ":sup:`Insert a suggestion` button on top of the comment text box and modify "
 "the text within the suggestion block."
 msgstr ""
+"行に対するコメントには提案を埋め込むことができ、プルリクエストの作成者はこれをプルリクエストに適用することができます。提案を追加するには、コメントテキストブロックの上にある"
+" |githubSuggestions| :sup:`Insert a suggestion` "
+"ボタンをクリックして、提案ブロックの中のテキストを修正してください。"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:292
 msgid "**Prefer committing suggestions to your pull request as a batch**"
-msgstr ""
+msgstr "**プルリクエストへの提案をバッチとして追加したいときは**"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:294
 msgid ""
@@ -587,10 +631,12 @@ msgid ""
 "the bottom of the comment when you have many suggestions to address and "
 "prefer adding them as a batch commit, that is:"
 msgstr ""
+"プルリクエストの作成者としてレビュワーからのフィードバックを直接プルリクエストに組み込むときに、対処すべき提案の数が多いためにそれらをバッチコミットとして追加したい場合は、コメントの一番下にある"
+" :guilabel:`Commit suggestion` ボタンを使用するのは避けてください。 すなわち、以下のようにします。"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:299
 msgid "Switch to the |githubFilesChanged| tab"
-msgstr ""
+msgstr "|githubFilesChanged| タブに移動します。"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:300
 msgid ""

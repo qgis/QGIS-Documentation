@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-26 13:13+0200\n"
+"POT-Creation-Date: 2020-09-24 11:25+0200\n"
 "PO-Revision-Date: 2020-03-16 19:32+0000\n"
 "Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2020\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
@@ -3890,21 +3890,23 @@ msgstr "사용할 파일을 가리키는 경로를 정의하려면 :guilabel:`Ed
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2157
 msgid ""
+"UI-files can also be hosted on a remote server. In this case, you provide "
+"the URL of the form instead of the file path in :guilabel:`Edit UI`."
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2160
+msgid ""
 "You'll find some example in the :ref:`Creating a new form <creating-new-"
 "form>` lesson of the :ref:`QGIS-training-manual-index-reference`. For more "
-"advanced information, see https://nathanw.net/2011/09/05/qgis-tips-custom-"
-"feature-forms-with-python-logic/."
+"advanced information, see https://woostuff.wordpress.com/2011/09/05/qgis-"
+"tips-custom-feature-forms-with-python-logic/."
 msgstr ""
-":ref:`QGIS-training-manual-index-reference` 의 :ref:`새 양식 생성 <creating-new-"
-"form>` 에서 몇몇 예시를 찾아볼 수 있습니다. 더 심화된 내용을 알고 싶다면, "
-"https://nathanw.net/2011/09/05/qgis-tips-custom-feature-forms-with-python-"
-"logic/ 을 참조하세요."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2164
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2167
 msgid "Enhance your form with custom functions"
 msgstr "사용자 지정 함수로 사용자 양식 향상시키기"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2166
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2169
 msgid ""
 "QGIS forms can have a Python function that is called when the dialog is "
 "opened. Use this function to add extra logic to your dialogs. The form code "
@@ -3913,7 +3915,7 @@ msgstr ""
 "QGIS 양식은 대화창을 열 때 호출되는 파이썬 함수를 보유할 수 있습니다. 이 함수를 이용해서 사용자 대화창에 추가적인 논리를 "
 "추가하십시오. 다음 세 가지 서로 다른 방법으로 양식 코드를 지정할 수 있습니다:"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2170
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2173
 msgid ""
 "``load from the environment``: use a function, for example in "
 ":file:`startup.py` or from an installed plugin"
@@ -3921,7 +3923,7 @@ msgstr ""
 "``load from the environment``: 예를 들어 :file:`startup.py` 파일 또는 설치한 플러그인에 있는 "
 "함수를 이용합니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2172
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2175
 msgid ""
 "``load from an external file``: a file chooser will let you select a Python "
 "file from your filesystem or enter a URL for a remote file."
@@ -3929,32 +3931,32 @@ msgstr ""
 "``load from an external file``: 원격 파일용 URL을 입력하거나 또는 사용자의 파일 시스템에서 파이썬 파일을 "
 "선택할 수 있는 파일 선택기를 엽니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2174
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2177
 msgid ""
 "``provide code in this dialog``: a Python editor will appear where you can "
 "directly type the function to use."
 msgstr ""
 "``provide code in this dialog``: 사용자가 사용할 함수를 직접 입력할 수 있는 파이썬 편집기를 엽니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2177
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2180
 msgid ""
 "In all cases you must enter the name of the function that will be called "
 "(``open`` in the example below)."
 msgstr "세 가지 방법 모두 사용자가 호출할 함수명을 입력해야만 합니다. (다음 예시에서는 ``open`` 입니다.)"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2180
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2183
 msgid "An example is (in module MyForms.py):"
 msgstr "다음은 (:file:`MyForms.py` 모듈에 있는) 예시입니다:"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2188
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2191
 msgid "Reference in Python Init Function like so: ``open``"
 msgstr "파이썬 초기화 함수(Python Init Function)에서도 마찬가지로 ``open`` 으로 참조합니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2194
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2197
 msgid "Configure the field behavior"
 msgstr "필드 습성 환경 설정"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2196
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2199
 msgid ""
 "The main part of the :guilabel:`Attributes Form` tab helps you set the type "
 "of widget used to fill or display values of the field, in the attribute "
@@ -3965,15 +3967,15 @@ msgstr ""
 "데 쓰이는 위젯의 유형을 설정할 수 있습니다. 사용자가 각 필드와 값 또는 각 필드에 추가할 수 있는 값의 범위와 어떻게 대화형 작업을 "
 "할지 정의할 수 있습니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2206
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2209
 msgid "Dialog to select an edit widget for an attribute column"
 msgstr "속성 열을 위한 편집 위젯을 선택할 수 있는 대화창"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2212
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2215
 msgid "Common settings"
 msgstr "공통 설정"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2214
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2217
 msgid ""
 "Regardless the type of widget applied to the field, there are some common "
 "properties you can set to control whether and how a field can be edited."
@@ -3981,21 +3983,21 @@ msgstr ""
 "필드에 적용된 위젯의 유형에 상관없이, 필드를 편집할 수 있는지 없는지 그리고 필드를 어떻게 편집할 수 있는지를 제어하도록 설정할 수 "
 "있는 몇몇 공통 속성이 존재합니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2218
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2221
 msgid "Widget display"
 msgstr "위젯 표시"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2220
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2223
 msgid ""
 ":guilabel:`Show label`: indicates whether the field name should be displayed"
 " in the form."
 msgstr ":guilabel:`Show label`: 양식에 필드명을 표시해야 하는지 여부를 나타냅니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2224
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2227
 msgid "General options"
 msgstr "일반 옵션"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2226
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2229
 msgid ""
 ":guilabel:`Alias`: a human readable name to use for fields. The alias will "
 "be displayed in the feature form, the attribute table, or in the "
@@ -4007,7 +4009,7 @@ msgstr ""
 ":guilabel:`Identify results` 패널에 표시될 것입니다. :ref:`표현식 작성기 "
 "<vector_expressions>` 에서 필드명 대신 사용될 수도 있는데, 표현식을 쉽게 이해하고 검토할 수 있게 해줍니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2232
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2235
 msgid ""
 ":guilabel:`Comment`: displays the field's comment as shown in the "
 ":guilabel:`Fields` tab, in a read-only state. This information is shown as "
@@ -4016,7 +4018,7 @@ msgstr ""
 ":guilabel:`Comment`: 필드의 코멘트를 읽기전용 상태로, :guilabel:`Fields` 탭에 표시된대로 표시합니다. 이"
 " 정보는 피처 양식에 있는 필드 라벨 위에 마우스를 가져가면 툴팁으로 표시됩니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2235
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2238
 msgid ""
 "|checkbox| :guilabel:`Editable`: uncheck this option to set the field read-"
 "only (not manually modifiable) even when the layer is in edit mode. Note "
@@ -4026,18 +4028,18 @@ msgstr ""
 "|checkbox| :guilabel:`Editable`: 이 설정을 선택 해제하면 레이어가 편집 모드 상태일지라도 필드를 읽기 전용으로"
 " (사용자가 수정할 수 없도록) 설정합니다. 이 설정을 체크해도 제공자의 어떤 편집 제한도 무시하지 않는다는 사실을 기억하십시오."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2238
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2241
 msgid ""
 "|checkbox| :guilabel:`Label on top`: places the field name above or beside "
 "the widget in the feature form."
 msgstr ""
 "|checkbox| :guilabel:`Label on top`: 피처 양식에 있는 위젯의 위 또는 옆에 필드명을 배치합니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2242
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2245
 msgid "Default values"
 msgstr "기본값"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2244
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2247
 msgid ""
 ":guilabel:`Default value`: for new features, automatically populates by "
 "default the field with a predefined value or an :ref:`expression-based one "
@@ -4046,7 +4048,7 @@ msgstr ""
 ":guilabel:`Default value`: 새 피처의 경우, 기본적으로 미리 정의된 값 또는 :ref:`표현식 기반 값 "
 "<vector_expressions>` 으로 필드를 자동적으로 채웁니다. 예를 들어:"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2248
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2251
 msgid ""
 "use ``$x``, ``$length``, ``$area`` to automatically populate a field with "
 "the feature's X coordinate, length, area or any geometric information at its"
@@ -4055,16 +4057,16 @@ msgstr ""
 "필드 생성시 피처의 X 좌표, 길이, 면적 또는 다른 어떤 도형 정보로 필드를 자동적으로 채우려면 ``$x``, ``$length``, "
 "``$area`` 를 사용하면 됩니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2250
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2253
 msgid ""
 "increment a field by 1 for each new feature using ``maximum(\"field\")+1``;"
 msgstr "새 피처를 생성할 때마다 필드를 1씩 증가하는 값으로 채우려면 ``maximum(\"field\")+1`` 을 사용하면 됩니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2251
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2254
 msgid "save the feature creation datetime using ``now()``;"
 msgstr "피처 생성 날짜&시간을 저장하려면 ``now()`` 를 사용하면 됩니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2252
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2255
 msgid ""
 "use :ref:`variables <general_tools_variables>` in expressions, making it "
 "easier to e.g. insert the operator name (``@user_full_name``), the project "
@@ -4073,13 +4075,13 @@ msgstr ""
 "표현식에 :ref:`변수 <general_tools_variables>` 를 사용하면, 예를 들어 작업자 "
 "이름(``@user_full_name``), 프로젝트 파일 경로(``@project_path``) 등등을 더 쉽게 삽입할 수 있습니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2256
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2259
 msgid ""
 "A preview of the resulting default value is displayed at the bottom of the "
 "widget."
 msgstr "산출되는 기본값의 미리보기가 위젯 하단에 표시됩니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2258
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2261
 msgid ""
 "The ``Default value`` option is not aware of the values in any other field "
 "of the feature being created so it won't be possible to use an expression "
@@ -4090,7 +4092,7 @@ msgstr ""
 " 사용하는 것은 불가능할 것입니다. 예를 들어 ``concat(field1, field2)`` 같은 표현식을 사용하면 작동하지 않을 수도"
 " 있습니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2263
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2266
 msgid ""
 "|checkbox| :guilabel:`Apply default value on update`: whenever the feature "
 "attribute or geometry is changed, the default value is recalculated. This "
@@ -4101,26 +4103,26 @@ msgstr ""
 "기본값을 다시 계산합니다. 이 옵션으로 데이터를 마지막으로 수정한 사용자, 피처가 마지막으로 변경된 시간 등과 같은 값들을 손쉽게 저장할"
 " 수 있습니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2270
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2273
 msgid "Constraints"
 msgstr "제약조건"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2272
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2275
 msgid ""
 "You can constrain the value to insert in the field. This constraint can be:"
 msgstr "필드에 삽입되는 값을 제약할 수 있습니다. 다음과 같은 제약 조건을 설정할 수 있습니다:"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2274
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2277
 msgid "|checkbox| :guilabel:`Not null`: requires the user to provide a value;"
 msgstr "|checkbox| :guilabel:`Not null`: 사용자가 값을 입력해야 합니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2275
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2278
 msgid ""
 "|checkbox| :guilabel:`Unique`: guarantee the inserted value to be unique "
 "throughout the field;"
 msgstr "|checkbox| :guilabel:`Unique`: 삽입되는 값이 필드 전체에서 유일하도록 보장합니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2277
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2280
 msgid ""
 "based on a custom :guilabel:`expression`: e.g. "
 "``regexp_match(col0,'A-Za-z')`` to ensure that the value of the field *col0*"
@@ -4131,19 +4133,19 @@ msgstr ""
 "``regexp_match(col0,'A-Za-z')`` 같은 표현식을 쓰면 됩니다. 사용자가 제약조건을 기억할 수 있도록 간단한 설명을"
 " 추가할 수 있습니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2281
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2284
 msgid ""
 "Whenever a value is added or edited in a field, it's submitted to the "
 "existing constraints and:"
 msgstr "필드에 값을 추가하거나 필드값을 편집할 때마다, 기존 제약조건이 새 값을 받아서:"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2284
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2287
 msgid ""
 "if it meets all the requirements, a green check is shown beside the field in"
 " the form;"
 msgstr "모든 요구사항을 만족하는 경우, 양식에 있는 필드 옆에 초록색 체크 표시가 나타납니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2286
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2289
 msgid ""
 "if it does not meet all the requirements, then a yellow or red cross is "
 "displayed near the field. You can hover over the cross to remind which "
@@ -4152,13 +4154,13 @@ msgstr ""
 "모든 요구사항을 만족하지 못하는 경우, 필드 옆에 노란색 또는 빨간색 가위표가 나타납니다. 가위표 위에 마우스를 가져가면 해당 필드에 "
 "어떤 제약조건이 적용돼 있는지 알 수 있으므로 값을 수정하면 됩니다:"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2290
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2293
 msgid ""
 "A yellow cross appears when the unmet constraint is an unenforced one and it"
 " does not prevent you to save the changes with the \"wrong\" values;"
 msgstr "만족하지 않는 제약조건이 강제가 아니기 때문에 \"틀린\" 값을 변경 사항으로 저장해도 될 때 노란색 가위표가 나타납니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2293
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2296
 msgid ""
 "A red cross can not be ignored and does not allow you to save your "
 "modifications until they meet the constraints. It appears when the "
@@ -4167,11 +4169,11 @@ msgstr ""
 "빨간색 가위표는 무시할 수 없으며, 제약조건을 만족할 때까지 사용자의 수정 사항을 저장할 수 없습니다. |checkbox| "
 ":guilabel:`Enforce constraint` 옵션을 활성화했을 때 빨간색 가위표가 나타납니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2301
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2304
 msgid "Edit widgets"
 msgstr "편집 위젯"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2303
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2306
 msgid ""
 "Based on the field type, QGIS automatically determines and assigns a default"
 " widget type to it. You can then replace the widget with any other "
@@ -4180,12 +4182,12 @@ msgstr ""
 "QGIS는 필드 유형에 따라 자동적으로 기본 위젯 유형을 결정하고 필드에 할당합니다. 이후 사용자가 필드 유형과 호환되는 다른 어떤 "
 "위젯으로도 대체할 수 있습니다. 다음과 같은 위젯을 사용할 수 있습니다:"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2307
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2310
 msgid ""
 "**Checkbox**: Displays a checkbox whose state defines the value to insert."
 msgstr "**체크박스(Checkbox)**: 그 상태가 삽입하는 값을 정의하는 체크박스를 표시합니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2308
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2311
 msgid ""
 "**Classification**: Only available when a :ref:`categorized symbology "
 "<categorized_renderer>` is applied to the layer, displays a combo box with "
@@ -4194,7 +4196,7 @@ msgstr ""
 "**범주화(Classification)**: 레이어에 :ref:`범주 심볼 <categorized_renderer>` 이 적용된 경우에만"
 " 사용할 수 있으며, 범주들의 값을 가지고 있는 콤보박스를 표시합니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2311
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2314
 msgid ""
 "**Color**: Displays a :ref:`color widget <color-selector>` allowing to "
 "select a color; the color value is stored as a html notation in the "
@@ -4203,7 +4205,7 @@ msgstr ""
 "**색상(Color)**: 색상을 선택할 수 있는 :ref:`색상 위젯 <color-selector>` 을 표시합니다. 색상값은 속성 "
 "테이블에 HTML 서식으로 저장됩니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2313
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2316
 msgid ""
 "**Date/Time**: Displays a line field which can open a calendar widget to "
 "enter a date, a time or both. Column type must be text. You can select a "
@@ -4212,7 +4214,7 @@ msgstr ""
 "**날짜&시간(Date/Time)**: 날짜, 시간, 또는 둘 다 입력하기 위한 캘린더 위젯을 열 수 있는 한 줄짜리 텍스트 란을 "
 "표시합니다. 열이 텍스트 유형이어야만 합니다. 캘린더 팝업창 등의 사용자 지정 서식을 선택할 수 있습니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2316
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2319
 msgid ""
 "**Enumeration**: Opens a combo box with predefined values fetched from the "
 "database. This is currently only supported by the PostgreSQL provider, for "
@@ -4221,7 +4223,7 @@ msgstr ""
 "**일람표(Enumeration)**: 데이터베이스에서 가져온 미리 정의된 값들을 가지고 있는 콤보박스를 엽니다. 현재 "
 "PostgreSQL 제공자가 ``enum`` 유형인 필드에 대해서만 지원하고 있습니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2319
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2322
 msgid ""
 "**Attachment**: Uses a \"Open file\" dialog to store file path in a relative"
 " or absolute mode. It can also be used to display a hyperlink (to document "
@@ -4230,13 +4232,13 @@ msgstr ""
 "**첨부(Attachment)**: 파일 경로를 상대 또는 절대 경로로 저장하기 위한 \"Open file\" 대화창을 사용합니다. "
 "(문서 경로를 가리키는) 하이퍼링크, 이미지 또는 웹페이지를 표시하는 데에도 사용할 수 있습니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2322
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2325
 msgid ""
 "**Hidden**: A hidden attribute column is invisible. The user is not able to "
 "see its contents."
 msgstr "**Hidden**: 숨겨진 속성 열을 볼 수 없습니다. 사용자가 열의 내용을 확인할 수 없습니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2324
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2327
 msgid ""
 "**Key/Value**: Displays a two-columns table to store sets of key/value pairs"
 " within a single field. This is currently supported by the PostgreSQL "
@@ -4245,7 +4247,7 @@ msgstr ""
 "**키/값(Key/Value)**: 단일 필드 안에 키/값 쌍의 집합을 저장하기 위한 열 2개짜리 테이블을 표시합니다. 현재 "
 "PostgreSQL 제공자가 ``hstore`` 유형인 필드에 대해서만 지원하고 있습니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2327
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2330
 msgid ""
 "**List**: Displays a single column table to add different values within a "
 "single field. This is currently supported by the PostgreSQL provider, for "
@@ -4254,14 +4256,14 @@ msgstr ""
 "**목록(List)**: 단일 필드 안에 서로 다른 값들을 추가하기 위한 열 1개짜리 테이블을 표시합니다. 현재 PostgreSQL "
 "제공자가 ``array`` 유형인 필드에 대해서만 지원하고 있습니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2330
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2333
 msgid ""
 "**Range**: Allows you to set numeric values from a specific range. The edit "
 "widget can be either a slider or a spin box."
 msgstr ""
 "**범위(Range)**: 특정 범위에서 숫자 값을 설정할 수 있습니다. 슬라이드 바 또는 스핀박스 위젯 가운데 선택할 수 있습니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2332
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2335
 msgid ""
 "**Relation Reference**: This widget lets you embed the feature form of the "
 "referenced layer on the feature form of the actual layer. See "
@@ -4270,7 +4272,7 @@ msgstr ""
 "**관계 참조(Relation Reference)**: 이 위젯은 실제 레이어의 피처 양식 상에 참조 레이어의 피처 양식을 삽입할 수 "
 "있게 해줍니다. :ref:`vector_relations` 을 참조하세요."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2335
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2338
 msgid ""
 "**Text Edit** (default): This opens a text edit field that allows simple "
 "text or multiple lines to be used. If you choose multiple lines you can also"
@@ -4279,7 +4281,7 @@ msgstr ""
 "**텍스트 편집(Text Edit)** (기본값): 간단한 텍스트 또는 여러 줄의 텍스트를 쓸 수 있는 텍스트 편집란을 엽니다. 여러 줄"
 " 유형을 선택한 경우 HTML 내용도 선택할 수 있습니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2338
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2341
 msgid ""
 "**Unique Values**: You can select one of the values already used in the "
 "attribute table. If 'Editable' is activated, a line edit is shown with "
@@ -4288,7 +4290,7 @@ msgstr ""
 "**단일값(Unique Values)**: 속성 테이블에서 이미 사용된 값들 가운데 하나를 선택할 수 있습니다. 'Editable' "
 "설정을 체크한 경우 자동 완성을 지원하는 한 줄짜리 텍스트 편집란을 표시하며, 체크하지 않은 경우 콤보박스를 표시합니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2341
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2344
 msgid ""
 "**Uuid Generator**: Generates a read-only UUID (Universally Unique "
 "Identifiers) field, if empty."
@@ -4296,7 +4298,7 @@ msgstr ""
 "**UUID 생성기(UUID Generator)**: UUID(Universally Unique Identifiers) 필드가 비어 있을"
 " 경우 읽기 전용 UUID 를 생성합니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2343
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2346
 msgid ""
 "**Value Map**: A combo box with predefined items. The value is stored in the"
 " attribute, the description is shown in the combo box. You can define values"
@@ -4305,7 +4307,7 @@ msgstr ""
 "**값 지도(Value Map)**: 사전 정의된 항목을 가지고 있는 콤보박스를 표시합니다. 값은 속성에 저장돼 있으며, 설명은 "
 "콤보박스에 표시됩니다. 값을 직접 정의할 수도 있고, 레이어 또는 CSV 파일에서 불러올 수도 있습니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2346
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2349
 msgid ""
 "**Value Relation**: Offers values from a related table in a combobox. You "
 "can select layer, key column and value column. Several options are available"
@@ -4318,11 +4320,11 @@ msgstr ""
 " 사용 – 있습니다. 이 양식은 드롭다운 목록을 표시하거나, 자동완성 체크박스를 활성화한 경우 한 줄짜리 텍스트 편집란을 표시할 "
 "것입니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2353
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2356
 msgid "**Relative Path in Attachment widget**"
 msgstr "**첨부 위젯의 상대 경로**"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2355
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2358
 msgid ""
 "If the path which is selected with the file browser is located in the same "
 "directory as the :file:`.qgs` project file or below, paths are converted to "
@@ -4333,11 +4335,11 @@ msgstr ""
 "상대 경로로 변환합니다. 이 습성은 멀티미디어 정보가 첨부된 :file:`.qgs` 프로젝트의 이동성(portability)을 "
 "향상시킵니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2365
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2368
 msgid "Joins Properties"
 msgstr "결합 속성"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2367
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2370
 msgid ""
 "|join| The :guilabel:`Joins` tab allows you to associate features of the "
 "current layer (called ``Target layer``) to features from another loaded "
@@ -4349,11 +4351,11 @@ msgstr ""
 "레이어의 (또는 테이블의) 피처를 결합시킬 수 있습니다. 결합은 레이어가 공유하는 속성을 기반으로 합니다. 레이어가 (테이블이) 무(無)"
 " 도형일 수도 아닐 수도 있지만 두 레이어의 결합 속성만큼은 동일한 유형이어야 합니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2373
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2376
 msgid "To create a join:"
 msgstr "결합을 생성하려면:"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2375
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2378
 msgid ""
 "Click the |signPlus| :sup:`Add new join` button. The :guilabel:`Add vector "
 "join` dialog appears."
@@ -4361,13 +4363,13 @@ msgstr ""
 "|signPlus| :sup:`Add new join` 아이콘을 클릭하면 :guilabel:`Add vector join` 대화창이 "
 "열립니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2377
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2380
 msgid ""
 "Select the :guilabel:`Join layer` you want to connect with the target vector"
 " layer"
 msgstr "대상 벡터 레이어와 연결하려는 :guilabel:`Join layer` 를 선택하십시오."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2379
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2382
 msgid ""
 "Specify the :guilabel:`Join field` and the :guilabel:`Target field` that are"
 " common to both the join layer and the target layer"
@@ -4375,17 +4377,17 @@ msgstr ""
 "결합 레이어와 대상 레이어 양쪽에 공통으로 존재하는 :guilabel:`Join field` 와 :guilabel:`Target "
 "field` 를 지정하십시오."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2381
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2384
 msgid ""
 "Press :guilabel:`OK` and a summary of selected parameters is added to the "
 ":guilabel:`Join` panel."
 msgstr ":guilabel:`OK` 를 누르면 :guilabel:`Join` 패널에 선택한 파라미터들의 요약이 추가됩니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2389
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2392
 msgid "Join an attribute table to an existing vector layer"
 msgstr "기존 벡터 레이어에 속성 테이블 결합"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2391
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2394
 msgid ""
 "The steps above will create a join, where **ALL** the attributes of the "
 "first matching feature in the join layer is added to the target layer's "
@@ -4394,7 +4396,7 @@ msgstr ""
 "앞의 단계들을 통해 생성된 결합은, 결합 레이어에서 처음으로 일치하는 피처의 **모든** 속성을 대상 레이어의 피처에 추가시킵니다. "
 "QGIS는 이 결합을 미세 조정할 수 있는 많은 옵션을 제공하고 있습니다:"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2395
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2398
 msgid ""
 "|checkbox| :guilabel:`Cache join layer in virtual memory`: allows you to "
 "cache values in memory (without geometries) from the joined layer in order "
@@ -4403,13 +4405,13 @@ msgstr ""
 "|checkbox| :guilabel:`Cache join layer in virtual memory`: 검색 속도를 향상시키기 위해, "
 "메모리에 결합된 레이어의 (도형을 제외한) 값들을 저장할 수 있게 합니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2398
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2401
 msgid "|unchecked| :guilabel:`Create attribute index on the join field`"
 msgstr ""
 "|unchecked| :guilabel:`Create attribute index on the join field`: 이 옵션을 "
 "활성화하면 결합 필드에 속성 인덱스를 생성합니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2399
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2402
 msgid ""
 "|unchecked| :guilabel:`Dynamic form`: helps to synchronize join fields on "
 "the fly, according to the :guilabel:`Target field`. This way, constraints "
@@ -4421,14 +4423,14 @@ msgstr ""
 " 실시간으로 동기화할 수 있습니다. 이 옵션을 활성화하면, 결합 필드에 있는 제약조건도 정확하게 업데이트됩니다. 이 옵션이 기본적으로 "
 "비활성화돼 있는 것은 피처나 결합이 많을 경우 처리 시간이 너무 오래 걸리기 때문이라는 사실을 기억하세요."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2404
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2407
 msgid ""
 "If the target layer is editable, then some icons will be displayed in the "
 "attribute table next to fields, in order to inform about their status:"
 msgstr ""
 "대상 레이어가 편집 가능 상태인 경우, 필드에 대한 정보를 알려주기 위한 몇몇 아이콘들이 속성 테이블의 필드 옆에 표시될 것입니다:"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2407
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2410
 msgid ""
 "|joinNotEditable|: the join layer is not configured to be editable. If you "
 "want to be able to edit join features from the target attribute table, then "
@@ -4437,14 +4439,14 @@ msgstr ""
 "|joinNotEditable|: 결합 레이어를 편집할 수 있도록 환경 설정되지 않았습니다. 대상 속성 테이블에서 결합 피처를 편집할 수"
 " 있도록 하고 싶다면, |checkbox| :guilabel:`Editable join layer` 옵션을 체크해야 합니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2411
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2414
 msgid ""
 "|joinedLayerNotEditable|: the join layer is well configured to be editable, "
 "but its current status is read only."
 msgstr ""
 "|joinedLayerNotEditable|: 결합 레이어를 편집할 수 있도록 환경 설정돼 있지만, 현재 읽기 전용 상태입니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2413
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2416
 msgid ""
 "|joinHasNotUpsertOnEdit|: the join layer is editable, but synchronization "
 "mechanisms are not activated. If you want to automatically add a feature in "
@@ -4458,7 +4460,7 @@ msgstr ""
 "옵션을 체크해야 합니다. 마찬가지로, 대상 레이어에서 피처를 삭제하면 결합 레이어에서도 자동적으로 삭제하게 하려면 |checkbox| "
 ":guilabel:`Delete cascade` 옵션을 체크해야 합니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2419
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2422
 msgid ""
 "|unchecked| :guilabel:`Joined fields`: instead of adding all the fields from"
 " the joined layer, you can specify a subset."
@@ -4466,7 +4468,7 @@ msgstr ""
 "|unchecked| :guilabel:`Joined fields`: 결합된 레이어의 모든 필드를 추가하는 대신, 하위 집합을 지정할 수"
 " 있습니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2421
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2424
 msgid ""
 "|unchecked| :guilabel:`Custom field name prefix` for joined fields, in order"
 " to avoid name collision"
@@ -4474,7 +4476,7 @@ msgstr ""
 "|unchecked| :guilabel:`Custom field name prefix`: 명칭의 충돌을 방지하기 위해 결합된 필드명에 "
 "사용자 지정 접두어를 추가합니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2424
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2427
 msgid ""
 "QGIS currently has support for joining non-spatial table formats supported "
 "by OGR (e.g., CSV, DBF and Excel), delimited text and the PostgreSQL "
@@ -4483,11 +4485,11 @@ msgstr ""
 "QGIS는 현재 OGR(예: CSV, DBF 및 엑셀), 구분 텍스트, 그리고 PostgreSQL 제공자가 지원하는 비공간 테이블 "
 "유형들의 결합도 지원합니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2431
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2434
 msgid "Auxiliary Storage Properties"
 msgstr "보조 저장소 속성"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2433
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2436
 msgid ""
 "The regular way to customize styling and labeling is to use data-defined "
 "properties as described in :ref:`data_defined`. However, it may not be "
@@ -4504,7 +4506,7 @@ msgstr ""
 "도구들을 완전하게 사용하고 싶다면 사용자의 원본 데이터소스에 있는 20개 이상의 (X 및 Y 위치, 회전 각도, 글꼴 스타일, 색상 "
 "등등) 필드들을 추가하고 환경 설정해주어야 합니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2441
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2444
 msgid ""
 "The Auxiliary Storage mechanism provides the solution to these limitations "
 "and awkward configurations. Auxiliary fields are a roundabout way to "
@@ -4516,21 +4518,21 @@ msgstr ""
 "데이터베이스에 이런 (라벨, 도표, 심볼 등의) 데이터 정의 속성들을 자동으로 관리하고 저장할 수 있는 우회적인 방법입니다. 즉 편집 "
 "가능 상태가 아닌 레이어의 속성들을 저장할 수 있게 해줍니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2447
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2450
 msgid ""
 "A tab is available in vector layer properties dialog to manage auxiliary "
 "storage:"
 msgstr "벡터 레이어 속성 대화창에 보조 저장소를 관리하기 위한 탭이 있습니다:"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2453
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2456
 msgid "Auxiliary Storage tab"
 msgstr "보조 저장소 탭"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2458
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2461
 msgid "Labeling"
 msgstr "라벨 작업"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2460
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2463
 msgid ""
 "Considering that the data source may be customized thanks to data-defined "
 "properties without being editable, labeling map tools described in "
@@ -4539,7 +4541,7 @@ msgstr ""
 "편집 가능 상태가 아닌 데이터 정의 속성 덕분에 데이터소스를 사용자 지정할 수도 있다는 점을 고려하면, 라벨 작업을 활성화하면 언제라도 "
 ":ref:`label_toolbar` 에서 설명한 라벨 작업 맵 도구들을 사용할 수 있습니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2464
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2467
 msgid ""
 "Actually, the auxiliary storage system needs an auxiliary layer to store "
 "these properties in a SQLite database (see "
@@ -4553,37 +4555,37 @@ msgstr ""
 "생성 과정이 실행됩니다. 그러면 (피처를 유일하게 식별하도록 보장하기 위해) 결합 작업에 사용할 기본 키를 선택할 수 있는 창이 "
 "표시됩니다:"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2476
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2479
 msgid "Auxiliary Layer creation dialog"
 msgstr "보조 레이어 생성 대화창"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2479
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2482
 msgid ""
 "As soon as an auxiliary layer is configured for the current data source, you"
 " can retrieve its information in the tab:"
 msgstr "현재 데이터소스에서 보조 레이어의 환경을 설정하자마자, 탭에서 보조 레이어의 정보를 검색할 수 있습니다:"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2485
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2488
 msgid "Auxiliary Layer key"
 msgstr "보조 레이어 키"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2488
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2491
 msgid "The auxiliary layer now has these characteristics:"
 msgstr "이 보조 레이어는 다음과 같은 특성을 가집니다:"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2490
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2493
 msgid "the primary key is ``ID``,"
 msgstr "기본 키는 ``ID`` 이고,"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2491
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2494
 msgid "there are ``0`` features using an auxiliary field,"
 msgstr "보조 필드를 사용하는 피처는 ``0`` 개이며,"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2492
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2495
 msgid "there are ``0`` auxiliary fields."
 msgstr "보조 필드도 ``0`` 개입니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2494
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2497
 msgid ""
 "Now that the auxiliary layer is created, you can edit the layer labels. "
 "Click on a label while the |changeLabelProperties| :sup:`Change Label` map "
@@ -4595,11 +4597,11 @@ msgstr ""
 "Label` 맵 도구를 활성화한 상태에서 라벨을 클릭하면, 크기, 색상 등의 스타일 작업 속성을 업데이트할 수 있습니다. 대응하는 데이터"
 " 정의 속성들을 다음과 같이 생성하고 가져올 수 있습니다:"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2503
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2506
 msgid "Auxiliary Fields"
 msgstr "보조 필드"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2506
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2509
 msgid ""
 "As you can see in the figure above, ``21`` fields are automatically created "
 "and configured for labeling. For example, the ``FontStyle`` auxiliary field "
@@ -4611,7 +4613,7 @@ msgstr ""
 "데이터베이스에서 ``FontStyle`` 보조 필드의 유형은 ``String`` 이며 명칭은 ``labeling_fontstyle`` "
 "입니다. 또 현재 보조 필드를 사용하고 있는 필드가 ``1`` 개있습니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2512
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2515
 msgid ""
 "Notice that the icon |dataDefineOn| is displayed in the :guilabel:`Labels` "
 "properties tab indicating that the data-defined override options are set "
@@ -4620,31 +4622,26 @@ msgstr ""
 ":guilabel:`Labels` 속성 탭에 |dataDefineOn| 아이콘이 표시된 것을 눈치채셨나요? 데이터 정의 무시 옵션이 "
 "정확하게 설정되었다는 의미입니다:"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2519
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2522
 msgid "Data-defined properties automatically created"
 msgstr "자동적으로 생성된 데이터 정의 속성들"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2522
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2525
 msgid ""
 "Otherwise, there's another way to create an auxiliary field for a specific "
 "property thanks to the |dataDefined| :sup:`data-defined override` button. By"
 " clicking on :guilabel:`Store data in the project`, an auxiliary field is "
 "automatically created for the :guilabel:`Opacity` field. If you click on "
-"this button whereas the auxiliary layer is not created yet, then the window "
-":ref:`figure_auxiliary_layer_creation` is first displayed to select the "
-"primary key to use for joining."
+"this button and the auxiliary layer is not created yet, a window "
+"(:numref:`figure_auxiliary_layer_creation`) is first displayed to select the"
+" primary key to use for joining."
 msgstr ""
-"그 외에도, |dataDefined| :sup:`data-defined override` 버튼으로 특정 속성을 위한 보조 필드를 생성할 "
-"수 있는 또다른 방법이 있습니다. :guilabel:`Store data in the project` 를 클릭하면, "
-":guilabel:`Opacity` 필드를 위한 보조 필드를 자동적으로 생성합니다. 아직 보조 레이어를 생성하지 않은 상태에서 이 버튼을"
-" 클릭했다면, :ref:`figure_auxiliary_layer_creation` 창이 먼저 표시되어 결합 작업을 위한 기본 키를 "
-"선택해야 합니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2532
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2536
 msgid "Symbology"
 msgstr "심볼"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2534
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2538
 msgid ""
 "Like the method described above for customizing labels, auxiliary fields can"
 " also be used to stylize symbols and diagrams. To do this, click on "
@@ -4657,11 +4654,11 @@ msgstr ""
 ":guilabel:`Store data in the project` 를 선택하십시오. 예를 들어 :guilabel:`Fill color`"
 " 필드의 경우:"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2543
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2547
 msgid "Data-defined property menu for symbol"
 msgstr "심볼을 위한 데이터 정의 속성 메뉴"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2546
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2550
 msgid ""
 "There are different attributes for each symbol (e.g. fill style, fill color,"
 " stroke color, etc...), so each auxiliary field representing an attribute "
@@ -4676,25 +4673,25 @@ msgstr ""
 "필드의 :guilabel:`Type` 을 표시하고 보조 필드용 유일 명칭을 입력하도록 하는 창이 열립니다. 예를 들면, "
 ":guilabel:`Fill color` 보조 필드를 생성할 때 다음과 같은 창이 열립니다:"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2557
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2561
 msgid "Name of the auxiliary field for a symbol"
 msgstr "심볼을 위한 보조 필드의 명칭"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2560
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2564
 msgid ""
 "Once created, the auxiliary field can be retrieved in the auxiliary storage "
 "tab:"
 msgstr "보조 필드를 생성하고 나면, 보조 저장소 탭에서 해당 필드를 검색할 수 있습니다:"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2566
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2570
 msgid "Auxiliary field symbol"
 msgstr "보조 필드 심볼"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2570
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2574
 msgid "Attribute table and widgets"
 msgstr "속성 테이블 및 위젯"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2572
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2576
 msgid ""
 "Auxiliary fields can be edited using the :ref:`attribute table "
 "<sec_attribute_table>`. However, not all auxiliary fields are initially "
@@ -4703,7 +4700,7 @@ msgstr ""
 ":ref:`속성 테이블 <sec_attribute_table>` 을 사용해서 보조 필드를 편집할 수 있습니다. 하지만, 모든 보조 필드가"
 " 처음부터 속성 테이블에 나타나지는 않습니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2576
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2580
 msgid ""
 "Auxiliary fields representing attributes of a layer's symbology, labeling, "
 "appearance, or diagrams will appear automatically in the attribute table. "
@@ -4717,7 +4714,7 @@ msgstr ""
 "보조 필드는 기본적으로 **색상** 위젯을 보유하도록 설정되는데, 그 외의 보조 필드는 기본적으로 **텍스트 편집** 위젯으로 "
 "설정됩니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2583
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2587
 msgid ""
 "Auxiliary fields that represent attributes that can be modified using the "
 ":ref:`Label toolbar<label_toolbar>` are **Hidden** in the attribute table by"
@@ -4735,31 +4732,31 @@ msgstr ""
 "Edit** 으로 변경하거나 또는 **auxiliary_storage_labeling_color** 를 **Color** 위젯으로 "
 "변경하십시오. 이제 필드가 속성 테이블에서 가시화될 것입니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2592
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2596
 msgid ""
 "Auxiliary fields in the attribute table will appear like the following "
 "image:"
 msgstr "속성 테이블에 있는 보조 필드는 다음 그림처럼 나타날 것입니다:"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2598
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2602
 msgid "Form with auxiliary fields"
 msgstr "보조 필드를 보유한 양식"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2602
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2606
 msgid "Management"
 msgstr "관리"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2604
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2608
 msgid ""
 "The :guilabel:`Auxiliary Layer` menu allows you to manage the auxiliary "
 "fields:"
 msgstr ":guilabel:`Auxiliary Layer` 메뉴에서 보조 필드를 관리할 수 있습니다:"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2609
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2613
 msgid "Auxiliary layer management"
 msgstr "보조 레이어 관리"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2612
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2616
 msgid ""
 "The first item :guilabel:`Create` is disabled in this case because the "
 "auxiliary layer is already created. But in case of a fresh work, you can use"
@@ -4770,7 +4767,7 @@ msgstr ""
 "작업하는 경우, 이 액션을 사용해서 보조 레이어를 생성할 수 있습니다. :ref:`vector_auxiliary_storage_key` "
 "에서 설명했듯이, 기본 키가 필요할 것입니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2617
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2621
 msgid ""
 "The :guilabel:`Clear` action allows to keep all auxiliary fields, but remove"
 " their contents. This way, the number of features using these fields will "
@@ -4779,7 +4776,7 @@ msgstr ""
 ":guilabel:`Clear` 액션은 모든 보조 필드를 유지하면서 그 내용들은 제거할 수 있습니다. 이렇게 하면 이 필드들을 사용하는 "
 "피처의 개수가 ``0`` 으로 떨어질 것입니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2621
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2625
 msgid ""
 "The :guilabel:`Delete` action completely removes the auxiliary layer. In "
 "other words, the corresponding table is deleted from the underlying SQLite "
@@ -4788,7 +4785,7 @@ msgstr ""
 ":guilabel:`Delete` 액션은 보조 레이어를 완전히 제거합니다. 다시 말해, 기저 SQLite 데이터베이스에서 대응하는 "
 "테이블을 삭제합니다. 사용자 지정한 속성들이 사라집니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2625
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2629
 msgid ""
 "Finally, the :guilabel:`Export` action allows to save the auxiliary layer as"
 " a :ref:`new vector layer <general_saveas>`. Note that geometries are not "
@@ -4798,11 +4795,11 @@ msgstr ""
 "마지막으로 :guilabel:`Export` 액션은 보조 레이어를 :ref:`새 벡터 레이어 <general_saveas>` 로 저장할 "
 "수 있습니다. 보조 저장소는 도형을 저장하지 않는다는 사실을 기억하십시오. 하지만 이 경우, 원본 데이터소스에서 도형들도 내보냅니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2633
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2637
 msgid "Auxiliary storage database"
 msgstr "보조 저장소 데이터베이스"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2635
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2639
 msgid ""
 "When you save your project with the ``.qgs`` format, the SQLite database "
 "used for auxiliary storage is saved at the same place but with the extension"
@@ -4811,7 +4808,7 @@ msgstr ""
 "사용자 프로젝트를 ``.qgs`` 포맷으로 저장하는 경우, 보조 저장소용으로 사용한 SQLite 데이터베이스도 동일한 위치에 저장되며 그"
 " 확장자는 ``.qgd`` 입니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2639
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2643
 msgid ""
 "For convenience, an archive may be used instead thanks to the ``.qgz`` "
 "format. In this case, ``.qgd`` and  ``.qgs`` files are both embedded in the "
@@ -4820,11 +4817,11 @@ msgstr ""
 "사용자 편의를 위해, ``.qgz`` 압축 포맷을 대신 사용할 수도 있습니다. 이 경우 ``.qgd`` 및 ``.qgs`` 파일 둘 다 "
 "압축 파일에 들어갑니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2647
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2651
 msgid "Actions Properties"
 msgstr "액션 속성"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2649
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2653
 msgid ""
 "|action| QGIS provides the ability to perform an action based on the "
 "attributes of a feature. This can be used to perform any number of actions, "
@@ -4835,11 +4832,11 @@ msgstr ""
 "생성한 인자(argument)와 함께 프로그램을 실행하거나 또는 웹 보고 도구에 파라미터를 전달하는 등의 수많은 액션을 수행할 수 "
 "있습니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2659
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2663
 msgid "Overview action dialog with some sample actions"
 msgstr "몇몇 예시 액션을 담고 있는 오버뷰 액션 대화창"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2661
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2665
 msgid ""
 "Actions are useful when you frequently want to run an external application "
 "or view a web page based on one or more values in your vector layer. They "
@@ -4848,19 +4845,19 @@ msgstr ""
 "외부 응용 프로그램을 자주 실행하거나 사용자 벡터 레이어에 있는 하나 이상의 값들을 기반으로 웹 페이지를 보려 하는 경우 액션이 "
 "유용합니다. 액션은 6개의 유형으로 나뉘며, 다음과 같이 사용할 수 있습니다:"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2665
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2669
 msgid "Generic, Mac, Windows and Unix actions start an external process."
 msgstr "외부 프로세스를 구동하는 일반, 맥, 윈도우 및 유닉스 액션"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2666
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2670
 msgid "Python actions execute a Python expression."
 msgstr "파이썬 표현식을 실행하는 파이썬 액션"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2667
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2671
 msgid "Generic and Python actions are visible everywhere."
 msgstr "어디에서나 볼 수 있는 일반 및 파이썬 액션"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2668
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2672
 msgid ""
 "Mac, Windows and Unix actions are visible only on the respective platform "
 "(i.e., you can define three 'Edit' actions to open an editor and the users "
@@ -4870,7 +4867,7 @@ msgstr ""
 "각각 대응하는 플랫폼 상에서만 볼 수 있는 맥, 윈도우 및 유닉스 액션 (예를 들어, 편집기를 여는 '편집' 액션을 3개 정의해도 "
 "사용자는 편집기를 실행하는 플랫폼의 전용 '편집' 액션만을 보고 실행할 수 있습니다.)"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2672
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2676
 msgid ""
 "There are several examples included in the dialog. You can load them by "
 "clicking on :guilabel:`Create Default Actions`. To edit any of the examples,"
@@ -4881,7 +4878,7 @@ msgstr ""
 "액션들을 불러올 수 있습니다. 예시 액션을 편집하려면, 해당 행을 더블클릭하십시오. 예시 가운데 하나는 속성값을 기반으로 검색을 "
 "수행합니다. 다음 항에서 이 개념을 사용합니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2677
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2681
 msgid ""
 "The |checkbox| :guilabel:`Show in Attribute Table` allows you to display in "
 "the attribute table dialog the checked feature-scoped actions, either as "
@@ -4892,11 +4889,11 @@ msgstr ""
 "범위(feature-scoped) 액션들을 :guilabel:`Combo Box` 또는 :guilabel:`Separate "
 "Buttons` 가운데 하나로 표시할 수 있습니다. (:ref:`configure_table_columns` 참조)"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2687
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2691
 msgid "Defining Actions"
 msgstr "액션 정의하기"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2689
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2693
 msgid ""
 "To define an attribute action, open the vector :guilabel:`Layer Properties` "
 "dialog and click on the :guilabel:`Actions` tab. In the :guilabel:`Actions` "
@@ -4907,7 +4904,7 @@ msgstr ""
 " 선택하십시오. :guilabel:`Actions` 탭에서 |signPlus| :sup:`Add a new action` 을 클릭하면 "
 ":guilabel:`Edit Action` 대화창이 열립니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2694
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2698
 msgid ""
 "Select the action :guilabel:`Type` and provide a descriptive name for the "
 "action. The action itself must contain the name of the application that will"
@@ -4928,7 +4925,7 @@ msgstr ""
 " 큰따옴표로 여러 텍스트를 묶으면 프로그램, 스크립트 또는 명령어에 대한 단일 인자로 만들 수 있습니다. 큰따옴표 앞에 역 슬래시가 있을"
 " 경우 이를 무시할 것입니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2706
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2710
 msgid ""
 "The :guilabel:`Action Scopes` allows you to define *where* the action should"
 " be available. You have 4 different choices:"
@@ -4936,13 +4933,13 @@ msgstr ""
 ":guilabel:`Action Scopes` 는 **어디에서** 액션을 사용할 수 있어야 하는지를 정의할 수 있습니다. 다음 4개 "
 "가운데 선택할 수 있습니다:"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2709
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2713
 msgid ""
 ":guilabel:`Feature Scope`: action is available when right click in the cell "
 "within the attribute table."
 msgstr ":guilabel:`Feature Scope`: 속성 테이블에 있는 셀을 오른쪽 클릭하면 액션을 사용할 수 있습니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2711
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2715
 msgid ""
 ":guilabel:`Field Scope`: action is available when right click in the cell "
 "within the attribute table, in the feature form and in the default action "
@@ -4951,7 +4948,7 @@ msgstr ""
 ":guilabel:`Field Scope`: 속성 테이블에 있는 셀, 피처 양식, 그리고 메인 툴바의 기본 액션 버튼을 오른쪽 클릭하면 "
 "액션을 사용할 수 있습니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2714
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2718
 msgid ""
 ":guilabel:`Layer Scope`: action is available in the action button in the "
 "attribute table toolbar. Be aware that this type of action involves the "
@@ -4960,13 +4957,13 @@ msgstr ""
 ":guilabel:`Layer Scope`: 속성 테이블 툴바에 있는 액션 버튼으로 액션을 사용할 수 있습니다. 이 액션 유형은 단일 "
 "피처가 아니라 레이어 전체를 대상으로 한다는 점을 유의하십시오."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2717
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2721
 msgid ""
 ":guilabel:`Canvas`: action is available in the main action button in the "
 "toolbar."
 msgstr ":guilabel:`Canvas`: 툴바에 있는 메인 액션 버튼으로 액션을 사용할 수 있습니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2720
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2724
 msgid ""
 "If you have field names that are substrings of other field names (e.g., "
 "``col1`` and ``col10``), you should indicate that by surrounding the field "
@@ -4982,7 +4979,7 @@ msgstr ""
 "``%col1`` 필드명과 혼동하는 일을 피할 수 있습니다. QGIS가 ``%`` 문자열을 필드값으로 대체할 때 괄호를 제거할 것입니다."
 " 대체된 필드값이 꺾쇠괄호로 묶여 있길 바란다면, ``[[%col10]]`` 처럼 괄호를 두 번 치십시오."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2728
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2732
 msgid ""
 "Using the :guilabel:`Identify Features` tool, you can open the "
 ":guilabel:`Identify Results` dialog. It includes a *(Derived)* item that "
@@ -5001,19 +4998,19 @@ msgstr ""
 "필드들의 값을 사용할 수 있습니다. :guilabel:`Attribute Table` 대화창이 아니라 :guilabel:`Identify"
 " Results` 대화 상자에서만 이 파생 속성을 쓸 수 있습니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2740
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2744
 msgid "Two example actions are shown below:"
 msgstr "다음은 예시 액션 2개입니다:"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2742
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2746
 msgid "``konqueror https://www.google.com/search?q=%nam``"
 msgstr "``konqueror https://www.google.com/search?q=%nam``"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2743
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2747
 msgid "``konqueror https://www.google.com/search?q=%%``"
 msgstr "``konqueror https://www.google.com/search?q=%%``"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2745
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2749
 msgid ""
 "In the first example, the web browser konqueror is invoked and passed a URL "
 "to open. The URL performs a Google search on the value of the ``nam`` field "
@@ -5029,7 +5026,7 @@ msgstr ""
 "https://www.google.com/search?q=%nam`` 으로 다시 작성하면 됩니다. 이렇게 하면 액션을 작동시켰을 때 "
 "캉커러 응용 프로그램이 확실하게 실행될 것입니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2754
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2758
 msgid ""
 "The second example uses the \\%\\% notation, which does not rely on a "
 "particular field for its value. When the action is invoked, the \\%\\% will "
@@ -5039,11 +5036,11 @@ msgstr ""
 "두 번째 예시는 ``%%`` 기호를 사용하는데, 특정 필드에서 그 값을 불러오지 않는다는 뜻입니다. 액션을 작동시켰을 때, ``%%`` "
 "기호는 식별 결과 또는 속성 테이블에서 선택한 필드의 값으로 대체될 것입니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2763
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2767
 msgid "Using Actions"
 msgstr "액션 사용하기"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2765
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2769
 msgid ""
 "QGIS offers many ways to execute actions you enabled on a layer. Depending "
 "on their settings, they can be available:"
@@ -5051,7 +5048,7 @@ msgstr ""
 "QGIS는 사용자가 레이어 상에 활성화시킨 액션들을 실행시킬 수 있는 방법을  여러 개 제공하고 있습니다. 액션 설정에 따라, 다음과 "
 "같이 실행시킬 수 있습니다:"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2768
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2772
 msgid ""
 "in the drop-down menu of |actionRun| :sup:`Run Feature Action` button from "
 "the :guilabel:`Attributes toolbar` or :guilabel:`Attribute table` dialog;"
@@ -5059,7 +5056,7 @@ msgstr ""
 ":guilabel:`Attributes toolbar` 또는 :guilabel:`Attribute table` 대화창의 "
 "|actionRun| :sup:`Run Feature Action` 버튼의 드롭다운 메뉴를 통해"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2770
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2774
 msgid ""
 "when right-clicking a feature with the |identify| :sup:`Identify Features` "
 "tool (see :ref:`identify` for more information);"
@@ -5067,19 +5064,19 @@ msgstr ""
 "|identify| :sup:`Identify Features` 도구로 피처를 오른쪽 클릭했을 때 (자세한 내용은 "
 ":ref:`identify` 참조)"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2772
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2776
 msgid ""
 "from the :guilabel:`Identify Results` panel, under the :guilabel:`Actions` "
 "section;"
 msgstr ":guilabel:`Identify Results` 패널의 :guilabel:`Actions` 부분에서"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2773
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2777
 msgid ""
 "as items of an :guilabel:`Actions` column in the :guilabel:`Attribute Table`"
 " dialog."
 msgstr ":guilabel:`Attribute Table` 대화창에 있는 :guilabel:`Actions` 열의 항목으로"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2776
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2780
 msgid ""
 "If you are invoking an action that uses the ``%%`` notation, right-click on "
 "the field value in the :guilabel:`Identify Results` dialog or the "
@@ -5089,7 +5086,7 @@ msgstr ""
 "``%%`` 표기를 사용하는 액션을 작동시키는 경우, :guilabel:`Identify Results` 대화창 또는 "
 ":guilabel:`Attribute Table` 대화창에서 응용 프로그램 또는 스크립트에 전달하려는 필드값을 오른쪽 클릭하십시오."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2781
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2785
 msgid ""
 "Here is another example that pulls data out of a vector layer and inserts it"
 " into a file using bash and the ``echo`` command (so it will only work on "
@@ -5104,13 +5101,13 @@ msgstr ""
 "경도 ``long`` 필드를 가지고 있습니다. 서식지를 공간 선택(spatial selection)해서 (QGIS 맵 영역에서 노란색으로"
 " 표시된) 선택한 레코드의 필드값들을 텍스트 파일로 내보내려 합니다. 다음은 이 작업을 하기 위한 액션입니다:"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2795
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2799
 msgid ""
 "After selecting a few localities and running the action on each one, opening"
 " the output file will show something like this:"
 msgstr "서식지를 몇 개 선택해서 각각에 대해 액션을 실행한 다음, 산출 파일을 열면 다음과 비슷한 내용을 보게 될 겁니다:"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2807
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2811
 msgid ""
 "As an exercise, we can create an action that does a Google search on the "
 "``lakes`` layer. First, we need to determine the URL required to perform a "
@@ -5125,11 +5122,11 @@ msgstr ""
 "QGIS가 검색어인 구글 검색 URL 서식이 https://www.google.com/search?q=QGIS 라는 걸 알았습니다. 이때"
 " ``QGIS`` 가 검색어입니다. 이 정보를 가지고 다음 단계로 넘어가겠습니다:"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2814
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2818
 msgid "Make sure the ``lakes`` layer is loaded."
 msgstr "``lakes`` 레이어를 불러왔는지 확인합니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2815
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2819
 msgid ""
 "Open the :guilabel:`Layer Properties` dialog by double-clicking on the layer"
 " in the legend, or right-click and choose :menuselection:`Properties` from "
@@ -5138,29 +5135,29 @@ msgstr ""
 "범례에 있는 레이어를 더블클릭하거나, 또는 오른쪽 클릭한 다음 컨텍스트 메뉴에서 :menuselection:`Properties` 를 "
 "선택해서 :guilabel:`Layer Properties` 대화창을 엽니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2818
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2822
 msgid "Click on the :guilabel:`Actions` tab."
 msgstr ":guilabel:`Actions` 탭을 클릭합니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2819
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2823
 msgid "Click |signPlus| :sup:`Add a new action`."
 msgstr "|signPlus| :sup:`Add a new action` 아이콘을 클릭합니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2820
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2824
 msgid "Choose the :guilabel:`Open` action type,"
 msgstr ":guilabel:`Open` 액션 유형을 선택합니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2821
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2825
 msgid "Enter a name for the action, for example ``Google Search``."
 msgstr "액션명을, 예를 들어 ``Google Search`` 를 입력합니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2822
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2826
 msgid ""
 "Additionally you can add a :guilabel:`Short Name` or even an "
 ":guilabel:`Icon`."
 msgstr ":guilabel:`Short Name`, 또는 :guilabel:`Icon` 도 따로 추가할 수 있습니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2823
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2827
 msgid ""
 "Choose the action :guilabel:`Scope`. See :ref:`adding_actions` for further "
 "information. Leave the default settings for this example."
@@ -5168,7 +5165,7 @@ msgstr ""
 "액션의 :guilabel:`Scope` 를 선택하십시오. 더 자세한 내용은 :ref:`adding_actions` 를 참조하세요. 이 "
 "예시의 경우 기본 설정을 유지합니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2825
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2829
 msgid ""
 "For the action, we need to provide the name of the external program to run. "
 "In this case, we can use Firefox. If the program is not in your path, you "
@@ -5177,7 +5174,7 @@ msgstr ""
 "액션이 실행할 외부 프로그램의 명칭을 지정해야 합니다. 이 경우, 파이어폭스를 이용하겠습니다. 이 프로그램이 사용자 경로에 없을 경우, "
 "전체 경로를 입력해야 합니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2828
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2832
 msgid ""
 "Following the name of the external application, add the URL used for doing a"
 " Google search, up to but not including the search term: "
@@ -5186,7 +5183,7 @@ msgstr ""
 "외부 응용 프로그램 명칭 뒤에, 구글 검색 용 URL ``https://www.google.com//search?q=`` 를 추가합니다."
 " 검색어는 포함시키지 않습니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2831
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2835
 msgid ""
 "The text in the :guilabel:`Action` field should now look like this: "
 "``https://www.google.com//search?q=``"
@@ -5194,40 +5191,40 @@ msgstr ""
 ":guilabel:`Action` 란에 있는 텍스트가 이제 ``https://www.google.com//search?q=`` 여야 "
 "합니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2833
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2837
 msgid ""
 "Click on the drop-down box containing the field names for the ``lakes`` "
 "layer. It's located just to the left of the :guilabel:`Insert` button."
 msgstr ""
 "``lakes`` 레이어의 필드명을 담고 있는 드롭다운 박스를 클릭합니다. :guilabel:`Insert` 버튼 바로 왼쪽에 있습니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2835
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2839
 msgid "From the drop-down box, select 'NAMES' and click :guilabel:`Insert`."
 msgstr "드롭다운 박스에서 'NAMES' 를 선택한 다음 :guilabel:`Insert` 를 클릭합니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2836
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2840
 msgid "Your action text now looks like this:"
 msgstr "이제 사용자 액션 텍스트가 다음과 같이 보일 겁니다:"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2838
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2842
 msgid "``https://www.google.com//search?q=[%NAMES%]``"
 msgstr "``https://www.google.com//search?q=[%NAMES%]``"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2839
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2843
 msgid "To finalize and add the action, click the :guilabel:`OK` button."
 msgstr "액션 생성을 완료하고 추가하려면, :guilabel:`OK` 버튼을 클릭합니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2846
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2850
 msgid "Edit action dialog configured with the example"
 msgstr "예시 액션 환경을 설정한 액션 편집 대화창"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2848
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2852
 msgid ""
 "This completes the action, and it is ready to use. The final text of the "
 "action should look like this:"
 msgstr "이렇게 액션을 완성했습니다. 이제 사용할 준비가 끝났습니다. 최종 액션 텍스트는 다음과 같아야 합니다:"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2855
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2859
 msgid ""
 "We can now use the action. Close the :guilabel:`Layer Properties` dialog and"
 " zoom in to an area of interest. Make sure the ``lakes`` layer is active and"
@@ -5238,11 +5235,11 @@ msgstr ""
 "``lakes`` 레이어가 활성화돼 있는지 확인한 다음 호수를 식별하십시오. 식별 결과 창에 생성한 액션이 다음과 같이 추가된 것을 "
 "확인할 수 있습니다:"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2864
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2868
 msgid "Select feature and choose action"
 msgstr "객체 선택 및 액션 선택"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2866
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2870
 msgid ""
 "When we click on the action, it brings up Firefox and navigates to the URL "
 "https://www.google.com/search?q=Tustumena. It is also possible to add "
@@ -5255,7 +5252,7 @@ msgstr ""
 "이동합니다. 이 액션에 더 많은 속성 필드를 추가할 수도 있습니다. 액션 텍스트 마지막에 ``+`` 를 추가하고, 또다른 필드를 선택한 "
 "다음 :guilabel:`Insert Field` 버튼을 클릭하면 됩니다. 그런데 이 예제에는 검색할 의미가 있는 다른 필드가 없네요."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2873
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2877
 msgid ""
 "You can define multiple actions for a layer, and each will show up in the "
 ":guilabel:`Identify Results` dialog."
@@ -5263,13 +5260,13 @@ msgstr ""
 "레이어 하나에 액션을 여러 개 정의할 수 있고, 각각의 액션이 :guilabel:`Identify Results` 대화창에 표시될 "
 "겁니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2877
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2881
 msgid ""
 "You can also invoke actions from the attribute table by selecting a row and "
 "right-clicking, then choosing the action from the pop-up menu."
 msgstr "속성 테이블에서 행을 하나 선택하고 오른쪽 클릭한 다음, 컨텍스트 메뉴에서 액션을 선택해서 액션을 작동시킬 수도 있습니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2881
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2885
 msgid ""
 "There are all kinds of uses for actions. For example, if you have a point "
 "layer containing locations of images or photos along with a file name, you "
@@ -5282,13 +5279,13 @@ msgstr ""
 "표시할 뷰어를 실행시키는 액션을 생성할 수 있습니다. 또는 구글 검색 예제에서와 동일한 방법으로 설정해서 속성 필드 또는 필드 결합에 "
 "대한 웹 기반 보고를 수행하는 액션을 사용할 수도 있습니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2888
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2892
 msgid ""
 "We can also make more complex examples, for instance, using **Python** "
 "actions."
 msgstr "훨씬 복잡한 예제도 만들어볼 수 있습니다. 예를 들어, **파이썬** 액션을 이용해서 말이죠."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2891
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2895
 msgid ""
 "Usually, when we create an action to open a file with an external "
 "application, we can use absolute paths, or eventually relative paths. In the"
@@ -5301,7 +5298,7 @@ msgstr ""
 "외부 프로그램 실행 파일의 위치가 경로의 기준이 됩니다. 하지만 선택한 (Shapefile 또는 SpatiaLite 같은 파일 기반) "
 "레이어를 기준으로 하는 상대 경로를 사용해야 하는 경우라면 어떨까요? 다음 코드로 이 문제를 해결할 수 있습니다:"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2912
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2916
 msgid ""
 "We just have to remember that the action is one of type *Python* and the "
 "*command* and *imagerelpath* variables must be changed to fit our needs."
@@ -5309,14 +5306,14 @@ msgstr ""
 "이 액션이 *파이썬* 유형 가운데 하나이며 *command* 및 *imagerelpath* 변수를 사용자 필요에 맞춰 변경해야 한다는 "
 "점만 기억하면 됩니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2915
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2919
 msgid ""
 "But what about if the relative path needs to be relative to the (saved) "
 "project file? The code of the Python action would be:"
 msgstr ""
 "그런데 상대 경로의 기준이 (저장한) 프로젝트 파일 위치여야 하는 경우는 또 어떨까요? 이 경우 파이썬 액션의 코드는 다음처럼 변합니다:"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2929
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2933
 msgid ""
 "Another Python action example is the one that allows us to add new layers to"
 " the project. For instance, the following examples will add to the project "
@@ -5329,21 +5326,21 @@ msgstr ""
 "벡터와 래스터를 추가할 것입니다. 프로젝트에 추가되는 파일명 및 레이어에 할당되는 명칭은 데이터를 기반으로 합니다. (*filename*"
 " 및 *layername* 은 액션이 작동한 벡터의 속성 테이블에 있는 열들의 명칭입니다.)"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2942
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2946
 msgid "To add a raster (a TIF image in this example), it becomes:"
 msgstr "래스터를 (이 예제에서는 TIF 이미지를) 추가하려면 다음 코드를 사용합니다:"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2953
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2957
 msgid "Display Properties"
 msgstr "표시 속성"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2955
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2959
 msgid ""
 "|display| The :guilabel:`Display` tab helps you configure fields to use for "
 "feature identification:"
 msgstr "|display| :guilabel:`Display` 탭에서 피처 식별에 사용되는 필드의 환경을 설정할 수 있습니다:"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2958
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2962
 msgid ""
 "The :guilabel:`Display name`: based on a field or an :ref:`expression "
 "<vector_expressions>`. This is:"
@@ -5351,25 +5348,25 @@ msgstr ""
 ":guilabel:`Display name`: 필드 또는 :ref:`표현식 <vector_expressions>` 을 기반으로 하는 "
 "표시명입니다:"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2961
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2965
 msgid ""
 "the label shown on top of the feature information in the :ref:`Identify tool"
 " <identify>` results;"
 msgstr ":ref:`식별 도구 <identify>` 의 결과에서 피처 정보 최상단에 나타나는 라벨"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2963
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2967
 msgid ""
 "the field used in the :ref:`locator bar <locator_options>` when looking for "
 "features in all layers;"
 msgstr "모든 레이어에서 피처를 찾을 때 :ref:`위치 탐색란 <locator_options>` 에서 쓰이는 필드"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2965
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2969
 msgid ""
 "the feature identifier in the attribute table :ref:`form view "
 "<attribute_table_view>`;"
 msgstr "속성 테이블에 있는 :ref:`양식 뷰 <attribute_table_view>` 의 피처 식별자"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2967
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2971
 msgid ""
 "the map tip information, i.e. the message displayed in the map canvas when "
 "hovering over a feature of the active layer with the |mapTips| :sup:`Show "
@@ -5378,7 +5375,7 @@ msgstr ""
 "맵 도움말(map tip) 정보, 예를 들어 |mapTips| :sup:`Show Map Tips` 아이콘을 누른 상태에서 활성화된 "
 "레이어의 피처 위에 마우스를 가져갔을 때 맵 캔버스에 표시되는 메시지"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2971
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2975
 msgid ""
 "The :guilabel:`HTML Map Tip` is specifically created for the map tips: it's "
 "a more complex and full HTML text mixing fields, expressions and html tags "
@@ -5387,11 +5384,11 @@ msgstr ""
 ":guilabel:`HTML Map Tip` 은 맵 도움말을 위해 특별히 생성됩니다. 이 도움말은 필드, 표현식, 그리고 HTML "
 "태그(여러 줄, 글꼴, 이미지, 하이퍼링크 등등)을 섞은 더 복잡하고 풍성한 HTML 텍스트입니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2980
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2984
 msgid "HTML code for map tip"
 msgstr "맵 도움말 용 HTML 코드"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2983
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2987
 msgid ""
 "To activate map tips, select the menu option :menuselection:`View --> Show "
 "Map Tips` or click on the |mapTips| :sup:`Show Map Tips` icon of the "
@@ -5404,19 +5401,19 @@ msgstr ""
 "클릭하십시오. 맵 도움말은 교차 세션(cross-session) 기능으로, 한 번 활성화시키면 다시 비활성화시키기 전까지는 계속 활성화 "
 "상태로 ─ 심지어 QGIS를 종료하고 다시 시작(새 세션)해도 ─ 모든 프로젝트의 모든 레이어에 적용된다는 뜻입니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2994
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2998
 msgid "Map tip made with HTML code"
 msgstr "HTML 코드로 생성된 맵 도움말"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3001
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3005
 msgid "Rendering Properties"
 msgstr "렌더링 속성"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3004
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3008
 msgid "Scale dependent visibility"
 msgstr "축척에 따른 가시성"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3006
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3010
 msgid ""
 "You can set the :guilabel:`Maximum (inclusive)` and :guilabel:`Minimum "
 "(exclusive)` scale, defining a range of scale in which features will be "
@@ -5430,11 +5427,11 @@ msgstr ""
 ":sup:`Set to current canvas scale` 버튼을 클릭하면 현재 맵 캔버스의 축척을 가시성 범위의 한계값으로 설정할 "
 "수 있습니다. 자세한 내용은 :ref:`label_scaledepend` 을 참조하세요."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3014
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3018
 msgid "Simplify geometry"
 msgstr "도형 단순화"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3016
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3020
 msgid ""
 "QGIS offers support for on-the-fly feature generalisation. This can improve "
 "rendering times when drawing many complex features at small scales. This "
@@ -5448,11 +5445,11 @@ msgstr ""
 "있습니다. 새로 추가하는 레이어에 대해 기본적으로 단순화를 활성화시키는 전체 수준 설정도 있습니다. (자세한 정보는 :ref:`전체 수준"
 " 단순화 <global_simplification>` 를 참조하세요.)"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3028
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3032
 msgid "Layer Geometry Simplification dialog"
 msgstr "레이어 도형 단순화 대화창"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3032
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3036
 msgid ""
 "Feature generalisation may introduce artefacts into your rendered output in "
 "some cases. These may include slivers between polygons and inaccurate "
@@ -5461,7 +5458,7 @@ msgstr ""
 "피처 단순화는 어떤 경우 사용자의 렌더링된 산출물에 오류를 남길 수도 있습니다. 폴리곤들 사이의 조각이거나, 오프셋 기반 심볼 레이어를 "
 "이용한 경우 부정확한 렌더링의 결과일 수도 있습니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3037
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3041
 msgid ""
 "While rendering extremely detailed layers (e.g. polygon layers with a huge "
 "number of nodes), this can cause layout exports in PDF/SVG format to be huge"
@@ -5472,7 +5469,7 @@ msgstr ""
 " 조판기가 내보낸 PDF/SVG 포맷 파일의 용량이 터무니없이 커질 수도 있습니다. 또다른 프로그램에서 해당 파일을 열거나 편집할 때 "
 "아주 느려질 수도 있습니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3042
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3046
 msgid ""
 "Checking |checkbox| :guilabel:`Force layer to render as raster` forces these"
 " layers to be rasterised so that the exported files won't have to include "
@@ -5482,7 +5479,7 @@ msgstr ""
 "|checkbox| :guilabel:`Force layer to render as raster` 를 활성화하면 이런 레이어를 강제로 "
 "래스터화해서 내보내기 파일이 해당 레이어가 담고 있는 모든 노드를 포함할 필요가 없도록 합니다. 따라서 렌더링 속도도 향상됩니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3046
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3050
 msgid ""
 "You can also do this by forcing the layout to export as a raster, but that "
 "is an all-or-nothing solution, given that the rasterisation is applied to "
@@ -5491,7 +5488,7 @@ msgstr ""
 "조판기에서 래스터로 내보내도록 강제해도 동일한 결과를 얻을 수 있지만, 이 방법은 모든 레이어를 래스터화하기 때문에 마지막 수단으로 "
 "남겨두어야 합니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3050
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3054
 msgid ""
 ":guilabel:`Refresh layer at interval (seconds)`: set a timer to "
 "automatically refresh individual layers at a matching interval. Canvas "
@@ -5502,7 +5499,7 @@ msgstr ""
 " 새로고침하도록 설정합니다. 하나 이상의 레이어에 자동 업데이트 간격을 설정한 경우 여러번 새로고침하지 않도록 캔버스 업데이트를 "
 "연기합니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3055
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3059
 msgid ""
 "Depending on the data provider (e.g. PostgreSQL), notifications can be sent "
 "to QGIS when changes are applied to the data source, out of QGIS. Use the "
@@ -5515,11 +5512,11 @@ msgstr ""
 "촉발하십시오. 특정 메시지에만 레이어를 새로고침하도록 |checkbox| :guilabel:`Only if message is` "
 "텍스트란에 메시지를 설정할 수도 있습니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3066
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3070
 msgid "Variables Properties"
 msgstr "변수 속성"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3068
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3072
 msgid ""
 "|expression| The :guilabel:`Variables` tab lists all the variables available"
 " at the layer's level (which includes all global and project's variables)."
@@ -5527,7 +5524,7 @@ msgstr ""
 "|expression| :guilabel:`Variables` 탭은 레이어 수준에서 쓸 수 있는 모든 변수들의 목록을 표시합니다. (전체"
 " 및 프로젝트 수준의 모든 변수를 포함합니다.)"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3071
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3075
 msgid ""
 "It also allows the user to manage layer-level variables. Click the "
 "|signPlus| button to add a new custom layer-level variable. Likewise, select"
@@ -5537,7 +5534,7 @@ msgstr ""
 "또한 사용자가 레이어 수준 변수를 관리할 수도 있습니다. |signPlus| 버튼을 클릭해서 새 사용자 지정 레이어 수준 변수를 "
 "추가합니다. 마찬가지로, 목록에서 사용자 지정 레이어 수준 변수를 선택한 다음 |signMinus| 버튼을 클릭해서 제거합니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3076
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3080
 msgid ""
 "More information on variables usage in the General Tools "
 ":ref:`general_tools_variables` section."
@@ -5545,11 +5542,11 @@ msgstr ""
 ":ref:`general_tools` 장의 :ref:`general_tools_variables` 절에서 변수에 관한 더 자세한 정보를 "
 "살펴볼 수 있습니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3084
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3088
 msgid "Metadata Properties"
 msgstr "메타데이터 속성"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3086
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3090
 msgid ""
 "|editMetadata| The :guilabel:`Metadata` tab provides you with options to "
 "create and edit a metadata report on your layer. Information to fill "
@@ -5558,50 +5555,50 @@ msgstr ""
 "|editMetadata| :guilabel:`Metadata` 탭은 사용자 레이어에 대한 메타데이터 보고서를 생성하고 편집할 수 있는 "
 "옵션들을 제공합니다. 채워야 할 정보는 다음과 같습니다:"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3089
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3093
 msgid ""
 "the data :guilabel:`Identification`: basic attribution of the dataset "
 "(parent, identifier, title, abstract, language...);"
 msgstr "데이터 :guilabel:`Identification`: 데이터의 기본 속성(페어런트, 식별자, 타이틀, 요약, 언어 등등)"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3091
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3095
 msgid ""
 "the :guilabel:`Categories` the data belongs to. Alongside the **ISO** "
 "categories, you can add custom ones;"
 msgstr ""
 "데이터가 속한 :guilabel:`Categories`: **ISO** 범주들과 함께 사용자 지정 범주도 추가할 수 있습니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3093
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3097
 msgid ""
 "the :guilabel:`Keywords` to retrieve the data and associated concepts "
 "following a standard based vocabulary;"
 msgstr ":guilabel:`Keywords`: 데이터 및 관련 개념을 표준 어휘를 따라 검색하기 위한 키워드"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3095
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3099
 msgid ""
 "the :guilabel:`Access` to the dataset (licenses, rights, fees, and "
 "constraints);"
 msgstr ":guilabel:`Access`: 데이터셋에 접근하기 위한 정보(라이선스, 권한, 비용 및 제약조건)"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3096
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3100
 msgid ""
 "the :guilabel:`Extent` of the dataset, either spatial one (CRS, map extent, "
 "altitudes) or temporal;"
 msgstr ":guilabel:`Extent`: 데이터셋의 공간(좌표계, 맵 범위, 고도) 또는 시계열 범위"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3098
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3102
 msgid "the :guilabel:`Contact` of the owner(s) of the dataset;"
 msgstr ":guilabel:`Contact`: 데이터셋 소유자(들)의 정보"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3099
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3103
 msgid "the :guilabel:`Links` to ancillary resources and related information;"
 msgstr ":guilabel:`Links`: 보조 리소스 및 관련 정보를 가리키는 링크"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3100
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3104
 msgid "the :guilabel:`History` of the dataset."
 msgstr ":guilabel:`History`: 데이터셋의 이력"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3102
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3106
 msgid ""
 "A summary of the filled information is provided in the "
 ":guilabel:`Validation` tab and helps you identify potential issues related "
@@ -5610,20 +5607,18 @@ msgstr ""
 ":guilabel:`Validation` 탭에서 이렇게 채워진 정보를 요약해서 제공하며 양식과 관련된 잠재적인 문제점들을 식별할 수 "
 "있습니다. 그 다음 문제점을 해결하거나 무시할 수 있습니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3106
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3110
 msgid ""
-"Metadata are currently saved in the project file. It can also be saved as an"
-" :file:`.XML` file alongside file based layers or in a local :file:`.sqlite`"
-" database for remote layers (e.g. PostGIS)."
+"Metadata are currently saved in the project file. They can also be saved in "
+"a :file:`.qmd` file alongside file based layers or in a local "
+":file:`.sqlite` database for remote layers (e.g. PostGIS)."
 msgstr ""
-"메타데이터는 현재 프로젝트 파일에 저장됩니다. 메타데이터를 파일 기반 레이어와 함께 :file:`.XML` 파일로 저장할 수도 있고, "
-"또는 원격 레이어(예: PostGIS)의 경우 로컬 :file:`.sqlite` 데이터베이스에 저장할 수도 있습니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3114
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3118
 msgid "Dependencies Properties"
 msgstr "의존성 속성"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3116
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3120
 msgid ""
 "|dependencies| The :guilabel:`Dependencies` tab allows to declare data "
 "dependencies between layers. A data dependency occurs when a data "
@@ -5637,7 +5632,7 @@ msgstr ""
 "발생합니다. 예를 들면 레이어의 도형을 수정한 후 데이터베이스 트리거 또는 사용자 지정 PyQGIS 스크립트 작업이 또다른 레이어의 "
 "도형을 업데이트하는 경우를 말합니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3123
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3127
 msgid ""
 "In the :guilabel:`Dependencies` tab, you can select any layers which may "
 "externally alter the data in the current layer. Correctly specifying "
@@ -5647,11 +5642,11 @@ msgstr ""
 ":guilabel:`Dependencies` 탭에서 현재 레이어의 데이터를 외부적으로 변경할 수도 있는 어떤 레이어도 선택할 수 "
 "있습니다. 의존 레이어를 정확하게 지정하면, 의존 레이어가 변경됐을 때 QGIS가 선택한 레이어의 캐시를 무효화할 수 있습니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3133
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3137
 msgid "Legend Properties"
 msgstr "범례 속성"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3135
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3139
 msgid ""
 "|legend| The :guilabel:`Legend` properties tab provides you with advanced "
 "settings for the :ref:`Layers panel <label_legend>` and/or the :ref:`print "
@@ -5660,7 +5655,7 @@ msgstr ""
 "|legend| :guilabel:`Legend` 속성 탭은 :ref:`레이어 패널 <label_legend>` 그리고/또는 "
 ":ref:`인쇄 조판기 범례 <layout_legend_item>` 를 위한, 다음과 같은 옵션을 포함하는 고급 설정을 제공합니다:"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3139
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3143
 msgid ""
 "|checkbox| :guilabel:`Text on symbols`: In some cases it can be useful to "
 "add extra information to the symbols in the legend. With this frame, you can"
@@ -5677,13 +5672,13 @@ msgstr ""
 " Labels from Expression` 버튼으로 테이블을 채우면 심볼과 텍스트를 매핑할 수 있습니다. :guilabel:`Text "
 "Format` 버튼의 글꼴 위젯과 색상 선택기 위젯을 통해 텍스트의 모양을 설정합니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3153
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3157
 msgid ""
 "Setting text on symbols (left) and its rendering in the :guilabel:`Layers` "
 "panel (right)"
 msgstr "심볼 위에 텍스트 설정(좌), :guilabel:`Layers` 패널에서 텍스트 렌더링 설정(우)"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3155
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3159
 msgid ""
 "a list of widgets you can embed within the layer tree in the Layers panel. "
 "The idea is to have a way to quickly access some actions that are often used"
@@ -5693,7 +5688,7 @@ msgstr ""
 "레이어 패널에 있는 레이어 트리 안에 삽입할 수 있는 위젯 목록 가운데 위젯을 선택할 수 있습니다. 레이어 작업 시 자주 쓰이는 몇몇 "
 "액션(투명도, 필터링, 선택, 스타일, 기타 등등의 설정)에 빨리 접근하기 위한 방법으로 사용됩니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3160
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3164
 msgid ""
 "By default, QGIS provides transparency widget but this can be extended by "
 "plugins registering their own widgets and assign custom actions to layers "
@@ -5702,11 +5697,11 @@ msgstr ""
 "QGIS가 기본적으로 투명도 위젯을 제공하고는 있지만, 자체 위젯을 등록하고 플러그인이 관리하는 레이어에 사용자 지정 액션을 할당하는 "
 "플러그인으로 위젯 목록을 확장할 수 있습니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3170
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3174
 msgid "QGIS Server Properties"
 msgstr "QGIS 서버 속성"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3172
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3176
 msgid ""
 "|overlay| The :guilabel:`QGIS Server` tab consists of "
 ":guilabel:`Description`, :guilabel:`Attribution`, :guilabel:`MetadataURL`, "
@@ -5716,7 +5711,7 @@ msgstr ""
 ":guilabel:`Attribution`, :guilabel:`MetadataURL`, 그리고 :guilabel:`LegendUrl` "
 "부분으로 이루어져 있습니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3175
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3179
 msgid ""
 "You can add or edit a title and abstract for the layer in the "
 ":guilabel:`Description` section. It's also possible to define a "
@@ -5728,13 +5723,13 @@ msgstr ""
 "여기에서:guilabel:`Keyword list` 를 정의할 수도 있습니다. 이 키워드 목록은 메타데이터 카탈로그에서 이용할 수 "
 "있습니다. XML 메타데이터 파일에서 제목을 사용하려 하는 경우, :guilabel:`DataUrl` 란에 링크를 입력해야 합니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3181
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3185
 msgid ""
 "Use :guilabel:`Attribution` to get attribute data from an XML metadata "
 "catalog."
 msgstr "XML 메타데이터 카탈로그에서 속성 데이터를 얻으려면 :guilabel:`Attribution` 부분을 이용하십시오."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3183
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3187
 msgid ""
 "In :guilabel:`MetadataUrl`, you can define the general path to the XML "
 "metadata catalog. This information will be saved in the QGIS project file "
@@ -5743,7 +5738,7 @@ msgstr ""
 ":guilabel:`MetadataUrl` 부분에서 XML 메타데이터 카탈로그를 가리키는 일반 경로를 정의할 수 있습니다. 이 정보는 "
 "향후 세션을 위해 QGIS 프로젝트 파일에 저장되며, QGIS 서버에서 사용될 것입니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3187
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3191
 msgid ""
 "In the :guilabel:`LegendUrl` section, you can provide the url of a legend "
 "image in the url field. You can use the Format drop-down option to apply the"
@@ -5754,30 +5749,30 @@ msgstr ""
 ":guilabel:`Format` 드롭다운 옵션을 이용해서 해당 이미지의 적절한 포맷을 적용시키십시오. 현재 PNG, JPG 및 JPEG"
 " 이미지 포맷을 지원하고 있습니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3196
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3200
 msgid "QGIS Server tab in vector layers properties dialog"
 msgstr "벡터 레이어 속성 대화창의 QGIS 서버 탭"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3201
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3205
 msgid "Digitizing Properties"
 msgstr "디지타이즈 작업 속성"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3203
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3207
 msgid ""
 "|digitizing| The :guilabel:`Digitizing` tab gives access to options that "
 "help to ensure the quality of digitized geometries."
 msgstr ""
 "|digitizing| :guilabel:`Digitizing` 탭은 디지타이즈한 도형의 질을 보장하도록 하는 옵션들을 제공합니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3211
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3215
 msgid "The QGIS Digitizing tab in the vector layers properties dialog"
 msgstr "벡터 레이어 속성 대화창의 QGIS 디지타이즈 작업 탭"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3214
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3218
 msgid "Automatic Fixes"
 msgstr "자동 수정"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3216
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3220
 msgid ""
 "Options in the :guilabel:`Automatic Fixes` section will directly affect the "
 "vertices of any geometry which is added or modified. If the |checkbox| "
@@ -5795,11 +5790,11 @@ msgstr ""
 " 설정한 도형 정밀도의 가장 가까운 배수로 반올림될 것입니다. 이 반올림은 레이어 좌표 참조 시스템에서 일어납니다. Z 및 M값은 "
 "반올림되지 않습니다. 디지타이즈 작업 도중 캔버스 상에 그리드가 여러 맵 도구들과 함께 나타납니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3226
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3230
 msgid "Geometry Checks"
 msgstr "도형 점검"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3228
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3232
 msgid ""
 "In the :guilabel:`Geometry checks` section, additional validations on a per "
 "geometry basis can be activated. Immediately after any geometry "
@@ -5813,11 +5808,11 @@ msgstr ""
 "레이어를 저장할 수는 없습니다. |checkbox| :guilabel:`Is valid` 옵션을 체크하면 도형에 대해 자체 교차 같은 "
 "기본 유효성 점검을 실행할 것입니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3236
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3240
 msgid "Topology Checks"
 msgstr "위상 점검"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3238
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3242
 msgid ""
 "In the :guilabel:`Topology checks` section, additional topology validation "
 "checks can be activated. Topology checks will be executed when the user "
@@ -5833,27 +5828,27 @@ msgstr ""
 "레이어를 저장할 수는 없습니다. 위상 점검은 수정한 피처의 경계상자 영역 안에서 실행됩니다. 동일한 영역에 다른 피처가 존재할 수도 있기"
 " 때문에, 현재 편집 세션에서 발생한 오류는 물론 이런 피처와 관련된 위상적 오류도 보고 메시지에 포함됩니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3250
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3254
 msgid "Topology check option"
 msgstr "위상 점검 옵션"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3251
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3255
 msgid "Illustration"
 msgstr "실제 예시"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3252
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3256
 msgid ""
 "The |checkbox| :guilabel:`Gap` check will check for gaps between "
 "neighbouring polygons."
 msgstr "|checkbox| :guilabel:`Gap`: 인접한 폴리곤들 사이의 틈을 점검할 것입니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3255
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3259
 msgid ""
 "The |checkbox| :guilabel:`Overlap` check will check for overlaps between "
 "neighbouring polygons."
 msgstr "|checkbox| :guilabel:`Overlap`: 인접한 폴리곤들 사이의 중첩을 점검할 것입니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3258
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3262
 msgid ""
 "The |checkbox| :guilabel:`Missing vertex` check will check for shared "
 "boundaries of neighbouring polygons where one border misses a vertex which "
@@ -5862,11 +5857,11 @@ msgstr ""
 "|checkbox| :guilabel:`Missing vertex`: 인접한 폴리곤들이 경계선을 공유하는데 한쪽 경계에 있는 꼭짓점이 "
 "다른쪽 경계에 없는 경우 빠진 꼭짓점을 점검할 것입니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3265
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3269
 msgid "Gap check exceptions"
 msgstr "틈 점검의 예외"
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3267
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3271
 msgid ""
 "Sometimes it is desirable to keep gaps inside an area in a polygon layer "
 "that otherwise is fully covered by polygons. For example, a land use layer "
@@ -5878,7 +5873,7 @@ msgstr ""
 " 이용 레이어는 호수를 나타내는, 받아들일 수 있는 구멍을 가지고 있을 수도 있습니다. 영역이 틈 점검에서 무시당하도록 정의할 수도 "
 "있습니다. 이런 영역 안에서는 틈이 허용되기 때문에, 이런 틈을 *허용된 틈(Allowed Gap)* 영역이라고 부르도록 하겠습니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3273
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3277
 msgid ""
 "In the options for the gap checks under :guilabel:`Allowed Gaps`, an "
 "*Allowed Gaps layer* can be configured."
@@ -5886,14 +5881,14 @@ msgstr ""
 ":guilabel:`Allowed Gaps` 아래 있는 틈 점검을 위한 옵션에서, *허용된 틈 레이어(Allowed Gaps "
 "layer)* 의 환경을 설정할 수 있습니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3276
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3280
 msgid ""
 "Whenever the gap check is executed, gaps which are covered by one or more "
 "polygons in the *Allowed Gaps Layer* are not reported as topology errors."
 msgstr ""
 "틈 점검을 실행할 때마다, *허용된 틈 레이어* 에서 하나 또는 그 이상의 폴리곤으로 덮혀 있는 틈은 위상 오류로 보고되지 않습니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3279
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3283
 msgid ""
 "It is also possible to configure an additional :guilabel:`Buffer`. This "
 "buffer is applied to each polygon on the *Allowed Gaps Layer*. This makes it"
@@ -5903,7 +5898,7 @@ msgstr ""
 "추가적인 :guilabel:`Buffer` 를 설정할 수도 있습니다. 이 버퍼는 *허용된 틈 레이어* 상의 각 폴리곤에 적용됩니다. "
 "이렇게 버퍼를 설정하면 틈 경계의 외곽선을 자잘하게 변경하더라도 틈 점검이 민감하게 잡아내지 않도록 할 수 있습니다."
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3284
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3288
 msgid ""
 "When *Allowed Gaps* are enabled, an additional button (:guilabel:`Add "
 "Allowed Gap`) for detected gap errors is available in the geometry "

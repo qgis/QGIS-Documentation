@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-26 13:13+0200\n"
+"POT-Creation-Date: 2020-09-24 11:25+0200\n"
 "PO-Revision-Date: 2020-03-16 19:26+0000\n"
 "Last-Translator: tomoyuki arai <tarai.3367@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
@@ -305,18 +305,18 @@ msgstr ""
 msgid ""
 "No reprojection is done while rendering the layers: features are just drawn "
 "using their raw coordinates."
-msgstr ""
+msgstr "レイヤのレンダリング時に再投影は行われません。地物は生の座標を使って描画されるだけです。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:174
 msgid "The ellipsoid is locked out and forced to ``None/Planimetric``."
-msgstr ""
+msgstr "距離面積の計算で前提となる楕円体は強制的に「None/Planimetric」で固定されます。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:175
 msgid ""
 "The distance and area units, and the coordinate display are locked out and "
 "forced to \"unknown units\"; all measurements are done in unknown map units,"
 " and no conversion is possible."
-msgstr ""
+msgstr "距離や面積の単位、座標表示は強制的に「不明な単位」で固定され、距離や面積の測定値はすべて未知の地図単位となり、変換はできません。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:179
 msgid ""
@@ -327,6 +327,8 @@ msgid ""
 "regardless their original CRS. Use of units and ellipsoid setting are "
 "available and make sense and you can perform calculations accordingly."
 msgstr ""
+"または、既存の座標参照系で *地理的座標系* 、 *投影された座標系* あるいは *ユーザ定義の座標系* "
+"を使用することができます。CRSの地球上における適用範囲のプレビューが表示されるため、適切なCRSを選択するのに役立ちます。プロジェクトに追加されたレイヤは、重ね合わせるために元のCRSに関係なくオンザフライでこのCRSに変換されます。使用する単位や楕円体の設定が可能かつ意味があり、これに応じて距離や面積の計算を行うことができます。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:186
 msgid ""
@@ -338,27 +340,27 @@ msgid ""
 " one of these CRSs will also set your project to measure using feet by "
 "default."
 msgstr ""
-"QGISプロジェクトに新しいCRSを選択するたびに、測定単位は :guilabel:`プロジェクトのプロパティ` ダイアログの "
-":guilabel:`一般` タブで自動的に変更されます（ :menuselection:`プロジェクト->プロパティ...` "
-"）選択したCRSに一致します。たとえば、一部のCRSはメートルではなくフィートで座標を定義するため、QGISプロジェクトをこれらのCRSのいずれかに設定すると、デフォルトでフィートを使用して測定するようにプロジェクトが設定されます。"
+"QGISプロジェクトで新しいCRSを選択すると、 :guilabel:`プロジェクトのプロパティ` ダイアログ（ "
+":menuselection:`プロジェクト->プロパティ...` ）の :guilabel:`一般情報` "
+"タブにある計測単位が選択したCRSに適合するように自動的に変更されます。たとえば、一部のCRSは座標をメートルではなくフィートで定義するため、QGISプロジェクトをこれらのCRSのいずれかに設定すると、デフォルトでフィートを使用して測定するようにプロジェクトが設定されます。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:193
 msgid "**Setting the project CRS from a layer**"
-msgstr ""
+msgstr "**レイヤのCRSをプロジェクトに設定する**"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:195
 msgid "You can assign a CRS to the project using a layer CRS:"
-msgstr ""
+msgstr "レイヤのCRSを使用して、プロジェクトにCRSを割り当てることができます。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:197
 msgid ""
 "In the :guilabel:`Layers` panel, right-click on the layer you want to pick "
 "the CRS"
-msgstr ""
+msgstr ":guilabel:`レイヤ` パネルでCRSを使用したいレイヤを右クリックする"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:199
 msgid "Select :guilabel:`Set project CRS from Layer`."
-msgstr ""
+msgstr ":guilabel:`レイヤのCRSをプロジェクトに設定` を選択する"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:201
 msgid ""
@@ -366,16 +368,18 @@ msgid ""
 "coordinates display are updated accordingly and all the layers in the "
 "project are on-the-fly translated to the new project CRS."
 msgstr ""
+"プロジェクトのCRSはレイヤのCRSで再定義されます。マップキャンバスの範囲や座標表示はこれに応じて更新され、プロジェクト内の全てのレイヤがオンザフライで新しいプロジェクトのCRSに変換されます。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:210
 msgid "Coordinate Reference System Selector"
-msgstr "座標系選択"
+msgstr "座標参照系の選択"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:212
 msgid ""
 "This dialog helps you assign a Coordinate Reference System to a project or a"
 " layer, provided a set of projection databases. Items in the dialog are:"
-msgstr "このダイアログは、投影データベースのセットを提供するプロジェクトまたはレイヤーに座標系を割り当てるのに役立ちます。ダイアログ内の項目は："
+msgstr ""
+"このダイアログには投影法データベースが備わっており、プロジェクトやレイヤに対して座標参照系を割り当てるのに役立ちます。ダイアログ内の項目には以下のものがあります："
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:215
 msgid ""
@@ -383,7 +387,7 @@ msgid ""
 "Coordinate Reference System, you can use the search feature to find it. "
 "Enter the EPSG code, the identifier or the name."
 msgstr ""
-"**フィルタ** ：利用したい座標系のEPSG コードの識別子または名前を知っている場合は、検索機能を使用して見つけることができます  EPSG "
+"**フィルター** ：利用したい座標系のEPSG コードの識別子または名前を知っている場合は、検索機能を使用して見つけることができます  EPSG "
 "コードの識別子、または名前を入力して下さい。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:218
@@ -392,8 +396,8 @@ msgid ""
 "that you frequently use in your everyday GIS work, these will be displayed "
 "in this list. Click on one of these items to select the associated CRS."
 msgstr ""
-"**最近利用した座標参照系** "
-"：日常のGISでの作業でよく使うCRSがあれば、このリストに表示されます。これらのひとつをクリックすると,CRSを選択できます。"
+"**最近使用したCRS** "
+"：日常のGIS作業でよく使うCRSがあれば、このリストに表示されます。これらのいずれかひとつをクリックするとCRSを選択できます。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:221
 msgid ""
@@ -402,15 +406,16 @@ msgid ""
 "reference systems. To define a CRS, select it from the list by expanding the"
 " appropriate node and selecting the CRS. The active CRS is preselected."
 msgstr ""
-"**世界の座標参照系** "
-"：これは、投影された地理的、およびカスタムは、基準座標系を含め、QGISでサポートされているすべてのCRSのリストです。CRSを定義するには、該当するノードを展開し、CRSを選択して、リストから選択します。アクティブCRSは、予め選択されています。"
+"**あらかじめ定義されたCRS** "
+"：これは、地理的座標系、投影された座標系およびユーザ定義の座標系など、QGISでサポートされているすべてのCRSのリストです。CRSを定義するには、該当するノードを展開してリストからCRSを選択します。現在アクティブなCRSは事前に選択されています。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:225
 msgid ""
 "**PROJ text**: This is the CRS string used by the PROJ projection engine. "
 "This text is read-only and provided for informational purposes."
 msgstr ""
-"**PROJ text** ：投影変換エンジンであるPROJで使われるCRS文字列です。この文字列は読み取り専用で、情報提供のために提供されます。"
+"**PROJ text** "
+"：投影変換エンジンであるPROJで使われるCRS文字列です。この文字列は読み取り専用であり、情報提供のために表示されています。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:228
 msgid ""
@@ -421,7 +426,7 @@ msgid ""
 "whenever a CRS is selected from the list. In addition, this preview map also"
 " shows an indicator of the current main canvas map extent."
 msgstr ""
-"CRSセレクタには、選択したCRSが有効に使用されている地理的領域の大まかなプレビューも表示されます。多くのCRSは、狭い地理的領域でのみ使用するように設計されています。これらのCRSは、設計された領域以外では使用しないでください。プレビュー地図は、CRSがリストから選択されるたびに、おおよその使用領域をシェーディングします。さらに、このプレビュー地図には、現在のメインキャンバス地図範囲のインジケータも表示されます。"
+"座標参照系のセレクタには、選択したCRSが使用可能な地理的領域の大まかなプレビューも表示されます。多くのCRSは、狭い地理的領域でのみ使用するように設計されているため、設計された領域以外では使用しないようにしてください。プレビュー地図は、CRSがリストから選択されるたびに、おおよその使用可能領域をシェーディングします。さらに、このプレビュー地図には現在のメインキャンバス地図範囲の目安も表示されます。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:241
 msgid "Custom Coordinate Reference System"
@@ -436,8 +441,8 @@ msgid ""
 " this database also contains your spatial bookmarks and other custom data."
 msgstr ""
 "QGISで必要な座標参照系が提供されていない場合は、カスタムCRSを定義できます。CRSを定義するには :menuselection:`設定` メニュー"
-" から |customProjection| :guilabel:`カスタムCRS...` "
-"を選択します。カスタムCRSはQGISのユーザーデータベースに格納されます。カスタムのCRSに加えて、このデータベースには、空間ブックマークやその他のカスタムデータが含まれます。"
+" から |customProjection| :guilabel:`カスタム投影法...` "
+"を選択します。カスタムCRSはQGISのユーザデータベースに格納されます。カスタムCRSに加えて、このデータベースには空間ブックマークやその他のカスタムデータも含まれています。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:254
 msgid "Custom CRS Dialog"
@@ -451,6 +456,10 @@ msgid ""
 "Geological Survey Open-File Report 90-284, 1990 (available at "
 "https://pubs.usgs.gov/of/1990/of90-284/ofr90-284.pdf)."
 msgstr ""
+"QGISでカスタムCRSを定義するには、PROJ投影ライブラリの十分な理解が必要です。まずは Gerald I. Evenden "
+"による1990年の米国地質調査所オープンファイルレポート90-284「Cartographic Projection Procedures for "
+"the UNIX Environment - A User's Manual」を参照してください（ "
+"https://pubs.usgs.gov/of/1990/of90-284/ofr90-284.pdf から入手可能です）。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:263
 msgid ""
@@ -458,14 +467,14 @@ msgid ""
 "utilities. The cartographic parameters used with ``proj`` are described in "
 "the user manual and are the same as those used by QGIS."
 msgstr ""
-"このマニュアルは、 ``proj`` および関連コマンドラインユーティリティの使用を記載しています。 ``proj`` "
-"と共に使用される地図作成パラメータは、ユーザマニュアルで説明され、QGISで使用されるものと同じです。"
+"このマニュアルには、 ``proj`` および関連するコマンドラインユーティリティの使用方法が説明されています。 ``proj`` "
+"で使用される地図パラメータはこのユーザマニュアルに記載されており、QGISも同じものを使っています。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:267
 msgid ""
 "The :guilabel:`Custom Coordinate Reference System Definition` dialog "
 "requires only two parameters to define a user CRS:"
-msgstr ":guilabel:`カスタム座標参照系定義` ダイアログでは、CRSを定義するために必要とするパラメーターは２つだけです。"
+msgstr ":guilabel:`カスタム座標参照系の定義` ダイアログでは、CRSを定義するために必要とするパラメーターは２つだけです。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:270
 msgid "A descriptive name"
@@ -473,19 +482,21 @@ msgstr "わかりやすい名前"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:271
 msgid "The cartographic parameters in PROJ or WKT format"
-msgstr ""
+msgstr "PROJまたはWKT形式の地図パラメータ"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:273
 msgid ""
 "To create a new CRS, click the |signPlus| :sup:`Add new CRS` button, enter a"
 " descriptive name, select the format, and the CRS parameters."
 msgstr ""
+"新しいCRSを作成するには、 |signPlus| :sup:`新規CRSを追加` "
+"ボタンをクリックし、わかりやすい名前を入力し、フォーマットを選択してCRSパラメータを入力します。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:276
 msgid ""
 "Click :guilabel:`Validate` to test whether the CRS definition is an "
 "acceptable projection definition."
-msgstr ""
+msgstr ":guilabel:`検証` ボタンをクリックすると、CRSの定義が問題ない投影定義であるかどうかをテストします。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:279
 msgid ""
@@ -495,24 +506,26 @@ msgid ""
 "and compare the results with the known values in your coordinate reference "
 "system."
 msgstr ""
-"まともな結果が得られるかを見ることで、CRSパラメーターをテストできます。これを行うには、知っているWGS84緯度経度の値を :guilabel:`北`"
-" 、 :guilabel:`東` フィールドにそれぞれ入力します。 :guilabel:`計算` "
-"をクリックして、出てきた結果と、定義したCRSでの知っている値とを比較します。"
+"CRSのパラメータをテストして、正常な結果が得られるかどうかを確認することができます。これを行うには、既知のWGS84の緯度と経度の値をそれぞれ "
+":guilabel:`北` 、 :guilabel:`東` フィールドに入力します。 :guilabel:`計算` "
+"をクリックして、結果を座標参照系の既知の値と比較します。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:285
 msgid "Integrate an NTv2-transformation in QGIS"
-msgstr ""
+msgstr "NTv2変換をQGISに統合する"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:287
 msgid ""
 "To integrate an NTv2 transformation file in QGIS you need one more step:"
-msgstr ""
+msgstr "NTv2変換ファイルをQGISに統合するには、もう1ステップ必要です。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:289
 msgid ""
 "Place the NTv2 file (.gsb) in the CRS/Proj folder that QGIS uses (e.g. "
 ":file:`C:\\\\OSGeo4W64\\\\share\\\\proj` for windows users)"
 msgstr ""
+"NTv2ファイル （.gsb）をQGISが使用するCRS/Proj フォルダに配置します（例えばwindowsユーザは "
+":file:`C:\\\\OSGeo4W64\\\\share\\\\proj` です）"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:291
 msgid ""
@@ -521,12 +534,12 @@ msgid ""
 "Reference System Definition` (:menuselection:`Settings --> Custom "
 "Projections...`)."
 msgstr ""
-"**nadgrids** （ ``+nadgrids=nameofthefile.gsb`` ）を :guilabel:`カスタム座標系定義` （ "
-":menuselection:`設定-->カスタム投影...` ）の :guilabel:`パラメータ` フィールドのProj定義に追加します。"
+"**nadgrids** （ ``+nadgrids=nameofthefile.gsb`` ）を :guilabel:`カスタム座標系の定義` （ "
+":menuselection:`設定-->カスタム投影法...` ）の :guilabel:`パラメータ` フィールドのProj定義に追加します。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:300
 msgid "Setting an NTv2 transformation"
-msgstr ""
+msgstr "NTv2変換の設定"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:307
 msgid "Datum Transformations"
@@ -539,6 +552,8 @@ msgid ""
 "transparently reprojects them to the project CRS. For some CRS, there are a "
 "number of possible transforms available to reproject to the project's CRS!"
 msgstr ""
+"QGIS では、デフォルトで「オンザフライ」の CRS 変換が有効になっており、異なる座標系を持つレイヤを使用すると、QGIS が透過的にプロジェクトの"
+" CRS へ再投影を行います。いくつかの CRS については、プロジェクトの CRS に再投影するために利用可能な変換が複数あります！"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:314
 msgid ""
@@ -552,6 +567,12 @@ msgid ""
 "extracting these to the :file:`proj` folder under your QGIS :ref:`user "
 "profile <user_profiles>` folder."
 msgstr ""
+"デフォルトでは、QGIS "
+"は利用可能な最も正確な変換を使用しようとします。しかし、変換するために追加のサポートファイルが必要な場合など、場合によってはこれが不可能な場合もあります。より正確な変換があるものの現在使用できない場合には、QGIS"
+" "
+"は警告メッセージを表示し、より正確な変換が利用可能であることと、システム上でそれを有効にするための方法を知らせてくれます。これは大抵、変換サポートファイルの外部パッケージをダウンロードし、QGISの"
+" :ref:`ユーザープロファイル <user_profiles>` フォルダの下にある :file:`proj` "
+"フォルダに展開する必要があるというものです。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:324
 msgid ""
@@ -560,6 +581,7 @@ msgid ""
 "informed selection of which is the most appropriate transformation to use "
 "for your data."
 msgstr ""
+"必要に応じて、2つのCRS間で複数の変換が可能な場合にはQGISはプロンプトを表示し、データに使用する最も適切な変換を情報に基づいて選択することができます。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:328
 msgid ""
@@ -567,6 +589,8 @@ msgid ""
 ":menuselection:`Options --> CRS` tab menu under the :guilabel:`Default datum"
 " transformations` group:"
 msgstr ""
+"この設定は、 :menuselection:`設定 -->` |options| :menuselection:`オプション --> "
+"座標参照系（CRS）` タブメニューの :guilabel:`デフォルトのデータ変換` グループで行えます。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:332
 msgid ""
@@ -578,28 +602,36 @@ msgid ""
 "selecting a transformation from this dialog, then the choice is remembered "
 "and automatically applied to any newly created QGIS projects."
 msgstr ""
+"|checkbox| :guilabel:`測地系変換が複数利用可能な場合は尋ねる`: "
+"をチェックすると、変換元CRS/変換先CRSの組み合わせに対して2つ以上の適切な測地系変換が存在する場合には、ダイアログが自動的に開き、プロジェクトで使用するものとしてそれらの測地系変換のうちどれを選択するかをユーザに尋ねます。このダイアログから変換を選択する際に"
+" :guilabel:`デフォルト変換` "
+"のチェックボックスをオンにすると、選択した内容が保存され、新しく作成されたQGISプロジェクトに自動的に適用されます。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:339
 msgid ""
 "or defining a list of appropriate datum transformations to use as defaults "
 "when loading a layer to a project or reprojecting a layer."
-msgstr ""
+msgstr "あるいは、プロジェクトにレイヤをロードしたり、レイヤを再投影したりする際にデフォルトとして使用する適切な測地系変換のリストを定義します。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:342
 msgid ""
 "Use the |signPlus| button to open the :guilabel:`Select Datum "
 "Transformations` dialog. Then:"
-msgstr "|signPlus| ボタンを使用して :guilabel:`測地系変換を選択` ダイアログを開きます。次に："
+msgstr ""
+"|signPlus| ボタンを押して :guilabel:`測地系変換を選択` "
+"ダイアログを開きます。それから、以下の手順で測地系変換リストの定義を行います。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:345
 msgid ""
 "Choose the :guilabel:`Source CRS` of the layer, using the drop-down menu or "
 "the |setProjection| :sup:`Select CRS` widget."
 msgstr ""
+"ドロップダウンメニューを使用するか、 |setProjection| :sup:`CRSの選択` ウィジェットを使用してレイヤの "
+":guilabel:`変換元CRS` を選択します。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:347
 msgid "Provide the :guilabel:`Destination CRS` in the same way."
-msgstr ""
+msgstr ":guilabel:`変換先CRS` も同様に設定します。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:348
 msgid ""
@@ -607,18 +639,19 @@ msgid ""
 " in the table. Clicking a row shows details on the settings applied and the "
 "corresponding accuracy of the transformation."
 msgstr ""
+"変換元から変換先への利用可能な変換方法がテーブルに一覧表示されます。行をクリックすると、適用された設定の詳細と対応する変換精度が表示されます。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:353
 msgid ""
 "In some cases a transformation may not be available for use on your system. "
 "In this case, the transformation will still be shown in this list but will "
 "not be selectable."
-msgstr ""
+msgstr "場合によっては使用中のシステムでは利用可能でない変換があります。この場合には、変換はリストに表示されますが、選択はできません。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:357
 msgid ""
 "Find your preferred transformation, select it and click :guilabel:`OK`."
-msgstr ""
+msgstr "お好みの変換方法を見つけて選択し、:guilabel:`OK` をクリックします。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:359
 msgid ""
@@ -628,6 +661,9 @@ msgid ""
 "Transformation` and :guilabel:`Destination Datum Transformation`) to be used"
 " to transform between the CRSs."
 msgstr ""
+":guilabel:`デフォルトのデータ変換` のテーブルに行が追加され、 :guilabel:`変換元CRS` と "
+":guilabel:`変換先CRS` に関する情報と、 CRS間の変換に使用される測地系変換操作（ :guilabel:`変換元測地系変換` と "
+":guilabel:`変換先測地系変換` ）の情報が含まれています。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:365
 msgid ""
@@ -636,6 +672,8 @@ msgid ""
 "(|signMinus|) from the list or change the entry (|toggleEditing|) in the "
 "list."
 msgstr ""
+"今後は、リストからそれを削除する (|signMinus|) か、リスト内のエントリを変更する (|toggleEditing|) "
+"までは、QGISは選択された測地系変換を自動的に使用して、これら2つのCRS間で変換を行います。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:375
 msgid "Selecting a preferred default datum transformation"
@@ -650,3 +688,7 @@ msgid ""
 "tab of the :guilabel:`Project properties` dialog (:menuselection:`Project "
 "--> Properties...`). These settings apply to the current project only."
 msgstr ""
+":menuselection:`設定 -->` |options| :menuselection:`オプション --> 座標参照系（CRS）` "
+"タブで設定された測地系変換は、システム上で作成されるすべての新しいQGISプロジェクトにも継承されます。さらに、プロジェクトは "
+":guilabel:`プロジェクトのプロパティ` ダイアログ（ :menuselection:`プロジェクト --> プロパティ...` ）の "
+":guilabel:`座標参照系` タブで指定した固有の変換セットを持つこともできます。この設定は現在のプロジェクトにのみ適用されます。"

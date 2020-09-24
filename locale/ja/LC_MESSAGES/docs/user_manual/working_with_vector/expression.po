@@ -4,17 +4,17 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# mnamihdk, 2020
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# mnamihdk, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-26 13:13+0200\n"
+"POT-Creation-Date: 2020-09-24 11:25+0200\n"
 "PO-Revision-Date: 2020-03-16 19:32+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: mnamihdk, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -122,11 +122,17 @@ msgstr "「pop_density」の値に応じてフィールド「density_level」の
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:59
 msgid ""
+"Update a region layer field with the names (comma separated) of contained "
+"airports::"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:63
+msgid ""
 "Apply a categorized style to all the features according to whether their "
 "average house price is smaller or higher than 10000€ per square metre::"
 msgstr "住宅の平均価格が平方メートル当たり10000€より小さいか大きいかに応じて、すべての地物に分類したスタイルを適用します::"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:64
+#: ../../docs/user_manual/working_with_vector/expression.rst:68
 msgid ""
 "Using the \"Select By Expression...\" tool, select all the features "
 "representing areas of “High population density” and whose average house "
@@ -134,21 +140,21 @@ msgid ""
 msgstr ""
 "「式で選択...」ツールを使用して、「高人口密度」エリアに相当し、加えて平方メートルあたりの住宅の平均価格が10000€よりも高くなるエリアのすべての地物を選択します::"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:70
+#: ../../docs/user_manual/working_with_vector/expression.rst:74
 msgid ""
 "Likewise, the previous expression could also be used to define which "
 "features should be labeled or shown in the map."
 msgstr "同様にこの式は、どの地物にラベルを付すべきか、あるいはどの地物を地図中に表示すべきかを定義するためにも使用できるでしょう。"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:73
+#: ../../docs/user_manual/working_with_vector/expression.rst:77
 msgid "Using expressions offers you a lot of possibilities."
 msgstr "式を使用することによって可能性が大きく広がります。"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:79
+#: ../../docs/user_manual/working_with_vector/expression.rst:83
 msgid "**Use named parameters to improve the expression reading**"
 msgstr "**式を読みやすくするために名前付きパラメータを使用する**"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:81
+#: ../../docs/user_manual/working_with_vector/expression.rst:85
 msgid ""
 "Some functions require many parameters to be set. The expression engine "
 "supports the use of named parameters. This means that instead of writing the"
@@ -163,11 +169,11 @@ msgstr ""
 "と書くことができるということです。これは例えば ``clamp( value:=2, max:=9, min:=1)`` "
 "のように、引数の位置を入れ替えることも可能にします。名前付きパラメータを使用すると、式関数の引数が参照するものを明確にできます。これは式に書かれたものを後々になってから読み解こうとするときに役立ちます。"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:93
+#: ../../docs/user_manual/working_with_vector/expression.rst:97
 msgid "List of functions"
 msgstr "関数のリスト"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:95
+#: ../../docs/user_manual/working_with_vector/expression.rst:99
 msgid ""
 "The :guilabel:`Expression` tab provides the main interface to write "
 "expressions using functions, layer's fields and values. It contains "
@@ -176,13 +182,13 @@ msgstr ""
 ":guilabel:`式` "
 "タブは、関数やレイヤのフィールドやその値を使って、式を書くための主要なインターフェイスを提供します。タブには以下のウィジェットが含まれています。"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:98
+#: ../../docs/user_manual/working_with_vector/expression.rst:102
 msgid ""
 "An expression editor area to type or paste expressions. Autocompletion is "
 "available to speed expression writing:"
 msgstr "式エディタエリアでは、式を入力したりペーストしたりします。入力を早めるために自動補完が使えるようになっています。"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:101
+#: ../../docs/user_manual/working_with_vector/expression.rst:105
 msgid ""
 "Corresponding variables, function names and field names to the input text "
 "are shown below: use the :kbd:`Up` and :kbd:`Down` arrows to browse the "
@@ -192,37 +198,37 @@ msgstr ""
 "入力したテキストに応じた変数名、関数名、フィールド名が下に表示されます。 :kbd:`Up` 矢印キーと :kbd:`Down` "
 "矢印キーを使って項目間を移動することができます。式に挿入するには :kbd:`Tab` キーを押すか、挿入したい項目を単にクリックします。"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:105
+#: ../../docs/user_manual/working_with_vector/expression.rst:109
 msgid "Function parameters are shown while filling them."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:107
+#: ../../docs/user_manual/working_with_vector/expression.rst:111
 msgid ""
 "QGIS also checks the expression rightness and highlights all the errors "
 "using:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:109
+#: ../../docs/user_manual/working_with_vector/expression.rst:113
 msgid "*Underline*: for unknown functions, wrong or invalid arguments;"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:110
+#: ../../docs/user_manual/working_with_vector/expression.rst:114
 msgid ""
 "*Marker*: for every other error (eg, missing parenthesis, unexpected "
 "character) at a single location."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:113
+#: ../../docs/user_manual/working_with_vector/expression.rst:117
 msgid "**Document your expression with comments**"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:115
+#: ../../docs/user_manual/working_with_vector/expression.rst:119
 msgid ""
 "When using complex expression, it is good practice to add text either as a "
 "multiline comment or inline comments to help you remember."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:144
+#: ../../docs/user_manual/working_with_vector/expression.rst:148
 msgid ""
 "Under the expression editor, an :guilabel:`Output preview` displays the "
 "result of the expression evaluated on the first feature of the layer. In "
@@ -230,7 +236,7 @@ msgid ""
 "hyperlink."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:147
+#: ../../docs/user_manual/working_with_vector/expression.rst:151
 msgid ""
 "A function selector displays the list of functions, variables, fields... "
 "organized in groups. A search box is available to filter the list and "
@@ -238,40 +244,40 @@ msgid ""
 " to the expression editor."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:151
+#: ../../docs/user_manual/working_with_vector/expression.rst:155
 msgid ""
 "A help panel displays help for each selected item in the function selector."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:155
+#: ../../docs/user_manual/working_with_vector/expression.rst:159
 msgid ""
 "Press :kbd:`Ctrl+Click` when hovering a function name in an expression to "
 "automatically display its help in the dialog."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:158
+#: ../../docs/user_manual/working_with_vector/expression.rst:162
 msgid ""
 "A field's values widget shown when a field is selected in the function "
 "selector helps to fetch features attributes. Double-clicking a value adds it"
 " to the expression editor."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:164
+#: ../../docs/user_manual/working_with_vector/expression.rst:168
 msgid ""
 "The right panel, showing functions help or field values, can be collapsed "
 "(invisible) in the dialog. Press the :guilabel:`Show Values` or "
 ":guilabel:`Show Help` button to get it back."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:173
+#: ../../docs/user_manual/working_with_vector/expression.rst:177
 msgid "The Expression tab"
 msgstr "[式]タブ"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:180
+#: ../../docs/user_manual/working_with_vector/expression.rst:184
 msgid "Aggregates Functions"
 msgstr "集計関数"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:182
+#: ../../docs/user_manual/working_with_vector/expression.rst:186
 msgid ""
 "This group contains functions which aggregate values over layers and fields."
 msgstr "このグループには、レイヤーやフィールドの値を集約する関数が含まれています。"
@@ -521,38 +527,38 @@ msgstr "sum"
 msgid "Returns the aggregate summed value from a field or expression"
 msgstr "フィールドまたは式から合計値を返します"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:217
+#: ../../docs/user_manual/working_with_vector/expression.rst:221
 msgid "**Examples:**"
 msgstr "**例:**"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:219
+#: ../../docs/user_manual/working_with_vector/expression.rst:223
 msgid ""
 "Return the maximum of the \"passengers\" field from features in the layer "
 "grouped by \"station_class\" field::"
 msgstr "「station_class」フィールドでグループ化されたレイヤー中の地物から「乗客」フィールドの最大値を返します::"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:224
+#: ../../docs/user_manual/working_with_vector/expression.rst:228
 msgid ""
 "Calculate the total number of passengers for the stations inside the current"
 " atlas feature::"
 msgstr "現在の地図帳地物内部の駅に対する合計乗降客数を計算::"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:230
+#: ../../docs/user_manual/working_with_vector/expression.rst:234
 msgid ""
 "Return the mean of the \"field_from_related_table\" field for all matching "
 "child features using the 'my_relation' relation from the layer::"
 msgstr ""
 "レイヤーから「my_relation」の関係を使用して、一致するすべての子のために「field_from_related_table」フィールドの平均値を返します::"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:235
+#: ../../docs/user_manual/working_with_vector/expression.rst:239
 msgid "or::"
 msgstr "または::"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:245
+#: ../../docs/user_manual/working_with_vector/expression.rst:249
 msgid "Array Functions"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:247
+#: ../../docs/user_manual/working_with_vector/expression.rst:251
 msgid ""
 "This group contains functions to create and manipulate arrays (also known as"
 " list data structures). The order of values within the array matters, unlike"
@@ -773,11 +779,11 @@ msgid ""
 " empty values"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:293
+#: ../../docs/user_manual/working_with_vector/expression.rst:297
 msgid "Color Functions"
 msgstr "色関数"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:295
+#: ../../docs/user_manual/working_with_vector/expression.rst:299
 msgid "This group contains functions for manipulating colors."
 msgstr "このグループには、色を操作するための関数が含まれています。"
 
@@ -941,11 +947,11 @@ msgid ""
 "alpha component"
 msgstr "赤色成分またはアルファ成分、例えば、色文字列の特定の色成分を設定します"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:330
+#: ../../docs/user_manual/working_with_vector/expression.rst:334
 msgid "Conditional Functions"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:332
+#: ../../docs/user_manual/working_with_vector/expression.rst:336
 msgid ""
 "This group contains functions to handle conditional checks in expressions."
 msgstr "このグループには式の中で条件を扱う関数を含まれます."
@@ -1008,19 +1014,19 @@ msgid ""
 "value (if provided) or Null if an error occurs"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:348
+#: ../../docs/user_manual/working_with_vector/expression.rst:352
 msgid "**Some example:**"
 msgstr "**いくつかの例：**"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:350
+#: ../../docs/user_manual/working_with_vector/expression.rst:354
 msgid "Send back a value if the first condition is true, else another value::"
 msgstr "最初の条件がtrueである場合は値を戻し、そうでない場合は別の値を::"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:358
+#: ../../docs/user_manual/working_with_vector/expression.rst:362
 msgid "Conversions Functions"
 msgstr "変換関数"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:360
+#: ../../docs/user_manual/working_with_vector/expression.rst:364
 msgid ""
 "This group contains functions to convert one data type to another (e.g., "
 "string to integer, integer to string)."
@@ -1100,21 +1106,21 @@ msgstr "to_time"
 msgid "Converts a string into a time object"
 msgstr "時間オブジェクトに文字列を変換します"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:380
+#: ../../docs/user_manual/working_with_vector/expression.rst:384
 msgid "Custom Functions"
 msgstr "カスタム関数"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:382
+#: ../../docs/user_manual/working_with_vector/expression.rst:386
 msgid ""
 "This group contains functions created by the user. See "
 ":ref:`function_editor` for more details."
 msgstr "このグループは、ユーザーが作成した関数が含まれています。詳細については :ref:`function_editor` を参照。"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:387
+#: ../../docs/user_manual/working_with_vector/expression.rst:391
 msgid "Date and Time Functions"
 msgstr "日付と時刻の関数"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:389
+#: ../../docs/user_manual/working_with_vector/expression.rst:393
 msgid "This group contains functions for handling date and time data."
 msgstr "このグループには日付や時刻データを扱う関数が含まれます."
 
@@ -1224,7 +1230,7 @@ msgid ""
 "an interval"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:407
+#: ../../docs/user_manual/working_with_vector/expression.rst:411
 msgid ""
 "This group also shares several functions with the "
 ":ref:`conversion_functions` ( to_date, to_time, to_datetime, to_interval) "
@@ -1234,48 +1240,48 @@ msgstr ""
 "（TO_DATE、TO_TIME、to_datetime、to_interval）と :ref:`string_functions` "
 "（format_date）グループといくつかの関数を共有します。"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:411
-#: ../../docs/user_manual/working_with_vector/expression.rst:731
-#: ../../docs/user_manual/working_with_vector/expression.rst:919
-#: ../../docs/user_manual/working_with_vector/expression.rst:987
-#: ../../docs/user_manual/working_with_vector/expression.rst:1215
+#: ../../docs/user_manual/working_with_vector/expression.rst:415
+#: ../../docs/user_manual/working_with_vector/expression.rst:735
+#: ../../docs/user_manual/working_with_vector/expression.rst:923
+#: ../../docs/user_manual/working_with_vector/expression.rst:991
+#: ../../docs/user_manual/working_with_vector/expression.rst:1219
 msgid "**Some examples:**"
 msgstr "**いくつかの例：**"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:413
+#: ../../docs/user_manual/working_with_vector/expression.rst:417
 msgid "Get today's month and year in the \"month_number/year\" format:"
 msgstr "「month_number /年」の形式で、今日の月と年を取得します。"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:420
+#: ../../docs/user_manual/working_with_vector/expression.rst:424
 msgid ""
 "Besides these functions, subtracting dates, datetimes or times using the "
 "``-`` (minus) operator will return an interval."
 msgstr "これらの関数に加えて、 ``-`` （マイナス）演算子を使用して日付、日付時刻または時刻を減算すると間隔を返します。"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:423
+#: ../../docs/user_manual/working_with_vector/expression.rst:427
 msgid ""
 "Adding or subtracting an interval to dates, datetimes or times, using the "
 "``+`` (plus) and ``-`` (minus) operators, will return a datetime."
 msgstr ""
 " ``+`` （プラス）、 ``-`` （マイナス）演算子を使用して、間隔を日付、日付時刻または時刻に加算または減算すると、日時を返します。"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:426
+#: ../../docs/user_manual/working_with_vector/expression.rst:430
 msgid "Get the number of days until QGIS 3.0 release:"
 msgstr "QGIS 3.0リリースまでの日数を取得します。"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:433
+#: ../../docs/user_manual/working_with_vector/expression.rst:437
 msgid "The same with time:"
 msgstr "時間と同じ："
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:440
+#: ../../docs/user_manual/working_with_vector/expression.rst:444
 msgid "Get the datetime of 100 days from now:"
 msgstr "今から100日の日時を取得します。"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:447
+#: ../../docs/user_manual/working_with_vector/expression.rst:451
 msgid "**Storing date and datetime and intervals on fields**"
 msgstr "**フィールドに日付と日時との間隔を保存する**"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:449
+#: ../../docs/user_manual/working_with_vector/expression.rst:453
 msgid ""
 "The ability to store *date*, *time* and *datetime* values directly on fields"
 " may depend on the data source's provider (e.g., Shapefile accepts *date* "
@@ -1283,13 +1289,13 @@ msgid ""
 "suggestions to overcome this limitation:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:454
+#: ../../docs/user_manual/working_with_vector/expression.rst:458
 msgid ""
 "*date*, *Datetime* and *time* can be stored in text type fields after using "
 "the ``to_format()`` function."
 msgstr "*日付* 、 *日時* と *時間* は ``to_format()`` 関数を使用した後、テキスト形式のフィールドに記憶できます。"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:457
+#: ../../docs/user_manual/working_with_vector/expression.rst:461
 msgid ""
 "*Intervals* can be stored in integer or decimal type fields after using one "
 "of the date extraction functions (e.g., ``day()`` to get the interval "
@@ -1298,22 +1304,22 @@ msgstr ""
 "*間隔* は日付抽出関数のいずれかを使用した後に整数または小数タイプフィールドに記憶できます（例えば、日数で表される時間間隔を取得する "
 "``day()`` ）"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:464
+#: ../../docs/user_manual/working_with_vector/expression.rst:468
 msgid "Fields and Values"
 msgstr "フィールドと値"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:466
+#: ../../docs/user_manual/working_with_vector/expression.rst:470
 msgid "Contains a list of fields from the layer."
 msgstr "レイヤーからのフィールドのリストが含まれています。"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:468
+#: ../../docs/user_manual/working_with_vector/expression.rst:472
 msgid ""
 "Double-click a field name to have it added to your expression. You can also "
 "type the field name (preferably inside double quotes) or its :ref:`alias "
 "<configure_field>`."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:472
+#: ../../docs/user_manual/working_with_vector/expression.rst:476
 msgid ""
 "To retrieve fields values to use in an expression, select the appropriate "
 "field and, in the shown widget, choose between :guilabel:`10 Samples` and "
@@ -1322,18 +1328,18 @@ msgid ""
 "Sample values can also be accessed via right-clicking on a field."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:478
+#: ../../docs/user_manual/working_with_vector/expression.rst:482
 msgid ""
 "To add a value to the expression you are writing, double-click on it in the "
 "list. If the value is of a string type, it should be simple quoted, "
 "otherwise no quote is needed."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:484
+#: ../../docs/user_manual/working_with_vector/expression.rst:488
 msgid "Files and Paths Functions"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:486
+#: ../../docs/user_manual/working_with_vector/expression.rst:490
 msgid "This group contains functions which manipulate file and path names."
 msgstr ""
 
@@ -1404,11 +1410,11 @@ msgstr ""
 msgid "Returns true if a path corresponds to a file."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:503
+#: ../../docs/user_manual/working_with_vector/expression.rst:507
 msgid "Fuzzy Matching Functions"
 msgstr "ファジー・マッチング関数"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:505
+#: ../../docs/user_manual/working_with_vector/expression.rst:509
 msgid "This group contains functions for fuzzy comparisons between values."
 msgstr "このグループには、値間でファジィ比較をするための関数が含まれています。"
 
@@ -1449,11 +1455,11 @@ msgstr "soundex"
 msgid "Returns the Soundex representation of a string"
 msgstr "文字列のSoundexの表現を返します"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:521
+#: ../../docs/user_manual/working_with_vector/expression.rst:525
 msgid "General Functions"
 msgstr "一般関数"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:523
+#: ../../docs/user_manual/working_with_vector/expression.rst:527
 msgid "This group contains general assorted functions."
 msgstr ""
 
@@ -1517,11 +1523,11 @@ msgid ""
 "value needs to be used more than once."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:545
+#: ../../docs/user_manual/working_with_vector/expression.rst:549
 msgid "Geometry Functions"
 msgstr "ジオメトリ関数"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:547
+#: ../../docs/user_manual/working_with_vector/expression.rst:551
 msgid ""
 "This group contains functions that operate on geometry objects (e.g. buffer,"
 " transform, $area)."
@@ -2514,31 +2520,31 @@ msgstr "z"
 msgid "Returns the Z coordinate of a point geometry"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:733
+#: ../../docs/user_manual/working_with_vector/expression.rst:737
 msgid "Return the X coordinate of the current feature's centroid::"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:737
+#: ../../docs/user_manual/working_with_vector/expression.rst:741
 msgid "Send back a value according to feature's area::"
 msgstr "地物の面積に応じた値を送り返す::"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:741
+#: ../../docs/user_manual/working_with_vector/expression.rst:745
 msgid ""
 "You can manipulate the current geometry using the variable ``$geometry`` to "
 "create a buffer or get a point on the geometry's surface::"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:747
+#: ../../docs/user_manual/working_with_vector/expression.rst:751
 msgid ""
 "Given a point feature, generate a closed line (using ``make_line``) around "
 "the point's geometry::"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:762
+#: ../../docs/user_manual/working_with_vector/expression.rst:766
 msgid "Layout Functions"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:764
+#: ../../docs/user_manual/working_with_vector/expression.rst:768
 msgid ""
 "This group contains functions to manipulate print layout items properties."
 msgstr ""
@@ -2551,19 +2557,19 @@ msgstr ""
 msgid "Returns a map of variables from a layout item inside this print layout"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:772
+#: ../../docs/user_manual/working_with_vector/expression.rst:776
 msgid "**An example:**"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:774
+#: ../../docs/user_manual/working_with_vector/expression.rst:778
 msgid "Get the scale of the 'Map 0' in the current print layout::"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:780
+#: ../../docs/user_manual/working_with_vector/expression.rst:784
 msgid "Map Layers"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:782
+#: ../../docs/user_manual/working_with_vector/expression.rst:786
 msgid ""
 "This group contains a list of the available layers in the current project. "
 "This offers a convenient way to write expressions referring to multiple "
@@ -2572,7 +2578,7 @@ msgid ""
 "queries."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:787
+#: ../../docs/user_manual/working_with_vector/expression.rst:791
 msgid "It also provides some convenient functions to manipulate layers."
 msgstr ""
 
@@ -2586,11 +2592,11 @@ msgid ""
 " information depends on the data provider type."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:800
+#: ../../docs/user_manual/working_with_vector/expression.rst:804
 msgid "Maps Functions"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:802
+#: ../../docs/user_manual/working_with_vector/expression.rst:806
 msgid ""
 "This group contains functions to create or manipulate keys and values of map"
 " data structures (also known as dictionary objects, key-value pairs, or "
@@ -2715,11 +2721,11 @@ msgstr ""
 msgid "Creates a json-formatted string from a map, an array or other value"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:830
+#: ../../docs/user_manual/working_with_vector/expression.rst:834
 msgid "Mathematical Functions"
 msgstr "数学関数"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:832
+#: ../../docs/user_manual/working_with_vector/expression.rst:836
 msgid "This group contains math functions (e.g., square root, sin and cos)."
 msgstr "このグループは、数学関数（例えば、平方根、sinとcos）が含まれています。"
 
@@ -2957,11 +2963,11 @@ msgstr "tan"
 msgid "Returns the tangent of an angle in radians"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:877
+#: ../../docs/user_manual/working_with_vector/expression.rst:881
 msgid "Operators"
 msgstr "演算子"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:879
+#: ../../docs/user_manual/working_with_vector/expression.rst:883
 msgid ""
 "This group contains operators (e.g., +, -, \\*). Note that for most of the "
 "mathematical functions below, if one of the inputs is NULL then the result "
@@ -3222,21 +3228,21 @@ msgstr "a NOT IN (値[,値])"
 msgid "a is not below the values listed"
 msgstr "aはリストされた値を下回りません"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:921
+#: ../../docs/user_manual/working_with_vector/expression.rst:925
 msgid "Joins a string and a value from a column name::"
 msgstr "文字列と列名の値を結合します::"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:925
+#: ../../docs/user_manual/working_with_vector/expression.rst:929
 msgid ""
 "Test if the \"description\" attribute field starts with the 'Hello' string "
 "in the value (note the position of the ``%`` character)::"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:934
+#: ../../docs/user_manual/working_with_vector/expression.rst:938
 msgid "Processing Functions"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:936
+#: ../../docs/user_manual/working_with_vector/expression.rst:940
 msgid "This group contains functions that operate on processing algorithms."
 msgstr ""
 
@@ -3248,11 +3254,11 @@ msgstr ""
 msgid "Returns the value of a processing algorithm input parameter"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:948
+#: ../../docs/user_manual/working_with_vector/expression.rst:952
 msgid "Rasters Functions"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:950
+#: ../../docs/user_manual/working_with_vector/expression.rst:954
 msgid "This group contains functions to operate on raster layer."
 msgstr ""
 
@@ -3272,11 +3278,11 @@ msgstr ""
 msgid "Returns the raster band value at the provided point"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:963
+#: ../../docs/user_manual/working_with_vector/expression.rst:967
 msgid "Record and Attributes Functions"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:965
+#: ../../docs/user_manual/working_with_vector/expression.rst:969
 msgid "This group contains functions that operate on record identifiers."
 msgstr "このグループにはレコードを特定するような関数が含まれます."
 
@@ -3376,22 +3382,22 @@ msgid ""
 "38 characters long."
 msgstr "各行の汎用一意識別子（UUID）を生成します。各UUIDは38文字です。"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:989
+#: ../../docs/user_manual/working_with_vector/expression.rst:993
 msgid ""
 "Return the first feature in layer \"LayerA\" whose field \"id\" has the same"
 " value as the field \"name\" of the current feature (a kind of jointure)::"
 msgstr ""
 "フィールド「ID」が現在の地物のフィールド「名前」と同じ値を有するレイヤー「LayerA」の最初の地物を返します（jointureの一種）::"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:994
+#: ../../docs/user_manual/working_with_vector/expression.rst:998
 msgid "Calculate the area of the joined feature from the previous example::"
 msgstr "前の例から結合された地物の面積を計算します::"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1002
+#: ../../docs/user_manual/working_with_vector/expression.rst:1006
 msgid "String Functions"
 msgstr "文字列関数"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1004
+#: ../../docs/user_manual/working_with_vector/expression.rst:1008
 msgid ""
 "This group contains functions that operate on strings (e.g., that replace, "
 "convert to upper case)."
@@ -3580,62 +3586,62 @@ msgstr "wordwrap"
 msgid "Returns a string wrapped to a maximum/minimum number of characters"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1038
+#: ../../docs/user_manual/working_with_vector/expression.rst:1042
 msgid "**About fields concatenation**"
 msgstr "**フィールド連結について**"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1040
+#: ../../docs/user_manual/working_with_vector/expression.rst:1044
 msgid ""
 "You can concatenate strings or field values using either ``||`` or ``+`` "
 "operators or the ``concat`` function, with some special characteristics:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1043
+#: ../../docs/user_manual/working_with_vector/expression.rst:1047
 msgid ""
 "The ``+`` operator also means sum up expression, so if you have an integer "
 "(field or numeric value) operand, this can be error prone and you better use"
 " the others::"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1049
+#: ../../docs/user_manual/working_with_vector/expression.rst:1053
 msgid ""
 "When any of the arguments is a NULL value, either ``||`` or ``+`` will "
 "return a NULL value. To return the other arguments regardless the NULL "
 "value, you may want to use the ``concat`` function::"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1058
+#: ../../docs/user_manual/working_with_vector/expression.rst:1062
 msgid "For other cases, do at your convenience::"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1069
+#: ../../docs/user_manual/working_with_vector/expression.rst:1073
 msgid "Variables"
 msgstr "変数"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1071
+#: ../../docs/user_manual/working_with_vector/expression.rst:1075
 msgid ""
 "This group contains dynamic variables related to the application, the "
 "project file and other settings. The availability of variables depends on "
 "the context:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1075
+#: ../../docs/user_manual/working_with_vector/expression.rst:1079
 msgid "from the |expressionSelect| :sup:`Select by expression` dialog"
 msgstr "|expressionSelect| :sup:`式で選択` ダイアログから使用"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1076
+#: ../../docs/user_manual/working_with_vector/expression.rst:1080
 msgid "from the |calculateField| :sup:`Field calculator` dialog"
 msgstr "|calculateField| :sup:`フィールド計算機` ダイアログから使用"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1077
+#: ../../docs/user_manual/working_with_vector/expression.rst:1081
 msgid "from the layer properties dialog"
 msgstr "レイヤーのプロパティダイアログから使用"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1078
+#: ../../docs/user_manual/working_with_vector/expression.rst:1082
 msgid "from the print layout"
 msgstr "印刷レイアウトから使用"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1080
+#: ../../docs/user_manual/working_with_vector/expression.rst:1084
 msgid ""
 "To use these variables in an expression, they should be preceded by the "
 "``@`` character (e.g, ``@row_number``)."
@@ -4498,25 +4504,25 @@ msgid ""
 "recalculating the same value repeatedly"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1217
+#: ../../docs/user_manual/working_with_vector/expression.rst:1221
 msgid "Return the X coordinate of a map item center in layout::"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1221
+#: ../../docs/user_manual/working_with_vector/expression.rst:1225
 msgid ""
 "Return, for each feature in the current layer, the number of overlapping "
 "airport features::"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1227
+#: ../../docs/user_manual/working_with_vector/expression.rst:1231
 msgid "Get the object_id of the first snapped point of a line::"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1243
+#: ../../docs/user_manual/working_with_vector/expression.rst:1247
 msgid "Recent Functions"
 msgstr "最近の関数"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1245
+#: ../../docs/user_manual/working_with_vector/expression.rst:1249
 msgid ""
 "This group contains recently used functions. Depending on the context of its"
 " usage (feature selection, field calculator, generic), recently applied "
@@ -4525,11 +4531,11 @@ msgid ""
 "reapply previously used expressions."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1256
+#: ../../docs/user_manual/working_with_vector/expression.rst:1260
 msgid "Function Editor"
 msgstr "関数エディタ"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1258
+#: ../../docs/user_manual/working_with_vector/expression.rst:1262
 msgid ""
 "With the :guilabel:`Function Editor` tab, you are able to write your own "
 "functions in Python language. This provides a handy and comfortable way to "
@@ -4539,23 +4545,23 @@ msgstr ""
 ":guilabel:`関数エディタ` "
 "タブでは、Python言語を使ってユーザ独自の関数を書くことができます。これにより、事前定義関数ではカバーされない特定のニーズに対処するための、手軽で快適な手段を手に入れることができます。"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1267
+#: ../../docs/user_manual/working_with_vector/expression.rst:1271
 msgid "The Function Editor tab"
 msgstr "[関数エディタ] タブ"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1269
+#: ../../docs/user_manual/working_with_vector/expression.rst:1273
 msgid "To create a new function:"
 msgstr "新しい関数を作成するには次のようにします。"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1271
+#: ../../docs/user_manual/working_with_vector/expression.rst:1275
 msgid "Press the |signPlus| :sup:`New File` button."
 msgstr "|signPlus| :sup:`新規ファイル` ボタンをクリックします。"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1272
+#: ../../docs/user_manual/working_with_vector/expression.rst:1276
 msgid "Enter a name to use in the form that pops up and press :guilabel:`OK`."
 msgstr "フォームがポップアップしますので、使用する名前を入力して :guilabel:`OK` をクリックします。"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1274
+#: ../../docs/user_manual/working_with_vector/expression.rst:1278
 msgid ""
 "A new item of the name you provide is added in the left panel of the "
 ":guilabel:`Function Editor` tab; this is a Python :file:`.py` file based on "
@@ -4567,14 +4573,14 @@ msgstr ""
 "ファイルです。このファイルは現在有効になっている :ref:`ユーザープロファイル <user_profiles>` のディレクトリ配下の "
 ":file:`/python/expressions` フォルダに格納されます。"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1278
+#: ../../docs/user_manual/working_with_vector/expression.rst:1282
 msgid ""
 "The right panel displays the content of the file: a python script template. "
 "Update the code and its help according to your needs."
 msgstr ""
 "右側のパネルはファイルの内容を表示します。最初はテンプレートのPythonスクリプトが表示されていますので、このコードやヘルプを必要に応じて書き換えてください。"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1280
+#: ../../docs/user_manual/working_with_vector/expression.rst:1284
 msgid ""
 "Press the |start| :guilabel:`Save and Load Functions` button. The function "
 "you wrote is added to the functions tree in the :guilabel:`Expression` tab, "
@@ -4583,11 +4589,11 @@ msgstr ""
 "|start| :guilabel:`関数の保存と読み込み` ボタンをクリックします。あなたの書いた関数が :guilabel:`式` "
 "タブの関数ツリーの中に追加されます。デフォルトでは ``Custom`` グループの中に追加されます。"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1283
+#: ../../docs/user_manual/working_with_vector/expression.rst:1287
 msgid "Enjoy your new function."
 msgstr "新しい関数をお楽しみください。"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1284
+#: ../../docs/user_manual/working_with_vector/expression.rst:1288
 msgid ""
 "If the function requires improvements, enable the :guilabel:`Function "
 "Editor` tab, do the changes and press again the |start| :guilabel:`Save and "
@@ -4597,7 +4603,7 @@ msgstr ""
 "関数に改善が必要なときは、 :guilabel:`関数エディタ` タブに戻って修正を加えた後、再度 |start| "
 ":guilabel:`関数の保存と読み込み` ボタンをクリックしてファイルに変更を反映させてください。 これにより式タブにも変更が反映されます。"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1289
+#: ../../docs/user_manual/working_with_vector/expression.rst:1293
 msgid ""
 "Custom Python functions are stored under the user profile directory, meaning"
 " that at each QGIS startup, it will auto load all the functions defined with"
@@ -4611,11 +4617,11 @@ msgstr ""
 "フォルダの中にのみ保存されて、プロジェクトファイルには保存されないことに注意してください。カスタム関数を使用したプロジェクトを共有するときは、 "
 ":file:`/python/expressions` フォルダの :file:`.py` ファイルも共有する必要があります。."
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1296
+#: ../../docs/user_manual/working_with_vector/expression.rst:1300
 msgid "Here's a short example on how to create your own functions:"
 msgstr "独自関数がどのように作成されるかの簡単な例を見てもらいます。"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1316
+#: ../../docs/user_manual/working_with_vector/expression.rst:1320
 msgid ""
 "The short example creates a function ``my_sum`` that will give you a "
 "function with two values. When using the ``args='auto'`` function argument "
@@ -4627,15 +4633,15 @@ msgstr ""
 "を使用した場合、その関数で必須となる引数の数は、Python中で定義された関数の引数から2を引いた数（``feature`` と ``parent`` "
 "を引いた数）になります。"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1322
+#: ../../docs/user_manual/working_with_vector/expression.rst:1326
 msgid "This function can then be used in expressions:"
 msgstr "この関数は次のようにして式の中で使うことができます。"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1329
+#: ../../docs/user_manual/working_with_vector/expression.rst:1333
 msgid "Custom Function added to the Expression tab"
 msgstr "式タブに追加されたカスタム関数"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1332
+#: ../../docs/user_manual/working_with_vector/expression.rst:1336
 msgid ""
 "Further information about creating Python code can be found in the :ref"
 ":`PyQGIS-Developer-Cookbook`."

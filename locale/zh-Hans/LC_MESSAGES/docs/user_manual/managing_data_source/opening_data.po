@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-26 13:13+0200\n"
+"POT-Creation-Date: 2020-09-24 11:25+0200\n"
 "PO-Revision-Date: 2020-03-16 19:25+0000\n"
 "Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
 "Language-Team: Chinese Simplified (https://www.transifex.com/qgis/teams/6144/zh-Hans/)\n"
@@ -748,7 +748,7 @@ msgstr ""
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:425
 msgid ""
 "``HTTP/HTTPS/FTP``, with a :guilabel:`URI` and, if required, an "
-"authentication"
+":ref:`authentication <authentication_index>`."
 msgstr ""
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:427
@@ -763,7 +763,8 @@ msgstr ""
 msgid ""
 "service supporting OGC ``WFS 3`` (still experimental), using ``GeoJSON`` or "
 "``GEOJSON - Newline Delimited`` format or based on ``CouchDB`` database. A "
-":guilabel:`URI` is required, with optional authentication."
+":guilabel:`URI` is required, with optional :ref:`authentication "
+"<authentication_index>`."
 msgstr ""
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:439
@@ -2004,4 +2005,29 @@ msgid ""
 "Open Weather Map Temperature: :guilabel:`URL`: "
 "``http://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?appid={api_key}``"
 " :guilabel:`Min. Zoom Level`: 0, :guilabel:`Max. Zoom Level`: 19."
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1208
+msgid "Handling broken file paths"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1210
+msgid ""
+"When the path to a data source is wrong, QGIS opens the :guilabel:`Handle "
+"Unavailable Layers` dialog. You can double-click in the "
+":guilabel:`Datasource` field or click :guilabel:`Browse` to fix the path. It"
+" is possible to continue working with your project with the broken path by "
+"clicking :guilabel:`Keep Unavailable Layers`. Your layer is then displayed "
+"in the :guilabel:`Layers` panel, but without any data until you fix the path"
+" using the |indicatorBadLayer| :sup:`Unavailable layer!` icon next to it in "
+"the :guilabel:`Layers` panel, or :guilabel:`Change Data Source...` in the "
+"layer contextual menu. Another possibility is to |deleteSelected| "
+":guilabel:`Remove Unavailable Layers`. As the last step, click "
+":guilabel:`Apply changes`."
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1223
+msgid ""
+"When a layer path has been fixed, QGIS scans through all other broken paths "
+"and tries to auto-fix those that have the same broken file path."
 msgstr ""
