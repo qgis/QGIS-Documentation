@@ -23,9 +23,9 @@ help:
 .PHONY: help Makefile
 
 springclean:
-	rm -r $(BUILDDIR)
+	rm -rf $(BUILDDIR)
 	# all .mo files
-	find $(SOURCEDIR)/locale/*/LC_MESSAGES/ -type f -name '*.mo' -delete
+	-find $(SOURCEDIR)/locale/*/LC_MESSAGES/ -type f -name '*.mo' -delete
 
 gettext:
 	@$(SPHINXBUILD) -M gettext "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
