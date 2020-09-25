@@ -731,7 +731,7 @@ files. It provides drivers to read and or write data in different formats.
 The :guilabel:`GDAL` tab currently exposes the drivers for raster and vector
 formats with their capabilities.
 
-GDAL driver options
+Raster driver options
 ...................
 
 This frame provides ways to customize the behavior of raster drivers that
