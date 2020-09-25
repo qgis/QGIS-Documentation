@@ -38,13 +38,13 @@ functions ``Mean``, ``Standard deviation`` and ``Variance`` (data type is always
 and ``Variety`` (data type is always ``Int32``).
 
 - ``Count``: The count statistic will always result in the number of cells
-without NoData values at the current cell location.
+  without NoData values at the current cell location.
 
 - ``Median``: If the number of input layers is even, the median will be
-calculated as the arithmetic mean of the two middle values of the ordered cell input values.
+  calculated as the arithmetic mean of the two middle values of the ordered cell input values.
 
 - ``Minority/Majority``: If no unique minority or majority could be found,
-the result is NoData, except all input cell values are equal.
+  the result is NoData, except all input cell values are equal.
 
 
 .. figure:: img/cell_statistics_all_stats.png
