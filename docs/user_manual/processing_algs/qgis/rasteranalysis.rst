@@ -46,7 +46,7 @@ or ``Count`` and ``Variety`` (data type is always ``Int32``).
 .. figure:: img/cell_statistics_all_stats.png
   :align: center
 
-  Example for all statistic functions while taking NoData cells (grey) into account. 
+  Example for all statistic functions while taking NoData cells (grey) into account.
 
 Parameters
 ..........
@@ -112,38 +112,37 @@ Outputs
 .......
 
 .. list-table::
-   :header-rows: 1
-   :widths: 20 20 20 40
+  :header-rows: 1
+  :widths: 20 20 20 40
 
-   * - Label
-     - Name
-     - Type
-     - Description
-   * - **Output raster**
-     - ``OUTPUT``
-     - [same as input]
-     - Output raster layer containing the result
-
-   * - **Extent**
-     - ``EXTENT``
-     - [extent]
-     - The spatial extent of the output raster layer
-   * - **CRS authority identifier**
-     - ``CRS_AUTHID``
-     - [crs]
-     - The coordinate reference system of the output raster layer
-   * - **Width in pixels**
-     - ``WIDTH_IN_PIXELS``
-     - [integer]
-     - The width in pixels of the output raster layer
-   * - **Height in pixels**
-     - ``HEIGHT_IN_PIXELS``
-     - [integer]
-     - The height in pixels of the output raster layer
-   * - **Total pixel count**
-     - ``TOTAL_PIXEL_COUNT``
-     - [integer]
-     - The count of pixels in the output raster layer
+  * - Label
+    - Name
+    - Type
+    - Description
+  * - **CRS authority identifier**
+    - ``CRS_AUTHID``
+    - [crs]
+    - The coordinate reference system of the output raster layer
+  * - **Extent**
+    - ``EXTENT``
+    - [extent]
+    - The spatial extent of the output raster layer
+  * - **Height in pixels**
+    - ``HEIGHT_IN_PIXELS``
+    - [integer]
+    - The height in pixels of the output raster layer
+  * - **Output raster**
+    - ``OUTPUT``
+    - [same as input]
+    - Output raster layer containing the result
+  * - **Total pixel count**
+    - ``TOTAL_PIXEL_COUNT``
+    - [integer]
+    - The count of pixels in the output raster layer
+  * - **Width in pixels**
+    - ``WIDTH_IN_PIXELS``
+    - [integer]
+    - The width in pixels of the output raster layer
 
 Python code
 ...........
