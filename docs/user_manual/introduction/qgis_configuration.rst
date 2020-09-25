@@ -380,7 +380,7 @@ panel.
 
 **Localized paths**
 
-It is possible to use localized paths for any kind of file based data source. 
+It is possible to use localized paths for any kind of file based data source.
 They are a list of paths which are used to abstract the data source location.
 For instance, if :file:`C:\\my_maps` is listed in the localized paths,
 a layer having :file:`C:\\my_maps\\my_country\\ortho.tif` as data source
@@ -728,14 +728,14 @@ GDAL Settings
 
 `GDAL <https://gdal.org>`_ is a data exchange library for vector and raster
 files. It provides drivers to read and or write data in different formats.
-The :guilabel:`GDAL` tab currently exposes the drivers for raster formats with
-their capabilities.
+The :guilabel:`GDAL` tab currently exposes the drivers for raster and vector
+formats with their capabilities.
 
 GDAL driver options
 ...................
 
-This frame provides ways to customize the behavior of drivers that support read
-and write access:
+This frame provides ways to customize the behavior of raster drivers that
+support read and write access:
 
 .. _gdal_createoptions:
 
@@ -777,22 +777,22 @@ and write access:
 
      Sample of Pyramids profile
 
-GDAL drivers
-............
+GDAL raster and vector drivers
+..............................
 
-In this frame, you can define which GDAL driver is to use to read and/or
+The :guilabel:`Raster Drivers` and :guilabel:`Vector Drivers` (in a separated
+tab) allow you to define which GDAL driver is enabled to read and/or
 write files, as in some cases more than one GDAL driver is available.
 
 .. _figure_gdal_settings:
-
 .. figure:: img/options_gdal.png
    :align: center
 
-   GDAL Settings in QGIS
+   GDAL Settings in QGIS - Raster drivers
 
-.. tip:: Double-click a driver that allows read and write access (``rw+(v)``)
-  opens the :ref:`Edit Create options <gdal_createoptions>` dialog for
-  customization.
+.. tip:: Double-click a raster driver that allows read and write access
+   (``rw+(v)``) opens the :ref:`Edit Create options <gdal_createoptions>`
+   dialog for customization.
 
 .. index:: Variables
 .. _variables_options:
