@@ -75,8 +75,8 @@ Parameters
        * 3 --- Median
        * 4 --- Standard deviation
        * 5 --- Variance
-       * 6 --- Maximum
-       * 7 --- Minimum
+       * 6 --- Minimum
+       * 7 --- Maximum
        * 8 --- Minority (least common value)
        * 9 --- Majority (most common value)
        * 10 --- Range (max - min)
