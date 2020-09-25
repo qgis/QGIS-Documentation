@@ -66,6 +66,7 @@ Parameters
    * - **Statistic**
      - ``STATISTIC``
      - [enumeration]
+
        Default: 0
      - Available statistics. Options:
 
@@ -84,6 +85,7 @@ Parameters
    * - **Ignore NoData values**
      - ``IGNORE_NODATA``
      - [boolean]
+     
        Default: True
      - Calculate statistics also for all cells stacks, ignoring NoData occurrence.
    * - **Reference layer**
