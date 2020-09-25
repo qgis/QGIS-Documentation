@@ -84,6 +84,7 @@ Parameters
    * - **Ignore NoData values**
      - ``IGNORE_NODATA``
      - [boolean]
+       Default: True
      - Calculate statistics also for all cells stacks, ignoring NoData occurrence.
    * - **Reference layer**
      - ``REF_LAYER``
