@@ -61,7 +61,7 @@ Parameters
      - Description
    * - **Input layers**
      - ``INPUT``
-     - [multipleLayers]
+     - [raster] [list]
      - Input raster layers
    * - **Statistic**
      - ``STATISTIC``
