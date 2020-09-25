@@ -12,9 +12,9 @@ Raster analysis
 Cell statistics |316|
 ---------------------
 
-The Cell statistics algorithm computes a value for each 
-cell of the output raster. At each cell location, the 
-output value is defined as a function of all overlaid 
+The Cell statistics algorithm computes a value for each
+cell of the output raster. At each cell location, the
+output value is defined as a function of all overlaid
 cell values of the input rasters.
 
 By default, a NoData cell in ANY of the input layers will result in a
@@ -29,11 +29,11 @@ The output raster will have the same extent, CRS, and pixel dimensions
 as this layer.
 
 **Calculation details:**
-Input raster layers that do not match the cell size of the reference 
-raster layer will be resampled using ``nearest neighbor resampling``. 
-The output raster data type will be set to the most complex 
-data type present in the input datasets except when using the 
-functions ``Mean`` and ``Standard deviation`` (data type is always ``Float32``) 
+Input raster layers that do not match the cell size of the reference
+raster layer will be resampled using ``nearest neighbor resampling``.
+The output raster data type will be set to the most complex
+data type present in the input datasets except when using the
+functions ``Mean`` and ``Standard deviation`` (data type is always ``Float32``)
 or ``Count`` and ``Variety`` (data type is always ``Int32``).
 
 - ``Count``: The count statistic will always result in the number of cells without NoData values at the current cell location.
@@ -43,13 +43,10 @@ or ``Count`` and ``Variety`` (data type is always ``Int32``).
 - ``Minority/Majority``: If no unique minority or majority could be found, the result is NoData, except all input cell values are equal.
 
 
-.. figure:: img/cellstatistics_mean.png
+.. figure:: img/cell_statistics_all_stats.png
   :align: center
 
-  Example for the cell statistics operation ``mean`` on three input rasters,
-  taking NoData cells (grey) into account. Raster data is based on `ESRI Cell statistics example. <https://pro.arcgis.com/en/pro-app/tool-reference/spatial-analyst/how-cell-statistics-works.htm>`_
-   
-  
+  Example for all statistic functions while taking NoData cells (grey) into account. 
 
 Parameters
 ..........
@@ -73,9 +70,9 @@ Parameters
      - Available statistics. Options:
 
        * 0 --- Sum
-       * 1 --- Count 
+       * 1 --- Count
        * 2 --- Mean
-       * 3 --- Median 
+       * 3 --- Median
        * 4 --- Standard deviation
        * 5 --- Variance
        * 6 --- Maximum
@@ -94,7 +91,7 @@ Parameters
      - The reference layer to create the output layer
        from (extent, CRS, pixel dimensions)
    * - **Output no data value**
-   
+
        Optional
      - ``OUTPUT_NO_DATA_VALUE``
      - [number]
