@@ -23,7 +23,7 @@ If the :guilabel:`Ignore NoData values` option is checked,
 then NoData inputs will be ignored in the statistic calculation. This
 may result in NoData output for locations where all cells are NoData.
 
-The :guilabel:`reference layer` parameter specifies an existing raster layer to
+The :guilabel:`Reference layer` parameter specifies an existing raster layer to
 use as a reference when creating the output raster.
 The output raster will have the same extent, CRS, and pixel dimensions
 as this layer.
@@ -37,11 +37,14 @@ functions ``Mean``, ``Standard deviation`` and ``Variance`` (data type is always
 ``Float32``or ``Float64`` depending on input float type) or ``Count``
 and ``Variety`` (data type is always ``Int32``).
 
-- ``Count``: The count statistic will always result in the number of cells without NoData values at the current cell location.
+- ``Count``: The count statistic will always result in the number of cells
+without NoData values at the current cell location.
 
-- ``Median``: If the number of input layers is even, the median will be calculated as the arithmetic mean of the two middle values of the ordered cell input values.
+- ``Median``: If the number of input layers is even, the median will be
+calculated as the arithmetic mean of the two middle values of the ordered cell input values.
 
-- ``Minority/Majority``: If no unique minority or majority could be found, the result is NoData, except all input cell values are equal.
+- ``Minority/Majority``: If no unique minority or majority could be found,
+the result is NoData, except all input cell values are equal.
 
 
 .. figure:: img/cell_statistics_all_stats.png
