@@ -12,9 +12,9 @@ Raster analysis
 Cell statistics |316|
 ---------------------
 
-The Cell statistics algorithm computes a value for each
-cell of the output raster. At each cell location, the
-output value is defined as a function of all overlaid
+Computes per-cell statistics based on input raster layers
+and for each cell writes the resulting statistics to an output raster. At each
+cell location, the output value is defined as a function of all overlaid
 cell values of the input rasters.
 
 By default, a NoData cell in ANY of the input layers will result in a
@@ -33,8 +33,9 @@ Input raster layers that do not match the cell size of the reference
 raster layer will be resampled using ``nearest neighbor resampling``.
 The output raster data type will be set to the most complex
 data type present in the input datasets except when using the
-functions ``Mean`` and ``Standard deviation`` (data type is always ``Float32``)
-or ``Count`` and ``Variety`` (data type is always ``Int32``).
+functions ``Mean``, ``Standard deviation`` and ``Variance`` (data type is always
+``Float32``or ``Float64`` depending on input float type) or ``Count``
+and ``Variety`` (data type is always ``Int32``).
 
 - ``Count``: The count statistic will always result in the number of cells without NoData values at the current cell location.
 
@@ -85,7 +86,7 @@ Parameters
    * - **Ignore NoData values**
      - ``IGNORE_NODATA``
      - [boolean]
-     
+
        Default: True
      - Calculate statistics also for all cells stacks, ignoring NoData occurrence.
    * - **Reference layer**
