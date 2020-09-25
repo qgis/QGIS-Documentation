@@ -1009,8 +1009,8 @@ OpenCL acceleration settings.
 
    Acceleration tab
 
-.. note:: depending on your hardware and software, you may have to install additional
-   libraries to enable OpenCL acceleration.
+Depending on your hardware and software, you may have to install additional 
+libraries to enable OpenCL acceleration.
 
 
 Processing Settings
