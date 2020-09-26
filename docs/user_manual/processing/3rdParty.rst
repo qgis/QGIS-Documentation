@@ -103,7 +103,7 @@ causes longer execution times.
 SAGA
 ----
 
-SAGA algorithms can be run from QGIS if SAGA included in the
+SAGA algorithms can be run from QGIS if SAGA is included with the
 QGIS installation.
 
 If you are running Windows, both the stand-alone installer and the
