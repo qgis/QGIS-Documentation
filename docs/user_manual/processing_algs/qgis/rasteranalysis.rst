@@ -50,7 +50,7 @@ and ``Variety`` (data type is always ``Int32``).
 .. figure:: img/cell_statistics_all_stats.png
   :align: center
 
-  Example for all statistic functions while taking NoData cells (grey) into account.
+  Example with all the statistic functions.``NoData`` cells (grey) are taken into account.
 
 Parameters
 ..........
@@ -140,7 +140,7 @@ Outputs
     - The height in pixels of the output raster layer
   * - **Output raster**
     - ``OUTPUT``
-    - [same as input]
+    - [raster]
     - Output raster layer containing the result
   * - **Total pixel count**
     - ``TOTAL_PIXEL_COUNT``
