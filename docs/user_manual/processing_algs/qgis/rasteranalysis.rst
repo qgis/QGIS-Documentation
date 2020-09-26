@@ -50,7 +50,7 @@ and ``Variety`` (data type is always ``Int32``).
 .. figure:: img/cell_statistics_all_stats.png
   :align: center
 
-  Example with all the statistic functions.``NoData`` cells (grey) are taken into account.
+  Example with all the statistic functions. ``NoData`` cells (grey) are taken into account.
 
 Parameters
 ..........
