@@ -99,10 +99,10 @@ Pages on the QGIS website can be edited quickly and easily by clicking on the
    guidelines <QGIS-documentation-guidelines>`.
 
 #. When you finish, make a short comment about your changes and click on
-   :guilabel:`Propose file change`. This will generate a
+   :guilabel:`Propose changes`. This will generate a
    new `branch <https://help.github.com/articles/about-branches/>`_ (``patch-xxx``) in your repository.
 
-#. After you click on :guilabel:`Propose file change` github will navigate to
+#. After you click on :guilabel:`Propose changes` github will navigate to
    the :guilabel:`Comparing changes` page.
 
    * If you're done making changes, skip to :ref:`Compare changes <compare_changes>`
