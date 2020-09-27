@@ -48,7 +48,7 @@ More than 80 vector and 140 raster formats are supported by
    installation of your OS may not have been built to support the format you
    want to use. To see the list of available formats, run the command line
    ``ogrinfo --formats`` (for vector) and ``gdalinfo --formats`` (for raster),
-   or check :menuselection:`Settings --> Options --> GDAL` menu in QGIS.
+   or check the :menuselection:`Settings --> Options --> GDAL` menu in QGIS.
 
 .. let's use ogrinfo until a list of vector formats is provided in a (GDAL/)OGR tab
 
