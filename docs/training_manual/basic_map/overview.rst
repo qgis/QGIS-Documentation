@@ -64,7 +64,7 @@ all the layers stored in the same path of the project file under in the
 
 Moreover, you can set one or more folder as **Favorites**: search under your path
 and once you have found the folder, right click on it and click on ``Add as a
-Favorite``. You should then be able to see your folder in the |favorites|
+Favorite``. You should then be able to see your folder in the |favourites|
 :guilabel:`Favorites` item.
 
 .. tip:: It can happen that the folders added to Favorite item have a really
