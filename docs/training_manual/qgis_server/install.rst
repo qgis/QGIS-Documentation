@@ -225,7 +225,7 @@ Replace ``127.0.0.1`` with the IP of your server.
    Remember that both the :file:`myhost.conf` and :file:`/etc/hosts` files should
    be configured for our setup to work.
    You can also test the access to your QGIS Server from other clients on the
-   network (e.g. Windows or Macos machines) by going to their :file:`/etc/hosts`
+   network (e.g. Windows or macOS machines) by going to their :file:`/etc/hosts`
    file and point the ``myhost`` name to whatever IP the server machine has on the
    network. You can be sure that that specific IP is not ``127.0.0.1`` as that's
    the local IP, only accessible from the local machine.  On ``*nix`` machines the
@@ -312,7 +312,7 @@ how to configure Apache with QGIS Server, on Debian based Linux distros.
 |WN|
 -------------------------------------------------------------------------------
 
-Now that you've installed QGIS Server and it's accesible through the HTTP
+Now that you've installed QGIS Server and it's accessible through the HTTP
 protocol, we need to learn how to access some of the services it can offer.
 The topic of the next lesson is to learn how to access QGIS Server WMS services.
 

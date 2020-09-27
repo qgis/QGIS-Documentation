@@ -12,7 +12,7 @@ The dataset contains shapefiles with cholera deaths and pump locations, and an O
 
 .. figure:: img/john_snow/project.png
 
-The first thing to do is to calculting the Voronoi diagram (a.k.a. Thyessen polygons) of the pumps layer, to get the influence zone of each pump. The *Voronoi Diagram* algorithm can be used for that.
+The first thing to do is to calculating the Voronoi diagram (a.k.a. Thyessen polygons) of the pumps layer, to get the influence zone of each pump. The *Voronoi Diagram* algorithm can be used for that.
 
 
 .. figure:: img/john_snow/voronoi.png
