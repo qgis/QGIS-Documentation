@@ -61,7 +61,7 @@ project to learn some basic vocabulary and actions that will be used below.
     yourself. This will prevent more than one person from working on the same
     issue.
 
-1. Fork QGIS-Documentation
+Fork QGIS-Documentation
 --------------------------
 
 Assuming you already have a `GitHub account <https://github.com/join>`_,
@@ -77,7 +77,7 @@ This repository is a copy of the official QGIS-Documentation repository where
 you have full write access and you can make changes without affecting the
 official documentation.
 
-2. Make changes
+Make changes
 ---------------
 
 There are different ways to contribute to QGIS documentation. We show
@@ -142,7 +142,7 @@ The name of the new branch should relate to the problem you intend to fix. The
 
 .. _modify_files:
 
-3. Modify files
+Modify files
 ---------------
 
 #. Browse the source files of your fork of QGIS-Documentation to the file that
@@ -158,7 +158,7 @@ The name of the new branch should relate to the problem you intend to fix. The
 
 .. _sharing_changes:
 
-4. Share your changes via Pull Request
+Share your changes via Pull Request
 --------------------------------------
 
 You need to make a pull request to integrate your changes into the official documentation.
@@ -171,7 +171,7 @@ You need to make a pull request to integrate your changes into the official docu
 
   Skip to :ref:`Step 2 <compare_changes>` below.
 
-1. Start a new pull request
+Start a new pull request
 ...........................
 
 Navigate to the main page of the `QGIS-Documentation <https://github.com/qgis/QGIS-Documentation>`_
@@ -179,7 +179,7 @@ repository and click on :guilabel:`New pull request`.
 
 .. _compare_changes:
 
-2. Compare changes
+Compare changes
 ..................
 
 If you see two dialog boxes, one that says ``base:master`` and the other
@@ -229,7 +229,7 @@ Click the :guilabel:`Create pull request` button.
       fixing issues for a different release, change **base** from ``master``
       to the appropriate ``release_...`` branch in the steps above.
 
-3. Describe your pull request
+Describe your pull request
 .............................
 
 A text box will open: fill in any relevant comments for the issue you are
@@ -244,7 +244,7 @@ Add links to any documentation pages that you are changing.
 
 Click on :guilabel:`Create pull request`.
 
-4. Review and comment pull request
+Review and comment pull request
 ..................................
 
 As seen above, anyone can submit modifications to the documentation through pull
@@ -314,7 +314,7 @@ comment text box and modify the text within the suggestion block.
  more legible history of changes and less notifications for the repository
  followers. Incidentally, proceeding as this will also save you many clicks.
 
-5. Make corrections
+Make corrections
 ...................
 
 A new pull request will automatically be added to the `Pull requests list <https://github.com/qgis/QGIS-Documentation/pulls>`_.
@@ -350,7 +350,7 @@ those changes and repeat the steps above.
 An administrator will merge your contribution after any build errors are
 corrected, and after you and the administrators are satisfied with your changes.
 
-5. Delete your merged branch
+Delete your merged branch
 ----------------------------
 
 You can delete the branch after your changes have been merged.
