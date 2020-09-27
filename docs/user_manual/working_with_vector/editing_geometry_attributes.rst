@@ -122,6 +122,29 @@ Another available option is to use |snappingIntersection| :guilabel:`snapping on
 intersection`, which allows you to snap to geometry intersections of
 snapping enabled layers, even if there are no vertices at the intersections.
 
+<<<<<<< HEAD
+=======
+.. index:: Snapping icons
+
+Snapping icons
+--------------
+
+QGIS will show different *snap* icons depending on the kind of *snap*:
+
+.. list-table::
+
+   * - .. figure:: img/snap_vertex_icon.png
+     - .. figure:: img/snap_segment_icon.png
+     - .. figure:: img/snap_intersection_icon.png
+   * - Snapping to a vertex: box icon
+     - Snapping to a segment: hourglass icon
+     - Snapping to an intersection: cross icon
+
+
+Note that it is possible to change the color of these icons in the
+:guilabel:`Digitizing` part of your settings.
+
+>>>>>>> 3006c2fec... Adds description for the additional Shape digitizing tools (#6126)
 .. index:: Search radius
 
 Search radius
@@ -144,6 +167,43 @@ proximity.
 The smaller the search radius, the more difficult it will be to hit
 what you want to move.
 
+<<<<<<< HEAD
+=======
+.. index:: Limit snapping to a scale range
+
+
+Limit snapping to a scale range
+-------------------------------
+
+In some cases snapping can become very slow. This is often caused by the
+amount of features in some layers that require a heavy index to compute
+and maintain. Some parameters exist to enable snapping only when the map
+view is inside a relevant scale range. This allows to only do the costly index
+computation related to snapping at a scale where drawing is relevant.
+
+Scale limit to snapping is configured in
+:menuselection:`Project --> Snapping Options...`.
+Limiting snapping to scale is only available in
+:guilabel:`Advanced Configuration` mode.
+
+To limit snapping to a scale range you have three modes available:
+
+* :guilabel:`Disabled`: Snapping is enabled whatever the current map scale
+  is. This is the default mode.
+* :guilabel:`Global`: Snapping is limited and only enabled when the current
+  scale of the map is between a global minimum and a global maximum value.
+  When selecting this mode two widgets become available
+  to configure the range of scales in which snapping is enabled.
+* :guilabel:`Per layer`: The snapping scale range limit is defined for each layer.
+  When selecting this mode two columns become available
+  to configure the minimum and maximum scales for each layer.
+
+
+
+Please note that the minimum and maximum scales follow the QGIS convention:
+minimum scale is the most "zoomed out" scale while maximum scale is the most "zoomed in".
+A minimum or maximum scale that is set to "0" or "not set" is considered not limiting.
+>>>>>>> 3006c2fec... Adds description for the additional Shape digitizing tools (#6126)
 
 .. index:: Topological editing
    single: Digitizing; Topology
@@ -1365,6 +1425,78 @@ curved geometry, if not, QGIS will segmentize the circular arcs.
   to circle from 3 tangents, except that you have to select two tangents, enter
   a radius and select the desired center.
 
+.. index:: Draw ellipses
+.. _draw_ellipses:
+
+Draw Ellipses
+-------------
+
+There is a set of tools for drawing ellipses. The tools are described
+below.
+
+Ellipses cannot be converted as circular strings, so they will always be
+segmented.
+
+* |ellipseCenter2Points| :sup:`Add Ellipse from center and two points`: Draws an
+  ellipse with a given center, major axis and minor axis. (Left-click,
+  left-click, right-click)
+* |ellipseCenterPoint| :sup:`Add Ellipse from center and a point`: Draws an
+  ellipse into a bounding box with the center and a corner. (Left-click,
+  right-click)
+* |ellipseExtent| :sup:`Add Ellipse from extent`: Draws an ellipse into a bounding
+  box with two opposite corners. (Left-click, right-click)
+* |ellipseFoci| :sup:`Add Ellipse from foci`: Draws an ellipse by 2 points for
+  foci and a point on the ellipse. (Left-click, left-click, right-click)
+
+.. index:: Draw rectangles
+.. _draw_rectangles:
+
+Draw Rectangles
+...............
+
+There is a set of tools for drawing rectangles. The tools are described
+below.
+
+* |rectangleCenter| :sup:`Rectangle from center and a point`: Draws a
+  rectangle from the center and a corner. (Left-click, right-click)
+* |rectangleExtent| :sup:`Rectangle from extent`: Draws a rectangle from two
+  opposite corners. (Left-click, right-click)
+* |rectangle3PointsDistance| :sup:`Rectangle from 3 points (distance)`: Draws an
+  oriented rectangle from three points. The first and second points determine the
+  length and angle of the first edge. The third point determines the length of the
+  other edge. (Left-click, left-click, right-click)
+* |rectangle3PointsProjected| :sup:`Rectangle from 3 points (projected)`: Same as
+  the preceding tool, but the length of the second edge is computed from the
+  projection of the third point on the first edge. (Left-click, left-click,
+  right-click)
+
+   .. _figure_draw_rectangles_3_points:
+
+   .. figure:: img/draw_rectangles_3_points.png
+      :align: center
+
+      Draw rectangle from 3 points using distance (right) and projected (left)
+
+.. index:: Draw regular polygons
+.. _draw_regular_polygons:
+
+Draw Regular Polygons
+.....................
+
+There is a set of tools for drawing regular polygons. The tools are described
+below. Left-click to place the first point.
+A dialog appears, where you can set the number of polygon edges.
+Right-click to finish  the regular polygon.
+
+* |regularPolygon2Points| :sup:`Regular polygon from two points`: Draws a regular
+  polygon where the two points determine the length and angle of the first edge.
+* |regularPolygonCenterPoint| :sup:`Regular polygon from center and a point`:
+  Draws a regular polygon from the provided center point. The second point determines the
+  angle and distance to the middle of an edge.
+* |regularPolygonCenterCorner| :sup:`Regular polygon from center and a corner`:
+  Same as the preceding tool, but the second point determines the angle and
+  distante to a vertex.
+
 .. index::
    single: Digitizing tools; Advanced panel
 .. _advanced_digitizing_panel:
@@ -1718,6 +1850,14 @@ To edit features in-place:
    :width: 1.5em
 .. |editableEdits| image:: /static/common/mIconEditableEdits.png
    :width: 1em
+.. |ellipseCenter2Points| image:: /static/common/mActionEllipseCenter2Points.png
+   :width: 1.5em
+.. |ellipseCenterPoint| image:: /static/common/mActionEllipseCenterPoint.png
+   :width: 1.5em
+.. |ellipseExtent| image:: /static/common/mActionEllipseExtent.png
+   :width: 1.5em
+.. |ellipseFoci| image:: /static/common/mActionEllipseFoci.png
+   :width: 1.5em
 .. |fileSaveAs| image:: /static/common/mActionFileSaveAs.png
    :width: 1.5em
 .. |fillRing| image:: /static/common/mActionFillRing.png
@@ -1754,7 +1894,21 @@ To edit features in-place:
    :width: 1em
 .. |processSelected| image:: /static/common/mActionProcessSelected.png
    :width: 1.5em
+.. |rectangle3PointsDistance| image:: /static/common/mActionRectangle3PointsDistance.png
+   :width: 1.5em
+.. |rectangle3PointsProjected| image:: /static/common/mActionRectangle3PointsProjected.png
+   :width: 1.5em
+.. |rectangleCenter| image:: /static/common/mActionRectangleCenter.png
+   :width: 1.5em
+.. |rectangleExtent| image:: /static/common/mActionRectangleExtent.png
+   :width: 1.5em
 .. |redo| image:: /static/common/mActionRedo.png
+   :width: 1.5em
+.. |regularPolygon2Points| image:: /static/common/mActionRegularPolygon2Points.png
+   :width: 1.5em
+.. |regularPolygonCenterCorner| image:: /static/common/mActionRegularPolygonCenterCorner.png
+   :width: 1.5em
+.. |regularPolygonCenterPoint| image:: /static/common/mActionRegularPolygonCenterPoint.png
    :width: 1.5em
 .. |reshape| image:: /static/common/mActionReshape.png
    :width: 1.5em
