@@ -95,6 +95,11 @@ default value and the range of valid values.
 
    Model Parameters Definition
 
+You can define your input as mandatory for your model by checking the
+|checkbox|:sup:`Mandatory` option and by checking the |unchecked|:sup:`Advanced`
+checkbox you can set the input to be within the Advanced section.
+This is particularly useful when the model has many parameters and some
+of them are not trivial, but you still want to choose them.
 For each added input, a new element is added to the modeler canvas.
 
 .. _figure_model_parameter_canvas:
