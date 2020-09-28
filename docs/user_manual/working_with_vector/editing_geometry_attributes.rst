@@ -122,29 +122,6 @@ Another available option is to use |snappingIntersection| :guilabel:`snapping on
 intersection`, which allows you to snap to geometry intersections of
 snapping enabled layers, even if there are no vertices at the intersections.
 
-<<<<<<< HEAD
-=======
-.. index:: Snapping icons
-
-Snapping icons
---------------
-
-QGIS will show different *snap* icons depending on the kind of *snap*:
-
-.. list-table::
-
-   * - .. figure:: img/snap_vertex_icon.png
-     - .. figure:: img/snap_segment_icon.png
-     - .. figure:: img/snap_intersection_icon.png
-   * - Snapping to a vertex: box icon
-     - Snapping to a segment: hourglass icon
-     - Snapping to an intersection: cross icon
-
-
-Note that it is possible to change the color of these icons in the
-:guilabel:`Digitizing` part of your settings.
-
->>>>>>> 3006c2fec... Adds description for the additional Shape digitizing tools (#6126)
 .. index:: Search radius
 
 Search radius
@@ -166,44 +143,6 @@ especially if you are dealing with a large number of vertices in close
 proximity.
 The smaller the search radius, the more difficult it will be to hit
 what you want to move.
-
-<<<<<<< HEAD
-=======
-.. index:: Limit snapping to a scale range
-
-
-Limit snapping to a scale range
--------------------------------
-
-In some cases snapping can become very slow. This is often caused by the
-amount of features in some layers that require a heavy index to compute
-and maintain. Some parameters exist to enable snapping only when the map
-view is inside a relevant scale range. This allows to only do the costly index
-computation related to snapping at a scale where drawing is relevant.
-
-Scale limit to snapping is configured in
-:menuselection:`Project --> Snapping Options...`.
-Limiting snapping to scale is only available in
-:guilabel:`Advanced Configuration` mode.
-
-To limit snapping to a scale range you have three modes available:
-
-* :guilabel:`Disabled`: Snapping is enabled whatever the current map scale
-  is. This is the default mode.
-* :guilabel:`Global`: Snapping is limited and only enabled when the current
-  scale of the map is between a global minimum and a global maximum value.
-  When selecting this mode two widgets become available
-  to configure the range of scales in which snapping is enabled.
-* :guilabel:`Per layer`: The snapping scale range limit is defined for each layer.
-  When selecting this mode two columns become available
-  to configure the minimum and maximum scales for each layer.
-
-
-
-Please note that the minimum and maximum scales follow the QGIS convention:
-minimum scale is the most "zoomed out" scale while maximum scale is the most "zoomed in".
-A minimum or maximum scale that is set to "0" or "not set" is considered not limiting.
->>>>>>> 3006c2fec... Adds description for the additional Shape digitizing tools (#6126)
 
 .. index:: Topological editing
    single: Digitizing; Topology
