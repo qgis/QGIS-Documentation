@@ -1092,7 +1092,7 @@ Python code
         
 .. _qgisrandompointsinpolygons:
 
-Random points in polygons |314|
+Random points in polygons |316|
 -------------------------------
 Creates a point layer with points placed inside the polygons of
 another layer.
@@ -1781,7 +1781,7 @@ Python code
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
-  :end-before: **end_algorithm_code_section**
+  :end-before: **end_algforithm_code_section**
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
@@ -1791,6 +1791,7 @@ Python code
    source folder.
 
 .. |314| replace:: ``NEW in 3.14``
+.. |316| replace:: ``NEW in 3.16``
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |dataDefined| image:: /static/common/mIconDataDefine.png
