@@ -1129,7 +1129,7 @@ of the algorithm.
 The attributes of the polygon feature on which a point was generated
 can be included (:guilabel:`Include polygon attributes`).
 
-If you want approximately the same point density for all the line
+If you want approximately the same point density for all the
 features, you can data-define the number of points using the area of
 the polygon feature geometry.
 
