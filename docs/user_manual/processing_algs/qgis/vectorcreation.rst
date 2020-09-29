@@ -1781,7 +1781,7 @@ Python code
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
-  :end-before: **end_algforithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
