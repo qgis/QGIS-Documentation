@@ -436,7 +436,7 @@ the same layer or in another layer.
 
 **Default menu**: :menuselection:`Vector --> Analysis Tools`
 
-.. seealso:: :ref:`qgisjoinattributesbynearest`
+.. seealso:: :ref:`qgisjoinbynearest`
 
 Parameters
 ..........
@@ -548,7 +548,7 @@ Distances are calculated based on the
   Display the nearest hub for the red input features
 
 .. seealso:: :ref:`qgisdistancetonearesthubpoints`,
-   :ref:`qgisjoinattributesbynearest`
+   :ref:`qgisjoinbynearest`
 
 Parameters
 ..........
@@ -632,7 +632,7 @@ feature (based on its center point) and the distance between the
 points.
 
 .. seealso:: :ref:`qgisdistancetonearesthublinetohub`,
-   :ref:`qgisjoinattributesbynearest`
+   :ref:`qgisjoinbynearest`
 
 Parameters
 ..........
@@ -1088,7 +1088,7 @@ values:
 
 **Default menu**: :menuselection:`Vector --> Analysis Tools`
 
-.. seealso:: :ref:`qgisjoinattributesbynearest`
+.. seealso:: :ref:`qgisjoinbynearest`
 
 Parameters
 ..........
