@@ -232,7 +232,7 @@ this area.
 #. Click :guilabel:`Run`
 
    After the clipping operation has completed, leave the
-   :guilabel:`Clip Raster by Extent` dialog open, to be able to reuse
+   :guilabel:`Clip Raster by Mask Layer` dialog open, to be able to reuse
    the clipping area
 #. Select the ``Rainfall`` raster layer in the :guilabel:`Input layer`
    dropdown list and save your output as :file:`Rainfall_clipped.tif`
