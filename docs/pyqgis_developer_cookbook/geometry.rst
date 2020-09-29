@@ -149,6 +149,7 @@ enumeration.
     # output: 1 for Point
   if gLine.wkbType() == QgsWkbTypes.LineString:
     print(gLine.wkbType())
+    # output: 2 for LineString
   if gPolygon.wkbType() == QgsWkbTypes.Polygon:
     print(gPolygon.wkbType())
     # output: 3 for Polygon
