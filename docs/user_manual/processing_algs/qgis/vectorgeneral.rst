@@ -1095,7 +1095,7 @@ The additional attributes and their values are taken from a second
 vector layer.
 An attribute is selected in each of them to define the join criteria.
 
-.. seealso:: :ref:`qgisjoinattributesbynearest`,
+.. seealso:: :ref:`qgisjoinbynearest`,
    :ref:`qgisjoinattributesbylocation`
 
 Parameters
@@ -1251,7 +1251,7 @@ layer that are added to each feature from the first layer.
 
 **Default menu**: :menuselection:`Vector --> Data Management Tools`
 
-.. seealso:: :ref:`qgisjoinattributesbynearest`,
+.. seealso:: :ref:`qgisjoinbynearest`,
    :ref:`qgisjoinattributestable`, :ref:`qgisjoinbylocationsummary`
 
 Parameters
@@ -1533,7 +1533,7 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
-.. _qgisjoinattributesbynearest:
+.. _qgisjoinbynearest:
 
 Join attributes by nearest
 -------------------------------
