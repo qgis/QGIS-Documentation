@@ -323,18 +323,36 @@ Further reading: :ref:`qgiscollect` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_collect_geometries_section
+   :end-before: .. end_contains_section
+
+Further reading: :ref:`expression_function_GeometryGroup_geometry_overlay_contains`
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_contains_section
    :end-before: .. end_convex_hull_section
 
 Further reading: :ref:`qgisconvexhull` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_convex_hull_section
+   :end-before: .. end_crosses_section
+
+Further reading: :ref:`expression_function_GeometryGroup_geometry_overlay_crosses`
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_crosses_section
    :end-before: .. end_difference_section
 
 Further reading: :ref:`qgisdifference` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_difference_section
+   :end-before: .. end_disjoint_section
+
+Further reading: :ref:`expression_function_GeometryGroup_geometry_overlay_disjoint`
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_disjoint_section
    :end-before: .. end_end_point_section
 
 Further reading: :ref:`qgisextractspecificvertices` algorithm
@@ -419,6 +437,12 @@ Further reading: :ref:`qgisintersection` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_intersection_section
+   :end-before: .. end_intersects_section
+
+Further reading: :ref:`expression_function_GeometryGroup_geometry_overlay_intersects`
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_intersects_section
    :end-before: .. end_line_interpolate_point_section
 
 Further reading: :ref:`qgisinterpolatepoint` algorithm
@@ -533,6 +557,12 @@ Further reading: :ref:`qgistaperedbuffer` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_tapered_buffer_section
+   :end-before: .. end_touches_section
+
+Further reading: :ref:`expression_function_GeometryGroup_geometry_overlay_touches`
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_touches_section
    :end-before: .. end_transform_section
 
 Further reading: :ref:`qgisreprojectlayer` algorithm
@@ -551,7 +581,13 @@ Further reading: :ref:`qgiswedgebuffers` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_wedge_buffer_section
+   :end-before: .. end_within_section
 
+Further reading: :ref:`expression_function_GeometryGroup_geometry_overlay_within`
+
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_within_section
 
 Layout Functions
 ----------------
