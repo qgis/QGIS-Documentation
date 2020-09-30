@@ -2812,7 +2812,7 @@ As an exercise, we can create an action that does a Google search on the ``lakes
 layer. First, we need to determine the URL required to perform a search on a
 keyword. This is easily done by just going to Google and doing a simple
 search, then grabbing the URL from the address bar in your browser. From this
-little effort, we see that the format is https://www.google.com//search?q=QGIS,
+little effort, we see that the format is https://www.google.com/search?q=QGIS,
 where ``QGIS`` is the search term. Armed with this information, we can proceed:
 
 #. Make sure the ``lakes`` layer is loaded.
@@ -2831,15 +2831,15 @@ where ``QGIS`` is the search term. Armed with this information, we can proceed:
    need to provide the full path.
 #. Following the name of the external application, add the URL used for doing
    a Google search, up to but not including the search term:
-   ``https://www.google.com//search?q=``
+   ``https://www.google.com/search?q=``
 #. The text in the :guilabel:`Action` field should now look like this:
-   ``https://www.google.com//search?q=``
+   ``https://www.google.com/search?q=``
 #. Click on the drop-down box containing the field names for the ``lakes``
    layer. It's located just to the left of the :guilabel:`Insert` button.
 #. From the drop-down box, select 'NAMES' and click :guilabel:`Insert`.
 #. Your action text now looks like this:
 
-   ``https://www.google.com//search?q=[%NAMES%]``
+   ``https://www.google.com/search?q=[%NAMES%]``
 #. To finalize and add the action, click the :guilabel:`OK` button.
 
 .. _figure_add_action:
@@ -2854,7 +2854,7 @@ action should look like this:
 
 ::
 
-   https://www.google.com//search?q=[%NAMES%]
+   https://www.google.com/search?q=[%NAMES%]
 
 We can now use the action. Close the :guilabel:`Layer Properties` dialog and
 zoom in to an area of interest. Make sure the ``lakes`` layer is active and
@@ -2922,7 +2922,7 @@ project file? The code of the Python action would be:
 .. code-block:: python
 
   command = "firefox"
-  imagerelpath = "images/test_image.jpg"
+  imagerelpath = "images_test/test_image.jpg"
   projectpath = qgis.core.QgsProject.instance().fileName()
   import os.path
   path = os.path.dirname(str(projectpath)) if projectpath != '' else None
