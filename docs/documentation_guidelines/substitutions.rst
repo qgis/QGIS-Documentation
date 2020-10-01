@@ -217,7 +217,7 @@ Icon                            Substitution                        Icon        
 |selectFreehand|                ``|selectFreehand|``                |selectRadius|                  ``|selectRadius|``
 |selectAll|                     ``|selectAll|``                     |deselectAll|                   ``|deselectAll|``
 |invertSelection|               ``|invertSelection|``               |expressionSelect|              ``|expressionSelect|``
-|deselectActiveLayer|           ``|deselectActiveLayer|``
+|deselectActiveLayer|           ``|deselectActiveLayer|``           |algorithmSelectLocation|       ``|algorithmSelectLocation|``
 |selectAllTree|                 ``|selectAllTree|``                 |select|                        ``|select|``
 |formSelect|                    ``|formSelect|``                    |dataDefined|                   ``|dataDefined|``
 |expression|                    ``|expression|``                    |dataDefineOn|                  ``|dataDefineOn|``
@@ -568,6 +568,8 @@ Icon                            Substitution                        Icon        
 .. |addWmsLayer| image:: /static/common/mActionAddWmsLayer.png
    :width: 1.5em
 .. |addXyzLayer| image:: /static/common/mActionAddXyzLayer.png
+   :width: 1.5em
+.. |algorithmSelectLocation|  image:: /static/common/mAlgorithmSelectLocation.png
    :width: 1.5em
 .. |alignBottom| image:: /static/common/mActionAlignBottom.png
    :width: 1.5em
