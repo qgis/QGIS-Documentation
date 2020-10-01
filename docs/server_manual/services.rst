@@ -1061,6 +1061,7 @@ information which is not available in the GetCapabilities output:
 * information about vector attributes and their edit types
 * information about layer order and drawing order
 * list of layers published in WFS
+* show if a legend group is mutually exclusive
 
 
 Web Feature Service (WFS)
