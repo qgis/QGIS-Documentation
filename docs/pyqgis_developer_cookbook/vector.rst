@@ -38,7 +38,6 @@ The code snippets on this page need the following imports if you're outside the 
       QgsVectorFileWriter,
       QgsWkbTypes,
       QgsSpatialIndex,
-      QgsVectorLayerUtils
     )
 
     from qgis.core.additions.edit import edit
@@ -647,40 +646,6 @@ create them easily. This is what you have to do:
 
     # returns array of IDs of features which intersect the rectangle
     intersect = index.intersects(QgsRectangle(22.5, 15.3, 23.1, 17.2))
-
-
-.. index:: Vector layers; utils
-
-The QgsVectorLayerUtils class
-=============================
-The :class:`QgsVectorLayerUtils <qgis.core.QgsVectorLayerUtils>` class contains
-some very useful methods that you can use with vector layers.
-
-For example the :meth:`createFeature() <qgis.core.QgsVectorLayerUtils.createFeature>` 
-method prepares a :class:`QgsFeature <qgis.core.QgsFeature>` to be added to 
-a vector layer keeping all the eventual constraints and default values of each
-field:
-
-.. testcode:: vectors
-
-    vlayer = QgsVectorLayer("testdata/airports.shp", "airports", "ogr")
-    feat = QgsVectorLayerUtils.createFeature(vlayer)
-
-
-The :meth:`getValues() <qgis.core.QgsVectorLayerUtils.getValues>` methods allows
-you to quickly get the values of a field or expression:
-
-.. testcode:: vectors
-
-    vlayer = QgsVectorLayer("testdata/airports.shp", "airports", "ogr")
-    # select only the first feature to make the output shorter
-    vlayer.selectByIds([1])
-    val = QgsVectorLayerUtils.getValues(vlayer, "NAME", selectedOnly=True)
-    print(val)
-
-.. testoutput:: vectors
-
-    (['AMBLER'], True)
 
 
 .. index:: Vector layers; Creating
