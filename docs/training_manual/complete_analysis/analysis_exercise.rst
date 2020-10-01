@@ -748,7 +748,7 @@ Find the locations that are closest to the University of Cape Town
 ----------------------------------------------------------------------
 
 #. Go to the *Processing Toolbox*, locate the
-   *Join Attributes by Nearest* algoritm
+   *Join Attributes by Nearest* algorithm
    (:menuselection:`Vector general --> Join Attributes by Nearest`)
    and execute it
 #. :guilabel:`Input layer` should be ``university``, and
