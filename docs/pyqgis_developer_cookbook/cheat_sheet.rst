@@ -190,7 +190,7 @@ Layers
 .. testcode:: cheat_sheet
 
     from qgis.core import QgsVectorLayer
-    layer = layer = QgsVectorLayer("Point?crs=EPSG:4326", "layer name you like", "memory")
+    layer = QgsVectorLayer("Point?crs=EPSG:4326", "layer name you like", "memory")
     QgsProject.instance().addMapLayer(layer)
 
     layers_names = []
