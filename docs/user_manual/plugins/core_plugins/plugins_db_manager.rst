@@ -90,6 +90,10 @@ button.
    See :ref:`vector_virtual_layers` for instructions on the SQL syntax
    to use.
 
+The :guilabel:`Query History` button stores the last 20 queries of each database
+and provider.  
+
+Double clicking on a query will fill add the string to the SQL window.
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
