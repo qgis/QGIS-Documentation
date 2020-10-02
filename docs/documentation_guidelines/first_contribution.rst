@@ -80,7 +80,7 @@ without any harm.
 Alternative 1: Use the ``Edit on GitHub`` shortcut
 ..................................................
 
-Pages on the QGIS website can be edited quickly and easily by clicking on the
+Pages on the QGIS documentation website can be edited quickly and easily by clicking on the
 ``Edit on GitHub`` link at the top right of each page.
 
 #. This will open the file in the ``qgis:master`` branch with a message at the
