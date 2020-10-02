@@ -94,15 +94,13 @@ methods you can easily get both:
 
 .. testcode:: vectors
 
-    vlayer = iface.addVectorLayer("testdata/airports.shp", "airports", "ogr")
+    vlayer = QgsVectorLayer("testdata/airports.shp", "airports", "ogr")
     print(vlayer.displayField())
-    print(vlayer.mapTipTemplate())
 
 
 .. testoutput:: vectors
 
     NAME
-    ''
 
 .. note:: If you change the ``Display Name`` from a field to an expression, you have to
    use :meth:`displayExpression() <qgis.core.QgsVectorLayer.displayExpression>`
