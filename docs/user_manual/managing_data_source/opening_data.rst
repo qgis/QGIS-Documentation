@@ -1140,6 +1140,27 @@ WFS(-T), WCS, CSW, ...).
 Thanks to QGIS Server, you can also publish such services.
 :ref:`QGIS-Server-manual` contains descriptions of these capabilities.
 
+.. index:: Vector Tiles services
+.. _vector_tile:
+
+Using Vecto Tiles services
+--------------------------
+
+Vector Tiles services can be found in the :guilabel:`Vector Tiles`
+top level entry in the :guilabel:`Browser`.
+You can add a service by opening the context menu with a right-click
+and choosing :guilabel:`New Connection`.
+figure_vector_tiles_maptilerplanet shows the dialog with the 
+MapTiler Planet service configuration. The service is available
+on https://cloud.maptiler.com/tiles/ . 
+
+.. _figure_vector_tiles_maptilerplanet:
+
+.. figure:: img/vector_tiles_maptilerplanet.png
+   :align: center
+   
+   Vector Tiles - MapTiler Planet configuration 
+
 .. index:: XYZ Tile services
 .. _xyz_tile:
 
