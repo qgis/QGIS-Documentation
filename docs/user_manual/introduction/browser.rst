@@ -74,11 +74,11 @@ When enabled, it opens at the bottom of the browser panel, as shown in
 
    The properties widget
 
-A second browser panels can be opened by activating the
+A second browser panel can be opened by activating the
 :guilabel:`Browser (2)` panel in :menuselection:`View --> Panels`.
 Having two browser panels can be useful when copying layers between
 resources that are locationed deep down in different branches of the
-browser hierarcy.
+browser hierarchy.
 
 
 Resources that can be opened / run from the Browser
@@ -113,7 +113,7 @@ The ones you have tagged will appear here.
 
 In addition to the operations described under *Home*, the
 context menu allows you to :guilabel:`Rename Favorite...` and
-:guilabel:`Remove Favourite`.
+:guilabel:`Remove Favorite`.
 
 
 Spatial Bookmarks
@@ -125,7 +125,7 @@ From the top level context menu, you can create a bookmark
 (:guilabel:`New Spatial Bookmark...`),
 :guilabel:`Show the Spatial Bookmark Manager`,
 :guilabel:`Import Spatial Bookmarks...` and
-:guilabel:`Export Spatial Bookmarks...`,
+:guilabel:`Export Spatial Bookmarks...`.
 
 For bookmark entries you can :guilabel:`Zoom to Bookmark`,
 :guilabel:`Edit Spatial Bookmark...` and
@@ -387,33 +387,33 @@ Resources
   The context menu for QGIS project files allows you to:
 
   * open it (:guilabel:`Open Project`)
-  * extract symbols (:guilabel:`Extract Symbols...`) - open the style
+  * extract symbols (:guilabel:`Extract Symbols...`) - opens the style
     manager that allows you to export symbols to an XML file, add
     symbols to the default style or export as PNG or SVG.
   * inspect properties (:guilabel:`File Properties...`)
 
   You can expand the project file to see its layers.
-  The context menu of a layers offers the same actions as elsewhere
+  The context menu of a layer offers the same actions as elsewhere
   in the browser.
-* QGIS Layer Definition files (QLR)
+* QGIS Layer Definition files (QLR).
   The following actions are available from the context menu:
 
   * export it (:menuselection:`Export Layer --> To file`)
   * add it to the project (:guilabel:`Add Layer to Project`)
   * inspect properties (:guilabel:`Layer Properties...`)
 
-* Processing models (.model3)
+* Processing models (.model3).
   The following actions are available from the context menu:
 
   * :guilabel:`Run Model...`)
   * :guilabel:`Edit Model...`)
 
-* QGIS print composer templates (QPT)
+* QGIS print composer templates (QPT).
   The following action is available from the context menu:
 
   * (:guilabel:`New Layout from Template`)
 
-* Python scripts (.py)
+* Python scripts (.py).
   The following actions are available from the context menu:
 
   * (:guilabel:`Run script...`)
@@ -448,6 +448,7 @@ Resources
    If you need to create a new substitution manually,
    please add it also to the substitutions.txt file in the
    source folder.
+
 .. |addLayer| image:: /static/common/mActionAddLayer.png
    :width: 1.5em
 .. |browserCollapse| image:: /static/common/browser_collapse.png
@@ -462,5 +463,3 @@ Resources
    :width: 1.5em
 .. |options| image:: /static/common/mActionOptions.png
    :width: 1em
-
-

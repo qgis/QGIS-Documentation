@@ -149,6 +149,7 @@ enumeration.
     # output: 1 for Point
   if gLine.wkbType() == QgsWkbTypes.LineString:
     print(gLine.wkbType())
+    # output: 2 for LineString
   if gPolygon.wkbType() == QgsWkbTypes.Polygon:
     print(gPolygon.wkbType())
     # output: 3 for Polygon
@@ -303,17 +304,17 @@ The following code assumes ``layer`` is a :class:`QgsVectorLayer
 .. testoutput:: geometry
 
     Zubin Potok
-    Perimeter (m): 87581.40256396442
+    Perimeter (m): 87581.40256396489
     Area (m2): 369302069.18814206
     Area (km2): 369.30206918814207
     Zulia
-    Perimeter (m): 1891227.0945423362
-    Area (m2): 44973645460.19726
-    Area (km2): 44973.64546019726
+    Perimeter (m): 1891227.0945423376
+    Area (m2): 44973645460.19719
+    Area (km2): 44973.645460197185
     Zuid-Holland
     Perimeter (m): 331941.8000214341
-    Area (m2): 3217213408.4100943
-    Area (km2): 3217.213408410094
+    Area (m2): 3217213408.4101033
+    Area (km2): 3217.213408410103
     Zug
     Perimeter (m): 67440.22483063207
     Area (m2): 232457391.52097562

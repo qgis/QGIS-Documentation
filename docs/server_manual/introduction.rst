@@ -1,11 +1,6 @@
-.. index:: QGIS Server, WMS Server, WFS Server, WCS Server
-
-.. _`label_qgisserver`:
-
-
-***********************
-QGIS as OGC Data Server
-***********************
+************
+Introduction
+************
 
 QGIS Server is an open source WMS 1.3, WFS 1.0.0, WFS 1.1.0 and WCS 1.1.1
 implementation that, in addition, implements advanced cartographic features for
@@ -30,11 +25,3 @@ In the following sections, we will provide a sample configuration to set up
 a QGIS Server on Linux (Debian, Ubuntu and derivatives) and on Windows.
 For more information about server plugin development, please read :ref:`server_plugins`.
 
-.. toctree::
-  :maxdepth: 2
-
-  getting_started
-  services
-  plugins
-  config
-  development_server

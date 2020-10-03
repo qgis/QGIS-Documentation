@@ -161,7 +161,7 @@ It will also be shown in the lower-right of the QGIS status bar.
 
 Available options are:
 
-* |unchecked| :guilabel:`No projection (or unknown/non-Earth projection)`:
+* |unchecked| :guilabel:`No CRS (or unknown/non-Earth projection)`:
   Checking this setting will disable ALL projection handling within the QGIS
   project, causing all layers and map coordinates to be treated as simple 2D
   Cartesian coordinates, with no relation to positions on the Earth's surface.
@@ -246,14 +246,6 @@ define a custom CRS. To define a CRS, select |customProjection|
 are stored in your QGIS user database. In addition to your custom CRSs, this
 database also contains your spatial bookmarks and other custom data.
 
-.. _figure_projection_custom:
-
-.. figure:: img/customProjectionDialog.png
-   :align: center
-
-   Custom CRS Dialog
-
-
 Defining a custom CRS in QGIS requires a good understanding of the PROJ
 projection library. To begin, refer to "Cartographic Projection Procedures
 for the UNIX Environment - A User's Manual" by Gerald I. Evenden, U.S.
@@ -270,11 +262,31 @@ only two parameters to define a user CRS:
 #. A descriptive name
 #. The cartographic parameters in PROJ or WKT format
 
-To create a new CRS, click the |signPlus| :sup:`Add new CRS` button,
-enter a descriptive name, select the format, and the CRS parameters.
+To create a new CRS:
 
-Click :guilabel:`Validate` to test whether the CRS definition is an acceptable
-projection definition.
+#. Click the |signPlus| :sup:`Add new CRS` button
+#. Enter a descriptive name
+#. Select the format: it can be :guilabel:`Proj String` or :guilabel:`WKT`
+#. Add the CRS :guilabel:`Parameters`.
+
+   .. note:: **Prefer storing the CRS definition in WKT format**
+
+    Although both ``Proj String`` and ``WKT`` formats are supported, it's
+    highly recommended to store projection definitions in the WKT format.
+    Therefore, if the available definition is in the proj format, select that
+    format, enter the parameters and then switch to WKT format.
+    QGIS will convert the definition to the WKT format that you can later save.
+
+#. Click :guilabel:`Validate` to test whether the CRS definition is an acceptable
+   projection definition.
+
+.. _figure_projection_custom:
+
+.. figure:: img/customProjectionDialog.png
+   :align: center
+
+   Custom CRS Dialog
+
 
 You can test your CRS parameters to see if they give sane results. To do this,
 enter known WGS 84 latitude and longitude values in :guilabel:`North` and

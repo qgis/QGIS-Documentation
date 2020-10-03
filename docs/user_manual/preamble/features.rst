@@ -39,7 +39,7 @@ Supported formats include:
 *  GRASS raster and vector data from GRASS databases (location/mapset).
    See section :ref:`sec_grass`.
 *  Online spatial data served as OGC Web Services, including WMS,
-   WMTS, WCS, WFS, and WFS-T. See section :ref:`sec_ogc`.
+   WMTS, WCS, WFS, and WFS-T. See section :ref:`working_with_ogc`.
 
    The QGIS authentication infrastructure helps you manage
    user/password, certificates and keys for web services and other
@@ -116,10 +116,10 @@ complete workflow in an intuitive graphical environment.
 Publish maps on the Internet
 ----------------------------------------------------------------------
 
-QGIS can be used as a WMS, WMTS, WMS-C or WFS and WFS-T client, and as
-a WMS, WCS or WFS server (see section :ref:`sec_ogc`). Additionally,
-you can publish your data on the Internet using a webserver with QGIS
-Server, UMN MapServer or GeoServer installed.
+QGIS can be used as a WMS, WMTS, WMS-C or WFS and WFS-T client (see
+section :ref:`working_with_ogc`), and QGIS Server (see the :ref:`QGIS-Server-manual`)
+allows you to publish your data through the WMS, WCS and WFS protocols on the Internet
+using a webserver.
 
 Extend QGIS functionality through plugins
 ----------------------------------------------------------------------

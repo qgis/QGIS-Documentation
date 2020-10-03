@@ -241,7 +241,7 @@ GetPrint requests
 -----------------
 
 One very nice feature of QGIS Server is that it makes use of the QGIS Desktop
-print layouts. You can learn about it in the :ref:`server_getprint` section.
+print layouts. You can learn about it in the :ref:`server_wms_getprint` section.
 
 If you open the :file:`world.qgs` project with QGIS Desktop you will find a
 print layout named ``Population distribution``. A simplified ``GetPrint``

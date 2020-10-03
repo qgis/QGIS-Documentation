@@ -12,8 +12,9 @@
    .. contents::
       :local:
 
-The :ref:`figure below <figure_layout_output>` shows an example print layout
-including all the types of layout items described in the previous section.
+:numref:`figure_layout_output` shows an example print layout
+including all the types of layout items described in the previous
+section.
 
 .. _figure_layout_output:
 

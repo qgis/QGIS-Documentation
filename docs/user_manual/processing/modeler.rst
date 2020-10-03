@@ -23,8 +23,17 @@ The graphical modeler can be opened from the Processing menu
 
 The modeler has a working canvas where the structure of the model and
 the workflow it represents are shown.
-The left part of the window is a panel with two tabs that can be used
-to add new elements to the model.
+The left part of the window is a section with five panels that can be used
+to add new elements to the model:
+
+#. ``Model Properties``: you can specify the name of the model and the group that
+   will contain it
+#. ``Inputs``: all the inputs that will shape your model
+#. ``Algorithms``: the Processing algorithms available
+#. ``Variables``: you can also define variables that will only be available in
+   the Processing Modeler
+#. ``Undo History``: this panel will register everything that happens in the 
+   modeler, making it easy to cancel things you did wrong.
 
 .. _figure_modeler:
 
@@ -33,14 +42,14 @@ to add new elements to the model.
 
    Modeler
 
-Creating a model involves two steps:
+Creating a model involves two basic steps:
 
 #. *Definition of necessary inputs*.
    These inputs will be added to the parameters window, so the user
    can set their values when executing the model.
    The model itself is an algorithm, so the parameters window is
-   generated automatically as it happens with all the algorithms
-   available in the processing framework.
+   generated automatically as for all algorithms
+   available in the Processing framework.
 #. *Definition of the workflow*.
    Using the input data of the model, the workflow is defined by
    adding algorithms and selecting how they use the defined inputs
@@ -50,36 +59,53 @@ Definition of inputs
 --------------------
 
 The first step is to define the inputs for the model.
-The following elements are found in the :guilabel:`Inputs` tab on
+The following elements are found in the :guilabel:`Inputs` panel on
 the left side of the modeler window:
 
+* Authentication Configuration
 * Boolean
+* Color
+* Connection Name
+* Coordinate Operation
 * CRS
+* Database Schema
+* Database Table
+* Datetime
 * Distance
 * Enum
 * Expression
 * Extent
+* Fields Aggregate
 * Fields Mapper
 * File/Folder
 * Map Layer
+* Map Theme
 * Matrix
+* Mesh Layer
 * Multiple Input
 * Number
 * Point
+* Print Layout
+* Print Layout Item
 * Range
 * Raster Band
 * Raster Layer
+* Scale
 * String
 * Vector Features
 * Vector Field
 * Vector Layer
+* Vector Tile Writer Layers
+
+.. note:: Hovering with the mouse over the inputs will show a tooltip with 
+  additional information.
 
 When double-clicking on an element, a dialog is shown that lets
 you define its characteristics.
-Depending on the parameter, the dialog will contain at least one basic
+Depending on the parameter, the dialog will contain at least one
 element (the description, which is what the user will see when
 executing the model).
-When adding a numerical value, as can be seen in the next figure,
+For example, when adding a numerical value, as can be seen in the next figure,
 in addition to the description of the parameter, you have to set a
 default value and the range of valid values.
 
@@ -89,6 +115,17 @@ default value and the range of valid values.
    :align: center
 
    Model Parameters Definition
+
+You can define your input as mandatory for your model by checking the 
+|checkbox| ``Mandatory`` option and by checking the |unchecked| ``Advanced`` 
+checkbox you can set the input to be within the ``Advanced`` section. This is 
+particularly useful when the model has many parameters and some of them are not
+trivial, but you still want to choose them.
+
+The ``Comments`` tab allows you to tag the input with more information,
+to better describe 
+the parameter. Comments are visible only in the modeler canvas and not in the
+final algorithm dialog.
 
 For each added input, a new element is added to the modeler canvas.
 
@@ -100,15 +137,24 @@ For each added input, a new element is added to the modeler canvas.
    Model Parameters
 
 You can also add inputs by dragging the input type from the list and
-dropping it in the position where you want it in the modeler canvas.
+dropping it at the position where you want it in the modeler canvas. If you want
+to change a parameter of an existing input, just double click on it, and the 
+same dialog will pop up.
 
 Definition of the workflow
 --------------------------
 
-Once the inputs have been defined, it is time to define the algorithms
-of the model.
-Algorithms can be found in the :guilabel:`Algorithms` tab, grouped
-much in the same way as they are in the Processing toolbox.
+In the following example we will add two inputs and two algorithms. The aim of
+the model is to copy the elevation values from a DEM raster layer to a line layer
+using the ``Drape`` algorithm,  and then calculate the total ascent of the line
+layer using the ``Climb Along Line`` algorithm.
+
+In the :guilabel:`Inputs` tab, choose the two inputs as ``Vector Layer`` for the line and
+``Raster Layer`` for the DEM.
+We are now ready to add the algorithms to the workflow.
+
+Algorithms can be found in the :guilabel:`Algorithms` panel, grouped
+much in the same way as they are in the Processing toolbox. 
 
 .. _figure_model_parameter_inputs:
 
@@ -119,13 +165,13 @@ much in the same way as they are in the Processing toolbox.
 
 
 To add an algorithm to a model, double-click on its name or drag and
-drop it, just like for inputs.
-An execution dialog will appear, with a content similar to the one
-found in the execution panel that is shown when executing the
+drop it, just like for inputs. As for the inputs you can change the description
+of the algorithm and add a comment.
+When adding an algorithm, an execution dialog will appear, with a content similar 
+to the one found in the execution panel that is shown when executing the
 algorithm from the toolbox.
-The ones shown next correspond to the QGIS
-'Drape (set Z value from raster)' algorithm and the QGIS 'Climb along
-line' algorithm.
+The following picture shows both the ``Drape (set Z value from raster)`` and the
+``Climb along line`` algorithm dialogs.
 
 .. _figure_model_parameter_alg:
 
@@ -135,50 +181,43 @@ line' algorithm.
    Model Algorithm parameters
 
 
-As you can see, some differences exist.
-Instead of the file output box that was used to set the file path for
-output layers and tables, a simple text box is used here.
-If the layer generated by the algorithm is just a temporary result
-that will be used as the input of another algorithm and should not be
-kept as a final result, just do not edit that text box.
-Typing anything in it means that the result is final and the text that
-you supply will be the description for the output, which will be the
-output the user will see when executing the model.
+As you can see there are some differences.
 
-Selecting the value of each parameter is also a bit different, since
-there are important differences between the context of the modeler and
-that of the toolbox.
-Let's see how to introduce the values for each type of parameter.
+You have four choices to define the algorithm **inputs**:
 
-* Layers (raster and vector) and tables.
-  These are selected from a list, but in this case, the possible values
-  are not the layers or tables currently loaded in QGIS, but the list
-  of model inputs of the corresponding type, or other layers or
-  tables generated by algorithms already added to the model.
-* Numerical values.
-  Literal values can be introduced directly in the text box.
-  Clicking on the button beside the text box, expressions can be entered.
-  Available variables for expressions include numerical inputs of the
-  model, outputs from model algorithms and also statistical values from
-  available layers within the model.
-* String.
-  Literal strings can be typed in the corresponding text box.
-  Clicking on the button beside the text box, expressions can be entered,
-  as for numerical values.
-* Vector Field.
-  The fields of a vector layer cannot be known at design time, since they
-  depend on the selection of the user each time the model is executed.
-  To set the value for this parameter, type the name of a field directly
-  in the text box, or use the list to select a table field.
-  The validity of the selected field will be checked at run time.
+* |integer| ``Value``: allows you to set the parameter from a loaded
+  layer in the QGIS project or to browse a layer from a folder
+* |expression| ``Pre-calculated Value``: with this option you can open the 
+  Expression Builder and define your own expression to fill the parameter. Model
+  inputs together with some other layer statistics are available as **variables**
+  and are listed at the top of the Search dialog of the Expression Builder
+* |processingModel| ``Model Input``: choose this option if the
+  parameter comes from an input of the model you have defined. Once clicked, this
+  option will list all the suitable inputs for the parameter
+* |processing| ``Algorithm Output``: is useful when the input 
+  parameter of an algorithm is an output of another algorithm
+
+Algorithm **outputs** have the addditional |processingOutput| ``Model Output``
+option that makes the output of the algorithm available in the model. 
+
+If a layer generated by the algorithm is only to be used as input to another
+algorithm,  don't edit that text box.
+
+In the following picture you can see the two input parameters defined as 
+``Model Input`` and the temporary output layer:
+
+.. figure:: img/models_parameters5.png
+   :align: center
+
+   Algorithm Input and Output parameters
 
 In all cases, you will find an additional parameter named
-*Parent algorithms* that is not available when calling the algorithm
+*Dependencies* that is not available when calling the algorithm
 from the toolbox.
 This parameter allows you to define the order in which algorithms are
-executed by explicitly defining one algorithm as a parent of the current
-one, which will force the parent algorithm to be executed before the
-current one.
+executed, by explicitly defining one algorithm as a *parent* of the current
+one.
+This will force the *parent* algorithm to be executed before the current one.
 
 When you use the output of a previous algorithm as the input of your
 algorithm, that implicitly sets the previous algorithm as parent of the
@@ -188,7 +227,7 @@ it does not use any output object from it (for instance, an algorithm
 that executes a SQL sentence on a PostGIS database and another one that
 imports a layer into that same database).
 In that case, just select the previous algorithm in the
-*Parent algorithms* parameter and they will be executed in the correct
+*Dependencies* parameter and they will be executed in the correct
 order.
 
 Once all the parameters have been assigned valid values, click on
@@ -199,7 +238,13 @@ that provide objects that are used as inputs for the algorithm.
 Elements can be dragged to a different position on the canvas.
 This is useful to make the structure of the model more clear and
 intuitive.
-Links between elements are updated automatically.
+You can also resize elements.
+This is particularly useful if the description of the input or algorithm is long.
+
+Links between elements are updated automatically and you can see a plus button
+at the top and at the bottom of each algorithm. Clicking the button will list
+all the inputs and outputs of the algorithm so you can have a quick overview.
+
 You can zoom in and out by using the mouse wheel.
 
 .. _figure_model_model:
@@ -210,19 +255,75 @@ You can zoom in and out by using the mouse wheel.
    A complete model
 
 
-You can run your algorithm any time by clicking on the :guilabel:`Run`
-button.
+You can run your algorithm any time by clicking on the |start| button.
 In order to use the algorithm from the toolbox, it has to be saved
 and the modeler dialog closed, to allow the toolbox to refresh its
 contents.
 
+Interacting with the canvas and elements
+----------------------------------------
+
+You can use the |zoomIn|, |zoomOut|, |zoomActual| and |zoomFullExtent| buttons
+to zoom the modeler canvas. The behavior of the buttons is basically the same
+of the main QGIS toolbar. 
+
+The ``Undo History`` panel together with the |undo| and |redo| buttons are 
+extremely useful to quickly rollback to a previous situation. The ``Undo History``
+panel lists everything you have done when creating the workflow.
+
+You can move or resize many elements at the same time by first selecting them,
+dragging the mouse.
+
+If you want to snap the elements while moving them in the canvas you can choose
+:menuselection:`View --> Enable Snapping`.
+
+The :menuselection:`Edit` menu contains some very useful options to interact with
+your model elements:
+
+* |selectAll|:sup:`Select All`: select all elements of the model
+* ``Snap Selected Components to Grid``: snap and align the elements into a 
+  grid
+* |undo|:sup:`Undo`: undo the last action
+* |redo|:sup:`Redo`: redo the last action
+* |editCut|:sup:`Cut`: cut the selected elements
+* |editCopy|:sup:`Copy`: copy the selected elements
+* |editPaste|:sup:`Paste`: paste the elements
+* |deleteSelected|:sup:`Delete Selected Components`: delete all the selected
+  elements from the model
+* ``Add Group Box``: add a draggable *box* to the canvas. This feature is very
+  useful in big models to group elements in the modeler canvas and to keep the
+  workflow clean. For example we might group together all the inputs of the 
+  example:
+
+
+   .. figure:: img/model_group_box.png
+      :align: center
+
+      Model Group Box
+
+You can change the name and the color of the boxes.
+Group boxes are very useful when used together with
+:menuselection:`View --> Zoom To`.
+This allows you to zoom to a specific part of the model.
+
+You might want to change the order of the inputs and how they are listed in the
+main model dialog. At the bottom of the ``Input`` panel you will find the
+``Reorder Model Inputs...`` button and by clicking on it a new dialog pops up
+allowing you to change the order of the inputs:
+
+.. figure:: img/model_reorder_inputs.png
+   :align: center
+
+   Reorder Model Inputs
+
+
 Saving and loading models
 -------------------------
 
-Use the :guilabel:`Save` button to save the current model and the
-:guilabel:`Open` button to open any previously saved model.
+Use the |fileSave|:sup:`Save model` button to save the current model and the
+|fileOpen|:sup:`Open Model` button to open a previously saved model.
 Models are saved with the :file:`.model3` extension.
-If the model has been already been saved from the modeler window,
+If the model has already been saved from the modeler window,
 you will not be prompted for a filename.
 Since there is already a file associated with the model, that file
 will be used for subsequent saves.
@@ -256,14 +357,15 @@ tab of the modeler window.
 That means that you can incorporate a model as a part of a bigger model,
 just like other algorithms.
 
-Models will show up in the :ref:`Browser <browser_panel>` panel , and
-can be run from there.
+Models will show up in the :ref:`Browser <browser_panel>` panel and can be run 
+from there.
 
 Exporting a model as an image, PDF or SVG
 .........................................
 
 A model can also be exported as an image, SVG or PDF (for illustration
-purposes).
+purposes) by clicking |saveMapAsImage|:sup:`Export as image`, 
+|saveAsPDF|:sup:`Export as PDF` or |saveAsSVG|:sup:`Export as SVG`.
 
 
 Editing a model
@@ -299,7 +401,7 @@ warning message like the one you can see below will be shown:
 
    Cannot Delete Algorithm
 
-Selecting the :guilabel:`Edit` option will show the parameter dialog
+Selecting the :guilabel:`Edit...` option will show the parameter dialog
 of the algorithm, so you can change the inputs and parameter values.
 Not all input elements available in the model will appear as
 available inputs.
@@ -311,7 +413,10 @@ Select the new values and click on the :guilabel:`OK` button as usual.
 The connections between the model elements will change in the modeler
 canvas accordingly.
 
-A model can be run partially, by deactivating some of its algorithms.
+The :guilabel:`Add comment...` allows you to add a comment to the algorithm to
+better describe the behavior.
+
+A model can be run partially by deactivating some of its algorithms.
 To do it, select the :guilabel:`Deactivate` option in the context menu
 that appears when right-clicking on an algorithm element.
 The selected algorithm, and all the ones in the model that depend on it
@@ -332,8 +437,8 @@ Editing model help files and meta-information
 ---------------------------------------------
 
 You can document your models from the modeler itself.
-Just click on the :guilabel:`Edit Model Help` button, and a dialog
-like the one shown next will appear.
+Click on the |processingHelp|:sup:`Edit model help` button, and a 
+dialog like the one shown next will appear.
 
 .. _figure_help_edition:
 
@@ -361,11 +466,12 @@ Exporting a model as a Python script
 As we will see in a later chapter, Processing algorithms can be called
 from the QGIS Python console, and new Processing algorithms can be
 created using Python.
-A quick way of creating such a Python script is to create a model and
-then to export is as a Python file.
+A quick way to create such a Python script is to create a model and
+then export it as a Python file.
 
-To do so, right click on the name of the model in the Processing
-Toolbox and choose :guilabel:`Export Model as Python Algorithm...`.
+To do so, click on the |saveAsPython|:sup:`Export as Script Algorithm...`
+in the modeler canvas or right click on the name of the model in the Processing
+Toolbox and choose |saveAsPython|:sup:`Export Model as Python Algorithm...`.
 
 
 About available algorithms
@@ -391,5 +497,57 @@ dialog.
 
 .. |addToProject| image:: /static/common/mAddToProject.png
    :width: 1.5em
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
+.. |deleteSelected| image:: /static/common/mActionDeleteSelected.png
+   :width: 1.5em
+.. |editCopy| image:: /static/common/mActionEditCopy.png
+   :width: 1.5em
+.. |editCut| image:: /static/common/mActionEditCut.png
+   :width: 1.5em
+.. |editPaste| image:: /static/common/mActionEditPaste.png
+   :width: 1.5em
+.. |expression| image:: /static/common/mIconExpression.png
+   :width: 1.5em
+.. |fileOpen| image:: /static/common/mActionFileOpen.png
+   :width: 1.5em
+.. |fileSave| image:: /static/common/mActionFileSave.png
+   :width: 1.5em
+.. |integer| image:: /static/common/mIconFieldInteger.png
+   :width: 1.5em
+.. |processing| image:: /static/common/processingAlgorithm.png
+   :width: 1.5em
+.. |processingHelp| image:: /static/common/mActionEditHelpContent.png
+   :width: 1.5em
+.. |processingModel| image:: /static/common/processingModel.png
+   :width: 1.5em
+.. |processingOutput| image:: /static/common/mIconModelOutput.png
+   :width: 1.5em
 .. |qgsProjectFile| image:: /static/common/mIconQgsProjectFile.png
+   :width: 1.5em
+.. |redo| image:: /static/common/mActionRedo.png
+   :width: 1.5em
+.. |saveAsPDF| image:: /static/common/mActionSaveAsPDF.png
+   :width: 1.5em
+.. |saveAsPython| image:: /static/common/mActionSaveAsPython.png
+   :width: 1.5em
+.. |saveAsSVG| image:: /static/common/mActionSaveAsSVG.png
+   :width: 1.5em
+.. |saveMapAsImage| image:: /static/common/mActionSaveMapAsImage.png
+   :width: 1.5em
+.. |selectAll| image:: /static/common/mActionSelectAll.png
+   :width: 1.5em
+.. |start| image:: /static/common/mActionStart.png
+   :width: 1.5em
+.. |unchecked| image:: /static/common/checkbox_unchecked.png
+   :width: 1.3em
+.. |undo| image:: /static/common/mActionUndo.png
+   :width: 1.5em
+.. |zoomActual| image:: /static/common/mActionZoomActual.png
+   :width: 1.5em
+.. |zoomFullExtent| image:: /static/common/mActionZoomFullExtent.png
+   :width: 1.5em
+.. |zoomIn| image:: /static/common/mActionZoomIn.png
+   :width: 1.5em
+.. |zoomOut| image:: /static/common/mActionZoomOut.png
    :width: 1.5em

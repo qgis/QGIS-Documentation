@@ -250,7 +250,12 @@ As grid type, you can specify to use a:
 
 Other than the grid type, you can define: 
 
-* the :guilabel:`CRS`, which could be different from the project CRS
+* the :guilabel:`CRS` of the grid. If not changed, it will follow the Map CRS.
+  The :guilabel:`Change` button lets you set it to a different CRS.
+  Once set, it can be changed back to default by selecting any group heading
+  (e.g **Geographic Coordinate System**) under
+  :guilabel:`Predefined Coordinate Reference Systems` in the CRS
+  selection dialog.
 * the :guilabel:`Interval` type to use for the grid references. Available
   options are ``Map Unit``, ``Fit Segment Width``, ``Millimeter`` or ``Centimeter``:
 

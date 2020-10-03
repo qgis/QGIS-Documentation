@@ -1,8 +1,8 @@
 .. _working_with_ogc:
 
-***********************
-QGIS as OGC Data Client
-***********************
+********************************
+Working with OGC / ISO protocols
+********************************
 
 .. only:: html
 
@@ -39,6 +39,10 @@ OGC services are increasingly being used to exchange geospatial data between
 different GIS implementations and data stores. QGIS can deal with the above
 specifications as a client, being **SFS** (through support of the PostgreSQL
 / PostGIS data provider, see section :ref:`label_postgis`).
+
+You can also share your maps and data through the WMS, WMTS, WFS, WFS-T and WCS protocols
+using a webserver with :ref:`QGIS Server <QGIS-Server-manual>`, UMN MapServer or
+GeoServer installed.
 
 .. _`ogc-wms`:
 
@@ -327,9 +331,10 @@ A coordinate reference system (CRS) is the OGC terminology for a QGIS projection
 Each WMS layer can be presented in multiple CRSs, depending on the capability of
 the WMS server.
 
-To choose a CRS, select :guilabel:`Change...` and a dialog similar to :ref:`figure_projection_custom`
-will appear. The main difference with the WMS version
-of the dialog is that only those CRSs supported by the WMS server will be shown.
+To choose a CRS, select :guilabel:`Change...` and a dialog similar to
+the one shown in :numref:`figure_projection_custom` will appear.
+The main difference with the WMS version of the dialog is that only
+those CRSs supported by the WMS server will be shown.
 
 .. _`serversearch`:
 
@@ -564,7 +569,7 @@ details.
 .. tip:: **QGIS WMS Mapserver**
 
    Since Version 1.7.0, QGIS has its own implementation of a WMS 1.3.0 Mapserver.
-   Read more about this in chapter :ref:`label_qgisserver`.
+   Read more about this in :ref:`QGIS-Server-manual`.
 
 .. _`ogc-wcs`:
 

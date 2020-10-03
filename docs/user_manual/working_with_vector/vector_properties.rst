@@ -30,22 +30,25 @@ The vector :guilabel:`Layer Properties` dialog provides the following sections:
      - |system| :ref:`Source <vectorsourcemenu>`
      - |symbology| :ref:`Symbology <vector_style_menu>`:sup:`[1]`
    * - |labeling| :ref:`Labels <vector_labels_tab>`:sup:`[1]`
-     - |diagram| :ref:`Diagrams <sec_diagram>`
+     - |labelmask| :guilabel:`Mask`:sup:`[1]`
      - |3d| :ref:`3D View <sec_3_d_view>`:sup:`[1]`
-   * - |sourceFields| :ref:`Fields <vector_fields_menu>`
+   * - |diagram| :ref:`Diagrams <sec_diagram>`
+     - |sourceFields| :ref:`Fields <vector_fields_menu>`
      - |formView| :ref:`Attributes Form <vector_attributes_menu>`
-     - |join| :ref:`Joins <sec_joins>`
-   * - |auxiliaryStorage| :ref:`Auxiliary Storage <vector_auxiliary_storage>`
+   * - |join| :ref:`Joins <sec_joins>`
+     - |auxiliaryStorage| :ref:`Auxiliary Storage <vector_auxiliary_storage>`
      - |action| :ref:`Actions <actions_menu>`
-     - |display| :ref:`Display <maptips>`
-   * - |rendering| :ref:`Rendering <vectorrenderingmenu>`
-     - |expression| :ref:`Variables <vectorvariablesmenu>`
+   * - |display| :ref:`Display <maptips>`
+     - |rendering| :ref:`Rendering <vectorrenderingmenu>`
+     - |temporal| :guilabel:`Temporal`
+   * - |expression| :ref:`Variables <vectorvariablesmenu>`
      - |editMetadata| :ref:`Metadata <vectormetadatamenu>`
-   * - |dependencies| :ref:`Dependencies <vectordependenciesmenu>`
-     - |legend| :ref:`Legend <vectorlegendmenu>`
+     - |dependencies| :ref:`Dependencies <vectordependenciesmenu>`
+   * - |legend| :ref:`Legend <vectorlegendmenu>`
      - |overlay| :ref:`QGIS Server <vectorservermenu>`
-   * - |digitizing| :ref:`Digitizing <digitizingmenu>`
-     - :ref:`External plugins <plugins>`:sup:`[2]` tabs
+     - |digitizing| :ref:`Digitizing <digitizingmenu>`
+   * - :ref:`External plugins <plugins>`:sup:`[2]` tabs
+     -
      -
 
 :sup:`[1]` Also available in the :ref:`Layer styling panel <layer_styling_panel>`
@@ -1553,29 +1556,30 @@ While for readability, ``label`` has been used below to describe the Label
 toolbar, note that when mentioned in their name, the tools work almost the
 same way with diagrams:
 
-* |pinLabels| :sup:`Pin/Unpin Labels And Diagrams`. By clicking or draging an
-  area, you pin label(s). If you click or drag an area holding :kbd:`Shift`,
-  label(s) are unpinned. Finally, you can also click or drag an area holding
-  :kbd:`Ctrl` to toggle the pin status of label(s).
-* |showPinnedLabels| :sup:`Highlight Pinned Labels And Diagrams`. If the
+* |showPinnedLabels| :sup:`Highlight Pinned Labels and Diagrams`. If the
   vector layer of the label is editable, then the highlighting is green,
   otherwise it's blue.
 * |showUnplacedLabel| :sup:`Toggles Display of Unplaced Labels`: Allows to
   determine whether any important labels are missing from the maps (e.g. due
   to overlaps or other constraints). They are displayed with a customizable
   color (see :ref:`automated_placement`).
-* |showHideLabels| :sup:`Show/Hide Labels And Diagrams`. If you click on the labels,
+* |pinLabels| :sup:`Pin/Unpin Labels and Diagrams`. By clicking or draging an
+  area, you pin label(s). If you click or drag an area holding :kbd:`Shift`,
+  label(s) are unpinned. Finally, you can also click or drag an area holding
+  :kbd:`Ctrl` to toggle the pin status of label(s).
+* |showHideLabels| :sup:`Show/Hide Labels and Diagrams`. If you click on the labels,
   or click and drag an area holding :kbd:`Shift`, they are hidden.
   When a label is hidden, you just have to click on the feature to restore its
   visibility. If you drag an area, all the labels in the area will be restored.
-* |moveLabel| :sup:`Move Label And Diagram`. You just have to drag the label to
+* |moveLabel| :sup:`Moves a Label or Diagram`. You just have to drag the label to
   the desired place.
-* |rotateLabel| :sup:`Rotate Label`. Click the label and move around and
+* |rotateLabel| :sup:`Rotates a Label`. Click the label and move around and
   you get the text rotated.
-* |changeLabelProperties| :sup:`Change Label`. It opens a dialog to change the
+* |changeLabelProperties| :sup:`Change Label Properties`. It opens a dialog to change the
   clicked label properties; it can be the label itself, its coordinates, angle,
-  font, size... as long as this property has been mapped to a field. Here you can
-  set the option to |checkbox| :guilabel:`Label every part of a feature`.
+  font, size, multiline alignment ... as long as this property has been mapped
+  to a field. Here you can set the option to |checkbox| :guilabel:`Label every
+  part of a feature`.
 
 .. warning:: **Label tools overwrite current field values**
 
@@ -1738,9 +1742,6 @@ different options:
 * :guilabel:`Always Show`: selects specific diagrams to always render, even when
   they overlap other diagrams or map labels;
 * setting the :ref:`Scale dependent visibility <label_scaledepend>`;
-* :guilabel:`Discourage diagrams and labels from covering features`: defines
-  features to use as obstacles, ie QGIS will try to not place diagrams nor labels
-  over these features.
 
 .. _figure_diagrams_appearance:
 
@@ -1817,8 +1818,11 @@ of each diagram, ie if there are different diagrams or labels candidates for the
 same location, the item with the higher priority will be displayed and the
 others could be left out.
 
-The priority rank is also used to evaluate whether a diagram could be omitted
-due to a greater weighted :ref:`obstacle feature <labels_obstacles>`.
+:guilabel:`Discourage diagrams and labels from covering features` defines
+features to use as :ref:`obstacles <labels_obstacles>`, ie QGIS will try to not
+place diagrams nor labels over these features.
+The priority rank is then used to evaluate whether a diagram could be omitted
+due to a greater weighted obstacle feature.
 
 .. _figure_diagrams_placement:
 
@@ -2150,9 +2154,12 @@ combobox...) to the layer's fields, you need to give them the same name.
 
 Use the :guilabel:`Edit UI` to define the path to the file to use.
 
+UI-files can also be hosted on a remote server.
+In this case, you provide the URL of the form instead of the file path in :guilabel:`Edit UI`.
+
 You'll find some example in the :ref:`Creating a new form <creating-new-form>`
 lesson of the :ref:`QGIS-training-manual-index-reference`. For more advanced information,
-see https://nathanw.net/2011/09/05/qgis-tips-custom-feature-forms-with-python-logic/.
+see https://woostuff.wordpress.com/2011/09/05/qgis-tips-custom-feature-forms-with-python-logic/.
 
 .. _form_custom_functions:
 
@@ -2515,13 +2522,14 @@ correctly:
    Data-defined properties automatically created
 
 
-Otherwise, there's another way to create an auxiliary field for a specific
-property thanks to the |dataDefined| :sup:`data-defined override` button. By
-clicking on :guilabel:`Store data in the project`, an auxiliary field is
-automatically created for the :guilabel:`Opacity` field. If you click on this
-button whereas the auxiliary layer is not created yet, then the window
-:ref:`figure_auxiliary_layer_creation` is first displayed to select the
-primary key to use for joining.
+Otherwise, there's another way to create an auxiliary field for a
+specific property thanks to the
+|dataDefined| :sup:`data-defined override` button.
+By clicking on :guilabel:`Store data in the project`, an auxiliary
+field is automatically created for the :guilabel:`Opacity` field.
+If you click on this button and the auxiliary layer is not created
+yet, a window (:numref:`figure_auxiliary_layer_creation`) is first
+displayed to select the primary key to use for joining.
 
 
 Symbology
@@ -2804,7 +2812,7 @@ As an exercise, we can create an action that does a Google search on the ``lakes
 layer. First, we need to determine the URL required to perform a search on a
 keyword. This is easily done by just going to Google and doing a simple
 search, then grabbing the URL from the address bar in your browser. From this
-little effort, we see that the format is https://www.google.com//search?q=QGIS,
+little effort, we see that the format is https://www.google.com/search?q=QGIS,
 where ``QGIS`` is the search term. Armed with this information, we can proceed:
 
 #. Make sure the ``lakes`` layer is loaded.
@@ -2823,15 +2831,15 @@ where ``QGIS`` is the search term. Armed with this information, we can proceed:
    need to provide the full path.
 #. Following the name of the external application, add the URL used for doing
    a Google search, up to but not including the search term:
-   ``https://www.google.com//search?q=``
+   ``https://www.google.com/search?q=``
 #. The text in the :guilabel:`Action` field should now look like this:
-   ``https://www.google.com//search?q=``
+   ``https://www.google.com/search?q=``
 #. Click on the drop-down box containing the field names for the ``lakes``
    layer. It's located just to the left of the :guilabel:`Insert` button.
 #. From the drop-down box, select 'NAMES' and click :guilabel:`Insert`.
 #. Your action text now looks like this:
 
-   ``https://www.google.com//search?q=[%NAMES%]``
+   ``https://www.google.com/search?q=[%NAMES%]``
 #. To finalize and add the action, click the :guilabel:`OK` button.
 
 .. _figure_add_action:
@@ -2846,7 +2854,7 @@ action should look like this:
 
 ::
 
-   https://www.google.com//search?q=[%NAMES%]
+   https://www.google.com/search?q=[%NAMES%]
 
 We can now use the action. Close the :guilabel:`Layer Properties` dialog and
 zoom in to an area of interest. Make sure the ``lakes`` layer is active and
@@ -2914,7 +2922,7 @@ project file? The code of the Python action would be:
 .. code-block:: python
 
   command = "firefox"
-  imagerelpath = "images/test_image.jpg"
+  imagerelpath = "images_test/test_image.jpg"
   projectpath = qgis.core.QgsProject.instance().fileName()
   import os.path
   path = os.path.dirname(str(projectpath)) if projectpath != '' else None
@@ -2955,11 +2963,13 @@ feature identification:
   <vector_expressions>`. This is:
 
   * the label shown on top of the feature information in the :ref:`Identify
-    tool <identify>` results;
+    tool <identify>` results
   * the field used in the :ref:`locator bar <locator_options>` when looking for
-    features in all layers;
+    features in all layers
   * the feature identifier in the attribute table :ref:`form view
-    <attribute_table_view>`;
+    <attribute_table_view>`
+  * the feature identifier when the map or layout is exported to a layered
+    output format such as GeoPDF
   * the map tip information, i.e. the message displayed in the map canvas when
     hovering over a feature of the active layer with the |mapTips| :sup:`Show
     Map Tips` icon pressed. Applicable when no :guilabel:`HTML Map Tip` is set.
@@ -3099,8 +3109,8 @@ A summary of the filled information is provided in the :guilabel:`Validation`
 tab and helps you identify potential issues related to the form. You can then
 either fix them or ignore them.
 
-Metadata are currently saved in the project file. It can also be saved as an
-:file:`.XML` file alongside file based layers or in a local :file:`.sqlite`
+Metadata are currently saved in the project file. They can also be saved in a
+:file:`.qmd` file alongside file based layers or in a local :file:`.sqlite`
 database for remote layers (e.g. PostGIS).
 
 .. index:: Dependencies
@@ -3168,11 +3178,12 @@ QGIS Server Properties
 |overlay| The :guilabel:`QGIS Server` tab consists of :guilabel:`Description`,
 :guilabel:`Attribution`, :guilabel:`MetadataURL`, and :guilabel:`LegendUrl` sections.
 
-You can add or edit a title and abstract for the layer in the
-:guilabel:`Description` section. It's also possible to define a
-:guilabel:`Keyword list` here. These keyword lists can be used in a
-metadata catalog. If you want to use a title from an XML metadata file,
-you have to fill in a link in the :guilabel:`DataUrl` field.
+From the :guilabel:`Description` section, you can change the :guilabel:`Short name` used to
+reference the layer in requests (to learn more about short names, read
+:ref:`server_short_name`). You can also add or edit a :guilabel:`Title` and
+:guilabel:`Abstract` for the layer, or define a :guilabel:`Keyword list` here. These
+keyword lists can be used in a metadata catalog. If you want to use a title from an
+XML metadata file, you have to fill in a link in the :guilabel:`DataUrl` field.
 
 Use :guilabel:`Attribution` to get attribute data from an XML metadata catalog.
 
@@ -3190,6 +3201,8 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
    :align: center
 
    QGIS Server tab in vector layers properties dialog
+
+To learn more about QGIS Server, read the :ref:`QGIS-Server-manual`.
 
 .. _digitizingmenu:
 
@@ -3298,8 +3311,6 @@ This makes it possible to quickly flag gaps as allowed.
    :width: 2em
 .. |actionRun| image:: /static/common/mAction.png
    :width: 1.5em
-.. |addOgrLayer| image:: /static/common/mActionAddOgrLayer.png
-   :width: 1.5em
 .. |arrowDown| image:: /static/common/mActionArrowDown.png
    :width: 1.5em
 .. |arrowUp| image:: /static/common/mActionArrowUp.png
@@ -3378,6 +3389,8 @@ This makes it possible to quickly flag gaps as allowed.
    :width: 1.5em
 .. |labelingRuleBased| image:: /static/common/labelingRuleBased.png
    :width: 1.5em
+.. |labelmask| image:: /static/common/labelmask.png
+   :width: 1.5em
 .. |labelplacement| image:: /static/common/labelplacement.png
    :width: 1.5em
 .. |labelshadow| image:: /static/common/labelshadow.png
@@ -3454,6 +3467,8 @@ This makes it possible to quickly flag gaps as allowed.
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
 .. |system| image:: /static/common/system.png
+   :width: 1.5em
+.. |temporal| image:: /static/common/temporal.png
    :width: 1.5em
 .. |text| image:: /static/common/text.png
    :width: 1.5em

@@ -195,6 +195,7 @@ Option                                                             Vector Layer 
 |allEdits| :menuselection:`Current Edits -->`                      |checkbox|          \                  \
 :guilabel:`Filter...`                                              |checkbox|          \                  \
 :guilabel:`Change Data Source...`                                  |checkbox|          \                  \
+:guilabel:`Repair Data Source...`                                  |checkbox|          \                  \
 :menuselection:`Actions on selections -->` (in edit mode)          |checkbox|          \                  \
 :menuselection:`--> Duplicate Feature`                             |checkbox|          \                  \
 :menuselection:`--> Duplicate Feature and Digitize`                |checkbox|          \                  \
@@ -292,15 +293,20 @@ symbols are:
 * |indicatorFilter| to indicate :ref:`a filter <vector_query_builder>` applied
   to the layer. Hover over the icon to see the filter expression and double-click
   to update the setting
+* |indicatorNonRemovable| to identify layers that are
+  :ref:`required <project_layer_capabilities>` in the project, hence non removable
 * |indicatorEmbedded| to identify an :ref:`embedded group or layer
   <nesting_projects>` and the path to their original project file
 * |indicatorBadLayer| to identify a layer whose data source was not available
-  at the project file opening. Click the icon to update the source path.
+  at the project file opening (see :ref:`handle_broken_paths`).
+  Click the icon to update the source path or select :guilabel:`Repair Data Source...`
+  entry from the layer contextual menu.
 * |indicatorMemory| to remind you that the layer is a :ref:`temporary scratch
   layer <vector_new_scratch_layer>` and its content will be discarded when you
   close this project. To avoid data loss and make the layer permanent, click
   the icon to store the layer in any of the OGR vector formats supported by QGIS.
 * |indicatorNoCRS| to identify a layer that has no/unknown CRS
+* |indicatorTemporal| to identify a temporal layer controlled by canvas animation
 
 .. index:: Style
 
@@ -509,7 +515,7 @@ on any vector layer. This panel allows you to select:
 ================================== ============ ============  ============  ============
 Count                               |checkbox|   |checkbox|    |checkbox|    |checkbox|
 Count Distinct Value                |checkbox|                               |checkbox|
-Count Missing value                 |checkbox|                               |checkbox|
+Count Missing value                 |checkbox|   |checkbox|    |checkbox|    |checkbox|
 Sum                                              |checkbox|    |checkbox|
 Mean                                             |checkbox|    |checkbox|    |checkbox|
 Standard Deviation                               |checkbox|    |checkbox|
@@ -517,14 +523,15 @@ Standard Deviation on Sample                     |checkbox|    |checkbox|
 Minimal value                       |checkbox|   |checkbox|    |checkbox|    |checkbox|
 Maximal value                       |checkbox|   |checkbox|    |checkbox|    |checkbox|
 Range                                            |checkbox|    |checkbox|    |checkbox|
-Minority                                         |checkbox|    |checkbox|
-Majority                                         |checkbox|    |checkbox|
+Minority                            |checkbox|   |checkbox|    |checkbox|
+Majority                            |checkbox|   |checkbox|    |checkbox|
 Variety                                          |checkbox|    |checkbox|
 First Quartile                                   |checkbox|    |checkbox|
 Third Quartile                                   |checkbox|    |checkbox|
 Inter Quartile Range                             |checkbox|    |checkbox|
 Minimum Length                      |checkbox|
 Maximum Length                      |checkbox|
+Mean Length                         |checkbox|
 ================================== ============ ============  ============  ============
 
 Table: Statistics available for each field type
@@ -949,14 +956,11 @@ annotations to the map canvas.
        grid mark it refers to
      * :guilabel:`Boundary direction`, ie each label follows the canvas
        boundary, and is perpendicular to the grid mark it refers to
-   * The :guilabel:`Annotation font` using the OS :ref:`font selector widget
-     <font_selector>`
+   * The :guilabel:`Annotation font` (text formatting, buffer, shadow...) using
+     the :ref:`font selector widget <font_selector>`
    * The :guilabel:`Distance to map frame`, margin between annotations and map
-     canvas limits. Convenient when exporting the map canvas eg to an image
-     format or PDF, and avoid annotations to be on the "paper" limits.
-
-     .. Todo: Add a reference link to export map canvas to image or pdf section when done
-
+     canvas limits. Convenient when :ref:`exporting the map canvas <exportingmapcanvas>`
+     eg to an image format or PDF, and avoid annotations to be on the "paper" limits.
    * The :guilabel:`Coordinate precision`
 
 #. Click :guilabel:`Apply` to verify that it looks as expected or :guilabel:`OK`
@@ -984,7 +988,8 @@ To add a Title Label decoration:
 
 #. Make sure |checkbox| :guilabel:`Enable Title Label` is checked
 #. Enter the title text you want to place on the map.
-   You can make it dynamic using the :guilabel:`Insert an Expression` button.
+   You can make it dynamic using the :guilabel:`Insert or Edit an Expression...`
+   button.
 #. Choose the :guilabel:`Font` for the label using the :ref:`font selector
    widget <font_selector>` with full access to QGIS :ref:`text formatting
    <text_format>` options. Quickly set the font color and opacity by clicking
@@ -1024,7 +1029,8 @@ To add this decoration:
 
 #. Make sure |checkbox| :guilabel:`Enable Copyright Label` is checked
 #. Enter the copyright text you want to place on the map.
-   You can make it dynamic using the :guilabel:`Insert an Expression` button.
+   You can make it dynamic using the :guilabel:`Insert or Edit an Expression...`
+   button.
 #. Choose the :guilabel:`Font` for the label using the :ref:`font selector
    widget <font_selector>` with full access to QGIS :ref:`text formatting
    <text_format>` options. Quickly set the font color and opacity by clicking
@@ -1492,7 +1498,9 @@ be selected on the map canvas too):
   features in the current layer
 * |invertSelection| :sup:`Invert Feature Selection` to invert the selection in
   the current layer
-
+* |algorithmSelectLocation| :sup:`Select by Location` to select the features
+  based on their spatial relationship with other features (in the same or
+  another layer - see :ref:`qgisselectbylocation`)
 
 For example, if you want to find regions that are boroughs from
 :file:`regions.shp` of the QGIS sample data, you can:
@@ -1659,7 +1667,8 @@ default it will display the following information:
   * general information about the feature's geometry:
 
     * depending on the geometry type, the cartesian measurements of length,
-      perimeter or area in the layer's CRS units
+      perimeter or area in the layer's CRS units.
+      For 3D line vectors the cartesian line length is available.
     * depending on the geometry type and if an ellipsoid is set in the project
       properties dialog for :guilabel:`Measurements`, the ellipsoidal values of
       length, perimeter or area using the specified units
@@ -1735,7 +1744,9 @@ combo boxes.
 The :guilabel:`View` can be set as **Tree**, **Table** or **Graph**.
 'Table' and 'Graph' views can only be set for raster layers.
 
-The identify tool allows you to |checkbox|:guilabel:`Auto open form`.
+The identify tool allows you to |checkbox|
+:guilabel:`Auto open form for single feature results`, found under |options|
+:sup:`Identify Settings`.
 If checked, each time a single feature is identified, a form opens
 showing its attributes. This is a handy way to quickly edit a feature's attributes.
 
@@ -1826,8 +1837,8 @@ to duplicate any layer in the map legend.
 
 .. tip:: **Manage styles from layer context menu**
 
-   Right-click on the layer in the :guilabel:`Layers` panel to add, rename
-   or remove layer styles.
+   Right-click on the layer in the :guilabel:`Layers` panel to copy, paste, add
+   or rename layer styles.
 
 .. _store_style:
 
@@ -2188,7 +2199,8 @@ Font Selector
 
 The :guilabel:`Font` selector widget is a convenient shortcut when you want to
 set font properties for textual information (feature labels, decoration labels,
-map legend text, ...). Clicking the drop-down arrow shows the following options:
+map legend text, ...). Clicking the drop-down arrow shows some or all of the
+following options:
 
 .. _figure_fontselector_widget:
 
@@ -2205,7 +2217,8 @@ map legend text, ...). Clicking the drop-down arrow shows the following options:
   with advanced formatting options (opacity, orientation, buffer, background,
   shadow, ...) as described in section :ref:`text_format`.
 * :guilabel:`Copy Format` of the text
-* and :guilabel:`Paste Format` to the text, speeding configuration.
+* :guilabel:`Paste Format` to the text, speeding configuration
+* the :ref:`color widget <color_widget>` for quick color setting
 
 
 .. index:: Unit selection; Map scale
@@ -2462,6 +2475,8 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |addMap| image:: /static/common/mActionAddMap.png
    :width: 1.5em
+.. |algorithmSelectLocation| image:: /static/common/mAlgorithmSelectLocation.png
+   :width: 1.5em
 .. |allEdits| image:: /static/common/mActionAllEdits.png
    :width: 1.5em
 .. |annotation| image:: /static/common/mActionAnnotation.png
@@ -2561,6 +2576,10 @@ The values presented in the varying size assistant above will set the size
 .. |indicatorMemory| image:: /static/common/mIndicatorMemory.png
    :width: 1.5em
 .. |indicatorNoCRS| image:: /static/common/mIndicatorNoCRS.png
+   :width: 1.5em
+.. |indicatorNonRemovable| image:: /static/common/mIndicatorNonRemovable.png
+   :width: 1.5em
+.. |indicatorTemporal| image:: /static/common/mIndicatorTemporal.png
    :width: 1.5em
 .. |invertSelection| image:: /static/common/mActionInvertSelection.png
    :width: 1.5em

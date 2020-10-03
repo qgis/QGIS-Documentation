@@ -45,11 +45,9 @@ version = 'testing'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx.ext.imgmath',
     'sphinx.ext.intersphinx',
     'sphinx.ext.doctest',
     'sphinx.ext.extlinks',
-    'sphinx.ext.autodoc',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -210,7 +208,8 @@ latex_paper_size = 'a4'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('docs/user_manual/index', 'QGISUserGuide.tex', f'QGIS {version} User Guide', u'QGIS Project', 'manual'),
+  ('docs/user_manual/index', 'QGISDesktopUserGuide.tex', f'QGIS Desktop {version} User Guide', u'QGIS Project', 'manual'),
+  ('docs/server_manual/index', 'QGISServerUserGuide.tex', f'QGIS Server {version} User Guide', u'QGIS Project', 'manual'),
   ('docs/pyqgis_developer_cookbook/index', 'PyQGISDeveloperCookbook.tex', f'PyQGIS {version} developer cookbook', u'QGIS Project', 'manual'),
   ('docs/training_manual/index', 'QGISTrainingManual.tex', u'QGIS Training Manual', u'QGIS Project', 'manual'),
   ('docs/documentation_guidelines/index', 'QGISDocumentationGuidelines.tex', u'QGIS Documentation Guidelines', u'QGIS Project', 'manual'),
@@ -254,6 +253,7 @@ latex_elements = {
     \\newunicodechar{≥}{$\geq$}
     \\newunicodechar{≤}{$\leq$}
     \\newunicodechar{π}{$\pi$}
+    \\newunicodechar{㎡}{$m^2$}
     \\newunicodechar{′}{\ensuremath{^{\prime}}}
     \\newunicodechar{″}{\ensuremath{^{\prime\prime}}}
     \\newunicodechar{​}{ }'''

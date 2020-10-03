@@ -42,7 +42,7 @@ The following code
 #. creates a raster layer from the result of the buffer operation
 #. returns the buffer layer, raster layer and number of features
 
-.. testcode:: 
+.. testcode::
 
     from qgis.PyQt.QtCore import QCoreApplication
     from qgis.core import (QgsProcessing,
@@ -166,9 +166,9 @@ The following code
                                                          'INPUT',
                                                          context)
             numfeatures = input_featuresource.featureCount()
-            
+
             # Retrieve the buffer distance and raster cell size numeric
-            # values. Since these are numeric values, they are retrieved 
+            # values. Since these are numeric values, they are retrieved
             # using self.parameterAsDouble.
             bufferdist = self.parameterAsDouble(parameters, 'BUFFERDIST',
                                                 context)
@@ -179,23 +179,23 @@ The following code
             buffer_result = processing.run(
                 'native:buffer',
                 {
-                    # Here we pass on the original parameter values of INPUT 
+                    # Here we pass on the original parameter values of INPUT
                     # and BUFFER_OUTPUT to the buffer algorithm.
                     'INPUT': parameters['INPUT'],
                     'OUTPUT': parameters['BUFFER_OUTPUT'],
                     'DISTANCE': bufferdist,
-                    'SEGMENTS': 10, 
+                    'SEGMENTS': 10,
                     'DISSOLVE': True,
                     'END_CAP_STYLE': 0,
                     'JOIN_STYLE': 0,
                     'MITER_LIMIT': 10
                 },
-                # Because the buffer algorithm is being run as a step in 
-                # another larger algorithm, the is_child_algorithm option 
+                # Because the buffer algorithm is being run as a step in
+                # another larger algorithm, the is_child_algorithm option
                 # should be set to True
                 is_child_algorithm=True,
                 #
-                # It's important to pass on the context and feedback objects to 
+                # It's important to pass on the context and feedback objects to
                 # child algorithms, so that they can properly give feedback to
                 # users and handle cancelation requests.
                 context=context,
@@ -205,12 +205,12 @@ The following code
             if feedback.isCanceled():
                 return {}
 
-            # Run the separate rasterization algorithm using the buffer result 
+            # Run the separate rasterization algorithm using the buffer result
             # as an input.
             rasterized_result = processing.run(
                 'qgis:rasterize',
                 {
-                    # Here we pass the 'OUTPUT' value from the buffer's result 
+                    # Here we pass the 'OUTPUT' value from the buffer's result
                     # dictionary off to the rasterize child algorithm.
                     'LAYER': buffer_result['OUTPUT'],
                     'EXTENT': buffer_result['OUTPUT'],
@@ -307,7 +307,7 @@ created in this way will always be added to a user's Processing Scripts
 provider -- it is not possible to add these algorithms to a custom provider,
 e.g. for use in plugins.
 
-The following code uses the @alg decorator to 
+The following code uses the @alg decorator to
 
 #. use a vector layer as input
 #. count the number of features
@@ -315,12 +315,12 @@ The following code uses the @alg decorator to
 #. create a raster layer from the result of the buffer operation
 #. returns the buffer layer, raster layer and number of features
 
-.. testcode:: 
+.. testcode::
 
     from qgis import processing
     from qgis.processing import alg
     from qgis.core import QgsProject
-    
+
     @alg(name='bufferrasteralg', label='Buffer and export to raster (alg)',
          group='examplescripts', group_label='Example scripts')
     # 'INPUT' is the recommended name for the main input parameter
@@ -336,7 +336,7 @@ The following code uses the @alg decorator to
                default=10.0)
     @alg.output(type=alg.NUMBER, name='NUMBEROFFEATURES',
                 label='Number of features processed')
-    
+
     def bufferrasteralg(instance, parameters, context, feedback, inputs):
         """
         Description of the algorithm.
@@ -355,7 +355,7 @@ The following code uses the @alg decorator to
                                    {'INPUT': parameters['INPUT'],
                                     'OUTPUT': parameters['BUFFER_OUTPUT'],
                                     'DISTANCE': bufferdist,
-                                    'SEGMENTS': 10, 
+                                    'SEGMENTS': 10,
                                     'DISSOLVE': True,
                                     'END_CAP_STYLE': 0,
                                     'JOIN_STYLE': 0,

@@ -382,9 +382,9 @@ panel.
 
 It is possible to use localized paths for any kind of file based data source. 
 They are a list of paths which are used to abstract the data source location.
-For instance, if :file:`C:\my_maps` is listed in the localized paths,
-a layer having :file:`C:\my_maps\my_country\ortho.tif` as data source
-will be saved in the project using :file:`localized:my_country\ortho.tif`.
+For instance, if :file:`C:\\my_maps` is listed in the localized paths,
+a layer having :file:`C:\\my_maps\\my_country\\ortho.tif` as data source
+will be saved in the project using :file:`localized:my_country\\ortho.tif`.
 
 The paths are listed by order of preference, in other words QGIS will first look
 for the file in the first path, then in the second one, etc.
@@ -1009,6 +1009,9 @@ OpenCL acceleration settings.
 
    Acceleration tab
 
+Depending on your hardware and software, you may have to install additional 
+libraries to enable OpenCL acceleration.
+
 
 Processing Settings
 -------------------
@@ -1065,6 +1068,9 @@ But you can create as many user profiles as you want:
    :guilabel:`Open Active Profile Folder`.
 #. A new instance of QGIS is started, using a clean
    configuration. You can then set your custom configurations.
+
+If you have more than one profile in your QGIS installation, the name of the
+active profile is shown in the application title bar between square brackets.
 
 As each user profile contains isolated settings, plugins and history they can be great for
 different workflows, demos, users of the same machine, or testing settings, etc.
@@ -1174,7 +1180,7 @@ CRS Properties
 The |crs| :guilabel:`CRS` tab helps you set the coordinate reference system
 to use in this project. It can be:
 
-* |checkbox| :guilabel:`No projection (or unknown/non-Earth projection)`:
+* |checkbox| :guilabel:`No CRS (or unknown/non-Earth projection)`:
   layers are drawn based on their raw coordinates
 * or an existing coordinate reference system that can be *geographic*,
   *projected* or *user-defined*. Layers added to the project are translated
@@ -1246,6 +1252,8 @@ These colors are identified as :guilabel:`Project colors` and listed as part of
   #. Update the project color once and the change is reflected EVERYWHERE
      it's in use.
 
+.. _project_data_source_properties:
+
 Data Sources Properties
 -----------------------
 
@@ -1253,7 +1261,7 @@ In the :guilabel:`Data Sources` tab, you can:
 
 * |unchecked| :guilabel:`Automatically create transaction groups where possible`:
   When this mode is turned on, all
-  (postgres) layers from the same database are synchronised in their edit state,
+  layers from the same database are synchronised in their edit state,
   i.e. when one layer is put into edit state, all are, when one layer is committed
   or one layer is rolled back, so are the others. Also, instead of buffering edit
   changes locally, they are directly sent to a transaction in the database which

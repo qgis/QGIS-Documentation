@@ -31,8 +31,8 @@ or
 
 .. note::
 
-  If the project has been modified QGIS will, by default, ask you
-  if you would like to save the changes.
+  If the project has been modified the ``*`` symbol will appear in the title bar 
+  and QGIS will, by default, ask you if you would like to save the changes.
   This behavior is controlled by the |checkbox|
   :guilabel:`Prompt to save project and data source changes when required`
   setting under :menuselection:`Settings --> Options --> General`.
@@ -56,6 +56,9 @@ If you want to clear your session and start fresh, go to
 :menuselection:`Project -->` |fileNew| :menuselection:`New`.
 This will prompt you to save the existing project if
 changes have been made since it was opened or last saved.
+
+When you open a fresh project, the title bar will show ``Untitled Project`` until you
+save it.
 
 .. _figure_new_project:
 
@@ -126,9 +129,39 @@ implementations (PostgreSQL and GeoPackage).
 Clicking the action will open a dialog to pick a GeoPackage connection
 and project or a PostgreSQL connection, schema and project.
 
-Projects stored in Geopackage or PostgreSQL can be also be loaded
+Projects stored in Geopackage or PostgreSQL can also be loaded
 through the QGIS browser panel, either by double-clicking them or by
 dragging them to the map canvas.
+
+
+.. _handle_broken_paths:
+
+Handling broken file paths
+==========================
+
+When opening a project, QGIS may fail to reach some data sources due to
+unavailable service/database, or to a renamed or moved file.
+QGIS then opens the :guilabel:`Handle Unavailable Layers` dialog, referencing
+the unfound layers.
+You can:
+
+* Double-click in the :guilabel:`Datasource` field, adjust the path of
+  each layer and click :guilabel:`Apply changes`;
+* Select a row, press :guilabel:`Browse` to indicate the correct location
+  and click :guilabel:`Apply changes`;
+* Press :guilabel:`Auto-Find` to browse the folders and try to automatically fix
+  all or selected broken path(s). Be aware that the browsing may take some time.
+* Ignore the message and open your project with the broken path(s) by clicking
+  :guilabel:`Keep Unavailable Layers`. Your layer is then displayed in the
+  :guilabel:`Layers` panel, but without any data until you fix the path using
+  the |indicatorBadLayer| :sup:`Unavailable layer!` icon next to it in the
+  :guilabel:`Layers` panel, or :guilabel:`Repair Data Source...` in the
+  layer contextual menu.
+
+  With the :guilabel:`Repair Data Source...` tool, once a layer path has been
+  fixed, QGIS scans through all other broken paths and tries
+  to auto-fix those that have the same broken file path.
+* |deleteSelected| :guilabel:`Remove Unavailable Layers` from the project.
 
 
 .. _`sec_output`:
@@ -179,6 +212,8 @@ Other ways to produce output files are:
 
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
+.. |deleteSelected| image:: /static/common/mActionDeleteSelected.png
+   :width: 1.5em
 .. |fileNew| image:: /static/common/mActionFileNew.png
    :width: 1.5em
 .. |fileOpen| image:: /static/common/mActionFileOpen.png
@@ -186,6 +221,8 @@ Other ways to produce output files are:
 .. |fileSave| image:: /static/common/mActionFileSave.png
    :width: 1.5em
 .. |fileSaveAs| image:: /static/common/mActionFileSaveAs.png
+   :width: 1.5em
+.. |indicatorBadLayer| image:: /static/common/mIndicatorBadLayer.png
    :width: 1.5em
 .. |newLayout| image:: /static/common/mActionNewLayout.png
    :width: 1.5em

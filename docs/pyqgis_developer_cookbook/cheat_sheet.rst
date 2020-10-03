@@ -190,7 +190,7 @@ Layers
 .. testcode:: cheat_sheet
 
     from qgis.core import QgsVectorLayer
-    layer = layer = QgsVectorLayer("Point?crs=EPSG:4326", "layer name you like", "memory")
+    layer = QgsVectorLayer("Point?crs=EPSG:4326", "layer name you like", "memory")
     QgsProject.instance().addMapLayer(layer)
 
     layers_names = []
@@ -422,7 +422,7 @@ Otherwise
         rasterLyr = QgsRasterLayer("type=xyz&url=" + url, name, "wms")
         QgsProject.instance().addMapLayer(rasterLyr)
 
-    urlWithParams = 'type=xyz&url=https://a.tile.openstreetmap.org/%7Bz%7D/%7Bx%7D/%7By%7D.png&zmax=19&zmin=0&crs=EPSG3857'
+    urlWithParams = 'https://tile.openstreetmap.org/%7Bz%7D/%7Bx%7D/%7By%7D.png&zmax=19&zmin=0&crs=EPSG3857'
     loadXYZ(urlWithParams, 'OpenStreetMap')
 
 **Remove all layers**

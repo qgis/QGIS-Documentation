@@ -117,7 +117,7 @@ In **interval** classification, the numbers are on a scale with
 positive, negative and zero values.
 For example: height above/below sea level, temperature in degrees
 Celsius.
-Symbols that are used for ratio data should imply order and
+Symbols that are used for interval data should imply order and
 magnitude.
 
 * For points, we can use symbols with varying size (small to big).
@@ -396,7 +396,7 @@ QGIS and into a format we can print out, or make into an image or PDF? That's th
 .. |calculateField| image:: /static/common/mActionCalculateField.png
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
-   :width: 1.5em
+   :width: 1.3em
 .. |expression| image:: /static/common/mIconExpression.png
    :width: 1.5em
 .. |hard| image:: /static/common/hard.png

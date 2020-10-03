@@ -19,7 +19,7 @@ Authentication database
 -----------------------
 
 The new authentication system stores authentication configurations in an SQLite
-database file located, by default, at :file:`<user home>/.qgis3/qgis-auth.db`.
+database file located, by default, at :file:`<profile directory>/qgis-auth.db`.
 
 This authentication database can be moved between QGIS installations without
 affecting other current QGIS user preferences, as it is completely separate from
@@ -40,13 +40,16 @@ Master password
 
 To store or access sensitive information within the database, a user must define
 a `master password`. A new master password is requested and verified when
-initially storing any encrypted data to the database. Only when sensitive
-information is accessed is the user prompted for the master password, which is
+initially storing any encrypted data to the database. When sensitive
+information is accessed, the user is prompted for the master password. The password is
 then cached for the remainder of the session (until application is quit), unless
 the user manually chooses an action to clear its cached value. Some instances of
 using the authentication system do not require input of the master password,
 such as when selecting an existing authentication configuration, or applying a
 configuration to a server configuration (such as when adding a WMS layer).
+
+You can choose to save the password in the ``Wallet/Keyring`` of your
+computer.
 
 .. _figure_masterpass:
 
@@ -224,35 +227,38 @@ authentication database and configurations:
 
    Utilities menu
 
-* **Input master password**:
-  
-  * Opens the master password input dialog, independent of performing any
-    authentication database command.
-    
-* **Clear cached master password**:
-
-  * Unsets the master password if it has been set via input dialog.
-  
-* **Reset master password**:
-
-  * Opens a dialog to change the master password (the current password
-    must be known) and optionally back up the current database.
-
-* **Clear cached authentication configurations**: Clears the internal lookup cache
-  for configurations used to speed up network connections. This does not clear
+* **Input master password**: opens the master password input dialog, independent 
+  of performing any authentication database command
+* **Clear cached master password**: unsets the master password if it has been 
+  set
+* **Reset master password**: opens a dialog to change the master password (the 
+  current password must be known) and optionally back up the current database
+* **Clear network authentication access cache**: clears the authentication cache
+  of all connections
+* **Automatically clear network authentication access cache on SSL errors**: the
+  connection cache stores all authentication data for connections, also when the
+  connection fails. If you change authentication configurations or certification authorities,
+  you should clear the authentication cache 
+  or restart QGIS. When this option is checked, the authentication cache will be
+  automatically cleared every time an SSL error occurs and you choose to abort 
+  the connection
+* **Integrate master password with your Wallet/Keyring**: adds the master 
+  password to your personal Wallet/Keyring
+* **Store/update the master password in your Wallet/Keyring**: updates the 
+  changed master password in your Wallet/Keyring
+* **Clear the master password from your Wallet/Keyring**: deletes the master
+  password from your Wallet/Keyring
+* **Enable password helper debug log**: enables a debug tool that will contain
+  all the log information of the authentication methods
+* **Clear cached authentication configurations**: clears the internal lookup cache
+  for configurations, used to speed up network connections. This does not clear
   QGIS’s core network access manager’s cache, which requires a relaunch of QGIS.
-
-* **Reset master password**: Replaces the current master password for a new one.
-  The current master password will be needed prior to resetting and a backup of
-  database can be done.
-
-* **Remove all authentication configurations**: Clears the database of all
+* **Remove all authentication configurations**: clears the database of all
   configuration records, without removing other stored records.
-
-* **Erase authentication database**: Schedules a backup of the current database
-  and complete rebuild of the database table structure. These actions are
-  scheduled for a later time, so as to ensure other operations like project
-  loading do not interrupt the operation or cause errors due to a temporarily
+* **Erase authentication database**: schedules a backup of the current database
+  and complete rebuild of the database table structure. The actions are
+  scheduled for a later time, to ensure that other operations, like project
+  loading, do not interrupt the operation or cause errors due to a temporarily
   missing database.
 
   .. _figure_authconfiutilsdb:

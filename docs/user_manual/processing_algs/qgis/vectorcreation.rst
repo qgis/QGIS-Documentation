@@ -925,8 +925,10 @@ Random points in extent
 Creates a new point layer with a given number of random points, all
 of them within a given extent.
 
-A minimum distance can be specified, to avoid points being too close
-to each other.
+A distance factor can be specified, to avoid points being too close to each 
+other. If the minimum distance between points makes it impossible to create new 
+points, either distance can be decreased or the maximum number of attempts may 
+be increased.
 
 **Default menu**: :menuselection:`Vector --> Research Tools`
 
@@ -963,6 +965,12 @@ Parameters
 
        Default: *Project CRS*
      - CRS of the random points layer
+   * - **Maximum number of search attempts given the minimum distance**
+     - ``MAX_ATTEMPTS``
+     - [number]
+
+       Default: 200
+     - Maximum number of attempts to place the points
    * - **Random points**
      - ``OUTPUT``
      - [vector: point]
@@ -996,7 +1004,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:randompointsinextent``
+**Algorithm ID**: ``native:randompointsinextent``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -1084,7 +1092,7 @@ Python code
         
 .. _qgisrandompointsinpolygons:
 
-Random points in polygons |314|
+Random points in polygons |316|
 -------------------------------
 Creates a point layer with points placed inside the polygons of
 another layer.
@@ -1121,7 +1129,7 @@ of the algorithm.
 The attributes of the polygon feature on which a point was generated
 can be included (:guilabel:`Include polygon attributes`).
 
-If you want approximately the same point density for all the line
+If you want approximately the same point density for all the
 features, you can data-define the number of points using the area of
 the polygon feature geometry.
 
@@ -1783,6 +1791,7 @@ Python code
    source folder.
 
 .. |314| replace:: ``NEW in 3.14``
+.. |316| replace:: ``NEW in 3.16``
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |dataDefined| image:: /static/common/mIconDataDefine.png
