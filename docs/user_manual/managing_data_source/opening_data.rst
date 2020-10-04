@@ -1152,7 +1152,7 @@ You can add a service by opening the context menu with a right-click
 and choosing :guilabel:`New Connection`.
 figure_vector_tiles_maptilerplanet shows the dialog with the 
 MapTiler Planet service configuration. The service is available
-on https://cloud.maptiler.com/tiles/ . 
+on https://cloud.maptiler.com/tiles/. 
 
 .. _figure_vector_tiles_maptilerplanet:
 
