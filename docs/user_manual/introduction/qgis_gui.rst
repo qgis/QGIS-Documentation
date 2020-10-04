@@ -378,80 +378,80 @@ details).
    * - :menuselection:`Add Rectangle -->`
      -
      - :guilabel:`Shape Digitizing`
-     -
+     - :ref:`draw_rectangles`
    * - :menuselection:`-->`
        |rectangleExtent| :guilabel:`Add Rectangle from Extent`
      -
      - :guilabel:`Shape Digitizing`
-     -
+     - :ref:`draw_rectangles`
    * - :menuselection:`-->`
        |rectangleCenter|
        :guilabel:`Add Rectangle from Center and a Point`
      -
      - :guilabel:`Shape Digitizing`
-     -
+     - :ref:`draw_rectangles`
    * - :menuselection:`-->`
        |rectangle3PointsProjected|
        :guilabel:`Add Rectangle from 3 Points (Distance from 2nd
        and 3rd point)`
      -
      - :guilabel:`Shape Digitizing`
-     -
+     - :ref:`draw_rectangles`
    * - :menuselection:`-->`
        |rectangle3PointsDistance|
        :guilabel:`Add Rectangle from 3 Points (Distance from
        projected point on segment p1 and p2)`
      -
      - :guilabel:`Shape Digitizing`
-     -
+     - :ref:`draw_rectangles`
    * - :menuselection:`Add Regular Polygon -->`
      -
      - :guilabel:`Shape Digitizing`
-     -
+     - :ref:`draw_rectangles`
    * - :menuselection:`-->`
        |regularPolygonCenterPoint|
        :guilabel:`Add Regular Polygon from Center and a Point`
      -
      - :guilabel:`Shape Digitizing`
-     -
+     - :ref:`draw_regular_polygons`
    * - :menuselection:`-->`
        |regularPolygonCenterCorner|
        :guilabel:`Add Regular Polygon from Center and a Corner`
      -
      - :guilabel:`Shape Digitizing`
-     -
+     - :ref:`draw_regular_polygons`
    * - :menuselection:`-->`
        |regularPolygon2Points|
        :guilabel:`Add Regular Polygon from 2 Points`
      -
      - :guilabel:`Shape Digitizing`
-     -
+     - :ref:`draw_regular_polygons`
    * - :menuselection:`Add Ellipse -->`
      -
      - :guilabel:`Shape Digitizing`
-     -
+     - :ref:`draw_ellipses`
    * - :menuselection:`-->`
        |ellipseCenter2Points|
        :guilabel:`Add Ellipse from Center and 2 Points`
      -
      - :guilabel:`Shape Digitizing`
-     -
+     - :ref:`draw_ellipses`
    * - :menuselection:`-->`
        |ellipseCenterPoint|
        :guilabel:`Add Ellipse from Center and a Point`
      -
      - :guilabel:`Shape Digitizing`
-     -
+     - :ref:`draw_ellipses`
    * - :menuselection:`-->`
        |ellipseExtent| :guilabel:`Add Ellipse from Extent`
      -
      - :guilabel:`Shape Digitizing`
-     -
+     - :ref:`draw_ellipses`
    * - :menuselection:`-->`
        |ellipseFoci| :guilabel:`Add Ellipse from Foci`
      -
      - :guilabel:`Shape Digitizing`
-     -
+     - :ref:`draw_ellipses`
    * - :menuselection:`Add Annotation -->`
      -
      -
