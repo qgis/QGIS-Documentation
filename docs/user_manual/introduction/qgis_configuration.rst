@@ -1032,7 +1032,89 @@ More information at :ref:`label_processing`.
 
    Processing Settings tab in QGIS
 
+.. _console_options:
 
+Python Console Settings
+-----------------------
+
+The |runConsole| :guilabel:`Python Console` settings apply to the Python
+:ref:`interactive console <console>` and :ref:`code editor <console_editor>`.
+They help manage and control their behavior and the dialog is accessible using
+the |options| :sup:`Options...` button from:
+
+* the :guilabel:`Python console` toolbar
+* the contextual menu of the :guilabel:`Python console` widget
+* and the contextual menu of the code editor.
+
+.. _figure_python_console_settings:
+
+.. figure:: img/options_pythonconsole.png
+   :align: center
+
+   Python Console Settings tab
+
+For both the Python :guilabel:`Console` and :guilabel:`Editor` you can specify:
+
+* |unchecked| :guilabel:`Autocompletion`: Enables code completion. You can get
+  autocompletion from the current document, the installed API files or both.
+
+  * :guilabel:`Autocompletion threshold`: Sets the threshold for displaying
+    the autocompletion list (in characters)
+
+* :guilabel:`Typing`
+
+  * |unchecked| :guilabel:`Automatic parentheses insertion`: Enables autoclosing
+    for parentheses
+  * |checkbox| :guilabel:`Automatic insertion of the 'import' string on 'from xxx'`:
+    Enables insertion of 'import' when specifying imports
+
+For :guilabel:`Editor` you can also specify:
+
+* :guilabel:`Run and Debug`
+
+  * |unchecked| :guilabel:`Enable Object Inspector (switching between tabs may
+    be slow)`: Enable the object inspector.
+  * |unchecked| :guilabel:`Auto-save script before running`: Saves the script
+    automatically when executed. This action will store a temporary file (in the
+    temporary system directory) that will be deleted automatically after running.
+
+For :guilabel:`APIs` you can specify:
+
+* |checkbox| :guilabel:`Using preloaded APIs file`: You can choose if you would
+  like to use the preloaded API files.  If this is not checked you can add API
+  files and you can also choose if you would like to use prepared API files
+  (see next option).
+* |unchecked| :guilabel:`Using prepared APIs file`: If checked, the chosen
+  ``*.pap`` file will be used for code completion. To generate a prepared API
+  file you have to load at least one ``*.api`` file and then compile it by
+  clicking the :guilabel:`Compile APIs...` button.
+* Under :guilabel:`GitHub access token`, you can generate a personal token
+  allowing you to share code snippets from within the Python code editor.
+  More details on `GitHub authentication
+  <https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token>`_
+
+.. _code_editor_options:
+
+Code Editor Settings
+--------------------
+
+In the |codeEditor| :guilabel:`Code Editor` tab, you have access to rendering
+properties inside code editor widgets (Python interactive console and editor,
+expression widget and function editor, ...).
+
+* Check |unchecked| :guilabel:`Override code editor font` to modify the default
+  :guilabel:`Font` family and :guilabel:`Size`.
+
+* Under the :guilabel:`Colors` group, you can:
+
+  * select a :guilabel:`Color scheme` different to the default applied to the
+    active theme
+  * change the :ref:`color <color_widget>` of each element in code writing,
+    such as the colors to use for comments, quotes, functions, ...
+  * press |undo| :sup:`Reset to default colors` to remove custom changes.
+
+
+.. index:: User profile
 .. _user_profiles:
 
 Working with User Profiles
@@ -1811,6 +1893,8 @@ in the QGIS user profile.
 
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
+.. |codeEditor| image:: /static/common/mIconCodeEditor.png
+   :width: 1.5em
 .. |crs| image:: /static/common/CRS.png
    :width: 1.5em
 .. |customProjection| image:: /static/common/mActionCustomProjection.png
@@ -1845,6 +1929,8 @@ in the QGIS user profile.
    :width: 1.5em
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
    :width: 1.5em
+.. |runConsole| image:: /static/common/iconRunConsole.png
+   :width: 1.5em
 .. |search| image:: /static/common/search.png
    :width: 1.5em
 .. |select| image:: /static/common/mActionSelect.png
@@ -1863,5 +1949,7 @@ in the QGIS user profile.
    :width: 1.5em
 .. |unchecked| image:: /static/common/checkbox_unchecked.png
    :width: 1.3em
+.. |undo| image:: /static/common/mActionUndo.png
+   :width: 1.5em
 .. |win| image:: /static/common/win.png
    :width: 1em
