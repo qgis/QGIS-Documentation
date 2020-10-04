@@ -75,6 +75,11 @@ It is possible to highlight a portion of the SQL to only execute that
 portion when pressing :kbd:`Ctrl+R` or clicking the :guilabel:`Execute`
 button.
 
+The :guilabel:`Query History` button stores the last 20 queries of each database
+and provider.  
+
+Double clicking on an entry will add the string to the SQL window.
+
 .. _figure_db_manager_queries:
 
 .. figure:: img/db_manager_sql.png
