@@ -402,7 +402,11 @@ details).
    * - :menuselection:`Add Regular Polygon -->`
      -
      - :guilabel:`Shape Digitizing`
+<<<<<<< HEAD
      -
+=======
+     - :ref:`draw_regular_polygons`
+>>>>>>> 9ab705065... Fix reference
    * - :menuselection:`-->`
        |regularPolygonCenterPoint|
        :guilabel:`Add Regular Polygon from Center and a Point`
