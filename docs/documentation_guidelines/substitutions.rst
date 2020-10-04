@@ -303,6 +303,7 @@ Icon                            Substitution                        Icon        
 |settings|                      ``|settings|``                      |start|                         ``|start|``
 |3dconfigure|                   ``|3dconfigure|``                   |deleteSelected|                ``|deleteSelected|``
 |browserExpand|                 ``|browserExpand|``                 |browserCollapse|               ``|browserCollapse|``
+|codeEditor|                    ``|codeEditor|``
 ==============================  ==================================  ==============================  ==================================
 
 
@@ -648,6 +649,8 @@ Icon                            Substitution                        Icon        
 .. |clearConsole| image:: /static/common/iconClearConsole.png
    :width: 1.5em
 .. |clip| image:: /static/common/clip.png
+   :width: 1.5em
+.. |codeEditor| image:: /static/common/mIconCodeEditor.png
    :width: 1.5em
 .. |collapseTree| image:: /static/common/mActionCollapseTree.png
    :width: 1.5em
