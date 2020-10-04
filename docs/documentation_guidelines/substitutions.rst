@@ -570,7 +570,7 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |addXyzLayer| image:: /static/common/mActionAddXyzLayer.png
    :width: 1.5em
-.. |algorithmSelectLocation|  image:: /static/common/mAlgorithmSelectLocation.png
+.. |algorithmSelectLocation| image:: /static/common/mAlgorithmSelectLocation.png
    :width: 1.5em
 .. |alignBottom| image:: /static/common/mActionAlignBottom.png
    :width: 1.5em
