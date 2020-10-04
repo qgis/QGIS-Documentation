@@ -1143,8 +1143,8 @@ Thanks to QGIS Server, you can also publish such services.
 .. index:: Vector Tiles services
 .. _vector_tile:
 
-Using Vecto Tiles services
---------------------------
+Using Vector Tiles services
+---------------------------
 
 Vector Tiles services can be found in the :guilabel:`Vector Tiles`
 top level entry in the :guilabel:`Browser`.
