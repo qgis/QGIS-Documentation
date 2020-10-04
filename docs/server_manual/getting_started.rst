@@ -193,7 +193,7 @@ Install NGINX:
   QGIS Server processes.
   Official Debian packages exist for both.
   When you have no X server running and you need, for example,
-  printing,	you can use :ref:`xvfb <xvfb>`.
+  printing, you can use :ref:`xvfb <xvfb>`.
 
 * Another option is to rely on **Systemd**, the init system for GNU/Linux that most
   Linux distributions use today.
@@ -235,7 +235,6 @@ as it adds the parameters from :file:`/etc/nginx/fastcgi_params`:
  fastcgi_param  REDIRECT_STATUS    200;
 
 Moreover, you can use some :ref:`qgis-server-envvar` to configure QGIS Server.
-0123456789012345678901234567890123456789012345678901234567890123456789
 In the NGINX configuration file, :file:`/etc/nginx/nginx.conf`, you have to use
 ``fastcgi_param`` instruction to define these variables as shown below:
 
@@ -818,7 +817,7 @@ in the range 0 to 100. Specify 0 for maximum compression, 100 for no compression
 You can change the limit for atlas features to be printed in one request by setting the
 :guilabel:`Maximum features for Atlas print requests` field.
 
-When QGIS Server is used in tiled mode (see :ref:`TILED parameter<server_wms_tiled>`), you can set the
+When QGIS Server is used in tiled mode (see :ref:`TILED parameter <wms-tiled>`), you can set the
 :guilabel:`Tile buffer in pixels`. The recommended value is the size of the largest
 symbol or line width in your QGIS project.
 

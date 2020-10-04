@@ -1092,7 +1092,7 @@ Python code
         
 .. _qgisrandompointsinpolygons:
 
-Random points in polygons |314|
+Random points in polygons |316|
 -------------------------------
 Creates a point layer with points placed inside the polygons of
 another layer.
@@ -1129,7 +1129,7 @@ of the algorithm.
 The attributes of the polygon feature on which a point was generated
 can be included (:guilabel:`Include polygon attributes`).
 
-If you want approximately the same point density for all the line
+If you want approximately the same point density for all the
 features, you can data-define the number of points using the area of
 the polygon feature geometry.
 
@@ -1791,6 +1791,7 @@ Python code
    source folder.
 
 .. |314| replace:: ``NEW in 3.14``
+.. |316| replace:: ``NEW in 3.16``
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |dataDefined| image:: /static/common/mIconDataDefine.png

@@ -1009,6 +1009,9 @@ OpenCL acceleration settings.
 
    Acceleration tab
 
+Depending on your hardware and software, you may have to install additional 
+libraries to enable OpenCL acceleration.
+
 
 Processing Settings
 -------------------
@@ -1177,7 +1180,7 @@ CRS Properties
 The |crs| :guilabel:`CRS` tab helps you set the coordinate reference system
 to use in this project. It can be:
 
-* |checkbox| :guilabel:`No projection (or unknown/non-Earth projection)`:
+* |checkbox| :guilabel:`No CRS (or unknown/non-Earth projection)`:
   layers are drawn based on their raw coordinates
 * or an existing coordinate reference system that can be *geographic*,
   *projected* or *user-defined*. Layers added to the project are translated

@@ -88,7 +88,15 @@ Here's an example:
 
  render.finished.connect(finished)
 
+ # Start the rendering
  render.start()
+
+ # The following loop is not normally required, we
+ # are using it here because this is a standalone example.
+ from qgis.PyQt.QtCore import QEventLoop
+ loop = QEventLoop()
+ render.finished.connect(loop.quit)
+ loop.exec_()
 
 
 Rendering layers with different CRS
