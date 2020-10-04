@@ -338,8 +338,8 @@ can be made between two CRSs, and allow you to make an informed selection
 of which is the most appropriate transformation to use for your data.
 
 This customization is done in the :menuselection:`Settings -->` |options|
-:menuselection:`Options --> CRS` tab menu under the :guilabel:`Default datum
-transformations` group:
+:menuselection:`Options --> Transformations` tab menu under the
+:guilabel:`Default datum transformations` group:
 
 * using |checkbox| :guilabel:`Ask for datum transformation if several are
   available`: when more than one appropriate datum transformation exists for a
@@ -387,8 +387,8 @@ transformations` group:
    Selecting a preferred default datum transformation
 
 Datum transformations set in the :menuselection:`Settings -->` |options|
-:menuselection:`Options --> CRS` tab will be inherited by all new QGIS
-projects created on the system. Additionally, a particular project
+:menuselection:`Options --> Transformations` tab will be inherited by all
+new QGIS projects created on the system. Additionally, a particular project
 may have its own specific set of transformations specified via the
 :guilabel:`CRS` tab of the :guilabel:`Project properties` dialog
 (:menuselection:`Project --> Properties...`). These settings apply
