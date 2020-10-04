@@ -53,19 +53,21 @@ msgstr "翻訳のプロセス"
 msgid ""
 "QGIS Documentation is written in English with :file:`.rst` files. In order "
 "to provide translations:"
-msgstr "QGISのドキュメントは :file:`.rst` ファイルを使い英語で書かれています。翻訳は次のプロセスを経ます。"
+msgstr "QGISのドキュメントは :file:`.rst` ファイルを使い英語で書かれています。翻訳は次のプロセスを経て提供されます。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:28
 msgid ""
 "A prebuild script creates translation files named :file:`.po` files for the "
 "English language in the folder :file:`/QGIS-Documentation/locale/en`."
 msgstr ""
+"プレビルドスクリプトによって、 :file:`.po` ファイルと呼ばれる翻訳用のファイルが、まず英語のために :file:`/QGIS-"
+"Documentation/locale/en` フォルダの中に作成されます。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:30
 msgid ""
 "These \"originals\" are then copied by the script to the :file:`locale` "
 "folders for other languages."
-msgstr ""
+msgstr "次にスクリプトによって、この「オリジナル」が、その他の言語のために :file:`locale` フォルダにコピーされます。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:32
 msgid ""
@@ -74,17 +76,18 @@ msgid ""
 " English to their language with the editor."
 msgstr ""
 ":file:`.po` "
-"ファイルの文はTransifexウェブプラットフォームにプッシュされ、英語から各言語へと、翻訳者がエディタを使って翻訳できるようになります。 "
+"ファイルの中の文章がTransifexのウェブプラットフォームにプッシュされ、英語から各言語へと、翻訳者がエディタを使って翻訳できるようになります。 "
 
 #: ../../docs/documentation_guidelines/do_translations.rst:35
 msgid "At the end of the day, a script pulls back all validated translations"
-msgstr "1日の終わりに、検証済みの翻訳がスクリプトによりプルされ取得されます。"
+msgstr "1日の終わりに、すべての検証済みの翻訳がスクリプトによって取得され、元の :file:`.po` ファイルに反映されます。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:36
 msgid ""
 "At the next build of the documentation (which occurs at least once a day), a"
 " script reuses the sentences to create translated output"
-msgstr "これらの翻訳は、ドキュメンテーションの次のビルド（少なくとも1日に1回は行われます）の際に、スクリプトによって取り込まれ反映されます。"
+msgstr ""
+"これらの翻訳は、ドキュメントの次のビルド（少なくとも1日に1回は行われます）の際に、翻訳版ドキュメントを作成するために、スクリプトによって再度利用されます。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:38
 msgid ""
@@ -96,11 +99,10 @@ msgid ""
 ":file:`.po` file and needs to be translated. The amount of work for updating"
 " translations for next release should be relatively small."
 msgstr ""
-":file:`.rst` ドキュメントが更新されると、新しく英語の :file:`.po` "
-"ファイルが作られます。この新しいファイルの内容は、他言語では既存の :file:`.po` "
-"ファイルへとマージされます。このことが意味するのは、翻訳済みの :file:`.rst` ドキュメントに新たな文章が追加されても、翻訳済みの "
-":file:`.po` "
-"には新しい（あるいは修正された）文章だけが追加され、その部分だけを翻訳し直せばよいということです。次回リリースの際に翻訳を更新する作業は、比較的少く済むはずです。"
+"原文の :file:`.rst` ドキュメントが更新されると、新しく英語の :file:`.po` "
+"ファイルが作られます。この新しいファイルの内容は、各言語の既存の :file:`.po` ファイルへとマージされます。言い換えると、翻訳済みの "
+":file:`.rst` ドキュメントに新たな文章が追加されても、翻訳済みの :file:`.po` "
+"には新しい（あるいは修正された）文章だけが追加され、その部分だけを翻訳し直せばよいということです。このため、次のリリースのための翻訳の更新作業は、比較的少く済むはずです。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:46
 msgid ""
@@ -111,14 +113,14 @@ msgid ""
 "application are pushed to and pulled from transifex as a single :file:`.ts` "
 "file."
 msgstr ""
-"上記のプロセスは、QGISウェブサイト、QGISデスクトップアプリケーション、QGISサーバのいずれの翻訳でも、同じように適用されます。ただしアプリケーションの翻訳では、:file:`.po`"
-" ファイルではなく、:file:`.py` や :file:`.cpp` や :file:`.yaml` "
-"ファイルなどの、アプリケーションを形作るファイル中のすべての翻訳可能な文字列が、単一の :file:`.ts` "
-"ファイルとしてtransifexとの間でプッシュされたりプルされたりします。"
+"上記のプロセスは、QGISウェブサイト、QGISデスクトップアプリケーション、QGISサーバのいずれの翻訳でも、同じように行われます。ただしアプリケーションの翻訳では、:file:`.po`"
+" ファイルではなく、:file:`.py` ファイルや :file:`.cpp` ファイル、 :file:`.yaml` "
+"ファイルなどのアプリケーションを形作るファイルの中のすべての翻訳可能な文字列が、単一の :file:`.ts` "
+"ファイルとしてtransifexとの間でやりとりされるという違いがあります。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:52
 msgid "Two different tools are currently used to do translations in QGIS:"
-msgstr "現在、二つの異なるツールが、QGISでの翻訳を行うために使用されています。"
+msgstr "現在、ふたつの異なるツールが、QGISでの翻訳を行うために使用されています。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:54
 msgid ""
@@ -128,8 +130,8 @@ msgid ""
 "Just pick the files you want and translate. Translated files are stored in "
 "the platform until another release is pushed."
 msgstr ""
-"`Transifexウェブプラットフォーム <https://www.transifex.com/>`_, "
-"は、QGISを翻訳するのに一番簡単でお勧めの方法です。上記のプロセスは透過的に行われ、またすべての翻訳可能なテキストは1箇所に集められています。翻訳者は希望のファイルを選んで翻訳するだけです。別のリリースがプッシュされるまで、翻訳されたファイルはプラットフォームに保存されます。"
+"`Transifexのウェブプラットフォーム <https://www.transifex.com/>`_, "
+"は、QGISを翻訳するのに一番簡単でお勧めの方法です。上で説明したプロセスは透過的に行われ、またすべての翻訳可能なテキストは1箇所に集められています。翻訳者は希望のファイルを選んで翻訳するだけです。別のリリースがプッシュされ翻訳を再開するまで、翻訳済みファイルはこのプラットフォームの中に保存されています。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:59
 msgid ""
@@ -137,9 +139,9 @@ msgid ""
 "development tool, requires the translator to pull locally the :file:`.po` "
 "(or :file:`.ts`) files from the source code, translate and then push back."
 msgstr ""
-"`Qt Linguist <https://doc.qt.io/qt-5/qtlinguist-index.html>`_, "
+"`Qt Linguist <https://doc.qt.io/qt-5/qtlinguist-index.html>`_ "
 "はQtの開発ツールです。翻訳者は :file:`.po` (もしくは :file:`.ts`) "
-"ファイルをソースコードからローカルにプルし、翻訳した後にはプッシュし戻す必要があります。"
+"ファイルをソースコードからローカル環境に取得し、翻訳した後は送り返す必要があります。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:64
 msgid ""
@@ -156,34 +158,34 @@ msgid ""
 "example. In this example we will translate it from English to Dutch, but it "
 "will be practically the same for other documents in all languages."
 msgstr ""
-"ヒートマッププラグインの例を使って翻訳の作業を説明します。この例では英語からオランダ語に翻訳を行いますが、他のドキュメントや言語でもほとんど同じはずです."
+"ヒートマッププラグインの例を使って翻訳の作業を説明します。この例では英語からオランダ語に翻訳を行いますが、他のドキュメントや言語でもほぼ同じでしょう。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:75
 msgid "The source of the document can be found here:"
-msgstr "このドキュメントのソースはここにあります。"
+msgstr "ヒートマッププラグインのドキュメントのソースは以下の場所にあります。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:81
 msgid "So why did I choose this document?"
-msgstr "なぜこのドキュメントを例として選んだのですかって？"
+msgstr "なんでこのドキュメントを例として選んだのかですって？"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:83
 msgid "It includes images, captions, headers, references and replacements."
-msgstr "このドキュメントには画像、キャプション、ヘッダー、参照、置換があります"
+msgstr "このドキュメントには画像、キャプション、ヘッダー、参照、置換があるからです"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:84
 msgid "I wrote it so it is easier for me to translate ;-)"
-msgstr "私が書いたドキュメントなので私にとっては翻訳が容易です (^o^)"
+msgstr "このドキュメントを書いたのは私なので、私には翻訳が容易だからです (^o^;)"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:86
 msgid ""
 "The build process has created the English :file:`.po` file which can be "
 "found here::"
-msgstr "ビルドプロセスが英語の :file:`.po` ファイルをここに生成済みです。"
+msgstr "ビルドプロセスが英語の :file:`.po` ファイルを以下の場所に生成しています。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:90
 msgid ""
 "The equivalent Dutch :file:`.po` file (basically a copy) can be found here::"
-msgstr "これに対応するオランダ語の :file:`.po` ファイル（基本的にはコピーです）はここにあります。"
+msgstr "これに対応するオランダ語の :file:`.po` ファイル（基本的にコピーです）は以下の場所にあります。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:94
 msgid ""
@@ -191,7 +193,7 @@ msgid ""
 " does not hold any translations yet."
 msgstr ""
 "このファイルと並んでごく小さなサイズの :file:`.mo` "
-"ファイルがあるのに気づかれると思いますが、今の所このファイルにはなんの翻訳も含まれていないということを意味します。"
+"ファイルがあるのに気づかれると思いますが、今の所このファイルにはなんの翻訳も含まれていません。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:101
 msgid "Translation in Transifex"

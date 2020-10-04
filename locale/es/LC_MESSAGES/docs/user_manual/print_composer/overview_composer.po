@@ -24,7 +24,7 @@ msgstr ""
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:5
 msgid "Overview of the Print Layout"
-msgstr ""
+msgstr "Resumen de la Composición de Impresión"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:12
 msgid ""
@@ -38,6 +38,15 @@ msgid ""
 "generating several maps based on a template can be done through the atlas "
 "generator."
 msgstr ""
+"El diseño de impresión proporciona capacidades de diseño e impresión cada "
+"vez mayores. Le permite agregar elementos como el lienzo del mapa QGIS, "
+"etiquetas de texto, imágenes, leyendas, barras de escala, formas básicas, "
+"flechas, tablas de atributos y marcos HTML. Puede dimensionar, agrupar, "
+"alinear, colocar y rotar cada elemento y ajustar sus propiedades para crear "
+"su diseño. El diseño se puede imprimir o exportar a formatos de imagen, "
+"PostScript, PDF o SVG. Puede guardar el diseño como plantilla y volver a "
+"cargarlo en otra sesión. Finalmente, la generación de varios mapas basados "
+"en una plantilla se puede hacer a través del generador de atlas."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:26
 msgid "Sample Session for beginners"
@@ -52,6 +61,13 @@ msgid ""
 " choose :menuselection:`File --> New Print Layout`. You will be prompted to "
 "choose a title for the new layout."
 msgstr ""
+"Antes de comenzar a trabajar con el diseño de impresión, debe cargar algunas"
+" capas ráster o vectoriales en el lienzo del mapa de QGIS y adaptar sus "
+"propiedades para que se adapten a su propia conveniencia. Después de que "
+"todo esté renderizado y simbolizado a su gusto, haga clic en el icono "
+"|newLayout| :sup:`Nueva composición de impresión` en la barra de "
+"herramientas o elija :menuselection:` Archivo -> Nueva composición de "
+"impresión`. Se le pedirá que elija un título para el nuevo diseño."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:36
 msgid ""
@@ -66,6 +82,10 @@ msgid ""
 "draw a rectangle on the canvas holding down the left mouse button. Inside "
 "the drawn rectangle the QGIS map view to the canvas."
 msgstr ""
+"En el lado izquierdo, seleccione el botón de la barra de herramientas "
+"|addMap| :sup:`Añade un nuevo mapa a la composición` y dibuja un rectángulo "
+"en el lienzo manteniendo presionado el botón izquierdo del ratón. Dentro del"
+" rectángulo dibujado, verá el lienzo del mapa de QGIS."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:41
 msgid ""
@@ -73,6 +93,10 @@ msgid ""
 "the left mouse button on the print layout canvas. A scalebar will be added "
 "to the canvas."
 msgstr ""
+"Seleccione el botón de la barra de herramientas |scaleBar| :sup:`Añadir "
+"nueva barra de escala a la composición` y haga clic con el botón izquierdo "
+"del ratón en el lienzo de diseño de impresión. Se agregará una barra de "
+"escala al lienzo."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:44
 msgid ""
@@ -80,12 +104,18 @@ msgid ""
 "rectangle on the canvas holding down the left mouse button. Inside the drawn"
 " rectangle the legend will be drawn."
 msgstr ""
+"Seleccione el botón de la barra de herramientas |addLegend| :sup:`Añadir "
+"nueva leyenda a la composición` y dibuja un rectángulo en el lienzo "
+"manteniendo presionado el botón izquierdo del mouse. Dentro del rectángulo "
+"dibujado se dibujará la leyenda."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:47
 msgid ""
 "Select the |select| :sup:`Select/Move item` icon to select the map on the "
 "canvas and move it a bit."
 msgstr ""
+"Seleccione el icono |select| :sup:`Seleccionar/Mover elemento` para "
+"seleccionar el mapa en el lienzo y moverlo un poco."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:49
 msgid ""
@@ -94,6 +124,11 @@ msgid ""
 "rectangle in one of the corners of the map item and drag it to a new "
 "location to change its size."
 msgstr ""
+"Mientras el elemento del mapa aún está seleccionado, también puede cambiar "
+"el tamaño del elemento del mapa. Haga clic mientras mantiene presionado el "
+"botón izquierdo del ratón, en un pequeño rectángulo blanco en una de las "
+"esquinas del elemento del mapa y arrástrelo a una nueva ubicación para "
+"cambiar su tamaño."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:53
 msgid ""
@@ -102,18 +137,28 @@ msgid ""
 ":guilabel:`Map orientation` to '15.00\\ |degrees| '. You should see the "
 "orientation of the map item change."
 msgstr ""
+"Haga clic en el panel :guilabel:`Propiedades del elemento` en el lado "
+"izquierdo hacia abajo y busque la configuración para la orientación. Cambie "
+"el valor de la configuración :guilabel:`Orientación del mapa` a "
+"'15.00\\|degrees|'. Debería ver cómo cambia la orientación del elemento del "
+"mapa."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:57
 msgid ""
 "Now, you can print or export your print layout to image formats, PDF or to "
 "SVG with the export tools in :menuselection:`Layout` menu."
 msgstr ""
+"Ahora, puede imprimir o exportar su diseño de impresión a formatos de "
+"imagen, PDF o SVG con las herramientas de exportación en el menú "
+":menuselection:`Diseño`."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:59
 msgid ""
 "Finally, you can save your print layout within the project file with the "
 "|fileSave| :sup:`Save Project` button."
 msgstr ""
+"Finalmente, puede guardar su diseño de impresión dentro del archivo del "
+"proyecto con el botón |fileSave| :sup:`Guardar proyecto`."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:63
 msgid ""
@@ -124,10 +169,16 @@ msgid ""
 "from the layout canvas you can do that with the :kbd:`Delete` or the "
 ":kbd:`Backspace` key."
 msgstr ""
+"Puede agregar varios elementos a la composición del diseño. También es "
+"posible tener más de una vista de mapa o leyenda o barra de escala en el "
+"lienzo de diseño de impresión, en una o varias páginas. Cada elemento tiene "
+"sus propias propiedades y, en el caso del mapa, su propia extensión. Si "
+"desea eliminar algún elemento del lienzo de diseño, puede hacerlo con la "
+"tecla :kbd:`Delete` o :kbd:`Backspace`."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:74
 msgid "The Layout Manager"
-msgstr ""
+msgstr "El Administrador de Composiciones"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:76
 msgid ""
@@ -135,24 +186,30 @@ msgid ""
 " the project. It gives you an overview of existing print layouts and reports"
 " in the project and offers tools to:"
 msgstr ""
+"El :guilabel:`Administrador de Composiciones` es la ventana principal para "
+"administrar los diseños de impresión en el proyecto. Le brinda una "
+"descripción general de los diseños de impresión e informes existentes en el "
+"proyecto y ofrece herramientas para:"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:80
 msgid ""
 "add new print layout or new report from scratch, template or duplicating an "
 "existing one;"
 msgstr ""
+"agregar una nueva composición de impresión o un nuevo informe desde cero, "
+"plantilla o duplicando uno existente;"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:82
 msgid "rename or delete any of them;"
-msgstr ""
+msgstr "renombrar o borrar cualquiera de ellos;"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:83
 msgid "open them in the project."
-msgstr ""
+msgstr "abrirlos en el proyecto."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:85
 msgid "To open the layout manager dialog:"
-msgstr ""
+msgstr "Para abrir el diálogo del Administrador de Composición:"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:87
 msgid ""
@@ -160,6 +217,10 @@ msgid ""
 "Manager...` menu or click on the |layoutManager| :sup:`Layout Manager` "
 "button in the :guilabel:`Project Toolbar`;"
 msgstr ""
+"desde el diálogo principal de QGIS, seleccione el menú "
+":menuselection:`Proyecto --> Administrador de Composiciones...` o haga click"
+" en el botón |layoutManager| :sup:`Administrador de Composiciones` en la "
+":guilabel:`Barra de Herramientas de Proyecto`;"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:90
 msgid ""
@@ -167,22 +228,32 @@ msgid ""
 "Layout Manager...` menu or click on the |layoutManager| :sup:`Layout "
 "Manager` button in the :guilabel:`Layout Toolbar`."
 msgstr ""
+"desde un cuadro de diálogo de diseño o informe de impresión, seleccione "
+":menuselection:`Diseño -> Layout Manager....` o haga clic en el botón "
+"|layoutManager| :sup:`Administrador de Composiciones` en :guilabel:`Barra de"
+" Herramientas Composiciones`."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:100
 msgid "The Print Layout Manager"
-msgstr ""
+msgstr "El Administrador de Impresión de Composición"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:103
 msgid ""
 "The layout manager lists in its upper part all the available print layouts "
 "or reports in the project with tools to:"
 msgstr ""
+"El administrador de composición enumera en su parte superior todos los "
+"diseños de impresión o informes disponibles en el proyecto con herramientas "
+"para:"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:106
 msgid ""
 "show the selection: you can select multiple reports and/or print layout(s) "
 "and open them in one-click. Double-click a name also opens it;"
 msgstr ""
+"mostrar la selección: puede seleccionar varios informes y/o composicion(es) "
+"de impresión y abrirlos con un solo clic. Hacer doble clic en un nombre "
+"también lo abre;"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:108
 msgid ""
@@ -190,18 +261,27 @@ msgid ""
 " selected): it creates a new dialog using the selected one as template. "
 "You'll be prompted to choose a new title for the new layout;"
 msgstr ""
+"duplicar la composición de impresión o informe seleccionado (disponible solo"
+" si se selecciona un elemento): crea un nuevo cuadro de diálogo utilizando "
+"el seleccionado como plantilla. Se le pedirá que elija un nuevo título para "
+"el nuevo diseño;"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:111
 msgid ""
 "rename the report or layout (available only if one item is selected): you'll"
 " be prompted to choose a new title for the layout;"
 msgstr ""
+"cambiar el nombre del informe o composición (disponible solo si se "
+"selecciona un elemento): se le pedirá que elija un nuevo título para el "
+"diseño;"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:113
 msgid ""
 "remove the layout: the selected print layout(s) will be deleted from the "
 "project."
 msgstr ""
+"eliminar la composición: los diseños de composición(es) seleccionados se "
+"eliminarán del proyecto."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:116
 msgid ""
@@ -214,6 +294,15 @@ msgid ""
 "listed in the combobox. Select an item and press the :guilabel:`Create` "
 "button to generate a new report or print layout."
 msgstr ""
+"En la parte inferior, es posible crear nuevos diseños de composición o "
+"informes desde cero o una plantilla. De forma predeterminada, QGIS buscará "
+"plantillas en el perfil de usuario y los directorios de plantillas de la "
+"aplicación (accesibles con los dos botones en la parte inferior del marco) "
+"pero también en cualquier carpeta declarada como :guilabel:`Ruta(s) para "
+"buscar plantillas de composición adicional` en :menuselection:`Configuración"
+" -> Opciones -> Composiciones`. Las plantillas encontradas se enumeran en el"
+" cuadro combinado. Seleccione un elemento y presione el botón "
+":guilabel:`Crear` para generar un nuevo informe o composición de impresión."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:125
 msgid ""
@@ -221,10 +310,15 @@ msgid ""
 " *specific* in the templates drop-down list, browse to the template and "
 "press :guilabel:`Create`."
 msgstr ""
+"También puede utilizar plantillas de diseño de una carpeta personalizada; en"
+" ese caso, seleccione *específico* en la lista desplegable de plantillas, "
+"busque la plantilla y presione :guilabel:`Crear`."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:129
 msgid "**Creating template-based print layouts from Browser panel**"
 msgstr ""
+"**Creación de composiciones de impresión basados en plantillas desde el "
+"panel del navegador**"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:131
 msgid ""
@@ -232,10 +326,14 @@ msgid ""
 "browser onto the map canvas or double-click it in the :ref:`Browser panel "
 "<browser_panel>` generates a new print layout from the template."
 msgstr ""
+"Arrastre y suelte un archivo de plantilla de composición de impresión "
+":file:`.qpt` desde cualquier explorador de archivos en el lienzo del mapa o "
+"haga doble clic en él en :ref:`panel del explorador `para generar una nueva "
+"composición de impresión a partir de la plantilla."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:140
 msgid "Menus, tools and panels of the print layout"
-msgstr ""
+msgstr "Menús, herramientas y paneles de la composición de impresión"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:142
 msgid ""
@@ -247,16 +345,27 @@ msgid ""
 "navigate, zoom in on an area and pan the view on the layout a well as "
 "buttons to select any layout item and to move the contents of the map item."
 msgstr ""
+"Abrir el compositor de impresión le proporciona un lienzo en blanco que "
+"representa la superficie del papel cuando utiliza la opción de impresión. "
+"Inicialmente, encontrará botones a la izquierda al lado del lienzo para "
+"agregar elementos de diseño de impresión: el lienzo del mapa QGIS actual, "
+"etiquetas de texto, imágenes, leyendas, barras de escala, formas básicas, "
+"flechas, tablas de atributos y marcos HTML. En esta barra de herramientas "
+"también encontrará botones para navegar, acercar un área y desplazar la "
+"vista en el diseño, así como botones para seleccionar cualquier elemento del"
+" diseño y mover el contenido del elemento del mapa."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:151
 msgid ""
 "figure_layout_overview_ shows the initial view of the print layout before "
 "any elements are added."
 msgstr ""
+"figure_layout_overview_ muestra la vista inicial de la composición de "
+"impresión antes de agregar elementos."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:160
 msgid "Print Layout"
-msgstr "Diseño de impresión"
+msgstr "Composición de impresión"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:163
 msgid ""
@@ -265,6 +374,10 @@ msgid ""
 "lower holds the panels :guilabel:`Layout`, :guilabel:`Item properties` and "
 ":guilabel:`Atlas generation`."
 msgstr ""
+"A la derecha, al lado del lienzo, encontrará dos conjuntos de paneles. El "
+"superior contiene los paneles :guilabel:`elementos` y :guilabel:`deshacer "
+"historia` y el inferior contiene los paneles :guilabel:`Diseño`, "
+":guilabel:`propiedades de elemento` y :guilabel: `Atlas`."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:168
 msgid ""
@@ -272,6 +385,9 @@ msgid ""
 "added to the canvas and ways to globally interact with them (see "
 ":ref:`layout_items_panel` for more information)."
 msgstr ""
+"El panel :guilabel:`elementos` proporciona una lista de todos los elementos "
+"del compositor de impresión añadidos al lienzo y formas de interactuar "
+"globalmente con ellos (ver :ref:`layout_items_panel` para mas información)."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:171
 msgid ""
@@ -279,6 +395,9 @@ msgid ""
 " to the layout. With a mouse click, it is possible to undo and redo layout "
 "steps back and forth to a certain status."
 msgstr ""
+"El panel :guilabel:`Deshacer historia` muestra un historial de todos los "
+"cambios aplicados al diseño. Con un clic del ratón, es posible deshacer y "
+"rehacer pasos de diseño hacia adelante y hacia atrás hasta un cierto estado."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:174
 msgid ""
@@ -286,6 +405,9 @@ msgid ""
 "to the layout when exporting or working within (see :ref:`layout_panel` for "
 "more details);"
 msgstr ""
+"El panel :guilabel:`Diseño` le permite establecer parámetros generales para "
+"aplicar al diseño al exportar o trabajar dentro (ver :ref:`layout_panel` "
+"para más detalles);"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:177
 msgid ""
@@ -296,6 +418,13 @@ msgid ""
 "selected item (see :ref:`layout_items` for detailed information on each item"
 " settings)."
 msgstr ""
+"El panel :guilabel:`Propiedades del elemento` muestra las propiedades del "
+"elemento seleccionado. Haga clic en el icono |select| "
+":sup:`Seleccionar/Mover elemento` para seleccionar un elemento (por ejemplo,"
+" leyenda, barra de escala o etiqueta) en el lienzo. Luego haga clic en el "
+"panel :guilabel:`Propiedades del elemento` y personalice la configuración "
+"del elemento seleccionado (consulte :ref:` layout_items` para obtener "
+"información detallada sobre la configuración de cada elemento)."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:183
 msgid ""
@@ -303,6 +432,10 @@ msgid ""
 "for the current layout and gives access to its parameters (see "
 ":ref:`atlas_generation` for detailed information on atlas generation usage)."
 msgstr ""
+"El panel :guilabel:`Atlas` le permite habilitar la generación de un atlas "
+"para el diseño actual y le da acceso a sus parámetros (consulte "
+":ref:`atlas_generation` para obtener información detallada sobre el uso de "
+"la generación de atlas)."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:189
 msgid ""
@@ -311,6 +444,11 @@ msgid ""
 " the number of selected items if applicable and, in the case of atlas "
 "generation, the number of features."
 msgstr ""
+"En la parte inferior de la ventana de diseño de impresión, puede encontrar "
+"una barra de estado con la posición del ratón, el número de página actual, "
+"un cuadro combinado para establecer el nivel de zoom, el número de elementos"
+" seleccionados si corresponde y, en el caso de la generación de atlas, el "
+"número de entidades."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:194
 msgid ""
@@ -318,6 +456,10 @@ msgid ""
 "toolbars. All print layout tools are available in menus and as icons in a "
 "toolbar."
 msgstr ""
+"En la parte superior de la ventana del compositor de impresión, puede "
+"encontrar menús y otras barras de herramientas. Todas las herramientas de "
+"diseño de impresión están disponibles en menús y como iconos en una barra de"
+" herramientas."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:198
 msgid ""
@@ -325,48 +467,64 @@ msgid ""
 " button over any toolbar or through :menuselection:`View --> Toolbars -->` "
 "or :menuselection:`View --> Panels -->`."
 msgstr ""
+"Las barras de herramientas y los paneles se pueden apagar y encender usando "
+"el botón derecho del ratón sobre cualquier barra de herramientas o mediante "
+":menuselection:`Ver -> Barras de herramientas ->` o :menuselection:`Ver -> "
+"Paneles ->`."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:209
 msgid "Menus and Tools"
-msgstr ""
+msgstr "Menús y Herramientas"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:212
 msgid "Layout menu"
-msgstr ""
+msgstr "Menú Diseño"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:214
 msgid "The :menuselection:`Layout` provides action to manage the layout:"
 msgstr ""
+"El :menuselection:`Diseño` proporciona acción para gestionar el diseño:"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:216
 msgid "Save the project file directly from the print layout window."
 msgstr ""
+"Guarde el archivo del proyecto directamente desde la ventana del compositor "
+"de impresión."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:217
 msgid ""
 "Create a new and blank print layout with |newLayout| :guilabel:`New "
 "Layout...`."
 msgstr ""
+"Crea una composición de impresión nueva y en blanco |newLayout| "
+":guilabel:`Nueva Composición...`."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:218
 msgid ""
 "|duplicateLayout| :guilabel:`Duplicate Layout...` : Create a new print "
 "layout by duplicating the current one."
 msgstr ""
+"|duplicateLayout| :guilabel:`Duplicar Composición..` : Crea un nuevo diseño "
+"de impresión duplicando el actual."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:220
 msgid ""
 "Remove the current layout with |deleteSelected| :guilabel:`Delete "
 "Layout...`."
 msgstr ""
+"Eliminar el diseño actual con |deleteSelected| :guilabel:`Borrar "
+"Composición...`."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:221
 msgid "Open the |layoutManager| :guilabel:`Layout Manager...`."
 msgstr ""
+"Abrir el  |layoutManager| :guilabel:`Administrador de Composiciones...`."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:222
 msgid ":menuselection:`Layouts -->` : Open an existing print layout."
 msgstr ""
+":menuselection:`Composiciones -->` : Abrir una composición de impresión "
+"existente."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:224
 msgid ""
@@ -375,6 +533,11 @@ msgid ""
 "current state of a print layout session as a :file:`.qpt` template file and "
 "load its items again in another session/print layout."
 msgstr ""
+"Una vez diseñada la composición, con |fileSaveAs | :guilabel:`Guardar como "
+"plantilla` y |fileOpen| :guilabel:`Añadir elementos desde plantilla`, puede "
+"guardar el estado actual de una sesión de composición de impresión como un "
+"archivo de plantilla :file:`.qpt` y cargar sus elementos nuevamente en otra "
+"sesión/composición de impresión."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:229
 msgid ""
@@ -384,6 +547,12 @@ msgid ""
 "Image...`, |saveAsPDF| :guilabel:`Export as PDF...`, |saveAsSVG| "
 ":guilabel:`Export as SVG...` and |filePrint| :guilabel:`Print...`."
 msgstr ""
+"En el menú :menuselection:`Diseño`, también hay formas poderosas de "
+"compartir información geográfica producida con QGIS que puede incluirse en "
+"informes o publicarse. Estas herramientas son |saveMapAsImage| "
+":guilabel:`Exportar como imagen...`, |saveAsPDF|  :guilabel:`Exportar como "
+"PDF...`, |saveAsSVG| :guilabel:`Exportar como SVG...` y |filePrint| "
+":guilabel:`Print...`."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:235
 #: ../../docs/user_manual/print_composer/overview_composer.rst:273
@@ -391,6 +560,8 @@ msgid ""
 "Below is a list of all the available tools in this menu with some convenient"
 " information."
 msgstr ""
+"A continuación se muestra una lista de todas las herramientas disponibles en"
+" este menú con información conveniente."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:239
 #: ../../docs/user_manual/print_composer/overview_composer.rst:1
@@ -416,7 +587,7 @@ msgstr "Atajos"
 #: ../../docs/user_manual/print_composer/overview_composer.rst:399
 #: ../../docs/user_manual/print_composer/overview_composer.rst:419
 msgid "Toolbar"
-msgstr "Barra de herramietas"
+msgstr "Barra de herramientas"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:239
 #: ../../docs/user_manual/print_composer/overview_composer.rst:1
@@ -429,7 +600,7 @@ msgstr "Referencia"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:241
 msgid "|fileSave| :guilabel:`Save Project`"
-msgstr ""
+msgstr "|fileSave| :guilabel:`Guardar Proyecto`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:241
 msgid ":kbd:`Ctrl+S`"
@@ -449,7 +620,7 @@ msgstr ":kbd:`Ctrl+S`"
 #: ../../docs/user_manual/print_composer/overview_composer.rst:1
 #: ../../docs/user_manual/print_composer/overview_composer.rst:1
 msgid ":guilabel:`Layout`"
-msgstr ""
+msgstr ":guilabel:`Composiciones`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:241
 msgid ":ref:`sec_projects`"
@@ -457,7 +628,7 @@ msgstr ":ref:`sec_projects`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:242
 msgid "|newLayout| :guilabel:`New Layout`"
-msgstr ""
+msgstr "|newLayout| :guilabel:`Nueva Composición`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:242
 msgid ":kbd:`Ctrl+N`"
@@ -468,83 +639,83 @@ msgstr ":kbd:`Ctrl+N`"
 #: ../../docs/user_manual/print_composer/overview_composer.rst:245
 #: ../../docs/user_manual/print_composer/overview_composer.rst:251
 msgid ":ref:`layout_manager`"
-msgstr ""
+msgstr ":ref:`layout_manager`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:243
 msgid "|duplicateLayout| :guilabel:`Duplicate Layout`"
-msgstr ""
+msgstr "|duplicateLayout| :guilabel:`Duplicar Composición`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:244
 msgid "|deleteSelected| :guilabel:`Delete Layout`"
-msgstr ""
+msgstr "|deleteSelected| :guilabel:`Eliminar Composición`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:245
 msgid "|layoutManager| :guilabel:`Layout Manager...`"
-msgstr "|layoutManager| :guilabel:`Layout Manager...`"
+msgstr "|layoutManager| :guilabel:`Administrador de composiciones...`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:246
 msgid ":menuselection:`Layouts -->`"
-msgstr ":menuselection:`Layouts -->`"
+msgstr ":menuselection:`Composiciones -->`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:247
 msgid ":guilabel:`Layout Properties...`"
-msgstr ""
+msgstr ":guilabel:`Propiedades de composición...`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:247
 msgid ":ref:`layout_panel`"
-msgstr ""
+msgstr ":ref:`layout_panel`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:248
 msgid ":guilabel:`Rename Layout...`"
-msgstr ""
+msgstr ":guilabel:`Renombrar Composición...`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:249
 msgid "|newPage| :guilabel:`Add Pages...`"
-msgstr ""
+msgstr "|newPage| :guilabel:`Añadir páginas...`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:249
 msgid ":ref:`page_properties`"
-msgstr ""
+msgstr ":ref:`page_properties`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:250
 msgid "|fileOpen| :guilabel:`Add Items from Template`"
-msgstr ""
+msgstr "|fileOpen| :guilabel:`Añadir elementos desde plantilla`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:250
 msgid ":ref:`create_layout_item`"
-msgstr ""
+msgstr ":ref:`create_layout_item`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:251
 msgid "|fileSaveAs| :guilabel:`Save as Template...`"
-msgstr ""
+msgstr "|fileSaveAs| :guilabel:`Guardar como plantilla...`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:252
 msgid "|saveMapAsImage| :guilabel:`Export as Image...`"
-msgstr ""
+msgstr "|saveMapAsImage| :guilabel:`Exportar como imagen...`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:252
 msgid ":ref:`export_layout_image`"
-msgstr ""
+msgstr ":ref:`export_layout_image`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:253
 msgid "|saveAsSVG| :guilabel:`Export as SVG...`"
-msgstr ""
+msgstr "|saveAsSVG| :guilabel:`Exportar como SVG...`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:253
 msgid ":ref:`export_layout_svg`"
-msgstr ""
+msgstr ":ref:`export_layout_svg`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:254
 msgid "|saveAsPDF| :guilabel:`Export as PDF...`"
-msgstr ""
+msgstr "|saveAsPDF| :guilabel:`Exportar como PDF...`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:254
 msgid ":ref:`export_layout_pdf`"
-msgstr ""
+msgstr ":ref:`export_layout_pdf`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:255
 msgid ":guilabel:`Page Setup...`"
-msgstr ""
+msgstr ":guilabel:`Configuración de página...`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:255
 msgid ":kbd:`Ctrl+Shift+P`"
@@ -552,7 +723,7 @@ msgstr ":kbd:`Ctrl+Shift+P`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:256
 msgid "|filePrint| :guilabel:`Print...`"
-msgstr ""
+msgstr "|filePrint| :guilabel:`Print...`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:256
 msgid ":kbd:`Ctrl+P`"
@@ -560,7 +731,7 @@ msgstr ":kbd:`Ctrl+P`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:256
 msgid ":ref:`create-output`"
-msgstr ""
+msgstr ":ref:`create-output`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:257
 msgid ":guilabel:`Close`"
@@ -572,7 +743,7 @@ msgstr ":kbd:`Ctrl+Q`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:261
 msgid "Edit menu"
-msgstr ""
+msgstr "Menú Editar"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:263
 msgid ""
@@ -581,6 +752,10 @@ msgid ""
 "undo/redo (see :ref:`layout_undo_panel`) functionality for the items in the "
 "layout."
 msgstr ""
+"El menú :menuselection:`Editar` ofrece herramientas para manipular elementos"
+" de diseño de impresión. Incluye acciones comunes como herramientas de "
+"selección, copiar/cortar/pegar y deshacer/rehacer (ver "
+":ref:`layout_undo_panel`) funcionalidad para los elementos del diseño."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:267
 msgid ""
@@ -590,6 +765,11 @@ msgid ""
 " page, at the same position they were in their initial page. It ensures to "
 "copy/paste items at the same place, from page to page."
 msgstr ""
+"Al usar la acción Pegar, los elementos se pegarán de acuerdo con la posición"
+" actual del ratón. Usando la opción :menuselection:`Editar -> Pegar en "
+"lugar` o presionando :kbd:` Ctrl + Shift + V` pegará los elementos en la "
+"página actual, en la misma posición que estaban en su página inicial. "
+"Asegura copiar / pegar elementos en el mismo lugar, de una página a otra."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:276
 msgid "Available Tools"
@@ -597,7 +777,7 @@ msgstr "Herramientas disponibles"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:1
 msgid "|undo| :guilabel:`Undo (last change)`"
-msgstr ""
+msgstr "|undo| :guilabel:`Deshacer(último cambio)`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:1
 msgid ":kbd:`Ctrl+Z`"
@@ -606,27 +786,27 @@ msgstr ":kbd:`Ctrl+Z`"
 #: ../../docs/user_manual/print_composer/overview_composer.rst:1
 #: ../../docs/user_manual/print_composer/overview_composer.rst:1
 msgid ":ref:`layout_undo_panel`"
-msgstr ""
+msgstr ":ref:`layout_undo_panel`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:1
 msgid "|redo| :guilabel:`Redo (last reverted change)`"
-msgstr ""
+msgstr "|redo| :guilabel:`Rehacer (último cambio )`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:1
 msgid ":kbd:`Ctrl+Y`"
-msgstr ""
+msgstr ":kbd:`Ctrl+Y`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:1
 msgid "|deleteSelected| :guilabel:`Delete`"
-msgstr ""
+msgstr "|deleteSelected| :guilabel:`Borrar`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:1
 msgid ":kbd:`Del`"
-msgstr ""
+msgstr ":kbd:`Del`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:1
 msgid "|editCut| :guilabel:`Cut`"
-msgstr ""
+msgstr "|editCut| :guilabel:`Cortar`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:1
 msgid ":kbd:`Ctrl+X`"
@@ -634,7 +814,7 @@ msgstr ":kbd:`Ctrl+X`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:1
 msgid "|editCopy| :guilabel:`Copy`"
-msgstr ""
+msgstr "|editCopy| :guilabel:`Copiar`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:1
 msgid ":kbd:`Ctrl+C`"
@@ -642,7 +822,7 @@ msgstr ":kbd:`Ctrl+C`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:1
 msgid "|editPaste| :guilabel:`Paste`"
-msgstr ""
+msgstr "|editPaste| :guilabel:`Pegar`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:1
 msgid ":kbd:`Ctrl+V`"
@@ -650,7 +830,7 @@ msgstr ":kbd:`Ctrl+V`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:1
 msgid ":guilabel:`Paste in place`"
-msgstr ""
+msgstr ":guilabel:`Pegar en lugar`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:1
 msgid ":kbd:`Ctrl+Shift+V`"
@@ -658,7 +838,7 @@ msgstr ":kbd:`Ctrl+Shift+V`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:1
 msgid "|selectAll| :guilabel:`Select All`"
-msgstr ""
+msgstr "|selectAll| :guilabel:`Seleccionar todo`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:1
 msgid ":kbd:`Ctrl+A`"
@@ -666,7 +846,7 @@ msgstr ":kbd:`Ctrl+A`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:1
 msgid "|deselectAll| :guilabel:`Deselect all`"
-msgstr ""
+msgstr "|deselectAll| :guilabel:`Deseleccionar todo`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:1
 msgid ":kbd:`Ctrl+Shift+A`"
@@ -674,31 +854,31 @@ msgstr ":kbd:`Ctrl+Shift+A`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:1
 msgid "|invertSelection| :guilabel:`Invert Selection`"
-msgstr ""
+msgstr "|invertSelection| :guilabel:`Invertir Selección`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:1
 msgid ":guilabel:`Select Next Item Below`"
-msgstr ""
+msgstr ":guilabel:`Seleccionar el siguiente elemento debajo`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:1
 msgid ":kbd:`Ctrl+Alt+[`"
-msgstr ""
+msgstr ":kbd:`Ctrl+Alt+[`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:1
 msgid ":guilabel:`Select Next Item above`"
-msgstr ""
+msgstr ":guilabel:`Seleccionar el siguiente elemento encima`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:1
 msgid ":kbd:`Ctrl+Alt+]`"
-msgstr ""
+msgstr ":kbd:`Ctrl+Alt+]`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:1
 msgid "|pan| :guilabel:`Pan Layout`"
-msgstr ""
+msgstr "|pan| :guilabel:`Desplzar Composición`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:1
 msgid ":kbd:`P`"
-msgstr ""
+msgstr ":kbd:`P`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:1
 #: ../../docs/user_manual/print_composer/overview_composer.rst:1
@@ -717,53 +897,53 @@ msgstr ""
 #: ../../docs/user_manual/print_composer/overview_composer.rst:410
 #: ../../docs/user_manual/print_composer/overview_composer.rst:411
 msgid ":guilabel:`Toolbox`"
-msgstr ""
+msgstr ":guilabel:`Caja de Herramientas`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:1
 msgid "|zoomToArea| :guilabel:`Zoom`"
-msgstr ""
+msgstr "|zoomToArea| :guilabel:`Zoom`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:1
 msgid ":kbd:`Z`"
-msgstr ""
+msgstr ":kbd:`Z`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:1
 msgid "|select| :guilabel:`Select/Move Item`"
-msgstr ""
+msgstr "|select| :guilabel:`Seleccionar/Mover elemento`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:1
 msgid ":kbd:`V`"
-msgstr ""
+msgstr ":kbd:`V`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:1
 msgid ":ref:`interact_layout_item`"
-msgstr ""
+msgstr ":ref:`interact_layout_item`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:1
 msgid "|moveItemContent| :guilabel:`Move Content`"
-msgstr ""
+msgstr "|moveItemContent| :guilabel:`Mover Contenido`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:1
 msgid ":kbd:`C`"
-msgstr ""
+msgstr ":kbd:`C`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:1
 #: ../../docs/user_manual/print_composer/overview_composer.rst:401
 msgid ":ref:`layout_map_item`"
-msgstr ""
+msgstr ":ref:`layout_map_item`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:1
 msgid "|editNodesShape| :guilabel:`Edit Nodes Item`"
-msgstr ""
+msgstr "|editNodesShape| :guilabel:`Editar Elementos de Nodos`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:1
 #: ../../docs/user_manual/print_composer/overview_composer.rst:409
 msgid ":ref:`layout_node_based_shape_item`"
-msgstr ""
+msgstr ":ref:`layout_node_based_shape_item`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:301
 msgid "View menu"
-msgstr ""
+msgstr "Menú Ver"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:303
 msgid ""
@@ -771,12 +951,17 @@ msgid ""
 "to configure general behavior of the print layout. Beside the common zoom "
 "tools, you have means to:"
 msgstr ""
+"El menú :menuselection:`Ver` dá acceso a las herramientas de navegación y "
+"ayuda a configurar el comportamiento general del compositor de impresión. "
+"Además de las herramientas de zoom habituales, dispone de medios para:"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:307
 msgid ""
 "|refresh| :sup:`Refresh view` (if you find the view in an inconsistent "
 "state);"
 msgstr ""
+"|refresh| :sup:`Actualizar vista` (si encuentra la vista en un estado "
+"inconsistente);"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:308
 msgid ""
@@ -784,6 +969,10 @@ msgid ""
 "creating them. Grids setting is done in :menuselection:`Settings --> Layout "
 "Options...` or in the :ref:`Layout Panel <layout_panel>`;"
 msgstr ""
+"habilite una :ref:`cuadrícula<grid_guides>` a la que podría ajustar "
+"elementos al moverlos o crearlos. La configuración de las cuadrículas se "
+"realiza en :menuselection:`Configuración -> Opciones de diseño...` o en "
+":ref:`Panel de diseño<layout_panel>`;"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:311
 msgid ""
@@ -792,26 +981,35 @@ msgid ""
 "ruler (above or at the left side of the layout) and drag and drop to the "
 "desired location;"
 msgstr ""
+"habilite :ref:`guías<grid_guides>` a las que podría ajustar elementos al "
+"moverlos o crearlos. Las guías son líneas rojas que puede crear haciendo "
+"clic en la regla (arriba o en el lado izquierdo del diseño) y arrastrar y "
+"soltar en la ubicación deseada;"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:315
 msgid ""
 ":guilabel:`Smart Guides`: uses other layout items as guides to dynamically "
 "snap to as you move or reshape an item;"
 msgstr ""
+":guilabel:`Guías inteligentes`: utiliza otros elementos de diseño como guías"
+" para ajustar dinámicamente a medida que mueve o cambia la forma de un "
+"elemento;"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:317
 msgid ":guilabel:`Clear Guides` to remove all current guides;"
-msgstr ""
+msgstr ":guilabel:`Limpiar Guías` para borrar todas las guías actuales;"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:318
 msgid ""
 ":guilabel:`Show Bounding box` around the items to better identify your "
 "selection;"
 msgstr ""
+":guilabel:`Mostrar Recuadros delimitadores` alrededor de los elementos para "
+"identificar mejor su selección;"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:320
 msgid ":guilabel:`Show Rules` around the layout;"
-msgstr ""
+msgstr ":guilabel:`Mostrar reglas` alrededor del diseño;"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:321
 msgid ""
@@ -821,6 +1019,11 @@ msgid ""
 "transparent background. It's sometimes referred to as \"infinite canvas\" in"
 " other editing packages."
 msgstr ""
+":guilabel:`Mostrar páginas` o configurar páginas transparentes. A menudo, el"
+" diseño se utiliza para crear diseños no impresos, p. Ej. para su inclusión "
+"en presentaciones u otros documentos, y es deseable exportar la composición "
+"utilizando un fondo totalmente transparente. A veces se lo denomina \"lienzo"
+" infinito\" en otros paquetes de edición."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:327
 msgid ""
@@ -830,6 +1033,13 @@ msgid ""
 "the mouse wheel. With :kbd:`Ctrl+Spacebar`, you can temporarily switch to "
 "Zoom In mode, and with :kbd:`Ctrl+Alt+Spacebar`, to Zoom Out mode."
 msgstr ""
+"En la composición de impresión, puede cambiar el nivel de zoom usando la "
+"rueda del ratón o el control deslizante y el cuadro combinado en la barra de"
+" estado. Si necesita cambiar al modo panorámico mientras trabaja en el área "
+"de diseño, puede mantener presionada la tecla :kbd:`Barra espaciadora` o la "
+"rueda del ratón. Con :kbd:`Ctrl + Barra espaciadora`, puede cambiar "
+"temporalmente al modo Acercar, y con :kbd:` Ctrl + Alt + Barra espaciadora`,"
+" al modo Alejar."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:334
 msgid ""
@@ -839,6 +1049,12 @@ msgid ""
 "press :kbd:`Ctrl+Tab`; all panels are hidden and only previously visible "
 "panels are restored when unchecked."
 msgstr ""
+"Los paneles y barras de herramientas se pueden habilitar desde el men "
+":menuselection:`Ver ->`. Para maximizar el espacio disponible para "
+"interactuar con una composición, puede marcar el |checkbox| "
+":menuselection:`Ver -> Alternar visibilidad del panel` o presione :kbd:`Ctrl"
+" + Tab`; todos los paneles están ocultos y solo los paneles previamente "
+"visibles se restauran cuando se desmarca."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:340
 msgid ""
@@ -846,10 +1062,13 @@ msgid ""
 "interact with by pressing :kbd:`F11` or using :menuselection:`View -->` "
 "|checkbox| :guilabel:`Toggle Full Screen`."
 msgstr ""
+"También es posible cambiar al modo de pantalla completa para tener más "
+"espacio para interactuar presionando :kbd:`F11` o usando :menuselection:` "
+"Ver -> ` |checkbox| :guilabel:`Alternar pantalla completa`."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:347
 msgid "|refresh| :guilabel:`Refresh`"
-msgstr ""
+msgstr "|refresh| :guilabel:`Actualizar`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:347
 msgid ":kbd:`F5`"
@@ -861,98 +1080,98 @@ msgstr ":kbd:`F5`"
 #: ../../docs/user_manual/print_composer/overview_composer.rst:351
 #: ../../docs/user_manual/print_composer/overview_composer.rst:352
 msgid ":guilabel:`Navigation`"
-msgstr ""
+msgstr ":guilabel:`Navegación`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:348
 msgid ":menuselection:`Preview -->`"
-msgstr ""
+msgstr ":menuselection:`Vista Previa-->`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:349
 msgid "|zoomIn| :guilabel:`Zoom In`"
-msgstr "|zoomIn| :guilabel:`Acercar zum`"
+msgstr "|zoomIn| :guilabel:`Acercamiento`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:349
 msgid ":kbd:`Ctrl++`"
-msgstr ""
+msgstr ":kbd:`Ctrl++`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:350
 msgid "|zoomOut| :guilabel:`Zoom Out`"
-msgstr "|zoomOut| :guilabel:`Alejar zum`"
+msgstr "|zoomOut| :guilabel:`Alejamiento`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:350
 msgid ":kbd:`Ctrl+-`"
-msgstr ""
+msgstr ":kbd:`Ctrl+-`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:351
 msgid "|zoomActual| :guilabel:`Zoom to 100%`"
-msgstr ""
+msgstr "|zoomActual| :guilabel:`Acercamiento a 100%`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:351
 msgid ":kbd:`Ctrl+1`"
-msgstr ""
+msgstr ":kbd:`Ctrl+1`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:352
 msgid "|zoomFullExtent| :guilabel:`Zoom Full`"
-msgstr "|zoomFullExtent| :guilabel:`Zum General`"
+msgstr "|zoomFullExtent| :guilabel:`Zoom completo`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:352
 msgid ":kbd:`Ctrl+0`"
-msgstr ""
+msgstr ":kbd:`Ctrl+0`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:353
 msgid ":guilabel:`Zoom to Width`"
-msgstr ""
+msgstr ":guilabel:`Zoom a la Anchura`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:354
 msgid "|vectorGrid| :guilabel:`Show Grid`"
-msgstr ""
+msgstr "|vectorGrid| :guilabel:`Mostrar cuadrícula`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:354
 msgid ":kbd:`Ctrl+'`"
-msgstr ""
+msgstr ":kbd:`Ctrl+'`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:354
 #: ../../docs/user_manual/print_composer/overview_composer.rst:355
 #: ../../docs/user_manual/print_composer/overview_composer.rst:356
 #: ../../docs/user_manual/print_composer/overview_composer.rst:357
 msgid ":ref:`grid_guides`"
-msgstr ""
+msgstr ":ref:`grid_guides`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:355
 msgid "|unchecked| :guilabel:`Snap to Grid`"
-msgstr ""
+msgstr "|unchecked| :guilabel:`Ajustar a cuadrícula`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:355
 msgid ":kbd:`Ctrl+Shift+'`"
-msgstr ""
+msgstr ":kbd:`Ctrl+Shift+'`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:356
 msgid "|checkbox| :guilabel:`Show Guides`"
-msgstr ""
+msgstr "|checkbox| :guilabel:`Mostrar guías`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:356
 msgid ":kbd:`Ctrl+;`"
-msgstr ""
+msgstr ":kbd:`Ctrl+;`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:357
 msgid "|checkbox| :guilabel:`Snap to Guides`"
-msgstr ""
+msgstr "|checkbox| :guilabel:`Ajustar a guías`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:357
 msgid ":kbd:`Ctrl+Shift+;`"
-msgstr ""
+msgstr ":kbd:`Ctrl+Shift+;`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:358
 msgid "|checkbox| :guilabel:`Smart Guides`"
-msgstr ""
+msgstr "|checkbox| :guilabel:`Guías inteligentes`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:358
 msgid ":kbd:`Ctrl+Alt+;`"
-msgstr ""
+msgstr ":kbd:`Ctrl+Alt+;`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:359
 msgid ":guilabel:`Manage Guides...`"
-msgstr ""
+msgstr ":guilabel:`Administrar guías...`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:359
 #: ../../docs/user_manual/print_composer/overview_composer.rst:359
@@ -970,15 +1189,15 @@ msgstr "\\"
 #: ../../docs/user_manual/print_composer/overview_composer.rst:359
 #: ../../docs/user_manual/print_composer/overview_composer.rst:360
 msgid ":ref:`layout_guides_panel`"
-msgstr ""
+msgstr ":ref:`layout_guides_panel`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:360
 msgid ":guilabel:`Clear Guides`"
-msgstr ""
+msgstr ":guilabel:`Limpiar guías`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:361
 msgid "|checkbox| :guilabel:`Show Rulers`"
-msgstr ""
+msgstr "|checkbox| :guilabel:`Mostrar reglas`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:361
 msgid ":kbd:`Ctrl+R`"
@@ -986,7 +1205,7 @@ msgstr ":kbd:`Ctrl+R`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:362
 msgid "|checkbox| :guilabel:`Show Bounding Boxes`"
-msgstr ""
+msgstr "|checkbox| :guilabel:`Mostrar rectángulos delimitadores`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:362
 msgid ":kbd:`Ctrl+Shift+B`"
@@ -994,7 +1213,7 @@ msgstr ":kbd:`Ctrl+Shift+B`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:363
 msgid "|checkbox| :guilabel:`Show Pages`"
-msgstr ""
+msgstr "|checkbox| :guilabel:`Mostrar páginas`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:364
 msgid ":menuselection:`Toolbars -->`"
@@ -1011,7 +1230,7 @@ msgstr ":menuselection:`Paneles -->`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:366
 msgid "|unchecked| :guilabel:`Toggle Full Screen`"
-msgstr ""
+msgstr "|unchecked| :guilabel:`Alternar pantalla completa`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:366
 msgid ":kbd:`F11`"
@@ -1020,11 +1239,11 @@ msgstr ":kbd:`F11`"
 #: ../../docs/user_manual/print_composer/overview_composer.rst:366
 #: ../../docs/user_manual/print_composer/overview_composer.rst:367
 msgid ":ref:`view_menu`"
-msgstr ""
+msgstr ":ref:`view_menu`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:367
 msgid "|unchecked| :guilabel:`Toggle Panel Visibility`"
-msgstr ""
+msgstr "|unchecked| :guilabel:`Alternar Visibilidad del Panel`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:367
 msgid ":kbd:`Ctrl+Tab`"
@@ -1032,21 +1251,24 @@ msgstr ":kbd:`Ctrl+Tab`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:371
 msgid "Items menu"
-msgstr ""
+msgstr "Menú de Elementos "
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:373
 msgid ""
 "The :menuselection:`Items` helps you configure items' position in the layout"
 " and the relations between them (see :ref:`interact_layout_item`)."
 msgstr ""
+"Los :menuselection:`Elementos` le ayuda a configurar la posición de los "
+"elementos en la composición y las relaciones entre ellos (consulte "
+":ref:`interact_layout_item`)."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:379
 msgid "|groupItems| :guilabel:`Group`"
-msgstr ""
+msgstr "|groupItems| :guilabel:`Agrupar`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:379
 msgid ":kbd:`Ctrl+G`"
-msgstr ""
+msgstr ":kbd:`Ctrl+G`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:379
 #: ../../docs/user_manual/print_composer/overview_composer.rst:380
@@ -1060,28 +1282,28 @@ msgstr ""
 #: ../../docs/user_manual/print_composer/overview_composer.rst:388
 #: ../../docs/user_manual/print_composer/overview_composer.rst:389
 msgid ":guilabel:`Actions`"
-msgstr ""
+msgstr ":guilabel:`Acciones`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:379
 #: ../../docs/user_manual/print_composer/overview_composer.rst:380
 msgid ":ref:`group_items`"
-msgstr ""
+msgstr ":ref:`group_items`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:380
 msgid "|ungroupItems| :guilabel:`Ungroup`"
-msgstr ""
+msgstr "|ungroupItems| :guilabel:`Desagrupar`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:380
 msgid ":kbd:`Ctrl+Shift+G`"
-msgstr ""
+msgstr ":kbd:`Ctrl+Shift+G`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:381
 msgid "|raiseItems| :guilabel:`Raise`"
-msgstr ""
+msgstr "|raiseItems| :guilabel:`Subir`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:381
 msgid ":kbd:`Ctrl+]`"
-msgstr ""
+msgstr ":kbd:`Ctrl+]`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:381
 #: ../../docs/user_manual/print_composer/overview_composer.rst:382
@@ -1089,35 +1311,35 @@ msgstr ""
 #: ../../docs/user_manual/print_composer/overview_composer.rst:384
 #: ../../docs/user_manual/print_composer/overview_composer.rst:387
 msgid ":ref:`align_items`"
-msgstr ""
+msgstr ":ref:`align_items`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:382
 msgid "|lowerItems| :guilabel:`Lower`"
-msgstr ""
+msgstr "|lowerItems| :guilabel:`Bajar`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:382
 msgid ":kbd:`Ctrl+[`"
-msgstr ""
+msgstr ":kbd:`Ctrl+[`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:383
 msgid "|moveItemsToTop| :guilabel:`Bring to Front`"
-msgstr ""
+msgstr "|moveItemsToTop| :guilabel:`Traer al frente`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:383
 msgid ":kbd:`Ctrl+Shift+]`"
-msgstr ""
+msgstr ":kbd:`Ctrl+Shift+]`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:384
 msgid "|moveItemsToBottom| :guilabel:`Send to Back`"
-msgstr ""
+msgstr "|moveItemsToBottom| :guilabel:`Enviar al fondo`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:384
 msgid ":kbd:`Ctrl+Shift+[`"
-msgstr ""
+msgstr ":kbd:`Ctrl+Shift+[`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:385
 msgid "|locked| :guilabel:`Lock Selected Items`"
-msgstr ""
+msgstr "|locked| :guilabel:`Bloquear elementos seleccionados`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:385
 msgid ":kbd:`Ctrl+L`"
@@ -1126,11 +1348,11 @@ msgstr ":kbd:`Ctrl+L`"
 #: ../../docs/user_manual/print_composer/overview_composer.rst:385
 #: ../../docs/user_manual/print_composer/overview_composer.rst:386
 msgid ":ref:`lock_items`"
-msgstr ""
+msgstr ":ref:`lock_items`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:386
 msgid "|unlocked| :guilabel:`Unlock All`"
-msgstr ""
+msgstr "|unlocked| :guilabel:`Desbloquear todo`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:386
 msgid ":kbd:`Ctrl+Shift+L`"
@@ -1138,122 +1360,124 @@ msgstr ":kbd:`Ctrl+Shift+L`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:387
 msgid ":menuselection:`Align Items -->`"
-msgstr ""
+msgstr ":menuselection:`Alinear elementos -->`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:388
 msgid ":menuselection:`Distribute Items -->`"
-msgstr ""
+msgstr ":menuselection:`Distribuir elementos -->`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:388
 #: ../../docs/user_manual/print_composer/overview_composer.rst:389
 msgid ":ref:`move_resize`"
-msgstr ""
+msgstr ":ref:`move_resize`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:389
 msgid ":menuselection:`Resize -->`"
-msgstr ""
+msgstr ":menuselection:`Cambiar tamaño -->`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:393
 msgid "Add Item menu"
-msgstr ""
+msgstr "Menú añadir elemento"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:395
 msgid ""
 "These are tools to create layout items. Each of them is deeply described in "
 ":ref:`layout_items` chapter."
 msgstr ""
+"Estas son herramientas para crear elementos de diseño. Cada uno de ellos "
+"está profundamente descrito en el capítulo :ref:`layout_items`."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:401
 msgid "|addMap| :guilabel:`Add Map`"
-msgstr ""
+msgstr "|addMap| :guilabel:`Añadir Mapa`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:402
 msgid "|addImage| :guilabel:`Add Picture`"
-msgstr ""
+msgstr "|addImage| :guilabel:`Añadir Imagen`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:402
 msgid ":ref:`layout_picture_item`"
-msgstr ""
+msgstr ":ref:`layout_picture_item`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:403
 msgid "|label| :guilabel:`Add Label`"
-msgstr ""
+msgstr "|label| :guilabel:`Añadir Etiqueta`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:403
 msgid ":ref:`layout_label_item`"
-msgstr ""
+msgstr ":ref:`layout_label_item`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:404
 msgid "|addLegend| :guilabel:`Add Legend`"
-msgstr ""
+msgstr "|addLegend| :guilabel:`Añadir Leyenda`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:404
 msgid ":ref:`layout_legend_item`"
-msgstr ""
+msgstr ":ref:`layout_legend_item`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:405
 msgid "|scaleBar| :guilabel:`Add Scale Bar`"
-msgstr ""
+msgstr "|scaleBar| :guilabel:`Añadir Barra de Escala`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:405
 msgid ":ref:`layout_scalebar_item`"
-msgstr ""
+msgstr ":ref:`layout_scalebar_item`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:406
 msgid "|northArrow| :guilabel:`Add North Arrow`"
-msgstr ""
+msgstr "|northArrow| :guilabel:`Añadir Flecha del Norte`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:406
 msgid ":ref:`layout_northarrow_item`"
-msgstr ""
+msgstr ":ref:`layout_northarrow_item`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:407
 msgid "|addBasicShape| :menuselection:`Add Shape -->`"
-msgstr ""
+msgstr "|addBasicShape| :menuselection:`Añadir Forma -->`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:407
 msgid ":ref:`layout_basic_shape_item`"
-msgstr ""
+msgstr ":ref:`layout_basic_shape_item`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:408
 msgid "|addArrow| :guilabel:`Add Arrow`"
-msgstr ""
+msgstr "|addArrow| :guilabel:`Añadir Flecha`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:408
 msgid ":ref:`layout_arrow_item`"
-msgstr ""
+msgstr ":ref:`layout_arrow_item`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:409
 msgid "|addNodesShape| :menuselection:`Add Node Item -->`"
-msgstr ""
+msgstr "|addNodesShape| :menuselection:`Añadir Elemento Nodo -->`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:410
 msgid "|addHtml| :guilabel:`Add HTML`"
-msgstr ""
+msgstr "|addHtml| :guilabel:`Añadir HTML`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:410
 msgid ":ref:`layout_html_item`"
-msgstr ""
+msgstr ":ref:`layout_html_item`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:411
 msgid "|openTable| :guilabel:`Add Attribute Table`"
-msgstr ""
+msgstr "|openTable| :guilabel:`Añadir Tabla de Atributos`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:411
 msgid ":ref:`layout_table_item`"
-msgstr ""
+msgstr ":ref:`layout_table_item`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:416
 msgid "Atlas menu"
-msgstr ""
+msgstr "Menú Atlas"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:421
 msgid "|atlas| :guilabel:`Preview Atlas`"
-msgstr ""
+msgstr "|atlas| :guilabel:`Vista Preliminar de Atlas`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:421
 msgid ":kbd:`Ctrl+ALt+/`"
-msgstr ""
+msgstr ":kbd:`Ctrl+ALt+/`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:421
 #: ../../docs/user_manual/print_composer/overview_composer.rst:422
@@ -1266,7 +1490,7 @@ msgstr ""
 #: ../../docs/user_manual/print_composer/overview_composer.rst:429
 #: ../../docs/user_manual/print_composer/overview_composer.rst:430
 msgid ":guilabel:`Atlas`"
-msgstr ""
+msgstr ":guilabel:`Atlas`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:421
 #: ../../docs/user_manual/print_composer/overview_composer.rst:422
@@ -1278,27 +1502,27 @@ msgstr ""
 #: ../../docs/user_manual/print_composer/overview_composer.rst:428
 #: ../../docs/user_manual/print_composer/overview_composer.rst:429
 msgid ":ref:`atlas_preview`"
-msgstr ""
+msgstr ":ref:`atlas_preview`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:422
 msgid "|atlasFirst| :guilabel:`First Feature`"
-msgstr ""
+msgstr "|atlasFirst| :guilabel:`Primer Objeto Espacial`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:422
 msgid ":kbd:`Ctrl+<`"
-msgstr ""
+msgstr ":kbd:`Ctrl+<`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:423
 msgid "|atlasPrev| :guilabel:`Previous Feature`"
-msgstr ""
+msgstr "|atlasPrev| :guilabel:`Objeto Espacial Anterior`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:423
 msgid ":kbd:`Ctrl+,`"
-msgstr ""
+msgstr ":kbd:`Ctrl+,`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:424
 msgid "|atlasNext| :guilabel:`Next Feature`"
-msgstr ""
+msgstr "|atlasNext| :guilabel:`Objeto Espacial Siguiente`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:424
 msgid ":kbd:`Ctrl+.`"
@@ -1306,35 +1530,35 @@ msgstr ":kbd:`Ctrl+.`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:425
 msgid "|atlasLast| :guilabel:`Last feature`"
-msgstr ""
+msgstr "|atlasLast| :guilabel:`Último Objeto Espacial`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:425
 msgid ":kbd:`Ctrl+>`"
-msgstr ""
+msgstr ":kbd:`Ctrl+>`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:426
 msgid "|filePrint| :guilabel:`Print Atlas...`"
-msgstr ""
+msgstr "|filePrint| :guilabel:`Print Atlas...`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:427
 msgid "|saveMapAsImage| :guilabel:`Export Atlas as Images...`"
-msgstr ""
+msgstr "|saveMapAsImage| :guilabel:`Export Atlas as Images...`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:428
 msgid "|saveAsSVG| :guilabel:`Export Atlas as SVG...`"
-msgstr ""
+msgstr "|saveAsSVG| :guilabel:`Export Atlas as SVG...`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:429
 msgid "|saveAsPDF| :guilabel:`Export Atlas as PDF...`"
-msgstr ""
+msgstr "|saveAsPDF| :guilabel:`Export Atlas as PDF...`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:430
 msgid "|atlasSettings| :guilabel:`Atlas Settings`"
-msgstr ""
+msgstr "|atlasSettings| :guilabel:`Configuración de Atlas`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:430
 msgid ":ref:`atlas_generation`"
-msgstr ""
+msgstr ":ref:`atlas_generation`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:435
 msgid "Settings Menu"
@@ -1347,44 +1571,64 @@ msgid ""
 "Here, you can set some options that will be used as default on any new print"
 " layout:"
 msgstr ""
+"El menú :menuselection:`Configuración --> Opciones de la composición...` es "
+"un atajo para el menú :menuselection:`Configuración --> Opciones --> "
+"Composiciones` del lien<o principal de QGIS. Aquí, puede configurar algunas "
+"opciones que se usarán por defecto en cualquier nueva composición de "
+"impresión:"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:442
 msgid ":guilabel:`Layout defaults` let you specify the default font to use;"
 msgstr ""
+":guilabel:`Composición predeterminada` le permite especificar la fuente "
+"predeterminada a utilizar;"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:443
 msgid ""
 "With :guilabel:`Grid appearance`, you can set the grid style and its color. "
 "There are three types of grid: **Dots**, **Solid** lines and **Crosses**;"
 msgstr ""
+"Con :guilabel:`aspecto de la cuadrícula`,puede establecer el estilo de la "
+"cuadrícula y su color. Hay tres tipos de cuadrículas: **Puntos**, líneas "
+"**Solidas** y **Cruces**;"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:445
 msgid ""
 ":guilabel:`Grid and guide defaults` defines spacing, offset and tolerance of"
 " the grid (see :ref:`grid_guides` for more details);"
 msgstr ""
+":guilabel:`Valores predefinidos de cuadrícula y guía` define el espaciado, "
+"el desplazamiento y la tolerancia de la cuadrícula (ver :ref:`grid_guides` "
+"para mas detalles);"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:447
 msgid ""
 ":guilabel:`Layout Paths`: to manage list of custom paths to search print "
 "templates."
 msgstr ""
+":guilabel:`Rutas de las composiciones`: para administrar la lista de rutas "
+"personalizadas para buscar plantillas de impresión."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:452
 msgid "Contextual menus"
-msgstr ""
+msgstr "Menús contextuales"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:454
 msgid ""
 "Depending on where you right-click in the print layout dialog, you open a "
 "contextual menu with various features:"
 msgstr ""
+"Dependiendo de dónde haga click con el botón derecho en el cuadro de diálogo"
+" de composición de impresión, abre un menú contextual con varias funciones:"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:457
 msgid ""
 "Right-click on the menu bar or any toolbar and you get the list of layout "
 "panels and toolbars you can enable or disable in one-click."
 msgstr ""
+"Haga clic con el botón derecho en la barra de menú o en cualquier barra de "
+"herramientas y obtendrá la lista de paneles de composiciones y barras de "
+"herramientas que puede habilitar o deshabilitar con un solo clic."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:459
 msgid ""
@@ -1393,58 +1637,78 @@ msgid ""
 "the :ref:`Guides panel <layout_guides_panel>` or :guilabel:`Clear Guides`. "
 "It's also possible to hide the rulers."
 msgstr ""
+"Haga clic derecho sobre una regla y podrá |checkbox| :guilabel:`Mostrar "
+"guías`, |checkbox| :guilabel:`Ajustar a guías`, :guilabel:`Administrar "
+"guías... `abrir el :ref:`Panel de guías<layout_guides_panel>` o :guilabel:` "
+"Limpiar guías`. También es posible ocultar las reglas."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:463
 msgid "Right-click in the print layout canvas and:"
 msgstr ""
+"Haga click con el botón derecho en el lienzo de la composición de impresión "
+"y:"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:465
 msgid ""
 "You'll be able to :guilabel:`Undo` and :guilabel:`Redo` recent changes, or "
 ":guilabel:`Paste` any copied item (only available if no item is selected)."
 msgstr ""
+"Podrá :guilabel:`Deshacer` y :guilabel:`Rehacer` los cambios recientes, o "
+":guilabel:`Pegar` cualquier elemento copiado (solo disponible si no se "
+"selecciona ningún elemento)."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:467
 msgid ""
 "If you click over a page, you can additionally access the current :ref:`Page"
 " Properties <page_properties>` panel or :guilabel:`Remove Page`."
 msgstr ""
+"Si hace clic en una página, también puede acceder al panel :ref:`Propiedades"
+" de la página<page_properties>` actual o :guilabel:`Eliminar página`."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:469
 msgid ""
 "If you click on a selected item then you can cut or copy it as well as open "
 "the :ref:`Item Properties <layout_item_options>` panel."
 msgstr ""
+"Si hace clic en un elemento seleccionado, puede cortarlo o copiarlo, así "
+"como abrir el panel :ref:`Propiedades del elemento<layout_item_options>`."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:471
 msgid ""
 "If more than one item are selected, then you can either group them and/or "
 "ungroup if at least one group is already in the selection."
 msgstr ""
+"Si se selecciona más de un elemento, puede agruparlos y/o desagruparlos si "
+"al menos un grupo ya está en la selección."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:473
 msgid ""
 "Right-click inside a text box or spinbox widget of any layout panel provides"
 " edit options to manipulate its content."
 msgstr ""
+"Hacer clic con el botón derecho dentro de un cuadro de texto o un widget de "
+"spinbox de cualquier panel de diseño proporciona opciones de edición para "
+"manipular su contenido."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:480
 msgid "The Layout Panel"
-msgstr ""
+msgstr "El Panel de Diseño"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:482
 msgid ""
 "In the :guilabel:`Layout` panel, you can define the global settings of your "
 "print layout."
 msgstr ""
+"En el panel de :guilabel:`Diseño`, puede definir la configuración global de "
+"su composición de impresión."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:490
 msgid "Layout Settings in the Print Layout"
-msgstr ""
+msgstr "Configuración de diseño en el compositor de impresión"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:495
 msgid "General settings"
-msgstr ""
+msgstr "Configuración General"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:497
 msgid ""
@@ -1455,6 +1719,12 @@ msgid ""
 "calculating units or scale. This includes exporting the print layout to "
 "georeferenced formats."
 msgstr ""
+"En una composición de impresión, puede utilizar más de un elemento de mapa. "
+"El :guilabel:`mapa de Referencia` representa el elemento del mapa que se "
+"utilizará como mapa maestro del diseño. Se asigna siempre que haya un "
+"elemento de mapa en el diseño. El compositor utilizará este mapa en "
+"cualquiera de sus propiedades y variables para calcular unidades o escala. "
+"Esto incluye exportar el diseño de impresión a formatos georreferenciados."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:504
 msgid ""
@@ -1463,28 +1733,40 @@ msgid ""
 "the map item they are drawn over, and fall back to the reference map if no "
 "overlapping map."
 msgstr ""
+"Además, los nuevos elementos de composición tales como barra de escala, "
+"leyenda o flecha de norte tienen sus configuraciones predeterminadas "
+"(orientación, capas mostradas, escala, ...) ligadas al elemento de mapa "
+"sobre el que están dibujados, y recurren al mapa de referencia si no "
+"superponen ningún mapa."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:512
 msgid "Guides and Grid"
-msgstr ""
+msgstr "Guías y Cuadrículas"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:514
 msgid ""
 "You can put some reference marks on your paper sheet to help you accurately "
 "place some items. These marks can be:"
 msgstr ""
+"Puede poner algunas marcas de referencia en su hoja de papel para ayudarle a"
+" colocar con precisión algunos elementos. Estas marcas pueden ser:"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:517
 msgid ""
 "simple horizontal or vertical lines (called **Guides**) put at the position "
 "you want (see :ref:`layout_guides_panel` for guides creation)."
 msgstr ""
+"líneas horizontales o verticales simples (llamadas **Guías**) colocadas en "
+"la posición que desee (consulte :ref:`layout_guides_panel` para la creación "
+"de guías)."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:519
 msgid ""
 "or regular **Grid**: a network of horizontal and vertical lines superimposed"
 " over the layout."
 msgstr ""
+"o **Cuadrícula** regular: una red de líneas horizontales y verticales "
+"superpuestas sobre el diseño."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:522
 msgid ""
@@ -1493,6 +1775,12 @@ msgid ""
 "items. The tolerance is the maximum distance below which the mouse cursor is"
 " snapped to a grid or a guide, while moving, resizing or creating an item."
 msgstr ""
+"Configuraciones como :guilabel:`Espaciado de cuadrícula` o :guilabel:` "
+"Desplazamiento de cuadrícula` se pueden ajustar en este grupo, así como "
+":guilabel:`Tolerancia de ajuste` para usar con los elementos. La tolerancia "
+"es la distancia máxima por debajo de la cual el cursor del mouse se ajusta a"
+" una cuadrícula o una guía, mientras se mueve, cambia el tamaño o crea un "
+"elemento."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:527
 msgid ""
@@ -1503,6 +1791,13 @@ msgid ""
 "assumption that they have been explicitly placed at highly desirable "
 "snapping locations, and should be selected over the general grid)."
 msgstr ""
+"Si se deben mostrar la cuadrícula o las guías se establece en el menú "
+":menuselection:`Ver`. Allí, también puede decidir si se pueden usar para "
+"ajustar elementos de diseño. Cuando tanto una línea de cuadrícula como una "
+"línea de guía están dentro de la tolerancia de un punto, las guías siempre "
+"tendrán prioridad, ya que se han establecido manualmente (por lo tanto, se "
+"supone que se han colocado explícitamente en ubicaciones de ajuste altamente"
+" deseables y deben seleccionarse sobre el cuadrícula general)."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:536
 msgid ""
@@ -1510,6 +1805,10 @@ msgid ""
 "the grid and guides parameters exposed above. However, these options will "
 "only apply as defaults to new print layouts."
 msgstr ""
+"En el menú :menuselection:`Configuración -> Opciones de composición`, "
+"también puede configurar los parámetros de cuadrícula y guías expuestos "
+"anteriormente. Sin embargo, estas opciones solo se aplicarán por defecto a "
+"los nuevos diseños de impresión."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:543
 msgid "Export settings"
@@ -1521,6 +1820,9 @@ msgid ""
 ":guilabel:`Export resolution`. This setting can then be overridden each time"
 " you export a map."
 msgstr ""
+"Puede definir una resolución a utilizar para todos los mapas exportados en "
+":guilabel:`Exportar resolución`. Esta configuración se puede anular cada vez"
+" que exporta un mapa."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:548
 msgid ""
@@ -1532,12 +1834,22 @@ msgid ""
 "possible as vectors, e.g. a map item with layer opacity won't force labels, "
 "scale bars, etc to be rasterized too. You can however:"
 msgstr ""
+"Debido a algunas opciones de renderizado avanzadas (:ref:`modo de fusión"
+"<blend-modes>`, :ref:`efectos<draw_effects>` ...), un elemento de diseño "
+"puede necesitar rasterización para poder exportarse correctamente. QGIS lo "
+"rasterizará individualmente sin forzar que todos los demás elementos también"
+" se rastericen. Esto permite imprimir o guardar como PostScript o PDF para "
+"mantener los elementos tanto como sea posible como vectores, p. Ej. un "
+"elemento de mapa con opacidad de capa no forzará a rasterizar etiquetas, "
+"barras de escala, etc. Sin embargo, puedes:"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:557
 msgid ""
 "force all the items to be rasterized checking the |checkbox| "
 ":guilabel:`Print as raster` box;"
 msgstr ""
+"forzar la rasterización de todos los elementos marcando el cuadro |checkbox|"
+" :guilabel:`Imprimir como ráster`;"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:559
 msgid ""
@@ -1546,6 +1858,10 @@ msgid ""
 "format. Note that in some cases, this could cause the output to look "
 "different to layout."
 msgstr ""
+"o use la opción opuesta, es decir :guilabel:`Exportar siempre como "
+"vectores`, para forzar la exportación para mantener los elementos como "
+"vectores cuando se exportan a un formato compatible. Tenga en cuenta que, en"
+" algunos casos, esto podría hacer que la salida se vea diferente al diseño."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:564
 msgid ""
@@ -1558,10 +1874,19 @@ msgid ""
 "with the reference map item and contains information to georeference it "
 "easily."
 msgstr ""
+"Donde el formato lo hace posible (por ejemplo,:file:`.TIF`, :file:`.PDF`) "
+"exportar una composición de impresión da como resultado por defecto un "
+"archivo georreferenciado (basado en el elemento :guilabel:`Mapa de "
+"referencia` en el grupo :guilabel:`Configuración general`). Para otros "
+"formatos, la salida georreferenciada requiere que genere un archivo mundial "
+"marcando |checkbox| :guilabel:`Guardar archivo mundial`. El archivo mundial "
+"se crea junto al mapa(s) exportado, tiene el nombre de la salida de la "
+"página con el elemento del mapa de referencia y contiene información para "
+"georreferenciarlo fácilmente."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:574
 msgid "Resize layout to content"
-msgstr ""
+msgstr "Cambiar el tamaño de la composición al contenido"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:576
 msgid ""
@@ -1569,6 +1894,10 @@ msgid ""
 "page composition whose extent covers the current contents of the print "
 "layout (with some optional :guilabel:`margins` around the cropped bounds)."
 msgstr ""
+"Usando la herramienta :guilabel:`Cambiar tamaño de página` en este grupo, "
+"crea una composición de página única cuya extensión cubre el contenido "
+"actual de la composición de impresión (con algunos :guilabel:`márgenes` "
+"opcionales alrededor de los límites recortados)."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:580
 msgid ""
@@ -1576,6 +1905,10 @@ msgid ""
 "<crop_to_content>` option in that all the items are placed on a real and "
 "unique page in replacement of all the existing pages."
 msgstr ""
+"Tenga en cuenta que este comportamiento es diferente de la opción: ref: "
+"`ajustar al contenido<crop_to_content>` en que todos los elementos se "
+"colocan en una página real y única en reemplazo de todas las páginas "
+"existentes."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:585
 msgid "Variables"
@@ -1586,6 +1919,9 @@ msgid ""
 "The :guilabel:`Variables` lists all the variables available at the layout's "
 "level (which includes all global and project's variables)."
 msgstr ""
+"La lista de :guilabel:`Variables` enumera todas las variables disponibles en"
+" el nivel del diseño (que incluye todas las variables globales y del "
+"proyecto)."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:590
 msgid ""
@@ -1594,20 +1930,26 @@ msgid ""
 "select a custom layout-level variable from the list and click the "
 "|signMinus| button to remove it."
 msgstr ""
+"También permite al usuario administrar variables a nivel de diseño. Haga "
+"clic en el |signPlus| para agregar una nueva variable de nivel de diseño "
+"personalizada. Del mismo modo, seleccione una variable de nivel de diseño "
+"personalizada de la lista y haga clic en el botón |signMinus| para quitarlo."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:595
 msgid ""
 "More information on variables usage in the :ref:`General Tools "
 "<general_tools_variables>` section."
 msgstr ""
+"Más información sobre el uso de variables en la sección :ref:`Herramientas "
+"generales`."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:603
 msgid "Variables Editor in the Print Layout"
-msgstr ""
+msgstr "Editor de variables en el compositor de impresión"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:610
 msgid "Working with the page properties"
-msgstr ""
+msgstr "Trabajar con las propiedades de la página"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:612
 msgid ""
@@ -1616,10 +1958,15 @@ msgid ""
 " with a layer, while a third one shows an HTML frame linking to your "
 "organization website. Or you can add many types of items on each page."
 msgstr ""
+"Un diseño puede estar compuesto por varias páginas. Por ejemplo, una primera"
+" página puede mostrar un lienzo de mapa y una segunda página puede mostrar "
+"la tabla de atributos asociada con una capa, mientras que una tercera "
+"muestra un marco HTML que se vincula al sitio web de su organización. O "
+"puede agregar muchos tipos de elementos en cada página."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:618
 msgid "Adding a new page"
-msgstr ""
+msgstr "Añadiendo una nueva página"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:620
 msgid ""
@@ -1628,16 +1975,23 @@ msgid ""
 "from the :menuselection:`Layout` menu or :guilabel:`Layout Toolbar`. The "
 ":guilabel:`Insert Pages` dialog opens and you are asked to fill:"
 msgstr ""
+"Además, se puede hacer un diseño usando diferentes tamaños y/u orientaciones"
+" de páginas. Para agregar una página, seleccione |newPage| "
+":guilabel:`Agregar páginas...` desde el menú :menuselection:`Diseño` o "
+":guilabel:`Barra de Herramientas Composiciones`. Se abre el cuadro de "
+"diálogo :guilabel:`Insertar páginas` y se le pide que complete:"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:625
 msgid "the number of pages to insert;"
-msgstr ""
+msgstr "el número de páginas para insertar;"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:626
 msgid ""
 "the position of the page(s): before or after a given page or at the end of "
 "the print layout;"
 msgstr ""
+"la posición de la página(s): antes o después de una página determinada o al "
+"final de la composición de impresión;"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:628
 msgid ""
@@ -1646,6 +2000,11 @@ msgid ""
 "as well as a resolution type, such as ``1920x1080`` or ``1024x768``) with "
 "associated :guilabel:`Orientation` (Portrait or Landscape)."
 msgstr ""
+"El :guilabel:`Tamaño de página`: podría ser de un formato de página "
+"preestablecido (``A4``, ``B0``, ``Legal``, ``Carta``, ``ANSI A``, ``Arch A``"
+" y sus derivados, así como un tipo de resolución, como ``1920x1080`` o "
+"``1024x768``) con una asociada :guilabel:`Orientación` (Vertical u "
+"Horizontal)."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:633
 msgid ""
@@ -1655,14 +2014,20 @@ msgid ""
 "``pt``, ``in``, ``ft``... Conversion of entered values is automatically "
 "applied when switching from one unit to another."
 msgstr ""
+"El tamaño de la página también puede tener un formato ``personalizado``; En "
+"ese caso, deberá ingresar su :guilabel:`Anchura` y :guilabel:`Altura` (con "
+"la proporción de tamaño bloqueada si es necesario) y seleccionar la unidad "
+"que se usará ``mm``, ``cm``, ``px``, ``pt``, ``in``, ``ft``... La conversión"
+" de los valores ingresados se aplica automáticamente al cambiar de una "
+"unidad a otra."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:644
 msgid "Creating a new page in the Print Layout"
-msgstr ""
+msgstr "Crear una nueva página en la composición de impresión"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:648
 msgid "Updating page properties"
-msgstr ""
+msgstr "Actualizar las propiedades de la página"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:650
 msgid ""
@@ -1671,6 +2036,10 @@ msgid ""
 "Properties...`. The :guilabel:`Item Properties` panel opens with settings "
 "such as:"
 msgstr ""
+"Cualquier página puede ser personalizada despues mediante el panel de página"
+" :guilabel:`Propiedades de elemento`. Click derecho en una página y "
+"seleccione :guilabel:`Propiedades de página...`. El panel "
+":guilabel:`Propiedades de elemento` se abre con configuraciones como:"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:654
 msgid ""
@@ -1678,6 +2047,9 @@ msgid ""
 "property using the data defined override options (see "
 ":ref:`atlas_data_defined_override` for a use case);"
 msgstr ""
+"el marco :guilabel:`Tamaño de página` descrito anteriormente. Puede "
+"modificar cada propiedad utilizando las opciones de anulación definidas por "
+"datos (consulte :ref:`atlas_data_defined_override` para un uso);"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:657
 msgid ""
@@ -1685,20 +2057,25 @@ msgid ""
 " current page with its content should be included in the :ref:`layout output"
 " <create-output>`;"
 msgstr ""
+"la |unchecked| :guilabel:`Excluir la página de las exportaciones` para "
+"controlar si la página actual con su contenido debe incluirse en la "
+":ref:`salida de diseño  <create-output>`;"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:660
 msgid ""
 "the :guilabel:`Background` of the current page using the :ref:`color <color-"
 "selector>` or :ref:`symbol <symbol-selector>` you want."
 msgstr ""
+"El :guilabel:`Fondo` de la página actual usando el :ref:`color <color-"
+"selector>` o :ref:`símbolo` que quiera."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:668
 msgid "Page properties dialog"
-msgstr ""
+msgstr "Diálogo de propiedades de página"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:675
 msgid "The Guides Panel"
-msgstr ""
+msgstr "El Panel Guías"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:677
 msgid ""
@@ -1708,12 +2085,21 @@ msgid ""
 " and :menuselection:`View --> Snap to Guides` options to be checked. To "
 "create a guide, there are two different methods:"
 msgstr ""
+"Las guías son referencias de líneas verticales u horizontales que puede "
+"colocar en una página de diseño para ayudarlo a colocar los elementos, al "
+"crearlos, moverlos o cambiar su tamaño. Para estar activo, las guías "
+"requieren las opciones de :menuselection:`Ver -> Mostrar guías` y "
+":menuselection:` Ver -> Ajustar a guías` para ser marcadas. Para crear una "
+"guía, existen dos métodos diferentes:"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:683
 msgid ""
 "if the :menuselection:`View --> Show Rulers` option is set, drag out a ruler"
 " and release the mouse button within the page area, at the desired position."
 msgstr ""
+"Si la opción :menuselection:`Ver --> Mostrar reglas` está habilitada, "
+"arrastre una regla y suelte el botón del mouse dentro del área de la página,"
+" en la posición deseada."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:686
 msgid ""
@@ -1721,20 +2107,26 @@ msgid ""
 ":menuselection:`View --> Toolbox -->` or by selecting :guilabel:`Manage "
 "guides for page...` from the page's contextual menu."
 msgstr ""
+"para mayor precisión, use el panel :guilabel:`Guías` de :menuselection:` Ver"
+" -> Caja de herramientas -> ` o seleccionando :guilabel:` Administrar guías "
+"para la página ... `del menú contextual de la página."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:695
 msgid "The Guides panel"
-msgstr ""
+msgstr "El Panel Guías"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:697
 msgid ""
 "The :guilabel:`Guides` panel allows creation of snap lines at specific "
 "locations:"
 msgstr ""
+"El panel :guilabel:`Guías` permite la creación de líneas de ajuste en "
+"ubicaciones específicas:"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:700
 msgid "Select the :guilabel:`Page` you'd like to add the guides to"
 msgstr ""
+"Seleccione la :guilabel:`Página` a la que le gustaría agregar las guías"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:701
 msgid ""
@@ -1742,12 +2134,17 @@ msgid ""
 "of the horizontal or vertical line. The origin is at the top left corner. "
 "Different units are available for this."
 msgstr ""
+"Haga clic en el botón |signPlus| :sup:`Agregar nueva guía` e ingrese las "
+"coordenadas de la línea horizontal o vertical. El origen está en la esquina "
+"superior izquierda. Hay diferentes unidades disponibles para esto."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:705
 msgid ""
 "The panel also allows adjusting the position of existing guides to exact "
 "coordinates: double-click and replace the value."
 msgstr ""
+"El panel también permite ajustar la posición de las guías existentes a las "
+"coordenadas exactas: haga doble clic y reemplace el valor."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:707
 msgid ""
@@ -1756,6 +2153,11 @@ msgid ""
 "can use the :guilabel:`Apply to All Pages` button to replicate the guide "
 "configuration of the current page to the other pages in the layout."
 msgstr ""
+"El panel :guilabel:`Guías` enumera solo los elementos de la página actual. "
+"Permite la creación o eliminación de guías solo en la página actual. Sin "
+"embargo, puede usar el botón :guilabel:`Aplicar a todas las páginas` para "
+"replicar la configuración de la guía de la página actual en las otras "
+"páginas del diseño."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:711
 msgid ""
@@ -1763,10 +2165,13 @@ msgid ""
 " guide` button. Use :guilabel:`Clear All Guides` to remove all the guides in"
 " the current page."
 msgstr ""
+"Para eliminar una guía, selecciónela y presione el botón |signMinus| "
+":sup:`Eliminar guía seleccionada`. Utilice :guilabel:`Borrar todas las "
+"guías` para eliminar todas las guías de la página actual."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:715
 msgid "**Snapping to existing layout items**"
-msgstr ""
+msgstr "** Ajustar a elementos de diseño existentes **"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:717
 msgid ""
@@ -1776,10 +2181,16 @@ msgid ""
 "to be checked. Anytime the mouse pointer is close to an item's bound, a "
 "snapping cross appears."
 msgstr ""
+"Además de guías y cuadrículas, puede utilizar elementos existentes como "
+"referencias de ajuste al mover, cambiar el tamaño o crear elementos nuevos; "
+"estos se llaman **guías inteligentes** y requieren la opción "
+":menuselection:`Ver -> Guías inteligentes` para ser marcada. Cada vez que el"
+" puntero del ratón está cerca del límite de un elemento, aparece una cruz de"
+" ensamblado."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:727
 msgid "The Items Panel"
-msgstr ""
+msgstr "El Panel Elementos"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:729
 msgid ""
@@ -1791,18 +2202,27 @@ msgid ""
 "canvas. This is thus a handy way to select an item placed behind another "
 "one. Note that a selected row is shown as bold."
 msgstr ""
+"El panel :guilabel:`Elementos` ofrece algunas opciones para administrar la "
+"selección y visibilidad de los elementos. Todos los elementos agregados al "
+"lienzo de diseño de impresión (incluido :ref:`grupo de "
+"elementos<group_items>`) se muestran en una lista y la selección de un "
+"elemento hace que la fila correspondiente se seleccione en la lista, así "
+"como la selección de una fila selecciona el elemento correspondiente en la "
+"impresión lienzo de diseño. Por tanto, esta es una forma práctica de "
+"seleccionar un elemento colocado detrás de otro. Tenga en cuenta que una "
+"fila seleccionada se muestra en negrita."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:738
 msgid "For any selected item, you can :"
-msgstr ""
+msgstr "Para cualquier elemento seleccionado, puede:"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:740
 msgid "|showAllLayers| set it visible or not;"
-msgstr ""
+msgstr "|showAllLayers| hacerlo visible o no;"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:741
 msgid "|locked| lock or unlock its position;"
-msgstr ""
+msgstr "|locked| bloquear o desbloquear su posición;"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:742
 msgid ""
@@ -1811,16 +2231,22 @@ msgid ""
 " in the print layout canvas. By default, a newly created item is placed in "
 "the foreground."
 msgstr ""
+"ordenar su posición Z. Puede mover hacia arriba y hacia abajo cada elemento "
+"de la lista con un clic y arrastrar. El elemento superior de la lista se "
+"colocará en primer plano en el lienzo de la composición de impresión. De "
+"forma predeterminada, un elemento recién creado se coloca en primer plano."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:746
 msgid "change the item ID by double-clicking the text;"
-msgstr ""
+msgstr "cambie el ID del elemento haciendo doble clic en el texto;"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:747
 msgid ""
 "right-click an item and copy or delete it or open its :ref:`properties panel"
 " <layout_item_options>`."
 msgstr ""
+"haga clic con el botón derecho en un elemento y cópielo o elimínelo o abra "
+"su :ref:`panel de propiedades<layout_item_options>`."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:750
 msgid ""
@@ -1830,10 +2256,17 @@ msgid ""
 ":menuselection:`Items` panel and unchecking the tickbox or you can use the "
 "icons on the toolbar."
 msgstr ""
+"Una vez que haya encontrado la posición correcta para un elemento, puede "
+"bloquearlo marcando la casilla |locked| en la columna. Los elementos "
+"bloqueados **no** se pueden seleccionar en el lienzo. Los elementos "
+"bloqueados se pueden desbloquear seleccionando el elemento en el panel "
+":menuselection:`Elementos` y desmarcando la casilla de verificación o puede "
+"utilizar los iconos en la barra de herramientas."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:760
 msgid "The Undo History Panel: Revert and Restore actions"
 msgstr ""
+"El panel de historial de deshacer: acciones de reversión y restauración"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:762
 msgid ""
@@ -1842,14 +2275,19 @@ msgid ""
 ":guilabel:`Edit` menu, the :guilabel:`Layout` toolbar or the contextual menu"
 " any time you right-click in the print layout area:"
 msgstr ""
+"Durante el proceso de diseño, es posible revertir y restaurar los cambios. "
+"Esto se puede hacer con las herramientas de reversión y restauración "
+"disponibles en el menú :guilabel:`Editar`, la barra de herramientas "
+":guilabel:` Diseño` o el menú contextual cada vez que haga clic con el botón"
+" derecho en el área de diseño de impresión:"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:767
 msgid "|undo| :sup:`Revert last change`"
-msgstr ""
+msgstr "|undo| :sup:`Deshacer último cambio`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:768
 msgid "|redo| :sup:`Restore last change`"
-msgstr ""
+msgstr "|redo| :sup:`Rehacer último cambio`"
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:770
 msgid ""
@@ -1859,7 +2297,13 @@ msgid ""
 "once you do new action all the actions done after the selected one will be "
 "removed."
 msgstr ""
+"Esto también se puede hacer haciendo clic con el mouse dentro del panel "
+":guilabel:`deshacer historial` (ver figure_layout_). El panel Historial "
+"enumera las últimas acciones realizadas dentro del diseño de impresión. "
+"Simplemente seleccione el punto al que desea volver y, una vez que realice "
+"una nueva acción, se eliminarán todas las acciones realizadas después de la "
+"seleccionada."
 
 #: ../../docs/user_manual/print_composer/overview_composer.rst:781
 msgid "Undo History in the Print Layout"
-msgstr ""
+msgstr "Deshacer historial en la composición de impresión"

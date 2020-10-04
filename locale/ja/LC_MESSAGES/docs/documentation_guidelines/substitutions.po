@@ -6,6 +6,7 @@
 # Translators:
 # tomoyuki arai <tarai.3367@gmail.com>, 2020
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# mnamihdk, 2020
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-24 11:25+0200\n"
 "PO-Revision-Date: 2020-03-16 19:16+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: mnamihdk, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,7 +25,7 @@ msgstr ""
 
 #: ../../docs/documentation_guidelines/substitutions.rst:5
 msgid "Substitutions"
-msgstr "置き換え"
+msgstr "置換参照と定義"
 
 #: ../../docs/documentation_guidelines/substitutions.rst:11
 msgid "Usage"
@@ -39,13 +40,14 @@ msgid ""
 " application in the documentation there is a big chance that there is "
 "already a substitution that can/should be used."
 msgstr ""
-"QGISのマニュアルのアイコンをより簡単に使用するため、置換が `QGIS文書リポジトリ <https://github.com/qgis/QGIS-"
-"Documentation>`_ で `/source/substitutions.txt` "
-"ファイル中の各アイコンのために定義されています。これらの置換のいくつかを以下に示します。したがって、文書中でQGISアプリケーションからアイコンを使用したい場合、すでに使用できる/するべき代替がある大きな可能性があります。"
+"QGISマニュアルでアイコンを手軽に使えるように、アイコンの置換が `QGIS-Documentationリポジトリ "
+"<https://github.com/qgis/QGIS-Documentation>`_ の `/source/substitutions.txt`"
+" "
+"ファイルで定義されています。そこで定義されている置換のいくつかを以下に示します。このためドキュメント中でQGISアプリケーションのアイコンを使用したい場合は、使用できる、あるいは使用すべき置換がすでにある可能性が大きいです。"
 
 #: ../../docs/documentation_guidelines/substitutions.rst:20
 msgid "If no replacement exists:"
-msgstr "置換が存在しない場合："
+msgstr "置換が存在しない場合は、以下のようにして追加することができます。"
 
 #: ../../docs/documentation_guidelines/substitutions.rst:22
 msgid ""
@@ -56,6 +58,11 @@ msgid ""
 "format) under :file:`/static/common` folder. For convenience and update, "
 "it's advised to keep filename when possible."
 msgstr ""
+"目的のアイコン画像があるかどうか、ドキュメンテーションリポジトリの :file:`/static/common` "
+"フォルダ内を確認してください。画像がない場合は、 `QGISリポジトリ <https://github.com/qgis/QGIS>`_ "
+"からアイコン画像ファイルを探して（ :source:`images/themes/default` フォルダにあることが多いです）、 "
+":file:`/static/common` フォルダに ``.png`` "
+"フォーマットでコピーします。利便性と後の更新のことを考えると、ファイル名は可能な限り元のままにしておくことを勧めます。"
 
 #: ../../docs/documentation_guidelines/substitutions.rst:28
 msgid ""
@@ -63,31 +70,32 @@ msgid ""
 ":file:`/source/substitutions.txt` file following the example below. The "
 "replacement text should be in camelCase:"
 msgstr ""
-"以下の例以下の :file:`/source/substitutions.txt` "
-"ファイルで置換への参照を作成します。置換テキストはキャメルケースにする必要があります："
+"以下の例に従って、置換への参照を :file:`/source/substitutions.txt` "
+"ファイルに作成します。置換テキストはキャメルケースにする必要があります。"
 
 #: ../../docs/documentation_guidelines/substitutions.rst:36
 msgid ""
 "run the :file:`scripts/find_set_subst.py` script to update the substitution "
 "definitions in the rst files and include the new substitution(s)."
 msgstr ""
-":file:`scripts/find_set_subst.py` スクリプトを実行して最初のファイルの置換定義を更新し、新しい置換を含めてください。"
+":file:`scripts/find_set_subst.py` "
+"スクリプトを実行してrstファイル中の置換定義を更新し、新しい置換が含まれるようにしてください。"
 
 #: ../../docs/documentation_guidelines/substitutions.rst:38
 msgid ""
 "(optional) add the reference to the icon and its substitution to the list "
 "below."
-msgstr "（オプション）以下のリストのアイコン及びその置換への参照を追加します。"
+msgstr "（オプション）以下のリストに、アイコンおよびその置換への参照を追加します。"
 
 #: ../../docs/documentation_guidelines/substitutions.rst:41
 msgid "Common Substitutions"
-msgstr "共通の置き換え"
+msgstr "一般的な置換"
 
 #: ../../docs/documentation_guidelines/substitutions.rst:43
 msgid ""
 "Below are given some icons and their substitution to use when writing "
 "documentation. Can be used/found in many places in manuals."
-msgstr "文書を書くときに使用するいくつかのアイコンとその置換が下で与えられています。マニュアルの多くの場所で使用できます/見つかります。"
+msgstr "以下はドキュメントを書くときに使われるアイコンとその置換です。マニュアルの多くの場所で使用されているのを見ることができるでしょう。"
 
 #: ../../docs/documentation_guidelines/substitutions.rst:47
 msgid "Platform Icons"
@@ -2906,7 +2914,7 @@ msgstr "``|groupItems|``"
 
 #: ../../docs/documentation_guidelines/substitutions.rst:380
 msgid "Layer Properties"
-msgstr ""
+msgstr "レイヤプロパティ"
 
 #: ../../docs/documentation_guidelines/substitutions.rst:385
 msgid "|symbology|"
@@ -3542,12 +3550,12 @@ msgstr ""
 
 #: ../../docs/documentation_guidelines/substitutions.rst:442
 msgid "Various Core Plugins"
-msgstr ""
+msgstr "コア・プラグインのいろいろ"
 
 #: ../../docs/documentation_guidelines/substitutions.rst:444
 msgid ""
 "Standard provided with basic install, but not loaded with initial install"
-msgstr "基本インストールで標準で提供されます,しかし初期インストールではロードされません"
+msgstr "基本インストールで標準で提供されます。しかし初期状態ではロードはされていません。"
 
 #: ../../docs/documentation_guidelines/substitutions.rst:449
 msgid "|showPluginManager|"

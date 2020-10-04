@@ -466,12 +466,21 @@ msgid ""
 "Since there is already a file associated with the model, that file will be "
 "used for subsequent saves."
 msgstr ""
+"Verwenden Sie die Schaltfläche :guilabel:`Speichern`, um das aktuelle Modell"
+" zu speichern, und die Schaltfläche :guilabel:`Öffnen`, um ein zuvor "
+"gespeichertes Modell zu öffnen. Modelle werden mit der Erweiterung "
+":file:`.model3` gespeichert. Wenn das Modell bereits vom Modellierer-Fenster"
+" aus gespeichert wurde, werden Sie nicht zur Eingabe eines Dateinamens "
+"aufgefordert. Da mit dem Modell bereits eine Datei verknüpft ist, wird diese"
+" Datei für spätere Speicherungen verwendet."
 
 #: ../../docs/user_manual/processing/modeler.rst:235
 msgid ""
 "Before saving a model, you have to enter a name and a group for it in the "
 "text boxes in the upper part of the window."
 msgstr ""
+"Bevor Sie ein Modell speichern, müssen Sie in den Textfeldern im oberen Teil"
+" des Fensters einen Namen und eine Gruppe für das Modell eingeben."
 
 #: ../../docs/user_manual/processing/modeler.rst:238
 msgid ""
@@ -482,6 +491,13 @@ msgid ""
 " the models they contain. Since a model is itself an algorithm, it can be "
 "added to the toolbox just like any other algorithm."
 msgstr ""
+"Modelle, die im Ordner :file:`models` gespeichert sind (der Standardordner, "
+"wenn Sie zur Eingabe eines Dateinamens zum Speichern des Modells "
+"aufgefordert werden), erscheinen in der Toolbox in der entsprechenden "
+"Rubrik. Wenn die Toolbox aufgerufen wird, durchsucht sie den Ordner "
+":file:`models` nach Dateien mit der Erweiterung :file:`.model3` und lädt die"
+" darin enthaltenen Modelle. Da ein Modell selbst ein Algorithmus ist, kann "
+"es wie jeder andere Algorithmus zur Toolbox hinzugefügt werden."
 
 #: ../../docs/user_manual/processing/modeler.rst:247
 msgid ""
@@ -490,12 +506,19 @@ msgid ""
 "method won't be written as :file:`.model3` files on the disk but will be "
 "embedded in the project file."
 msgstr ""
+"Modelle können auch innerhalb der Projektdatei mit der Schaltfläche "
+"|addToProject|:sup:`Modell im Projekt speichern` gespeichert werden. "
+"Modelle, die mit dieser Methode gespeichert werden, werden nicht als "
+":file:``.model3` Dateien auf die Platte geschrieben, sondern in die "
+"Projektdatei eingebettet."
 
 #: ../../docs/user_manual/processing/modeler.rst:252
 msgid ""
 "Project models are available in the |qgsProjectFile|:guilabel:`Project "
 "models` menu of the toolbox."
 msgstr ""
+"Projektmodelle sind im Menü |qgsProjectFile|:guilabel:`Projektmodelle` der "
+"Toolbox verfügbar."
 
 #: ../../docs/user_manual/processing/modeler.rst:255
 msgid ""
@@ -512,22 +535,31 @@ msgid ""
 "modeler window. That means that you can incorporate a model as a part of a "
 "bigger model, just like other algorithms."
 msgstr ""
+"Modelle, die aus dem Ordner :file:`models` geladen wurden, erscheinen nicht "
+"nur in der Toolbox, sondern auch in der Algorithmenliste im Reiter "
+":guilabel:`Algorithms` des Modellierfensters. Das bedeutet, dass Sie ein "
+"Modell als Teil eines größeren Modells einbinden können, genau wie andere "
+"Algorithmen."
 
 #: ../../docs/user_manual/processing/modeler.rst:264
 msgid ""
 "Models will show up in the :ref:`Browser <browser_panel>` panel , and can be"
 " run from there."
 msgstr ""
+"Die Modelle werden im Panel :ref:`Browser <browser_panel>` angezeigt und "
+"können von dort aus gestartet werden."
 
 #: ../../docs/user_manual/processing/modeler.rst:268
 msgid "Exporting a model as an image, PDF or SVG"
-msgstr ""
+msgstr "Exportieren eines Modells als Bild, PDF oder SVG"
 
 #: ../../docs/user_manual/processing/modeler.rst:270
 msgid ""
 "A model can also be exported as an image, SVG or PDF (for illustration "
 "purposes)."
 msgstr ""
+"Ein Modell kann auch als Bild, SVG oder PDF (zur Darstellung) exportiert "
+"werden."
 
 #: ../../docs/user_manual/processing/modeler.rst:275
 msgid "Editing a model"
@@ -539,12 +571,17 @@ msgid ""
 "and the relationships between the algorithms and inputs that define the "
 "model."
 msgstr ""
+"Sie können das Modell, das Sie gerade erstellen, bearbeiten und dabei den "
+"Workflow und die Beziehungen zwischen den Algorithmen und Eingaben, die das "
+"Modell definieren, ändern."
 
 #: ../../docs/user_manual/processing/modeler.rst:281
 msgid ""
 "If you right-click on an algorithm in the canvas, you will see a context "
 "menu like the one shown next:"
 msgstr ""
+"Wenn Sie mit der rechten Maustaste auf einen Algorithmus in der Leinwand "
+"klicken, sehen Sie ein Kontextmenü wie das folgende:"
 
 #: ../../docs/user_manual/processing/modeler.rst:289
 msgid "Modeler Right Click"
@@ -578,6 +615,12 @@ msgid ""
 "values generated at a more advanced step in the workflow defined by the "
 "model will not be available if they cause circular dependencies."
 msgstr ""
+"Wenn Sie die Option :guilabel: `Bearbeiten` wählen, wird der Parameterdialog"
+" des Algorithmus angezeigt, so dass Sie die Eingaben und Parameterwerte "
+"ändern können. Es werden nicht alle im Modell verfügbaren Eingabeelemente "
+"als verfügbare Eingaben angezeigt. Layer oder Werte, die bei einem weiter "
+"entwickelten Schritt des Arbeitsablaufes erzeugt wurden, sind nicht "
+"verfügbar, wenn sie zirkuläre Abhängigkeiten verursachen."
 
 #: ../../docs/user_manual/processing/modeler.rst:315
 msgid ""
@@ -585,6 +628,9 @@ msgid ""
 "connections between the model elements will change in the modeler canvas "
 "accordingly."
 msgstr ""
+"Wählen Sie die neuen Werte aus und klicken Sie wie gewohnt auf die "
+"Schaltfläche :guilabel:`OK`. Die Verbindungen zwischen den Modellelementen "
+"ändern sich in der Modellierungsarbeitsfläche entsprechend."
 
 #: ../../docs/user_manual/processing/modeler.rst:319
 msgid ""
@@ -609,6 +655,9 @@ msgid ""
 "When right-clicking on an algorithm that is not active, you will see a "
 ":guilabel:`Activate` menu option that you can use to reactivate it."
 msgstr ""
+"Wenn Sie mit der rechten Maustaste auf einen Algorithmus klicken, der nicht "
+"aktiv ist, sehen Sie die Menüoption :guilabel: `Aktivieren`, mit der Sie den"
+" Algorithmus reaktivieren können."
 
 #: ../../docs/user_manual/processing/modeler.rst:337
 msgid "Editing model help files and meta-information"
@@ -620,10 +669,13 @@ msgid ""
 ":guilabel:`Edit Model Help` button, and a dialog like the one shown next "
 "will appear."
 msgstr ""
+"Sie können Ihre Modelle im Modellierer selbst dokumentieren. Klicken Sie "
+"einfach auf die Schaltfläche :guilabel:`Modellhilfe bearbeiten`, und es "
+"erscheint ein Dialog wie der folgende."
 
 #: ../../docs/user_manual/processing/modeler.rst:348
 msgid "Editing Help"
-msgstr ""
+msgstr "Hilfe bearbeiten"
 
 #: ../../docs/user_manual/processing/modeler.rst:350
 msgid ""
@@ -649,7 +701,7 @@ msgstr "Modell-Hilfe wird als Teil des Modells selbst gespeichert."
 
 #: ../../docs/user_manual/processing/modeler.rst:364
 msgid "Exporting a model as a Python script"
-msgstr ""
+msgstr "Exportieren eines Modells als Python Skript"
 
 #: ../../docs/user_manual/processing/modeler.rst:366
 msgid ""
@@ -658,12 +710,20 @@ msgid ""
 "Python. A quick way of creating such a Python script is to create a model "
 "and then to export is as a Python file."
 msgstr ""
+"Wie wir in einem späteren Kapitel sehen werden, können "
+"Verarbeitungsalgorithmen von der QGIS-Python-Konsole aufgerufen werden, und "
+"neue Verarbeitungsalgorithmen können mit Python erstellt werden. Ein "
+"schneller Weg, ein solches Python-Skript zu erstellen, ist die Erstellung "
+"eines Modells und der anschließende Export als Python-Datei."
 
 #: ../../docs/user_manual/processing/modeler.rst:372
 msgid ""
 "To do so, right click on the name of the model in the Processing Toolbox and"
 " choose :guilabel:`Export Model as Python Algorithm...`."
 msgstr ""
+"Klicken Sie dazu mit der rechten Maustaste auf den Namen des Modells in der "
+"Processing Toolbox und wählen Sie :guilabel:`Modell als Python-Algorithmus "
+"exportieren...`."
 
 #: ../../docs/user_manual/processing/modeler.rst:377
 msgid "About available algorithms"
@@ -679,3 +739,11 @@ msgid ""
 "it is not possible to use it within a model, and it will not appear in the "
 "list of algorithms that you can find in the modeler dialog."
 msgstr ""
+"Möglicherweise stellen Sie fest, dass einige Algorithmen, die über die "
+"Toolbox ausgeführt werden können, beim Entwurf eines Modells nicht in der "
+"Liste der verfügbaren Algorithmen erscheinen. Um in ein Modell aufgenommen "
+"zu werden, muss ein Algorithmus die richtige Semantik haben. Wenn ein "
+"Algorithmus nicht über eine so gut definierte Semantik verfügt (z. B. wenn "
+"die Anzahl der Ausgabelayer nicht im Voraus bekannt ist), kann er nicht in "
+"einem Modell verwendet werden, und er erscheint nicht in der Liste der "
+"Algorithmen, die Sie im Modellierungsdialog finden."

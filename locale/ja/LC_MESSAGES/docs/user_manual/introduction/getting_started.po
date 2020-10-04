@@ -5,7 +5,6 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
-# Kayama Yoichi <yoichi.kayama@gmail.com>, 2020
 # mnamihdk, 2020
 # 
 #, fuzzy
@@ -25,7 +24,7 @@ msgstr ""
 
 #: ../../docs/user_manual/introduction/getting_started.rst:8
 msgid "Getting Started"
-msgstr "はじめましょう"
+msgstr "始めましょう"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:15
 msgid ""
@@ -75,6 +74,9 @@ msgid ""
 "called :file:`INSTALL`. You can also find them online at "
 "https://github.com/qgis/QGIS/blob/master/INSTALL.md."
 msgstr ""
+"QGISをソースからインストールする場合は、QGISのソースコードに同梱されている :file:`INSTALL` "
+"ファイルに記載の指示に従ってください。同じ内容は https://github.com/qgis/QGIS/blob/master/INSTALL.md"
+" で読むこともできます。"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:46
 msgid ""
@@ -112,7 +114,7 @@ msgid ""
 "This user guide contains examples based on the QGIS sample dataset (also "
 "called the ``Alaska dataset``)."
 msgstr ""
-"このユーザガイドには QGISサンプルデータセット ( ``Alaska dataset`` ともよばれています) に基づく例が含まれています."
+"このユーザガイドには QGISサンプルデータセット ( ``Alaska dataset`` ともよばれています) に基づく例が含まれています。"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:72
 msgid ""
@@ -123,14 +125,14 @@ msgid ""
 "not select the checkbox to install the sample dataset during the initial "
 "QGIS installation, you may do one of the following:"
 msgstr ""
-"|win|  Windows インストーラにはQGIS サンプルデータセットをインストールするオプションがあります.それがチェックされているとデータは "
+"|win|  Windows インストーラにはQGISサンプルデータセットをインストールするオプションがあります。それがチェックされているとデータは "
 ":file:`Documents` フォルダにダウンロードされ :file:`GIS Database` "
-"というフォルダに置かれます。Windowsエキスプローラを利用すると利用しやすい場所にこのフォルダを移動できます。 "
-"もしQGISの初期インストールでサンプルデータインストールチェックボックスを選択していない場合は以下の作業のうちのどれかを行うことができます:"
+"というフォルダに置かれます。Windowsエクスプローラを使ってこのフォルダを利用しやすい場所に移動できます。 "
+"QGISの初期インストールでサンプルデータインストールチェックボックスを選択しなかった場合は、以下のような手段でサンプルデータの入手が可能です。"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:79
 msgid "Use GIS data that you already have"
-msgstr "既にあなたがお持ちのGISデータを利用する;"
+msgstr "既に手元にあるGISデータを利用する"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:80
 msgid ""
@@ -138,6 +140,8 @@ msgid ""
 "Data/archive/master.zip and unzip the archive on any convenient location on "
 "your system."
 msgstr ""
+"サンプルデータのアーカイブを https://github.com/qgis/QGIS-Sample-Data/archive/master.zip "
+"からダウンロードし、コンピュータの好きな場所に解凍する"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:83
 msgid ""
@@ -152,6 +156,10 @@ msgid ""
 "it from https://github.com/qgis/QGIS-Sample-Data/archive/master.zip and "
 "unzip the archive on any convenient location on your system."
 msgstr ""
+"|nix| |osx| "
+"GNU/LinuxやmacOSのためのrpmやdeb、dmgを使ったデータセットのインストールパッケージは提供されていません。サンプルデータセットを使用するには、"
+" https://github.com/qgis/QGIS-Sample-Data/archive/master.zip "
+"からアーカイブをダウンロードして、コンピュータの好きな場所に解凍してください。"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:91
 msgid ""
@@ -160,8 +168,9 @@ msgid ""
 " projection for the QGIS sample datasets is Alaska Albers Equal Area with "
 "units feet. The EPSG code is 2964."
 msgstr ""
-"アラスカデータセットにはユーザーガイドサンプルとスクリーンショットで利用されているすべてのGISデータが含まれています。そこには小さなGRASSデータベースも含まれています。QGISサンプルデータセットの投影法はフィート単位のAlaska"
-" Albers Equal Area図法です。それのEPSGコードは2964です。"
+"Alaska "
+"datasetには、このユーザーガイドのサンプルとスクリーンショットで使用されているすべてのGISデータが含まれています。また、小さなGRASSデータベースも含まれています。QGISサンプルデータセットの投影法は、フィートを単位とするAlaska"
+" Albers Equal Area図法です。EPSGコードは2964です。"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:119
 msgid ""
@@ -181,57 +190,58 @@ msgstr "QGISの起動と終了"
 msgid ""
 "QGIS can be started like any other application on your computer. This means "
 "that you can launch QGIS by:"
-msgstr "あなたのコンピュータの他のアプリケーションと同じような方法でQGISは起動できます.次のような方法でQGISを起動できます:"
+msgstr "QGISは、他のアプリケーションと同じように、次のような方法で起動することができます。"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:132
 msgid ""
 "using |nix| the Applications menu, |win| the Start menu, or |osx| the Dock"
-msgstr " |nix| アプリケーションメニュー, |win| スタートメニュー,  |osx| Dock を使って起動できます"
+msgstr " |nix| ではアプリケーションメニューを、 |win| ではスタートメニューを、 |osx| では Dock を使って起動する"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:133
 msgid ""
 "double clicking the icon in your Applications folder or desktop shortcut"
-msgstr "アプリケーションフォルダまたはデスクトップショートカットのアイコンをダブルクリック"
+msgstr "アプリケーションフォルダまたはデスクトップショートカットのアイコンをダブルクリックする"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:134
 msgid ""
 "double clicking an existing QGIS project file (with :file:`.qgz` or "
 ":file:`.qgs` extension). Note that this will also open the project."
 msgstr ""
-"既存のQGIS プロジェクトファイル( :file:`.qgz` または :file:`.qgs` という拡張子)をダブルクリックして下さい. 注 "
-"この操作ではそのプロジェクトも開かれます."
+"既存のQGIS プロジェクトファイル (拡張子は :file:`.qgz` または :file:`.qgs` ) "
+"をダブルクリックする（この操作ではプロジェクトも同時に開かれることに注意してください）"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:136
 msgid ""
 "typing ``qgis`` in a command prompt (assuming that QGIS is added to your "
 "PATH or you are in its installation folder)"
 msgstr ""
-"コマンドプロンプトで ``qgis`` とタイプして下さい ( QGIS のインストール場所が PATH "
-"に追加されているかインストールされているフォルダになたがいることが前提です)"
+"コマンドプロンプトで ``qgis`` とタイプする（QGIS のインストール場所が PATH "
+"に追加されているか、インストールフォルダに移動していることが前提となります）"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:139
 msgid "To stop QGIS, use:"
-msgstr "QGISを終了させる場合は以下の方法を使って下さい:"
+msgstr "QGISを終了させる場合は以下の方法を使用します。"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:141
 msgid ""
 "|nix| |win| the menu option :menuselection:`Project --> Exit QGIS` or use "
 "the shortcut :kbd:`Ctrl+Q`"
 msgstr ""
-"|nix| |win| メニューオプション :menuselection:`プロジェクト --> QGISを終了` またはショートカット "
-":kbd:`Ctrlキー+Q` を使用"
+"|nix| |win| メニューから :menuselection:`プロジェクト --> QGISを終了` を選択する、またはショートカット "
+":kbd:`Ctrlキー+Q` を使用する"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:143
 msgid ""
 "|osx| :menuselection:`QGIS --> Quit QGIS`, or use the shortcut :kbd:`Cmd+Q`"
 msgstr ""
-"|osx| :menuselection:`QGIS --> QGISを終了` 、またはショートカット :kbd:`Cmd+Q` を使用します"
+"|osx| メニューから :menuselection:`QGIS --> QGISを終了` を選択する、またはショートカット :kbd:`Cmd+Q`"
+" を使用する"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:144
 msgid ""
 "or use the red cross at the top-right corner of the main interface of the "
 "application."
-msgstr "またはアプリケーションメインインターフェースで上右の角にある赤いバツ印を使って下さい."
+msgstr "アプリケーションのメインインターフェースの右上角にある赤いバツ印を使う"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:150
 msgid "Sample Session: Loading raster and vector layers"
@@ -244,34 +254,34 @@ msgid ""
 "first sample session. In this example, we will visualize a raster and a "
 "vector layer. We will use:"
 msgstr ""
-"さて今では :ref:`QGISをインストール <label_installation>` されていて :ref:`サンプルデータセット "
+"さて、 :ref:`QGISをインストール <label_installation>` して :ref:`サンプルデータセット "
 "<label_sampledata>` "
-"が利用できるようになっていますので、最初のサンプルセッションを例示します。この例の中ではラスタおよびベクタレイヤを視覚化します。以下を使用します："
+"が利用できるようになりましたので、初めてののサンプルセッションを実行してみましょう。この例ではラスタおよびベクタレイヤを視覚化します。以下のデータを使用します。"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:157
 msgid ""
 "the :file:`landcover` raster layer "
 "(:file:`qgis_sample_data/raster/landcover.img`)"
 msgstr ""
-":file:`landcover` ラスターレイヤー（ :file:`qgis_sample_data/raster/landcover.img` ）"
+":file:`landcover` ラスタレイヤ ( :file:`qgis_sample_data/raster/landcover.img` )"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:158
 msgid ""
 "and the :file:`lakes` vector layer (:file:`qgis_sample_data/gml/lakes.gml`)"
-msgstr "そして :file:`lakes` ベクタレイヤ (:file:`qgis_sample_data/gml/lakes.gml`)"
+msgstr ":file:`lakes` ベクタレイヤ (:file:`qgis_sample_data/gml/lakes.gml`)"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:160
 msgid ""
 "Where :file:`qgis_sample_data` represents the path to the unzipped dataset."
-msgstr " :file:`qgis_sample_data` が解凍されたデータセットのパスはどこに表示されるでしょうか？."
+msgstr ":file:`qgis_sample_data` はデータセットを解凍したフォルダのパスを意味します。"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:162
 msgid "Start QGIS as seen in :ref:`label_startingqgis`."
-msgstr " :ref:`label_startingqgis` で説明されている方法でQGISを起動します."
+msgstr " :ref:`label_startingqgis` で説明されている方法でQGISを起動します。"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:163
 msgid "To load the files in QGIS:"
-msgstr "QGIS にファイルをロードします:"
+msgstr "QGIS にファイルをロードします。"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:165
 msgid ""
@@ -283,7 +293,7 @@ msgstr ""
 
 #: ../../docs/user_manual/introduction/getting_started.rst:167
 msgid "Browse to the folder :file:`qgis_sample_data/raster/`"
-msgstr " :file:`qgis_sample_data/raster/` フォルダを閲覧します"
+msgstr " :file:`qgis_sample_data/raster/` フォルダに移動します。"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:168
 msgid ""
@@ -292,19 +302,19 @@ msgid ""
 "window remains open."
 msgstr ""
 "ERDAS IMGファイル :file:`landcover.img` "
-"を選択してダブルクリックします。データソースマネージャウィンドウを開いたまま、ランドカバーレイヤがバックグラウンドで追加されます。"
+"を選択してダブルクリックします。データソースマネージャウィンドウを開いたまま、landcoverレイヤがバックグラウンドで追加されます。"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:177
 msgid "Adding data to a new project in QGIS"
-msgstr ""
+msgstr "新しいQGISプロジェクトにデータを追加する"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:179
 msgid ""
 "To load the lakes data, browse to the folder :file:`qgis_sample_data/gml/`, "
 "and double-click the :file:`lakes.gml` file to open it."
 msgstr ""
-"lakes データをロードするためには :file:`qgis_sample_data/gml/` フォルダを開き,  "
-":file:`lakes.gml` をダブルクリックして開いて下さい."
+"lakes データをロードするには、 :file:`qgis_sample_data/gml/` フォルダに移動し、 :file:`lakes.gml`"
+" をダブルクリックして開きます。"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:181
 msgid ""
@@ -312,58 +322,60 @@ msgid ""
 ":guilabel:`Filter` menu, type ``2964``, filtering the list of Coordinate "
 "Reference Systems below."
 msgstr ""
-":guilabel:`座標参照系の選択` ダイアログが開きます. In the :guilabel:`フィルター` メニューで, ``2964`` "
-"と打ち込んでください, フィルターされた座標参照系のリストが下に表示されます."
+":guilabel:`座標参照系の選択` ダイアログが開きます。 :guilabel:`フィルター` メニューで ``2964`` "
+"と打ち込んでください。フィルタされた座標参照系のリストが下に表示されます。"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:190
 msgid "Select the Coordinate Reference System of data"
-msgstr ""
+msgstr "データの座標参照系を選択する"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:192
 msgid "Select the :guilabel:`NAD27 / Alaska Alberts` entry"
-msgstr " :guilabel:`NAD27 / Alaska Alberts` エントリを選択して下さい"
+msgstr " :guilabel:`NAD27 / Alaska Alberts` を選択します。"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:193
 msgid "Click :guilabel:`OK`"
-msgstr ":guilabel:`OK` をクリックします"
+msgstr ":guilabel:`OK` をクリックします。"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:194
 msgid "Close the Data Source Manager window"
-msgstr "データソースマネージャウィンドウを閉じて下さい"
+msgstr "データソースマネージャウィンドウを閉じます。"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:196
 msgid ""
 "You now have the two layers available in your project in some random "
 "colours. Let's do some customization on the lakes layer."
-msgstr "これで、プロジェクトの中で2つのレイヤをランダムな色で使用できるようになりました。 lakesレイヤーでカスタマイズを行いましょう。"
+msgstr ""
+"これでプロジェクトで2つのレイヤを使用できるようになりました。レイヤはQGISによってランダムな配色がされています。では、 "
+"lakesレイヤーをカスタマイズしてみましょう。"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:199
 msgid ""
 "Select the |zoomIn| :sup:`Zoom In` tool on the :guilabel:`Navigation` "
 "toolbar"
-msgstr "|zoomIn| :sup:`Navigation` ツールバーの :guilabel:`Zoom In` ツールを選択します"
+msgstr ":guilabel:`ナビゲーション` ツールバーで |zoomIn| :sup:`拡大` ツールを選択します。"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:200
 msgid "Zoom to an area with some lakes"
-msgstr "湖がある場所にズームします"
+msgstr "湖がある場所にズームします。"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:201
 msgid ""
 "Double-click the :file:`lakes` layer in the map legend to open the "
 ":guilabel:`Properties` dialog"
-msgstr " :file:`lakes` を地図の凡例の場所でクリックして :guilabel:`プロパティ` ダイアログを開きます"
+msgstr " :file:`lakes` レイヤをレイヤパネルでダブルクリックして :guilabel:`レイヤプロパティ` ダイアログを開きます。"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:203
 msgid "To change the lakes color:"
-msgstr "湖の色を変えてみます:"
+msgstr "湖の色を変えてみます。"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:205
 msgid "Click on the |symbology| :guilabel:`Symbology` tab"
-msgstr ""
+msgstr "|symbology| :guilabel:`シンボロジ` タブをクリックします。"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:206
 msgid "Select blue as fill color."
-msgstr "塗りつぶし色として青を選択しましょう."
+msgstr "塗りつぶし色として青を選択します。"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:213
 msgid "Selecting Lakes color"
@@ -372,126 +384,124 @@ msgstr "湖の色を選択する"
 #: ../../docs/user_manual/introduction/getting_started.rst:215
 msgid ""
 "Press :guilabel:`OK`. Lakes are now displayed in blue in the map canvas."
-msgstr ":guilabel:`OK` を押して下さい. 地図キャンバスで湖が青で表示されます."
+msgstr ":guilabel:`OK` を押します。地図キャンバスで湖が青で表示されます。"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:216
 msgid "To display the name of the lakes:"
-msgstr "湖の名前を表示します:"
+msgstr "湖の名前を表示します。"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:218
 msgid "Reopen the :file:`lakes` layer :guilabel:`Properties` dialog"
-msgstr ":file:`lakes` レイヤ :guilabel:`プロパティ` ダイアログを再度開きます"
+msgstr ":file:`lakes` レイヤで :guilabel:`レイヤプロパティ` ダイアログを再度開きます。"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:219
 msgid "Click on the |labeling| :guilabel:`Labels` tab"
-msgstr " |labeling| :guilabel:`Labels` タブをクリックします"
+msgstr " |labeling| :guilabel:`ラベル` タブをクリックします。"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:220
 msgid ""
 "Select :guilabel:`Single labels` in the drop-down menu to enable labeling."
-msgstr "ドロップダウンメニューで :guilabel:`単一定義(single )` を選択するとラベリングが有効になります."
+msgstr "ドロップダウンメニューで :guilabel:`単一定義(single )` を選択するとラベリングが有効になります。"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:221
 msgid "From the :guilabel:`Label with` list, choose the ``NAMES`` field."
-msgstr ":guilabel:`Label with` リストで, ``NAMES`` フィールドを選んでください."
+msgstr ":guilabel:`値` リストから ``NAMES`` フィールドを選びます。"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:228
 msgid "Showing Lakes names"
-msgstr ""
+msgstr "湖の名前を表示する"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:230
 msgid "Press :guilabel:`Apply`. Names will now load over the boundaries."
-msgstr ":guilabel:`Apply` を押して下さい. 名前が境界線の上に表示されます."
+msgstr ":guilabel:`Apply` を押します。すると名前が湖の領域の上に表示されます。"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:231
 msgid ""
 "You can improve readability of the labels by adding a white buffer around "
 "them:"
-msgstr "ラベルに縁取り(バッファ)を加えて読みやすくすることができます:"
+msgstr "ラベルに白い縁取り(バッファ)を加えて読みやすくすることができます。"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:233
 msgid "Click the :guilabel:`Buffer` tab in the list on the left"
-msgstr "左のリストで :guilabel:`バッファ` タブをクリックして下さい"
+msgstr "左のリストで :guilabel:`バッファ` タブをクリックします。"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:234
 msgid "Check |checkbox| :guilabel:`Draw text buffer`"
-msgstr "|checkbox| :guilabel:`テキストバッファを描画` をチェックして下さい"
+msgstr "|checkbox| :guilabel:`テキストバッファを描画` にチェックを入れます。"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:235
 msgid "Choose ``3`` as buffer size"
-msgstr "バッファサイズとして ``3`` を選択して下さい"
+msgstr "サイズを ``3`` にします。"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:236
 msgid "Click :guilabel:`Apply`"
-msgstr ""
+msgstr ":guilabel:`Apply` をクリックします。"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:237
 msgid "Check if the result looks good, and update the value if needed."
-msgstr "できばえがいいかどうかチェックしましょう, 必要があれば値を変えてみましょう."
+msgstr "出来栄えを確認して必要なら値を変更します。"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:238
 msgid ""
 "Finally click :guilabel:`OK` to close the :guilabel:`Layer Properties` "
 "dialog and apply the changes."
-msgstr "最後に :guilabel:`OK` をクリックして :guilabel:`レイヤプロパティ` ダイアログを閉じて変更を適用して下さい."
+msgstr "最後に :guilabel:`OK` をクリックして :guilabel:`レイヤプロパティ` ダイアログを閉じ、変更を適用します。"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:241
 msgid ""
 "Let's now add some decorations in order to shape the map and export it out "
 "of QGIS:"
-msgstr "地図にいくつかの整飾を加えてからQGISの外にエキスポートしてみましょう:"
+msgstr "今度は、地図の見栄えを整えるためにいくつか整飾を加えて、QGISからエクスポートしてみましょう。"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:244
 msgid "Select :menuselection:`View --> Decorations --> Scale Bar` menu"
-msgstr " :menuselection:`ビュー --> 地図整飾 --> スケールバー`  メニューを選択して下さい"
+msgstr "メニューから :menuselection:`ビュー --> 地図整飾 --> スケールバー`  を選択します。"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:245
 msgid ""
 "In the dialog that opens, check |checkbox| :guilabel:`Enable Scale Bar` "
 "option"
-msgstr "開いたダイアログの中で |checkbox| :guilabel:`スケールバーを有効にする` オプションをチェックして下さい"
+msgstr "開いたダイアログで、 |checkbox| :guilabel:`スケールバーを有効にする` にチェックを入れます。"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:246
 msgid "Customize the options of the dialog as you want"
-msgstr "お好みにあわせてダイアログにあるオプションを設定して下さい"
+msgstr "好みにあわせてダイアログのオプションを設定します。"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:247
 msgid "Press :guilabel:`Apply`"
-msgstr ":guilabel:`適用` を押します。"
+msgstr ":guilabel:`Apply` を押します。"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:248
 msgid ""
 "Likewise, from the decorations menu, add more items (north arrow, "
 "copyright...) to the map canvas with custom properties."
-msgstr ""
-"同じように地図整飾メニューではさらにいくつかのアイテムを (方位記号, 著作権ラベル...)　"
-"いくつかのプロパティを指定して地図キャンバスに追加できます."
+msgstr "同様に地図整飾メニューから、さらに方位記号、著作権ラベルなどのアイテムを、属性を調整して地図キャンバスに追加できます。"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:250
 msgid ""
 "Click :menuselection:`Project --> Import/Export -->` |saveMapAsImage| "
 ":menuselection:`Export Map to Image...`"
 msgstr ""
-" :menuselection:`プロジェクト --> インポートとエキスポーと -->` |saveMapAsImage| "
-":menuselection:`地図を画像にエキスポート...` をクリックして下さい"
+" メニューから :menuselection:`プロジェクト --> インポートとエクスポート -->` |saveMapAsImage| "
+":menuselection:`地図を画像にエキスポート...` を選びます。"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:252
 msgid "Press :guilabel:`Save` in the opened dialog"
-msgstr "開いたダイアログで :guilabel:`保存` を押して下さい"
+msgstr "開いたダイアログで :guilabel:`Save` を押します。"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:253
 msgid ""
 "Select a file location, a format and confirm by pressing :guilabel:`Save` "
 "again."
-msgstr "ファイルの保存場所を選択して形式を確認した上で :guilabel:`保存` を再度押して下さい."
+msgstr "ファイルの保存場所とフォーマットを選択し、再度 :guilabel:`保存` を押して確定します。"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:255
 msgid ""
 "Press :menuselection:`Project -->` |fileSave| :menuselection:`Save...` to "
 "store your changes as a :file:`.qgz` project file."
 msgstr ""
-"変更を :file:`.qgz`  プロジェクトファイルに保存する場合は :menuselection:`プロジェクト -->` |fileSave| "
-":menuselection:`保存...` を押して下さい."
+"変更を :file:`.qgz` プロジェクトファイルに保存する場合は、 :menuselection:`プロジェクト -->` |fileSave| "
+":menuselection:`保存...` を選択します。"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:258
 msgid ""
@@ -500,8 +510,8 @@ msgid ""
 " in other softwares. Let's move on to learn more about the available "
 "functionality, features and settings, and how to use them."
 msgstr ""
-"これでおしまい！ "
-"QGISでラスタレイヤとベクタレイヤを視覚化し、それらを構成して、他のソフトウェアで使用できる画像形式で地図を作成するのがどれほど簡単かわかったでしょう。次には、使用可能な機能、機能と設定、およびそれらの使用方法について詳しく説明します。"
+"どうでしたか？　"
+"QGISでラスタ・ベクタレイヤを視覚化し設定し、他のソフトウェアで使用できる画像フォーマットで地図を作成するのがどれほど簡単か、わかったと思います。引き続きQGISで使える機能や特徴、設定、およびその使用方法についてさらに学んでいきましょう。"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:264
 msgid ""
@@ -509,4 +519,4 @@ msgid ""
 ":ref:`Training manual <QGIS-training-manual-index-reference>`."
 msgstr ""
 "QGISをステップバイステップの演習で勉強したい場合は :ref:`トレーニングマニュアル <QGIS-training-manual-index-"
-"reference>` を参照して下さい."
+"reference>` を参照して下さい。"

@@ -107,7 +107,7 @@ msgstr ""
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:119
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:160
 msgid "''"
-msgstr ""
+msgstr "''"
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:61
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:80
@@ -123,7 +123,7 @@ msgstr ""
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:161
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:180
 msgid "All"
-msgstr ""
+msgstr "모두"
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:63
 msgid "QUERY_STRING"
@@ -205,6 +205,8 @@ msgid ""
 "Activate logging to stderr. This variable  has no effect when "
 "``QGIS_SERVER_LOG_FILE`` is set."
 msgstr ""
+"'stderr' 로의 로그 작업을 활성화합니다. ``QGIS_SERVER_LOG_FILE`` 을 설정한 경우 이 환경 변수는 아무 영향도"
+" 주지 못 합니다."
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:106
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:135
@@ -223,7 +225,7 @@ msgstr "``1`` 또는 ``true`` (대소문자 구분 안 함)"
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:169
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:179
 msgid "false"
-msgstr ""
+msgstr "false"
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:111
 msgid "MAX_CACHE_LAYERS"
@@ -235,7 +237,7 @@ msgstr "캐시되는 레이어의 최대 개수를 지정합니다. (기본값�
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:113
 msgid "100"
-msgstr ""
+msgstr "100"
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:116
 msgid "QGIS_PLUGINPATH"
@@ -272,7 +274,7 @@ msgstr "``2`` 또는 ``CRITICAL``:  치명적인 오류만 로그에 기록합�
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:128
 msgid "0"
-msgstr ""
+msgstr "0"
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:131
 msgid "QGIS_SERVER_PARALLEL_RENDERING"
@@ -290,7 +292,7 @@ msgstr ""
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:170
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:186
 msgid "WMS"
-msgstr ""
+msgstr "WMS"
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:140
 msgid "QGIS_SERVER_MAX_THREADS"
@@ -301,11 +303,12 @@ msgid ""
 "Number of threads to use when parallel rendering is activated. If value is "
 "``-1`` it uses the number of processor cores."
 msgstr ""
+"병렬 렌더링을 활성화한 경우 사용할 스레드의 개수를 지정합니다. 값이 ``-1`` 인 경우 프로세서 코어의 개수를 사용합니다."
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:143
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:185
 msgid "-1"
-msgstr ""
+msgstr "-1"
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:146
 msgid "QGIS_SERVER_CACHE_DIRECTORY"
@@ -313,11 +316,11 @@ msgstr "QGIS_SERVER_CACHE_DIRECTORY"
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:147
 msgid "Specifies the network cache directory on the filesystem."
-msgstr ""
+msgstr "파일 시스템 상에 네트워크 캐시 디렉터리를 지정합니다."
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:148
 msgid "``cache`` in profile directory"
-msgstr ""
+msgstr "``cache`` 가 프로파일 디렉터리에 있음"
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:151
 msgid "QGIS_SERVER_CACHE_SIZE"
@@ -325,11 +328,11 @@ msgstr "QGIS_SERVER_CACHE_SIZE"
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:152
 msgid "Sets the network cache size in MB."
-msgstr ""
+msgstr "네트워크 캐시의 용량을 MB 단위로 설정합니다."
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:153
 msgid "50 MB"
-msgstr ""
+msgstr "50 MB"
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:156
 msgid "QGIS_SERVER_OVERRIDE_SYSTEM_LOCALE"
@@ -382,7 +385,7 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:182
 msgid "QGIS_SERVER_WMS_MAX_HEIGHT / QGIS_SERVER_WMS_MAX_WIDTH"
-msgstr ""
+msgstr "QGIS_SERVER_WMS_MAX_HEIGHT / QGIS_SERVER_WMS_MAX_WIDTH"
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:183
 msgid ""
@@ -390,16 +393,18 @@ msgid ""
 "and the project one is used. If the value is ``-1``, it means that there is "
 "no maximum set."
 msgstr ""
+"WMS 요청에 대한 최대 높이/너비입니다. 이 값과 프로젝트 값 사이에 가장 보수적인 값을 사용합니다. 값이 ``-1`` 인 경우, "
+"설정된 최대값이 없다는 뜻입니다."
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:188
 msgid "QGIS_SERVER_API_RESOURCES_DIRECTORY"
-msgstr ""
+msgstr "QGIS_SERVER_API_RESOURCES_DIRECTORY"
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:189
 msgid ""
 "Base directory for all OGC API (such as OAPIF/WFS3) static resources (HTML "
 "templates, CSS, JS, ...)"
-msgstr ""
+msgstr "(OAPIF/WFS3 같은) OGC API의 모든 정적 리소스(HTML 템플릿, CSS, JS 등등) 용 기본 디렉터리"
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:191
 msgid "depends on packaging"
@@ -408,15 +413,15 @@ msgstr "패키지에 따라 다름"
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:192
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:197
 msgid "WFS"
-msgstr ""
+msgstr "WFS"
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:194
 msgid "QGIS_SERVER_API_WFS3_MAX_LIMIT"
-msgstr ""
+msgstr "QGIS_SERVER_API_WFS3_MAX_LIMIT"
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:195
 msgid "Maximum value for ``limit`` in a features request."
-msgstr ""
+msgstr "피처 요청에서 ``limit`` 의 최대값입니다."
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:196
 msgid "10000"
@@ -472,6 +477,9 @@ msgid ""
 " Temperature” and be requested using the abbreviated **Name** “ATMAX”. User "
 "can already set title for layers, groups and project."
 msgstr ""
+"예를 들어, 어느 데이터셋이 \"최대 기온(Maximum Atmospheric Temperature)\"이란 서술적 제목을 보유한 동시에"
+" **약칭** \"ATMAX\"를 사용한 요청을 받을 수도 있습니다. 사용자는 이미 레이어, 그룹 및 프로젝트를 위한 제목을 설정할 수 "
+"있습니다."
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:258
 msgid ""

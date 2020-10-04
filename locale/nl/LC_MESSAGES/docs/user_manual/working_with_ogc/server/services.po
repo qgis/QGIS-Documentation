@@ -78,10 +78,16 @@ msgid ""
 "to render as well as the image format to generate. Basic support is also "
 "available for **Styled Layer Descriptor (SLD)**."
 msgstr ""
+"De WMS standaarden **1.1.0** en **1.3.0**, geïmplementeerd in QGIS Server, "
+"verschaffen een interface voor HTTP voor het verzoeken van kaart- of "
+"legenda-afbeeldingen gegenereerd uit een project van QGIS. Een typisch WMS-"
+"verzoek definieert het te gebruiken project van QGIS, de te renderen lagen "
+"als ook de te genereren indeling van de afbeelding. Basisondersteuning is "
+"ook beschikbaar voor de standaard **Styled Layer Descriptor (SLD)**."
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:35
 msgid "Specifications:"
-msgstr ""
+msgstr "Specificaties:"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:37
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1393
@@ -97,12 +103,16 @@ msgid ""
 "`WMS 1.3.0 "
 "<https://portal.opengeospatial.org/files/?artifact_id=14416&format=pdf>`_"
 msgstr ""
+"`WMS 1.3.0 "
+"<https://portal.opengeospatial.org/files/?artifact_id=14416&format=pdf>`_"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:39
 msgid ""
 "`SLD 1.1.0 WMS profile "
 "<http://portal.opengeospatial.org/files/?artifact_id=22364&format=pdf>`_"
 msgstr ""
+"`SLD 1.1.0 WMS profile "
+"<http://portal.opengeospatial.org/files/?artifact_id=22364&format=pdf>`_"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:41
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:980
@@ -504,19 +514,19 @@ msgstr "Transparante achtergrond"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
 msgid "SLD"
-msgstr ""
+msgstr "SLD"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
 msgid "URL of an SLD to be used for styling"
-msgstr ""
+msgstr "URL of een SLD om te worden gebruikt voor de opmaak"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
 msgid "SLD_BODY"
-msgstr ""
+msgstr "SLD_BODY"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
 msgid "In-line SLD (XML) to be used for styling"
-msgstr ""
+msgstr "Inregelige SLD (XML) om te worden gebruikt voor de opmaak"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:89
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:564
@@ -797,9 +807,9 @@ msgid ""
 " defined, then it's used by default instead of the layer's name:"
 msgstr ""
 "De verkorte naam van een laag kan worden geconfigureerd via "
-":menuselection:`Eigenschappen --> Metadata` in het menu Laag. Als de "
-"verkorte naam is gedefinieerd, dan wordt die standaard gebruikt in plaats "
-"van de naam van de laag:"
+":menuselection:`Eigenschappen --> Metadata` in het menu Laag. Als de korte "
+"naam is gedefinieerd, dan wordt die standaard gebruikt in plaats van de naam"
+" van de laag:"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:201
 msgid ""
@@ -1472,6 +1482,11 @@ msgid ""
 "response` option in the QGIS project. See :ref:`Configure your project "
 "<Creatingwmsfromproject>`."
 msgstr ""
+"Deze parameter specificeert of geometrieën moeten worden toegevoegd aan de "
+"uitvoer. U moet eerst de optie :guilabel:`Geometrie aan feature response "
+"toevoegen` in het project van QGIS inschakelen om deze mogelijkheid te "
+"kunnen gebruiken. Bekijk :ref:`Configureer uw project "
+"<Creatingwmsfromproject>`."
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:724
 msgid ""
@@ -1807,19 +1822,23 @@ msgid ""
 "**LAYERTITLE** ``FALSE`` to get only the legend graphics without the layer "
 "title"
 msgstr ""
+"**LAYERTITLE** ``FALSE`` om alleen de afbeeldingen van de Legenda te "
+"verkrijgen, zonder de titel van de laag"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:926
 msgid "**RULELABEL**:"
-msgstr ""
+msgstr "**RULELABEL**:"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:928
 msgid "``FALSE`` legend graphics without item labels"
-msgstr ""
+msgstr "``FALSE`` afbeeldingen van de Legenda, zonder labels voor de items"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:929
 msgid ""
 "``AUTO`` hide item label for layers with :guilabel:`Single symbol` rendering"
 msgstr ""
+"``AUTO`` labels voor items verbergen voor lagen met rendering "
+":guilabel:`Enkel symbool`"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:932
 msgid ""
@@ -2334,6 +2353,8 @@ msgid ""
 "This parameter defines the CRS to use when computing the underlying pyramid."
 " Format: ``EPSG:XXXX``."
 msgstr ""
+"Deze parameter definieert het te gebruiken CRS bij het berekenen van de "
+"onderliggende piramide. Indeling: ``EPSG:XXXX``."
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1354
 msgid "This parameter allows to define the matrix to use for the output tile."
@@ -2889,6 +2910,9 @@ msgid ""
 "``QGIS_SERVER_API_WFS3_MAX_LIMIT`` server configuration setting (see: :ref"
 ":`qgis-server-envvar`)."
 msgstr ""
+"De maximale te accepteren waarde voor ``limit`` kan worden geconfigureerd "
+"met de instelling voor de configuratie van de server "
+"``QGIS_SERVER_API_WFS3_MAX_LIMIT`` (zie: :ref:`qgis-server-envvar`)."
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1780
 msgid "Feature filtering"

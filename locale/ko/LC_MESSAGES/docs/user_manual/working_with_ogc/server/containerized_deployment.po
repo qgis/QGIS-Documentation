@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-24 11:25+0200\n"
 "PO-Revision-Date: 2020-09-24 10:26+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2020\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,13 +24,15 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:3
 msgid "Containerized deployment"
-msgstr ""
+msgstr "컨테이너화 응용 프로그램 배포"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:11
 msgid ""
 "There are many ways to use containerized application, from the most simple "
 "(simple Docker images) to sophisticated (Kubernetes and so on)."
 msgstr ""
+"컨테이너화된 응용 프로그램을 사용할 수 있는 많은 방법이 있습니다. 가장 단순한 방법(단순 도커(Doker) 이미지)부터 복잡한 "
+"방법(쿠버네티스(Kubernetes) 등)까지 말입니다."
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:14
 msgid ""
@@ -37,6 +40,8 @@ msgid ""
 "<https://www.docker.com>`_ to be installed and running. Check this `tutorial"
 " <https://www.docker.com/101-tutorial>`_."
 msgstr ""
+"이런 종류의 배포는 `도커 응용 프로그램 <https://www.docker.com>`_ 을 설치하고 실행해야 합니다. 이 `튜토리얼 "
+"<https://www.docker.com/101-tutorial>`_ 을 확인해보세요."
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:19
 msgid ""
@@ -44,10 +49,12 @@ msgid ""
 "sources (Dockerfile and resources) to build or already built from registries"
 " (private or public)."
 msgstr ""
+"도커는 사전에 패키지된 응용 프로그램(이미지)을 실행합니다. 이 이미지를 빌드하기 위해 소스(도커 파일 및 리소스)로 가져올 수도 있고,"
+" 또는 (사설 또는 공공) 레지스트리에 이미 빌드되어 있을 수도 있습니다."
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:26
 msgid "Simple docker images"
-msgstr ""
+msgstr "단순 도커 이미지"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:28
 msgid ""
@@ -55,22 +62,24 @@ msgid ""
 "build it. To do so create a directory :file:`qgis-server` and within its "
 "directory:"
 msgstr ""
+"퍼블릭 레지스트리에 도커 이미지가 없기 때문에, 직접 빌드해야 합니다. 그렇게 하려면 :file:`qgis-server` 디렉터리를 "
+"생성하고 이 디렉터리 안에:"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:31
 msgid "create a file :file:`Dockerfile` with this content:"
-msgstr ""
+msgstr "다음 내용을 가진 :file:`Dockerfile` 파일을 생성하십시오:"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:81
 msgid "create a file :file:`cmd.sh` with this content:"
-msgstr ""
+msgstr "다음 내용을 가진 :file:`cmd.sh` 파일을 생성하십시오:"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:92
 msgid "build the image with:"
-msgstr ""
+msgstr "다음을 사용해서 이미지를 빌드하십시오:"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:100
 msgid "First try"
-msgstr ""
+msgstr "첫 번째 시도"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:102
 msgid ""
@@ -79,6 +88,10 @@ msgid ""
 "qgis/-/blob/cc1798074d4a66a472721352f3984bb318777a5a/qgis-"
 "exec/data/osm.qgs>`_."
 msgstr ""
+"서버를 실행하려면 QGIS 프로젝트 파일이 필요할 것입니다. 사용자 프로젝트 가운데 하나를 사용해도 되고, 또는 `이 예시 프로젝트 "
+"<https://gitlab.com/Oslandia/qgis/docker-"
+"qgis/-/blob/cc1798074d4a66a472721352f3984bb318777a5a/qgis-"
+"exec/data/osm.qgs>`_ 를 선택해도 됩니다."
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:105
 msgid ""
@@ -86,56 +99,60 @@ msgid ""
 "server` and copy your file in it. To comply with the following explanations,"
 " rename it to :file:`osm.qgs`."
 msgstr ""
+"QGIS 프로젝트를 사용하려면, :file:`qgis-server` 디렉터리 안에 :file:`data` 디렉터리를 생성하고 사용자의 "
+"파일을 복사해 넣으십시오. 다음 설명과 일치시키기 위해, 파일을 :file:`osm.qgs` 로 재명명하십시오."
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:109
 msgid "Now, you can run the server with:"
-msgstr ""
+msgstr "이제 다음 명령어로 서버를 실행할 수 있습니다:"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:119
 msgid "Options used:"
-msgstr ""
+msgstr "사용된 옵션:"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:121
 msgid "**-d**: run in the background"
-msgstr ""
+msgstr "**-d**: 배경에서 실행"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:122
 msgid "**--rm**: remove the container when it is stopped"
-msgstr ""
+msgstr "**--rm**: 서버 종료 시 컨테이너 제거"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:123
 msgid "**--name**: name of the container to be created"
-msgstr ""
+msgstr "**--name**: 생성할 컨테이너의 이름"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:124
 msgid "**--net**: (previously created) sub network"
-msgstr ""
+msgstr "**--net**: (이전에 생성된) 하위 네트워크"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:125
 msgid "**--hostname**: container hostname, for later referencing"
-msgstr ""
+msgstr "**--hostname**: 컨테이너 호스트명, 이후 참조 작업용"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:126
 msgid "**-v**: local data directory to be mounted in the container"
-msgstr ""
+msgstr "**-v**: 컨테이너에 마운트될 로컬 데이터 디렉터리"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:127
 msgid "**-p**: host/container port mapping"
-msgstr ""
+msgstr "**-p**: 호스트/컨테이너 포트 매핑"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:128
 msgid "**-e**: environment variable to be used in the container"
-msgstr ""
+msgstr "**-e**: 컨테이너에서 사용될 환경 변수"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:131
 msgid ""
 "To check, type ``docker ps | grep qgis-server`` and you should see a line "
 "with **qgis-server**::"
 msgstr ""
+"확인하려면, ``docker ps | grep qgis-server`` 를 입력하십시오. **qgis-server** 의 다음과 같은 "
+"내용을 보게 될 것입니다::"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:139
 msgid "Usable sample"
-msgstr ""
+msgstr "사용 가능한 예시"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:141
 msgid ""
@@ -143,41 +160,45 @@ msgid ""
 "HTTP server that handles this protocol. To do so we have to create a simple "
 "Nginx configuration file and start a Nginx image."
 msgstr ""
+"서버가 FastCGI 연결만 받아들이기 때문에, 이 프로토콜을 처리하는 HTTP 서버를 가지고 있어야 합니다. 이를 위해 단순한 "
+"Nginx 환경 설정 파일을 생성하고 Nginx 이미지를 시작해야 합니다."
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:146
 msgid ""
 "Create a file :file:`nginx.conf` in the current directory with this content:"
-msgstr ""
+msgstr "현재 디렉터리에 다음 내용을 가진 :file:`nginx.conf` 파일을 생성하십시오:"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:167
 msgid "And type this command:"
-msgstr ""
+msgstr "다음 명령어를 입력하십시오:"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:175
 msgid ""
 "To check capabilities availability, type in a browser http://localhost:8080"
 "/qgis-server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities"
 msgstr ""
+"케이퍼빌리티를 사용할 수 있는지 확인하려면, 브라우저에 http://localhost:8080/qgis-"
+"server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities 를 입력하십시오."
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:179
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:275
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:498
 msgid "Cleanup"
-msgstr ""
+msgstr "제거(cleanup)"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:181
 msgid "To cleanup the running images, type:"
-msgstr ""
+msgstr "실행 중인 이미지를 제거하려면, 다음을 입력하십시오:"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:190
 msgid "Docker stacks"
-msgstr ""
+msgstr "도커 스택"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:192
 msgid ""
 "The previous method is scriptable, but not easily packageable nor "
 "standardized or easily manageable."
-msgstr ""
+msgstr "앞에서 설명한 방법은 스크립트로 작성할 수 있지만, 쉽게 패키지화할 수도, 표준화할 수도, 또는 관리할 수도 없습니다."
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:195
 msgid ""
@@ -187,16 +208,19 @@ msgid ""
 "other workers. There are many orchestrators, for example Swarm, Kubernetes "
 "and Mesos."
 msgstr ""
+"도커 이미지 집합을 작업하기 위해 조직자(orchestrator)가 관리하는 도커 스택을 사용하면 됩니다. 스택을 사용하면, 이미지가 "
+"동일한 사설 네트워크에서 작동하며, 사용자가 전체 스택을 실행/종료하거나 다른 작업자에세 스택을 배포할 수 있습니다. 조직자는 많이 "
+"있습니다 － 예를 들면 스웜(Swarm), 쿠버네티스(Kubernetes) 그리고 메소스(Mesos) 같은 조직자들 말이죠."
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:202
 msgid ""
 "In the following, we will present simple configurations for testing "
 "purposes. They are not suitable for production."
-msgstr ""
+msgstr "다음 절부터 테스트 목적의 단순 환경 설정을 제시할 것입니다. 이 환경 설정은 실제 서버 운용에는 적합하지 않습니다."
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:207
 msgid "Swarm/docker-compose"
-msgstr ""
+msgstr "스웜/도커 구성"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:209
 msgid ""
@@ -205,10 +229,13 @@ msgid ""
 "started/orchestration/#enable-docker-swarm>`_ (the Mac version will also "
 "work with Linux)."
 msgstr ""
+"도커가 이제 (도커 구성(docker-compose) 파일과 호환되는) 고유 조직자 스웜을 가지고 있습니다. 사용자가 스웜을 `활성화 "
+"<https://docs.docker.com/get-started/orchestration/#enable-docker-swarm>`_ "
+"해야 합니다. (맥 버전도 리눅스 방법으로 작동할 것입니다.)"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:217
 msgid "Stack description"
-msgstr ""
+msgstr "스택 설명"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:219
 msgid ""
@@ -216,34 +243,38 @@ msgid ""
 "<https://docs.docker.com/get-started/swarm-deploy/>`_) :file:`qgis-"
 "stack.yaml`:"
 msgstr ""
+"이제 스웜을 작동시켰으니, 서비스 파일 (`스웜 배포 <https://docs.docker.com/get-started/swarm-"
+"deploy/>`_ 참조) :file:`qgis-stack.yaml` 을 생성하십시오:"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:249
 msgid "To deploy (or update) the stack, type:"
-msgstr ""
+msgstr "스택을 배포(또는 업데이트)하려면 다음을 입력하십시오:"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:255
 msgid ""
 "Check the stack deployment status until you obtain **1/1** in the "
 "**replicas** column:"
-msgstr ""
+msgstr "**replicas** 열에 **1/1** 이 나올 때까지 스택 배포 상태를 확인하십시오:"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:262
 msgid "Something like:"
-msgstr ""
+msgstr "다음과 같이 말이죠:"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:271
 msgid ""
 "To check WMS capabilities, type in a web browser http://localhost:8080/qgis-"
 "server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities"
 msgstr ""
+"WMS 케이퍼빌리티를 확인하려면, 웹 브라우저에 http://localhost:8080/qgis-"
+"server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities 를 입력하십시오."
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:277
 msgid "To cleanup, type:"
-msgstr ""
+msgstr "스택을 제거하려면, 다음을 입력하십시오:"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:284
 msgid "Kubernetes"
-msgstr ""
+msgstr "쿠버네티스"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:287
 msgid "Installation"
@@ -255,6 +286,9 @@ msgid ""
 " pretty straight forward: `enable k8s <https://docs.docker.com/get-"
 "started/orchestration/#enable-Kubernetes>`_."
 msgstr ""
+"**도커 데스크톱** 을 설치한 경우, 쿠버네티스(별칭 k8s)를 사용하는 방법은 꽤 직관적입니다: `k8s를 활성화 "
+"<https://docs.docker.com/get-started/orchestration/#enable-Kubernetes>`_ "
+"하십시오."
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:293
 msgid ""
@@ -262,6 +296,9 @@ msgid ""
 "/hello-minikube/>`_ or `microk8s for Ubuntu "
 "<https://ubuntu.com/tutorials/install-a-local-Kubernetes-with-microk8s>`_."
 msgstr ""
+"설치하지 않았다면, `미니큐브 튜토리얼 <https://Kubernetes.io/docs/tutorials/hello-"
+"minikube/>`_ 또는 `우분투용 microk8s <https://ubuntu.com/tutorials/install-a"
+"-local-Kubernetes-with-microk8s>`_ 를 따르십시오."
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:298
 msgid ""
@@ -269,34 +306,41 @@ msgid ""
 "aspects used by this demo. For further / deeper information, check the "
 "`official documentation <https://Kubernetes.io/docs/home/>`_."
 msgstr ""
+"쿠버네티스를 설치하는 과정이 아주 까다로울 수 있기 때문에, 이 예시에서 사용할 면면에만 집중할 것입니다. 더 심화된 정보를 알고 "
+"싶다면, `공식 문서 <https://Kubernetes.io/docs/home/>`_ 를 확인해보세요."
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:304
 msgid "microk8s"
-msgstr ""
+msgstr "microk8s"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:306
 msgid ""
 "microk8s needs extra steps: you have to enable the registry and tag the "
 "qgis-server image in order to have Kubernetes to find the created images."
 msgstr ""
+"microk8s를 사용하려면 추가 단계를 거쳐야 합니다: 쿠버네티스가 생성된 이미지를 찾을 수 있게 하려면 레지스트리를 활성화하고 "
+"qgis-server 이미지를 태그해야 합니다."
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:310
 msgid "First, enable the registry:"
-msgstr ""
+msgstr "먼저, 레지스트리를 활성화하십시오:"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:316
 msgid "Then, tag and push the image to your newly created registry:"
-msgstr ""
+msgstr "그 다음, 사용자가 새로 생성하 레지스트리에 이미지를 태그하고 푸시하십시오:"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:322
 msgid ""
 "Finally, add or complete the :file:`/etc/docker/daemon.json` to have your "
 "registry **127.0.0.1:32000** listed in the **insecure-registries** field:"
 msgstr ""
+"마지막으로, :file:`/etc/docker/daemon.json` 파일의 **insecure-registries**  필드 목록에 "
+"사용자 레지스트리 **127.0.0.1:32000** 이 들어가도록 :file:`/etc/docker/daemon.json` 파일을 "
+"추가하거나 수정하십시오:"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:335
 msgid "Creating manifests"
-msgstr ""
+msgstr "매니페스트 생성하기"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:337
 msgid ""
@@ -305,68 +349,72 @@ msgid ""
 " images) and services to expose the deployments to internal or external "
 "purposes."
 msgstr ""
+"쿠버네티스는 배포할 객체를 yaml 매니페스트(manifest) 서식으로 설명합니다. 수많은 서로 다른 유형의 서식이 있지만, 내부적 "
+"또는 외부적 목적으로 배포를 노출시키기 위한 (도커 이미지 같은 포드(pod)를 처리하는) 배포 서식 및 서비스 서식만 사용할 것입니다."
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:343
 msgid "Deployment manifests"
-msgstr ""
+msgstr "배포 매니페스트"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:345
 msgid "Create a file :file:`deployments.yaml` with this content:"
-msgstr ""
+msgstr "다음 내용을 가진 :file:`deployments.yaml` 파일을 생성하십시오:"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:417
 msgid "Service manifests"
-msgstr ""
+msgstr "서비스 매니페스트"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:419
 msgid "Create a file :file:`services.yaml` with this content:"
-msgstr ""
+msgstr "다음 내용을 가진 :file:`services.yaml` 파일을 생성하십시오:"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:451
 msgid "Deploying manifests"
-msgstr ""
+msgstr "매니페스트 배포하기"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:453
 msgid ""
 "To deploy the images and services in Kubernetes, one can use the dashboard "
 "(click on the **+** on the upper right) or the command line."
-msgstr ""
+msgstr "쿠버네티스에서 이미지와 서비스를 배포하려면, 대시 보드(우상단에 있는 **+** 를 클릭) 또는 명령 줄을 사용하면 됩니다."
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:457
 msgid ""
 "When using the command line with microk8s you will have to prefix each "
 "command with `microk8s`."
-msgstr ""
+msgstr "microk8s에서 명령 줄을 사용할 경우 각 명령어 앞에 `microk8s` 접두어를 붙여야 할 것입니다."
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:460
 msgid "To deploy or update your manifests:"
-msgstr ""
+msgstr "사용자 매니페스트를 배포 또는 업데이트하려면 다음을 입력하십시오:"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:466
 msgid "To check what is currently deployed:"
-msgstr ""
+msgstr "현재 배포되고 있는 것이 무엇인지 확인하려면 다음을 입력하십시오:"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:472
 msgid "You should obtain something like::"
-msgstr ""
+msgstr "다음과 같은 화면을 보게 될 것입니다::"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:488
 msgid "To read nginx/qgis logs, type:"
-msgstr ""
+msgstr "Nginx/QGIS 로그를 읽어오려면 다음을 입력하십시오:"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:494
 msgid ""
 "To check WMS capabilities, type in a web browser http://localhost:30080"
 "/qgis-server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities"
 msgstr ""
+"WMS 케이퍼빌리티를 확인하려면, 웹 브라우저에 http://localhost:30080/qgis-"
+"server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities 를 입력하십시오."
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:500
 msgid "To clean up, type:"
-msgstr ""
+msgstr "매니페스트를 제거하려면, 다음을 입력하십시오:"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:507
 msgid "Cloud deployment"
-msgstr ""
+msgstr "클라우드 배포"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:509
 msgid ""
@@ -374,12 +422,14 @@ msgid ""
 "containerized applications, is a complex job. You have to handle multiple "
 "issues, such as hardware, bandwidth and security at different levels."
 msgstr ""
+"컨테이너화된 응용 프로그램의 배포를 처리하도록 사용자 고유의 서버 클러스터를 관리하는 것은 복잡한 일입니다. 하드웨어, 대여폭, 그리고 "
+"서로 다른 수준들의 보안 등 여러 문제를 동시에 처리해야 하니까요."
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:514
 msgid ""
 "Cloud deployment solutions can be a good alternative when you do not want to"
 " focus on infrastructure management."
-msgstr ""
+msgstr "사용자가 인프라 관리에만 집중하고 싶지 않다면, 클라우드 배포 솔루션이 훌륭한 대안이 되어 줄 수 있습니다."
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:517
 msgid ""
@@ -387,10 +437,12 @@ msgid ""
 "compatible with the stages explained previously (:ref:`docker images "
 "<simple-docker-images>` and :ref:`stack management <docker-stacks>`)."
 msgstr ""
+"클라우드 배포는 상용 메커니즘을 사용할 수도 있지만, 앞에서 설명한(:ref:`도커 이미지 <simple-docker-images>` 및"
+" :ref:`스택 관리 <docker-stacks>`) 단계와도 호환됩니다."
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:523
 msgid "AWS usecase"
-msgstr ""
+msgstr "AWS 활용 사례"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:525
 msgid ""
@@ -401,6 +453,10 @@ msgid ""
 "<https://console.aws.amazon.com/ecr/home>`_ for your custom images to be "
 "accessible."
 msgstr ""
+"아마존 AWS를 사용하면, `ECS(Elastic Container Service) "
+"<https://console.aws.amazon.com/ecs/home>`_ 기능을 통해 도커 구성(docker-compose) 또는 "
+"쿠버네티스 호환 래퍼(wrapper)를 사용해서 사용자 스택을 관리할 수 있습니다. 사용자 정의 이미지를 받아들이게 하려면 `이미지 "
+"레지스트리 <https://console.aws.amazon.com/ecr/home>`_ 를 생성해야 할 것입니다."
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:533
 msgid ""
@@ -414,6 +470,14 @@ msgid ""
 "tutorial-fargate.html>`_), you can reuse the :ref:`stack description "
 "<docker-compose-file>`."
 msgstr ""
+"도커 구성과 비슷한 기능을 사용하려면, **ecs-cli** 클라이언트를 설치하고 `적절한 권한/역할 "
+"<https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_execution_IAM_role.html>`_"
+" 을 가지고 있어야 합니다. 그러면, `ecs-cli compose` 명령어(`ecs-cli 구성 지침서 "
+"<https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-"
+"compose.html>`_ 및 `ecs-cli 튜토리얼 "
+"<https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-cli-"
+"tutorial-fargate.html>`_ 참조)의 도움으로 :ref:`스택 설명 <docker-compose-file>` 을 재사용할"
+" 수 있습니다."
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:543
 msgid ""
@@ -423,3 +487,7 @@ msgid ""
 "configured kubectl environment, you can reuse the :ref:`Kubernetes manifests"
 " <k8s-manifests>`."
 msgstr ""
+"쿠버네티스를 사용하려면, AWS 웹 콘솔 또는 명령 줄 도구 `eksctl "
+"<https://docs.aws.amazon.com/eks/latest/userguide/getting-started.html>`_ 를 "
+"사용해서 적절한 권한/역할을 가질 수 있습니다. 그 다음 잘 환경 설정된 kubectl 환경과 함께 :ref:`쿠버네티스 매니페스트 "
+"<k8s-manifests>` 를 재사용할 수 있습니다."

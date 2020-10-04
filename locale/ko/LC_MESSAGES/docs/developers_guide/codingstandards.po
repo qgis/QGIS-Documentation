@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# 정윤호 <yunhoc@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-24 11:25+0200\n"
 "PO-Revision-Date: 2020-03-16 19:24+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: 정윤호 <yunhoc@gmail.com>, 2020\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,60 +24,60 @@ msgstr ""
 
 #: ../../docs/developers_guide/codingstandards.rst:5
 msgid "QGIS Coding Standards"
-msgstr ""
+msgstr "QGIS 코딩 표준"
 
 #: ../../docs/developers_guide/codingstandards.rst:10
 msgid "These standards should be followed by all QGIS developers."
-msgstr ""
+msgstr "이 표준은 모든 QGIS 개발자가 준수해야합니다."
 
 #: ../../docs/developers_guide/codingstandards.rst:13
 msgid "Classes"
-msgstr ""
+msgstr "클래스"
 
 #: ../../docs/developers_guide/codingstandards.rst:17
 #: ../../docs/developers_guide/codingstandards.rst:212
 msgid "Names"
-msgstr ""
+msgstr "이름"
 
 #: ../../docs/developers_guide/codingstandards.rst:19
 msgid "Class in QGIS begin with Qgs and are formed using camel case."
-msgstr ""
+msgstr "QGIS의 클래스는 Qgs로 시작하며 카멜 케이스로 형성됩니다."
 
 #: ../../docs/developers_guide/codingstandards.rst:21
 #: ../../docs/developers_guide/codingstandards.rst:191
 #: ../../docs/developers_guide/codingstandards.rst:263
 msgid "Examples:"
-msgstr ""
+msgstr "예시"
 
 #: ../../docs/developers_guide/codingstandards.rst:23
 msgid "``QgsPoint``"
-msgstr ""
+msgstr "``QgsPoint``"
 
 #: ../../docs/developers_guide/codingstandards.rst:24
 msgid "``QgsMapCanvas``"
-msgstr ""
+msgstr "``QgsMapCanvas``"
 
 #: ../../docs/developers_guide/codingstandards.rst:25
 msgid "``QgsRasterLayer``"
-msgstr ""
+msgstr "``QgsRasterLayer``"
 
 #: ../../docs/developers_guide/codingstandards.rst:29
 msgid "Members"
-msgstr ""
+msgstr "멤버"
 
 #: ../../docs/developers_guide/codingstandards.rst:32
 msgid ""
 "Class member names begin with a lower case m and are formed using mixed "
 "case."
-msgstr ""
+msgstr "클래스 멤버 이름은 소문자 m으로 시작하며 대소문자를 혼합하여 형성됩니다."
 
 #: ../../docs/developers_guide/codingstandards.rst:35
 msgid "``mMapCanvas``"
-msgstr ""
+msgstr "``mMapCanvas``"
 
 #: ../../docs/developers_guide/codingstandards.rst:36
 msgid "``mCurrentExtent``"
-msgstr ""
+msgstr "``mCurrentExtent``"
 
 #: ../../docs/developers_guide/codingstandards.rst:38
 msgid ""
@@ -85,6 +86,8 @@ msgid ""
 " be accessed from Python subclasses, since protected members cannot be used "
 "from the Python bindings."
 msgstr ""
+"모든 클래스 멤버는 개인이어야 합니다. 공공 클래스 멤버는 매우 실망스럽습니다. Python 바인딩에서 보호 멤버를 사용할 수 없으므로 "
+"Python 하위 클래스에서 멤버에 액세스해야 할 경우 보호 멤버를 피해야 합니다."
 
 #: ../../docs/developers_guide/codingstandards.rst:43
 msgid ""

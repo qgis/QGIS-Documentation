@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-24 11:25+0200\n"
 "PO-Revision-Date: 2020-03-16 19:27+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,6 +35,12 @@ msgid ""
 "<create_layout_item>` and manipulate it the same way as exposed in "
 ":ref:`interact_layout_item`."
 msgstr ""
+"El elemento :guilabel:`Etiqueta` es una herramienta que ayuda a decorar tu "
+"mapa con textos que ayudarían a entenderlo; puede ser el título, autor, "
+"fuentes de datos o cualquier otra información ... Puede agregar una etiqueta"
+" con la herramienta |label| :guilabel:`Agregar etiqueta` siguiendo las "
+":ref:`instrucciones de creación de elementos <create_layout_item>` y "
+"manipularla de la misma manera que se expone en :ref:`interact_layout_item`"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:19
 msgid ""
@@ -42,10 +49,15 @@ msgid ""
 "common properties <item_common_properties>`, this feature has the following "
 "functionalities (see figure_layout_label_):"
 msgstr ""
+"De forma predeterminada, el elemento de etiqueta proporciona un texto "
+"predeterminado que puede personalizar utilizando su panel "
+":guilabel:`Propiedades del elemento`. Aparte de las :ref:`propiedades "
+"principales de los elementos <item_common_properties>`, este objeto tiene "
+"las siguientes funcionalidades (ver figure_layout_label_):"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:29
 msgid "Label Item Properties Panel"
-msgstr ""
+msgstr "Panel de propiedades de elemento etiqueta"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:32
 msgid "Main properties"
@@ -57,6 +69,10 @@ msgid ""
 "can be in HTML) or the expression to build the label. Expressions need to be"
 " surrounded by ``[%`` and ``%]`` in order to be interpreted as such."
 msgstr ""
+"El grupo :guilabel:`Propiedades principales` es el lugar para proporcionar "
+"el texto (puede estar en HTML) o la expresión para construir la etiqueta. "
+"Las expresiones deben estar rodeadas por \"[%\" y \"%]\" para poder ser "
+"interpretadas como tales."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:38
 msgid ""
@@ -64,7 +80,7 @@ msgid ""
 "as HTML`. You can now insert a URL, a clickable image that links to a web "
 "page or something more complex."
 msgstr ""
-"Las etiquetas pueden ser interpretadas como código HTML: check |checkbox| "
+"Las etiquetas pueden ser interpretadas como código HTML: marque |checkbox| "
 ":guilabel:`Representar como HTML`. Ahora puede insertar una URL, una imagen "
 "seleccionable que enlaza a una página web o algo más complejo."
 
@@ -75,6 +91,10 @@ msgid ""
 "when the dialog is applied, QGIS automatically adds the surrounding "
 "characters."
 msgstr ""
+"También puede usar :ref:`expresiones <expression_builder>`: haga clic en el "
+"botón :guilabel:`Insertar una expresión`, escriba su fórmula como de "
+"costumbre y cuando se aplica el diálogo, QGIS agrega automáticamente los "
+"caracteres circundantes."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:45
 msgid ""
@@ -83,17 +103,25 @@ msgid ""
 "you want to update an existing text, you need to select it the part of "
 "interest beforehand."
 msgstr ""
+"Al hacer clic en el botón :guilabel:`Insertar una expresión` cuando no se "
+"realiza ninguna selección en el cuadro de texto, se agregará la nueva "
+"expresión al texto existente. Si desea actualizar un texto existente, debe "
+"seleccionarlo como parte de su interés de antemano."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:50
 msgid ""
 "You can combine HTML rendering and expressions, leading to e.g. a text like:"
 msgstr ""
+"Puede combinar expresiones y renderizado HTML, lo que lleva, por ejemplo, a "
+"un texto como:"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:56
 msgid ""
 "which will render: **Check out the new logo for** `QGIS 3.0 "
 "<https://www.qgis.org>`_ **:** |logo|"
 msgstr ""
+"que mostrará: **Echa un vistazo al nuevo logotipo de ** `QGIS 3.0 "
+"<https://www.qgis.org>`_ **:** |logo|"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:63
 msgid "Appearance"
@@ -104,6 +132,9 @@ msgid ""
 "Define :guilabel:`Font` by clicking on the :guilabel:`Font...` button or a "
 ":guilabel:`Font color` by pushing the :ref:`color widget <color-selector>`."
 msgstr ""
+"Defina :guilabel:`Fuente` haciendo clic en el botón :guilabel:`Tipo de "
+"letra... `o en :guilabel:`Color de letras` presionando :ref:`color widget "
+"<color-selector>`."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:67
 msgid ""
@@ -112,27 +143,38 @@ msgid ""
 "outside the bounds of the label e.g. to align label items with other items. "
 "In this case you have to use negative values for the margin."
 msgstr ""
+"Puede especificar diferentes márgenes horizontales y verticales en ``mm``. "
+"Este es el margen desde el borde del elemento de diseño. La etiqueta se "
+"puede colocar fuera de los límites de la etiqueta, p. Ej. para alinear los "
+"elementos de la etiqueta con otros elementos. En este caso, debe utilizar "
+"valores negativos para el margen."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:71
 msgid ""
 "Using the text alignment is another way to position your label. It can be:"
 msgstr ""
+"Usar la alineación del texto es otra forma de colocar su etiqueta. Puede "
+"ser:"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:73
 msgid ""
 ":guilabel:`Left`, :guilabel:`Center`, :guilabel:`Right` or "
 ":guilabel:`Justify` for :guilabel:`Horizontal alignment`"
 msgstr ""
+":guilabel:`Izquierda`, :guilabel:`Centro`, :guilabel:`Derecha` o "
+":guilabel:`Justificar` para :guilabel:`Alineación horizontal`"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:75
 msgid ""
 "and :guilabel:`Top`, :guilabel:`Middle`, :guilabel:`Bottom` for "
 ":guilabel:`Vertical alignment`."
 msgstr ""
+"y :guilabel:`Arriba`, :guilabel:`Medio`, :guilabel:`Abajo` para :guilabel:` "
+"Alineación vertical`."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:81
 msgid "Exploring expressions in a label item"
-msgstr ""
+msgstr "Explorando expresiones en un elemento de etiqueta"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:83
 msgid ""
@@ -141,25 +183,37 @@ msgid ""
 "calculated part, should be surrounded by ``[%`` and ``%]`` in the "
 ":guilabel:`Main properties` frame:"
 msgstr ""
+"A continuación, se muestran algunos ejemplos de expresiones que puede "
+"utilizar para completar el elemento de la etiqueta con información "
+"interesante: recuerde que el código, o al menos la parte calculada, debe "
+"estar rodeada por ``[%`` y ``%]`` en el cuadro :guilabel:`Propiedades "
+"principales`:"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:87
 msgid "Display a title with the current atlas feature value in \"field1\":"
 msgstr ""
+"Muestra un título con el valor actual de la característica del atlas en "
+"\"field1\":"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:93
 msgid "or, written in the :guilabel:`Main properties` section:"
-msgstr ""
+msgstr "o, escrito en la sección :guilabel:`Propiedades principales`:"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:99
 msgid "Add a pagination for processed atlas features (eg, ``Page 1/10``):"
 msgstr ""
+"Agregue una paginación para los objetos procesadas del atlas (por ejemplo, "
+"``Page 1/10``):"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:105
 msgid "Return the lower X coordinate of the ``Map 1`` item's extent:"
 msgstr ""
+"Devuelve la coordenada X inferior de la extensión del elemento ``Map 1``:"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:111
 msgid ""
 "Retrieve the name of the layers in the current layout ``Map 1`` item, and "
 "formats in one name by line:"
 msgstr ""
+"Recupere el nombre de las capas en el elemento de diseño actual ``Map1`` y "
+"en formato de un nombre por línea:"

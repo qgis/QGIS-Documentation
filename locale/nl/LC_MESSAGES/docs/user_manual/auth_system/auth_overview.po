@@ -40,6 +40,9 @@ msgid ""
 "SQLite database file located, by default, at :file:`<profile directory"
 ">/qgis-auth.db`."
 msgstr ""
+"Het nieuwe authenticatiesysteem slaat configuraties voor authenticatie "
+"standaard op in een databasebestand van SQLite, :file:`<profile directory"
+">/qgis-auth.db`."
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:24
 msgid ""
@@ -89,12 +92,26 @@ msgid ""
 "authentication configuration, or applying a configuration to a server "
 "configuration (such as when adding a WMS layer)."
 msgstr ""
+"Een gebruiker moet een `hoofdwachtwoord` definiëren om gevoelige informatie "
+"in de database op te slaan of er toegang tot te verkrijgen. Een nieuw "
+"hoofdwachtwoord wordt verzocht en geverifieerd bij het initieel opslaan van "
+"versleutelde informatie in de database. Wanneer toegang wordt gezocht tot "
+"gevoelige informatie wordt de gebruiker gevraagd het hoofdwachtwoord in te "
+"voeren. Het wachtwoord wordt opgeslagen voor de rest van die sessie (totdat "
+"de toepassing wordt afgesloten), tenzij de gebruiker handmatig een actie "
+"kiest om de opgeslagen waarde te verwijderen. Sommige instances van het "
+"gebruik van het authenticatiesysteem vereisen geen invoer van het "
+"hoofdwachtwoord, zoals bij het kiezen van een bestaande configuratie voor "
+"authenticatie, of het toepassen van een configuratie op een configuratie "
+"voor een server (zoals bij het toevoegen van een WMS-laag)."
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:51
 msgid ""
 "You can choose to save the password in the ``Wallet/Keyring`` of your "
 "computer."
 msgstr ""
+"U kunt er voor kiezen het wachtwoord op te slaan in de ``Wallet/Keyring`` "
+"van uw computer."
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:59
 msgid "Input new master password"
@@ -332,24 +349,34 @@ msgid ""
 "**Input master password**: opens the master password input dialog, "
 "independent of performing any authentication database command"
 msgstr ""
+"**Hoofdwachtwoord invoeren**: opent het dialoogvenster voor het invoeren van"
+" het hoofdwachtwoord, onafhankelijk van een opdracht voor de database voor "
+"authenticatie"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:232
 msgid ""
 "**Clear cached master password**: unsets the master password if it has been "
 "set"
 msgstr ""
+"**Hoofdwachtwoord uit cache verwijderen**: verwijdert het hoofdwachtwoord "
+"als dat is ingesteld"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:234
 msgid ""
 "**Reset master password**: opens a dialog to change the master password (the"
 " current password must be known) and optionally back up the current database"
 msgstr ""
+"**Hoofdwachtwoord opnieuw instellen**: opent een dialoogvenster om het "
+"hoofdwachtwoord te wijzigen (het huidige hoofdwachtwoord moet bekend zijn) "
+"en optioneel een back-up te maken van de huidige database"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:236
 msgid ""
 "**Clear network authentication access cache**: clears the authentication "
 "cache of all connections"
 msgstr ""
+"**Cache voor toegang netwerk authenticatie leegmaken**: leegt de cache voor "
+"authenticatie van alle verbindingen"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:238
 msgid ""
@@ -361,30 +388,47 @@ msgid ""
 "automatically cleared every time an SSL error occurs and you choose to abort"
 " the connection"
 msgstr ""
+"**Automatisch cache voor toegang netwerk authenticatie bij fouten in SSL "
+"leegmaken**: de  cache voor de verbinding slaat alle gegevens voor "
+"authenticatie voor verbindingen op, ook als de verbinding mislukt. Wanneer u"
+" configuraties voor authenticatie of autoriteiten voor certificaten wijzigt "
+"zou u de cache voor authenticatie leeg moeten maken of QGIS opnieuw moeten "
+"starten. Als deze optie is geselecteerd zal de cache voor authenticatie "
+"automatisch leeg worden gemaakt, elke keer als er een SSL-fout optreedt en u"
+" er voor kiest de verbinding af te breken"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:245
 msgid ""
 "**Integrate master password with your Wallet/Keyring**: adds the master "
 "password to your personal Wallet/Keyring"
 msgstr ""
+"**Hoofdwachtwoord integreren met uw Wallet/Keyring**: voegt het "
+"hoofdwachtwoord toe aan uw persoonlijke Wallet/Keyring"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:247
 msgid ""
 "**Store/update the master password in your Wallet/Keyring**: updates the "
 "changed master password in your Wallet/Keyring"
 msgstr ""
+"**Het hoofdwachtwoord opslaan/bijwerken in uw Wallet/Keyring**: werkt het "
+"gewijzigde hoofdwachtwoord bij in uw Wallet/Keyring"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:249
 msgid ""
 "**Clear the master password from your Wallet/Keyring**: deletes the master "
 "password from your Wallet/Keyring"
 msgstr ""
+"**Verwijder het hoofdwachtwoord uit uw Wallet/Keyring**: verwijdert het "
+"hoofdwachtwoord uit uw Wallet/Keyring"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:251
 msgid ""
 "**Enable password helper debug log**: enables a debug tool that will contain"
 " all the log information of the authentication methods"
 msgstr ""
+"**Log voor hulp bij debuggen van wachtwoord inschakelen**: schakelt een "
+"gereedschap voor debuggen in dat alle informatie van het loggen zal bevatten"
+" van de methoden voor authenticatie"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:253
 msgid ""
@@ -393,12 +437,19 @@ msgid ""
 "not clear QGIS’s core network access manager’s cache, which requires a "
 "relaunch of QGIS."
 msgstr ""
+"**Gecachete configuraties voor authenticatie verwijderen**: leegt de interne"
+" cache voor opzoeken van configuraties gebruikt om netwerkverbindingen te "
+"versnellen. Dit schoont niet de beheerscache van het bronnetwerk van QGIS "
+"op, die opnieuw starten van QGIS vereist."
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:256
 msgid ""
 "**Remove all authentication configurations**: clears the database of all "
 "configuration records, without removing other stored records."
 msgstr ""
+"**Alle configuraties voor authenticatie verwijderen**: schoont de database "
+"van alle records voor configuratie, zonder andere opgeslagen records te "
+"verwijderen."
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:258
 msgid ""
@@ -408,6 +459,12 @@ msgid ""
 "project loading, do not interrupt the operation or cause errors due to a "
 "temporarily missing database."
 msgstr ""
+"**Authenticatiedatabase wissen**: maakt een taak aan voor een volledige "
+"back-up van de huidige database en een volledige herbouw van de "
+"tabelstructuur van de database. De acties worden later gepland om er voor te"
+" zorgen dat andere bewerkingen, zoals het laden van een project, de "
+"bewerking niet onderbreken of fouten veroorzaken door een tijdelijk "
+"ontbrekende database."
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:269
 msgid "DB erase verification menu"

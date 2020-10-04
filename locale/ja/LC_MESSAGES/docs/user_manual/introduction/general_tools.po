@@ -156,7 +156,7 @@ msgid ""
 " to convenient shortcuts to manipulate visibility of the layers in the "
 ":guilabel:`Layers` panel:"
 msgstr ""
-"The |showMapTheme| :sup:`地図テーマの管理` ドロップダウンボタンを使用すると、 :guilabel:`レイヤ` "
+"|showMapTheme| :sup:`地図テーマの管理` ドロップダウンボタンを使用すると、 :guilabel:`レイヤ` "
 "パネルの可視性を操作するための便利なショートカットにアクセスできます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:100
@@ -220,7 +220,7 @@ msgstr "中に配置されいるレイヤのノードやグループの折りた
 
 #: ../../docs/user_manual/introduction/general_tools.rst:121
 msgid "To create a map theme:"
-msgstr "地図テーマを作成するには、："
+msgstr "地図テーマを作成するには、"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:123
 msgid "Check a layer you want to show"
@@ -303,7 +303,7 @@ msgstr ""
 
 #: ../../docs/user_manual/introduction/general_tools.rst:158
 msgid "Overview of the context menu of the Layers panel"
-msgstr "レイヤーパネルのコンテキストメニューの概要"
+msgstr "レイヤパネルのコンテキストメニューの概要"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:160
 msgid ""
@@ -876,6 +876,8 @@ msgid ""
 "|indicatorBadLayer| to identify a layer whose data source was not available "
 "at the project file opening. Click the icon to update the source path."
 msgstr ""
+"|indicatorBadLayer| "
+"プロジェクトファイルを開いたときにデータソースが利用できなかったレイヤであることを示します。アイコンをクリックし、データソースのパスを更新してください。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:286
 msgid ""
@@ -894,7 +896,7 @@ msgstr "|indicatorNoCRS| CRSがない/不明なレイヤであることを示し
 
 #: ../../docs/user_manual/introduction/general_tools.rst:297
 msgid "Editing vector layer style"
-msgstr "ベクターレイヤーのスタイルを編集する"
+msgstr "ベクタレイヤのスタイル編集"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:299
 msgid ""
@@ -911,16 +913,18 @@ msgid ""
 "If you defined many styles for the layer, you can switch from one to another"
 " and your layer rendering will automatically be updated on the map canvas."
 msgstr ""
+"現在、レイヤーに適用されている :ref:`スタイル <manage_custom_style>` "
+"が表示されます。レイヤにいくつもスタイルを定義している場合は、そのスタイルを切り替えることができ、マップキャンバス上のレイヤのレンダリングは自動的に更新されます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:306
 msgid ""
 "copy part or all of the current style, and when applicable, paste a copied "
 "style from another layer"
-msgstr ""
+msgstr "現在のスタイルの一部または全部をコピーします。また、適用可能な場合には別のレイヤからコピーしたスタイルを貼り付けます"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:309
 msgid "**Quickly share a layer style**"
-msgstr "**すぐにレイヤースタイルを共有します**"
+msgstr "**レイヤスタイルを素早く共有**"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:311
 msgid ""
@@ -929,7 +933,7 @@ msgid ""
 "the same type (vector/raster) as the original layer and, for vector layers, "
 "have the same geometry type (point, line or polygon)."
 msgstr ""
-"コンテキストメニューから、レイヤのスタイルをコピーして、グループまたはレイヤの選択に貼り付けます。スタイルは、元のレイヤと同じタイプ（ベクタ／ラスタ）のすべてのレイヤに適用され、ベクタレイヤについては同じジオメトリタイプ（ポイント、ライン、またはポリゴン）を持ちます。"
+"コンテキストメニューから、レイヤのスタイルをコピーして、グループまたは選択したレイヤに貼り付けることで、素早くレイヤスタイルを共有できます。スタイルは、元のレイヤと同じタイプ（ベクタ／ラスタ）、ベクタレイヤの場合は同じジオメトリタイプ（ポイント、ライン、またはポリゴン）を持つのすべてのレイヤに適用されます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:316
 msgid ""
@@ -937,10 +941,11 @@ msgid ""
 "current one) or delete the current style (when multiple styles are "
 "available)."
 msgstr ""
+"現在のスタイルの名前を変更したり、新しいスタイル（実際には現在のスタイルのコピー）を追加したり、現在のスタイルを削除（複数のスタイルが利用可能な場合）できます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:320
 msgid "The previous options are also available for raster or mesh layers."
-msgstr ""
+msgstr "上に挙げたオプションは、ラスタレイヤやメッシュレイヤでも利用可能です。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:322
 msgid ""
@@ -948,12 +953,16 @@ msgid ""
 " convenience, the recently used colors are also available at the bottom of "
 "the color wheel."
 msgstr ""
+":ref:`シンボルの色 <color-selector>` を **カラーホイール** を使って更新します。 "
+"便利なように、最近使用した色はカラーホイールの下部からも選べます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:325
 msgid ""
 ":guilabel:`Edit Symbol...`: open the :ref:`Symbol Selector <symbol-"
 "selector>` dialog and change feature symbol (symbol, size, color...)."
 msgstr ""
+":guilabel:`シンボルの編集...`: :ref:`シンボルセレクタ <symbol-selector>` "
+"ダイアログを開き、地物のシンボル（シンボルタイプ、サイズ、色など...）を変更します。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:328
 msgid ""
@@ -966,16 +975,22 @@ msgid ""
 "entries to switch the visibility of all the classes of features. These avoid"
 " (un)checking items one by one."
 msgstr ""
+"分類シンボルタイプ（ :ref:`カテゴリ値による定義 <categorized_renderer>` 、 :ref:`連続値による定義 "
+"<graduated_renderer>` 、あるいは :ref:`ルールによる定義 <rule_based_rendering>` "
+"）を使用している場合、前述のシンボルレベルのオプションは分類別のエントリのコンテキストメニューからも利用可能です。また、分類別のエントリには地物の分類すべての表示を切り替えるために"
+" |toggleAllLayers| :guilabel:`アイテム切り替え` 、 |showAllLayers| "
+":guilabel:`全アイテム表示` 、および |hideAllLayers| :guilabel:`全アイテム非表示` "
+"のエントリも用意されています。これらを使うことで、項目の一つ一つをチェックする（あるいはチェックを外す）事態を避けられます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:337
 msgid ""
 "Double-clicking a class leaf entry also opens the :guilabel:`Symbol "
 "Selector` dialog."
-msgstr ""
+msgstr "クラスの葉エントリをダブルクリックすることでも :guilabel:`シンボルセレクタ` ダイアログが開きます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:347
 msgid "Layer Styling Panel"
-msgstr "レイヤースタイル設定パネル"
+msgstr "レイヤスタイル設定パネル"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:349
 msgid ""
@@ -985,7 +1000,7 @@ msgid ""
 "behavior of a layer, and to visualize its effects without having to open the"
 " layer properties dialog."
 msgstr ""
-":guilabel:`レイヤスタイリング` パネル（ :kbd:`Ctrl+3` でも有効）は、 :guilabel:`レイヤプロパティ` "
+":guilabel:`レイヤスタイル` パネル（ :kbd:`Ctrl+3` でも有効）は、 :guilabel:`レイヤプロパティ` "
 "ダイアログの機能の一部へのショートカットです。レイヤのレンダリングと動作を定義し、レイヤプロパティダイアログを開かずにその効果を視覚化するための迅速かつ簡単な方法を提供します。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:355
@@ -997,13 +1012,13 @@ msgid ""
 "style panel causes the color selector dialog to be opened inside the layer "
 "style panel itself rather than as a separate dialog."
 msgstr ""
-"レイヤスタイリングパネルにより、遮断する（または「モーダル」）レイヤプロパティダイアログを避けるだけでなく、ダイアログで画面が乱雑になることも避けられ、ほとんどのスタイル機能（カラーセレクタ、効果プロパティ、ルール編集、ラベル置換...）が含まれます：たとえば、レイヤースタイルパネル内のカラーボタンをクリックすると、カラーセレクターダイアログが、個別のダイアログとしてではなく、レイヤスタイルパネル自体の内部で開かれます。"
+"レイヤスタイルパネルはレイヤプロパティダイアログによるブロッキング（または「モーダル」：ダイアログ操作以外は受け付けない状態）を回避することに加えて、ダイアログで画面が乱雑になることも避けられ、ほとんどのスタイル機能（カラーセレクタ、効果のプロパティ、ルール編集、ラベル置換...）が含まれています：たとえば、レイヤスタイルパネル内のカラーボタンをクリックすると、カラーセレクターダイアログが個別のダイアログとしてではなく、レイヤスタイルパネル自体の内部で開かれます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:362
 msgid ""
 "From a drop-down list of current layers in the layer panel, select an item "
 "and:"
-msgstr "レイヤーパネルの現在のレイヤーのドロップダウンリストから項目を選択して："
+msgstr "レイヤパネルの現在のレイヤのドロップダウンリストから項目を選択して、以下の設定ができます："
 
 #: ../../docs/user_manual/introduction/general_tools.rst:364
 msgid ""
@@ -1012,6 +1027,9 @@ msgid ""
 "properties. These options are the same as those in the "
 ":ref:`raster_properties_dialog`."
 msgstr ""
+"ラスタレイヤの |symbology| :guilabel:`シンボロジ` 、 |transparency| :guilabel:`透過性` と "
+"|rasterHistogram| :guilabel:`ヒストグラム` プロパティの設定。これらのオプションは "
+":ref:`raster_properties_dialog` と同一のものです。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:367
 msgid ""
@@ -1019,12 +1037,17 @@ msgid ""
 " and |labeling| :guilabel:`Labels` properties. These options are the same as"
 " those in the :ref:`vector_properties_dialog`."
 msgstr ""
+"ベクタレイヤの |symbology| :guilabel:`シンボロジ` 、 |3d| :guilabel:`3Dビュー` と |labeling| "
+":guilabel:`ラベル` プロパティの設定。これらのオプションは :ref:`vector_properties_dialog` "
+"と同一のものです。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:370
 msgid ""
 "Manage the associated style(s) in the |stylePreset| :guilabel:`Style "
 "Manager` (more details at :ref:`manage_custom_style`)."
 msgstr ""
+"関連付けられたスタイルを |stylePreset| :guilabel:`スタイルをマネージャ` で管理する（詳細は "
+":ref:`manage_custom_style` を参照）。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:372
 msgid ""
@@ -1032,6 +1055,9 @@ msgid ""
 "style in the current project: you can therefore cancel or restore to any "
 "state by selecting it in the list and clicking :guilabel:`Apply`."
 msgstr ""
+"現在のプロジェクトにおいてレイヤスタイル対して適用した変更の |history| :guilabel:`履歴` "
+"を確認する：リストの中から任意の状態を選択して :guilabel:`適用` "
+"をクリックすることで、レイヤスタイルの状態を戻したり復元させたりすることができます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:376
 msgid ""
@@ -1039,17 +1065,17 @@ msgid ""
 "update` checkbox. Tick it to render your changes immediately on the map "
 "canvas: you no longer need to click the :guilabel:`Apply` button."
 msgstr ""
-"このパネルのもう1つの強力な機能は、 |checkbox|  :guilabel:`即時更新` "
-"チェックボックスです。チェックを入れると、変更が地図キャンバスにすぐに表示されます。 :guilabel:`適用` "
-"ボタンをクリックする必要はなくなりました。"
+"このパネルのもう1つの強力な機能は、 |checkbox|  :guilabel:`ライブ更新` "
+"チェックボックスです。これにチェックを入れるとスタイル変更がマップキャンバスにすぐに表示され、 :guilabel:`適用` "
+"ボタンをクリックする必要はなくなります。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:385
 msgid "Defining a layer's symbology from the layer styling panel"
-msgstr ""
+msgstr "レイヤスタイルパネルからレイヤのシンボロジを定義する"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:387
 msgid "**Add custom tabs to the Layer Styling panel**"
-msgstr ""
+msgstr "**レイヤスタイルパネルへのカスタムタブの追加**"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:389
 msgid ""
@@ -1058,10 +1084,14 @@ msgid ""
 "https://nathanw.net/2016/06/29/qgis-style-dock-part-2-plugin-panels/ for an "
 "example."
 msgstr ""
+":ref:`PyQGIS <PyQGIS-Developer-Cookbook>` "
+"を使用することで、レイヤプロパティを管理するための新たなタブをレイヤスタイルパネル内に設定することができます。 実例は "
+"https://nathanw.net/2016/06/29/qgis-style-dock-part-2-plugin-panels/ "
+"を参照して下さい。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:400
 msgid "Layer Order Panel"
-msgstr ""
+msgstr "レイヤ順序パネル"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:402
 msgid ""
@@ -1069,6 +1099,8 @@ msgid ""
 "order in the :guilabel:`Layers` panel: the higher a layer is in the panel, "
 "the higher (hence, more visible) it'll be in the map view."
 msgstr ""
+"デフォルトでは、QGISのマップキャンバスに表示されるレイヤは :guilabel:`レイヤ` "
+"パネルの順序に従って描画されます。つまりパネル内でレイヤの位置が高いほど、マップビューではより前面に（従って、より見えやすく）表示されます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:406
 msgid ""
@@ -1081,26 +1113,26 @@ msgid ""
 "see that the ``airports`` features are displayed over the ``alaska`` polygon"
 " despite those layers' respective placement in the Layers panel."
 msgstr ""
-":guilabel:`レイヤ順序` パネルを :menuselection:`表示->パネル->` メニューまたは :kbd:`Ctrl+9` "
-"で有効にすると、レイヤパネルの順序に関係なく、レイヤの描画順序を定義できます。レイヤのリストの下にある |checkbox| "
-":guilabel:`レンダリング順序を制御` "
-"チェックし、必要に応じてパネル内のレイヤを再編成します。この順序は、地図キャンバスに適用される順序になります。たとえば、 "
-"figure_layer_order_ "
-"では、レイヤのレイヤパネルでのそれぞれの配置にかかわらず、「airports」地物が「alaska」ポリゴンの上に表示されていることがわかります。"
+":guilabel:`レイヤ順序` パネルを :menuselection:`ビュー --> パネル -->` メニュー内からもしくは "
+":kbd:`Ctrl+9` を押して有効にすると、レイヤパネル内の順序とは無関係にレイヤの描画順序を定義することができます。レイヤのリストの下にある "
+"|checkbox| :guilabel:`描画順序の制御` "
+"にチェックを入れて、パネル内のレイヤを好きなように再編成してください。この順序がマップキャンバスに適用される順序になります。例えば "
+"figure_layer_order_ の場合、レイヤパネル内でのそれぞれのレイヤ配置とは無関係に、「airports」 地物が「alaska」 "
+"ポリゴンの上に表示されていることがわかります。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:416
 msgid ""
 "Unchecking |checkbox| :guilabel:`Control rendering order` will revert to "
 "default behavior."
-msgstr ""
+msgstr "|checkbox| :guilabel:`描画順序の制御` のチェックを外すと、デフォルトの動作に戻ります。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:424
 msgid "Define a layer order independent of the legend"
-msgstr ""
+msgstr "凡例とは無関係にレイヤの順序を定義する"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:432
 msgid "Overview Panel"
-msgstr ""
+msgstr "全体図パネル"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:434
 msgid ""
@@ -1113,16 +1145,15 @@ msgid ""
 "If you click-and-drag the red rectangle in the overview frame, the main map "
 "view extent will update accordingly."
 msgstr ""
-":guilabel:`オーバービュー` パネル（ :kbd:`Ctrl+8` "
-"）は、いくつかのレイヤの全範囲ビューの地図を表示します。オーバービュー地図は、 :menuselection:`レイヤ` "
-"メニューまたはレイヤのコンテキストメニューの :guilabel:`オーバービューに表示` "
-"オプションを使用するレイヤーで埋められます。ビュー内では、赤い長方形は現在の地図キャンバス範囲を示し、地図全体のどの領域を現在表示しているか迅速に判断するのに役立ちます。概要フレーム内の赤い長方形をクリックしてドラッグすると、それに応じて主地図ビューの範囲が更新されます。"
+":guilabel:`全体図` パネル（ :kbd:`Ctrl+8` ）は、いくつかのレイヤの全範囲ビューの地図を表示します。全体図マップは、 "
+":menuselection:`レイヤ` メニューまたはレイヤのコンテキストメニューの :guilabel:`全体図に表示` "
+"オプションを使用するレイヤーで埋められます。ビュー内では、現在のマップキャンバス範囲が赤い長方形で表示され、地図全体のどの領域が現在表示されているかをすばやく判断するのに役立ちます。全体図フレーム内の赤い長方形をクリックしてドラッグすると、それに応じてメインマップビューの範囲が更新されます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:443
 msgid ""
 "Note that labels are not rendered to the map overview even if the layers "
 "used in the map overview have been set up for labeling."
-msgstr ""
+msgstr "全体図で使用するレイヤにラベル付けが設定されていても、全体図にラベルはレンダリングされないことに注意してください。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:453
 msgid "Log Messages Panel"
@@ -1149,25 +1180,30 @@ msgid ""
 "of actions by selecting the action listed above. More details at :ref:`Undo "
 "and Redo edits <undoredo_edits>`."
 msgstr ""
+"For each layer being edited, the :guilabel:`元に戻す/やり直す` (:kbd:`Ctrl+5`) "
+"パネルには、編集されたレイヤごとに実行されたアクションの一覧が表示されます。リストの上に表示されたアクションを選択することで、一連のアクションを素早く元に戻すことができます。さらなる詳細については、"
+" :ref:`元に戻すとやり直し <undoredo_edits>` を参照してください。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:481
 msgid "Statistical Summary Panel"
-msgstr "統計の概要パネル"
+msgstr "統計パネル"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:483
 msgid ""
 "The :guilabel:`Statistics` panel (:kbd:`Ctrl+6`) provides summarized "
 "information on any vector layer. This panel allows you to select:"
 msgstr ""
+":guilabel:`統計` パネル (:kbd:`Ctrl+6`) "
+"は任意のベクタレイヤに関する情報の要約を提供します。このパネルでは、以下の事柄についての選択操作が可能です："
 
 #: ../../docs/user_manual/introduction/general_tools.rst:486
 msgid "the vector layer to compute the statistics on"
-msgstr ""
+msgstr "統計情報を計算するベクタレイヤ"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:487
 msgid ""
 "the column to use, or an |expression| :ref:`expression <vector_expressions>`"
-msgstr ""
+msgstr "使用するカラム、もしくは |expression| :ref:`式 <vector_expressions>`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:488
 msgid ""
@@ -1175,6 +1211,7 @@ msgid ""
 "the dialog. Depending on the field's (or expression's values) type, "
 "available statistics are:"
 msgstr ""
+"返される統計量はダイアログ右下にあるドロップダウンボタンを使って選択できます。フィールド（あるいは式の値）の型に応じて、利用可能な統計量は以下のとおりです："
 
 #: ../../docs/user_manual/introduction/general_tools.rst:495
 msgid "Statistics"
@@ -1200,19 +1237,19 @@ msgstr "日付"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:497
 msgid "Count"
-msgstr "カウント"
+msgstr "個数"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:498
 msgid "Count Distinct Value"
-msgstr "個別の値をカウント"
+msgstr "個数（ユニークな値）"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:499
 msgid "Count Missing value"
-msgstr "欠損値をカウント"
+msgstr "個数（欠損値）"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:500
 msgid "Sum"
-msgstr "和"
+msgstr "合計"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:501
 msgid "Mean"
@@ -1220,11 +1257,11 @@ msgstr "平均"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:502
 msgid "Standard Deviation"
-msgstr "標準偏差"
+msgstr "標準偏差（母集団）"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:503
 msgid "Standard Deviation on Sample"
-msgstr "サンプルの標準偏差"
+msgstr "標準偏差（標本）"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:504
 msgid "Minimal value"
@@ -1240,11 +1277,11 @@ msgstr "範囲"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:507
 msgid "Minority"
-msgstr "少数"
+msgstr "最希少値"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:508
 msgid "Majority"
-msgstr "多数"
+msgstr "最頻値"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:509
 msgid "Variety"
@@ -1252,11 +1289,11 @@ msgstr "多様"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:510
 msgid "First Quartile"
-msgstr "第一四分位"
+msgstr "第１四分位"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:511
 msgid "Third Quartile"
-msgstr "第三四分位"
+msgstr "第３四分位"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:512
 msgid "Inter Quartile Range"
@@ -1264,41 +1301,44 @@ msgstr "四分位範囲"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:513
 msgid "Minimum Length"
-msgstr "最小の長さ"
+msgstr "最小長さ"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:514
 msgid "Maximum Length"
-msgstr "最大の長さ"
+msgstr "最大長さ"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:517
 msgid "Table: Statistics available for each field type"
-msgstr "表：各フィールドタイプのために利用可能な統計"
+msgstr "表：各フィールド型に対して利用可能な統計量"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:519
 msgid "The statistical summary can be:"
-msgstr ""
+msgstr "統計量の概要は以下の設定・操作が可能です："
 
 #: ../../docs/user_manual/introduction/general_tools.rst:521
 msgid ""
 "returned for the whole layer or |checkbox| :guilabel:`selected features "
 "only`"
 msgstr ""
+"レイヤ全体に対する統計量を返す、もしくは |checkbox| :guilabel:`選択した地物のみ` "
+"にチェックを入れて選択した地物のみの統計量を返す"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:522
 msgid ""
 "recalculated using the |refresh| button when the underlying data source "
 "changes (eg, new or removed features/fields, attribute modification)"
 msgstr ""
+"|refresh| ボタンを押して、基礎となるデータソースに変更（例えば地物/フィールドの追加・削除や、属性値の変更）があった場合に統計量の再計算を行う"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:524
 msgid ""
 "|editCopy| copied to the clipboard and pasted as a table in another "
 "application"
-msgstr ""
+msgstr "|editCopy| ボタンを押して統計量をクリップボードにコピーし、別のアプリケーションにテーブルとして貼りつけられるようにする"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:531
 msgid "Show statistics on a field"
-msgstr "フィールド上の統計情報を表示します"
+msgstr "フィールドに対する統計量を表示する"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:538
 msgid "Nesting Projects"
@@ -1310,23 +1350,26 @@ msgid ""
 "the same style. You can either create a :ref:`default style <store_style>` "
 "for these layers or embed them from another project to save time and effort."
 msgstr ""
+"時には、異なるプロジェクトにあるいくつかのレイヤーをそのまま同じスタイルで保持したい場合もあるでしょう。これらのレイヤーに対して "
+":ref:`デフォルトスタイル <store_style>` "
+"を作成するか、別のプロジェクトからそのレイヤを埋め込むことで、時間と労力を節約することができます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:544
 msgid ""
 "Embed layers and groups from an existing project has some advantages over "
 "styling:"
-msgstr "既存のプロジェクトからの埋め込みレイヤーとグループには、スタイル設定を超える利点がいくつかあります："
+msgstr "既存のプロジェクトからレイヤやグループを埋め込むことには、スタイル設定を超える利点がいくつかあります："
 
 #: ../../docs/user_manual/introduction/general_tools.rst:547
 msgid ""
 "All types of layers (vector or raster, local or online...) can be added"
-msgstr ""
+msgstr "あらゆる種類のレイヤ（ベクタ/ラスタ、ローカル/オンラインなど...）を追加できます"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:548
 msgid ""
 "Fetching groups and layers, you can keep the same tree structure of the "
 "\"background\" layers in your different projects"
-msgstr ""
+msgstr "グループとレイヤを取得することで、異なるプロジェクトで「背景」レイヤのツリー構造を同じに保つことができます"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:550
 msgid ""
@@ -1334,31 +1377,35 @@ msgid ""
 "such as symbology, labels, forms, default values and actions, ensuring "
 "consistency across projects"
 msgstr ""
-"埋め込まれたレイヤは編集可能ですが、シンボル、ラベル、フォーム、デフォルト値、アクションなどのプロパティを変更することはできず、プロジェクト全体で一貫性を確保できます"
+"埋め込まれたレイヤは編集可能ですが、シンボロジ、ラベル、フォーム、デフォルト値やアクションなどのプロパティを変更することはできないため、プロジェクト間で一貫性を確保できます"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:553
 msgid ""
 "Modify the items in the original project and changes are propagated to all "
 "the other projects"
-msgstr "元のプロジェクト内の項目を変更し、変更は他のすべてのプロジェクトに反映されます。"
+msgstr "元のプロジェクト内の項目を変更すると、変更は他のすべてのプロジェクトにも反映されます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:556
 msgid ""
 "If you want to embed content from other project files into your project, "
 "select :menuselection:`Layer --> Embed Layers and Groups`:"
 msgstr ""
+"他のプロジェクトのコンテンツをあるプロジェクトに埋め込みたい場合には、 :menuselection:`レイヤ --> レイヤとグループを埋め込む` "
+"を選択して、以下のように操作します："
 
 #: ../../docs/user_manual/introduction/general_tools.rst:559
 msgid ""
 "Click the :guilabel:`...` button to look for a project: you can see the "
 "content of the project (see figure_embed_dialog_)"
 msgstr ""
+":guilabel:`...` ボタンをクリックし、プロジェクトを探します。プロジェクトの中身を確認することもできます（ "
+"figure_embed_dialog_ を参照）"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:561
 msgid ""
 "Hold down :kbd:`Ctrl` ( or |osx| :kbd:`Cmd`) and click on the layers and "
 "groups you wish to retrieve"
-msgstr ""
+msgstr ":kbd:`Ctrl` キー（ |osx| の場合は :kbd:`Cmd` キー）を押しながら取得したいレイヤやグループをクリックします"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:563
 msgid "Click :guilabel:`OK`"
@@ -1371,22 +1418,25 @@ msgid ""
 "to their name for recognition and hovering over displays a tooltip with the "
 "original project file path."
 msgstr ""
-"選択したレイヤとグループは :guilabel:`レイヤ` パネルに埋め込まれ、地図キャンバスに表示されます。 |indicatorEmbedded| "
-"アイコンが認識のために名前の横に追加され、ホバーすると、元のプロジェクトファイルパスを含むツールチップが表示されます。"
+"選択したレイヤとグループは :guilabel:`レイヤ` パネルに埋め込まれ、マップキャンバスに表示されます。識別のために "
+"|indicatorEmbedded| "
+"アイコンが名前の横に追加され、この上にマウスカーソルを置くと、元のプロジェクトファイルパスを示すツールチップが表示されます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:575
 msgid "Select layers and groups to embed"
-msgstr "埋め込むためのレイヤーとグループを選択します"
+msgstr "埋め込むレイヤとグループの選択"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:577
 msgid ""
 "Like any other layer, an embedded layer can be removed from the project by "
 "right-clicking on the layer and clicking |removeLayer| :sup:`Remove`."
 msgstr ""
+"他のレイヤと同じように、埋め込まれたレイヤもレイヤを右クリックして |removeLayer| :sup:`レイヤの削除` "
+"をクリックすることでプロジェクトから削除することができます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:580
 msgid "**Change rendering of an embedded layer**"
-msgstr "**埋め込みレイヤーのレンダリングを変更する**"
+msgstr "**埋め込みレイヤのレンダリングを変更する**"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:582
 msgid ""
@@ -1396,13 +1446,13 @@ msgid ""
 "featured and not dependent on the original project. You can then safely "
 "remove the linked layer."
 msgstr ""
-"元のプロジェクトファイルに変更を加えない限り、埋め込みレイヤーのレンダリングは変更できません。しかし、レイヤー上で右クリックして "
+"元のプロジェクトファイルに変更を加えない限り、埋め込みレイヤのレンダリングは変更できません。しかし、レイヤ上で右クリックして "
 ":guilabel:`複製` "
-"を選択すると、完全な機能を備えた、元のプロジェクトに依存していないレイヤーを作成します。その後、安全にリンクレイヤーを除去できます。"
+"を選択すると、完全な機能を備えた、元のプロジェクトに依存していないレイヤを作成されます。その後、リンクされた埋め込みレイヤを削除しても問題ありません。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:592
 msgid "Working with the map canvas"
-msgstr "地図キャンバスで作業する"
+msgstr "マップキャンバスでの作業"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:598
 msgid "Rendering"
@@ -1413,23 +1463,23 @@ msgid ""
 "By default, QGIS renders all visible layers whenever the map canvas is "
 "refreshed. The events that trigger a refresh of the map canvas include:"
 msgstr ""
-"デフォルトでは、QGISは、地図キャンバスが更新されるたびすべての可視レイヤーをレンダリングします。地図キャンバスの更新を発生させるイベントは、次のとおりです。"
+"デフォルトでは、QGISはマップキャンバスが更新されるたびにすべての可視レイヤをレンダリングします。マップキャンバスの更新を発生させるイベントは次のとおりです。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:603
 msgid "adding a layer"
-msgstr ""
+msgstr "レイヤの追加"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:604
 msgid "panning or zooming"
-msgstr ""
+msgstr "地図のパン・ズーム"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:605
 msgid "resizing the QGIS window"
-msgstr ""
+msgstr "QGISウィンドウのサイズ変更"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:606
 msgid "changing the visibility of a layer or layers"
-msgstr ""
+msgstr "レイヤの可視性の変更"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:608
 msgid "QGIS allows you to control the rendering process in a number of ways."
@@ -1449,10 +1499,10 @@ msgid ""
 ":guilabel:`Minimum (exclusive)` and :guilabel:`Maximum (inclusive)` scale "
 "values."
 msgstr ""
-"縮尺依存レンダリングでは、レイヤー（ラスターまたはベクター）が表示される最小および最大縮尺を指定できます。縮尺依存レンダリングを設定するには、凡例内のレイヤーをダブルクリックして"
+"縮尺依存レンダリングでは、レイヤ（ラスタまたはベクタ）が表示される最小および最大縮尺を指定できます。縮尺依存レンダリングを設定するには、凡例内のレイヤをダブルクリックして"
 " :guilabel:`プロパティ` ダイアログを開きます。 :guilabel:`レンダリング` タブで、 |checkbox|  "
-":guilabel:`縮尺依存可視性` をティックし、:guilabel:`最小（この値は含まない）` と :guilabel:`最大（この値を含む）`"
-" 縮尺値を入力します。"
+":guilabel:`縮尺に応じた表示設定` にチェックを入れ、:guilabel:`最小（この値は含まない）` と "
+":guilabel:`最大（この値を含む）` 縮尺値を入力します。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:623
 msgid ""
@@ -1460,12 +1510,16 @@ msgid ""
 "panel. Right-click on the layer and in the context menu, select "
 ":guilabel:`Set Layer Scale Visibility`."
 msgstr ""
+"また、レイヤパネルからレイヤの縮尺依存表示を有効にすることもできます。レイヤを右クリックして、コンテキストメニューから "
+":guilabel:`レイヤを表示する縮尺の設定` を選択します。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:626
 msgid ""
 "The |mapIdentification| :sup:`Set to current canvas scale` button allow you "
 "to use the current map canvas scale as boundary of the range visibility."
 msgstr ""
+"|mapIdentification| :sup:`現在のキャンバスの縮尺に設定` "
+"ボタンは、現在のマップキャンバスの縮尺を可視範囲の境界として使用することができます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:631
 msgid ""
@@ -1475,9 +1529,9 @@ msgid ""
 "menu. Select it and the map is zoomed to the layer's nearest visibility "
 "scale."
 msgstr ""
-"可視性縮尺の範囲外に地図の縮尺があるためにレイヤーが地図キャンバスに描画されていない場合、レイヤーはレイヤーパネル中でグレー表示され、新しいオプション "
-":guilabel:`可視縮尺にズーム` "
-"がレイヤーのコンテキストメニューに表示されます。それを選択すると、地図はそのレイヤーの最寄の可視性縮尺にズームされます。"
+"マップの縮尺が表示可能な縮尺の範囲外にあるためにレイヤがマップキャンバスにレンダリングされない場合、そのレイヤはレイヤパネルでグレー表示され、新しいオプション"
+" :guilabel:`表示される縮尺にズーム` "
+"がレイヤのコンテキストメニューに表示されます。これを選択すると、マップはそのレイヤの表示可能な縮尺に最も近い縮尺までズームします。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:640
 msgid "Controlling Map Rendering"
@@ -1485,7 +1539,7 @@ msgstr "地図レンダリングの制御"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:642
 msgid "Map rendering can be controlled in various ways, as described below."
-msgstr "後述のように地図レンダリングは、さまざまな方法で制御できます。"
+msgstr "以下で述べるように、地図レンダリングはさまざまな方法で制御できます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:649
 msgid "Suspending Rendering"
@@ -1499,36 +1553,38 @@ msgid ""
 "response to any of the events described in the section :ref:`redraw_events`."
 " Examples of when you might want to suspend rendering include:"
 msgstr ""
+"レンダリングを中断するには、ステータスバーの右下角にある |checkbox| :guilabel:`レンダ` チェックボックスをクリックします。 "
+"|checkbox| :guilabel:`レンダ` がチェックされていない場合、QGISは :ref:`redraw_events` "
+"のセクションで説明されているイベントに応じたキャンバスの再描画を行いません。レンダリングを中断したい場合の例としては、以下のようなものがあります："
 
 #: ../../docs/user_manual/introduction/general_tools.rst:657
 msgid "adding many layers and symbolizing them prior to drawing"
-msgstr ""
+msgstr "多数のレイヤを追加し、描画される前にシンボルを設定したい場合"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:658
 msgid ""
 "adding one or more large layers and setting scale dependency before drawing"
-msgstr ""
+msgstr "１つもしくは多数の巨大なレイヤを追加し、描画される前に縮尺依存表示設定を行いたい場合"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:659
 msgid ""
 "adding one or more large layers and zooming to a specific view before "
 "drawing"
-msgstr ""
+msgstr "１つもしくは多数の巨大なレイヤを追加し、描画される前に特定のビューにズームしたい場合"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:660
 msgid "any combination of the above"
-msgstr ""
+msgstr "上で挙げたいずれかの組み合わせの場合"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:662
 msgid ""
 "Checking the |checkbox| :guilabel:`Render` checkbox enables rendering and "
 "causes an immediate refresh of the map canvas."
-msgstr ""
-"|checkbox| :guilabel:`レンダリング` がチェックされるとレンダリングが有効になり、即座に地図キャンバスが更新されます。"
+msgstr "|checkbox| :guilabel:`レンダ` がチェックされるとレンダリングが有効になり、即座にマップキャンバスが更新されます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:672
 msgid "Setting Layer Add Option"
-msgstr "レイヤー追加オプションの設定"
+msgstr "レイヤ追加時のオプションの設定"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:674
 msgid ""
@@ -1540,12 +1596,10 @@ msgid ""
 "layers added to the map should be displayed`. Any layer subsequently added "
 "to the map will be off (invisible) by default."
 msgstr ""
-"描画せずに常に新しいレイヤを読み込むようにオプションを設定できます。 "
-"これは、レイヤーは地図に追加されますが、凡例中のその可視性チェックボックスがデフォルトでオフになることを意味します。 "
-"このオプションを設定するには、メニューオプション :menuselection:`設定 - >オプション` を選択し、 "
-":guilabel:`レンダリング` タブをクリックしてください。 |checkbox| "
-":guilabel:`デフォルトで地図に追加された新しいレイヤーが表示される` のチェックを外します。 "
-"その後地図に追加されたレイヤーは、デフォルトでオフ（非表示）になります。"
+"新しいレイヤを常に描画せずに読み込むオプションを設定できます。これは、レイヤはマップに追加されますが、凡例内の表示チェックボックスはデフォルトではオフになることを意味します。このオプションを設定するには、メニューオプションの"
+" :menuselection:`設定 --> オプション` を選択して :guilabel:`レンダリング` タブをクリックします。 "
+"|checkbox| :guilabel:`追加レイヤのデフォルトで表示` "
+"のチェックを外します。その後にマップに追加されたレイヤは、デフォルトでオフ（非表示）になります。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:688
 msgid "Stopping Rendering"
@@ -1557,13 +1611,13 @@ msgid ""
 "refresh of the map canvas and leave the map partially drawn. It may take a "
 "bit of time between pressing :kbd:`Esc` for the map drawing to halt."
 msgstr ""
-"地図の描画を停止するには、 :kbd:`Esc` "
-"キーを押します。これにより地図キャンバスの更新は中断され、地図が部分的に描画されたままになります。地図の描画が停止するには、 :kbd:`Esc` "
-"を押している間に少し時間がかかる場合があります。"
+"マップの描画を停止するには、 :kbd:`Esc` "
+"キーを押します。これによりマップキャンバスの更新は中断され、マップは部分的に描画されたままになります。 :kbd:`Esc` "
+"を押してからマップの描画が停止するまでには、少し時間がかかる場合があります。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:700
 msgid "Influence Rendering Quality"
-msgstr "描画品質への影響"
+msgstr "レンダリング品質への影響"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:702
 msgid ""
@@ -1572,9 +1626,9 @@ msgid ""
 ":guilabel:`Rendering` tab and select or deselect |checkbox| :guilabel:`Make "
 "lines appear less jagged at the expense of some drawing performance`."
 msgstr ""
-"QGISは地図のレンダリング品質に影響を与えるためのオプションを持っています。メニューオプション :menuselection:`設定 --> "
-"オプション` を選択して、 :guilabel:`レンダリング` タブをクリックし、 |checkbox| "
-":guilabel:`いくらか描画性能を犠牲に線のギザギザを少なく` を選択または選択解除してください。"
+"QGISにはマップのレンダリング品質に影響を与えるオプションがあります。メニューオプションの :menuselection:`設定 --> オプション`"
+" を選択して、 :guilabel:`レンダリング` タブをクリックし、 |checkbox| "
+":guilabel:`線のジャギーを目立たなくする（描画速度が若干低下します）` を選択または選択解除してください。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:711
 msgid "Speed-up rendering"
@@ -1586,23 +1640,22 @@ msgid ""
 "QGIS options dialog using :menuselection:`Settings --> Options`, go to the "
 ":guilabel:`Rendering` tab and select or deselect the following checkboxes:"
 msgstr ""
-"レンダリング速度を上げるいくつかの設定があります。 :menuselection:`設定 --> オプション` "
-"を使用してQGISのオプション]ダイアログボックスを開き、 :guilabel:`レンダリング` "
-"タブに行って、次のチェックボックスを選択または選択解除します："
+"レンダリング速度を上げる設定がいくつかあります。 :menuselection:`設定 --> オプション` "
+"からQGISのオプションダイアログボックスを開き、 :guilabel:`レンダリング` タブに行って、次のチェックボックスを選択または選択解除します："
 
 #: ../../docs/user_manual/introduction/general_tools.rst:717
 msgid ""
 "|checkbox| :guilabel:`Use render caching where possible to speed up "
 "redraws`."
-msgstr ""
+msgstr "|checkbox| :guilabel:`再描画の速度を上げられる時にレンダリングのキャッシュを利用する`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:718
 msgid ""
 "|checkbox| :guilabel:`Render layers in parallel using many CPU cores` and "
 "then set the |checkbox| :guilabel:`Max cores to use`."
 msgstr ""
-"|checkbox| :guilabel:`多くのCPUコアを使用して並列にレイヤーをレンダリング` してから |checkbox|  "
-":guilabel:`最大コアを使用` を設定する。"
+"|checkbox| :guilabel:`レイヤの描画を複数のCPUコアを使って並列に行う` と |checkbox|  "
+":guilabel:`最大コア数` の設定"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:720
 msgid ""
@@ -1612,8 +1665,8 @@ msgid ""
 "rendering finishes faster than this duration, it will be shown "
 "instantaneously."
 msgstr ""
-"地図は、バックグラウンドで別々の画像上に |checkbox| :guilabel:`地図更新間隔` "
-"毎にレンダリングされ、この（オフスクリーン）画像の内容は表示画面の表示を更新するために取られます。ただし、レンダリングがこの期間よりも早く終了した場合は、それは瞬時に表示されます。"
+"マップはバックグラウンドで別々の画像にレンダリングされ、 |checkbox| :guilabel:`更新間隔` "
+"毎に、この（画面外の）画像の内容が表示画面の更新に使用されます。ただし、レンダリングがこの時間よりも早く終了した場合は、それが瞬時に表示されます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:725
 msgid ""
@@ -1622,6 +1675,8 @@ msgid ""
 "result, they display more quickly. Be aware that this can cause rendering "
 "inconsistencies."
 msgstr ""
+"|checkbox| :guilabel:`新規追加レイヤの地物の簡素化をデフォルトで有効にする` "
+"を使用すると、地物のジオメトリが簡略化（ノード数が減少）され、結果として表示が速くなります。これはレンダリングに不整合が生じる場合があることに注意してください。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:735
 msgid "Zooming and Panning"
@@ -1629,7 +1684,7 @@ msgstr "ズームとパン"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:737
 msgid "QGIS provides tools to zoom and pan to your area of interest."
-msgstr "QGISは関心のお住まいの地域にズームするためのツールとパンを提供します。"
+msgstr "QGISには、関心のある領域にズームやパンを行うためのツールがあります。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:739
 msgid ""
@@ -1640,6 +1695,10 @@ msgid ""
 ":menuselection:`Options --> Map tools` menu to define the scale behavior "
 "while zooming."
 msgstr ""
+"ツールバー上の |pan| :sup:`地図を移動` や |zoomIn| :sup:`拡大`/|zoomOut| :sup:`縮小` "
+"アイコンをマウスで操作する以外にも、マウスホイールやスペースバー、矢印キーを使って移動することもできます。 :menuselection:`設定 "
+"-->` |options| :menuselection:`オプション --> ツール` メニューから :guilabel:`ズーム倍率` "
+"を設定することができ、ズーム時のスケール動作を定義することができます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:747
 msgid "With the mouse wheel"
@@ -1653,6 +1712,9 @@ msgid ""
 "of the zoomed area of interest. Holding down :kbd:`Ctrl` while rolling the "
 "mouse wheel results in a finer zoom."
 msgstr ""
+"マウスホイールを押してメインウィンドウの内側をパンすることができます（macOSでは、 :kbd:`cmd` "
+"キーを押したままにする必要があるかもしれません）。マウスホイールを回転させて、マップを拡大・縮小することができます。マウスのカーソル位置がズームされた領域の中心になります。"
+" :kbd:`Ctrl` キーを押したままマウスホイールを回転させると、より細かいズームができます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:756
 msgid "With the arrow keys"
@@ -1663,7 +1725,7 @@ msgid ""
 "Panning the map is possible with the arrow keys. Place the mouse cursor "
 "inside the map area, and click on the arrow keys to pan up, down, left and "
 "right."
-msgstr ""
+msgstr "矢印キーで地図のパンが可能です。マウスカーソルをマップエリア内に置き、矢印キーを押して上下左右にパンすることができます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:762
 msgid ""
@@ -1673,9 +1735,9 @@ msgid ""
 ":kbd:`Ctrl++` or :kbd:`Ctrl+-` also performs an immediate zoom in/out on the"
 " map canvas."
 msgstr ""
-"また、スペースバーを使用すると、マウスの動きで一時的に地図をパンできます。キーボードの :kbd:`PgUp` と :kbd:`PgDown` "
-"キーは地図表示がズーム倍率のセットを、次のズームインまたはズームアウトします。 :kbd:`Ctrl + +` または :kbd:`Ctrl + -` "
-"を押しても地図キャンバス上ですぐにズームイン/アウトを実行します。"
+"また、スペースバーを使用するとマウスの動きで一時的に地図をパンすることもできます。キーボードの :kbd:`PgUp` キーや "
+":kbd:`PgDown` キーを押すと、設定されたズーム倍率に従ってマップ表示がズームインまたはズームアウトされます。また、 "
+":kbd:`Ctrl++` や :kbd:`Ctrl+-` でもマップキャンバス上で即座にズームイン/ズームアウトが実行されます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:768
 msgid ""
@@ -1684,6 +1746,9 @@ msgid ""
 "zoom to that area. This is not enabled for selection tools (since they use "
 ":kbd:`Shift` for adding to selection) or edit tools."
 msgstr ""
+"特定のマップツール（地物の識別ツール、計測ツール...）がアクティブな場合、 :kbd:`Shift` "
+"キーを押しながらマップ上で矩形をドラッグするとその領域にズームすることができます。これは選択ツールや編集ツールがアクティブな場合には使用することはできません（選択範囲への追加に"
+" :kbd:`Shift` キーを使うため）。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:780
 msgid "Spatial Bookmarks"
@@ -1698,6 +1763,10 @@ msgid ""
 ":guilabel:`Project Bookmarks`) and stored within the project file, which can"
 " be helpful if the project is to be shared with other users."
 msgstr ""
+"空間ブックマークは地理的な場所を「ブックマーク」し、後でその場所に戻ることができます。デフォルトでは、ブックマークは（ "
+":guilabel:`ユーザー・ブックマーク` "
+"として）ユーザープロファイルに保存されるため、ユーザーが開いたどのプロジェクトからでもブックマークを利用できます。また、単一のプロジェクト "
+"に対して保存（ :guilabel:`プロジェクト・ブックマーク` ）することもでき、これはプロジェクトを他のユーザーと共有する場合に便利です。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:790
 msgid "Creating a Bookmark"
@@ -1709,7 +1778,7 @@ msgstr "ブックマークをを作成するには："
 
 #: ../../docs/user_manual/introduction/general_tools.rst:794
 msgid "Zoom and pan to the area of interest."
-msgstr ""
+msgstr "関心のある領域にズームやパンし移動します"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:795
 msgid ""
@@ -1719,18 +1788,23 @@ msgid ""
 ":guilabel:`Browser` panel and select :guilabel:`New Spatial Bookmark`. The "
 ":guilabel:`Bookmark Editor` dialog opens."
 msgstr ""
+"メニューオプションの :menuselection:`ビュー -->` |newBookmark| "
+":menuselection:`空間ブックマークを作成...` を選択するか、 :kbd:`Ctrl+B` を押す、もしくは "
+":guilabel:`ブラウザ` パネル内の |showBookmarks| :guilabel:`空間ブックマーク` "
+"エントリを右クリックして、select :guilabel:`新規空間ブックマーク` を選択します。 :guilabel:`ブックマークエディタ` "
+"ダイアログが開きます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:807
 msgid "The Bookmark Editor Dialog"
-msgstr ""
+msgstr "ブックマークエディタダイアログ"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:809
 msgid "Enter a descriptive name for the bookmark"
-msgstr ""
+msgstr "ブックマークにわかりやすい名前を付けます"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:810
 msgid "Enter or select a group name in which to store related bookmarks"
-msgstr ""
+msgstr "関連するブックマークを保存するグループ名を入力または選択します。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:811
 msgid ""
@@ -1738,24 +1812,27 @@ msgid ""
 "the extent can be calculated from a loaded layer extent, the current map "
 "canvas or drawn over the current map canvas."
 msgstr ""
+"保存したい領域範囲を領域セレクタを使用して選択します。保存範囲は読み込まれたレイヤの領域か、現在のマップキャンバス領域、もしくは現在のマップキャンバス上に描画した領域より計算されます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:814
 msgid "Indicate the :guilabel:`CRS` to use for the extent"
-msgstr ""
+msgstr "領域に使用する :guilabel:`CRS` を指定します"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:815
 msgid ""
 "Select whether the bookmark will be :guilabel:`Saved in` :guilabel:`User "
 "Bookmarks` or :guilabel:`Project Bookmarks`"
 msgstr ""
+"ブックマークの :guilabel:`保存先` を :guilabel:`ユーザー・ブックマーク` か "
+":guilabel:`プロジェクト・ブックマーク` のどちらにするか選択します"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:817
 msgid "Press :guilabel:`Save` to add the bookmark to the list"
-msgstr ""
+msgstr ":guilabel:`保存` ボダンを押して、ブックマークをリストに追加します"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:819
 msgid "Note that you can have multiple bookmarks with the same name."
-msgstr "同じ名称で複数のブックマークを所有できることにご注意ください。"
+msgstr "同じ名前のブックマークを複数持てることに注意してください。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:822
 msgid "Working with Bookmarks"
@@ -1766,6 +1843,7 @@ msgid ""
 "To use and manage bookmarks, you can either use the :guilabel:`Spatial "
 "Bookmarks` panel or :guilabel:`Browser`."
 msgstr ""
+"ブックマークを利用・管理するには、 :guilabel:`空間ブックマーク` パネル もしくは :guilabel:`ブラウザ` パネルを使用できます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:827
 msgid ""
@@ -1776,58 +1854,68 @@ msgid ""
 "to show the |showBookmarks| :guilabel:`Spatial Bookmarks` entry in the "
 ":guilabel:`Browser` panel."
 msgstr ""
+":menuselection:`ビュー -->` |showBookmarks| :menuselection:`空間ブックマーク・マネージャを表示` "
+"を選択するか :kbd:`Ctrl+7` を押すと、 :guilabel:`空間ブックマークマネージャ` パネルが開きます。 "
+":menuselection:`ビュー -->` |showBookmarks| :menuselection:`空間ブックマークを表示` を選択するか"
+" :kbd:`Ctrl+Shift+B` を押すと、 :guilabel:`ブラウザ` パネル内の |showBookmarks| "
+":guilabel:`空間ブックマーク` エントリが表示されます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:835
 msgid "You can perform the following tasks:"
-msgstr ""
+msgstr "以下の作業を行うことができます："
 
 #: ../../docs/user_manual/introduction/general_tools.rst:842
 msgid "Task"
-msgstr ""
+msgstr "タスク"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:843
 msgid "Spatial Bookmark Manager"
-msgstr ""
+msgstr "空間ブックマークマネージャ"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:844
 msgid "Browser"
-msgstr ""
+msgstr "ブラウザ"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:845
 msgid "**Zoom to a Bookmark**"
-msgstr ""
+msgstr "**ブックマークにズーム**"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:846
 msgid ""
 "Double-click on it, or select the bookmark and press the |zoomToBookmark| "
 ":guilabel:`Zoom to bookmark` button."
 msgstr ""
+"ブックマーク上でダブルクリックするか、ブックマークを選択して |zoomToBookmark| :guilabel:`ブックマークにズーム` "
+"ボタンを押す"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:848
 msgid ""
 "Double-click on it, drag and drop it to the map canvas, or right-click the "
 "bookmark and select :guilabel:`Zoom to Bookmark`."
 msgstr ""
+"ブックマーク上でダブルクリックするか、ブックマークをマップキャンバス上へドラッグドロップする、あるいはブックマークで右クリックし、 "
+":guilabel:`ブックマークにズーム` を選択する"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:850
 msgid "**Delete a bookmark**"
-msgstr ""
+msgstr "**ブックマークを削除する**"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:851
 msgid ""
 "Select the bookmark and click the |deleteSelected| :guilabel:`Delete "
 "bookmark` button. Confirm your choice."
 msgstr ""
+"ブックマークを選択して |deleteSelected| :guilabel:`ブックマークを削除する` ボタンを押し、削除の確認を承認する"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:853
 msgid ""
 "Right-click the bookmark and select :guilabel:`Delete Spatial Bookmark`. "
 "Confirm your choice."
-msgstr ""
+msgstr "ブックマークを右クリックして :guilabel:`ブックマークを削除` を選択し、削除の確認を承認する"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:855
 msgid "**Export bookmarks to XML**"
-msgstr ""
+msgstr "**ブックマークをXMLへエクスポート**"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:856
 msgid ""
@@ -1835,6 +1923,8 @@ msgid ""
 "|sharingExport| :guilabel:`Export`. All the bookmarks (user or project) are "
 "saved in an xml file."
 msgstr ""
+"|sharing| :guilabel:`ブックマークのインポートとエクスポート` ボタンをクリックし、 |sharingExport| "
+":guilabel:`エクスポート` を選択する。すべての空間ブックマーク（ユーザー、プロジェクトともに）がXMLファイルに保存される"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:859
 msgid ""
@@ -1842,10 +1932,12 @@ msgid ""
 "right-click and select |sharingExport| :guilabel:`Export Spatial "
 "Bookmarks...`. The selected bookmark subset is saved."
 msgstr ""
+"１つまたは（ユーザー、プロジェクト）両方のフォルダ、あるいはサブフォルダ（グループ）を選択し、右クリックして |sharingExport| "
+":guilabel:`空間ブックマークをエクスポート...` を選ぶ。選択したブックマークのサブセットが保存される"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:862
 msgid "**Import bookmarks from XML**"
-msgstr ""
+msgstr "**ブックマークをXMLからインポート**"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:863
 msgid ""
@@ -1853,6 +1945,8 @@ msgid ""
 "|sharingImport| :guilabel:`Import`. All bookmarks in the XML file are "
 "imported as user bookmarks."
 msgstr ""
+"|sharing| :guilabel:`ブックマークのインポートとエクスポート` ボタンをクリックし、 |sharingImport| "
+":guilabel:`インポート` を選択する。XMLファイル内の全てのブックマークがユーザー・ブックマークとしてインポートされる"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:866
 msgid ""
@@ -1862,16 +1956,21 @@ msgid ""
 " If performed on the :guilabel:`Spatial Bookmarks` entry, the bookmarks are "
 "added to :guilabel:`User Bookmarks`."
 msgstr ""
+"ブックマークをインポートしたい場所として :guilabel:`空間ブックマーク` "
+"エントリか、その中のフォルダ（ユーザーまたはプロジェクト）のどれかか、あるいはそのサブフォルダ（グループ）を決めて右クリックし、 "
+"|sharingImport| :guilabel:`空間ブックマークをインポート` を選ぶ。 :guilabel:`空間ブックマーク` "
+"エントリを選んだ場合、インポートしたブックマークは :guilabel:`ユーザー・ブックマーク` に追加される"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:871
 msgid "**Edit bookmark**"
-msgstr ""
+msgstr "**ブックマークを編集**"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:872
 msgid ""
 "You can change a bookmark by changing the values in the table. You can edit "
 "the name, the group, the extent and if it is stored in the project or not."
 msgstr ""
+"テーブル内の値を変えることでブックマークを変更することができる。名前、グループ名、範囲、そしてブックマークがプロジェクトに保存されるか否かを編集できる"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:875
 msgid ""
@@ -1880,22 +1979,24 @@ msgid ""
 "redefine every aspect of the bookmark as if you were creating it for the "
 "first time."
 msgstr ""
+"編集したいブックマークを右クリックし、 :guilabel:`空間ブックマークを編集...` を選択する。 "
+":guilabel:`ブックマーク・エディタ` が開き、ブックマークを最初に作成したときのようにさまざまな点についてを再定義できる"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:880
 msgid ""
 "You can also drag and drop the bookmark between folders (user and project) "
 "and subfolders (groups)."
-msgstr ""
+msgstr "フォルダ間（ユーザー、プロジェクト）やサブフォルダ（グループ）間でブックマークをドラッグ・ドロップすることもできる"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:883
 msgid ""
 "You can also zoom to bookmarks by typing the bookmark name in the "
 ":ref:`locator <label_statusbar>`."
-msgstr ""
+msgstr ":ref:`ロケータ <label_statusbar>` バーにブックマーク名を入力して、ブックマーク範囲にズームすることもできます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:890
 msgid "Decorations"
-msgstr "整飾"
+msgstr "地図整飾"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:892
 msgid ""
@@ -1903,6 +2004,8 @@ msgid ""
 "Scale Bar and Layout Extents. They are used to 'decorate' the map by adding "
 "cartographic elements."
 msgstr ""
+"地図整飾には、グリッド、タイトルラベル、著作権ラベル、画像、方位記号、スケールバー、そしてレイアウト範囲があります。 "
+"これらは地図要素を追加することによって地図を「整飾」するために使われます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:899
 msgid "Grid"
@@ -1912,13 +2015,13 @@ msgstr "グリッド"
 msgid ""
 "|addGrid| :guilabel:`Grid` allows you to add a coordinate grid and "
 "coordinate annotations to the map canvas."
-msgstr ""
+msgstr "|addGrid| :guilabel:`グリッド` はマップキャンバスに座標グリッドと座標注釈を追加します。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:904
 msgid ""
 "Select menu option :menuselection:`View --> Decorations --> Grid...` to open"
 " the dialog."
-msgstr ""
+msgstr ":menuselection:`ビュー --> 地図整飾 --> グリッド...` のメニューオプションを選択し、ダイアログを開きます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:911
 msgid "The Grid Dialog"
@@ -1929,77 +2032,83 @@ msgid ""
 "Tick |checkbox| :guilabel:`Enable grid` and set grid definitions according "
 "to the layers loaded in the map canvas:"
 msgstr ""
+"|checkbox| :guilabel:`グリッドを有効にする` "
+"にチェックを入れ、マップキャンバスに読み込まれたレイヤに応じてグリッド定義を設定します："
 
 #: ../../docs/user_manual/introduction/general_tools.rst:916
 msgid ""
 "The :guilabel:`Grid type`: it can be :guilabel:`Line` or :guilabel:`Marker`"
-msgstr ""
+msgstr ":guilabel:`グリッドタイプ` ： :guilabel:`ライン` もしくは :guilabel:`マーカー` から選びます"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:917
 msgid ""
 "The associated :ref:`Line symbol <vector_line_symbols>` or :ref:`marker "
 "symbol <vector_marker_symbols>` used to represent the grid marks"
 msgstr ""
+"グリッドのマークを表現するために使用される、関連した :ref:`ラインシンボル <vector_line_symbols>` あるいは "
+":ref:`マーカーシンボル <vector_marker_symbols>`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:919
 msgid ""
 "The :guilabel:`Interval X` and :guilabel:`Interval Y` between the grid "
 "marks, in map units"
-msgstr ""
+msgstr "マップ単位によるグリッドマーク間の :guilabel:`X 間隔` と :guilabel:`Y 間隔`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:921
 msgid ""
 "An :guilabel:`Offset X` and :guilabel:`Offset Y` distance of the grid marks "
 "from the bottom left corner of the map canvas, in map units"
 msgstr ""
+"マップ単位によるマップキャンバス左下隅からグリッドマークまでの距離 :guilabel:`X オフセット` と :guilabel:`Y オフセット`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:923
 msgid "The interval and offset parameters can be set based on the:"
-msgstr ""
+msgstr "間隔とオフセットのパラメータは、以下に基づいて設定することもできます："
 
 #: ../../docs/user_manual/introduction/general_tools.rst:925
 msgid ""
 ":guilabel:`Canvas Extents`: generates a grid with an interval that is "
 "approximatively 1/5 of the canvas width"
-msgstr ""
+msgstr ":guilabel:`キャンバスの領域`: キャンバス幅のおおよそ1/5 の間隔でグリッドを生成します"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:927
 msgid ":guilabel:`Active Raster Layer` resolution"
-msgstr ""
+msgstr ":guilabel:`アクティブラスタレイヤ` の解像度に基づき設定します"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:928
 msgid ""
 "Tick |checkbox| :guilabel:`Draw annotations` to display the coordinates of "
 "the grid marks and set:"
-msgstr ""
+msgstr "|checkbox| :guilabel:`注釈の描画` にチェックを入れ、グリッドのマークの座標を表示します。以下の設定があります。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:931
 msgid ""
 "The :guilabel:`Annotation direction`, ie how the labels would be placed "
 "relative to their grid line. It can be:"
-msgstr ""
+msgstr ":guilabel:`注記方向`, ラベルがグリッド線に対して相対的にどのように配置されるかを設定します。これには以下の選択肢があります："
 
 #: ../../docs/user_manual/introduction/general_tools.rst:934
 msgid ":guilabel:`Horizontal` or :guilabel:`Vertical` for all the labels"
-msgstr ""
+msgstr "全てのラベルを :guilabel:`水平` あるいは :guilabel:`垂直` に配置する"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:935
 msgid ""
 ":guilabel:`Horizontal and Vertical`, ie each label is parallel to the grid "
 "mark it refers to"
-msgstr ""
+msgstr ":guilabel:`水平と垂直` 各ラベルは参照しているグリッドマークと平行です"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:937
 msgid ""
 ":guilabel:`Boundary direction`, ie each label follows the canvas boundary, "
 "and is perpendicular to the grid mark it refers to"
-msgstr ""
+msgstr ":guilabel:`境界線の方向` 各ラベルはキャンバスの境界線に沿っており、参照するグリッドマークに垂直です"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:939
 msgid ""
 "The :guilabel:`Annotation font` using the OS :ref:`font selector widget "
 "<font_selector>`"
 msgstr ""
+":guilabel:`注記用フォント` OSの :ref:`フォントセレクタウィジェット <font_selector>` を使って設定します。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:941
 msgid ""
@@ -2007,10 +2116,12 @@ msgid ""
 "canvas limits. Convenient when exporting the map canvas eg to an image "
 "format or PDF, and avoid annotations to be on the \"paper\" limits."
 msgstr ""
+":guilabel:`地図のフレームまでの距離` "
+"注記とマップキャンバスの限界の間のマージンです。マップキャンバスを画像形式やPDFにエクスポートする際に便利で、「紙」の境界上に注記が乗ってしまうことを避けられます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:947
 msgid "The :guilabel:`Coordinate precision`"
-msgstr ""
+msgstr ":guilabel:`座標精度`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:949
 #: ../../docs/user_manual/introduction/general_tools.rst:988
@@ -2020,40 +2131,43 @@ msgid ""
 "Click :guilabel:`Apply` to verify that it looks as expected or "
 ":guilabel:`OK` if you're satisfied."
 msgstr ""
+":guilabel:`適用` ボタンをクリックして見た目が期待通りかを確認し、満足ならば :guilabel:`OK` ボタンをクリックします。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:956
 msgid "Title Label"
-msgstr ""
+msgstr "タイトルラベル"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:958
 msgid ""
 "|titleLabel| :guilabel:`Title Label` allows you to decorate your map with a "
 "**Title**."
-msgstr ""
+msgstr "|titleLabel| :guilabel:`タイトルラベル` は **タイトル** でマップを整飾します。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:960
 msgid "To add a Title Label decoration:"
-msgstr ""
+msgstr "タイトルラベル整飾を追加するには："
 
 #: ../../docs/user_manual/introduction/general_tools.rst:962
 msgid ""
 "Select menu option :menuselection:`View --> Decorations --> Title Label...` "
 "to open the dialog."
 msgstr ""
+":menuselection:`ビュー --> 地図整飾 --> タイトルラベル...` のメニューオプションを選択し、ダイアログを開きます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:970
 msgid "The Title Decoration Dialog"
-msgstr ""
+msgstr "タイトルラベルの装飾ダイアログ"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:972
 msgid "Make sure |checkbox| :guilabel:`Enable Title Label` is checked"
-msgstr ""
+msgstr "|checkbox| :guilabel:`タイトルラベルの有効化` をチェックしてください"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:973
 msgid ""
 "Enter the title text you want to place on the map. You can make it dynamic "
 "using the :guilabel:`Insert an Expression` button."
 msgstr ""
+"マップに追加したいタイトルのテキストを入力します。 :guilabel:`式の挿入` ボタンを使用して、テキストを動的にすることもできます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:975
 #: ../../docs/user_manual/introduction/general_tools.rst:1015
@@ -2063,12 +2177,15 @@ msgid ""
 "<text_format>` options. Quickly set the font color and opacity by clicking "
 "the black arrow to the right of the font combo box."
 msgstr ""
+"ラベルの :guilabel:`フォント` を QGISの :ref:`テキストの整形 <text_format>` オプションへフルアクセスできる "
+":ref:`フォントセレクタウィジェット <font_selector>` "
+"を使用して選択します。フォントコンボボックスの右にある黒い矢印をクリックすると、フォントの色や不透明度を素早く設定することができます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:979
 msgid ""
 "Select the :ref:`color <color-selector>` to apply to the title's "
 ":guilabel:`Background bar color`."
-msgstr ""
+msgstr "タイトルの :guilabel:`背景のバーの色` に適用する :ref:`色 <color-selector>` を選択します。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:981
 msgid ""
@@ -2077,6 +2194,9 @@ msgid ""
 "Right`, :guilabel:`Bottom left`, :guilabel:`Bottom Center` and "
 ":guilabel:`Bottom Right`."
 msgstr ""
+"キャンバス内のラベルの :guilabel:`配置` を選択します。選択肢は :guilabel:`左上` 、 :guilabel:`中上` "
+"（デフォルト）、 :guilabel:`右上` 、 :guilabel:`左下` 、 :guilabel:`中下` そして :guilabel:`右下`"
+" です。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:985
 #: ../../docs/user_manual/introduction/general_tools.rst:1023
@@ -2086,42 +2206,44 @@ msgid ""
 "**Pixels** or set as a **Percentage** of the width or height of the map "
 "canvas."
 msgstr ""
-"水平および/または垂直の :guilabel:`縁からの余白` を設定することで、項目の配置を絞り込みます。これらの値は **ミリ** または "
-"**ピクセル** 単位として、または地図キャンバスの幅または高さの **割合** として設定できます。"
+"水平および/または垂直の :guilabel:`端からのマージン` を設定することで、アイテムの配置を調整します。これらの値は **ミリメートル** "
+"または **ピクセル** 単位で指定するか、マップキャンバスの幅または高さの **パーセント** として設定することができます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:995
 msgid "Copyright Label"
-msgstr ""
+msgstr "著作権ラベル"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:997
 msgid ""
 "|copyrightLabel| :guilabel:`Copyright Label` can be used to decorate your "
 "map with a **Copyright** label."
-msgstr ""
+msgstr "|copyrightLabel| :guilabel:`著作権ラベル` は、 **著作権** ラベルでマップを整飾するために使います。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1000
 msgid "To add this decoration:"
-msgstr ""
+msgstr "著作権ラベル整飾を追加するには："
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1002
 msgid ""
 "Select menu option :menuselection:`View --> Decorations --> Copyright "
 "Label...` to open the dialog."
 msgstr ""
+":menuselection:`ビュー --> 地図整飾 --> 著作権ラベル...` のメニューオプションを選択し、ダイアログを開きます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1010
 msgid "The Copyright Decoration Dialog"
-msgstr ""
+msgstr "著作権ラベル整飾ダイアログ"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1012
 msgid "Make sure |checkbox| :guilabel:`Enable Copyright Label` is checked"
-msgstr ""
+msgstr "|checkbox| :guilabel:`著作権ラベルを有効にする` をチェックしてください"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1013
 msgid ""
 "Enter the copyright text you want to place on the map. You can make it "
 "dynamic using the :guilabel:`Insert an Expression` button."
 msgstr ""
+"マップに追加したい著作権ラベルのテキストを入力します。 :guilabel:`式の挿入` ボタンを使用して、テキストを動的にすることもできます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1019
 msgid ""
@@ -2130,40 +2252,44 @@ msgid ""
 ":guilabel:`Bottom left`, :guilabel:`Bottom Center`, and :guilabel:`Bottom "
 "Right` (default for Copyright decoration)"
 msgstr ""
+"キャンバス内のラベルの :guilabel:`配置` を選択します。選択肢は :guilabel:`左上` 、 :guilabel:`中上` 、 "
+":guilabel:`右上` 、 :guilabel:`左下` 、 :guilabel:`中下` そして "
+":guilabel:`右下（著作権整飾のデフォルト）` です。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1033
 msgid "Image Decoration"
-msgstr ""
+msgstr "画像"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1035
 msgid ""
 "|addImage| :guilabel:`Image` allows you to add an image (logo, legend, ..) "
 "on the map canvas."
-msgstr ""
+msgstr "|addImage| :guilabel:`画像` はマップキャンバスに画像（ロゴ、凡例など...）を追加します。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1037
 msgid "To add an image:"
-msgstr ""
+msgstr "画像を追加するには："
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1039
 msgid ""
 "Select menu option :menuselection:`View --> Decorations --> Image...` to "
 "open the dialog."
-msgstr ""
+msgstr ":menuselection:`ビュー --> 地図整飾 --> 画像...` のメニューオプションを選択し、ダイアログを開きます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1047
 msgid "The Image Decoration Dialog"
-msgstr ""
+msgstr "画像整飾ダイアログ"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1049
 msgid "Make sure |checkbox| :guilabel:`Enable Image` is checked"
-msgstr ""
+msgstr "|checkbox| :guilabel:`画像を有効化` をチェックしてください"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1050
 msgid ""
 "Select a bitmap (e.g. png or jpg) or SVG image using the :guilabel:`...` "
 ":sup:`Browse` button"
 msgstr ""
+":guilabel:`...` :sup:`ブラウズ` ボタンを押して、ビットマップ画像（例：png や jpg）か SVG画像を選択します"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1052
 msgid ""
@@ -2171,12 +2297,16 @@ msgid ""
 ":guilabel:`Fill` or :guilabel:`Stroke` (outline) color. For bitmap images, "
 "the color settings are disabled."
 msgstr ""
+"パラメータが有効化されたSVG画像を選択した場合、 :guilabel:`塗りつぶし` や :guilabel:`ストローク` "
+"（輪郭線）の色も設定することができます。ビットマップ画像の場合には、この色設定は無効になっています。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1055
 msgid ""
 "Set a :guilabel:`Size` of the image in mm. The width of selected image is "
 "used to resize it to given :guilabel:`Size`."
 msgstr ""
+"画像の :guilabel:`大きさ` をミリメートル単位で指定します。選択された画像の幅は、与えられた :guilabel:`大きさ`  "
+"にリサイズされます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1057
 msgid ""
@@ -2184,6 +2314,8 @@ msgid ""
 ":guilabel:`Placement` combo box. The default position is :guilabel:`Top "
 "Left`."
 msgstr ""
+":guilabel:`配置` コンボボックスを用いて、マップ上で画像を配置したい場所を選択します。 デフォルトの位置は :guilabel:`左上` "
+"です。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1059
 msgid ""
@@ -2191,6 +2323,8 @@ msgid ""
 "Edge`. These values can be set in **Millimeters**, **Pixels** or as a "
 "**Percentage** of the width or height of the map canvas."
 msgstr ""
+":guilabel:`（キャンバス）端からの水平` および :guilabel:`垂直 マージン` を設定します。これらの値は **ミリメートル** "
+"または **ピクセル** 単位で指定するか、マップキャンバスの幅または高さの **パーセント** として設定することができます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1062
 #: ../../docs/user_manual/introduction/general_tools.rst:1093
@@ -2199,48 +2333,49 @@ msgid ""
 "Click :guilabel:`Apply` to verify that it looks as expected and "
 ":guilabel:`OK` if you're satisfied."
 msgstr ""
+":guilabel:`適用` ボタンをクリックして見た目が期待通りかを確認し、満足ならば :guilabel:`OK` ボタンをクリックします。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1069
 msgid "North Arrow"
-msgstr "北向き矢印"
+msgstr "方位記号"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1071
 msgid ""
 "|northArrow| :guilabel:`North Arrow` allows you to add a north arrow on the "
 "map canvas."
-msgstr ""
+msgstr "|northArrow| :guilabel:`方位記号` はマップキャンバスに北向き矢印を追加します。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1073
 msgid "To add a north arrow:"
-msgstr ""
+msgstr "方位記号を追加するには："
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1075
 msgid ""
 "Select menu option :menuselection:`View --> Decorations --> North Arrow...` "
 "to open the dialog."
-msgstr ""
+msgstr ":menuselection:`ビュー --> 地図整飾 --> 方位記号...` のメニューオプションを選択し、ダイアログを開きます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1083
 msgid "The North Arrow Dialog"
-msgstr "北向き矢印ダイアログ"
+msgstr "方位記号ダイアログ"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1085
 msgid "Make sure |checkbox| :guilabel:`Enable north arrow` is checked"
-msgstr ""
+msgstr "|checkbox| :guilabel:`方位記号を使用` をチェックしてください"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1086
 msgid "Optionally change the color and size, or choose a custom SVG"
-msgstr ""
+msgstr "オプションで色やサイズを変更したり、カスタムSVGを選択したりすることができます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1087
 msgid ""
 "Optionally change the angle or choose **Automatic** to let QGIS determine "
 "the direction"
-msgstr ""
+msgstr "オプションで角度を変更するか、あるいはQGISに **自動** で方向を決定させることができます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1089
 msgid "Optionally choose the placement from the Placement combo box"
-msgstr ""
+msgstr "オプションで配置コンボボックスから配置位置を選択できます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1090
 msgid ""
@@ -2249,8 +2384,8 @@ msgid ""
 " or **Pixels** or set as a **Percentage** of the width or height of the map "
 "canvas."
 msgstr ""
-"必要に応じて、水平および/または垂直の `（キャンバス）縁からの余白` を設定して矢印の配置を調整します。これらの値は **ミリメートル** または "
-"**ピクセル** で指定するか、地図キャンバスの幅または高さの **割合** として設定できます。"
+"必要に応じて、水平および/または垂直の `（キャンバス）端からのマージン` を設定して矢印の配置を調整します。これらの値は **ミリメートル** または"
+" **ピクセル** 単位で指定するか、マップキャンバスの幅または高さの **パーセント** として設定できます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1100
 msgid "Scale Bar"
@@ -2263,7 +2398,7 @@ msgid ""
 "bar."
 msgstr ""
 "|scaleBar| :guilabel:`スケールバー` "
-"は、地図キャンバスに、単純なスケールバーを追加します。スタイルや配置だけでなく、バ​​ーのラベルを制御できます。"
+"は、マップキャンバスに単純なスケールバーを追加します。スタイルや配置、バ​​ーのラベルを制御することができます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1105
 msgid ""
@@ -2272,16 +2407,19 @@ msgid ""
 " bar in feet. Likewise, if you are using decimal degrees, you can't create a"
 " scale bar to display distance in meters."
 msgstr ""
+"QGISはマップフレームと同じ単位でのスケール表示しかサポートしていません。従って、プロジェクトのCRSの単位がメートルの場合には、フィート単位のスケールバーを作成することはできません。同様に、小数点表示の角度を使っている場合には、"
+" 距離をメートル単位で表示するスケールバーは作成できません。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1110
 msgid "To add a scale bar:"
-msgstr "スケールバーを追加するために："
+msgstr "スケールバーを追加するには："
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1112
 msgid ""
 "Select menu option :menuselection:`View --> Decorations --> Scale Bar...` to"
 " open the dialog"
 msgstr ""
+":menuselection:`ビュー --> 地図整飾 --> スケールバー...` のメニューオプションを選択し、ダイアログを開きます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1120
 msgid "The Scale Bar Dialog"
@@ -2289,12 +2427,12 @@ msgstr "スケールバーダイアログ"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1122
 msgid "Make sure |checkbox| :guilabel:`Enable scale bar` is checked"
-msgstr ""
+msgstr "|checkbox| :guilabel:`スケールバーを有効にする` をチェックしてください"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1123
 msgid ""
 "Choose a style from the :guilabel:`Scale bar style` |selectString| combo box"
-msgstr ""
+msgstr ":guilabel:`スケールバーのスタイル` |selectString| コンボボックスからスタイルを選択します"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1124
 msgid ""
@@ -2303,27 +2441,29 @@ msgid ""
 "and outline can be made opaque by clicking on the down arrow to the right of"
 " the color input."
 msgstr ""
+"塗りつぶし色（デフォルト：黒）とアウトライン色（デフォルト：白）を選択して、 :guilabel:`バーの色` |selectColor| "
+"を設定します。色入力の右にある下矢印をクリックすると、スケールバーの塗りつぶしとアウトラインの不透明度を設定することもできます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1128
 msgid ""
 "Select the font for the scale bar from the :guilabel:`Font of bar` "
 "|selectString| combo box"
-msgstr ""
+msgstr ":guilabel:`バーのフォント` |selectString| コンボボックスからスケールバーのフォントを選択します"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1129
 msgid "Set the :guilabel:`Size of bar` |selectNumber|"
-msgstr ""
+msgstr ":guilabel:`バーのサイズ` |selectNumber| を設定します"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1130
 msgid ""
 "Optionally check |checkbox| :guilabel:`Automatically snap to round number on"
 " resize` to display easy-to-read values"
-msgstr ""
+msgstr "オプションで |checkbox| :guilabel:`リサイズ時に自動的に四捨五入` をチェックすることで、読みやすい値で表示できます"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1132
 msgid ""
 "Choose the placement from the :guilabel:`Placement` |selectString| combo box"
-msgstr ""
+msgstr ":guilabel:`配置` |selectString| コンボボックスから配置位置を選択します"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1133
 msgid ""
@@ -2332,12 +2472,12 @@ msgid ""
 " or **Pixels** or set as a **Percentage** of the width or height of the map "
 "canvas."
 msgstr ""
-"水平および/または垂直の `（キャンバス）縁からの余白` を設定することで、項目の配置を絞り込むことができます。これらの値は **ミリ** または "
-"**ピクセル** 単位として、または地図キャンバスの幅または高さの **割合** として設定できます。"
+"水平および/または垂直の `（キャンバス）端からのマージン` を設定することで、アイテムの配置を調整します。これらの値は **ミリメートル** または "
+"**ピクセル** 単位で指定するか、マップキャンバスの幅または高さの **パーセント** として設定できます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1142
 msgid "Layout Extents"
-msgstr ""
+msgstr "レイアウト範囲"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1144
 msgid ""
@@ -2359,32 +2499,33 @@ msgid ""
 "layouts. The print layout named 'Sights' contains two map items, while the "
 "other print layout contains one map item."
 msgstr ""
+"2つの印刷レイアウトのレイアウト範囲をQGISプロジェクトに表示した例。「Sights」という名前の印刷レイアウトには2つの地図アイテムがあり、もう一つの印刷レイアウトの地図アイテムは1つ。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1160
 msgid "To add layout extent(s):"
-msgstr ""
+msgstr "レイアウト範囲を追加するには："
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1162
 msgid ""
 "Select :menuselection:`View --> Decorations --> Layout Extents` to open the "
 "dialog"
-msgstr ""
+msgstr ":menuselection:`ビュー --> 地図整飾 --> レイアウト範囲...` を選択し、ダイアログを開きます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1170
 msgid "The Layout Extents Dialog"
-msgstr ""
+msgstr "レイアウト範囲ダイアログ"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1172
 msgid "Make sure |checkbox| :guilabel:`Show layout extents` is checked."
-msgstr ""
+msgstr "|checkbox| :guilabel:`レイアウトの範囲を表示する` をチェックしてください。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1173
 msgid "Optionally change the symbol and labeling of the extents."
-msgstr ""
+msgstr "オプションで範囲のシンボルとラベル付けを変更することができます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1180
 msgid "**Decorations Settings**"
-msgstr ""
+msgstr "**地図整飾の設定**"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1182
 msgid ""
@@ -2409,17 +2550,17 @@ msgstr ""
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1199
 msgid "|textAnnotation| :sup:`Text Annotation` for custom formatted text"
-msgstr ""
+msgstr "|textAnnotation| :sup:`文字注記` カスタム書式テキストの注記"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1200
 msgid ""
 "|htmlAnnotation| :sup:`HTML Annotation` to place the content of an "
 ":file:`html` file"
-msgstr ""
+msgstr "|htmlAnnotation| :sup:`HTML注記`  :file:`html` ファイルのコンテンツを配置するための注記"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1202
 msgid "|svgAnnotation| :sup:`SVG Annotation` to add an :file:`SVG` symbol"
-msgstr ""
+msgstr "|svgAnnotation| :sup:`SVG注記` :file:`SVG` ファイルのシンボルを追加するための注記"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1203
 msgid ""
@@ -2430,10 +2571,15 @@ msgid ""
 " video https://www.youtube.com/watch?v=0pDBuSbQ02o&feature=youtu.be&t=2m25s "
 "from Tim Sutton for more information."
 msgstr ""
+"|formAnnotation| :sup:`注記フォーム`: ベクタレイヤの属性を、カスタマイズされた :file:`ui` ファイル（ "
+"figure_custom_annotation_ を参照）で表示するのに便利です。 :ref:`カスタム属性フォーム "
+"<provide_ui_file>` に似ていますが、これは注記アイテムに表示されます。詳細については、Tim Sutton 氏によるビデオ "
+"https://www.youtube.com/watch?v=0pDBuSbQ02o&feature=youtu.be&t=2m25s "
+"も参照してください。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1215
 msgid "Customized QT Designer annotation form"
-msgstr ""
+msgstr "カスタマイズされたQtデザイナ注記フォーム"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1222
 msgid ""
@@ -2442,7 +2588,7 @@ msgid ""
 "with various options. This dialog is almost the same for all the annotation "
 "types:"
 msgstr ""
-"注記を追加するには、対応するツールを選択して地図キャンバスをクリックします。空のバルーンが追加されます。それをダブルクリックすると、さまざまなオプションを含むダイアログが開きます。このダイアログは、すべての注記タイプでほぼ同じです。"
+"注記を追加するには、対応するツールを選択してマップキャンバスをクリックします。空のバルーンが追加されます。これをダブルクリックすると、さまざまなオプションを含むダイアログが開きます。このダイアログは、すべての注記タイプでほぼ同じです。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1226
 msgid ""
@@ -2451,7 +2597,7 @@ msgid ""
 " annotation, you can enter your message in a text box and set its rendering "
 "with the normal font tools."
 msgstr ""
-"一番上には、注釈の種類に応じて :file:`html`, :file:`svg` または :file:`ui` "
+"一番上には、注記の種類に応じて :file:`html` 、 :file:`svg` または :file:`ui` "
 "ファイルへのパスを入力するためのファイルセレクタがあります。テキスト注釈の場合は、テキストボックスにメッセージを入力して、通常のフォントツールを使用してそのレンダリングを設定できます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1230
@@ -2461,13 +2607,13 @@ msgid ""
 "it's always shown regardless the map canvas extent."
 msgstr ""
 "|checkbox| "
-":guilabel:`固定された地図位置`：チェックを外すと、バルーンの配置は（地図ではなく）画面の位置に基づきます。つまり、地図のキャンバスの範囲に関係なく常に表示されます。"
+":guilabel:`地図の固定位置`：チェックを外すと、バルーンの配置は（地図ではなく）画面の位置に基づきます。つまり、注記は地図のキャンバスの範囲に関係なく常に表示されます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1233
 msgid ""
 ":guilabel:`Linked layer`: associates the annotation with a map layer, making"
 " it visible only when that layer is visible."
-msgstr ""
+msgstr ":guilabel:`リンクされたレイヤ`: マップのレイヤに注記を関連付け、そのレイヤが表示状態のときのみ注記が表示されるようにします。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1235
 msgid ""
@@ -2475,17 +2621,22 @@ msgid ""
 "the symbol to display at the balloon anchor position (shown only when "
 ":guilabel:`Fixed map position` is checked)."
 msgstr ""
+":guilabel:`マーカー`: :ref:`QGISのシンボル <symbol-selector>` "
+"を使って、バルーンのアンカー位置に表示されるシンボルを設定します（ :guilabel:`地図の固定位置` "
+"にチェックが入っているときのみ表示されます）。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1238
 msgid ""
 ":guilabel:`Frame style`: sets the frame background color, transparency, "
 "stroke color or width of the balloon using QGIS symbols."
 msgstr ""
+":guilabel:`フレームスタイル`: "
+"QGISのシンボル設定を使用して、フレームの背景色や透明度、バルーンのストローク色やストローク幅を設定します。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1240
 msgid ""
 ":guilabel:`Contents margins`: sets interior margins of the annotation frame."
-msgstr ""
+msgstr ":guilabel:`コンテンツのマージン`: 注記フレームの内側のマージンを設定します。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1247
 msgid "Annotation text dialog"
@@ -2498,8 +2649,8 @@ msgid ""
 " the balloon. The |annotation| :sup:`Move Annotation` tool also allows you "
 "to move the balloon on the map canvas."
 msgstr ""
-"注記ツールを有効にすると注記を選択できます。そのとき注記は、地図の位置で（地図のマーカーをドラッグ）またはバルーンだけを動かすことで移動できます。 "
-"|annotation| :sup:`注記を移動` ツールで地図キャンバス上のバルーンを移動させることもできます。"
+"注記ツールが有効なときは、注記を選択できます。注記は、（マップマーカーをドラッグすることで）地図上の位置を移動したり、バルーンだけを移動したりすることができます。"
+" |annotation| :sup:`注記の移動` ツールでマップキャンバス上のバルーンを移動させることもできます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1254
 msgid ""
@@ -2508,7 +2659,7 @@ msgid ""
 " button in the properties dialog."
 msgstr ""
 "注記を削除するには、その注記を選択して :kbd:`Del` または :kbd:`Backspace` "
-"ボタンを押すか、またはその注記をダブルクリックしてプロパティダイアログの :guilabel:`Delete` ボタンを押します。"
+"キーを押すか、またはその注記をダブルクリックしてプロパティダイアログの :guilabel:`削除` ボタンを押します。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1258
 msgid ""
@@ -2516,31 +2667,33 @@ msgid ""
 "annotation, text annotation, form annotation) is active, the visibility "
 "states of the items are inverted."
 msgstr ""
-":guilabel:`注記` ツール（注記移動、文字注記、注記フォーム ）が有効な時に :kbd:`Ctrl+T` "
-"を押すと、項目の可視属性が反転します。"
+":guilabel:`注記` ツール（注記の移動、文字注記、注記フォーム ）が有効な時に :kbd:`Ctrl+T` "
+"を押すと、アイテムの表示・非表示が反転します。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1262
 msgid "**Layout the map with annotations**"
-msgstr ""
+msgstr "**マップに注記をレイアウトする**"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1264
 msgid ""
 "You can print or export annotations with your map to various formats using:"
-msgstr ""
+msgstr "以下の方法で、注記をマップとともにさまざまな形式で印刷またはエクスポートすることができます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1266
 msgid "map canvas export tools available in the :menuselection:`Project` menu"
-msgstr ""
+msgstr ":menuselection:`プロジェクト` メニュー内にあるマップキャンバスのエクスポートツール"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1267
 msgid ""
 ":ref:`print layout <create-output>`, in which case you need to check "
 ":guilabel:`Draw map canvas items` in the corresponding map item properties"
 msgstr ""
+":ref:`印刷レイアウト <create-output>` の場合には、対応する地図のアイテムプロパティで "
+":guilabel:`地図キャンバスアイテムの描画` にチェックを入れる必要があります。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1276
 msgid "Measuring"
-msgstr "測定"
+msgstr "計測"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1279
 msgid "General information"
@@ -2548,25 +2701,25 @@ msgstr "一般情報"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1281
 msgid "QGIS provides four means of measuring geometries:"
-msgstr "QGISは、ジオメトリを測定する4つの手段を提供します。"
+msgstr "QGISは、ジオメトリを計測する4つの手段を提供します。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1283
 msgid "interactive measurement tools |measure|"
-msgstr ""
+msgstr "インタラクティブな計測ツール |measure|"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1284
 msgid "measuring in the |calculateField| :sup:`Field Calculator`"
-msgstr ""
+msgstr "|calculateField| :sup:`フィールド計算機` による計測"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1285
 msgid "derived measurements in the :ref:`identify` tool"
-msgstr ""
+msgstr ":ref:`identify` ツールによる派生した属性の計測"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1286
 msgid ""
 "the vector analysis tool: :menuselection:`Vector --> Geometry Tools --> "
 "Export/Add Geometry Columns`"
-msgstr ""
+msgstr "ベクタ解析ツール: :menuselection:`ベクタ --> ジオメトリツール --> ジオメトリ属性の追加`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1289
 msgid ""
@@ -2574,7 +2727,7 @@ msgid ""
 "unprojected data. The first three measuring tools behave equally to global "
 "project settings:"
 msgstr ""
-"測定は投影された座標系（例えば、UTM）と非投影データ内で機能します。最初の3つの測定ツールは、グローバルなプロジェクト設定に対しても同様に動作します："
+"計測は投影された座標系（例えばUTM）でも、非投影データでも機能します。最初の3つの計測ツールは、グローバルなプロジェクト設定に対しても同様に動作します："
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1292
 msgid ""
@@ -2583,6 +2736,8 @@ msgid ""
 "General`. This is true both when geographic and projected coordinate systems"
 " are defined for the project."
 msgstr ""
+"他のほとんどのGISとは異なり、QGISのデフォルトの計測基準は楕円体で、 :menuselection:`プロジェクト --> プロパティ... "
+"--> 一般情報` で定義される楕円体を使っています。これは、プロジェクトに地理座標系や投影座標系が定義されている場合にも当てはまります。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1296
 msgid ""
@@ -2592,6 +2747,9 @@ msgid ""
 "General`). However, with a geographic (ie unprojected) CRS defined for the "
 "data and project, area and distance measurement will be ellipsoidal."
 msgstr ""
+"投影された/平面的な面積や距離を直交座標系によって計算したい場合には、計測の楕円体を「None/Planimetric」にしなければなりません（ "
+":menuselection:`プロジェクト --> プロパティ... --> 一般情報` "
+"）。ただし、データとプロジェクトに定義された地理的（すなわち非投影の）CRSを使用すると、面積と距離の計測は楕円体計算になります。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1302
 msgid ""
@@ -2601,6 +2759,9 @@ msgid ""
 "Geometry Tools --> Add Geometry Attributes...`. Here, measurement is "
 "planimetric, unless you choose the ellipsoidal measurement."
 msgstr ""
+"しかしながら、地物情報表示ツールやフィールド計算機はどちらも計測前にデータをプロジェクトのCRSへ変換しません。これを行いたい場合には、ベクタ解析ツール:"
+" :menuselection:`ベクタ --> ジオメトリツール --> ジオメトリ属性の追加...` "
+"を使用する必要があります。ここでは、楕円体計測を選択しない限り、計測は平面座標系で行われます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1309
 msgid "Measure length, areas and angles interactively"
@@ -2613,10 +2774,13 @@ msgid ""
 "area or |measureAngle| angle. The default unit used in the dialog is the one"
 " set in :menuselection:`Project --> Properties... --> General` menu."
 msgstr ""
+"属性ツールバーの |measure| アイコンをクリックすると、計測を開始できます。アイコンの近くにある下矢印は |measure| 長さ、 "
+"|measureArea| 面積、 |measureAngle| 角度の計測を切り替えます。ダイアログで使用されるデフォルトの単位は、 "
+":menuselection:`プロジェクト --> プロパティ... --> 一般情報` メニュー内で設定された単位です。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1317
 msgid "**Configuring the measure tool**"
-msgstr "**測定ツールを設定する**"
+msgstr "**計測ツールを設定する**"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1319
 msgid ""
@@ -2629,11 +2793,11 @@ msgid ""
 ":menuselection:`Project --> Properties... --> General` menu, and by the "
 "selection made in the measurement widget."
 msgstr ""
-"長さや面積を測定している間、ウィジェットの一番下にある :guilabel:`設定` ボタンをクリックすると、 :menuselection:`設定 "
-"--> オプション --> 地図ツール` "
-"メニューが開きます。ここではラバーバンド色、測定の精度、そして単位の挙動を選択できます。好みの測度や角度の単位も選択できますが、現在のプロジェクト中ではこれらの値は"
-" :menuselection:`プロジェクト --> プロパティ --> 一般` "
-"メニューで行われた選択と測定ウィジェットで行われた選択によって上書きされることに注意してください。"
+"長さや面積を測定しているときに、ウィジェットの下にある :guilabel:`設定` ボタンをクリックすると、 :menuselection:`設定 "
+"--> オプション --> ツール` "
+"メニューが開きます。ここではラバーバンド色、測定の桁数、計測単位を選択できます。好みの長さや角度の単位も選択できますが、現在のプロジェクト中ではこれらの値は"
+" :menuselection:`プロジェクト --> プロパティ --> 一般情報` "
+"メニューで行われた選択と計測ウィジェットで行われた選択によって上書きされることに注意してください。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1328
 msgid ""
@@ -2643,8 +2807,8 @@ msgid ""
 "snapping tolerance. Now, when using the measuring tools, each mouse click "
 "(within the tolerance setting) will snap to that layer."
 msgstr ""
-"すべての測定モジュールは、デジタル化モジュールからのスナップ設定を使用（ :ref:`snapping_tolerance` "
-"セクションを参照）。正確にライン地物に沿って、またはポリゴン地物の周りを測定したいのであれば、最初にそのレイヤーのスナップ許容誤差を設定します。今、測定ツールを使用している場合（許容誤差の設定内）の各マウスクリックは、そのレイヤーにスナップします。"
+"すべての計測モジュールは、デジタイジングモジュールのスナップ設定（ :ref:`snapping_tolerance` "
+"セクションを参照）を使用します。正確にライン地物に沿って、あるいはポリゴン地物の周りを測定したいのであれば、最初にそのレイヤのスナップ許容誤差を設定します。すると、測定ツールを使用している場合の（許容誤差の設定内の）各マウスクリックはそのレイヤにスナップします。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1339
 msgid ""
@@ -2653,6 +2817,8 @@ msgid ""
 "click points on the map. Each segment length, as well as the total, shows up"
 " in the measure window. To stop measuring, click the right mouse button."
 msgstr ""
+"デフォルトでは、 |measure| :sup:`線の長さを測る` "
+"は与えられた点の実距離を定義された楕円体に基づいて計測します。このツールではマップ上の点をクリックすることができます。各セグメントの長さと合計が計測ウィンドウに表示されます。計測を停止するには、マウスの右ボタンをクリックします。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1345
 msgid ""
@@ -2668,11 +2834,11 @@ msgstr ""
 msgid ""
 "The :guilabel:`Info` section in the dialog explains how calculations are "
 "made according to the CRS settings available."
-msgstr ""
+msgstr "ダイアログの :guilabel:`情報` セクションでは、利用可能なCRS設定に従ってどのように計算が行われるかが説明されています。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1363
 msgid "Measure Distance"
-msgstr "距離を測定"
+msgstr "距離の計測"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1365
 msgid ""
@@ -2684,10 +2850,12 @@ msgid ""
 "centimeters', 'Square millimeters', 'Square nautical miles', 'Square "
 "degrees', 'Map units')."
 msgstr ""
+"|measureArea| :sup:`面積を測る`: "
+"面積も計測することができます。計測ウィンドウでは、累積の面積合計が表示されます。右クリックで描画を停止します。情報セクションがあり、異なる面積単位への変換機能（「平方メートル」、「平方キロメートル」、「平方フィート」、「平方ヤード」、「平方マイル」、「ヘクタール」、「エーカー」、「平方センチメートル」、「平方ミリメートル」、「平方海里」、「平方度」、「地図単位」）もあります。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1377
 msgid "Measure Area"
-msgstr "面積を測定"
+msgstr "面積の計測"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1379
 msgid ""
@@ -2696,10 +2864,12 @@ msgid ""
 " to measure, then move the cursor to draw the desired angle. The measurement"
 " is displayed in a pop-up dialog."
 msgstr ""
+"|measureAngle| :sup:`角度を測る`: "
+"角度を測ることもできます。カーソルが十字型に変化します。クリックして計測したい角の1つ目のセグメントを描画し、それからカーソルを動かして求める角を描きます。計測値はポップアップダイアログに表示されます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1389
 msgid "Measure Angle"
-msgstr "角度を測定"
+msgstr "角度の計測"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1392
 msgid "Interacting with features"

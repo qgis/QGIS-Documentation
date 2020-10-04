@@ -5,8 +5,9 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
-# MarieSilvestre, 2020
 # Francis Gasc <francisgasc@gmail.com>, 2020
+# MarieSilvestre, 2020
+# Sant-anna <delazj@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-24 11:25+0200\n"
 "PO-Revision-Date: 2020-03-16 19:32+0000\n"
-"Last-Translator: Francis Gasc <francisgasc@gmail.com>, 2020\n"
+"Last-Translator: Sant-anna <delazj@gmail.com>, 2020\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -4525,6 +4526,10 @@ msgid ""
 "advanced information, see https://woostuff.wordpress.com/2011/09/05/qgis-"
 "tips-custom-feature-forms-with-python-logic/."
 msgstr ""
+"Vous trouverez un exemple dans la leçon :ref:`Créer un nouveau formulaire "
+"<creating-new-form>` de :ref:`QGIS-training-manual-index-reference`. Pour "
+"plus d'informations, voir https://woostuff.wordpress.com/2011/09/05/qgis-"
+"tips-custom-feature-forms-with-python-logic/."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2167
 msgid "Enhance your form with custom functions"
@@ -5377,6 +5382,14 @@ msgid ""
 "(:numref:`figure_auxiliary_layer_creation`) is first displayed to select the"
 " primary key to use for joining."
 msgstr ""
+"Sinon, il existe une autre façon de créer un champ auxiliaire pour une "
+"propriété spécifique grâce au bouton |dataDefined| :sup:`Valeur définie par "
+"des données`. En cliquant sur:guilabel:`Stocker les données dans le projet`,"
+" un champ auxiliaire est automatiquement créé pour le champ "
+":guilabel:`Opacité`. Si vous cliquez sur ce bouton alors que la couche "
+"auxiliaire n'est pas encore créée, une fenêtre "
+"(:numref:`figure_auxiliary_layer_creation`) s'affiche d'abord pour "
+"sélectionner la clé primaire à utiliser pour la jointure."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2536
 msgid "Symbology"
@@ -5811,11 +5824,11 @@ msgstr "Deux exemples d'action sont proposés ci-dessous :"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2746
 msgid "``konqueror https://www.google.com/search?q=%nam``"
-msgstr "``konqueror https://www.google.com/search?q=1%n am``"
+msgstr "``konqueror https://www.google.com/search?q=%n am``"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2747
 msgid "``konqueror https://www.google.com/search?q=%%``"
-msgstr "``konqueror https://www.google.com/search?q=1%%``"
+msgstr "``konqueror https://www.google.com/search?q=%%``"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2749
 msgid ""
@@ -5833,8 +5846,8 @@ msgstr ""
 "appelé par l'action doit se trouver dans le chemin ou vous devez fournir le "
 "chemin complet. Pour être certain, nous pourrions réécrire le premier "
 "exemple comme suit: ``/opt/kde3/bin/konqueror https: "
-"//www.google.com/search?q=1%nam ''. Cela garantira que l'application "
-"konqueror sera exécutée lorsque l'action sera invoquée."
+"//www.google.com/search?q=%nam``. Cela garantira que l'application konqueror"
+" sera exécutée lorsque l'action sera invoquée."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2758
 msgid ""
@@ -5876,7 +5889,7 @@ msgid ""
 "tool (see :ref:`identify` for more information);"
 msgstr ""
 "lorsque vous cliquez avec le bouton droit sur une entité avec l'outil "
-"|identifier| :sup:`identifier des entités` (voir :ref:`identify` pour plus "
+"|identify| :sup:`Identifier des entités` (voir :ref:`identify` pour plus "
 "d'informations) ;"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2776
@@ -5949,8 +5962,8 @@ msgstr ""
 "pour effectuer une recherche sur un mot clé. Cela se fait facilement en "
 "allant simplement sur Google et en faisant une recherche simple, puis en "
 "saisissant l'URL de la barre d'adresse de votre navigateur. De ce petit "
-"effort, nous voyons que le format est https://www.google.com//search?q=QGIS,"
-" où ``QGIS`` est le terme de recherche. Forts de ces informations, nous "
+"effort, nous voyons que le format est https://www.google.com/search?q=QGIS, "
+"où ``QGIS`` est le terme de recherche. Forts de ces informations, nous "
 "pouvons procéder:"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2818
@@ -6017,16 +6030,16 @@ msgid ""
 "``https://www.google.com//search?q=``"
 msgstr ""
 "À la suite du nom de l'application externe, ajoutez l'URL utilisée pour "
-"effectuer une recherche Google, jusqu'à mais sans inclure le terme de "
-"``echerche: ``https: //www.google.com//search?q=`"
+"effectuer une recherche Google, sans inclure le terme à rechercher lui-même,"
+" soit: ``https: //www.google.com/search?q=``"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2835
 msgid ""
 "The text in the :guilabel:`Action` field should now look like this: "
 "``https://www.google.com//search?q=``"
 msgstr ""
-"Le texte du champ :guilabel:`Action` devrait maintenant ressembler à "
-"ceci:``https: //www.google.com//search?q=``"
+"Le texte du champ :guilabel:`Action` devrait maintenant ressembler à ceci: "
+"``https: //www.google.com/search?q=``"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2837
 msgid ""
@@ -6048,7 +6061,7 @@ msgstr "Votre texte Action ressemble maintenant à :"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2842
 msgid "``https://www.google.com//search?q=[%NAMES%]``"
-msgstr "``https://www.google.com//search?q=[%NAMES%]``"
+msgstr "``https://www.google.com/search?q=[%NAMES%]``"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2843
 msgid "To finalize and add the action, click the :guilabel:`OK` button."
@@ -6529,6 +6542,10 @@ msgid ""
 "a :file:`.qmd` file alongside file based layers or in a local "
 ":file:`.sqlite` database for remote layers (e.g. PostGIS)."
 msgstr ""
+"Les métadonnées sont actuellement enregistrées dans le fichier de projet. "
+"Elles peuvent également être enregistrées dans un fichier :file:`.qmd` à "
+"côté des fichiers de couches ou dans une base de données locale: file:` "
+".sqlite` pour les couches distantes (par exemple PostGIS)."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3118
 msgid "Dependencies Properties"

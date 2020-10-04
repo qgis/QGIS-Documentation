@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-24 11:25+0200\n"
 "PO-Revision-Date: 2020-03-16 19:32+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -43,12 +44,26 @@ msgid ""
 "displays waypoints in point layers, while routes and tracks are displayed in"
 " linestring layers."
 msgstr ""
+"GPS, el Sistema de Posicionamiento Global, es un sistema basado en satélites"
+" que permite a cualquier persona con un receptor GPS encontrar su posición "
+"exacta en cualquier parte del mundo. El GPS se utiliza como ayuda en la "
+"navegación, por ejemplo, en aviones, barcos y excursionistas. El receptor "
+"GPS utiliza las señales de los satélites para calcular su latitud, longitud "
+"y (a veces) elevación. La mayoría de los receptores también tienen la "
+"capacidad de almacenar ubicaciones (conocidas como **waypoints**), "
+"secuencias de ubicaciones que forman una **ruta** planificada y un tracklog "
+"o **track** del movimiento del receptor a lo largo del tiempo. Waypoints, "
+"rutas y tracks son los tres tipos de funciones básicas en los datos GPS. "
+"QGIS muestra los waypoints en capas de puntos, mientras que las rutas y los "
+"tracks se muestran en capas de líneas."
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:27
 msgid ""
 "QGIS supports also GNSS receivers. But we keep using the term GPS in this "
 "documentation."
 msgstr ""
+"QGIS también admite receptores GNSS. Pero seguimos usando el término GPS en "
+"esta documentación."
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:33
 msgid "Loading GPS data from a file"
@@ -61,6 +76,10 @@ msgid ""
 "interchange format that can contain any number of waypoints, routes and "
 "tracks in the same file."
 msgstr ""
+"Hay docenas de formatos de archivo diferentes para almacenar datos GPS. El "
+"formato que utiliza QGIS se llama GPX (formato de intercambio de GPS), que "
+"es un formato de intercambio estándar que puede contener cualquier número de"
+" waypoints, rutas y tracks en el mismo archivo."
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:40
 msgid ""
@@ -71,6 +90,13 @@ msgid ""
 "small handheld GPS device will show up in the toolbar and in "
 ":menuselection:`Layer --> Create Layer -->` :"
 msgstr ""
+"Para cargar un archivo GPX, primero debe cargar el complemento. "
+":menuselection:`Complementos ->` |showPluginManager| "
+":menuselection:`Administrador de complementos...` abre el cuadro de diálogo "
+"Adinistrador de complementos. Active la casilla de verificación |checkbox| "
+":guilabel:`Herramientas GPS`. Cuando se carga este complemento, un botón con"
+" un pequeño dispositivo GPS de mano aparecerá en la barra de herramientas y "
+"en :menuselection:`Capa -> Crear capa ->`:"
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:47
 msgid "|importGPX| :sup:`GPS Tools`"
@@ -78,7 +104,7 @@ msgstr "|importGPX| :sup:`Herramientas GPS`"
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:48
 msgid "|createGPX| :guilabel:`Create new GPX Layer`"
-msgstr ""
+msgstr "|createGPX| :guilabel:`Crear nueva capa GPX`"
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:50
 msgid ""
@@ -87,6 +113,11 @@ msgid ""
 "See section :ref:`label_sampledata` for more information about the sample "
 "data."
 msgstr ""
+"Para trabajar con datos GPS, proporcionamos un archivo GPX de ejemplo "
+"disponible en el conjunto de datos de muestra de QGIS: "
+":file:`qgis_sample_data/gps/national_monuments.gpx`. Consulte la sección "
+":ref:`label_sampledata` para obtener más información sobre los datos de "
+"muestra."
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:54
 msgid ""
@@ -94,12 +125,17 @@ msgid ""
 ":sup:`GPS Tools` icon in the toolbar and open the :guilabel:`Load GPX file` "
 "tab (see figure_GPS_)."
 msgstr ""
+"Seleccione :menuselection:`Vector -> GPS Tools` o haga clic en el icono "
+"|importGPX| :sup:`Herramientas GPS` en la barra de herramientas y abra la "
+"pestaña :guilabel:`Cargar archivo GPX` (ver figura_GPS_)."
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:57
 msgid ""
 "Browse to the folder :file:`qgis_sample_data/gps/`, select the GPX file "
 ":file:`national_monuments.gpx` and click :guilabel:`Open`."
 msgstr ""
+"Navegue a la carpeta :file:`qgis_sample_data/gps/`, seleccione el archivo "
+"GPX :file:`national_monuments.gpx` y haga click en :guilabel:`Abrir`."
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:65
 msgid "The *GPS Tools* dialog window"
@@ -113,6 +149,11 @@ msgid ""
 ":guilabel:`OK`. The file :file:`national_monuments.gpx` only includes "
 "waypoints."
 msgstr ""
+"Use el botón :guilabel:`Examinar...` para seleccionar el archivo GPX, luego "
+"use las casillas de verificación para seleccionar los tipos de objetos que "
+"desea cargar desde ese archivo GPX. Cada tipo de entidad se cargará en una "
+"capa separada cuando haga clic en :guilabel:ʻAceptar`. El archivo "
+":file:`national_monuments.gpx` solo incluye waypoints."
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:73
 msgid ""
@@ -122,6 +163,11 @@ msgid ""
 "(latitude/longitude). QGIS expects this, and it is the official GPX "
 "specification. See https://www.topografix.com/GPX/1/1/."
 msgstr ""
+"Las unidades GPS le permiten almacenar datos en diferentes sistemas de "
+"coordenadas. Al descargar un archivo GPX (desde su unidad GPS o un sitio "
+"web) y luego cargarlo en QGIS, asegúrese de que los datos almacenados en el "
+"archivo GPX usen WGS 84 (latitud/longitud). QGIS espera esto, y es la "
+"especificación oficial de GPX. Ver https://www.topografix.com/GPX/1/1/."
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:80
 msgid "GPSBabel"
@@ -138,6 +184,15 @@ msgid ""
 "1.2.3 of GPSBabel is known to work with QGIS, but you should be able to use "
 "later versions without any problems."
 msgstr ""
+"Dado que QGIS usa archivos GPX, necesita una forma de convertir otros "
+"formatos de archivo GPS a GPX. Esto se puede hacer para muchos formatos "
+"utilizando el programa gratuito GPSBabel, que está disponible en "
+"https://www.gpsbabel.org. Este programa también puede transferir datos GPS "
+"entre su computadora y un dispositivo GPS. QGIS usa GPSBabel para hacer "
+"estas cosas, por lo que se recomienda que lo instale. Sin embargo, si solo "
+"desea cargar datos GPS desde archivos GPX, no los necesitará. Se sabe que la"
+" versión 1.2.3 de GPSBabel funciona con QGIS, pero debería poder utilizar "
+"versiones posteriores sin ningún problema."
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:92
 msgid "Importing GPS data"
@@ -153,10 +208,17 @@ msgid ""
 " will support all three feature types, so for many formats you will only be "
 "able to choose between one or two types."
 msgstr ""
+"Para importar datos GPS desde un archivo que no es un archivo GPX, use la "
+"herramienta :guilabel:ʻImportar otro archivo` en el diálogo Herramientas "
+"GPS. Aquí, selecciona el archivo que desea importar (y el tipo de archivo), "
+"qué tipo de entidad desea importar de él, dónde desea almacenar el archivo "
+"GPX convertido y cuál debe ser el nombre de la nueva capa. Tenga en cuenta "
+"que no todos los formatos de datos GPS admitirán los tres tipos de objetos, "
+"por lo que para muchos formatos solo podrá elegir entre uno o dos tipos."
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:103
 msgid "Downloading GPS data from a device"
-msgstr ""
+msgstr "Descarga de datos GPS desde un dispositivo"
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:105
 msgid ""
@@ -167,6 +229,13 @@ msgid ""
 "this), the feature type that you want to download, the GPX file where the "
 "data should be stored, and the name of the new layer."
 msgstr ""
+"QGIS puede usar GPSBabel para descargar datos de un dispositivo GPS "
+"directamente como nuevas capas vectoriales. Para ello usamos la pestaña "
+":guilabel:`Descargar desde GPS` del cuadro de diálogo Herramientas GPS (ver "
+"Figura_GPS_download_). Aquí, seleccionamos el tipo de dispositivo GPS, el "
+"puerto al que está conectado (o USB si su GPS lo admite), el tipo de función"
+" que desea descargar, el archivo GPX donde se deben almacenar los datos y el"
+" nombre de la nueva capa."
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:117
 msgid "The download tool"
@@ -179,6 +248,10 @@ msgid ""
 "work with your GPS device, you can create a new type (see section :ref"
 ":`defining-new-device`)."
 msgstr ""
+"El tipo de dispositivo que seleccione en el menú del dispositivo GPS "
+"determina cómo GPSBabel intenta comunicarse con su dispositivo GPS. Si "
+"ninguno de los tipos disponibles funciona con su dispositivo GPS, puede "
+"crear un nuevo tipo (consulte la sección :ref:`define-new-device`)."
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:123
 msgid ""
@@ -187,25 +260,32 @@ msgid ""
 "device is connected to. It may also be simply USB, for USB-enabled GPS "
 "units."
 msgstr ""
+"El puerto puede ser un nombre de archivo o algún otro nombre que su sistema "
+"operativo utiliza como referencia al puerto físico de su computadora al que "
+"está conectado el dispositivo GPS. También puede ser simplemente USB, para "
+"unidades GPS habilitadas para USB."
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:127
 msgid ""
 "|nix| On Linux, this is something like ``/dev/ttyS0`` or ``/dev/ttyS1``."
 msgstr ""
+"|nix| En Linux, esto es algo así como ``/dev/ttyS0`` o ``/dev/ttyS1``."
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:128
 msgid "|win| On Windows, it is ``COM1`` or ``COM2``."
-msgstr ""
+msgstr "|win| En Windows, es ``COM1`` o ``COM2``."
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:130
 msgid ""
 "When you click :guilabel:`OK`, the data will be downloaded from the device "
 "and appear as a layer in QGIS."
 msgstr ""
+"Al hacer clic en :guilabel:ʻAceptar`, los datos se descargarán del "
+"dispositivo y aparecerán como una capa en QGIS."
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:134
 msgid "Uploading GPS data to a device"
-msgstr ""
+msgstr "Subir datos GPS a un dispositivo"
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:136
 msgid ""
@@ -216,6 +296,13 @@ msgid ""
 "connected to. Just as with the download tool, you can specify new device "
 "types if your device isn't in the list."
 msgstr ""
+"También puede cargar datos directamente desde una capa vectorial en QGIS a "
+"un dispositivo GPS usando: guilabel: pestaña ʻSubir a GPS` del cuadro de "
+"diálogo Herramientas GPS. Para hacer esto, simplemente seleccione la capa "
+"que desea cargar (que debe ser una capa GPX), su tipo de dispositivo GPS y "
+"el puerto (o USB) al que está conectado. Al igual que con la herramienta de "
+"descarga, puede especificar nuevos tipos de dispositivos si su dispositivo "
+"no está en la lista."
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:143
 msgid ""
@@ -223,10 +310,13 @@ msgid ""
 " of QGIS. It allows you to load a map, create waypoints and routes, and then"
 " upload them and use them on your GPS device."
 msgstr ""
+"Esta herramienta es muy útil en combinación con las capacidades de edición "
+"de vectores de QGIS. Le permite cargar un mapa, crear waypoints y rutas, y "
+"luego cargarlos y usarlos en su dispositivo GPS."
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:150
 msgid "Defining new device types"
-msgstr ""
+msgstr "Definiendo nuevos tipos de dispositivos"
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:152
 msgid ""
@@ -237,6 +327,13 @@ msgid ""
 " You do this by using the GPS device editor, which you start by clicking the"
 " :guilabel:`Edit Devices` button in the download or the upload tab."
 msgstr ""
+"Hay muchos tipos diferentes de dispositivos GPS. Los desarrolladores de QGIS"
+" no pueden probarlos todos, por lo que si tiene uno que no funciona con "
+"ninguno de los tipos de dispositivos enumerados en las herramientas "
+":guilabel:`Descargar desde GPS` y :guilabel:ʻSubir a GPS`, puede definir su "
+"propio tipo de dispositivo. Para ello, utilice el editor de dispositivos "
+"GPS, que puede cargar haciendo clic en el botón :guilabel:ʻEditar "
+"dispositivos` en la pestaña de descarga o carga."
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:159
 msgid ""
@@ -250,6 +347,16 @@ msgid ""
 "replace the keywords ``%type``, ``%in``, and ``%out`` when it runs the "
 "command."
 msgstr ""
+"Para definir un nuevo dispositivo, simplemente haga clic en el botón "
+":guilabel:`Nuevo dispositivo`, ingrese un nombre, ingrese los comandos de "
+"descarga y carga para su dispositivo, y haga clic en el botón "
+":guilabel:ʻActualizar dispositivo`. El nombre aparecerá en los menús del "
+"dispositivo en las ventanas de carga y descarga; puede ser cualquier cadena."
+" El comando de descarga es el comando que se utiliza para descargar datos "
+"desde el dispositivo a un archivo GPX. Probablemente sea un comando de "
+"GPSBabel, pero puede usar cualquier otro programa de línea de comando que "
+"pueda crear un archivo GPX. QGIS reemplazará las palabras clave``% type``, "
+"``%in`` y ``%out`` cuando ejecute el comando."
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:168
 msgid ""
@@ -258,6 +365,10 @@ msgid ""
 "tracks. These are command-line options that tell GPSBabel which feature type"
 " to download."
 msgstr ""
+"``%type`` será reemplazado por ``-w`` si está descargando waypoints, ``-r`` "
+"si está descargando rutas y ``-t`` si está descargando tracks. Estas son "
+"opciones de línea de comandos que le indican a GPSBabel qué tipo de función "
+"descargar."
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:172
 msgid ""
@@ -270,6 +381,15 @@ msgid ""
 "``/dev/ttyS0`` to the file ``output.gpx``, QGIS will replace the keywords "
 "and run the command ``gpsbabel -w -i garmin -o gpx /dev/ttyS0 output.gpx``."
 msgstr ""
+"``%i n`` será reemplazado por el nombre del puerto que elija en la ventana "
+"de descarga y ``%out`` será reemplazado por el nombre que elija para el "
+"archivo GPX en el que se deben almacenar los datos descargados. Entonces, si"
+" cree un tipo de dispositivo con el comando de descarga ``gpsbabel% type -i "
+"garmin -o gpx n ut`` (este es en realidad el comando de descarga para el "
+"tipo de dispositivo predefinido 'Garmin serial') y luego utilícelo para "
+"descargar waypoints desde el puerto ``/dev/ttyS0`` al archivo "
+"``output.gpx``, QGIS reemplazará las palabras clave y ejecutará el comando "
+"``gpsbabel -w -i garmin -o gpx /dev/ttyS0 output.gpx``."
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:181
 msgid ""
@@ -278,22 +398,30 @@ msgid ""
 "GPX file for the layer that is being uploaded, and ``%out`` is replaced by "
 "the port name."
 msgstr ""
+"El comando de carga es el comando que se utiliza para cargar datos en el "
+"dispositivo. Se utilizan las mismas palabras clave, pero ``%in`` ahora se "
+"reemplaza por el nombre del archivo GPX para la capa que se está cargando, y"
+" ``%out`` se reemplaza por el nombre del puerto."
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:186
 msgid ""
 "You can learn more about GPSBabel and its available command line options at "
 "https://www.gpsbabel.org."
 msgstr ""
+"Puede obtener más información sobre GPSBabel y sus opciones de línea de "
+"comandos disponibles en https://www.gpsbabel.org."
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:189
 msgid ""
 "Once you have created a new device type, it will appear in the device lists "
 "for the download and upload tools."
 msgstr ""
+"Una vez que haya creado un nuevo tipo de dispositivo, aparecerá en las "
+"listas de dispositivos para las herramientas de descarga y carga."
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:193
 msgid "Download of points/tracks from GPS units"
-msgstr ""
+msgstr "Descarga de puntos/tracks desde unidades GPS"
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:195
 msgid ""
@@ -304,6 +432,13 @@ msgid ""
 "create other profiles, so downloading directly in QGIS using the GPS Tools "
 "is at the moment limited to Garmin USB units."
 msgstr ""
+"Como se describe en las secciones anteriores, QGIS usa GPSBabel para "
+"descargar puntos/pistas directamente en el proyecto. QGIS viene de fábrica "
+"con un perfil predefinido para descargar desde dispositivos Garmin. "
+"Desafortunadamente, hay un `error #6318 "
+"<https://issues.qgis.org/issues/6318>`_ que no permite crear otros perfiles,"
+" por lo que la descarga directa en QGIS usando las herramientas GPS está "
+"actualmente limitada a Garmin USB unidades."
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:203
 msgid "Garmin GPSMAP 60cs"
@@ -320,6 +455,8 @@ msgid ""
 "Install the Garmin USB drivers from "
 "https://www8.garmin.com/support/download_details.jsp?id=591"
 msgstr ""
+"Instale los controladores USB de Garmin desde "
+"https://www8.garmin.com/support/download_details.jsp?id=591"
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:210
 msgid ""
@@ -328,6 +465,11 @@ msgid ""
 "file`. Sometimes it seems to have problems saving in a certain folder, using"
 " something like ``c:\\temp`` usually works."
 msgstr ""
+"Conecte la unidad. Abre Herramientas GPS y usa ``type=garmin serial`` y "
+"``port=usb:`` Rellena los campos :guilabel:`Nombre de capa` y "
+":guilabel:ʻArchivo de salida`. A veces parece tener problemas para guardar "
+"en una carpeta determinada, usar algo como ``c:\\temp`` generalmente "
+"funciona."
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:215
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:249
@@ -342,12 +484,18 @@ msgid ""
 "You can try to create a file :file:`/etc/udev/rules.d/51-garmin.rules` "
 "containing this rule"
 msgstr ""
+"Primero se necesita un problema sobre los permisos del dispositivo, como se "
+"describe en https://wiki.openstreetmap.org/wiki/USB_Garmin_on_GNU/Linux. "
+"Puedes intentar crear un archivo :file:`/etc/udev/rules.d/51-garmin.rules` "
+"conteniendo esta regla"
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:225
 msgid ""
 "After that is necessary to be sure that the ``garmin_gps`` kernel module is "
 "not loaded"
 msgstr ""
+"Después de eso, es necesario asegurarse de que el módulo del kernel "
+"``garmin_gps`` no esté cargado"
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:232
 msgid ""
@@ -355,10 +503,13 @@ msgid ""
 "#7182 <https://issues.qgis.org/issues/7182>`_ and usually QGIS freezes "
 "several times before the operation work fine."
 msgstr ""
+"y luego puede utilizar las herramientas de GPS. Desafortunadamente, parece "
+"haber un`error #7182 <https://issues.qgis.org/issues/7182>`_ y generalmente "
+"QGIS se congela varias veces antes de que la operación funcione bien."
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:237
 msgid "BTGP-38KM datalogger (only Bluetooth)"
-msgstr ""
+msgstr "BTGP-38KM registrador de datos (solo Bluetooth)"
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:241
 msgid ""
@@ -366,20 +517,27 @@ msgid ""
 "QGIS, so it is needed to use GPSBabel from the command line or using its "
 "interface. The working command is"
 msgstr ""
+"El error ya mencionado no permite descargar los datos desde dentro de QGIS, "
+"por lo que es necesario usar GPSBabel desde la línea de comandos o usando su"
+" interfaz. El comando de trabajo es"
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:251
 msgid ""
 "Use same command (or settings if you use GPSBabel GUI) as in Windows. On "
 "Linux it maybe somehow common to get a message like"
 msgstr ""
+"Use el mismo comando (o configuración si usa GPSBabel GUI) que en Windows. "
+"En Linux, tal vez sea común recibir un mensaje como"
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:258
 msgid "it is just a matter to turn off and on the datalogger and try again."
 msgstr ""
+"solo es cuestión de apagar y encender el registrador de datos y volver a "
+"intentarlo."
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:261
 msgid "BlueMax GPS-4044 datalogger (both BT and USB)"
-msgstr ""
+msgstr "registrador de datos BlueMax GPS-4044 (tanto BT como USB)"
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:267
 msgid ""
@@ -393,6 +551,8 @@ msgstr ""
 msgid ""
 "Downloading with GPSBabel, both with USB and BT returns always an error like"
 msgstr ""
+"La descarga con GPSBabel, tanto con USB como con BT devuelve siempre un "
+"error como"
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:280
 msgid "**With USB**"
@@ -404,6 +564,9 @@ msgid ""
 "what port is being used, for example ``/dev/ttyACM3``. Then as usual use "
 "GPSBabel from the CLI or GUI"
 msgstr ""
+"Después de haber conectado el cable, use el comando ``dmesg`` para "
+"comprender qué puerto se está utilizando, por ejemplo, ``/dev/ttyACM3``. "
+"Luego, como de costumbre, use GPSBabel desde la CLI o GUI"
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:290
 msgid "**With Bluetooth**"
@@ -414,3 +577,5 @@ msgid ""
 "Use Blueman Device Manager to pair the device and make it available through "
 "a system port, then run GPSBabel"
 msgstr ""
+"Use Blueman Device Manager para emparejar el dispositivo y hacerlo "
+"disponible a través de un puerto del sistema, luego ejecute GPSBabel"

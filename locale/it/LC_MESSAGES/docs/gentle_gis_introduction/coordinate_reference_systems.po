@@ -5,6 +5,8 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Simone Falceri, 2020
+# Stefano Campus <skampus@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-24 11:25+0200\n"
 "PO-Revision-Date: 2020-03-16 19:16+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Stefano Campus <skampus@gmail.com>, 2020\n"
 "Language-Team: Italian (https://www.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,7 +25,7 @@ msgstr ""
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:4
 msgid "Coordinate Reference Systems"
-msgstr "Sistema di riferimento"
+msgstr "Sistema di Riferimento delle Coordinate"
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:7
 msgid "|gentleLogo|"
@@ -35,7 +37,7 @@ msgstr "Obiettivi:"
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:7
 msgid "Understanding of Coordinate Reference Systems."
-msgstr "Introduzione sui sistemi di riferimento."
+msgstr "Introduzione ai Sistema di Riferimento delle Coordinate"
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:9
 msgid "Keywords:"
@@ -46,7 +48,7 @@ msgid ""
 "Coordinate Reference System (CRS), Map Projection, On the Fly Projection, "
 "Latitude, Longitude, Northing, Easting"
 msgstr ""
-"Sistema di riferimento (SR), Proiezione cartografica, Proiezione al volo, "
+"Sistema di Riferimento (SR), Proiezione Cartografica, Proiezione al Volo, "
 "Latitudine, Longitudine, Nord, Est"
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:13
@@ -60,6 +62,11 @@ msgid ""
 "map projections try to transform the earth from its spherical shape (3D) to "
 "a planar shape (2D)."
 msgstr ""
+"Le **Proiezioni cartografiche** cercano di rappresentare la superficie della"
+" terra, o una porzione della terra, su un pezzo di carta piatto o sullo "
+"schermo di un computer. In parole povere, le proiezioni cartografiche "
+"cercano di trasformare la terra dalla sua forma sferica (3D) ad una forma "
+"planare (2D)."
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:19
 msgid ""
@@ -69,6 +76,11 @@ msgid ""
 "extent of the area you want to work in, on the analysis you want to do, and "
 "often on the availability of data."
 msgstr ""
+"Un **sistema di riferimento di coordinate** (SR) definisce quindi il modo in"
+" cui la mappa bidimensionale proiettata nel tuo GIS si riferisce ai luoghi "
+"reali sulla terra. La decisione di quale proiezione cartografica e SR usare "
+"dipende dall'estensione regionale dell'area in cui si desidera lavorare, "
+"dall'analisi che si desidera eseguire e spesso dalla disponibilità dei dati."
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:26
 msgid "Map Projection in detail"
@@ -621,6 +633,19 @@ msgid ""
 " and progressing East back to the **antemeridian** (**zone 60** at 180 "
 "degrees East longitude) as shown in figure_utm_zones_."
 msgstr ""
+"Il SR delle coordinate Trasversali di Mercatore Universale (UTM) ha la sua "
+"origine sull' **equatore** ad una specifica **Longitudine**. Ora i valori Y "
+"aumentano verso Sud e i valori X aumentano verso Ovest. Il SR UTM è una "
+"proiezione cartografica globale. Ciò significa che è generalmente usato in "
+"tutto il mondo. Ma come già descritto nella sezione 'precisione delle "
+"proiezioni cartografiche' sopra, maggiore è l'area (ad esempio il Sud "
+"Africa), maggiore è la distorsione della conformità angolare, della distanza"
+" e dell'area. Per evitare troppe distorsioni, il mondo è diviso in **60 zone"
+" uguali** che sono tutte larghe **6 gradi** in longitudine da Est ad Ovest. "
+"Le **zone UTM** sono numerate **da 1 a 60**, a partire "
+"dall'**antimeridiano** (**zona 1** a 180 gradi di longitudine Ovest) e "
+"procedendo verso Est fino all'**antimeridiano** (**zona 60** a 180 gradi di "
+"longitudine Est) come mostrato in figure_utm_zones_."
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:323
 msgid ""
@@ -789,6 +814,15 @@ msgid ""
 "within the map window of your GIS, even though they may be in **different** "
 "reference systems. In QGIS, this functionality is applied by default."
 msgstr ""
+"Per risolvere questo problema, molti GIS includono una funzionalità chiamata"
+" proiezione **al volo**. Significa che puoi **definire** una certa "
+"proiezione quando avvii il GIS e tutti i layer che poi carichi, "
+"indipendentemente dal sistema di riferimento di coordinate che hanno, "
+"verranno automaticamente visualizzati nella proiezione che hai definito. "
+"Questa funzionalità ti consente di sovrapporre i layer all'interno della "
+"finestra della mappa del tuo GIS, anche se potrebbero trovarsi in "
+"**diversi** SR. In QGIS, questa funzionalità viene applicata per "
+"impostazione predefinita."
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:406
 msgid "Common problems / things to be aware of"
@@ -891,29 +925,36 @@ msgstr "Ecco alcune idee per provare con i vostri studenti:"
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:442
 msgid "Start QGIS"
-msgstr ""
+msgstr "Avvia QGIS"
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:443
 msgid ""
 "In :menuselection:`Project --> Properties... --> CRS` check :guilabel:`No "
 "projection (or unknown/non-Earth projection)`"
 msgstr ""
+"In :menuselection:`Progetto --> Proprietà... --> SR` check "
+":guilabel:`Nessuna proiezione (o proiezione sconosciuta/non terrestre)`"
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:445
 msgid "Load two layers of the same area but with different projections"
-msgstr ""
+msgstr "Carica due layer della stessa area ma con proiezioni diverse"
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:446
 msgid ""
 "Let your pupils find the coordinates of several places on the two layers. "
 "You can show them that it is not possible to overlay the two layers."
 msgstr ""
+"Lascia che i tuoi studenti trovino le coordinate di diversi punti sui due "
+"layer. Puoi mostrare loro che non è possibile sovrapporre i due layer."
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:448
 msgid ""
 "Then define the coordinate reference system as Geographic/WGS 84 inside the "
 ":guilabel:`Project Properties` dialog"
 msgstr ""
+"Quindi definire il sistema di riferimento delle coordinate come "
+"Geografico/WGS 84 all'interno della finestra di dialogo :guilabel:`Proprietà"
+" del progetto`"
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:450
 msgid ""
@@ -921,6 +962,9 @@ msgid ""
 "setting a CRS for the project (hence, enabling \"on-the-fly\" projection) "
 "works."
 msgstr ""
+"Carica di nuovo i due layer della stessa area e lascia che i tuoi studenti "
+"vedano come funziona l'impostazione di un SR per il progetto (quindi, "
+"abilitare la proiezione \"al volo\")."
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:453
 msgid ""
@@ -929,6 +973,11 @@ msgid ""
 "of the complexity of this topic. You can select different CRSs to display "
 "the same layer in different projections."
 msgstr ""
+"Puoi aprire la finestra di dialogo :guilabel:`Proprietà del Progetto` in "
+"QGIS e mostrare ai tuoi studenti i molti diversi sistemi di riferimento "
+"delle coordinate in modo che abbiano un'idea della complessità di questo "
+"argomento. È possibile selezionare diversi SR per visualizzare lo stesso "
+"layer in diverse proiezioni."
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:459
 msgid "Something to think about"

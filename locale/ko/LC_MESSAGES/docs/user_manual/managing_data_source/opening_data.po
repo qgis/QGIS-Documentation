@@ -556,7 +556,7 @@ msgid ""
 ":ref:`Layers panel <label_legend>` and can be viewed on the map canvas."
 msgstr ""
 "컨텍스트 메뉴를 사용해서 레이어 명칭을 더블 클릭하거나 :ref:`맵 캔버스 <label_mapview>` 로 레이어를 "
-"드래그&드롭하십시오. :ref:`레이어 패널 <label_legend>`에 사용자 레이어를 추가하고 맵 캔버스 상에 표시할 것입니다."
+"드래그&드롭하십시오. :ref:`레이어 패널 <label_legend>` 에 사용자 레이어를 추가하고 맵 캔버스 상에 표시할 것입니다."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:246
 msgid "**Open a QGIS project directly from the browser**"
@@ -2434,7 +2434,7 @@ msgstr ""
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1208
 msgid "Handling broken file paths"
-msgstr ""
+msgstr "망가진 파일 경로 처리"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1210
 msgid ""
@@ -2450,9 +2450,19 @@ msgid ""
 ":guilabel:`Remove Unavailable Layers`. As the last step, click "
 ":guilabel:`Apply changes`."
 msgstr ""
+"데이터소스를 가리키는 경로가 잘못되었을 경우, QGIS는 :guilabel:`Handle Unavailable Layers` 대화창을 "
+"엽니다. :guilabel:`Datasource` 필드를 더블 클릭하거나 :guilabel:`Browse` 를 클릭하면 경로를 고칠 수 "
+"있습니다. :guilabel:`Keep Unavailable Layers` 를 클릭하면 망가진 경로와 함께 사용자 프로젝트를 계속 작업할"
+" 수도 있습니다. 사용자의 레이어가 :guilabel:`Layers` 패널에 표시되지만, 사용자가 :guilabel:`Layers` "
+"패널에서 사용자 레이어 옆에 있는 |indicatorBadLayer| :sup:`Unavailable layer!` 아이콘 또는 레이어 "
+"컨텍스트 메뉴의 :guilabel:`Change Data Source...` 항목을 사용해서 경로를 고치기 전에는 어떤 데이터도 "
+"없습니다. 또다른 방법으로는 |deleteSelected| :guilabel:`Remove Unavailable Layers` 를 "
+"사용해서 레이어를 제거하는 것입니다. 마지막 단계로 :guilabel:`Apply changes` 를 클릭하십시오."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1223
 msgid ""
 "When a layer path has been fixed, QGIS scans through all other broken paths "
 "and tries to auto-fix those that have the same broken file path."
 msgstr ""
+"레이어 경로를 고치고 나면, QGIS는 다른 모든 망가진 경로를 스캔해서 동일한 망가진 파일 경로를 가진 레이어를 자동으로 고치려 "
+"시도합니다."

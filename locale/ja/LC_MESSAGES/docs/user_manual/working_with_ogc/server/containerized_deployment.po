@@ -61,6 +61,8 @@ msgid ""
 "build it. To do so create a directory :file:`qgis-server` and within its "
 "directory:"
 msgstr ""
+"Dockerイメージがパブリックレジストリに存在しないため。ビルドする必要があります。そのためには、ディレクトリ :file:`qgis-server`"
+" をそのディレクトリ内に作成します。"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:31
 msgid "create a file :file:`Dockerfile` with this content:"
@@ -85,6 +87,10 @@ msgid ""
 "qgis/-/blob/cc1798074d4a66a472721352f3984bb318777a5a/qgis-"
 "exec/data/osm.qgs>`_."
 msgstr ""
+"サーバを実行するには、QGisプロジェクトファイルが必要です。お手持ちのものを使用するか、 `このサンプル "
+"<https://gitlab.com/Oslandia/qgis/docker-"
+"qgis/-/blob/cc1798074d4a66a472721352f3984bb318777a5a/qgis-"
+"exec/data/osm.qgs>`_ を選択できます。"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:105
 msgid ""
@@ -151,6 +157,7 @@ msgid ""
 "HTTP server that handles this protocol. To do so we have to create a simple "
 "Nginx configuration file and start a Nginx image."
 msgstr ""
+"サーバーはfastcgi接続のみを受け入れるため、このプロトコルを処理するHTTPサーバーが必要です。そのためには、単純なNginx構成ファイルを作成し、Nginxイメージを開始する必要があります。"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:146
 msgid ""
@@ -281,6 +288,8 @@ msgid ""
 "aspects used by this demo. For further / deeper information, check the "
 "`official documentation <https://Kubernetes.io/docs/home/>`_."
 msgstr ""
+"Kubernetesのインストールは非常に複雑になる可能性があるため、このデモで使用される側面のみに焦点を当てます。詳細は `公式文書 "
+"<https://Kubernetes.io/docs/home/>`_ をご確認ください。"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:304
 msgid "microk8s"
@@ -291,6 +300,8 @@ msgid ""
 "microk8s needs extra steps: you have to enable the registry and tag the "
 "qgis-server image in order to have Kubernetes to find the created images."
 msgstr ""
+"microk8sでは追加の手順が必要です。Kubernetesで作成されたイメージを検出するには、レジストリを有効にしてqgis-"
+"serverイメージにタグを付ける必要があります。"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:310
 msgid "First, enable the registry:"
@@ -317,6 +328,7 @@ msgid ""
 " images) and services to expose the deployments to internal or external "
 "purposes."
 msgstr ""
+"Kubernetesは、yamlマニフェストにデプロイするオブジェクトを記述します。さまざまな種類がありますが、デプロイメント（ポッドを処理する、つまりDockerイメージ）とサービスのみを使用して、デプロイメントを内部または外部の目的に公開します。"
 
 #: ../../docs/user_manual/working_with_ogc/server/containerized_deployment.rst:343
 msgid "Deployment manifests"
