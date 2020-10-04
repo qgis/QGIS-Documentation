@@ -1141,7 +1141,7 @@ Thanks to QGIS Server, you can also publish such services.
 :ref:`QGIS-Server-manual` contains descriptions of these capabilities.
 
 .. index:: Vector Tiles services
-.. _vector_tile:
+.. _vector_tiles:
 
 Using Vector Tiles services
 ---------------------------
