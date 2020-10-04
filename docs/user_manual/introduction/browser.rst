@@ -392,11 +392,8 @@ Resources
   * add it to the project (:guilabel:`Add Layer to Project`)
   * inspect properties (:guilabel:`Layer Properties...`)
 
-<<<<<<< HEAD
-* QGIS Models (.model3)
-=======
+
 * Processing models (.model3).
->>>>>>> a489ecae4... Partial integration to the Browser Panel (#5902)
   The following actions are available from the context menu:
 
   * :guilabel:`Run Model...`)
