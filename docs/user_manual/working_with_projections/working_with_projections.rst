@@ -342,7 +342,7 @@ This customization is done in the :menuselection:`Settings -->` |options|
 :guilabel:`Default datum transformations` group:
 
 * using |checkbox| :guilabel:`Ask for datum transformation if several are
-  available`: when more than one appropriate datum transformation exists for a
+  available`: when more than one appropriate datum transformation exist for a
   source/destination CRS combination, a dialog will automatically be opened
   prompting users to choose which of these datum transformations to use for
   the project. If the :guilabel:`Make default` checkbox is ticked when
