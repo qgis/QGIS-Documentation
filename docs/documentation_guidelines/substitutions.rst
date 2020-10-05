@@ -336,6 +336,7 @@ Icon                            Substitution                        Icon        
 |geographic|                    ``|geographic|``                    |crs|                           ``|crs|``
 |customProjection|              ``|customProjection|``              |setProjection|                 ``|setProjection|``
 |projectionDisabled|            ``|projectionDisabled|``            |projectionEnabled|             ``|projectionEnabled|``
+|transformation|                ``|transformation|``
 |georefRun|                     ``|georefRun|``                     |pencil|                        ``|pencil|``
 |linkQGisToGeoref|              ``|linkQGisToGeoref|``              |linkGeorefToQGis|              ``|linkGeorefToQGis|``
 |coordinateCapture|             ``|coordinateCapture|``             |fullHistogramStretch|          ``|fullHistogramStretch|``
@@ -1306,6 +1307,8 @@ Icon                            Substitution                        Icon        
 .. |tracing| image:: /static/common/mActionTracing.png
    :width: 1.5em
 .. |tracking| image:: /static/common/tracking.png
+   :width: 1.5em
+.. |transformation| image:: /static/common/transformation.png
    :width: 1.5em
 .. |transparency| image:: /static/common/transparency.png
    :width: 1.5em

@@ -224,7 +224,7 @@ variables are displayed in :guilabel:`Current environment variables`, and it's
 possible to filter them by activating
 |checkbox| :guilabel:`Show only QGIS-specific variables`.
 
-.. index:: CRS, Datum transformation, On-the-fly reprojection
+.. index:: CRS, On-the-fly reprojection
 .. _crs_options:
 
 CRS Settings
@@ -267,6 +267,27 @@ or when a layer without a CRS is loaded.
 * |radioButtonOff| :guilabel:`Use project CRS`
 * |radioButtonOff| :guilabel:`Use a default CRS`
 
+|unchecked| :guilabel:`Planimetric measurements`: sets the default for the
+"planimetric measurements" property for newly created projects.
+
+
+.. index:: CRS, Datum transformation, Reprojection
+.. _transformations_options:
+
+Transformations Settings
+------------------------
+
+The |transformation| :guilabel:`Transformations` tab helps you set coordinate
+transformations and operations to apply when loading a layer to a project or
+reprojecting a layer.
+
+.. _figure_transfo_options:
+
+.. figure:: img/options_transformations.png
+   :align: center
+
+   Transformations Settings
+
 **Default datum transformations**
 
 In this group, you can control whether reprojecting layers to another CRS should be:
@@ -277,10 +298,6 @@ In this group, you can control whether reprojecting layers to another CRS should
   * |checkbox| :guilabel:`Ask for datum transformation if several are available`
   * a predefined list of datum transformations to apply by default.
     See :ref:`datum_transformation` for more details.
-
-
-* |unchecked| :guilabel:`Planimetric measurements`: sets the default for the
-  "planimetric measurements" property for newly created projects.
 
 
 .. _datasources_options:
@@ -1860,6 +1877,8 @@ in the QGIS user profile.
 .. |signPlus| image:: /static/common/symbologyAdd.png
    :width: 1.5em
 .. |styleManager| image:: /static/common/mActionStyleManager.png
+   :width: 1.5em
+.. |transformation| image:: /static/common/transformation.png
    :width: 1.5em
 .. |unchecked| image:: /static/common/checkbox_unchecked.png
    :width: 1.3em
