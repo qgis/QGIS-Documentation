@@ -1150,16 +1150,8 @@ Vector Tiles services can be found in the :guilabel:`Vector Tiles`
 top level entry in the :guilabel:`Browser`.
 You can add a service by opening the context menu with a right-click
 and choosing :guilabel:`New Connection`.
-figure_vector_tiles_maptilerplanet shows the dialog with the 
-MapTiler Planet service configuration. The service is available
-on https://cloud.maptiler.com/tiles/. 
-
-.. _figure_vector_tiles_maptilerplanet:
-
-.. figure:: img/vector_tiles_maptilerplanet.png
-   :align: center
-   
-   Vector Tiles - MapTiler Planet configuration 
+You set up a service by adding a :guilabel:`Name` and a :guilabel:`URL`.
+The Vector Tiles Service must provide tiles in :file:`.pbf` format.
 
 .. index:: XYZ Tile services
 .. _xyz_tile:
