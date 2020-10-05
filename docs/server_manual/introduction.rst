@@ -9,9 +9,6 @@ application written in C++ that works together with a web server (e.g., Apache,
 Nginx). It has Python plugin support allowing for fast and efficient
 development and deployment of new features.
 
-.. index:: SLD, SLD/SE
-.. index:: FastCGI, CGI (Common Gateway Interface)
-
 QGIS Server uses QGIS as back end for the GIS logic and for map rendering.
 Furthermore, the Qt library is used for graphics and for platform-independent
 C++ programming. In contrast to other WMS software, the QGIS Server uses
