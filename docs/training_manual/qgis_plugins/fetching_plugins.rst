@@ -50,7 +50,7 @@ that you currently have installed. To install new plugins:
    .. figure:: img/plugin_details.png
       :align: center
 
-#. Install the one(s) you are intereseted in by clicking the :guilabel:`Install
+#. Install the one(s) you are interested in by clicking the :guilabel:`Install
    Plugin` button below the plugin information panel.
 
 .. note:: if the plugin has some error it will be listed in the :guilabel:`Invalid`

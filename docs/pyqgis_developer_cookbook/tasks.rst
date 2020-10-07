@@ -354,7 +354,7 @@ parameter ``wait_time``.
                                    MESSAGE_CATEGORY, Qgis.Critical)
           raise exception
 
-  # Creae a few tasks
+  # Create a few tasks
   task1 = QgsTask.fromFunction('Waste cpu 1', doSomething,
                                on_finished=completed, wait_time=4)
   task2 = QgsTask.fromFunction('Waste cpu 2', doSomething,

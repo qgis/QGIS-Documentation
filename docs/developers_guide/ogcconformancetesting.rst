@@ -44,7 +44,7 @@ It can be downloaded using **pyogctest**:
 After the download, a ``teamengine_wms_130.qgs`` project is available in the
 new ``data`` directory. This project has to be registered as the default
 project for QGIS Server thanks to the **QGIS_SERVER_PROJECT_FILE** environment
-variable. This way, we don't need to explicitely set the ``MAP``
+variable. This way, we don't need to explicitly set the ``MAP``
 vendor-parameter of QGIS Server.
 
 A specific configuration is also necessary to comply with metadata tests.
