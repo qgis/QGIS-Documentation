@@ -249,15 +249,29 @@ QgsMessageLog
 The python built in logging module
 ------------------------------------
 
-.. testcode:: communicating
+.. code-block:: python
 
   import logging
-  logging.basicConfig(filename='c:\\temp\\example.log',level=logging.DEBUG)
-  logging.info("This logging text goes into the file")
+  formatter = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+  logfilename='c:\\temp\\example.log'
+  logging.basicConfig(filename=logfilename, level=logging.DEBUG, format=formatter)
+  logging.info("This logging info text goes into the file")
+  logging.debug("This logging debug text goes into the file as well")
 
-.. testoutput:: communicating
+The basicConfig method configures the basic setup of the logging. In the above code the filename, logging level and the format are defined. The filename refers to where to write the logfile to, the logging level defines what levels to output and the format defines the format in which each message is output. 
 
-  INFO:root:This logging text goes into the file
+.. code-output:: communicating
+
+  2020-10-08 13:14:42,998 - root - INFO - This logging text goes into the file
+  2020-10-08 13:14:42,998 - root - DEBUG - This logging debug text goes into the file as well
+
+.. note::
+   If you want to erase the log file every time you execute your script you can do something like:
+   
+.. code-block:: python
+   if os.path.isfile(logfilename):
+		with open(logfilename, 'w') as file:
+		   pass
 
 .. note::
 
