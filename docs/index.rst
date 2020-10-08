@@ -18,7 +18,7 @@ Please have a look into one of the documents below.
 
 .. toctree::
    :maxdepth: 2
-   :caption: For Documentation Writers
+   :caption: For Writers
 
    Documentation Guidelines <documentation_guidelines/index>
 
