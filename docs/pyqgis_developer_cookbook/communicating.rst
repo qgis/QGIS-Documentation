@@ -209,8 +209,24 @@ example:
 Logging
 =======
 
-You can use the QGIS logging system to log all the information that you want to
-save about the execution of your code.
+There are three different types of logging available in QGIS to log and save all the information about the execution of your code. Each has its specific output location. Please consider to use the correct way of logging for your purpose:
+
+* QgsMessageLog is for messages to communicate issues to the user who calls the script. The output of the QgsMessageLog is shown in the Log Messages Panel
+* The python built in **logging** module is for debugging on the level of the QGIS Python API (PyQGIS). It is recommended for Python script developers that need to debug their python code, e.g. feature ids or geometries
+* QgsLogger is for messages for *QGIS internal* debugging / developers (i.e. you suspect something is triggered by some broken code). A developer version of QGIS is required.
+
+Examples for the different logging types are shown in the following sections below.
+
+.. warning::
+
+ Use of the Python ``print`` statement is unsafe to do in any code which may be
+ multithreaded and **extremely slows down the algorithm**. This includes **expression functions**, **renderers**,
+ **symbol layers** and **Processing algorithms** (amongst others). In these
+ cases you should always use the python **logging** module or thread safe classes (:class:`QgsLogger <qgis.core.QgsLogger>`
+ or :class:`QgsMessageLog <qgis.core.QgsMessageLog>`) instead.
+
+QgsMessageLog
+-------------
 
 .. testcode:: communicating
 
@@ -225,23 +241,31 @@ save about the execution of your code.
   (1): Your plugin code might have some problems
   (2): Your plugin code has crashed!
 
-.. warning::
-
- Use of the Python ``print`` statement is unsafe to do in any code which may be
- multithreaded. This includes **expression functions**, **renderers**,
- **symbol layers** and **Processing algorithms** (amongst others). In these
- cases you should always use thread safe classes (:class:`QgsLogger <qgis.core.QgsLogger>`
- or :class:`QgsMessageLog <qgis.core.QgsMessageLog>`) instead.
-
-
 .. note::
 
    You can see the output of the :class:`QgsMessageLog <qgis.core.QgsMessageLog>`
    in the :ref:`log_message_panel`
 
+The python built in logging module
+------------------------------------
+
+.. testcode:: communicating
+
+  import logging
+  logging.basicConfig(filename='c:\\temp\\example.log',level=logging.DEBUG)
+  logging.info("This logging text goes into the file")
+
+.. testoutput:: communicating
+
+  INFO:root:This logging text goes into the file
+
 .. note::
 
- * :class:`QgsLogger <qgis.core.QgsLogger>` is for messages for debugging /
-   developers (i.e. you suspect they are triggered by some broken code)
- * :class:`QgsMessageLog <qgis.core.QgsMessageLog>` is for messages to
-   investigate issues by sysadmins (e.g. to help a sysadmin to fix configurations)
+ Further resources on how to use the python logging facility are available at:
+ * https://docs.python.org/3/library/logging.html
+ * https://docs.python.org/3/howto/logging.html
+ * https://docs.python.org/3/howto/logging-cookbook.html
+
+.. warning::
+   Please note that without logging to a file by setting a filename the logging may be multithreaded which heavily slows down the output.
+
