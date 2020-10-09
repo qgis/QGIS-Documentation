@@ -7,6 +7,13 @@ a free and Open Source Geographic Information System (GIS) Software, under the
 
 The latest documentation is available at <https://docs.qgis.org/latest>
 
+* [Building the documentation](#building-the-documentation)
+   * [Build on Linux](#build-on-linux)
+   * [Build on macOS or Linux](#build-on-macos-or-linux)
+   * [Build on Windows](#build-on-windows)
+   * [Build PDFs](#build-pdfs)
+* [Translating](#translating)
+
 # Building the documentation
 
 1. If not provided by your OS, you need to install:
@@ -48,20 +55,6 @@ If you want for some reason start from scratch:
 make -f venv.mk cleanall
 ```
 
-### Build PDFs
-
-In Linux, you can also build the PDF versions of the main documents:
-
-```
-make -f venv.mk pdf
-```
-
-For building PDFs you will need to install the XeLaTex compiler package `textlive-xetex` and GNU Freefont.
-
-```
-sudo apt install textlive-xetex fonts-freefont
-```
-
 ## Build on macOS or Linux
 
 You can also use your own virtual env by creating it first:
@@ -97,23 +90,6 @@ Want to build your own language? Note that you will use the translations from th
 make LANG=nl html
 ```
 
-If you want to build PDFs in another language, you can use a similar syntax:
-
-```
-make LANG=fr pdf
-```
-
-For building translated PDFs, you may have to install the texlive extra package
-for your specific language (e.g. `texlive-lang-french`).
-For japanese, it's crucial to install `texlive-lang-japanese`, which will install the platex compiler.
-If you plan to build all languages, it might be easier to install all languages packages (`texlive-lang-all`),
-but it will use a considerable amount of disk space.
-
-Some languages will also need specific fonts installed:
-
--   Korea (ko) - NanumMyeongjo from the `fonts-nanum` package
--   Hindi (hi) - Nakula from the `fonts-nakula` package
-
 ## Build on Windows
 
 Create a virtual environment called 'venv' in that directory (search the Internet for Python Virtual
@@ -148,6 +124,43 @@ Want to build your own language? Note that you will use the translations from th
 set SPHINXOPTS=-D language=nl
 make.bat html
 ```
+
+## Build PDFs
+
+In Linux, you can also build the PDF versions of the main documents.
+
+```
+make -f venv.mk pdf
+```
+
+Or after you enabled the venv:
+
+```
+make pdf
+```
+
+For building PDFs you will need to install the XeLaTex compiler package `textlive-xetex` and GNU Freefont.
+
+```
+sudo apt install textlive-xetex fonts-freefont
+```
+
+If you want to build PDFs in a language other than English, you can use a similar syntax:
+
+```
+make LANG=fr pdf
+```
+
+For building translated PDFs, you may have to install the texlive extra package
+for your specific language (e.g. `texlive-lang-french`).
+For japanese, it's crucial to install `texlive-lang-japanese`, which will install the platex compiler.
+If you plan to build all languages, it might be easier to install all languages packages (`texlive-lang-all`),
+but it will use a considerable amount of disk space.
+
+Some languages will also need specific fonts installed:
+
+-   Korea (ko) - NanumMyeongjo from the `fonts-nanum` package
+-   Hindi (hi) - Nakula from the `fonts-nakula` package
 
 # Translating
 
