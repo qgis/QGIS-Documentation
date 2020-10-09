@@ -1152,8 +1152,9 @@ You can add a service by opening the context menu with a right-click
 and choosing :guilabel:`New Connection`.
 You set up a service by adding a :guilabel:`Name` and a :guilabel:`URL`.
 The Vector Tiles Service must provide tiles in :file:`.pbf` format.
-The dialog provides two menus to define the :checkbox:`Min. Zoom Level` 
-and the :checkbox:`Max. Zoom Level` which are dependend from the
+The dialog provides two menus to define the 
+|checkbox|:guilabel:`Min. Zoom Level` and the
+|checkbox|:guilabel:`Max. Zoom Level` which are dependend from the
 Vector Tile you want to load.
 
 .. index:: XYZ Tile services
