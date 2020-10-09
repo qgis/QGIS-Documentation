@@ -944,15 +944,22 @@ It provides some default filters (with prefix) to use:
   or menu in QGIS, opening a panel...
 * Active layer features (``f``): searches for matching attributes in any field
   from the current active layer and zooms to the selected feature.
+  Press |settings| to configure the maximum number of results.
 * Features in all layers (``af``): searches for matching attributes in the
   :ref:`display name <maptips>` of each :ref:`searchable layers <project_layer_capabilities>`
   and zooms to the selected feature.
+  Press |settings| to configure the maximum number of results and the maximum
+  number of results per layer.
 * Calculator (``=``): allows evaluation of any QGIS expression and, if valid,
   gives an option to copy the result to the clipboard.
 * Spatial bookmarks (``b``): finds and zooms to the bookmark extent.
 * Settings (``set``): browses and opens project and application-wide properties
   dialogs.
-* Processing (``a``): searches and opens a Processing algorithm dialog.
+* Go to coordinate (``go``): pans the map canvas to a location defined by a
+  comma or space separated pair of x and y coordinate or a formatted URL
+  (e.g., OpenStreetMap, Leaflet, OpenLayer, Google Maps, ...).
+  The coordinate is expected in WGS 84 (``epsg:4326``) and/or map canvas CRS.
+* Processing algorithms (``a``): searches and opens a Processing algorithm dialog.
 * Edit selected features (``ef``): gives quick access and runs a compatible
   :ref:`modify-in-place <processing_inplace_edit>` Processing algorithm on the
   active layer.
@@ -965,6 +972,7 @@ In the dialog, you can:
   searches and a shortcut is available in the locator bar menu
 * set whether the filter is :guilabel:`Default`: a search not using a filter
   returns results from only the default filters categories.
+* Some filters provide a way to configure the number of results in a  search.
 
 The set of default locator filters can be extended by plugins, eg for OSM
 nominatim searches, direct database searching, layer catalog searches.
@@ -1860,6 +1868,8 @@ in the QGIS user profile.
    :width: 2.8em
 .. |selectString| image:: /static/common/selectstring.png
    :width: 2.5em
+.. |settings| image:: /static/common/settings.png
+   :width: 1.5em
 .. |signMinus| image:: /static/common/symbologyRemove.png
    :width: 1.5em
 .. |signPlus| image:: /static/common/symbologyAdd.png

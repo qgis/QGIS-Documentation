@@ -2529,6 +2529,15 @@ widget, helps you find and run any feature or options in QGIS:
 #. Click on a result to execute the corresponding action, depending on the type
    of item.
 
+.. tip:: **Limit the lookup to one field of the active layer**
+
+  By default, a search with the "active layer features" filter (``af``) runs
+  through the whole attribute table of the layer. You can limit the search to
+  a particular field using the ``@`` prefix. E.g., ``af @name sal`` or
+  ``@name sal`` returns only the features whose "name" attribute contains 'sal'.
+  Text autocompletion is active when writing and suggestion can be applied
+  using :kbd:`Tab` key.
+
 Searching is handled using threads, so that results always become available as
 quickly as possible, regardless of whether any slow search filters may be
 installed. They also appear as soon as each result is encountered by each
