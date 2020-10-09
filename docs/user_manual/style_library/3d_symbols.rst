@@ -1,5 +1,36 @@
+.. _`3dsymbols`:
+
+*********************
+ Creating 3D Symbols
+*********************
+
+.. only:: html
+
+   .. contents::
+      :local:
+
+The :guilabel:`Style Manager` helps you create and store 3D symbols for every geometry type
+to render in the :ref:`3D map view <label_3dmapview>`.
+
+As of the other items, enable the |3d| :guilabel:`3D Symbols` tab and expand the |signPlus|
+button menu to create:
+
+* :ref:`3D point symbols <3d_pointlayers>`
+* :ref:`3D line symbols <3d_linelayers>`
+* :ref:`3D polygon symbols <3d_polygonlayers>`
+
+
+.. _`3d_pointlayers`:
+
 Point Layers
-------------
+============
+
+.. _figure_3d_point_symbol:
+
+.. figure:: img/3d_point_symbol.png
+   :align: center
+
+   Properties of a 3D point symbol
 
 * You can define different simple 3D shapes like :guilabel:`Sphere`, :guilabel:`Cylinder`,
   :guilabel:`Cube`, :guilabel:`Cone`, :guilabel:`Plane` and :guilabel:`Torus`
@@ -21,8 +52,17 @@ Point Layers
 * You can define a :guilabel:`Scale factor` for the 3D shape as well as a
   :guilabel:`Rotation` around the x-, y- and z-axis.
 
+.. _`3d_linelayers`:
+
 Line layers
------------
+===========
+
+.. _figure_3d_line_symbol:
+
+.. figure:: img/3d_line_symbol.png
+   :align: center
+
+   Properties of a 3D line symbol
 
 * Beneath the :guilabel:`Width` and :guilabel:`Height` settings you can
   define the :guilabel:`Extrusion` of the vector lines. If the lines do not have
@@ -37,8 +77,17 @@ Line layers
 * The shading can be defined in the menus :guilabel:`Diffuse`, :guilabel:`Ambient`,
   :guilabel:`Specular` and :guilabel:`Shininess`.
 
+.. _`3d_polygonlayers`:
+
 Polygon Layers
---------------
+==============
+
+.. _figure_3d_polygon_symbol:
+
+.. figure:: img/3d_polygon_symbol.png
+   :align: center
+
+   Properties of a 3D polygon symbol
 
 * As for the other ones, :guilabel:`Height` can be defined in CRS units. You can
   also use the |dataDefined| button to overwrite the value with a custom
@@ -61,7 +110,7 @@ Polygon Layers
 
 
 Application example
--------------------
+===================
 
 To go through the settings explained above you can have a look at
 https://public.cloudmergin.com/projects/saber/luxembourg/tree.
@@ -73,7 +122,11 @@ https://public.cloudmergin.com/projects/saber/luxembourg/tree.
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |3d| image:: /static/common/3d.png
+   :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |dataDefined| image:: /static/common/mIconDataDefine.png
+   :width: 1.5em
+.. |signPlus| image:: /static/common/symbologyAdd.png
    :width: 1.5em
