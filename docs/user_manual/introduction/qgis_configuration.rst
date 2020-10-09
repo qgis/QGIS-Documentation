@@ -924,9 +924,18 @@ https://doc.qt.io/qt-5.9/qnetworkproxy.html#ProxyType-enum
 Locator Settings
 ----------------
 
-|search| The :guilabel:`Locator` tab allows to configure the :ref:`Locator bar <locator_bar>`, a
-quick search widget available on the status bar that helps you perform searches
-anywhere in the application. It provides some default filters (with prefix) to use:
+|search| The :guilabel:`Locator` tab allows to configure the :ref:`Locator bar
+<locator_bar>`, a quick search widget available on the status bar that helps
+you perform searches anywhere in the application.
+It provides some default filters (with prefix) to use:
+
+.. _figure_locator_settings:
+
+.. figure:: img/options_locator.png
+   :align: center
+
+   Locator Settings in QGIS
+
 
 * Project layers (``l``): finds and selects a layer in the :guilabel:`Layers`
   panel.
@@ -948,17 +957,17 @@ anywhere in the application. It provides some default filters (with prefix) to u
   :ref:`modify-in-place <processing_inplace_edit>` Processing algorithm on the
   active layer.
 
-For each filter, you can customize the filter, set whether it is enabled by default or not.
+In the dialog, you can:
+
+* customize the filter :guilabel:`Prefix`, i.e. the keyword to use to trigger
+  the filter
+* set whether the filter is :guilabel:`Enabled`: the filter can be used in the
+  searches and a shortcut is available in the locator bar menu
+* set whether the filter is :guilabel:`Default`: a search not using a filter
+  returns results from only the default filters categories.
+
 The set of default locator filters can be extended by plugins, eg for OSM
 nominatim searches, direct database searching, layer catalog searches.
-
-
-.. _figure_locator_settings:
-
-.. figure:: img/options_locator.png
-   :align: center
-
-   Locator Settings in QGIS
 
 
 .. _optionsadvanced:
