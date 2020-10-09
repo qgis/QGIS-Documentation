@@ -1151,11 +1151,13 @@ top level entry in the :guilabel:`Browser`.
 You can add a service by opening the context menu with a right-click
 and choosing :guilabel:`New Connection`.
 You set up a service by adding a :guilabel:`Name` and a :guilabel:`URL`.
-The Vector Tiles Service must provide tiles in :file:`.pbf` format.
+The Vector Tiles Service must provide tiles in :file:`.pbf` format. 
 The dialog provides two menus to define the 
 |checkbox|:guilabel:`Min. Zoom Level` and the
 |checkbox|:guilabel:`Max. Zoom Level` which are dependend from the
-Vector Tile you want to load.
+Vector Tile you want to load. 
+The Vector Tiles menu is suitable to connect to ArcGIS Vector Tile 
+Services.
 
 .. index:: XYZ Tile services
 .. _xyz_tile:
