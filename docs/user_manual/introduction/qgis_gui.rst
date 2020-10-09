@@ -2512,6 +2512,9 @@ manage the map view.
 
 .. _`locator_bar`:
 
+Locator bar
+-----------
+
 On the left side of the status bar, the locator bar, a quick search
 widget, helps you find and run any feature or options in QGIS:
 
@@ -2553,6 +2556,9 @@ if a very slow search filter is present (e.g. one which uses an online service).
   Options...` menu.
 
 
+Reporting actions
+-----------------
+
 In the area next to the locator bar, a summary of actions you've
 carried out will be shown when needed  (such as selecting features in
 a layer, removing layer) or a long description of the tool you are
@@ -2561,6 +2567,9 @@ hovering over (not available for all tools).
 In case of lengthy operations, such as gathering of statistics in
 raster layers, executing Processing algorithms or rendering several
 layers in the map view, a progress bar is displayed in the status bar.
+
+Control the map canvas
+----------------------
 
 The |tracking| :guilabel:`Coordinate` option shows the current
 position of the mouse, following it while moving across the map view.
@@ -2605,16 +2614,6 @@ To the right of the render functions, you find the |projectionEnabled|
 on this opens the :guilabel:`Project Properties` dialog and lets you
 apply another CRS to the map view.
 
-The |messageLog| :sup:`Messages` button next to it opens the
-:guilabel:`Log Messages Panel` which has information on underlying
-processes (QGIS startup, plugins loading, processing tools...)
-
-Depending on the :ref:`Plugin Manager settings <setting_plugins>`,
-the status bar can sometimes show icons to the right to inform you
-about availability of |pluginNew| new or |pluginUpgrade| upgradeable
-plugins.
-Click the icon to open the Plugin Manager dialog.
-
 .. index::
    single: Scale calculate
 
@@ -2633,6 +2632,19 @@ Click the icon to open the Plugin Manager dialog.
 
    Note that CRS choice on startup can be set in
    :menuselection:`Settings --> Options --> CRS`.
+
+Messaging
+---------
+
+The |messageLog| :sup:`Messages` button next to it opens the
+:guilabel:`Log Messages Panel` which has information on underlying
+processes (QGIS startup, plugins loading, processing tools...)
+
+Depending on the :ref:`Plugin Manager settings <setting_plugins>`,
+the status bar can sometimes show icons to the right to inform you
+about availability of |pluginNew| new or |pluginUpgrade| upgradeable
+plugins.
+Click the icon to open the Plugin Manager dialog.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
