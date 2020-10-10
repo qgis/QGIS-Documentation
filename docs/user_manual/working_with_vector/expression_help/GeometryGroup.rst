@@ -853,255 +853,6 @@ Returns a specific geometry from a geometry collection, or NULL if the input geo
 
 .. end_geometry_n_section
 
-.. geometry_overlay_contains_section
-
-.. _expression_function_GeometryGroup_geometry_overlay_contains:
-
-geometry_overlay_contains
-.........................
-
-Performs a spatial join of type CONTAINS. This returns an array of results of an expression evaluated on features from a different layer that CONTAINS the current feature, or, if no expression if provided, simply returns whether at least one feature from the other layer CONTAINS the current feature.
-
-.. list-table::
-   :widths: 15 85
-
-   * - Syntax
-     - geometry_overlay_contains(layer, [expression], [filter], [limit], [cache=False])
-
-       [] marks optional arguments
-   * - Arguments
-     - * **layer** - the other layer
-       * **expression** - an optional expression to evaluate on the features from the other layer (if not set, the function will just return a boolean indicating whether there is at least one match)
-       * **filter** - an optional expression to filter the matching features (if not set, all features will be returned)
-       * **limit** - an optional integer to limit the number of matching features (if not set, all features will be returned)
-       * **cache** - set this to true to build a local spatial index (most of the time, this is unwanted, unless you are working with a particularly slow data provider)
-   * - Examples
-     - * ``geometry_overlay_contains('regions')`` → True
-       * ``geometry_overlay_contains('regions', name)`` → ['South Africa', 'Africa', 'World']
-       * ``geometry_overlay_contains('regions', name, name != 'World')`` → ['South Africa', 'Africa']
-       * ``geometry_overlay_contains('regions', name, limit:=1)`` → ['South Africa']
-
-
-.. end_geometry_overlay_contains_section
-
-.. geometry_overlay_crosses_section
-
-.. _expression_function_GeometryGroup_geometry_overlay_crosses:
-
-geometry_overlay_crosses
-........................
-
-Performs a spatial join of type CROSSES. This returns an array of results of an expression evaluated on features from a different layer that CROSSES the current feature, or, if no expression if provided, simply returns whether at least one feature from the other layer CROSSES the current feature.
-
-.. list-table::
-   :widths: 15 85
-
-   * - Syntax
-     - geometry_overlay_crosses(layer, [expression], [filter], [limit], [cache=False])
-
-       [] marks optional arguments
-   * - Arguments
-     - * **layer** - the other layer
-       * **expression** - an optional expression to evaluate on the features from the other layer (if not set, the function will just return a boolean indicating whether there is at least one match)
-       * **filter** - an optional expression to filter the matching features (if not set, all features will be returned)
-       * **limit** - an optional integer to limit the number of matching features (if not set, all features will be returned)
-       * **cache** - set this to true to build a local spatial index (most of the time, this is unwanted, unless you are working with a particularly slow data provider)
-   * - Examples
-     - * ``geometry_overlay_crosses('regions')`` → True
-       * ``geometry_overlay_crosses('regions', name)`` → ['South Africa', 'Africa', 'World']
-       * ``geometry_overlay_crosses('regions', name, name != 'World')`` → ['South Africa', 'Africa']
-       * ``geometry_overlay_crosses('regions', name, limit:=1)`` → ['South Africa']
-
-
-.. end_geometry_overlay_crosses_section
-
-.. geometry_overlay_disjoint_section
-
-.. _expression_function_GeometryGroup_geometry_overlay_disjoint:
-
-geometry_overlay_disjoint
-.........................
-
-Performs a spatial join of type DISJOINT. This returns an array of results of an expression evaluated on features from a different layer that DISJOINT the current feature, or, if no expression if provided, simply returns whether at least one feature from the other layer DISJOINT the current feature.
-
-.. list-table::
-   :widths: 15 85
-
-   * - Syntax
-     - geometry_overlay_disjoint(layer, [expression], [filter], [limit], [cache=False])
-
-       [] marks optional arguments
-   * - Arguments
-     - * **layer** - the other layer
-       * **expression** - an optional expression to evaluate on the features from the other layer (if not set, the function will just return a boolean indicating whether there is at least one match)
-       * **filter** - an optional expression to filter the matching features (if not set, all features will be returned)
-       * **limit** - an optional integer to limit the number of matching features (if not set, all features will be returned)
-       * **cache** - set this to true to build a local spatial index (most of the time, this is unwanted, unless you are working with a particularly slow data provider)
-   * - Examples
-     - * ``geometry_overlay_disjoint('regions')`` → True
-       * ``geometry_overlay_disjoint('regions', name)`` → ['South Africa', 'Africa', 'World']
-       * ``geometry_overlay_disjoint('regions', name, name != 'World')`` → ['South Africa', 'Africa']
-       * ``geometry_overlay_disjoint('regions', name, limit:=1)`` → ['South Africa']
-
-
-.. end_geometry_overlay_disjoint_section
-
-.. geometry_overlay_equals_section
-
-.. _expression_function_GeometryGroup_geometry_overlay_equals:
-
-geometry_overlay_equals
-.......................
-
-Performs a spatial join of type EQUALS. This returns an array of results of an expression evaluated on features from a different layer that EQUALS the current feature, or, if no expression if provided, simply returns whether at least one feature from the other layer EQUALS the current feature.
-
-.. list-table::
-   :widths: 15 85
-
-   * - Syntax
-     - geometry_overlay_equals(layer, [expression], [filter], [limit], [cache=False])
-
-       [] marks optional arguments
-   * - Arguments
-     - * **layer** - the other layer
-       * **expression** - an optional expression to evaluate on the features from the other layer (if not set, the function will just return a boolean indicating whether there is at least one match)
-       * **filter** - an optional expression to filter the matching features (if not set, all features will be returned)
-       * **limit** - an optional integer to limit the number of matching features (if not set, all features will be returned)
-       * **cache** - set this to true to build a local spatial index (most of the time, this is unwanted, unless you are working with a particularly slow data provider)
-   * - Examples
-     - * ``geometry_overlay_equals('regions')`` → True
-       * ``geometry_overlay_equals('regions', name)`` → ['South Africa', 'Africa', 'World']
-       * ``geometry_overlay_equals('regions', name, name != 'World')`` → ['South Africa', 'Africa']
-       * ``geometry_overlay_equals('regions', name, limit:=1)`` → ['South Africa']
-
-
-.. end_geometry_overlay_equals_section
-
-.. geometry_overlay_intersects_section
-
-.. _expression_function_GeometryGroup_geometry_overlay_intersects:
-
-geometry_overlay_intersects
-...........................
-
-Performs a spatial join of type INTERSECTS. This returns an array of results of an expression evaluated on features from a different layer that INTERSECTS the current feature, or, if no expression if provided, simply returns whether at least one feature from the other layer INTERSECTS the current feature.
-
-.. list-table::
-   :widths: 15 85
-
-   * - Syntax
-     - geometry_overlay_intersects(layer, [expression], [filter], [limit], [cache=False])
-
-       [] marks optional arguments
-   * - Arguments
-     - * **layer** - the other layer
-       * **expression** - an optional expression to evaluate on the features from the other layer (if not set, the function will just return a boolean indicating whether there is at least one match)
-       * **filter** - an optional expression to filter the matching features (if not set, all features will be returned)
-       * **limit** - an optional integer to limit the number of matching features (if not set, all features will be returned)
-       * **cache** - set this to true to build a local spatial index (most of the time, this is unwanted, unless you are working with a particularly slow data provider)
-   * - Examples
-     - * ``geometry_overlay_intersects('regions')`` → True
-       * ``geometry_overlay_intersects('regions', name)`` → ['South Africa', 'Africa', 'World']
-       * ``geometry_overlay_intersects('regions', name, name != 'World')`` → ['South Africa', 'Africa']
-       * ``geometry_overlay_intersects('regions', name, limit:=1)`` → ['South Africa']
-
-
-.. end_geometry_overlay_intersects_section
-
-.. geometry_overlay_nearest_section
-
-.. _expression_function_GeometryGroup_geometry_overlay_nearest:
-
-geometry_overlay_nearest
-........................
-
-This returns an array of results of an expression evaluated on features from a different layer ordered BY DISTANCE to the current feature, or, if no expression if provided, simply returns whether at least one feature from the other layer was found. Note : this function can be slow and consume a lot of memory for large layers.
-
-.. list-table::
-   :widths: 15 85
-
-   * - Syntax
-     - geometry_overlay_nearest(layer, [expression], [filter], [limit], [max_distance], [cache=False])
-
-       [] marks optional arguments
-   * - Arguments
-     - * **layer** - the other layer
-       * **expression** - an optional expression to evaluate on the features from the other layer (if not set, the function will just return a boolean indicating whether there is at least one match)
-       * **filter** - an optional expression to filter the matching features (if not set, all features will be returned)
-       * **limit** - an optional integer to limit the number of matching features (if not set, only the nearest feature will be returned)
-       * **max_distance** - an optional maximum distance to limit the number of matching features (if not set, only the nearest feature will be returned)
-       * **cache** - set this to true to build a local spatial index (most of the time, this is unwanted, unless you are working with a particularly slow data provider)
-   * - Examples
-     - * ``geometry_overlay_nearest('regions')`` → True
-       * ``geometry_overlay_nearest('regions', name)`` → ['South Africa', 'Africa', 'World']
-       * ``geometry_overlay_nearest('regions', name, name != 'World')`` → ['South Africa', 'Africa']
-       * ``geometry_overlay_nearest('regions', name, limit:=1)`` → ['South Africa']
-
-
-.. end_geometry_overlay_nearest_section
-
-.. geometry_overlay_touches_section
-
-.. _expression_function_GeometryGroup_geometry_overlay_touches:
-
-geometry_overlay_touches
-........................
-
-Performs a spatial join of type TOUCHES. This returns an array of results of an expression evaluated on features from a different layer that TOUCHES the current feature, or, if no expression if provided, simply returns whether at least one feature from the other layer TOUCHES the current feature.
-
-.. list-table::
-   :widths: 15 85
-
-   * - Syntax
-     - geometry_overlay_touches(layer, [expression], [filter], [limit], [cache=False])
-
-       [] marks optional arguments
-   * - Arguments
-     - * **layer** - the other layer
-       * **expression** - an optional expression to evaluate on the features from the other layer (if not set, the function will just return a boolean indicating whether there is at least one match)
-       * **filter** - an optional expression to filter the matching features (if not set, all features will be returned)
-       * **limit** - an optional integer to limit the number of matching features (if not set, all features will be returned)
-       * **cache** - set this to true to build a local spatial index (most of the time, this is unwanted, unless you are working with a particularly slow data provider)
-   * - Examples
-     - * ``geometry_overlay_touches('regions')`` → True
-       * ``geometry_overlay_touches('regions', name)`` → ['South Africa', 'Africa', 'World']
-       * ``geometry_overlay_touches('regions', name, name != 'World')`` → ['South Africa', 'Africa']
-       * ``geometry_overlay_touches('regions', name, limit:=1)`` → ['South Africa']
-
-
-.. end_geometry_overlay_touches_section
-
-.. geometry_overlay_within_section
-
-.. _expression_function_GeometryGroup_geometry_overlay_within:
-
-geometry_overlay_within
-.......................
-
-Performs a spatial join of type WITHIN. This returns an array of results of an expression evaluated on features from a different layer that are WITHIN the current feature, or, if no expression if provided, simply returns whether at least one feature from the other layer is WITHIN the current feature.
-
-.. list-table::
-   :widths: 15 85
-
-   * - Syntax
-     - geometry_overlay_within(layer, [expression], [filter], [limit], [cache=False])
-
-       [] marks optional arguments
-   * - Arguments
-     - * **layer** - the other layer
-       * **expression** - an optional expression to evaluate on the features from the other layer (if not set, the function will just return a boolean indicating whether there is at least one match)
-       * **filter** - an optional expression to filter the matching features (if not set, all features will be returned)
-       * **limit** - an optional integer to limit the number of matching features (if not set, all features will be returned)
-       * **cache** - set this to true to build a local spatial index (most of the time, this is unwanted, unless you are working with a particularly slow data provider)
-   * - Examples
-     - * ``geometry_overlay_within('regions')`` → True
-       * ``geometry_overlay_within('regions', name)`` → ['South Africa', 'Africa', 'World']
-       * ``geometry_overlay_within('regions', name, name != 'World')`` → ['South Africa', 'Africa']
-       * ``geometry_overlay_within('regions', name, limit:=1)`` → ['South Africa']
-
-
-.. end_geometry_overlay_within_section
-
 .. hausdorff_distance_section
 
 .. _expression_function_GeometryGroup_hausdorff_distance:
@@ -2175,6 +1926,255 @@ Tests whether a geometry overlaps another. Returns true if the geometries share 
 
 
 .. end_overlaps_section
+
+.. overlay_contains_section
+
+.. _expression_function_GeometryGroup_overlay_contains:
+
+overlay_contains
+................
+
+Performs a spatial join of type CONTAINS. This returns an array of results of an expression evaluated on features from a different layer that CONTAINS the current feature, or, if no expression if provided, simply returns whether at least one feature from the other layer CONTAINS the current feature.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - overlay_contains(layer, [expression], [filter], [limit], [cache=False])
+
+       [] marks optional arguments
+   * - Arguments
+     - * **layer** - the other layer
+       * **expression** - an optional expression to evaluate on the features from the other layer (if not set, the function will just return a boolean indicating whether there is at least one match)
+       * **filter** - an optional expression to filter the matching features (if not set, all features will be returned)
+       * **limit** - an optional integer to limit the number of matching features (if not set, all features will be returned)
+       * **cache** - set this to true to build a local spatial index (most of the time, this is unwanted, unless you are working with a particularly slow data provider)
+   * - Examples
+     - * ``overlay_contains('regions')`` → True
+       * ``overlay_contains('regions', name)`` → ['South Africa', 'Africa', 'World']
+       * ``overlay_contains('regions', name, name != 'World')`` → ['South Africa', 'Africa']
+       * ``overlay_contains('regions', name, limit:=1)`` → ['South Africa']
+
+
+.. end_overlay_contains_section
+
+.. overlay_crosses_section
+
+.. _expression_function_GeometryGroup_overlay_crosses:
+
+overlay_crosses
+...............
+
+Performs a spatial join of type CROSSES. This returns an array of results of an expression evaluated on features from a different layer that CROSSES the current feature, or, if no expression if provided, simply returns whether at least one feature from the other layer CROSSES the current feature.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - overlay_crosses(layer, [expression], [filter], [limit], [cache=False])
+
+       [] marks optional arguments
+   * - Arguments
+     - * **layer** - the other layer
+       * **expression** - an optional expression to evaluate on the features from the other layer (if not set, the function will just return a boolean indicating whether there is at least one match)
+       * **filter** - an optional expression to filter the matching features (if not set, all features will be returned)
+       * **limit** - an optional integer to limit the number of matching features (if not set, all features will be returned)
+       * **cache** - set this to true to build a local spatial index (most of the time, this is unwanted, unless you are working with a particularly slow data provider)
+   * - Examples
+     - * ``overlay_crosses('regions')`` → True
+       * ``overlay_crosses('regions', name)`` → ['South Africa', 'Africa', 'World']
+       * ``overlay_crosses('regions', name, name != 'World')`` → ['South Africa', 'Africa']
+       * ``overlay_crosses('regions', name, limit:=1)`` → ['South Africa']
+
+
+.. end_overlay_crosses_section
+
+.. overlay_disjoint_section
+
+.. _expression_function_GeometryGroup_overlay_disjoint:
+
+overlay_disjoint
+................
+
+Performs a spatial join of type DISJOINT. This returns an array of results of an expression evaluated on features from a different layer that DISJOINT the current feature, or, if no expression if provided, simply returns whether at least one feature from the other layer DISJOINT the current feature.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - overlay_disjoint(layer, [expression], [filter], [limit], [cache=False])
+
+       [] marks optional arguments
+   * - Arguments
+     - * **layer** - the other layer
+       * **expression** - an optional expression to evaluate on the features from the other layer (if not set, the function will just return a boolean indicating whether there is at least one match)
+       * **filter** - an optional expression to filter the matching features (if not set, all features will be returned)
+       * **limit** - an optional integer to limit the number of matching features (if not set, all features will be returned)
+       * **cache** - set this to true to build a local spatial index (most of the time, this is unwanted, unless you are working with a particularly slow data provider)
+   * - Examples
+     - * ``overlay_disjoint('regions')`` → True
+       * ``overlay_disjoint('regions', name)`` → ['South Africa', 'Africa', 'World']
+       * ``overlay_disjoint('regions', name, name != 'World')`` → ['South Africa', 'Africa']
+       * ``overlay_disjoint('regions', name, limit:=1)`` → ['South Africa']
+
+
+.. end_overlay_disjoint_section
+
+.. overlay_equals_section
+
+.. _expression_function_GeometryGroup_overlay_equals:
+
+overlay_equals
+..............
+
+Performs a spatial join of type EQUALS. This returns an array of results of an expression evaluated on features from a different layer that EQUALS the current feature, or, if no expression if provided, simply returns whether at least one feature from the other layer EQUALS the current feature.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - overlay_equals(layer, [expression], [filter], [limit], [cache=False])
+
+       [] marks optional arguments
+   * - Arguments
+     - * **layer** - the other layer
+       * **expression** - an optional expression to evaluate on the features from the other layer (if not set, the function will just return a boolean indicating whether there is at least one match)
+       * **filter** - an optional expression to filter the matching features (if not set, all features will be returned)
+       * **limit** - an optional integer to limit the number of matching features (if not set, all features will be returned)
+       * **cache** - set this to true to build a local spatial index (most of the time, this is unwanted, unless you are working with a particularly slow data provider)
+   * - Examples
+     - * ``overlay_equals('regions')`` → True
+       * ``overlay_equals('regions', name)`` → ['South Africa', 'Africa', 'World']
+       * ``overlay_equals('regions', name, name != 'World')`` → ['South Africa', 'Africa']
+       * ``overlay_equals('regions', name, limit:=1)`` → ['South Africa']
+
+
+.. end_overlay_equals_section
+
+.. overlay_intersects_section
+
+.. _expression_function_GeometryGroup_overlay_intersects:
+
+overlay_intersects
+..................
+
+Performs a spatial join of type INTERSECTS. This returns an array of results of an expression evaluated on features from a different layer that INTERSECTS the current feature, or, if no expression if provided, simply returns whether at least one feature from the other layer INTERSECTS the current feature.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - overlay_intersects(layer, [expression], [filter], [limit], [cache=False])
+
+       [] marks optional arguments
+   * - Arguments
+     - * **layer** - the other layer
+       * **expression** - an optional expression to evaluate on the features from the other layer (if not set, the function will just return a boolean indicating whether there is at least one match)
+       * **filter** - an optional expression to filter the matching features (if not set, all features will be returned)
+       * **limit** - an optional integer to limit the number of matching features (if not set, all features will be returned)
+       * **cache** - set this to true to build a local spatial index (most of the time, this is unwanted, unless you are working with a particularly slow data provider)
+   * - Examples
+     - * ``overlay_intersects('regions')`` → True
+       * ``overlay_intersects('regions', name)`` → ['South Africa', 'Africa', 'World']
+       * ``overlay_intersects('regions', name, name != 'World')`` → ['South Africa', 'Africa']
+       * ``overlay_intersects('regions', name, limit:=1)`` → ['South Africa']
+
+
+.. end_overlay_intersects_section
+
+.. overlay_nearest_section
+
+.. _expression_function_GeometryGroup_overlay_nearest:
+
+overlay_nearest
+...............
+
+This returns an array of results of an expression evaluated on features from a different layer ordered BY DISTANCE to the current feature, or, if no expression if provided, simply returns whether at least one feature from the other layer was found. Note : this function can be slow and consume a lot of memory for large layers.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - overlay_nearest(layer, [expression], [filter], [limit], [max_distance], [cache=False])
+
+       [] marks optional arguments
+   * - Arguments
+     - * **layer** - the other layer
+       * **expression** - an optional expression to evaluate on the features from the other layer (if not set, the function will just return a boolean indicating whether there is at least one match)
+       * **filter** - an optional expression to filter the matching features (if not set, all features will be returned)
+       * **limit** - an optional integer to limit the number of matching features (if not set, only the nearest feature will be returned)
+       * **max_distance** - an optional maximum distance to limit the number of matching features (if not set, only the nearest feature will be returned)
+       * **cache** - set this to true to build a local spatial index (most of the time, this is unwanted, unless you are working with a particularly slow data provider)
+   * - Examples
+     - * ``overlay_nearest('regions')`` → True
+       * ``overlay_nearest('regions', name)`` → ['South Africa', 'Africa', 'World']
+       * ``overlay_nearest('regions', name, name != 'World')`` → ['South Africa', 'Africa']
+       * ``overlay_nearest('regions', name, limit:=1)`` → ['South Africa']
+
+
+.. end_overlay_nearest_section
+
+.. overlay_touches_section
+
+.. _expression_function_GeometryGroup_overlay_touches:
+
+overlay_touches
+...............
+
+Performs a spatial join of type TOUCHES. This returns an array of results of an expression evaluated on features from a different layer that TOUCHES the current feature, or, if no expression if provided, simply returns whether at least one feature from the other layer TOUCHES the current feature.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - overlay_touches(layer, [expression], [filter], [limit], [cache=False])
+
+       [] marks optional arguments
+   * - Arguments
+     - * **layer** - the other layer
+       * **expression** - an optional expression to evaluate on the features from the other layer (if not set, the function will just return a boolean indicating whether there is at least one match)
+       * **filter** - an optional expression to filter the matching features (if not set, all features will be returned)
+       * **limit** - an optional integer to limit the number of matching features (if not set, all features will be returned)
+       * **cache** - set this to true to build a local spatial index (most of the time, this is unwanted, unless you are working with a particularly slow data provider)
+   * - Examples
+     - * ``overlay_touches('regions')`` → True
+       * ``overlay_touches('regions', name)`` → ['South Africa', 'Africa', 'World']
+       * ``overlay_touches('regions', name, name != 'World')`` → ['South Africa', 'Africa']
+       * ``overlay_touches('regions', name, limit:=1)`` → ['South Africa']
+
+
+.. end_overlay_touches_section
+
+.. overlay_within_section
+
+.. _expression_function_GeometryGroup_overlay_within:
+
+overlay_within
+..............
+
+Performs a spatial join of type WITHIN. This returns an array of results of an expression evaluated on features from a different layer that are WITHIN the current feature, or, if no expression if provided, simply returns whether at least one feature from the other layer is WITHIN the current feature.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - overlay_within(layer, [expression], [filter], [limit], [cache=False])
+
+       [] marks optional arguments
+   * - Arguments
+     - * **layer** - the other layer
+       * **expression** - an optional expression to evaluate on the features from the other layer (if not set, the function will just return a boolean indicating whether there is at least one match)
+       * **filter** - an optional expression to filter the matching features (if not set, all features will be returned)
+       * **limit** - an optional integer to limit the number of matching features (if not set, all features will be returned)
+       * **cache** - set this to true to build a local spatial index (most of the time, this is unwanted, unless you are working with a particularly slow data provider)
+   * - Examples
+     - * ``overlay_within('regions')`` → True
+       * ``overlay_within('regions', name)`` → ['South Africa', 'Africa', 'World']
+       * ``overlay_within('regions', name, name != 'World')`` → ['South Africa', 'Africa']
+       * ``overlay_within('regions', name, limit:=1)`` → ['South Africa']
+
+
+.. end_overlay_within_section
 
 .. $perimeter_section
 

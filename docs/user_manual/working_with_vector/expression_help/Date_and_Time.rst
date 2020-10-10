@@ -338,8 +338,9 @@ Creates an interval value from year, month, weeks, days, hours, minute and secon
        * **minutes** - Number of minutes
        * **seconds** - Number of seconds
    * - Examples
-     - * ``make_interval(hours:=3)`` → 3 hour interval
-       * ``make_interval(days:=2, hours:=3)`` → 2 day, 3 hour interval
+     - * ``make_interval(hours:=3)`` → interval: 3 hours
+       * ``make_interval(days:=2, hours:=3)`` → interval: 2.125 days
+       * ``make_interval(minutes:=0.5, seconds:=5)`` → interval: 35 seconds
 
 
 .. end_make_interval_section
@@ -589,7 +590,9 @@ Converts a string to an interval type. Can be used to take days, hours, month, e
    * - Arguments
      - * **string** - a string representing an interval. Allowable formats include {n} days {n} hours {n} months.
    * - Examples
-     - * ``to_datetime('2012-05-05 12:00:00') - to_interval('1 day 2 hours')`` → 2012-05-04T10:00:00
+     - * ``to_interval('1 day 2 hours')`` → interval: 1.08333 days
+       * ``to_interval( '0.5 hours' )`` → interval: 30 minutes
+       * ``to_datetime('2012-05-05 12:00:00') - to_interval('1 day 2 hours')`` → 2012-05-04T10:00:00
 
 
 .. end_to_interval_section

@@ -305,7 +305,9 @@ Converts a string to an interval type. Can be used to take days, hours, month, e
    * - Arguments
      - * **string** - a string representing an interval. Allowable formats include {n} days {n} hours {n} months.
    * - Examples
-     - * ``to_datetime('2012-05-05 12:00:00') - to_interval('1 day 2 hours')`` → 2012-05-04T10:00:00
+     - * ``to_interval('1 day 2 hours')`` → interval: 1.08333 days
+       * ``to_interval( '0.5 hours' )`` → interval: 30 minutes
+       * ``to_datetime('2012-05-05 12:00:00') - to_interval('1 day 2 hours')`` → 2012-05-04T10:00:00
 
 
 .. end_to_interval_section
