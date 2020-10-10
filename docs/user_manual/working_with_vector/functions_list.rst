@@ -325,7 +325,7 @@ Further reading: :ref:`qgiscollect` algorithm
    :start-after: .. end_collect_geometries_section
    :end-before: .. end_contains_section
 
-Further reading: :ref:`expression_function_GeometryGroup_geometry_overlay_contains`
+Further reading: :ref:`expression_function_GeometryGroup_overlay_contains`
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_contains_section
@@ -337,7 +337,7 @@ Further reading: :ref:`qgisconvexhull` algorithm
    :start-after: .. end_convex_hull_section
    :end-before: .. end_crosses_section
 
-Further reading: :ref:`expression_function_GeometryGroup_geometry_overlay_crosses`
+Further reading: :ref:`expression_function_GeometryGroup_overlay_crosses`
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_crosses_section
@@ -349,7 +349,7 @@ Further reading: :ref:`qgisdifference` algorithm
    :start-after: .. end_difference_section
    :end-before: .. end_disjoint_section
 
-Further reading: :ref:`expression_function_GeometryGroup_geometry_overlay_disjoint`
+Further reading: :ref:`expression_function_GeometryGroup_overlay_disjoint`
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_disjoint_section
@@ -377,60 +377,6 @@ Further reading: :ref:`qgisforcerhr` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_force_rhr_section
-   :end-before: .. end_geometry_overlay_contains_section
-
-Further reading: :ref:`expression_function_GeometryGroup_contains`,
-:ref:`qgisselectbylocation` algorithm
-
-.. include:: expression_help/GeometryGroup.rst
-   :start-after: .. end_geometry_overlay_contains_section
-   :end-before: .. end_geometry_overlay_crosses_section
-
-Further reading: :ref:`expression_function_GeometryGroup_crosses`,
-:ref:`qgisselectbylocation` algorithm
-
-.. include:: expression_help/GeometryGroup.rst
-   :start-after: .. end_geometry_overlay_crosses_section
-   :end-before: .. end_geometry_overlay_disjoint_section
-
-Further reading: :ref:`expression_function_GeometryGroup_disjoint`,
-:ref:`qgisselectbylocation` algorithm
-
-.. include:: expression_help/GeometryGroup.rst
-   :start-after: .. end_geometry_overlay_disjoint_section
-   :end-before: .. end_geometry_overlay_equals_section
-
-Further reading: :ref:`qgisselectbylocation` algorithm
-
-.. include:: expression_help/GeometryGroup.rst
-   :start-after: .. end_geometry_overlay_equals_section
-   :end-before: .. end_geometry_overlay_intersects_section
-
-Further reading: :ref:`expression_function_GeometryGroup_intersects`,
-:ref:`qgisselectbylocation` algorithm
-
-.. include:: expression_help/GeometryGroup.rst
-   :start-after: .. end_geometry_overlay_intersects_section
-   :end-before: .. end_geometry_overlay_nearest_section
-
-Further reading: :ref:`qgisjoinbynearest` algorithm
-
-.. include:: expression_help/GeometryGroup.rst
-   :start-after: .. end_geometry_overlay_nearest_section
-   :end-before: .. end_geometry_overlay_touches_section
-
-Further reading: :ref:`expression_function_GeometryGroup_touches`,
-:ref:`qgisselectbylocation` algorithm
-
-.. include:: expression_help/GeometryGroup.rst
-   :start-after: .. end_geometry_overlay_touches_section
-   :end-before: .. end_geometry_overlay_within_section
-
-Further reading: :ref:`expression_function_GeometryGroup_within`,
-:ref:`qgisselectbylocation` algorithm
-
-.. include:: expression_help/GeometryGroup.rst
-   :start-after: .. end_geometry_overlay_within_section
    :end-before: .. end_intersection_section
    
 Further reading: :ref:`qgisintersection` algorithm
@@ -439,7 +385,7 @@ Further reading: :ref:`qgisintersection` algorithm
    :start-after: .. end_intersection_section
    :end-before: .. end_intersects_section
 
-Further reading: :ref:`expression_function_GeometryGroup_geometry_overlay_intersects`
+Further reading: :ref:`expression_function_GeometryGroup_overlay_intersects`
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_intersects_section
@@ -479,6 +425,60 @@ Further reading: :ref:`qgisorientedminimumboundingbox` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_oriented_bbox_section
+   :end-before: .. end_overlay_contains_section
+
+Further reading: :ref:`expression_function_GeometryGroup_contains`,
+:ref:`qgisselectbylocation` algorithm
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_overlay_contains_section
+   :end-before: .. end_overlay_crosses_section
+
+Further reading: :ref:`expression_function_GeometryGroup_crosses`,
+:ref:`qgisselectbylocation` algorithm
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_overlay_crosses_section
+   :end-before: .. end_overlay_disjoint_section
+
+Further reading: :ref:`expression_function_GeometryGroup_disjoint`,
+:ref:`qgisselectbylocation` algorithm
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_overlay_disjoint_section
+   :end-before: .. end_overlay_equals_section
+
+Further reading: :ref:`qgisselectbylocation` algorithm
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_overlay_equals_section
+   :end-before: .. end_overlay_intersects_section
+
+Further reading: :ref:`expression_function_GeometryGroup_intersects`,
+:ref:`qgisselectbylocation` algorithm
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_overlay_intersects_section
+   :end-before: .. end_overlay_nearest_section
+
+Further reading: :ref:`qgisjoinbynearest` algorithm
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_overlay_nearest_section
+   :end-before: .. end_overlay_touches_section
+
+Further reading: :ref:`expression_function_GeometryGroup_touches`,
+:ref:`qgisselectbylocation` algorithm
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_overlay_touches_section
+   :end-before: .. end_overlay_within_section
+
+Further reading: :ref:`expression_function_GeometryGroup_within`,
+:ref:`qgisselectbylocation` algorithm
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_overlay_within_section
    :end-before: .. end_point_n_section
 
 Further reading: :ref:`qgisextractspecificvertices` algorithm
@@ -559,7 +559,7 @@ Further reading: :ref:`qgistaperedbuffer` algorithm
    :start-after: .. end_tapered_buffer_section
    :end-before: .. end_touches_section
 
-Further reading: :ref:`expression_function_GeometryGroup_geometry_overlay_touches`
+Further reading: :ref:`expression_function_GeometryGroup_overlay_touches`
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_touches_section
@@ -583,7 +583,7 @@ Further reading: :ref:`qgiswedgebuffers` algorithm
    :start-after: .. end_wedge_buffer_section
    :end-before: .. end_within_section
 
-Further reading: :ref:`expression_function_GeometryGroup_geometry_overlay_within`
+Further reading: :ref:`expression_function_GeometryGroup_overlay_within`
 
 
 .. include:: expression_help/GeometryGroup.rst
