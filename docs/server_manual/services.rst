@@ -1031,9 +1031,9 @@ area:
 * **BBOX** the geographical area for which the legend should be built
 * **CRS / SRS** the coordinate reference system adopted to define the
   BBOX coordinates
-* **WIDTH / HEIGHT** if set these should match those defined for the
-  GetMap request, to let QGIS Server scale symbols according to the
-  map view image size.
+* **SRCWIDTH / SRCHEIGHT** if set these should match the WIDTH and HEIGHT
+  parameters of the GetMap request, to let QGIS Server scale symbols according
+  to the map view image size.
 
 Content based legend features are based on the `UMN MapServer
 implementation:
@@ -1046,6 +1046,7 @@ implementation:
     :align: center
 
 * **RULE** set it to a given rule name to get only the named rule symbol
+* **WIDTH/HEIGHT** the generated legend image size if the **RULE** parameter is set
 
 
 .. _server_wms_getprojectsettings:
