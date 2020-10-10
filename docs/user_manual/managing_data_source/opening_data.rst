@@ -19,12 +19,12 @@ and often write a lot of formats:
 
 * Vector data formats include GeoPackage, GML, GeoJSON, GPX, KML,
   Comma Separated Values, ESRI formats (Shapefile, Geodatabase...),
-  MapInfo and MicroStation file formats, AutoCAD DWG/DXF, 
+  MapInfo and MicroStation file formats, AutoCAD DWG/DXF,
   GRASS and many more...
   Read the complete list of `supported vector formats
   <https://gdal.org/drivers/vector/index.html>`_.
 * Raster data formats include GeoTIFF, JPEG, ASCII Gridded XYZ,
-  MBTiles, R or Idrisi rasters, GDAL Virtual, SRTM, Sentinel Data, 
+  MBTiles, R or Idrisi rasters, GDAL Virtual, SRTM, Sentinel Data,
   ERDAS IMAGINE, ArcInfo Binary Grid, ArcInfo ASCII Grid, and
   many more...
   Read the complete list of `supported raster formats
@@ -48,9 +48,8 @@ More than 80 vector and 140 raster formats are supported by
    installation of your OS may not have been built to support the format you
    want to use. To see the list of available formats, run the command line
    ``ogrinfo --formats`` (for vector) and ``gdalinfo --formats`` (for raster),
-   or check :menuselection:`Settings --> Options --> GDAL` menu (for raster)
-   in QGIS.
-   
+   or check the :menuselection:`Settings --> Options --> GDAL` menu in QGIS.
+
 .. let's use ogrinfo until a list of vector formats is provided in a (GDAL/)OGR tab
 
 .. _datasourcemanager:
@@ -232,7 +231,7 @@ the layers have been added to the project):
 To add a layer to the project using the :guilabel:`Browser`:
 
 #. Enable the :guilabel:`Browser` as described above.
-   A browser tree with your file system, databases and web services is 
+   A browser tree with your file system, databases and web services is
    displayed.
    You may need to connect databases and web services before they appear
    (see dedicated sections).
@@ -355,7 +354,7 @@ To load a layer from a file:
    * for raster data (like GeoTiff, MBTiles, GRIdded Binary and DWG layers):
      press :kbd:`Ctrl+Shift+R`, select the :menuselection:`Layer --> Add Layer -->`
      |addRasterLayer| :guilabel:`Add Raster Layer` menu option or
-     click on the |addRasterLayer| :sup:`Add Raster Layer` toolbar button. 
+     click on the |addRasterLayer| :sup:`Add Raster Layer` toolbar button.
 
      .. _figure_raster_add:
 
@@ -404,14 +403,14 @@ Layer` tabs allow loading of layers from source types other than :guilabel:`File
   ``UK. National Transfer Format``, as well as the raw TIGER format of the
   ``US Census Bureau`` or ``OpenfileGDB``. To do that, you select
   |radioButtonOn| :guilabel:`Directory` as :guilabel:`Source type`.
-  In this case, a directory can be selected in the dialog after pressing 
+  In this case, a directory can be selected in the dialog after pressing
   :guilabel:`...` :sup:`Browse`.
 * With the |radioButtonOn| :guilabel:`Database` source type you can select an
   existing database connection or create one to the selected database type.
   Some possible database types are ``ODBC``, ``Esri Personal Geodatabase``,
   ``MSSQL`` as well as ``PostgreSQL`` or ``MySQL`` .
 
-  Pressing the :guilabel:`New` button opens the 
+  Pressing the :guilabel:`New` button opens the
   :guilabel:`Create a New OGR Database Connection` dialog whose parameters
   are among the ones you can find in :ref:`vector_create_stored_connection`.
   Pressing :guilabel:`Open` lets you select from the available tables, for
@@ -537,7 +536,7 @@ Once the file is parsed, set :guilabel:`Geometry definition` to
 
 * |radioButtonOn|:guilabel:`Point coordinates` and provide the :guilabel:`X
   field`, :guilabel:`Y field`, :guilabel:`Z field` (for 3-dimensional data)
-  and :guilabel:`M field` (for the measurement dimension) if the layer is of 
+  and :guilabel:`M field` (for the measurement dimension) if the layer is of
   point geometry type and contains such fields. If the coordinates
   are defined as degrees/minutes/seconds, activate the
   |checkbox|:guilabel:`DMS coordinates` checkbox.
@@ -634,7 +633,7 @@ There you can select which layers to add to the QGIS project:
 
 .. figure:: img/dwg_dxf_import_dialog.png
     :align: center
-    
+
     Import dialog for DWG/DXF files
 
 
@@ -812,7 +811,7 @@ For the other database types, see their differences at
 
 * :guilabel:`Authentication`, configurations.
   Choose an authentication configuration. You can add configurations using
-  the |signPlus| button. Choices are:  
+  the |signPlus| button. Choices are:
 
   * Basic authentication
   * PKI PKCS#12 authentication
@@ -1030,7 +1029,7 @@ A driver/host/port connection requires:
 
   It is also helpful for the spatial column to be registered with a specific
   spatial reference identifier (most often ``4326`` for WGS84 coordinates).
-  A spatial column can be registered by calling the 
+  A spatial column can be registered by calling the
   ``ST_Register_Spatial_Column`` stored procedure.
 
 
@@ -1176,7 +1175,7 @@ The XML file for OpenStreetMap looks like this:
      zmin="0" zmax="19" password="" name="OpenStreetMap" username=""
      authcfg="" referer=""/>
   </qgsXYZTilesConnections>
-  
+
 Once a connection to a XYZ tile service is set, right-click over the entry to:
 
 * :guilabel:`Edit...` the XYZ connection settings
