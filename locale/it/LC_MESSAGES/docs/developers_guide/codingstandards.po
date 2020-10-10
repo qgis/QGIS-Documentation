@@ -6,15 +6,16 @@
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
 # Korto <gifattor@libero.it>, 2020
+# marcobra <marcobra.ubuntu@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-24 11:25+0200\n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
 "PO-Revision-Date: 2020-03-16 19:24+0000\n"
-"Last-Translator: Korto <gifattor@libero.it>, 2020\n"
+"Last-Translator: marcobra <marcobra.ubuntu@gmail.com>, 2020\n"
 "Language-Team: Italian (https://www.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -271,6 +272,8 @@ msgid ""
 "It is required to write API documentation for every class, method, enum and "
 "other code that is available in the public API."
 msgstr ""
+"È necessario scrivere documentazione API per ogni class, method, enum ed "
+"altro codice disponibile nelle API pubbliche."
 
 #: ../../docs/developers_guide/codingstandards.rst:122
 msgid ""
@@ -350,12 +353,18 @@ msgid ""
 "relevant widgets. Tooltips add greatly to feature discoverability for both "
 "new and experienced users."
 msgstr ""
+"Tutte le finestre di dialogo dovrebbero implementare l'aiuto Tooltip per "
+"tutte le icone della barra degli strumenti e altri widget rilevanti. I "
+"tooltip aggiungono notevole efficacia alla funzionalità di reperibilità per "
+"i utenti nuovi ed esperti."
 
 #: ../../docs/developers_guide/codingstandards.rst:204
 msgid ""
 "Ensure that the tab order for widgets is updated whenever the layout of a "
 "dialog changes."
 msgstr ""
+"Assicurarsi che l'ordine della scheda per i widget venga aggiornato ogni "
+"volta che il layout di una finestra di dialogo cambia."
 
 #: ../../docs/developers_guide/codingstandards.rst:209
 msgid "C++ Files"
@@ -367,12 +376,17 @@ msgid ""
 "respectively. Filename should be all lowercase and, in the case of classes, "
 "match the class name."
 msgstr ""
+"I file di implementazione e di intestazione C++ dovrebbero avere "
+"rispettivamente un'estensione .cpp e .h. Il nome del file deve essere tutto "
+"minuscolo e, nel caso di classi, abbinarsi al nome della classe."
 
 #: ../../docs/developers_guide/codingstandards.rst:218
 msgid ""
 "Example: Class ``QgsFeatureAttribute`` source files are "
 ":file:`qgsfeatureattribute.cpp` and :file:`qgsfeatureattribute.h`"
 msgstr ""
+"Esempio: Class ``QgsFeatureAttribute`` i file sorgenti sono "
+":file:`qgsfeatureattribute.cpp` e :file:`qgsfeatureattribute.h`"
 
 #: ../../docs/developers_guide/codingstandards.rst:222
 msgid ""
@@ -381,6 +395,11 @@ msgid ""
 "implemented in its own file. This makes it much easier for newcomers to "
 "identify where the code is relating to specific class."
 msgstr ""
+"Nel caso in cui non sia chiaro dall'istruzione di cui sopra, perché un nome "
+"di file corrisponda a un nome di classe significa implicitamente che ogni "
+"classe deve essere dichiarata e implementata nel proprio file. Questo rende "
+"molto più facile per i nuovi arrivati identificare dove il codice è relativo"
+" alla classe specifica."
 
 #: ../../docs/developers_guide/codingstandards.rst:229
 msgid "Standard Header and License"
@@ -391,6 +410,8 @@ msgid ""
 "Each source file should contain a header section patterned after the "
 "following example:"
 msgstr ""
+"Ogni file sorgente dovrebbe contenere una sezione di intestazione modellata "
+"dopo il seguente esempio:"
 
 #: ../../docs/developers_guide/codingstandards.rst:251
 msgid ""
@@ -399,6 +420,10 @@ msgid ""
 " address and - if required - the name and configure QtCreator to use it: "
 ":menuselection:`Tools --> Options --> C++ --> File Naming`."
 msgstr ""
+"C'è un modello per Qt Creator in git. Per usarlo, copiarlo da "
+":file:`doc/qt_creator_license_template` in una posizione locale, modificare "
+"l'indirizzo di posta e - se richiesto - il nome e configurare QtCreator per "
+"usarlo: :menuselection:`Tools --> Options --> C++ --> File Naming`."
 
 #: ../../docs/developers_guide/codingstandards.rst:258
 msgid "Variable Names"
@@ -409,6 +434,8 @@ msgid ""
 "Local variable names begin with a lower case letter and are formed using "
 "mixed case. Do not use prefixes like ``my`` or ``the``."
 msgstr ""
+"I nomi delle variabili locali iniziano con una lettera minuscola e sono "
+"formati usando maiuscole miste. Non usare prefissi come ``my`` o ``the``."
 
 #: ../../docs/developers_guide/codingstandards.rst:265
 msgid "``mapCanvas``"
@@ -420,28 +447,34 @@ msgstr "``currentExtent``"
 
 #: ../../docs/developers_guide/codingstandards.rst:270
 msgid "Enumerated Types"
-msgstr ""
+msgstr "Enumerated Types"
 
 #: ../../docs/developers_guide/codingstandards.rst:272
 msgid ""
 "Enumerated types should be named in CamelCase with a leading capital e.g.:"
 msgstr ""
+"I tipi enumerati devono essere denominati in CamelCase con una maiuscola "
+"iniziale, es.:"
 
 #: ../../docs/developers_guide/codingstandards.rst:284
 msgid ""
 "Do not use generic type names that will conflict with other types. e.g. use "
 "``UnkownUnit`` rather than ``Unknown``"
 msgstr ""
+"Non usare nomi di tipo generici che entreranno in conflitto con altri tipi. "
+"es. usare ``UnkownUnit`` piuttosto che ``Unknown``"
 
 #: ../../docs/developers_guide/codingstandards.rst:288
 msgid "Global Constants & Macros"
-msgstr ""
+msgstr "Costanti Globali & Macros"
 
 #: ../../docs/developers_guide/codingstandards.rst:290
 msgid ""
 "Global constants and macros should be written in upper case underscore "
 "separated e.g.:"
 msgstr ""
+"Costanti globali e macros dovrebbero essere scritte in maiuscolo separate da"
+" underscore es.:"
 
 #: ../../docs/developers_guide/codingstandards.rst:298
 msgid "Comments"
@@ -452,6 +485,8 @@ msgid ""
 "Comments to class methods should use a third person indicative style instead"
 " of the imperative style:"
 msgstr ""
+"I commenti ai metodi delle classi dovrebbero usare uno stile indicativo in "
+"terza persona invece dello stile imperativo:"
 
 #: ../../docs/developers_guide/codingstandards.rst:313
 msgid "Qt Signals and Slots"

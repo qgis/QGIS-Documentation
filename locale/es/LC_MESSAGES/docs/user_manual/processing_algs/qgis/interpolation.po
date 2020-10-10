@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-24 11:25+0200\n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
 "PO-Revision-Date: 2020-03-16 19:29+0000\n"
 "Last-Translator: Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
@@ -29,13 +29,15 @@ msgstr "Interpolación"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:14
 msgid "Heatmap (kernel density estimation)"
-msgstr ""
+msgstr "Mapa de calor (estimación de densidad kernel)"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:15
 msgid ""
 "Creates a density (heatmap) raster of an input point vector layer using "
 "kernel density estimation."
 msgstr ""
+"Crea un ráster de densidad (mapa de calor) de una capa vectorial de puntos "
+"entrante usando estimación de densidad kernel."
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:18
 msgid ""
@@ -43,6 +45,10 @@ msgid ""
 "larger numbers of clustered points resulting in larger values. Heatmaps "
 "allow easy identification of *hotspots* and clustering of points."
 msgstr ""
+"La densidad se calcula en función del número de puntos en una ubicación, con"
+" un mayor número de puntos agrupados que dan como resultado valores más "
+"grandes. Los mapas de calor permiten una fácil identificación de *puntos "
+"calientes* y la agrupación de puntos."
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:24
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:271
@@ -88,11 +94,11 @@ msgstr "Descripción"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:35
 msgid "**Point layer**"
-msgstr ""
+msgstr "**Capa de puntos**"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:36
 msgid "``INPUT``"
-msgstr "``ENTRADA``"
+msgstr "``INPUT``"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:37
 msgid "[vector: point]"
@@ -100,15 +106,15 @@ msgstr "[vector: point]"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:38
 msgid "Point vector layer to use for the heatmap"
-msgstr ""
+msgstr "Capa vectorial de puntos a usar para el mapa de calor"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:39
 msgid "**Radius**"
-msgstr ""
+msgstr "**Radio**"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:40
 msgid "``RADIUS``"
-msgstr ""
+msgstr "``RADIUS``"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:41
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:51
@@ -121,7 +127,7 @@ msgstr "[número]"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:43
 msgid "Default: 100.0"
-msgstr ""
+msgstr "Predeterminado: 100.0"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:44
 msgid ""
@@ -130,30 +136,35 @@ msgid ""
 "will be felt. Larger values result in greater smoothing, but smaller values "
 "may show finer details and variation in point density."
 msgstr ""
+"Radio de búsqueda de mapa de calor (o ancho de banda del kernel) en unidades"
+" de mapa. El radio especifica la distancia alrededor de un punto en el que "
+"se sentirá la influencia del punto. Los valores más grandes dan como "
+"resultado un mayor suavizado, pero los valores más pequeños pueden mostrar "
+"detalles más finos y variaciones en la densidad de puntos."
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:49
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:326
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:460
 msgid "**Output raster size**"
-msgstr ""
+msgstr "**Tamaño del ráster de salida**"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:50
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:327
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:461
 msgid "``PIXEL_SIZE``"
-msgstr ""
+msgstr "``PIXEL_SIZE``"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:53
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:330
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:464
 msgid "Default: 0.1"
-msgstr ""
+msgstr "Predeterminado: 0.1"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:54
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:331
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:465
 msgid "Pixel size of the output raster layer in layer units."
-msgstr ""
+msgstr "Tamaño de píxel de la capa ráster de salida en unidades de capa."
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:56
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:333
@@ -168,10 +179,19 @@ msgid ""
 "number of columns, and the cell size will be halved. The extent of the "
 "output raster will remain the same (approximately)."
 msgstr ""
+"En la GUI, el tamaño se puede especificar por el número de filas (``Número "
+"de filas``)/ columnas(``Número de columnas``) **o** el tamaño de píxel "
+"(``Tamaño de píxel X`` / ``Tamaño de píxel Y``). El aumento del número de "
+"filas o columnas disminuirá el tamaño de la celda y aumentará el tamaño del "
+"archivo del ráster de salida. Los valores en ``Filas``, ``Columnas``, "
+"``Tamaño de píxel X`` y ``Tamaño de píxel Y`` se actualizarán "
+"simultáneamente; al duplicar el número de filas, se duplicará el número de "
+"columnas, y la celda el tamaño se reducirá a la mitad. La extensión del "
+"ráster de salida seguirá siendo la misma (aproximadamente)."
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:67
 msgid "**Radius from field**"
-msgstr ""
+msgstr "**Radio a partir de campo**"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:69
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:76
@@ -181,7 +201,7 @@ msgstr "Opcional"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:70
 msgid "``RADIUS_FIELD``"
-msgstr ""
+msgstr "``RADIUS_FIELD``"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:71
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:78
@@ -193,28 +213,33 @@ msgid ""
 "Sets the search radius for each feature from an attribute field in the input"
 " layer."
 msgstr ""
+"Establece el radio de búsqueda para cada entidad a partir de un atributo en "
+"la capa entrante."
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:74
 msgid "**Weight from field**"
-msgstr ""
+msgstr "**Peso a partir de un campo**"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:77
 msgid "``WEIGHT_FIELD``"
-msgstr ""
+msgstr "``WEIGHT_FIELD``"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:79
 msgid ""
 "Allows input features to be weighted by an attribute field. This can be used"
 " to increase the influence certain features have on the resultant heatmap."
 msgstr ""
+"Permite a las entidades entrantes ser ponderadas por un atributo de campo. "
+"Esto puede ser empleado para incrementar la influencia que ciertas entidades"
+" tienen en el mapa de calor resultante."
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:82
 msgid "**Kernel shape**"
-msgstr ""
+msgstr "**Forma kernel**"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:83
 msgid "``KERNEL``"
-msgstr ""
+msgstr "``KERNEL``"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:84
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:131
@@ -224,7 +249,7 @@ msgstr "[enumeración]"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:86
 msgid "Default: *0*"
-msgstr "Por defecto: *0*"
+msgstr "Predeterminado: *0*"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:87
 msgid ""
@@ -499,7 +524,7 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:375
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:524
 msgid "Python code"
-msgstr ""
+msgstr "Código Python"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:245
 msgid "**Algorithm ID**: ``qgis:heatmapkerneldensityestimation``"
@@ -514,6 +539,11 @@ msgid ""
 "and values. See :ref:`processing_console` for details on how to run "
 "processing algorithms from the Python console."
 msgstr ""
+"El *algoritmo id* se muestra cuando pasa el cursor sobre el algoritmo en la "
+"caja de herramientas de procesos. El *diccionario de parámetros* proporciona"
+" los NOMBRES y valores de los parámetros. Consulte :ref:`processing_console`"
+" para obtener detalles sobre cómo ejecutar algoritmos de procesamiento desde"
+" la consola de Python."
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:255
 msgid "IDW Interpolation"

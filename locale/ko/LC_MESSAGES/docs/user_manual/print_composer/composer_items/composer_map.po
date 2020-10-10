@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-24 11:25+0200\n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
 "PO-Revision-Date: 2020-03-16 19:27+0000\n"
 "Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2020\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
@@ -496,10 +496,15 @@ msgid "Other than the grid type, you can define:"
 msgstr "그리드 유형 외에도, 다음을 정의할 수 있습니다:"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:253
-msgid "the :guilabel:`CRS`, which could be different from the project CRS"
-msgstr ":guilabel:`CRS`: 프로젝트 수준 좌표계와는 다른 좌표계도 정의할 수 있습니다."
+msgid ""
+"the :guilabel:`CRS` of the grid. If not changed, it will follow the Map CRS."
+" The :guilabel:`Change` button lets you set it to a different CRS. Once set,"
+" it can be changed back to default by selecting any group heading (e.g "
+"**Geographic Coordinate System**) under :guilabel:`Predefined Coordinate "
+"Reference Systems` in the CRS selection dialog."
+msgstr ""
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:254
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:259
 msgid ""
 "the :guilabel:`Interval` type to use for the grid references. Available "
 "options are ``Map Unit``, ``Fit Segment Width``, ``Millimeter`` or "
@@ -508,7 +513,7 @@ msgstr ""
 ":guilabel:`Interval`: 그리드 참조용으로 사용할 간격 유형을 정의합니다. ``Map Unit``, ``Fit "
 "Segment Width``, ``Millimeter`` 또는 ``Centimeter`` 옵션을 선택할 수 있습니다."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:257
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:262
 msgid ""
 "choosing ``Fit Segment Width`` will dynamically select the grid interval "
 "based on the map extent to a \"pretty\" interval. When selected, the "
@@ -517,20 +522,20 @@ msgstr ""
 "``Fit Segment Width`` 를 선택하면 맵 범위를 기반으로 \"보기 좋은(pretty)\" 그리드 간격을 동적으로 선택할 "
 "것입니다. 이 옵션을 선택했다면 ``Minimum`` 및 ``Maximum`` 간격을 설정할 수 있습니다."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:260
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:265
 msgid ""
 "the other options allow you to set the distance between two consecutive grid"
 " references in the ``X`` and ``Y`` directions."
 msgstr "다른 옵션들을 선택하면 ``X`` 및 ``Y`` 방향을 참조하는 두 연속되는 그리드들 사이의 거리를 설정할 수 있습니다."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:263
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:268
 msgid ""
 "the :guilabel:`Offset` from the map item edges, in the ``X`` and/or the "
 "``Y`` direction"
 msgstr ""
 ":guilabel:`Offset`: 맵 항목 경계로부터 ``X`` 그리고/또는 ``Y`` 방향으로 오프셋 거리를 정의할 수 있습니다."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:265
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:270
 msgid ""
 "and the :guilabel:`Blend mode` of the grid (see :ref:`blend-modes`) when "
 "compatible."
@@ -538,15 +543,15 @@ msgstr ""
 ":guilabel:`Blend mode`: 그리드에 :ref:`blend-modes` 를 사용할 수 있는 경우, 그리드의 혼합 모드를 "
 "정의할 수 있습니다."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:273
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:278
 msgid "Grid Appearance Dialog"
 msgstr "그리드 모양 대화창"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:276
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:281
 msgid "Grid Frame"
 msgstr "그리드 프레임"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:278
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:283
 msgid ""
 "There are different options to style the frame that holds the map. The "
 "following options are available: ``No Frame``, ``Zebra``, ``Zebra "
@@ -557,7 +562,7 @@ msgstr ""
 " ticks``, ``Exterior ticks``, ``Interior and Exterior ticks``, ``Line "
 "border`` 그리고 ``Line border (nautical)`` 옵션 가운데 하나로 선택할 수 있습니다."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:283
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:288
 msgid ""
 "When compatible, it's possible to set the :guilabel:`Frame size`, a "
 ":guilabel:`Frame margin`, the :guilabel:`Frame line thickness` with "
@@ -567,7 +572,7 @@ msgstr ""
 ":guilabel:`Frame line thickness` 를 정의할 수 있고, :guilabel:`Frame fill colors` 도"
 " 설정할 수 있습니다."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:287
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:292
 msgid ""
 "Using ``Latitude/Y only`` and ``Longitude/X only`` values in the divisions "
 "section you can prevent a mix of latitude/Y and longitude/X coordinates "
@@ -578,15 +583,15 @@ msgstr ""
 "``Longitude/X only`` 로 설정하면, 그리드 프레임 양쪽에 위도/Y 및 경도/X 좌표가 섞이는 일을 방지할 수 있습니다. "
 "또 그리드 프레임 양쪽에 각각 가시화 또는 비가시화되도록 선택할 수도 있습니다."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:297
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:302
 msgid "Grid Frame Dialog"
 msgstr "그리드 프레임 대화창"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:300
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:305
 msgid "Coordinates"
 msgstr "좌표"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:302
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:307
 msgid ""
 "The |checkbox| :guilabel:`Draw coordinates` checkbox allows you to add "
 "coordinates to the map frame. You can choose the annotation numeric format, "
@@ -598,7 +603,7 @@ msgstr ""
 "서식으로 주석 숫자 서식을 선택할 수 있는데, 이 서식은 실수 좌표인지 도/분/초 좌표인지, 접미사 여부, 정렬 여부 옵션을 가지고 "
 "있습니다. 표현식 대화창을 이용한 사용자 지정 서식도 설정할 수 있습니다."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:307
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:312
 msgid ""
 "You can choose which annotation to show. The options are: show all, latitude"
 " only, longitude only, or disable(none). This is useful when the map is "
@@ -611,21 +616,21 @@ msgstr ""
 " 유용합니다. 맵 프레임 바깥쪽 또는 안쪽에 주석을 렌더링할 수 있습니다. 주석의 방향은 ``Horizontal``, ``Vertical"
 " ascending`` 또는 ``Vertical descending`` 가운데 하나를 선택할 수 있습니다."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:313
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:318
 msgid ""
 "Finally, you can define the annotation font, font color, distance from the "
 "map frame and the precision of the drawn coordinates."
 msgstr "마지막으로, 주석 글꼴, 글꼴 색상, 맵 프레임에서 주석까지의 거리 그리고 렌더링한 좌표의 정밀도를 정의할 수 있습니다."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:321
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:326
 msgid "Grid Draw Coordinates dialog"
 msgstr "그리드 좌표 렌더링 대화창"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:327
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:332
 msgid "Overviews"
 msgstr "오버뷰"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:329
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:334
 msgid ""
 "Sometimes you may have more than one map in the print layout and would like "
 "to locate the study area of one map item on another one. This could be for "
@@ -635,7 +640,7 @@ msgstr ""
 "종종 인쇄 조판에 하나 이상의 맵을 추가해서, 어떤 맵 항목의 연구 영역을 또다른 맵 항목 위에 배치하고 싶을 때가 있습니다. 예를 들어"
 " 맵을 보는 사람들이 두 번째 맵에 표시된 더 넓은 지리적 맥락에서 해당 영역을 식별하기 쉽게 만들기 위해서 말이죠."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:334
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:339
 msgid ""
 "The :guilabel:`Overviews` group of the map panel helps you create the link "
 "between two different maps extent and provides the following "
@@ -644,11 +649,11 @@ msgstr ""
 "맵 항목 패널의 :guilabel:`Overviews` 그룹에서 서로 다른 맵 범위 2개 사이의 링크를 생성하고, 다음과 같은 기능을 "
 "사용할 수 있습니다:"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:342
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:347
 msgid "Map Overviews group"
 msgstr "맵 오버뷰 그룹"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:344
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:349
 msgid ""
 "To create an overview, select the map item on which you want to show the "
 "other map item's extent and expand the :guilabel:`Overviews` option in the "
@@ -658,7 +663,7 @@ msgstr ""
 "오버뷰를 생성하려면, 해당 맵 위에 다른 맵의 범위를 표시하고자 하는 맵을 선택한 다음 :guilabel:`Item Properties`"
 " 패널에서 :guilabel:`Overviews` 옵션을 펼치십시오. 그리고 |signPlus| 버튼을 클릭해서 오버뷰를 추가하십시오."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:349
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:354
 msgid ""
 "Initially this overview is named 'Overview 1' (see "
 "Figure_layout_map_overview_). You can:"
@@ -666,15 +671,15 @@ msgstr ""
 "이 오버뷰는 처음에 'Overview 1' 이라고 명명됩니다. (:ref:`figure_layout_map_overview` 그림을 "
 "참조하세요.) 이 그룹에서:"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:352
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:357
 msgid "Rename it with a double-click"
 msgstr "더블클릭하면 다른 명칭으로 변경할 수 있습니다."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:353
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:358
 msgid "With the |signPlus| and |signMinus| buttons, add or remove overviews"
 msgstr "|signPlus| 및 |signMinus| 버튼을 이용해서 오버뷰를 추가하거나 제거할 수 있습니다."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:354
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:359
 msgid ""
 "With the |arrowUp| and |arrowDown| buttons, move an overview up and down in "
 "the list, placing it above or below other overviews in the map item (when "
@@ -684,7 +689,7 @@ msgstr ""
 ":ref:`스택 위치(stack position) <overview_stack_position>` 에 있는 경우) 다른 오버뷰의 위 또는"
 " 아래 배치할 수 있습니다."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:358
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:363
 msgid ""
 "Then select the overview item in the list and check the |checkbox| "
 ":guilabel:`Draw \"<name_overview>\" overview` to enable the drawing of the "
@@ -693,13 +698,13 @@ msgstr ""
 "그 다음 목록에서 오버뷰 항목을 선택하고 |checkbox| :guilabel:`Draw \"<name_overview>\" "
 "overview` 옵션을 체크하면, 선택한 맵 프레임 상에 오버뷰를 렌더링합니다. 이 오버뷰를 다음과 같이 사용자 지정할 수 있습니다:"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:362
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:367
 msgid ""
 "The :guilabel:`Map frame` selects the map item whose extents will be shown "
 "on the present map item."
 msgstr ":guilabel:`Map frame`:  현재 맵 항목 위에 범위를 표시할 맵 항목을 선택합니다."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:364
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:369
 msgid ""
 "The :guilabel:`Frame Style` uses the :ref:`symbol properties <symbol-"
 "selector>` to render the overview frame."
@@ -707,13 +712,13 @@ msgstr ""
 ":guilabel:`Frame Style`: 오버뷰 프레임을 렌더링할 :ref:`심볼 속성 <symbol-selector>` 을 "
 "설정합니다."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:366
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:371
 msgid ""
 "The :guilabel:`Blending mode` allows you to set different transparency blend"
 " modes."
 msgstr ":guilabel:`Blending mode`: 서로 다른 투명도 혼합 모드를 설정할 수 있습니다."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:368
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:373
 msgid ""
 "The |checkbox| :guilabel:`Invert overview` creates a mask around the extents"
 " when activated: the referenced map extents are shown clearly, whereas the "
@@ -724,7 +729,7 @@ msgstr ""
 "참조되는 맵의 범위는 명확하게 표시되는 반면, 맵 항목의 다른 부분은 (채우기 색상을 설정했다면) 프레임 채우기 색상과 혼합되어 "
 "흐려집니다."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:372
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:377
 msgid ""
 "The |checkbox| :guilabel:`Center on overview` pans the map item content so "
 "that the overview frame is displayed at the center of the map. You can only "
@@ -733,7 +738,7 @@ msgstr ""
 "|checkbox| :guilabel:`Center on overview` 옵션을 활성화하면 맵 항목의 내용물을 이동해서 맵의 중심에 "
 "오버뷰 프레임을 표시합니다. 오버뷰를 여러 개 추가한 경우, 1개의 오버뷰 항목만 중심에 사용할 수 있습니다."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:378
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:383
 msgid ""
 "The :guilabel:`Position` controls exactly where in the map item's layer "
 "stack the overview will be placed, e.g. allowing an overview extent to be "
@@ -743,11 +748,11 @@ msgstr ""
 ":guilabel:`Position`: 맵 항목의 레이어 스택 가운데 정확히 어디에 오버뷰를 배치할지를 제어합니다. 예를 들면, 오버뷰 "
 "범위를 도로 같은 일부 레이어 아래, 기타 배경 레이어 위로 렌더링하도록 할 수 있습니다. 다음 옵션을 사용할 수 있습니다:"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:383
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:388
 msgid ":guilabel:`Below map`"
 msgstr ":guilabel:`Below map`: 오버뷰를 맵 항목 아래에 렌더링합니다."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:384
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:389
 msgid ""
 ":guilabel:`Below map layer` and :guilabel:`Above map layer`: place the "
 "overview frame below and above the geometries of a layer, respectively. The "
@@ -757,7 +762,7 @@ msgstr ""
 "도형의 상대적인 아래 또는 위에 렌더링합니다. :guilabel:`Stacking layer` 옵션에서 해당 레이어를 선택할 수 "
 "있습니다."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:387
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:392
 msgid ""
 ":guilabel:`Below map labels`: given that labels are always rendered above "
 "all the feature geometries in a map item, places the overview frame above "
@@ -766,7 +771,7 @@ msgstr ""
 ":guilabel:`Below map labels`: 라벨이 언제나 맵 항목에 있는 모든 피처 도형 위에 렌더링된다는 점을 고려하면, "
 "오버뷰 프레임을 모든 라벨 아래, 모든 도형 위로 배치합니다."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:390
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:395
 msgid ""
 ":guilabel:`Above map labels`: places the overview frame above all the "
 "geometries and labels in the map item."

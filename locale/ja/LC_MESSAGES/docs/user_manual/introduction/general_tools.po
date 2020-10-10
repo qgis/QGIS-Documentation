@@ -4,8 +4,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# fairtommy <fairtommy@gmail.com>, 2020
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# fairtommy <fairtommy@gmail.com>, 2020
 # tomoyuki arai <tarai.3367@gmail.com>, 2020
 # 
 #, fuzzy
@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-24 11:25+0200\n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
 "PO-Revision-Date: 2020-03-16 19:25+0000\n"
 "Last-Translator: tomoyuki arai <tarai.3367@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
@@ -1180,7 +1180,7 @@ msgid ""
 "of actions by selecting the action listed above. More details at :ref:`Undo "
 "and Redo edits <undoredo_edits>`."
 msgstr ""
-"For each layer being edited, the :guilabel:`元に戻す/やり直す` (:kbd:`Ctrl+5`) "
+":guilabel:`元に戻す/やり直す` (:kbd:`Ctrl+5`) "
 "パネルには、編集されたレイヤごとに実行されたアクションの一覧が表示されます。リストの上に表示されたアクションを選択することで、一連のアクションを素早く元に戻すことができます。さらなる詳細については、"
 " :ref:`元に戻すとやり直し <undoredo_edits>` を参照してください。"
 
@@ -1448,7 +1448,7 @@ msgid ""
 msgstr ""
 "元のプロジェクトファイルに変更を加えない限り、埋め込みレイヤのレンダリングは変更できません。しかし、レイヤ上で右クリックして "
 ":guilabel:`複製` "
-"を選択すると、完全な機能を備えた、元のプロジェクトに依存していないレイヤを作成されます。その後、リンクされた埋め込みレイヤを削除しても問題ありません。"
+"を選択すると、完全な機能を備えた、元のプロジェクトに依存していないレイヤが作成されます。その後、リンクされた埋め込みレイヤを削除しても問題ありません。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:592
 msgid "Working with the map canvas"
@@ -2877,7 +2877,7 @@ msgstr "地物とのやりとり"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1409
 msgid "Selecting features"
-msgstr "地物を選択する"
+msgstr "地物の選択"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1411
 msgid ""
@@ -2885,36 +2885,38 @@ msgid ""
 "tools are available in the :menuselection:`Edit --> Select` menu or in the "
 ":guilabel:`Attributes toolbar`."
 msgstr ""
+"QGISには、マップキャンバス上の地物を選択するためのツールがいくつかあります。選択ツールは、 :menuselection:`編集 --> 選択` "
+"メニューや :guilabel:`属性ツールバー` にあります。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1417
 msgid "Selection tools work with the currently active layer."
-msgstr "選択ツールは、現在アクティブなレイヤーで動作します。"
+msgstr "選択ツールは、現在アクティブなレイヤで動作します。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1420
 msgid "Selecting manually on the map canvas"
-msgstr "地図キャンバスで手動で選択する"
+msgstr "マップキャンバスで手動で選択する"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1422
 msgid ""
 "To select one or more features with the mouse, you can use one of the "
 "following tools:"
-msgstr ""
+msgstr "マウスを使って1つもしくは多数の地物を選択するには、以下のツールのどれかを使います："
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1425
 msgid "|selectRectangle| :sup:`Select Features by area or single click`"
-msgstr "|selectRectangle| :sup:`エリアまたは単一クリックによって地物を選択`"
+msgstr "|selectRectangle| :sup:`エリアまたはシングルクリックによる地物選択`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1426
 msgid "|selectPolygon| :sup:`Select Features by Polygon`"
-msgstr "|selectPolygon| :sup:`ポリゴンで地物を選択`"
+msgstr "|selectPolygon| :sup:`ポリゴンによる地物選択`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1427
 msgid "|selectFreehand| :sup:`Select Features by Freehand`"
-msgstr "|selectFreehand| :sup:`フリーハンドで地物を選択`"
+msgstr "|selectFreehand| :sup:`フリーハンドによる地物選択`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1428
 msgid "|selectRadius| :sup:`Select Features by Radius`"
-msgstr "|selectRadius| :sup:`半径で地物を選択`"
+msgstr "|selectRadius| :sup:`円による地物選択`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1430
 msgid ""
@@ -2922,6 +2924,8 @@ msgid ""
 "selection tools allow you to select feature(s) on the map canvas with a "
 "single click."
 msgstr ""
+"|selectPolygon| :sup:`ポリゴンによる地物選択` "
+"を除き、これらの手動選択ツールはマップキャンバス上の地物をシングルクリックで選択することもできます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1434
 msgid ""
@@ -2931,7 +2935,7 @@ msgid ""
 "that contain the clicked point. All the overlapping features from the active"
 " layer are selected."
 msgstr ""
-"既存のポリゴンを使用して重なり合う地物を選択するには |selectPolygon| :sup:`地物をポリゴンで選択` "
+"既存のポリゴンを使用して重なり合う地物を選択するには |selectPolygon| :sup:`ポリゴンによる地物選択` "
 "ツールを使用してください。ポリゴンを右クリックして、クリックした点を含むすべてのポリゴンのリストを表示するコンテキストメニューからそれを選択します。アクティブレイヤーのすべての重なり合う地物が選択されます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1440
@@ -2941,6 +2945,8 @@ msgid ""
 "selection, and then click somewhere else accidentally and clear your "
 "selection."
 msgstr ""
+":menuselection:`編集 --> 選択 --> 地物を再選択` "
+"ツールを使うと、直前に行った選択をやり直せます。これは苦労して選択をした後、うっかりどこか別の場所をクリックしてしまい、選択がクリアされてしまった時に非常に便利です。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1445
 msgid ""
@@ -2948,11 +2954,13 @@ msgid ""
 "holding :kbd:`Shift` or :kbd:`Ctrl` toggles whether a feature is selected "
 "(ie either adds to the current selection or remove from it)."
 msgstr ""
+"|selectRectangle| :guilabel:`地物の選択` ツールを使用中に :kbd:`Shift` キーや :kbd:`Ctrl` "
+"キーを押しながら選択すると、地物の選択状態が反転します（つまり、現在の選択に追加するか、選択から除くかをします）。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1449
 msgid ""
 "For the other tools, different behaviors can be performed by holding down:"
-msgstr ""
+msgstr "他のツールについては、以下のキーを押しながら選択した際の動作が異なります："
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1451
 msgid ":kbd:`Shift`: add features to the current selection"
@@ -2966,7 +2974,7 @@ msgstr ":kbd:`Ctrl` ：地物を現在の選択から除きます"
 msgid ""
 ":kbd:`Ctrl+Shift`: intersect with current selection, ie only keep "
 "overlapping features from the current selection"
-msgstr ""
+msgstr ":kbd:`Ctrl+Shift`: 現在の選択範囲との交差を取ります。すなわち、現在の選択範囲と重なりがある地物のみを残します"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1455
 msgid ""
@@ -2974,6 +2982,8 @@ msgid ""
 "Combined with :kbd:`Shift` or :kbd:`Ctrl` keys, you can add or substract "
 "features to/from the current selection."
 msgstr ""
+":kbd:`Alt`: 選択形状の中に完全に入っている地物を選択します。 :kbd:`Shift` キーや :kbd:`Ctrl` "
+"キーと組み合わせると、地物を現在の選択に追加したり、選択から引いたりできます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1462
 msgid "Automatic selection"
@@ -2987,69 +2997,74 @@ msgid ""
 "show the same information, so if you select one feature in the attribute "
 "table, it will be selected on the map canvas too):"
 msgstr ""
-"他の選択ツールは、ほとんどは :ref:`属性テーブル <sec_attribute_table>` "
-"からも利用できますが、地物の属性やその選択状態に基づいて選択を実行します（属性テーブルと地図のキャンバスは同じ情報を表示するので、属性テーブル内で1つの地物を選択した場合、それはまた、地図キャンバスでも選択されることに注意してください）。"
+"もう一方の選択ツールは、地物の属性やその選択状態に基づいて選択を実行します。ツールのほとんどは :ref:`属性テーブル "
+"<sec_attribute_table>` "
+"からも利用できます（属性テーブルと地図のキャンバスは同じ情報を表示するので、属性テーブル内で1つの地物を選択した場合、それはまた、地図キャンバスでも選択されることに注意してください）。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1470
 msgid ""
 "|expressionSelect| :sup:`Select By Expression...` select features using "
 "expression dialog"
-msgstr ""
+msgstr "|expressionSelect| :sup:`式による地物選択...` 式ダイアログを使用して地物を選択します"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1472
 msgid "|formSelect| :sup:`Select Features By Value...` or press :kbd:`F3`"
-msgstr "|formSelect| :sup:`値で地物を選択...` または :kbd:`F3` を押します"
+msgstr "|formSelect| :sup:`値による地物選択...` または :kbd:`F3` を押します"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1473
 msgid ""
 "|deselectAll| :sup:`Deselect Features from All Layers` or press "
 ":kbd:`Ctrl+Shift+A` to deselect all selected features in all layers"
 msgstr ""
+"|deselectAll| :sup:`全レイヤの地物選択を取り消す` または :kbd:`Ctrl+Shift+A` "
+"を押しても全レイヤの地物選択を取り消すことができます"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1475
 msgid ""
 "|selectAll| :sup:`Select All Features` or press :kbd:`Ctrl+A` to select all "
 "features in the current layer"
-msgstr ""
+msgstr "|selectAll| :sup:`全ての地物の選択` または :kbd:`Ctrl+A` でも現在のレイヤの地物全てを選択します"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1477
 msgid ""
 "|invertSelection| :sup:`Invert Feature Selection` to invert the selection in"
 " the current layer"
-msgstr ""
+msgstr "|invertSelection| :sup:`地物選択を反転` カレントレイヤ内の地物の選択状態を反転させます"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1481
 msgid ""
 "For example, if you want to find regions that are boroughs from "
 ":file:`regions.shp` of the QGIS sample data, you can:"
 msgstr ""
+"例えば、QGISサンプルデータの :file:`regions.shp` から市（boroughs）の地域を探したい場合には、次のようにします："
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1484
 msgid ""
 "Use the |expressionSelect| :sup:`Select features using an Expression` icon"
-msgstr ""
+msgstr "|expressionSelect| :sup:`式による地物選択` アイコンをクリックします"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1485
 msgid "Expand the :guilabel:`Fields and Values` group"
-msgstr ""
+msgstr ":guilabel:`フィールドと値` グループを展開します"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1486
 msgid "Double-click the field that you want to query (\"TYPE_2\")"
-msgstr ""
+msgstr "クエリしたいフィールド（ \"TYPE_2\" ）をダブルクリックします"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1487
 msgid "Click :guilabel:`All Unique` in the panel that shows up on the right"
-msgstr ""
+msgstr "右に現れたパネルの :guilabel:`全てのユニーク` ボタンをクリックします"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1488
 msgid ""
 "From the list, double-click 'Borough'. In the :guilabel:`Expression` editor "
 "field, write the following query:"
 msgstr ""
+"リストの中から、「市（Borough）」をダブルクリックします。 :guilabel:`式` エディタフィールドで、以下のようにクエリを記述します："
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1496
 msgid "Click :guilabel:`Select Features`"
-msgstr ""
+msgstr ":guilabel:`地物の選択` ボタンをクリックします"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1498
 msgid ""
@@ -3058,13 +3073,13 @@ msgid ""
 "that you have used before. The dialog remembers the last 20 expressions "
 "used. See :ref:`vector_expressions` for more information and examples."
 msgstr ""
-"式ビルダーダイアログから、 :menuselection:`関数リスト->最近（選択）` "
-"を使用して、以前に使用した選択を行うこともできます。ダイアログには最後に使用された20個の式が記憶されます。詳細および例は "
-":ref:`vector_expressions` を参照。"
+"式ビルダーダイアログから、 :menuselection:`関数リスト --> 最近使用（selection）` "
+"を使用して、以前に使用した式による選択を行うこともできます。ダイアログには最後に使用された20個の式が記憶されます。詳細情報や例は "
+":ref:`vector_expressions` を参照してください。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1504
 msgid "**Save your selection into a new file**"
-msgstr "**新しいファイルに選択を保存する**"
+msgstr "**新しいファイルに選択地物を保存する**"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1506
 msgid ""
@@ -3072,6 +3087,8 @@ msgid ""
 " **New Vector Layer** using :menuselection:`Edit --> Copy Features` and "
 ":menuselection:`Edit --> Paste Features as` in the desired format."
 msgstr ""
+":menuselection:`編集 --> 地物のコピー` と :menuselection:`編集 --> 新規レイヤへの地物貼り付け` "
+"を使用することで、ユーザは選択した地物を **新しいスクラッチレイヤ** や任意のファイル形式の **新しいベクタレイヤ** に保存することができます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1516
 msgid "Select Features By Value"

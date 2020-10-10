@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-24 11:25+0200\n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
 "PO-Revision-Date: 2020-03-16 19:25+0000\n"
 "Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2020\n"
 "Language-Team: Italian (https://www.transifex.com/qgis/teams/6144/it/)\n"
@@ -805,6 +805,14 @@ msgstr ""
 msgid ":menuselection:`Add Rectangle -->`"
 msgstr ":menuselection:`Aggiungi Rettangolo -->`"
 
+#: ../../docs/user_manual/introduction/qgis_gui.rst:376
+#: ../../docs/user_manual/introduction/qgis_gui.rst:381
+#: ../../docs/user_manual/introduction/qgis_gui.rst:387
+#: ../../docs/user_manual/introduction/qgis_gui.rst:394
+#: ../../docs/user_manual/introduction/qgis_gui.rst:401
+msgid ":ref:`draw_rectangles`"
+msgstr ":ref:`draw_rectangles`"
+
 #: ../../docs/user_manual/introduction/qgis_gui.rst:377
 msgid ""
 ":menuselection:`-->` |rectangleExtent| :guilabel:`Add Rectangle from Extent`"
@@ -840,6 +848,13 @@ msgstr ""
 msgid ":menuselection:`Add Regular Polygon -->`"
 msgstr ":menuselection:`Aggiungi Poligono Regolare -->`"
 
+#: ../../docs/user_manual/introduction/qgis_gui.rst:405
+#: ../../docs/user_manual/introduction/qgis_gui.rst:411
+#: ../../docs/user_manual/introduction/qgis_gui.rst:417
+#: ../../docs/user_manual/introduction/qgis_gui.rst:423
+msgid ":ref:`draw_regular_polygons`"
+msgstr ":ref:`draw_regular_polygons`"
+
 #: ../../docs/user_manual/introduction/qgis_gui.rst:406
 msgid ""
 ":menuselection:`-->` |regularPolygonCenterPoint| :guilabel:`Add Regular "
@@ -867,6 +882,14 @@ msgstr ""
 #: ../../docs/user_manual/introduction/qgis_gui.rst:424
 msgid ":menuselection:`Add Ellipse -->`"
 msgstr ":menuselection:`Aggiungi Ellisse -->`"
+
+#: ../../docs/user_manual/introduction/qgis_gui.rst:427
+#: ../../docs/user_manual/introduction/qgis_gui.rst:433
+#: ../../docs/user_manual/introduction/qgis_gui.rst:439
+#: ../../docs/user_manual/introduction/qgis_gui.rst:444
+#: ../../docs/user_manual/introduction/qgis_gui.rst:449
+msgid ":ref:`draw_ellipses`"
+msgstr ":ref:`draw_ellipses`"
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:428
 msgid ""
@@ -3823,12 +3846,17 @@ msgid ""
 "At the top of an additional map canvas, there's a toolbar with following "
 "capabilities:"
 msgstr ""
+"Nella parte superiore di una visualizzazione della mappa aggiuntiva, c'è una"
+" barra degli strumenti con le seguenti funzionalità:"
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2104
 msgid ""
 "|zoomFullExtent| :sup:`Zoom Full`, |zoomToSelected| :sup:`Zoom to Selection`"
 " and |zoomToLayer| :sup:`Zoom to Layer` to navigate within the view"
 msgstr ""
+"|zoomFullExtent| :sup:`Zoom Completo`, |zoomToSelected| :sup:`Zoom alla "
+"Selezione` e |zoomToLayer| :sup:`Zoom sul Layer` per navigare all'interno "
+"della vista"
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2106
 msgid ""
@@ -3836,10 +3864,16 @@ msgid ""
 "<map_themes>` to display in the map view. If set to ``(none)``, the view "
 "will follow the :guilabel:`Layers` panel changes."
 msgstr ""
+"|showMapTheme| :sup:`Impostazione Tema di visualizzazione` per selezionare "
+"il :ref:`map theme <map_themes>` da utilizzare nella visualizzazione mappa.."
+" Se impostato su ``(nessuna)``, la visualizzazione seguirà i cambiamenti del"
+" pannello :guilabel:`Layer`."
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2109
 msgid "|options| :sup:`View settings` to configure the map view:"
 msgstr ""
+"|options| :sup:`Impostazioni di visualizzazione` per configurare la "
+"visualizzazione della mappa:"
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2111
 msgid ""
@@ -3847,24 +3881,30 @@ msgid ""
 " center of the map views without changing the scale. This allows you to have"
 " an overview style or magnified map which follows the main canvas center."
 msgstr ""
+"|radioButtonOn| :guilabel:`Sincronizza il Centro della Vista con la Mappa "
+"Principale`: sincronizza il centro della vista della mappa senza cambiare la"
+" scala. Questo permette di avere uno sguardo d'insieme o una mappa "
+"ingrandita che segue il centro della mappa principale."
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2115
 msgid ""
 "|radioButtonOff| :guilabel:`Synchronize view to selection`: same as zoom to "
 "selection"
 msgstr ""
+"|radioButtonOff| :guilabel:`Sincronizza Vista con la Selezione`: equivalente"
+" a zoom alla selezione"
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2117
 msgid ":guilabel:`Scale`"
-msgstr ""
+msgstr ":guilabel:`Scala`"
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2118
 msgid ":guilabel:`Rotation`"
-msgstr ""
+msgstr ":guilabel:`Rotazione`"
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2119
 msgid ":guilabel:`Magnification`"
-msgstr ""
+msgstr ":guilabel:`Ingrandimento`"
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2120
 msgid ""
@@ -3872,36 +3912,43 @@ msgid ""
 ":guilabel:`Scale factor` can then be applied, allowing you to have a view "
 "which is e.g. always 2x the scale of the main canvas."
 msgstr ""
+"|unchecked| :guilabel:`Sincronizza scala` con la scala della mappa "
+"principale. Si può quindi applicare un :guilabel:`Fattore di scala` che "
+"permette di avere una vista che è ad esempio sempre 2x la scala della mappa "
+"principale."
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2123
 msgid "|checkbox| :guilabel:`Show annotations`"
-msgstr ""
+msgstr "|checkbox| :guilabel:`Mostra Annotazioni`"
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2124
 msgid "|checkbox| :guilabel:`Show cursor position`"
-msgstr ""
+msgstr "|checkbox| :guilabel:`Mostra Posizione Cursore`"
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2125
 msgid "|unchecked| :guilabel:`Show main canvas extent`"
-msgstr ""
+msgstr "|unchecked| :guilabel:`Mostra Estensione Mappa Principale`"
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2126
 msgid ""
 "|checkbox| :guilabel:`Show labels`: allows to hide labels regardless they "
 "are set in the displayed layers' properties"
 msgstr ""
+"|checkbox| :guilabel:`Mostra etichette`: permette di nascondere le etichette"
+" indipendentemente dal fatto che siano impostate nelle proprietà dei layer "
+"visualizzati"
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2128
 msgid ":guilabel:`Change map CRS...`"
-msgstr ""
+msgstr ":guilabel:`Cambia SR della Mappa...`"
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2129
 msgid ":guilabel:`Rename view...`"
-msgstr ""
+msgstr ":guilabel:`Rinomina Vista...`"
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2135
 msgid "Exporting the map view"
-msgstr ""
+msgstr "Esportare la visualizzazione della mappa"
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2137
 msgid ""
@@ -3911,18 +3958,23 @@ msgid ""
 "rendering, without a layout. This quick \"screenshot\" of the map view has "
 "some convenient features."
 msgstr ""
+"Le mappe realizzate possono essere impaginate ed esportate in vari formati "
+"utilizzando le funzionalità avanzate del :ref:`print layout or report "
+"<label_printlayout>`. È anche possibile esportare direttamente il rendering "
+"corrente, senza layout. Questo rapido \"screenshot\" della visualizzazione "
+"della mappa ha alcune utili opzioni."
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2144
 msgid "To export the map canvas with the current rendering:"
-msgstr ""
+msgstr "Per esportare la mappa con la rappresentazione corrente:"
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2146
 msgid "Go to :menuselection:`Project --> Import/Export`"
-msgstr ""
+msgstr "Vai su :menuselection:`Progetto --> Importa/Esporta`"
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2147
 msgid "Depending on your output format, select either"
-msgstr ""
+msgstr "A seconda del formato di output, seleziona"
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2149
 msgid "|saveMapAsImage| :guilabel:`Export Map to Image...`"
@@ -3930,17 +3982,19 @@ msgstr "|saveMapAsImage| :guilabel:`Esporta Mappa come Immagine...`"
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2150
 msgid "or |saveAsPDF| :guilabel:`Export Map to PDF...`"
-msgstr ""
+msgstr "o |saveAsPDF| :guilabel:`Esporta Mappa come PDF...`"
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2152
 msgid ""
 "The two tools provide you with a common set of options. In the dialog that "
 "opens:"
 msgstr ""
+"I due strumenti hanno in comune diverse opzioni. Nella finestra di dialogo "
+"che si apre:"
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2160
 msgid "The Save Map as Image dialog"
-msgstr ""
+msgstr "La finestra di dialogo Salva Mappa come Immagine"
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2162
 msgid ""
@@ -3949,6 +4003,11 @@ msgid ""
 "canvas. Coordinates of the selected area are displayed and manually "
 "editable."
 msgstr ""
+"Scegli l' :guilabel:`Estensione` di esportazione: può essere l'estensione "
+"della vista corrente (l'impostazione predefinita), l'estensione di un layer "
+"o un'estensione personalizzata disegnata sull'area di visualizzazione della "
+"mappa. Le coordinate dell'area selezionata vengono visualizzate e sono "
+"modificabili manualmente."
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2166
 msgid ""
@@ -3956,10 +4015,13 @@ msgid ""
 ":ref:`predefined scales <predefinedscales>`: changing the scale will resize "
 "the extent to export (from the center)."
 msgstr ""
+"Inserisci la :guilabel:`Scala` della mappa o selezionala dal "
+":ref:`predefined scales <predefinedscales>`:  cambiando la scala si "
+"ridimensionerà l'estensione di esportazione (dal centro)."
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2169
 msgid "Set the :guilabel:`Resolution` of the output"
-msgstr ""
+msgstr "Imposta la :guilabel:`Risoluzione` dell'output"
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2170
 msgid ""
@@ -3969,6 +4031,12 @@ msgid ""
 " ratio can be locked, which may be particularly convenient when drawing the "
 "extent on the canvas."
 msgstr ""
+"Puoi controllare la :guilabel:`Larghezza` e l' :guilabel:`Altezza` "
+"dell'output dell'immagine in pixel : in base alla risoluzione e "
+"all'estensione attuali, possono essere personalizzati e ridimensioneranno "
+"l'estensione della mappa (dal centro). Il rapporto delle proporzioni può "
+"essere bloccato, il che può essere particolarmente opportuno quando si "
+"modifica l'estensione sulla mappa."
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2176
 msgid ""
@@ -3976,12 +4044,17 @@ msgid ""
 "<decorations>` (scale bar, title, grid, north arrow...) are exported with "
 "the map"
 msgstr ""
+"|checkbox| :guilabel:`Disegna le decorazioni attive`: in uso "
+":ref:`decorations <decorations>` (barra di scala, titolo, griglia, freccia "
+"nord...) vengono esportate con la mappa"
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2179
 msgid ""
 "|checkbox| :guilabel:`Draw annotations` to export any :ref:`annotation "
 "<sec_annotations>`"
 msgstr ""
+"|checkbox| :guilabel:`Scrivi annotazioni` per esportare le :ref:`annotation "
+"<sec_annotations>`"
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2181
 msgid ""
@@ -3991,22 +4064,31 @@ msgid ""
 "in the same folder as your image. The ``PDF`` format embeds the information "
 "in the PDF file."
 msgstr ""
+"|checkbox| :guilabel:`Aggiunge informazioni georiferimento (includendolo o "
+"via world file)`: a seconda del formato di output, un world file con lo "
+"stesso nome (con estensione ``PNGW`` per le immagini ``PNG``, ``JPGW`` per "
+"``JPG``, ...) viene salvato nella stessa cartella della tua immagine. Il "
+"formato ``PDF`` incorpora le informazioni nel file PDF."
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2186
 msgid ""
 "When exporting to PDF, more options are available in the :guilabel:`Save map"
 " as PDF...` dialog:"
 msgstr ""
+"Quando si esporta in PDF, sono disponibili altre opzioni nella finestra di "
+"dialogo :guilabel:`Salva Mappa come PDF...`:"
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2194
 msgid "The Save Map as PDF dialog"
-msgstr ""
+msgstr "La finestra di dialogo Salva Mappa come PDF"
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2196
 msgid ""
 "|checkbox| :guilabel:`Export RDF metadata` of the document such as the "
 "title, author, date, description..."
 msgstr ""
+"|checkbox| :guilabel:`Esporta RDF metadata` del documento come il titolo, "
+"l'autore, la data, la descrizione..."
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2198
 msgid ""
@@ -4014,10 +4096,13 @@ msgid ""
 "`georeferenced PDF file <https://gdal.org/drivers/raster/pdf.html>`_ "
 "(requires GDAL version 3 or later). You can:"
 msgstr ""
+"|unchecked| :guilabel:`Crea PDF Geospaziale (GeoPDF)`: Genera un `file PDF "
+"georeferenziato <https://gdal.org/drivers/raster/pdf.html>``_ (richiede GDAL"
+" versione 3 o successiva). Puoi:"
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2204
 msgid "Choose the GeoPDF :guilabel:`Format`"
-msgstr ""
+msgstr "Scegli il :guilabel:`Formato` PDF. "
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2205
 msgid ""
@@ -4025,6 +4110,10 @@ msgid ""
 "file: will include all the geometry and attribute information from features "
 "visible within the map in the output GeoPDF file."
 msgstr ""
+"|checkbox| :guilabel:`Includi informazioni sulle caratteristiche dei "
+"vettori` nel file GeoPDF: includerà tutte le informazioni sulla geometria e "
+"sugli attributi delle caratteristiche dei vettori visibili all'interno della"
+" mappa nel file di output GeoPDF."
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2212
 msgid ""
@@ -4032,10 +4121,13 @@ msgid ""
 "source. For more on GeoPDF support in QGIS, see https://north-"
 "road.com/2019/09/03/qgis-3-10-loves-geopdf/."
 msgstr ""
+"A partire da QGIS 3.10, anche un file GeoPDF può essere utilizzato come "
+"fonte di dati. Per ulteriori informazioni sul funzionamento di GeoPDF in "
+"QGIS, vedere https://north-road.com/2019/09/03/qgis-3-10-loves-geopdf/."
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2216
 msgid ":guilabel:`Rasterize map`"
-msgstr ""
+msgstr ":guilabel:`Rasterizza mappa`"
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2217
 msgid ""
@@ -4046,6 +4138,14 @@ msgid ""
 " apart will be removed). This can reduce the size and complexity of the "
 "export file (very large files can fail to load in other applications)."
 msgstr ""
+"|checkbox|:guilabel:`Semplifica geometrie per ridurre le dimensioni del file"
+" in uscita`: Le geometrie saranno semplificate durante l'esportazione della "
+"mappa rimuovendo i vertici che non sono distinguibili alla risoluzione di "
+"esportazione (ad esempio, se la risoluzione di esportazione è di ``300 "
+"dpi``, verranno rimossi i vertici che sono a meno di ``1/600 pollici`` "
+"distanti tra loro). Questo può ridurre la dimensione e la complessità del "
+"file di esportazione (file molto grandi possono non riuscire a caricarsi in "
+"altre applicazioni)."
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2225
 msgid ""
@@ -4058,10 +4158,21 @@ msgid ""
 "settings like buffers are in place. That’s why exporting as paths is "
 "recommended."
 msgstr ""
+"Imposta l' :guilabel:`Esportazione testo`: controlla se le etichette di "
+"testo vengono esportate come oggetti di testo propriamente detti "
+"(:guilabel:`Esporta Sempre Testo come Oggetti Testo`) o solo come percorsi "
+"(:guilabel:`Esporta Sempre Testo come Percorso`). Se vengono esportati come "
+"oggetti di testo, allora possono essere modificati in applicazioni esterne "
+"(p.e. Inkscape) come testo normale. MA l'effetto collaterale è che la "
+"qualità della restituzione risulta inferiore. E ci sono problemi con la "
+"restituzione quando certe impostazioni di testo come i buffer sono al loro "
+"posto. Questo è il motivo per cui si raccomanda di esportare come percorsi."
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2236
 msgid "Click :guilabel:`Save` to select file location, name and format."
 msgstr ""
+"Fai clic su :guilabel:`Salva` per selezionare la posizione, il nome e il "
+"formato del file."
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2238
 msgid ""
@@ -4069,6 +4180,9 @@ msgid ""
 " the expected result of the above settings and paste the map in another "
 "application such as LibreOffice, GIMP..."
 msgstr ""
+"Quando si esporta come immagine, il risultato atteso delle impostazioni di "
+"cui sopra può essere salvato in :guilabel:`Copia negli appunti`per incollare"
+" la mappa in un'altra applicazione come LibreOffice, GIMP..."
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2248
 msgid "3D Map View"
@@ -4119,42 +4233,57 @@ msgid ""
 "|zoomFullExtent| :sup:`Zoom Full`: resizes the view to the whole layers' "
 "extent"
 msgstr ""
+"|zoomFullExtent| :sup:`Zoom Completo`: ridefinisce la visualizzazione "
+"all'estenzione di tutti i layer"
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2272
 msgid ""
 "|3dNavigation| :sup:`Toggle on-screen notification`: shows/hides the "
 "navigation widget (that is meant to ease controlling of the map view)"
 msgstr ""
+"|3dNavigazione| :sup:`Attiva navigazione su schermo`: mostra/nasconde il "
+"widget di navigazione (che ha lo scopo di facilitare il controllo della "
+"visualizzazione della mappa)"
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2274
 msgid ""
 "|identify| :sup:`Identify`: returns information on the clicked point of the "
 "terrain or the clicked 3D feature(s) -- More details at :ref:`identify`"
 msgstr ""
+"|identify| :sup:`Informazioni`: restituisce informazioni sul punto del "
+"terreno cliccato o sul(sugli) oggetto(i) 3D cliccato(i) -- Maggiori dettagli"
+" in :ref:`identify`"
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2276
 msgid ""
 "|measure| :sup:`Measurement line`: measures the horizontal distance between "
 "points"
 msgstr ""
+"|measure| :sup:`Linea di Misura`: misura la distanza orizzontale tra i punti"
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2277
 msgid ""
 "|play| :sup:`Animations`: shows/hides the :ref:`animation player "
 "<create_animation>` widget"
 msgstr ""
+"|play| :sup:`Animazioni`: mostra/nasconde il widget :ref:`animation player "
+"<create_animation>`"
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2279
 msgid ""
 "|saveMapAsImage| :sup:`Save as image...`: exports the current view to an "
 "image file format"
 msgstr ""
+"|saveMapAsImage| :sup:`Salva come immagine...`: esporta la vista corrente in"
+" un formato file immagine"
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2281
 msgid ""
 "|options| :sup:`Configure` the map view :ref:`settings "
 "<scene_configuration>`"
 msgstr ""
+"|options| :sup:`Configura` la vista mappa :ref:`settings "
+"<scene_configuration>`"
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2287
 msgid "Navigation options"
@@ -4162,18 +4291,22 @@ msgstr "Opzioni di navigazione"
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2289
 msgid "To explore the map view in 3D:"
-msgstr ""
+msgstr "Per esplorare la vista della mappa in 3D:"
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2291
 msgid ""
 "Tilt the terrain (rotating it around a horizontal axis that goes through the"
 " center of the window)"
 msgstr ""
+"Inclina il terreno (ruotandolo attorno ad un asse orizzontale che passa "
+"attraverso il centro della finestra)"
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2294
 msgid ""
 "Press the |tiltUp| :sup:`Tilt up` and |tiltDown| :sup:`Tilt down` tools"
 msgstr ""
+"Premi gli strumenti |tiltUp| :sup:`Inclina in alto` e |tiltDown| "
+":sup:`Inclina in basso`."
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2295
 msgid "Press :kbd:`Shift` and use the up/down keys"
@@ -4198,10 +4331,14 @@ msgid ""
 "Rotate the terrain (around a vertical axis that goes through the center of "
 "the window)"
 msgstr ""
+"Ruota il terreno (intorno ad un asse verticale che passa attraverso il "
+"centro della finestra)"
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2303
 msgid "Turn the compass of the navigation widget to the watching direction"
 msgstr ""
+"Ruota la bussola del widget di navigazione verso la direzione di "
+"osservazione"
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2304
 msgid "Press :kbd:`Shift` and use the left/right keys"
@@ -4226,22 +4363,28 @@ msgid ""
 "Change the camera position (and the view center), moving it around in a "
 "horizontal plan"
 msgstr ""
+"Cambia la posizione della telecamera (e il centro della visuale), "
+"spostandola in un piano orizzontale"
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2312
 msgid ""
 "Drag the mouse with the left mouse button pressed, and the |pan| "
 ":sup:`Camera control` button enabled"
 msgstr ""
+"Trascina il mouse con il tasto sinistro del mouse premuto e il tasto |pan| "
+":sup:`Controllo Fotocamera` abilitato"
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2314
 msgid "Press the directional arrows of the navigation widget"
-msgstr ""
+msgstr "Premi le frecce direzionali del widget di navigazione"
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2315
 msgid ""
 "Use the up/down/left/right keys to move the camera forward, backward, right "
 "and left, respectively"
 msgstr ""
+"Utilizza i tasti su/giù/sinistra/destra per spostare la telecamera "
+"rispettivamente in avanti, indietro, destra e sinistra"
 
 #: ../../docs/user_manual/introduction/qgis_gui.rst:2318
 msgid ""
