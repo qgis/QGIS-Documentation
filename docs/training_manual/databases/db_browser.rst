@@ -40,7 +40,7 @@ interface.
 .. note:: Of course you can also use this interface to connect to PostGIS 
    databases hosted on a server external to your workstation. Right clicking
    on the PostGIS entry in the tree will allow you to specify connection
-   paramaters for a new connection.
+   parameters for a new connection.
 
 
 |basic| |FA| Adding a filtered set of records as a Layer

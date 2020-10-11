@@ -454,7 +454,7 @@ this functionality also programmatically --- it is just another method for
 vector layer editing that complements the direct usage of data providers. Use
 this option when providing some GUI tools for vector layer editing, since this
 will allow user to decide whether to commit/rollback and allows the usage of
-undo/redo. When changes are commited, all changes from the editing buffer are
+undo/redo. When changes are committed, all changes from the editing buffer are
 saved to data provider.
 
 The methods are similar to the ones we have seen in the provider, but they are
@@ -587,7 +587,7 @@ to be updated because the changes are not automatically propagated.
 
 .. tip:: **Directly save changes using** ``with`` **based command**
 
-    Using ``with edit(layer):`` the changes will be commited automatically
+    Using ``with edit(layer):`` the changes will be committed automatically
     calling :meth:`commitChanges() <qgis.core.QgsVectorLayer.commitChanges>` at the end. If any exception occurs, it will
     :meth:`rollBack() <qgis.core.QgsVectorLayer.rollBack>` all the changes. See :ref:`editing-buffer`.
 
