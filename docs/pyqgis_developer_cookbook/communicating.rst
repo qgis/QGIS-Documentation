@@ -254,7 +254,7 @@ The python built in logging module
 
   import logging
   formatter = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-  logfilename='c:\\temp\\example.log'
+  logfilename=r'c:\temp\example.log'
   logging.basicConfig(filename=logfilename, level=logging.DEBUG, format=formatter)
   logging.info("This logging info text goes into the file")
   logging.debug("This logging debug text goes into the file as well")
