@@ -49,7 +49,7 @@ to activate the venv and then run the build from within that venv:
 make html
 ```
 
-If you want for some reason start from scratch:
+If, for some reason, you want to start from scratch:
 
 ```
 make -f venv.mk cleanall
