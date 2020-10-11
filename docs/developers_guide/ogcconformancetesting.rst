@@ -65,6 +65,14 @@ according to the description in
 https://cite.opengeospatial.org/teamengine/about/wms/1.3.0/site/.
 To run the tests, we need to provide the GetCapabilities URL of the service later.
 
+<<<<<<< HEAD
+=======
+After the download, a ``teamengine_wms_130.qgs`` project is available in the
+new ``data`` directory. This project has to be registered as the default
+project for QGIS Server thanks to the **QGIS_SERVER_PROJECT_FILE** environment
+variable. This way, we don't need to explicitly set the ``MAP``
+vendor-parameter of QGIS Server.
+>>>>>>> 802aba7ea... Merge pull request #6134 from ka1bi4/FixMisspellings
 
 Running the WMS 1.3.0 test
 ===========================
