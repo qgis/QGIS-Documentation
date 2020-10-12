@@ -1930,6 +1930,17 @@ Parameters
 
        Default: ``EPSG:4326 - WGS 84``
      - Destination coordinate reference system
+   * - **Coordinate Operation** |312|
+
+       Optional
+     - ``OPERATION``
+     - [string]
+     - Specific operation to use for a particular reprojection task, instead
+       of always forcing use of the current project's transformation settings.
+       Useful when reprojecting a particular layer and control over the exact
+       transformation pipeline is required. Requires proj version >= 6.
+
+       Read more at :ref:`datum_transformation`.
    * - **Reprojected**
      - ``OUTPUT``
      - [same as input]
