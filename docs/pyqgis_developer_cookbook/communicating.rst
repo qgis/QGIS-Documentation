@@ -277,10 +277,11 @@ The basicConfig method configures the basic setup of the logging. In the above c
 		   pass
 
 
- Further resources on how to use the python logging facility are available at:
- * https://docs.python.org/3/library/logging.html
- * https://docs.python.org/3/howto/logging.html
- * https://docs.python.org/3/howto/logging-cookbook.html
+Further resources on how to use the python logging facility are available at:
+
+* https://docs.python.org/3/library/logging.html
+* https://docs.python.org/3/howto/logging.html
+* https://docs.python.org/3/howto/logging-cookbook.html
 
 .. warning::
    Please note that without logging to a file by setting a filename the logging may be multithreaded which heavily slows down the output.
