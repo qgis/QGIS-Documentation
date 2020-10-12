@@ -1037,10 +1037,11 @@ More information at :ref:`label_processing`.
 Python Console Settings
 -----------------------
 
-The |runConsole| :guilabel:`Python Console` settings apply to the Python
-:ref:`interactive console <console>` and :ref:`code editor <console_editor>`.
-They help manage and control their behavior and the dialog is accessible using
-the |options| :sup:`Options...` button from:
+The |runConsole| :guilabel:`Python Console` settings help you manage and control
+the behavior of the Python editors (:ref:`interactive console <interactive_console>`,
+:ref:`code editor <console_editor>`, :ref:`project macros <project_macros>`,
+:ref:`custom expressions <function_editor>`, ...).
+It can also be accessed using the |options| :sup:`Options...` button from:
 
 * the :guilabel:`Python console` toolbar
 * the contextual menu of the :guilabel:`Python console` widget
@@ -1053,7 +1054,7 @@ the |options| :sup:`Options...` button from:
 
    Python Console Settings tab
 
-For both the Python :guilabel:`Console` and :guilabel:`Editor` you can specify:
+You can specify:
 
 * |unchecked| :guilabel:`Autocompletion`: Enables code completion. You can get
   autocompletion from the current document, the installed API files or both.
@@ -1061,16 +1062,14 @@ For both the Python :guilabel:`Console` and :guilabel:`Editor` you can specify:
   * :guilabel:`Autocompletion threshold`: Sets the threshold for displaying
     the autocompletion list (in characters)
 
-* :guilabel:`Typing`
+* under :guilabel:`Typing`
 
   * |unchecked| :guilabel:`Automatic parentheses insertion`: Enables autoclosing
     for parentheses
   * |checkbox| :guilabel:`Automatic insertion of the 'import' string on 'from xxx'`:
     Enables insertion of 'import' when specifying imports
 
-For :guilabel:`Editor` you can also specify:
-
-* :guilabel:`Run and Debug`
+* under :guilabel:`Run and Debug`
 
   * |unchecked| :guilabel:`Enable Object Inspector (switching between tabs may
     be slow)`: Enable the object inspector.
@@ -1098,20 +1097,32 @@ For :guilabel:`APIs` you can specify:
 Code Editor Settings
 --------------------
 
-In the |codeEditor| :guilabel:`Code Editor` tab, you have access to rendering
-properties inside code editor widgets (Python interactive console and editor,
+In the |codeEditor| :guilabel:`Code Editor` tab, you can control the appearance
+and behaviour of code editor widgets (Python interactive console and editor,
 expression widget and function editor, ...).
+
+.. _figure_code_editor_settings:
+
+.. figure:: img/options_codeeditor.png
+   :align: center
+
+   Code Editor Settings tab
+
+At the top of the dialog, a widget provides a live preview of the current
+settings, in various coding languages (Python, QGIS expression, HTML, SQL,
+JavaScript). A convenient way to adjust settings.
 
 * Check |unchecked| :guilabel:`Override code editor font` to modify the default
   :guilabel:`Font` family and :guilabel:`Size`.
 
 * Under the :guilabel:`Colors` group, you can:
 
-  * select a :guilabel:`Color scheme` different to the default applied to the
-    active theme
+  * select a :guilabel:`Color scheme`: predefined settings are ``Default``,
+    ``Solarized Dark`` and ``Solarized Light``. A ``Custom`` scheme is triggered
+    whenever you modify a color and can be reset with selecting a predefined
+    scheme.
   * change the :ref:`color <color_widget>` of each element in code writing,
-    such as the colors to use for comments, quotes, functions, ...
-  * press |undo| :sup:`Reset to default colors` to remove custom changes.
+    such as the colors to use for comments, quotes, functions, background, ...
 
 
 .. index:: User profile
@@ -1421,6 +1432,8 @@ project-level variable from the list and click the |signMinus| button to
 remove it.
 More information on variables usage in the General Tools
 :ref:`general_tools_variables` section.
+
+.. _project_macros:
 
 Macros Properties
 -----------------
@@ -1949,7 +1962,5 @@ in the QGIS user profile.
    :width: 1.5em
 .. |unchecked| image:: /static/common/checkbox_unchecked.png
    :width: 1.3em
-.. |undo| image:: /static/common/mActionUndo.png
-   :width: 1.5em
 .. |win| image:: /static/common/win.png
    :width: 1em

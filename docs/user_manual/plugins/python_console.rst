@@ -26,6 +26,8 @@ your python scripts. Both console and editor are based on PyQScintilla2
 package. To open the console go to :menuselection:`Plugins --> Python Console`
 (:kbd:`Ctrl+Alt+P`).
 
+.. _interactive_console:
+
 The Interactive Console
 =======================
 
