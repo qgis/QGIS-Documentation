@@ -35,7 +35,7 @@ Parameters
      - Input vector layer
    * - **Additional creation options**
 
-       (optional)
+       Optional
      - ``OPTIONS``
      - [string]
 

@@ -49,7 +49,7 @@ Parameters
      - Select the new CRS to assign to the vector layer
    * - **Assigned CRS**
 
-       (Optional)
+       Optional
      - ``OUTPUT``
      - [same as input]
 
@@ -544,7 +544,7 @@ Parameters
        The file encoding can also be changed here.
    * - **Filtered (duplicates)**
 
-       (Optional)
+       Optional
      - ``DUPLICATES``
      - [same as input]
 
@@ -641,14 +641,14 @@ Parameters
      - The revised or modified vector layer
    * - **Attributes to consider for match**
    
-       (Optional)
+       Optional
      - ``COMPARE_ATTRIBUTES``
      - [tablefield: any] [list]
      - Attributes to consider for match. By default, all attributes
        are compared.  
    * - **Geometry comparison behavior**
    
-       (Optional)
+       Optional
      - ``MATCH_TYPE``
      - [enumeration]
        
@@ -1884,7 +1884,7 @@ Outputs
      - Description
    * - **Repaired layer**
      - ``OUTPUT``
-     - [vector any]
+     - [vector: any]
      - The input vector layer with the SHX file repaired
 
 Python code

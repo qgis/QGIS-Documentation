@@ -2034,7 +2034,7 @@ Parameters
      - Prefix for the names of the added columns.
    * - **Sampled Points**
 
-       (Optional)
+       Optional
      - ``OUTPUT``
      - [vector: point]
 
@@ -2062,7 +2062,7 @@ Outputs
      - Description
    * - **Sampled Points**
 
-       (Optional)
+       Optional
      - ``OUTPUT``
      - [vector: point]
      - The output layer containing the sampled values.
@@ -2153,7 +2153,7 @@ Outputs
      - Description
    * - **Output zones**
 
-       (Optional)
+       Optional
      - ``OUTPUT``
      - [vector: polygon]
 
