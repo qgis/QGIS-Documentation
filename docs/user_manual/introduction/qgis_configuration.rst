@@ -924,9 +924,9 @@ https://doc.qt.io/qt-5.9/qnetworkproxy.html#ProxyType-enum
 Locator Settings
 ----------------
 
-|search| The :guilabel:`Locator` tab allows to configure the :ref:`Locator bar
-<locator_bar>`, a quick search widget available on the status bar that helps
-you perform searches anywhere in the application.
+|search| The :guilabel:`Locator` tab lets you configure the :ref:`Locator bar
+<locator_bar>`, a quick search widget available on the status bar to help
+you perform searches in the application.
 It provides some default filters (with prefix) to use:
 
 .. _figure_locator_settings:
@@ -956,7 +956,7 @@ It provides some default filters (with prefix) to use:
 * Settings (``set``): browses and opens project and application-wide properties
   dialogs.
 * Go to coordinate (``go``): pans the map canvas to a location defined by a
-  comma or space separated pair of x and y coordinate or a formatted URL
+  comma or space separated pair of x and y coordinates or a formatted URL
   (e.g., OpenStreetMap, Leaflet, OpenLayer, Google Maps, ...).
   The coordinate is expected in WGS 84 (``epsg:4326``) and/or map canvas CRS.
 * Processing algorithms (``a``): searches and opens a Processing algorithm dialog.
@@ -975,7 +975,7 @@ In the dialog, you can:
 * Some filters provide a way to configure the number of results in a  search.
 
 The set of default locator filters can be extended by plugins, eg for OSM
-nominatim searches, direct database searching, layer catalog searches.
+nominatim searches, direct database searching, layer catalog searches, ...
 
 
 .. _optionsadvanced:

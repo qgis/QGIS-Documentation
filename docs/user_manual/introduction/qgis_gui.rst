@@ -2520,8 +2520,9 @@ widget, helps you find and run any feature or options in QGIS:
 
 #. Click in the text widget to activate the locator search bar or press
    :kbd:`Ctrl+K`.
-#. Type associated with the item you are looking for (name, tag, keyword...).
-   By default, results are returned for the enabled locator filters but
+#. Type a text associated with the item you are looking for
+   (name, tag, keyword, ...).
+   By default, results are returned for the enabled locator filters, but
    you can limit the search to a certain scope by prefixing your text
    with the :ref:`locator filters <locator_options>` prefix,
    ie. typing ``l cad`` will return only the layers whose name contains ``cad``.
@@ -2538,14 +2539,14 @@ widget, helps you find and run any feature or options in QGIS:
   through the whole attribute table of the layer. You can limit the search to
   a particular field using the ``@`` prefix. E.g., ``af @name sal`` or
   ``@name sal`` returns only the features whose "name" attribute contains 'sal'.
-  Text autocompletion is active when writing and suggestion can be applied
+  Text autocompletion is active when writing and the suggestion can be applied
   using :kbd:`Tab` key.
 
 Searching is handled using threads, so that results always become available as
-quickly as possible, regardless of whether any slow search filters may be
-installed. They also appear as soon as each result is encountered by each
+quickly as possible, even if slow search filters are installed.
+They also appear as soon as they are encountered by a
 filter, which means that e.g. a file search filter will show results one by one
-as the file tree is scanned. This ensures that the UI is always responsive even
+as the file tree is scanned. This ensures that the UI is always responsive, even
 if a very slow search filter is present (e.g. one which uses an online service).
 
 .. tip:: **Quick access to the locator's configurations**
@@ -2642,7 +2643,7 @@ processes (QGIS startup, plugins loading, processing tools...)
 
 Depending on the :ref:`Plugin Manager settings <setting_plugins>`,
 the status bar can sometimes show icons to the right to inform you
-about availability of |pluginNew| new or |pluginUpgrade| upgradeable
+about the availability of new (|pluginNew|) or  upgradeable (|pluginUpgrade|)
 plugins.
 Click the icon to open the Plugin Manager dialog.
 
