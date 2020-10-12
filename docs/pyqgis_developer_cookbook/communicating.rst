@@ -276,7 +276,6 @@ The basicConfig method configures the basic setup of the logging. In the above c
 		with open(logfilename, 'w') as file:
 		   pass
 
-.. note::
 
  Further resources on how to use the python logging facility are available at:
  * https://docs.python.org/3/library/logging.html
