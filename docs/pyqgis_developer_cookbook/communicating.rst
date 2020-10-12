@@ -252,6 +252,7 @@ The python built in logging module
 
 .. code-block:: python
 
+
   import logging
   formatter = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
   logfilename=r'c:\temp\example.log'
