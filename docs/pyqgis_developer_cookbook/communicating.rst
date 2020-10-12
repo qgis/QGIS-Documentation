@@ -270,6 +270,7 @@ The basicConfig method configures the basic setup of the logging. In the above c
    If you want to erase the log file every time you execute your script you can do something like:
    
 .. code-block:: python
+
    if os.path.isfile(logfilename):
 		with open(logfilename, 'w') as file:
 		   pass
