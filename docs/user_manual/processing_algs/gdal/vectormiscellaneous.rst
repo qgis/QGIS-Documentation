@@ -126,7 +126,7 @@ Parameters
        * 2 --- SQLite
    * - **Additional creation options**
 
-       (optional)
+       Optional
      - ``OPTIONS``
      - [string]
 
@@ -456,7 +456,7 @@ Parameters
      - Avoids modifying column attributes to comply with input data
    * - **Additional creation options**
 
-       (optional)
+       Optional
      - ``OPTIONS``
      - [string]
 
@@ -798,7 +798,7 @@ Parameters
      - Avoids modifying column attributes to comply with input data
    * - **Additional creation options**
 
-       (optional)
+       Optional
      - ``OPTIONS``
      - [string]
 
