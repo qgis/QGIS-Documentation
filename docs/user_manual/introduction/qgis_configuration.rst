@@ -925,9 +925,18 @@ https://doc.qt.io/qt-5.9/qnetworkproxy.html#ProxyType-enum
 Locator Settings
 ----------------
 
-|search| The :guilabel:`Locator` tab allows to configure the :ref:`Locator bar <locator_bar>`, a
-quick search widget available on the status bar that helps you perform searches
-anywhere in the application. It provides some default filters (with prefix) to use:
+|search| The :guilabel:`Locator` tab lets you configure the :ref:`Locator bar
+<locator_bar>`, a quick search widget available on the status bar to help
+you perform searches in the application.
+It provides some default filters (with prefix) to use:
+
+.. _figure_locator_settings:
+
+.. figure:: img/options_locator.png
+   :align: center
+
+   Locator Settings in QGIS
+
 
 * Project layers (``l``): finds and selects a layer in the :guilabel:`Layers`
   panel.
@@ -936,51 +945,38 @@ anywhere in the application. It provides some default filters (with prefix) to u
   or menu in QGIS, opening a panel...
 * Active layer features (``f``): searches for matching attributes in any field
   from the current active layer and zooms to the selected feature.
+  Press |settings| to configure the maximum number of results.
 * Features in all layers (``af``): searches for matching attributes in the
   :ref:`display name <maptips>` of each :ref:`searchable layers <project_layer_capabilities>`
   and zooms to the selected feature.
+  Press |settings| to configure the maximum number of results and the maximum
+  number of results per layer.
 * Calculator (``=``): allows evaluation of any QGIS expression and, if valid,
   gives an option to copy the result to the clipboard.
 * Spatial bookmarks (``b``): finds and zooms to the bookmark extent.
 * Settings (``set``): browses and opens project and application-wide properties
   dialogs.
-* Processing (``a``): searches and opens a Processing algorithm dialog.
+* Go to coordinate (``go``): pans the map canvas to a location defined by a
+  comma or space separated pair of x and y coordinates or a formatted URL
+  (e.g., OpenStreetMap, Leaflet, OpenLayer, Google Maps, ...).
+  The coordinate is expected in WGS 84 (``epsg:4326``) and/or map canvas CRS.
+* Processing algorithms (``a``): searches and opens a Processing algorithm dialog.
 * Edit selected features (``ef``): gives quick access and runs a compatible
   :ref:`modify-in-place <processing_inplace_edit>` Processing algorithm on the
   active layer.
 
-For each filter, you can customize the filter, set whether it is enabled by default or not.
+In the dialog, you can:
+
+* customize the filter :guilabel:`Prefix`, i.e. the keyword to use to trigger
+  the filter
+* set whether the filter is :guilabel:`Enabled`: the filter can be used in the
+  searches and a shortcut is available in the locator bar menu
+* set whether the filter is :guilabel:`Default`: a search not using a filter
+  returns results from only the default filters categories.
+* Some filters provide a way to configure the number of results in a  search.
+
 The set of default locator filters can be extended by plugins, eg for OSM
-nominatim searches, direct database searching, layer catalog searches.
-
-The locator search bar can be activated pressing :kbd:`Ctrl+K`. Type your text
-to perform a search. By default, results are returned for all enabled locator
-filters but you can limit the search to a certain filter by prefixing your
-text with the locator filter prefix, ie. typing ``l cad`` will return only the
-layers whose name contains ``cad``. Click on the result to execute the
-corresponding action, depending on the type of item.
-
-Searching is handled using threads, so that results always become available as
-quickly as possible, regardless of whether any slow search filters may be
-installed. They also appear as soon as each result is encountered by each
-filter, which means that e.g. a file search filter will show results one by one
-as the file tree is scanned. This ensures that the UI is always responsive even
-if a very slow search filter is present (e.g. one which uses an online service).
-
-.. tip:: **Quick access to the locator's configurations**
-
-  Click on the |search| icon inside the locator widget on the status bar to
-  display the list of filters you can use and a :guilabel:`Configure` entry that
-  opens the :guilabel:`Locator` tab of the :menuselection:`Settings -->
-  Options...` menu.
-
-
-.. _figure_locator_settings:
-
-.. figure:: img/options_locator.png
-   :align: center
-
-   Locator Settings in QGIS
+nominatim searches, direct database searching, layer catalog searches, ...
 
 
 .. _optionsadvanced:
@@ -1873,6 +1869,8 @@ in the QGIS user profile.
    :width: 2.8em
 .. |selectString| image:: /static/common/selectstring.png
    :width: 2.5em
+.. |settings| image:: /static/common/settings.png
+   :width: 1.5em
 .. |signMinus| image:: /static/common/symbologyRemove.png
    :width: 1.5em
 .. |signPlus| image:: /static/common/symbologyAdd.png

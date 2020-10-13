@@ -2512,14 +2512,53 @@ manage the map view.
 
 .. _`locator_bar`:
 
+Locator bar
+-----------
+
 On the left side of the status bar, the locator bar, a quick search
-widget, helps you find and run any feature or options in QGIS.
-Simply type text associated with the item you are looking for (name,
-tag, keyword...) and you get a list that updates as you write.
-You can also limit the search scope using
-:ref:`locator filters <locator_options>`.
-Click the |search| button to select any of them and press the
-:guilabel:`Configure` entry for global settings.
+widget, helps you find and run any feature or options in QGIS:
+
+#. Click in the text widget to activate the locator search bar or press
+   :kbd:`Ctrl+K`.
+#. Type a text associated with the item you are looking for
+   (name, tag, keyword, ...).
+   By default, results are returned for the enabled locator filters, but
+   you can limit the search to a certain scope by prefixing your text
+   with the :ref:`locator filters <locator_options>` prefix,
+   ie. typing ``l cad`` will return only the layers whose name contains ``cad``.
+
+   The filter can also be selected with a double-click in the menu that shows
+   when accessing the locator widget.
+
+#. Click on a result to execute the corresponding action, depending on the type
+   of item.
+
+.. tip:: **Limit the lookup to one field of the active layer**
+
+  By default, a search with the "active layer features" filter (``af``) runs
+  through the whole attribute table of the layer. You can limit the search to
+  a particular field using the ``@`` prefix. E.g., ``af @name sal`` or
+  ``@name sal`` returns only the features whose "name" attribute contains 'sal'.
+  Text autocompletion is active when writing and the suggestion can be applied
+  using :kbd:`Tab` key.
+
+Searching is handled using threads, so that results always become available as
+quickly as possible, even if slow search filters are installed.
+They also appear as soon as they are encountered by a
+filter, which means that e.g. a file search filter will show results one by one
+as the file tree is scanned. This ensures that the UI is always responsive, even
+if a very slow search filter is present (e.g. one which uses an online service).
+
+.. tip:: **Quick access to the locator's configurations**
+
+  Click on the |search| icon inside the locator widget on the status bar to
+  display the list of filters you can use and a :guilabel:`Configure` entry that
+  opens the :guilabel:`Locator` tab of the :menuselection:`Settings -->
+  Options...` menu.
+
+
+Reporting actions
+-----------------
 
 In the area next to the locator bar, a summary of actions you've
 carried out will be shown when needed  (such as selecting features in
@@ -2529,6 +2568,9 @@ hovering over (not available for all tools).
 In case of lengthy operations, such as gathering of statistics in
 raster layers, executing Processing algorithms or rendering several
 layers in the map view, a progress bar is displayed in the status bar.
+
+Control the map canvas
+----------------------
 
 The |tracking| :guilabel:`Coordinate` option shows the current
 position of the mouse, following it while moving across the map view.
@@ -2573,16 +2615,6 @@ To the right of the render functions, you find the |projectionEnabled|
 on this opens the :guilabel:`Project Properties` dialog and lets you
 apply another CRS to the map view.
 
-The |messageLog| :sup:`Messages` button next to it opens the
-:guilabel:`Log Messages Panel` which has information on underlying
-processes (QGIS startup, plugins loading, processing tools...)
-
-Depending on the :ref:`Plugin Manager settings <setting_plugins>`,
-the status bar can sometimes show icons to the right to inform you
-about availability of |pluginNew| new or |pluginUpgrade| upgradeable
-plugins.
-Click the icon to open the Plugin Manager dialog.
-
 .. index::
    single: Scale calculate
 
@@ -2601,6 +2633,19 @@ Click the icon to open the Plugin Manager dialog.
 
    Note that CRS choice on startup can be set in
    :menuselection:`Settings --> Options --> CRS`.
+
+Messaging
+---------
+
+The |messageLog| :sup:`Messages` button next to it opens the
+:guilabel:`Log Messages Panel` which has information on underlying
+processes (QGIS startup, plugins loading, processing tools...)
+
+Depending on the :ref:`Plugin Manager settings <setting_plugins>`,
+the status bar can sometimes show icons to the right to inform you
+about the availability of new (|pluginNew|) or  upgradeable (|pluginUpgrade|)
+plugins.
+Click the icon to open the Plugin Manager dialog.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
