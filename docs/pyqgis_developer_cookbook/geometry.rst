@@ -239,7 +239,7 @@ The following code assumes ``layer`` is a :class:`QgsVectorLayer <qgis.core.QgsV
   layer = QgsProject.instance().mapLayersByName('countries')[0]
 
   # let's filter for countries that begin with Z, then get their features
-  query = '"name" LIKE \'Zu%\''
+  query = '"name" LIKE \'Z%\''
   features = layer.getFeatures(QgsFeatureRequest().setFilterExpression(query))
 
   # now loop through the features, perform geometry computation and print the results
@@ -253,19 +253,12 @@ The following code assumes ``layer`` is a :class:`QgsVectorLayer <qgis.core.QgsV
 
 .. testoutput:: geometry
 
-    Zubin Potok
-    Area:  0.040717371293465573
-    Perimeter:  0.9406133328077781
-    Zulia
-    Area:  3.708060762610232
-    Perimeter:  17.172123598311487
-    Zuid-Holland
-    Area:  0.4204687950359031
-    Perimeter:  4.098878517120812
-    Zug
-    Area:  0.027573510374275363
-    Perimeter:  0.7756605461489624
-
+    Zambia
+    Area:  62.822790653431205
+    Perimeter:  50.65232014052552
+    Zimbabwe
+    Area:  33.41113559136521
+    Perimeter:  26.608288555013935
 
 Now you have calculated and printed the areas and perimeters of the geometries.
 You may however quickly notice that the values are strange.
@@ -287,7 +280,7 @@ The following code assumes ``layer`` is a :class:`QgsVectorLayer
   layer = QgsProject.instance().mapLayersByName('countries')[0]
 
   # let's filter for countries that begin with Z, then get their features
-  query = '"name" LIKE \'Zu%\''
+  query = '"name" LIKE \'Z%\''
   features = layer.getFeatures(QgsFeatureRequest().setFilterExpression(query))
 
   for f in features:
@@ -303,22 +296,14 @@ The following code assumes ``layer`` is a :class:`QgsVectorLayer
 
 .. testoutput:: geometry
 
-    Zubin Potok
-    Perimeter (m): 87581.40256396489
-    Area (m2): 369302069.18814206
-    Area (km2): 369.30206918814207
-    Zulia
-    Perimeter (m): 1891227.0945423376
-    Area (m2): 44973645460.19719
-    Area (km2): 44973.645460197185
-    Zuid-Holland
-    Perimeter (m): 331941.8000214341
-    Area (m2): 3217213408.4101033
-    Area (km2): 3217.213408410103
-    Zug
-    Perimeter (m): 67440.22483063207
-    Area (m2): 232457391.52097562
-    Area (km2): 232.45739152097562
+    Zambia
+    Perimeter (m): 5539361.250080013
+    Area (m2): 752000605894.2937
+    Area (km2): 752000.6058942936
+    Zimbabwe
+    Perimeter (m): 2865021.3323912495
+    Area (m2): 389250992553.95465
+    Area (km2): 389250.99255395465
 
 Alternatively, you may want to know the distance and bearing between two points.
 
