@@ -260,6 +260,13 @@ msgid ""
 "triweight results in “sharper” hotspots and Epanechnikov results in "
 "“smoother” hotspots."
 msgstr ""
+"Controla la velocidad a la que la influencia de un punto disminuye a medida "
+"que aumenta la distancia desde el punto. Los diferentes núcleos se "
+"descomponen a diferentes velocidades, por lo que un núcleo de tres pesos da "
+"a las entidades un mayor peso para distancias más cercanas al punto que el "
+"kernel de Epanechnikov. En consecuencia, el peso triple da como resultado "
+"puntos calientes \"más nítidos\" y Epanechnikov da como resultado puntos "
+"calientes \"más suaves\"."
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:95
 msgid ""
@@ -267,97 +274,111 @@ msgid ""
 "<https://en.wikipedia.org/wiki/Kernel_(statistics)#Kernel_functions_in_common_use>`_"
 " for further information):"
 msgstr ""
+"Hay muchas formas disponibles (consulte la página de Wikipedia "
+"<https://en.wikipedia.org/wiki/Kernel_(statistics)#Kernel_functions_in_common_use>`_"
+" para mas información):"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:99
 msgid "0 --- Quartic"
-msgstr ""
+msgstr "0 --- Cuartico"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:100
 msgid "1 --- Triangular"
-msgstr ""
+msgstr "1 --- Triangular"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:101
 msgid "2 --- Uniform"
-msgstr ""
+msgstr "2 --- Uniforme"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:102
 msgid "3 --- Triweight"
-msgstr ""
+msgstr "3 --- Triweight"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:103
 msgid "4 --- Epanechnikov"
-msgstr ""
+msgstr "4 --- Epanechnikov"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:105
 msgid "**Decay ratio (Triangular kernels only)**"
-msgstr ""
+msgstr "**Relación de decaimiento (solo kernels triangulares)**"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:108
 msgid "``DECAY``"
-msgstr ""
+msgstr "``DECAY``"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:111
 msgid "Default: *0.0*"
-msgstr ""
+msgstr "Predetermminado: *0.0*"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:112
 msgid ""
 "Can be used with Triangular kernels to further control how heat from a "
 "feature decreases with distance from the feature."
 msgstr ""
+"Se puede usar con núcleos triangulares para controlar aún más cómo el calor "
+"de una entidad disminuye con la distancia a la entidad."
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:116
 msgid ""
 "A value of 0 (=minimum) indicates that the heat will be concentrated in the "
 "center of the given radius and completely extinguished at the edge."
 msgstr ""
+"Un valor de 0(=mínimo) indica que el calor se concentrará en el centro del "
+"radio dado y se extinguirá completamente en el borde."
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:119
 msgid ""
 "A value of 0.5 indicates that pixels at the edge of the radius will be given"
 " half the heat as pixels at the center of the search radius."
 msgstr ""
+"Un valor de 0,5 indica que los píxeles en el borde del radio recibirán la "
+"mitad de calor que los píxeles en el centro del radio de búsqueda."
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:122
 msgid ""
 "A value of 1 means the heat is spread evenly over the whole search radius "
 "circle. (This is equivalent to the ‘Uniform’ kernel.)"
 msgstr ""
+"Un valor de 1 significa que el calor se distribuye uniformemente por todo el"
+" círculo del radio de búsqueda. (Esto es equivalente al kernel 'uniforme')."
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:125
 msgid ""
 "A value greater than 1 indicates that the heat is higher towards the edge of"
 " the search radius than at the center."
 msgstr ""
+"Un valor mayor que 1 indica que el calor es mayor hacia el borde del radio "
+"de búsqueda que hacia el centro."
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:129
 msgid "**Output value scaling**"
-msgstr ""
+msgstr "**Escala de valor de salida**"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:130
 msgid "``OUTPUT_VALUE``"
-msgstr ""
+msgstr "``OUTPUT_VALUE``"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:133
 msgid "Default: *Raw*"
-msgstr ""
+msgstr "Predeterminado: *Bruto*"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:134
 msgid "Allow to change the values of the output heatmap raster. One of:"
 msgstr ""
+"Permitir cambiar los valores del ráster del mapa de calor de salida. Uno de:"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:137
 msgid "0 --- Raw"
-msgstr ""
+msgstr "0 --- Bruto"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:138
 msgid "1 --- Scaled"
-msgstr ""
+msgstr "1 --- Escalado"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:140
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:165
 msgid "**Heatmap**"
-msgstr ""
+msgstr "**Mapa de calor**"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:141
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:166
@@ -366,7 +387,7 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:479
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:515
 msgid "``OUTPUT``"
-msgstr "``SALIDA``"
+msgstr "``OUTPUT``"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:142
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:167
@@ -375,17 +396,19 @@ msgstr "``SALIDA``"
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:480
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:516
 msgid "[raster]"
-msgstr "[raster]"
+msgstr "[ráster]"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:144
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:348
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:482
 msgid "Default: ``[Save to temporary file]``"
-msgstr "Predeterminado: ``[Save to temporary file]``"
+msgstr "Predeterminado: ``[Guardar como archivo temporal]``"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:145
 msgid "Specify the output raster layer with kernel density values. One of:"
 msgstr ""
+"Especifique la capa ráster de salida con valores de densidad de kernel. Uno "
+"de:"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:148
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:352
@@ -414,11 +437,11 @@ msgstr "Salidas"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:168
 msgid "Raster layer with kernel density values"
-msgstr ""
+msgstr "Capa ráster con valores de densidad de kernel"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:171
 msgid "Example: Creating a Heatmap"
-msgstr ""
+msgstr "Ejemplo: Creación de una mapa de calor"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:172
 msgid ""
@@ -428,46 +451,62 @@ msgid ""
 "`http://qgistutorials.com "
 "<http://www.qgistutorials.com/en/docs/creating_heatmaps.html>`_."
 msgstr ""
+"Para el siguiente ejemplo, usaremos la capa vectorial de puntos ``airports``"
+" del conjunto de datos de muestra de QGIS (ver :ref:`label_sampledata`). "
+"Otro excelente tutorial de QGIS sobre cómo hacer mapas de calor se puede "
+"encontrar en `http://qgistutorials.com "
+"<http://www.qgistutorials.com/en/docs/creating_heatmaps.html>`_."
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:178
 msgid "In Figure_Heatmap_data_processing_, the airports of Alaska are shown."
 msgstr ""
+"En la Figure_Heatmap_data_processing_, se muestran los aeropuertos de "
+"Alaska."
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:185
 msgid "Airports of Alaska"
-msgstr ""
+msgstr "Aeropuertos de Alaska"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:188
 msgid ""
 "Open the :guilabel:`Heatmap (Kernel Density Estimation)` algorithm from the "
 "QGIS :guilabel:`Interpolation` group"
 msgstr ""
+"Abra el algoritmo del QGIS :guilabel:`Mapa de Calor (Estimación de Densidad "
+"Kernel)`  del grupo :guilabel:`Interpolación`"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:190
 msgid ""
 "In the :guilabel:`Point layer` |selectString| field, select ``airports`` "
 "from the list of point layers loaded in the current project."
 msgstr ""
+"En el campo :guilabel:`capa de Puntos` |selectString| , seleccione "
+"``airports`` de la lista de capas de puntos cargadas en el proyecto actual."
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:193
 msgid "Change the :guilabel:`Radius` to ``1000000`` meters."
-msgstr ""
+msgstr "Cambie el :guilabel:`Radio` a ``1000000`` metros."
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:194
 msgid ""
 "Change the :guilabel:`Pixel size X` to ``1000``. The :guilabel:`Pixel size "
 "Y`, :guilabel:`Rows` and :guilabel:`Columns` will be automatically updated."
 msgstr ""
+"Cambie el :guilabel:`tamaño de Pixel X` a ``1000``. El :guilabel:`tamaño de "
+"Pixel Y`, :guilabel:`Filas` y :guilabel:`Columnas` se actualizarán "
+"automáticamente."
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:197
 msgid ""
 "Click on :guilabel:`Run` to create and load the airports heatmap (see "
 "Figure_Heatmap_created_processing_)."
 msgstr ""
+"Click en :guilabel:`Ejecutar` para crear y cargar el mapa de calor de los "
+"aeropuertos (ver Figure_Heatmap_created_processing_)."
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:205
 msgid "The Heatmap Dialog"
-msgstr ""
+msgstr "El Diálogo Mapa de Calor"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:207
 msgid ""
@@ -476,10 +515,14 @@ msgid ""
 "concentrations of airports. The heatmap can now be styled in QGIS to improve"
 " its appearance."
 msgstr ""
+"QGIS generará el mapa de calor y lo agregará a su ventana de mapa. De forma "
+"predeterminada, el mapa de calor está sombreado en escala de grises, y las "
+"áreas más claras muestran concentraciones más altas de aeropuertos. El mapa "
+"de calor ahora se puede diseñar en QGIS para mejorar su apariencia."
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:217
 msgid "The heatmap after loading looks like a grey surface"
-msgstr ""
+msgstr "El mapa de calor después de la carga parece una superficie gris"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:220
 msgid ""
@@ -487,38 +530,45 @@ msgid ""
 "layer ``heatmap_airports``, open the context menu with the right mouse "
 "button and select :guilabel:`Properties`)."
 msgstr ""
+"Abra el diálogo de propiedades de la capa ``heatmap_airports`` (seleccione "
+"la capa ``heatmap_airports``, abra el menú contextual con el botón derecho "
+"del ratón y seleccione :guilabel:`Propiedades`)."
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:223
 msgid "Select the :guilabel:`Symbology` tab."
-msgstr ""
+msgstr "Seleccione la pestaña :guilabel:`Simbología`"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:224
 msgid ""
 "Change the :guilabel:`Render type` |selectString| to 'Singleband "
 "pseudocolor'."
 msgstr ""
+"Cambie el :guilabel:`tipo de Representación` |selectString| a 'pseudocolor "
+"Banda única'."
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:226
 msgid ""
 "Select a suitable :guilabel:`Color ramp` |selectString|, for instance "
 "``YlOrRd``."
 msgstr ""
+"Seleccione una adecuada :guilabel:`rampa de color` |selectString|, por "
+"ejemplo ``YlOrRd``."
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:228
 msgid "Click the :guilabel:`Classify` button."
-msgstr ""
+msgstr "Click en el botón :guilabel:`Clasificar`."
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:229
 msgid "Press :guilabel:`OK` to update the layer."
-msgstr ""
+msgstr "Presiona :guilabel:`Aceptar` para actualizar la capa."
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:231
 msgid "The final result is shown in Figure_Heatmap_styled_processing_."
-msgstr ""
+msgstr "El resultado final se muestra en Figure_Heatmap_styled_processing_."
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:238
 msgid "Styled heatmap of airports of Alaska"
-msgstr ""
+msgstr "Mapa de calor con estilo de los aeropuertos de Alaska"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:243
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:375
@@ -528,7 +578,7 @@ msgstr "Código Python"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:245
 msgid "**Algorithm ID**: ``qgis:heatmapkerneldensityestimation``"
-msgstr ""
+msgstr "**Algorithm ID**: ``qgis:heatmapkerneldensityestimation``"
 
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
@@ -547,13 +597,15 @@ msgstr ""
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:255
 msgid "IDW Interpolation"
-msgstr ""
+msgstr "Interpolación IDW"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:256
 msgid ""
 "Generates an Inverse Distance Weighted (IDW) interpolation of a point vector"
 " layer."
 msgstr ""
+"Genera una interpolación de distancia inversa ponderada (IDW) de una capa "
+"vectorial de puntos."
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:259
 msgid ""
@@ -561,6 +613,9 @@ msgid ""
 "one point relative to another declines with distance from the unknown point "
 "you want to create."
 msgstr ""
+"Los puntos de muestra se ponderan durante la interpolación de modo que la "
+"influencia de un punto en relación con otro disminuye con la distancia desde"
+" el punto desconocido que desea crear."
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:263
 msgid ""
@@ -568,22 +623,27 @@ msgid ""
 " interpolation result can decrease, if the distribution of sample data "
 "points is uneven."
 msgstr ""
+"El método de interpolación IDW también tiene algunas desventajas: la calidad"
+" del resultado de la interpolación puede disminuir si la distribución de los"
+" puntos de datos de la muestra es desigual."
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:267
 msgid ""
 "Furthermore, maximum and minimum values in the interpolated surface can only"
 " occur at sample data points."
 msgstr ""
+"Además, los valores máximo y mínimo en la superficie interpolada solo pueden"
+" ocurrir en puntos de datos de muestra."
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:283
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:414
 msgid "**Input layer(s)**"
-msgstr ""
+msgstr "**Capa(s) de entrada**"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:284
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:415
 msgid "``INTERPOLATION_DATA``"
-msgstr ""
+msgstr "``INTERPOLATION_DATA``"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:285
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:416
@@ -599,6 +659,11 @@ msgid ""
 "<python/plugins/processing/algs/qgis/ui/InterpolationWidgets.py>` for more "
 "details)."
 msgstr ""
+"Capa(s) de vector y campo(s) a utilizar para la interpolación, codificados "
+"en una cadena (consulte la clase ``ParameterInterpolationData`` en "
+":source:`InterpolationWidgets "
+"<python/plugins/processing/algs/qgis/ui/InterpolationWidgets.py>` para mas "
+"detalles)."
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:292
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:423
@@ -606,11 +671,13 @@ msgid ""
 "The following GUI elements are provided to compose the interpolation data "
 "string:"
 msgstr ""
+"Se proporcionan los siguientes elementos de la GUI para componer la cadena "
+"de datos de interpolación:"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:295
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:426
 msgid "**Vector layer** [vector: any]"
-msgstr ""
+msgstr "**capa Vectorial** [vector: any]"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:296
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:427
@@ -618,6 +685,8 @@ msgid ""
 "**Interpolation attribute** [tablefield: numeric]: Attribute to use in the "
 "interpolation"
 msgstr ""
+"**atributo interpolación** [tablefield: numeric]: Atributo a emplear en la "
+"interpolación"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:298
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:429
@@ -625,11 +694,15 @@ msgid ""
 "**Use Z-coordinate for interpolation** [boolean]: Uses the layer's stored Z "
 "values (Default: False)"
 msgstr ""
+"**Usar coordenada Z para interpolación** [boolean]: Utiliza los valores Z "
+"almacenados de la capa (predeterminado: False)"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:301
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:432
 msgid "For each of the added layer-field combinations, a type can be chosen:"
 msgstr ""
+"Para cada una de las combinaciones de campo de capa agregadas, se puede "
+"elegir un tipo:"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:304
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:435
@@ -639,12 +712,12 @@ msgstr ":guilabel:`Puntos`"
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:305
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:436
 msgid ":guilabel:`Structured lines`"
-msgstr ""
+msgstr ":guilabel:`líneas estructuradas`"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:306
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:437
 msgid ":guilabel:`Break lines`"
-msgstr ""
+msgstr ":guilabel:`líneas quebradas`"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:308
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:439
@@ -652,24 +725,29 @@ msgid ""
 "In the string, the layer-field elements are separated by ``'::|::'``. The "
 "sub-elements of the layer-field elements are separated by ``'::~::'``."
 msgstr ""
+"En la cadena, los elementos del campo de capa están separados por "
+"``'::|::'``. Los subelementos de los elementos de campo de capa están "
+"separados por ``'::~::'``."
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:312
 msgid "**Distance coefficient P**"
-msgstr ""
+msgstr "**Coeficiente de Distancia P**"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:313
 msgid "``DISTANCE_COEFFICIENT``"
-msgstr ""
+msgstr "``DISTANCE_COEFFICIENT``"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:316
 msgid "Default: 2.0"
-msgstr "Preestablecido: 2.0"
+msgstr "Predeterminado: 2.0"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:317
 msgid ""
 "Sets the distance coefficient for the interpolation. Minimum: 0.0, maximum: "
 "100.0."
 msgstr ""
+"Establece el coeficiente de distancia para la interpolación. Mínimo: 0.0, "
+"máximo: 100.0."
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:319
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:453
@@ -679,7 +757,7 @@ msgstr "**Extesión (xmin, xmax, ymin, ymax)**"
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:320
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:454
 msgid "``EXTENT``"
-msgstr ""
+msgstr "``EXTENT``"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:321
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:455
@@ -693,35 +771,40 @@ msgid ""
 "either choosing it from the map canvas, selecting it from another layer or "
 "type it manually."
 msgstr ""
+"Extensión de la capa ráster de salida. Debe declarar la extensión de salida "
+"eligiéndola del lienzo del mapa, seleccionándola de otra capa o "
+"escribiéndola manualmente."
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:344
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:369
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:478
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:514
 msgid "**Interpolated**"
-msgstr ""
+msgstr "**Interpolada**"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:349
 msgid "Raster layer of interpolated values. One of:"
-msgstr ""
+msgstr "Capa ráster de valores interpolados. Uno de:"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:372
 msgid "Raster layer of interpolated values"
-msgstr ""
+msgstr "Capa ráster de valores interpolados"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:377
 msgid "**Algorithm ID**: ``qgis:idwinterpolation``"
-msgstr ""
+msgstr "**Algorithm ID**: ``qgis:idwinterpolation``"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:387
 msgid "TIN Interpolation"
-msgstr ""
+msgstr "Interpolación TIN"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:388
 msgid ""
 "Generates a Triangulated Irregular Network (TIN) interpolation of a point "
 "vector layer."
 msgstr ""
+"Genera una interpolación de red irregular triangulada (TIN) de una capa "
+"vectorial de puntos."
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:391
 msgid ""
@@ -731,20 +814,27 @@ msgid ""
 "overlapping and as compact as possible triangles. The resulting surfaces are"
 " not smooth."
 msgstr ""
+"Con el método TIN puede crear una superficie formada por triángulos de "
+"puntos vecinos más cercanos. Para hacer esto, se crean circunferencias "
+"alrededor de los puntos de muestra seleccionados y sus intersecciones se "
+"conectan a una red de triángulos no superpuestos y tan compactos como sea "
+"posible. Las superficies resultantes no son lisas."
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:398
 msgid ""
 "The algorithm creates both the raster layer of the interpolated values and "
 "the vector line layer with the triangulation boundaries."
 msgstr ""
+"El algoritmo crea tanto la capa ráster de los valores interpolados como la "
+"capa de línea vectorial con los límites de triangulación."
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:443
 msgid "**Interpolation method**"
-msgstr ""
+msgstr "**Método interpolación**"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:444
 msgid "``METHOD``"
-msgstr "``METHODO``"
+msgstr "``METHOD``"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:447
 msgid "Default: 0"
@@ -752,29 +842,29 @@ msgstr "Predeterminado: 0"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:448
 msgid "Set the interpolation method to be used. One of:"
-msgstr ""
+msgstr "Configura el método de interpolación a ser empleada. Una de:"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:450
 msgid ":guilabel:`Linear`"
-msgstr ""
+msgstr ":guilabel:`Lineal`"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:451
 msgid ":guilabel:`Clough-Toucher (cubic)`"
-msgstr ""
+msgstr ":guilabel:`Clough-Toucher (cúbico)`"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:483
 msgid "The output TIN interpolation as a raster layer. One of:"
-msgstr ""
+msgstr "La interpolación TIN de salida como una capa ráster. Uno de:"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:489
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:518
 msgid "**Triangulation**"
-msgstr ""
+msgstr "**Triangulación**"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:490
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:519
 msgid "``TRIANGULATION``"
-msgstr ""
+msgstr "``TRIANGULATION``"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:491
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:520
@@ -783,19 +873,19 @@ msgstr "[vector: line]"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:493
 msgid "Default: ``[Skip output]``"
-msgstr "Preestablecido: ``[Saltar salida]``"
+msgstr "Preestablecido: ``[Omitir salida]``"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:494
 msgid "The output TIN as a vector layer. One of:"
-msgstr ""
+msgstr "La salida TIN como capa vectorial. Una de:"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:496
 msgid "Skip Output"
-msgstr "Saltar salida"
+msgstr "Omitir salida"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:497
 msgid "Create Temporary Layer (``TEMPORARY_OUTPUT``)"
-msgstr "Crear capa temporal (``SALIDA_TEMPORAL``)"
+msgstr "Crear capa temporal (``TEMPORARY_OUTPUT``)"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:499
 msgid "Save to Geopackage..."
@@ -807,12 +897,12 @@ msgstr "Guardar a Tabla PostGIS..."
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:517
 msgid "The output TIN interpolation as a raster layer"
-msgstr ""
+msgstr "La salida de la interpolación TIN como una capa ráster"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:521
 msgid "The output TIN as a vector layer."
-msgstr ""
+msgstr "La TIN saliente como capa vectorial."
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:526
 msgid "**Algorithm ID**: ``qgis:tininterpolation``"
-msgstr ""
+msgstr "**Algorithm ID**: ``qgis:tininterpolation``"

@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# 정윤호 <yunhoc@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-05 01:57+0200\n"
 "PO-Revision-Date: 2020-03-16 19:20+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: 정윤호 <yunhoc@gmail.com>, 2020\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,7 +24,7 @@ msgstr ""
 
 #: ../../docs/training_manual/forestry/map_georeferencing.rst:2
 msgid "|LS| Georeferencing a Map"
-msgstr "|LS| 맵을 지리참조시키기"
+msgstr "|LS| 지도 지오리퍼런싱"
 
 #: ../../docs/training_manual/forestry/map_georeferencing.rst:4
 msgid ""
@@ -57,7 +58,7 @@ msgstr "**이 강의의 목표:** QGIS의 지리참조 도구를 사용하는 �
 
 #: ../../docs/training_manual/forestry/map_georeferencing.rst:18
 msgid "|basic| Scan the map"
-msgstr "|basic| 맵 스캔하기"
+msgstr "|basic| 지도 스캔"
 
 #: ../../docs/training_manual/forestry/map_georeferencing.rst:20
 msgid ""
@@ -100,6 +101,8 @@ msgid ""
 ":menuselection:`Project --> Properties --> CRS`, which is the currently used"
 " CRS in Finland."
 msgstr ""
+"QGIS 시작후 프로젝트 CRS를 :menuselection:`Project --> Properties --> CRS`에서 핀란드에서 "
+"사용중인 좌표계  :kbd:`ETRS89 / ETRS-TM35FIN`로 설정합니다."
 
 #: ../../docs/training_manual/forestry/map_georeferencing.rst:43
 msgid "Save the QGIS project as :kbd:`map_digitizing.qgs`."
@@ -132,6 +135,8 @@ msgid ""
 "Add the map image file, :kbd:`rautjarvi_map.tif`, as the image to "
 "georeference, :menuselection:`File --> Open raster`."
 msgstr ""
+"지도 이미지파일을 추가합니다, :kbd:`rautjarvi_map.tif` 배경으로 사용할 이미지 파일을 "
+":menuselection:`파일 --> 래스터열기`로 이동합니다."
 
 #: ../../docs/training_manual/forestry/map_georeferencing.rst:54
 msgid ""
@@ -178,6 +183,8 @@ msgid ""
 "panning tools as you usually do in QGIS to inspect the image in the "
 "Georeferencer's window."
 msgstr ""
+"지도에는 다양한 십자선의로 좌표 마킹한 위치를 포함합니다. 이 위치값으로 배경이미지로 설정항 수 있습니다. 확대/축소 & 이동툴을 "
+"사용하여 QGIS의 지오리퍼런서 윈도우에서 이미지를 확인할 수 있습니다."
 
 #: ../../docs/training_manual/forestry/map_georeferencing.rst:76
 msgid ""
@@ -186,6 +193,8 @@ msgid ""
 ":guilabel:`KKJ / Finland zone 2` CRS. You will use this point as the first "
 "ground control point for the georeferencing your map."
 msgstr ""
+"지도의 좌하단 코너로 확대후 X, Y가 맞추어진 십자성이 있는지 확인하십시오. 확인방법은 :guilabel:`KKJ / Finland "
+"zone 2` CRS에서 언급하였습니다. 이점을 지도의 배경이미지로할 첫번째 기준점으로 사용할 수 있습니다."
 
 #: ../../docs/training_manual/forestry/map_georeferencing.rst:80
 msgid ""
@@ -248,7 +257,7 @@ msgstr ""
 msgid ""
 "Once you are happy with your control points, you can save them for later "
 "use:"
-msgstr ""
+msgstr "기준점에 만족하시면 나중에 사용할 수 있도록 저장할 수 있습니다:"
 
 #: ../../docs/training_manual/forestry/map_georeferencing.rst:111
 msgid ":menuselection:`File --> Save GCP points as...`."
@@ -313,7 +322,7 @@ msgstr "|IC|"
 msgid ""
 "You have now georeferenced a paper map, making it possible to use it as a "
 "map layer in QGIS."
-msgstr ""
+msgstr "이제 종이지도에 지오리퍼런싱되어 QGIS의 지도레이어로 사용할 수 있습니다."
 
 #: ../../docs/training_manual/forestry/map_georeferencing.rst:143
 msgid "|WN|"
@@ -323,4 +332,4 @@ msgstr "|WN|"
 msgid ""
 "In the next lesson, you will digitize the forest stands in your map as "
 "polygons and add the inventory data to them."
-msgstr ""
+msgstr "다음 레슨에서 지도에 있는 식생을 폴리곤으로 디지타이징하여 인벤토리 데이터를 추가하십시오."

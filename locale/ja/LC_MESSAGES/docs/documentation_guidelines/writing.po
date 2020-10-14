@@ -35,9 +35,9 @@ msgid ""
 "<https://devguide.python.org/documenting/>`_. For convenience, we provide a "
 "set of general rules we rely on for writing QGIS documentation below."
 msgstr ""
-"一般に、QGISプロジェクトのためにreSTドキュメントを作成するときには、 `Python documentation style "
+"総じて、QGISプロジェクトのためにreSTドキュメントを作成するときには、 `Python documentation style "
 "guidelines <https://devguide.python.org/documenting/>`_ "
-"に従ってください。簡便のために以下に、QGISドキュメントを書く際に依拠すべき一般的なルールを、一揃い提供します。"
+"に従ってください。簡便のために以下に、QGISドキュメントを書く際に依拠すべき一般的なルールを、一通り示します。"
 
 #: ../../docs/documentation_guidelines/writing.rst:17
 msgid "Writing Documentation"
@@ -500,6 +500,7 @@ msgid ""
 "that help us provide a set of indices that are really useful (coherent, "
 "consistent and really connected to each other):"
 msgstr ""
+"索引は読者がドキュメント内で必要な情報を見つけるのを手助けする手軽な方法です。QGISドキュメントは必須の索引項目のみを提供しています。本当に有用な（よく整理され、首尾一貫し、相互に関連づけられた）索引項目のセットのみを提供する助けとなるルールがいくつかあります。"
 
 #: ../../docs/documentation_guidelines/writing.rst:417
 msgid ""
@@ -508,9 +509,9 @@ msgid ""
 "``-``... characters to link them i.e., ``Loading layers`` instead of "
 "``loading_layers`` or ``loadingLayers``."
 msgstr ""
-"索引は、人間が読めるもの、理解できるもの、翻訳可能なものでなければなりません。索引は複数の単語から作ることができますが、 "
-"``loading_layers`` や ``loadingLayers`` の代わりに ``Loading layers`` "
-"というように、それらを繋ぐ不要な ``_`` 、 ``-`` 、・・・は使用しないようにしてください。"
+"索引は、人間が読めるもの、理解できるもの、翻訳可能なものでなければなりません。索引は複数の単語から作ることができますが、それらを繋ぐ不要な ``_`` "
+"や ``-`` などは使用しないようにしてください。たとえば ``loading_layers`` や ``loadingLayers`` ではなく、 "
+"``Loading layers`` としてください。"
 
 #: ../../docs/documentation_guidelines/writing.rst:421
 msgid ""
@@ -518,6 +519,8 @@ msgid ""
 "particular spelling. E.g., ``Loading layers``, ``Atlas generation``, "
 "``WMS``, ``pgsql2shp``."
 msgstr ""
+"特別な綴りを持つ単語でない限りは、索引語の最初の文字のみを大文字にします。たとえば、 ``Loading layers`` 、 ``Atlas "
+"generation`` 、 ``WMS`` 、 ``pgsql2shp`` などとします。"
 
 #: ../../docs/documentation_guidelines/writing.rst:424
 msgid ""
@@ -526,12 +529,14 @@ msgid ""
 "most convenient expression with the right spelling and avoid unnecessary "
 "duplicates."
 msgstr ""
+"常に現在の `索引語リスト <https://docs.qgis.org/testing/en/genindex.html>`_ "
+"に注意を払うことで、より好適な表現を正しい綴りで再利用し、不要な重複は避けるようにしてください。"
 
 #: ../../docs/documentation_guidelines/writing.rst:428
 msgid ""
 "Several index tags exist in RST. You can use the inline ``:index:`` tag "
 "within normal text:"
-msgstr ""
+msgstr "RSTには索引用のタグがあります。行内タグ ``:index:`` は通常のテキスト中で次のように使います。"
 
 #: ../../docs/documentation_guidelines/writing.rst:435
 msgid ""
@@ -539,6 +544,8 @@ msgid ""
 "beginning of the next paragraph. Because of the rules mentioned above, it is"
 " recommended to use the block-level tag:"
 msgstr ""
+"ブロックレベルのマークアップの ``.. index::`` "
+"を使うこともできます。これは次の段落の始まりにリンクします。上記ルールにより、ブロックレベルタグの使用を推奨します。"
 
 #: ../../docs/documentation_guidelines/writing.rst:443
 msgid ""
@@ -548,6 +555,11 @@ msgid ""
 "doc.org/en/master/usage/restructuredtext/directives.html#index-generating-"
 "markup>`_ for more information on index creation."
 msgstr ""
+"``single`` 、 ``pair`` 、 ``see`` "
+"のような索引パラメータの使用も推奨します。これはより構造化され相互に関連した索引語テーブルを作るのに有用です。索引作成についてのより詳しい情報は "
+"`Index generating <https://www.sphinx-"
+"doc.org/en/master/usage/restructuredtext/directives.html#index-generating-"
+"markup>`_ を参照してください。"
 
 #: ../../docs/documentation_guidelines/writing.rst:450
 msgid "Special Comments"
@@ -636,6 +648,10 @@ msgid ""
 "Dataset), which should be placed in the same folder as the QGIS-"
 "Documentation Repository."
 msgstr ""
+"スクリーンショットを作成するために使うことのできるQGISプロジェクトが、このリポジトリの :file:`./qgis-projects` "
+"フォルダに用意されています。これは次期バージョンQGISのためのスクリーンショットの再作成を多少なりとも容易にします。このプロジェクトではQGISの "
+"`サンプルデータ <https://qgis.org/downloads/data/>`_ (またの名をAlaskaデータセット) を使用しています"
+"。サンプルデータはQGIS-Documentationリポジトリと同じフォルダになければなりません。"
 
 #: ../../docs/documentation_guidelines/writing.rst:519
 msgid ""
@@ -671,6 +687,9 @@ msgid ""
 " will be at original size in html and at a good print resolution in the PDF."
 " You can also use ImageMagick convert command to do a batch of images:"
 msgstr ""
+"印刷サイズ解像度を ``135 dpi`` に設定します（たとえば Gimp で印刷解像度を設定するにはメニューで "
+":menuselection:`Image --> Print size` "
+"を選択して保存します）。これによって、画像はHTMLではオリジナルサイズで、PDFでは印刷に適した解像度となります。ImageMagickのconvertコマンドを使えば、この処理を次のようにバッチ処理で行うこともできます。"
 
 #: ../../docs/documentation_guidelines/writing.rst:536
 msgid "Save them as :file:`.png` (to avoid :file:`.jpeg` artifacts)"

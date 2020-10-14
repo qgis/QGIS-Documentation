@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# 정윤호 <yunhoc@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-05 01:57+0200\n"
 "PO-Revision-Date: 2020-03-16 19:22+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: 정윤호 <yunhoc@gmail.com>, 2020\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,7 +30,7 @@ msgstr "태양광 발전소 입지 계획"
 msgid ""
 "Module contributed by Paolo Cavallini - `Faunalia "
 "<https://www.faunalia.eu>`_"
-msgstr ""
+msgstr "모듈 제공자 : Paolo Cavallini - `Faunalia <https://www.faunalia.eu>`_"
 
 #: ../../docs/training_manual/processing/solar.rst:6
 msgid ""
@@ -39,12 +40,11 @@ msgstr "이 강의에서는 태양광 발전소 설치에 적합한 지역의 �
 
 #: ../../docs/training_manual/processing/solar.rst:8
 msgid "First of all, create an aspect map from DTM:"
-msgstr "먼저 DEM으로부터 향 맵을 생성해봅시다."
+msgstr "우선 DEM으로 지도방향을 생성합니다:"
 
 #: ../../docs/training_manual/processing/solar.rst:10
 msgid ":menuselection:`GRASS --> r.aspect` [Data type: int; cell size:100]"
-msgstr ""
-"메뉴에서 :menuselection:`GRASS --> r.aspect` 를 선택하십시오. [데이터 유형은 정수, 셀 크기는 100]"
+msgstr ":menuselection:`GRASS --> r.aspect` [Data type: int; cell size:100]"
 
 #: ../../docs/training_manual/processing/solar.rst:12
 msgid ""
@@ -52,16 +52,16 @@ msgid ""
 "East. To extract only South facing slopes (270 degrees +- 45), we can "
 "reclassify it:"
 msgstr ""
-"GRASS는 동쪽에서 시작해서 반시계방향으로, 도 단위로 향을 계산합니다. 남향 경사(270˚ ± 45˚)만을 추출하려면 다음과 같이 "
-"재분류하십시오."
+"GRASS에서는 동쪽에서 반시계방향으로 도분초로 방향이 계산됩니다. 남향 경사 (270˚ ± 45˚)만을 추출하려면 다음과 같이 "
+"재분류하십시오:"
 
 #: ../../docs/training_manual/processing/solar.rst:14
 msgid ":menuselection:`GRASS --> r.reclass`"
-msgstr "메뉴에서 :menuselection:`GRASS --> r.reclass` 를 선택한 다음,"
+msgstr ":menuselection:`GRASS --> r.reclass`"
 
 #: ../../docs/training_manual/processing/solar.rst:16
 msgid "with the following rules::"
-msgstr "다음과 같이 설정합니다."
+msgstr "다음규칙 사용:"
 
 #: ../../docs/training_manual/processing/solar.rst:21
 msgid ""
@@ -79,19 +79,19 @@ msgstr "매우 넓은 발전소를 건설하려 하기 때문에, (100ha를 넘�
 
 #: ../../docs/training_manual/processing/solar.rst:25
 msgid ":menuselection:`GRASS --> r.reclass.greater`"
-msgstr "메뉴에서 :menuselection:`GRASS --> r.reclass.greater` 를 선택합니다."
+msgstr ":menuselection:`GRASS --> r.reclass.greater`"
 
 #: ../../docs/training_manual/processing/solar.rst:27
 msgid "Finally, we convert to a vector:"
-msgstr "마지막으로 벡터로 변환해봅시다."
+msgstr "마지막으로 벡터로 변환해봅시다:"
 
 #: ../../docs/training_manual/processing/solar.rst:29
 msgid ""
 ":menuselection:`GRASS --> r.to.vect` [Feature type: area; Smooth corners: "
 "yes]"
 msgstr ""
-"메뉴에서 :menuselection:`GRASS --> r.to.vect` 를 선택하십시오. [피처 유형은 면적, 매끄러운 "
-"모서리(Smooth corner)를 선택]"
+":menuselection:`GRASS --> r.to.vect` [Feature type: area; Smooth corners: "
+"yes]"
 
 #: ../../docs/training_manual/processing/solar.rst:31
 msgid ""
