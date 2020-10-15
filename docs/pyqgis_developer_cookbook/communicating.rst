@@ -262,7 +262,7 @@ The python built in logging module
 
 The basicConfig method configures the basic setup of the logging. In the above code the filename, logging level and the format are defined. The filename refers to where to write the logfile to, the logging level defines what levels to output and the format defines the format in which each message is output. 
 
-.. code-block:: communicating
+.. code-block::
 
   2020-10-08 13:14:42,998 - root - INFO - This logging text goes into the file
   2020-10-08 13:14:42,998 - root - DEBUG - This logging debug text goes into the file as well
