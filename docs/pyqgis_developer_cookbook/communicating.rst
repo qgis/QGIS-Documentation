@@ -211,7 +211,7 @@ Logging
 
 There are three different types of logging available in QGIS to log and save all the information about the execution of your code. Each has its specific output location. Please consider to use the correct way of logging for your purpose:
 
-* QgsMessageLog is for messages to communicate issues to the user.
+* :class:`QgsMessageLog <qgis.core.QgsMessageLog>` is for messages to communicate issues to the user.
   The output of the QgsMessageLog is shown in the Log Messages Panel.
 * The python built in **logging** module is for debugging on the level of the QGIS Python API (PyQGIS). It is recommended for Python script developers that need to debug their python code, e.g. feature ids or geometries
 * :class:`QgsLogger <qgis.core.QgsLogger>` is for messages for *QGIS internal* debugging / developers (i.e. you suspect something is triggered by some broken code). Messages are only visible with developer versions of QGIS.
