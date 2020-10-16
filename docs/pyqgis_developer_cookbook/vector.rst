@@ -83,6 +83,29 @@ by calling :meth:`fields() <qgis.core.QgsVectorLayer.fields>` on a :class:`QgsVe
     NAME String
     USE String
 
+The :meth:`displayField() <qgis.core.QgsVectorLayer.displayField>` and 
+:meth:`mapTipTemplate() <qgis.core.QgsVectorLayer.mapTipTemplate>` methods of
+the :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` class provide
+information on the field and template used in the :ref:`maptips` tab.
+
+When you load a vector layer, a field is always chosen by QGIS as the 
+``Display Name``, while the ``HTML Map Tip`` is empty by default. With these 
+methods you can easily get both:
+
+.. testcode:: vectors
+
+    vlayer = QgsVectorLayer("testdata/airports.shp", "airports", "ogr")
+    print(vlayer.displayField())
+
+
+.. testoutput:: vectors
+
+    NAME
+
+.. note:: If you change the ``Display Name`` from a field to an expression, you have to
+   use :meth:`displayExpression() <qgis.core.QgsVectorLayer.displayExpression>`
+   instead of :meth:`displayField() <qgis.core.QgsVectorLayer.displayField>`.
+
 .. index:: Iterating features
 
 Iterating over Vector Layer
