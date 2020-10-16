@@ -9,7 +9,7 @@ Using processing from the command line
       :local:
 
 QGIS comes with a tool called `qgis_process` which allows you to call
-processing algorithms directly from the command line without starting
+processing algorithms and models directly from the command line without starting
 QGIS desktop itself.
 
 The command `list` can be used to get a list of all available providers
