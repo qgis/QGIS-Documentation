@@ -209,21 +209,30 @@ example:
 Logging
 =======
 
-There are three different types of logging available in QGIS to log and save all the information about the execution of your code. Each has its specific output location. Please consider to use the correct way of logging for your purpose:
+There are three different types of logging available in QGIS to log and save all
+the information about the execution of your code. Each has its specific output
+location. Please consider to use the correct way of logging for your purpose:
 
-* :class:`QgsMessageLog <qgis.core.QgsMessageLog>` is for messages to communicate issues to the user.
+* :class:`QgsMessageLog <qgis.core.QgsMessageLog>` is for messages to communicate
+  issues to the user.
   The output of the QgsMessageLog is shown in the Log Messages Panel.
-* The python built in **logging** module is for debugging on the level of the QGIS Python API (PyQGIS). It is recommended for Python script developers that need to debug their python code, e.g. feature ids or geometries
-* :class:`QgsLogger <qgis.core.QgsLogger>` is for messages for *QGIS internal* debugging / developers (i.e. you suspect something is triggered by some broken code). Messages are only visible with developer versions of QGIS.
+* The python built in **logging** module is for debugging on the level of the QGIS
+  Python API (PyQGIS). It is recommended for Python script developers that need to
+  debug their python code, e.g. feature ids or geometries
+* :class:`QgsLogger <qgis.core.QgsLogger>` is for messages for *QGIS internal*
+  debugging / developers (i.e. you suspect something is triggered by some broken code).
+  Messages are only visible with developer versions of QGIS.
 
 Examples for the different logging types are shown in the following sections below.
 
 .. warning::
 
  Use of the Python ``print`` statement is unsafe to do in any code which may be
- multithreaded and **extremely slows down the algorithm**. This includes **expression functions**, **renderers**,
+ multithreaded and **extremely slows down the algorithm**. This includes **expression
+ functions**, **renderers**,
  **symbol layers** and **Processing algorithms** (amongst others). In these
- cases you should always use the python **logging** module or thread safe classes (:class:`QgsLogger <qgis.core.QgsLogger>`
+ cases you should always use the python **logging** module or thread safe classes
+ (:class:`QgsLogger <qgis.core.QgsLogger>`
  or :class:`QgsMessageLog <qgis.core.QgsMessageLog>`) instead.
 
 QgsMessageLog
@@ -252,7 +261,6 @@ The python built in logging module
 
 .. code-block:: python
 
-
   import logging
   formatter = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
   logfilename=r'c:\temp\example.log'
@@ -260,22 +268,23 @@ The python built in logging module
   logging.info("This logging info text goes into the file")
   logging.debug("This logging debug text goes into the file as well")
 
-The basicConfig method configures the basic setup of the logging. In the above code the filename, logging level and the format are defined. The filename refers to where to write the logfile to, the logging level defines what levels to output and the format defines the format in which each message is output. 
+The basicConfig method configures the basic setup of the logging.
+In the above code the filename, logging level and the format are defined.
+The filename refers to where to write the logfile to, the logging level defines what
+levels to output and the format defines the format in which each message is output. 
 
 .. code-block::
 
   2020-10-08 13:14:42,998 - root - INFO - This logging text goes into the file
   2020-10-08 13:14:42,998 - root - DEBUG - This logging debug text goes into the file as well
 
-.. note::
-   If you want to erase the log file every time you execute your script you can do something like:
+If you want to erase the log file every time you execute your script you can do something like:
    
 .. code-block:: python
 
    if os.path.isfile(logfilename):
-		with open(logfilename, 'w') as file:
-		   pass
-
+       with open(logfilename, 'w') as file:
+           pass
 
 Further resources on how to use the python logging facility are available at:
 
@@ -285,4 +294,5 @@ Further resources on how to use the python logging facility are available at:
 
 .. warning::
 
-   Please note that without logging to a file by setting a filename the logging may be multithreaded which heavily slows down the output.
+   Please note that without logging to a file by setting a filename the logging may be
+   multithreaded which heavily slows down the output.
