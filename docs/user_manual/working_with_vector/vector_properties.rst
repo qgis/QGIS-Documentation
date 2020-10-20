@@ -2082,8 +2082,8 @@ in figure_fields_form_.
 #. Choose ``Drag and drop designer`` from the :guilabel:`Select attribute layout
    editor` combobox. This enables the :guilabel:`Form Layout` panel next to the
    :guilabel:`Available widgets` panel, filled with existing fields.
-   The selected field displays its :ref:`properties <configure_field>` (that you
-   can customize) in a third panel.
+   The selected field displays its :ref:`properties <configure_field>` in a third
+   panel.
 #. Select fields you do not want to use in your :guilabel:`Form Layout`
    panel and hit the |signMinus| button to remove them. Drag and drop fields
    from the other panel to re-add them. The same field can be added multiple times.
@@ -2126,6 +2126,7 @@ in figure_fields_form_.
 
 #. The next step is to assign the relevant fields to each container,
    by simple drag and drop. Groups and tabs can also be moved in the same way.
+#. :ref:`Customize the widget <configure_field>` of the fields in use
 #. In case the layer is involved in a :ref:`one or many to many relation
    <vector_relations>`, drag-and-drop the relation name from the
    :guilabel:`Available widgets` panel to the :guilabel:`Form Layout` panel.
@@ -2221,7 +2222,7 @@ Widget display
 ^^^^^^^^^^^^^^^
 
 :guilabel:`Show label`: indicates whether the field name should be displayed
-in the form.
+in the form (only in the :ref:`Drag and drop <drag_drop_designer>` designer mode).
 
 General options
 ^^^^^^^^^^^^^^^
