@@ -630,7 +630,6 @@ Further reading
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |CURRENT| replace:: 3.10
 .. |deleteSelected| image:: /static/common/mActionDeleteSelected.png
    :width: 1.5em
 .. |githubBluePlus| image:: /static/common/githubBluePlus.png
