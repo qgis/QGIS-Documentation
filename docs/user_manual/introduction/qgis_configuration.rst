@@ -1119,7 +1119,7 @@ JavaScript). A convenient way to adjust settings.
 
   * select a :guilabel:`Color scheme`: predefined settings are ``Default``,
     ``Solarized Dark`` and ``Solarized Light``. A ``Custom`` scheme is triggered
-    whenever you modify a color and can be reset with selecting a predefined
+    as soon as you modify a color and can be reset with selecting a predefined
     scheme.
   * change the :ref:`color <color_widget>` of each element in code writing,
     such as the colors to use for comments, quotes, functions, background, ...
