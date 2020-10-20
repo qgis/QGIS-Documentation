@@ -360,31 +360,35 @@ This customization is done in the :menuselection:`Settings -->` |options|
   #. A list of available transformations from source to destination will be
      shown in the table.
      Clicking a row shows details on the settings applied and the corresponding
-     accuracy of the transformation.
+     accuracy and area of use of the transformation.
+
+     .. _figure_projection_datum:
+
+     .. figure:: img/datumTransformation.png
+        :align: center
+
+        Selecting a preferred default datum transformation
 
      In some cases a transformation may not be available for use on your system.
-     In this case, the transformation will still be shown in this list but
-     will not be selectable.
+     In this case, the transformation will still be shown (greyed) in this list
+     but can not be picked until you download and install the required package
+     of transformation support. Usually, a button is provided to download the
+     corresponding grid.
 
-  #. Find your preferred transformation, select it and click :guilabel:`OK`.
+  #. Find your preferred transformation and select it
+  #. Set whether you |checkbox| :guilabel:`Allow fallback transforms if preferred
+     operation fails`
+  #. Click :guilabel:`OK`.
 
      A row is added to the table under :guilabel:`Default Datum Transformations`
-     with information about :guilabel:`Source CRS` and :guilabel:`Destination CRS`
-     as well as the datum transformations (:guilabel:`Source Datum Transformation`
-     and :guilabel:`Destination Datum Transformation`) to be used to transform
-     between the CRSs.
+     with information about the :guilabel:`Source CRS`, the :guilabel:`Destination
+     CRS`, the :guilabel:`Operation` applied for the transformation and whether
+     :guilabel:`Allow fallback Transforms` is enabled.
 
   From now, QGIS automatically uses the selected datum transformations for
   further transformation between these two CRSs until you remove
   it (|signMinus|) from the list or change the entry (|toggleEditing|) in
   the list.
-
-.. _figure_projection_datum:
-
-.. figure:: img/datumTransformation.png
-   :align: center
-
-   Selecting a preferred default datum transformation
 
 Datum transformations set in the :menuselection:`Settings -->` |options|
 :menuselection:`Options --> Transformations` tab will be inherited by all

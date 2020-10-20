@@ -1293,10 +1293,13 @@ to use in this project. It can be:
   *projected* or *user-defined*. Layers added to the project are translated
   on-the-fly to this CRS in order to overlay them regardless their original CRS.
 
-The |crs| :guilabel:`CRS` tab also helps you control the layers reprojection
-settings by configuring the datum transformation preferences to apply in the
-current project. As usual, these override any corresponding global settings.
-See :ref:`datum_transformation` for more details.
+Transformations Properties
+--------------------------
+
+The |transformation| :guilabel:`Transformations` tab  helps you control the
+layers reprojection settings by configuring the datum transformation preferences
+to apply in the current project. As usual, these override any corresponding
+global settings. See :ref:`datum_transformation` for more details.
 
 .. _default_styles_properties:
 
