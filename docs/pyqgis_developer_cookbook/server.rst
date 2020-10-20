@@ -600,7 +600,7 @@ AccessControl.py
            return super().authorizedLayerAttributes(layer, attributes)
 
        def allowToEdit(self, layer, feature):
-           """ Are we authorise to modify the following geometry """
+           """ Are we authorised to modify the following geometry """
            return super().allowToEdit(layer, feature)
 
        def cacheKey(self):
@@ -610,7 +610,7 @@ AccessControl.py
 
       def __init__(self, serverIface):
          """ Register AccessControlFilter """
-         serverIface.registerAccessControl(AccessControlFilter(self.serverIface), 100)
+         serverIface.registerAccessControl(AccessControlFilter(serverIface), 100)
 
 
 This example gives a full access for everybody.
@@ -749,9 +749,6 @@ Here is an example of a custom service named CUSTOM:
 
         def version(self):
             return "1.0.0"
-
-        def allowMethod(method):
-            return True
 
         def executeRequest(self, request, response, project):
             response.setStatusCode(200)
