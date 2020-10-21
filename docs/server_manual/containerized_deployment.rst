@@ -44,8 +44,8 @@ it. To do so create a directory :file:`qgis-server` and within its directory:
           wget \
           locales \
       && localedef -i en_US -f UTF-8 en_US.UTF-8 \
-      && wget -O - https://qgis.org/downloads/qgis-2019.gpg.key | gpg --import \
-      && gpg --export --armor 8D5A5B203548E5004487DD1951F523511C7028C3 | apt-key add - \
+      && wget -O - https://qgis.org/downloads/qgis-2020.gpg.key | gpg --import \
+      && gpg --export --armor F7E06F06199EF2F2 | apt-key add - \
       && echo "deb http://qgis.org/debian buster main" >> /etc/apt/sources.list.d/qgis.list \
       && apt-get update \
       && apt-get install --no-install-recommends --no-install-suggests --allow-unauthenticated -y \
