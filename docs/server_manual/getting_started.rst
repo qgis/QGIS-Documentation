@@ -31,7 +31,7 @@ Once the chosen repository is configured, installation is simply done with:
 .. code-block:: bash
 
  apt install qgis-server --no-install-recommends --no-install-suggests
- # if you want to install server plugins, also:
+ # if you want to install server Python plugins, also:
  apt install python-qgis
 
 To test the installation, run:
