@@ -21,7 +21,7 @@ simple (simple Docker images) to sophisticated (Kubernetes and so on).
    build or already built from registries (private or public).
 
 .. note:: QGIS Debian-Ubuntu package downloads need a valid gpg authentication key.  
-   Please refer to the `installation pages https://www.qgis.org/fr/site/forusers/alldownloads.html#debian-ubuntu`_ 
+   Please refer to the `installation pages <https://www.qgis.org/fr/site/forusers/alldownloads.html#debian-ubuntu>`_ 
    to update the following Dockerfile with the latest key fingerprint 
 
 .. _simple-docker-images:
