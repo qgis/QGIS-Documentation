@@ -1983,8 +1983,8 @@ filters all features where attribute ``name`` ends with "value"
 
     http://localhost/qgisserver/wfs3/collection_one/items.json?attribute_one=*value
 
-Feature sorting |316|
----------------------
+Feature sorting
+---------------
 
 It is possible to order the result set by field value using the ``sortby``
 query parameter.
@@ -2245,11 +2245,3 @@ Similarly, external layers can be used in GetPrint requests:
    &basemap:layers=orthofoto
    &basemap:styles=default
 
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |316| replace:: ``NEW in 3.16``

@@ -607,8 +607,9 @@ Python code
 
 .. _qgisdetectdatasetchanges:
 
-Detect dataset changes |312|
------------------------------------
+Detect dataset changes
+----------------------
+
 Compares two vector layers, and determines which features are
 unchanged, added or deleted between the two.
 It is designed for comparing two different versions of the same
@@ -1859,8 +1860,9 @@ Python code
 
 .. _qgisrepairshapefile:
 
-Repair Shapefile |312|
-----------------------
+Repair Shapefile
+----------------
+
 Repairs a broken ESRI Shapefile dataset by (re)creating the SHX file.
 
 Parameters
@@ -1939,7 +1941,7 @@ Parameters
 
        Default: ``EPSG:4326 - WGS 84``
      - Destination coordinate reference system
-   * - **Coordinate Operation** |312|
+   * - **Coordinate Operation**
 
        Optional
      - ``OPERATION``
@@ -2269,6 +2271,5 @@ Python code
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |312| replace:: ``NEW in 3.12``
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em

@@ -9,8 +9,8 @@ Vector geometry
 
 .. _qgisaffinetransform:
 
-Affine transform |312|
-----------------------
+Affine transform
+----------------
 
 Applies an affine transformation to the layer geometries.
 Affine transformations can include translation, scaling and rotation.
@@ -5382,6 +5382,7 @@ Python code
 
 Remove null geometries
 ----------------------
+
 Removes any features which do not have a geometry from a vector layer.
 All other features will be copied unchanged.
 
@@ -5411,7 +5412,7 @@ Parameters
      - ``INPUT``
      - [vector: any]
      - Input vector layer (with non-NULL geometries)
-   * - **Also remove empty geometries** |314|
+   * - **Also remove empty geometries**
      - ``REMOVE_EMPTY``
      - [boolean]
      - 
@@ -7466,8 +7467,6 @@ Python code
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |312| replace:: ``NEW in 3.12``
-.. |314| replace:: ``NEW in 3.14``
 .. |arrowDown| image:: /static/common/mActionArrowDown.png
    :width: 1.5em
 .. |arrowUp| image:: /static/common/mActionArrowUp.png

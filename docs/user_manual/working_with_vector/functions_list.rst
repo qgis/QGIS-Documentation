@@ -813,8 +813,8 @@ operators, with some special characteristics:
    :start-after: .. end_concat_section
 
 
-User Expressions |312|
-----------------------
+User Expressions
+----------------
 
 This group contains the expressions saved as
 :ref:`user expressions <user_expressions_functions>`.
@@ -842,9 +842,9 @@ To use these variables in an expression, they should be preceded by the
    :widths: 25, 70
 
    "algorithm_id", "The unique ID of an algorithm"
-   "animation_end_time |314|", "End of the animation's overall temporal time range (as a datetime value)"
-   "animation_interval |314|", "Duration of the animation's overall temporal time range (as an interval value)"
-   "animation_start_time |314|", "Start of the animation's overall temporal time range (as a datetime value)"
+   "animation_end_time", "End of the animation's overall temporal time range (as a datetime value)"
+   "animation_interval", "Duration of the animation's overall temporal time range (as an interval value)"
+   "animation_start_time", "Start of the animation's overall temporal time range (as a datetime value)"
    "atlas_feature", "The current atlas feature (as feature object)"
    "atlas_featureid", "The current atlas feature ID"
    "atlas_featurenumber", "The current atlas feature number in the layout"
@@ -863,15 +863,15 @@ To use these variables in an expression, they should be preceded by the
    form or table row"
    "current_geometry", "The geometry of the feature currently being edited
    in the form or the table row"
-   "current_parent_feature |314|", "represents the feature currently being
+   "current_parent_feature", "represents the feature currently being
    edited in the parent form. Only usable in an embedded form context."
-   "current_parent_geometry |314|", "represents the geometry of the feature currently being
+   "current_parent_geometry", "represents the geometry of the feature currently being
    edited in the parent form. Only usable in an embedded form context."
    "form_mode", "What the form is used for, like AddFeatureMode, SingleEditMode, MultiEditMode,
    SearchMode, AggregateSearchMode or IdentifyMode as string."
-   "frame_duration |314|", "Temporal duration of each animation frame (as an interval value)"
-   "frame_number |314|", "Current frame number during animation playback"
-   "frame_rate |314|", "Number of frames per second during animation playback"
+   "frame_duration", "Temporal duration of each animation frame (as an interval value)"
+   "frame_number", "Current frame number during animation playback"
+   "frame_rate", "Number of frames per second during animation playback"
    "fullextent_maxx", "Maximum x value from full canvas extent (including all layers)"
    "fullextent_maxy", "Maximum y value from full canvas extent (including all layers)"
    "fullextent_minx", "Minimum x value from full canvas extent (including all layers)"
@@ -886,9 +886,9 @@ To use these variables in an expression, they should be preceded by the
    "item_uuid", "The layout item unique ID"
    "layer", "The current layer"
    "layer_id", "The ID of current layer"
-   "layer_ids |314|", "The IDs of all the map layers in the current project as a list"
+   "layer_ids", "The IDs of all the map layers in the current project as a list"
    "layer_name", "The name of current layer"
-   "layers |314|", "All the map layers in the current project as a list"
+   "layers", "All the map layers in the current project as a list"
    "layout_dpi", "The composition resolution (DPI)"
    "layout_name", "The layout name"
    "layout_numpages", "The number of pages in the layout"
@@ -915,7 +915,7 @@ To use these variables in an expression, they should be preceded by the
    reference system of the current map"
    "map_crs_wkt", "The WKT definition of the Coordinate reference
    system of the current map"
-   "map_end_time |314|", "The end of the map's temporal time range
+   "map_end_time", "The end of the map's temporal time range
    (as a datetime value)"
    "map_extent", "The geometry representing the current extent of the map"
    "map_extent_center", "The point feature at the center of the map"
@@ -923,13 +923,13 @@ To use these variables in an expression, they should be preceded by the
    "map_extent_width", "The current width of the map"
    "map_id", "The ID of current map destination. This will be 'canvas'
    for canvas renders, and the item ID for layout map renders"
-   "map_interval |314|", "The duration of the map's temporal time range
+   "map_interval", "The duration of the map's temporal time range
    (as an interval value)"
    "map_layer_ids", "The list of map layer IDs visible in the map"
    "map_layers", "The list of map layers visible in the map"
    "map_rotation", "The current rotation of the map"
    "map_scale", "The current scale of the map"
-   "map_start_time |314|", "The start of the map's temporal time range
+   "map_start_time", "The start of the map's temporal time range
    (as a datetime value)"
    "map_units", "The units of map measurements"
    "model_path", "Full path (including file name) of current model
@@ -989,16 +989,16 @@ To use these variables in an expression, they should be preceded by the
    "symbol_id", "The Internal ID of the symbol (in the layout legend)"
    "symbol_label", "The label for the symbol (either a user defined
    label or the default autogenerated label - in the layout legend)"
-   "symbol_layer_count |314|", "Total number of symbol layers in the symbol"
-   "symbol_layer_index |314|", "Current symbol layer index"
-   "symbol_marker_column |314|", "Column number for marker (valid for point pattern fills only)."
-   "symbol_marker_row |314|", "Row number for marker (valid for point pattern fills only)."
+   "symbol_layer_count", "Total number of symbol layers in the symbol"
+   "symbol_layer_index", "Current symbol layer index"
+   "symbol_marker_column", "Column number for marker (valid for point pattern fills only)."
+   "symbol_marker_row", "Row number for marker (valid for point pattern fills only)."
    "user_account_name", "The current user's operating system account name"
    "user_full_name", "The current user's operating system user name"
    "value", "The current value"
    "with_variable", "Allows setting a variable for usage within an expression
    and avoid recalculating the same value repeatedly"
-   "zoom_level |314|", "Zoom level of the tile that is being rendered (derived from the current
+   "zoom_level", "Zoom level of the tile that is being rendered (derived from the current
    map scale). Normally in interval [0, 20]."
 
 **Some examples:**
@@ -1044,8 +1044,6 @@ This makes it easy to quickly retrieve and reapply previously used expressions.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |312| replace:: ``NEW in 3.12``
-.. |314| replace:: ``NEW in 3.14``
 .. |calculateField| image:: /static/common/mActionCalculateField.png
    :width: 1.5em
 .. |expressionSelect| image:: /static/common/mIconExpressionSelect.png
