@@ -1,6 +1,6 @@
-![HTML Build](https://github.com/DelazJ/QGIS-Documentation/workflows/HTML%20build/badge.svg?branch=master)
-[![Build Status](https://travis-ci.org/qgis/QGIS-Documentation.svg?branch=master)](https://travis-ci.org/qgis/QGIS-Documentation)
-[![Read the documentation](https://img.shields.io/badge/Read-the%20docs-green.svg)](https://docs.qgis.org/testing/)
+![HTML Build](https://github.com/DelazJ/QGIS-Documentation/workflows/HTML%20build/badge.svg?branch=release_3.16)
+[![Build Status](https://travis-ci.org/qgis/QGIS-Documentation.svg?branch=release_3.16)](https://travis-ci.org/qgis/QGIS-Documentation)
+[![Read the documentation](https://img.shields.io/badge/Read-the%20docs-green.svg)](https://docs.qgis.org/3.16/)
 
 
 This repository is meant to write and manage the Official Documentation of [QGIS](https://qgis.org),
