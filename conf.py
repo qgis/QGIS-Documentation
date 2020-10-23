@@ -120,7 +120,7 @@ html_static_path = ['static']
 
 ## Set a bullet character for :menuselection: role
 from sphinx.roles import MenuSelection
-MenuSelection.BULLET_CHARACTER = '\N{BLACK RIGHT-POINTING TRIANGLE}'
+MenuSelection.BULLET_CHARACTER = '\N{BLACK RIGHT-POINTING POINTER}'
 
 ## for rtd themes, creating a html_context for the version/language part
 
