@@ -465,7 +465,7 @@ Returns a portion of the array. The slice is defined by the start_pos and end_po
        * ``array_slice(array(1,2,3,4,5),-2,-1)`` → [ 4, 5 ]
        * ``array_slice(array(1,2,3,4,5),-1,-1)`` → [ 5 ]
        * ``array_slice(array('Dufour','Valmiera','Chugiak','Brighton'),1,2)`` → [ 'Valmiera', 'Chugiak' ]
-       * ``array_slice(array_slice(array('Dufour','Valmiera','Chugiak','Brighton'),-2,-1)`` → [ 'Chugiak', 'Brighton' ]
+       * ``array_slice(array('Dufour','Valmiera','Chugiak','Brighton'),-2,-1)`` → [ 'Chugiak', 'Brighton' ]
 
 
 .. end_array_slice_section

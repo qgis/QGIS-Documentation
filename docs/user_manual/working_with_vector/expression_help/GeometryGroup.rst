@@ -1934,26 +1934,31 @@ Tests whether a geometry overlaps another. Returns true if the geometries share 
 overlay_contains
 ................
 
-Performs a spatial join of type CONTAINS. This returns an array of results of an expression evaluated on features from a different layer that CONTAINS the current feature, or, if no expression if provided, simply returns whether at least one feature from the other layer CONTAINS the current feature.
+Returns whether the current feature spatially contains at least one feature from a target layer, or an array of expression-based results for the features in the target layer contained in the current feature.
+
+
+
+Read more on the underlying GEOS "Contains" predicate, as described in PostGIS `ST_CONTAINS <https://postgis.net/docs/ST_Contains.html>`_ function.
 
 .. list-table::
    :widths: 15 85
 
    * - Syntax
-     - overlay_contains(layer, [expression], [filter], [limit], [cache=False])
+     - overlay_contains(layer, [expression], [filter], [limit], [cache=false])
 
        [] marks optional arguments
    * - Arguments
-     - * **layer** - the other layer
-       * **expression** - an optional expression to evaluate on the features from the other layer (if not set, the function will just return a boolean indicating whether there is at least one match)
-       * **filter** - an optional expression to filter the matching features (if not set, all features will be returned)
-       * **limit** - an optional integer to limit the number of matching features (if not set, all features will be returned)
+     - * **layer** - the layer whose overlay is checked
+       * **expression** - an optional expression to evaluate on the features from the target layer. If not set, the function will just return a boolean indicating whether there is at least one match.
+       * **filter** - an optional expression to filter the target features to check. If not set, all the features will be checked.
+       * **limit** - an optional integer to limit the number of matching features. If not set, all the matching features will be returned.
        * **cache** - set this to true to build a local spatial index (most of the time, this is unwanted, unless you are working with a particularly slow data provider)
    * - Examples
-     - * ``overlay_contains('regions')`` → True
-       * ``overlay_contains('regions', name)`` → ['South Africa', 'Africa', 'World']
-       * ``overlay_contains('regions', name, name != 'World')`` → ['South Africa', 'Africa']
-       * ``overlay_contains('regions', name, limit:=1)`` → ['South Africa']
+     - * ``overlay_contains('regions')`` → true if the current feature spatially contains a region
+       * ``overlay_contains('regions', filter:= population > 10000)`` → true if the current feature spatially contains a region with a population greater than 10000
+       * ``overlay_contains('regions', name)`` → an array of names, for the regions contained in the current feature
+       * ``array_sort(overlay_contains(layer:='regions', expression:="name", filter:= population > 10000))`` → an ordered array of names, for the regions contained in the current feature and with a population greater than 10000
+       * ``overlay_contains(layer:='regions', expression:= geom_to_wkt($geometry), limit:=2)`` → an array of geometries (in WKT), for up to two regions contained in the current feature
 
 
 .. end_overlay_contains_section
