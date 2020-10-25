@@ -710,8 +710,9 @@ Python code
 
 Points to path
 --------------
+
 Converts a point layer to a line layer, by joining points in an
-order defined by a field in the input point layer (if the order
+order defined by an expression or a field in the input point layer (if the order
 field is a date/time field, the format must be specified).
 
 Points can be grouped by a field to distinguish line features.
@@ -744,10 +745,10 @@ Parameters
        Default: False
      - If checked, the first and last points of the line will be connected
        and close the generated path
-   * - **Order field**
-     - ``ORDER_FIELD``
-     - [tablefield: any]
-     - Field containing the order to connect the points in the path
+   * - **Order expression** |318|
+     - ``ORDER_EXPRESSION``
+     - [expression]
+     - Field or expression providing the order to connect the points in the path
    * - **Group field**
 
        Optional
@@ -1799,6 +1800,7 @@ Python code
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |318| replace:: ``NEW in 3.18``
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |dataDefined| image:: /static/common/mIconDataDefine.png
