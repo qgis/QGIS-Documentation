@@ -2394,9 +2394,9 @@ the 3D canvas panel to open the :guilabel:`3D configuration` window.
 In the 3D Configuration window there are various options to
 fine-tune the 3D scene:
 
-* Camera's :guilabel:`Field of view`: allowing to create panoramic
-  scenes.
-  Default value is 45\°.
+Terrain
+.......
+
 * :guilabel:`Terrain`: Before diving into the details, it is worth
   noting that terrain in a 3D view is represented by a hierarchy of
   terrain tiles and as the camera moves closer to the terrain,
@@ -2447,6 +2447,9 @@ fine-tune the 3D scene:
     scene light(s) and the terrain material's :guilabel:`Ambient` and
     :guilabel:`Specular` colors and :guilabel:`Shininess`
 
+Lights
+......
+
 * :guilabel:`Lights`: you can add
 
   * up to eight :guilabel:`Point lights`, each with a particular position
@@ -2462,6 +2465,19 @@ fine-tune the 3D scene:
 
      The 3D Map Lights Configuration dialog
 
+Shadow
+......
+
+
+Camera & Skybox
+...............
+
+* Camera's :guilabel:`Field of view`: allowing to create panoramic
+  scenes.
+  Default value is 45\°.
+  
+Advanced
+........
 
 * :guilabel:`Map tile resolution`: Width and height of the 2D map
   images used as textures for the terrain tiles.
