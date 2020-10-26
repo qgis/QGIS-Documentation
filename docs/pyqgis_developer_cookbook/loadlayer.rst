@@ -399,7 +399,7 @@ know what layers you want:
 
 .. testcode:: loadlayer
 
-      urlWithParams = "crs=EPSG:4326&format=image/png&layers=tasmania&styles&url=https://demo.geo-solutions.it/geoserver/ows"
+      urlWithParams = "crs=EPSG:4326&format=image/png&layers=gs:tasmania_roads&styles&url=https://demo.geo-solutions.it/geoserver/ows"
       rlayer = QgsRasterLayer(urlWithParams, 'some layer name', 'wms')
       if not rlayer.isValid():
         print("Layer failed to load!")
