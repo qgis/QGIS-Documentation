@@ -9,7 +9,7 @@
 
 The code snippets on this page need the following imports if you're outside the pyqgis console:
 
-.. testcode:: expr
+.. testcode:: temporal_data
 
     from qgis.core import (
         QgsApplication,
@@ -146,5 +146,4 @@ Saving temporal images
    # you could now cd into the save_dir and do:
    # ffmpeg -y -r 1 -i %4d.png -vcodec libx264 -vf "fps=1,scale=-2:720" -pix_fmt yuv420p -r 4 movie.mp4
    # ffmpeg -y -r 1 -i %4d.png -vf "fps=6,scale=320:-1:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" -loop 0 movie.gif
-
 
