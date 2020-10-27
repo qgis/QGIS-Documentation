@@ -95,8 +95,8 @@ Registering a Vector layer as Temporal
    # update the 'range' of the object (so the limits) to reflect the range of our current project
    navigator.setTemporalExtents(time_range)
 
-   # OK, all setup now. let's rewind to start and play one loop
-   # NOTE: currently there seems no way to 'enable' the gui. That is: it will play, but the widget is not updated to show it (if Temporal Navigation was disabled)
+   # OK, all setup now. let's show Temporal controller, `rewind to start and play one loop
+   navigator.setNavigationMode(QgsTemporalNavigationObject.Animated) # will show controller
    navigator.rewindToStart()
    navigator.playForward()
 
