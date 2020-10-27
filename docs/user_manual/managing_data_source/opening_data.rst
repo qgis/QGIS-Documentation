@@ -1154,7 +1154,7 @@ You set up a service by adding a :guilabel:`Name` and a :guilabel:`URL`.
 The Vector Tiles Service must provide tiles in :file:`.pbf` format. 
 The dialog provides two menus to define the 
 |checkbox|:guilabel:`Min. Zoom Level` and the
-|checkbox|:guilabel:`Max. Zoom Level` which are dependend from the
+|checkbox|:guilabel:`Max. Zoom Level` which depend on the
 Vector Tile you want to load. 
 The Vector Tiles menu is suitable to connect to ArcGIS Vector Tile 
 Services.
