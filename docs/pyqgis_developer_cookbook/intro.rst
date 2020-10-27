@@ -299,7 +299,7 @@ the following commands, ``<qgispath>`` should be replaced with your actual
 QGIS installation path:
 
 * on Linux: :command:`export PYTHONPATH=/<qgispath>/share/qgis/python`
-* on Windows: :command:`set PYTHONPATH=c:\\<qgispath>\\python`
+* on Windows: :command:`set PYTHONPATH=<qgispath>\\python`
 * on macOS: :command:`export PYTHONPATH=/<qgispath>/Contents/Resources/python`
 
 Now, the path to the PyQGIS modules is known, but they depend on
@@ -316,7 +316,7 @@ Fix this by adding the directories where the QGIS libraries reside to
 the search path of the dynamic linker:
 
 * on Linux: :command:`export LD_LIBRARY_PATH=/<qgispath>/lib`
-* on Windows: :command:`set PATH=C:\\<qgispath>\\bin;C:\\<qgispath>\\apps\\<qgisrelease>\\bin;%PATH%`
+* on Windows: :command:`set PATH=<qgispath>\\bin;<qgispath>\\apps\\<qgisrelease>\\bin;%PATH%`
   where ``<qgisrelease>`` should be replaced with the type of release
   you are targeting (eg, ``qgis-ltr``, ``qgis``, ``qgis-dev``)
 
