@@ -40,9 +40,8 @@ Handling Temporal data in QGIS
 .. contents::
    :local:
 
-Since QGIS 3.14 QGIS has native tools and GUI elements to handle Temporal Data.
-
-Since QGIS 3.16 you can use PyQGIS to register a layer in a plugin to be used as Temporal Data.
+QGIS has native tools and GUI elements to handle Temporal Data.
+Using PyQGIS, you can register a layer in a plugin to be used as Temporal Data.
 
 
 Registering a Vector layer as Temporal
@@ -105,7 +104,7 @@ Saving temporal images
 
 .. testcode:: temporal_data
 
-   # now create an set of images so you can create an animated gif or so
+   # now create a set of images so you can create an animated gif or so
    def render_time_range(map_settings, time_range):
      img = QImage(map_settings.outputSize(), map_settings.outputImageFormat())
      img.fill(map_settings.backgroundColor().rgb())
@@ -146,4 +145,3 @@ Saving temporal images
    # you could now cd into the save_dir and do:
    # ffmpeg -y -r 1 -i %4d.png -vcodec libx264 -vf "fps=1,scale=-2:720" -pix_fmt yuv420p -r 4 movie.mp4
    # ffmpeg -y -r 1 -i %4d.png -vf "fps=6,scale=320:-1:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" -loop 0 movie.gif
-
