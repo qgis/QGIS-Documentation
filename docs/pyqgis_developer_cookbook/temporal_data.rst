@@ -18,7 +18,7 @@ The code snippets on this page need the following imports if you're outside the 
         QgsProject,
         QgsMapRendererCustomPainterJob,
         QgsMapSettings,
-        QgsRectangle.
+        QgsRectangle,
         QgsTemporalUtils,
         QgsUnitTypes,
         QgsVectorLayer,
@@ -51,7 +51,8 @@ Registering a Vector layer as Temporal
 .. testcode:: temporal_data
 
    # load simple world layer from internal QGIS
-   iface.addVectorLayer(os.path.join(QgsApplication.pkgDataPath(),'resources','data','world_map.gpkg|layername=Countries'), '', 'ogr')
+   # currently failing in Travis because the gpgk/resources not readable by normal user...
+   #iface.addVectorLayer(os.path.join(QgsApplication.pkgDataPath(),'resources','data','world_map.gpkg|layername=Countries'), '', 'ogr')
 
    # load geojson earthquake data of last (or 7) days from https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php
    # https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson
