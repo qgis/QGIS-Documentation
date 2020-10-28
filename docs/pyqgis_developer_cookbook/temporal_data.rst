@@ -25,7 +25,7 @@ The code snippets on this page need the following imports if you're outside the 
          QgsVectorLayerTemporalProperties
     )
 
-    from qgis.PyQt.Core import (
+    from qgis.PyQt.QtCore import (
         QVariant,
         QSize
     )
