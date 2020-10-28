@@ -139,11 +139,14 @@ See the following sites for information on becoming a GIT master.
 * https://help.github.com/en
 
 
-Development in branches
-========================
+Development process
+===================
 
-Purpose
--------
+As common in open source projects contributions of code and documentation to the project are highly appreciated. The QGIS community is very supportive. 
+
+
+Development in branches
+-----------------------
 
 The complexity of the QGIS source code has increased considerably during the
 last years. Therefore it is hard to anticipate the side effects that the
@@ -154,6 +157,24 @@ switched to a development model where new features are coded in GIT branches
 first and merged to master (the main branch) when they are finished and stable.
 This section describes the procedure for branching and merging in the QGIS
 project.
+
+Roles
+-----
+
+There exist various roles on GitHub. When having an account on GitHub you are already allowed to contribute by forking the repository and have the role 'contributor'. Core developers are 'collaborators' and can merge branches into the master repository.
+
+Contributions to development
+----------------------------
+
+Once signed up on GitHub you can engage as a contributor. You can contribute by forking the repository and initiating a pull request. To do that follow these generic steps:
+
+1. Fork the repository on GitHub
+2. Clone it onto your local computer and set up the build environment
+3. Create a new branch and do the edits for development
+4. Commit and push it back to the remote fork on GitHub
+5. Open a pull request (PR) that will pull the commit(s) from your branch into the master branch. For pull request is offered as web link (URL) right after the push. 
+
+A more detailed Github's Fork & Pull Workflow is available at https://reflectoring.io/github-fork-and-pull/
 
 
 Procedure
