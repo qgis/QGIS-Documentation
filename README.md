@@ -181,15 +181,17 @@ make gettext
 sphinx-intl update -p build/gettext -l en
 ```
 
-To create the .tx/config to push/pull using tx client do:
+To create the `.tx/config` file to push/pull using tx client do:
 
 ```
-# Creating the txconfig is only to be once the first time (we have one now...)
+# Creating the txconfig is only to be done the first time (we have one now...)
 #sphinx-intl create-txconfig
+
+# Update list of resources (necessary when files were added or removed)
 sphinx-intl update-txconfig-resources --transifex-project-name qgis-documentation
 
 # Then (only Transifex admin) can push the po source files to Transifex
-tx push -fs --no-interactive #push the source (-s) files forcing (-f) overwriting the ones their without asking (--no-interactive)
+tx push -fs --no-interactive #push the source (-s) files forcing (-f) overwriting the ones there without asking (--no-interactive)
 ```
 
 To update all po files of all languages (Which we do not use here! This is done by Transifex):
