@@ -25,6 +25,11 @@ The code snippets on this page need the following imports if you're outside the 
         QgsVectorLayerTemporalProperties
     )
 
+   from qgis.PyQt.Core import (
+       QVariant,
+       QSize
+   )
+
     import tempfile
     import os
 
@@ -104,30 +109,10 @@ Saving temporal images
 
 .. testcode:: temporal_data
 
-   # now create a set of images so you can create an animated gif or so
-   def render_time_range(map_settings, time_range):
-     img = QImage(map_settings.outputSize(), map_settings.outputImageFormat())
-     img.fill(map_settings.backgroundColor().rgb())
+   # now create an set of images so you can create an animated gif or mp4 movie of it
 
-     p = QPainter()
-     p.begin(img)
-     map_settings.setTemporalRange(time_range)
-     render = QgsMapRendererCustomPainterJob(map_settings, p)
-     render.start()
-     render.waitForFinished()
-     p.end()
-     return img
-
-   navigator = iface.mapCanvas().temporalController()
-   # check and stop it if it is running
-   if not navigator.animationState() == QgsTemporalNavigationObject.AnimationState.Idle:
-       navigator.setAnimationState(QgsTemporalNavigationObject.AnimationState.Idle)
-   # just to be sure
-   navigator.rewindToStart()
-
-
+   # setup all your map settings stuff here, e.g. scale, extent, image size, etc
    map_settings = QgsMapSettings()
-   # setup all your default map settings stuff here, e.g. scale, extent, image size, etc
    map_settings.setLayers(iface.mapCanvas().layers())
    map_settings.setOutputSize(QSize(300, 150)) # width, height
    rect = QgsRectangle(iface.mapCanvas().fullExtent())
@@ -135,13 +120,25 @@ Saving temporal images
    map_settings.setExtent(rect)
    map_settings.setIsTemporal(True)
 
+
+   navigator = iface.mapCanvas().temporalController()
    save_dir = tempfile.gettempdir() + os.sep
-   for frame_number in range(0, navigator.totalFrameCount()):
-       frame_range = navigator.dateTimeRangeForFrameNumber(frame_number)
-       img = render_time_range(map_settings, frame_range)
-       ok = img.save(f'{save_dir}{frame_number:04d}.png') # should show "<frame number> True"
-       print(f'Frame {frame_number} saved in {save_dir} as {frame_number:04d}.png, OK = {ok}')
+
+   # setup animation settings, using current navigation state (OR create other)
+   animation_settings=QgsTemporalUtils.AnimationExportSettings()
+   animation_settings.animationRange=navigator.temporalExtents()
+   animation_settings.frameDuration=navigator.frameDuration()
+   animation_settings.outputDirectory=save_dir
+   animation_settings.fileNameTemplate='frame####.png'
+   animation_settings.decorations=[]
+
+   print(QgsTemporalUtils.exportAnimation(map_settings, animation_settings))
 
    # you could now cd into the save_dir and do:
    # ffmpeg -y -r 1 -i %4d.png -vcodec libx264 -vf "fps=1,scale=-2:720" -pix_fmt yuv420p -r 4 movie.mp4
    # ffmpeg -y -r 1 -i %4d.png -vf "fps=6,scale=320:-1:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" -loop 0 movie.gif
+
+.. testoutput:: temporal_data
+
+   (True, '')
+
