@@ -96,7 +96,7 @@ Registering a Vector layer as Temporal
     navigator = iface.mapCanvas().temporalController()
 
     # update the 'range' of the object (so the limits) to reflect the range of our current project
-    navigator.setTemporalExtents(time_range)
+    #navigator.setTemporalExtents(time_range)
 
     # OK, all setup now. let's show Temporal controller, `rewind to start and play one loop
     navigator.setNavigationMode(QgsTemporalNavigationObject.Animated) # will show controller
