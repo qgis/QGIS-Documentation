@@ -1149,13 +1149,17 @@ Using Vector Tiles services
 Vector Tiles services can be found in the :guilabel:`Vector Tiles`
 top level entry in the :guilabel:`Browser`.
 You can add a service by opening the context menu with a right-click
-and choosing :guilabel:`New Connection`.
+and choosing :guilabel:`New Generic Connection ...`.
 You set up a service by adding a :guilabel:`Name` and a :guilabel:`URL`.
 The Vector Tiles Service must provide tiles in :file:`.pbf` format. 
 The dialog provides two menus to define the 
 |checkbox|:guilabel:`Min. Zoom Level` and the
-|checkbox|:guilabel:`Max. Zoom Level` which depend on the
-Vector Tile you want to load. 
+|checkbox|:guilabel:`Max. Zoom Level`. For Mercator projection
+(used by OpenStreetMap Vector Tiles) Zoom Level 0 represents the
+whole world at a scale of 1:500.000.000. Zoom Level 14 represents
+the scale 1:35.000. The number of Zoom Levels depend on the
+pixel size of the Vector Tiles. 
+
 The Vector Tiles menu is suitable to connect to ArcGIS Vector Tile 
 Services.
 
