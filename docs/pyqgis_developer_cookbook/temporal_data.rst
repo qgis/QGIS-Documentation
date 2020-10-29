@@ -103,11 +103,6 @@ Registering a Vector layer as Temporal
     navigator.rewindToStart()
     navigator.playForward()
 
-Saving temporal images
-======================
-
-.. testcode:: temporal_data
-
     # now create a set of images so you can create an animated gif or mp4 movie of it
 
     # setup all your map settings stuff here, e.g. scale, extent, image size, etc
