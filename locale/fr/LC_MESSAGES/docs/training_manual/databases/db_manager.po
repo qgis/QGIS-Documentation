@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# MarieSilvestre, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-05 01:57+0200\n"
 "PO-Revision-Date: 2020-03-16 19:20+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: MarieSilvestre, 2020\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -71,6 +72,10 @@ msgid ""
 "able to expand the ``myPG`` section and its ``public`` schema to see the "
 "tables we have worked with in previous sections."
 msgstr ""
+"Vous devriez déjà voir les connexions que nous avons configurées "
+"précédemment et vous devriez pouvoir étendre la section ``myPG`` et son "
+"schéma ``public`` pour voir les tables que nous avons utilisées dans les "
+"sections précédentes."
 
 #: ../../docs/training_manual/databases/db_manager.rst:25
 msgid ""
@@ -187,6 +192,8 @@ msgid ""
 "Select :menuselection:`Table --> Edit Table` from the menu, to open the "
 ":guilabel:`Table Properties` dialog."
 msgstr ""
+"Sélectionnez depuis le menu :menuselection:`Table --> Éditer une table` afin"
+" d'ouvrir la fenêtre :guilabel:`Propriétés de la table`."
 
 #: ../../docs/training_manual/databases/db_manager.rst:90
 msgid ""
@@ -231,6 +238,9 @@ msgid ""
 "If it is not already open, open the DB Manager window, and expand the tree "
 "until you see the list of tables already in your database."
 msgstr ""
+"Si elle n'est pas déjà ouverte, ouvrez la fenêtre de DB Manager et déroulez "
+"l'arborescence jusqu'à voir la liste des tables déjà présentes dans votre "
+"base de données."
 
 #: ../../docs/training_manual/databases/db_manager.rst:113
 msgid ""
@@ -243,15 +253,18 @@ msgstr ""
 #: ../../docs/training_manual/databases/db_manager.rst:115
 msgid "Use the default ``Public`` schema and name the table ``places``."
 msgstr ""
+"Utilisez le schéma par défaut ``Public`` et nommez la table ``places``."
 
 #: ../../docs/training_manual/databases/db_manager.rst:116
 msgid ""
 "Add the ``id``, ``place_name``, and ``elevation`` fields as shown below"
 msgstr ""
+"Ajoutez les champs ``id``, ``place_name`` et ``elevation`` comme montré ci-"
+"dessous"
 
 #: ../../docs/training_manual/databases/db_manager.rst:118
 msgid "Make sure the ``id`` field is set as the primary key."
-msgstr ""
+msgstr "Assurez-vous de définir le champ ``id`` comme clé primaire."
 
 #: ../../docs/training_manual/databases/db_manager.rst:119
 msgid ""
@@ -259,6 +272,9 @@ msgid ""
 " set to a ``POINT`` type and leave it named ``geom`` and specify ``4326`` as"
 " the :guilabel:`SRID`."
 msgstr ""
+"Cochez la case :guilabel:`Créer une colonne géométrique` et assurez-vous "
+"qu'elle est définie de type ``POINT`` et laissez le nom ``geom`` et "
+"spécifiez ``4326`` comme :guilabel:`SRID`."
 
 #: ../../docs/training_manual/databases/db_manager.rst:123
 msgid ""
@@ -298,6 +314,10 @@ msgid ""
 "administration tool, but it does provide some functionality that you can use"
 " to maintain your database."
 msgstr ""
+"DB Manager vous permet aussi de faire d'autres tâches basiques "
+"d'administration de base de données. Ce n'est certainement pas un substitut "
+"pour un outil complet d'administration de base de données, mais il vous "
+"fournit des fonctions de maintenance de votre base de données."
 
 #: ../../docs/training_manual/databases/db_manager.rst:146
 msgid ""
@@ -318,20 +338,24 @@ msgid ""
 "Let us take a look at how we can perform a *VACUUM ANALYZE* command from "
 "within DB Manager."
 msgstr ""
+"Voyons comment réaliser une commande *VACUUM ANALYZE* à partir de DB "
+"Manager."
 
 #: ../../docs/training_manual/databases/db_manager.rst:155
 msgid "Select one of your tables in the DB Manager Tree"
-msgstr ""
+msgstr "Sélectionnez une de vos tables dans l'arborescence de DB Manager"
 
 #: ../../docs/training_manual/databases/db_manager.rst:156
 msgid "Select :menuselection:`Table --> Run Vacuum Analyze` from the menu"
-msgstr ""
+msgstr "Sélectionnez menu :menuselection:`Table --> Lancer Vacuum Analyze`."
 
 #: ../../docs/training_manual/databases/db_manager.rst:158
 msgid ""
 "PostgreSQL will now perform the operation. Depending on how big your table "
 "is, this may take some time to complete."
 msgstr ""
+"PostgreSQL va réaliser l'opération. Selon la taille de votre table, ceci "
+"peut prendre un certain temps."
 
 #: ../../docs/training_manual/databases/db_manager.rst:162
 msgid ""
@@ -361,7 +385,7 @@ msgstr ""
 
 #: ../../docs/training_manual/databases/db_manager.rst:175
 msgid "Select the ``lines`` table in the tree."
-msgstr ""
+msgstr "Sélectionnez la table ``lines`` dans l'arborescence."
 
 #: ../../docs/training_manual/databases/db_manager.rst:176
 msgid "Select the :guilabel:`SQL window` button in the DB Manager toolbar."
@@ -399,10 +423,13 @@ msgid ""
 "Select the ``id`` column as the :guilabel:`Column with unique integer "
 "values` and the ``geom`` column as the :guilabel:`Geometry column`."
 msgstr ""
+"Sélectionnez la colonne ``id`` en tant que :guilabel:`Colonne avec des "
+"valeurs entières et uniques` et la colonne ``geom`` en tant que "
+":guilabel:`Colonne de géométrie`."
 
 #: ../../docs/training_manual/databases/db_manager.rst:197
 msgid "Enter ``roads_primary`` as the :guilabel:`Layer name (prefix)`."
-msgstr ""
+msgstr "Saisissez ``roads_primary`` dans le :guilabel:`Nom de la couche`."
 
 #: ../../docs/training_manual/databases/db_manager.rst:198
 msgid ""
@@ -449,6 +476,8 @@ msgid ""
 "Select the :file:`urban_33S.shp` file from "
 ":file:`exercise_data/projected_data` as the input dataset"
 msgstr ""
+"Sélectionnez le fichier :file:`urban_33S.shp` depuis "
+":file:`exercise_data/projected_data` en tant que donnée d'entrée."
 
 #: ../../docs/training_manual/databases/db_manager.rst:224
 msgid ""
@@ -469,6 +498,8 @@ msgid ""
 "Specify the :guilabel:`Source SRID` as ``32722`` and the :guilabel:`Target "
 "SRID` as ``4326``"
 msgstr ""
+"Paramétrer le :guilabel:`SCR Source` à ``32722`` et le :guilabel:`SCR Cible`"
+" à ``4326``."
 
 #: ../../docs/training_manual/databases/db_manager.rst:229
 msgid "Enable the checkbox to :guilabel:`Create Spatial Index`"
@@ -476,7 +507,7 @@ msgstr "Cochez la case :guilabel:`Créer un index spatial`"
 
 #: ../../docs/training_manual/databases/db_manager.rst:230
 msgid "Click :guilabel:`OK` to perform the import"
-msgstr ""
+msgstr "Cliquez sur :guilabel:`OK` pour réaliser l'import"
 
 #: ../../docs/training_manual/databases/db_manager.rst:235
 msgid "Dismiss the dialog letting you know that the import was successful"
@@ -487,6 +518,8 @@ msgstr ""
 #: ../../docs/training_manual/databases/db_manager.rst:236
 msgid "Click the :guilabel:`Refresh` button on the DB Manager Toolbar"
 msgstr ""
+"Cliquez sur le bouton :guilabel:`Rafraîchir` de la barre d'outils de DB "
+"Manager"
 
 #: ../../docs/training_manual/databases/db_manager.rst:238
 msgid ""
@@ -494,6 +527,9 @@ msgid ""
 "Tree. Verify that the data has been reprojected by checking that the "
 ":guilabel:`Spatial ref:` is listed as ``WGS 84 (4326)``."
 msgstr ""
+"Vous pouvez maintenant inspecter la table dans votre base de données en "
+"cliquant dans l'arbre. Vérifiez que la donnée a bien été reprojetée en "
+"vérifiant que :guilabel:`Ref Spatiale:` contient bien ``WGS 84 (4326)``."
 
 #: ../../docs/training_manual/databases/db_manager.rst:246
 msgid ""
@@ -522,16 +558,22 @@ msgid ""
 "File` button on the toolbar to open the :guilabel:`Export to vector file` "
 "dialog."
 msgstr ""
+"Sélectionnez la couche ``lines`` dans l'arbre et cliquez sur le bouton "
+":guilabel:`Exporter vers le fichier` pour ouvrir la boîte de dialogue "
+":guilabel:`Exporter vers un fichier vecteur`."
 
 #: ../../docs/training_manual/databases/db_manager.rst:259
 msgid ""
 "Click the :guilabel:`...` button to select the :guilabel:`Output file` and "
 "save the data to your :file:`exercise_data` directory as :file:`urban_4326`."
 msgstr ""
+"Cliquez sur le bouton :guilabel:`...` pour sélectionner le "
+":guilabel:`Fichier en sortie` et sauvegarder les données dans le répertoire "
+":file:`exercise_data` sous le nom :file:`urban_4326`."
 
 #: ../../docs/training_manual/databases/db_manager.rst:262
 msgid "Set the :guilabel:`Target SRID` as ``4326``."
-msgstr ""
+msgstr "Paramétrez le :guilabel:`SCR cible` à ``4326``."
 
 #: ../../docs/training_manual/databases/db_manager.rst:263
 msgid "Click :guilabel:`OK` to initialize the export."
@@ -561,6 +603,9 @@ msgid ""
 " spatial databases, to execute SQL queries against your data and how to "
 "import and export data."
 msgstr ""
+"Nous avons étudié comment utiliser l'interface de DB Manager sous QGIS pour "
+"gérer des bases de données spatiales, exécuter des requêtes SQL et comment "
+"importer et exporter des données."
 
 #: ../../docs/training_manual/databases/db_manager.rst:284
 msgid "|WN|"
@@ -571,3 +616,5 @@ msgid ""
 "Next, we will look at how to use many of these same techniques with "
 "*SpatiaLite* databases."
 msgstr ""
+"Dans la prochaine leçon, nous étudierons comment utiliser des techniques "
+"identiques sur les bases de données *SpatiaLite*."

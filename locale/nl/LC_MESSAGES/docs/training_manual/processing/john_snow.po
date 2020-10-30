@@ -5,15 +5,16 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# DiGro, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"POT-Creation-Date: 2020-10-14 22:11+0200\n"
 "PO-Revision-Date: 2020-03-16 19:22+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: DiGro, 2020\n"
 "Language-Team: Dutch (https://www.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -76,24 +77,24 @@ msgstr ""
 
 #: ../../docs/training_manual/processing/john_snow.rst:15
 msgid ""
-"The first thing to do is to calculting the Voronoi diagram (a.k.a. Thyessen "
+"The first thing to do is to calculate the Voronoi diagram (a.k.a. Thiessen "
 "polygons) of the pumps layer, to get the influence zone of each pump. The "
 "*Voronoi Diagram* algorithm can be used for that."
 msgstr ""
 "Het eerste dat moet worden gedaan is het Voronoi-diagram berekenen (ook "
-"bekend als. Thyessen polygonen) van de laag Pumps, om de zone van invloed "
+"bekend als. Thiessen polygonen) van de laag Pumps, om de zone van invloed "
 "voor elke pomp te verkrijgen. Het algoritme *Voronoi Diagram* kan daarvoor "
 "worden gebruikt."
 
-#: ../../docs/training_manual/processing/john_snow.rst:20
+#: ../../docs/training_manual/processing/john_snow.rst:22
 msgid "Pretty easy, but it will already give us interesting information."
 msgstr "Redelijk eenvoudig, maar het geeft ons al interessante informatie."
 
-#: ../../docs/training_manual/processing/john_snow.rst:24
+#: ../../docs/training_manual/processing/john_snow.rst:26
 msgid "Clearly, most cases are within one of the polygons"
 msgstr "Duidelijk, de meeste gevallen liggen binnen een van de polygonen"
 
-#: ../../docs/training_manual/processing/john_snow.rst:26
+#: ../../docs/training_manual/processing/john_snow.rst:28
 msgid ""
 "To get a more quantitative result, we can count the number of deaths in each"
 " polygon. Since each point represents a building where deaths occured, and "
@@ -107,7 +108,7 @@ msgstr ""
 "eenvoudigweg de punten tellen. We hebben een gewogen telling nodig, dus "
 "zullen we het gereedschap *Count points in polygon (weighted)* gebruiken."
 
-#: ../../docs/training_manual/processing/john_snow.rst:30
+#: ../../docs/training_manual/processing/john_snow.rst:32
 msgid ""
 "The new field will be called *DEATHS*, and we use the *COUNT* field as "
 "weighting field. The resulting table clearly reflects that the number of "
@@ -119,7 +120,7 @@ msgstr ""
 " het aantal doden in de polygoon die overeenkomt met de eerste pomp veel "
 "groter is dan in de andere."
 
-#: ../../docs/training_manual/processing/john_snow.rst:34
+#: ../../docs/training_manual/processing/john_snow.rst:36
 msgid ""
 "Another good way of visualizing the dependence of each point in the "
 "``Cholera_deaths`` layer with a point in the ``Pumps`` layer is to draw a "
@@ -132,11 +133,11 @@ msgstr ""
 " gereedschap *Distance to nearest hub*, en de hieronder getoonde "
 "configuratie te gebruiken."
 
-#: ../../docs/training_manual/processing/john_snow.rst:38
+#: ../../docs/training_manual/processing/john_snow.rst:40
 msgid "The result looks like this:"
 msgstr "Het resultaat ziet er uit als dit:"
 
-#: ../../docs/training_manual/processing/john_snow.rst:42
+#: ../../docs/training_manual/processing/john_snow.rst:44
 msgid ""
 "Although the number of lines is larger in the case of the central pump, do "
 "not forget that this does not represent the number of deaths, but the number"
@@ -150,7 +151,7 @@ msgstr ""
 "representatieve parameter, maar het houdt geen rekening met het feit dat "
 "sommige locaties meer gevallen zouden kunnen hebben dan andere."
 
-#: ../../docs/training_manual/processing/john_snow.rst:44
+#: ../../docs/training_manual/processing/john_snow.rst:46
 msgid ""
 "A density layer will also give us a very clear view of what is happening. We"
 " can create it with the *Kernel density* algorithm. Using the "
@@ -164,7 +165,7 @@ msgstr ""
 "wegen, met een straal van 100, het bereik en de celgrootte van de rasterlaag"
 " Streets, krijgen we zoiets als dit."
 
-#: ../../docs/training_manual/processing/john_snow.rst:48
+#: ../../docs/training_manual/processing/john_snow.rst:50
 msgid ""
 "Remember that, to get the output extent, you do not have to type it. Click "
 "on the button on the right-hand side and select *Use layer/canvas extent*."
@@ -173,7 +174,7 @@ msgstr ""
 "voeren. Klik op de knop aan de rechterkant en selecteer *Use layer/canvas "
 "extent*."
 
-#: ../../docs/training_manual/processing/john_snow.rst:52
+#: ../../docs/training_manual/processing/john_snow.rst:54
 msgid ""
 "Select the streets raster layer and its extent will be automatically added "
 "to the text field. You must do the same with the cellsize, selecting the "
@@ -183,7 +184,7 @@ msgstr ""
 " toegevoegd aan het tekstveld. U moet hetzelfde doen voor de celgrootte, "
 "door ook de celgrootte van die laag te selecteren."
 
-#: ../../docs/training_manual/processing/john_snow.rst:54
+#: ../../docs/training_manual/processing/john_snow.rst:56
 msgid ""
 "Combining with the pumps layer, we see that there is one pump clearly in the"
 " hotspot where the maximum density of death cases is found."

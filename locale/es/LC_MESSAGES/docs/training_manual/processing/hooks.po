@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-05 01:57+0200\n"
 "PO-Revision-Date: 2020-03-16 19:22+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,6 +31,9 @@ msgid ""
 "This lesson shows how to use pre- and post-execution hooks, which allow to "
 "perform additional operations before and after actual processing."
 msgstr ""
+"Esta lección muestra cómo usar hooks previos y posteriores a la ejecución, "
+"que permiten realizar operaciones adicionales antes y después del "
+"procesamiento real."
 
 #: ../../docs/training_manual/processing/hooks.rst:7
 msgid ""
@@ -37,6 +41,10 @@ msgid ""
 "after actual data processing is performed. This can be used to automate "
 "tasks that should be performed whenever an algorithm is executed."
 msgstr ""
+"Los hooks previos y posteriores a la ejecución son scripts de procesamiento "
+"que se ejecutan antes y después de realizar el procesamiento de datos real. "
+"Esto se puede utilizar para automatizar tareas que deben realizarse cada vez"
+" que se ejecuta un algoritmo."
 
 #: ../../docs/training_manual/processing/hooks.rst:11
 msgid ""
@@ -45,6 +53,10 @@ msgid ""
 "<https://docs.qgis.org/testing/en/docs/user_manual/processing/console.html>`_"
 " in the QGIS User Guide for more details."
 msgstr ""
+"La sintaxis de los ganchos es idéntica a la sintaxis de los scripts de "
+"procesamiento, consulte el correspondiente `capítulo "
+"<https://docs.qgis.org/testing/en/docs/user_manual/processing/console.html>`_"
+" en la Guía del usuario de QGIS para obtener más detalles."
 
 #: ../../docs/training_manual/processing/hooks.rst:15
 msgid ""
@@ -52,6 +64,9 @@ msgid ""
 "variable named ``alg``, which represents the algorithm that has just been "
 "(or is about to be) executed."
 msgstr ""
+"Además de todas las características de los scripts, en los hooks puede usar "
+"una variable global especial llamada ``alg``, que representa el algoritmo "
+"que acaba de ejecutarse (o está a punto de ejecutarse)."
 
 #: ../../docs/training_manual/processing/hooks.rst:19
 msgid ""
@@ -59,6 +74,10 @@ msgid ""
 "analysis results in temporary files. This script will copy outputs to a "
 "specific directory, so they won't be deleted after closing QGIS."
 msgstr ""
+"A continuación se muestra un ejemplo de secuencia de comandos posterior a la"
+" ejecución. De forma predeterminada, Processing almacena los resultados del "
+"análisis en archivos temporales. Este script copiará los resultados a un "
+"directorio específico, por lo que no se eliminarán después de cerrar QGIS."
 
 #: ../../docs/training_manual/processing/hooks.rst:36
 msgid ""
@@ -68,12 +87,19 @@ msgid ""
 "import Processing outputs. This will be explained in more detail later in "
 "this lesson."
 msgstr ""
+"En las dos primeras líneas importamos los paquetes de Python requeridos: "
+"``os`` --- para manipulaciones de ruta, p. ej. extraer el nombre del archivo"
+" y ``shutil`` --- para varias operaciones del sistema de archivos, como "
+"copiar archivos. En la tercera línea importamos salidas de procesamiento. "
+"Esto se explicará con más detalle más adelante en esta lección."
 
 #: ../../docs/training_manual/processing/hooks.rst:41
 msgid ""
 "Then we define a ``MY_DIRECTORY`` constant, which is the path to the "
 "directory where we want to copy analysis results."
 msgstr ""
+"Luego definimos una constante `` MY_DIRECTORY '', que es la ruta al "
+"directorio donde queremos copiar los resultados del análisis."
 
 #: ../../docs/training_manual/processing/hooks.rst:44
 msgid ""
@@ -82,6 +108,11 @@ msgid ""
 "and can be copied. If so, we determine top-level directory in which output "
 "files are located and then copy all files to our directory."
 msgstr ""
+"Al final del script, tenemos el código del hook principal. En el ciclo, "
+"iteramos sobre todas las salidas del algoritmo y verificamos si esta salida "
+"es una salida basada en un archivo y se puede copiar. Si es así, "
+"determinamos el directorio de nivel superior en el que se encuentran los "
+"archivos de salida y luego copiamos todos los archivos a nuestro directorio."
 
 #: ../../docs/training_manual/processing/hooks.rst:49
 msgid ""
@@ -90,18 +121,28 @@ msgid ""
 "filename of the hook script there. the specified hook will be executed after"
 " each Processing algorithm."
 msgstr ""
+"Para activar este hook, necesitamos abrir las opciones de Procesamiento, "
+"encontrar la entrada llamada *Archivo de script posterior a la ejecución* en"
+" el grupo *General* y especificar allí el nombre de archivo del script del "
+"hook. el hook especificado se ejecutará después de cada algoritmo de "
+"procesamiento."
 
 #: ../../docs/training_manual/processing/hooks.rst:53
 msgid ""
 "In a similar way, we can implement pre-execution hooks. For example, let's "
 "create a hook to check input vectors for geometry errors."
 msgstr ""
+"De manera similar, podemos implementar ganchos de ejecución previa. Por "
+"ejemplo, creemos un hook para verificar los vectores de entrada en busca de "
+"errores de geometría."
 
 #: ../../docs/training_manual/processing/hooks.rst:69
 msgid ""
 "As in the previous example, first we import required QGIS and Processing "
 "packages."
 msgstr ""
+"Como en el ejemplo anterior, primero importamos los paquetes de "
+"procesamiento y QGIS requeridos."
 
 #: ../../docs/training_manual/processing/hooks.rst:72
 msgid ""
@@ -111,6 +152,11 @@ msgid ""
 " If at least one feature contains an invalid geometry, we print a warning "
 "message."
 msgstr ""
+"Luego, iteramos sobre todos los parámetros del algoritmo y, si se encuentra "
+"un parámetro ParameterVector, obtenemos el objeto de capa vectorial "
+"correspondiente. Repasamos todas las entidades de la capa y las comprobamos "
+"en busca de errores de geometría. Si al menos una entidad contiene una "
+"geometría no válida, imprimimos un mensaje de advertencia."
 
 #: ../../docs/training_manual/processing/hooks.rst:76
 msgid ""
@@ -118,3 +164,7 @@ msgid ""
 "script file* option in the Processing configuration dialog. The hook will be"
 " executed before running any Processing algorithm."
 msgstr ""
+"Para activar este gancho necesitamos ingresar su nombre de archivo en la "
+"opción *Archivo de script de ejecución previa* en el diálogo de "
+"configuración de Procesamiento. El hook se ejecutará antes de ejecutar "
+"cualquier algoritmo de procesamiento."

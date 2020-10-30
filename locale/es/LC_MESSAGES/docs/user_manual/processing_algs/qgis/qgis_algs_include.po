@@ -25,7 +25,7 @@ msgstr ""
 
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:3
 msgid "**network_advanced_parameters**"
-msgstr ""
+msgstr "**network_advanced_parameters**"
 
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:223
@@ -370,19 +370,19 @@ msgstr ""
 
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:111
 msgid "**end_network_advanced_parameters**"
-msgstr ""
+msgstr "**end_network_advanced_parameters**"
 
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:113
 msgid "**network_advanced_parameters_table**"
-msgstr ""
+msgstr "**network_advanced_parameters_table**"
 
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:214
 msgid "**end_network_advanced_parameters_table**"
-msgstr ""
+msgstr "**end_network_advanced_parameters_table**"
 
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:216
 msgid "**network_advanced_parameters_service_area**"
-msgstr ""
+msgstr "**network_advanced_parameters_service_area**"
 
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:323
 msgid "**Include upper/lower bound points**"
@@ -412,11 +412,11 @@ msgstr ""
 
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:332
 msgid "**end_network_advanced_parameters_service_area**"
-msgstr ""
+msgstr "**end_network_advanced_parameters_service_area**"
 
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:334
 msgid "**geometric_predicates**"
-msgstr ""
+msgstr "**geometric_predicates**"
 
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:342
 msgid ""
@@ -461,30 +461,39 @@ msgid ""
 "select it the other way around, as it contains a circle completely. This is "
 "the opposite of *are within*."
 msgstr ""
+"Devuelve 1 (verdadero) si y solo si ningún punto de b se encuentra en el "
+"exterior de a, y al menos un punto del interior de b se encuentra en el "
+"interior de a. En la imagen, no se selecciona ningún círculo, pero el "
+"rectángulo lo estaría si lo seleccionara al revés, ya que contiene un "
+"círculo por completo. Esto es lo opuesto a *están dentro de*."
 
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:362
 msgid "*Disjoint*"
-msgstr ""
+msgstr "*Desarticular*"
 
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:361
 msgid ""
 "Returns 1 (true) if the geometries do not share any portion of space (no "
 "overlap, not touching). Only circle 4 is selected."
 msgstr ""
+"Devuelve 1 (verdadero) si las geometrías no comparten ninguna porción de "
+"espacio (sin superposición, sin tocar). Solo se selecciona el círculo 4."
 
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:366
 msgid "*Equal*"
-msgstr ""
+msgstr "*Igual*"
 
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:365
 msgid ""
 "Returns 1 (true) if and only if geometries are exactly the same. No circles "
 "will be selected."
 msgstr ""
+"Devuelve 1 (verdadero) si y solo si las geometrías son exactamente iguales. "
+"No se seleccionarán círculos."
 
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:371
 msgid "*Touch*"
-msgstr ""
+msgstr "*Toque*"
 
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:369
 msgid ""
@@ -492,10 +501,13 @@ msgid ""
 " have at least one point in common, but their interiors do not intersect. "
 "Only circle 3 is selected."
 msgstr ""
+"Comprueba si una geometría toca a otra. Devuelve 1 (verdadero) si las "
+"geometrías tienen al menos un punto en común, pero sus interiores no se "
+"cruzan. Solo se selecciona el círculo 3."
 
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:376
 msgid "*Overlap*"
-msgstr ""
+msgstr "*Superponer*"
 
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:374
 msgid ""
@@ -503,20 +515,26 @@ msgid ""
 "geometries share space, are of the same dimension, but are not completely "
 "contained by each other. Only circle 2 is selected."
 msgstr ""
+"Comprueba si una geometría se superpone a otra. Devuelve 1 (verdadero) si "
+"las geometrías comparten espacio, son de la misma dimensión, pero no están "
+"completamente contenidas entre sí. Solo se selecciona el círculo 2."
 
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:380
 msgid "*Are within*"
-msgstr ""
+msgstr "*Están dentro*"
 
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:379
 msgid ""
 "Tests whether a geometry is within another. Returns 1 (true) if geometry a "
 "is completely inside geometry b. Only circle 1 is selected."
 msgstr ""
+"Comprueba si una geometría está dentro de otra. Devuelve 1 (verdadero) si la"
+" geometría a está completamente dentro de la geometría b. Solo se selecciona"
+" el círculo 1."
 
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:387
 msgid "*Cross*"
-msgstr ""
+msgstr "*Cruza*"
 
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:383
 msgid ""
@@ -526,14 +544,20 @@ msgid ""
 " as a line (selected). Two lines crossing will cross as a point (selected). "
 "Two polygons cross as a polygon (not selected)."
 msgstr ""
+"Devuelve 1 (verdadero) si las geometrías proporcionadas tienen algunos "
+"puntos interiores en común, pero no todos, y el cruce real es de una "
+"dimensión menor que la geometría proporcionada más alta. Por ejemplo, una "
+"línea que cruza un polígono se cruzará como una línea (seleccionada). Dos "
+"líneas que se cruzan se cruzarán como un punto (seleccionado). Dos polígonos"
+" se cruzan como un polígono (no seleccionado)."
 
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:389
 msgid "**end_geometric_predicates**"
-msgstr ""
+msgstr "**end_geometric_predicates**"
 
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:391
 msgid "**postgisexecutesqlexample**"
-msgstr ""
+msgstr "**postgisexecutesqlexample**"
 
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:396
 msgid "**Example**"
@@ -565,11 +589,11 @@ msgstr ""
 
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:418
 msgid "**end_postgisexecutesqlexample**"
-msgstr ""
+msgstr "**end_postgisexecutesqlexample**"
 
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:420
 msgid "**algorithm_code_section**"
-msgstr ""
+msgstr "**algorithm_code_section**"
 
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:429
 msgid ""
@@ -586,4 +610,4 @@ msgstr ""
 
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:435
 msgid "**end_algorithm_code_section**"
-msgstr ""
+msgstr "**end_algorithm_code_section**"

@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-05 01:57+0200\n"
 "PO-Revision-Date: 2020-03-16 19:17+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,7 +24,7 @@ msgstr ""
 
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:2
 msgid "|LS| Simple Feature Model"
-msgstr "Modelo de Caracteristica SImple ILSI"
+msgstr "Modelo de Objeto SImple ILSI"
 
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:4
 msgid ""
@@ -31,6 +32,9 @@ msgid ""
 "lesson we'll cover one approach, the Simple Feature Model as defined by the "
 "OGC."
 msgstr ""
+"¿Cómo podemos almacenar y representar entidades geográficas en una base de "
+"datos? En esta lección, cubriremos un enfoque, el Modelo de objetos simples "
+"como lo define el OGC."
 
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:8
 msgid ""
@@ -53,10 +57,17 @@ msgid ""
 "implementation of standards for geospatial content and services, GIS data "
 "processing and data sharing. *- Wikipedia*"
 msgstr ""
+"El Consorcio Geoespacial Abierto (OGC), una organización internacional "
+"voluntaria de estándares de consenso, se originó en 1994. En el OGC, más de "
+"370+ organizaciones comerciales, gubernamentales, sin fines de lucro y de "
+"investigación en todo el mundo colaboran en un proceso de consenso abierto "
+"que fomenta el desarrollo e implementación de estándares para geoespacial "
+"contenido y servicios, procesamiento de datos GIS e intercambio de datos. * "
+"- Wikipedia *"
 
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:21
 msgid "What is the SFS Model"
-msgstr ""
+msgstr "¿Qué es el modelo SFS?"
 
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:23
 msgid ""
@@ -64,42 +75,53 @@ msgid ""
 "geospatial data in a database and defines functions for accessing, "
 "operating, and constructing these data."
 msgstr ""
+"El modelo de Objeto Simple para SQL (SFS) es una forma *no topológica* de "
+"almacenar datos geoespaciales en una base de datos y define funciones para "
+"acceder, operar y construir estos datos."
 
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:30
 msgid ""
 "The model defines geospatial data from Point, Linestring, and Polygon types "
 "(and aggregations of them to Multi objects)."
 msgstr ""
+"El modelo define datos geoespaciales de los tipos de punto, cadena de líneas"
+" y polígono (y agregaciones de ellos a objetos múltiples)."
 
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:33
 msgid ""
 "For further information, have a look at the `OGC Simple Feature for SQL "
 "<https://www.opengeospatial.org/standards/sfs>`_ standard."
 msgstr ""
+"Para obtener más información, eche un vistazo a ʻOGC Objeto Simple para SQL "
+"<https://www.opengeospatial.org/standards/sfs>`_ estándar."
 
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:37
 msgid "Add a geometry field to table"
-msgstr ""
+msgstr "Añadir un campo geometría a la tabla"
 
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:39
 msgid "Let's add a point field to our people table:"
-msgstr ""
+msgstr "Agreguemos un campo de puntos a nuestra tabla de gente:"
 
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:48
 msgid "Add a constraint based on geometry type"
-msgstr ""
+msgstr "Añadir una restricción basada en el tipo de geometría"
 
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:50
 msgid ""
 "You will notice that the geometry field type does not implicitly specify "
 "what *type* of geometry for the field - for that we need a constraint:"
 msgstr ""
+"Notará que el tipo de campo de geometría no especifica implícitamente qué "
+"*tipo* de geometría para el campo; para eso, necesitamos una restricción:"
 
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:60
 msgid ""
 "This adds a constraint to the table so that it will only accept a point "
 "geometry or a null value."
 msgstr ""
+"Esto agrega una restricción a la tabla para que solo acepte una geometría de"
+" punto o un valor nulo."
 
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:64
 msgid "|TY| |hard|"
@@ -111,6 +133,10 @@ msgid ""
 "including a geometry field for storing polygons (the city boundaries). Make "
 "sure it has a constraint enforcing geometries to be polygons."
 msgstr ""
+"Cree una nueva tabla llamada ciudades y asígnele algunas columnas "
+"apropiadas, incluido un campo de geometría para almacenar polígonos (los "
+"límites de la ciudad). Asegúrese de que tenga una restricción que obligue a "
+"que las geometrías sean polígonos."
 
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:70
 msgid ":ref:`Check your results <simple-feature-1>`"
@@ -118,24 +144,30 @@ msgstr ":ref:`Comprueba tus resultados <simple-feature-1>`"
 
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:75
 msgid "Populate geometry_columns table"
-msgstr ""
+msgstr "Rellenar geometry_columns de tabla"
 
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:77
 msgid ""
 "At this point you should also add an entry into the ``geometry_columns`` "
 "table:"
 msgstr ""
+"En este punto, también debe agregar una entrada en ``geometry_columns`` de "
+"la tabla:"
 
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:84
 msgid ""
 "Why? :kbd:`geometry_columns` is used by certain applications to be aware of "
 "which tables in the database contain geometry data."
 msgstr ""
+"Porque? :kbd:`geometry_columns` Algunas aplicaciones lo utilizan para saber "
+"qué tablas de la base de datos contienen datos geométricos."
 
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:89
 msgid ""
 "If the above ``INSERT`` statement causes an error, run this query first:"
 msgstr ""
+"Si la declaración \"INSERT\" anterior provoca un error, primero ejecute esta"
+" consulta:"
 
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:96
 msgid ""
@@ -143,12 +175,16 @@ msgid ""
 "this table has already been registered and you don't need to do anything "
 "more."
 msgstr ""
+"Si la columna :kbd:`f_table_name` contiene el valor :kbd:`people`, entonces "
+"esta tabla ya ha sido registrada y no necesita hacer nada más."
 
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:100
 msgid ""
 "The value ``2`` refers to the number of dimensions; in this case, two: **X**"
 " and **Y**."
 msgstr ""
+"El valor ``2`` se refiere al número de dimensiones; en este caso, dos: **X**"
+" e **Y **."
 
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:103
 msgid ""
@@ -156,6 +192,9 @@ msgid ""
 "WGS 84, which is referred to by the number 4326 (refer to the earlier "
 "discussion about the EPSG)."
 msgstr ""
+"El valor :kbd:`4326` se refiere a la proyección que estamos usando; en este "
+"caso, WGS 84, al que se hace referencia con el número 4326 (consulte la "
+"discusión anterior sobre EPSG)."
 
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:108
 msgid "|TY| |basic|"
@@ -164,6 +203,8 @@ msgstr "|TY| |basic|"
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:110
 msgid "Add an appropriate `geometry_columns` entry for your new cities layer"
 msgstr ""
+"Agregue una entrada `geometry_columns` apropiada para su nueva capa de "
+"ciudades"
 
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:112
 msgid ":ref:`Check your results <simple-feature-2>`"
@@ -171,11 +212,13 @@ msgstr ":ref:`Comprueba tus resultados <simple-feature-2>`"
 
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:117
 msgid "Add geometry record to table using SQL"
-msgstr ""
+msgstr "Agregar registro de geometría a la tabla usando SQL"
 
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:119
 msgid "Now that our tables are geo-enabled, we can store geometries in them:"
 msgstr ""
+"Ahora que nuestras tablas están geo-habilitadas, podemos almacenar "
+"geometrías en ellas:"
 
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:130
 msgid ""
@@ -185,6 +228,12 @@ msgid ""
 "projection information. Obviously, the new point needs to use the same SRID "
 "as the data-set it is being added to, so you need to specify it."
 msgstr ""
+"En la nueva entrada anterior, deberá especificar qué proyección (SRID) desea"
+" usar. Esto se debe a que ingresó la geometría del nuevo punto utilizando "
+"una cadena de texto simple, que no agrega automáticamente la información de "
+"proyección correcta. Obviamente, el nuevo punto debe usar el mismo SRID que "
+"el conjunto de datos al que se está agregando, por lo que debe "
+"especificarlo."
 
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:136
 msgid ""
@@ -194,6 +243,11 @@ msgid ""
 "every point you want to add if you've already specified it for that data-"
 "set, as we did earlier."
 msgstr ""
+"Si en este punto estuviera utilizando una interfaz gráfica, por ejemplo, "
+"especificar la proyección para cada punto sería automático. En otras "
+"palabras, normalmente no tendrá que preocuparse por utilizar la proyección "
+"correcta para cada punto que desee agregar si ya lo ha especificado para ese"
+" conjunto de datos, como hicimos anteriormente."
 
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:142
 msgid ""
@@ -201,12 +255,19 @@ msgid ""
 "table. Also, we should try editing / adding / deleting records and then "
 "performing select queries in the database to see how the data has changed."
 msgstr ""
+"Este es probablemente un buen momento para abrir QGIS e intentar ver su "
+"tabla :kbd:`people`. Además, deberíamos intentar editar / agregar / eliminar"
+" registros y luego realizar consultas de selección en la base de datos para "
+"ver cómo han cambiado los datos."
 
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:146
 msgid ""
 "To load a PostGIS layer in QGIS, use the :menuselection:`Layer --> Add "
 "PostGIS Layers` menu option or toolbar button:"
 msgstr ""
+" Para cargar una capa PostGIS en QGIS, use la opción de menú "
+":menuselection:`Capas --> Añadir capas PostGIS`  o botón de la barra de "
+"herramientas:"
 
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:149
 msgid "|addPostgisLayer|"
@@ -214,15 +275,15 @@ msgstr "|addPostgisLayer|"
 
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:151
 msgid "This will open the dialog:"
-msgstr ""
+msgstr "Esto abrirá el diálogo:"
 
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:156
 msgid "Click on the :guilabel:`New` button to open this dialog:"
-msgstr ""
+msgstr "Click en el botón :guilabel:`Nuevo` para abrir este diálogo:"
 
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:161
 msgid "Then define a new connection, e.g.::"
-msgstr ""
+msgstr "Luego defina una nueva conexión, por ejemplo::"
 
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:171
 msgid ""
@@ -231,12 +292,19 @@ msgid ""
 "works, check the boxes next to :guilabel:`Save Username` and :guilabel:`Save"
 " Password`. Then click :guilabel:`OK` to create this connection."
 msgstr ""
+"Para ver si QGIS ha encontrado la base de datos :kbd:`address` y si su "
+"nombre de usuario y contraseña son correctos, haga clic en :guilabel:`Probar"
+" conexión`. Si funciona, marque las casillas junto a :guilabel:`Guardar "
+"nombre de usuario` y :guilabel:`Guardar contraseña`. Luego haga clic en "
+":guilabel:`Aceptar` para crear esta conexión."
 
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:176
 msgid ""
 "Back in the :guilabel:`Add PostGIS Layers` dialog, click :guilabel:`Connect`"
 " and add layers to your project as usual."
 msgstr ""
+"Regresa al diálogo :guilabel:`Añadir capas PostGIS`, click "
+":guilabel:`Conectar` y agregue capas a su proyecto como de costumbre."
 
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:180
 msgid "|TY| |moderate|"
@@ -247,6 +315,8 @@ msgid ""
 "Formulate a query that shows a person's name, street name and position (from"
 " the the_geom column) as plain text."
 msgstr ""
+"Formule una consulta que muestre el nombre de una persona, el nombre de la "
+"calle y la posición (de la columna the_geom) como texto sin formato."
 
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:185
 msgid ":ref:`Check your results <simple-feature-3>`"
@@ -261,6 +331,8 @@ msgid ""
 "You have seen how to add spatial objects to your database and view them in "
 "GIS software."
 msgstr ""
+"Ha visto cómo agregar objetos espaciales a su base de datos y visualizarlos "
+"en el software GIS."
 
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:194
 msgid "|WN|"

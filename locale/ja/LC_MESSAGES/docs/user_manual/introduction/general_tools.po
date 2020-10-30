@@ -4388,7 +4388,7 @@ msgstr "そして :guilabel:`ペーストの書式` は、テキストにフォ�
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2202
 msgid "Unit Selector"
-msgstr ""
+msgstr "単位セレクタ"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2204
 msgid ""
@@ -4399,22 +4399,26 @@ msgid ""
 "rendering you want (based on screen resolution, paper size, or the terrain)."
 " Available units are:"
 msgstr ""
+"QGIS のアイテム（ラベル、シンボル、レイアウト要素 "
+"...）のサイズプロパティは、必ずしもプロジェクト単位または特定のレイヤの単位に拘束されるわけではありません。多くのプロパティでは、 "
+":guilabel:`単位` "
+"セレクタのドロップダウンメニューを使用して、必要なレンダリングに応じて（画面解像度、用紙サイズ、または地形を基準として）プロパティの値を調整することができます。利用可能な単位は以下のとおりです："
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2210
 msgid ":guilabel:`Millimeters`"
-msgstr ""
+msgstr ":guilabel:`ミリメートル（Millimeters）`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2211
 msgid ":guilabel:`Points`"
-msgstr ""
+msgstr ":guilabel:`ポイント（Points）`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2212
 msgid ":guilabel:`Pixels`"
-msgstr ""
+msgstr ":guilabel:`ピクセル（Pixels）`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2213
 msgid ":guilabel:`Inches`"
-msgstr ""
+msgstr ":guilabel:`インチ（Inches）`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2214
 msgid ""
@@ -4424,6 +4428,8 @@ msgid ""
 "based on the current project ellipsoid setting and a projection of the "
 "distances in meters at the center of the current map extent."
 msgstr ""
+":guilabel:`縮尺済みメートル（Meters at Scale）` ： これにより、基礎となる地図単位（例：インチ、フィート、度 "
+"...）に関係なく、常にサイズをメートル単位で設定できます。メートル単位のサイズは、現在のプロジェクト楕円体の設定と、現在のマップ範囲の中心位置でのメートル単位の距離の投影に基づいて計算されます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2219
 msgid ""
@@ -4432,6 +4438,9 @@ msgid ""
 "|options| button next to the entry to constrain the size to a range of "
 "values based on:"
 msgstr ""
+":guilabel:`地図単位` ： "
+"サイズはマップビューのスケールに応じて拡大縮小されます。これは大きすぎる、あるいは小さすぎる値となることがあるため、エントリの隣にある "
+"|options| ボタンを使用して、サイズを以下に基づいた値の範囲に制限します："
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2223
 msgid ""
@@ -4440,6 +4449,8 @@ msgid ""
 "limits. Out of the range of scale, the value at the nearest scale limit is "
 "kept."
 msgstr ""
+":guilabel:`最小縮尺` と :guilabel:`最大縮尺` "
+"：これらの縮尺限界値に到達するまでは、値はマップビューの縮尺に基づいてスケーリングされます。縮尺の範囲外の場合は、値は最も近い縮尺限界値に基づく値のままです。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2226
 msgid ""
@@ -4447,14 +4458,16 @@ msgid ""
 "``mm``: The value is scaled based on the map view scale until it reaches any"
 " of these limits; Then the limit size is kept."
 msgstr ""
+"かつ/または :guilabel:`最小サイズ` と :guilabel:`最大サイズ` を ``mm`` 単位で指定したもの "
+"：値はこれらのサイズ限界値に到達するまで、マップビューの縮尺に基づいてスケーリングされます。限界値に到達した場合は、このサイズ限界値で一定となります。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2235
 msgid "Adjust scaling range dialog"
-msgstr ""
+msgstr "縮尺範囲の調整ダイアログ"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2243
 msgid "Blending Modes"
-msgstr "描画モード"
+msgstr "混合モード"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2245
 msgid ""
@@ -4462,20 +4475,20 @@ msgid ""
 " that you may previously only know from graphics programs. Blending modes "
 "can be applied on layers and features, and also on print layout items:"
 msgstr ""
+"QGISは混合モードツールを通じて、これまでは画像編集プログラムでしか知られていないような、特別なレンダリング効果のためのさまざまなオプションを提供しています。混合モードは、レイヤや地物に適用したり、印刷レイアウトアイテムにも適用することができます："
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2249
 msgid ""
 "**Normal**: This is the standard blend mode, which uses the alpha channel of"
 " the top pixel to blend with the pixel beneath it. The colors aren't mixed."
-msgstr ""
-"**通常**：これは標準のブレンドモードで、トップピクセルのアルファチャンネルを使用してその下のピクセルとブレンドします。色は混合されません。"
+msgstr "**通常**：これは標準の混合モードで、上にあるピクセルのアルファチャンネルを使用して、その下のピクセルと混合します。色は混合されません。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2251
 msgid ""
 "**Lighten**: This selects the maximum of each component from the foreground "
 "and background pixels. Be aware that the results tend to be jagged and "
 "harsh."
-msgstr "**明るく**：これは、前景と背景の画素から各成分の最大値を選択します。結果はギザギザで粗くなる傾向があることに注意してください。"
+msgstr "**明るく**：これは、前景と背景のピクセルから各成分の最大値を選択します。結果はギザギザで粗くなる傾向があることに注意してください。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2253
 msgid ""
@@ -4484,6 +4497,7 @@ msgid ""
 "of one item with another item (such as using a hillshade to texture another "
 "layer)."
 msgstr ""
+"**スクリーン**：アイテムの明るいピクセルは下のレイヤ上に塗られますが、暗いピクセルは塗られません。このモードは、あるアイテムのテクスチャを別のアイテムに混ぜるのに便利です（例えば、陰影図を使って他のレイヤのテクスチャを作成するなど）。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2256
 msgid ""
@@ -4492,6 +4506,7 @@ msgid ""
 "the underlying pixels to increase. This works best if the top pixels aren't "
 "too bright. Otherwise the effect is too extreme."
 msgstr ""
+"**覆い焼き**：上にあるピクセルの明るさに基づき下のピクセルを明るくし、彩度を上げます。上にあるピクセルが明るいほど、下のピクセルの彩度と明るさが上がります。これは、上にあるピクセルが明るすぎない場合に最適です。そうでない場合は効果が極端になります。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2260
 msgid ""
@@ -4499,31 +4514,33 @@ msgid ""
 "above the maximum value (in the case of RGB), white is displayed. This mode "
 "is suitable for highlighting features."
 msgstr ""
+"**加算**：あるアイテムのピクセル値を他方のピクセル値に加えます。値が上限値よりも大きくなる場合、（RGBモードの場合は）白色で表示されます。このモードは地物をハイライトするのに適しています。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2263
 msgid ""
 "**Darken**: Retains the lowest values of each component of the foreground "
 "and background pixels. Like lighten, the results tend to be jagged and "
 "harsh."
-msgstr ""
+msgstr "**暗く**：上と下のピクセルの各成分で最小値を保持します。「明るく」と同様に、結果はギザギザで粗くなる傾向があります。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2265
 msgid ""
 "**Multiply**: Pixel values of the top item are multiplied with the "
 "corresponding values for the bottom item. The results are darker."
-msgstr ""
+msgstr "**乗算**：上のアイテムのピクセル値を下のアイテムのピクセル値と掛け合わせます。結果は暗くなります。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2267
 msgid ""
 "**Burn**: Darker colors in the top item cause the underlying items to "
 "darken. Burn can be used to tweak and colorize underlying layers."
 msgstr ""
+"**焼きこみ**：上にあるアイテムの色が濃いと、下にあるアイテムの色が濃くなります。「焼きこみ」は下にあるレイヤの色を調整したり、色付けしたりするのに使えます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2269
 msgid ""
 "**Overlay**: Combines multiply and screen blending modes. Light parts become"
 " lighter and dark parts become darker."
-msgstr ""
+msgstr "**オーバーレイ**：「乗算」と「網掛け」混合モードの組み合わせです。明るい部分はより明るく、暗い部分はより暗くなります。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2271
 msgid ""
@@ -4531,12 +4548,14 @@ msgid ""
 "multiply/screen it uses color burn/dodge. This is supposed to emulate "
 "shining a soft light onto an image."
 msgstr ""
+"**ソフトライト**：「オーバーレイ」とよく似ていますが、「乗算」/「覆い焼き」の代わりに「焼きこみ」/「覆い焼き」を使います。これは、画像に柔らかい光が当たっているのを模擬したものです。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2273
 msgid ""
 "**Hard light**: Hard light is also very similar to the overlay mode. It's "
 "supposed to emulate projecting a very intense light onto an image."
-msgstr "**ハードライト**：ハードライトもオーバーレイモードと非常によく似ています。画像上に非常に強い光を投射するのを真似ているとされます。"
+msgstr ""
+"**ハードライト**：「ハードライト」も「オーバーレイ」モードと非常によく似ています。画像に非常に強い光が当たっているのを模擬したものです。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2275
 msgid ""
@@ -4544,16 +4563,18 @@ msgid ""
 "way around, in order always to get a positive value. Blending with black "
 "produces no change, as the difference with all colors is zero."
 msgstr ""
+"**差分**： "
+"結果が常に正の値となるように、下のピクセル値から上のピクセル値を引く、もしくはその逆を行います。黒色との混合は、全ての色に対する違いがゼロのため、何の変化もありません。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2278
 msgid ""
 "**Subtract**: Subtracts pixel values of one item from the other. In the case"
 " of negative values, black is displayed."
-msgstr ""
+msgstr "**減算**：あるアイテムのピクセル値から他のアイテムのピクセル値を引きます。負の値となる場合には、黒く表示されます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2285
 msgid "Data defined override setup"
-msgstr "データ定義の上書きの設定"
+msgstr "データによって定義された上書きの設定"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2287
 msgid ""
@@ -4566,16 +4587,21 @@ msgid ""
 "widget is applied to the parameter regardless of its normal value (checkbox,"
 " textbox, slider...)."
 msgstr ""
+"ベクタレイヤのプロパティダイアログの多くのオプションや印刷レイアウトの設定の横には、 |dataDefined| "
+":sup:`データによって定義された上書き` アイコンがあります。このツールでは、レイヤ属性やアイテム設定に基づいた :ref:`式 "
+"<vector_expressions>`  、予め用意された関数やカスタム関数、 :ref:`変数 "
+"<general_tools_variables>` "
+"を使用して、パラメータに動的な値を設定することができます。これを有効にすると、通常の値（チェックボックス、テキストボックス、スライダー...）に関係なく、このウィジェットによって返される値がパラメータに適用されます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2296
 msgid "The data defined override widget"
-msgstr ""
+msgstr "データによって定義された上書きウィジェット"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2298
 msgid ""
 "Clicking the |dataDefined| :sup:`Data defined override` icon shows the "
 "following entries:"
-msgstr ""
+msgstr "|dataDefined| :sup:`データによって定義された上書き` アイコンをクリックすると、以下のエントリが表示されます："
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2300
 msgid ""
@@ -4583,18 +4609,22 @@ msgid ""
 "input is expected, the valid input type and the current definition. Hovering"
 " over the widget also pops up this information."
 msgstr ""
+":guilabel:`説明...` "
+"は、オプションが有効化されているか、予想される入力値、有効な入力型、そして現在の定義を表示します。ウィジェットの上にマウスカーソルを乗せることでも、この情報を表示します。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2303
 msgid ""
 ":guilabel:`Store data in the project`: a button allowing  the property to be"
 " stored using to the :ref:`vector_auxiliary_storage` mechanism."
 msgstr ""
+":guilabel:`データをプロジェクトに格納する` ： :ref:`vector_auxiliary_storage` "
+"機能を使用してプロパティをプロジェクトに保存することを許可するためのボタンです。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2305
 msgid ""
 ":guilabel:`Field type`: an entry to select from the layer's fields that "
 "match the valid input type."
-msgstr ""
+msgstr ":guilabel:`フィールドの型`: レイヤのフィールドのうち、有効な入力型に一致するフィールドから選択するためのエントリです。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2307
 msgid ""
@@ -4602,12 +4632,16 @@ msgid ""
 "gives access to the colors defined as part of the current :ref:`project's "
 "colors <project_colors>` scheme."
 msgstr ""
+":guilabel:`色`: ウィジェットが色プロパティと関連しているときには、このメニューから現在の :ref:`プロジェクトの色 "
+"<project_colors>` スキームとして定義されている色にアクセスできます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2310
 msgid ""
 ":guilabel:`Variable`: a menu to access the available user-defined "
 ":ref:`variables <general_tools_variables>`"
 msgstr ""
+":guilabel:`変数` ：利用可能なユーザー定義の :ref:`変数 <general_tools_variables>` "
+"へアクセスするためのメニューです。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2312
 msgid ""
@@ -4616,14 +4650,16 @@ msgid ""
 " in the expression, a reminder of the expected output's format is provided "
 "in the dialog."
 msgstr ""
+":guilabel:`編集...` ボタンは、 :guilabel:`式文字列ビルダ` "
+"ダイアログを使用して、適用する式を作成もしくは編集するためのボタンです。正しく式を入力するのを助けるために、期待される出力フォーマットのヒントがダイアログ内に表示されています。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2316
 msgid ":guilabel:`Paste` and :guilabel:`Copy` buttons."
-msgstr ""
+msgstr ":guilabel:`貼り付け` と :guilabel:`コピー` ボタン"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2317
 msgid ":guilabel:`Clear` button to remove the setup."
-msgstr ":guilabel:`クリア` ボタンで設定を削除"
+msgstr ":guilabel:`クリア` ボタンで設定を削除します。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2318
 msgid ""
@@ -4631,10 +4667,12 @@ msgid ""
 "the feature data is applied to the property (more details :ref:`below "
 "<data_defined_assistant>`)"
 msgstr ""
+"数値と色のプロパティには、地物データがプロパティにどのように適用されるのかを再スケーリングするための :guilabel:`アシスタント...` "
+"があります（詳細については :ref:`下記 <data_defined_assistant>` を参照ください）。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2322
 msgid "**Use right-click to (de)activate the data override**"
-msgstr ""
+msgstr "**データによる上書きを右クリックで有効化（無効化）**"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2324
 msgid ""
@@ -4642,16 +4680,21 @@ msgid ""
 " |dataDefineOn| or |dataDefineExpressionOn|. If it is broken, the icon is "
 "red |dataDefineError| or |dataDefineExpressionError|."
 msgstr ""
+"データによって定義された上書きのオプションが正しく設定されている場合には、アイコンは黄色で |dataDefineOn| や "
+"|dataDefineExpressionOn| になります。もし上書きオプションが壊れている場合には、アイコンは赤色で "
+"|dataDefineError| や |dataDefineExpressionError| になります。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2328
 msgid ""
 "You can enable or disable a configured |dataDefined| :sup:`data-defined "
 "override` button by simply clicking the widget with the right mouse button."
 msgstr ""
+"ウィジェットをマウスの右ボタンでクリックすることで、設定された |dataDefined| :sup:`データによって定義された上書き` "
+"ボタンを簡単に有効化・無効化できます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2334
 msgid "Using the data-defined assistant interface"
-msgstr ""
+msgstr "データによる定義のアシスタントインターフェースを使用する"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2336
 msgid ""
@@ -4660,16 +4703,21 @@ msgid ""
 " that allows you to change how the data is applied to the parameter for each"
 " feature. The assistant allows you to:"
 msgstr ""
+"|dataDefined| :sup:`データによって定義された上書き` ボタンが数値もしくは色パラメータと関連付けられている場合、 "
+":guilabel:`アシスタント...` "
+"オプションがあり、各地物に対してデータがパラメータに適用される方法を変更することができます。このアシスタントはには以下の機能があります："
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2341
 msgid "Define the :guilabel:`Input` data, ie:"
-msgstr ""
+msgstr ":guilabel:`入力` データを定義します。すなわち："
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2343
 msgid ""
 "the attribute to represent, using the Field listbox or the |expression| "
 ":sup:`Set column expression` function (see :ref:`vector_expressions`)"
 msgstr ""
+"フィールドのリストボックスまたは |expression| :sup:`カラム式の設定` 機能（ :ref:`vector_expressions` "
+"参照）を使用して、表す属性値を定義します。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2345
 msgid ""
@@ -4678,6 +4726,8 @@ msgid ""
 "fields automatically with the minimum and maximum values returned by the "
 "chosen attribute or the expression applied to your data"
 msgstr ""
+"表す値の範囲： 値を手入力することもできますし、 |refresh| :sup:`レイヤから値の範囲を取得する` "
+"ボタンを使用して、選択した属性やデータに適用された式によって返される最小値と最大値からこれらのフィールドを自動的に入力することもできます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2349
 msgid ""
@@ -4687,47 +4737,52 @@ msgid ""
 "the graphic to add break point(s) and drag the point(s) to apply a custom "
 "distribution."
 msgstr ""
+"|unchecked| :guilabel:`変換曲線を適用する` "
+"：デフォルトでは、出力値（設定は下記を参照）は線形スケールに従って入力地物に適用されます。 "
+"これを変換曲線ロジックを利用して上書きすることができます：変換オプションを有効にして、グラフにブレークポイントを追加しポイントをドラッグして適用すべきカスタム分布を作成します。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2354
 msgid ""
 "Define the :guilabel:`Output` values: the options vary according to the "
 "parameter to define. You can globally set:"
-msgstr ""
+msgstr ":guilabel:`出力` 値を定義します：このオプションは定義するパラメータによって異なります。共通して設定できるのは以下の項目です："
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2357
 msgid ""
 "the minimum and maximum values to apply to the selected property (n case of "
 "a color setting, you'll need to provide a :ref:`color ramp <color-ramp>`)"
 msgstr ""
+"選択したプロパティに適用する最小値と最大値（色設定の場合には、 :ref:`カラーランプ <color-ramp>` を指定する必要があります）"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2360
 msgid ""
 "the :guilabel:`Scale method` of representation which can be **Flannery**, "
 "**Exponential**, **Surface** or **Radius**"
 msgstr ""
+"表現の :guilabel:`スケール方法` は、 **フラナリー** 、 **面**、 **半径** または **指数関数的** のどれかです。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2362
 msgid "the :guilabel:`Exponent` to use for data scaling"
-msgstr ""
+msgstr "データのスケーリングに使用する :guilabel:`指数` の設定"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2363
 msgid ""
 "the output value or :ref:`color <color-selector>` to represent features with"
 " NULL values"
-msgstr ""
+msgstr "NULL値の場合の出力値あるいは地物を表す :ref:`色 <color-selector>` "
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2366
 msgid ""
 "When compatible with the property, a live-update preview is displayed in the"
 " right-hand side of the dialog to help you control the value scaling."
-msgstr ""
+msgstr "プロパティに適合している場合には、ダイアログの右側にライブ更新プレビューが表示され、値のスケーリングを制御するのに役立ちます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2374
 msgid "The data-defined size assistant"
-msgstr ""
+msgstr "データ定義によるサイズ設定のアシスタント"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2376
 msgid ""
 "The values presented in the varying size assistant above will set the size "
 "'Data-defined override' with: ::"
-msgstr ""
+msgstr "上図の可変サイズアシスタントで提示された値は、「データによって定義された上書き」のサイズを以下のように設定します： ::"

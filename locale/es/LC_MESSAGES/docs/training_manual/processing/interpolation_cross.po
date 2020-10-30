@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-05 01:57+0200\n"
 "PO-Revision-Date: 2020-03-16 19:23+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -40,6 +41,10 @@ msgid ""
 "This lesson uses some interpolation algorithms that were already introduced,"
 " but has a different approach."
 msgstr ""
+"La interpolación es una técnica común y se puede utilizar para demostrar "
+"varias técnicas que se pueden aplicar utilizando el marco de procesamiento "
+"de QGIS. Esta lección utiliza algunos algoritmos de interpolación que ya se "
+"introdujeron, pero tiene un enfoque diferente."
 
 #: ../../docs/training_manual/processing/interpolation_cross.rst:8
 msgid ""
@@ -48,6 +53,11 @@ msgid ""
 "did in the previous lesson, but this time we will save part of the original "
 "data to use it for assessing the quality of the interpolation process."
 msgstr ""
+"Los datos de esta lección también contienen una capa de puntos, en este caso"
+" con datos de elevación. Lo vamos a interpolar de la misma forma que hicimos"
+" en la lección anterior, pero esta vez guardaremos parte de los datos "
+"originales para usarlos para evaluar la calidad del proceso de "
+"interpolación."
 
 #: ../../docs/training_manual/processing/interpolation_cross.rst:10
 msgid ""
@@ -63,16 +73,30 @@ msgid ""
 "selected points and ignore the rest. The selection can be done using the "
 "*Random selection* algorithm. Run it with the following parameters."
 msgstr ""
+"Primero, tenemos que rasterizar la capa de puntos y llenar las celdas sin "
+"datos resultantes, pero usando solo una fracción de los puntos de la capa. "
+"Ahorraremos el 10% de los puntos para una verificación posterior, por lo que"
+" debemos tener el 90% de los puntos listos para la interpolación. Para "
+"hacerlo, podríamos usar el algoritmo * Dividir capa de formas aleatoriamente"
+" *, que ya usamos en una lección anterior, pero hay una mejor manera de "
+"hacerlo, sin tener que crear ninguna nueva capa intermedia. En lugar de eso,"
+" podemos seleccionar los puntos que queremos usar para la interpolación (la "
+"fracción del 90%) y luego ejecutar el algoritmo. Como ya hemos visto, el "
+"algoritmo de rasterización usará solo esos puntos seleccionados e ignorará "
+"el resto. La selección se puede hacer usando el algoritmo * Selección "
+"aleatoria *. Ejecútelo con los siguientes parámetros."
 
 #: ../../docs/training_manual/processing/interpolation_cross.rst:14
 msgid "That will select 90% of the points in the layer to rasterize"
-msgstr ""
+msgstr "Eso seleccionará el 90% de los puntos en la capa a rasterizar"
 
 #: ../../docs/training_manual/processing/interpolation_cross.rst:18
 msgid ""
 "The selection is random, so your selection might differ from the selection "
 "shown in the above image."
 msgstr ""
+"La selección es aleatoria, por lo que su selección puede diferir de la "
+"selección que se muestra en la imagen de arriba."
 
 #: ../../docs/training_manual/processing/interpolation_cross.rst:20
 msgid ""
@@ -80,6 +104,9 @@ msgid ""
 "run the *Close gaps* algorithm to fill the no--data cells [Cell resolution: "
 "100 m]."
 msgstr ""
+"Ahora ejecute el algoritmo *Rasterize* para obtener la primera capa ráster, "
+"y luego ejecutar el algoritmo *Cerrar espacios* para llenar las celdas sin "
+"datos [Resolución de celda: 100 m]."
 
 #: ../../docs/training_manual/processing/interpolation_cross.rst:24
 msgid ""
@@ -89,12 +116,19 @@ msgid ""
 "interpolated raster layer). We can compare the two by computing the "
 "differences between those values."
 msgstr ""
+"Para comprobar la calidad de la interpolación, ahora podemos utilizar los "
+"puntos que no están seleccionados. En este punto, conocemos la elevación "
+"real (el valor en la capa de puntos) y la elevación interpolada (el valor en"
+" la capa ráster interpolada). Podemos comparar los dos calculando las "
+"diferencias entre esos valores."
 
 #: ../../docs/training_manual/processing/interpolation_cross.rst:26
 msgid ""
 "Since we are going to use the points that are not selected, first, let's "
 "invert the selection."
 msgstr ""
+"Como vamos a usar los puntos que no están seleccionados, primero invirtamos "
+"la selección."
 
 #: ../../docs/training_manual/processing/interpolation_cross.rst:30
 msgid ""
@@ -102,6 +136,9 @@ msgid ""
 "add them in a new field, we can use the *Add raster values to points* "
 "algorithm"
 msgstr ""
+"Los puntos contienen los valores originales, pero no los interpolados. Para "
+"agregarlos en un nuevo campo, podemos usar el algoritmo *Agregar valores "
+"ráster a los puntos*"
 
 #: ../../docs/training_manual/processing/interpolation_cross.rst:34
 msgid ""
@@ -110,18 +147,26 @@ msgid ""
 "it to *interpolate* and that layer name is the one that will be used for the"
 " name of the field to add."
 msgstr ""
+"La capa ráster a seleccionar (el algoritmo admite múltiples ráster, pero "
+"solo necesitamos una) es la resultante de la interpolación. Lo hemos "
+"renombrado a *interpolar* y ese nombre de capa es el que se usará para el "
+"nombre del campo a agregar."
 
 #: ../../docs/training_manual/processing/interpolation_cross.rst:36
 msgid ""
 "Now we have a vector layer that contains both values, with points that were "
 "not used for the interpolation."
 msgstr ""
+"Ahora tenemos una capa vectorial que contiene ambos valores, con puntos que "
+"no se usaron para la interpolación."
 
 #: ../../docs/training_manual/processing/interpolation_cross.rst:40
 msgid ""
 "Now, we will use the fields calculator for this task. Open the *Field "
 "calculator* algorithm and run it with the following parameters."
 msgstr ""
+"Ahora, usaremos la calculadora de campos para esta tarea. Abra el algoritmo "
+"*Calculadora de campos* y ejecútelo con los siguientes parámetros."
 
 #: ../../docs/training_manual/processing/interpolation_cross.rst:44
 msgid ""
@@ -131,18 +176,27 @@ msgid ""
 "interpolation, each of them containing the difference between the two "
 "elevation values."
 msgstr ""
+"Si su campo con los valores de la capa ráster tiene un nombre diferente, "
+"debe modificar la fórmula anterior en consecuencia. Al ejecutar este "
+"algoritmo, obtendrá una nueva capa con solo los puntos que no hemos usado "
+"para la interpolación, cada uno de los cuales contiene la diferencia entre "
+"los dos valores de elevación."
 
 #: ../../docs/training_manual/processing/interpolation_cross.rst:46
 msgid ""
 "Representing that layer according to that value will give us a first idea of"
 " where the largest discrepancies are found."
 msgstr ""
+"Representar esa capa de acuerdo con ese valor nos dará una primera idea de "
+"dónde se encuentran las mayores discrepancias."
 
 #: ../../docs/training_manual/processing/interpolation_cross.rst:50
 msgid ""
 "Interpolating that layer will get you a raster layer with the estimated "
 "error in all points of the interpolated area."
 msgstr ""
+"Al interpolar esa capa, obtendrá una capa ráster con el error estimado en "
+"todos los puntos del área interpolada."
 
 #: ../../docs/training_manual/processing/interpolation_cross.rst:54
 msgid ""
@@ -150,6 +204,9 @@ msgid ""
 "values and interpolated ones) directly with :menuselection:`GRASS --> "
 "v.sample`."
 msgstr ""
+"También puede obtener la misma información (diferencia entre los valores de "
+"puntos originales y los interpolados) directamente with "
+":menuselection:`GRASS --> v.sample`."
 
 #: ../../docs/training_manual/processing/interpolation_cross.rst:56
 msgid ""
@@ -157,3 +214,5 @@ msgid ""
 " introduced when running the random selection, at the beginning of this "
 "lesson."
 msgstr ""
+"Sus resultados pueden diferir de estos, ya que se introduce un componente "
+"aleatorio al ejecutar la selección aleatoria, al comienzo de esta lección."

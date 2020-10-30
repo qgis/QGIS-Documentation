@@ -6,7 +6,7 @@
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
 # mnamihdk, 2020
-# fairtommy <fairtommy@gmail.com>, 2020
+# tomoyuki arai <tarai.3367@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-05 01:57+0200\n"
 "PO-Revision-Date: 2020-03-16 19:25+0000\n"
-"Last-Translator: fairtommy <fairtommy@gmail.com>, 2020\n"
+"Last-Translator: tomoyuki arai <tarai.3367@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -84,6 +84,8 @@ msgid ""
 "formats such as QML files (:ref:`qgisstylefile`) and virtual and memory "
 "layers."
 msgstr ""
+"アーカイブされたフォルダからサポートしているフォーマットのファイルを読み込んだり、QML ファイル （ :ref:`qgisstylefile` "
+"）などのQGISネイティブ形式や仮想レイヤ、メモリレイヤを使用することができます。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:41
 msgid ""
@@ -103,6 +105,9 @@ msgid ""
 "or check :menuselection:`Settings --> Options --> GDAL` menu (for raster) in"
 " QGIS."
 msgstr ""
+"さまざまな理由により、リストに挙げたすべてのフォーマットがQGISで動作するわけではありません。例えば、外部のプロプライエタリなライブラリを必要とする場合や、お使いのOSのGDAL/OGRのインストールが、使用したいフォーマットをサポートするようにビルドされていない場合もあります。利用可能なフォーマットのリストを確認するには、コマンドラインで"
+" ``ogrinfo --formats`` （ベクタ用）や ``gdalinfo --formats`` （ラスタ用）を実行するか、QGIS上で  "
+":menuselection:`設定 --> オプション --> GDAL` のメニュー（ラスタ用）を確認してください。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:58
 msgid ""
@@ -119,19 +124,19 @@ msgid ""
 "|checkbox| :guilabel:`Modeless data source manager dialog` in the "
 ":menuselection:`Settings --> Options --> General` menu."
 msgstr ""
-"QGISでは、データ形式に応じて、データセットを開くためのさまざまなツールがあります。それらは主に "
-":menuselection:`レイヤ->レイヤを追加->` メニューまたは :guilabel:`レイヤー管理` ツールバー（有効 "
-":menuselection:`表示->ツールバー` メニューで有効にできます）で使用できます。ただし、これらすべてのツールは "
-":guilabel:`データソースマネージャ` ダイアログという一意のダイアログを指します。これは "
-":guilabel:`データソースマネージャツールバー` 、または :kbd:`Ctrl + L`を押して使用 |dataSourceManager|"
-"  :sup:`データソースマネージャを開く` ボタンで開くことができます。 :guilabel:`データソースマネージャ` "
-"ダイアログは、ベクタまたはラスタファイルベースのデータや、QGISでサポートされているデータベースやWebサービスを開くための統一されたインターフェイスを提供します。このダイアログは"
-" :guiselect:`設定->オプション->一般`メニューの |checkbox|  "
+"QGISでは、データ形式に応じて、データセットを開くためのさまざまなツールがあります。それらは主に :menuselection:`レイヤ --> "
+"レイヤの追加 -->` メニューまたは :guilabel:`レイヤ管理` ツールバー（ :menuselection:`ビュー --> ツールバー` "
+"メニューで有効にできます）で使用できます。ただし、これらのツールはすべて :guilabel:`データソースマネージャ` "
+"ダイアログというただ一つのダイアログを指しています。このダイアログは :guilabel:`データソースマネージャツールバー` にある "
+"|dataSourceManager| :sup:`データソースマネージャを開く` ボタンを押すか、または :kbd:`Ctrl+L` "
+"を押すと開くことができます。 :guilabel:`データソースマネージャ` "
+"ダイアログは、ベクタ形式またはラスタ形式のファイルベースのデータやデータベース、QGISがサポートするWebサービスを開くための統一されたインターフェイスを提供します。"
+" このダイアログは、 :menuselection:`設定 --> オプション --> 一般` メニューの |checkbox| "
 ":guilabel:`モードレスデータソースマネージャダイアログ` でモーダルに設定したりモードレスに設定できます。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:79
 msgid "QGIS Data Source Manager dialog"
-msgstr ""
+msgstr "QGISのデータソースマネージャダイアログ"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:82
 msgid ""

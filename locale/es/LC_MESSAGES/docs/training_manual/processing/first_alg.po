@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-05 01:57+0200\n"
 "PO-Revision-Date: 2020-03-16 19:21+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -41,12 +42,19 @@ msgid ""
 "we are going to run one of those native algorithms. In particular, we are "
 "going to calculate the centroids of set of polygons."
 msgstr ""
+"Como ya hemos mencionado, el marco de procesamiento puede ejecutar "
+"algoritmos de otras aplicaciones, pero también contiene algoritmos nativos "
+"que no necesitan software externo para ejecutarse. Para comenzar a explorar "
+"el marco de procesamiento, vamos a ejecutar uno de esos algoritmos nativos. "
+"En particular, vamos a calcular los centroides de un conjunto de polígonos."
 
 #: ../../docs/training_manual/processing/first_alg.rst:14
 msgid ""
 "First, open the QGIS project corresponding to this lesson. It contains just "
 "a single layer with two polygons"
 msgstr ""
+"Primero, abra el proyecto QGIS correspondiente a esta lección. Contiene solo"
+" una capa con dos polígonos"
 
 #: ../../docs/training_manual/processing/first_alg.rst:19
 msgid ""
@@ -56,10 +64,16 @@ msgid ""
 "that match your search but belong to a provider that is not active, an "
 "additional label will be shown in the lower part of the toolbox."
 msgstr ""
+"Ahora vaya al cuadro de texto en la parte superior de la caja de "
+"herramientas. Ese es el cuadro de búsqueda, y si escribe texto en él, "
+"filtrará la lista de algoritmos para que solo se muestren los que contienen "
+"el texto introducido. Si hay algoritmos que coinciden con su búsqueda pero "
+"pertenecen a un proveedor que no está activo, se mostrará una etiqueta "
+"adicional en la parte inferior de la caja de herramientas."
 
 #: ../../docs/training_manual/processing/first_alg.rst:25
 msgid "Type ``centroids`` and you should see something like this."
-msgstr ""
+msgstr "Escriba ``centroides`` y debería ver algo como esto."
 
 #: ../../docs/training_manual/processing/first_alg.rst:29
 msgid ""
@@ -71,6 +85,14 @@ msgid ""
 " in light gray. A link to activate each inactive provider is also shown. "
 "We'll see later how to activate other providers."
 msgstr ""
+"El cuadro de búsqueda es una forma muy práctica de encontrar el algoritmo "
+"que está buscando. En la parte inferior del cuadro de diálogo, una etiqueta "
+"adicional muestra que hay algoritmos que coinciden con su búsqueda, pero "
+"pertenecen a un proveedor que no está activo. Si hace clic en el enlace de "
+"esa etiqueta, la lista de algoritmos también incluirá los resultados de esos"
+" proveedores inactivos, que se mostrarán en gris claro. También se muestra "
+"un enlace para activar cada proveedor inactivo. Veremos más adelante cómo "
+"activar otros proveedores."
 
 #: ../../docs/training_manual/processing/first_alg.rst:39
 msgid ""
@@ -78,6 +100,9 @@ msgid ""
 "toolbox. When you double-click on the *Polygon centroids* algorithm, you "
 "will see the following dialog."
 msgstr ""
+"Para ejecutar un algoritmo, solo tiene que hacer doble clic en su nombre en "
+"la caja de herramientas. Cuando haga doble clic en el algoritmo *Centroides "
+"poligonales*, verá el siguiente cuadro de diálogo."
 
 #: ../../docs/training_manual/processing/first_alg.rst:45
 msgid ""
@@ -86,6 +111,10 @@ msgid ""
 "to store. In this case, the only input we have is a vector layer with "
 "polygons."
 msgstr ""
+"Todos los algoritmos tienen una interfaz similar, que básicamente contiene "
+"parámetros de entrada que debe completar y salidas que debe seleccionar "
+"dónde almacenar. En este caso, la única entrada que tenemos es una capa "
+"vectorial con polígonos."
 
 #: ../../docs/training_manual/processing/first_alg.rst:49
 msgid ""
@@ -93,6 +122,10 @@ msgid ""
 "which is the centroids layer. There are two options to define where a data "
 "output is saved: enter a filepath or save it to a temporary filename"
 msgstr ""
+"Seleccione la capa *Polígonos* como entrada. El algoritmo tiene una única "
+"salida, que es la capa de centroides. Hay dos opciones para definir dónde se"
+" guarda una salida de datos: ingresar una ruta de archivo o guardarla en un "
+"nombre de archivo temporal"
 
 #: ../../docs/training_manual/processing/first_alg.rst:53
 msgid ""
@@ -106,6 +139,16 @@ msgid ""
 "file format corresponding to that extension will be used to save the layer "
 "or table."
 msgstr ""
+"En caso de que desee establecer un destino y no guardar el resultado en un "
+"archivo temporal, el formato de la salida se define por la extensión del "
+"nombre del archivo. Para seleccionar un formato, simplemente seleccione la "
+"extensión de archivo correspondiente (o agréguela si en su lugar está "
+"escribiendo directamente la ruta del archivo). Si la extensión de la ruta de"
+" archivo que ingresó no coincide con ninguna de las admitidas, una extensión"
+" predeterminada (generalmente :file:`.dbf` para tablas, :file:`.tif` para "
+"capas ráster y :file:`.shp` para los vectoriales) se agregará a la ruta del "
+"archivo y el formato de archivo correspondiente a esa extensión se utilizará"
+" para guardar la capa o tabla."
 
 #: ../../docs/training_manual/processing/first_alg.rst:62
 msgid ""
@@ -113,6 +156,9 @@ msgid ""
 " file, since there is no need to save them for a later use. Feel free to "
 "save them to a permanent location if you want to."
 msgstr ""
+"En todos los ejercicios de esta guía, guardaremos los resultados en un "
+"archivo temporal, ya que no es necesario guardarlos para un uso posterior. "
+"No dude en guardarlos en una ubicación permanente si lo desea."
 
 #: ../../docs/training_manual/processing/first_alg.rst:66
 msgid ""
@@ -121,16 +167,22 @@ msgid ""
 " you try to open back the project later, since that output file will not "
 "exist."
 msgstr ""
+"Los archivos temporales se eliminan una vez que cierra QGIS. Si crea un "
+"proyecto con una salida que se guardó como salida temporal, QGIS se quejará "
+"cuando intente volver a abrir el proyecto más tarde, ya que ese archivo de "
+"salida no existirá."
 
 #: ../../docs/training_manual/processing/first_alg.rst:71
 msgid ""
 "Once you have configured the algorithm dialog, press :guilabel:`Run` to run "
 "the algorithm."
 msgstr ""
+"Una vez que haya configurado el diálogo del algoritmo, presione "
+":guilabel:`Ejecutar` para ejecutar el algoritmo."
 
 #: ../../docs/training_manual/processing/first_alg.rst:74
 msgid "You will get the following output."
-msgstr ""
+msgstr "Obtendrá el siguiente resultado."
 
 #: ../../docs/training_manual/processing/first_alg.rst:78
 msgid ""
@@ -139,6 +191,11 @@ msgid ""
 " case of some special algorithms (for instance, reprojection ones), the "
 "outputs will also have that same CRS. We will see more about this soon."
 msgstr ""
+"La salida tiene el mismo SRC que la entrada. Geoalgorithms asume que todas "
+"las capas de entrada comparten el mismo SRC y no realizan ninguna "
+"reproyección. Excepto en el caso de algunos algoritmos especiales (por "
+"ejemplo, los de reproyección), las salidas también tendrán ese mismo SRC. "
+"Veremos más sobre esto pronto."
 
 #: ../../docs/training_manual/processing/first_alg.rst:83
 msgid ""
@@ -147,3 +204,7 @@ msgid ""
 " layer to be loaded in QGIS after it is generated, you can check off the "
 "checkbox that is found below the output path box."
 msgstr ""
+"Intente guardarlo usando diferentes formatos de archivo (use, por ejemplo, "
+":file:`shp` y :file:`geojson` como extensiones). Además, si no desea que la "
+"capa se cargue en QGIS después de que se genere, puede marcar la casilla de "
+"verificación que se encuentra debajo del cuadro de ruta de salida."

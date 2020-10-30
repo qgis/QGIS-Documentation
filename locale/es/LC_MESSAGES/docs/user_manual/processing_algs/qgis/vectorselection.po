@@ -29,7 +29,7 @@ msgstr "Selección vectorial"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:14
 msgid "Extract by attribute"
-msgstr "Estraer por atributo"
+msgstr "Extraer por atributo"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:15
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:134
@@ -38,16 +38,21 @@ msgid ""
 "matching features while the second will contain all the non-matching "
 "features."
 msgstr ""
+"Crea dos capas vectoriales a partir de una capa de entrada: una contendrá "
+"solo entidades coincidentes mientras que la segunda contendrá todas las "
+"entidades no coincidentes."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:19
 msgid ""
 "The criteria for adding features to the resulting layer is based on the "
 "values of an attribute from the input layer."
 msgstr ""
+"Los criterios para agregar entidades a la capa resultante se basan en los "
+"valores de un atributo de la capa de entrada."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:22
 msgid ":ref:`qgisselectbyattribute`"
-msgstr ""
+msgstr ":ref:`qgisselectbyattribute`"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:25
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:146
@@ -667,11 +672,16 @@ msgid ""
 "select it the other way around, as it contains a circle completely. This is "
 "the opposite of *are within*."
 msgstr ""
+"Devuelve 1 (verdadero) si y solo si ningún punto de b se encuentra en el "
+"exterior de a, y al menos un punto del interior de b se encuentra en el "
+"interior de a. En la imagen, no se selecciona ningún círculo, pero el "
+"rectángulo lo estaría si lo seleccionara al revés, ya que contiene un "
+"círculo por completo. Esto es lo opuesto a *están dentro de*."
 
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:29
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:29
 msgid "*Disjoint*"
-msgstr ""
+msgstr "*Dividir*"
 
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:28
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:28
@@ -679,11 +689,13 @@ msgid ""
 "Returns 1 (true) if the geometries do not share any portion of space (no "
 "overlap, not touching). Only circle 4 is selected."
 msgstr ""
+"Devuelve 1 (verdadero) si las geometrías no comparten ninguna porción de "
+"espacio (sin superposición, sin tocar). Solo se selecciona el círculo 4."
 
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:33
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:33
 msgid "*Equal*"
-msgstr ""
+msgstr "*Igual*"
 
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:32
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:32
@@ -691,11 +703,13 @@ msgid ""
 "Returns 1 (true) if and only if geometries are exactly the same. No circles "
 "will be selected."
 msgstr ""
+"Devuelve 1 (verdadero) si y solo si las geometrías son exactamente iguales. "
+"No se seleccionarán círculos."
 
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:38
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:38
 msgid "*Touch*"
-msgstr ""
+msgstr "*Tocar*"
 
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:36
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:36
@@ -704,11 +718,14 @@ msgid ""
 " have at least one point in common, but their interiors do not intersect. "
 "Only circle 3 is selected."
 msgstr ""
+"Comprueba si una geometría toca a otra. Devuelve 1 (verdadero) si las "
+"geometrías tienen al menos un punto en común, pero sus interiores no se "
+"cruzan. Solo se selecciona el círculo 3."
 
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:43
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:43
 msgid "*Overlap*"
-msgstr ""
+msgstr "*Superponer*"
 
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:41
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:41
@@ -717,11 +734,14 @@ msgid ""
 "geometries share space, are of the same dimension, but are not completely "
 "contained by each other. Only circle 2 is selected."
 msgstr ""
+"Comprueba si una geometría se superpone a otra. Devuelve 1 (verdadero) si "
+"las geometrías comparten espacio, son de la misma dimensión, pero no están "
+"completamente contenidas entre sí. Solo se selecciona el círculo 2."
 
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:47
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:47
 msgid "*Are within*"
-msgstr ""
+msgstr "*Están dentro*"
 
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:46
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:46
@@ -729,11 +749,14 @@ msgid ""
 "Tests whether a geometry is within another. Returns 1 (true) if geometry a "
 "is completely inside geometry b. Only circle 1 is selected."
 msgstr ""
+"Comprueba si una geometría está dentro de otra. Devuelve 1 (verdadero) si la"
+" geometría a está completamente dentro de la geometría b. Solo se selecciona"
+" el círculo 1."
 
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:55
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:55
 msgid "*Cross*"
-msgstr ""
+msgstr "*Cruza*"
 
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:50
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:50
@@ -744,6 +767,12 @@ msgid ""
 " as a line (selected). Two lines crossing will cross as a point (selected). "
 "Two polygons cross as a polygon (not selected)."
 msgstr ""
+"Devuelve 1 (verdadero) si las geometrías proporcionadas tienen algunos "
+"puntos interiores en común, pero no todos, y el cruce real es de una "
+"dimensión menor que la geometría proporcionada más alta. Por ejemplo, una "
+"línea que cruza un polígono se cruzará como una línea (seleccionada). Dos "
+"líneas que se cruzan se cruzarán como un punto (seleccionado). Dos polígonos"
+" se cruzan como un polígono (no seleccionado)."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:240
 msgid ":ref:`qgisselectbylocation`"
@@ -751,12 +780,12 @@ msgstr ":ref:`qgisselectbylocation`"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:254
 msgid "**Extract features from**"
-msgstr ""
+msgstr "*Extraer entidades de*"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:258
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:865
 msgid "**Where the features (geometric predicate)**"
-msgstr ""
+msgstr "**Donde las entidades (predicado geométrico)**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:259
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:866
@@ -766,7 +795,7 @@ msgstr "``PREDICATE``"
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:260
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:867
 msgid "[enumeration] [list]"
-msgstr "[enumeration] [list]"
+msgstr "[enumeració] [lista]"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:262
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:869
@@ -776,47 +805,47 @@ msgstr "Preestablecido: [0]"
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:263
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:870
 msgid "Spatial condition for the selection. One or more of:"
-msgstr ""
+msgstr "Condición espacial para la selección. Una o mas de:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:266
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:873
 msgid "0 --- intersect"
-msgstr ""
+msgstr "0 --- intersecta"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:267
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:874
 msgid "1 --- contain"
-msgstr ""
+msgstr "1 --- contiene"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:268
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:875
 msgid "2 --- disjoint"
-msgstr ""
+msgstr "2 --- dividir"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:269
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:876
 msgid "3 --- equal"
-msgstr ""
+msgstr "3 --- igual"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:270
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:877
 msgid "4 --- touch"
-msgstr ""
+msgstr "4 --- toca"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:271
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:878
 msgid "5 --- overlap"
-msgstr ""
+msgstr "5 --- superpone"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:272
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:879
 msgid "6 --- are within"
-msgstr ""
+msgstr "6 --- esta dentro"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:273
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:880
 msgid "7 --- cross"
-msgstr ""
+msgstr "7 --- cruza"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:275
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:882
@@ -824,11 +853,13 @@ msgid ""
 "If more than one condition is chosen, at least one of them (OR operation) "
 "has to be met for a feature to be extracted."
 msgstr ""
+"Si se elige más de una condición, al menos una de ellas (operación OR) debe "
+"cumplirse para que se extraiga una entidad."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:278
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:885
 msgid "**By comparing to the features from**"
-msgstr ""
+msgstr "*Comparar con las entidades de*"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:279
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:886
@@ -838,12 +869,12 @@ msgstr "``INTERSECT``"
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:281
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:888
 msgid "Intersection vector layer"
-msgstr ""
+msgstr "Capa vectorial intersección"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:282
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:308
 msgid "**Extracted (location)**"
-msgstr ""
+msgstr "**Extraida (localización)**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:286
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:374
@@ -857,20 +888,26 @@ msgid ""
 "spatial relationship(s) with one or more features in the comparison layer. "
 "One of:"
 msgstr ""
+"Especifique la capa del vector de salida para las entidades que tienen la "
+"relacion(es) espacial elegida con una o más entidades en la capa de "
+"comparación. Una de:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:311
 msgid ""
 "Vector layer with features from the input layer that have the chosen spatial"
 " relationship(s) with one or more features in the comparison layer."
 msgstr ""
+"Capa vectorial con entidades de la capa de entrada que tienen las "
+"relacion(es) espacial elegida con una o más entidades en la capa de "
+"comparación."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:318
 msgid "**Algorithm ID**: ``qgis:extractbylocation``"
-msgstr ""
+msgstr "**Algoritmo ID**: ``qgis:extractbylocation``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:328
 msgid "Random extract"
-msgstr ""
+msgstr "Extracción aleatoria"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:329
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:417
@@ -878,6 +915,8 @@ msgid ""
 "Takes a vector layer and generates a new one that contains only a subset of "
 "the features in the input layer."
 msgstr ""
+"Toma una capa vectorial y genera una nueva que contiene solo un subconjunto "
+"de las entidades en la capa de entrada."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:332
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:515
@@ -886,6 +925,9 @@ msgid ""
 "The subset is defined randomly, based on feature IDs, using a percentage or "
 "count value to define the total number of features in the subset."
 msgstr ""
+"El subconjunto se define de forma aleatoria, en función de los ID de "
+"entidades, utilizando un porcentaje o valor de recuento para definir el "
+"número total de características en el subconjunto."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:336
 msgid ":ref:`qgisrandomselection`"
@@ -893,7 +935,7 @@ msgstr ":ref:`qgisrandomselection`"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:353
 msgid "Source vector layer to select the features from"
-msgstr ""
+msgstr "Capa vectorial fuente de la que seleccionar entidades"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:354
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:449
@@ -910,32 +952,32 @@ msgstr "**Methodo**"
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:793
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:890
 msgid "``METHOD``"
-msgstr "``METHODO``"
+msgstr "``METHOD``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:359
 msgid "Random selection methods. One of:"
-msgstr ""
+msgstr "Métodos de selección aleatoria. Uno de:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:361
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:456
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:545
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:630
 msgid "0 --- Number of selected features"
-msgstr ""
+msgstr "0 --- Número de entidades seleccionadas"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:362
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:457
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:546
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:631
 msgid "1 --- Percentage of selected features"
-msgstr ""
+msgstr "1 --- Porcentaje de entidades seleccionadas"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:364
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:459
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:548
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:633
 msgid "**Number/percentage of selected features**"
-msgstr ""
+msgstr "**Número/porcentaje de entidades seleccionadas**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:365
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:460
@@ -963,36 +1005,41 @@ msgstr "Predeterminado: 10"
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:553
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:638
 msgid "Number or percentage of features to select"
-msgstr ""
+msgstr "Número o porcentaje de entidades a seleccionar"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:370
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:397
 msgid "**Extracted (random)**"
-msgstr ""
+msgstr "**Extraida (aleatorio)**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:375
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:470
 msgid ""
 "Specify the output vector layer for the randomly selected features. One of:"
 msgstr ""
+"Especifica la capa vectorial saliente para las entidades seleccionadas "
+"aleatoriamente. una de:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:384
 msgid "Vector layer containing randomly selected features"
 msgstr ""
+"Capa vectorial contenedora de las entidades seleccionadas aleatoriamente"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:400
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:495
 msgid ""
 "Vector layer containing randomly selected features from the input layer"
 msgstr ""
+"Capa vectorial contenedora de las entidades  seleccionadas aleatoriamente a "
+"partir de la capa de entrada"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:406
 msgid "**Algorithm ID**: ``qgis:randomextract``"
-msgstr ""
+msgstr "**Algoritmo ID**: ``qgis:randomextract``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:416
 msgid "Random extract within subsets"
-msgstr ""
+msgstr "Extracto aleatorio dentro de subconjuntos"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:420
 msgid ""
@@ -1001,6 +1048,11 @@ msgid ""
 "percentage/count value is not applied to the whole layer, but instead to "
 "each category. Categories are defined according to a given attribute."
 msgstr ""
+"El subconjunto se define de forma aleatoria, en función de los ID de "
+"entidades, utilizando un porcentaje o valor de recuento para definir el "
+"número total de entidades en el subconjunto. El valor de porcentaje/recuento"
+" no se aplica a toda la capa, sino a cada categoría. Las categorías se "
+"definen según un atributo determinado."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:427
 msgid ":ref:`qgisrandomselectionwithinsubsets`"
@@ -1008,31 +1060,32 @@ msgstr ":ref:`qgisrandomselectionwithinsubsets`"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:444
 msgid "Vector layer to select the features from"
-msgstr ""
+msgstr "Capa vectorial de la cuál seleccionar las entidades"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:445
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:619
 msgid "**ID field**"
-msgstr ""
+msgstr "**Campo ID**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:448
 msgid "Category of the source vector layer to select the features from"
 msgstr ""
+"Categoría de la capa vectorial fuente de la que seleccionar las entidades"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:454
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:543
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:628
 msgid "Random selection method. One of:"
-msgstr ""
+msgstr "Método de selección aleatorio. Uno de:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:465
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:492
 msgid "**Extracted (random stratified)**"
-msgstr ""
+msgstr "**Extraido (estratificado aleatorio)**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:501
 msgid "**Algorithm ID**: ``qgis:randomextractwithinsubsets``"
-msgstr ""
+msgstr "**Algoritmo ID**: ``qgis:randomextractwithinsubsets``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:511
 msgid "Random selection"
@@ -1044,22 +1097,24 @@ msgid ""
 "Takes a vector layer and selects a subset of its features. No new layer is "
 "generated by this algorithm."
 msgstr ""
+"Toma una capa vectorial y selecciona un subconjunto de sus entidades. Este "
+"algoritmo no genera una nueva capa."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:519
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:600
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:845
 msgid "**Default menu**: :menuselection:`Vector --> Research Tools`"
 msgstr ""
-"**menú predeterminado**: :menuselection:`Vector --> Herramientas de "
+"**menú predeterminado**: :menuselection:`Vectorial --> Herramientas de "
 "Investigación`"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:521
 msgid ":ref:`qgisrandomextract`"
-msgstr ""
+msgstr ":ref:`qgisrandomextract`"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:537
 msgid "Vector layer for the selection"
-msgstr ""
+msgstr "Capa vectorial para la selección"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:569
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:654
@@ -1067,130 +1122,139 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:819
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:916
 msgid "The input layer with features selected"
-msgstr ""
+msgstr "La capa entrante con las entidades seleccionadas"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:574
 msgid "**Algorithm ID**: ``qgis:randomselection``"
-msgstr ""
+msgstr "**Algoritmo ID**: ``qgis:randomselection``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:584
 msgid "Random selection within subsets"
-msgstr ""
+msgstr "Selección aleatoria con subconjuntos"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:592
 msgid ""
 "The percentage/count value is not applied to the whole layer, but instead to"
 " each category."
 msgstr ""
+"El valor porcentaje/recuento no se aplica a toda la capa, sino a cada "
+"categoría."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:595
 msgid ""
 "Categories are defined according to a given attribute, which is also "
 "specified as an input parameter for the algorithm."
 msgstr ""
+"Las categorías se definen de acuerdo con un atributo dado, que también se "
+"especifica como un parámetro de entrada para el algoritmo."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:598
 msgid "No new outputs are created."
-msgstr ""
+msgstr "No se crean nuevas salidas."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:602
 msgid ":ref:`qgisrandomextractwithinsubsets`"
-msgstr ""
+msgstr ":ref:`qgisrandomextractwithinsubsets`"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:618
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:692
 msgid "Vector layer to select features in"
-msgstr ""
+msgstr "Capa vectorial en la que seleccionar entidades"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:622
 msgid "Category of the input layer to select the features from"
-msgstr ""
+msgstr "Categoría de la capa entrante de la que seleccionar entidades"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:659
 msgid "**Algorithm ID**: ``qgis:randomselectionwithinsubsets``"
-msgstr ""
+msgstr "**Algoritmo ID**: ``qgis:randomselectionwithinsubsets``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:669
 msgid "Select by attribute"
-msgstr ""
+msgstr "Seleccionar por atributo"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:670
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:765
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:835
 msgid "Creates a selection in a vector layer."
-msgstr ""
+msgstr "Crea una selección en una capa vectorial."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:672
 msgid ""
 "The criteria for selecting features is based on the values of an attribute "
 "from the input layer."
 msgstr ""
+"Los criterios para seleccionar entidades se basan en los valores de un "
+"atributo de la capa de entrada."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:675
 msgid ":ref:`qgisextractbyattribute`"
-msgstr ""
+msgstr ":ref:`qgisextractbyattribute`"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:722
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:792
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:889
 msgid "**Modify current selection by**"
-msgstr ""
+msgstr "**Modificar selección actual por**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:727
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:797
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:894
 msgid "How the selection of the algorithm should be managed. One of:"
-msgstr ""
+msgstr "Como se debe administrar la selección del algoritmo. Uno de:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:730
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:800
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:897
 msgid "0 --- creating new selection"
-msgstr ""
+msgstr "0 --- crear nueva selección"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:731
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:801
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:898
 msgid "1 --- adding to current selection"
-msgstr ""
+msgstr "1 --- añadir a la selección actual"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:732
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:802
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:899
 msgid "2 --- selecting within current selection"
-msgstr ""
+msgstr "2 --- seleccionar dentro de la selección actual"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:733
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:803
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:900
 msgid "3 --- removing from current selection"
-msgstr ""
+msgstr "3 --- borrar de la selección actual"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:754
 msgid "**Algorithm ID**: ``qgis:selectbyattribute``"
-msgstr ""
+msgstr "**Algoritmo ID**: ``qgis:selectbyattribute``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:764
 msgid "Select by expression"
-msgstr ""
+msgstr "Seleccionar por expresión"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:767
 msgid ""
 "The criteria for selecting features is based on a QGIS expression. For more "
 "information about expressions see the :ref:`vector_expressions`."
 msgstr ""
+"Los criterios para seleccionar entidades se basan en una expresión QGIS. "
+"Para obtener más información sobre las expresiones, consulte "
+":ref:`vector_expressions`."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:771
 msgid ":ref:`qgisextractbyexpression`"
-msgstr ""
+msgstr ":ref:`qgisextractbyexpression`"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:791
 msgid "Expression to filter the input layer"
-msgstr ""
+msgstr "Expresión para filtrar la capa entrante"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:824
 msgid "**Algorithm ID**: ``qgis:selectbyexpression``"
-msgstr ""
+msgstr "**Algoritmo ID**: ``qgis:selectbyexpression``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:834
 msgid "Select by location"
@@ -1201,15 +1265,17 @@ msgid ""
 "The criteria for selecting features is based on the spatial relationship "
 "between each feature and the features in an additional layer."
 msgstr ""
+"Los criterios para seleccionar entidades se basan en la relación espacial "
+"entre cada entidad y las entidades en una capa adicional."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:847
 msgid ":ref:`qgisextractbylocation`"
-msgstr ""
+msgstr ":ref:`qgisextractbylocation`"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:861
 msgid "**Select features from**"
-msgstr ""
+msgstr "**Seleccionar entidades de**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:921
 msgid "**Algorithm ID**: ``qgis:selectbylocation``"
-msgstr ""
+msgstr "**Algoritmo ID**: ``qgis:selectbylocation``"

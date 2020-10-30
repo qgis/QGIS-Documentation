@@ -3,6 +3,9 @@
 # This file is distributed under the same license as the QGIS Documentation package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -10,6 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-05 01:57+0200\n"
 "PO-Revision-Date: 2020-03-16 19:32+0000\n"
+"Last-Translator: Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,7 +23,7 @@ msgstr ""
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:5
 msgid "Offline Editing Plugin"
-msgstr ""
+msgstr "Complemento de Edición Fuera de Línea"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:7
 msgid ""
@@ -30,6 +34,13 @@ msgid ""
 "datasets, it is difficult to merge the edits by hand, even if people don’t "
 "change the same features."
 msgstr ""
+"Para la recopilación de datos, es situación común trabajar con una "
+"computadora portátil o un teléfono celular fuera de línea en el campo. Al "
+"regresar a la red, los cambios deben sincronizarse con la fuente de datos "
+"maestra (por ejemplo, una base de datos PostGIS). Si varias personas están "
+"trabajando simultáneamente en los mismos conjuntos de datos, es difícil "
+"fusionar las ediciones manualmente, incluso si las personas no cambian las "
+"mismas entidades."
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:13
 msgid ""
@@ -39,16 +50,24 @@ msgid ""
 "to dedicated tables. After being connected to the network again, it is "
 "possible to apply the offline edits to the master dataset."
 msgstr ""
+"El compemento |offlineEditingCopy| :sup:`Edición fuera de línea` automatiza "
+"la sincronización copiando el contenido de una fuente de datos (generalmente"
+" PostGIS o WFS-T) a una base de datos SpatiaLite o GeoPackage y almacenando "
+"las ediciones fuera de línea en tablas dedicadas. Después de volver a "
+"conectarse a la red, es posible aplicar las ediciones fuera de línea al "
+"conjunto de datos maestro."
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:19
 msgid "To use the plugin:"
-msgstr ""
+msgstr "Para usar el complemento:"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:21
 msgid ""
 "Open a project with some vector layers (e.g., from a PostGIS or WFS-T "
 "datasource)."
 msgstr ""
+"Abra un proyecto con algunas capas vectoriales (p.ej. de una fuente de datos"
+" de PostGOS o WFS-T)."
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:22
 msgid ""
@@ -57,12 +76,18 @@ msgid ""
 " Editing -->` |offlineEditingCopy| :guilabel:`Convert to offline project`. "
 "The eponym dialog opens."
 msgstr ""
+"Suponiendo que ya ha habilitado el complemento (ver "
+":ref:`core_and_external_plugins`) vaya a :menuselection:`Base de datos -> "
+"Edición sin conexión -> `|offlineEditingCopy| :guilabel:`Convertir a "
+"proyecto fuera de línea`. Se abre el cuadro de diálogo del epónimo."
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:25
 msgid ""
 "Select the :guilabel:`Storage type`. It can be of :guilabel:`GeoPackage` or "
 ":guilabel:`SpatiaLite` database type."
 msgstr ""
+"Seleccione :guilabel:`Tipo de almacenamiento`. Puede ser del tipo de base de"
+" datos :guilabel:`GeoPackage` o :guilabel:`SpatiaLite`."
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:27
 msgid ""
@@ -70,12 +95,18 @@ msgid ""
 "in which to store the :guilabel:`Offline data`. It can be an existing file "
 "or one to create."
 msgstr ""
+"Utilice el botón :guilabel:`Examinar` para indicar la ubicación de la base "
+"de datos en la que almacenar :guilabel:ʻDatos fuera de línea`. Puede ser un "
+"archivo existente o uno para crear."
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:30
 msgid ""
 "In the :guilabel:`Select remote layers` section, check the layers you'd like"
 " to save. The content of the layers is saved to database tables."
 msgstr ""
+"En la sección :guilabel:`Seleccionar capas remotas`, marque las capas que "
+"desea guardar. El contenido de las capas se guarda en tablas de la base de "
+"datos."
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:32
 msgid ""
@@ -83,18 +114,21 @@ msgid ""
 "selection is present` allowing to only save and work on a subset. It can be "
 "invaluable in case of large layers."
 msgstr ""
+"Puede marcar |checkbox| :guilabel:ʻSolo sincroniza las entidades "
+"seleccionadas si hay una selección presente` permitiendo guardar y trabajar "
+"solo en un subconjunto. Puede ser inestimable en caso de capas grandes."
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:36
 msgid "This is all!"
-msgstr ""
+msgstr "¡Esto es todo!"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:37
 msgid "Save your project and bring it on the field."
-msgstr ""
+msgstr "Guarde su proyecto y llévelo al campo."
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:38
 msgid "Edit the layers offline."
-msgstr ""
+msgstr "Edite las capas sin conexión."
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:39
 msgid ""
@@ -102,7 +136,10 @@ msgid ""
 ":menuselection:`Database --> Offline Editing -->` |offlineEditingSync| "
 ":guilabel:`Synchronize`."
 msgstr ""
+"Después de conectarse nuevamente, cargue los cambios usando "
+":menuselection:`Database -> Edición Fuera de Línea ->` |offlineEditingSync| "
+":guilabel:`Sincronizar`."
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:47
 msgid "Create an offline project"
-msgstr ""
+msgstr "Crea un proyecto sin conexión"

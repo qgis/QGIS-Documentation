@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-05 01:57+0200\n"
 "PO-Revision-Date: 2020-03-16 19:21+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,6 +31,8 @@ msgid ""
 "In this lesson we will see another example of spatial data preparation, to "
 "continue using geoalgorithms in real-world scenarios."
 msgstr ""
+"En esta lección veremos otro ejemplo de preparación de datos espaciales, "
+"para continuar usando geoalgoritmos en escenarios del mundo real."
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:7
 msgid ""
@@ -40,26 +43,36 @@ msgid ""
 "you open the project corresponding to this lesson, you will see something "
 "like this."
 msgstr ""
+"Para esta lección, vamos a calcular una capa de pendiente para un área que "
+"rodea el área de una ciudad, que se da en una capa vectorial con un solo "
+"polígono. El MDE base se divide en dos capas ráster que, juntas, cubren un "
+"área mucho mayor que la que rodea la ciudad con la que queremos trabajar. Si"
+" abre el proyecto correspondiente a esta lección, verá algo como esto."
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:16
 msgid "These layers have two problems:"
-msgstr ""
+msgstr "Estas capas tienen dos problemas:"
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:18
 msgid ""
 "They cover an area that is too large for what we want (we are interested in "
 "a smaller region around the city center)"
 msgstr ""
+"Cubren un área que es demasiado grande para lo que queremos (estamos "
+"interesados en una región más pequeña alrededor del centro de la ciudad)"
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:20
 msgid ""
 "They are in two different files (the city limits fall into just one single "
 "raster layer, but, as it's been said, we want some extra area around it)."
 msgstr ""
+"Están en dos archivos diferentes (los límites de la ciudad caen en una sola "
+"capa ráster, pero, como se ha dicho, queremos un área adicional a su "
+"alrededor)."
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:23
 msgid "Both of them are easily solvable with the appropriate geoalgorithms."
-msgstr ""
+msgstr "Ambos se pueden resolver fácilmente con los geoalgoritmos adecuados."
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:25
 msgid ""
@@ -68,28 +81,40 @@ msgid ""
 "the city area, and then we buffer it, so as to have a raster layer that "
 "covers a bit more that the strictly necessary."
 msgstr ""
+"Primero, creamos un rectángulo que define el área que queremos. Para "
+"hacerlo, creamos una capa que contiene el cuadro delimitador de la capa con "
+"los límites del área de la ciudad, y luego lo almacenamos en búfer, para "
+"tener una capa ráster que cubra un poco más de lo estrictamente necesario."
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:30
 msgid ""
 "To calculate the bounding box , we can use the *Polygon from layer extent* "
 "algorithm"
 msgstr ""
+"Para calcular el cuadro delimitador, podemos usar el algoritmo *Polígono de "
+"extensión de capa*"
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:34
 msgid ""
 "To buffer it, we use the *Fixed distance buffer* algorithm, with the "
 "following parameter values."
 msgstr ""
+"Para amortiguarlo, utilizamos el algoritmo *Búfer de distancia fija*, con "
+"los siguientes valores de parámetro."
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:38
 msgid ""
 "Syntax changed in recent versions; set both Distance and Arc vertex to .25"
 msgstr ""
+"La sintaxis cambió en versiones recientes; establezca la distancia y vértice"
+" del arco a .25"
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:40
 msgid ""
 "Here is the resulting bounding box obtained using the parameters shown above"
 msgstr ""
+"Aquí está el cuadro delimitador resultante obtenido usando los parámetros "
+"que se muestran arriba"
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:44
 msgid ""
@@ -98,6 +123,11 @@ msgid ""
 " have buffered the city limits first, and then calculate the extent "
 "rectangle, saving one step."
 msgstr ""
+"Es un cuadro redondeado, pero podemos obtener fácilmente el cuadro "
+"equivalente con ángulos cuadrados, ejecutando el algoritmo *Polígono desde "
+"extensión de capa* en él. Primero podríamos haber almacenado en búfer los "
+"límites de la ciudad y luego calcular el rectángulo de extensión, ahorrando "
+"un paso."
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:50
 msgid ""
@@ -105,12 +135,17 @@ msgid ""
 " We should therefore reproject them before proceeding further, using the "
 "*Warp (reproject)* tool."
 msgstr ""
+"Notará que los rásteres tienen una proyección diferente a la del vector. Por"
+" lo tanto, deberíamos reproyectarlos antes de continuar, usando la "
+"herramienta *Warp(reproject)*."
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:56
 msgid ""
 "Recent versions have a more complex interface. Make sure at least one "
 "compression method is selected."
 msgstr ""
+"Las versiones recientes tienen una interfaz más compleja. Asegúrese de "
+"seleccionar al menos un método de compresión."
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:59
 msgid ""
@@ -118,12 +153,17 @@ msgid ""
 "want to obtain, we can crop both of the raster layers, using the *Clip "
 "raster with polygon* algorithm."
 msgstr ""
+"Con esta capa que contiene el cuadro delimitador de la capa ráster que "
+"queremos obtener, podemos recortar ambas capas ráster, usando el algoritmo "
+"*Recortar ráster con polígono*."
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:65
 msgid ""
 "Once the layers have been cropped, they can be merged using the GDAL *Merge*"
 " algorithm."
 msgstr ""
+"Una vez que se han recortado las capas, se pueden fusionar utilizando el "
+"algoritmo GDAL *Mezclar*."
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:69
 msgid ""
@@ -136,14 +176,22 @@ msgid ""
 "automate that operation. In this example, we just have two layers, so you "
 "shouldn't worry about that now."
 msgstr ""
+"Puede ahorrar tiempo fusionando primero y luego recortando, y evitará llamar"
+" dos veces al algoritmo de recorte. Sin embargo, si hay varias capas para "
+"fusionar y tienen un tamaño bastante grande, terminará con una capa más "
+"grande que luego puede ser difícil de procesar. En ese caso, es posible que "
+"tenga que llamar al algoritmo de recorte varias veces, lo que puede llevar "
+"mucho tiempo, pero no se preocupe, pronto veremos que hay algunas "
+"herramientas adicionales para automatizar esa operación. En este ejemplo, "
+"solo tenemos dos capas, por lo que no debería preocuparse por eso ahora."
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:77
 msgid "With that, we get the final DEM we want."
-msgstr ""
+msgstr "Con eso, obtenemos el MDE final que queremos."
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:81
 msgid "Now it is time to compute the slope layer."
-msgstr ""
+msgstr "Ahora es el momento de calcular la capa de pendiente."
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:83
 msgid ""
@@ -155,14 +203,23 @@ msgid ""
 "again. We reproject into a CRS with meters as units (e.g. 3857), so we can "
 "then correctly calculate the slope, with either SAGA or GDAL."
 msgstr ""
+"Una capa de pendiente se puede calcular con el algoritmo *Pendiente, "
+"Aspecto, Curvatura*, pero el MDE obtenido en el último paso no es adecuado "
+"como entrada, ya que los valores de elevación están en metros pero el tamaño"
+" de celda no se expresa en metros (la capa usa un SRC con coordenadas "
+"geográficas). Se necesita una reproyección. Para reproyectar una capa "
+"ráster, el algoritmo *Warp (reproyectar)* se puede usar nuevamente. "
+"Reproyectamos en un SRC con metros como unidades (por ejemplo, 3857), para "
+"que luego podamos calcular correctamente la pendiente, ya sea con SAGA o "
+"GDAL."
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:91
 msgid "With the new DEM, slope can now be computed."
-msgstr ""
+msgstr "Con el nuevo MDE, ahora se puede calcular la pendiente."
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:95
 msgid "And here is the resulting slope layer."
-msgstr ""
+msgstr "Y aquí está la capa de pendiente resultante."
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:99
 msgid ""
@@ -173,12 +230,20 @@ msgid ""
 "that algorithm existed, you could use the raster calculator that we have "
 "already used)."
 msgstr ""
+"La pendiente producida por el algoritmo *Pendiente, Aspecto, Curvatura* se "
+"puede expresar en grados o radianes; Los grados son una unidad más práctica "
+"y común. En caso de que lo hayas calculado en radianes, el algoritmo "
+"*Conversiones métricas* nos ayudará a hacer la conversión (pero en caso de "
+"que no supieras que existía el algoritmo, puedes usar la calculadora ráster "
+"que ya hemos usado)."
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:107
 msgid ""
 "Reprojecting the converted slope layer back with the *Reproject raster "
 "layer*, we get the final layer we wanted."
 msgstr ""
+"Al volver a proyectar la capa de pendiente convertida con la *Reproyectar "
+"capa ráster*, obtenemos la capa final que queríamos."
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:110
 msgid "todo: Add image"
@@ -190,3 +255,7 @@ msgid ""
 " outside the bounding box that we calculated in one of the first steps. This"
 " can be solved by clipping it again, as we did to obtain the base DEM."
 msgstr ""
+"Los procesos de reproyección pueden haber causado que la capa final contenga"
+" datos fuera del cuadro delimitador que calculamos en uno de los primeros "
+"pasos. Esto se puede solucionar recortándolo de nuevo, como hicimos para "
+"obtener el MDE base."

@@ -105,6 +105,13 @@ msgid ""
 "before the task is started. Attempting to use them from background threads "
 "will result in crashes."
 msgstr ""
+"Cualquier tarea en segundo plano (independientemente de cómo se cree) NUNCA "
+"debe usar ningún QObject que viva en el hilo principal, como acceder a "
+"QgsVectorLayer, QgsProject o realizar cualquier operación basada en GUI como"
+" crear nuevos widgets o interactuar con widgets existentes. Solo se debe "
+"acceder o modificar los widgets de Qt desde el hilo principal. Los datos que"
+" se utilizan en una tarea se deben copiar antes de iniciar la tarea. "
+"Intentar utilizarlos desde subprocesos en segundo plano provocará bloqueos."
 
 #: ../../docs/pyqgis_developer_cookbook/tasks.rst:97
 msgid ""

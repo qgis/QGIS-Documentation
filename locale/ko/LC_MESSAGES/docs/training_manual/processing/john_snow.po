@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"POT-Creation-Date: 2020-10-14 22:11+0200\n"
 "PO-Revision-Date: 2020-03-16 19:22+0000\n"
 "Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
@@ -63,23 +63,20 @@ msgstr ""
 
 #: ../../docs/training_manual/processing/john_snow.rst:15
 msgid ""
-"The first thing to do is to calculting the Voronoi diagram (a.k.a. Thyessen "
+"The first thing to do is to calculate the Voronoi diagram (a.k.a. Thiessen "
 "polygons) of the pumps layer, to get the influence zone of each pump. The "
 "*Voronoi Diagram* algorithm can be used for that."
 msgstr ""
-"먼저 :guilabel:`Pumps` 레이어의 보로노이 다이어그램(Voronoi diagram, 일명 티센(Thyessen) 폴리곤)을 "
-"계산해서 각 펌프의 영향 범위를 계산해야 합니다. 이 작업에 :guilabel:`Voronoi Diagram` 알고리듬을 사용할 수 "
-"있습니다."
 
-#: ../../docs/training_manual/processing/john_snow.rst:20
+#: ../../docs/training_manual/processing/john_snow.rst:22
 msgid "Pretty easy, but it will already give us interesting information."
 msgstr "꽤 쉬운 작업이지만, 벌써 흥미로운 정보를 알려주고 있습니다."
 
-#: ../../docs/training_manual/processing/john_snow.rst:24
+#: ../../docs/training_manual/processing/john_snow.rst:26
 msgid "Clearly, most cases are within one of the polygons"
 msgstr "명백히 보이듯이, 폴리곤 중 하나 안에 사망자 대부분이 존재합니다."
 
-#: ../../docs/training_manual/processing/john_snow.rst:26
+#: ../../docs/training_manual/processing/john_snow.rst:28
 msgid ""
 "To get a more quantitative result, we can count the number of deaths in each"
 " polygon. Since each point represents a building where deaths occured, and "
@@ -91,7 +88,7 @@ msgstr ""
 " 포인트의 속성에 저장돼 있으므로, 그냥 포인트만 세어서는 안 됩니다. 숫자에 가중치를 부여해야 하므로, :guilabel:`Count "
 "points in polygon (weighted)` 도구를 사용할 것입니다."
 
-#: ../../docs/training_manual/processing/john_snow.rst:30
+#: ../../docs/training_manual/processing/john_snow.rst:32
 msgid ""
 "The new field will be called *DEATHS*, and we use the *COUNT* field as "
 "weighting field. The resulting table clearly reflects that the number of "
@@ -102,7 +99,7 @@ msgstr ""
 "그 결과 생성되는 테이블은 첫 번째 펌프에 해당하는 폴리곤에서의 사망자 수가 다른 폴리곤들보다 훨씬 많다는 사실을 분명히 반영하고 "
 "있습니다."
 
-#: ../../docs/training_manual/processing/john_snow.rst:34
+#: ../../docs/training_manual/processing/john_snow.rst:36
 msgid ""
 "Another good way of visualizing the dependence of each point in the "
 "``Cholera_deaths`` layer with a point in the ``Pumps`` layer is to draw a "
@@ -110,11 +107,11 @@ msgid ""
 " tool, and using the configuration shown next."
 msgstr ""
 
-#: ../../docs/training_manual/processing/john_snow.rst:38
+#: ../../docs/training_manual/processing/john_snow.rst:40
 msgid "The result looks like this:"
 msgstr "결과는 다음과 같습니다."
 
-#: ../../docs/training_manual/processing/john_snow.rst:42
+#: ../../docs/training_manual/processing/john_snow.rst:44
 msgid ""
 "Although the number of lines is larger in the case of the central pump, do "
 "not forget that this does not represent the number of deaths, but the number"
@@ -125,7 +122,7 @@ msgstr ""
 "중앙에 있는 펌프의 라인 개수가 가장 많지만, 이것은 사망자 수가 아니라 콜레라가 발생한 위치의 개수라는 점을 잊어서는 안 됩니다. 분명"
 " 결과를 대표할 수 있는 파라미터이긴 하지만 일부 위치의 사망자 수가 다른 곳보다 더 많을 수 있다는 사실을 고려하지 않고 있습니다."
 
-#: ../../docs/training_manual/processing/john_snow.rst:44
+#: ../../docs/training_manual/processing/john_snow.rst:46
 msgid ""
 "A density layer will also give us a very clear view of what is happening. We"
 " can create it with the *Kernel density* algorithm. Using the "
@@ -138,7 +135,7 @@ msgstr ""
 ":guilabel:`COUNT` 필드를 사용하고, 반경을 100으로 설정한 다음 :kbd:`streets` 래스터 레이어의 범위 및 셀 "
 "크기를 사용하면 다음과 같은 결과를 얻을 수 있습니다."
 
-#: ../../docs/training_manual/processing/john_snow.rst:48
+#: ../../docs/training_manual/processing/john_snow.rst:50
 msgid ""
 "Remember that, to get the output extent, you do not have to type it. Click "
 "on the button on the right-hand side and select *Use layer/canvas extent*."
@@ -146,7 +143,7 @@ msgstr ""
 "산출물의 범위를 설정하기 위해 직접 입력할 필요가 없다는 사실을 기억하십시오. :guilabel:`Output extent...` 항목 "
 "오른쪽에 있는 버튼을 클릭한 다음 :guilabel:`Use layer/canvas extent` 를 선택하면 됩니다."
 
-#: ../../docs/training_manual/processing/john_snow.rst:52
+#: ../../docs/training_manual/processing/john_snow.rst:54
 msgid ""
 "Select the streets raster layer and its extent will be automatically added "
 "to the text field. You must do the same with the cellsize, selecting the "
@@ -155,7 +152,7 @@ msgstr ""
 "그리고 도로 래스터 레이어를 선택하면 해당 레이어의 범위가 자동적으로 텍스트 란에 채워질 것입니다. 셀 크기도 동일한 방법으로, 해당 "
 "레이어의 셀 크기를 선택해서 설정해야 합니다."
 
-#: ../../docs/training_manual/processing/john_snow.rst:54
+#: ../../docs/training_manual/processing/john_snow.rst:56
 msgid ""
 "Combining with the pumps layer, we see that there is one pump clearly in the"
 " hotspot where the maximum density of death cases is found."

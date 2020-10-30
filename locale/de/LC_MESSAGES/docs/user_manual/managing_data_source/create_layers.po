@@ -85,6 +85,11 @@ msgid ""
 "toolbar. The :guilabel:`New GeoPackage Layer` dialog will be displayed as "
 "shown in figure_create_geopackage_."
 msgstr ""
+"Um einen neuen GeoPackage-Layer zu erstellen, drücken Sie die Schaltfläche "
+"|newGeoPackageLayer| :menuselection:`Neuer GeoPackage Layer...` im Menü "
+":menuselection:`Layer --> Layer erstellen -->` oder aus der Symbolleiste "
+":guilabel: `Datenquellen-Verwaltung`. Das Dialogfeld :guilabel:`Neuer "
+"GeoPackage Layer` wird angezeigt, wie in figure_create_geopackage_ gezeigt."
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:56
 msgid "Creating a New GeoPackage layer dialog"
@@ -98,10 +103,16 @@ msgid ""
 "a new one. QGIS will automatically add the right extension to the name you "
 "provide."
 msgstr ""
+"Der erste Schritt besteht darin, den Speicherort der Datenbankdatei "
+"anzugeben. Dies kann durch Drücken der Schaltfläche :guilabel:`....` rechts "
+"neben dem Feld :guilabel:`Datenbank` erfolgen und eine vorhandene "
+"GeoPackage-Datei auswählen oder eine neue erstellen. QGIS wird automatisch "
+"die richtige Erweiterung zu dem von Ihnen angegebenen Namen hinzufügen."
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:63
 msgid "Give the new layer / table a name (:guilabel:`Table name`)"
 msgstr ""
+"Geben Sie dem neuen Layer/Tabelle einen Namen (:guilabel:`Tabellenname`)"
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:64
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:168
@@ -110,24 +121,29 @@ msgid ""
 "specify whether it should :guilabel:`Include Z dimension` and/or "
 ":guilabel:`Include M values`."
 msgstr ""
+"Definieren Sie den :guilabel:`Geometrietyp`. Wenn es sich nicht um einen "
+"geometrielosen Layer handelt, können Sie angeben, ob er :guilabel: "
+"`Z-Dimension einschließen` und/oder :guilabel: `M-Werte einschließen` soll."
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:67
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:117
 msgid ""
 "Specify the coordinate reference system using the |setProjection| button"
 msgstr ""
+"Geben Sie das Koordinatenreferenzsystem mit der Schaltfläche |setProjection|"
+" an"
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:69
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:126
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:173
 msgid "To add fields to the layer you are creating:"
-msgstr ""
+msgstr "Zum Hinzufügen von Feldern zu dem Layer, den Sie erstellen:"
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:71
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:128
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:175
 msgid "Enter the :guilabel:`Name` of the field"
-msgstr ""
+msgstr "Geben Sie :guilabel:`Name` des Feldes ein"
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:72
 msgid ""
@@ -136,24 +152,34 @@ msgid ""
 "number`, :guilabel:`Date` and :guilabel:`Date and time`, :guilabel:`Binary "
 "(BLOB)` and :guilabel:`Boolean`."
 msgstr ""
+"Wählen Sie die Daten :guilabel:`Typ`. Unterstützte Typen sind "
+":guilabel:`Text`, :guilabel:`Ganze Zahl` (sowohl Integer als auch Integer 64"
+" bit), :guilabel:`Dezimalzahl`, :guilabel:`Datum` und :guilabel:`Datum & "
+"Zeit`, :guilabel: Binärobjekt (BLOB)` und :guilabel:`Boolean`."
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:76
 msgid ""
 "Depending on the selected data format, enter the :guilabel:`Maximum length` "
 "of values."
 msgstr ""
+"Je nach gewähltem Datenformat geben Sie die :guilabel:`Maximallänge` der "
+"Werte ein."
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:78
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:134
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:178
 msgid "Click on the |newAttribute| :guilabel:`Add to Fields List` button"
 msgstr ""
+"Klicken Sie auf die Schaltfläche |newAttribute| :guilabel: `Zur Feldliste "
+"hinzufügen`."
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:79
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:135
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:179
 msgid "Reproduce the steps above for each field you need to add"
 msgstr ""
+"Wiederholen Sie die obigen Schritte für jedes Feld, das Sie hinzufügen "
+"müssen"
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:80
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:136
@@ -163,6 +189,9 @@ msgid ""
 "the new layer to the legend, and you can edit it as described in section "
 ":ref:`sec_edit_existing_layer`."
 msgstr ""
+"Wenn Sie mit den Attributen zufrieden sind, klicken Sie auf :guilabel:`OK`. "
+"QGIS wird den neuen Layer zur Legende hinzufügen, und Sie können ihn wie in "
+"Abschnitt :ref:`sec_edit_existing_layer` beschrieben bearbeiten."
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:84
 msgid ""
@@ -174,12 +203,22 @@ msgid ""
 "together with the :guilabel:`Layer identifier` (short human readable name of"
 " the layer) and the :guilabel:`Layer description`."
 msgstr ""
+"Standardmäßig erzeugt QGIS beim Erstellen eines GeoPackage-Layers eine "
+":guilabel:`Objektkennungsspalte` namens ``fid``, die als Primärschlüssel des"
+" Layers fungiert. Der Name kann geändert werden. Das Geometriefeld, falls "
+"verfügbar, heißt ``geometry``, und Sie können wählen, ob Sie darauf einen "
+"räumlichen Index erstellen wollen. Diese Optionen sind unter dem "
+":guilabel:`Erweiterte Optionen` zusammen mit dem :guilabel: `Layerkennung` "
+"(kurzer menschenlesbarer Name des Layers) und der :guilabel: "
+"`Layerbeschreibung` zu finden."
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:93
 msgid ""
 "Further management of GeoPackage layers can be done with the :ref:`DB "
 "Manager <dbmanager>`."
 msgstr ""
+"Die weitere Verwaltung von GeoPackage-Layern kann mit dem :ref:`DB-"
+"Verwaltung <dbmanager>` erfolgen. "
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:100
 msgid "Creating a new Shapefile layer"

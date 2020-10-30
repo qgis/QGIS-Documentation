@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"POT-Creation-Date: 2020-10-27 06:22+0100\n"
 "PO-Revision-Date: 2020-03-16 19:23+0000\n"
 "Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
 "Language-Team: Russian (https://www.transifex.com/qgis/teams/6144/ru/)\n"
@@ -139,35 +139,99 @@ msgstr "Логгирование"
 
 #: ../../docs/pyqgis_developer_cookbook/communicating.rst:212
 msgid ""
-"You can use the QGIS logging system to log all the information that you want"
-" to save about the execution of your code."
+"There are three different types of logging available in QGIS to log and save"
+" all the information about the execution of your code. Each has its specific"
+" output location. Please consider to use the correct way of logging for your"
+" purpose:"
+msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:216
+msgid ""
+":class:`QgsMessageLog <qgis.core.QgsMessageLog>` is for messages to "
+"communicate issues to the user. The output of the QgsMessageLog is shown in "
+"the Log Messages Panel."
+msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:219
+msgid ""
+"The python built in **logging** module is for debugging on the level of the "
+"QGIS Python API (PyQGIS). It is recommended for Python script developers "
+"that need to debug their python code, e.g. feature ids or geometries"
+msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:222
+msgid ""
+":class:`QgsLogger <qgis.core.QgsLogger>` is for messages for *QGIS internal*"
+" debugging / developers (i.e. you suspect something is triggered by some "
+"broken code). Messages are only visible with developer versions of QGIS."
+msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:226
+msgid ""
+"Examples for the different logging types are shown in the following sections"
+" below."
 msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/communicating.rst:230
 msgid ""
 "Use of the Python ``print`` statement is unsafe to do in any code which may "
-"be multithreaded. This includes **expression functions**, **renderers**, "
-"**symbol layers** and **Processing algorithms** (amongst others). In these "
-"cases you should always use thread safe classes (:class:`QgsLogger "
+"be multithreaded and **extremely slows down the algorithm**. This includes "
+"**expression functions**, **renderers**, **symbol layers** and **Processing "
+"algorithms** (amongst others). In these cases you should always use the "
+"python **logging** module or thread safe classes (:class:`QgsLogger "
 "<qgis.core.QgsLogger>` or :class:`QgsMessageLog <qgis.core.QgsMessageLog>`) "
 "instead."
 msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/communicating.rst:239
+msgid "QgsMessageLog"
+msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:256
 msgid ""
 "You can see the output of the :class:`QgsMessageLog "
 "<qgis.core.QgsMessageLog>` in the :ref:`log_message_panel`"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/communicating.rst:244
-msgid ""
-":class:`QgsLogger <qgis.core.QgsLogger>` is for messages for debugging / "
-"developers (i.e. you suspect they are triggered by some broken code)"
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:260
+msgid "The python built in logging module"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/communicating.rst:246
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:271
 msgid ""
-":class:`QgsMessageLog <qgis.core.QgsMessageLog>` is for messages to "
-"investigate issues by sysadmins (e.g. to help a sysadmin to fix "
-"configurations)"
+"The basicConfig method configures the basic setup of the logging. In the "
+"above code the filename, logging level and the format are defined. The "
+"filename refers to where to write the logfile to, the logging level defines "
+"what levels to output and the format defines the format in which each "
+"message is output."
+msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:281
+msgid ""
+"If you want to erase the log file every time you execute your script you can"
+" do something like:"
+msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:289
+msgid ""
+"Further resources on how to use the python logging facility are available "
+"at:"
+msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:291
+msgid "https://docs.python.org/3/library/logging.html"
+msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:292
+msgid "https://docs.python.org/3/howto/logging.html"
+msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:293
+msgid "https://docs.python.org/3/howto/logging-cookbook.html"
+msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:297
+msgid ""
+"Please note that without logging to a file by setting a filename the logging"
+" may be multithreaded which heavily slows down the output."
 msgstr ""

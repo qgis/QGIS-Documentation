@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-05 01:57+0200\n"
 "PO-Revision-Date: 2020-03-16 19:21+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -65,12 +66,18 @@ msgid ""
 "then typed to a spreadsheet. The sample plots information has been condensed"
 " into a :file:`.csv` file that can be easily open in QGIS."
 msgstr ""
+"La mayoría de las veces, la información se recopilará en formularios de "
+"papel en el campo y luego se escribirá en una hoja de cálculo. La "
+"información de los gráficos de muestra se ha condensado en un archivo "
+":file:`.csv` que se puede abrir fácilmente en QGIS."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:21
 msgid ""
 "Continue with the QGIS project from the lesson about designing the "
 "inventory, you probably named it :file:`forest_inventory.qgs`."
 msgstr ""
+"Continúe con el proyecto QGIS de la lección sobre el diseño del inventario, "
+"probablemente lo nombró :file:`forest_inventory.qgs`."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:24
 msgid "First, add the sample plots measurements to your QGIS project:"
@@ -86,6 +93,8 @@ msgid ""
 "Browse to the file :file:`systematic_inventory_results.csv` located in "
 ":file:`exercise_data/forestry/results/`."
 msgstr ""
+"Navegue al archivo :file:`systematic_inventory_results.csv` ubicado en "
+":file:`exercise_data/forestry/results/`."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:29
 msgid "Make sure that the :guilabel:`Point coordinates` option is checked."
@@ -96,6 +105,7 @@ msgid ""
 "Set the fields for the coordinates to the :guilabel:`X` and :guilabel:`Y` "
 "fields."
 msgstr ""
+"Establece las coordenadas para los campos :guilabel:`X` e :guilabel:`Y`."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:31
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:64
@@ -103,19 +113,21 @@ msgstr ""
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:132
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:154
 msgid "Click :guilabel:`OK`."
-msgstr "Haz clic en :guilabel:`OK`."
+msgstr "Haz clic en :guilabel:`Aceptar`."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:32
 msgid "When prompted, select :guilabel:`ETRS89 / ETRS-TM35FIN` as the CRS."
 msgstr ""
+"Cuando se le solicite, seleccione :guilabel:`ETRS89 / ETRS-TM35FIN` como "
+"SRC."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:33
 msgid ""
 "Open the new layer's :guilabel:`Attribute table` and have a look at the "
 "data."
 msgstr ""
-"Abre la :guilabel:`Attribute table` de la nueva capa y echa un vistazo a los"
-" datos."
+"Abre la :guilabel:`Tabla de atributos` de la nueva capa y echa un vistazo a "
+"los datos."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:35
 msgid ""
@@ -123,6 +135,9 @@ msgid ""
 "measurements in the text file :file:`legend_2012_inventorydata.txt` located "
 "in the :file:`exercise_data/forestry/results/` folder."
 msgstr ""
+"Puede leer el tipo de datos contenidos en las medidas de las parcelas de "
+"muestra en el archivo de texto :file:`legend_2012_inventorydata.txt` ubicado"
+" en la carpeta :file:`exercise_data/forestry/results/`."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:39
 msgid ""
@@ -131,27 +146,31 @@ msgid ""
 "file. Before you continue, convert the inventory results to a real spatial "
 "dataset:"
 msgstr ""
+"La capa :file:`systematic_inventory_results` que acaba de agregar es en "
+"realidad solo una representación virtual de la información de texto en el "
+"archivo :file:`.csv`. Antes de continuar, convierta los resultados del "
+"inventario en un conjunto de datos espaciales reales:"
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:43
 msgid "Right click on the :file:`systematic_inventory_results` layer."
-msgstr ""
+msgstr "Click derecho en la capa :file:`systematic_inventory_results`."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:44
 msgid "Browse to :file:`exercise_data/forestry/results/` folder."
-msgstr ""
+msgstr "Navegue a la carpeta :file:`exercise_data/forestry/results/`."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:45
 msgid "Name the file :file:`sample_plots_results.shp`."
-msgstr ""
+msgstr "Nombre el archivo :file:`sample_plots_results.shp`."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:46
 msgid "Check :guilabel:`Add saved file to map`."
-msgstr "Activa :guilabel:`Add saved file to map`."
+msgstr "Activa :guilabel:`Agregar archivo guardado al mapa`."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:47
 msgid ""
 "Remove the :file:`systematic_inventory_results` layer from your project."
-msgstr ""
+msgstr "Borre la capa :file:`systematic_inventory_results` de su proyecto."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:50
 msgid "|basic| |FA| Whole Forest Parameters Estimation"
@@ -165,6 +184,12 @@ msgid ""
 "areas, you can directly calculate the averages of the volumes and number of "
 "stems per hectare from the :file:`sample_plots_results` layer."
 msgstr ""
+"Puede calcular los promedios para toda esta área de bosque a partir de los "
+"resultados del inventario para algunos parámetros interesantes, como el "
+"volumen y el número de tallos por hectárea. Dado que las parcelas de muestra"
+" sistemáticas representan áreas iguales, puede calcular directamente los "
+"promedios de los volúmenes y el número de tallos por hectárea de la capa "
+":file:`sample_plots_results`."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:58
 msgid ""
@@ -179,24 +204,30 @@ msgid ""
 "Open :menuselection:`Vector --> Analysis Tools --> Basic statistics for "
 "Fields`."
 msgstr ""
+"Abre :menuselection:`Vectorial --> Herramientas de análisis --> Estadísticas"
+" básicas para campos`."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:62
 msgid "Select ``sample_plots_results`` as the :guilabel:`Input Vector Layer`."
 msgstr ""
+"Selecciona ``sample_plots_results`` como la :guilabel:`Capa vectorial de "
+"entrada`."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:63
 msgid "Select ``Vol`` as :guilabel:`Target field`."
-msgstr ""
+msgstr "Selecciona ``Vol`` como :guilabel:`campo destino`."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:66
 msgid "The average volume in the forest is ``135.2 m3/ha``."
-msgstr ""
+msgstr "El volumen promedio en el bosque es ``135.2 m3/ha``."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:68
 msgid ""
 "You can calculate the average for the number of stems in the same way, "
 "``2745 stems/ha``."
 msgstr ""
+"Puede calcular el promedio del número de tallos de la misma manera, ``2745 "
+"stems/ha``."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:74
 msgid "|basic| |FA| Estimating Stand Parameters"
@@ -249,12 +280,16 @@ msgid ""
 "Set ``forest_stands_2012`` as the :guilabel:`Target vector layer`. The layer"
 " you want the results for."
 msgstr ""
+"Configura ``forest_stands_2012`` como la :guilabel:`capa vectorial de "
+"destino`. La capa para la que desea obtener los resultados."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:93
 msgid ""
 "Set ``sample_plots_results`` as the :guilabel:`Join vector layer`. The layer"
 " you want to calculate estimates from."
 msgstr ""
+"Ajusta ``sample_plots_results`` como la :guilabel:`Capa de unión vectorial`."
+" La capa desde la que desea calcular las estimaciones."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:95
 msgid "Check :guilabel:`Take summary of intersecting features`."
@@ -269,6 +304,8 @@ msgid ""
 "Name the result as :file:`forest_stands_2012_results.shp` and save it in the"
 " :file:`exercise_data/forestry/results/` folder."
 msgstr ""
+"Nombra el resultado como :file:`forest_stands_2012_results.shp` y guárdalo "
+"en la carpeta :file:`exercise_data/forestry/results/`."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:99
 msgid ""
@@ -294,6 +331,12 @@ msgid ""
 "calculations, those are the ones having no sample plots. Select them all and"
 " view them in the map, they are some of the smaller stands:"
 msgstr ""
+"Abre la :guilabel:`tabla de atributos` para "
+":guilabel:`forest_stands_2012_results` y revise los resultados que obtuvo. "
+"Tenga en cuenta que varios rodales forestales tienen ``NULL`` como valor "
+"para los cálculos, estos son los que no tienen parcelas de muestra. "
+"Selecciónalas todas y visualízalas en el mapa, son algunos de los stands más"
+" pequeños:"
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:114
 msgid ""
@@ -305,6 +348,14 @@ msgid ""
 "again, the average values of the parameters that are in, for example, m3/ha "
 "for the volumes are converted to total volumes for the stands."
 msgstr ""
+"Calculemos ahora los mismos promedios para todo el bosque que hiciste antes,"
+" solo que esta vez usarás los promedios que obtuviste para los rodales como "
+"base para el cálculo. Recuerde que en la situación anterior, cada parcela "
+"muestral representaba un soporte teórico de `` 80x80 m ''. Ahora debes "
+"considerar el área de cada uno de los stands individualmente. De esa manera,"
+" nuevamente, los valores promedio de los parámetros que están en, por "
+"ejemplo, m3 / ha para los volúmenes se convierten en volúmenes totales para "
+"los stands."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:122
 msgid ""
@@ -320,25 +371,29 @@ msgstr "En la :guilabel:`Tabla de atributos` habilitar la edición."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:126
 msgid "Open the :guilabel:`Field calculator`."
-msgstr "Abre el :guilabel:`Field calculator`."
+msgstr "Abre el :guilabel:`Calculadora de campo`."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:127
 msgid "Create a new field called ``area``."
-msgstr ""
+msgstr "Crear un nuevo campo llamado ``area``."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:128
 msgid "Set the :guilabel:`Output field type` to ``Decimal number (real)``."
 msgstr ""
+"Esteblece el :guilabel:`tipo de campo de salida` a ``Número decimal "
+"(real)``."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:129
 msgid "Set the :guilabel:`Precision` to ``2``."
-msgstr ""
+msgstr "Establece la :guilabel:`Precisión` a ``2``."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:130
 msgid ""
 "In the :guilabel:`Expression` box, write ``$area / 10000``. This will "
 "calculate the area of the forest stands in ha."
 msgstr ""
+"En el cuadro :guilabel:`Expresión`, escribe ``$area / 10000``. Esto "
+"calculará el área de las masas forestales en ha."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:134
 msgid ""
@@ -350,7 +405,7 @@ msgstr ""
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:136
 msgid "Name the fields ``s_vol`` and ``s_stem``."
-msgstr ""
+msgstr "Nombre los  nuevos campos ``s_vol`` y ``s_stem``."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:137
 msgid "The fields can be integer numbers or you can use real numbers also."
@@ -363,6 +418,8 @@ msgid ""
 "Use the expressions ``\"area\"  *  \"MEANVol\"`` and ``\"area\"  *  "
 "\"MEANStems\"`` for total volumes and total stems respectively."
 msgstr ""
+"Use las expresiones ``\"area\"  *  \"MEANVol\"`` y ``\"area\"  *  "
+"\"MEANStems\"`` para volúmenes totales y tallos totales respectivamente."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:140
 msgid "Save the edits when you are finished."
@@ -392,38 +449,51 @@ msgid ""
 ":file:`forest_stands_2012_results` layer, select all the stands containing "
 "information."
 msgstr ""
+"En la  :guilabel:`Tabla de atributos` para la capa "
+":file:`forest_stands_2012_results`, seleccione todos los stands que "
+"contienen información."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:150
 msgid ""
 "Open :menuselection:`Vector --> Analysis Tools --> Basic statistics for "
 "fields`."
 msgstr ""
+"Abre :menuselection:`Vectorial --> Herramientas de análisis --> Estadísticas"
+" básicas para campos`."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:151
 msgid ""
 "Select the :file:`forest_stands_2012_results` as the :guilabel:`Input "
 "layer`."
 msgstr ""
+"Selecciona :file:`forest_stands_2012_results` como :guilabel:`capa de "
+"entrada`."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:152
 msgid "Select ``area`` as :guilabel:`Field to calculate statistics on`."
 msgstr ""
+"Selecciona ``área`` como :guilabel:`Campo en el que calcular estadísticas`."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:153
 msgid "Check the :guilabel:`Selected features only`"
-msgstr ""
+msgstr "Marque :guilabel:`Solo objetos seleccionados`"
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:159
 msgid ""
 "As you can see, the total sum of the stands' areas is ``66.04 ha``. Note "
 "that the area of the missing forest stands is only about ``7 ha``."
 msgstr ""
+"Como puede ver, la suma total de las áreas de los rodales es de ``66,04 "
+"ha``. Tenga en cuenta que el área de las masas forestales que faltan es de "
+"solo ``7 ha``."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:162
 msgid ""
 "In the same way, you can calculate that the total volume for these stands is"
 " ``8908 m3/ha`` and the total number of stems is ``179594 stems``."
 msgstr ""
+"De la misma forma, se puede calcular que el volumen total de estos rodales "
+"es de ``8908 m3/ha`` y el número total de tallos es ``179594 tallos``."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:165
 msgid ""
@@ -436,15 +506,15 @@ msgstr ""
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:168
 msgid "``184.9 m3/ha`` and"
-msgstr ""
+msgstr "``184.9 m3/ha`` y"
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:169
 msgid "``2719 stems/ha``."
-msgstr ""
+msgstr "``2719 stems/ha``."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:171
 msgid "Save your QGIS project, :file:`forest_inventory.qgs`."
-msgstr ""
+msgstr "Guarde su proyecto QGIS, :file:`forest_inventory.qgs`."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:174
 msgid "|IC|"

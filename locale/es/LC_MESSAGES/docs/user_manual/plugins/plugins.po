@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-05 01:57+0200\n"
 "PO-Revision-Date: 2020-03-16 19:31+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -45,6 +46,8 @@ msgid ""
 "QGIS plugins are implemented either as **Core Plugins** or **External "
 "Plugins**."
 msgstr ""
+"Los complementos de QGIS se implementan como **Complementos principales** o "
+"**Complementos externos**."
 
 #: ../../docs/user_manual/plugins/plugins.rst:25
 msgid ""
@@ -52,6 +55,10 @@ msgid ""
 "Team and are automatically part of every QGIS distribution. They are written"
 " in one of two languages: **C++** or **Python**."
 msgstr ""
+"Los :ref:`Complementos principales <core_plugins>` son mantenidos por el "
+"Equipo de Desarrollo de QGIS y son automáticamente parte de cada "
+"distribución de QGIS. Están escritos en uno de dos idiomas: **C++** o "
+"**Python**."
 
 #: ../../docs/user_manual/plugins/plugins.rst:29
 msgid ""
@@ -65,6 +72,15 @@ msgid ""
 "external plugins themselves. External plugins documentation is not included "
 "in this manual."
 msgstr ""
+"La mayoría de los complementos externos están escritos actualmente en "
+"Python. Se almacenan en el repositorio 'oficial' de QGIS en "
+"https://plugins.qgis.org/plugins/ o en repositorios externos y son "
+"mantenidos por los autores individuales. Se proporciona documentación "
+"detallada sobre el uso, la versión mínima de QGIS, la página de inicio, los "
+"autores y otra información importante para los complementos en el "
+"repositorio oficial. Para otros repositorios externos, la documentación "
+"puede estar disponible con los propios complementos externos. La "
+"documentación de complementos externos no se incluye en este manual."
 
 #: ../../docs/user_manual/plugins/plugins.rst:38
 msgid ""
@@ -74,12 +90,19 @@ msgid ""
 ":file:`python/plugins` folder of the active :ref:`user profile "
 "<user_profiles>` path."
 msgstr ""
+"Para instalar o activar el complemento, vaya al menú "
+":menuselection:`Complementos` y seleccionar |showPluginManager| "
+":menuselection:`Administrar e Instalar complementos...`. los complementos de"
+" Python externos instalados se colocan en la carpeta  :file:`python/plugins`"
+" de la ruta activa :ref:`perfil de usuario <user_profiles>`."
 
 #: ../../docs/user_manual/plugins/plugins.rst:43
 msgid ""
 "Paths to Custom C++ plugins libraries can also be added under "
 ":menuselection:`Settings --> Options --> System`."
 msgstr ""
+"También se pueden agregar rutas a bibliotecas de complementos personalizados"
+" de C ++ en :menuselection:`Configuración --> Opciones --> Sistema`."
 
 #: ../../docs/user_manual/plugins/plugins.rst:48
 msgid ""
@@ -87,6 +110,10 @@ msgid ""
 " interface can display an icon on the right of the status bar to inform you "
 "that there are updates for your installed plugins or new plugins available."
 msgstr ""
+"De acuerdo con la :ref:`configuración de administración de complementos "
+"<setting_plugins>`, la interfaz principal de QGIS puede mostrar un icono a "
+"la derecha de la barra de estado para informarle que hay actualizaciones "
+"para sus complementos instalados o nuevos complementos disponibles."
 
 #: ../../docs/user_manual/plugins/plugins.rst:58
 msgid "The Plugins Dialog"
@@ -98,10 +125,13 @@ msgid ""
 "upgrade plugins in different ways. Each plugin has some metadata displayed "
 "in the right panel:"
 msgstr ""
+"Las pestañas del cuadro de diálogo Complementos permiten al usuario "
+"instalar, desinstalar y actualizar complementos de diferentes formas. Cada "
+"complemento tiene algunos metadatos que se muestran en el panel derecho:"
 
 #: ../../docs/user_manual/plugins/plugins.rst:64
 msgid "information on whether the plugin is experimental"
-msgstr ""
+msgstr "información sobre si el complemento es experimental"
 
 #: ../../docs/user_manual/plugins/plugins.rst:65
 msgid "description"
@@ -109,7 +139,7 @@ msgstr "descripción"
 
 #: ../../docs/user_manual/plugins/plugins.rst:66
 msgid "rating vote(s) (you can vote for your preferred plugin!)"
-msgstr ""
+msgstr "calificación por voto(s) (¡puede votar por su complemento preferido!)"
 
 #: ../../docs/user_manual/plugins/plugins.rst:67
 msgid "tags"
@@ -118,6 +148,8 @@ msgstr "etiquetas"
 #: ../../docs/user_manual/plugins/plugins.rst:68
 msgid "some useful links to the home page, tracker and code repository"
 msgstr ""
+"algunos enlaces útiles a la página de inicio, el rastreador y el repositorio"
+" de código"
 
 #: ../../docs/user_manual/plugins/plugins.rst:69
 msgid "author(s)"
@@ -134,10 +166,14 @@ msgid ""
 "available in nearly every tab (except |transformSettings| "
 ":guilabel:`Settings`)."
 msgstr ""
+"En la parte superior del diálogo, una función :guilabel:`Buscar` te ayuda a "
+"buscar cualquier complemento usando información de metadatos (autor, nombre,"
+" descripción...). Está disponible en casi todas las pestañas (excepto "
+"|transformSettings| :guilabel:`Configuración`)."
 
 #: ../../docs/user_manual/plugins/plugins.rst:79
 msgid "The Settings tab"
-msgstr ""
+msgstr "La pestaña Configuración"
 
 #: ../../docs/user_manual/plugins/plugins.rst:81
 msgid ""
@@ -145,6 +181,9 @@ msgid ""
 "configure which plugins can be displayed in your application. You can use "
 "the following options:"
 msgstr ""
+"La pestaña |transformSettings| :guilabel:`Configuración` es el lugar "
+"principal donde puede configurar qué complementos se pueden mostrar en su "
+"aplicación. Puede utilizar las siguientes opciones:"
 
 #: ../../docs/user_manual/plugins/plugins.rst:85
 msgid ""
@@ -175,6 +214,10 @@ msgid ""
 "deprecated and generally unsuitable for production use. They appear among "
 "invalid plugins list."
 msgstr ""
+"|checkbox| :guilabel:`Mostrar también complementos obsoletos`. Debido a que "
+"usan funciones que ya no están disponibles en QGIS, estos complementos están"
+" obsoletos y generalmente no son adecuados para el uso de producción. "
+"Aparecen entre la lista de complementos no válidos."
 
 #: ../../docs/user_manual/plugins/plugins.rst:96
 msgid ""
@@ -185,6 +228,12 @@ msgid ""
 " Details` form with a name and the URL. The URL can be of ``http://`` or "
 "``file://`` protocol type."
 msgstr ""
+"Por defecto, QGIS le proporciona su repositorio oficial de complementos con "
+"la URL https://plugins.qgis.org/plugins/plugins.xml?qgis=3.0 (in case of "
+"QGIS 3.0) en la sección :guilabel:`repositorios de Complementos`. Para "
+"añadir repositorios de autores externos, click en :guilabel:`Añadir...` y "
+"rellene en el formulario :guilabel:`Detalles del repositorio` con un nombre "
+"y la URL. La URL puede ser de tipo de protocolo ``http://`` o ``file://``."
 
 #: ../../docs/user_manual/plugins/plugins.rst:102
 msgid ""
@@ -194,6 +243,12 @@ msgid ""
 "can get more information on QGIS authentication support in "
 ":ref:`authentication` chapter."
 msgstr ""
+"El repositorio predeterminado de QGIS es un repositorio abierto y no "
+"necesita ninguna autenticación para acceder a él. Sin embargo, puede "
+"implementar su propio repositorio de complementos y requerir una "
+"autenticación (autenticación básica, PKI). Puede obtener más información "
+"sobre el soporte de autenticación de QGIS en el capítulo "
+":ref:`authentication`."
 
 #: ../../docs/user_manual/plugins/plugins.rst:107
 msgid ""
@@ -201,14 +256,17 @@ msgid ""
 "disabled from the Settings tab via the :guilabel:`Edit...` button, or "
 "completely removed with the :guilabel:`Delete` button."
 msgstr ""
+"Si no desea uno o más de los repositorios agregados, puede desactivarlos "
+"desde la pestaña Configuración a través del botón :guilabel:`Editar... `, o "
+"eliminarlos por completo con el botón :guilabel:`Eliminar`."
 
 #: ../../docs/user_manual/plugins/plugins.rst:116
 msgid "The |transformSettings| :guilabel:`Settings` tab"
-msgstr ""
+msgstr "La pestaña |transformSettings| :guilabel:`Configuración`"
 
 #: ../../docs/user_manual/plugins/plugins.rst:119
 msgid "The All tab"
-msgstr ""
+msgstr "La pestaña Todos"
 
 #: ../../docs/user_manual/plugins/plugins.rst:121
 msgid ""
@@ -220,14 +278,22 @@ msgid ""
 "plugin is installed. An installed plugin can be temporarily de/activated "
 "using the checkbox."
 msgstr ""
+"En la pestaña |showPluginManager| :guilabel: `Todos`, se enumeran todos los "
+"complementos disponibles, incluidos los complementos centrales y externos. "
+"Utilice :guilabel:`Actualizar Todos` para buscar nuevas versiones de los "
+"complementos. Además, puede utilizar :guilabel:`Instalar Complemento` si un "
+"plugin está en la lista pero no está instalado, :guilabel:`Desinstalar "
+"Complemento` así como :guilabel:`Reinstalar Complemento` si hay un plugin "
+"instalado. Un complemento instalado puede desactivarse/activarse "
+"temporalmente usando la casilla de verificación."
 
 #: ../../docs/user_manual/plugins/plugins.rst:134
 msgid "The |showPluginManager| :guilabel:`All` tab"
-msgstr ""
+msgstr "La pestaña |showPluginManager| :guilabel:`Todos`"
 
 #: ../../docs/user_manual/plugins/plugins.rst:138
 msgid "The Installed tab"
-msgstr ""
+msgstr "La pestaña instalados"
 
 #: ../../docs/user_manual/plugins/plugins.rst:140
 msgid ""
@@ -237,14 +303,20 @@ msgid ""
 " :guilabel:`Uninstall Plugin` and :guilabel:`Reinstall Plugin` buttons. You "
 "can :guilabel:`Upgrade All` the plugins here as well."
 msgstr ""
+"En la pestaña |pluginInstalled| :guilabel:`Instalados`, encontrará una lista"
+" de los complementos Principales que no puede desinstalar. Puede ampliar "
+"esta lista con complementos externos que se pueden desinstalar y reinstalar "
+"en cualquier momento, utilizando los botones :guilabel:`Desinstalar "
+"Complemento` y :guilabel:`Reinstalar Complemento`. Puede "
+":guilabel:`Actualizar todos` los complementos aquí también."
 
 #: ../../docs/user_manual/plugins/plugins.rst:151
 msgid "The |pluginInstalled| :guilabel:`Installed` tab"
-msgstr ""
+msgstr "La pestaña |pluginInstalled| :guilabel:`Instalados`"
 
 #: ../../docs/user_manual/plugins/plugins.rst:154
 msgid "The Not installed tab"
-msgstr ""
+msgstr "La pestaña No Instalados"
 
 #: ../../docs/user_manual/plugins/plugins.rst:156
 msgid ""
@@ -252,14 +324,17 @@ msgid ""
 "are not installed. You can use the :guilabel:`Install Plugin` button to "
 "implement a plugin into QGIS."
 msgstr ""
+"La pestaña |plugin| :guilabel:`No instalados` enumera todos los complementos"
+" disponibles que no están instalados. Puedes usar el botón "
+":guilabel:`Instalar Complemento` para implementar un complemento a QGIS."
 
 #: ../../docs/user_manual/plugins/plugins.rst:165
 msgid "The |plugin| :guilabel:`Not installed` tab"
-msgstr ""
+msgstr "La pestaña |plugin| :guilabel:`No Instalados`"
 
 #: ../../docs/user_manual/plugins/plugins.rst:168
 msgid "The Upgradeable and New tabs"
-msgstr ""
+msgstr "Las pestañas Actualizable y Nueva"
 
 #: ../../docs/user_manual/plugins/plugins.rst:170
 msgid ""
@@ -270,20 +345,30 @@ msgid ""
 "|transformSettings| :guilabel:`Settings` menu, those also appear in the list"
 " giving you opportunity to early test upcoming tools."
 msgstr ""
+"Las pestañas |plugin-upgrade| :guilabel:`Actualizable` y |plugin-new| "
+":guilabel:`Nuevo` se habilitan cuando se agregan nuevos complementos al "
+"repositorio o se lanza una nueva versión de un complemento instalado. Si "
+"activó |checkbox| :guilabel:`Mostrar también complementos experimentales` en"
+" el menú |transformSettings| :guilabel:`Configuración`, también aparecen en "
+"la lista, lo que le brinda la oportunidad de probar las próximas "
+"herramientas."
 
 #: ../../docs/user_manual/plugins/plugins.rst:177
 msgid ""
 "Installation can be done with the :guilabel:`Install Plugin`, "
 ":guilabel:`Upgrade Plugin` or :guilabel:`Upgrade All` buttons."
 msgstr ""
+"La instalación se puede hacer con los botones :guilabel:`Instalar "
+"Complemento`, :guilabel:`Actualizar Complemento` o :guilabel:`Actualizar "
+"Todos`."
 
 #: ../../docs/user_manual/plugins/plugins.rst:185
 msgid "The |plugin-upgrade| :guilabel:`Upgradeable` tab"
-msgstr ""
+msgstr "La pestaña |plugin-upgrade| :guilabel:`Actualizable`"
 
 #: ../../docs/user_manual/plugins/plugins.rst:188
 msgid "The Invalid tab"
-msgstr ""
+msgstr "La pestaña No valido"
 
 #: ../../docs/user_manual/plugins/plugins.rst:190
 msgid ""
@@ -294,14 +379,21 @@ msgid ""
 " the times the fix will be elsewhere (install some libraries, look for "
 "another compatible plugin or help to upgrade the broken one)."
 msgstr ""
+"La pestaña |pluginInvalid| :guilabel:`No válido` enumera todos los "
+"complementos instalados que están actualmente dañados por cualquier motivo "
+"(dependencia faltante, errores durante la carga, funciones incompatibles con"
+" la versión de QGIS ...). Puedes probar el botón  :guilabel:`Reinstalar "
+"complemento` para arreglar un complemento no válido, pero la mayoría de las "
+"veces la solución estará en otro lugar (instale algunas bibliotecas, busque "
+"otro complemento compatible o ayude a actualizar el que está roto)."
 
 #: ../../docs/user_manual/plugins/plugins.rst:202
 msgid "The |pluginInvalid| :guilabel:`Invalid` tab"
-msgstr ""
+msgstr "La pestaña |pluginInvalid| :guilabel:`No válido`"
 
 #: ../../docs/user_manual/plugins/plugins.rst:205
 msgid "The Install from ZIP tab"
-msgstr ""
+msgstr "La pestaña instalar a partir de ZIP"
 
 #: ../../docs/user_manual/plugins/plugins.rst:207
 msgid ""
@@ -309,7 +401,12 @@ msgid ""
 "selector widget to import plugins in a zipped format, e.g. plugins "
 "downloaded directly from their repository."
 msgstr ""
+"La pestaña |installPluginFromZip| :guilabel:`Instalar a partir de ZIP` "
+"proporciona un widget selector de archivos para importar complementos en "
+"formato comprimido, p. ej. complementos descargados directamente de su "
+"repositorio."
 
 #: ../../docs/user_manual/plugins/plugins.rst:216
 msgid "The |installPluginFromZip| :guilabel:`Install from zip` tab"
 msgstr ""
+"La pestaña |installPluginFromZip| :guilabel:`Instalar a partir de ZIP`"

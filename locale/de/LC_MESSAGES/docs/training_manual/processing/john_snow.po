@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"POT-Creation-Date: 2020-10-14 22:11+0200\n"
 "PO-Revision-Date: 2020-03-16 19:22+0000\n"
 "Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
 "Language-Team: German (https://www.transifex.com/qgis/teams/6144/de/)\n"
@@ -76,24 +76,21 @@ msgstr ""
 
 #: ../../docs/training_manual/processing/john_snow.rst:15
 msgid ""
-"The first thing to do is to calculting the Voronoi diagram (a.k.a. Thyessen "
+"The first thing to do is to calculate the Voronoi diagram (a.k.a. Thiessen "
 "polygons) of the pumps layer, to get the influence zone of each pump. The "
 "*Voronoi Diagram* algorithm can be used for that."
 msgstr ""
-"Der erste Schritt ist die Erstellung eines Voronoi Diagramms (bzw. Thiessen-"
-"Polygone) für den Layer der Pumpen, um die Einflusszone für jede Pumpe zu "
-"ermitteln. Der Algorithmus *Voronoi-Polygone* kann dazu verwendet werden."
 
-#: ../../docs/training_manual/processing/john_snow.rst:20
+#: ../../docs/training_manual/processing/john_snow.rst:22
 msgid "Pretty easy, but it will already give us interesting information."
 msgstr ""
 "Ganz einfach - aber wir erhalten schon erste interessante Informationen."
 
-#: ../../docs/training_manual/processing/john_snow.rst:24
+#: ../../docs/training_manual/processing/john_snow.rst:26
 msgid "Clearly, most cases are within one of the polygons"
 msgstr "Die meisten Fälle liegen offensichtlich innerhalb eines der Polygone."
 
-#: ../../docs/training_manual/processing/john_snow.rst:26
+#: ../../docs/training_manual/processing/john_snow.rst:28
 msgid ""
 "To get a more quantitative result, we can count the number of deaths in each"
 " polygon. Since each point represents a building where deaths occured, and "
@@ -107,7 +104,7 @@ msgstr ""
 "nicht, nur die Punkte zu zählen. Wir benötigen eine gewichetete Zählung. "
 "Dazu können wir das Werkzeug *Punkte in Polygon zählen* verwenden."
 
-#: ../../docs/training_manual/processing/john_snow.rst:30
+#: ../../docs/training_manual/processing/john_snow.rst:32
 msgid ""
 "The new field will be called *DEATHS*, and we use the *COUNT* field as "
 "weighting field. The resulting table clearly reflects that the number of "
@@ -119,7 +116,7 @@ msgstr ""
 "Todesfälle im zur ersten Pumpe gehörenden Polygon größer ist, als in den "
 "anderen Polygonen."
 
-#: ../../docs/training_manual/processing/john_snow.rst:34
+#: ../../docs/training_manual/processing/john_snow.rst:36
 msgid ""
 "Another good way of visualizing the dependence of each point in the "
 "``Cholera_deaths`` layer with a point in the ``Pumps`` layer is to draw a "
@@ -132,11 +129,11 @@ msgstr ""
 "Hilfe des Werkzeuges *Abstand zum nächsten Knoten (Linie zu Knoten)* und der"
 " unten aufgeführten Konfiguration erfolgen."
 
-#: ../../docs/training_manual/processing/john_snow.rst:38
+#: ../../docs/training_manual/processing/john_snow.rst:40
 msgid "The result looks like this:"
 msgstr "Das Ergebnis sieht wie folgt aus:"
 
-#: ../../docs/training_manual/processing/john_snow.rst:42
+#: ../../docs/training_manual/processing/john_snow.rst:44
 msgid ""
 "Although the number of lines is larger in the case of the central pump, do "
 "not forget that this does not represent the number of deaths, but the number"
@@ -150,7 +147,7 @@ msgstr ""
 "ist zwar ein repräsentativer Parameter, allerdings ohne Berücksichtigung der"
 " mehrfachen Todesfälle an einigen Orten."
 
-#: ../../docs/training_manual/processing/john_snow.rst:44
+#: ../../docs/training_manual/processing/john_snow.rst:46
 msgid ""
 "A density layer will also give us a very clear view of what is happening. We"
 " can create it with the *Kernel density* algorithm. Using the "
@@ -164,7 +161,7 @@ msgstr ""
 " Radius von 100 und die Ausdehnung des Rasterlayers der Straßen verwenden, "
 "erhalten wir in etwa die folgende Ausgabe."
 
-#: ../../docs/training_manual/processing/john_snow.rst:48
+#: ../../docs/training_manual/processing/john_snow.rst:50
 msgid ""
 "Remember that, to get the output extent, you do not have to type it. Click "
 "on the button on the right-hand side and select *Use layer/canvas extent*."
@@ -173,7 +170,7 @@ msgstr ""
 "müssen. Klicken Sie auf die Schaltfläche auf der rechten Seite und wählen "
 "*Use layer/canvas extent*."
 
-#: ../../docs/training_manual/processing/john_snow.rst:52
+#: ../../docs/training_manual/processing/john_snow.rst:54
 msgid ""
 "Select the streets raster layer and its extent will be automatically added "
 "to the text field. You must do the same with the cellsize, selecting the "
@@ -183,7 +180,7 @@ msgstr ""
 "automatisch in das Textfeld übernommen. Mit der Zellgröße können wir genauso"
 " vorgehen, d.h. wir wählen diesen Layer erneut."
 
-#: ../../docs/training_manual/processing/john_snow.rst:54
+#: ../../docs/training_manual/processing/john_snow.rst:56
 msgid ""
 "Combining with the pumps layer, we see that there is one pump clearly in the"
 " hotspot where the maximum density of death cases is found."

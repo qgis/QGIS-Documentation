@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-05 01:57+0200\n"
 "PO-Revision-Date: 2020-03-16 19:18+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -60,7 +61,7 @@ msgstr "Ordenar resultados"
 
 #: ../../docs/training_manual/database_concepts/queries.rst:30
 msgid "Let's retrieve a list of people ordered by their house numbers:"
-msgstr ""
+msgstr "Recuperemos una lista de personas ordenadas por sus números de casa:"
 
 #: ../../docs/training_manual/database_concepts/queries.rst:36
 #: ../../docs/training_manual/database_concepts/queries.rst:54
@@ -73,7 +74,7 @@ msgstr "Resultado:"
 
 #: ../../docs/training_manual/database_concepts/queries.rst:48
 msgid "You can sort the results by the values of more than one column:"
-msgstr ""
+msgstr "Puede ordenar los resultados por los valores de más de una columna:"
 
 #: ../../docs/training_manual/database_concepts/queries.rst:68
 msgid "Filtering"
@@ -94,16 +95,20 @@ msgid ""
 "Here is an example of a numerical filter which only returns objects whose "
 "``house_no`` is less than 50:"
 msgstr ""
+"Aquí hay un ejemplo de un filtro numérico que solo devuelve objetos cuyo "
+"``house_no`` es menor que 50:"
 
 #: ../../docs/training_manual/database_concepts/queries.rst:87
 msgid ""
 "You can combine filters (defined using the ``WHERE`` clause) with sorting "
 "(defined using the ``ORDER BY`` clause):"
 msgstr ""
+"Puede combinar filtros (definidos usando la cláusula ``WHERE``) con "
+"clasificación (definida usando la cláusula ``ORDER BY``):"
 
 #: ../../docs/training_manual/database_concepts/queries.rst:100
 msgid "You can also filter based on text data:"
-msgstr ""
+msgstr "También puede filtrar según los datos de texto:"
 
 #: ../../docs/training_manual/database_concepts/queries.rst:112
 msgid ""
@@ -121,12 +126,17 @@ msgid ""
 "If you want to search for a string of letters regardless of case, you can do"
 " a case in-sensitive search using the :kbd:`ILIKE` clause:"
 msgstr ""
+"Si desea buscar una cadena de letras independientemente del caso, puede "
+"realizar una búsqueda que no distinga entre mayúsculas y minúsculas "
+"utilizando la cláusula :kbd:`ILIKE`:"
 
 #: ../../docs/training_manual/database_concepts/queries.rst:129
 msgid ""
 "That query returned every **people** object with an :kbd:`r` or :kbd:`R` in "
 "their name."
 msgstr ""
+"Esa consulta devolvió todos los objetos **personas** con un :kbd:`r` o "
+":kbd:`R` en su nombre."
 
 #: ../../docs/training_manual/database_concepts/queries.rst:133
 msgid "Joins"
@@ -138,6 +148,9 @@ msgid ""
 " of the ID? In order to do that, you need to join the two tables together in"
 " a single query. Lets look at an example:"
 msgstr ""
+"¿Qué sucede si desea ver los detalles de la persona y el nombre de su calle "
+"en lugar de la identificación? Para hacer eso, debe unir las dos tablas en "
+"una sola consulta. Veamos un ejemplo:"
 
 #: ../../docs/training_manual/database_concepts/queries.rst:145
 msgid ""
@@ -155,7 +168,7 @@ msgstr ""
 
 #: ../../docs/training_manual/database_concepts/queries.rst:151
 msgid "Here is what the correct output will look like:"
-msgstr ""
+msgstr "Así es como se verá la salida correcta:"
 
 #: ../../docs/training_manual/database_concepts/queries.rst:163
 msgid ""
@@ -184,19 +197,23 @@ msgstr ""
 
 #: ../../docs/training_manual/database_concepts/queries.rst:173
 msgid "First, let's do a little tweaking of our data:"
-msgstr ""
+msgstr "Primero, hagamos algunos ajustes en nuestros datos:"
 
 #: ../../docs/training_manual/database_concepts/queries.rst:183
 msgid ""
 "Let's take a quick look at our data after those changes: we can reuse our "
 "query from the previous section:"
 msgstr ""
+"Echemos un vistazo rápido a nuestros datos después de esos cambios: podemos "
+"reutilizar nuestra consulta de la sección anterior:"
 
 #: ../../docs/training_manual/database_concepts/queries.rst:204
 msgid ""
 "Now let's show you a sub-selection on this data. We want to show only people"
 " who live in ``street_id`` number :kbd:`1`:"
 msgstr ""
+"Ahora le mostraremos una sub-selección de estos datos. Queremos mostrar solo"
+" a las personas que viven en ``street_id`` número :kbd:`1`:"
 
 #: ../../docs/training_manual/database_concepts/queries.rst:227
 msgid ""
@@ -219,10 +236,16 @@ msgid ""
 "typical example which tells us how many people objects are in our people "
 "table:"
 msgstr ""
+"Una de las características poderosas de una base de datos es su capacidad "
+"para resumir los datos en sus tablas. Estos resúmenes se denominan consultas"
+" agregadas. Aquí hay un ejemplo típico que nos dice cuántas personas hay "
+"objetos en nuestra tabla de personas:"
 
 #: ../../docs/training_manual/database_concepts/queries.rst:251
 msgid "If we want the counts to be summarised by street name we can do this:"
 msgstr ""
+"Si queremos que los recuentos se resuman por nombre de calle, podemos hacer "
+"esto:"
 
 #: ../../docs/training_manual/database_concepts/queries.rst:270
 msgid ""

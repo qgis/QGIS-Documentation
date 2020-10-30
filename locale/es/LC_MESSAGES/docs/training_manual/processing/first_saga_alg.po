@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
+# Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-05 01:57+0200\n"
 "PO-Revision-Date: 2020-03-16 19:22+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,7 +23,7 @@ msgstr ""
 
 #: ../../docs/training_manual/processing/first_saga_alg.rst:2
 msgid "Running an external algorithm"
-msgstr "Correr un algoritmo externo"
+msgstr "Ejecutar un algoritmo externo"
 
 #: ../../docs/training_manual/processing/first_saga_alg.rst:5
 msgid ""
@@ -31,6 +31,9 @@ msgid ""
 "party application, particularly SAGA, which is one of the main algorithm "
 "providers."
 msgstr ""
+"En esta lección veremos cómo utilizar algoritmos que dependen de una "
+"aplicación de terceros, en particular SAGA, que es uno de los principales "
+"proveedores de algoritmos."
 
 #: ../../docs/training_manual/processing/first_saga_alg.rst:9
 msgid ""
@@ -42,6 +45,14 @@ msgid ""
 "Such algorithms are wrapped and included in the toolbox, so you can easily "
 "use them from QGIS, and use QGIS data to run them."
 msgstr ""
+"Todos los algoritmos que hemos ejecutado hasta ahora son parte del marco de "
+"procesamiento. Es decir, son algoritmos *nativos* implementados en el "
+"complemento y ejecutados por QGIS tal como se ejecuta el propio complemento."
+" Sin embargo, una de las mayores características del marco de procesamiento "
+"es que puede utilizar algoritmos de aplicaciones externas y ampliar las "
+"posibilidades de esas aplicaciones. Dichos algoritmos están empaquetados e "
+"incluidos en la caja de herramientas, por lo que puede usarlos fácilmente "
+"desde QGIS y usar los datos de QGIS para ejecutarlos."
 
 #: ../../docs/training_manual/processing/first_saga_alg.rst:17
 msgid ""
@@ -54,6 +65,15 @@ msgid ""
 " talk about some of the other ones, but SAGA is going to be our main "
 "backend, so we will discuss it here."
 msgstr ""
+"Algunos de los algoritmos que ve en la vista simplificada requieren la "
+"instalación de aplicaciones de terceros en su sistema. Un proveedor de "
+"algoritmos de especial interés es SAGA (Sistema de análisis geoespacial "
+"automatizado). Primero, necesitamos configurar todo para que QGIS pueda "
+"llamar correctamente a SAGA. Esto no es difícil, pero es importante "
+"comprender cómo funciona. Cada aplicación externa tiene su propia "
+"configuración, y más adelante en este mismo manual hablaremos de algunas de "
+"las otras, pero SAGA va a ser nuestro backend principal, así que lo "
+"discutiremos aquí."
 
 #: ../../docs/training_manual/processing/first_saga_alg.rst:25
 msgid ""
@@ -63,12 +83,19 @@ msgid ""
 "is nothing else to do. You can open the settings dialog and go to the "
 "*Providers/SAGA* group."
 msgstr ""
+"Si está en Windows, la mejor manera de trabajar con algoritmos externos es "
+"instalar QGIS usando el instalador independiente. Se encargará de instalar "
+"todas las dependencias necesarias, incluido SAGA, por lo que si lo ha "
+"utilizado, no hay nada más que hacer. Puede abrir el cuadro de diálogo de "
+"configuración e ir al grupo *Proveedores/SAGA*."
 
 #: ../../docs/training_manual/processing/first_saga_alg.rst:32
 msgid ""
 "The SAGA path should already be configured and pointing to the folder where "
 "SAGA is installed."
 msgstr ""
+"La ruta SAGA ya debería estar configurada y apuntando a la carpeta donde "
+"está instalado SAGA."
 
 #: ../../docs/training_manual/processing/first_saga_alg.rst:34
 msgid ""
@@ -77,6 +104,10 @@ msgid ""
 "separately) there. The required version is SAGA 2.1 [this is changing "
 "according to the releases of SAGA]."
 msgstr ""
+"Si ha instalado QGIS sin usar el instalador independiente, entonces debe "
+"ingresar la ruta a su instalación de SAGA (que debe haber instalado por "
+"separado) allí. La versión requerida es SAGA 2.1 [esto está cambiando según "
+"las versiones de SAGA]."
 
 #: ../../docs/training_manual/processing/first_saga_alg.rst:38
 msgid ""
@@ -91,6 +122,17 @@ msgid ""
 "you can do it by enabling 2.0.8 compatibility in the configuration dialog, "
 "under the *SAGA* group."
 msgstr ""
+"En caso de que esté utilizando Linux, no tiene que establecer la ruta a su "
+"instalación SAGA en la configuración de procesamiento. En su lugar, debe "
+"instalar SAGA y asegurarse de que la carpeta SAGA esté en PATH, para que se "
+"pueda llamar desde la consola (simplemente abra una consola y escriba "
+"``saga_cmd`` para verificarlo). En Linux, la versión de destino para SAGA "
+"también es 2.1, pero en algunas instalaciones (como OSGeo Live DVD) es "
+"posible que solo tenga disponible la 2.0.8. Hay algunos paquetes 2.1 "
+"disponibles, pero no se instalan comúnmente y pueden tener algunos "
+"problemas, por lo que si prefiere utilizar el 2.0.8 más común y estable, "
+"puede hacerlo habilitando la compatibilidad con 2.0.8 en el cuadro de "
+"diálogo de configuración, en el grupo * SAGA *."
 
 #: ../../docs/training_manual/processing/first_saga_alg.rst:50
 msgid ""
@@ -101,6 +143,11 @@ msgid ""
 "the corresponding application is not installed, you will see something like "
 "this."
 msgstr ""
+"Una vez que SAGA está instalado, puede ejecutar un algoritmo SAGA haciendo "
+"doble clic en su nombre, como con cualquier otro algoritmo. Como estamos "
+"usando la interfaz simplificada, no sabe qué algoritmos están basados en "
+"SAGA o en otra aplicación externa, pero si hace doble clic en uno de ellos y"
+" la aplicación correspondiente no está instalada, verá algo como esta."
 
 #: ../../docs/training_manual/processing/first_saga_alg.rst:58
 msgid ""
@@ -108,12 +155,17 @@ msgid ""
 "you should not see this window, and you will get to the parameters dialog "
 "instead."
 msgstr ""
+"En nuestro caso, y asumiendo que SAGA está correctamente instalado y "
+"configurado, no debería ver esta ventana y, en su lugar, accederá al diálogo"
+" de parámetros."
 
 #: ../../docs/training_manual/processing/first_saga_alg.rst:61
 msgid ""
 "Let's try with a SAGA--based algorithm, the one called *Split shapes layer "
 "randomly*."
 msgstr ""
+"Probemos con un algoritmo basado en SAGA, el llamado *Capa de formas "
+"divididas aleatoriamente*."
 
 #: ../../docs/training_manual/processing/first_saga_alg.rst:65
 msgid ""
@@ -121,6 +173,10 @@ msgid ""
 "and the default parameter values, and you will get something like this (the "
 "split is random, so your result might be different)."
 msgstr ""
+"Use la capa de puntos en el proyecto correspondiente a esta lección como "
+"entrada, y los valores de los parámetros predeterminados, y obtendrá algo "
+"como esto (la división es aleatoria, por lo que su resultado puede ser "
+"diferente)."
 
 #: ../../docs/training_manual/processing/first_saga_alg.rst:71
 msgid ""
@@ -128,6 +184,9 @@ msgid ""
 "of points. This result has been computed by SAGA, and later taken by QGIS "
 "and added to the QGIS project."
 msgstr ""
+"La capa de entrada se ha dividido en dos capas, cada una con el mismo número"
+" de puntos. Este resultado ha sido calculado por SAGA y luego tomado por "
+"QGIS y agregado al proyecto QGIS."
 
 #: ../../docs/training_manual/processing/first_saga_alg.rst:75
 msgid ""
@@ -138,6 +197,12 @@ msgid ""
 "problems adding the result to the QGIS project, and an error message like "
 "this will be shown."
 msgstr ""
+"Si todo va bien, no notará ninguna diferencia entre este algoritmo basado en"
+" SAGA y uno de los otros que hemos ejecutado anteriormente. Sin embargo, es "
+"posible que SAGA, por alguna razón, no pueda producir un resultado y no "
+"generar el archivo que QGIS espera. En ese caso, habrá problemas para "
+"agregar el resultado al proyecto QGIS y se mostrará un mensaje de error como"
+" este."
 
 #: ../../docs/training_manual/processing/first_saga_alg.rst:83
 msgid ""
@@ -146,10 +211,14 @@ msgid ""
 "and it is important to know how to deal with them. Let's produce one of "
 "those error messages."
 msgstr ""
+"Este tipo de problemas pueden ocurrir, incluso si SAGA (o cualquier otra "
+"aplicación que estemos llamando desde el marco de procesamiento) esté "
+"correctamente instalada, y es importante saber cómo tratarlos. Produzcamos "
+"uno de esos mensajes de error."
 
 #: ../../docs/training_manual/processing/first_saga_alg.rst:87
 msgid "Open the *Create graticule* algorithm and use the following values."
-msgstr ""
+msgstr "Abra el algoritmo *Crear retícula* y use los siguientes valores."
 
 #: ../../docs/training_manual/processing/first_saga_alg.rst:92
 msgid ""
@@ -159,6 +228,12 @@ msgid ""
 " create the graticule. Since it cannot create it, it will not produce the "
 "expected layer, and you will see the error message shown above."
 msgstr ""
+"Estamos usando valores de ancho y alto que son mayores que la extensión "
+"especificada, por lo que SAGA no puede producir ningún resultado. En otras "
+"palabras, los valores de los parámetros son incorrectos, pero no se "
+"comprueban hasta que SAGA los obtiene e intenta crear la retícula. Como no "
+"puede crearlo, no producirá la capa esperada y verá el mensaje de error que "
+"se muestra arriba."
 
 #: ../../docs/training_manual/processing/first_saga_alg.rst:98
 msgid ""
@@ -166,6 +241,9 @@ msgid ""
 " you'll not get an error. To provoke an error, use negative values for "
 "division."
 msgstr ""
+"En SAGA> = 2.2.3, el comando ajustará automáticamente los datos de entrada "
+"incorrectos, por lo que no obtendrá un error. Para provocar un error, use "
+"valores negativos para la división."
 
 #: ../../docs/training_manual/processing/first_saga_alg.rst:101
 msgid ""
@@ -176,6 +254,12 @@ msgid ""
 " was executed. This applies not only to SAGA, but also to other external "
 "applications as well."
 msgstr ""
+"Comprender este tipo de problemas te ayudará a resolverlos y a encontrar una"
+" explicación a lo que está sucediendo. Como puedes ver en el mensaje de "
+"error, se realiza una prueba para comprobar que la conexión con SAGA está "
+"funcionando correctamente, indicándote que puede haber un problema en cómo "
+"se ejecutó el algoritmo. Esto se aplica no solo a SAGA, sino también a otras"
+" aplicaciones externas."
 
 #: ../../docs/training_manual/processing/first_saga_alg.rst:107
 msgid ""
@@ -183,3 +267,6 @@ msgid ""
 "about commands run by geoalgorithms is kept, and you will see how to get "
 "more detail when issues like this appear."
 msgstr ""
+"En la siguiente lección, presentaremos el registro de procesamiento, donde "
+"se guarda la información sobre los comandos ejecutados por geoalgoritmos, y "
+"verá cómo obtener más detalles cuando aparecen problemas como este."

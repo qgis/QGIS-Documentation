@@ -6,6 +6,7 @@
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
 # micirculopolar <lfernandez@geosistec.com>, 2020
+# Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-05 01:57+0200\n"
 "PO-Revision-Date: 2020-03-16 19:24+0000\n"
-"Last-Translator: micirculopolar <lfernandez@geosistec.com>, 2020\n"
+"Last-Translator: Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -36,18 +37,22 @@ msgstr "Biblioteca de análisis de redes"
 
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:35
 msgid "The network analysis library can be used to:"
-msgstr ""
+msgstr "La biblioteca de análisis de red se puede utilizar para:"
 
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:37
 msgid ""
 "create mathematical graph from geographical data (polyline vector layers)"
 msgstr ""
+"crear un gráfico matemático a partir de datos geográficos (capas vectoriales"
+" de polilínea)"
 
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:38
 msgid ""
 "implement basic methods from graph theory (currently only Dijkstra's "
 "algorithm)"
 msgstr ""
+"implementar métodos básicos de la teoría de grafos (actualmente solo el "
+"algoritmo de Dijkstra)"
 
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:41
 msgid ""
@@ -144,6 +149,20 @@ msgid ""
 "<https://www.boost.org/doc/libs/1_48_0/libs/graph/doc/index.html>`_ or "
 "`NetworkX <https://networkx.lanl.gov/>`_."
 msgstr ""
+"La conversión de una capa vectorial al gráfico se realiza mediante el "
+"`Builder <https://en.wikipedia.org/wiki/Builder_pattern>`_ de patrón de "
+"programación. Un gráfico se construye utilizando un llamado Director. Solo "
+"hay un Director por ahora: :api:`QgsVectorLayerDirector "
+"<classQgsVectorLayerDirector.html>`. El director establece la configuración "
+"básica que se utilizará para construir un gráfico a partir de una capa de "
+"vector de línea, utilizada por el constructor para crear el gráfico. "
+"Actualmente, como en el caso del director, solo existe un constructor: "
+":class:`QgsGraphBuilder <qgis.analysis.QgsGraphBuilder>`, que crea objetos "
+":class:`QgsGraph <qgis.analysis.QgsGraph>`. Es posible que desee implementar"
+" sus propios constructores que crearán gráficos compatibles con bibliotecas "
+"como `BGL "
+"<https://www.boost.org/doc/libs/1_48_0/libs/graph/doc/index.html>`_ o "
+"`NetworkX <https://networkx.lanl.gov/>`_."
 
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:86
 msgid ""
@@ -157,6 +176,16 @@ msgid ""
 "plugin uses a strategy that computes travel time using edge length and speed"
 " value from attributes."
 msgstr ""
+"Para calcular las propiedades del borde el patrón de `estrategia "
+"<https://en.wikipedia.org/wiki/Strategy_pattern>`_  de programamción es "
+"usado. Solo por ahora :api:`QgsNetworkDistanceStrategy "
+"<classQgsNetworkDistanceStrategy.html>` estrategia (que tiene en cuenta la "
+"longitud de la ruta) y :api:`QgsNetworkSpeedStrategy "
+"<classQgsNetworkSpeedStrategy.html>` (que también considera la velocidad) "
+"están disponibles. Puede implementar su propia estrategia que utilizará "
+"todos los parámetros necesarios. Por ejemplo, el complemento RoadGraph "
+"utiliza una estrategia que calcula el tiempo de viaje utilizando la longitud"
+" del borde y el valor de velocidad de los atributos."
 
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:95
 msgid "It's time to dive into the process."
@@ -165,6 +194,8 @@ msgstr "Es tiempo de sumergirse en el proceso."
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:97
 msgid "First of all, to use this library we should import the analysis module"
 msgstr ""
+"En primer lugar, para utilizar esta biblioteca debemos importar el módulo de"
+" análisis"
 
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:103
 msgid "Then some examples for creating a director"
@@ -189,7 +220,7 @@ msgstr "Y aquí esta la lista completa de lo que significan estos parámetros:"
 
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:135
 msgid "``vectorLayer`` --- vector layer used to build the graph"
-msgstr ""
+msgstr "``vectorLayer`` --- capa vectorial usada para construir la gráfica"
 
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:136
 msgid ""
@@ -233,18 +264,24 @@ msgid ""
 " those roads where field ``directionFieldId`` is not set or has some value "
 "different from any of the three values specified above. Possible values are:"
 msgstr ""
+"``defaultDirection`` --- dirección de la carretera predeterminada. Este "
+"valor se usará para aquellas carreteras donde el campo ``directionFieldId`` "
+"no está configurado o tiene algún valor diferente de cualquiera de los tres "
+"valores especificados anteriormente. Los posibles valores son:"
 
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:149
 msgid "``QgsVectorLayerDirector.DirectionForward`` --- One-way direct"
 msgstr ""
+"``QgsVectorLayerDirector.DirectionForward`` --- dirección de un sentido"
 
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:150
 msgid "``QgsVectorLayerDirector.DirectionBackward`` --- One-way reverse"
 msgstr ""
+"``QgsVectorLayerDirector.DirectionBackward`` --- Inverso unidireccional"
 
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:151
 msgid "``QgsVectorLayerDirector.DirectionBoth`` --- Two-way"
-msgstr ""
+msgstr "``QgsVectorLayerDirector.DirectionBoth`` --- Dos sentidos"
 
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:154
 msgid ""
@@ -263,24 +300,31 @@ msgid ""
 ":class:`QgsGraphBuilder <qgis.analysis.QgsGraphBuilder>` class constructor "
 "takes several arguments:"
 msgstr ""
+"Ahora podemos usar el constructor, que creará el gráfico. La clase "
+":class:`QgsGraphBuilder <qgis.analysis.QgsGraphBuilder>` constructor toma "
+"varios argumentos:"
 
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:176
 msgid "``crs`` --- coordinate reference system to use. Mandatory argument."
 msgstr ""
+"``crs`` --- sistema de referencia de coordenadas a utilizar. Argumento "
+"obligatorio."
 
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:177
 msgid ""
 "``otfEnabled`` --- use \"on the fly\" reprojection or no. By default "
 "const:`True` (use OTF)."
 msgstr ""
+"``otfEnabled`` --- utilizar reproyección \"sobre la marcha\" o no. Por "
+"defecto const:`True` (use OTF)."
 
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:179
 msgid "``topologyTolerance`` --- topological tolerance. Default value is 0."
-msgstr ""
+msgstr "``topologyTolerance`` --- tolerancia topológica. Por defecto es 0."
 
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:180
 msgid "``ellipsoidID`` --- ellipsoid to use. By default \"WGS84\"."
-msgstr ""
+msgstr "``ellipsoidID`` --- elipsoide a usar. Por defecto \"WGS84\"."
 
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:187
 msgid ""
@@ -345,6 +389,8 @@ msgid ""
 "The shortest path tree is a directed weighted graph (or more precisely a "
 "tree) with the following properties:"
 msgstr ""
+"El árbol de ruta más corto es un gráfico ponderado dirigido (o más "
+"precisamente un árbol) con las siguientes propiedades:"
 
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:232
 msgid "only one vertex has no incoming edges — the root of the tree"
@@ -371,6 +417,12 @@ msgid ""
 ":meth:`dijkstra <qgis.analysis.QgsGraphAnalyzer.dijkstra>` method because it"
 " works faster and uses memory more efficiently."
 msgstr ""
+"Para obtener el árbol de ruta más corto, use los métodos :meth:`shortestTree"
+" <qgis.analysis.QgsGraphAnalyzer.shortestTree>` y :meth:`dijkstra "
+"<qgis.analysis.QgsGraphAnalyzer.dijkstra>` de la clase "
+":class:`QgsGraphAnalyzer <qgis.analysis.QgsGraphAnalyzer>`. Es recomendable "
+"usar el método :meth:`dijkstra <qgis.analysis.QgsGraphAnalyzer.dijkstra>` "
+"porque funciona más rápido y usa la memoria de manera más eficiente."
 
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:244
 msgid ""
@@ -378,19 +430,25 @@ msgid ""
 "method is useful when you want to walk around the shortest path tree. It "
 "always creates a new graph object (QgsGraph) and accepts three variables:"
 msgstr ""
+"El método :meth:`shortestTree <qgis.analysis.QgsGraphAnalyzer.shortestTree>`"
+" es útil cuando desea caminar alrededor del árbol de ruta más corto. Siempre"
+" crea un nuevo objeto gráfico (QgsGraph) y acepta tres variables:"
 
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:249
 msgid "``source`` --- input graph"
-msgstr ""
+msgstr "``source`` --- gráfica entrante"
 
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:250
 msgid ""
 "``startVertexIdx`` --- index of the point on the tree (the root of the tree)"
 msgstr ""
+"``startVertexIdx`` --- índice del punto en el árbol (la raíz del árbol)"
 
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:251
 msgid "``criterionNum`` --- number of edge property to use (started from 0)."
 msgstr ""
+"``criterionNum`` --- número de propiedad de borde a usar (comenzando desde "
+"0)."
 
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:257
 msgid ""
@@ -400,6 +458,12 @@ msgid ""
 " the second array element `n` contains the distance from the root of the "
 "tree to vertex `n` or DOUBLE_MAX if vertex `n` is unreachable from the root."
 msgstr ""
+"El método :meth:`dijkstra <qgis.analysis.QgsGraphAnalyzer.dijkstra>` tiene "
+"los mismos argumentos, pero devuelve dos matrices. En la primera matriz, el "
+"elemento `n` contiene el índice del borde entrante o -1 si no hay bordes "
+"entrantes. En la segunda matriz, el elemento `n` contiene la distancia desde"
+" la raíz del árbol hasta el vértice` n` o DOUBLE_MAX si el vértice `n` es "
+"inalcanzable desde la raíz."
 
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:268
 msgid ""
@@ -408,12 +472,19 @@ msgid ""
 "<qgis.analysis.QgsGraphAnalyzer.shortestTree>` method (select linestring "
 "layer in :guilabel:`Layers` panel and replace coordinates with your own)."
 msgstr ""
+"Aquí hay un código muy simple para mostrar el árbol de ruta más corto usando"
+" el gráfico creado con el método :meth:`shortestTree "
+"<qgis.analysis.QgsGraphAnalyzer.shortestTree>` (seleccione la capa de cadena"
+" de líneas en el panel :guilabel:`Capas` y reemplace las coordenadas con las"
+" suyas)."
 
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:273
 msgid ""
 "Use this code only as an example, it creates a lot of :class:`QgsRubberBand "
 "<qgis.gui.QgsRubberBand>` objects and may be slow on large datasets."
 msgstr ""
+"Use este código solo como ejemplo, crea muchos objetos :class:`QgsRubberBand"
+" <qgis.gui.QgsRubberBand>` y puede ser lento en conjuntos de datos extensos."
 
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:309
 msgid ""
@@ -438,6 +509,14 @@ msgid ""
 "point B and start to walk through the tree from point B to point A. The "
 "whole algorithm can be written as:"
 msgstr ""
+"Para encontrar la ruta óptima entre dos puntos, se utiliza el siguiente "
+"enfoque. Ambos puntos (inicio A y final B) están \"vinculados\" al gráfico "
+"cuando se construye. Luego usando el método :meth:`shortestTree "
+"<qgis.analysis.QgsGraphAnalyzer.shortestTree>` o :meth:`dijkstra "
+"<qgis.analysis.QgsGraphAnalyzer.dijkstra>` construimos el árbol de ruta más "
+"corto con la raíz en el punto de inicio A. En el mismo árbol también "
+"encontramos el punto final B y comenzamos a caminar a través del árbol desde"
+" el punto B hasta el punto A. Todo el algoritmo se puede escribir como:"
 
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:366
 msgid ""
@@ -456,12 +535,18 @@ msgid ""
 "yours) that uses the :meth:`shortestTree "
 "<qgis.analysis.QgsGraphAnalyzer.shortestTree>` method"
 msgstr ""
+"Aquí está el código de muestra para QGIS Python Console (es posible que deba"
+" cargar y seleccionar una capa de cadena de líneas en TOC y reemplazar las "
+"coordenadas en el código con las suyas) que usa el método "
+":meth:`shortestTree <qgis.analysis.QgsGraphAnalyzer.shortestTree>`"
 
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:426
 msgid ""
 "And here is the same sample but using the :meth:`dijkstra "
 "<qgis.analysis.QgsGraphAnalyzer.dijkstra>` method"
 msgstr ""
+"Y aquí está la misma muestra pero usando el método :meth:`dijkstra "
+"<qgis.analysis.QgsGraphAnalyzer.dijkstra>` "
 
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:482
 msgid "Areas of availability"
@@ -498,6 +583,12 @@ msgid ""
 " cost[i] is less than or equal to a predefined value, then vertex i is "
 "inside the area of availability, otherwise it is outside."
 msgstr ""
+"Para encontrar las áreas de disponibilidad podemos utilizar el método "
+":meth:`dijkstra <qgis.analysis.QgsGraphAnalyzer.dijkstra>` de la clase "
+":class:`QgsGraphAnalyzer <qgis.analysis.QgsGraphAnalyzer>`. Es suficiente "
+"comparar los elementos de la matriz de costos con un valor predefinido. Si "
+"cost[i] es menor o igual a un valor predefinido, entonces el vértice i está "
+"dentro del área de disponibilidad, de lo contrario, está fuera."
 
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:500
 msgid ""
