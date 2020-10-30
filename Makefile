@@ -106,6 +106,11 @@ zip:
 site: html zip
 	rsync -az $(BUILDDIR)/html/$(LANG) $(SITEDIR)/;
 
+
+full: html zip
+	#make LANG=$(LANG) pdf;
+	
+
 # this will build ALL languages, AND tries to rsync them to the web dir on qgis2
 # to be able to run this you will need a key on the server
 all: springclean
