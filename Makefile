@@ -108,7 +108,7 @@ site: html zip
 
 
 full: springclean html zip
-	#make LANG=$(LANG) pdf;
+	make LANG=$(LANG) pdf;
 	
 
 # this will build ALL languages, AND tries to rsync them to the web dir on qgis2
