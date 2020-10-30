@@ -11,8 +11,8 @@ SPHINXBUILD     ?= sphinx-build
 SPHINXINTL      ?= sphinx-intl
 SOURCEDIR       = .
 BUILDDIR        = build
-#SITEDIR         = /var/www/html/qgisdocs
-SITEDIR         = qgis2:/var/www/qgisdata/QGIS-Documentation/live/html
+#SITEDIR         = qgis2:/var/www/qgisdata/QGIS-Documentation/live/html
+SITEDIR         = /var/www/qgisdata/QGIS-Documentation/live/html
 VERSION         = testing
 
 
