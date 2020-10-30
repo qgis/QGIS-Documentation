@@ -13,7 +13,7 @@ SOURCEDIR       = .
 BUILDDIR        = build
 #SITEDIR         = /var/www/html/qgisdocs
 SITEDIR         = qgis2:/var/www/qgisdata/QGIS-Documentation/live/html
-VERSION         = testing
+VERSION         = 3.16
 
 
 # Put it first so that "make" without argument is like "make help".
