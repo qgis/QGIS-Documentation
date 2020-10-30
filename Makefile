@@ -107,7 +107,7 @@ site: html zip
 	rsync -az $(BUILDDIR)/html/$(LANG) $(SITEDIR)/;
 
 
-full: html zip
+full: springclean html zip
 	#make LANG=$(LANG) pdf;
 	
 
