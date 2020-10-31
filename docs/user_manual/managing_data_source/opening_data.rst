@@ -62,7 +62,7 @@ However, all these tools point to a unique dialog, the :guilabel:`Data Source
 Manager` dialog, that you can open with the |dataSourceManager|
 :sup:`Open Data Source Manager` button, available on the :guilabel:`Data Source
 Manager Toolbar`, or by pressing :kbd:`Ctrl+L`.
-The :guilabel:`Data Source Manager` dialog offers a unified interface to open
+The :guilabel:`Data Source Manager` dialog(:numref:`figure_datasource_manager`) offers a unified interface to open
 vector or raster file-based data as well as databases or web services supported
 by QGIS.
 It can be set modal or not with the |checkbox|
@@ -122,7 +122,7 @@ At the top of the Browser panel, you find some buttons that help you to:
 * |filterMap| :sup:`Filter Browser` to search for specific data. Enter a search
   word or wildcard and the browser will filter the tree to only show paths to
   matching DB tables, filenames or folders -- other data or folders won't be
-  displayed. See the Browser Panel(2) example in figure_browser_panels_.
+  displayed. See the Browser Panel(2) example in :numref:`figure_browser_panels`.
   The comparison can be case-sensitive or not. It can also be set to:
 
   * :guilabel:`Normal`: show items containing the search text
