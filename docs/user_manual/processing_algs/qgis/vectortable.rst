@@ -1043,6 +1043,82 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
+.. _qgisrenametablefield:
+
+Rename vector field
+-------------------
+Renames an existing field from a vector layer.
+
+The original layer is not modified. A new layer is generated where
+the attribute table contains the renamed field.
+
+.. seealso:: :ref:`qgisrefactorfields`
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - The input vector layer
+   * - **Field to rename**
+     - ``FIELD``
+     - [string]
+     - The field to be altered
+   * - **New field name**
+     - ``NEW_NAME``
+     - [string]
+     - The new field name
+   * - **Renamed**
+     - ``OUTPUT``
+     - [vector: same as input]
+       
+       Default: ``[Create temporary layer]``
+     - Specification of the output layer.
+       One of:
+       
+       * Create Temporary Layer
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table......
+       
+       The file encoding can also be changed here.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Renamed**
+     - ``OUTPUT``
+     - [vector: same as input]
+     - Output layer with the renamed field
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:renametablefield``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
 .. _qgistexttofloat:
 
 Text to float
