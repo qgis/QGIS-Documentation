@@ -1080,7 +1080,7 @@ Parameters
      - The new field name
    * - **Renamed**
      - ``OUTPUT``
-     - [vector: any]
+     - [vector: same as input]
        
        Default: ``[Create temporary layer]``
      - Specification of the output layer.
@@ -1106,7 +1106,7 @@ Outputs
      - Description
    * - **Renamed**
      - ``OUTPUT``
-     - [vector: any]
+     - [vector: same as input]
      - Output layer with the renamed field
 
 Python code
