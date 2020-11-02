@@ -1944,8 +1944,19 @@ Line layers
 Polygon Layers
 --------------
 	
-* As for the other ones, :guilabel:`Height` can be defined in CRS units.
-* Again, :guilabel:`Extrusion` is possible for missing z-values.
+* As for the other ones, :guilabel:`Height` can be defined in CRS units. You can
+  also use the |dataDefined| button to overwrite the value with a custom 
+  expression, a variable or an entry of the attribute table
+
+* Again, :guilabel:`Extrusion` is possible for missing z-values. Also for the
+  extrusion you can use the |dataDefined| button in order to use the values of 
+  the vector layer and have different results for each polygon:
+
+   .. figure:: img/3d_extrusion.png
+      :align: center
+
+      Data Defined Extrusion
+
 * The :guilabel:`Altitude clamping`, :guilabel:`Altitude binding` can be defined
   as explained above.
 * There is an additional option to |checkbox|:guilabel:`Add back faces`
