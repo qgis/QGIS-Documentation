@@ -737,6 +737,13 @@ Parameters
      - ``INPUT``
      - [vector: point]
      - Input point vector layer
+   * - **Close path**
+     - ``CLOSE_PATH``
+     - [boolean]
+
+       Default: False
+     - If checked, the first and last points of the line will be connected
+       and close the generated path
    * - **Order field**
      - ``ORDER_FIELD``
      - [tablefield: any]
@@ -802,7 +809,7 @@ Outputs
      - [vector: line]
      - Line vector layer of the path
    * - **Directory for text output**
-     - ``OUTPUT``
+     - ``OUTPUT_TEXT_DIR``
      - [folder]
      - Directory containing description files of points and paths
 
