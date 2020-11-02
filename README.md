@@ -1,5 +1,5 @@
 ![HTML Build](https://github.com/DelazJ/QGIS-Documentation/workflows/HTML%20build/badge.svg?branch=master)
-[![Build Status](https://travis-ci.org/qgis/QGIS-Documentation.svg?branch=master)](https://travis-ci.org/qgis/QGIS-Documentation)
+![Doctest Build](https://github.com/DelazJ/QGIS-Documentation/workflows/Doctest%20build/badge.svg?branch=master)
 [![Read the documentation](https://img.shields.io/badge/Read-the%20docs-green.svg)](https://docs.qgis.org/testing/)
 
 

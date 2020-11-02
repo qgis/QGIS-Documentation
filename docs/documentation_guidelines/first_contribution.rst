@@ -322,15 +322,13 @@ A new pull request will automatically be added to the `Pull requests list
 Other editors and administrators will review your pull request and they may make
 suggestions or ask for corrections.
 
-A pull request will also trigger a `Travis CI build <https://travis-ci.org/qgis/QGIS-Documentation>`_
-which automatically checks your contribution for build errors.
-If Travis CI finds an error, a red cross will appear next to your commit.
+A pull request will also trigger automated build checks (eg, for rst formatting,
+python code syntaxes), and reports are displayed at the bottom of the page.
+If an error is found, a red cross will appear next to your commit.
 Click on the red cross or on ``Details`` in the summary section at the bottom
 of the pull request page to see the details of the error. You'll have to fix
 any reported errors or warnings before your changes are committed to the
 ``qgis/QGIS-Documentation`` repository.
-
-    .. %ToDo: The FAQ could add information on Travis error and common fixes.
 
 You can make modifications to your pull request until it is merged with the
 main repository, either to improve your request, to address requested
