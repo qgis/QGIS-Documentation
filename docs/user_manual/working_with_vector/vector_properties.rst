@@ -1945,8 +1945,8 @@ Polygon Layers
 --------------
 	
 * As for the other ones, :guilabel:`Height` can be defined in CRS units. You can
-  also use the |dataDefined| button to overwrite the value with the entries in
-  the attribute table of the vector layer.
+  also use the |dataDefined| button to overwrite the value with a custom 
+  expression, a variable or an entry of the attribute table
 
 * Again, :guilabel:`Extrusion` is possible for missing z-values. Also for the
   extrusion you can use the |dataDefined| button in order to use the values of 
