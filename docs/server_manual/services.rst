@@ -1062,6 +1062,7 @@ information which is not available in the GetCapabilities output:
 * information about vector attributes and their edit types
 * information about layer order and drawing order
 * list of layers published in WFS
+* show if a group in the layer tree is :ref:`mutually exclusive <group_layers_interact>`
 
 
 Web Feature Service (WFS)
