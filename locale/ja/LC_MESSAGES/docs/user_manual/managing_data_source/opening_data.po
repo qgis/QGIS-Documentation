@@ -145,12 +145,15 @@ msgid ""
 "connected databases. More information on DB Manager capabilities can be "
 "found in :ref:`dbmanager`."
 msgstr ""
+"このメインエントリポイントの他に、接続されたデータベースを分析したり操作したりする高度な機能を提供する |dbManager| "
+":guilabel:`DBマネージャ` プラグインがあります。DBマネージャの機能についての詳細は、 :ref:`dbmanager` "
+"を参照してください。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:87
 msgid ""
 "There are many other tools, native or third-party plugins, that help you "
 "open various data formats."
-msgstr ""
+msgstr "他にも多くのツールやネイティブのプラグイン、サードパーティ製のプラグインがあり、様々なデータ形式を開くのに役立ちます。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:90
 msgid ""
@@ -159,6 +162,8 @@ msgid ""
 "dialog but more than describing each tab, it will also explore the tools "
 "based on the data provider or format specificities."
 msgstr ""
+"この章では、QGISでデータをロードするためにデフォルトで提供されているツールのみを説明します。主に、 :guilabel:`データソースマネージャ` "
+"ダイアログに焦点を当てますが、 各タブの説明だけでなく、データプロバイダやフォーマットの仕様に基づいたツールについても説明します。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:101
 msgid "The Browser Panel"
@@ -168,13 +173,15 @@ msgstr "ブラウザパネル"
 msgid ""
 "The :guilabel:`Browser` is one of the main ways to quickly and easily add "
 "your data to projects. It's available as:"
-msgstr ""
+msgstr ":guilabel:`ブラウザ` は、素早く簡単にデータをプロジェクトに追加する主な方法の一つです。これは、以下の方法で利用できます。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:106
 msgid ""
 "a :guilabel:`Data Source Manager` tab, enabled pressing the "
 "|dataSourceManager| :sup:`Open Data Source Manager` button (:kbd:`Ctrl+L`);"
 msgstr ""
+"|dataSourceManager| :sup:`データソースマネージャを開く` ボタン（ :kbd:`Ctrl+L` ）を押して開いた "
+":guilabel:`データソースマネージャ` のタブの一つにブラウザがあります。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:108
 msgid ""
@@ -182,6 +189,8 @@ msgid ""
 "(or |kde| :menuselection:`Settings --> Panels`) or by pressing "
 ":kbd:`Ctrl+2`."
 msgstr ""
+":menuselection:`ビュー --> パネル` （ |kde| は :menuselection:`設定 --> パネル` ）メニューもしくは"
+" :kbd:`Ctrl+2` を押すことで開くQGISのパネルとして利用できます。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:111
 msgid ""
@@ -190,25 +199,29 @@ msgid ""
 "table), or the datasource format (plain or compressed files, databases, web "
 "services)."
 msgstr ""
+"どちらの場合でも、 :guilabel:`ブラウザ` "
+"はレイヤの種類（ラスタ、ベクタ、テーブル）やデータソースの形式（プレーンまたは圧縮ファイル、データベース、webサービス）に関係なく、ファイルシステム内を検索しジオデータを管理するのに役立ちます。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:116
 msgid "Exploring the Interface"
-msgstr ""
+msgstr "インターフェースについて"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:118
 msgid ""
 "At the top of the Browser panel, you find some buttons that help you to:"
-msgstr ""
+msgstr "ブラウザパネルの上部には、以下の機能を持つボタンがあります："
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:120
 msgid ""
 "|addLayer| :sup:`Add Selected Layers`: you can also add data to the map "
 "canvas by selecting **Add selected layer(s)** from the layer's context menu;"
 msgstr ""
+"|addLayer| :sup:`選択したレイヤの追加` ：レイヤのコンテキストメニューから **レイヤをプロジェクトに追加する** "
+"を選択することでも、マップキャンバスにデータを追加することができます。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:122
 msgid "|refresh| :sup:`Refresh` the browser tree;"
-msgstr ""
+msgstr "|refresh| :sup:`再読み込み` ：ブラウザツリーを更新します"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:123
 msgid ""
@@ -219,24 +232,29 @@ msgid ""
 "figure_browser_panels_. The comparison can be case-sensitive or not. It can "
 "also be set to:"
 msgstr ""
+"|filterMap| :sup:`ブラウザのフィルタ` "
+"：特定のデータを検索するためにブラウザをフィルタリングします。検索語やワイルドカードを入力すると、ブラウザはツリーをフィルタリングして、一致するDBテーブル、ファイル名、フォルダへのパスのみを表示します"
+" -- 他のデータやフォルダは表示されません。 figure_browser_panels_ "
+"のブラウザ(2)パネルの例を参照してください。比較は大文字と小文字を区別するかどうかを指定できます。また、下記のオプションを設定することもできます："
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:129
 msgid ":guilabel:`Normal`: show items containing the search text"
-msgstr ""
+msgstr ":guilabel:`通常` ：検索テキストを含むアイテムを表示します"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:130
 msgid ""
 ":guilabel:`Wildcard(s)`: fine tune the search using the ``?`` and/or ``*`` "
 "characters to specify the position of the search text"
 msgstr ""
+":guilabel:`ワイルドカード` ： ``?`` や ``*`` の文字を使用して、検索テキストの位置指定を調整した検索を実行できます。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:132
 msgid ":guilabel:`Regular expression`"
-msgstr ""
+msgstr ":guilabel:`正規表現`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:134
 msgid "|collapseTree| :sup:`Collapse All` the whole tree;"
-msgstr "|collapseTree| ツリー全体を :sup:`すべてを折りたたむ` "
+msgstr "|collapseTree| :sup:`すべて折りたたむ` ：ツリー全体を折りたたみます"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:135
 msgid ""
@@ -244,23 +262,25 @@ msgid ""
 "widget is added at the bottom of the panel showing, if applicable, metadata "
 "for the selected item."
 msgstr ""
+"|metadata| :sup:`プロパティウィジェットの有効化/無効化` "
+"：オンに切り替わると、パネルの下部に新しいウィジェットが追加され、選択されたアイテムのメタデータが表示されます。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:139
 msgid ""
 "The entries in the :guilabel:`Browser` panel are organised hierarchically, "
 "and there are several top level entries:"
-msgstr ""
+msgstr ":guilabel:`ブラウザ` パネル内のエントリは階層的にまとめられており、いくつかのトップレベルエントリがあります："
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:142
 msgid ""
 ":guilabel:`Favorites` where you can place shortcuts to often used locations"
-msgstr ""
+msgstr ":guilabel:`お気に入り` ：よく使用する場所へのショートカットを置くことができる場所です"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:143
 msgid ""
 ":guilabel:`Spatial Bookmarks` where you can store often used map extents "
 "(see :ref:`sec_bookmarks`)"
-msgstr ""
+msgstr ":guilabel:`空間ブックマーク` ：よく使用するマップ範囲を保存できる場所です（ :ref:`sec_bookmarks` 参照）"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:145
 msgid ""
@@ -268,82 +288,86 @@ msgid ""
 "of) the data related to your project are stored. The default value is the "
 "directory where your project file resides."
 msgstr ""
+":guilabel:`プロジェクトホーム` "
+"：プロジェクトに関連したデータ（の大半）が保存されているフォルダへのクイックアクセスです。デフォルト値は、プロジェクトファイルがあるディレクトリです。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:148
 msgid ""
 ":guilabel:`Home` directory in the file system and the filesystem root "
 "directory."
-msgstr ""
+msgstr "ファイルシステムの :guilabel:`ホーム` ディレクトリと、ファイルシステムのルートディレクトリ"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:149
 msgid "Connected local or network drives"
-msgstr ""
+msgstr "接続されているローカルドライブやネットワークドライブ"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:150
 msgid ""
 "Then comes a number of container / database types and service protocols, "
 "depending on your platform and underlying libraries:"
 msgstr ""
+"それから、プラットフォームと基礎となるライブラリにもよりますが、多数のコンテナ / "
+"データベース形式やサービスプロトコルのトップレベルエントリがあります："
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:153
 msgid "|geoPackage| :guilabel:`GeoPackage`"
-msgstr ""
+msgstr "|geoPackage| :guilabel:`GeoPackage`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:154
 msgid "|spatialite| :guilabel:`SpatiaLite`"
-msgstr ""
+msgstr "|spatialite| :guilabel:`SpatiaLite`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:155
 msgid "|postgis| :guilabel:`PostGIS`"
-msgstr ""
+msgstr "|postgis| :guilabel:`PostGIS`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:156
 msgid "|mssql| :guilabel:`MSSQL`"
-msgstr ""
+msgstr "|mssql| :guilabel:`MSSQL`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:157
 msgid "|oracle| :guilabel:`Oracle`"
-msgstr ""
+msgstr "|oracle| :guilabel:`Oracle`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:158
 msgid "|db2| :guilabel:`DB2`"
-msgstr ""
+msgstr "|db2| :guilabel:`DB2`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:159
 msgid "|wms| :guilabel:`WMS/WMTS`"
-msgstr ""
+msgstr "|wms| :guilabel:`WMS/WMTS`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:160
 msgid "|wms| :guilabel:`XYZ Tiles`"
-msgstr ""
+msgstr "|wms| :guilabel:`XYZ Tiles`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:161
 msgid "|wcs| :guilabel:`WCS`"
-msgstr ""
+msgstr "|wcs| :guilabel:`WCS`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:162
 msgid "|wfs| :guilabel:`WFS`"
-msgstr ""
+msgstr "|wfs| :guilabel:`WFS`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:163
 msgid "|ows| :guilabel:`OWS`"
-msgstr ""
+msgstr "|ows| :guilabel:`OWS`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:164
 msgid "|ams| :guilabel:`ArcGISMapServer`"
-msgstr ""
+msgstr "|ams| :guilabel:`ArcGISMapServer`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:165
 msgid "|afs| :guilabel:`ArcGISFeatureServer`"
-msgstr ""
+msgstr "|afs| :guilabel:`ArcGISFeatureServer`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:166
 msgid "|geonode| :guilabel:`GeoNode`"
-msgstr ""
+msgstr "|geonode| :guilabel:`GeoNode`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:169
 msgid "Interacting with the Browser items"
-msgstr ""
+msgstr "ブラウザ項目とのインタラクション"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:171
 msgid ""
@@ -351,6 +375,8 @@ msgid ""
 "the canvas and :guilabel:`Layers` panel, and from the :guilabel:`Layers` "
 "panel to layer containers (e.g. GeoPackage) in the browser."
 msgstr ""
+"ブラウザは、ブラウザへのドラッグ＆ドロップやブラウザからキャンバスや :guilabel:`レイヤ` パネルへのドラッグ＆ドロップ、 "
+":guilabel:`レイヤ` パネルからブラウザ内のレイヤコンテナ（例えばGeoPackage等）へのドラッグ＆ドロップをサポートしています。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:175
 msgid ""
@@ -361,53 +387,54 @@ msgid ""
 "a geopackage file) or added to the current project through drag and drop or "
 "double click."
 msgstr ""
+"ブラウザ内のプロジェクトファイルのアイテムは展開することができ、プロジェクトに含まれる（グループを含む）完全なレイヤツリーを表示します。プロジェクトのアイテムはブラウザ内の他のアイテムと同様に扱われるため、（例えばGeoPackageファイルにレイヤアイテムをコピーするために）ブラウザ内でドラッグ＆ドロップしたり、ドラッグ＆ドロップやダブルクリックで現在のプロジェクトにアイテムを追加したりすることができます。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:182
 msgid ""
 "The context menu for an element in the :guilabel:`Browser` panel is opened "
 "by right-clicking on it."
-msgstr ""
+msgstr ":guilabel:`ブラウザ` パネル内の要素を右クリックすると、コンテキストメニューが開きます。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:185
 msgid ""
 "For file system directory entries, the context menu offers the following:"
-msgstr ""
+msgstr "ファイルシステムのディレクトリエントリの場合、コンテキストメニューには次のようなものがあります："
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:187
 msgid ":guilabel:`New` -->"
-msgstr ""
+msgstr ":guilabel:`新規` -->"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:189
 msgid ":guilabel:`Directory...`"
-msgstr ""
+msgstr ":guilabel:`ディレクトリ...`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:190
 msgid ":guilabel:`GeoPackage...`"
-msgstr ""
+msgstr ":guilabel:`GeoPackage...`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:191
 msgid ":guilabel:`ShapeFile...`"
-msgstr ""
+msgstr ":guilabel:`シェープファイル...`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:192
 msgid ":guilabel:`Add as a Favorite`"
-msgstr ""
+msgstr ":guilabel:`お気に入りとして追加`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:193
 msgid ":guilabel:`Hide from Browser`"
-msgstr ""
+msgstr ":guilabel:`ブラウザから隠す`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:194
 msgid ":guilabel:`Fast Scan this Directory`"
-msgstr ""
+msgstr ":guilabel:`このディレクトリの高速スキャン`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:195
 msgid ":guilabel:`Open Directory`"
-msgstr ""
+msgstr ":guilabel:`ディレクトリを開く...`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:196
 msgid ":guilabel:`Open in Terminal`"
-msgstr ""
+msgstr ":guilabel:`ターミナルで開く...`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:197
 msgid ":guilabel:`Properties...`"
@@ -415,19 +442,19 @@ msgstr ":guilabel:`プロパティ...`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:198
 msgid ":guilabel:`Directory Properties...`"
-msgstr ""
+msgstr ":guilabel:`ディレクトリプロパティ...`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:200
 msgid ":guilabel:`Favourites`, can also be removed and renamed:"
-msgstr ""
+msgstr ":guilabel:`お気に入り` 内のディレクトリエントリは、削除や名前変更もできます："
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:202
 msgid ":guilabel:`Rename favourite...`"
-msgstr ""
+msgstr ":guilabel:`お気に入りの名前の変更...`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:203
 msgid ":guilabel:`Remove favourite`"
-msgstr ""
+msgstr ":guilabel:`お気に入りを削除`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:205
 msgid ""
@@ -435,26 +462,27 @@ msgid ""
 "will have supporting entries. For example, for non-database, non-service-"
 "based vector, raster and mesh data sources:"
 msgstr ""
+"プロジェクト内でレイヤとして扱うことのできるリーフエントリについては、コンテキストメニューにサポート項目があります。例えば、非データベース、非サービスベースのベクタ、ラスタ、メッシュデータソースには、以下の項目があります："
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:210
 msgid ":guilabel:`Delete File \"<name of file>\"...`"
-msgstr ""
+msgstr ":guilabel:`ファイル \"<name of file>\" を削除する...`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:211
 msgid ":guilabel:`Export Layer` --> :guilabel:`To File...`"
-msgstr ""
+msgstr ":guilabel:`レイヤエクスポート` --> :guilabel:`ファイルへ...`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:212
 msgid ":guilabel:`Add Layer to Project`"
-msgstr ""
+msgstr ":guilabel:`レイヤをプロジェクトに追加する`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:213
 msgid ":guilabel:`Layer Properties`"
-msgstr ""
+msgstr ":guilabel:`レイヤのプロパティ`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:214
 msgid ":guilabel:`File Properties`"
-msgstr ""
+msgstr ":guilabel:`ファイルプロパティ...`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:216
 msgid ""
@@ -463,6 +491,9 @@ msgid ""
 ":ref:`raster <raster_properties_dialog>` layer properties once the layers "
 "have been added to the project):"
 msgstr ""
+":guilabel:`レイヤのプロパティ` エントリを選択すると、（レイヤがプロジェクトに追加された後に :ref:`ベクタ "
+"<vector_properties_dialog>` レイヤや :ref:`ラスタ <raster_properties_dialog>` "
+"レイヤのプロパティで表示されるものと同様な）以下の情報が表示されます："
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:222
 msgid ""
@@ -473,20 +504,25 @@ msgid ""
 "layers), :guilabel:`Contacts`, :guilabel:`Links` (for vector layers), "
 ":guilabel:`References` (for raster layers), :guilabel:`History`."
 msgstr ""
+"レイヤに関する :guilabel:`メタデータ` 。メタデータのグループは次のとおりです： :guilabel:`プロバイダからの情報` （可能ならば"
+" :guilabel:`パス` はソースへのハイパーリンクで表示されます）、 :guilabel:`識別` 、 :guilabel:`領域` 、 "
+":guilabel:`アクセス` 、 :guilabel:`フィールド` （ベクタレイヤの場合）、 :guilabel:`バンド` "
+"（ラスタレイヤの場合）、 :guilabel:`連絡先` 、 :guilabel:`リンク` （ベクタレイヤの場合）、 "
+":guilabel:`リファレンス` （ラスタレイヤの場合）、 :guilabel:`履歴`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:229
 msgid "A :guilabel:`Preview` panel"
-msgstr ""
+msgstr ":guilabel:`プレビュー` パネル"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:230
 msgid ""
 "The attribute table for vector sources (in the :guilabel:`Attributes` "
 "panel)."
-msgstr ""
+msgstr "ベクタソースの場合は属性テーブル（ :guilabel:`属性` パネル内）"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:233
 msgid "To add a layer to the project using the :guilabel:`Browser`:"
-msgstr ""
+msgstr ":guilabel:`ブラウザ` を使用してプロジェクトにレイヤを追加するには、次の手順で操作します："
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:235
 msgid ""
@@ -495,10 +531,12 @@ msgid ""
 "connect databases and web services before they appear (see dedicated "
 "sections)."
 msgstr ""
+":guilabel:`ブラウザ` "
+"を上記のように有効にします。ファイルシステム、データベース、webサービスのブラウザツリーが表示されます。データベースやwebサービスが表示される前に、データベースやwebサービスへ接続する必要があるかもしれません（専用のセクションを参照してください）。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:240
 msgid "Find the layer in the list."
-msgstr ""
+msgstr "リストの中からレイヤを見つけます。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:241
 msgid ""
@@ -506,16 +544,20 @@ msgid ""
 ":ref:`map canvas <label_mapview>`. Your layer is now added to the "
 ":ref:`Layers panel <label_legend>` and can be viewed on the map canvas."
 msgstr ""
+"レイヤのコンテキストメニューを使用するか、レイヤ名をダブルクリックするか、レイヤを :ref:`マップキャンバス <label_mapview>` "
+"へとドラッグ＆ドロップします。これでレイヤは :ref:`レイヤパネル <label_legend>` "
+"に追加され、マップキャンバス上で見ることができるようになります。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:246
 msgid "**Open a QGIS project directly from the browser**"
-msgstr ""
+msgstr "**ブラウザからQGISプロジェクトを直接開く**"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:248
 msgid ""
 "You can also open a QGIS project directly from the Browser panel by double-"
 "clicking its name or by drag-and-drop into the map canvas."
 msgstr ""
+"プロジェクト名をダブルクリックするか、マップキャンバス上へドラッグ＆ドロップすることで、ブラウザパネルからQGISのプロジェクトを直接開くこともできます。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:251
 msgid ""
@@ -526,16 +568,20 @@ msgid ""
 " menu. See section :ref:`vector_style_menu` for more information on setting "
 "symbology for vector layers."
 msgstr ""
+"ファイルがロードされたら、マップナビゲーションツールを使用してレイヤをあちこちズームすることができます。レイヤのスタイルを変更するには、凡例内のレイヤ名をダブルクリックするか、レイヤ名を右クリックしてコンテキストメニューから"
+" :menuselection:`プロパティ` を選択し、 :guilabel:`レイヤプロパティ` "
+"ダイアログを開きます。ベクタレイヤのシンボロジ設定の詳細については、 :ref:`vector_style_menu` を参照してください。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:259
 msgid "Right-clicking an item in the browser tree helps you to:"
-msgstr ""
+msgstr "ブラウザツリー内のアイテムを右クリックすると、以下の機能があります："
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:261
 msgid ""
 "for a file or a table, display its metadata or open it in your project. "
 "Tables can even be renamed, deleted or truncated."
 msgstr ""
+"ファイルやテーブルについては、メタデータを表示したり、プロジェクト内に開きます。テーブルは名前を変更したり、行を削除したり、全行削除することもできます。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:263
 msgid ""
@@ -543,20 +589,24 @@ msgid ""
 "tree. Hidden folders can be managed from the :menuselection:`Settings --> "
 "Options --> Data Sources` tab."
 msgstr ""
+"フォルダについては、お気に入りにブックマークしたり、ブラウザツリーから隠したりできます。非表示となったフォルダは、 :menuselection:`設定"
+" --> オプション --> データソース` タブで管理することができます。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:266
 msgid ""
 "manage your :ref:`spatial bookmarks <sec_bookmarks>`: bookmarks can be "
 "created, exported and imported as ``XML`` files."
 msgstr ""
+":ref:`空間ブックマーク <sec_bookmarks>` の管理：ブックマークを作成したり、ブックマークを ``XML`` "
+"ファイルとしてエクスポートしたり、``XML`` ファイルからインポートしたりできます。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:268
 msgid "create a connection to a database or a web service."
-msgstr ""
+msgstr "データベースやwebサービスへの接続を作成します。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:269
 msgid "refresh, rename or delete a schema."
-msgstr ""
+msgstr "再読み込みや、スキーマ名の変更、スキーマの削除ができます。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:271
 msgid ""
@@ -565,6 +615,7 @@ msgid ""
 "browser panel available to avoid long scrolling while dragging. Just select "
 "the file and drag-and-drop from one panel to the other."
 msgstr ""
+"また、ファイルをデータベースにインポートしたり、1つのスキーマ/データベースから別のスキーマ/データベースにテーブルをコピーしたりすることもドラッグ＆ドロップで簡単に行うことができます。2つ目のブラウザパネルを利用することで、ドラッグ中に長いスクロールを行わずに済みます。ファイルを選択して、一方のパネルから他方のパネルへとドラッグ＆ドロップするだけです。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:281
 msgid "QGIS Browser panels side-by-side"
@@ -573,7 +624,7 @@ msgstr "横並びのQGISブラウザパネル"
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:284
 msgid ""
 "**Add layers to QGIS by simple drag-and-drop from your OS file browser**"
-msgstr "**お使いのOSのファイルブラウザからの簡単なドラッグ＆ドロップでQGISにレイヤーを追加します**"
+msgstr "**OSのファイルブラウザからドラッグ＆ドロップでQGISにレイヤを追加する**"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:286
 msgid ""
@@ -581,8 +632,8 @@ msgid ""
 "operating system file browser to the :guilabel:`Layers Panel` or the map "
 "canvas."
 msgstr ""
-"ファイルをプロジェクトに追加するには、オペレーティングシステムのファイルブラウザから :guilabel:`レイヤーパネル` "
-"または地図キャンバスにファイルをドラッグアンドドロップします。"
+"オペレーティングシステムのファイルブラウザから :guilabel:`レイヤパネル` "
+"またはマップキャンバスにファイルをドラッグ＆ドロップしても、ファイルをプロジェクトに追加できます。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:293
 msgid "The DB Manager"
@@ -595,69 +646,74 @@ msgid ""
 "GeoPackage, Oracle Spatial, MSSQL, DB2, Virtual layers). It can be activated"
 " from the :menuselection:`Plugins --> Manage and Install Plugins...` menu."
 msgstr ""
+":guilabel:`DBマネージャ` プラグインは、is another tool for integrating and managing "
+"spatial database formats supported by "
+"QGISがサポートする空間データベース形式（PostGIS、SpatiaLite、GeoPackage、Oracle "
+"Spatial、MSSQL、DB2、仮想レイヤ）を統合して管理するためのもう一つのツールです。これは、 :menuselection:`プラグイン "
+"--> プラグインの管理とインストール...` メニューから有効化することができます。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:301
 msgid "The |dbManager| :sup:`DB Manager` Plugin provides several features:"
-msgstr "|DBManager| :sup:`DBマネージャ` プラグインはいくつかの機能を提供します。"
+msgstr "|DBManager| :sup:`DBマネージャ` プラグインにはさまざまな機能があります。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:303
 msgid "connect to databases and display their structure and contents"
-msgstr ""
+msgstr "データベースに接続し、その構造や内容を表示する"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:304
 msgid "preview tables of databases"
-msgstr ""
+msgstr "データベースのテーブルをプレビューする"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:305
 msgid ""
 "add layers to the map canvas, either by double-clicking or drag-and-drop."
-msgstr ""
+msgstr "ダブルクリックまたはドラッグ＆ドロップで、マップキャンバスへレイヤを追加する"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:306
 msgid ""
 "add layers to a database from the QGIS Browser or from another database"
-msgstr ""
+msgstr "QGISブラウザや他のデータベースから、データベースにレイヤを追加する"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:307
 msgid "create SQL queries and add their output to the map canvas"
-msgstr ""
+msgstr "SQLクエリを作成し、実行結果をマップキャンバスへ追加する"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:308
 msgid "create :ref:`virtual layers <vector_virtual_layers>`"
-msgstr ""
+msgstr ":ref:`仮想レイヤ <vector_virtual_layers>` を作成する"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:310
 msgid ""
 "More information on DB Manager capabilities is found in :ref:`dbmanager`."
-msgstr ""
+msgstr "DBマネージャの機能に関する更なる情報は、 :ref:`dbmanager` を参照してください。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:317
 msgid "DB Manager dialog"
-msgstr "[DBマネージャ]ダイアログ"
+msgstr "DBマネージャダイアログ"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:321
 msgid "Provider-based loading tools"
-msgstr "プロバイダーベースのロードツール"
+msgstr "プロバイダベースの読み込みツール"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:323
 msgid ""
 "Beside the Browser Panel and the DB Manager, the main tools provided by QGIS"
 " to add layers, you'll also find tools that are specific to data providers."
-msgstr ""
+msgstr "レイヤを追加するためにQGISが提供する主なツールであるブラウザパネルとDBマネージャの他に、データプロバイダに特化したツールもあります。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:328
 msgid ""
 "Some :ref:`external plugins <plugins>` also provide tools to open specific "
 "format files in QGIS."
-msgstr ""
+msgstr "いくつかの :ref:`外部プラグイン <plugins>` も、QGISで特定の形式のファイルを開くためのツールを提供しています。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:336
 msgid "Loading a layer from a file"
-msgstr "ファイルからレイヤーを読み込む"
+msgstr "ファイルからレイヤを読み込む"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:338
 msgid "To load a layer from a file:"
-msgstr ""
+msgstr "ファイルからレイヤを読み込むには、次の手順で操作します："
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:340
 msgid ""
@@ -665,6 +721,8 @@ msgid ""
 "click the |dataSourceManager| :sup:`Open Data Source Manager` button (or "
 "press :kbd:`Ctrl+L`) and enable the target tab or:"
 msgstr ""
+":guilabel:`データソースマネージャ` ダイアログでレイヤタイプのタブを開きます。つまり、 |dataSourceManager| "
+":sup:`データソースマネージャを開く` ボタン（または :kbd:`Ctrl+L` ）を押し、目的のタブを有効にします。 もしくは、"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:344
 msgid ""
@@ -673,10 +731,13 @@ msgid ""
 "|addOgrLayer| :guilabel:`Add Vector Layer` menu option or click on the "
 "|addOgrLayer| :sup:`Add Vector Layer` toolbar button."
 msgstr ""
+"ベクタデータ（GML、ESRIシェープファイル、Mapinfo、DXFなど）については、 :kbd:`Ctrl+Shift+V` を押すか、 "
+":menuselection:`レイヤ --> レイヤの追加 -->` |addOgrLayer| :guilabel:`ベクタレイヤの追加` "
+"メニューオプションを選択するか、  |addOgrLayer| :sup:`ベクタレイヤの追加` ツールバーボタンをクリックします。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:354
 msgid "Add Vector Layer Dialog"
-msgstr "ベクターレイヤーダイアログを追加"
+msgstr "ベクタレイヤの追加ダイアログ"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:356
 msgid ""
@@ -685,18 +746,21 @@ msgid ""
 "-->` |addRasterLayer| :guilabel:`Add Raster Layer` menu option or click on "
 "the |addRasterLayer| :sup:`Add Raster Layer` toolbar button."
 msgstr ""
+"ラスタデータ（GeoTiff、MBTiles、GRIdded Binary、DWGなど）については、 :kbd:`Ctrl+Shift+R` を押すか、"
+" :menuselection:`レイヤ --> レイヤの追加 -->` |addRasterLayer| :guilabel:`ラスタレイヤの追加` "
+"メニューオプションを選択するか、 |addRasterLayer| :sup:`ラスタレイヤの追加` ツールバーボタンをクリックします。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:366
 msgid "Add Raster Layer Dialog"
-msgstr ""
+msgstr "ラスタレイヤの追加ダイアログ"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:368
 msgid "Check |radioButtonOn| :guilabel:`File` source type"
-msgstr ""
+msgstr "ソースタイプは |radioButtonOn| :guilabel:`ファイル` を選択します"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:369
 msgid "Click on the :guilabel:`...` :sup:`Browse` button"
-msgstr ""
+msgstr ":guilabel:`...` :sup:`ブラウズ` ボタンをクリックします"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:370
 msgid ""
@@ -708,16 +772,20 @@ msgid ""
 "filter. Other formats can be loaded by selecting ``All files`` (the top item"
 " in the pull-down menu)."
 msgstr ""
+"ファイルシステムを検索し、サポートされているデータソースを読み込みます。ダイアログで :kbd:`Ctrl` "
+"キーを押しながら複数のアイテムをクリックするか、 :kbd:`Shift` "
+"キーを押しながら最初と最後のアイテムを選択することでアイテム範囲を選択することで、複数のレイヤを同時に読み込むことが可能です。ファイル形式のフィルタには、十分にテストされたファイル形式のみが表示されます。他のファイル形式は、"
+"  ``全ファイル`` （プルダウンメニューの一番上のアイテム）を選択することで読み込むことができます。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:378
 msgid ""
 "Press :guilabel:`Open` to load the selected file into :guilabel:`Data Source"
 " Manager` dialog"
-msgstr ""
+msgstr ":guilabel:`開く` ボタンを押し、選択したファイルを :guilabel:`データソースマネージャ` ダイアログに読み込みます"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:380
 msgid "You can specify the encoding for vector file if desired"
-msgstr ""
+msgstr "ベクタファイルの場合は、必要に応じてエンコーディングを指定することができます"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:381
 msgid ""
@@ -725,6 +793,8 @@ msgid ""
 "view. figure_vector_loaded_ shows QGIS after loading the :file:`alaska.shp` "
 "file."
 msgstr ""
+":guilabel:`追加` ボタンを押すと、QGISにファイルが読み込まれ、マップビューに表示されます。 figure_vector_loaded_ "
+"は、 :file:`alaska.shp` ファイルがロードされた後のQGISを表示しています。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:389
 msgid "QGIS with Shapefile of Alaska loaded"
@@ -737,6 +807,8 @@ msgid ""
 "loading such datasets opens a dialog to select geometries to use in order to"
 " have one geometry per layer."
 msgstr ""
+"MapInfo （例 :file:`.tab` ）やAutoCAD（ :file:`.dxf` "
+"）などいくつかのファイル形式は一つのファイル内にさまざまなジオメトリタイプを混在させることが可能なため、このようなデータセットを開く時には、レイヤごとに1つのジオメトリとするために、使用するジオメトリを選択するダイアログが開きます。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:401
 msgid ""
@@ -744,6 +816,8 @@ msgid ""
 "Raster Layer` tabs allow loading of layers from source types other than "
 ":guilabel:`File`:"
 msgstr ""
+"|addOgrLayer| :sup:`Add ベクタ` と |addRasterLayer| :sup:`ラスタ` タブでは、 "
+":guilabel:`ファイル` 以外のソースタイプからレイヤを読み込むことができます："
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:404
 msgid ""
@@ -753,6 +827,11 @@ msgid ""
 ":guilabel:`Directory` as :guilabel:`Source type`. In this case, a directory "
 "can be selected in the dialog after pressing :guilabel:`...` :sup:`Browse`."
 msgstr ""
+"``ArcInfo Binary Coverage`` 、 ``UK. National Transfer Format`` や ``US Census"
+" Bureau`` のraw TIGER形式、 ``OpenfileGDB`` "
+"といった特定のベクタフォーマットを読み込むことができます。これらを読み込むためには、 :guilabel:`ソースタイプ` で "
+"|radioButtonOn| :guilabel:`ディレクトリ` を選択します。この場合、 :guilabel:`...` :sup:`ブラウズ` "
+"ボタンを押すと、ダイアログではディレクトリの選択が可能になります。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:410
 msgid ""
@@ -761,6 +840,10 @@ msgid ""
 "Some possible database types are ``ODBC``, ``Esri Personal Geodatabase``, "
 "``MSSQL`` as well as ``PostgreSQL`` or ``MySQL`` ."
 msgstr ""
+"|radioButtonOn| :guilabel:`データベース` "
+"ソースタイプでは、既存のデータベース接続を選択したり、選択したデータベースタイプの接続を作成したりすることができます。利用可能なデータベースタイプには、"
+" ``ODBC`` 、 ``Esri Personal GeoDatabase`` 、 ``MSSQL`` 、 ``PostgreSQL`` 、 "
+"``MySQL`` などがあります。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:415
 msgid ""
@@ -770,6 +853,10 @@ msgid ""
 "you select from the available tables, for example of PostGIS enabled "
 "databases."
 msgstr ""
+":guilabel:`新規` ボタンを押すと、 :guilabel:`新しいOGRデータベース接続を作成する` "
+"ダイアログが開きます。指定できるパラメータは :ref:`vector_create_stored_connection` "
+"で説明しているものと同じです。 :guilabel:`Open` ボタンを押すと、利用可能なテーブルの中から、例えば PostGIS "
+"が有効になっているデータベースのテーブルなどを選択することができます。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:420
 msgid ""
@@ -778,12 +865,16 @@ msgid ""
 "in private buckets of commercial cloud storage services. Supported protocol "
 "types are:"
 msgstr ""
+"|radioButtonOn| :guilabel:`プロトコル` "
+"ソースタイプは、ローカル、あるいはネットワークに保存されたデータを開きます。このデータはパブリックアクセスが可能か、商用クラウドストレージサービスのプライベートバケットに保存されているかのいずれかです。サポートされているプロトコルタイプは以下のとおりです："
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:425
 msgid ""
 "``HTTP/HTTPS/FTP``, with a :guilabel:`URI` and, if required, an "
 ":ref:`authentication <authentication_index>`."
 msgstr ""
+"``HTTP/HTTPS/FTP`` ： :guilabel:`URI` と、必要に応じて :ref:`認証 "
+"<authentication_index>` を指定します"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:427
 msgid ""
@@ -792,6 +883,9 @@ msgid ""
 "to fill in the :guilabel:`Bucket or container` and the :guilabel:`Object "
 "key`."
 msgstr ""
+"``AWS S3`` 、 ``Google Cloud Storage`` 、 ``Microsoft Azure Blob`` 、 ``Alibaba"
+" OSS Cloud`` 、 ``Open Stack Swift Storage`` 等のクラウドストレージ。 "
+":guilabel:`バケットまたはコンテナ` と :guilabel:`オブジェクトキー` を入力する必要があります。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:431
 msgid ""
@@ -800,10 +894,13 @@ msgid ""
 ":guilabel:`URI` is required, with optional :ref:`authentication "
 "<authentication_index>`."
 msgstr ""
+"OGC ``WFS 3`` をサポートするサービス（まだ実験段階です）。 ``GeoJSON`` または ``GEOJSON - Newline "
+"Delimited`` フォーマットを使用しているか、 ``CouchDB`` データベースに基づくものです。 :guilabel:`URI` "
+"が必須で、 :ref:`認証 <authentication_index>` はオプションです。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:439
 msgid "Loading a mesh layer"
-msgstr ""
+msgstr "メッシュレイヤを読み込む"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:441
 msgid ""
@@ -811,10 +908,12 @@ msgid ""
 "The spatial component contains a collection of vertices, edges and faces in "
 "2D or 3D space. More information on mesh layers at :ref:`label_meshdata`."
 msgstr ""
+"メッシュは通常、時間やその他の成分を持った非構造格子です。空間成分には、2Dまたは3D空間の頂点、辺、面の集合が含まれます。メッシュレイヤに関する詳細な情報は"
+" :ref:`label_meshdata` を参照してください。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:445
 msgid "To add a mesh layer to QGIS:"
-msgstr ""
+msgstr "メッシュレイヤをQGISに追加するには、次の手順で操作します："
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:447
 msgid ""
@@ -822,26 +921,30 @@ msgid ""
 " from the :menuselection:`Layer -->` menu or clicking the "
 "|dataSourceManager| :sup:`Open Data Source Manager` button."
 msgstr ""
+":menuselection:`レイヤ -->` メニューから選択するか、 |dataSourceManager| "
+":sup:`データソースマネージャを開く` ボタンをクリックして、 :menuselection:`データソースマネージャ` ダイアログを開きます。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:450
 msgid "Enable the |addMeshLayer| :guilabel:`Mesh` tab on the left panel"
-msgstr ""
+msgstr "左のパネルの |addMeshLayer| :guilabel:`メッシュ` タブを有効にします。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:451
 msgid ""
 "Press the :guilabel:`...` :sup:`Browse` button to select the file. "
 ":ref:`Various formats <mesh_supported_formats>` are supported."
 msgstr ""
+":guilabel:`...` :sup:`ブラウズ` ボタンを押し、ファイルを選択します。 :ref:`さまざまなファイル形式 "
+"<mesh_supported_formats>` がサポートされています。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:453
 msgid ""
 "Select the layer and press :guilabel:`Add`. The layer will be added using "
 "the native mesh rendering."
-msgstr ""
+msgstr "レイヤを選択し、 :guilabel:`追加` ボタンを押します。ネイティブのメッシュレンダリングを使用してレイヤが追加されます。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:461
 msgid "Mesh tab in Data Source Manager"
-msgstr ""
+msgstr "データソースマネージャのメッシュタブ"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:469
 msgid "Importing a delimited text file"
@@ -855,16 +958,23 @@ msgid ""
 "coordinates / geometries that you could want to visualize. This is what "
 "|addDelimitedTextLayer|:guilabel:`Add Delimited Text Layer` is designed for."
 msgstr ""
+"区切りのあるテキストファイル（例えば :file:`.txt` 、 :file:`.csv` 、 :file:`.dat` 、 :file:`.wkt`"
+" "
+"）は上記のツールを使って読み込むことができますが、この方法ではファイルはシンプルなテーブルとして表示されます。時には、区切りのあるテキストファイルに可視化したい座標"
+" / ジオメトリが含まれていることがあります。 |addDelimitedTextLayer|:guilabel:`CSVテキストレイヤの追加`  "
+"で読み込むことで、これを可視化することができます。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:479
 msgid ""
 "Click the |dataSourceManager| :sup:`Open Data Source Manager` icon to open "
 "the :guilabel:`Data Source Manager` dialog"
 msgstr ""
+"|dataSourceManager| :sup:`データソースマネージャを開く` アイコンをクリックし、 "
+":guilabel:`データソースマネージャ` ダイアログを開きます"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:481
 msgid "Enable the |addDelimitedTextLayer| :guilabel:`Delimited Text` tab"
-msgstr ""
+msgstr "|addDelimitedTextLayer| :guilabel:`CSVテキスト` タブを有効にします"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:482
 msgid ""
@@ -872,25 +982,28 @@ msgid ""
 ":file:`qgis_sample_data/csv/elevp.csv`) by clicking on the :guilabel:`...` "
 ":sup:`Browse` button."
 msgstr ""
+":guilabel:`...` :sup:`ブラウズ` ボタンをクリックし、インポートしたい区切りのあるテキストファイル（例えば "
+":file:`qgis_sample_data/csv/elevp.csv` ）を選択します。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:484
 msgid ""
 "In the :guilabel:`Layer name` field, provide the name to use for the layer "
 "in the project (e.g. :file:`Elevation`)."
 msgstr ""
+"プロジェクト内でレイヤに使用したい名前を :guilabel:`レイヤ名` フィールドに入力します。 （例： :file:`Elevation` ）"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:486
 msgid ""
 "Configure the settings to meet your dataset and needs, as explained below."
-msgstr ""
+msgstr "以下に説明するように、データセットや必要に合わせて設定を行います。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:493
 msgid "Delimited Text Dialog"
-msgstr "区切りテキストダイアログ"
+msgstr "CSVテキストダイアログ"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:496
 msgid "File format"
-msgstr ""
+msgstr "ファイル形式"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:498
 msgid ""
@@ -899,12 +1012,13 @@ msgid ""
 "correctly parse the file, it is important to select the right delimiter. You"
 " can specify a delimiter by choosing between:"
 msgstr ""
+"ファイルが選択されると、QGISは最近使用された区切り文字を使用してファイルの解析を試み、フィールドと行を識別します。QGISがファイルを正しく解析できるようにするためには、正しい区切り文字を選択することが重要です。区切り文字には、次のいずれかを選択して指定することができます："
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:503
 msgid ""
 "|radioButtonOn|:guilabel:`CSV (comma separated values)` to use the comma "
 "character."
-msgstr ""
+msgstr "|radioButtonOn|:guilabel:`CSV（コンマで区切られた値）` は、コンマの文字を使います。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:505
 msgid ""
@@ -913,6 +1027,8 @@ msgid ""
 "tab, use ``\\t`` (this is used in regular expressions for the tab "
 "character)."
 msgstr ""
+"|radioButtonOff|:guilabel:`正規表現区切り` を選んだ場合は :guilabel:`式` "
+"フィールドにテキストを入力します。例えば、区切り文字をタブに変更するには、 ``\\t`` （これは正規表現ではタブ文字に使用されます）を使用します。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:509
 msgid ""
@@ -920,14 +1036,16 @@ msgid ""
 "predefined delimiters like ``comma``, ``space``, ``tab``, ``semicolon``, ..."
 " ."
 msgstr ""
+"|radioButtonOff|:guilabel:`カスタム区切り` は、 ``コンマ`` 、 ``空白`` 、 ``タブ`` 、 ``セミコロン``"
+" 等の定義済み区切り文字の中から選択します。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:513
 msgid "Records and fields"
-msgstr ""
+msgstr "レコードとフィールドのオプション"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:515
 msgid "Some other convenient options can be used for data recognition:"
-msgstr ""
+msgstr "他にもデータ認識に使用できる便利なオプションがいくつかあります："
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:517
 msgid ""
@@ -935,6 +1053,8 @@ msgid ""
 "avoid the first lines in the file in the import, either because those are "
 "blank lines or with another formatting."
 msgstr ""
+":guilabel:`破棄するヘッダ行数` "
+"：ファイルの始めの数行が空行あるいは別フォーマットであるときに、これをインポートしないようにする場合に便利です。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:520
 msgid ""
@@ -942,42 +1062,47 @@ msgid ""
 " are used as field names, otherwise QGIS uses the field names ``field_1``, "
 "``field_2``..."
 msgstr ""
+"|checkbox|:guilabel:`最初の行はフィールド名` "
+"：最初の行の値をフィールド名として使用します。チェックがない場合には、QGISはフィールド名に ``field_1`` 、 ``field_2`` "
+"等を使用します。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:523
 msgid ""
 "|checkbox|:guilabel:`Detect field types`: automatically recognizes the field"
 " type. If unchecked then all attributes are treated as text fields."
 msgstr ""
+"|checkbox|:guilabel:`フィールド型を検出する` "
+"：フィールドの型を自動的に認識します。チェックがない場合には、全ての属性はテキストフィールドとして扱われます。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:525
 msgid ""
 "|checkbox|:guilabel:`Decimal separator is comma`: you can force decimal "
 "separator to be a comma."
-msgstr ""
+msgstr "|checkbox|:guilabel:`小数点記号にコンマを使う` ：小数点の区切り文字を強制的ににコンマとすることができます。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:527
 msgid ""
 "|checkbox|:guilabel:`Trim fields`: allows you to trim leading and trailing "
 "spaces from fields."
-msgstr ""
+msgstr "|checkbox|:guilabel:`前後の空白を削除する` ：フィールドから前後の空白文字を取り除くことができます。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:529
 msgid "|checkbox|:guilabel:`Discard empty fields`."
-msgstr ""
+msgstr "|checkbox|:guilabel:`空フィールドを削除する`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:531
 msgid ""
 "As you set the parser properties, a sample data preview updates at the "
 "bottom of the dialog."
-msgstr ""
+msgstr "解析器のプロパティを設定すると、ダイアログ下部のサンプルデータのプレビューが更新されます。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:535
 msgid "Geometry definition"
-msgstr ""
+msgstr "ジオメトリ定義"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:537
 msgid "Once the file is parsed, set :guilabel:`Geometry definition` to"
-msgstr ""
+msgstr "ファイルが解析されたら、 :guilabel:`ジオメトリ定義` の設定を行います。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:539
 msgid ""
@@ -989,6 +1114,11 @@ msgid ""
 "coordinates` checkbox. Provide the appropriate :guilabel:`Geometry CRS` "
 "using the |setProjection| :sup:`Select CRS` widget."
 msgstr ""
+"|radioButtonOn|:guilabel:`ポイント座標` レイヤがポイントジオメトリ型で、 :guilabel:`X属性` 、 "
+":guilabel:`Y属性` 、 :guilabel:`Z属性`  （3次元データの場合）、 :guilabel:`M値の属性` "
+"（計測次元の場合）のフィールドを含む場合には、これを指定します。座標が度 / 分 / 秒で定義されている場合には、 "
+"|checkbox|:guilabel:`度分秒を使う` のチェックボックスにチェックを入れます。 |setProjection| "
+":sup:`CRSの選択` ウィジェットを使用して、適切な :guilabel:`ジオメトリのCRS` を指定します。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:547
 msgid ""
@@ -998,6 +1128,10 @@ msgid ""
 "field` or let QGIS auto-detect it. Provide the appropriate "
 ":guilabel:`Geometry CRS` using the |setProjection| :sup:`Select CRS` widget."
 msgstr ""
+"|radioButtonOn|:guilabel:`Well-known text (WKT)` "
+"オプションは、空間情報がWKTにより表現されている場合に使用します：WKTジオメトリが含まれる :guilabel:`ジオメトリフィールド` を選択し、"
+" 適切な :guilabel:`ジオメトリタイプ` を選ぶか、QGISの自動検出に任せます。|setProjection| :sup:`CRSの選択` "
+"ウィジェットを使用して、 適切な :guilabel:`ジオメトリのCRS` を指定します。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:553
 msgid ""
@@ -1005,10 +1139,12 @@ msgid ""
 ":guilabel:`No geometry (attribute only table)` and it will be loaded as an "
 "ordinary table."
 msgstr ""
+"ファイルが非空間データの場合には、 |radioButtonOn| :guilabel:`ジオメトリなし（属性のみのテーブル）` "
+"を有効にすると、通常のテーブルとして読み込まれます。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:557
 msgid "Layer settings"
-msgstr ""
+msgstr "レイヤ設定"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:559
 msgid "Additionally, you can enable:"
@@ -1018,7 +1154,7 @@ msgstr "また、以下を有効にできます："
 msgid ""
 "|checkbox|:guilabel:`Use spatial index` to improve the performance of "
 "displaying and spatially selecting features."
-msgstr ""
+msgstr "|checkbox|:guilabel:`空間インデックスを使う` ：地物の表示や空間的な選択のパフォーマンスを改善します。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:563
 msgid ""
@@ -1026,12 +1162,15 @@ msgid ""
 ":ref:`subset filters <vector_query_builder>` (when defined in the layer "
 "properties)."
 msgstr ""
+"|checkbox|:guilabel:`サブセットインデックスを使う` ：（レイヤプロパティで定義されている場合に） :ref:`サブセットフィルタ "
+"<vector_query_builder>` のパフォーマンスを改善します。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:565
 msgid ""
 "|checkbox|:guilabel:`Watch file` to watch for changes to the file by other "
 "applications while QGIS is running."
 msgstr ""
+"|checkbox|:guilabel:`ファイルを監視する` ：QGISの実行中に他のアプリケーションによってファイルが変更されたかを監視します。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:569
 msgid ""
@@ -1042,10 +1181,14 @@ msgid ""
 "require :ref:`to be saved <general_saveas>` in order to get a spatial layer "
 "on disk."
 msgstr ""
+"最後に :guilabel:`追加` をクリックし、マップにレイヤを追加します。この例では、 ``Elevation`` "
+"という名前のポイントレイヤがプロジェクトに追加され、QGISの他のマップレイヤと同様に動作します。このレイヤは :file:`.csv` "
+"ソースファイルに対するクエリの結果であり（従ってこれにリンクされているため）、ディスク上に空間レイヤを取得するには :ref:`保存する "
+"<general_saveas>` 必要があります。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:580
 msgid "Importing a DXF or DWG file"
-msgstr "DXFまたはDWGファイルをインポートする"
+msgstr "DXFファイルやDWGファイルをインポートする"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:582
 msgid ""
@@ -1157,7 +1300,7 @@ msgstr ""
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:646
 msgid "Importing OpenStreetMap Vectors"
-msgstr "OpenStreetMapベクターをインポートする"
+msgstr "OpenStreetMapベクタのインポート"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:648
 msgid ""
@@ -1167,6 +1310,7 @@ msgid ""
 "photography and local knowledge. To support this objective, QGIS provides "
 "support for OSM data."
 msgstr ""
+"多くの国でデジタル道路地図等のジオデータが無料で利用できないため、OpenStreetMapプロジェクトは人気があります。OSMプロジェクトの目的は、GPSデータや航空写真、ローカルな知識からフリーで編集可能な世界地図を作成することです。この目的を支援するため、QGISはOSMデータのサポートを提供しています。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:655
 msgid ""
@@ -1176,6 +1320,10 @@ msgid ""
 "geometry type in the :file:`.osm` file, and keep the :file:`osm` file data "
 "structure."
 msgstr ""
+":guilabel:`ブラウザパネル` を使用して :file:`.osm` "
+"ファイルをマップキャンバスに読み込むと、ジオメトリタイプに基づいてサブレイヤを選択するためのダイアログが現れます。読み込んだレイヤには "
+":file:`.osm` ファイル内のそのジオメトリタイプの全てのデータが含まれており、 :file:`osm` "
+"ファイルのデータ構造が保持されています。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:667
 msgid "SpatiaLite Layers"
