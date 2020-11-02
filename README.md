@@ -1,5 +1,5 @@
-![HTML Build](https://github.com/DelazJ/QGIS-Documentation/workflows/HTML%20build/badge.svg?branch=release_3.16)
-![Doctest Build](https://github.com/DelazJ/QGIS-Documentation/workflows/Doctest%20build/badge.svg?branch=release_3.16)
+[![HTML Build](https://github.com/qgis/QGIS-Documentation/workflows/HTML%20build/badge.svg?branch=release_3.16)](https://github.com/qgis/QGIS-Documentation/actions?query=branch%3Arelease_3.16+workflow%3A%22HTML+build%22)
+[![Doctest Build](https://github.com/qgis/QGIS-Documentation/workflows/Doctest%20build/badge.svg?branch=release_3.16)](https://github.com/qgis/QGIS-Documentation/actions?query=branch%3Arelease_3.16+workflow%3A%22Doctest+build%22)
 [![Read the documentation](https://img.shields.io/badge/Read-the%20docs-green.svg)](https://docs.qgis.org/3.16/)
 
 
