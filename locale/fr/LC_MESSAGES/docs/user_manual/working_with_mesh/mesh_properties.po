@@ -5,8 +5,9 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
-# Francis Gasc <francisgasc@gmail.com>, 2020
 # MarieSilvestre, 2020
+# Francis Gasc <francisgasc@gmail.com>, 2020
+# Sant-anna <delazj@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-05 01:57+0200\n"
 "PO-Revision-Date: 2020-03-16 19:26+0000\n"
-"Last-Translator: MarieSilvestre, 2020\n"
+"Last-Translator: Sant-anna <delazj@gmail.com>, 2020\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -38,7 +39,7 @@ msgid ""
 "2D or 3D space:"
 msgstr ""
 "Un maillage est une grille non structurée qui contient usuellement des "
-"composantes temporelle ou d'autres types. La composante spatiale contient "
+"composantes temporelles ou d'autres types. La composante spatiale contient "
 "une collection de sommets, d’arêtes et de faces en 2D ou en 3D :"
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:19
@@ -328,13 +329,13 @@ msgid ""
 "for more details."
 msgstr ""
 "Pour charger un jeu de données maillé dans QGIS, utilisez la commande "
-"|addMeshLayer| :guilabel:`Maillé` dans la boîte de dialogue "
+"|addMeshLayer| :guilabel:`Maillage` dans la boîte de dialogue "
 ":guilabel:`Gestionnaire source de données`. Lisez :ref:`mesh_loading` pour "
 "plus de détails."
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:109
 msgid "Mesh Dataset Properties"
-msgstr "Propriétés d'un jeu de données maillées"
+msgstr "Propriétés d'un jeu de données maillé"
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:112
 msgid "Information Properties"
@@ -383,10 +384,10 @@ msgid ""
 "is wrong or if none was applied."
 msgstr ""
 "définition du système de référence de coordonnées : affiche le :ref:`Système"
-" de référence de coordonnées (SCR) <layer_crs>` la couche. Vous pouvez "
+" de référence de coordonnées (SCR) <layer_crs>` de la couche. Vous pouvez "
 "modifier le SCR de la couche en sélectionnant celui récemment utilisé dans "
 "la liste déroulante ou en cliquant sur le bouton |setProjection| "
-":guilabel:`Sélectionner le SCR` (voir :ref:`crs_selector`). Utilisez ce "
+":guilabel:`Sélecteur de SCR` (voir :ref:`crs_selector`). Utilisez ce "
 "processus uniquement si le SCR appliqué à la couche est incorrect ou si "
 "aucun n'a été appliqué."
 
@@ -407,8 +408,8 @@ msgid ""
 "Click the |symbology| :guilabel:`Symbology` button to activate the dialog as"
 " shown in the following image:"
 msgstr ""
-"Cliquez sur le bouton |symbology| :guilabel:`Style` pour charger la "
-"fenêtrecomme indiqué dans l'image suivante :"
+"Cliquez sur le bouton |symbology| :guilabel:`Style` pour charger la fenêtre "
+"comme indiqué dans l'image suivante :"
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:155
 msgid "Mesh Layer Symbology"
@@ -460,7 +461,9 @@ msgstr "métadonnées si disponibles"
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:174
 msgid ":ref:`blending mode <blend-modes>` available for the selected dataset."
-msgstr ":ref:`blending mode 1` disponible pour le jeu de données sélectionné."
+msgstr ""
+":ref:`mode de fusion <blend-modes>` disponible pour le jeu de données "
+"sélectionné."
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:177
 msgid ""
@@ -475,9 +478,9 @@ msgstr ""
 ":guilabel:`|<`, :guilabel:`<`, :guilabel:`>`, :guilabel:`>|` permettent "
 "d'explorer une autre dimension des données, si elles sont disponibles. "
 "Lorsque le curseur se déplace, les métadonnées sont présentées en "
-"conséquence. Voir la figure :ref:`Mesh groups 1` ci-dessous à titre "
-"d'exemple. Le canevas de la carte affichera également le groupe d'ensembles "
-"de données sélectionné."
+"conséquence. Voir la figure :ref:`groupe de maillage <figure_mesh_groups>` "
+"ci-dessous à titre d'exemple. Le canevas de la carte affichera également le "
+"groupe d'ensembles de données sélectionné."
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:189
 msgid "Dataset in Selected Group(s)"
@@ -497,7 +500,7 @@ msgid ""
 "Under :guilabel:`Groups`, click on |meshcontoursoff| to show contours with "
 "default visualization parameters."
 msgstr ""
-"Sous :guilabel:`Groups`, cliquez sur |meshcontoursoff| pour afficher les "
+"Sous :guilabel:`Groupes`, cliquez sur |meshcontoursoff| pour afficher les "
 "contours avec les paramètres de visualisation par défaut."
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:204
@@ -534,22 +537,22 @@ msgid ""
 "contours: :guilabel:`Linear`, :guilabel:`Discrete` and :guilabel:`Exact`."
 msgstr ""
 "La liste d':guilabel:`Interpolation` contient trois options pour rendre les "
-"contours: :guilabel:`Lineaire`, :guilabel:`Discrete` et :guilabel:`Exact`."
+"contours: :guilabel:`Lineaire`, :guilabel:`Discrete` et :guilabel:`Exacte`."
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:222
 msgid ""
 "The :guilabel:`Color ramp` widget opens the :ref:`color ramp drop-down "
 "shortcut <color_ramp_widget>`."
 msgstr ""
-"Le widget :guilabel:`rampe de couleurs` ouvre le raccourci :ref:`color ramp "
-"dropdown 1 '."
+"Le widget :guilabel:`rampe de couleurs` dispose d'un raccourci :ref:`menu "
+"déroulant rampe de couleurs <color_ramp_widget>`."
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:224
 msgid ""
 "The :guilabel:`Label unit suffix` is a label added after the value in the "
 "legend."
 msgstr ""
-"Le :guilabel:`Label unit suffix` est une étiquette ajoutée après la valeur "
+"L' :guilabel:`unité d'étiquette` est une étiquette ajoutée après la valeur "
 "dans la légende."
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:226
@@ -562,7 +565,7 @@ msgid ""
 msgstr ""
 "En sélectionnant :guilabel:`Continu` dans la classification "
 ":guilabel:`Mode`, QGIS crée automatiquement des classes en tenant compte des"
-" valeurs :guilabel:`Min` et :guilabel:`Max`. Avec 'Equal interval', il "
+" valeurs :guilabel:`Min` et :guilabel:`Max`. Avec 'intervalles égaux', il "
 "suffit de sélectionner le nombre de classes à l'aide de la boîte combinée "
 ":guilabel:`Classes` et d'appuyer sur le bouton :guilabel:`Classer`."
 
@@ -594,7 +597,7 @@ msgid ""
 "with default parameters. Click on the tab |meshvectors| to change the "
 "visualization parameters for vectors as shown in the image below:"
 msgstr ""
-"Dans l'onglet |général|, cliquez sur |meshcontoursoff| pour afficher les "
+"Dans l'onglet |general|, cliquez sur |meshcontoursoff| pour afficher les "
 "vecteurs s'ils sont disponibles. Le canevas de la carte affichera les "
 "vecteurs dans le groupe sélectionné avec des paramètres par défaut. Cliquez "
 "sur l'onglet |meshvectors| pour modifier les paramètres de visualisation des"
@@ -630,17 +633,16 @@ msgid ""
 "render the vector considering the given spacing."
 msgstr ""
 "|checkbox| :guilabel:`Afficher les vecteurs sur la grille utilisateur` et "
-"spécifiez :guilabel:`Espacement X` et l' :guilabel:`Espacement Y`, QGIS "
-"rendra le vecteur en tenant compte de l'espacement donné."
+"spécifiez :guilabel:`Espacement X` et  :guilabel:`Espacement Y`, QGIS rendra"
+" le vecteur en tenant compte de l'espacement donné."
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:265
 msgid ""
 "With the Head Options :guilabel:`Head Options`, QGIS allows the shape of the"
 " arrow head to be set by specifying width and length (in percentage)."
 msgstr ""
-"Avec les options de tête :guilabel:`Options de tête`, QGIS permet de définir"
-" la forme de la tête de flèche en spécifiant la largeur et la longueur (en "
-"pourcentage)."
+"Avec :guilabel:`Options de tête`, QGIS permet de définir la forme de la tête"
+" de flèche en spécifiant la largeur et la longueur (en pourcentage)."
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:268
 msgid ""
@@ -689,7 +691,7 @@ msgstr "``Rendu de maillage triangulaire`` qui affiche des triangles"
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:292
 msgid "Mesh Rendering"
-msgstr "Rendu maillee"
+msgstr "Rendu maille"
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:295
 msgid ""

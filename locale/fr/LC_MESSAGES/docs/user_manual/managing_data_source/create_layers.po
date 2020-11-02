@@ -6,8 +6,8 @@
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
 # MarieSilvestre, 2020
-# Sant-anna <delazj@gmail.com>, 2020
 # Francis Gasc <francisgasc@gmail.com>, 2020
+# Sant-anna <delazj@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-05 01:57+0200\n"
 "PO-Revision-Date: 2020-03-16 19:25+0000\n"
-"Last-Translator: Francis Gasc <francisgasc@gmail.com>, 2020\n"
+"Last-Translator: Sant-anna <delazj@gmail.com>, 2020\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -50,7 +50,7 @@ msgid ""
 "(:ref:`virtual layers <vector_virtual_layers>`)"
 msgstr ""
 "couches à la suite d'une requête de type SQL basée sur une ou plusieurs "
-"couches (:ref:`virtual layers 1`)"
+"couches (:ref:`couches virtuelles <vector_virtual_layers>`)"
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:21
 msgid "QGIS also provides tools to import/export from/to different formats."
@@ -71,8 +71,9 @@ msgid ""
 msgstr ""
 "QGIS vous permet de créer de nouvelles couches dans différents formats. Il "
 "fournit des outils pour créer des couches GeoPackage, Shapefile, SpatiaLite,"
-" GPX et Temporaire en memoire (également appelées couches de mémoire). La "
-"création d'une :ref:`new GRASS layer 1` est supportée dans le plugin GRASS."
+" GPX et Temporaire (également appelées couches de mémoire). La création "
+"d'une :ref:`nouvelle couche GRASS <creating_new_grass_vectors>` est "
+"supportée dans le plugin GRASS."
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:42
 msgid "Creating a new GeoPackage layer"
@@ -218,7 +219,7 @@ msgid ""
 "Manager <dbmanager>`."
 msgstr ""
 "Une gestion plus approfondie des couches GeoPackage peut être effectuée avec"
-" :ref:`DB Manager 1`."
+" le :ref:`Gestionnaire de bases de données <dbmanager>`."
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:100
 msgid "Creating a new Shapefile layer"
@@ -371,7 +372,7 @@ msgid ""
 "<dbmanager>`."
 msgstr ""
 "Une gestion plus approfondie des couches SpatiaLite peut être effectuée avec"
-" :ref:`DB Manager 1`."
+" le :ref:`Gestionnaire de bases de données <dbmanager>`."
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:196
 msgid "Creating a new GPX layer"
@@ -479,12 +480,11 @@ msgid ""
 msgstr ""
 "Par défaut, une nouvelle couche de travail temporaire est créée sans aucun "
 "attribut. Vous pouvez les ajouter ultérieurement en utilisant le bouton "
-"|newAttribute| :sup:`Nouveau champ` dans la boîte de dialogue de la table "
-"d'attributs de la couche ou l'onglet :guilabel:`Champ` de sa boîte de "
-"dialogue de propriétés. Vous pouvez également créer des couches de travail "
-"temporaires préremplies en utilisant par exemple le presse-papiers (voir "
-":ref:`paste_into_layer`) ou à la suite d'un :ref:`algorithme de traitement "
-"1`."
+"|newAttribute| :sup:`Nouveau champ` de la table d'attributs de la couche ou "
+"l'onglet :guilabel:`Champ` de sa fenêtre de propriétés. Vous pouvez "
+"également créer des couches de travail temporaires préremplies en utilisant "
+"par exemple le presse-papiers (voir :ref:`paste_into_layer`) ou à la suite "
+"d'un :ref:`traitement <processing_algs>`."
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:253
 msgid "**Permanently store a memory layer on disk**"
@@ -661,8 +661,9 @@ msgid ""
 msgstr ""
 ":guilabel:`Options création`: utilisez des options avancées (compression de "
 "fichier, tailles de blocs, colorimétrie ...) lors de la génération de "
-"fichiers, soit à partir de :ref:`predefined create profiles 1` liés au "
-"format de sortie ou en définissant chaque paramètre."
+"fichiers, soit à partir de :ref:`profils prédéfinis de création "
+"<gdal_createoptions>` liés au format de sortie ou en définissant chaque "
+"paramètre."
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:318
 msgid ":guilabel:`Pyramids` creation"
@@ -731,10 +732,10 @@ msgid ""
 msgstr ""
 ":guilabel:`Sélectionnez les champs à exporter et leurs options "
 "d'exportation`. Dans le cas où vous définissez le comportement de vos champs"
-" avec certains :ref:`Edit widgets 1`, par ex. ``value map``, vous pouvez "
-"conserver les valeurs affichées dans la couche en cochant |checkbox| "
-":guilabel:`Remplacer toutes les valeurs des champs bruts sélectionnés par "
-"les valeurs affichées`."
+" avec certains :ref:`widgets d'édition <configure_field>`, par ex. ``value "
+"map``, vous pouvez conserver les valeurs affichées dans la couche en cochant"
+" |checkbox| :guilabel:`Remplacer toutes les valeurs des champs bruts "
+"sélectionnés par les valeurs affichées`."
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:346
 msgid ""
@@ -925,8 +926,8 @@ msgid ""
 "Choose the symbology mode and scale (see the :ref:`OGR Feature Styles "
 "<ogr_features_note>` note), if applicable."
 msgstr ""
-"Choisissez le mode de symbologie et l'échelle (voir la note :ref:`OGR "
-"Feature Styles 1`), le cas échéant. "
+"Choisissez le mode de symbologie et l'échelle (voir la note :ref:`Styles "
+"d'entités OGR <ogr_features_note>`), le cas échéant. "
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:429
 msgid "Select the data :guilabel:`Encoding`."
@@ -949,9 +950,9 @@ msgid ""
 msgstr ""
 "Sélectionnez les couches à inclure dans les fichiers DXF en les archivant "
 "dans le widget de table ou en les sélectionnant automatiquement à partir "
-"d'un :ref:`map theme 1`. Les boutons :guilabel:`Sélectionner tout` et "
-":guilabel:`Désélectionner tout` peuvent aider à définir rapidement les "
-"données à exporter."
+"d'un :ref:`thème de carte <map_themes>`. Les boutons :guilabel:`Sélectionner"
+" tout` et :guilabel:`Désélectionner tout` peuvent aider à définir rapidement"
+" les données à exporter."
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:438
 msgid ""
@@ -1215,8 +1216,8 @@ msgid ""
 ":ref:`Functions of QGIS expressions<functions_list>` can also be used in a "
 "virtual layer query."
 msgstr ""
-":ref:`Functions of QGIS expressions 1` peuvent également être utilisées dans"
-" une requête de couche virtuelle."
+"Les :ref:`Fonctions des expressions QGIS <functions_list>` peuvent également"
+" être utilisées dans une requête de couche virtuelle."
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:573
 msgid "To refer the geometry column of a layer, use the name ``geometry``."

@@ -7,6 +7,7 @@
 # Richard Duivenvoorde <richard@duif.net>, 2020
 # Francis Gasc <francisgasc@gmail.com>, 2020
 # MarieSilvestre, 2020
+# Sant-anna <delazj@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-05 01:57+0200\n"
 "PO-Revision-Date: 2020-03-16 19:26+0000\n"
-"Last-Translator: MarieSilvestre, 2020\n"
+"Last-Translator: Sant-anna <delazj@gmail.com>, 2020\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -111,6 +112,8 @@ msgid ""
 "`SLD 1.1.0 WMS profile "
 "<http://portal.opengeospatial.org/files/?artifact_id=22364&format=pdf>`_"
 msgstr ""
+"`SLD 1.1.0 WMS profile "
+"<http://portal.opengeospatial.org/files/?artifact_id=22364&format=pdf>`_"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:41
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:980
@@ -517,7 +520,7 @@ msgstr "SLD"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
 msgid "URL of an SLD to be used for styling"
-msgstr ""
+msgstr "URL d'un SLD à utiliser pour la symbologie"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
 msgid "SLD_BODY"
@@ -525,7 +528,7 @@ msgstr "SLD_BODY"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1
 msgid "In-line SLD (XML) to be used for styling"
-msgstr ""
+msgstr "Contenu de SLD (XML) à utiliser pour la symbologie"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:89
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:564
@@ -1022,12 +1025,13 @@ msgid ""
 " a required parameter. For further information you may refer to "
 ":ref:`server_env_variables`."
 msgstr ""
-"Comme mentionné dans :ref:`GetMap parameters table 1`, ``MAP`` est "
-"obligatoire car une requête a besoin d'un projet QGIS pour fonctionner. "
-"Cependant, la variable d'environnement ``QGIS_PROJECT_FILE`` peut être "
-"utilisée pour définir un projet QGIS par défaut. Dans ce cas spécifique, "
-"``MAP`` n'est plus un paramètre obligatoire. Pour plus d'informations, vous "
-"pouvez vous référer à :ref:`server_env_variables`."
+"Comme mentionné dans la :ref:`table des paramètres GetMap <qgisserver-wms-"
+"getmap>`, ``MAP`` est obligatoire car une requête a besoin d'un projet QGIS "
+"pour fonctionner. Cependant, la variable d'environnement "
+"``QGIS_PROJECT_FILE`` peut être utilisée pour définir un projet QGIS par "
+"défaut. Dans ce cas spécifique, ``MAP`` n'est plus un paramètre obligatoire."
+" Pour plus d'informations, vous pouvez vous référer à "
+":ref:`server_env_variables`."
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:393
 msgid ""
@@ -1388,8 +1392,8 @@ msgid ""
 "See the ``LAYERS`` parameter defined in :ref:`See GetMap <qgisserver-wms-"
 "getmap>` for more information."
 msgstr ""
-"Voir le paramètre ``LAYERS`` défini dans :ref:`See GetMap 1` pour plus "
-"d'informations."
+"Voir le paramètre ``LAYERS`` défini dans :ref:`GetMap <qgisserver-wms-"
+"getmap>` pour plus d'informations."
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:634
 msgid ""
@@ -1473,6 +1477,10 @@ msgid ""
 "response` option in the QGIS project. See :ref:`Configure your project "
 "<Creatingwmsfromproject>`."
 msgstr ""
+"Ce paramètre spécifie s'il faut ajouter des géométries à la sortie. Pour "
+"l'utiliser, il vous faut d'abord activer l'option :guilabel:`Ajouter la "
+"géométrie à la réponse d'une entité` dans le projet QGIS. Voir "
+":ref:`Configurer son projet <Creatingwmsfromproject>`."
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:724
 msgid ""
@@ -1706,8 +1714,9 @@ msgid ""
 "This parameter specifies the layers for a layout map item. See :ref:`See "
 "GetMap <qgisserver-wms-getmap>` for more information on this parameter."
 msgstr ""
-"Ce paramètre spécifie les couches pour un élément de mise en page. Voir "
-":ref:`See GetMap 1` pour plus d'informations sur ce paramètre."
+"Ce paramètre spécifie les couches pour un élément carte de mise en page. "
+"Voir :ref:`GetMap <qgisserver-wms-getmap>` pour plus d'informations sur ce "
+"paramètre."
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:891
 msgid ""
@@ -1716,8 +1725,8 @@ msgid ""
 " this parameter."
 msgstr ""
 "Ce paramètre spécifie les styles des couches définis dans un élément de mise"
-" en page spécifique. Voir :ref:`See GetMap 1` pour plus d'informations sur "
-"ce paramètre."
+" en page spécifique. Voir :ref:`GetMap <qgisserver-wms-getmap>` pour plus "
+"d'informations sur ce paramètre."
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:900
 msgid ""
@@ -1803,6 +1812,8 @@ msgid ""
 "**LAYERTITLE** ``FALSE`` to get only the legend graphics without the layer "
 "title"
 msgstr ""
+"**LAYERTITLE** ``FALSE`` pour obtenir uniquement les graphiques de légende "
+"sans le titre de la couche"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:926
 msgid "**RULELABEL**:"
@@ -1811,11 +1822,15 @@ msgstr "**RULELABEL** :"
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:928
 msgid "``FALSE`` legend graphics without item labels"
 msgstr ""
+"``FALSE`` pour obtenir uniquement les graphiques de légende sans les "
+"étiquettes"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:929
 msgid ""
 "``AUTO`` hide item label for layers with :guilabel:`Single symbol` rendering"
 msgstr ""
+"``AUTO`` pour cacher l'étiquette de l'élément, pour les couches utilisant le"
+"  rendu :guilabel:`Symbole unique`"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:932
 msgid ""
@@ -1856,8 +1871,8 @@ msgid ""
 "rfc-101.html>`_"
 msgstr ""
 "Les fonctionnalités de légende basées sur le contenu sont basées sur "
-"l'implémentation de UMN MapServer: "
-"<https://www.mapserver.org/development/rfc/ms-rfc-101.html> `_"
+"`l'implémentation de UMN MapServer : "
+"<https://www.mapserver.org/development/rfc/ms-rfc-101.html>`_"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:947
 msgid ""
@@ -2320,6 +2335,8 @@ msgid ""
 "This parameter defines the CRS to use when computing the underlying pyramid."
 " Format: ``EPSG:XXXX``."
 msgstr ""
+"Ce paramètre permet de définir le SCR à utiliser pour calculer la pyramide "
+"sous-jacente. Format : ``EPSG:XXXX``."
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1354
 msgid "This parameter allows to define the matrix to use for the output tile."
@@ -2427,7 +2444,7 @@ msgid ""
 msgstr ""
 "WFS3 est la première implémentation de la nouvelle génération de protocoles "
 "OGC. Il est décrit par le document `OGC API - Features - Part 1: Core "
-"<http://docs.opengeospatial.org/is/17-069r3/17-069r3.html>` _ document."
+"<http://docs.opengeospatial.org/is/17-069r3/17-069r3.html>`_."
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1541
 msgid ""
@@ -2442,8 +2459,8 @@ msgid ""
 "WFS3 is based on a `REST "
 "<https://en.wikipedia.org/wiki/Representational_state_transfer>`_ API"
 msgstr ""
-"WFS3 est basé sur une API REST "
-"<https://en.wikipedia.org/wiki/Representational_state_transfer> `_ _"
+"WFS3 est basé sur une API `REST "
+"<https://en.wikipedia.org/wiki/Representational_state_transfer>`_"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1547
 msgid ""
@@ -2451,7 +2468,7 @@ msgid ""
 "<https://en.wikipedia.org/wiki/OpenAPI_Specification>`_ specifications"
 msgstr ""
 "L'API WFS3 doit suivre les spécifications `OPENAPI "
-"<https://en.wikipedia.org/wiki/OpenAPI_Specification>` _"
+"<https://en.wikipedia.org/wiki/OpenAPI_Specification>`_"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1550
 msgid ""
@@ -2463,8 +2480,8 @@ msgstr ""
 "WFS3 prend en charge plusieurs formats de sortie, mais il n'en dicte aucun "
 "(seuls GeoJSON et HTML sont actuellement disponibles dans QGIS WFS3) et il "
 "utilise la `négociation de contenu "
-"<https://en.wikipedia.org/wiki/Content_negotiation>` _ pour déterminer le "
-"format doit être servi au client"
+"<https://en.wikipedia.org/wiki/Content_negotiation>`_ pour déterminer le "
+"format qui doit être servi au client"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1555
 msgid "JSON and HTML are first class citizens in WFS3"
@@ -2514,7 +2531,7 @@ msgid ""
 "The QGIS Server WFS3 implementation currently supports the following "
 "resource representation (output) formats:"
 msgstr ""
-"L'implémentation de QGIS Server WFS3 prend actuellement en charge les "
+"L'implémentation de WFS3 dans QGIS Server prend actuellement en charge les "
 "formats de représentation (sortie) de ressources suivants:"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1583
@@ -2867,9 +2884,9 @@ msgid ""
 "``next`` and ``prev`` links, QGIS server constructs these links by appending"
 " ``limit`` and ``offset`` as query string parameters."
 msgstr ""
-"La pagination d'une longue liste d' entités est implémentée dans l'API OGC "
-"via des liens ``suivant`` et ``précédent``, QGIS serveur construit ces liens"
-" en ajoutant ``limite`` et ``décalage`` comme paramètres de chaîne de "
+"La pagination d'une longue liste d'entités est implémentée dans l'API OGC "
+"via des liens ``suivant`` et ``précédent``, QGIS Server construit ces liens "
+"en ajoutant ``limite`` et ``décalage`` comme paramètres de chaîne de "
 "requête."
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1774
@@ -2878,6 +2895,9 @@ msgid ""
 "``QGIS_SERVER_API_WFS3_MAX_LIMIT`` server configuration setting (see: :ref"
 ":`qgis-server-envvar`)."
 msgstr ""
+"La valeur maximale acceptable pour ``limit`` peut être configurée avec le "
+"paramètre de configuration du serveur ``QGIS_SERVER_API_WFS3_MAX_LIMIT`` "
+"(voir :ref:`qgis-server-envvar`)."
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1780
 msgid "Feature filtering"
@@ -2999,7 +3019,7 @@ msgstr ""
 "Si le *SCR* de la boîte englobante n'est pas WGS84 "
 "(*http://www.opengis.net/def/crs/OGC/1.3/CRS84*), un SCR différent peut être"
 " spécifié en utilisant le paramètre facultatif ``bbox -crs``. L'identifiant "
-"du SCR doit être au format `OGC URI <http://www.opengis.net/def/crs/>` _:"
+"du SCR doit être au format `OGC URI <http://www.opengis.net/def/crs/>`_:"
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1861
 msgid "Attribute filters"
@@ -3012,12 +3032,13 @@ msgid ""
 "filters can be combined using the ``AND`` operator."
 msgstr ""
 "Les filtres d'attribut peuvent être combinés avec le filtre de boîte "
-"englobante et ils se présentent sous la forme générale: ``1=2``. Plusieurs "
-"filtres peuvent être combinés à l'aide de l'opérateur ``AND``."
+"englobante et ils se présentent sous la forme générale: ``<attribute "
+"name>=<attribute value>``. Plusieurs filtres peuvent être combinés à l'aide "
+"de l'opérateur ``AND``."
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1869
 msgid "filters all features where attribute ``name`` equals \"my value\""
-msgstr "filtre toutes les entites où l'attribut ``name` est égal à \"ma valeur\""
+msgstr "filtre toutes les entites où l'attribut ``name`` est égal à \"ma valeur\""
 
 #: ../../docs/user_manual/working_with_ogc/server/services.rst:1876
 msgid "Partial matches are also supported by using a ``*`` (\"star\") operator:"
