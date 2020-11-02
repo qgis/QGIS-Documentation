@@ -1118,6 +1118,9 @@ Python code
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
+
+.. _qgistexttofloat:
+
 Text to float
 -------------
 Modifies the type of a given attribute in a vector layer, converting a
