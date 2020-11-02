@@ -335,7 +335,14 @@ Summary Rules for translation
 #. Do not change text between two ``|`` characters like ``|bronze|``, ``|checkbox|``, 
    ``|labels|``, ``|selectString|``, ``|addLayer|`` ... These are special tags
    used to replace images
-#. Do not change references that start with the tag ``:ref:`` or ``:file:``
+#. Do not change references that start with roles like ``:ref:``, ``:file:``,
+   ``:numref:`` unless they include a title. In that case, you can translate the title
+   but keep unchanged the link (i.e., the text between ``<`` and ``>``)
+
+   .. tip:: When a title is provided for a reference, Transifex may display a number
+    in the English source text in replacement of the link part. Click on the number
+    in the source text to add the reference link next to the title being translated.
+
 #. Do not change references that end with an underscore like ``figure_labels_1_``
 #. Do not change the url in hyperlinks, but you may change the external
    description. Leave the underscore at the end of the hyperlink,
