@@ -1269,11 +1269,12 @@ attributes are made identical.
 Rotate Point Symbols
 --------------------
 
-The |rotatePointSymbols| :sup:`Rotate Point Symbols` allows you to change the
-rotation of point symbols in the map canvas.
+The |rotatePointSymbols| :sup:`Rotate Point Symbols` allows you to individually
+change the rotation of point symbols in the map canvas.
 
-#. First of all, apply to the symbol a :ref:`data-defined <data_defined>`
-   rotation:
+#. First, you need to indicate the field to store the rotation value in.
+   This is made by assigning a field to the symbol :ref:`data-defined <data_defined>`
+   rotation property:
 
    #. In the :menuselection:`Layer Properties --> Symbology` dialog, browse to
       the symbol editor dialog.
@@ -1282,6 +1283,10 @@ rotation of point symbols in the map canvas.
       of the symbol layers.
    #. Choose a field in the :guilabel:`Field Type` combobox. Values of this
       field are hence used to rotate each feature's symbol accordingly.
+
+      You can also check the :sup:`Store data in project` entry to generate an
+      :ref:`auxiliary data storage <vector_auxiliary_storage>` field to
+      control the rotation value.
 
    .. note:: **Make sure that the same field is assigned to all the symbol layers**
 
@@ -1298,18 +1303,17 @@ rotation of point symbols in the map canvas.
 
       Rotating a point symbol
 
-#. Then click on a point feature in the map canvas with the
-   |rotatePointSymbols| :sup:`Rotate Point Symbols` and move the mouse
-   around, holding the left button pressed.
+#. Then click on a point symbol in the map canvas with the
+   |rotatePointSymbols| :sup:`Rotate Point Symbols` tool
+#. Move the mouse around.
    A red arrow with the rotation value will be visualized (see
    Figure_rotate_point_).
-#. Release the left mouse button again, the symbol is defined with
-   this new rotation and the rotation field is updated in the layer's
-   attribute table.
+   If you hold the :kbd:`Ctrl` key while moving, the rotation will be done
+   in 15 degree steps.
+#. When you get the expected angle value, click again. The symbol is rendered
+   with this new rotation and the associated field is updated accordingly.
 
-.. tip::
-   If you hold the :kbd:`Ctrl` key pressed, the rotation will be done in 15
-   degree steps.
+   You can right-click to abort symbol rotation.
 
 .. index::
    single: Digitizing tools; Offset Point Symbols
@@ -1322,8 +1326,19 @@ The |offsetPointSymbols| :sup:`Offset Point Symbols` allows you to interactively
 change the rendered position of point symbols in the map canvas. This tool behaves
 like the |rotatePointSymbols| :sup:`Rotate Point Symbols` tool except that it
 requires you to connect a field to the data-defined :guilabel:`Offset (X,Y)`
-property of the symbol, field which will then be populated with the offset
-coordinates while moving the symbol in the map canvas.
+property of each layer of the symbol. The field will then be populated with the
+offset coordinates for the features whose symbol is moved in the map canvas.
+
+#. Associate a field to the data-defined widget of the :guilabel:`Offset (X,Y)`
+   property of the symbol. If the symbol is made with many layers, you may
+   want to assign the field to each of them
+#. Select the |offsetPointSymbols| :sup:`Offset Point Symbols` tool
+#. Click a point symbol
+#. Move to a new location
+#. Click again. The symbol is moved to the new place.
+   Offset values from the original position are stored in the linked field.
+
+   You can right-click to abort symbol offset.
 
 .. note:: The |offsetPointSymbols| :sup:`Offset Point Symbols` tool doesn't
    move the point feature itself; you should use the |vertexToolActiveLayer|
