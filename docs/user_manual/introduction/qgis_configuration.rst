@@ -1421,6 +1421,8 @@ In the :guilabel:`Data Sources` tab, you can:
 
    Data Sources tab
 
+.. _project_relations:
+
 Relations Properties
 --------------------
 
