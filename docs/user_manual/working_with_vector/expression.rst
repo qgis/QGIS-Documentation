@@ -18,6 +18,9 @@ in order to dynamically change the geometry style, the content or position
 of the label, the value for diagram, the height of a layout item,
 select some features, create virtual field, ...
 
+.. note:: A list of the default functions and variables for writing expressions
+   can be found at :ref:`functions_list`, with detailed information and examples.
+
 .. _expression_builder:
 
 The Expression string builder

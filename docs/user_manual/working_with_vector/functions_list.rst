@@ -759,6 +759,12 @@ Further reading: :ref:`maps_functions`
 
 .. include:: expression_help/Record_and_Attributes.rst
    :start-after: .. end_attributes_section
+   :end-before: .. end_get_feature_by_id_section
+
+Further reading: :ref:`expression_function_Record_and_Attributes_$id`
+
+.. include:: expression_help/Record_and_Attributes.rst
+   :start-after: .. end_get_feature_by_id_section
    :end-before: .. end_represent_value_section
 
 Further reading: :ref:`widget types <edit_widgets>` 
@@ -772,6 +778,18 @@ Further reading: :ref:`project_data_source_properties`, :ref:`vector_relations`
 .. include:: expression_help/Record_and_Attributes.rst
    :start-after: .. end_sqlite_fetch_and_increment_section
 
+
+.. index:: Relations
+.. _relations_list:
+
+Relations
+---------
+
+This group contains the list of the :ref:`relations <project_relations>`
+available in the current project, with their description. It provides a quick
+access to the relation ID for writing an expression (with e.g. the
+:ref:`relation_aggregate <expression_function_Aggregates_relation_aggregate>`
+function) or customizing a form.
 
 .. _string_functions:
 
