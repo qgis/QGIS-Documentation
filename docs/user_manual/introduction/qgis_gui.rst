@@ -2394,11 +2394,11 @@ the 3D canvas panel to open the :guilabel:`3D configuration` window.
 In the 3D Configuration window there are various options to
 fine-tune the 3D scene:
 
-* Camera's :guilabel:`Field of view`: allowing to create panoramic
-  scenes.
-  Default value is 45\°.
+Terrain
+.......
+
 * :guilabel:`Terrain`: Before diving into the details, it is worth
-  noting that terrain in a 3D view is represented by a hierarchy of
+  noting that the terrain in a 3D view is represented by a hierarchy of
   terrain tiles and as the camera moves closer to the terrain,
   existing tiles that do not have sufficient details are replaced by
   smaller tiles with more details.
@@ -2430,9 +2430,9 @@ fine-tune the 3D scene:
     Raising this value will add vertical walls ("skirts") around terrain
     tiles to hide the cracks.
 
-* :guilabel:`Mesh Terrain Settings`: Configures the rendering of the terrain
-  when a mesh layer is used. You can set the triangles rendering (wireframe,
-  smooth triangle) and colors (uniform or depending on terrain level).
+* When a mesh layer is used as terrain, you can configure the
+  :guilabel:`Triangles settings` (wireframe display, smooth triangles) and the
+  :guilabel:`Rendering colors settings` (as uniform or depending on terrain level).
   More details in the :ref:`Mesh layer properties <label_meshproperties>` section.
 
   .. TODO: replace the mesh properties link with a direct one to the 3D section
@@ -2447,21 +2447,63 @@ fine-tune the 3D scene:
     scene light(s) and the terrain material's :guilabel:`Ambient` and
     :guilabel:`Specular` colors and :guilabel:`Shininess`
 
-* :guilabel:`Lights`: you can add
+Lights
+......
 
-  * up to eight :guilabel:`Point lights`, each with a particular position
-    (at :guilabel:`X`, :guilabel:`Y` and :guilabel:`Z`), :guilabel:`Color`,
-    :guilabel:`Intensity` and :guilabel:`Attenuation`
-  * up to four :guilabel:`Directional lights`, with direction vector (:guilabel:`X`,
-    :guilabel:`Y`, :guilabel:`Z`), :guilabel:`Color` and :guilabel:`Intensity`.
+From the :guilabel:`Lights` tab, press the |signPlus| menu to add
 
-  .. _figure_3dmap_configlights:
+* up to eight :guilabel:`Point lights`: emits light in all directions, like a
+  sphere of light filling an area. Objects closer to the light will be brighter,
+  and objects further away will be darker. A point light has a set position
+  (:guilabel:`X`, :guilabel:`Y` and :guilabel:`Z`), a :guilabel:`Color`,
+  an :guilabel:`Intensity` and an :guilabel:`Attenuation`
+* up to four :guilabel:`Directional lights`: mimics the lighting that you would
+  get from a giant flash light very far away from your objects, always centered
+  and that never dies off (e.g. the sun). It emits parallel light rays in a
+  single direction but the light reaches out into infinity.
+  A directional light can be rotated given an  :guilabel:`Azimuth`, have an
+  :guilabel:`Altitude`, a :guilabel:`Color` and an :guilabel:`Intensity`.
 
-  .. figure:: img/3dmapconfiguration_lights.png
-     :align: center
+.. _figure_3dmap_configlights:
 
-     The 3D Map Lights Configuration dialog
+.. figure:: img/3dmapconfiguration_lights.png
+   :align: center
 
+   The 3D Map Lights Configuration dialog
+
+Shadow
+......
+
+Check |unchecked| :guilabel:`Show shadow` to display shadow within your scene,
+given:
+
+* a :guilabel:`Directional light`
+* a :guilabel:`Shadow rendering maximum distance`: to avoid rendering shadow
+  of too distant objects, particularly when the camera looks up along the
+  horizon
+* a :guilabel:`Shadow bias`: to avoid self-shadowing effects that could make
+  some areas darker than others, due to differences between map sizes.
+  The lower the better
+* a :guilabel:`Shadow map resolution`: to make shadows look sharper.
+  It may result in less performance if the resolution parameter is too high.
+
+Camera & Skybox
+...............
+
+* Camera's :guilabel:`Field of view`: allowing to create panoramic scenes.
+  Default value is 45\°.
+* Check |unchecked| :guilabel:`Show skybox` to enable skybox rendering in
+  the scene. The skybox type can be:
+
+  * :guilabel:`Panoramic texture`, with a single file providing sight on 360\°
+  * :guilabel:`Distinct faces`, with a texture file for each of the six sides
+    of a box containing the scene
+
+  Texture files can be files on the disk, remote URLs or embedded in the project
+  (:ref:`more details <svg_paths>`).
+
+Advanced
+........
 
 * :guilabel:`Map tile resolution`: Width and height of the 2D map
   images used as textures for the terrain tiles.
@@ -2479,7 +2521,7 @@ fine-tune the 3D scene:
   them would not introduce any extra detail anyway).
   This value limits the depth of the hierarchy of tiles: lower values
   make the hierarchy deep, increasing rendering complexity.
-* :guilabel:`Zoom labels`: Shows the number of zoom levels (depends on
+* :guilabel:`Zoom levels`: Shows the number of zoom levels (depends on
   the map tile resolution and max. ground error).
 * |unchecked| :guilabel:`Show labels`: Toggles map labels on/off
 * |unchecked| :guilabel:`Show map tile info`: Include border and tile
