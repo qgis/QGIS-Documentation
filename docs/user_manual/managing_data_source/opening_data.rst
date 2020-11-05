@@ -1140,6 +1140,40 @@ WFS(-T), WCS, CSW, ...).
 Thanks to QGIS Server, you can also publish such services.
 :ref:`QGIS-Server-manual` contains descriptions of these capabilities.
 
+.. index:: Vector Tiles services
+.. _vector_tiles:
+
+Using Vector Tiles services
+---------------------------
+
+Vector Tiles services can be found in the :guilabel:`Vector Tiles`
+top level entry in the :guilabel:`Browser`.
+You can add a service by opening the context menu with a right-click
+and choosing :guilabel:`New Generic Connection ...`.
+You set up a service by adding a :guilabel:`Name` and a :guilabel:`URL`.
+The Vector Tiles Service must provide tiles in :file:`.pbf` format. 
+The dialog provides two menus to define the 
+|checkbox|:guilabel:`Min. Zoom Level` and the
+|checkbox|:guilabel:`Max. Zoom Level`. Vector Tiles have a 
+pyramid structure. By using these options you have the opportunity 
+to individually generate layers from the tile pyramid. These layers
+will then be used to render the Vector Tile in QGIS.
+For Mercator projection (used by OpenStreetMap Vector Tiles) Zoom Level 0
+represents the whole world at a scale of 1:500.000.000. Zoom Level 14
+represents the scale 1:35.000. 
+figure_vector_tiles_maptilerplanet_ shows the dialog with the
+MapTiler planet Vector Tiles service configuration.
+
+.. _figure_vector_tiles_maptilerplanet:
+
+.. figure:: img/vector_tiles_maptilerplanet.png
+   :align: center
+   
+   Vector Tiles - Maptiler Planet configuration
+
+By using :guilabel:`New ArcGIS Vector Tile Service Connection ...` you can
+connect to ArcGIS Vector Tile Services.
+
 .. index:: XYZ Tile services
 .. _xyz_tile:
 
