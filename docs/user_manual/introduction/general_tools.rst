@@ -1359,7 +1359,9 @@ By default, |measure| :sup:`Measure Line` measures real distances
 between given points according to a defined ellipsoid.
 The tool then allows you to click points on the map. Each segment length,
 as well as the total, shows up in the measure window.
-To stop measuring, click the right mouse button.
+To stop measuring, click the right mouse button. Now it is possible
+to copy all your line measurements at once to the clipboard using the 
+:guilabel:`Copy All` button.
 
 Note that you can use the drop-down list near the total to change
 the measurement units interactively while working with the measure tool ('Meters', 'Kilometers', 'Feet', 'Yards',
