@@ -1127,26 +1127,37 @@ select a layer and then click :guilabel:`Add`.
 
 Optionally, you can activate the following options:
 
-* |checkbox| :guilabel:`Only look in the geometry_columns metadata table`.
-* |checkbox| :guilabel:`Use layer extent from geometry_columns table`, 
-  this checkbox is dependent on the first one; it remains disabled unless
-  the first option is checked.
-* |checkbox| :guilabel:`Use primary key from geometry_columns table`
-* |checkbox| :guilabel:`Also list table with no geometry`: tables without a 
+* |checkbox| :guilabel:`Only look in the geometry_columns metadata table`:
+  restricts the available tables to the ones in the ``geometry_columns``
+  metadata table when scanning for tables.
+  This can speed up the table scanning.
+* |checkbox| :guilabel:`Use layer extent from geometry_columns table`:
+  this option, dependent on the previous one, allows QGIS to skip extent calculation
+  when loading layers and thus lowering the amount of time needed to load them.
+  It relies on extent manually specified using additional QGIS-specific columns
+  (``qgis_xmin``, ``qgis_xmax``, ``qgis_ymin``, ``qgis_ymax``)
+  in the ``geometry_columns`` table.
+* |checkbox| :guilabel:`Use primary key from geometry_columns table`:
+  allows QGIS to skip primary key calculation for views when loading them,
+  thus lowering the amount of time needed to load them.
+  It relies on names manually filled in a QGIS-specific ``qgis_pkey`` column
+  set in the ``geometry_columns`` table.
+  If more than one column is used for the primary key,
+  they should be filled as comma separated values.
+* |checkbox| :guilabel:`Also list table with no geometry`: tables without a
   geometry column attached will also be shown in the available table list.
-* |checkbox| :guilabel:`Use estimated table parameters`: only estimated table 
-  metadata will be used. This avoids a slow table scan, but may result in 
-  incorrect layer properties such as layer extent. 
-* |checkbox| :guilabel:`Skip invalid geometry handling`: all handling of records 
+* |checkbox| :guilabel:`Use estimated table parameters`: only estimated table
+  metadata will be used. This avoids a slow table scan, but may result in
+  incorrect layer properties such as layer extent.
+* |checkbox| :guilabel:`Skip invalid geometry handling`: all handling of records
   with invalid geometry will be disabled. This speeds up the provider, however,
   if any invalid geometries are present in a table then the result is unpredictable
   and may include missing records. Only check this option if you are certain that
   all geometries present in the database are valid, and any newly added geometries
   or tables will also be valid.
-* |checkbox| :guilabel:`Use only a Subset of Schemas` will allow you to filter 
+* |checkbox| :guilabel:`Use only a Subset of Schemas` will allow you to filter
   schemas for MS SQL connection. If enabled, only checked schemas will be displayed.
-  You can right-click to :guilabel:`Check` or :guilabel:`Uncheck` any schema 
-  in the list. 
+  You can right-click to :guilabel:`Check` or :guilabel:`Uncheck` any schema in the list.
 
 .. _create_hana_connection:
 
