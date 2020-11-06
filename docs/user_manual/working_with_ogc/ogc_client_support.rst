@@ -336,33 +336,6 @@ the one shown in :numref:`figure_projection_custom` will appear.
 The main difference with the WMS version of the dialog is that only
 those CRSs supported by the WMS server will be shown.
 
-.. _`serversearch`:
-
-Server search
--------------
-
-Within QGIS, you can search for WMS servers. Figure_OGC_search_ shows the
-:guilabel:`Server Search` tab with the :guilabel:`Add Layer(s) from a Server` dialog.
-
-.. _Figure_OGC_search:
-
-.. figure:: img/wms_server_search.png
-   :align: center
-
-   Dialog for searching WMS servers after some keywords
-
-As you can see, it is possible to enter a search string in the text field and hit
-the :guilabel:`Search` button. After a short while, the search result will be populated
-into the list below the text field. Browse the result list and inspect your search
-results within the table. To visualize the results, select a table entry, press
-the :guilabel:`Add Selected Row to WMS List` button and change back to the
-:guilabel:`Layers` tab. QGIS has automatically updated your server list, and the
-selected search result is already enabled in the list of saved WMS servers in
-the :guilabel:`Layers` tab. You only need to request the list of layers by clicking
-the :guilabel:`Connect` button. This option is quite handy when you want to search maps
-by specific keywords.
-
-Basically, this option is a front end to the API of http://geopole.org.
 
 .. _`tilesets`:
 
