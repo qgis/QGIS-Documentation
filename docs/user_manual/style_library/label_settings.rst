@@ -178,6 +178,40 @@ text buffer` checkbox in the |labelbuffer| :guilabel:`Buffer` tab. Then you can:
   :ref:`paint effects <draw_effects>` for improving text readability,
   eg through outer glows and blurs.
 
+.. _labels_mask:
+
+Mask tab
+--------
+
+The |labelmask| :guilabel:`Mask` tab allows you to define a mask areas
+around labels or point markers. This feature is very useful when your
+symbols and labels are overlapping each other in the map and you want to
+make the labels visible. 
+To create masks, activate the |checkbox| :guilabel:`Enable mask` checkbox
+in the |labelmask| tab. Then you can:
+
+* Set the mask's :guilabel:`Size`.
+* Set the mask's :guilabel:`Opacity`.
+* Apply a :guilabel:`Pen Join Style`.
+* Activate the |checkbox| :guilabel:`Draw effects` checkbox.
+
+Finally you have to select this mask shape as a mask source in the
+layer properties |labelmask| :guilabel:`Mask` tab. To do so 
+
+* Click the :guilabel:`Masked symbol layers`.
+* Choose the :guilabel:`Mask sources`. This defines the labels of the
+  layers that should be masked.
+  
+.. _figure_label_masks_1:
+   :align: center
+   
+   Mask settings - Mask tab
+   
+.. _figure_label_masks_2:
+   :align: center
+   
+   Layer properties - Mask tab
+ 
 
 .. _labels_background:
 
