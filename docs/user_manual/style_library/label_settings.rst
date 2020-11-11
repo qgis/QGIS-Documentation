@@ -396,7 +396,7 @@ the global :ref:`PAL setting <automated_placement>`.
 Placement for point layers
 --------------------------
 
-With the |radioButtonOn| :guilabel:`Cartographic` placement mode,
+With the :guilabel:`Cartographic` placement mode,
 point labels are generated with a better visual relationship with the
 point feature, following ideal cartographic placement rules. Labels can be
 placed at a set :guilabel:`Distance` either from the point feature itself
@@ -421,12 +421,12 @@ feature using a data defined list of prioritised positions.
 This also allows only certain placements to be used, so e.g.
 for coastal features you can prevent labels being placed over the land.
 
-The |radioButtonOn| :guilabel:`Around point` setting places the label in an
+The :guilabel:`Around point` setting places the label in an
 equal radius (set in :guilabel:`Distance`) circle around the feature. The
 placement of the label can even be constrained using the :guilabel:`Quadrant`
 option.
 
-With the |radioButtonOn| :guilabel:`Offset from point`, labels are
+With the :guilabel:`Offset from point`, labels are
 placed at a fixed offset from the point feature. You can select the
 :guilabel:`Quadrant` in which to place your label. You are also able to set
 the :guilabel:`Offset X,Y` distances between the points and their labels and
@@ -439,17 +439,16 @@ possible.
 Placement for line layers
 -------------------------
 
-Label options for line layers include |radioButtonOn| :guilabel:`Parallel`,
-|radioButtonOff| :guilabel:`Curved` or |radioButtonOff| :guilabel:`Horizontal`.
-For the |radioButtonOn| :guilabel:`Parallel` and |radioButtonOff|
-:guilabel:`Curved` options, you can set the position to |checkbox|
-:guilabel:`Above line`, |checkbox| :guilabel:`On line` and |checkbox|
-:guilabel:`Below line`. It's possible to select several options at once. In
-that case, QGIS will look for the optimal label position. For Parallel and
-curved placement options, you can also use the line orientation for the
-position of the label. Additionally, you can define a :guilabel:`Maximum
-angle between curved characters` when selecting the |radioButtonOff|
-:guilabel:`Curved` option (see Figure_labels_placement_line).
+Label modes for line layers include :guilabel:`Parallel`,
+:guilabel:`Curved` or :guilabel:`Horizontal`.
+For the :guilabel:`Parallel` and :guilabel:`Curved` modes,
+you can set the position to |checkbox| :guilabel:`Above line`,
+|checkbox| :guilabel:`On line` and |checkbox| :guilabel:`Below line`.
+It's possible to select several options at once. In that case, QGIS
+will look for the optimal label position. For Parallel and curved placement modes,
+you can also use the line orientation for the position of the label.
+Additionally, you can define a :guilabel:`Maximum angle between curved characters`
+when selecting the :guilabel:`Curved` mode (see Figure_labels_placement_line).
 
 .. _figure_labels_placement_line:
 
@@ -458,11 +457,20 @@ angle between curved characters` when selecting the |radioButtonOff|
 
    Label placement examples in lines
 
-For all three placement options, in :guilabel:`Repeat`, you can set up a
-minimum distance for repeating labels. The distance can be in ``mm`` or in
-``map units``. Also, in :guilabel:`Overrun feature` you can specify the
+For all three placement modes, in :guilabel:`Repeating Labels`, you can
+set up a minimum distance for repeating labels. The distance can be in
+``Millimeters``, ``Points``, ``Pixels``, ``Meters at scale``, ``Map Units`` 
+and ``Inches``. Also, in :guilabel:`Label Overrun` you can specify the
 maximal allowable distance a label may run past the end (or start) of
 line features.
+The :guilabel:`Label Anchoring` allows you to control the placement
+of labels along line features. Click on :guilabel:`Settings ...` and
+choose the position along the line which labels will be placed close to.
+There are two :guilabel:`Placement Behaviours`: if you choose 
+:guilabel:`Preferred Placement Hint` the label anchor is only treated as
+hint for the preferred label placement. By choosing :guilabel:`Strict`
+labels are placed exactly on the label anchor.
+
 
 Placement for polygon layers
 ----------------------------
