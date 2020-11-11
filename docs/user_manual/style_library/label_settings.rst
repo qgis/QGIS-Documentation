@@ -686,6 +686,8 @@ Under :guilabel:`Feature options`:
    :width: 1.5em
 .. |labeling| image:: /static/common/labelingSingle.png
    :width: 1.5em
+.. |labelmask| image:: /static/common/labelmask.png
+   :width: 1.5em
 .. |labelplacement| image:: /static/common/labelplacement.png
    :width: 1.5em
 .. |labelshadow| image:: /static/common/labelshadow.png
