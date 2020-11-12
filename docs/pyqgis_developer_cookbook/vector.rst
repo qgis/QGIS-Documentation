@@ -667,7 +667,7 @@ field:
     feat = QgsVectorLayerUtils.createFeature(vlayer)
 
 
-The :meth:`getValues() <qgis.core.QgsVectorLayerUtils.getValues>` methods allows
+The :meth:`getValues() <qgis.core.QgsVectorLayerUtils.getValues>` method allows
 you to quickly get the values of a field or expression:
 
 .. testcode:: vectors
