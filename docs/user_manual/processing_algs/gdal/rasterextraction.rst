@@ -165,11 +165,11 @@ Parameters
    * - **Source CRS**
      - ``SOURCE_CRS``
      - [crs]
-     -
+     - Set the coordinate reference to use for the input raster
    * - **Target CRS**
      - ``TARGET_CRS``
      - [crs]
-     -
+     - Set the coordinate reference to use for the mask layer
    * - **Assign a specified nodata value to output bands**
 
        Optional
@@ -185,15 +185,13 @@ Parameters
 
        Default: False
      - Creates an alpha band for the result.
-       The alpha band then includes the transparency values of
-       the pixels.
+       The alpha band then includes the transparency values of the pixels.
    * - **Match the extent of the clipped raster to the extent of the mask layer**
      - ``CROP_TO_CUTLINE``
      - [boolean]
 
        Default: True
-     - Applies the vector layer extent to the output raster if
-       checked.
+     - Applies the vector layer extent to the output raster if checked.
    * - **Keep resolution of input raster**
      - ``KEEP_RESOLUTION``
      - [boolean]
@@ -227,7 +225,9 @@ Parameters
      - [boolean]
 
        Default: False
-     -
+     - Two threads will be used to process chunks of image
+       and perform input/output operation simultaneously.
+       Note that computation is not multithreaded itself.
    * - **Additional creation options**
 
        Optional
