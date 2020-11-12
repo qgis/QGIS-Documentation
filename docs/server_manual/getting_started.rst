@@ -193,7 +193,7 @@ Install NGINX:
   QGIS Server processes.
   Official Debian packages exist for both.
   When you have no X server running and you need, for example,
-  printing,	you can use :ref:`xvfb <xvfb>`.
+  printing, you can use :ref:`xvfb <xvfb>`.
 
 * Another option is to rely on **Systemd**, the init system for GNU/Linux that most
   Linux distributions use today.
@@ -235,7 +235,6 @@ as it adds the parameters from :file:`/etc/nginx/fastcgi_params`:
  fastcgi_param  REDIRECT_STATUS    200;
 
 Moreover, you can use some :ref:`qgis-server-envvar` to configure QGIS Server.
-0123456789012345678901234567890123456789012345678901234567890123456789
 In the NGINX configuration file, :file:`/etc/nginx/nginx.conf`, you have to use
 ``fastcgi_param`` instruction to define these variables as shown below:
 
@@ -762,8 +761,8 @@ from the Coordinate Reference System Selector, or click :guilabel:`Used`
 to add the CRSs used in the QGIS project to the list.
 
 If you have print layouts defined in your project, they will be listed in the
-`GetProjectSettings` response, and they can be used by the GetPrint request to
-create prints, using one of the print layout layouts as a template.
+``GetProjectSettings`` response, and they can be used by the GetPrint request to
+create prints, using one of the print layouts as a template.
 This is a QGIS-specific extension to the WMS 1.3.0 specification.
 If you want to exclude any print layout from being published by the WMS,
 check |checkbox| :guilabel:`Exclude layouts` and click the
@@ -781,8 +780,14 @@ It is recommended that you exclude from publishing the layers that you don't
 need as this reduces the size of the WMS GetCapabilities response which leads
 to faster loading times on the client side.
 
-You can receive requested GetFeatureInfo as plain text, XML and GML. Default is XML,
-text or GML format depends the output format chosen for the GetFeatureInfo request.
+If you check |checkbox| :guilabel:`Use layer ids as name`, layer ids will be
+used to reference layers in the ``GetCapabilities`` response or ``GetMap LAYERS``
+parameter. If not, layer name or short name if defined (see :ref:`vectorservermenu`)
+is used.
+
+You can receive requested GetFeatureInfo as plain text, XML and GML. The default is XML.
+
+.. _`addGeometryToFeatureResponse` : 
 
 If you wish, you can check |checkbox| :guilabel:`Add geometry to feature response`.
 This will include the bounding box for each feature in the GetFeatureInfo response.
@@ -805,6 +810,16 @@ in the WMS GetCapabilities response, enter the corresponding URL in the
 Furthermore, you can restrict the maximum size of the maps returned by the
 GetMap request by entering the maximum width and height into the respective
 fields under :guilabel:`Maximums for GetMap request`.
+
+You can change the :guilabel:`Quality for JPEG images` factor. The quality factor must be
+in the range 0 to 100. Specify 0 for maximum compression, 100 for no compression.
+
+You can change the limit for atlas features to be printed in one request by setting the
+:guilabel:`Maximum features for Atlas print requests` field.
+
+When QGIS Server is used in tiled mode (see :ref:`TILED parameter <wms-tiled>`), you can set the
+:guilabel:`Tile buffer in pixels`. The recommended value is the size of the largest
+symbol or line width in your QGIS project.
 
 If one of your layers uses the :ref:`Map Tip display <maptips>` (i.e. to show text using
 expressions) this will be listed inside the GetFeatureInfo output. If the

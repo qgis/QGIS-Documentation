@@ -312,6 +312,7 @@ Python code
 
 Contour
 -------
+
 Extracts contour lines from any GDAL-supported elevation raster.
 
 This algorithm is derived from the
@@ -338,6 +339,8 @@ Parameters
    * - **Band number**
      - ``BAND``
      - [raster band]
+
+       Default: 1
      - Raster band to create the contours from
    * - **Interval between contour lines**
      - ``INTERVAL``
@@ -353,8 +356,15 @@ Parameters
      - [string]
 
        Default: 'ELEV'
-     - Defines the attribute name for the field containing the
-       values of the contour lines.
+     - Provides a name for the attribute in which to put the elevation.
+   * - **Offset from zero relative to which to interpret intervals**
+
+       Optional
+     - ``OFFSET``
+     - [number]
+
+       Default: 0.0
+     -
    * - **Produce 3D vector**
      - ``CREATE_3D``
      - [boolean]
@@ -377,14 +387,6 @@ Parameters
        Default: None
      - Defines a value that should be inserted for the nodata
        values in the output raster
-   * - **Offset from zero relative to which to interpret intervals**
-
-       Optional
-     - ``OFFSET``
-     - [number]
-
-       Default: 0.0
-     -
    * - **Additional command-line parameters**
 
        Optional
@@ -392,25 +394,14 @@ Parameters
      - [string]
 
        Default: None
-     - Add extra GDAL command line options
-   * - **Additional creation options**
-
-       Optional
-     - ``OPTIONS``
-     - [string]
-
-       Default: ''
-     - For adding one or more creation options that control the
-       raster to be created (colors, block size, file
-       compression...).
-       For convenience, you can rely on predefined profiles (see
-       :ref:`GDAL driver options section <gdal_createoptions>`).
+     - Add extra GDAL command line options.
+       Refer to the corresponding GDAL utility documentation.
    * - **Contours**
      - ``OUTPUT``
      - [vector: line]
 
        Default: '[Save to temporary file]'
-     - Specification of the output raster layer.
+     - Specification of the output vector layer.
        One of:
 
        * Save to a Temporary File
@@ -438,6 +429,143 @@ Python code
 ...........
 
 **Algorithm ID**: ``gdal:contour``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _gdalcontour_polygon:
+
+Contour Polygons
+----------------
+
+Extracts contour polygons from any GDAL-supported elevation raster.
+
+This algorithm is derived from the
+`GDAL contour utility <https://gdal.org/gdal_contour.html>`_.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [raster]
+     - Input raster
+   * - **Band number**
+     - ``BAND``
+     - [raster band]
+
+       Default: 1
+     - Raster band to create the contours from
+   * - **Interval between contour lines**
+     - ``INTERVAL``
+     - [number]
+
+       Default: 10.0
+     - Defines the interval between the contour lines in the given
+       units of the elevation raster (minimum value 0)
+   * - **Offset from zero relative to which to interpret intervals**
+
+       Optional
+     - ``OFFSET``
+     - [number]
+
+       Default: 0.0
+     -
+   * - **Attribute name for minimum elevation of contour polygon**
+
+       Optional
+     - ``FIELD_NAME_MIN``
+     - [string]
+
+       Default: 'ELEV_MIN'
+     - Provides a name for the attribute in which to put the minimum elevation
+       of contour polygon. If not provided no minimum elevation attribute
+       is attached.
+   * - **Attribute name for maximum elevation of contour polygon**
+
+       Optional
+     - ``FIELD_NAME_MAX``
+     - [string]
+
+       Default: 'ELEV_MAX'
+     - Provides a name for the attribute in which to put the maximum elevation
+       of contour polygon. If not provided no maximum elevation attribute
+       is attached.
+   * - **Produce 3D vector**
+     - ``CREATE_3D``
+     - [boolean]
+
+       Default: False
+     - Forces production of 3D vectors instead of 2D.
+       Includes elevation at every vertex.
+   * - **Treat all raster values as valid**
+     - ``IGNORE_NODATA``
+     - [boolean]
+
+       Default: False
+     - Ignores any nodata values in the dataset.
+   * - **Input pixel value to treat as "nodata"**
+
+       Optional
+     - ``NODATA``
+     - [number]
+
+       Default: None
+     - Defines a value that should be inserted for the nodata
+       values in the output raster
+   * - **Additional command-line parameters**
+
+       Optional
+     - ``EXTRA``
+     - [string]
+
+       Default: None
+     - Add extra GDAL command line options.
+       Refer to the corresponding GDAL utility documentation.
+   * - **Contours**
+     - ``OUTPUT``
+     - [vector: polygon]
+
+       Default: '[Save to temporary file]'
+     - Specification of the output vector layer.
+       One of:
+
+       * Save to a Temporary File
+       * Save to File...
+
+       The file encoding can also be changed here.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Contours**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - Output vector layer with contour polygons
+
+Python code
+...........
+
+**Algorithm ID**: ``gdal:contour_polygon``
 
 .. include:: ../qgis/qgis_algs_include.rst
   :start-after: **algorithm_code_section**

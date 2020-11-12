@@ -194,7 +194,7 @@ Parameters
        has none.
    * - **Override projection for the output file**
 
-       (optional)
+       Optional
      - ``ASSIGN_CRS``
      - [crs]
 

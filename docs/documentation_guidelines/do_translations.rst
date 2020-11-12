@@ -26,8 +26,8 @@ QGIS Documentation is written in English with :file:`.rst` files.
 In order to provide translations:
 
 #. A prebuild script creates translation files named :file:`.po` files for the
-   English language in the folder :file:`/QGIS-Documentation/i18n/en`.
-#. These "originals" are then copied by the script to the :file:`i18n` folders for
+   English language in the folder :file:`/QGIS-Documentation/locale/en`.
+#. These "originals" are then copied by the script to the :file:`locale` folders for
    other languages.
 #. The sentences in the :file:`.po` files are pushed to the Transifex web platform,
    and made available for translators who can begin to translate from English to their
@@ -85,11 +85,11 @@ So why did I choose this document?
 
 The build process has created the English :file:`.po` file which can be found here::
 
- QGIS-Documentation/i18n/en/LC_MESSAGES/docs/user_manual/plugins/plugins_heatmap.po
+ QGIS-Documentation/locale/en/LC_MESSAGES/docs/user_manual/plugins/plugins_heatmap.po
 
 The equivalent Dutch :file:`.po` file (basically a copy) can be found here::
 
- QGIS-Documentation/i18n/nl/LC_MESSAGES/docs/user_manual/plugins/plugins_heatmap.po
+ QGIS-Documentation/locale/nl/LC_MESSAGES/docs/user_manual/plugins/plugins_heatmap.po
 
 Along this file you will see a tiny :file:`.mo` file which indicates that it
 does not hold any translations yet.
@@ -146,7 +146,7 @@ With Qt Linguist, you need to:
 
 #. manually grab the :file:`.po` or :file:`.ts`  file(s). This can be achieved
    by downloading the file(s) either from Transifex platform or from the
-   :file:`i18n/$language` folder of the source repository (in GitHub),
+   :file:`locale/$language` folder of the source repository (in GitHub),
 #. proceed to the translation locally
 #. upload the modified files to their sources (Transifex or GitHub).
 
@@ -335,7 +335,14 @@ Summary Rules for translation
 #. Do not change text between two ``|`` characters like ``|bronze|``, ``|checkbox|``, 
    ``|labels|``, ``|selectString|``, ``|addLayer|`` ... These are special tags
    used to replace images
-#. Do not change references that start with the tag ``:ref:`` or ``:file:``
+#. Do not change references that start with roles like ``:ref:``, ``:file:``,
+   ``:numref:`` unless they include a title. In that case, you can translate the title
+   but keep unchanged the link (i.e., the text between ``<`` and ``>``)
+
+   .. tip:: When a title is provided for a reference, Transifex may display a number
+    in the English source text in replacement of the link part. Click on the number
+    in the source text to add the reference link next to the title being translated.
+
 #. Do not change references that end with an underscore like ``figure_labels_1_``
 #. Do not change the url in hyperlinks, but you may change the external
    description. Leave the underscore at the end of the hyperlink,

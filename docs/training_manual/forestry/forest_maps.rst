@@ -386,7 +386,7 @@ labels to use the information from the :kbd:`atlas_coverage` layer's attribute t
 * Set the :guilabel:`Font` size to :kbd:`12`.
 * Set the cursor at the end of the text in the label.
 * In  the :guilabel:`Item properties` tab, inside the :guilabel:`Main properties`
-  click on :guilabel:`Insert an expression`.
+  click on :guilabel:`Insert or Edit an Expression...`.
 * In the :guilabel:`Function list` double click on the field :kbd:`Zone` under
   :guilabel:`Field and Values`.
 * Click :guilabel:`OK`.

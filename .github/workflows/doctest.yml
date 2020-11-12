@@ -1,0 +1,31 @@
+name: Doctest build
+
+on: [push, pull_request]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    services:
+      image: docker
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 1
+    - name: Set up Python 3.7
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.7
+    - name: Pip upgrade
+      run: |
+          python -m pip install --upgrade pip
+    - name: Build test code
+      run: |
+          make -f docker.mk doctest
+    - name: Upload build artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: Doctest build
+        path: ./build/doctest/output.txt

@@ -161,7 +161,7 @@ It will also be shown in the lower-right of the QGIS status bar.
 
 Available options are:
 
-* |unchecked| :guilabel:`No projection (or unknown/non-Earth projection)`:
+* |unchecked| :guilabel:`No CRS (or unknown/non-Earth projection)`:
   Checking this setting will disable ALL projection handling within the QGIS
   project, causing all layers and map coordinates to be treated as simple 2D
   Cartesian coordinates, with no relation to positions on the Earth's surface.
@@ -246,14 +246,6 @@ define a custom CRS. To define a CRS, select |customProjection|
 are stored in your QGIS user database. In addition to your custom CRSs, this
 database also contains your spatial bookmarks and other custom data.
 
-.. _figure_projection_custom:
-
-.. figure:: img/customProjectionDialog.png
-   :align: center
-
-   Custom CRS Dialog
-
-
 Defining a custom CRS in QGIS requires a good understanding of the PROJ
 projection library. To begin, refer to "Cartographic Projection Procedures
 for the UNIX Environment - A User's Manual" by Gerald I. Evenden, U.S.
@@ -270,11 +262,31 @@ only two parameters to define a user CRS:
 #. A descriptive name
 #. The cartographic parameters in PROJ or WKT format
 
-To create a new CRS, click the |signPlus| :sup:`Add new CRS` button,
-enter a descriptive name, select the format, and the CRS parameters.
+To create a new CRS:
 
-Click :guilabel:`Validate` to test whether the CRS definition is an acceptable
-projection definition.
+#. Click the |signPlus| :sup:`Add new CRS` button
+#. Enter a descriptive name
+#. Select the format: it can be :guilabel:`Proj String` or :guilabel:`WKT`
+#. Add the CRS :guilabel:`Parameters`.
+
+   .. note:: **Prefer storing the CRS definition in WKT format**
+
+    Although both ``Proj String`` and ``WKT`` formats are supported, it's
+    highly recommended to store projection definitions in the WKT format.
+    Therefore, if the available definition is in the proj format, select that
+    format, enter the parameters and then switch to WKT format.
+    QGIS will convert the definition to the WKT format that you can later save.
+
+#. Click :guilabel:`Validate` to test whether the CRS definition is an acceptable
+   projection definition.
+
+.. _figure_projection_custom:
+
+.. figure:: img/customProjectionDialog.png
+   :align: center
+
+   Custom CRS Dialog
+
 
 You can test your CRS parameters to see if they give sane results. To do this,
 enter known WGS 84 latitude and longitude values in :guilabel:`North` and
@@ -326,11 +338,11 @@ can be made between two CRSs, and allow you to make an informed selection
 of which is the most appropriate transformation to use for your data.
 
 This customization is done in the :menuselection:`Settings -->` |options|
-:menuselection:`Options --> CRS` tab menu under the :guilabel:`Default datum
-transformations` group:
+:menuselection:`Options --> Transformations` tab menu under the
+:guilabel:`Default datum transformations` group:
 
 * using |checkbox| :guilabel:`Ask for datum transformation if several are
-  available`: when more than one appropriate datum transformation exists for a
+  available`: when more than one appropriate datum transformation exist for a
   source/destination CRS combination, a dialog will automatically be opened
   prompting users to choose which of these datum transformations to use for
   the project. If the :guilabel:`Make default` checkbox is ticked when
@@ -348,35 +360,39 @@ transformations` group:
   #. A list of available transformations from source to destination will be
      shown in the table.
      Clicking a row shows details on the settings applied and the corresponding
-     accuracy of the transformation.
+     accuracy and area of use of the transformation.
+
+     .. _figure_projection_datum:
+
+     .. figure:: img/datumTransformation.png
+        :align: center
+
+        Selecting a preferred default datum transformation
 
      In some cases a transformation may not be available for use on your system.
-     In this case, the transformation will still be shown in this list but
-     will not be selectable.
+     In this case, the transformation will still be shown (greyed) in this list
+     but can not be picked until you download and install the required package
+     of transformation support. Usually, a button is provided to download the
+     corresponding grid.
 
-  #. Find your preferred transformation, select it and click :guilabel:`OK`.
+  #. Find your preferred transformation and select it
+  #. Set whether you |checkbox| :guilabel:`Allow fallback transforms if preferred
+     operation fails`
+  #. Click :guilabel:`OK`.
 
      A row is added to the table under :guilabel:`Default Datum Transformations`
-     with information about :guilabel:`Source CRS` and :guilabel:`Destination CRS`
-     as well as the datum transformations (:guilabel:`Source Datum Transformation`
-     and :guilabel:`Destination Datum Transformation`) to be used to transform
-     between the CRSs.
+     with information about the :guilabel:`Source CRS`, the :guilabel:`Destination
+     CRS`, the :guilabel:`Operation` applied for the transformation and whether
+     :guilabel:`Allow fallback Transforms` is enabled.
 
   From now, QGIS automatically uses the selected datum transformations for
   further transformation between these two CRSs until you remove
   it (|signMinus|) from the list or change the entry (|toggleEditing|) in
   the list.
 
-.. _figure_projection_datum:
-
-.. figure:: img/datumTransformation.png
-   :align: center
-
-   Selecting a preferred default datum transformation
-
 Datum transformations set in the :menuselection:`Settings -->` |options|
-:menuselection:`Options --> CRS` tab will be inherited by all new QGIS
-projects created on the system. Additionally, a particular project
+:menuselection:`Options --> Transformations` tab will be inherited by all
+new QGIS projects created on the system. Additionally, a particular project
 may have its own specific set of transformations specified via the
 :guilabel:`CRS` tab of the :guilabel:`Project properties` dialog
 (:menuselection:`Project --> Properties...`). These settings apply

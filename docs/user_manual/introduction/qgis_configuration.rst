@@ -224,7 +224,7 @@ variables are displayed in :guilabel:`Current environment variables`, and it's
 possible to filter them by activating
 |checkbox| :guilabel:`Show only QGIS-specific variables`.
 
-.. index:: CRS, Datum transformation, On-the-fly reprojection
+.. index:: CRS, On-the-fly reprojection
 .. _crs_options:
 
 CRS Settings
@@ -267,6 +267,27 @@ or when a layer without a CRS is loaded.
 * |radioButtonOff| :guilabel:`Use project CRS`
 * |radioButtonOff| :guilabel:`Use a default CRS`
 
+|unchecked| :guilabel:`Planimetric measurements`: sets the default for the
+"planimetric measurements" property for newly created projects.
+
+
+.. index:: CRS, Datum transformation, Reprojection
+.. _transformations_options:
+
+Transformations Settings
+------------------------
+
+The |transformation| :guilabel:`Transformations` tab helps you set coordinate
+transformations and operations to apply when loading a layer to a project or
+reprojecting a layer.
+
+.. _figure_transfo_options:
+
+.. figure:: img/options_transformations.png
+   :align: center
+
+   Transformations Settings
+
 **Default datum transformations**
 
 In this group, you can control whether reprojecting layers to another CRS should be:
@@ -277,10 +298,6 @@ In this group, you can control whether reprojecting layers to another CRS should
   * |checkbox| :guilabel:`Ask for datum transformation if several are available`
   * a predefined list of datum transformations to apply by default.
     See :ref:`datum_transformation` for more details.
-
-
-* |unchecked| :guilabel:`Planimetric measurements`: sets the default for the
-  "planimetric measurements" property for newly created projects.
 
 
 .. _datasources_options:
@@ -380,7 +397,7 @@ panel.
 
 **Localized paths**
 
-It is possible to use localized paths for any kind of file based data source. 
+It is possible to use localized paths for any kind of file based data source.
 They are a list of paths which are used to abstract the data source location.
 For instance, if :file:`C:\\my_maps` is listed in the localized paths,
 a layer having :file:`C:\\my_maps\\my_country\\ortho.tif` as data source
@@ -726,16 +743,17 @@ You can define the :guilabel:`Default font` used within the :ref:`print layout
 GDAL Settings
 -------------
 
-`GDAL <https://gdal.org>`_ is a data exchange library for vector and raster
-files. It provides drivers to read and or write data in different formats.
-The :guilabel:`GDAL` tab currently exposes the drivers for raster formats with
-their capabilities.
+`GDAL <https://gdal.org>`_ is a data exchange library for geospatial data that supports a
+large number of vector and raster formats.
+It provides drivers to read and (often) write data in these formats.
+The :guilabel:`GDAL` tab exposes the drivers for raster and vector
+formats with their capabilities.
 
-GDAL driver options
-...................
+Raster driver options
+.....................
 
-This frame provides ways to customize the behavior of drivers that support read
-and write access:
+This frame provides ways to customize the behavior of raster drivers that
+support read and write access:
 
 .. _gdal_createoptions:
 
@@ -777,22 +795,22 @@ and write access:
 
      Sample of Pyramids profile
 
-GDAL drivers
-............
+GDAL raster and vector drivers
+..............................
 
-In this frame, you can define which GDAL driver is to use to read and/or
+The :guilabel:`Raster Drivers` and :guilabel:`Vector Drivers` (in a separated
+tab) allow you to define which GDAL driver is enabled to read and/or
 write files, as in some cases more than one GDAL driver is available.
 
 .. _figure_gdal_settings:
-
 .. figure:: img/options_gdal.png
    :align: center
 
-   GDAL Settings in QGIS
+   GDAL Settings in QGIS - Raster drivers
 
-.. tip:: Double-click a driver that allows read and write access (``rw+(v)``)
-  opens the :ref:`Edit Create options <gdal_createoptions>` dialog for
-  customization.
+.. tip:: Double-click a raster driver that allows read and write access
+   (``rw+(v)``) opens the :ref:`Edit Create options <gdal_createoptions>`
+   dialog for customization.
 
 .. index:: Variables
 .. _variables_options:
@@ -907,9 +925,18 @@ https://doc.qt.io/qt-5.9/qnetworkproxy.html#ProxyType-enum
 Locator Settings
 ----------------
 
-|search| The :guilabel:`Locator` tab allows to configure the :ref:`Locator bar <locator_bar>`, a
-quick search widget available on the status bar that helps you perform searches
-anywhere in the application. It provides some default filters (with prefix) to use:
+|search| The :guilabel:`Locator` tab lets you configure the :ref:`Locator bar
+<locator_bar>`, a quick search widget available on the status bar to help
+you perform searches in the application.
+It provides some default filters (with prefix) to use:
+
+.. _figure_locator_settings:
+
+.. figure:: img/options_locator.png
+   :align: center
+
+   Locator Settings in QGIS
+
 
 * Project layers (``l``): finds and selects a layer in the :guilabel:`Layers`
   panel.
@@ -918,51 +945,38 @@ anywhere in the application. It provides some default filters (with prefix) to u
   or menu in QGIS, opening a panel...
 * Active layer features (``f``): searches for matching attributes in any field
   from the current active layer and zooms to the selected feature.
+  Press |settings| to configure the maximum number of results.
 * Features in all layers (``af``): searches for matching attributes in the
   :ref:`display name <maptips>` of each :ref:`searchable layers <project_layer_capabilities>`
   and zooms to the selected feature.
+  Press |settings| to configure the maximum number of results and the maximum
+  number of results per layer.
 * Calculator (``=``): allows evaluation of any QGIS expression and, if valid,
   gives an option to copy the result to the clipboard.
 * Spatial bookmarks (``b``): finds and zooms to the bookmark extent.
 * Settings (``set``): browses and opens project and application-wide properties
   dialogs.
-* Processing (``a``): searches and opens a Processing algorithm dialog.
+* Go to coordinate (``go``): pans the map canvas to a location defined by a
+  comma or space separated pair of x and y coordinates or a formatted URL
+  (e.g., OpenStreetMap, Leaflet, OpenLayer, Google Maps, ...).
+  The coordinate is expected in WGS 84 (``epsg:4326``) and/or map canvas CRS.
+* Processing algorithms (``a``): searches and opens a Processing algorithm dialog.
 * Edit selected features (``ef``): gives quick access and runs a compatible
   :ref:`modify-in-place <processing_inplace_edit>` Processing algorithm on the
   active layer.
 
-For each filter, you can customize the filter, set whether it is enabled by default or not.
+In the dialog, you can:
+
+* customize the filter :guilabel:`Prefix`, i.e. the keyword to use to trigger
+  the filter
+* set whether the filter is :guilabel:`Enabled`: the filter can be used in the
+  searches and a shortcut is available in the locator bar menu
+* set whether the filter is :guilabel:`Default`: a search not using a filter
+  returns results from only the default filters categories.
+* Some filters provide a way to configure the number of results in a  search.
+
 The set of default locator filters can be extended by plugins, eg for OSM
-nominatim searches, direct database searching, layer catalog searches.
-
-The locator search bar can be activated pressing :kbd:`Ctrl+K`. Type your text
-to perform a search. By default, results are returned for all enabled locator
-filters but you can limit the search to a certain filter by prefixing your
-text with the locator filter prefix, ie. typing ``l cad`` will return only the
-layers whose name contains ``cad``. Click on the result to execute the
-corresponding action, depending on the type of item.
-
-Searching is handled using threads, so that results always become available as
-quickly as possible, regardless of whether any slow search filters may be
-installed. They also appear as soon as each result is encountered by each
-filter, which means that e.g. a file search filter will show results one by one
-as the file tree is scanned. This ensures that the UI is always responsive even
-if a very slow search filter is present (e.g. one which uses an online service).
-
-.. tip:: **Quick access to the locator's configurations**
-
-  Click on the |search| icon inside the locator widget on the status bar to
-  display the list of filters you can use and a :guilabel:`Configure` entry that
-  opens the :guilabel:`Locator` tab of the :menuselection:`Settings -->
-  Options...` menu.
-
-
-.. _figure_locator_settings:
-
-.. figure:: img/options_locator.png
-   :align: center
-
-   Locator Settings in QGIS
+nominatim searches, direct database searching, layer catalog searches, ...
 
 
 .. _optionsadvanced:
@@ -1009,6 +1023,9 @@ OpenCL acceleration settings.
 
    Acceleration tab
 
+Depending on your hardware and software, you may have to install additional 
+libraries to enable OpenCL acceleration.
+
 
 Processing Settings
 -------------------
@@ -1029,7 +1046,100 @@ More information at :ref:`label_processing`.
 
    Processing Settings tab in QGIS
 
+.. _console_options:
 
+Python Console Settings
+-----------------------
+
+The |runConsole| :guilabel:`Python Console` settings help you manage and control
+the behavior of the Python editors (:ref:`interactive console <interactive_console>`,
+:ref:`code editor <console_editor>`, :ref:`project macros <project_macros>`,
+:ref:`custom expressions <function_editor>`, ...).
+It can also be accessed using the |options| :sup:`Options...` button from:
+
+* the :guilabel:`Python console` toolbar
+* the contextual menu of the :guilabel:`Python console` widget
+* and the contextual menu of the code editor.
+
+.. _figure_python_console_settings:
+
+.. figure:: img/options_pythonconsole.png
+   :align: center
+
+   Python Console Settings tab
+
+You can specify:
+
+* |unchecked| :guilabel:`Autocompletion`: Enables code completion. You can get
+  autocompletion from the current document, the installed API files or both.
+
+  * :guilabel:`Autocompletion threshold`: Sets the threshold for displaying
+    the autocompletion list (in characters)
+
+* under :guilabel:`Typing`
+
+  * |unchecked| :guilabel:`Automatic parentheses insertion`: Enables autoclosing
+    for parentheses
+  * |checkbox| :guilabel:`Automatic insertion of the 'import' string on 'from xxx'`:
+    Enables insertion of 'import' when specifying imports
+
+* under :guilabel:`Run and Debug`
+
+  * |unchecked| :guilabel:`Enable Object Inspector (switching between tabs may
+    be slow)`: Enable the object inspector.
+  * |unchecked| :guilabel:`Auto-save script before running`: Saves the script
+    automatically when executed. This action will store a temporary file (in the
+    temporary system directory) that will be deleted automatically after running.
+
+For :guilabel:`APIs` you can specify:
+
+* |checkbox| :guilabel:`Using preloaded APIs file`: You can choose if you would
+  like to use the preloaded API files.  If this is not checked you can add API
+  files and you can also choose if you would like to use prepared API files
+  (see next option).
+* |unchecked| :guilabel:`Using prepared APIs file`: If checked, the chosen
+  ``*.pap`` file will be used for code completion. To generate a prepared API
+  file you have to load at least one ``*.api`` file and then compile it by
+  clicking the :guilabel:`Compile APIs...` button.
+* Under :guilabel:`GitHub access token`, you can generate a personal token
+  allowing you to share code snippets from within the Python code editor.
+  More details on `GitHub authentication
+  <https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token>`_
+
+.. _code_editor_options:
+
+Code Editor Settings
+--------------------
+
+In the |codeEditor| :guilabel:`Code Editor` tab, you can control the appearance
+and behaviour of code editor widgets (Python interactive console and editor,
+expression widget and function editor, ...).
+
+.. _figure_code_editor_settings:
+
+.. figure:: img/options_codeeditor.png
+   :align: center
+
+   Code Editor Settings tab
+
+At the top of the dialog, a widget provides a live preview of the current
+settings, in various coding languages (Python, QGIS expression, HTML, SQL,
+JavaScript). A convenient way to adjust settings.
+
+* Check |unchecked| :guilabel:`Override code editor font` to modify the default
+  :guilabel:`Font` family and :guilabel:`Size`.
+
+* Under the :guilabel:`Colors` group, you can:
+
+  * select a :guilabel:`Color scheme`: predefined settings are ``Default``,
+    ``Solarized Dark`` and ``Solarized Light``. A ``Custom`` scheme is triggered
+    as soon as you modify a color and can be reset with selecting a predefined
+    scheme.
+  * change the :ref:`color <color_widget>` of each element in code writing,
+    such as the colors to use for comments, quotes, functions, background, ...
+
+
+.. index:: User profile
 .. _user_profiles:
 
 Working with User Profiles
@@ -1177,16 +1287,19 @@ CRS Properties
 The |crs| :guilabel:`CRS` tab helps you set the coordinate reference system
 to use in this project. It can be:
 
-* |checkbox| :guilabel:`No projection (or unknown/non-Earth projection)`:
+* |checkbox| :guilabel:`No CRS (or unknown/non-Earth projection)`:
   layers are drawn based on their raw coordinates
 * or an existing coordinate reference system that can be *geographic*,
   *projected* or *user-defined*. Layers added to the project are translated
   on-the-fly to this CRS in order to overlay them regardless their original CRS.
 
-The |crs| :guilabel:`CRS` tab also helps you control the layers reprojection
-settings by configuring the datum transformation preferences to apply in the
-current project. As usual, these override any corresponding global settings.
-See :ref:`datum_transformation` for more details.
+Transformations Properties
+--------------------------
+
+The |transformation| :guilabel:`Transformations` tab  helps you control the
+layers reprojection settings by configuring the datum transformation preferences
+to apply in the current project. As usual, these override any corresponding
+global settings. See :ref:`datum_transformation` for more details.
 
 .. _default_styles_properties:
 
@@ -1258,7 +1371,7 @@ In the :guilabel:`Data Sources` tab, you can:
 
 * |unchecked| :guilabel:`Automatically create transaction groups where possible`:
   When this mode is turned on, all
-  (postgres) layers from the same database are synchronised in their edit state,
+  layers from the same database are synchronised in their edit state,
   i.e. when one layer is put into edit state, all are, when one layer is committed
   or one layer is rolled back, so are the others. Also, instead of buffering edit
   changes locally, they are directly sent to a transaction in the database which
@@ -1308,6 +1421,8 @@ In the :guilabel:`Data Sources` tab, you can:
 
    Data Sources tab
 
+.. _project_relations:
+
 Relations Properties
 --------------------
 
@@ -1336,6 +1451,8 @@ project-level variable from the list and click the |signMinus| button to
 remove it.
 More information on variables usage in the General Tools
 :ref:`general_tools_variables` section.
+
+.. _project_macros:
 
 Macros Properties
 -----------------
@@ -1808,6 +1925,8 @@ in the QGIS user profile.
 
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
+.. |codeEditor| image:: /static/common/mIconCodeEditor.png
+   :width: 1.5em
 .. |crs| image:: /static/common/CRS.png
    :width: 1.5em
 .. |customProjection| image:: /static/common/mActionCustomProjection.png
@@ -1842,6 +1961,8 @@ in the QGIS user profile.
    :width: 1.5em
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
    :width: 1.5em
+.. |runConsole| image:: /static/common/iconRunConsole.png
+   :width: 1.5em
 .. |search| image:: /static/common/search.png
    :width: 1.5em
 .. |select| image:: /static/common/mActionSelect.png
@@ -1852,11 +1973,15 @@ in the QGIS user profile.
    :width: 2.8em
 .. |selectString| image:: /static/common/selectstring.png
    :width: 2.5em
+.. |settings| image:: /static/common/settings.png
+   :width: 1.5em
 .. |signMinus| image:: /static/common/symbologyRemove.png
    :width: 1.5em
 .. |signPlus| image:: /static/common/symbologyAdd.png
    :width: 1.5em
 .. |styleManager| image:: /static/common/mActionStyleManager.png
+   :width: 1.5em
+.. |transformation| image:: /static/common/transformation.png
    :width: 1.5em
 .. |unchecked| image:: /static/common/checkbox_unchecked.png
    :width: 1.3em

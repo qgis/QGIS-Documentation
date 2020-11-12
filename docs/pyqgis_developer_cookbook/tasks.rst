@@ -354,7 +354,7 @@ parameter ``wait_time``.
                                    MESSAGE_CATEGORY, Qgis.Critical)
           raise exception
 
-  # Creae a few tasks
+  # Create a few tasks
   task1 = QgsTask.fromFunction('Waste cpu 1', doSomething,
                                on_finished=completed, wait_time=4)
   task2 = QgsTask.fromFunction('Waste cpu 2', doSomething,
@@ -387,7 +387,9 @@ Create a task that uses the algorithm :ref:`qgis:randompointsinextent <qgisrando
 generate 50000 random points inside a specified extent.  The result is
 added to the project in a safe way.
 
-.. testcode:: tasks
+.. this snippet crashes the test runner
+
+.. code-block:: python
 
   from functools import partial
   from qgis.core import (QgsTaskManager, QgsMessageLog,
@@ -425,5 +427,6 @@ added to the project in a safe way.
   task = QgsProcessingAlgRunnerTask(alg, params, context, feedback)
   task.executed.connect(partial(task_finished, context))
   QgsApplication.taskManager().addTask(task)
+
 
 See also: https://opengis.ch/2018/06/22/threads-in-pyqgis3/.

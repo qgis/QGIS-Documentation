@@ -5,7 +5,7 @@
    :linenothreshold: 5
 
 
-.. Tests are skipped because they fail to import from processing_provider under Travis CI
+.. Tests are skipped because they fail to import from processing_provider under CI
 .. everything runs fine when testing locally with make -f docker.mk doctest
 
 .. testsetup:: processing

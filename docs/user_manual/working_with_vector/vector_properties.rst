@@ -1944,8 +1944,19 @@ Line layers
 Polygon Layers
 --------------
 	
-* As for the other ones, :guilabel:`Height` can be defined in CRS units.
-* Again, :guilabel:`Extrusion` is possible for missing z-values.
+* As for the other ones, :guilabel:`Height` can be defined in CRS units. You can
+  also use the |dataDefined| button to overwrite the value with a custom 
+  expression, a variable or an entry of the attribute table
+
+* Again, :guilabel:`Extrusion` is possible for missing z-values. Also for the
+  extrusion you can use the |dataDefined| button in order to use the values of 
+  the vector layer and have different results for each polygon:
+
+   .. figure:: img/3d_extrusion.png
+      :align: center
+
+      Data Defined Extrusion
+
 * The :guilabel:`Altitude clamping`, :guilabel:`Altitude binding` can be defined
   as explained above.
 * There is an additional option to |checkbox|:guilabel:`Add back faces`
@@ -2082,8 +2093,8 @@ in figure_fields_form_.
 #. Choose ``Drag and drop designer`` from the :guilabel:`Select attribute layout
    editor` combobox. This enables the :guilabel:`Form Layout` panel next to the
    :guilabel:`Available widgets` panel, filled with existing fields.
-   The selected field displays its :ref:`properties <configure_field>` (that you
-   can customize) in a third panel.
+   The selected field displays its :ref:`properties <configure_field>` in a third
+   panel.
 #. Select fields you do not want to use in your :guilabel:`Form Layout`
    panel and hit the |signMinus| button to remove them. Drag and drop fields
    from the other panel to re-add them. The same field can be added multiple times.
@@ -2126,6 +2137,7 @@ in figure_fields_form_.
 
 #. The next step is to assign the relevant fields to each container,
    by simple drag and drop. Groups and tabs can also be moved in the same way.
+#. :ref:`Customize the widget <configure_field>` of the fields in use
 #. In case the layer is involved in a :ref:`one or many to many relation
    <vector_relations>`, drag-and-drop the relation name from the
    :guilabel:`Available widgets` panel to the :guilabel:`Form Layout` panel.
@@ -2221,7 +2233,7 @@ Widget display
 ^^^^^^^^^^^^^^^
 
 :guilabel:`Show label`: indicates whether the field name should be displayed
-in the form.
+in the form (only in the :ref:`Drag and drop <drag_drop_designer>` designer mode).
 
 General options
 ^^^^^^^^^^^^^^^
@@ -2812,7 +2824,7 @@ As an exercise, we can create an action that does a Google search on the ``lakes
 layer. First, we need to determine the URL required to perform a search on a
 keyword. This is easily done by just going to Google and doing a simple
 search, then grabbing the URL from the address bar in your browser. From this
-little effort, we see that the format is https://www.google.com//search?q=QGIS,
+little effort, we see that the format is https://www.google.com/search?q=QGIS,
 where ``QGIS`` is the search term. Armed with this information, we can proceed:
 
 #. Make sure the ``lakes`` layer is loaded.
@@ -2831,15 +2843,15 @@ where ``QGIS`` is the search term. Armed with this information, we can proceed:
    need to provide the full path.
 #. Following the name of the external application, add the URL used for doing
    a Google search, up to but not including the search term:
-   ``https://www.google.com//search?q=``
+   ``https://www.google.com/search?q=``
 #. The text in the :guilabel:`Action` field should now look like this:
-   ``https://www.google.com//search?q=``
+   ``https://www.google.com/search?q=``
 #. Click on the drop-down box containing the field names for the ``lakes``
    layer. It's located just to the left of the :guilabel:`Insert` button.
 #. From the drop-down box, select 'NAMES' and click :guilabel:`Insert`.
 #. Your action text now looks like this:
 
-   ``https://www.google.com//search?q=[%NAMES%]``
+   ``https://www.google.com/search?q=[%NAMES%]``
 #. To finalize and add the action, click the :guilabel:`OK` button.
 
 .. _figure_add_action:
@@ -2854,7 +2866,7 @@ action should look like this:
 
 ::
 
-   https://www.google.com//search?q=[%NAMES%]
+   https://www.google.com/search?q=[%NAMES%]
 
 We can now use the action. Close the :guilabel:`Layer Properties` dialog and
 zoom in to an area of interest. Make sure the ``lakes`` layer is active and
@@ -2922,7 +2934,7 @@ project file? The code of the Python action would be:
 .. code-block:: python
 
   command = "firefox"
-  imagerelpath = "images/test_image.jpg"
+  imagerelpath = "images_test/test_image.jpg"
   projectpath = qgis.core.QgsProject.instance().fileName()
   import os.path
   path = os.path.dirname(str(projectpath)) if projectpath != '' else None
@@ -3109,8 +3121,8 @@ A summary of the filled information is provided in the :guilabel:`Validation`
 tab and helps you identify potential issues related to the form. You can then
 either fix them or ignore them.
 
-Metadata are currently saved in the project file. It can also be saved as an
-:file:`.XML` file alongside file based layers or in a local :file:`.sqlite`
+Metadata are currently saved in the project file. They can also be saved in a
+:file:`.qmd` file alongside file based layers or in a local :file:`.sqlite`
 database for remote layers (e.g. PostGIS).
 
 .. index:: Dependencies
@@ -3178,11 +3190,12 @@ QGIS Server Properties
 |overlay| The :guilabel:`QGIS Server` tab consists of :guilabel:`Description`,
 :guilabel:`Attribution`, :guilabel:`MetadataURL`, and :guilabel:`LegendUrl` sections.
 
-You can add or edit a title and abstract for the layer in the
-:guilabel:`Description` section. It's also possible to define a
-:guilabel:`Keyword list` here. These keyword lists can be used in a
-metadata catalog. If you want to use a title from an XML metadata file,
-you have to fill in a link in the :guilabel:`DataUrl` field.
+From the :guilabel:`Description` section, you can change the :guilabel:`Short name` used to
+reference the layer in requests (to learn more about short names, read
+:ref:`server_short_name`). You can also add or edit a :guilabel:`Title` and
+:guilabel:`Abstract` for the layer, or define a :guilabel:`Keyword list` here. These
+keyword lists can be used in a metadata catalog. If you want to use a title from an
+XML metadata file, you have to fill in a link in the :guilabel:`DataUrl` field.
 
 Use :guilabel:`Attribution` to get attribute data from an XML metadata catalog.
 

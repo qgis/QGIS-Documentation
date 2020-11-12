@@ -14,7 +14,7 @@ Before learning how to navigate within the Map Canvas, let's add some
 layers that we can explore during this tutorial.
 
 #. Open a new blank project and using the steps learnt in :ref:`Create a Map
-   <tm_pepare_a_map>`, load the previously seen ``protected_areas``, ``roads``
+   <tm_prepare_a_map>`, load the previously seen ``protected_areas``, ``roads``
    and ``buildings`` layers to the project.
    The result view should look similar to the snippet in
    :numref:`figure_roads_buildings_added` below (colors do not matter): 

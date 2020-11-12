@@ -378,80 +378,100 @@ details).
    * - :menuselection:`Add Rectangle -->`
      -
      - :guilabel:`Shape Digitizing`
-     -
+     - :ref:`draw_rectangles`
    * - :menuselection:`-->`
        |rectangleExtent| :guilabel:`Add Rectangle from Extent`
      -
      - :guilabel:`Shape Digitizing`
-     -
+     - :ref:`draw_rectangles`
    * - :menuselection:`-->`
        |rectangleCenter|
        :guilabel:`Add Rectangle from Center and a Point`
      -
      - :guilabel:`Shape Digitizing`
-     -
+     - :ref:`draw_rectangles`
    * - :menuselection:`-->`
        |rectangle3PointsProjected|
        :guilabel:`Add Rectangle from 3 Points (Distance from 2nd
        and 3rd point)`
      -
      - :guilabel:`Shape Digitizing`
-     -
+     - :ref:`draw_rectangles`
    * - :menuselection:`-->`
        |rectangle3PointsDistance|
        :guilabel:`Add Rectangle from 3 Points (Distance from
        projected point on segment p1 and p2)`
      -
      - :guilabel:`Shape Digitizing`
-     -
+     - :ref:`draw_rectangles`
    * - :menuselection:`Add Regular Polygon -->`
      -
      - :guilabel:`Shape Digitizing`
-     -
+     - :ref:`draw_regular_polygons`
    * - :menuselection:`-->`
        |regularPolygonCenterPoint|
        :guilabel:`Add Regular Polygon from Center and a Point`
      -
      - :guilabel:`Shape Digitizing`
-     -
+     - :ref:`draw_regular_polygons`
    * - :menuselection:`-->`
        |regularPolygonCenterCorner|
        :guilabel:`Add Regular Polygon from Center and a Corner`
      -
      - :guilabel:`Shape Digitizing`
-     -
+     - :ref:`draw_regular_polygons`
    * - :menuselection:`-->`
        |regularPolygon2Points|
        :guilabel:`Add Regular Polygon from 2 Points`
      -
      - :guilabel:`Shape Digitizing`
-     -
+     - :ref:`draw_regular_polygons`
    * - :menuselection:`Add Ellipse -->`
      -
      - :guilabel:`Shape Digitizing`
-     -
+     - :ref:`draw_ellipses`
    * - :menuselection:`-->`
        |ellipseCenter2Points|
        :guilabel:`Add Ellipse from Center and 2 Points`
      -
      - :guilabel:`Shape Digitizing`
-     -
+     - :ref:`draw_ellipses`
    * - :menuselection:`-->`
        |ellipseCenterPoint|
        :guilabel:`Add Ellipse from Center and a Point`
      -
      - :guilabel:`Shape Digitizing`
-     -
+     - :ref:`draw_ellipses`
    * - :menuselection:`-->`
        |ellipseExtent| :guilabel:`Add Ellipse from Extent`
      -
      - :guilabel:`Shape Digitizing`
-     -
+     - :ref:`draw_ellipses`
    * - :menuselection:`-->`
        |ellipseFoci| :guilabel:`Add Ellipse from Foci`
      -
      - :guilabel:`Shape Digitizing`
+     - :ref:`draw_ellipses`
+   * - :menuselection:`Add Annotation -->`
      -
+     -
+     - :ref:`sec_annotations`
+   * - |textAnnotation| :menuselection:`--> Text Annotation`
+     -
+     - :guilabel:`Attributes`
+     - :ref:`sec_annotations`
+   * - |formAnnotation| :menuselection:`--> Form Annotation`
+     -
+     - :guilabel:`Attributes`
+     - :ref:`sec_annotations`
+   * - |htmlAnnotation| :menuselection:`--> HTML Annotation`
+     -
+     - :guilabel:`Attributes`
+     - :ref:`sec_annotations`
+   * - |svgAnnotation| :menuselection:`--> SVG Annotation`
+     -
+     - :guilabel:`Attributes`
+     - :ref:`sec_annotations`
    * - |moveFeature| :guilabel:`Move Feature(s)`
      -
      - :guilabel:`Advanced Digitizing`
@@ -728,19 +748,23 @@ actions like:
      -
      -
      -
-   * - :menuselection:`--> Simulate Photocopy (Grayscale)`
+   * - :menuselection:`--> Simulate Monochrome`
      -
      -
      -
-   * - :menuselection:`--> Simulate Fax (Mono)`
+   * - :menuselection:`--> Simulate Achromatopsia Color Blindness (Grayscale)`
      -
      -
      -
-   * - :menuselection:`--> Simulate Color Blindness (Protanope)`
+   * - :menuselection:`--> Simulate Protanopia Color Blindness (No Red)`
      -
      -
      -
-   * - :menuselection:`--> Simulate Color Blindness (Deuteronope)`
+   * - :menuselection:`--> Simulate Deuteranopia Color Blindness (No Green)`
+     -
+     -
+     -
+   * - :menuselection:`--> Simulate Tritanopia Color Blindness (No Blue)`
      -
      -
      -
@@ -916,16 +940,15 @@ actions like:
      -
      -
      -
-   * - :menuselection:`--> Shape Digitizing Toolbar`
-     -
-     -
-     - :ref:`shape_edit`
    * - :menuselection:`--> Selection Toolbar`
      -
      -
      - :ref:`sec_selection`
-   * - :menuselection:`-->`
-       :guilabel:`Snapping Toolbar`
+   * - :menuselection:`--> Shape Digitizing Toolbar`
+     -
+     -
+     - :ref:`shape_edit`
+   * - :menuselection:`--> Snapping Toolbar`
      -
      -
      - :ref:`snapping_tolerance`
@@ -2375,11 +2398,11 @@ the 3D canvas panel to open the :guilabel:`3D configuration` window.
 In the 3D Configuration window there are various options to
 fine-tune the 3D scene:
 
-* Camera's :guilabel:`Field of view`: allowing to create panoramic
-  scenes.
-  Default value is 45\°.
+Terrain
+.......
+
 * :guilabel:`Terrain`: Before diving into the details, it is worth
-  noting that terrain in a 3D view is represented by a hierarchy of
+  noting that the terrain in a 3D view is represented by a hierarchy of
   terrain tiles and as the camera moves closer to the terrain,
   existing tiles that do not have sufficient details are replaced by
   smaller tiles with more details.
@@ -2411,9 +2434,9 @@ fine-tune the 3D scene:
     Raising this value will add vertical walls ("skirts") around terrain
     tiles to hide the cracks.
 
-* :guilabel:`Mesh Terrain Settings`: Configures the rendering of the terrain
-  when a mesh layer is used. You can set the triangles rendering (wireframe,
-  smooth triangle) and colors (uniform or depending on terrain level).
+* When a mesh layer is used as terrain, you can configure the
+  :guilabel:`Triangles settings` (wireframe display, smooth triangles) and the
+  :guilabel:`Rendering colors settings` (as uniform or depending on terrain level).
   More details in the :ref:`Mesh layer properties <label_meshproperties>` section.
 
   .. TODO: replace the mesh properties link with a direct one to the 3D section
@@ -2428,21 +2451,63 @@ fine-tune the 3D scene:
     scene light(s) and the terrain material's :guilabel:`Ambient` and
     :guilabel:`Specular` colors and :guilabel:`Shininess`
 
-* :guilabel:`Lights`: you can add
+Lights
+......
 
-  * up to eight :guilabel:`Point lights`, each with a particular position
-    (at :guilabel:`X`, :guilabel:`Y` and :guilabel:`Z`), :guilabel:`Color`,
-    :guilabel:`Intensity` and :guilabel:`Attenuation`
-  * up to four :guilabel:`Directional lights`, with direction vector (:guilabel:`X`,
-    :guilabel:`Y`, :guilabel:`Z`), :guilabel:`Color` and :guilabel:`Intensity`.
+From the :guilabel:`Lights` tab, press the |signPlus| menu to add
 
-  .. _figure_3dmap_configlights:
+* up to eight :guilabel:`Point lights`: emits light in all directions, like a
+  sphere of light filling an area. Objects closer to the light will be brighter,
+  and objects further away will be darker. A point light has a set position
+  (:guilabel:`X`, :guilabel:`Y` and :guilabel:`Z`), a :guilabel:`Color`,
+  an :guilabel:`Intensity` and an :guilabel:`Attenuation`
+* up to four :guilabel:`Directional lights`: mimics the lighting that you would
+  get from a giant flash light very far away from your objects, always centered
+  and that never dies off (e.g. the sun). It emits parallel light rays in a
+  single direction but the light reaches out into infinity.
+  A directional light can be rotated given an  :guilabel:`Azimuth`, have an
+  :guilabel:`Altitude`, a :guilabel:`Color` and an :guilabel:`Intensity`.
 
-  .. figure:: img/3dmapconfiguration_lights.png
-     :align: center
+.. _figure_3dmap_configlights:
 
-     The 3D Map Lights Configuration dialog
+.. figure:: img/3dmapconfiguration_lights.png
+   :align: center
 
+   The 3D Map Lights Configuration dialog
+
+Shadow
+......
+
+Check |unchecked| :guilabel:`Show shadow` to display shadow within your scene,
+given:
+
+* a :guilabel:`Directional light`
+* a :guilabel:`Shadow rendering maximum distance`: to avoid rendering shadow
+  of too distant objects, particularly when the camera looks up along the
+  horizon
+* a :guilabel:`Shadow bias`: to avoid self-shadowing effects that could make
+  some areas darker than others, due to differences between map sizes.
+  The lower the better
+* a :guilabel:`Shadow map resolution`: to make shadows look sharper.
+  It may result in less performance if the resolution parameter is too high.
+
+Camera & Skybox
+...............
+
+* Camera's :guilabel:`Field of view`: allowing to create panoramic scenes.
+  Default value is 45\°.
+* Check |unchecked| :guilabel:`Show skybox` to enable skybox rendering in
+  the scene. The skybox type can be:
+
+  * :guilabel:`Panoramic texture`, with a single file providing sight on 360\°
+  * :guilabel:`Distinct faces`, with a texture file for each of the six sides
+    of a box containing the scene
+
+  Texture files can be files on the disk, remote URLs or embedded in the project
+  (:ref:`more details <svg_paths>`).
+
+Advanced
+........
 
 * :guilabel:`Map tile resolution`: Width and height of the 2D map
   images used as textures for the terrain tiles.
@@ -2460,7 +2525,7 @@ fine-tune the 3D scene:
   them would not introduce any extra detail anyway).
   This value limits the depth of the hierarchy of tiles: lower values
   make the hierarchy deep, increasing rendering complexity.
-* :guilabel:`Zoom labels`: Shows the number of zoom levels (depends on
+* :guilabel:`Zoom levels`: Shows the number of zoom levels (depends on
   the map tile resolution and max. ground error).
 * |unchecked| :guilabel:`Show labels`: Toggles map labels on/off
 * |unchecked| :guilabel:`Show map tile info`: Include border and tile
@@ -2493,14 +2558,53 @@ manage the map view.
 
 .. _`locator_bar`:
 
+Locator bar
+-----------
+
 On the left side of the status bar, the locator bar, a quick search
-widget, helps you find and run any feature or options in QGIS.
-Simply type text associated with the item you are looking for (name,
-tag, keyword...) and you get a list that updates as you write.
-You can also limit the search scope using
-:ref:`locator filters <locator_options>`.
-Click the |search| button to select any of them and press the
-:guilabel:`Configure` entry for global settings.
+widget, helps you find and run any feature or options in QGIS:
+
+#. Click in the text widget to activate the locator search bar or press
+   :kbd:`Ctrl+K`.
+#. Type a text associated with the item you are looking for
+   (name, tag, keyword, ...).
+   By default, results are returned for the enabled locator filters, but
+   you can limit the search to a certain scope by prefixing your text
+   with the :ref:`locator filters <locator_options>` prefix,
+   ie. typing ``l cad`` will return only the layers whose name contains ``cad``.
+
+   The filter can also be selected with a double-click in the menu that shows
+   when accessing the locator widget.
+
+#. Click on a result to execute the corresponding action, depending on the type
+   of item.
+
+.. tip:: **Limit the lookup to one field of the active layer**
+
+  By default, a search with the "active layer features" filter (``af``) runs
+  through the whole attribute table of the layer. You can limit the search to
+  a particular field using the ``@`` prefix. E.g., ``af @name sal`` or
+  ``@name sal`` returns only the features whose "name" attribute contains 'sal'.
+  Text autocompletion is active when writing and the suggestion can be applied
+  using :kbd:`Tab` key.
+
+Searching is handled using threads, so that results always become available as
+quickly as possible, even if slow search filters are installed.
+They also appear as soon as they are encountered by a
+filter, which means that e.g. a file search filter will show results one by one
+as the file tree is scanned. This ensures that the UI is always responsive, even
+if a very slow search filter is present (e.g. one which uses an online service).
+
+.. tip:: **Quick access to the locator's configurations**
+
+  Click on the |search| icon inside the locator widget on the status bar to
+  display the list of filters you can use and a :guilabel:`Configure` entry that
+  opens the :guilabel:`Locator` tab of the :menuselection:`Settings -->
+  Options...` menu.
+
+
+Reporting actions
+-----------------
 
 In the area next to the locator bar, a summary of actions you've
 carried out will be shown when needed  (such as selecting features in
@@ -2510,6 +2614,9 @@ hovering over (not available for all tools).
 In case of lengthy operations, such as gathering of statistics in
 raster layers, executing Processing algorithms or rendering several
 layers in the map view, a progress bar is displayed in the status bar.
+
+Control the map canvas
+----------------------
 
 The |tracking| :guilabel:`Coordinate` option shows the current
 position of the mouse, following it while moving across the map view.
@@ -2554,16 +2661,6 @@ To the right of the render functions, you find the |projectionEnabled|
 on this opens the :guilabel:`Project Properties` dialog and lets you
 apply another CRS to the map view.
 
-The |messageLog| :sup:`Messages` button next to it opens the
-:guilabel:`Log Messages Panel` which has information on underlying
-processes (QGIS startup, plugins loading, processing tools...)
-
-Depending on the :ref:`Plugin Manager settings <setting_plugins>`,
-the status bar can sometimes show icons to the right to inform you
-about availability of |pluginNew| new or |pluginUpgrade| upgradeable
-plugins.
-Click the icon to open the Plugin Manager dialog.
-
 .. index::
    single: Scale calculate
 
@@ -2582,6 +2679,19 @@ Click the icon to open the Plugin Manager dialog.
 
    Note that CRS choice on startup can be set in
    :menuselection:`Settings --> Options --> CRS`.
+
+Messaging
+---------
+
+The |messageLog| :sup:`Messages` button next to it opens the
+:guilabel:`Log Messages Panel` which has information on underlying
+processes (QGIS startup, plugins loading, processing tools...)
+
+Depending on the :ref:`Plugin Manager settings <setting_plugins>`,
+the status bar can sometimes show icons to the right to inform you
+about the availability of new (|pluginNew|) or  upgradeable (|pluginUpgrade|)
+plugins.
+Click the icon to open the Plugin Manager dialog.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
@@ -2715,6 +2825,8 @@ Click the icon to open the Plugin Manager dialog.
    :width: 1.5em
 .. |fillRing| image:: /static/common/mActionFillRing.png
    :width: 1.5em
+.. |formAnnotation| image:: /static/common/mActionFormAnnotation.png
+   :width: 1.5em
 .. |formSelect| image:: /static/common/mIconFormSelect.png
    :width: 1.5em
 .. |geometryChecker| image:: /static/common/geometrychecker.png
@@ -2732,6 +2844,8 @@ Click the icon to open the Plugin Manager dialog.
 .. |hideDeselectedLayers| image:: /static/common/mActionHideDeselectedLayers.png
    :width: 1.5em
 .. |hideSelectedLayers| image:: /static/common/mActionHideSelectedLayers.png
+   :width: 1.5em
+.. |htmlAnnotation| image:: /static/common/mActionHtmlAnnotation.png
    :width: 1.5em
 .. |identify| image:: /static/common/mActionIdentify.png
    :width: 1.5em
@@ -2927,7 +3041,11 @@ Click the icon to open the Plugin Manager dialog.
    :width: 1em
 .. |sum| image:: /static/common/mActionSum.png
    :width: 1.2em
+.. |svgAnnotation| image:: /static/common/mActionSvgAnnotation.png
+   :width: 1.5em
 .. |symbologyEdit| image:: /static/common/symbologyEdit.png
+   :width: 1.5em
+.. |textAnnotation| image:: /static/common/mActionTextAnnotation.png
    :width: 1.5em
 .. |tiltDown| image:: /static/common/mActionTiltDown.png
    :width: 1.5em

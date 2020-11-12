@@ -26,6 +26,8 @@ your python scripts. Both console and editor are based on PyQScintilla2
 package. To open the console go to :menuselection:`Plugins --> Python Console`
 (:kbd:`Ctrl+Alt+P`).
 
+.. _interactive_console:
+
 The Interactive Console
 =======================
 
@@ -139,55 +141,6 @@ share the code via codepad.org and much more). Main features are:
 
    The Python Console editor
 
-.. _console_options:
-
-Options
-=======
-
-Accessible from the Console toolbar and the contextual menus of the Console
-output panel and the Code Editor, the :guilabel:`Python Console Settings`
-help manage and control the Python console behavior.
-
-For both :guilabel:`Console` and :guilabel:`Editor` you can specify:
-
-* :guilabel:`Autocompletion`: Enables code completion. You can get
-  autocompletion from the current document, the installed API files or both.
-
-  * :guilabel:`Autocompletion threshold`: Sets the threshold for displaying
-    the autocompletion list (in characters)
-    
-* :guilabel:`Typing`
-
-  * :guilabel:`Automatic parentheses insertion`: Enables autoclosing for
-    parentheses
-
-  * :guilabel:`Automatic insertion of the 'import' string on 'from xxx'`:
-    Enables insertion of 'import' when specifying imports
-    
-For :guilabel:`Editor` you can also specify:
-
-* :guilabel:`Run and Debug`
-
-  * :guilabel:`Enable Object Inspector (switching between tabs may be slow)`:
-    Enable the object inspector.
-
-  * :guilabel:`Auto-save script before running`: Saves the script
-    automatically when executed. This action will store a temporary file (in the
-    temporary system directory) that will be deleted automatically after running.
-
-* :guilabel:`Font and Colors`: Here you can specify the font to use in the
-  editor and the colors to use for highlighting
-
-For :guilabel:`APIs` you can specify:
-
-* :guilabel:`Using preloaded APIs file`: You can choose if you would like to use the
-  preloaded API files.  If this is not checked you can add API files and you
-  can also choose if you would like to use prepared API files (see next option).
-
-* :guilabel:`Using prepared APIs file`: If checked, the chosen ``*.pap`` file will
-  be used for code completion. To generate a prepared API file you have to load
-  at least one ``*.api`` file and then compile it by clicking the
-  :guilabel:`Compile APIs...` button.
 
 .. tip:: **Save the options**
 

@@ -217,7 +217,7 @@ Icon                            Substitution                        Icon        
 |selectFreehand|                ``|selectFreehand|``                |selectRadius|                  ``|selectRadius|``
 |selectAll|                     ``|selectAll|``                     |deselectAll|                   ``|deselectAll|``
 |invertSelection|               ``|invertSelection|``               |expressionSelect|              ``|expressionSelect|``
-|deselectActiveLayer|           ``|deselectActiveLayer|``
+|deselectActiveLayer|           ``|deselectActiveLayer|``           |algorithmSelectLocation|       ``|algorithmSelectLocation|``
 |selectAllTree|                 ``|selectAllTree|``                 |select|                        ``|select|``
 |formSelect|                    ``|formSelect|``                    |dataDefined|                   ``|dataDefined|``
 |expression|                    ``|expression|``                    |dataDefineOn|                  ``|dataDefineOn|``
@@ -303,6 +303,7 @@ Icon                            Substitution                        Icon        
 |settings|                      ``|settings|``                      |start|                         ``|start|``
 |3dconfigure|                   ``|3dconfigure|``                   |deleteSelected|                ``|deleteSelected|``
 |browserExpand|                 ``|browserExpand|``                 |browserCollapse|               ``|browserCollapse|``
+|codeEditor|                    ``|codeEditor|``
 ==============================  ==================================  ==============================  ==================================
 
 
@@ -336,6 +337,7 @@ Icon                            Substitution                        Icon        
 |geographic|                    ``|geographic|``                    |crs|                           ``|crs|``
 |customProjection|              ``|customProjection|``              |setProjection|                 ``|setProjection|``
 |projectionDisabled|            ``|projectionDisabled|``            |projectionEnabled|             ``|projectionEnabled|``
+|transformation|                ``|transformation|``
 |georefRun|                     ``|georefRun|``                     |pencil|                        ``|pencil|``
 |linkQGisToGeoref|              ``|linkQGisToGeoref|``              |linkGeorefToQGis|              ``|linkGeorefToQGis|``
 |coordinateCapture|             ``|coordinateCapture|``             |fullHistogramStretch|          ``|fullHistogramStretch|``
@@ -569,6 +571,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |addXyzLayer| image:: /static/common/mActionAddXyzLayer.png
    :width: 1.5em
+.. |algorithmSelectLocation| image:: /static/common/mAlgorithmSelectLocation.png
+   :width: 1.5em
 .. |alignBottom| image:: /static/common/mActionAlignBottom.png
    :width: 1.5em
 .. |alignHCenter| image:: /static/common/mActionAlignHCenter.png
@@ -646,6 +650,8 @@ Icon                            Substitution                        Icon        
 .. |clearConsole| image:: /static/common/iconClearConsole.png
    :width: 1.5em
 .. |clip| image:: /static/common/clip.png
+   :width: 1.5em
+.. |codeEditor| image:: /static/common/mIconCodeEditor.png
    :width: 1.5em
 .. |collapseTree| image:: /static/common/mActionCollapseTree.png
    :width: 1.5em
@@ -1304,6 +1310,8 @@ Icon                            Substitution                        Icon        
 .. |tracing| image:: /static/common/mActionTracing.png
    :width: 1.5em
 .. |tracking| image:: /static/common/tracking.png
+   :width: 1.5em
+.. |transformation| image:: /static/common/transformation.png
    :width: 1.5em
 .. |transparency| image:: /static/common/transparency.png
    :width: 1.5em

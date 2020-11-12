@@ -223,7 +223,7 @@ providers:
 
       uri = "https://demo.geo-solutions.it/geoserver/ows?service=WFS&version=1.1.0&request=GetFeature&typename=geosolutions:regioni"
       vlayer = QgsVectorLayer(uri, "my wfs layer", "WFS")
-      QgsProject.instance().addMapLayer(vlayer)
+
 
   The uri can be created using the standard ``urllib`` library:
 
@@ -252,7 +252,8 @@ providers:
       # Use project's transform context
       provider_options.transformContext = QgsProject.instance().transformContext()
       vlayer.setDataSource(uri, "layer name you like", "WFS", provider_options)
-      QgsProject.instance().addMapLayer(vlayer)
+
+      del(vlayer)
 
 
 .. index::
@@ -303,7 +304,7 @@ in the layer list) in one step.
 To load a PostGIS raster:
 
 PostGIS rasters, similar to PostGIS vectors, can be added to a project using a URI string.
-It is efficient to keep a reusable dictionary of strings for the database connection parameters. 
+It is efficient to keep a reusable dictionary of strings for the database connection parameters.
 This makes it easy to edit the dictionary for the applicable connection.
 The dictionary is then encoded into a URI using the 'postgresraster' provider metadata object.
 After that the raster can be added to the project.
@@ -334,18 +335,18 @@ After that the raster can be added to the project.
      'options':None,         # other PostgreSQL connection options not in this list.
      'enableTime': None,
      'temporalDefaultTime': None,
-     'temporalFieldIndex': None,     
-     'mode':'2',             # GDAL 'mode' parameter, 2 unions raster tiles, 1 adds tiles separately (may require user input) 
+     'temporalFieldIndex': None,
+     'mode':'2',             # GDAL 'mode' parameter, 2 unions raster tiles, 1 adds tiles separately (may require user input)
  }
  # remove any NULL parameters
  uri_config = {key:val for key, val in uri_config.items() if val is not None}
  # get the metadata for the raster provider and configure the URI
  md = QgsProviderRegistry.instance().providerMetadata('postgresraster')
  uri = QgsDataSourceUri(md.encodeUri(uri_config))
- 
+
  # the raster can then be loaded into the project
  rlayer = iface.addRasterLayer(uri.uri(False), "raster layer name", "postgresraster")
- 
+
 
 
 Raster layers can also be created from a WCS service:

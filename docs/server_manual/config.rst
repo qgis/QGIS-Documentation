@@ -24,11 +24,9 @@ Logging
 To log requests sent to the server, you have to set the following environment
 variables:
 
-- **QGIS_SERVER_LOG_LEVEL**
-- **QGIS_SERVER_LOG_FILE**
-- **QGIS_SERVER_LOG_STDERR**
-
-Take a look on :ref:`qgis-server-envvar` to understand their meanings.
+- :ref:`QGIS_SERVER_LOG_LEVEL <qgis_server_log_level>`
+- :ref:`QGIS_SERVER_LOG_FILE <qgis_server_log_file>`
+- :ref:`QGIS_SERVER_LOG_STDERR <qgis_server_log_stderr>`
 
 
 .. _`qgis-server-envvar`:
@@ -44,148 +42,186 @@ several ways to define these variables. This is fully described in
 :ref:`httpserver`.
 
 
-QGIS_OPTIONS_PATH
-^^^^^^^^^^^^^^^^^
+.. list-table::
+   :header-rows: 1
+   :widths: 30 40 15 15
 
-Specifies the path to the directory with settings. It works the same way as
-QGIS application ``--optionspath`` option. It is looking for settings file in
-``<QGIS_OPTIONS_PATH>/QGIS/QGIS3.ini``.
+   * - Name
+     - Description
+     - Default
+     - Services
 
+   * - QGIS_OPTIONS_PATH
+     - Specifies the path to the directory with settings. It works the same way as
+       QGIS application ``--optionspath`` option. It is looking for settings file in
+       ``<QGIS_OPTIONS_PATH>/QGIS/QGIS3.ini``.
+     - ''
+     - All
 
-QUERY_STRING
-^^^^^^^^^^^^
+   * - QUERY_STRING
+     - The query string, normally passed by the web server. This variable can be
+       useful while testing QGIS server binary from the command line.
 
-The query string, normally passed by the web server. This variable can be
-useful while testing QGIS server binary from the command line.
+       For example for testing a GetCapabilities request on the command line
+       to a project that also requires a PostgreSQL connection defined in a
+       pg_service.conf file:
 
-For example for testing a GetCapabilities request on the command line
-to a project that also requires a PostgreSQL connection defined in a
-pg_service.conf file:
+       .. code-block:: bash
+		
+        PGSERVICEFILE=/etc/pg_service.conf \
+	QUERY_STRING="MAP=/home/qgis/projects/world.qgs&SERVICE=WMS&REQUEST=GetCapabilities" \
+	/usr/lib/cgi-bin/qgis_mapserv.fcgi
 
-.. code-block:: bash
+       The result should be either the content of the GetCapabilities response or,
+       if something is wrong, an error message.
+     - ''
+     - All
 
- PGSERVICEFILE=/etc/pg_service.conf QUERY_STRING="MAP=/home/qgis/projects/world.qgs&SERVICE=WMS&REQUEST=GetCapabilities" /usr/lib/cgi-bin/qgis_mapserv.fcgi
+   * - QGIS_PROJECT_FILE
+     - The ``.qgs`` or ``.qgz`` project file, normally passed as a parameter in the
+       query string (with *MAP*), you can also set it as an environment variable (for
+       example by using ``mod_rewrite`` Apache module).
 
-The result should be either the content of the GetCapabilities response or,
-if something is wrong, an error message.
+       Note that you may also indicate a project stored in PostgreSQL, e.g.
+       ``postgresql://localhost:5432?sslmode=disable&dbname=mydb&schema=myschema&project=myproject``.
+     - ''
+     - All
 
-QGIS_PROJECT_FILE
-^^^^^^^^^^^^^^^^^
+   * - .. _qgis_server_log_file:
 
-The ``.qgs`` or ``.qgz`` project file, normally passed as a parameter in the
-query string (with *MAP*), you can also set it as an environment variable (for
-example by using ``mod_rewrite`` Apache module).
+       QGIS_SERVER_LOG_FILE
+     - Specify path and filename. Make sure that server has proper permissions for
+       writing to file. File should be created automatically, just send some requests
+       to server. If it's not there, check permissions.
 
-Note that you may also indicate a project stored in PostgreSQL, e.g.
-``postgresql://localhost:5432?sslmode=disable&dbname=mydb&schema=myschema&project=myproject``.
+       .. warning:: QGIS_SERVER_LOG_FILE is deprecated since QGIS 3.4.
+         File logging support will be removed in QGIS 4.0.
+     - ''
+     - All
 
+   * - .. _qgis_server_log_stderr:
 
-QGIS_SERVER_LOG_FILE
-^^^^^^^^^^^^^^^^^^^^
+       QGIS_SERVER_LOG_STDERR
+     - Activate logging to stderr. This variable  has no effect when ``QGIS_SERVER_LOG_FILE``
+       is set.
 
-Specify path and filename. Make sure that server has proper permissions for
-writing to file. File should be created automatically, just send some requests
-to server. If it's not there, check permissions.
+       * ``0`` or ``false`` (case insensitive)
+       * ``1`` or ``true`` (case insensitive)
+     - false
+     - All
 
-QGIS_SERVER_LOG_FILE is deprecated since QGIS 3.4. File logging support will
-be removed in QGIS 4.0.
+   * - MAX_CACHE_LAYERS
+     - Specify the maximum number of cached layers (default: ``100``).
+     - 100
+     - All
 
-QGIS_SERVER_LOG_STDERR
-^^^^^^^^^^^^^^^^^^^^^^
+   * - QGIS_PLUGINPATH
+     - Useful if you are using Python plugins for the server, this sets the folder
+       that is searched for Python plugins.
+     - ''
+     - All
 
-Activate logging to stderr. It's disabled by default. This variable
-has no effect when ``QGIS_SERVER_LOG_FILE`` is set.
+   * - .. _qgis_server_log_level:
 
-* ``0`` or ``false`` (case insensitive)
-* ``1`` or ``true`` (case insensitive)
+       QGIS_SERVER_LOG_LEVEL
+     - Specify desired log level. Available values are:
 
-MAX_CACHE_LAYERS
-^^^^^^^^^^^^^^^^
+       * ``0`` or ``INFO`` (log all requests)
+       * ``1`` or ``WARNING``
+       * ``2`` or ``CRITICAL`` (log just critical errors, suitable for production purposes)
+     - 0
+     - All
 
-Specify the maximum number of cached layers (default: ``100``).
+   * - QGIS_SERVER_PARALLEL_RENDERING
+     - Activates parallel rendering for WMS GetMap requests. It's disabled (``false``)
+       by default. Available values are:
 
+       * ``0`` or ``false`` (case insensitive)
+       * ``1`` or ``true`` (case insensitive)
+     - false
+     - WMS
 
-DISPLAY
-^^^^^^^
+   * - QGIS_SERVER_MAX_THREADS
+     - Number of threads to use when parallel rendering is activated. If value is ``-1`` it
+       uses the number of processor cores.
+     - -1
+     - All
 
-This is used to pass (fake) X server display number (needed on Unix-like systems).
+   * - QGIS_SERVER_CACHE_DIRECTORY
+     - Specifies the network cache directory on the filesystem. 
+     - ``cache`` in profile directory
+     - All
 
+   * - QGIS_SERVER_CACHE_SIZE
+     - Sets the network cache size in MB.
+     - 50 MB
+     - All
 
-QGIS_PLUGINPATH
-^^^^^^^^^^^^^^^
+   * - QGIS_SERVER_OVERRIDE_SYSTEM_LOCALE
+     - Sets LOCALE to be used by QGIS server. The default value is empty (no override).
 
-Useful if you are using Python plugins for the server, this sets the folder
-that is searched for Python plugins.
+       Example: ``de_CH.utf8``
+     - ''
+     - All
 
+   * - QGIS_SERVER_SHOW_GROUP_SEPARATOR
+     - Defines whether a group separator (e.g. thousand separator) should be used for
+       numeric values (e.g. in GetFeatureInfo responses). The default value is ``0``.
 
-QGIS_SERVER_LOG_LEVEL
-^^^^^^^^^^^^^^^^^^^^^
+       * ``0`` or ``false`` (case insensitive)
+       * ``1`` or ``true`` (case insensitive)
+     - false
+     - WMS
 
-Specify desired log level. Available values are:
+   * - QGIS_SERVER_IGNORE_BAD_LAYERS
+     - "Bad" layers are layers that cannot be loaded. The default behavior of QGIS Server
+       is to consider the project as not available if it contains a bad layer.
 
-* ``0`` or ``INFO`` (log all requests)
-* ``1`` or ``WARNING``
-* ``2`` or ``CRITICAL`` (log just critical errors, suitable for production purposes)
+       The default behavior can be overridden by setting this variable to ``1`` or ``true``.
+       In this case, "bad" layers will just be ignored, and the project will be considered
+       valid and available.
+     - false
+     - All
 
+   * - QGIS_SERVER_WMS_MAX_HEIGHT / QGIS_SERVER_WMS_MAX_WIDTH
+     - Maximum height/width for a WMS request. The most conservative between this and the project one is used.
+       If the value is ``-1``, it means that there is no maximum set.
+     - -1
+     - WMS
 
-QGIS_SERVER_PARALLEL_RENDERING
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   * - QGIS_SERVER_API_RESOURCES_DIRECTORY
+     - Base directory for all OGC API (such as OAPIF/WFS3) static resources (HTML
+       templates, CSS, JS, ...)
+     - depends on packaging
+     - WFS
 
-Activates parallel rendering for WMS GetMap requests. It's disabled (``false``)
-by default. Available values are:
+   * - QGIS_SERVER_API_WFS3_MAX_LIMIT
+     - Maximum value for ``limit`` in a features request.
+     - 10000
+     - WFS
 
-* ``0`` or ``false`` (case insensitive)
-* ``1`` or ``true`` (case insensitive)
+   * - QGIS_SERVER_TRUST_LAYER_METADATA
+     - This is an option at the project level to improve project read time by using the vector
+       layer extents defined in the project metadata and disabling the check for
+       PostgreSQL/PostGIS layer primary key uniqueness.
 
+       Trusting layer metadata can be forced by setting this variable to ``1`` or ``true``.
+       The vector layer's extent will then be the one defined in the project, and the
+       PostgreSQL/PostGIS layer's primary key defined in the data source is
+       considered as unique without a check.
 
-QGIS_SERVER_MAX_THREADS
-^^^^^^^^^^^^^^^^^^^^^^^
+       Do not use it if layers' extent is not fixed during the project's use.
+     - false
+     - All
 
-Number of threads to use when parallel rendering is activated. Default value
-is ``-1`` to use the number of processor cores.
+   * - QGIS_SERVER_DISABLE_GETPRINT
+     - This is an option at the project level to improve project read time by disabling
+       loading of layouts.
 
-
-QGIS_SERVER_CACHE_DIRECTORY
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Specifies the network cache directory on the filesystem. The default
-directory is named ``cache`` and located in the profile directory.
-
-
-QGIS_SERVER_CACHE_SIZE
-^^^^^^^^^^^^^^^^^^^^^^
-
-Sets the network cache size in MB. The default value is ``50`` MB.
-
-
-QGIS_SERVER_OVERRIDE_SYSTEM_LOCALE
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Sets LOCALE to be used by QGIS server. The default value is empty (no override).
-
-Example: ``de_CH.utf8``
-
-
-QGIS_SERVER_SHOW_GROUP_SEPARATOR
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Defines whether a group separator (e.g. thousand separator) should be used for
-numeric values (e.g. in GetFeatureInfo responses). The default value is ``0``.
-
-* ``0`` or ``false`` (case insensitive)
-* ``1`` or ``true`` (case insensitive)
-
-
-QGIS_SERVER_IGNORE_BAD_LAYERS
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-"Bad" layers are layers that cannot be loaded. The default behavior of QGIS Server
-is to consider the project as not available if it contains a bad layer.
-
-The default behavior can be overridden by setting this variable to ``1`` or ``true``.
-In this case, "bad" layers will just be ignored, and the project will be considered
-valid and available.
-
+       Activating this option disables the QGIS WMS GetPrint request.
+       Set this QGIS project flag to not load layouts.
+     - false
+     - WMS
 
 Settings summary
 ================
@@ -232,6 +268,8 @@ The corresponding entries in the ini file are **/qgis/max_threads** and
 **/qgis/parallel_rendering** and their values are **true** and **4** threads.
 
 
+.. _server_short_name:
+
 Short name for layers, groups and project
 =========================================
 
@@ -241,20 +279,19 @@ communication while the **Title** is for the benefit of humans.
 
 For example, a dataset might have the descriptive Title
 “Maximum Atmospheric Temperature” and be requested using the abbreviated
-Name “ATMAX”. User can already set title for layers, groups and project.
+**Name** “ATMAX”. The user can set the title for layers, groups and projects.
 
-OWS name is based on the name used in layer tree. This name is more a label
-for humans than a name for machine-to-machine communication.
+OWS name is based on the name used in the layer tree. This name is more a label
+for humans than a name for machine-to-machine communication. You can set a
+**Short name** for layers, groups or projects, to be used by QGIS Server as
+the layer identification name (in :ref:`LAYERS <wms-layers>` parameter for instance ).
 
-QGIS Server supports:
+You can set title, short name and abstract for:
 
-* short name line edits to layers properties
-  You can change this by right clicking on a layer, choose
-  :menuselection:`Properties --> Metadata tab --> Description --> Short name`.
+* **Layers**: right-click on a layer and choose
+  :menuselection:`Properties... --> QGIS Server --> Description`.
 
-* WMS data dialog to layer tree group (short name, title, abstract)
-
-  By right clicking on a layer group and selecting the :guilabel:`Set Group WMS data` option you will get:
+* **Groups**: right-click on a group and select :guilabel:`Set Group WMS data`
 
   .. _figure_group_wms_data:
 
@@ -263,19 +300,9 @@ QGIS Server supports:
 
      Set group WMS data dialog
 
-* short name line edits to project properties - add a regexp validator
-  ``"^[A-Za-z][A-Za-z0-9\._-]*"`` to short name line edit accessible through a
-  static method
-* add a regexp validator ``"^[A-Za-z][A-Za-z0-9\._-]*"`` to short name line
-  edit accessible through a static method
+* **Project**: go to :menuselection:`Project --> Properties... --> QGIS Server -->
+  Service Capabilities`.
 
-  You can choose a short name for the project root by going to :menuselection:`Project properties -->
-  OWS Server --> Service capabilities --> Short name`.
-
-* add a ``TreeName`` element in the ``fullProjectSettings``
-
-If a short name has been set for layers, groups or project it is used by
-QGIS Sever as the layer name.
 
 Connection to service file
 ==========================

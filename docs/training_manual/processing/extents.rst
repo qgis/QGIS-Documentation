@@ -22,7 +22,7 @@ is to be rasterized, and configure how the rasterization process should work.
 The two last parameters, on the other hand, define the characteristics of the
 output layer. That means that they define the area that is covered
 (which is not necessarily the same area covered by the input vector layer),
-and the resolution/cellsize (which cannot be infered from the vector layer,
+and the resolution/cellsize (which cannot be inferred from the vector layer,
 since vector layers do not have a cellsize).
 
 The first thing you can do is to type the 4 defining values explained before,

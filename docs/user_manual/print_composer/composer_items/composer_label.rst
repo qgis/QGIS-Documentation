@@ -39,11 +39,11 @@ surrounded by ``[%`` and ``%]`` in order to be interpreted as such.
   :guilabel:`Render as HTML`. You can now insert a URL, a clickable image that
   links to a web page or something more complex.
 * You can also use :ref:`expressions <expression_builder>`: click on :guilabel:`Insert
-  an expression` button, write your formula as usual and when the dialog is
+  or Edit an expression...` button, write your formula as usual and when the dialog is
   applied, QGIS automatically adds the surrounding characters.
   
-.. note:: Clicking the :guilabel:`Insert an Expression` button when no selection is
-  made in the textbox will append the new expression to the existing text.
+.. note:: Clicking the :guilabel:`Insert or Edit an Expression...` button when no
+  selection is made in the textbox will append the new expression to the existing text.
   If you want to update an existing text, you need to select it the part of
   interest beforehand.
 

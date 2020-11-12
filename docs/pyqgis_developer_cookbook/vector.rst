@@ -38,6 +38,7 @@ The code snippets on this page need the following imports if you're outside the 
       QgsVectorFileWriter,
       QgsWkbTypes,
       QgsSpatialIndex,
+      QgsVectorLayerUtils
     )
 
     from qgis.core.additions.edit import edit
@@ -82,6 +83,29 @@ by calling :meth:`fields() <qgis.core.QgsVectorLayer.fields>` on a :class:`QgsVe
     ELEV Real
     NAME String
     USE String
+
+The :meth:`displayField() <qgis.core.QgsVectorLayer.displayField>` and 
+:meth:`mapTipTemplate() <qgis.core.QgsVectorLayer.mapTipTemplate>` methods of
+the :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` class provide
+information on the field and template used in the :ref:`maptips` tab.
+
+When you load a vector layer, a field is always chosen by QGIS as the 
+``Display Name``, while the ``HTML Map Tip`` is empty by default. With these 
+methods you can easily get both:
+
+.. testcode:: vectors
+
+    vlayer = QgsVectorLayer("testdata/airports.shp", "airports", "ogr")
+    print(vlayer.displayField())
+
+
+.. testoutput:: vectors
+
+    NAME
+
+.. note:: If you change the ``Display Name`` from a field to an expression, you have to
+   use :meth:`displayExpression() <qgis.core.QgsVectorLayer.displayExpression>`
+   instead of :meth:`displayField() <qgis.core.QgsVectorLayer.displayField>`.
 
 .. index:: Iterating features
 
@@ -454,7 +478,7 @@ this functionality also programmatically --- it is just another method for
 vector layer editing that complements the direct usage of data providers. Use
 this option when providing some GUI tools for vector layer editing, since this
 will allow user to decide whether to commit/rollback and allows the usage of
-undo/redo. When changes are commited, all changes from the editing buffer are
+undo/redo. When changes are committed, all changes from the editing buffer are
 saved to data provider.
 
 The methods are similar to the ones we have seen in the provider, but they are
@@ -561,16 +585,16 @@ For deletion of fields just provide a list of field indexes.
 
  if caps & QgsVectorDataProvider.DeleteAttributes:
      res = layer.dataProvider().deleteAttributes([0])
-     
+
 .. testcode:: vectors
 
- # Alternate methods for removing fields 
+ # Alternate methods for removing fields
  # first create temporary fields to be removed (f1-3)
  layer.dataProvider().addAttributes([QgsField("f1",QVariant.Int),QgsField("f2",QVariant.Int),QgsField("f3",QVariant.Int)])
  layer.updateFields()
  count=layer.fields().count() # count of layer fields
  ind_list=list((count-3, count-2)) # create list
- 
+
  # remove a single field with an index
  layer.dataProvider().deleteAttributes([count-1])
 
@@ -587,7 +611,7 @@ to be updated because the changes are not automatically propagated.
 
 .. tip:: **Directly save changes using** ``with`` **based command**
 
-    Using ``with edit(layer):`` the changes will be commited automatically
+    Using ``with edit(layer):`` the changes will be committed automatically
     calling :meth:`commitChanges() <qgis.core.QgsVectorLayer.commitChanges>` at the end. If any exception occurs, it will
     :meth:`rollBack() <qgis.core.QgsVectorLayer.rollBack>` all the changes. See :ref:`editing-buffer`.
 
@@ -648,6 +672,7 @@ create them easily. This is what you have to do:
     intersect = index.intersects(QgsRectangle(22.5, 15.3, 23.1, 17.2))
 
 
+
 You can also use the :class:`QgsSpatialIndexKDBush() <qgis.core.QgsSpatialIndexKDBush>`
 spatial index. This index is similar to the *standard* :class:`QgsSpatialIndex() <qgis.core.QgsSpatialIndex>`
 but:
@@ -660,6 +685,40 @@ but:
   additional feature requests
 * supports true *distance based* searches, i.e. return all points within a
   radius from a search point
+
+.. index:: Vector layers; utils
+
+The QgsVectorLayerUtils class
+=============================
+The :class:`QgsVectorLayerUtils <qgis.core.QgsVectorLayerUtils>` class contains
+some very useful methods that you can use with vector layers.
+
+For example the :meth:`createFeature() <qgis.core.QgsVectorLayerUtils.createFeature>`
+method prepares a :class:`QgsFeature <qgis.core.QgsFeature>` to be added to
+a vector layer keeping all the eventual constraints and default values of each
+field:
+
+.. testcode:: vectors
+
+    vlayer = QgsVectorLayer("testdata/airports.shp", "airports", "ogr")
+    feat = QgsVectorLayerUtils.createFeature(vlayer)
+
+
+The :meth:`getValues() <qgis.core.QgsVectorLayerUtils.getValues>` method allows
+you to quickly get the values of a field or expression:
+
+.. testcode:: vectors
+
+    vlayer = QgsVectorLayer("testdata/airports.shp", "airports", "ogr")
+    # select only the first feature to make the output shorter
+    vlayer.selectByIds([1])
+    val = QgsVectorLayerUtils.getValues(vlayer, "NAME", selectedOnly=True)
+    print(val)
+
+.. testoutput:: vectors
+
+    (['AMBLER'], True)
+
 
 .. index:: Vector layers; Creating
 
@@ -1426,7 +1485,11 @@ We will have to create metadata for the symbol layer
       radius = float(props["radius"]) if "radius" in props else 4.0
       return FooSymbolLayer(radius)
 
-  QgsApplication.symbolLayerRegistry().addSymbolLayerType(FooSymbolLayerMetadata())
+  fslmetadata = FooSymbolLayerMetadata()
+
+.. code-block:: python
+
+  QgsApplication.symbolLayerRegistry().addSymbolLayerType(fslmetadata)
 
 You should pass layer type (the same as returned by the layer) and symbol type
 (marker/line/fill) to the constructor of the parent class. The :meth:`createSymbolLayer()
@@ -1564,7 +1627,11 @@ RandomRenderer example
     def createRendererWidget(self, layer, style, renderer):
       return RandomRendererWidget(layer, style, renderer)
 
-  QgsApplication.rendererRegistry().addRenderer(RandomRendererMetadata())
+  rrmetadata = RandomRendererMetadata()
+
+.. code-block:: python
+
+  QgsApplication.rendererRegistry().addRenderer(rrmetadata)
 
 Similarly as with symbol layers, abstract metadata constructor awaits renderer
 name, name visible for users and optionally name of renderer's icon.

@@ -319,7 +319,7 @@ Return the first matching position matching a regular expression within a string
      - * **input_string** - the string to test against the regular expression
        * **regex** - The regular expression to test against. Backslash characters must be double escaped (e.g., "\\\\s" to match a white space character).
    * - Examples
-     - * ``regexp_match('QGIS ROCKS','\\\\sROCKS')`` → 4
+     - * ``regexp_match('QGIS ROCKS','\\\\sROCKS')`` → 5
 
 
 .. end_regexp_match_section
@@ -344,6 +344,8 @@ Returns a string with the supplied regular expression replaced.
        * **replacement** - The string that will replace any matching occurrences of the supplied regular expression. Captured groups can be inserted into the replacement string using \\\\1, \\\\2, etc.
    * - Examples
      - * ``regexp_replace('QGIS SHOULD ROCK','\\\\sSHOULD\\\\s',' DOES ')`` → 'QGIS DOES ROCK'
+       * ``regexp_replace('ABC123','\\\\d+','')`` → 'ABC'
+       * ``regexp_replace('my name is John','(.*) is (.*)','\\\\2 is \\\\1')`` → 'John is my name'
 
 
 .. end_regexp_replace_section

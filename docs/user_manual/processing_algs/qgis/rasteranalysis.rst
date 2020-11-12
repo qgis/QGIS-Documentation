@@ -7,10 +7,164 @@ Raster analysis
       :local:
       :depth: 1
 
+.. _qgiscellstatistics:
+
+Cell statistics
+---------------
+
+Computes per-cell statistics based on input raster layers
+and for each cell writes the resulting statistics to an output raster. At each
+cell location, the output value is defined as a function of all overlaid
+cell values of the input rasters.
+
+By default, a NoData cell in ANY of the input layers will result in a
+NoData cell in the output raster.
+If the :guilabel:`Ignore NoData values` option is checked,
+then NoData inputs will be ignored in the statistic calculation. This
+may result in NoData output for locations where all cells are NoData.
+
+The :guilabel:`Reference layer` parameter specifies an existing raster layer to
+use as a reference when creating the output raster.
+The output raster will have the same extent, CRS, and pixel dimensions
+as this layer.
+
+**Calculation details:**
+Input raster layers that do not match the cell size of the reference
+raster layer will be resampled using ``nearest neighbor resampling``.
+The output raster data type will be set to the most complex
+data type present in the input datasets except when using the
+functions ``Mean``, ``Standard deviation`` and ``Variance`` (data type is always
+``Float32``or ``Float64`` depending on input float type) or ``Count``
+and ``Variety`` (data type is always ``Int32``).
+
+- ``Count``: The count statistic will always result in the number of cells
+  without NoData values at the current cell location.
+
+- ``Median``: If the number of input layers is even, the median will be
+  calculated as the arithmetic mean of the two middle values of the ordered cell input values.
+
+- ``Minority/Majority``: If no unique minority or majority could be found,
+  the result is NoData, except all input cell values are equal.
+
+
+.. figure:: img/cell_statistics_all_stats.png
+  :align: center
+
+  Example with all the statistic functions. ``NoData`` cells (grey) are taken into account.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layers**
+     - ``INPUT``
+     - [raster] [list]
+     - Input raster layers
+   * - **Statistic**
+     - ``STATISTIC``
+     - [enumeration]
+
+       Default: 0
+     - Available statistics. Options:
+
+       * 0 --- Sum
+       * 1 --- Count
+       * 2 --- Mean
+       * 3 --- Median
+       * 4 --- Standard deviation
+       * 5 --- Variance
+       * 6 --- Minimum
+       * 7 --- Maximum
+       * 8 --- Minority (least common value)
+       * 9 --- Majority (most common value)
+       * 10 --- Range (max - min)
+       * 11 --- Variety (unique value count)
+   * - **Ignore NoData values**
+     - ``IGNORE_NODATA``
+     - [boolean]
+
+       Default: True
+     - Calculate statistics also for all cells stacks, ignoring NoData occurrence.
+   * - **Reference layer**
+     - ``REF_LAYER``
+     - [raster]
+     - The reference layer to create the output layer
+       from (extent, CRS, pixel dimensions)
+   * - **Output no data value**
+
+       Optional
+     - ``OUTPUT_NO_DATA_VALUE``
+     - [number]
+
+       Default: -9999.0
+     - Value to use for nodata in the output layer
+   * - **Output layer**
+     - ``OUTPUT``
+     - [same as input]
+     - Specification of the output raster. One of:
+
+       * Save to a Temporary File
+       * Save to File...
+
+       The file encoding can also be changed here.
+
+Outputs
+.......
+
+.. list-table::
+  :header-rows: 1
+  :widths: 20 20 20 40
+
+  * - Label
+    - Name
+    - Type
+    - Description
+  * - **CRS authority identifier**
+    - ``CRS_AUTHID``
+    - [crs]
+    - The coordinate reference system of the output raster layer
+  * - **Extent**
+    - ``EXTENT``
+    - [extent]
+    - The spatial extent of the output raster layer
+  * - **Height in pixels**
+    - ``HEIGHT_IN_PIXELS``
+    - [integer]
+    - The height in pixels of the output raster layer
+  * - **Output raster**
+    - ``OUTPUT``
+    - [raster]
+    - Output raster layer containing the result
+  * - **Total pixel count**
+    - ``TOTAL_PIXEL_COUNT``
+    - [integer]
+    - The count of pixels in the output raster layer
+  * - **Width in pixels**
+    - ``WIDTH_IN_PIXELS``
+    - [integer]
+    - The width in pixels of the output raster layer
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:cellstatistics``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
 .. _qgisfuzzifyrastergaussianmembership:
 
-Fuzzify raster (gaussian membership) |312|
-------------------------------------------
+Fuzzify raster (gaussian membership)
+------------------------------------
 
 Transforms an input raster to a fuzzified raster by assigning a
 membership value to each pixel, using a Gaussian membership function.
@@ -126,8 +280,8 @@ Python code
 
 .. _qgisfuzzifyrasterlargemembership:
 
-Fuzzify raster (large membership) |312|
-------------------------------------------
+Fuzzify raster (large membership)
+---------------------------------
 
 Transforms an input raster to a fuzzified raster by assigning a
 membership value to each pixel, using a Large membership function.
@@ -236,8 +390,8 @@ Python code
 
 .. _qgisfuzzifyrasterlinearmembership:
 
-Fuzzify raster (linear membership) |312|
-------------------------------------------
+Fuzzify raster (linear membership)
+----------------------------------
 
 Transforms an input raster to a fuzzified raster by assigning a
 membership value to each pixel, using a Linear membership function.
@@ -350,8 +504,8 @@ Python code
 
 .. _qgisfuzzifyrasternearmembership:
 
-Fuzzify raster (near membership) |312|
-------------------------------------------
+Fuzzify raster (near membership)
+--------------------------------
 
 Transforms an input raster to a fuzzified raster by assigning a
 membership value to each pixel, using a Near membership function.
@@ -459,8 +613,8 @@ Python code
 
 .. _qgisfuzzifyrasterpowermembership:
 
-Fuzzify raster (power membership) |312|
-------------------------------------------
+Fuzzify raster (power membership)
+---------------------------------
 
 Transforms an input raster to a fuzzified raster by assigning a
 membership value to each pixel, using a Power membership function.
@@ -577,8 +731,8 @@ Python code
 
 .. _qgisfuzzifyrastersmallmembership:
 
-Fuzzify raster (small membership) |312|
-------------------------------------------
+Fuzzify raster (small membership)
+---------------------------------
 
 Transforms an input raster to a fuzzified raster by assigning a
 membership value to each pixel, using a Small membership function.
@@ -1880,7 +2034,7 @@ Parameters
      - Prefix for the names of the added columns.
    * - **Sampled Points**
 
-       (Optional)
+       Optional
      - ``OUTPUT``
      - [vector: point]
 
@@ -1908,7 +2062,7 @@ Outputs
      - Description
    * - **Sampled Points**
 
-       (Optional)
+       Optional
      - ``OUTPUT``
      - [vector: point]
      - The output layer containing the sampled values.
@@ -1999,7 +2153,7 @@ Outputs
      - Description
    * - **Output zones**
 
-       (Optional)
+       Optional
      - ``OUTPUT``
      - [vector: polygon]
 
@@ -2022,9 +2176,6 @@ Zonal statistics
 ----------------
 Calculates statistics of a raster layer for each feature of an
 overlapping polygon vector layer.
-
-.. warning:: No new output file will be created.
-   The algorithm adds new columns to the source vector layer.
 
 Parameters
 ..........
@@ -2090,10 +2241,10 @@ Outputs
      - Name
      - Type
      - Description
-   * - **Vector layer containing zones**
-     - ``INPUT_VECTOR``
+   * - **Vector layer containing zones and statistics**
+     - ``OUTPUT``
      - [vector: polygon]
-     - The input zone vector layer with added statistics.
+     - The zone vector layer with added statistics.
 
 Python code
 ...........
@@ -2117,11 +2268,3 @@ Python code
    :height: 4.4em
 .. |small_formula| image:: img/fuzzy_small_formula.png
    :height: 3.2em
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |312| replace:: ``NEW in 3.12``

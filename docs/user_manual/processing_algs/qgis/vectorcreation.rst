@@ -710,8 +710,9 @@ Python code
 
 Points to path
 --------------
+
 Converts a point layer to a line layer, by joining points in an
-order defined by a field in the input point layer (if the order
+order defined by an expression or a field in the input point layer (if the order
 field is a date/time field, the format must be specified).
 
 Points can be grouped by a field to distinguish line features.
@@ -737,10 +738,17 @@ Parameters
      - ``INPUT``
      - [vector: point]
      - Input point vector layer
-   * - **Order field**
-     - ``ORDER_FIELD``
-     - [tablefield: any]
-     - Field containing the order to connect the points in the path
+   * - **Close path**
+     - ``CLOSE_PATH``
+     - [boolean]
+
+       Default: False
+     - If checked, the first and last points of the line will be connected
+       and close the generated path
+   * - **Order expression** |318|
+     - ``ORDER_EXPRESSION``
+     - [expression]
+     - Field or expression providing the order to connect the points in the path
    * - **Group field**
 
        Optional
@@ -802,7 +810,7 @@ Outputs
      - [vector: line]
      - Line vector layer of the path
    * - **Directory for text output**
-     - ``OUTPUT``
+     - ``OUTPUT_TEXT_DIR``
      - [folder]
      - Directory containing description files of points and paths
 
@@ -1092,8 +1100,9 @@ Python code
         
 .. _qgisrandompointsinpolygons:
 
-Random points in polygons |314|
--------------------------------
+Random points in polygons
+-------------------------
+
 Creates a point layer with points placed inside the polygons of
 another layer.
 
@@ -1129,7 +1138,7 @@ of the algorithm.
 The attributes of the polygon feature on which a point was generated
 can be included (:guilabel:`Include polygon attributes`).
 
-If you want approximately the same point density for all the line
+If you want approximately the same point density for all the
 features, you can data-define the number of points using the area of
 the polygon feature geometry.
 
@@ -1358,8 +1367,9 @@ Python code
 
 .. _qgisrandompointsonlines:
 
-Random points on lines |314|
-----------------------------------
+Random points on lines
+----------------------
+
 Creates a point layer with points placed on the lines of another
 layer.
 
@@ -1790,7 +1800,7 @@ Python code
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |314| replace:: ``NEW in 3.14``
+.. |318| replace:: ``NEW in 3.18``
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |dataDefined| image:: /static/common/mIconDataDefine.png

@@ -14,5 +14,6 @@ QGIS processing framework
     modeler
     batch
     console
+    standalone
     scripts
     3rdParty

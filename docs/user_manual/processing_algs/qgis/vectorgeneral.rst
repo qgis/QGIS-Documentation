@@ -49,7 +49,7 @@ Parameters
      - Select the new CRS to assign to the vector layer
    * - **Assigned CRS**
 
-       (Optional)
+       Optional
      - ``OUTPUT``
      - [same as input]
 
@@ -544,7 +544,7 @@ Parameters
        The file encoding can also be changed here.
    * - **Filtered (duplicates)**
 
-       (Optional)
+       Optional
      - ``DUPLICATES``
      - [same as input]
 
@@ -607,8 +607,9 @@ Python code
 
 .. _qgisdetectdatasetchanges:
 
-Detect dataset changes |312|
------------------------------------
+Detect dataset changes
+----------------------
+
 Compares two vector layers, and determines which features are
 unchanged, added or deleted between the two.
 It is designed for comparing two different versions of the same
@@ -641,14 +642,14 @@ Parameters
      - The revised or modified vector layer
    * - **Attributes to consider for match**
    
-       (Optional)
+       Optional
      - ``COMPARE_ATTRIBUTES``
      - [tablefield: any] [list]
      - Attributes to consider for match. By default, all attributes
        are compared.  
    * - **Geometry comparison behavior**
    
-       (Optional)
+       Optional
      - ``MATCH_TYPE``
      - [enumeration]
        
@@ -820,6 +821,15 @@ Execute SQL
 -----------
 Runs a simple or complex query with ``SQL`` syntax on the source
 layer.
+
+Input datasources are identified with ``input1``, ``input2``... ``inputN`` and
+a simple query will look like ``SELECT * FROM input1``.
+
+Beside a simple query, you can add expressions or variables within the 
+``SQL query`` parameter itself. This is particulary useful if this algorithm is
+executed within a Processing model and you want to use a model input as a
+parameter of the query. An example of a query will then be ``SELECT * FROM 
+[% @table %]`` where ``@table`` is the variable that identifies the model input.
 
 The result of the query will be added as a new layer.
 
@@ -1095,7 +1105,7 @@ The additional attributes and their values are taken from a second
 vector layer.
 An attribute is selected in each of them to define the join criteria.
 
-.. seealso:: :ref:`qgisjoinattributesbynearest`,
+.. seealso:: :ref:`qgisjoinbynearest`,
    :ref:`qgisjoinattributesbylocation`
 
 Parameters
@@ -1251,7 +1261,7 @@ layer that are added to each feature from the first layer.
 
 **Default menu**: :menuselection:`Vector --> Data Management Tools`
 
-.. seealso:: :ref:`qgisjoinattributesbynearest`,
+.. seealso:: :ref:`qgisjoinbynearest`,
    :ref:`qgisjoinattributestable`, :ref:`qgisjoinbylocationsummary`
 
 Parameters
@@ -1533,7 +1543,7 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
-.. _qgisjoinattributesbynearest:
+.. _qgisjoinbynearest:
 
 Join attributes by nearest
 -------------------------------
@@ -1664,7 +1674,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:joinattributesbynearest``
+**Algorithm ID**: ``qgis:joinbynearest``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -1850,8 +1860,9 @@ Python code
 
 .. _qgisrepairshapefile:
 
-Repair Shapefile |312|
-----------------------
+Repair Shapefile
+----------------
+
 Repairs a broken ESRI Shapefile dataset by (re)creating the SHX file.
 
 Parameters
@@ -1884,7 +1895,7 @@ Outputs
      - Description
    * - **Repaired layer**
      - ``OUTPUT``
-     - [vector any]
+     - [vector: any]
      - The input vector layer with the SHX file repaired
 
 Python code
@@ -1930,6 +1941,17 @@ Parameters
 
        Default: ``EPSG:4326 - WGS 84``
      - Destination coordinate reference system
+   * - **Coordinate Operation**
+
+       Optional
+     - ``OPERATION``
+     - [string]
+     - Specific operation to use for a particular reprojection task, instead
+       of always forcing use of the current project's transformation settings.
+       Useful when reprojecting a particular layer and control over the exact
+       transformation pipeline is required. Requires proj version >= 6.
+
+       Read more at :ref:`datum_transformation`.
    * - **Reprojected**
      - ``OUTPUT``
      - [same as input]
@@ -2249,6 +2271,5 @@ Python code
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |312| replace:: ``NEW in 3.12``
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em

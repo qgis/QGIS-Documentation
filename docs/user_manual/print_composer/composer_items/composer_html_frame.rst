@@ -48,9 +48,9 @@ panel provides the following functionalities (see figure_layout_html_ppt_):
   a table or using a regular expression.
 * In :guilabel:`Source` you can enter text in the textbox with some HTML tags or
   provide a full HTML page.
-* The :guilabel:`Insert an Expression` button can be used to insert an expression like
-  ``[%Year($now)%]`` in the Source textbox to display the current year. This
-  button is only activated when radiobutton :guilabel:`Source` is selected.
+* The :guilabel:`Insert or Edit an Expression...` button can be used to add an
+  expression like ``[%Year($now)%]`` in the Source textbox to display the current year.
+  This button is only activated when radiobutton :guilabel:`Source` is selected.
   After inserting the expression click somewhere in the textbox before
   refreshing the HTML frame, otherwise you will lose the expression.
 * Activate |checkbox| :guilabel:`Evaluate QGIS expressions in HTML code` to see

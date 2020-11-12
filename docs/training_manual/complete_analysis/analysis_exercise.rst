@@ -232,7 +232,7 @@ this area.
 #. Click :guilabel:`Run`
 
    After the clipping operation has completed, leave the
-   :guilabel:`Clip Raster by Extent` dialog open, to be able to reuse
+   :guilabel:`Clip Raster by Mask Layer` dialog open, to be able to reuse
    the clipping area
 #. Select the ``Rainfall`` raster layer in the :guilabel:`Input layer`
    dropdown list and save your output as :file:`Rainfall_clipped.tif`
@@ -446,7 +446,7 @@ in the resulting raster (it's almost as if they are being lit by the
 morning sunlight).
 
 Find the correct rainfall (greater than ``1000`` mm) the same way.
-Use the following expression:
+Use the following expression::
 
   rainfall30@1 > 1000
 
@@ -748,7 +748,7 @@ Find the locations that are closest to the University of Cape Town
 ----------------------------------------------------------------------
 
 #. Go to the *Processing Toolbox*, locate the
-   *Join Attributes by Nearest* algoritm
+   *Join Attributes by Nearest* algorithm
    (:menuselection:`Vector general --> Join Attributes by Nearest`)
    and execute it
 #. :guilabel:`Input layer` should be ``university``, and
@@ -767,7 +767,7 @@ addition, the attributes of the nearby suitable areas (including the
 ``id``), and the distance to that location.
 
 #. Open the attribute table of the result of the join
-#. Note of the ``id`` for the four nearests suitable areas, and
+#. Note the ``id`` of the four nearest suitable areas, and
    then close the attribute table
 #. Open the attribute table of the ``suitable_areas`` layer
 #. Build a query to select the four suitable areas closest to the

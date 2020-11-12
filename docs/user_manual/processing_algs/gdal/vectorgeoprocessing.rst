@@ -67,7 +67,7 @@ Parameters
       - 
    *  - **Additional creation options**
 
-        (optional)
+        Optional
       - ``OPTIONS``
       - [string]
 
@@ -143,7 +143,7 @@ Parameters
         It has to be defined in target CRS coordinates.
    *  - **Additional creation options**
 
-        (optional)
+        Optional
       - ``OPTIONS``
       - [string]
 
@@ -219,7 +219,7 @@ Parameters
 	layer.
    *  - **Additional creation options**
 
-        (optional)
+        Optional
       - ``OPTIONS``
       - [string]
 
@@ -291,7 +291,7 @@ Parameters
       - The input layer to dissolve
    *  - **Dissolve field**
 
-        (optional)
+        Optional
       - ``FIELD``
       - [tablefield: any]
       - The field of the input layer to use for dissolving
@@ -339,13 +339,13 @@ Parameters
         attribute specified and include them in the output layer
    *  - **Numeric attribute to calculate statistics on**
 
-        (optional)
+        Optional
       - ``STATISTICS_ATTRIBUTE``
       - [tablefield: numeric]
       - The numeric attribute to calculate statistics on
    *  - **Additional creation options**
 
-        (optional)
+        Optional
       - ``OPTIONS``
       - [string]
 
@@ -428,7 +428,7 @@ Parameters
       - 
    *  - **Additional creation options**
 
-        (optional)
+        Optional
       - ``OPTIONS``
       - [string]
 
@@ -542,7 +542,7 @@ Parameters
       - 
    *  - **Additional creation options**
 
-        (optional)
+        Optional
       - ``OPTIONS``
       - [string]
 
@@ -625,7 +625,7 @@ Parameters
       - 
    *  - **Additional creation options**
 
-        (optional)
+        Optional
       - ``OPTIONS``
       - [string]
 

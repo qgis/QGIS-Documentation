@@ -195,6 +195,7 @@ Option                                                             Vector Layer 
 |allEdits| :menuselection:`Current Edits -->`                      |checkbox|          \                  \
 :guilabel:`Filter...`                                              |checkbox|          \                  \
 :guilabel:`Change Data Source...`                                  |checkbox|          \                  \
+:guilabel:`Repair Data Source...`                                  |checkbox|          \                  \
 :menuselection:`Actions on selections -->` (in edit mode)          |checkbox|          \                  \
 :menuselection:`--> Duplicate Feature`                             |checkbox|          \                  \
 :menuselection:`--> Duplicate Feature and Digitize`                |checkbox|          \                  \
@@ -297,7 +298,9 @@ symbols are:
 * |indicatorEmbedded| to identify an :ref:`embedded group or layer
   <nesting_projects>` and the path to their original project file
 * |indicatorBadLayer| to identify a layer whose data source was not available
-  at the project file opening. Click the icon to update the source path.
+  at the project file opening (see :ref:`handle_broken_paths`).
+  Click the icon to update the source path or select :guilabel:`Repair Data Source...`
+  entry from the layer contextual menu.
 * |indicatorMemory| to remind you that the layer is a :ref:`temporary scratch
   layer <vector_new_scratch_layer>` and its content will be discarded when you
   close this project. To avoid data loss and make the layer permanent, click
@@ -953,14 +956,11 @@ annotations to the map canvas.
        grid mark it refers to
      * :guilabel:`Boundary direction`, ie each label follows the canvas
        boundary, and is perpendicular to the grid mark it refers to
-   * The :guilabel:`Annotation font` using the OS :ref:`font selector widget
-     <font_selector>`
+   * The :guilabel:`Annotation font` (text formatting, buffer, shadow...) using
+     the :ref:`font selector widget <font_selector>`
    * The :guilabel:`Distance to map frame`, margin between annotations and map
-     canvas limits. Convenient when exporting the map canvas eg to an image
-     format or PDF, and avoid annotations to be on the "paper" limits.
-
-     .. Todo: Add a reference link to export map canvas to image or pdf section when done
-
+     canvas limits. Convenient when :ref:`exporting the map canvas <exportingmapcanvas>`
+     eg to an image format or PDF, and avoid annotations to be on the "paper" limits.
    * The :guilabel:`Coordinate precision`
 
 #. Click :guilabel:`Apply` to verify that it looks as expected or :guilabel:`OK`
@@ -988,7 +988,8 @@ To add a Title Label decoration:
 
 #. Make sure |checkbox| :guilabel:`Enable Title Label` is checked
 #. Enter the title text you want to place on the map.
-   You can make it dynamic using the :guilabel:`Insert an Expression` button.
+   You can make it dynamic using the :guilabel:`Insert or Edit an Expression...`
+   button.
 #. Choose the :guilabel:`Font` for the label using the :ref:`font selector
    widget <font_selector>` with full access to QGIS :ref:`text formatting
    <text_format>` options. Quickly set the font color and opacity by clicking
@@ -1028,7 +1029,8 @@ To add this decoration:
 
 #. Make sure |checkbox| :guilabel:`Enable Copyright Label` is checked
 #. Enter the copyright text you want to place on the map.
-   You can make it dynamic using the :guilabel:`Insert an Expression` button.
+   You can make it dynamic using the :guilabel:`Insert or Edit an Expression...`
+   button.
 #. Choose the :guilabel:`Font` for the label using the :ref:`font selector
    widget <font_selector>` with full access to QGIS :ref:`text formatting
    <text_format>` options. Quickly set the font color and opacity by clicking
@@ -1357,7 +1359,9 @@ By default, |measure| :sup:`Measure Line` measures real distances
 between given points according to a defined ellipsoid.
 The tool then allows you to click points on the map. Each segment length,
 as well as the total, shows up in the measure window.
-To stop measuring, click the right mouse button.
+To stop measuring, click the right mouse button. Now it is possible
+to copy all your line measurements at once to the clipboard using the 
+:guilabel:`Copy All` button.
 
 Note that you can use the drop-down list near the total to change
 the measurement units interactively while working with the measure tool ('Meters', 'Kilometers', 'Feet', 'Yards',
@@ -1496,7 +1500,9 @@ be selected on the map canvas too):
   features in the current layer
 * |invertSelection| :sup:`Invert Feature Selection` to invert the selection in
   the current layer
-
+* |algorithmSelectLocation| :sup:`Select by Location` to select the features
+  based on their spatial relationship with other features (in the same or
+  another layer - see :ref:`qgisselectbylocation`)
 
 For example, if you want to find regions that are boroughs from
 :file:`regions.shp` of the QGIS sample data, you can:
@@ -2195,7 +2201,8 @@ Font Selector
 
 The :guilabel:`Font` selector widget is a convenient shortcut when you want to
 set font properties for textual information (feature labels, decoration labels,
-map legend text, ...). Clicking the drop-down arrow shows the following options:
+map legend text, ...). Clicking the drop-down arrow shows some or all of the
+following options:
 
 .. _figure_fontselector_widget:
 
@@ -2212,7 +2219,8 @@ map legend text, ...). Clicking the drop-down arrow shows the following options:
   with advanced formatting options (opacity, orientation, buffer, background,
   shadow, ...) as described in section :ref:`text_format`.
 * :guilabel:`Copy Format` of the text
-* and :guilabel:`Paste Format` to the text, speeding configuration.
+* :guilabel:`Paste Format` to the text, speeding configuration
+* the :ref:`color widget <color_widget>` for quick color setting
 
 
 .. index:: Unit selection; Map scale
@@ -2468,6 +2476,8 @@ The values presented in the varying size assistant above will set the size
 .. |addImage| image:: /static/common/mActionAddImage.png
    :width: 1.5em
 .. |addMap| image:: /static/common/mActionAddMap.png
+   :width: 1.5em
+.. |algorithmSelectLocation| image:: /static/common/mAlgorithmSelectLocation.png
    :width: 1.5em
 .. |allEdits| image:: /static/common/mActionAllEdits.png
    :width: 1.5em

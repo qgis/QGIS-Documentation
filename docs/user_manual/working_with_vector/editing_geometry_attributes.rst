@@ -139,7 +139,7 @@ QGIS will show different *snap* icons depending on the kind of *snap*:
      - Snapping to an intersection: cross icon
 
 
-Note that it is possible to change the color of these icons in the 
+Note that it is possible to change the color of these icons in the
 :guilabel:`Digitizing` part of your settings.
 
 .. index:: Search radius
@@ -165,6 +165,40 @@ proximity.
 The smaller the search radius, the more difficult it will be to hit
 what you want to move.
 
+.. index:: Limit snapping to a scale range
+
+
+Limit snapping to a scale range
+-------------------------------
+
+In some cases snapping can become very slow. This is often caused by the
+amount of features in some layers that require a heavy index to compute
+and maintain. Some parameters exist to enable snapping only when the map
+view is inside a relevant scale range. This allows to only do the costly index
+computation related to snapping at a scale where drawing is relevant.
+
+Scale limit to snapping is configured in
+:menuselection:`Project --> Snapping Options...`.
+Limiting snapping to scale is only available in
+:guilabel:`Advanced Configuration` mode.
+
+To limit snapping to a scale range you have three modes available:
+
+* :guilabel:`Disabled`: Snapping is enabled whatever the current map scale
+  is. This is the default mode.
+* :guilabel:`Global`: Snapping is limited and only enabled when the current
+  scale of the map is between a global minimum and a global maximum value.
+  When selecting this mode two widgets become available
+  to configure the range of scales in which snapping is enabled.
+* :guilabel:`Per layer`: The snapping scale range limit is defined for each layer.
+  When selecting this mode two columns become available
+  to configure the minimum and maximum scales for each layer.
+
+
+
+Please note that the minimum and maximum scales follow the QGIS convention:
+minimum scale is the most "zoomed out" scale while maximum scale is the most "zoomed in".
+A minimum or maximum scale that is set to "0" or "not set" is considered not limiting.
 
 .. index:: Topological editing
    single: Digitizing; Topology
@@ -1235,11 +1269,12 @@ attributes are made identical.
 Rotate Point Symbols
 --------------------
 
-The |rotatePointSymbols| :sup:`Rotate Point Symbols` allows you to change the
-rotation of point symbols in the map canvas.
+The |rotatePointSymbols| :sup:`Rotate Point Symbols` allows you to individually
+change the rotation of point symbols in the map canvas.
 
-#. First of all, apply to the symbol a :ref:`data-defined <data_defined>`
-   rotation:
+#. First, you need to indicate the field to store the rotation value in.
+   This is made by assigning a field to the symbol :ref:`data-defined <data_defined>`
+   rotation property:
 
    #. In the :menuselection:`Layer Properties --> Symbology` dialog, browse to
       the symbol editor dialog.
@@ -1248,6 +1283,10 @@ rotation of point symbols in the map canvas.
       of the symbol layers.
    #. Choose a field in the :guilabel:`Field Type` combobox. Values of this
       field are hence used to rotate each feature's symbol accordingly.
+
+      You can also check the :sup:`Store data in project` entry to generate an
+      :ref:`auxiliary data storage <vector_auxiliary_storage>` field to
+      control the rotation value.
 
    .. note:: **Make sure that the same field is assigned to all the symbol layers**
 
@@ -1264,18 +1303,17 @@ rotation of point symbols in the map canvas.
 
       Rotating a point symbol
 
-#. Then click on a point feature in the map canvas with the
-   |rotatePointSymbols| :sup:`Rotate Point Symbols` and move the mouse
-   around, holding the left button pressed.
+#. Then click on a point symbol in the map canvas with the
+   |rotatePointSymbols| :sup:`Rotate Point Symbols` tool
+#. Move the mouse around.
    A red arrow with the rotation value will be visualized (see
    Figure_rotate_point_).
-#. Release the left mouse button again, the symbol is defined with
-   this new rotation and the rotation field is updated in the layer's
-   attribute table.
+   If you hold the :kbd:`Ctrl` key while moving, the rotation will be done
+   in 15 degree steps.
+#. When you get the expected angle value, click again. The symbol is rendered
+   with this new rotation and the associated field is updated accordingly.
 
-.. tip::
-   If you hold the :kbd:`Ctrl` key pressed, the rotation will be done in 15
-   degree steps.
+   You can right-click to abort symbol rotation.
 
 .. index::
    single: Digitizing tools; Offset Point Symbols
@@ -1288,8 +1326,19 @@ The |offsetPointSymbols| :sup:`Offset Point Symbols` allows you to interactively
 change the rendered position of point symbols in the map canvas. This tool behaves
 like the |rotatePointSymbols| :sup:`Rotate Point Symbols` tool except that it
 requires you to connect a field to the data-defined :guilabel:`Offset (X,Y)`
-property of the symbol, field which will then be populated with the offset
-coordinates while moving the symbol in the map canvas.
+property of each layer of the symbol. The field will then be populated with the
+offset coordinates for the features whose symbol is moved in the map canvas.
+
+#. Associate a field to the data-defined widget of the :guilabel:`Offset (X,Y)`
+   property of the symbol. If the symbol is made with many layers, you may
+   want to assign the field to each of them
+#. Select the |offsetPointSymbols| :sup:`Offset Point Symbols` tool
+#. Click a point symbol
+#. Move to a new location
+#. Click again. The symbol is moved to the new place.
+   Offset values from the original position are stored in the linked field.
+
+   You can right-click to abort symbol offset.
 
 .. note:: The |offsetPointSymbols| :sup:`Offset Point Symbols` tool doesn't
    move the point feature itself; you should use the |vertexToolActiveLayer|
@@ -1385,6 +1434,78 @@ curved geometry, if not, QGIS will segmentize the circular arcs.
 - |circle2TangentsPoint| :sup:`Add circle from 2 tangents and a point`: Similar
   to circle from 3 tangents, except that you have to select two tangents, enter
   a radius and select the desired center.
+
+.. index:: Draw ellipses
+.. _draw_ellipses:
+
+Draw Ellipses
+-------------
+
+There is a set of tools for drawing ellipses. The tools are described
+below.
+
+Ellipses cannot be converted as circular strings, so they will always be
+segmented.
+
+* |ellipseCenter2Points| :sup:`Add Ellipse from center and two points`: Draws an
+  ellipse with a given center, major axis and minor axis. (Left-click,
+  left-click, right-click)
+* |ellipseCenterPoint| :sup:`Add Ellipse from center and a point`: Draws an
+  ellipse into a bounding box with the center and a corner. (Left-click,
+  right-click)
+* |ellipseExtent| :sup:`Add Ellipse from extent`: Draws an ellipse into a bounding
+  box with two opposite corners. (Left-click, right-click)
+* |ellipseFoci| :sup:`Add Ellipse from foci`: Draws an ellipse by 2 points for
+  foci and a point on the ellipse. (Left-click, left-click, right-click)
+
+.. index:: Draw rectangles
+.. _draw_rectangles:
+
+Draw Rectangles
+...............
+
+There is a set of tools for drawing rectangles. The tools are described
+below.
+
+* |rectangleCenter| :sup:`Rectangle from center and a point`: Draws a
+  rectangle from the center and a corner. (Left-click, right-click)
+* |rectangleExtent| :sup:`Rectangle from extent`: Draws a rectangle from two
+  opposite corners. (Left-click, right-click)
+* |rectangle3PointsDistance| :sup:`Rectangle from 3 points (distance)`: Draws an
+  oriented rectangle from three points. The first and second points determine the
+  length and angle of the first edge. The third point determines the length of the
+  other edge. (Left-click, left-click, right-click)
+* |rectangle3PointsProjected| :sup:`Rectangle from 3 points (projected)`: Same as
+  the preceding tool, but the length of the second edge is computed from the
+  projection of the third point on the first edge. (Left-click, left-click,
+  right-click)
+
+   .. _figure_draw_rectangles_3_points:
+
+   .. figure:: img/draw_rectangles_3_points.png
+      :align: center
+
+      Draw rectangle from 3 points using distance (right) and projected (left)
+
+.. index:: Draw regular polygons
+.. _draw_regular_polygons:
+
+Draw Regular Polygons
+.....................
+
+There is a set of tools for drawing regular polygons. The tools are described
+below. Left-click to place the first point.
+A dialog appears, where you can set the number of polygon edges.
+Right-click to finish  the regular polygon.
+
+* |regularPolygon2Points| :sup:`Regular polygon from two points`: Draws a regular
+  polygon where the two points determine the length and angle of the first edge.
+* |regularPolygonCenterPoint| :sup:`Regular polygon from center and a point`:
+  Draws a regular polygon from the provided center point. The second point determines the
+  angle and distance to the middle of an edge.
+* |regularPolygonCenterCorner| :sup:`Regular polygon from center and a corner`:
+  Same as the preceding tool, but the second point determines the angle and
+  distante to a vertex.
 
 .. index::
    single: Digitizing tools; Advanced panel
@@ -1739,6 +1860,14 @@ To edit features in-place:
    :width: 1.5em
 .. |editableEdits| image:: /static/common/mIconEditableEdits.png
    :width: 1em
+.. |ellipseCenter2Points| image:: /static/common/mActionEllipseCenter2Points.png
+   :width: 1.5em
+.. |ellipseCenterPoint| image:: /static/common/mActionEllipseCenterPoint.png
+   :width: 1.5em
+.. |ellipseExtent| image:: /static/common/mActionEllipseExtent.png
+   :width: 1.5em
+.. |ellipseFoci| image:: /static/common/mActionEllipseFoci.png
+   :width: 1.5em
 .. |fileSaveAs| image:: /static/common/mActionFileSaveAs.png
    :width: 1.5em
 .. |fillRing| image:: /static/common/mActionFillRing.png
@@ -1775,7 +1904,21 @@ To edit features in-place:
    :width: 1em
 .. |processSelected| image:: /static/common/mActionProcessSelected.png
    :width: 1.5em
+.. |rectangle3PointsDistance| image:: /static/common/mActionRectangle3PointsDistance.png
+   :width: 1.5em
+.. |rectangle3PointsProjected| image:: /static/common/mActionRectangle3PointsProjected.png
+   :width: 1.5em
+.. |rectangleCenter| image:: /static/common/mActionRectangleCenter.png
+   :width: 1.5em
+.. |rectangleExtent| image:: /static/common/mActionRectangleExtent.png
+   :width: 1.5em
 .. |redo| image:: /static/common/mActionRedo.png
+   :width: 1.5em
+.. |regularPolygon2Points| image:: /static/common/mActionRegularPolygon2Points.png
+   :width: 1.5em
+.. |regularPolygonCenterCorner| image:: /static/common/mActionRegularPolygonCenterCorner.png
+   :width: 1.5em
+.. |regularPolygonCenterPoint| image:: /static/common/mActionRegularPolygonCenterPoint.png
    :width: 1.5em
 .. |reshape| image:: /static/common/mActionReshape.png
    :width: 1.5em

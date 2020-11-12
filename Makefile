@@ -11,8 +11,8 @@ SPHINXBUILD     ?= sphinx-build
 SPHINXINTL      ?= sphinx-intl
 SOURCEDIR       = .
 BUILDDIR        = build
-#SITEDIR         = /var/www/html/qgisdocs
-SITEDIR         = qgis2:/var/www/qgisdata/QGIS-Documentation/live/html
+#SITEDIR         = qgis2:/var/www/qgisdata/QGIS-Documentation/live/html
+SITEDIR         = /var/www/qgisdata/QGIS-Documentation/live/html
 VERSION         = testing
 
 
@@ -23,9 +23,9 @@ help:
 .PHONY: help Makefile
 
 springclean:
-	rm -r $(BUILDDIR)
+	rm -rf $(BUILDDIR)
 	# all .mo files
-	find $(SOURCEDIR)/locale/*/LC_MESSAGES/ -type f -name '*.mo' -delete
+	-find $(SOURCEDIR)/locale/*/LC_MESSAGES/ -type f -name '*.mo' -delete
 
 gettext:
 	@$(SPHINXBUILD) -M gettext "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
@@ -106,6 +106,11 @@ zip:
 site: html zip
 	rsync -az $(BUILDDIR)/html/$(LANG) $(SITEDIR)/;
 
+
+full: springclean html zip
+	make LANG=$(LANG) pdf;
+	
+
 # this will build ALL languages, AND tries to rsync them to the web dir on qgis2
 # to be able to run this you will need a key on the server
 all: springclean
@@ -135,6 +140,6 @@ tx_force_pull_translations:
 	tx pull -f --parallel -l $(subst $(space),$(comma),$(subst en$(space),,$(subst zh_,zh-,$(LANGUAGES)))) ;
 
 doctest:
-	$(SPHINXBUILD) -b doctest . $(BUILDDIR)/doctest
+	LD_PRELOAD=/lib/x86_64-linux-gnu/libSegFault.so $(SPHINXBUILD) -b doctest . $(BUILDDIR)/doctest
 	@echo "Testing of doctests in the sources finished, look at the " \
 	      "results in $(BUILDDIR)/doctest/output.txt."
