@@ -446,7 +446,7 @@ in the resulting raster (it's almost as if they are being lit by the
 morning sunlight).
 
 Find the correct rainfall (greater than ``1000`` mm) the same way.
-Use the following expression:
+Use the following expression::
 
   rainfall30@1 > 1000
 
