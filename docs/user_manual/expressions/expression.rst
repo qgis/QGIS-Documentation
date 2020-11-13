@@ -93,13 +93,13 @@ using functions, layer fields and values. It contains the following widgets:
           'max',
           "ELEV", -- the field containing the altitude
           -- and limit the airports to the region they are within
-          filter := within( $geometry, geometry( @parent ) )
+          filter := within( @geometry, geometry( @parent ) )
         ),
           aggregate( -- finds airports at the same altitude in the region
             'airports',
             'concatenate',
             "NAME",
-            filter := within( $geometry, geometry( @parent ) )
+            filter := within( @geometry, geometry( @parent ) )
               and "ELEV" = @airport_alti
           )
           || ' : ' || @airport_alti || 'm'
@@ -250,9 +250,17 @@ Some use cases of expressions
   The previous expression could also be used to define which features
   to label or show on the map.
 
+* Select features that overlap a natural zone from the "lands" layer::
+
+   overlay_intersects( layer:='lands', filter:="zone_type"='Natural' )
+
+* Count for each feature the number of buildings they contain::
+
+   array_length( overlay_contains( layer:='buildings', expression:=@id ) )
+
 * Create a different symbol (type) for the layer, using the geometry generator::
 
-    point_on_surface( $geometry )
+    point_on_surface( @geometry )
 
 * Given a point feature, generate a closed line (using ``make_line``) around its
   geometry::
@@ -263,7 +271,7 @@ Some use cases of expressions
         -- list of angles for placing the projected points (every 90°)
         array:=generate_series( 0, 360, 90 ),
         -- translate the point 20 units in the given direction (angle)
-        expression:=project( $geometry, distance:=20, azimuth:=radians( @element ) )
+        expression:=project( @geometry, distance:=20, azimuth:=radians( @element ) )
       )
     )
 
@@ -273,7 +281,7 @@ Some use cases of expressions
    with_variable( 'extent',
                   map_get( item_variables( 'Map 1' ), 'map_extent' ),
                   aggregate( 'airports', 'concatenate', "NAME",
-                             intersects( $geometry, @extent ), ' ,'
+                             intersects( @geometry, @extent ), ' ,'
                            )
                 )
 
