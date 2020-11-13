@@ -428,54 +428,62 @@ Further reading: :ref:`qgisorientedminimumboundingbox` algorithm
    :end-before: .. end_overlay_contains_section
 
 Further reading: :ref:`expression_function_GeometryGroup_contains`,
-:ref:`qgisselectbylocation` algorithm
+:ref:`array manipulation <array_functions>`, :ref:`qgisselectbylocation`
+algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_overlay_contains_section
    :end-before: .. end_overlay_crosses_section
 
 Further reading: :ref:`expression_function_GeometryGroup_crosses`,
-:ref:`qgisselectbylocation` algorithm
+:ref:`array manipulation <array_functions>`, :ref:`qgisselectbylocation`
+algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_overlay_crosses_section
    :end-before: .. end_overlay_disjoint_section
 
 Further reading: :ref:`expression_function_GeometryGroup_disjoint`,
-:ref:`qgisselectbylocation` algorithm
+:ref:`array manipulation <array_functions>`, :ref:`qgisselectbylocation`
+algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_overlay_disjoint_section
    :end-before: .. end_overlay_equals_section
 
-Further reading: :ref:`qgisselectbylocation` algorithm
+Further reading: :ref:`array manipulation <array_functions>`,
+:ref:`qgisselectbylocation` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_overlay_equals_section
    :end-before: .. end_overlay_intersects_section
 
 Further reading: :ref:`expression_function_GeometryGroup_intersects`,
-:ref:`qgisselectbylocation` algorithm
+:ref:`array manipulation <array_functions>`, :ref:`qgisselectbylocation`
+algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_overlay_intersects_section
    :end-before: .. end_overlay_nearest_section
 
-Further reading: :ref:`qgisjoinbynearest` algorithm
+Further reading: :ref:`array manipulation <array_functions>`,
+:ref:`qgisjoinbynearest` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_overlay_nearest_section
    :end-before: .. end_overlay_touches_section
 
 Further reading: :ref:`expression_function_GeometryGroup_touches`,
-:ref:`qgisselectbylocation` algorithm
+:ref:`array manipulation <array_functions>`, :ref:`qgisselectbylocation`
+algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_overlay_touches_section
    :end-before: .. end_overlay_within_section
 
 Further reading: :ref:`expression_function_GeometryGroup_within`,
-:ref:`qgisselectbylocation` algorithm
+:ref:`array manipulation <array_functions>`, :ref:`qgisselectbylocation`
+algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_overlay_within_section
