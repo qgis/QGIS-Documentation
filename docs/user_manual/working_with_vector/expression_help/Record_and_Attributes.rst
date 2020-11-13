@@ -459,15 +459,21 @@ When the database parameter is a layer and the layer is in transaction mode, the
 uuid
 ....
 
-Generates a Universally Unique Identifier (UUID) for each row using the Qt `QUuid::createUuid <https://doc.qt.io/qt-5/quuid.html#createUuid>`_ method. Each UUID is 38 characters long.
+Generates a Universally Unique Identifier (UUID) for each row using the Qt `QUuid::createUuid <https://doc.qt.io/qt-5/quuid.html#createUuid>`_ method.
 
 .. list-table::
    :widths: 15 85
 
    * - Syntax
-     - uuid()
+     - uuid([format='WithBraces'])
+
+       [] marks optional arguments
+   * - Arguments
+     - * **format** - The format, as the UUID will be formatted. 'WithBraces', 'WithoutBraces' or 'Id128'.
    * - Examples
      - * ``uuid()`` → '{0bd2f60f-f157-4a6d-96af-d4ba4cb366a1}'
+       * ``uuid('WithoutBraces')`` → '0bd2f60f-f157-4a6d-96af-d4ba4cb366a1'
+       * ``uuid('Id128')`` → '0bd2f60ff1574a6d96afd4ba4cb366a1'
 
 
 .. end_uuid_section

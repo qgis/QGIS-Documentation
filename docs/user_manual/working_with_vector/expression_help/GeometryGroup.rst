@@ -1938,7 +1938,7 @@ Returns whether the current feature spatially contains at least one feature from
 
 
 
-Read more on the underlying GEOS "Contains" predicate, as described in PostGIS `ST_CONTAINS <https://postgis.net/docs/ST_Contains.html>`_ function.
+Read more on the underlying GEOS "Contains" predicate, as described in PostGIS `ST_Contains <https://postgis.net/docs/ST_Contains.html>`_ function.
 
 .. list-table::
    :widths: 15 85
@@ -1970,26 +1970,31 @@ Read more on the underlying GEOS "Contains" predicate, as described in PostGIS `
 overlay_crosses
 ...............
 
-Performs a spatial join of type CROSSES. This returns an array of results of an expression evaluated on features from a different layer that CROSSES the current feature, or, if no expression if provided, simply returns whether at least one feature from the other layer CROSSES the current feature.
+Returns whether the current feature spatially crosses at least one feature from a target layer, or an array of expression-based results for the features in the target layer crossed by the current feature.
+
+
+
+Read more on the underlying GEOS "Crosses" predicate, as described in PostGIS `ST_Crosses <https://postgis.net/docs/ST_Crosses.html>`_ function.
 
 .. list-table::
    :widths: 15 85
 
    * - Syntax
-     - overlay_crosses(layer, [expression], [filter], [limit], [cache=False])
+     - overlay_crosses(layer, [expression], [filter], [limit], [cache=false])
 
        [] marks optional arguments
    * - Arguments
-     - * **layer** - the other layer
-       * **expression** - an optional expression to evaluate on the features from the other layer (if not set, the function will just return a boolean indicating whether there is at least one match)
-       * **filter** - an optional expression to filter the matching features (if not set, all features will be returned)
-       * **limit** - an optional integer to limit the number of matching features (if not set, all features will be returned)
+     - * **layer** - the layer whose overlay is checked
+       * **expression** - an optional expression to evaluate on the features from the target layer. If not set, the function will just return a boolean indicating whether there is at least one match.
+       * **filter** - an optional expression to filter the target features to check. If not set, all the features will be checked.
+       * **limit** - an optional integer to limit the number of matching features. If not set, all the matching features will be returned.
        * **cache** - set this to true to build a local spatial index (most of the time, this is unwanted, unless you are working with a particularly slow data provider)
    * - Examples
-     - * ``overlay_crosses('regions')`` → True
-       * ``overlay_crosses('regions', name)`` → ['South Africa', 'Africa', 'World']
-       * ``overlay_crosses('regions', name, name != 'World')`` → ['South Africa', 'Africa']
-       * ``overlay_crosses('regions', name, limit:=1)`` → ['South Africa']
+     - * ``overlay_crosses('regions')`` → true if the current feature spatially crosses a region
+       * ``overlay_crosses('regions', filter:= population > 10000)`` → true if the current feature spatially crosses a region with a population greater than 10000
+       * ``overlay_crosses('regions', name)`` → an array of names, for the regions crossed by the current feature
+       * ``array_sort(overlay_crosses(layer:='regions', expression:="name", filter:= population > 10000))`` → an ordered array of names, for the regions crossed by the current feature and with a population greater than 10000
+       * ``overlay_crosses(layer:='regions', expression:= geom_to_wkt($geometry), limit:=2)`` → an array of geometries (in WKT), for up to two regions crossed by the current feature
 
 
 .. end_overlay_crosses_section
@@ -2001,26 +2006,31 @@ Performs a spatial join of type CROSSES. This returns an array of results of an 
 overlay_disjoint
 ................
 
-Performs a spatial join of type DISJOINT. This returns an array of results of an expression evaluated on features from a different layer that DISJOINT the current feature, or, if no expression if provided, simply returns whether at least one feature from the other layer DISJOINT the current feature.
+Returns whether the current feature is spatially disjoint from at least one feature from a target layer, or an array of expression-based results for the features in the target layer that are disjoint from the current feature.
+
+
+
+Read more on the underlying GEOS "Disjoint" predicate, as described in PostGIS `ST_Disjoint <https://postgis.net/docs/ST_Disjoint.html>`_ function.
 
 .. list-table::
    :widths: 15 85
 
    * - Syntax
-     - overlay_disjoint(layer, [expression], [filter], [limit], [cache=False])
+     - overlay_disjoint(layer, [expression], [filter], [limit], [cache=false])
 
        [] marks optional arguments
    * - Arguments
-     - * **layer** - the other layer
-       * **expression** - an optional expression to evaluate on the features from the other layer (if not set, the function will just return a boolean indicating whether there is at least one match)
-       * **filter** - an optional expression to filter the matching features (if not set, all features will be returned)
-       * **limit** - an optional integer to limit the number of matching features (if not set, all features will be returned)
+     - * **layer** - the layer whose overlay is checked
+       * **expression** - an optional expression to evaluate on the features from the target layer. If not set, the function will just return a boolean indicating whether there is at least one match.
+       * **filter** - an optional expression to filter the target features to check. If not set, all the features will be checked.
+       * **limit** - an optional integer to limit the number of matching features. If not set, all the matching features will be returned.
        * **cache** - set this to true to build a local spatial index (most of the time, this is unwanted, unless you are working with a particularly slow data provider)
    * - Examples
-     - * ``overlay_disjoint('regions')`` → True
-       * ``overlay_disjoint('regions', name)`` → ['South Africa', 'Africa', 'World']
-       * ``overlay_disjoint('regions', name, name != 'World')`` → ['South Africa', 'Africa']
-       * ``overlay_disjoint('regions', name, limit:=1)`` → ['South Africa']
+     - * ``overlay_disjoint('regions')`` → true if the current feature is spatially disjoint from a region
+       * ``overlay_disjoint('regions', filter:= population > 10000)`` → true if the current feature is spatially disjoint from a region with a population greater than 10000
+       * ``overlay_disjoint('regions', name)`` → an array of names, for the regions spatially disjoint from the current feature
+       * ``array_sort(overlay_disjoint(layer:='regions', expression:="name", filter:= population > 10000))`` → an ordered array of names, for the regions spatially disjoint from the current feature and with a population greater than 10000
+       * ``overlay_disjoint(layer:='regions', expression:= geom_to_wkt($geometry), limit:=2)`` → an array of geometries (in WKT), for up to two regions spatially disjoint from the current feature
 
 
 .. end_overlay_disjoint_section
@@ -2032,26 +2042,31 @@ Performs a spatial join of type DISJOINT. This returns an array of results of an
 overlay_equals
 ..............
 
-Performs a spatial join of type EQUALS. This returns an array of results of an expression evaluated on features from a different layer that EQUALS the current feature, or, if no expression if provided, simply returns whether at least one feature from the other layer EQUALS the current feature.
+Returns whether the current feature spatially equals to at least one feature from a target layer, or an array of expression-based results for the features in the target layer that are spatially equal to the current feature.
+
+
+
+Read more on the underlying GEOS "Equals" predicate, as described in PostGIS `ST_Equals <https://postgis.net/docs/ST_Equals.html>`_ function.
 
 .. list-table::
    :widths: 15 85
 
    * - Syntax
-     - overlay_equals(layer, [expression], [filter], [limit], [cache=False])
+     - overlay_equals(layer, [expression], [filter], [limit], [cache=false])
 
        [] marks optional arguments
    * - Arguments
-     - * **layer** - the other layer
-       * **expression** - an optional expression to evaluate on the features from the other layer (if not set, the function will just return a boolean indicating whether there is at least one match)
-       * **filter** - an optional expression to filter the matching features (if not set, all features will be returned)
-       * **limit** - an optional integer to limit the number of matching features (if not set, all features will be returned)
+     - * **layer** - the layer whose overlay is checked
+       * **expression** - an optional expression to evaluate on the features from the target layer. If not set, the function will just return a boolean indicating whether there is at least one match.
+       * **filter** - an optional expression to filter the target features to check. If not set, all the features will be checked.
+       * **limit** - an optional integer to limit the number of matching features. If not set, all the matching features will be returned.
        * **cache** - set this to true to build a local spatial index (most of the time, this is unwanted, unless you are working with a particularly slow data provider)
    * - Examples
-     - * ``overlay_equals('regions')`` → True
-       * ``overlay_equals('regions', name)`` → ['South Africa', 'Africa', 'World']
-       * ``overlay_equals('regions', name, name != 'World')`` → ['South Africa', 'Africa']
-       * ``overlay_equals('regions', name, limit:=1)`` → ['South Africa']
+     - * ``overlay_equals('regions')`` → true if the current feature is spatially equal to a region
+       * ``overlay_equals('regions', filter:= population > 10000)`` → true if the current feature is spatially equal to a region with a population greater than 10000
+       * ``overlay_equals('regions', name)`` → an array of names, for the regions spatially equal to the current feature
+       * ``array_sort(overlay_equals(layer:='regions', expression:="name", filter:= population > 10000))`` → an ordered array of names, for the regions spatially equal to the current feature and with a population greater than 10000
+       * ``overlay_equals(layer:='regions', expression:= geom_to_wkt($geometry), limit:=2)`` → an array of geometries (in WKT), for up to two regions spatially equal to the current feature
 
 
 .. end_overlay_equals_section
@@ -2063,26 +2078,31 @@ Performs a spatial join of type EQUALS. This returns an array of results of an e
 overlay_intersects
 ..................
 
-Performs a spatial join of type INTERSECTS. This returns an array of results of an expression evaluated on features from a different layer that INTERSECTS the current feature, or, if no expression if provided, simply returns whether at least one feature from the other layer INTERSECTS the current feature.
+Returns whether the current feature spatially intersects at least one feature from a target layer, or an array of expression-based results for the features in the target layer intersected by the current feature.
+
+
+
+Read more on the underlying GEOS "Intersects" predicate, as described in PostGIS `ST_INTERSECTS <https://postgis.net/docs/ST_Intersects.html>`_ function.
 
 .. list-table::
    :widths: 15 85
 
    * - Syntax
-     - overlay_intersects(layer, [expression], [filter], [limit], [cache=False])
+     - overlay_intersects(layer, [expression], [filter], [limit], [cache=false])
 
        [] marks optional arguments
    * - Arguments
-     - * **layer** - the other layer
-       * **expression** - an optional expression to evaluate on the features from the other layer (if not set, the function will just return a boolean indicating whether there is at least one match)
-       * **filter** - an optional expression to filter the matching features (if not set, all features will be returned)
-       * **limit** - an optional integer to limit the number of matching features (if not set, all features will be returned)
+     - * **layer** - the layer whose overlay is checked
+       * **expression** - an optional expression to evaluate on the features from the target layer. If not set, the function will just return a boolean indicating whether there is at least one match.
+       * **filter** - an optional expression to filter the target features to check. If not set, all the features will be checked.
+       * **limit** - an optional integer to limit the number of matching features. If not set, all the matching features will be returned.
        * **cache** - set this to true to build a local spatial index (most of the time, this is unwanted, unless you are working with a particularly slow data provider)
    * - Examples
-     - * ``overlay_intersects('regions')`` → True
-       * ``overlay_intersects('regions', name)`` → ['South Africa', 'Africa', 'World']
-       * ``overlay_intersects('regions', name, name != 'World')`` → ['South Africa', 'Africa']
-       * ``overlay_intersects('regions', name, limit:=1)`` → ['South Africa']
+     - * ``overlay_intersects('regions')`` → true if the current feature spatially intersects a region
+       * ``overlay_intersects('regions', filter:= population > 10000)`` → true if the current feature spatially intersects a region with a population greater than 10000
+       * ``overlay_intersects('regions', name)`` → an array of names, for the regions intersected by the current feature
+       * ``array_sort(overlay_intersects(layer:='regions', expression:="name", filter:= population > 10000))`` → an ordered array of names, for the regions intersected by the current feature and with a population greater than 10000
+       * ``overlay_intersects(layer:='regions', expression:= geom_to_wkt($geometry), limit:=2)`` → an array of geometries (in WKT), for up to two regions intersected by the current feature
 
 
 .. end_overlay_intersects_section
@@ -2094,27 +2114,33 @@ Performs a spatial join of type INTERSECTS. This returns an array of results of 
 overlay_nearest
 ...............
 
-This returns an array of results of an expression evaluated on features from a different layer ordered BY DISTANCE to the current feature, or, if no expression if provided, simply returns whether at least one feature from the other layer was found. Note : this function can be slow and consume a lot of memory for large layers.
+Returns whether the current feature has feature(s) from a target layer within a given distance, or an array of expression-based results for the features in the target layer within a distance from the current feature.
+
+
+
+Note: This function can be slow and consume a lot of memory for large layers.
 
 .. list-table::
    :widths: 15 85
 
    * - Syntax
-     - overlay_nearest(layer, [expression], [filter], [limit], [max_distance], [cache=False])
+     - overlay_nearest(layer, [expression], [filter], [limit=1], [max_distance], [cache=false])
 
        [] marks optional arguments
    * - Arguments
-     - * **layer** - the other layer
-       * **expression** - an optional expression to evaluate on the features from the other layer (if not set, the function will just return a boolean indicating whether there is at least one match)
-       * **filter** - an optional expression to filter the matching features (if not set, all features will be returned)
-       * **limit** - an optional integer to limit the number of matching features (if not set, only the nearest feature will be returned)
-       * **max_distance** - an optional maximum distance to limit the number of matching features (if not set, only the nearest feature will be returned)
+     - * **layer** - the target layer
+       * **expression** - an optional expression to evaluate on the features from the target layer. If not set, the function will just return a boolean indicating whether there is at least one match.
+       * **filter** - an optional expression to filter the target features to check. If not set, all the features in the target layer will be used.
+       * **limit** - an optional integer to limit the number of matching features. If not set, only the nearest feature will be returned. If set to -1, returns all the matching features.
+       * **max_distance** - an optional distance to limit the search of matching features. If not set, all the features in the target layer will be used.
        * **cache** - set this to true to build a local spatial index (most of the time, this is unwanted, unless you are working with a particularly slow data provider)
    * - Examples
-     - * ``overlay_nearest('regions')`` → True
-       * ``overlay_nearest('regions', name)`` → ['South Africa', 'Africa', 'World']
-       * ``overlay_nearest('regions', name, name != 'World')`` → ['South Africa', 'Africa']
-       * ``overlay_nearest('regions', name, limit:=1)`` → ['South Africa']
+     - * ``overlay_nearest('airports')`` → true if the "airports" layer has at least one feature
+       * ``overlay_nearest('airports', max_distance:= 5000)`` → true if there is an airport within a distance of 5000 map units from the current feature
+       * ``overlay_nearest('airports', name)`` → the name of the closest airport to the current feature
+       * ``overlay_nearest(layer:='airports', expression:= name, max_distance:= 5000)`` → the name of the closest airport within a distance of 5000 map units from the current feature
+       * ``overlay_nearest(layer:='airports', expression:="name", filter:= "Use"='Civilian', limit:=3)`` → an array of names, for up to the three closest civilian airports ordered by distance
+       * ``overlay_nearest(layer:='airports', expression:="name", limit:= -1, max_distance:= 5000)`` → an array of names, for all the airports within a distance of 5000 map units from the current feature, ordered by distance
 
 
 .. end_overlay_nearest_section
@@ -2126,26 +2152,31 @@ This returns an array of results of an expression evaluated on features from a d
 overlay_touches
 ...............
 
-Performs a spatial join of type TOUCHES. This returns an array of results of an expression evaluated on features from a different layer that TOUCHES the current feature, or, if no expression if provided, simply returns whether at least one feature from the other layer TOUCHES the current feature.
+Returns whether the current feature spatially touches at least one feature from a target layer, or an array of expression-based results for the features in the target layer touched by the current feature.
+
+
+
+Read more on the underlying GEOS "Touches" predicate, as described in PostGIS `ST_TOUCHES <https://postgis.net/docs/ST_Touches.html>`_ function.
 
 .. list-table::
    :widths: 15 85
 
    * - Syntax
-     - overlay_touches(layer, [expression], [filter], [limit], [cache=False])
+     - overlay_touches(layer, [expression], [filter], [limit], [cache=false])
 
        [] marks optional arguments
    * - Arguments
-     - * **layer** - the other layer
-       * **expression** - an optional expression to evaluate on the features from the other layer (if not set, the function will just return a boolean indicating whether there is at least one match)
-       * **filter** - an optional expression to filter the matching features (if not set, all features will be returned)
-       * **limit** - an optional integer to limit the number of matching features (if not set, all features will be returned)
+     - * **layer** - the layer whose overlay is checked
+       * **expression** - an optional expression to evaluate on the features from the target layer. If not set, the function will just return a boolean indicating whether there is at least one match.
+       * **filter** - an optional expression to filter the target features to check. If not set, all the features will be checked.
+       * **limit** - an optional integer to limit the number of matching features. If not set, all the matching features will be returned.
        * **cache** - set this to true to build a local spatial index (most of the time, this is unwanted, unless you are working with a particularly slow data provider)
    * - Examples
-     - * ``overlay_touches('regions')`` → True
-       * ``overlay_touches('regions', name)`` → ['South Africa', 'Africa', 'World']
-       * ``overlay_touches('regions', name, name != 'World')`` → ['South Africa', 'Africa']
-       * ``overlay_touches('regions', name, limit:=1)`` → ['South Africa']
+     - * ``overlay_touches('regions')`` → true if the current feature spatially touches a region
+       * ``overlay_touches('regions', filter:= population > 10000)`` → true if the current feature spatially touches a region with a population greater than 10000
+       * ``overlay_touches('regions', name)`` → an array of names, for the regions touched by the current feature
+       * ``array_sort(overlay_touches(layer:='regions', expression:="name", filter:= population > 10000))`` → an ordered array of names, for the regions touched by the current feature and with a population greater than 10000
+       * ``overlay_touches(layer:='regions', expression:= geom_to_wkt($geometry), limit:=2)`` → an array of geometries (in WKT), for up to two regions touched by the current feature
 
 
 .. end_overlay_touches_section
@@ -2157,26 +2188,31 @@ Performs a spatial join of type TOUCHES. This returns an array of results of an 
 overlay_within
 ..............
 
-Performs a spatial join of type WITHIN. This returns an array of results of an expression evaluated on features from a different layer that are WITHIN the current feature, or, if no expression if provided, simply returns whether at least one feature from the other layer is WITHIN the current feature.
+Returns whether the current feature is spatially within at least one feature from a target layer, or an array of expression-based results for the features in the target layer that contain the current feature.
+
+
+
+Read more on the underlying GEOS "Within" predicate, as described in PostGIS `ST_WITHIN <https://postgis.net/docs/ST_Within.html>`_ function.
 
 .. list-table::
    :widths: 15 85
 
    * - Syntax
-     - overlay_within(layer, [expression], [filter], [limit], [cache=False])
+     - overlay_within(layer, [expression], [filter], [limit], [cache=false])
 
        [] marks optional arguments
    * - Arguments
-     - * **layer** - the other layer
-       * **expression** - an optional expression to evaluate on the features from the other layer (if not set, the function will just return a boolean indicating whether there is at least one match)
-       * **filter** - an optional expression to filter the matching features (if not set, all features will be returned)
-       * **limit** - an optional integer to limit the number of matching features (if not set, all features will be returned)
+     - * **layer** - the layer whose overlay is checked
+       * **expression** - an optional expression to evaluate on the features from the target layer. If not set, the function will just return a boolean indicating whether there is at least one match.
+       * **filter** - an optional expression to filter the target features to check. If not set, all the features will be checked.
+       * **limit** - an optional integer to limit the number of matching features. If not set, all the matching features will be returned.
        * **cache** - set this to true to build a local spatial index (most of the time, this is unwanted, unless you are working with a particularly slow data provider)
    * - Examples
-     - * ``overlay_within('regions')`` → True
-       * ``overlay_within('regions', name)`` → ['South Africa', 'Africa', 'World']
-       * ``overlay_within('regions', name, name != 'World')`` → ['South Africa', 'Africa']
-       * ``overlay_within('regions', name, limit:=1)`` → ['South Africa']
+     - * ``overlay_within('regions')`` → true if the current feature is spatially within a region
+       * ``overlay_within('regions', filter:= population > 10000)`` → true if the current feature is spatially within a region with a population greater than 10000
+       * ``overlay_within('regions', name)`` → an array of names, for the regions containing the current feature
+       * ``array_sort(overlay_within(layer:='regions', expression:="name", filter:= population > 10000))`` → an ordered array of names, for the regions containing the current feature and with a population greater than 10000
+       * ``overlay_within(layer:='regions', expression:= geom_to_wkt($geometry), limit:=2)`` → an array of geometries (in WKT), for up to two regions containing the current feature
 
 
 .. end_overlay_within_section
