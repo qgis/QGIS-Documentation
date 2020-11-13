@@ -34,7 +34,7 @@ raster layer will be resampled using ``nearest neighbor resampling``.
 The output raster data type will be set to the most complex
 data type present in the input datasets except when using the
 functions ``Mean``, ``Standard deviation`` and ``Variance`` (data type is always
-``Float32``or ``Float64`` depending on input float type) or ``Count``
+``Float32`` or ``Float64`` depending on input float type) or ``Count``
 and ``Variety`` (data type is always ``Int32``).
 
 - ``Count``: The count statistic will always result in the number of cells
@@ -1495,7 +1495,7 @@ Raster layer zonal statistics
 Calculates statistics for a raster layer's values, categorized by
 zones defined in another raster layer.
 
-.. seealso:: :ref:`qgiszonalstatistics`
+.. seealso:: :ref:`qgiszonalstatisticsfb`
 
 Parameters
 ..........
@@ -2170,7 +2170,7 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
-.. _qgiszonalstatistics:
+.. _qgiszonalstatisticsfb:
 
 Zonal statistics
 ----------------
@@ -2189,6 +2189,10 @@ Parameters
      - Name
      - Type
      - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: polygon]
+     - Vector polygon layer that contains the zones.
    * - **Raster layer**
      - ``INPUT_RASTER``
      - [raster]
@@ -2199,10 +2203,6 @@ Parameters
 
        Default: The first band of the input layer
      - If the raster is multiband, choose a band for the statistics.
-   * - **Vector layer containing zones**
-     - ``INPUT_VECTOR``
-     - [vector: polygon]
-     - Vector polygon layer that defines the zones.
    * - **Output column prefix**
      - ``COLUMN_PREFIX``
      - [string]
@@ -2229,6 +2229,21 @@ Parameters
        * 9 --- Majority
        * 10 --- Variety
        * 11 --- Variance
+   * - **Zonal Statistics**
+     - ``OUTPUT``
+     - [vector: polygon]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output vector polygon layer.
+       One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to GeoPackage...
+       * Save to PostGIS Table...
+       * Append to Layer...
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
@@ -2241,7 +2256,7 @@ Outputs
      - Name
      - Type
      - Description
-   * - **Vector layer containing zones and statistics**
+   * - **Zonal Statistics**
      - ``OUTPUT``
      - [vector: polygon]
      - The zone vector layer with added statistics.
@@ -2249,7 +2264,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:zonalstatistics``
+**Algorithm ID**: ``qgis:zonalstatisticsfb``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
