@@ -102,6 +102,47 @@ should be surrounded by ``[%`` and ``%]`` in the :guilabel:`Main properties` fra
 
     concat( 'Page ', @atlas_featurenumber, '/', @atlas_totalfeatures )
 
+* Return the name of the airports of the current atlas region feature,
+  based on their common attributes:
+
+  ::
+
+    aggregate( layer := 'airports',
+               aggregate := 'concatenate',
+               expression := "NAME",
+               filter := fk_regionId = attribute( @atlas_feature, 'ID' ),
+               concatenator := ', '
+             )
+
+  Or, if an ref:`attributes relation <vector_relations>` is set:
+
+  ::
+
+    relation_aggregate( relation := 'airports_in_region_relation',
+                        aggregate := 'concatenate',
+                        expression := "NAME",
+                        concatenator := ', '
+                      )
+
+* Return the name of the airports contained in the current atlas region feature,
+  based on their spatial relationship:
+
+  ::
+
+    aggregate( layer := 'airports',
+               aggregate := 'concatenate',
+               expression := "NAME",
+               filter := contains( geometry( @parent ), $geometry ),
+               concatenator := ', '
+             )
+
+  OR::
+
+    array_to_string( array:= overlay_contains( layer := 'airports',
+                                               expression := "NAME" ),
+                     delimiter:= ', '
+                   )
+
 * Return the lower X coordinate of the ``Map 1`` item's extent:
 
   ::
