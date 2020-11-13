@@ -158,72 +158,86 @@ Selecting WMS/WMTS Servers
 
 The first time you use the WMS feature in QGIS, there are no servers defined.
 
-Begin by clicking the |addWmsLayer| :sup:`Add WMS layer` button on the
-toolbar, or selecting :menuselection:`Layer --> Add WMS Layer...`.
+You then need to create connections to the server you are targeting:
 
-The dialog :guilabel:`Add Layer(s) from a Server` for adding layers from
-the WMS server appears. You can add some servers to play with by clicking the
-:guilabel:`Add Default Servers` button. This will add two WMS demo servers for you to
-use: the WMS servers of the DM Solutions Group and Lizardtech. To define a new
-WMS server in the :guilabel:`Layers` tab, select the :guilabel:`New` button. Then enter
-the parameters to connect to your desired WMS server, as listed in table_OGC_wms_:
+#. Go to the |wms| :guilabel:`WMS/WMTS` tab of the :guilabel:`Data Source
+   Manager` dialog, either by:
 
-\
+   * clicking the |dataSourceManager| :sup:`Open Data Source Manager` button
+     (or pressing :kbd:`Ctrl+L`) and enabling the tab
+   * clicking the |addWmsLayer| :sup:`Add WMS layer` button on the
+     *Manage Layers* toolbar
+   * or selecting :menuselection:`Layer --> Add Layer -->` |addWmsLayer|
+     :menuselection:`Add WMS/WMTS Layer...` menu
+#. Press :guilabel:`New` from the :guilabel:`Layers` tab.
+   The :guilabel:`Create a New WMS/WMTS Connection...` dialog appears.
 
-.. _table_OGC_wms:
+   .. tip:: Right-click the |wms| :guilabel:`WMS/WMTS` entry from within the
+    :ref:`Browser panel <label_browserpanel>` and select :guilabel:`New Connection...`
+    also opens the :guilabel:`Create a New WMS/WMTS Connection...` dialog.
 
-+--------------------------------------+------------------------------------------------------------------+
-| Name                                 | A name for this connection.  This name will be used in the       |
-|                                      | Server Connections drop-down box so that you can distinguish     |
-|                                      | it from other WMS servers.                                       |
-+--------------------------------------+------------------------------------------------------------------+
-| URL                                  | URL of the server providing the data. This must be a resolvable  |
-|                                      | host name -- the same format as you would use to open a telnet   |
-|                                      | connection or ping a host.                                       |
-+--------------------------------------+------------------------------------------------------------------+
-| Username                             | Username to access a secured WMS server.  This parameter is      |
-|                                      | optional.                                                        |
-+--------------------------------------+------------------------------------------------------------------+
-| Password                             | Password for a basic authenticated WMS server. This parameter    |
-|                                      | is optional.                                                     |
-+--------------------------------------+------------------------------------------------------------------+
-| Ignore GetMap URI                    | |checkbox|                                                       |
-|                                      | :guilabel:`Ignore GetMap URI reported in capabilities`. Use      |
-|                                      | given URI from URL field above.                                  |
-+--------------------------------------+------------------------------------------------------------------+
-| Ignore GetFeatureInfo URI            | |checkbox|                                                       |
-|                                      | :guilabel:`Ignore GetFeatureInfo URI reported in capabilities`.  |
-|                                      | Use given URI from URL field above.                              |
-+--------------------------------------+------------------------------------------------------------------+
+#. Then enter the parameters to connect to your desired WMS server, as listed
+   below:
 
-Table OGC 1: WMS Connection Parameters
+   .. _figure_OGC_create_wms_connection:
+
+   .. figure:: img/add_connection_wms.png
+      :align: center
+
+      Creating a connection to a WMS server
+
+
+   * :guilabel:`Name`: A name for the connection. This name will be used in
+     the Server Connections drop-down box so that you can distinguish it from
+     other WMS servers.
+   * :guilabel:`URL`: URL of the server providing the data. This must be a
+     resolvable host name -- the same format as you would use to open a telnet
+     connection or ping a host, i.e. the base URL only.
+     For example, you shouldn't have fragments such as ``request=GetCapabilities``
+     or ``version=1.0.0`` in your URL.
+   * :guilabel:`Authentication` (optional): using a :ref:`stored configuration
+     <authentication_workflow>` or a basic authentication with
+     :guilabel:`Username` and :guilabel:`Password`.
+
+     .. warning::
+
+      Entering **username** and **password** in the :guilabel:`Authentication`
+      tab will keep unprotected credentials in the connection configuration.
+      Those **credentials will be visible** if, for instance, you shared the
+      project file with someone. Therefore, it's advisable to save your
+      credentials in a *Authentication configuration* instead
+      (:guilabel:`configurations` tab).
+      See :ref:`authentication_index` for more details.
+
+   * HTTP :guilabel:`Referer`
+   * :guilabel:`DPI-Mode`: Available options are **all**, **off**, **QGIS**,
+     **UMN** and **GeoServer**
+   * |unchecked| :guilabel:`Ignore GetMap/GetTile URI reported in capabilities`:
+     if checked, use given URI from the :guilabel:`URL` field above.
+   * |unchecked| :guilabel:`Ignore GetFeatureInfo URI reported in capabilities`:
+     if checked, use given URI from the :guilabel:`URL` field above.
+   * |unchecked| :guilabel:`Ignore axis orientation (WMS 1.3/WMTS)`
+   * |unchecked| :guilabel:`Ignore reported layer extents`: because the extent
+     reported by raster layers may be smaller than the actual area which can
+     be rendered (notably for WMS servers with symbology which takes more space
+     than the data extent), check this option to avoid cropping raster layers
+     to their reported extents, resulting in truncated symbols on the borders
+     of these layers.
+   * |unchecked| :guilabel:`Invert axis orientation`
+   * |unchecked| :guilabel:`Smooth pixmap transformation`
+#. Press :guilabel:`OK`
+
+Once the new WMS server connection has been created, it will be preserved for
+future QGIS sessions.
 
 .. index:: Proxy, Proxy server
 
 If you need to set up a proxy server to be able to receive WMS services from the
 internet, you can add your proxy server in the options. Choose
-:menuselection:`Settings --> Options` and click on the :guilabel:`Network & Proxy` tab.
+:menuselection:`Settings --> Options` and click on the :guilabel:`Network` tab.
 There, you can add your proxy settings and enable them by setting |checkbox|
 :guilabel:`Use proxy for web access`. Make sure that you select the correct
 proxy type from the :guilabel:`Proxy type` |selectString| drop-down menu.
-
-Once the new WMS server connection has been created, it will be preserved for
-future QGIS sessions.
-
-.. tip:: **On WMS Server URLs**
-
-   Be sure, when entering the WMS server URL, that you have the base URL only.
-   For example, you shouldn't have fragments such as ``request=GetCapabilities``
-   or ``version=1.0.0`` in your URL.
-
-.. warning::
-
-   Entering **username** and **password** in the :guilabel:`Authentication` tab
-   will keep unprotected credentials in the connection configuration. Those
-   **credentials will be visible** if, for instance, you shared the project file
-   with someone. Therefore, it's advisable to save your credentials in a
-   *Authentication configuration* instead (:guilabel:`configurations` tab).
-   See :ref:`authentication_index` for more details.
 
 .. _`ogc-wms-layers`:
 
@@ -736,4 +750,6 @@ features and view the attribute table.
 .. |unchecked| image:: /static/common/checkbox_unchecked.png
    :width: 1.3em
 .. |wcs| image:: /static/common/mIconWcs.png
+   :width: 1.5em
+.. |wms| image:: /static/common/mIconWms.png
    :width: 1.5em
