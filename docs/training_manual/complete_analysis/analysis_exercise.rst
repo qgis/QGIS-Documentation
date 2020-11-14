@@ -256,7 +256,7 @@ First we change the resolution of our rainfall data to 30 meters
 #. Set the :guilabel:`Horizontal` and :guilabel:`Vertical` resolution
    to ``30`` (meters).
 #. Save the file as :file:`Rainfall30.tif` in
-   :file:`rainfall/reprojected` (:guilabel:`File name`)`
+   :file:`rainfall/reprojected` (:guilabel:`File name`)
 
 Then we align the DEM:
 
@@ -267,7 +267,7 @@ Then we align the DEM:
 #. Set the :guilabel:`Horizontal` and :guilabel:`Vertical` resolution
    to 30 (meters)
 #. Under :guilabel:`Extent`, click on
-   :guilabel:`Calculate from Layer` and choose ``rainfall30``
+   :guilabel:`Calculate from Layer` and choose ``Rainfall30``
 #. Save the file as :file:`DEM30.tif` in :file:`DEM/reprojected`
    (:guilabel:`File name`)
 
