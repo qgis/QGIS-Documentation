@@ -71,7 +71,8 @@ Loading Data into the Map
 ----------------------------------------------------------------------
 
 In order to process the data, you will need to load the necessary
-layers (street names, zones, rainfall, DEM) into the map canvas.
+layers (street names, zones, rainfall, DEM, districts) into the map
+canvas.
 
 For vectors...
 ......................................................................
@@ -109,6 +110,9 @@ For vectors...
    :file:`Generalised_Zoning_Dissolve_UTM33S.shp` file in the
    :file:`Zoning` directory.
 #. Rename it to ``Zoning``.
+#. Load also the vector layer
+   :file:`admin_boundaries/Western_Cape_UTM33S.shp` into your map.
+#. Rename it to ``Districts``.
 
 For rasters...
 ......................................................................
@@ -142,30 +146,30 @@ going to be used anyway.
 Find the Correct Districts
 ----------------------------------------------------------------------
 
-#. Load the vector layer
-   :file:`admin_boundaries/Western_Cape_UTM33S.shp` into your map.
-#. Rename it to ``Districts``.
+Due to the aforementioned area of investigation, we need to limit our
+districts to the following ones:
+
+* ``Bellville``
+* ``Cape``
+* ``Goodwood``
+* ``Kuils River``
+* ``Mitchells Plain``
+* ``Simon Town``
+* ``Wynberg``
+
 #. Right-click on the ``Districts`` layer in the
    :guilabel:`Layers` panel.
 #. In the menu that appears,  select the :guilabel:`Filter...` menu
    item.
    The :guilabel:`Query Builder` dialog appears.
 
-   You will now build a query to select only the following districts:
-
-   * ``Bellville``
-   * ``Cape``
-   * ``Goodwood``
-   * ``Kuils River``
-   * ``Mitchells Plain``
-   * ``Simon Town``
-   * ``Wynberg``
+#. You will now build a query to select only the candidate districts:
 
    #. In the :guilabel:`Fields` list, double-click on the
       ``NAME_2`` field to make it appear in the
       :guilabel:`SQL where clause` text field below
-   #. Click the :guilabel:`=` button; an ``=`` sign is appended to the
-      SQL query
+   #. Click the :guilabel:`IN` button to append it to the SQL query
+   #. Open the brackets
    #. Click the :guilabel:`All` button below the (currently empty)
       :guilabel:`Values` list.
 
@@ -173,33 +177,25 @@ Find the Correct Districts
       list with the values of the selected field (``NAME_2``).
    #. Double-click the value ``Bellville`` in the
       :guilabel:`Values` list to append it to the SQL query.
+   #. Add a comma and double-click to add ``Cape`` district
+   #. Repeat the previous step for the remaining districts
+   #. Close the brackets
 
-      In order to select more than one district, you'll need to use
-      the *OR* boolean operator.
-   #. Click the :guilabel:`OR` button and it will be appended to the
-      SQL query
-   #. Using a process similar to the above, add the following to the
-      existing SQL query::
+      The final query should be (the order of the districts in the brackets
+      does not matter)::
 
-        "NAME_2" = 'Cape'
+        "NAME_2" in ('Bellville', 'Cape', 'Goodwood', 'Kuils River',
+                     'Mitchells Plain', 'Simon Town', 'Wynberg')
 
-   #. Add another *OR* operator, then work your way through
-      the list of districts above in a similar fashion.
-
-      The final query should be::
-
-        "NAME_2" = 'Bellville' OR "NAME_2" = 'Cape' OR
-        "NAME_2" = 'Goodwood' OR "NAME_2" = 'Kuils River' OR
-        "NAME_2" = 'Mitchells Plain' OR "NAME_2" = 'Simon Town' OR
-        "NAME_2" = 'Wynberg'
-
-      .. note:: By using the ``IN`` operator, the query would look
+      .. note:: You can also use the ``OR`` operator; the query would look
          like this::
-           
-           "NAME_2" in ('Bellville', 'Cape', 'Goodwood', 'Kuils River',
-                        'Mitchells Plain', 'Simon Town', 'Wynberg')
 
-   #. Click :guilabel:`OK`.
+          "NAME_2" = 'Bellville' OR "NAME_2" = 'Cape' OR
+          "NAME_2" = 'Goodwood' OR "NAME_2" = 'Kuils River' OR
+          "NAME_2" = 'Mitchells Plain' OR "NAME_2" = 'Simon Town' OR
+          "NAME_2" = 'Wynberg'
+
+   #. Click :guilabel:`OK` twice.
 
       The districts shown in your map are now limited to those in the
       list above.
@@ -210,9 +206,6 @@ Clip the Rasters
 Now that you have an area of interest, you can clip the rasters to
 this area.
 
-#. Ensure that the only layers that are visible are the ``DEM``,
-   ``Rainfall`` and ``Districts`` layers
-#. ``Districts`` must be on top to be visible
 #. Open the clipping dialog by selecting the menu item
    :menuselection:`Raster --> Extraction --> Clip Raster by Mask Layer...`
 #. In the :guilabel:`Input layer` dropdown list, select the ``DEM``
@@ -222,7 +215,7 @@ this area.
 #. Scroll down and specify an output location in the
    :guilabel:`Clipped (mask)` text field by clicking the
    :guilabel:`...` button and choosing :guilabel:`Save to File...`
-   
+
    #. Navigate to the :file:`Rasterprac` directory
    #. Enter a file name - ``DEM_clipped.tif``
    #. Save
@@ -253,8 +246,8 @@ First we change the resolution of our rainfall data to 30 meters
 
 #. Right-click on the ``Rainfall_clipped`` layer and select
    :menuselection:`Export--> Save As...` in the context menu.
-#. Set the :guilabel:`Horizontal` and :guilabel:`Vertical` resolution
-   to ``30`` (meters).
+#. Under :guilabel:`Resolution`, set the :guilabel:`Horizontal` and
+   :guilabel:`Vertical` resolutions to ``30`` (meters).
 #. Save the file as :file:`Rainfall30.tif` in
    :file:`rainfall/reprojected` (:guilabel:`File name`)`
 
@@ -264,8 +257,8 @@ Then we align the DEM:
    :menuselection:`Export--> Save As...` in the context menu
 #. For :guilabel:`CRS`, choose *WGS 84 / UTM zone 33S* (EPSG code
    ``32733``)
-#. Set the :guilabel:`Horizontal` and :guilabel:`Vertical` resolution
-   to 30 (meters)
+#. Under :guilabel:`Resolution`, set the :guilabel:`Horizontal` and
+   :guilabel:`Vertical` resolutions to ``30`` (in meters).
 #. Under :guilabel:`Extent`, click on
    :guilabel:`Calculate from Layer` and choose ``rainfall30``
 #. Save the file as :file:`DEM30.tif` in :file:`DEM/reprojected`
@@ -281,12 +274,12 @@ Changing the symbology of vector layers
    :guilabel:`Streets` layer
 #. Select :guilabel:`Properties` from the menu that appears
 #. Switch to the :guilabel:`Symbology` tab in the dialog that appears
-#. Click on the :guilabel:`Color` dropdown
-#. Select a new color in the dialog that appears
-#. Click :guilabel:`OK`
-#. Click :guilabel:`OK` again in the :guilabel:`Layer Properties`
+#. Click on the :guilabel:`Fill` entry in the top widget
+#. Select a symbol in the list below or set a new one (color,
+   transparency, ...)
+#. Click :guilabel:`OK` to close the :guilabel:`Layer Properties`
    dialog.
-   This will change the color of the :guilabel:`Streets` layer.
+   This will change the rendering of the :guilabel:`Streets` layer.
 #. Follow a similar process for the :guilabel:`Zoning` layer and
    choose an appropriate color for it
 
