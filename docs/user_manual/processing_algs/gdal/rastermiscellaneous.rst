@@ -17,7 +17,7 @@ be created. Overviews are lower resolution copies of the data which
 QGIS uses depending of the level of zoom.
 
 This algorithm is derived from the
-`GDAL addo utility <https://gdal.org/gdaladdo.html>`_.
+`GDAL addo utility <https://gdal.org/programs/gdaladdo.html>`_.
 
 **Default menu**: :menuselection:`Raster --> Miscellaneous`
 
@@ -136,7 +136,7 @@ GDAL-supported rasters.
 With a mosaic you can merge several raster files.
 
 This algorithm is derived from the
-`GDAL buildvrt utility <https://gdal.org/gdalbuildvrt.html>`_.
+`GDAL buildvrt utility <https://gdal.org/programs/gdalbuildvrt.html>`_.
 
 **Default menu**: :menuselection:`Raster --> Miscellaneous`
 
@@ -479,7 +479,7 @@ table from an input raster and define the output raster type. All
 the images must be in the same coordinate system.
 
 This algorithm is derived from the
-`GDAL merge utility <https://gdal.org/gdal_merge.html>`_.
+`GDAL merge utility <https://gdal.org/programs/gdal_merge.html>`_.
 
 **Default menu**: :menuselection:`Raster --> Miscellaneous`
 
@@ -928,7 +928,7 @@ The gdalinfo program lists various information about a GDAL supported
 raster dataset.
 
 This algorithm is derived from the
-`GDAL info utility <https://gdal.org/gdalinfo.html>`_.
+`GDAL info utility <https://gdal.org/programs/gdalinfo.html>`_.
 
 **Default menu**: :menuselection:`Raster --> Miscellaneous`
 
@@ -1033,7 +1033,7 @@ coordinate system and have a matching number of bands.
 Optionally pyramid levels are generated.
 
 This algorithm is derived from the
-`GDAL Retile utility <https://gdal.org/gdal_retile.html>`_.
+`GDAL Retile utility <https://gdal.org/programs/gdal_retile.html>`_.
 
 Parameters
 ..........
@@ -1224,7 +1224,7 @@ the raster.
 This output is suitable for use with MapServer as a raster tileindex.
 
 This algorithm is derived from the
-`GDAL Tile Index utility <https://gdal.org/gdaltindex.html>`_.
+`GDAL Tile Index utility <https://gdal.org/programs/gdaltindex.html>`_.
 
 **Default menu**: :menuselection:`Raster --> Miscellaneous`
 
