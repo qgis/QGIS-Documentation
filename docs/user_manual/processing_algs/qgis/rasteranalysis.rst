@@ -2172,6 +2172,7 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
+.. _qgiszonalstatistics:
 .. _qgiszonalstatisticsfb:
 
 Zonal statistics
