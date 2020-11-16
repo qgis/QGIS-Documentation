@@ -607,7 +607,7 @@ come from GDAL which is responsible for the writing of the file:
 
 Besides GeoJSON there is also an option to export to
 "GeoJSON - Newline Delimited"
-(see https://gdal.org/drv_geojsonseq.html).
+(see https://gdal.org/drivers/vector/geojsonseq.html).
 Instead of a FeatureCollection with Features, you can stream one type
 (probably only Features) sequentially separated with newlines.
 

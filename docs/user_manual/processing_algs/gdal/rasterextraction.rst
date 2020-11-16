@@ -15,7 +15,7 @@ Clip raster by extent
 Clips any GDAL-supported raster file to a given extent.
 
 This algorithm is derived from the
-`GDAL grid utility <https://gdal.org/gdal_grid.html>`_.
+`GDAL warp utility <https://gdal.org/programs/gdalwarp.htm>`_.
 
 **Default menu**: :menuselection:`Raster --> Extraction`
 
@@ -138,7 +138,7 @@ Clip raster by mask layer
 Clips any GDAL-supported raster by a vector mask layer.
 
 This algorithm is derived from the
-`GDAL grid utility <https://gdal.org/gdal_grid.html>`_.
+`GDAL warp utility <https://gdal.org/programs/gdalwarp.htm>`_.
 
 **Default menu**: :menuselection:`Raster --> Extraction`
 
@@ -316,7 +316,7 @@ Contour
 Extracts contour lines from any GDAL-supported elevation raster.
 
 This algorithm is derived from the
-`GDAL contour utility <https://gdal.org/gdal_contour.html>`_.
+`GDAL contour utility <https://gdal.org/programs/gdal_contour.html>`_.
 
 **Default menu**: :menuselection:`Raster --> Extraction`
 
@@ -443,7 +443,7 @@ Contour Polygons
 Extracts contour polygons from any GDAL-supported elevation raster.
 
 This algorithm is derived from the
-`GDAL contour utility <https://gdal.org/gdal_contour.html>`_.
+`GDAL contour utility <https://gdal.org/programs/gdal_contour.html>`_.
 
 Parameters
 ..........
