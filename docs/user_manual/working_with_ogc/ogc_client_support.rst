@@ -231,23 +231,34 @@ Loading WMS/WMTS Layers
 -----------------------
 
 Once you have successfully filled in your parameters, you can use the
-:guilabel:`Connect` button to retrieve the capabilities of the selected server. This
-includes the image encoding, layers, layer styles and projections. Since this is
-a network operation, the speed of the response depends on the quality of your
-network connection to the WMS server. While downloading data from the WMS server,
-the download progress is visualized in the lower left of the WMS dialog.
+:guilabel:`Connect` button to retrieve the capabilities of the selected server.
+This includes the image encoding, layers, layer styles and projections.
+Since this is a network operation, the speed of the response depends on the
+quality of your network connection to the WMS server.
+While downloading data from the WMS server, the download progress is
+visualized in the lower left corner of the main QGIS dialog.
 
-.. following should be replaced in 1.8 with the response of de DM Solutions Group
-
-Your screen should now look a bit like figure_OGC_add_wms_, which shows the response
-provided by the European Soil Portal WMS server.
+Your screen should now look a bit like :numref:`figure_OGC_add_wms`,
+which shows the response provided by a WMS server.
 
 .. _figure_OGC_add_wms:
 
 .. figure:: img/connection_wms.png
    :align: center
 
-   Dialog for adding a WMS server, showing its available layers
+   Dialog for adding a WMS server, with filter on available layers
+
+The upper part of the :guilabel:`Layers` tab of the dialog shows a tree
+structure that can include layer groups embedding layers with their associated
+image style(s) served by the server.
+Each item can be identified by:
+
+* an :guilabel:`ID`
+* a :guilabel:`Name`
+* a :guilabel:`Title`
+* and an :guilabel:`Astract`.
+
+The list can be filtered using the |search| widget in the top right corner.
 
 **Image Encoding**
 
@@ -270,47 +281,49 @@ requirements.
 
 **Options**
 
-The Options area of the dialog provides a text field where you can add a :guilabel:`Layer name`
-for the WMS layer. This name will appear in the legend after loading
-the layer.
+The Options area of the dialog provides means to configure the WMS requests.
+You can define:
 
-Below the layer name, you can define :guilabel:`Tile size` if you want to set tile
-sizes (e.g., 256x256) to split up the WMS request into multiple requests.
+* :guilabel:`Tile size` if you want to set tile sizes (e.g., 256x256)
+  to split up the WMS request into multiple requests.
+* The :guilabel:`Request step size`
+* The :guilabel:`Feature limit for GetFeatureInfo` defines the maximum number
+  of GetFeatureInfo results from the server.
 
-The :guilabel:`Feature limit for GetFeatureInfo` defines what features from
-the server to query.
+* If you select a WMS from the list, a field with the default projection provided
+  by the web server appears. Press the :guilabel:`Change...` button to replace
+  the default projection of the WMS with another CRS supported by the WMS server.
 
-If you select a WMS from the list, a field with the default projection provided
-by the mapserver appears. If the :guilabel:`Change...` button is active, you can click
-on it and change the default projection of the WMS to another CRS provided by
-the WMS server.
+* Finally you can activate |checkbox| :guilabel:`Use contextual WMS Legend` if the
+  WMS Server supports this feature. Then only the relevant legend for your current
+  map view extent will be shown and thus will not include legend items for items
+  you can't see in the current map.
 
-Finally you can activate |checkbox| :guilabel:`Use contextual WMS-Legend` if the
-WMS Server supports this feature. Then only the relevant legend for your current map view extent
-will be shown and thus will not include legend items for things you can't see in the current map.
+At the bottom of the dialog, a :guilabel:`Layer name` text field displays the
+selected item's :guilabel:`Title`. You can change the name at your will.
+This name will appear in the :guilabel:`Layers` panel after you pressed the
+:guilabel:`Add` button and loaded the layer(s) in QGIS.
+
+You can select several layers at once, but only one image style per layer.
+When several layers are selected, they will be combined at the WMS server
+and transmitted to QGIS in one go, as a single layer.
+The default name is a slash (`/`) separated list of their original title.
 
 **Layer Order**
 
 The :guilabel:`Layer Order` tab lists the selected layers available from the
-current connected WMS server. You may notice that some layers are expandable;
-this means that the layer can be displayed in a choice of image styles.
+current connected WMS server.
 
-You can select several layers at once, but only one image style per layer.
-When several layers are selected, they will be combined at the WMS server
-and transmitted to QGIS in one go.
-
-
-.. tip:: **WMS Layer Ordering**
-
-   WMS layers rendered by a server are overlaid in the order listed in the Layers
-   section, from top to bottom of the list. If you want to change the overlay
-   order, you can use the :guilabel:`Layer Order` tab.
+WMS layers rendered by a server are overlaid in the order listed in the
+:guilabel:`Layers` tab, from top to bottom of the list.
+If you want to change the overlay order, you can use the :guilabel:`Up`
+and :guilabel:`Down` buttons of the :guilabel:`Layer Order` tab.
 
 .. _`ogc-wms-transparency`:
 
 **Transparency**
 
-In this version of QGIS, the :guilabel:`Global transparency` setting from the
+The :guilabel:`Global transparency` setting from the
 :guilabel:`Layer Properties` is hard coded to be always on, where available.
 
 .. index::
@@ -723,6 +736,8 @@ features and view the attribute table.
    :width: 1.5em
 .. |addWmsLayer| image:: /static/common/mActionAddWmsLayer.png
    :width: 1.5em
+.. |browserExpand| image:: /static/common/browser_expand.png
+   :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
@@ -730,6 +745,8 @@ features and view the attribute table.
 .. |identify| image:: /static/common/mActionIdentify.png
    :width: 1.5em
 .. |kde| image:: /static/common/kde.png
+   :width: 1.5em
+.. |search| image:: /static/common/search.png
    :width: 1.5em
 .. |selectString| image:: /static/common/selectstring.png
    :width: 2.5em
