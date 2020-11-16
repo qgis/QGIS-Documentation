@@ -15,7 +15,7 @@ Assign projection
 Applies a coordinate system to a raster dataset.
 
 This algorithm is derived from the
-`GDAL edit utility <https://gdal.org/gdal_edit.html>`_.
+`GDAL edit utility <https://gdal.org/programs/gdal_edit.html>`_.
 
 **Default menu**: :menuselection:`Raster --> Projections`
 
@@ -73,7 +73,7 @@ Extracts the projection of a raster file and writes it into a *world*
 file with extension :file:`.wld`.
 
 This algorithm is derived from the
-`GDAL srsinfo utility <https://gdal.org/gdalsrsinfo.html>`_.
+`GDAL srsinfo utility <https://gdal.org/programs/gdalsrsinfo.html>`_.
 
 **Default menu**: :menuselection:`Raster --> Projections`
 
@@ -146,7 +146,7 @@ Reprojects a raster layer into another Coordinate Reference System
 The output file resolution and the resampling method can be chosen.
 
 This algorithm is derived from the
-`GDAL warp utility <https://gdal.org/gdalwarp.html>`_.
+`GDAL warp utility <https://gdal.org/programs/gdalwarp.html>`_.
 
 **Default menu**: :menuselection:`Raster --> Projections`
 

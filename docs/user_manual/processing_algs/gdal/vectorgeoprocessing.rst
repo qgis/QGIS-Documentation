@@ -118,7 +118,7 @@ Clip vector by extent
 Clips any OGR-supported vector file to a given extent.
 
 This algorithm is derived from the
-`ogr2ogr utility <https://gdal.org/ogr2ogr.html>`_.
+`GDAL ogr2ogr utility <https://gdal.org/programs/ogr2ogr.html>`_.
 
 Parameters
 ..........
@@ -194,8 +194,8 @@ Clip vector by mask layer
 -------------------------
 Clips any OGR-supported vector layer by a mask polygon layer.
 
-This algorithm is derived from the `ogr2ogr utility
-<https://gdal.org/ogr2ogr.html>`_.
+This algorithm is derived from the `GDAL ogr2ogr utility
+<https://gdal.org/programs/ogr2ogr.html>`_.
 
 Parameters
 ..........

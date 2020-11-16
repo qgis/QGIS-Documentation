@@ -93,7 +93,7 @@ It will convert a pseudocolor band from the input file to
 an RGB file of the desired format.
 
 This algorithm is derived from the
-`GDAL pct2rgb utility <https://gdal.org/pct2rgb.html>`_.
+`GDAL pct2rgb utility <https://gdal.org/programs/pct2rgb.html>`_.
 
 **Default menu**: :menuselection:`Raster --> Conversion`
 
@@ -174,7 +174,7 @@ raster sharing a common pixel value. Each polygon is created with an
 attribute indicating the pixel value of that polygon.
 
 This algorithm is derived from the
-`GDAL polygonize utility <https://gdal.org/gdal_polygonize.html>`_.
+`GDAL polygonize utility <https://gdal.org/programs/gdal_polygonize.html>`_.
 
 **Default menu**: :menuselection:`Raster --> Conversion`
 
@@ -272,7 +272,7 @@ The algorithm also makes it possible to reorder the bands for the
 newly-created raster.
 
 This algorithm is derived from the
-`GDAL translate utility <https://gdal.org/gdal_translate.html>`_.
+`GDAL translate utility <https://gdal.org/programs/gdal_translate.html>`_.
 
 Parameters
 ..........
@@ -383,7 +383,7 @@ classes it can be helpful to downsample your image with this algorithm
 before.
 
 This algorithm is derived from the
-`GDAL rgb2pct utility <https://gdal.org/rgb2pct.html>`_.
+`GDAL rgb2pct utility <https://gdal.org/programs/rgb2pct.html>`_.
 
 **Default menu**: :menuselection:`Raster --> Conversion`
 
@@ -456,7 +456,7 @@ Translate (convert format)
 Converts raster data between different formats.
 
 This algorithm is derived from the
-`GDAL translate utility <https://gdal.org/gdal_translate.html>`_.
+`GDAL translate utility <https://gdal.org/programs/gdal_translate.html>`_.
 
 **Default menu**: :menuselection:`Raster --> Conversion`
 
