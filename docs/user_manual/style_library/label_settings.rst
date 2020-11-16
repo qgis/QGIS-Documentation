@@ -310,8 +310,10 @@ the shape of the connector is recomputed.
 
    Labels with various callouts settings
 
-To add a callout to a label, enable the |labelcallout| :guilabel:`Callouts`
-tab and activate the |checkbox| :guilabel:`Draw callouts`. Then you can:
+To add a callout to a label, choose |label| :guilabel:`Label Settings`
+and click the |signPlus| :guilabel:`Add item` button. Then enable the
+|labelcallout| :guilabel:`Callouts` tab and activate the
+|checkbox| :guilabel:`Draw callouts`. Then you can:
 
 #. Select the :guilabel:`Style` of connector, one of:
 
@@ -352,10 +354,10 @@ tab and activate the |checkbox| :guilabel:`Draw callouts`. Then you can:
 Placement tab
 =============
 
-Choose the |labelplacement| :guilabel:`Placement` tab for configuring label placement
-and labeling priority. Note that the placement options differ according to the
-type of vector layer, namely point, line or polygon, and are affected by
-the global :ref:`PAL setting <automated_placement>`.
+Choose the |labelplacement| :guilabel:`Placement` tab from the label settings
+list widged for configuring label placement and labeling priority. Note that
+the placement options differ according to the type of vector layer, namely point,
+line or polygon, and are affected by the global :ref:`PAL setting <automated_placement>`.
 
 .. _cartographic:
 
@@ -432,6 +434,9 @@ line features.
 The :guilabel:`Label Anchoring` allows you to control the placement
 of labels along line features. Click on :guilabel:`Settings ...` and
 choose the position along the line which labels will be placed close to.
+You can select |LabelAnchorCenter| :guilabel:`Center of Line`, 
+|labelAnchorStart| :guilabel:`Start of Line`, |labelAnchorEnd| :guilabel:`End of Line`
+or |labelAnchorCustom| :guilabel:`Custom ...`.
 There are two :guilabel:`Placement Behaviours`: if you choose 
 :guilabel:`Preferred Placement Hint` the label anchor is only treated as
 hint for the preferred label placement. By choosing :guilabel:`Strict`
@@ -649,6 +654,14 @@ Under :guilabel:`Feature options`:
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |dataDefined| image:: /static/common/mIconDataDefine.png
+   :width: 1.5em
+.. |labelAnchorCenter| image:: /static/commmon/mActionLabelAnchorCenter.png
+   :width: 1.5em
+.. |labelAnchorCustom| image:: /static/commmon/mActionLabelAnchorCustom.png
+   :width: 1.5em
+.. |labelAnchorEnd| image:: /static/commmon/mActionLabelAnchorEnd.png
+   :width: 1.5em
+.. |labelAnchorStart| image::/static/common/mActionLabelAnchorStart.png
    :width: 1.5em
 .. |labelbackground| image:: /static/common/labelbackground.png
    :width: 1.5em
