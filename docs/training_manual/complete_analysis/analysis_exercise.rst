@@ -249,7 +249,7 @@ First we change the resolution of our rainfall data to 30 meters
 #. Under :guilabel:`Resolution`, set the :guilabel:`Horizontal` and
    :guilabel:`Vertical` resolutions to ``30`` (meters).
 #. Save the file as :file:`Rainfall30.tif` in
-   :file:`rainfall/reprojected` (:guilabel:`File name`)`
+   :file:`rainfall/reprojected` (:guilabel:`File name`)
 
 Then we align the DEM:
 
@@ -260,7 +260,7 @@ Then we align the DEM:
 #. Under :guilabel:`Resolution`, set the :guilabel:`Horizontal` and
    :guilabel:`Vertical` resolutions to ``30`` (in meters).
 #. Under :guilabel:`Extent`, click on
-   :guilabel:`Calculate from Layer` and choose ``rainfall30``
+   :guilabel:`Calculate from Layer` and choose ``Rainfall30``
 #. Save the file as :file:`DEM30.tif` in :file:`DEM/reprojected`
    (:guilabel:`File name`)
 
@@ -357,7 +357,7 @@ The new ``hillshade`` layer has appeared in the
 #. Note the effect when the transparent hillshade is superimposed over
    the clipped DEM.
    You may have to change the order of your layers, or click off the
-   ``rainfall30`` layer in order to see the effect.
+   ``Rainfall30`` layer in order to see the effect.
 
 Slope
 ----------------------------------------------------------------------
@@ -441,7 +441,7 @@ morning sunlight).
 Find the correct rainfall (greater than ``1000`` mm) the same way.
 Use the following expression::
 
-  rainfall30@1 > 1000
+  Rainfall30@1 > 1000
 
 Now that you have all three criteria each in separate rasters, you
 need to combine them to see which areas satisfy all the criteria.
