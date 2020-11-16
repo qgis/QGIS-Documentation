@@ -448,17 +448,18 @@ Placement for polygon layers
 You can choose one of the following options for placing labels in polygons
 (see figure_labels_placement_polygon_):
 
-* |radioButtonOn| :guilabel:`Offset from centroid`,
-* |radioButtonOff| :guilabel:`Horizontal (slow)`,
-* |radioButtonOff| :guilabel:`Around centroid`,
-* |radioButtonOff| :guilabel:`Free (slow)`,
-* |radioButtonOff| :guilabel:`Using perimeter`,
-* and |radioButtonOff| :guilabel:`Using perimeter (curved)`.
+* :guilabel:`Offset from centroid`,
+* :guilabel:`Around centroid`,
+* :guilabel:`Horizontal (slow)`,
+* :guilabel:`Free (Angled)(slow)`,
+* :guilabel:`Using perimeter`,
+* :guilabel:`Using perimeter (Curved)`,
+* and :guilabel:`Outside Polygons`.
 
 In the :guilabel:`Offset from centroid` settings you can
-specify if the centroid is of the |radioButtonOn| :guilabel:`visible
-polygon` or |radioButtonOff| :guilabel:`whole polygon`. That means that
-either the centroid is used for the polygon you can see on the map or the
+specify if the centroid is of the |radioButtonOn| :guilabel:`visible polygon`
+or |radioButtonOff| :guilabel:`whole polygon`. That means that either the 
+centroid is used for the polygon you can see on the map or the
 centroid is determined for the whole polygon, no matter if you can see the
 whole feature on the map. You can place your label within a specific
 quadrant, and define offset and rotation.
