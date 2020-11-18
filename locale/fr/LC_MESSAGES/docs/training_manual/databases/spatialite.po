@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Francis Gasc <francisgasc@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-05 01:57+0200\n"
 "PO-Revision-Date: 2020-03-16 19:20+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Francis Gasc <francisgasc@gmail.com>, 2020\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,7 +24,7 @@ msgstr ""
 
 #: ../../docs/training_manual/databases/spatialite.rst:2
 msgid "|LS| Working with SpatiaLite databases in QGIS"
-msgstr ""
+msgstr "|LS| Travailler avec les bases de données SpatiaLite dans QGIS"
 
 #: ../../docs/training_manual/databases/spatialite.rst:3
 msgid ""
@@ -36,34 +37,52 @@ msgid ""
 " database and explore the functionality provided to work with these "
 "databases in QGIS."
 msgstr ""
+"Alors que PostGIS est généralement utilisé sur un serveur pour fournir des "
+"capacités de base de données spatiales à plusieurs utilisateurs en même "
+"temps, QGIS prend également en charge l'utilisation d'un format de fichier "
+"appelé *SpatiaLite* qui est un moyen léger et portable de stocker une base "
+"de données spatiales entière dans un seul fichier. Il est évident que ces "
+"deux types de bases de données spatiales doivent être utilisés à des fins "
+"différentes, mais les mêmes principes et techniques de base s'appliquent aux"
+" deux. Créons une nouvelle base de données SpatiaLite et explorons les "
+"fonctionnalités fournies pour travailler avec ces bases de données dans le "
+"QGIS."
 
 #: ../../docs/training_manual/databases/spatialite.rst:14
 msgid ""
 "**The goal for this lesson:** To learn how to interact with SpatiaLite "
 "databases using the QGIS Browser interface."
 msgstr ""
+"**Le but de cette leçon:** Apprendre à interagir avec les bases de données "
+"SpatiaLite en utilisant l'interface du navigateur QGIS."
 
 #: ../../docs/training_manual/databases/spatialite.rst:18
 msgid "|basic| |FA| Creating a SpatiaLite database with the Browser"
-msgstr ""
+msgstr "|basic| |FA| Créer une base de données SpatiaLite avec le navigateur"
 
 #: ../../docs/training_manual/databases/spatialite.rst:20
 msgid ""
 "Using the Browser panel, we can create a new SpatiaLite database and get it "
 "setup for use in QGIS."
 msgstr ""
+"En utilisant le panneau navigateur, nous pouvons créer une nouvelle base de "
+"données SpatiaLite et la configurer pour une utilisation dans QGIS."
 
 #: ../../docs/training_manual/databases/spatialite.rst:23
 msgid ""
 "Right click on the :guilabel:`SpatiaLite` entry in the Browser tree and "
 "select :guilabel:`Create Database`."
 msgstr ""
+"Faites un clic droit sur l'entrée :guilabel:`SpatiaLite` dans l'arbre du "
+"navigateur et sélectionnez :guilabel:`créer base de donnees`."
 
 #: ../../docs/training_manual/databases/spatialite.rst:25
 msgid ""
 "Specify where on your filesystem you want to store the file and name it "
 "``qgis-sl.db``."
 msgstr ""
+"Précisez où vous voulez stocker le fichier sur votre système de fichiers et "
+"nommez-le ``qgis-sl.db``."
 
 #: ../../docs/training_manual/databases/spatialite.rst:27
 msgid ""
@@ -71,6 +90,10 @@ msgid ""
 "and now select the :guilabel:`New Connection` item. Find the file you "
 "created in the last step and open it."
 msgstr ""
+"Cliquez à nouveau sur l'entrée :guilabel:`SpatiaLite` dans l'arbre du "
+"navigateur et sélectionnez maintenant l'élément :guilabel:`nouvelle "
+"connection`. Trouvez le fichier que vous avez créé à la dernière étape et "
+"ouvrez-le."
 
 #: ../../docs/training_manual/databases/spatialite.rst:31
 msgid ""
@@ -91,6 +114,10 @@ msgid ""
 "SpatiaLite layer, or select :menuselection:`Layer --> New -->` "
 "|newSpatiaLiteLayer| :menuselection:`New SpatiaLite Layer`."
 msgstr ""
+"Trouvez le bouton pour créer une nouvelle couche et utilisez la liste "
+"déroulante pour créer une nouvelle couche SpatiaLite, ou sélectionnez "
+":menuselection:`Couche --> Nouveau -->` |newSpatiaLiteLayer| "
+":menuselection:`Nouvelle couche SpatiaLite`."
 
 #: ../../docs/training_manual/databases/spatialite.rst:41
 msgid "Select the database we created in the previous steps in the drop down."
@@ -100,7 +127,7 @@ msgstr ""
 
 #: ../../docs/training_manual/databases/spatialite.rst:43
 msgid "Give the layer the name ``places``."
-msgstr ""
+msgstr "Donnez à la couche le nom de ``places``."
 
 #: ../../docs/training_manual/databases/spatialite.rst:44
 msgid ""
@@ -112,7 +139,7 @@ msgstr ""
 
 #: ../../docs/training_manual/databases/spatialite.rst:46
 msgid "Add two attributes as shown in below"
-msgstr ""
+msgstr "Ajoutez deux attributs comme indiqué ci-dessous"
 
 #: ../../docs/training_manual/databases/spatialite.rst:47
 msgid "Click :guilabel:`OK` to create the table."
@@ -123,6 +150,8 @@ msgid ""
 "Click the refresh button at the top of the Browser and you should now see "
 "your ``places`` table listed."
 msgstr ""
+"Cliquez sur le bouton Actualiser en haut du navigateur et vous devriez "
+"maintenant voir votre table ``places`` listée."
 
 #: ../../docs/training_manual/databases/spatialite.rst:58
 msgid ""
@@ -146,6 +175,9 @@ msgid ""
 "Manager and you can use this same technique to import data into your new "
 "SpatiaLite DB."
 msgstr ""
+"Nous avons également appris comment importer des données dans une base de "
+"données en utilisant le gestionnaire de BD et vous pouvez utiliser cette "
+"même technique pour importer des données dans votre nouvelle BD SpatiaLite."
 
 #: ../../docs/training_manual/databases/spatialite.rst:69
 msgid "|IC|"
@@ -156,3 +188,5 @@ msgid ""
 "You have seen how to create SpatiaLite databases, add tables to them and use"
 " these tables as layers in QGIS."
 msgstr ""
+"Vous avez vu comment créer des bases de données SpatiaLite, y ajouter des "
+"tables et utiliser ces tables comme couches dans QGIS."

@@ -5,8 +5,9 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
-# Francis Gasc <francisgasc@gmail.com>, 2020
 # MarieSilvestre, 2020
+# Francis Gasc <francisgasc@gmail.com>, 2020
+# Sant-anna <delazj@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-05 01:57+0200\n"
 "PO-Revision-Date: 2020-03-16 19:26+0000\n"
-"Last-Translator: MarieSilvestre, 2020\n"
+"Last-Translator: Sant-anna <delazj@gmail.com>, 2020\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -91,12 +92,26 @@ msgid ""
 "authentication configuration, or applying a configuration to a server "
 "configuration (such as when adding a WMS layer)."
 msgstr ""
+"Pour stocker ou accéder à des informations sensibles dans la base de "
+"données, un utilisateur doit définir un \"mot de passe maître\". Un nouveau "
+"mot de passe maître est demandé et vérifié lors du stockage initial de toute"
+" donnée cryptée dans la base de données. Lorsque l'utilisateur accède à des "
+"informations sensibles, il est invité à saisir le mot de passe principal. Le"
+" mot de passe est alors mis en cache pour le reste de la session (jusqu'à ce"
+" que l'application soit quittée), à moins que l'utilisateur ne choisisse "
+"manuellement une action pour effacer sa valeur en cache. Certains cas "
+"d'utilisation du système d'authentification ne nécessitent pas la saisie du "
+"mot de passe maître, comme lors de la sélection d'une configuration "
+"d'authentification existante, ou de l'application d'une configuration à une "
+"configuration de serveur (comme lors de l'ajout d'une couche WMS)."
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:51
 msgid ""
 "You can choose to save the password in the ``Wallet/Keyring`` of your "
 "computer."
 msgstr ""
+"Vous pouvez choisir de sauvegarder le mot de passe dans le \"mur/clé\" de "
+"votre ordinateur."
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:59
 msgid "Input new master password"
@@ -322,9 +337,9 @@ msgid ""
 ":guilabel:`Authentication` tab, there are several utility actions to manage "
 "the authentication database and configurations:"
 msgstr ""
-"A partir du menu Options (:menuselection:`Préférences--> Options`) , dans "
-"l'onglet :guilabel:`Authentification` , plusieurs actions permettent de "
-"gérer le mot de passe principal, la base de données et les configurations "
+"A partir du menu Options (:menuselection:`Préférences --> Options`) , dans "
+"l'onglet :guilabel:`Authentification`, plusieurs actions permettent de gérer"
+" le mot de passe principal, la base de données et les configurations "
 "d'authentification:"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:228
@@ -336,24 +351,34 @@ msgid ""
 "**Input master password**: opens the master password input dialog, "
 "independent of performing any authentication database command"
 msgstr ""
+"**Entrer le mot de passe principal** : ouvre le dialogue d'entrée du mot de "
+"passe principal, indépendamment de l'exécution de toute commande "
+"d'authentification de la base de données"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:232
 msgid ""
 "**Clear cached master password**: unsets the master password if it has been "
 "set"
 msgstr ""
+"**Effacer le mot de passe principal en cache** : efface le mot de passe "
+"principal s'il a été défini"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:234
 msgid ""
 "**Reset master password**: opens a dialog to change the master password (the"
 " current password must be known) and optionally back up the current database"
 msgstr ""
+"**Réinitialisation du mot de passe principal** : ouvre une boîte de dialogue"
+" pour modifier le mot de passe principal (le mot de passe actuel doit être "
+"connu) et éventuellement sauvegarder la base de données actuelle"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:236
 msgid ""
 "**Clear network authentication access cache**: clears the authentication "
 "cache of all connections"
 msgstr ""
+"**Cache d'accès à l'authentification du réseau** : efface le cache "
+"d'authentification de toutes les connexions"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:238
 msgid ""
@@ -365,30 +390,48 @@ msgid ""
 "automatically cleared every time an SSL error occurs and you choose to abort"
 " the connection"
 msgstr ""
+"**Cache d'accès à l'authentification réseau automatique sur les erreurs "
+"SSL** : le cache de connexion stocke toutes les données d'authentification "
+"pour les connexions, même en cas d'échec de la connexion. Si vous modifiez "
+"les configurations d'authentification ou les autorités de certification, "
+"vous devez vider le cache d'authentification ou redémarrer QGIS. Lorsque "
+"cette option est cochée, le cache d'authentification sera automatiquement "
+"effacé chaque fois qu'une erreur SSL se produit et que vous choisissez "
+"d'interrompre la connexion"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:245
 msgid ""
 "**Integrate master password with your Wallet/Keyring**: adds the master "
 "password to your personal Wallet/Keyring"
 msgstr ""
+"**Intégrer le mot de passe maître à votre porte-monnaie/clé** : ajoute le "
+"mot de passe maître à votre porte-monnaie/clé personnel"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:247
 msgid ""
 "**Store/update the master password in your Wallet/Keyring**: updates the "
 "changed master password in your Wallet/Keyring"
 msgstr ""
+"**Mémoriser/mettre à jour le mot de passe principal dans votre porte-"
+"monnaie/clé** : met à jour le mot de passe principal modifié dans votre "
+"porte-monnaie/clé"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:249
 msgid ""
 "**Clear the master password from your Wallet/Keyring**: deletes the master "
 "password from your Wallet/Keyring"
 msgstr ""
+"**Effacer le mot de passe principal de votre porte-monnaie/clé** : efface le"
+" mot de passe principal de votre porte-monnaie/clé"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:251
 msgid ""
 "**Enable password helper debug log**: enables a debug tool that will contain"
 " all the log information of the authentication methods"
 msgstr ""
+"**Activer le journal de débogage de l'aide au mot de passe** : active un "
+"outil de débogage qui contiendra toutes les informations de log des méthodes"
+" d'authentification"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:253
 msgid ""
@@ -397,12 +440,19 @@ msgid ""
 "not clear QGIS’s core network access manager’s cache, which requires a "
 "relaunch of QGIS."
 msgstr ""
+"**Effacer les configurations d'authentification en cache** : permet de vider"
+" le cache de consultation interne des configurations, utilisé pour accélérer"
+" les connexions réseau. Cela n'efface pas le cache du gestionnaire d'accès "
+"au réseau central de QGIS, ce qui nécessite un nouveau lancement de QGIS."
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:256
 msgid ""
 "**Remove all authentication configurations**: clears the database of all "
 "configuration records, without removing other stored records."
 msgstr ""
+"**Supprimer toutes les configurations d'authentification** : efface de la "
+"base de données tous les enregistrements de configuration, sans supprimer "
+"les autres enregistrements stockés."
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:258
 msgid ""
@@ -412,6 +462,12 @@ msgid ""
 "project loading, do not interrupt the operation or cause errors due to a "
 "temporarily missing database."
 msgstr ""
+"**Effacer la base de données d'authentification** : prévoit une sauvegarde "
+"de la base de données actuelle et une reconstruction complète de la "
+"structure des tables de la base de données. Les actions sont programmées "
+"pour une date ultérieure, afin de s'assurer que d'autres opérations, comme "
+"le chargement du projet, n'interrompent pas l'opération ou ne provoquent pas"
+" d'erreurs dues à une base de données temporairement manquante."
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:269
 msgid "DB erase verification menu"

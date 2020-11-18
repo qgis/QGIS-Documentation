@@ -1,29 +1,36 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2014, QGIS project
-# This file is distributed under the same license as the QGIS Documentation
-# Project package.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation\n"
+"Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-07 15:33+0200\n"
-"PO-Revision-Date: 2019-04-07 13:45+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
-"Language-Team: Urdu (http://www.transifex.com/qgis/qgis-documentation/language/ur/)\n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:20+0000\n"
+"Language-Team: Urdu (https://www.transifex.com/qgis/teams/6144/ur/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.1\n"
 "Language: ur\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../source/docs/training_manual/vector_classification/attribute_data.rst:8
-msgid "|LS| Attribute Data"
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:4
+msgid "|LS| Vector Attribute Data"
 msgstr ""
 
-#: ../../source/docs/training_manual/vector_classification/attribute_data.rst:10
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:6
+msgid ""
+"Vector data is arguably the most common kind of data in the daily use of "
+"GIS. The vector model represents the location and shape of geographic "
+"features using points, lines and polygons (and for 3D data also surfaces and"
+" volumes), while their other properties are included as attributes (often "
+"presented as a table in QGIS)."
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:12
 msgid ""
 "Up to now, none of the changes we have made to the map have been influenced "
 "by the objects that are being shown. In other words, all the land use areas "
@@ -32,7 +39,7 @@ msgid ""
 " is a road of a certain shape in a certain area."
 msgstr ""
 
-#: ../../source/docs/training_manual/vector_classification/attribute_data.rst:16
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:18
 msgid ""
 "But the whole strength of GIS is that all the objects that are visible on "
 "the map also have attributes. Maps in a GIS aren't just pictures. They "
@@ -40,32 +47,211 @@ msgid ""
 "objects."
 msgstr ""
 
-#: ../../source/docs/training_manual/vector_classification/attribute_data.rst:20
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:23
 msgid ""
-"**The goal of this lesson:** To explore the attribute data of an object and "
-"understand what the various data can be useful for."
+"**The goal for this lesson:** To learn about the structure of vector data "
+"and explore the attribute data of an object"
 msgstr ""
 
-#: ../../source/docs/training_manual/vector_classification/attribute_data.rst:27
-msgid "|basic| |FA| Attribute data"
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:27
+msgid "|basic| |FA| Viewing Layer Attributes"
 msgstr ""
 
-#: ../../source/docs/training_manual/vector_classification/attribute_data.rst:29
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:29
 msgid ""
-"Open the attribute table for the :guilabel:`places` layer (refer back to the"
-" section :ref:`tm_working_vector_data` if necessary). Which field would be "
-"the most useful to represent in label form, and why?"
+"It's important to know that the data you will be working with does not only "
+"represent **where** objects are in space, but also tells you **what** those "
+"objects are."
 msgstr ""
 
-#: ../../source/docs/training_manual/vector_classification/attribute_data.rst:33
-msgid ":ref:`Check your results <labels-attribute-data-1>`"
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:33
+msgid ""
+"From the previous exercise, you should have the ``protected_areas`` layer "
+"loaded in your map. If it is not loaded, then you can find the "
+":file:`protected_areas.shp` *ESRI Shapefile* format dataset in directory "
+":file:`exercise_data/shapefile`."
 msgstr ""
 
-#: ../../source/docs/training_manual/vector_classification/attribute_data.rst:36
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:38
+msgid ""
+"The polygons representing the protected areas constitute the **spatial "
+"data**, but we can learn more about the protected areas by exploring the "
+"**attribute table**."
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:42
+msgid ""
+"In the :guilabel:`Layers` panel, click on the ``protected_areas`` layer to "
+"select it."
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:44
+msgid ""
+"In the :guilabel:`Attributes Toolbar` click the |openTable| :sup:`Open "
+"Attribute Table` button. This will open a new window showing the attribute "
+"table of the ``protected_areas`` layer."
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:51
+msgid ""
+"A row is called a **record** and is associated with a **feature** in the "
+"Canvas Map, such as a polygon. A column is called a **field** (or an "
+"**attribute**), and has a name that helps describe it, such as ``name`` or "
+"``id``. Values in the cells are known as **attribute values**. These "
+"definitions are commonly used in GIS, so it is good to become familiar with "
+"them."
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:59
+msgid ""
+"In the ``protected_areas`` layer, there are two **features**, which are "
+"represented by the two polygons we see on the Map Canvas."
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:62
+msgid ""
+"In order to understand what the **fields** and **attribute values** "
+"represent, one may need to find documentation (or metadata) describing the "
+"meaning of the attribute values. This is usually available from the creator "
+"of the data set."
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:67
+msgid ""
+"Next, let's see how a record in the attribute table is linked to a polygon "
+"feature that we see on the Map Canvas."
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:70
+msgid "Go back to the main QGIS window."
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:71
+msgid ""
+"In the :guilabel:`Attributes Toolbar`, click on the |selectFeature| "
+":sup:`Select Feature` button."
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:73
+msgid ""
+"Make sure the ``protected_areas`` layer is still selected in the "
+":guilabel:`Layers` panel."
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:75
+msgid ""
+"Move your mouse to the Map Canvas and left click on the smaller of the two "
+"polygons.  The polygon will turn yellow indicating it is selected."
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:81
+msgid ""
+"Go back to the :guilabel:`Attribute Table` window, and you should see a "
+"record (row) highlighted.  These are the attribute values of the selected "
+"polygon."
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:88
+msgid "You can also select a feature using the Attribute Table."
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:90
+msgid ""
+"In the :guilabel:`Attribute Table` window, on the far left, click on the row"
+" number of the record that is currently not selected."
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:96
+msgid ""
+"Go back to the main QGIS window and look at the Map Canvas. You should see "
+"the larger of the two polygons colored yellow."
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:98
+msgid ""
+"To deselect the feature, go to the :guilabel:`Attribute Table` window and "
+"click on |deselectAll| :sup:`Deselect all features from the layer` button."
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:101
+msgid ""
+"Sometimes there are many features shown on the Map Canvas and it might be "
+"difficult to see which feature is selected from the Attribute Table.  "
+"Another way to identify the location of a feature is to use the "
+":guilabel:`Flash Feature` tool."
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:106
+msgid ""
+"In the :guilabel:`Attribute Table`, right-click on any cell in the row that "
+"has the attribute value ``r2855697`` for the field ``full_id``."
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:108
+msgid ""
+"In the context menu, click on :guilabel:`Flash Feature` and watch the Map "
+"Canvas."
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:114
+msgid ""
+"You should see the polygon flash red a few times.  If you missed it, try it "
+"again."
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:117
+msgid ""
+"Another useful tool is the :guilabel:`Zoom to Feature` tool, that tells QGIS"
+" to zoom to the feature of interest."
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:120
+msgid ""
+"In the :guilabel:`Attribute Table`, right-click on  any cell in the row that"
+" has the attribute value ``r2855697`` for the field ``full_id``."
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:122
+msgid "In the context menu, click on :guilabel:`Zoom to Feature`"
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:127
+msgid ""
+"Look at the Map Canvas.  The polygon should now occupy the extent of the Map"
+" Canvas area."
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:130
+msgid "You may now close the attribute table."
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:135
+msgid "|basic| |TY| Exploring Vector Data Attributes"
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:137
+msgid "How many fields are available in the :guilabel:`rivers` layer?"
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:138
+msgid "Tell us a bit about the ``town`` places in your dataset."
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:139
+msgid ""
+"Open the attribute table for the :guilabel:`places` layer. Which field would"
+" be the most useful to represent in label form, and why?"
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:142
+msgid ":ref:`Check your results <vector-explore-attribute-data>`"
+msgstr ""
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:145
 msgid "|IC|"
 msgstr ""
 
-#: ../../source/docs/training_manual/vector_classification/attribute_data.rst:38
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:147
 msgid ""
 "You now know how to use the attribute table to see what is actually in the "
 "data you're using. Any dataset will only be useful to you if it has the "
@@ -74,19 +260,13 @@ msgid ""
 "look for another one that has the required attribute data."
 msgstr ""
 
-#: ../../source/docs/training_manual/vector_classification/attribute_data.rst:45
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:154
 msgid "|WN|"
 msgstr ""
 
-#: ../../source/docs/training_manual/vector_classification/attribute_data.rst:47
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:156
 msgid ""
 "Different attributes are useful for different purposes. Some of them can be "
 "represented directly as text for the map user to see. You'll learn how to do"
 " this in the next lesson."
 msgstr ""
-
-#~ msgid ""
-#~ "Open the attribute table for the :guilabel:`places` layer (refer back to the"
-#~ " section *\"Working with Vector Data\"* if necessary). Which field would be "
-#~ "the most useful to represent in label form, and why?"
-#~ msgstr ""

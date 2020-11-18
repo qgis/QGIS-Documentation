@@ -1,39 +1,37 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2014, QGIS project
-# This file is distributed under the same license as the QGIS Documentation
-# Project package.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation\n"
+"Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-11 14:48+0200\n"
-"PO-Revision-Date: 2019-08-11 13:01+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
-"Language-Team: Tamil (http://www.transifex.com/qgis/qgis-documentation/language/ta/)\n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:23+0000\n"
+"Language-Team: Tamil (https://www.transifex.com/qgis/teams/6144/ta/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.1\n"
 "Language: ta\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:11
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:10
+msgid ""
+"The code snippets on this page need the following imports if you're outside "
+"the pyqgis console:"
+msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:25
 msgid "Projections Support"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:16
-msgid ""
-"If you're outside the pyqgis console, the code snippets on this page need "
-"the following imports:"
-msgstr ""
-
-#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:30
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:31
 msgid "Coordinate reference systems"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:32
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:33
 msgid ""
 "Coordinate reference systems (CRS) are encapsulated by the "
 ":class:`QgsCoordinateReferenceSystem "
@@ -41,57 +39,70 @@ msgid ""
 " be created in several different ways:"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:36
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:37
 msgid "specify CRS by its ID"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:44
-msgid "QGIS uses three different IDs for every reference system:"
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:45
+msgid "QGIS supports different CRS identifiers with the following formats:"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:46
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:47
 msgid ""
-":attr:`InternalCrsId <qgis.core.QgsCoordinateReferenceSystem.InternalCrsId>`"
-" --- ID used in the internal QGIS database."
+"``EPSG:<code>`` --- ID assigned by the EPSG organization - handled with "
+":meth:`createFromOgcWms() "
+"<qgis.core.QgsCoordinateReferenceSystem.createFromOgcWmsCrs>`"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:47
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:48
 msgid ""
-":attr:`PostgisCrsId <qgis.core.QgsCoordinateReferenceSystem.PostgisCrsId>` "
-"--- ID used in PostGIS databases."
+"``POSTGIS:<srid>``--- ID used in PostGIS databases - handled with "
+":meth:`createFromSrid() "
+"<qgis.core.QgsCoordinateReferenceSystem.createFromSrid>`"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:48
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:49
 msgid ""
-":attr:`EpsgCrsId <qgis.core.QgsCoordinateReferenceSystem.EpsgCrsId>` --- ID "
-"assigned by the EPSG organization."
+"``INTERNAL:<srsid>`` --- ID used in the internal QGIS database - handled "
+"with :meth:`createFromSrsId() "
+"<qgis.core.QgsCoordinateReferenceSystem.createFromSrsId>`"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:50
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:50
 msgid ""
-"If not specified otherwise with the second parameter, PostGIS SRID is used "
-"by default."
+"``PROJ:<proj>`` - handled with :meth:`createFromProj() "
+"<qgis.core.QgsCoordinateReferenceSystem.createFromProj>`"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:52
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:51
+msgid ""
+"``WKT:<wkt>`` - handled with :meth:`createFromWkt() "
+"<qgis.core.QgsCoordinateReferenceSystem.createFromWkt>`"
+msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:53
+msgid "If no prefix is specified, WKT definition is assumed."
+msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:55
 msgid "specify CRS by its well-known text (WKT)"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:62
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:65
 msgid ""
 "create an invalid CRS and then use one of the ``create*`` functions to "
-"initialize it. In the following example we use a Proj4 string to initialize "
+"initialize it. In the following example we use a Proj string to initialize "
 "the projection."
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:72
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:75
 msgid ""
 "It's wise to check whether creation (i.e. lookup in the database) of the CRS"
 " has been successful: :meth:`isValid() "
 "<qgis.core.QgsCoordinateReferenceSystem.isValid>` must return ``True``."
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:76
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:79
 msgid ""
 "Note that for initialization of spatial reference systems QGIS needs to look"
 " up appropriate values in its internal database :file:`srs.db`. Thus in case"
@@ -103,20 +114,20 @@ msgid ""
 "you."
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:84
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:87
 msgid "Accessing spatial reference system information:"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:101
-#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:142
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:104
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:146
 msgid "Output:"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:117
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:120
 msgid "CRS Transformation"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:119
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:122
 msgid ""
 "You can do transformation between different spatial reference systems by "
 "using the :class:`QgsCoordinateTransform <qgis.core.QgsCoordinateTransform>`"
@@ -128,80 +139,3 @@ msgid ""
 "transformation. By default it does forward transformation, but it is capable"
 " to do also inverse transformation."
 msgstr ""
-
-#~ msgid ""
-#~ "Coordinate reference systems (CRS) are encapsulated by "
-#~ ":class:`QgsCoordinateReferenceSystem` class. Instances of this class can be "
-#~ "created by several different ways:"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "create invalid CRS and then use one of the :func:`create*` functions to "
-#~ "initialize it. In following example we use Proj4 string to initialize the "
-#~ "projection"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "It's wise to check whether creation (i.e. lookup in the database) of the CRS"
-#~ " has been successful: :func:`isValid` must return :const:`True`."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Note that for initialization of spatial reference systems QGIS needs to look"
-#~ " up appropriate values in its internal database :file:`srs.db`. Thus in case"
-#~ " you create an independent application you need to set paths correctly with "
-#~ ":func:`QgsApplication.setPrefixPath` otherwise it will fail to find the "
-#~ "database. If you are running the commands from QGIS python console or "
-#~ "developing a plugin you do not care: everything is already set up for you."
-#~ msgstr ""
-
-#~ msgid "Accessing spatial reference system information"
-#~ msgstr ""
-
-#~ msgid "Projections"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "You can do transformation between different spatial reference systems by "
-#~ "using :class:`QgsCoordinateTransform` class. The easiest way to use it is to"
-#~ " create source and destination CRS and construct "
-#~ ":class:`QgsCoordinateTransform` instance with them. Then just repeatedly "
-#~ "call :func:`transform` function to do the transformation. By default it does"
-#~ " forward transformation, but it is capable to do also inverse transformation"
-#~ msgstr ""
-
-#~ msgid ":const:`PostgisCrsId` --- IDs used within PostGIS databases."
-#~ msgstr ""
-
-#~ msgid ":const:`InternalCrsId` --- IDs internally used in QGIS database."
-#~ msgstr ""
-
-#~ msgid ":const:`EpsgCrsId` --- IDs assigned by the EPSG organization"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "If not specified otherwise in second parameter, PostGIS SRID is used by "
-#~ "default."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "create invalid CRS and then use one of the :func:`create*` functions to "
-#~ "initialize it. In the following example we use Proj4 string to initialize "
-#~ "the projection"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "It's wise to check whether creation (i.e. lookup in the database) of the CRS"
-#~ " has been successful: :meth:`isValid() "
-#~ "<qgis.core.QgsCoordinateReferenceSystem.isValid>` must return :const:`True`."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Note that for initialization of spatial reference systems QGIS needs to look"
-#~ " up appropriate values in its internal database :file:`srs.db`. Thus in case"
-#~ " you create an independent application you need to set paths correctly with "
-#~ ":meth:`QgsApplication.setPrefixPath() "
-#~ "<qgis.core.QgsApplication.setPrefixPath>` otherwise it will fail to find the"
-#~ " database. If you are running the commands from QGIS python console or "
-#~ "developing a plugin you do not care: everything is already set up for you."
-#~ msgstr ""

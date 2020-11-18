@@ -1,40 +1,48 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation
-# Project package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation Project 3.4\n"
+"Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-11 14:48+0200\n"
-"PO-Revision-Date: 2019-04-07 13:47+0000\n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:24+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
 "Language-Team: Hebrew (https://www.transifex.com/qgis/teams/6144/he/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.1\n"
 "Language: he\n"
 "Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % 1 == 0) ? 1: (n % 10 == 0 && n % 1 == 0 && n > 10) ? 2 : 3;\n"
 
-#: ../../source/docs/pyqgis_developer_cookbook/tasks.rst:12
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:11
+msgid ""
+"The code snippets on this page need the following imports if you're outside "
+"the pyqgis console:"
+msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:30
 msgid "Tasks - doing heavy work in the background"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/tasks.rst:15
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:33
 msgid "Introduction"
-msgstr ""
+msgstr "הקדמה"
 
-#: ../../source/docs/pyqgis_developer_cookbook/tasks.rst:17
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:35
 msgid ""
 "Background processing using threads is a way to maintain a responsive user "
 "interface when heavy processing is going on. Tasks can be used to achieve "
 "threading in QGIS."
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/tasks.rst:21
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:39
 msgid ""
 "A task (:class:`QgsTask <qgis.core.QgsTask>`) is a container for the code to"
 " be performed in the background, and the task manager "
@@ -44,7 +52,7 @@ msgid ""
 "status for background processes. Tasks can be grouped using subtasks."
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/tasks.rst:29
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:47
 msgid ""
 "The global task manager (found with :meth:`QgsApplication.taskManager() "
 "<qgis.core.QgsApplication.taskManager>`) is normally used. This means that "
@@ -52,32 +60,34 @@ msgid ""
 "manager."
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/tasks.rst:33
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:51
 msgid "There are several ways to create a QGIS task:"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/tasks.rst:35
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:53
 msgid "Create your own task by extending :class:`QgsTask <qgis.core.QgsTask>`"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/tasks.rst:41
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:60
 msgid "Create a task from a function"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/tasks.rst:48
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:75
 msgid "Create a task from a processing algorithm"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/tasks.rst:56
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:88
 msgid ""
-"Any background task (regardless of how it is created) must NEVER perform any"
-" GUI based operations, such as creating new widgets or interacting with "
-"existing widgets. Qt widgets must only be accessed or modified from the main"
-" thread. Attempting to use them from background threads will result in "
-"crashes."
+"Any background task (regardless of how it is created) must NEVER use any "
+"QObject that lives on the main thread, such as accessing QgsVectorLayer, "
+"QgsProject or perform any GUI based operations like creating new widgets or "
+"interacting with existing widgets. Qt widgets must only be accessed or "
+"modified from the main thread. Data that is used in a task must be copied "
+"before the task is started. Attempting to use them from background threads "
+"will result in crashes."
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/tasks.rst:62
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:97
 msgid ""
 "Dependencies between tasks can be described using the :meth:`addSubTask "
 "<qgis.core.QgsTask.addSubTask>` function of :class:`QgsTask "
@@ -89,7 +99,7 @@ msgid ""
 "deadlocks possible, so be careful."
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/tasks.rst:72
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:107
 msgid ""
 "If a task depends on a layer being available, this can be stated using the "
 ":meth:`setDependentLayers <qgis.core.QgsTask.setDependentLayers>` function "
@@ -97,7 +107,7 @@ msgid ""
 "is not available, the task will be canceled."
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/tasks.rst:78
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:113
 msgid ""
 "Once the task has been created it can be scheduled for running using the "
 ":meth:`addTask <qgis.core.QgsTaskManager.addTask>` function of the task "
@@ -108,22 +118,22 @@ msgid ""
 "<qgis.core.QgsTaskManager.addTask>`."
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/tasks.rst:86
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:121
 msgid ""
 "The status of tasks can be monitored using :class:`QgsTask "
 "<qgis.core.QgsTask>` and :class:`QgsTaskManager <qgis.core.QgsTaskManager>` "
 "signals and functions."
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/tasks.rst:91
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:126
 msgid "Examples"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/tasks.rst:94
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:129
 msgid "Extending QgsTask"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/tasks.rst:96
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:131
 msgid ""
 "In this example ``RandomIntegerSumTask`` extends :class:`QgsTask "
 "<qgis.core.QgsTask>` and will generate 100 random integers between 0 and 500"
@@ -133,11 +143,11 @@ msgid ""
 " manager, demonstrating two types of dependencies."
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/tasks.rst:216
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:280
 msgid "Task from function"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/tasks.rst:218
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:282
 msgid ""
 "Create a task from a function (``doSomething`` in this example). The first "
 "parameter of the function will hold the :class:`QgsTask <qgis.core.QgsTask>`"
@@ -147,55 +157,17 @@ msgid ""
 "``wait_time``."
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/tasks.rst:303
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:384
 msgid "Task from a processing algorithm"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/tasks.rst:305
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:386
 msgid ""
 "Create a task that uses the algorithm :ref:`qgis:randompointsinextent "
 "<qgisrandompointsinextent>` to generate 50000 random points inside a "
 "specified extent.  The result is added to the project in a safe way."
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/tasks.rst:348
-msgid "See also: https://www.opengis.ch/2018/06/22/threads-in-pyqgis3/."
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:431
+msgid "See also: https://opengis.ch/2018/06/22/threads-in-pyqgis3/."
 msgstr ""
-
-#~ msgid ""
-#~ "The global task manager (found with :meth:`QgsApplication.taskManager() "
-#~ "<qgis.core.QgsApplication.taskManager>`) is normally used.  This means that "
-#~ "your tasks may not be the only tasks that are controlled by the task "
-#~ "manager."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Dependencies between tasks can be described using the ``addSubTask`` "
-#~ "function of :class:`QgsTask <qgis.core.QgsTask>`. When a dependency is "
-#~ "stated, the task manager will automatically determine how these dependencies"
-#~ " will be executed. Wherever possible dependencies will be executed in "
-#~ "parallel in order to satisfy them as quickly as possible. If a task on which"
-#~ " another task depends is canceled, the dependent task will also be canceled."
-#~ " Circular dependencies can make deadlocks possible, so be careful."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "If a task depends on a layer being available, this can be stated using the "
-#~ "``setDependentLayers`` function of :class:`QgsTask <qgis.core.QgsTask>`. If "
-#~ "a layer on which a task depends is not available, the task will be canceled."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Once the task has been created it can be scheduled for running using the "
-#~ "``addTask`` function of the task manager. Adding a task to the manager "
-#~ "automatically transfers ownership of that task to the manager, and the "
-#~ "manager will cleanup and delete tasks after they have executed. The "
-#~ "scheduling of the tasks is influenced by the task priority, which is set in "
-#~ "``addTask``."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Create a task that uses the algorithm ``qgis:randompointsinextent`` to "
-#~ "generate 50000 random points inside a specified extent.  The result is added"
-#~ " to the project in a safe way."
-#~ msgstr ""

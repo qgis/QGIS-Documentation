@@ -1,29 +1,27 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2014, QGIS project
-# This file is distributed under the same license as the QGIS Documentation
-# Project package.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation\n"
+"Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-07 15:33+0200\n"
-"PO-Revision-Date: 2019-04-07 13:58+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
-"Language-Team: Telugu (http://www.transifex.com/qgis/qgis-documentation/language/te/)\n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:31+0000\n"
+"Language-Team: Telugu (https://www.transifex.com/qgis/teams/6144/te/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.1\n"
 "Language: te\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../source/docs/user_manual/processing/intro.rst:10
+#: ../../docs/user_manual/processing/intro.rst:4
 msgid "Introduction"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/intro.rst:12
+#: ../../docs/user_manual/processing/intro.rst:6
 msgid ""
 "This chapter introduces the QGIS processing framework, a geoprocessing "
 "environment that can be used to call native and third-party algorithms from "
@@ -31,13 +29,41 @@ msgid ""
 "accomplish."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/intro.rst:16
+#: ../../docs/user_manual/processing/intro.rst:10
+msgid ""
+"As a :ref:`Core plugin <core_plugins>`, Processing is installed by default "
+"but you need to activate it:"
+msgstr ""
+
+#: ../../docs/user_manual/processing/intro.rst:13
+msgid "Go to :menuselection:`Plugins --> Manage and install plugins...`"
+msgstr ""
+
+#: ../../docs/user_manual/processing/intro.rst:14
+msgid "Click on the :guilabel:`Installed` tab at the left"
+msgstr ""
+
+#: ../../docs/user_manual/processing/intro.rst:15
+msgid "Check the box next to the |processing| :guilabel:`Processing` entry"
+msgstr ""
+
+#: ../../docs/user_manual/processing/intro.rst:16
+msgid "Close the dialog."
+msgstr ""
+
+#: ../../docs/user_manual/processing/intro.rst:18
+msgid ""
+"A :menuselection:`Processing` menu is now available in the top menu bar. "
+"From there you can reach the main components of this framework."
+msgstr ""
+
+#: ../../docs/user_manual/processing/intro.rst:21
 msgid ""
 "In the following sections, we will review how to use the graphical elements "
 "of this framework and make the most out of each one of them."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/intro.rst:19
+#: ../../docs/user_manual/processing/intro.rst:24
 msgid ""
 "There are four basic elements in the framework GUI, which are used to run "
 "algorithms for different purposes. Choosing one tool or another will depend "
@@ -50,98 +76,51 @@ msgid ""
 "later in this chapter)."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/intro.rst:28
+#: ../../docs/user_manual/processing/intro.rst:33
 msgid ""
 "The :guilabel:`Toolbox`: The main element of the GUI, it is used to execute "
 "a single algorithm or run a batch process based on that algorithm."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/intro.rst:36
+#: ../../docs/user_manual/processing/intro.rst:41
 msgid "Processing Toolbox"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/intro.rst:38
+#: ../../docs/user_manual/processing/intro.rst:43
 msgid ""
 "The :guilabel:`Graphical Modeler`: Several algorithms can be combined "
 "graphically using the modeler to define a workflow, creating a single "
 "process that involves several subprocesses."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/intro.rst:48
+#: ../../docs/user_manual/processing/intro.rst:53
 msgid "Processing Modeler"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/intro.rst:50
+#: ../../docs/user_manual/processing/intro.rst:55
 msgid ""
 "The :guilabel:`History` manager: All actions performed using any of the "
 "aforementioned elements are stored in a history file and can be later easily"
 " reproduced using the history manager."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/intro.rst:59
+#: ../../docs/user_manual/processing/intro.rst:64
 msgid "Processing History"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/intro.rst:61
+#: ../../docs/user_manual/processing/intro.rst:66
 msgid ""
 "The :guilabel:`Batch Processing` interface: This interface allows you to "
 "execute batch processes and automate the execution of a single algorithm on "
 "multiple datasets."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/intro.rst:71
+#: ../../docs/user_manual/processing/intro.rst:76
 msgid "Batch Processing interface"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/intro.rst:73
+#: ../../docs/user_manual/processing/intro.rst:78
 msgid ""
 "In the following sections, we will review each one of these elements in "
 "detail."
 msgstr ""
-
-#~ msgid "|updatedisclaimer|"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "There are four basic elements in the framework GUI, which are used to run "
-#~ "algorithms for different purposes. Choosing one tool or another will depend "
-#~ "on the kind of analysis that is to be performed and the particular "
-#~ "characteristics of each user and project. All of them (except for the batch "
-#~ "processing interface, which is called from the toolbox or the algorithm "
-#~ "execution dialog, as we will see) can be accessed from the "
-#~ ":menuselection:`Processing` menu item. (You will see more than four entries."
-#~ " The remaining ones are not used to execute algorithms and will be explained"
-#~ " later in this chapter)."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The :guilabel:`Toolbox`. The main element of the GUI, it is used to execute "
-#~ "a single algorithm or run a batch process based on that algorithm."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The :guilabel:`Graphical modeler`. Several algorithms can be combined "
-#~ "graphically using the modeler to define a workflow, creating a single "
-#~ "process that involves several subprocesses."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The :guilabel:`History manager`. All actions performed using any of the "
-#~ "aforementioned elements are stored in a history file and can be later easily"
-#~ " reproduced using the history manager."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The :guilabel:`Batch processing interface`. This interface allows you to "
-#~ "execute batch processes and automate the execution of a single algorithm on "
-#~ "multiple datasets."
-#~ msgstr ""
-
-#~ msgid "*About Vector Menu*"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Some processing algorithms can be accessed via the :menuselection:`Vector` "
-#~ "menu which lists some tools from the processing framework but also from "
-#~ "plugins."
-#~ msgstr ""

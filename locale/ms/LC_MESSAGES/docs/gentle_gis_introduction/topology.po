@@ -1,55 +1,53 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2014, QGIS project
-# This file is distributed under the same license as the QGIS Documentation
-# Project package.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation\n"
+"Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-07 15:33+0200\n"
-"PO-Revision-Date: 2019-04-07 13:41+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
-"Language-Team: Malay (http://www.transifex.com/qgis/qgis-documentation/language/ms/)\n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:16+0000\n"
+"Language-Team: Malay (https://www.transifex.com/qgis/teams/6144/ms/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.1\n"
 "Language: ms\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:8
+#: ../../docs/gentle_gis_introduction/topology.rst:5
 msgid "Topology"
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:11
+#: ../../docs/gentle_gis_introduction/topology.rst:8
 msgid "|gentleLogo|"
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:11
+#: ../../docs/gentle_gis_introduction/topology.rst:8
 msgid "Objectives:"
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:11
+#: ../../docs/gentle_gis_introduction/topology.rst:8
 msgid "Understanding topology in vector data"
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:13
+#: ../../docs/gentle_gis_introduction/topology.rst:10
 msgid "Keywords:"
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:13
+#: ../../docs/gentle_gis_introduction/topology.rst:10
 msgid ""
 "Vector, topology, topology rules, topology errors, search radius, snapping "
 "distance, simple feature"
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:17
+#: ../../docs/gentle_gis_introduction/topology.rst:14
 msgid "Overview"
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:19
+#: ../../docs/gentle_gis_introduction/topology.rst:16
 msgid ""
 "**Topology** expresses the spatial relationships between connecting or "
 "adjacent vector features (points, polylines and polygons) in a GIS. "
@@ -59,7 +57,7 @@ msgid ""
 "types of spatial analysis, such as network analysis."
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:26
+#: ../../docs/gentle_gis_introduction/topology.rst:23
 msgid ""
 "Imagine you travel to London. On a sightseeing tour you plan to visit St. "
 "Paul's Cathedral first and in the afternoon Covent Garden Market for some "
@@ -71,15 +69,15 @@ msgid ""
 "show connectivity."
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:40
+#: ../../docs/gentle_gis_introduction/topology.rst:37
 msgid "Topology of London Underground Network."
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:43
+#: ../../docs/gentle_gis_introduction/topology.rst:40
 msgid "Topology errors"
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:45
+#: ../../docs/gentle_gis_introduction/topology.rst:42
 msgid ""
 "There are different types of topological errors and they can be grouped "
 "according to whether the vector feature types are polygons or polylines. "
@@ -91,7 +89,7 @@ msgid ""
 "beyond the line it should connect to (see figure_topology_errors_)."
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:60
+#: ../../docs/gentle_gis_introduction/topology.rst:57
 msgid ""
 "Undershoots (1) occur when digitised vector lines that should connect to "
 "each other don’t quite touch. Overshoots (2) happen if a line ends beyond "
@@ -99,14 +97,14 @@ msgid ""
 "polygons do not match up on their borders."
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:65
+#: ../../docs/gentle_gis_introduction/topology.rst:62
 msgid ""
 "The result of overshoot and undershoot errors are so-called 'dangling nodes'"
 " at the end of the lines. Dangling nodes are acceptable in special cases, "
 "for example if they are attached to dead-end streets."
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:69
+#: ../../docs/gentle_gis_introduction/topology.rst:66
 msgid ""
 "Topological errors break the relationship between features. These errors "
 "need to be fixed in order to be able to analyse vector data with procedures "
@@ -122,25 +120,25 @@ msgid ""
 "between the municipalities are."
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:81
+#: ../../docs/gentle_gis_introduction/topology.rst:78
 msgid ""
 "It is not only important for your own analysis to create and have "
 "topologically correct data, but also for people who you pass data on to. "
 "They will be expecting your data and analysis results to be correct!"
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:86
+#: ../../docs/gentle_gis_introduction/topology.rst:83
 msgid "Topology rules"
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:88
+#: ../../docs/gentle_gis_introduction/topology.rst:85
 msgid ""
 "Fortunately, many common errors that can occur when digitising vector "
 "features can be prevented by topology rules that are implemented in many GIS"
 " applications."
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:91
+#: ../../docs/gentle_gis_introduction/topology.rst:88
 msgid ""
 "Except for some special GIS data formats, topology is usually not enforced "
 "by default. Many common GIS, like QGIS, define topology as relationship "
@@ -148,36 +146,36 @@ msgid ""
 "vector layer."
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:95
+#: ../../docs/gentle_gis_introduction/topology.rst:92
 msgid ""
 "The following list shows some examples of where topology rules can be "
 "defined for real world features in a vector map:"
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:98
+#: ../../docs/gentle_gis_introduction/topology.rst:95
 msgid "Area edges of a municipality map must not overlap."
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:99
+#: ../../docs/gentle_gis_introduction/topology.rst:96
 msgid "Area edges of a municipality map must not have gaps (slivers)."
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:100
+#: ../../docs/gentle_gis_introduction/topology.rst:97
 msgid ""
 "Polygons showing property boundaries must be closed. Undershoots or "
 "overshoots of the border lines are not allowed."
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:102
+#: ../../docs/gentle_gis_introduction/topology.rst:99
 msgid ""
 "Contour lines in a vector line layer must not intersect (cross each other)."
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:105
+#: ../../docs/gentle_gis_introduction/topology.rst:102
 msgid "Topological tools"
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:107
+#: ../../docs/gentle_gis_introduction/topology.rst:104
 msgid ""
 "Many GIS applications provide tools for topological editing. For example in "
 "QGIS you can **enable topological editing** to improve editing and "
@@ -187,7 +185,7 @@ msgid ""
 " other polygon boundaries as shown in figure_topological_tools_ (1)."
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:114
+#: ../../docs/gentle_gis_introduction/topology.rst:111
 msgid ""
 "Another topological option allows you to prevent** polygon overlaps** during"
 " digitising (see figure_topological_tools_ (2)). If you already have one "
@@ -196,7 +194,7 @@ msgid ""
 " to the common boundary."
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:126
+#: ../../docs/gentle_gis_introduction/topology.rst:123
 msgid ""
 "(1) Topological editing to detect shared boundaries, when moving vertices. "
 "When moving a vertex, all features that share that vertex are updated. (2) "
@@ -204,11 +202,11 @@ msgid ""
 " is clipped to avoid overlapping neighbouring areas."
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:132
+#: ../../docs/gentle_gis_introduction/topology.rst:129
 msgid "Snapping distance"
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:134
+#: ../../docs/gentle_gis_introduction/topology.rst:131
 msgid ""
 "Snapping distance is the distance a GIS uses to search for the closest "
 "vertex and / or segment you are trying to connect when you digitise. A "
@@ -219,17 +217,17 @@ msgid ""
 "figure_snapping_distance_)."
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:147
+#: ../../docs/gentle_gis_introduction/topology.rst:144
 msgid ""
 "The snapping distance (black circle) is defined in map units (e.g. decimal "
 "degrees) for snapping to either vertices or segments."
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:151
+#: ../../docs/gentle_gis_introduction/topology.rst:148
 msgid "Search Radius"
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:153
+#: ../../docs/gentle_gis_introduction/topology.rst:150
 msgid ""
 "Search radius is the distance a GIS uses to search for the closest vertex "
 "you are trying to move when you click on the map. If you aren't within the "
@@ -238,7 +236,7 @@ msgid ""
 "functionality."
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:158
+#: ../../docs/gentle_gis_introduction/topology.rst:155
 msgid ""
 "Snapping distance and search radius are both set in map units so you may "
 "need to experiment to get the distance value set right. If you specify a "
@@ -248,71 +246,71 @@ msgid ""
 "vertex to move or edit."
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:165
+#: ../../docs/gentle_gis_introduction/topology.rst:162
 msgid "Common problems / things to be aware of"
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:167
+#: ../../docs/gentle_gis_introduction/topology.rst:164
 msgid ""
 "Mainly designed for simplicity and for fast rendering but not for data "
-"analysis that require topology (such as finding routes across a network). "
-"Many GIS applications are able to show topological and simple feature data "
+"analysis that requires topology (such as finding routes across a network), "
+"many GIS applications are able to show topological and simple feature data "
 "together and some can also create, edit and analyse both."
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:173
+#: ../../docs/gentle_gis_introduction/topology.rst:170
 msgid "What have we learned?"
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:175
+#: ../../docs/gentle_gis_introduction/topology.rst:172
 msgid "Let's wrap up what we covered in this worksheet:"
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:177
+#: ../../docs/gentle_gis_introduction/topology.rst:174
 msgid ""
 "**Topology** shows the spatial relation of neighbouring vector features."
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:178
+#: ../../docs/gentle_gis_introduction/topology.rst:175
 msgid "Topology in GIS is provided by **topological tools**."
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:179
+#: ../../docs/gentle_gis_introduction/topology.rst:176
 msgid "Topology can be used to **detect and correct digitizing errors**."
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:180
+#: ../../docs/gentle_gis_introduction/topology.rst:177
 msgid ""
 "For some tools, such as **network analysis**, topological data is essential."
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:181
+#: ../../docs/gentle_gis_introduction/topology.rst:178
 msgid ""
 "**Snapping distance** and **search radius** help us to digitise "
 "topologically correct vector data."
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:183
+#: ../../docs/gentle_gis_introduction/topology.rst:180
 msgid ""
 "**Simple feature** data is not a true topological data format but it is "
 "commonly used by GIS applications."
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:187
+#: ../../docs/gentle_gis_introduction/topology.rst:184
 msgid "Now you try!"
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:189
+#: ../../docs/gentle_gis_introduction/topology.rst:186
 msgid "Here are some ideas for you to try with your learners:"
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:191
+#: ../../docs/gentle_gis_introduction/topology.rst:188
 msgid ""
 "Mark your local bus stops on a toposheet map and then task your learners to "
 "find the shortest route between two stops."
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:193
+#: ../../docs/gentle_gis_introduction/topology.rst:190
 msgid ""
 "Think of how you would create vector features in a GIS to represent a "
 "topological road network of your town. What topological rules are important "
@@ -320,68 +318,62 @@ msgid ""
 "layer is topologically correct?"
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:199
+#: ../../docs/gentle_gis_introduction/topology.rst:196
 msgid "Something to think about"
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:201
+#: ../../docs/gentle_gis_introduction/topology.rst:198
 msgid ""
 "If you don't have a computer available, you can use a map of a bus or "
 "railway network and discuss the spatial relationships and topology with your"
 " learners."
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:205
+#: ../../docs/gentle_gis_introduction/topology.rst:202
 msgid "Further reading"
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:207
+#: ../../docs/gentle_gis_introduction/topology.rst:204
 msgid "**Books**:"
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:209
+#: ../../docs/gentle_gis_introduction/topology.rst:206
 msgid ""
 "Chang, Kang-Tsung (2006). Introduction to Geographic Information Systems. "
 "3rd Edition. McGraw Hill. ISBN: 0070658986"
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:211
+#: ../../docs/gentle_gis_introduction/topology.rst:208
 msgid ""
 "DeMers, Michael N. (2005). Fundamentals of Geographic Information Systems. "
 "3rd Edition. Wiley. ISBN: 9814126195"
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:214
+#: ../../docs/gentle_gis_introduction/topology.rst:211
 msgid "**Websites**:"
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:216
+#: ../../docs/gentle_gis_introduction/topology.rst:213
 msgid "http://www.innovativegis.com/basis/"
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:217
+#: ../../docs/gentle_gis_introduction/topology.rst:214
 msgid "https://en.wikipedia.org/wiki/Geospatial_topology"
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:219
+#: ../../docs/gentle_gis_introduction/topology.rst:216
 msgid ""
 "The QGIS User Guide also has more detailed information on topological "
 "editing provided in QGIS."
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:223
+#: ../../docs/gentle_gis_introduction/topology.rst:220
 msgid "What's next?"
 msgstr ""
 
-#: ../../source/docs/gentle_gis_introduction/topology.rst:225
+#: ../../docs/gentle_gis_introduction/topology.rst:222
 msgid ""
 "In the section that follows we will take a closer look at **Coordinate "
 "Reference Systems** to understand how we relate data from our spherical "
 "earth onto flat maps!"
 msgstr ""
-
-#~ msgid "http://www.innovativegis.com/basis/primer/concepts.html"
-#~ msgstr ""
-
-#~ msgid "http://en.wikipedia.org/wiki/Geospatial_topology"
-#~ msgstr ""

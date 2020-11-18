@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Francis Gasc <francisgasc@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-05 01:57+0200\n"
 "PO-Revision-Date: 2020-03-16 19:24+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Francis Gasc <francisgasc@gmail.com>, 2020\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -28,6 +29,7 @@ msgstr "Chargement de couches"
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:27
 msgid "The code snippets on this page need the following imports:"
 msgstr ""
+"Les extraits de code sur cette page nécessitent les importations suivantes :"
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:39
 msgid ""
@@ -48,6 +50,9 @@ msgid ""
 "To create and add a vector layer instance to the project, specify the "
 "layer's data source identifier, name for the layer and provider's name:"
 msgstr ""
+"Pour créer et ajouter une instance de couche vecteur au projet, il faut "
+"spécifier l'identifiant de la source de données de la couche, le nom de la "
+"couche et le nom du provider    :"
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:66
 msgid ""
@@ -199,6 +204,8 @@ msgid ""
 "WFS connection: the connection is defined with a URI and using the ``WFS`` "
 "provider:"
 msgstr ""
+"Connexion WFS : la connexion est définie avec un URI et en utilisant le "
+"fournisseur ``WFS`` :"
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:227
 msgid "The uri can be created using the standard ``urllib`` library:"
@@ -212,6 +219,10 @@ msgid ""
 ":class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` instance, as in the "
 "following example:"
 msgstr ""
+"Vous pouvez changer la source de données d'une couche existante en appelant "
+":meth:`setDataSource() <qgis.core.QgsVectorLayer.setDataSource>` sur une "
+"instance :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>`, comme dans "
+"l'exemple suivant :"
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:262
 msgid "Raster Layers"
@@ -225,10 +236,16 @@ msgid ""
 " available by default). To load a raster from a file, specify its filename "
 "and display name:"
 msgstr ""
+"Pour accéder aux fichiers raster, la bibliothèque GDAL est utilisée. Elle "
+"prend en charge un large éventail de formats de fichiers. Si vous avez des "
+"difficultés à ouvrir certains fichiers, vérifiez si votre GDAL prend en "
+"charge le format en question (tous les formats ne sont pas disponibles par "
+"défaut). Pour charger un raster à partir d'un fichier, indiquez son nom de "
+"fichier et son nom d'affichage :"
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:277
 msgid "To load a raster from a geopackage:"
-msgstr ""
+msgstr "Pour charger un raster à partir d'un géopackage :"
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:291
 msgid ""
@@ -236,16 +253,21 @@ msgid ""
 "addRasterLayer function of the :class:`QgisInterface "
 "<qgis.gui.QgisInterface>` object:"
 msgstr ""
+"Tout comme les couches vecteur, les couches raster peuvent être chargées en "
+"utilisant la fonction addRasterLayer de l'objet :class:`QgisInterface "
+"<qgis.gui.QgisInterface>` :"
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:298
 msgid ""
 "This creates a new layer and adds it to the current project (making it "
 "appear in the layer list) in one step."
 msgstr ""
+"Cela crée une nouvelle couche et l'ajoute au projet en cours (en la faisant "
+"apparaître dans la liste des couches) en une seule étape."
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:302
 msgid "To load a PostGIS raster:"
-msgstr ""
+msgstr "Pour charger un raster PostGIS :"
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:304
 msgid ""
@@ -255,6 +277,12 @@ msgid ""
 "URI, before adding the raster. Note that None should be used when it is "
 "desired to leave the parameter blank:"
 msgstr ""
+"Les raster PostGIS, similaires aux vecteurs PostGIS, peuvent être ajoutées à"
+" un projet à l'aide d'une chaîne URI. Il est efficace de créer un "
+"dictionnaire de chaînes pour les paramètres de connexion à la base de "
+"données. Le dictionnaire est ensuite chargé dans un URI vide, avant "
+"d'ajouter le raster. Notez qu'il convient d'utiliser None lorsque l'on "
+"souhaite laisser le paramètre vide :"
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:352
 msgid "Raster layers can also be created from a WCS service:"
@@ -263,7 +291,7 @@ msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:360
 msgid "Here is a description of the parameters that the WCS URI can contain:"
-msgstr ""
+msgstr "Voici une description des paramètres que l'URI du WCS peut contenir :"
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:362
 msgid ""
@@ -272,6 +300,11 @@ msgid ""
 ":class:`QgsDataSourceUri <qgis.core.QgsDataSourceUri>` should be used to "
 "construct the URI to ensure that special characters are encoded properly."
 msgstr ""
+"L'URI du WCS est composé de paires **clé=valeur** séparées par \"&\". C'est "
+"le même format que la chaîne de requête dans l'URL, encodée de la même "
+"manière :class:`QgsDataSourceUri <qgis.core.QgsDataSourceUri>` doit être "
+"utilisé pour construire l'URI afin de s'assurer que les caractères spéciaux "
+"sont encodés correctement."
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:368
 msgid ""
@@ -279,36 +312,50 @@ msgid ""
 " version of WCS is using different parameter name for **GetCapabilities** "
 "version, see param version."
 msgstr ""
+"**url** (obligatoire) : URL du serveur WCS. Ne pas utiliser VERSION dans "
+"l'URL, car chaque version de WCS utilise un nom de paramètre différent pour "
+"la version **GetCapabilities**, voir la version param."
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:371
 msgid "**identifier** (required) : Coverage name"
-msgstr ""
+msgstr "**identifier** (obligatoire) : Nom de la couverture"
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:372
 msgid ""
 "**time** (optional) : time position or time period "
 "(beginPosition/endPosition[/timeResolution])"
 msgstr ""
+"**time** (facultatif) : position temporelle ou période de temps "
+"(beginPosition/endPosition [/timeResolution])"
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:374
 msgid ""
 "**format** (optional) : Supported format name. Default is the first "
 "supported format with tif in name or the first supported format."
 msgstr ""
+"**format** (facultatif) : Nom du format supporté. La valeur par défaut est "
+"le premier format supporté avec tif dans le nom ou le premier format "
+"supporté."
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:376
 msgid ""
 "**crs** (optional) : CRS in form AUTHORITY:ID, e.g. EPSG:4326. Default is "
 "EPSG:4326 if supported or the first supported CRS."
 msgstr ""
+"**crs** (facultatif) : CRS sous la forme AUTHORITY:ID, par exemple "
+"EPSG:4326. La valeur par défaut est EPSG:4326 si elle est prise en charge ou"
+" le premier CRS pris en charge."
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:378
 msgid "**username** (optional) : Username for basic authentication."
 msgstr ""
+"**username** (facultatif) : Nom d'utilisateur pour l'authentification de "
+"base."
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:379
 msgid "**password** (optional) : Password for basic authentication."
 msgstr ""
+"**password** (facultatif) : Mot de passe pour l'authentification de base."
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:380
 msgid ""
@@ -316,6 +363,9 @@ msgid ""
 "GetCoverage URL advertised by GetCapabilities. May be necessary if a server "
 "is not configured properly."
 msgstr ""
+"**IgnoreGetMapUrl** (facultatif, hack) : Si spécifié (défini à 1), ignorer "
+"l'URL de GetCoverage annoncée par GetCapabilities. Peut être nécessaire si "
+"un serveur n'est pas configuré correctement."
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:383
 msgid ""
@@ -323,12 +373,18 @@ msgid ""
 " axis in GetCoverage request. May be necessary for geographic CRS if a "
 "server is using wrong axis order."
 msgstr ""
+"**InvertAxisOrientation** (optionnel, hack) : Si spécifié (défini à 1), "
+"changer d'axe dans la demande GetCoverage. Peut être nécessaire pour les CRS"
+" géographiques si un serveur utilise un mauvais ordre d'axes."
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:386
 msgid ""
 "**IgnoreAxisOrientation** (optional, hack) : If specified (set to 1), do not"
 " invert axis orientation according to WCS standard for geographic CRS."
 msgstr ""
+"**IgnoreAxisOrientation** (optionnel, hack) : Si spécifié (défini à 1), "
+"n'inversez pas l'orientation des axes selon la norme WCS pour les CRS "
+"géographiques."
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:388
 msgid ""
@@ -337,6 +393,11 @@ msgid ""
 "failed with AlwaysCache. Allowed values: AlwaysCache, PreferCache, "
 "PreferNetwork, AlwaysNetwork. Default is AlwaysCache."
 msgstr ""
+"**cache** (facultatif) : contrôle de la charge du cache, comme décrit dans "
+"QNetworkRequest::CacheLoadControl, mais la requête est renvoyée en tant que "
+"PreferCache si elle a échoué avec AlwaysCache. Valeurs autorisées : "
+"AlwaysCache, PreferCache, PreferNetwork, AlwaysNetwork. La valeur par défaut"
+" est AlwaysCache."
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:396
 msgid ""
@@ -351,7 +412,7 @@ msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:410
 msgid "QgsProject instance"
-msgstr ""
+msgstr "QgsProject instance"
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:412
 msgid ""
@@ -364,22 +425,35 @@ msgid ""
 "via Python using the :meth:`removeMapLayer() "
 "<qgis.core.QgsProject.removeMapLayer>` method."
 msgstr ""
+"Si vous souhaitez utiliser les couches ouvertes pour le rendu, n'oubliez pas"
+" de les ajouter à l'instance :class:`QgsProject <qgis.core.QgsProject>`. "
+"L'instance :class:`QgsProject <qgis.core.QgsProject>` prend la propriété des"
+" couches et celles-ci peuvent être accessibles ultérieurement depuis "
+"n'importe quelle partie de l'application par leur identifiant unique. "
+"Lorsque la couche est retirée du projet, elle est également supprimée. Les "
+"couches peuvent être supprimées par l'utilisateur dans l'interface QGIS, ou "
+"via Python en utilisant la méthode :meth:`removeMapLayer() "
+"<qgis.core.QgsProject.removeMapLayer>`."
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:421
 msgid ""
 "Adding a layer to the current project is done using the :meth:`addMapLayer()"
 " <qgis.core.QgsProject.addMapLayer>` method:"
 msgstr ""
+"L'ajout d'une couche au projet actuel se fait à l'aide de la méthode "
+":meth:`addMapLayer() <qgis.core.QgsProject.addMapLayer>` :"
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:427
 msgid "To add a layer at an absolute position:"
-msgstr ""
+msgstr "Pour ajouter une couche à une position absolue :"
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:438
 msgid ""
 "If you want to delete the layer use the :meth:`removeMapLayer() "
 "<qgis.core.QgsProject.removeMapLayer>` method:"
 msgstr ""
+"Si vous voulez supprimer la couche, utilisez la méthode "
+":meth:`removeMapLayer() <qgis.core.QgsProject.removeMapLayer>` :"
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:445
 msgid ""
@@ -387,9 +461,14 @@ msgid ""
 ":meth:`id() <qgis.core.QgsMapLayer.id>` method of the layer), but you can "
 "also pass the layer object itself."
 msgstr ""
+"Dans le code ci-dessus, l'identifiant de la couche est passé (vous pouvez "
+"l'obtenir en appelant la méthode :meth:`id() <qgis.core.QgsMapLayer.id>` de "
+"la couche), mais vous pouvez aussi passer l'objet de la couche lui-même."
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:448
 msgid ""
 "For a list of loaded layers and layer ids, use the :meth:`mapLayers() "
 "<qgis.core.QgsProject.mapLayers>` method:"
 msgstr ""
+"Pour obtenir une liste des couches chargées et de leurs identifiants, "
+"utilisez la méthode :meth:`mapLayers() <qgis.core.QgsProject.mapLayers>` :"

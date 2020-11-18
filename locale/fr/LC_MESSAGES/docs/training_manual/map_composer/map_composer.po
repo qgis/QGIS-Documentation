@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Francis Gasc <francisgasc@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-05 01:57+0200\n"
 "PO-Revision-Date: 2020-03-16 19:19+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Francis Gasc <francisgasc@gmail.com>, 2020\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,7 +24,7 @@ msgstr ""
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:2
 msgid "|LS| Using Print Layout"
-msgstr ""
+msgstr "|LS| Utilisation de mise en page"
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:4
 msgid ""
@@ -36,28 +37,46 @@ msgid ""
 "printing out the map if you have a printer connected. Both exporting and "
 "printing is handled via the *Print Layout*."
 msgstr ""
+"Maintenant que vous avez une carte, vous devez pouvoir l'imprimer ou "
+"l'exporter vers un document. La raison en est qu'un fichier de carte SIG "
+"n'est pas une image. Il enregistre plutôt l'état du programme SIG, avec des "
+"références à toutes les couches, leurs étiquettes, leurs couleurs, etc. "
+"Ainsi, pour quelqu'un qui ne dispose pas des données ou du même programme "
+"SIG (comme QGIS), le fichier de carte sera inutile. Heureusement, QGIS peut "
+"exporter son fichier de carte dans un format que n'importe quel ordinateur "
+"peut lire, ainsi qu'imprimer la carte si vous avez une imprimante connectée."
+" L'exportation et l'impression sont toutes deux gérées par la fonction *Mise"
+" en page*."
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:16
 msgid ""
 "**The goal for this lesson:** To use the QGIS *Print Layout* to create a "
 "basic map with all the required settings."
 msgstr ""
+"**L'objectif de cette leçon:** Utiliser *Mise en page* QGIS pour créer une "
+"carte avec tous les paramètres requis."
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:20
 msgid "|basic| |FA| The Layout Manager"
-msgstr ""
+msgstr "|basic| |FA| Le gestionnaire de mise en page"
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:22
 msgid ""
 "QGIS allows you to create multiple maps using the same map file. For this "
 "reason, it has a tool called the *Layout Manager*."
 msgstr ""
+"QGIS vous permet de créer plusieurs cartes en utilisant le même fichier "
+"cartographique. Pour cette raison, il dispose d'un outil appelé "
+"*Gestionnaire mise en page*."
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:25
 msgid ""
 "Click on the :menuselection:`Project --> Layout Manager` menu entry to open "
 "this tool. You'll see a blank :guilabel:`Layout manager` dialog appear."
 msgstr ""
+"Cliquez sur l'entrée du menu :menuselection:`Projet --> Gestionnaire de mise"
+" en page` pour ouvrir cet outil. Vous verrez apparaître un dialogue "
+":guilabel:`gestionnaire mise en page` vide."
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:28
 msgid ""
@@ -65,6 +84,9 @@ msgid ""
 "the :guilabel:`Create...` button, and give the new layout the name of "
 "|majorUrbanName|."
 msgstr ""
+"Sous :guilabel:`nouveau depuis modele`, sélectionnez :guilabel:`mise en page"
+" vide`, cliquez sur le bouton :guilabel:`créer...`, et donnez a la nouvelle "
+"mise en page le nom de |majorUrbanName|."
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:31
 msgid "Click :guilabel:`OK`."
@@ -75,12 +97,17 @@ msgid ""
 "(You could also close the dialog and navigate to a layout via the "
 ":menuselection:`Project --> Layouts -->` menu, as in the image below.)"
 msgstr ""
+"(Vous pouvez aussi fermer le dialogue et naviguer vers une mise en page via "
+"le menu :menuselection:`Projet --> mises en page -->`, comme dans l'image "
+"ci-dessous)."
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:39
 msgid ""
 "Whichever route you take to get there, you will now see the *Print Layout* "
 "window:"
 msgstr ""
+"Quel que soit le chemin que vous prenez pour vous y rendre, vous verrez "
+"maintenant la fenêtre *mise en page* :"
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:47
 msgid "|basic| |FA| Basic Map Composition"
@@ -100,14 +127,18 @@ msgid ""
 " :guilabel:`Page properties...` in the context menu. Check that the values "
 "in the :guilabel:`Item Properties` tab are set to the following:"
 msgstr ""
+"Faites un clic droit sur la feuille dans la partie centrale de la fenêtre de"
+" mise en page et choisissez :guilabel:`proprietes page...` dans le menu "
+"contextuel. Vérifiez que les valeurs dans l'onglet :guilabel:`proprietes de "
+"l'élément` sont définies comme suit :"
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:57
 msgid ":guilabel:`Size`: ``A4``"
-msgstr ""
+msgstr ":guilabel:`taille`: ``A4``."
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:58
 msgid ":guilabel:`Orientation`: ``Landscape``"
-msgstr ""
+msgstr ":guilabel:`Orientation` : ``Paysage``."
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:60
 msgid ""
@@ -119,11 +150,11 @@ msgstr ""
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:64
 msgid "Click on the |addMap| :sup:`Add New Map` button."
-msgstr ""
+msgstr "Cliquez sur le bouton |addMap| :sup:`ajouter nouvelle carte`."
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:66
 msgid "With this tool activated, you will be able to place a map on the page."
-msgstr ""
+msgstr "Avec cet outil activé, vous pourrez placer une carte sur la page."
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:69
 msgid "Click and drag a box on the blank page:"
@@ -139,7 +170,7 @@ msgstr "Déplacez la carte en cliquant et en vous déplaçant autour:"
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:81
 msgid "Resize it by clicking and dragging the boxes on the edges:"
-msgstr ""
+msgstr "Redimensionnez-le en cliquant et en faisant glisser sur les bords :"
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:86
 msgid ""
@@ -175,16 +206,24 @@ msgid ""
 "Zoom and pan the map in the main QGIS window. You can also pan the map using"
 " the |moveItemContent| :sup:`Move item content` tool."
 msgstr ""
+"Zoomez et faites un panoramique de la carte dans la fenêtre principale de "
+"QGIS. Vous pouvez également effectuer un panoramique de la carte en "
+"utilisant l'outil |moveItemContent| :sup:`déplacer le contenu de l'element`."
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:103
 msgid "The map view updates as you zoom in or zoom out."
 msgstr ""
+"La vue de la carte s'actualise au fur et à mesure que vous faites un zoom "
+"avant ou arrière."
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:104
 msgid ""
 "If, for any reason, the map view does not refresh correctly, you can force "
 "the map to refresh by clicking this button:"
 msgstr ""
+"Si, pour une raison quelconque, la vue de la carte ne se rafraîchit pas "
+"correctement, vous pouvez forcer le rafraîchissement de la carte en cliquant"
+" sur ce bouton :"
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:110
 msgid ""
@@ -194,12 +233,21 @@ msgid ""
 "Because a *Print Layout* in QGIS is part of the main map file, you must save"
 " your project."
 msgstr ""
+"N'oubliez pas que la taille et la position que vous avez indiquées sur la "
+"carte n'ont pas besoin d'être définitives. Vous pouvez toujours revenir et "
+"la modifier plus tard si vous n'êtes pas satisfait. Pour l'instant, vous "
+"devez vous assurer que vous avez bien enregistré votre travail sur cette "
+"carte. Étant donné qu'une *mise en page* dans QGIS fait partie du fichier "
+"principal de la carte, vous devez enregistrer votre projet. "
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:119
 msgid ""
 "Go to the :menuselection:`Layout -->` |fileSave| :menuselection:`Save "
 "Project`. This is a convenient shortcut to the one in the main dialog."
 msgstr ""
+"Allez à la page :menuselection:`mise en page -->` |fileSave| "
+":menuselection:`sauvegarder projet`. C'est un raccourci pratique vers celui "
+"du dialogue principal."
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:124
 msgid "|basic| |FA| Adding a Title"
@@ -211,10 +259,14 @@ msgid ""
 "being told what's going on yet. They need some context, which is what you'll"
 " provide for them by adding map elements. First, let us add a title."
 msgstr ""
+"Votre carte a maintenant fière allure sur la page, mais vos "
+"lecteurs/utilisateurs ne sont pas encore informés de ce qui se passe. Ils "
+"ont besoin d'un contexte, et c'est ce que vous leur fournirez en ajoutant "
+"des éléments de carte. Commençons par ajouter un titre."
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:132
 msgid "Click on the |label| :sup:`Add Label` button"
-msgstr ""
+msgstr "Cliquez sur le bouton |label| :sup:`ajouter etiquette`."
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:134
 msgid ""
@@ -222,6 +274,9 @@ msgid ""
 ":guilabel:`New Item Properties` dialog, and a label will appear at the top "
 "of the map."
 msgstr ""
+"Cliquez sur la page, au-dessus de la carte, acceptez les valeurs suggérées "
+"dans le dialogue :guilabel:`nouvelles proprietes element`, et une étiquette "
+"apparaîtra en haut de la carte."
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:138
 msgid ""
@@ -245,6 +300,9 @@ msgid ""
 "However, there is also a tool in the Actions Toolbar to help position the "
 "title relative to the map (not the page):"
 msgstr ""
+"Cependant, il existe également un outil dans la barre d'outils des actions "
+"pour aider à positionner le titre par rapport à la carte (et non à la page) "
+":"
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:148
 msgid "|alignLeft|"
@@ -252,13 +310,15 @@ msgstr "|alignLeft|"
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:150
 msgid "Click the map to select it"
-msgstr ""
+msgstr "Cliquez sur la carte pour la sélectionner"
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:151
 msgid ""
 "Hold in :kbd:`Shift` on your keyboard and click on the label so that both "
 "the map and the label are selected."
 msgstr ""
+"Maintenez :kbd:`Shift` sur votre clavier et cliquez sur l'étiquette de sorte"
+" que la carte et l'étiquette soient toutes deux sélectionnées."
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:153
 msgid ""
@@ -266,12 +326,18 @@ msgid ""
 "on the dropdown arrow next to it to reveal the positioning options and click"
 " |alignHCenter| :guilabel:`Align center`:"
 msgstr ""
+"Cherchez le bouton |alignLeft| :sup:`aligner les éléments sélectionnés à "
+"gauche` et cliquez sur la liste déroulante à côté pour faire apparaître les "
+"options de positionnement et cliquez sur |alignHCenter| :guilabel:`aligner "
+"centré` :"
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:161
 msgid ""
 "Now the label frame is centered on the map, but not the contents. To center "
 "the contents of the label:"
 msgstr ""
+"Maintenant, le cadre de l'étiquette est centré sur la carte, mais pas le "
+"contenu. Pour centrer le contenu de l'étiquette :"
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:164
 msgid "Select the label by clicking on it."
@@ -282,6 +348,8 @@ msgid ""
 "Click on the :guilabel:`Item Properties` tab in the side panel of the layout"
 " window."
 msgstr ""
+"Cliquez sur l'onglet :guilabel:`proprietes element` dans le panneau latéral "
+"de la fenêtre de mise en page."
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:167
 msgid "Change the text of the label to \"|majorUrbanName|\":"
@@ -299,6 +367,9 @@ msgid ""
 " a size of ``36``) and set the :guilabel:`Horizontal Alignment` to "
 ":guilabel:`Center`."
 msgstr ""
+"Choisissez une police large mais raisonnable (l'exemple utilisera la police "
+"par défaut avec une taille de \"36\") et définissez le :guilabel:`aligner "
+"horizontal` à :guilabel:`centrer`."
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:178
 msgid ""
@@ -344,18 +415,26 @@ msgid ""
 "To make sure that you don't accidentally move these elements around now that"
 " you've aligned them, you can lock items into place:"
 msgstr ""
+"Pour vous assurer que vous ne déplacez pas accidentellement ces éléments "
+"maintenant que vous les avez alignés, vous pouvez les verrouiller :"
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:198
 msgid ""
 "With both the label and map selected, click the |lockItems| :sup:`Lock "
 "Selected Items` button in the *Actions* Toolbar."
 msgstr ""
+"Une fois l'étiquette et la carte sélectionnées, cliquez sur le bouton "
+"|lockItems| :sup:`verouiller les éléments selectionnes` dans la barre "
+"d'outils *Actions*."
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:202
 msgid ""
 "Click the |unlockAll| :sup:`Unlock All Items` button in the *Actions* "
 "Toolbar to be able to edit the items again."
 msgstr ""
+"Cliquez sur le bouton |unlockAll| :sup:`Déverrouiller tous les éléments` "
+"dans la barre d'outils *Actions* pour pouvoir modifier à nouveau les "
+"éléments."
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:207
 msgid "|basic| |FA| Adding a Legend"
@@ -368,10 +447,15 @@ msgid ""
 "In other cases, it's more difficult to guess, like the colors of the "
 "forests. Let's add a new legend."
 msgstr ""
+"Le lecteur de carte doit également être capable de voir ce que signifient "
+"réellement les différents éléments de la carte. Dans certains cas, comme les"
+" noms de lieux, cela est assez évident. Dans d'autres cas, c'est plus "
+"difficile à deviner, comme les couleurs des forêts. Ajoutons une nouvelle "
+"légende."
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:216
 msgid "Click on this |addLegend| :sup:`Add Legend` button"
-msgstr ""
+msgstr "Cliquez sur ce bouton |addLegend| :sup:`ajouter legende`."
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:218
 msgid ""
@@ -379,6 +463,9 @@ msgid ""
 ":guilabel:`New Item Properties` dialog, and then move it to where you want "
 "it:"
 msgstr ""
+"Cliquez sur la page pour placer la légende, acceptez les valeurs suggérées "
+"dans la boîte de dialogue :guilabel:`nouvelle propriete de l'element`, puis "
+"déplacez-la là où vous le souhaitez :"
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:226
 msgid "|moderate| |FA| Customizing Legend Items"
@@ -403,10 +490,12 @@ msgstr ""
 #: ../../docs/training_manual/map_composer/map_composer.rst:233
 msgid "Select the entry with buildings (from :file:`training_data.gpkg`)."
 msgstr ""
+"Sélectionnez l'entrée avec les bâtiments (à partir de "
+":file:`training_data.gpkg`)."
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:234
 msgid "Delete it from the legend by clicking the |signMinus| button:"
-msgstr ""
+msgstr "Supprimez-le de la légende en cliquant sur le bouton |signMinus| :"
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:237
 msgid "You can also rename items."
@@ -418,23 +507,27 @@ msgstr "Sélectionnez une couche dans la même liste."
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:240
 msgid "Click the |edit| button."
-msgstr ""
+msgstr "Cliquez sur le bouton |edit|."
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:241
 msgid ""
 "Rename the layers to ``Places``, ``Roads and Streets``, ``Surface Water``, "
 "and ``Rivers``."
 msgstr ""
+"Renommez les couches en ``Places``, ``Roads and Streets``, ``Surface Water``"
+" et ``Rivers``."
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:243
 msgid ""
 "Set ``landuse`` to :guilabel:`Hidden` (right-click to bring up the context "
 "menu)."
 msgstr ""
+"Mettez ``landuse`` sur :guilabel:`masquer` (clic droit pour faire apparaître"
+" le menu contextuel)."
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:246
 msgid "You can also reorder the items:"
-msgstr ""
+msgstr "Vous pouvez également les commander à nouveau :"
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:251
 msgid ""
@@ -458,6 +551,8 @@ msgid ""
 "Finally the map is ready for export! You'll see the export buttons near the "
 "top left corner of the layout window:"
 msgstr ""
+"La carte est enfin prête pour l'exportation ! Vous verrez les boutons "
+"d'exportation dans le coin supérieur gauche de la fenêtre de mise en page :"
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:266
 msgid ""
@@ -466,10 +561,17 @@ msgid ""
 "working with, it's probably better to consult the printer manual or a "
 "general guide to printing for more information on this topic."
 msgstr ""
+"|filePrint| :sup:`mise en page` : interface avec une imprimante. Comme les "
+"options d'impression diffèrent selon le modèle d'imprimante avec lequel vous"
+" travaillez, il est probablement préférable de consulter le manuel de "
+"l'imprimante ou un guide général d'impression pour plus d'informations sur "
+"ce sujet."
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:272
 msgid "The other buttons allow you to export the map page to a file."
 msgstr ""
+"Les autres boutons vous permettent d'exporter la page de la carte vers un "
+"fichier."
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:273
 msgid ""
@@ -477,6 +579,10 @@ msgid ""
 "common image formats to choose from. This is probably the simplest option, "
 "but the image it creates is \"dead\" and difficult to edit."
 msgstr ""
+"|saveMapAsImage| :sup:`Exporter image ` : vous donne une sélection de divers"
+" formats d'images courants parmi lesquels vous pouvez choisir. C'est "
+"probablement l'option la plus simple, mais l'image qu'elle crée est "
+"\"morte\" et difficile à modifier."
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:277
 msgid ""
@@ -486,6 +592,11 @@ msgid ""
 "imported to programs like `Inkscape <https://inkscape.org/>`_ or other "
 "vector image editing software."
 msgstr ""
+"|saveAsSVG| :sup:`Exporter SVG` : Si vous envoyez la carte à un cartographe "
+"(qui peut vouloir l'éditer pour la publier), il est préférable de l'exporter"
+" en SVG. SVG signifie \"Scalable Vector Graphic\", et peut être importé dans"
+" des programmes comme `Inkscape <https://inkscape.org/>`_ ou d'autres "
+"logiciels d'édition d'images vecteur."
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:282
 msgid ""
@@ -494,6 +605,11 @@ msgid ""
 "options for a PDF. Some cartographers may prefer PDF as well, if they have a"
 " program that allows them to import and edit this format."
 msgstr ""
+"|saveAsPDF| :sup:`Exporter PDF` : Si vous devez envoyer la carte à un "
+"client, il est plus courant d'utiliser un PDF, car il est plus facile de "
+"configurer les options d'impression pour un PDF. Certains cartographes "
+"peuvent également préférer le format PDF, s'ils disposent d'un programme qui"
+" leur permet d'importer et de modifier ce format."
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:288
 msgid "For our purposes, we're going to use PDF."
@@ -501,48 +617,60 @@ msgstr "Pour nos fins, nous allons utiliser un PDF."
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:290
 msgid "Click the |saveAsPDF| :sup:`Export as PDF` button"
-msgstr ""
+msgstr "Cliquez sur le bouton |saveAsPDF| :sup:`Exporter PDF"
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:291
 msgid ""
 "Choose a save location and a file name as usual. The following dialog will "
 "show up."
 msgstr ""
+"Choisissez un emplacement de sauvegarde et un nom de fichier comme "
+"d'habitude. La boîte de dialogue suivante s'affiche."
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:297
 msgid "You can safely use the default values now and click :guilabel:`Save`."
 msgstr ""
+"Vous pouvez maintenant utiliser en toute sécurité les valeurs par défaut et "
+"cliquer sur :guilabel:`sauvegarder`."
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:300
 msgid ""
 "QGIS will proceed to the map export and push a message on top of the print "
 "layout dialog as soon as it finishes."
 msgstr ""
+"QGIS procédera à l'exportation de la carte et ajoutera un message au "
+"dialogue de mise en page dès qu'il sera terminé."
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:302
 msgid ""
 "Click the hyperlink in the message to open the folder in which the PDF has "
 "been saved in your system's file manager"
 msgstr ""
+"Cliquez sur l'hyperlien dans le message pour ouvrir le dossier dans lequel "
+"le PDF a été enregistré dans le gestionnaire de fichiers de votre système"
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:304
 msgid "Open it and see how your layout looks."
-msgstr ""
+msgstr "Ouvrez-le et voyez à quoi ressemble votre mise en page."
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:306
 msgid ""
 "Everything is OK? Congratulations on your first completed QGIS map project!"
 msgstr ""
+"Tout va bien ? Félicitations pour votre premier projet de carte QGIS achevé "
+"!"
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:309
 msgid ""
 "Anything unsatisfying? Go back to the QGIS window, do the appropriate "
 "modifications and export again."
 msgstr ""
+"Quelque chose d'insatisfaisant ? Retournez à la fenêtre QGIS, faites les "
+"modifications appropriées et exportez à nouveau."
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:311
 msgid "Remember to save your project file."
-msgstr ""
+msgstr "N'oubliez pas de sauvegarder votre fichier de projet."
 
 #: ../../docs/training_manual/map_composer/map_composer.rst:315
 msgid "|IC|"
@@ -554,3 +682,6 @@ msgid ""
 "further and create a map layout that adapts dynamically, with more layout "
 "items."
 msgstr ""
+"Vous savez maintenant comment créer une carte statique de base. Nous pouvons"
+" aller plus loin et créer une mise en page de carte qui s'adapte "
+"dynamiquement, avec plus d'éléments de mise en page."

@@ -1,131 +1,95 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2014, QGIS project
-# This file is distributed under the same license as the QGIS Documentation
-# Project package.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation\n"
+"Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-06 11:48+0100\n"
-"PO-Revision-Date: 2019-12-06 11:54+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
-"Language-Team: Kabyle (http://www.transifex.com/qgis/qgis-documentation/language/kab/)\n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:31+0000\n"
+"Language-Team: Kabyle (https://www.transifex.com/qgis/teams/6144/kab/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.1\n"
 "Language: kab\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../source/docs/user_manual/processing/history.rst:10
+#: ../../docs/user_manual/processing/history.rst:4
 msgid "The history manager"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/history.rst:18
+#: ../../docs/user_manual/processing/history.rst:12
 msgid "The processing history"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/history.rst:20
+#: ../../docs/user_manual/processing/history.rst:14
 msgid ""
 "Every time you execute an algorithm, information about the process is stored"
-" in the history manager. Along with the parameters used, the date and time "
-"of the execution are also saved."
+" in the history manager. The date and time of the execution are saved, along"
+" with the parameters used, making it is easy to track and control all the "
+"work that has been developed using the Processing framework, and to "
+"reproduce it."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/history.rst:24
-msgid ""
-"This way, it is easy to track and control all the work that has been "
-"developed using the Processing framework, and to reproduce it."
-msgstr ""
-
-#: ../../source/docs/user_manual/processing/history.rst:27
-msgid ""
-"The history manager is a set of registry entries grouped according to their "
-"date of execution, making it easier to find information about an algorithm "
-"executed at any particular moment."
-msgstr ""
-
-#: ../../source/docs/user_manual/processing/history.rst:36
+#: ../../docs/user_manual/processing/history.rst:26
 msgid "History"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/history.rst:38
+#: ../../docs/user_manual/processing/history.rst:28
 msgid ""
 "Process information is kept as a command-line expression, even if the "
-"algorithm was launched from the toolbox. This makes it also useful for those"
-" learning how to use the command-line interface, since they can call an "
-"algorithm using the toolbox and then check the history manager to see how "
-"that same algorithm could be called from the command line."
+"algorithm was launched from the toolbox. This makes it useful for those "
+"learning how to use the command-line interface, since they can call an "
+"algorithm using the toolbox and then check the history manager to see how it"
+" could be called from the command line."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/history.rst:44
+#: ../../docs/user_manual/processing/history.rst:35
 msgid ""
 "Apart from browsing the entries in the registry, you can also re-execute "
-"processes by simply double-clicking on the corresponding entry: the "
-"algorithm dialog opens with parameters already filled; you can then change "
-"any of them to fit your needs and re-run the algorithm."
+"processes by simply double-clicking on the entry. The algorithm dialog then "
+"opens with parameters already set, and you can change any of them to fit "
+"your needs and re-run the algorithm."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/history.rst:49
+#: ../../docs/user_manual/processing/history.rst:40
 msgid ""
 "The :guilabel:`History` dialog also provides a convenient way to contribute "
 "to the consolidation of the testing infrastructure of QGIS Processing "
-"algorithms and scripts. Right-click on a command you previously executed and"
-" you can :guilabel:`Create Test...` for the concerned algorithm, following "
-"instructions at :source:`python/plugins/processing/tests/README.md`."
+"algorithms and scripts. When you right-click on an entry, you can "
+":guilabel:`Create Test...` using the concerned algorithm and parameters, "
+"following instructions at "
+":source:`python/plugins/processing/tests/README.md`."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/history.rst:57
+#: ../../docs/user_manual/processing/history.rst:49
 msgid "The processing log"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/history.rst:59
+#: ../../docs/user_manual/processing/history.rst:51
 msgid ""
 "The history dialog only contains the execution calls, but not the "
 "information produced by the algorithm when executed. That information is "
 "written to the QGIS log (:menuselection:`View --> Panels --> Log Messages "
-"Panel`), in a :guilabel:`Processing` tab."
+"Panel`)."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/history.rst:64
+#: ../../docs/user_manual/processing/history.rst:56
 msgid ""
-"Third-party algorithms are usually executed by calling their command-line "
+"Third-party algorithms are usually executed by using their command-line "
 "interfaces, which communicate with the user via the console. Although that "
 "console is not shown, usually a full dump of it is written to the log each "
 "time you run one of those algorithms. To avoid cluttering the log with that "
-"information, you can disable it for each provider, looking for the "
-"corresponding option in the provider entry of the settings dialog."
+"information, you can disable it for each provider in the settings dialog."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/history.rst:71
+#: ../../docs/user_manual/processing/history.rst:64
 msgid ""
 "Some algorithms, even if they can produce a result with the given input "
-"data, might add comments or additional information to log if they detect "
+"data, output comments or additional information to log when they detect "
 "potential problems with the data, in order to warn you. Make sure you check "
-"those messages in the log if you are having unexpected results."
+"those messages in the log if you get unexpected results."
 msgstr ""
-
-#~ msgid "|updatedisclaimer|"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Apart from browsing the entries in the registry, you can also re-execute "
-#~ "processes by simply double-clicking on the corresponding entry."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The history dialog only contains the execution calls, but not the "
-#~ "information produced by the algorithm when executed. That information is "
-#~ "written to the QGIS log, in a :guilabel:`Processing` tab."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The :guilabel:`History` dialog also provides a convenient way to contribute "
-#~ "to the consolidation of the testing infrastructure of QGIS Processing "
-#~ "algorithms and scripts. Right-click on a command you previously executed and"
-#~ " you can :guilabel:`Create Test...` for the concerned algorithm, following "
-#~ "instructions at "
-#~ "https://github.com/qgis/QGIS/blob/master/python/plugins/processing/tests/README.md."
-#~ msgstr ""

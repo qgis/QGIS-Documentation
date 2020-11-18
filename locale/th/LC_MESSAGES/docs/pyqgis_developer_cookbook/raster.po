@@ -1,43 +1,37 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2014, QGIS project
-# This file is distributed under the same license as the QGIS Documentation
-# Project package.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation\n"
+"Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-06 11:48+0100\n"
-"PO-Revision-Date: 2019-12-06 11:03+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
-"Language-Team: Thai (http://www.transifex.com/qgis/qgis-documentation/language/th/)\n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:23+0000\n"
+"Language-Team: Thai (https://www.transifex.com/qgis/teams/6144/th/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.1\n"
 "Language: th\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:14
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:29
+msgid ""
+"The code snippets on this page need the following imports if you're outside "
+"the pyqgis console:"
+msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:56
 msgid "Using Raster Layers"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:16
-msgid "|outofdate|"
-msgstr ""
-
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:21
-msgid ""
-"The code snippets on this page needs the following imports if you're outside"
-" the pyqgis console:"
-msgstr ""
-
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:34
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:61
 msgid "Layer Details"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:36
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:63
 msgid ""
 "A raster layer consists of one or more raster bands --- referred to as "
 "single band and multi band rasters. One band represents a matrix of values. "
@@ -48,27 +42,27 @@ msgid ""
 "the colors stored in the palette."
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:44
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:71
 msgid ""
 "The following code assumes ``rlayer`` is a :class:`QgsRasterLayer "
 "<qgis.core.QgsRasterLayer>` object."
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:72
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:133
 msgid "Renderer"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:74
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:135
 msgid ""
 "When a raster layer is loaded, it gets a default renderer based on its type."
 " It can be altered either in the layer properties or programmatically."
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:77
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:138
 msgid "To query the current renderer:"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:86
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:157
 msgid ""
 "To set a renderer, use the :meth:`setRenderer "
 "<qgis.core.QgsRasterLayer.setRenderer>` method of :class:`QgsRasterLayer "
@@ -76,34 +70,34 @@ msgid ""
 " from :class:`QgsRasterRenderer <qgis.core.QgsRasterRenderer>`):"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:91
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:162
 msgid ""
 ":class:`QgsMultiBandColorRenderer <qgis.core.QgsMultiBandColorRenderer>`"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:92
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:163
 msgid ""
 ":class:`QgsPalettedRasterRenderer <qgis.core.QgsPalettedRasterRenderer>`"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:93
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:164
 msgid ""
 ":class:`QgsSingleBandColorDataRenderer "
 "<qgis.core.QgsSingleBandColorDataRenderer>`"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:94
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:165
 msgid ""
 ":class:`QgsSingleBandGrayRenderer <qgis.core.QgsSingleBandGrayRenderer>`"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:95
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:166
 msgid ""
 ":class:`QgsSingleBandPseudoColorRenderer "
 "<qgis.core.QgsSingleBandPseudoColorRenderer>`"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:97
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:168
 msgid ""
 "Single band raster layers can be drawn either in gray colors (low values = "
 "black, high values = white) or with a pseudocolor algorithm that assigns "
@@ -112,11 +106,11 @@ msgid ""
 " to RGB colors. Another possibility is to use just one band for drawing."
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:108
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:179
 msgid "Single Band Rasters"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:110
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:181
 msgid ""
 "Let's say we want a render single band raster layer with colors ranging from"
 " green to yellow (corresponding to pixel values from 0 to 255). In the first"
@@ -124,53 +118,53 @@ msgid ""
 "<qgis.core.QgsRasterShader>` object and configure its shader function:"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:126
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:197
 msgid ""
 "The shader maps the colors as specified by its color map. The color map is "
 "provided as a list of pixel values with associated colors. There are three "
 "modes of interpolation:"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:130
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:201
 msgid ""
 "linear (``Interpolated``): the color is linearly interpolated from the color"
 " map entries above and below the pixel value"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:132
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:203
 msgid ""
 "discrete (``Discrete``): the color is taken from the closest color map entry"
 " with equal or higher value"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:134
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:205
 msgid ""
 "exact (``Exact``): the color is not interpolated, only pixels with values "
 "equal to color map entries will be drawn"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:137
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:208
 msgid ""
 "In the second step we will associate this shader with the raster layer:"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:144
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:215
 msgid ""
 "The number ``1`` in the code above is the band number (raster bands are "
 "indexed from one)."
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:147
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:218
 msgid ""
 "Finally we have to use the :meth:`triggerRepaint "
 "<qgis.core.QgsMapLayer.triggerRepaint>` method to see the results:"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:159
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:230
 msgid "Multi Band Rasters"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:161
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:232
 msgid ""
 "By default, QGIS maps the first three bands to red, green and blue to create"
 " a color image (this is the ``MultiBandColor`` drawing style. In some cases "
@@ -178,23 +172,23 @@ msgid ""
 "red band (1) and green band (2):"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:172
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:243
 msgid ""
 "In case only one band is necessary for visualization of the raster, single "
 "band drawing can be chosen, either gray levels or pseudocolor."
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:175
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:246
 msgid ""
 "We have to use :meth:`triggerRepaint <qgis.core.QgsMapLayer.triggerRepaint>`"
 " to update the map and see the result:"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:189
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:260
 msgid "Query Values"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:191
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:262
 msgid ""
 "Raster values can be queried using the :meth:`sample "
 "<qgis.core.QgsRasterDataProvider.sample>` method of the "
@@ -204,266 +198,17 @@ msgid ""
 "with the value and ``True`` or ``False`` depending on the results:"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:202
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:273
 msgid ""
 "Another method to query raster values is using the :meth:`identify "
 "<qgis.core.QgsRasterDataProvider.identify>` method that returns a "
 ":class:`QgsRasterIdentifyResult <qgis.core.QgsRasterIdentifyResult>` object."
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:213
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:288
 msgid ""
 "In this case, the :meth:`results "
 "<qgis.core.QgsRasterIdentifyResult.results>` method returns a dictionary, "
 "with band indices as keys, and band values as values. For instance, "
 "something like ``{1: 323.0}``"
 msgstr ""
-
-#~ msgid "This sections lists various operations you can do with raster layers."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "A raster layer consists of one or more raster bands --- it is referred to as"
-#~ " either single band or multi band raster. One band represents a matrix of "
-#~ "values. Usual color image (e.g. aerial photo) is a raster consisting of red,"
-#~ " blue and green band. Single band layers typically represent either "
-#~ "continuous variables (e.g. elevation) or discrete variables (e.g. land use)."
-#~ " In some cases, a raster layer comes with a palette and raster values refer "
-#~ "to colors stored in the palette:"
-#~ msgstr ""
-
-#~ msgid "To query the current renderer::"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "To set a renderer use :func:`setRenderer` method of :class:`QgsRasterLayer`."
-#~ " There are several available renderer classes (derived from "
-#~ ":class:`QgsRasterRenderer`):"
-#~ msgstr ""
-
-#~ msgid "QgsMultiBandColorRenderer"
-#~ msgstr ""
-
-#~ msgid "QgsPalettedRasterRenderer"
-#~ msgstr ""
-
-#~ msgid "QgsSingleBandColorDataRenderer"
-#~ msgstr ""
-
-#~ msgid "QgsSingleBandGrayRenderer"
-#~ msgstr ""
-
-#~ msgid "QgsSingleBandPseudoColorRenderer"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The following sections explain how to query and modify the layer drawing "
-#~ "style. After doing the changes, you might want to force update of map "
-#~ "canvas, see :ref:`refresh-layer`."
-#~ msgstr ""
-
-#~ msgid "**TODO:**"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "contrast enhancements, transparency (no data), user defined min/max, band "
-#~ "statistics"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Let's say we want to render our raster layer (assuming one band only) with "
-#~ "colors ranging from green to yellow (for pixel values from 0 to 255). In the"
-#~ " first stage we will prepare ``QgsRasterShader`` object and configure its "
-#~ "shader function:"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "linear (``INTERPOLATED``): resulting color is linearly interpolated from the"
-#~ " color map entries above and below the actual pixel value"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "discrete (``DISCRETE``): color is used from the color map entry with equal "
-#~ "or higher value"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "exact (``EXACT``): color is not interpolated, only the pixels with value "
-#~ "equal to color map entries are drawn"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "In the second step we will associate this shader with the raster layer::"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The number 1 in the code above is band number (raster bands are indexed from"
-#~ " one)."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "By default, QGIS maps the first three bands to red, green and blue values to"
-#~ " create a color image (this is the ``MultiBandColor`` drawing style. In some"
-#~ " cases you might want to override these setting. The following code "
-#~ "interchanges red band (1) and green band (2)::"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "In case only one band is necessary for visualization of the raster, single "
-#~ "band drawing can be chosen --- either gray levels or pseudocolor."
-#~ msgstr ""
-
-#~ msgid "Refreshing Layers"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "If you do change layer symbology and would like ensure that the changes are "
-#~ "immediately visible to the user, call these methods"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The first call will ensure that the cached image of rendered layer is erased"
-#~ " in case render caching is turned on. This functionality is available from "
-#~ "QGIS 1.4, in previous versions this function does not exist --- to make sure"
-#~ " that the code works with all versions of QGIS, we first check whether the "
-#~ "method exists."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "This method is deprecated as of QGIS 2.18.0 and will produce a warning. "
-#~ "Simply calling ``triggerRepaint()`` is sufficient."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The second call emits signal that will force any map canvas containing the "
-#~ "layer to issue a refresh."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "With WMS raster layers, these commands do not work. In this case, you have "
-#~ "to do it explicitly"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "In case you have changed layer symbology (see sections about raster and "
-#~ "vector layers on how to do that), you might want to force QGIS to update the"
-#~ " layer symbology in the layer list (legend) widget. This can be done as "
-#~ "follows (``iface`` is an instance of :class:`QgisInterface`)"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "To do a query on value of bands of raster layer at some specified point"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The ``results`` method in this case returns a dictionary, with band indices "
-#~ "as keys, and band values as values."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "A raster layer consists of one or more raster bands --- it is referred to as"
-#~ " either single band or multi band raster. One band represents a matrix of "
-#~ "values. Usual color image (e.g. aerial photo) is a raster consisting of red,"
-#~ " blue and green bands. Single band layers typically represent either "
-#~ "continuous variables (e.g. elevation) or discrete variables (e.g. land use)."
-#~ " In some cases, a raster layer comes with a palette and raster values refer "
-#~ "to colors stored in the palette."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "When a raster layer is loaded, it gets a default renderer based on its type."
-#~ " It can be altered either in raster layer properties or programmatically."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "To set a renderer use :func:`setRenderer` method of :class:`QgsRasterLayer "
-#~ "<qgis.core.QgsRasterLayer>`. There are several available renderer classes "
-#~ "(derived from :class:`QgsRasterRenderer`):"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Single band raster layers can be drawn either in gray colors (low values = "
-#~ "black, high values = white) or with a pseudocolor algorithm that assigns "
-#~ "colors for values from the single band. Single band rasters with a palette "
-#~ "can be additionally drawn using their palette. Multiband layers are "
-#~ "typically drawn by mapping the bands to RGB colors. Other possibility is to "
-#~ "use just one band for gray or pseudocolor drawing."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Let's say we want to render our raster layer (assuming one band only) with "
-#~ "colors ranging from green to yellow (for pixel values from 0 to 255). In the"
-#~ " first stage we will prepare a ``QgsRasterShader`` object and configure its "
-#~ "shader function:"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The shader maps the colors as specified by its color map. The color map is "
-#~ "provided as a list of items with pixel value and its associated color. There"
-#~ " are three modes of interpolation of values:"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "linear (``Interpolated``): resulting color is linearly interpolated from the"
-#~ " color map entries above and below the actual pixel value"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "discrete (``Discrete``): color is used from the color map entry with equal "
-#~ "or higher value"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "exact (``Exact``): color is not interpolated, only the pixels with value "
-#~ "equal to color map entries are drawn"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The number 1 in the code above is then band number (raster bands are indexed"
-#~ " from one)."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Finally we have to use the :meth:`triggerRepaint() "
-#~ "<qgis.core.QgsMapLayer.triggerRepaint>` to see the results:"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "By default, QGIS maps the first three bands to red, green and blue values to"
-#~ " create a color image (this is the ``MultiBandColor`` drawing style. In some"
-#~ " cases you might want to override these setting. The following code "
-#~ "interchanges red band (1) and green band (2):"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "As we did before, we have to use meth:`triggerRepaint() "
-#~ "<qgis.core.QgsMapLayer.triggerRepaint>` to update the map and see the "
-#~ "results:"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The first method to query raster values is using the :func:`sample` method "
-#~ "of the :class:`QgsRasterDataProvider <qgis.core.QgsRasterDataProvider>` "
-#~ "class. You have to specify a :class:`QgsPointXY <qgis.core.QgsPointXY>` and "
-#~ "the band number of the raster layer you want to query. The method returns a "
-#~ "tuple with the value and ``True`` or ``False`` depending on the results:"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The second method is using the :meth:`identify() "
-#~ "<qgis.core.QgsRasterDataProvider.identify>` method that returns a "
-#~ ":class:`QgsRasterIdentifyResult <qgis.core.QgsRasterIdentifyResult>` object."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The :meth:`results() <qgis.core.QgsRasterIdentifyResult.results>` method in "
-#~ "this case returns a dictionary, with band indices as keys, and band values "
-#~ "as values. For instance, something like ``{1: 323.0}``"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Let's say we want a render single band raster layer with colors ranging from"
-#~ " green to yellow (corresponding to pixel values from 0 to 255). In the first"
-#~ " stage we will prepare a class:`QgsRasterShader <qgis.core.QgsRasterShader>`"
-#~ " object and configure its shader function:"
-#~ msgstr ""

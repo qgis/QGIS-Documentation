@@ -1,35 +1,33 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2014, QGIS project
-# This file is distributed under the same license as the QGIS Documentation
-# Project package.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation\n"
+"Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-06 11:48+0100\n"
-"PO-Revision-Date: 2019-12-06 11:01+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
-"Language-Team: Tamil (http://www.transifex.com/qgis/qgis-documentation/language/ta/)\n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:22+0000\n"
+"Language-Team: Tamil (https://www.transifex.com/qgis/teams/6144/ta/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.1\n"
 "Language: ta\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../source/docs/training_manual/processing/modeler_twi.rst:8
+#: ../../docs/training_manual/processing/modeler_twi.rst:2
 msgid "Starting with the graphical modeler"
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/modeler_twi.rst:10
+#: ../../docs/training_manual/processing/modeler_twi.rst:4
 msgid ""
 "In this lesson we will use the graphical modeler, a powerful component that "
 "we can use to define a workflow and run a chain of algorithms."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/modeler_twi.rst:12
+#: ../../docs/training_manual/processing/modeler_twi.rst:6
 msgid ""
 "A normal session with the processing tools includes more than running a "
 "single algorithm. Usually several of them are run to obtain a result, and "
@@ -37,28 +35,28 @@ msgid ""
 "other ones."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/modeler_twi.rst:14
+#: ../../docs/training_manual/processing/modeler_twi.rst:8
 msgid ""
 "Using the graphical modeler, that workflow can be put into a model, which "
 "will run all the necessary algorithms in a single run, thus simplifying the "
 "whole process and automating it."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/modeler_twi.rst:16
+#: ../../docs/training_manual/processing/modeler_twi.rst:10
 msgid ""
 "To start this lesson, we are going to calculate a parameter named "
 "Topographic Wetness Index. The algorithm that computes it is called "
 "*Topographic wetness index (twi)*"
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/modeler_twi.rst:20
+#: ../../docs/training_manual/processing/modeler_twi.rst:14
 msgid ""
 "As you can see, there are two mandatory inputs: *Slope* and *Catchment "
 "area*. There is also an optional input, but we will not be using it, so we "
 "can ignore it."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/modeler_twi.rst:22
+#: ../../docs/training_manual/processing/modeler_twi.rst:16
 msgid ""
 "The data for this lesson contains just a DEM, so we do not have any of the "
 "required inputs. However, we know how to calculate both of them from that "
@@ -67,29 +65,29 @@ msgid ""
 "the TWI algorithm."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/modeler_twi.rst:24
+#: ../../docs/training_manual/processing/modeler_twi.rst:18
 msgid ""
 "Here are the parameter dialogs that you should use to calculate the 2 "
 "intermediate layers."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/modeler_twi.rst:26
+#: ../../docs/training_manual/processing/modeler_twi.rst:20
 msgid "Slope must be calculated in radians, not in degrees."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/modeler_twi.rst:32
+#: ../../docs/training_manual/processing/modeler_twi.rst:26
 msgid ""
 "And this is how you have to set the parameters dialog of the TWI algorithm."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/modeler_twi.rst:36
+#: ../../docs/training_manual/processing/modeler_twi.rst:30
 msgid ""
 "This is the result that you will obtain (the default singleband pseudocolor "
 "inverted palette has been used for rendering). You can use the ``twi.qml`` "
 "style provided."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/modeler_twi.rst:40
+#: ../../docs/training_manual/processing/modeler_twi.rst:34
 msgid ""
 "What we will try to do now is to create an algorithm that calculates the TWI"
 " from a DEM in just one single step. That will save us work in case we later"
@@ -99,11 +97,11 @@ msgid ""
 "workflow to wrap them. This is where the graphical modeler comes in."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/modeler_twi.rst:42
+#: ../../docs/training_manual/processing/modeler_twi.rst:36
 msgid "Open the modeler by selecting its menu entry in the processing menu."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/modeler_twi.rst:46
+#: ../../docs/training_manual/processing/modeler_twi.rst:40
 msgid ""
 "Two things are needed to create a model: setting the inputs that it will "
 "need, and defining the algorithm that it contains. Both of them are done by "
@@ -111,19 +109,19 @@ msgid ""
 "window: *Inputs* and *Algorithms*"
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/modeler_twi.rst:48
+#: ../../docs/training_manual/processing/modeler_twi.rst:42
 msgid ""
 "Let's start with the inputs. In this case we do not have much to add. We "
 "just need a raster layer with the DEM, and that will be our only input data."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/modeler_twi.rst:50
+#: ../../docs/training_manual/processing/modeler_twi.rst:44
 msgid ""
 "Double click on the *Raster layer* input and you will see the following "
 "dialog."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/modeler_twi.rst:54
+#: ../../docs/training_manual/processing/modeler_twi.rst:48
 msgid ""
 "Here we will have to define the input we want. Since we expect this raster "
 "layer to be a DEM, we will call it *DEM*. That's the name that the user of "
@@ -131,22 +129,22 @@ msgid ""
 "will define it as a mandatory layer."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/modeler_twi.rst:56
+#: ../../docs/training_manual/processing/modeler_twi.rst:50
 msgid "Here is how the dialog should be configured."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/modeler_twi.rst:60
+#: ../../docs/training_manual/processing/modeler_twi.rst:54
 msgid "Click on *OK* and the input will appear in the modeler canvas."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/modeler_twi.rst:64
+#: ../../docs/training_manual/processing/modeler_twi.rst:58
 msgid ""
 "Now let's move to the *Algorithms* tab. The first algorithm we have to run "
 "is the *Slope, aspect, curvature* algorithm. Locate it in the algorithm "
 "list, double--click on it and you will see the dialog shown below."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/modeler_twi.rst:68
+#: ../../docs/training_manual/processing/modeler_twi.rst:62
 msgid ""
 "This dialog is very similar to the one that you can find when running the "
 "algorithm from the toolbox, but the element that you can use as parameter "
@@ -158,7 +156,7 @@ msgid ""
 " corresponding to the *Elevation* parameter."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/modeler_twi.rst:70
+#: ../../docs/training_manual/processing/modeler_twi.rst:64
 msgid ""
 "Output generated by an algorithm are handled a bit differently when the "
 "algorithm is used as a part of a model. Instead of selecting the filepath "
@@ -170,7 +168,7 @@ msgid ""
 "calculate the TWI layer, which is the final result that we want to obtain."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/modeler_twi.rst:72
+#: ../../docs/training_manual/processing/modeler_twi.rst:66
 msgid ""
 "When layers are not a final result, you should just leave the corresponding "
 "field. Otherwise, you have to enter a name that will be used to identify the"
@@ -178,7 +176,7 @@ msgid ""
 "later."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/modeler_twi.rst:74
+#: ../../docs/training_manual/processing/modeler_twi.rst:68
 msgid ""
 "There is not much to select in this first dialog, since we do not have but "
 "just one layer in or model (The DEM input that we created). Actually, the "
@@ -187,7 +185,7 @@ msgid ""
 "canvas."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/modeler_twi.rst:78
+#: ../../docs/training_manual/processing/modeler_twi.rst:72
 msgid ""
 "The second algorithm we have to add to our model is the catchment area "
 "algorithm. We will use the algorithm named *Catchment area (Paralell)*. We "
@@ -195,17 +193,17 @@ msgid ""
 "are final, so here is how you have to fill the corresponding dialog."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/modeler_twi.rst:82
+#: ../../docs/training_manual/processing/modeler_twi.rst:76
 msgid "Now your model should look like this."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/modeler_twi.rst:86
+#: ../../docs/training_manual/processing/modeler_twi.rst:80
 msgid ""
 "The last step is to add the *Topographic wetness index* algorithm, with the "
 "following configuration."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/modeler_twi.rst:90
+#: ../../docs/training_manual/processing/modeler_twi.rst:84
 msgid ""
 "In this case, we will not be using the DEM as input, but instead, we will "
 "use the slope and catchment area layers that are calculated by the "
@@ -214,24 +212,24 @@ msgid ""
 "the algorithms, creating the workflow."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/modeler_twi.rst:92
+#: ../../docs/training_manual/processing/modeler_twi.rst:86
 msgid ""
 "In this case, the output TWI layer is a final layer, so we have to indicate "
 "so. In the corresponding textbox, enter the name that you want to be shown "
 "for this output."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/modeler_twi.rst:94
+#: ../../docs/training_manual/processing/modeler_twi.rst:88
 msgid "Now our model is finished and it should look like this."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/modeler_twi.rst:98
+#: ../../docs/training_manual/processing/modeler_twi.rst:92
 msgid ""
 "Enter a name and a group name in the upper part of the model window, and "
 "then save it clicking on the *Save* button."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/modeler_twi.rst:102
+#: ../../docs/training_manual/processing/modeler_twi.rst:96
 msgid ""
 "You can save it anywhere you want and open it later, but if you save it in "
 "the models folder (which is the folder that you will see when the save file "
@@ -239,36 +237,25 @@ msgid ""
 " stay on that folder and save the model with the filename that you prefer."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/modeler_twi.rst:104
+#: ../../docs/training_manual/processing/modeler_twi.rst:98
 msgid ""
 "Now close the modeler dialog and go to the toolbox. In the *Models* entry "
 "you will find you model."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/modeler_twi.rst:108
+#: ../../docs/training_manual/processing/modeler_twi.rst:102
 msgid "You can run it just like any normal algorithm, double--clicking on it."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/modeler_twi.rst:112
+#: ../../docs/training_manual/processing/modeler_twi.rst:106
 msgid ""
 "As you can see, the parameters dialog, contain the input that you added to "
 "the model, along with the outputs that you set as final when adding the "
 "corresponding algorithms."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/modeler_twi.rst:114
+#: ../../docs/training_manual/processing/modeler_twi.rst:108
 msgid ""
 "Run it using the DEM as input and you will get the TWI layer in just one "
 "single step."
 msgstr ""
-
-#~ msgid ""
-#~ "Output generated by an algorithm are handled a bit differently when the "
-#~ "algorithm is used as a part of a model. Instead of selecting the filepath "
-#~ "where you want to save each output, you just have to specify if that ouput "
-#~ "is an intermediate layer (and you do not want it to be preserved after the "
-#~ "model has been executed), or it is a final one. In this case, all layers "
-#~ "produced by this algorithm are intermediate. We will only use one of them "
-#~ "(the slope layer), but we do not want to keep it, since we just need it to "
-#~ "calculate the TWI layer, which is the final result that we want to obtain."
-#~ msgstr ""

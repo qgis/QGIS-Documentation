@@ -5,9 +5,9 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
-# Sant-anna <delazj@gmail.com>, 2020
 # Francis Gasc <francisgasc@gmail.com>, 2020
 # MarieSilvestre, 2020
+# Sant-anna <delazj@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-05 01:57+0200\n"
 "PO-Revision-Date: 2020-03-16 19:32+0000\n"
-"Last-Translator: MarieSilvestre, 2020\n"
+"Last-Translator: Sant-anna <delazj@gmail.com>, 2020\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2100,10 +2100,10 @@ msgid ""
 "polygon feature` tool)."
 msgstr ""
 "Dessinez un nouveau polygone sur l'entité existante: QGIS ajoute un anneau à"
-" sa géométrie (comme si vous utilisiez l'outil |addRing| :sup:`ajouter "
+" sa géométrie (comme si vous utilisiez l'outil |addRing| :sup:`Ajouter "
 "anneau`) et crée une nouvelle entité dont la géométrie correspond à l'anneau"
-" (comme si vous :ref:`tracez`  sur les limites intérieures avec l'outil  "
-"|capturePolygon| :sup:`ajouter entité polygone`)."
+" (comme si vous :ref:`traciez <tracing>`  en suivant les limites intérieures"
+" avec l'outil |capturePolygon| :sup:`Ajouter entité polygone`)."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:996
 msgid ""
@@ -2121,9 +2121,9 @@ msgid ""
 " with values of the \"parent\" feature and/or :ref:`fields constraints "
 "<configure_field>`."
 msgstr ""
-"La formulaire :guilabel:`Attributs`  de la nouvelle entité s'ouvre, pré-"
+"Le formulaire :guilabel:`Attributs` de la nouvelle entité s'ouvre, pré-"
 "remplie avec les valeurs de l'entité \"parent\" et / ou avec les "
-":ref:`Contraintes d'attribut`."
+":ref:`Contraintes d'attribut <configure_field>`."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1012
 msgid ""
@@ -2144,9 +2144,9 @@ msgid ""
 " first to the last intersection with the original line."
 msgstr ""
 "Vous pouvez remodeler les entités linéaires et polygonales à l'aide de "
-"l'outil |reshape| :sup:`remodeler entités` dans la barre d'outils. Pour les "
+"l'outil |reshape| :sup:`Remodeler entités` dans la barre d'outils. Pour les "
 "lignes, il remplace la partie de ligne de la première à la dernière "
-"intersection par la ligne d'origine."
+"intersection avec la ligne d'origine."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1034
 msgid "Reshape line"
@@ -2297,8 +2297,8 @@ msgid ""
 "two or more new and independent features, ie. each geometry corresponding to"
 " a new row in the attribute table."
 msgstr ""
-"Utilisez l'outil |splitFeatures| :sup:`Séparer entités` pour diviser une "
-"entité en deux ou plusieurs nouvelles entités indépendantes, c'est-à-dire. "
+"Utilisez l'outil |splitFeatures| :sup:`Séparer les entités` pour diviser une"
+" entité en deux ou plusieurs nouvelles entités indépendantes, c'est-à-dire. "
 "chaque géométrie correspondant à une nouvelle ligne dans la table "
 "attributaire."
 
@@ -2308,7 +2308,7 @@ msgstr "Pour couper des entités linéaires ou surfaciques :"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1126
 msgid "Select the |splitFeatures| :sup:`Split Features` tool."
-msgstr "Sélectionnez l'outil |splitFeatures| :sup:`séparer entités`."
+msgstr "Sélectionnez l'outil |splitFeatures| :sup:`Séparer les entités`."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1127
 msgid ""
@@ -2319,9 +2319,10 @@ msgid ""
 msgstr ""
 "Tracez une ligne sur la ou les entités que vous souhaitez couper. Si une "
 "sélection est active, seules les entités sélectionnées sont coupées. "
-"Lorsqu'elles sont définies, :ref:`les valeurs par défaut et contraintes` "
-"sont appliquées aux champs correspondants et les autres attributs de "
-"l'entité parent sont copiés par défaut dans les nouvelles entités."
+"Lorsqu'elles sont définies, :ref:`les valeurs par défaut et contraintes "
+"<configure_field>` sont appliquées aux champs correspondants et les autres "
+"attributs de l'entité parent sont copiés par défaut dans les nouvelles "
+"entités."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1132
 msgid ""
@@ -2709,8 +2710,8 @@ msgstr ""
 "La création d'entités avec ces outils suit la même règle que les autres "
 "outils de numérisation: clic gauche pour placer des sommets et clic droit "
 "pour terminer la géométrie. Lors du dessin de la géométrie, vous pouvez "
-"passer d'un outil à l'autre ainsi que :ref:`outil de ligne`, créant ainsi "
-"des géométries couplées."
+"passer d'un outil à l'autre ainsi qu'aux :ref:`outils de géométrie de lignes"
+" <add_feature>`, créant ainsi des géométries plus complexes."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1329
 msgid ""
@@ -3551,14 +3552,14 @@ msgid ""
 " to automate multiple features modification using advanced and complex "
 "operations."
 msgstr ""
-"Le menu :ref:`processing`  donne accès à un large éventail d'outils pour "
-"analyser et créer de nouvelles entités en fonction des propriétés des "
-"entités en entrée ou de leurs relations avec d'autres entités (dans la même "
-"couche ou non). Bien que le comportement courant consiste à créer de "
-"nouvelles couches en sortie, certains algorithmes permettent également de "
-"modifier la couche d'entrée. Il s'agit d'un moyen pratique d'automatiser la "
-"modification de plusieurs entités à l'aide d'opérations avancées et "
-"complexes."
+"Le menu :ref:`Traitement <label_processing>`  donne accès à un large "
+"éventail d'outils pour analyser et créer de nouvelles entités en fonction "
+"des propriétés des entités en entrée ou de leurs relations avec d'autres "
+"entités (dans la même couche ou non). Bien que le comportement courant "
+"consiste à créer de nouvelles couches en sortie, certains algorithmes "
+"permettent également de modifier la couche d'entrée. Il s'agit d'un moyen "
+"pratique d'automatiser la modification de plusieurs entités à l'aide "
+"d'opérations avancées et complexes."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1693
 msgid "To edit features in-place:"
@@ -3584,10 +3585,10 @@ msgid ""
 "algorithms is filtered, showing only those compatible with in-place "
 "modifications, i.e.:"
 msgstr ""
-"Appuyez sur le bouton |processSelected|  :sup:`Modifier les entités In-"
-"Place` en haut de :ref:`Processing toolbox <processing.toolbox>`. La liste "
-"des algorithmes est filtrée, affichant uniquement ceux compatibles avec les "
-"modifications 'sur place', à savoir:"
+"Appuyez sur le bouton |processSelected|  :sup:`Modifier les entités sur "
+"place` en haut de la :ref:`Boîte à outis Traitements <processing.toolbox>`. "
+"La liste des algorithmes est filtrée, affichant uniquement ceux compatibles "
+"avec les modifications 'sur place', à savoir:"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1702
 msgid "They work at the feature source and not at the layer level."

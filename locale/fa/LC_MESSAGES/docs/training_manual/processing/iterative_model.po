@@ -1,35 +1,33 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2014, QGIS project
-# This file is distributed under the same license as the QGIS Documentation
-# Project package.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation\n"
+"Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-28 10:31+0100\n"
-"PO-Revision-Date: 2015-05-22 19:28+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
-"Language-Team: Persian (http://www.transifex.com/qgis/qgis-documentation/language/fa/)\n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:21+0000\n"
+"Language-Team: Persian (https://www.transifex.com/qgis/teams/6144/fa/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.1\n"
 "Language: fa\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: ../../source/docs/training_manual/processing/iterative_model.rst:6
+#: ../../docs/training_manual/processing/iterative_model.rst:2
 msgid "More iterative execution of algorithms"
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/iterative_model.rst:8
+#: ../../docs/training_manual/processing/iterative_model.rst:4
 msgid ""
 "This lesson shows how to combine the iterative execution of algorithms with "
 "the modeler to get more automation."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/iterative_model.rst:11
+#: ../../docs/training_manual/processing/iterative_model.rst:7
 msgid ""
 "The iterative execution of algorithms is available not just for built-in "
 "algorithms, but also for the algorithms that you can create yourself, such "
@@ -37,7 +35,7 @@ msgid ""
 "execution of algorithms, so we can obtain more complex results with ease."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/iterative_model.rst:14
+#: ../../docs/training_manual/processing/iterative_model.rst:10
 msgid ""
 "The data the we are going to use for this lesson is the same one that we "
 "already used for the last one. In this case, instead of just clipping the "
@@ -46,14 +44,14 @@ msgid ""
 "within the watershed."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/iterative_model.rst:16
+#: ../../docs/training_manual/processing/iterative_model.rst:12
 msgid ""
 "Since we have a workflow that involves several steps (clipping + computing "
 "the hypsometric curve), we should go to the modeler and create the "
 "corresponding model for that workflow."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/iterative_model.rst:18
+#: ../../docs/training_manual/processing/iterative_model.rst:14
 msgid ""
 "You can find the model already created in the data folder for this lesson, "
 "but it would be good if you first try to create it yourself. The clipped "
@@ -62,37 +60,35 @@ msgid ""
 "with the curve data."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/iterative_model.rst:20
+#: ../../docs/training_manual/processing/iterative_model.rst:16
 msgid "The model should look like this:"
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/iterative_model.rst:24
+#: ../../docs/training_manual/processing/iterative_model.rst:20
 msgid ""
 "Add the model to you models folder, so it is available in the toolbox, and "
-"now execute it."
+"execute it."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/iterative_model.rst:28
+#: ../../docs/training_manual/processing/iterative_model.rst:22
+msgid "Select the DEM and watersheds basins."
+msgstr ""
+
+#: ../../docs/training_manual/processing/iterative_model.rst:24
 msgid ""
-"Select the DEM and watersheds basins, and do not forget to toggle the button"
-" that indicates that the algorithm has to be run iteratively."
+"The algorithm will generate tables for all the basins and place them in the "
+"output directory."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/iterative_model.rst:30
-msgid ""
-"The algorithm will be run several times, and the corresponding tables will "
-"be created and open in your QGIS project."
-msgstr ""
-
-#: ../../source/docs/training_manual/processing/iterative_model.rst:34
+#: ../../docs/training_manual/processing/iterative_model.rst:27
 msgid ""
 "We can make this example more complex by extending the model and computing "
-"some slope statistics. Add the *Slope, aspect, curvature* algorithm to the "
-"model, and then the *Raster statistics* algorithm, which should use the "
-"slope output as its only input."
+"some slope statistics. Add the *Slope* algorithm to the model, and then the "
+"*Raster statistics* algorithm, which should use the slope output as its only"
+" input."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/iterative_model.rst:38
+#: ../../docs/training_manual/processing/iterative_model.rst:34
 msgid ""
 "If you now run the model, apart from the tables you will get a set of pages "
 "with statistics. These pages will be available in the results dialog."

@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Mauro Rizzato, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-05 01:57+0200\n"
 "PO-Revision-Date: 2020-03-16 19:19+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Mauro Rizzato, 2020\n"
 "Language-Team: Italian (https://www.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,7 +24,7 @@ msgstr ""
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:2
 msgid "|LS| Creating a New Vector Dataset"
-msgstr ""
+msgstr "|LS| Creare un nuovo vettore dati"
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:4
 msgid ""
@@ -32,14 +33,18 @@ msgid ""
 "specialized the project, the less likely it is that the data will already be"
 " available. In such cases, you'll need to create your own new data."
 msgstr ""
+"I dati che utilizzi devono provenire da qualcosa. Per le applicazioni più "
+"comuni, i dati esistono già; ma più il progetto è specializzato e "
+"particolare, meno probabile è che i dati siano già disponibili. In questi "
+"casi, hai bisogno di creare i tuoi nuovi dati."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:9
 msgid "**The goal for this lesson:** To create a new vector dataset."
-msgstr ""
+msgstr "**Obiettivo di questa lezione:** Creare un nuovo vettore dati."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:12
 msgid "|basic| |FA| The Layer Creation Dialog"
-msgstr ""
+msgstr "|basic| |FA| Il dialogo crea nuovo layer"
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:14
 msgid ""
@@ -48,10 +53,14 @@ msgid ""
 " an existing dataset. Therefore, you'll need to define your own new dataset "
 "first."
 msgstr ""
+"Prima di poter aggiungere un nuovi dati al vettore, hai bisogno di un "
+"vettore dati a cui aggiungerli. Nel nostro caso, inizierai creando dei dati "
+"completamente nuovi, invece di modificarne di esistenti. Perciò, devi prima "
+"definire il tuo nuovo insieme di dati."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:18
 msgid "Open QGIS and create a new blank project."
-msgstr ""
+msgstr "Apri QGIS e crea un nuovo progetto vuoto."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:22
 msgid ""
@@ -59,20 +68,25 @@ msgid ""
 "Layer --> New Shapefile Layer`. You'll be presented with the :guilabel:`New "
 "Shapefile Layer` dialog, which will allow you to define a new layer."
 msgstr ""
+"Vai la menu e seleziona la voce :menuselection:`Layer --> Crea Vettore --> "
+"Nuovo Shapefile`. Ti verrà presentato il dialogo :guilabel:`Nuovo "
+"Shapefile`, che ti permetterà di definire un nuovo vettore (layer)."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:30
 msgid ""
 "Click :guilabel:`...` for the :guilabel:`File name` field. A save dialog "
 "will appear."
 msgstr ""
+"Clicca :guilabel:`...` per il campo :guilabel:`Nome file`. Apparirà un "
+"dialogo salva."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:32
 msgid "Navigate to the :file:`exercise_data` directory."
-msgstr ""
+msgstr "Naviga fino alla cartella :file:`exercise_data`."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:33
 msgid "Save your new layer as :file:`school_property.shp`."
-msgstr ""
+msgstr "Salva il nuovo vettore come :file:`school_property.shp`."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:35
 msgid ""
@@ -80,24 +94,33 @@ msgid ""
 "different vector layer type is \"built differently\" in the background, so "
 "once you've created the layer, you can't change its type."
 msgstr ""
+"È importante decidere in questa fase che tipo di insieme di dati vuoi. Ogni "
+"tipo di vettore è \"costruito diversamente\" in background, quindi una volta"
+" creato il vettore, non è possibile cambiarne il tipo."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:39
 msgid ""
 "For the next exercise, we're going to create new features which describe "
 "areas. For such features, you'll need to create a polygon dataset."
 msgstr ""
+"Per il prossimo esercizio, creeremo degli elementi che descrivono aree. Per "
+"questi elementi, è necessario creare un insieme di dati poligono."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:42
 msgid ""
 "For :guilabel:`Geometry Type`, select :guilabel:`Polygon` from the drop down"
 " menu:"
 msgstr ""
+"Per :guilabel:`Tipo di geometria`, seleziona :guilabel:`Poligono` dal menu a"
+" scomparsa:"
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:47
 msgid ""
 "This has no impact on the rest of the dialog, but it will cause the correct "
 "type of geometry to be used when the vector dataset is created."
 msgstr ""
+"Questo non ha conseguenze sul resto del dialogo, ma comporterà l'utilizzo "
+"del tipo corretto di geometria da utilizzare quanto il vettore viene creato."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:50
 msgid ""
@@ -106,12 +129,19 @@ msgid ""
 " the surface of the Earth. See the User Manual on :ref:`Working with "
 "Projections <label_projections>` to learn more."
 msgstr ""
+"Il campo successivo permette di specificare il Coordinate Reference System "
+"(Sistema di Riferimento delle Coordinate), o CRS. Il CRS è u metodo per "
+"associare le coordinate numeriche con una posizione sulla superficie della "
+"terra. Vedi il Manuale Utente alla voce :ref:`Lavorare con le proiezioni "
+"<label_projections>` per saperne di più."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:56
 msgid ""
 "For this example we will use the default CRS associated with this project, "
 "which is WGS84."
 msgstr ""
+"Per questo esempio useremo il CRS predefinito associato con questo progetto,"
+" che è WGS84."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:62
 msgid ""
@@ -123,16 +153,25 @@ msgid ""
 "will be enough to add one field called ``name`` that will hold ``Text data``"
 " and will be limited to text length of ``80`` characters."
 msgstr ""
+"Poi c'è una collezione di campi raccolti sotto :guilabel:`Nuovo Campo`. Per "
+"impostazione predefinita, un nuovo campo ha un solo attributo, il campo "
+"``id`` (che dovresti vedere in :guilabel:`Lista Campi`). Comunque, perché i "
+"tuoi dati siano utili, ora devi dire qualcosa riguardo gli elementi che "
+"creerai in questo vettore. Per i nostri scopi, sarà sufficiente aggiungere "
+"un campo chiamato ``name`` che conterrà ``Testo`` e sarà limitato ad una "
+"lunghezza di 80 caratteri."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:70
 msgid ""
 "Replicate the setup below, then click the :guilabel:`Add to Fields List` "
 "button:"
 msgstr ""
+"Riproduci la configurazione sotto riportata, poi clicca il pulsante "
+":guilabel:`Aggiungi a Lista Campi`:"
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:75
 msgid "Check that your dialog now looks like this:"
-msgstr ""
+msgstr "Controlla che il tuo dialogo appaia come segue:"
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:80
 msgid "Click :guilabel:`OK`"
@@ -141,10 +180,11 @@ msgstr "Fai clic su :guilabel:`OK`"
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:82
 msgid "The new layer should appear in your :guilabel:`Layers` panel."
 msgstr ""
+"Il nuovo vettore dovrebbe apparire nel tuo pannello :guilabel:`Layer`."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:87
 msgid "|basic| |FA| Data Sources"
-msgstr ""
+msgstr "|basic| |FA| Fonti dei dati"
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:89
 msgid ""
@@ -152,6 +192,8 @@ msgid ""
 "exist on the ground. Therefore, you'll need to get your information from "
 "somewhere."
 msgstr ""
+"Quando crei nuovi dati, ovviamente devono riguardare oggetti che esistono "
+"realmente sul terreno. Perciò, devi ricevere le informazioni da qualcosa."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:93
 msgid ""
@@ -162,70 +204,91 @@ msgid ""
 "digitizing process to trace objects from remote sensing data, such as "
 "satellite imagery or aerial photography."
 msgstr ""
+"Ci sono diversi modi per ottenere dati sugli oggetti. Per esempio, potresti "
+"usare un GPS per rilevare i punti nel mondo reale, e successivamente "
+"importarli in QGIS. Oppure potresti misurare i punti con un teodolite, ed "
+"inserire le coordinate manualmente per creare nuovi elementi. Oppure puoi "
+"usare un processo di digitalizzazione per tracciare oggetti raccolti da "
+"sistemi remoti, come immagini da satellite o foto aeree."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:100
 msgid ""
 "For our example, you'll be using the digitizing approach. Sample raster "
 "datasets are provided, so you'll need to import them as necessary."
 msgstr ""
+"Per il nostro esempio, useremo un approccio digitale. Sono forniti degli "
+"insiemi di dati raster, quindi dovrai importarli quando necessario."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:103
 msgid "Click on |dataSourceManager| :sup:`Data Source Manager` button."
 msgstr ""
+"Clicca sul pulsante |dataSourceManager| :sup:`Apri Gestore delle sorgenti "
+"dati`."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:104
 msgid "Select |raster| :guilabel:`Raster` on the left side."
-msgstr ""
+msgstr "Selezione |raster| :guilabel:`Raster` sulla sinistra."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:105
 msgid "In the :guilabel:`Source` panel, click on the :guilabel:`...` button:"
 msgstr ""
+"Nel pannello :guilabel:`Sorgente`, clicca sul pulsante :guilabel:`...`:"
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:106
 msgid "Navigate to :file:`exercise_data/raster/`."
-msgstr ""
+msgstr "Naviga in :file:`exercise_data/raster/`."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:107
 msgid "Select the file :file:`3420C_2010_327_RGB_LATLNG.tif`."
-msgstr ""
+msgstr "Seleziona il file :file:`3420C_2010_327_RGB_LATLNG.tif`."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:108
 msgid "Click :guilabel:`Open` to close the dialogue window."
-msgstr ""
+msgstr "Clicca :guilabel:`Apri` per chiudere la finestra di dialogo."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:113
 msgid ""
 "Click :guilabel:`Add` and :guilabel:`Close`. An image will load into your "
 "map."
 msgstr ""
+"Clicca :guilabel:`Aggiungi` e :guilabel:`Chiudi`. Un'immagine sarà carica "
+"sulla mappa."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:118
 msgid ""
 "If you don't see an aerial image appear, select the new layer, right click, "
 "and choose :guilabel:`Zoom to Layer` in the context menu."
 msgstr ""
+"Se non vedi apparire un'immagine aerea, seleziona il nuovo layer, clicca col"
+" tasto destro, e scegli :guilabel:`Zoom sul Layer`  nel menu contestuale."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:124
 msgid ""
 "Click on the |zoomIn| :sup:`Zoom In` button, and zoom to the area "
 "highlighted in blue below:"
 msgstr ""
+"Clicca sul pulsante |zoomIn| :sup:`Ingrandisci`, ed ingrandisci l'area sotto"
+" evidenziata in blu:"
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:130
 msgid "Now you are ready to digitize these three fields:"
-msgstr ""
+msgstr "Ora sei pronto per digitalizzare questi tre campi:"
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:135
 msgid ""
 "Before starting to digitize, let's move the ``school_property`` layer above "
 "the aerial image."
 msgstr ""
+"Prima di iniziare a digitalizzare, spostiamo il layer ``school_property`` "
+"sopra l'immagine aerea."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:137
 msgid ""
 "Select ``school_property`` layer in the :guilabel:`Layers` pane and drag it "
 "to the top."
 msgstr ""
+"Seleziona il layer ``school_property`` in :guilabel:`Layer` spostalo in "
+"cima."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:142
 msgid ""
@@ -234,20 +297,26 @@ msgid ""
 "deleting important data. Edit mode is switched on or off individually for "
 "each layer."
 msgstr ""
+"Per iniziare a digitalizzare, devi entrare in modalità **modifica**. I "
+"software GIS comunemente lo richiedono per evitare che accidentalmente "
+"vengano modificati o cancellati dati importanti. La modalità modifica è "
+"attivata e disattivata individualmente per ogni layer."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:146
 msgid "To enter edit mode for the ``school_property`` layer:"
-msgstr ""
+msgstr "Per entrare in modalità modifica per il layer ``school_property``:"
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:148
 msgid ""
 "Click on the ``school_property`` layer in the :guilabel:`Layers` panel to "
 "select it."
 msgstr ""
+"Clicca sul layer ``school_property`` sul pannello :guilabel:`Layer` per "
+"selezionarlo."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:149
 msgid "Click on the |toggleEditing| :sup:`Toggle Editing` button."
-msgstr ""
+msgstr "Clicca sul pulsante |toggleEditing| :sup:`Attiva Modifiche`."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:151
 msgid ""
@@ -255,38 +324,50 @@ msgid ""
 " is enabled. There should be a check mark next to the :menuselection:`View "
 "--> Toolbars --> Digitizing` menu entry."
 msgstr ""
+"Se non riesci a trovare questo pulsante, controlla che la barra strumenti "
+":guilabel:`Strumenti di Digitalizzazione` sia abilitata. Dovrebbe esserci "
+"una spunta alla voce di menu :menuselection:`View --> Toolbars --> Strumenti"
+" di Digitalizzazione`."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:155
 msgid ""
 "As soon as you are in edit mode, you'll see that some digitizing tools have "
 "become active:"
 msgstr ""
+"Appena entri in modalità modifica, vedrai attivarsi alcuni strumenti di "
+"digitalizzazione:"
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:158
 msgid "|capturePolygon| :sup:`Capture Polygon`"
-msgstr ""
+msgstr "|capturePolygon| :sup:`Aggiungi Elemento Poligonale`"
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:159
 msgid "|vertexToolActiveLayer| :sup:`Vertex Tool`"
-msgstr ""
+msgstr "|vertexToolActiveLayer| :sup:`Strumento Vertice`"
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:161
 msgid ""
 "Other relevant buttons are still inactive, but will become active when we "
 "start interacting with our new data."
 msgstr ""
+"Altri pulsanti importanti sono ancora inattivi, diventeranno attivi quando "
+"inizierai ad interagire con i nuovi dati."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:164
 msgid ""
 "Notice that the layer ``school_property`` in the :guilabel:`Layers` panel "
 "now has the pencil icon, indicating that it is in edit mode."
 msgstr ""
+"Nota che il layer ``school_property`` nel pannello :guilabel:`Layer` ha "
+"un'icona penna, indicante che è in modalità modifica."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:167
 msgid ""
 "Click on the |capturePolygon| :sup:`Capture Polygon` button to begin "
 "digitizing our school fields."
 msgstr ""
+"Clicca sul pulsante |capturePolygon| :sup:`Aggiungi Elemento Poligonale` per"
+" iniziare a digitalizzare i nostri campi scolastici."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:170
 msgid ""
@@ -296,22 +377,30 @@ msgid ""
 "map by rolling the mouse wheel, and you can pan around by holding down the "
 "mouse wheel and dragging around in the map."
 msgstr ""
+"Noterai che il cursore del mouse è diventato un mirino. Questo ti permette "
+"di essere più accurato nel posizionare i punti da digitalizzare. Ricorda che"
+" anche quando stai utilizzando lo strumento di digitalizzazione, puoi "
+"ingrandire e rimpicciolire la mappa ruotando la rotella del mouse, e puoi "
+"spostarla tenendo premuto la rotella del mouse e spostandoti sulla mappa."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:176
 msgid "The first feature you'll be digitizing is the |schoolAreaType1|:"
-msgstr ""
+msgstr "Il primo elemento che digitalizzerai è |schoolAreaType1|:"
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:181
 msgid ""
 "Start digitizing by clicking on a point somewhere along the edge of the "
 "field."
 msgstr ""
+"Inizia la digitalizzazione cliccando in un punto lungo il bordo del campo."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:182
 msgid ""
 "Place more points by clicking further along the edge, until the shape you're"
 " drawing completely covers the field."
 msgstr ""
+"Piazza più punti cliccando lungo il bordo, finché la forma che stai "
+"disegnando non ricopre completamente il campo."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:187
 msgid ""
@@ -319,23 +408,29 @@ msgid ""
 "This will finalize the feature and show you the :guilabel:`Attributes` "
 "dialog."
 msgstr ""
+"Dopo aver piazzato il tuo ultimo punto, clicca col tasto destro per finire "
+"il disegno del poligono. Questo completerà l'elemento e ti mostrerà il "
+"dialogo :guilabel:`Attributi elemento`."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:189
 msgid "Fill in the values as below:"
-msgstr ""
+msgstr "Inserisci i valori come di seguito:"
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:194
 msgid "Click :guilabel:`OK`, and you have created a new feature!"
-msgstr ""
+msgstr "Clicca :guilabel:`OK`, ed hai creato un nuovo elemento!"
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:199
 msgid "In the :guilabel:`Layers` panel select the ``school_property`` layer."
 msgstr ""
+"Nel pannello the :guilabel:`Layer` seleziona il layer ``school_property``."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:200
 msgid ""
 "Right click and choose :guilabel:`Open Attribute Table` in the context menu."
 msgstr ""
+"Clicca col tasto destro e seleziona :guilabel:`Apri tabella attributi` nel "
+"menu contestuale."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:205
 msgid ""
@@ -343,6 +438,9 @@ msgid ""
 " can update the attributes data by double click on the cell you want to "
 "update."
 msgstr ""
+"Nella tabella vedrai l'elemento appena aggiunto. Nella modalità modifica "
+"puoi aggiornare i dati degli attributi facendo doppio click sulla cella che "
+"vuoi aggiornare."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:212
 msgid "Close the attribute table."
@@ -353,6 +451,8 @@ msgid ""
 "To save the new feature we just created, click on |saveEdits| :sup:`Save "
 "Edits` button."
 msgstr ""
+"Per salvare l'elemento appena creato, clicca sul pulsante |saveEdits| "
+":sup:`Salva Modifiche Vettore`."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:215
 msgid ""
@@ -360,63 +460,83 @@ msgid ""
 "always edit it after you're done creating it. If you've made a mistake, "
 "continue digitizing until you're done creating the feature as above. Then:"
 msgstr ""
+"Ricorda, se hai fatto un errore digitalizzando un elemento, puoi sempre "
+"modificarlo dopo averlo creato. Se hai fatto un errore, continua la "
+"digitalizzazione finché non hai creato l'elemento come sopra. Poi:"
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:219
 msgid "Click on |vertexToolActiveLayer| :sup:`Vertex Tool` button."
-msgstr ""
+msgstr "Clicca sul pulsante |vertexToolActiveLayer| :sup:`Strumento Vertice`."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:220
 msgid ""
 "Hover the mouse over a vertex you want to move and left click on the vertex."
 msgstr ""
+"Sposta il mouse sopra un vertice che vuoi spostare e clicca col tasto destro"
+" sul vertice."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:221
 msgid ""
 "Move the mouse to the correct location of the vertex, and left click. This "
 "will move the vertex to the new location."
 msgstr ""
+"Muovi il mouse nella posizione corretta del vertice, e clicca col tasto "
+"sinistro. Questo muoverà il vertice nella nuova posizione."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:229
 msgid ""
 "The same procedure can be used to move a line segment, but you will need to "
 "hover over the midpoint of the line segment."
 msgstr ""
+"La stessa procedura può essere utilizzata per spostare una linea, ma dovrai "
+"spostarti sopra il punto mediano della linea."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:232
 msgid ""
 "If you want to undo a change, you can press the |undo| :sup:`Undo` button or"
 " :kbd:`Ctrl+Z`."
 msgstr ""
+"Se vuoi annullare una modifica, puoi premere il pulsante |undo| "
+":sup:`Annulla` o premere :kbd:`Ctrl+Z`."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:234
 msgid ""
 "Remember to save your changes by clicking the |saveEdits| :sup:`Save Edits` "
 "button."
 msgstr ""
+"Ricorda di salvare le modifiche cliccando il pulsante |saveEdits| "
+":sup:`Salva Modifiche Vettore`."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:236
 msgid ""
 "To enable the remaining feature editing tools, one needs to select the "
 "feature."
 msgstr ""
+"Per abilitare i rimanenti strumenti di modifica elemento, è necessario "
+"selezionare l'elemento."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:238
 msgid ""
 "Click on the |selectRectangle| :sup:`Select Features` button in the "
 "Attributes Toolbar."
 msgstr ""
+"Clicca sul pulsante |selectRectangle| :sup:`Seleziona Elementi` nella barra "
+"degli Strumenti Attributi."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:239
 msgid ""
 "Click on the feature that was just created and the remaining buttons will "
 "become enabled."
 msgstr ""
+"Clicca sull'elemento appena creato ed i pulsanti rimanenti si attiveranno."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:246
 msgid ""
 "See :ref:`User Manual<sec_edit_existing_layer>` for description of the other"
 " buttons in this toolbar."
 msgstr ""
+"Vedi il :ref:`Manuale Utente<sec_edit_existing_layer>` per una descrizione "
+"degli altri pulsanti in questa barra strumenti."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:249
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:319
@@ -424,52 +544,68 @@ msgid ""
 "When done editing, click the |toggleEditing| :sup:`Toggle Editing` button to"
 " get out of edit mode, and save your edits."
 msgstr ""
+"Quando hai finito le modifiche, clicca il pulsante |toggleEditing| "
+":sup:`Attiva Modifiche` per uscire dalla modalità modifica, e salva le "
+"modifiche."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:254
 msgid "|basic| |TY| Digitizing Polygons"
-msgstr ""
+msgstr "|basic| |TY| Digitalizzare Poligoni"
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:256
 msgid ""
 "Digitize the school itself and the upper field. Use this image to assist "
 "you:"
 msgstr ""
+"Digitalizza la scuola stessa ed il campo in alto. Usa questa immagine come "
+"aiuto:"
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:261
 msgid "Remember that each new feature needs to have a unique ``id`` value!"
-msgstr ""
+msgstr "Ricorda che ogni nuovo elemento deve avere un unico campo ``id``!"
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:263
 msgid ""
 "When you're done adding features to a layer, remember to save your edits and"
 " then exit edit mode."
 msgstr ""
+"Quando hai finito di aggiungere elementi ad un layer, ricorda di salvare le "
+"modifiche e poi esci dalla modalità modifica."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:266
 msgid ""
 "You can style the fill, outline and label placement and formatting of the "
 "``school_property`` using techniques learnt in earlier lessons."
 msgstr ""
+"Puoi cambiare stile del riempimento, del contorno e posizionamento delle "
+"etichette e la formattazione del ``school_property`` usando le tecniche "
+"imparate nelle lezioni precedenti."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:273
 msgid "|moderate| |FA| Using Vertex Editor Table"
-msgstr ""
+msgstr "|moderate| |FA| Usare la tabella modifica vertici"
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:275
 msgid ""
 "Another way to edit a feature is to manually enter the actual coordinate "
 "values for each vertex using the :guilabel:`Vertex Editor` table."
 msgstr ""
+"Un altro modo per modificare un elemento è inserire manualmente i valori "
+"delle coordinate per ogni vertice usando la tabella :guilabel:`Modifica "
+"Vertici`."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:279
 msgid "Make sure you are in edit mode on layer ``school_property``."
 msgstr ""
+"Assicurati di essere in modalità modifica sul layer ``school_property``."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:280
 msgid ""
 "If not already activated, click on |vertexToolActiveLayer| :sup:`Vertex "
 "Tool` button."
 msgstr ""
+"Se non ancora attivato, clicca sul pulsante |vertexToolActiveLayer| "
+":sup:`Strumento Vertice`."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:282
 msgid ""
@@ -477,6 +613,9 @@ msgid ""
 "``school_property`` layer and right click on it. This will select the "
 "feature and a :guilabel:`Vertex Editor` pane will appear."
 msgstr ""
+"Muovi il mouse sopra uno degli elementi poligono creati sul layer "
+"``school_property``e cliccaci sopra col tasto destro. Questo selezionerà "
+"l'elemento ed apparirà un pannello :guilabel:`Modifica Vertici`."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:289
 msgid ""
@@ -487,12 +626,19 @@ msgid ""
 " the feature geometry, and are required in order to create a closed polygon "
 "feature."
 msgstr ""
+"Questa tabella contiene le coordinate dei vertici dell'elemento. Nota che ci"
+" sono 7 vertici su questa figura, ma solo sei sono visualizzabili sulla "
+"mappa. Guardando attentamente, si noterà che le righe 0 e 6 contengono le "
+"stesse coordinate. Questi sono i vertici di inizio e fine della geometria "
+"dell'elemento, e sono necessari per creare un elemento poligono chiuso."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:297
 msgid ""
 "Click and drag a box over a vertex, or multiple vertices, of the selected "
 "feature."
 msgstr ""
+"Clicca e trascina un rettangolo sopra uno o più vertici, dell'elemento "
+"selezionato."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:302
 msgid ""
@@ -500,6 +646,9 @@ msgid ""
 "Editor` table will have the corresponding rows highlighted, which contain "
 "the coordinates of the vertices."
 msgstr ""
+"I vertici selezionati cambieranno colore in blu e nella tabella "
+":guilabel:`Modifica Vertici` le righe corrispondenti alle coordinate dei "
+"vertici saranno evidenziate,."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:309
 msgid ""
@@ -507,16 +656,23 @@ msgid ""
 "want to edit and enter the updated value. In this example, the x coordinate "
 "of row ``4`` is updated from ``20.4450`` to ``20.4444``."
 msgstr ""
+"Per modificare una coordinata, fai doppio clic col tasto sinistro sulla "
+"cella nella tabella che vuoi modificare ed inserisci il valore. In questo "
+"esempio, la coordinata x della riga ``4`` è modificata da ``20.4450`` a "
+"``20.4444``."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:317
 msgid ""
 "After entering the updated value, hit the enter key to apply the change. You"
 " will see the vertex move to the new location in the map window."
 msgstr ""
+"Dopo aver inserito il valore, premi il tasto Invio per applicare la "
+"modifica. Vedrai il vertice spostarsi nella nuova posizione nella finestra "
+"della mappa."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:323
 msgid "|basic| |TY| Digitizing Lines"
-msgstr ""
+msgstr "|basic| |TY| Digitalizzare linee"
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:324
 msgid ""
@@ -524,16 +680,22 @@ msgid ""
 "roads layer; one is a path, the other is a track. Our path runs along the "
 "southern edge of the suburb of Railton, starting and ending at marked roads:"
 msgstr ""
+"Digitalizzeremo due strade che non sono ancora segnate come strade sul "
+"layer; uno è un sentiero (path), l'altro una pista (track). Il nostro "
+"sentiero corre lungo il confine sud della periferia di Railton, iniziando e "
+"finendo su strade segnate:"
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:332
 msgid "Our track is a little further to the south:"
-msgstr ""
+msgstr "La nostra pista è un po' più a sud:"
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:337
 msgid ""
 "Create a new ESRI Shapefile line dataset called ``routes.shp``, with "
 "attributes ``id`` and ``type`` (use the approach above to guide you.)"
 msgstr ""
+"Crea un nuovo Shapefile ESRI per linee e chiamalo ``routes.shp``, con "
+"attributi ``id`` e ``type`` (usa l'approccio visto come guida)."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:340
 msgid ""
@@ -541,16 +703,22 @@ msgid ""
 ":file:`training-data.gpkg` included in the :file:`exercise_data` folder of "
 "the training data you downloaded."
 msgstr ""
+"Se il layer roads non nella mappa, aggiungilo dal file GeoPackage :file"
+":`training-data.gpkg` incluso nella cartella :file:`exercise_data` dei dati "
+"per l'esercitazione che hai scaricato."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:343
 msgid "Activate edit mode."
-msgstr ""
+msgstr "Attiva la modalità modifica."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:344
 msgid ""
 "Since you are working with a line feature, click on the |addLineFeature| "
 ":sup:`Add Line` button to initiate line digitizing mode."
 msgstr ""
+"Dato che stai lavorando con un elemento linea, clicca sul pulsante "
+"|addLineFeature| :sup:`Aggiungi Elemento Lineare` per iniziare la "
+"digitalizzazione della linea."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:347
 msgid ""
@@ -558,26 +726,33 @@ msgid ""
 "to follow the routes as accurately as possible, adding additional points "
 "along corners or turns."
 msgstr ""
+"Uno alla volta, digitalizza il sentiero e la traccia sul layer ``routes``. "
+"Prova a seguire i percorsi il più accuratamente possibile, aggiungendo "
+"ulteriori punti sugli angoli e sulle curve. "
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:350
 msgid "Set the ``type`` attribute value to ``path`` or ``track``."
-msgstr ""
+msgstr "Imposta il valore dell'attributo ``type`` a ``path`` o ``track``."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:351
 msgid ""
 "Use the :guilabel:`Layer Properties` dialog to add styling to your routes. "
 "Feel free to use different styles for paths and tracks."
 msgstr ""
+"Usa il dialogo :guilabel:`Proprietà Layer` per aggiungere uno stile ai "
+"percorsi. Sentiti libero di usare diversi stili per i sentieri e le piste."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:353
 msgid ""
 "Save your edits and toggle off editing mode by pressing the |toggleEditing| "
 ":sup:`Toggle Editing` button."
 msgstr ""
+"Salva le modifiche e disattiva la modalità modifica premendo il pulsante "
+"|toggleEditing| :sup:`Attiva Modifiche`."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:356
 msgid ":ref:`Check your results <create-vector-digitize-1>`"
-msgstr ""
+msgstr ":ref:`Controlla i risultati <create-vector-digitize-1>`"
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:359
 msgid "|IC|"
@@ -591,12 +766,19 @@ msgid ""
 " that you only click once where you want the point to be, give it attributes"
 " as usual, and then the feature is created."
 msgstr ""
+"Ora sai come creare elementi! Questo corso non mostra come aggiungere "
+"elementi punto, perché non è realmente necessario dopo aver lavorato con "
+"elementi più complicati (linee e poligoni). Si opera allo stesso modo, solo "
+"che devi cliccare una sola volta dove vuoi che il punto stia, gli si danno "
+"degli attributi come al solito, e l'elemento è creato."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:367
 msgid ""
 "Knowing how to digitize is important because it's a very common activity in "
 "GIS programs."
 msgstr ""
+"Conoscere come digitalizzare è importante perché è un'attività molto comune "
+"nei programmi GIS."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:371
 msgid "|WN|"
@@ -609,3 +791,7 @@ msgid ""
 "This is called **topology**. In the next lesson you'll see an example of why"
 " this can be useful."
 msgstr ""
+"Gli elementi in un layer GIS non sono solo figure, sono oggetti nello "
+"spazio. Per esempio, poligoni adiacenti sanno dove sono in relazione uno con"
+" l'altro. Questa è chiamata **topologia**. Nella prossima lezione vedrai un "
+"esempio di perché questo è utile."

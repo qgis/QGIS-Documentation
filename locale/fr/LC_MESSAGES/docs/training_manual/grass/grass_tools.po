@@ -187,18 +187,23 @@ msgstr ""
 #: ../../docs/training_manual/grass/grass_tools.rst:75
 msgid "Click on :guilabel:`Run` and wait until the process is finished:"
 msgstr ""
+"Cliquez sur :guilabel:`Executer` et attendez que le processus soit terminé :"
 
 #: ../../docs/training_manual/grass/grass_tools.rst:80
 msgid ""
 "Click on :guilabel:`View Output` to load the reclassified raster in the "
 "canvas"
 msgstr ""
+"Cliquez sur :guilabel:`visualiser résultats` pour charger le raster "
+"reclassée dans le canevas"
 
 #: ../../docs/training_manual/grass/grass_tools.rst:82
 msgid ""
 "The new layer is made up by just 4 values (1, 2, 3, and 4) and it is easier "
 "to manage and to process."
 msgstr ""
+"La nouvelle couche est composée de seulement 4 valeurs (1, 2, 3 et 4) et "
+"elle est plus facile à gérer et à traiter."
 
 #: ../../docs/training_manual/grass/grass_tools.rst:88
 msgid ""
@@ -206,30 +211,35 @@ msgid ""
 "to start becoming used to them. Moreover, take a deep look at the GRASS "
 "manual: a lot of different examples are pointed out."
 msgstr ""
+"Ouvrez le fichier :file:`reclass_aspect.txt` avec un éditeur de texte pour "
+"voir les règles et commencer à vous y habituer. De plus, regardez "
+"attentivement le manuel GRASS : de nombreux exemples différents sont "
+"présentés."
 
 #: ../../docs/training_manual/grass/grass_tools.rst:96
 msgid "|moderate| |TY| Reclassify with your rules"
-msgstr ""
+msgstr "|moderate| |TY| Reclassifier avec vos règles"
 
 #: ../../docs/training_manual/grass/grass_tools.rst:98
 msgid "Try to reclassify the :file:`g_dem` layer into 3 new categories:"
 msgstr ""
+"Essayez de reclasser la couche :file:`g_dem` en 3 nouvelles catégories :"
 
 #: ../../docs/training_manual/grass/grass_tools.rst:100
 msgid "from 0 to 1000, new value = 1"
-msgstr ""
+msgstr "de 0 à 1000, nouvelle valeur = 1"
 
 #: ../../docs/training_manual/grass/grass_tools.rst:101
 msgid "from 1000 to 1400, new value = 2"
-msgstr ""
+msgstr "de 1000 à 1400, nouvelle valeur = 2"
 
 #: ../../docs/training_manual/grass/grass_tools.rst:102
 msgid "from 1400 to the maximum raster value, new value = 3"
-msgstr ""
+msgstr "de 1400 à la valeur maximale du raster, nouvelle valeur = 3"
 
 #: ../../docs/training_manual/grass/grass_tools.rst:104
 msgid ":ref:`Check your results <grass_reclass>`"
-msgstr ""
+msgstr ":ref:`Check your results <grass_reclass>`"
 
 #: ../../docs/training_manual/grass/grass_tools.rst:108
 msgid "|moderate| |FA| The Mapcalc Tool"
@@ -241,18 +251,25 @@ msgid ""
 "perform mathematical operation on one or more raster layers and the final "
 "result will be a new layer with the calculated values."
 msgstr ""
+"L'outil Mapcalc est similaire à la calculatrice raster de QGIS. Vous pouvez "
+"effectuer des opérations mathématiques sur une ou plusieurs couches raster "
+"et le résultat final sera une nouvelle couche avec les valeurs calculées."
 
 #: ../../docs/training_manual/grass/grass_tools.rst:114
 msgid ""
 "The aim of the next exercise is to extract the values greater than 1000 from"
 " the :file:`g_dem` raster layer."
 msgstr ""
+"Le but du prochain exercice est d'extraire les valeurs supérieures à 1000 de"
+" la couche raster :file:`g_dem`."
 
 #: ../../docs/training_manual/grass/grass_tools.rst:117
 msgid ""
 "Look for the :guilabel:`r.mapcalc` module by searching for it in the "
 ":guilabel:`Filter` field of the :guilabel:`Modules List` tab."
 msgstr ""
+"Recherchez le module :guilabel:`r.mapcalc` en le cherchant dans le champ "
+":guilabel:`Filtre` de l'onglet :guilabel:`Modules List`."
 
 #: ../../docs/training_manual/grass/grass_tools.rst:119
 msgid "Start the tool."
@@ -264,6 +281,9 @@ msgid ""
 "analyses to be performed on a raster, or collection of rasters. You will use"
 " these tools to do so:"
 msgstr ""
+"Le dialogue :guilabel:`Mapcalc` vous permet de construire une séquence "
+"d'analyses à effectuer sur un raster, ou une collection de rasters. Vous "
+"utiliserez ces outils pour ce faire :"
 
 #: ../../docs/training_manual/grass/grass_tools.rst:128
 msgid "In order, they are:"
@@ -272,12 +292,16 @@ msgstr "Dans l'ordre:"
 #: ../../docs/training_manual/grass/grass_tools.rst:130
 msgid ":guilabel:`Add map`: Add a raster file from your current GRASS mapset."
 msgstr ""
+":guilabel:`Ajouter une carte` : Ajoutez un fichier raster de votre jeu de "
+"cartes GRASS actuel."
 
 #: ../../docs/training_manual/grass/grass_tools.rst:131
 msgid ""
 ":guilabel:`Add constant value`: Add a constant value to be used in "
 "functions, 1000 in this case"
 msgstr ""
+":guilabel:`Ajouter une valeur constante` : Ajoute une valeur constante à "
+"utiliser dans les fonctions, 1000 dans ce cas"
 
 #: ../../docs/training_manual/grass/grass_tools.rst:133
 msgid ""
@@ -285,6 +309,9 @@ msgid ""
 "connected to inputs and outputs, we will use the operator ``greater equals "
 "than``"
 msgstr ""
+":guilabel:`Ajouter un opérateur ou une fonction` : Ajoutez un opérateur ou "
+"une fonction à connecter aux entrées et sorties, nous utiliserons "
+"l'opérateur \"plus égal que\"."
 
 #: ../../docs/training_manual/grass/grass_tools.rst:135
 msgid ""
@@ -293,49 +320,69 @@ msgid ""
 "are correctly connected to a connector line will turn gray. If the line or "
 "dot is red, it is not properly connected!"
 msgstr ""
+":guilabel:`ajouter connection` : Connecter des éléments. À l'aide de cet "
+"outil, cliquez et glissez du point rouge sur un élément vers le point rouge "
+"sur un autre élément. Les points qui sont correctement connectés à une ligne"
+" de connexion deviennent gris. Si la ligne ou le point est rouge, c'est "
+"qu'il n'est pas correctement connecté !"
 
 #: ../../docs/training_manual/grass/grass_tools.rst:139
 msgid ":guilabel:`Select item`: Select an item and move selected items."
 msgstr ""
+":guilabel:`Selectionner item` : Sélectionnez un élément et déplacez les "
+"éléments sélectionnés."
 
 #: ../../docs/training_manual/grass/grass_tools.rst:140
 msgid ""
 ":guilabel:`Delete selected item`: Removes the selected item from the current"
 " mapcalc sheet, but not from the mapset (if it is an existing raster)"
 msgstr ""
+":guilabel:`Supprimer l'élément sélectionné` : Supprime l'élément sélectionné"
+" de la feuille mapcalc actuelle, mais pas du jeu de cartes (s'il s'agit "
+"d'unraster existant)"
 
 #: ../../docs/training_manual/grass/grass_tools.rst:142
 msgid ":guilabel:`Open`: Open an existing file with the operation defined"
 msgstr ""
+":guilabel:`ouvrir` : Ouvrir un fichier existant avec l'opération définie"
 
 #: ../../docs/training_manual/grass/grass_tools.rst:143
 msgid ":guilabel:`Save`: Save all the operation in a file"
 msgstr ""
+":guilabel:`Sauvegarder` : Sauvegarder toute l'opération dans un fichier"
 
 #: ../../docs/training_manual/grass/grass_tools.rst:144
 msgid ""
 ":guilabel:`Save as`: Save all the operations as a new file on the disk."
 msgstr ""
+":guilabel:`Sauvegarder sous` : Enregistrez toutes les opérations dans un "
+"nouveau fichier sur le disque."
 
 #: ../../docs/training_manual/grass/grass_tools.rst:146
 msgid "Using these tools, construct the following algorithm:"
-msgstr ""
+msgstr "À l'aide de ces outils, construisez l'algorithme suivant :"
 
 #: ../../docs/training_manual/grass/grass_tools.rst:151
 msgid ""
 "Click on :guilabel:`Run` and then on :guilabel:`View output` to see the "
 "output displayed in your map:"
 msgstr ""
+"Cliquez sur :guilabel:`Executer` et ensuite sur :guilabel:`voir resultats` "
+"pour voir la sortie affichée dans votre carte :"
 
 #: ../../docs/training_manual/grass/grass_tools.rst:157
 msgid "This shows all the areas where the terrain is higher than 1000 meters."
 msgstr ""
+"Cela montre toutes les zones où le terrain est plus haut que 1000 mètres."
 
 #: ../../docs/training_manual/grass/grass_tools.rst:159
 msgid ""
 "You can also save the formula you have created and load it in another QGIS "
 "project by clicking on the last button on the GRASS Mapcalc toolbar."
 msgstr ""
+"Vous pouvez également sauvegarder la formule que vous avez créée et la "
+"charger dans un autre projet QGIS en cliquant sur le dernier bouton de la "
+"barre d'outils GRASS Mapcalc."
 
 #: ../../docs/training_manual/grass/grass_tools.rst:163
 msgid "|IC|"

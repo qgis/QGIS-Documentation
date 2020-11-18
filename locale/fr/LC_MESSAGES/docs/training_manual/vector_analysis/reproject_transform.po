@@ -6,6 +6,7 @@
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
 # Francis Gasc <francisgasc@gmail.com>, 2020
+# Sant-anna <delazj@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-05 01:57+0200\n"
 "PO-Revision-Date: 2020-03-16 19:18+0000\n"
-"Last-Translator: Francis Gasc <francisgasc@gmail.com>, 2020\n"
+"Last-Translator: Sant-anna <delazj@gmail.com>, 2020\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,6 +32,9 @@ msgid ""
 "Let us talk about Coordinate Reference Systems (CRSs) again. We have touched"
 " on this briefly before, but haven't discussed what it means practically."
 msgstr ""
+"Parlons à nouveau des systèmes de référence de coordonnés (CRS). Nous en "
+"avons déjà parlé brièvement, mais nous n'avons pas discuté de ce que cela "
+"signifie concrètement."
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:8
 msgid ""
@@ -48,6 +52,10 @@ msgid ""
 "called *WGS84*. This is a very common Geographic Coordinate System (GCS) for"
 " representing data. But there's a problem, as we will see."
 msgstr ""
+"Le CRS dans lequel se trouvent actuellement toutes les données, ainsi que la"
+" carte elle-même, s'appelle *WGS84*. Il s'agit d'un système de coordonnées "
+"géographiques (GCS) très courant pour représenter les données. Mais il y a "
+"un problème, comme nous allons le voir."
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:19
 msgid "Save your current map"
@@ -58,6 +66,8 @@ msgid ""
 "Then open the map of the world which you will find under "
 ":file:`exercise_data/world/world.qgs`"
 msgstr ""
+"Ensuite, ouvrez la carte du monde que vous trouverez sous "
+":file:`exercise_data/world/world.qgs`"
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:22
 msgid "Zoom in to South Africa by using the :guilabel:`Zoom In` tool"
@@ -69,6 +79,10 @@ msgid ""
 "*Statusbar* along the bottom of the screen. While over South Africa, set "
 "this value to ``1:5 000 000`` (one to five million)."
 msgstr ""
+"Essayez de définir une échelle dans le champ :guilabel:`echelle`, qui se "
+"trouve dans la *barre de statut* en bas de l'écran. Lors de votre passage en"
+" Afrique du Sud, réglez cette valeur sur \"1:5 000 000\" (un à cinq "
+"millions)."
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:27
 msgid "Pan around the map while keeping an eye on the :guilabel:`Scale` field"
@@ -81,6 +95,9 @@ msgid ""
 "point that you zoomed into at ``1:5 000 000``, which was at the center of "
 "your screen. All around that point, the scale is different."
 msgstr ""
+"Vous avez remarqué que l'échelle change ? C'est parce que vous vous éloignez"
+" du point sur lequel vous avez zoomé à \"1:5 000 000\", qui était au centre "
+"de votre écran. Tout autour de ce point, l'échelle est différente."
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:35
 msgid ""
@@ -103,6 +120,16 @@ msgid ""
 "of the objects that you see gets larger and larger. What this means for us, "
 "practically, is that there is no constant scale on our map!"
 msgstr ""
+"Dans un GCS, vous travaillez sur cette sphère, mais votre écran est plat. "
+"Lorsque vous essayez de représenter la sphère sur une surface plane, il se "
+"produit une distorsion, semblable à ce qui se produirait si vous coupiez une"
+" balle de tennis et essayiez de l'aplatir. Cela signifie que sur une carte, "
+"les lignes de longitude restent à égale distance les unes des autres, même "
+"aux pôles (où elles sont censées se rencontrer). Cela signifie qu'à mesure "
+"que vous vous éloignez de l'équateur sur votre carte, l'échelle des objets "
+"que vous voyez devient de plus en plus grande. Ce que cela signifie pour "
+"nous, en pratique, c'est qu'il n'y a pas d'échelle constante sur notre carte"
+" !"
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:52
 msgid ""
@@ -136,6 +163,9 @@ msgid ""
 "You can change the CRS of the project by clicking on the |projectionEnabled|"
 " :sup:`Current projection` button in the bottom right corner of QGIS."
 msgstr ""
+"Vous pouvez changer le CRS du projet en cliquant sur le bouton "
+"|projectionEnabled| :sup:`Projection courante` dans le coin inférieur droit "
+"de QGIS."
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:69
 msgid ""
@@ -143,12 +173,17 @@ msgid ""
 ":guilabel:`Filter` field. A few CRSs should appear in the "
 ":guilabel:`Predefined Reference Systems` field below."
 msgstr ""
+"Dans la boîte de dialogue qui apparaît, tapez le mot \"global\" dans le "
+"champ :guilabel:`Filtre`. Quelques CRS devraient apparaître dans le champ "
+":guilabel:`Systèmes de référence prédéfinis` ci-dessous."
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:73
 msgid ""
 "Select :guilabel:`WGS 84 / NSIDC EASE-Grid 2.0 Global | EPSG:6933` entry by "
 "clicking on it, and then click :guilabel:`OK`."
 msgstr ""
+"Sélectionnez l'entrée :guilabel:`WGS 84 / NSIDC EASE-Grid 2.0 Global | "
+"EPSG:6933` en cliquant dessus, puis cliquez sur :guilabel:`OK`."
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:76
 msgid ""
@@ -161,7 +196,7 @@ msgstr ""
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:79
 msgid "Zoom to a scale of ``1:5 000 000`` again, as before."
-msgstr ""
+msgstr "Zoomez à nouveau à l'échelle 1:5 000 000, comme précédemment."
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:80
 msgid "Pan around the map."
@@ -184,12 +219,17 @@ msgid ""
 "Add another vector layer to your map which has the data for South Africa "
 "only. You will find it as :file:`exercise_data/world/RSA.shp`."
 msgstr ""
+"Ajoutez une autre couche vecteur à votre carte qui contient les données pour"
+" l'Afrique du Sud uniquement. Vous la trouverez sous la forme "
+":file:`exercise_data/world/RSA.shp`."
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:90
 msgid ""
 "Load it. A quick way to see its CRS is by hovering the mouse over the layer "
 "in the legend. It is ``EPSG:3410``."
 msgstr ""
+"Chargez-le. Un moyen rapide de voir son CRS est de passer la souris sur la "
+"couche de la légende. Il s'agit de \"EPSG:3410\"."
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:94
 msgid "What do you notice?"
@@ -214,6 +254,10 @@ msgid ""
 "layer, it is always better to have the layer in a projected coordinate "
 "system."
 msgstr ""
+"Parfois, vous devez exporter un ensemble de données existant avec un autre "
+"CRS. Comme nous le verrons dans la prochaine leçon, si vous devez faire des "
+"calculs de distance sur une couche, il est toujours préférable d'avoir la "
+"couche dans un système de coordonnées projetées."
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:108
 msgid ""
@@ -221,25 +265,32 @@ msgid ""
 "and not to single layers. This means that a layer can have a different CRS "
 "from the project even if you see it in the *correct* position."
 msgstr ""
+"Sachez que la reprojection \"à la volée\" est liée au **projet** et non à "
+"des couches individuelles. Cela signifie qu'une couche peut avoir un CRS "
+"différent du projet même si vous le voyez dans la position *correcte*."
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:113
 msgid "You can easily export the layer with another CRS."
-msgstr ""
+msgstr "Vous pouvez facilement exporter la couche avec un autre CRS."
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:115
 msgid "Add the ``buildings`` dataset from :file:`training_data.gpkg`"
 msgstr ""
+"Ajoutez le jeu de données ``buildings`` à partir de "
+":file:`training_data.gpkg`"
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:116
 msgid "Right-click on the ``buildings`` layer in the :guilabel:`Layers` panel"
 msgstr ""
+"Cliquez avec le bouton droit sur la couche ``buildings`` dans le panneau "
+":guilabel:`Couches`"
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:118
 msgid ""
 "Select :menuselection:`Export --> Save Features As...` in the menu that "
 "appears. You will be shown the :guilabel:`Save Vector Layer as...` dialog."
 msgstr ""
-"Sélectionnez :menuselection:`Exporter -> Sauvegarder les entités sous ...` "
+"Sélectionnez :menuselection:`Exporter --> Sauvegarder les entités sous ...` "
 "dans le menu qui apparaît. La boîte de dialogue :guilabel:`Enregistrer la "
 "couche vecteur sous ...` s'affiche."
 
@@ -256,6 +307,8 @@ msgid ""
 "Navigate to :file:`exercise_data/` and specify the name of the new layer as "
 ":file:`buildings_reprojected.shp`."
 msgstr ""
+"Naviguez vers :file:`exercise_data/` et spécifiez le nom de la nouvelle "
+"couche comme :file:`buildings_reprojected.shp`."
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:125
 msgid ""
@@ -263,16 +316,22 @@ msgid ""
 "shown in the drop-down menu. Click on the |setProjection| :sup:`Select "
 "projection` button next to the drop-down menu."
 msgstr ""
+"Changez la valeur du :guilabel:`CRS`. Seuls les CRS récents utilisés seront "
+"affichés dans le menu déroulant. Cliquez sur le bouton |setProjection| "
+":sup:`Sélectionner la projection` à côté du menu déroulant."
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:129
 msgid ""
 "The :guilabel:`Coordinate Reference System Selector` dialog will appear. In "
 "its :guilabel:`Filter` field, search for ``34S``."
 msgstr ""
+"Le dialogue :guilabel:`Sélecteur de système de référence de coordonnées` "
+"apparaîtra. Dans son champ :guilabel:`filtre`, recherchez ``34S``."
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:132
 msgid "Select :guilabel:`WGS 84 / UTM zone 34S | EPSG:32734` from the list"
 msgstr ""
+"Sélectionnez :guilabel:`WGS 84 / UTM zone 34S | EPSG:32734` dans la liste"
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:137
 msgid ""
@@ -322,11 +381,15 @@ msgid ""
 "Go to :menuselection:`Settings --> Custom Projections...` and you will see "
 "this dialog."
 msgstr ""
+"Allez à :menuselection:`Parametres --> Projection personnalisee...` et vous "
+"verrez ce dialogue."
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:163
 msgid ""
 "Click on the |signPlus| :sup:`Add new CRS` button to create a new projection"
 msgstr ""
+"Cliquez sur le bouton |signPlus| :sup:`ajouter nouveau CRS` pour créer une "
+"nouvelle projection"
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:165
 msgid ""
@@ -353,6 +416,8 @@ msgid ""
 "Click on the |projectionEnabled| :sup:`Current CRS` button to change the "
 "project CRS"
 msgstr ""
+"Cliquez sur le bouton |projectionEnabled| :sup:`CRS` pour modifier le CRS du"
+" projet"
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:181
 msgid ""
@@ -412,3 +477,5 @@ msgid ""
 "In the next lesson you will learn how to analyze vector data using QGIS' "
 "various vector analysis tools."
 msgstr ""
+"Dans la prochaine leçon, vous apprendrez comment analyser des données "
+"vecteur en utilisant les différents outils d'analyse vecteur de QGIS."

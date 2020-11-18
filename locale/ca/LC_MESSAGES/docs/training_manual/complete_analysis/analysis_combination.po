@@ -1,80 +1,82 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2014, QGIS project
-# This file is distributed under the same license as the QGIS Documentation
-# Project package.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation\n"
+"Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-07 15:33+0200\n"
-"PO-Revision-Date: 2019-04-07 13:43+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
-"Language-Team: Catalan (http://www.transifex.com/qgis/qgis-documentation/language/ca/)\n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:17+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Catalan (https://www.transifex.com/qgis/teams/6144/ca/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.1\n"
 "Language: ca\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:8
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:2
 msgid "|LS| Combining the Analyses"
 msgstr ""
 
-#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:10
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:4
 msgid ""
 "Using the vectorized results of the raster analysis will allow you to select"
 " only those buildings on suitable terrain."
 msgstr ""
 
-#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:13
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:7
 msgid ""
 "**The goal for this lesson:** To use the vectorized terrain results to "
 "select suitable plots."
 msgstr ""
 
-#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:17
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:11
 msgid "|moderate| |TY|"
 msgstr "|moderate| |TY|"
 
-#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:19
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:13
 msgid "Save your current map (:kbd:`raster_analysis.qgs`)."
 msgstr ""
 
-#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:20
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:14
 msgid ""
 "Open the map in which you created during the vector analysis earlier (you "
 "should have saved the file as :kbd:`analysis.qgs`)."
 msgstr ""
 
-#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:22
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:16
 msgid "In the :guilabel:`Layers` panel, enable these layers:"
 msgstr ""
 
-#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:24
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:18
 msgid ":guilabel:`hillshade`,"
 msgstr ""
 
-#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:25
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:19
 msgid ":guilabel:`solution` (or :guilabel:`buildings_over_100`)"
 msgstr ""
 
-#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:27
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:21
 msgid ""
 "In addition to these layers, which should already be loaded in the map from "
 "when you worked on it before, also add the :kbd:`suitable_terrain.shp` "
 "dataset."
 msgstr ""
 
-#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:30
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:24
 msgid ""
 "If you are missing some layers, you should find them in "
 ":kbd:`exercise_data/residential_development/`"
 msgstr ""
 
-#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:32
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:26
 msgid ""
 "Use the :guilabel:`Intersect` tool (:menuselection:`Vector --> Geoprocessing"
 " Tools`) to create a new vector layer called :kbd:`new_solution.shp` which "
@@ -82,27 +84,17 @@ msgid ""
 "layer."
 msgstr ""
 
-#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:36
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:30
 msgid ""
 "You should now have a layer showing certain buildings as your solution, for "
 "example:"
 msgstr ""
 
-#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:42
-msgid ""
-"If you find that the :guilabel:`Intersect` tool does not produce any "
-"results, check the CRS settings of each of your layers. The CRS must be the "
-"same for both the layers you are comparing. You may need to reproject one "
-"layer by saving the layer as a new file with the required CRS. In our "
-"example, the :file:`suitable_terrain` layer was reprojected to |localCRS| "
-"and named :file:`suitable_terrain_34S.shp`."
-msgstr ""
-
-#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:53
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:40
 msgid "|moderate| |TY| Inspecting the Results"
 msgstr ""
 
-#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:55
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:42
 msgid ""
 "Look at each of the buildings in your :guilabel:`new_solution` layer. "
 "Compare them with the :guilabel:`suitable_terrain` layer by changing the "
@@ -112,21 +104,21 @@ msgid ""
 " or why not? Which ones would you deem to be unsuitable?"
 msgstr ""
 
-#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:62
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:49
 msgid ":ref:`Check your results <complete-analysis-2>`"
 msgstr ""
 
-#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:68
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:55
 msgid "|moderate| |TY| Refining the Analysis"
 msgstr ""
 
-#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:70
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:57
 msgid ""
 "You can see from the results that some buildings which were included were "
 "not really suitable, so we can now refine the analysis."
 msgstr ""
 
-#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:73
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:60
 msgid ""
 "We want to ensure that our analysis returns only those buildings which fall "
 "entirely within the :kbd:`suitable_terrain` layer. How would you achieve "
@@ -134,37 +126,25 @@ msgid ""
 "are all over 100m squared in size."
 msgstr ""
 
-#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:78
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:65
 msgid ":ref:`Check your results <complete-analysis-3>`"
 msgstr ""
 
-#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:81
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:68
 msgid "|IC|"
 msgstr "|IC|"
 
-#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:83
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:70
 msgid ""
 "You have now answered the original research question, and can offer an "
 "opinion (with reasons, backed by analysis) for a recommendation regarding "
 "which property to develop."
 msgstr ""
 
-#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:88
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:75
 msgid "|WN|"
 msgstr "|WN|"
 
-#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:90
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:77
 msgid "Next you will present these results as part of your second assignment."
 msgstr ""
-
-#~ msgid "In the :guilabel:`Layers list`, enable these layers:"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "If you find that the :guilabel:`Intersect` tool does not produce any "
-#~ "results, check the CRS settings of each of your layers. The CRS must be the "
-#~ "same for both the layers you are comparing. You may need to reproject one "
-#~ "layer by saving the layer as a new shapefile with the required CRS. In our "
-#~ "example, the :kbd:`suitable_terrain` layer was reprojected to |localCRS| and"
-#~ " named :kbd:`suitable_terrain_34S`."
-#~ msgstr ""

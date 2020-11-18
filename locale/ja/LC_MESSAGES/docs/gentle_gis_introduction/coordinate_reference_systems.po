@@ -494,7 +494,7 @@ msgstr ""
 "上にあります。Y値は南向きに増加し、X値は西向きに増加します。 UTM "
 "CRSは、グローバル地図投影です。つまり、世界中で一般的に使用されます。ただし、上記の「地図投影の精度」のセクションですでに説明したように、面積が大きい（たとえば南アフリカ）ほど、角度の一致、距離、および面積の歪みが多く発生します。過度の歪みを避けるために、世界は東から西にすべて経度"
 " **6度** の幅である **60の等しいゾーン** に分割されます。 figure_utm_zones_に示すように、 **UTMゾーン** には "
-"**下子午線** （西経180度の **ゾーン1** ）から始まり東向きに **下子午線** （ **ゾーン60 **（東経180度））に戻るまで、 "
+"**下子午線** （西経180度の **ゾーン1** ）から始まり東向きに **下子午線** （ **ゾーン60** （東経180度））に戻るまで、 "
 "**1から60** までの番号が付けられます。"
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:323
@@ -637,6 +637,9 @@ msgid ""
 "within the map window of your GIS, even though they may be in **different** "
 "reference systems. In QGIS, this functionality is applied by default."
 msgstr ""
+"この問題を解決するために、多くのGISには **オンザフライ** 投影と呼ばれる機能が含まれています。つまり、GISを開始するときに特定の投影法を "
+"**定義** でき、ロードするすべてのレイヤーは、それらの座標参照系に関係なく、定義した投影法で自動的に表示されます。この機能を使用すると、 "
+"**異なる** 参照系にある場合でもGISの地図ウィンドウ内にレイヤをオーバーレイできます。 QGISではこの機能はデフォルトで適用されます。"
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:406
 msgid "Common problems / things to be aware of"
@@ -755,6 +758,8 @@ msgid ""
 "of the complexity of this topic. You can select different CRSs to display "
 "the same layer in different projections."
 msgstr ""
+"QGISで :guilabel:`プロジェクトのプロパティ` "
+"ダイアログを開き、生徒にさまざまな座標参照系を見せれば、このトピックの複雑さを教えることができます。同じレイヤーを異なる投影で表示するために様々なCRSを選択できます。"
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:459
 msgid "Something to think about"

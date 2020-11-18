@@ -1,30 +1,31 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2014, QGIS project
-# This file is distributed under the same license as the QGIS Documentation
-# Project package.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Drago Sever <Drago.Sever@um.si>, 2015
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation\n"
+"Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-07 15:33+0200\n"
-"PO-Revision-Date: 2019-04-07 13:43+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
-"Language-Team: Slovenian (http://www.transifex.com/qgis/qgis-documentation/language/sl/)\n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:17+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Slovenian (https://www.transifex.com/qgis/teams/6144/sl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.1\n"
 "Language: sl\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
 
-#: ../../source/docs/training_manual/spatial_databases/geometry.rst:8
+#: ../../docs/training_manual/spatial_databases/geometry.rst:2
 msgid "|LS| Geometry Construction"
 msgstr "|LS| Sestavljanje geometrije"
 
-#: ../../source/docs/training_manual/spatial_databases/geometry.rst:10
+#: ../../docs/training_manual/spatial_databases/geometry.rst:4
 msgid ""
 "In this section we are going to delve a little deeper into how simple "
 "geometries are constructed in SQL. In reality, you will probably use a GIS "
@@ -33,154 +34,154 @@ msgid ""
 "queries and understanding how the database is assembled."
 msgstr ""
 
-#: ../../source/docs/training_manual/spatial_databases/geometry.rst:16
+#: ../../docs/training_manual/spatial_databases/geometry.rst:10
 msgid ""
 "**The goal of this lesson:** To better understand how to create spatial "
 "entities directly in PostgreSQL/PostGIS."
 msgstr ""
 
-#: ../../source/docs/training_manual/spatial_databases/geometry.rst:22
+#: ../../docs/training_manual/spatial_databases/geometry.rst:16
 msgid "Creating Linestrings"
 msgstr ""
 
-#: ../../source/docs/training_manual/spatial_databases/geometry.rst:24
+#: ../../docs/training_manual/spatial_databases/geometry.rst:18
 msgid ""
 "Going back to our :kbd:`address` database, let's get our streets table "
 "matching the others; i.e., having a constraint on the geometry, an index and"
 " an entry in the geometry_columns table."
 msgstr ""
 
-#: ../../source/docs/training_manual/spatial_databases/geometry.rst:29
+#: ../../docs/training_manual/spatial_databases/geometry.rst:23
 msgid "|TY| |moderate|"
 msgstr ""
 
-#: ../../source/docs/training_manual/spatial_databases/geometry.rst:31
+#: ../../docs/training_manual/spatial_databases/geometry.rst:25
 msgid ""
 "Modify the :kbd:`streets` table so that it has a geometry column of type "
 "ST_LineString."
 msgstr ""
 
-#: ../../source/docs/training_manual/spatial_databases/geometry.rst:33
+#: ../../docs/training_manual/spatial_databases/geometry.rst:27
 msgid ""
 "Don't forget to do the accompanying update to the geometry columns table!"
 msgstr ""
 
-#: ../../source/docs/training_manual/spatial_databases/geometry.rst:35
+#: ../../docs/training_manual/spatial_databases/geometry.rst:29
 msgid ""
 "Also add a constraint to prevent any geometries being added that are not "
 "LINESTRINGS or null."
 msgstr ""
 
-#: ../../source/docs/training_manual/spatial_databases/geometry.rst:37
+#: ../../docs/training_manual/spatial_databases/geometry.rst:31
 msgid "Create a spatial index on the new geometry column"
 msgstr ""
 
-#: ../../source/docs/training_manual/spatial_databases/geometry.rst:39
+#: ../../docs/training_manual/spatial_databases/geometry.rst:33
 msgid ":ref:`Check your results <geometry-1>`"
 msgstr ""
 
-#: ../../source/docs/training_manual/spatial_databases/geometry.rst:41
+#: ../../docs/training_manual/spatial_databases/geometry.rst:35
 msgid ""
 "Now let's insert a linestring into our streets table. In this case we will "
 "update an existing street record:"
 msgstr ""
 
-#: ../../source/docs/training_manual/spatial_databases/geometry.rst:50
+#: ../../docs/training_manual/spatial_databases/geometry.rst:44
 msgid ""
 "Take a look at the results in QGIS. (You may need to right-click on the "
 "streets layer in the 'Layers' panel, and choose 'Zoom to layer extent'.)"
 msgstr ""
 
-#: ../../source/docs/training_manual/spatial_databases/geometry.rst:53
+#: ../../docs/training_manual/spatial_databases/geometry.rst:47
 msgid ""
 "Now create some more streets entries - some in QGIS and some from the "
 "command line."
 msgstr ""
 
-#: ../../source/docs/training_manual/spatial_databases/geometry.rst:58
+#: ../../docs/training_manual/spatial_databases/geometry.rst:52
 msgid "Creating Polygons"
 msgstr ""
 
-#: ../../source/docs/training_manual/spatial_databases/geometry.rst:60
+#: ../../docs/training_manual/spatial_databases/geometry.rst:54
 msgid ""
 "Creating polygons is just as easy. One thing to remember is that by "
 "definition, polygons have at least four vertices, with the last and first "
 "being co-located:"
 msgstr ""
 
-#: ../../source/docs/training_manual/spatial_databases/geometry.rst:68
+#: ../../docs/training_manual/spatial_databases/geometry.rst:62
 msgid ""
 "A polygon requires double brackets around its coordinate list; this is to "
 "allow you to add complex polygons with multiple unconnected areas. For "
 "instance"
 msgstr ""
 
-#: ../../source/docs/training_manual/spatial_databases/geometry.rst:80
+#: ../../docs/training_manual/spatial_databases/geometry.rst:74
 msgid ""
 "If you followed this step, you can check what it did by loading the cities "
 "dataset into QGIS, opening its attribute table, and selecting the new entry."
 " Note how the two new polygons behave like one polygon."
 msgstr ""
 
-#: ../../source/docs/training_manual/spatial_databases/geometry.rst:87
+#: ../../docs/training_manual/spatial_databases/geometry.rst:81
 msgid "Exercise: Linking Cities to People"
 msgstr ""
 
-#: ../../source/docs/training_manual/spatial_databases/geometry.rst:89
+#: ../../docs/training_manual/spatial_databases/geometry.rst:83
 msgid "For this exercise you should do the following:"
 msgstr ""
 
-#: ../../source/docs/training_manual/spatial_databases/geometry.rst:91
+#: ../../docs/training_manual/spatial_databases/geometry.rst:85
 msgid "Delete all data from your people table."
 msgstr ""
 
-#: ../../source/docs/training_manual/spatial_databases/geometry.rst:92
+#: ../../docs/training_manual/spatial_databases/geometry.rst:86
 msgid ""
 "Add a foreign key column to people that references the primary key of the "
 "cities table."
 msgstr ""
 
-#: ../../source/docs/training_manual/spatial_databases/geometry.rst:94
+#: ../../docs/training_manual/spatial_databases/geometry.rst:88
 msgid "Use QGIS to capture some cities."
 msgstr ""
 
-#: ../../source/docs/training_manual/spatial_databases/geometry.rst:95
+#: ../../docs/training_manual/spatial_databases/geometry.rst:89
 msgid ""
 "Use SQL to insert some new people records, ensuring that each has an "
 "associated street and city."
 msgstr ""
 
-#: ../../source/docs/training_manual/spatial_databases/geometry.rst:98
+#: ../../docs/training_manual/spatial_databases/geometry.rst:92
 msgid "Your updated people schema should look something like this:"
 msgstr ""
 
-#: ../../source/docs/training_manual/spatial_databases/geometry.rst:126
+#: ../../docs/training_manual/spatial_databases/geometry.rst:120
 msgid ":ref:`Check your results <geometry-2>`"
 msgstr ""
 
-#: ../../source/docs/training_manual/spatial_databases/geometry.rst:130
+#: ../../docs/training_manual/spatial_databases/geometry.rst:124
 msgid "Looking at Our Schema"
 msgstr ""
 
-#: ../../source/docs/training_manual/spatial_databases/geometry.rst:132
+#: ../../docs/training_manual/spatial_databases/geometry.rst:126
 msgid "By now our schema should be looking like this:"
 msgstr ""
 
-#: ../../source/docs/training_manual/spatial_databases/geometry.rst:139
+#: ../../docs/training_manual/spatial_databases/geometry.rst:133
 msgid "|TY| |hard|"
 msgstr ""
 
-#: ../../source/docs/training_manual/spatial_databases/geometry.rst:141
+#: ../../docs/training_manual/spatial_databases/geometry.rst:135
 msgid ""
 "Create city boundaries by computing the minimum convex hull of all addresses"
 " for that city and computing a buffer around that area."
 msgstr ""
 
-#: ../../source/docs/training_manual/spatial_databases/geometry.rst:146
+#: ../../docs/training_manual/spatial_databases/geometry.rst:140
 msgid "Access Sub-Objects"
 msgstr ""
 
-#: ../../source/docs/training_manual/spatial_databases/geometry.rst:148
+#: ../../docs/training_manual/spatial_databases/geometry.rst:142
 msgid ""
 "With the SFS-Model functions, you have a wide variety of options to access "
 "sub-objects of SFS Geometries. When you want to select the first vertex "
@@ -188,39 +189,39 @@ msgid ""
 "this in this way:"
 msgstr ""
 
-#: ../../source/docs/training_manual/spatial_databases/geometry.rst:153
+#: ../../docs/training_manual/spatial_databases/geometry.rst:147
 msgid "Transform the polygon boundary to a linestring:"
 msgstr ""
 
-#: ../../source/docs/training_manual/spatial_databases/geometry.rst:160
+#: ../../docs/training_manual/spatial_databases/geometry.rst:154
 msgid "Select the first vertex point of the resultant linestring:"
 msgstr ""
 
-#: ../../source/docs/training_manual/spatial_databases/geometry.rst:171
+#: ../../docs/training_manual/spatial_databases/geometry.rst:165
 msgid "Data Processing"
 msgstr ""
 
-#: ../../source/docs/training_manual/spatial_databases/geometry.rst:173
+#: ../../docs/training_manual/spatial_databases/geometry.rst:167
 msgid ""
 "PostGIS supports all OGC SFS/MM standard conform functions. All these "
 "functions start with ``ST_``."
 msgstr ""
 
-#: ../../source/docs/training_manual/spatial_databases/geometry.rst:177
+#: ../../docs/training_manual/spatial_databases/geometry.rst:171
 msgid "Clipping"
 msgstr ""
 
-#: ../../source/docs/training_manual/spatial_databases/geometry.rst:179
+#: ../../docs/training_manual/spatial_databases/geometry.rst:173
 msgid ""
 "To clip a subpart of your data you can use the ``ST_INTERSECT()`` function. "
 "To avoid empty geometries, use:"
 msgstr ""
 
-#: ../../source/docs/training_manual/spatial_databases/geometry.rst:200
+#: ../../docs/training_manual/spatial_databases/geometry.rst:194
 msgid "Building Geometries from Other Geometries"
 msgstr ""
 
-#: ../../source/docs/training_manual/spatial_databases/geometry.rst:202
+#: ../../docs/training_manual/spatial_databases/geometry.rst:196
 msgid ""
 "From a given point table, you want to generate a linestring. The order of "
 "the points is defined by their :kbd:`id`. Another ordering method could be a"
@@ -228,66 +229,66 @@ msgid ""
 "receiver."
 msgstr ""
 
-#: ../../source/docs/training_manual/spatial_databases/geometry.rst:210
+#: ../../docs/training_manual/spatial_databases/geometry.rst:204
 msgid ""
 "To create a linestring from a new point layer called 'points', you can run "
 "the following command:"
 msgstr ""
 
-#: ../../source/docs/training_manual/spatial_databases/geometry.rst:222
+#: ../../docs/training_manual/spatial_databases/geometry.rst:216
 msgid ""
 "To see how it works without creating a new layer, you could also run this "
 "command on the 'people' layer, although of course it would make little real-"
 "world sense to do this."
 msgstr ""
 
-#: ../../source/docs/training_manual/spatial_databases/geometry.rst:230
+#: ../../docs/training_manual/spatial_databases/geometry.rst:224
 msgid "Geometry Cleaning"
 msgstr ""
 
-#: ../../source/docs/training_manual/spatial_databases/geometry.rst:232
+#: ../../docs/training_manual/spatial_databases/geometry.rst:226
 msgid ""
 "You can get more information for this topic in `this blog entry "
 "<https://linfiniti.com/?s=cleangeometry>`_."
 msgstr ""
 
-#: ../../source/docs/training_manual/spatial_databases/geometry.rst:236
+#: ../../docs/training_manual/spatial_databases/geometry.rst:230
 msgid "Differences between tables"
 msgstr ""
 
-#: ../../source/docs/training_manual/spatial_databases/geometry.rst:238
+#: ../../docs/training_manual/spatial_databases/geometry.rst:232
 msgid ""
 "To detect the difference between two tables with the same structure, you can"
 " use the PostgreSQL keyword ``EXCEPT``:"
 msgstr ""
 
-#: ../../source/docs/training_manual/spatial_databases/geometry.rst:247
+#: ../../docs/training_manual/spatial_databases/geometry.rst:241
 msgid ""
 "As the result, you will get all records from table_a which are not stored in"
 " table_b."
 msgstr ""
 
-#: ../../source/docs/training_manual/spatial_databases/geometry.rst:251
+#: ../../docs/training_manual/spatial_databases/geometry.rst:245
 msgid "Tablespaces"
 msgstr ""
 
-#: ../../source/docs/training_manual/spatial_databases/geometry.rst:253
+#: ../../docs/training_manual/spatial_databases/geometry.rst:247
 msgid ""
 "You can define where postgres should store its data on disk by creating "
 "tablespaces:"
 msgstr ""
 
-#: ../../source/docs/training_manual/spatial_databases/geometry.rst:260
+#: ../../docs/training_manual/spatial_databases/geometry.rst:254
 msgid ""
 "When you create a database, you can then specify which tablespace to use "
 "e.g.::"
 msgstr ""
 
-#: ../../source/docs/training_manual/spatial_databases/geometry.rst:265
+#: ../../docs/training_manual/spatial_databases/geometry.rst:259
 msgid "|IC|"
-msgstr ""
+msgstr "|IC|"
 
-#: ../../source/docs/training_manual/spatial_databases/geometry.rst:267
+#: ../../docs/training_manual/spatial_databases/geometry.rst:261
 msgid ""
 "You've learned how to create more complex geometries using PostGIS "
 "statements. Keep in mind that this is mostly to improve your tacit knowledge"
@@ -296,8 +297,3 @@ msgid ""
 "general idea of their structure will help you when using a GIS, especially "
 "if you encounter errors that would otherwise seem cryptic."
 msgstr ""
-
-#~ msgid ""
-#~ "You can get more information for this topic in `this blog entry "
-#~ "<http://linfiniti.com/?s=cleangeometry>`_."
-#~ msgstr ""

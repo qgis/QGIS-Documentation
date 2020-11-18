@@ -1,42 +1,40 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2014, QGIS project
-# This file is distributed under the same license as the QGIS Documentation
-# Project package.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation\n"
+"Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-06 11:48+0100\n"
-"PO-Revision-Date: 2019-12-06 11:01+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
-"Language-Team: Hindi (http://www.transifex.com/qgis/qgis-documentation/language/hi/)\n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:21+0000\n"
+"Language-Team: Hindi (https://www.transifex.com/qgis/teams/6144/hi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.1\n"
 "Language: hi\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../source/docs/training_manual/processing/crs.rst:8
+#: ../../docs/training_manual/processing/crs.rst:2
 msgid "CRSs. Reprojecting"
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/crs.rst:11
+#: ../../docs/training_manual/processing/crs.rst:5
 msgid ""
 "In this lesson we will discuss how Processing uses CRSs. We will also see a "
 "very useful algorithm: reprojecting."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/crs.rst:15
+#: ../../docs/training_manual/processing/crs.rst:9
 msgid ""
 "CRS's are a great source of confusion for QGIS Processing users, so here are"
 " some general rules about how they are handled by geoalgorithms when "
 "creating a new layer."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/crs.rst:18
+#: ../../docs/training_manual/processing/crs.rst:12
 msgid ""
 "If there are input layers, it will use the CRS of the first layer. This is "
 "assumed to be the CRS of all input layers, since they should have the same "
@@ -45,14 +43,14 @@ msgid ""
 "parameters dialog."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/crs.rst:25
+#: ../../docs/training_manual/processing/crs.rst:19
 msgid ""
 "If there are no input layer, it will use the project CRS, unless the "
 "algorithm contains a specific CRS field (as it happened in the last lesson "
 "with the graticule algorithm)"
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/crs.rst:29
+#: ../../docs/training_manual/processing/crs.rst:23
 msgid ""
 "Open the project corresponding to this lesson and you will see two layers "
 "named 23030 and 4326. They both contain the same points, but in different "
@@ -61,11 +59,11 @@ msgid ""
 "actually the same layer."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/crs.rst:35
+#: ../../docs/training_manual/processing/crs.rst:29
 msgid "Open the *Export/Add geometry columns* algorithm."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/crs.rst:39
+#: ../../docs/training_manual/processing/crs.rst:33
 msgid ""
 "This algorithm add new columns to the attributes table of a vector layer. "
 "The content of the columns depend on the type of geometry of the layer. In "
@@ -73,7 +71,7 @@ msgid ""
 " point."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/crs.rst:44
+#: ../../docs/training_manual/processing/crs.rst:38
 msgid ""
 "In the list of available layers that you will find in the input layer field,"
 " you will see each one with its corresponding CRS. That means that, although"
@@ -81,7 +79,7 @@ msgid ""
 "differently. Select the 4326 layer."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/crs.rst:49
+#: ../../docs/training_manual/processing/crs.rst:43
 msgid ""
 "The other parameter of the algorithm allows to set how the algorithm uses "
 "coordinates to calculate the new value that it will add to the resulting "
@@ -90,7 +88,7 @@ msgid ""
 "as they are. This is how almost all geoalgorithms work."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/crs.rst:55
+#: ../../docs/training_manual/processing/crs.rst:49
 msgid ""
 "You should get a new layer with exactly the same points as the other two "
 "layers. If you right click on the name of the layer and open its properties,"
@@ -99,13 +97,13 @@ msgid ""
 "enter the CRS of the layer, since QGIS already knows about it."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/crs.rst:61
+#: ../../docs/training_manual/processing/crs.rst:55
 msgid ""
 "If you open the attributes table of the new layer you will see that it "
 "contains two new fields with the X and Y coordinates of each point."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/crs.rst:66
+#: ../../docs/training_manual/processing/crs.rst:60
 msgid ""
 "Those coordinate values are given in the layer CRS, since we chose that "
 "option. However, even if you choose another option, the output CRS of the "
@@ -115,26 +113,26 @@ msgid ""
 "layer to be different to the CRS of the input one."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/crs.rst:74
+#: ../../docs/training_manual/processing/crs.rst:68
 msgid ""
 "Now do the same calculation using the other layer. You should find the "
 "resulting layer rendered exactly in the same place as the other ones, and it"
 " will have the EPSG:23030 CRS, since that was the one of the input layer."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/crs.rst:78
+#: ../../docs/training_manual/processing/crs.rst:72
 msgid ""
 "If you go to its attribute table, you will see values that are different to "
 "the ones in the first layer that we created."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/crs.rst:83
+#: ../../docs/training_manual/processing/crs.rst:77
 msgid ""
 "This is because the original data is different (it uses a different CRS), "
 "and those coordinates are taken from it."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/crs.rst:86
+#: ../../docs/training_manual/processing/crs.rst:80
 msgid ""
 "What should you learn from this? The main idea behind these examples is that"
 " geoalgorithms use the layer as it is in its original data source, and "
@@ -147,25 +145,25 @@ msgid ""
 "other, since they might have different CRSs."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/crs.rst:95
+#: ../../docs/training_manual/processing/crs.rst:89
 msgid ""
 "Algorithms performs no reprojection (except in the reprojection algorithm "
 "that we will see next), so it is up to you to make sure that layers have "
 "matching CRS's."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/crs.rst:99
+#: ../../docs/training_manual/processing/crs.rst:93
 msgid ""
 "An interesting module that deals with CRS's is the reprojection one. It "
 "represents a particular case, since it has an input layer (the one to "
 "reproject), but it will not use its CRS for the output one."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/crs.rst:103
+#: ../../docs/training_manual/processing/crs.rst:97
 msgid "Open the *Reproject layer* algorithm."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/crs.rst:107
+#: ../../docs/training_manual/processing/crs.rst:101
 msgid ""
 "Select any of the layers as input, and select EPSG:23029 as the destination "
 "CRS. Run the algorithm and you will get a new layer, identical to the input "
@@ -176,18 +174,3 @@ msgid ""
 "veryfing that the added coordinates are different to the ones in the "
 "attribute tables of both of the two layers that we had computed before."
 msgstr ""
-
-#~ msgid ""
-#~ "If there are no input layer, it will use the project CRS, unless the "
-#~ "algorithm contains a specific CRS field (as it happenend in the last lesson "
-#~ "with the graticule algorithm)"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Those coordinate values are given in the layer CRS, since we chose that "
-#~ "option. However, even if you choose another option, the output CRS of the "
-#~ "layer would have been the same, since the input CRS is used to set the CRS "
-#~ "of the output layer. Choosing another option will cause the values to be "
-#~ "different, but not the resulting point to change or the CRS of the ouput "
-#~ "layer to be different to the CRS of the input one."
-#~ msgstr ""

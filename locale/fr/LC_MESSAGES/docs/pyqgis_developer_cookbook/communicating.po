@@ -46,7 +46,7 @@ msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/communicating.rst:44
 msgid "Showing messages. The QgsMessageBar class"
-msgstr ""
+msgstr "Afficher des messages. La classe QgsMessageBar"
 
 #: ../../docs/pyqgis_developer_cookbook/communicating.rst:46
 msgid ""
@@ -88,22 +88,27 @@ msgid ""
 ":class:`Qgis.MessageLevel <qgis.core.Qgis.MessageLevel>` enumeration. You "
 "can use up to 4 different levels:"
 msgstr ""
+"Les exemples ci-dessus montrent une barre d'erreur, mais le paramètre "
+"``level`` peut être utilisé pour créer des messages d'avertissement ou des "
+"messages d'information, en utilisant l'énumération :class:`Qgis.MessageLevel"
+" <qgis.core.Qgis.MessageLevel>`. Vous pouvez utiliser jusqu'à 4 niveaux "
+"différents :"
 
 #: ../../docs/pyqgis_developer_cookbook/communicating.rst:89
 msgid "Info"
-msgstr ""
+msgstr "Info"
 
 #: ../../docs/pyqgis_developer_cookbook/communicating.rst:90
 msgid "Warning"
-msgstr ""
+msgstr "Warning"
 
 #: ../../docs/pyqgis_developer_cookbook/communicating.rst:91
 msgid "Critical"
-msgstr ""
+msgstr "Critical"
 
 #: ../../docs/pyqgis_developer_cookbook/communicating.rst:92
 msgid "Success"
-msgstr ""
+msgstr "Success"
 
 #: ../../docs/pyqgis_developer_cookbook/communicating.rst:98
 msgid "QGIS Message bar (info)"
@@ -154,6 +159,8 @@ msgid ""
 "Also, you can use the built-in status bar to report progress, as in the next"
 " example:"
 msgstr ""
+"Vous pouvez également utiliser la barre d'état intégrée pour signaler les "
+"progrès, comme dans l'exemple suivant :"
 
 #: ../../docs/pyqgis_developer_cookbook/communicating.rst:210
 msgid "Logging"
@@ -166,6 +173,10 @@ msgid ""
 " output location. Please consider to use the correct way of logging for your"
 " purpose:"
 msgstr ""
+"Trois types de journalisation sont disponibles dans QGIS pour enregistrer et"
+" sauvegarder toutes les informations relatives à l'exécution de votre code. "
+"Chacun a son emplacement de sortie spécifique. Veuillez utiliser la méthode "
+"de journalisation qui convient le mieux à votre situation :"
 
 #: ../../docs/pyqgis_developer_cookbook/communicating.rst:216
 msgid ""
@@ -173,6 +184,9 @@ msgid ""
 "communicate issues to the user. The output of the QgsMessageLog is shown in "
 "the Log Messages Panel."
 msgstr ""
+":class:`QgsMessageLog <qgis.core.QgsMessageLog>` est destiné aux messages "
+"pour communiquer des problèmes à l'utilisateur. La sortie du QgsMessageLog "
+"est affichée dans le panneau des messages de log."
 
 #: ../../docs/pyqgis_developer_cookbook/communicating.rst:219
 msgid ""
@@ -180,6 +194,10 @@ msgid ""
 "QGIS Python API (PyQGIS). It is recommended for Python script developers "
 "that need to debug their python code, e.g. feature ids or geometries"
 msgstr ""
+"Le module python intégré **logging** est destiné au débogage au niveau de "
+"l'API Python QGIS (PyQGIS). Il est recommandé aux développeurs de scripts "
+"Python qui ont besoin de déboguer leur code python, par exemple les "
+"identifiants d'entités ou les géométries"
 
 #: ../../docs/pyqgis_developer_cookbook/communicating.rst:222
 msgid ""
@@ -187,12 +205,19 @@ msgid ""
 " debugging / developers (i.e. you suspect something is triggered by some "
 "broken code). Messages are only visible with developer versions of QGIS."
 msgstr ""
+":class:`QgsLogger <qgis.core.QgsLogger>` est destiné aux messages pour le "
+"débogage / les développements *QGIS interne* (c'est-à-dire que vous "
+"soupçonnez que quelque chose est déclenché par un code défectueux). Les "
+"messages ne sont visibles qu'avec les versions de QGIS destinées aux "
+"développeurs."
 
 #: ../../docs/pyqgis_developer_cookbook/communicating.rst:226
 msgid ""
 "Examples for the different logging types are shown in the following sections"
 " below."
 msgstr ""
+"Des exemples pour les différents types d'exploitation forestière sont "
+"présentés dans les sections suivantes."
 
 #: ../../docs/pyqgis_developer_cookbook/communicating.rst:230
 msgid ""
@@ -204,20 +229,29 @@ msgid ""
 "<qgis.core.QgsLogger>` or :class:`QgsMessageLog <qgis.core.QgsMessageLog>`) "
 "instead."
 msgstr ""
+"L'utilisation de l'instruction Python ``print`` n'est pas sûre dans tout "
+"code qui peut être multithreadé et **ralentit extrêmement l'algorithme**. "
+"Cela inclut les **fonctions d'expression**, les **renderers**, les **couches"
+" de symboles** et les **algorithmes de traitement** (entre autres). Dans ces"
+" cas, vous devriez toujours utiliser le module python **logging** ou les "
+"classes thread safe (:class:`QgsLogger <qgis.core.QgsLogger>` ou "
+":class:`QgsMessageLog <qgis.core.QgsMessageLog>`) à la place."
 
 #: ../../docs/pyqgis_developer_cookbook/communicating.rst:239
 msgid "QgsMessageLog"
-msgstr ""
+msgstr "QgsMessageLog"
 
 #: ../../docs/pyqgis_developer_cookbook/communicating.rst:256
 msgid ""
 "You can see the output of the :class:`QgsMessageLog "
 "<qgis.core.QgsMessageLog>` in the :ref:`log_message_panel`"
 msgstr ""
+"Vous pouvez voir la sortie du :class:`QgsMessageLog "
+"<qgis.core.QgsMessageLog>` dans :ref:`log_message_panel`."
 
 #: ../../docs/pyqgis_developer_cookbook/communicating.rst:260
 msgid "The python built in logging module"
-msgstr ""
+msgstr "Le python intégré dans le module de journalisation"
 
 #: ../../docs/pyqgis_developer_cookbook/communicating.rst:271
 msgid ""
@@ -227,33 +261,46 @@ msgid ""
 "what levels to output and the format defines the format in which each "
 "message is output."
 msgstr ""
+"La méthode basicConfig permet de configurer la configuration de base de "
+"l'enregistrement. Dans le code ci-dessus, le nom de fichier, le niveau de "
+"journalisation et le format sont définis. Le nom du fichier fait référence à"
+" l'endroit où écrire le fichier journal, le niveau de journalisation définit"
+" les niveaux de sortie et le format définit le format dans lequel chaque "
+"message est sorti."
 
 #: ../../docs/pyqgis_developer_cookbook/communicating.rst:281
 msgid ""
 "If you want to erase the log file every time you execute your script you can"
 " do something like:"
 msgstr ""
+"Si vous voulez effacer le fichier journal chaque fois que vous exécutez "
+"votre script, vous pouvez faire quelque chose comme"
 
 #: ../../docs/pyqgis_developer_cookbook/communicating.rst:289
 msgid ""
 "Further resources on how to use the python logging facility are available "
 "at:"
 msgstr ""
+"D'autres ressources sur la façon d'utiliser le système d'exploitation "
+"forestière python sont disponibles à l'adresse suivante"
 
 #: ../../docs/pyqgis_developer_cookbook/communicating.rst:291
 msgid "https://docs.python.org/3/library/logging.html"
-msgstr ""
+msgstr "https://docs.python.org/3/library/logging.html"
 
 #: ../../docs/pyqgis_developer_cookbook/communicating.rst:292
 msgid "https://docs.python.org/3/howto/logging.html"
-msgstr ""
+msgstr "https://docs.python.org/3/howto/logging.html"
 
 #: ../../docs/pyqgis_developer_cookbook/communicating.rst:293
 msgid "https://docs.python.org/3/howto/logging-cookbook.html"
-msgstr ""
+msgstr "https://docs.python.org/3/howto/logging-cookbook.html"
 
 #: ../../docs/pyqgis_developer_cookbook/communicating.rst:297
 msgid ""
 "Please note that without logging to a file by setting a filename the logging"
 " may be multithreaded which heavily slows down the output."
 msgstr ""
+"Veuillez noter que sans enregistrement dans un fichier en définissant un nom"
+" de fichier, l'enregistrement peut être multithreadé, ce qui ralentit "
+"fortement la sortie."

@@ -6,6 +6,7 @@
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
 # Fred ETHEVE <fred@f-etheve.fr>, 2020
+# Francis Gasc <francisgasc@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-05 01:57+0200\n"
 "PO-Revision-Date: 2020-03-16 19:20+0000\n"
-"Last-Translator: Fred ETHEVE <fred@f-etheve.fr>, 2020\n"
+"Last-Translator: Francis Gasc <francisgasc@gmail.com>, 2020\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,7 +25,7 @@ msgstr ""
 
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:4
 msgid "|LS| Vector Attribute Data"
-msgstr ""
+msgstr "|LS| Données sur les attributs des donnees vecteur"
 
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:6
 msgid ""
@@ -34,6 +35,12 @@ msgid ""
 " volumes), while their other properties are included as attributes (often "
 "presented as a table in QGIS)."
 msgstr ""
+"Les données vecteur sont sans doute le type de données le plus courant dans "
+"l'utilisation quotidienne des SIG. Le modèle vecteur représente "
+"l'emplacement et la forme d'entités géographiques à l'aide de points, de "
+"lignes et de polygones (et pour les données 3D, également des surfaces et "
+"des volumes), tandis que leurs autres propriétés sont incluses en tant "
+"qu'attributs (souvent présentés sous forme de tableau dans QGIS)."
 
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:12
 msgid ""
@@ -91,6 +98,11 @@ msgid ""
 ":file:`protected_areas.shp` *ESRI Shapefile* format dataset in directory "
 ":file:`exercise_data/shapefile`."
 msgstr ""
+"D'après l'exercice précédent, vous devriez avoir la couche "
+"\"protected_areas\" chargée dans votre carte. Si elle n'est pas chargée, "
+"alors vous pouvez trouver le jeu de données au format "
+":file:`protected_areas.shp` *ESRI Shapefile* dans le répertoire "
+":file:`exercise_data/shapefile`."
 
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:38
 msgid ""
@@ -98,12 +110,17 @@ msgid ""
 "data**, but we can learn more about the protected areas by exploring the "
 "**attribute table**."
 msgstr ""
+"Les polygones représentant les zones protégées constituent les **données "
+"spatiales**, mais nous pouvons en apprendre davantage sur les zones "
+"protégées en explorant la **table d'attributs**."
 
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:42
 msgid ""
 "In the :guilabel:`Layers` panel, click on the ``protected_areas`` layer to "
 "select it."
 msgstr ""
+"Dans le panneau :guilabel:`couches`, cliquez sur la couche "
+"``protected_areas`` pour la sélectionner."
 
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:44
 msgid ""
@@ -111,6 +128,9 @@ msgid ""
 "Attribute Table` button. This will open a new window showing the attribute "
 "table of the ``protected_areas`` layer."
 msgstr ""
+"Dans la barre d'outils :guilabel:`Attributs`, cliquez sur le bouton "
+"|openTable| :sup:`ouvrir la table attribut`. Cela ouvrira une nouvelle "
+"fenêtre montrant la table d'attributs de la couche ``protected_areas``."
 
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:51
 msgid ""
@@ -121,12 +141,20 @@ msgid ""
 "definitions are commonly used in GIS, so it is good to become familiar with "
 "them."
 msgstr ""
+"Une ligne est appelée un **enregistrement** et est associée à une **entité**"
+" dans la carte sur le canevas, comme un polygone. Une colonne est appelée "
+"**champ** (ou **attribut**), et porte un nom qui aide à la décrire, comme "
+"``name`` ou ``id `. Les valeurs dans les cellules sont connues sous le nom "
+"de **valeur d'attribut**. Ces définitions sont couramment utilisées dans les"
+" SIG, il est donc bon de se familiariser avec elles."
 
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:59
 msgid ""
 "In the ``protected_areas`` layer, there are two **features**, which are "
 "represented by the two polygons we see on the Map Canvas."
 msgstr ""
+"Dans la couche ``zones_protégées``, il y a deux **entites**, qui sont "
+"représentées par les deux polygones que nous voyons sur la carte."
 
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:62
 msgid ""
@@ -135,34 +163,48 @@ msgid ""
 "meaning of the attribute values. This is usually available from the creator "
 "of the data set."
 msgstr ""
+"Afin de comprendre ce que représentent les **champs** et les **valeurs "
+"d'attribut**, il peut être nécessaire de trouver de la documentation (ou des"
+" métadonnées) décrivant la signification des valeurs d'attribut. Cette "
+"documentation est généralement disponible auprès du créateur de l'ensemble "
+"de données."
 
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:67
 msgid ""
 "Next, let's see how a record in the attribute table is linked to a polygon "
 "feature that we see on the Map Canvas."
 msgstr ""
+"Ensuite, voyons comment un enregistrement dans la table d'attributs est lié "
+"à une entite de polygone que nous voyons sur la carte."
 
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:70
 msgid "Go back to the main QGIS window."
-msgstr ""
+msgstr "Retournez à la fenêtre principale QGIS."
 
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:71
 msgid ""
 "In the :guilabel:`Attributes Toolbar`, click on the |selectFeature| "
 ":sup:`Select Feature` button."
 msgstr ""
+"Dans la barre d'outils :guilabel:`Attributs`, cliquez sur le bouton "
+"|selectFeature| :sup:`selectionner entite`."
 
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:73
 msgid ""
 "Make sure the ``protected_areas`` layer is still selected in the "
 ":guilabel:`Layers` panel."
 msgstr ""
+"Assurez-vous que la couche ``protected_areas`` est toujours sélectionnée "
+"dans le panneau :guilabel:`couches`."
 
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:75
 msgid ""
 "Move your mouse to the Map Canvas and left click on the smaller of the two "
 "polygons.  The polygon will turn yellow indicating it is selected."
 msgstr ""
+"Déplacez votre souris sur la carte et cliquez sur le plus petit des deux "
+"polygones avec le bouton gauche de la souris. Le polygone deviendra jaune, "
+"indiquant qu'il est sélectionné."
 
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:81
 msgid ""
@@ -170,28 +212,41 @@ msgid ""
 "record (row) highlighted.  These are the attribute values of the selected "
 "polygon."
 msgstr ""
+"Revenez à la fenêtre :guilabel:`table d'attribut`, et vous devriez voir un "
+"enregistrement (ligne) mis en évidence. Il s'agit des valeurs d'attribut du "
+"polygone sélectionné."
 
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:88
 msgid "You can also select a feature using the Attribute Table."
 msgstr ""
+"Vous pouvez également sélectionner une entite à l'aide de la table "
+"attributs."
 
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:90
 msgid ""
 "In the :guilabel:`Attribute Table` window, on the far left, click on the row"
 " number of the record that is currently not selected."
 msgstr ""
+"Dans la fenêtre :guilabel:`table attributs`, à gauche, cliquez sur le numéro"
+" de ligne de l'enregistrement qui n'est actuellement pas sélectionné."
 
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:96
 msgid ""
 "Go back to the main QGIS window and look at the Map Canvas. You should see "
 "the larger of the two polygons colored yellow."
 msgstr ""
+"Retournez à la fenêtre principale de QGIS et regardez le canevas "
+"cartographique. Vous devriez voir le plus grand des deux polygones colorés "
+"en jaune."
 
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:98
 msgid ""
 "To deselect the feature, go to the :guilabel:`Attribute Table` window and "
 "click on |deselectAll| :sup:`Deselect all features from the layer` button."
 msgstr ""
+"Pour désélectionner l'entite, allez dans la fenêtre :guilabel:`table "
+"attributs` et cliquez sur |deselectAll| :sup:`deselectionner toutes les "
+"entites depuis la couche`."
 
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:101
 msgid ""
@@ -200,46 +255,64 @@ msgid ""
 "Another way to identify the location of a feature is to use the "
 ":guilabel:`Flash Feature` tool."
 msgstr ""
+"Parfois, de nombreuses entites sont affichées sur la carte et il peut être "
+"difficile de voir quelle entité est sélectionnée dans la table d'attributs. "
+"Une autre façon d'identifier l'emplacement d'un élément est d'utiliser "
+"l'outil :guilabel:`Flash Feature`."
 
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:106
 msgid ""
 "In the :guilabel:`Attribute Table`, right-click on any cell in the row that "
 "has the attribute value ``r2855697`` for the field ``full_id``."
 msgstr ""
+"Dans la :guilabel:`table attributs`, faites un clic droit sur toute cellule "
+"de la ligne qui a la valeur d'attribut ``r2855697`` pour le champ "
+"``full_id``."
 
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:108
 msgid ""
 "In the context menu, click on :guilabel:`Flash Feature` and watch the Map "
 "Canvas."
 msgstr ""
+"Dans le menu contextuel, cliquez sur :guilabel:`Flash Feature` et regardez "
+"le canevas de carte."
 
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:114
 msgid ""
 "You should see the polygon flash red a few times.  If you missed it, try it "
 "again."
 msgstr ""
+"Vous devriez voir le polygone clignoter en rouge plusieurs fois. Si vous "
+"l'avez manqué, essayez-le à nouveau."
 
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:117
 msgid ""
 "Another useful tool is the :guilabel:`Zoom to Feature` tool, that tells QGIS"
 " to zoom to the feature of interest."
 msgstr ""
+"Un autre outil utile est l'outil :guilabel:`zoomer à l'entité`, qui indique "
+"à QGIS de zoomer sur l'élément qui l'intéresse."
 
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:120
 msgid ""
 "In the :guilabel:`Attribute Table`, right-click on  any cell in the row that"
 " has the attribute value ``r2855697`` for the field ``full_id``."
 msgstr ""
+"Dans la :guilabel:`table attributs`, faites un clic droit sur toute cellule "
+"de la ligne qui a la valeur d'attribut ``r2855697`` pour le champ "
+"``full_id``."
 
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:122
 msgid "In the context menu, click on :guilabel:`Zoom to Feature`"
-msgstr ""
+msgstr "Dans le menu contextuel, cliquez sur :guilabel:`zoomer à l'entité`."
 
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:127
 msgid ""
 "Look at the Map Canvas.  The polygon should now occupy the extent of the Map"
 " Canvas area."
 msgstr ""
+"Regardez le canevas de la carte. Le polygone devrait maintenant occuper "
+"l'étendue de la zone du Map Canvas."
 
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:130
 msgid "You may now close the attribute table."
@@ -247,25 +320,28 @@ msgstr "Vous pouvez maintenant fermer la table d’attributs."
 
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:135
 msgid "|basic| |TY| Exploring Vector Data Attributes"
-msgstr ""
+msgstr "|basic| |TY| explorer les attributs des donnees vecteur"
 
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:137
 msgid "How many fields are available in the :guilabel:`rivers` layer?"
 msgstr ""
+"Combien de champs sont disponibles dans la couche :guilabel:`rivers` ?"
 
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:138
 msgid "Tell us a bit about the ``town`` places in your dataset."
-msgstr ""
+msgstr "Parlez-nous un peu des endroits town de votre jeu de données."
 
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:139
 msgid ""
 "Open the attribute table for the :guilabel:`places` layer. Which field would"
 " be the most useful to represent in label form, and why?"
 msgstr ""
+"Ouvrez la table des attributs de la couche :guilabel:`places`. Quel champ "
+"serait le plus utile à représenter sous forme d'étiquette, et pourquoi ?"
 
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:142
 msgid ":ref:`Check your results <vector-explore-attribute-data>`"
-msgstr ""
+msgstr ":ref:`Check your results <vector-explore-attribute-data>`"
 
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:145
 msgid "|IC|"

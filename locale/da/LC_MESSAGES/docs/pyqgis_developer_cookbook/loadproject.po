@@ -1,36 +1,40 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2014, QGIS project
-# This file is distributed under the same license as the QGIS Documentation
-# Project package.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation\n"
+"Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-11 14:48+0200\n"
-"PO-Revision-Date: 2019-08-11 13:02+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
-"Language-Team: Danish (http://www.transifex.com/qgis/qgis-documentation/language/da/)\n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:23+0000\n"
+"Language-Team: Danish (https://www.transifex.com/qgis/teams/6144/da/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.1\n"
 "Language: da\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadproject.rst:11
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:6
+msgid ""
+"The code snippets on this page need the following imports if you're outside "
+"the pyqgis console:"
+msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:35
 msgid "Loading Projects"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadproject.rst:13
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:37
 msgid ""
 "Sometimes you need to load an existing project from a plugin or (more often)"
 " when developing a standalone QGIS Python application (see: "
 ":ref:`pythonapplications`)."
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadproject.rst:20
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:44
 msgid ""
 "To load a project into the current QGIS application you need to create an "
 "instance of the :class:`QgsProject <qgis.core.QgsProject>` class. This is a "
@@ -40,7 +44,7 @@ msgid ""
 "project to be loaded:"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadproject.rst:41
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:75
 msgid ""
 "If you need to make modifications to the project (for example to add or "
 "remove some layers) and save your changes, call the :meth:`write() "
@@ -49,14 +53,14 @@ msgid ""
 " path for saving the project to a new location:"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadproject.rst:53
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:87
 msgid ""
 "Both :meth:`read() <qgis.core.QgsProject.read>` and :meth:`write() "
 "<qgis.core.QgsProject.write>` functions return a boolean value that you can "
 "use to check if the operation was successful."
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadproject.rst:59
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:93
 msgid ""
 "If you are writing a QGIS standalone application, in order to synchronise "
 "the loaded project with the canvas you need to instantiate a "
@@ -64,42 +68,49 @@ msgid ""
 "as in the example below:"
 msgstr ""
 
-#~ msgid ""
-#~ "Sometimes you need to load an existing project from a plugin or (more often)"
-#~ " when developing a stand-alone QGIS Python application (see: "
-#~ ":ref:`pythonapplications`)."
-#~ msgstr ""
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:109
+msgid "Resolving bad paths"
+msgstr ""
 
-#~ msgid ""
-#~ "To load a project into the current QGIS application you need a "
-#~ ":class:`QgsProject` :func:`instance()` object and call its :func:`read()` "
-#~ "method passing to it a :class:`QFileInfo` object that contains the path from"
-#~ " where the project will be loaded::"
-#~ msgstr ""
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:111
+msgid ""
+"It can happen that layers loaded in the project are moved to another "
+"location. When the project is loaded again all the layer paths are broken."
+msgstr ""
 
-#~ msgid ""
-#~ "In case you need to make some modifications to the project (for example add "
-#~ "or remove some layers) and save your changes, you can call the "
-#~ ":func:`write()` method of your project instance. The :func:`write()` method "
-#~ "also accepts an optional :class:`QFileInfo` that allows you to specify a "
-#~ "path where the project will be saved::"
-#~ msgstr ""
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:114
+msgid ""
+"The :class:`QgsPathResolver <qgis.core.QgsPathResolver>` class with the "
+":meth:`setPathPreprocessor() "
+"<qgis.core.QgsPathResolver.setPathPreprocessor>` allows setting a custom "
+"path pre-processor function, which allows for manipulation of paths and data"
+" sources prior to resolving them to file references or layer sources."
+msgstr ""
 
-#~ msgid ""
-#~ "Both :func:`read()` and :func:`write()` funtions return a boolean value that"
-#~ " you can use to check if the operation was successful."
-#~ msgstr ""
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:120
+msgid ""
+"The processor function must accept a single string argument (representing "
+"the original file path or data source) and return a processed version of "
+"this path."
+msgstr ""
 
-#~ msgid ""
-#~ "If you are writing a QGIS standalone application, in order to synchronise "
-#~ "the loaded project with the canvas you need to instanciate a "
-#~ ":class:`QgsLayerTreeMapCanvasBridge` as in the example below::"
-#~ msgstr ""
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:123
+msgid ""
+"The path pre-processor function is called **before** any bad layer handler."
+msgstr ""
 
-#~ msgid ""
-#~ "If you need to make modifications to the project (for example to add or "
-#~ "remove some layers) and save your changes, call the :meth:`write() "
-#~ "<qgis.core.QgsProject.write>` method of your project instance. The "
-#~ ":func:`write()` method also accepts an optional path for saving the project "
-#~ "to a new location:"
-#~ msgstr ""
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:125
+msgid "Some use cases:"
+msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:127
+msgid "replace an outdated path:"
+msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:136
+msgid "replace a database host address with a new one:"
+msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:145
+msgid "replace stored database credentials with new ones:"
+msgstr ""

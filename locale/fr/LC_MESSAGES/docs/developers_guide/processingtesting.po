@@ -8,6 +8,7 @@
 # Sant-anna <delazj@gmail.com>, 2020
 # thomas jacquemot <t.jacquemot@inddigo.com>, 2020
 # Loïc E <loic.ecault@region-bretagne.fr>, 2020
+# Francis Gasc <francisgasc@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-05 01:57+0200\n"
 "PO-Revision-Date: 2020-03-16 19:24+0000\n"
-"Last-Translator: Loïc E <loic.ecault@region-bretagne.fr>, 2020\n"
+"Last-Translator: Francis Gasc <francisgasc@gmail.com>, 2020\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -92,6 +93,15 @@ msgid ""
 "prefer to use what's already there in the folder :file:`testdata`. If you "
 "need extra data, put it into :file:`testdata/custom`."
 msgstr ""
+"Exécutez le :ref:`algorithme <processing_algs>` que vous voulez tester dans "
+"QGIS à partir du :ref:`processing toolbox <processing.toolbox>`. Si le "
+"résultat est une couche vecteur, préférez GML, avec son XSD, comme sortie "
+"pour son support des types de géométrie mixte et sa bonne lisibilité. "
+"Redirigez la sortie vers "
+":file:`python/plugins/processing/tests/testdata/expected`. Pour les couches "
+"d'entrée, préférez utiliser ce qui se trouve déjà dans le dossier "
+":file:`testdata`. Si vous avez besoin de données supplémentaires, mettez-les"
+" dans le dossier :file:`testdata/custom`."
 
 #: ../../docs/developers_guide/processingtesting.rst:53
 msgid ""
@@ -150,7 +160,7 @@ msgstr "Paramètres et résultats"
 
 #: ../../docs/developers_guide/processingtesting.rst:88
 msgid "Trivial type parameters"
-msgstr ""
+msgstr "Paramètres de type trivial"
 
 #: ../../docs/developers_guide/processingtesting.rst:90
 msgid "Parameters and results are specified as lists or dictionaries:"
@@ -180,6 +190,7 @@ msgstr "Le type, par exemple \"vecteur\" ou \"raster\""
 #: ../../docs/developers_guide/processingtesting.rst:115
 msgid "a name, with a relative path like :file:`expected/polys_centroid.gml`"
 msgstr ""
+"un nom, avec un chemin relatif tel que :file:`expected/polys_centroid.gml`"
 
 #: ../../docs/developers_guide/processingtesting.rst:117
 msgid "This is what it looks like in action:"
@@ -194,6 +205,9 @@ msgid ""
 "If you need an external file for the algorithm test, you need to specify the"
 " 'file' type and the (relative) path to the file in its 'name':"
 msgstr ""
+"Si vous avez besoin d'un fichier externe pour le test d'algorithme, vous "
+"devez spécifier le type de \"fichier\" et le chemin (relatif) vers le "
+"fichier dans son \"nom\" :"
 
 #: ../../docs/developers_guide/processingtesting.rst:148
 msgid "Results"
@@ -201,7 +215,7 @@ msgstr "Résultats"
 
 #: ../../docs/developers_guide/processingtesting.rst:150
 msgid "Results are specified very similarly."
-msgstr ""
+msgstr "Les résultats sont spécifiés de manière très similaire."
 
 #: ../../docs/developers_guide/processingtesting.rst:153
 msgid "Basic vector files"
@@ -213,7 +227,7 @@ msgstr "Ce ne pourrait être plus trivial!"
 
 #: ../../docs/developers_guide/processingtesting.rst:164
 msgid "Add the expected GML and XSD files in the folder."
-msgstr ""
+msgstr "Ajoutez les fichiers GML et XSD attendus dans le dossier."
 
 #: ../../docs/developers_guide/processingtesting.rst:167
 msgid "Vector with tolerance"
@@ -225,6 +239,10 @@ msgid ""
 "still acceptable. In this case (but only then) you may also use additional "
 "properties to define how a layer is compared."
 msgstr ""
+"Parfois, des plateformes différentes donnent des résultats légèrement "
+"différents qui restent acceptables. Dans ce cas (mais seulement dans ce "
+"cas), vous pouvez également utiliser des propriétés supplémentaires pour "
+"définir la façon dont une couche est comparée."
 
 #: ../../docs/developers_guide/processingtesting.rst:173
 msgid ""
@@ -236,6 +254,15 @@ msgid ""
 "certain tolerance to all fields. There is another property ``geometry`` "
 "which also accepts a ``precision`` which is applied to each vertex."
 msgstr ""
+"Pour traiter une certaine tolérance pour les valeurs de sortie, vous pouvez "
+"spécifier une propriété ``compare`` pour une sortie. La propriété de "
+"comparaison peut contenir des sous-propriétés pour les ``champs`` . Celle-ci"
+" contient des informations sur la précision avec laquelle un certain champ "
+"est comparé (``precision``) ou un champ peut même être entièrement "
+"``évité``. Il existe un nom de champ spécial __all__`` qui applique une "
+"certaine tolérance à tous les champs. Il y a une autre propriété "
+"``geometry`` qui accepte également une ``precision`` qui est appliquée à "
+"chaque sommet."
 
 #: ../../docs/developers_guide/processingtesting.rst:196
 msgid "Raster files"
@@ -246,6 +273,9 @@ msgid ""
 "Raster files are compared with a hash checksum. This is calculated when you "
 "create a test from the processing history."
 msgstr ""
+"Les fichiers raster sont comparés à une somme de contrôle de hachage. Celui-"
+"ci est calculé lorsque vous créez un test à partir de l'historique du "
+"traitement."
 
 #: ../../docs/developers_guide/processingtesting.rst:208
 msgid "Files"
@@ -256,6 +286,8 @@ msgid ""
 "You can compare the content of an output file to an expected result "
 "reference file"
 msgstr ""
+"Vous pouvez comparer le contenu d'un fichier de sortie à un fichier de "
+"référence des résultats attendus"
 
 #: ../../docs/developers_guide/processingtesting.rst:219
 msgid ""
@@ -263,6 +295,9 @@ msgid ""
 "<https://docs.python.org/3/library/re.html#re.search>`_ against the file "
 "content"
 msgstr ""
+"Vous pouvez également utiliser une ou plusieurs expressions régulières qui "
+"seront `appariées avec le contenu du fichier "
+"<https://docs.python.org/3/library/re.html#re.search>`_."
 
 #: ../../docs/developers_guide/processingtesting.rst:233
 msgid "Directories"
@@ -273,6 +308,8 @@ msgid ""
 "You can compare the content of an output directory with an expected result "
 "reference directory"
 msgstr ""
+"Vous pouvez comparer le contenu d'un répertoire de sortie avec un répertoire"
+" de référence des résultats attendus"
 
 #: ../../docs/developers_guide/processingtesting.rst:245
 msgid "Algorithm Context"
@@ -283,6 +320,8 @@ msgid ""
 "There are a few more definitions that can modify the context of the "
 "algorithm - these can be specified at the top level of test:"
 msgstr ""
+"Il existe quelques autres définitions qui peuvent modifier le contexte de "
+"l'algorithme - elles peuvent être spécifiées au niveau supérieur du test :"
 
 #: ../../docs/developers_guide/processingtesting.rst:250
 msgid ""
@@ -316,3 +355,5 @@ msgid ""
 "or one of the following values listed in the :source:`CMakelists.txt "
 "<python/plugins/processing/tests/CMakeLists.txt>`"
 msgstr ""
+"ou l'une des valeurs suivantes figurant dans le fichier "
+":source:`CMakelists.txt <python/plugins/processing/tests/CMakeLists.txt>`"
