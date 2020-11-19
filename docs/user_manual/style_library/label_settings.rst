@@ -100,9 +100,11 @@ In the |labelformatting| :guilabel:`Formatting` tab, you can:
 
 * Use the :guilabel:`Type case` option to change the capitalization style of
   the text. You have the possibility to render the text as :guilabel:`All
-  uppercase`, :guilabel:`All lowercase` or :guilabel:`Capitalize first letter`.
+  uppercase`, :guilabel:`All lowercase`, :guilabel:`Title case`
+  and :guilabel:`Force First Letter to Capital`.
   Note that the last option modifies only the first letter of each word and
   leaves the other letters in the text untouched.
+  Choosing :guilabel:`No Change` you don't change the capitalization.
 * Under :guilabel:`Spacing`, change the space between words and between
   individual letters.
 * |checkbox| :guilabel:`Enable kerning` of the text font
@@ -111,39 +113,7 @@ In the |labelformatting| :guilabel:`Formatting` tab, you can:
   setting a label.
 * Use the :guilabel:`Blend mode` option to determine how your labels will mix
   with the map features below them (more details at :ref:`blend-modes`).
-* The |unchecked| :guilabel:`Apply label text substitutes` option allows you
-  to specify a list of texts to substitute to texts in feature labels (e.g.,
-  abbreviating street types). Replacement texts are used when displaying
-  labels on the map. Users can also export and import lists of
-  substitutes to make reuse and sharing easier.
-* Configure :guilabel:`Multiple lines`:
-
-  * Set a character that will force a line break in the text with the
-    :guilabel:`Wrap on character` option
-  * Set an ideal line size for auto-wrapping using the :guilabel:`Wrap lines to`
-    option. The size can represent either the :guilabel:`Maximum line length`
-    or the :guilabel:`Minimum line length`.
-  * Decide the :guilabel:`Line Height`
-  * Format the :guilabel:`Alignment`: typical values available are
-    :guilabel:`Left`, :guilabel:`Right` and :guilabel:`Center`.
-
-    When setting point labels properties, the text alignment can also be
-    :guilabel:`Follow label placement`. In that case, the alignment will depend
-    on the final placement of the label relative to the point. E.g., if the
-    label is placed to the left of the point, then the label will be right
-    aligned, while if it is placed to the right, it will be left aligned.
-
-* For line labels you can include :guilabel:`Line direction symbol`
-  to help determine the line directions, with symbols to use to indicate the
-  :guilabel:`Left` or :guilabel:`Right`. They work particularly well when
-  used with the *curved* or *Parallel* placement options from the
-  :guilabel:`Placement` tab. There are options to set the symbols position, and
-  to |unchecked| :guilabel:`Reverse direction`.
-* Use the |unchecked| :guilabel:`Formatted numbers` option to format numeric
-  texts. You can set the number of :guilabel:`Decimal places`. By default, ``3``
-  decimal places will be used. Use the |checkbox| :guilabel:`Show plus sign` if
-  you want to show the plus sign for positive numbers.
-
+* Configure :guilabel:`Multiple lines` by deciding the :guilabel:`Line Height`.
 
 .. _labels_buffer:
 
@@ -342,7 +312,7 @@ and click the |signPlus| :guilabel:`Add item` button. Then enable the
    line should join to the label text. Available options:
 
    * :guilabel:`Closest point`
-   * :guilabel:`Label centroid`
+   * :guilabel:`Centroid`
    * Fixed position at the edge (:guilabel:`Top left`, :guilabel:`Top center`,
      :guilabel:`Top right`, :guilabel:`Left middle`, :guilabel:`Right middle`,
      :guilabel:`Bottom left`, :guilabel:`Bottom center` and :guilabel:`Bottom right`).
@@ -391,7 +361,7 @@ Point labels placement modes available are:
   #. top, slightly right
   #. bottom, slightly left.
 
-  The :guilabel:`Position priority` can, however, be customized or set for an
+  The placement mode can, however, be customized or set for an
   individual feature using a data defined list of prioritised positions.
   This also allows only certain placements to be used, so e.g.
   for coastal features you can prevent labels being placed over the land.
@@ -468,12 +438,12 @@ You can choose one of the following options for placing labels in polygons
 
 * :guilabel:`Horizontal`: places at the best position a horizontal 
   label inside the polygon. Again, it's possible to :guilabel:`Allow placing
-  labels outside of polygons`
+  labels outside of polygons`.
 * :guilabel:`Around centroid`: places the label at a specified distance
   around the centroid. Again, you can define whether the centroid is the one
   of the :guilabel:`visible polygon` or the :guilabel:`whole polygon`.
 * :guilabel:`Free (angled)`: places at the best position a rotated label
-  inside the polygon
+  inside the polygon.
 * :guilabel:`Using perimeter`: draws the label next to the polygon boundary
   The label will behave like the :ref:`parallel option for lines <labels_line_placement>`.
   You can define a position and a distance for the label. For the position,
@@ -481,13 +451,13 @@ You can choose one of the following options for placing labels in polygons
   :guilabel:`Line orientation dependent position` are possible. You can
   specify the distance between the label and the polygon outline, as well as
   the repeat interval for the label.
-* :guilabel:`Using perimeter (curved)`: draws the label along
+* :guilabel:`Using perimeter (Curved)`: draws the label along
   the polygon boundary, using a curved labeling. In addition to the parameters
   available with :guilabel:`Using perimeter` setting, you can set the
   :guilabel:`Maximum angle between curved characters polygon`, either inside
   or outside.
 * :guilabel:`Outside polygons`: always places polygon labels
-  for the layer outside the features, at a set :guilabel:`Distance`
+  for the layer outside the features, at a set :guilabel:`Distance`.
 
 
 .. _figure_labels_placement_polygon:
@@ -554,8 +524,8 @@ labels placement can result in labels being placed over unrelated features.
 An obstacle is a feature over which QGIS avoids placing other features' labels
 or diagrams. This can be controlled from the :guilabel:`Obstacles` section:
 
-#. Activate the |checkbox| :guilabel:`Discourage labels and diagrams from covering features`
-   option to decide whether features of the layer should act as obstacles for
+#. Activate the |checkbox| :guilabel:`Features act as obstacles`
+   option to decide that features of the layer should act as obstacles for
    any label and diagram (including items from other features in the same layer).
 
    Instead of the whole layer, you can select a subset of features to use as
@@ -634,8 +604,8 @@ Feature options
 
 Under :guilabel:`Feature options`:
 
-* You can choose to :guilabel:`label every part of a multi-part feature`
-  and :guilabel:`limit the number of features to be labeled`.
+* You can choose to :guilabel:`Label every part of a multi-part features`
+  and :guilabel:`Limit number of features to be labeled to`.
 * Both line and polygon layers offer the option to set a minimum size for
   the features to be labeled, using :guilabel:`Suppress labeling of features
   smaller than`.
