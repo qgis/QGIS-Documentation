@@ -100,9 +100,11 @@ In the |labelformatting| :guilabel:`Formatting` tab, you can:
 
 * Use the :guilabel:`Type case` option to change the capitalization style of
   the text. You have the possibility to render the text as :guilabel:`All
-  uppercase`, :guilabel:`All lowercase` or :guilabel:`Capitalize first letter`.
+  uppercase`, :guilabel:`All lowercase`, :guilabel:`Title case`
+  and :guilabel:`Force First Letter to Capital`.
   Note that the last option modifies only the first letter of each word and
   leaves the other letters in the text untouched.
+  Choosing :guilabel:`No Change` you don't change the capitalization.
 * Under :guilabel:`Spacing`, change the space between words and between
   individual letters.
 * |checkbox| :guilabel:`Enable kerning` of the text font
@@ -341,7 +343,7 @@ tab and activate the |checkbox| :guilabel:`Draw callouts`. Then you can:
    line should join to the label text. Available options:
 
    * :guilabel:`Closest point`
-   * :guilabel:`Label centroid`
+   * :guilabel:`Centroid`
    * Fixed position at the edge (:guilabel:`Top left`, :guilabel:`Top center`,
      :guilabel:`Top right`, :guilabel:`Left middle`, :guilabel:`Right middle`,
      :guilabel:`Bottom left`, :guilabel:`Bottom center` and :guilabel:`Bottom right`).
@@ -539,8 +541,8 @@ labels placement can result in labels being placed over unrelated features.
 An obstacle is a feature over which QGIS avoids placing other features' labels
 or diagrams. This can be controlled from the :guilabel:`Obstacles` section:
 
-#. Activate the |checkbox| :guilabel:`Discourage labels and diagrams from covering features`
-   option to decide whether features of the layer should act as obstacles for
+#. Activate the |checkbox| :guilabel:`Features act as obstacles`
+   option to decide that features of the layer should act as obstacles for
    any label and diagram (including items from other features in the same layer).
 
    Instead of the whole layer, you can select a subset of features to use as
@@ -619,8 +621,8 @@ Feature options
 
 Under :guilabel:`Feature options`:
 
-* You can choose to :guilabel:`label every part of a multi-part feature`
-  and :guilabel:`limit the number of features to be labeled`.
+* You can choose to :guilabel:`Label every part of a multi-part features`
+  and :guilabel:`Limit number of features to be labeled to`.
 * Both line and polygon layers offer the option to set a minimum size for
   the features to be labeled, using :guilabel:`Suppress labeling of features
   smaller than`.
