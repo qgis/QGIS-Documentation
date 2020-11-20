@@ -391,8 +391,8 @@ of your feature, like this one:
   attributes from selected feature` button):
 
 .. note:: If you're using a different dataset, it is highly likely that your
-   original polygon's :guilabel:`OGC_FID` will not be :kbd:`1`. Just choose the
-   feature which has an :guilabel:`OGC_FID`.
+  original polygon's :guilabel:`OGC_FID` will not be ``1``. Just choose the
+  feature which has an :guilabel:`OGC_FID`.
 
   .. figure:: img/merge_feature_dialog.png
      :align: center
