@@ -208,7 +208,7 @@ Returns the feature with an id on a layer.
      - * **layer** - layer, layer name or layer id
        * **feature_id** - the id of the feature which should be returned
    * - Examples
-     - * ``get_feature('streets', 1)`` → the feature with the id 1 on the layer "streets"
+     - * ``get_feature_by_id('streets', 1)`` → the feature with the id 1 on the layer "streets"
 
 
 .. end_get_feature_by_id_section
@@ -268,6 +268,8 @@ If called with a 'feature' parameter only, the function returns true if the spec
      - * **feature** - The feature which should be checked for selection.
    * - Examples
      - * ``is_selected(@atlas_feature)`` → True if the current atlas feature is selected.
+       * ``is_selected(get_feature('streets', 'name', 'Main St.')))`` → True if the unique named "Main St." feature on the active "streets" layer is selected.
+       * ``is_selected(get_feature_by_id('streets', 1))`` → True if the feature with the id 1 on the active "streets" layer is selected.
 
 
 **Two parameters**
@@ -280,10 +282,11 @@ If the function is called with both a layer and a feature, it will return true i
    * - Syntax
      - is_selected(layer, feature)
    * - Arguments
-     - * **layer** - The layer (or its ID or name) on which the selection will be checked.
+     - * **layer** - The layer (its ID or name) on which the selection will be checked.
        * **feature** - The feature which should be checked for selection.
    * - Examples
-     - * ``is_selected( 'streets', get_feature('streets', 'name', "street_name"))`` → True if the current building's street is selected (assuming the building layer has a field named 'street_name' and the 'streets' layer has a field called 'name').
+     - * ``is_selected( 'streets', get_feature('streets', 'name', "street_name"))`` → True if the current building's street is selected (assuming the building layer has a field named 'street_name' and the 'streets' layer has a field called 'name' with unique values).
+       * ``is_selected( 'streets', get_feature_by_id('streets', 1))`` → True if the feature with the id 1 on the "streets" layer is selected.
 
 
 .. end_is_selected_section

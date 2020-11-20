@@ -241,7 +241,7 @@ Returns an array with the given expression evaluated on each item.
 array_get
 .........
 
-Returns the Nth value (0 for the first one) of an array.
+Returns the Nth value (0 for the first one) or the last -Nth value (-1 for the last one) of an array.
 
 .. list-table::
    :widths: 15 85
@@ -253,6 +253,7 @@ Returns the Nth value (0 for the first one) of an array.
        * **index** - the index to get (0 based)
    * - Examples
      - * ``array_get(array('a','b','c'),1)`` → 'b'
+       * ``array_get(array('a','b','c'),-1)`` → 'c'
 
 
 .. end_array_get_section
