@@ -381,16 +381,10 @@ Point labels placement modes available are:
 Placement for line layers
 -------------------------
 
-Label modes for line layers include :guilabel:`Parallel`,
-:guilabel:`Curved` or :guilabel:`Horizontal`.
-For the :guilabel:`Parallel` and :guilabel:`Curved` modes,
-you can set the position to |checkbox| :guilabel:`Above line`,
-|checkbox| :guilabel:`On line` and |checkbox| :guilabel:`Below line`.
-It's possible to select several options at once. In that case, QGIS
-will look for the optimal label position. For Parallel and curved placement modes,
-you can also use the line orientation for the position of the label.
-Additionally, you can define a :guilabel:`Maximum angle between curved characters`
-when selecting the :guilabel:`Curved` mode (see Figure_labels_placement_line).
+Label placment modes for line layers include
+* :guilabel:`Parallel`: draws a line parallel
+* :guilabel:`Curved`: draws a curved label, following the line feature geometry
+* :guilabel:`Horizontal`: draws a horizontal label.
 
 .. _figure_labels_placement_line:
 
@@ -399,12 +393,19 @@ when selecting the :guilabel:`Curved` mode (see Figure_labels_placement_line).
 
    Label placement examples in lines
 
-For all three placement modes, in :guilabel:`Repeating Labels`, you can
-set up a minimum distance for repeating labels. The distance can be in
-``Millimeters``, ``Points``, ``Pixels``, ``Meters at scale``, ``Map Units`` 
-and ``Inches``. Also, in :guilabel:`Label Overrun` you can specify the
-maximal allowable distance a label may run past the end (or start) of
-line features.
+For the :guilabel:`Parallel` and :guilabel:`Curved` modes,
+you can set the position to |checkbox|:guilabel:`Above line`,
+|checkbox| :guilabel:`On line` and |checkbox|:guilabel:`Below line`.
+It's possible to select several options at once. In
+that case, QGIS will look for the optimal label position. For Parallel and
+curved placement mode, you can also use the line orientation for the
+position of the label. Additionally, you can define a :guilabel:`Maximum
+angle between curved characters` when selecting the :guilabel:`Curved` mode
+(see Figure_labels_placement_line).
+The :guilabel:`Label overrun` allows to specify the maximal allowable distance
+a label may run past the end (or start) of line features. Convenient when the
+lines are too short but you still want to display their label. It supports
+data-defined distances, in various units.
 The :guilabel:`Label Anchoring` allows you to control the placement
 of labels along line features. Click on :guilabel:`Settings ...` and
 choose the position along the line which labels will be placed close to.
@@ -415,7 +416,8 @@ There are two :guilabel:`Placement Behaviours`: if you choose
 :guilabel:`Preferred Placement Hint` the label anchor is only treated as
 hint for the preferred label placement. By choosing :guilabel:`Strict`
 labels are placed exactly on the label anchor.
-
+For all placement modes, in :guilabel:`Repeating Labels`, you can set up
+a data-defined minimum distance for repeating labels, in any supported unit.
 
 Placement for polygon layers
 ----------------------------
@@ -544,10 +546,10 @@ or diagrams. This can be controlled from the :guilabel:`Obstacles` section:
      certain features are more likely to be covered than others.
    * For polygon layers, you can choose the kind of obstacle the feature is:
 
-     * **over the feature's interior**: avoids placing labels over the interior
+     * **Over the Feature's Interior**: avoids placing labels over the interior
        of the polygon (prefers placing labels totally outside or just slightly
        inside the polygon)
-     * or **over the feature's boundary**: avoids placing labels over the
+     * or **Over the Feature's Boundary**: avoids placing labels over the
        boundary of the polygon (prefers placing labels outside or completely
        inside the polygon). This can be useful for layers where the features
        cover the whole area (administrative units, categorical coverages, ...).
