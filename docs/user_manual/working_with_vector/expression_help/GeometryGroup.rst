@@ -1957,6 +1957,8 @@ Read more on the underlying GEOS "Contains" predicate, as described in PostGIS `
      - * ``overlay_contains('regions')`` → true if the current feature spatially contains a region
        * ``overlay_contains('regions', filter:= population > 10000)`` → true if the current feature spatially contains a region with a population greater than 10000
        * ``overlay_contains('regions', name)`` → an array of names, for the regions contained in the current feature
+       * ``array_to_string(overlay_contains('regions', name))`` → a string as a comma separated list of names, for the regions contained in the current feature
+       * ``array_length(overlay_contains('regions', name))`` → the number of regions contained in the current feature
        * ``array_sort(overlay_contains(layer:='regions', expression:="name", filter:= population > 10000))`` → an ordered array of names, for the regions contained in the current feature and with a population greater than 10000
        * ``overlay_contains(layer:='regions', expression:= geom_to_wkt($geometry), limit:=2)`` → an array of geometries (in WKT), for up to two regions contained in the current feature
 
@@ -1993,6 +1995,7 @@ Read more on the underlying GEOS "Crosses" predicate, as described in PostGIS `S
      - * ``overlay_crosses('regions')`` → true if the current feature spatially crosses a region
        * ``overlay_crosses('regions', filter:= population > 10000)`` → true if the current feature spatially crosses a region with a population greater than 10000
        * ``overlay_crosses('regions', name)`` → an array of names, for the regions crossed by the current feature
+       * ``array_to_string(overlay_crosses('regions', name))`` → a string as a comma separated list of names, for the regions crossed by the current feature
        * ``array_sort(overlay_crosses(layer:='regions', expression:="name", filter:= population > 10000))`` → an ordered array of names, for the regions crossed by the current feature and with a population greater than 10000
        * ``overlay_crosses(layer:='regions', expression:= geom_to_wkt($geometry), limit:=2)`` → an array of geometries (in WKT), for up to two regions crossed by the current feature
 
@@ -2006,7 +2009,7 @@ Read more on the underlying GEOS "Crosses" predicate, as described in PostGIS `S
 overlay_disjoint
 ................
 
-Returns whether the current feature is spatially disjoint from at least one feature from a target layer, or an array of expression-based results for the features in the target layer that are disjoint from the current feature.
+Returns whether the current feature is spatially disjoint from all the features of a target layer, or an array of expression-based results for the features in the target layer that are disjoint from the current feature.
 
 
 
@@ -2026,9 +2029,10 @@ Read more on the underlying GEOS "Disjoint" predicate, as described in PostGIS `
        * **limit** - an optional integer to limit the number of matching features. If not set, all the matching features will be returned.
        * **cache** - set this to true to build a local spatial index (most of the time, this is unwanted, unless you are working with a particularly slow data provider)
    * - Examples
-     - * ``overlay_disjoint('regions')`` → true if the current feature is spatially disjoint from a region
-       * ``overlay_disjoint('regions', filter:= population > 10000)`` → true if the current feature is spatially disjoint from a region with a population greater than 10000
+     - * ``overlay_disjoint('regions')`` → true if the current feature is spatially disjoint from all the regions
+       * ``overlay_disjoint('regions', filter:= population > 10000)`` → true if the current feature is spatially disjoint from all the regions with a population greater than 10000
        * ``overlay_disjoint('regions', name)`` → an array of names, for the regions spatially disjoint from the current feature
+       * ``array_to_string(overlay_disjoint('regions', name))`` → a string as a comma separated list of names, for the regions spatially disjoint from the current feature
        * ``array_sort(overlay_disjoint(layer:='regions', expression:="name", filter:= population > 10000))`` → an ordered array of names, for the regions spatially disjoint from the current feature and with a population greater than 10000
        * ``overlay_disjoint(layer:='regions', expression:= geom_to_wkt($geometry), limit:=2)`` → an array of geometries (in WKT), for up to two regions spatially disjoint from the current feature
 
@@ -2065,6 +2069,7 @@ Read more on the underlying GEOS "Equals" predicate, as described in PostGIS `ST
      - * ``overlay_equals('regions')`` → true if the current feature is spatially equal to a region
        * ``overlay_equals('regions', filter:= population > 10000)`` → true if the current feature is spatially equal to a region with a population greater than 10000
        * ``overlay_equals('regions', name)`` → an array of names, for the regions spatially equal to the current feature
+       * ``array_to_string(overlay_equals('regions', name))`` → a string as a comma separated list of names, for the regions spatially equal to the current feature
        * ``array_sort(overlay_equals(layer:='regions', expression:="name", filter:= population > 10000))`` → an ordered array of names, for the regions spatially equal to the current feature and with a population greater than 10000
        * ``overlay_equals(layer:='regions', expression:= geom_to_wkt($geometry), limit:=2)`` → an array of geometries (in WKT), for up to two regions spatially equal to the current feature
 
@@ -2082,7 +2087,7 @@ Returns whether the current feature spatially intersects at least one feature fr
 
 
 
-Read more on the underlying GEOS "Intersects" predicate, as described in PostGIS `ST_INTERSECTS <https://postgis.net/docs/ST_Intersects.html>`_ function.
+Read more on the underlying GEOS "Intersects" predicate, as described in PostGIS `ST_Intersects <https://postgis.net/docs/ST_Intersects.html>`_ function.
 
 .. list-table::
    :widths: 15 85
@@ -2101,6 +2106,7 @@ Read more on the underlying GEOS "Intersects" predicate, as described in PostGIS
      - * ``overlay_intersects('regions')`` → true if the current feature spatially intersects a region
        * ``overlay_intersects('regions', filter:= population > 10000)`` → true if the current feature spatially intersects a region with a population greater than 10000
        * ``overlay_intersects('regions', name)`` → an array of names, for the regions intersected by the current feature
+       * ``array_to_string(overlay_intersects('regions', name))`` → a string as a comma separated list of names, for the regions intersected by the current feature
        * ``array_sort(overlay_intersects(layer:='regions', expression:="name", filter:= population > 10000))`` → an ordered array of names, for the regions intersected by the current feature and with a population greater than 10000
        * ``overlay_intersects(layer:='regions', expression:= geom_to_wkt($geometry), limit:=2)`` → an array of geometries (in WKT), for up to two regions intersected by the current feature
 
@@ -2137,8 +2143,9 @@ Note: This function can be slow and consume a lot of memory for large layers.
    * - Examples
      - * ``overlay_nearest('airports')`` → true if the "airports" layer has at least one feature
        * ``overlay_nearest('airports', max_distance:= 5000)`` → true if there is an airport within a distance of 5000 map units from the current feature
-       * ``overlay_nearest('airports', name)`` → the name of the closest airport to the current feature
-       * ``overlay_nearest(layer:='airports', expression:= name, max_distance:= 5000)`` → the name of the closest airport within a distance of 5000 map units from the current feature
+       * ``overlay_nearest('airports', name)`` → the name of the closest airport to the current feature, as an array
+       * ``array_to_string(overlay_nearest('airports', name))`` → the name of the closest airport to the current feature, as a string
+       * ``overlay_nearest(layer:='airports', expression:= name, max_distance:= 5000)`` → the name of the closest airport within a distance of 5000 map units from the current feature, as an array
        * ``overlay_nearest(layer:='airports', expression:="name", filter:= "Use"='Civilian', limit:=3)`` → an array of names, for up to the three closest civilian airports ordered by distance
        * ``overlay_nearest(layer:='airports', expression:="name", limit:= -1, max_distance:= 5000)`` → an array of names, for all the airports within a distance of 5000 map units from the current feature, ordered by distance
 
@@ -2156,7 +2163,7 @@ Returns whether the current feature spatially touches at least one feature from 
 
 
 
-Read more on the underlying GEOS "Touches" predicate, as described in PostGIS `ST_TOUCHES <https://postgis.net/docs/ST_Touches.html>`_ function.
+Read more on the underlying GEOS "Touches" predicate, as described in PostGIS `ST_Touches <https://postgis.net/docs/ST_Touches.html>`_ function.
 
 .. list-table::
    :widths: 15 85
@@ -2175,6 +2182,7 @@ Read more on the underlying GEOS "Touches" predicate, as described in PostGIS `S
      - * ``overlay_touches('regions')`` → true if the current feature spatially touches a region
        * ``overlay_touches('regions', filter:= population > 10000)`` → true if the current feature spatially touches a region with a population greater than 10000
        * ``overlay_touches('regions', name)`` → an array of names, for the regions touched by the current feature
+       * ``string_to_array(overlay_touches('regions', name))`` → a string as a comma separated list of names, for the regions touched by the current feature
        * ``array_sort(overlay_touches(layer:='regions', expression:="name", filter:= population > 10000))`` → an ordered array of names, for the regions touched by the current feature and with a population greater than 10000
        * ``overlay_touches(layer:='regions', expression:= geom_to_wkt($geometry), limit:=2)`` → an array of geometries (in WKT), for up to two regions touched by the current feature
 
@@ -2192,7 +2200,7 @@ Returns whether the current feature is spatially within at least one feature fro
 
 
 
-Read more on the underlying GEOS "Within" predicate, as described in PostGIS `ST_WITHIN <https://postgis.net/docs/ST_Within.html>`_ function.
+Read more on the underlying GEOS "Within" predicate, as described in PostGIS `ST_Within <https://postgis.net/docs/ST_Within.html>`_ function.
 
 .. list-table::
    :widths: 15 85
@@ -2211,6 +2219,7 @@ Read more on the underlying GEOS "Within" predicate, as described in PostGIS `ST
      - * ``overlay_within('regions')`` → true if the current feature is spatially within a region
        * ``overlay_within('regions', filter:= population > 10000)`` → true if the current feature is spatially within a region with a population greater than 10000
        * ``overlay_within('regions', name)`` → an array of names, for the regions containing the current feature
+       * ``array_to_string(overlay_within('regions', name))`` → a string as a comma separated list of names, for the regions containing the current feature
        * ``array_sort(overlay_within(layer:='regions', expression:="name", filter:= population > 10000))`` → an ordered array of names, for the regions containing the current feature and with a population greater than 10000
        * ``overlay_within(layer:='regions', expression:= geom_to_wkt($geometry), limit:=2)`` → an array of geometries (in WKT), for up to two regions containing the current feature
 
