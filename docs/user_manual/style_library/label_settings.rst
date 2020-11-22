@@ -325,11 +325,17 @@ tab and activate the |checkbox| :guilabel:`Draw drop shadow`. Then you can:
   will mix with the map components below them (more details at
   :ref:`blend-modes`).
 
+Configuring interaction with labels
+===================================
+
+Other than the text formatting settings exposed above, you can also set how labels
+interact with each others or with the features.
+
 
 .. _labels_callouts:
 
 Callouts tab
-============
+------------
 
 A common practice when placing labels on a crowded map is to use **callouts** -
 labels which are placed outside (or displaced from) their associated feature
@@ -384,7 +390,7 @@ tab and activate the |checkbox| :guilabel:`Draw callouts`. Then you can:
 .. _labels_placement:
 
 Placement tab
-=============
+-------------
 
 Choose the |labelplacement| :guilabel:`Placement` tab for configuring label placement
 and labeling priority. Note that the placement options differ according to the
@@ -394,7 +400,7 @@ the global :ref:`PAL setting <automated_placement>`.
 .. _labels_point_placement:
 
 Placement for point layers
---------------------------
+..........................
 
 Point labels placement modes available are:
 
@@ -443,7 +449,7 @@ Point labels placement modes available are:
 .. _labels_line_placement:
 
 Placement for line layers
--------------------------
+.........................
 
 Label modes for line layers include:
 
@@ -499,7 +505,7 @@ Next to placement modes, you can set:
 
 
 Placement for polygon layers
-----------------------------
+............................
 
 You can choose one of the following modes for placing labels of polygons
 (see figure_labels_placement_polygon_):
@@ -564,12 +570,12 @@ You can choose one of the following modes for placing labels of polygons
    Label placement examples in polygons
 
 Common placement settings
--------------------------
+.........................
 
 Some label placement settings are available for all layer geometry types:
 
 Data Defined
-............
+^^^^^^^^^^^^
 
 The :guilabel:`Data Defined` group provides direct control on labels
 placement, on a feature-by-feature basis. It relies on their attributes
@@ -599,7 +605,7 @@ or an expression to set:
 .. _`labels_priority`:
 
 Priority
-........
+^^^^^^^^
 
 In the :guilabel:`Priority` section you can define the placement priority rank
 of each label, ie if there are different diagrams or labels candidates for the
@@ -612,7 +618,7 @@ due to a greater weighted :ref:`obstacle feature <labels_obstacles>`.
 .. _`labels_obstacles`:
 
 Obstacles
-.........
+^^^^^^^^^
 
 In some contexts (eg, high density labels, overlapping features...), the
 labels placement can result in labels being placed over unrelated features.
@@ -655,13 +661,13 @@ or diagrams. This can be controlled from the :guilabel:`Obstacles` section:
 .. _labels_rendering:
 
 Rendering tab
-=============
+-------------
 
 In the |render| :guilabel:`Rendering` tab, you can tune when the labels can
 be rendered and their interaction with other labels and features.
 
 Label options
--------------
+.............
 
 Under :guilabel:`Label options`:
 
@@ -696,7 +702,7 @@ Under :guilabel:`Label options`:
   **when rotation defined** or **always**.
 
 Feature options
----------------
+...............
 
 Under :guilabel:`Feature options`:
 
