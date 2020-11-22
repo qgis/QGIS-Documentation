@@ -9,47 +9,70 @@
    .. contents::
       :local:
 
-Labels are textual information you can display on vector features. They add
-details you could not necessarily represent using symbols.
+Labels are textual information you can display on vector features or maps.
+They add details you could not necessarily represent using symbols.
+Two types of text-related items are available in QGIS:
 
-The :guilabel:`Style Manager` dialog allows you to create a set of labels or
-text formats (ie the appearance of the text, including font, size, colors,
-shadow, background...). Each of these items could later be applied to layers in
-the |labeling| :guilabel:`Labels` tab of the vector :guilabel:`Layer Properties`
-dialog or :guilabel:`Layer Styling` panel or using the |labeling| :sup:`Layer
-Labeling Options` button of the **Labels toolbar**. You can also directly
-configure them in the abovementioned dialogs.
+* :guilabel:`Text Format`: defines the appearance of the text, including
+  :ref:`font, size, colors <labels_text>`, :ref:`shadow <labels_shadow>`,
+  :ref:`background <labels_background>`, :ref:`buffer <labels_buffer>`, ...
 
-.. It could be nice to briefly expose the "label settings" tab of the style
- manager, with some sample of label settings in it.
+  They can be used to render texts over the map (layout/map title,
+  decorations, scale bar, ...), usually through the :ref:`font <font_selector>`
+  widget.
 
-The :guilabel:`Label Settings` dialog allows you to configure smart labeling
-for vector layers. Setting a label includes configuring the :ref:`text format
-<text_format>`, and how the label relates with the features or other labels
-(through :ref:`placement <labels_placement>`, :ref:`rendering <labels_rendering>`
-and :ref:`callout <labels_callouts>`).
+  To create a :guilabel:`Text Format` item:
+
+  #. Open the |styleManager| :guilabel:`Style Manager` dialog
+  #. Activate the :guilabel:`Text format` tab
+
+     .. _figure_textformats:
+
+     .. figure:: img/stylemanager_textformat.png
+        :align: center
+
+        Text formats in Style Manager dialog
+
+  #. Press the |signPlus| :sup:`Add item` button. The :guilabel:`Text Format`
+     dialog opens for :ref:`configuration <text_format>`.
+     As usual, these properties are :ref:`data-definable <data_defined>`.
+
+* :guilabel:`Label Settings`: extend the text format settings with properties
+  related to the location or the interaction with other texts or features
+  (:ref:`callouts <labels_callouts>`, :ref:`placement <labels_placement>`,
+  :ref:`overlay, scale visibility <labels_rendering>`, mask ...).
+
+  They are used to configure smart labelling for vector layers through the
+  |labeling| :guilabel:`Labels` tab of the vector :guilabel:`Layer Properties`
+  dialog or :guilabel:`Layer Styling` panel or using the |labeling| :sup:`Layer
+  Labeling Options` button of the :ref:`Label toolbar <label_toolbar>`.
+
+  To create a :guilabel:`Label Settings` item:
+
+  #. Open the |styleManager| :guilabel:`Style Manager` dialog
+  #. Activate the :guilabel:`Label Settings` tab
+
+     .. _figure_label_settings:
+
+     .. figure:: img/stylemanager_labelsettings.png
+        :align: center
+
+        Label Settings in Style Manager dialog
+
+  #. Press the |signPlus| :sup:`Add item` menu and select the entry corresponding
+     to the geometry type of the features you want to label.
+
+  The :guilabel:`Label Settings` dialog opens with the following properties.
+  As usual, these properties are :ref:`data-definable <data_defined>`.
+
 
 .. _text_format:
 
 Formatting the label text
 =========================
 
-To create text formats, you can:
-
-#. Open the |styleManager| :guilabel:`Style Manager` dialog
-#. Activate the :guilabel:`Text format` tab
-
-   .. _figure_textformats:
-
-   .. figure:: img/stylemanager_textformat.png
-      :align: center
-
-      Text formats in Style Manager dialog
-
-#. Press the |signPlus| :sup:`Add item` button. The :guilabel:`Text Settings`
-   dialog opens with the following properties. As usual, these properties
-   are :ref:`data-definable <data_defined>`.
-
+Most of the following properties are common to :guilabel:`Text Format`
+and :guilabel:`Label Settings` items.
 
 .. _labels_text:
 
@@ -72,17 +95,19 @@ In the |text| :guilabel:`Text` tab, you can set:
 * the :guilabel:`Color`
 * and the :guilabel:`Opacity`.
 
-At the bottom, a text formats list widget shows a filterable list of text
-formats stored within your :ref:`style manager database <vector_style_manager>`.
-This allows you to easily set text formats to match styles saved in the local
-style database, and also to add a new text format to the style database based on
-the current settings. Press the :guilabel:`Save format...` button to store the
-current text format in the :guilabel:`Style Manager`, providing a name and tag(s).
 
-Likewise, a label settings list widget is shown when configuring labels, allowing
-you to pick from the |styleManager| :sup:`Style Manager` widget or to add new
-styles to it.
 
+At the bottom of the tab, a widget shows a filterable list of compatible items
+stored in your :ref:`style manager database <vector_style_manager>`.
+This allows you to easily configure the current text format or label setting
+based on an existing one, and also save a new item to the style database:
+Press the :guilabel:`Save format...` or :guilabel:`Save settings...` button
+and provide a name and tag(s).
+
+.. note:: When configuring a :guilabel:`Label Settings` item, text format items
+ are also available in this widget. Select one to quickly overwrite the current
+ :ref:`textual properties <text_format>` of the label.
+ Likewise, you can create/overwrite a text format from there.
 
 .. _labels_formatting:
 
