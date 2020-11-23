@@ -79,12 +79,12 @@ and :guilabel:`Label Settings` items.
 Text tab
 --------
 
-.. _figure_textsettings_text:
+.. _figure_label_text:
 
-.. figure:: img/textsettings_text.png
+.. figure:: img/label_text.png
    :align: center
 
-   Text settings - Text tab
+   Labels settings - Text tab
 
 In the |text| :guilabel:`Text` tab, you can set:
 
@@ -114,12 +114,12 @@ and provide a name and tag(s).
 Formatting tab
 --------------
 
-.. _figure_textsettings_formatting:
+.. _figure_label_formatting:
 
-.. figure:: img/textsettings_formatting.png
+.. figure:: img/label_formatting.png
    :align: center
 
-   Text settings - Formatting tab
+   Label settings - Formatting tab
 
 In the |labelformatting| :guilabel:`Formatting` tab, you can:
 
@@ -184,12 +184,12 @@ In the |labelformatting| :guilabel:`Formatting` tab, you can:
 Buffer tab
 ----------
 
-.. _figure_textsettings_buffer:
+.. _figure_label_buffer:
 
-.. figure:: img/textsettings_buffer.png
+.. figure:: img/label_buffer.png
    :align: center
 
-   Text settings - Buffer tab
+   Label settings - Buffer tab
 
 To create a buffer around the label, activate the |checkbox| :guilabel:`Draw
 text buffer` checkbox in the |labelbuffer| :guilabel:`Buffer` tab. Then you can:
@@ -230,12 +230,12 @@ the :guilabel:`Shape` type. It can be:
 * or a :guilabel:`Marker Symbol` you can create or select from the
   :ref:`symbol library <vector_marker_symbols>`.
 
-.. _figure_textsettings_background:
+.. _figure_label_background:
 
-.. figure:: img/textsettings_background.png
+.. figure:: img/label_background.png
    :align: center
 
-   Text settings - Background tab
+   Label settings - Background tab
 
 Depending on the selected shape, you need to configure some of the following
 properties:
@@ -272,12 +272,12 @@ properties:
 Shadow tab
 ----------
 
-.. _figure_textsettings_shadow:
+.. _figure_label_shadow:
 
-.. figure:: img/textsettings_shadow.png
+.. figure:: img/label_shadow.png
    :align: center
 
-   Text settings - Shadow tab
+   Label settings - Shadow tab
 
 To add a shadow to the text, enable the |labelshadow| :guilabel:`Shadow`
 tab and activate the |checkbox| :guilabel:`Draw drop shadow`. Then you can:
