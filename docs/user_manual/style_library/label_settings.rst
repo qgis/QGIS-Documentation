@@ -368,42 +368,42 @@ Point labels placement modes available are:
 
 * :guilabel:`Cartographic`: point labels are generated with a
   better visual relationship with the point feature, following ideal
-  cartographic placement rules. Labels can be placed at a set
-  :guilabel:`Distance` in :ref:`supported units <unit_selector>`, either
-  from the point feature itself or from the bounds of the symbol used
-  to represent the feature (set in :guilabel:`Distance offset from`). 
-  The latter option is especially useful when the symbol size isn't fixed,
-  e.g. if it's set by a data defined size or when using different symbols
-  in a :ref:`categorized <categorized_renderer>` renderer.
+  cartographic placement rules. Labels can be placed:
 
-  By default, cartographic mode placements are prioritised in the following
-  order (respecting the `guidelines from Krygier and Wood (2011) 
-  <https://www.researchgate.net/publication/44463780_Making_maps_a_visual_guide_to_map_design_for_GIS_John_Krygier_Denis_Wood>`_
-  and other cartographic textbooks):
+  * at a set :guilabel:`Distance` in :ref:`supported units <unit_selector>`,
+    either from the point feature itself or from the bounds of the symbol
+    used to represent the feature (set in :guilabel:`Distance offset from`).
+    The latter option is especially useful when the symbol size isn't fixed,
+    e.g. if it's set by a data defined size or when using different symbols
+    in a :ref:`categorized <categorized_renderer>` renderer.
+  * following a :guilabel:`Position priority` that can be customized or set for
+    an individual feature using a data defined list of prioritised positions.
+    This also allows only certain placements to be used, so e.g.
+    for coastal features you can prevent labels being placed over the land.
 
-  #. top right
-  #. top left
-  #. bottom right
-  #. bottom left
-  #. middle right
-  #. middle left
-  #. top, slightly right
-  #. bottom, slightly left.
+    By default, cartographic mode placements are prioritised in the following
+    order (respecting the `guidelines from Krygier and Wood (2011)
+    <https://www.researchgate.net/publication/44463780_Making_maps_a_visual_guide_to_map_design_for_GIS_John_Krygier_Denis_Wood>`_
+    and other cartographic textbooks):
 
-  The :guilabel:`Position priority` can, however, be customized or set for an
-  individual feature using a data defined list of prioritised positions.
-  This also allows only certain placements to be used, so e.g.
-  for coastal features you can prevent labels being placed over the land.
+    #. top right
+    #. top left
+    #. bottom right
+    #. bottom left
+    #. middle right
+    #. middle left
+    #. top, slightly right
+    #. bottom, slightly left.
 
-* :guilabel:`Around point`: labels are placed in an
-  equal radius (set in :guilabel:`Distance`) circle around the feature. The
-  default placement priority follows a clockwise circle from top and can be
-  constrained using the data-defined :guilabel:`Quadrant` option.
+* :guilabel:`Around Point`: labels are placed in a circle around the feature.
+  equal radius (set in :guilabel:`Distance`) circle around the feature.
+  The placement priority is clockwise from the "top right". The position can
+  be constrained using the data-defined :guilabel:`Quadrant` option.
 
-* :guilabel:`Offset from point`: labels are placed at an :guilabel:`Offset X,Y`
-  distance from the point feature, in various units. You can select a
-  data-defined :guilabel:`Quadrant` in which to place your label and assign
-  a :guilabel:`Rotation` to them.
+* :guilabel:`Offset from Point`: labels are placed at an :guilabel:`Offset X,Y`
+  distance from the point feature, in various units, or preferably over the
+  feature. You can use a data-defined :guilabel:`Quadrant` to constrain the
+  placement and can assign a :guilabel:`Rotation` to the label.
 
 
 .. _labels_line_placement:
