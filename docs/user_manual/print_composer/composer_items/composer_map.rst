@@ -424,6 +424,8 @@ of the overview on the selected map frame. You can customize it with:
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
+.. |clip| image:: /static/common/clip.png
+   :width: 1.5em
 .. |dataDefined| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
 .. |labeling| image:: /static/common/labelingSingle.png
