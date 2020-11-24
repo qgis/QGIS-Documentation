@@ -83,6 +83,8 @@ functionalities:
      map item by using a shape or polygon feature from the print layout. When you
      enable this option the map will be automatically clipped to the selected shape
      in the combobox. Again, the above mentioned clipping modes are available.
+   When creating an atlas, the clipping settings are relevant.
+   See :ref:`atlas creation <atlas_generation>`.
 
 .. _`layout_main_properties`:
 
