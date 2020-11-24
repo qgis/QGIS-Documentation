@@ -70,7 +70,7 @@ functionalities:
     highlighting them in a :ref:`predefined color <automated_placement>`.
 *  |clip| :sup:`Clipping settings`: allows to clip the map item to the atlas
    feature and to shape and polygon items:
-   * in |checkbox|`:guilabel:`Clip to atlas feature` you can determine that
+   * in |checkbox| `:guilabel:`Clip to atlas feature` you can determine that
      the map layers will be clipped automatically to the current atlas feature.
      There are different clipping nodes available: :guilabel:`Clip During Render Only`,
      :guilabel:`Clip Feature Before Render` and
