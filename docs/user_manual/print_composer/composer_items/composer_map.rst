@@ -68,7 +68,21 @@ functionalities:
     are missing from the layout map (e.g. due to conflicts with other
     map labels or due to insufficient space to place the label) by
     highlighting them in a :ref:`predefined color <automated_placement>`.
-
+*  |clip| :sup:`Clipping settings`: allows to clip the map item to the atlas
+   feature and to shape and polygon items:
+   * in |checkbox|`:guilabel:`Clip to atlas feature` you can determine that
+     the map layers will be clipped automatically to the current atlas feature.
+     There are different clipping nodes available: :guilabel:`Clip During Render Only`,
+     :guilabel:`Clip Feature Before Render` and
+     :guilabel:`Render Intersecting Features Unchanged`. They define how features 
+     will be clipped. You can |checkbox| :guilabel:`Force labels inside atlas feature`.
+     If you don't want to |radiobuttonoff| :guilabel:`Clip all layers` to the
+     atlas feature you can use the |radiobuttonon| :guilabel:`Clip selected layers:`
+     option.
+   * in |checkbox| :guilabel:`Clip to item` it is possible to change the shape of the
+     map item by using a shape or polygon feature from the print layout. When you
+     enable this option the map will be automatically clipped to the selected shape
+     in the combobox. Again, the above mentioned clipping modes are available.
 
 .. _`layout_main_properties`:
 
