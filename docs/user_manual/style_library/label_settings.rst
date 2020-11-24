@@ -433,47 +433,60 @@ line features.
 Placement for polygon layers
 ----------------------------
 
-You can choose one of the following options for placing labels in polygons
+You can choose one of the following modes for placing labels of polygons
 (see figure_labels_placement_polygon_):
 
-* :guilabel:`Offset from centroid`: labels are placed at a fixed :guilabel:`Offset X,Y`
-  distance of the centroid. The reference centroid can be determined based on the
+* :guilabel:`Offset from Centroid`: labels are placed over the feature centroid
+  or at a fixed :guilabel:`Offset X,Y` distance (in :ref:`supported units
+  <unit_selector>`) from the centroid.
+  The reference centroid can be determined based on the
   part of the polygon rendered in the map canvas (:guilabel:`visible polygon`)
   or the :guilabel:`whole polygon`, no matter if you can see it. You can also:
 
-  * force the label anchor point to lay inside their polygon
+  * force the centroid point to lay inside their polygon
   * place the label within a specific quadrant
   * assign a rotation
-  * :guilabel:`Allow placing labels outside of polygons` when it is not possible
-    to place them inside the polygon. Thanks to data-defined properties, this makes
-    possible to either allow outside labels, prevent outside labels, or force outside
-    labels on a feature-by-feature basis.
+  * :guilabel:`Allow placing labels outside of polygons` when it is not
+    possible to place them inside the polygon. Thanks to data-defined properties,
+    this makes possible to either allow outside labels, prevent outside labels,
+    or force outside labels on a feature-by-feature basis.
 
-* :guilabel:`Horizontal`: places at the best position a horizontal 
-  label inside the polygon. Again, it's possible to :guilabel:`Allow placing
-  labels outside of polygons`
-* :guilabel:`Around centroid`: places the label at a specified distance
-  around the centroid. Again, you can define whether the centroid is the one
-  of the :guilabel:`visible polygon` or the :guilabel:`whole polygon`.
-* :guilabel:`Free (angled)`: places at the best position a rotated label
-  inside the polygon
-* :guilabel:`Using perimeter`: draws the label next to the polygon boundary
-  The label will behave like the :ref:`parallel option for lines <labels_line_placement>`.
-  You can define a position and a distance for the label. For the position,
-  :guilabel:`Above line`, :guilabel:`On line`, :guilabel:`Below line` and
-  :guilabel:`Line orientation dependent position` are possible. You can
-  specify the distance between the label and the polygon outline, as well as
-  the repeat interval for the label.
-* :guilabel:`Using perimeter (curved)`: draws the label along
-  the polygon boundary, using a curved labeling. In addition to the parameters
-  available with :guilabel:`Using perimeter` setting, you can set the
+* :guilabel:`Around Centroid`: places the label within a preset distance around
+  the centroid, with a preference for the placement directly over the centroid.
+  Again, you can define whether the centroid is the one of the
+  :guilabel:`visible polygon` or the :guilabel:`whole polygon`, and whether
+  to force the force the centroid point inside the polygon.
+
+* :guilabel:`Horizontal`: places at the best position a horizontal label inside
+  the polygon. The preferred placement is further from the edges of the polygon.
+  It's possible to :guilabel:`Allow placing labels outside of polygons`.
+
+* :guilabel:`Free (Angled)`: places at the best position a rotated label
+  inside the polygon. The rotation respects the polygon's orientation and
+  the preferred placement is further from the edges of the polygon.
+  It's possible to :guilabel:`Allow placing labels outside of polygons`.
+
+* :guilabel:`Using Perimeter`: draws the label parallel to a generalised line
+  representing the polygon boundary, with preference for straighter portions
+  of the perimeter. You can define:
+
+  * :guilabel:`Allowed positions`: :guilabel:`Above line`, :guilabel:`On line`,
+    :guilabel:`Below line` and :guilabel:`Line orientation dependent position`
+    (placing the label at the left or the right of the polygon's boundary).
+    It's possible to select several options at once. In that case, QGIS will
+    look for the optimal label position.
+  * :guilabel:`Distance` between the label and the polygon's outline
+  * the :guilabel:`Repeating Labels` :guilabel:`Distance` to display multiple
+    times the label over the length of the perimeter.
+
+* :guilabel:`Using Perimeter (Curved)`: draws the label following the curvature
+  of the polygon's boundary. In addition to the parameters available with the
+  :guilabel:`Using Perimeter` mode, you can set the
   :guilabel:`Maximum angle between curved characters polygon`, either inside
   or outside.
-* :guilabel:`Outside polygons`: always places polygon labels
-  for the layer outside the features, at a set :guilabel:`Distance`
 
-
-
+* :guilabel:`Outside Polygons`: always places labels outside the polygons,
+  at a set :guilabel:`Distance`
 
 .. _figure_labels_placement_polygon:
 
@@ -569,8 +582,6 @@ or diagrams. This can be controlled from the :guilabel:`Obstacles` section:
        In this case, it is impossible to avoid
        placing labels within these features, and it looks much better when
        placing them over the boundaries between features is avoided.
-
-
 
 
 .. _labels_rendering:
