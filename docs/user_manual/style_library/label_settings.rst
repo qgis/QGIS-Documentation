@@ -99,18 +99,25 @@ Formatting tab
 In the |labelformatting| :guilabel:`Formatting` tab, you can:
 
 * Use the :guilabel:`Type case` option to change the capitalization style of
-  the text. You have the possibility to render the text as :guilabel:`All
-  uppercase`, :guilabel:`All lowercase`, :guilabel:`Title case`
-  and :guilabel:`Force First Letter to Capital`.
-  Note that the last option modifies only the first letter of each word and
-  leaves the other letters in the text untouched.
-  Choosing :guilabel:`No Change` you don't change the capitalization.
+  the text. You have the possibility to render the text as:
+
+  * :guilabel:`No change`
+  * :guilabel:`All uppercase`
+  * :guilabel:`All lowercase`
+  * :guilabel:`Title case`: modifies the first letter of each word into capital,
+    and turns the other letters into lower case if the original text is using
+    a single type case. In case of mixed type cases in the text, the other
+    letters are left untouched.
+  * :guilabel:`Force first letter to capital`: modifies the first letter of each
+    word into capital and leaves the other letters in the text untouched.
+
 * Under :guilabel:`Spacing`, change the space between words and between
   individual letters.
 * |checkbox| :guilabel:`Enable kerning` of the text font
 * Set the :guilabel:`Text orientation` which can be :guilabel:`Horizontal`
   or :guilabel:`Vertical`. It can also be :guilabel:`Rotation-based` when
-  setting a label.
+  setting a label (e.g., to properly label line features in :ref:`parallel
+  <labels_line_placement>` placement mode).
 * Use the :guilabel:`Blend mode` option to determine how your labels will mix
   with the map features below them (more details at :ref:`blend-modes`).
 * The |unchecked| :guilabel:`Apply label text substitutes` option allows you
@@ -127,7 +134,7 @@ In the |labelformatting| :guilabel:`Formatting` tab, you can:
     or the :guilabel:`Minimum line length`.
   * Decide the :guilabel:`Line Height`
   * Format the :guilabel:`Alignment`: typical values available are
-    :guilabel:`Left`, :guilabel:`Right` and :guilabel:`Center`.
+    :guilabel:`Left`, :guilabel:`Right`, :guilabel:`Justify` and :guilabel:`Center`.
 
     When setting point labels properties, the text alignment can also be
     :guilabel:`Follow label placement`. In that case, the alignment will depend
