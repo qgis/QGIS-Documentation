@@ -283,7 +283,7 @@ digitization:
 #. Move the mouse over another vertex or segment you'd like to snap and,
    instead of the usual straight line, the digitizing rubber band
    represents a path from the last point you snapped to the current
-   position.
+   position. The tool also works with curved geometries.
 
    QGIS actually uses the underlying features topology to build the
    shortest path between the two points.
