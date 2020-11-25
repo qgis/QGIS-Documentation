@@ -337,8 +337,7 @@ Then enable and start the service:
 
 .. code-block:: bash
 
- systemctl enable qgis-server
- systemctl start qgis-server
+ systemctl enable --now qgis-server
 
 .. warning::
 
@@ -416,7 +415,7 @@ Now enable and start sockets:
 
 .. code-block:: bash
 
- for i in 1 2 3 4; do systemctl enable qgis-server@$i.socket && systemctl start qgis-server@$i.socket; done
+ for i in 1 2 3 4; do systemctl enable --now qgis-server@$i.socket; done
 
 The **QGIS Server Service unit** defines and starts the QGIS Server process.
 The important part is that the Service process’ standard input is connected to
@@ -456,7 +455,7 @@ Now start socket service:
 
 .. code-block:: bash
 
- for i in 1 2 3 4; do systemctl enable qgis-server@$i.service && systemctl start qgis-server@$i.service; done
+ for i in 1 2 3 4; do systemctl enable --now qgis-server@$i.service; done
 
 Finally, for the NGINX HTTP server, lets introduce the configuration for this setup:
 
@@ -519,8 +518,7 @@ Enable, start and check the status of the ``xvfb.service``:
 
 .. code-block:: bash
 
-   systemctl enable xvfb.service
-   systemctl start xvfb.service
+   systemctl enable --now xvfb.service
    systemctl status xvfb.service
 
 Then, according to your HTTP server, you should configure the **DISPLAY**
