@@ -73,10 +73,20 @@ functionalities:
 
    * |checkbox| :guilabel:`Clip to atlas feature`: you can determine that
      the layout map item will be clipped automatically to the current atlas feature.
-     There are different clipping nodes available: :guilabel:`Clip During Render Only`,
-     :guilabel:`Clip Feature Before Render` and
-     :guilabel:`Render Intersecting Features Unchanged`. They define how features 
-     will be clipped. You can |checkbox| :guilabel:`Force labels inside atlas feature`.
+
+     There are different clipping modes available:
+
+     * :guilabel:`Clip During Render Only`: applies a painter based clip,
+       so that portions of vector features which sit outside the atlas feature
+       become invisible
+     * :guilabel:`Clip Feature Before Render`: applies the clip before rendering
+       features, so borders of features which fall partially outside the atlas
+       feature will still be visible on the boundary of the atlas feature
+     * :guilabel:`Render Intersecting Features Unchanged`: renders all
+       features which intersect the current atlas feature, but without clipping their
+       their geometry.
+
+     You can |checkbox| :guilabel:`Force labels inside atlas feature`.
      If you don't want to |radiobuttonoff| :guilabel:`Clip all layers` to the
      atlas feature you can use the |radiobuttonon| :guilabel:`Clip selected layers:`
      option.
