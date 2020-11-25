@@ -68,35 +68,36 @@ functionalities:
     are missing from the layout map (e.g. due to conflicts with other
     map labels or due to insufficient space to place the label) by
     highlighting them in a :ref:`predefined color <automated_placement>`.
-*  |clip| :sup:`Clipping settings`: allows to clip the map item to the atlas
-   feature and to shape and polygon items:
+* |clip| :sup:`Clipping settings`: allows to clip the map item to the atlas
+  feature and to shape and polygon items:
 
-   * |checkbox| :guilabel:`Clip to atlas feature`: you can determine that
-     the layout map item will be clipped automatically to the current atlas feature.
+  * |checkbox| :guilabel:`Clip to atlas feature`: you can determine that
+    the layout map item will be clipped automatically to the current :ref:`atlas
+    feature <atlas_generation>`.
 
-     There are different clipping modes available:
+    There are different clipping modes available:
 
-     * :guilabel:`Clip During Render Only`: applies a painter based clip,
-       so that portions of vector features which sit outside the atlas feature
-       become invisible
-     * :guilabel:`Clip Feature Before Render`: applies the clip before rendering
-       features, so borders of features which fall partially outside the atlas
-       feature will still be visible on the boundary of the atlas feature
-     * :guilabel:`Render Intersecting Features Unchanged`: renders all
-       features which intersect the current atlas feature, but without clipping their
-       their geometry.
+    * :guilabel:`Clip During Render Only`: applies a painter based clip,
+      so that portions of vector features which sit outside the atlas feature
+      become invisible
+    * :guilabel:`Clip Feature Before Render`: applies the clip before rendering
+      features, so borders of features which fall partially outside the atlas
+      feature will still be visible on the boundary of the atlas feature
+    * :guilabel:`Render Intersecting Features Unchanged`: renders all
+      features which intersect the current atlas feature, but without clipping their
+      their geometry.
 
-     You can |checkbox| :guilabel:`Force labels inside atlas feature`.
-     If you don't want to |radiobuttonoff| :guilabel:`Clip all layers` to the
-     atlas feature you can use the |radiobuttonon| :guilabel:`Clip selected layers`
-     option.
-   * |checkbox| :guilabel:`Clip to item`: it is possible to change the shape of the
-     map item by using a :ref:`shape <layout_basic_shape_item>` or :ref:`polygon
-     <layout_node_based_shape_item>` item from the print layout. When you
-     enable this option the map will be automatically clipped to the selected shape
-     in the combobox. Again, the above mentioned clipping modes are available.
-   When creating an atlas, the clipping settings are relevant.
-   See :ref:`atlas creation <atlas_generation>`.
+    You can |checkbox| :guilabel:`Force labels inside atlas feature`.
+    If you don't want to |radiobuttonoff| :guilabel:`Clip all layers` to the
+    atlas feature you can use the |radiobuttonon| :guilabel:`Clip selected layers`
+    option.
+  * |checkbox| :guilabel:`Clip to item`: it is possible to change the shape of the
+    map item by using a :ref:`shape <layout_basic_shape_item>` or :ref:`polygon
+    <layout_node_based_shape_item>` item from the print layout. When you
+    enable this option the map will be automatically clipped to the selected shape
+    in the combobox. Again, the above mentioned clipping modes are available and
+    labels can be forced to display only inside the clipping shape.
+
 
 .. _`layout_main_properties`:
 
