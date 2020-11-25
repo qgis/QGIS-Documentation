@@ -72,7 +72,7 @@ functionalities:
    feature and to shape and polygon items:
 
    * |checkbox| :guilabel:`Clip to atlas feature`: you can determine that
-     the map layers will be clipped automatically to the current atlas feature.
+     the layout map item will be clipped automatically to the current atlas feature.
      There are different clipping nodes available: :guilabel:`Clip During Render Only`,
      :guilabel:`Clip Feature Before Render` and
      :guilabel:`Render Intersecting Features Unchanged`. They define how features 
