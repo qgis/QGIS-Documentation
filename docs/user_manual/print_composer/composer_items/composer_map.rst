@@ -91,7 +91,8 @@ functionalities:
      atlas feature you can use the |radiobuttonon| :guilabel:`Clip selected layers:`
      option.
    * in |checkbox| :guilabel:`Clip to item` it is possible to change the shape of the
-     map item by using a shape or polygon feature from the print layout. When you
+     map item by using a :ref:`shape <layout_basic_shape_item>` or :ref:`polygon
+     <layout_node_based_shape_item>` item from the print layout. When you
      enable this option the map will be automatically clipped to the selected shape
      in the combobox. Again, the above mentioned clipping modes are available.
    When creating an atlas, the clipping settings are relevant.
