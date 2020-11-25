@@ -90,7 +90,7 @@ functionalities:
      If you don't want to |radiobuttonoff| :guilabel:`Clip all layers` to the
      atlas feature you can use the |radiobuttonon| :guilabel:`Clip selected layers:`
      option.
-   * in |checkbox| :guilabel:`Clip to item` it is possible to change the shape of the
+   * |checkbox| :guilabel:`Clip to item`: it is possible to change the shape of the
      map item by using a :ref:`shape <layout_basic_shape_item>` or :ref:`polygon
      <layout_node_based_shape_item>` item from the print layout. When you
      enable this option the map will be automatically clipped to the selected shape
