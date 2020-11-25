@@ -323,6 +323,12 @@ direction and a negative value does the opposite.
    digitize parts of the feature with tracing enabled and other
    parts with tracing disabled.
    Tools behave as usual when tracing is disabled.
+   
+.. tip:: **Convert tracing to curved geometries**
+   
+   By using :menuselection:`Settings --> Options --> Digitizing --> Tracing` 
+   you can create curved geometries while digitizing.
+   See :ref:`digitizing options <digitizing_options>`.
 
 
 .. index:: Digitizing, Digitizing tools
