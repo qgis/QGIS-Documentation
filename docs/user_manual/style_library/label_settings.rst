@@ -310,10 +310,8 @@ the shape of the connector is recomputed.
 
    Labels with various callouts settings
 
-To add a callout to a label, choose |label| :guilabel:`Label Settings`
-and click the |signPlus| :guilabel:`Add item` button. Then enable the
-|labelcallout| :guilabel:`Callouts` tab and activate the
-|checkbox| :guilabel:`Draw callouts`. Then you can:
+To add a callout to a label, enable the |labelcallout| :guilabel:`Callouts`
+tab and activate the |checkbox| :guilabel:`Draw callouts`. Then you can:
 
 #. Select the :guilabel:`Style` of connector, one of:
 
@@ -354,17 +352,17 @@ and click the |signPlus| :guilabel:`Add item` button. Then enable the
 Placement tab
 =============
 
-Choose the |labelplacement| :guilabel:`Placement` tab from the label settings
-list widged for configuring label placement and labeling priority. Note that
-the placement options differ according to the type of vector layer, namely point,
-line or polygon, and are affected by the global :ref:`PAL setting <automated_placement>`.
+Choose the |labelplacement| :guilabel:`Placement` tab for configuring label placement
+and labeling priority. Note that the placement options differ according to the
+type of vector layer, namely point, line or polygon, and are affected by
+the global :ref:`PAL setting <automated_placement>`.
 
 .. _cartographic:
 
 Placement for point layers
 --------------------------
 
-With the :guilabel:`Cartographic` placement mode,
+With the |radioButtonOn| :guilabel:`Cartographic` placement mode,
 point labels are generated with a better visual relationship with the
 point feature, following ideal cartographic placement rules. Labels can be
 placed at a set :guilabel:`Distance` either from the point feature itself
@@ -389,12 +387,12 @@ feature using a data defined list of prioritised positions.
 This also allows only certain placements to be used, so e.g.
 for coastal features you can prevent labels being placed over the land.
 
-The :guilabel:`Around point` setting places the label in an
+The |radioButtonOn| :guilabel:`Around point` setting places the label in an
 equal radius (set in :guilabel:`Distance`) circle around the feature. The
 placement of the label can even be constrained using the :guilabel:`Quadrant`
 option.
 
-With the :guilabel:`Offset from point`, labels are
+With the |radioButtonOn| :guilabel:`Offset from point`, labels are
 placed at a fixed offset from the point feature. You can select the
 :guilabel:`Quadrant` in which to place your label. You are also able to set
 the :guilabel:`Offset X,Y` distances between the points and their labels and
@@ -434,7 +432,7 @@ line features.
 The :guilabel:`Label Anchoring` allows you to control the placement
 of labels along line features. Click on :guilabel:`Settings ...` and
 choose the position along the line which labels will be placed close to.
-You can select |LabelAnchorCenter| :guilabel:`Center of Line`, 
+You can select |labelAnchorCenter| :guilabel:`Center of Line`, 
 |labelAnchorStart| :guilabel:`Start of Line`, |labelAnchorEnd| :guilabel:`End of Line`
 or |labelAnchorCustom| :guilabel:`Custom ...`.
 There are two :guilabel:`Placement Behaviours`: if you choose 
@@ -655,13 +653,13 @@ Under :guilabel:`Feature options`:
    :width: 1.3em
 .. |dataDefined| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
-.. |labelAnchorCenter| image:: /static/commmon/mActionLabelAnchorCenter.png
+.. |labelAnchorCenter| image:: /static/common/mActionLabelAnchorCenter.png
    :width: 1.5em
-.. |labelAnchorCustom| image:: /static/commmon/mActionLabelAnchorCustom.png
+.. |labelAnchorCustom| image:: /static/common/mActionLabelAnchorCustom.png
    :width: 1.5em
-.. |labelAnchorEnd| image:: /static/commmon/mActionLabelAnchorEnd.png
+.. |labelAnchorEnd| image:: /static/common/mActionLabelAnchorEnd.png
    :width: 1.5em
-.. |labelAnchorStart| image::/static/common/mActionLabelAnchorStart.png
+.. |labelAnchorStart| image:: /static/common/mActionLabelAnchorStart.png
    :width: 1.5em
 .. |labelbackground| image:: /static/common/labelbackground.png
    :width: 1.5em

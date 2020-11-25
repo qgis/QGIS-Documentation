@@ -246,6 +246,8 @@ Icon                     Substitution                 Icon                     S
 |labelformatting|        ``|labelformatting|``        |labelplacement|         ``|labelplacement|``
 |labelshadow|            ``|labelshadow|``            |render|                 ``|render|``
 |labelcallout|           ``|labelcallout|``
+|labelAnchorCenter|      ``|labelAnchorCenter|``      |labelAnchorCustom|      ``|labelAnchorCustom|``
+|labelAnchorEnd|         ``|labelAnchorEnd|``         |labelAnchorStart|       ``|labelAnchorStart|``
 |pinLabels|              ``|pinLabels|``              |showHideLabels|         ``|showHideLabels|``
 |moveLabel|              ``|moveLabel|``              |rotateLabel|            ``|rotateLabel|``
 |showPinnedLabels|       ``|showPinnedLabels|``       |showUnplacedLabel|      ``|showUnplacedLabel|``
@@ -913,6 +915,14 @@ Icon                            Substitution                        Icon        
 .. |keyboardShortcuts| image:: /static/common/mActionKeyboardShortcuts.png
    :width: 1.5em
 .. |label| image:: /static/common/mActionLabel.png
+   :width: 1.5em
+.. |labelAnchorCenter| image:: /static/common/mActionLabelAnchorCenter.png
+   :width: 1.5em
+.. |labelAnchorCustom| image:: /static/common/mActionLabelAnchorCustom.png
+   :width: 1.5em
+.. |labelAnchorEnd| image:: /static/common/mActionLabelAnchorEnd.png
+   :width: 1.5em
+.. |labelAnchorStart| image:: /static/common/mActionLabelAnchorStart.png
    :width: 1.5em
 .. |labelbackground| image:: /static/common/labelbackground.png
    :width: 1.5em
