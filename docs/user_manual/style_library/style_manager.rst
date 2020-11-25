@@ -65,7 +65,9 @@ previewed items organized into tabs:
 * |labeling| :guilabel:`Label settings` to manage :ref:`label settings
   <showlabels>`, which include the text formats and some layer-type specific
   settings such as label placement, priority, callouts, rendering...
-
+* |3d| :guilabel:`3D Symbols` to configure symbols with :ref:`3D properties
+  <3dsymbols>` (extrusion, shading, altitude, ...) for the features to render
+  in a :ref:`3D Map view <label_3dmapview>`
 
 For each family of items, you can organize the elements into different categories,
 listed in the panel on the left:
@@ -307,6 +309,8 @@ choose the ramp type:
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |3d| image:: /static/common/3d.png
+   :width: 1.5em
 .. |color| image:: /static/common/color.png
 .. |fileOpen| image:: /static/common/mActionFileOpen.png
    :width: 1.5em
