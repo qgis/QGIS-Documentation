@@ -701,6 +701,12 @@ from GEOS 3.3.
 * :guilabel:`Quadrant segments`
 * :guilabel:`Miter limit`
 
+**Tracing**
+
+By activating the |checkbox| :guilabel:`Convert tracing to curve` you can
+create curve segments while digitizing. Keep in mind that your data provider
+must support this feature.
+
 
 .. _layout_options:
 
