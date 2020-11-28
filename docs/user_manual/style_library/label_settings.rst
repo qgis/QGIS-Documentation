@@ -99,16 +99,25 @@ Formatting tab
 In the |labelformatting| :guilabel:`Formatting` tab, you can:
 
 * Use the :guilabel:`Type case` option to change the capitalization style of
-  the text. You have the possibility to render the text as :guilabel:`All
-  uppercase`, :guilabel:`All lowercase` or :guilabel:`Capitalize first letter`.
-  Note that the last option modifies only the first letter of each word and
-  leaves the other letters in the text untouched.
+  the text. You have the possibility to render the text as:
+
+  * :guilabel:`No change`
+  * :guilabel:`All uppercase`
+  * :guilabel:`All lowercase`
+  * :guilabel:`Title case`: modifies the first letter of each word into capital,
+    and turns the other letters into lower case if the original text is using
+    a single type case. In case of mixed type cases in the text, the other
+    letters are left untouched.
+  * :guilabel:`Force first letter to capital`: modifies the first letter of each
+    word into capital and leaves the other letters in the text untouched.
+
 * Under :guilabel:`Spacing`, change the space between words and between
   individual letters.
 * |checkbox| :guilabel:`Enable kerning` of the text font
 * Set the :guilabel:`Text orientation` which can be :guilabel:`Horizontal`
   or :guilabel:`Vertical`. It can also be :guilabel:`Rotation-based` when
-  setting a label.
+  setting a label (e.g., to properly label line features in :ref:`parallel
+  <labels_line_placement>` placement mode).
 * Use the :guilabel:`Blend mode` option to determine how your labels will mix
   with the map features below them (more details at :ref:`blend-modes`).
 * The |unchecked| :guilabel:`Apply label text substitutes` option allows you
@@ -125,7 +134,7 @@ In the |labelformatting| :guilabel:`Formatting` tab, you can:
     or the :guilabel:`Minimum line length`.
   * Decide the :guilabel:`Line Height`
   * Format the :guilabel:`Alignment`: typical values available are
-    :guilabel:`Left`, :guilabel:`Right` and :guilabel:`Center`.
+    :guilabel:`Left`, :guilabel:`Right`, :guilabel:`Justify` and :guilabel:`Center`.
 
     When setting point labels properties, the text alignment can also be
     :guilabel:`Follow label placement`. In that case, the alignment will depend
@@ -341,7 +350,7 @@ tab and activate the |checkbox| :guilabel:`Draw callouts`. Then you can:
    line should join to the label text. Available options:
 
    * :guilabel:`Closest point`
-   * :guilabel:`Label centroid`
+   * :guilabel:`Centroid`
    * Fixed position at the edge (:guilabel:`Top left`, :guilabel:`Top center`,
      :guilabel:`Top right`, :guilabel:`Left middle`, :guilabel:`Right middle`,
      :guilabel:`Bottom left`, :guilabel:`Bottom center` and :guilabel:`Bottom right`).
@@ -539,8 +548,8 @@ labels placement can result in labels being placed over unrelated features.
 An obstacle is a feature over which QGIS avoids placing other features' labels
 or diagrams. This can be controlled from the :guilabel:`Obstacles` section:
 
-#. Activate the |checkbox| :guilabel:`Discourage labels and diagrams from covering features`
-   option to decide whether features of the layer should act as obstacles for
+#. Activate the |checkbox| :guilabel:`Features act as obstacles`
+   option to decide that features of the layer should act as obstacles for
    any label and diagram (including items from other features in the same layer).
 
    Instead of the whole layer, you can select a subset of features to use as
@@ -619,8 +628,8 @@ Feature options
 
 Under :guilabel:`Feature options`:
 
-* You can choose to :guilabel:`label every part of a multi-part feature`
-  and :guilabel:`limit the number of features to be labeled`.
+* You can choose to :guilabel:`Label every part of a multi-part features`
+  and :guilabel:`Limit number of features to be labeled to`.
 * Both line and polygon layers offer the option to set a minimum size for
   the features to be labeled, using :guilabel:`Suppress labeling of features
   smaller than`.
