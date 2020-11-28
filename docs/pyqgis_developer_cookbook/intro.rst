@@ -299,7 +299,7 @@ the following commands, ``<qgispath>`` should be replaced with your actual
 QGIS installation path:
 
 * on Linux: :command:`export PYTHONPATH=/<qgispath>/share/qgis/python`
-* on Windows: :command:`set PYTHONPATH=c:\\<qgispath>\\python`
+* on Windows: :command:`set PYTHONPATH=c:\\<qgispath>\\apps\\<qgisrelease>\\python;c:\\<qgispath>\\apps\\Python37\\lib\\site-packages`, where <qgisrelease> should be replaced with the type of release you are targeting (eg, qgis-ltr, qgis, qgis-dev)
 * on macOS: :command:`export PYTHONPATH=/<qgispath>/Contents/Resources/python`
 
 Now, the path to the PyQGIS modules is known, but they depend on
