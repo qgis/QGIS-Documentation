@@ -405,16 +405,24 @@ possible.
 Placement for line layers
 -------------------------
 
-Label modes for line layers include :guilabel:`Parallel`,
-:guilabel:`Curved` or :guilabel:`Horizontal`.
-For the :guilabel:`Parallel` and :guilabel:`Curved` modes,
-you can set the position to |checkbox| :guilabel:`Above line`,
-|checkbox| :guilabel:`On line` and |checkbox| :guilabel:`Below line`.
-It's possible to select several options at once. In that case, QGIS
-will look for the optimal label position. For Parallel and curved placement modes,
-you can also use the line orientation for the position of the label.
-Additionally, you can define a :guilabel:`Maximum angle between curved characters`
-when selecting the :guilabel:`Curved` mode (see Figure_labels_placement_line).
+Label modes for line layers include:
+
+* :guilabel:`Parallel`:draws the label parallel to a generalised line
+  representing the feature, with preference for placement over straighter
+  portions of the line. You can define:
+
+  * :guilabel:`Allowed positions`: :guilabel:`Above line`, :guilabel:`On line`,
+    :guilabel:`Below line` and :guilabel:`Line orientation dependent position`
+    (placing the label at the left or the right of the line). It's possible to
+    select several options at once. In that case, QGIS will look for the optimal
+    label position.
+  * :guilabel:`Distance` between the label and the line
+* :guilabel:`Curved`: draws the label following the curvature of the line
+  feature. In addition to the parameters available with the :guilabel:`Parallel`
+  mode, you can set the :guilabel:`Maximum angle between curved characters`,
+  either inside or outside.
+* :guilabel:`Horizontal`: draws labels horizontally along the length of the
+  line feature.
 
 .. _figure_labels_placement_line:
 
@@ -423,22 +431,31 @@ when selecting the :guilabel:`Curved` mode (see Figure_labels_placement_line).
 
    Label placement examples in lines
 
-For all three placement modes, in :guilabel:`Repeating Labels`, you can
-set up a minimum distance for repeating labels. The distance can be in
-``Millimeters``, ``Points``, ``Pixels``, ``Meters at scale``, ``Map Units`` 
-and ``Inches``. Also, in :guilabel:`Label Overrun` you can specify the
-maximal allowable distance a label may run past the end (or start) of
-line features.
-The :guilabel:`Label Anchoring` allows you to control the placement
-of labels along line features. Click on :guilabel:`Settings ...` and
-choose the position along the line which labels will be placed close to.
-You can select |labelAnchorCenter| :guilabel:`Center of Line`, 
-|labelAnchorStart| :guilabel:`Start of Line`, |labelAnchorEnd| :guilabel:`End of Line`
-or |labelAnchorCustom| :guilabel:`Custom ...`.
-There are two :guilabel:`Placement Behaviours`: if you choose 
-:guilabel:`Preferred Placement Hint` the label anchor is only treated as
-hint for the preferred label placement. By choosing :guilabel:`Strict`
-labels are placed exactly on the label anchor.
+Next to placement modes, you can set:
+
+* :guilabel:`Repeating Labels` :guilabel:`Distance` to display multiple
+  times the label over the length of the feature. The distance can be in
+  ``Millimeters``, ``Points``, ``Pixels``, ``Meters at scale``, ``Map Units``
+  and ``Inches``.
+* A :guilabel:`Label Overrun` :guilabel:`Distance` (not available for
+  horizontal mode): specifies the maximal allowable distance a label may run
+  past the end (or start) of line features. Increasing this value can allow
+  for labels to be shown for shorter line features.
+* :guilabel:`Label Anchoring`: controls the placement of the labels along the
+  line feature they refer to. Click on :guilabel:`Settings ...` to choose:
+
+  * the position along the line (as a ratio) which labels will be
+    placed close to. It can be data-defined and possible values are:
+
+    * |labelAnchorCenter| :guilabel:`Center of Line`
+    * |labelAnchorStart| :guilabel:`Start of Line`
+    * |labelAnchorEnd| :guilabel:`End of Line`
+    * or |labelAnchorCustom| :guilabel:`Custom...`.
+
+  * :guilabel:`Placement Behavior`: use :guilabel:`Preferred Placement Hint`
+    to treat the label anchor only as a hint for the label placement.
+    By choosing :guilabel:`Strict`, labels are placed exactly on the label
+    anchor.
 
 
 Placement for polygon layers
