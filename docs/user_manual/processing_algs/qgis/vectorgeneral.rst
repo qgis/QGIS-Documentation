@@ -1690,8 +1690,7 @@ single one.
 
 If attributes tables are different, the attribute table of the
 resulting layer will contain the attributes from all input layers.
-Non-matching fields will be appended at the end of the attribute
-table.
+New attributes will be added for the original layer name and source.
 
 If any input layers contain Z or M values, then the output layer will
 also contain these values.
