@@ -226,7 +226,7 @@ understand.
    try the :guilabel:`Curved` option instead.
 
 #. Select the :guilabel:`Curved` option in the :guilabel:`Placement` panel of
-   the :guilabel:`Layers` tab
+   the :guilabel:`Labels` tab
 
 Here's the result:
 
