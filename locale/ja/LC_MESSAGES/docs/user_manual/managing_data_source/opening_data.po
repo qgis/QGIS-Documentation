@@ -1740,7 +1740,7 @@ msgstr "特定の接続要件"
 msgid ""
 "Because of database type particularities, provided options are not the same."
 " Database specific options are described below."
-msgstr ""
+msgstr "データベースタイプの特殊性のため、提供されるオプションは同じではありません。データベース固有のオプションを以下で説明します。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:865
 msgid "PostgreSQL Service connection file"
@@ -1752,19 +1752,19 @@ msgid ""
 "associated with a single service name. That service name can then be "
 "specified by a client and the associated settings will be used."
 msgstr ""
-"サービスの接続ファイルで、PostgreSQLの接続パラメーターを単一のサービス名に関連づけできます。そのときサービス名はクライアントによって指定でき、関連する設定が使用されます。"
+"サービス接続ファイルは、PostgreSQLの接続パラメータを単一のサービス名と関連付けできます。そのサービス名をクライアントで指定すると、関連付けられた設定が使用されます。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:871
 msgid ""
 "It's called :file:`.pg_service.conf` under \\*nix systems (GNU/Linux, macOS "
 "etc.) and :file:`pg_service.conf` on Windows."
 msgstr ""
-"それは\\*nixシステム下（GNU / Linux、MacOSのなど） :file:`.pg_service.conf` 、Windowsでは "
+"これは、\\*nixシステム（GNU/Linux、MacOSなど）では :file:`.pg_service.conf` 、Windowsでは "
 ":file:`pg_service.conf` と呼ばれています。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:874
 msgid "The service file can look like this::"
-msgstr ""
+msgstr "サービスファイルは以下のようなものです::"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:888
 msgid ""
@@ -1775,6 +1775,10 @@ msgid ""
 "``psql`` you need to do something like ``export PGSERVICE=water_service`` "
 "before doing your psql commands."
 msgstr ""
+"上の例には、 ``water_service`` と ``wastewater_service`` の2つのサービスがあります。 "
+"接続したいサービスの名前（囲みブラケットは除く）を指定するだけで、QGISやpgAdmin等からサービスに接続することができます。 ``psql`` "
+"でこのサービスを使用したい場合には、psqlコマンドを使用する前に ``export PGSERVICE=water_service`` "
+"のような操作を行う必要があります。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:895
 msgid ""
@@ -1782,6 +1786,8 @@ msgid ""
 "<https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-"
 "PARAMKEYWORDS>`_"
 msgstr ""
+"`ここ <https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-"
+"PARAMKEYWORDS>`_ では、全てのPostgreSQLのパラメータを確認できます。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:898
 msgid ""
@@ -1789,6 +1795,8 @@ msgid ""
 "`.pg_pass <https://www.postgresql.org/docs/current/libpq-pgpass.html>`_ "
 "option."
 msgstr ""
+"サービスファイル内にパスワードを保存したくない場合には、 `.pg_pass "
+"<https://www.postgresql.org/docs/current/libpq-pgpass.html>`_ オプションを使用します。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:904
 msgid ""
@@ -1799,6 +1807,10 @@ msgid ""
 ":file:`/home/web/` directory in order to directly work (without specifying "
 "any other environment variables)."
 msgstr ""
+"\\*nixオペレーティングシステム（GNU/Linux、macOS等）では、 :file:`.pg_service.conf` "
+"ファイルはユーザーのホームディレクトリに保存することができ、PostgreSQLクライアントはこれを自動的に見つけます。例えば、ログインユーザーが "
+"``web`` ならば、（他の環境変数を何も指定しなくとも）そのままでうまくいくためには、 :file:`.pg_service.conf` は "
+":file:`/home/web/` ディレクトリに保存されている必要があります。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:911
 msgid ""
@@ -1807,9 +1819,9 @@ msgid ""
 "PGSERVICEFILE=/home/web/.pg_service.conf`` command under your \\*nix OS to "
 "temporarily set the ``PGSERVICEFILE`` variable)"
 msgstr ""
-"例えば、一時的に設定するために\\*nixのOSの下で ``輸出PGSERVICEFILE = /ホーム/ウェブ/ "
-".pg_service.conf``コマンドを実行します（ `` "
-"PGSERVICEFILE``環境変数を作成することにより、サービスファイルの場所を指定できます`` PGSERVICEFILE``変数）"
+"``PGSERVICEFILE`` 環境変数を作成することで、サービスファイルの場所を指定することができます（例えば、\\*nix OSでは "
+"``export PGSERVICEFILE=/home/web/.pg_service.conf`` コマンドを実行して、 "
+"``PGSERVICEFILE`` 変数を一時的に設定します）。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:917
 msgid ""
@@ -1819,18 +1831,21 @@ msgid ""
 "directory containing the service file. If service definitions with the same "
 "name exist in the user and the system file, the user file takes precedence."
 msgstr ""
+"また、 :file:`.pg_service.conf` ファイルを ``pg_config --sysconfdir`` が指す場所に配置するか、 "
+"``PGSYSCONFDIR`` "
+"環境変数を追加してサービスファイルが含まれるディレクトリを指定することで、サービスファイルをシステム全体（全てのユーザー）で利用できるようにすることもできます。ユーザーファイルとシステムファイルで同じ名前のサービス定義が存在する場合は、ユーザーファイルが優先されます。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:925
 msgid "There are some caveats under Windows:"
-msgstr "Windowsでいくつかの注意点があります。"
+msgstr "Windowsではいくつか注意点があります。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:927
 msgid ""
 "The service file should be saved as :file:`pg_service.conf` and not as "
 ":file:`.pg_service.conf`."
 msgstr ""
-"サービスファイルは :file:`.pg_service.conf` として、 :file:`pg_service.conf` "
-"でなく、保存する必要があります。"
+"サービスファイルは :file:`.pg_service.conf` ではなく、 :file:`pg_service.conf` "
+"という名前で保存する必要があります。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:929
 msgid ""
@@ -1838,9 +1853,9 @@ msgid ""
 " do it is to open it with `Notepad++ <https://notepad-plus-plus.org/>`_ and "
 ":menuselection:`Edit --> EOL Conversion --> UNIX Format --> File save`."
 msgstr ""
-"サービスファイルが機能するためには、Unixの形式で保存する必要があります。それを行うための1つの方法は、 `メモ帳++ <https"
-"://notepad-plus-plus.org/>`_ でそれを開き :menuselection:`編集 --> EOL変換 --> UNIX形式 "
-"--> ファイル保存` 。"
+"サービスファイルが機能するためには、Unixのフォーマットで保存する必要があります。それを行うための1つの方法は、 `Notepad++ <https"
+"://notepad-plus-plus.org/>`_ でサービスファイルを開き :menuselection:`編集 --> 改行コード変換 -->"
+" UNIX（LF） --> ファイル保存` とします。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:934
 msgid ""
@@ -1850,6 +1865,9 @@ msgid ""
 "``PGSERVICEFILE`` with the path - e.g. "
 ":file:`C:\\\\Users\\\\John\\\\pg_service.conf`"
 msgstr ""
+"環境変数はさまざまな方法で追加することができます。確実にうまくいくと知られているテスト済みの方法は、 :menuselection:`コントロールパネル"
+" --> システムとセキュリティ --> システム --> システムの詳細設定 --> 環境変数` と操作して、 ``PGSERVICEFILE`` "
+"変数にパス、例えば :file:`C:\\\\Users\\\\John\\\\pg_service.conf` を設定して追加します。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:939
 msgid ""
@@ -1868,27 +1886,26 @@ msgid ""
 "some of the options in :ref:`vector_create_stored_connection`, the "
 "connection dialog proposes:"
 msgstr ""
-"Oracleデータベース内のネイティブ型では地理的位置データを管理する上でのOracle "
-"Spatialの援助のユーザーの空間の特徴。のオプションのいくつかに加えて :ref:`vector_create_stored_connection`"
-" 、接続ダイアログが提案しています："
+"Oracle Spatialの空間機能は、ユーザーが地理的データや位置情報データをOracle データベース内のネイティブ型で管理するのに役立ちます。 "
+":ref:`vector_create_stored_connection` のいくつかのオプションに加えて、接続ダイアログでは下記の設定を行います。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:953
 msgid "**Database**: SID or SERVICE_NAME of the Oracle instance;"
-msgstr "**Database** :OracleインスタンスのSID または SERVICE_NAME."
+msgstr "**データベース** :OracleインスタンスのSID または SERVICE_NAME."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:954
 msgid ""
 "**Port**: Port number the Oracle database server listens on. The default "
 "port is ``1521``;"
-msgstr "**Port**: Oracle データベースサーバーが接続待ちをしているポート番号。デフォルトポートは ``1521`` です。"
+msgstr "**ポート**: Oracle データベースサーバーがリッスンしているポート番号。デフォルトのポートは ``1521`` です。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:956
 msgid "**Workspace**: Workspace to switch to."
-msgstr "**ワークスペース**：ワークスペースに切り替えます。"
+msgstr "**ワークスペース**：切り替え先のワークスペースを指定します。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:958
 msgid "Optionally, you can activate the following checkboxes:"
-msgstr ""
+msgstr "オプションで、以下のチェックボックスを有効にできます："
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:960
 msgid ""
@@ -1896,18 +1913,24 @@ msgid ""
 "tables to those that are in the ``all_sdo_geom_metadata`` view. This can "
 "speed up the initial display of spatial tables."
 msgstr ""
+"|checkbox| :guilabel:`メタデータテーブルのみを調べる` ：表示されるテーブルを ``all_sdo_geom_metadata``"
+" ビュー内にあるものに制限します。これは、空間テーブルの初期表示を高速化することができます。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:963
 msgid ""
 "|checkbox| :guilabel:`Only look for user's tables`: when searching for "
 "spatial tables, restricts the search to tables that are owned by the user."
 msgstr ""
+"|checkbox| :guilabel:`ユーザのテーブルのみを参照する` "
+"：空間テーブルを検索するときに、検索をユーザが所有するテーブルに制限します。r."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:965
 msgid ""
 "|checkbox| :guilabel:`Also list tables with no geometry`: indicates that "
 "tables without geometry should also be listed by default."
 msgstr ""
+"|checkbox| :guilabel:`ジオメトリを持たないテーブルもリストする` "
+"：ジオメトリを持たないテーブルもデフォルトでリストするように指定します。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:967
 msgid ""
@@ -1922,12 +1945,18 @@ msgid ""
 "even if a layer filter is applied. Table geometry is determined from the "
 "first 100 non-null geometry rows in the table."
 msgstr ""
+"|checkbox| :guilabel:`概算されたテーブルメタデータを利用する` "
+"：レイヤが読み込まれると、Oracleテーブルのさまざまなメタデータが必要になります。これには、テーブルの行数、ジオメトリタイプ、ジオメトリ列のデータの空間的広がりなどの情報が含まれます。テーブルに多数の行が含まれていると、このメタデータの決定に時間がかかることがあります。このオプションを有効にすると、以下のような高速なテーブルメタデータ操作が行われます。行数カウントは"
+" ``all_tables.num_rows`` から決定されます。テーブルの空間範囲は、レイヤフィルタが適用されている場合でも、常に "
+"SDO_TUNE.EXTENTS_OF 関数で決定されます。テーブルのジオメトリは、テーブル内の最初の100行の非ヌルなジオメトリから決定されます。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:977
 msgid ""
 "|checkbox| :guilabel:`Only existing geometry types`: only lists the existing"
 " geometry types and don't offer to add others."
 msgstr ""
+"|checkbox| :guilabel:`存在するジオメトリタイプのみ` "
+"：存在しているジオメトリタイプのみをリストし、他のジオメトリタイプは追加しません。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:979
 msgid "|checkbox| :guilabel:`Include additional geometry attributes`."
@@ -1935,19 +1964,19 @@ msgstr "|checkbox| :guilabel:`追加のジオメトリ属性を含める` 。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:983
 msgid "**Oracle Spatial Layers**"
-msgstr "**Oracle Spatialのレイヤー**"
+msgstr "**Oracle Spatialレイヤ**"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:985
 msgid ""
 "Normally, an Oracle Spatial layer is defined by an entry in the "
 "**USER_SDO_METADATA** table."
-msgstr "通常 ORACLE Spatial レイヤーは **USER_SDO_METADATA** テーブルのエントリで定義されています."
+msgstr "通常、ORACLE Spatialレイヤは **USER_SDO_METADATA** テーブルのエントリで定義されます。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:988
 msgid ""
 "To ensure that selection tools work correctly, it is recommended that your "
 "tables have a **primary key**."
-msgstr ""
+msgstr "選択ツールが正しく動作するようにするためには、テーブルに **主キー** があることをお勧めします。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:995
 msgid "Connecting to DB2 Spatial"
@@ -1961,22 +1990,26 @@ msgid ""
 "either a :guilabel:`Service/DSN` name defined to ODBC or :guilabel:`Driver`,"
 " :guilabel:`Host` and :guilabel:`Port`."
 msgstr ""
+":ref:`vector_create_stored_connection` "
+"で説明されているいくつかのオプションに加えて、DB2データベースへの接続（詳細は :ref:`label_db2_spatial` "
+"を参照）は、ODBCに定義された :guilabel:`サービス/DSN` 名または :guilabel:`ドライバー` 、 "
+":guilabel:`ホスト` 、 :guilabel:`ポート` で指定することができます。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1003
 msgid ""
 "An ODBC **Service/DSN** connection requires the service name defined to "
 "ODBC."
-msgstr "ODBC **サービス/DSN** 接続はODBCに定義されたサービス名が必要です。"
+msgstr "ODBC **サービス/DSN** 接続には、ODBCに定義されたサービス名が必要です。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1005
 msgid "A driver/host/port connection requires:"
-msgstr "ドライバ/ホスト/ポート接続が必要です。"
+msgstr "ドライバー/ホスト/ポートによる接続では、以下のものが必要です："
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1007
 msgid ""
 "**Driver**: Name of the DB2 driver. Typically this would be IBM DB2 ODBC "
 "DRIVER."
-msgstr "**ドライバ** ：DB2ドライバの名前。通常、これはIBM DB2 ODBCドライバになります。"
+msgstr "**ドライバー** ：DB2ドライバの名前。通常、これはIBM DB2 ODBCドライバです。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1009
 msgid ""
@@ -1984,8 +2017,8 @@ msgid ""
 " such as would be used to open a TCP/IP connection or ping the host. If the "
 "database is on the same computer as QGIS, simply enter *localhost* here."
 msgstr ""
-"**DB2ホスト** "
-"：データベースホストの名前。これは、TCP/IP接続を開くかまたはホストにpingを実行するために使用されるような解決可能なホスト名でなければなりません。データベースがQGISと同じコンピュータ上にある場合は、単にここに"
+":guilabel:`DB2ホスト` "
+"：データベースのホスト名です。これは、TCP/IP接続を開いたり、ホストをpingしたりするために使用されるような、解決可能なホスト名でなければなりません。データベースがQGISと同じコンピュータ上にある場合は、ここには単に"
 " *localhost* と入力します。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1014
@@ -1993,18 +2026,18 @@ msgid ""
 "**DB2 Port**: Port number the DB2 database server listens on. The default "
 "DB2 LUW port is ``50000``. The default DB2 z/OS port is ``446``."
 msgstr ""
-"**DB2ポート** ：DB2データベース・サーバーが待機するポート番号。デフォルトDB2 LUWポートは ``50000`` です。デフォルトのDB2"
-" z / OSのポートは、 ``446`` です。"
+"**DB2ポート** ：DB2データベース・サーバーがリッスンするポート番号です。デフォルトのDB2 LUWポートは ``50000`` "
+"です。デフォルトのDB2 z/OSのポートは ``446`` です。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1020
 msgid "**DB2 Spatial Layers**"
-msgstr "**DB2 Spatialのレイヤー**"
+msgstr "**DB2の空間レイヤ**"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1022
 msgid ""
 "A DB2 Spatial layer is defined by a row in the "
 "**DB2GSE.ST_GEOMETRY_COLUMNS** view."
-msgstr "DB2空間レイヤーは **DB2GSE.ST_GEOMETRY_COLUMNS** ビューの行によって定義されます。"
+msgstr "DB2空間レイヤは **DB2GSE.ST_GEOMETRY_COLUMNS** ビューの行によって定義されます。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1027
 msgid ""
@@ -2013,8 +2046,8 @@ msgid ""
 "KEY and if new features are going to be added, this column should also have "
 "the GENERATED characteristic."
 msgstr ""
-"QGISのDB2空間テーブルを効果的に使用するには、表にINTEGERまたはBIGINT列がPRIMARY "
-"KEYとして定義されていることが重要です。また、新しい機能を追加する場合は、この列もGENERATED特性を持つ必要があります。"
+"QGISでDB2空間テーブルを効果的に使用するためには、表にPRIMARY "
+"KEYとして定義されたINTEGERまたはBIGINT列があることが重要です。また、新しい地物を追加する場合は、この列もGENERATED特性を持っている必要があります。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1032
 msgid ""
@@ -2023,12 +2056,12 @@ msgid ""
 "spatial column can be registered by calling the "
 "``ST_Register_Spatial_Column`` stored procedure."
 msgstr ""
-"また、空間列を特定の空間参照識別子（WGS84座標の場合は「4326」）に登録すると便利です。空間列は、 "
-"``ST_Register_Spatial_Column`` ストアドプロシージャを呼び出すことで登録できます。"
+"また、空間列を特定の空間参照識別子（WGS84 座標の場合は  ``4326`` が最も多い）で登録しておくと便利です。空間列は、 "
+"``ST_Register_Spatial_Column`` ストアドプロシージャを呼び出すことで登録することができます。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1041
 msgid "Connecting to MSSQL Spatial"
-msgstr "MSSQL空間への接続"
+msgstr "MSSQL Spatialへの接続"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1043
 msgid ""
@@ -2038,12 +2071,12 @@ msgid ""
 "available databases."
 msgstr ""
 ":ref:`vector_create_stored_connection` "
-"のオプションのいくつかに加えて、新しいMSSQL接続ダイアログを作成すると、 **Provider/DSN** "
-"の名前を入力するよう提案されます。使用可能なデータベースを表示することもできます。"
+"のいくつかのオプションに加えて、新しいMSSQL接続ダイアログを作成すると、 **プロバイダー/DSN** "
+"の名前を入力するよう促されます。使用可能なデータベースを表示することもできます。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1051
 msgid "Loading a Database Layer"
-msgstr "データベースレイヤーをロードする"
+msgstr "データベースのレイヤを読み込む"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1053
 msgid ""
@@ -2053,21 +2086,26 @@ msgid ""
 ":ref:`vector_import_data_in_postgis` for a discussion on importing data into"
 " a PostGIS database."
 msgstr ""
+"データベースに1つ以上の接続が定義できたら（ :ref:`vector_create_stored_connection` "
+"を参照）、そこからレイヤを読み込むことができます。もちろん、このためにはデータが利用可能なものである必要があります。PostGISデータベースへのデータのインポートについての議論は、"
+" :ref:`vector_import_data_in_postgis` のセクションを参照してください。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1059
 msgid "To load a layer from a database, you can perform the following steps:"
-msgstr "データベースからレイヤーをロードするには、以下のステップを実行できます："
+msgstr "データベースからレイヤを読み込むには、以下の手順に従います："
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1061
 msgid ""
 "Open the \"Add <database> table(s)\" dialog (see "
 ":ref:`vector_create_stored_connection`)."
 msgstr ""
+"\" <database> テーブルの追加\" ダイアログを開きます（ :ref:`vector_create_stored_connection` "
+"参照）。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1063
 msgid ""
 "Choose the connection from the drop-down list and click :guilabel:`Connect`."
-msgstr ""
+msgstr "接続をドロップダウンリストから選択し、 :guilabel:`接続` ボタンをクリックします。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1064
 msgid ""
@@ -2081,16 +2119,21 @@ msgid ""
 "before you hit the :guilabel:`Connect` button, speeding up the database "
 "fetching."
 msgstr ""
+"オプションとして、いくつかの |checkbox| :guilabel:`検索オプション` "
+"を使用して、検索にマッチしたもののみにテーブルのリストを削減できます。このオプションを :guilabel:`接続` "
+"ボタンを押す前に設定することもでき、データベースからのテーブル取得を高速化することができます。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1069
 msgid "Find the layer(s) you wish to add in the list of available layers."
-msgstr "有効なレイヤーリスト中で使用したいレイヤーを探してください."
+msgstr "利用可能なレイヤのリスト内で、追加したいレイヤを探してください。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1070
 msgid ""
 "Select it by clicking on it. You can select multiple layers by holding down "
 "the :kbd:`Shift` or :kbd:`Ctrl` key while clicking."
 msgstr ""
+"追加したいレイヤをクリックして選択します。 :kbd:`Shift` キーまたは :kbd:`Ctrl` "
+"キーを押しながらクリックすることで、複数のレイヤを選択できます。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1072
 msgid ""
@@ -2101,6 +2144,10 @@ msgid ""
 "restriction can be removed or edited in the :menuselection:`Layer Properties"
 " --> General --> Provider Feature Filter` frame."
 msgstr ""
+"利用可能ならば、 :guilabel:`フィルタの設定` ボタン（もしくはレイヤをダブルクリック）を使用して :guilabel:`クエリビルダ` "
+"ダイアログ（ :ref:`vector_query_builder` "
+"のセクション参照）を開始し、選択したレイヤからどの地物を読み込むかを定義します。フィルタ式はリストの ``sql`` 列に表示されます。この制約条件は、"
+" :menuselection:`レイヤプロパティ --> ソース --> プロバイダ地物フィルタ` フレームで削除または編集ができます。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1078
 msgid ""
@@ -2108,10 +2155,12 @@ msgid ""
 "gets the feature ids without the attributes and generally speeds up the data"
 " loading."
 msgstr ""
+"``idで選択`` "
+"カラムのチェックボックスはデフォルトで有効になっていますが、これは属性なしの地物idを取得し、たいていの場合でデータの読み込みを高速化します。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1081
 msgid "Click on the :guilabel:`Add` button to add the layer to the map."
-msgstr ""
+msgstr ":guilabel:`追加` ボタンをクリックし、マップにレイヤを追加します。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1089
 msgid "Add PostGIS Table(s) Dialog"
@@ -2119,7 +2168,7 @@ msgstr "PostGISテーブルを追加ダイアログ"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1092
 msgid "**Use the Browser Panel to speed up loading of database table(s)**"
-msgstr ""
+msgstr "**ブラウザパネルを使用してデータベースのテーブル読み込みを高速化する**"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1094
 msgid ""
@@ -2131,31 +2180,39 @@ msgid ""
 " Manager <dbmanager>` to drag and drop the database tables into the map "
 "canvas."
 msgstr ""
+":guilabel:`データソースマネージャ` "
+"からデータベーステーブルを追加しようとすると、QGISが各テーブルについて統計量やプロパティ（例えば、ジオメトリタイプやフィールド、CRS、地物の数など）をあらかじめ取得するため、時間がかかることがあります。これを避けるには、"
+" :ref:`接続の設定 <vector_create_stored_connection>` ができたら、 :ref:`ブラウザパネル "
+"<browser_panel>` または :ref:`DBマネージャ <dbmanager>` "
+"を使用して、データベーステーブルをマップキャンバスへドラッグ＆ドロップする方法が良いでしょう。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1106
 msgid "QGIS Custom formats"
-msgstr "QGISカスタムフォーマット"
+msgstr "QGISカスタム形式"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1108
 msgid "QGIS proposes two custom formats:"
-msgstr ""
+msgstr "QGISには2つのカスタム形式があります："
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1110
 msgid ""
 "Temporary Scratch Layer: a memory layer that is bound to the project (see "
 ":ref:`vector_new_scratch_layer` for more information)"
 msgstr ""
+"一時スクラッチレイヤ：プロジェクトに結び付いたメモリレイヤです（詳細は :ref:`vector_new_scratch_layer` "
+"を参照してください）"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1112
 msgid ""
 "Virtual Layers: a layer resulting from a query on other layer(s) (see "
 ":ref:`vector_virtual_layers` for more information)"
 msgstr ""
-"仮想レイヤー：他のレイヤーに対するクエリの結果として得られるレイヤー（詳細は :ref:`vector_virtual_layers` を参照）"
+"仮想レイヤ：他のレイヤに対するクエリの結果として得られるレイヤです（詳細は :ref:`vector_virtual_layers` "
+"を参照してください）"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1119
 msgid "QLR - QGIS Layer Definition File"
-msgstr ""
+msgstr "QLR - QGISレイヤ定義ファイル"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1121
 msgid ""
@@ -2163,6 +2220,9 @@ msgid ""
 "<qgislayerdefinitionfile>` (QLR - :file:`.qlr`) using :menuselection:`Export"
 " --> Save As Layer Definition File...` in the layer context menu."
 msgstr ""
+"レイヤのコンテキストメニューで :menuselection:`エクスポート --> レイヤ定義ファイルとして保存...` を使用して、レイヤの定義を "
+":ref:`レイヤ定義ファイル <qgislayerdefinitionfile>` （QLR - :file:`.qlr` "
+"）として保存することができます。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1127
 msgid ""
@@ -2170,6 +2230,8 @@ msgid ""
 "other QGIS users. QLR files contain links to the data sources and all the "
 "QGIS style information necessary to style the layer."
 msgstr ""
+"QLR形式によって、 \"完全な\" QGISレイヤを他のQGISユーザーと共有することができます。 "
+"QLRファイルには、データソースへのリンクとレイヤのスタイル設定に必要な全てのQGISスタイル情報が含まれています。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1132
 msgid ""
@@ -2177,6 +2239,7 @@ msgid ""
 " their saved styles) to the Layers Panel. You can also drag and drop QLR "
 "files from the system file manager into the map canvas."
 msgstr ""
+"QLRファイルはブラウザパネル内に表示され、レイヤ（を保存されたスタイルで）をレイヤパネルに追加するために使用できます。QLRファイルをシステムのファイルマネージャーからマップキャンバスへとドラッグ＆ドロップすることもできます。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1138
 msgid "Connecting to web services"
@@ -2189,10 +2252,13 @@ msgid ""
 "services. Chapter :ref:`sec_ogc` contains descriptions of these "
 "capabilities."
 msgstr ""
+"QGISを使用すると、さまざまな種類のOGC "
+"ウェブサービス（WM(T)S、WFS(-T)、WCS、CSW、...）にアクセスすることができます。QGIS "
+"Serverのおかげで、このようなサービスを公開することもできます。 :ref:`sec_ogc` の章にはこれらの機能についての説明があります。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1149
 msgid "Using XYZ Tile services"
-msgstr ""
+msgstr "XYZタイルサービスを使用する"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1151
 msgid ""
@@ -2203,10 +2269,15 @@ msgid ""
 "click to open). figure_xyz_tiles_openstreetmap_ shows the dialog with the "
 "OpenStreetMap XYZ Tile service configuration."
 msgstr ""
+"XYZタイルサービスは :guilabel:`ブラウザ` の :guilabel:`XYZ Tiles` "
+"トップレベルエントリにあります。デフォルトでは、OpenStreetMap XYZタイルサービスが設定されています。XYZ "
+"Tilesのコンテキストメニュー（右クリックして開く）の :guilabel:`新しい接続` "
+"を選択すると、XYZタイルプロトコルを使用する他のサービスを追加することができます。 figure_xyz_tiles_openstreetmap_ "
+"にOpenStreetMap XYZタイルサービスの設定ダイアログを示します。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1165
 msgid "XYZ Tiles - OpenStreetMap configuration"
-msgstr ""
+msgstr "XYZ Tiles - OpenStreetMap の設定"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1167
 msgid ""
@@ -2214,30 +2285,35 @@ msgid ""
 " (:guilabel:`Load Connections`) through the context menu. Authentication "
 "configuration is supported. The XML file for OpenStreetMap looks like this:"
 msgstr ""
+"コンテキストメニューから、設定をXMLで保存（ :guilabel:`接続を保存` ）したり、XMLから読み込んだり（ "
+":guilabel:`接続をロード` "
+"）することができます。認証設定をサポートしています。OpenStreetMapのXMLファイルは以下のようになっています："
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1181
 msgid ""
 "Once a connection to a XYZ tile service is set, right-click over the entry "
 "to:"
-msgstr ""
+msgstr "XYZタイルサービスへの接続が設定できたら、エントリの上で右クリックすると以下の操作ができます："
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1183
 msgid ":guilabel:`Edit...` the XYZ connection settings"
-msgstr ""
+msgstr ":guilabel:`編集...` XYZタイルサービスの接続設定を編集します"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1184
 msgid ":guilabel:`Delete` the connection"
-msgstr ""
+msgstr ":guilabel:`削除` 接続を削除します。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1185
 msgid ""
 ":menuselection:`Export layer... --> To File`, :ref:`saving it as a raster "
 "<general_saveas>`"
 msgstr ""
+":menuselection:`レイヤエクスポート... --> ファイルへ` は、 :ref:`タイルをラスタとして保存します "
+"<general_saveas>`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1187
 msgid ":guilabel:`Add layer to project`: a double-click also adds the layer"
-msgstr ""
+msgstr ":guilabel:`レイヤをプロジェクトに追加する` ：ダブルクリックでもレイヤを追加できます"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1188
 msgid ""
@@ -2245,10 +2321,12 @@ msgid ""
 "preview of the data provided by the service. More settings are available "
 "when the layer has been loaded into the project."
 msgstr ""
+":guilabel:`レイヤのプロパティ...` "
+"を確認し、サービスによって提供されるメタデータやデータのプレビューにアクセスできます。レイヤがプロジェクトに読み込まれている場合には、より多くの設定が可能です。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1193
 msgid "Examples of XYZ Tile services:"
-msgstr ""
+msgstr "XYZタイルサービスの例："
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1195
 msgid ""
@@ -2256,6 +2334,8 @@ msgid ""
 "mapnik/{z}/{x}/{y}.png``, :guilabel:`Min. Zoom Level`: 0, :guilabel:`Max. "
 "Zoom Level`: 19."
 msgstr ""
+"OpenStreetMap Monochrome: :guilabel:`URL`: ``http://tiles.wmflabs.org/bw-"
+"mapnik/{z}/{x}/{y}.png``, :guilabel:`最小ズームレベル`: 0, :guilabel:`最大ズームレベル`: 19"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1198
 msgid ""
@@ -2263,6 +2343,9 @@ msgid ""
 "``https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}``, :guilabel:`Min. Zoom"
 " Level`: 0, :guilabel:`Max. Zoom Level`: 19."
 msgstr ""
+"Googleマップ: :guilabel:`URL`: "
+"``https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}``, "
+":guilabel:`最小ズームレベル`: 0, :guilabel:`最大ズームレベル`: 19"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1201
 msgid ""
@@ -2270,10 +2353,13 @@ msgid ""
 "``http://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?appid={api_key}``"
 " :guilabel:`Min. Zoom Level`: 0, :guilabel:`Max. Zoom Level`: 19."
 msgstr ""
+"Open Weather Map Temperature: :guilabel:`URL`: "
+"``http://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?appid={api_key}``"
+" :guilabel:`最小ズームレベル`: 0, :guilabel:`最大ズームレベル`: 19"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1208
 msgid "Handling broken file paths"
-msgstr ""
+msgstr "壊れたファイルパスの取り扱い"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1210
 msgid ""
@@ -2289,9 +2375,17 @@ msgid ""
 ":guilabel:`Remove Unavailable Layers`. As the last step, click "
 ":guilabel:`Apply changes`."
 msgstr ""
+"データソースへのパスが間違っている場合、QGISは :guilabel:`利用できないレイヤを処理する` ダイアログを開きます。 "
+":guilabel:`データソース` フィールドをダブルクリックするか :guilabel:`ブラウズ` "
+"ボタンをクリックすると、パスを修正することができます。 :guilabel:`利用できないレイヤを保持する` "
+"ボタンをクリックすると、パスが壊れた状態のままでプロジェクトの作業を続けられます。この場合レイヤは :guilabel:`レイヤ` "
+"パネルに表示されますが、 :guilabel:`レイヤ` パネルの横にある |indicatorBadLayer| :sup:`利用できないレイヤ!` "
+"アイコンまたはレイヤのコンテキストメニューの :guilabel:`データソースの変更...` "
+"を使用してパスを修正するまでは、データは何も表示されません。もう一つの方法としては、 |deleteSelected| "
+":guilabel:`利用できないレイヤを削除する` こともできます。この場合は最後に :guilabel:`変更の適用` をクリックしてください。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1223
 msgid ""
 "When a layer path has been fixed, QGIS scans through all other broken paths "
 "and tries to auto-fix those that have the same broken file path."
-msgstr ""
+msgstr "あるレイヤのパスが修正されると、QGISは他の壊れたパス全てをスキャンし、同じ壊れたファイルパスの自動修正を試みます。"

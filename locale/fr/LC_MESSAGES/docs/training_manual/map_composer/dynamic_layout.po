@@ -6,6 +6,7 @@
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
 # Sant-anna <delazj@gmail.com>, 2020
+# Francis Gasc <francisgasc@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-05 01:57+0200\n"
 "PO-Revision-Date: 2020-03-16 19:19+0000\n"
-"Last-Translator: Sant-anna <delazj@gmail.com>, 2020\n"
+"Last-Translator: Francis Gasc <francisgasc@gmail.com>, 2020\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,6 +34,11 @@ msgid ""
 " page properties, e.g. when you change the size of the page. Also, the date "
 "of creation will adapt dynamically."
 msgstr ""
+"Maintenant que vous avez appris à créer une mise en page de base, nous "
+"allons un peu plus loin et créons une mise en page qui s'adapte "
+"dynamiquement à l'étendue de notre carte et aux propriétés de la page, par "
+"exemple lorsque vous changez la taille de la page. De même, la date de "
+"création s'adaptera de manière dynamique."
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:11
 msgid "|moderate| |FA| Creating the dynamic map canvas"
@@ -56,6 +62,10 @@ msgid ""
 ":menuselection:`File --> New Print Layout`. You will be prompted to choose a"
 " title for the new print layout."
 msgstr ""
+"Une fois que tout est rendu et symbolisé à votre goût, cliquez sur l'icône "
+"|newLayout| :sup:`Nouvelle mise en page` dans la barre d'outils ou "
+"choisissez :menuselection:`fichier --> nouvelle mise en page`. Vous serez "
+"invité à choisir un titre pour la nouvelle mise en page."
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:21
 msgid ""
@@ -63,6 +73,10 @@ msgid ""
 "region near Swellendam, South Africa. The layout should have a margin of 7.5"
 " mm and the header should be 36mm high."
 msgstr ""
+"Nous voulons créer une mise en page cartographique composée d'un en-tête et "
+"d'une carte de la région près de Swellendam, en Afrique du Sud. La mise en "
+"page doit avoir une marge de 7,5 mm et l'en-tête doit avoir une hauteur de "
+"36 mm."
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:25
 msgid ""
@@ -76,6 +90,16 @@ msgid ""
 "again and type in the name ``sw_layout_height_header``. Set the value to "
 "``36``."
 msgstr ""
+"Créez un élément de carte appelé ``carte principale`` sur le canevas et "
+"allez dans le panneau :guilabel:`mise en page`. Descendez jusqu'à la section"
+" :guilabel:`Variables` et trouvez la partie :guilabel:`mise en page`. Ici, "
+"nous définissons quelques variables que vous pouvez utiliser dans toute la "
+"mise en page dynamique. Allez dans le panneau :guilabel:`mise en page` et "
+"descendez jusqu'à la section :guilabel:`Variables`. La première variable "
+"définira la marge. Appuyez sur le bouton |signPlus| et tapez le nom "
+"``sw_layout_margin``. Définissez la valeur à ``7.5``. Appuyez à nouveau sur "
+"le bouton |signPlus| et tapez le nom ``w_layout_height_header``. Mettez la "
+"valeur à ``36``."
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:40
 msgid ""
@@ -86,12 +110,23 @@ msgid ""
 "|dataDefineExpressionOn| :sup:`Data defined override` for :guilabel:`X` and "
 "from the :guilabel:`Variables` entry, choose ``@sw_layout_margin``."
 msgstr ""
+"Vous êtes maintenant prêt à créer automatiquement la position et la taille "
+"du canevas de la carte au moyen des variables. Assurez-vous que votre "
+"élément de carte est sélectionné, allez dans le panneau "
+":guilabel:`proprietes element`, faites défiler vers le bas et ouvrez la "
+"section :guilabel:`Position et taille`. Cliquez sur l'expression "
+"|dataDefineExpressionOn| :sup:`passer outre les donnees` pour :guilabel:`X` "
+"et à partir de l'entrée :guilabel:`Variables`, choisissez "
+"``@sw_layout_margin``."
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:48
 msgid ""
 "Click the |dataDefineExpressionOn| :sup:`Data defined override` for "
 ":guilabel:`Y`, choose :guilabel:`Edit...` and type in the formula::"
 msgstr ""
+"Cliquez sur l'expression |dataDefineExpressionOn| :sup:`passer outre les "
+"données définies` pour :guilabel:`Y`, choisissez :guilabel:`editer...` et "
+"tapez la formule: :"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:54
 msgid ""
@@ -100,6 +135,11 @@ msgid ""
 " :sup:`Data defined override` for :guilabel:`Width` and choose "
 ":guilabel:`Edit ...` again. Fill in the formula::"
 msgstr ""
+"Vous pouvez créer la taille de l'élément de carte en utilisant les variables"
+" :guilabel:`largeur` et :guilabel:`hauteur`. Cliquez sur l'expression "
+"|dataDefineExpressionOn| :sup:`passer outre les donnees definies` pour "
+":guilabel:`largeur` et choisissez :guilabel:`Edit ...` à nouveau. Remplissez"
+" la formule: :"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:62
 msgid ""
@@ -107,6 +147,9 @@ msgid ""
 ":guilabel:`Height` and choose :guilabel:`Edit ...`. Here fill in the "
 "formula::"
 msgstr ""
+"Cliquez sur l'expression |dataDefineExpressionOn| :sup:`passer outre les "
+"donnees definies` pour :guilabel:`hauteur` et choisissez :guilabel:`Edit "
+"...`. Remplissez ici la formule: :"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:68
 msgid ""
@@ -118,6 +161,15 @@ msgid ""
 "scale you chose in the QGIS main canvas. The :guilabel:`Grid type` "
 ":guilabel:`Cross` is very well suited for our purposes."
 msgstr ""
+"Nous allons également créer une grille contenant les coordonnées de "
+"l'étendue du canevas de la carte principale. Allez à nouveau sur "
+":guilabel:`proprietes element` et choisissez la section :guilabel:`grille`. "
+"Insérez une grille en cliquant sur le bouton |signPlus|. Cliquez sur "
+":guilabel:`modifier grille ...` et définissez l'intervalle "
+":guilabel:`Intervalle` pour :guilabel:`X`, :guilabel:`Y` et "
+":guilabel:`Offset` selon l'échelle de la carte que vous avez choisie dans le"
+" canevas principal du QGIS. Le :guilabel:`Type de grille` :guilabel:`Cross` "
+"est très bien adapté à nos besoins."
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:81
 msgid "|moderate| |FA| Creating the dynamic header"
@@ -141,10 +193,15 @@ msgid ""
 ":guilabel:`X` as well as for :guilabel:`Y`. :guilabel:`Width` shall be "
 "defined by the expression::"
 msgstr ""
+"Encore une fois, allez dans la section :guilabel:`proprietes element` et "
+"ouvrez la section :guilabel:`position et taille`. En utilisant "
+"|dataDefineExpressionOn| :sup:`passer outre les donnees definies`, "
+"choisissez la variable ``sw_layout_margin`` pour :guilabel:`X` ainsi que "
+"pour :guilabel:`Y`. :guilabel:`largeur` sera définie par l'expression: :"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:95
 msgid "and :guilabel:`Height` by the ``sw_layout_height_header`` variable."
-msgstr ""
+msgstr "et :guilabel:`hauteur` par la variable ``sw_layout_height_header``."
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:96
 msgid ""
@@ -153,52 +210,61 @@ msgid ""
 "Create a horizontal line and two vertical lines and name them ``Horizontal "
 "line``, ``Vertical line 1`` ``Vertical line 2``."
 msgstr ""
+"Nous allons insérer une ligne horizontale et deux lignes verticales pour "
+"diviser l'en-tête en différentes sections à l'aide de la fonction "
+"|addNodesShape| :sup:`ajouter element noeud`. Créez une ligne horizontale et"
+" deux lignes verticales et nommez-les ``Ligne horizontale``, ``Ligne "
+"verticale 1``, ``Ligne verticale 2``."
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:102
 msgid "For the horizontal line:"
-msgstr ""
+msgstr "Pour la ligne horizontale"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:104
 msgid "Set :guilabel:`X` to the variable ``sw_layout_margin``"
-msgstr ""
+msgstr "Mettez :guilabel:`X` à la variable ``sw_layout_margin``."
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:105
 msgid "Set the expression for :guilabel:`Y` to::"
-msgstr ""
+msgstr "Définissez l'expression pour :guilabel:`Y` à: :"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:109
 msgid "Set the expression for :guilabel:`Width` to::"
-msgstr ""
+msgstr "Définissez l'expression pour :guilabel:`largeur` à: :"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:113
 msgid "For the first vertical line:"
-msgstr ""
+msgstr "Pour la première ligne verticale :"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:115
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:127
 msgid "Set the expression for :guilabel:`X` to::"
-msgstr ""
+msgstr "Définissez l'expression pour :guilabel:`X` à: :"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:119
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:131
 msgid "Set :guilabel:`Y` to the variable ``sw_layout_margin``"
-msgstr ""
+msgstr "Mettez :guilabel:`Y` à la variable ``sw_layout_margin``."
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:120
 msgid ""
 "The height must be the same as the header we created, so set "
 ":guilabel:`Height` to the variable ``sw_layout_height_header``."
 msgstr ""
+"La hauteur doit être la même que celle de l'en-tête que nous avons créé, "
+"donc mettez :guilabel:`hauteur` à la variable ``sw_layout_height_header``."
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:124
 msgid "The second vertical line is placed to the left of the first one."
-msgstr ""
+msgstr "La deuxième ligne verticale est placée à gauche de la première"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:132
 msgid ""
 "The height shall be the same as the other vertical line, so set "
 ":guilabel:`Height` to the variable ``sw_layout_height_header``."
 msgstr ""
+"La hauteur doit être la même que celle de l'autre ligne verticale, donc "
+"mettez :guilabel:`hauteur` à la variable ``sw_layout_height_header``."
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:136
 msgid ""
@@ -220,12 +286,17 @@ msgid ""
 "(variable)``. In the :guilabel:`Main Properties` of the :guilabel:`Items "
 "Properties` Panel enter the expression::"
 msgstr ""
+"Le titre de votre projet QGIS peut être inclus automatiquement. Le titre est"
+" défini dans les :guilabel:`proprietes projet`. Insérez un label avec le "
+"bouton |addLabel| :sup:`ajouter etiquette` et entrez le nom ``project title "
+"(variable)``. Dans le panneau :guilabel:`Main Properties` du panneau "
+":guilabel:`proprietes element`, entrez l'expression: :"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:154
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:183
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:210
 msgid "Set the position of the label."
-msgstr ""
+msgstr "Définissez la position de l'étiquette."
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:156
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:185
@@ -234,7 +305,7 @@ msgstr ""
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:255
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:281
 msgid "For :guilabel:`X`, use the expression::"
-msgstr ""
+msgstr "Pour :guilabel:`X`, utilisez l'expression: :"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:160
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:189
@@ -243,19 +314,20 @@ msgstr ""
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:259
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:285
 msgid "For :guilabel:`Y`, use the expression::"
-msgstr ""
+msgstr "Pour :guilabel:`Y`, utilisez l'expression: :"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:164
 msgid "For :guilabel:`Width`, use the expression::"
-msgstr ""
+msgstr "Pour :guilabel:`largeur`, utilisez l'expression: :"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:168
 msgid "Enter ``11.25`` for :guilabel:`Height`"
-msgstr ""
+msgstr "Entrez ``11,25`` pour :guilabel:`hauteur`."
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:170
 msgid "Under :guilabel:`Appearance` set the Font size to 16 pt."
 msgstr ""
+"Sous :guilabel:`apparence`, définissez la taille de la police à 16 pt."
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:172
 msgid ""
@@ -264,11 +336,18 @@ msgid ""
 "Properties` enter the text ``map description``. In the :guilabel:`Main "
 "Properties` we will also include::"
 msgstr ""
+"La deuxième étiquette comprendra une description de la carte que vous avez "
+"créée. Là encore, insérez un label et nommez-le ``description de la carte``."
+" Dans le champ :guilabel:`Main Properties`, entrez le texte ``map "
+"description``. Dans le champ :guilabel:`Main Properties` nous inclurons "
+"également : :"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:180
 msgid ""
 "Here we used two ``Date and Time`` functions (``now`` and ``format_date``)."
 msgstr ""
+"Nous avons utilisé ici deux fonctions ``Date and Time`` (``now`` et "
+"``format_date``)."
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:193
 msgid ""
@@ -280,22 +359,29 @@ msgid ""
 "about your organisation. We will use these variables in the :guilabel:`Main "
 "Properties` section."
 msgstr ""
+"Le troisième label comprendra des informations sur votre organisation. Nous "
+"allons d'abord créer quelques variables dans le menu :guilabel:`Variables` "
+"des :guilabel:`proprietes element`. Allez dans le menu :guilabel:`mise en "
+"page`, cliquez sur le bouton |signPlus| à chaque fois et entrez les noms "
+"``o_department``, ``o_name`` , ``o_adress`` et ``o_postcode``. Dans la "
+"deuxième ligne, entrez les informations concernant votre organisation. Nous "
+"utiliserons ces variables dans la section :guilabel:`Main Properties``."
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:203
 msgid "In :guilabel:`Main Properties` enter::"
-msgstr ""
+msgstr "Dans :guilabel:`Main Properties` entrez: :"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:220
 msgid "For :guilabel:`Width`, use ``49.00``"
-msgstr ""
+msgstr "Pour :guilabel:`largeur`, utilisez ``49.00``."
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:221
 msgid "For :guilabel:`Height`, use the expression::"
-msgstr ""
+msgstr "Pour :guilabel:`hauteur`, utilisez l'expression: :"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:228
 msgid "|moderate| |FA| Adding pictures to the dynamic header"
-msgstr ""
+msgstr "|moderate| |FA| Ajout d'images dans l'en-tête dynamique"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:230
 msgid ""
@@ -303,14 +389,18 @@ msgid ""
 "your label ``organisation information``. After entering the name "
 "``organisation logo`` define the position and size of the logo:"
 msgstr ""
+"Utilisez le bouton |addNewImage| :sup:`ajouter image` pour placer une image "
+"au-dessus de votre étiquette ``information d'organisation``. Après avoir "
+"saisi le nom ``logo de l'organisation``, définissez la position et la taille"
+" du logo :"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:243
 msgid "For :guilabel:`Width`, use ``39.292``"
-msgstr ""
+msgstr "Pour :guilabel:`largeur`, utilisez ``39.292``"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:244
 msgid "For :guilabel:`Height`, use ``9.583``"
-msgstr ""
+msgstr "Pour :guilabel:`hauteur`, utilisez ``9.583``"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:246
 msgid ""
@@ -318,6 +408,9 @@ msgid ""
 " home directory and enter the path under :menuselection:`Main Properties -->"
 " Image Source`."
 msgstr ""
+"Pour inclure un logo de votre organisation, vous devez enregistrer votre "
+"logo sous votre répertoire d'origine et entrer le chemin sous "
+":menuselection:`Main Properties --> Image Source`."
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:249
 msgid ""
@@ -325,18 +418,21 @@ msgid ""
 "|northArrow| :sup:`Add North Arrow`. We will use the default north arrow. "
 "Define the position:"
 msgstr ""
+"Notre tracé a encore besoin d'une flèche nord. Celle-ci sera également "
+"insérée en utilisant |flèche nord| :sup:`Add North Arrow`. Nous utiliserons "
+"la flèche nord par défaut. Définissez la position :"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:263
 msgid "For :guilabel:`Width`, use ``21.027``"
-msgstr ""
+msgstr "Pour :guilabel:`largeur`, utilisez ``21.027``"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:264
 msgid "For :guilabel:`Height`, use ``21.157``"
-msgstr ""
+msgstr "Pour :guilabel:`hauteur`, utilisez ``21.157``."
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:267
 msgid "|moderate| |FA| Creating the scalebar of the dynamic header"
-msgstr ""
+msgstr "|moderate| |FA| Création de la barre d'échelle de l'en-tête dynamique"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:269
 msgid ""
@@ -348,18 +444,26 @@ msgid ""
 ":guilabel:`Numeric`. This means that we insert a simple scale without a "
 "scalebar. The scale still needs a position and size."
 msgstr ""
+"Pour insérer une barre d'échelle dans l'en-tête, cliquez sur |addScalebar| "
+":sup:`ajouter barre d'echelle` et placez-la dans le rectangle au-dessus de "
+"la flèche nord. Dans :guilabel:`Carte` sous le :guilabel:`Main Properties` "
+"choisissez votre ``main map(Map 1)``. Cela signifie que l'échelle change "
+"automatiquement selon l'étendue que vous choisissez dans le canevas "
+"principal du QGIS. Choisissez le :guilabel:`Style` :guilabel:`Numérique`. "
+"Cela signifie que nous insérons une échelle simple sans barre d'échelle. "
+"L'échelle a encore besoin d'une position et d'une taille."
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:289
 msgid "For :guilabel:`Width`, use ``25``"
-msgstr ""
+msgstr "Pour :guilabel:`largeur`, utilisez ``25``."
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:290
 msgid "For :guilabel:`Height`, use ``8``"
-msgstr ""
+msgstr "Pour :guilabel:`hauteur`, utilisez ``8``."
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:291
 msgid "Place the ``Reference point`` in the center."
-msgstr ""
+msgstr "Placez le ``point de référence`` au centre."
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:293
 msgid ""
@@ -370,6 +474,13 @@ msgid ""
 " click the |refresh| :sup:`Refresh view` button and the page design is "
 "adapted."
 msgstr ""
+"Félicitations ! Vous avez créé votre première mise en page de carte "
+"dynamique. Jetez un coup d'œil à la mise en page et vérifiez si tout est "
+"comme vous le souhaitez ! La mise en page de la carte dynamique réagit "
+"automatiquement lorsque vous modifiez les propriétés de la page "
+":guilabel:`page`. Par exemple, si vous changez la taille de la page de DIN "
+"A4 à DIN A3, cliquez sur le bouton |refresh| :sup:`Rafraîchir la vue` et la "
+"conception de la page est adaptée."
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:306
 msgid "|WN|"

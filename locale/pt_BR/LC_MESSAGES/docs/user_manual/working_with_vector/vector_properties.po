@@ -5110,10 +5110,13 @@ msgid ""
 "by OGR (e.g., CSV, DBF and Excel), delimited text and the PostgreSQL "
 "provider."
 msgstr ""
+"QGIS atualmente tem suporte para juntar formatos de tabelas não espaciais "
+"suportados por OGR (por exemplo, CSV, DBF e Excel), texto delimitado e o "
+"provedor PostgreSQL."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2434
 msgid "Auxiliary Storage Properties"
-msgstr ""
+msgstr "Propriedades de armazenamento auxiliar"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2436
 msgid ""
@@ -5126,6 +5129,14 @@ msgid ""
 " in your original data source (X and Y positions, rotation angle, font "
 "style, color and so on)."
 msgstr ""
+"A maneira normal de personalizar o estilo e a rotulação é usar propriedades "
+"definidas por dados conforme descrito em: ref: `data_defined`. No entanto, "
+"pode não ser possível se os dados subjacentes forem somente leitura. Além "
+"disso, configurar essas propriedades definidas por dados pode consumir muito"
+" tempo ou não ser desejável! Por exemplo, se você deseja usar totalmente as "
+"ferramentas de mapa que vêm com: ref: `label_toolbar`, então você precisa "
+"adicionar e configurar mais de 20 campos em sua fonte de dados original "
+"(posições X e Y, ângulo de rotação, estilo da fonte, cor e em breve)."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2444
 msgid ""
@@ -5135,20 +5146,28 @@ msgid ""
 "diagram, symbology...) in a SQLite database thanks to editable joins. This "
 "allows you to store properties for layers that aren't editable."
 msgstr ""
+"O mecanismo de armazenamento auxiliar fornece a solução para essas "
+"limitações e configurações inadequadas. Os campos auxiliares são uma forma "
+"indireta de gerenciar e armazenar automaticamente essas propriedades "
+"definidas por dados (rótulos, diagrama, simbologia ...) em um banco de dados"
+" SQLite, graças às junções editáveis. Isso permite que você armazene "
+"propriedades para camadas que não são editáveis."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2450
 msgid ""
 "A tab is available in vector layer properties dialog to manage auxiliary "
 "storage:"
 msgstr ""
+"Uma guia está disponível na caixa de diálogo de propriedades da camada "
+"vetorial para gerenciar o armazenamento auxiliar:"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2456
 msgid "Auxiliary Storage tab"
-msgstr ""
+msgstr "Guia de armazenamento auxiliar"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2461
 msgid "Labeling"
-msgstr ""
+msgstr "Marcação"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2463
 msgid ""
@@ -5156,6 +5175,10 @@ msgid ""
 "properties without being editable, labeling map tools described in "
 ":ref:`label_toolbar` are always available as soon as labeling is activated."
 msgstr ""
+"Considerando que a fonte de dados pode ser personalizada graças às "
+"propriedades definidas pelos dados sem ser editável, as ferramentas de mapa "
+"de rotulagem descritas em: ref: `label_toolbar` estão sempre disponíveis "
+"assim que a rotulagem é ativada."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2467
 msgid ""
@@ -5166,36 +5189,45 @@ msgid ""
 "activated. Then, a window is displayed, allowing you to select the primary "
 "key to use for joining (to ensure that features are uniquely identified):"
 msgstr ""
+"Na verdade, o sistema de armazenamento auxiliar precisa de uma camada "
+"auxiliar para armazenar essas propriedades em um banco de dados SQLite (ver:"
+" ref: `vector_auxiliary_storage_database`). Seu processo de criação é "
+"executado na primeira vez que você clica no mapa enquanto uma ferramenta de "
+"mapa de rotulagem está ativada no momento. Em seguida, uma janela é exibida,"
+" permitindo que você selecione a chave primária a ser usada para ingressar "
+"(para garantir que os recursos sejam identificados exclusivamente):"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2479
 msgid "Auxiliary Layer creation dialog"
-msgstr ""
+msgstr "Caixa de diálogo de criação de camada auxiliar"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2482
 msgid ""
 "As soon as an auxiliary layer is configured for the current data source, you"
 " can retrieve its information in the tab:"
 msgstr ""
+"Assim que uma camada auxiliar é configurada para a fonte de dados atual, "
+"você pode recuperar suas informações na guia:"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2488
 msgid "Auxiliary Layer key"
-msgstr ""
+msgstr "Chave da camada auxiliar"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2491
 msgid "The auxiliary layer now has these characteristics:"
-msgstr ""
+msgstr "A camada auxiliar agora tem estas características:"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2493
 msgid "the primary key is ``ID``,"
-msgstr ""
+msgstr "a chave primária é `` ID``,"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2494
 msgid "there are ``0`` features using an auxiliary field,"
-msgstr ""
+msgstr "existem recursos `` 0`` usando um campo auxiliar,"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2495
 msgid "there are ``0`` auxiliary fields."
-msgstr ""
+msgstr "existem campos auxiliares `` 0``."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2497
 msgid ""
@@ -5205,10 +5237,16 @@ msgid ""
 "colors, and so on. The corresponding data-defined properties are created and"
 " can be retrieved:"
 msgstr ""
+"Agora que a camada auxiliar foi criada, você pode editar os rótulos da "
+"camada. Clique em um rótulo enquanto o | changeLabelProperties | : sup: a "
+"ferramenta de mapa `Change Label` está ativada, então você pode atualizar as"
+" propriedades de estilo como tamanhos, cores e assim por diante. As "
+"propriedades definidas por dados correspondentes são criadas e podem ser "
+"recuperadas:"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2506
 msgid "Auxiliary Fields"
-msgstr ""
+msgstr "Campos Auxiliares"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2509
 msgid ""
@@ -5218,6 +5256,11 @@ msgid ""
 "SQLite database. There is also ``1`` feature which is currently using these "
 "auxiliary fields."
 msgstr ""
+"Como você pode ver na figura acima, os campos `` 21`` são criados e "
+"configurados automaticamente para rotulagem. Por exemplo, o tipo de campo "
+"auxiliar `` FontStyle`` é um `` String`` e é denominado `` "
+"labeling_fontstyle`` no banco de dados SQLite subjacente. Há também o "
+"recurso `` 1`` que está usando esses campos auxiliares."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2515
 msgid ""
@@ -5225,10 +5268,13 @@ msgid ""
 "properties tab indicating that the data-defined override options are set "
 "correctly:"
 msgstr ""
+"Observe que o ícone | dataDefineOn | é exibido na guia de propriedades: "
+"guilabel: `Labels` indicando que as opções de substituição definidas pelos "
+"dados estão configuradas corretamente:"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2522
 msgid "Data-defined properties automatically created"
-msgstr ""
+msgstr "Propriedades definidas por dados criadas automaticamente"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2525
 msgid ""
@@ -5240,6 +5286,13 @@ msgid ""
 "(:numref:`figure_auxiliary_layer_creation`) is first displayed to select the"
 " primary key to use for joining."
 msgstr ""
+"Caso contrário, existe outra maneira de criar um campo auxiliar para uma "
+"propriedade específica, graças ao | dataDefined | : sup: botão `data-defined"
+" override`. Ao clicar em: guilabel: `Armazenar dados no projeto`, um campo "
+"auxiliar é criado automaticamente para o campo: guilabel:` Opacidade`. Se "
+"você clicar neste botão e a camada auxiliar ainda não tiver sido criada, uma"
+" janela (: numref: `figure_auxiliary_layer_creation`) é primeiro exibida "
+"para selecionar a chave primária a ser usada para ingressar."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2536
 msgid "Symbology"
@@ -5253,10 +5306,15 @@ msgid ""
 "in the project` for a specific property. For example, the :guilabel:`Fill "
 "color` field:"
 msgstr ""
+"Como o método descrito acima para personalizar rótulos, os campos auxiliares"
+" também podem ser usados para estilizar símbolos e diagramas. Para fazer "
+"isso, clique em | dataDefined | : sup: `Substituição definida por dados` e "
+"selecione: guilabel:` Armazenar dados no projeto` para uma propriedade "
+"específica. Por exemplo, o campo: guilabel: `Cor de preenchimento`:"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2547
 msgid "Data-defined property menu for symbol"
-msgstr ""
+msgstr "Menu de propriedades definidas por dados para o símbolo"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2550
 msgid ""
@@ -5268,24 +5326,34 @@ msgid ""
 "For example, when creating a :guilabel:`Fill color` auxiliary field the "
 "following window opens:"
 msgstr ""
+"Existem diferentes atributos para cada símbolo (por exemplo, estilo de "
+"preenchimento, cor de preenchimento, cor do traço, etc ...), portanto, cada "
+"campo auxiliar que representa um atributo requer um nome exclusivo para "
+"evitar conflitos. Após selecionar: guilabel: `Armazenar dados no projeto`, "
+"uma janela abre e exibe o: guilabel:` Tipo` do campo e solicita que você "
+"insira um nome exclusivo para o campo auxiliar. Por exemplo, ao criar um "
+"campo auxiliar: guilabel: `Cor de preenchimento`, a seguinte janela é "
+"aberta:"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2561
 msgid "Name of the auxiliary field for a symbol"
-msgstr ""
+msgstr "Nome do campo auxiliar para um símbolo"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2564
 msgid ""
 "Once created, the auxiliary field can be retrieved in the auxiliary storage "
 "tab:"
 msgstr ""
+"Depois de criado, o campo auxiliar pode ser recuperado na guia de "
+"armazenamento auxiliar:"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2570
 msgid "Auxiliary field symbol"
-msgstr ""
+msgstr "Símbolo de campo auxiliar"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2574
 msgid "Attribute table and widgets"
-msgstr ""
+msgstr "Tabela de atributos e widgets"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2576
 msgid ""
@@ -5293,6 +5361,9 @@ msgid ""
 "<sec_attribute_table>`. However, not all auxiliary fields are initially "
 "visible in the attribute table."
 msgstr ""
+"Os campos auxiliares podem ser editados usando a: ref: `tabela de "
+"atributos<sec_attribute_table>`. No entanto, nem todos os campos auxiliares "
+"são inicialmente visíveis na tabela de atributos."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2580
 msgid ""
@@ -5303,6 +5374,13 @@ msgid ""
 "representing a ``Color`` have a widget **Color** set by default, otherwise "
 "auxiliary fields default to the **Text Edit** widget."
 msgstr ""
+"Os campos auxiliares que representam os atributos da simbologia, rotulagem, "
+"aparência ou diagramas de uma camada aparecerão automaticamente na tabela de"
+" atributos. A exceção são os atributos que podem ser modificados usando a: "
+"ref: `Barra de ferramentas do rótulo<label_toolbar>` que estão ocultos por "
+"padrão. Os campos auxiliares que representam uma `` Cor`` têm um widget ** "
+"Cor ** definido por padrão, caso contrário, os campos auxiliares são "
+"padronizados para o widget ** Edição de Texto **."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2587
 msgid ""
@@ -5315,30 +5393,43 @@ msgid ""
 "change **auxiliary_storage_labeling_color** to the **Color** widget. Those "
 "fields will now be visible in the attribute table."
 msgstr ""
+"Os campos auxiliares que representam os atributos que podem ser modificados "
+"usando a: ref: `Barra de ferramentas do rótulo<label_toolbar>` são ** "
+"Ocultos ** na tabela de atributos por padrão. Para tornar um campo visível, "
+"abra a: ref: `guia de propriedades do formulário de "
+"atributo<vector_attributes_menu>` e altere o valor de um campo auxiliar: "
+"guilabel: `Widget Type` de ** Oculto ** para outro valor relevante. Por "
+"exemplo, altere ** auxiliary_storage_labeling_size ** para ** Text Edit ** "
+"ou altere ** auxiliary_storage_labeling_color ** para o widget ** Color **. "
+"Esses campos agora estarão visíveis na tabela de atributos."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2596
 msgid ""
 "Auxiliary fields in the attribute table will appear like the following "
 "image:"
 msgstr ""
+"Os campos auxiliares na tabela de atributos aparecerão como a seguinte "
+"imagem:"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2602
 msgid "Form with auxiliary fields"
-msgstr ""
+msgstr "Formulário com campos auxiliares"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2606
 msgid "Management"
-msgstr ""
+msgstr "Gestão"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2608
 msgid ""
 "The :guilabel:`Auxiliary Layer` menu allows you to manage the auxiliary "
 "fields:"
 msgstr ""
+"O menu: guilabel: `Camada Auxiliar` permite que você gerencie os campos "
+"auxiliares:"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2613
 msgid "Auxiliary layer management"
-msgstr ""
+msgstr "Gerenciamento de camada auxiliar"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2616
 msgid ""
@@ -5347,6 +5438,10 @@ msgid ""
 " this action to create an auxiliary layer. As explained in "
 ":ref:`vector_auxiliary_storage_key`, a primary key will be needed then."
 msgstr ""
+"O primeiro item: guilabel: `Criar` está desabilitado neste caso porque a "
+"camada auxiliar já foi criada. Mas no caso de um novo trabalho, você pode "
+"usar esta ação para criar uma camada auxiliar. Conforme explicado em: ref: "
+"`vector_auxiliary_storage_key`, uma chave primária será necessária então."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2621
 msgid ""
@@ -5354,6 +5449,9 @@ msgid ""
 " their contents. This way, the number of features using these fields will "
 "fall to ``0``."
 msgstr ""
+"A ação: guilabel: `Clear` permite manter todos os campos auxiliares, mas "
+"remover seus conteúdos. Dessa forma, o número de recursos que usam esses "
+"campos cairá para `` 0``."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2625
 msgid ""
@@ -5361,6 +5459,9 @@ msgid ""
 "other words, the corresponding table is deleted from the underlying SQLite "
 "database and properties customization are lost."
 msgstr ""
+"A ação: guilabel: `Delete` remove completamente a camada auxiliar. Em outras"
+" palavras, a tabela correspondente é excluída do banco de dados SQLite "
+"subjacente e a personalização das propriedades é perdida."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2629
 msgid ""
@@ -5369,10 +5470,14 @@ msgid ""
 "stored in auxiliary storage. However, in this case, geometries are exported "
 "from the original data source too."
 msgstr ""
+"Finalmente, a ação: guilabel: `Export` permite salvar a camada auxiliar como"
+" uma: ref:` nova camada vetorial <general_saveas>`. Observe que as "
+"geometrias não são armazenadas no armazenamento auxiliar. No entanto, neste "
+"caso, as geometrias também são exportadas da fonte de dados original."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2637
 msgid "Auxiliary storage database"
-msgstr ""
+msgstr "Banco de dados de armazenamento auxiliar"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2639
 msgid ""
@@ -5380,6 +5485,9 @@ msgid ""
 "used for auxiliary storage is saved at the same place but with the extension"
 " ``.qgd``."
 msgstr ""
+"Quando você salva seu projeto com o formato `` .qgs``, o banco de dados "
+"SQLite usado para armazenamento auxiliar é salvo no mesmo lugar, mas com a "
+"extensão `` .qgd``."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2643
 msgid ""
@@ -5387,10 +5495,13 @@ msgid ""
 "format. In this case, ``.qgd`` and  ``.qgs`` files are both embedded in the "
 "archive."
 msgstr ""
+"Por conveniência, um arquivo pode ser usado graças ao formato `` .qgz``. "
+"Neste caso, os arquivos `` .qgd`` e `` .qgs`` são ambos embutidos no "
+"arquivo."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2651
 msgid "Actions Properties"
-msgstr ""
+msgstr "Propriedades de Ações"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2653
 msgid ""
@@ -5399,10 +5510,15 @@ msgid ""
 "for example, running a program with arguments built from the attributes of a"
 " feature or passing parameters to a web reporting tool."
 msgstr ""
+"| ação | QGIS fornece a capacidade de executar uma ação com base nos "
+"atributos de um recurso. Isso pode ser usado para realizar qualquer número "
+"de ações, por exemplo, executar um programa com argumentos construídos a "
+"partir dos atributos de um recurso ou passar parâmetros para uma ferramenta "
+"de relatório da web."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2663
 msgid "Overview action dialog with some sample actions"
-msgstr ""
+msgstr "Diálogo de ação de visão geral com alguns exemplos de ações"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2665
 msgid ""
@@ -5445,6 +5561,11 @@ msgid ""
 " double-click its row. One example is performing a search based on an "
 "attribute value. This concept is used in the following discussion."
 msgstr ""
+"Existem vários exemplos incluídos na caixa de diálogo. Você pode carregá-los"
+" clicando em: guilabel: `Criar ações padrão`. Para editar qualquer um dos "
+"exemplos, clique duas vezes em sua linha. Um exemplo é realizar uma pesquisa"
+" com base em um valor de atributo. Este conceito é usado na discussão a "
+"seguir."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2681
 msgid ""
@@ -5453,6 +5574,10 @@ msgid ""
 ":guilabel:`Combo Box` or as :guilabel:`Separate Buttons` (see "
 ":ref:`configure_table_columns`)."
 msgstr ""
+"A | caixa de seleção | : guilabel: `Mostrar na Tabela de Atributos` permite "
+"que você exiba na caixa de diálogo da tabela de atributos as ações com "
+"escopo de recursos verificados, seja como: guilabel:` Combo Box` ou como: "
+"guilabel: `Botões Separados` (ver: ref:` configure_table_columns `)."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2691
 msgid "Defining Actions"
