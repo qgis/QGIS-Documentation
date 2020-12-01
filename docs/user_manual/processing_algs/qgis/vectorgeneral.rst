@@ -1690,7 +1690,6 @@ single one.
 
 If attributes tables are different, the attribute table of the
 resulting layer will contain the attributes from all input layers.
-New attributes will be added for the original layer name and source.
 
 If any input layers contain Z or M values, then the output layer will
 also contain these values.
