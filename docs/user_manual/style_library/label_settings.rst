@@ -414,17 +414,24 @@ possible.
 Placement for line layers
 -------------------------
 
-Label options for line layers include |radioButtonOn| :guilabel:`Parallel`,
-|radioButtonOff| :guilabel:`Curved` or |radioButtonOff| :guilabel:`Horizontal`.
-For the |radioButtonOn| :guilabel:`Parallel` and |radioButtonOff|
-:guilabel:`Curved` options, you can set the position to |checkbox|
-:guilabel:`Above line`, |checkbox| :guilabel:`On line` and |checkbox|
-:guilabel:`Below line`. It's possible to select several options at once. In
-that case, QGIS will look for the optimal label position. For Parallel and
-curved placement options, you can also use the line orientation for the
-position of the label. Additionally, you can define a :guilabel:`Maximum
-angle between curved characters` when selecting the |radioButtonOff|
-:guilabel:`Curved` option (see Figure_labels_placement_line).
+Label modes for line layers include:
+
+* :guilabel:`Parallel`:draws the label parallel to a generalised line
+  representing the feature, with preference for placement over straighter
+  portions of the line. You can define:
+
+  * :guilabel:`Allowed positions`: :guilabel:`Above line`, :guilabel:`On line`,
+    :guilabel:`Below line` and :guilabel:`Line orientation dependent position`
+    (placing the label at the left or the right of the line). It's possible to
+    select several options at once. In that case, QGIS will look for the optimal
+    label position.
+  * :guilabel:`Distance` between the label and the line
+* :guilabel:`Curved`: draws the label following the curvature of the line
+  feature. In addition to the parameters available with the :guilabel:`Parallel`
+  mode, you can set the :guilabel:`Maximum angle between curved characters`,
+  either inside or outside.
+* :guilabel:`Horizontal`: draws labels horizontally along the length of the
+  line feature.
 
 .. _figure_labels_placement_line:
 
@@ -433,11 +440,32 @@ angle between curved characters` when selecting the |radioButtonOff|
 
    Label placement examples in lines
 
-For all three placement options, in :guilabel:`Repeat`, you can set up a
-minimum distance for repeating labels. The distance can be in ``mm`` or in
-``map units``. Also, in :guilabel:`Overrun feature` you can specify the
-maximal allowable distance a label may run past the end (or start) of
-line features.
+Next to placement modes, you can set:
+
+* :guilabel:`Repeating Labels` :guilabel:`Distance` to display multiple
+  times the label over the length of the feature. The distance can be in
+  ``Millimeters``, ``Points``, ``Pixels``, ``Meters at scale``, ``Map Units``
+  and ``Inches``.
+* A :guilabel:`Label Overrun` :guilabel:`Distance` (not available for
+  horizontal mode): specifies the maximal allowable distance a label may run
+  past the end (or start) of line features. Increasing this value can allow
+  for labels to be shown for shorter line features.
+* :guilabel:`Label Anchoring`: controls the placement of the labels along the
+  line feature they refer to. Click on :guilabel:`Settings ...` to choose:
+
+  * the position along the line (as a ratio) which labels will be
+    placed close to. It can be data-defined and possible values are:
+
+    * |labelAnchorCenter| :guilabel:`Center of Line`
+    * |labelAnchorStart| :guilabel:`Start of Line`
+    * |labelAnchorEnd| :guilabel:`End of Line`
+    * or |labelAnchorCustom| :guilabel:`Custom...`.
+
+  * :guilabel:`Placement Behavior`: use :guilabel:`Preferred Placement Hint`
+    to treat the label anchor only as a hint for the label placement.
+    By choosing :guilabel:`Strict`, labels are placed exactly on the label
+    anchor.
+
 
 Placement for polygon layers
 ----------------------------
@@ -650,6 +678,14 @@ Under :guilabel:`Feature options`:
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |dataDefined| image:: /static/common/mIconDataDefine.png
+   :width: 1.5em
+.. |labelAnchorCenter| image:: /static/common/mActionLabelAnchorCenter.png
+   :width: 1.5em
+.. |labelAnchorCustom| image:: /static/common/mActionLabelAnchorCustom.png
+   :width: 1.5em
+.. |labelAnchorEnd| image:: /static/common/mActionLabelAnchorEnd.png
+   :width: 1.5em
+.. |labelAnchorStart| image:: /static/common/mActionLabelAnchorStart.png
    :width: 1.5em
 .. |labelbackground| image:: /static/common/labelbackground.png
    :width: 1.5em
