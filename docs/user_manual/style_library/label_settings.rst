@@ -366,48 +366,54 @@ and labeling priority. Note that the placement options differ according to the
 type of vector layer, namely point, line or polygon, and are affected by
 the global :ref:`PAL setting <automated_placement>`.
 
-.. _cartographic:
+.. _labels_point_placement:
 
 Placement for point layers
 --------------------------
 
-With the |radioButtonOn| :guilabel:`Cartographic` placement mode,
-point labels are generated with a better visual relationship with the
-point feature, following ideal cartographic placement rules. Labels can be
-placed at a set :guilabel:`Distance` either from the point feature itself
-or from the bounds of the symbol used to represent the feature.
-The latter option is especially useful when the symbol size isn't fixed,
-e.g. if it's set by a data defined size or when using different symbols
-in a categorized renderer.
+Point labels placement modes available are:
 
-By default, placements are prioritised in the following order:
+.. _cartographic:
 
-#. top right
-#. top left
-#. bottom right
-#. bottom left
-#. middle right
-#. middle left
-#. top, slightly right
-#. bottom, slightly left.
+* :guilabel:`Cartographic`: point labels are generated with a
+  better visual relationship with the point feature, following ideal
+  cartographic placement rules. Labels can be placed:
 
-Placement priority can, however, be customized or set for an individual
-feature using a data defined list of prioritised positions.
-This also allows only certain placements to be used, so e.g.
-for coastal features you can prevent labels being placed over the land.
+  * at a set :guilabel:`Distance` in :ref:`supported units <unit_selector>`,
+    either from the point feature itself or from the bounds of the symbol
+    used to represent the feature (set in :guilabel:`Distance offset from`).
+    The latter option is especially useful when the symbol size isn't fixed,
+    e.g. if it's set by a data defined size or when using different symbols
+    in a :ref:`categorized <categorized_renderer>` renderer.
+  * following a :guilabel:`Position priority` that can be customized or set for
+    an individual feature using a data defined list of prioritised positions.
+    This also allows only certain placements to be used, so e.g.
+    for coastal features you can prevent labels being placed over the land.
 
-The |radioButtonOn| :guilabel:`Around point` setting places the label in an
-equal radius (set in :guilabel:`Distance`) circle around the feature. The
-placement of the label can even be constrained using the :guilabel:`Quadrant`
-option.
+    By default, cartographic mode placements are prioritised in the following
+    order (respecting the `guidelines from Krygier and Wood (2011)
+    <https://www.researchgate.net/publication/44463780_Making_maps_a_visual_guide_to_map_design_for_GIS_John_Krygier_Denis_Wood>`_
+    and other cartographic textbooks):
 
-With the |radioButtonOn| :guilabel:`Offset from point`, labels are
-placed at a fixed offset from the point feature. You can select the
-:guilabel:`Quadrant` in which to place your label. You are also able to set
-the :guilabel:`Offset X,Y` distances between the points and their labels and
-can alter the angle of the label placement with the :guilabel:`Rotation`
-setting. Thus, placement in a selected quadrant with a defined rotation is
-possible.
+    #. top right
+    #. top left
+    #. bottom right
+    #. bottom left
+    #. middle right
+    #. middle left
+    #. top, slightly right
+    #. bottom, slightly left.
+
+* :guilabel:`Around Point`: labels are placed in a circle around the feature.
+  equal radius (set in :guilabel:`Distance`) circle around the feature.
+  The placement priority is clockwise from the "top right". The position can
+  be constrained using the data-defined :guilabel:`Quadrant` option.
+
+* :guilabel:`Offset from Point`: labels are placed at an :guilabel:`Offset X,Y`
+  distance from the point feature, in various units, or preferably over the
+  feature. You can use a data-defined :guilabel:`Quadrant` to constrain the
+  placement and can assign a :guilabel:`Rotation` to the label.
+
 
 .. _labels_line_placement:
 
