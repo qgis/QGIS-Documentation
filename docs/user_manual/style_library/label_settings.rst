@@ -9,59 +9,82 @@
    .. contents::
       :local:
 
-Labels are textual information you can display on vector features. They add
-details you could not necessarily represent using symbols.
+Labels are textual information you can display on vector features or maps.
+They add details you could not necessarily represent using symbols.
+Two types of text-related items are available in QGIS:
 
-The :guilabel:`Style Manager` dialog allows you to create a set of labels or
-text formats (ie the appearance of the text, including font, size, colors,
-shadow, background...). Each of these items could later be applied to layers in
-the |labeling| :guilabel:`Labels` tab of the vector :guilabel:`Layer Properties`
-dialog or :guilabel:`Layer Styling` panel or using the |labeling| :sup:`Layer
-Labeling Options` button of the **Labels toolbar**. You can also directly
-configure them in the abovementioned dialogs.
+* :guilabel:`Text Format`: defines the appearance of the text, including
+  :ref:`font, size, colors <labels_text>`, :ref:`shadow <labels_shadow>`,
+  :ref:`background <labels_background>`, :ref:`buffer <labels_buffer>`, ...
 
-.. It could be nice to briefly expose the "label settings" tab of the style
- manager, with some sample of label settings in it.
+  They can be used to render texts over the map (layout/map title,
+  decorations, scale bar, ...), usually through the :ref:`font <font_selector>`
+  widget.
 
-The :guilabel:`Label Settings` dialog allows you to configure smart labeling
-for vector layers. Setting a label includes configuring the :ref:`text format
-<text_format>`, and how the label relates with the features or other labels
-(through :ref:`placement <labels_placement>`, :ref:`rendering <labels_rendering>`
-and :ref:`callout <labels_callouts>`).
+  To create a :guilabel:`Text Format` item:
+
+  #. Open the |styleManager| :guilabel:`Style Manager` dialog
+  #. Activate the :guilabel:`Text format` tab
+
+     .. _figure_textformats:
+
+     .. figure:: img/stylemanager_textformat.png
+        :align: center
+
+        Text formats in Style Manager dialog
+
+  #. Press the |signPlus| :sup:`Add item` button. The :guilabel:`Text Format`
+     dialog opens for :ref:`configuration <text_format>`.
+     As usual, these properties are :ref:`data-definable <data_defined>`.
+
+* :guilabel:`Label Settings`: extend the text format settings with properties
+  related to the location or the interaction with other texts or features
+  (:ref:`callouts <labels_callouts>`, :ref:`placement <labels_placement>`,
+  :ref:`overlay, scale visibility <labels_rendering>`, mask ...).
+
+  They are used to configure smart labelling for vector layers through the
+  |labeling| :guilabel:`Labels` tab of the vector :guilabel:`Layer Properties`
+  dialog or :guilabel:`Layer Styling` panel or using the |labeling| :sup:`Layer
+  Labeling Options` button of the :ref:`Label toolbar <label_toolbar>`.
+
+  To create a :guilabel:`Label Settings` item:
+
+  #. Open the |styleManager| :guilabel:`Style Manager` dialog
+  #. Activate the :guilabel:`Label Settings` tab
+
+     .. _figure_label_settings:
+
+     .. figure:: img/stylemanager_labelsettings.png
+        :align: center
+
+        Label Settings in Style Manager dialog
+
+  #. Press the |signPlus| :sup:`Add item` menu and select the entry corresponding
+     to the geometry type of the features you want to label.
+
+  The :guilabel:`Label Settings` dialog opens with the following properties.
+  As usual, these properties are :ref:`data-definable <data_defined>`.
+
 
 .. _text_format:
 
 Formatting the label text
 =========================
 
-To create text formats, you can:
-
-#. Open the |styleManager| :guilabel:`Style Manager` dialog
-#. Activate the :guilabel:`Text format` tab
-
-   .. _figure_textformats:
-
-   .. figure:: img/stylemanager_textformat.png
-      :align: center
-
-      Text formats in Style Manager dialog
-
-#. Press the |signPlus| :sup:`Add item` button. The :guilabel:`Text Settings`
-   dialog opens with the following properties. As usual, these properties
-   are :ref:`data-definable <data_defined>`.
-
+Most of the following properties are common to :guilabel:`Text Format`
+and :guilabel:`Label Settings` items.
 
 .. _labels_text:
 
 Text tab
 --------
 
-.. _figure_textsettings_text:
+.. _figure_label_text:
 
-.. figure:: img/textsettings_text.png
+.. figure:: img/label_text.png
    :align: center
 
-   Text settings - Text tab
+   Labels settings - Text tab
 
 In the |text| :guilabel:`Text` tab, you can set:
 
@@ -72,29 +95,31 @@ In the |text| :guilabel:`Text` tab, you can set:
 * the :guilabel:`Color`
 * and the :guilabel:`Opacity`.
 
-At the bottom, a text formats list widget shows a filterable list of text
-formats stored within your :ref:`style manager database <vector_style_manager>`.
-This allows you to easily set text formats to match styles saved in the local
-style database, and also to add a new text format to the style database based on
-the current settings. Press the :guilabel:`Save format...` button to store the
-current text format in the :guilabel:`Style Manager`, providing a name and tag(s).
 
-Likewise, a label settings list widget is shown when configuring labels, allowing
-you to pick from the |styleManager| :sup:`Style Manager` widget or to add new
-styles to it.
 
+At the bottom of the tab, a widget shows a filterable list of compatible items
+stored in your :ref:`style manager database <vector_style_manager>`.
+This allows you to easily configure the current text format or label setting
+based on an existing one, and also save a new item to the style database:
+Press the :guilabel:`Save format...` or :guilabel:`Save settings...` button
+and provide a name and tag(s).
+
+.. note:: When configuring a :guilabel:`Label Settings` item, text format items
+ are also available in this widget. Select one to quickly overwrite the current
+ :ref:`textual properties <text_format>` of the label.
+ Likewise, you can create/overwrite a text format from there.
 
 .. _labels_formatting:
 
 Formatting tab
 --------------
 
-.. _figure_textsettings_formatting:
+.. _figure_label_formatting:
 
-.. figure:: img/textsettings_formatting.png
+.. figure:: img/label_formatting.png
    :align: center
 
-   Text settings - Formatting tab
+   Label settings - Formatting tab
 
 In the |labelformatting| :guilabel:`Formatting` tab, you can:
 
@@ -159,12 +184,12 @@ In the |labelformatting| :guilabel:`Formatting` tab, you can:
 Buffer tab
 ----------
 
-.. _figure_textsettings_buffer:
+.. _figure_label_buffer:
 
-.. figure:: img/textsettings_buffer.png
+.. figure:: img/label_buffer.png
    :align: center
 
-   Text settings - Buffer tab
+   Label settings - Buffer tab
 
 To create a buffer around the label, activate the |checkbox| :guilabel:`Draw
 text buffer` checkbox in the |labelbuffer| :guilabel:`Buffer` tab. Then you can:
@@ -205,12 +230,12 @@ the :guilabel:`Shape` type. It can be:
 * or a :guilabel:`Marker Symbol` you can create or select from the
   :ref:`symbol library <vector_marker_symbols>`.
 
-.. _figure_textsettings_background:
+.. _figure_label_background:
 
-.. figure:: img/textsettings_background.png
+.. figure:: img/label_background.png
    :align: center
 
-   Text settings - Background tab
+   Label settings - Background tab
 
 Depending on the selected shape, you need to configure some of the following
 properties:
@@ -247,12 +272,12 @@ properties:
 Shadow tab
 ----------
 
-.. _figure_textsettings_shadow:
+.. _figure_label_shadow:
 
-.. figure:: img/textsettings_shadow.png
+.. figure:: img/label_shadow.png
    :align: center
 
-   Text settings - Shadow tab
+   Label settings - Shadow tab
 
 To add a shadow to the text, enable the |labelshadow| :guilabel:`Shadow`
 tab and activate the |checkbox| :guilabel:`Draw drop shadow`. Then you can:
@@ -300,11 +325,17 @@ tab and activate the |checkbox| :guilabel:`Draw drop shadow`. Then you can:
   will mix with the map components below them (more details at
   :ref:`blend-modes`).
 
+Configuring interaction with labels
+===================================
+
+Other than the text formatting settings exposed above, you can also set how labels
+interact with each others or with the features.
+
 
 .. _labels_callouts:
 
 Callouts tab
-============
+------------
 
 A common practice when placing labels on a crowded map is to use **callouts** -
 labels which are placed outside (or displaced from) their associated feature
@@ -359,7 +390,7 @@ tab and activate the |checkbox| :guilabel:`Draw callouts`. Then you can:
 .. _labels_placement:
 
 Placement tab
-=============
+-------------
 
 Choose the |labelplacement| :guilabel:`Placement` tab for configuring label placement
 and labeling priority. Note that the placement options differ according to the
@@ -369,7 +400,7 @@ the global :ref:`PAL setting <automated_placement>`.
 .. _labels_point_placement:
 
 Placement for point layers
---------------------------
+..........................
 
 Point labels placement modes available are:
 
@@ -418,7 +449,7 @@ Point labels placement modes available are:
 .. _labels_line_placement:
 
 Placement for line layers
--------------------------
+.........................
 
 Label modes for line layers include:
 
@@ -474,7 +505,7 @@ Next to placement modes, you can set:
 
 
 Placement for polygon layers
-----------------------------
+............................
 
 You can choose one of the following modes for placing labels of polygons
 (see figure_labels_placement_polygon_):
@@ -539,12 +570,12 @@ You can choose one of the following modes for placing labels of polygons
    Label placement examples in polygons
 
 Common placement settings
--------------------------
+.........................
 
 Some label placement settings are available for all layer geometry types:
 
 Data Defined
-............
+^^^^^^^^^^^^
 
 The :guilabel:`Data Defined` group provides direct control on labels
 placement, on a feature-by-feature basis. It relies on their attributes
@@ -574,7 +605,7 @@ or an expression to set:
 .. _`labels_priority`:
 
 Priority
-........
+^^^^^^^^
 
 In the :guilabel:`Priority` section you can define the placement priority rank
 of each label, ie if there are different diagrams or labels candidates for the
@@ -587,7 +618,7 @@ due to a greater weighted :ref:`obstacle feature <labels_obstacles>`.
 .. _`labels_obstacles`:
 
 Obstacles
-.........
+^^^^^^^^^
 
 In some contexts (eg, high density labels, overlapping features...), the
 labels placement can result in labels being placed over unrelated features.
@@ -630,13 +661,13 @@ or diagrams. This can be controlled from the :guilabel:`Obstacles` section:
 .. _labels_rendering:
 
 Rendering tab
-=============
+-------------
 
 In the |render| :guilabel:`Rendering` tab, you can tune when the labels can
 be rendered and their interaction with other labels and features.
 
 Label options
--------------
+.............
 
 Under :guilabel:`Label options`:
 
@@ -671,7 +702,7 @@ Under :guilabel:`Label options`:
   **when rotation defined** or **always**.
 
 Feature options
----------------
+...............
 
 Under :guilabel:`Feature options`:
 
