@@ -247,6 +247,13 @@ the following functionalities (see figure_layout_fixed_table_):
 Main properties
 ...............
 
+.. _figure_table_designer_fixed_table:
+
+.. figure:: img/fixedtable_table_designer.png
+   :align: center
+
+   Fixed table Item Properties Panel with Table designer
+
 In :guilabel:`Main properties` you can work with the :guilabel:`Table designer` 
 when clicking the :guilabel:`Edit table ...`:
 
@@ -276,18 +283,29 @@ when clicking the :guilabel:`Edit table ...`:
   * Define the :guilabel:`Cell Size` with :guilabel:`Row height` and 
     :guilabel:`Column width`.
 
-
-
 Appearance
 ..........
 
+The :guilabel:`Appearance` group of the fixed table provides the following functionalities:
+
+* Click |checkbox| :guilabel:`Show empty rows` to fill the attribute table with empty cells.
+* With :guilabel:`Cell margins` you can define the margin around text in each cell of the table.
+* With :guilabel:`Display header` you can select from a list one of 'On first frame',
+  'On all frames' default option, or 'No header'.
+* With :guilabel:`Background color` you can set the background color of the table using
+  the :ref:`color selector <color-selector>` widget. The :guilabel:`Advanced customization`
+  option helps you define different background colors for each cell.
+* With :guilabel:`Oversized text` you define the behavior when the width set for
+  a column is  smaller than its content's length. It can be **Wrap text** or
+  **Truncate text**.
+  
 Tables common functionalities
 -----------------------------
 
 Show grid
 .........
 
-The :guilabel:`Show grid` group of the attribute table provides
+The :guilabel:`Show grid` group of the table items provides
 the following functionalities (see figure_layout_table_grid_):
 
 .. _figure_layout_table_grid:
@@ -307,7 +325,7 @@ the following functionalities (see figure_layout_table_grid_):
 Fonts and text styling
 ......................
 
-The :guilabel:`Fonts and text styling` group of the attribute table
+The :guilabel:`Fonts and text styling` group of the table items
 provides the following functionalities (see figure_layout_table_fonts_):
 
 .. _figure_layout_table_fonts:
@@ -328,7 +346,7 @@ provides the following functionalities (see figure_layout_table_fonts_):
 Frames
 ......
 
-The :guilabel:`Frames` group of the attribute table properties provides
+The :guilabel:`Frames` group of the table item properties provides
 the following functionalities (see figure_layout_table_frames_):
 
 .. _figure_layout_table_frames:
