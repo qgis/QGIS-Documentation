@@ -1,17 +1,24 @@
 .. index:: Attribute table
 .. _layout_table_item:
 
-The Attribute Table Item
-========================
+The Table Items
+===============
 
 .. only:: html
 
    .. contents::
       :local:
+      
+You can use table items to decorate and explain your map. While 
+|addTable| :guilabel:`Add attribute table` shows the attributes of
+the layers, |addFixedTable| :guilabel:`Add Fixed Table` inserts a
+manual text table where you can place additional information that
+is independent from the layers.
+
+The attribute table item
+------------------------
 
 Any layer in the project can have its attributes shown in the print layout.
-You can use this to decorate and explain your map with information about
-underlying data.
 Use the |addTable| :guilabel:`Add Attribute Table` tool following :ref:`items
 creation instructions <create_layout_item>` to add a new map item that you can
 later manipulate the same way as exposed in :ref:`interact_layout_item`.
@@ -31,7 +38,7 @@ following functionalities (see figure_layout_table_):
 
 
 Main properties
----------------
+...............
 
 The :guilabel:`Main properties` group of the attribute table provides the
 following functionalities (see figure_layout_table_ppt_):
@@ -134,7 +141,7 @@ following functionalities (see figure_layout_table_ppt_):
 
 
 Feature filtering
------------------
+.................
 
 The :guilabel:`Feature filtering` group of the attribute table provides
 the following functionalities (see figure_layout_table_filter_):
@@ -169,7 +176,7 @@ You can:
   in the attribute field 'USE'.
 
 Appearance
-----------
+..........
 
 The :guilabel:`Appearance` group of the attribute table provides
 the following functionalities  (see figure_layout_table_appearance_):
@@ -224,9 +231,61 @@ the following functionalities  (see figure_layout_table_appearance_):
   a column is  smaller than its content's length. It can be **Wrap text** or
   **Truncate text**.
 
+The fixed table item
+--------------------
+
+Additional information about the map can be inserted manually into a table by
+choosing || :guilabel:`Add Fixed Table` and by following :ref:`items
+creation instructions <create_layout_item>` to add a new map item that you can
+later manipulate the same way as exposed in :ref:`interact_layout_item`.
+
+By default, an empty table with two minimized columns and rows appears in
+the map layout. You have to customize the table in the :guilabel:`Item Properties` panel.
+Other than the :ref:`items common properties <item_common_properties>`, this feature has
+the following functionalities (see figure_layout_fixed_table_):
+
+Main properties
+...............
+
+In :guilabel:`Main properties` you can work with the :guilabel:`Table designer` 
+when clicking the :guilabel:`Edit table ...`:
+
+* You can click into the table and insert texts manually.
+* Through the menus on top it is possible to 
+
+  * :guilabel:`Import Content From Clipboard` by going to :guilabel:`File`
+    (it overrides given inputs).
+  * work with selection functionalities for rows and columns by going
+    to :guilabel:`Edit`.
+  * :guilabel:`Insert rows`, :guilabel:`Insert columns`,
+    :guilabel:`Delete Rows`, :guilabel:`Delete Columns` as well as
+    using the option to |checkbox| :guilabel:`Include Header Row`.
+ 
+* You can work with the :guilabel:`Cell Contents` section on the right and:
+   
+  * Define the text format of selected cells in :guilabel:`Formatting`
+   
+   * by clicking on the given |expression| expression button and using a
+     regular expression for the input of the cell
+   * by choosing the :guilabel:`Text format`
+   * by |checkbox| :guilabel:`Format as number` (several formats are available)
+   * by defining the :guilabel:`Horizonatl alignment` and the
+     :guilabel:`Vertical alignment`
+   * by choosing a :guilabel:`Background color`
+   
+  * Define the :guilabel:`Cell Size` with :guilabel:`Row height` and 
+    :guilabel:`Column width`.
+
+
+
+Appearance
+..........
+
+Tables common functionalities
+-----------------------------
 
 Show grid
----------
+.........
 
 The :guilabel:`Show grid` group of the attribute table provides
 the following functionalities (see figure_layout_table_grid_):
@@ -246,7 +305,7 @@ the following functionalities (see figure_layout_table_grid_):
 
 
 Fonts and text styling
-----------------------
+......................
 
 The :guilabel:`Fonts and text styling` group of the attribute table
 provides the following functionalities (see figure_layout_table_fonts_):
@@ -267,7 +326,7 @@ provides the following functionalities (see figure_layout_table_fonts_):
 
 
 Frames
--------
+......
 
 The :guilabel:`Frames` group of the attribute table properties provides
 the following functionalities (see figure_layout_table_frames_):
