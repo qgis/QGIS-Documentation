@@ -242,7 +242,7 @@ later manipulate the same way as exposed in :ref:`interact_layout_item`.
 By default, an empty table with two minimized columns and rows appears in
 the map layout. You have to customize the table in the :guilabel:`Item Properties` panel.
 Other than the :ref:`items common properties <item_common_properties>`, this feature has
-the following functionalities (see figure_layout_fixed_table_):
+the following functionalities:
 
 Main properties
 ...............
