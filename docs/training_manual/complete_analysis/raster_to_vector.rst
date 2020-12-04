@@ -46,9 +46,9 @@ style of this layer if you want to have a clearer visualization of it.
 Refer back to the module on vector analysis.
 
 * Create a new vector file that contains only the polygons where
-  :kbd:`suitable` has the value of :kbd:`1`.
-* Save the new file as :kbd:`exercise_data/residential_development/` as
-  :kbd:`suitable_terrain.shp`.
+  :guilabel:`suitable` has the value of ``1``.
+* Save the new file under :file:`exercise_data/residential_development/` as
+  :file:`suitable_terrain.shp`.
 
 :ref:`Check your results <complete-analysis-1>`
 
@@ -57,7 +57,7 @@ Refer back to the module on vector analysis.
 
 Although unnecessary for our current problem, it's useful to know about the
 opposite conversion from the one performed above. Convert to raster the
-:kbd:`suitable_terrain.shp` vector file you just created in previous step.
+:file:`suitable_terrain.shp` vector file you just created in previous step.
 
 * Click on :menuselection:`Raster --> Conversion --> Rasterize (Vector to
   Raster)` to start this tool, then set it up as in the screenshot below:
