@@ -235,7 +235,7 @@ The fixed table item
 --------------------
 
 Additional information about the map can be inserted manually into a table by
-choosing || :guilabel:`Add Fixed Table` and by following :ref:`items
+choosing |addManualTable| :guilabel:`Add Fixed Table` and by following :ref:`items
 creation instructions <create_layout_item>` to add a new map item that you can
 later manipulate the same way as exposed in :ref:`interact_layout_item`.
 
