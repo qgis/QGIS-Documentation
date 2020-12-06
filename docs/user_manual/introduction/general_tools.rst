@@ -1698,11 +1698,11 @@ default it will display the following information:
   
   * the name of the relation
   * the entry in reference field, e.g. the name of the related child feature
-  * **Actions**: 
-  * **Data attributes**. This is the list of attributes fields and values of the
-    related child feature. Also for the child feature you can define actions
+  * **Actions**: Also for the child feature you can define actions
     in the layer's properties dialog (see :ref:`actions_menu`) and the default
     action is ``View feature form``.
+  * **Data attributes**. This is the list of attributes fields and values of the
+    related child feature. 
   
 .. note:: Links in the feature's attributes are clickable from the :guilabel:`Identify
    Results` panel and will open in your default web browser.
