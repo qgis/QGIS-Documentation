@@ -178,40 +178,6 @@ text buffer` checkbox in the |labelbuffer| :guilabel:`Buffer` tab. Then you can:
   :ref:`paint effects <draw_effects>` for improving text readability,
   eg through outer glows and blurs.
 
-.. _labels_mask:
-
-Mask tab
---------
-
-The |labelmask| :guilabel:`Mask` tab allows you to define a mask areas
-around labels or point markers. This feature is very useful when your
-symbols and labels are overlapping each other in the map and you want to
-make the labels visible. 
-To create masks, activate the |checkbox| :guilabel:`Enable mask` checkbox
-in the |labelmask| tab. Then you can:
-
-* Set the mask's :guilabel:`Size`.
-* Set the mask's :guilabel:`Opacity`.
-* Apply a :guilabel:`Pen Join Style`.
-* Activate the |checkbox| :guilabel:`Draw effects` checkbox.
-
-Finally you have to select this mask shape as a mask source in the
-layer properties |labelmask| :guilabel:`Mask` tab. To do so 
-
-* Click the :guilabel:`Masked symbol layers`.
-* Choose the :guilabel:`Mask sources`. This defines the labels of the
-  layers that should be masked.
-  
-.. _figure_label_masks_1:
-   :align: center
-   
-   Mask settings - Mask tab
-   
-.. _figure_label_masks_2:
-   :align: center
-   
-   Layer properties - Mask tab
- 
 
 .. _labels_background:
 
@@ -324,6 +290,37 @@ tab and activate the |checkbox| :guilabel:`Draw drop shadow`. Then you can:
 * Use the :guilabel:`Blend mode` option to determine how your label's shadow
   will mix with the map components below them (more details at
   :ref:`blend-modes`).
+
+
+.. _labels_mask:
+
+Mask tab
+--------
+
+The |labelmask| :guilabel:`Mask` tab allows you to define a mask area around
+the labels. This feature is very useful when you have overlapping symbols and
+labels with similar colors, and you want to make the labels visible.
+
+.. _figure_label_mask:
+
+.. figure:: img/label_mask.png
+   :align: center
+
+   Labels settings - Mask tab
+
+To create masking effects on labels:
+
+#. Activate the |checkbox| :guilabel:`Enable mask` checkbox in the |labelmask| tab.
+#. Then you can set:
+
+   * the mask's :guilabel:`Size` in the :ref:`supported units <unit_selector>`
+   * the :guilabel:`Opacity` of the mask area around the label
+   * a :guilabel:`Pen Join Style`
+   * :ref:`paint effects <draw_effects>` through the |checkbox|
+     :guilabel:`Draw effects` checkbox.
+
+#. Select this mask shape as a mask source in the overlapping layer properties
+   |labelmask| :guilabel:`Mask` tab (see :ref:`vector_mask_menu`).
 
 
 .. _labels_callouts:

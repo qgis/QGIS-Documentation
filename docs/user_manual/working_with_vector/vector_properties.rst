@@ -30,7 +30,7 @@ The vector :guilabel:`Layer Properties` dialog provides the following sections:
      - |system| :ref:`Source <vectorsourcemenu>`
      - |symbology| :ref:`Symbology <vector_style_menu>`:sup:`[1]`
    * - |labeling| :ref:`Labels <vector_labels_tab>`:sup:`[1]`
-     - |labelmask| :guilabel:`Mask`:sup:`[1]`
+     - |labelmask| :ref:`Mask <vector_mask_menu>`:sup:`[1]`
      - |3d| :ref:`3D View <sec_3_d_view>`:sup:`[1]`
    * - |diagram| :ref:`Diagrams <sec_diagram>`
      - |sourceFields| :ref:`Fields <vector_fields_menu>`
@@ -1862,6 +1862,37 @@ in the :ref:`Layers panel <label_legend>`, and in the :ref:`print layout legend
 
 When set, the diagram legend items (attributes with color and diagram size)
 are also displayed in the print layout legend, next to the layer symbology.
+
+.. _vector_mask_menu:
+
+Masks Properties
+================
+
+|labelmask| The :guilabel:`Masks` tab helps you configure the current layer
+symbols overlay with other symbol layers or labels, from any layer.
+This is meant to improve the readability of symbols and labels whose colors
+are close and can be hard to decipher when overlapping; it adds a custom and
+transparent mask around the items to "hide" parts of the symbol layers of
+the current layer.
+
+To apply masks on the active layer, you first need to enable in the project
+either :ref:`mask symbol layers <mask_marker_symbol>` or :ref:`mask labels
+<labels_mask>`. Then, from the :guilabel:`Masks` tab, check:
+
+* the :guilabel:`Masked symbol layers`: lists in a tree structure all the symbol
+  layers of the current layer. There you can select the symbol layer item you
+  would like to transparently "cut out" when they overlap the selected mask sources
+* the :guilabel:`Mask sources` tab: list all the mask labels and mask symbol
+  layers defined in the project.
+  Select the items that would generate the mask over the selected masked symbol
+  layers
+
+.. _figure_mask_properties:
+
+.. figure:: img/masks_properties.png
+   :align: center
+
+   Layer properties - Masks tab
 
 
 .. index:: 3d view properties
