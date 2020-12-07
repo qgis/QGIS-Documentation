@@ -408,7 +408,9 @@ in :ref:`layout_items` chapter.
  |addArrow| :guilabel:`Add Arrow`                    :guilabel:`Toolbox`        :ref:`layout_arrow_item`
  |addNodesShape| :menuselection:`Add Node Item -->`  :guilabel:`Toolbox`        :ref:`layout_node_based_shape_item`
  |addHtml| :guilabel:`Add HTML`                      :guilabel:`Toolbox`        :ref:`layout_html_item`
- |openTable| :guilabel:`Add Attribute Table`         :guilabel:`Toolbox`        :ref:`layout_table_item`
+ |addTable| :guilabel:`Add Attribute Table`          :guilabel:`Toolbox`        :ref:`layout_attribute_table_item`
+ |addManualTable| :guilabel:`Add Fixed Table`        :guilabel:`Toolbox`        :ref:`layout_fixed_table_item`
+ |add3DMap| :guilabel:`Add 3D Map`                   :guilabel:`Toolbox`        :ref:`layout_map3d_item`
 =================================================== ======================== =====================================
 
 
@@ -787,6 +789,8 @@ the actions done after the selected one will be removed.
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |add3DMap| image:: /static/common/mActionAdd3DMap.png
+   :width: 1.5em
 .. |addArrow| image:: /static/common/mActionAddArrow.png
    :width: 1.5em
 .. |addBasicShape| image:: /static/common/mActionAddBasicShape.png
@@ -797,9 +801,13 @@ the actions done after the selected one will be removed.
    :width: 1.5em
 .. |addLegend| image:: /static/common/mActionAddLegend.png
    :width: 1.5em
+.. |addManualTable| image:: /static/common/mActionAddManualTable.png
+   :width: 1.5em
 .. |addMap| image:: /static/common/mActionAddMap.png
    :width: 1.5em
 .. |addNodesShape| image:: /static/common/mActionAddNodesShape.png
+   :width: 1.5em
+.. |addTable| image:: /static/common/mActionAddTable.png
    :width: 1.5em
 .. |atlas| image:: /static/common/mIconAtlas.png
    :width: 1.5em
@@ -862,8 +870,6 @@ the actions done after the selected one will be removed.
 .. |newPage| image:: /static/common/mActionNewPage.png
    :width: 1.5em
 .. |northArrow| image:: /static/common/north_arrow.png
-   :width: 1.5em
-.. |openTable| image:: /static/common/mActionOpenTable.png
    :width: 1.5em
 .. |pan| image:: /static/common/mActionPan.png
    :width: 1.5em
