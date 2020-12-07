@@ -7,6 +7,108 @@ Cartography
       :local:
       :depth: 1
 
+.. _qgisangletonearest:
+
+Align points to features
+------------------------
+
+Calculates the rotation required to align point features with their nearest
+feature from another reference layer. A new field is added to the output layer
+which is filled with the angle (in degrees, clockwise) to the nearest reference
+feature.
+
+Optionally, the output layer's symbology can be set to automatically use the
+calculated rotation field to rotate marker symbols.
+If desired, a maximum distance to use when aligning points can be set,
+to avoid aligning isolated points to distant features.
+
+.. hint:: This algorithm is designed for use cases like aligning building
+ point symbols to follow the nearest road direction.
+
+|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: point]
+     - Point features to calculate the rotation for
+   * - **Reference layer**
+     - ``REFERENCE_LAYER``
+     - [vector: any]
+     - Layer to find the closest feature from for rotation calculation
+   * - **Maximum distance to consider**
+
+       Optional
+     - ``MAX_DISTANCE``
+     - [number]
+
+       Default: Not set
+     - If no reference feature is found within this distance, no rotation
+       is assigned to the point feature.
+   * - **Angle field name**
+     - ``FIELD_NAME``
+     - [string]
+
+       Default: 'rotation'
+     - Field in which to store the rotation value.
+   * - **Automatically apply symbology**
+     - ``APPLY_SYMBOLOGY``
+     - [boolean]
+
+       Default: True
+     - Rotates the symbol marker of the features using the angle field value
+   * - **Aligned layer**
+     - ``OUTPUT``
+     - [vector: point]
+       
+       Default: ``[Save to temporary file]``
+     - Specify the rotated output vector layer. One of:
+
+       * Save to a Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to GeoPackage...
+       * Save to Database Table...
+
+       The file encoding can also be changed here.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Aligned layer**
+     - ``OUTPUT``
+     - [vector: point]
+     - The point layer appended with a rotation field.
+       If loaded to QGIS, it is applied by default the input layer symbology,
+       with a data-defined rotation of its marker symbol.
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:angletonearest``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
 .. _qgiscombinestyles:
 
 Combine style databases
@@ -604,3 +706,13 @@ Python code
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
