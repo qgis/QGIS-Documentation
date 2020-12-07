@@ -256,4 +256,3 @@ Debugging` in the bottom left of the window.
 
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
-
