@@ -365,7 +365,8 @@ Icon                     Substitution                 Icon                     S
 |addArrow|               ``|addArrow|``               |northArrow|             ``|northArrow|``
 |add3DMap|               ``|add3DMap|``               |addMap|                 ``|addMap|``
 |addLegend|              ``|addLegend|``              |addHtml|                ``|addHtml|``
-|addImage|               ``|addImage|``               |addTable|               ``|addTable|``
+|addManualTable|         ``|addManualTable|``         |addTable|               ``|addTable|``
+|addImage|               ``|addImage|``
 |label|                  ``|label|``                  |scaleBar|               ``|scaleBar|``
 |select|                 ``|select|``                 |moveItemContent|        ``|moveItemContent|``
 |setToCanvasScale|       ``|setToCanvasScale|``       |setToCanvasExtent|      ``|setToCanvasExtent|``
@@ -530,6 +531,8 @@ Icon                            Substitution                        Icon        
 .. |addLayer| image:: /static/common/mActionAddLayer.png
    :width: 1.5em
 .. |addLegend| image:: /static/common/mActionAddLegend.png
+   :width: 1.5em
+.. |addManualTable| image:: /static/common/mActionAddManualTable.png
    :width: 1.5em
 .. |addMap| image:: /static/common/mActionAddMap.png
    :width: 1.5em
