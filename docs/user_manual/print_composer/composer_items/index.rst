@@ -14,7 +14,7 @@ Layout Items
    composer_label
    composer_legend
    composer_scale_bar
-   composer_attribute_table
+   composer_table_items
    composer_image
    composer_html_frame
    composer_items_shape
