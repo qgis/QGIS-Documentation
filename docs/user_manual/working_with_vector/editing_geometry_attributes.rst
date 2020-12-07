@@ -283,7 +283,7 @@ digitization:
 #. Move the mouse over another vertex or segment you'd like to snap and,
    instead of the usual straight line, the digitizing rubber band
    represents a path from the last point you snapped to the current
-   position.
+   position. The tool also works with curved geometries.
 
    QGIS actually uses the underlying features topology to build the
    shortest path between the two points.
@@ -323,6 +323,12 @@ direction and a negative value does the opposite.
    digitize parts of the feature with tracing enabled and other
    parts with tracing disabled.
    Tools behave as usual when tracing is disabled.
+   
+.. tip:: **Convert tracing to curved geometries**
+   
+   By using :menuselection:`Settings --> Options --> Digitizing --> Tracing` 
+   you can create curved geometries while digitizing.
+   See :ref:`digitizing options <digitizing_options>`.
 
 
 .. index:: Digitizing, Digitizing tools
