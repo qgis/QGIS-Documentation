@@ -475,7 +475,7 @@ Label modes for line layers include:
 .. figure:: img/line_label_placement.png
    :align: center
 
-   Label placement examples in lines
+   Label placement examples for lines
 
 Next to placement modes, you can set:
 
@@ -507,8 +507,15 @@ Next to placement modes, you can set:
 Placement for polygon layers
 ............................
 
-You can choose one of the following modes for placing labels of polygons
-(see figure_labels_placement_polygon_):
+You can choose one of the following modes for placing labels of polygons:
+
+.. _figure_labels_placement_polygon:
+
+.. figure:: img/polygon_label_placement.png
+   :align: center
+
+   Label placement examples for polygons
+
 
 * :guilabel:`Offset from Centroid`: labels are placed over the feature centroid
   or at a fixed :guilabel:`Offset X,Y` distance (in :ref:`supported units
@@ -561,13 +568,6 @@ You can choose one of the following modes for placing labels of polygons
 
 * :guilabel:`Outside Polygons`: always places labels outside the polygons,
   at a set :guilabel:`Distance`
-
-.. _figure_labels_placement_polygon:
-
-.. figure:: img/polygon_label_placement.png
-   :align: center
-
-   Label placement examples in polygons
 
 Common placement settings
 .........................
