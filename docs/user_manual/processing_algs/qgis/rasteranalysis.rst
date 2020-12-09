@@ -2180,6 +2180,9 @@ Zonal statistics
 Calculates statistics of a raster layer for each feature of an
 overlapping polygon vector layer.
 
+Prior to QGIS 3.16, the algorithm edited the layer in-place, adding the new
+statistics fields to it. Now, it outputs a new layer with these statistics.
+
 Parameters
 ..........
 
@@ -2232,7 +2235,7 @@ Parameters
        * 9 --- Majority
        * 10 --- Variety
        * 11 --- Variance
-   * - **Zonal Statistics**
+   * - **Zonal Statistics** |316|
      - ``OUTPUT``
      - [vector: polygon]
 
@@ -2259,7 +2262,7 @@ Outputs
      - Name
      - Type
      - Description
-   * - **Zonal Statistics**
+   * - **Zonal Statistics** |316|
      - ``OUTPUT``
      - [vector: polygon]
      - The zone vector layer with added statistics.
@@ -2274,6 +2277,7 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
+.. |316| replace:: ``NEW in 3.16``
 .. |gaussian_formula| image:: img/fuzzy_gaussian_formula.png
    :height: 1.5em
 .. |fuzzy_large_formula| image:: img/fuzzy_large_formula.png
