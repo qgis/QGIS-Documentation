@@ -77,6 +77,7 @@ The :guilabel:`Layout Manager` is the main window to manage print layouts in the
 project. It gives you an overview of existing print layouts and reports in the
 project and offers tools to:
 
+* search for a layout;
 * add new print layout or new report from scratch, template or duplicating an
   existing one;
 * rename or delete any of them;
