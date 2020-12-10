@@ -399,7 +399,7 @@ transformation.
 
 .. _figure_raster_resampling:
 
-.. figure:: img/rasterRenderAndRessampling.png
+.. figure:: img/rasterRenderAndResampling.png
    :align: center
 
    Raster Symbology - Color rendering and Resampling settings
