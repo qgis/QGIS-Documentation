@@ -382,7 +382,7 @@ You can achieve special rendering effects for your raster file(s)
 by using one of the blending modes (see :ref:`blend-modes`).
 
 Further settings can be made by modifying the :guilabel:`Brightness`,
-:guilabel:`Saturation` and :guilabel:`Contrast`.
+:guilabel:`Saturation`, :guilabel:`Gamma` and :guilabel:`Contrast`.
 You can also use a :guilabel:`Grayscale` option, where you can choose
 between 'Off', 'By lightness', 'By luminosity' and 'By average'.
 For one :guilabel:`Hue` in the color table, you can modify the
