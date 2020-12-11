@@ -15,13 +15,13 @@ fi
 touch running
 trap "rm $PWD/running" EXIT
 
-# throw away building artefacts
+# throw away building artefacts or edits(!)
 git stash
 git stash drop
-# get latest version
+# get latest version from github
 git pull
 
-docker run -v $PWD:/build -v /var/www/qgisdata/QGIS-Documentation/live/html:/site -w="/build" --rm=true --name="qgis_docs_master_build" qgis/sphinx_pdf_3 make site
+docker run -v $PWD:/build -v /var/www/qgisdata/QGIS-Documentation/live/html:/site -w="/build" --rm=true --name="qgis_docs_master_build" qgis/sphinx_pdf_3 make all
 
 now=`date`
 echo "Finished: $now"
