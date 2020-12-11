@@ -10,6 +10,8 @@ Comparaison matrix
       :depth: 3
 
 
+... _comp-matrix:
+
 .. list-table:: 
    :header-rows: 1
    :stub-columns: 1
@@ -27,7 +29,7 @@ Comparaison matrix
    * - Licence
      - GPL
      - GPL
-     - proprietary
+     - commercial
        
    * - Commercial support
      - Multiple companies

@@ -17,4 +17,6 @@ QGIS Server Guide/Manual
   config
   development_server
   containerized_deployment
+  integration_with_third_parties
   comparaison_matrix
+  faq
