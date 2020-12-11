@@ -163,7 +163,7 @@ the person who creates the forms).
       :align: center
 
 #. Set its name to ``name``.
-#. Using the same approach, create another :guilabel:`Line Edit` and set its name to
+#. Using the same approach, create a new :guilabel:`Spin Box` and set its name to
    ``age``.
 #. Add a :guilabel:`Label` with the text ``Add a New Person`` in a
    bold font (look in the object *properties* to find out how to set
