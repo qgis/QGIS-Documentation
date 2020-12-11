@@ -60,199 +60,19 @@ This is a good thing, it tells you we're on the right track as the server is
 saying that we haven't asked for a supported service. We'll see later on
 how to make WMS requests.
 
-|FA| HTTP Server Configuration
+|hard| |FA| HTTP Server Configuration
 -------------------------------------------------------------------------------
 
-In order to access on the installed QGIS server from an Internet Browser we
-need to use an HTTP server.
-
-In this lesson we're going to use the
-`Apache HTTP server <https://httpd.apache.org>`_, colloquially called Apache.
-
-First we need to install Apache by running the following command in a terminal::
-
- apt install apache2 libapache2-mod-fcgid
-
-You can run QGIS server on your default website, or configure a virtualhost
-specifically for this, as follows.
-
-In the :file:`/etc/apache2/sites-available` directory let's create a file
-called :file:`qgis.demo.conf`, with this content:
-
-.. code-block:: apacheconf
-
- <VirtualHost *:80>
-   ServerAdmin webmaster@localhost
-   ServerName qgis.demo
-
-   DocumentRoot /var/www/html
-
-   # Apache logs (different than QGIS Server log)
-   ErrorLog ${APACHE_LOG_DIR}/qgis.demo.error.log
-   CustomLog ${APACHE_LOG_DIR}/qgis.demo.access.log combined
-
-   # Longer timeout for WPS... default = 40
-   FcgidIOTimeout 120
-
-   FcgidInitialEnv LC_ALL "en_US.UTF-8"
-   FcgidInitialEnv PYTHONIOENCODING UTF-8
-   FcgidInitialEnv LANG "en_US.UTF-8"
-
-   # QGIS log (different from apache logs) see https://docs.qgis.org/testing/en/docs/user_manual/working_with_ogc/ogc_server_support.html#qgis-server-logging
-   FcgidInitialEnv QGIS_SERVER_LOG_FILE /var/log/qgis/qgisserver.log
-   FcgidInitialEnv QGIS_SERVER_LOG_LEVEL 0
-
-   FcgidInitialEnv QGIS_DEBUG 1
-
-   # default QGIS project
-   SetEnv QGIS_PROJECT_FILE /home/qgis/projects/world.qgs
-
-   # QGIS_AUTH_DB_DIR_PATH must lead to a directory writeable by the Server's FCGI process user
-   FcgidInitialEnv QGIS_AUTH_DB_DIR_PATH "/home/qgis/qgisserverdb/"
-   FcgidInitialEnv QGIS_AUTH_PASSWORD_FILE "/home/qgis/qgisserverdb/qgis-auth.db"
-
-   # See https://docs.qgis.org/testing/en/docs/user_manual/working_with_vector/supported_data.html#pg-service-file
-   SetEnv PGSERVICEFILE /home/qgis/.pg_service.conf
-   FcgidInitialEnv PGPASSFILE "/home/qgis/.pgpass"
-
-   # Tell QGIS Server instances to use a specific display number
-   FcgidInitialEnv DISPLAY ":99"
-
-   # if qgis-server is installed from packages in debian based distros this is usually /usr/lib/cgi-bin/
-   # run "locate qgis_mapserv.fcgi" if you don't know where qgis_mapserv.fcgi is
-   ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
-   <Directory "/usr/lib/cgi-bin/">
-     AllowOverride None
-     Options +ExecCGI -MultiViews -SymLinksIfOwnerMatch
-     Order allow,deny
-     Allow from all
-     Require all granted
-   </Directory>
-
-  <IfModule mod_fcgid.c>
-  FcgidMaxRequestLen 26214400
-  FcgidConnectTimeout 60
-  </IfModule>
-
- </VirtualHost>
-
-You can do the above in a linux Desktop system by pasting and saving the above
-configuration after doing ``nano /etc/apache2/sites-available/qgis.demo.conf``.
-
-.. note:: See some of the configuration options are explained in the Server
- :ref:`server_env_variables` section.
-
-Let's now create the directories that will store the QGIS Server logs and
-the authentication database:
-
-.. code-block:: bash
-
- mkdir /var/log/qgis/
- chown www-data:www-data /var/log/qgis
-
- mkdir /home/qgis/qgisserverdb
- chown www-data:www-data /home/qgis/qgisserverdb
-
-.. note::
-
- ``www-data`` is the Apache user on Debian based systems and we need Apache to have access to
- those locations or files.
- The ``chown www-data...`` commands changes the owner of the respective directories and files
- to ``www-data``.
-
-We can now enable the `virtual host <https://httpd.apache.org/docs/2.4/vhosts>`_,
-enable the ``fcgid`` mod if it's not already enabled and restart the ``apache2`` service:
-
-.. code-block:: bash
-
- a2enmod fcgid
- a2ensite qgis.demo
- systemctl restart apache2
+In order to access on the installed QGIS server from an Internet Browser we need to use an HTTP server.
+The Apache HTTP Server installation process is detailled :ref:`here <httpserver>`.
 
 .. note::
 
  If you installed QGIS Server without running an X Server (included in Linux
  Desktop) and if you also want to use the ``GetPrint`` command then you should
  install a fake X Server and tell QGIS Server to use it. You can do that by
- running the following commands.
+ following the :ref:`Xvfb installation process <xvfb>`.
 
- Install xvfb:
-
-.. code-block:: bash
-
- apt install xvfb
-
-Create the service file:
-
-.. code-block:: bash
-
-  sh -c \
-  "echo \
-  '[Unit]
-  Description=X Virtual Frame Buffer Service
-  After=network.target
-
-  [Service]
-  ExecStart=/usr/bin/Xvfb :99 -screen 0 1024x768x24 -ac +extension GLX +render -noreset
-
-  [Install]
-  WantedBy=multi-user.target' \
-  > /etc/systemd/system/xvfb.service"
-
-Enable, start and check the status of the ``xvfb.service``:
-
-.. code-block:: bash
-
-   systemctl enable xvfb.service
-   systemctl start xvfb.service
-   systemctl status xvfb.service
-
-In the above configuration file there's a ``FcgidInitialEnv DISPLAY ":99"``
-that tells QGIS Server instances to use display no. 99. If you're running the
-Server in Desktop then there's no need to install xvfb and you should simply
-comment with ``#`` this specific setting in the configuration file.
-More info at https://www.itopen.it/qgis-server-setup-notes/.
-
-Now that Apache knows that he should answer requests to http://qgis.demo
-we also need to setup the client system so that it knows who ``qgis.demo``
-is. We do that by adding ``127.0.0.1 qgis.demo`` in the
-`hosts <https://en.wikipedia.org/wiki/Hosts_%28file%29>`_ file. We can do it
-with ``sh -c "echo '127.0.0.1 qgis.demo' >> /etc/hosts"``.
-Replace ``127.0.0.1`` with the IP of your server.
-
-.. note::
-
-   Remember that both the :file:`myhost.conf` and :file:`/etc/hosts` files should
-   be configured for our setup to work.
-   You can also test the access to your QGIS Server from other clients on the
-   network (e.g. Windows or macOS machines) by going to their :file:`/etc/hosts`
-   file and point the ``myhost`` name to whatever IP the server machine has on the
-   network. You can be sure that that specific IP is not ``127.0.0.1`` as that's
-   the local IP, only accessible from the local machine.  On ``*nix`` machines the
-   :file:`hosts` file is located in :file:`/etc`, while on Windows it's under
-   the :file:`C:\\Windows\\System32\\drivers\\etc` directory. Under Windows you
-   need to start your text editor with administrator privileges before opening
-   the hosts file.
-
-We can test one of the installed qgis servers with a http request from command
-line with ``curl http://qgis.demo/cgi-bin/qgis_mapserv.fcgi`` which
-should output:
-
-.. code-block:: xml
-
-  <ServiceExceptionReport version="1.3.0" xmlns="https://www.opengis.net/ogc">
-  <ServiceException code="Service configuration error">Service unknown or unsupported</ServiceException>
-  </ServiceExceptionReport>
-
-.. note::
-
- curl can be installed with ``apt install curl``.
-
-Apache is now configured.
-
-Also, from your web browser you can check the capabilities of the server:
-
-http://qgis.demo/cgi-bin/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
 
 |moderate| |FA| Create another virtual host
 -------------------------------------------------------------------------------
@@ -328,3 +148,4 @@ The topic of the next lesson is to learn how to access QGIS Server WMS services.
 .. |LS| replace:: Lesson:
 .. |WN| replace:: What's Next?
 .. |moderate| image:: /static/common/moderate.png
+.. |hard| image:: /static/common/hard.png
