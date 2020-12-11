@@ -17,7 +17,7 @@ Comparison matrix
    :stub-columns: 1
 
    * - Features
-     - QGis server
+     - QGIS server
      - Geoserver
      - ArcGis server
        
@@ -77,7 +77,7 @@ Comparison matrix
    :stub-columns: 1
 
    * - OGC standards
-     - QGis server
+     - QGIS server
      - Geoserver
      - ArcGis server
        
@@ -90,6 +90,11 @@ Comparison matrix
      - 1.1.0 - 1.0.0
      - 2.0.0 - 1.0.0
      - 2.0.0 - 1.0.0
+
+   * - OAPIF (aka WFS3)
+     - 1.0.0
+     - no
+     - no
        
    * - WMTS
      - 1.0.0

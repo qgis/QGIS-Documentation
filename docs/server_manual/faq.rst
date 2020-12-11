@@ -10,9 +10,9 @@ Frequently Asked Question
       :depth: 3
 
 
-* *What are the differences between QGis Desktop and QGis Server?*
+* *What are the differences between QGIS Desktop and QGIS Server?*
 
-	QGis Desktop has an graphical user interface and allow you to create and modify maps. QGis server is a server application serving your QGis project files to end user applications via OGC streams like `WMS, WFS, etc. <https://www.ogc.org/docs/is>`_.
+	QGIS Desktop has an graphical user interface and allow you to create and modify maps. QGIS server is a server application serving your QGIS project files to end user applications via OGC streams like `WMS, WFS, etc. <https://www.ogc.org/docs/is>`_.
 
 * *What is OGC?*
 
@@ -22,13 +22,13 @@ Frequently Asked Question
 
   ArcGIS server, Geoserver, Mapserver, Mapnik etc.
 
-*	*How to compare QGis server to other web mapping servers?*
+*	*How to compare QGIS server to other web mapping servers?*
 
 	:doc:`See the Comparison matrix<comparison_matrix>`.
 
 * *What is a tile cache?*
 
-	Maps are often static. As most mapping clients render WMS (Web Map Service) data every time they are queried, this can result in unnecessary processing and increased wait times. The tile cache optimizes this experience by saving (caching) map images, or tiles, as they are requested, in effect acting as a proxy between client (such as OpenLayers or Google Maps) and server (any WMS-compliant server). As new maps and tiles are requested, QGis server intercepts these calls and returns pre-rendered tiles if stored, or calls the QGIs engine to render new tiles as necessary. Thus, once tiles are stored, the speed of map rendering increases by many times, creating a much improved user experience.
+	Maps are often static. As most mapping clients render WMS (Web Map Service) data every time they are queried, this can result in unnecessary processing and increased wait times. The tile cache optimizes this experience by saving (caching) map images, or tiles, as they are requested, in effect acting as a proxy between client (such as OpenLayers or Google Maps) and server (any WMS-compliant server). As new maps and tiles are requested, QGIS server intercepts these calls and returns pre-rendered tiles if stored, or calls the QGIs engine to render new tiles as necessary. Thus, once tiles are stored, the speed of map rendering increases by many times, creating a much improved user experience.
 
 * *What is PostGIS?*
 
