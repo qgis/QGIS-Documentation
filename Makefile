@@ -11,8 +11,10 @@ SPHINXBUILD     ?= sphinx-build
 SPHINXINTL      ?= sphinx-intl
 SOURCEDIR       = .
 BUILDDIR        = build
-#SITEDIR         = /var/www/html/qgisdocs
-SITEDIR         = qgis2:/var/www/qgisdata/QGIS-Documentation-3.16/live/html
+#SITEDIR         = qgis2:/var/www/qgisdata/QGIS-Documentation-3.16/live/html
+#SITEDIR         = /var/www/qgisdata/QGIS-Documentation-3.16/live/html
+# to be able to run the Makefile in a docker you have to mount (with -v) your site dir on /site
+SITEDIR         = /site
 VERSION         = 3.16
 
 
@@ -104,20 +106,23 @@ zip:
 	mv $(BUILDDIR)/html/QGIS-$(VERSION)-Documentation-$(LANG).zip $(BUILDDIR)/zip/;
 
 site: html zip
-	rsync -az $(BUILDDIR)/html/$(LANG) $(SITEDIR)/;
+	rsync -hrzc --delete --progress $(BUILDDIR)/html/$(LANG) $(SITEDIR)/;
 
+full: html zip
+	make LANG=$(LANG) pdf;
+	
 # this will build ALL languages, AND tries to rsync them to the web dir on qgis2
 # to be able to run this you will need a key on the server
 all: springclean
 	@for LANG in $(LANGUAGES) ; do \
 		make LANG=$$LANG site; \
 	done
-	rsync -az $(BUILDDIR)/zip $(SITEDIR)/;
+	rsync -hvrzc $(BUILDDIR)/zip $(SITEDIR)/;
 
 	@for LANG in $(LANGUAGES) ; do \
 		make LANG=$$LANG pdf; \
 	done
-	rsync -az $(BUILDDIR)/pdf $(SITEDIR)/;
+	rsync -hvrzc $(BUILDDIR)/pdf $(SITEDIR)/;
 
 # this will pull ALL translations (or at least from the languages we build for)
 # to your local disk, so it can be committed into github
