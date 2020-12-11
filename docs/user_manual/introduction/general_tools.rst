@@ -1693,8 +1693,7 @@ default it will display the following information:
 
 * **Data attributes**: This is the list of attribute fields and values for the
   feature that has been clicked.
-* information about the related child feature if you defined a relation as described
-  in :ref:`vector_relations´:
+* information about the related child feature if you defined a :ref:`relation <vector_relations>`:
   
   * the name of the relation
   * the entry in reference field, e.g. the name of the related child feature
