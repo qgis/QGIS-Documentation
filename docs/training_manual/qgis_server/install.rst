@@ -64,7 +64,7 @@ how to make WMS requests.
 -------------------------------------------------------------------------------
 
 In order to access on the installed QGIS server from an Internet Browser we need to use an HTTP server.
-The Apache HTTP Server installation process is detailled :ref:`here <httpserver>`.
+The Apache HTTP Server installation process is detailed :ref:`here <httpserver>`.
 
 .. note::
 
