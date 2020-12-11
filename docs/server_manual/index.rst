@@ -18,5 +18,5 @@ QGIS Server Guide/Manual
   development_server
   containerized_deployment
   integration_with_third_parties
-  comparaison_matrix
+  comparison_matrix
   faq

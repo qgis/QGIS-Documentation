@@ -24,7 +24,7 @@ Frequently Asked Question
 
 *	*How to compare QGis server to other web mapping servers?*
 
-	:doc:`See the Comparaison matrix<comparaison_matrix>`.
+	:doc:`See the Comparison matrix<comparison_matrix>`.
 
 * *What is a tile cache?*
 

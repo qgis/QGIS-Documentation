@@ -1,5 +1,5 @@
 ******************
-Comparaison matrix
+Comparison matrix
 ******************
 
 
