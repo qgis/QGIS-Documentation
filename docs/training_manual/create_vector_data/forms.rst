@@ -118,7 +118,7 @@ You can also design your own custom form completely from scratch.
    attributes:
 
    * name (text)
-   * age (text)
+   * age (integer)
 
    .. figure:: img/new_point_layer.png
       :align: center
@@ -162,9 +162,9 @@ the person who creates the forms).
    .. figure:: img/qt_line_edit.png
       :align: center
 
-#. Set its name to ``Name``.
-#. Using the same approach, create a new spinbox and set its name to
-   ``Age``.
+#. Set its name to ``name``.
+#. Using the same approach, create another :guilabel:`Line Edit` and set its name to
+   ``age``.
 #. Add a :guilabel:`Label` with the text ``Add a New Person`` in a
    bold font (look in the object *properties* to find out how to set
    this).
