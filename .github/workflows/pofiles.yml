@@ -1,0 +1,53 @@
+name: Update English PO files for translation
+
+on:
+  push:
+    branches:
+      - release_3.16
+    paths:
+      - 'docs/**'
+
+  schedule: #run at 02:00 UTC every day
+    - cron:  '00 02 * * *'
+
+jobs:
+  prepare_translation:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: checkout
+      uses: actions/checkout@v2
+      with:
+        ref: release_3.16
+
+    - name: Set up Python 3.7
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.7
+
+    - name: Install dependencies
+      run: |
+          python -m pip install --upgrade pip
+          pip install sphinx sphinx-intl pyYAML
+
+    - name: Generate English PO files
+      id: "generate-po-files"
+      run: |
+          make gettext
+          sphinx-intl update -p build/gettext -l en
+
+    - name: Commit the PO files
+      description: Update the PO files if there are changes
+      id: "auto-commit-action"
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Update English PO files
+
+    - name: "Inform that changes have been made"
+      if: steps.auto-commit-action.outputs.changes_detected == 'true'
+      run: echo "Changes committed!"
+
+    - name: "Inform that no changes were performed"
+      if: steps.auto-commit-action.outputs.changes_detected == 'false'
+      run: echo "No Changes detected!"
