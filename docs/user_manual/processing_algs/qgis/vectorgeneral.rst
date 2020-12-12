@@ -1688,9 +1688,10 @@ Merge vector layers
 Combines multiple vector layers of the **same geometry** type into a
 single one.
 
-If attributes tables are different, in the attribute table of the
-resulting layer the fields from all input layers
-referencing the input layer name and its path will be appended.
+The attribute table of the resulting layer will contain the fields from all
+input layers. If fields with the same name but different types are found then
+the exported field will be automatically converted into a string type field.
+New fields storing the original layer name and source are also added.
 
 If any input layers contain Z or M values, then the output layer will
 also contain these values.
