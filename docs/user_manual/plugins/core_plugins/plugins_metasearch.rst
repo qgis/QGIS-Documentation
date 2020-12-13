@@ -196,9 +196,21 @@ You can fine tune MetaSearch with the following :guilabel:`Settings`:
 * :guilabel:`Results paging`: when searching metadata catalogs, the
   number of results to show per page. Default value is 10.
 
+CSW Server Errors
+-----------------
+
+In some cases, the CSW will work in a web browser, but not in MetaSearch.
+This may be due to the CSW server's configuration/setup.
+CSW server providers should ensure URLs are consistent and up to date in
+their configuration (this is common in HTTP -> HTTPS redirection scenarios).
+Please see the `pycsw FAQ item`_ for a deeper explanation of the issue and fix.
+Although the FAQ item is pycsw specific it can also apply in general to other
+CSW servers.
+
 
 .. _`CSW (Catalog Service for the Web)`: https://www.opengeospatial.org/standards/cat
 .. _`OGC (Open Geospatial Consortium)`: https://www.opengeospatial.org
+.. _`pycsw FAQ item`: https://pycsw.org/faq/#my-pycsw-install-doesnt-work-at-all-with-qgis
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
