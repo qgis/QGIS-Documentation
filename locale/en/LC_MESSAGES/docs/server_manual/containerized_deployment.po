@@ -1,0 +1,436 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.16\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-13 09:01+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../docs/server_manual/containerized_deployment.rst:3
+msgid "Containerized deployment"
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:11
+msgid ""
+"There are many ways to use containerized application, from the most "
+"simple (simple Docker images) to sophisticated (Kubernetes and so on)."
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:14
+msgid ""
+"This kind of deployment needs the `docker application "
+"<https://www.docker.com>`_ to be installed and running. Check this "
+"`tutorial <https://www.docker.com/101-tutorial>`_."
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:19
+msgid ""
+"Docker run pre packaged application (aka images) which can be retrieved "
+"as sources (Dockerfile and resources) to build or already built from "
+"registries (private or public)."
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:23
+msgid ""
+"QGIS Debian-Ubuntu package downloads need a valid gpg authentication key."
+" Please refer to the `installation pages "
+"<https://www.qgis.org/fr/site/forusers/alldownloads.html#debian-ubuntu>`_"
+" to update the following Dockerfile with the latest key fingerprint"
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:30
+msgid "Simple docker images"
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:32
+msgid ""
+"As the docker image does not exist in a public registry. you will need to"
+" build it. To do so create a directory :file:`qgis-server` and within its"
+" directory:"
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:35
+msgid "create a file :file:`Dockerfile` with this content:"
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:87
+msgid "create a file :file:`cmd.sh` with this content:"
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:98
+msgid "build the image with:"
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:106
+msgid "First run"
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:108
+msgid ""
+"To run the server you will need a QGIS project file. You can use one of "
+"yours or pick `this sample <https://gitlab.com/Oslandia/qgis/docker-"
+"qgis/-/blob/cc1798074d4a66a472721352f3984bb318777a5a/qgis-"
+"exec/data/osm.qgs>`_."
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:111
+msgid ""
+"To do so, create a directory :file:`data` within the directory :file"
+":`qgis-server` and copy your file in it. To comply with the following "
+"explanations, rename it to :file:`osm.qgs`."
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:115
+msgid "Now, you can run the server with:"
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:125
+msgid "Options used:"
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:127
+msgid "**-d**: run in the background"
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:128
+msgid "**--rm**: remove the container when it is stopped"
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:129
+msgid "**--name**: name of the container to be created"
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:130
+msgid "**--net**: (previously created) sub network"
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:131
+msgid "**--hostname**: container hostname, for later referencing"
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:132
+msgid "**-v**: local data directory to be mounted in the container"
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:133
+msgid "**-p**: host/container port mapping"
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:134
+msgid "**-e**: environment variable to be used in the container"
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:137
+msgid ""
+"To check, type ``docker ps | grep qgis-server`` and you should see a line"
+" with **qgis-server**::"
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:145
+msgid "Usable sample"
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:147
+msgid ""
+"As the server is only accepting fastcgi connections, you need an HTTP "
+"server that handles this protocol. To do so we have to create a simple "
+"Nginx configuration file and start a Nginx image."
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:152
+msgid ""
+"Create a file :file:`nginx.conf` in the current directory with this "
+"content:"
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:173
+msgid "And type this command:"
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:181
+msgid ""
+"To check capabilities availability, type in a browser "
+"http://localhost:8080/qgis-"
+"server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities"
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:185
+#: ../../docs/server_manual/containerized_deployment.rst:281
+#: ../../docs/server_manual/containerized_deployment.rst:504
+msgid "Cleanup"
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:187
+msgid "To cleanup the running images, type:"
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:196
+msgid "Docker stacks"
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:198
+msgid ""
+"The previous method is scriptable, but not easily packageable nor "
+"standardized or easily manageable."
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:201
+msgid ""
+"To work with a docker image set you could use a docker stack managed by "
+"an orchestrator. In a stack, the images are working in the same private "
+"network, and you can start / stop the whole stack or deploy the stack to "
+"other workers. There are many orchestrators, for example Swarm, "
+"Kubernetes and Mesos."
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:208
+msgid ""
+"In the following, we will present simple configurations for testing "
+"purposes. They are not suitable for production."
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:213
+msgid "Swarm/docker-compose"
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:215
+msgid ""
+"Docker now has its own orchestrator: Swarm (compatible with docker-"
+"compose files). You have to `enable it <https://docs.docker.com/get-"
+"started/orchestration/#enable-docker-swarm>`_ (the Mac version will also "
+"work with Linux)."
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:223
+msgid "Stack description"
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:225
+msgid ""
+"Now that you have Swarm working, create the service file (see `Deploy to "
+"Swarm <https://docs.docker.com/get-started/swarm-deploy/>`_) :file:`qgis-"
+"stack.yaml`:"
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:255
+msgid "To deploy (or update) the stack, type:"
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:261
+msgid ""
+"Check the stack deployment status until you obtain **1/1** in the "
+"**replicas** column:"
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:268
+msgid "Something like:"
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:277
+msgid ""
+"To check WMS capabilities, type in a web browser http://localhost:8080"
+"/qgis-server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities"
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:283
+msgid "To cleanup, type:"
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:290
+msgid "Kubernetes"
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:293
+msgid "Installation"
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:295
+msgid ""
+"If you have a **Docker Desktop** installation, using Kubernetes (aka k8s)"
+" is pretty straight forward: `enable k8s <https://docs.docker.com/get-"
+"started/orchestration/#enable-Kubernetes>`_."
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:299
+msgid ""
+"If not, follow the `minikube tutorial "
+"<https://Kubernetes.io/docs/tutorials/hello-minikube/>`_ or `microk8s for"
+" Ubuntu <https://ubuntu.com/tutorials/install-a-local-Kubernetes-with-"
+"microk8s>`_."
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:304
+msgid ""
+"As Kubernetes installation can be really complex, we will only focus on "
+"aspects used by this demo. For further / deeper information, check the "
+"`official documentation <https://Kubernetes.io/docs/home/>`_."
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:310
+msgid "microk8s"
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:312
+msgid ""
+"microk8s needs extra steps: you have to enable the registry and tag the "
+"qgis-server image in order to have Kubernetes to find the created images."
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:316
+msgid "First, enable the registry:"
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:322
+msgid "Then, tag and push the image to your newly created registry:"
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:328
+msgid ""
+"Finally, add or complete the :file:`/etc/docker/daemon.json` to have your"
+" registry **127.0.0.1:32000** listed in the **insecure-registries** "
+"field:"
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:341
+msgid "Creating manifests"
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:343
+msgid ""
+"Kubernetes describes the objects to deploy in yaml manifests. There are "
+"many different kinds, but we will only use deployments (handle pods, i.e."
+" docker images) and services to expose the deployments to internal or "
+"external purposes."
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:349
+msgid "Deployment manifests"
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:351
+msgid "Create a file :file:`deployments.yaml` with this content:"
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:423
+msgid "Service manifests"
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:425
+msgid "Create a file :file:`services.yaml` with this content:"
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:457
+msgid "Deploying manifests"
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:459
+msgid ""
+"To deploy the images and services in Kubernetes, one can use the "
+"dashboard (click on the **+** on the upper right) or the command line."
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:463
+msgid ""
+"When using the command line with microk8s you will have to prefix each "
+"command with `microk8s`."
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:466
+msgid "To deploy or update your manifests:"
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:472
+msgid "To check what is currently deployed:"
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:478
+msgid "You should obtain something like::"
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:494
+msgid "To read nginx/qgis logs, type:"
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:500
+msgid ""
+"To check WMS capabilities, type in a web browser http://localhost:30080"
+"/qgis-server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities"
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:506
+msgid "To clean up, type:"
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:513
+msgid "Cloud deployment"
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:515
+msgid ""
+"Managing your own cluster of servers to handle the deployment of "
+"containerized applications, is a complex job. You have to handle multiple"
+" issues, such as hardware, bandwidth and security at different levels."
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:520
+msgid ""
+"Cloud deployment solutions can be a good alternative when you do not want"
+" to focus on infrastructure management."
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:523
+msgid ""
+"A cloud deployment may use proprietary mechanisms, but they are also "
+"compatible with the stages explained previously (:ref:`docker images "
+"<simple-docker-images>` and :ref:`stack management <docker-stacks>`)."
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:529
+msgid "AWS usecase"
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:531
+msgid ""
+"With Amazon AWS, through `ECS (Elastic Container Service) "
+"<https://console.aws.amazon.com/ecs/home>`_ functionalities, you can use "
+"docker-compose or Kubernetes compatible wrappers to manage your stack. "
+"You will have to create an `image registry "
+"<https://console.aws.amazon.com/ecr/home>`_ for your custom images to be "
+"accessible."
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:539
+msgid ""
+"To use docker-compose alike functionalities, you need to install the "
+"**ecs-cli** client and have `proper permissions / roles "
+"<https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_execution_IAM_role.html>`_."
+" Then, with the help of the `ecs-cli compose` commands (see the `ecs-cli "
+"compose manual "
+"<https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-"
+"compose.html>`_ and `ecs-cli tutorial "
+"<https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-cli-"
+"tutorial-fargate.html>`_), you can reuse the :ref:`stack description "
+"<docker-compose-file>`."
+msgstr ""
+
+#: ../../docs/server_manual/containerized_deployment.rst:549
+msgid ""
+"To use Kubernetes, you can use the AWS web console or the command line "
+"tool `eksctl <https://docs.aws.amazon.com/eks/latest/userguide/getting-"
+"started.html>`_ and have the proper permissions / roles. Then with a well"
+" configured kubectl environment, you can reuse the :ref:`Kubernetes "
+"manifests <k8s-manifests>`."
+msgstr ""
+
