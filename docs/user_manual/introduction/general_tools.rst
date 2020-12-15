@@ -397,15 +397,12 @@ From a drop-down list of current layers in the layer panel, select an item and:
   layer style in the current project: you can therefore cancel or restore to any
   state by selecting it in the list and clicking :guilabel:`Apply`.
 
-<<<<<<< HEAD
-=======
 .. TODO: Move the next paragraph to the vector tile chapter when one is set
 
 For Vector Tile layers there is an option to show |checkbox| :guilabel:`Visible rules only`.
 This is very useful if you just want to work with rules that fall inside the
 current map canvas zoom level.
  
->>>>>>> a7fb98eb8 (Update list of tabs available in the layer styling panel (#6330))
 Another powerful feature of this panel is the |checkbox| :guilabel:`Live update` checkbox.
 Tick it to render your changes immediately on the map canvas:
 you no longer need to click the :guilabel:`Apply` button.
