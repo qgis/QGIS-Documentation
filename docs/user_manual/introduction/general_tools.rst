@@ -380,18 +380,29 @@ rather than as a separate dialog.
 
 From a drop-down list of current layers in the layer panel, select an item and:
 
-* Set raster layer |symbology| :guilabel:`Symbology`, |transparency| :guilabel:`Transparency`,
-  and |rasterHistogram| :guilabel:`Histogram` properties.
-  These options are the same as those in the :ref:`raster_properties_dialog`.
-* Set vector layer |symbology| :guilabel:`Symbology`, |3d| :guilabel:`3D View` and
-  |labeling| :guilabel:`Labels` properties.
-  These options are the same as those in the :ref:`vector_properties_dialog`.
+* Depending on the layer type, set:
+
+  * |symbology| :guilabel:`Symbology`, |transparency| :guilabel:`Transparency`,
+    and |rasterHistogram| :guilabel:`Histogram` properties for raster layer.
+    These options are the same as in the :ref:`raster_properties_dialog`.
+  * |symbology| :guilabel:`Symbology`, |labeling| :guilabel:`Labels`, |labelmask|
+    :guilabel:`Mask` and |3d| :guilabel:`3D View` properties for vector layer.
+    These options are the same as in the :ref:`vector_properties_dialog`.
+  * |symbology| :guilabel:`Symbology` and |3d| :guilabel:`3D View` properties
+    for mesh layer.
+    These options are the same as in the :ref:`label_meshproperties`.
 * Manage the associated style(s) in the |stylePreset| :guilabel:`Style Manager`
   (more details at :ref:`manage_custom_style`).
 * See the |history| :guilabel:`History` of changes you applied to the
   layer style in the current project: you can therefore cancel or restore to any
   state by selecting it in the list and clicking :guilabel:`Apply`.
 
+.. TODO: Move the next paragraph to the vector tile chapter when one is set
+
+For Vector Tile layers there is an option to show |checkbox| :guilabel:`Visible rules only`.
+This is very useful if you just want to work with rules that fall inside the
+current map canvas zoom level.
+ 
 Another powerful feature of this panel is the |checkbox| :guilabel:`Live update` checkbox.
 Tick it to render your changes immediately on the map canvas:
 you no longer need to click the :guilabel:`Apply` button.
@@ -2594,6 +2605,8 @@ The values presented in the varying size assistant above will set the size
 .. |invertSelection| image:: /static/common/mActionInvertSelection.png
    :width: 1.5em
 .. |labeling| image:: /static/common/labelingSingle.png
+   :width: 1.5em
+.. |labelmask| image:: /static/common/labelmask.png
    :width: 1.5em
 .. |mapIdentification| image:: /static/common/mActionMapIdentification.png
    :width: 1.5em
