@@ -1136,6 +1136,8 @@ to any of the layers in the current project.
   the first band of that layer will be referred as
   ``rasterfile.tif@1``.
 
+.. seealso:: :ref:`label_raster_calc`
+
 Parameters
 ..........
 
