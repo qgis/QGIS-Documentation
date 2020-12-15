@@ -2274,9 +2274,10 @@ with the field type. The available widgets are:
   for fields of ``array`` type.
 * **Range**: Allows you to set numeric values from a specific range. The edit
   widget can be either a slider or a spin box.
-* **Relation Reference**: This widget lets you embed the feature form of the
-  referenced layer on the feature form of the actual layer.
-  See :ref:`vector_relations`.
+* **Relation Reference**: This is the default widget assigned to the referencing
+  field (i.e., the foreign key in the child layer) when a :ref:`relation <vector_relations>`
+  is set. It provides direct access to the parent feature's form which in turn
+  embeds the list and form of its children.
 * **Text Edit** (default): This opens a text edit field that allows simple
   text or multiple lines to be used. If you choose multiple lines you
   can also choose html content.
