@@ -332,6 +332,37 @@ Other than the text formatting settings exposed above, you can also set how labe
 interact with each others or with the features.
 
 
+.. _labels_mask:
+
+Mask tab
+--------
+
+The |labelmask| :guilabel:`Mask` tab allows you to define a mask area around
+the labels. This feature is very useful when you have overlapping symbols and
+labels with similar colors, and you want to make the labels visible.
+
+.. _figure_label_mask:
+
+.. figure:: img/label_mask.png
+   :align: center
+
+   Labels settings - Mask tab
+
+To create masking effects on labels:
+
+#. Activate the |checkbox| :guilabel:`Enable mask` checkbox in the |labelmask| tab.
+#. Then you can set:
+
+   * the mask's :guilabel:`Size` in the :ref:`supported units <unit_selector>`
+   * the :guilabel:`Opacity` of the mask area around the label
+   * a :guilabel:`Pen Join Style`
+   * :ref:`paint effects <draw_effects>` through the |checkbox|
+     :guilabel:`Draw effects` checkbox.
+
+#. Select this mask shape as a mask source in the overlapping layer properties
+   |labelmask| :guilabel:`Mask` tab (see :ref:`vector_mask_menu`).
+
+
 .. _labels_callouts:
 
 Callouts tab
@@ -746,6 +777,8 @@ Under :guilabel:`Feature options`:
 .. |labelformatting| image:: /static/common/labelformatting.png
    :width: 1.5em
 .. |labeling| image:: /static/common/labelingSingle.png
+   :width: 1.5em
+.. |labelmask| image:: /static/common/labelmask.png
    :width: 1.5em
 .. |labelplacement| image:: /static/common/labelplacement.png
    :width: 1.5em
