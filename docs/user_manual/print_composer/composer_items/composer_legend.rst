@@ -98,22 +98,8 @@ panel provides the following functionalities (see figure_layout_legend_items_):
   * The |symbologyEdit| button is used to edit the layer, group name or title.
     First you need to select the legend item. Double-clicking the item also
     opens the text box to rename it.
-  * |expression| allows you to add expressions to each symbol label of a given
-    layer. New variables (``@symbol_label``, ``@symbol_id`` and ``@symbol_count``)
-    help you interact with the legend entry.
-
-    For example, given a categorized layer, you can append to each class in the
-    legend their number of features, ie *class (number)*:
-
-    #. Select the layer entry in the legend tree
-    #. Press the |expression| button, opening the :guilabel:`Expression String Builder`
-       dialog
-    #. Enter the following expression::
-
-        concat( @symbol_label, ' (', @symbol_count, ')' )
-
-    #. Press :guilabel:`OK`
-
+  * The |expression| button uses expressions to customize each symbol label
+    of the selected layer (see :ref:`legend_items_data_defined`)
   * The |sum| button adds a feature count for each class of vector layer.
   * The |expressionFilter| :sup:`Filter legend by expression` helps you filter
     which of the legend items of a layer will be displayed, i.e. using a layer
@@ -139,6 +125,32 @@ panel provides the following functionalities (see figure_layout_legend_items_):
 * While generating an atlas with polygon features, you can filter out legend
   items that lie outside the current atlas feature. To do that, check the
   |checkbox| :guilabel:`Only show items inside current atlas feature` option.
+
+.. _legend_items_data_defined:
+
+Data-define the legend labels
+.............................
+
+|expression| allows you to add :ref:`expressions <vector_expressions>` to
+each symbol label of a given layer. New variables (``@symbol_label``,
+``@symbol_id`` and ``@symbol_count``) help you interact with the legend entry.
+
+For example, given a ``regions`` layer categorized by its ``type`` field,
+you can append to each class in the legend their number of features and total area,
+e.g. ``Borough (3) - 850ha``:
+
+#. Select the layer entry in the legend tree
+#. Press the |expression| button, opening the :guilabel:`Expression String Builder`
+   dialog
+#. Enter the following expression (*assuming symbol labels have not been edited*)::
+
+    concat( @symbol_label,
+            ' (', @symbol_count, ') - ',
+            round( aggregate(@layer, 'sum', $area, filter:= "type"=@symbol_label)/10000 ),
+            'ha'
+          )
+
+#. Press :guilabel:`OK`
 
 
 Fonts
