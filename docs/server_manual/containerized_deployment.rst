@@ -75,6 +75,7 @@ it. To do so create a directory :file:`qgis-server` and within its directory:
   ENV QGIS_SERVER_LOG_LEVEL 2
   
   COPY cmd.sh /home/qgis/cmd.sh
+  RUN chmod -R 777 /home/qgis/cmd.sh
   RUN chown qgis:qgis /home/qgis/cmd.sh
   
   USER qgis
