@@ -205,6 +205,13 @@ Appropriate for point geometry features, marker symbols have several
 
 * **Geometry generator** (see :ref:`geometry_generator_symbol`)
 
+.. _mask_marker_symbol:
+
+* **Mask**: its sub-symbol defines a mask shape whose color property will be
+  ignored and only the opacity will be used. This is convenient when the marker
+  symbol overlaps with labels or other symbols whose colors are close,
+  making it hard to decipher. More details at :ref:`vector_mask_menu`.
+
 .. _raster_image_marker:
 
 * **Raster image marker**: use an image (:file:`PNG`, :file:`JPG`, :file:`BMP` ...)
