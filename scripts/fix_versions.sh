@@ -11,7 +11,7 @@ set -e
 # List to complete
 DEPRECATED=(3.4)
 # The versions to reference. List to complete
-DOCVERSIONS=(testing latest 3.10 3.4 2.18 2.14 2.8 2.6 2.2 2.0 1.8)
+DOCVERSIONS=(testing latest 3.16 3.10 3.4 2.18 2.14 2.8 2.6 2.2 2.0 1.8)
 # The main parent folder as a parameter, or use current folder (default value)
 SPATH=${1:-$PWD}
 
