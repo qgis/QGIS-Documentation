@@ -170,12 +170,19 @@ the person who creates the forms).
    this).
    Alternatively, you may want to set the title of the dialog itself
    (rather than adding a label).
+#. Add a :guilabel:`Label` for your :guilabel:`Line Edit` and your :guilabel:`Spin Box`.
+#. Arrange the elements to your own desire.
 #. Click anywhere in your dialog.
-#. Find the *Lay Out Vertically* button (in a toolbar along the top
+#. Find the *Lay Out in a Form Layout* button (in a toolbar along the top
    edge of the screen, by default). This lays out your dialog
    automatically.
 #. Set the dialog's maximum size (in its properties) to ``200``
-   (width) by ``100`` (height).
+   (width) by ``150`` (height).
+#. Your form should now look similar to this:
+
+   .. figure:: img/qt_example_form.png
+      :align: center
+
 #. Save your new form as :file:`exercise_data/forms/add_people.ui`
 #. When it's done saving, you can close *Qt Designer*
 
