@@ -1093,6 +1093,60 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
+.. _qgisflattenrelationship
+
+Flatten relationship
+--------------------
+
+This algorithm flattens all relationship for a vector layer,
+exporting a single layer containing one master feature per 
+related feature. This master feature contains all the 
+attributes for the related features.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input Layer**
+     - ``INPUT``
+     - [vector: any]
+     - Layer with relationships that should be de-normalized
+
+Outputs
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Flattened layer**
+     - ``OUTPUT``
+     - [same as input]
+     - A master feature 
+       containing all the attributes for the related features
+
+Python code
+...........
+
+**Algorithm ID**: ``native:flattenrelationships``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+  
+
 .. _qgisjoinattributestable:
 
 Join attributes by field value
