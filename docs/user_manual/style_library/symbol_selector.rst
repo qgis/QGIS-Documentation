@@ -282,7 +282,7 @@ layer types:
   * |checkbox| :guilabel:`Tweak dash pattern at sharp corners`: dynamically 
     adjusts the dash pattern placement so that sharp corners are represented
     by a full dash element coming into and out of the sharp corner.
-    Dependend on :guilabel:`Align dash pattern to line length`.
+    Dependent on :guilabel:`Align dash pattern to line length`.
 
 .. _arrow_symbol:
 
