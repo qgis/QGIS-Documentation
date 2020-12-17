@@ -375,7 +375,35 @@ To load a layer from a file:
    in the pull-down menu).
 #. Press :guilabel:`Open` to load the selected file into :guilabel:`Data
    Source Manager` dialog
-#. You can specify the encoding for vector file if desired
+   
+   * Depending on the format of the vector files you can specify options. 
+     For ESRI Shapefiles these are:
+   
+     * **ENCODING**: Allows you to overwrite the encoding of the file
+       or to avoid any recoding.
+   
+     * **DBF_DATE_LAST_UPDATE**: Allows you to manually set the last update.
+   
+     * **ADJUST_TYPE**: For ambigous field widths this options helps to
+       find the proper field type
+   
+     * **ADJUST_GEOM_TYPE**: The geometry type will be derived either 
+       from the first shape in the attribute table or from an iteration
+       over all shapes. A default setting is also possible.
+   
+     * **AUTO_REPACK**: Shapefiles will be repacked automatically, e.g.
+       when closing the file.
+   
+     * **DBF_EOF_CHAR**: Using this option QGIS will write an end-of-file
+       character into the :file:`.dbf` file.
+
+      .. _figure_vector_layer_open_options:
+   
+      .. figure:: img/openoptionsvectorlayer.png
+      :align: center
+      
+      Loading a Shapefile with open options
+
 #. Press :guilabel:`Add` to load the file in QGIS and display them in the map view.
    figure_vector_loaded_ shows QGIS after loading the :file:`alaska.shp` file.
 
