@@ -90,7 +90,7 @@ Install Apache and  `mod_fcgid <https://httpd.apache.org/mod_fcgid/mod/mod_fcgid
  apt install apache2 libapache2-mod-fcgid
 
 
-You can run QGIS server on your default website, or configure a virtualhost
+You can run QGIS Server on your default website, or configure a virtualhost
 specifically for this, as follows.
 
 In the :file:`/etc/apache2/sites-available` directory let's create a file
