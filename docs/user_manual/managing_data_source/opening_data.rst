@@ -400,9 +400,9 @@ To load a layer from a file:
        .. _figure_vector_layer_open_options:
    
        .. figure:: img/openoptionsvectorlayer.png
-       :align: center
+          :align: center
       
-       Loading a Shapefile with open options
+          Loading a Shapefile with open options
 
 #. Press :guilabel:`Add` to load the file in QGIS and display them in the map view.
    figure_vector_loaded_ shows QGIS after loading the :file:`alaska.shp` file.
