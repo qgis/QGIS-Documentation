@@ -115,7 +115,7 @@ called :file:`qgis.demo.conf`, with this content:
    FcgidInitialEnv PYTHONIOENCODING UTF-8
    FcgidInitialEnv LANG "en_US.UTF-8"
 
-   # QGIS log (different from apache logs) see https://docs.qgis.org/testing/en/docs/user_manual/working_with_ogc/ogc_server_support.html#qgis-server-logging
+   # QGIS log (different from apache logs)
    FcgidInitialEnv QGIS_SERVER_LOG_FILE /var/log/qgis/qgisserver.log
    FcgidInitialEnv QGIS_SERVER_LOG_LEVEL 0
 
@@ -128,7 +128,7 @@ called :file:`qgis.demo.conf`, with this content:
    FcgidInitialEnv QGIS_AUTH_DB_DIR_PATH "/home/qgis/qgisserverdb/"
    FcgidInitialEnv QGIS_AUTH_PASSWORD_FILE "/home/qgis/qgisserverdb/qgis-auth.db"
 
-   # See https://docs.qgis.org/testing/en/docs/user_manual/working_with_vector/supported_data.html#pg-service-file
+   # Set pg access via pg_service file
    SetEnv PGSERVICEFILE /home/qgis/.pg_service.conf
    FcgidInitialEnv PGPASSFILE "/home/qgis/.pgpass"
 
@@ -153,6 +153,10 @@ called :file:`qgis.demo.conf`, with this content:
 
  </VirtualHost>
 
+Further readings:
+* `QGIS server logging <https://docs.qgis.org/latest/en/docs/server_manual/config.html#logging>`_
+* `pg-service-file in QGIS server <https://docs.qgis.org/latest/en/docs/user_manual/managing_data_source/opening_data.html?highlight=pg_service#pg-service-file>`_
+	
 You can do the above in a linux Desktop system by pasting and saving the above
 configuration after doing ``nano /etc/apache2/sites-available/qgis.demo.conf``.
 
@@ -203,10 +207,10 @@ Replace ``127.0.0.1`` with the IP of your server.
    be configured for our setup to work.
    You can also test the access to your QGIS Server from other clients on the
    network (e.g. Windows or macOS machines) by going to their :file:`/etc/hosts`
-   file and point the ``myhost`` name to whatever IP the server machine has on the
-   network. You can be sure that that specific IP is not ``127.0.0.1`` as that's
-   the local IP, only accessible from the local machine.  On ``*nix`` machines the
-   :file:`hosts` file is located in :file:`/etc`, while on Windows it's under
+   file and point the ``myhost`` name to whatever IP the server machine has on the 
+   network (not ``127.0.0.1`` as it is the local IP, only accessible from the
+   local machine).  On ``*nix`` machines the
+   :file:`hosts` file is located in :file:`/etc`, while on Windows it's under 
    the :file:`C:\\Windows\\System32\\drivers\\etc` directory. Under Windows you
    need to start your text editor with administrator privileges before opening
    the hosts file.
@@ -540,7 +544,7 @@ QGIS Server needs a running X Server to be fully usable, in particular for print
 On servers it is usually recommended not to install it, so you may use ``xvfb``
 to have a virtual X environment.
 
-If you're running the Server in Desktop then there's no need to install xvfb.
+If you're running the Server in graphic/X11 environment then there is no need to install xvfb.
 More info at https://www.itopen.it/qgis-server-setup-notes/.
 
 To install the package:
