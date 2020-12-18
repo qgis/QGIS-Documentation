@@ -397,12 +397,12 @@ To load a layer from a file:
      * **DBF_EOF_CHAR**: Using this option QGIS will write an end-of-file
        character into the :file:`.dbf` file.
 
-      .. _figure_vector_layer_open_options:
+       .. _figure_vector_layer_open_options:
    
-      .. figure:: img/openoptionsvectorlayer.png
-      :align: center
+       .. figure:: img/openoptionsvectorlayer.png
+       :align: center
       
-      Loading a Shapefile with open options
+       Loading a Shapefile with open options
 
 #. Press :guilabel:`Add` to load the file in QGIS and display them in the map view.
    figure_vector_loaded_ shows QGIS after loading the :file:`alaska.shp` file.
