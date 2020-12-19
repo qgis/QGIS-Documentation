@@ -1,0 +1,270 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:24+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Romanian (https://www.transifex.com/qgis/teams/6144/ro/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+#: ../../docs/developers_guide/unittesting.rst:6
+msgid "Unit Testing"
+msgstr "Testarea Unităților"
+
+#: ../../docs/developers_guide/unittesting.rst:11
+msgid ""
+"As of November 2007 we require all new features going into master to be "
+"accompanied with a unit test. Initially we have limited this requirement to "
+"qgis_core, and we will extend this requirement to other parts of the code "
+"base once people are familiar with the procedures for unit testing explained"
+" in the sections that follow."
+msgstr ""
+"Din noiembrie 2007 am cerut ca toate noile caracteristici care intră în "
+"versiunea master să fie însoțite de teste de unitate. Inițial ne-am limitat "
+"la qgis_core, apoi vom extinde această cerință pentru alte părți ale bazei "
+"de cod, o dată ce dezvoltatorii se vor familiariza cu procedurile pentru "
+"testele de unitate, detaliate în secțiunile următoare."
+
+#: ../../docs/developers_guide/unittesting.rst:19
+msgid "The QGIS testing framework - an overview"
+msgstr "Cadrul de testare QGIS - o privire de ansamblu"
+
+#: ../../docs/developers_guide/unittesting.rst:34
+msgid ""
+"You create a unit test. This happens under ``<QGIS Source "
+"Dir>/tests/src/core`` in the case of the core lib. The test is basically a "
+"client that creates an instance of a class and calls some methods on that "
+"class. It will check the return from each method to make sure it matches the"
+" expected value. If any one of the calls fails, the unit will fail."
+msgstr ""
+"Creați un test de unitate. Acest lucru se întâmplă în directorul ``<QGIS "
+"Source Dir>/tests/src/core``, în cazul bibliotecilor de bază. Testul este de"
+" fapt un client care creează o instanță a unei clase, apelând unele metode "
+"ale acestei clase. Acesta va verifica valorile returnate din fiecare metodă,"
+" pentru a se asigura că se potrivesc valorilor așteptate. În cazul în care "
+"unul dintre apeluri eșuează, testul de unitate va eșua."
+
+#: ../../docs/developers_guide/unittesting.rst:40
+msgid ""
+"You include QtTestLib macros in your test class. This macro is processed by "
+"the Qt meta object compiler (moc) and expands your test class into a "
+"runnable application."
+msgstr ""
+"Includeți macro-urile QtTestLib în clasa dvs. de test. Macrocomenzile sunt "
+"procesate de către compilatorul de obiecte meta Qt (MOC) și transformă clasa"
+" de testare într-o aplicație executabilă."
+
+#: ../../docs/developers_guide/unittesting.rst:44
+msgid ""
+"You add a section to the CMakeLists.txt in your tests directory that will "
+"build your test."
+msgstr ""
+"Adăugați o secțiune la fișierul CMakeLists.txt din directorul testelor dvs.,"
+" care va construi testul."
+
+#: ../../docs/developers_guide/unittesting.rst:47
+msgid ""
+"You ensure you have ``ENABLE_TESTING`` enabled in ccmake / cmakesetup. This "
+"will ensure your tests actually get compiled when you type make."
+msgstr ""
+"Asigurați-vă că ați activat ``ENABLE_TESTING`` în ccmake / cmakesetup. "
+"Astfel, vă veți asigura că testele dumneavoastră se compilează atunci când "
+"tastați make."
+
+#: ../../docs/developers_guide/unittesting.rst:56
+msgid ""
+"You compile your sources and install. Do this using normal ``make && (sudo)"
+"  make install`` procedure."
+msgstr ""
+"Compilați sursele, apoi efectuați instalarea. Faceți acest lucru utilizând "
+"procedura normală ``make && (sudo) make install``."
+
+#: ../../docs/developers_guide/unittesting.rst:70
+msgid "Creating a unit test"
+msgstr "Crearea unui test de unitate"
+
+#: ../../docs/developers_guide/unittesting.rst:105
+msgid ""
+"Beyond that you just continue implementing your class as per normal, pulling"
+" in whatever headers you may need:"
+msgstr ""
+"Mai departe, continuați implementarea normală a clasei, incluzând antetele "
+"de care aveți nevoie:"
+
+#: ../../docs/developers_guide/unittesting.rst:123
+msgid ""
+"Since we are combining both class declaration and implementation in a single"
+" file the class declaration comes next. We start with our doxygen "
+"documentation. Every test case should be properly documented. We use the "
+"doxygen ingroup directive so that all the UnitTests appear as a module in "
+"the generated Doxygen documentation. After that comes a short description of"
+" the unit test and the class must inherit from QObject and include the "
+"Q_OBJECT macro."
+msgstr ""
+"Din moment ce combinăm atât declarația clasei cât și implementarea într-un "
+"singur fișier, urmează declarația clasei. Vom începe cu documentația "
+"doxygen. Fiecare caz de testare trebuie să fie documentat în mod "
+"corespunzător. Folosim directiva doxygen ingroup, astfel încât toate "
+"Unitățile de Testare apar ca module în documentația Doxygen generată. "
+"Urmează apoi o scurtă descriere a unității de testare, clasa trebuind să "
+"moștenească QObject și să includă macrocomanda Q_OBJECT."
+
+#: ../../docs/developers_guide/unittesting.rst:214
+msgid ""
+"There is one more benefit to regression tests - they can save you time. If "
+"you ever fixed a bug that involved making changes to the source, and then "
+"running the application and performing a series of convoluted steps to "
+"replicate the issue, it will be immediately apparent that simply "
+"implementing your regression test before fixing the bug will let you "
+"automate the testing for bug resolution in an efficient manner."
+msgstr ""
+"Mai există un beneficiu al prezenței testelor de regresie - acestea pot "
+"aduce economie de timp. Dacă ați depanat vreodată o eroare care a implicat "
+"efectuarea de modificări în codul sursă, urmată de rularea aplicației și "
+"efectuarea unei serii de pași extrem de complicați pentru a reproduce "
+"problema, va fi imediat evident că simpla implementare a testului de "
+"regresie înainte de corectarea erorii permite automatizarea testării, ceea "
+"ce reprezintă o eliminare eficientă a defectelor."
+
+#: ../../docs/developers_guide/unittesting.rst:257
+msgid ""
+"That ends our class declaration. The implementation is simply inlined in the"
+" same file lower down. First our init and cleanup functions:"
+msgstr ""
+"Astfel se termină declarația clasei noastre. Implementarea are loc pur și "
+"simplu, în partea de jos a fișierului. Mai întâi are loc inițializarea și "
+"curățarea funcțiilor:"
+
+#: ../../docs/developers_guide/unittesting.rst:290
+msgid "The above init function illustrates a couple of interesting things."
+msgstr ""
+"Funcția de inițializare de mai sus ilustrează câteva lucruri interesante."
+
+#: ../../docs/developers_guide/unittesting.rst:304
+msgid ""
+"Qt also provides some other interesting mechanisms for data driven testing, "
+"so if you are interested to know more on the topic, consult the Qt "
+"documentation."
+msgstr ""
+"Qt oferă, de asemenea, alte câteva mecanisme interesante pentru testarea "
+"dirijată cu ajutorul datelor, așa că, dacă vă interesează să aflați mai "
+"multe despre acest subiect, consultați documentația Qt."
+
+#: ../../docs/developers_guide/unittesting.rst:326
+msgid ""
+"Some of these macros are useful only when using the Qt framework for data "
+"driven testing (see the Qt docs for more detail)."
+msgstr ""
+"Unele dintre aceste macro-uri sunt utile numai atunci când se utilizează "
+"cadrul de lucru Qt, pentru testarea cu ajutorul datelor (a se vedea "
+"documentația Qt, pentru mai multe detalii)."
+
+#: ../../docs/developers_guide/unittesting.rst:336
+msgid ""
+"Normally your functional tests would cover all the range of functionality of"
+" your classes public API where feasible. With our functional tests out the "
+"way, we can look at our regression test example."
+msgstr ""
+"În mod normal, testele funcționale ar putea acoperi toată gama de "
+"funcționalități a claselor dvs. API publice, acolo unde este fezabil. "
+"Testele funcționale fiind gata, ne putem uita la exemplul nostru de test de "
+"regresie."
+
+#: ../../docs/developers_guide/unittesting.rst:340
+msgid ""
+"Since the issue in bug #832 is a misreported cell count, writing our test is"
+" simply a matter of using QVERIFY to check that the cell count meets the "
+"expected value:"
+msgstr ""
+"Având în vedere că problema #832 raportează un număr eronat de celule, "
+"scrierea testului nostru constă pur și simplu în folosirea macrocomenzii "
+"QVERIFY, pentru a verifica dacă numărul de celule corespunde valorii "
+"așteptate:"
+
+#: ../../docs/developers_guide/unittesting.rst:456
+msgid "Adding your unit test to CMakeLists.txt"
+msgstr "Adăugarea testului de unitate în CMakeLists.txt"
+
+#: ../../docs/developers_guide/unittesting.rst:469
+msgid "The ADD_QGIS_TEST macro explained"
+msgstr "Adăugarea macocomenzii ADD_QGIS_TEST"
+
+#: ../../docs/developers_guide/unittesting.rst:515
+msgid ""
+"Since our test class needs to be run through the Qt meta object compiler "
+"(moc) we need to provide a couple of lines to make that happen too:"
+msgstr ""
+"Din moment ce clasa noastră de test trebuie să fie executată prin "
+"intermediul compilatorului meta-obiect (MOC) din Qt, trebuie să indicăm "
+"acest lucru printr-o pereche de linii:"
+
+#: ../../docs/developers_guide/unittesting.rst:585
+msgid "Building your unit test"
+msgstr "Compilarea testului de unitate"
+
+#: ../../docs/developers_guide/unittesting.rst:587
+msgid ""
+"To build the unit test you need only to make sure that ``ENABLE_TESTS=true``"
+" in the cmake configuration. There are two ways to do this:"
+msgstr ""
+"Pentru a compila testul de unitate rewbuie doar să vă asigurați că "
+"``ENABLE_TESTS = true`` în configurația cmake. Există două moduri de a face "
+"acest lucru:"
+
+#: ../../docs/developers_guide/unittesting.rst:590
+msgid ""
+"Run ``ccmake ..`` ( or ``cmakesetup ..`` under windows) and interactively "
+"set the ``ENABLE_TESTS`` flag to ``ON``."
+msgstr ""
+"Rulați ``ccmake ..`` ( sau ``cmakesetup ..`` sub windows) și setați, în mod "
+"interactiv, fanionul ``ENABLE_TESTS`` pe ``ON``."
+
+#: ../../docs/developers_guide/unittesting.rst:592
+msgid "Add a command line flag to cmake e.g. ``cmake -DENABLE_TESTS=true ..``"
+msgstr ""
+"Adăugați o linie de comandă pentru fanion în cmake ex.: ``cmake "
+"-DENABLE_TESTS=true ..``"
+
+#: ../../docs/developers_guide/unittesting.rst:594
+msgid ""
+"Other than that, just build QGIS as per normal and the tests should build "
+"too."
+msgstr ""
+"La urmă, doar compilați normal QGIS, iar testele ar trebui să se compileze, "
+"la rândul lor."
+
+#: ../../docs/developers_guide/unittesting.rst:598
+msgid "Run your tests"
+msgstr "Rularea testelor dumneavoastră"
+
+#: ../../docs/developers_guide/unittesting.rst:601
+msgid ""
+"The simplest way to run the tests is as part of your normal build process:"
+msgstr ""
+"Cel mai simplu mod de a rula testele este ca parte a procesului normal de "
+"compilare:"
+
+#: ../../docs/developers_guide/unittesting.rst:627
+msgid ""
+"If a test fails, you can use the ctest command to examine more closely why "
+"it failed. Use the ``-R`` option to specify a regex for which tests you want"
+" to run and ``-V`` to get verbose output:"
+msgstr ""
+"Dacă un test eșuează, puteți utiliza comanda ctest pentru a-i examina mai "
+"îndeaproape cauza. Utilizați ``opțiunea -R`` pentru a specifica un regex "
+"pentru testele pe care doriți să le rulați, și un `` -V`` pentru a obține o "
+"ieșire detaliată:"

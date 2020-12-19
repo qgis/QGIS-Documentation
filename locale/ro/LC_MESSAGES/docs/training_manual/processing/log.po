@@ -1,0 +1,172 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:22+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Romanian (https://www.transifex.com/qgis/teams/6144/ro/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+#: ../../docs/training_manual/processing/log.rst:2
+msgid "The processing log"
+msgstr "Procesarea jurnalului"
+
+#: ../../docs/training_manual/processing/log.rst:4
+msgid "This lesson describes the processing log."
+msgstr "Această lecție descrie procesarea jurnalului."
+
+#: ../../docs/training_manual/processing/log.rst:6
+msgid ""
+"All the analysis performed with the processing framework is logged in QGIS "
+"logging system. This allows you to know more about what has been done with "
+"the processing tools, to solve problems when they happen, and also to re--"
+"run previous operations, since the logging system also implements some "
+"interactivity."
+msgstr ""
+"Toate analizele efectuate de cadrul de procesare se înregistrează în "
+"sistemul de jurnalizare al aplicației QGIS. Acest lucru vă permite să aflați"
+" mai multe despre istoricul utilizării uneltelor de procesare, pentru a "
+"putea depăși problemele atunci când acestea apar și, de asemenea, vă "
+"facilitează repetarea operațiunilor anterioare, întrucât sistemul de "
+"jurnalizare dispune de o anumită interactivitate."
+
+#: ../../docs/training_manual/processing/log.rst:8
+msgid ""
+"To open the log, click on the balloon at the bottom right, on the QGIS "
+"status bar. Some algorithms might leave here information about their "
+"execution. For instance, those algorithms that call an external application "
+"usually log the console output of that application to this entry. If you "
+"have a look at it, you will see that the output of the SAGA algorithm that "
+"we just run (and that fail to execute because input data was not correct) is"
+" stored here."
+msgstr ""
+"Pentru a deschide jurnalul, faceți clic pe balonul din dreapta jos, pe bara "
+"de stare a QGIS. Unii algoritmi ar putea nota aici informații cu privire la "
+"execuția lor. De exemplu, acei algoritmi care apelează o aplicație externă, "
+"dirijează orice mesaj către această ieșire. Dacă priviți cu atenție, veți "
+"observa că ieșirea algoritmului SAGA pe care tocmai l-am rulat (și a cărui "
+"execuție nu a reușit, deoarece datele de intrare nu au fost corecte) se află"
+" aici."
+
+#: ../../docs/training_manual/processing/log.rst:10
+msgid ""
+"This is helpful to understand what is going on. Advanced users will be able "
+"to analyze that output to find out why the algorithm failed. If you are not "
+"an advanced user, this will be useful for others to help you diagnose the "
+"problem you are having, which might be a problem in the installation of the "
+"external software or an issue with the data you provided."
+msgstr ""
+"Aceste informații v-ar putea fi utile, pentru a înțelege ce se întâmplă. "
+"Utilizatorii avansați vor putea să analizeze o ieșire, pentru a afla de ce a"
+" eșuat algoritmul. Dacă nu sunteți un utilizator avansat, informațiile "
+"respective vor fi utile celor care vă vor ajuta la diagnosticarea unei "
+"probleme, pentru a determina dacă a fost cauzată de instalarea unei "
+"aplicații externe sau de datele pe care le-ați introdus."
+
+#: ../../docs/training_manual/processing/log.rst:12
+msgid ""
+"Even if the algorithm could be executed, some algorithms might leave "
+"warnings in case the result might not be right. For instance, when executing"
+" an interpolation algorithm with a very small amount of points, the "
+"algorithm can run and will produce a result, but it is likely that it will "
+"not be correct, since more points should be used. It's a good idea to "
+"regularly check for this type of warnings if you are not sure about some "
+"aspect of a given algorithm."
+msgstr ""
+"Chiar dacă un algoritm poate fi executat, în unele cazuri aceștia ar putea "
+"emite avertismente dacă rezultatul s-ar putea să nu fie corect. Un exemplu "
+"ar fi execuția unui algoritm de interpolare pe baza unui număr foarte mic de"
+" puncte, care, deși se poate desfășura, poate genera un rezultat incorect, "
+"atât timp cât ar fi trebuit să fie folosite mai multe puncte. Este foarte "
+"bune să verificați în mod regulat acest tip de avertismente, dacă nu vă sunt"
+" clare anumite aspecte ale unui algoritm."
+
+#: ../../docs/training_manual/processing/log.rst:14
+msgid ""
+"From the *Processing* menu, under the *History* section, you'll find "
+"*Algorithms*. All algorithms that are executed, even if they are executed "
+"from the GUI and not from the console (which will be explained later in this"
+" manual) are stored in this section as a console call. That means that "
+"everytime you run an algorithm, a console command is added to the log, and "
+"you have the full history of your working session. Here is how that history "
+"looks like:"
+msgstr ""
+"În meniului *Processing*, din secțiunea *Istoricului*, veți găsi "
+"*Algoritmii*. Toți algoritmii care sunt executați, chiar dacă sunt lansați "
+"din cadrul GUI și nu de la consolă (care va fi descrisă mai târziu în acest "
+"manual) sunt stocați în această parte a jurnalului ca și apel din consolă. "
+"Acest lucru înseamnă că de fiecare dată când executați un algoritm, se va "
+"adăuga o comandă de consolă în jurnal, păstrându-se istoricul complet al "
+"sesiunii dvs. de lucru. Iată cum arată istoricul:"
+
+#: ../../docs/training_manual/processing/log.rst:18
+msgid ""
+"This can be very useful when starting working with the console, to learn "
+"about the syntax of algorithms. We will use it when we discuss how to run "
+"analysis commands from the console."
+msgstr ""
+"Acest lucru poate fi foarte util atunci când începe lucrul cu consola, "
+"pentru a afla mai multe despre sintaxa algoritmilor. Îl vom folosi când vom "
+"discuta despre modul în care se pot rula comenzile de analiză din consolă."
+
+#: ../../docs/training_manual/processing/log.rst:20
+msgid ""
+"The history is also interactive, and you can re--run any previous algorithm "
+"just by double--clicking on its entry. This is an easy way of replicating "
+"the work we already did before."
+msgstr ""
+"Istoricul este, de asemenea, interactiv, de aceea veți putea relansa orice "
+"algoritm printr-un simplu dublu-clic pe denumirea sa. Aceasta este o "
+"modalitate ușoară de a reproduce comenzi pe care le-ați mai executat."
+
+#: ../../docs/training_manual/processing/log.rst:22
+msgid ""
+"For instance, try the following. Open the data corresponding to the first "
+"chapter of this manual and run the algorithm explained there. Now go to the "
+"log dialog and locate the last algorithm in the list, which corresponds to "
+"the algorithm you have just run. Double--click on it an a new result should "
+"be produced, just like when you run it using the normal dialog and calling "
+"it from the toolbox."
+msgstr ""
+"De exemplu, încercați următoarele. Deschideți datele corespunzătoare "
+"primului capitol din acest manual și rulați algoritmul descris acolo. Apoi "
+"mergeți la fereastra jurnalului și localizați ultimul algoritm din listă, "
+"care corespunde algoritmului pe care abia l-ați rulat. Efectuând un dublu-"
+"clic pe el se va obține un nou rezultat, la fel ca și atunci când l-ați "
+"rulat utilizând dialogul normal, apelându-l din caseta de instrumente."
+
+#: ../../docs/training_manual/processing/log.rst:26
+msgid "|hard| Advanced"
+msgstr "|hard| Avansat"
+
+#: ../../docs/training_manual/processing/log.rst:28
+msgid ""
+"You can also modify the algorithm. Just copy it, open the "
+":menuselection:`Plugins --> Python console`, click on :menuselection:`Import"
+" class --> Import Processing class`, then paste it to re-run the analysis; "
+"change the text at will. To display the resulting file, type "
+":kbd:`iface.addVectorLayer('/path/filename.shp', 'Layer name in legend', "
+"'ogr')`. Otherwise, you can use :kbd:`processing.runandload`."
+msgstr ""
+"De asemenea, puteți modifica algoritmul. Trebuie doar să-l copiați, să "
+"deschideți :menuselection:`Plugin-uri --> Consola Python`, să faceți clic pe"
+" :menuselection:`Importare clasă --> Importare clasă de Processing`, apoi "
+"să-l lipiți pentru a reexecuta analiza; schimbați textul după dorință. "
+"Pentru a afișa fișierul rezultat, introduceți "
+":kbd:`iface.addVectorLayer('/path/filename.shp', 'Numele stratului din "
+"legendă', 'ogr')`. În caz contrar, puteți utiliza "
+":kbd:`processing.runandload`."

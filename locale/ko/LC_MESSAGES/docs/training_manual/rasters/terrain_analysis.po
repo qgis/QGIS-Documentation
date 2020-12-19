@@ -1,0 +1,181 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:20+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:2
+msgid "|LS| Terrain Analysis"
+msgstr "|LS| 지형 분석"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:4
+msgid ""
+"Certain types of rasters allow you to gain more insight into the terrain "
+"that they represent. Digital Elevation Models (DEMs) are particularly useful"
+" in this regard. In this lesson you will use terrain analysis tools to find "
+"out more about the study area for the proposed residential development from "
+"earlier."
+msgstr ""
+"래스터가 표현하고 있는 지형에 대해 더 깊이 이해할 수 있게 해주는 특정한 래스터 형식이 있습니다. 수치 표고 모델(DEM)이 이런 "
+"점에서 특히 유용합니다. 이 강의에서는 지형 분석을 이용해서, 이전 모듈에서 다뤘던 주거 구역 개발에 대해 더 자세히 알아보도록 "
+"하겠습니다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:12
+msgid ""
+"**The goal for this lesson:** To use terrain analysis tools to derive more "
+"information about the terrain."
+msgstr "**이 강의의 목표:** 지형 분석을 이용해서 지형에 대해 더 많은 정보를 끌어내기."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:16
+msgid "|basic| |FA| Calculating a Hillshade"
+msgstr "|basic| |FA| 음영기복도 계산"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:49
+msgid ""
+"You will now have a new layer called :guilabel:`hillshade` that looks like "
+"this:"
+msgstr "이제 다음과 같이 :guilabel:`hillshade` 라는 새 레이어가 생성되었습니다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:55
+msgid ""
+"That looks nice and 3D, but can we improve on this? On its own, the "
+"hillshade looks like a plaster cast. Can't we use it together with our "
+"other, more colorful rasters somehow? Of course we can, by using the "
+"hillshade as an overlay."
+msgstr ""
+"멋진 3D로 보입니다만, 좀 더 향상시킬 수 있을까요? 음영기복도 그 자체로는 마치 석고 모형처럼 보입니다. 다른, 좀 더 다채로운 "
+"래스터들과 어떻게 함께 사용할 수는 없을까요? 물론 할 수 있습니다. 음영기복도를 오버레이로서 사용한다면 말이죠."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:61
+msgid "|basic| |FA| Using a Hillshade as an Overlay"
+msgstr "|basic| |FA| 음영기복도를 오버레이로 사용"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:63
+msgid ""
+"A hillshade can provide very useful information about the sunlight at a "
+"given time of day. But it can also be used for aesthetic purposes, to make "
+"the map look better. The key to this is setting the hillshade to being "
+"mostly transparent."
+msgstr ""
+"음영기복도는 낮 동안의 특정 시간의 햇빛에 대한 유용한 정보를 제공할 수 있습니다. 하지만 맵을 더 보기 좋게 하기 위한 심미적 목적을 "
+"위해서도 사용할 수 있습니다. 이렇게 하려면 음영기복도를 거의 투명하게 설정하면 됩니다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:86
+msgid ""
+"Using a hillshade in this way, it's possible to enhance the topography of "
+"the landscape. If the effect doesn't seem strong enough to you, you can "
+"change the transparency of the :guilabel:`hillshade` layer; but of course, "
+"the brighter the hillshade becomes, the dimmer the colors behind it will be."
+" You will need to find a balance that works for you."
+msgstr ""
+"음영기복도를 이런 식으로 사용하면 경관의 지형을 향상시킬 수 있습니다. 만약 그 효과가 미미하다고 느껴진다면, "
+":guilabel:`hillshade` 레이어의 투명도를 조절할 수 있습니다. 하지만 물론, 음영기복도가 밝아질수록 그 아래의 색상은 "
+"침침해질 것입니다. 여러분이 만족할 수 있는 균형을 찾아야 합니다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:96
+msgid "|moderate| |FA| Calculating the Slope"
+msgstr "|moderate| |FA| 경사도 계산"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:98
+msgid ""
+"Another useful thing to know about the terrain is how steep it is. If, for "
+"example, you want to build houses on the land there, then you need land that"
+" is relatively flat."
+msgstr ""
+"지형에 대해 알아두면 좋은 점 가운데 하나는 얼마나 가파르냐는 것입니다. 예를 들어 어떤 토지에 집을 짓고 싶다고 할 때, 그 토지는 "
+"어느 정도 평평해야 할 것입니다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:133
+msgid ":ref:`Check your results <raster-analysis-1>`"
+msgstr ":ref:`결과 확인 <raster-analysis-1>`"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:136
+msgid "|moderate| |FA| Using the Raster Calculator"
+msgstr "|moderate| |FA| 래스터 계산기 사용"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:148
+msgid ""
+"Fortunately, you already have rasters showing you the slope as well as the "
+"aspect, but you have no way of knowing where both conditions are satisfied "
+"at once. How could this analysis be done?"
+msgstr ""
+"다행히 여러분에게는 이미 경사는 물론 향을 보여주는 래스터가 있습니다. 그런데 이 두 가지 조건을 동시에 만족하는 곳을 알 도리가 없죠."
+" 어떻게 이런 분석을 할 수 있을까요?"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:153
+msgid "The answer lies with the :guilabel:`Raster calculator`."
+msgstr "그 답은 :guilabel:`Raster calculator` 가 가지고 있습니다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:203
+msgid "Your result will be this:"
+msgstr "결과는 다음과 같을 것입니다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:229
+msgid ":ref:`Check your results <raster-analysis-2>`"
+msgstr ":ref:`결과 확인 <raster-analysis-2>`"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:233
+msgid "|moderate| |FA| Combining Raster Analysis Results"
+msgstr "|moderate| |FA| 래스터 분석 결과 결합"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:257
+msgid "To calculate the areas that satisfy these criteria:"
+msgstr "이 기준들을 만족하는 지역을 계산하려면,"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:271
+msgid "The result:"
+msgstr "결과물은 다음과 같습니다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:278
+msgid "|moderate| |FA| Simplifying the Raster"
+msgstr "|moderate| |FA| 래스터 단순화"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:330
+msgid "Your output looks like this:"
+msgstr "산출물은 다음과 같습니다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:335
+msgid ""
+"This is what was expected: a simplified version of the earlier results. "
+"Remember that if the results you get from a tool aren't what you expected, "
+"viewing the metadata (and vector attributes, if applicable) can prove "
+"essential to solving the problem."
+msgstr ""
+"우리가 기대한 산출물입니다. 이전 결과물을 단순화시킨 버전이죠. 어떤 도구의 결과물이 기대했던 것과 다를 경우, 문제를 해결 하는 데 "
+"메타데이터(및, 적용 가능할 경우 벡터 속성)을 살펴보는 작업이 필수적일 수도 있습니다."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:483
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:493
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:495
+msgid ""
+"Now you have two analyses: the vector analysis which shows you the "
+"potentially suitable plots, and the raster analysis that shows you the "
+"potentially suitable terrain. How can these be combined to arrive at a final"
+" result for this problem? That's the topic for the next lesson, starting in "
+"the next module."
+msgstr ""
+"이제 여러분은 두 가지 분석을 할 수 있습니다. 벡터 분석은 잠재적으로 적합한 계획을 보여주며, 래스터 분석은 잠재적으로 적합한 지형을 "
+"보여줍니다. 이들을 어떻게 결합해야 문제에 대한 최종 결론을 얻을 수 있을까요? 이것이 다음 모듈에서 시작하는 강의의 주제입니다."

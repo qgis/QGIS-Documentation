@@ -1,0 +1,176 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# Aline Furlanetto Viero <afviero@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:23+0000\n"
+"Last-Translator: Aline Furlanetto Viero <afviero@gmail.com>, 2020\n"
+"Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:10
+msgid "Introduction"
+msgstr "Introdução"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:12
+msgid ""
+"This document is intended to be both a tutorial and a reference guide. While"
+" it does not list all possible use cases, it should give a good overview of "
+"the principal functionality."
+msgstr ""
+"Este documento pretende ser um tutorial e um guia de referência. Embora não "
+"liste todos os casos de uso possíveis, deve fornecer uma boa visão geral da "
+"funcionalidade principal."
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:19
+msgid ""
+"Python support was first introduced in QGIS 0.9. There are several ways to "
+"use Python in QGIS Desktop (covered in the following sections):"
+msgstr ""
+"O suporte ao Python foi introduzido pela primeira vez no QGIS 0.9. Existem "
+"várias maneiras de usar o Python no QGIS Desktop (abordado nas seções "
+"seguintes):"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:23
+msgid "Issue commands in the Python console within QGIS"
+msgstr "Emita comandos no console Python no QGIS"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:24
+msgid "Create and use plugins"
+msgstr "Crie e use complementos"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:25
+msgid "Automatically run Python code when QGIS starts"
+msgstr "Executar automaticamente o código Python quando o QGIS for iniciado"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:28
+msgid "Create custom applications based on the QGIS API"
+msgstr "Crie aplicativos personalizados com base na API QGIS"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:41
+msgid ""
+"A good resource for learning how to perform common tasks is to download "
+"existing plugins from the `plugin repository <https://plugins.qgis.org/>`_ "
+"and examine their code."
+msgstr ""
+"Um bom recurso para aprender como executar tarefas comuns é fazer o download"
+" de complementos existentes no `repositório de complementos "
+"<https://plugins.qgis.org/>`_ e examinar seu código."
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:52
+msgid "Scripting in the Python Console"
+msgstr "Escrevendo Scripts no Terminal Python"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:54
+msgid ""
+"QGIS provides an integrated :ref:`Python console <console>` for scripting. "
+"It can be opened from the :menuselection:`Plugins --> Python Console` menu:"
+msgstr ""
+"O QGIS fornece um :ref:`console Python <console>` integrado para scripts. "
+"Ele pode ser aberto no menu :menuselection:`Complementos --> Terminal "
+"Python`"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:61
+msgid "QGIS Python console"
+msgstr "Terminal Python QGIS "
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:63
+msgid ""
+"The screenshot above illustrates how to get the layer currently selected in "
+"the layer list, show its ID and optionally, if it is a vector layer, show "
+"the feature count. For interaction with the QGIS environment, there is an "
+":data:`iface` variable, which is an instance of :class:`QgisInterface "
+"<qgis.gui.QgisInterface>`. This interface allows access to the map canvas, "
+"menus, toolbars and other parts of the QGIS application."
+msgstr ""
+"A captura de tela acima ilustra como obter a camada atualmente selecionada "
+"na lista de camadas, mostrar seu ID e, opcionalmente, se for uma camada "
+"vetorial, mostrar o número de feições. Para interação com o ambiente QGIS, "
+"existe uma variável :data:`iface`, que é uma instância de "
+":class:`QgisInterface <qgis.gui.QgisInterface>`. Essa interface permite o "
+"acesso à tela do mapa, menus, barras de ferramentas e outras partes do "
+"aplicativo QGIS."
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:72
+msgid ""
+"For user convenience, the following statements are executed when the console"
+" is started (in the future it will be possible to set further initial "
+"commands)"
+msgstr ""
+"Para conveniência do usuário, as seguintes instruções são executadas quando "
+"o terminal é iniciado (no futuro, será possível definir mais comandos "
+"iniciais)"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:88
+msgid "Python Plugins"
+msgstr "Complementos Python"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:90
+msgid ""
+"The functionality of QGIS can be extended using plugins. Plugins can be "
+"written in Python. The main advantage over C++ plugins is simplicity of "
+"distribution (no compiling for each platform) and easier development."
+msgstr ""
+"A funcionalidade do QGIS pode ser estendida usando complementos. Os "
+"complementos podem ser escritos em Python. A principal vantagem sobre os "
+"complementos C++ é a simplicidade de distribuição (sem compilação para cada "
+"plataforma) e o desenvolvimento mais fácil."
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:96
+msgid ""
+"Many plugins covering various functionality have been written since the "
+"introduction of Python support. The plugin installer allows users to easily "
+"fetch, upgrade and remove Python plugins. See the `Python Plugins "
+"<https://plugins.qgis.org/>`_ page for more information about plugins and "
+"plugin development."
+msgstr ""
+"Muitos complementos que abrangem várias funcionalidades foram escritos desde"
+" a introdução do suporte ao Python. O instalador do complemento permite aos "
+"usuários buscar, atualizar e remover facilmente os complementos do Python. "
+"Veja a página `Python Plugins <https://plugins.qgis.org/>`_ para obter mais "
+"informações sobre complementos e desenvolvimento de complementos."
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:102
+msgid ""
+"Creating plugins in Python is simple, see :ref:`developing_plugins` for "
+"detailed instructions."
+msgstr ""
+"Criar complementos no Python é simples, veja :ref:`development_plugins` para"
+" instruções detalhadas."
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:107
+msgid ""
+"Python plugins are also available for QGIS server. See :ref:`server_plugins`"
+" for further details."
+msgstr ""
+"Os complementos Python também estão disponíveis para o servidor QGIS. Veja "
+":ref:`server_plugins` para mais detalhes."
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:117
+msgid ""
+"There are two distinct methods to run Python code every time QGIS starts."
+msgstr ""
+"Existem dois métodos distintos de executar o código em Phyton toda vez que o"
+" QGIS é iniciado."
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:166
+msgid "Python Applications"
+msgstr "Aplicações Python"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:288
+msgid "Running Custom Applications"
+msgstr "Executando aplicativos personalizados"

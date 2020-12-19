@@ -1,0 +1,249 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:24+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Arabic (https://www.transifex.com/qgis/teams/6144/ar/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ar\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+#: ../../docs/developers_guide/unittesting.rst:6
+msgid "Unit Testing"
+msgstr "وحدة التجارب"
+
+#: ../../docs/developers_guide/unittesting.rst:11
+msgid ""
+"As of November 2007 we require all new features going into master to be "
+"accompanied with a unit test. Initially we have limited this requirement to "
+"qgis_core, and we will extend this requirement to other parts of the code "
+"base once people are familiar with the procedures for unit testing explained"
+" in the sections that follow."
+msgstr ""
+"اعتبارًا من نوفمبر 2007 ، نطلب من جميع الميزات الجديدة التي تدخل في مرحلة "
+"الماجستير أن تكون مصحوبة باختبار وحدة. في البداية قمنا بتقييد هذا الشرط على "
+"qgis_core ، وسنقوم بتوسيع هذا المطلب ليشمل أجزاء أخرى من قاعدة الكود بمجرد "
+"أن يكون الناس على دراية بإجراءات اختبار الوحدة الموضحة في الأقسام التالية."
+
+#: ../../docs/developers_guide/unittesting.rst:19
+msgid "The QGIS testing framework - an overview"
+msgstr "إطار اختبار QGIS - نظرة عامة"
+
+#: ../../docs/developers_guide/unittesting.rst:34
+msgid ""
+"You create a unit test. This happens under ``<QGIS Source "
+"Dir>/tests/src/core`` in the case of the core lib. The test is basically a "
+"client that creates an instance of a class and calls some methods on that "
+"class. It will check the return from each method to make sure it matches the"
+" expected value. If any one of the calls fails, the unit will fail."
+msgstr ""
+"يمكنك إنشاء اختبار وحدة. هذا يحدث تحت `` / اختبارات / src الأساسية`` في حالة"
+" اللب الأساسية. الاختبار هو في الأساس عميل يقوم بإنشاء مثيل لفئة ويستدعي بعض"
+" الأساليب في تلك الفئة. سيتحقق من العائد من كل طريقة للتأكد من مطابقته "
+"للقيمة المتوقعة. في حالة فشل أي من المكالمات ، ستفشل الوحدة."
+
+#: ../../docs/developers_guide/unittesting.rst:40
+msgid ""
+"You include QtTestLib macros in your test class. This macro is processed by "
+"the Qt meta object compiler (moc) and expands your test class into a "
+"runnable application."
+msgstr ""
+"يمكنك تضمين وحدات الماكرو اختبار Qt اختبار في صف الاختبار. تتم معالجة هذا "
+"الماكرو بواسطة برنامج التحويل البرمجي كائن meta (moc) Qt ويقوم بتوسيع فئة "
+"الاختبار الخاص بك إلى تطبيق "
+
+#: ../../docs/developers_guide/unittesting.rst:44
+msgid ""
+"You add a section to the CMakeLists.txt in your tests directory that will "
+"build your test."
+msgstr ""
+"كنك إضافة قسم إلى قوائم make .txt في دليل الاختبارات الذي سيقوم ببناء "
+"الاختبار."
+
+#: ../../docs/developers_guide/unittesting.rst:47
+msgid ""
+"You ensure you have ``ENABLE_TESTING`` enabled in ccmake / cmakesetup. This "
+"will ensure your tests actually get compiled when you type make."
+msgstr ""
+"عليك التأكد من تمكين اختبار تمكين في ccmake ج جعل الإعداد. سيضمن ذلك تجميع "
+"اختباراتك فعليًا عند كتابة النوع."
+
+#: ../../docs/developers_guide/unittesting.rst:56
+msgid ""
+"You compile your sources and install. Do this using normal ``make && (sudo)"
+"  make install`` procedure."
+msgstr ""
+"قمت بتجميع المصادر الخاصة بك وتثبيتها. القيام بذلك باستخدام `` جعل (سودو) "
+"جعل إجراء التثبيت العادي."
+
+#: ../../docs/developers_guide/unittesting.rst:70
+msgid "Creating a unit test"
+msgstr "إنشاء اختبار وحدة"
+
+#: ../../docs/developers_guide/unittesting.rst:105
+msgid ""
+"Beyond that you just continue implementing your class as per normal, pulling"
+" in whatever headers you may need:"
+msgstr ""
+"أبعد من ذلك ، ما عليك سوى متابعة تنفيذ صفك بشكل طبيعي ، مع سحب أي رؤوس قد "
+"تحتاج إليها:"
+
+#: ../../docs/developers_guide/unittesting.rst:123
+msgid ""
+"Since we are combining both class declaration and implementation in a single"
+" file the class declaration comes next. We start with our doxygen "
+"documentation. Every test case should be properly documented. We use the "
+"doxygen ingroup directive so that all the UnitTests appear as a module in "
+"the generated Doxygen documentation. After that comes a short description of"
+" the unit test and the class must inherit from QObject and include the "
+"Q_OBJECT macro."
+msgstr ""
+"نظرًا لأننا نجمع بين كل من تعريف الفصل والتنفيذ في ملف واحد ، يأتي تعريف "
+"الفئة بعد ذلك. نبدأ مع الوثائق doxygen لدينا. يجب توثيق كل حالة اختبار بشكل "
+"صحيح. نستخدم doxygen في توجيه المجموعة بحيث تظهر جميع اختبارات الوحدة كوحدة "
+"نمطية في وثائق Doxygen التي تم إنشاؤها. بعد ذلك يأتي وصفًا قصيرًا لاختبار "
+"الوحدة ويجب أن ترث الفئة من QObject وتضمين الماكرو Q_OBJECT."
+
+#: ../../docs/developers_guide/unittesting.rst:214
+msgid ""
+"There is one more benefit to regression tests - they can save you time. If "
+"you ever fixed a bug that involved making changes to the source, and then "
+"running the application and performing a series of convoluted steps to "
+"replicate the issue, it will be immediately apparent that simply "
+"implementing your regression test before fixing the bug will let you "
+"automate the testing for bug resolution in an efficient manner."
+msgstr ""
+"هناك فائدة أخرى من اختبارات الانحدار - يمكنها توفير الوقت. إذا سبق لك إصلاح "
+"خطأ ينطوي على إجراء تغييرات على المصدر ، ثم تشغيل التطبيق وتنفيذ سلسلة من "
+"الخطوات المعقدة لتكرار المشكلة ، فسيظهر على الفور أن مجرد تنفيذ اختبار "
+"التراجع قبل إصلاح الخطأ سيسمح لك بأتمتة اختبار لقرار علة بطريقة فعالة."
+
+#: ../../docs/developers_guide/unittesting.rst:257
+msgid ""
+"That ends our class declaration. The implementation is simply inlined in the"
+" same file lower down. First our init and cleanup functions:"
+msgstr ""
+"هذا ينهي تصريح طبقتنا. يتم ببساطة تضمين التطبيق في نفس الملف لأسفل. أولاً "
+"لدينا وظائف التنظيف والتنظيف:"
+
+#: ../../docs/developers_guide/unittesting.rst:290
+msgid "The above init function illustrates a couple of interesting things."
+msgstr "توضح دالة init الواردة أعلاه شيئين مثيرًا للاهتمام."
+
+#: ../../docs/developers_guide/unittesting.rst:304
+msgid ""
+"Qt also provides some other interesting mechanisms for data driven testing, "
+"so if you are interested to know more on the topic, consult the Qt "
+"documentation."
+msgstr ""
+"كما توفر Qt بعض الآليات الأخرى المثيرة للاهتمام للاختبارات التي تعتمد على "
+"البيانات ، لذلك إذا كنت مهتمًا بمعرفة المزيد حول الموضوع ، فاستشر وثائق Qt."
+
+#: ../../docs/developers_guide/unittesting.rst:326
+msgid ""
+"Some of these macros are useful only when using the Qt framework for data "
+"driven testing (see the Qt docs for more detail)."
+msgstr ""
+"بعض وحدات الماكرو هذه مفيدة فقط عند استخدام إطار عمل كيو تي للإختبار المبني "
+"على البيانات (انظر مستندات كيو تي لمزيد من التفاصيل)."
+
+#: ../../docs/developers_guide/unittesting.rst:336
+msgid ""
+"Normally your functional tests would cover all the range of functionality of"
+" your classes public API where feasible. With our functional tests out the "
+"way, we can look at our regression test example."
+msgstr ""
+"عادةً ، ستغطي اختباراتك الوظيفية جميع وظائف وظائف API العامة للفصول الدراسية"
+" ، حيثما كان ذلك ممكنًا. من خلال اختباراتنا الوظيفية ، يمكننا أن ننظر إلى "
+"مثال اختبار الانحدار لدينا."
+
+#: ../../docs/developers_guide/unittesting.rst:340
+msgid ""
+"Since the issue in bug #832 is a misreported cell count, writing our test is"
+" simply a matter of using QVERIFY to check that the cell count meets the "
+"expected value:"
+msgstr ""
+"نظرًا لأن المشكلة في bug # 832 عبارة عن عدد خلايا تم الإبلاغ عنه بشكل خاطئ ،"
+" فإن كتابة اختبارنا هو ببساطة مسألة استخدام QVERIFY للتحقق من أن عدد الخلايا"
+" يحقق القيمة المتوقعة:"
+
+#: ../../docs/developers_guide/unittesting.rst:456
+msgid "Adding your unit test to CMakeLists.txt"
+msgstr "إضافة اختبار الوحدة الخاصة بك إلى CMakeLists.tx"
+
+#: ../../docs/developers_guide/unittesting.rst:469
+msgid "The ADD_QGIS_TEST macro explained"
+msgstr "شرح الماكرو ADD_QGIS_TEST"
+
+#: ../../docs/developers_guide/unittesting.rst:515
+msgid ""
+"Since our test class needs to be run through the Qt meta object compiler "
+"(moc) we need to provide a couple of lines to make that happen too:"
+msgstr ""
+"نظرًا لأنه يجب أن يتم تشغيل صف الاختبار من خلال مترجم كائن التعريف Qt (moc) "
+"، نحتاج إلى توفير سطرين لجعل ذلك يحدث أيضًا:"
+
+#: ../../docs/developers_guide/unittesting.rst:585
+msgid "Building your unit test"
+msgstr "بناء اختبار الوحدة الخاصة بك"
+
+#: ../../docs/developers_guide/unittesting.rst:587
+msgid ""
+"To build the unit test you need only to make sure that ``ENABLE_TESTS=true``"
+" in the cmake configuration. There are two ways to do this:"
+msgstr ""
+"لإنشاء اختبار الوحدة تحتاج فقط للتأكد من أن `` ENABLE_TESTS = true`` في "
+"تكوين cmake. هناك طريقتان للقيام بذلك:"
+
+#: ../../docs/developers_guide/unittesting.rst:590
+msgid ""
+"Run ``ccmake ..`` ( or ``cmakesetup ..`` under windows) and interactively "
+"set the ``ENABLE_TESTS`` flag to ``ON``."
+msgstr ""
+"تشغيل `` ccmake ..`` (أو `` cmakesetup ..`` ضمن النوافذ) وتعيين إشارة `` "
+"ENABLE_TESTS`` 'بشكل تفاعلي إلى `` ON``."
+
+#: ../../docs/developers_guide/unittesting.rst:592
+msgid "Add a command line flag to cmake e.g. ``cmake -DENABLE_TESTS=true ..``"
+msgstr ""
+"أضف علامة سطر الأوامر إلى cmake على سبيل المثال. `` cmake -DENABLE_TESTS = "
+"true ..`"
+
+#: ../../docs/developers_guide/unittesting.rst:594
+msgid ""
+"Other than that, just build QGIS as per normal and the tests should build "
+"too."
+msgstr ""
+"بخلاف ذلك ، فقط قم ببناء QGIS كما هو معتاد ويجب أن تبني الاختبارات أيضا."
+
+#: ../../docs/developers_guide/unittesting.rst:598
+msgid "Run your tests"
+msgstr "قم بتشغيل اختباراتك"
+
+#: ../../docs/developers_guide/unittesting.rst:601
+msgid ""
+"The simplest way to run the tests is as part of your normal build process:"
+msgstr "تعد أبسط طريقة لتشغيل الاختبارات جزءًا من عملية الإنشاء العادية"
+
+#: ../../docs/developers_guide/unittesting.rst:627
+msgid ""
+"If a test fails, you can use the ctest command to examine more closely why "
+"it failed. Use the ``-R`` option to specify a regex for which tests you want"
+" to run and ``-V`` to get verbose output:"
+msgstr ""
+"ذا فشل اختبار ، يمكنك استخدام الأمر ctest لفحص سبب فشلها عن كثب. استخدم خيار"
+" `` -R`` لتحديد regex للاختبارات التي تريد تشغيلها و `` -V` للحصول على "
+"مخرجات مطولة:"

@@ -1,0 +1,259 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:20+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:2
+msgid "|LS| Georeferencing a Map"
+msgstr "|LS| 地図を地理参照する"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:4
+msgid ""
+"A common forestry task would be the update of the information for a forestry"
+" area. It is possible that the previous information for that area dates "
+"several years back and was collected analogically (that is, in paper) or "
+"perhaps it was digitized but all you have left is the paper version of that "
+"inventory data."
+msgstr ""
+"林業においてよくある作業は、森林地域についての情報の更新でしょう。その地域についての以前の情報は何年も前にアナログで（つまり紙で）集めた、あるいはおそらくそれはデジタル化されたが残されているのはその調査データの紙版しかない、といったことがよくありそうです。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:9
+msgid ""
+"Most likely you would like to use that information in your GIS to, for "
+"example, compare later with later inventories. This means that you will need"
+" to digitize the information at hand using your GIS software. But before you"
+" can start the digitizing, there is an important first step to be done, "
+"scanning and georeferencing your paper map."
+msgstr ""
+"その情報をGISで、例えば後で後の調査と比較するために、使用したいときっと思うでしょう。これは、GISソフトウェアを用いて手で情報をデジタル化する必要があることを意味します。しかし、最初に重要なステップ、紙の地図をスキャンし地理参照しなければ、デジタル化は開始できません。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:15
+msgid ""
+"**The goal for this lesson:** To learn to use the Georeferencer tool in "
+"QGIS."
+msgstr "**このレッスンの目標：** QGISで地理参照ツールを使用する方法を学ぶ。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:18
+msgid "|basic| Scan the map"
+msgstr "|basic|  地図をスキャン"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:20
+msgid ""
+"The first task you will have to do is to scan your map. If your map is too "
+"big, then you can scan it in different parts but keep in mind that you will "
+"have to repeat preprocessing and georeferencing tasks for each part. So if "
+"possible, scan the map in as few parts as possible."
+msgstr ""
+"するべき最初のタスクは、地図をスキャンすることです。地図が大きすぎる場合は、部分に分けてそれをスキャンできますが、各部分について前処理とジオリファレンスの作業を繰り返す必要があることを心に留めておいてください。ですからできれば、可能な限り少ない部分に分けて地図をスキャンします。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:25
+msgid ""
+"If you are going to use a different map that the one provided with this "
+"manual, use your own scanner to scan the map as an image file, a resolution "
+"of 300 DPI will do. If your map has colors, scan the image in color so that "
+"you can later use those colors to separate information from your map into "
+"different  layers (for ex., forest stands, contour lines, roads...)."
+msgstr ""
+"このマニュアルで提供される一つは、画像ファイルとして地図をスキャンするために、独自のスキャナを使用する異なる地図を使用しようとしている場合は、300 "
+"DPIの解像度が行います。地図が色付きの場合は色付きで画像をスキャンし、後でそれらの色を使用して地図からの情報を別々のレイヤー（例えば、林分、道路、等高線...）に分離できるようにしておきます。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:31
+msgid ""
+"For this exercise you will use a previously scanned map, you can find it as "
+":kbd:`rautjarvi_map.tif` in the data folder :kbd:`exercise_data/forestry`"
+msgstr ""
+"この演習では以前にスキャンした地図を使用します。データフォルダ :kbd:`exercise_data/forestry` 内に "
+":kbd:`rautjarvi_map.tif` として見つかります"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:35
+msgid "|basic| |FA| Georeferencing the scanned map"
+msgstr "|basic| |FA|  スキャンした地図を地理参照する"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:43
+msgid "Save the QGIS project as :kbd:`map_digitizing.qgs`."
+msgstr ":kbd:`map_digitizing.qgs` としてQGISプロジェクトを保存します。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:45
+msgid ""
+"You will use the georeferencing plugin from QGIS, the plugin is already "
+"installed in QGIS. Activate the plugin using the plugin manager as you have "
+"done in previous modules. The plugin is named :guilabel:`Georeferencer "
+"GDAL`."
+msgstr ""
+"QGISから地理参照 プラグイン を使用します。この プラグイン はすでにQGISにインストールされています。前のモジュールで行ったように、 プラグイン"
+" マネージャを使用して プラグイン を有効にします。 プラグイン の名前は :guilabel:`Georeferencer GDAL` です。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:49
+msgid "To georeference the map:"
+msgstr "地図を地理参照するには："
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:51
+msgid ""
+"Open the georeference tool, :menuselection:`Raster --> Georeferencer --> "
+"Georeferencer`."
+msgstr "地理参照ツールを開きます :menuselection:`ラスター --> ジオリファレンサ --> ジオリファレンサ` 。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:54
+msgid ""
+"When prompted find and select the :kbd:`KKJ / Finland zone 2` CRS, it is the"
+" CRS that was used in Finland back in 1994 when this map was created."
+msgstr ""
+"求められたら :kbd:`KKJ/フィンランドゾーン2` "
+"CRSを検索して選択します。それは昔この地図が作成された1994年にフィンランドで使用されていたCRSです。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:56
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:69
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:84
+msgid "Click :guilabel:`OK`."
+msgstr ":guilabel:`OK` をクリックします。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:58
+msgid ""
+"Next you should define the transformation settings for georeferencing the "
+"map:"
+msgstr "次は地図を地理参照するための変換設定を定義する必要があります。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:60
+msgid "Open :menuselection:`Settings --> Transformation settings`."
+msgstr ":menuselection:`設定 --> 変換設定` を開きます。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:61
+msgid ""
+"Click the icon next to the :kbd:`Output raster` box, go to the folder and "
+"create the folder :kbd:`exercise_data\\\\forestry\\\\digitizing` and name "
+"the file as :kbd:`rautjarvi_georef.tif`."
+msgstr ""
+":kbd:`出力ラスター` ボックスの隣にあるアイコンをクリックして、フォルダに移動し、フォルダ "
+":kbd:`exercise_data\\\\forestry\\\\digitizing` を作成し、ファイルの名前を "
+":kbd:`rautjarvi_georef.tif` とします。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:64
+msgid "Set the rest of parameters as shown below."
+msgstr "下記に示すように、残りのパラメーターを設定します。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:80
+msgid ""
+"Select the :guilabel:`Add point` tool and click in the intersection of the "
+"cross-hairs (pan and zoom as needed)."
+msgstr ":guilabel:`point` ツールを追加し、（必要に応じてパンとズーム）十字線の交点をクリックし選択します。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:82
+msgid ""
+"In the :guilabel:`Enter map coordinates` dialogue write the coordinates that"
+" appear in the map (X: 2557000 and Y: 6786000)."
+msgstr ":guilabel:`地図座標を入力` ダイアログで地図に表示される座標（X：2557000とY：6786000 ）を書き込みます。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:86
+msgid "The first coordinate for the georeferencing is now ready."
+msgstr "地理参照のための最初の座標の準備ができました。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:88
+msgid ""
+"Look for other cross-hairs in the black lines image, they are separated 1000"
+" meters from each other both in North and East direction. You should be able"
+" to calculate the coordinates of those points in relation to the first one."
+msgstr ""
+"黒い線の画像で他の十字線を探すと、北と東の両方の方向で互いに1000メートル離れています。最初のポイントとの関係でそれらのポイントの座標を計算できるはずです。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:92
+msgid ""
+"Zoom out in the image and move to the right until you find other cross-hair,"
+" and estimate how many kilometres you have moved. Try to get ground control "
+"points as far from each other as possible. Digitize at least three more "
+"ground control points in the same way you did the first one. You should end "
+"up with something similar to this:"
+msgstr ""
+"画像にズームアウトして、他の十字を見つけるまで右に移動し、何キロメートル移動してきたか見積もります。地上基準点はできるだけ互いに離して取得してください。1つめをやったのと同じ方法で、少なくとも3つの地上基準点をデジタル化します。終わりにはこのようになっている必要があります："
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:101
+msgid ""
+"With already three digitized ground control points you will be able to see "
+"the georeferencing error as a red line coming out of the points. The error "
+"in pixels can be seen also in the :guilabel:`GCP table` in the "
+":guilabel:`dX[pixels]` and :guilabel:`dY[pixels]` columns. The error in "
+"pixels should not be higher than 10 pixels, if it is you should review the "
+"points you have digitized and the coordinates you have entered to find what "
+"the problem is. You can use the image above as a guide."
+msgstr ""
+"3つの地上基準点がすでにデジタル化されていると、地理参照の誤差をポイントから出てくる赤い線として見ることができます。 "
+":guilabel:`GCPテーブル` の中でも :guilabel:`dX [ピクセル]` と :guilabel:`dY [ピクセル]` "
+"列でピクセル単位の誤差を見ることができます。ピクセル単位の誤差は10ピクセルよりも大きくならないように。そうである場合は、問題がないかどうか、デジタル化された点および入力した座標を見直してください。ガイドとして上記の画像を使用できます。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:111
+msgid ":menuselection:`File --> Save GCP points as...`."
+msgstr ":menuselection:`ファイル --> 名前をつけてGCP点を保存...` 。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:112
+msgid ""
+"In the folder :kbd:`exercise_data\\\\forestry\\\\digitizing`, name the file "
+":kbd:`rautjarvi_map.tif.points`."
+msgstr ""
+"フォルダ :kbd:`exercise_data\\\\forestry\\\\digitizing` 中で、ファイルに "
+":kbd:`rautjarvi_map.tif.points` という名前を付けます。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:115
+msgid "Finally, georeference you map:"
+msgstr "最後に、地図を地理参照します："
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:117
+msgid ":menuselection:`File --> Start georeferencing`."
+msgstr ":menuselection:`ファイル --> 地理参照を開始` 。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:118
+msgid ""
+"Note that you named the file already as :kbd:`rautjarvi_georef.tif` when you"
+" edited the Georeferencer settings."
+msgstr "地理参照の設定を編集したときに 既にファイルを :kbd:`rautjarvi_georef.tif` と名前つけていることに注意。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:121
+msgid ""
+"Now you can see the map in QGIS project as a georeferenced raster. Note that"
+" the raster seems to be slightly rotated, but that is simply because the "
+"data is :kbd:`KKJ / Finland zone 2` and your project is in :kbd:`ETRS89 / "
+"ETRS-TM35FIN`."
+msgstr ""
+"今、地理参照ラスターとしてQGISプロジェクトの地図を見ることができます。ラスターがわずかに回転しているように見えますが、それはデータが "
+":kbd:`KKJ/フィンランドゾーン2` でありプロジェクトが :kbd:`ETRS89 / ETRS-TM35FIN` "
+"であるというだけの理由であることに注意してください。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:125
+msgid ""
+"To check that your data is properly georeferenced you can open the aerial "
+"image in the :kbd:`exercise_data\\\\forestry` folder, named "
+":kbd:`rautjarvi_aerial.tif`. Your map and this image should match quite "
+"well. Set the map transparency to 50% and compare it to the aerial image."
+msgstr ""
+":kbd:`exercise_data\\\\forestry` フォルダの、 :kbd:`rautjarvi_aerial.tif` "
+"という名前の空撮画像を開き、データが適切に地理参照されていることを確認できます。地図とこの画像は非常によく一致している必要があります。地図の透明度を50％に設定して空撮画像と比較します。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:133
+msgid ""
+"Save the changes to your QGIS project, you will continue from this point for"
+" the next lesson."
+msgstr "QGISプロジェクトへの変更を保存し、次のレッスンはこの時点から継続します。"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:137
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:143
+msgid "|WN|"
+msgstr "|WN|"

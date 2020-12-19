@@ -1,0 +1,152 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:22+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Romanian (https://www.transifex.com/qgis/teams/6144/ro/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+#: ../../docs/training_manual/processing/first_saga_alg.rst:2
+msgid "Running an external algorithm"
+msgstr "Rularea unui algoritm extern"
+
+#: ../../docs/training_manual/processing/first_saga_alg.rst:5
+msgid ""
+"In this lesson we will see how to use algorithms that depend on a third-"
+"party application, particularly SAGA, which is one of the main algorithm "
+"providers."
+msgstr ""
+"În această lecție vom vedea cum să folosim algoritmi care depind de o terță "
+"aplicație, în speță SAGA, care este unul dintre principalii furnizori de "
+"algoritmi."
+
+#: ../../docs/training_manual/processing/first_saga_alg.rst:17
+msgid ""
+"Some of the algorithms that you see in the simplified view require third "
+"party applications to be installed in your system. One algorithm provider of"
+" special interest is SAGA (System for Automated Geospatial Analysis). First,"
+" we need to configure everything so QGIS can correctly call SAGA. This is "
+"not difficult, but it's important to understand how it works. Each external "
+"application has its own configuration, and later in this same manual we will"
+" talk about some of the other ones, but SAGA is going to be our main "
+"backend, so we will discuss it here."
+msgstr ""
+"Pentru a rula, unii dintre algoritmii pe care îi vedeți în vizualizarea "
+"simplificată necesită, în prealabil, instalarea unor aplicații terțe în "
+"sistemul dumneavoastră. Un furnizor de algoritm de interes special este SAGA"
+" (Sistem de Analize Geospațiale Automate). Pentru a apela în mod corect "
+"SAGA, QGIS trebuie să fie configurat în mod corespunzător. Acest lucru nu "
+"este dificil, dacă înțelegem principiul de funcționare. Fiecare aplicație "
+"externă are propria sa configurație, iar mai târziu, în același manual vom "
+"vorbi despre altele, însă acum vom discuta despre SAGA."
+
+#: ../../docs/training_manual/processing/first_saga_alg.rst:25
+msgid ""
+"If you are on Windows, the best way to work with external algorithms is to "
+"install QGIS using the standalone installer. It will take care of installing"
+" all the needed dependencies, including SAGA, so if you have used it, there "
+"is nothing else to do. You can open the settings dialog and go to the "
+"*Providers/SAGA* group."
+msgstr ""
+"În cazul în care vă aflați pe Windows, cel mai bun mod de a lucra cu "
+"algoritmii externi este de a instala QGIS cu ajutorul programului de "
+"instalare. Acesta va avea grijă de instalarea dependențelor necesare, "
+"inclusiv SAGA, astfel că, dacă l-ați folosit, nu mai trebuie să "
+"întreprindeți altceva. Puteți deschide dialogul setărilor, apoi să mergeți "
+"la grupul *Furnizorilor/SAGA*."
+
+#: ../../docs/training_manual/processing/first_saga_alg.rst:32
+msgid ""
+"The SAGA path should already be configured and pointing to the folder where "
+"SAGA is installed."
+msgstr ""
+"Calea către SAGA trebuie să fie deja configurată și să indice folderul în "
+"care este instalat SAGA."
+
+#: ../../docs/training_manual/processing/first_saga_alg.rst:34
+msgid ""
+"If you have installed QGIS not using the standalone installer, then you must"
+" enter the path to your SAGA installation (which you must have installed "
+"separately) there. The required version is SAGA 2.1 [this is changing "
+"according to the releases of SAGA]."
+msgstr ""
+"Dacă ați instalat QGIS fără să folosiți programul autonom de instalare, "
+"atunci trebuie să introduceți calea către SAGA (care trebuie să fie deja "
+"instalată). Versiunea necesară este SAGA 2.1 [aceasta se schimbă în funcție "
+"de versiunile de SAGA]."
+
+#: ../../docs/training_manual/processing/first_saga_alg.rst:50
+msgid ""
+"Once SAGA is installed, you can launch a SAGA algorithm double clicking on "
+"its name, as with any other algorithm. Since we are using the simplified "
+"interface, you do not know which algorithms are based on SAGA or in another "
+"external application, but if you happen to double--click on one of them and "
+"the corresponding application is not installed, you will see something like "
+"this."
+msgstr ""
+"O dată ce SAGA este instalat, puteți lansa un algoritm SAGA printr-un dublu "
+"clic pe numele său, similar celorlalți algoritmi. Din moment ce folosim "
+"interfața simplificată, nu știm care dintre algoritmi se bazează pe SAGA sau"
+" pe o altă aplicație externă, dar dacă se întâmplă să rulați unul pentru "
+"care aplicația corespunzătoare nu este instalată, vi se va indica acest "
+"lucru."
+
+#: ../../docs/training_manual/processing/first_saga_alg.rst:58
+msgid ""
+"In our case, and assuming that SAGA is correctly installed and configured, "
+"you should not see this window, and you will get to the parameters dialog "
+"instead."
+msgstr ""
+"În cazul nostru, presupunând că aplicația SAGA este instalată și configurată"
+" corect, nu ar trebui să vedeți această fereastră ci, în schimb, veți obține"
+" parametrii dialogului."
+
+#: ../../docs/training_manual/processing/first_saga_alg.rst:61
+msgid ""
+"Let's try with a SAGA--based algorithm, the one called *Split shapes layer "
+"randomly*."
+msgstr ""
+"Să încercăm cu un algoritm bazat pe SAGA, cel denumit *Split shapes layer "
+"randomly*."
+
+#: ../../docs/training_manual/processing/first_saga_alg.rst:65
+msgid ""
+"Use the points layer in the project corresponding to this lesson as input, "
+"and the default parameter values, and you will get something like this (the "
+"split is random, so your result might be different)."
+msgstr ""
+"Folosind ca intrare stratul de puncte din proiectul corespunzător acestei "
+"lecții, împreună cu valorile implicite ale parametrilor, veți obține ceva de"
+" genul următor (divizarea este aleatorie, de aceea rezultatul dvs. poate fi "
+"diferit)."
+
+#: ../../docs/training_manual/processing/first_saga_alg.rst:87
+msgid "Open the *Create graticule* algorithm and use the following values."
+msgstr ""
+"Deschideți algoritmul *Creare graticule*, și folosiți-l cu următoarele "
+"valori."
+
+#: ../../docs/training_manual/processing/first_saga_alg.rst:98
+msgid ""
+"In SAGA >= 2.2.3, the command will adjust automatically wrong input data, so"
+" you'll not get an error. To provoke an error, use negative values for "
+"division."
+msgstr ""
+"În SAGA >= 2.2.3, comanda va ajusta în mod automat datele de intrare "
+"greșite, așa că nu veți obține o eroare. Pentru a provoca o eroare, "
+"utilizați valori negative la divizare."

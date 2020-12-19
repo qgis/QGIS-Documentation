@@ -1,0 +1,449 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# Peter Gräbel <graebel@gis-consult-nord.de>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:16+0000\n"
+"Last-Translator: Peter Gräbel <graebel@gis-consult-nord.de>, 2020\n"
+"Language-Team: German (https://www.transifex.com/qgis/teams/6144/de/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:5
+msgid "Vector Data"
+msgstr "Vektordaten"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:8
+msgid "|gentleLogo|"
+msgstr "|gentleLogo|"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:8
+msgid "Objectives:"
+msgstr "Ziele:"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:8
+msgid "Understanding of vector data models as used in GIS."
+msgstr "Das Vektordatenmodell von QGIS verstehen."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:10
+msgid "Keywords:"
+msgstr "Schlüsselwörter:"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:10
+msgid ""
+"Vector, Point, Polyline, Polygon, Vertex, Geometry, Scale, Data Quality, "
+"Symbology, Data Sources"
+msgstr ""
+"Vektor, Punkt, Polylinie, Polygon, Vertex, Geometrie, Maßstab, "
+"Datenqualität, Darstellung, Datenquellen"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:14
+msgid "Overview"
+msgstr "Übersicht"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:16
+msgid ""
+"**Vector** data provide a way to represent real world **features** within "
+"the GIS environment. A feature is anything you can see on the landscape. "
+"Imagine you are standing on the top of a hill. Looking down you can see "
+"houses, roads, trees, rivers, and so on (see figure_vector_landscape_). Each"
+" one of these things would be a **feature** when we represent them in a GIS "
+"Application. Vector features have **attributes**, which consist of text or "
+"numerical information that **describe** the features."
+msgstr ""
+"**Vektordaten** bieten eine Möglichkeit, reale **features** in der GIS-"
+"Umgebung darzustellen. Eine feature ist alles, was Sie in der Landschaft "
+"sehen können. Stellen Sie sich vor, Sie stehen auf einem Hügel. Wenn Sie "
+"nach unten schauen, sehen Sie Häuser, Straßen, Bäume, Flüsse usw. (siehe "
+"figure_vector_landscape_). Jedes dieser Dinge wäre eine **feature**, wenn "
+"wir sie in einer GIS-Anwendung darstellen. Vektor features haben "
+"**Attribute**, die aus Text oder numerischen Informationen bestehen, die die"
+" features **beschreiben**."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:30
+msgid ""
+"Looking over a landscape you can see the main features, such as roads, "
+"houses and trees."
+msgstr ""
+"Wenn Sie den Blick über eine Landschaft schweifen lassen, können Sie die "
+"Haupt-Features wie Straßen, Häuser und Bäume erkennen."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:33
+msgid ""
+"A vector feature has its shape represented using **geometry**. The geometry "
+"is made up of one or more interconnected **vertices**. A vertex describes a "
+"position in space using an **X**, **Y** and optionally **Z** axis. "
+"Geometries which have vertices with a ``Z`` axis are often referred to as "
+"**2.5D** since they describe height or depth at each vertex, but not both."
+msgstr ""
+"Die Form eines Vektor-Features wird mit einer **Geometrie** dargestellt. Die"
+" Geometrie besteht aus einem oder mehreren miteinander verbundenen "
+"**Scheitelpunkten**. Ein Scheitelpunkt beschreibt eine Position im Raum "
+"unter Verwendung einer **X** -, **Y** - und optional **Z** -Achse. "
+"Geometrien mit Scheitelpunkten an einer Z-Achse werden häufig als **2,5D** "
+"bezeichnet, da sie die Höhe oder Tiefe an jedem Scheitelpunkt beschreiben, "
+"jedoch nicht beide."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:39
+msgid ""
+"When a feature's geometry consists of only a single vertex, it is referred "
+"to as a **point** feature (see illustration figure_geometry_point_). Where "
+"the geometry consists of two or more vertices and the first and last vertex "
+"are not equal, a **polyline** feature is formed (see illustration "
+"figure_geometry_polyline_). Where three or more vertices are present, and "
+"the last vertex is equal to the first, an enclosed **polygon** feature is "
+"formed (see illustration figure_geometry_polygon_)."
+msgstr ""
+"Wenn die Geometrie eines Features nur aus einem einzigen Scheitelpunkt "
+"besteht, wird sie als **Punkt** -Feature bezeichnet (siehe Abbildung "
+"figure_geometry_point_). Wenn die Geometrie aus zwei oder mehr "
+"Scheitelpunkten besteht und der erste und der letzte Scheitelpunkt nicht "
+"gleich sind, wird ein Merkmal **Polylinie** gebildet (siehe Abbildung "
+"figure_geometry_polyline_). Wenn drei oder mehr Scheitelpunkte vorhanden "
+"sind und der letzte Scheitelpunkt gleich dem ersten ist, wird ein "
+"eingeschlossenes **Polygon** -Feature gebildet (siehe Abbildung "
+"figure_geometry_polygon_)."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:52
+msgid ""
+"A point feature is described by its X, Y and optionally Z coordinate. The "
+"point attributes describe the point e.g. if it is a tree or a lamp post."
+msgstr ""
+"Ein Punkt-Feature wird durch seine X-, Y- und optional Z-Koordinate "
+"beschrieben. Die Punktattribute beschreiben den Punkt, z.B. ob es sich um "
+"einen Baum oder einen Laternenpfahl handelt."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:61
+msgid ""
+"A polyline is a sequence of joined vertices. Each vertex has an X, Y (and "
+"optionally Z) coordinate. Attributes describe the polyline."
+msgstr ""
+"Eine Polylinie ist eine Sequenz verbundener Vertices. Jeder Vertex hat eine "
+"X-, Y- (und optional Z-)Koordinate. Die Polylinie wird durch ihre Attribute "
+"beschrieben."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:70
+msgid ""
+"A polygon, like a polyline, is a sequence of vertices. However in a polygon,"
+" the first and last vertices are always at the same position."
+msgstr ""
+"Ein Polygon besteht wie auch eine Polylinie aus einer Sequenz von Vertices. "
+"In einem Polygon befinden sich der erste und letzte Vertex jedoch an der "
+"gleichen Stelle."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:73
+msgid ""
+"Looking back at the picture of a landscape we showed you further up, you "
+"should be able to see the different types of features in the way that a GIS "
+"represents them now (see illustration figure_geometry_landscape_)."
+msgstr ""
+"Wenn Sie sich jetzt noch einmal das Landschaftsfoto von eben anschauen, "
+"sollten Sie in der Lage sein die verschiedenen Feature-Typen auf die Art zu "
+"sehen, wie ein GIS sie jetzt repräsentiert (siehe "
+"figure_geometry_landscape_)."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:83
+msgid ""
+"Landscape features as we would present them in a GIS. Rivers (blue) and "
+"roads (green) can be represented as lines, trees as points (red) and houses "
+"as polygons (white)."
+msgstr ""
+"Landschafts-Features, wie wir sie in einem GIS darstellen würden. Flüsse "
+"(blau) und Straßen (grün) können als Linien dargestellt werden, Bäume als "
+"Punkte (rot) und Häuser als Polygone (weiß)."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:88
+msgid "Point features in detail"
+msgstr "Punkt-Features im Detail"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:90
+msgid ""
+"The first thing we need to realise when talking about point features is that"
+" what we describe as a point in GIS is a matter of opinion, and often "
+"dependent on scale. let's look at cities for example. If you have a small "
+"scale map (which covers a large area), it may make sense to represent a city"
+" using a point feature. However as you zoom in to the map, moving towards a "
+"larger scale, it makes more sense to show the city limits as a polygon."
+msgstr ""
+"Wenn wir über Punkt-Features sprechen, müssen wir uns als allererstes "
+"vergegenwärtigen, dass ein Punkt in einem GIS Ansichtssache ist, und oftmals"
+" vom Maßstab abhängt. Schauen wir uns zum Beispiel Städte an. Wenn Sie eine "
+"Karte mit kleinem Maßstab haben (die ein großes Gebiet darstellt), könnte es"
+" sinnvoll sein eine Stadt durch ein Punkt-Feature darzustellen. Wenn sie den"
+" Kartenausschnitt jedoch vergrößern, ist es sinnvoller das Stadtgebiet als "
+"Polygon abzubilden."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:97
+msgid ""
+"When you choose to use points to represent a feature is mostly a matter of "
+"scale (how far away are you from the feature), convenience (it takes less "
+"time and effort to create point features than polygon features), and the "
+"type of feature (some things like telephone poles just don't make sense to "
+"be stored as polygons)."
+msgstr ""
+"Wenn Sie sich dazu entscheiden Punkte zur Darstellung eines Features zu "
+"wählen, so ist dies meistens eine Frage von Maßstab (Entfernung bis zum "
+"Feature), Bequemlichkeit (es benötigt weniger Zeit und Aufwand Punkt-"
+"Features zu erstellen als Polygon-Features) und Feature-Typ (bei manchen "
+"Dingen wie z.B. Telefonmasten hat es keinen Sinn sie als Polygone zu "
+"speichern)."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:102
+msgid ""
+"As we show in illustration figure_geometry_point_, a point feature has an X,"
+" Y and optionally, Z value. The X and Y values will depend on the "
+"**Coordinate Reference System** (CRS) being used. We are going to go into "
+"more detail about Coordinate Reference Systems in a later tutorial. For now "
+"let's simply say that a CRS is a way to accurately describe where a "
+"particular place is on the earth's surface. One of the most common reference"
+" systems is **Longitude and Latitude**. Lines of Longitude run from the "
+"North Pole to the South Pole. Lines of Latitude run from the East to West. "
+"You can describe precisely where you are at any place on the earth by giving"
+" someone your Longitude (X) and Latitude (Y). If you make a similar "
+"measurement for a tree or a telephone pole and marked it on a map, you will "
+"have created a point feature."
+msgstr ""
+"Wie in der Abbildung figure_geometry_point_ gezeigt, hat ein Punkt-Feature "
+"einen X-, Y- und optional einen Z-Wert. Die X- und Y-Werte hängen vom "
+"verwendeten **Koordinatenbezugssystem** (KBS) ab. Wir werden in einem "
+"späteren Tutorial näher auf Koordinatenbezugssysteme eingehen. Lassen Sie "
+"uns zunächst einfach sagen, dass ein KBS eine Möglichkeit ist, genau zu "
+"beschreiben, wo sich ein bestimmter Ort auf der Erdoberfläche befindet. "
+"Eines der gebräuchlichsten Bezugssysteme ist **Längen- und Breitengrad**. "
+"Längengrade verlaufen vom Nordpol zum Südpol. Die Linien der Breitengrade "
+"verlaufen von Ost nach West. Sie können genau beschreiben, wo Sie sich an "
+"einem beliebigen Ort auf der Erde befinden, indem Sie jemandem Ihren "
+"Längengrad (X) und Breitengrad (Y) geben. Wenn Sie eine ähnliche Messung für"
+" einen Baum oder einen Telefonmast durchführen und diese auf einer Karte "
+"markieren, haben Sie ein Punkt-Feature erstellt."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:114
+msgid ""
+"Since we know the earth is not flat, it is often useful to add a Z value to "
+"a point feature. This describes how high above sea level you are."
+msgstr ""
+"Da wir wissen, dass die Erde keine Scheibe ist, ist es oftmals nützlich dem "
+"Punkt-Feature einen Z-Wert hinzuzufügen. Dieser beschreibt die Höhe über dem"
+" Meeresspiegel."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:118
+msgid "Polyline features in detail"
+msgstr "Polylinien-Features im Detail"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:120
+msgid ""
+"Where a point feature is a single vertex, **a polyline has two or more "
+"vertices**. The polyline is a continuous path drawn through each vertex, as "
+"shown in figure_geometry_polyline_. When two vertices are joined, a line is "
+"created. When more than two are joined, they form a 'line of lines', or "
+"**polyline**."
+msgstr ""
+"Während ein Punkt-Feature ein einzelner Scheitelpunkt ist, **hat eine "
+"Polylinie zwei oder mehr Scheitelpunkte**. Die Polylinie ist ein "
+"kontinuierlicher Pfad, der durch jeden Scheitelpunkt gezogen wird, wie in "
+"figure_geometry_polyline_ gezeigt. Wenn zwei Scheitelpunkte verbunden "
+"werden, wird eine Linie erstellt. Wenn mehr als zwei verbunden sind, bilden "
+"sie eine 'Linienlinie' oder **Polylinie**."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:125
+msgid ""
+"A polyline is used to show the geometry of **linear features** such as "
+"roads, rivers, contours, footpaths, flight paths and so on. Sometimes we "
+"have special rules for polylines in addition to their basic geometry. For "
+"example contour lines may touch (e.g. at a cliff face) but should never "
+"cross over each other. Similarly, polylines used to store a road network "
+"should be connected at intersections. In some GIS applications you can set "
+"these special rules for a feature type (e.g. roads) and the GIS will ensure "
+"that these polylines always comply to these rules."
+msgstr ""
+"Eine Polylinie wird verwendet um **lineare Features** wie Straßen, Flüsse, "
+"Konturen, Fußwege, Flugrouten usw. darzustellen. Manchmal gibt es für "
+"Polylinien zusätzlich zu ihrer Basisgeometrie spezielle Vorschriften. Zum "
+"Beispiel dürfen sich Konturlinien berühren (z.B. bei einer Felsklippe), sie "
+"dürfen sich aber niemals kreuzen. Gleichermaßen sollten Polylinien, die ein "
+"Wegenetz abbilden, an Schnittpunkten miteinander verbunden sein. In manchen "
+"GIS-Anwendungen kann man diese speziellen Regeln für den jeweiligen Feature-"
+"Typ (z.B. Straßen) einstellen, so dass das GIS gewährleistet, dass diese "
+"Polylinien stets diesen Vorgaben entsprechen."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:134
+msgid ""
+"If a curved polyline has very large distances between vertices, it may "
+"appear **angular** or jagged, depending on the scale at which it is viewed "
+"(see figure_polyline_jagged_). Because of this it is important that "
+"polylines are digitised (captured into the computer) with distances between "
+"vertices that are small enough for the scale at which you want to use the "
+"data."
+msgstr ""
+"Wenn eine gekrümmte Polylinie sehr große Abstände zwischen den "
+"Scheitelpunkten aufweist, kann sie je nach Betrachtungsmaßstab **eckig** "
+"oder gezackt erscheinen (siehe figure_polyline_jagged_). Aus diesem Grund "
+"ist es wichtig, dass Polylinien mit Abständen zwischen Scheitelpunkten "
+"digitalisiert (im Computer erfasst) werden, die klein genug für den Maßstab "
+"sind, in dem Sie die Daten verwenden möchten."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:146
+msgid ""
+"Polylines viewed at a smaller scale (1:20 000 to the left) may appear smooth"
+" and curved. When zoomed in to a larger scale (1:500 to the right) polylines"
+" may look very angular."
+msgstr ""
+"Betrachtet man Polylinien mit kleinerem Maßstab (1:20.000 links im Bild), "
+"können sie glatt und gebogen erscheinen. Zoomt man auf einen größeren "
+"Maßstab hinein (1:500 rechts im Bild), können sie sehr eckig aussehen."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:150
+msgid ""
+"The **attributes** of a polyline describe its properties or characteristics."
+" For example a road polyline may have attributes that describe whether it is"
+" surfaced with gravel or tar, how many lanes it has, whether it is a one way"
+" street, and so on. The GIS can use these attributes to symbolise the "
+"polyline feature with a suitable colour or line style."
+msgstr ""
+"Die **Attribute** einer Polylinie beschreiben ihre Eigenschaften oder "
+"Merkmale. Beispielsweise kann eine Straßenpolylinie Attribute aufweisen, die"
+" beschreiben, ob sie mit Kies oder Teer bedeckt ist, wie viele Fahrspuren "
+"sie hat, ob es sich um eine Einbahnstraße handelt und so weiter. Das GIS "
+"kann diese Attribute verwenden, um das Polylinien-Feature mit einer "
+"geeigneten Farbe oder einem geeigneten Linienstil zu symbolisieren."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:157
+msgid "Polygon features in detail"
+msgstr "Polygon-Features im Detail"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:159
+msgid ""
+"Polygon features are **enclosed areas** like dams, islands, country "
+"boundaries and so on. Like polyline features, polygons are created from a "
+"series of vertices that are connected with a continuous line. However "
+"because a polygon always describes an enclosed area, the first and last "
+"vertices should always be at the same place! Polygons often have **shared "
+"geometry** –-- boundaries that are in common with a neighbouring polygon. "
+"Many GIS applications have the capability to ensure that the boundaries of "
+"neighbouring polygons exactly coincide. We will explore this in the "
+":ref:`gentle_gis_topology` topic later in this tutorial."
+msgstr ""
+"Polygon-Features sind **eingeschlossene Flächen**, wie Dämme, Inseln, "
+"Ländergrenzen usw. So wie Polylinien-Features werden auch Polygon-Features  "
+"durch eine Reihe von Vertices gebildet, die durch eine fortlaufende Linie "
+"miteinander verbunden sind. Da ein Polygon stets eine eingeschlossene Fläche"
+" beschreibt, sollten sich der erste und der letzte Vertex immer an der "
+"gleichen Stelle befinden! Polygone haben oftmals **gemeinsame Geometrien**  "
+"–-- Grenzen, die sie sich mit einem benachbarten Polygon teilen. Viele GIS-"
+"Anwendungen bieten die Möglichkeit, dass die Grenzen benachbarter Polygone "
+"exakt übereinstimmen. Dies werden wir im Thema :ref:`gentle_gis_topology` "
+"später in diesem Tutorial ergründen."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:168
+msgid ""
+"As with points and polylines, polygons have **attributes**. The attributes "
+"describe each polygon. For example a dam may have attributes for depth and "
+"water quality."
+msgstr ""
+"Wie Punkte und Polylinien besitzen auch Polygone **Attribute**. Die "
+"Attribute beschreiben jedes Polygon. Zum Beispiel könnte ein Damm Attibute "
+"für Tiefe und Wasserqualität besitzen."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:173
+msgid "Vector data in layers"
+msgstr "Vektordaten in Layern"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:175
+msgid ""
+"Now that we have described what vector data is, let's look at how vector "
+"data is managed and used in a GIS environment. Most GIS applications group "
+"vector features into **layers**. Features in a layer have the same geometry "
+"type (e.g. they will all be points) and the same kinds of attributes (e.g. "
+"information about what species a tree is for a trees layer). For example if "
+"you have recorded the positions of all the footpaths in your school, they "
+"will usually be stored together on the computer hard disk and shown in the "
+"GIS as a single layer. This is convenient because it allows you to hide or "
+"show all of the features for that layer in your GIS application with a "
+"single mouse click."
+msgstr ""
+"Nachdem wir nun beschrieben haben, was Vektordaten sind, schauen wir uns an,"
+" wie Vektordaten in einer GIS-Umgebung verwaltet und verwendet werden. Die "
+"meisten GIS-Anwendungen gruppieren Vektormerkmale in **Layer**. Alle Feature"
+" in einem Layer haben denselben Geometrietyp (z. B. sind sie alle Punkte) "
+"und dieselben Arten von Attributen (z. B. Informationen darüber, welche Art "
+"ein Baum in einem Baum-Layer ist). Wenn Sie beispielsweise die Positionen "
+"aller Fußwege in Ihrer Schule aufgezeichnet haben, werden diese "
+"normalerweise zusammen auf der Computerfestplatte gespeichert und im GIS als"
+" einzelner Layer angezeigt. Dies ist praktisch, da Sie mit einem einzigen "
+"Mausklick alle Feature für diese Ebene in Ihrer GIS-Anwendung ausblenden "
+"oder anzeigen können."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:186
+msgid "Editing vector data"
+msgstr "Bearbeiten von Vektordaten"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:188
+msgid ""
+"The GIS application will allow you to create and modify the geometry data in"
+" a layer --– a process called **digitising** –-- which we will look at more "
+"closely in a later tutorial. If a layer contains polygons (e.g. farm dams), "
+"the GIS application will only allow you to create new polygons in that "
+"layer. Similarly if you want to change the shape of a feature, the "
+"application will only allow you to do it if the changed shape is correct. "
+"For example it won't allow you to edit a line in such a way that it has only"
+" one vertex –-- remember in our discussion of lines above that all lines "
+"must have at least two vertices."
+msgstr ""
+"Mit der GIS-Anwendung können Sie die Geometriedaten in einer Ebene erstellen"
+" und ändern - ein Prozess namens **Digitalisierung** -, auf den wir in einem"
+" späteren Tutorial näher eingehen werden. Wenn ein Layer Polygone enthält "
+"(z. B. Farmdämme), können Sie mit der GIS-Anwendung nur neue Polygone in "
+"diesem Layer erstellen. Wenn Sie die Form eines Features ändern möchten, "
+"können Sie dies in der Anwendung nur tun, wenn die geänderte Form korrekt "
+"ist. Zum Beispiel können Sie eine Linie nicht so bearbeiten, dass sie nur "
+"einen Scheitelpunkt hat - denken Sie an unsere vorangegangene Definition der"
+" Linien, dass alle Linien mindestens zwei Scheitelpunkte haben müssen."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:243
+msgid "Symbology"
+msgstr "Symbolisierung"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:347
+msgid "What have we learned?"
+msgstr "Was haben wir gelernt?"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:349
+msgid "Let's wrap up what we covered in this worksheet:"
+msgstr ""
+"Lassen Sie uns zusammenfassen, was wir in diesem Arbeitsblatt behandelt "
+"haben:"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:383
+msgid "Now you try!"
+msgstr "Versuchen Sie es selbst!"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:385
+msgid "Here are some ideas for you to try with your learners:"
+msgstr ""
+"Hier sind einige Ideen für Sie, die Sie mit Ihren Lernenden versuchen "
+"sollten:"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:425
+msgid "Something to think about"
+msgstr "Etwas zum nachdenken"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:431
+msgid "Further reading"
+msgstr "Literaturhinweise"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:437
+msgid "What's next?"
+msgstr "Wie geht es weiter?"

@@ -1,0 +1,258 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:24+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:29
+msgid "Network analysis library"
+msgstr "ネットワーク分析ライブラリ"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:41
+msgid ""
+"The network analysis library was created by exporting basic functions from "
+"the RoadGraph core plugin and now you can use it's methods in plugins or "
+"directly from the Python console."
+msgstr ""
+"ネットワーク解析ライブラリはRoadGraphコアプラグインから基本機能をエクスポートすることによって作成されました。今はそのメソッドをプラグインで、またはPythonのコンソールから直接使用できます。"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:46
+msgid "General information"
+msgstr "一般情報"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:48
+msgid "Briefly, a typical use case can be described as:"
+msgstr "手短に言えば、一般的なユースケースは、次のように記述できます。"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:50
+msgid "create graph from geodata (usually polyline vector layer)"
+msgstr "地理データから地理的なグラフ（たいていはポリラインベクターレイヤー）を作成する"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:51
+msgid "run graph analysis"
+msgstr "グラフ分析の実行"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:52
+msgid "use analysis results (for example, visualize them)"
+msgstr "分析結果の利用（例えば、これらの可視化）"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:55
+msgid "Building a graph"
+msgstr "グラフを構築する"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:57
+msgid ""
+"The first thing you need to do --- is to prepare input data, that is to "
+"convert a vector layer into a graph. All further actions will use this "
+"graph, not the layer."
+msgstr ""
+"最初にする必要がある事は---"
+"入力データを準備することです、つまりベクターレイヤーをグラフに変換することです。これからのすべての操作は、レイヤーではなく、このグラフを使用します。"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:61
+msgid ""
+"As a source we can use any polyline vector layer. Nodes of the polylines "
+"become graph vertexes, and segments of the polylines are graph edges. If "
+"several nodes have the same coordinates then they are the same graph vertex."
+" So two lines that have a common node become connected to each other."
+msgstr ""
+"ソースとしてどんなポリラインベクターレイヤーも使用できます。ポリラインの頂点は、グラフの頂点となり、ポリラインのセグメントは、グラフの辺です。いくつかのノードが同じ座標を持っている場合、それらは同じグラフの頂点です。だから共通のノードを持つ2つの線は接続しています。"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:66
+msgid ""
+"Additionally, during graph creation it is possible to \"fix\" (\"tie\") to "
+"the input vector layer any number of additional points. For each additional "
+"point a match will be found --- the closest graph vertex or closest graph "
+"edge. In the latter case the edge will be split and a new vertex added."
+msgstr ""
+"さらに、グラフの作成時には、入力ベクターレイヤーに好きな数だけ追加の点を「固定する」（「結びつける」）ことが可能です。追加の点それぞれについて、対応箇所"
+"---最も近いグラフの頂点または最も近いグラフの辺、が探し出されます。後者の場合、辺は分割されて新しい頂点が追加されるでしょう。"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:71
+msgid ""
+"Vector layer attributes and length of an edge can be used as the properties "
+"of an edge."
+msgstr "ベクターレイヤー属性と辺の長さは、辺の性質として使用できます。"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:95
+msgid "It's time to dive into the process."
+msgstr "では手順に行きましょう。"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:103
+msgid "Then some examples for creating a director"
+msgstr "それからディレクターを作成するためのいくつかの例"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:119
+msgid ""
+"To construct a director  we should pass a vector layer, that will be used as"
+" the source for the graph structure and information about allowed movement "
+"on each road segment (one-way or bidirectional movement, direct or reverse "
+"direction). The call looks like this"
+msgstr ""
+"ディレクターを構築するために、ベクターレイヤーを渡さなければなりません。これはグラフ構造および各道路セグメント上で許される移動（一方向または双方向の動き、順または逆の方向）についての情報のソースとして使用されるでしょう。呼び出しは次のようになります"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:133
+msgid "And here is full list of what these parameters mean:"
+msgstr "そして、ここでこれらのパラメーターは何を意味するかの完全なリストは以下のとおりです。 "
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:136
+msgid ""
+"``directionFieldId`` --- index of the attribute table field, where "
+"information about roads direction is stored. If ``-1``, then don't use this "
+"info at all. An integer."
+msgstr ""
+"``directionFieldId`` ---道路の方向に関する情報が格納されている属性テーブルのフィールドのインデックス。 ``-1`` "
+"、その後、まったくこの情報を使用しない場合。整数。"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:139
+msgid ""
+"``directDirectionValue`` --- field value for roads with direct direction "
+"(moving from first line point to last one). A string."
+msgstr "``directDirectionValue`` ---順方向（線の最初の点から最後の点へ移動）の道に対するフィールド値。文字列。"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:141
+msgid ""
+"``reverseDirectionValue`` --- field value for roads with reverse direction "
+"(moving from last line point to first one). A string."
+msgstr "``reverseDirectionValue`` ---逆方向（線の最後の点から最初の点へ移動）の道に対するフィールド値。文字列。"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:143
+msgid ""
+"``bothDirectionValue`` --- field value for bidirectional roads (for such "
+"roads we can move from first point to last and from last to first). A "
+"string."
+msgstr ""
+"``bothDirectionValue`` "
+"---双方向道路に対するフィールド値（例えば最初の点から最後まで、また最後から最初まで移動できる道に対する）。文字列。"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:154
+msgid ""
+"It is necessary then to create a strategy for calculating edge properties"
+msgstr "それから、辺性質を計算するための戦略を作成することが必要です"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:166
+msgid "And tell the director about this strategy"
+msgstr "そして、ディレクターにこの戦略について教えます"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:187
+msgid ""
+"Also we can define several points, which will be used in the analysis. For "
+"example"
+msgstr "分析に使用されるいくつかのポイントを定義することもできます。例えば"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:195
+msgid ""
+"Now all is in place so we can build the graph and \"tie\" these points to it"
+msgstr "これですべてが整いましたので、グラフを構築し、それにこれらの点を「結びつける」ことができます。"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:201
+msgid ""
+"Building the graph can take some time (which depends on the number of "
+"features in a layer and layer size). ``tiedPoints`` is a list with "
+"coordinates of \"tied\" points. When the build operation is finished we can "
+"get the graph and use it for the analysis"
+msgstr ""
+"グラフを構築するには（レイヤー中の地物数とレイヤーのサイズに応じて）いくらか時間がかかることがあります。 ``tiedPoints`` "
+"は「結びつけられた」点の座標を持つリストです。ビルド操作が完了するとグラフが得られ、それを分析のために使用できます"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:210
+msgid "With the next code we can get the vertex indexes of our points"
+msgstr "次のコードで、点の頂点インデックスを取得できます"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:219
+msgid "Graph analysis"
+msgstr "グラフ分析"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:221
+msgid ""
+"Networks analysis is used to find answers to two questions: which vertexes "
+"are connected and how to find a shortest path. To solve these problems the "
+"network analysis library provides Dijkstra's algorithm."
+msgstr ""
+"ネットワーク分析はこの二つの質問に対する答えを見つけるために使用されます：どの頂点が接続されているか、どのように最短経路を検索するか。これらの問題を解決するため、ネットワーク解析ライブラリではダイクストラのアルゴリズムを提供しています。"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:225
+msgid ""
+"Dijkstra's algorithm finds the shortest route from one of the vertexes of "
+"the graph to all the others and the values of the optimization parameters. "
+"The results can be represented as a shortest path tree."
+msgstr ""
+"ダイクストラ法は、グラフの１つの頂点から他のすべての頂点への最短ルートおよび最適化パラメーターの値を見つけます。結果は、最短経路木として表現できます。"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:232
+msgid "only one vertex has no incoming edges — the root of the tree"
+msgstr "流入する辺がない頂点が1つだけあります - 木の根"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:233
+msgid "all other vertexes have only one incoming edge"
+msgstr "他のすべての頂点には流入する辺が１つだけあります"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:234
+msgid ""
+"if vertex B is reachable from vertex A, then the path from A to B is the "
+"single available path and it is optimal (shortest) on this graph"
+msgstr "頂点Bが頂点Aから到達可能である場合、このグラフ上のAからBへの経路は、単一の利用可能な経路であり、それは最適（最短）です"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:346
+msgid "Finding shortest paths"
+msgstr "最短経路を見つける"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:366
+msgid ""
+"At this point we have the path, in the form of the inverted list of vertexes"
+" (vertexes are listed in reversed order from end point to start point) that "
+"will be visited during traveling by this path."
+msgstr "この時点において、この経路で走行中に訪問される頂点の反転リストの形（頂点は逆順で終点から始点へと列挙されている）で、経路が得られます。　"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:482
+msgid "Areas of availability"
+msgstr "利用可能領域"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:484
+msgid ""
+"The area of availability for vertex A is the subset of graph vertexes that "
+"are accessible from vertex A and the cost of the paths from A to these "
+"vertexes are not greater that some value."
+msgstr ""
+"頂点Aに対する利用可能領域とは、頂点Aから到達可能であり、Aからこれらの頂点までの経路のコストがある値以下になるような、グラフの頂点の部分集合です。"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:488
+msgid ""
+"More clearly this can be shown with the following example: \"There is a fire"
+" station. Which parts of city can a fire truck reach in 5 minutes? 10 "
+"minutes? 15 minutes?\". Answers to these questions are fire station's areas "
+"of availability."
+msgstr ""
+"より明確に、これは次の例で示すことができます。「消防署があります。消防車が5分、10分、15分で到達できるのは市内のどの部分ですか？」。これらの質問への回答が消防署の利用可能領域です。"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:500
+msgid ""
+"A more difficult problem is to get the borders of the area of availability. "
+"The bottom border is the set of vertexes that are still accessible, and the "
+"top border is the set of vertexes that are not accessible. In fact this is "
+"simple: it is the availability border based on the edges of the shortest "
+"path tree for which the source vertex of the edge is accessible and the "
+"target vertex of the edge is not."
+msgstr ""
+"より難しい問題は、利用可能領域の境界を取得することです。下限はまだ到達できる頂点の集合であり、上限は到達できない頂点の集合です。実際にはこれは簡単です：それは、辺の元頂点が到達可能であり辺の先頂点が到達可能ではないような、最短経路木の辺に基づく利用可能境界です。"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:507
+msgid "Here is an example"
+msgstr "例です"

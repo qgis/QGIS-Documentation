@@ -1,0 +1,182 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Andi Herlan <herlandi.27@gmail.com>, 2020
+# Yudha Ha Te <yudha_ht@yahoo.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-05-10 09:48+0000\n"
+"Last-Translator: Yudha Ha Te <yudha_ht@yahoo.com>, 2020\n"
+"Language-Team: Indonesian (https://www.transifex.com/qgis/teams/6144/id/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: id\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:7
+msgid "Appendix D: QGIS R script syntax"
+msgstr "Appendix D: sintaksis skrip R dalam QGIS"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:11
+msgid ""
+"Writing R scripts in Processing is a bit tricky because of the special "
+"syntax."
+msgstr ""
+"Penulisan skrip R dalam Processing memiliki kiat dengan adanya sintaksis "
+"khusus. "
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:14
+msgid ""
+"A Processing R script starts with defining its **Inputs** and **Outputs**, "
+"each preceded with double hash characters (``##``)."
+msgstr ""
+"Pemrosesan skrip R dimulai dengan mendefinisikan **Inputs** (masukan) dan "
+"**Outputs** (keluaran), dimana dimulai dengan 2 (dua) karakter pagar "
+"(**##**)."
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:17
+msgid ""
+"Before the inputs, the group to place the algoritm in can be specified. If "
+"the group already exists, the algorithm will be added to it, if not, the "
+"group will be created. In the example below, the name of the group is *My "
+"group*:"
+msgstr ""
+"Sebelum masukan, grup untuk menempatkan algoritma dapat didefinisikan. Jika "
+"grup sudah didefinisikan sebelumnya, algoritma akan ditambahkan ke dalamnya,"
+" jika belum kelompok akan dibuat. Dalam contoh di bawah, nama grup adalah "
+"*My Group*."
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:23
+msgid "``##My Group=group``"
+msgstr "``##My Group=group``"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:27
+msgid "Inputs"
+msgstr "Masukan"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:29
+msgid ""
+"All input data and parameters have to be specified. There are several types "
+"of inputs:"
+msgstr ""
+"Semua data masukan dan parameter harus lengkap. Terdapat beberapa tipe "
+"masukan:"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:32
+msgid "vector: ``##Layer = vector``"
+msgstr "vector: ``##Layer = vector``"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:35
+msgid "raster: ``##r = raster``"
+msgstr "raster: ``##r = raster``"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:36
+msgid "table: ``##t = table``"
+msgstr "table: ``##t = table``"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:37
+msgid "number: ``##Num = number``"
+msgstr "number: ``##Num = number``"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:38
+msgid "string: ``##Str = string``"
+msgstr "string: ``##Str = string``"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:39
+msgid "boolean: ``##Bol = boolean``"
+msgstr "boolean: ``##Bol = boolean``"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:46
+msgid "Outputs"
+msgstr "Keluaran"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:48
+msgid ""
+"As for the inputs, each output has to be defined at the beginning of the "
+"script:"
+msgstr ""
+"Seperti pada masukan, masing-masing keluaran harus didefinisikan pada awal "
+"skrip:"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:146
+msgid "Script body"
+msgstr "Badan skrip"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:163
+msgid "Example with vector output"
+msgstr "Contoh pada keluaran vektor"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:165
+msgid ""
+"Let's take an algorithm from the online collection that creates random "
+"points from the extent of an input layer::"
+msgstr ""
+"Mari ambil sebuah algoritma dari koleksi daring untuk membuat titik-titik "
+"acak dari luasan lapis masukan::"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:180
+msgid "``Point pattern analysis`` is the group of the algorithm"
+msgstr "``Analisis pola titik`` merupakan kelompok algoritma"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:181
+msgid "``Layer`` is the input **vector** layer"
+msgstr "``Lapis`` merupakan lapis **vektor** masukan"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:183
+msgid ""
+"``Output`` is the **vector** layer that will be created by the algorithm"
+msgstr ""
+"``Keluaran`` merupakan lapis **vektor** yang akan dibuat oleh algoritma"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:200
+msgid "Example with raster output"
+msgstr "Contoh dengan keluaran raster"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:231
+msgid "Example with table output"
+msgstr "Contoh dengan keluaran tabel"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:233
+msgid ""
+"Let's edit the ``Summary Statistics`` algorithm so that the output is a "
+"table file (csv)."
+msgstr ""
+"Mari sunting algoritma ``Summary Statistics`` sehingga keluarannya menjadi "
+"sebuah berkas tabel (csv)."
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:236
+msgid "The script body is the following::"
+msgstr "Badan skrip seperti berikut::"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:257
+msgid ""
+"The third line specifies the **Vector Field** in input and the fourth line "
+"tells the algorithm that the output should be a table."
+msgstr ""
+"Baris ketiga menentukan **Vector Field** pada masukan dan baris keempat "
+"menjelaskan algoritma yang hasilnya haruslah sebuah tabel."
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:260
+msgid ""
+"The last line will take the ``Stat`` object created in the script and "
+"convert it into a ``csv`` table."
+msgstr ""
+"Baris terakhir akan mengambil objek ``Stat`` yang dibuat dalam skrip dan "
+"mengonversikannya ke dalam sebuah tabel ``csv``."
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:264
+msgid "Example with console output"
+msgstr "Contoh dengan keluaran konsol"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:294
+msgid "Example with plot"
+msgstr "Contoh dengan plot"

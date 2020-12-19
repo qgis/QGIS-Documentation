@@ -1,0 +1,172 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# Aline Furlanetto Viero <afviero@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-27 06:22+0100\n"
+"PO-Revision-Date: 2020-03-16 19:23+0000\n"
+"Last-Translator: Aline Furlanetto Viero <afviero@gmail.com>, 2020\n"
+"Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:10
+msgid ""
+"The code snippets on this page need the following imports if you're outside "
+"the pyqgis console:"
+msgstr ""
+"Os trechos de código desta página precisam das seguintes importações se você"
+" estiver fora do console do pyqgis:"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:35
+msgid "Communicating with the user"
+msgstr "Comunicação com o usuário"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:40
+msgid ""
+"This section shows some methods and elements that should be used to "
+"communicate with the user, in order to keep consistency in the User "
+"Interface."
+msgstr ""
+"Esta seção mostra alguns métodos e elementos que devem ser usados ​​para se "
+"comunicar com o usuário, a fim de manter a consistência na interface do "
+"usuário."
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:44
+msgid "Showing messages. The QgsMessageBar class"
+msgstr "Mostrando mensagens. A classe QgsMessageBar"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:46
+msgid ""
+"Using message boxes can be a bad idea from a user experience point of view. "
+"For showing a small info line or a warning/error messages, the QGIS message "
+"bar is usually a better option."
+msgstr ""
+"Usando caixas de mensagem pode ser uma má idéia, do ponto de vista da "
+"experiência do usuário. Para mostrar uma pequena linha de informação ou uma "
+"mensagem de aviso/erro, a barra de mensagens QGIS é geralmente uma opção "
+"melhor."
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:50
+msgid ""
+"Using the reference to the QGIS interface object, you can show a message in "
+"the message bar with the following code"
+msgstr ""
+"Usando a referência ao objeto de interface QGIS, você pode mostrar uma "
+"mensagem na barra de mensagem com o seguinte código"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:67
+msgid "QGIS Message bar"
+msgstr "Barra de mensagem do QGIS"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:69
+msgid "You can set a duration to show it for a limited time"
+msgstr "Você pode definir uma duração de mostrá-lo por um tempo limitado"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:83
+msgid "QGIS Message bar with timer"
+msgstr "Barra de Mensagem QGIS como temporizar"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:85
+msgid ""
+"The examples above show an error bar, but the ``level`` parameter can be "
+"used to creating warning messages or info messages, using the "
+":class:`Qgis.MessageLevel <qgis.core.Qgis.MessageLevel>` enumeration. You "
+"can use up to 4 different levels:"
+msgstr ""
+"Os exemplos acima mostram uma barra de erro, mas o parâmetro `` level`` pode"
+" ser usado para criar mensagens de aviso ou informações, usando enumeração "
+":class:`Qgis.MessageLevel <qgis.core.Qgis.MessageLevel>`. Você pode usar até"
+" 4 níveis diferentes"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:89
+msgid "Info"
+msgstr "Info"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:90
+msgid "Warning"
+msgstr "Aviso"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:91
+msgid "Critical"
+msgstr "Crítico"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:92
+msgid "Success"
+msgstr "Sucesso"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:98
+msgid "QGIS Message bar (info)"
+msgstr "Barra de mensagens QGIS (informação)"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:100
+msgid ""
+"Widgets can be added to the message bar, like for instance a button to show "
+"more info"
+msgstr ""
+"Widgets podem ser adicionados à barra de mensagens, como por exemplo, um "
+"botão para mostrar mais informações"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:123
+msgid "QGIS Message bar with a button"
+msgstr "Barra de mensagens QGIS com um botão"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:125
+msgid ""
+"You can even use a message bar in your own dialog so you don't have to show "
+"a message box, or if it doesn't make sense to show it in the main QGIS "
+"window"
+msgstr ""
+"Você ainda pode usar uma barra de mensagens em sua própria caixa de diálogo "
+"para que você não tenha de mostrar uma caixa de mensagem, ou se ela não faz "
+"sentido para mostrá-la na janela principal QGIS"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:151
+msgid "QGIS Message bar in custom dialog"
+msgstr "Barra de mensagens QGIS em diálogo personalizado"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:155
+msgid "Showing progress"
+msgstr "Mostrando progresso"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:157
+msgid ""
+"Progress bars can also be put in the QGIS message bar, since, as we have "
+"seen, it accepts widgets. Here is an example that you can try in the "
+"console."
+msgstr ""
+"As barras de progresso também pode ser colocado na barra de mensagem QGIS, "
+"uma vez que, como vimos, ele aceita widgets. Aqui está um exemplo que você "
+"pode tentar no console."
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:183
+msgid ""
+"Also, you can use the built-in status bar to report progress, as in the next"
+" example:"
+msgstr ""
+"Além disso, você pode usar a barra de status interna para relatar o "
+"progresso, como no próximo exemplo:"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:210
+msgid "Logging"
+msgstr "Carregando"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:256
+msgid ""
+"You can see the output of the :class:`QgsMessageLog "
+"<qgis.core.QgsMessageLog>` in the :ref:`log_message_panel`"
+msgstr ""
+"Você pode ver a saída da :class:`QgsMessageLog <qgis.core.QgsMessageLog>` no"
+" :ref:`log_message_panel`"

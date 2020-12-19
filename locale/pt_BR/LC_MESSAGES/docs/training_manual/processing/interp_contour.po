@@ -1,0 +1,144 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# Aline Furlanetto Viero <afviero@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:21+0000\n"
+"Last-Translator: Aline Furlanetto Viero <afviero@gmail.com>, 2020\n"
+"Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../docs/training_manual/processing/interp_contour.rst:2
+msgid "Interpolation and contouring"
+msgstr "Interpolação e curvas de contorno"
+
+#: ../../docs/training_manual/processing/interp_contour.rst:4
+msgid ""
+"Module contributed by Paolo Cavallini - `Faunalia "
+"<https://www.faunalia.eu>`_"
+msgstr ""
+"Módulo foi contribuição de Paolo Cavallini - `Faunalia "
+"<https://www.faunalia.eu>`_"
+
+#: ../../docs/training_manual/processing/interp_contour.rst:6
+msgid ""
+"This chapter shows how to use different backends to calculate different "
+"interpolations."
+msgstr ""
+"Este capítulo mostra como usar diferentes formas de calcular diferentes "
+"interpolações."
+
+#: ../../docs/training_manual/processing/interp_contour.rst:9
+msgid "Interpolation"
+msgstr "Interpolação"
+
+#: ../../docs/training_manual/processing/interp_contour.rst:11
+msgid ""
+"The project shows a gradient in rainfall, from south to north. Let's use "
+"different methods for interpolation, all based on vector ``points.shp``, "
+"parameter ``RAIN``:"
+msgstr ""
+"O projeto mostra um gradiente de precipitação de chuva, do sul para o norte."
+" Usaremos diferentes métodos para a interpolação, todas baseadas na camada "
+"vectorial ``pontos.shp`` e o parâmetro ``CHUVA``:"
+
+#: ../../docs/training_manual/processing/interp_contour.rst:14
+msgid "Set cell size to :kbd:`500` for all analyses."
+msgstr "Definir o tamanho da célula para :kbd:`500` para todas as análises."
+
+#: ../../docs/training_manual/processing/interp_contour.rst:16
+msgid ":menuselection:`GRASS --> v.surf.rst`"
+msgstr ":menuselection:`GRASS --> v.surf.rst`"
+
+#: ../../docs/training_manual/processing/interp_contour.rst:17
+msgid ":menuselection:`SAGA --> Multilevel B-Spline Interpolation`"
+msgstr ":menuselection:`SAGA --> Interpolacao Multinivel B-Spline`"
+
+#: ../../docs/training_manual/processing/interp_contour.rst:19
+msgid ":menuselection:`GDAL --> Grid (Inverse Distance to a power)` [Power:4]"
+msgstr ""
+":menuselection:`GDAL --> Malha (Inverso da Distancia a potencia)` "
+"[Potencia:4]"
+
+#: ../../docs/training_manual/processing/interp_contour.rst:20
+msgid ":menuselection:`GDAL --> Grid (Moving average)` [Radius1&2: 50000]"
+msgstr ":menuselection:`GDAL --> Malha (Média móvil)` [Radio1&2: 50000]"
+
+#: ../../docs/training_manual/processing/interp_contour.rst:22
+msgid ""
+"Then measure variation among methods and correlate it with distance to "
+"points:"
+msgstr ""
+"Em seguida, medir a variação entre os métodos e correlacioná-la com "
+"distância de pontos:"
+
+#: ../../docs/training_manual/processing/interp_contour.rst:24
+msgid ""
+":menuselection:`GRASS --> r.series` [Unselect Propagate NULLs, Aggregate "
+"operation: stddev]"
+msgstr ""
+":menuselection:`GRASS --> r.series` [Propagação NULLs não selecionada, "
+"Operação agregar: stddev]"
+
+#: ../../docs/training_manual/processing/interp_contour.rst:25
+msgid ":menuselection:`GRASS --> v.to.rast.value` on ``points.shp``"
+msgstr ":menuselection:`GRASS --> v.to.rast.value` em ``points.shp``"
+
+#: ../../docs/training_manual/processing/interp_contour.rst:26
+msgid ":menuselection:`GDAL --> Proximity`"
+msgstr ":menuselection:`GDAL --> Proximidade`"
+
+#: ../../docs/training_manual/processing/interp_contour.rst:27
+msgid ""
+":menuselection:`GRASS --> r.covar` to show the correlation matrix; check the"
+" significance of the correlation e.g. with http://vassarstats.net/rsig.html."
+msgstr ""
+":menuselection:`GRASS --> r.covar` para mostrar matriz de correlação; "
+"verificar a significância da correlação, isto é, com "
+"http://vassarstats.net/rsig.html."
+
+#: ../../docs/training_manual/processing/interp_contour.rst:30
+msgid "Thus, areas far from points will have less accurate interpolation."
+msgstr "Assim, áreas distantes dos pontos terá interpolação menos precisa."
+
+#: ../../docs/training_manual/processing/interp_contour.rst:33
+msgid "Contour"
+msgstr "Contorno"
+
+#: ../../docs/training_manual/processing/interp_contour.rst:35
+msgid ""
+"Various methods to draw contour lines [always step= 10] on the *stddev* "
+"raster:"
+msgstr ""
+"Varios metodos de desenhar linhas de contorno [always step= 10] em *stddev* "
+"raster:"
+
+#: ../../docs/training_manual/processing/interp_contour.rst:37
+msgid ":menuselection:`GRASS --> r.contour.step`"
+msgstr ":menuselection:`GRASS --> r.contour.step`"
+
+#: ../../docs/training_manual/processing/interp_contour.rst:38
+msgid ":menuselection:`GDAL --> Contour`"
+msgstr ":menuselection:`GDAL --> Contorno`"
+
+#: ../../docs/training_manual/processing/interp_contour.rst:39
+msgid ""
+":menuselection:`SAGA --> Contour lines from grid` [**NB:** in some older "
+"SAGA versions, output shp is not valid, known bug]"
+msgstr ""
+":menuselection: `SAGA -> Linhas de contorno a partir do grid` [**NB:** em "
+"algumas versões antigas do SAGA, shp de saída não é válido, bug conhecido]"

@@ -1,0 +1,503 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:16+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Romanian (https://www.transifex.com/qgis/teams/6144/ro/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:5
+msgid "Topology"
+msgstr "Topologia"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:8
+msgid "|gentleLogo|"
+msgstr "|gentleLogo|"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:8
+msgid "Objectives:"
+msgstr "Obiective:"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:8
+msgid "Understanding topology in vector data"
+msgstr "Să înțelegem topologia datelor vectoriale"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:10
+msgid "Keywords:"
+msgstr "Cuvinte cheie:"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:10
+msgid ""
+"Vector, topology, topology rules, topology errors, search radius, snapping "
+"distance, simple feature"
+msgstr ""
+"Vector, topologie, normele de topologie, erorile de topologie, raza de "
+"căutare, distanța de acroșare, entitate simplă"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:14
+msgid "Overview"
+msgstr "Vedere generală"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:16
+msgid ""
+"**Topology** expresses the spatial relationships between connecting or "
+"adjacent vector features (points, polylines and polygons) in a GIS. "
+"Topological or topology-based data are useful for detecting and correcting "
+"digitising errors (e.g. two lines in a roads vector layer that do not meet "
+"perfectly at an intersection). Topology is necessary for carrying out some "
+"types of spatial analysis, such as network analysis."
+msgstr ""
+"**Topologia** exprimă relațiile spațiale dintre entitățile vectoriale "
+"conectate sau adiacente (puncte, polilinii și poligoane) dintr-un GIS. "
+"Datele topologice, sau pe bază de topologie, sunt utile pentru detectarea și"
+" corectarea erorilor de digitizare (de exemplu, două linii dintr-un strat de"
+" drumuri vectoriale care nu se întâlnesc perfect la o intersecție). "
+"Topologia este necesară pentru realizarea unor genuri de analize spațiale, "
+"cum ar fi analiza de rețea."
+
+#: ../../docs/gentle_gis_introduction/topology.rst:23
+msgid ""
+"Imagine you travel to London. On a sightseeing tour you plan to visit St. "
+"Paul's Cathedral first and in the afternoon Covent Garden Market for some "
+"souvenirs. Looking at the Underground map of London (see "
+"figure_topology_london_) you have to find connecting trains to get from "
+"Covent Garden to St. Paul's. This requires topological information (data) "
+"about where it is possible to change trains. Looking at a map of the "
+"underground, the topological relationships are illustrated by circles that "
+"show connectivity."
+msgstr ""
+"Imaginați-vă că vă deplasați spre Londra. Cu ajutorul unei hărți turistice "
+"vă planificați mai întâi o vizită la Catedrala Sf Paul, urmată de alta la "
+"Covent Garden Market, pentru unele suveniruri. Privind pe harta metroului "
+"londonez (a se vedea figure_topology_london_) va trebui să identificați "
+"trenurile de legătură dintre Covent Garden și Sf. Paul. Acest lucru necesită"
+" informații topologice (date) cu privire la posibilitatea de schimbare a "
+"trenurilor. Privind la o hartă a metroului, relațiile topologice sunt "
+"ilustrate prin cercuri care arată conexiunile."
+
+#: ../../docs/gentle_gis_introduction/topology.rst:37
+msgid "Topology of London Underground Network."
+msgstr "Topologia rețelei de metrou din Londra"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:40
+msgid "Topology errors"
+msgstr "Erori de topologie"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:42
+msgid ""
+"There are different types of topological errors and they can be grouped "
+"according to whether the vector feature types are polygons or polylines. "
+"Topological errors with **polygon** features can include unclosed polygons, "
+"gaps between polygon borders or overlapping polygon borders. A common "
+"topological error with **polyline** features is that they do not meet "
+"perfectly at a point (node). This type of error is called an **undershoot** "
+"if a gap exists between the lines, and an **overshoot** if a line ends "
+"beyond the line it should connect to (see figure_topology_errors_)."
+msgstr ""
+"Există diferite tipuri de erori topologice, ele putând fi grupate în funcție"
+" de caracterul de poligon sau polilinie al entităților vectoriale. Printre "
+"erorile topologice, în cazul entităților de tip **poligon**, se pot include "
+"poligoanele nefinalizate, breșele sau suprapunerile limitelor poligoanelor. "
+"O eroare topologică obișnuită, în cazul entităților de tip **polilinie**, o "
+"reprezintă faptul că acestea nu sunt tangente la un punct (nod). Acest tip "
+"de eroare poartă numele **neîncadrare** dacă există o breșă între linii, sau"
+" **depășire** dacă o linie se termină dincolo de linia la care ar trebui să "
+"se conecteze (a se vedea figure_topology_errors_)."
+
+#: ../../docs/gentle_gis_introduction/topology.rst:57
+msgid ""
+"Undershoots (1) occur when digitised vector lines that should connect to "
+"each other don’t quite touch. Overshoots (2) happen if a line ends beyond "
+"the line it should connect to. Slivers (3) occur when the vertices of two "
+"polygons do not match up on their borders."
+msgstr ""
+"Erorile de neîncadrare (1) apar atunci când liniile vectoriale digitizate, "
+"care ar trebuie să fie conectate între ele, nu se ating. Depășirile (2) apar"
+" atunci când o linie se termină dincolo de linia la care ar trebui să se "
+"conecteze. Așchiile (3) apar atunci când vârfurile a două poligoane nu aderă"
+" perfect la laturile lor."
+
+#: ../../docs/gentle_gis_introduction/topology.rst:62
+msgid ""
+"The result of overshoot and undershoot errors are so-called 'dangling nodes'"
+" at the end of the lines. Dangling nodes are acceptable in special cases, "
+"for example if they are attached to dead-end streets."
+msgstr ""
+"Rezultatul erorilor de neîncadrare și de depășire sunt așa-numitele 'noduri "
+"incerte' de la capătul liniilor. Nodurile incerte sunt acceptabile în cazuri"
+" speciale, cum ar fi cazul în care sunt atașate unor străzi care se înfundă."
+
+#: ../../docs/gentle_gis_introduction/topology.rst:66
+msgid ""
+"Topological errors break the relationship between features. These errors "
+"need to be fixed in order to be able to analyse vector data with procedures "
+"like network analysis (e.g. finding the best route across a road network) or"
+" measurement (e.g. finding out the length of a river). In addition to "
+"topology being useful for network analysis and measurement, there are other "
+"reasons why it is important and useful to create or have vector data with "
+"correct topology. Just imagine you digitise a municipal boundaries map for "
+"your province and the polygons overlap or show slivers. If such errors were "
+"present, you would be able to use the measurement tools, but the results you"
+" get will be incorrect. You will not know the correct area for any "
+"municipality and you will not be able to define exactly, where the borders "
+"between the municipalities are."
+msgstr ""
+"Erorile topologice denaturează relațiile dintre entități. Aceste erori "
+"trebuie să fie reparate, pentru a fi în măsură să studiați datele vectoriale"
+" cu proceduri cum ar fi analiza de rețea (de exemplu, găsirea cel mai bun "
+"traseu într-o rețea de drumuri) sau prin măsurători (de exemplu, aflarea "
+"lungimii unui râu). În plus, există și alte motive pentru care este "
+"important și util să creați sau să aveți date vectoriale cu topologie "
+"corectă. Doar imaginați-vă că digitizați o hartă a granițelor municipale "
+"pentru provincia dvs., și că poligoanele se suprapun sau prezintă așchii. "
+"Dacă există astfel de erori, deși veți putea utiliza instrumentele de "
+"măsurare, rezultatele pe care le obține vor fi incorecte. Nu veți cunoaște "
+"suprafața corectă și nici nu veți fi în măsură să precizați cu exactitate "
+"unde sunt granițele dintre municipalități."
+
+#: ../../docs/gentle_gis_introduction/topology.rst:78
+msgid ""
+"It is not only important for your own analysis to create and have "
+"topologically correct data, but also for people who you pass data on to. "
+"They will be expecting your data and analysis results to be correct!"
+msgstr ""
+"Nu este important doar pentru propria analiză să creați și să aveți date "
+"corecte din punct de vedere topologic, ci și pentru cei cărora le "
+"transmiteți datele. Aceștia se așteaptă ca datele și rezultatele analizei să"
+" fie corecte!"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:83
+msgid "Topology rules"
+msgstr "Reguli topologice"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:85
+msgid ""
+"Fortunately, many common errors that can occur when digitising vector "
+"features can be prevented by topology rules that are implemented in many GIS"
+" applications."
+msgstr ""
+"Din fericire, multe din erorile care pot apărea la digitizarea entităților "
+"vectoriale pot fi prevenite prin regulile de topologie care sunt "
+"implementate în multe aplicații GIS."
+
+#: ../../docs/gentle_gis_introduction/topology.rst:88
+msgid ""
+"Except for some special GIS data formats, topology is usually not enforced "
+"by default. Many common GIS, like QGIS, define topology as relationship "
+"rules and let the user choose the rules, if any, to be implemented in a "
+"vector layer."
+msgstr ""
+"Cu excepția unor formate de date GIS speciale, topologia nu este, de obicei "
+"activată în mod implicit. Multe aplicații GIS comune, cum ar fi QGIS, "
+"definesc topologia sub formă de reguli relaționate, permițând utilizatorului"
+" să aleagă regulile care vor fi implementate într-un strat vectorial."
+
+#: ../../docs/gentle_gis_introduction/topology.rst:92
+msgid ""
+"The following list shows some examples of where topology rules can be "
+"defined for real world features in a vector map:"
+msgstr ""
+"Lista de mai jos prezintă câteva exemple în care regulile topologie pot fi "
+"definite pentru entități ale lumii reale într-o hartă vectorială:"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:95
+msgid "Area edges of a municipality map must not overlap."
+msgstr "Marginile hărții unei municipalități nu trebuie să se suprapună."
+
+#: ../../docs/gentle_gis_introduction/topology.rst:96
+msgid "Area edges of a municipality map must not have gaps (slivers)."
+msgstr ""
+"Marginile unei hărți pentru o municipalitate nu trebuie să aibă lacune "
+"(șuvițe)."
+
+#: ../../docs/gentle_gis_introduction/topology.rst:97
+msgid ""
+"Polygons showing property boundaries must be closed. Undershoots or "
+"overshoots of the border lines are not allowed."
+msgstr ""
+"Poligoanele care indică limitele de proprietate trebuie să fie închise. "
+"Depășirile liniilor de frontieră, inclusiv cele negative, nu sunt permise."
+
+#: ../../docs/gentle_gis_introduction/topology.rst:99
+msgid ""
+"Contour lines in a vector line layer must not intersect (cross each other)."
+msgstr ""
+"Curbele de nivel dintr-un strat vectorial de tip linie nu trebuie să se "
+"intersecteze (nu au voie să se încrucișeze)."
+
+#: ../../docs/gentle_gis_introduction/topology.rst:102
+msgid "Topological tools"
+msgstr "Instrumente topologice"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:104
+msgid ""
+"Many GIS applications provide tools for topological editing. For example in "
+"QGIS you can **enable topological editing** to improve editing and "
+"maintaining common boundaries in polygon layers. A GIS such as QGIS "
+"'detects' a shared boundary in a polygon map so you only have to move the "
+"edge vertex of one polygon boundary and QGIS will ensure the updating of the"
+" other polygon boundaries as shown in figure_topological_tools_ (1)."
+msgstr ""
+"Multe aplicații GIS oferă instrumente de editare topologică. De exemplu, în "
+"QGIS puteți activa **editarea topologică** pentru a îmbunătăți editarea și "
+"pentru menținerea granițelor comune în straturile poligonale. Un GIS cum "
+"este QGIS 'detectează' o graniță comună într-o hartă poligonală, așa că "
+"trebuie doar să mutați vertexul unei limite poligonale, iar QGIS va asigura "
+"actualizarea celorlalte limite poligonale, așa cum se arată în "
+"figure_topological_tools_ (1)."
+
+#: ../../docs/gentle_gis_introduction/topology.rst:111
+msgid ""
+"Another topological option allows you to prevent** polygon overlaps** during"
+" digitising (see figure_topological_tools_ (2)). If you already have one "
+"polygon, it is possible with this option to digitise a second adjacent "
+"polygon so that both polygons overlap and QGIS then clips the second polygon"
+" to the common boundary."
+msgstr ""
+"O altă opțiune topologică vă permite să împiedicați **suprapunerea "
+"poligonală** pe durata digitizării (a se vedea figure_topological_tools_ "
+"(2)). Dacă aveți deja un poligon, este posibil, cu această opțiune să "
+"digitizați un al doilea poligon adiacent, astfel încât ambele poligoane să "
+"se suprapună, apoi QGIS va decupa al doilea poligon la limita comună."
+
+#: ../../docs/gentle_gis_introduction/topology.rst:123
+msgid ""
+"(1) Topological editing to detect shared boundaries, when moving vertices. "
+"When moving a vertex, all features that share that vertex are updated. (2) "
+"To avoid polygon overlaps, when a new polygon is digitised (shown in red) it"
+" is clipped to avoid overlapping neighbouring areas."
+msgstr ""
+"(1) Editarea topologică pentru a detecta limitele comune, atunci când se "
+"deplasează vertecșii. Atunci când se deplasează un nod, toate entitățile "
+"care au în comun vertexul vor fi actualizate. (2) Pentru a evita "
+"suprapunerile poligonale, atunci când un nou poligon este digitizat "
+"(prezentat în roșu), el va fi decupat pentru a evita suprapunerea zonelor "
+"învecinate."
+
+#: ../../docs/gentle_gis_introduction/topology.rst:129
+msgid "Snapping distance"
+msgstr "Distanța de acroșare"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:131
+msgid ""
+"Snapping distance is the distance a GIS uses to search for the closest "
+"vertex and / or segment you are trying to connect when you digitise. A "
+"**segment** is a straight line formed between two vertices in a polygon or "
+"polyline geometry. If you aren't within the snapping distance, a GIS such as"
+" QGIS will leave the vertex where you release the mouse button, instead of "
+"snapping it to an existing vertex and / or segment (see "
+"figure_snapping_distance_)."
+msgstr ""
+"Distanța de acroșare reprezintă distanța până la care un GIS caută cel mai "
+"apropiat vertex și / sau segment la care încearcă să se conecteze, atunci "
+"când are loc digitizarea. Un **segment** este o linie dreaptă formată între "
+"două noduri dintr-o geometrie de tip poligon sau polilinie. Dacă distanța de"
+" acroșare este depășită, un GIS va lăsa vertexul în locul în care s-a "
+"eliberat butonul mouse-ului, în locul acroșării la un nod sau la un segment "
+"existent (a se vedea figure_snapping_distance_)."
+
+#: ../../docs/gentle_gis_introduction/topology.rst:144
+msgid ""
+"The snapping distance (black circle) is defined in map units (e.g. decimal "
+"degrees) for snapping to either vertices or segments."
+msgstr ""
+"Distanța de acroșare (cercul negru) este definită în unități de hartă (de "
+"exemplu, în grade zecimale), pentru acroșarea fie la noduri, fie la "
+"segmente."
+
+#: ../../docs/gentle_gis_introduction/topology.rst:148
+msgid "Search Radius"
+msgstr "Raza de căutare"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:150
+msgid ""
+"Search radius is the distance a GIS uses to search for the closest vertex "
+"you are trying to move when you click on the map. If you aren't within the "
+"search radius, the GIS won't find and select any vertex of a feature for "
+"editing. In principle, it is quite similar to the snapping distance "
+"functionality."
+msgstr ""
+"Cautarea radiala reprezinta distanta pe care un GIS o utilizeaza in cautarea"
+" celui mai apropiat vertex cand incercati sa il mutati in momentul in care "
+"faceti click pe harta. Daca nu sunteti in cadrul cautarii radiale, GIS-ul nu"
+" va gasi si selecta nici un vertex al entitatii selectate. In principiu, "
+"este asemanatoare cu functionalitatea distanta saltului."
+
+#: ../../docs/gentle_gis_introduction/topology.rst:155
+msgid ""
+"Snapping distance and search radius are both set in map units so you may "
+"need to experiment to get the distance value set right. If you specify a "
+"value that is too big, the GIS may snap to a wrong vertex, especially if you"
+" are dealing with a large number of vertices close together. If you specify "
+"the search radius too small the GIS application won't find any feature or "
+"vertex to move or edit."
+msgstr ""
+"Distanta saltului si cautarea radiala sunt amandoua setate in unitatile de "
+"masura ale hartii deci va trebui sa faceti cateva experimente pentru a afla "
+"valoarea corecta. Daca specificati o valoare care este prea mare, GIS-ul "
+"poate sari la un alt vertex, in special cand lucrati cu un numar mare de "
+"vertexi apropriati unul de altul. Daca specificati cautarea radiala prea "
+"mica aplicatia GIS nu va gasi nici o entitate sau vertex de mutat sau de "
+"editat."
+
+#: ../../docs/gentle_gis_introduction/topology.rst:162
+msgid "Common problems / things to be aware of"
+msgstr "Probleme comune / lucruri de care trebuie să fiți conștienți"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:170
+msgid "What have we learned?"
+msgstr "Ce am învățat?"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:172
+msgid "Let's wrap up what we covered in this worksheet:"
+msgstr "Să recapitulăm subiectele abordate în acest capitol:"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:174
+msgid ""
+"**Topology** shows the spatial relation of neighbouring vector features."
+msgstr ""
+"**Topologia** ne arată relaţia spaţială dintre entităţile vector vecine."
+
+#: ../../docs/gentle_gis_introduction/topology.rst:175
+msgid "Topology in GIS is provided by **topological tools**."
+msgstr ""
+"Topologia în GIS poate fi accesată de către **instrumentele topologice**."
+
+#: ../../docs/gentle_gis_introduction/topology.rst:176
+msgid "Topology can be used to **detect and correct digitizing errors**."
+msgstr ""
+"Topologia poate fi utilizată pentru **a detecta şi corecta erorile de "
+"digitizare**"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:177
+msgid ""
+"For some tools, such as **network analysis**, topological data is essential."
+msgstr ""
+"Pentru anumite instrumente, precum **analiza reţelei**, datele topologice "
+"sunt estenţiale."
+
+#: ../../docs/gentle_gis_introduction/topology.rst:178
+msgid ""
+"**Snapping distance** and **search radius** help us to digitise "
+"topologically correct vector data."
+msgstr ""
+"**Distanţa de snap** şi  **raza de căutare** ne ajută să digitizăm corect "
+"topologic datele vector."
+
+#: ../../docs/gentle_gis_introduction/topology.rst:180
+msgid ""
+"**Simple feature** data is not a true topological data format but it is "
+"commonly used by GIS applications."
+msgstr ""
+"O **entitate simplă** nu reprezintă un adevărat format de date topologic, "
+"dar este frecvent utilizat de aplicațiile GIS."
+
+#: ../../docs/gentle_gis_introduction/topology.rst:184
+msgid "Now you try!"
+msgstr "Încercați acum!"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:186
+msgid "Here are some ideas for you to try with your learners:"
+msgstr ""
+"Aici sunt câteva idei care pot fi testate împreună cu elevii dumneavoastră:"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:188
+msgid ""
+"Mark your local bus stops on a toposheet map and then task your learners to "
+"find the shortest route between two stops."
+msgstr ""
+"Marcati opririle autobuzului local pe o harta topografica si apoi dati ca "
+"sarcina elevilor dumneavoastra sa gaseasca cea mai scurta cale dintre cele "
+"doua opriri."
+
+#: ../../docs/gentle_gis_introduction/topology.rst:190
+msgid ""
+"Think of how you would create vector features in a GIS to represent a "
+"topological road network of your town. What topological rules are important "
+"and what tools can your learners use in QGIS to make sure that the new road "
+"layer is topologically correct?"
+msgstr ""
+"Gândiți-vă la modul în care ați crea entitățile vectoriale într-un GIS, "
+"pentru a reprezenta o rețea de drumuri topologice din orașul dvs. Ce reguli "
+"topologice sunt importante, și ce instrumente pot utiliza studenții dvs. în "
+"QGIS, pentru a vă asigura că noul strat cu drumuri este corect din punct de "
+"vedere topologic?"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:196
+msgid "Something to think about"
+msgstr "De reținut"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:198
+msgid ""
+"If you don't have a computer available, you can use a map of a bus or "
+"railway network and discuss the spatial relationships and topology with your"
+" learners."
+msgstr ""
+"Dacă nu aveți un calculator disponibil, puteți utiliza o hartă a rețelei de "
+"transport feroviar sau auto, apoi să discutați despre relațiile spațiale și "
+"despre topologie cu studenții."
+
+#: ../../docs/gentle_gis_introduction/topology.rst:202
+msgid "Further reading"
+msgstr "Lecturi suplimentare"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:204
+msgid "**Books**:"
+msgstr "**Cărți**:"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:206
+msgid ""
+"Chang, Kang-Tsung (2006). Introduction to Geographic Information Systems. "
+"3rd Edition. McGraw Hill. ISBN: 0070658986"
+msgstr ""
+"Chang, Kang-Tsung (2006). Introduction to Geographic Information Systems. "
+"3rd Edition. McGraw Hill. ISBN: 0070658986"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:208
+msgid ""
+"DeMers, Michael N. (2005). Fundamentals of Geographic Information Systems. "
+"3rd Edition. Wiley. ISBN: 9814126195"
+msgstr ""
+"DeMers, Michael N. (2005). Fundamentals of Geographic Information Systems. "
+"3rd Edition. Wiley. ISBN: 9814126195"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:211
+msgid "**Websites**:"
+msgstr "**Site-uri web**:"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:216
+msgid ""
+"The QGIS User Guide also has more detailed information on topological "
+"editing provided in QGIS."
+msgstr ""
+"Ghidul de utilizare QGIS conţine mai multe informaţii detaliate despre "
+"istrumentele de editare topologică."
+
+#: ../../docs/gentle_gis_introduction/topology.rst:220
+msgid "What's next?"
+msgstr "Ce urmează?"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:222
+msgid ""
+"In the section that follows we will take a closer look at **Coordinate "
+"Reference Systems** to understand how we relate data from our spherical "
+"earth onto flat maps!"
+msgstr ""
+"In sectiunea care urmeaza vom arunca o privire de aproape asupra "
+"\"Sistemelor de coordonate\" pentru a intelege cum relationam datele despre "
+"pamantul sferic sferic si hartile plate."

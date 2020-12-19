@@ -1,0 +1,133 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:22+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/training_manual/processing/log.rst:2
+msgid "The processing log"
+msgstr "処理ログ"
+
+#: ../../docs/training_manual/processing/log.rst:4
+msgid "This lesson describes the processing log."
+msgstr "このレッスンでは、処理ログを説明します。"
+
+#: ../../docs/training_manual/processing/log.rst:6
+msgid ""
+"All the analysis performed with the processing framework is logged in QGIS "
+"logging system. This allows you to know more about what has been done with "
+"the processing tools, to solve problems when they happen, and also to re--"
+"run previous operations, since the logging system also implements some "
+"interactivity."
+msgstr ""
+"処理フレームワークで実行されるすべての分析は、QGISのログ作成システムに記録されます。ログ作成システムによって処理ツールを用いて行われたことについて詳細を知るとか、問題が発生したときにそれを解決したりできます。またログ作成システムもいくつかの対話を実装しているので、以前の操作の再実行もできます。"
+
+#: ../../docs/training_manual/processing/log.rst:8
+msgid ""
+"To open the log, click on the balloon at the bottom right, on the QGIS "
+"status bar. Some algorithms might leave here information about their "
+"execution. For instance, those algorithms that call an external application "
+"usually log the console output of that application to this entry. If you "
+"have a look at it, you will see that the output of the SAGA algorithm that "
+"we just run (and that fail to execute because input data was not correct) is"
+" stored here."
+msgstr ""
+"ログを開くには、QGISのステータスバーに、右下のバルーンをクリックしてください。いくつかのアルゴリズムは、ここではそれらの実行に関する情報を残すことがあります。例えば、外部アプリケーションを呼び出すアルゴリズムは、通常、そのアプリケーションのコンソール出力をこのエントリにログ出力します。それを見ると、私たちが実行した（そして入力データが正しくなかったので実行に失敗した）ばかりのSAGAアルゴリズムの出力がここに格納されていることがわかります。"
+
+#: ../../docs/training_manual/processing/log.rst:10
+msgid ""
+"This is helpful to understand what is going on. Advanced users will be able "
+"to analyze that output to find out why the algorithm failed. If you are not "
+"an advanced user, this will be useful for others to help you diagnose the "
+"problem you are having, which might be a problem in the installation of the "
+"external software or an issue with the data you provided."
+msgstr ""
+"これは、何が起こっているか理解するのに便利です。上級ユーザーは、その出力を分析して、アルゴリズムが失敗した理由を探せるでしょう。上級ユーザーでなければ、持っている問題を診断するのを他の人に助けてもらうために有用でしょう。外部のソフトウェアのインストール中の問題であるかもしれないし、提供されたデータの問題であるかもしれません。"
+
+#: ../../docs/training_manual/processing/log.rst:12
+msgid ""
+"Even if the algorithm could be executed, some algorithms might leave "
+"warnings in case the result might not be right. For instance, when executing"
+" an interpolation algorithm with a very small amount of points, the "
+"algorithm can run and will produce a result, but it is likely that it will "
+"not be correct, since more points should be used. It's a good idea to "
+"regularly check for this type of warnings if you are not sure about some "
+"aspect of a given algorithm."
+msgstr ""
+"アルゴリズムには、そのアルゴリズムが実行できたとしても結果が正しくないかもしれない場合に警告を残すものがあります。例えば、非常に少ない点で補間アルゴリズムを実行するとき、アルゴリズムは実行できて結果は作成されますが、より多くの点が使用されなければならないので、それは正しくない可能性が高いです。指定されたアルゴリズムのいくつかの側面に確信がない場合は、定期的に警告のこのタイプをチェックすることをお勧めします。"
+
+#: ../../docs/training_manual/processing/log.rst:14
+msgid ""
+"From the *Processing* menu, under the *History* section, you'll find "
+"*Algorithms*. All algorithms that are executed, even if they are executed "
+"from the GUI and not from the console (which will be explained later in this"
+" manual) are stored in this section as a console call. That means that "
+"everytime you run an algorithm, a console command is added to the log, and "
+"you have the full history of your working session. Here is how that history "
+"looks like:"
+msgstr ""
+"*処理* メニューから、 *履歴* セクションの下に、 *アルゴリズム* "
+"を見つけることができます。実行されるすべてのアルゴリズムは、GUIから実行されコンソール（本書で後述する）から実行されていない場合でもコンソール呼び出しとしてこのセクションに格納されます。それはアルゴリズムを実行するたび、コンソールコマンドがログに追加されることを意味し、作業セッションには完全な履歴があります。その履歴がどのように見えるかというと："
+
+#: ../../docs/training_manual/processing/log.rst:18
+msgid ""
+"This can be very useful when starting working with the console, to learn "
+"about the syntax of algorithms. We will use it when we discuss how to run "
+"analysis commands from the console."
+msgstr ""
+"アルゴリズムの構文について学ぶために、コンソールで作業を開始するとき、これは非常に便利です。それはコンソールから分析コマンドを実行する方法について説明するときに使用するでしょう。"
+
+#: ../../docs/training_manual/processing/log.rst:20
+msgid ""
+"The history is also interactive, and you can re--run any previous algorithm "
+"just by double--clicking on its entry. This is an easy way of replicating "
+"the work we already did before."
+msgstr ""
+"履歴は対話的でもあり、そのエントリをダブルクリックするだけで、以前のアルゴリズムを再実行できます。これは、すでに前にした作業を複製する簡単な方法です。"
+
+#: ../../docs/training_manual/processing/log.rst:22
+msgid ""
+"For instance, try the following. Open the data corresponding to the first "
+"chapter of this manual and run the algorithm explained there. Now go to the "
+"log dialog and locate the last algorithm in the list, which corresponds to "
+"the algorithm you have just run. Double--click on it an a new result should "
+"be produced, just like when you run it using the normal dialog and calling "
+"it from the toolbox."
+msgstr ""
+"たとえば、次のようにしてみてください。このマニュアルの最初の章に対応するデータを開き、そこで説明されたアルゴリズムを実行します。ここでログダイアログに移動して、たった今実行されたアルゴリズムに対応する、リスト内の最後のアルゴリズムを見つけます。それをダブルクリックすると新しい結果が作成されるはずです、ちょうど通常のダイアログを使用してツールボックスからそれを呼び出してそれを実行したときのように。"
+
+#: ../../docs/training_manual/processing/log.rst:26
+msgid "|hard| Advanced"
+msgstr "|hard| 上級編"
+
+#: ../../docs/training_manual/processing/log.rst:28
+msgid ""
+"You can also modify the algorithm. Just copy it, open the "
+":menuselection:`Plugins --> Python console`, click on :menuselection:`Import"
+" class --> Import Processing class`, then paste it to re-run the analysis; "
+"change the text at will. To display the resulting file, type "
+":kbd:`iface.addVectorLayer('/path/filename.shp', 'Layer name in legend', "
+"'ogr')`. Otherwise, you can use :kbd:`processing.runandload`."
+msgstr ""
+"アルゴリズムを変更することもできます。ただそれをコピーし、 :menuselection:`プラグイン --> Pythonコンソール` を開き、 "
+":menuselection:`クラスをインポート --> 処理クラスをインポート` をクリック "
+"し、それから貼り付けて分析を再実行する（随意でテキストを変更します）。結果のファイルを表示するには、 "
+":kbd:`iface.addVectorLayer('/path/filename.shp', 'Layer name in legend', "
+"'ogr')` とタイプします。それ以外の場合は、 :kbd:`processing.runandload` を使用できます。"

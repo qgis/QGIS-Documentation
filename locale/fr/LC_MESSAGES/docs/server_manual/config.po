@@ -1,0 +1,677 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# Vincent Bré <vincent.bre@outlook.fr>, 2020
+# MarieSilvestre, 2020
+# Sant-anna <delazj@gmail.com>, 2020
+# Francis Gasc <francisgasc@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation testing\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-22 21:43+0200\n"
+"PO-Revision-Date: 2020-09-22 19:51+0000\n"
+"Last-Translator: Francis Gasc <francisgasc@gmail.com>, 2020\n"
+"Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../docs/server_manual/config.rst:8
+msgid "Advanced configuration"
+msgstr "Configuration avancée"
+
+#: ../../docs/server_manual/config.rst:22
+msgid "Logging"
+msgstr "Suivi du journal"
+
+#: ../../docs/server_manual/config.rst:24
+msgid ""
+"To log requests sent to the server, you have to set the following "
+"environment variables:"
+msgstr ""
+"Pour enregistrer les requêtes envoyées au serveur, vous devez paramétrer les"
+" variables d'environnement suivantes :"
+
+#: ../../docs/server_manual/config.rst:27
+msgid ":ref:`QGIS_SERVER_LOG_LEVEL <qgis_server_log_level>`"
+msgstr ":ref:`QGIS_SERVER_LOG_LEVEL <qgis_server_log_level>`"
+
+#: ../../docs/server_manual/config.rst:28
+msgid ":ref:`QGIS_SERVER_LOG_FILE <qgis_server_log_file>`"
+msgstr ":ref:`QGIS_SERVER_LOG_FILE <qgis_server_log_file>`"
+
+#: ../../docs/server_manual/config.rst:29
+msgid ":ref:`QGIS_SERVER_LOG_STDERR <qgis_server_log_stderr>`"
+msgstr ":ref:`QGIS_SERVER_LOG_STDERR <qgis_server_log_stderr>`"
+
+#: ../../docs/server_manual/config.rst:35
+msgid "Environment variables"
+msgstr "Variables d'environnement"
+
+#: ../../docs/server_manual/config.rst:37
+msgid ""
+"You can configure some aspects of QGIS Server by setting **environment "
+"variables**."
+msgstr ""
+"Vous pouvez configurer certains aspects de QGIS Server en définissant **des "
+"variables d'environnement**."
+
+#: ../../docs/server_manual/config.rst:40
+msgid ""
+"According to the HTTP server and how you run QGIS Server, there are several "
+"ways to define these variables. This is fully described in "
+":ref:`httpserver`."
+msgstr ""
+"Selon le serveur HTTP et la façon dont vous exécutez QGIS Server, il existe "
+"plusieurs façons de définir ces variables. Ceci est décrit en détail dans "
+":ref:`httpserver`."
+
+#: ../../docs/server_manual/config.rst:49
+msgid "Name"
+msgstr "Nom"
+
+#: ../../docs/server_manual/config.rst:50
+msgid "Description"
+msgstr "Description"
+
+#: ../../docs/server_manual/config.rst:51
+msgid "Default"
+msgstr "Default"
+
+#: ../../docs/server_manual/config.rst:52
+msgid "Services"
+msgstr "Services"
+
+#: ../../docs/server_manual/config.rst:54
+msgid "QGIS_OPTIONS_PATH"
+msgstr "QGIS_OPTIONS_PATH"
+
+#: ../../docs/server_manual/config.rst:55
+msgid ""
+"Specifies the path to the directory with settings. It works the same way as "
+"QGIS application ``--optionspath`` option. It is looking for settings file "
+"in ``<QGIS_OPTIONS_PATH>/QGIS/QGIS3.ini``."
+msgstr ""
+"Indique le chemin vers le répertoire des paramètres. Elle fonctionne de la "
+"même manière que l'option ``--optionspath`` de l'application QGIS. Elle "
+"recherche le fichier de paramètres dans "
+"``<QGIS_OPTIONS_PATH>/QGIS/QGIS3.ini``."
+
+#: ../../docs/server_manual/config.rst:58
+#: ../../docs/server_manual/config.rst:77
+#: ../../docs/server_manual/config.rst:87
+#: ../../docs/server_manual/config.rst:99
+#: ../../docs/server_manual/config.rst:121
+#: ../../docs/server_manual/config.rst:164
+msgid "''"
+msgstr "''"
+
+#: ../../docs/server_manual/config.rst:59
+#: ../../docs/server_manual/config.rst:78
+#: ../../docs/server_manual/config.rst:88
+#: ../../docs/server_manual/config.rst:100
+#: ../../docs/server_manual/config.rst:111
+#: ../../docs/server_manual/config.rst:116
+#: ../../docs/server_manual/config.rst:122
+#: ../../docs/server_manual/config.rst:133
+#: ../../docs/server_manual/config.rst:148
+#: ../../docs/server_manual/config.rst:153
+#: ../../docs/server_manual/config.rst:158
+#: ../../docs/server_manual/config.rst:165
+#: ../../docs/server_manual/config.rst:184
+#: ../../docs/server_manual/config.rst:215
+msgid "All"
+msgstr "Tous"
+
+#: ../../docs/server_manual/config.rst:61
+msgid "QUERY_STRING"
+msgstr "QUERY_STRING"
+
+#: ../../docs/server_manual/config.rst:62
+msgid ""
+"The query string, normally passed by the web server. This variable can be "
+"useful while testing QGIS server binary from the command line."
+msgstr ""
+"La chaîne de caractères de la requête, habituellement transmise par le "
+"serveur Web. Cette variable peut être utile pour tester le binaire de QGIS "
+"Server depuis la ligne de commande."
+
+#: ../../docs/server_manual/config.rst:65
+msgid ""
+"For example for testing a GetCapabilities request on the command line to a "
+"project that also requires a PostgreSQL connection defined in a "
+"pg_service.conf file:"
+msgstr ""
+"Par exemple, pour tester une demande GetCapabilities sur la ligne de "
+"commande d'un projet qui nécessite également une connexion PostgreSQL "
+"définie dans un fichier pg_service.conf:"
+
+#: ../../docs/server_manual/config.rst:75
+msgid ""
+"The result should be either the content of the GetCapabilities response or, "
+"if something is wrong, an error message."
+msgstr ""
+"Le résultat doit être le contenu de la réponse GetCapabilities ou, si "
+"quelque chose ne va pas, un message d'erreur."
+
+#: ../../docs/server_manual/config.rst:80
+msgid "QGIS_PROJECT_FILE"
+msgstr "QGIS_PROJECT_FILE"
+
+#: ../../docs/server_manual/config.rst:81
+msgid ""
+"The ``.qgs`` or ``.qgz`` project file, normally passed as a parameter in the"
+" query string (with *MAP*), you can also set it as an environment variable "
+"(for example by using ``mod_rewrite`` Apache module)."
+msgstr ""
+"Le fichier de projet .``.qgs`` ou ``.qgz``, habituellement transmis sous "
+"forme de paramètre dans la chaîne de la requête (avec *MAP*), vous pouvez "
+"également la paramétrer comme une variable d’environnement (par exemple, en "
+"utilisant le module Apache `mod_rewrite`)."
+
+#: ../../docs/server_manual/config.rst:85
+msgid ""
+"Note that you may also indicate a project stored in PostgreSQL, e.g. "
+"``postgresql://localhost:5432?sslmode=disable&dbname=mydb&schema=myschema&project=myproject``."
+msgstr ""
+"Notez que vous pouvez également indiquer un projet stocké dans PostgreSQL, "
+"par exemple "
+"``postgresql://localhost:5432?sslmode=disable&dbname=mydb&schema=myschema&project=myproject``."
+
+#: ../../docs/server_manual/config.rst:92
+msgid "QGIS_SERVER_LOG_FILE"
+msgstr "QGIS_SERVER_LOG_FILE"
+
+#: ../../docs/server_manual/config.rst:93
+msgid ""
+"Specify path and filename. Make sure that server has proper permissions for "
+"writing to file. File should be created automatically, just send some "
+"requests to server. If it's not there, check permissions."
+msgstr ""
+"Indique le chemin et le nom de fichier du journal. Assurez-vous que le "
+"serveur dispose des permissions adaptées pour écrire dans le fichier. Le "
+"fichier est créé automatiquement lors de l'envoi de requêtes vers le "
+"serveur. S'il n'existe pas, vérifiez les permissions. "
+
+#: ../../docs/server_manual/config.rst:97
+msgid ""
+"QGIS_SERVER_LOG_FILE is deprecated since QGIS 3.4. File logging support will"
+" be removed in QGIS 4.0."
+msgstr ""
+"QGIS_SERVER_LOG_FILE est obsolète depuis QGIS 3.4. La prise en charge de la "
+"journalisation des fichiers sera supprimée dans QGIS 4.0."
+
+#: ../../docs/server_manual/config.rst:104
+msgid "QGIS_SERVER_LOG_STDERR"
+msgstr "QGIS_SERVER_LOG_STDERR"
+
+#: ../../docs/server_manual/config.rst:105
+msgid ""
+"Activate logging to stderr. This variable  has no effect when "
+"``QGIS_SERVER_LOG_FILE`` is set."
+msgstr ""
+"Activez la journalisation sur stderr. Cette variable n'a aucun effet lorsque"
+" ``QGIS_SERVER_LOG_FILE`` est défini."
+
+#: ../../docs/server_manual/config.rst:108
+#: ../../docs/server_manual/config.rst:139
+#: ../../docs/server_manual/config.rst:171
+msgid "``0`` or ``false`` (case insensitive)"
+msgstr "``0`` ou ``false`` (insensible à la casse)"
+
+#: ../../docs/server_manual/config.rst:109
+#: ../../docs/server_manual/config.rst:140
+#: ../../docs/server_manual/config.rst:172
+msgid "``1`` or ``true`` (case insensitive)"
+msgstr "``1`` ou ``true`` (insensible à la casse)"
+
+#: ../../docs/server_manual/config.rst:110
+#: ../../docs/server_manual/config.rst:141
+#: ../../docs/server_manual/config.rst:173
+#: ../../docs/server_manual/config.rst:183
+#: ../../docs/server_manual/config.rst:214
+#: ../../docs/server_manual/config.rst:223
+msgid "false"
+msgstr "faux"
+
+#: ../../docs/server_manual/config.rst:113
+msgid "MAX_CACHE_LAYERS"
+msgstr "MAX_CACHE_LAYERS"
+
+#: ../../docs/server_manual/config.rst:114
+msgid "Specify the maximum number of cached layers (default: ``100``)."
+msgstr ""
+"Indique le nombre maximal de couches mises en cache (par défaut : ``100``)."
+
+#: ../../docs/server_manual/config.rst:115
+msgid "100"
+msgstr "100"
+
+#: ../../docs/server_manual/config.rst:118
+msgid "QGIS_PLUGINPATH"
+msgstr "QGIS_PLUGINPATH"
+
+#: ../../docs/server_manual/config.rst:119
+msgid ""
+"Useful if you are using Python plugins for the server, this sets the folder "
+"that is searched for Python plugins."
+msgstr ""
+"Utile si vous utilisez des extensions Python pour le serveur, le répertoire "
+"indiqué est celui qui sera utilisé pour la recherche des extensions Python."
+
+#: ../../docs/server_manual/config.rst:126
+msgid "QGIS_SERVER_LOG_LEVEL"
+msgstr "QGIS_SERVER_LOG_LEVEL"
+
+#: ../../docs/server_manual/config.rst:127
+msgid "Specify desired log level. Available values are:"
+msgstr ""
+"indique le niveau de journalisation désiré. Les valeurs disponibles sont les"
+" suivantes : "
+
+#: ../../docs/server_manual/config.rst:129
+msgid "``0`` or ``INFO`` (log all requests)"
+msgstr "``0`` ou ``INFO`` (journalise toutes les requêtes), "
+
+#: ../../docs/server_manual/config.rst:130
+msgid "``1`` or ``WARNING``"
+msgstr "``1`` ou ``WARNING``,"
+
+#: ../../docs/server_manual/config.rst:131
+msgid ""
+"``2`` or ``CRITICAL`` (log just critical errors, suitable for production "
+"purposes)"
+msgstr ""
+"``2`` ou ``CRITICAL`` (journalise uniquement les erreurs critiques, adapté à"
+" un fonctionnement en production)."
+
+#: ../../docs/server_manual/config.rst:132
+msgid "0"
+msgstr "0"
+
+#: ../../docs/server_manual/config.rst:135
+msgid "QGIS_SERVER_PARALLEL_RENDERING"
+msgstr "QGIS_SERVER_PARALLEL_RENDERING"
+
+#: ../../docs/server_manual/config.rst:136
+msgid ""
+"Activates parallel rendering for WMS GetMap requests. It's disabled "
+"(``false``) by default. Available values are:"
+msgstr ""
+"Active le rendu parallèle pour les demandes WMS GetMap. Il est désactivé "
+"(``faux``) par défaut. Les valeurs disponibles sont:"
+
+#: ../../docs/server_manual/config.rst:142
+#: ../../docs/server_manual/config.rst:174
+#: ../../docs/server_manual/config.rst:190
+#: ../../docs/server_manual/config.rst:224
+msgid "WMS"
+msgstr "WMS"
+
+#: ../../docs/server_manual/config.rst:144
+msgid "QGIS_SERVER_MAX_THREADS"
+msgstr "QGIS_SERVER_MAX_THREADS"
+
+#: ../../docs/server_manual/config.rst:145
+msgid ""
+"Number of threads to use when parallel rendering is activated. If value is "
+"``-1`` it uses the number of processor cores."
+msgstr ""
+"Nombre de threads à utiliser lorsque le rendu parallèle est activé. Si la "
+"valeur est ``-1``, le nombre de cœurs de processeur est utilisé."
+
+#: ../../docs/server_manual/config.rst:147
+#: ../../docs/server_manual/config.rst:189
+msgid "-1"
+msgstr "-1"
+
+#: ../../docs/server_manual/config.rst:150
+msgid "QGIS_SERVER_CACHE_DIRECTORY"
+msgstr "QGIS_SERVER_CACHE_DIRECTORY"
+
+#: ../../docs/server_manual/config.rst:151
+msgid "Specifies the network cache directory on the filesystem."
+msgstr "Définit le dossier du cache réseau dans le système de fichier."
+
+#: ../../docs/server_manual/config.rst:152
+msgid "``cache`` in profile directory"
+msgstr "``cache`` dans le répertoire du profil"
+
+#: ../../docs/server_manual/config.rst:155
+msgid "QGIS_SERVER_CACHE_SIZE"
+msgstr "QGIS_SERVER_CACHE_SIZE"
+
+#: ../../docs/server_manual/config.rst:156
+msgid "Sets the network cache size in MB."
+msgstr "Définit la taille du cache réseau en Mo."
+
+#: ../../docs/server_manual/config.rst:157
+msgid "50 MB"
+msgstr "50 Mo"
+
+#: ../../docs/server_manual/config.rst:160
+msgid "QGIS_SERVER_OVERRIDE_SYSTEM_LOCALE"
+msgstr "QGIS_SERVER_OVERRIDE_SYSTEM_LOCALE"
+
+#: ../../docs/server_manual/config.rst:161
+msgid ""
+"Sets LOCALE to be used by QGIS server. The default value is empty (no "
+"override)."
+msgstr ""
+"Définit LOCALE à utiliser par le serveur QGIS. La valeur par défaut est vide"
+" (pas de substitution)."
+
+#: ../../docs/server_manual/config.rst:163
+msgid "Example: ``de_CH.utf8``"
+msgstr "Exemple : ``de_CH.utf8``"
+
+#: ../../docs/server_manual/config.rst:167
+msgid "QGIS_SERVER_SHOW_GROUP_SEPARATOR"
+msgstr "QGIS_SERVER_SHOW_GROUP_SEPARATOR"
+
+#: ../../docs/server_manual/config.rst:168
+msgid ""
+"Defines whether a group separator (e.g. thousand separator) should be used "
+"for numeric values (e.g. in GetFeatureInfo responses). The default value is "
+"``0``."
+msgstr ""
+"Définit si un séparateur de groupe (par exemple mille séparateurs) doit être"
+" utilisé pour les valeurs numériques (par exemple dans les réponses "
+"GetFeatureInfo). La valeur par défaut est ``0``."
+
+#: ../../docs/server_manual/config.rst:176
+msgid "QGIS_SERVER_IGNORE_BAD_LAYERS"
+msgstr "QGIS_SERVER_IGNORE_BAD_LAYERS"
+
+#: ../../docs/server_manual/config.rst:177
+msgid ""
+"\"Bad\" layers are layers that cannot be loaded. The default behavior of "
+"QGIS Server is to consider the project as not available if it contains a bad"
+" layer."
+msgstr ""
+"Les \"mauvaises\" couches sont des couches qui ne peuvent pas être chargées."
+" Le comportement par défaut de QGIS Server consiste à considérer le projet "
+"comme non disponible s'il contient une mauvaise couche."
+
+#: ../../docs/server_manual/config.rst:180
+msgid ""
+"The default behavior can be overridden by setting this variable to ``1`` or "
+"``true``. In this case, \"bad\" layers will just be ignored, and the project"
+" will be considered valid and available."
+msgstr ""
+"Le comportement par défaut peut être remplacé en définissant cette variable "
+"sur ``1`` ou ``vrai``. Dans ce cas, les \"mauvaises\" couches seront "
+"simplement ignorées et le projet sera considéré comme valide et disponible."
+
+#: ../../docs/server_manual/config.rst:186
+msgid "QGIS_SERVER_WMS_MAX_HEIGHT / QGIS_SERVER_WMS_MAX_WIDTH"
+msgstr "QGIS_SERVER_WMS_MAX_HEIGHT / QGIS_SERVER_WMS_MAX_WIDTH"
+
+#: ../../docs/server_manual/config.rst:187
+msgid ""
+"Maximum height/width for a WMS request. The most conservative between this "
+"and the project one is used. If the value is ``-1``, it means that there is "
+"no maximum set."
+msgstr ""
+"Hauteur/largeur maximale d'une requête WMS. La valeur la plus conservatrice "
+"entre la requête et le projet est utilisée. Une valeur de ``-1`` signifie "
+"qu'il n'y a pas de maximum défini."
+
+#: ../../docs/server_manual/config.rst:192
+msgid "QGIS_SERVER_API_RESOURCES_DIRECTORY"
+msgstr "QGIS_SERVER_API_RESOURCES_DIRECTORY"
+
+#: ../../docs/server_manual/config.rst:193
+msgid ""
+"Base directory for all OGC API (such as OAPIF/WFS3) static resources (HTML "
+"templates, CSS, JS, ...)"
+msgstr ""
+"Répertoire de base pour toutes les ressources statiques OGC API (telles que "
+"OAPIF/WFS3) (modèles HTML, CSS, JS, ...)."
+
+#: ../../docs/server_manual/config.rst:195
+msgid "depends on packaging"
+msgstr "dépend du package l"
+
+#: ../../docs/server_manual/config.rst:196
+#: ../../docs/server_manual/config.rst:201
+msgid "WFS"
+msgstr "WFS"
+
+#: ../../docs/server_manual/config.rst:198
+msgid "QGIS_SERVER_API_WFS3_MAX_LIMIT"
+msgstr "QGIS_SERVER_API_WFS3_MAX_LIMIT"
+
+#: ../../docs/server_manual/config.rst:199
+msgid "Maximum value for ``limit`` in a features request."
+msgstr "Valeur maximale pour ``limit`` dans une demande d’entités."
+
+#: ../../docs/server_manual/config.rst:200
+msgid "10000"
+msgstr "10000"
+
+#: ../../docs/server_manual/config.rst:203
+msgid "QGIS_SERVER_TRUST_LAYER_METADATA"
+msgstr "QGIS_SERVER_TRUST_LAYER_METADATA"
+
+#: ../../docs/server_manual/config.rst:204
+msgid ""
+"This is an option at the project level to improve project read time by using"
+" the vector layer extents defined in the project metadata and disabling the "
+"check for PostgreSQL/PostGIS layer primary key uniqueness."
+msgstr ""
+"Il s'agit d'une option au niveau du projet pour améliorer le temps de "
+"lecture du projet en utilisant les étendues de la couche vecteur définies "
+"dans les métadonnées du projet et en désactivant la vérification de "
+"l'unicité de la clé primaire de la couche PostgreSQL/PostGIS."
+
+#: ../../docs/server_manual/config.rst:208
+msgid ""
+"Trusting layer metadata can be forced by setting this variable to ``1`` or "
+"``true``. The vector layer's extent will then be the one defined in the "
+"project, and the PostgreSQL/PostGIS layer's primary key defined in the data "
+"source is considered as unique without a check."
+msgstr ""
+"On peut forcer la confiance dans les métadonnées de la couche en fixant "
+"cette variable à \"1\" ou \"true\". L'étendue de la couche vecteur sera "
+"alors celle définie dans le projet, et la clé primaire de la couche "
+"PostgreSQL/PostGIS définie dans la source de données est considérée comme "
+"unique sans contrôle."
+
+#: ../../docs/server_manual/config.rst:213
+msgid "Do not use it if layers' extent is not fixed during the project's use."
+msgstr ""
+"Ne l'utilisez pas si l'étendue des couches n'est pas fixée pendant "
+"l'utilisation du projet."
+
+#: ../../docs/server_manual/config.rst:217
+msgid "QGIS_SERVER_DISABLE_GETPRINT"
+msgstr "QGIS_SERVER_DISABLE_GETPRINT"
+
+#: ../../docs/server_manual/config.rst:218
+msgid ""
+"This is an option at the project level to improve project read time by "
+"disabling loading of layouts."
+msgstr ""
+"C'est une option au niveau du projet qui permet d'améliorer le temps de "
+"lecture du projet en désactivant le chargement des mises en page."
+
+#: ../../docs/server_manual/config.rst:221
+msgid ""
+"Activating this option disables the QGIS WMS GetPrint request. Set this QGIS"
+" project flag to not load layouts."
+msgstr ""
+"L'activation de cette option désactive la demande de GetPrint du WMS QGIS. "
+"Activez ce drapeau de projet QGIS pour ne pas charger les mises en page."
+
+#: ../../docs/server_manual/config.rst:227
+msgid "Settings summary"
+msgstr "Résumé des paramètres"
+
+#: ../../docs/server_manual/config.rst:229
+msgid ""
+"When QGIS Server is starting, you have a summary of all configurable "
+"parameters thanks to environment variables. Moreover, the value currently "
+"used and the origin is also displayed."
+msgstr ""
+"Au démarrage de QGIS Server, vous disposez d'un résumé de tous les "
+"paramètres configurables grâce aux variables d'environnement. De plus, la "
+"valeur actuellement utilisée et l'origine sont également affichées."
+
+#: ../../docs/server_manual/config.rst:233
+msgid "For example with spawn-fcgi:"
+msgstr "Par exemple avec spawn-fcgi :"
+
+#: ../../docs/server_manual/config.rst:264
+msgid ""
+"In this particular case, we know that **QGIS_SERVER_MAX_THREADS** and "
+"**QGIS_SERVER_PARALLEL_RENDERING** values are read from the ini file found "
+"in **QGIS_OPTIONS_PATH** directory (which is defined through an environment "
+"variable). The corresponding entries in the ini file are "
+"**/qgis/max_threads** and **/qgis/parallel_rendering** and their values are "
+"**true** and **4** threads."
+msgstr ""
+"Dans ce cas particulier, nous savons que les valeurs "
+"**QGIS_SERVER_MAX_THREADS** et **QGIS_SERVER_PARALLEL_RENDERING** sont lues "
+"à partir du fichier ini situé dans le répertoire **QGIS_OPTIONS_PATH** (qui "
+"est défini via une variable d'environnement). Les entrées correspondantes "
+"dans le fichier ini sont **/qgis/max_threads** et "
+"**/qgis/parallel_rendering** et leurs valeurs sont **true** et **4** "
+"threads."
+
+#: ../../docs/server_manual/config.rst:274
+msgid "Short name for layers, groups and project"
+msgstr "Nom court pour les couches, les groupes et le projet"
+
+#: ../../docs/server_manual/config.rst:276
+msgid ""
+"A number of elements have both a ``<Name>`` and a ``<Title>``. The **Name** "
+"is a text string used for machine-to-machine communication while the "
+"**Title** is for the benefit of humans."
+msgstr ""
+"Un certains nombre d'éléments disposent d'un ``<Name>`` dt d'un ``<Title>``."
+" Le nom est une chaîne de caractères utilisée dans la communication de "
+"machine à machine alors que le titre est utilisé pour les êtres humains."
+
+#: ../../docs/server_manual/config.rst:280
+msgid ""
+"For example, a dataset might have the descriptive Title “Maximum Atmospheric"
+" Temperature” and be requested using the abbreviated **Name** “ATMAX”. The "
+"user can set the title for layers, groups and projects."
+msgstr ""
+"Par exemple, un ensemble de données peut avoir le titre descriptif "
+"\"Température atmosphérique maximale\" et être demandé en utilisant le **nom"
+" abrégé** \"ATMAX\". L'utilisateur peut définir le titre pour les couches, "
+"les groupes et les projets."
+
+#: ../../docs/server_manual/config.rst:284
+msgid ""
+"OWS name is based on the name used in the layer tree. This name is more a "
+"label for humans than a name for machine-to-machine communication. You can "
+"set a **Short name** for layers, groups or projects, to be used by QGIS "
+"Server as the layer identification name (in :ref:`LAYERS <wms-layers>` "
+"parameter for instance )."
+msgstr ""
+"Le nom de l'OWS est basé sur le nom utilisé dans l'arbre des couches. Ce nom"
+" est plus une étiquette pour les humains qu'un nom pour la communication de "
+"machine à machine. Vous pouvez définir un **nom court** pour les couches, "
+"groupes ou projets, qui sera utilisé par le serveur QGIS comme nom "
+"d'identification de la couche (dans :ref:`LAYERS <wms-layers>` par exemple)."
+
+#: ../../docs/server_manual/config.rst:289
+msgid "You can set title, short name and abstract for:"
+msgstr "Vous pouvez définir un titre, un nom abrégé et un résumé pour :"
+
+#: ../../docs/server_manual/config.rst:291
+msgid ""
+"**Layers**: right-click on a layer and choose :menuselection:`Properties... "
+"--> QGIS Server --> Description`."
+msgstr ""
+"**Layers** : cliquez avec le bouton droit de la souris sur une couche et "
+"choisissez :menuselection:`Propriétés... --> Serveur QGIS --> Description`."
+
+#: ../../docs/server_manual/config.rst:294
+msgid ""
+"**Groups**: right-click on a group and select :guilabel:`Set Group WMS data`"
+msgstr ""
+"**Groupes** : cliquez avec le bouton droit de la souris sur un groupe et "
+"sélectionnez :guilabel:`Définir les données WMS du groupe`."
+
+#: ../../docs/server_manual/config.rst:301
+msgid "Set group WMS data dialog"
+msgstr "Définir la boîte de dialogue des données associées au groupe WMS"
+
+#: ../../docs/server_manual/config.rst:303
+msgid ""
+"**Project**: go to :menuselection:`Project --> Properties... --> QGIS Server"
+" --> Service Capabilities`."
+msgstr ""
+"**Projet** : allez à :menuselection:`Projet --> Propriétés... --> Serveur "
+"QGIS --> Capacités du service`."
+
+#: ../../docs/server_manual/config.rst:308
+msgid "Connection to service file"
+msgstr "Connexion au fichier de service"
+
+#: ../../docs/server_manual/config.rst:310
+msgid ""
+"In order to make apache aware of the PostgreSQL service file (see the :ref"
+":`pg-service-file` section) you need to make your :file:`*.conf` file look "
+"like:"
+msgstr ""
+"Pour faire en sorte qu'Apache puisse accéder au fichier de service "
+"PostgreSQL (consultez la section ref:`pg-service-file`), vous devez modifier"
+" vos fichiers :file:`*.conf` de la manière suivante:"
+
+#: ../../docs/server_manual/config.rst:326
+msgid "Add fonts to your linux server"
+msgstr "Ajouter des polices à votre serveur Linux"
+
+#: ../../docs/server_manual/config.rst:328
+msgid ""
+"Keep in mind that you may use QGIS projects that point to fonts that may not"
+" exist by default on other machines. This means that if you share the "
+"project, it may look different on other machines (if the fonts don't exist "
+"on the target machine)."
+msgstr ""
+"Gardez à l'esprit que vous pouvez utiliser des projet QGIS qui utilisent des"
+" polices qui n'existent pas par défaut sur les autres machines. Cela "
+"signifie que si vous partagez le projet, il pourra apparaître de manière "
+"différente sur d'autres machines (si les polices n'existent pas sur la "
+"machine cible)."
+
+#: ../../docs/server_manual/config.rst:332
+msgid ""
+"In order to ensure this does not happen you just need to install the missing"
+" fonts on the target machine. Doing this on desktop systems is usually "
+"trivial (double clicking the fonts)."
+msgstr ""
+"Pour s'assurer que cela n'arrive pas, vous devez simplement installer les "
+"polices manquantes sur la machine cible. En règle général, le faire sur des "
+"systèmes bureautiques est relativement simple (double-cliquer sur des "
+"polices)."
+
+#: ../../docs/server_manual/config.rst:335
+msgid ""
+"For linux, if you don't have a desktop environment installed (or you prefer "
+"the command line) you need to:"
+msgstr ""
+"Sous Linux, si vous n'avez pas d'environnement de bureau d'installé (ou que "
+"vous préferrez la ligne de commande), vous devrez:"
+
+#: ../../docs/server_manual/config.rst:337
+msgid "On Debian based systems:"
+msgstr "Sur les systèmes basés sur Debian:"
+
+#: ../../docs/server_manual/config.rst:350
+msgid "On Fedora based systems:"
+msgstr "Pour les systèmes basés sur Fedora:"

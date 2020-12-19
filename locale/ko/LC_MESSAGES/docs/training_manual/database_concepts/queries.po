@@ -1,0 +1,176 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:18+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:2
+msgid "|LS| Queries"
+msgstr "|LS| 쿼리"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:4
+msgid ""
+"When you write a :kbd:`SELECT ...` command it is commonly known as a query -"
+" you are interrogating the database for information."
+msgstr ""
+":kbd:`SELECT ...` 명령을 작성할 때 이를 흔히 쿼리라고 합니다. 사용자가 데이터베이스에서 정보를 얻는 행위입니다."
+
+#: ../../docs/training_manual/database_concepts/queries.rst:7
+msgid ""
+"**The goal of this lesson:** To learn how to create queries that will return"
+" useful information."
+msgstr "**이 강의의 목표:** 유용한 정보를 반환하는 쿼리를 생성하는 방법을 배우기."
+
+#: ../../docs/training_manual/database_concepts/queries.rst:10
+msgid ""
+"If you did not do so in the previous lesson, add the following people "
+"objects to your :kbd:`people` table. If you receive any errors related to "
+"foreign key constraints, you will need to add the 'Main Road' object to your"
+" streets table first"
+msgstr ""
+"이전 강의에서 벌써 하지 않았다면, 사용자의 :kbd:`people` 테이블에 다음 인물 오브젝트들을 추가하십시오. 외래 키 제약 조건에"
+" 관한 오류를 반환받았을 경우, 먼저 streets 테이블에 'Main Road' 오브젝트를 추가해야 합니다."
+
+#: ../../docs/training_manual/database_concepts/queries.rst:28
+msgid "Ordering Results"
+msgstr "결과물 정렬"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:36
+#: ../../docs/training_manual/database_concepts/queries.rst:54
+#: ../../docs/training_manual/database_concepts/queries.rst:192
+#: ../../docs/training_manual/database_concepts/queries.rst:217
+#: ../../docs/training_manual/database_concepts/queries.rst:242
+#: ../../docs/training_manual/database_concepts/queries.rst:259
+msgid "Result:"
+msgstr "결과 :"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:68
+msgid "Filtering"
+msgstr "필터링"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:70
+msgid ""
+"Often you won't want to see every single record in the database - especially"
+" if there are thousands of records and you are only interested in seeing one"
+" or two."
+msgstr ""
+"대부분의 경우 데이터베이스에 있는 모든 레코드를 하나하나 보고 싶지는 않을 겁니다. 특히 레코드가 수 천 개 있는데 그 중 하나나 두 "
+"개에만 관심이 있을 때는 말이죠."
+
+#: ../../docs/training_manual/database_concepts/queries.rst:112
+msgid ""
+"Here we used the :kbd:`LIKE` clause to find all names with an :kbd:`s` in "
+"them. You'll notice that this query is case-sensitive, so the :kbd:`Sally "
+"Norman` entry has not been returned."
+msgstr ""
+"이 예시에서 :kbd:`LIKE` 구문을 이용해 :kbd:`s` 가 들어간 모든 성명을 찾았습니다. 이 쿼리가 대소문자를 구분하기 때문에"
+" :kbd:`Sally Norman` 항목을 반환하지 않았다는 사실을 알아차리셨을 겁니다."
+
+#: ../../docs/training_manual/database_concepts/queries.rst:133
+msgid "Joins"
+msgstr "결합"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:145
+msgid ""
+"With joins, you will always state the two tables the information is coming "
+"from, in this case people and streets. You also need to specify which two "
+"keys must match (foreign key & primary key). If you don't specify that, you "
+"will get a list of all possible combinations of people and streets, but no "
+"way to know who actually lives on which street!"
+msgstr ""
+"결합을 이용할 때 항상 정보를 가져오는 두 테이블을 선언해야 합니다. 이 경우엔 'people'과 'streets'입니다. 또한 어떤 두"
+" 키(기본 키와 외래 키)가 일치해야만 하는지도 지정해야 합니다. 키를 지정하지 않을 경우 'people'과 'streets'의 가능한 "
+"모든 조합의 목록을 받게 되지만, 누가 실제로 어디에 사는지 알 수 있는 방법이 없습니다!"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:163
+msgid ""
+"We will revisit joins as we create more complex queries later. Just remember"
+" they provide a simple way to combine the information from two or more "
+"tables."
+msgstr ""
+"이후 좀 더 복잡한 쿼리를 생성할 때 다시 이 결합을 살펴볼 것입니다. 지금은 두 개 이상의 테이블에서 정보를 조합할 수 있는 간단한 "
+"방법이라는 것만 기억해두십시오."
+
+#: ../../docs/training_manual/database_concepts/queries.rst:167
+msgid "Sub-Select"
+msgstr "내부 선택"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:169
+msgid ""
+"Sub-selections allow you to select objects from one table based on the data "
+"from another table which is linked via a foreign key relationship. In our "
+"case, we want to find people who live on a specific street."
+msgstr ""
+"내부 선택을 사용하면 외래 키 관계를 통해 연결된 다른 테이블의 데이터를 기반으로 테이블에서 오브젝트를 선택할 수 있습니다. 이 "
+"예시에서는 특정 거리에 사는 인물을 찾고자 합니다."
+
+#: ../../docs/training_manual/database_concepts/queries.rst:227
+msgid ""
+"Although this is a very simple example and unnecessary with our small data-"
+"sets, it illustrates how useful and important sub-selections can be when "
+"querying large and complex data-sets."
+msgstr ""
+"이 예시가 매우 단순하며 여러분의 작은 데이터셋에서는 불필요하긴 하지만, 복잡한 대용량 데이터셋을 쿼리할 때 내부 선택이 얼마나 유용하고"
+" 중요할 수 있는지를 보여줍니다."
+
+#: ../../docs/training_manual/database_concepts/queries.rst:232
+msgid "Aggregate Queries"
+msgstr "집계 쿼리"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:270
+msgid ""
+"Because we have not used an :kbd:`ORDER BY` clause, the order of your "
+"results may not match what is shown here."
+msgstr ":kbd:`ORDER BY` 구문을 쓰지 않았기 때문에, 사용자의 결과물 순서가 예시와 일치하지 않을 수도 있습니다."
+
+#: ../../docs/training_manual/database_concepts/queries.rst:274
+msgid "|TY| |moderate|"
+msgstr "|TY| |moderate| 중급"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:276
+msgid ""
+"Summarise the people by street name and show the actual street names instead"
+" of the street_ids."
+msgstr "도로명으로 인물을 요약하고 'street_id' 대신 실제 도로명을 나타내도록 하십시오."
+
+#: ../../docs/training_manual/database_concepts/queries.rst:279
+msgid ":ref:`Check your results <database-concepts-8>`"
+msgstr ":ref:`결과 확인 <database-concepts-8>`"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:284
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:286
+msgid ""
+"You've seen how to use queries to return the data in your database in a way "
+"that allows you to extract useful information from it."
+msgstr ""
+"어떻게 데이터베이스에서 유용한 정보를 추출할 수 있게 해주는 방식으로 쿼리를 사용해서 데이터베이스의 데이터를 반환받을 수 있는지 "
+"배웠습니다."
+
+#: ../../docs/training_manual/database_concepts/queries.rst:290
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:292
+msgid ""
+"Next you'll see how to create views from the queries that you've written."
+msgstr "다음 강의에서 사용자가 작성한 쿼리에서 뷰를 생성하는 방법을 배워보겠습니다."

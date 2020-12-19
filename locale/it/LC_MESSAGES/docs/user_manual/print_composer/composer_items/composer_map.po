@@ -1,0 +1,517 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:27+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Italian (https://www.transifex.com/qgis/teams/6144/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:5
+msgid "The Map Item"
+msgstr "L'Oggetto Mappa"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:13
+msgid ""
+"The map item is the main frame that displays the map you've designed in the "
+"map canvas. Use the |addMap| :guilabel:`Add Map` tool following :ref:`items "
+"creation instructions <create_layout_item>` to add a new map item that you "
+"can later manipulate the same way as exposed in :ref:`interact_layout_item`."
+msgstr ""
+"L'oggetto mappa è la cornice principale che visualizza la mappa che hai "
+"disegnato nell'area di disegno della mappa. Utilizza lo strumento |addMap| "
+":guilabel:`Aggiungi Mappa` seguendo :ref:`items creation instructions "
+"<create_layout_item>` per aggiungere un nuovo oggetto mappa che potrai poi "
+"manipolare come esposto in :ref:`interact_layout_item`."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:19
+msgid ""
+"By default, a new map item shows the current status of the :ref:`map canvas "
+"<label_mapview>` with its extent and visible layers. You can customize it "
+"thanks to the :guilabel:`Item Properties` panel. Other than the :ref:`items "
+"common properties <item_common_properties>`, this feature has the following "
+"functionalities:"
+msgstr ""
+"Per impostazione predefinita, un nuovo oggetto mappa mostra lo stato attuale"
+" della :ref:`map canvas <label_mapview>` con la sua estensione e layer "
+"visibili. Puoi personalizzarlo grazie al pannello :guilabel:`Proprietà "
+"dell'oggetto`. Oltre a :ref:`items common properties "
+"<item_common_properties>`, questo pannello ha le seguenti opzioni:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:30
+msgid "Map Item Properties Panel"
+msgstr "Pannello Proprietà Oggetto Mappa"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:76
+msgid "Main properties"
+msgstr "Proprietà principali"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:78
+msgid ""
+"In the :guilabel:`Main properties` group (see figure_layout_map_) of the map"
+" :guilabel:`Item Properties` panel, available options are:"
+msgstr ""
+"Nel gruppo :guilabel:`Proprietà Principali` (vedi figure_layout_map_map_) "
+"del pannello :guilabel:`Proprietà dell'oggetto` mappa, le opzioni "
+"disponibili sono:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:81
+msgid ""
+"The :guilabel:`Update Preview` button to refresh the map item rendering if "
+"the view in map canvas has been modified. Note that most of the time, the "
+"map item refresh is automatically triggered by the changes;"
+msgstr ""
+"Il pulsante :guilabel:`Aggiorna Anteprima` per aggiornare la visualizzazione"
+" dell'oggetto mappa se la visualizzazione nell'area della mappa è stata "
+"modificata. Da notare che la maggior parte delle volte, l'aggiornamento "
+"dell'oggetto mappa viene attivato automaticamente dalle modifiche; "
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:84
+msgid "The :guilabel:`Scale` to manually set the map item scale;"
+msgstr ""
+"La :guilabel:`Scala` per impostare manualmente la scala dell'oggetto mappa; "
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:85
+msgid ""
+"The :guilabel:`Map rotation` allows you to rotate the map item content "
+"clockwise in degrees. The rotation of the map canvas can be imitated here;"
+msgstr ""
+"La :guilabel:`Rotazione mappa` ti permette di ruotare in senso orario il "
+"contenuto dell'oggetto mappa in gradi. Qui può essere definita la rotazione "
+"dell'area della mappa; "
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:87
+msgid ""
+"The :guilabel:`CRS` allows you to display the map item content in any "
+":ref:`CRS <crs_selector>`. It defaults to ``Use project CRS``;"
+msgstr ""
+"Il :guilabel:`SR` permette di visualizzare il contenuto dell'oggetto mappa "
+"in qualsiasi :ref:`CRS <crs_selector>`. L'impostazione predefinita è ``Usa "
+"il SR del progetto``; "
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:89
+msgid ""
+"|checkbox| :guilabel:`Draw map canvas items` lets you show in the print "
+"layout :ref:`annotations <sec_annotations>` that are placed on the main map "
+"canvas."
+msgstr ""
+"|checkbox| :guilabel:`Disegna elementi sulla mappa` ti permette di "
+"visualizzare nel layout di stampa :ref:`annotazioni <sec_annotations>` che "
+"sono posizionati nell'area di disegno principale della mappa."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:96
+msgid "Layers"
+msgstr "Layer"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:98
+msgid ""
+"By default, map item appearance is synced with the map canvas rendering "
+"meaning that toggling visibility of the layers or modifying their style in "
+"the :guilabel:`Layers Panel` is automatically applied to the map item. "
+"Because, like any other item, you may want to add multiple map items to a "
+"print layout, there's a need to break this synchronization in order to allow"
+" showing different areas, layer combinations, at different scales... The "
+":guilabel:`Layers` properties group (see figure_layout_map_layers_) helps "
+"you do that."
+msgstr ""
+"Per impostazione predefinita, l'aspetto dell'oggetto mappa è sincronizzato "
+"con la visualizzazione nell'area di disegno della mappa, il che significa "
+"che la visibilità dei layer o la modifica del loro stile nel pannello "
+":guilabel:`Layer` viene applicata automaticamente all'oggetto mappa. Poiché,"
+" come qualsiasi altro elemento, puoi aggiungere più oggetti mappa a un "
+"layout di stampa, c'è la necessità di interrompere questa sincronizzazione "
+"per permettere di mostrare aree diverse, combinazioni di layer, a scale "
+"diverse..... Le proprietà del gruppo :guilabel:`Layer` (vedi "
+"figure_layout_map_layers_) ti aiutano a farlo. "
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:112
+msgid "Map Layers group"
+msgstr "Gruppo Layer dell'oggetto Mappa"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:115
+msgid ""
+"If you want to keep the map item consistent with an existing :ref:`map theme"
+" <map_themes>`, check |checkbox| :guilabel:`Follow map theme` and select the"
+" desired theme in the drop-down list. Any changes applied to the theme in "
+"QGIS' main window (using the replace theme function) will automatically "
+"affect the map item. If a map theme is selected, the :guilabel:`Lock styles "
+"for layers` option is disabled because :guilabel:`Follow map theme` also "
+"updates the style (symbology, labels, diagrams) of the layers."
+msgstr ""
+"Se vuoi mantenere l'oggetto mappa coerente con un esistente :ref:`map theme "
+"<map_themes>`, spunta |checkbox| :guilabel:`Segui il tema mappa` e seleziona"
+" il tema desiderato nell'elenco a discesa. Tutte le modifiche apportate alla"
+" finestra principale di QGIS (utilizzando la preimpostazione di "
+"sostituzione) verranno mostrate nell'oggetto mappa. Se viene selezionato un "
+"tema mappa, l'opzione :guilabel:`Blocca stili per i layer` è disabilitata "
+"perché :guilabel:`Segui il tema mappa` aggiorna anche lo stile (simbologia, "
+"etichette, diagrammi) dei layer. "
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:124
+msgid ""
+"To lock the layers shown in a map item to the current map canvas visibility,"
+" check |checkbox| :guilabel:`Lock layers`. When this option is enabled, any "
+"changes on the layers' visibility in QGIS' main window will not affect the "
+"layout's map item. Nevertheless, style and labels of locked layers are still"
+" refreshed according to QGIS' main window. You can prevent this by using "
+":guilabel:`Lock styles for layers`."
+msgstr ""
+"Per bloccare i layer mostrati in un oggetto mappa alla visibilità corrente "
+"della mappa, seleziona |checkbox| :guilabel:`Blocca layer`. Quando questa "
+"opzione è abilitata, qualsiasi modifica della visibilità dei layer nella "
+"finestra principale di QGIS non influisce sull'oggetto mappa del layout. "
+"Tuttavia, lo stile e le etichette dei layer bloccati sono ancora aggiornati "
+"in accordo alla finestra principale di QGIS. Puoi evitare questo problema "
+"utilizzando :guilabel:`Blocca stili per i layer`."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:140
+msgid ""
+"Note that, unlike the :guilabel:`Follow map theme` option, if the "
+":guilabel:`Lock layers` option is enabled and set to a map theme, the layers"
+" in the map item will not be refreshed even if the map theme is updated "
+"(using the replace theme function) in QGIS' main window."
+msgstr ""
+"Nota che, a differenza dell'opzione :guilabel:`Segui il tema mappa`, se "
+"l'opzione :guilabel:`Blocca layer` è abilitata e impostata su un tema  "
+"mappa, i layer nell'oggetto mappa non saranno aggiornati anche se il tema "
+"mappa è aggiornato (utilizzando la funzione di sostituzione del tema) nella "
+"finestra principale di QGIS."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:145
+msgid ""
+"Locked layers in the map item can also be :ref:`data-defined "
+"<data_defined>`, using the |dataDefined| icon beside the option. When used, "
+"this overrides the selection set in the drop-down list. You need to pass a "
+"list of layers separated by ``|`` character. The following example locks the"
+" map item to use only layers ``layer 1`` and ``layer 2``::"
+msgstr ""
+"I layer bloccati nell'oggetto mappa possono anche essere :ref:`data-defined "
+"<data_defined>`, usando l'icona |dataDefined| accanto all'opzione. Quando "
+"viene utilizzato, sostituisce la selezione impostata nell'elenco a discesa. "
+"Devi costruire una lista di layer separati da un carattere ``|```. Il "
+"seguente esempio blocca l'oggetto mappa ad usare solo i livelli ``layer 1`` "
+"e ``layer 2``:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:156
+msgid "Extents"
+msgstr "Estensione mappa"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:158
+msgid ""
+"The :guilabel:`Extents` group of the map item properties panel provides the "
+"following functionalities (see figure_layout_map_extents_):"
+msgstr ""
+"Il gruppo :guilabel:`Estensione mappa` del pannello proprietà dell'oggetto "
+"mappa fornisce le seguenti funzionalità (vedi figure_layout_map_extents_):"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:166
+msgid "Map Extents group"
+msgstr "Gruppo Estensione dell'oggetto Mappa"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:168
+msgid ""
+"The **Extents** area displays ``X`` and ``Y`` coordinates of the area shown "
+"in the map item. Each of these values can be manually replaced, modifying "
+"the map canvas area displayed and/or map item size. Clicking the "
+":guilabel:`Set to Map Canvas Extent` button sets the extent of the layout "
+"map item to the extent of the main map canvas. The button :guilabel:`View "
+"Extent in Map Canvas` does exactly the opposite; it updates the extent of "
+"the main map canvas to the extent of the layout map item."
+msgstr ""
+"L'area **Estensione mappa** visualizza le coordinate ``X`` e ``Y`` dell'area"
+" mostrata nell'oggetto mappa. Ognuno di questi valori può essere sostituito "
+"manualmente, modificando l'area di disegno della mappa visualizzata e/o le "
+"dimensioni dell'oggetto mappa. Facendo clic sul pulsante :guilabel:`Imposta "
+"all'estensione della mappa` imposti l'estensione del layout della mappa "
+"all'estensione della mappa principale. Il pulsante :guilabel:`Vedi "
+"l'estensione sulla mappa` fa esattamente il contrario; aggiorna l'estensione"
+" della mappa principale fino all'estensione dell'oggetto layout mappa."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:176
+msgid ""
+"You can also alter a map item extent using the |moveItemContent| :sup:`Move "
+"item content` tool: click-and-drag within the map item to modify its current"
+" view, keeping the same scale. With the |moveItemContent| tool enabled, use "
+"the mouse wheel to zoom in or out, modifying the scale of the shown map. "
+"Combine the movement with :kbd:`Ctrl` key pressed to have a smaller zoom."
+msgstr ""
+"Puoi anche modificare l'estensione di un oggetto mappa usando lo strumento "
+"|moveItemContent| :sup:`Sposta contenuto elemento`: clicca e trascina "
+"all'interno dell'oggetto mappa per modificare la sua visualizzazione "
+"corrente, mantenendo la stessa scala. Con lo strumento |MoveItemContent| "
+"attivato, usa la rotellina del mouse per ingrandire o rimpicciolire, "
+"modificando la scala della mappa visualizzata. Combina il movimento con il "
+"tasto :kbd:`Ctrl` premuto per avere uno zoom più piccolo. "
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:186
+msgid "Controlled by atlas"
+msgstr "Controllato da Atlante"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:188
+msgid ""
+"The |checkbox| :guilabel:`Controlled by atlas` group properties is available"
+" only if an :ref:`atlas <atlas_generation>` is active in the print layout. "
+"Check this option if you want the map item being ruled by the atlas; when "
+"iterating over the coverage layer, the map item extent is panned/zoomed to "
+"the atlas feature following:"
+msgstr ""
+"|checkbox| :guilabel:`Controllato  da Atlante` è disponibile solo se un "
+":ref:`atlas <atlas_generation>` è attivo nel layout di stampa. Seleziona "
+"questa opzione se vuoi che l'oggetto mappa sia governato dall'atlante; "
+"durante l'interazione sul layer di copertura, l'estensione dell'oggetto "
+"mappa viene spostata/zoomata all'elemento dell'atlante seguente:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:194
+msgid ""
+"|radioButtonOn| :guilabel:`Margin around features`: zooms to the feature at "
+"the best scale, keeping around each a margin representing a percentage of "
+"the map item width or height. The margin can be the same for all features or"
+" :ref:`set variable <data_defined>`, e.g., depending on map scale;"
+msgstr ""
+"|RadioButtonOn| :guilabel:`Margine attorno all'elemento`: ingrandisce "
+"l'elemento alla migliore scala, mantenendo intorno a ciascuno un margine che"
+" rappresenta una percentuale della larghezza o dell'altezza dell'elemento "
+"della mappa. Il margine può essere lo stesso per tutte le caratteristiche o "
+":ref:`set variable <data_defined>`, ad esempio, a seconda della scala della "
+"mappa;"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:198
+msgid ""
+"|radioButtonOff| :guilabel:`Predefined scale (best fit)`: zooms to the "
+"feature at the project :ref:`predefined scale <predefinedscales>` where the "
+"atlas feature best fits;"
+msgstr ""
+"|radioButtonOff| :guilabel:`Scala predefinita (miglior adattamento)`: "
+"ingrandisce l'elemento al progetto :ref:`predefined scale "
+"<predefinedscales>` dove l'elemento dell'atlante si adatta meglio;"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:201
+msgid ""
+"|radioButtonOff| :guilabel:`Fixed scale`: atlas features are panned from one"
+" to another, keeping the same scale of the map item. Ideal when working with"
+" features of same size (e.g., a grid) or willing to highlight size "
+"differences among atlas features."
+msgstr ""
+"|radioButtonOff| :guilabel:`Scala fissa`: gli elementi dell'atlante vengono "
+"spostati uno dopo l'altro, mantenendo la stessa scala dell'oggetto mappa. "
+"Ideale quando si lavora con elementi della stessa dimensione (ad esempio, "
+"una griglia) o quando si desidera evidenziare le differenze di dimensione "
+"tra gli elementi dell'atlante."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:209
+msgid "Grids"
+msgstr "Reticoli"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:211
+msgid ""
+"With grids, you can add, over your map, information relative to its extent "
+"or coordinates, either in the map item projection or a different one. The "
+":guilabel:`Grids` group provides the possibility to add several grids to a "
+"map item."
+msgstr ""
+"Con le griglie, puoi aggiungere, sulla tua mappa, informazioni relative alla"
+" sua estensione o coordinate, sia nella proiezione dell'oggetto mappa o in "
+"un altro oggetto. Il gruppo :guilabel:`Reticoli` offre la possibilità di "
+"aggiungere più  reticoli ad una mappa."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:216
+msgid ""
+"With the |signPlus| and |signMinus| buttons you can add or remove a selected"
+" grid;"
+msgstr ""
+"Con i pulsanti |signPlus| e |signMinus| puoi aggiungere o rimuovere "
+"specifici reticoli."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:218
+msgid ""
+"With the |arrowUp| and |arrowDown| buttons you can move up and down a grid "
+"in the list, hence move it on top or bottom of another one, over the map "
+"item."
+msgstr ""
+"Con i pulsanti |arrowUp| e |arrowDown| puoi spostare su e giù un reticolo "
+"nell'elenco, quindi spostarla sopra o sotto un'altra, sopra l'oggetto mappa."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:221
+msgid "Double-click the added grid to rename it."
+msgstr "Doppio-clic sul reticolo aggiunto per rinominarlo."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:228
+msgid "Map Grids Dialog"
+msgstr "Finestra di dialogo Reticoli mappa"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:235
+msgid "Grid Appearance"
+msgstr "Aspetto del Reticolo"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:240
+msgid "As grid type, you can specify to use a:"
+msgstr "Come tipologia di reticolo, puoi scegliere di utilizzare:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:242
+msgid ""
+"*Solid*: shows a line across the grid frame. The :guilabel:`Line style` can "
+"be customized using :ref:`color <color-selector>` and :ref:`symbol <symbol-"
+"selector>` selector widget;"
+msgstr ""
+"*Pieno*: mostra una linea che attraversa la cornice della griglia. Lo "
+":guilabel:`Stile linea` può essere personalizzato usando il widget  di "
+"selezione :ref:`color <color-selector>` e :ref:`simbolo <symbol-selector>`; "
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:245
+msgid ""
+"*Cross*: displays segment at the grid lines intersection for which you can "
+"set the :guilabel:`Line style` and the :guilabel:`Cross width`;"
+msgstr ""
+"*Croce*: visualizza segmenti all'intersezione delle linee del reticolo, per "
+"il quale puoi impostare il valore :guilabel:`Stile linea` e il valore "
+":guilabel:`Spessore della croce`;"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:247
+msgid ""
+"*Markers*: only displays customizable markers symbol at grid lines "
+"intersection;"
+msgstr ""
+"*Simboli*: visualizza solo il simbolo  personalizzabile all'intersezione "
+"delle linee del reticolo;"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:249
+msgid "or *Frame and annotations only*."
+msgstr "o *Solo cornice e annotazioni*"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:251
+msgid "Other than the grid type, you can define:"
+msgstr "Oltre alla tipologia di reticolo, puoi definire:  "
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:270
+msgid ""
+"and the :guilabel:`Blend mode` of the grid (see :ref:`blend-modes`) when "
+"compatible."
+msgstr ""
+"e la :guilabel:`Modalità fusione` del reticolo (vedi :ref:`blend-modes`) "
+"quando compatibile."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:281
+msgid "Grid Frame"
+msgstr "Cornice Reticolo"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:302
+msgid "Grid Frame Dialog"
+msgstr "Finestra di dialogo Cornice Reticolo"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:305
+msgid "Coordinates"
+msgstr "Coordinate"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:307
+msgid ""
+"The |checkbox| :guilabel:`Draw coordinates` checkbox allows you to add "
+"coordinates to the map frame. You can choose the annotation numeric format, "
+"the options range from decimal to degrees, minute and seconds, with or "
+"without suffix, aligned or not and a custom format using the expression "
+"dialog."
+msgstr ""
+"|checkbox| :guilabel:`Disegna coordinate` ti consente di aggiungere le "
+"coordinate alla cornice della mappa. Puoi scegliere il formato numerico "
+"dell'annotazione, le opzioni variano da decimale a gradi, minuti e secondi, "
+"con o senza suffisso, allineati o meno e un formato personalizzato "
+"utilizzando la finestra di dialogo delle espressioni."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:312
+msgid ""
+"You can choose which annotation to show. The options are: show all, latitude"
+" only, longitude only, or disable(none). This is useful when the map is "
+"rotated. The annotation can be drawn inside or outside the map frame. The "
+"annotation direction can be defined as horizontal, vertical ascending or "
+"vertical descending."
+msgstr ""
+"Puoi scegliere quale annotazione mostrare. Le opzioni sono: mostra tutte, "
+"solo latitudine, solo longitudine o disabilita (nessuna). Questo è utile "
+"quando la mappa viene ruotata. L'annotazione può essere disegnata "
+"all'interno o all'esterno della cornice della mappa. La direzione "
+"dell'annotazione può essere definita come orizzontale, verticale ascendente "
+"o verticale discendente."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:318
+msgid ""
+"Finally, you can define the annotation font, font color, distance from the "
+"map frame and the precision of the drawn coordinates."
+msgstr ""
+"Infine, puoi scegliere il carattere dell'annotazione, il colore del "
+"carattere, la distanza dalla cornice della mappa e la precisione delle "
+"coordinate rappresentate."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:326
+msgid "Grid Draw Coordinates dialog"
+msgstr "Finestra di dialogo Scrivi Coordinate"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:332
+msgid "Overviews"
+msgstr "Panoramiche"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:334
+msgid ""
+"Sometimes you may have more than one map in the print layout and would like "
+"to locate the study area of one map item on another one. This could be for "
+"example to help map readers identify the area in relation with its larger "
+"geographic context shown in the second map."
+msgstr ""
+"A volte puoi avere più di una mappa nel layout di stampa e vuoi localizzare "
+"l'area di studio di un oggetto mappa su un'altra mappa. Questo potrebbe "
+"essere, ad esempio, per aiutare i lettori di mappe a identificare l'area in "
+"relazione al contesto geografico più ampio mostrato nella seconda mappa."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:339
+msgid ""
+"The :guilabel:`Overviews` group of the map panel helps you create the link "
+"between two different maps extent and provides the following "
+"functionalities:"
+msgstr ""
+"Il gruppo :guilabel:`Panoramiche` del pannello mappe ti aiuta a creare il "
+"collegamento tra due diverse estensioni di mappa e fornisce le seguenti "
+"funzionalità:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:347
+msgid "Map Overviews group"
+msgstr "Gruppo Panoramiche della Mappa"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:349
+msgid ""
+"To create an overview, select the map item on which you want to show the "
+"other map item's extent and expand the :guilabel:`Overviews` option in the "
+":guilabel:`Item Properties` panel. Then press the |signPlus| button to add "
+"an overview."
+msgstr ""
+"Per creare una panoramica, seleziona l'oggetto mappa su cui vuoi mostrare "
+"l'estensione dell'altro oggetto mappa ed espandere l'opzione "
+":guilabel:`Panoramica` nel pannello :guilabel:`Proprietà dell'oggetto`. "
+"Quindi premi il pulsante |signPlus| per aggiungere una panoramica."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:354
+msgid ""
+"Initially this overview is named 'Overview 1' (see "
+"Figure_layout_map_overview_). You can:"
+msgstr ""
+"Inizialmente questa panoramica si chiama 'Panoramica 1' (vedi "
+"Figure_layout_map_overview_). Puoi:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:371
+msgid ""
+"The :guilabel:`Blending mode` allows you to set different transparency blend"
+" modes."
+msgstr ""
+"La :guilabel:`Modalità fusione` ti consente di impostare diverse modalità di"
+" fusione e trasparenza."

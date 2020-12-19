@@ -1,0 +1,310 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:24+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Romanian (https://www.transifex.com/qgis/teams/6144/ro/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:29
+msgid "Network analysis library"
+msgstr "Biblioteca de analiză a rețelelor"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:41
+msgid ""
+"The network analysis library was created by exporting basic functions from "
+"the RoadGraph core plugin and now you can use it's methods in plugins or "
+"directly from the Python console."
+msgstr ""
+"Biblioteca analizelor de rețea a fost creată prin exportarea funcțiilor de "
+"bază ale plugin-ului RoadGraph, iar acum aveți posibilitatea să-i utilizați "
+"metodele în plugin-uri sau direct în consola Python."
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:46
+msgid "General information"
+msgstr "Informații generale"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:48
+msgid "Briefly, a typical use case can be described as:"
+msgstr "Pe scurt, un caz tipic de utilizare poate fi descris astfel:"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:50
+msgid "create graph from geodata (usually polyline vector layer)"
+msgstr ""
+"crearea grafului din geodate (de obicei un strat vectorial de tip polilinie)"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:51
+msgid "run graph analysis"
+msgstr "rularea analizei grafului"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:52
+msgid "use analysis results (for example, visualize them)"
+msgstr "folosirea rezultatelor analizei (de exemplu, vizualizarea lor)"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:55
+msgid "Building a graph"
+msgstr "Construirea unui graf"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:57
+msgid ""
+"The first thing you need to do --- is to prepare input data, that is to "
+"convert a vector layer into a graph. All further actions will use this "
+"graph, not the layer."
+msgstr ""
+"Primul lucru pe care trebuie să-l faceți --- este de a pregăti datele de "
+"intrare, ceea ce înseamnă conversia stratului vectorial într-un graf. Toate "
+"acțiunile viitoare vor folosi acest graf, și nu stratul."
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:61
+msgid ""
+"As a source we can use any polyline vector layer. Nodes of the polylines "
+"become graph vertexes, and segments of the polylines are graph edges. If "
+"several nodes have the same coordinates then they are the same graph vertex."
+" So two lines that have a common node become connected to each other."
+msgstr ""
+"Ca și sursă putem folosi orice strat vectorial de tip polilinie. Nodurile "
+"poliliniilor devin noduri ale grafului, segmentele poliliniilor reprezentând"
+" marginile grafului. În cazul în care mai multe noduri au aceleași "
+"coordonate, atunci ele sunt în același nod al grafului. Astfel, două linii "
+"care au un nod comun devin conectate între ele."
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:66
+msgid ""
+"Additionally, during graph creation it is possible to \"fix\" (\"tie\") to "
+"the input vector layer any number of additional points. For each additional "
+"point a match will be found --- the closest graph vertex or closest graph "
+"edge. In the latter case the edge will be split and a new vertex added."
+msgstr ""
+"În plus, în timpul creării grafului este posibilă \"fixarea\" ('legarea\") "
+"de stratul vectorial de intrare a oricărui număr de puncte suplimentare. "
+"Pentru fiecare punct suplimentar va fi găsită o potrivire --- cel mai "
+"apropiat nod sau cea mai apropiată muchie a grafului. În ultimul caz muchia "
+"va fi divizată iar noul nod va fi adăugat."
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:71
+msgid ""
+"Vector layer attributes and length of an edge can be used as the properties "
+"of an edge."
+msgstr ""
+"Atributele stratului vectorial și lungimea unei muchii pot fi folosite ca "
+"proprietăți ale marginii."
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:95
+msgid "It's time to dive into the process."
+msgstr "Este timpul de a aprofunda acest proces."
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:103
+msgid "Then some examples for creating a director"
+msgstr "Apoi, câteva exemple pentru crearea unui director"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:119
+msgid ""
+"To construct a director  we should pass a vector layer, that will be used as"
+" the source for the graph structure and information about allowed movement "
+"on each road segment (one-way or bidirectional movement, direct or reverse "
+"direction). The call looks like this"
+msgstr ""
+"Pentru a construi un director ar trebui să transmitem stratul vectorial, "
+"care va fi folosit ca sursă pentru structura grafului și informațiile despre"
+" mișcările permise pe fiecare segment de drum (circulație unilaterală sau "
+"bilaterală, sens direct sau invers). Acest apel arată în felul următor"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:133
+msgid "And here is full list of what these parameters mean:"
+msgstr "Iată lista completă a ceea ce înseamnă acești parametri:"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:136
+msgid ""
+"``directionFieldId`` --- index of the attribute table field, where "
+"information about roads direction is stored. If ``-1``, then don't use this "
+"info at all. An integer."
+msgstr ""
+"``directionFieldId`` --- indexul câmpului din tabelul de atribute, în care "
+"sunt stocate informații despre direcțiile drumurilor. Dacă este ``-1``, "
+"atunci aceste informații nu se folosesc deloc. Număr întreg."
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:139
+msgid ""
+"``directDirectionValue`` --- field value for roads with direct direction "
+"(moving from first line point to last one). A string."
+msgstr ""
+"``directDirectionValue`` --- valoarea câmpului pentru drumurile cu sens "
+"direct (trecere de la primul punct de linie la ultimul). Șir de caractere."
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:141
+msgid ""
+"``reverseDirectionValue`` --- field value for roads with reverse direction "
+"(moving from last line point to first one). A string."
+msgstr ""
+"``reverseDirectionValue`` --- valoarea câmpului pentru drumurile cu sens "
+"invers (în mișcare de la ultimul punct al liniei până la primul). Șir de "
+"caractere."
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:143
+msgid ""
+"``bothDirectionValue`` --- field value for bidirectional roads (for such "
+"roads we can move from first point to last and from last to first). A "
+"string."
+msgstr ""
+"``bothDirectionValue`` --- valoarea câmpului pentru drumurile bilaterale "
+"(pentru astfel de drumuri putem trece de la primul la ultimul punct și de la"
+" ultimul la primul). Șir de caractere."
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:154
+msgid ""
+"It is necessary then to create a strategy for calculating edge properties"
+msgstr ""
+"Este necesară, apoi, crearea unei strategii pentru calcularea proprietăților"
+" marginii"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:166
+msgid "And tell the director about this strategy"
+msgstr "Apoi spuneți directorului despre această strategie"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:187
+msgid ""
+"Also we can define several points, which will be used in the analysis. For "
+"example"
+msgstr ""
+"De asemenea, putem defini mai multe puncte, care vor fi utilizate în "
+"analiză. De exemplu"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:195
+msgid ""
+"Now all is in place so we can build the graph and \"tie\" these points to it"
+msgstr ""
+"Acum că totul este la locul lui, putem să construim graful și să \"legăm\" "
+"aceste puncte la el"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:201
+msgid ""
+"Building the graph can take some time (which depends on the number of "
+"features in a layer and layer size). ``tiedPoints`` is a list with "
+"coordinates of \"tied\" points. When the build operation is finished we can "
+"get the graph and use it for the analysis"
+msgstr ""
+"Construirea unui graf poate dura ceva timp (depinzând de numărul de entități"
+" dintr-un strat și de dimensiunea stratului). ``tiedPoints`` reprezintă o "
+"listă cu coordonatele punctelor \"asociate\". Când s-a terminat operațiunea "
+"de construire putem obține graful și să-l utilizăm pentru analiză"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:210
+msgid "With the next code we can get the vertex indexes of our points"
+msgstr "Cu următorul cod putem obține indecșii punctelor noastre"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:219
+msgid "Graph analysis"
+msgstr "Analiza grafului"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:221
+msgid ""
+"Networks analysis is used to find answers to two questions: which vertexes "
+"are connected and how to find a shortest path. To solve these problems the "
+"network analysis library provides Dijkstra's algorithm."
+msgstr ""
+"Analiza de rețea este utilizată pentru a găsi răspunsuri la două întrebări: "
+"care noduri sunt conectate și identificarea celei mai scurte căi. Pentru a "
+"rezolva această problemă, biblioteca de analiză de rețea oferă algoritmul "
+"lui Dijkstra."
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:225
+msgid ""
+"Dijkstra's algorithm finds the shortest route from one of the vertexes of "
+"the graph to all the others and the values of the optimization parameters. "
+"The results can be represented as a shortest path tree."
+msgstr ""
+"Algoritmul lui Dijkstra găsește cea mai bună cale între unul dintre "
+"vârfurile grafului și toate celelalte, precum și valorile parametrilor de "
+"optimizare. Rezultatele pot fi reprezentate ca cel mai scurt arbore."
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:232
+msgid "only one vertex has no incoming edges — the root of the tree"
+msgstr "doar un singur nod nu are muchii de intrare — rădăcina arborelui"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:233
+msgid "all other vertexes have only one incoming edge"
+msgstr "toate celelalte noduri au numai o margine de intrare"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:234
+msgid ""
+"if vertex B is reachable from vertex A, then the path from A to B is the "
+"single available path and it is optimal (shortest) on this graph"
+msgstr ""
+"dacă nodul B este accesibil din nodul A, apoi calea de la A la B este "
+"singura disponibilă și este optimă (cea mai scurtă) în acest graf"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:346
+msgid "Finding shortest paths"
+msgstr "Găsirea celor mai scurte căi"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:366
+msgid ""
+"At this point we have the path, in the form of the inverted list of vertexes"
+" (vertexes are listed in reversed order from end point to start point) that "
+"will be visited during traveling by this path."
+msgstr ""
+"În acest moment avem calea, sub formă de listă inversată de noduri (nodurile"
+" sunt listate în ordine inversă, de la punctul de final către cel de start),"
+" ele fiind vizitate în timpul parcurgerii căii."
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:482
+msgid "Areas of availability"
+msgstr "Ariile de disponibilitate"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:484
+msgid ""
+"The area of availability for vertex A is the subset of graph vertexes that "
+"are accessible from vertex A and the cost of the paths from A to these "
+"vertexes are not greater that some value."
+msgstr ""
+"Aria de disponibilitate a nodului A este un subset de noduri ale graf-ului, "
+"care sunt accesibile din nodul A iar costurile căii de la A la aceste noduri"
+" nu sunt mai mari decât o anumită valoare."
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:488
+msgid ""
+"More clearly this can be shown with the following example: \"There is a fire"
+" station. Which parts of city can a fire truck reach in 5 minutes? 10 "
+"minutes? 15 minutes?\". Answers to these questions are fire station's areas "
+"of availability."
+msgstr ""
+"Mai clar, acest lucru poate fi dovedit cu următorul exemplu: \"Există o "
+"echipă de intervenție în caz de incendiu. Ce zone ale orașului acoperă "
+"această echipă în 5 minute? Dar în 10 minute? Dar în 15 minute?\". Răspunsul"
+" la aceste întrebări îl reprezintă zonele de disponibilitate ale echipei de "
+"intervenție."
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:500
+msgid ""
+"A more difficult problem is to get the borders of the area of availability. "
+"The bottom border is the set of vertexes that are still accessible, and the "
+"top border is the set of vertexes that are not accessible. In fact this is "
+"simple: it is the availability border based on the edges of the shortest "
+"path tree for which the source vertex of the edge is accessible and the "
+"target vertex of the edge is not."
+msgstr ""
+"Mai dificilă este obținerea granițelor zonei de disponibilitate. Marginea de"
+" jos reprezintă un set de noduri care încă sunt accesibile, iar marginea de "
+"sus un set de noduri inaccesibile. De fapt, acest lucru este simplu: "
+"marginea disponibilă a atins aceste margini parcurgând arborele cel mai "
+"scurt, pentru care nodul de start este accesibil, spre deosebire de celelalt"
+" capăt, care nu este accesibil."
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:507
+msgid "Here is an example"
+msgstr "Iată un exemplu"

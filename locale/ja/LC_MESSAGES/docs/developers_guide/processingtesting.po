@@ -1,0 +1,130 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:24+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/developers_guide/processingtesting.rst:11
+msgid "Algorithm tests"
+msgstr "アルゴリズムのテスト"
+
+#: ../../docs/developers_guide/processingtesting.rst:16
+msgid ""
+"QGIS provides several algorithms under the Processing framework. You can "
+"extend this list with algorithms of your own and, like any new feature, "
+"adding tests is required."
+msgstr ""
+"QGISでは、プロセッシングフレームワークの下にいくつかのアルゴリズムを提供しています。このリストは独自のアルゴリズムで拡張できます。そして新しい機能と同様、テストを追加することが必要です。"
+
+#: ../../docs/developers_guide/processingtesting.rst:46
+msgid ""
+"Run the :ref:`algorithm <processing_algs>` you want to test in QGIS from the"
+" :ref:`processing toolbox <processing.toolbox>`. If the result is a vector "
+"layer prefer GML, with its XSD, as output for its support of mixed geometry "
+"types and good readability. Redirect output to "
+":file:`python/plugins/processing/tests/testdata/expected`. For input layers "
+"prefer to use what's already there in the folder :file:`testdata`. If you "
+"need extra data, put it into :file:`testdata/custom`."
+msgstr ""
+":ref:`プロセッシングツールボックス <processing.toolbox>` からQGISでテストしたい :ref:`アルゴリズム "
+"<processing_algs>` "
+"を実行します。結果がベクタレイヤの場合、混合ジオメトリタイプと優れた読みやすさのサポートの出力として、XSDを備えたGMLを優先します。出力を "
+":file:`python/plugins/processing/tests/testdata/expected` "
+"にリダイレクトします。入力レイヤには、フォルダ :file:`testdata` に既にあるものを優先的に使用します。追加のデータが必要な場合は、それを"
+" :file:`testdata/custom` に入れてください。"
+
+#: ../../docs/developers_guide/processingtesting.rst:79
+msgid ""
+"It is also possible to create tests for Processing scripts. Scripts should "
+"be placed in the :file:`scripts` subdirectory in the test data directory "
+":file:`python/plugins/processing/tests/testdata/`. The script file name "
+"should match the script algorithm name."
+msgstr ""
+"処理スクリプトのテストを作成することもできます。スクリプトは、テストデータのディレクトリ "
+":file:`python/plugins/processing/tests/testdata/` の :file:`scripts` "
+"サブディレクトリに配置する必要があります。スクリプトファイル名は、スクリプトアルゴリズム名と一致する必要があります。"
+
+#: ../../docs/developers_guide/processingtesting.rst:90
+msgid "Parameters and results are specified as lists or dictionaries:"
+msgstr "パラメータと結果はリストまたは辞書として指定されます："
+
+#: ../../docs/developers_guide/processingtesting.rst:111
+msgid ""
+"You will often need to specify layers as parameters. To specify a layer you "
+"will need to specify:"
+msgstr "多くの場合、レイヤをパラメータとして指定する必要があるでしょう。レイヤを指定するには、次を指定する必要があります："
+
+#: ../../docs/developers_guide/processingtesting.rst:114
+msgid "the type, ie ``vector`` or ``raster``"
+msgstr "種類、すなわち ``vector`` または ``raster``"
+
+#: ../../docs/developers_guide/processingtesting.rst:133
+msgid ""
+"If you need an external file for the algorithm test, you need to specify the"
+" 'file' type and the (relative) path to the file in its 'name':"
+msgstr "アルゴリズムのテストに外部ファイルが必要な場合は、「ファイル」タイプと「名前」でファイルへの（相対）パスを指定する必要があります。"
+
+#: ../../docs/developers_guide/processingtesting.rst:148
+msgid "Results"
+msgstr "結果"
+
+#: ../../docs/developers_guide/processingtesting.rst:169
+msgid ""
+"Sometimes different platforms create slightly different results which are "
+"still acceptable. In this case (but only then) you may also use additional "
+"properties to define how a layer is compared."
+msgstr ""
+"プラットフォームによって、わずかに異なる結果が作成される場合がありますが、それでも依然として許容範囲です。この場合（ただしその場合のみ）、追加のプロパティを使用して、レイヤーの比較方法を定義することもできます。"
+
+#: ../../docs/developers_guide/processingtesting.rst:173
+msgid ""
+"To deal with a certain tolerance for output values you can specify a "
+"``compare`` property for an output. The compare property can contain sub-"
+"properties for ``fields``. This contains information about how precisely a "
+"certain field is compared (``precision``) or a field can even entirely be "
+"``skip``ed. There is a special field name ``__all__`` which will apply a "
+"certain tolerance to all fields. There is another property ``geometry`` "
+"which also accepts a ``precision`` which is applied to each vertex."
+msgstr ""
+"出力値の特定の許容範囲を処理するために、出力に ``比較`` "
+"プロパティを指定できます。この比較プロパティには、「フィールド」のサブプロパティを含めることができます。これには、特定のフィールドがどの程度正確に比較されるか（「精度」）、またはフィールドを完全に「スキップ」することもできます。すべてのフィールドに特定の許容値を適用する特別なフィールド名"
+" ``__all__`` があります。別に、各頂点に適用される「精度」も受け入れるプロパティ「ジオメトリ」があります。"
+
+#: ../../docs/developers_guide/processingtesting.rst:198
+msgid ""
+"Raster files are compared with a hash checksum. This is calculated when you "
+"create a test from the processing history."
+msgstr "ラスタファイルはハッシュチェックサムと比較されます。これは、プロセッシングの履歴からテストを作成するときに計算されます。"
+
+#: ../../docs/developers_guide/processingtesting.rst:210
+msgid ""
+"You can compare the content of an output file to an expected result "
+"reference file"
+msgstr "出力ファイルの内容を予想される結果参照ファイルと比較できます"
+
+#: ../../docs/developers_guide/processingtesting.rst:245
+msgid "Algorithm Context"
+msgstr "アルゴリズムのコンテキスト"
+
+#: ../../docs/developers_guide/processingtesting.rst:247
+msgid ""
+"There are a few more definitions that can modify the context of the "
+"algorithm - these can be specified at the top level of test:"
+msgstr "アルゴリズムのコンテキストを変更できる定義がいくつかあります。これらはテストの最上位で指定できます："

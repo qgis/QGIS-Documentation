@@ -1,0 +1,421 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# Aline Furlanetto Viero <afviero@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:20+0000\n"
+"Last-Translator: Aline Furlanetto Viero <afviero@gmail.com>, 2020\n"
+"Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../docs/training_manual/databases/db_manager.rst:2
+msgid "|LS| Using DB Manager to work with Spatial Databases in QGIS"
+msgstr ""
+"|LS| Usando o Gerenciador BD para trabalhar com bancos de dados espaciais no"
+" QGIS"
+
+#: ../../docs/training_manual/databases/db_manager.rst:4
+msgid ""
+"We have already seen how to perform many database operations with QGIS as "
+"well as with other tools, but now it's time to look at the DB Manager tool "
+"which provides much of this same functionality as well as more management "
+"oriented tools."
+msgstr ""
+"Já vimos como realizar muitas operações de banco de dados com o QGIS, bem "
+"como com outras ferramentas, mas agora é hora de olhar para a ferramenta "
+"Gerenciador BD que fornece grande parte destas mesmas funcionalidades, bem "
+"como mais ferramentas de gestão orientadas."
+
+#: ../../docs/training_manual/databases/db_manager.rst:9
+msgid ""
+"**The goal for this lesson:** To learn how to interact with spatial "
+"databases using the QGIS DB Manager."
+msgstr ""
+"**A meta para esta lição:** Aprender como interagir com bancos de dados "
+"espaciais usando o Gerenciador BD do QGIS."
+
+#: ../../docs/training_manual/databases/db_manager.rst:13
+msgid "|basic| |FA| Managing PostGIS Databases with DB Manager"
+msgstr "|basic| |FA| Gerenciando Base de dados PostGIS com Gerenciador BD"
+
+#: ../../docs/training_manual/databases/db_manager.rst:15
+msgid ""
+"You should first open the DB Manager interface by selecting "
+":guilabel:`Database --> DB Manager --> DB Manager` on the menu or by "
+"selecting the DB Manager icon on the toolbar."
+msgstr ""
+"Você deve primeiro abrir a interface do Gerenciador BD selecionando "
+":guilabel:`Base de Dados --> Gerenciador BD --> Gerenciador BD` no menu ou "
+"selecionando o ícone Gerenciador BD na barra de ferramentas."
+
+#: ../../docs/training_manual/databases/db_manager.rst:19
+msgid "|dbManager|"
+msgstr "|dbManager|"
+
+#: ../../docs/training_manual/databases/db_manager.rst:25
+msgid ""
+"The first thing you may notice is that you can now see some metadata about "
+"the Schemas contained in your database."
+msgstr ""
+"A primeira coisa que irá notar é que agora você pode ver os metadados dos "
+"esquemas contidos em sua base de dados."
+
+#: ../../docs/training_manual/databases/db_manager.rst:31
+msgid ""
+"Schemas are a way of grouping data tables and other objects in a PostgreSQL "
+"database and a container for permissions and other constraints. Managing "
+"PostgreSQL schemas is beyond the scope of this manual, but you can find more"
+" information about them in the `PostgreSQL documentation on Schemas "
+"<https://www.postgresql.org/docs/9.1/ddl-schemas.html>`_. You can use the DB"
+" Manager to create new Schemas, but will need to use a tool like pgAdmin III"
+" or the command line interface to manage them effectively."
+msgstr ""
+"Os esquemas são uma maneira de agrupar tabelas de dados e outros objetos em "
+"um banco de dados PostgreSQL e um contêiner para permissões e outras "
+"restrições. O gerenciamento de esquemas do PostgreSQL está além do escopo "
+"deste manual, mas você pode encontrar mais informações sobre eles na "
+"`Documentação do PostgreSQL sobre esquemas "
+"<https://www.postgresql.org/docs/9.1/ddl-schemas.html>`_. Você pode usar o "
+"Gerenciador de BD para criar novos esquemas, mas precisará usar uma "
+"ferramenta como o pgAdmin III ou a interface da linha de comandos para "
+"gerenciá-los efetivamente."
+
+#: ../../docs/training_manual/databases/db_manager.rst:42
+msgid ""
+"DB Manager can also be used to manage the tables within your database. We "
+"have already looked at various ways to create and manage tables on the "
+"command line, but now lets look at how to do this in DB Manager."
+msgstr ""
+"O Gerenciador BD pode também ser usado para gerenciar tabelas do seu banco "
+"de dados. Nós já vimos várias maneiras de criar e manipular tabelas na linha"
+" de comando, mas agora vamos ver como fazer isso usando o Gerenciador BD."
+
+#: ../../docs/training_manual/databases/db_manager.rst:47
+msgid ""
+"First, its useful to just look at a table's metadata by clicking on its name"
+" in tree and looking in the :guilabel:`Info` tab."
+msgstr ""
+"Para começar, é interessante dar uma olhada nos metadados da tabela clicando"
+" no nome da mesma na árvore e verificando a guia :guilabel:`Info`."
+
+#: ../../docs/training_manual/databases/db_manager.rst:53
+msgid ""
+"In this panel you can see the :guilabel:`General Info` about the table as "
+"well the information that the PostGIS extension maintains about the geometry"
+" and spatial reference system."
+msgstr ""
+"Neste painel você pode ver as :guilabel:`Informações gerais` sobre a tabelas"
+" bem como as informações que a extensão PostGIS mantém sobre a geometria e o"
+" sistema de referencia espacial."
+
+#: ../../docs/training_manual/databases/db_manager.rst:57
+msgid ""
+"If you scroll down in the :guilabel:`Info` tab, you can see more information"
+" about the :guilabel:`Fields`, :guilabel:`Constraints` and "
+":guilabel:`Indexes` for the table you are viewing."
+msgstr ""
+"Se você rolar para baixo a guia :guilabel:`Info`, poderá ver mais "
+"informações sobre :guilabel:`Campos`, :guilabel:`Restrições` e "
+":guilabel:`Índices` relacionados a tabela selecionada."
+
+#: ../../docs/training_manual/databases/db_manager.rst:64
+msgid ""
+"Its also very useful to use DB Manager to simply look at the records in the "
+"database in much the same way you might do this by viewing the attribute "
+"table of a layer in the Layer Tree. You can browse the data by selecting the"
+" :guilabel:`Table` tab."
+msgstr ""
+"Também é muito útil usar o Gerenciador BD simplesmente para ver os registros"
+" no banco de dados de maneira parecida com que pode-se ver a tabela de "
+"atributos de uma camada na Árvore de Camadas. Você pode navegar pelos dados "
+"selecionando a guia :guilabel:`Tabela`."
+
+#: ../../docs/training_manual/databases/db_manager.rst:72
+msgid ""
+"There is also a :guilabel:`Preview` tab which will show you the layer data "
+"in a map preview."
+msgstr ""
+"Há também a guia :guilabel:`Pré-visualizar` que mostra a camada em uma pré-"
+"visualização de um mapa. "
+
+#: ../../docs/training_manual/databases/db_manager.rst:75
+msgid ""
+"Right-clicking on a layer in the tree and clicking :guilabel:`Add to Canvas`"
+" will add this layer to your map."
+msgstr ""
+"Clicando com o botão direito em uma camada da árvore e selecionando "
+":guilabel:`Adicionar à tela` irá adicionar essa camada ao mapa."
+
+#: ../../docs/training_manual/databases/db_manager.rst:78
+msgid ""
+"So far we have only been viewing the database its schemas and tables and "
+"their metadata, but what if we wanted to alter the table to add an "
+"additional column perhaps? DB Manager allows you to do this directly."
+msgstr ""
+"Hasta ahora sólo hemos visto los esquemas, tablas y sus metadatos de la base"
+" de datos, pero lo que si queríamos era modificar la tabla para añadir una "
+"columna más, tal vez? El Administrador de BBDD le permite hacer esto "
+"directamente."
+
+#: ../../docs/training_manual/databases/db_manager.rst:83
+msgid "Select the table you want to edit in the tree"
+msgstr "Seleccione la tabla que desee editar en el árbol"
+
+#: ../../docs/training_manual/databases/db_manager.rst:90
+msgid ""
+"You can use this dialog to Add Columns, Add geometry columns, edit existing "
+"columns or to remove a column completely."
+msgstr ""
+"Se puede utilizar este diálogo para añadir columnas, añadir columnas de "
+"geometría, editar columnas existentes o eliminar una columna completamente."
+
+#: ../../docs/training_manual/databases/db_manager.rst:93
+msgid ""
+"Using the :guilabel:`Constraints` tab, you can manage which fields are used "
+"as the primary key or to drop existing constraints."
+msgstr ""
+"Utilice la pestaña :guilabel:`Restricciones`, se puede administra que campos"
+" se utilizan como clave primaria o para borrar una restricción existente. "
+
+#: ../../docs/training_manual/databases/db_manager.rst:99
+msgid ""
+"The :guilabel:`Indexes` tab can be used to add and delete both spatial and "
+"normal indexes."
+msgstr ""
+"La pestaña :guilabel:`Índices` se puede utilizar para añadir y borrar ambos "
+"índices espacial y normal."
+
+#: ../../docs/training_manual/databases/db_manager.rst:106
+msgid "|basic| |FA| Creating a New Table"
+msgstr "|basic| |FA| Crear una nueva tabla"
+
+#: ../../docs/training_manual/databases/db_manager.rst:108
+msgid ""
+"Now that we have gone through the process of working with existing tables in"
+" our database, let's use DB Manager to create a new table."
+msgstr ""
+"Ahora que hemos pasado por el proceso de trabajar con tablas existentes en "
+"nuestra base de datos, vamos a usar el Administrador de BBDD para crear una "
+"nueva tabla."
+
+#: ../../docs/training_manual/databases/db_manager.rst:113
+msgid ""
+"From the menu select :guilabel:`Table --> Create Table` to bring up the "
+"Create Table dialog."
+msgstr ""
+"Desde el menú, seleccione :guilabel:`Tabla--> Crear Tabla` para mostrar el "
+"diálogo Crear Tabla."
+
+#: ../../docs/training_manual/databases/db_manager.rst:123
+msgid ""
+"Click the checkbox to :guilabel:`Create spatial index` and click "
+":guilabel:`Create` to create the table."
+msgstr ""
+"Haga clic en la casilla :guilabel:`Crear índice espacial` y haga clic "
+":guilabel:`Crear` para crear la tabla."
+
+#: ../../docs/training_manual/databases/db_manager.rst:129
+msgid ""
+"Dismiss the dialog letting you know that the table was created and click "
+":guilabel:`Close` to close the Create Table Dialog."
+msgstr ""
+"Descarte el diálogo que conoce que la tabla fue creada y haga clic en "
+":guilabel:`Cerrar` para cerrar el diálogo Crear Tabla."
+
+#: ../../docs/training_manual/databases/db_manager.rst:132
+msgid ""
+"You can now inspect your table in the DB Manager and you will of course find"
+" that there is no data in it. From here you can :guilabel:`Toggle Editing` "
+"on the layer menu and begin to add places to your table."
+msgstr ""
+"Ahora puede examinar su tabla en el Administrador de BBDD y por supuesto "
+"encontrará que no hay datos en él. Desde aquí se puede :guilabel:`Conmutar "
+"edición` sobre el menú Capa e iniciar a añadir sitios a su tabla."
+
+#: ../../docs/training_manual/databases/db_manager.rst:138
+msgid "|basic| |FA| Basic Database Administration"
+msgstr "|basic| |FA| Administración de base de datos básica"
+
+#: ../../docs/training_manual/databases/db_manager.rst:146
+msgid ""
+"Database tables can often become quite large and tables which are being "
+"modified frequently can end up leaving around remnants of records that are "
+"no longer needed by PostgreSQL. The *VACUUM* command takes care of doing a "
+"kind of garbage collection to compact and optional analyze your tables for "
+"better performance."
+msgstr ""
+"Las tablas de base de datos a menudo pueden llegar a ser bastante grandes y "
+"las tablas que están modificando frecuentemente puede dejar botado al resto "
+"de registros que no son necesarios por PostgreSQL. El comando *VACUUM* se "
+"encarga de hacer una especie de recolección de basura para compactar y "
+"analizar opcional sus tablas para mejorar el rendimiento."
+
+#: ../../docs/training_manual/databases/db_manager.rst:167
+msgid "|basic| |FA| Executing SQL Queries with DB Manager"
+msgstr ""
+"|basic| |FA| Ejecutar consultas SQL Queries con el Administrador de BBDD"
+
+#: ../../docs/training_manual/databases/db_manager.rst:169
+msgid ""
+"DB Manager also provides a way for you to write queries against your "
+"database tables and to view the results. We have already seen this type of "
+"functionality in the :guilabel:`Browser` panel, but lets look at it again "
+"here with DB Manager."
+msgstr ""
+"El Administrador de BBDD también proporciona una forma para que pueda "
+"escribir consultas en las tablas de base de datos y los resultados a vistas."
+" Ya hemos visto este tipo de funciones en el panel :guilabel:`Explorar`, "
+"pero vamos de nuevo aquí con el Administrador de BBDD."
+
+#: ../../docs/training_manual/databases/db_manager.rst:176
+msgid "Select the :guilabel:`SQL window` button in the DB Manager toolbar."
+msgstr ""
+"Seleccione el botón :guilabel:`Ventana SQL` en la barra de herramientas del "
+"Administrador de BBDD."
+
+#: ../../docs/training_manual/databases/db_manager.rst:181
+msgid "Compose the following :guilabel:`SQL query` in the space provided::"
+msgstr ""
+"Componga la siguiente :guilabel:`Consulta SQL` en el espacio proporcionado::"
+
+#: ../../docs/training_manual/databases/db_manager.rst:185
+msgid "Click the :guilabel:`Execute (F5)` button to run the query."
+msgstr ""
+"Haga clic en el botón :guilabel:`Ejecutar (F5)` para ejecutar la consulta."
+
+#: ../../docs/training_manual/databases/db_manager.rst:186
+msgid ""
+"You should now see the records that match in the :guilabel:`Result` panel."
+msgstr ""
+"Ahora se debe ver el registro que coinciden en el panel "
+":guilabel:`Resultado`"
+
+#: ../../docs/training_manual/databases/db_manager.rst:192
+msgid ""
+"Click the checkbox for :guilabel:`Load as new layer` to add the results to "
+"your map."
+msgstr ""
+"Haga clic en la casilla :guilabel:`Cargar como nueva capa`   para añadir el "
+"resultado a su mapa."
+
+#: ../../docs/training_manual/databases/db_manager.rst:198
+msgid ""
+"Click :guilabel:`Load now!` to load the results as a new layer into your "
+"map."
+msgstr ""
+"Haga clic :guilabel:`¡Cargar ahora!` para cargar los resultados como una "
+"nueva capa en su mapa."
+
+#: ../../docs/training_manual/databases/db_manager.rst:204
+msgid ""
+"The layers that matched your query are now displayed on your map. You can of"
+" course use this query tool to execute any arbitrary SQL command including "
+"many of the ones we looked at in previous modules and sections."
+msgstr ""
+"La capa que corresponde a su consulta ahora se despliega sobre su mapa. Se "
+"puede por supuesto utilizar esta herramienta de consulta para ejecutar "
+"cualquier comando SQL arbitrario incluyendo muchos de los que vimos en los "
+"módulos y secciones anteriores."
+
+#: ../../docs/training_manual/databases/db_manager.rst:210
+msgid "Importing Data into a Database with DB Manager"
+msgstr "Importar datos en una base de datos con el Administrador de BBDD"
+
+#: ../../docs/training_manual/databases/db_manager.rst:212
+msgid ""
+"We have already looked at how to import data into a spatial database using "
+"command line tools, so now let's learn how to use DB Manager to do imports."
+msgstr ""
+"Já vimos como importar dados para um banco de dados espacial usando "
+"ferramentas de linha de comando; agora, vamos aprender como usar o "
+"Gerenciador de BD para fazer importações."
+
+#: ../../docs/training_manual/databases/db_manager.rst:216
+msgid ""
+"Click the :guilabel:`Import layer/file` button on the toolbar in the DB "
+"Manager dialog."
+msgstr ""
+"Haga clic en botón :guilabel:`Importar capa/archivo`  en la barra de "
+"herramientas en el diálogo del Administrador de BBDD."
+
+#: ../../docs/training_manual/databases/db_manager.rst:224
+msgid ""
+"Click the :guilabel:`Update Options` button to pre-fill some of the form "
+"values."
+msgstr ""
+"Haga clic en el botón :guilabel:`Actualizar Opciones` para pre-llenar "
+"algunos de los valores del formulario."
+
+#: ../../docs/training_manual/databases/db_manager.rst:226
+msgid "Make sure that the :guilabel:`Create new table` option is selected"
+msgstr ""
+"Asegúrese que la opción :guilabel:`Crear nueva tabla` esta seleccionada."
+
+#: ../../docs/training_manual/databases/db_manager.rst:229
+msgid "Enable the checkbox to :guilabel:`Create Spatial Index`"
+msgstr "Habilitar la casilla a  :guilabel:`Crear índice espacial`"
+
+#: ../../docs/training_manual/databases/db_manager.rst:235
+msgid "Dismiss the dialog letting you know that the import was successful"
+msgstr "Cerrar el diálogo que sabe que la importación fue exitosa."
+
+#: ../../docs/training_manual/databases/db_manager.rst:246
+msgid ""
+"Right clicking on the table in the Tree and a selecting :guilabel:`Add to "
+"Canvas` will add the table as a layer in your map."
+msgstr ""
+"Haga clic derecho sobre la tabla en el árbol y una selección "
+":guilabel:`Añadir al lienzo` se añadirá la tabla como capa en su mapa."
+
+#: ../../docs/training_manual/databases/db_manager.rst:251
+msgid "Exporting Data from a Database with DB Manager"
+msgstr "Exportando datos desde una base de datos con el Administrador de BBDD"
+
+#: ../../docs/training_manual/databases/db_manager.rst:253
+msgid ""
+"Of course DB Manager can also be used to export data from your spatial "
+"databases, so lets take a look at how that is done."
+msgstr ""
+"Por supuesto el Administrador de BBDD también puede ser utilizado para "
+"exportar datos desde su base de datos espacial, por lo que vamos a echar un "
+"vistazo a cómo se hace."
+
+#: ../../docs/training_manual/databases/db_manager.rst:263
+msgid "Click :guilabel:`OK` to initialize the export."
+msgstr "Haga clic en :guilabel:`Aceptar` para inicializar la exportación."
+
+#: ../../docs/training_manual/databases/db_manager.rst:268
+msgid ""
+"Dismiss the dialog letting you know the export was successful and close the "
+"DB Manager."
+msgstr ""
+"Cierre el diálogo que le permite saber que la exportación fue exitosa y "
+"cierre el administrador de BBDD."
+
+#: ../../docs/training_manual/databases/db_manager.rst:271
+msgid "You can now inspect the shapefile you created with the Browser panel."
+msgstr ""
+"Ahora se puede examinar el archivo shape que creó con el panel de "
+"Explorador."
+
+#: ../../docs/training_manual/databases/db_manager.rst:277
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../docs/training_manual/databases/db_manager.rst:284
+msgid "|WN|"
+msgstr "|WN|"

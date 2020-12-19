@@ -1,0 +1,149 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:18+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:2
+msgid "|LS| Vector Analysis"
+msgstr "|LS| 벡터 분석"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:10
+msgid ""
+"**The goal for this lesson:** To ask a question and solve it using analysis "
+"tools."
+msgstr "**이 강의의 목표:** 문제를 제시하고, 분석 도구를 써서 해결하기"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:15
+msgid "|basic| The GIS Process"
+msgstr "|basic| GIS 처리 과정"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:21
+msgid "State the Problem"
+msgstr "문제를 정의"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:22
+msgid "Get the Data"
+msgstr "데이터 획득"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:23
+msgid "Analyze the Problem"
+msgstr "문제를 분석"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:24
+msgid "Present the Results"
+msgstr "결과를 표출"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:30
+msgid ""
+"Let's start off the process by deciding on a problem to solve. For example, "
+"you are an estate agent and you are looking for a residential property in "
+"|majorUrbanName| for clients who have the following criteria:"
+msgstr ""
+"해결해야 할 문제를 결정하는 것으로 처리 과정을 시작합시다. 예를 들어 여러분이 부동산 업자인데 다음 기준을 가진 고객을 위해 "
+"|majorUrbanName| 에 있는 거주지를 찾고 있다고 해봅시다."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:59
+msgid ""
+"Although OSM downloads have consistent data fields, the coverage and detail "
+"does vary. If you find that your chosen region does not contain information "
+"on restaurants, for example, you may need to chose a different region."
+msgstr ""
+"OSM 다운로드는 일관된 데이터 항목을 가지고 있지만, 커버리지 및 세부 내용은 다를 수 있습니다. 예를 들어 여러분이 선택한 지역에 "
+"식당 정보가 없다면, 다른 지역을 선택해야 할 수도 있습니다."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:128
+msgid "|basic| |TY| Convert Layers' CRS"
+msgstr "|basic| |TY| 레이어 CRS 변환"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:180
+msgid "|basic| |FA| Analyzing the Problem: Distances From Schools and Roads"
+msgstr "|basic| |FA| 문제 분석: 학교 및 도로부터의 거리"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:236
+msgid "Now your map will look something like this:"
+msgstr "이제 여러분의 맵이 다음처럼 보일 것입니다."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:263
+msgid "Now there are no unnecessary subdivisions."
+msgstr "이제 필요 없는 부분들이 사라졌습니다."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:275
+msgid "|basic| |TY| Distance from schools"
+msgstr "|basic| |TY| 학교로부터의 거리"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:277
+msgid "Use the same approach as above and create a buffer for your schools."
+msgstr "앞 단계와 동일한 방법으로 학교를 중심으로 하는 버퍼를 생성하십시오."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:282
+msgid ":ref:`Check your results <vector-analysis-basic-1>`"
+msgstr ":ref:`결과 확인 <vector-analysis-basic-1>`"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:285
+msgid "|basic| |FA| Overlapping Areas"
+msgstr "|basic| |FA| 겹치는 구역"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:305
+msgid "Click :guilabel:`Run`."
+msgstr ":guilabel:`Run` 을 클릭합니다."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:313
+msgid ""
+"You may remove the two buffer layers and only keep the one that shows where "
+"they overlap, since that's what we really wanted to know in the first place:"
+msgstr "이제 두 버퍼 레이어를 제거하고 겹치는 구역만 보여주는 레이어만 남겨도 됩니다. 원래 그 레이어만을 원했기 때문입니다."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:358
+msgid "|moderate| |TY| Further Filter our Buildings"
+msgstr "|moderate| |TY| 한 번 더 건물을 필터링"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:360
+msgid ""
+"We now have a layer which shows us all the buildings within 1km of a school "
+"and within 50m of a road. We now need to reduce that selection to only show "
+"buildings which are within 500m of a restaurant."
+msgstr ""
+"이제 학교에서 1km, 도로에서 50m 이내에 있는 모든 건물들을 보여주는 레이어가 생성됐습니다. 다음으로 이 레이어에서 식당으로부터 "
+"500m 이내에 있는 건물들만 추려내야 합니다."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:370
+msgid ":ref:`Check your results <vector-analysis-basic-2>`"
+msgstr ":ref:`결과 확인 <vector-analysis-basic-2>`"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:373
+msgid "|basic| |FA| Select Buildings of the Right Size"
+msgstr "|basic| |FA| 면적 기준을 만족하는 건물 선택"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:404
+msgid "Click :guilabel:`OK`."
+msgstr ":guilabel:`OK` 를 클릭합니다."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:411
+msgid "|basic| |TY|"
+msgstr "|basic| |TY|"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:419
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:426
+msgid "|WN|"
+msgstr "|WN|"

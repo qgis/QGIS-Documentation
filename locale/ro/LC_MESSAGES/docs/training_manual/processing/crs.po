@@ -1,0 +1,233 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:21+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Romanian (https://www.transifex.com/qgis/teams/6144/ro/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+#: ../../docs/training_manual/processing/crs.rst:2
+msgid "CRSs. Reprojecting"
+msgstr "Reproiectarea CRS-urilor"
+
+#: ../../docs/training_manual/processing/crs.rst:5
+msgid ""
+"In this lesson we will discuss how Processing uses CRSs. We will also see a "
+"very useful algorithm: reprojecting."
+msgstr ""
+"În această lecție, vom discuta despre modul în care Processing utilizează "
+"CRS-urile. Vom vedea, de asemenea, un algoritm foarte util: reproiectarea."
+
+#: ../../docs/training_manual/processing/crs.rst:9
+msgid ""
+"CRS's are a great source of confusion for QGIS Processing users, so here are"
+" some general rules about how they are handled by geoalgorithms when "
+"creating a new layer."
+msgstr ""
+"CRS-urile sunt o mare sursă de confuzie pentru utilizatorii QGIS Processing,"
+" așa că aici sunt câteva reguli generale cu privire la modul în care pot fi "
+"gestionate de către geoalgoritmi, la crearea unui nou strat."
+
+#: ../../docs/training_manual/processing/crs.rst:12
+msgid ""
+"If there are input layers, it will use the CRS of the first layer. This is "
+"assumed to be the CRS of all input layers, since they should have the same "
+"one. If you use layers with unmatching CRS's, QGIS will warn you about it. "
+"Notice that the CRS of input layers is shown along with its name in the "
+"parameters dialog."
+msgstr ""
+"Dacă există straturi de intrare, se va utiliza CRS-ul primului strat. Acesta"
+" este presupus a fi CRS-ul tuturor straturilor de intrare, atât timp cât "
+"este necesar ca acestea să-l aibă pe același. În cazul în care utilizați "
+"straturi cu un CRS diferit, QGIS va emite un avertisment. Observați că CRS-"
+"ul straturilor de intrare este afișat alături de numele său, în dialogul "
+"parametrilor."
+
+#: ../../docs/training_manual/processing/crs.rst:23
+msgid ""
+"Open the project corresponding to this lesson and you will see two layers "
+"named 23030 and 4326. They both contain the same points, but in different "
+"CRSs (EPSG:23030 and EPSG:4326). They appear in the same place because QGIS "
+"is reprojecting on the fly to the project CRS (EPSG:4326), but they are not "
+"actually the same layer."
+msgstr ""
+"Deschideți proiectul corespunzător acestei lecții, și veți vedea două "
+"straturi denumite 23030 și 4326. Ambele conțin același număr de puncte, dar "
+"aflate în diferite CRS-uri (EPSG:23030 și EPSG:4326). Ele apar în același "
+"loc, deoarece QGIS este reproiectat \"din zbor\" în CRS-ul proiectului "
+"(EPSG:4326), ele nefiind, de fapt, unul și același strat."
+
+#: ../../docs/training_manual/processing/crs.rst:29
+msgid "Open the *Export/Add geometry columns* algorithm."
+msgstr "Deschide algoritmul *Export/Adăugare coloane de geometrie*."
+
+#: ../../docs/training_manual/processing/crs.rst:33
+msgid ""
+"This algorithm add new columns to the attributes table of a vector layer. "
+"The content of the columns depend on the type of geometry of the layer. In "
+"the case of points, it adds new columns with the X and Y coordinates of each"
+" point."
+msgstr ""
+"Acest algoritm adaugă coloane noi în tabela de atribute a unui strat "
+"vectorial. Conținutul coloanelor depinde de tipul geometriei stratului. În "
+"cazul punctelor, se vor adăuga coloane noi, conținând coordonatele X și Y "
+"ale fiecărui punct."
+
+#: ../../docs/training_manual/processing/crs.rst:38
+msgid ""
+"In the list of available layers that you will find in the input layer field,"
+" you will see each one with its corresponding CRS. That means that, although"
+" they appear in the same place in your canvas, they will be treated "
+"differently. Select the 4326 layer."
+msgstr ""
+"În lista de straturi disponibile, pe care le veți găsi în câmpul stratului "
+"de intrare, le veți vedea pe fiecare, alături de CRS-ul corespunzător. "
+"Astfel, deși apar în același loc pe canevas, ele vor fi tratate în mod "
+"diferit. Selectați stratul 4326."
+
+#: ../../docs/training_manual/processing/crs.rst:43
+msgid ""
+"The other parameter of the algorithm allows to set how the algorithm uses "
+"coordinates to calculate the new value that it will add to the resulting "
+"layers. Most algorithms do not have an option like that, and just use the "
+"coordinates directly. Select the *Layer CRS* option to just use coordinates "
+"as they are. This is how almost all geoalgorithms work."
+msgstr ""
+"Celălalt parametru al algoritmului permite setarea modului în care "
+"algoritmul folosește coordonatele, pentru a calcula noua valoare care se va "
+"adăuga la straturile rezultate. Cei mai mulți algoritmi nu au o opțiune de "
+"acest gen, și vor folosi în mod direct coordonatele. Selectați opțiunea "
+"*CRS-ul Stratului* pentru a folosi coordonatele așa cum sunt. Acesta este "
+"modul în care lucrează  aproape toți geo-algoritmii."
+
+#: ../../docs/training_manual/processing/crs.rst:49
+msgid ""
+"You should get a new layer with exactly the same points as the other two "
+"layers. If you right click on the name of the layer and open its properties,"
+" you will see that it shares the same CRS of the input layer, that is, "
+"EPSG:4326. When the layer is loaded into QGIS, you will not be asked to "
+"enter the CRS of the layer, since QGIS already knows about it."
+msgstr ""
+"Ar trebui să obțineți un nou strat, cu exact aceleași puncte ca și celelalte"
+" două. Dacă faceți clic dreapta pe numele stratului și îi deschideți "
+"proprietățile, veți vedea că folosește CRS-ul stratului de intrare, adică, "
+"EPSG:4326. Atunci când stratul este încărcat în QGIS, nu vi se va cere să "
+"introduceți CRS-ul stratului, atât timp cât QGIS îl cunoaște."
+
+#: ../../docs/training_manual/processing/crs.rst:55
+msgid ""
+"If you open the attributes table of the new layer you will see that it "
+"contains two new fields with the X and Y coordinates of each point."
+msgstr ""
+"Dacă deschideți tabelul de atribute a noului strat, veți vedea că ea conține"
+" două noi câmpuri, cu coordonatele X și Y ale fiecărui punct."
+
+#: ../../docs/training_manual/processing/crs.rst:68
+msgid ""
+"Now do the same calculation using the other layer. You should find the "
+"resulting layer rendered exactly in the same place as the other ones, and it"
+" will have the EPSG:23030 CRS, since that was the one of the input layer."
+msgstr ""
+"Acum, efectuați același calcul, utilizând celălalt strat. Ar trebui să "
+"găsiți stratul rezultat, randat exact în același loc ca și celelalte, având "
+"același CRS, EPSG:23030, acesta fiind CRS-ul stratului de intrare."
+
+#: ../../docs/training_manual/processing/crs.rst:72
+msgid ""
+"If you go to its attribute table, you will see values that are different to "
+"the ones in the first layer that we created."
+msgstr ""
+"Dacă mergeți la tabela sa de atribute, veți vedea valori care sunt diferite "
+"de cele din primul strat pe care l-am creat."
+
+#: ../../docs/training_manual/processing/crs.rst:77
+msgid ""
+"This is because the original data is different (it uses a different CRS), "
+"and those coordinates are taken from it."
+msgstr ""
+"Acest lucru se datorează faptului că datele originale sunt diferite (se "
+"folosește un alt CRS), și acele coordonate sunt preluate din ea."
+
+#: ../../docs/training_manual/processing/crs.rst:80
+msgid ""
+"What should you learn from this? The main idea behind these examples is that"
+" geoalgorithms use the layer as it is in its original data source, and "
+"completely ignore the reprojections that QGIS might be doing before "
+"rendering. In other words, do not trust what you see in the canvas, but "
+"always have in mind that the original data will be used. That is not so "
+"important in this case, since we are just using one single layer at a time, "
+"but in an algorithm that needs several of them (such as a clip algorithm), "
+"layers that appear to match or overlay might be very far one from each "
+"other, since they might have different CRSs."
+msgstr ""
+"Ce ar trebui să învățați din asta? Ideea principală din spatele acestor "
+"exemple este aceea că geoalgoritmii folosesc stratul așa cum se află în "
+"sursa sa de date originală, ignorând complet reproiectările pe care QGIS le-"
+"ar putea efectua înainte de randare. Cu alte cuvinte, nu aveți încredere în "
+"ceea ce vedeți pe pânză, dar aveți întotdeauna în vedere faptul că vor fi "
+"utilizate datele originale. Acest lucru nu este atât de important în acest "
+"caz, din moment ce folosim doar un singur strat la un moment dat, dar într-"
+"un algoritm care are nevoie de mai multe (cum ar fi un algoritm de "
+"decupare), straturile care par să se potrivească sau să se suprapună, ar "
+"putea fi foarte departe unul față de celălalt, atât timp cât pot avea "
+"diferite CRS-uri."
+
+#: ../../docs/training_manual/processing/crs.rst:89
+msgid ""
+"Algorithms performs no reprojection (except in the reprojection algorithm "
+"that we will see next), so it is up to you to make sure that layers have "
+"matching CRS's."
+msgstr ""
+"Algoritmii nu realizează nici o reproiectare (cu excepția algoritmului de "
+"reproiectare pe care îl vom vedea în continuare), de aceea, trebuie ca dvs. "
+"să vă asigurați că straturile au același CRS."
+
+#: ../../docs/training_manual/processing/crs.rst:93
+msgid ""
+"An interesting module that deals with CRS's is the reprojection one. It "
+"represents a particular case, since it has an input layer (the one to "
+"reproject), but it will not use its CRS for the output one."
+msgstr ""
+"Un modul interesant, care are de-a face cu CRS-ul, este cel de reproiectare."
+" Acesta reprezintă un caz particular, deoarece are un strat de intrare (cel "
+"de reproiectat), însă nu îi va folosi CRS-ul pentru stratul de ieșire."
+
+#: ../../docs/training_manual/processing/crs.rst:97
+msgid "Open the *Reproject layer* algorithm."
+msgstr "Deschide algoritmul de *Reproiectare a stratului*."
+
+#: ../../docs/training_manual/processing/crs.rst:101
+msgid ""
+"Select any of the layers as input, and select EPSG:23029 as the destination "
+"CRS. Run the algorithm and you will get a new layer, identical to the input "
+"one, but with a different CRS. It will appear on the same region of the "
+"canvas, like the other ones, since QGIS will reproject it on the fly, but "
+"its original coordinates are different. You can see that by running the "
+"*Export/Add geometry columns* algorithm using this new layer as input, and "
+"veryfing that the added coordinates are different to the ones in the "
+"attribute tables of both of the two layers that we had computed before."
+msgstr ""
+"Selectați oricare dintre straturile ca intrare, și alegeți EPSG:23029 ca CRS"
+" destinație. Rulați algoritmul și veți obține un nou strat, identic cu cel "
+"de intrare, dar cu un alt CRS. Acesta va apărea în aceeași regiune a "
+"canevasului, ca și celelalte, din moment ce QGIS îl va reproiecta din zbor, "
+"dar coordonatele sale originale sunt diferite. Puteți vedea acest lucru, "
+"prin rularea algoritmului de *Exportare/Adăugare coloane de geometrie* "
+"asupra acestui nou strat de intrare,  și prin verificarea diferențelor "
+"dintre coordonatele adăugate și cele din tabelele de atribute ale ambelor "
+"straturi, calculate anterior."

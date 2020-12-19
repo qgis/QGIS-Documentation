@@ -1,0 +1,297 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:21+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:2
+msgid "|LS| DEM from LiDAR Data"
+msgstr "|LS| レーザー測量データからのDEM"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:4
+msgid ""
+"You can improve the look of your maps by using different background images. "
+"You could use the basic map or the aerial image you have been using before, "
+"but a hillshade raster of the terrain will look nicer in some situations."
+msgstr ""
+"さまざまな背景画像を使用することで、地図の外観を改善できます。基本地図も以前に使用してきた空撮画像も使用できますが、地形の陰影起伏ラスターが見栄えを良くする状況もあるでしょう。"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:8
+msgid ""
+"You will use LAStools to extract a DEM from a LiDAR dataset and then create "
+"a hillshade raster to use in your map presentation later."
+msgstr ""
+"LAStoolsを使用してレーザー測量データセットからDEMを抽出し、その後、地図のプレゼンテーションで使用する陰影起伏ラスターを作成します。"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:11
+msgid ""
+"**The goal for this lesson:** Install LAStools and calculate a DEM from "
+"LiDAR data and a hillshade raster."
+msgstr "**このレッスンの目標：** LAStoolsをインストールし、レーザー測量データと陰影起伏ラスターからDEMを計算します。"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:16
+msgid "|basic| |FA| Installing Lastools"
+msgstr "|basic| |FA| LAStoolsをインストールする"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:21
+msgid ""
+"You can obtain a digital elevation model (DEM) from a LiDAR point cloud and "
+"then create a hillshade raster that is visually more intuitive for "
+"presentation purposes. First you will have to set up the "
+":guilabel:`Processing` framework settings to properly work with LAStools:"
+msgstr ""
+"レーザー測量点群からデジタル標高モデル（DEM）を取得して、プレゼンテーション目的のために、視覚的により直感的な陰影起伏ラスターを作成できます。最初に、"
+" :guilabel:`プロセッシング` フレームワークの設定を、LAStoolsで動作するように適切に設定する必要があります。"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:26
+msgid "Close QGIS, if you have already started it."
+msgstr "QGISをすでに開始している場合は閉じます。"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:27
+msgid ""
+"An old lidar plugin might be installed by default in your system in the "
+"folder :file:`C:/Program Files/QGIS "
+"Valmiera/apps/qgis/python/plugins/processing/`."
+msgstr ""
+"古いライダープラグインは、フォルダ :file:`C:/Program "
+"Files/QGISValmiera/apps/qgis/python/plugins/processing/` "
+"内のシステムにデフォルトでインストールされる可能性があります。"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:29
+msgid ""
+"If you have a folder named :kbd:`lidar`, delete it. This is valid for some "
+"installations of QGIS 2.2 and 2.4."
+msgstr ""
+"名前 :kbd:`lidar` のフォルダがある場合、それを削除します。これは、QGIS 2.2および2.4の一部のインストールのために有効です。"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:47
+msgid ""
+"Read the :kbd:`LICENSE.txt` file inside the :kbd:`lastools` folder. Some of "
+"the LAStools are open source and other are closed source and require "
+"licensing for most commercial and governmental use.  For education and "
+"evaluation purposes you can use and test LAStools as much as you need to."
+msgstr ""
+":kbd:`lastools` フォルダ内部の :kbd:`LICENSE.txt` "
+"ファイルをお読みください。LAStoolsの一部はオープンソースであり、他は、クローズドソースであり、ほとんどの商用および政府の使用のライセンスが必要です。教育と評価の目的のためには、必要なだけLAStoolsを使用してテストできます。"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:52
+msgid ""
+"The plugin and the actual algorithms are now installed in your computer and "
+"almost ready to use, you just need to set up the Processing framework to "
+"start using them:"
+msgstr ""
+"今プラグインと実際のアルゴリズムはお手元のコンピュータにインストールされ、使用する準備がほぼできていますので、それらの使用を開始するために処理フレームワークを設定することが必要であるだけです。"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:55
+msgid "Open a new project in QGIS."
+msgstr "QGISで新しいプロジェクトを開きます。"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:56
+msgid "Set the project's CRS to :kbd:`ETRS89 / ETRS-TM35FIN`."
+msgstr "プロジェクトのCRSを :kbd:`ETRS89 / ETRS-TM35FIN` に設定してください。"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:57
+msgid "Save the project as :kbd:`forest_lidar.qgs`."
+msgstr "プロジェクトを :kbd:`forest_lidar.qgs` として保存します。"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:59
+msgid "To setup the LAStools in QGIS:"
+msgstr "QGISでLAStoolsを設定するには："
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:61
+msgid "Go to :menuselection:`Processing --> Options and configuration`."
+msgstr ":menuselection:`プロセッシング --> オプションと構成` に行きます。"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:62
+msgid ""
+"In the :guilabel:`Processing options` dialog, go to :guilabel:`Providers` "
+"and then to :guilabel:`Tools for LiDAR data`."
+msgstr ""
+":guilabel:`処理オプション` ダイアログで、 :guilabel:`プロバイダー` に、その後 "
+":guilabel:`LiDARデータのためのツール` に行きます。"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:64
+msgid "Check :guilabel:`Activate`."
+msgstr ":guilabel:`Activate` をチェックします。"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:65
+msgid ""
+"For :guilabel:`LAStools folder` set :kbd:`c:\\\\lastools\\\\` (or the folder"
+" you extracted LAStools to)."
+msgstr ""
+":guilabel:`LAStoolsフォルダ` について :kbd:`C:\\\\lastools\\\\` "
+"（またはLAStoolsを展開したフォルダ）を設定します。"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:72
+msgid "|basic| |FA| Calculating a DEM with LAStools"
+msgstr "|basic| |FA| LAStoolsとDEMの計算"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:74
+msgid ""
+"You have already used the :menuselection:`Processing` toolbox in "
+":doc:`../vector_analysis/spatial_statistics` to run some SAGA algorithms. "
+"Now you are going to use it to run LAStools programs:"
+msgstr ""
+"いくつかのSAGAアルゴリズムを実行するために、 :doc:`../vector_analysis/spatial_statistics` 中の "
+":menuselection:`プロセッシング` "
+"ツールボックスはすでに使用してきました。ここではLAStoolsプログラムを実行するためにそれを使用しようとしています。"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:77
+msgid "Open :menuselection:`Processing --> Toolbox`."
+msgstr ":menuselection:`プロセッシング --> ツールボックス` を開きます。"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:78
+msgid ""
+"In the dropdown menu at the bottom, select :guilabel:`Advanced interface`."
+msgstr "一番下にあるドロップダウンメニューで、:guilabel:`高度なインターフェイス` を選択します。"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:79
+msgid "You should see the :guilabel:`Tools for LiDAR data` category."
+msgstr ":guilabel:`レーザー測量データ` カテゴリのツールが表示されるはずです。"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:84
+msgid ""
+"Expand it to see the tools available, and expand also the "
+":guilabel:`LAStools` category (the number of algorithms may vary)."
+msgstr ""
+"利用可能なツールが見えるようにそれを展開し、さらに :guilabel:`LAStools` "
+"カテゴリを展開します（アルゴリズムの数は変化する場合があります）。"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:86
+msgid ""
+"Scroll down until you find the :guilabel:`lasview` algorithm, double click "
+"it to open."
+msgstr ":guilabel:`lasview` アルゴリズムが見つかるまで下にスクロールし、見つかったらダブルクリックして開きます。"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:93
+msgid "Click :guilabel:`Run`."
+msgstr ":guilabel:`実行` をクリックします。"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:95
+msgid ""
+"Now you can see the LiDAR data in the :guilabel:`just a little LAS and LAZ "
+"viewer` dialog window:"
+msgstr "今、 :guilabel:`ほんの少しLASとLAZダイアログウィンドウビューア` 内にLiDARデータを見ることができます："
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:100
+msgid ""
+"There are many things you can do within this viewer, but for now you can "
+"just click and drag on the viewer to pan the LiDAR point cloud to see what "
+"it looks like."
+msgstr ""
+"このビューア内ではいろいろなことができますが、今はビューアをクリックおよびドラッグしてLiDAR点群にパンし、それがどのように見えるかを確認できます。"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:107
+msgid "Close the viewer when you are ready."
+msgstr "準備ができたら、ビューアを閉じます。"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:109
+msgid ""
+"Creating a DEM with LAStools can be done in two steps, first one to classify"
+" the point cloud into :kbd:`ground` and :kbd:`no ground` points and then "
+"calculating a DEM using only the :kbd:`ground` points."
+msgstr ""
+"LAStoolsとDEMの作成は2段階で行うことができます。第1は点群を :kbd:`基準` と :kbd:`非基準` 点に分類すること、次は "
+":kbd:`基準` 点のみ使用してDEMを計算すること。"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:113
+msgid "Go back to the :guilabel:`Processing Toolbox`."
+msgstr ":guilabel:`処理ツールボックス` に戻ります。"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:114
+msgid "Note the :guilabel:`Search...` box, write :kbd:`lasground`."
+msgstr ":guilabel:`検索...` ボックス注意して、 :kbd:`lasground` と書いてください。"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:115
+msgid ""
+"Double click to open the :guilabel:`lasground` tool and set it as shown in "
+"this image:"
+msgstr "ダブルクリックして :guilabel:`lasground` ツールを開き、この画像のように設定します："
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:123
+msgid "You can open it with :guilabel:`lasview` if you want to check it."
+msgstr "それを確認したい場合は、:guilabel:`lasview` で開くことができます。"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:137
+msgid "Close the viewer again."
+msgstr "再びビューアを閉じます。"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:138
+msgid "In the :guilabel:`Processing Toolbox`, search for :kbd:`las2dem`."
+msgstr ":guilabel:`プロセッシングツールボックス` で :kbd:`las2dem` を検索します。"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:139
+msgid "Open the :guilabel:`las2dem` tool and set it as shown in this image:"
+msgstr ":guilabel:`las2dem` ツールを開き、この画像に示すように設定します。"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:144
+msgid ""
+"The result DEM is added to your map with the generic name :kbd:`Output "
+"raster file`."
+msgstr "結果DEMは、 :kbd:`出力ラスターファイル` という一般的な名前で地図に追加されます。"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:146
+msgid ""
+"The :guilabel:`lasground` and :guilabel:`las2dem` tools require licensing. "
+"You can use the unlicensed tool as indicated in the license file, but you "
+"get the diagonals you can appreciate in the image results."
+msgstr ""
+":guilabel:`lasground` と :guilabel:`las2dem` "
+"ツールはライセンスが必要です。ライセンス・ファイルに示されるように、無免許でツールを使用できますが、画像結果にはっきりわかる対角線が出ます。"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:151
+msgid "|basic| |FA| Creating a Terrain Hillshade"
+msgstr "|basic| |FA| 地形陰影起伏を作成する"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:156
+msgid "Open :menuselection:`Raster --> Terrain analysis --> Hillshade`."
+msgstr ":menuselection:`ラスター --> 地形分析 --> 陰影` を開きます。"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:159
+msgid "Leave the rest of parameters with the default settings."
+msgstr "デフォルトの設定でパラメーターの残りの部分を残します。"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:164
+msgid "Select :kbd:`ETRS89 / ETRS-TM35FIN` as the CRS when prompted."
+msgstr "プロンプトが表示されたら :kbd:`ETRS89 / ETRS-TM35FIN` をCRSとして選択します。"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:166
+msgid ""
+"Despite the diagonal lines remaining in the hillshade raster result, you can"
+" clearly see an accurate relief of the area. You can even see the different "
+"soil drains that have been dug in the forests."
+msgstr ""
+"陰影起伏ラスター結果に残っている対角線にもかかわらず、明らかに地域の正確な起伏を見ることができます。森に掘られている異なる土壌の排水も見ることができます。"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:175
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:184
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:186
+msgid ""
+"In the next, and final step in this module, lesson you will use the "
+"hillshade raster and the forest inventory results to create a map "
+"presentation of the results."
+msgstr ""
+"次の、そしてこのモジュールの最後のステップの、レッスンでは、陰影起伏ラスターと森林目録の結果を使用して、結果の地図のプレゼンテーションを作成します。"

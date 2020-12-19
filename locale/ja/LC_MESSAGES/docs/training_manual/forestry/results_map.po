@@ -1,0 +1,160 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:20+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/training_manual/forestry/results_map.rst:2
+msgid "|LS| Map Presentation"
+msgstr "|LS| 地図プレゼンテーション"
+
+#: ../../docs/training_manual/forestry/results_map.rst:4
+msgid ""
+"In the previous lessons you have imported an old forest inventor as a GIS "
+"project, updated it to the current situation, designed a forest inventory, "
+"created maps for the field work and calculated forest parameters from the "
+"field measurements."
+msgstr ""
+"以前のレッスンでは、GISプロジェクトとして古い森林調査をインポートし、それを現在の状況に更新し、森林調査を設計し、フィールドワークの地図を作成し、フィールド測定から森林のパラメーターを算出しました。"
+
+#: ../../docs/training_manual/forestry/results_map.rst:8
+msgid ""
+"It is often important to create maps with the results of a GIS project. A "
+"map presenting the results of the forest inventory will make it easier for "
+"anyone to have a good idea of what the results are in a quick glance, "
+"without looking at the specific numbers."
+msgstr ""
+"GISプロジェクトの結果で地図を作成することはしばしば重要です。森林調査の結果を提示する地図によって、特定の数字を見なくても、結果が何であるか誰にでも一目でわかりやすくなるでしょう。"
+
+#: ../../docs/training_manual/forestry/results_map.rst:13
+msgid ""
+"**The goal for this lesson:** Create a map to present the inventory results "
+"using a hillshade raster as background."
+msgstr "**このレッスンの目標：** 調査結果を提示する地図を、陰影起伏ラスターを背景に使用して作成します。"
+
+#: ../../docs/training_manual/forestry/results_map.rst:17
+msgid "|basic| |FA| Preparing the Map Data"
+msgstr "|basic| |FA| 地図データを準備する"
+
+#: ../../docs/training_manual/forestry/results_map.rst:19
+msgid ""
+"Open the QGIS project from the parameters calculations lesson, "
+":kbd:`forest_inventory.qgs`. Keep at least the following layers:"
+msgstr ""
+"パラメーター計算のレッスンからのQGISプロジェクトを開きます、 :kbd:`forest_inventory.qgs` "
+"。少なくとも以下のレイヤーを保管してください："
+
+#: ../../docs/training_manual/forestry/results_map.rst:22
+msgid ":kbd:`forest_stands_2012_results`."
+msgstr ":kbd:`forest_stands_2012_results`."
+
+#: ../../docs/training_manual/forestry/results_map.rst:23
+msgid ":kbd:`basic_map`."
+msgstr ":kbd:`basic_map`."
+
+#: ../../docs/training_manual/forestry/results_map.rst:24
+msgid ":kbd:`rautjarvi_aerial`."
+msgstr ":kbd:`rautjarvi_aerial`."
+
+#: ../../docs/training_manual/forestry/results_map.rst:25
+msgid ""
+":kbd:`lakes` (if you don't have it, add it from the "
+":kbd:`exercise_data\\\\forestry\\\\` folder)."
+msgstr ""
+":kbd:`lakes` （それを持っていない場合は、:kbd:`exercise_data\\\\forestry\\\\` "
+"フォルダからそれを追加します）。"
+
+#: ../../docs/training_manual/forestry/results_map.rst:34
+msgid "For the :kbd:`forest_stands_2012_results` layer:"
+msgstr ":kbd:`forest_stands_2012_results` レイヤ に対して："
+
+#: ../../docs/training_manual/forestry/results_map.rst:36
+msgid "Open the :guilabel:`Attribute table` and enable editing."
+msgstr ":guilabel:`属性テーブル` を開き編集を可能にします。"
+
+#: ../../docs/training_manual/forestry/results_map.rst:37
+msgid "Select the polygons with :kbd:`NULL` values."
+msgstr ":kbd:`NULL` 値を持つポリゴンを選択します。"
+
+#: ../../docs/training_manual/forestry/results_map.rst:38
+msgid ""
+"Use the calculator to update the values of the :kbd:`MEANVol` field to "
+":kbd:`-999` only for the selected features."
+msgstr "選択された地物だけに対して、計算機を使用して :kbd:`MEANVol` フィールドの値を :kbd:`-999` に更新します。"
+
+#: ../../docs/training_manual/forestry/results_map.rst:40
+msgid "Disable editing and save the changes."
+msgstr "編集を無効にし、変更を保存します。"
+
+#: ../../docs/training_manual/forestry/results_map.rst:42
+msgid "Now you can use a saved style for this layer:"
+msgstr "今、保存されたスタイルをこのレイヤーに使用できます。"
+
+#: ../../docs/training_manual/forestry/results_map.rst:46
+msgid ""
+"Select the :kbd:`forest_stands_2012_results.qml` from the "
+":kbd:`exercise_data\\\\forestry\\\\results\\\\` folder."
+msgstr ""
+":kbd:`exercise_data\\\\forestry\\\\results\\\\` フォルダから "
+":kbd:`forest_stands_2012_results.qml` を選択します。"
+
+#: ../../docs/training_manual/forestry/results_map.rst:47
+msgid "Click :guilabel:`OK`."
+msgstr ":guilabel:`OK` をクリックします。"
+
+#: ../../docs/training_manual/forestry/results_map.rst:52
+msgid "Your map will look something like this:"
+msgstr "地図は次のようになります。"
+
+#: ../../docs/training_manual/forestry/results_map.rst:59
+msgid "|basic| |TY| Try Different Blending Modes"
+msgstr "|basic| |TY| さまざまなブレンドモードを試す"
+
+#: ../../docs/training_manual/forestry/results_map.rst:61
+msgid "The style you loaded:"
+msgstr "ロードしたスタイル:"
+
+#: ../../docs/training_manual/forestry/results_map.rst:71
+msgid ""
+"Try with different modes and see the differences in your map. Then choose "
+"the one you like better for your final map."
+msgstr "異なるモードで試してみて、地図の違いを見てください。それから、より好きな方を最終的な地図として選択してください。"
+
+#: ../../docs/training_manual/forestry/results_map.rst:87
+msgid "The map template you are using will give a map similar to this one:"
+msgstr "使用している地図テンプレートは、これと同じ地図を提供します："
+
+#: ../../docs/training_manual/forestry/results_map.rst:92
+msgid "Save your QGIS project for future references."
+msgstr "将来の参照のためQGISプロジェクトを保存します。"
+
+#: ../../docs/training_manual/forestry/results_map.rst:95
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../docs/training_manual/forestry/results_map.rst:97
+msgid ""
+"Through this module you have seen how a basic forest inventory can be "
+"planned and presented with QGIS. Many more forest analysis are possible with"
+" the variety of tools that you can access, but hopefully this manual has "
+"given you a good starting point to explore how you could achieve the "
+"specific results you need."
+msgstr ""
+"このモジュールを通して、基本的な森林調査を計画し、QGISで提示する方法を見てきました。アクセスできるさまざまなツールでさらに多くの森林の分析が可能ですが、このマニュアルがご自身が必要とする結果を達成する方法を探るための良い出発点になればと思います。"

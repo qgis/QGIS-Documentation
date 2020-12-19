@@ -1,0 +1,285 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# Sorin Călinică <scalinica@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:24+0000\n"
+"Last-Translator: Sorin Călinică <scalinica@gmail.com>, 2020\n"
+"Language-Team: Romanian (https://www.transifex.com/qgis/teams/6144/ro/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:32
+msgid "Introduction"
+msgstr "Introducere"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:170
+msgid ":class:`QgsServerFilter <qgis.server.QgsServerFilter>`"
+msgstr ":class:`QgsServerFilter <qgis.server.QgsServerFilter>`"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:171
+msgid ":class:`QgsAccessControlFilter <qgis.server.QgsAccessControlFilter>`"
+msgstr ":class:`QgsAccessControlFilter <qgis.server.QgsAccessControlFilter>`"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:172
+msgid ":class:`QgsServerCacheFilter <qgis.server.QgsServerCacheFilter>`"
+msgstr ":class:`QgsServerCacheFilter <qgis.server.QgsServerCacheFilter>`"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:217
+msgid "The following paragraphs describe the available callbacks in details."
+msgstr ""
+"Următoarele paragrafe descriu, în detaliu, funcțiile de reapelare "
+"disponibile."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:220
+msgid "requestReady"
+msgstr "requestReady"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:222
+msgid ""
+"This is called when the request is ready: incoming URL and data have been "
+"parsed and before entering the core services (WMS, WFS etc.) switch, this is"
+" the point where you can manipulate the input and perform actions like:"
+msgstr ""
+"Este apelată atunci când cererea este pregătită: adresa și datele primite au"
+" fost analizate și, înainte de a intra în comutatorul serviciilor de bază "
+"(WMS, WFS, etc), acesta este punctul în care se poate interveni asupra "
+"datelor de intrare, putându-se efectua acțiuni de genul:"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:226
+msgid "authentication/authorization"
+msgstr "autentificare/autorizare"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:227
+msgid "redirects"
+msgstr "redirectări"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:228
+msgid "add/remove certain parameters (typenames for example)"
+msgstr ""
+"adăugarea/eliminarea anumitor parametri (denumirile tipurilor, de exemplu)"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:229
+msgid "raise exceptions"
+msgstr "tratarea excepțiilor"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:231
+msgid ""
+"You could even substitute a core service completely by changing **SERVICE** "
+"parameter and hence bypassing the core service completely (not that this "
+"make much sense though)."
+msgstr ""
+"Ați putea chiar să substituiți în întregime un serviciu de bază, prin "
+"schimbarea parametrului **SERVICE**, astfel, ocolindu-se complet serviciul "
+"de bază (deși, acest lucru nu ar avea prea mult sens)."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:237
+msgid "sendResponse"
+msgstr "sendResponse"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:261
+msgid "responseComplete"
+msgstr "responseComplete"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:285
+msgid ""
+"This approach basically works but it is not very \"pythonic\": a better "
+"approach would be to raise exceptions from python code and see them bubbling"
+" up into C++ loop for being handled there."
+msgstr ""
+"Această abordare funcționează în principiu, dar nu este în spiritul "
+"limbajului \"python\": o abordare mai bună ar fi de a face vizibile "
+"excepțiile din codul python la nivelul buclei C++, pentru a fi manipulată "
+"acolo."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:293
+msgid "Writing a server plugin"
+msgstr "Scrierea unui plugin pentru server"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:316
+#: ../../docs/pyqgis_developer_cookbook/server.rst:542
+msgid "Plugin files"
+msgstr "Fișierele Plugin-ului"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:318
+msgid "Here's the directory structure of our example server plugin"
+msgstr ""
+"Iată structura de directoare a exemplului nostru de plugin pentru server"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:331
+#: ../../docs/pyqgis_developer_cookbook/server.rst:556
+msgid "__init__.py"
+msgstr "__init__.py"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:349
+msgid "HelloServer.py"
+msgstr "HelloServer.py"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:351
+msgid ""
+"This is where the magic happens and this is how magic looks like: (e.g. "
+":file:`HelloServer.py`)"
+msgstr ""
+"Aici este locul în care se întâmplă magia, și iată rezultatul acesteia: (de "
+"exemplu :file:`HelloServer.py`)"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:416
+msgid "The following examples cover some common use cases:"
+msgstr "Următorul exemplu demonstrează câteva cazuri de utilizare obișnuită:"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:419
+msgid "Modifying the input"
+msgstr "Modificarea intrării"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:462
+msgid ""
+"The same technique can be exploited to use a custom service instead of a "
+"core one: you could for example skip a **WFS** **SERVICE** request or any "
+"other core request just by changing the **SERVICE** parameter to something "
+"different and the core service will be skipped, then you can inject your "
+"custom results into the output and send them to the client (this is "
+"explained here below)."
+msgstr ""
+"Aceeași tehnică poate fi exploatată pentru a utiliza un serviciu "
+"personalizat in locul unuia de bază: de exemplu, ați putea sări peste o "
+"cerere **WFS** **SERVICE**, sau peste oricare altă cerere de bază, doar prin"
+" schimbarea parametrului **SERVICE** în ceva diferit, iar serviciul de bază "
+"va fi omis; în acel caz, veți puteți injecta datele dvs. în interiorul "
+"rezultatului, trimițându-le clientului (acest lucru este explicat în "
+"continuare)."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:476
+msgid "Modifying or replacing the output"
+msgstr "Modificarea sau înlocuirea rezultatului"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:574
+msgid "AccessControl.py"
+msgstr "AccessControl.py"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:614
+msgid "This example gives a full access for everybody."
+msgstr "Acest exemplu oferă un acces deplin pentru oricine."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:616
+msgid "It's the role of the plugin to know who is logged on."
+msgstr "Este de datoria plugin-ului să știe cine este conectat."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:618
+msgid ""
+"On all those methods we have the layer on argument to be able to customise "
+"the restriction per layer."
+msgstr ""
+"Toate aceste metode au ca argument stratul, pentru a putea personaliza "
+"restricțiile pentru fiecare strat."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:623
+msgid "layerFilterExpression"
+msgstr "layerFilterExpression"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:625
+msgid "Used to add an Expression to limit the results, e.g.:"
+msgstr ""
+"Se folosește pentru a adăuga o Expresie de limitare a rezultatelor, ex.:"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:632
+#: ../../docs/pyqgis_developer_cookbook/server.rst:645
+msgid "To limit on feature where the attribute role is equals to \"user\"."
+msgstr ""
+"Pentru restrângerea la entitățile pentru care atributul \"rol\" are valoarea"
+" \"user\"."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:636
+msgid "layerFilterSubsetString"
+msgstr "layerFilterSubsetString"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:638
+msgid ""
+"Same than the previous but use the ``SubsetString`` (executed in the "
+"database)"
+msgstr ""
+"La fel ca și precedenta, dar folosește ``SubsetString`` (executată în baza "
+"de date)"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:649
+msgid "layerPermissions"
+msgstr "layerPermissions"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:651
+msgid "Limit the access to the layer."
+msgstr "Limitează accesul la strat."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:665
+#: ../../docs/pyqgis_developer_cookbook/server.rst:685
+#: ../../docs/pyqgis_developer_cookbook/server.rst:702
+msgid "Example:"
+msgstr "Exemplu:"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:675
+msgid "To limit everything on read only access."
+msgstr "Pentru a permite tuturor accesul numai pentru citire."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:679
+msgid "authorizedLayerAttributes"
+msgstr "authorizedLayerAttributes"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:681
+msgid "Used to limit the visibility of a specific subset of attribute."
+msgstr ""
+"Folosit pentru a reduce vizibilitatea unui subset specific de atribute."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:683
+msgid "The argument attribute return the current set of visible attributes."
+msgstr "Atributul argument returnează setul actual de atribute vizibile."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:692
+msgid "To hide the 'role' attribute."
+msgstr "Pentru a ascunde atributul 'role'."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:696
+msgid "allowToEdit"
+msgstr "allowToEdit"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:698
+msgid "This is used to limit the editing on a subset of features."
+msgstr ""
+"Se folosește pentru a limita editarea unui subset specific de entități."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:700
+msgid "It is used in the ``WFS-Transaction`` protocol."
+msgstr "Este folosit în protocolul ``WFS-Transaction``."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:710
+msgid ""
+"To be able to edit only feature that has the attribute role with the value "
+"user."
+msgstr ""
+"Pentru a putea modifica numai entitatea pentru care atributul \"rol\" are "
+"valoarea de \"utilizator\"."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:715
+msgid "cacheKey"
+msgstr "cacheKey"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:717
+msgid ""
+"QGIS server maintain a cache of the capabilities then to have a cache per "
+"role you can return the role in this method. Or return ``None`` to "
+"completely disable the cache."
+msgstr ""
+"Serverul QGIS menține o memorie tampon a capabilităților, de aceea, pentru a"
+" avea o memorie cache pentru fiecare rol, puteți specifica rolul cu ajutorul"
+" acestei metode. Sau puteți seta valoarea ``None``, pentru a dezactiva "
+"complet memoria tampon."

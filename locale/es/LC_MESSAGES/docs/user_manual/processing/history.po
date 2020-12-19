@@ -1,0 +1,137 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:31+0000\n"
+"Last-Translator: Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020\n"
+"Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/user_manual/processing/history.rst:4
+msgid "The history manager"
+msgstr "El administrador del historial"
+
+#: ../../docs/user_manual/processing/history.rst:12
+msgid "The processing history"
+msgstr "El historial del procesamiento"
+
+#: ../../docs/user_manual/processing/history.rst:14
+msgid ""
+"Every time you execute an algorithm, information about the process is stored"
+" in the history manager. The date and time of the execution are saved, along"
+" with the parameters used, making it is easy to track and control all the "
+"work that has been developed using the Processing framework, and to "
+"reproduce it."
+msgstr ""
+"Cada vez que ejecuta un algoritmo, la información sobre el proceso se "
+"almacena en el administrador de historial. Se guarda la fecha y hora de "
+"ejecución, junto con los parámetros utilizados, lo que facilita el "
+"seguimiento y control de todo el trabajo que se ha desarrollado utilizando "
+"el marco de Procesamiento, y su reproducción."
+
+#: ../../docs/user_manual/processing/history.rst:26
+msgid "History"
+msgstr "Historial"
+
+#: ../../docs/user_manual/processing/history.rst:28
+msgid ""
+"Process information is kept as a command-line expression, even if the "
+"algorithm was launched from the toolbox. This makes it useful for those "
+"learning how to use the command-line interface, since they can call an "
+"algorithm using the toolbox and then check the history manager to see how it"
+" could be called from the command line."
+msgstr ""
+"La información del proceso se mantiene como una expresión de línea de "
+"comandos, incluso si el algoritmo se inició desde la caja de herramientas. "
+"Esto lo hace útil para aquellos que están aprendiendo a usar la interfaz de "
+"línea de comandos, ya que pueden llamar a un algoritmo usando la caja de "
+"herramientas y luego consultar el administrador de historial para ver cómo "
+"se puede llamar desde la línea de comandos."
+
+#: ../../docs/user_manual/processing/history.rst:35
+msgid ""
+"Apart from browsing the entries in the registry, you can also re-execute "
+"processes by simply double-clicking on the entry. The algorithm dialog then "
+"opens with parameters already set, and you can change any of them to fit "
+"your needs and re-run the algorithm."
+msgstr ""
+"Además de navegar por las entradas en el registro, también puede volver a "
+"ejecutar los procesos simplemente haciendo doble clic en la entrada. A "
+"continuación, el cuadro de diálogo del algoritmo se abre con los parámetros "
+"ya configurados y puede cambiar cualquiera de ellos para que se ajuste a sus"
+" necesidades y volver a ejecutar el algoritmo."
+
+#: ../../docs/user_manual/processing/history.rst:40
+msgid ""
+"The :guilabel:`History` dialog also provides a convenient way to contribute "
+"to the consolidation of the testing infrastructure of QGIS Processing "
+"algorithms and scripts. When you right-click on an entry, you can "
+":guilabel:`Create Test...` using the concerned algorithm and parameters, "
+"following instructions at "
+":source:`python/plugins/processing/tests/README.md`."
+msgstr ""
+"El cuadro de diálogo :guilabel:`Historial` también proporciona una manera "
+"conveniente de contribuir a la consolidación de la infraestructura de prueba"
+" de los algoritmos y scripts de procesamiento QGIS. Cuando hace clic derecho"
+" en una entrada, puede :guilabel:`Crear Prueba...` usando el algoritmo y los"
+" parámetros correspondientes, siguiendo las instrucciones en "
+":source:`python/plugins/processing/tests/README.md`."
+
+#: ../../docs/user_manual/processing/history.rst:49
+msgid "The processing log"
+msgstr "El registro de procesamiento"
+
+#: ../../docs/user_manual/processing/history.rst:51
+msgid ""
+"The history dialog only contains the execution calls, but not the "
+"information produced by the algorithm when executed. That information is "
+"written to the QGIS log (:menuselection:`View --> Panels --> Log Messages "
+"Panel`)."
+msgstr ""
+"El diálogo de historial solo contiene las llamadas de ejecución, pero no la "
+"información producida por el algoritmo cuando se ejecuta. Esa información se"
+" escribe en el registro de QGIS (:menuselection:`Ver -> Paneles -> Panel de "
+"mensajes de registro`)."
+
+#: ../../docs/user_manual/processing/history.rst:56
+msgid ""
+"Third-party algorithms are usually executed by using their command-line "
+"interfaces, which communicate with the user via the console. Although that "
+"console is not shown, usually a full dump of it is written to the log each "
+"time you run one of those algorithms. To avoid cluttering the log with that "
+"information, you can disable it for each provider in the settings dialog."
+msgstr ""
+"Los algoritmos de terceros generalmente se ejecutan utilizando sus "
+"interfaces de línea de comandos, que se comunican con el usuario a través de"
+" la consola. Aunque esa consola no se muestra, normalmente se escribe un "
+"volcado completo en el registro cada vez que ejecuta uno de esos algoritmos."
+" Para evitar saturar el registro con esa información, puede desactivarlo "
+"para cada proveedor en el cuadro de diálogo de configuración."
+
+#: ../../docs/user_manual/processing/history.rst:64
+msgid ""
+"Some algorithms, even if they can produce a result with the given input "
+"data, output comments or additional information to log when they detect "
+"potential problems with the data, in order to warn you. Make sure you check "
+"those messages in the log if you get unexpected results."
+msgstr ""
+"Algunos algoritmos, incluso si pueden producir un resultado con los datos de"
+" entrada dados, devuelven comentarios o información adicional a registrar "
+"cuando detectan problemas potenciales con los datos, para advertirle. "
+"Asegúrese de comprobar esos mensajes en el registro si obtiene resultados "
+"inesperados."

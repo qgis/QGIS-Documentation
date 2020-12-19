@@ -1,0 +1,1001 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:16+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Slovenian (https://www.transifex.com/qgis/teams/6144/sl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: sl\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:4
+msgid "Data Capture"
+msgstr "Zajemanje podatkov"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:7
+msgid "|gentleLogo|"
+msgstr "|gentleLogo|"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:7
+msgid "Objectives:"
+msgstr "Cilji"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:7
+msgid "Learn how to create and edit vector and attribute data."
+msgstr ""
+"Naučiti se kako vzpostaviti in popravljati vektorje in podatke o njihovih "
+"lastnostih"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:9
+msgid "Keywords:"
+msgstr "Ključne besede:"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:9
+msgid "Editing, data capture, heads-up, table, database."
+msgstr ""
+"Popravljanje, zajemanje podatkov, pregledovanje, tabele, baza podatkov"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:13
+msgid "Overview"
+msgstr "Pregled"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:15
+msgid ""
+"In the previous two topics we looked at vector data. We saw that there are "
+"two key concepts to vector data, namely: **geometry** and **attributes**. "
+"The geometry of a vector feature describes its **shape** and **position**, "
+"while the **attributes** of a vector feature describe its **properties** "
+"(colour, size, age etc.)."
+msgstr ""
+"V prejšnjih dveh poglavjih smo si ogledali vektorske podatke. Videli smo, da"
+" obstajata dva ključna koncepta vektorskih podatkov poimenovana: "
+"**geometrija** in **atributi**. Geometrija je lastnost vektorja , ki opisuje"
+" njegovo **obliko** in **lego**, medtem ko **atributi** opisujejo njegove "
+"**lastnosti** (barvo, velikost, starost ipd.)."
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:21
+msgid ""
+"In this section we will look more closely at the process of creating and "
+"editing vector data --– both the geometry and attributes of vector features."
+msgstr ""
+"V tem delu si bomo podrobneje ogledali proces ustvarjanja in popravljanja "
+"vektorskih podatkov - geometrijo in atribute vektorskih podatkov."
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:25
+msgid "How does GIS digital data get stored?"
+msgstr "Kako so GIS digitalni podatki shranjeni?"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:27
+msgid ""
+"Word processors, spreadsheets and graphics packages are all programs that "
+"let you create and edit digital data. Each type of application saves its "
+"data into a particular file format. For example, a graphics program will let"
+" you save your drawing as a :file:`.jpg` JPEG image, word processors let you"
+" save your document as an :file:`.odt` OpenDocument or :file:`.doc` Word "
+"Document, and so on."
+msgstr ""
+"Urejevalci besedil, preglednic in grafični paketi so računalniški programi, "
+"s katerimi lahko ustvarjamo in popravljamo digitalne podatke. Vsaka vrsta "
+"aplikacije shranjuje svoje podatke v določeno obliko datoteke. Na primer, "
+"grafični programi omogočajo shranjevanje narisane slike kot :file:`.jpg` "
+"JPEG sliko, urejevalci besedil pa lahko shranijo dokument kot :file:`.odt` "
+"OpenDocument ali :file:`.doc` Word dokument in tako naprej."
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:33
+msgid ""
+"Just like these other applications, GIS Applications can store their data in"
+" files on the computer hard disk. There are a number of different file "
+"formats for GIS data, but the most common one is probably the 'shape file'. "
+"The name is a little odd in that although we call it a shape file "
+"(singular), it actually consists of at least three different files that work"
+" together to store your digital vector data, as shown in table_shapefile_."
+msgstr ""
+"Podobno kot druge aplikacije, GIS aplikacije lahko shranijo svoje podatke v "
+"datoteke na trdem disku računalnika. Obstajajo številni različni formati "
+"datotek za GIS podatke, eden verjetno najpogostejših pa je 'shape file'. Ime"
+" je malo nenavadno še posebej zaradi tega ker ga poimenujemo in kličemo kot "
+"shape file (ednina) čeprav dejansko vsebuje vsaj tri različne datoteke, ki "
+"vzajemno hranijo digitalne vektorske podatke kot je prikazano v "
+"table_shapefile_."
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:43
+msgid "Extension"
+msgstr "Končnica"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:43
+msgid "Description"
+msgstr "Opis"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:45
+msgid ":file:`.shp`"
+msgstr ":file:`.shp`"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:45
+msgid "The geometry of vector features are stored in this file"
+msgstr "V to datoteko je shranjena geometrija vektorjev"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:47
+msgid ":file:`.dbf`"
+msgstr ":file:`.dbf`"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:47
+msgid "The attributes of vector features are stored in this file"
+msgstr "V to datoteko so shranjeni atributi - lastnosti vektorjev"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:49
+msgid ":file:`.shx`"
+msgstr ":file:`.shx`"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:49
+msgid ""
+"This file is an index that helps the GIS Application to find features more "
+"quickly."
+msgstr ""
+"Datoteka predstavlja indeks, ki omogoča GIS aplikaciji, da hitreje najde "
+"določen element."
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:52
+msgid ""
+"Table Shapefile 1: The basic files that together make up a 'shapefile'."
+msgstr "Tabela Shapefile 1: Osnovne datoteke, ki skupaj tvorijo 'shapefile'."
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:54
+msgid ""
+"When you look at the files that make up a shapefile on the computer hard "
+"disk, you will see something like figure_shapefile_. If you want to share "
+"vector data stored in shapefiles with another person, it is important to "
+"give them all of the files for that layer. So in the case of the trees layer"
+" shown in figure_shapefile_, you would need to give the person "
+":file:`trees.shp`, :file:`trees.shx`, :file:`trees.dbf`, :file:`trees.prj` "
+"and :file:`trees.qml`."
+msgstr ""
+"Če si boste ogledali datoteke, ki skupaj tvorijo shape file na trdem disku "
+"računalnika, boste videli sliko podobno figure_shapefile_. Če želite svoje "
+"vektorske podatke deliti z drugo osebo je pomembno, da mu posredujete vse "
+"datoteke določene plasti. Tako na primer za plast drevesa prikazanem na "
+"figure_shapefile_, bi morali tej osebi posredovati: :file:`trees.shp`, "
+":file:`trees.shx`, :file:`trees.dbf`, :file:`trees.prj` in "
+":file:`trees.qml`."
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:67
+msgid ""
+"The files that make up a ’trees’ shapefile as seen in the computer’s file "
+"manager."
+msgstr ""
+"Datoteke, ki tvorijo shapefile ’trees’ kot je to moč videti v urejevalcu "
+"datotek."
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:70
+msgid ""
+"Many GIS Applications are also able to store digital data inside a "
+"**database**. In general storing GIS data in a database is a good solution "
+"because the database can store **large amounts** of data **efficiently** and"
+" can provide data to the GIS Application quickly. Using a database also "
+"allows many people to work with the same vector data layers at the same "
+"time. Setting up a database to store GIS data is more complicated than using"
+" shapefiles, so for this topic we will focus on creating and editing "
+"shapefiles."
+msgstr ""
+"Več GIS aplikacij lahko shranjuje digitalne podatke znotraj **podatkovnih "
+"baz**. V splošnem je shranjevanje GIS podatkov v podatkovne baze dobra "
+"rešitev, kajti podatkovne baze lahko **učinkovito** shranjujejo **večjo "
+"količino** podatkov in omogočajo hiter dostop do njih. Podatkovne baze "
+"omogočajo tudi, da večje število uporabnikov istočasno uporablja iste plasti"
+" vektorskih podatkov. Nastavitev podatkovne baze za hranjenje GIS podatkov "
+"je bolj komplicirano kot uporaba shapefilov tako, da se bomo v nadaljevanju "
+"osredotočili samo na ustvarjanje in popravljanje shapefilov."
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:79
+msgid "Planning before you begin"
+msgstr "Načrtovanje pred začetkom"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:81
+msgid ""
+"Before you can create a new vector layer (which will be stored in a "
+"shapefile), you need know what the geometry of that layer will be (point, "
+"polyline or polygon), and you need to know what the attributes of that layer"
+" will be. Let's look at a few examples and it will become clearer how to go "
+"about doing this."
+msgstr ""
+"Pred začetkom vzpostavljanja nove vektorske plasti (ki bo shranjena v "
+"shapefile), je potrebno vedeti kakšna bo geometrija plasti (točkovna, "
+"linijska ali površinska) ter kateri bodo atributi plasti. Poglejmo si nekaj "
+"primerov tako, da se bodo razjasnile obravnavane teme."
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:87
+msgid "Example 1: Creating a tourism map"
+msgstr "Primer 1: Vzpostavljanje turističnega zemljevida"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:89
+msgid ""
+"Imagine that you want to create a nice tourism map for your local area. Your"
+" vision of the final map is a 1:50 000 toposheet with markers overlaid for "
+"sites of interest to tourists. First, let's think about the geometry. We "
+"know that we can represent a vector layer using point, polyline or polygon "
+"features. Which one makes the most sense for our tourism map? We could use "
+"points if we wanted to mark specific locations such as look out points, "
+"memorials, battle sites and so on. If we wanted to take tourists along a "
+"route, such as a scenic route through a mountain pass, it might make sense "
+"to use polylines. If we have whole areas that are of tourism interest, such "
+"as a nature reserve or a cultural village, polygons might make a good "
+"choice."
+msgstr ""
+"Zamislimo si, da želimo vzpostaviti privlačen turistični zemljevid lokalnega"
+" območja. Ideja je, da bi na topografski karti v merilu 1:50 000 označili za"
+" turiste posebej zanimive lokacije. Prvo je potrebno razmislite glede "
+"geometrije plasti. Vemo, da je moč vektorske plasti vzpostaviti kot "
+"točkovne, linijske ali površinske. Kateri od omenjenih pristopov je najbolj "
+"smiseln za namene turističnega zemljevida? Uporabimo lahko točke, če želimo "
+"označiti posebej zanimive lokacije kot na primer razgledne točke, spomenike,"
+" bojišča in podobno. Če želimo turiste peljati vzdolž določene poti, pr. "
+"panoramske poti skozi gorski prelaz, potem bi bilo smiselna uporaba linije. "
+"Če imamo celotna območja, ki bi lahko bila zanimiva za turiste, npr. "
+"zaščitena naravna območja ali kulturna območja, bo uporaba površin - "
+"poligonov dobra izbira."
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:100
+msgid ""
+"As you can see it's often not easy to know what type of geometry you will "
+"need. One common approach to this problem is to make one layer for each "
+"geometry type you need. So, for example, if you look at digital data "
+"provided by the Chief Directorate: Surveys and Mapping, South Africa, they "
+"provide a river areas (polygons) layer and a rivers polyline layer. They use"
+" the river areas (polygons) to represent river stretches that are wide, and "
+"they use river polylines to represent narrow stretches of river. In "
+"figure_tourism_ we can see how our tourism layers might look on a map if we "
+"used all three geometry types."
+msgstr ""
+"Kakor je razvidno, vedno ni enostavno vedeti katero vrsto geometrije "
+"potrebujemo. Velja samo skupen pristop za razrešitev navedenega problema in "
+"sicer, da se za vsako geometrijo, ki jo potrebujemo, naredi ena vektorska "
+"plast. Tako, na primer, če pregledamo digitalne podatke, ki jih zagotavlja "
+"Chief Directorate: Surveys and Mapping, South Africa, vidimo, da ponujajo "
+"plast površja rek (površine - poligon) ter plast reke kot linijska plast. Za"
+" predstavitev celotnega obsega reke uporabljajo površine (poligone), za "
+"predstavitev poteka rek pa uporabljajo linije - polilinije. Na sliki "
+"figure_tourism_ je prikazano, kako bi lahko izgledal obravnavan zemljevid, "
+"če bi uporabili vse tri vrste geometrije."
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:115
+msgid ""
+"A map with tourism layers. We have used three different geometry types for "
+"tourism data so that we can properly represent the different kinds of "
+"features needed for our visitors, giving them all the information they need."
+msgstr ""
+"Zemljevid s turističnimi plastmi. Za prestavitev za turiste zanimivih "
+"podatkov so uporabljene so tri različne vrste geometrije, s katerimi lahko "
+"primerno predstavimo različne vsebine in informacije, potrebne za "
+"obiskovalce. "
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:120
+msgid "Example 2: Creating a map of pollution levels along a river"
+msgstr "Primer 2: Vzpostavljanje karte nivojev onesnaženosti vzdolž reke"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:122
+msgid ""
+"If you wanted to measure pollution levels along the course of a river you "
+"would typically travel along the river in a boat or walk along its banks. At"
+" regular intervals you would stop and take various measurements such as "
+"Dissolved Oxygen (DO) levels, Coliform Bacteria (CB) counts, Turbidity "
+"levels and pH. You would also need to make a map reading of your position or"
+" obtain your position using a GPS receiver."
+msgstr ""
+"Če želimo meriti stopnje onesnaženosti vzdolž reke, bi morali praviloma ob "
+"obalah s čolnom ali peš opraviti terenske meritve. Na enakomernih razdaljah "
+"bi se morali ustaviti in opraviti različne analize - meritve kot na primer "
+"vsebnosti kisika v vodi - Dissolved Oxygen (DO) , število koliformnih "
+"bakterij - Coliform Bacteria (CB) counts, stopnje kalnosti vode - Turbidity "
+"levels in pH. Ob omenjenem je potrebno določiti tudi svojo lego pri vsaki "
+"meritvi ali pridobiti trenutno lokacija s pomočjo GPS sprejemnika."
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:129
+msgid ""
+"To store the data collected from an exercise like this in a GIS Application,"
+" you would probably create a GIS layer with a point geometry. Using point "
+"geometry makes sense here because each sample taken represents the "
+"conditions at a very specific place."
+msgstr ""
+"Za hranjenje zbranih podatkov v GIS aplikaciji je smiselno vzpostaviti GIS "
+"plast s točkovno geometrijo. Takšen pristop je smiseln saj vsak pobran "
+"vzorec predstavlja pogoje na natančno določenem mestu."
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:134
+msgid ""
+"For the attributes we would want a **field** for each thing that describes "
+"the sample site. So we may end up with an attribute table that looks "
+"something like table_river_attributes_."
+msgstr ""
+"Za atribute bi potrebovali **polje** za vsako stvar, ki opisuje mesto "
+"vzorčenja. Lahko bi vzpostavili tabelo atributov, ki bi zgledala podobno kot"
+" table_river_attributes_."
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:141
+msgid "SampleNo"
+msgstr "Številka vzorca"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:141
+msgid "pH"
+msgstr "pH"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:141
+msgid "DO"
+msgstr "DO"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:141
+msgid "CB"
+msgstr "CB"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:141
+msgid "Turbidity"
+msgstr "Kalnost"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:141
+msgid "Collector"
+msgstr "Zbiratelj"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:141
+msgid "Date"
+msgstr "Datum"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:143
+msgid "1"
+msgstr "1"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:143
+msgid "7"
+msgstr "7"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:143
+#: ../../docs/gentle_gis_introduction/data_capture.rst:147
+msgid "6"
+msgstr "6"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:143
+msgid "N"
+msgstr "Ne"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:143
+msgid "Low"
+msgstr "Nizka"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:143
+msgid "Patience"
+msgstr "Patience"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:143
+#: ../../docs/gentle_gis_introduction/data_capture.rst:145
+#: ../../docs/gentle_gis_introduction/data_capture.rst:147
+msgid "12/01/2009"
+msgstr "12/01/2009"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:145
+msgid "2"
+msgstr "2"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:145
+msgid "6.8"
+msgstr "6.8"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:145
+msgid "5"
+msgstr "5"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:145
+#: ../../docs/gentle_gis_introduction/data_capture.rst:147
+msgid "Y"
+msgstr "Da"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:145
+msgid "Medium"
+msgstr "Srednja"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:145
+msgid "Thabo"
+msgstr "Thabo"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:147
+msgid "3"
+msgstr "3"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:147
+msgid "6.9"
+msgstr "6.9"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:147
+msgid "High"
+msgstr "Visoka"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:147
+msgid "Victor"
+msgstr "Victor"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:150
+msgid ""
+"Table River Attributes 1: Drawing a table like this before you create your "
+"vector layer will let you decide what attribute fields (columns) you will "
+"need. Note that the geometry (positions where samples were taken) is not "
+"shown in the attribute table --– the GIS Application stores it separately!"
+msgstr ""
+"Table River Attributes 1: Prikazano tabelo je smiselno izdelati predno se "
+"odločite katera polja (kolone) za atribute potrebujete. Pomni, da geometrija"
+" (lokacija, kjer so vzorci pobrani) ni prikazana v tabeli - GIS aplikacijo "
+"jo shranjuje ločeno."
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:156
+msgid "Creating an empty shapefile"
+msgstr "Vzpostavljanje praznega shapefila"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:158
+msgid ""
+"Once you have planned what features you want to capture into the GIS, and "
+"the geometry type and attributes that each feature should have, you can move"
+" on to the next step of creating an empty shapefile."
+msgstr ""
+"Ko je izdelan načrt katere vsebine se želijo zajemati v GIS ter je določena "
+"vrsta geometrije in atribute za vsako posamezno vsebino, se lahko premaknemo"
+" na naslednji korak vzpostavljanja praznega shapefila."
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:162
+msgid ""
+"The process usually starts with choosing the 'new vector layer' option in "
+"your GIS Application and then selecting a geometry type (see "
+"figure_new_shapefile_). As we covered in an earlier topic, this means "
+"choosing either point, polyline or polygon for the geometry."
+msgstr ""
+"Proces se navadno začne z izbiro ukaza 'new vector layer' v GIS aplikaciji "
+"ter nadaljnjo izbiro vrste geometrije (glej figure_new_shapefile_). Kakor je"
+" bilo predhodno omenjeno, slednje pomeni izbrati med točkovno, linijsko ali "
+"površinsko geometrijo."
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:173
+msgid ""
+"Creating a new vector layer is as simple as filling in a few details in a "
+"form. First you choose the geometry type, and then you add the attribute "
+"fields."
+msgstr ""
+"Vzpostavljanje nove vektorske datoteke se izvede preprosto z nekaj odgovori "
+"v pogovornem oknu. Izbrati je potrebno vrsto geometrije ter dodati polja za "
+"atribute."
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:176
+msgid ""
+"Next you will add fields to the attribute table. Normally we give field "
+"names that are short, have no spaces and indicate what type of information "
+"is being stored in that field. Example field names may be 'pH', "
+"'RoofColour', 'RoadType' and so on. As well as choosing a name for each "
+"field, you need to indicate how the information should be stored in that "
+"field –-- i.e. is it a number, a word or a sentence, or a date?"
+msgstr ""
+"V nadaljevanju se bodo dodala polja v atributivno tabelo. Navadno posamezna "
+"polja poimenujemo čim krajše, brez praznih prostorov ter pokažemo katera "
+"vrsta informacije naj bi bila hranjena v tem polju. Primeri za ime polja so"
+"  'pH', 'RoofColour', 'RoadType' in podobno. Ob izbiri imena moramo tudi "
+"označiti na kakšen način bodo informacije shranjene v to polje - kot "
+"števila, beseda ali stavek ali kot datum?"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:183
+msgid ""
+"Computer programs usually call information that is made up of words or "
+"sentences '**strings**', so if you need to store something like a street "
+"name or the name of a river, you should use 'String' for the field type."
+msgstr ""
+"Računalniški programi navadno imenujejo informacijo, ki jo sestavljajo "
+"besede ali stavki '**strings**' - niz, torej če je potrebno shraniti nekaj "
+"podobnega kot ime ceste ali ime reke, potem morate uporabiti 'String' kot "
+"vrsto polja."
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:187
+msgid ""
+"The shapefile format allows you to store the numeric field information as "
+"either a whole number (**integer**) or a decimal number (**floating point**)"
+" –-- so you need to think before hand whether the numeric data you are going"
+" to capture will have decimal places or not."
+msgstr ""
+"Numerične informacije se lahko v shapefilu hranijo kot celoštevilčna števila"
+" (**integer**) ali kot decimalna števila (**floating point**) –-- predhodno "
+"je potrebno vedeti ali bodo imeli numerični podatki, ki se zajemajo, "
+"decimalna mesta ali ne."
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:192
+msgid ""
+"The final step (as shown in figure_save_shapefile_) for creating a shapefile"
+" is to give it a name and a place on the computer hard disk where it should "
+"be created. Once again it is a good idea to give the shapefile a short and "
+"meaningful name. Good examples are 'rivers', 'watersamples' and so on."
+msgstr ""
+"Končni korak (kot je prikazano na figure_save_shapefile_) vzpostavljanja "
+"shapefila je, da mu damo ime in mu določimo mesto na trdem disku "
+"računalnika, kjer bo vzpostavljen. Ponovno, za poimenovanje je smiselno "
+"uporabiti kratka in pomenljiva imena. Dobri primeri so 'rivers', "
+"'watersamples' in podobno."
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:203
+msgid ""
+"After defining our new layer’s geometry and attributes, we need to save it "
+"to disk. It is important to give a short but meaningful name to your "
+"shapefile."
+msgstr ""
+"Po določitvi geometrije in atributov nove plasti, jo moramo shraniti na "
+"disk. Pomembno je uporabljati čim krajša vendar pomenljiva imena."
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:206
+msgid ""
+"Let's recap the process again quickly. To create a shapefile you first say "
+"what kind of geometry it will hold, then you create one or more fields for "
+"the attribute table, and then you save the shapefile to the hard disk using "
+"an easy to recognise name. Easy as 1-2-3!"
+msgstr ""
+"Hitro ponovimo še enkrat celoten proces. Pri vzpostavljanju shapefila je "
+"potrebno vedeti kakšno geometrijo bo vseboval, vzpostaviti je potrebno eno "
+"ali več polj v atributivni tabeli ter shraniti shapefile na trdi disk z "
+"uporabo imena preprostega za razpoznavo. Preprosto kot 1-2-3!"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:212
+msgid "Adding data to your shapefile"
+msgstr "Dodajanje podatkov v shapefile"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:214
+msgid ""
+"So far we have only created an empty shapefile. Now we need to enable "
+"editing in the shapefile using the 'enable editing' menu option or tool bar "
+"icon in the GIS Application. Shapefiles are not enabled for editing by "
+"default to prevent accidentally changing or deleting the data they contain. "
+"Next we need to start adding data. There are two steps we need to complete "
+"for each record we add to the shapefile:"
+msgstr ""
+"Vzpostavljen imamo prazen shapefile. Sedaj moramo omogočiti urejanje "
+"shapefila z ukazom 'enable editing' na menuju ali v orodjarni uporabljane "
+"GIS aplikacije. V osnovi ni omogočeno urejanje shapefilov, saj je s tem "
+"preprečeno, da bi se podatki po nesreči spreminjali ali brisali. Nadalje "
+"začnemo z dodajanje podatkov. Za vsak nov zapis v shapefile moramo narediti "
+"dva koraka:"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:221
+msgid "Capturing geometry"
+msgstr "Zajemanje geometrije - oblike"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:222
+msgid "Entering attributes"
+msgstr "Vnos atributov"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:224
+msgid ""
+"The process of capturing geometry is different for points, polylines and "
+"polygons."
+msgstr ""
+"Postopek zajemanje grafičnih podatkov je odvisen od vrste geometrije in je "
+"različen za točke, linije - polilinije in površine - poligone."
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:226
+msgid ""
+"To **capture a point**, you first use the map pan and zoom tools to get to "
+"the correct geographical area that you are going to be recording data for. "
+"Next you will need to enable the point capture tool. Having done that, the "
+"next place you click with the **left mouse button** in the map view, is "
+"where you want your new point **geometry** to appear. After you click on the"
+" map, a window will appear and you can enter all of the **attribute data** "
+"for that point (see figure_attribute_dialog_). If you are unsure of the data"
+" for a given field you can usually leave it blank, but be aware that if you "
+"leave a lot of fields blank it will be hard to make a useful map from your "
+"data!"
+msgstr ""
+"Za **zajemanje točke - capture a point** se je potrebno prvo z uporabo "
+"orodij za premikanje - pan in povečevanje - zoom postaviti na prostorsko "
+"pravilno mesto, kjer bodo zapisani podatki. Potem je potrebno omogočiti "
+"orodje za zajemanje točke, Na mestu, kjer želimo vzpostaviti novo **točko** "
+"slednje opravimo s pritiskom - klikom na **miškin levi gumb - left mouse "
+"button**. Po pritisku gumba na miški na karti, se odpre okno za vnos "
+"**atributivnih podatkov** za vneseno točko (glej figure_attribute_dialog_). "
+"Če niste prepričani v pravilnost podatkov, lahko določeno polje tudi pustite"
+" prazno, vendar pazite, če se bo pustilo več polj praznih, bo kasneje "
+"težavno narediti uporaben zemljevid iz vaših podatkov!"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:242
+msgid ""
+"After you have captured the point geometry, you will be asked to describe "
+"its attributes. The attribute form is based on the fields you specified when"
+" you created the vector layer."
+msgstr ""
+"Po vnosu točke boste povprašani po opisu njenih atributov. Pogovorno okno "
+"vsebuje podatkovna polja, ki so bila določena pri vzpostavljanju vektorske "
+"plasti."
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:246
+msgid ""
+"To **capture a polyline** the process is similar to that of a point, in that"
+" you need to first use the pan and zoom tools to move the map in the map "
+"view to the correct geographical area. You should be zoomed in enough so "
+"that your new vector polyline feature will have an appropriate scale (see "
+":ref:`gentle_gis_vector_data` for more details on scale issues). When you "
+"are ready, you can click the polyline capture icon in the tool bar and then "
+"start drawing your line by clicking on the map. After you make your first "
+"click, you will notice that the line stretches like an elastic band to "
+"follow the mouse cursor around as you move it. Each time you click with the "
+"**left mouse button**, a new vertex will be added to the map. This process "
+"is shown in figure_capture_polyline_."
+msgstr ""
+"Postopek **zajemanja linije - capture a polyline** je podoben postopku za "
+"točke, kjer je pro potrebno uporabiti orodja za premikanje in povečevanje "
+"tako, da bo v oknu zemljevida prikazano pravilno geografsko območje. Z "
+"uporabljeno povečavo se zagotovi, da bo nova vektorska linija - polilinija v"
+" primernem merilu (za več informacij o merilu glej "
+":ref:`gentle_gis_vector_data`). Ko boste pripravljeni, pritisnite ikono za "
+"zajemanje polilinije v orodjarni in začnite risati linijo z zaporednimi "
+"pritiski na gumb miške po zemljevidu. Po prvem pritisku gumba na miški boste"
+" opazili, da od označene točke poteka ravna linija, ki elastično sledi "
+"gibanju miške, ko jo premikamo. Vsakič, ko pritisnemo **levi gumb miške - "
+"left mouse button** se na zemljevidu doda nova vmesna točka - vertex. "
+"Postopek je prikazan na figure_capture_polyline_."
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:263
+msgid ""
+"Capturing lines for a tourism map. When editing a line layer, the vertices "
+"are shown with circular markers which you can move about with the mouse to "
+"adjust the line's geometry. When adding a new line (shown in red), each "
+"click of the mouse will add a new vertex."
+msgstr ""
+"Zajemanje linij ta turistični zemljevid. Pri urejanju linijske plasti so "
+"vmesne točke označene s krogci in jih lahko s pomočjo miške premikamo ter s "
+"tem prilagamo obliko linije. Ko dodajamo novo linijo (prikazano z rdečo "
+"barvo) se z vsakim pritiskom na miški doda nova vmesna točka."
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:268
+msgid ""
+"When you have finished defining your line, use the **right mouse button** to"
+" tell the GIS Application that you have completed your edits. As with the "
+"procedure for capturing a point feature, you will then be asked to enter in "
+"the attribute data for your new polyline feature."
+msgstr ""
+"Ob zaključku določanja linije s pritiskom na **desni gumb miške - right "
+"mouse buttom** poveste GIS aplikaciji, da ste zaključili z urejanjem. "
+"Podobno kot pri postopku vnosa točke, boste povprašani za vnos atributivnih "
+"podatkov nove linije."
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:273
+msgid ""
+"The process for **capturing a polygon** is almost the same as capturing a "
+"polyline except that you need to use the polygon capture tool in the "
+"toolbar. Also, you will notice that when you draw your geometry on the "
+"screen, the GIS Application always creates an enclosed area."
+msgstr ""
+"Postopek **zajemanja površin - capturing a polygon** je skoraj v celoti enak"
+" postopku zajemanja linije, vendar je potrebno pri tem v orodjarni uporabiti"
+" orodje za zajemanje površin. Opazili boste, da pri risanju izbrane oblike "
+"na ekranu, GIS aplikacija vedno prikazuje zaprto površino."
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:278
+msgid ""
+"To add a new feature after you have created your first one, you can simply "
+"click again on the map with the point, polyline or polygon capture tool "
+"active and start to draw your next feature."
+msgstr ""
+"Dodajanje novih vsebin potem, ko ste prvo že vzpostavili, se nadaljuje s "
+"preprostim ponovnim pritiskom gumba miške na karti, pri čemer je orodje za "
+"zajemanje točke, linije ali površine aktivirano in pripravljeno za risanje "
+"naslednje grafične oblike."
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:282
+msgid ""
+"When you have no more features to add, always be sure to click the 'allow "
+"editing' icon to toggle it off. The GIS Application will then save your "
+"newly created layer to the hard disk."
+msgstr ""
+"Ko nimate več ničesar za dodati, se vedno prepričajte, da ikona 'allow "
+"editing' ni aktivna. Z izklopom ikone bo GIS aplikacija shranila na novo "
+"vzpostavljeno plast na trdi disk."
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:287
+msgid "Heads-up digitising"
+msgstr "Zajemanje na podlagi"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:289
+msgid ""
+"As you have probably discovered by now if you followed the steps above, it "
+"is pretty hard to draw the features so that they are **spatially correct** "
+"if you do not have other features that you can use as a point of reference. "
+"One common solution to this problem is to use a raster layer (such as an "
+"aerial photograph or a satellite image) as a backdrop layer. You can then "
+"use this layer as a reference map, or even trace the features off the raster"
+" layer into your vector layer if they are visible. This process is known as "
+"'heads-up digitising' and is shown in figure_headsup_digitizing_."
+msgstr ""
+"Kakor ste že verjetno spoznali, če bi sledili zgoraj navedenim postopkom, "
+"potem je grafične vsebine kar težko narisati, še posebej, če bi morali biti "
+"**prostorsko pravilno** umeščene, pa nimamo nobene stvari, ki bi jo lahko "
+"uporabili kot referenčno točko. Ena pogostejših rešitev tega problema je "
+"uporaba rastrskih plasti (kot so aerofotografske ali satelitske slike) kot "
+"podlage. V tem primeru lahko uporabimo to podlago kot referenčno karto in na"
+" njeni osnovi digitaliziramo potrebne vektorske vsebine. Proces je poznan "
+"kot  'heads-up digitising' in je prikazan na sliki "
+"figure_headsup_digitizing_."
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:304
+msgid ""
+"Heads-up digitising using a satellite image as a backdrop. The image is used"
+" as a reference for capturing polyline features by tracing over them."
+msgstr ""
+"Zajemanje na podlagi z uporabo satelitske slike kot podlage. Slike se "
+"uporablja kot referenca za zajemanje linijskih podatkov s sledenjem linije "
+"na sliki."
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:308
+msgid "Digitising using a digitising table"
+msgstr "Zajemanje podatkov s tablico za digitalizacijo"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:310
+msgid ""
+"Another method of capturing vector data is to use a digitising table. This "
+"approach is less commonly used except by GIS professionals, and it requires "
+"expensive equipment. The process of using a digitising table, is to place a "
+"paper map on the table. The paper map is held securely in place using clips."
+" Then a special device called a 'puck' is used to trace features from the "
+"map. Tiny cross-hairs in the puck are used to ensure that lines and points "
+"are drawn accurately. The puck is connected to a computer and each feature "
+"that is captured using the puck gets stored in the computer's memory. You "
+"can see what a digitising puck looks like in figure_digitizing_table_."
+msgstr ""
+"Druga metoda za zajemanje vektorskih podatkov je uporaba tablice za "
+"digitalizacijo. Pristop je pogostejši, razen s strani GIS strokovnjakov, in "
+"zahteva dodatno drago opremo. Postopek uporabe tablice za digitalizacijo se "
+"začne z namestitvijo papirnatega zemljevida na tablico. Zemljevid se na "
+"tablici s pomočjo sponk pritrdi. Za sledenje grafičnim oblikam iz karte se "
+"uporablja posebna naprava imenovana 'puck' ali plošček. Na vrhu ploščka je "
+"povečevalno steklo s tankim križem, ki omogoča natančno prerisovanje točk in"
+" linij. Plošček je povezan z računalnikom tako, da se vsaka grafična "
+"vsebina, ki je bila zajeta s ploščkom shrani v spomin računalnika. Na sliki "
+"figure_digitizing_table_ je prikazana tablica za digitalizacijo."
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:326
+msgid ""
+"A digitising table and puck are used by GIS professionals when they want to "
+"digitise features from existing maps."
+msgstr ""
+"Strokovnjaki v GISu uporabljajo tablico za digitalizacijo s ploščkom takrat,"
+" kadar želimo digitalizirati določene grafične vsebine iz obstoječih "
+"zemljevidov."
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:330
+msgid "After your features are digitised..."
+msgstr "Potek, ko so tvoje vsebine že digitalizirane..."
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:332
+msgid ""
+"Once your features are digitised, you can use the techniques you learned in "
+"the previous topic to set the symbology for your layer. Choosing an "
+"appropriate symbology will allow you to better understand the data you have "
+"captured when you look at the map."
+msgstr ""
+"Potem, ko so tvoje grafične vsebine digitalizirane, lahko uporabiš postopke,"
+" ki si jih spoznal v prejšnjih poglavjih o množici označb za različne "
+"plasti. Uporaba primerne oznake bo omogočila boljše razumevanje shranjenih "
+"podatkov na zemljevidu."
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:338
+msgid "Common problems / things to be aware of"
+msgstr "Pogosti problemi /stvari na katere je potrebno biti pozoren"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:340
+msgid ""
+"If you are digitising using a backdrop raster layer such as an aerial "
+"photograph or satellite image, it is very important that the raster layer is"
+" properly georeferenced. A layer that is georeferenced properly displays in "
+"the correct position in the map view based on the GIS Application's internal"
+" model of the Earth. We can see the effect of a poorly georeferenced image "
+"in figure_georeference_issue_."
+msgstr ""
+"V kolikor se pri digitalizaciji podatkov kot podlaga uporablja rastrska "
+"slika kot na primer aerofotografska aki satelitska slika, potem je izjemno "
+"pomembno, da je rastrska plast ustrezno umerjena - georeferencirana. Plast, "
+"ki je pravilno georeferencirana se prikazuje na pravilni lokaciji v oknu "
+"zemljevida in temelji na notranjem modelu Zemlje izbrane GIS aplikacije. "
+"Vpliv slabo georeferencirane slike lahko vidimo na "
+"figure_georeference_issue_."
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:353
+msgid ""
+"The importance of using properly georeferenced raster images for heads-up "
+"digitising. On the left we can see the image is properly georegistered and "
+"the road features (in orange) overlap perfectly. If the image is poorly "
+"georeferenced (as shown on the right) the features will not be well aligned."
+" Worse still, if the image on the right is used as a reference when "
+"capturing new features, the newly captured data will be inaccurate!"
+msgstr ""
+"Pomembnost uporabe pravilno georeferenciranih rastrskih slik po "
+"digitalizaciji s podlage. Na levi lahko vidimo pravilno georeferencirano "
+"sliko, kjer se cesta (v oranžni barvi) ustrezno nalega na sliko. Če je slika"
+" slabo georeferencirana (kot je prikazano na desni) grafični elementi ne "
+"nalegajo pravilno. Še slabše, če takšno sliko uporabimo za zajemanje novih "
+"grafičnih podatkov, bodo le-ti napačni!"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:360
+msgid ""
+"Also remember that it is important that you are zoomed in to an appropriate "
+"scale so that the vector features you create are useful. As we saw in the "
+"previous topic on vector geometry, it is a bad idea to digitise your data "
+"when you are zoomed out to a scale of 1:1000 000 if you intend to use the "
+"data you capture at a scale of 1:50 000 later."
+msgstr ""
+"Pomni tudi, da je zelo pomembna izbira ustrezne povečave, da bodo lahko "
+"vektorski podatki, ko bodo ustvarjeni, uporabni. Kot je bilo razvidno iz "
+"poglavja o geometriji vektorja, digitalizacija na merilu večjem od 1:1000 "
+"000 ni smiselna, če se bodo kasneje podatki uporabljali na manjšem merilu "
+"npr. 1:50 000."
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:367
+msgid "What have we learned?"
+msgstr "Kaj smo se naučili?"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:369
+msgid "Let's wrap up what we covered in this worksheet:"
+msgstr "Preglejmo, kaj smo obravnavali v tem poglavju:"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:371
+msgid ""
+"**Digitising** is the process of capturing knowledge of a feature's "
+"**geometry** and **attributes** into a **digital format** stored on the "
+"computer's disk."
+msgstr ""
+"**Digitalizacija** je postopek zajemanja **geometrije** in **atributov** "
+"različnih vsebin v **digitalno obliko**, ki je shranjena na računalniškem "
+"disku."
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:373
+msgid "GIS Data can be stored in a **database** or as **files**."
+msgstr ""
+"GIS podatki so lahko shranjeni v **podatkovno bazo** ali kot **datoteke**."
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:374
+msgid ""
+"One commonly used file format is the **shapefile** which is actually a group"
+" of three or more files (:file:`.shp`, :file:`.dbf` and :file:`.shx`)."
+msgstr ""
+"Najpogosteje uporabljana oblika datoteke je **shapefile**, ki je dejansko "
+"skupina treh ali več datotek (:file:`.shp`, :file:`.dbf` in :file:`.shx`)."
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:376
+msgid ""
+"Before you create a new vector layer you need to plan both what **geometry**"
+" type and **attribute** fields it will contain."
+msgstr ""
+"Predno se vzpostavi nova vektorska plast je potrebno predvideti vrsto "
+"**geometrije** in polja, ki bodo vsebovala **atribute**."
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:378
+msgid "Geometry can be point, polyline or polygon."
+msgstr "Geometrija je lahko točkovna, linijska ali ravninska."
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:379
+msgid ""
+"Attributes can be **integers** (whole numbers), **floating points** (decimal"
+" numbers), **strings** (words) or **dates**."
+msgstr ""
+"Atributi so lahko **celoštevilčni - integer** (cela števila), **decimalni - "
+"floating points** (decimalna števila), **tekstualni - string** (besede) ali "
+"**datumi**."
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:381
+msgid ""
+"The digitising process consists of **drawing** the geometry in the map view "
+"and then entering its attributes. This is repeated for each feature."
+msgstr ""
+"Proces digitalizacije je sestavljen iz **risanja** geometrije iz okna "
+"zemljevida in kasnejšega vnosa atributov. Omenjeno je ponovljivo za vsako "
+"grafično vsebino."
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:383
+msgid ""
+"**Heads-up digitising** is often used to provide orientation during "
+"digitising by using a raster image in the background."
+msgstr ""
+"**Digitalizacija s podlage** se pogosto uporablja, saj rastrska slika kot "
+"podlaga, omogoča orientacijo med digitalizacijo."
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:385
+msgid ""
+"Professional GIS users sometimes use a **digitising table** to capture "
+"information from paper maps."
+msgstr ""
+"Profesionalni GIS uporabniki uporabljajo **tablico za digitalizacijo** za "
+"zajemanje informacij iz papirnatih zemljevidov."
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:389
+msgid "Now you try!"
+msgstr "Sedaj poskusi!"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:391
+msgid "Here are some ideas for you to try with your learners:"
+msgstr "Nekaj idej, ki jih preizkusi z učenci:"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:393
+msgid ""
+"Draw up a list of features in and around your school that you think would be"
+" interesting to capture. For example: the school boundary, the position of "
+"fire assembly points, the layout of each class room, and so on. Try to use a"
+" mix of different geometry types. Now split your learners into groups and "
+"assign each group a few features to capture. Have them symbolise their "
+"layers so that they are more meaningful to look at. Combine the layers from "
+"all the groups to create a nice map of your school and its surroundings!"
+msgstr ""
+"Sestavite seznam stvari v okolici vaše šole, ki bi lahko bile zanimive za "
+"zajemanje. Na primer: šolski okoliš, lokacija točk z gasilko opremo, lego in"
+" obliko učilnice in podobno. Poskusi uporabiti različne vrste geometrije. "
+"Sedaj razdeli učence v skupine in vsaki skupini določi nekaj prostorskih "
+"vsebin za zajemanje. Posameznim plastem dodaj smiselne in povedne označbe. "
+"Iz plasti različnih skupin sestavi lep zemljevid tvoje šole z okolico."
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:400
+msgid ""
+"Find a local river and take water samples along its length. Make a careful "
+"note of the position of each sample using a GPS or by marking it on a "
+"toposheet. For each sample take measurements such as pH, dissolved oxygen "
+"etc. Capture the data using the GIS application and make maps that show the "
+"samples with a suitable symbology. Could you identify any areas of concern? "
+"Was the GIS Application able to help you to identify these areas?"
+msgstr ""
+"Poišči lokalno reko in poberi nekaj vzorcev vzdolž njenega toka. Naredi "
+"pazljiv zapis o poziciji vsakega pobranega vzorca ali z uporabo GPS ali z "
+"označbo na topografski karti. Na vsaki lokaciji izmeri PH, raztopljen kisik "
+"v vodi ipd. Prenesi podatke v GIS aplikacijo in naredi zemljevide, ki "
+"prikazujejo merna mesta z uporabo ustreznih označb. Ali lahko opredeliš "
+"problematična območja? Ali ti je GIS aplikacija pri tem pomagala?"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:408
+msgid "Something to think about"
+msgstr "V razmislek"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:410
+msgid ""
+"If you don't have a computer available, you can follow the same process by "
+"using transparency sheets and a notebook. Use an aerial photo, orthosheet or"
+" satellite image printout as your background layer. Draw columns down the "
+"page in your notebook and write in the column headings for each attribute "
+"field you want to store information about. Now trace the geometry of "
+"features onto the transparency sheet, writing a number next to each feature "
+"so that it can be identified. Now write the same number in the first column "
+"in your table in your notebook, and then fill in all the additional "
+"information you want to record."
+msgstr ""
+"Če nimaš računalnika, lahko isti postopek narediš z uporabo transparentnega "
+"papirja in zvezka. Uporabi izrisano sliko iz zraka, ortofoto ali satelitsko "
+"sliko kot podlago. V zvezek nariši navpične kolone, na vrhu kolone pa "
+"poimenuj vsak atribut, o katerem želiš hraniti informacijo. Sedaj na "
+"transparentnem papirja, ki si ga položil preko podlage označi in oštevilči "
+"mesta, na katera se podatki nanašajo. Isto številko vpiši tudi v preglednico"
+" ter v zvezek dodaj vse dodatne informacije, ki jih želiš zabeležiti."
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:420
+msgid "Further reading"
+msgstr "Dodatno branje"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:425
+msgid ""
+"The QGIS User Guide also has more detailed information on digitising vector "
+"data in QGIS."
+msgstr ""
+"QGIS Navodilo za uporabnika vsebuje natančnejše podatke o digitalizaciji "
+"vektorskih podatkov v QGIS."
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:429
+msgid "What's next?"
+msgstr "Kako naprej?"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:431
+msgid ""
+"In the section that follows we will take a closer look at **raster data** to"
+" learn all about how image data can be used in a GIS."
+msgstr ""
+"V naslednjem poglavju si bomo natančneje ogledali **rastrske podatke** ter "
+"se naučili kako se lahko slikovni podatki uporabljajo v GIS."

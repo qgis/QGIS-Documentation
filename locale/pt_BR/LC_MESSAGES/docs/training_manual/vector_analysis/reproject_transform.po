@@ -1,0 +1,249 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# Aline Furlanetto Viero <afviero@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:18+0000\n"
+"Last-Translator: Aline Furlanetto Viero <afviero@gmail.com>, 2020\n"
+"Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:2
+msgid "|LS| Reprojecting and Transforming Data"
+msgstr "|LS| Reproyectando y Transformando Datos"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:8
+msgid ""
+"**The goal for this lesson:** To reproject and transform vector datasets."
+msgstr ""
+"**El objetivo de esta lección:** Reproyectar y transformar conjuntos de "
+"datos vectoriales."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:11
+msgid "|basic| |FA| Projections"
+msgstr "|basic| |FA| Proyecciones"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:19
+msgid "Save your current map"
+msgstr "Salve seu mapa atual"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:22
+msgid "Zoom in to South Africa by using the :guilabel:`Zoom In` tool"
+msgstr ""
+"Aumente o zoom na África do Sul usando a ferramenta :guilabel:`Zoom In`"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:27
+msgid "Pan around the map while keeping an eye on the :guilabel:`Scale` field"
+msgstr "Percorra o mapa enquanto observa o campo :guilabel:`Escala`"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:35
+msgid ""
+"To understand why, think about a globe of the Earth. It has lines running "
+"along it from North to South. These longitude lines are far apart at the "
+"equator, but they meet at the poles."
+msgstr ""
+"Para entender por qué, piensa en el Globo Terráqueo. Tiene lineas "
+"discurriendo de Norte a Sur. Estas líneas están alejadas en el ecuador, pero"
+" se encuentran en los polos."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:52
+msgid ""
+"To solve this, let's use a Projected Coordinate System (PCS) instead. A PCS "
+"\"projects\" or converts the data in a way that makes allowance for the "
+"scale change and corrects it. Therefore, to keep the scale constant, we "
+"should reproject our data to use a PCS."
+msgstr ""
+"Para solucionar esto, utilicemos en su lugar un Sistema de Coordenadas "
+"Proyectado (SCP). Un SCP \"proyecta\" o convierte los datos en una forma que"
+" permite a la escala cambiar y corregirse. Además, para mantener la escala "
+"constante, deberiamos reproyectar nuestros datos a usar un SCP."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:59
+msgid "|basic| |FA| \"On the Fly\" Reprojection"
+msgstr "|basic| |FA| Reproyección \"Al Vuelo\""
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:61
+msgid ""
+"By default, QGIS reprojects data \"on the fly\". What this means is that "
+"even if the data itself is in another CRS, QGIS can project it as if it were"
+" in a CRS of your choice."
+msgstr ""
+"Por padrão, o QGIS reprojeta os dados \"on the fly\". O que isso significa é"
+" que, mesmo que os dados estejam em outro SRC, o QGIS pode projetá-lo como "
+"se estivesse em um SRC de sua escolha."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:76
+msgid ""
+"Notice how the shape of South Africa changes. All projections work by "
+"changing the apparent shapes of objects on Earth."
+msgstr ""
+"Observa cómo cambia la forma de Sudáfrica. Todas las proyecciones funcionan "
+"cambiando las formas aparentes de los objetos de la Tierra."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:80
+msgid "Pan around the map."
+msgstr "Desplázate sobre el mapa."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:82
+msgid "Notice how the scale stays the same!"
+msgstr "¡Observa cómo la escala permanece igual!"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:84
+msgid ""
+"\"On the fly\" reprojection is also used for combining datasets that are in "
+"different CRSs."
+msgstr ""
+"La transformación\" al vuelo\" también se usa para combinar conjuntos de "
+"datos que están en diferentes SRCs."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:94
+msgid "What do you notice?"
+msgstr "¿Qué observas?"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:96
+msgid ""
+"The layer is visible even if it has a different CRS from the "
+":guilabel:`continents` one."
+msgstr ""
+"A camada é visível mesmo que tenha um SRC diferente do mostrado em "
+":guilabel:`continents`."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:101
+msgid "|moderate| |FA| Saving a Dataset to Another CRS"
+msgstr "|moderate| |FA| Guardando un Conjunto de Datos en Otro SRC"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:118
+msgid ""
+"Select :menuselection:`Export --> Save Features As...` in the menu that "
+"appears. You will be shown the :guilabel:`Save Vector Layer as...` dialog."
+msgstr ""
+"Selecione :menuselection:`Exportar --> Salvar Feição Como...` no menu que "
+"aparece. Você verá a caixa de diálogo :guilabel:`Salvar Camada Vetorial "
+"como...`."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:137
+msgid ""
+"Leave the other options unchanged. The :guilabel:`Save Vector Layer as...` "
+"dialog now looks like this:"
+msgstr ""
+"Deixe as outras opções inalteradas. A caixa de diálogo :guilabel:`Salvar "
+"Camada Vetorial como...` agora fica assim:"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:143
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:178
+msgid "Click :guilabel:`OK`"
+msgstr "Clique :guilabel:`OK`."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:145
+msgid ""
+"You can now compare the old and new projections of the layer and see that "
+"they are in two different CRS but they are still overlapping."
+msgstr ""
+"Agora você pode comparar as projeções antiga e nova da camada e ver que elas"
+" estão em dois SRC diferentes, mas ainda estão sobrepostas."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:150
+msgid "|hard| |FA| Creating Your Own Projection"
+msgstr "|hard| |FA| Creando Tu Propia Proyección"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:152
+msgid ""
+"There are many more projections than just those included in QGIS by default."
+" You can also create your own projections."
+msgstr ""
+"Hay muchos más proyecciones que las incluidas en QGIS por defecto. Además, "
+"también puedes crear tus propias proyecciones."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:155
+msgid "Start a new map"
+msgstr "Inicie um novo mapa"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:156
+msgid "Load the :file:`world/oceans.shp` dataset"
+msgstr "Carregue o conjunto de dados :file:`world/oceans.shp` dataset"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:165
+msgid ""
+"An interesting projection to use is called ``Van der Grinten I``. Enter its "
+"name in the :guilabel:`Name` field."
+msgstr ""
+"Uma projeção interessante a ser usada é chamada ``Van der Grinten I`. Digite"
+" seu nome no campo :guilabel:`Nome`."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:168
+msgid ""
+"This projection represents the Earth on a circular field instead of a "
+"rectangular one, as most other projections do."
+msgstr ""
+"Esta proyección representa la Tierra en un campo circular en lugar de una "
+"zona rectangular, como la mayoría de proyecciones hacen."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:171
+msgid "Add the following string in the :guilabel:`Parameters` field::"
+msgstr "Adicione a seguinte string no campo :guilabel:`Parâmetros` ::"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:181
+msgid ""
+"Choose your newly defined projection (search for its name in the "
+":guilabel:`Filter` field)"
+msgstr ""
+"Escolha sua projeção recém-definida (pesquise seu nome no campo "
+":guilabel:`Filtrar`)"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:183
+msgid "On applying this projection, the map will be reprojected thus:"
+msgstr "Aplicando esta proyección, el mapa será reproyectado así:"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:189
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:191
+msgid ""
+"Different projections are useful for different purposes. By choosing the "
+"correct projection, you can ensure that the features on your map are being "
+"represented accurately."
+msgstr ""
+"Proyecciones diferentes son útiles para diferentes propósitos. Eligiendo la "
+"proyección correcta, puedes asegurarte que los elementos de tu mapa se están"
+" representando de forma precisa."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:196
+msgid "|FR|"
+msgstr "|FR|"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:198
+msgid ""
+"Materials for the *Advanced* section of this lesson were taken from `this "
+"article <https://anitagraser.com/2012/03/18/beautiful-global-projections-"
+"adding-custom-projections-to-qgis/>`_."
+msgstr ""
+"Os materiais para a seção *Avançado* desta lição foram extraídos deste "
+"artigo `<https://anitagraser.com/2012/03/18/beautiful-global-projections-"
+"adding-custom-projections-to-qgis/>`_ ."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:201
+msgid ""
+"Further information on Coordinate Reference Systems is available `here "
+"<https://linfiniti.com/dla/worksheets/7_CRS.pdf>`_."
+msgstr ""
+"Mais informações sobre Sistemas de Referenciamento de Coordenadas estão "
+"disponíveis  `aqui <https://linfiniti.com/dla/worksheets/7_CRS.pdf>`_."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:205
+msgid "|WN|"
+msgstr "|WN|"

@@ -1,0 +1,547 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:15+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Romanian (https://www.transifex.com/qgis/teams/6144/ro/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:6
+msgid "Spatial Analysis (Interpolation)"
+msgstr "Analiza spațială (Interpolare)"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:9
+msgid "|gentleLogo|"
+msgstr "|gentleLogo|"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:9
+msgid "Objectives:"
+msgstr "Obiective:"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:9
+msgid "Understanding of interpolation as part of spatial analysis"
+msgstr "Să înțelegem folosirea interpolării, ca parte din analiza spațială"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:11
+msgid "Keywords:"
+msgstr "Cuvinte cheie:"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:11
+msgid ""
+"Point data, interpolation method, Inverse Distance Weighted, Triangulated "
+"Irregular Network"
+msgstr ""
+"Date de tip punct, metoda de interpolare, Distanța Inversă Ponderată, Rețele"
+" Neregulate Triangulate"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:15
+msgid "Overview"
+msgstr "Vedere generală"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:17
+msgid ""
+"**Spatial analysis** is the process of manipulating spatial information to "
+"extract new information and meaning from the original data. Usually spatial "
+"analysis is carried out with a Geographic Information System (GIS). A GIS "
+"usually provides spatial analysis tools for calculating feature statistics "
+"and carrying out geoprocessing activities as data interpolation. In "
+"hydrology, users will likely emphasize the importance of terrain analysis "
+"and hydrological modelling (modelling the movement of water over and in the "
+"earth). In wildlife management, users are interested in analytical functions"
+" dealing with wildlife point locations and their relationship to the "
+"environment. Each user will have different things they are interested in "
+"depending on the kind of work they do."
+msgstr ""
+"**Analiza spațială** reprezintă procesul de manipulare a informației "
+"spațiale, pentru a extrage noi informații și semnificații din datele "
+"originale. De obicei, analiza spațială este efectuată cu ajutorul unui "
+"sistem de informații geografice (GIS). Un GIS oferă, de obicei, instrumente "
+"de analiză spațială pentru calcularea statisticilor pentru entități și "
+"pentru desfășurarea activităților de geoprocesare ca interpolare de date. În"
+" hidrologie, utilizatorii vor sublinia probabil importanța analizei "
+"terenului și modelarea hidrologică (modelarea circulației apei pe "
+"suprafețe). În managementul faunei sălbatice, utilizatorii sunt interesați "
+"de funcțiile de analiză care se gestionează locațiile punctuale pentru "
+"animalele sălbatice și relația acestora cu mediul. Fiecare utilizator va fi "
+"interesat de acele facilități care îl pot ajuta, conform tipului de "
+"activitate pe care o prestează."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:29
+msgid "Spatial interpolation in detail"
+msgstr "Interpolarea spațială în detaliu"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:31
+msgid ""
+"Spatial interpolation is the process of using points with known values to "
+"estimate values at other unknown points. For example, to make a "
+"precipitation (rainfall) map for your country, you will not find enough "
+"evenly spread weather stations to cover the entire region. Spatial "
+"interpolation can estimate the temperatures at locations without recorded "
+"data by using known temperature readings at nearby weather stations (see "
+"figure_temperature_map_). This type of interpolated surface is often called "
+"a **statistical surface**. Elevation data, precipitation, snow accumulation,"
+" water table and population density are other types of data that can be "
+"computed using interpolation."
+msgstr ""
+"Interpolarea spațială reprezintă procesul de utilizare a punctelor cu valori"
+" cunoscute, în scopul estimării valorilor necunoscute ale altor puncte. De "
+"exemplu, pentru a face o hartă a precipitațiilor (a ploilor) pentru țara "
+"dumneavoastră, veți observa că, deși scopul este de a acoperi întreaga "
+"regiune, stațiile meteorologice nu sunt repartizate chiar uniform. "
+"Interpolarea spațială poate estima temperaturile în locurile fără "
+"înregistrări de date, cu ajutorul citirilor de temperatură obținute de la "
+"stațiile meteorologice din apropiere (v. figure_temperature_map_). Acest tip"
+" de suprafață interpolată este adesea numită **suprafață statistică**. "
+"Datele de elevație, precipitațiile, acumulările de zăpadă, masele de apă și "
+"densitatea populației constituie alte tipuri de date care pot fi calculate "
+"cu ajutorul interpolării."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:47
+msgid "Temperature map interpolated from South African Weather Stations."
+msgstr ""
+"Harta temperaturilor interpolate din stațiile meteo din Africa de Sud."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:49
+msgid ""
+"Because of high cost and limited resources, data collection is usually "
+"conducted only in a limited number of selected point locations. In GIS, "
+"spatial interpolation of these points can be applied to create a raster "
+"surface with estimates made for all raster cells."
+msgstr ""
+"Din cauza costurilor ridicate și a resurselor limitate, colectarea datelor "
+"este, de obicei, efectuată numai într-un număr limitat de puncte selectate. "
+"În GIS, interpolarea spațială a acestor puncte poate fi aplicată pentru a "
+"crea o suprafață raster, având estimările realizate pentru toate celulele "
+"raster."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:54
+msgid ""
+"In order to generate a continuous map, for example, a digital elevation map "
+"from elevation points measured with a GPS device, a suitable interpolation "
+"method has to be used to optimally estimate the values at those locations "
+"where no samples or measurements were taken. The results of the "
+"interpolation analysis can then be used for analyses that cover the whole "
+"area and for modelling."
+msgstr ""
+"De exemplu, pentru a genera o hartă continuă din punctele de elevație "
+"măsurate cu ajutorul unui dispozitiv GPS, trebuie să fie utilizată o metodă "
+"de interpolare adecvată, pentru estimarea corectă a valorilor din acele zone"
+" în care nu au fost prelevate probe, sau care nu au beneficiat de "
+"măsurători. Apoi, rezultatele interpolării pot fi utilizate pentru analize "
+"care acoperă întreaga zonă și pentru modelare."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:60
+msgid ""
+"There are many interpolation methods. In this introduction we will present "
+"two widely used interpolation methods called **Inverse Distance Weighting** "
+"(IDW) and **Triangulated Irregular Networks** (TIN). If you are looking for "
+"additional interpolation methods, please refer to the 'Further Reading' "
+"section at the end of this topic."
+msgstr ""
+"Există multe metode de interpolare. În această introducere vom prezenta două"
+" metode de interpolare utilizate pe scară largă, denumite **Ponderarea "
+"Distanței Inverse** (IDW) și **Triangularea Rețelelor Neregulate** (TIN). "
+"Dacă sunteți în căutarea unor metode suplimentare de interpolare, vă rugăm "
+"să consultați secțiunea 'Lecturi suplimentare', de la sfârșitul acestui "
+"subiect."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:67
+msgid "Inverse Distance Weighted (IDW)"
+msgstr "Distanța Inversă Ponderată (IDW)"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:69
+msgid ""
+"In the IDW interpolation method, the sample points are weighted during "
+"interpolation such that the influence of one point relative to another "
+"declines with distance from the unknown point you want to create (see "
+"figure_idw_interpolation_)."
+msgstr ""
+"În metoda de interpolare IDW, punctele de eșantionare sunt ponderate pe "
+"durata interpolării, astfel încât influența unui punct în raport cu altul "
+"scade o dată cu distanța de la punctul necunoscut pe care doriți să-l creați"
+" (v. figure_idw_interpolation_)."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:80
+msgid ""
+"Inverse Distance Weighted interpolation based on weighted sample point "
+"distance (left). Interpolated IDW surface from elevation vector points "
+"(right). Image Source: Mitas, L., Mitasova, H. (1999)."
+msgstr ""
+"Interpolarea Distanței Inverse Ponderate pe baza unei distanțe ponderat până"
+" la un punct eșantion (stânga). Suprafață interpolată IDW pe baza elevației "
+"punctelor vectoriale (dreapta). Sursa imaginii: Mitas, L., Mitasova, H. "
+"(1999)."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:84
+msgid ""
+"Weighting is assigned to sample points through the use of a weighting "
+"coefficient that controls how the weighting influence will drop off as the "
+"distance from new point increases. The greater the weighting coefficient, "
+"the less the effect points will have if they are far from the unknown point "
+"during the interpolation process. As the coefficient increases, the value of"
+" the unknown point approaches the value of the nearest observational point."
+msgstr ""
+"Ponderarea este asignată punctelor prelevate, prin utilizarea unui "
+"coeficient care controlează modul în care influența ponderării va scădea, pe"
+" măsură ce crește distanța de la noile puncte. Cu cât este mai mare "
+"coeficientul de ponderare, cu atât mai puțin efect vor avea punctele, dacă "
+"acestea sunt situate mai departe de punctul necunoscut pe durata procesului "
+"de interpolare. Pe măsură ce crește coeficientul, valoarea punctului "
+"necunoscut se apropie de valoarea celui mai apropiat punct observațional."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:91
+msgid ""
+"It is important to notice that the IDW interpolation method also has some "
+"disadvantages: the quality of the interpolation result can decrease, if the "
+"distribution of sample data points is uneven. Furthermore, maximum and "
+"minimum values in the interpolated surface can only occur at sample data "
+"points. This often results in small peaks and pits around the sample data "
+"points as shown in figure_idw_interpolation_."
+msgstr ""
+"Este important de observat faptul că metoda de interpolare IDW are și unele "
+"dezavantaje: calitatea rezultatului interpolării poate scădea, în cazul în "
+"care distribuția punctelor din eșantionul de date este inegală. Mai mult, "
+"valorile maxime și minime din suprafața interpolată pot apărea numai pentru "
+"punctele din eșantionul de date. Acest fapt conduce la mici paliere de "
+"creștere și scădere în jurul punctelor din eșantion, după cum se arată în "
+"figure_idw_interpolation_."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:98
+msgid ""
+"In GIS, interpolation results are usually shown as a 2 dimensional raster "
+"layer. In figure_idw_result_, you can see a typical IDW interpolation "
+"result, based on elevation sample points collected in the field with a GPS "
+"device."
+msgstr ""
+"În GIS, rezultatele de interpolare sunt de obicei prezentate ca un strat "
+"raster cu 2 dimensiuni. În figure_idw_result_, puteți vedea un rezultat de "
+"interpolare IDW tipic, bazat pe eșantionul punctelor de elevație, colectat "
+"din teren cu ajutorul unui dispozitiv GPS."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:108
+msgid ""
+"IDW interpolation result from irregularly collected elevation sample points "
+"(shown as black crosses)."
+msgstr ""
+"Rezultatul interpolării IDW, din puncte eșantion de colectare a elevației "
+"punctelor neregulate (prezentat cu cruciulițe negre)."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:112
+msgid "Triangulated Irregular Network (TIN)"
+msgstr "Rețea Neregulată Triangulată (TIN) "
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:114
+msgid ""
+"TIN interpolation is another popular tool in GIS. A common TIN algorithm is "
+"called **Delaunay triangulation**. It tries to create a surface formed by "
+"triangles of nearest neighbour points. To do this, circumcircles around "
+"selected sample points are created and their intersections are connected to "
+"a network of non overlapping and as compact as possible triangles (see "
+"figure_tin_interpolation_)."
+msgstr ""
+"Interpolarea TIN este un alt instrument popular în GIS. Un algoritm TIN "
+"comun este denumit **Triangulare Delaunay**. Acesta încearcă să creeze o "
+"suprafață formată din triunghiurile celor mai apropiate puncte vecine. "
+"Pentru a face acest lucru, se circumscriu eșantioanele de puncte selectate, "
+"iar intersecțiile lor sunt conectate la o rețea, pe cât de posibil compactă,"
+" de triunghiuri care nu se suprapun (v. figure_tin_interpolation_)."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:126
+msgid ""
+"Delaunay triangulation with circumcircles around the red sample data. The "
+"resulting interpolated TIN surface created from elevation vector points is "
+"shown on the right. Image Source: Mitas, L., Mitasova, H. (1999)."
+msgstr ""
+"Triangulația Delaunay cu cercuri în jurul datelor din eșantion, de culoare "
+"roșie. Suprafața interpolată TIN, care a rezultat din punctele vectoriale de"
+" elevație, este afișată în partea dreaptă. Sursa Imaginii: Mitas, L., "
+"Mitasova, H. (1999)."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:130
+msgid ""
+"The main disadvantage of the TIN interpolation is that the surfaces are not "
+"smooth and may give a jagged appearance. This is caused by discontinuous "
+"slopes at the triangle edges and sample data points. In addition, "
+"triangulation is generally not suitable for extrapolation beyond the area "
+"with collected sample data points (see figure_tin_result_ )."
+msgstr ""
+"Principalul dezavantaj al interpolării TIN se datorează faptului că "
+"suprafețele nu sunt netede și pot avea un aspect zimțat. Acest lucru este "
+"cauzat de pantele discontinue la muchiile triunghiurilor și la punctele "
+"eșantionului de date. În plus, triangulația nu este, în general, adecvată "
+"pentru extrapolare dincolo de suprafața de pe care s-au colectat punctele "
+"din eșantionul de date (vedeți figure_tin_result_ )."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:142
+msgid ""
+"Delaunay TIN interpolation result from irregularly collected rainfall sample"
+" points (blue circles)"
+msgstr ""
+"Rezultatul interpolării TIN Delaunay (prezentat cu cerculețe albastre), din "
+"eșantionul punctelor de elevație."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:146
+msgid "Common problems / things to be aware of"
+msgstr "Probleme comune / lucruri pe care trebuie să le cunoașteți"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:148
+msgid ""
+"It is important to remember that there is no single interpolation method "
+"that can be applied to all situations. Some are more exact and useful than "
+"others but take longer to calculate. They all have advantages and "
+"disadvantages. In practice, selection of a particular interpolation method "
+"should depend upon the sample data, the type of surfaces to be generated and"
+" tolerance of estimation errors. Generally, a three step procedure is "
+"recommended:"
+msgstr ""
+"Este important să reținem că nu există o metodă unică de interpolare care să"
+" poată fi aplicată tuturor situațiilor. Unele sunt mai precise și mai utile "
+"decât altele, dar necesită mai mult timp pentru calcule. Toate au avantaje "
+"și dezavantaje. În practică, selectarea unei anumite metode de interpolare "
+"ar trebui să depindă de datele eșantion, de tipul suprafețelor care urmează "
+"să fie generate și de toleranța de estimare a erorilor. În general, se "
+"recomandă o procedură în trei etape:"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:155
+msgid ""
+"Evaluate the sample data. Do this to get an idea on how data are distributed"
+" in the area, as this may provide hints on which interpolation method to "
+"use."
+msgstr ""
+"Evaluați datele eșantion. Efectuați acest lucru pentru a vă face o idee "
+"despre modul în care sunt distribuite datele în zonă, deoarece acest lucru "
+"vă poate oferi indicii cu privire la metoda de interpolare de utilizat."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:157
+msgid ""
+"Apply an interpolation method which is most suitable to both the sample data"
+" and the study objectives. When you are in doubt, try several methods, if "
+"available."
+msgstr ""
+"Aplicați metoda de interpolare cea mai potrivită, atât pentru datele "
+"eșantion, cât și pentru obiectivele studiului. Când aveți dubii, încercați "
+"mai multe metode, dacă sunt disponibile."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:160
+msgid ""
+"Compare the results and find the best result and the most suitable method. "
+"This may look like a time consuming process at the beginning. However, as "
+"you gain experience and knowledge of different interpolation methods, the "
+"time required for generating the most suitable surface will be greatly "
+"reduced."
+msgstr ""
+"Comparați rezultatele și găsiți cel mai bun rezultat și cea mai potrivită "
+"metodă. La început, acest lucru poate arăta ca un proces consumator de timp."
+" Cu toate acestea, pe masură ce câșigați experiență și cunoștințe despre "
+"diferitele metode de interpolare, timpul necesar pentru generarea celei mai "
+"potrivite suprafețe va fi redus foarte mult."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:166
+msgid "Other interpolation methods"
+msgstr "Alte metode de interpolare"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:168
+msgid ""
+"Although we concentrated on IDW and TIN interpolation methods in this "
+"worksheet, there are more spatial interpolation methods provided in GIS, "
+"such as Regularized Splines with Tension (RST), Kriging or Trend Surface "
+"interpolation. See the additional reading section below for a web link."
+msgstr ""
+"Deși ne-am concentrat pe metodele de interpolare IDW și TIN în această foaie"
+" de lucru, există mai multe metode de interpolare spațială în GIS, cum ar fi"
+" Curbele Rregularizate cu Tensiune (RST), Kriging sau Interpolarea Tendinței"
+" Suprafețelor. Consultați secțiunea lecturilor suplimentare de mai jos, "
+"pentru o adresă web."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:174
+msgid "What have we learned?"
+msgstr "Ce am învățat?"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:176
+msgid "Let's wrap up what we covered in this worksheet:"
+msgstr "Să recapitulăm subiectele abordate în acest capitol:"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:178
+msgid ""
+"**Interpolation** uses vector points with known values to estimate values at"
+" unknown locations to create a raster surface covering an entire area."
+msgstr ""
+"**Interpolarea** folosește puncte vectoriale cu valori cunoscute pentru a "
+"estima valorile din locații necunoscute, în scopul creării unei suprafațe "
+"raster care acoperă întreaga suprafață."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:180
+msgid "The interpolation result is typically a **raster** layer."
+msgstr "Rezultatul interpolării este, de obicei, un strat **raster**."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:181
+msgid ""
+"It is important to **find a suitable interpolation method** to optimally "
+"estimate values for unknown locations."
+msgstr ""
+"Este important să se **găsească o metodă potrivită de interpolare** pentru a"
+" estima în mod optim valorile pentru locațiile necunoscute."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:183
+msgid ""
+"**IDW interpolation** gives weights to sample points, such that the "
+"influence of one point on another declines with distance from the new point "
+"being estimated."
+msgstr ""
+"**Interpolarea IDW** atribuie greutate punctelor eșantion, astfel că "
+"influența unui punct asupra altuia scade o dată cu distanța față de noul "
+"punct estimat."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:186
+msgid ""
+"**TIN interpolation** uses sample points to create a surface formed by "
+"triangles based on nearest neighbour point information."
+msgstr ""
+"**Interpolarea TIN** folosește punctele de eșantionare, pentru a crea o "
+"suprafață formată din triunghiuri, pe baza cel mai apropiat punct vecin de "
+"informare."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:190
+msgid "Now you try!"
+msgstr "Încercați acum!"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:192
+msgid "Here are some ideas for you to try with your learners:"
+msgstr ""
+"Aici sunt câteva idei care pot fi testate împreună cu elevii dumneavoastră:"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:194
+msgid ""
+"The Department of Agriculture plans to cultivate new land in your area but "
+"apart from the character of the soils, they want to know if the rainfall is "
+"sufficient for a good harvest. All the information they have available comes"
+" from a few weather stations around the area. Create an interpolated surface"
+" with your learners that shows which areas are likely to receive the highest"
+" rainfall."
+msgstr ""
+"Departamentul de Agricultură intenționează să cultive noi terenuri în zona "
+"dumneavoastră, dar în afară de caracterul solurilor, ei vor să știe dacă "
+"precipitațiile sunt suficiente pentru o recoltă bună. Toate informațiile pe "
+"care le au la dispoziție vin de la câteva stații meteorologice din jurul "
+"zonei. Creați, împreună cu studenții, suprafața interpolată a ariilor "
+"susceptibile de a primi cele mai multe precipitații."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:199
+msgid ""
+"The tourist office wants to publish information about the weather conditions"
+" in January and February. They have temperature, rainfall and wind strength "
+"data and ask you to interpolate their data to estimate places where tourists"
+" will probably have optimal weather conditions with mild temperatures, no "
+"rainfall and little wind strength. Can you identify the areas in your region"
+" that meet these criteria?"
+msgstr ""
+"Biroul de turism vrea să publice informații cu privire la condițiile "
+"meteorologice din lunile ianuarie și februarie. Aceștia au date despre "
+"temperatură, precipitații și despre puterea vântului, iar dumneavoastră vi "
+"se cere să interpolați datele, pentru a estima locurile unde turiștii vor "
+"avea, probabil, condiții meteorologice optime, cu temperaturi moderate, fără"
+" precipitații și cu vânt slab. Puteți identifica zonele din regiunea "
+"dumneavoastră care îndeplinesc aceste criterii?"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:207
+msgid "Something to think about"
+msgstr "De reținut"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:209
+msgid ""
+"If you don't have a computer available, you can use a toposheet and a ruler "
+"to estimate elevation values between contour lines or rainfall values "
+"between fictional weather stations. For example, if rainfall at weather "
+"station A is 50 mm per month and at weather station B it is 90 mm, you can "
+"estimate, that the rainfall at half the distance between weather station A "
+"and B is 70 mm."
+msgstr ""
+"Dacă nu aveți un calculator la dispoziție, puteți folosi o foaie milimetrică"
+" și o riglă, pentru a estima valorile de elevație între curbele de nivel sau"
+" valorile precipitațiilor în stații meteorologice fictive. De exemplu, în "
+"cazul în care ploile la statia meteo A sunt de 50 mm pe lună, iar la stația "
+"B este de 90 mm, se poate estima că ploile de la jumătatea distanței dintre "
+"stațiile A și B sunt de 70 mm."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:216
+msgid "Further reading"
+msgstr "Lecturi suplimentare"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:218
+msgid "**Books**:"
+msgstr "**Cărți**:"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:220
+msgid ""
+"Chang, Kang-Tsung (2006). Introduction to Geographic Information Systems. "
+"3rd Edition. McGraw Hill. ISBN: 0070658986"
+msgstr ""
+"Chang, Kang-Tsung (2006). Introducere în sistemele de informații geografice."
+" A 3-a ediție. McGraw Hill. ISBN: 0070658986"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:222
+msgid ""
+"DeMers, Michael N. (2005): Fundamentals of Geographic Information Systems. "
+"3rd Edition. Wiley. ISBN: 9814126195"
+msgstr ""
+"DeMers, Michael N. (2005): Bazele Sistemelor Informatice Geografice. A 3-a "
+"ediție. Wiley. ISBN: 9814126195"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:224
+msgid ""
+"Mitas, L., Mitasova, H. (1999). Spatial Interpolation. In: P.Longley, M.F. "
+"Goodchild, D.J. Maguire, D.W.Rhind (Eds.), Geographical Information Systems:"
+" Principles, Techniques, Management and Applications, Wiley."
+msgstr ""
+"Mitas, L., Mitasova, H. (1999). Interpolare Spațială. În: P.Longley, M.F. "
+"Goodchild, D.J. Maguire, D.W.Rhind (Eds.), Sisteme de Informații Geografice:"
+" Principii, Tehnici, Management și Aplicații, Wiley."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:228
+msgid "**Websites**:"
+msgstr "**Site-uri web**:"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:230
+msgid "https://en.wikipedia.org/wiki/Interpolation"
+msgstr "https://en.wikipedia.org/wiki/Interpolation"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:231
+msgid "https://en.wikipedia.org/wiki/Delaunay_triangulation"
+msgstr "https://en.wikipedia.org/wiki/Delaunay_triangulation"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:233
+msgid ""
+"The QGIS User Guide also has more detailed information on interpolation "
+"tools provided in QGIS."
+msgstr ""
+"Ghidul Utilizatorului conține, de asemenea, informații detaliate cu privire "
+"la instrumentele de interpolare existente în QGIS."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:237
+msgid "What's next?"
+msgstr "Ce urmează?"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:239
+msgid ""
+"This is the final worksheet in this series. We encourage you to explore QGIS"
+" and use the accompanying QGIS manual to discover all the other things you "
+"can do with GIS software!"
+msgstr ""
+"Aceasta este foaia de lucru finală din această serie. Vă încurajăm să "
+"explorați QGIS și să folosiți manualul însoțitor, pentru a descoperi toate "
+"celelalte activități care fi efectuate cu o aplicație GIS!"

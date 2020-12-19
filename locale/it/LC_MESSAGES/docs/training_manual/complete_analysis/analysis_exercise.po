@@ -1,0 +1,301 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# Mauro Rizzato, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:18+0000\n"
+"Last-Translator: Mauro Rizzato, 2020\n"
+"Language-Team: Italian (https://www.transifex.com/qgis/teams/6144/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:2
+msgid "|LS| Supplementary Exercise"
+msgstr "|LS| Esercizio supplementare"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:4
+msgid ""
+"In this lesson, you will be guided through a complete GIS analysis in QGIS."
+msgstr ""
+"In questa lezione, sarai guidato in una analisi GIS completa con QGIS."
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:7
+msgid ""
+"Lesson developed by Linfiniti Consulting (South Africa) and Siddique Motala "
+"(Cape Peninsula University of Technology)"
+msgstr ""
+"Lezione preparata da Linfiniti Consulting (South Africa) e Siddique Motala "
+"(Cape Peninsula University of Technology)"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:11
+msgid "Problem Statement"
+msgstr "Enunciazione del problema"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:13
+msgid ""
+"You are tasked with finding areas in and around the Cape Peninsula that are "
+"suitable habitats for a rare fynbos plant species. The extent of your area "
+"of investigation covers Cape Town and the Cape Peninsula between "
+"Melkbosstrand in the north and Strand in the south. Botanists have provided "
+"you with the following preferences exhibited by the species in question:"
+msgstr ""
+"Sei incaricato di trovare delle aree all'interno e nei dintorni della Cape "
+"Peninsula che abbiamo un habitat adatto per delle rare specie di boscaglia "
+"fine. L'estensione dell'area di analisi va da Cape Town alla Cape Peninsula "
+"tra Melkbosstrand nel nord e Strand nel sud. I botanici hanno fornito le "
+"seguenti preferenze esposte dalle specie in questione:"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:20
+msgid "It grows on east facing slopes"
+msgstr "Crescono nei pendii affacciati a est"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:21
+msgid "It grows on slopes with a gradient between 15% and 60%"
+msgstr "Crescono nei pendii con inclinazione compresa fra il 15% ed il 60%"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:22
+msgid "It grows in areas that have a total annual rainfall of > 1000 mm"
+msgstr "Crescono in aree con precipitazioni annue maggiori di 1000 mm"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:23
+msgid "It will only be found at least 250 m away from any human settlement"
+msgstr ""
+"Possono essere trovate solo ad oltre 250m da qualsiasi insediamento umano"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:24
+msgid ""
+"The area of vegetation in which it occurs should be at least 6000 ㎡ in area"
+msgstr "L'area verde in cui si trovano deve essere di almeno 6000 ㎡"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:27
+msgid ""
+"As a student at the University, you have agreed to search for the plant in "
+"four different suitable areas of land. You want those four suitable areas to"
+" be the ones that are closest to the University of Cape Town where you live."
+" Use your GIS skills to determine where you should go to look."
+msgstr ""
+"Come studente universitario, hai accettato di cercare le piante in quattro "
+"diverse aree. Vuoi che le quattro aree siano quelle più vicine "
+"all'università di Cape Town dove vivi. Usa le tue abilità GIS per "
+"determinare dove dovresti andare a cercare."
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:34
+msgid "Solution Outline"
+msgstr "Tracciamento della soluzione"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:36
+msgid ""
+"The data for this exercise can be found in the "
+":file:`exercise_data/more_analysis` folder."
+msgstr ""
+"I dati per questo esercizio possono essere trovati nella cartella "
+":file:`exercise_data/more_analysis`."
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:39
+msgid ""
+"You are going to find the four suitable areas that are closest to the "
+"University of Cape Town."
+msgstr ""
+"Dovrai cercare le quattro aree adatte che sono più vicine all'università di "
+"Cape Town."
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:42
+msgid "The solution will involve:"
+msgstr "La soluzione comporterà:"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:44
+msgid ""
+"Analysing a DEM raster layer to find the east facing slopes and the slopes "
+"with the correct gradients"
+msgstr ""
+"Analizzare un layer raster DEM per trovare i pendii affacciati ad est e con "
+"la corretta pendenza"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:46
+msgid ""
+"Analysing a rainfall raster layer to find the areas with the correct amount "
+"of rainfall"
+msgstr ""
+"Analizzare un layer raster di precipitazioni per trovare le aree con la "
+"corretta quantità di pioggia"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:48
+msgid ""
+"Analysing a zoning vector layer to find areas that are away from human "
+"settlement and are of the correct size"
+msgstr ""
+"Analizzare un layer vettoriale a zone per trovare le aree lontane dagli "
+"insediamenti umani e della corretta dimensione"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:52
+msgid "|FA| Setting up the Map"
+msgstr "|FA| Impostazione della mappa"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:54
+msgid ""
+"Click on the |projectionEnabled| :sup:`Current CRS` button in the lower "
+"right corner of the screen. Under the :guilabel:`CRS` tab of the dialog that"
+" appears, use the \"Filter\" tool to search for \"33S\". Select the entry "
+":guilabel:`WGS 84 / UTM zone 33S` (with EPSG code ``32733``)."
+msgstr ""
+"Clicca sul pulsante |projectionEnabled| :sup:`SR Attuale` nell'angolo in "
+"basso a destra dello schermo. Nella scheda :guilabel:`SR` del dialogo che "
+"appare, usa lo strumento \"Filtra\" per cercare \"33S\". Seleziona la voce "
+":guilabel:`WGS 84 / UTM zone 33S` (con codice EPSG  ``32733``)."
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:60
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:286
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:313
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:363
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:517
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:586
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:672
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:741
+msgid "Click :guilabel:`OK`"
+msgstr "Clicca su :guilabel:`OK`"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:61
+msgid ""
+"Save the project file by clicking on the |fileSave| :sup:`Save Project` "
+"toolbar button, or use the :menuselection:`File --> Save As...` menu item."
+msgstr ""
+"Salva il progetto cliccando sul pulsante |fileSave| :sup:`Salva Progetto` "
+"sulla barra strumenti, oppure usa la voce di menu :menuselection:`Progetto "
+"--> Salva con nome...`."
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:65
+msgid ""
+"Save it in a new directory called :file:`Rasterprac`, that you should create"
+" somewhere on your computer. You will save whatever layers you create in "
+"this directory as well. Save the project as :file:`your_name_fynbos.qgs`."
+msgstr ""
+"Salvalo in una nuova cartella chiamata :file:`Rasterprac`, che dovrai creare"
+" da qualche parte nel tuo computer. Dovrai salvare i layer che creerai in "
+"questa cartella. Salva il progetto con nome :file:`tuo_nome_fynbos.qgs`."
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:71
+msgid "Loading Data into the Map"
+msgstr "Caricare i dati nella mappa"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:73
+msgid ""
+"In order to process the data, you will need to load the necessary layers "
+"(street names, zones, rainfall, DEM) into the map canvas."
+msgstr ""
+"Per elaborare i dati, avrai bisogno di caricare i layer necessari (nomi "
+"delle strade, zone, precipitazioni, DEM) nella mappa."
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:77
+msgid "For vectors..."
+msgstr "Per i vettori..."
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:79
+msgid ""
+"Click on the |dataSourceManager| :sup:`Open Data Source Manager` button in "
+"the *Data Source Manager Toolbar*, and enable the |addOgrLayer| "
+":guilabel:`Vector` tab in the dialog that appears, or use the "
+":menuselection:`Layer --> Add Layer -->` |addOgrLayer| :menuselection:`Add "
+"Vector Layer...` menu item"
+msgstr ""
+"Clicca sul pulsante |dataSourceManager| :sup:`Apri Gestore delle sorgenti "
+"dati` nella *Barra degli strumenti per la gestione delle sorgenti dati*, ed "
+"abilita la scheda |addOgrLayer| :guilabel:`Vettore` nel dialogo che appare, "
+"oppure usa la voce di menu :menuselection:`Layer --> Aggiungi Layer -->` "
+"|addOgrLayer| :menuselection:`Aggiungi Vettore...`"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:84
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:121
+msgid "Ensure that |radioButtonOn| :guilabel:`File` is selected"
+msgstr "Assicurati che sia selezionato |radioButtonOn| :guilabel:`File`"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:85
+msgid "Click on the :guilabel:`...` button to browse for vector dataset(s)"
+msgstr "Clicca sul pulsante :guilabel:`...` per sfogliare i dati vettoriali"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:87
+msgid ""
+"In the dialog that appears, open the "
+":file:`exercise_data/more_analysis/Streets` directory"
+msgstr ""
+"Nel dialogo che appare, apri la cartella "
+":file:`exercise_data/more_analysis/Streets`"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:89
+msgid "Select the file :file:`Street_Names_UTM33S.shp`"
+msgstr "Seleziona il file :file:`Street_Names_UTM33S.shp`"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:90
+msgid "Click :guilabel:`Open`."
+msgstr "Clicca :guilabel:`Apri`."
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:92
+msgid ""
+"The dialog closes and shows the original dialog, with the file path "
+"specified in the text field next to :guilabel:`Vector dataset(s)`. This "
+"allows you to ensure that the correct file is selected. It is also possible "
+"to enter the file path in this field manually, should you wish to do so."
+msgstr ""
+"Il dialogo si chiude e mostra quello originario, con il percorso del file "
+"nel campo di testo vicino a :guilabel:`Dataset vettoriale`. Questo ti "
+"permette di controllare di aver selezionato il file corretto. È anche "
+"possibile inserire manualmente il percorso del file, nel caso volessi farlo."
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:98
+msgid ""
+"Click :guilabel:`Add`. The vector layer will be loaded into your map. Its "
+"color is automatically assigned. You will change it later."
+msgstr ""
+"Clicca :guilabel:`Aggiungi`. Il layer vettoriale sarà caricato sulla mappa. "
+"I colori saranno assegnati automaticamente. Li cambierai più tardi."
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:102
+msgid "Rename the layer to ``Streets``"
+msgstr "Rinominare il layer in ``Streets``"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:104
+msgid ""
+"Right-click on it in the :guilabel:`Layers` panel (by default, the pane "
+"along the left-hand side of the screen)"
+msgstr ""
+"Clicca su di esso col tasto destro nel pannello :guilabel:`Layer` (per "
+"impostazione predefinita nella parte sinistra dello schermo)"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:106
+msgid ""
+"Click :guilabel:`Rename` in the dialog that appears and rename it, pressing "
+"the :kbd:`Enter` key when done"
+msgstr ""
+"Nel dialogo che appare clicca su :guilabel:`Rinomina Layer` e rinominalo, "
+"premendo il tasto :kbd:`Invio` quando finito"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:202
+msgid "Click :guilabel:`OK`."
+msgstr "Click :guilabel:`OK`."
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:232
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:352
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:384
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:399
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:478
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:573
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:615
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:762
+msgid "Click :guilabel:`Run`"
+msgstr "Clicca :guilabel:`Esegui`"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:435
+msgid "Click :guilabel:`Run`."
+msgstr "Click :guilabel:`Run`."

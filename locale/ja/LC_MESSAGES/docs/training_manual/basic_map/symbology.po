@@ -1,0 +1,576 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# fairtommy <fairtommy@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:17+0000\n"
+"Last-Translator: fairtommy <fairtommy@gmail.com>, 2020\n"
+"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:2
+msgid "|LS| Symbology"
+msgstr "|LS| シンボル体系"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:4
+msgid ""
+"The symbology of a layer is its visual appearance on the map. The basic "
+"strength of GIS over other ways of representing data with spatial aspects is"
+" that with GIS, you have a dynamic visual representation of the data you're "
+"working with."
+msgstr ""
+"レイヤーのシンボルは、地図上の外観です。空間的な側面を持つデータを表現する他の方法に勝るGISの基本的な強みは、GISを使用すると、作業データの動的な視覚表現ができることです。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:9
+msgid ""
+"Therefore, the visual appearance of the map (which depends on the symbology "
+"of the individual layers) is very important. The end user of the maps you "
+"produce will need to be able to easily see what the map represents. Equally "
+"as important, you need to be able to explore the data as you're working with"
+" it, and good symbology helps a lot."
+msgstr ""
+"したがって、（個々のレイヤーのシンボルに依存する）地図の外観は非常に重要です。作成した地図のエンドユーザーに地図が何を表現するかが簡単にわかるようにする必要があります。同様に重要なこととして、データはそれで作業しながら探索できる必要があり、優れたシンボルは大きな助けになります。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:15
+msgid ""
+"In other words, having proper symbology is not a luxury or just nice to "
+"have. In fact, it's essential for you to use a GIS properly and produce maps"
+" and information that people will be able to use."
+msgstr ""
+"つまり、適切なシンボルを持つことは、高級でもなくまたは単に素晴らしいことではありません。実際には、適切にGISを使用して、地図や、人々が使用できる情報を生成するためにそれが不可欠です。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:19
+msgid ""
+"**The goal for this lesson:** To be able to create any symbology you want "
+"for any vector layer."
+msgstr "**このレッスンの目標:** ベクターレイヤーに対して、望むとおりのシンボル体系を作成できるようになる"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:23
+msgid "|basic| |FA| Changing Colors"
+msgstr "|basic| |FA| 色を変更する"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:25
+msgid ""
+"To change a layer's symbology, open its :guilabel:`Layer Properties`. Let's "
+"begin by changing the color of the :guilabel:`landuse` layer."
+msgstr ""
+"レイヤーのシンボル体系を変更するには、そのレイヤーの :guilabel:`レイヤーのプロパティ` を表示します。 "
+":guilabel:`landuse` レイヤーの色を変更するのを始めましょう。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:31
+msgid ""
+"By default, you can also access a layer's properties by double-clicking on "
+"the layer in the Layers list."
+msgstr "デフォルトでは、レイヤーリストでリスト上でダブルクリックすることで、レイヤーのプロパティにアクセスできます。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:47
+msgid "Choose a gray color and click :guilabel:`OK`."
+msgstr "グレーを選択して、 :guilabel:`OK` をクリックします。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:48
+msgid ""
+"Click :guilabel:`OK` again in the :guilabel:`Layer Properties` window, and "
+"you will see the color change being applied to the layer."
+msgstr ""
+":guilabel:`レイヤープロパティ` ウィンドウで再度 :guilabel:`OK` "
+"をクリックし、色の変更がレイヤーに適用されたことを確認するでしょう。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:55
+#: ../../docs/training_manual/basic_map/symbology.rst:93
+msgid "|basic| |TY|"
+msgstr "|basic| |TY|"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:60
+msgid ":ref:`Check your results <symbology-colors-1>`"
+msgstr ":ref:`結果の確認 <symbology-colors-1>`"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:64
+msgid "|basic| |FA| Changing Symbol Structure"
+msgstr "|basic| |FA| シンボル構造を変更する"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:66
+msgid ""
+"This is good stuff so far, but there's more to a layer's symbology than just"
+" its color. Next we want to eliminate the lines between the different land "
+"use areas so as to make the map less visually cluttered."
+msgstr ""
+"これはこれまでのところ良いものですが、ちょうどその色よりも、レイヤーのシンボルに適したものがあります。次に、視覚的に雑然となるように様々な土地利用エリア間のラインを削除したいと思います。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:70
+msgid ""
+"Open the :guilabel:`Layer Properties` window for the :guilabel:`landuse` "
+"layer."
+msgstr ":guilabel:`landuse` レイヤーの :guilabel:`レイヤーのプロパティ` ウィンドウを開きます。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:80
+msgid "Change this to :guilabel:`No Pen`."
+msgstr "これを :guilabel:`ペンなし` に変更します。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:85
+#: ../../docs/training_manual/basic_map/symbology.rst:134
+#: ../../docs/training_manual/basic_map/symbology.rst:190
+msgid "Click :guilabel:`OK`."
+msgstr ":guilabel:`OK` をクリックします。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:87
+msgid "Now the :guilabel:`landuse` layer won't have any lines between areas."
+msgstr "今、 :guilabel:`landuse` レイヤーでは、エリアの間に何もラインがありません。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:97
+msgid ""
+"Change the :guilabel:`rivers` layer's symbology to a sensible representation"
+" of waterways."
+msgstr "水路の表示を明確に表現するため :guilabel:`rivers` レイヤーのシンボル体系を変更します。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:104
+msgid ":ref:`Check your results <symbology-structure-1>`"
+msgstr ":ref:`結果の確認 <symbology-structure-1>`"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:107
+msgid "|moderate| |FA| Scale-Based Visibility"
+msgstr "|moderate| |FA| 縮尺に基づく表示"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:109
+msgid ""
+"Sometimes you will find that a layer is not suitable for a given scale. For "
+"example, a dataset of all the continents may have low detail, and not be "
+"very accurate at street level. When that happens, you want to be able to "
+"hide the dataset at inappropriate scales."
+msgstr ""
+"時には、レイヤーが与えられた縮尺に適していないとわかることもあります。例えば、すべての大陸のデータセットは、詳細さが低く、街区レベルではあまり正確ではないかもしれません。それが起こると、不適切な縮尺でデータセットを非表示できるようにしたくなります。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:120
+msgid ""
+"... is not very useful. The buildings are hard to distinguish at that scale."
+msgstr "…あまり便利ではありません。その縮尺で建物を区別するのは難しいです。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:122
+msgid "To enable scale-based rendering:"
+msgstr "縮尺に基づくレンダリングを有効にするには："
+
+#: ../../docs/training_manual/basic_map/symbology.rst:124
+msgid ""
+"Open the :guilabel:`Layer Properties` dialog for the :guilabel:`buildings` "
+"layer."
+msgstr ":guilabel:`buildings` レイヤーの :guilabel:`レイヤーのプロパティ` ダイアログを開きます。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:136
+msgid ""
+"Test the effects of this by zooming in and out in your map, noting when the "
+":guilabel:`buildings` layer disappears and reappears."
+msgstr ":guilabel:`buildings` レイヤーがいつ現れたり消えるかに注目しながら、地図で拡大・縮小する効果をテストします。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:139
+msgid ""
+"You can use your mouse wheel to zoom in increments. Alternatively, use the "
+"zoom tools to zoom to a window:"
+msgstr ""
+"インクリメントにズームインするために、マウスホイールを使用できます。あるいは、ウインドウにズームするために、ズーム・ツールを使用してください："
+
+#: ../../docs/training_manual/basic_map/symbology.rst:142
+msgid "|zoomIn| |zoomOut|"
+msgstr "|zoomIn| |zoomOut|"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:145
+msgid "|moderate| |FA| Adding Symbol Layers"
+msgstr "|moderate| |FA| シンボルレイヤーを追加する"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:147
+msgid ""
+"Now that you know how to change simple symbology for layers, the next step "
+"is to create more complex symbology. QGIS allows you to do this using symbol"
+" layers."
+msgstr ""
+"これでレイヤーに対する単純なシンボルを変更する方法はわかりましたので、次のステップは、より複雑なシンボルを作成することです。QGISでは、シンボルレイヤーを使用して、これを行うことができます。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:154
+msgid ""
+"In this example, the current symbol has no outline (i.e., it uses the "
+":guilabel:`No Pen` border style)."
+msgstr ""
+"この例では、現在のシンボルは何のアウトラインを持っていません（すなわち、それは :guilabel:`ペンなし` の境界スタイルを使用しています）。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:171
+msgid ""
+"Now there's a second symbol layer. Being a solid color, it will of course "
+"completely hide the previous kind of symbol. Plus, it has a :guilabel:`Solid"
+" Line` border style, which we don't want. Clearly this symbol has to be "
+"changed."
+msgstr ""
+"今、第2のシンボルレイヤーがあります。ソリッドカラーなので、それは当然のことながら、完全にシンボルの前のようなものを非表示になります。 "
+":guilabel:`実線` の境界スタイル、プラス、それは持っています、これは望ましくない。明らかに、この記号は、変更する必要があります。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:175
+msgid ""
+"It's important not to get confused between a map layer and a symbol layer. A"
+" map layer is a vector (or raster) that has been loaded into the map. A "
+"symbol layer is part of the symbol used to represent a map layer. This "
+"course will usually refer to a map layer as just a layer, but a symbol layer"
+" will always be called a symbol layer, to prevent confusion."
+msgstr ""
+"地図レイヤーとシンボルレイヤーを混同しないことが重要です。地図レイヤーは地図にロードされているベクター（またはラスター）です。シンボルレイヤーは、地図レイヤーを表すために使用されるシンボルの一部です。このコースでは、たいていは地図レイヤーを単にレイヤーと言いますが、シンボルレイヤーは、混乱を防ぐために、シンボルレイヤーと呼びます。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:183
+msgid "Set the border style to :guilabel:`No Pen`, as before."
+msgstr "以前のように、境界スタイルを :guilabel:`ペンなし` へ設定します。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:184
+msgid ""
+"Change the fill style to something other than :guilabel:`Solid` or "
+":guilabel:`No brush`. For example:"
+msgstr "塗りつぶしスタイルを :guilabel:`ソリッド` か :guilabel:`ブラシなし` 以外に変更します。例えば："
+
+#: ../../docs/training_manual/basic_map/symbology.rst:199
+msgid "It's fun! But it probably has too many colors to use in a real map..."
+msgstr "これは楽しいです！しかし、おそらく、実際の地図に使用するためにあまりにも色が多すぎ..."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:204
+#: ../../docs/training_manual/basic_map/symbology.rst:284
+#: ../../docs/training_manual/basic_map/symbology.rst:420
+msgid "|moderate| |TY|"
+msgstr "|moderate| |TY|"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:206
+msgid ""
+"Remembering to zoom in if necessary, create a simple, but not distracting "
+"texture for the :guilabel:`buildings` layer using the methods above."
+msgstr ""
+"シンプルに、必要に応じて、ズームイン作成するために覚えて、しかしためのテクスチャをそらさない :guilabel:`buildings` "
+"レイヤーが上記の方法を使用して。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:209
+msgid ":ref:`Check your results <symbology-layers-1>`"
+msgstr ":ref:`結果の確認 <symbology-layers-1>`"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:213
+msgid "|moderate| |FA| Ordering Symbol Levels"
+msgstr "|moderate| |FA| シンボルレベルの順序"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:215
+msgid ""
+"When symbol layers are rendered, they are also rendered in a sequence, "
+"similar to the way the different map layers are rendered. This means that in"
+" some cases, having many symbol layers in one symbol can cause unexpected "
+"results."
+msgstr ""
+"シンボルレイヤーがレンダリングされるとき、それらは、異なる地図レイヤーがレンダリングされる方法と同様の順列でレンダリングされます。これは、場合によっては、一つのシンボルに多くのシンボルレイヤーを有することは予期しない結果を引き起こす可能性があることを意味します。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:219
+msgid ""
+"Give the :guilabel:`roads` layer an extra symbol layer (using the method for"
+" adding symbol layers demonstrated above)."
+msgstr ""
+":guilabel:`roads` レイヤーに余分なシンボルレイヤー与えます（上記実証シンボルレイヤーを追加するためのメソッドを使用して）。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:224
+msgid "You'll notice that this happens:"
+msgstr "あなたはこれが発生したことがわかります。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:232
+msgid ""
+"To prevent this from happening, you can sort the symbol levels and thereby "
+"control the order in which the different symbol layers are rendered."
+msgstr "これを防ぐには、シンボルレベルを並べ替えることにより、異なるシンボルレイヤーがレンダリングされる順序を制御できます。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:260
+msgid "Click :guilabel:`OK` twice to return to the map."
+msgstr ":guilabel:`OK` を２回クリックし、地図に戻ります。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:262
+msgid "The map will now look like this:"
+msgstr "地図はこのように見えるでしょう:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:286
+msgid "Change the appearance of the :guilabel:`roads` layer again."
+msgstr "もう一度 :guilabel:`roads` レイヤーの外観を変更します。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:295
+msgid ":ref:`Check your results <symbology-levels-1>`"
+msgstr ":ref:`結果の確認 <symbology-levels-1>`"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:301
+#: ../../docs/training_manual/basic_map/symbology.rst:478
+msgid "|hard| |TY|"
+msgstr "|hard| |TY|"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:307
+msgid "Create a new map and add only the :guilabel:`roads` dataset."
+msgstr "新しい地図を作成し、 :guilabel:`roads` データセットだけ追加します。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:310
+msgid "Zoom in to the |majorUrbanName| area."
+msgstr "|majorUrbanName| のエリアにズームします。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:311
+msgid ""
+"Using symbol layers, ensure that the outlines of layers flow into one "
+"another as per the image below:"
+msgstr "シンボルレイヤーを使用して、レイヤーの輪郭線は、以下の画像に従って互いに流入することを確認してください："
+
+#: ../../docs/training_manual/basic_map/symbology.rst:317
+msgid ":ref:`Check your results <symbology-levels-2>`"
+msgstr ":ref:`結果の確認 <symbology-levels-2>`"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:321
+msgid "|moderate| |FA| Symbol layer types"
+msgstr "|moderate| |FA| シンボルレイヤータイプ"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:328
+msgid ""
+"Each type of vector (point, line and polygon) has its own set of symbol "
+"layer types. First we will look at the types available for points."
+msgstr ""
+"ベクターの各種類（ポイント、ライン、ポリゴン）は、シンボルレイヤータイプの独自のセットを有しています。まず、ポイントのために利用可能なタイプを見ていきます。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:332
+msgid "Point Symbol Layer Types"
+msgstr "ポイントシンボルレイヤータイプ"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:335
+msgid "Change the symbol properties for the :guilabel:`places` layer:"
+msgstr ":guilabel:`places` レイヤーのシンボルプロパティを変更します。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:347
+msgid ""
+"Investigate the various options available to you, and choose a symbol with "
+"styling you think is appropriate."
+msgstr "利用できるさまざまなオプションを調査し、適切だとお思いのスタイルでシンボルを選択してください。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:355
+msgid "Line Symbol Layer Types"
+msgstr "ラインシンボルレイヤータイプ"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:357
+msgid "To see the various options available for line data:"
+msgstr "ラインデータのために利用できるさまざまなオプションを表示するには："
+
+#: ../../docs/training_manual/basic_map/symbology.rst:376
+msgid ""
+"Ensure that the symbol levels are correct (via the :menuselection:`Advanced "
+"--> Symbol levels` dialog we used earlier) before applying the style."
+msgstr ""
+"スタイルを適用する前に、シンボルレベルが正しいことを（以前に使用した :menuselection:`高度な --> シンボルレベル` "
+"ダイアログ経由で）確認してください。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:380
+msgid ""
+"Once you have applied the style, take a look at its results on the map. As "
+"you can see, these symbols change direction along with the road but don't "
+"always bend along with it. This is useful for some purposes, but not for "
+"others. If you prefer, you can change the symbol layer in question back to "
+"the way it was before."
+msgstr ""
+"スタイルを適用したら、地図上でその結果を見てみましょう。おわかりのように、これらのシンボルは道路と一緒に向きを変えるが、常にそれに沿って曲げないでください。これは、いくつかの目的には有用ですが、他の目的には有用ではありません。ご希望の場合は、前にした方法に戻って、問題のシンボルレイヤーを変更できます。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:387
+msgid "Polygon Symbol Layer Types"
+msgstr "ポリゴンシンボルレイヤータイプ"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:389
+msgid "To see the various options available for polygon data:"
+msgstr "ポリゴンデータのために利用できるさまざまなオプションを表示するには："
+
+#: ../../docs/training_manual/basic_map/symbology.rst:393
+msgid "Investigate what the different options on the list can do."
+msgstr "リスト上の異なるオプションが何ができるかを調べます。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:394
+msgid "Choose one of them that you find suitable."
+msgstr "これらのうち、適した１つを選択します。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:395
+msgid ""
+"If in doubt, use the :guilabel:`Point pattern fill` with the following "
+"options:"
+msgstr "次のオプションを使用して、 :guilabel:`ポイントパターン塗り` 疑問がある場合は、使用します。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:404
+msgid "Add a new symbol layer with a normal :guilabel:`Simple fill`."
+msgstr ":guilabel:`単純塗り` 通常で新しいシンボルレイヤーを追加します。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:405
+msgid "Make it the same light blue with a darker blue border."
+msgstr "それを暗青の境界を持つ水色にします。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:406
+msgid ""
+"Move it underneath the point pattern symbol layer with the :guilabel:`Move "
+"down` button:"
+msgstr ":guilabel:`下に移動` ボタンで点パターンシンボルレイヤーの下に移動させます。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:412
+msgid ""
+"As a result, you have a textured symbol for the water layer, with the added "
+"benefit that you can change the size, shape and distance of the individual "
+"dots that make up the texture."
+msgstr ""
+"その結果、テクスチャを構成する個々のドットの大きさ、形状や距離を変えることができるという利点があり、水のレイヤーのためのテクスチャシンボルを持っています。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:494
+msgid "|hard| |FA| Creating a Custom SVG Fill"
+msgstr "|hard| |FA| カスタムSVG塗りつぶしを作成する"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:496
+msgid ""
+"To do this exercise, you will need to have the free vector editing software "
+"`Inkscape <https://inkscape.org/>`_ installed."
+msgstr ""
+"この演習を行うには、無料のベクター編集ソフトウェア `Inkscape <https://inkscape.org/>`_ "
+"がインストールされている必要があります。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:505
+msgid ""
+"You should find this familiar if you have used other vector image editing "
+"programs, like Corel."
+msgstr "コーレルのような、他のベクター画像編集プログラムを使用している方は、これがなじみ深いと思うはずです。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:508
+msgid ""
+"First, we'll change the canvas to a size appropriate for a small texture."
+msgstr "まず、小さなテクスチャに適したサイズにキャンバスを変更します。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:510
+msgid ""
+"Click on the menu item :menuselection:`File --> Document Properties`. This "
+"will give you the :guilabel:`Document Properties` dialog."
+msgstr ""
+"メニュー項目 :menuselection:`ファイル --> 文書のプロパティ` をクリックします。これは :guilabel:`文書のプロパティ`"
+"  ダイアログを表示するでしょう。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:512
+msgid "Change the :guilabel:`Units` to :guilabel:`px`."
+msgstr ":guilabel:`単位` を :guilabel:`px` に変更します。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:514
+msgid "Close the dialog when you are done."
+msgstr "実行後はダイアログを閉じます。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:515
+msgid ""
+"Click on the menu item :menuselection:`View --> Zoom --> Page` to see the "
+"page you are working with."
+msgstr ""
+":menuselection:`ビュー --> ズーム --> ページ` メニュー項目をクリックして、作業しているページを参照してください。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:517
+msgid "Select the :guilabel:`Circle` tool:"
+msgstr ":guilabel:`円` ツールを選択します。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:522
+msgid ""
+"Click and drag on the page to draw an ellipse. To make the ellipse turn into"
+" a circle, hold the :kbd:`Ctrl` button while you're drawing it."
+msgstr ""
+"楕円を描画するためにクリックして、ページ上でドラッグします。楕円が円に変わるようにするには、描いている間 :kbd:`Ctrl` ボタンを押し続けます。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:524
+msgid ""
+"Right-click on the circle you just created and open its :guilabel:`Fill and "
+"Stroke` options. You can modify its rendering, such as:"
+msgstr ""
+"先ほど作成した円を右クリックし、その :guilabel:`塗りとストローク` オプションを開きます。このように、そのレンダリングを変更できます："
+
+#: ../../docs/training_manual/basic_map/symbology.rst:527
+msgid "Change the :guilabel:`Fill` color to a somehow pale grey-blue,"
+msgstr ":guilabel:`塗り` 色を何とか淡灰青に変更し、"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:528
+msgid "Assign to the border a darker color in :guilabel:`Stroke paint` tab,"
+msgstr ":guilabel:`ストロークの塗り` タブの中で国境に暗い色の割り当て]、"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:529
+msgid "And reduce the border thickness under :guilabel:`Stroke style` tab."
+msgstr ":guilabel:`ストロークのスタイル` タブと下の境界の太さを減らします。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:534
+msgid "Draw a line using the :guilabel:`Pencil` tool:"
+msgstr ":guilabel:`鉛筆` ツール使って線を引きます："
+
+#: ../../docs/training_manual/basic_map/symbology.rst:538
+msgid "Move the pointer horizontally and place a point with a simple click."
+msgstr "水平方向にポインタを移動し、クリックするだけでポイントを置きます。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:539
+msgid ""
+"Click and snap to the vertex of the line and trace a vertical line, ended by"
+" a simple click."
+msgstr "クリックして、ラインの頂点にスナップし、クリックするだけで終わる垂直線を、トレースします。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:541
+msgid "Now join the two end vertices."
+msgstr "今、二つの端の頂点に参加。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:542
+msgid ""
+"Change the color and width of the triangle symbol to match the circle's "
+"stroke and move it around as necessary, so that you end up with a symbol "
+"like this one:"
+msgstr "このようなシンボルで終わるように、円のストロークに合わせ、必要に応じて、それを周りに移動するには三角形のシンボルの色と幅を変更します。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:552
+msgid "In QGIS:"
+msgstr "QGISでは:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:554
+msgid "Open the :guilabel:`Layer Properties` for the :file:`landuse` layer."
+msgstr ":file:`landuse` レイヤーに :guilabel:`レイヤーのプロパティ` を開きます。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:567
+msgid ""
+"Once you validate the dialog, features in :guilabel:`landuse` layer should "
+"now be covered by a set of symbols, showing a texture like the one on the "
+"following map. If textures are not visible, you may need to zoom in the map "
+"canvas or set in the layer properties a bigger :guilabel:`Texture width`."
+msgstr ""
+"ダイアログを有効にすると、 :guilabel:`土地利用` "
+"レイヤの地物がシンボルで覆われ、次の地図のような模様が表示されるはずです。模様が見えない場合は、地図キャンバスを拡大するか、レイヤのプロパティで "
+":guilabel:`模様の幅`を大きく設定する必要があるかもしれません。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:576
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:578
+msgid ""
+"Changing the symbology for the different layers has transformed a collection"
+" of vector files into a legible map. Not only can you see what's happening, "
+"it's even nice to look at!"
+msgstr ""
+"異なるレイヤーのためにシンボルを変更することで、ベクターファイルの集まりを読みやすい地図に変えてきました。何が起こっているか見ることができるだけでなく、それを見るのはうれしくもあります！"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:583
+msgid "|FR|"
+msgstr "|FR|"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:589
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:591
+msgid ""
+"Changing symbols for whole layers is useful, but the information contained "
+"within each layer is not yet available to someone reading these maps. What "
+"are the streets called? Which administrative regions do certain areas belong"
+" to? What are the relative surface areas of the farms? All of this "
+"information is still hidden. The next lesson will explain how to represent "
+"this data on your map."
+msgstr ""
+"レイヤー全体のためのシンボルを変更することは便利ですが、それぞれのレイヤーの中に含まれている情報は、まだこれらの地図を読んでいる誰かには利用できません。街路が何と呼ばれていますか？ある領域がどの行政地域に属していますか？農場の相対的な表面積は何ですか？この情報のすべてがまだ隠されています。次のレッスンでは、地図上にデータを表現する方法を説明します。"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:598
+msgid "Did you remember to save your map recently?"
+msgstr "最近の忘れずに地図を保存しましたか？"

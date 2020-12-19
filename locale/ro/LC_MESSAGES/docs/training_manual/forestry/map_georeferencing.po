@@ -1,0 +1,204 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:20+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Romanian (https://www.transifex.com/qgis/teams/6144/ro/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:2
+msgid "|LS| Georeferencing a Map"
+msgstr "|LS| Georeferențierea unei Hărți"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:4
+msgid ""
+"A common forestry task would be the update of the information for a forestry"
+" area. It is possible that the previous information for that area dates "
+"several years back and was collected analogically (that is, in paper) or "
+"perhaps it was digitized but all you have left is the paper version of that "
+"inventory data."
+msgstr ""
+"O activitate silvică obișnuită constă în actualizarea informațiilor pentru "
+"zonele forestiere. Este posibil ca informațiile anterioare pentru acea zonă "
+"să aibă o vechime de mai mulți ani, să fi fost colectate în mod analogic "
+"(adică, pe hârtie) sau poate că au fost digitizate, dar tot ce aveți "
+"reprezintă versiunea pe hârtie a datelor inventarului respectiv."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:9
+msgid ""
+"Most likely you would like to use that information in your GIS to, for "
+"example, compare later with later inventories. This means that you will need"
+" to digitize the information at hand using your GIS software. But before you"
+" can start the digitizing, there is an important first step to be done, "
+"scanning and georeferencing your paper map."
+msgstr ""
+"Cel mai probabil, v-ați dori să utilizați aceste informații în GIS, de "
+"exemplu, pentru a le compara mai târziu cu inventarele ulterioare. Acest "
+"lucru presupune că va trebui să digitizați manual informațiile, cu ajutorul "
+"softului GIS. Dar, înainte de a începe digitizarea, trebuie făcuți pași "
+"importanți, cum ar fi scanarea și georeferențierea hărții de hârtie."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:15
+msgid ""
+"**The goal for this lesson:** To learn to use the Georeferencer tool in "
+"QGIS."
+msgstr ""
+"**Scopul acestei lecții:** De a afla cum să utilizați instrumentul de "
+"Georeferențiere din QGIS."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:18
+msgid "|basic| Scan the map"
+msgstr "|basic| Scanarea hărții "
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:20
+msgid ""
+"The first task you will have to do is to scan your map. If your map is too "
+"big, then you can scan it in different parts but keep in mind that you will "
+"have to repeat preprocessing and georeferencing tasks for each part. So if "
+"possible, scan the map in as few parts as possible."
+msgstr ""
+"Prima activitate constă în scanarea hărții. Dacă harta dvs. este prea mare, "
+"atunci o puteți scana pe porțiuni, dar rețineți că pentru fiecare parte va "
+"trebui să reluați acțiunile de preprocesare și georeferențiere. Din acest "
+"motiv, este recomandabil să împărțiți harta în cel mai mic număr de porțiuni"
+" posibile."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:31
+msgid ""
+"For this exercise you will use a previously scanned map, you can find it as "
+":kbd:`rautjarvi_map.tif` in the data folder :kbd:`exercise_data/forestry`"
+msgstr ""
+"Pentru acest exercițiu, veți utiliza o hartă scanată anterior, pe care o "
+"puteți găsi ca :kbd:`rautjarvi_map.tif` în folderul de date "
+":kbd:`exercise_data/forestry`"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:35
+msgid "|basic| |FA| Georeferencing the scanned map"
+msgstr "|basic| |FA| Georeferențierea hărții scanate"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:43
+msgid "Save the QGIS project as :kbd:`map_digitizing.qgs`."
+msgstr "Salvați proiectul QGIS sub numele :kbd:`map_digitizing.qgs`."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:49
+msgid "To georeference the map:"
+msgstr "Pentru a georeferenția harta:"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:51
+msgid ""
+"Open the georeference tool, :menuselection:`Raster --> Georeferencer --> "
+"Georeferencer`."
+msgstr ""
+"Deschideți instrumentul de georeferențiere, :menuselection:`Raster --> "
+"Georeferencer --> Georeferencer`."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:56
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:69
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:84
+msgid "Click :guilabel:`OK`."
+msgstr "Clic pe :guilabel:`OK`"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:58
+msgid ""
+"Next you should define the transformation settings for georeferencing the "
+"map:"
+msgstr ""
+"Ulterior ar trebui să definiți setările de transformare pentru "
+"georeferențierea hărții:"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:60
+msgid "Open :menuselection:`Settings --> Transformation settings`."
+msgstr "Deschideți :menuselection:`Settings --> Transformation settings`."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:61
+msgid ""
+"Click the icon next to the :kbd:`Output raster` box, go to the folder and "
+"create the folder :kbd:`exercise_data\\\\forestry\\\\digitizing` and name "
+"the file as :kbd:`rautjarvi_georef.tif`."
+msgstr ""
+"Faceți clic pe pictograma de lângă caseta :kbd:`Output raster`, mergeți și "
+"creați folderul :kbd:`exercise_data\\\\forestry\\\\digitizing`, apoi "
+"denumiți fișierul :kbd:`rautjarvi_georef.tif`."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:64
+msgid "Set the rest of parameters as shown below."
+msgstr "Setați restul parametrilor așa cum se arată mai jos."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:80
+msgid ""
+"Select the :guilabel:`Add point` tool and click in the intersection of the "
+"cross-hairs (pan and zoom as needed)."
+msgstr ""
+"Selectați instrumentul :guilabel:`Adăugare punct`, apoi faceți clic pe "
+"intersecția firelor reticulare (deplasați și măriți după nevoie)."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:82
+msgid ""
+"In the :guilabel:`Enter map coordinates` dialogue write the coordinates that"
+" appear in the map (X: 2557000 and Y: 6786000)."
+msgstr ""
+"În dialogul :guilabel:`Enter map coordinates` notați coordonatele care apar "
+"pe hartă (X: 2557000 si Y: 6786000)."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:86
+msgid "The first coordinate for the georeferencing is now ready."
+msgstr "Prima coordonată de georeferențiat deja este gata."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:111
+msgid ":menuselection:`File --> Save GCP points as...`."
+msgstr ":menuselection:`File --> Save GCP points as...`."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:112
+msgid ""
+"In the folder :kbd:`exercise_data\\\\forestry\\\\digitizing`, name the file "
+":kbd:`rautjarvi_map.tif.points`."
+msgstr ""
+"În folderul :kbd:`exercise_data\\\\forestry\\\\digitizing`, denumiți "
+"fișierul :kbd:`rautjarvi_map.tif.points`."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:115
+msgid "Finally, georeference you map:"
+msgstr "În cele din urmă, georeferențiați harta dvs.:"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:117
+msgid ":menuselection:`File --> Start georeferencing`."
+msgstr ":menuselection:`File --> Start georeferencing`."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:118
+msgid ""
+"Note that you named the file already as :kbd:`rautjarvi_georef.tif` when you"
+" edited the Georeferencer settings."
+msgstr ""
+"Rețineți că deja ați denumit fișierul :kbd:`rautjarvi_georef.tif`, când ați "
+"editat setările Georeferențiatorului."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:133
+msgid ""
+"Save the changes to your QGIS project, you will continue from this point for"
+" the next lesson."
+msgstr ""
+"Salvați modificările proiectului QGIS, apoi veți continua din acest punct cu"
+" lecția următoare."
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:137
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:143
+msgid "|WN|"
+msgstr "|WN|"

@@ -1,0 +1,223 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# Klaus Affeldt <ka@ansperger.de>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-14 22:11+0200\n"
+"PO-Revision-Date: 2020-03-16 19:21+0000\n"
+"Last-Translator: Klaus Affeldt <ka@ansperger.de>, 2020\n"
+"Language-Team: German (https://www.transifex.com/qgis/teams/6144/de/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/training_manual/processing/extents.rst:2
+msgid "Defining extents"
+msgstr "Definierung von Ausschnitten"
+
+#: ../../docs/training_manual/processing/extents.rst:4
+msgid ""
+"In this lesson we will see how to define extents, which are needed by some "
+"algorithms, especially raster ones."
+msgstr ""
+"In dieser Lektion werden wir sehen, wie man Ausdehnungen definiert, die von "
+"einigen Algorithmen, v.a. den Rasteralgorithmen benötigt werden."
+
+#: ../../docs/training_manual/processing/extents.rst:7
+msgid ""
+"Some algorithms require an extent to define the area to be covered by the "
+"analysis they perform, and usually to define the extent of the resulting "
+"layer."
+msgstr ""
+"Einige Algorithmen benötigen eine Ausdehnung, um die Fläche zu definieren, "
+"die von der Analyse berücksichtigt wird und auch die Ausdehnung des "
+"Ausgabelayers bestimmt."
+
+#: ../../docs/training_manual/processing/extents.rst:10
+msgid ""
+"When an extent is required, it can be defined manually by entering the four "
+"values that define it (min X, min Y, max X, max Y), but there are other more"
+" practical and more interesting ways of doing it as well. We will see all of"
+" them in this lesson."
+msgstr ""
+"Wenn eine Ausdehnung erforderlich ist, kann sie manuell mit Hilfe der vier "
+"Werte die sie definieren vorgegeben werden (min X, min Y, max X, max Y). Es "
+"gibt aber auch andere praktikablere und interessantere Möglichkeiten, dies "
+"zu tun. Wir werden sie in dieser Lektion kennenlernen."
+
+#: ../../docs/training_manual/processing/extents.rst:15
+msgid ""
+"First, let's open an algorithm that requires an extent to be defined. Open "
+"the *Rasterize* algorithm, which creates a raster layer from a vector layer."
+msgstr ""
+"Als Erstes öffnen wir einen Algorithmus, der die Definition einer Ausdehnung"
+" voraussetzt. Öffnen Sie den Algorithmus *Rastern*, der einen Rasterlayer "
+"aus einem Vektorlayer erstellt."
+
+#: ../../docs/training_manual/processing/extents.rst:20
+msgid ""
+"All the parameters, except for the last two ones, are used to define which "
+"layer is to be rasterized, and configure how the rasterization process "
+"should work. The two last parameters, on the other hand, define the "
+"characteristics of the output layer. That means that they define the area "
+"that is covered (which is not necessarily the same area covered by the input"
+" vector layer), and the resolution/cellsize (which cannot be inferred from "
+"the vector layer, since vector layers do not have a cellsize)."
+msgstr ""
+"Alle Parameter bis auf die letzten beiden werden benutzt, um zu bestimmen, "
+"welcher Layer gerastert werden soll und wie der Prozess der Rasterung "
+"ablaufen soll. Die letzen beiden Paramter bestimmen dagegen die "
+"Charakteristik des Ausgabelayers. Sie bestimmen die bedeckte Fläche (die "
+"unter Umständen von der Fläche des Eingabevektorlayers abweicht) und die "
+"Auflösung/Zellengröße (wird nicht vom Vektorlayer beeinflusst, da "
+"Vektorlayer keine Zellengröße verwenden)."
+
+#: ../../docs/training_manual/processing/extents.rst:28
+msgid ""
+"The first thing you can do is to type the 4 defining values explained "
+"before, separated by commas."
+msgstr ""
+"Als Erstes geben wir die 4 bestimmenden oben beschriebenen Werte getrennt "
+"durch Komma ein."
+
+#: ../../docs/training_manual/processing/extents.rst:33
+msgid ""
+"That doesn't need any extra explanation. While this is the most flexible "
+"option, it is also the less practical in some cases, and that's why other "
+"options are implemented. To access them, you have to click on the button on "
+"the right--hand side of the extent text box."
+msgstr ""
+"Hierfür benötigen wir keine weitere Erklärung. Obwohl das die flexibelste "
+"Möglichkeit ist, ist sie manchmal am wenigsten praktikabel. Es gibt es noch "
+"andere Alternativen. Man greift über die Schaltfläche auf der rechten Seite "
+"des Eingabefeldes darauf zu."
+
+#: ../../docs/training_manual/processing/extents.rst:40
+msgid "Let's see what each one of them does."
+msgstr "Sehen wir uns an, welche Möglichkeiten es gibt."
+
+#: ../../docs/training_manual/processing/extents.rst:42
+msgid ""
+"The first option is *Use layer/canvas extent*, which will show the selection"
+" dialog shown below."
+msgstr ""
+"Die erste Option lautet *Use layer/canvas extent*, wie im Auswahl Dialog "
+"unten zu sehen ist."
+
+#: ../../docs/training_manual/processing/extents.rst:47
+msgid ""
+"Here you can select the extent of the canvas (the extent covered by the "
+"current zoom), or the extension any of the available layers. Select it and "
+"click on *OK*, and the text box will be automatically filled with the "
+"corresponding values."
+msgstr ""
+"Hiermit wird die Ausdehnung des Arbeitsbereiches (die Ausdehnung die der "
+"aktuellen Zoomstufe entspricht) oder eines beliebigen verfügbaren Layers "
+"gewählt. Wählen Sie den Eintrag, klicken auf *OK* und das Textfeld wird "
+"automatisch mit den zugehörigen Werten gefüllt."
+
+#: ../../docs/training_manual/processing/extents.rst:51
+msgid ""
+"The second option is *Select extent on canvas*. In this case, the algorithm "
+"dialog disappears and you can click and drag on the QGIS canvas to define "
+"the desired extent."
+msgstr ""
+"Die zweite Option lautet *Ausdehnung auf Kartenausschnitt wählen*. In diesem"
+" Fall verschwindet das Auswahlfeld und man kann den gewünschten Ausschnitt "
+"im QGIS Arbeitsbereich aufziehen."
+
+#: ../../docs/training_manual/processing/extents.rst:57
+msgid ""
+"Once you release the mouse button, the dialog will reappear and the text box"
+" will already have the values corresponding to the defined extent."
+msgstr ""
+"Nachdem man den Ausschnitt aufgezogen hat, erscheint erneut das "
+"Dialogfenster und das Textfeld ist mit den zum Ausschnitt gehörenden Werten "
+"gefüllt."
+
+#: ../../docs/training_manual/processing/extents.rst:60
+msgid ""
+"The last option is *Use min covering extent from input layers*, which is the"
+" default option. This will compute the min covering extent of all layers "
+"used to run the algorithm, and there is no need to enter any value in the "
+"text box. In the case of a single input layer, as in the algorithm we are "
+"running, the same extent can be obtained by selecting that same input layer "
+"in the *Use layer/canvas extent* that we already saw. However, when there "
+"are several input layers, the min covering extent does not correspond to any"
+" of the input layer extent, since it is computed from all of them together."
+msgstr ""
+"Die letzte Option und Standardvorgabe lautet *Use min covering extent from "
+"input layers*. Damit wird die minimale Ausdehnung aller Eingabelayer "
+"verwendet, eine händische Eingabe in das Textfeld muss nicht mehr erfolgen. "
+"Im Fall eines einzelnen Eingabelayers, wie in unserem Beispiel, wird hiermit"
+" dasselbe Ergebnis erzielt wie mit *Use layer/canvas extent*, das wir schon "
+"beschrieben haben. Wenn dagegen mehrere Eingabelayer verwendet werden, "
+"entspricht die Ausdehnung keinem einzelnen Layer. Die Ausdehnung wird dann "
+"aus allen Eingabelayern berechnet."
+
+#: ../../docs/training_manual/processing/extents.rst:69
+msgid "We will use this last method to execute our rasterization algorithm."
+msgstr ""
+"Wir werden für unseren Rasterungsalgorithmus diese letzte Möglichkeit "
+"verwenden."
+
+#: ../../docs/training_manual/processing/extents.rst:71
+msgid "Fill the parameters dialog as shown next, and press *OK*."
+msgstr ""
+"Füllen Sie die Parameter im Dialog wie gezeigt aus und drücken auf *Starte*."
+
+#: ../../docs/training_manual/processing/extents.rst:75
+msgid ""
+"In this case, better use an *Integer (1 byte)* instead of a *Floating point "
+"(4 byte)*, since the *NAME* is an integer with maximum value=64. This will "
+"result in a smaller file size and faster computations."
+msgstr ""
+"In diesem Fall ist es besser, *Integer (1 byte)* anstelle von *Floating "
+"point (4 byte)* zu verwenden, da *NAME* ganzzahlig mit einem Maximalwert=64 "
+"ist. Die Berechnung läuft dann schneller ab und die Ergebnisdatei ist "
+"kleiner."
+
+#: ../../docs/training_manual/processing/extents.rst:79
+msgid ""
+"You will get a rasterized layer that covers exactly the area covered by the "
+"original vector layer."
+msgstr ""
+"Wir erhalten einen gerasterten Layer, der exakt die Fläche des originalen "
+"Vektorlayers abdeckt."
+
+#: ../../docs/training_manual/processing/extents.rst:84
+msgid ""
+"In some cases, the last option, *Use min covering extent from input layers*,"
+" might not be available. This will happen in those algorithm that do not "
+"have input layers, but just parameters of other types. In that case, you "
+"will have to enter the value manually or use any of the other options."
+msgstr ""
+"In manchen Fällen ist die letzte Option *Use min covering extent from input "
+"layers* nicht verfügbar. Das passiert, wenn der Algorithmus keine "
+"Eingabelayer sondern nur Parameter mit anderem Typ verwendet. In diesem Fall"
+" müssen Sie die Werte händisch eingeben oder eine der anderen Möglichkeiten "
+"verwenden."
+
+#: ../../docs/training_manual/processing/extents.rst:89
+msgid ""
+"Notice that, when a selection exist, the extent of the layer is that of the "
+"whole set of features, and the selection is not used to compute the extent, "
+"even though the rasterization is executed on the selected items only. In "
+"that case, you might want to actually create a new layer from the selection,"
+" and then use it as input."
+msgstr ""
+"Beachten Sie, das eine Auswahl nicht bei der Berechnung der Ausdehnung "
+"berücksichtigt wird auch wenn die Rasterung nur mit den gewählten Objekten "
+"erfolgt. Die Ausdehnung bezieht sich auf alle Objekte des Layers. In so "
+"einem Fall, ist es günstiger einen Layer aus der Auswahl zu erstellen."

@@ -1,0 +1,146 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:26+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:4
+msgid "Security Considerations"
+msgstr "セキュリティの考慮事項"
+
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:11
+msgid ""
+"Once the master password is entered, the API is open to access "
+"authentication configs in the authentication database, similar to how "
+"Firefox works. However, in the initial implementation, no wall against "
+"PyQGIS access has been defined. This may lead to issues where a user "
+"downloads/installs a malicious PyQGIS plugin or standalone app that gains "
+"access to authentication credentials."
+msgstr ""
+"マスターパスワードが入力されると、APIは、Firefoxが機能する方法と同様、認証データベース中のアクセス認証configsに開放されます。しかし、初期の実装では、PyQGISアクセスに対しては壁が定義されていません。これは、認証証明書へのアクセスを獲得する悪意のあるPyQGISプラグインまたはスタンドアロンアプリケーションをユーザーがダウンロード／インストールする問題につながる可能性があります。"
+
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:17
+msgid ""
+"The quick solution for initial release of feature is to just not include "
+"most PyQGIS bindings for the authentication system."
+msgstr "機能の最初のリリースのための手っ取り早い解決策は、単に認証システムのためにほとんどのPyQGISバインディングを含めないことです。"
+
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:20
+msgid ""
+"Another simple, though not robust, fix is to add a combobox in "
+":menuselection:`Settings --> Options --> Authentication` (defaults to "
+"\"never\"):"
+msgstr ""
+"別の簡単な、堅牢ではないけれども、修正は :menuselection:`設定 --> オプション --> 認証` "
+"でコンボボックスを追加することです（デフォルトは「never」）："
+
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:28
+msgid ""
+"Such an option's setting would need to be saved in a location non-accessible"
+" to Python, e.g. the authentication database, and encrypted with the master "
+"password."
+msgstr ""
+"このようなオプションの設定は、例えば、認証データベースのPythonへの非アクセスできる場所に保存し、マスターパスワードで暗号化する必要があろう。"
+
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:32
+msgid "Another option may be to track which plugins the user has specifically"
+msgstr "別のオプションは、ユーザーが特にどのプラ​​グインを＠認証システムへのアクセスを許可したか＠追跡することかもしれません＠"
+
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:33
+msgid ""
+"allowed to access the authentication system, though it may be tricky to "
+"deduce which plugin is actually making the call."
+msgstr "認証システムへのアクセスを許可＠どのプラ​​グインが実際に呼び出しをしているかを推測するにはこつがいるかもしれませんが。"
+
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:37
+msgid ""
+"Sandboxing plugins, possibly in their own virtual environments, would reduce"
+" 'cross-plugin' hacking of authentication configs from another plugin that "
+"is authorized. This might mean limiting cross-plugin communication as well, "
+"but maybe only between third-party plugins."
+msgstr ""
+"プラグインを、おそらく自分の仮想環境で、サンドボックス設定すると、認証されている別のプラグインから認証コンフィグの「クロス・プラグイン」ハッキングを低減するでしょう。これは同様のクロス・プラグイン通信を制限する意味するかもしれませんが、多分サードパーティのプラグインとの間にのみ。"
+
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:42
+msgid ""
+"Another good solution is to issue code-signing certificates to vetted plugin"
+" authors. Then validate the plugin's certificate upon loading. If need be "
+"the user can also directly set an untrusted policy for the certificate "
+"associated with the plugin using existing certificate management dialogs."
+msgstr ""
+"もう一つの良い解決策は吟味されたプラグインの作者にコード署名証明書を発行することです。そのときはロード時にプラグインの証明書を検証します。必要であればユーザーは、直接既存の証明書の管理ダイアログを使用してプラグインに関連付けられた証明書を信頼されていないポリシーを設定できます。"
+
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:47
+msgid ""
+"Alternatively, access to sensitive authentication system data from Python"
+msgstr "また、Pythonのよりセンシティブ認証システムのデータへのアクセス"
+
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:48
+msgid ""
+"could never be allowed, and only the use of QGIS core widgets, or "
+"duplicating authentication system integrations, would allow the plugin to "
+"work with resources that have an authentication configuration, while keeping"
+" master password and authentication config loading in the realm of the main "
+"app."
+msgstr ""
+"メインアプリの分野では、マスターパスワードと認証の設定負荷を維持しながら、認証の設定を持っているリソースで動作するようにプラグインを可能にする、許可されていない、とQGISコアウィジェットの使用のみ、または認証システム統合を複製することがない可能性があります。"
+
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:54
+msgid ""
+"The same security concerns apply to C++ plugins, though it will be harder to"
+" restrict access, since there is no function binding to simply be removed as"
+" with Python."
+msgstr ""
+"単にPythonのと同じように削除するバインディング機能がないため、アクセスを制限することが困難になりますけれども、同じセキュリティ上の問題は、C "
+"++のプラグインに適用されます。"
+
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:59
+msgid "Restrictions"
+msgstr "制限事項"
+
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:61
+msgid ""
+"The confusing `licensing and exporting`_ issues associated with OpenSSL "
+"apply. In order for Qt to work with SSL certificates, it needs access to the"
+" OpenSSL libraries. Depending upon how Qt was compiled, the default is to "
+"dynamically link to the OpenSSL libs at run-time (to avoid the export "
+"limitations)."
+msgstr ""
+"OpenSSLのに関連した紛らわしい `ライセンスとエクスポート`_ "
+"問題が適用されます。QtがSSL証明書を使用して動作するためには、OpenSSLライブラリにアクセスする必要があります。Qtがどうコンパイルされたかに応じて、デフォルトは（エクスポート制限を回避するために）実行時に動的にOpenSSLのライブラリにリンクすることです。"
+
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:66
+msgid ""
+"QCA follows a similar tactic, whereby linking to QCA incurs no restrictions,"
+" because the qca-ossl (OpenSSL) plugin is loaded at run-time. The qca-ossl "
+"plugin is directly linked to the OpenSSL libs. Packagers would be the ones "
+"needing to ensure any OpenSSL-linking restrictions are met, if they ship the"
+" plugin. Maybe.  I don't really know. I'm not a lawyer."
+msgstr ""
+"QCAは同様の戦術に従います、そこではQCAにリンクすることは何の制限を招かない、なぜならQCA-"
+"OSSL（OpenSSLの）プラグインが実行時にロードされるため。QCA-OSSLプラグインは、直接にOpenSSL "
+"LIBSにリンクされています。パッケージャは、彼らがプラグインを出荷する場合は、任意のOpenSSLの-"
+"リンクの制約が満たされていることを確認する必要なものだろう。多分。私は本当に知りません。私は弁護士ではありませんよ。"
+
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:72
+msgid ""
+"The authentication system safely disables itself when ``qca-ossl`` is not "
+"found at run-time."
+msgstr "``qca-ossl`` が実行時に見つからない場合、認証システムは安全に自身を無効にします。"

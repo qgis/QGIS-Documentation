@@ -1,0 +1,177 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:24+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Turkish (https://www.transifex.com/qgis/teams/6144/tr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: tr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../docs/developers_guide/codingstandards.rst:5
+msgid "QGIS Coding Standards"
+msgstr "QGIS Kodlama Standartları"
+
+#: ../../docs/developers_guide/codingstandards.rst:10
+msgid "These standards should be followed by all QGIS developers."
+msgstr "Bu standartlara tüm QGIS geliştiricileri uymalıdır."
+
+#: ../../docs/developers_guide/codingstandards.rst:13
+msgid "Classes"
+msgstr "Sınıflar"
+
+#: ../../docs/developers_guide/codingstandards.rst:17
+#: ../../docs/developers_guide/codingstandards.rst:212
+msgid "Names"
+msgstr "İsimler"
+
+#: ../../docs/developers_guide/codingstandards.rst:19
+msgid "Class in QGIS begin with Qgs and are formed using camel case."
+msgstr "İlk harf büyük şekilde ve Qgs ile başlayan QGIS sınıfı."
+
+#: ../../docs/developers_guide/codingstandards.rst:21
+#: ../../docs/developers_guide/codingstandards.rst:191
+#: ../../docs/developers_guide/codingstandards.rst:263
+msgid "Examples:"
+msgstr "Örnekler:"
+
+#: ../../docs/developers_guide/codingstandards.rst:23
+msgid "``QgsPoint``"
+msgstr "``QgsNokta``"
+
+#: ../../docs/developers_guide/codingstandards.rst:24
+msgid "``QgsMapCanvas``"
+msgstr "`mMapCanvas``"
+
+#: ../../docs/developers_guide/codingstandards.rst:25
+msgid "``QgsRasterLayer``"
+msgstr "``QgsRasterKatman``"
+
+#: ../../docs/developers_guide/codingstandards.rst:29
+msgid "Members"
+msgstr "Üyeler"
+
+#: ../../docs/developers_guide/codingstandards.rst:32
+msgid ""
+"Class member names begin with a lower case m and are formed using mixed "
+"case."
+msgstr ""
+"Küçük harf m ile başlayan ve karışık harf kullanılarak şekillendirilmiş "
+"sınıf üye adları"
+
+#: ../../docs/developers_guide/codingstandards.rst:35
+msgid "``mMapCanvas``"
+msgstr "`mMapCanvas``"
+
+#: ../../docs/developers_guide/codingstandards.rst:36
+msgid "``mCurrentExtent``"
+msgstr "``mCurrentExtent``"
+
+#: ../../docs/developers_guide/codingstandards.rst:46
+msgid "``sRefCounter``"
+msgstr "``sRefCounter``"
+
+#: ../../docs/developers_guide/codingstandards.rst:47
+msgid "``DEFAULT_QUEUE_SIZE``"
+msgstr "``VARSAYILAN_KUYRUK_BOYUTU``"
+
+#: ../../docs/developers_guide/codingstandards.rst:51
+msgid "Accessor Functions"
+msgstr "Erişimci Fonksiyonlar"
+
+#: ../../docs/developers_guide/codingstandards.rst:54
+msgid ""
+"Class member values should be obtained through accesssor functions. The "
+"function should be named without a get prefix. Accessor functions for the "
+"two private members above would be:"
+msgstr ""
+"Sınınf üye değerleri erişim fonksiyonları yoluyla hesaplanabilmelidir. "
+"Fonksiyon bir get ön eki almadan isimlendirilmelidir. Yukarıdaki iki özel "
+"üye erişim fonksiyonu:"
+
+#: ../../docs/developers_guide/codingstandards.rst:58
+msgid "``mapCanvas()``"
+msgstr "``haritaTuval()``"
+
+#: ../../docs/developers_guide/codingstandards.rst:59
+msgid "``currentExtent()``"
+msgstr "``mevcutBoyut()``"
+
+#: ../../docs/developers_guide/codingstandards.rst:61
+msgid ""
+"Ensure that accessors are correctly marked with ``const``. Where "
+"appropriate, this may require that cached value type member variables are "
+"marked with ``mutable``."
+msgstr ""
+"Erişimcilerin  ``const` ekiyle işaretlendiğinden emin olun. Uygun yerlerde, "
+"saklanmış veri tipli uye değerleri `mutable`` ifadesiyle işaretlenebilir."
+
+#: ../../docs/developers_guide/codingstandards.rst:69
+msgid ""
+"Function names begin with a lowercase letter and are formed using mixed "
+"case. The function name should convey something about the purpose of the "
+"function."
+msgstr ""
+"Fonksiyon adları küçük harfle başlar ve, büyük veya küçük harflerle devam "
+"eder. Fonksiyonun ismi fonksiyonun amacı hakkında bilgi vermelidir."
+
+#: ../../docs/developers_guide/codingstandards.rst:72
+msgid "``updateMapExtent()``"
+msgstr "``updateMapExtent()``"
+
+#: ../../docs/developers_guide/codingstandards.rst:73
+msgid "``setUserOptions()``"
+msgstr "``setUserOptions()``"
+
+#: ../../docs/developers_guide/codingstandards.rst:75
+msgid ""
+"For consistency with the existing QGIS API and with the Qt API, "
+"abbreviations should be avoided. E.g. ``setDestinationSize`` instead of "
+"``setDestSize``, ``setMaximumValue`` instead of ``setMaxVal``."
+msgstr ""
+"Mevcut QGIS API ve Qt API ile uyumluluktan dolayı, ``setDestinationSize`` "
+"yerine ``setDestSize`` gibi veya ``setMaximumValue`` yerine ``setMaxVal` "
+"gibi kısaltmalardan kaçınılmalı."
+
+#: ../../docs/developers_guide/codingstandards.rst:79
+msgid ""
+"Acronyms should also be camel cased for consistency. E.g. ``setXml`` instead"
+" of ``setXML``."
+msgstr ""
+"Acronyms ler uyumluluk için `setXML`` yerine  ``setXml`` gibi camel case "
+"yapısı kullanılmalıdır."
+
+#: ../../docs/developers_guide/codingstandards.rst:84
+msgid "Function Arguments"
+msgstr "Fonksiyon Argümanları"
+
+#: ../../docs/developers_guide/codingstandards.rst:87
+msgid ""
+"Function arguments should use descriptive names. Do not use single letter "
+"arguments (e.g. ``setColor( const QColor& color )`` instead of ``setColor( "
+"const QColor& c )``)."
+msgstr ""
+"Fonksiyon argüman tanımlayıcı isimler kullanabilir. Tek harfli argümanlar "
+"kullanılmaz (örneğin ``setColor( const QColor& c )`` yerine  ``setColor( "
+"const QColor& color )``)."
+
+#: ../../docs/developers_guide/codingstandards.rst:100
+msgid "Function Return Values"
+msgstr "Fonksiyon Geridönüş Değerleri"
+
+#: ../../docs/developers_guide/codingstandards.rst:325
+msgid "Editing"
+msgstr "Ekleme"

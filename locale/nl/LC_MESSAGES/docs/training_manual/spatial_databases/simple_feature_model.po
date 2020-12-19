@@ -1,0 +1,348 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:17+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Dutch (https://www.transifex.com/qgis/teams/6144/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:2
+msgid "|LS| Simple Feature Model"
+msgstr "|LS| Eenvoudig object model"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:4
+msgid ""
+"How can we store and represent geographic features in a database? In this "
+"lesson we'll cover one approach, the Simple Feature Model as defined by the "
+"OGC."
+msgstr ""
+"Hoe kunnen we geografische objecten in een database opslaan en weergeven? In"
+" deze les zullen we één benadering behandelen, het Eenvoudige object model "
+"zoals dat is gedefinieerd door de OGC."
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:8
+msgid ""
+"**The goal for this lesson:** To learn what the SFS Model is and how to use "
+"it."
+msgstr ""
+"**Het doel voor deze les:** Leren wat het Eenvoudig object model is en hoe "
+"het te gebruiken."
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:11
+msgid "What is OGC"
+msgstr "Wat is OGC?"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:13
+msgid ""
+"The Open Geospatial Consortium (OGC), an international voluntary consensus "
+"standards organization, originated in 1994. In the OGC, more than 370+ "
+"commercial, governmental, nonprofit and research organizations worldwide "
+"collaborate in an open consensus process encouraging development and "
+"implementation of standards for geospatial content and services, GIS data "
+"processing and data sharing. *- Wikipedia*"
+msgstr ""
+"Het Open Geospatial Consortium (OGC), een internationale organisatie voor "
+"standaarden onder vrijwillige consensus, werd opgericht in 1994. In de OGC "
+"werken meer dan 370+ commerciële, overheids-, non-profit- en "
+"onderzoeksorganisaties wereldwijd samen in een proces voor open consensus "
+"voor het aanmoedigen van de ontwikkeling en implementatie van standaarden "
+"voor georuimtelijke inhoud en services, het verwerken van gegevens voor GIS "
+"en het delen van gegevens. *- Wikipedia*"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:21
+msgid "What is the SFS Model"
+msgstr "Wat is het SFS-model (Eenvoudig object model)"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:23
+msgid ""
+"The Simple Feature for SQL (SFS) Model is a *non-topological* way to store "
+"geospatial data in a database and defines functions for accessing, "
+"operating, and constructing these data."
+msgstr ""
+"Het Simple Feature voor SQL (SFS) Model is een *niet-topologische* manier om"
+" georuimtelijke gegevens op te slaan in een database en definieert functies "
+"vooe toegang tot, het bewerken van en het construeren van deze gegevens."
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:30
+msgid ""
+"The model defines geospatial data from Point, Linestring, and Polygon types "
+"(and aggregations of them to Multi objects)."
+msgstr ""
+"Het model definieert georuimtelijke gegevens vanuit typen Punt, Lijn en "
+"Polygoon (en samenvoegingen daarvan naar Multi-objecten)."
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:33
+msgid ""
+"For further information, have a look at the `OGC Simple Feature for SQL "
+"<https://www.opengeospatial.org/standards/sfs>`_ standard."
+msgstr ""
+"Kijk, voor meer informatie, eens naar de standaard `OGC Simple Feature for "
+"SQL <https://www.opengeospatial.org/standards/sfs>`_."
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:37
+msgid "Add a geometry field to table"
+msgstr "Een veld voor geometrie aan een tabel toevoegen"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:39
+msgid "Let's add a point field to our people table:"
+msgstr "Laten we een veld point aan onze tabel people toevoegen:"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:48
+msgid "Add a constraint based on geometry type"
+msgstr "Een beperking, gebaseerd op een type geometrie, toevoegen"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:50
+msgid ""
+"You will notice that the geometry field type does not implicitly specify "
+"what *type* of geometry for the field - for that we need a constraint:"
+msgstr ""
+"U zult opmerken dat het veldtype geometrie niet impliciet  het *type* "
+"geometrie voor het veld specificeert - daarvoor hebben we een beperking "
+"(constraint) nodig:"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:60
+msgid ""
+"This adds a constraint to the table so that it will only accept a point "
+"geometry or a null value."
+msgstr ""
+"Dit voegt een beperking aan de tabel toe zodat die alleen een geometrie punt"
+" of een waarde null accepteert."
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:64
+msgid "|TY| |hard|"
+msgstr "|TY| |hard|"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:66
+msgid ""
+"Create a new table called cities and give it some appropriate columns, "
+"including a geometry field for storing polygons (the city boundaries). Make "
+"sure it has a constraint enforcing geometries to be polygons."
+msgstr ""
+"Maak een nieuwe tabel, genaamd cities, en geef die enkele toepasselijke "
+"kolommen, inclusief een veld voor geometrie voor het opslaan van polygonen "
+"(de stadsgrenzen). Zorg er voor dat het een beperking heeft die maakt dat de"
+" geometrieën polygonen zijn."
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:70
+msgid ":ref:`Check your results <simple-feature-1>`"
+msgstr ":ref:`Controleer uw resultaten <simple-feature-1>`"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:75
+msgid "Populate geometry_columns table"
+msgstr "Tabel geometry_columns vullen"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:77
+msgid ""
+"At this point you should also add an entry into the ``geometry_columns`` "
+"table:"
+msgstr ""
+"Op dit punt zou u ook een item aan de tabel ``geometry_columns`` moeten "
+"toevoegen:"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:84
+msgid ""
+"Why? :kbd:`geometry_columns` is used by certain applications to be aware of "
+"which tables in the database contain geometry data."
+msgstr ""
+"Waarom? :kbd:`geometry_columns` wordt door bepaalde toepassingen gebruikt om"
+" bij te houden welke tabellen in de database gegevens met geometrie "
+"bevatten."
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:89
+msgid ""
+"If the above ``INSERT`` statement causes an error, run this query first:"
+msgstr ""
+"Als het bovenstaande argument ``INSERT`` een fout veroorzaakt, voer dan "
+"eerst deze query uit:"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:96
+msgid ""
+"If the column :kbd:`f_table_name` contains the value :kbd:`people`, then "
+"this table has already been registered and you don't need to do anything "
+"more."
+msgstr ""
+"Als de kolom :kbd:`f_table_name` al de waarde :kbd:`people` bevat, dan is "
+"deze tabel al geregistreerd en hoeft u niets meer te doen."
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:100
+msgid ""
+"The value ``2`` refers to the number of dimensions; in this case, two: **X**"
+" and **Y**."
+msgstr ""
+"De waarde ``2`` verwijst naar het aantal dimensies; in dit geval twee: **X**"
+" en **Y**."
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:103
+msgid ""
+"The value :kbd:`4326` refers to the projection we are using; in this case, "
+"WGS 84, which is referred to by the number 4326 (refer to the earlier "
+"discussion about the EPSG)."
+msgstr ""
+"De waarde :kbd:`4326` verwijst naar de projectie die we gebruiken; in dit "
+"geval WGS 84, waarnaar wordt verwezen door het getal 4326 (bekijk de eerdere"
+" bespreking van EPSG)."
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:108
+msgid "|TY| |basic|"
+msgstr "|TY| |basic|"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:110
+msgid "Add an appropriate `geometry_columns` entry for your new cities layer"
+msgstr ""
+"Voeg een toepasselijk item voor `geometry_columns` in voor uw nieuwe laag "
+"cities"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:112
+msgid ":ref:`Check your results <simple-feature-2>`"
+msgstr ":ref:`Controleer uw resultaten <simple-feature-2>`"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:117
+msgid "Add geometry record to table using SQL"
+msgstr "Record met geometrie toevoegen aan tabel met behulp van SQL"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:119
+msgid "Now that our tables are geo-enabled, we can store geometries in them:"
+msgstr ""
+"Nu onze tabellen ingeschakeld zijn voor geometrie, kunnen we er geometrieën "
+"in opslaan:"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:130
+msgid ""
+"In the new entry above, you will need to specify which projection (SRID) you"
+" want to use. This is because you entered the geometry of the new point "
+"using a plain string of text, which does not automatically add the correct "
+"projection information. Obviously, the new point needs to use the same SRID "
+"as the data-set it is being added to, so you need to specify it."
+msgstr ""
+"In het nieuwe item hierboven zult u moeten specificeren welke projectie "
+"(SRID) u wilt gebruiken. Dit omdat u de geometrie van het nieuwe punt "
+"invoert met behulp van een gewone tekenreeks van tekst, wat niet automatisch"
+" de juiste informatie over de projectie toevoegt. Uiteraard dient het nieuwe"
+" punt hetzelfde SRID te gebruiken als de gegevensset waaraan het wordt "
+"toegevoegd, dus u moet het specificeren."
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:136
+msgid ""
+"If at this point you were using a graphical interface, for example, "
+"specifying the projection for each point would be automatic. In other words,"
+" you usually won't need to worry about using the correct projection for "
+"every point you want to add if you've already specified it for that data-"
+"set, as we did earlier."
+msgstr ""
+"Als u op dit punt een grafische interface zou gebruiken, zou, bijvoorbeeld, "
+"het specificeren van de projectie voor elk punt automatisch gebeuren. Met "
+"andere woorden: u hoeft zich gewoonlijk geen zorgen te maken over het "
+"gebruiken van de juiste projectie voor elk punt dat u wilt toevoegen als u "
+"het al voor die gegevensset heeft gespecificeerd, zoals wij eerder al deden."
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:142
+msgid ""
+"Now is probably a good time to open QGIS and try to view your :kbd:`people` "
+"table. Also, we should try editing / adding / deleting records and then "
+"performing select queries in the database to see how the data has changed."
+msgstr ""
+"Nu is het waarschijnlijk een goed moment om QGIS te openen en te proberen uw"
+" tabel :kbd:`people` te bekijken. Ook zouden we moeten proberen records te "
+"bewerken / toe te voegen / te verwijderen en dan query's SELECT op de "
+"database uitvoeren  om te zien hoe de gegevens zijn gewijzigd."
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:146
+msgid ""
+"To load a PostGIS layer in QGIS, use the :menuselection:`Layer --> Add "
+"PostGIS Layers` menu option or toolbar button:"
+msgstr ""
+"Een laag van PostGIS laden in QGIS, gebruik de menuoptie "
+":menuselection:`Laag --> PostGIS-laag toevoegen` of de knop op de werkbalk:"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:149
+msgid "|addPostgisLayer|"
+msgstr "|addPostgisLayer|"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:151
+msgid "This will open the dialog:"
+msgstr "Dit zal het dialoogvenster openen:"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:156
+msgid "Click on the :guilabel:`New` button to open this dialog:"
+msgstr "Klik op de knop :guilabel:`Nieuw` om dit dialoogvenster te openen:"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:161
+msgid "Then define a new connection, e.g.::"
+msgstr "Definieer dan een nieuwe verbinding, bijv.::"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:171
+msgid ""
+"To see whether QGIS has found the :kbd:`address` database and that your "
+"username and password are correct, click :guilabel:`Test Connect`. If it "
+"works, check the boxes next to :guilabel:`Save Username` and :guilabel:`Save"
+" Password`. Then click :guilabel:`OK` to create this connection."
+msgstr ""
+"Klik op :guilabel:`Test verbinding` om te zien of QGIS de database "
+":kbd:`address` heeft gevonden en of uw gebruikersnaam en wachtwoord juist "
+"zijn. Als het werkt, selecteer dan de vakken naast :guilabel:`Gebruikersnaam"
+" opslaan` en :guilabel:`Wachtwoord opslaan`. Klik dan op :guilabel:`OK` om "
+"deze verbinding te maken."
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:176
+msgid ""
+"Back in the :guilabel:`Add PostGIS Layers` dialog, click :guilabel:`Connect`"
+" and add layers to your project as usual."
+msgstr ""
+"Terug in het dialoogvenster :guilabel:`PostGIS-tabel(len) toevoegen`, klik "
+"op :guilabel:`Verbinden` en voeg de lagen zoals gewoonlijk toe aan uw "
+"project."
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:180
+msgid "|TY| |moderate|"
+msgstr "|TY| |moderate|"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:182
+msgid ""
+"Formulate a query that shows a person's name, street name and position (from"
+" the the_geom column) as plain text."
+msgstr ""
+"Formuleer een query die de naam, straatnaam en positie (vanuit de kolom "
+"the_geom) weergeeft als gewone tekst."
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:185
+msgid ":ref:`Check your results <simple-feature-3>`"
+msgstr ":ref:`Controleer uw resultaten <simple-feature-3>`"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:188
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:190
+msgid ""
+"You have seen how to add spatial objects to your database and view them in "
+"GIS software."
+msgstr ""
+"U heeft gezien hoe u ruimtelijke objecten toevoegt aan uw database en ze "
+"bekijkt in GIS-software."
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:194
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:196
+msgid ""
+"Next you'll see how to import data into, and export data from, your "
+"database."
+msgstr ""
+"Vervolgens zult u zien hoe u gegevens importeert naar en exporteert vanuit "
+"uw database."

@@ -1,0 +1,331 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# Aline Furlanetto Viero <afviero@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:31+0000\n"
+"Last-Translator: Aline Furlanetto Viero <afviero@gmail.com>, 2020\n"
+"Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../docs/user_manual/processing/console.rst:4
+msgid "Using processing algorithms from the console"
+msgstr "Usando os algoritmos do processamento a partir do Terminal Python."
+
+#: ../../docs/user_manual/processing/console.rst:11
+msgid ""
+"The console allows advanced users to increase their productivity and perform"
+" complex operations that cannot be performed using any of the other GUI "
+"elements of the processing framework. Models involving several algorithms "
+"can be defined using the command-line interface, and additional operations "
+"such as loops and conditional sentences can be added to create more flexible"
+" and powerful workflows."
+msgstr ""
+"O terminal permite que usuários avançados aumente sua produtividade e "
+"execute operações complexas que não podem ser utilizados através dos outros "
+"elementos GUI da caixa de processamento.  Modelos envolvendo vários "
+"algoritmos podem ser definidos usando a interface de linha de comando e "
+"operações adicionais como loops e sentenças condicionais podem ser "
+"adicionados para criar fluxos de trabalho mais flexíveis e poderosos."
+
+#: ../../docs/user_manual/processing/console.rst:24
+msgid ""
+"The code that you can execute from the Python console, even if it does not "
+"call any specific processing method, can be converted into a new algorithm "
+"that you can later call from the toolbox, the graphical modeler or any other"
+" component, just like you do with any other algorithm. In fact, some "
+"algorithms that you can find in the toolbox are simple scripts."
+msgstr ""
+"O código que pode executar a partir do Terminal Python, mesmo quando não "
+"chama nenhum método específico do processamento, pode ser convertido num "
+"novo algoritmo que pode mais tarde chamar da caixa de ferramentas, o "
+"modelador gráfico ou qualquer outro componente, como faz para outro "
+"algoritmo. De fato, alguns algoritmos que encontra na caixa de ferramentas "
+"são scripts simples."
+
+#: ../../docs/user_manual/processing/console.rst:35
+msgid "Calling algorithms from the Python console"
+msgstr "Chamando os algoritmos a partir do Terminal Python"
+
+#: ../../docs/user_manual/processing/console.rst:37
+msgid ""
+"The first thing you have to do is to import the processing functions with "
+"the following line:"
+msgstr ""
+"A primeira coisa que tem de fazer é importar as funções do processamento com"
+" a seguinte linha:"
+
+#: ../../docs/user_manual/processing/console.rst:251
+msgid ""
+"Depending on the type of parameter, values are introduced differently. The "
+"next list gives a quick review of how to introduce values for each type of "
+"input parameter:"
+msgstr ""
+"Dependendo do tipo de parâmetro, os valores são introduzidos diferentemente."
+" A próxima explicação é uma rápida revisão de como introduzir valores para "
+"cada tipo de parâmetro de entrada:"
+
+#: ../../docs/user_manual/processing/console.rst:283
+msgid ""
+"Multiple input. The value is a string with input descriptors separated by "
+"semicolons (``;``). As in the case of single layers or tables, each input "
+"descriptor can be the data object name, or its file path."
+msgstr ""
+"Múltiplas entradas. O valor é uma cadeia de texto com descritores de entrada"
+" separados por ponto e vírgula (``;``). Como no caso das camadas ou tabelas "
+"únicas, cada descritor de entrada pode ser o nome do objeto ou o caminho do "
+"arquivo."
+
+#: ../../docs/user_manual/processing/console.rst:286
+msgid ""
+"Table Field from XXX. Use a string with the name of the field to use. This "
+"parameter is case-sensitive."
+msgstr ""
+"Campo da Tabela de XXX. Use uma cadeia de texto com o nome do campo a usar. "
+"O parâmetro é caso sensitivo."
+
+#: ../../docs/user_manual/processing/console.rst:288
+msgid ""
+"Fixed Table. Type the list of all table values separated by commas (``,``) "
+"and enclosed between quotes (``\"``). Values start on the upper row and go "
+"from left to right. You can also use a 2-D array of values representing the "
+"table."
+msgstr ""
+"Tabela Fixa. Digite a lista de todos os valores da tabela separadas por "
+"vírgulas (``,``) e feche entre aspas (``\"``). Os valores começam na linha "
+"superior e vai da esquerda para a direita. Pode também usar uma matriz 2D de"
+" valores que representam a tabela."
+
+#: ../../docs/user_manual/processing/console.rst:291
+msgid "CRS. Enter the EPSG code number of the desired CRS."
+msgstr "SRC. Introduza o número do código EPSG do SRC desejado."
+
+#: ../../docs/user_manual/processing/console.rst:292
+msgid ""
+"Extent. You must use a string with ``xmin``, ``xmax``, ``ymin`` and ``ymax``"
+" values separated by commas (``,``)."
+msgstr ""
+"Extensão. Deve usar uma cadeia de texto com ``xmin``, ``xmax``, ``ymin`` e "
+"``ymax`` valores separados por vírgulas (``,``)."
+
+#: ../../docs/user_manual/processing/console.rst:295
+msgid ""
+"Boolean, file, string and numerical parameters do not need any additional "
+"explanations."
+msgstr ""
+"Os parâmetros booleanos, de arquivo, cadeia de texto e numéricos não "
+"necessitam de explicações adicionais."
+
+#: ../../docs/user_manual/processing/console.rst:370
+msgid "Creating scripts and running them from the toolbox"
+msgstr "Criando scripts e correndo-os a partir da caixa de ferramentas"
+
+#: ../../docs/user_manual/processing/console.rst:486
+msgid ""
+":class:`QgsProcessingParameterBand <qgis.core.QgsProcessingParameterBand>`"
+msgstr ""
+":class:`QgsProcessingParameterBand <qgis.core.QgsProcessingParameterBand>`"
+
+#: ../../docs/user_manual/processing/console.rst:487
+msgid ""
+":class:`QgsProcessingParameterBoolean "
+"<qgis.core.QgsProcessingParameterBoolean>`"
+msgstr ""
+":class:`QgsProcessingParameterBoolean "
+"<qgis.core.QgsProcessingParameterBoolean>`"
+
+#: ../../docs/user_manual/processing/console.rst:488
+msgid ""
+":class:`QgsProcessingParameterColor <qgis.core.QgsProcessingParameterColor>`"
+msgstr ""
+":class:`QgsProcessingParameterColor <qgis.core.QgsProcessingParameterColor>`"
+
+#: ../../docs/user_manual/processing/console.rst:489
+msgid ""
+":class:`QgsProcessingParameterCrs <qgis.core.QgsProcessingParameterCrs>`"
+msgstr ""
+":class:`QgsProcessingParameterCrs <qgis.core.QgsProcessingParameterCrs>`"
+
+#: ../../docs/user_manual/processing/console.rst:490
+msgid ""
+":class:`QgsProcessingParameterDistance "
+"<qgis.core.QgsProcessingParameterDistance>`"
+msgstr ""
+":class:`QgsProcessingParameterDistance "
+"<qgis.core.QgsProcessingParameterDistance>`"
+
+#: ../../docs/user_manual/processing/console.rst:491
+msgid ""
+":class:`QgsProcessingParameterEnum <qgis.core.QgsProcessingParameterEnum>`"
+msgstr ""
+":class:`QgsProcessingParameterEnum <qgis.core.QgsProcessingParameterEnum>`"
+
+#: ../../docs/user_manual/processing/console.rst:492
+msgid ""
+":class:`QgsProcessingParameterExpression "
+"<qgis.core.QgsProcessingParameterExpression>`"
+msgstr ""
+":class:`QgsProcessingParameterExpression "
+"<qgis.core.QgsProcessingParameterExpression>`"
+
+#: ../../docs/user_manual/processing/console.rst:493
+msgid ""
+":class:`QgsProcessingParameterExtent "
+"<qgis.core.QgsProcessingParameterExtent>`"
+msgstr ""
+":class:`QgsProcessingParameterExtent "
+"<qgis.core.QgsProcessingParameterExtent>`"
+
+#: ../../docs/user_manual/processing/console.rst:494
+msgid ""
+":class:`QgsProcessingParameterFeatureSink "
+"<qgis.core.QgsProcessingParameterFeatureSink>`"
+msgstr ""
+":class:`QgsProcessingParameterFeatureSink "
+"<qgis.core.QgsProcessingParameterFeatureSink>`"
+
+#: ../../docs/user_manual/processing/console.rst:495
+msgid ""
+":class:`QgsProcessingParameterFeatureSource "
+"<qgis.core.QgsProcessingParameterFeatureSource>`"
+msgstr ""
+":class:`QgsProcessingParameterFeatureSource "
+"<qgis.core.QgsProcessingParameterFeatureSource>`"
+
+#: ../../docs/user_manual/processing/console.rst:497
+msgid ""
+":class:`QgsProcessingParameterFile <qgis.core.QgsProcessingParameterFile>`"
+msgstr ""
+":class:`QgsProcessingParameterFile <qgis.core.QgsProcessingParameterFile>`"
+
+#: ../../docs/user_manual/processing/console.rst:498
+msgid ""
+":class:`QgsProcessingParameterFileDestination "
+"<qgis.core.QgsProcessingParameterFileDestination>`"
+msgstr ""
+":class:`QgsProcessingParameterFileDestination "
+"<qgis.core.QgsProcessingParameterFileDestination>`"
+
+#: ../../docs/user_manual/processing/console.rst:499
+msgid ""
+":class:`QgsProcessingParameterFolderDestination "
+"<qgis.core.QgsProcessingParameterFolderDestination>`"
+msgstr ""
+":class:`QgsProcessingParameterFolderDestination "
+"<qgis.core.QgsProcessingParameterFolderDestination>`"
+
+#: ../../docs/user_manual/processing/console.rst:502
+msgid ""
+":class:`QgsProcessingParameterMapLayer "
+"<qgis.core.QgsProcessingParameterMapLayer>`"
+msgstr ""
+":class:`QgsProcessingParameterMapLayer "
+"<qgis.core.QgsProcessingParameterMapLayer>`"
+
+#: ../../docs/user_manual/processing/console.rst:503
+msgid ""
+":class:`QgsProcessingParameterMatrix "
+"<qgis.core.QgsProcessingParameterMatrix>`"
+msgstr ""
+":class:`QgsProcessingParameterMatrix "
+"<qgis.core.QgsProcessingParameterMatrix>`"
+
+#: ../../docs/user_manual/processing/console.rst:505
+msgid ""
+":class:`QgsProcessingParameterMultipleLayers "
+"<qgis.core.QgsProcessingParameterMultipleLayers>`"
+msgstr ""
+":class:`QgsProcessingParameterMultipleLayers "
+"<qgis.core.QgsProcessingParameterMultipleLayers>`"
+
+#: ../../docs/user_manual/processing/console.rst:506
+msgid ""
+":class:`QgsProcessingParameterNumber "
+"<qgis.core.QgsProcessingParameterNumber>`"
+msgstr ""
+":class:`QgsProcessingParameterNumber "
+"<qgis.core.QgsProcessingParameterNumber>`"
+
+#: ../../docs/user_manual/processing/console.rst:507
+msgid ""
+":class:`QgsProcessingParameterPoint <qgis.core.QgsProcessingParameterPoint>`"
+msgstr ""
+":class:`QgsProcessingParameterPoint <qgis.core.QgsProcessingParameterPoint>`"
+
+#: ../../docs/user_manual/processing/console.rst:508
+msgid ""
+":class:`QgsProcessingParameterRange <qgis.core.QgsProcessingParameterRange>`"
+msgstr ""
+":class:`QgsProcessingParameterRange <qgis.core.QgsProcessingParameterRange>`"
+
+#: ../../docs/user_manual/processing/console.rst:509
+msgid ""
+":class:`QgsProcessingParameterRasterDestination "
+"<qgis.core.QgsProcessingParameterRasterDestination>`"
+msgstr ""
+":class:`QgsProcessingParameterRasterDestination "
+"<qgis.core.QgsProcessingParameterRasterDestination>`"
+
+#: ../../docs/user_manual/processing/console.rst:510
+msgid ""
+":class:`QgsProcessingParameterRasterLayer "
+"<qgis.core.QgsProcessingParameterRasterLayer>`"
+msgstr ""
+":class:`QgsProcessingParameterRasterLayer "
+"<qgis.core.QgsProcessingParameterRasterLayer>`"
+
+#: ../../docs/user_manual/processing/console.rst:512
+msgid ""
+":class:`QgsProcessingParameterString "
+"<qgis.core.QgsProcessingParameterString>`"
+msgstr ""
+":class:`QgsProcessingParameterString "
+"<qgis.core.QgsProcessingParameterString>`"
+
+#: ../../docs/user_manual/processing/console.rst:513
+msgid ""
+":class:`QgsProcessingParameterVectorDestination "
+"<qgis.core.QgsProcessingParameterVectorDestination>`"
+msgstr ""
+":class:`QgsProcessingParameterVectorDestination "
+"<qgis.core.QgsProcessingParameterVectorDestination>`"
+
+#: ../../docs/user_manual/processing/console.rst:514
+msgid ""
+":class:`QgsProcessingParameterVectorLayer "
+"<qgis.core.QgsProcessingParameterVectorLayer>`"
+msgstr ""
+":class:`QgsProcessingParameterVectorLayer "
+"<qgis.core.QgsProcessingParameterVectorLayer>`"
+
+#: ../../docs/user_manual/processing/console.rst:590
+msgid "Documenting your scripts"
+msgstr "Documentando os seus scripts"
+
+#: ../../docs/user_manual/processing/console.rst:605
+msgid "Pre- and post-execution script hooks"
+msgstr "Pré- e pós-execução de encaixe da script"
+
+#: ../../docs/user_manual/processing/console.rst:611
+msgid ""
+"The syntax is identical to the syntax explained above, but an additional "
+"global variable named ``alg`` is available, representing the algorithm that "
+"has just been (or is about to be) executed."
+msgstr ""
+"A sintaxe é identica à sintaxe explicada em cima, mas uma variável global "
+"``alg`` está disponível, representando o algoritmo que foi (ou está prestes "
+"a ser) executado."

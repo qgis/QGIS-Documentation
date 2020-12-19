@@ -1,0 +1,301 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:17+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Romanian (https://www.transifex.com/qgis/teams/6144/ro/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:2
+msgid "|LS| Geometry Construction"
+msgstr "|LS| Construirea Geometriei"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:4
+msgid ""
+"In this section we are going to delve a little deeper into how simple "
+"geometries are constructed in SQL. In reality, you will probably use a GIS "
+"like QGIS to create complex geometries using their digitising tools; "
+"however, understanding how they are formulated can be handy for writing "
+"queries and understanding how the database is assembled."
+msgstr ""
+"În această secțiune vom intra în detalii despre cum sunt construite "
+"geometriile în SQL. În realitate, probabil veți utiliza un GIS cum ar fi "
+"QGIS pentru creearea geometriilor complexe folosind instrumentele acestora; "
+"cu toate acestea, întelegerea modului cum sunt stocate poate fi utilă pentru"
+" scrierea de interogări și înțelegerea modului cum este alcătuită baza de "
+"date."
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:10
+msgid ""
+"**The goal of this lesson:** To better understand how to create spatial "
+"entities directly in PostgreSQL/PostGIS."
+msgstr ""
+"**Scopul acestei lecții:** De a înțelege mai bine cum să creați entități "
+"spațiale direct în PostgreSQL/PostGIS."
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:16
+msgid "Creating Linestrings"
+msgstr "Crearea Șirurilor de Linii"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:18
+msgid ""
+"Going back to our :kbd:`address` database, let's get our streets table "
+"matching the others; i.e., having a constraint on the geometry, an index and"
+" an entry in the geometry_columns table."
+msgstr ""
+"Întorcându-ne la baza de date :kbd:`address`, să facem tabelul de străzi să "
+"se potrivească cu celelalte; de ex., să aibă o constrângere pentru "
+"geometrie, un index și o intrare în tabelul geometry_columns."
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:23
+msgid "|TY| |moderate|"
+msgstr "|TY| |moderate|"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:25
+msgid ""
+"Modify the :kbd:`streets` table so that it has a geometry column of type "
+"ST_LineString."
+msgstr ""
+"Modificați tabela :kbd:`streets`, astfel încât ea să aibă o coloană de "
+"geometrie de tipul ST_LineString."
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:27
+msgid ""
+"Don't forget to do the accompanying update to the geometry columns table!"
+msgstr "Nu uitați să faceți actualizarea coloanelor de geometrie!"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:29
+msgid ""
+"Also add a constraint to prevent any geometries being added that are not "
+"LINESTRINGS or null."
+msgstr ""
+"De asemenea, adăugați o constrângere pentru a preveni adăugarea geometrii "
+"care nu sunt null sau de tip LINESTRINGS."
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:31
+msgid "Create a spatial index on the new geometry column"
+msgstr "Creați un index spațial în noua coloană de geometrie"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:33
+msgid ":ref:`Check your results <geometry-1>`"
+msgstr ":ref:`Check your results <geometry-1>`"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:44
+msgid ""
+"Take a look at the results in QGIS. (You may need to right-click on the "
+"streets layer in the 'Layers' panel, and choose 'Zoom to layer extent'.)"
+msgstr ""
+"Aruncați o privire la rezultatele din QGIS. (Poate fi necesar să faceți "
+"clic-dreapta pe stratul străzilor din panoul 'Straturilor', apoi alegeți "
+"'Transfocare la extinderea stratului'.)"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:47
+msgid ""
+"Now create some more streets entries - some in QGIS and some from the "
+"command line."
+msgstr ""
+"Acum, creați mai multe intrări de străzi - unele în QGIS, iar altele din "
+"linia de comandă."
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:52
+msgid "Creating Polygons"
+msgstr "Crearea Poligoanelor"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:62
+msgid ""
+"A polygon requires double brackets around its coordinate list; this is to "
+"allow you to add complex polygons with multiple unconnected areas. For "
+"instance"
+msgstr ""
+"Un poligon necesită acolade duble în jurul listei sale de coordonate; "
+"aceasta pentru a permite poligoane complexe având multiple zone neconectate."
+" De exemplu"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:74
+msgid ""
+"If you followed this step, you can check what it did by loading the cities "
+"dataset into QGIS, opening its attribute table, and selecting the new entry."
+" Note how the two new polygons behave like one polygon."
+msgstr ""
+"Dacă ați urmat acest pas, puteți verifica rezultatul prin încărcarea setului"
+" de date orașe în QGIS, deschizând tabelul de atribute al acestuia, și "
+"selectând noua intrare. Remarcați cum cele două noi poligoane se comportă ca"
+" unul singur."
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:81
+msgid "Exercise: Linking Cities to People"
+msgstr "Exercițiu: Learea Orașelor de Persoane"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:83
+msgid "For this exercise you should do the following:"
+msgstr "Pentru acest exercițiu ar trebui să faceți următoarele:"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:85
+msgid "Delete all data from your people table."
+msgstr "Ștergeți toate datele din tabela de personal."
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:86
+msgid ""
+"Add a foreign key column to people that references the primary key of the "
+"cities table."
+msgstr ""
+"Adăugați o coloană de cheie străină în tabela de personal, care face "
+"referire la cheia primară a tabelei orașelor."
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:88
+msgid "Use QGIS to capture some cities."
+msgstr "Utilizați QGIS pentru a captura unele orașe."
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:89
+msgid ""
+"Use SQL to insert some new people records, ensuring that each has an "
+"associated street and city."
+msgstr ""
+"Utilizați SQL pentru a introduce câteva înregistrări de personal, verificând"
+" că fiecare are asociate o stradă și un oraș."
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:120
+msgid ":ref:`Check your results <geometry-2>`"
+msgstr ":ref:`Check your results <geometry-2>`"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:124
+msgid "Looking at Our Schema"
+msgstr "Analizați Schema Noastră"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:126
+msgid "By now our schema should be looking like this:"
+msgstr "Acum, schrma noastră ar trebui să arate în felul următor:"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:133
+msgid "|TY| |hard|"
+msgstr "|TY| |hard|"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:135
+msgid ""
+"Create city boundaries by computing the minimum convex hull of all addresses"
+" for that city and computing a buffer around that area."
+msgstr ""
+"Creați marginile orașelor prin calucularea înfășurătorii convexe pentru "
+"toate adresele din acel oraș și calcularea unei zone tampon în jurul "
+"acesteia."
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:140
+msgid "Access Sub-Objects"
+msgstr "Accesul la Sub-Obiecte"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:142
+msgid ""
+"With the SFS-Model functions, you have a wide variety of options to access "
+"sub-objects of SFS Geometries. When you want to select the first vertex "
+"point of every polygon geometry in the table myPolygonTable, you have to do "
+"this in this way:"
+msgstr ""
+"Folosind funcțiile SFS-Model, aveți la dispoziție o largă gamă de opțiuni "
+"pentru accesarea sub-obiectelor geometriilor SFS. Când doriți să selectați "
+"primul punct vertex al fiecărei geometrii poligon în tabelul myPolygonTable,"
+" trebuie să o faceți în felul acesta:"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:165
+msgid "Data Processing"
+msgstr "Procesarea Datelor"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:167
+msgid ""
+"PostGIS supports all OGC SFS/MM standard conform functions. All these "
+"functions start with ``ST_``."
+msgstr ""
+"PostGIS suportă toate funcțiile conforme standardelor OGC SFS/MM. Toate "
+"aceste funcții încep cu ``ST_``."
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:171
+msgid "Clipping"
+msgstr "Decuparea"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:194
+msgid "Building Geometries from Other Geometries"
+msgstr "Construirea de Geometrii pornind de la Alte Geometrii"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:196
+msgid ""
+"From a given point table, you want to generate a linestring. The order of "
+"the points is defined by their :kbd:`id`. Another ordering method could be a"
+" timestamp, such as the one you get when you capture waypoints with a GPS "
+"receiver."
+msgstr ""
+"Plecând de la de la un tabel de puncte dat, doriți să generați un "
+"linestring. Ordinea punctelor este dată de valoarea  :kbd:`id`. O altă "
+"metodă de ordonare ar putea fi marca de timp, cum ar fi cea pe care o "
+"primiți când capturiați puncte cu un receptor GPS."
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:216
+msgid ""
+"To see how it works without creating a new layer, you could also run this "
+"command on the 'people' layer, although of course it would make little real-"
+"world sense to do this."
+msgstr ""
+"Pentru a vedea cum funcționează fără a crea un nou strat, puteți executa "
+"această comandă în stratul 'people', deși desigur nu ar avea prea mult sens "
+"în lumea reală."
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:224
+msgid "Geometry Cleaning"
+msgstr "Curățarea Geometriilor"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:230
+msgid "Differences between tables"
+msgstr "Diferențele dintre tabele"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:241
+msgid ""
+"As the result, you will get all records from table_a which are not stored in"
+" table_b."
+msgstr ""
+"Ca rezultat, veți obține toate acele înregistrări din table_a care nu se "
+"regăsesc și în table_b."
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:245
+msgid "Tablespaces"
+msgstr "Spațiile tabelelor"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:254
+msgid ""
+"When you create a database, you can then specify which tablespace to use "
+"e.g.::"
+msgstr ""
+"Atunci când creați o bază de date, aveți posibilitatea să specificați care "
+"spațiu de tabelă să fie utilizat, de exemplu::"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:259
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:261
+msgid ""
+"You've learned how to create more complex geometries using PostGIS "
+"statements. Keep in mind that this is mostly to improve your tacit knowledge"
+" when working with geo-enabled databases through a GIS frontend. You usually"
+" won't need to actually enter these statements manually, but having a "
+"general idea of their structure will help you when using a GIS, especially "
+"if you encounter errors that would otherwise seem cryptic."
+msgstr ""
+"Ați învățat cum să creeați geometrii mai complexe folosing instrucțiuni "
+"PostGIS. Rețineți că aceasta folosește la îmbunătățirea cunoștințelor pentru"
+" lucrul cu o bază de date spațială printr-o interfață GIS. În mod curent nu "
+"veți avea nevoie să folosiți aceste instrucțiuni manual, dar o înțelegere "
+"generală vă va ajuta la utilizarea unui GIS, în special dacă întâlniți erori"
+" care ar putea să pară altfel criptice."

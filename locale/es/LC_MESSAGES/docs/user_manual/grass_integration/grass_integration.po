@@ -1,0 +1,2112 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:28+0000\n"
+"Last-Translator: Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020\n"
+"Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:6
+msgid "GRASS GIS Integration"
+msgstr "Integracion GRASS SIG"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:13
+msgid ""
+"GRASS integration provides access to GRASS GIS databases and functionalities"
+" (see GRASS-PROJECT in :ref:`literature_and_web`). The integration consists "
+"of two parts: provider and plugin. The provider allows to browse, manage and"
+" visualize GRASS raster and vector layers. The plugin can be used to create "
+"new GRASS locations and mapsets, change GRASS region, create and edit vector"
+" layers and analyze GRASS 2-D and 3-D data with more than 400 GRASS modules."
+" In this section, we'll introduce the provider and plugin functionalities "
+"and give some examples of managing and working with GRASS data."
+msgstr ""
+"La integración de GRASS proporciona acceso a las bases de datos y "
+"funcionalidades de GRASS GIS (ver GRASS-PROJECT en "
+":ref:`literature_and_web`). La integración consta de dos partes: proveedor y"
+" complemento. El proveedor permite navegar, administrar y visualizar capas "
+"raster y vectoriales de GRASS. El complemento se puede utilizar para crear "
+"nuevas ubicaciones y conjuntos de mapas de GRASS, cambiar la región de "
+"GRASS, crear y editar capas vectoriales y analizar datos de GRASS 2-D y 3-D "
+"con más de 400 módulos de GRASS. En esta sección, presentaremos las "
+"funcionalidades del proveedor y el complemento y daremos algunos ejemplos de"
+" cómo administrar y trabajar con datos de GRASS."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:21
+msgid ""
+"The provider supports GRASS version 6 and 7, the plugin supports GRASS 6 and"
+" 7 (starting from QGIS 2.12). QGIS distribution may contain provider/plugin "
+"for either GRASS 6 or GRASS 7 or for both versions at the same time "
+"(binaries have different file names). Only one version of the "
+"provider/plugin may be loaded on runtime however."
+msgstr ""
+"El proveedor es compatible con GRASS versión 6 y 7, el complemento es "
+"compatible con GRASS 6 y 7 (a partir de QGIS 2.12). La distribución de QGIS "
+"puede contener un proveedor / complemento para GRASS 6 o GRASS 7 o para "
+"ambas versiones al mismo tiempo (los binarios tienen diferentes nombres de "
+"archivo). Sin embargo, solo se puede cargar una versión del "
+"proveedor/complemento en tiempo de ejecución."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:28
+msgid "Demo dataset"
+msgstr "Conjuntos de datos demostración"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:30
+msgid ""
+"As an example, we will use the QGIS Alaska dataset (see section "
+":ref:`label_sampledata`). It includes a small sample GRASS :file:`LOCATION` "
+"with three vector layers and one raster elevation map. Create a new folder "
+"called :file:`grassdata`, download the QGIS 'Alaska' dataset "
+":file:`qgis\\_sample\\_data.zip` from https://qgis.org/downloads/data/ and "
+"unzip the file into :file:`grassdata`."
+msgstr ""
+"Como ejemplo, usaremos el conjunto de datos QGIS Alaska (ver sección "
+":ref:`label_sampledata`). Incluye una pequeña muestra de GRASS "
+":file:`LOCATION` con tres capas vectoriales y un mapa de elevación ráster. "
+"Cree una nueva carpeta llamada :file:`grassdata`, descargue el conjunto de "
+"datos de QGIS 'Alaska' :file:`qgis\\_sample\\_data.zip` de "
+"https://qgis.org/downloads/data/ y descomprima el archivo en "
+":file:`grassdata`."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:36
+msgid ""
+"More sample GRASS :file:`LOCATIONs` are available at the GRASS website at "
+"https://grass.osgeo.org/download/sample-data/."
+msgstr ""
+"Mas muestras de GRASS :file:`LOCATIONs` están disponibles en el sitio web de"
+" GRASS enhttps://grass.osgeo.org/download/sample-data/."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:42
+msgid "Loading GRASS raster and vector layers"
+msgstr "Cargar capas ráster y vectorial de GRASS"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:44
+msgid ""
+"If the provider is loaded in QGIS, the location item with GRASS |grass| icon"
+" is added in the browser tree under each folder item which contains GRASS "
+"location. Go to the folder :file:`grassdata` and expand location "
+":file:`alaska` and mapset :file:`demo`."
+msgstr ""
+"Si el proveedor está cargado en QGIS, el elemento de ubicación con GRASS | "
+"grass | El icono se agrega en el árbol del navegador debajo de cada elemento"
+" de carpeta que contiene la ubicación de GRASS. Vaya a la carpeta "
+":file:`grassdata` y expanda la ubicación :file:`alaska` y mapset "
+":file:`demo`."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:49
+msgid ""
+"You can load GRASS raster and vector layers like any other layer from the "
+"browser either by double click on layer item or by dragging and dropping to "
+"map canvas or legend."
+msgstr ""
+"Puede cargar capas ráster y vectoriales de GRASS como cualquier otra capa "
+"desde el navegador, ya sea haciendo doble clic en el elemento de capa o "
+"arrastrando y soltando al lienzo del mapa o la leyenda."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:52
+msgid "**GRASS Data Loading**"
+msgstr "**Cargando datos GRASS**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:54
+msgid ""
+"If you don't see GRASS location item, verify in :menuselection:`Help --> "
+"About --> Providers` if GRASS vector provider is loaded."
+msgstr ""
+"Si no ve el elemento de ubicación de GRASS, verifique en "
+":menuselection:`Ayuda --> Acerca de --> Proveedores` si está cargado el "
+"proveedor de vectores GRASS."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:61
+msgid "Importing data into a GRASS LOCATION via drag and drop"
+msgstr ""
+"Importar datos dentro de una UBICACIÓN DE GRASS mediante arrastrar y soltar"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:63
+msgid ""
+"This section gives an example of how to import raster and vector data into a"
+" GRASS mapset."
+msgstr ""
+"Esta sección ofrece un ejemplo de cómo importar datos ráster y vectoriales "
+"en un conjunto de mapas de GRASS."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:65
+msgid "In QGIS browser navigate to the mapset you want to import data into."
+msgstr ""
+"En el navegador QGIS, navegue hasta el conjunto de mapas en el que desea "
+"importar datos."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:66
+msgid ""
+"In QGIS browser find a layer you want to import to GRASS, note that you can "
+"open another instance of the browser (:guilabel:`Browser Panel (2)`) if "
+"source data are too far from the mapset in the tree."
+msgstr ""
+"En el navegador QGIS busque una capa que desee importar a GRASS, tenga en "
+"cuenta que puede abrir otra instancia del navegador (:guilabel:`Panel del "
+"navegador (2)`) si los datos de origen están demasiado lejos del conjunto de"
+" mapas en el árbol."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:69
+msgid ""
+"Drag a layer and drop it on the target mapset. The import may take some time"
+" for larger layers, you will see animated icon |import| in front of new "
+"layer item until the import finishes."
+msgstr ""
+"Arrastre una capa y suéltela en el conjunto de mapas de destino. La "
+"importación puede llevar algún tiempo para capas más grandes, verá el icono "
+"animado |import| delante del nuevo elemento de capa hasta que finalice la "
+"importación."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:73
+msgid ""
+"When raster data are in different CRS, they can be reprojected using an "
+":guilabel:`Approximate` (fast) or :guilabel:`Exact` (precise) "
+"transformation. If a link to the source raster is created (using "
+"``r.external``), the source data are in the same CRS and the format is known"
+" to GDAL, the source data CRS will be used. You can set these options in the"
+" :guilabel:`Browser` tab in :ref:`grass_options`."
+msgstr ""
+"Cuando los datos ráster están en diferentes SRC, pueden reproyectarse usando"
+" una transformación :guilabel:`Aproximada` (rápida) o :guilabel:`Exacta` "
+"(precisa). Si se crea un enlace al ráster de origen (utilizando "
+"``r.external``), los datos de origen están en el mismo CRS y el formato es "
+"conocido por GDAL, se utilizará el SRC de datos de origen. Puede configurar "
+"estas opciones en la pestaña :guilabel:`Navegador` en :ref:`grass_options`."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:79
+msgid ""
+"If a source raster has more bands, a new GRASS map is created for each layer"
+" with **.<band number>** suffix and group of all maps with |rasterGroup| "
+"icon is created. External rasters have a different icon |rasterLink|."
+msgstr ""
+"Si un ráster de origen tiene más bandas, se crea un nuevo mapa de GRASS para"
+" cada capa con el sufijo **.<band number>** y grupo de todos los mapas con "
+"|rasterGroup| Se crea el icono. Los rásteres externos tienen un icono "
+"diferente |rasterLink|."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:86
+msgid "Managing GRASS data in QGIS Browser"
+msgstr "Administrar datos de GRASS en el navegador QGIS"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:88
+msgid ""
+"Copying maps: GRASS maps may be copied between mapsets within the same "
+"location using drag and drop."
+msgstr ""
+"Copia de mapas: los mapas de GRASS se pueden copiar entre conjuntos de mapas"
+" dentro de la misma ubicación usando arrastrar y soltar."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:89
+msgid ""
+"Deleting maps: Right click on a GRASS map and select :guilabel:`Delete` from"
+" context menu."
+msgstr ""
+"Eliminación de mapas: haga clic con el botón derecho en un mapa de GRASS y "
+"seleccione :guilabel:`Eliminar` del menú contextual."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:90
+msgid ""
+"Renaming maps: Right click on a GRASS map and select :guilabel:`Rename` from"
+" context menu."
+msgstr ""
+"Cambiar el nombre de los mapas: haga clic con el botón derecho en un mapa de"
+" GRASS y seleccione :guilabel:`Renombrar` en el menú contextual."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:95
+msgid "GRASS Options"
+msgstr "Opciones GRASS"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:97
+msgid ""
+"GRASS options may be set in :guilabel:`GRASS Options` dialog, which can be "
+"opened by right clicking on the location or mapset item in the browser and "
+"then choosing :guilabel:`GRASS Options`."
+msgstr ""
+"Las opciones de GRASS se pueden configurar en el cuadro de diálogo "
+":guilabel:`Opciones de GRASS`, que se puede abrir haciendo clic con el botón"
+" derecho en la ubicación o el elemento del conjunto de mapas en el navegador"
+" y luego eligiendo :guilabel:`Opciones de GRASS`."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:103
+msgid "Starting the GRASS plugin"
+msgstr "Iniciar el complemento GRASS"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:105
+msgid ""
+"To use GRASS functionalities in QGIS, you must select and load the GRASS "
+"plugin using the Plugin Manager. To do this, go to the menu "
+":menuselection:`Plugins -->` |showPluginManager| :menuselection:`Manage and "
+"Install Plugins...`, select |checkbox| :guilabel:`GRASS` and click "
+":guilabel:`OK`."
+msgstr ""
+"Para usar las funcionalidades de GRASS en QGIS, debe seleccionar y cargar el"
+" complemento de GRASS usando el Administrador de complementos. Para hacer "
+"esto, vaya al menú :menuselection:`Complementos ->` |showPluginManager| "
+":menuselection:`Administrar e instalar complementos ...`, seleccione "
+"|checkbox| :guilabel:`GRASS` y haga clic en :guilabel:`Aceptar`."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:110
+msgid ""
+"The following main features are provided with the GRASS menu "
+"(:menuselection:`Plugins --> GRASS`) when you start the GRASS plugin:"
+msgstr ""
+"Las siguientes funciones principales se proporcionan con el menú de GRASS ( "
+":menuselection:`Complementos -> GRASS`) cuando inicia el complemento de "
+"GRASS:"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:113
+msgid "|grassOpenMapset| :sup:`Open Mapset`"
+msgstr "|grassOpenMapset| :sup:`Abrir directorio de mapas`"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:114
+msgid "|grassNewMapset| :sup:`New Mapset`"
+msgstr "|grassNewMapset| :sup:`Nuevo directorio de mapas`"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:115
+msgid "|grassCloseMapset| :sup:`Close Mapset`"
+msgstr "|grassCloseMapset| :sup:`Cerrar directorio de mapas`"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:116
+msgid "|grassTools| :sup:`Open GRASS Tools`"
+msgstr "|grassTools| :sup:`Abrir herramientas de GRASS`"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:117
+msgid "|grassRegion| :sup:`Display Current GRASS Region`"
+msgstr "|grassRegion| :sup:`Mostrar región actual de GRASS`"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:118
+msgid "|general| :sup:`GRASS Options`"
+msgstr "|general| :sup:`Opciones de GRASS`"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:121
+msgid "Opening GRASS mapset"
+msgstr "Abrir directorio de mapas"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:123
+msgid ""
+"A GRASS mapset must be opened to get access to GRASS Tools in the plugin "
+"(the tools are disabled if no mapset is open). You can open a mapset from "
+"the browser: right click on mapset item and then choose :guilabel:`Open "
+"mapset` from context menu."
+msgstr ""
+"Se debe abrir un conjunto de mapas de GRASS para obtener acceso a las "
+"herramientas de GRASS en el complemento (las herramientas están "
+"deshabilitadas si no hay ningún conjunto de mapas abierto). Puede abrir un "
+"conjunto de mapas desde el navegador: haga clic con el botón derecho en el "
+"elemento del conjunto de mapas y luego elija :guilabel:`Open mapset` del "
+"menú contextual."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:130
+msgid "GRASS LOCATION and MAPSET"
+msgstr "LOCALIZACIÓN y DIRECTORIO DE MAPA GRASS"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:132
+msgid ""
+"GRASS data are stored in a directory referred to as GISDBASE. This "
+"directory, often called :file:`grassdata`, must be created before you start "
+"working with the GRASS plugin in QGIS. Within this directory, the GRASS GIS "
+"data are organized by projects stored in subdirectories called "
+":file:`LOCATIONs`. Each :file:`LOCATION` is defined by its coordinate "
+"system, map projection and geographical boundaries. Each :file:`LOCATION` "
+"can have several :file:`MAPSETs` (subdirectories of the :file:`LOCATION`) "
+"that are used to subdivide the project into different topics or subregions, "
+"or as workspaces for individual team members (see Neteler & Mitasova 2008 in"
+" :ref:`literature_and_web`). In order to analyse vector and raster layers "
+"with GRASS modules, you generally have to import them into a GRASS "
+":file:`LOCATION`. (This is not strictly true -- with the GRASS modules "
+":file:`r.external` and :file:`v.external` you can create read-only links to "
+"external GDAL/OGR-supported datasets without importing them. This is not the"
+" usual way for beginners to work with GRASS, therefore this functionality "
+"will not be described here.)"
+msgstr ""
+"Los datos de GRASS se almacenan en un directorio denominado GISDBASE. Este "
+"directorio, a menudo llamado :file:`grassdata`, debe crearse antes de "
+"comenzar a trabajar con el complemento GRASS en QGIS. Dentro de este "
+"directorio, los datos de GRASS GIS están organizados por proyectos "
+"almacenados en subdirectorios llamados :file:`LOCATIONs`. Cada "
+":file:`LOCATION` se define por su sistema de coordenadas, proyección de mapa"
+" y límites geográficos. Cada :file:`LOCATION` puede tener varios "
+":file:`MAPSETs` (subdirectorios del :file:`LOCATION`) que se utilizan para "
+"subdividir el proyecto en diferentes temas o subregiones, o como espacios de"
+" trabajo para miembros individuales del equipo (ver Neteler & Mitasova 2008 "
+"en :ref:`literatura_y_web`). Para analizar capas vectoriales y ráster con "
+"módulos GRASS, generalmente debe importarlas a un archivo GRASS "
+":file:`LOCATION`. (Esto no es estrictamente cierto; con los módulos GRASS "
+":file:`r.external` y :file:` v.external` puede crear enlaces de solo lectura"
+" a conjuntos de datos externos compatibles con GDAL/OGR sin importarlos. "
+"Esto es no es la forma habitual para que los principiantes trabajen con "
+"GRASS, por lo que esta funcionalidad no se describirá aquí.)"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:152
+msgid "GRASS data in the alaska LOCATION"
+msgstr "Datos GRASS en la LOCALIZACIÓN alaska"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:157
+msgid "Importing data into a GRASS LOCATION"
+msgstr "Importar datos dentro de una LOCALIZACIÓN DE GRASS"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:159
+msgid ""
+"See section :ref:`import_data_dnd` to find how data can be easily imported "
+"by dragging and dropping in the browser."
+msgstr ""
+"Ver sección :ref:`import_data_dnd` para descubrir cómo se pueden importar "
+"fácilmente los datos arrastrando y soltando en el navegador."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:162
+msgid ""
+"This section gives an example of how to import raster and vector data into "
+"the 'alaska' GRASS :file:`LOCATION` provided by the QGIS 'Alaska' dataset in"
+" traditional way, using standard GRASS modules. Therefore, we use the "
+"landcover raster map :file:`landcover.img` and the vector GML file "
+":file:`lakes.gml` from the QGIS 'Alaska' dataset (see "
+":ref:`label_sampledata`)."
+msgstr ""
+"Esta sección ofrece un ejemplo de cómo importar datos ráster y vectoriales "
+"en el archivo GRASS de 'alaska' :file:'LOCATION' proporcionado por el "
+"conjunto de datos de QGIS 'Alaska' de forma tradicional, utilizando módulos "
+"GRASS estándar. Por lo tanto, usamos el mapa ráster de cobertura terrestre "
+":file:`landcover.img` y el archivo vectorial GML :file:` lakes.gml` del "
+"conjunto de datos QGIS 'Alaska' (ver :ref:`label_sampledata`)."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:168
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:214
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:283
+msgid "Start QGIS and make sure the GRASS plugin is loaded."
+msgstr "Inicie QGIS y asegúrese que el complemento GRASS está cargado."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:169
+msgid ""
+"In the GRASS toolbar, click the |grassOpenMapset| :sup:`Open MAPSET` icon to"
+" bring up the :guilabel:`MAPSET` wizard."
+msgstr ""
+"En la barra de herramientas de GRASS, haga clic en el icono "
+"|grassOpenMapset| :sup:`Abrir directorio de mapas` para que aparezca el "
+"asistente :guilabel:`DIRECTORIO DE MAPA`."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:171
+msgid ""
+"Select as GRASS database the folder :file:`grassdata` in the QGIS Alaska "
+"dataset, as :file:`LOCATION` 'alaska', as :file:`MAPSET` 'demo' and click "
+":guilabel:`OK`."
+msgstr ""
+"Seleccione como base de datos GRASS la carpeta: archivo: `grassdata` en el "
+"conjunto de datos de QGIS Alaska, como :file:`LOCATION` 'alaska', como "
+":file:`MAPSET` 'demo' y haga clic en :guilabel:`Aceptar`."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:174
+msgid ""
+"Now click the |grassTools| :sup:`Open GRASS tools` icon. The GRASS Toolbox "
+"(see section :ref:`subsec_grass_toolbox`) dialog appears."
+msgstr ""
+"Ahora haga clic en el icono |grassTools| :sup:`Abrir herramientas de GRASS`."
+" El diálogo de la caja de herramientas de GRASS (vea la sección "
+":ref:`subsec_grass_toolbox`) aparece."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:176
+msgid ""
+"To import the raster map :file:`landcover.img`, click the module "
+":file:`r.in.gdal` in the :guilabel:`Modules Tree` tab. This GRASS module "
+"allows you to import GDAL-supported raster files into a GRASS "
+":file:`LOCATION`. The module dialog for :file:`r.in.gdal` appears."
+msgstr ""
+"Para importar el mapa ráster :file:`landcover.img`, haga clic en el modulo "
+":file:`r.in.gdal` en la pestaña :guilabel:`Árbol de módulos`. Este modulo "
+"GRASS le permite importar archivos ráster GDAL-admitidos en un "
+":file:`LOCALIZACIÓN` de GRASS. El diálogo del módulo para que "
+":file:`r.in.gdal` aparezca."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:180
+msgid ""
+"Browse to the folder :file:`raster` in the QGIS 'Alaska' dataset and select "
+"the file :file:`landcover.img`."
+msgstr ""
+"Navegue al navegador :file:`raster` en el conjunto de datos de QGIS 'Alaska'"
+" y seleccione el archivo :file:`landcover.img`."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:182
+msgid ""
+"As raster output name, define :file:`landcover_grass` and click "
+":guilabel:`Run`. In the :guilabel:`Output` tab, you see the currently "
+"running GRASS command ``r.in.gdal -o input=/path/to/landcover.img "
+"output=landcover_grass``."
+msgstr ""
+"Como nombre de ráster saliente, define :file:`landcover_grass` y click en "
+":guilabel:`Ejecutar`. en la pestaña :guilabel:`Salida`, ve el comando GRASS "
+"que se está ejecutando actualmente ``r.in.gdal -o "
+"input=/path/to/landcover.img output=landcover_grass``."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:186
+msgid ""
+"When it says **Successfully finished**, click :guilabel:`View Output`. The "
+":file:`landcover_grass` raster layer is now imported into GRASS and will be "
+"visualized in the QGIS canvas."
+msgstr ""
+"Cuando dice **finalizado satisfactoriamente**, click en :guilabel:`Ver "
+"salida`. La capa ráster :file:`landcover_grass` ahora se importa a GRASS y "
+"se visualizará en el lienzo de QGIS."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:189
+msgid ""
+"To import the vector GML file :file:`lakes.gml`, click the module "
+":file:`v.in.ogr` in the :guilabel:`Modules Tree` tab. This GRASS module "
+"allows you to import OGR-supported vector files into a GRASS "
+":file:`LOCATION`. The module dialog for :file:`v.in.ogr` appears."
+msgstr ""
+"Para importar el archivo vector GML :file:`lakes.gml`, haga clic en el "
+"modulo :file:`v.in.ogr` en la pestaña :guilabel:`Árbol de módulos`. Este "
+"modulo GRASS le permite importar archivos vectoriales OGR-admitidos  en una "
+":file:`LOCAZACIÓN` de GRASS. El diálogo del modulo para que :file:`v.in.ogr`"
+" aparezca."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:193
+msgid ""
+"Browse to the folder :file:`gml` in the QGIS 'Alaska' dataset and select the"
+" file :file:`lakes.gml` as OGR file."
+msgstr ""
+"Busque la carpeta :file:`gml` en el conjunto de datos de QGIS 'Alaska' y "
+"seleccione el archivo :file:`lakes.gml` como archivo OGR."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:195
+msgid ""
+"As vector output name, define :file:`lakes_grass` and click :guilabel:`Run`."
+" You don't have to care about the other options in this example. In the "
+":guilabel:`Output` tab you see the currently running GRASS command "
+"``v.in.ogr -o dsn=/path/to/lakes.gml output=lakes\\_grass``."
+msgstr ""
+"Como nombre de salida del vector, defina :file:`lakes_grass` y haga clic en "
+":guilabel:`Ejecutar`. No tiene que preocuparse por las otras opciones en "
+"este ejemplo. En la pestaña :guilabel:`Salida`, verá el comando GRASS que se"
+" está ejecutando actualmente ``v.in.ogr -o dsn=/path/to/lakes.gml "
+"output=lakes\\_grass``."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:199
+msgid ""
+"When it says **Succesfully finished**, click :guilabel:`View Output`. The "
+":file:`lakes_grass` vector layer is now imported into GRASS and will be "
+"visualized in the QGIS canvas."
+msgstr ""
+"Cuando diga **Finalizado satisfactoriamente**, haga clic en :guilabel:`Ver "
+"salida`. La capa vectorial :file:`lakes_grass` ahora se importa a GRASS y se"
+" visualizará en el lienzo de QGIS."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:206
+msgid "Creating a new GRASS LOCATION"
+msgstr "Crear una nueva LOCALIZACIÓN GRASS"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:208
+msgid ""
+"As an example, here is the sample GRASS :file:`LOCATION alaska`, which is "
+"projected in the Albers Equal Area projection using feet as units. This "
+"sample GRASS :file:`LOCATION alaska` will be used for all examples and "
+"exercises in the following GRASS-related sections. It is useful to download "
+"and install the dataset on your computer (see :ref:`label_sampledata`)."
+msgstr ""
+"Como ejemplo, aquí está el ejemplo de GRASS :file:`LOCATION alaska`, que se "
+"proyecta en la proyección Albers Equal Area usando pies como unidades. Este "
+"archivo de ejemplo de GRASS :file:`LOCATION alaska` se utilizará para todos "
+"los ejemplos y ejercicios de las siguientes secciones relacionadas con "
+"GRASS. Es útil descargar e instalar el conjunto de datos en su computadora "
+"(ver: ref: `label_sampledata`)."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:215
+msgid ""
+"Visualize the :file:`alaska.shp` shapefile (see section :ref:`loading_file`)"
+" from the QGIS Alaska dataset (see :ref:`label_sampledata`)."
+msgstr ""
+"Visualice el shapefile :file:`alaska.shp` (ver sección :ref:`loading_file`) "
+"del conjunto de datos QGIS Alaska (ver :ref:`label_sampledata`)."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:217
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:284
+msgid ""
+"In the GRASS toolbar, click on the |grassNewMapset| :sup:`New mapset` icon "
+"to bring up the :guilabel:`MAPSET` wizard."
+msgstr ""
+"En la barra de herramientas de GRASS, haga clic en el icono |grassNewMapset|"
+" :sup:`Nuevo mapaset` para traer al wizard :guilabel:`MAPSET`."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:219
+msgid ""
+"Select an existing GRASS database (GISDBASE) folder :file:`grassdata`, or "
+"create one for the new :file:`LOCATION` using a file manager on your "
+"computer. Then click :guilabel:`Next`."
+msgstr ""
+"Seleccione una carpeta de base de datos GRASS (GISDBASE) existente "
+":file:`grassdata`, o crea uno para la nueva :file:`LOCATION` usando un "
+"administrador de archivos en su computadora. Luego haga clic en "
+":guilabel:`Siguiente`."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:222
+msgid ""
+"We can use this wizard to create a new :file:`MAPSET` within an existing "
+":file:`LOCATION` (see section :ref:`sec_add_mapset`) or to create a new "
+":file:`LOCATION` altogether. Select |radioButtonOn| :guilabel:`Create new "
+"location` (see figure_grass_new_location_)."
+msgstr ""
+"Podemos usar este asistente para crear un nuevo :file:`MAPSET` sin una "
+"existente :file:`LOCATION` (ver sección :ref:`sec_add_mapset`) o para crear "
+"una nueva :file:`LOCATION` conjunta. Selecciona |radioButtonOn| "
+":guilabel:`Crear nueva localización` (ver figure_grass_new_location_)."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:226
+msgid ""
+"Enter a name for the :file:`LOCATION` -- we used 'alaska' -- and click "
+":guilabel:`Next`."
+msgstr ""
+"Introduzca un nombre para :file:`LOCATION` -- nosostros usamos 'alaska' -- y"
+" haga click en :guilabel:`Siguiente`."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:227
+msgid ""
+"Define the projection by clicking on the radio button |radioButtonOn| "
+":guilabel:`Projection` to enable the projection list."
+msgstr ""
+"Defina la proyección haciendo clic en el botón de radio |radioButtonOn| "
+":guilabel:`Proyección` para habilitar la lista de proyección."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:229
+msgid ""
+"We are using Albers Equal Area Alaska (feet) projection. Since we happen to "
+"know that it is represented by the EPSG ID 2964, we enter it in the search "
+"box. (Note: If you want to repeat this process for another :file:`LOCATION` "
+"and projection and haven't memorized the EPSG ID, click on the "
+"|projectionEnabled| :sup:`CRS Status` icon in the lower right-hand corner of"
+" the status bar (see section :ref:`label_projections`))."
+msgstr ""
+"Estamos usando la proyección Albers Equal Area Alaska (pies). Puesto que nos"
+" ha tocado saber que está representado por el EPSG ID 2964, ingresamos en el"
+" cuadro de búsqueda. (Nota: Si desea repetir este proceso para otra "
+":file:`LOCALIZACIÓN` y proyección y no ha memorizado el EPSG ID, haga clic "
+"en el icono |projectionEnabled| :sup:`SRC actual` en la esquina inferior "
+"derecha de la barra de estado (vea sección :ref:`label_projections`))."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:235
+msgid "In :guilabel:`Filter`, insert 2964 to select the projection."
+msgstr "En :guilabel:`Filtrar`, inserte 2964 para seleccionar la proyección."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:236
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:241
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:289
+msgid "Click :guilabel:`Next`."
+msgstr "Haz clic en :guilabel:`Siguiente`."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:237
+msgid ""
+"To define the default region, we have to enter the :file:`LOCATION` bounds "
+"in the north, south, east, and west directions. Here, we simply click on the"
+" button :guilabel:`Set Current QGIS Extent`, to apply the extent of the "
+"loaded layer :file:`alaska.shp` as the GRASS default region extent."
+msgstr ""
+"Para definir la región predeterminada, tenemos que ingresar los límites de "
+":file:`LOCATION` en dirección norte, sur, este, y oeste. Aquí, simplemente "
+"hacemos clic en el botón :guilabel:`Establecer la extensión actual de QGIS`,"
+" para aplicar la extensión de la capa cargada :file:`alaska.shp` como la "
+"extensión de región predeterminada de GRASS."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:242
+msgid ""
+"We also need to define a :file:`MAPSET` within our new :file:`LOCATION` "
+"(this is necessary when creating a new :file:`LOCATION`). You can name it "
+"whatever you like - we used 'demo'. GRASS automatically creates a special "
+":file:`MAPSET` called :file:`PERMANENT`, designed to store the core data for"
+" the project, its default spatial extent and coordinate system definitions "
+"(see Neteler & Mitasova 2008 in :ref:`literature_and_web`)."
+msgstr ""
+"También necesitamos definir un :file:`MAPSET` dentro de nuestro nueva "
+":file:`LOCATION` (esto es necesario al crear una nueva :file:`LOCATION`). "
+"Puedes nombrarlo como quieras, usamos 'demo'. GRASS crea automáticamente un "
+"especial :file:`MAPSET` llamada :file:`PERMANENT`, diseñado para almacenar "
+"los datos centrales del proyecto, su extensión espacial predeterminada y las"
+" definiciones del sistema de coordenadas (ver Neteler & Mitasova 2008 en "
+":ref:`literature_and_web`)."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:248
+msgid ""
+"Check out the summary to make sure it's correct and click "
+":guilabel:`Finish`."
+msgstr ""
+"Consulte el resumen para asegurarse de que sea correcto y haga clic en "
+":guilabel:`Finalizar`."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:249
+msgid ""
+"The new :file:`LOCATION`, 'alaska', and two :file:`MAPSETs`, 'demo' and "
+"'PERMANENT', are created. The currently opened working set is 'demo', as you"
+" defined."
+msgstr ""
+"La nueva :file:`LOCALIZACIÓN`, 'alaska', y los dos :file:`DIRECTORIO DE "
+"MAPAS`, 'demo' y 'PERMANENT', son creados. El conjunto de trabajo abierto "
+"actualmente es 'demo', como se ha definido."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:251
+msgid ""
+"Notice that some of the tools in the GRASS toolbar that were disabled are "
+"now enabled."
+msgstr ""
+"Tenga en cuenta que algunas de las herramientas en la barra de herramientas "
+"de GRASS que estaban inhabilitadas ahora están habilitadas."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:260
+msgid "Creating a new GRASS LOCATION or a new MAPSET in QGIS"
+msgstr ""
+"Cree una nueva LOCALIZACIÓN GRASS o un nuevo DIRECTORIO DE MAPA en QGIS"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:262
+msgid ""
+"If that seemed like a lot of steps, it's really not all that bad and a very "
+"quick way to create a :file:`LOCATION`. The :file:`LOCATION` 'alaska' is now"
+" ready for data import (see section :ref:`sec_import_loc_data`). You can "
+"also use the already-existing vector and raster data in the sample GRASS "
+":file:`LOCATION` 'alaska', included in the QGIS 'Alaska' dataset "
+":ref:`label_sampledata`, and move on to section :ref:`label_vectmodel`."
+msgstr ""
+"Si eso parecía como una gran cantidad de pasos, en realidad no es tan malo y"
+" una forma muy rápida de crear una :file:`LOCALIZACIÓN`. La "
+":file:`LOCALIZACIÓN` 'alaska' ahora está listo para la importación de datos "
+"(vea la sección :ref:`sec_import_loc_data`). También puede utilizar los "
+"datos ya existentes vectoriales y ráster en el ejemplo :file:`LOCALIZACIÓN` "
+"'alaska' de GRASS, incluido en el conjunto de datos 'Alaska' de QGIS "
+":ref:`label_sampledata`, ya pasar a la sección :ref:`label_vectmodel`."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:272
+msgid "Adding a new MAPSET"
+msgstr "Añadir un nuevo DIRECTORIO DE MAPA"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:274
+msgid ""
+"A user has write access only to a GRASS :file:`MAPSET` which he or she "
+"created. This means that besides access to your own :file:`MAPSET`, you can "
+"read maps in other users' :file:`MAPSETs` (and they can read yours), but you"
+" can modify or remove only the maps in your own :file:`MAPSET`."
+msgstr ""
+"Un usuario sólo tiene acceso de escritura a un :file:`DIRECTORIO DE MAPA` "
+"GRASS que él o ella crearon. Esto significa que además de acceder a su "
+"propio :file:`DIRECTORIO DE MAPA`, se pueden leer mapas de otros usuarios' "
+":file:`DIRECTORIO DE MAPAS` (y ellos pueden leer los tuyos), pero sólo puede"
+" modificar o eliminar su propio :file:`DIRECTORIO DE MAPA`."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:279
+msgid ""
+"All :file:`MAPSETs` include a :file:`WIND` file that stores the current "
+"boundary coordinate values and the currently selected raster resolution (see"
+" Neteler & Mitasova 2008 in :ref:`literature_and_web`, and section "
+":ref:`sec_grass_region`)."
+msgstr ""
+"Todos los :file:`DIRECTORIO DE MAPAS` incluyen un archivo :file:`WIND` que "
+"almacena los valores de las coordenadas de los límites actuales y la "
+"resolución ráster actualmente seleccionado (vea Neteler & Mitasova 2008 en "
+":ref:`literature_and_web`, y la sección :ref:`sec_grass_region`)."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:286
+msgid ""
+"Select the GRASS database (GISDBASE) folder :file:`grassdata` with the "
+":file:`LOCATION` 'alaska', where we want to add a further :file:`MAPSET` "
+"called 'test'."
+msgstr ""
+"Seleccione la base de datos GRASS (GISDBASE) la carpeta :file:`grassdata` "
+"con la :file:`LOCALIZACIÓN` 'alaska', donde queremos añadir otro "
+":file:`DIRECTORIO DE MAPA` llamado 'test'. "
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:290
+msgid ""
+"We can use this wizard to create a new :file:`MAPSET` within an existing "
+":file:`LOCATION` or to create a new :file:`LOCATION` altogether. Click on "
+"the radio button |radioButtonOn| :guilabel:`Select location` (see "
+"figure_grass_new_location_) and click :guilabel:`Next`."
+msgstr ""
+"Podemos usar este asistente para crear un nuevo :file:`MAPSET` dentro de una"
+" existente :file:`LOCATION` o para crear un nuevo archivo :file:`LOCATION` "
+"conjunto. Click en el botón de opciones |radioButtonOn| "
+":guilabel:`Seleccionar localización` (ver figure_grass_new_location_) y haga"
+" click en :guilabel:`Siguiente`."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:294
+msgid ""
+"Enter the name :file:`test` for the new :file:`MAPSET`. Below in the wizard,"
+" you see a list of existing :file:`MAPSETs` and corresponding owners."
+msgstr ""
+"Introduzca el nombre :file:`test` para el nuevo :file:`MAPSET`. Abajo en el "
+"asistente, verá una lista de :file:`MAPSETs` y propietarios "
+"correspondientes."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:296
+msgid ""
+"Click :guilabel:`Next`, check out the summary to make sure it's all correct "
+"and click :guilabel:`Finish`."
+msgstr ""
+"Click en :guilabel:`Siguiente`, consulte el resumen para asegurarse de que "
+"esté todo correcto y haga clic en :guilabel:`Finalizar`."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:303
+msgid "The GRASS vector data model"
+msgstr "El modelo de datos vectoriales de GRASS"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:305
+msgid ""
+"It is important to understand the :index:`GRASS vector data model` prior to "
+"digitizing. In general, GRASS uses a topological vector model. This means "
+"that areas are not represented as closed polygons, but by one or more "
+"boundaries. A boundary between two adjacent areas is digitized only once, "
+"and it is shared by both areas. Boundaries must be connected and closed "
+"without gaps. An area is identified (and labelled) by the **centroid** of "
+"the area."
+msgstr ""
+"Es importante comprender el :index:`Modelo de datos vectoriales de GRASS` "
+"antes de digitalizar. En general, GRASS utiliza un modelo vectorial "
+"topológico. Esto significa que las áreas no se representan como polígonos "
+"cerrados, sino por uno o más límites. Un límite entre dos áreas adyacentes "
+"se digitaliza solo una vez y es compartido por ambas áreas. Los límites "
+"deben estar conectados y cerrados sin espacios. Un área se identifica (y "
+"etiqueta) por el **centroide** del área."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:312
+msgid ""
+"Besides boundaries and centroids, a vector map can also contain points and "
+"lines. All these geometry elements can be mixed in one vector and will be "
+"represented in different so-called 'layers' inside one GRASS vector map. So "
+"in GRASS, a layer is not a vector or raster map but a level inside a vector "
+"layer. This is important to distinguish carefully. (Although it is possible "
+"to mix geometry elements, it is unusual and, even in GRASS, only used in "
+"special cases such as vector network analysis. Normally, you should prefer "
+"to store different geometry elements in different layers.)"
+msgstr ""
+"Además de los límites y centroides, un mapa vectorial también puede contener"
+" puntos y líneas. Todos estos elementos geométricos se pueden mezclar en una"
+" vector y serán representados en diferentes denominadas 'capas' dentro de un"
+" mapa vectorial GRASS.  Por lo que en GRASS, una capa no es un mapa "
+"vectorial o ráster pero un nivel dentro de una capa vectorial. Esto es "
+"importante para distinguir cuidadosamente. (aunque es imposible mezclar "
+"elementos, es inusual e incluso en GRASS, sólo se utiliza en casos "
+"especiales como análisis de redes vectoriales. Usualmente,  se debe preferir"
+" almacenar diferentes elementos geométricos en diferentes capas.) "
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:321
+msgid ""
+"It is possible to store several 'layers' in one vector dataset. For example,"
+" fields, forests and lakes can be stored in one vector. An adjacent forest "
+"and lake can share the same boundary, but they have separate attribute "
+"tables. It is also possible to attach attributes to boundaries. An example "
+"might be the case where the boundary between a lake and a forest is a road, "
+"so it can have a different attribute table."
+msgstr ""
+"Es posible almacenar varias 'capas' en un conjunto de datos vectoriales. Por"
+" ejemplo, campos, bosques y lagos se pueden almacenar en un vector. Un "
+"bosque y lago adyacente pueden compartir el mismo límite, pero tienen tablas"
+" de atributos separados. También es posible adjuntar atributos a límites. Un"
+" ejemplo podría ser el caso donde los límites entre un lago y un bosque es "
+"una carretera, por lo que puede tener una tabla de atributos diferente."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:327
+msgid ""
+"The 'layer' of the feature is defined by the 'layer' inside GRASS. 'Layer' "
+"is the number which defines if there is more than one layer inside the "
+"dataset (e.g., if the geometry is forest or lake). For now, it can be only a"
+" number. In the future, GRASS will also support names as fields in the user "
+"interface."
+msgstr ""
+"La 'capa' del objeto espacial es definido por la 'capa' dentro de GRASS. "
+"'Capa' es el número que define si hay más de una capa dentro del conjunto de"
+" datos (por ejemplo, si la geometría es bosque o lago). Por ahora, sólo "
+"puede ser un número. En el futuro, GRASS también implementara nombres como "
+"campos en la interfaz de usuario."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:332
+msgid ""
+"Attributes can be stored inside the GRASS :file:`LOCATION` as dBase,  "
+"SQLite3 or in external database tables, for example, PostgreSQL, MySQL, "
+"Oracle, etc."
+msgstr ""
+"Los atributos se pueden almacenar dentro de la :file:`LOCALIZACIÓN` en GRASS"
+" como dBase o SQLite3 o en tablas de base de datos externa, por ejemplo, "
+"PostgreSQL, MySQL, Oracle, etc."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:338
+msgid ""
+"Attributes in database tables are linked to geometry elements using a "
+"'category' value."
+msgstr ""
+"Los atributos en la tabla de base de datos están enlazadas a los elementos "
+"geométricos utilizando un valor 'categoría'."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:344
+msgid ""
+"'Category' (key, ID) is an integer attached to geometry primitives, and it "
+"is used as the link to one key column in the database table."
+msgstr ""
+"'Categoría' (llave, ID) es un entero adjunto a la geometría primitiva, y se "
+"utiliza como el enlace a una columna llave en la tabla de base de datos."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:347
+msgid "**Learning the GRASS Vector Model**"
+msgstr "**Aprendizaje del modelo vectorial GRASS**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:349
+msgid ""
+"The best way to learn the GRASS vector model and its capabilities is to "
+"download one of the many GRASS tutorials where the vector model is described"
+" more deeply. See https://grass.osgeo.org/documentation/manuals/ for more "
+"information, books and tutorials in several languages."
+msgstr ""
+"La mejor manera de aprender el modelo vectorial de GRASS y sus capacidades "
+"es descargar uno de los muchos tutoriales de GRASS donde se describe el "
+"modelo vectorial con mayor profundidad. Ver "
+"https://grass.osgeo.org/documentation/manuals/ para obtener más información,"
+" libros y tutoriales en varios idiomas."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:360
+msgid "Creating a new GRASS vector layer"
+msgstr "Crear una nueva capa vectorial GRASS"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:362
+msgid ""
+"To create a new GRASS vector layer, select one of following items from "
+"mapset context menu in the browser:"
+msgstr ""
+"Para crear una nueva capa vectorial de GRASS, seleccione uno de los "
+"siguientes elementos del menú contextual del conjunto de mapas en el "
+"navegador:"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:365
+msgid "New Point Layer"
+msgstr "Nueva Capa de Puntos"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:366
+msgid "New Line Layer"
+msgstr "Nueva Capa de Líneas"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:367
+msgid "New Polygon Layer"
+msgstr "Nueva capa de polígonos"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:369
+msgid ""
+"and enter a name in the dialog. A new vector map will be created and layer "
+"will be added to canvas and editing started. Selecting type of the layer "
+"does not restrict geometry types which can be digitized in the vector map. "
+"In GRASS, it is possible to organize all sorts of geometry types (point, "
+"line and polygon) in one vector map. The type is only used to add the layer "
+"to the canvas, because QGIS requires a layer to have a specific type."
+msgstr ""
+"e ingrese un nombre en el diálogo. Se creará un nuevo mapa vectorial, se "
+"agregará una capa al lienzo y se iniciará la edición. La selección del tipo "
+"de capa no restringe los tipos de geometría que se pueden digitalizar en el "
+"mapa vectorial. En GRASS, es posible organizar todo tipo de tipos de "
+"geometría (punto, línea y polígono) en un mapa vectorial. El tipo solo se "
+"usa para agregar la capa al lienzo, porque QGIS requiere que una capa tenga "
+"un tipo específico."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:375
+msgid ""
+"It is also possible to add layers to existing vector maps selecting one of "
+"the items described above from context menu of existing vector map."
+msgstr ""
+"También es posible agregar capas a mapas vectoriales existentes "
+"seleccionando uno de los elementos descritos anteriormente del menú "
+"contextual del mapa vectorial existente."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:378
+msgid ""
+"In GRASS, it is possible to organize all sorts of geometry types (point, "
+"line and area) in one layer, because GRASS uses a topological vector model, "
+"so you don't need to select the geometry type when creating a new GRASS "
+"vector. This is different from shapefile creation with QGIS, because "
+"shapefiles use the Simple Feature vector model (see section "
+":ref:`sec_create_vector`)."
+msgstr ""
+"En GRASS, es posible organizar todo tipo de tipos de geometría (punto, línea"
+" y área) en una capa, porque GRASS utiliza un modelo de vector topológico, "
+"por lo que no es necesario seleccionar el tipo de geometría al crear un "
+"nuevo vector de GRASS. Esto es diferente de la creación de shapefile con "
+"QGIS, porque los shapefiles usan el modelo vectorial de entidades simples "
+"(ver sección :ref:`sec_create_vector`)."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:389
+msgid "Digitizing and editing a GRASS vector layer"
+msgstr "Digitalizar y editar una capa vectorial GRASS"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:391
+msgid ""
+"GRASS vector layers can be digitized using the standard QGIS digitizing "
+"tools. There are however some particularities, which you should know about, "
+"due to"
+msgstr ""
+"Las capas vectoriales de GRASS se pueden digitalizar utilizando las "
+"herramientas de digitalización estándar de QGIS. Sin embargo, existen "
+"algunas particularidades que debe conocer debido a"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:394
+msgid "GRASS topological model versus QGIS simple feature"
+msgstr "Modelo topológico de GRASS versus entidad simple de QGIS"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:395
+msgid "complexity of GRASS model"
+msgstr "complejidad del modelo GRASS"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:397
+msgid "multiple layers in single maps"
+msgstr "múltiples capas en mapas únicos"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:398
+msgid "multiple geometry types in single map"
+msgstr "múltiples tipos de geometría en un solo mapa"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:399
+msgid "geometry sharing by multiple features from multiple layers"
+msgstr "compartir geometría por múltiples entidades de múltiples capas"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:401
+msgid "The particularities are discussed in the following sections."
+msgstr "Las particularidades se discuten en las siguientes secciones."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:403
+msgid "**Save, discard changes, undo, redo**"
+msgstr "**Guardar, descartar cambios, deshacer, rehacer**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:405
+msgid ""
+"All the changes done during editing are immediately written to vector map "
+"and related attribute tables."
+msgstr ""
+"Todos los cambios realizados durante la edición se escriben inmediatamente "
+"en el mapa vectorial y las tablas de atributos relacionados."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:407
+msgid ""
+"Changes are written after each operation, it is however, possible to do "
+"undo/redo or discard all changes when closing editing. If undo or discard "
+"changes is used, original state is rewritten in vector map and attribute "
+"tables."
+msgstr ""
+"Los cambios se escriben después de cada operación, sin embargo, es posible "
+"deshacer/rehacer o descartar todos los cambios al cerrar la edición. Si se "
+"usa deshacer o descartar cambios, el estado original se reescribe en el mapa"
+" vectorial y las tablas de atributos."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:411
+msgid "There are two main reasons for this behaviour:"
+msgstr "Hay dos razones principales para este comportamiento:"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:413
+msgid ""
+"It is the nature of GRASS vectors coming from conviction that user wants to "
+"do what he is doing and it is better to have data saved when the work is "
+"suddenly interrupted (for example, blackout)"
+msgstr ""
+"Es la naturaleza de los vectores GRASS que surge de la convicción de que el "
+"usuario quiere hacer lo que está haciendo y es mejor tener los datos "
+"guardados cuando el trabajo se interrumpe repentinamente (por ejemplo, "
+"apagón)"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:416
+msgid ""
+"Necessity for effective editing of topological data is visualized "
+"information about topological correctness, such information can only be "
+"acquired from GRASS vector map if changes are written to the map."
+msgstr ""
+"La necesidad de una edición eficaz de los datos topológicos es la "
+"información visualizada sobre la corrección topológica; dicha información "
+"solo se puede adquirir del mapa vectorial de GRASS si se escriben cambios en"
+" el mapa."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:420
+msgid "**Toolbar**"
+msgstr "**Barra de herramientas**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:422
+msgid ""
+"The 'Digitizing Toolbar' has some specific tools when a GRASS layer is "
+"edited:"
+msgstr ""
+"La 'Barra de herramientas de digitalización' tiene algunas herramientas "
+"específicas cuando se edita una capa de GRASS:"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:427
+msgid "Icon"
+msgstr "Icono"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:427
+msgid "Tool"
+msgstr "Herramienta"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:427
+msgid "Purpose"
+msgstr "Propósito"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:429
+msgid "|capturePoint|"
+msgstr "|capturePoint|"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:429
+msgid "New Point"
+msgstr "Nuevo punto"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:429
+msgid "Digitize new point"
+msgstr "Digitalizar un nuevo punto"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:431
+msgid "|captureLine|"
+msgstr "|captureLine|"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:431
+msgid "New Line"
+msgstr "Nueva línea"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:431
+msgid "Digitize new line"
+msgstr "Digitalizar nueva línea"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:433
+msgid "|captureBoundary|"
+msgstr "|captureBoundary|"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:433
+msgid "New Boundary"
+msgstr "Nuevo límite"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:433
+msgid "Digitize new boundary"
+msgstr "Digitalizar nuevo borde"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:435
+msgid "|captureCentroid|"
+msgstr "|captureCentroid|"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:435
+msgid "New Centroid"
+msgstr "Nuevo centroide"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:435
+msgid "Digitize new centroid (label existing area)"
+msgstr "Digitalizar nuevo centroide (etiqueta de área existente)"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:437
+msgid "|capturePolygon|"
+msgstr "|capturePolygon|"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:437
+msgid "New Closed Boundary"
+msgstr "Nuevo Contorno Cerrado"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:437
+msgid "Digitize new closed boundary"
+msgstr "Digitalizar nuevo borde cerrado"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:441
+msgid "Table GRASS Digitizing: GRASS Digitizing Tools"
+msgstr "Mesa GRASS Digitalización: Herramientas de digitalización GRASS"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:443
+msgid "**Digitizing polygons in GRASS**"
+msgstr "**Digitalizando polígonos en GRASS**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:445
+msgid ""
+"If you want to create a polygon in GRASS, you first digitize the boundary of"
+" the polygon. Then you add a centroid (label point) into the closed "
+"boundary. The reason for this is that a topological vector model links the "
+"attribute information of a polygon always to the centroid and not to the "
+"boundary."
+msgstr ""
+"Si desea crear un polígono en GRASS, primero debe digitalizar el límite del "
+"polígono. Luego agrega un centroide (punto de etiqueta) en el límite "
+"cerrado. La razón de esto es que un modelo vectorial topológico vincula la "
+"información de atributo de un polígono siempre al centroide y no al límite."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:451
+msgid "**Category**"
+msgstr "**Categoría**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:453
+msgid ""
+"Category, often called cat, is sort of ID. The name comes from times when "
+"GRASS vectors had only singly attribute \"category\". Category is used as a "
+"link between geometry and attributes. A single geometry may have multiple "
+"categories and thus represent multiple features in different layers. "
+"Currently it is possible to assign only one category per layer using QGIS "
+"editing tools. New features have automatically assigned new unique category,"
+" except boundaries. Boundaries usually only form areas and do not represent "
+"linear features, it is however possible to define attributes for a boundary "
+"later, for example in different layer."
+msgstr ""
+"La categoría, a menudo llamada gato, es una especie de identificación. El "
+"nombre proviene de tiempos en los que los vectores GRASS solo tenían un "
+"atributo \"categoría\". La categoría se utiliza como vínculo entre la "
+"geometría y los atributos. Una única geometría puede tener varias categorías"
+" y, por tanto, representar varias entidades en diferentes capas. Actualmente"
+" es posible asignar solo una categoría por capa usando las herramientas de "
+"edición de QGIS. Las nuevas funciones han asignado automáticamente una nueva"
+" categoría única, excepto los límites. Los límites generalmente solo forman "
+"áreas y no representan entidades lineales; sin embargo, es posible definir "
+"atributos para un límite más adelante, por ejemplo, en una capa diferente."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:461
+msgid ""
+"New categories are always created only in currently being edited layer."
+msgstr ""
+"Las nuevas categorías siempre se crean solo en la capa que se está editando "
+"actualmente."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:463
+msgid ""
+"It is not possible to assign more categories to geometry using QGIS editing,"
+" such data are properly represented as multiple features, and individual "
+"features, even from different layers, may be deleted."
+msgstr ""
+"No es posible asignar más categorías a la geometría mediante la edición de "
+"QGIS, dichos datos se representan correctamente como múltiples entidades y "
+"las entidades individuales, incluso de diferentes capas, pueden eliminarse."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:467
+msgid "**Attributes**"
+msgstr "**Atributos**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:469
+msgid ""
+"Attributes of currently edited layer can only be modified. If the vector map"
+" contains more layers, features of other layers will have all attributes set"
+" to '<not editable (layer #)>' to warn you that such attribute is not "
+"editable. The reason is, that other layers may have and usually have "
+"different set of fields while QGIS only supports one fixed set of fields per"
+" layer."
+msgstr ""
+"Los atributos de la capa editada actualmente solo se pueden modificar. Si el"
+" mapa vectorial contiene más capas, las entidades de otras capas tendrán "
+"todos los atributos establecidos en '<not editable (layer #)>' para "
+"advertirle que dicho atributo no es editable. La razón es que otras capas "
+"pueden tener y generalmente tienen un conjunto de campos diferente, mientras"
+" que QGIS solo admite un conjunto fijo de campos por capa."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:474
+msgid ""
+"If a geometry primitive does not have a category assigned, a new unique "
+"category is automatically assigned and new record in attribute table is "
+"created when an attribute of that geometry is changed."
+msgstr ""
+"Si una primitiva de geometría no tiene una categoría asignada, se asigna "
+"automáticamente una nueva categoría única y se crea un nuevo registro en la "
+"tabla de atributos cuando se cambia un atributo de esa geometría."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:479
+msgid ""
+"If you want to do bulk update of attributes in table, for example using "
+"'Field Calculator' (:ref:`vector_field_calculator`), and there are features "
+"without category which you don't want to update (typically boundaries), you "
+"can filter them out by setting 'Advanced Filter' to ``cat is not null``."
+msgstr ""
+"Si desea realizar una actualización masiva de atributos en la tabla, por "
+"ejemplo, usando 'Calculadora de campo' (:ref:`vector_field_calculator`), y "
+"hay entidades sin categoría que no desea actualizar (generalmente límites), "
+"puede filtrar eliminarlos configurando 'Filtro avanzado' en ``cat is not "
+"null``."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:484
+msgid "**Editing style**"
+msgstr "**Editar Estilo**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:489
+msgid ""
+"The topological symbology is essential for effective editing of topological "
+"data. When editing starts, a specialized 'GRASS Edit' renderer is set on the"
+" layer automatically and original renderer is restored when editing is "
+"closed. The style may be customized in layer properties 'Style' tab. The "
+"style can also be stored in project file or in separate file as any other "
+"style. If you customize the style, do not change its name, because it is "
+"used to reset the style when editing is started again."
+msgstr ""
+"La simbología topológica es esencial para la edición eficaz de datos "
+"topológicos. Cuando se inicia la edición, se establece un renderizador "
+"especializado 'GRASS Edit' en la capa automáticamente y el renderizador "
+"original se restaura cuando se cierra la edición. El estilo se puede "
+"personalizar en la pestaña 'Estilo' de las propiedades de capa. El estilo "
+"también se puede almacenar en un archivo de proyecto o en un archivo "
+"separado como cualquier otro estilo. Si personaliza el estilo, no cambie su "
+"nombre, ya que se utiliza para restablecer el estilo cuando se vuelve a "
+"iniciar la edición."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:496
+msgid ""
+"Do not save project file when the layer is edited, the layer would be stored"
+" with 'Edit Style' which has no meaning if layer is not edited."
+msgstr ""
+"No guarde el archivo del proyecto cuando se edita la capa, la capa se "
+"almacenaría con 'Editar estilo' que no tiene ningún significado si la capa "
+"no se edita."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:499
+msgid ""
+"The style is based on topological information which is temporarily added to "
+"attribute table as field 'topo_symbol'. The field is automatically removed "
+"when editing is closed."
+msgstr ""
+"El estilo se basa en información topológica que se agrega temporalmente a la"
+" tabla de atributos como campo 'topo_symbol'. El campo se elimina "
+"automáticamente cuando se cierra la edición."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:502
+msgid ""
+"Do not remove 'topo_symbol' field from attribute table, that would make "
+"features invisible because the renderer is based on that column."
+msgstr ""
+"No elimine el campo 'topo_symbol' de la tabla de atributos, eso haría "
+"invisibles las entidades porque el renderizador se basa en esa columna."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:506
+msgid "**Snapping**"
+msgstr "**Autoensamblado**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:508
+msgid ""
+"To form an area, vertices of connected boundaries must have **exactly** the "
+"same coordinates. This can be achieved using snapping tool only if canvas "
+"and vector map have the same CRS. Otherwise, due conversion from map "
+"coordinates to canvas and back, the coordinate may become slightly different"
+" due to representation error and CRS transformations."
+msgstr ""
+"Para formar un área, los vértices de los límites conectados deben tener "
+"**exactamente** las mismas coordenadas. Esto se puede lograr utilizando la "
+"herramienta de ajuste solo si el lienzo y el mapa vectorial tienen el mismo "
+"SRC. De lo contrario, debido a la conversión de coordenadas de mapa a lienzo"
+" y viceversa, la coordenada puede volverse ligeramente diferente debido a "
+"errores de representación y transformaciones de SRC."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:513
+msgid "Use layer's CRS also for canvas when editing."
+msgstr "Utilice el SRC de la capa también para el lienzo al editar."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:516
+msgid "**Limitations**"
+msgstr "**Limitaciones**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:518
+msgid ""
+"Simultaneous editing of multiple layers within the same vector at the same "
+"time is not supported. This is mainly due to the impossibility of handling "
+"multiple undo stacks for a single data source."
+msgstr ""
+"No se admite la edición simultánea de varias capas dentro del mismo vector "
+"al mismo tiempo. Esto se debe principalmente a la imposibilidad de manejar "
+"múltiples pilas de deshacer para una sola fuente de datos."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:522
+msgid ""
+"|nix| |osx| On Linux and macOS only one GRASS layer can be edited at time. "
+"This is due to a bug in GRASS which does not allow to close database drivers"
+" in random order. This is being solved with GRASS developers."
+msgstr ""
+"|nix| |osx| En Linux y macOS, solo se puede editar una capa de GRASS a la "
+"vez. Esto se debe a un error en GRASS que no permite cerrar los "
+"controladores de la base de datos en orden aleatorio. Esto se está "
+"resolviendo con los desarrolladores de GRASS."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:527
+msgid "**GRASS Edit Permissions**"
+msgstr "**Editar permisos de GRASS**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:529
+msgid ""
+"You must be the owner of the GRASS :file:`MAPSET` you want to edit. It is "
+"impossible to edit data layers in a :file:`MAPSET` that is not yours, even "
+"if you have write permission."
+msgstr ""
+"Debe ser el propietario del :file:`DIRECTORIO DE MAPA` de  GRASS que desee "
+"editar. Es imposible editar capas de datos en un :file:`DIRECTORIO DE MAPA` "
+"que no sea suyo, incluso si tiene permisos de escritura. "
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:539
+msgid "The GRASS region tool"
+msgstr "La herramienta de región GRASS"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:542
+msgid ""
+"The region definition (setting a spatial working window) in GRASS is "
+"important for working with raster layers. Vector analysis is by default not "
+"limited to any defined region definitions. But all newly created rasters "
+"will have the spatial extension and resolution of the currently defined "
+"GRASS region, regardless of their original extension and resolution. The "
+"current GRASS region is stored in the :file:`$LOCATION/$MAPSET/WIND` file, "
+"and it defines north, south, east and west bounds, number of columns and "
+"rows, horizontal and vertical spatial resolution."
+msgstr ""
+"La definición de la región (ajuste una ventana de trabajo espacial) en GRASS"
+" es importante para trabajar con capas ráster. Análisis vectorial esta por "
+"defecto no limitado a cualquier definición de región definida. Pero todas "
+"los rásters recién creados tendrán la extensión espacial y resolución de la "
+"región GRASS definida actualmente, independientemente de su extensión y "
+"resolución original. La región GRASS actual es almacenada en el archivo "
+":file:`$LOCALIZACIÓN/$DIRECTORIO DE MAPA/WIND`, y define los límites norte, "
+"sur, este y oeste, número de columnas y filas, resolución espacial "
+"horizontal y vertical."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:550
+msgid ""
+"It is possible to switch on and off the visualization of the GRASS region in"
+" the QGIS canvas using the |grassRegion| :sup:`Display current GRASS region`"
+" button."
+msgstr ""
+"Es posible prender y apagar la visualización de la región GRASS en el lienzo"
+" de QGIS utilizando el botón |grassRegion| :sup:`Mostrar región actual de "
+"GRASS`."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:556
+msgid ""
+"The region can be modified in 'Region' tab in 'GRASS Tolls' dock widget. "
+"Type in the new region bounds and resolution, and click :guilabel:`Apply`. "
+"If you click on :guilabel:`Select the extent by dragging on canvas` you can "
+"select a new region interactively with your mouse on the QGIS canvas "
+"dragging a rectangle."
+msgstr ""
+"La región se puede modificar en la pestaña 'Región' en el widget de muelle "
+"'GRASS Tolls'. Escriba los límites y la resolución de la nueva región y haga"
+" clic en :guilabel:`Aplicar`. Si hace clic en :guilabel:`Seleccionar la "
+"extensión arrastrando sobre el lienzo`, puede seleccionar una nueva región "
+"de forma interactiva con el ratón en el lienzo de QGIS arrastrando un "
+"rectángulo."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:562
+msgid ""
+"The GRASS module :file:`g.region` provides a lot more parameters to define "
+"an appropriate region extent and resolution for your raster analysis. You "
+"can use these parameters with the GRASS Toolbox, described in section "
+":ref:`subsec_grass_toolbox`."
+msgstr ""
+"El modulo GRASS  :file:`g.region` proporciona muchos más parámetros para "
+"definir una extensión de región apropiada y resolución para su análisis "
+"ráster. Se puede utilizar estos parámetros con la caja de herramientas "
+"GRASS, descrito en la sección :ref:`subsec_grass_toolbox`."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:571
+msgid "The GRASS Toolbox"
+msgstr "La caja de herramientas GRASS"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:573
+msgid ""
+"The |grassTools| :sup:`Open GRASS Tools` box provides GRASS module "
+"functionalities to work with data inside a selected GRASS :file:`LOCATION` "
+"and :file:`MAPSET`. To use the GRASS Toolbox you need to open a "
+":file:`LOCATION` and :file:`MAPSET` that you have write permission for "
+"(usually granted, if you created the :file:`MAPSET`). This is necessary, "
+"because new raster or vector layers created during analysis need to be "
+"written to the currently selected :file:`LOCATION` and :file:`MAPSET`."
+msgstr ""
+"La caja |grassTools| :sup:`Abrir herramientas GRASS` proporciona "
+"funcionalidades de modulo GRASS para trabajar con datos dentro un "
+":file:`LOCALIZACIÓN` GRASS seleccionada y :file:`DIRECTORIO DE MAPA`. Para "
+"utilizar la caja de herramientas GRASS necesita abrir una "
+":file:`LOCALIZACIÓN` y :file:`DIRECTORIO DE MAPA` que tiene permisos de "
+"escritura para (normalmente se concede si ha creado el :file:`DIRECTORIO DE "
+"MAPA`). Esto es necesario, porque las capas ráster y vector creadas durante "
+"análisis necesitan estar escritos a la :file:`LOCALIZACIÓN` y "
+":file:`DIRECTORIO DE MAPA` actualmente "
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:585
+msgid "GRASS Toolbox and Module Tree"
+msgstr "Caja de herramienta GRASS y módulo"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:590
+msgid "Working with GRASS modules"
+msgstr "Trabajando con módulos GRASS"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:592
+msgid ""
+"The GRASS shell inside the GRASS Toolbox provides access to almost all (more"
+" than 300) GRASS modules in a command line interface. To offer a more user-"
+"friendly working environment, about 200 of the available GRASS modules and "
+"functionalities are also provided by graphical dialogs within the GRASS "
+"plugin Toolbox."
+msgstr ""
+"La consola GRASS dentro de la caja de herramientas proporciona acceso a casi"
+" todo (más de 300) los módulos GRASS en una interfaz de línea de comando. "
+"Para ofrecer un entorno de trabajo más fácil de usar, cerca de 200 de los "
+"módulos de GRASS disponibles y funcionalidades también son proporcionados "
+"por diálogos gráficos dentro de la caja de herramientas del complemento "
+"GRASS."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:597
+msgid ""
+"A complete list of GRASS modules available in the graphical Toolbox in QGIS "
+"version |CURRENT| is available in the GRASS wiki at "
+"https://grasswiki.osgeo.org/wiki/GRASS-QGIS_relevant_module_list."
+msgstr ""
+"Una lista completa de los módulos GRASS disponibles en la caja de "
+"herramientas gráfica en la versión QGIS |CURRENT| está disponible en la wiki"
+" de GRASS en https://grasswiki.osgeo.org/wiki/GRASS-"
+"QGIS_relevant_module_list."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:601
+msgid ""
+"It is also possible to customize the GRASS Toolbox content. This procedure "
+"is described in section :ref:`sec_toolbox-customizing`."
+msgstr ""
+"También es posible personalizar el contenido de la caja de herramientas "
+"GRASS. Este procedimiento se describe en la sección :ref:`sec_toolbox-"
+"customizing`."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:604
+msgid ""
+"As shown in figure_grass_toolbox_, you can look for the appropriate GRASS "
+"module using the thematically grouped :guilabel:`Modules Tree` or the "
+"searchable :guilabel:`Modules List` tab."
+msgstr ""
+"Como se muestra en figure_grass_toolbox_, puede buscar el módulo GRASS "
+"apropiado usando el grupo temático :guilabel:`Árbol de Módulos` o la "
+"búsqueda :guilabel:`Lista de Módulos` tab."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:608
+msgid ""
+"By clicking on a graphical module icon, a new tab will be added to the "
+"Toolbox dialog, providing three new sub-tabs: :guilabel:`Options`, "
+":guilabel:`Output` and :guilabel:`Manual`."
+msgstr ""
+"Al hacer clic en un icono de modulo gráfico, una nueva pestaña se añadirá al"
+" diálogo de Caja de herramientas, proporciona tres nuevas sub-pestañas "
+":guilabel:`Opciones`, :guilabel:`Salida` y :guilabel:`Manual`."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:612
+msgid "**Options**"
+msgstr "**Opciones**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:614
+msgid ""
+"The :guilabel:`Options` tab provides a simplified module dialog where you "
+"can usually select a raster or vector layer visualized in the QGIS canvas "
+"and enter further module-specific parameters to run the module."
+msgstr ""
+"La pestaña :guilabel:`Opciones` proporciona un cuadro de diálogo de módulo "
+"simplificado donde normalmente puede seleccionar una capa ráster o vectorial"
+" visualizada en el lienzo de QGIS e ingresar más parámetros específicos del "
+"módulo para ejecutar el módulo."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:623
+msgid "GRASS Toolbox Module Options"
+msgstr "Opciones del módulo de la caja de herramientas GRASS"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:625
+msgid ""
+"The provided module parameters are often not complete to keep the dialog "
+"simple. If you want to use further module parameters and flags, you need to "
+"start the GRASS shell and run the module in the command line."
+msgstr ""
+"Los parámetros del módulo proporcionados a menudo no están completos para "
+"que el diálogo sea sencillo. Si desea utilizar más parámetros y banderas del"
+" módulo, debe iniciar el shell de GRASS y ejecutar el módulo en la línea de "
+"comandos."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:629
+msgid ""
+"A new feature since QGIS 1.8 is the support for a :guilabel:`Show Advanced "
+"Options` button below the simplified module dialog in the "
+":guilabel:`Options` tab. At the moment, it is only added to the module "
+":file:`v.in.ascii` as an example of use, but it will probably be part of "
+"more or all modules in the GRASS Toolbox in future versions of QGIS. This "
+"allows you to use the complete GRASS module options without the need to "
+"switch to the GRASS shell."
+msgstr ""
+"Una nueva característica desde QGIS 1.8 es la implementación de un botón "
+":guilabel:`Mostrar opciones avanzadas` abajo del diálogo del modulo "
+"simplificado en la pestaña :guilabel:`Opciones`. Por el momento, sólo se "
+"añade al modulo :file:`v.in.ascii` como ejemplo de uso, pero probablemente "
+"es parte de más o todos los módulos en la caja de herramientas GRASS en "
+"futuras versiones de QGIS. Esto le permite usar las opciones del modulo de "
+"GRASS completo sin la necesidad de cambiar la consola de GRASS."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:636
+msgid "**Output**"
+msgstr "**Salida**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:643
+msgid "GRASS Toolbox Module Output"
+msgstr "Salida del módulo de la caja de herramientas GRASS"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:645
+msgid ""
+"The :guilabel:`Output` tab provides information about the output status of "
+"the module. When you click the :guilabel:`Run` button, the module switches "
+"to the :guilabel:`Output` tab and you see information about the analysis "
+"process. If all works well, you will finally see a ``Successfully finished``"
+" message."
+msgstr ""
+"La pestaña :guilabel:`Salida` proporciona información sobre el estado de "
+"salida del módulo. Cuando hace clic en el botón :guilabel:`Ejecutar`, el "
+"módulo cambia a la pestaña :guilabel:`Salida` y ve información sobre el "
+"proceso de análisis. Si todo funciona bien, finalmente verá un mensaje de "
+"``Finalizado correctamente``."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:650
+msgid "**Manual**"
+msgstr "**Manual**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:657
+msgid "GRASS Toolbox Module Manual"
+msgstr "Módulo Manual de la caja de herramientas GRASS"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:659
+msgid ""
+"The :guilabel:`Manual` tab shows the HTML help page of the GRASS module. You"
+" can use it to check further module parameters and flags or to get a deeper "
+"knowledge about the purpose of the module. At the end of each module manual "
+"page, you see further links to the :file:`Main Help index`, the "
+":file:`Thematic index` and the :file:`Full index`. These links provide the "
+"same information as the module :file:`g.manual`."
+msgstr ""
+"La pestaña :guilabel:`Manual` muestra la página de ayuda HTML del modulo "
+"GRASS. Se puede utilizar para comprobar otros parámetros de los módulos y "
+"las banderas o para obtener un conocimiento más profundo acerca de la "
+"finalidad del módulo. Al final de cada página del manual del módulo, se ven "
+"otros enlaces al :file:`Índice de ayuda principal`, al :file:`Índice "
+"temático` y al :file:`Índice completo`. Estos enlaces proporcionar "
+"información de ejemplo como el modulo :file:`g.manual`."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:669
+msgid "**Display results immediately**"
+msgstr "**Mostrar resultados inmediatamente**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:671
+msgid ""
+"If you want to display your calculation results immediately in your map "
+"canvas, you can use the 'View Output' button at the bottom of the module "
+"tab."
+msgstr ""
+"Si desea mostrar sus resultados de cálculo inmediatamente en su lienzo de "
+"mapa, se puede utilizar el botón 'Ver Salida' en la parte inferior de la "
+"pestaña de módulo."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:675
+msgid "GRASS module examples"
+msgstr "Ejemplos del módulo GRASS"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:677
+msgid ""
+"The following examples will demonstrate the power of some of the GRASS "
+"modules."
+msgstr ""
+"Los siguientes ejemplos demostrarán el poder de algunos módulos GRASS."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:680
+msgid "Creating contour lines"
+msgstr "Crear curvas de nivel"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:682
+msgid ""
+"The first example creates a vector contour map from an elevation raster "
+"(DEM). Here, it is assumed that you have the Alaska :file:`LOCATION` set up "
+"as explained in section :ref:`sec_import_loc_data`."
+msgstr ""
+"El primer ejemplo crea un mapa de curvas de nivel vectoriales de un ráster "
+"de elevación (DEM). Aquí, se asume que se tiene :file:`LOCALIZACIÓN` Alaska "
+"configurado como se explica en la sección :ref:`sec_import_loc_data`."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:686
+msgid ""
+"First, open the location by clicking the |grassOpenMapset| :sup:`Open "
+"mapset` button and choosing the Alaska location."
+msgstr ""
+"Primero, abra la ubicación haciendo clic en el botón |grassOpenMapset| "
+":sup:`Abrir mapset` y elegir la ubicación de Alaska."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:688
+msgid ""
+"Now open the Toolbox with the |grassTools| :sup:`Open GRASS tools` button."
+msgstr ""
+"Ahora abra la caja de herramientas con el botón |grassTools| :sup:`Abrir "
+"herramientas de GRASS`."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:689
+msgid ""
+"In the list of tool categories, double-click :menuselection:`Raster --> "
+"Surface Management --> Generate vector contour lines`."
+msgstr ""
+"En la lista de categorías de herramientas, haga doble clic "
+":menuselection:`Ráster --> Administración de superficie--> Generar curvas de"
+" nivel vectoriales`."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:691
+msgid ""
+"Now a single click on the tool **r.contour** will open the tool dialog as "
+"explained above (see :ref:`grass_modules`)."
+msgstr ""
+"Ahora, un solo clic en la herramienta **r.contour** abrirá el cuadro de "
+"diálogo de la herramienta como se explicó anteriormente (ver "
+":ref:`grass_modules`)."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:693
+msgid "In the :guilabel:`Name of input raster map` enter ``gtopo30``."
+msgstr ""
+"En el :guilabel:`Nombre del mapa ráster de entrada` introduce ``gtopo30``."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:694
+msgid ""
+"Type into the :guilabel:`Increment between Contour levels` |selectNumber| "
+"the value 100. (This will create contour lines at intervals of 100 meters.)"
+msgstr ""
+"Escriba en :guilabel:`Incremento entre niveles de contorno` |selectNumber| "
+"el valor 100 (esto creará curvas de nivel a intervalos de 100 metros)."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:696
+msgid ""
+"Type into the :guilabel:`Name for output vector map` the name ``ctour_100``."
+msgstr ""
+"Escriba en :guilabel:`Nombre de salida del mapa vectorial` el nombre "
+"``ctour_100``."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:697
+msgid ""
+"Click :guilabel:`Run` to start the process. Wait for several moments until "
+"the message ``Successfully finished`` appears in the output window. Then "
+"click :guilabel:`View Output` and :guilabel:`Close`."
+msgstr ""
+"Haga clic en :guilabel:`Ejecutar` para iniciar el proceso. Espere unos "
+"momentos hasta que aparezca el mensaje ``Finalizado satisfactoriamente`` en "
+"la ventana de salida. Luego haga clic en :guilabel:`Ver salida` y "
+":guilabel:`Cerrar`."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:701
+msgid ""
+"Since this is a large region, it will take a while to display. After it "
+"finishes rendering, you can open the layer properties window to change the "
+"line color so that the contours appear clearly over the elevation raster, as"
+" in :ref:`vector_properties_dialog`."
+msgstr ""
+"Dado que esta es una región grande, tomará un tiempo para mostrarla. Después"
+" de que termine la presentación, puede abrir la ventana de propiedades de la"
+" capa para cambiar el color de línea así el contorno aparece claramente "
+"sobre el ráster de elevación, como en :ref:`vector_properties_dialog`."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:705
+msgid ""
+"Next, zoom in to a small, mountainous area in the center of Alaska. Zooming "
+"in close, you will notice that the contours have sharp corners. GRASS offers"
+" the **v.generalize** tool to slightly alter vector maps while keeping their"
+" overall shape. The tool uses several different algorithms with different "
+"purposes. Some of the algorithms (i.e., Douglas Peuker and Vertex Reduction)"
+" simplify the line by removing some of the vertices. The resulting vector "
+"will load faster. This process is useful when you have a highly detailed "
+"vector, but you are creating a very small-scale map, so the detail is "
+"unnecessary."
+msgstr ""
+"El siguiente acercamiento a una pequeña y montañosa área en el centro de "
+"Alaska. Al acercarse, se puede observar que las curvas de nivel tienen "
+"esquinas afiladas. GRASS ofrece la herramienta **v.generalize** para alterar"
+" ligeramente mapas vectoriales, manteniendo su forma general. La herramienta"
+" utiliza varios algoritmos diferentes con propósitos diferentes. Algunos de "
+"los algoritmos (es decir, Douglas Peucker y Vertex Reduction) simplificar la"
+" línea mediante la eliminación de algunos de los vértices. El vector "
+"resultante se carga más rápido. Este proceso es útil cuando se tiene un "
+"vector muy detallado, pero va a crear un mapa de escala muy pequeña, por lo "
+"que el detalle es innecesario."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:714
+msgid "**The simplify tool**"
+msgstr "**La herramienta de simplificar**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:716
+msgid ""
+"Note that QGIS has a :menuselection:`Vector --> Geometry Tools --> Simplify "
+"geometries` tool that works just like the GRASS **v.generalize** Douglas-"
+"Peuker algorithm."
+msgstr ""
+"Tenga en cuenta que QGIS tiene una :menuselection:`Vectorial -> Herramientas"
+" de Geometría -> Simplificar Geometría` que funciona como el algoritmo de "
+"GRASS **v.generalize** Douglas-Peuker."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:720
+msgid ""
+"However, the purpose of this example is different. The contour lines created"
+" by ``r.contour`` have sharp angles that should be smoothed. Among the "
+"**v.generalize** algorithms, there is Chaiken's, which does just that (also "
+"Hermite splines). Be aware that these algorithms can **add** additional "
+"vertices to the vector, causing it to load even more slowly."
+msgstr ""
+"Sin embargo, el proposito de este ejemplo es diferente. Las líneas de curvas"
+" de nivel creadas por ``r.contour`` tiene ángulos agudos que deben ser "
+"suavizados. Entre el algoritmo **v.generalize** hay Chaiken's, lo que hace "
+"precisamente eso (también astillas de Hermite). Tenga en cuenta que estos "
+"algoritmos se pueden **añadir** vértices adicionales al vector, haciendo que"
+" se cargue más lentamente"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:726
+msgid ""
+"Open the GRASS Toolbox and double-click the categories "
+":menuselection:`Vector --> Develop map --> Generalization`, then click on "
+"the **v.generalize** module to open its options window."
+msgstr ""
+"Abra la caja de herramientas GRASS y haga doble clic en las categorías "
+":menuselection:`Vectorial --> Desarrollar mapa --> Generalización`,"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:729
+msgid ""
+"Check that the 'ctour_100' vector appears as the :guilabel:`Name of input "
+"vector`."
+msgstr ""
+"Compruebe que el vector 'ctour_100' aparece como el :guilabel:`Nombre del "
+"vector de entrada`."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:730
+msgid ""
+"From the list of algorithms, choose Chaiken's. Leave all other options at "
+"their default, and scroll down to the last row to enter in the field "
+":guilabel:`Name for output vector map` 'ctour_100_smooth', and click "
+":guilabel:`Run`."
+msgstr ""
+"De la lista de algoritmos, elija Chaiken's. Deje todas las demás opciones en"
+" sus valores predeterminados y desplácese hacia abajo hasta la última fila "
+"para ingresar en el campo :guilabel:`Nombre del mapa vectorial de salida` "
+"'ctour_100_smooth', y haga click en :guilabel:`Ejecutar`."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:733
+msgid ""
+"The process takes several moments. Once ``Successfully finished`` appears in"
+" the output windows, click :guilabel:`View Output` and then "
+":guilabel:`Close`."
+msgstr ""
+"El proceso lleva varios minutos. Una vez que aparezca ``Finalizado con "
+"éxito`` en las ventanas de salida, haga clic en :guilabel:`Ver salida` y "
+"luego :guilabel:`Cerrar`."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:735
+msgid ""
+"You may change the color of the vector to display it clearly on the raster "
+"background and to contrast with the original contour lines. You will notice "
+"that the new contour lines have smoother corners than the original while "
+"staying faithful to the original overall shape."
+msgstr ""
+"Se puede cambiar el color del vector para que se muestre claramente sobre el"
+" fondo del ráster y para contrastar con las curvas de nivel originales. Se "
+"dará cuenta de que las nuevas curvas de nivel tienen esquinas más suaves que"
+" el original durante su estancia fiel a la original de forma general."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:746
+msgid "GRASS module v.generalize to smooth a vector map"
+msgstr "Módulo GRASS v.generalize para suavizar un mapa vectorial"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:748
+msgid "**Other uses for r.contour**"
+msgstr "**Otros usos de r.contour**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:750
+msgid ""
+"The procedure described above can be used in other equivalent situations. If"
+" you have a raster map of precipitation data, for example, then the same "
+"method will be used to create a vector map of isohyetal (constant rainfall) "
+"lines."
+msgstr ""
+"El proceso descrito anteriormente se puede utilizar en otras situaciones "
+"equivalentes. Si tiene un mapa ráster de datos de precipitación, por "
+"ejemplo, entonces el mismo método se utilizará para crear un mapa vectorial "
+"de líneas isoyetas (lluvia constante)."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:755
+msgid "Creating a Hillshade 3-D effect"
+msgstr "Crear un efecto sombreado de relieve 3-D"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:757
+msgid ""
+"Several methods are used to display elevation layers and give a 3-D effect "
+"to maps. The use of contour lines, as shown above, is one popular method "
+"often chosen to produce topographic maps. Another way to display a 3-D "
+"effect is by hillshading. The hillshade effect is created from a DEM "
+"(elevation) raster by first calculating the slope and aspect of each cell, "
+"then simulating the sun's position in the sky and giving a reflectance value"
+" to each cell. Thus, you get sun-facing slopes lighted; the slopes facing "
+"away from the sun (in shadow) are darkened."
+msgstr ""
+"Varios métodos se utilizan para mostrar capas de elevación y da un efecto "
+"#-D a mapas. El uso de líneas de curvas de nivel, como se mostro "
+"anteriormente, es un método popular regularmente elejido para producir mapas"
+" topológicos. El efecto de sombreado se crea de un ráster (elevación) DEM "
+"calculando primero la pendiente y el aspecto de cada celda, entonces simula "
+"la posición del sol en el cielo y da un valor de reflectancia a cada celda. "
+"De este modo se obtienen pendientes frente al sol iluminadas; las pendientes"
+" orientadas lejos del sol(en la sombra) se oscurecen."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:765
+msgid ""
+"Begin this example by loading the ``gtopo30`` elevation raster. Start the "
+"GRASS Toolbox, and under the Raster category, double-click to open "
+":menuselection:`Spatial analysis --> Terrain analysis`."
+msgstr ""
+"Comience este ejemplo cargando el ráster de elevación ``gtopo30``. Inicie la"
+" caja de herramientas GRASS y bajo la categoría ráster, haga doble clic para"
+" abrir :menuselection:`Análisis espacial --> Análisis del terreno`."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:768
+msgid "Then click **r.shaded.relief** to open the module."
+msgstr "A continuación haga clic en **r.shaded.relief** para abrir el módulo."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:769
+msgid "Change the :guilabel:`azimuth angle` |selectNumber| 270 to 315."
+msgstr "Cambie el :guilabel:`ángulo del azimut` |selectnumber| 270 a 315"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:770
+msgid ""
+"Enter ``gtopo30_shade`` for the new hillshade raster, and click "
+":guilabel:`Run`."
+msgstr ""
+"Ingrese ``gtopo30_shade`` para el nuevo ráster de sombreado y haga clic en "
+":guilabel:`Ejecutar`."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:771
+msgid ""
+"When the process completes, add the hillshade raster to the map. You should "
+"see it displayed in grayscale."
+msgstr ""
+"Cuando el proceso finalice, añada el ráster de mapa de sombras al mapa. Debe"
+" verlo desplegado en escala de grises."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:773
+msgid ""
+"To view both the hillshading and the colors of the ``gtopo30`` together, "
+"move the hillshade map below the ``gtopo30`` map in the table of contents, "
+"then open the :menuselection:`Properties` window of ``gtopo30``, switch to "
+"the :guilabel:`Transparency` tab and set its transparency level to about "
+"25%."
+msgstr ""
+"Para ver ambos sombreados y los colores de la `gtopo30`` juntos, mueva el "
+"mapa de sombreado abajo del mapa ``gtopo30`` en la tabla de contenido, a "
+"continuación abra la ventana :menuselection:`Propiedades` de ``gtopo30``, "
+"cambie a la pestaña de :guilabel:`Transparencia` y establezca su nivel de "
+"transparencia a cerca de 25%."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:778
+msgid ""
+"You should now have the ``gtopo30`` elevation with its colormap and "
+"transparency setting displayed **above** the grayscale hillshade map. In "
+"order to see the visual effects of the hillshading, turn off the "
+"``gtopo30_shade`` map, then turn it back on."
+msgstr ""
+"Ahora debe tener la elevación ``gtopo30`` con su mapa de color y ajuste de "
+"transparencia mostrado **arriba** el mapa de sombras en escala de grises. "
+"Con el fin de ver los efectos visuales en el mapa de sombras, apague el mapa"
+" ``gtopo30_shade``, a continuación, vuelva a encenderla."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:783
+msgid "**Using the GRASS shell**"
+msgstr "**Utilizar la consola de GRASS**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:785
+msgid ""
+"The GRASS plugin in QGIS is designed for users who are new to GRASS and not "
+"familiar with all the modules and options. As such, some modules in the "
+"Toolbox do not show all the options available, and some modules do not "
+"appear at all. The GRASS shell (or console) gives the user access to those "
+"additional GRASS modules that do not appear in the Toolbox tree, and also to"
+" some additional options to the modules that are in the Toolbox with the "
+"simplest default parameters. This example demonstrates the use of an "
+"additional option in the **r.shaded.relief** module that was shown above."
+msgstr ""
+"El complemento GRASS en QGIS está diseñado para usuarios que son nuevos en "
+"GRASS y no están familiarizados con todos los módulos y opciones. Como tal, "
+"algunos módulos en la Caja de herramientas no muestran todas las opciones "
+"disponibles y algunos módulos no aparecen en absoluto. El shell (o consola) "
+"de GRASS le da al usuario acceso a los módulos GRASS adicionales que no "
+"aparecen en el árbol de la Caja de herramientas, y también a algunas "
+"opciones adicionales a los módulos que están en la Caja de herramientas con "
+"los parámetros predeterminados más simples. Este ejemplo demuestra el uso de"
+" una opción adicional en el módulo **r.shaded.relief** que se mostró arriba."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:799
+msgid "The GRASS shell, r.shaded.relief module"
+msgstr "La consola de GRASS, módulo r.shaded.relief"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:801
+msgid ""
+"The module **r.shaded.relief** can take a parameter ``zmult``, which "
+"multiplies the elevation values relative to the X-Y coordinate units so that"
+" the hillshade effect is even more pronounced."
+msgstr ""
+"El modulo **r.shaded.relief** puede tomar un parámetro ``zmult``, que "
+"multiplica los valores de elevación relativas a las unidades de las "
+"coordenadas X-Y por lo que el efecto de sombreado es incluso más "
+"pronunciado."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:805
+msgid ""
+"Load the ``gtopo30`` elevation raster as above, then start the GRASS Toolbox"
+" and click on the GRASS shell. In the shell window, type the command "
+"``r.shaded.relief map=gtopo30 shade=gtopo30_shade2 azimuth=315 zmult=3`` and"
+" press :kbd:`Enter`."
+msgstr ""
+"Cargue el ráster de elevación ``gtopo30`` como se muestra arriba, luego "
+"inicie la Caja de herramientas de GRASS y haga clic en el shell de GRASS. En"
+" la ventana del shell, escriba el comando ``r.shaded.relief map = gtopo30 "
+"shade = gtopo30_shade2 azimuth = 315 zmult = 3`` y presione :kbd:`Enter`."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:809
+msgid ""
+"After the process finishes, shift to the :guilabel:`Browse` tab and double-"
+"click on the new ``gtopo30_shade2`` raster to display it in QGIS."
+msgstr ""
+"Una vez finalizado el proceso, cambie a la pestaña :guilabel:`Examinar` y "
+"haga doble clic en el nuevo ráster ``gtopo30_shade2`` para mostrarlo en "
+"QGIS."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:811
+msgid ""
+"As explained above, move the shaded relief raster below the ``gtopo30`` "
+"raster in the table of contents, then check the transparency of the colored "
+"``gtopo30`` layer. You should see that the 3-D effect stands out more "
+"strongly compared with the first shaded relief map."
+msgstr ""
+"Como se explicó anteriormente, mueva ráster del relieve sombreado a bajo del"
+" ráster ``gtopo30`` en la tabla de contenido, entonces valide la "
+"transparecia de la capa coloreada ``gtopo30``. Debe ver que el efecto 3-D "
+"destaca más fuertemente comparada con el primer mapa de relieve sombreado."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:822
+msgid "Displaying shaded relief created with the GRASS module r.shaded.relief"
+msgstr ""
+"Mostrar relieve sombreado creado con el módulo de GRASS r.shaded.relief"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:826
+msgid "Raster statistics in a vector map"
+msgstr "Estadísticas de ráster en un mapa vectorial"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:828
+msgid ""
+"The next example shows how a GRASS module can aggregate raster data and add "
+"columns of statistics for each polygon in a vector map."
+msgstr ""
+"El siguiente ejemplo muestra como un módulo GRASS puede agregar datos ráster"
+" y añadir columnas de una estadística para cada polígono en un mapa "
+"vectorial."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:831
+msgid ""
+"Again using the Alaska data, refer to :ref:`sec_import_loc_data` to import "
+"the :file:`shapefiles/trees.shp` file into GRASS."
+msgstr ""
+"Nuevamente usando los datos de Alaska, consulte :ref:`sec_import_loc_data` "
+"para importar el archivo :file:`shapefiles/trees.shp` en GRASS."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:833
+msgid ""
+"Now an intermediate step is required: centroids must be added to the "
+"imported trees map to make it a complete GRASS area vector (including both "
+"boundaries and centroids)."
+msgstr ""
+"Ahora un paso intermedio es necesario: los centroides se deben añadir al "
+"mapa de árboles importado para que sea una zona de GRASS completa del vector"
+" (incluyendo ambos límites y centroides)."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:836
+msgid ""
+"From the Toolbox, choose :menuselection:`Vector --> Manage features`, and "
+"open the module **v.centroids**."
+msgstr ""
+"De la caja de herramientas, elija :menuselection:`Vectorial --> Desarrollar "
+"mapa -> Administrar objetos espaciales`, y abra el modulo **v.centroids**."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:838
+msgid ""
+"Enter as the :guilabel:`output vector map` 'forest_areas' and run the "
+"module."
+msgstr ""
+"Introduzca como el :guilabel:`Mapa vectorial de salida` 'forest_areas' y "
+"ejecute el módulo."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:839
+msgid ""
+"Now load the ``forest_areas`` vector and display the types of forests - "
+"deciduous, evergreen, mixed - in different colors: In the layer "
+":guilabel:`Properties` window, :guilabel:`Symbology` tab, choose from "
+":guilabel:`Legend type` |selectString| 'Unique value' and set the "
+":guilabel:`Classification field` to 'VEGDESC'. (Refer to the explanation of "
+"the symbology tab in :ref:`vector_style_menu` of the vector section.)"
+msgstr ""
+"Ahora cargue el vector ``forest_areas`` y muestre los tipos de bosque - "
+"caducifolio, árbol de hoja perenne, mixto - en diferentes colores: En la "
+"ventana :guilabel:`Propiedades` de la capa, la pestaña "
+":guilabel:`Simbología`, elija de :guilabel:`Tipo de leyenda` |selectString| "
+"'Valor único' y establezca el :guilabel:`Campo de clasificación` a "
+"'VEGDESC'. (Consulte la explicación de la pestaña de simbología en "
+":ref:`vector_style_menu` de la sección vectorial.)"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:845
+msgid ""
+"Next, reopen the GRASS Toolbox and open :menuselection:`Vector --> Vector "
+"update` by other maps."
+msgstr ""
+"A continuación vuelva a abrir la caja de herramientas de GRASS y abra "
+":menuselection:`Vectorial --> Actualizacion vectorial por otros mapas`. "
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:847
+msgid ""
+"Click on the **v.rast.stats** module. Enter ``gtopo30`` and "
+"``forest_areas``."
+msgstr ""
+"Haga clic en el modulo **v.rast.stats**. Ingrese ``gtopo30`` y "
+"``forest_areas``."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:848
+msgid ""
+"Only one additional parameter is needed: Enter :guilabel:`column prefix` "
+"``elev``, and click :guilabel:`Run`. This is a computationally heavy "
+"operation, which will run for a long time (probably up to two hours)."
+msgstr ""
+"Solo se necesita un parámetro adicional: Ingrese :guilabel:`prefijo de "
+"columna` ``elev`` y haga clic en :guilabel:`Ejecutar`. Esta es una operación"
+" computacionalmente pesada, que se ejecutará durante mucho tiempo "
+"(probablemente hasta dos horas)."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:851
+msgid ""
+"Finally, open the ``forest_areas`` attribute table, and verify that several "
+"new columns have been added, including ``elev_min``, ``elev_max``, "
+"``elev_mean``, etc., for each forest polygon."
+msgstr ""
+"Finalmente, abra la tabla de atributos ``forest_areas``, y verifique que "
+"varias de las nuevas columnas se han añadido, incluyendo ``elev_min``, "
+"``elev_max``, ``elev_mean``, etc., para cada polígono de bosque."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:860
+msgid "Customizing the GRASS Toolbox"
+msgstr "Personalizar la caja de herramientas GRASS"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:862
+msgid ""
+"Nearly all GRASS modules can be added to the GRASS Toolbox. An XML interface"
+" is provided to parse the pretty simple XML files that configure the "
+"modules' appearance and parameters inside the Toolbox."
+msgstr ""
+"Casi todos los módulos de GRASS se pueden añadir a la caja de herramientas "
+"de GRASS. Una interfaz XML se proporciona para analizar los archivos XML muy"
+" sencillos que configuran la apariencia y los parámetros de los módulos "
+"dentro de la caja de herramientas."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:866
+msgid ""
+"A sample XML file for generating the module ``v.buffer`` (v.buffer.qgm) "
+"looks like this:"
+msgstr ""
+"Un ejemplo del archivo XML para generar el módulo ``v.buffer`` "
+"(v.buffer.qgm) luce como esto:"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:881
+msgid ""
+"The parser reads this definition and creates a new tab inside the Toolbox "
+"when you select the module. A more detailed description for adding new "
+"modules, changing a module's group, etc., can be found at "
+"https://qgis.org/en/site/getinvolved/development/addinggrasstools.html."
+msgstr ""
+"El analizador lee esta definición y crea una nueva pestaña dentro de la Caja"
+" de herramientas cuando selecciona el módulo. Puede encontrar una "
+"descripción más detallada para agregar nuevos módulos, cambiar el grupo de "
+"un módulo, etc. en "
+"https://qgis.org/en/site/getinvolved/development/addinggrasstools.html."

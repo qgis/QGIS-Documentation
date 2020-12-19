@@ -1,0 +1,804 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# Mauro Rizzato, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:18+0000\n"
+"Last-Translator: Mauro Rizzato, 2020\n"
+"Language-Team: Italian (https://www.transifex.com/qgis/teams/6144/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:2
+msgid "|LS| Spatial Statistics"
+msgstr "|LS| Statistiche spaziali"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:4
+msgid ""
+"Lesson developed by Linfiniti and S Motala (Cape Peninsula University of "
+"Technology)"
+msgstr ""
+"Lezione sviluppata da Linfiniti e S Motala (Cape Peninsula University of "
+"Technology)"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:7
+msgid ""
+"Spatial statistics allows you to analyze and understand what is going on in "
+"a given vector dataset. QGIS includes many useful tools for statistical "
+"analysis."
+msgstr ""
+"Le statistiche spaziali permettono di comprendere cosa sta succedendo in un "
+"determinato insieme di dati vettoriali. QGIS include molti strumenti utili "
+"per l'analisi statistica."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:11
+msgid ""
+"**The goal for this lesson:** To know how to use QGIS' spatial statistics "
+"tools within the :guilabel:`Processing Toolbox`."
+msgstr ""
+"**Scopo della lezione:** Comprendere come utilizzare gli strumenti QGIS in "
+":guilabel:`Strumenti di Processing` per le statistiche spaziali."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:15
+msgid "|basic| |FA| Create a Test Dataset"
+msgstr "|basic| |FA| Creare un insieme di dati per il test"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:17
+msgid "We will create a random set of points, to get a dataset to work with."
+msgstr ""
+"Creeremo un insieme di punti casuali, per avere un dataset con cui lavorare"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:19
+msgid ""
+"To do so, you will need a polygon dataset to define the area you want to "
+"create the points in."
+msgstr ""
+"Per questo, è necessario un insieme poligonale per definire l'area in cui "
+"creare i punti."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:22
+msgid "We will use the area covered by streets."
+msgstr "Useremo l'area coperta da strade."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:24
+msgid "Start a new project"
+msgstr "Inizia un nuovo progetto"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:25
+msgid ""
+"Add your ``roads`` dataset, as well as ``srtm_41_19`` (elevation data) found"
+" in :file:`exercise_data/raster/SRTM/`."
+msgstr ""
+"Aggiungi il dataset ``roads``, così come ``srtm_41_19`` (dati di altitudine)"
+" che si trova in :file:`exercise_data/raster/SRTM/`."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:28
+msgid ""
+"You might find that the SRTM DEM layer has a different CRS to that of the "
+"roads layer. QGIS is reprojecting both layers in a single CRS. For the "
+"following exercises this difference does not matter, but feel free to "
+"reproject (as shown earlier in this module)."
+msgstr ""
+"Potresti trovare che il layer SRTM DEM ha un diverso SR da quello del layer "
+"roads. QGIS riproietta entrambi i layer in un singolo SR. Per il seguente "
+"esercizio questa differenza non ha importanza, sei libero di riproiettarli "
+"(come mostrato in questo modulo)."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:34
+msgid "Open :guilabel:`Processing` toolbox"
+msgstr "Apri gli strumenti di :guilabel:`Processing`"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:35
+msgid ""
+"Use the :menuselection:`Vector Geometry --> Minimum bounding geometry` tool "
+"to generate an area enclosing all the roads by selecting ``Convex Hull`` as "
+"the :guilabel:`Geometry Type`:"
+msgstr ""
+"Usa lo strumento :menuselection:`Geometria vettore --> Geometri di "
+"delimitazione minima` per generare un'area che racchiuda tutte le strade "
+"selezionando ``Poligono Convesso`` in the :guilabel:`Tipo di geometria`:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:43
+msgid ""
+"As you know, if you don't specify the output, *Processing* creates temporary"
+" layers. It is up to you to save the layers immediately or at a later stage."
+msgstr ""
+"Come sai, se non specifici l'uscita, *Processing* crea un layer temporaneo. "
+"Sta a te salvare subito il layer o più tardi."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:48
+msgid "Creating random points"
+msgstr "Creare punti casuali"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:50
+msgid ""
+"Create 100 random points in this area using the tool at "
+":menuselection:`Vector Creation --> Random points in layer bounds`, with a "
+"minimum distance of ``0.0``:"
+msgstr ""
+"Creeremo 100 punti casuali in questa area utilizzando lo strumento "
+":menuselection:`Creazione vettore --> Punti casuali nell'estensione del "
+"layer`, con una distanza minima di ``0.0``:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:57
+msgid ""
+"The yellow warning sign tells you that that parameter concerns distances. "
+"The :guilabel:`Bounding geometry` layer is in a Geographical Coordinate "
+"System and the algorithm is just reminding you this. For this example we "
+"won't use this parameter so you can ignore it."
+msgstr ""
+"Il segno di avviso giallo segnala che il parametro riguarda le distanze. Il "
+"layer :guilabel:`Bounding geometry` è in un sistema di coordinate "
+"geografiche e l'algoritmo te lo sta ricordando. Per questo esempio non "
+"useremo questo parametro perciò può essere ignorato."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:64
+msgid ""
+"If needed, move the generated random point to the top of the legend to see "
+"them better:"
+msgstr ""
+"Se necessario, muovi i punti generati casualmente in coma alla legenda per "
+"vederli meglio:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:71
+msgid "Sampling the data"
+msgstr "Campionamento dei dati"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:73
+msgid ""
+"To create a sample dataset from the raster, you'll need to use the "
+":menuselection:`Raster Analysis --> Sample raster values` algorithm. This "
+"tool samples the raster at the locations of the points and adds the raster "
+"values in new field(s) depending on the number of bands in the raster."
+msgstr ""
+"Per creare un insieme di dati di esempio dal raster, avrai bisogno "
+"dell'algoritmo :menuselection:`Analisi raster --> Campiona valori raster`. "
+"Questo strumento campiona il raster nelle locazioni dei punti e aggiunge i "
+"valori raster in nuovi campi in base al numero di bande nel raster."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:77
+msgid "Open the :guilabel:`Sample raster values` algorithm dialog"
+msgstr "Apri il dialogo dell'algoritmo :guilabel:`Campiona valori raster`"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:78
+msgid ""
+"Select ``Random_points`` as the layer containing sampling points, and the "
+"SRTM raster as the band to get values from. The default name of the new "
+"field is ``rvalue_N``, where ``N`` is the number of the raster band. You can"
+" change the name of the prefix if you want."
+msgstr ""
+"Seleziona ``Punti casuali`` come layer contenente i punti da campionare, e "
+"il raster SRTM come banda da cui prendere i valori. Il nome predefinito per "
+"il nuovo campo è ``rvalue_N``, dove ``N`` è il numero della banda raster. Se"
+" vuoi puoi cambiare il nome del prefisso."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:87
+msgid "Press :guilabel:`Run`"
+msgstr "Premi :guilabel:`Esegui`"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:89
+msgid ""
+"Now you can check the sampled data from the raster file in the attribute "
+"table of the ``Sampled Points`` layer. They will be in a new field with the "
+"name you have chosen."
+msgstr ""
+"Ora puoi controllare i dati campionati dal file raster nella tabella degli "
+"attributi del layer ``Punti Campionati``. Saranno in un nuovo campo con il "
+"nome che hai scelto."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:93
+msgid "A possible sample layer is shown here:"
+msgstr "Un possibile layer campionato è mostrato qui:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:98
+msgid ""
+"The sample points are classified using the ``rvalue_1`` field such that red "
+"points are at a higher altitude."
+msgstr ""
+"I punti campionati sono classificati usando il campo ``rvalue_1`` così che i"
+" punti rossi sono ad un'altitudine maggiore."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:101
+msgid ""
+"You will be using this sample layer for the rest of the statistical "
+"exercises."
+msgstr ""
+"Useremo questo layer di esempio per il resto degli esercizi statistici."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:105
+msgid "|basic| |FA| Basic Statistics"
+msgstr "|basic| |FA| Statistiche elementari"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:107
+msgid "Now get the basic statistics for this layer."
+msgstr "Ora vediamo le statistiche elementari per questo layer"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:109
+msgid ""
+"Click on the |sum| :sup:`Show statistical summary` icon in the "
+":guilabel:`Attributes Toolbar`. A new panel will pop up."
+msgstr ""
+"Clicca sull'icona |sum| :sup:`Mostra sintesi delle statistiche` nella "
+":guilabel:`Barra degli strumenti attributi`. Apparirà un nuovo pannello."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:112
+msgid ""
+"In the dialog that appears, specify the ``Sampled Points`` layer as the "
+"source."
+msgstr ""
+"Nel dialogo che apparirà, indica il layer ``Punti Campionati`` come "
+"sorgente."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:114
+msgid ""
+"Select the *rvalue_1* field in the field combo box. This is the field you "
+"will calculate statistics for."
+msgstr ""
+"Seleziona il campo ``rvalue_1`` nella lista a comparsa dei campi. Questo è "
+"il campo per cui calcoleremo le statistiche."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:116
+msgid ""
+"The :guilabel:`Statistics` Panel will be automatically updated with the "
+"calculated statistics:"
+msgstr ""
+"Il pannello :guilabel:`Statistiche` si aggiornerà automaticamente con le "
+"statistiche calcolate:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:122
+msgid ""
+"You can copy the values by clicking on the |editCopy| :sup:`Copy Statistics "
+"To Clipboard` button and paste the results into a spreadsheet."
+msgstr ""
+"Puoi copiare i valori cliccando sul pulsante |editCopy| :sup:`Copia "
+"Statistiche negli Appunti` ed incollare i risultati in un foglio di calcolo."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:126
+msgid "Close the :guilabel:`Statistics` Panel when done"
+msgstr "Quando hai fatto chiudi il pannello :guilabel:`Statistiche`"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:128
+msgid "Many different statistics are available:"
+msgstr "Sono disponibili molte statistiche:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:131
+msgid "Count"
+msgstr "Conteggio"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:131
+msgid "The number of samples/values."
+msgstr "Il numero di campioni/valori."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:134
+msgid "Sum"
+msgstr "Somma"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:134
+msgid "The values added together."
+msgstr "I valori sommati assieme."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:138
+msgid "Mean"
+msgstr "Media"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:137
+msgid ""
+"The mean (average) value is simply the sum of the values divided by the "
+"number of values."
+msgstr ""
+"Il valore medio (media) è la somma dei valori diviso per il numero di "
+"valori."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:143
+msgid "Median"
+msgstr "Mediana"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:141
+msgid ""
+"If you arrange all the values from smallest to greatest, the middle value "
+"(or the average of the two middle values, if N is an even number) is the "
+"median of the values."
+msgstr ""
+"Se si ordinano tutti i valori dal più piccolo al più grande, il valore in "
+"mezzo (o la media dei due valori in mezzo, se N è un numero pari) è la "
+"mediana dei valori."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:150
+msgid "St Dev (pop)"
+msgstr "Deviazione standard (popolazione)"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:146
+msgid ""
+"The standard deviation. Gives an indication of how closely the values are "
+"clustered around the mean. The smaller the standard deviation, the closer "
+"values tend to be to the mean."
+msgstr ""
+"La deviazione standard. Dà una indicazione di quanto vicino alla media sono "
+"raggruppati i valori. Più piccola è la deviazione standard, più i valori "
+"tendono ad essere vicini alla media."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:153
+msgid "Minimum"
+msgstr "Minimo"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:153
+msgid "The minimum value."
+msgstr "Il valore minimo."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:156
+msgid "Maximum"
+msgstr "Massimo"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:156
+msgid "The maximum value."
+msgstr "Il valore massimo."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:159
+msgid "Range"
+msgstr "Intervallo"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:159
+msgid "The difference between the minimum and maximum values."
+msgstr "La differenza fra i valori minimo e massimo."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:162
+msgid "Q1"
+msgstr "Q1"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:162
+msgid "First quartile of the data."
+msgstr "Primo quartile dei dati."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:165
+msgid "Q3"
+msgstr "Q3"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:165
+msgid "Third quartile of the data."
+msgstr "Terzo quartile dei dati."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:169
+msgid "Missing (null) values"
+msgstr "Valori mancanti (nulli)"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:168
+msgid "The number of missing values."
+msgstr "Il numero di valori mancanti."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:172
+msgid "|basic| |FA| Compute statistics on distances between points"
+msgstr "|basic| |FA| Calcolo di statistiche sulle distanze fra i punti"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:174
+msgid "Create a new temporary point layer."
+msgstr "Crea un nuovo layer puntuale temporaneo."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:175
+msgid ""
+"Enter edit mode, and digitize three points somewhere among the other points."
+msgstr ""
+"Entra in modalità modifica, e digitalizza tre punti in mezzo agli altri "
+"punti."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:178
+msgid ""
+"Alternatively, use the same random point generation method as before, but "
+"specify only **three** points."
+msgstr ""
+"Alternativamente, usa il metodo di generazione casuale dei punti visto "
+"precedentemente, ma specifica solo **tre** punti."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:180
+msgid ""
+"Save your new layer as :guilabel:`distance_points` in the format you prefer."
+msgstr ""
+"Salva il nuovo layer come :guilabel:`distance_points` nel formato che "
+"preferisci."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:183
+msgid ""
+"To generate statistics on the distances between points in the two layers:"
+msgstr "Per creare statistiche sulla distanza fra i punti nei due layer:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:186
+msgid "Open the :menuselection:`Vector Analysis --> Distance matrix` tool."
+msgstr ""
+"Apri lo strumento :menuselection:`Vettore Strumenti di Analisi --> Matrice "
+"di distanza`."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:187
+msgid ""
+"Select the ``distance_points`` layer as the input layer, and the ``Sampled "
+"Points`` layer as the target layer."
+msgstr ""
+"Seleziona il layer ``distance_points`` come layer di ingresso, e il layer "
+"``Punti Campionati`` come layer di uscita."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:189
+msgid "Set it up like this:"
+msgstr "Impostalo come questo:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:194
+msgid ""
+"If you want you can save the output layer as a file or just run the "
+"algorithm and save the temporary output layer later."
+msgstr ""
+"Sei vuoi puoi salvare il layer di uscita come un file oppure esegui "
+"l'algoritmo e salva il layer di uscita temporaneo più tardi."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:196
+msgid "Click :guilabel:`Run` to generate the distance matrix layer."
+msgstr ""
+"Clicca su :guilabel:`Esegui` per generare il layer matrice delle distanze"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:197
+msgid ""
+"Open the attribute table of the generated layer: values refer to the "
+"distances between the :guilabel:`distance_points` features and their two "
+"nearest points in the :guilabel:`Sampled Points` layer:"
+msgstr ""
+"Apri la tabella degli attributi del layer generato: i valori si riferiscono "
+"alle distanze fra gli elementi :guilabel:`distance_points` ed i loro due "
+"punti più vicini nel layer :guilabel:`Punti Campionati`:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:204
+msgid ""
+"With these parameters, the *Distance Matrix* tool calculates distance "
+"statistics for each point of the input layer with respect to the nearest "
+"points of the target layer. The fields of the output layer contain the mean,"
+" standard deviation, minimum and maximum for the distances to the nearest "
+"neighbors of the points in the input layer."
+msgstr ""
+"Con questi parametri, lo strumento *Matrice di distanza* calcola statistiche"
+" di distanza per ogni punto del layer di ingresso rispetto ai punti più "
+"vicini del layer destinazione. I campi del layer di uscita contengono la "
+"media, la deviazione standard, il minimo e massimo per le distanze dai punti"
+" più prossimi ai punti del layer di ingresso."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:213
+msgid "|basic| |FA| Nearest Neighbor Analysis (within layer)"
+msgstr "|basic| |FA| Analisi dei vicini più prossimi (all'interno del layer)"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:215
+msgid "To do a nearest neighbor analysis of a point layer:"
+msgstr "Per analizzare il vicino più prossimi in un layer puntuale:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:217
+msgid "Choose :menuselection:`Vector analysis --> Nearest neighbor analysis`."
+msgstr ""
+"Scegli :menuselection:`Vettore Strumenti di analisi --> Nearest neighbor "
+"analysis`."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:219
+msgid ""
+"In the dialog that appears, select the :guilabel:`Random points` layer and "
+"click :guilabel:`Run`."
+msgstr ""
+"Nel dialogo che appare, seleziona il layer :guilabel:`Punti casuali` e "
+"clicca :guilabel:`Esegui`."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:221
+msgid ""
+"The results will appear in the Processing :guilabel:`Result Viewer` Panel."
+msgstr ""
+"I risultati appariranno nel pannello :guilabel:`Visualizzatore risultati` di"
+" Processing."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:227
+msgid "Click on the blue link to open the ``html`` page with the results:"
+msgstr ""
+"Clicca sul collegamento in blu per aprire la pagina ``html`` con i "
+"risultati:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:233
+msgid "|basic| |FA| Mean Coordinates"
+msgstr "|basic| |FA| Media coordiante"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:235
+msgid "To get the mean coordinates of a dataset:"
+msgstr "Per avere la media delle coordinate di un insieme di dati:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:237
+msgid "Start :menuselection:`Vector analysis --> Mean coordinate(s)`"
+msgstr ""
+"Scegli :menuselection:`Vettore Strumenti di analisi  --> Media "
+"Coordinata(e)`"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:238
+msgid ""
+"In the dialog that appears, specify :guilabel:`Random points` as "
+":guilabel:`Input layer`, and leave the optional choices unchanged."
+msgstr ""
+"Nel dialogo che appare, come :guilabel:`Layer in ingresso` seleziona "
+":guilabel:`Punti casuali`, e lascia le altre opzioni invariate."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:240
+msgid "Click :guilabel:`Run`."
+msgstr "Clicca su :guilabel:`Esegui`."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:242
+msgid ""
+"Let us compare this to the central coordinate of the polygon that was used "
+"to create the random sample."
+msgstr ""
+"Confrontiamo il risultato con le coordinate centrali del poligono usato per "
+"creare punti casuali."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:245
+msgid "Start :menuselection:`Vector geometry --> Centroids`"
+msgstr "Scegli :menuselection:`Vettore Strumenti di geometria --> Centroidi`"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:246
+msgid ""
+"In the dialog that appears, select ``Bounding geometry`` as the input layer."
+msgstr ""
+"Nel dialogo che appare, seleziona ``Bounding geometry`` come layer di "
+"ingresso."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:249
+msgid ""
+"As you can see, the mean coordinates (pink point) and the center of the "
+"study area (in green) don't necessarily coincide."
+msgstr ""
+"Come puoi vedere, la media coordinate (punto rosa) ed il centro dell'area di"
+" studio (in verde) non necessariamente coincidono."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:252
+msgid ""
+"The centroid is the barycenter of the layer (the barycenter of a square is "
+"the center of the square) while the mean coordinates represent the average "
+"of all node coordinates."
+msgstr ""
+"Il centroide è il baricentro del layer (il baricentro di un quadrato è il "
+"centro del quadrato) mentre la media delle coordinate rappresenta la media "
+"delle coordinate di tutti i nodi."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:260
+msgid "|basic| |FA| Image Histograms"
+msgstr "|basic| |FA| Istogrammi"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:262
+msgid ""
+"The histogram of a dataset shows the distribution of its values. The "
+"simplest way to demonstrate this in QGIS is via the image histogram, "
+"available in the :guilabel:`Layer Properties` dialog of any image layer "
+"(raster dataset)."
+msgstr ""
+"L'istogramma di un insieme di dati mostra la distribuzione dei suoi valori. "
+"Il modo migliore per dimostrarlo in QGIS è tramite l'istogramma immagine, "
+"disponibile nel dialogo :guilabel:`Proprietà Layer`  di qualunque layer "
+"immagine (dati raster)."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:267
+msgid ""
+"In your :guilabel:`Layers` panel, right-click on the ``srtm_41_19`` layer"
+msgstr ""
+"Nel pannello :guilabel:`Layer`, clicca col tasto destro sul layer "
+"``srtm_41_19``"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:269
+msgid "Select :menuselection:`Properties`"
+msgstr "Seleziona :menuselection:`Proprietà`"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:270
+msgid ""
+"Choose the :guilabel:`Histogram` tab. You may need to click on the "
+":guilabel:`Compute Histogram` button to generate the graphic. You will see a"
+" graph that shows the frequency distribution for the raster values."
+msgstr ""
+"Scegli la scheda :guilabel:`Istogramma`. Clicca sul pulsante "
+":guilabel:`Calcola l'istogramma` per generare il grafico. Dovresti vedere un"
+" grafico che mostra la distribuzione di frequenza per i valori raster."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:279
+msgid ""
+"The graph can be exported as an image with the |fileSave| :sup:`Save plot` "
+"button"
+msgstr ""
+"Il grafico può essere esportato come immagine con il pulsante |fileSave| "
+":sup:`Salava la stampa`"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:282
+msgid ""
+"You can see more detailed information about the layer in the "
+":guilabel:`Information` tab (the mean and max values are estimated, and may "
+"not be exact)."
+msgstr ""
+"Puoi vedere informazioni più dettagliate sul layer nella scheda "
+":guilabel:`Informazioni` (i valori medio e massimo sono stimati, potrebbero "
+"non essere esatti)."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:286
+msgid ""
+"The mean value is ``332.8`` (estimated to 324.3), and the maximum value is "
+"``1699`` (estimated to 1548)! You can zoom in the histogram. Since there are"
+" a lot of pixels with value ``0``, the histogram looks compressed "
+"vertically. By zooming in to cover everything but the peak at ``0``, you "
+"will see more details:"
+msgstr ""
+"Il valore medio è ``332.8`` (stimato in 324.3), ed il valore massimo è "
+"``1699`` (stimato in 1548)! Puoi ingrandire l'istogramma. Dato che ci sono "
+"molti punti con valore ``0``, l'istogramma appare compresso verticalmente. "
+"Ingrandendo coprendo tutto tranne il picco a ``0``, si vedranno maggiori "
+"dettagli:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:297
+msgid ""
+"If the mean and maximum values are not the same as above, it can be due to "
+"the min/max value calculation. Open the :guilabel:`Symbology` tab and expand"
+" the :guilabel:`Min / Max Value Settings` menu. Choose "
+"|radioButtonOn|:guilabel:`Min / max` and click on :guilabel:`Apply`."
+msgstr ""
+"Se i valori medio e massimo non sono gli stessi come sopra, può dipendere "
+"dal calcolo del valore min/max. Apri la scheda :guilabel:`Simbologia` ed "
+"espandi il menu :guilabel:`Impostazioni dei valori di Min e Max`. Scegli "
+"|radioButtonOn|:guilabel:`Min / max` e clicca su :guilabel:`Applica`."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:304
+msgid ""
+"Keep in mind that a histogram shows you the distribution of values, and not "
+"all values are necessarily visible on the graph."
+msgstr ""
+"Tieni a mente che un istogramma mostra la distribuzione dei valori, e non "
+"tutti i valori sono necessariamente visibili sul grafico."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:309
+msgid "|basic| |FA| Spatial Interpolation"
+msgstr "|basic| |FA| Interpolazione spaziale"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:311
+msgid ""
+"Let's say you have a collection of sample points from which you would like "
+"to extrapolate data. For example, you might have access to the "
+":guilabel:`Sampled points` dataset we created earlier, and would like to "
+"have some idea of what the terrain looks like."
+msgstr ""
+"Mettiamo di avere un insieme di punti campione da cui vogliamo estrapolare "
+"dei dati. Per esempio, potresti aver accesso all'insieme :guilabel:`Punti "
+"campionati` creato in precedenza, e vorremmo avere qualche idea di come "
+"appare il terreno."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:317
+msgid ""
+"To start, launch the :menuselection:`GDAL --> Raster analysis --> Grid (IDW "
+"with nearest neighbor searching)` tool in the :guilabel:`Processing "
+"Toolbox`."
+msgstr ""
+"Per iniziare, esegui lo strumento :menuselection:`GDAL --> Analisi raster "
+"--> Grid (IDW with nearest neighbor searching)` in :guilabel:`Strumenti di "
+"Processing`."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:320
+msgid "For :guilabel:`Point layer` select ``Sampled points``"
+msgstr "Seleziona ``Punti campionati`` per :guilabel:`Point layer`"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:321
+msgid "Set :guilabel:`Weighting power` to ``5.0``"
+msgstr "Imposta :guilabel:`Weighting power` a ``5.0``"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:322
+msgid ""
+"In :guilabel:`Advanced parameters`, set :guilabel:`Z value from field` to "
+"``rvalue_1``"
+msgstr ""
+"In :guilabel:`Advanced parameters`, imposta :guilabel:`Z value from field` a"
+" ``rvalue_1``"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:324
+msgid "Finally click on :guilabel:`Run` and wait until the processing ends"
+msgstr ""
+"Infine clicca su :guilabel:`Esegui` ed attendi la fine dell'elaborazione"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:325
+msgid "Close the dialog"
+msgstr "Chiudi il dialogo"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:327
+msgid ""
+"Here is a comparison of the original dataset (left) to the one constructed "
+"from our sample points (right). Yours may look different due to the random "
+"nature of the location of the sample points."
+msgstr ""
+"Qui trovi un confronto fra l'insieme originale (a sinistra) e quello "
+"costruito dai nostri punti campionati (a destra). Il tuo potrà apparire "
+"diverso data la natura casuale dei punti campionati."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:335
+msgid ""
+"As you can see, 100 sample points aren't really enough to get a detailed "
+"impression of the terrain. It gives a very general idea, but it can be "
+"misleading as well."
+msgstr ""
+"Come puoi vedere, 100 punti non sono abbastanza per avere un'idea "
+"dettagliata del terreno. Dà un'idea molto generica, può essere anche "
+"fuorviante."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:340
+msgid "|moderate| |TY| Different interpolation methods"
+msgstr "|moderate| |TY| Metodi diversi di interpolazione"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:342
+msgid "Use the processes shown above to create a set of 10 000 random points"
+msgstr ""
+"Usa i procedimenti visti in precedenza per creare un insieme di 10 000 punti"
+" casuali"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:345
+msgid ""
+"If the number of points is really big, the processing time can take a long "
+"time."
+msgstr "Se il numero di punti è grande, il tempo di calcolo può essere lungo."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:348
+msgid "Use these points to sample the original DEM"
+msgstr "Usa questi punti per campionare il DEM originale"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:349
+msgid ""
+"Use the :guilabel:`Grid (IDW with nearest neighbor searching)` tool on this "
+"dataset."
+msgstr ""
+"Usa lo strumento :guilabel:`Grid (IDW with nearest neighbor searching)` su "
+"questo insieme di dati."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:351
+msgid ""
+"Set :guilabel:`Power` and :guilabel:`Smoothing` to ``5.0`` and ``2.0``, "
+"respectively."
+msgstr ""
+"Imposta :guilabel:`Power` e :guilabel:`Smoothing` a ``5.0`` e ``2.0``, "
+"rispettivamente."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:354
+msgid ""
+"The results (depending on the positioning of your random points) will look "
+"more or less like this:"
+msgstr ""
+"I risultati (dipendentemente dalla posizione dei tuoi punti casuali) "
+"apparirà più o meno come questo:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:360
+msgid ""
+"This is a better representation of the terrain, due to the greater density "
+"of sample points. Remember, larger samples give better results."
+msgstr ""
+"Questa è una rappresentazione migliore del terreno, grazie alla maggiore "
+"densità dei punti campione. Ricorda, più sono i campioni migliori sono i "
+"risultati."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:366
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:368
+msgid ""
+"QGIS has a number of tools for analyzing the spatial statistical properties "
+"of datasets."
+msgstr ""
+"QGIS ha numerosi strumenti per l'analisi delle proprietà statistiche "
+"spaziali degli insiemi di dati."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:373
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:375
+msgid ""
+"Now that we have covered vector analysis, why not see what can be done with "
+"rasters? That is what we will do in the next module!"
+msgstr ""
+"Ora che abbiamo visto l'analisi vettoriale, perché non vedere cosa può "
+"essere fatto con i raster? È quello che faremo nel prossimo modulo!"

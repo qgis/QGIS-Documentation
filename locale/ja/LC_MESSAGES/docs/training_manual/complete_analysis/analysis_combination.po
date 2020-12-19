@@ -1,0 +1,160 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:17+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:2
+msgid "|LS| Combining the Analyses"
+msgstr "|LS| 分析を組み合わせる"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:4
+msgid ""
+"Using the vectorized results of the raster analysis will allow you to select"
+" only those buildings on suitable terrain."
+msgstr "ベクター化されたラスター分析の結果を使用して、適当な地形の上の建物のみを選択することができます。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:7
+msgid ""
+"**The goal for this lesson:** To use the vectorized terrain results to "
+"select suitable plots."
+msgstr "**このレッスンの目標:** 適当な小地所を選び出すためにベクター化された地形の結果を使用します。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:11
+msgid "|moderate| |TY|"
+msgstr "|moderate| |TY|"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:13
+msgid "Save your current map (:kbd:`raster_analysis.qgs`)."
+msgstr "現在の地図を保存します (:kbd:`raster_analysis.qgs`)。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:14
+msgid ""
+"Open the map in which you created during the vector analysis earlier (you "
+"should have saved the file as :kbd:`analysis.qgs`)."
+msgstr "以前ベクター分析をした地図を開きます（ :kbd:`analysis.qgs` としてファイル保存したもの）。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:18
+msgid ":guilabel:`hillshade`,"
+msgstr ":guilabel:`hillshade`,"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:19
+msgid ":guilabel:`solution` (or :guilabel:`buildings_over_100`)"
+msgstr ":guilabel:`solution` (または :guilabel:`buildings_over_100`)"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:21
+msgid ""
+"In addition to these layers, which should already be loaded in the map from "
+"when you worked on it before, also add the :kbd:`suitable_terrain.shp` "
+"dataset."
+msgstr ""
+"前に作業した時から既に地図に読み込まれているはずであるこれらのレイヤーに加え、 :kbd:`suitable_terrain.shp` "
+"データセットも追加します。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:24
+msgid ""
+"If you are missing some layers, you should find them in "
+":kbd:`exercise_data/residential_development/`"
+msgstr ""
+"もしレイヤーに見つからないものがある場合は、 :kbd:`exercise_data/residential_development/` "
+"から見つけて下さい。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:26
+msgid ""
+"Use the :guilabel:`Intersect` tool (:menuselection:`Vector --> Geoprocessing"
+" Tools`) to create a new vector layer called :kbd:`new_solution.shp` which "
+"contains only those buildings which intersect the :kbd:`suitable_terrain` "
+"layer."
+msgstr ""
+":guilabel:`交差` ツール（ :menuselection:`ベクター --> ジオプロセッシングツール` ）を使用して、 "
+":kbd:`suitable_terrain` レイヤーと交差する建物のみが含まれる :kbd:`new_solution.shp` "
+"と呼ばれる新しいベクターレイヤーを作成します。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:30
+msgid ""
+"You should now have a layer showing certain buildings as your solution, for "
+"example:"
+msgstr "あなたは解として特定の建物を示すレイヤーを持っているはずです。例えば:"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:40
+msgid "|moderate| |TY| Inspecting the Results"
+msgstr "|moderate| |TY| 結果の検査"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:42
+msgid ""
+"Look at each of the buildings in your :guilabel:`new_solution` layer. "
+"Compare them with the :guilabel:`suitable_terrain` layer by changing the "
+"symbology for the :guilabel:`new_solution` layer so that it has outlines "
+"only. What do you notice about some of the buildings? Are they all suitable "
+"just because they intersect with the :guilabel:`suitable_terrain` layer? Why"
+" or why not? Which ones would you deem to be unsuitable?"
+msgstr ""
+":guilabel:`new_solution` レイヤーの各建物を見て下さい。 :guilabel:`new_solution` "
+"レイヤーのシンボロジをアウトラインだけに変更して、それらを :guilabel:`suitable_terrain` "
+"レイヤーと比較して下さい。建物のいくつかを見て何に気づきましたか? それらは :guilabel:`suitable_terrain` "
+"レイヤーと交差しているからといってすべて適当ですか? その理由は? どれが不適当だと考えますか?"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:49
+msgid ":ref:`Check your results <complete-analysis-2>`"
+msgstr ":ref:`結果をチェックする <complete-analysis-2>`"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:55
+msgid "|moderate| |TY| Refining the Analysis"
+msgstr "|moderate| |TY| 分析結果の改良"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:57
+msgid ""
+"You can see from the results that some buildings which were included were "
+"not really suitable, so we can now refine the analysis."
+msgstr "結果に含まれていた建物の中には本当には適していないものがありましたので分析結果を改良しましょう。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:60
+msgid ""
+"We want to ensure that our analysis returns only those buildings which fall "
+"entirely within the :kbd:`suitable_terrain` layer. How would you achieve "
+"this? Use one or more Vector Analysis tools and remember that our buildings "
+"are all over 100m squared in size."
+msgstr ""
+"私たちの分析では :kbd:`suitable_terrain` "
+"レイヤーの中に完全に収まる建物だけが選ばれるようにしたい。これはどのように達成できるでしょうか? "
+"1つ以上のベクター解析ツールを使用します。そして私たちの建物の大きさは100平方メートルを超えていることを覚えておいて下さい。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:65
+msgid ":ref:`Check your results <complete-analysis-3>`"
+msgstr ":ref:`結果をチェックする <complete-analysis-3>`"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:68
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:70
+msgid ""
+"You have now answered the original research question, and can offer an "
+"opinion (with reasons, backed by analysis) for a recommendation regarding "
+"which property to develop."
+msgstr "あなたは当初の研究課題に答え、どの地所を開発するべきかに関する推薦の意見を(無理なく、分析に支えられて)提供できます。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:75
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:77
+msgid "Next you will present these results as part of your second assignment."
+msgstr "次は2番目の研究課題の一部としてこれらの結果を提示します。"

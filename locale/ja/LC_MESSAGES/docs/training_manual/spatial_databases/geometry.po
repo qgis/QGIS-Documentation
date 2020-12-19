@@ -1,0 +1,309 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:17+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:2
+msgid "|LS| Geometry Construction"
+msgstr "|LS| ジオメトリの構成"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:4
+msgid ""
+"In this section we are going to delve a little deeper into how simple "
+"geometries are constructed in SQL. In reality, you will probably use a GIS "
+"like QGIS to create complex geometries using their digitising tools; "
+"however, understanding how they are formulated can be handy for writing "
+"queries and understanding how the database is assembled."
+msgstr ""
+"このセクションでは単純なジオメトリがSQL内でどのように構成されるかを少し掘り下げます。実際には、複雑なジオメトリをデジタル化ツールを使用して作るには、QGIS"
+" のような GIS "
+"を使用するでしょう。しかし、それらがどのように形作られているかを知ることは、クエリを書いたりデータベースがどのように作られているかを理解するのに役立ちます。"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:10
+msgid ""
+"**The goal of this lesson:** To better understand how to create spatial "
+"entities directly in PostgreSQL/PostGIS."
+msgstr "**このレッスンの目的** PostgreSQL/PostGIS で空間要素を直接作成する方法をよく理解する。"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:16
+msgid "Creating Linestrings"
+msgstr "ラインストリングの作成"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:18
+msgid ""
+"Going back to our :kbd:`address` database, let's get our streets table "
+"matching the others; i.e., having a constraint on the geometry, an index and"
+" an entry in the geometry_columns table."
+msgstr ""
+":kbd:`address` "
+"データベースに戻って、他に一致する街路テーブルを取得してみましょう。すなわち、ジオメトリ、インデックスとGEOMETRY_COLUMNSテーブル中のエントリに制約を持ちます。"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:23
+msgid "|TY| |moderate|"
+msgstr "|TY| |moderate|"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:25
+msgid ""
+"Modify the :kbd:`streets` table so that it has a geometry column of type "
+"ST_LineString."
+msgstr "タイプST_LineStringのジオメトリ列を持つように :kbd:`街路` テーブルを修正します。"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:27
+msgid ""
+"Don't forget to do the accompanying update to the geometry columns table!"
+msgstr "ジオメトリ列のテーブルに伴う更新を行うことを忘れないでください！"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:29
+msgid ""
+"Also add a constraint to prevent any geometries being added that are not "
+"LINESTRINGS or null."
+msgstr "また、ラインストリングでないかnullであるようなジオメトリが追加されることを防ぐための制約を追加します。"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:31
+msgid "Create a spatial index on the new geometry column"
+msgstr "新しいジオメトリ列に空間索引を作成します。"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:33
+msgid ":ref:`Check your results <geometry-1>`"
+msgstr ":ref:`結果の確認 <geometry-1>`"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:35
+msgid ""
+"Now let's insert a linestring into our streets table. In this case we will "
+"update an existing street record:"
+msgstr "次に、街路テーブルに線ストリングを挿入しましょう。この場合、既存の道路記録を更新します："
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:44
+msgid ""
+"Take a look at the results in QGIS. (You may need to right-click on the "
+"streets layer in the 'Layers' panel, and choose 'Zoom to layer extent'.)"
+msgstr ""
+"結果をQGISで確認してみます。('レイヤー' "
+"パネルのstreetsレイヤーを右クリックし、'レイヤーの領域にズームする'を選択する必要があるかもしれません。)"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:47
+msgid ""
+"Now create some more streets entries - some in QGIS and some from the "
+"command line."
+msgstr "いくつかはQGISから、いくつかはコマンドラインから道路の要素をもう少し追加します。"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:52
+msgid "Creating Polygons"
+msgstr "ポリゴンの作成"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:54
+msgid ""
+"Creating polygons is just as easy. One thing to remember is that by "
+"definition, polygons have at least four vertices, with the last and first "
+"being co-located:"
+msgstr "ポリゴンの作成も簡単です。覚えておくべきことの1つは、ポリゴンには少なくとも4つの頂点があり、最後と最初のものが同じ場所にあることです。"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:62
+msgid ""
+"A polygon requires double brackets around its coordinate list; this is to "
+"allow you to add complex polygons with multiple unconnected areas. For "
+"instance"
+msgstr ""
+"ポリゴンは、その座標リストの周りに二重括弧を必要とします。これにより、複数の連結していない領域を持つ複雑なポリゴンを追加できるようなります。例えば"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:74
+msgid ""
+"If you followed this step, you can check what it did by loading the cities "
+"dataset into QGIS, opening its attribute table, and selecting the new entry."
+" Note how the two new polygons behave like one polygon."
+msgstr ""
+"この手順に従った場合、QGISに都市データセットをロードし、属性テーブルを開き、新しいエントリを選択することで、何をしたか確認できます。二つの新しいポリゴンが1つのポリゴンのように振る舞うかに注意してください。"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:81
+msgid "Exercise: Linking Cities to People"
+msgstr "練習:CitiesをPeopleにリンクする"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:83
+msgid "For this exercise you should do the following:"
+msgstr "この演習では次のことを行う必要があります。"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:85
+msgid "Delete all data from your people table."
+msgstr "peopleテーブルからすべてのデータを削除します。"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:86
+msgid ""
+"Add a foreign key column to people that references the primary key of the "
+"cities table."
+msgstr "都市テーブルの主キーを参照する人々への外部キー列を追加します。"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:88
+msgid "Use QGIS to capture some cities."
+msgstr "QGISを使用していくつかの都市をキャプチャします。"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:89
+msgid ""
+"Use SQL to insert some new people records, ensuring that each has an "
+"associated street and city."
+msgstr "それぞれが関連付けられている通り、街を持っていることを確認して、いくつかの新しい人々のレコードを挿入するSQLを使用してください。"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:92
+msgid "Your updated people schema should look something like this:"
+msgstr "更新されたユーザーのスキーマは、次のようになります。"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:120
+msgid ":ref:`Check your results <geometry-2>`"
+msgstr ":ref:`結果の確認 <geometry-2>`"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:124
+msgid "Looking at Our Schema"
+msgstr "スキーマに着目する"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:126
+msgid "By now our schema should be looking like this:"
+msgstr "スキーマはこのように見えるべきです:"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:133
+msgid "|TY| |hard|"
+msgstr "|TY| |hard|"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:135
+msgid ""
+"Create city boundaries by computing the minimum convex hull of all addresses"
+" for that city and computing a buffer around that area."
+msgstr "その都市のすべてのアドレスの最小凸包を計算し、その領域の周りのバッファを計算することにより、都市の境界線を作成します。"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:140
+msgid "Access Sub-Objects"
+msgstr "サブオブジェクトへのアクセス"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:142
+msgid ""
+"With the SFS-Model functions, you have a wide variety of options to access "
+"sub-objects of SFS Geometries. When you want to select the first vertex "
+"point of every polygon geometry in the table myPolygonTable, you have to do "
+"this in this way:"
+msgstr ""
+"SFS-"
+"モデルの機能を使用すると、SFSジオメトリのサブオブジェクトにアクセスするためのさまざまなオプションを持っています。テーブルmyPolygonTable内のすべてのポリゴンジオメトリの最初の頂点を選択したいときは、このような方法でこれを実行する必要があります："
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:147
+msgid "Transform the polygon boundary to a linestring:"
+msgstr "ポリゴン境界を線ストリングに変換する："
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:154
+msgid "Select the first vertex point of the resultant linestring:"
+msgstr "結果の線ストリングの最初の頂点を選択します。"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:165
+msgid "Data Processing"
+msgstr "データプロセッシング"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:167
+msgid ""
+"PostGIS supports all OGC SFS/MM standard conform functions. All these "
+"functions start with ``ST_``."
+msgstr "PostGISでは、すべてのOGC SFS/MM標準準拠関数をサポートしています。これらの関数はすべて ``ST_`` で始まります。"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:171
+msgid "Clipping"
+msgstr "クリッピング"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:173
+msgid ""
+"To clip a subpart of your data you can use the ``ST_INTERSECT()`` function. "
+"To avoid empty geometries, use:"
+msgstr ""
+"データのサブパートをクリップするには、 ``ST_INTERSECT()`` 関数を使用します。空のジオメトリを避けるには、次のようにします。"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:194
+msgid "Building Geometries from Other Geometries"
+msgstr "ジオメトリを他のジオメトリから構築する"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:196
+msgid ""
+"From a given point table, you want to generate a linestring. The order of "
+"the points is defined by their :kbd:`id`. Another ordering method could be a"
+" timestamp, such as the one you get when you capture waypoints with a GPS "
+"receiver."
+msgstr ""
+"与えられたポイントテーブルから、ラインストリングを生成します。ポイントの順序は、その :kbd:`id` "
+"によって定義されます。別の並べ方は、GPS受信機でウェイポイントをキャプチャするときに得るような、タイムスタンプになりうるかもしれません。"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:204
+msgid ""
+"To create a linestring from a new point layer called 'points', you can run "
+"the following command:"
+msgstr "'points'という新しいポイントレイヤーから線ストリングを作成するには、次のコマンドを実行します。"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:216
+msgid ""
+"To see how it works without creating a new layer, you could also run this "
+"command on the 'people' layer, although of course it would make little real-"
+"world sense to do this."
+msgstr ""
+"どのように機能するかを確認するために、「人」レイヤーにもこのコマンドを実行できたでしょう。もちろん、これを行うことに現実世界の意味はほとんどないでしょうが。"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:224
+msgid "Geometry Cleaning"
+msgstr "ジオメトリクリーニング"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:230
+msgid "Differences between tables"
+msgstr "テーブル間の差"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:232
+msgid ""
+"To detect the difference between two tables with the same structure, you can"
+" use the PostgreSQL keyword ``EXCEPT``:"
+msgstr "同じ構造を持つ2つのテーブルの差を検出するには、PostgreSQLキーワード \"EXCEPT\"を使用します："
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:241
+msgid ""
+"As the result, you will get all records from table_a which are not stored in"
+" table_b."
+msgstr "結果として、table_aからtable_bに格納されていないすべてのレコードが得られるでしょう。"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:245
+msgid "Tablespaces"
+msgstr "表領域"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:247
+msgid ""
+"You can define where postgres should store its data on disk by creating "
+"tablespaces:"
+msgstr "Postgresがディスク上にデータを格納する場所を定義するには、表領域を作成します。"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:254
+msgid ""
+"When you create a database, you can then specify which tablespace to use "
+"e.g.::"
+msgstr "データベースを作成するときは、例えばどの表領域を使用するか指定できます::"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:259
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:261
+msgid ""
+"You've learned how to create more complex geometries using PostGIS "
+"statements. Keep in mind that this is mostly to improve your tacit knowledge"
+" when working with geo-enabled databases through a GIS frontend. You usually"
+" won't need to actually enter these statements manually, but having a "
+"general idea of their structure will help you when using a GIS, especially "
+"if you encounter errors that would otherwise seem cryptic."
+msgstr ""
+"PostGISの文を使用して、より複雑なジオメトリを作成する方法を学びました。これはGISのフロントエンドを通じて地理対応データベースを操作するときは、暗黙知を向上させることがほとんどであることに留意してください。これらのステートメントを実際に手動で入力する必要は普通はありませんが、その構造について一般的な知識を持っておくと、GISを使用するときに、特にそうでなければ不可解と思うであろうエラーが発生したときに、役に立ちます。"

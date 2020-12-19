@@ -1,0 +1,1099 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:28+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2020\n"
+"Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:2
+msgid "Basic Grid Analysis"
+msgstr "기본 그리드 분석"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:11
+msgid "D-Infinity Contributing Area"
+msgstr "D-Infinity 기여 영역"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:14
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:72
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:155
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:178
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:231
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:290
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:327
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:362
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:436
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:455
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:498
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:556
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:580
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:624
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:715
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:760
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:787
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:828
+msgid "Description"
+msgstr "설명"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:16
+msgid ""
+"Calculates a grid of specific catchment area which is the contributing area "
+"per unit contour length using the multiple flow direction D-infinity "
+"approach. D-infinity flow direction is defined as steepest downward slope on"
+" planar triangular facets on a block centered grid. The contribution at each"
+" grid cell is taken as the grid cell length (or when the optional weight "
+"grid input is used, from the weight grid). The contributing area of each "
+"grid cell is then taken as its own contribution plus the contribution from "
+"upslope neighbors that have some fraction draining to it according to the "
+"D-infinity flow model. The flow from each cell either all drains to one "
+"neighbor, if the angle falls along a cardinal (0, π/2, π, 3π/2) or ordinal "
+"(π/4, 3π/4, 5π/4, 7π/4) direction, or is on an angle falling between the "
+"direct angle to two adjacent neighbors. In the latter case the flow is "
+"proportioned between these two neighbor cells according to how close the "
+"flow direction angle is to the direct angle to those cells. The contour "
+"length used here is the grid cell size. The resulting units of the specific "
+"catchment area are length units the same as those of the grid cell size."
+msgstr ""
+"이 알고리즘은 다중 유수 방향 D-Infinity 접근법을 사용해서 등고선 길이 단위당 기여 영역을 나타내는 특정 집수 영역의 그리드를 "
+"계산합니다. D-Infinity 유수 방향은 직육면체로 이루어진 그리드 상에 있는 편평 삼각면(planar triangular "
+"facet)에 대해 가장 내리막 경사가 심한 방향으로 정의됩니다. 각 그리드 셀 별 기여도는 그리드 셀 길이(또는 부가적인 가중치 "
+"그리드를 사용하는 경우, 가중치 그리드에서 나온 값)로 계산합니다. 이렇게 되면 각 그리드 셀 별 기여 영역은 각 셀 고유의 기여도에 "
+"D-Infinity 흐름 모델에 따라 해당 셀로 어느 정도 배수되는 오르막 이웃들의 기여도를 합산해서 계산합니다. 각 셀에서 유수 방향은"
+" 각도가 기수(0, π/2, π, 3π/2) 또는 서수(π/4, 3π/4, 5π/4, 7π/4) 방향인 경우 단일 이웃으로 모두 "
+"배수됩니다. 또는 각도가 교각(direct angle) 사이라면 인접 이웃 2개 방향으로 배수됩니다. 후자의 경우 유수 방향 각도가 인접"
+" 이웃 셀에 대한 교각에 얼마나 가깝냐에 따라 유수의 비율이 정해집니다. 이 알고리즘이 사용하는 등고선 길이란 그리드 셀 크기를 "
+"말합니다. 특정 집수 영역의 산출 단위는 그리드 셀 크기와 동일한 길이 단위입니다."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:35
+msgid ""
+"When the optional weight grid is not used, the result is reported in terms "
+"of specific catchment area, the upslope area per unit contour length, taken "
+"here as the number of cells times grid cell length (cell area divided by "
+"cell length). This assumes that grid cell length is the effective contour "
+"length, in the definition of specific catchment area and does not "
+"distinguish any difference in contour length dependent upon the flow "
+"direction. When the optional weight grid is used, the result is reported "
+"directly as a summation of weights, without any scaling."
+msgstr ""
+"부가적인 가중치 그리드를 사용하지 않는 경우, 셀 개수를 (셀 면적을 셀 길이로 나눈) 그리드 셀 길이와 곱한 값으로 나타낸 특정 집수 "
+"영역(등고선 길이 단위 당 오르막 영역)을 산출합니다. 이때 특정 집수 영역의 정의에 따라 그리드 셀 길이가 실질적인 등고선 길이라고 "
+"가정하며, 흐름 방향에 따른 등고선 길이의 차이점을 구분하지 않습니다. 부가적인 가중치 그리드를 사용하는 경우, 어떤 크기 조정도 없이 "
+"가중치의 요약을 직접 산출합니다."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:44
+msgid ""
+"If the optional outlet point shapefile is used, only the outlet cells and "
+"the cells upslope (by the D-infinity flow model) of them are in the domain "
+"to be evaluated."
+msgstr ""
+"부가적인 유출구 포인트 shapefile을 사용하는 경우, 유출구 셀과 해당 셀의 (D-infinity 흐름 모델에 따른) 오르막 셀들이"
+" 있는 영역만 평가합니다."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:48
+msgid ""
+"By default, the tool checks for edge contamination. This is defined as the "
+"possibility that a contributing area value may be underestimated due to grid"
+" cells outside of the domain not being counted. This occurs when drainage is"
+" inwards from the boundaries or areas with \"no data\" values for elevation."
+" The algorithm recognizes this and reports \"no data\" for the contributing "
+"area. It is common to see streaks of \"no data\" values extending inwards "
+"from boundaries along flow paths that enter the domain at a boundary. This "
+"is the desired effect and indicates that contributing area for these grid "
+"cells is unknown due to it being dependent on terrain outside of the domain "
+"of data available. Edge contamination checking may be turned off in cases "
+"where you know it is not an issue or want to ignore these problems, if for "
+"example, the DEM has been clipped along a watershed outline."
+msgstr ""
+"기본적으로, 이 도구는 경계 오염을 확인합니다. 경계 오염이란 영역 바깥에 있는 그리드 셀을 계산에 넣지 않기 때문에 기여 영역 값이 "
+"저평가될 수도 있다는 가능성으로 정의됩니다. 경계 오염은 배수가 경계로부터 안 쪽으로 흐르거나 또는 표고값이 NODATA인 영역에서 "
+"발생합니다. 이 알고리즘은 이를 인식하고 기여 영역에 대해 NODATA를 보고합니다. 경계선에서 영역으로 들어오는 흐름 경로를 따라 "
+"NODATA 값들이 쭉 나열되는 것을 흔히 볼 수 있습니다. 이는 기대대로의 효과로서, 해당 그리드 셀들의 기여 영역이 사용할 수 있는 "
+"데이터 영역 외부에 있는 지형에 의존하기 때문에 그 기여 영역을 알 수 없다는 사실을 나타냅니다. 사용자가 경계 오염이 문제가 되지 "
+"않는다는 사실을 알고 있거나 또는 이런 문제를 무시하고자 하는 경우, 예를 들면 유역 외곽선을 따라 DEM을 잘라낸 경우라면 경계 오염 "
+"확인 옵션을 끌 수도 있습니다."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:62
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:221
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:352
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:488
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:614
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:778
+msgid "Parameters"
+msgstr "파라미터"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:69
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:152
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:228
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:287
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:359
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:433
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:495
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:553
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:621
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:712
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:784
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:825
+msgid "Label"
+msgstr "라벨"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:70
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:153
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:229
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:288
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:360
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:434
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:496
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:554
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:622
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:713
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:785
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:826
+msgid "Name"
+msgstr "명칭"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:71
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:154
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:230
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:289
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:361
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:435
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:497
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:555
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:623
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:714
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:786
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:827
+msgid "Type"
+msgstr "유형"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:73
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:254
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:291
+msgid "**D-infinity flow directions**"
+msgstr "**D-infinity flow directions**"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:74
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:255
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:292
+msgid "``DINF_FLOWDIR``"
+msgstr "``DINF_FLOWDIR``"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:75
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:99
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:135
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:158
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:234
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:256
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:268
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:293
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:307
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:365
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:384
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:416
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:439
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:501
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:523
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:535
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:559
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:565
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:627
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:637
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:667
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:680
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:692
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:718
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:725
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:732
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:790
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:797
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:807
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:831
+msgid "[raster]"
+msgstr "[raster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:76
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:294
+msgid ""
+"A grid of flow directions based on the D-infinity flow method using the "
+"steepest slope of a triangular facet. Flow direction is determined as the "
+"direction of the steepest downward slope on the 8 triangular facets of a 3x3"
+" block centered grid. Flow direction is encoded as an angle in radians, "
+"counter-clockwise from east as a continuous (floating point) quantity "
+"between 0 and 2π. The resulting flow in a grid is then usually interpreted "
+"as being proportioned between the two neighboring cells that define the "
+"triangular facet with the steepest downward slope."
+msgstr ""
+"삼각면(triangular facet)의 가장 심한 경사도를 사용하는 D-infinity 유수법에 기반한 유수 방향 그리드입니다. 유수 "
+"방향은 3x3 블록 중심 그리드의 삼각면 8개 가운데 가장 심한 내리막 경사의 방향으로 결정됩니다. 동쪽에서 반시계 방향으로 0에서 2π"
+" 사이의 (부동소수점) 연속량인 라디안 단위 각도로 유수 방향을 인코딩합니다. 이렇게 하면 일반적으로 가장 심한 내리막 경사를 가진 "
+"삼각면을 정의하는 이웃 셀 2개 사이의 비율로서 그리드에서 산출되는 유수를 해석합니다."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:87
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:371
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:656
+msgid "**Outlets**"
+msgstr "**Outlets**"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:89
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:97
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:373
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:382
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:635
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:648
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:658
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:795
+msgid "Optional"
+msgstr "부가적"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:90
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:374
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:659
+msgid "``OUTLETS``"
+msgstr "``OUTLETS``"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:91
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:375
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:660
+msgid "[vector: point]"
+msgstr "[vector: point]"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:92
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:376
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:661
+msgid ""
+"A point shapefile defining the outlets of interest. If this input file is "
+"used, only the cells upslope of these outlet cells are considered to be "
+"within the domain being evaluated."
+msgstr ""
+"관심 유출구 포인트를 정의하는 포인트 shapefile입니다. 이 파일을 입력하는 경우, 해당 유출구 셀의 주변 오르막 셀들만 평가 영역"
+" 안에 있다고 간주합니다."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:95
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:380
+msgid "**Weight grid**"
+msgstr "**Weight grid**"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:98
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:383
+msgid "``WEIGHT_GRID``"
+msgstr "``WEIGHT_GRID``"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:100
+msgid ""
+"A grid giving contribution to flow for each cell. These contributions (also "
+"sometimes referred to as weights or loadings) are used in the contributing "
+"area accumulation. If this input file is not used, the result is reported in"
+" terms of specific catchment area (the upslope area per unit contour length)"
+" taken as the number of cells times grid cell length (cell area divided by "
+"cell length)."
+msgstr ""
+"각 셀에 대해 유수 기여도를 지정하는 그리드입니다. 이 (가중치 또는 부하값으로 불리기도 하는) 기여도는 기여 영역 집적에 사용됩니다. "
+"이 파일을 입력하지 않는 경우, 셀 개수를 (셀 면적을 셀 길이로 나눈) 그리드 셀 길이와 곱한 값으로 나타낸 특정 집수 영역(등고선 "
+"길이 단위 당 오르막 영역)을 산출합니다."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:108
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:390
+msgid "**Check for edge contamination**"
+msgstr "**Check for edge contamination**"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:109
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:391
+msgid "``EDGE_CONTAMINATION``"
+msgstr "``EDGE_CONTAMINATION``"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:110
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:392
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:801
+msgid "[boolean]"
+msgstr "[boolean]"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:112
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:394
+msgid "Default: True"
+msgstr "기본값: True"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:113
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:395
+msgid ""
+"A flag that indicates whether the tool should check for edge contamination. "
+"Edge contamination is defined as the possibility that a contributing area "
+"value may be underestimated due to the fact that grid cells outside of the "
+"domain have not been evaluated. This occurs when drainage is inwards from "
+"the boundaries or areas with NODATA values for elevation. The algorithm "
+"recognizes this and reports NODATA for the impated cells. It is common to "
+"see streaks of NODATA values extending inwards from boundaries along flow "
+"paths that enter the domain at a boundary. This is the desired effect and "
+"indicates that contributing area for these grid cells is unknown due to it "
+"being dependent on terrain outside of the domain of available data. Edge "
+"contamination checking may be turned off in cases where you know this is not"
+" an issue, or want to ignore these problems, if for example, the DEM has "
+"been clipped along a watershed outline."
+msgstr ""
+"이 도구가 경계 오염을 확인해야 할지 여부를 나타내는 플래그입니다. 경계 오염이란 영역 바깥에 있는 그리드 셀을 계산에 넣지 않기 때문에"
+" 기여 영역 값이 저평가될 수도 있다는 가능성으로 정의됩니다. 경계 오염은 배수가 경계로부터 안 쪽으로 흐르거나 또는 표고값이 "
+"NODATA인 영역에서 발생합니다. 이 알고리즘은 이를 인식하고 이런 셀에 대해 NODATA를 보고합니다. 경계선에서 영역으로 들어오는 "
+"흐름 경로를 따라 NODATA 값들이 쭉 나열되는 것을 흔히 볼 수 있습니다. 이는 기대대로의 효과로서, 해당 그리드 셀들의 기여 영역이"
+" 사용할 수 있는 데이터 영역 외부에 있는 지형에 의존하기 때문에 그 기여 영역을 알 수 없다는 사실을 나타냅니다. 사용자가 경계 오염이"
+" 문제가 되지 않는다는 사실을 알고 있거나 또는 이런 문제를 무시하고자 하는 경우, 예를 들면 유역 외곽선을 따라 DEM을 잘라낸 "
+"경우라면 이 옵션을 끌 수도 있습니다."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:133
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:156
+msgid "**D-infinity specific catchment area**"
+msgstr "**D-infinity specific catchment area**"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:134
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:157
+msgid "``DINF_CONTRIB_AREA``"
+msgstr "``DINF_CONTRIB_AREA``"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:137
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:258
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:270
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:418
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:525
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:537
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:669
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:682
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:694
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:809
+msgid "Default: ``[Save to temporary file]``"
+msgstr "기본값: ``[Save to temporary file]``"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:138
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:419
+msgid "Specification of the output raster. One of:"
+msgstr "산출 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:140
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:262
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:274
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:421
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:529
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:541
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:674
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:686
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:699
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:813
+msgid "Save to a Temporary File"
+msgstr "임시 파일로 저장"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:141
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:263
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:275
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:422
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:530
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:542
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:675
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:687
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:700
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:814
+msgid "Save to File..."
+msgstr "파일로 저장"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:143
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:265
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:277
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:424
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:532
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:544
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:677
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:689
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:702
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:816
+msgid "The file encoding can also be changed here."
+msgstr "이 파라미터에서 파일 인코딩도 변경할 수 있습니다."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:146
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:280
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:427
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:547
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:705
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:819
+msgid "Outputs"
+msgstr "산출물"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:159
+msgid ""
+"A grid of specific catchment area which is the contributing area per unit "
+"contour length using the multiple flow direction D-infinity approach. The "
+"contributing area of each grid cell is then taken as its own contribution "
+"plus the contribution from upslope neighbors that have some fraction "
+"draining to it according to the D-infinity flow model."
+msgstr ""
+"다중 흐름 방향 D-infinity 접근법을 사용한 등고선 길이 단위 당 기여 영역인 특정 집수 영역 그리드입니다. 각 그리드 셀 별 "
+"기여 영역은 각 셀 고유의 기여도에 D-infinity 흐름 모델에 따라 해당 셀로 배수되는 오르막 이웃들의 기여도를 합산해서 "
+"계산합니다."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:167
+msgid "**Algorithm ID**: ``taudem:areadinf``"
+msgstr "**Algorithm ID**: ``taudem:areadinf``"
+
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+msgid ""
+"The *algorithm id* is displayed when you hover over the algorithm in the "
+"Processing Toolbox. The *parameter dictionary* provides the parameter NAMEs "
+"and values. See :ref:`processing_console` for details on how to run "
+"processing algorithms from the Python console."
+msgstr ""
+"공간 처리 툴박스에 있는 알고리즘 위에 마우스를 가져가면 *알고리즘 ID* 를 표시합니다. *파라미터 목록(dictionary)* 은 "
+"파라미터 **명칭** 및 값을 제공합니다. 파이썬 콘솔에서 공간 처리 알고리즘을 어떻게 실행하는지 자세히 알고 싶다면 "
+":ref:`processing_console` 을 참조하세요."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:175
+msgid "D-Infinity Flow Directions"
+msgstr "D-infinity 흐름 방향"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:180
+msgid ""
+"Assigns a flow direction based on the D-infinity flow method using the "
+"steepest slope of a triangular facet (Tarboton, 1997, \"A New Method for the"
+" Determination of Flow Directions and Contributing Areas in Grid Digital "
+"Elevation Models\", Water Resources Research, 33(2): 309-319). Flow "
+"direction is defined as steepest downward slope on planar triangular facets "
+"on a block centered grid. Flow direction is encoded as an angle in radians "
+"counter-clockwise from east as a continuous (floating point) quantity "
+"between 0 and 2π. The flow direction angle is determined as the direction of"
+" the steepest downward slope on the eight triangular facets formed in a 3 x "
+"3 grid cell window centered on the grid cell of interest. The resulting flow"
+" in a grid is then usually interpreted as being proportioned between the two"
+" neighboring cells that define the triangular facet with the steepest "
+"downward slope."
+msgstr ""
+"삼각면(triangular facet)의 가장 심한 경사도를 사용하는 D-infinity 유수법에 기반한 유수 방향을 "
+"할당합니다(Tarboton, 1997, \"A New Method for the Determination of Flow "
+"Directions and Contributing Areas in Grid Digital Elevation Models\", Water "
+"Resources Research, 33(2): 309-319). 유수 방향은 블록 중심 그리드 상의 삼각면 가운데 가장 심한 내리막 "
+"경사의 방향으로 정의됩니다. 동쪽에서 반시계 방향으로 0에서 2π 사이의 (부동소수점) 연속량인 라디안 단위 각도로 유수 방향을 "
+"인코딩합니다. 유수 방향 각도는 관심 그리드 셀을 중심으로 하는 3x3 그리드 셀 창을 형성하는 삼각면 8개 가운데 가장 심한 내리막 "
+"경사의 방향으로 정의됩니다. 이렇게 하면 일반적으로 가장 심한 내리막 경사를 가진 삼각면을 정의하는 이웃 셀 2개 사이의 비율로서 "
+"그리드에서 산출되는 유수를 해석합니다."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:196
+msgid ""
+"A block-centered representation is used with each elevation value taken to "
+"represent the elevation of the center of the corresponding grid cell. Eight "
+"planar triangular facets are formed between each grid cell and its eight "
+"neighbors. Each of these has a downslope vector which when drawn outwards "
+"from the center may be at an angle that lies within or outside the 45 degree"
+" (π/4 radian) angle range of the facet at the center point. If the slope "
+"vector angle is within the facet angle, it represents the steepest flow "
+"direction on that facet. If the slope vector angle is outside a facet, the "
+"steepest flow direction associated with that facet is taken along the "
+"steepest edge. The slope and flow direction associated with the grid cell is"
+" taken as the magnitude and direction of the steepest downslope vector from "
+"all eight facets. Slope is measured as drop/distance, i.e. tan of the slope "
+"angle."
+msgstr ""
+"해당 그리드 셀의 중심 표고를 표현하는 데 쓰이는 각 표고 값에 블록 중심 표현법을 사용합니다. 편평 삼각면 8개가 각 그리드 셀과 그 "
+"이웃 8개 사이에 형성됩니다. 각 편평 삼각면은 중심에서 바깥쪽으로 그리는 경우 중심 포인트에 있는 삼각면의 45도 (π/4 라디안) "
+"각도 범위 안 또는 바깥에 있을 수도 있는 내리막 벡터를 가지고 있습니다. 경사 벡터 각도가 삼각면 각도 안에 있을 경우, 해당 삼각면의"
+" 가장 심한 경사의 흐름 방향을 나타냅니다. 경사 벡터 각도가 삼각면 각도 바깥에 있을 경우, 해당 삼각면의 가장 심한 경사의 흐름 "
+"방향은 가장 심한 경사를 가진 경계를 따르게 됩니다. 그리드 셀의 경사 및 흐름 방향은 모든 8개 삼각면 가운데 가장 심한 내리막 벡터의"
+" 크기 및 방향을 따릅니다. 고저차/거리, 즉 경사각의 탄젠트로 경사를 측정합니다."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:209
+msgid ""
+"In the case where no slope vectors are positive (downslope), the flow "
+"direction is set using the method of Garbrecht and Martz (1997) for the "
+"determination of flow across flat areas. This makes flat areas drain away "
+"from high ground and towards low ground. The flow path grid to enforce "
+"drainage along existing streams is an optional input, and if used, takes "
+"precedence over elevations for the setting of flow directions."
+msgstr ""
+"모든 경사 벡터가 양의 값(내리막)이 아닌 경우, 평탄 지역의 흐름 방향을 결정하기 위한 Garbrecht & Martz (1997) "
+"방법을 사용해서 흐름 방향을 정합니다. 평탄 지역을 고지대에서 저지대로 향하는 배수 경로의 일부로 취급하는 방법입니다. 기존 하천을 따라"
+" 배수를 강제하기 위한 흐름 경로 그리드를 입력할 수도 있고, 하지 않을 수도 있습니다. 입력하는 경우, 흐름 방향을 정하는 과정에서 "
+"표고를 우선합니다."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:216
+msgid ""
+"The D-infinity flow direction algorithm may be applied to a DEM that has not"
+" had its pits filled, but it will then result in \"no data\" values for the "
+"D-infinity flow direction and slope associated with the lowest point of the "
+"pit."
+msgstr ""
+"함몰부를 채우지 않은 DEM에 D-infinity 흐름 방향 알고리즘을 적용할 수도 있지만, 그렇게 하면 함몰부의 최저 포인트에서 "
+"D-infinity 흐름 방향 및 경사를 NODATA로 산출할 것입니다."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:232
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:499
+msgid "**Pit filled elevation**"
+msgstr "**Pit filled elevation**"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:233
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:500
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:806
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:830
+msgid "``PIT_FILLED``"
+msgstr "``PIT_FILLED``"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:235
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:502
+msgid ""
+"A grid of elevation values. This is usually the output of the **\"Pit "
+"Remove\"** tool, in which case it is elevations with pits removed. Pits are "
+"low elevation areas in digital elevation models (DEMs) that are completely "
+"surrounded by higher terrain. They are generally taken to be artifacts of "
+"the digitation process that interfere with the processing of flow across "
+"DEMs. So they are removed by raising their elevation to the point where they"
+" just drain off the domain. This step is not essential if you have reason to"
+" believe that the pits in your DEM are real. If a few pits actually exist "
+"and so should not be removed, while at the same time others are believed to "
+"be artifacts that need to be removed, the actual pits should have NODATA "
+"elevation values inserted at their lowest point. NODATA values serve to "
+"define edges of the domain in the flow field, and elevations are only raised"
+" to where flow is off an edge, so an internal NODATA value will stop a pit "
+"from being removed, if necessary."
+msgstr ""
+"표고 값을 보유한 그리드를 지정합니다. 일반적으로 이 그리드는 `함몰부 제거 "
+"<http://docs.qgis.org/2.18/ko/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.html"
+"#pit-remove>`_ 도구의 산출물로, 함몰부를 제거한 표고입니다. 함몰부란 수치 표고 모델(DEM)에 있는 높은 지형으로 완전히 "
+"둘러쌓인 낮은 표고 영역을 말합니다. 일반적으로 함몰부는 DEM에서 유수 공간 처리를 방해하는, 디지타이즈 작업 과정 중의 오류로 "
+"간주됩니다. 따라서 함몰부의 표고를 해당 영역의 물이 배수될 때까지 올려 함몰부를 제거합니다. 사용자 DEM에 있는 함몰부가 실재한다고 "
+"믿을 만한 이유가 있다면 이 단계를 건너뛰어도 됩니다. 몇몇 함몰부가 실제로 존재하고 제거해서는 안 되는 반면 다른 몇몇 함몰부는 "
+"제거해야 할 오류인 경우, 실재 함몰부의 가장 낮은 지점에 NODATA 표고값을 삽입해야 합니다. NODATA 값은 유수 영역의 경계를 "
+"정의하는 역할을 하며, 함몰부 제거 도구는 유수가 경계를 향해 흘러가도록 표고를 높이기 때문에, 필요한 경우 이렇게 NODATA 값을 "
+"영역 내부에 설정해주면 함몰부가 제거되는 일을 막을 수 있습니다."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:259
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:526
+msgid "Specification of the output flow direction raster. One of:"
+msgstr "산출 유수 방향 래스터를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:266
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:305
+msgid "**D-infinity slope**"
+msgstr "**D-infinity slope**"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:267
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:306
+msgid "``DINF_SLOPE``"
+msgstr "``DINF_SLOPE``"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:271
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:538
+msgid "Specification of the output slope raster. One of:"
+msgstr "산출 경사도 래스터를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:308
+msgid ""
+"A grid of slope evaluated using the D-infinity method described in Tarboton,"
+" D. G., (1997), \"A New Method for the Determination of Flow Directions and "
+"Contributing Areas in Grid Digital Elevation Models\", Water Resources "
+"Research, 33(2): 309-319. This is the steepest outwards slope on one of "
+"eight triangular facets centered at each grid cell, measured as "
+"drop/distance, i.e. tan of the slope angle."
+msgstr ""
+"D\\. G. 타보튼(Tarboton)이 1997년 수자원 연구(Water Resources Research) 33(2)호 309 ~ "
+"319쪽에 발표한 논문 \"A New Method for the Determination of Flow Directions and "
+"Contributing Areas in Grid Digital Elevation Models\"에서 설명한 D-infinity 방법을 "
+"사용해서 평가한 경사 그리드를 지정합니다. 각 그리드 셀을 중심으로 한 8개의 삼각면 가운데 가장 심한 바깥 방향 경사를 경사 값으로 "
+"보유하고 있는 그리드입니다. 고저차/거리, 즉 경사각의 탄젠트로 경사를 측정합니다."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:316
+msgid "**Algorithm ID**: ``taudem:dinfflowdir``"
+msgstr "**Algorithm ID**: ``taudem:dinfflowdir``"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:324
+msgid "D8 Contributing Area"
+msgstr "D8 기여 영역"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:329
+msgid ""
+"Calculates a grid of contributing areas using the single direction D8 flow "
+"model. The contribution of each grid cell is taken as one (or when the "
+"optional weight grid is used, the value from the weight grid). The "
+"contributing area for each grid cell is taken as its own contribution plus "
+"the contribution from upslope neighbors that drain in to it according to the"
+" D8 flow model."
+msgstr ""
+"이 알고리즘은 단일 방향 D8 흐름 모델을 사용해서 기여 영역의 그리드를 생성합니다. 각 그리드 셀 별로 기여도를 (또는 부가적인 가중치"
+" 그리드를 사용하는 경우, 가중치 그리드에서 나온 값으로) 계산합니다. 각 그리드 셀 별 기여 영역은 각 셀 고유의 기여도에 D8 흐름 "
+"모델에 따라 해당 셀로 배수되는 오르막 이웃들의 기여도를 합산해서 계산합니다."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:335
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:610
+msgid ""
+"If the optional outlet point shapefile is used, only the outlet cells and "
+"the cells upslope (by the D8 flow model) of them are in the domain to be "
+"evaluated."
+msgstr ""
+"부가적인 유출구 포인트 shapefile을 사용하는 경우, 유출구 셀과 해당 셀의 (D8 흐름 모델에 따른) 오르막 셀들이 있는 영역만 "
+"평가합니다."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:338
+msgid ""
+"By default, the tool checks for edge contamination. This is defined as the "
+"possibility that a contributing area value may be underestimated due to grid"
+" cells outside of the domain not being counted. This occurs when drainage is"
+" inwards from the boundaries or areas with \"no data\" values for elevation."
+" The algorithm recognizes this and reports \"no data\" for the contributing "
+"area. It is common to see streaks of \"no data\" values extending inwards "
+"from boundaries along flow paths that enter the domain at a boundary. This "
+"is the desired effect and indicates that contributing area for these grid "
+"cells is unknown due to it being dependent on terrain outside of the domain "
+"of data available. Edge contamination checking may be turned off in cases "
+"where you know this is not an issue or want to ignore these problems, if for"
+" example, the DEM has been clipped along a watershed outline."
+msgstr ""
+"기본적으로, 이 도구는 경계 오염을 확인합니다. 경계 오염이란 영역 바깥에 있는 그리드 셀을 계산에 넣지 않기 때문에 기여 영역 값이 "
+"저평가될 수도 있다는 가능성으로 정의됩니다. 경계 오염은 배수가 경계로부터 안 쪽으로 흐르거나 또는 표고값이 NODATA인 영역에서 "
+"발생합니다. 이 알고리즘은 이를 인식하고 기여 영역에 대해 NODATA를 보고합니다. 경계선에서 영역으로 들어오는 흐름 경로를 따라 "
+"NODATA 값들이 쭉 나열되는 것을 흔히 볼 수 있습니다. 이는 기대대로의 효과로서, 해당 그리드 셀들의 기여 영역이 사용할 수 있는 "
+"데이터 영역 외부에 있는 지형에 의존하기 때문에 그 기여 영역을 알 수 없다는 사실을 나타냅니다. 사용자가 경계 오염이 문제가 되지 "
+"않는다는 사실을 알고 있거나 또는 이런 문제를 무시하고자 하는 경우, 예를 들면 유역 외곽선을 따라 DEM을 잘라낸 경우라면 경계 오염 "
+"확인 옵션을 끌 수도 있습니다."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:363
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:521
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:557
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:625
+msgid "**D8 flow directions**"
+msgstr "**D8 flow directions**"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:364
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:522
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:558
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:626
+msgid "``D8_FLOWDIR``"
+msgstr "``D8_FLOWDIR``"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:366
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:628
+msgid ""
+"A grid of D8 flow directions which are defined, for each cell, as the "
+"direction of the one of its eight adjacent or diagonal neighbors with the "
+"steepest downward slope. This grid can be obtained as the output of the "
+"**\"D8 Flow Directions\"** tool."
+msgstr ""
+"각 셀 별로 그 인접 또는 대각선 방향의 이웃 8개 셀 가운데 가장 심한 내리막 경사를 가지고 있는 셀의 방향으로 정의한 D8 흐름 방향"
+" 그리드입니다. 이 그리드는 `D8 흐름 방향 <#d8-flow-directions>`_ 알고리즘의 산출물로 얻을 수 있습니다."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:385
+msgid ""
+"A grid giving contribution to flow for each cell. These contributions (also "
+"sometimes referred to as weights or loadings) are used in the contributing "
+"area accumulation. If this input file is not used, the contribution to flow "
+"will assumed to be one for each grid cell."
+msgstr ""
+"각 셀에 대해 유수 기여도를 지정하는 그리드입니다. 이 (가중치 또는 부하값으로 불리기도 하는) 기여도는 기여 영역 집적에 사용됩니다. "
+"이 파일을 입력하지 않는 경우, 각 그리드 셀 별로 유수 기여도를 추정할 것입니다."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:414
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:437
+msgid "**D8 specific catchment area**"
+msgstr "**D8 specific catchment area**"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:415
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:438
+msgid "``D8_CONTRIB_AREA``"
+msgstr "``D8_CONTRIB_AREA``"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:440
+msgid ""
+"A grid of contributing area values calculated as the cells own contribution "
+"plus the contribution from upslope neighbors that drain in to it according "
+"to the D8 flow model."
+msgstr ""
+"각 셀 고유의 기여도에 D8 유수 모델에 따라 해당 셀로 배수되는 오르막 이웃들의 기여도를 합산해서 계산한 기여 영역 값들의 "
+"그리드입니다."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:444
+msgid "**Algorithm ID**: ``taudem:aread8``"
+msgstr "**Algorithm ID**: ``taudem:aread8``"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:452
+msgid "D8 Flow Directions"
+msgstr "D8 흐름 방향"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:457
+msgid ""
+"Creates 2 grids. The first contains the flow direction from each grid cell "
+"to one of its adjacent or diagonal neighbors, calculated using the direction"
+" of steepest descent. The second contain the slope, as evaluated in the "
+"direction of steepest descent, and is reported as drop/distance, i.e. tan of"
+" the angle. Flow direction is reported as NODATA for any grid cell adjacent "
+"to the edge of the DEM domain, or adjacent to a NODATA value in the DEM. In "
+"flat areas, flow directions are assigned away from higher ground and towards"
+" lower ground using the method of Garbrecht and Martz (1997). The D8 flow "
+"direction algorithm may be applied to a DEM that has not had its pits "
+"filled, but it will then result in NODATA values for flow direction and "
+"slope at the lowest point of each pit."
+msgstr ""
+"이 알고리즘은 그리드를 2개 생성합니다. 첫 번째 그리드는 각 그리드 셀에서 가장 심한 내리막 경사를 계산해서 인접 또는 대각선 방향의 "
+"이웃들 가운데 어느 방향으로 흘러가는지에 대한 정보를 담고 있습니다. 두 번째 그리드는 가장 심한 내리막 경사의 방향으로 평가한 경사도를"
+" 고저차/거리라는, 예를 들면 각도의 탄젠트 값으로 담고 있습니다. DEM 영역의 경계에 인접한, 또는 DEM의 NODATA 값에 인접한"
+" 모든 그리드 셀의 흐름 방향은 NODATA로 보고됩니다. 평탄 지역의 경우, Garbrecht & Martz (1997) 방법을 "
+"사용해서 고지대에서 저지대를 향해 흐름 방향을 할당합니다. 함몰부를 채우지 않은 DEM에 D8 흐름 방향 알고리즘을 적용할 수도 있지만,"
+" 각 함몰부의 최저점에서 흐름 방향 및 경사도를 NODATA로 산출할 것입니다."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:468
+msgid "D8 Flow Direction Coding:"
+msgstr "D8 흐름 방향 코딩:"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:470
+msgid "1 --- East"
+msgstr "1 -- 동"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:471
+msgid "2 --- Northeast"
+msgstr "2 -- 북동"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:472
+msgid "3 --- North"
+msgstr "3 -- 북"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:473
+msgid "4 --- Northwest"
+msgstr "4 -- 북서"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:474
+msgid "5 --- West"
+msgstr "5 -- 서"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:475
+msgid "6 --- Southwest"
+msgstr "6 -- 남서"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:476
+msgid "7 --- South"
+msgstr "7 -- 남"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:477
+msgid "8 --- Southeast"
+msgstr "8 -- 남동"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:482
+msgid ""
+"The flow direction routing across flat areas is performed according to the "
+"method described by Garbrecht, J. and L. W. Martz, (1997), \"The Assignment "
+"of Drainage Direction Over Flat Surfaces in Raster Digital Elevation "
+"Models\", Journal of Hydrology, 193: 204-213."
+msgstr ""
+"J\\. 가르브레히트와 L. W. 마츠가 1997년 수문학 저널(Journal of Hydrology) 193호 204 ~ 213쪽에 "
+"공저한 논문 \"The Assignment of Drainage Direction Over Flat Surfaces in Raster "
+"Digital Elevation Models\"에서 설명한 방법에 따라 유수가 평탄 지역에서 어느 방향으로 흘러가는지 결정합니다."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:533
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:563
+msgid "**D8 slope**"
+msgstr "**D8 slope**"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:534
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:564
+msgid "``D8_SLOPE``"
+msgstr "``D8_SLOPE``"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:560
+msgid ""
+"A grid of D8 flow directions which are defined, for each cell, as the "
+"direction of the one of its eight adjacent or diagonal neighbors with the "
+"steepest downward slope."
+msgstr ""
+"각 셀 별로 그 인접 또는 대각선 방향의 이웃 8개 셀 가운데 가장 심한 내리막 경사를 가지고 있는 셀의 방향으로 정의한 D8 흐름 방향"
+" 그리드입니다."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:566
+msgid ""
+"A grid giving slope in the D8 flow direction. This is measured as "
+"drop/distance."
+msgstr "D8 흐름 방향에서 경사도를 지정하는 그리드입니다. 경사도는 '고저차/거리'로 측정합니다."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:569
+msgid "**Algorithm ID**: ``taudem:d8flowdir``"
+msgstr "**Algorithm ID**: ``taudem:d8flowdir``"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:577
+msgid "Grid Network"
+msgstr "그리드 망"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:582
+msgid ""
+"Creates 3 grids that contain for each grid cell: 1) the longest path, 2) the"
+" total path, and 3) the Strahler order number. These values are derived from"
+" the network defined by the D8 flow model."
+msgstr ""
+"각 그리드 셀이 각각 1) 최장 경로, 2) 총 경로, 3) `스트랄러 순서 "
+"<https://en.wikipedia.org/wiki/Strahler_number>`_ 번호를 담고 있는 그리드 3개를 생성합니다. 이"
+" 값들은 D8 흐름 모델이 정의한 망(network)으로부터 파생됐습니다."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:586
+msgid ""
+"The longest upslope length is the length of the flow path from the furthest "
+"cell that drains to each cell. The total upslope path length is the length "
+"of the entire grid network upslope of each grid cell. Lengths are measured "
+"between cell centers taking into account cell size and whether the direction"
+" is adjacent or diagonal."
+msgstr ""
+"최장 오르막 길이란 각 셀로 배수되는 가장 멀리 있는 셀에서 시작한 흐름 경로의 길이입니다. 총 오르막 경로 길이란 각 그리드 셀의 "
+"그리드 망 오르막 경로의 전체 길이입니다. 셀 크기 및 인접 방향인지 또는 대각선 방향인지를 고려해서 셀 중심 간의 길이를 측정합니다."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:592
+msgid ""
+"Strahler order is defined as follows: A network of flow paths is defined by "
+"the D8 Flow Direction grid. Source flow paths have a Strahler order number "
+"of one. When two flow paths of different order join the order of the "
+"downstream flow path is the order of the highest incoming flow path. When "
+"two flow paths of equal order join the downstream flow path order is "
+"increased by 1. When more than two flow paths join the downstream flow path "
+"order is calculated as the maximum of the highest incoming flow path order "
+"or the second highest incoming flow path order + 1. This generalizes the "
+"common definition to cases where more than two flow paths join at a point."
+msgstr ""
+"스트랄러 순서(Strahler order)란 다음과 같이 정의됩니다: D8 흐름 방향 그리드가 흐름 경로망을 정의합니다. "
+"주(source) 흐름 경로가 스트랄러 순서 1번입니다. 서로 다른 순서의 유수 경로 2개가 하류(downstream)로 합쳐지는 경우 "
+"흐름 경로의 순서는 가장 높은 순서를 따르게 됩니다. 동일한 순서의 흐름 경로 2개가 하류로 합쳐지는 경우 흐름 경로 순서는 1만큼 "
+"증가합니다. 2개 이상의 흐름 경로가 하류로 합쳐지는 경우 흐름 경로 순서는 가장 높은 흐름 경로 순서의 최대값, 또는 두 번째로 높은 "
+"흐름 경로 순서에 1을 더한 값으로 계산됩니다. 어느 한 포인트에서 2개 이상의 흐름 경로가 합쳐지는 경우 스트랄러 순서는 일반적으로 "
+"이렇게 정의됩니다."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:602
+msgid ""
+"Where the optional mask grid and threshold value are input, the function is "
+"evaluated only considering grid cells that lie in the domain with mask grid "
+"value greater than or equal to the threshold value. Source (first order) "
+"grid cells are taken as those that do not have any other grid cells from "
+"inside the domain draining in to them, and only when two of these flow paths"
+" join is order propagated according to the ordering rules. Lengths are also "
+"only evaluated counting paths within the domain greater than or equal to the"
+" threshold."
+msgstr ""
+"부가적인 임계값 마스크 그리드를 입력하는 경우, 임계값 이상의 값을 가진 마스크 그리드 영역에 있는 그리드 셀만을 평가합니다. 해당 영역"
+" 안에 있는 어느 그리드 셀도 해당 셀로 배수되지 않는 셀을 주 (1번 순서) 그리드 셀로 평가하고, 이런 흐름 경로 2개가 합쳐지는 "
+"경우에만 순서 규칙에 따라 순서를 누적(propagate)합니다. 또 임계값 이상의 값을 가진 마스크 그리드 영역에 있는 경로만 집계해서"
+" 길이를 평가합니다."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:633
+msgid "**Mask Grid**"
+msgstr "**Mask Grid**"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:636
+msgid "``MASK_GRID``"
+msgstr "``MASK_GRID``"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:638
+msgid ""
+"A grid that is used to determine the domain do be analyzed. If the mask grid"
+" value >= mask threshold (see below), then the cell will be included in the "
+"domain. While this tool does not have an edge contamination flag, if edge "
+"contamination analysis is needed, then a mask grid from a function like "
+"**\"D8 Contributing Area\"** that does support edge contamination can be "
+"used to achieve the same result."
+msgstr ""
+"분석할 영역을 결정하는 데 사용하는 그리드를 지정합니다. 마스크 그리드의 값이 마스크 임계값(다음 파라미터 참조) 이상인 경우, 해당 "
+"셀을 분석 영역에 포함시킵니다. 이 도구는 경계 오염 플래그를 보유하고 있지 않지만, 경계 오염 분석을 해야 하는 경우 `D8 기여 영역"
+" <#d8-contributing-area>`_ 처럼 경계 오염을 지원하는 알고리즘이 산출한 마스크 그리드를 사용하면 됩니다."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:646
+msgid "**Mask threshold**"
+msgstr "**Mask threshold**"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:649
+msgid "``THRESHOLD``"
+msgstr "``THRESHOLD``"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:650
+msgid "[number]"
+msgstr "[number]"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:652
+msgid "Default: 100.0"
+msgstr "기본값: 100.0"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:653
+msgid ""
+"This input parameter is used in the calculation mask grid value >= mask "
+"threshold to determine if the grid cell is in the domain to be analyzed."
+msgstr ""
+"어느 그리드 셀이 분석할 영역에 해당하는지 결정하기 위해 마스크 그리드 값 >= 마스크 임계값 계산에 사용하는 입력 파라미터를 "
+"지정합니다."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:665
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:716
+msgid "**Longest upslope length**"
+msgstr "**Longest upslope length**"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:666
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:717
+msgid "``LONGEST_PATH``"
+msgstr "``LONGEST_PATH``"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:670
+msgid "Specification of the output raster with total upslope lengths. One of:"
+msgstr "가장 긴 오르막(upslope) 길이를 가질 산출 래스터를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:678
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:723
+msgid "**Total upslope length**"
+msgstr "**Total upslope length**"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:679
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:724
+msgid "``TOTAL_PATH``"
+msgstr "``TOTAL_PATH``"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:683
+msgid "Specification of the output raster with upslope lengths. One of:"
+msgstr "총 오르막(upslope) 길이를 가질 산출 래스터를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:690
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:730
+msgid "**Strahler network order**"
+msgstr "**Strahler network order**"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:691
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:731
+msgid "``STRAHLER_ORDER``"
+msgstr "``STRAHLER_ORDER``"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:695
+msgid ""
+"Specification of the output raster with Strahler network order. One of:"
+msgstr "스트랄러 망 순서를 가질 산출 래스터를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:719
+msgid ""
+"A grid that gives the length of the longest upslope D8 flow path terminating"
+" at each grid cell. Lengths are measured between cell centers taking into "
+"account cell size and whether the direction is adjacent or diagonal."
+msgstr ""
+"각 그리드 셀에서 끝나는 최장 오르막 D8 유수 경로의 길이를 지정하는 그리드입니다. 셀 크기 및 인접 방향인지 또는 대각선 방향인지를 "
+"고려해서 셀 중심 간의 길이를 측정합니다."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:726
+msgid ""
+"The total upslope path length is the length of the entire D8 flow grid "
+"network upslope of each grid cell. Lengths are measured between cell centers"
+" taking into account cell size and whether the direction is adjacent or "
+"diagonal."
+msgstr ""
+"총 오르막 경로 길이란 각 그리드 셀의 D8 유수 그리드 망 오르막 경로의 전체 길이입니다. 셀 크기 및 인접 방향인지 또는 대각선 "
+"방향인지를 고려해서 셀 중심 간의 길이를 측정합니다."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:733
+msgid ""
+"A grid giving the Strahler order number for each cell. A network of flow "
+"paths is defined by the D8 Flow Direction grid. Source flow paths have a "
+"Strahler order number of one. When two flow paths of different order join "
+"the order of the downstream flow path is the order of the highest incoming "
+"flow path. When two flow paths of equal order join the downstream flow path "
+"order is increased by 1. When more than two flow paths join the downstream "
+"flow path order is calculated as the maximum of the highest incoming flow "
+"path order or the second highest incoming flow path order + 1. This "
+"generalizes the common definition to cases where more than two flow paths "
+"join at a point."
+msgstr ""
+"각 셀 별 스트랄러 순서를 지정하는 그리드입니다. D8 흐름 방향 그리드가 흐름 경로망을 정의합니다. 주(source) 흐름 경로가 "
+"스트랄러 순서 1번입니다. 서로 다른 순서의 흐름 경로 2개가 하류(downstream)로 합쳐지는 경우 흐름 경로의 순서는 가장 높은 "
+"순서를 따르게 됩니다. 동일한 순서의 흐름 경로 2개가 하류로 합쳐지는 경우 흐름 경로 순서는 1만큼 증가합니다. 2개 이상의 흐름 "
+"경로가 하류로 합쳐지는 경우 흐름 경로 순서는 가장 높은 흐름 경로 순서의 최대값, 또는 두 번째로 높은 흐름 경로 순서에 1을 더한 "
+"값으로 계산됩니다. 어느 한 포인트에서 2개 이상의 흐름 경로가 합쳐지는 경우 스트랄러 순서는 일반적으로 이렇게 정의됩니다."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:749
+msgid "**Algorithm ID**: ``taudem:gridnet``"
+msgstr "**Algorithm ID**: ``taudem:gridnet``"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:757
+msgid "Pit Remove"
+msgstr "함몰부 제거"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:762
+msgid ""
+"Identifies all pits in the DEM and raises their elevation to the level of "
+"the lowest pour point around their edge. Pits are low elevation areas in "
+"digital elevation models (DEMs) that are completely surrounded by higher "
+"terrain. They are generally taken to be artifacts that interfere with the "
+"routing of flow across DEMs, so are removed by raising their elevation to "
+"the point where they drain off the edge of the domain. The pour point is the"
+" lowest point on the boundary of the \"watershed\" draining to the pit. This"
+" step is not essential if you have reason to believe that the pits in your "
+"DEM are real. If a few pits actually exist and so should not be removed, "
+"while at the same time others are believed to be artifacts that need to be "
+"removed, the actual pits should have NODATA elevation values inserted at "
+"their lowest point. NODATA values serve to define edges in the domain, and "
+"elevations are only raised to where flow is off an edge, so an internal "
+"NODATA value will stop a pit from being removed, if necessary."
+msgstr ""
+"DEM에 있는 모든 함몰부를 식별해서, 표고를 그 경계 주변의 최저 배수 포인트 수준까지 올립니다. 함몰부란 수치 표고 모델(DEM)에 "
+"있는, 높은 지형으로 완전히 둘러쌓인 낮은 표고 영역을 말합니다. 일반적으로 함몰부는 DEM에서 흐름 경로 작업을 방해하는 오류로 "
+"간주됩니다. 따라서 함몰부의 표고를 해당 영역의 물이 배수될 때까지 올려 함몰부를 제거합니다. 배수 포인트(pour point)란 "
+"함몰부로 배수되는 \"유역(watershed)\" 경계 상의 최저 포인트를 말합니다. 사용자 DEM에 있는 함몰부가 실재한다고 믿을 만한"
+" 이유가 있다면 이 단계를 건너뛰어도 됩니다. 몇몇 함몰부가 실제로 존재하고 제거해서는 안 되는 반면 다른 몇몇 함몰부는 제거해야 할 "
+"오류인 경우, 실재 함몰부의 가장 낮은 지점에 NODATA 표고값을 삽입해야 합니다. NODATA 값은 유수 영역의 경계를 정의하는 "
+"역할을 하며, 함몰부 제거 도구는 유수가 경계를 향해 흘러가도록 표고를 높이기 때문에, 필요한 경우 이렇게 NODATA 값을 영역 내부에"
+" 설정해주면 함몰부가 제거되는 일을 막을 수 있습니다."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:788
+msgid "**Elevation**"
+msgstr "**Elevation**"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:789
+msgid "``ELEVATION``"
+msgstr "``ELEVATION``"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:791
+msgid ""
+"A digital elevation model (DEM) grid to serve as the base input for the "
+"terrain analysis and stream delineation."
+msgstr "지형 분석 및 하천 묘사를 위한 기본 입력물 역할을 하는 DEM 그리드를 지정합니다."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:793
+msgid "**Depression mask**"
+msgstr "**Depression mask**"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:796
+msgid "``DEPRESSION_MASK``"
+msgstr "``DEPRESSION_MASK``"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:799
+msgid "**Consider only 4 way neighbors**"
+msgstr "**Consider only 4 way neighbors**"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:800
+msgid "``FOUR_NEIGHBOURS``"
+msgstr "``FOUR_NEIGHBOURS``"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:803
+msgid "Default: False"
+msgstr "기본값: False"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:805
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:829
+msgid "**Pit removed elevation**"
+msgstr "**Pit removed elevation**"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:810
+msgid "Specification of the (pit filled) output raster. One of:"
+msgstr "함몰부를 채운 산출 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:832
+msgid ""
+"A grid of elevation values with pits removed so that flow is routed off of "
+"the domain."
+msgstr "흐름 경로가 영역 밖으로 향하도록 함몰부를 제거한 표고 값 그리드입니다."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:835
+msgid "**Algorithm ID**: ``taudem:pitremove``"
+msgstr "**Algorithm ID**: ``taudem:pitremove``"

@@ -1,0 +1,2293 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# DiGro, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:32+0000\n"
+"Last-Translator: DiGro, 2020\n"
+"Language-Team: Dutch (https://www.transifex.com/qgis/teams/6144/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:6
+msgid "Working with the Attribute Table"
+msgstr "Werken met de attributentabel"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:8
+msgid ""
+"The attribute table displays information on features of a selected layer. "
+"Each row in the table represents a feature (with or without geometry), and "
+"each column contains a particular piece of information about the feature. "
+"Features in the table can be searched, selected, moved or even edited."
+msgstr ""
+"De attributentabel geeft informatie over de objecten van een geselecteerde "
+"laag weer. Elke regel in de tabel geeft één object (met of zonder geometrie)"
+" weer en elke kolom bevat een bepaald stukje informatie over het object. "
+"Objecten in de tabel kunnen opgezocht, geselecteerd, verplaatst of zelfs "
+"bewerkt worden."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:22
+msgid "Foreword: Spatial and non-spatial tables"
+msgstr "Voorwoord: Ruimtelijke en niet ruimtelijke tabellen"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:24
+msgid ""
+"QGIS allows you to load spatial and non-spatial layers. This currently "
+"includes tables supported by OGR and delimited text, as well as the "
+"PostgreSQL, MSSQL, SpatiaLite, DB2 and Oracle provider. All loaded layers "
+"are listed in the :guilabel:`Layers` panel. Whether a layer is spatially "
+"enabled or not determines whether you can interact with it on the map."
+msgstr ""
+"QGIS staat u toe om ruimtelijke en niet ruimtelijke lagen te laden. Dit "
+"betreffen momenteel door OGR ondersteunde tabellen, tekengescheiden tekst en"
+" de providers PostgreSQL, MSSQL SpatiaLite, DB2 en Oracle. Alle lagen worden"
+" vermeld in het paneel :guilabel:`Lagen`. Of de laag waarmee u werkt "
+"ruimtelijk is ingesteld of niet bepaalt of u daarmee kunt werken in het "
+"kaartvenster."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:30
+msgid ""
+"Non-spatial tables can be browsed and edited using the attribute table view."
+" Furthermore, they can be used for field lookups. For example, you can use "
+"columns of a non-spatial table to define attribute values, or a range of "
+"values that are allowed, to be added to a specific vector layer during "
+"digitizing. Have a closer look at the edit widget in section "
+":ref:`vector_attributes_menu` to find out more."
+msgstr ""
+"Niet ruimtelijke tabellen kunnen gebladerd worden en ze kunnen worden "
+"bewerkt met de tabelweergave voor de attributen. Verder kunnen zij worden "
+"gebruikt voor het opzoeken van velden. Als voorbeeld kunt u kolommen van een"
+" niet ruimtelijke tabel gebruiken om waarden voor attributen te definiëren "
+"of een bereik van toegestane waarden die mogen worden toegevoegd aan een "
+"specifieke vectorlaag tijdens het digitaliseren. Bekijk de widget voor "
+"bewerken in :ref:`vector_attributes_menu` wat nader voor meer informatie."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:40
+msgid "Introducing the attribute table interface"
+msgstr "Introductie van de interface van de Attributentabel"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:42
+msgid ""
+"To open the attribute table for a vector layer, activate the layer by "
+"clicking on it in the :ref:`label_legend`. Then, from the main "
+":menuselection:`Layer` menu, choose |openTable| :menuselection:`Open "
+"Attribute Table`. It is also possible to right-click on the layer and choose"
+" |openTable| :menuselection:`Open Attribute Table` from the drop-down menu, "
+"or to click on the |openTable| :guilabel:`Open Attribute Table` button in "
+"the Attributes toolbar. If you prefer shortcuts, :kbd:`F6` will open the "
+"attribute table. :kbd:`Shift+F6` will open the attribute table filtered to "
+"selected features and :kbd:`Ctrl+F6` will open the attribute table filtered "
+"to visible features."
+msgstr ""
+"Activeer, om de attributentabel voor een vectorlaag te openen, de laag door "
+"deze te selecteren in de :ref:`label_legend`. Open dan de attributentabel "
+"vanuit het menu :menuselection:`Kaartlagen`, kies |openTable| "
+":menuselection:`Attributentabel openen`. Het is ook mogelijk door met de "
+"rechter muisknop op een laag in de legenda te klikken en |openTable| "
+":menuselection:`Attributentabel openen` te kiezen uit het contextmenu of "
+"door te klikken op de knop |openTable| :guilabel:`Attributentabel openen` op"
+" de werkbalk Attributen. Als u liever met sneltoetsen werkt: :kbd:`F6` zal "
+"de attributentabel openen. :kbd:`Shift+F6` zal de attributentabel openen, "
+"maar gefilterd tot de geselecteerde objecten en :kbd:`Ctrl+F6` zal de "
+"attributentabel openen, maar gefilterd tot de zichtbare objecten."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:53
+msgid ""
+"This will open a new window that displays the feature attributes for the "
+"layer (figure_attributes_table_). According to the setting in "
+":menuselection:`Settings --> Options --> Data sources` menu, the attribute "
+"table will open in a docked window or a regular window. The total number of "
+"features in the layer and the number of currently selected/filtered features"
+" are shown in the attribute table title, as well as if the layer is "
+"spatially limited."
+msgstr ""
+"Dit zal een nieuw venster openen dat de attributen voor de objecten van de "
+"laag weergeeft (figure_attributes_table_). Overeenkomstig de instelling in "
+"het menu :menuselection:`Extra --> Opties --> Databronnen`, zal de "
+"attributentabel openen in een vastgezet venster of een normaal venster. Het "
+"totale aantal objecten op de laag en het aantal momenteel "
+"geselecteerde/gefilterde objecten wordt weergegeven in de titel van de "
+"attributentabel en ook of de laag ruimtelijk beperkt is."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:66
+msgid "Attribute Table for regions layer"
+msgstr "Attributentabel voor de laag regions"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:68
+msgid ""
+"The buttons at the top of the attribute table window provide the following "
+"functionality:"
+msgstr ""
+"De knoppen boven in het venster van de attributentabel bieden de volgende "
+"functionaliteiten:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:73
+msgid "Available Tools"
+msgstr "Beschikbare gereedschappen"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Icon"
+msgstr "Pictogram"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Label"
+msgstr "Label"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Purpose"
+msgstr "Doel"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Default Shortcut"
+msgstr "Standaard snelkoppeling"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "|toggleEditing|"
+msgstr "|toggleEditing|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Toggle editing mode"
+msgstr "Bewerken aan/uitzetten"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Enable editing functionalities"
+msgstr "Schakel functionaliteiten voor Bewerken in"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid ":kbd:`Ctrl+E`"
+msgstr ":kbd:`Ctrl+E`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "|multiEdit|"
+msgstr "|multiEdit|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Toggle multi edit mode"
+msgstr "Schakelen naar modus Meervoudige bewerkingen"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Update multiple fields of many features"
+msgstr "Meerdere velden van veel objecten bijwerken"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "|saveEdits|"
+msgstr "|saveEdits|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Save Edits"
+msgstr "Bewerkingen opslaan"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Save current modifications"
+msgstr "Huidige aanpassingen opslaan"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "|refresh|"
+msgstr "|refresh|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Reload the table"
+msgstr "De tabel opnieuw laden"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "|newTableRow|"
+msgstr "|newTableRow|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Add feature"
+msgstr "Object toevoegen"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Add new geometryless feature"
+msgstr "Object zonder geometrie toevoegen"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "|deleteSelectedFeatures|"
+msgstr "|deleteSelectedFeatures|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Delete selected features"
+msgstr "Geselecteerde objecten verwijderen"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Remove selected features from the layer"
+msgstr "Geselecteerde objecten op de laag verwijderen"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "|editCut|"
+msgstr "|editCut|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Cut selected features to clipboard"
+msgstr "Geselecteerde objecten naar klembord knippen"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid ":kbd:`Ctrl+X`"
+msgstr ":kbd:`Ctrl+X`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "|copySelected|"
+msgstr "|copySelected|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Copy selected features to clipboard"
+msgstr "Geselecteerde objecten naar klembord kopiëren"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid ":kbd:`Ctrl+C`"
+msgstr ":kbd:`Ctrl+C`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "|editPaste|"
+msgstr "|editPaste|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Paste features from clipboard"
+msgstr "Objecten vanaf klembord plakken"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Insert new features from copied ones"
+msgstr "Nieuwe objecten vanuit gekopieerde invoegen"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid ":kbd:`Ctrl+V`"
+msgstr ":kbd:`Ctrl+V`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "|expressionSelect|"
+msgstr "|expressionSelect|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Select features using an Expression"
+msgstr "Objecten selecteren m.b.v. reguliere expressie"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "|selectAll|"
+msgstr "|selectAll|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Select All"
+msgstr "Alles selecteren"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Select all features in the layer"
+msgstr "Alle objecten op de laag selecteren"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid ":kbd:`Ctrl+A`"
+msgstr ":kbd:`Ctrl+A`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "|invertSelection|"
+msgstr "|invertSelection|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Invert selection"
+msgstr "Selectie omdraaien"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Invert the current selection in the layer"
+msgstr "De huidige selectie van de laag omdraaien"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid ":kbd:`Ctrl+R`"
+msgstr ":kbd:`Ctrl+R`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "|deselectAll|"
+msgstr "|deselectAll|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Deselect all"
+msgstr "Alles deselecteren"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Deselect all features in the current layer"
+msgstr "Alle objecten op de huidige laag deselecteren"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid ":kbd:`Ctrl+Shift+A`"
+msgstr ":kbd:`Ctrl+Shift+A`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "|filterMap|"
+msgstr "|filterMap|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Filter/Select features using form"
+msgstr "Objecten filteren/selecteren met behulp van formulier "
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid ":kbd:`Ctrl+F`"
+msgstr ":kbd:`Ctrl+F`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "|selectedToTop|"
+msgstr "|selectedToTop|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Move selected to top"
+msgstr "Geselecteerde naar boven verplaatsen"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Move selected rows to the top of the table"
+msgstr "Geselecteerde rijen naar boven in de tabel verplaatsen"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "|panToSelected|"
+msgstr "|panToSelected|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Pan map to the selected rows"
+msgstr "Kaart naar de geselecteerde rijen verschuiven"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid ":kbd:`Ctrl+P`"
+msgstr ":kbd:`Ctrl+P`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "|zoomToSelected|"
+msgstr "|zoomToSelected|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Zoom map to the selected rows"
+msgstr "Kaart naar de geselecteerde rijen zoomen"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid ":kbd:`Ctrl+J`"
+msgstr ":kbd:`Ctrl+J`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "|newAttribute|"
+msgstr "|newAttribute|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "New field"
+msgstr "Nieuw veld"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Add a new field to the data source"
+msgstr "Nieuw veld aan de gegevensbron toevoegen"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid ":kbd:`Ctrl+W`"
+msgstr ":kbd:`Ctrl+W`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "|deleteAttribute|"
+msgstr "|deleteAttribute|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Delete field"
+msgstr "Veld verwijderen"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Remove a field from the data source"
+msgstr "Een veld uit de gegevensbron verwijderen"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "|calculateField|"
+msgstr "|calculateField|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Open field calculator"
+msgstr "Veldberekening openen"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Update field for many features in a row"
+msgstr "Veld voor veel objecten in een rij bijwerken"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid ":kbd:`Ctrl+I`"
+msgstr ":kbd:`Ctrl+I`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "|conditionalFormatting|"
+msgstr "|conditionalFormatting|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Conditional formatting"
+msgstr "Voorwaardelijke opmaak"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Enable table formatting"
+msgstr "Opmaak voor de tabel inschakelen"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "|dock|"
+msgstr "|dock|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Dock attribute table"
+msgstr "Attributentabel vast zetten"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Allows to dock/undock the attribute table"
+msgstr "Maakt het mogelijk de attributentabel vast te zetten/los te maken"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "|actionRun|"
+msgstr "|actionRun|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Actions"
+msgstr "Acties"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Lists the actions related to the layer"
+msgstr "Vermeldt de aan de laag gerelateerde acties"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:103
+msgid ""
+"Depending on the format of the data and the OGR library built with your QGIS"
+" version, some tools may not be available."
+msgstr ""
+"Afhankelijk van de indeling van de gegevens en de bibliotheek van OGR die is"
+" gebouwd met uw versie van QGIS, zouden sommige gereedschappen niet "
+"beschikbaar kunnen zijn."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:106
+msgid ""
+"Below these buttons is the Quick Field Calculation bar (enabled only in "
+":ref:`edit mode <sec_edit_existing_layer>`), which allows to quickly apply "
+"calculations to all or part of the features in the layer. This bar uses the "
+"same :ref:`expressions <vector_expressions>` as the |calculateField| "
+":sup:`Field Calculator` (see :ref:`calculate_fields_values`)."
+msgstr ""
+"Onder deze knoppen staat de werkbalk Veldberekening (alleen ingeschakeld in "
+"de :ref:`modus Bewerken <sec_edit_existing_layer>`), die het mogelijk maakt "
+"berekeningen snel toe te passen op ofwel alle of de geselecteerde attributen"
+" in de tabel. Deze werkbalk gebruikt dezelfde :ref:`expressies "
+"<vector_expressions>` als |calculateField| :sup:`Veldberekening` (zie "
+":ref:`calculate_fields_values`)."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:115
+msgid "Table view vs Form view"
+msgstr "Tabelweergave vs Formulierweergave"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:117
+msgid ""
+"QGIS provides two view modes to easily manipulate data in the attribute "
+"table:"
+msgstr ""
+"QGIS verschaft twee weergaven om eenvoudig gegevens in de attributentabel te"
+" bewerken:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:119
+msgid ""
+"The |openTable| :sup:`Table view`, displays values of multiple features in a"
+" tabular mode, each row representing a feature and each column a field."
+msgstr ""
+"de |openTable| :sup:`Tabelweergave`, die waarden van verscheidene objecten "
+"in een tabulaire vorm weergeeft, elke rij staat voor een object en elke "
+"kolom voor een veld."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:121
+msgid ""
+"The |formView| :sup:`Form view` shows :ref:`feature identifiers <maptips>` "
+"in a first panel and displays only the attributes of the clicked identifier "
+"in the second one. There is a pull-down menu at the top of the first panel "
+"where the \"identifier\" can be specified using an attribute "
+"(:guilabel:`Column preview`) or an :guilabel:`Expression`. The pull-down "
+"also includes the last 10 expressions for re-use. Form view uses the layer "
+"fields configuration (see :ref:`vector_attributes_menu`). You can browse "
+"through the feature identifiers with the arrows on the bottom of the first "
+"panel. Once you markered the feature in yellow in the list it is selected in"
+" yellow on the canvas. Use the |zoomToSelected| on top of the attribute "
+"table to zoom to the feature. Clicking on an entry in the list (without "
+"using the rectangles) makes a feature flash in red color once so you can see"
+" where it is situated."
+msgstr ""
+"En de |formView| :sup:`Formulierweergave` geeft :ref:`identificaties voor "
+"objecten <maptips>` weer in een eerste paneel en geeft de attributen, alleen"
+" van die waarop geklikt werd, weer in het tweede. Er is een keuzemenu aan de"
+" bovenzijde van het eerste paneel waar de &quot;identificatie&quot; kan "
+"worden gespecificeerd met een attribuut (:guilabel:&#x60;Voorbeeld "
+"kolom&#x60;) of een :guilabel:&#x60;Expressie&#x60;. Het keuzemenu bevat ook"
+" de laatste 10 expressies om die opnieuw te kunnen gebruiken. "
+"Formulierweergave gebruikt de configuratie van de velden van de laag (bekijk"
+" :ref:`vector_attributes_menu`). U kunt door de identificaties van de "
+"objecten bladeren met de pijlen aan de onderzijde van het eerste paneel. "
+"Wanneer u eenmaal het object geel gemarkeerd hebt in de lijst, is het in "
+"geel geselecteerd in het kaartvenster. Gebruik |zoomToSelected| boven in de "
+"attributentabel om naar het object te zoomen. Klikken op een item in de "
+"lijst (zonder de rechthoeken te gebruiken) maakt dat een object één keer in "
+"rode kleur flitst, zodat u weet waar het is gesitueerd."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:137
+msgid ""
+"You can switch from one mode to the other by clicking the corresponding icon"
+" at the bottom right of the dialog."
+msgstr ""
+"U kunt van de ene naar de andere modus schakelen door te klikken op het "
+"corresponderende pictogram aan de rechteronderzijde van het dialoogvenster."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:140
+msgid ""
+"You can also specify the :guilabel:`Default view` mode at the opening of the"
+" attribute table in :menuselection:`Settings --> Options --> Data Sources` "
+"menu. It can be 'Remember last view', 'Table view' or 'Form view'."
+msgstr ""
+"U kunt ook de modus :guilabel:`Standaard weergave` specificeren voor het "
+"openen van de attributentabel in het menu :menuselection:`Extra --> Opties "
+"--> Gegevensbronnen`. Het kan de 'Laatste weergave onthouden', "
+"'Tabelweergave' of 'Formulierweergave'."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:149
+msgid "Attribute table in table view (top) vs form view (bottom)"
+msgstr "Attributentabel in tabelweergave (boven) vs formulierweergave (onder)"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:157
+msgid "Configuring the columns"
+msgstr "De kolommen configureren"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:159
+msgid ""
+"Right-click in a column header when in table view to have access to tools "
+"that help you configure what can be displayed in the attribute table and "
+"how."
+msgstr ""
+"Klik met rechts, in tabelweergave, op een kolomkop om toegang te krijgen tot"
+" gereedschappen die u helpen te configureren wat kan worden weergegeven in "
+"de attributentabel en hoe."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:163
+msgid "Hiding and organizing columns and enabling actions"
+msgstr "Kolommen verbergen en beheren en acties inschakelen"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:165
+msgid ""
+"By right-clicking in a column header, you can choose to hide it from the "
+"attribute table. To change several columns behavior at once, unhide a column"
+" or change the order of the columns, choose :guilabel:`Organize columns "
+"...`. In the new dialog, you can:"
+msgstr ""
+"Door met rechts te klikken op een kolomkop kunt u er voor kiezen om die te "
+"verbergen in de attributentabel. In één keer het gedrag van verscheidene "
+"kolommen wijzigen, het verbergen van een kolom opheffen of de volgorde van "
+"de kolommen wijzigen, kies :guilabel:`Kolommen beheren…`. In het nieuwe "
+"dialoogvenster kunt u:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:170
+msgid "check/uncheck columns you want to show or hide"
+msgstr "kolommen selecteren/deselecteren die u wilt weergeven of verbergen"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:171
+msgid ""
+"drag-and-drop items to reorder the columns in the attribute table. Note that"
+" this change is for the table rendering and does not alter the fields order "
+"in the layer datasource"
+msgstr ""
+"items slepen en neerzetten om de volgorde van de kolommen in de "
+"attributentabel te wijzigen. Onthoud dat deze wijziging slechts is bestemd "
+"voor het renderen van de tabel en niet de veldvolgorde in de gegevensbron "
+"van de laag wijzigt"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:174
+msgid ""
+"enable a new virtual :guilabel:`Actions` column that displays in each row a "
+"drop-down box or button list of actions for each row, see "
+":ref:`actions_menu` for more information about actions."
+msgstr ""
+"een nieuwe virtuele kolom :guilabel:`Acties` inschakelen die in elke rij een"
+" keuze- of knoppenlijst weergeeft met acties voor elke rij, zie "
+":ref:`actions_menu` voor meer informatie over acties."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:179
+msgid "Resizing columns widths"
+msgstr "Breedte kolommen wijzigen"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:181
+msgid ""
+"Columns width can be set through a right-click on the column header and "
+"select either:"
+msgstr ""
+"De breedte van kolommen kan worden ingesteld met een klik met rechts op de "
+"kolomkop en ofwel te selecteren:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:184
+msgid ""
+":guilabel:`Set width...` to enter the desired value. By default, the current"
+" value is displayed in the widget"
+msgstr ""
+":guilabel:`Breedte instellen…` om de gewenste waarde in te voeren. Standaard"
+" wordt in de widget de huidige waarde weergegeven"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:186
+msgid ":guilabel:`Autosize` to resize at the best fit the column."
+msgstr ""
+"of :guilabel:`Autom. grootte` om te wijzigen naar de best passende grootte "
+"voor de kolom."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:188
+msgid ""
+"It can also be changed by dragging the boundary on the right of the column "
+"heading. The new size of the column is maintained for the layer, and "
+"restored at the next opening of the attribute table."
+msgstr ""
+"Het kan ook worden gewijzigd door met de grens aan de rechterzijde van de "
+"kolomkop te slepen. De nieuwe grootte van de kolom wordt behouden voor de "
+"laag, en herstelt zich bij het opnieuw openen van de attributentabel."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:193
+msgid "Sorting columns"
+msgstr "Kolommen sorteren"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:195
+msgid ""
+"The table can be sorted by any column, by clicking on the column header. A "
+"small arrow indicates the sort order (downward pointing means descending "
+"values from the top row down, upward pointing means ascending values from "
+"the top row down). You can also choose to sort the rows with the "
+":guilabel:`sort` option of the column header context menu and write an "
+"expression, e.g. to sort the row using multiple columns you can write "
+"``concat(col0, col1)``."
+msgstr ""
+"De tabel kan gesorteerd worden op elke kolom, door een kolomkop te "
+"selecteren. Een kleine pijl wijst de sorteervolgorde aan (een pijltje omhoog"
+" betekent, de waarden zijn oplopend gesorteerd van boven naar beneden, "
+"pijltje omlaag betekent, de waarden zijn aflopend gesorteerd van boven naar "
+"beneden). U kunt er ook voor kiezen de rijen te sorteren met de optie "
+":guilabel:`Sorteren` in het contextmenu van de kolomkop en een expressie te "
+"schrijven, bijv. om de rij te sorteren op meerdere kolommen, kunt u "
+"schrijven ``concat(col0, col1)``."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:203
+msgid ""
+"In form view, features identifier can be sorted using the |sort| "
+":guilabel:`Sort by preview expression` option."
+msgstr ""
+"In formulierweergave kan de ID van de objecten worden gesorteerd met behulp "
+"van de optie |sort| :guilabel:`Op expressie voor weergave sorteren`."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:208
+msgid "**Sorting based on columns of different types**"
+msgstr "**Sorteren gebaseerd op kolommen van verschillende typen**"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:210
+msgid ""
+"Trying to sort an attribute table based on columns of string and numeric "
+"types may lead to unexpected result because of the ``concat(\"USE\", "
+"\"ID\")`` expression returning string values (ie, ``'Borough105' < "
+"'Borough6'``). You can workaround this by using eg ``concat(\"USE\", "
+"lpad(\"ID\", 3, 0))`` which returns ``'Borough105' > 'Borough006'``."
+msgstr ""
+"Een attributentabel proberen te sorteren op kolommen van tekenreeksen of "
+"numerieke typen zou kunnen leiden tot onverwachte resultaten omdat de "
+"expressie ``concat(\"USE\", \"ID\")`` waarden als tekenreeksen teruggeeft "
+"(d.i, ``'Borough105' < 'Borough6'``). U kunt daar omheen werken door bijv "
+"``concat(\"USE\", lpad(\"ID\", 3, 0))`` te gebruiken, dat ``'Borough105' > "
+"'Borough006'`` teruggeeft."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:220
+msgid "Formatting of table cells using conditions"
+msgstr "Opmaken van tabelcellen met voorwaarden"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:222
+msgid ""
+"Conditional formatting settings can be used to highlight in the attribute "
+"table features you may want to put a particular focus on, using custom "
+"conditions on feature's:"
+msgstr ""
+"Instellingen voor voorwaardelijke opmaak kunnen worden gebruikt om objecten "
+"in de attributentabel, waarop u een bijzonder focus wilt zetten, te "
+"accentueren met behulp van aangepaste voorwaarden op de object:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:226
+msgid ""
+"geometry (e.g., identifying multi-parts features, small area ones or in a "
+"defined map extent...);"
+msgstr ""
+"geometrie (bijv. identificeren van meerdelige objecten, zeer kleine gebieden"
+" of in een gedefinieerd kaartbereik…);"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:228
+msgid ""
+"or field value (e.g., comparing values to a threshold, identifying empty "
+"cells...)."
+msgstr ""
+"of veldwaarde (bijv. waarden vergelijken met een drempel, lege cellen "
+"identificeren…)."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:231
+msgid ""
+"You can enable the conditional formatting panel clicking on "
+"|conditionalFormatting| at the top right of the attributes window in table "
+"view (not available in form view)."
+msgstr ""
+"U kunt het paneel Voorwaardelijke opmaak inschakelen door te klikken op "
+"|conditionalFormatting| aan de rechterbovenkant van het venster Attributen "
+"in de tabelweergave (niet beschikbaar in de formulierweergave)."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:235
+msgid ""
+"The new panel allows user to add new rules to format rendering of "
+"|radioButtonOn|:guilabel:`Field` or |radioButtonOff|:guilabel:`Full row`. "
+"Adding new rule opens a form to define:"
+msgstr ""
+"Het nieuwe paneel stelt de gebruiker in staat om nieuwe regels toe te voegen"
+" voor de opmaak van het renderen van het |radioButtonOn|:guilabel:`Veld` of "
+"de |radioButtonOff|:guilabel:`Volledige rij`. Toevoegen van een nieuwe regel"
+" opent een formulier om te definiëren:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:239
+msgid "the name of the rule;"
+msgstr "de naam van de regel;"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:240
+msgid ""
+"a condition using any of the :ref:`expression builder <vector_expressions>` "
+"functions;"
+msgstr ""
+"een voorwaarde met behulp van een van de functies van :ref:`Expressie-string"
+" bouwer <vector_expressions>`;"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:242
+msgid ""
+"the formatting: it can be choosen from a list of predefined formats or "
+"created based on properties like:"
+msgstr ""
+"de opmaak: die kan worden gekozen uit een lijst met vooraf gedefinieerde "
+"opmaak of gemaakt worden, gebaseerd op eigenschappen zoals:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:245
+msgid "background and text colors;"
+msgstr "achtergrond- en tekstkleuren;"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:246
+msgid "use of icon;"
+msgstr "gebruik van pictogram;"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:247
+msgid "bold, italic, underline, or strikeout;"
+msgstr "vet, cursief onderstreept, of doorgehaald;"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:248
+msgid "font."
+msgstr "lettertype."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:255
+msgid "Conditional Formatting of an attribute table"
+msgstr "Voorwaardelijke opmaak van een attributentabel"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:261
+msgid "Interacting with features in an attribute table"
+msgstr "Werken met objecten in een attributentabel"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:264
+msgid "Selecting features"
+msgstr "Objecten selecteren"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:266
+msgid ""
+"In table view, each row in the attribute table displays the attributes of a "
+"unique feature in the layer. Selecting a row selects the feature and "
+"likewise, selecting a feature in the map canvas (in case of geometry enabled"
+" layer) selects the row in the attribute table. If the set of features "
+"selected in the map canvas (or attribute table) is changed, then the "
+"selection is also updated in the attribute table (or map canvas) "
+"accordingly."
+msgstr ""
+"In tabelweergave geeft elke regel in de attributentabel de attributen van "
+"een uniek object in de laag weer. Selecteren van een rij selecteert het "
+"object en soortgelijk, selecteren van een object in het kaartvenster (in het"
+" geval van een laag met ingeschakelde geometrie) selecteert de rij in de "
+"attributentabel. Als de set geselecteerde objecten in het kaartvenster (of "
+"attributentabel) wordt gewijzigd, dan wordt die selectie ook overeenkomstig "
+"bijgewerkt in de attributentabel (of het kaartvenster)."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:273
+msgid ""
+"Rows can be selected by clicking on the row number on the left side of the "
+"row. **Multiple rows** can be marked by holding the :kbd:`Ctrl` key. A "
+"**continuous selection** can be made by holding the :kbd:`Shift` key and "
+"clicking on several row headers on the left side of the rows. All rows "
+"between the current cursor position and the clicked row are selected. Moving"
+" the cursor position in the attribute table, by clicking a cell in the "
+"table, does not change the row selection. Changing the selection in the main"
+" canvas does not move the cursor position in the attribute table."
+msgstr ""
+"Rijen kunnen worden geselecteerd door te klikken op het rijnummer aan de "
+"linkerkant. **Meerdere rijen** kunnen worden geselecteerd met de "
+":kbd:`Ctrl`-toets ingedrukt gehouden. Een **Opvolgende selectie** kan worden"
+" gemaakt door de :kbd:`Shift`-toets in te drukken en een rijnummer aan de "
+"linkerkant. Alle rijen tussen de rij waarin zich de cursor bevindt en de "
+"aangeklikte rij worden geselecteerd. Het veranderen van de cursorpositie, "
+"door in een andere cel van de tabel te klikken, zal de selectie niet "
+"aanpassen. Het wijzigen van de selectie in het kaartvenster, zal niet de "
+"cursorpositie in de attributentabel wijzigen."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:282
+msgid ""
+"In form view of the attribute table, features are by default identified in "
+"the left panel by the value of their displayed field (see :ref:`maptips`). "
+"This identifier can be replaced using the drop-down list at the top of the "
+"panel, either by selecting an existing field or using a custom expression. "
+"You can also choose to sort the list of features from the drop-down menu."
+msgstr ""
+"In de formulierweergave van de attributentabel worden objecten standaard "
+"geïdentificeerd in het linkerpaneel aan de hand van hun weergegeven veld "
+"(zie :ref:`maptips`). Deze identificatie kan worden vervangen met behulp van"
+" de keuzelijst aan de bovenzijde van het paneel, ofwel door een bestaand "
+"veld te kiezen of door een aangepaste expressie te gebruiken. U kunt er ook "
+"voor kiezen de lijst met objecten te sorteren vanuit de keuzelijst."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:288
+msgid ""
+"Click a value in the left panel to display the feature's attributes in the "
+"right one. To select a feature, you need to click inside the square symbol "
+"at the left of the identifier. By default, the symbol turns into yellow. "
+"Like in the table view, you can perform multiple feature selection using the"
+" keyboard combinations previously exposed."
+msgstr ""
+"Klik op een waarde in het linkerpaneel om de attributen van het object in "
+"het rechter weer te geven. U dient binnen het vierkant aan de linkerkant van"
+" de identificatie te klikken om een object te selecteren. Standaard zal het "
+"symbool geel kleuren. Net zoals in de tabelweergave kunt u meervoudig "
+"selecteren van objecten uitvoeren met behulp van de reeds eerder weergegeven"
+" combinaties voor het toetsenbord."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:297
+msgid ""
+"Beyond selecting features with the mouse, you can perform automatic "
+"selection based on feature's attribute using tools available in the "
+"attribute table toolbar, such as (see section :ref:`automatic_selection` and"
+" following one for more information and use case):"
+msgstr ""
+"Naast het selecteren van objecten met de muis, kunt u automatische selecties"
+" uitvoeren, gebaseerd op de attributen van het object met behulp van de "
+"beschikbare gereedschappen in de werkbalk van de attributentabel, zoals (zie"
+" gedeelte :ref:`automatic_selection` en volgende voor meer informatie en "
+"gebruiksgevallen):"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:302
+msgid "|expressionSelect| :guilabel:`Select By Expression...`"
+msgstr ""
+"|expressionSelect| :guilabel:`Objecten selecteren m.b.v. een reguliere "
+"expressie`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:303
+msgid "|formSelect| :guilabel:`Select Features By Value...`"
+msgstr "|formSelect| :guilabel:`Objecten selecteren d.m.v. waarde...`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:304
+msgid "|deselectAll| :guilabel:`Deselect Features from All Layers`"
+msgstr "|deselectAll| :guilabel:`Objecten uit alle lagen deselecteren`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:305
+msgid "|selectAll| :guilabel:`Select All Features`"
+msgstr "|selectAll| :guilabel:`Alle objecten selecteren`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:306
+msgid "|invertSelection| :guilabel:`Invert Feature Selection`."
+msgstr "|invertSelection| :guilabel:`Selectie van objecten omdraaien`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:308
+msgid ""
+"It is also possible to select features using the :ref:`filter_select_form`."
+msgstr ""
+"Het is ook mogelijk objecten te selecteren met behulp van "
+":ref:`filter_select_form`."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:314
+msgid "Filtering features"
+msgstr "Objecten filteren"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:316
+msgid ""
+"Once you have selected features in the attribute table, you may want to "
+"display only these records in the table. This can be easily done using the "
+":guilabel:`Show Selected Features` item from the drop-down list at the "
+"bottom left of the attribute table dialog. This list offers the following "
+"filters:"
+msgstr ""
+"Als u eenmaal objecten hebt geselecteerd in de attributentabel, wilt u "
+"misschien alleen die records in de tabel weergeven. Dat kan eenvoudig worden"
+" gedaan met behulp van het item :guilabel:`Geselecteerde objecten weergeven`"
+" uit de keuzelijst aan de linkeronderzijde van het dialoogvenster "
+"Attributentabel. Deze lijst biedt de volgende filters:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:321
+msgid ":guilabel:`Show All Features`"
+msgstr ":guilabel:`Alle objecten tonen`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:322
+msgid ":guilabel:`Show Selected Features`"
+msgstr ":guilabel:`Geselecteerde objecten weergeven`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:323
+msgid ":guilabel:`Show Features visible on map`"
+msgstr ":guilabel:`Op kaart zichtbare objecten tonen`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:324
+msgid ":guilabel:`Show Edited and New Features`"
+msgstr ":guilabel:`Gewijzigde en nieuwe objecten tonen`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:325
+msgid ""
+":guilabel:`Field Filter` - allows the user to filter based on value of a "
+"field: choose a column from a list, type a value and press :kbd:`Enter` to "
+"filter. Then, only the matching features are shown in the attribute table."
+msgstr ""
+":guilabel:`Veldfilter` - stelt de gebruiker in staat te filteren, gebaseerd "
+"op de waarde van een veld: kies een kolom uit de lijst, typ een waarde en "
+"druk op :kbd:`Enter` om te filteren. Daarna zullen alleen de overeenkomende "
+"objecten worden weergegeven in de attributentabel."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:328
+msgid ""
+":guilabel:`Advanced filter (Expression)` - Opens the expression builder "
+"dialog. Within it, you can create :ref:`complex expressions "
+"<vector_expressions>` to match table rows. For example, you can filter the "
+"table using more than one field. When applied, the filter expression will "
+"show up at the bottom of the form."
+msgstr ""
+":guilabel:`Geavanceerd filter (Expressie)` - Opent het dialoogvenster voor "
+"de Expressie-string bouwer. Daarin kunt u :ref:`complexe expressies "
+"<vector_expressions>` maken waaraan rijen van de tabel moeten voldoen. U "
+"kunt, bijvoorbeeld, de tabel filteren met behulp van meer dan één veld. "
+"Indien toegepast verschijnt de expressie van het filter aan de onderzijde "
+"van het formulier."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:334
+msgid ""
+"It is also possible to :ref:`filter features using forms "
+"<filter_select_form>`."
+msgstr ""
+"Het is ook mogelijk :ref:`objecten te filteren met formulieren "
+"<filter_select_form>`."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:338
+msgid ""
+"Filtering records out of the attribute table does not filter features out of"
+" the layer; they are simply momentaneously hidden from the table and can be "
+"accessed from the map canvas or by removing the filter. For filters that do "
+"hide features from the layer, use the :ref:`Query Builder "
+"<vector_query_builder>`."
+msgstr ""
+"Filteren van records uit de attributentabel filtert niet de objecten uit de "
+"laag weg; zij worden eenvoudigweg tijdelijk verborgen in de tabel en er kan "
+"toegang tot verkregen worden vanuit het kaartvenster of door het filter te "
+"verwijderen. Voor filters die wel objecten van de laag verbergen, gebruik de"
+" :ref:`Querybouwer <vector_query_builder>`."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:344
+msgid "**Update datasource filtering with** ``Show Features Visible on Map``"
+msgstr ""
+"**Gegevensbron bijwerken door te filteren met** ``Op kaart zichtbare "
+"objecten tonen``"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:346
+msgid ""
+"When for performance reasons, features shown in attribute table are "
+"spatially limited to the canvas extent at its opening (see :ref:`Data Source"
+" Options <tip_table_filtering>` for a how-to), selecting :guilabel:`Show "
+"Features Visible on Map` on a new canvas extent updates the spatial "
+"restriction."
+msgstr ""
+"Indien om redenen van uitvoering objecten die worden weergegeven in de "
+"attributentabel ruimtelijk zijn beperkt tot het kaartvenster bij het openen "
+"(zie :ref:`Instellingen voor databronnen <tip_table_filtering>` voor een "
+"how-to), zal selecteren van :guilabel:`Op kaart zichtbare objecten tonen` op"
+" een nieuw kaartbereik de ruimtelijke beperking bijwerken."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:355
+msgid "Filtering and selecting features using forms"
+msgstr "Objecten filteren en selecteren met formulieren"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:357
+msgid ""
+"Clicking the |filterMap| :sup:`Filter/Select features using form` or "
+"pressing :kbd:`Ctrl+F` will make the attribute table dialog switch to form "
+"view and replace each widget with its search variant."
+msgstr ""
+"Klikken op |filterMap| :sup:`Objecten met behulp van formulier "
+"filteren/selecteren` of drukken op :kbd:`Ctrl+F` in het dialoogvenster van "
+"de attributentabel zal dat schakelen naar de formulierweergave en elk widget"
+" vervangen door zijn variant om te zoeken."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:361
+msgid ""
+"From this point onwards, this tool functionality is similar to the one "
+"described in :ref:`select_by_value`, where you can find descriptions of all "
+"operators and selecting modes."
+msgstr ""
+"Vanaf dit punt is de functionaliteit van dit gereedschap soortgelijk aan die"
+" welke werd beschreven in :ref:`select_by_value`, waar u beschrijvingen kunt"
+" vinden van alle operatoren en modi voor selecteren."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:370
+msgid "Attribute table filtered by the filter form"
+msgstr "Attributentabel gefilterd door het filterformulier"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:372
+msgid ""
+"When selecting / filtering features from the attribute table, there is a "
+":guilabel:`Filter features` button that allows defining and refining "
+"filters. Its use triggers the :guilabel:`Advanced filter (Expression)` "
+"option and displays the corresponding filter expression in an editable text "
+"widget at the bottom of the form."
+msgstr ""
+"Bij het selecteren / filteren van objecten in de attributentabel is er een "
+"knop :guilabel:`Objecten filteren` die het mogelijk maakt filters te "
+"definiëren en te verfijnen. Gebruiken ervan activeert de optie "
+":guilabel:`Geavanceerd filter (Expressie)` en geeft de overeenkomende "
+"expressie voor het filteren weer in een bewerkbaar tekstwidget aan de "
+"onderzijde van het formulier."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:377
+msgid ""
+"If there are already filtered features, you can refine the filter using the "
+"drop-down list next to the :guilabel:`Filter features` button. The options "
+"are:"
+msgstr ""
+"Indien er al gefilterde objecten zijn, kunt u het filter verfijnen met "
+"behulp van de keuzelijst naast de knop :guilabel:`Objecten filteren`. De "
+"opties zijn:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:380
+msgid ":guilabel:`Filter within (\"AND\")`"
+msgstr ":guilabel:`Filteren binnen (\"AND\")`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:381
+msgid ":guilabel:`Extend filter (\"OR\")`"
+msgstr ":guilabel:`Filter uitbreiden (\"OR\")`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:383
+msgid ""
+"To clear the filter, either select the :guilabel:`Show all features` option "
+"from the bottom left pull-down menu, or clear the expression and click "
+":guilabel:`Apply` or press :kbd:`Enter`."
+msgstr ""
+"Selecteer, om het filter op te heffen, ofwel de optie :guilabel:`Alle "
+"objecten tonen` uit de keuzelijst aan de linkeronderzijde, of maak de "
+"expressie leeg en klik op :guilabel:`Apply` of druk op :kbd:`Enter`."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:388
+msgid "Using action on features"
+msgstr "Acties op objecten gebruiken"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:390
+msgid ""
+"Users have several possibilities to manipulate feature with the contextual "
+"menu like:"
+msgstr ""
+"Gebruikers hebben verscheidene mogelijkheden om objecten te bewerken met het"
+" contextmenu, zoals:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:393
+msgid ":guilabel:`Select all` (:kbd:`Ctrl+A`) the features;"
+msgstr ""
+":guilabel:`Alles selecteren` (:kbd:`Ctrl+A`) alle objecten selecteren;"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:394
+msgid ""
+"Copy the content of a cell in the clipboard with :guilabel:`Copy cell "
+"content`;"
+msgstr ""
+"De inhoud van een cel naar het klembord te kopiëren met :guilabel:`Celinhoud"
+" kopiëren`;"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:395
+msgid ":guilabel:`Zoom to feature` without having to select it beforehand;"
+msgstr ""
+":guilabel:`Naar object inzoomen` zonder het eerst te hebben geselecteerd;"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:396
+msgid ":guilabel:`Pan to feature` without having to select it beforehand;"
+msgstr ""
+":guilabel:`Naar object verplaatsen` zonder het eerst te hebben geselecteerd;"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:397
+msgid ":guilabel:`Flash feature`, to highlight it in the map canvas;"
+msgstr ""
+":guilabel:`Flitsmogelijkheid`, om het in het kaartvenster te accentueren;"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:398
+msgid ""
+":guilabel:`Open form`: it toggles attribute table into form view with a "
+"focus on the clicked feature."
+msgstr ""
+":guilabel:`Formulier openen`: Het schakelt de attributentabel naar "
+"formulierweergave met de focus op het aangeklikte object."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:406
+msgid "Copy cell content button"
+msgstr "Knop Celinhoud kopiëren"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:408
+msgid ""
+"If you want to use attribute data in external programs (such as Excel, "
+"LibreOffice, QGIS or a custom web application), select one or more row(s) "
+"and use the |copySelected| :sup:`Copy selected rows to clipboard` button or "
+"press :kbd:`Ctrl+C`."
+msgstr ""
+"Indien u gegevens van attributen wilt gebruiken in externe programma's "
+"(zoals Excel, LibreOffice, QGIS of een eigen webtoepassing), selecteer één "
+"of meer rij(en) en gebruik de knop |copySelected| :sup:`Geselecteerde rijen "
+"naar klembord kopiëren` of druk op :kbd:`Ctrl+C`."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:415
+msgid ""
+"In :menuselection:`Settings --> Options --> Data Sources` menu you can "
+"define the format to paste to with :guilabel:`Copy features as` dropdown "
+"list:"
+msgstr ""
+"In het menu :menuselection:`Extra --> Opties --> Databronnen` kunt u uit de "
+"keuzelijst de opmaak definiëren die moet worden geplakt met "
+":guilabel:`Objecten kopiëren als`:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:419
+msgid "Plain text, no geometry,"
+msgstr "Platte tekst, geen geometrie,"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:420
+msgid "Plain text, WKT geometry,"
+msgstr "Platte tekst, WKT-geometrie,"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:421
+msgid "GeoJSON"
+msgstr "GeoJSON"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:423
+msgid ""
+"You can also display a list of actions in this contextual menu. This is "
+"enabled in the :menuselection:`Layer properties --> Actions` tab. See "
+":ref:`actions_menu` for more information on actions."
+msgstr ""
+"U kunt ook een lijst met acties weergeven in dit contextmenu. Dit wordt "
+"ingeschakeld op de tab :menuselection:`Laageigenschappen --> Acties`. Bekijk"
+" :ref:`actions_menu` voor meer informatie over acties."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:428
+msgid "Saving selected features as new layer"
+msgstr "Geselecteerde objecten als nieuwe laag opslaan"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:430
+msgid ""
+"The selected features can be saved as any OGR-supported vector format and "
+"also transformed into another coordinate reference system (CRS). In the "
+"contextual menu of the layer, from the :guilabel:`Layers` panel, click on "
+":menuselection:`Export --> Save selected features as...` to define the name "
+"of the output dataset, its format and CRS (see section "
+":ref:`general_saveas`). You'll notice that |checkbox| :menuselection:`Save "
+"only selected features` is checked. It is also possible to specify OGR "
+"creation options within the dialog."
+msgstr ""
+"De geselecteerde objecten kunnen worden opgeslagen in alle door OGR "
+"ondersteunde vectorindelingen en ook worden omgezet naar een ander "
+"Coördinaten Referentie Systeem (CRS). In het contextmenu van de laag uit het"
+"  paneel :guilabel:`Lagen`, klik op :menuselection:`Exporteren --> "
+"Geselecteerde objecten opslaan als…` om vervolgens een naam voor het uitvoer"
+" gegevensbestand op te geven, de gewenste indeling en het CRS (zie het "
+"gedeelte :ref:`general_saveas`). U zult zien dat het keuzevak |checkbox| "
+":menuselection:`Alleen geselecteerde objecten opslaan` is geselecteerd. Het "
+"is ook mogelijk om opties voor het maken van OGR op te geven in het "
+"dialoogvenster."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:442
+msgid "Editing attribute values"
+msgstr "Attribuutwaarden bewerken"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:444
+msgid "Editing attribute values can be done by:"
+msgstr "Bewerken van waarden van attributen kan worden gedaan door:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:446
+msgid ""
+"typing the new value directly in the cell, whether the attribute table is in"
+" table or form view. Changes are hence done cell by cell, feature by "
+"feature;"
+msgstr ""
+"het direct typen van de nieuwe waarde in de cel, zowel; in de tabel als in "
+"de formulierweergave. Wijzigingen worden daarom per cel uitgevoerd, object "
+"na object;"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:448
+msgid ""
+"using the :ref:`field calculator <vector_field_calculator>`: update in a row"
+" a field that may already exist or to be created but for multiple features. "
+"It can be used to create virtual fields;"
+msgstr ""
+"met :ref:`Veldberekening <vector_field_calculator>`: bijwerken van een rij "
+"van een veld dat al kan bestaan of dat kan worden gemaakt, maar voor "
+"meerdere objecten. Het kan worden gebruikt om virtuele velden te maken;"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:451
+msgid ""
+"using the quick field :ref:`calculation bar <quick_field_calculation_bar>`: "
+"same as above but for only existing field;"
+msgstr ""
+"met de :ref:`werkbalk Snelle veldberekening <quick_field_calculation_bar>`: "
+"hetzelfde als hierboven maar alleen voor bestaande velden;"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:453
+msgid ""
+"or using the :ref:`multi edit <multi_edit_fields>` mode: update in a row "
+"multiple fields for multiple features."
+msgstr ""
+"of met de modus :ref:`Meervoudige bewerkingen <multi_edit_fields>`: meerdere"
+" velden voor meerdere objecten bijwerken in een rij."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:459
+msgid "Using the Field Calculator"
+msgstr "Veldberekening gebruiken"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:461
+msgid ""
+"The |calculateField| :sup:`Field Calculator` button in the attribute table "
+"allows you to perform calculations on the basis of existing attribute values"
+" or defined functions, for instance, to calculate length or area of geometry"
+" features. The results can be used to update an existing field, or written "
+"to a new field (that can be a :ref:`virtual <virtual_field>` one)."
+msgstr ""
+"De knop |calculateField| :sup:`Veldberekening` in de attributentabel geeft "
+"de mogelijkheid om berekeningen uit te voeren van bestaande waarden van "
+"attributen of gedefinieerde functies, bijvoorbeeld om de lengte of "
+"oppervlakte van objecten geometrie te berekenen. De resultaten kunnen worden"
+" gebruikt om een bestaand veld bij te werken of worden geschreven naar een "
+"nieuw veld (dat een :ref:`virtueel veld <virtual_field>` mag zijn)."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:467
+msgid ""
+"The field calculator is available on any layer that supports edit. When you "
+"click on the field calculator icon the dialog opens (see "
+"figure_field_calculator_). If the layer is not in edit mode, a warning is "
+"displayed and using the field calculator will cause the layer to be put in "
+"edit mode before the calculation is made."
+msgstr ""
+"Veldberekening is beschikbaar op elke laag die bewerken ondersteunt. Wanneer"
+" u op het pictogram Veldberekening klikt opent het dialoogvenster (zie "
+"figure_field_calculator_). Als de laag niet in de modus Bewerken staat, "
+"wordt een waarschuwing weergegeven en het gebruiken van Veldberekening zal "
+"er voor zorgen dat de laag in de modus Bewerken wordt gezet vóórdat de "
+"berekening wordt uitgevoerd."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:473
+msgid ""
+"Based on the :ref:`Expression Builder <functions_list>` dialog, the field "
+"calculator dialog offers a complete interface to define an expression and "
+"apply it to an existing or a newly created field. To use the field "
+"calculator dialog, you must select whether you want to:"
+msgstr ""
+"Gebaseerd op het dialoogvenster :ref:`Expressie-string bouwer "
+"<functions_list>`, biedt het dialoogvenster Veldberekening een volledige "
+"interface om een expressie te definiëren en die toe te passen op een "
+"bestaand of nieuw gemaakt veld. U moet eerst, om Veldberekening te kunnen "
+"gebruiken, selecteren:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:478
+msgid "apply calculation on the whole layer or on selected features only"
+msgstr ""
+"berekening toepassen op de gehele laag of alleen op de geselecteerde "
+"objecten"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:479
+msgid "create a new field for the calculation or update an existing one."
+msgstr ""
+"een nieuw veld voor de berekening maken of een bestaand veld bijwerken."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:486
+msgid "Field Calculator"
+msgstr "Veldberekening"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:488
+msgid ""
+"If you choose to add a new field, you need to enter a field name, a field "
+"type (integer, real, date or string) and if needed, the total field length "
+"and the field precision. For example, if you choose a field length of 10 and"
+" a field precision of 3, it means you have 7 digits before the dot, and 3 "
+"digits for the decimal part."
+msgstr ""
+"Als u er voor kiest een nieuw veld toe te voegen, dient een veldnaam, een "
+"veldtype (geheel getal, decimaal getal, datum of tekst) en, indien nodig, de"
+" totale veldlengte en de precisie te worden opgegeven. Als u bijvoorbeeld "
+"voor een veldlengte van 10 en een precisie van 3 kiest, betekent dit dat u "
+"ruimte heeft voor 7 tekens voor de punt, en 3 tekens voor het decimale "
+"gedeelte."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:494
+msgid ""
+"A short example illustrates how field calculator works when using the "
+":guilabel:`Expression` tab. We want to calculate the length in km of the "
+"``railroads`` layer from the QGIS sample dataset:"
+msgstr ""
+"Een kort voorbeeld illustreert het gebruik van Veldberekening bij het "
+"gebruiken van de tab :guilabel:`Expressie`. We willen de lengte van de laag "
+"``railroads`` van de voorbeeld dataset van QGIS berekenen in km:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:498
+msgid ""
+"Load the shapefile :file:`railroads.shp` in QGIS and press |openTable| "
+":sup:`Open Attribute Table`."
+msgstr ""
+"Laad het shapefile :file:`railroads.shp` in QGIS en selecteer |openTable| "
+":sup:`Attributentabel openen`."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:500
+msgid ""
+"Click on |toggleEditing| :sup:`Toggle editing mode` and open the "
+"|calculateField| :sup:`Field Calculator` dialog."
+msgstr ""
+"Klik op |toggleEditing| :sup:`Bewerken aan/uitzetten` en open het "
+"dialoogvenster |calculateField| :sup:`Veldberekening`."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:502
+msgid ""
+"Select the |checkbox| :guilabel:`Create a new field` checkbox to save the "
+"calculations into a new field."
+msgstr ""
+"Selecteer het keuzevak |checkbox| :guilabel:`Nieuw veld aanmaken` om "
+"berekeningen op te slaan in het nieuwe veld."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:504
+msgid "Set :guilabel:`Output field name` to  ``length_km``"
+msgstr "Stel :guilabel:`Naam voor veld` in op ``length_km``"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:505
+msgid "Select ``Decimal number (real)`` as :guilabel:`Output field type`"
+msgstr "Selecteer ``Decimaal getal (real)`` als :guilabel:`Type voor veld`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:506
+msgid ""
+"Set the :guilabel:`Output field length` to ``10`` and the "
+":guilabel:`Precision` to ``3``"
+msgstr ""
+"Stel de :guilabel:`Lengte van veld voor uitvoer` in op ``10`` en de "
+":guilabel:`Precisie` op ``3``"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:508
+msgid ""
+"Double click on ``$length`` in the :guilabel:`Geometry` group to add the "
+"length of the geometry into the Field calculator expression box."
+msgstr ""
+"Dubbelklik nu op de ``$length`` in de groep :guilabel:`Geometrie` om de "
+"lengte van de geometrie toe te voegen aan het vak voor de expressie van de "
+"Veldberekening."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:510
+msgid ""
+"Complete the expression by typing ``/ 1000`` in the Field calculator "
+"expression box and click :guilabel:`OK`."
+msgstr ""
+"Voltooi de expressie compleet door \"/1000\" in te typen in het vak voor de "
+"expressie van de berekening en druk op :guilabel:`OK`."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:512
+msgid ""
+"You can now find a new :guilabel:`length_km` field in the attribute table."
+msgstr ""
+"U zult nu een nieuw veld :guilabel:`length_km` in de attributentabel "
+"terugvinden."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:517
+msgid "Creating a Virtual Field"
+msgstr "Een virtueel veld maken"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:519
+msgid ""
+"A virtual field is a field based on an expression calculated on the fly, "
+"meaning that its value is automatically updated as soon as an underlying "
+"parameter changes. The expression is set once; you no longer need to "
+"recalculate the field each time underlying values change. For example, you "
+"may want to use a virtual field if you need area to be evaluated as you "
+"digitize features or to automatically calculate a duration between dates "
+"that may change (e.g., using ``now()`` function)."
+msgstr ""
+"Een virtueel veld is een veld dat is gebaseerd op een direct berekende "
+"expressie, wat betekent dat zijn waarde automatisch wordt bijgewerkt zodra "
+"een onderliggende parameter wijzigt. De expressie wordt één keer ingesteld; "
+"u hoeft het veld niet langer elke keer opnieuw te berekenen als de "
+"onderliggende waarde wijzigt. U zou, bijvoorbeeld, een virtueel veld willen "
+"gebruiken als u gebieden wilt laten evalueren bij het digitaliseren van "
+"objecten of om automatisch een duur te laten bereken tussen datums die "
+"zouden kunnen wijzigen (bijv. bij het gebruiken van de functie ``now()``)."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:527
+msgid "**Use of Virtual Fields**"
+msgstr "**Virtuele velden gebruiken**"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:529
+msgid ""
+"Virtual fields are not permanent in the layer attributes, meaning that "
+"they're only saved and available in the project file they've been created."
+msgstr ""
+"Virtuele velden staan niet permanent in de attributen van de laag, wat "
+"betekent dat zij alleen worden opgeslagen en beschikbaar zijn in het "
+"projectbestand waarin zij zijn gemaakt."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:531
+msgid ""
+"A field can be set virtual only at its creation. Virtual fields are marked "
+"with a purple background in the fields tab of the layer properties dialog to"
+" distinguish them from regular physical or joined fields. Their expression "
+"can be edited later by pressing the expression button in the Comment column."
+" An expression editor window will be opened to adjust the expression of the "
+"virtual field."
+msgstr ""
+"Een veld kan allen virtueel worden ingesteld bij het maken. Virtuele velden "
+"zijn gemarkeerd met een paarse achtergrond op de tab Velden van het "
+"dialoogvenster Laageigenschappen om ze te kunnen onderscheiden van normale "
+"fysieke of samengestelde velden. Hun expressie kan later worden bewerkt door"
+" te drukken op de knop Expressie in de kolom Opmerking. Een venster voor het"
+" bewerken van de expressie zal worden geopend om de expressie van het "
+"virtuele veld aan te kunnen passen."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:541
+msgid "Using the Quick Field Calculation Bar"
+msgstr "De werkbalk Snelle veldberekening gebruiken"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:543
+msgid ""
+"While Field calculator is always available, the quick field calculation bar "
+"on top of the attribute table is only visible if the layer is in edit mode. "
+"Thanks to the expression engine, it offers a quicker access to edit an "
+"already existing field:"
+msgstr ""
+"Waar Veldberekening altijd beschikbaar is, is de werkbalk Snelle "
+"veldberekening, boven in de attributentabel, alleen zichtbaar als de laag in"
+" de modus Bewerken staat. Dankzij het programma voor de expressie, biedt het"
+" snelle toegang voor het bewerken van een reeds bestaand veld:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:548
+msgid "Select the field to update in the drop-down list."
+msgstr "Selecteer het bij te werken veld in de keuzelijst."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:549
+msgid ""
+"Fill the textbox with a value, an expression you directly write or build "
+"using the |expression| expression button."
+msgstr ""
+"Vul het tekstvak met een waarde, een expressie die u direct schrijft of "
+"bouwt met de knop voor de expressie |expression|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:551
+msgid ""
+"Click on :guilabel:`Update All`, :guilabel:`Update Selected` or "
+":guilabel:`Update Filtered` button according to your need."
+msgstr ""
+"Klik op de knop :guilabel:`Alles bijwerken`, :guilabel:`Geselecteerde "
+"bijwerken` of :guilabel:`Gefilterde bijwerken`, overeenkomstig uw wensen."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:559
+msgid "Quick Field Calculation Bar"
+msgstr "De werkbalk Snelle veldberekening"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:566
+msgid "Editing multiple fields"
+msgstr "Meerdere velden bewerken"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:568
+msgid ""
+"Unlike the previous tools, multi edit mode allows multiple attributes of "
+"different features to be edited simultaneously. When the layer is toggled to"
+" edit, multi edit capabilities are accessible:"
+msgstr ""
+"Anders dan met de vorige gereedschappen, staat de modus Meervoudige "
+"bewerkingen toe dat meerdere attributen van verschillende objecten "
+"tegelijkertijd worden bewerkt. Wanneer de laag is geschakeld naar de modus "
+"Bewerken, zijn mogelijkheden voor Meervoudige bewerkingen toegankelijk:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:572
+msgid ""
+"using the |multiEdit| :sup:`Toggle multi edit mode` button from the toolbar "
+"inside the attribute table dialog;"
+msgstr ""
+"met de knop |multiEdit| :sup:`Schakelen naar modus Meervoudige bewerkingen` "
+"vanaf de werkbalk binnen het dialoogvenster Attributentabel;"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:574
+msgid ""
+"or selecting :menuselection:`Edit -->` |multiEdit| :menuselection:`Modify "
+"attributes of selected features` menu."
+msgstr ""
+"of door het selecteren van het menu :menuselection:`Bewerken -->` "
+"|multiEdit| :menuselection:`Attributen van geselecteerde objecten "
+"aanpassen`."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:579
+msgid ""
+"Unlike the tool from the attribute table, hitting the :menuselection:`Edit "
+"--> Modify Attributes of Selected Features` option provides you with a modal"
+" dialog to fill attributes changes. Hence, features selection is required "
+"before execution."
+msgstr ""
+"Anders dan het gereedschap vanuit de attributentabel zal drukken op de optie"
+" :menuselection:`Bewerken --> Attributen van geselecteerde objecten "
+"aanpassen` u een model dialoogvenster verschaffen om wijzigingen aan de "
+"attributen in te vullen. Daarom is het selecteren van objecten vereist vóór "
+"het uitvoeren."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:584
+msgid "In order to edit multiple fields in a row:"
+msgstr "Om meerdere velden in één rij te bewerken:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:586
+msgid "Select the features you want to edit."
+msgstr "Selecteer de objecten die u wilt bewerken."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:587
+msgid ""
+"From the attribute table toolbar, click the |multiEdit| button. This will "
+"toggle the dialog to its form view. Feature selection could also be made at "
+"this step."
+msgstr ""
+"Klik, op de werkbalk van de Attributentabel, op de knop |multiEdit|. Dit zal"
+" het dialoogvenster naar de formulierweergave schakelen. Selecteren van "
+"objecten zou ook in deze stap gedaan kunnen worden."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:590
+msgid ""
+"At the right side of the attribute table, fields (and values) of selected "
+"features are shown. New widgets appear next to each field allowing for "
+"display of the current multi edit state:"
+msgstr ""
+"Aan de rechterkant van de attributentabel worden velden (en waarden) van "
+"geselecteerde objecten weergegeven. Nieuwe widgets verschijnen naast elk "
+"veld, wat het mogelijk maakt de huidige status voor Meervoudige bewerkingen "
+"weer te geven:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:594
+msgid ""
+"|multiEditMixedValues| The field contains different values for selected "
+"features. It's shown empty and each feature will keep its original value. "
+"You can reset the value of the field from the drop-down list of the widget."
+msgstr ""
+"|multiEditMixedValues| Het veld bevat verschillende waarden voor de "
+"geselecteerde objecten. Het wordt leeg weergegeven en elk object behoudt "
+"zijn originele waarde. U kunt de waarde van het veld herstellen uit de "
+"keuzelijst van de widget."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:597
+msgid ""
+"|multiEditSameValues| All selected features have the same value for this "
+"field and the value displayed in the form will be kept."
+msgstr ""
+"|multiEditSameValues| Alle geselecteerde objecten hebben dezelfde waarde "
+"voor dit veld en de weergegeven waarde in het formulier zal worden behouden."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:599
+msgid ""
+"|multiEditChangedValues| The field has been edited and the entered value "
+"will be applied to all the selected features. A message appears at the top "
+"of the dialog, inviting you to either apply or reset your modification."
+msgstr ""
+"|multiEditChangedValues| Het veld is bewerkt en de ingevoerde waarde zal "
+"worden toegepast op alle geselecteerde objecten. Er verschijnt een bericht "
+"aan de bovenzijde van het dialoogvenster dat u zal vragen uw wijziging toe "
+"te passen of te herstellen."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:603
+msgid ""
+"Clicking any of these widgets allows you to either set the current value for"
+" the field or reset to original value, meaning that you can roll back "
+"changes on a field-by-field basis."
+msgstr ""
+"Klikken op een van deze widgets stelt u in staat ofwel de huidige waarde "
+"voor het veld in te stellen of de originele waarde te herstellen, wat "
+"betekent dat u wijzigingen kunt terugdraaien op een veld-na-veld-basis."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:612
+msgid "Editing fields of multiple features"
+msgstr "Velden van meerdere objecten bewerken"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:614
+msgid "Make the changes to the fields you want."
+msgstr "Maak de wijzigingen in de velden die u wilt."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:615
+msgid ""
+"Click on **Apply changes** in the upper message text or any other feature in"
+" the left panel."
+msgstr ""
+"Klik op **Wijzigingen toepassen** in het bericht bovenaan of enig ander "
+"object in het linkerpaneel."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:618
+msgid ""
+"Changes will apply to **all selected features**. If no feature is selected, "
+"the whole table is updated with your changes. Modifications are made as a "
+"single edit command. So pressing |undo| :sup:`Undo` will rollback the "
+"attribute changes for all selected features at once."
+msgstr ""
+"Wijzigingen zullen worden toegepast op **alle geselecteerde objecten**. "
+"Indien er geen object is geselecteerd wordt de gehele tabel met uw "
+"wijzigingen bijgewerkt. Aanpassingen worden gemaakt als één enkele opdracht "
+"tot bewerken. Het drukken op |undo| :sup:`Ongedaan maken` zal dus de "
+"wijzigingen aan de attributen voor alle objecten in één keer terugdraaien."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:625
+msgid ""
+"Multi edit mode is only available for auto generated and drag and drop forms"
+" (see :ref:`customize_form`); it is not supported by custom ui forms."
+msgstr ""
+"Modus Meervoudige bewerkingen is alleen beschikbaar voor automatisch "
+"gegenereerde en formulieren van Slepen en neerzetten (zie "
+":ref:`customize_form`); het wordt niet ondersteund in aangepaste formulieren"
+" voor de UI."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:633
+msgid "Creating one or many to many relations"
+msgstr "Een tot veel- of veel-tot-veel-relaties maken"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:635
+msgid ""
+"Relations are a technique often used in databases. The concept is that "
+"features (rows) of different layers (tables) can belong to each other."
+msgstr ""
+"Relaties zijn een techniek die veel gebruikt wordt in databases. Het concept"
+" is dat objecten (rijen) van verschillende lagen (tabellen) aan elkaar "
+"kunnen behoren."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:641
+msgid "Introducing 1-N relations"
+msgstr "1-N-relaties introduceren"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:643
+msgid ""
+"As an example you have a layer with all regions of alaska (polygon) which "
+"provides some attributes about its name and region type and a unique id "
+"(which acts as primary key)."
+msgstr ""
+"Als voorbeeld heeft u een laag met alle regio's van Alaska (polygoon) die "
+"verschillende attributen verschaft over de naam ervan en het type regio en "
+"een unieke ID (die dient als primaire sleutel)."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:647
+msgid ""
+"Then you get another point layer or table with information about airports "
+"that are located in the regions and you also want to keep track of these. If"
+" you want to add them to the regions layer, you need to create a one to many"
+" relation using foreign keys, because there are several airports in most "
+"regions."
+msgstr ""
+"Dan krijgt u een andere laag met punten of tabel met informatie over "
+"vliegvelden die in de regio's liggen en u wilt ook deze bijhouden. Als u ze "
+"wilt toevoegen aan de laag van de regio's, dient u een één tot veel-relatie "
+"te maken met behulp van secundaire sleutels, omdat er meerdere vliegvelden "
+"in de meeste regio's liggen."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:657
+msgid "Alaska region with airports"
+msgstr "Regio Alaska met vliegvelden"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:660
+msgid "Layers in 1-N relations"
+msgstr "Lagen in 1-N-relaties"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:662
+msgid ""
+"QGIS makes no difference between a table and a vector layer. Basically, a "
+"vector layer is a table with a geometry. So you can add your table as a "
+"vector layer. To demonstrate the 1-n relation, you can load the "
+":file:`regions` shapefile and the :file:`airports` shapefile which has a "
+"foreign key field (``fk_region``) to the layer regions. This means, that "
+"each airport belongs to exactly one region while each region can have any "
+"number of airports (a typical one to many relation)."
+msgstr ""
+"QGIS maakt geen verschil tussen een tabel en een vectorlaag. In feite is een"
+" vectorlaag een tabel met een geometrie. Dus kunt u uw laag tabel als een "
+"vectorlaag toevoegen. U kunt, om de 1-N-relatie te demonstreren, het "
+"shapefile :file:`regions` laden en de csv-tabel :file:`airports` dat een "
+"veld voor een secundaire sleutel (``fk_region``) voor de laag regions heeft."
+" Dit betekent dat elk vliegveld tot precies één regio behoort terwijl elke "
+"regio een onbepaald aantal vliegvelden kan hebben (een typische een tot "
+"veel-relatie)."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:671
+msgid "Foreign keys in 1-N relations"
+msgstr "Vreemde sleutels in 1-N-relaties"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:673
+msgid ""
+"In addition to the already existing attributes in the airports attribute "
+"table, you'll need another field ``fk_region`` which acts as a foreign key "
+"(if you have a database, you will probably want to define a constraint on "
+"it)."
+msgstr ""
+"In aanvulling op de reeds bestaande attributen in de attributentabel van de "
+"vliegvelden heeft u nog een ander veld ``fk_region`` nodig dat optreedt als "
+"een secundaire sleutel (als u een database heeft, wilt u er waarschijnlijk "
+"een voorwaarde aan verbinden)."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:677
+msgid ""
+"This field fk_region will always contain an id of a region. It can be seen "
+"like a pointer to the region it belongs to. And you can design a custom edit"
+" form for editing and QGIS takes care of the setup. It works with different "
+"providers (so you can also use it with shape and csv files) and all you have"
+" to do is to tell QGIS the relations between your tables."
+msgstr ""
+"Dit veld fk_region zal altijd een ID van een regio bevatten. Het kan worden "
+"gezien als een verwijzing naar de regio waartoe het behoort. En u kunt een "
+"aangepaste vorm voor bewerken ontwerpen en QGIS zorgt dan voor de "
+"instellingen. Het werkt voor verschillende providers (dus u kunt het ook "
+"gebruiken met Shapefile- en csv-bestanden) en alles wat u hoeft te doen is "
+"QGIS de relaties tussen uw tabellen te vertellen."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:684
+msgid "Defining 1-N relations (Relation Manager)"
+msgstr " 1-N-relaties definiëren (Relatiebeheer)"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:686
+msgid ""
+"The first thing we are going to do is to let QGIS know about the relations "
+"between the layers. This is done in :menuselection:`Project --> Project "
+"Properties...`. Open the :guilabel:`Relations` tab and click on "
+":guilabel:`Add Relation`."
+msgstr ""
+"Het eerste dat gaan we doen is om QGIS in kennis te stellen van de relaties "
+"tussen de lagen. Dit wordt gedaan in :menuselection:`Project --> "
+"Eigenschappen…`. Open de tab :guilabel:`Relaties` en klik op "
+":guilabel:`Relatie toevoegen`."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:690
+msgid ""
+"**Name** is going to be used as a title. It should be a human readable "
+"string, describing, what the relation is used for. We will just call say "
+"**airport_relation** in this case."
+msgstr ""
+"**Naam** zal worden gebruikt als de titel. Het zou een door mensen te lezen "
+"tekenreeks moeten zijn, die beschrijft waar de relatie voor wordt gebruikt. "
+"We zullen het in dit geval eenvoudigweg **vliegveld_relatie** noemen."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:693
+msgid ""
+"**Referenced Layer (Parent)** also considered as parent layer, is the one "
+"with the primary key, pointed to, so here it is the ``regions`` layer. You "
+"can define the primary key of the referenced layer, so it is ``ID``. For "
+"this layer you can define multiple referenced fields by using the |signPlus|"
+" button."
+msgstr ""
+"**Referentielaag (Parent)**, ook wel beschouwd als de ouderlaag, is die "
+"waarnaar de primaire sleutel verwijst, dus hier is het de laag ``regions``. "
+"U kunt de primaire sleutel voor de referentielaag definiëren, dus is het "
+"``ID``. Voor deze laag kunt u meerdere velden, waarnaar wordt verwezen, "
+"definiëren door de knop |signPlus| tegebruiken."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:697
+msgid ""
+"**Referencing Layer (Child)** also considered as child layer, is the one "
+"with the foreign key field on it. In our case, this is the ``airports`` "
+"layer. For this layer you need to add a referencing field which points to "
+"the other layer, so this is ``fk_region``. When using multiple field "
+"relations you can add another referencing field by using the |signPlus| "
+"button."
+msgstr ""
+"**Referentielaag (Kind)**, ook wel beschouwd als de kindlaag, is die met het"
+" veld voor de vreemde sleutel erop. In ons geval is dit de laag "
+"``airports``. Voor deze laag dient u een verwijzingsveld toe te voegen dat "
+"naar de andere laag verwijst, dus is dit ``fk_region``. Bij het gebruiken "
+"van meerdere veldrelaties kunt u een ander verwijzingsveld toevoegen met de "
+"knop |signPlus|."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:702
+msgid ""
+"**Id** will be used for internal purposes and has to be unique. You may need"
+" it to build :ref:`custom forms <customize_form>`. If you leave it empty, "
+"one will be generated for you but you can assign one yourself to get one "
+"that is easier to handle"
+msgstr ""
+"**ID** zal worden gebruikt voor interne doeleinden en moet uniek zijn. U zou"
+" mogelijk :ref:`aangepaste formulieren <customize_form>` moeten maken. Als u"
+" het leeg laat zal er een voor u worden gegenereerd maar u kunt er zelf een "
+"toewijzen om er een te krijgen die voor u eenvoudiger is."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:706
+msgid ""
+"**Relationship strength** sets the strength of the relation between the "
+"parent and the child layer. The default :guilabel:`Association` type means "
+"that the parent layer is *simply* linked to the child one while the "
+":guilabel:`Composition` type allows you to duplicate also the child features"
+" when duplicating the parent ones."
+msgstr ""
+"**Sterkte relatie** stelt de sterkte van de relatie in tussen de ouder- en "
+"de kindlaag. Het standaard type :guilabel:`Associatie` betekent dat de "
+"ouderlaag *simpelweg* is gekoppeld aan de kindlaag, terwijl het type "
+":guilabel:`Compositie` u in staat stelt ook de kindobjecten te dupliceren "
+"wanneer u die van de ouderlaag dupliceert."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:717
+msgid "Relation Manager"
+msgstr "Relatiebeheer"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:722
+msgid "Forms for 1-N relations"
+msgstr "Formulieren voor 1-N-relaties"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:724
+msgid ""
+"Now that QGIS knows about the relation, it will be used to improve the forms"
+" it generates. As we did not change the default form method (autogenerated) "
+"it will just add a new widget in our form. So let's select the layer region "
+"in the legend and use the identify tool. Depending on your settings, the "
+"form might open directly or you will have to choose to open it in the "
+"identification dialog under actions."
+msgstr ""
+"Nu QGIS van de relatie weet zal het worden gebruikt om de formulieren te "
+"verbeteren die het genereert. Als we de standaardmethode voor het formulier "
+"niet wijzigden (automatisch gegenereerd) zal het eenvoudigweg een nieuw "
+"widget in ons formulier maken. Dus laten we de laag regions selecteren in de"
+" legenda en het gereedschap Objecten identificeren gebruiken. Afhankelijk "
+"van uw instellingen zou het formulier direct kunnen openen of u moet het "
+"kiezen om het openen in het dialoogvenster Identificatieresultaten onder "
+"Acties."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:736
+msgid "Identification dialog regions with relation to airports"
+msgstr ""
+"Dialoogvenster Identificatieresultaten regions met relatie naar vliegvelden"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:738
+msgid ""
+"As you can see, the airports assigned to this particular region are all "
+"shown in a table. And there are also some buttons available. Let's review "
+"them shortly:"
+msgstr ""
+"Zoals u kunt zien worden de vliegvelden die tot deze bepaalde regio zijn "
+"toegewezen weergegeven in een tabel. En er zijn ook enkele knoppen "
+"beschikbaar. Laten we die even kort bekijken:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:741
+msgid ""
+"The |toggleEditing| button is for toggling the edit mode. Be aware that it "
+"toggles the edit mode of the airport layer, although we are in the feature "
+"form of a feature from the region layer. But the table is representing "
+"features of the airport layer."
+msgstr ""
+"De knop |toggleEditing| is voor het aan of uitzetten van het bewerken. "
+"Onthoud dat het de modus Bewerken voor de laag airports schakelt, hoewel we "
+"in het objectformulier van een object uit de laag regions staan. maar de "
+"tabel geeft objecten weer uit de laag airports."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:745
+msgid "The |saveEdits| button is for saving all the edits."
+msgstr "De knop |saveEdits| is voor het opslaan van alle bewerkingen."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:746
+msgid ""
+"The |newTableRow| button will add a new record to the airport layer "
+"attribute table. And it will assign the new airport to the current region by"
+" default."
+msgstr ""
+"De knop |newTableRow| zal een nieuw record aan de attributentabel van de "
+"laag airports toevoegen. En het zal standaard het nieuwe vliegveld toevoegen"
+" aan de huidige regio."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:748
+msgid ""
+"The |duplicateFeature| button allows you to copy one or more child features."
+msgstr ""
+"De knop |duplicateFeature| stelt u in staat één of meer kindobjecten te "
+"kopiëren."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:749
+msgid ""
+"The |deleteSelectedFeatures| button will delete the selected airport "
+"permanently."
+msgstr ""
+"De knop |deleteSelectedFeatures| zal het geselecteerde vliegveld permanent "
+"verwijderen."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:751
+msgid ""
+"The |link| symbol will open a new dialog where you can select any existing "
+"airport which will then be assigned to the current region. This may be handy"
+" if you created the airport on the wrong region by accident."
+msgstr ""
+"Het symbool |link| zal een nieuw dialoogvenster openen waar u een bestaand "
+"vliegveld kunt selecteren, dat dan zal worden toegevoegd aan de huidige "
+"regio. Dit kan handig zijn als u per ongeluk eerder het vliegveld in de "
+"verkeerde regio maakte."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:754
+msgid ""
+"The |unlink| symbol will unlink the selected airport from the current "
+"region, leaving them unassigned (the foreign key is set to NULL) "
+"effectively."
+msgstr ""
+"Het symbool |unlink| zal het geselecteerde vliegveld loskoppelen van de "
+"huidige regio en het daarna als niet toegewezen beschouwen (de secundaire "
+"sleutel wordt op NULL gezet)."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:756
+msgid ""
+"With the |zoomToSelected| button you can zoom the map to the selected child "
+"features."
+msgstr ""
+"Met de knop |zoomToSelected| kunt u op de kaart inzoomen op de geselecteerde"
+" kindobjecten."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:758
+msgid ""
+"The two buttons |formView| and |openTable| to the right switch between table"
+" view and form view where the later let's you view all the airports in their"
+" respective form."
+msgstr ""
+"De twee knoppen |formView| en |openTable| aan de rechterkant schakelen "
+"tussen de tabelweergave en de formulierweergave waarbij de laatste u de "
+"vliegvelden laat zien in hun respectievelijke formulier."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:762
+msgid ""
+"In the above example the referencing layer has geometries (so it isn't just "
+"an alphanumeric table) so the above steps will create an entry in the layer "
+"attribute table that has no corresponding geometric feature. To add the "
+"geometry:"
+msgstr ""
+"In het bovenstaande voorbeeld heeft de verwijzingslaag geometrieën (en is "
+"het niet slechts een alfanumerieke tabel), dus zullen de bovenvermelde "
+"stappen een item maken in de attributentabel van de laag dat geen "
+"overeenkomend geometrisch object heeft. De geometrie toevoegen:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:767
+msgid ""
+"Choose |openTable| :menuselection:`Open Attribute Table` for the referencing"
+" layer."
+msgstr ""
+"Kies |openTable| :menuselection:`Attributentabel openen` voor de "
+"referentielaag."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:768
+msgid ""
+"Select the record that has been added previously within the feature form of "
+"the referenced layer."
+msgstr ""
+"Selecteer het record dat eerder werd toegevoegd in het objectformulier van "
+"de verwijzingslaag."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:770
+msgid ""
+"Use the |addPart| :sup:`Add Part` digitizing tool to attach a geometry to "
+"the selected attributes table record."
+msgstr ""
+"Gebruik het gereedschap voor digitaliseren |addPart| :sup:`Deel toevoegen` "
+"om een geometrie te verbinden met het geselecteerde record van de "
+"attributentabel."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:773
+msgid ""
+"If you work on the airport table, the widget Relation Reference is "
+"automatically set up for the ``fk_region`` field (the one used to create the"
+" relation), see :ref:`Relation Reference widget <configure_field>`."
+msgstr ""
+"Als u werkt op met de tabel Airports is de widget Relatie-verwijzing "
+"automatisch ingesteld voor het veld ``fk_region`` (dat werd gebruikt om de "
+"relatie te maken), bekijk :ref:`widget Relatie-verwijzing<configure_field>`."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:779
+msgid ""
+"In the airport form you will see the |formView| button at the right side of "
+"the ``fk_region`` field: if you click on the button the form of the region "
+"layer will be opened. This widget allows you to easily and quickly open the "
+"forms of the linked parent features."
+msgstr ""
+"In het formulier Airports zult u de knop |formView| zien aan de rechterkant "
+"van het veld ``fk_region``: als u op de knop klikt zal het formulier van de "
+"laag Regions worden geopend. Dit widget stelt u in staat eenvoudig en snel "
+"de formulieren van de gekoppelde ouderobjecten te openen."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:789
+msgid "Identification dialog airport with relation to regions"
+msgstr ""
+"Dialoogvenster Identificatieresultaten Airports met relatie naar Regions"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:791
+msgid ""
+"The Relation Reference widget has also an option to embed the form of the "
+"parent layer within the child one. It is available in  the "
+":menuselection:`Properties --> Attributes Form` menu of the airport layer: "
+"select the ``fk_region`` field and check the ``Show embedded form`` option."
+msgstr ""
+"De widget Relatie-verwijzing heeft ook een optie om het formulier van de "
+"ouderlaag in te bedden in de kindlaag. Het is beschikbaar in het menu "
+":menuselection:`Eigenschappen --> Formulier attributen` van de laag "
+"Airports: selecteer het veld ``fk_region`` en selecteer de optie ``Ingebed "
+"formulier weergeven``."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:796
+msgid ""
+"If you look at the feature dialog now, you will see, that the form of the "
+"region is embedded inside the airports form and will even have a combobox, "
+"which allows you to assign the current airport to another region."
+msgstr ""
+"Als u nu kijkt naar het dialoogvenster van het object, zult u zien dat het "
+"formulier van de regio nu is ingebed in het formulier van de vliegvelden en "
+"zelfs een combinatievak zal hebben, wat u in staat stelt het huidige "
+"vliegveld aan een andere regio toe te wijzen."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:805
+msgid ""
+"Moreover if you toggle the editing mode of the airport layer, the "
+"``fk_region`` field has also an autocompleter function: while typing you "
+"will see all the values of the ``id`` field of the region layer. Here it is "
+"possible to digitize a polygon for the region layer using the |signPlus| "
+"button if you chose the option ``Allow adding new features`` in the "
+":menuselection:`Properties --> Attributes Form` menu of the airport layer."
+msgstr ""
+"Meer nog, als u schakelt met de modus Bewerken van de laag airports, heeft "
+"het veld ``fk_region`` ook een functie automatisch aanvullen: tijdens het "
+"typen zult u alle waarden zien van het veld ``id`` van de laag regions. Hier"
+" is het mogelijk een polygoon te digitaliseren voor de laag regions met de "
+"knop |signPlus| als u kiest voor de knop ``Toevoegen nieuwe objecten "
+"toestaan`` in het menu :menuselection:`Eigenschappen --> Formulier "
+"attributen` van de laag airports."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:812
+msgid ""
+"The child layer can also be used in the :ref:`select_by_value` tool in order"
+" to select features of the parent layer based on attributes of their "
+"children."
+msgstr ""
+"De kindlaag kan ook worden gebruikt in het gereedschap "
+":ref:`select_by_value` om objecten van de ouderlaag te selecteren, gebaseerd"
+" op attributen van hun kinderen."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:815
+msgid ""
+"In :numref:`figure_select_by_value`, all the regions where the mean altitude"
+" of the airports is greater than 500 meters above sea level are selected."
+msgstr ""
+"In :numref:`figure_select_by_value` zijn alle regio's, waarvan de gemiddelde"
+" hoogte van de vliegvelden groter is dan 500 meter boven zeeniveau, "
+"geselecteerd."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:819
+msgid ""
+"You will find that many different aggregation functions are available in the"
+" form."
+msgstr ""
+"U zult merken dat veel verschillende functies voor samenvoegen in het "
+"formulier beschikbaar zijn."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:826
+msgid "Select parent features with child values"
+msgstr "Ouderobjecten selecteren met waarden van hun kind"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:833
+msgid "Introducing many-to-many (N-M) relations"
+msgstr "Introduceren van relaties veel-tot-veel (N-M)"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:835
+msgid ""
+"N-M relations are many-to-many relations between two tables. For instance, "
+"the ``airports`` and ``airlines`` layers: an airport receives several "
+"airline companies and an airline company flies to several airports."
+msgstr ""
+"N-M-relaties zijn veel-tot-veel-relaties tussen twee tabellen. Bijvoorbeeld "
+"voor de lagen ``airports`` en ``airlines``: een vliegveld ontvangt "
+"verscheidene luchtvaartmaatschappijen en een luchtvaartmaatschappij vliegt "
+"naar verscheidene vliegvelden."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:839
+msgid ""
+"This SQL code creates the three tables we need for an N-M relationship in a "
+"PostgreSQL/PostGIS schema named *locations*. You can run the code using the "
+":menuselection:`Database --> DB Manager…` for PostGIS or external tools such"
+" as `pgAdmin <https://www.pgadmin.org>`_. The airports table stores the "
+"``airports`` layer and the airlines table stores the ``airlines`` layer. In "
+"both tables few fields are used for clarity. The *tricky* part is the "
+"``airports_airlines`` table. We need it to list all airlines for all "
+"airports (or vice versa). This kind of table is known as a *pivot table*. "
+"The *constraints* in this table force that an airport can be associated with"
+" an airline only if both already exist in their layers."
+msgstr ""
+"Deze code voor SQL maakt de drie tabellen die we nodig hebben voor een "
+"relatie N-M in schema voor PostgreSQL/PostGIS, genaamd *locations*. U kunt "
+"de code uitvoeren met :menuselection:`Database --> DB Manager…` voor PostGIS"
+" of met externe programma's als `pgAdmin <https://www.pgadmin.org>`_. De "
+"tabel airports slaat de laag ``airports`` op en de tabel airlines slaat de "
+"laag ``airlines`` op. In beide tabellen worden voor helderheid enkele velden"
+" gebruikt. Het *moeilijke* gedeelte is de tabel ``airports_airlines``. We "
+"dienen er voor te zorgen dat die alle airlines voor alle airports vermeld "
+"(of vice versa). Dit soort tabel staat bekend als een *draaitabel*. De "
+"*voorwaarden* in deze tabel forceren dat een airport alleen kan worden "
+"geassocieerd met een airline als beide al in hun lagen bestaan."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:891
+msgid ""
+"Instead of PostgreSQL you can also use GeoPackage. In this case, the three "
+"tables can be created manually using the :menuselection:`Database --> DB "
+"Manager…`. In GeoPackage there are no schemas so the *locations* prefix is "
+"not needed."
+msgstr ""
+"In plaats van PostgreSQL kunt u ook GeoPackage gebruiken. In dit geval "
+"kunnen de drie tabellen handmatig worden gemaakt met "
+":menuselection:`Database --> DB Manager…`. In GeoPackage zijn geen schema's,"
+" dus het voorvoegsel *locations* is niet nodig."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:895
+msgid ""
+"Foreign key constraints in ``airports_airlines`` table can´t be created "
+"using :menuselection:`Table --> Create Table…` or :menuselection:`Table --> "
+"Edit Table…` so they should be created using :menuselection:`Database --> "
+"SQL Window…`. GeoPackage doesn't support *ADD CONSTRAINT* statements so the "
+"``airports_airlines`` table should be created in two steps:"
+msgstr ""
+"Voorwaarden voor secundaire sleutels in de tabel ``airports_airlines`` "
+"kunnen niet worden gemaakt met :menuselection:`Tabel --> Tabel maken…` of "
+":menuselection:`Tabel --> Tabel bewerken…` dus zouden zij moeten worden "
+"gemaakt met :menuselection:`Database --> SQL-venster…`. GeoPackage "
+"ondersteunt geen argumenten *ADD CONSTRAINT*, dus de tabel "
+"``airports_airlines`` zou in twee stappen moeten worden gemaakt:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:900
+msgid ""
+"Set up the table only with the ``id`` field using :menuselection:`Table --> "
+"Create Table…`"
+msgstr ""
+"Maak de tabel met alleen het veld ``ID`` met :menuselection:`Tabel --> Tabel"
+" maken…`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:901
+msgid ""
+"Using :menuselection:`Database --> SQL Window…`, type and execute this SQL "
+"code:"
+msgstr ""
+"Met :menuselection:`Database --> SQL-venster…`, typ en voer deze code voor "
+"SQL uit:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:919
+msgid ""
+"Then in QGIS, you should set up two :ref:`one-to-many relations "
+"<one_to_many_relation>` as explained above:"
+msgstr ""
+"Dan, in QGIS, zou u twee :ref:`een-tot-veel relaties <one_to_many_relation>`"
+" moeten instellen zoals hierboven uitgelegd:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:922
+msgid "a relation between ``airlines`` table and the pivot table;"
+msgstr "een relatie tussen de tabel ``airlines`` en de draaitabel;"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:923
+msgid "and a second one between ``airports`` table and the pivot table."
+msgstr "en een tweede tussen de tabel ``airports`` en de draaitabel."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:925
+msgid ""
+"An easier way to do it (only for PostgreSQL) is using the "
+":guilabel:`Discover Relations` in :menuselection:`Project --> Properties -->"
+" Relations`. QGIS will automatically read all relations in your database and"
+" you only have to select the two you need. Remember to load the three tables"
+" in the QGIS project first."
+msgstr ""
+"Een gemakkelijker manier om dit te doen (alleen voor PostgreSQL) is met "
+":guilabel:`Relaties ontdekken` in :menuselection:`Project --> Eigenschappen "
+"--> Relaties`. QGIS zal automatisch alle relaties in uw database lezen en u "
+"hoeft alleen de twee te kiezen die u nodig hebt. Vergeet niet eerst de drie "
+"tabellen in het project van QGIS in te lezen."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:935
+msgid "Relations and autodiscover"
+msgstr "Relaties en automatisch ontdekken"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:937
+msgid ""
+"In case you want to remove an ``airport`` or an ``airline``, QGIS won't "
+"remove the associated record(s) in ``airports_airlines`` table. This task "
+"will be made by the database if we specify the right *constraints* in the "
+"pivot table creation as in the current example."
+msgstr ""
+"In het geval u een ``airport`` of een ``airline`` wilt verwijderen, zal QGIS"
+" het/de geassocieerde record(s) in de tabel ``airports_airlines`` niet "
+"verwijderen. Deze taak zal door de database worden uitgevoerd als we de "
+"juiste *voorwaarden* specificeren bij het maken van de draaitabel, zoals in "
+"het huidige voorbeeld."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:942
+msgid "**Combining N-M relation with automatic transaction group**"
+msgstr "**N-M-relatie combineren met automatische transactie groep**"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:944
+msgid ""
+"You should enable the transaction mode in :menuselection:`Project Properties"
+" --> Data Sources -->` when working on such context. QGIS should be able to "
+"add or update row(s) in all tables (airlines, airports and the pivot "
+"tables)."
+msgstr ""
+"U zou de modus voor transacties in moeten schakelen in "
+":menuselection:`Eigenschappen --> Databronnen -->` bij het werken met een "
+"dergelijke context. QGIS zou in staat moeten zijn rij(en) in alle tabellen "
+"(airlines, airports en de draaitabel) toe te voegen en bij te werken."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:948
+msgid ""
+"Finally we have to select the right cardinalilty in the "
+":menuselection:`Layer Properties --> Attributes Form` for the ``airports`` "
+"and ``airlines`` layers. For the first one we should choose the **airlines "
+"(id)** option and for the second one the **airports (id)** option."
+msgstr ""
+"Tenslotte moeten we de juiste kardinaliteit selecteren in de "
+":menuselection:`Laageigenschappen --> Formulier attributen` voor de lagen "
+"``airports`` en ``airlines``. Voor de eerste zouden we de optie **airlines "
+"(id)** kiezen en voor de tweede de optie **airports (id)**."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:958
+msgid "Set relationship cardinality"
+msgstr "Kardinaliteit relatie instellen "
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:960
+msgid ""
+"Now you can associate an airport with an airline (or an airline with an "
+"airport) using :guilabel:`Add child feature` or :guilabel:`Link existing "
+"child feature` in the subforms. A record will automatically be inserted in "
+"the ``airports_airlines`` table."
+msgstr ""
+"Nu kunt u een airport aan een airline koppelen (of een airline aan een "
+"airport) met :guilabel:`Kindobject toevoegen` of :guilabel:`Bestaand "
+"kindobject koppelen` in de subformulieren. Een record zal automatisch worden"
+" ingevoegd in de tabel ``airports_airlines``."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:970
+msgid "N-M relationship between airports and airlines"
+msgstr "N-M-relaties tussen airports en airlines"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:972
+msgid "Using **Many to one relation** cardinality"
+msgstr "Kardinaliteit **Veel-tot één-relatie** gebruiken "
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:974
+msgid ""
+"Sometimes hiding the pivot table in an N-M relationship is not desirable. "
+"Mainly because there are attributes in the relationship that can only have "
+"values when a relationship is established. If your tables are layers (have a"
+" geometry field) it could be interesting to activate the :guilabel:`On map "
+"identification` option (:menuselection:`Layer Properties --> Attributes Form"
+" --> Available widgets --> Fields`) for the foreign key fields in the pivot "
+"table."
+msgstr ""
+"Soms is het verbergen van de draaitabel in een N-M-relatie niet gewenst. "
+"Voornamelijk omdat er attributen in de relatie kunnen staan die alleen "
+"waarden hebben als er een relatie is. Als uw tabellen lagen zijn (een veld "
+"geometrie hebben) zou het interessant kunnen zijn om de optie :guilabel:`Op "
+"kaart identificeren` (:menuselection:`Laageigenschappen --> Formulier "
+"attributen --> Beschikbare widgets --> Velden`) te activeren voor de velden "
+"met secundaire sleutels in de draaitabel."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:981
+msgid "**Pivot table primary key**"
+msgstr "**Primaire sleutel draaitabel**"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:983
+msgid ""
+"Avoid using multiple fields in the primary key in a pivot table. QGIS "
+"assumes a single primary key so a constraint like ``constraint "
+"airports_airlines_pkey primary key (airport_fk, airline_fk)`` will not work."
+msgstr ""
+"Vermijd het gebruiken van meerdere velden voor de primaire sleutel in een "
+"draaitabel. QGIS gaat uit van één enkele sleutel, dus een voorwaarde als "
+"``constraint airports_airlines_pkey primary key (airport_fk, airline_fk)`` "
+"zal niet werken."

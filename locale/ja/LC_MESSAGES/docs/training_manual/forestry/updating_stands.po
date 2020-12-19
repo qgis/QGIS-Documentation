@@ -1,0 +1,495 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:21+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:2
+msgid "|LS| Updating Forest Stands"
+msgstr "|LS| 林分を更新する"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:4
+msgid ""
+"Now that you have digitized the information from the old inventory maps and "
+"added the corresponding information to the forest stands, the next step "
+"would be to create the inventory of the current state of the forest."
+msgstr ""
+"古い目録の地図から情報をデジタル化し、林分に対応する情報を追加し終わりましたから、次のステップは、森林の現在の状態の目録を作成することです。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:14
+msgid ""
+"After digitizing the forest stands, you will add information such as new "
+"constraints given by conservation regulations."
+msgstr "林分をデジタル化した後、このような保全条例により与えられた新たな制約などの情報を追加します。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:17
+msgid ""
+"**The goal for this lesson:** To digitize a new set of forest stands from "
+"CIR aerial photographs and add information from other data-sets."
+msgstr "**このレッスンの目標：** 林分の新しいセットをCIR航空写真からデジタル化し、他のデータセットからの情報を追加します。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:22
+msgid "|basic| Comparing the Old Forest Stands to Current Aerial Photographs"
+msgstr "|basic| 古い林分を現在の航空写真と比較する"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:37
+msgid ""
+"The CIR images are from 2012. You can compare the stands that were created "
+"in 1994 with the situation almost 20 years later."
+msgstr "CIRの画像は2012年からです。ほぼ20年後の状況と1994年に作成された林分を比較できます。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:40
+msgid "Add your :kbd:`forest_stands_1994.shp` layer."
+msgstr ":kbd:`forest_stands_1994.shp` レイヤーを追加します。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:41
+msgid "Set its styling so that you can see through your polygons."
+msgstr "スタイルを設定することでポリゴンを透過して見えるようにします。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:42
+msgid ""
+"Review how the old forest stands follow (or not) what you might visually "
+"interpret as an homogeneous forest."
+msgstr "古い林分が視覚的に均質な森として解釈する可能性があるものをフォローする（またはしない）方法を確認してください。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:45
+msgid ""
+"Zoom and pan around the area. You probably will notice that some of the old "
+"forest stands might be still corresponding with the image but others are "
+"not."
+msgstr "エリアの周りにズームおよびパンします。おそらく、古い林分でなお静止画に対応するもの、しないものがわかるでしょう。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:48
+msgid ""
+"This is a normal situation, as some 20 years have passed by and different "
+"forest operations have been done (harvesting, thinning...). It is also "
+"possible that the forest stands looked homogeneous back in 1992 to the "
+"person who digitized them but as time has passed some forest has developed "
+"in different ways. Or simply the priorities for the forest inventory were "
+"different that they are today."
+msgstr ""
+"これは通常の状況です、というのは20年ほどが経過して別の森林施業（伐採、間伐...）が行われていますので。林分は1992年に戻りそれらをデジタル化した人には均質に見えていたが、時間が経過するにつれ、いくつかの森は異なった方法で発展してきた、ということもありえます。あるいは森林目録のための優先順位は今日あるものと単に異なっていました。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:55
+msgid ""
+"Next, you will create new forest stands for this image without using the old"
+" ones. Later you can compare them to see the differences."
+msgstr "次は、この画像に対する新しい林分を古い林分を使用せずに作成します。その後、違いを見るためにそれらを比較できます。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:60
+msgid "|basic| Interpreting the CIR Image"
+msgstr "|basic| CIR画像の解釈"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:62
+msgid ""
+"Let's digitize the same area that was covered by the old inventory, limited "
+"by the roads and the lake. You don't have to digitize the whole area, as in "
+"the previous exercise you can start with a vector file that already contains"
+" most of the forest stands."
+msgstr ""
+"道路や湖によって制限される、古い調査でカバーされていた同じ地域を、デジタル化してみましょう。前の練習でのようにすでに林分のほとんどが含まれているベクターファイルで開始できますので、地域全体をデジタル化する必要はありません。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:67
+msgid "Remove the :kbd:`forest_stands_1994.shp` layer."
+msgstr ":kbd:`forest_stands_1994.shp` レイヤーを外します。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:68
+msgid ""
+"Add the :kbd:`forest_stands_2012.shp` layer, located in the "
+":kbd:`exercise_data\\\\forestry\\\\` folder."
+msgstr ""
+":kbd:`forest_stands_2012.shp` レイヤーを追加します、 "
+":kbd:`exercise_data\\\\forestry\\\\` フォルダにあります。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:69
+msgid ""
+"Set the styling of this layer so that the polygons have no fill and the "
+"borders are visible."
+msgstr "このレイヤーのスタイルを、ポリゴンには塗りつぶしなしで、境界が表示されるように設定します。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:74
+msgid ""
+"You can see that a region to the North of the inventory area is still "
+"missing. That will be your task, digitizing the missing forest stands."
+msgstr "目録エリアの北に領域がまだ不足していることがわかります。不足している林分をデジタル化することは必要になります。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:77
+msgid ""
+"But before you start, spend some time reviewing the forest stands already "
+"digitized and the corresponding forest in the image. Try to get an idea "
+"about how the stands borders are decided, it helps if you have some forestry"
+" knowledge."
+msgstr ""
+"しかし、開始する前に、すでにデジタル化した林分および画像内の対応する森林を見直すことにいくらか時間を費やしてください。林分境界がどのように決定されるかについて理解してみてください、いくらか林業の知識を持っている場合それが役立ちます。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:81
+msgid "Some ideas about what you could identify from the images:"
+msgstr "画像から特定できるものについていくつかのアイデア："
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:83
+msgid ""
+"What forests are deciduous species (in Finland mostly birch forests) and "
+"which ones are conifers (in this region pine or spruce). In CIR images, "
+"deciduous species will often come as bright red color whereas conifers "
+"present dark green colors."
+msgstr ""
+"どの森林が落葉樹林（フィンランドではほとんどは白樺林）でどれが針葉樹林（この地域では松やトウヒ）であるか。CIR画像において、落葉樹林はしばしば暗緑色本、一方、針葉樹林は明るい赤色で来ます。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:87
+msgid ""
+"When a forest stand age changes, by looking at the  sizes of the tree crowns"
+" that can be identified in the imagery."
+msgstr "いつ林分の年齢が変化するか、樹冠の大きさを見ることで、画像内で識別できます。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:89
+msgid ""
+"The different forest stands' densities, for example forest stand were a "
+"thinning operation has recently been done would clearly show spaces between "
+"the tree crowns and should be easy to differentiate from other forest stands"
+" around it."
+msgstr ""
+"別の林分の密度は、例えば、最近間引きが行われた林分は樹冠の間に明確に隙間が見えるでしょうし、その周りの他の林分から区別することは容易なはずです。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:93
+msgid ""
+"Blueish areas indicate barren terrain, roads and urban areas, crops that "
+"have not started to grow etc."
+msgstr "青みを帯びた地域は不毛の地形、道路や市街地、成長を開始していない作物などを示しています"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:103
+msgid "|basic| |TY| Digitizing Forest Stands from CIR Imagery"
+msgstr "|basic| |TY| CIR画像から林分をデジタル化する"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:105
+msgid ""
+"When digitizing the forest stands, you should try to get forest areas that "
+"are as homogeneous as possible in terms of tree species, forest age, stand "
+"density... Don't be too detailed though, or you will end up making hundreds "
+"of small forest stands that would not be useful at all. You should try to "
+"get stands that are meaningful in the context of forestry, not too small (at"
+" least 0.5 ha) but not too big either (no more than 3 ha)."
+msgstr ""
+"林分をデジタル化するときは、樹種、林齢、林分密度...の観点から、可能な限り均一で取得しようとすべきです。しかし、詳細すぎてはいけません。まったく役に立たない小さなたくさんの林分を作ることになります。小さすぎず（少なくとも0.5ヘクタール）また大きすぎない（せいぜい3ヘクタール）、林業の文脈において意味ある林分を取得しようとする必要があります。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:112
+msgid ""
+"With this indications in mind, you can now digitize the missing forest "
+"stands."
+msgstr "この示唆を心に持って、今、不足している林分をデジタル化できます。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:114
+msgid "Enable editing for :kbd:`forest_stands_2012.shp`."
+msgstr ":kbd:`forest_stands_2012.shp` の編集を有効にします。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:115
+msgid "Set up the snapping and topology options as in the image."
+msgstr "画像のようにスナップとトポロジオプションを設定します。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:116
+msgid "Remember to click :guilabel:`Apply` or :guilabel:`OK`."
+msgstr ":guilabel:`適用` または :guilabel:`OK` をクリックすることを忘れないでください。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:121
+msgid ""
+"Start digitizing as you did in the previous lesson, with the only difference"
+" that you don't have any point layer that you are snapping to. For this area"
+" you should get around 14 new forest stands. While digitizing, fill in the "
+":kbd:`Stand_id` field with numbers starting at :kbd:`901`."
+msgstr ""
+"前のレッスンで行ったように、スナップされる点レイヤーがないことが違うだけで、デジタル化を開始します。この地域のためには約14の新しい林分を取得する必要があります。デジタル化しながら、"
+" :kbd:`Stand_id` フィールドに :kbd:`901` から始まる番号を記入します。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:126
+msgid "When you are finished your layer should look something like:"
+msgstr "作業が完了したら、レイヤーは次のようになります。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:131
+msgid ""
+"Now you have a  new set of polygons defining the different forest stands for"
+" the current situation as can interpreted from the CIR images. But you are "
+"obviously still missing the forest inventory data, right? For that you will "
+"still need to visit the forest and get some sample data that you will use to"
+" estimate the forest attributes for each of the forest stands. You will see "
+"how to do that in the next lesson."
+msgstr ""
+"今、別の森林を定義するポリゴンの新しいセットは、CIR画像から解釈できるように、現在の状況を表しています。しかし明らかにまだ森林目録データが欠落しています、よね？そのためにはまだ、森林を訪問し、各林分に対する森林属性を推定するために使用するいくつかのサンプルデータを取得する必要があります。次のレッスンでそれを行う方法について説明します。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:138
+msgid ""
+"For the moment, you still can improve your vector layer with some extra "
+"information that you have about conservation regulation that should be taken"
+" into account for this area."
+msgstr "現時点では、まだこの地域のために考慮されるべき保全規制について持っているいくつかの追加情報を使用して、ベクターレイヤーを改善できます。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:144
+msgid "|basic| |FA| Updating Forest Stands with Conservation Information"
+msgstr "|basic| |FA|  保全情報で林分を更新する"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:146
+msgid ""
+"For the area you are working with, it has been researched that the following"
+" conservation regulations must be taken into account while doing the forest "
+"planning:"
+msgstr "作業している地域のために、森林計画をしている間、以下の保全規制を考慮しなければならないことを研究されてきました。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:149
+msgid ""
+"Two locations of a protected species of Siberian flying squirrel (Pteromys "
+"volans) have been identified. According to the regulation, an area of 15 "
+"meters around the spots must be left untouched."
+msgstr ""
+"エゾモモンガ（Pteromysのvolans）の保護種の二箇所が同定されています。規定によれば、スポットの約15メートルの区域は手つかずのまま残さなければなりません。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:152
+msgid ""
+"A riparian forest of special interest growing along a stream in the area "
+"must be protected. In a visit to the field, it was found that 20 meters to "
+"both sides of the stream must be protected."
+msgstr ""
+"地域の中の流れに沿って成育している特別な関心の水辺林は保護されなければなりません。現地調査で、流れの両側までの20メートルが保護されなければならないことがわかりました。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:156
+msgid ""
+"You have one vector file containing the information about the squirrel "
+"locations and another containing the digitized stream running in the North "
+"area towards the lake. From the :kbd:`exercise_data\\\\forestry\\\\` folder,"
+" add the vector files :kbd:`squirrel.shp` and :kbd:`stream.shp`."
+msgstr ""
+"リスの場所や湖に向けて北エリアで実行されているデジタル化された流れを含む他の情報を含む1つのベクターファイルを持っています。 "
+":kbd:`exercise_data\\\\forestry\\\\` フォルダから、ベクターファイル :kbd:`squirrel.shp` と "
+":kbd:`stream.shp` を追加します。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:161
+msgid ""
+"For the protection of the squirrels locations, you are going to add a new "
+"attribute (column) to your new forest stands that will contain information "
+"about point locations that have to be protected. That information will later"
+" be available whenever a forest operation is planned, and the field team "
+"will be able to mark the area that has to be left untouched before the work "
+"starts."
+msgstr ""
+"リスの場所の保護のために、保護する必要がある点の位置に関する情報が含まれている新しい林分に新しい属性（列）を追加しようとしています。その情報は、森林施業が計画されるときはいつでも、後で利用できるようになり、野外チームは作業を開始する前に手つかずで残す必要がある地域をマークできるでしょう。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:167
+msgid "Open the attribute table for the :kbd:`squirrel` layer."
+msgstr ":kbd:`リス` レイヤーのための属性テーブルを開きます。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:168
+msgid ""
+"You can see that there are two locations that are defined as Siberian flying"
+" squirrel, and that the area to be protected is indicated by a distance of "
+"15 meters from the locations."
+msgstr "エゾモモンガと定義されている2つの場所があること、及び保護すべき地域がそれらの場所から15メートルの距離で示されていることがわかります。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:172
+msgid ""
+"To join the information about the squirrels to your forest stands, you can "
+"use the :guilabel:`Join attributes by location`:"
+msgstr "林分にリスについての情報を結合するには、 :guilabel:`位置によって属性を結合` を使用できます："
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:175
+msgid ""
+"Open :menuselection:`Vector --> Data Management Tools --> Join attributes by"
+" location`."
+msgstr ":menuselection:`ベクター --> データ管理ツール --> 位置によって属性を結合` を開きます。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:176
+msgid ""
+"Set the :kbd:`forest_stands_2012.shp` layer as the :guilabel:`Target vector "
+"layer`."
+msgstr ""
+":guilabel:`結合先ベクターレイヤー` として :kbd:`forest_stands_2012.shp` レイヤーを設定してください。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:177
+msgid ""
+"As :guilabel:`Join vector layer` select the :kbd:`squirrel.shp` point layer."
+msgstr ":guilabel:`結合ベクターレイヤー` として :kbd:`squirrel.shp` ポイントレイヤーを選択してください。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:178
+msgid "Name the output file as :kbd:`stands_squirrel.shp`."
+msgstr "出力ファイルに :kbd:`stands_squirrel.shp` と名前を付けます。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:179
+msgid ""
+"In :guilabel:`Output table` select :guilabel:`Keep all records (including "
+"non-matching target records)`. So that you keep all the forest stands in the"
+" layer instead of only keeping those that are spatially related to the "
+"squirrel locations."
+msgstr ""
+":guilabel:`出力テーブル` で :guilabel:`すべてのレコードを保持（マッチしない対象レコードを含む）` "
+"を選択します。だから、リスの場所に空間的に関連づけられるものだけを保持するのでなく、レイヤー中のすべての林分を保持します。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:183
+msgid "Click :guilabel:`OK`."
+msgstr ":guilabel:`OK` をクリックします。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:184
+msgid "Select :guilabel:`Yes` when prompted to add the layer to the TOC."
+msgstr "TOCにレイヤーを追加するか求められたとき :guilabel:`はい` を選択します。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:185
+msgid "Close the dialogue box."
+msgstr "ダイアログボックスを閉じます。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:190
+msgid ""
+"Now you have a new forest stands layer, :kbd:`stands_squirrel` where there "
+"are new attributes corresponding to the protection information related to "
+"the Siberian flying squirrel."
+msgstr "エゾモモンガに関連した保護情報に対応した新しい属性がある :kbd:`stands_squirrel` 今、新しい林分レイヤー。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:194
+msgid ""
+"Open the table of the new layer and order it so that the forest stands with "
+"information for the :guilabel:`Protection` attribute are on top. You should "
+"have now two forest stands where the squirrel has been located:"
+msgstr ""
+"新しいレイヤーのテーブルを開き、 :guilabel:`Protection` "
+"属性のための情報を持つ林分が一番上になるように整列します。リスが配置された場所2つの林分を今持っている必要があります。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:201
+msgid ""
+"Although this information might be enough, look at what areas related to the"
+" squirrels should be protected. You know that you have to leave a buffer of "
+"15 meters around the squirrels location:"
+msgstr ""
+"この情報で十分かもしれませんが、リスに関連するどの地域が保護されるべきかを見てください。リスの場所を中心に15メートルのバッファを残す必要があることはわかっています："
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:205
+msgid "Open :menuselection:`Vector --> Geoprocessing Tools --> Buffer`."
+msgstr ":menuselection:`ベクター --> ジオプロセッシングツール --> バッファ` を開きます。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:206
+msgid "Make a buffer of 15 meters for the :kbd:`squirrel` layer."
+msgstr ":kbd:`squirrel` レイヤーのための15メートルのバッファを作成します。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:207
+msgid "Name the result :kbd:`squirrel_15m.shp`."
+msgstr "結果に :kbd:`squirrel_15m.shp` と名前を付けます。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:212
+msgid ""
+"You will notice that if you zoom in to the location in the Northern part of "
+"the area, the buffer area extends to the neighbouring stand as well. This "
+"means that whenever a forest operation would take place in that stand, the "
+"protected location should also be taken into account."
+msgstr ""
+"地域の北部の場所にズームインすると、バッファ領域が隣りの林分にも同様に延びていることがわかります。これは、その林分で森林施業が行われるときはいつも、保護される場所も考慮すべきであることを意味します。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:220
+msgid ""
+"From your previous analysis, you did not get that stand to register "
+"information about the protection status. To solve this problem:"
+msgstr "以前の分析からは、その林分に保護のステータスに関する情報を登録することができませんでした。この問題を解決するには："
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:223
+msgid "Run the :guilabel:`Join attributes by location` tool again."
+msgstr "再び :guilabel:`位置で属性を結合` ツールを実行します。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:224
+msgid "But this time use the :kbd:`squirrel_15m` layer as join layer."
+msgstr "しかし、今回は結合レイヤーとして :kbd:`squirrel_15m` レイヤーを使用しています。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:225
+msgid "Name the output file as :kbd:`stands_squirrel_15m.shp`."
+msgstr ":kbd:`stands_squirrel_15m.shp` として出力ファイルに名前を付けます。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:230
+msgid ""
+"Open the attribute table for the this new layer and note that now you have "
+"three forest stands that have the information about the protection "
+"locations. The information in the forest stands data will indicate to the "
+"forest manager that there are protection considerations to be taken into "
+"account. Then he or she can get the location from the :kbd:`squirrel` "
+"dataset, and visit the area to mark the corresponding buffer around the "
+"location so that the operators in the field can avoid disturbing the "
+"squirrels environment."
+msgstr ""
+"この新しいレイヤーの属性テーブルを開き、今保護の場所についての情報を持っている3つの林分を持っていることに注意してください。林分データの中の情報は、考慮に入れるべき保護の考慮事項があることを森林管理者に指示しています。それから森林管理者は"
+" :kbd:`squirrel` "
+"データセットから位置を取得でき、その地域を訪れて野外でのオペレーターがリスの環境を乱さないように場所を中心に対応するバッファをマークできます。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:239
+msgid "|basic| |TY| Updating Forest Stands with Distance to the Stream"
+msgstr "|basic| |TY| 流れへの距離で林分を更新する"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:241
+msgid ""
+"Following the same approach as indicated for the protected squirrel "
+"locations you can now update your forest stands with protection information "
+"related to the stream identified in the field:"
+msgstr "保護されたリスの位置について示されたのと同じアプローチに従って、今、林分を野外で識別された流れに関連した保護情報に更新できます。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:245
+msgid "Remember that the buffer in this case is 20 meters around it."
+msgstr "この場合、バッファはその周り20メートルであることを覚えておいてください。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:246
+msgid ""
+"You want to have all the protection information in the same vector file, so "
+"use the :kbd:`stands_squirrel_15m` layer as the target."
+msgstr ""
+"すべての保護情報を同じベクターファイル内に持ちたいので、ターゲットとして :kbd:`stands_squirrel_15m` "
+"レイヤーを使用してください。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:248
+msgid "Name your output as :kbd:`forest_stands_2012_protect.shp`."
+msgstr "出力に :kbd:`forest_stands_2012_protect.shp` と名前を付けます。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:250
+msgid ""
+"Open the attributes table for the new vector layer and confirm that you now "
+"have all the protection information for the stands that are affected by the "
+"protection measures to protect the riparian forest associated with the "
+"stream."
+msgstr ""
+"新しいベクターレイヤーの属性テーブルを開き、今、流れに関連付けられた水辺林を保護するための保護措置の影響を受けている林分のためのすべての保護情報を持っていることを確認します。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:254
+msgid "Save your QGIS project."
+msgstr "QGISプロジェクトを保存します。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:257
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:259
+msgid ""
+"You have seen how to interpret CIR images to digitize forest stands. Of "
+"course it would take some practice to make more accurate stands and usually "
+"using other information like soil maps would give better results, but you "
+"know now the basis for this type of task. And adding information from other "
+"datasets resulted to be quite a trivial task."
+msgstr ""
+"林分をデジタル化するCIR画像をどのように解釈するかを見てきました。もちろんより正確な林分を作るためにはいくらか練習がいるでしょうし、通常は土壌地図のような他の情報を使用すればより良い結果が得られるでしょうが、これでこの種の業務のための基礎はわかりました。そして、他のデータセットからの情報を追加することで、非常に簡単な作業となりました。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:266
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:268
+msgid ""
+"The forest stands you digitized will be used for planning forestry "
+"operations in the future, but you still need to get more information about "
+"the forest. In the next lesson, you will see how to plan a set of sampling "
+"plots to inventory the forest area you just digitized, and get the overall "
+"estimate of forest parameters."
+msgstr ""
+"デジタル化した林分は将来的に森林施業を計画するために使用されるでしょうが、まだ森林に関する詳細な情報を取得する必要があります。次のレッスンでは、調査にだけのデジタル化された森林面積をサンプリングプロットのセットを計画する方法を見て、森林のパラメーターの全体的な見積もりを取得します。"

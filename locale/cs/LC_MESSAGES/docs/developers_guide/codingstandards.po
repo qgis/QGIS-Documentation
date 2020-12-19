@@ -1,0 +1,197 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:24+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Czech (https://www.transifex.com/qgis/teams/6144/cs/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: cs\n"
+"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
+
+#: ../../docs/developers_guide/codingstandards.rst:5
+msgid "QGIS Coding Standards"
+msgstr "QGIS kódovací standardy"
+
+#: ../../docs/developers_guide/codingstandards.rst:10
+msgid "These standards should be followed by all QGIS developers."
+msgstr "Těmito standardy by se měli řídit všichni vývojáři QGIS"
+
+#: ../../docs/developers_guide/codingstandards.rst:13
+msgid "Classes"
+msgstr "Třídy"
+
+#: ../../docs/developers_guide/codingstandards.rst:17
+#: ../../docs/developers_guide/codingstandards.rst:212
+msgid "Names"
+msgstr "Názvy"
+
+#: ../../docs/developers_guide/codingstandards.rst:19
+msgid "Class in QGIS begin with Qgs and are formed using camel case."
+msgstr "Třída v QGIS začína s Qgs a je formována za použití CamelCase."
+
+#: ../../docs/developers_guide/codingstandards.rst:21
+#: ../../docs/developers_guide/codingstandards.rst:191
+#: ../../docs/developers_guide/codingstandards.rst:263
+msgid "Examples:"
+msgstr "Příklady:"
+
+#: ../../docs/developers_guide/codingstandards.rst:23
+msgid "``QgsPoint``"
+msgstr "``QgsPoint``"
+
+#: ../../docs/developers_guide/codingstandards.rst:24
+msgid "``QgsMapCanvas``"
+msgstr "``QgsMapCanvas``"
+
+#: ../../docs/developers_guide/codingstandards.rst:25
+msgid "``QgsRasterLayer``"
+msgstr "``QgsRasterLayer``"
+
+#: ../../docs/developers_guide/codingstandards.rst:29
+msgid "Members"
+msgstr "Členy"
+
+#: ../../docs/developers_guide/codingstandards.rst:32
+msgid ""
+"Class member names begin with a lower case m and are formed using mixed "
+"case."
+msgstr ""
+"Jména členů třídy začínají malým písmenem m a jsou formovány s použitím "
+"velkých i malých písmen."
+
+#: ../../docs/developers_guide/codingstandards.rst:35
+msgid "``mMapCanvas``"
+msgstr "``mMapCanvas``"
+
+#: ../../docs/developers_guide/codingstandards.rst:36
+msgid "``mCurrentExtent``"
+msgstr "``mCurrentExtent``"
+
+#: ../../docs/developers_guide/codingstandards.rst:38
+msgid ""
+"All class members should be private. Public class members are STRONGLY "
+"discouraged. Protected members should be avoided when the member may need to"
+" be accessed from Python subclasses, since protected members cannot be used "
+"from the Python bindings."
+msgstr ""
+"Všechny členy třídy by měli být privátní. Veřejné člyny tříd jsou SILNĚ "
+"nedoporučovány. Chráněných členů by se mělo být vyvarováno, pokud by mohlo "
+"být k členu přistupováno z Pythonovských podtříd, jelikož chráněné členy "
+"nemohou být použity z Pythonovských vazeb."
+
+#: ../../docs/developers_guide/codingstandards.rst:46
+msgid "``sRefCounter``"
+msgstr "``sRefCounter``"
+
+#: ../../docs/developers_guide/codingstandards.rst:47
+msgid "``DEFAULT_QUEUE_SIZE``"
+msgstr "``DEFAULT_QUEUE_SIZE``"
+
+#: ../../docs/developers_guide/codingstandards.rst:58
+msgid "``mapCanvas()``"
+msgstr "``mapCanvas()``"
+
+#: ../../docs/developers_guide/codingstandards.rst:59
+msgid "``currentExtent()``"
+msgstr "``currentExtent()``"
+
+#: ../../docs/developers_guide/codingstandards.rst:66
+msgid "Functions"
+msgstr "Funkce"
+
+#: ../../docs/developers_guide/codingstandards.rst:72
+msgid "``updateMapExtent()``"
+msgstr "``updateMapExtent()``"
+
+#: ../../docs/developers_guide/codingstandards.rst:73
+msgid "``setUserOptions()``"
+msgstr "``setUserOptions()``"
+
+#: ../../docs/developers_guide/codingstandards.rst:84
+msgid "Function Arguments"
+msgstr "Argumenty funkcí"
+
+#: ../../docs/developers_guide/codingstandards.rst:100
+msgid "Function Return Values"
+msgstr "Vrácené hodnoty funkcí"
+
+#: ../../docs/developers_guide/codingstandards.rst:107
+msgid "``int maximumValue() const``"
+msgstr "``int maximumValue() const``"
+
+#: ../../docs/developers_guide/codingstandards.rst:108
+msgid "``const LayerSet& layers() const``"
+msgstr "``const LayerSet& layers() const``"
+
+#: ../../docs/developers_guide/codingstandards.rst:183
+msgid "Qt Designer"
+msgstr "Qt Návrhář"
+
+#: ../../docs/developers_guide/codingstandards.rst:186
+msgid "Generated Classes"
+msgstr "Generované třídy"
+
+#: ../../docs/developers_guide/codingstandards.rst:193
+msgid "``QgsPluginManagerBase``"
+msgstr "``QgsPluginManagerBase``"
+
+#: ../../docs/developers_guide/codingstandards.rst:194
+msgid "``QgsUserOptionsBase``"
+msgstr "``QgsUserOptionsBase``"
+
+#: ../../docs/developers_guide/codingstandards.rst:198
+msgid "Dialogs"
+msgstr "Dialogy"
+
+#: ../../docs/developers_guide/codingstandards.rst:209
+msgid "C++ Files"
+msgstr "C++ Soubory"
+
+#: ../../docs/developers_guide/codingstandards.rst:258
+msgid "Variable Names"
+msgstr "Proměné názvy"
+
+#: ../../docs/developers_guide/codingstandards.rst:265
+msgid "``mapCanvas``"
+msgstr "``mapCanvas``"
+
+#: ../../docs/developers_guide/codingstandards.rst:266
+msgid "``currentExtent``"
+msgstr "``currentExtent``"
+
+#: ../../docs/developers_guide/codingstandards.rst:325
+msgid "Editing"
+msgstr "Editování"
+
+#: ../../docs/developers_guide/codingstandards.rst:508
+msgid "``0 == value`` instead of ``value == 0``"
+msgstr "``0 == value`` namísto ``value == 0``"
+
+#: ../../docs/developers_guide/codingstandards.rst:527
+msgid "or this:"
+msgstr "nebo toto:"
+
+#: ../../docs/developers_guide/codingstandards.rst:544
+msgid "Consider:"
+msgstr "Zvaž:"
+
+#: ../../docs/developers_guide/codingstandards.rst:586
+msgid ""
+"`Effective Modern C++ <http://shop.oreilly.com/product/0636920033707.do>`_, "
+"Scott Meyers"
+msgstr ""
+"`Effective Modern C++ <http://shop.oreilly.com/product/0636920033707.do>`_, "
+"Scott Meyers"

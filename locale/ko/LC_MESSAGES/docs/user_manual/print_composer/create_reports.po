@@ -1,0 +1,527 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:27+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2020\n"
+"Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:8
+msgid "Creating a Report"
+msgstr "보고서 생성 작업"
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:15
+msgid "This section will help you set up a report in QGIS."
+msgstr "QGIS에서 보고서를 설정하는 방법에 대해 설명합니다."
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:18
+msgid "What is it?"
+msgstr "보고서란?"
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:19
+msgid ""
+"By definition, a GIS report is a document containing information organized "
+"in a narrative way, containing maps, text, graphics, tables, etc. A report "
+"can be prepared ad hoc, periodic, recurring, regular, or as required. "
+"Reports may refer to specific periods, events, occurrences, subjects or "
+"locations."
+msgstr ""
+"GIS 보고서란 당연히 서술적인 방식으로 정리된 정보를 맵, 텍스트, 그래픽, 표 등과 함께 담고 있는 문서를 말합니다. 즉석에서, "
+"주기적으로, 반복적으로, 규칙적으로, 또는 필요할 때마다 보고서를 준비할 수 있습니다. 보고서는 특정한 기간, 사건, 출현, 주제 또는 "
+"위치를 참조할 수도 있습니다."
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:27
+msgid ""
+"In QGIS, a :guilabel:`Report` is an extension of a :ref:`Layouts "
+"<label_printlayout>`."
+msgstr "QGIS에서 :guilabel:`Report` 는 :ref:`조판기 <label_printlayout>` 의 연장입니다."
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:30
+msgid ""
+"Reports allow users to output their GIS projects in a simple, quick and "
+"structured way."
+msgstr "보고서는 사용자가 자신의 GIS 프로젝트를 간결하고 구조적인 방식으로 출력할 수 있게 해줍니다."
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:33
+msgid ""
+"A report can be created with :menuselection:`Project --> New Report` or "
+"inside the :menuselection:`Project --> Layout Manager`."
+msgstr ""
+":menuselection:`Project --> New Report` 메뉴 또는 :menuselection:`Project --> "
+"Layout Manager` 대화창에서 보고서를 생성할 수 있습니다."
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:36
+msgid ""
+"The maps in QGIS reports behave in the same way as maps in print layouts and"
+" atlases. We will concentrate on the specifics of QGIS reports. For details "
+"on map handling, see the sections on :ref:`print layouts <overview_layout>` "
+"and :ref:`atlases <atlas_generation>`."
+msgstr ""
+"QGIS 보고서에 있는 맵도 인쇄 조판기와 지도책에 있는 맵과 동일한 방식으로 동작합니다. 여기에서는 QGIS 보고서의 세부 사항에 "
+"집중할 것입니다. 맵 처리에 대한 자세한 내용은 :ref:`인쇄 조판기 <overview_layout>` 와 :ref:`지도책 "
+"<atlas_generation>` 을 참조하십시오."
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:44
+msgid "Get started"
+msgstr "시작하기"
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:45
+msgid ""
+"In the :guilabel:`Layout Manager` dialog a report can be created through "
+":guilabel:`New from template` by selecting the dropdown option "
+":guilabel:`Empty Report` and hitting the :guilabel:`Create...` button."
+msgstr ""
+":guilabel:`Layout Manager` 대화창에서 :guilabel:`New from template` 드롭다운 목록의 "
+":guilabel:`Empty Report` 를 선택한 다음 :guilabel:`Create...` 버튼을 클릭하면 보고서를 생성할 수 "
+"있습니다."
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:50
+msgid ""
+"For this example, we use some administrative boundaries, populated places, "
+"ports and airports from the `Natural Earth dataset "
+"<https://www.naturalearthdata.com/downloads/>`_ (1:10M)."
+msgstr ""
+"이 예시에서는 `자연 지구(Natural Earth) 데이터셋 "
+"<https://www.naturalearthdata.com/downloads/>`_ (1:10,000,000)의 몇몇 행정 경계, 인구"
+" 밀집 지역, 항구 및 공항을 사용합니다."
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:57
+msgid ""
+"Using the :menuselection:`Project --> New Report` command, we create a blank"
+" report. Initially, there is not much to look at – the dialog which is "
+"displayed looks much like the print layout designer, except for the "
+":guilabel:`Report Organizer` panel to the left:"
+msgstr ""
+":menuselection:`Project --> New Report` 메뉴 옵션을 선택하면, 비어 있는 보고서를 생성합니다. 처음에는 "
+"별로 볼 것도 없습니다 ─ 이 대화창은 왼쪽에 있는 :guilabel:`Report Organizer` 패널을 제외하면 인쇄 조판 "
+"설계자와 매우 비슷합니다:"
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:67
+msgid "Layout Report Workspace"
+msgstr "조판기 보고서 작업 공간"
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:69
+msgid ""
+"QGIS reports can consist of multiple, nested sections. In our new blank "
+"report we initially only have the main report section. The only options for "
+"this report section is :guilabel:`Include report header` and "
+":guilabel:`Include report footer`. If we enable these options, a header will"
+" be included as the first page(s) (individual parts of reports can be multi-"
+"page if desired) in the report, and a footer will constitute the last "
+"page(s). Enable the header (:guilabel:`Include report header`), and hit the "
+":guilabel:`Edit` button next to it:"
+msgstr ""
+"QGIS 보고서는 여러 개의 내포된 부분들로 이루어질 수 있습니다. 비어 있는 새 보고서는 처음에 주요 보고서 부분만 가지고 있습니다. "
+"이 보고서 부분을 위한 옵션은 :guilabel:`Include report header` 와 :guilabel:`Include "
+"report footer` 뿐입니다. 이 옵션들을 활성화하면, 헤더가 보고서의 첫 번째 페이지(들)로 포함되고, 푸터가 마지막 "
+"페이지(들)를 구성할 것입니다. (필요한 경우 보고서의 개별 부분들을 여러 페이지로 만들 수 있습니다.) 헤더를 활성화하고 "
+"(:guilabel:`Include report header`) 옆에 있는 :guilabel:`Edit` 버튼을 클릭하십시오:"
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:84
+msgid ""
+"A few things happen as a result. Firstly, an edit pencil is shown next to "
+":guilabel:`Report` in the :guilabel:`Report Organizer`, indicating that the "
+"report section is currently being edited in the designer. We also see a new "
+"page with a small :guilabel:`Report Header` title. The page has *landscape* "
+"orientation by default, but this (and other properties of the page) can be "
+"changed by right-clicking on the page and choosing :menuselection:`Page "
+"properties`. This will bring up the :guilabel:`Item properties` tab for the "
+"page, and page :guilabel:`Size`, :guilabel:`Width`, :guilabel:`Height`, and "
+"more can be specified."
+msgstr ""
+"몇 가지 일이 일어납니다. 먼저, 설계자의 보고서 부분이 현재 편집중이라는 사실을 나타내는 편집 연필이 :guilabel:`Report "
+"Organizer` 의 :guilabel:`Report` 옆에 표시됩니다. 또 작은 :guilabel:`Report Header` 제목을"
+" 가진 새 페이지도 추가됩니다. 이 페이지는 기본적으로 *랜드스케이프* 방향이지만, 페이지를 오른쪽 클릭하고 "
+":menuselection:`Page properties` 를 선택하면 이 속성을 (그리고 페이지의 다른 속성도) 변경할 수 있습니다. "
+"이렇게 하면 페이지 :guilabel:`Item properties` 탭을 불러와서 페이지의 :guilabel:`Size`, "
+":guilabel:`Width`, :guilabel:`Height` 는 물론 더 많은 속성을 설정할 수 있습니다."
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:96
+msgid ""
+"In QGIS reports, every component of the report is made up of individual "
+"layouts. They can be created and modified using the same tools as for "
+"standard print layouts – so you can use any desired combination of labels, "
+"pictures, maps, tables, etc. Let us add some items to our report header to "
+"demonstrate:"
+msgstr ""
+"QGIS 보고서에서, 보고서의 모든 구성 요소는 개별 조판으로 만들어집니다. 표준 인쇄 조판과 동일한 도구를 사용해서 보고서의 모든 "
+"항목을 생성하고 수정할 수 있습니다. 즉 사용자가 원하는 모든 라벨, 그림, 맵, 표 등을 조합해서 사용할 수 있습니다. 예시를 위해 "
+"보고서 헤더에 몇몇 항목을 추가해봅시다:"
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:106
+msgid ""
+"We will also create a simple footer for the report by checking the "
+":guilabel:`Include report footer` option and hitting :guilabel:`Edit`."
+msgstr ""
+":guilabel:`Include report footer` 옵션을 활성화하고 :guilabel:`Edit` 버튼을 클릭해서 보고서에 "
+"간단한 푸터도 생성하겠습니다."
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:112
+msgid ""
+"Before proceeding further, let us export this report and see what we get. "
+"Exporting is done from the :menuselection:`Report` menu – in this case we "
+"select :menuselection:`Export Report as PDF...` to render the whole report "
+"to a PDF file. Here is the not-very-impressive result – a two page PDF "
+"consisting of our header and footer:"
+msgstr ""
+"다음 단계로 넘어가기 전에, 이 보고서를 내보내서 어떤 산출물이 나오는지 봅시다. :menuselection:`Report` 메뉴에서 "
+"내보내기를 할 수 있습니다 ─ 이 경우 :menuselection:`Export Report as PDF...` 메뉴를 선택해서 전체 "
+"보고서를 PDF 파일로 렌더링하겠습니다. 다음은 헤더와 푸터로 이루어진, 그리 인상적이지도 않은 산출물인 두 페이지짜리 PDF입니다:"
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:123
+msgid ""
+"Let us make things more interesting. By hitting the |signPlus| :sup:`Add "
+"Section` button in the :guilabel:`Report Organizer`, we are given a choice "
+"of new sections to add to our report."
+msgstr ""
+"좀 더 재미있는 보고서를 만들어볼까요. :guilabel:`Report Organizer` 에서 |signPlus| :sup:`Add "
+"Section` 버튼을 클릭하면, 보고서에 추가할 새로운 부분을 선택할 수 있습니다."
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:131
+msgid ""
+"There are two options: :guilabel:`Static Layout Section` and "
+":guilabel:`Field Group Section`."
+msgstr ""
+":guilabel:`Static Layout Section` 과 :guilabel:`Field Group Section` 옵션 가운데 "
+"하나를 선택할 수 있습니다."
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:134
+msgid ""
+"The :guilabel:`Add Static Layout Section` is a single, static body layout. "
+"This can be used to embed static layouts mid-way through a report."
+msgstr ""
+":guilabel:`Add Static Layout Section` 옵션은 정적인 단일 본문(body) 조판을 추가합니다. 보고서 중간에"
+" 정적인 조판을 삽입하는 데 사용할 수 있습니다."
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:138
+msgid ""
+"The :guilabel:`Field Group Section` repeats its body layout for every "
+"feature of a layer. The features are sorted by the selected grouping feature"
+" (with an option for ascending/descending sort). If a field group section "
+"has child sections (e.g. another field group section with a different "
+"field), then only features with unique values for the group feature are "
+"iterated over. This allows nested reports."
+msgstr ""
+":guilabel:`Field Group Section` 옵션은 레이어의 모든 피처에 대해 필드 그룹의 본문 조판을 반복합니다. 선택한 "
+"그룹화 피처로 피처들을 정렬합니다. (오름차순/내림차순 정렬 옵션이 있습니다.) 필드 그룹 부분이 (예를 들어 다른 필드를 가진 또다른 "
+"필드 그룹 부분 같은) 자식 부분을 가지고 있는 경우, 그룹 피처에 대해 유일값을 가진 피처들만 반복 작업합니다. 이렇게 하면 내포된 "
+"보고서를 만들 수 있습니다."
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:147
+msgid ""
+"For now we will add a :guilabel:`Field Group Section` to our report. At its "
+"most basic level, you can think of a :guilabel:`Field Group Section` as the "
+"equivalent of a :ref:`print atlas <atlas_generation>`: you select a layer to"
+" iterate over, and the report will insert a section for each feature found. "
+"Selecting the new :guilabel:`Field Group Section` reveals a number of new "
+"related settings:"
+msgstr ""
+"이제 보고서에 :guilabel:`Field Group Section` 을 추가하겠습니다. 가장 기초적인 수준에서, "
+":guilabel:`Field Group Section` 을 :ref:`지도책 생성 <atlas_generation>` 과 동등하다고 "
+"생각할 수 있습니다. 반복 작업할 레이어를 선택하면, 발견된 피처 각각에 대해 보고서가 필드 그룹 부분을 삽입할 것입니다. 새 "
+":guilabel:`Field Group Section` 을 선택하면 관련된 새로운 설정 여러 개를 볼 수 있습니다:"
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:159
+msgid ""
+"In this case we’ve setup our Field Group so that we iterate over all the "
+"states from the `Admin Level 1` layer, using the values from the "
+":guilabel:`adm1name` field. The same options to include header and footer "
+"are present, together with a new option to include a :guilabel:`body` for "
+"this section. We’ll do that, and edit the body:"
+msgstr ""
+"이 경우 :guilabel:`adm1name` 필드의 값을 사용해서  'Admin Level 1' 레이어의 모든 주(州)를 반복 "
+"작업하도록 필드 그룹을 설정했습니다. 헤더 및 푸터를 포함시키는 기존 옵션은 물론 이 부분에 :guilabel:`body` 를 포함시키는"
+" 새 옵션도 있습니다. 이 옵션으로 본문을 추가하고 편집해보겠습니다:"
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:169
+msgid ""
+"Our body now consists of a map and a label showing the name of the state. To"
+" include the name of the state, we selected :menuselection:`Add Item --> Add"
+" Label` and data defined the text under :guilabel:`Main Properties` with the"
+" help of :guilabel:`Insert an Expression...`."
+msgstr ""
+"이제 맵과 주의 명칭을 표시하는 라벨로 본문을 구성합니다. 주의 명칭을 포함시키기 위해, :menuselection:`Add Item "
+"--> Add Label` 메뉴 옵션을 선택한 다음 :guilabel:`Insert an Expression...` 을 통해 "
+":guilabel:`Main Properties` 아래에서 텍스트를 데이터 정의했습니다."
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:175
+msgid ""
+"The result was the following expression (`name` is the name of the attribute"
+" in the `Admin Level 1` layer that contains the name of the state)::"
+msgstr "다음 표현식을 사용했습니다('name' 은 주의 명칭을 담고 있는 'Admin Level 1' 레이어 속성의 명칭입니다.):"
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:181
+msgid ""
+"The map is set to follow the current report feature (enabled by checking "
+":guilabel:`Controlled by Report` – just like a map item in an atlas will "
+"follow the current atlas feature when :ref:`Controlled by Atlas "
+"<controlled_atlas>` is checked):"
+msgstr ""
+"맵이 현재 보고서 피처를 따르도록 설정합니다( |checkbox| :guilabel:`Controlled by Report` 옵션을 "
+"체크해서 활성화합니다 ─ :ref:`지도책으로 제어 <controlled_atlas>` 를 활성화하면 지도책이 현재 지도책 피처를 따르는"
+" 것과 동일합니다):"
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:189
+msgid ""
+"If we went ahead and exported our report now, we’d get something like this:"
+msgstr "이제 보고서를 내보내면, 다음과 같은 산출물이 나옵니다:"
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:196
+msgid "The report header, a page for each state, and the report footer."
+msgstr "보고서 헤더, 각 주에 대한 페이지와 보고서 푸터"
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:198
+msgid "So more or less an atlas, but with a header and footer page."
+msgstr "헤더와 푸터 페이지가 있긴 하지만 이제 조금 지도책다워졌군요."
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:200
+msgid ""
+"Let us make things more interesting by adding a subsection to our state "
+"group. We do this by first selecting the *Admin Level 1* field group in the "
+"organizer, then hitting the |signPlus| :sup:`Add Field` button and adding a "
+"new :guilabel:`Field Group Section`:"
+msgstr ""
+"주(州) 그룹에 하위 부분을 추가해서 보고서를 좀 더 재미있게 만들어봅시다. 먼저 :guilabel:`Report Organizer` "
+"에서 'Admin Level 1' 필드 그룹을 선택한 다음, |signPlus| :sup:`Add Field` 버튼을 클릭해서 새 "
+":guilabel:`Field Group Section` 을 추가합니다:"
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:209
+msgid ""
+"When iterating over the features of a :guilabel:`Field Group Section`, the "
+"features will be filtered to match the defining field of its parent group "
+"(``adm1name`` in this case). Here, the subsection we added will iterate over"
+" a :guilabel:`Populated Places` layer, including a body section for each "
+"place encountered. The magic here is that the :guilabel:`Populated Places` "
+"layer has an attribute with the same name as the defining field in the "
+"parent layer, :guilabel:`adm1name`, tagging each place with the state it is "
+"contained within (if you’re lucky your data will already be structured like "
+"this – if not, run the :ref:`Join Attributes by Location "
+"<qgisjoinattributesbylocation>` Processing algorithm and create your own "
+"field). When we export this report, QGIS will grab the first state from the "
+":guilabel:`Admin Level 1` layer, and then iterate over all the "
+":guilabel:`Populated Places` with a matching :guilabel:`adm1name` value. "
+"Here’s what we get:"
+msgstr ""
+":guilabel:`Field Group Section` 의 피처들을 반복 작업할 때, 부모 그룹의 정의 필드(이 경우 "
+"``adm1name``)와 일치하도록 피처들을 필터링할 것입니다. 이때, 추가한 하위 부분이 :guilabel:`Populated "
+"Places` 레이어를 반복 작업하면서 일치하는 각 지역에 대한 본문 부분을 추가할 것입니다. 주목할 점은 "
+":guilabel:`Populated Places` 레이어가 :guilabel:`adm1name` 부모 레이어의 정의 필드와 동일한 "
+"명칭을 가진 속성을 보유하고 있다는 것입니다. 즉 각 지역을 해당 지역이 있는 주에 태그한다는 뜻입니다. (운이 좋다면 사용자 데이터가 "
+"이미 이런 구조로 되어 있을 겁니다. 그렇지 않다면, :ref:`위치로 속성 결합 "
+"<qgisjoinattributesbylocation>` 공간 처리 알고리즘을 실행해서 사용자 고유의 필드를 생성하세요.) 이 보고서를 "
+"내보내면, QGIS는 :guilabel:`Admin Level 1` 레이어의 첫 번째 주를 가져온 다음 모든 "
+":guilabel:`Populated Places` 레이어를 일치하는 :guilabel:`adm1name` 값으로 반복 작업할 것입니다."
+" 다음은 그 결과물입니다:"
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:231
+msgid ""
+"Here we created a basic body for the Populated Places group, including a map"
+" of the place and a table of some place attributes. So our report is now a "
+"report header, a page for the first state, followed by a page for every "
+"populated place within that state, then the rest of the states with their "
+"populated places, and finally the report footer. If we were to add a header "
+"for the Populated Places group, it would be included just before listing the"
+" populated places for each state, as shown in the illustration below."
+msgstr ""
+"여기까지, 인구 밀집 지역 그룹에 대한 기초적인 본문을 지역의 맵과 일부 지역의 속성 테이블을 포함해서 생성했습니다. 이제 보고서는 "
+"보고서 헤더, 첫 번째 주에 대한 페이지, 해당 주에 있는 인구 밀집 지역 전체에 대한 페이지, 그 다음 주에 대한 페이지와 해당 주의 "
+"인구 밀집 지역 페이지, 그리고 마지막으로 보고서 푸터로 구성됐습니다. 인구 밀집 지역 그룹에 헤더를 추가하고자 했다면, 아래에 있는 "
+"그림과 같이 각 주의 인구 밀집 지역 페이지들 앞에 삽입되었을 것입니다."
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:241
+msgid ""
+"Similarly, a footer for the Populated Places group would be inserted after "
+"the final place for each state is included."
+msgstr "마찬가지로, 인구 밀집 지역 그룹에 푸터를 추가했다면 각 주의 마지막 지역 뒤에 삽입되었을 것입니다."
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:244
+msgid ""
+"In addition to nested subsections, subsections in a report can also be "
+"included consecutively. If we add a second subsection to the `Admin Level 1 "
+"group` for :guilabel:`Airports`, then (if the :guilabel:`Airports` layer has"
+" an attribute :guilabel:`adm1name` that can link it to the parent group) our"
+" report will first list ALL the populated places for each state, followed by"
+" all the airports within that state, before proceeding to the next state."
+msgstr ""
+"내포된 하위 부분 이외에도, 보고서에 하위 부분을 연속해서 포함시킬 수 있습니다. 'Admin Level 1' 그룹에 "
+":guilabel:`Airports` 를 위한 두 번째 하위 부분을 추가하는 경우, (:guilabel:`Airports` 레이어가 부모"
+" 그룹에 링크할 수 있는 :guilabel:`adm1name` 속성을 가지고 있는 경우) 보고서는 먼저 각 주별로 모든 인구 밀집 지역을"
+" 목록화한 다음, 다음 주로 넘어가기 전에 해당 주에 있는 모든 공항도 목록화할 것입니다."
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:256
+msgid ""
+"The key point here is that our :guilabel:`Airports group` is a subsection of"
+" the :guilabel:`Admin Level 1 group` – not the :guilabel:`Populated Places "
+"group`."
+msgstr ""
+"여기서 중요한 점은 :guilabel:`Airports group` 이 :guilabel:`Populated Places group` 의"
+" 하위 부분이 아니라 :guilabel:`Admin Level 1 group` 의 하위 부분이라는 사실입니다."
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:260
+msgid ""
+"In this case our report would be structured like this (note that state flags"
+" have also been included - the procedure for adding feature specific "
+"pictures in this way is described below):"
+msgstr ""
+"이 경우 보고서는 다음과 같이 구성될 것입니다(주기(州旗)도 추가됐다는 사실을 기억하십시오. 이런 방식으로 피처 특화 그림을 추가하는 "
+"방법을 이 다음에 설명합니다):"
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:268
+msgid "Including pictures in a report"
+msgstr "보고서에 그림 포함시키기"
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:270
+msgid ""
+"Pictures can be quite useful in reports, and QGIS allows pictures in both "
+"the static and dynamic parts of a report. Pictures are added in the same way"
+" as for standard print layouts, and for the static report parts (and static "
+"pictures in dynamic parts) there is not more to it."
+msgstr ""
+"그림은 보고서에 매우 유용할 수 있습니다. QGIS는 그림을 보고서의 정적인 일부와 동적인 일부, 양쪽으로 사용할 수 있습니다. 표준적인"
+" 인쇄 조판의 경우와 동일한 방법으로 그림을 추가합니다. 정적인 보고서의 일부인 경우 (그리고 동적인 부분의 정적인 그림인 경우) 더 "
+"설명할 것은 없습니다."
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:276
+msgid ""
+"But if you want illustrations that are tailored to the report features, your"
+" layer must have an attribute that can be used to define the picture to "
+"include."
+msgstr ""
+"그러나 보고서 피처에 맞게 다듬어진 그림을 원한다면, 사용자 레이어가 포함시킬 그림을 정의하는 데 사용할 수 있는 속성을 가지고 있어야만"
+" 합니다."
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:280
+msgid "QGIS depends on absolute file names for images in reports."
+msgstr "QGIS는 보고서 이미지에 대해 절대 파일명에 의존합니다."
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:282
+msgid ""
+"For dynamic pictures, you first add a picture to the body part of the group,"
+" as usual. In the :guilabel:`Item properties` of the picture, you set the "
+":guilabel:`Image Source` using the |dataDefined| :sup:`Data defined "
+"override` button, and either select an attribute that contains the absolute "
+"path of the images or :guilabel:`Edit...` (to enter an expression that "
+"generates the absolute image path)."
+msgstr ""
+"동적인 그림의 경우, 먼저 그룹의 본문 부분에 그림을 동일한 방법으로 추가하십시오. 그림 :guilabel:`Item "
+"properties` 패널에서 |dataDefined| :sup:`Data defined override` 버튼으로 "
+":guilabel:`Image Source` 를 설정한 다음 이미지의 절대 경로를 담고 있는 속성을 선택하거나, 또는 "
+":guilabel:`Edit...` 버튼을 클릭한 다음 이미지의 절대 경로를 생성하는 표현식을 입력하십시오."
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:291
+msgid ""
+"Below is an example expression that uses string concatenation to specify the"
+" absolute path to the pictures, using the directory where the project file "
+"is located ``@project_path``) and an attribute (``adm1name``) from which the"
+" file name is generated (in this case by transforming the string in the "
+"``adm1name`` attribute to uppercase, and appending '_flag.png')::"
+msgstr ""
+"다음 예시 표현식은 프로젝트 파일이 위치한 디렉터리와 (``@project_path``) 파일명 생성 기반이 되는 속성을 "
+"(``adm1name``) 사용해서 그림을 가리키는 절대 경로를 지정하기 위해 문자열을 연결합니다. (이 경우 ``adm1name`` "
+"속성의 문자열을 대문자로 변환한 다음 그 뒤에 ``'_flag.png'`` 를 붙여서 파일명을 생성합니다.)"
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:301
+msgid ""
+"This means that the pictures are located in the ``naturalearth/pictures`` "
+"subdirectory of the project file directory."
+msgstr "즉 그림이 프로젝트 파일 디렉터리의 ``naturalearth/pictures`` 하위 디렉터리에 위치한다는 뜻입니다."
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:310
+msgid "Highlighting the current report feature in a map"
+msgstr "맵에서 현재 보고서 피처를 강조하기"
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:312
+msgid ""
+"In the above report, the report features are emphasized in the maps using "
+"highlighting (state) and circles (populated places). To emphasize the report"
+" features in the maps (apart from placing them at the centre of the maps), "
+"you must data define the style using a comparison between its ``@id`` and "
+"the ``@atlas_featureid``, as for atlases."
+msgstr ""
+"앞의 보고서에서, 맵에 있는 보고서 피처를 강조하는 데 (주의 경우) 강조(highlight)를, (인구 밀집 지역의 경우) 원을 "
+"사용했습니다. 맵에 있는 보고서 피처를 (맵 중앙에 배치하는 것을 제외하고) 강조하려면, 피처의 ``@id`` 와 지도책의 "
+"``@atlas_featureid`` 를 비교해서 스타일을 데이터 정의해야만 합니다."
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:319
+msgid ""
+"For instance, if you would like to use a thicker line / border for the "
+"report feature than the other features you can data define the line width::"
+msgstr ""
+"예를 들어, 보고서 피처에 다른 피처보다 더 두꺼운 라인/경계선을 사용하고자 하는 경우 라인 너비를 데이터 정의할 수 있습니다:"
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:325
+msgid ""
+"The report feature will get a 2 units wide polygon outline, while all other "
+"features will get a 0.1 units wide line. It is also possible to data define "
+"the colour (non-transparent dark magenta for the report feature and semi-"
+"transparent light gray for the other features)::"
+msgstr ""
+"보고서 피처의 폴리곤 외곽선의 너비는 2단위가 되는 반면, 다른 모든 피처의 외곽선 너비는 0.1단위가 될 것입니다. 색상도 데이터 "
+"정의할 수 있습니다. 다음 예시는 보고서 피처에는 불투명한 진한 마젠타 색상을, 다른 피처에는 반투명한 연한 회색을 지정하는 "
+"표현식입니다:"
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:334
+msgid "More level 1 groups"
+msgstr "더 많은 1레벨 그룹"
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:336
+msgid ""
+"Combining nested and consecutive sections, together with section headers and"
+" footers allows for tons of flexibility. For instance, in the below report "
+"we add another field group as a child of the main report for the "
+":guilabel`Ports` layer. Now, after listing the states together with their "
+"populated places and airports, we’ll get a summary list of all the ports in "
+"the region:"
+msgstr ""
+"부분 헤더 및 푸터와 함께 내포 부분과 연속 부분을 결합하면, 엄청난 유연성을 얻을 수 있습니다. 예를 들어, 다음 보고서에서 "
+":guilabel:`Ports` 에 대한 또다른 필드 그룹을 주 보고서의 자식으로 추가하십시오. 이제 인구 밀집 지역과 공항과 함께 "
+"주들을 나열한 다음, 해당 지역에 있는 항구를 요약해서 나열할 것입니다:"
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:347
+msgid "This results in the last part of our report exporting as:"
+msgstr "이렇게 내보내면 보고서의 마지막 부분에 다음과 같이 산출됩니다:"
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:353
+msgid "Export settings"
+msgstr "내보내기 설정"
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:355
+msgid ""
+"When you export a report (:menuselection:`Report --> Export Report as "
+"Images... / SVG... / PDF...`), you will be asked for a file name, and then "
+"you get the opportunity to tune the export settings to get the most "
+"appropriate output."
+msgstr ""
+"보고서를 내보낼 때 (:menuselection:`Report --> Export Report as Images... / SVG... /"
+" PDF...`) 파일명을 입력하라는 요청을 받을 것입니다. 그 다음 내보내기 설정을 가장 적절한 산출물을 얻기 위해 미세 조정할 수 "
+"있습니다."
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:360
+msgid "As you see, reports in QGIS are extremely powerful and flexible!"
+msgstr "이제 알겠지만, QGIS의 보고서는 대단히 강력하고 유연하답니다!"
+
+#: ../../docs/user_manual/print_composer/create_reports.rst:363
+msgid ""
+"The current information was adapted from a North Road blog, `Exploring "
+"Reports in QGIS 3.0 - the Ultimate Guide! <https://north-road.com/2018/01/23"
+"/exploring-reports-in-qgis-3-0-the-ultimate-guide>`_"
+msgstr ""
+"이 정보들은 GIS 소프트웨어 회사인 노스로드(North Road)의 블로그 게시글, `Exploring Reports in QGIS "
+"3.0 - the Ultimate Guide! <https://north-road.com/2018/01/23/exploring-"
+"reports-in-qgis-3-0-the-ultimate-guide>`_ 를 손본 것입니다."

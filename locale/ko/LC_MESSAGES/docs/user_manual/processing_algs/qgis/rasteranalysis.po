@@ -1,0 +1,2110 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:29+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2020\n"
+"Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2
+msgid "Raster analysis"
+msgstr "래스터 분석"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:13
+msgid "Raster boolean AND"
+msgstr "래스터 불(boolean) AND"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:14
+msgid ""
+"Calculates the boolean ``AND`` for a set of input rasters. If all of the "
+"input rasters have a non-zero value for a pixel, that pixel will be set to "
+"``1`` in the output raster. If any of the input rasters have ``0`` values "
+"for the pixel it will be set to ``0`` in the output raster."
+msgstr ""
+"입력 래스터 집합에 대해 불(boolean) ``AND`` 를 계산합니다. 모든 입력 래스터들이 어떤 픽셀에 대해 0이 아닌 값을 가지고"
+" 있다면, 산출 래스터에서 해당 픽셀의 값을 ``1`` 로 설정할 것입니다. 입력 래스터 가운데 하나라도 어떤 픽셀에 대해 ``0`` "
+"값을 가지고 있다면, 산출 래스터에서 해당 픽셀의 값을 ``0`` 으로 설정할 것입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:20
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:160
+msgid ""
+"The reference layer parameter specifies an existing raster layer to use as a"
+" reference when creating the output raster. The output raster will have the "
+"same extent, CRS, and pixel dimensions as this layer."
+msgstr ""
+"참조 레이어 파라미터는 산출 래스터 생성 시 참조물로 사용할 기존 래스터 레이어를 지정합니다. 산출 래스터는 참조 레이어와 동일한 범위,"
+" 좌표계, 그리고 픽셀 크기를 가질 것입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:25
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:165
+msgid ""
+"By default, a nodata pixel in ANY of the input layers will result in a "
+"nodata pixel in the output raster. If the :guilabel:`Treat nodata values as "
+"false` option is checked, then nodata inputs will be treated the same as a "
+"``0`` input value."
+msgstr ""
+"입력 레이어 가운데 **하나에만** NODATA 픽셀이 있어도, 기본적으로 산출 래스터에서도 NODATA 픽셀로 산출될 것입니다. "
+":guilabel:`Treat nodata values as false` 옵션을 활성화한 경우, NODATA 입력을 ``0`` 입력값과 "
+"동일하게 취급할 것입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:30
+msgid ":ref:`qgisrasterbooleanor`"
+msgstr ":ref:`qgisrasterbooleanor`"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:33
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:173
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:309
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:434
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:542
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:670
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:791
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:922
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1053
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1180
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1265
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1353
+msgid "Parameters"
+msgstr "파라미터"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:40
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:98
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:180
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:238
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:316
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:405
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:440
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:476
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:549
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:599
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:677
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:732
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:798
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:877
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:929
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1026
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1060
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1148
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1186
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1228
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1271
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1319
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1360
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1412
+msgid "Label"
+msgstr "라벨"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:41
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:99
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:181
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:239
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:317
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:406
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:441
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:477
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:550
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:600
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:678
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:733
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:799
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:878
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:930
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1027
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1061
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1149
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1187
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1229
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1272
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1320
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1361
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1413
+msgid "Name"
+msgstr "명칭"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:42
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:100
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:182
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:240
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:318
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:407
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:442
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:478
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:551
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:601
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:679
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:734
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:800
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:879
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:931
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1028
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1062
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1150
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1188
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1230
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1273
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1321
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1362
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1414
+msgid "Type"
+msgstr "유형"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:43
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:101
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:183
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:241
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:319
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:408
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:443
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:479
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:552
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:602
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:680
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:735
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:801
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:880
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:932
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1029
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1063
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1151
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1189
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1231
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1274
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1322
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1363
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1415
+msgid "Description"
+msgstr "설명"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:44
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:184
+msgid "**Input layers**"
+msgstr "**Input layers**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:45
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:185
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:445
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:554
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:682
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:803
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1191
+msgid "``INPUT``"
+msgstr "``INPUT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:46
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:186
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:355
+msgid "[raster] [list]"
+msgstr "[raster] [list]"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:47
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:187
+msgid "List of input raster layers"
+msgstr "입력 래스터 레이어의 목록"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:48
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:188
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:705
+msgid "**Reference layer**"
+msgstr "**Reference layer**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:49
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:189
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:708
+msgid "``REF_LAYER``"
+msgstr "``REF_LAYER``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:50
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:87
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:137
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:190
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:227
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:276
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:388
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:411
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:446
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:555
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:683
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:694
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:804
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:935
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1011
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1032
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1066
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1130
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1154
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1196
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1277
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1366
+msgid "[raster]"
+msgstr "[raster]"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:51
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:191
+msgid ""
+"The reference layer to create the output layer from (extent, CRS, pixel "
+"dimensions)"
+msgstr "산출 레이어 생성 시 (범위, 좌표계, 픽셀 크기를) 참조할 참조 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:53
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:193
+msgid "**Treat nodata values as false**"
+msgstr "**Treat nodata values as false**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:54
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:194
+msgid "``NODATA_AS_FALSE``"
+msgstr "``NODATA_AS_FALSE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:55
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:195
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:983
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1101
+msgid "[boolean]"
+msgstr "[boolean]"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:57
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:197
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:985
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1103
+msgid "Default: False"
+msgstr "기본값: False"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:58
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:198
+msgid ""
+"Treat nodata values in the input files as 0 when performing the operation"
+msgstr "작업 수행 시 입력 파일에 있는 NODATA 값을 0으로 취급"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:60
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:200
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:962
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1080
+msgid "**Output no data value**"
+msgstr "**Output no data value**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:61
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:201
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:963
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1081
+msgid "``NO_DATA``"
+msgstr "``NO_DATA``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:62
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:202
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:367
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:482
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:486
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:490
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:509
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:513
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:517
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:521
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:613
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:617
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:621
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:647
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:746
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:750
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:766
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:770
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:815
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:883
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:887
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:891
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:964
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1082
+msgid "[number]"
+msgstr "[number]"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:64
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:204
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:966
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1084
+msgid "Default: -9999.0"
+msgstr "기본값: -9999.0"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:65
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:205
+msgid "Value to use for nodata in the output layer"
+msgstr "산출 레이어에서 NODATA용으로 사용할 값"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:66
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:206
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:989
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1107
+msgid "**Output data type**"
+msgstr "**Output data type**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:67
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:207
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:990
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1108
+msgid "``DATA_TYPE``"
+msgstr "``DATA_TYPE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:68
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:208
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:709
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:823
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:970
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:991
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1088
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1109
+msgid "[enumeration]"
+msgstr "[enumeration]"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:70
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:210
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:993
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1111
+msgid "Default: 5"
+msgstr "기본값: 5"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:71
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:211
+msgid "Output raster data type. Options:"
+msgstr "산출 래스터 데이터 유형입니다. 다음 가운데 하나를 선택할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:73
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:213
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:997
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1116
+msgid "0 --- Byte"
+msgstr "0 --- 바이트(Byte)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:74
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:214
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:998
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1117
+msgid "1 --- Int16"
+msgstr "1 --- 부호 있는 16비트 정수형(Int16)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:75
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:215
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:999
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1118
+msgid "2 --- UInt16"
+msgstr "2 --- 부호 없는 16비트 정수형(UInt16)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:76
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:216
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1000
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1119
+msgid "3 --- UInt32"
+msgstr "3 --- 부호 없는 32비트 정수형(UInt32)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:77
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:217
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1001
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1120
+msgid "4 --- Int32"
+msgstr "4 --- 부호 있는 32비트 정수형(Int32)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:78
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:218
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1002
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1121
+msgid "5 --- Float32"
+msgstr "5 --- 부동소수점 32비트 실수형(Float32)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:79
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:219
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1003
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1122
+msgid "6 --- Float64"
+msgstr "6 --- 부동소수점 64비트 실수형(Float64)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:80
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:220
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1004
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1123
+msgid "7 --- CInt16"
+msgstr "7 --- 복잡 16비트 정수형(CInt16)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:81
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:221
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1005
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1124
+msgid "8 --- CInt32"
+msgstr "8 --- 복잡 32비트 정수형(CInt32)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:82
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:222
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1006
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1125
+msgid "9 --- CFloat32"
+msgstr "9 --- 복잡 부동소수점 32비트 실수형(CFloat32)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:83
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:223
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1007
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1126
+msgid "10 --- CFloat64"
+msgstr "10 --- 복잡 부동소수점 64비트 실수형(CFloat64)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:85
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:135
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:225
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:274
+msgid "**Output layer**"
+msgstr "**Output layer**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:86
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:136
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:226
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:275
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:387
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:410
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1010
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1031
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1129
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1153
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1207
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1235
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1298
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1326
+msgid "``OUTPUT``"
+msgstr "``OUTPUT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:88
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:228
+msgid "Output raster layer"
+msgstr "산출 래스터 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:91
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:231
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:399
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:469
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:592
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:725
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:871
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1020
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1142
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1222
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1313
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1406
+msgid "Outputs"
+msgstr "산출물"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:102
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:242
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:607
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:740
+msgid "**Extent**"
+msgstr "**Extent**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:103
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:243
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:373
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:608
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:741
+msgid "``EXTENT``"
+msgstr "``EXTENT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:104
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:244
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:374
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:609
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:742
+msgid "[extent]"
+msgstr "[extent]"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:105
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:245
+msgid "The extent of the output raster layer"
+msgstr "산출 래스터 레이어의 범위"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:106
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:246
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:603
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:736
+msgid "**CRS authority identifier**"
+msgstr "**CRS authority identifier**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:107
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:247
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:604
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:737
+msgid "``CRS_AUTHID``"
+msgstr "``CRS_AUTHID``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:108
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:248
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:382
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:605
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:738
+msgid "[crs]"
+msgstr "[crs]"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:109
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:249
+msgid "The coordinate reference system of the output raster layer"
+msgstr "산출 래스터 레이어의 좌표계"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:110
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:250
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:645
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:768
+msgid "**Width in pixels**"
+msgstr "**Width in pixels**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:111
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:251
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:646
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:769
+msgid "``WIDTH_IN_PIXELS``"
+msgstr "``WIDTH_IN_PIXELS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:112
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:116
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:120
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:124
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:128
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:132
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:252
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:256
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:260
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:264
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:268
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:272
+msgid "[integer]"
+msgstr "[integer]"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:113
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:253
+msgid "The width in pixels of the output raster layer"
+msgstr "산출 래스터 레이어의 픽셀 단위 너비"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:114
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:254
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:611
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:744
+msgid "**Height in pixels**"
+msgstr "**Height in pixels**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:115
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:255
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:612
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:745
+msgid "``HEIGHT_IN_PIXELS``"
+msgstr "``HEIGHT_IN_PIXELS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:117
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:257
+msgid "The height in pixels of the output raster layer"
+msgstr "산출 래스터 레이어의 픽셀 단위 높이"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:118
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:258
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:619
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:764
+msgid "**Total pixel count**"
+msgstr "**Total pixel count**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:119
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:259
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:620
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:765
+msgid "``TOTAL_PIXEL_COUNT``"
+msgstr "``TOTAL_PIXEL_COUNT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:121
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:261
+msgid "The count of pixels in the output raster layer"
+msgstr "산출 래스터 레이어의 픽셀 개수"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:122
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:262
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:615
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:748
+msgid "**NODATA pixel count**"
+msgstr "**NODATA pixel count**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:123
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:263
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:616
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:749
+msgid "``NODATA_PIXEL_COUNT``"
+msgstr "``NODATA_PIXEL_COUNT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:125
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:265
+msgid "The count of nodata pixels in the output raster layer"
+msgstr "산출 래스터 레이어의 NODATA 픽셀 개수"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:126
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:266
+msgid "**True pixel count**"
+msgstr "**True pixel count**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:127
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:267
+msgid "``TRUE_PIXEL_COUNT``"
+msgstr "``TRUE_PIXEL_COUNT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:129
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:269
+msgid "The count of True pixels (value = 1) in the output raster layer"
+msgstr "산출 래스터 레이어에 있는 (값이 1인) 참 픽셀의 개수"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:130
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:270
+msgid "**False pixel count**"
+msgstr "**False pixel count**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:131
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:271
+msgid "``FALSE_PIXEL_COUNT``"
+msgstr "``FALSE_PIXEL_COUNT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:133
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:273
+msgid "The count of False pixels (value = 0) in the output raster layer"
+msgstr "산출 래스터 레이어에 있는 (값이 0인) 거짓 픽셀의 개수"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:138
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:277
+msgid "Output raster layer containing the result"
+msgstr "결과물을 담고 있는 산출 래스터 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:141
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:280
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:415
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:525
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:651
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:774
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:905
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1036
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1160
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1240
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1333
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1422
+msgid "Python code"
+msgstr "파이썬 코드"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:143
+msgid "**Algorithm ID**: ``qgis:rasterbooleanand``"
+msgstr "**Algorithm ID**: ``qgis:rasterbooleanand``"
+
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+msgid ""
+"The *algorithm id* is displayed when you hover over the algorithm in the "
+"Processing Toolbox. The *parameter dictionary* provides the parameter NAMEs "
+"and values. See :ref:`processing_console` for details on how to run "
+"processing algorithms from the Python console."
+msgstr ""
+"공간 처리 툴박스에 있는 알고리즘 위에 마우스를 가져가면 *알고리즘 ID* 를 표시합니다. *파라미터 목록(dictionary)* 은 "
+"파라미터 **명칭** 및 값을 제공합니다. 파이썬 콘솔에서 공간 처리 알고리즘을 어떻게 실행하는지 자세히 알고 싶다면 "
+":ref:`processing_console` 을 참조하세요."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:153
+msgid "Raster boolean OR"
+msgstr "래스터 불(boolean) OR"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:154
+msgid ""
+"Calculates the boolean ``OR`` for a set of input rasters. If all of the "
+"input rasters have a zero value for a pixel, that pixel will be set to ``0``"
+" in the output raster. If any of the input rasters have ``1`` values for the"
+" pixel it will be set to ``1`` in the output raster."
+msgstr ""
+"입력 래스터 집합에 대해 불(boolean) ``OR`` 를 계산합니다. 모든 입력 래스터들이 어떤 픽셀에 대해 0 값을 가지고 있다면,"
+" 산출 래스터에서 해당 픽셀의 값을 ``0`` 으로 설정할 것입니다. 입력 래스터 가운데 하나라도 어떤 픽셀에 대해 ``1`` 값을 "
+"가지고 있다면, 산출 래스터에서 해당 픽셀의 값을 ``1`` 로 설정할 것입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:170
+msgid ":ref:`qgisrasterbooleanand`"
+msgstr ":ref:`qgisrasterbooleanand`"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:282
+msgid "**Algorithm ID**: ``qgis:rasterbooleanor``"
+msgstr "**Algorithm ID**: ``qgis:rasterbooleanor``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:292
+msgid "Raster calculator"
+msgstr "래스터 계산기"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:293
+msgid "Performs algebraic operations using raster layers."
+msgstr "래스터 레이어를 사용해 대수(algebra) 작업을 수행합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:295
+msgid ""
+"The resulting layer will have its values computed according to an "
+"expression. The expression can contain numerical values, operators and "
+"references to any of the layers in the current project."
+msgstr ""
+"산출되는 레이어는 표현식에 따라 계산된 값을 가질 것입니다. 표현식은 숫자값, 연산자를 담을 수 있고, 현재 프로젝트에 있는 모든 "
+"레이어를 참조할 수 있습니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:300
+msgid ""
+"When using the calculator in :ref:`processing_batch` or from the "
+":ref:`console` the files to use have to be specified. The corresponding "
+"layers are referred using the base name of the file (without the full path)."
+" For instance, if using a layer at ``path/to/my/rasterfile.tif``, the first "
+"band of that layer will be referred as ``rasterfile.tif@1``."
+msgstr ""
+":ref:`processing_batch` 또는 :ref:`console` 에서 계산기를 사용하는 경우 사용할 파일을 지정해야 합니다. "
+"대응하는 레이어는 (전체 경로가 아닌) 기본명을 사용해서 참조시켜야 합니다. 예를 들어, "
+"``path/to/my/rasterfile.tif`` 위치에 있는 레이어를 사용하는 경우 해당 레이어의 첫 번째 밴드는 "
+"``rasterfile.tif@1`` 로 참조될 것입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:320
+msgid "**Layers**"
+msgstr "**Layers**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:321
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:331
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:343
+msgid "GUI only"
+msgstr "GUI 전용"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:323
+msgid ""
+"Shows the list of all raster layers loaded in the legend. These can be used "
+"to fill the expression box (double click to add). Raster layers are referred"
+" by their name and the number of the band: ``layer_name@band_number``. For "
+"instance, the first band from a layer named ``DEM`` will be referred as "
+"``DEM@1``."
+msgstr ""
+"범례에 불러온 모든 래스터 레이어의 목록을 표시합니다. 이 목록을 사용해서 (레이어명을 더블 클릭하면) 표현식란에 해당 레이어를 추가할 "
+"수 있습니다. 래스터 레이어는 ``layer_name@band_number`` 처럼 명칭 및 밴드 번호로 참조됩니다. 예를 들어 "
+"``DEM`` 이라는 레이어의 첫 번째 밴드는 ``DEM@1`` 로 참조될 것입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:330
+msgid "**Operators**"
+msgstr "**Operators**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:333
+msgid ""
+"Contains some calculator like buttons that can be used to fill the "
+"expression box."
+msgstr "표현식란을 채울 수 있는 몇몇 계산기 버튼을 담고 있습니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:335
+msgid "**Expression**"
+msgstr "**Expression**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:336
+msgid "``EXPRESSION``"
+msgstr "``EXPRESSION``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:337
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1200
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1293
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1380
+msgid "[string]"
+msgstr "[string]"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:338
+msgid ""
+"Expression that will be used to calculate the output raster layer. You can "
+"use the operator buttons provided to type directly the expression in this "
+"box."
+msgstr ""
+"산출 래스터 레이어를 계산하기 위해 사용할 수 있는 표현식입니다. 제공된 연산자 버튼을 사용해서 표현식란에 표현식을 직접 입력할 수 "
+"있습니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:342
+msgid "**Predefined expressions**"
+msgstr "**Predefined expressions**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:345
+msgid ""
+"You can use the predefined ``NDVI`` expression or you can define new "
+"expressions for calculations. The :guilabel:`Add...` button loads a defined "
+"expression (and lets you set the parameters). The :guilabel:`Save...` button"
+" lets you define a new expression."
+msgstr ""
+"사전 정의된 ``NDVI`` 표현식을 사용할 수도 있고, 또는 계산을 위한 새 표현식을 정의할 수도 있습니다. "
+":guilabel:`Add...` 버튼을 클릭하면 사전 정의 표현식을 불러올 수 있습니다. (그리고 사용자가 파라미터를 설정할 수 "
+"있지요.) :guilabel:`Save...` 버튼을 클릭하면 새 표현식을 정의할 수 있습니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:351
+msgid "**Reference layer(s) (used for automated extent, cellsize, and CRS)**"
+msgstr "**Reference layer(s) (used for automated extent, cellsize, and CRS)**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:353
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:365
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:380
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:707
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1292
+msgid "Optional"
+msgstr "부가적"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:354
+msgid "``LAYERS``"
+msgstr "``LAYERS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:356
+msgid ""
+"Layer(s) that will be used to fetch extent, cell size and CRS. By choosing "
+"the layer in this box you avoid filling in all the other parameters by hand."
+" Raster layers are referred by their name and the number of the band: "
+"``layer_name@band_number``. For instance, the first band from a layer named "
+"``DEM`` will be referred as ``DEM@1``."
+msgstr ""
+"범위, 셀 크기 및 좌표계를 가져올 레이어(들)입니다. 이 상자에서 레이어를 선택하면 사용자가 직접 다른 모든 파라미터를 지정해야 할 "
+"필요가 사라집니다. 래스터 레이어는 ``layer_name@band_number`` 처럼 명칭 및 밴드 번호로 참조됩니다. 예를 들어 "
+"``DEM`` 이라는 레이어의 첫 번째 밴드는 ``DEM@1`` 로 참조될 것입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:363
+msgid "**Cell size (use 0 or empty to set it automatically)**"
+msgstr "**Cell size (use 0 or empty to set it automatically)**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:366
+msgid "``CELLSIZE``"
+msgstr "``CELLSIZE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:368
+msgid ""
+"Cell size of the output raster layer. If the cell size is not specified, the"
+" minimum cell size of the selected reference layer(s) will be used. The cell"
+" size will be the same for the X and Y axes."
+msgstr ""
+"산출 래스터 레이어의 셀 크기입니다. 셀 크기를 지정하지 않은 경우, 선택한 참조 레이어(들)의 최소 셀 크기를 사용할 것입니다. 셀 "
+"크기는 X축 및 Y축에 대해 동일할 것입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:372
+msgid "**Output extent (xmin, xmax, ymin, ymax)**"
+msgstr "**Output extent (xmin, xmax, ymin, ymax)**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:375
+msgid ""
+"Extent of the output raster layer. If the extent is not specified, the "
+"minimum extent that covers all the selected reference layers will be used."
+msgstr ""
+"산출 래스터 레이어의 범위입니다. 범위를 지정하지 않은 경우, 선택한 참조 레이어(들)을 모두 커버하는 최소 범위를 사용할 것입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:378
+msgid "**Output CRS**"
+msgstr "**Output CRS**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:381
+msgid "``CRS``"
+msgstr "``CRS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:383
+msgid ""
+"CRS of the output raster layer. If the output CRS is not specified, the CRS "
+"of the first reference layer will be used."
+msgstr "산출 래스터 레이어의 좌표계입니다. 좌표계를 지정하지 않은 경우, 첫 번째 참조 레이어의 좌표계를 사용할 것입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:386
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:409
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:455
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:492
+msgid "**Output**"
+msgstr "**Output**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:390
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:459
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:568
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:847
+msgid "Default: ``[Save to temporary file]``"
+msgstr "기본값: ``[Save to temporary file]``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:391
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1012
+msgid "Specification of the output raster. One of:"
+msgstr "산출 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:393
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:463
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:572
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1014
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1136
+msgid "Save to a Temporary File"
+msgstr "임시 파일로 저장"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:394
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:464
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:573
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:585
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:852
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:864
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1015
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1137
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1215
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1306
+msgid "Save to File..."
+msgstr "파일로 저장"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:396
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:466
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:575
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:589
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:854
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:868
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1017
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1219
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1310
+msgid "The file encoding can also be changed here."
+msgstr "이 파라미터에서 파일 인코딩도 변경할 수 있습니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:412
+msgid "Output raster file with the calculated values."
+msgstr "계산된 값을 가진 산출 래스터 파일"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:417
+msgid "**Algorithm ID**: ``qgis:rastercalculator``"
+msgstr "**Algorithm ID**: ``qgis:rastercalculator``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:427
+msgid "Raster layer statistics"
+msgstr "래스터 레이어 통계"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:428
+msgid ""
+"Calculates basic statistics from the values in a given band of the raster "
+"layer. The output is loaded in the :menuselection:`Processing --> Results "
+"viewer` menu."
+msgstr ""
+"래스터 레이어의 지정한 밴드의 값으로부터 기본 통계를 계산합니다. :menuselection:`Processing --> Results "
+"viewer` 메뉴로 산출물을 불러옵니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:444
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:553
+msgid "**Input layer**"
+msgstr "**Input layer**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:447
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:556
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:684
+msgid "Input raster layer"
+msgstr "입력 래스터 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:448
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:557
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:685
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:806
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:937
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1068
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1279
+msgid "**Band number**"
+msgstr "**Band number**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:449
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:558
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:686
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:807
+msgid "``BAND``"
+msgstr "``BAND``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:450
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:559
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:687
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:700
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:808
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:939
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1070
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1281
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1370
+msgid "[raster band]"
+msgstr "[raster band]"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:452
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:561
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1283
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1372
+msgid "Default: The first band of the input layer"
+msgstr "기본값: 입력 레이어의 첫 번째 밴드"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:453
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:562
+msgid ""
+"If the raster is multiband, choose the band you want to get statistics for."
+msgstr "래스터가 다중 밴드인 경우, 통계를 얻고자 하는 밴드를 선택하십시오."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:456
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:493
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:565
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:624
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:844
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:894
+msgid "``OUTPUT_HTML_FILE``"
+msgstr "``OUTPUT_HTML_FILE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:457
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:494
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:625
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:845
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:895
+msgid "[html]"
+msgstr "[html]"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:460
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:569
+msgid "Specification of the output file:"
+msgstr "산출 레이어를 지정합니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:462
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:571
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:583
+msgid "Skip Output"
+msgstr "산출물 건너뛰기"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:480
+msgid "**Maximum value**"
+msgstr "**Maximum value**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:481
+msgid "``MAX``"
+msgstr "``MAX``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:484
+msgid "**Mean value**"
+msgstr "**Mean value**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:485
+msgid "``MEAN``"
+msgstr "``MEAN``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:488
+msgid "**Minimum value**"
+msgstr "**Minimum value**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:489
+msgid "``MIN``"
+msgstr "``MIN``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:495
+msgid "The output file contains the following information:"
+msgstr "산출물 파일은 다음 정보를 담고 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:497
+msgid "Analyzed file: path of the raster layer"
+msgstr "파일 분석: 래스터 레이어의 경로"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:498
+msgid "Minimum value: minimum value of the raster"
+msgstr "최소값: 래스터의 최소값"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:499
+msgid "Maximum value: maximum value of the raster"
+msgstr "최대값: 래스터의 최대값"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:500
+msgid "Range: difference between the maximum and minimum values"
+msgstr "범위: 최대값과 최소값의 차"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:501
+msgid "Sum: total sum of the values"
+msgstr "합계: 값들의 총합"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:502
+msgid "Mean value: mean of the values"
+msgstr "평균값: 값들의 평균"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:503
+msgid "Standard deviation: standard deviation of the values"
+msgstr "표준 편차: 값들의 표준 편차"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:504
+msgid ""
+"Sum of the squares: sum of the squared differences of each observation from "
+"the overall mean"
+msgstr "제곱 합계: 전체 평균과 각 관측값의 차를 제곱한 값의 합계"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:507
+msgid "**Range**"
+msgstr "**Range**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:508
+msgid "``RANGE``"
+msgstr "``RANGE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:511
+msgid "**Standard deviation**"
+msgstr "**Standard deviation**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:512
+msgid "``STD_DEV``"
+msgstr "``STD_DEV``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:515
+msgid "**Sum**"
+msgstr "**Sum**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:516
+msgid "``SUM``"
+msgstr "``SUM``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:519
+msgid "**Sum of the squares**"
+msgstr "**Sum of the squares**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:520
+msgid "``SUM_OF_SQUARES``"
+msgstr "``SUM_OF_SQUARES``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:527
+msgid "**Algorithm ID**: ``qgis:rasterlayerstatistics``"
+msgstr "**Algorithm ID**: ``qgis:rasterlayerstatistics``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:537
+msgid "Raster layer unique values report"
+msgstr "래스터 레이어 유일값 보고"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:538
+msgid ""
+"Returns the count and area of each unique value in a given raster layer."
+msgstr "지정한 래스터 레이어에 있는 각 유일값의 개수와 면적을 반환합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:564
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:623
+msgid "**Unique values report**"
+msgstr "**Unique values report**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:566
+msgid "[file]"
+msgstr "[file]"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:576
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:635
+msgid "**Unique values table**"
+msgstr "**Unique values table**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:577
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:636
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:720
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:753
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:856
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:899
+msgid "``OUTPUT_TABLE``"
+msgstr "``OUTPUT_TABLE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:578
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:637
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:721
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:754
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:857
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:900
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1076
+msgid "[table]"
+msgstr "[table]"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:580
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:859
+msgid "Default: ``[Skip output]``"
+msgstr "기본값: ``[Skip output]``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:581
+msgid "Specification of the table for unique values:"
+msgstr "유일값을 위한 테이블을 지정합니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:584
+msgid "Create Temporary Layer"
+msgstr "임시 레이어 생성"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:586
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1216
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1307
+msgid "Save to GeoPackage..."
+msgstr "Geopackage로 저장"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:587
+msgid "Save to PostGIS Table......"
+msgstr "PostGIS 테이블로 저장"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:626
+msgid "The output HTML file contains the following information:"
+msgstr "산출 HTML 파일은 다음 정보를 담고 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:628
+msgid "Analyzed file: the path of the raster layer"
+msgstr "파일 분석: 래스터 레이어의 경로"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:629
+msgid "Extent: xmin, ymin, xmax, ymax coordinates of the extent"
+msgstr "범위: 범위의 xmin, ymin, xmax, ymax 좌표"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:630
+msgid "Projection: projection of the layer"
+msgstr "투영체: 레이어의 투영체"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:631
+msgid "Width in pixels: number of columns and pixel width size"
+msgstr "픽셀 단위 너비: 열의 개수와 픽셀 너비 크기"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:632
+msgid "Height in pixels: number of rows and pixel width size"
+msgstr "픽셀 단위 높이: 행의 개수와 픽셀 너비 크기"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:633
+msgid "Total pixel count: count of all the pixels"
+msgstr "총 픽셀 개수: 모든 픽셀의 개수"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:634
+msgid "NODATA pixel count: count of pixels with NODATA value"
+msgstr "NODATA 픽셀 개수: NODATA 값을 가진 픽셀의 개수"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:638
+msgid "A table with three columns:"
+msgstr "다음 열 3개를 가진 테이블:"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:640
+msgid "*value*: pixel value"
+msgstr "*value*: 픽셀 값"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:641
+msgid "*count*: count of pixels with this value"
+msgstr "*count*: 해당 값을 가진 픽셀의 개수"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:642
+msgid "*m*\\ :sup:`2`: total area in square meters of pixels with this value."
+msgstr "*m*\\ :sup:`2`: 해당 값을 가진 픽셀의 제곱미터 단위 총 면적"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:653
+msgid "**Algorithm ID**: ``qgis:rasterlayeruniquevaluesreport``"
+msgstr "**Algorithm ID**: ``qgis:rasterlayeruniquevaluesreport``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:663
+msgid "Raster layer zonal statistics"
+msgstr "래스터 레이어 구역 통계"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:664
+msgid ""
+"Calculates statistics for a raster layer's values, categorized by zones "
+"defined in another raster layer."
+msgstr "래스터 레이어의 값을 또다른 레이어에서 정의한 구역(zone)으로 범주화한 통계를 계산합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:667
+msgid ":ref:`qgiszonalstatistics`"
+msgstr ":ref:`qgiszonalstatistics`"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:681
+msgid "**Input Layer**"
+msgstr "**Input Layer**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:689
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:702
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:810
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:941
+msgid "Default: The first band of the raster layer"
+msgstr "기본값: 래스터 레이어의 첫 번째 밴드"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:690
+msgid ""
+"If the raster is multiband choose the band for which you want to calculate "
+"the statistics."
+msgstr "래스터가 다중 밴드인 경우, 통계를 계산하고자 하는 밴드를 선택하십시오."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:692
+msgid "**Zones layer**"
+msgstr "**Zones layer**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:693
+msgid "``ZONES``"
+msgstr "``ZONES``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:695
+msgid ""
+"Raster layer defining zones. Zones are given by contiguous pixels having the"
+" same pixel value."
+msgstr "구역을 정의하는 래스터 레이어. 동일한 픽셀 값을 가진 인접한 픽셀들로 구역을 지정합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:698
+msgid "**Zones band number**"
+msgstr "**Zones band number**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:699
+msgid "``ZONES_BAND``"
+msgstr "``ZONES_BAND``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:703
+msgid "If the raster is multiband, choose the band that defines the zones"
+msgstr "래스터가 다중 밴드인 경우, 구역을 정의하는 밴드를 선택하십시오."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:711
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:825
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:972
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1090
+msgid "Default: 0"
+msgstr "기본값: 0"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:712
+msgid ""
+"Raster layer used to calculate the centroids that will be used as reference "
+"when determining the zones in the output layer. One of:"
+msgstr ""
+"산출 레이어에 구역을 결정할 때 참조물로 사용될 중심(centroid)을 계산하기 위해 사용되는 래스터 레이어입니다. 다음 가운데 하나를"
+" 선택할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:716
+msgid "0 --- Input layer"
+msgstr "0 --- 입력 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:717
+msgid "1 --- Zones layer"
+msgstr "1 --- 구역 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:719
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:752
+msgid "**Statistics**"
+msgstr "**Statistics**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:722
+msgid "Table with the calculated statistics"
+msgstr "계산된 통계를 가진 테이블"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:755
+msgid "The output layer contains the following information **for each zone**:"
+msgstr "산출 레이어는 **각 구역별로** 다음 정보를 담고 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:758
+msgid "Area: the area in square raster units in the zone;"
+msgstr "면적: 구역의 제곱 래스터 단위 면적"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:759
+msgid "Sum: the total sum of the pixel values in the zone;"
+msgstr "합계: 구역에 있는 픽셀 값의 총합"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:760
+msgid "Count: the number of pixels in the zone;"
+msgstr "개수: 구역에 있는 픽셀들의 개수"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:761
+msgid "Min: the minimum pixel value in the zone;"
+msgstr "최소값: 구역에 있는 최소 픽셀 값"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:762
+msgid "Max: the maximum pixel value in the zone;"
+msgstr "최대값: 구역에 있는 최대 픽셀 값"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:763
+msgid "Mean: the mean of the pixel values in the zone;"
+msgstr "평균: 구역에 있는 픽셀 값들의 평균"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:776
+msgid "**Algorithm ID**: ``qgis:rasterlayerzonalstats``"
+msgstr "**Algorithm ID**: ``qgis:rasterlayerzonalstats``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:786
+msgid "Raster surface volume"
+msgstr "래스터 표면 부피"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:787
+msgid ""
+"Calculates the volume under a raster surface relative to a given base level."
+" This is mainly useful for Digital Elevation Models (DEM)."
+msgstr ""
+"지정한 기준면(base level)에 따라 래스터 표면 아래의 부피를 계산합니다. 주로 수치 표고 모델(DEM; Digital "
+"Elevation Model)에 유용한 알고리즘입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:802
+msgid "**INPUT layer**"
+msgstr "**INPUT layer**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:805
+msgid "Input raster, representing a surface"
+msgstr "표면을 표현하는 입력 래스터"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:811
+msgid ""
+"If the raster is multiband, choose the band that shall define the surface."
+msgstr "래스터가 다중 밴드인 경우, 표면을 정의할 밴드를 선택하십시오."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:813
+msgid "**Base level**"
+msgstr "**Base level**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:814
+msgid "``LEVEL``"
+msgstr "``LEVEL``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:817
+msgid "Default: 0.0"
+msgstr "기본값: 0.0"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:818
+msgid ""
+"Define a base or reference value. This base is used in the volume "
+"calculation according to the ``Method`` parameter (see below)."
+msgstr ""
+"기준 또는 참조 값을 정의합니다. 부피를 ``Method`` 파라미터에 따라 (아래 참조) 계산하는 데 이 기준을 사용합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:821
+msgid "**Method**"
+msgstr "**Method**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:822
+msgid "``METHOD``"
+msgstr "``METHOD``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:826
+msgid ""
+"Define the method for the volume calculation given by the difference between"
+" the raster pixel value and the ``Base level``. Options:"
+msgstr ""
+"래스터 픽셀 값과 ``Base level`` 의 차로 지정하는 부피 계산용 방법을 정의합니다. 다음 옵션 가운데 하나를 선택할 수 "
+"있습니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:831
+msgid ""
+"0 --- Count Only Above Base Level: only pixels above the base level will add"
+" to the volume."
+msgstr "0 --- 기준면 위만 셉니다: 기준면 위에 있는 픽셀만 부피에 추가할 것입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:833
+msgid ""
+"1 --- Count Only Below Base Level: only pixels below the base level will add"
+" to the volume."
+msgstr "1 --- 기준면 아래만 셉니다: 기준면 아래 있는 픽셀만 부피에 추가할 것입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:835
+msgid ""
+"2 --- Subtract Volumes Below Base level: pixels above the base level will "
+"add to the volume, pixels below the base level will subtract from the "
+"volume."
+msgstr ""
+"2 --- 기준면 아래의 부피를 뺍니다: 기준면 위에 있는 픽셀을 부피에 추가하고, 기준면 아래 있는 픽셀을 부피에서 뺄 것입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:838
+msgid ""
+"3 --- Add Volumes Below Base level: Add the volume regardless whether the "
+"pixel is above or below the base level. This is equivalent to sum the "
+"absolute values of the difference between the pixel value and the base "
+"level."
+msgstr ""
+"3 --- 기준면 아래의 부피를 추가합니다: 픽셀이 기준면 위에 있든 아래 있든 상관없이 부피에 추가합니다. 이 옵션은 픽셀 값과 "
+"기준면의 차의 절대값을 합한 것과 동일합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:843
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:893
+msgid "**Surface volume report**"
+msgstr "**Surface volume report**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:848
+msgid "Specification of the output HTML report. One of:"
+msgstr "산출 HTML 파일을 지정합니다. 다음 가운데 하나를 선택할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:850
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:862
+msgid "Skip output"
+msgstr "산출물 건너뛰기"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:851
+msgid "Save to Temporary File"
+msgstr "임시 파일로 저장"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:855
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:898
+msgid "**Surface volume table**"
+msgstr "**Surface volume table**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:860
+msgid "Specification of the output table. One of:"
+msgstr "산출 테이블을 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:863
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1214
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1305
+msgid "Create Temporary Layer (``TEMPORARY_OUTPUT``)"
+msgstr "임시 레이어 생성 (``TEMPORARY_OUTPUT``)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:865
+msgid "Save to Geopackage..."
+msgstr "Geopackage로 저장"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:866
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1217
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1308
+msgid "Save to PostGIS Table..."
+msgstr "PostGIS 테이블로 저장"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:881
+msgid "**Volume**"
+msgstr "**Volume**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:882
+msgid "``VOLUME``"
+msgstr "``VOLUME``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:884
+msgid "The calculated volume"
+msgstr "계산된 부피"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:885
+msgid "**Area**"
+msgstr "**Area**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:886
+msgid "``AREA``"
+msgstr "``AREA``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:888
+msgid "The area in square map units"
+msgstr "제곱 맵 단위의 면적"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:889
+msgid "**Pixel_count**"
+msgstr "**Pixel_count**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:890
+msgid "``PIXEL_COUNT``"
+msgstr "``PIXEL_COUNT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:892
+msgid "The total number of pixels that have been analyzed"
+msgstr "분석된 픽셀의 총 개수"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:896
+msgid ""
+"The output report (containing volume, area and pixel count) in HTML format"
+msgstr "HTML 서식으로 된 (부피, 면적 및 픽셀 개수를 담고 있는) 산출 보고서"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:901
+msgid "The output table (containing volume, area and pixel count)"
+msgstr "(부피, 면적 및 픽셀 개수를 담고 있는) 산출 테이블"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:907
+msgid "**Algorithm ID**: ``qgis:rastersurfacevolume``"
+msgstr "**Algorithm ID**: ``qgis:rastersurfacevolume``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:917
+msgid "Reclassify by layer"
+msgstr "래스터로 재범주화"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:918
+msgid ""
+"Reclassifies a raster band by assigning new class values based on the ranges"
+" specified in a vector table."
+msgstr "래스터를 벡터 테이블에서 지정된 범위를 기반으로 하는 새 범주 값을 할당해서 재범주화합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:933
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1064
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1275
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1364
+msgid "**Raster layer**"
+msgstr "**Raster layer**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:934
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1065
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1276
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1365
+msgid "``INPUT_RASTER``"
+msgstr "``INPUT_RASTER``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:936
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1067
+msgid "Raster layer to reclassify"
+msgstr "재범주화할 래스터 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:938
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1069
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1280
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1369
+msgid "``RASTER_BAND``"
+msgstr "``RASTER_BAND``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:942
+msgid "If the raster is multiband, choose the band you want to reclassify."
+msgstr "래스터가 다중 밴드인 경우, 재범주화하려는 밴드를 선택하십시오."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:944
+msgid "**Layer containing class breaks**"
+msgstr "**Layer containing class breaks**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:945
+msgid "``INPUT_TABLE``"
+msgstr "``INPUT_TABLE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:946
+msgid "[vector: any]"
+msgstr "[vector: any]"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:947
+msgid "Vector layer containing the values to use for classification."
+msgstr "범주화에 사용할 값을 담고 있는 벡터 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:948
+msgid "**Minimum class value field**"
+msgstr "**Minimum class value field**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:949
+msgid "``MIN_FIELD``"
+msgstr "``MIN_FIELD``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:950
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:954
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:958
+msgid "[tablefield: numeric]"
+msgstr "[tablefield: numeric]"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:951
+msgid "Field with the minimum value of the range for the class."
+msgstr "범주용 범위의 최소값을 가진 필드"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:952
+msgid "**Maximum class value field**"
+msgstr "**Maximum class value field**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:953
+msgid "``MAX_FIELD``"
+msgstr "``MAX_FIELD``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:955
+msgid "Field with the maximum value of the range for the class."
+msgstr "범주용 범위의 최대값을 가진 필드"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:956
+msgid "**Output value field**"
+msgstr "**Output value field**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:957
+msgid "``VALUE_FIELD``"
+msgstr "``VALUE_FIELD``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:959
+msgid ""
+"Field with the value that will be assigned to the pixels that fall in the "
+"class (between the corresponding min and max values)."
+msgstr "(대응하는 최소 및 최대값 사이의) 범주에 들어오는 픽셀에 할당될 값을 가진 필드"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:967
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1085
+msgid "Value to apply to no data values."
+msgstr "NODATA 값에 적용할 값"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:968
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1086
+msgid "**Range boundaries**"
+msgstr "**Range boundaries**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:969
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1087
+msgid "``RANGE_BOUNDARIES``"
+msgstr "``RANGE_BOUNDARIES``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:973
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1091
+msgid "Defines comparison rules for the classification. Options:"
+msgstr "범주화를 위한 비교 규칙을 정의합니다. 다음 옵션 가운데 선택할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:976
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1094
+msgid "0 --- min < value <= max"
+msgstr "0 --- 최소값 < 값 <= 최대값"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:977
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1095
+msgid "1 --- min <= value < max"
+msgstr "1 --- 최소값 <= 값 < 최대값"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:978
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1096
+msgid "2 --- min <= value <= max"
+msgstr "2 --- 최소값 <= 값 <= 최대값"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:979
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1097
+msgid "3 --- min < value < max"
+msgstr "3 --- 최소값 < 값 < 최대값"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:981
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1099
+msgid "**Use no data when no range matches value**"
+msgstr "**Use no data when no range matches value**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:982
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1100
+msgid "``NODATA_FOR_MISSING``"
+msgstr "``NODATA_FOR_MISSING``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:986
+msgid ""
+"Values that do not belong to a class will result in the no data value. If "
+"False, the original value is kept."
+msgstr "범주에 속하지 않는 값은 NODATA 값으로 산출될 것입니다. False로 설정한 경우, 원본 값을 유지합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:994
+msgid "Defines the data type of the output raster file. Options:"
+msgstr "산출 래스터 파일의 데이터 유형을 정의합니다. 다음 가운데 하나로 지정할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1009
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1030
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1128
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1152
+msgid "**Reclassified raster**"
+msgstr "**Reclassified raster**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1033
+msgid "Output raster layer with reclassified band values"
+msgstr "재범주화된 밴드 값을 가진 산출 래스터 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1038
+msgid "**Algorithm ID**: ``qgis:reclassifybylayer``"
+msgstr "**Algorithm ID**: ``qgis:reclassifybylayer``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1048
+msgid "Reclassify by table"
+msgstr "테이블로 재범주화"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1049
+msgid ""
+"Reclassifies a raster band by assigning new class values based on the ranges"
+" specified in a fixed table."
+msgstr "래스터를 고정 테이블에서 지정된 범위를 기반으로 하는 새 범주 값을 할당해서 재범주화합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1072
+msgid "Default: 1"
+msgstr "기본값: 1"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1073
+msgid "Raster band for which you want to recalculate values."
+msgstr "값을 재계산하고자 하는 래스터 밴드"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1074
+msgid "**Reclassification table**"
+msgstr "**Reclassification table**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1075
+msgid "``TABLE``"
+msgstr "``TABLE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1077
+msgid ""
+"A 3-columns table to fill with the values to set the boundaries of each "
+"class (``Minimum`` and ``Maximum``) and the new ``Value`` to assign to the "
+"band values that fall in the class."
+msgstr ""
+"각 범주의 범위(``Minimum`` 및 ``Maximum``)를 설정할 값과 범주 안에 들어오는 밴드 값에 할당할 새 ``Value``"
+" 로 채워질 열 3개로 이루어진 테이블"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1104
+msgid ""
+"Applies the no data value to band values that do not fall in any class. If "
+"False, the original value is kept."
+msgstr "어떤 범주에도 들어오지 않는 밴드 값에 NODATA 값을 적용합니다. False로 설정한 경우, 원본 값을 유지합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1112
+msgid "Defines the format of the output raster file."
+msgstr "산출 래스터 파일의 포맷을 정의합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1114
+msgid "Options:"
+msgstr "옵션:"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1132
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1156
+msgid "Default: '[Save to temporary file]'"
+msgstr "기본값: '[Save to temporary file]'"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1133
+msgid "Specification of the output raster layer. One of:"
+msgstr "산출 래스터 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1139
+msgid "The file encoding can also be changed here"
+msgstr "이 파라미터에서 파일 인코딩도 변경할 수 있습니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1157
+msgid "The output raster layer."
+msgstr "산출 래스터 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1162
+msgid "**Algorithm ID**: ``qgis:reclassifybytable``"
+msgstr "**Algorithm ID**: ``qgis:reclassifybytable``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1172
+msgid "Sample raster values"
+msgstr "래스터 값 샘플링"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1173
+msgid ""
+"Extracts raster values at the point locations. If the raster layer is "
+"multiband, each band is sampled."
+msgstr "포인트 위치에 있는 래스터 값을 추출합니다. 래스터 레이어가 다중 밴드인 경우, 각 밴드를 샘플링합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1176
+msgid ""
+"The attribute table of the resulting layer will have as many new columns as "
+"the raster layer band count."
+msgstr "산출 레이어의 속성 테이블은 래스터 레이어의 밴드 개수만큼의 새 열을 가질 것입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1190
+msgid "**Input Point Layer**"
+msgstr "**Input Point Layer**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1192
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1208
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1236
+msgid "[vector: point]"
+msgstr "[vector: point]"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1193
+msgid "Point vector layer to use for  sampling"
+msgstr "샘플링에 사용할 포인트 벡터 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1194
+msgid "**Raster Layer to sample**"
+msgstr "**Raster Layer to sample**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1195
+msgid "``RASTERCOPY``"
+msgstr "``RASTERCOPY``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1197
+msgid "Raster layer to sample at the given point locations."
+msgstr "지정한 포인트 위치에서 샘플링할 래스터 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1198
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1289
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1378
+msgid "**Output column prefix**"
+msgstr "**Output column prefix**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1199
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1290
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1379
+msgid "``COLUMN_PREFIX``"
+msgstr "``COLUMN_PREFIX``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1202
+msgid "Default: 'rvalue'"
+msgstr "기본값: 'rvalue'"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1203
+msgid "Prefix for the names of the added columns."
+msgstr "추가될 열의 명칭 앞에 붙일 접두어"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1204
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1232
+msgid "**Sampled Points**"
+msgstr "**Sampled Points**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1206
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1234
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1325
+msgid "(Optional)"
+msgstr "(Optional)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1210
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1301
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1329
+msgid "Default: ``[Create temporary layer]``"
+msgstr "기본값: ``[Create temporary layer]``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1211
+msgid "Specify the output layer containing the sampled values. One of:"
+msgstr "샘플링된 값을 담고 있는 산출 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1237
+msgid "The output layer containing the sampled values."
+msgstr "샘플링된 값을 담고 있는 산출 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1242
+msgid "**Algorithm ID**: ``qgis:rastersampling``"
+msgstr "**Algorithm ID**: ``qgis:rastersampling``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1252
+msgid "Zonal histogram"
+msgstr "구역 히스토그램"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1253
+msgid ""
+"Appends fields representing counts of each unique value from a raster layer "
+"contained within polygon features."
+msgstr "폴리곤 피처 내부에 담겨진 래스터 레이어에서 나온 각 유일값의 개수를 표현하는 필드를 추가합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1256
+msgid ""
+"The output layer attribute table will have as many fields as the unique "
+"values of the raster layer that intersects the polygon(s)."
+msgstr "산출 레이어의 속성 테이블은 폴리곤(들)과 교차하는 래스터 레이어의 유일값 개수만큼의 필드를 가질 것입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1262
+msgid "Raster layer histogram example"
+msgstr "래스터 레이어 히스토그램 예시"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1278
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1367
+msgid "Input raster layer."
+msgstr "입력 래스터 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1284
+msgid "If the raster is multiband, choose a band."
+msgstr "래스터가 다중 밴드인 경우, 밴드를 선택하십시오."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1285
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1374
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1416
+msgid "**Vector layer containing zones**"
+msgstr "**Vector layer containing zones**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1286
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1375
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1417
+msgid "``INPUT_VECTOR``"
+msgstr "``INPUT_VECTOR``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1287
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1299
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1327
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1376
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1418
+msgid "[vector: polygon]"
+msgstr "[vector: polygon]"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1288
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1377
+msgid "Vector polygon layer that defines the zones."
+msgstr "구역을 정의하는 벡터 폴리곤 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1295
+msgid "Default: 'HISTO\\_'"
+msgstr "기본값: 'HISTO\\_'"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1296
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1383
+msgid "Prefix for the output columns names."
+msgstr "산출 열의 명칭 앞에 붙일 접두어"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1297
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1323
+msgid "**Output zones**"
+msgstr "**Output zones**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1302
+msgid "Specify the output vector polygon layer. One of:"
+msgstr "산출 벡터 폴리곤 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1330
+msgid "The output vector polygon layer."
+msgstr "산출 벡터 폴리곤 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1335
+msgid "**Algorithm ID**: ``qgis:zonalhistogram``"
+msgstr "**Algorithm ID**: ``qgis:zonalhistogram``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1345
+msgid "Zonal statistics"
+msgstr "구역 통계"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1346
+msgid ""
+"Calculates statistics of a raster layer for each feature of an overlapping "
+"polygon vector layer."
+msgstr "중첩하는 폴리곤 벡터 레이어의 각 피처에 해당하는 래스터 레이어 영역의 통계를 계산합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1349
+msgid ""
+"No new output file will be created. The algorithm adds new columns to the "
+"source vector layer."
+msgstr "새 산출물 파일을 생성하지 않을 것입니다. 이 알고리즘은 소스 벡터 레이어에 새 열을 추가합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1368
+msgid "**Raster band**"
+msgstr "**Raster band**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1373
+msgid "If the raster is multiband, choose a band for the statistics."
+msgstr "래스터가 다중 밴드인 경우, 통계를 얻고자 하는 밴드를 선택하십시오."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1382
+msgid "Default: '_'"
+msgstr "기본값: '_'"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1384
+msgid "**Statistics to calculate**"
+msgstr "**Statistics to calculate**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1385
+msgid "``STATISTICS``"
+msgstr "``STATISTICS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1386
+msgid "[enumeration] [list]"
+msgstr "[enumeration] [list]"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1388
+msgid "Default: [0,1,2]"
+msgstr "기본값: [0,1,2]"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1389
+msgid "List of statistical operator for the output. Options:"
+msgstr "산출물을 위한 통계 연산자의 목록. 다음 옵션 가운데 선택할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1392
+msgid "0 --- Count"
+msgstr "0 --- 개수(Count)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1393
+msgid "1 --- Sum"
+msgstr "1 --- 합계(Sum)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1394
+msgid "2 --- Mean"
+msgstr "2 --- 평균(Mean)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1395
+msgid "3 --- Median"
+msgstr "3 --- 중간값(Median)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1396
+msgid "4 --- St. dev."
+msgstr "4 --- 표준 편차(St. dev.)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1397
+msgid "5 --- Minimum"
+msgstr "5 --- 최소값(Minimum)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1398
+msgid "6 --- Maximum"
+msgstr "6 --- 최대값(Maximum)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1399
+msgid "7 --- Range"
+msgstr "7 --- 범위(Range)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1400
+msgid "8 --- Minority"
+msgstr "8 --- 소수 기준(Minority)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1401
+msgid "9 --- Majority"
+msgstr "9 --- 다수 기준(Majority)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1402
+msgid "10 --- Variety"
+msgstr "10 --- 다양도(Variety)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1403
+msgid "11 --- Variance"
+msgstr "11 --- 변동(Variance)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1419
+msgid "The input zone vector layer with added statistics."
+msgstr "추가 통계를 가진 입력 구역 벡터 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1424
+msgid "**Algorithm ID**: ``qgis:zonalstatistics``"
+msgstr "**Algorithm ID**: ``qgis:zonalstatistics``"

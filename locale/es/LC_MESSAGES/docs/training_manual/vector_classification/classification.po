@@ -1,0 +1,745 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:20+0000\n"
+"Last-Translator: Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020\n"
+"Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:2
+msgid "|LS| Classification"
+msgstr "|LS| Clasificación"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:4
+msgid ""
+"Labels are a good way to communicate information such as the names of "
+"individual places, but they can't be used for everything. For example, let "
+"us say that someone wants to know what each ``landuse`` area is used for. "
+"Using labels, you would get this:"
+msgstr ""
+"Las etiquetas son una buena forma de comunicar información como los nombres "
+"de lugares individuales, pero no se pueden usar para todo. Por ejemplo, "
+"digamos que alguien quiere saber para qué se utiliza cada área de "
+"``landuse``. Usando etiquetas, obtendría esto:"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:13
+msgid ""
+"This makes the map's labeling difficult to read and even overwhelming if "
+"there are numerous different landuse areas on the map."
+msgstr ""
+"Esto dificulta la lectura el etiquetado del mapa e incluso sería abrumador "
+"si hay muchos usos diferentes del territorio en un mapa."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:16
+msgid ""
+"**The goal for this lesson:** To learn how to classify vector data "
+"effectively."
+msgstr ""
+"**El objetivo de esta lección:** Aprender como clasificar los datos "
+"vectoriales efectivamente."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:20
+msgid "|basic| |FA| Classifying Nominal Data"
+msgstr "|basic| |FA| Clasificación de Datos Nominales"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:22
+#: ../../docs/training_manual/vector_classification/classification.rst:287
+msgid "Open the :guilabel:`Layer Properties` dialog for the ``landuse`` layer"
+msgstr ""
+"Abra el diálogo :guilabel:`Propiedades de capa` para la capa``landuse``"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:24
+msgid "Go to the :guilabel:`Symbology` tab"
+msgstr "Vaya a la sección :guilabel:`Simbología`"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:25
+msgid ""
+"Click on the dropdown that says :guilabel:`Single Symbol` and change it to "
+":guilabel:`Categorized`:"
+msgstr ""
+"Haga clic sobre la lista desplegable que dice :guilabel:`Símbolo único` y "
+"cambiarlo a :guilabel:`Categorizado`:"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:31
+msgid ""
+"In the new panel, change the :guilabel:`Value` to ``landuse`` and the "
+":guilabel:`Color ramp` to :guilabel:`Random colors`"
+msgstr ""
+"En el nuevo panel, cambie el :guilabel:`Valor` a ``landuse`` y la "
+":guilabel:`Rampa de Color` a :guilabel:`Colores aleatorios`"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:33
+msgid "Click the button labeled :guilabel:`Classify`"
+msgstr "Click en el botón etiquetado con :guilabel:`Clasificar`"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:38
+#: ../../docs/training_manual/vector_classification/classification.rst:172
+#: ../../docs/training_manual/vector_classification/classification.rst:202
+#: ../../docs/training_manual/vector_classification/classification.rst:243
+msgid "Click :guilabel:`OK`"
+msgstr "Haga clic en :guilabel:`Aceptar`."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:40
+msgid "You'll see something like this:"
+msgstr "Verás algo como esto:"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:45
+msgid ""
+"Click the arrow (or plus sign) next to ``landuse`` in the :guilabel:`Layers`"
+" panel, you'll see the categories explained:"
+msgstr ""
+"Click en la flecha (o sigmo mas) al lado de ``landuse`` en el panel "
+":guilabel:`Capas`, verá las categorías explicadas:"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:51
+msgid ""
+"Now our landuse polygons are colored and are classified so that areas with "
+"the same land use are the same color."
+msgstr ""
+"Ahora que nuestros polígonos de uso de suelo están coloreados y clasificados"
+" de tal manera que áreas con el mismo uso tienen el mismo color."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:54
+msgid ""
+"If you wish to, you can change the symbol of each landuse area by double-"
+"clicking the relevant color block in the :guilabel:`Layers` panel or in the "
+":guilabel:`Layer Properties` dialog:"
+msgstr ""
+"Si quieres, puedes cambiar el símbolo de cada uso de suelo haciendo doble-"
+"click en el bloque de color adecuado en el panel :guilabel:`Capas`o en el "
+"diálogo :guilabel:`Propiedades de capa`:"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:62
+msgid "Notice that there is one category that's empty:"
+msgstr "Nota que hay una categoría vacía."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:67
+msgid ""
+"This empty category is used to color any objects which do not have a landuse"
+" value defined or which have a *NULL* value. It can be useful to keep this "
+"empty category so that areas with a *NULL* value are still represented on "
+"the map. You may like to change the color to more obviously represent a "
+"blank or *NULL* value."
+msgstr ""
+"Esta categoría vacía se utiliza para colorear cualquier objeto que no tenga "
+"definido un valor de uso del suelo o que tenga un valor *NULL*. Puede ser "
+"útil mantener esta categoría vacía para que las áreas con un valor *NULL* "
+"sigan representadas en el mapa. Es posible que desee cambiar el color para "
+"representar más obviamente un valor en blanco o *NULL*."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:74
+msgid ""
+"Remember to save your map now so that you don't lose all your hard-earned "
+"changes!"
+msgstr ""
+"¡Recuerda guardar tu mapa ahora para no perder todos tus laboriosos cambios!"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:78
+msgid "|basic| |TY| More Classification"
+msgstr "|basic| |TY| Más Clasificación"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:80
+msgid ""
+"Use the knowledge you gained above to classify the ``buildings`` layer. Set "
+"the categorisation against the ``building`` field and use the "
+":guilabel:`Spectral` color ramp."
+msgstr ""
+"Use el conocimiento adquirido arriba para clasificar la capa ``buildings``. "
+"Ajuste la categorización sobre el campo ``building`` y use la rampa de color"
+" :guilabel:Èspectral`."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:84
+msgid "Remember to zoom into an urban area to see the results."
+msgstr "Recuerda ampliar en un área urbana para ver los resultados."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:87
+msgid "|moderate| |FA| Ratio Classification"
+msgstr "|moderate| |FA| Clasificación por Razones"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:89
+msgid ""
+"There are four types of classification: *nominal*, *ordinal*, *interval* and"
+" *ratio*."
+msgstr ""
+"Hay cuatro tipos de clasificación: *nominal*, *ordinal*, *de intervalos* y "
+"*relativa*."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:92
+msgid ""
+"In **nominal** classification, the categories that objects are classified "
+"into are name-based; they have no order. For example: town names, district "
+"codes, etc. Symbols that are used for nominal data should not imply any "
+"order or magnitude."
+msgstr ""
+"En la clasificación **nominal**, las categorías en las que se clasifican los"
+" objetos se basan en el nombre; No tienen orden. Por ejemplo: nombres de "
+"ciudades, códigos de distritos, etc. Los símbolos que se usan para datos "
+"nominales no deben implicar ningún orden o magnitud."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:98
+msgid "For points, we can use symbols of different shape."
+msgstr "Para puntos, podemos usar símbolos de diferentes formas."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:99
+msgid ""
+"For polygons, we can use different types of hatching or different colours "
+"(avoid mixing light and dark colours)."
+msgstr ""
+"Para polígonos, podemos usar diferentes tipos de tramas o diferents colores "
+"(evitar mezclar colores claros y oscuros)."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:101
+msgid ""
+"For lines, we can use different dash patterns, different colours (avoid "
+"mixing light and dark colours) and different symbols along the lines."
+msgstr ""
+"Para las líneas, podemos usar diferentes patrones de guiones, diferentes "
+"colores (evite mezclar colores claros y oscuros) y diferentes símbolos a lo "
+"largo de las líneas."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:105
+msgid ""
+"In **ordinal** classification, the categories are arranged in a certain "
+"order. For example, world cities are given a rank depending on their "
+"importance for world trade, travel, culture, etc. Symbols that are used for "
+"ordinal data should imply order, but not magnitude."
+msgstr ""
+"En la clasificación **ordinal**, las categorías se organizan en un cierto "
+"orden. Por ejemplo, a las ciudades del mundo se les asigna un rango según su"
+" importancia para el comercio mundial, los viajes, la cultura, etc. Los "
+"símbolos que se usan para datos ordinales deben implicar orden, pero no "
+"magnitud."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:112
+msgid "For points, we can use symbols with light to dark colours."
+msgstr "Para puntos, podemos usar símbolos con colores claros y oscuros."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:113
+msgid "For polygons, we can use graduated colours (light to dark)."
+msgstr "Para polígonos, podemos usar colores graduados (claro a oscuro)."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:114
+msgid "For lines, we can use graduated colours (light to dark)."
+msgstr "Para líneas, podemos usar colores graduados(claro a oscuro)."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:116
+msgid ""
+"In **interval** classification, the numbers are on a scale with positive, "
+"negative and zero values. For example: height above/below sea level, "
+"temperature in degrees Celsius. Symbols that are used for interval data "
+"should imply order and magnitude."
+msgstr ""
+"En la clasificación de ** intervalo **, los números están en una escala con "
+"valores positivos, negativos y cero. Por ejemplo: altura sobre/bajo del "
+"nivel del mar, temperatura en grados Celsius. Los símbolos que se utilizan "
+"para los datos de intervalo deben implicar orden y magnitud."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:123
+#: ../../docs/training_manual/vector_classification/classification.rst:136
+msgid "For points, we can use symbols with varying size (small to big)."
+msgstr ""
+"Para los puntos, podemos usar símbolos con diferentes tamaños (de pequeño a "
+"grande)."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:124
+#: ../../docs/training_manual/vector_classification/classification.rst:137
+msgid ""
+"For polygons, we can use graduated colours (light to dark) or add diagrams "
+"of varying size."
+msgstr ""
+"Para los polígonos, podemos usar colores graduados (claro a oscuro) o "
+"agregar diagramas de diferentes tamaños."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:126
+#: ../../docs/training_manual/vector_classification/classification.rst:139
+msgid "For lines, we can use thickness (thin to thick)."
+msgstr "Para líneas, podemos usar grosor (delgado a grueso)."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:128
+msgid ""
+"In **ratio** classification, the numbers are on a scale with only positive "
+"and zero values. For example: temperature above absolute zero (0 degrees "
+"Kelvin), distance from a point, the average amount of traffic on a given "
+"street per month, etc. Symbols that are used for ratio data should imply "
+"order and magnitude."
+msgstr ""
+"En la clasificación **ratio**, los números están en una escala con solo "
+"valores positivos y cero. Por ejemplo: temperatura por encima del cero "
+"absoluto (0 grados Kelvin), distancia desde un punto, la cantidad promedio "
+"de tráfico en una calle determinada por mes, etc. Los símbolos que se usan "
+"para datos de relación deben implicar orden y magnitud."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:141
+msgid ""
+"In the example above, we used nominal classification to color each record in"
+" the ``landuse`` layer based on its ``landuse`` attribute. Now we will use "
+"ratio classification to classify the records by area."
+msgstr ""
+"En el ejemplo anterior, utilizamos la clasificación nominal para colorear "
+"cada registro en la capa ``landuse`` según su atributo ``landuse``. Ahora "
+"usaremos la clasificación de ratio para clasificar los registros por área."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:145
+msgid ""
+"We are going to reclassify the layer, so existing classes will be lost if "
+"not saved. To store the current classification:"
+msgstr ""
+"Vamos a reclasificar la capa, por lo que las clases existentes se perderán "
+"si no se guardan. Para almacenar la clasificación actual:"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:148
+msgid "Open the layer's properties dialog"
+msgstr "Abrir el diálogo de propiedades de la capa"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:149
+msgid ""
+"Click the :guilabel:`Save Style ...` button in the :guilabel:`Style` drop-"
+"down menu."
+msgstr ""
+"Haga click en el botón :guilabel:`Guardar estilo...` en el menú desplegable "
+":guilabel:`Estilo`."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:151
+msgid ""
+"Select :guilabel:`Rename Current...`, enter ``land usage`` and press "
+":guilabel:`OK`."
+msgstr ""
+"Seleccione :guilabel:`Renombrar actual ... ', ingrese``landuse`` y presione "
+":guilabel:`Aceptar`."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:154
+msgid ""
+"The categories and their symbols are now saved in the layer's properties."
+msgstr ""
+"Las categorías y sus símbolos ahora se guardan en las propiedades de la "
+"capa."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:155
+msgid ""
+"Click now on the :guilabel:`Add...` entry of the :guilabel:`Style` drop-down"
+" menu and create a new style named ``ratio``. This will store the new "
+"classification."
+msgstr ""
+"Haga click ahora en la entrada :guilabel:`Agregar ...` del menú desplegable "
+":guilabel:`Estilo` y cree un nuevo estilo llamado``ratio``. Esto almacenará "
+"la nueva clasificación."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:158
+msgid "Close the :guilabel:`Layer Properties` dialog"
+msgstr "Cierre el diálogo :guilabel:`Propiedades de capa`"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:160
+msgid ""
+"We want to classify the landuse areas by size, but there is a problem: they "
+"don't have a size field, so we'll have to make one."
+msgstr ""
+"Queremos clasificar las áreas de uso del suelo por tamaño, pero hay un "
+"problema: no tienen un campo de tamaño, por lo que tendremos que crear uno."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:163
+msgid "Open the Attributes Table for the ``landuse`` layer."
+msgstr "Abra la tabla de atributos para la capa ``landuse``."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:164
+msgid ""
+"Enter edit mode by clicking the |toggleEditing|  :sup:`Toggle editing` "
+"button"
+msgstr ""
+"Ingrese al modo de edición haciendo click en el botón |toggleEditing| "
+":sup:`Conmutar edición`"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:166
+msgid ""
+"Add a new column of decimal type, called ``AREA``, using the |newAttribute| "
+":sup:`New field` button:"
+msgstr ""
+"Agregue una nueva columna de tipo decimal, llamada ``AREA``, utilizando el "
+"botón |newAttribute| :sup:`Nuevo campo`:"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:174
+msgid ""
+"The new field will be added (at the far right of the table; you may need to "
+"scroll horizontally to see it). However, at the moment it is not populated, "
+"it just has a lot of *NULL* values."
+msgstr ""
+"Se agregará el nuevo campo (en el extremo derecho de la tabla; es posible "
+"que deba desplazarse horizontalmente para verlo). Sin embargo, en este "
+"momento no está lleno, solo tiene muchos valores *NULL*."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:179
+msgid "To solve this problem, we will need to calculate the areas."
+msgstr "Para resolver este problema, necesitaremos calcular las áreas."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:181
+msgid "Open the field calculator with the |calculateField| button."
+msgstr "Abra la calculadora de campo con el botón |CalculateField|."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:183
+msgid "You will get this dialog:"
+msgstr "Obtendrá este diálogo:"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:188
+msgid "Check the |checkbox| :guilabel:`Update existing fields`"
+msgstr "Marque |checkbox| :guilabel:`Actualizar campos existentes`"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:189
+msgid "Select :guilabel:`AREA` in the fields drop-down menu"
+msgstr "Seleccionar :guilabel:`AREA` en el menú desplegable de campos"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:194
+msgid ""
+"Under the :guilabel:`Expression` tab, expand the :guilabel:`Geometry` "
+"functions group in the list and find :menuselection:`$area`"
+msgstr ""
+"En la pestaña :guilabel:`Expresión`, expanda el grupo de funciones "
+":guilabel:`Geometría` en la lista y busque :menuselection:`$area`"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:196
+msgid ""
+"Double-click on it so that it appears in the :guilabel:`Expression` field"
+msgstr ""
+"Haga doble clic en él para que aparezca en el campo :guilabel:`Expresión`"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:203
+msgid ""
+"Scroll to the ``AREA`` field in the attribute table and you will notice that"
+" it is populated with values (you may need to click the column header to "
+"refresh the data)."
+msgstr ""
+"Desplácese hasta el campo ``ÁREA`` en la tabla de atributos y notará que "
+"está lleno de valores (es posible que deba hacer click en el encabezado de "
+"la columna para actualizar los datos)."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:207
+msgid ""
+"These areas respect the project's area unit settings, so they may be in "
+"square meters or square degrees."
+msgstr ""
+"Estas áreas respetan la configuración de la unidad de área del proyecto, por"
+" lo que pueden estar en metros cuadrados o grados cuadrados."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:210
+msgid ""
+"Press |saveEdits| to save the edits and exit the edit mode with "
+"|toggleEditing| :sup:`Toggle editing`"
+msgstr ""
+"Presione |saveEdits| guardar las ediciones y salir del modo de edición con "
+"|toggleEditing| :sup:`Conmutar edición`"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:212
+msgid "Close the attribute table"
+msgstr "Cierre la tabla de atributos"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:214
+msgid ""
+"Now that we have the data, let's use them to render the ``landuse`` layer."
+msgstr ""
+"Ahora que tenemos los datos, usémoslos para representar la capa ``landuse``."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:216
+msgid ""
+"Open the :guilabel:`Layer properties` dialog's :guilabel:`Symbology` tab for"
+" the ``landuse`` layer"
+msgstr ""
+"Abra el cuadro de diálogo :guilabel:`Propiedades de capa` en la pestaña "
+":guilabel:`Simbología` para la capa ``landuse``"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:218
+msgid ""
+"Change the classification style from :guilabel:`Categorized` to "
+":guilabel:`Graduated`"
+msgstr ""
+"Cambie el estilo de clasificación de :guilabel:`Categorizada` a "
+":guilabel:`Graduada`"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:220
+msgid "Change the :guilabel:`Value` to ``AREA``"
+msgstr "Cambie el :guilabel:`Valor` a ``AREA``"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:221
+msgid ""
+"Under :guilabel:`Color ramp`, choose the option :guilabel:`Create New Color "
+"Ramp...`:"
+msgstr ""
+"En :guilabel:`Rampa de Color`, elija la opción :guilabel:`Crear Nueva Rampa "
+"de Color...`:"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:227
+msgid ""
+"Choose :guilabel:`Gradient` (if it's not selected already) and click "
+":guilabel:`OK`. You will see this:"
+msgstr ""
+"Elija :guilabel:`Gradiente` (si no está seleccionado todavía) y haga click "
+"en :guilabel:`Aceptar`. Verá esto:"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:233
+msgid ""
+"You'll be using this to denote area, with small areas as :guilabel:`Color 1`"
+" and large areas as :guilabel:`Color 2`."
+msgstr ""
+"Estarás usando esto para denotar áreas, con áreas pequeñas como "
+":guilabel:`Color 1` y áreas grandes como :guilabel:`Color 2`."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:236
+msgid "Choose appropriate colors"
+msgstr "Elija colores apropiados"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:238
+msgid "In the example, the result looks like this:"
+msgstr "En el ejemplo, el resultado se ve así:"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:244
+msgid ""
+"You can save the colour ramp by selecting :guilabel:`Save Color Ramp...` "
+"under the :guilabel:`Color ramp` tab. Choose an appropriate name for the "
+"colour ramp and click :guilabel:`Save`. You will now be able to select the "
+"same colour ramp easily under :guilabel:`All Color Ramps`."
+msgstr ""
+"Puede guardar la rampa de color seleccionanda :guilabel:`Guardar rampa de "
+"color ...` en la pestaña :guilabel:`Rampa de color`. Elija un nombre "
+"apropiado para la rampa de color y haga click en :guilabel:`Guardar`. Ahora "
+"podrá seleccionar la misma rampa de color fácilmente en :guilabel:`Todas las"
+" rampas de color`."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:251
+msgid "Click :guilabel:`Classify`"
+msgstr "Click en :guilabel:`Clasificar`"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:253
+msgid "Now you will have something like this:"
+msgstr "Ahora tendrás algo como esto:"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:258
+msgid "Leave everything else as-is."
+msgstr "Deja todo lo demás como está."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:260
+msgid "Click :guilabel:`OK`:"
+msgstr "Click en :guilabel:`Aceptar`:"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:269
+msgid "|moderate| |TY| Refine the Classification"
+msgstr "|moderate| |TY| Refinar la Clasificación"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:271
+msgid ""
+"Change the values of :guilabel:`Mode` and :guilabel:`Classes` until you get "
+"a classification that makes sense."
+msgstr ""
+"Cambia los valores de :guilabel:`Modo` y :guilabel:`Clases` hasta que "
+"obtengas una clasificación coherente."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:274
+msgid ":ref:`Check your results <classification-refine-1>`"
+msgstr ":ref:`Comprueba tus resultados <classification-refine-1>`"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:277
+msgid "|hard| |FA| Rule-based Classification"
+msgstr "|hard| |FA| Clasificación basada en Reglas"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:279
+msgid ""
+"It's often useful to combine multiple criteria for a classification, but "
+"unfortunately normal classification only takes one attribute into account. "
+"That's where rule-based classification comes in handy."
+msgstr ""
+"Es común combinar múltiples criterios para una clasificación, pero "
+"desafortunadamente la clasificación normal solo tiene en cuenta un atributo."
+" Ahí es donde la clasificación basada en reglas entra en juego."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:283
+msgid ""
+"In this lesson, we will represent the ``landuse`` layer in a way to easily "
+"identify |majorUrbanName| city from the other residential area, and from the"
+" other types of landuse (based on their area)."
+msgstr ""
+"En esta lección, representaremos la capa ``landuse`` de manera que se pueda "
+"identificar fácilmente la ciudad |majorUrbanName| del otro área residencial "
+"y de los otros tipos de uso de la tierra (según su área)."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:289
+msgid "Switch to the :guilabel:`Symbology` tab"
+msgstr "Conmute la pestaña :guilabel:`Simbología`"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:290
+msgid "Switch the classification style to :guilabel:`Rule-based`"
+msgstr "Cambie el estilo de clasificación a :guilabel:`basado en reglas`"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:292
+msgid ""
+"QGIS will automatically show the rules that represent the current "
+"classification implemented for this layer. For example, after completing the"
+" exercise above, you may see something like this:"
+msgstr ""
+"QGIS mostrará automáticamente las reglas que representan la clasificación "
+"actual implementada para esta capa. Por ejemplo, después de completar el "
+"ejercicio anterior, puede ver algo como esto:"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:300
+msgid "Click and drag to select all the rules"
+msgstr "Click y arrastre para seleccionar todas las reglas"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:301
+msgid ""
+"Use the |signMinus| :sup:`Remove selected rules` button to remove all of the"
+" existing rules"
+msgstr ""
+"Use el botón |signMinus| :sup:`Eliminar reglas seleccionadas` para borrar "
+"todas las reglas existentes"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:304
+msgid "Let's now add our custom rules."
+msgstr "Ahora añadamos nuestras reglas personalizadas."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:306
+msgid "Click the |signPlus| :sup:`Add rule` button"
+msgstr "Click en el botón |signPlus| :sup:`Añadir regla`"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:307
+msgid "The :guilabel:`Edit rule` dialog then appears"
+msgstr "El diálogo :guilabel:`Editar regla` entonces aparece"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:308
+msgid "Enter ``Swellendam city`` as :guilabel:`Label`"
+msgstr "Introduzca ``Swellendam city`` como :guilabel:`Etiqueta`"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:309
+msgid ""
+"Click the |expression| button next to the :guilabel:`Filter` text area to "
+"open the :guilabel:`Expression String Builder`"
+msgstr ""
+"Haga clic en el botón |expression| al lado del área de texto "
+":guilabel:`Filtro` para abrir el :guilabel:`Generador de cadenas de "
+"expresión`"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:311
+msgid "Enter the criterion ``\"name\" = 'Swellendam'`` and validate"
+msgstr "Introduzca el criterio ``\"name\" = 'Swellendam'`` y valide"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:316
+msgid ""
+"Back to the :guilabel:`Edit rule` dalog, assign it a darker grey-blue color "
+"in order to indicate the town's importance in the region and remove the "
+"border"
+msgstr ""
+"Regrese al cuadro de diálogo :guilabel:`Editar regla`, asígnele un color "
+"gris-azul más oscuro para indicar la importancia de la ciudad en la región y"
+" eliminar el borde"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:323
+msgid "Press :guilabel:`OK`"
+msgstr "Presiona :guilabel:`Aceptar`"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:324
+msgid "Repeat the steps above to add the following rules:"
+msgstr "Repite los pasos de arriba para añadir las siguientes reglas:"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:326
+msgid ""
+"**Other residential** label with the criterion ``\"landuse\" = 'residential'"
+" AND \"name\" <> 'Swellendam'`` (or ``\"landuse\" = 'residential' AND "
+"\"name\" != 'Swellendam'``). Choose a pale blue-grey :guilabel:`Fill color`"
+msgstr ""
+"Etiqueta **Otro residencial** con el criterio ``\"landuse\" = 'residential' "
+"AND \"name\" <> 'Swellendam'`` (o ``\"landuse\" = 'residential' AND \"name\""
+" != 'Swellendam'``). Elija un azul gris pálido como :guilabel:`Color de "
+"relleno`"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:330
+msgid ""
+"**Big non residential areas** label with the criterion ``\"landuse\" <> "
+"'residential' AND \"AREA\" >= 605000``. Choose a mid-green color."
+msgstr ""
+"Etiqueta **Grandes Areas no Residenciales** con la regla ``\"landuse\" <> "
+"'residential' AND \"AREA\" >= 605000``. Elige un color verde medio."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:337
+msgid ""
+"These filters are exclusive, in that they exclude areas on the map (non-"
+"residential areas which are smaller than 605000 (square meters) are not "
+"included in any of the rules)."
+msgstr ""
+"Estos filtros son exclusivos, ya que excluyen áreas en el mapa (las áreas no"
+" residenciales que son más pequeñas que 605000 (metros cuadrados) no están "
+"incluidas en ninguna de las reglas)."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:341
+msgid ""
+"We will catch the remaining features using a new rule labeled **Small non "
+"residential areas**. Instead of a filter expression, Check the "
+"|radioButtonOn| :guilabel:`Else`. Give this category a suitable pale green "
+"color."
+msgstr ""
+"Capturaremos las entidades restantes usando una nueva regla etiquetada "
+"**Pequeñas áreas no residenciales**. En lugar de una expresión de filtro, "
+"marque |radioButtonOn| :guilabel:`Else`. Dé a esta categoría un color verde "
+"pálido adecuado."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:349
+msgid "Your rules should now look like this:"
+msgstr "Sus reglas deberían aparecer como estas:"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:354
+msgid "Apply this symbology"
+msgstr "Aplique esta simbología"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:356
+msgid "Your map will look something like this:"
+msgstr "Tu mapa se parecerá a este:"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:361
+msgid ""
+"Now you have a map with |majorUrbanName| the most prominent residential area"
+" and other non-residential areas colored according to their size."
+msgstr ""
+"Ahora tienes un mapa con las áreas residenciales más destacadas "
+"|majorUrbanName| y otras áreas no residenciales coloreadas de acuerdo con su"
+" tamaño."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:366
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:368
+msgid ""
+"Symbology allows us to represent the attributes of a layer in an easy-to-"
+"read way. It allows us as well as the map reader to understand the "
+"significance of features, using any relevant attributes that we choose. "
+"Depending on the problems you face, you'll apply different classification "
+"techniques to solve them."
+msgstr ""
+"La simbología nos permite representar los atributos de una capa de una forma"
+" sencilla de entender. También permite a los que visualicen el mapa entender"
+" el significado de las características, utilizando atributos relevantes que "
+"hemos escogido. Dependiendo del problema al que te enfrentes, aplicarás "
+"diferentes técnicas de clasificación para resolverlos."
+
+#: ../../docs/training_manual/vector_classification/classification.rst:376
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:378
+msgid ""
+"Now we have a nice-looking map, but how are we going to get it out of QGIS "
+"and into a format we can print out, or make into an image or PDF? That's the"
+" topic of the next lesson!"
+msgstr ""
+"Ahora tenemos un bonito mapa, pero ¿Cómo obtendremos del QGIS un formato que"
+" se pueda imprimir o convertirlo en una imagen o PDF? ¡Ese es el tema de la "
+"siguiente lección!"

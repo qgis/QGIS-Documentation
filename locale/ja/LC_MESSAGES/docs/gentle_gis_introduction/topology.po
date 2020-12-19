@@ -1,0 +1,423 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# Tomoko Takeda <takeda@iges.or.jp>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:16+0000\n"
+"Last-Translator: Tomoko Takeda <takeda@iges.or.jp>, 2020\n"
+"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:5
+msgid "Topology"
+msgstr "トポロジ"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:8
+msgid "|gentleLogo|"
+msgstr "|gentleLogo|"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:8
+msgid "Objectives:"
+msgstr "目的："
+
+#: ../../docs/gentle_gis_introduction/topology.rst:8
+msgid "Understanding topology in vector data"
+msgstr "ベクターデータにおけるトポロジの理解"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:10
+msgid "Keywords:"
+msgstr "キーワード："
+
+#: ../../docs/gentle_gis_introduction/topology.rst:10
+msgid ""
+"Vector, topology, topology rules, topology errors, search radius, snapping "
+"distance, simple feature"
+msgstr "ベクター、トポロジ、トポロジルール、トポロジエラー、検索半径、スナップ距離、単純地物"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:14
+msgid "Overview"
+msgstr "概要"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:16
+msgid ""
+"**Topology** expresses the spatial relationships between connecting or "
+"adjacent vector features (points, polylines and polygons) in a GIS. "
+"Topological or topology-based data are useful for detecting and correcting "
+"digitising errors (e.g. two lines in a roads vector layer that do not meet "
+"perfectly at an intersection). Topology is necessary for carrying out some "
+"types of spatial analysis, such as network analysis."
+msgstr ""
+"**トポロジ** "
+"はGISにおけるベクターの地物（ポイント、ポリライン、ポリゴン）の接続または隣接のような空間的関係を表現したものです。トポロジデータまたはトポロジベースのデータはデジタル化エラー（例えば、"
+" "
+"道路レイヤー内の２本のラインが交差点で完全に合っていない）を検出して修正するのに便利です。トポロジは、ネットワーク分析のような、ある種の空間分析を実行するのに必要です。"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:23
+msgid ""
+"Imagine you travel to London. On a sightseeing tour you plan to visit St. "
+"Paul's Cathedral first and in the afternoon Covent Garden Market for some "
+"souvenirs. Looking at the Underground map of London (see "
+"figure_topology_london_) you have to find connecting trains to get from "
+"Covent Garden to St. Paul's. This requires topological information (data) "
+"about where it is possible to change trains. Looking at a map of the "
+"underground, the topological relationships are illustrated by circles that "
+"show connectivity."
+msgstr ""
+"ロンドンに旅行すると想像してみてください。観光ツアーでは、まずセントポール大聖堂へ、そして午後はお土産を求めてコヴェント・ガーデン・マーケットを訪れると計画します。ロンドンの地下鉄路線図("
+" figure_topology_london_ を参照) "
+"を見て、コヴェント・ガーデンからセントポールへと行く接続する列車を見つけなければなりません。これには、どこで列車を乗り換えることが可能かについてのトポロジ情報(データ)"
+" が必要です。地下の地図を見ると、位相的な関係が接続を示す丸印によって示されています。"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:37
+msgid "Topology of London Underground Network."
+msgstr "ロンドン地下鉄ネットワークのトポロジ。"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:40
+msgid "Topology errors"
+msgstr "トポロジエラー"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:42
+msgid ""
+"There are different types of topological errors and they can be grouped "
+"according to whether the vector feature types are polygons or polylines. "
+"Topological errors with **polygon** features can include unclosed polygons, "
+"gaps between polygon borders or overlapping polygon borders. A common "
+"topological error with **polyline** features is that they do not meet "
+"perfectly at a point (node). This type of error is called an **undershoot** "
+"if a gap exists between the lines, and an **overshoot** if a line ends "
+"beyond the line it should connect to (see figure_topology_errors_)."
+msgstr ""
+"トポロジエラーにはさまざまな種類があり、ベクター地物タイプがポリゴンなのかポリラインなのかに応じて分類できます。 **ポリゴン** "
+"地物でのトポロジエラーには、閉じていないポリゴン、ポリゴン境界の隙間、ポリゴン境界の重複といったものがあります。 **ポリライン** "
+"地物で一般的なトポロジ的エラーは、ポイント (ノード) で完全に合っていないことです。このタイプのエラーは、線の間にギャップが存在する場合 "
+"**アンダーシュート** と呼ばれ、ラインが接続しなければならないラインを超えて終了した場合 **オーバーシュート** と呼ばれます ( "
+"figure_topology_errors_ 参照) 。"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:57
+msgid ""
+"Undershoots (1) occur when digitised vector lines that should connect to "
+"each other don’t quite touch. Overshoots (2) happen if a line ends beyond "
+"the line it should connect to. Slivers (3) occur when the vertices of two "
+"polygons do not match up on their borders."
+msgstr ""
+"お互いに接続する必要がある、デジタル化されたベクター線がまったく接触しないとき、アンダーシュート(1)が起きています。ラインが接続すべきラインを超えて終了した場合、オーバーシュート(2)"
+" が起きています。2つのポリゴンの頂点が境界上で一致しないとき、スライバ (3)が起きています。"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:62
+msgid ""
+"The result of overshoot and undershoot errors are so-called 'dangling nodes'"
+" at the end of the lines. Dangling nodes are acceptable in special cases, "
+"for example if they are attached to dead-end streets."
+msgstr ""
+"オーバーシュートとアンダーシュートのエラーはいわゆるラインの端にある'ぶら下がりノード'です。ぶら下がりノードは、特別な場合、例えば、行き止まりの通りに接続されている場合には許容されます。"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:66
+msgid ""
+"Topological errors break the relationship between features. These errors "
+"need to be fixed in order to be able to analyse vector data with procedures "
+"like network analysis (e.g. finding the best route across a road network) or"
+" measurement (e.g. finding out the length of a river). In addition to "
+"topology being useful for network analysis and measurement, there are other "
+"reasons why it is important and useful to create or have vector data with "
+"correct topology. Just imagine you digitise a municipal boundaries map for "
+"your province and the polygons overlap or show slivers. If such errors were "
+"present, you would be able to use the measurement tools, but the results you"
+" get will be incorrect. You will not know the correct area for any "
+"municipality and you will not be able to define exactly, where the borders "
+"between the municipalities are."
+msgstr ""
+"トポロジエラーは、地物間の関係を壊します。ネットワーク分析（例えば、道路ネットワークを介して最適なルートを見つける）または計測（例えば、川の長さを見つける）といった手順でベクターデータが分析できるようにするには、これらのエラーを修正する必要があります。トポロジがネットワーク分析と計測に有用であることに加えて、正しいトポロジでベクターデータを作成することが重要かつ有用である他の理由があります。ご自身の地域のために市町村界地図をデジタル化して、ポリゴンが重なっていたりスライバがあったりするとちょっと想像してみてください。このようなエラーが存在した場合、計測ツールは使用はできますが、得られる結果は不正確になります。どの市町村の面積も正しく知ることができませんし、市町村間の境界がどこにあるかも正確に定義できません。"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:78
+msgid ""
+"It is not only important for your own analysis to create and have "
+"topologically correct data, but also for people who you pass data on to. "
+"They will be expecting your data and analysis results to be correct!"
+msgstr ""
+"位相的に正しいデータを作成し所有することは、自分の解析のために重要なだけでなく、データを渡される人々のためでもあります。データを渡された人はデータと分析結果が正しいことを期待するでしょう！"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:83
+msgid "Topology rules"
+msgstr "トポロジルール"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:85
+msgid ""
+"Fortunately, many common errors that can occur when digitising vector "
+"features can be prevented by topology rules that are implemented in many GIS"
+" applications."
+msgstr ""
+"幸いなことに、ベクター地物をデジタル化する場合に発生しうる多くの一般的なエラーは、多くのGISアプリケーションに実装されているトポロジルールで防止できます。"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:88
+msgid ""
+"Except for some special GIS data formats, topology is usually not enforced "
+"by default. Many common GIS, like QGIS, define topology as relationship "
+"rules and let the user choose the rules, if any, to be implemented in a "
+"vector layer."
+msgstr ""
+"いくつかの特別なGISデータ形式を除いて、トポロジは、通常はデフォルトで適用されません。QGISのような多くの一般的なGISは、ベクターレイヤーに実装されるように、リレーションシップルールとしてトポロジを定義し、ユーザーがルールを選択できます。"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:92
+msgid ""
+"The following list shows some examples of where topology rules can be "
+"defined for real world features in a vector map:"
+msgstr "次のリストは、ベクター地図の現実世界の地物がどのトポロジルールで定義されるかの例を示しています："
+
+#: ../../docs/gentle_gis_introduction/topology.rst:95
+msgid "Area edges of a municipality map must not overlap."
+msgstr "市町村地図の領域の境界が重なり合っていてはいけません。"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:96
+msgid "Area edges of a municipality map must not have gaps (slivers)."
+msgstr "市町村地図の領域の境界にギャップ（細長い隙間）があってはいけません。"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:97
+msgid ""
+"Polygons showing property boundaries must be closed. Undershoots or "
+"overshoots of the border lines are not allowed."
+msgstr "境界を示すポリゴンは閉じていないといけません。境界線のアンダーシュートやオーバーシュートは許可されません。"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:99
+msgid ""
+"Contour lines in a vector line layer must not intersect (cross each other)."
+msgstr "ベクターの線レイヤーにおいて等高線のラインはインターセクト（互いに交差）してはいけません。"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:102
+msgid "Topological tools"
+msgstr "トポロジのツール"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:104
+msgid ""
+"Many GIS applications provide tools for topological editing. For example in "
+"QGIS you can **enable topological editing** to improve editing and "
+"maintaining common boundaries in polygon layers. A GIS such as QGIS "
+"'detects' a shared boundary in a polygon map so you only have to move the "
+"edge vertex of one polygon boundary and QGIS will ensure the updating of the"
+" other polygon boundaries as shown in figure_topological_tools_ (1)."
+msgstr ""
+"多くのGISアプリケーションは、トポロジの編集をするためのツールを提供しています。QGISの例では、**トポロジの編集を有効** "
+"にすることで、ポリゴンレイヤーにおける共有境界を編集・維持することを改善できます。QGISなどのGISではポリゴン地図内の共有境界を「検出」するので、1つのポリゴンの境界の縁頂点を移動するだけで、もう１つのポリゴン境界の更新が"
+" figure_topological_tools_ (1)に示されるようにQGISによって保証されます。"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:111
+msgid ""
+"Another topological option allows you to prevent** polygon overlaps** during"
+" digitising (see figure_topological_tools_ (2)). If you already have one "
+"polygon, it is possible with this option to digitise a second adjacent "
+"polygon so that both polygons overlap and QGIS then clips the second polygon"
+" to the common boundary."
+msgstr ""
+"別のトポロジのオプションでは、デジタル化の際に **ポリゴン重なり** を防止できます（ figure_topological_tools_ "
+"(2)参照）。既に1つのポリゴンを使用している場合、このオプションによって、第2の隣接するポリゴンを元のポリゴンと重なるようにデジタル化すると、共通の境界で2番目のポリゴンがQGISによってクリップされるようにできます。"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:123
+msgid ""
+"(1) Topological editing to detect shared boundaries, when moving vertices. "
+"When moving a vertex, all features that share that vertex are updated. (2) "
+"To avoid polygon overlaps, when a new polygon is digitised (shown in red) it"
+" is clipped to avoid overlapping neighbouring areas."
+msgstr ""
+"（1）頂点を移動しているとき、共有の境界を検出するトポロジ的編集。頂点を移動しているときは、その頂点を共有するすべての地物が更新されます。（2）ポリゴンの重なりを回避するために、新たなポリゴンはデジタル化される（赤色で表示）とき、重なっている隣接する領域が重ならないようにクリップされます。"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:129
+msgid "Snapping distance"
+msgstr "スナップ距離"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:131
+msgid ""
+"Snapping distance is the distance a GIS uses to search for the closest "
+"vertex and / or segment you are trying to connect when you digitise. A "
+"**segment** is a straight line formed between two vertices in a polygon or "
+"polyline geometry. If you aren't within the snapping distance, a GIS such as"
+" QGIS will leave the vertex where you release the mouse button, instead of "
+"snapping it to an existing vertex and / or segment (see "
+"figure_snapping_distance_)."
+msgstr ""
+"スナップ距離は、デジタル化時に接続しようとしている最も近い頂点および/またはセグメントをGISが検索するために使用する距離です。**セグメント** "
+"は、ポリゴンまたはポリラインジオメトリの2つの頂点の間に形成された直線です。スナップ距離内でない場合には、QGISのようなGISでは頂点を、既存の頂点および/またはセグメントにスナップせずに、マウスボタンを放したところに残すでしょう（"
+" figure_snapping_distance_ 参照）。"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:144
+msgid ""
+"The snapping distance (black circle) is defined in map units (e.g. decimal "
+"degrees) for snapping to either vertices or segments."
+msgstr "各頂点やセグメントをスナップするために、スナップ距離（黒い円）は地図単位（例えば10進数の度）で定義されます。"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:148
+msgid "Search Radius"
+msgstr "検索半径"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:150
+msgid ""
+"Search radius is the distance a GIS uses to search for the closest vertex "
+"you are trying to move when you click on the map. If you aren't within the "
+"search radius, the GIS won't find and select any vertex of a feature for "
+"editing. In principle, it is quite similar to the snapping distance "
+"functionality."
+msgstr ""
+"検索半径は、地図をクリックしたときに、動かそうとしている最も近い頂点を検索するためにGISが使用する距離です。検索半径内にない場合、GISは地物編集用の頂点を検索・選択しません。原理的には、スナップ距離機能に極めて類似しています。"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:155
+msgid ""
+"Snapping distance and search radius are both set in map units so you may "
+"need to experiment to get the distance value set right. If you specify a "
+"value that is too big, the GIS may snap to a wrong vertex, especially if you"
+" are dealing with a large number of vertices close together. If you specify "
+"the search radius too small the GIS application won't find any feature or "
+"vertex to move or edit."
+msgstr ""
+"スナップ距離と検索半径は両方とも地図単位で設定されていますので、距離値を正しく設定するには試行錯誤する必要があるかもしれません。大きすぎる値を指定した場合、近くに密集した頂点を扱っている場合は特に、GISは間違った頂点にスナップします。小さすぎる検索半径を指定した場合、GISアプリケーションは移動または編集する地物または頂点を見つけることができません。"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:162
+msgid "Common problems / things to be aware of"
+msgstr "一般的な問題 / 注意すべき点"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:164
+msgid ""
+"Mainly designed for simplicity and for fast rendering but not for data "
+"analysis that requires topology (such as finding routes across a network), "
+"many GIS applications are able to show topological and simple feature data "
+"together and some can also create, edit and analyse both."
+msgstr ""
+"トポロジを必要とするデータ分析（例えば、ネットワーク経由のルートを見つけるなど）のためでなく、主に簡単にするためおよび高速なレンダリングのために設計されています。多くのGISアプリケーションでは、トポロジ的なデータと単純な図形データを一緒に表示できます。両方とも作成、編集、および分析できるものもあります。"
+" "
+
+#: ../../docs/gentle_gis_introduction/topology.rst:170
+msgid "What have we learned?"
+msgstr "わかりましたか?"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:172
+msgid "Let's wrap up what we covered in this worksheet:"
+msgstr "ここでは以下のことを学びました:"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:174
+msgid ""
+"**Topology** shows the spatial relation of neighbouring vector features."
+msgstr "**トポロジ** は隣接するベクターの地物の空間的関係を示すものです。"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:175
+msgid "Topology in GIS is provided by **topological tools**."
+msgstr "GISでのトポロジは **トポロジツール** によって提供されます。"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:176
+msgid "Topology can be used to **detect and correct digitizing errors**."
+msgstr "トポロジは **デジタイズのエラーを検出し修正する** ために利用されます。"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:177
+msgid ""
+"For some tools, such as **network analysis**, topological data is essential."
+msgstr "**ネットワーク分析** のように、 いくつかのツールではトポロジデータが必要不可欠です。"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:178
+msgid ""
+"**Snapping distance** and **search radius** help us to digitise "
+"topologically correct vector data."
+msgstr "**スナップ距離** と **検索半径** はトポロジ的に正しくベクターデータをデジタイズするのに役立ちます。"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:180
+msgid ""
+"**Simple feature** data is not a true topological data format but it is "
+"commonly used by GIS applications."
+msgstr "**単純地物** データは真のトポロジデータ・フォーマットではないが、GISアプリケーションで一般的に使われます。"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:184
+msgid "Now you try!"
+msgstr "やってみよう"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:186
+msgid "Here are some ideas for you to try with your learners:"
+msgstr "ここでは人に教える際のアイデアをいくつか述べていきます:"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:188
+msgid ""
+"Mark your local bus stops on a toposheet map and then task your learners to "
+"find the shortest route between two stops."
+msgstr "トポシート地図であなたの地域のバス停に注目しましょう。すると２点のバス停間の最短ルートを見つけることができます。"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:190
+msgid ""
+"Think of how you would create vector features in a GIS to represent a "
+"topological road network of your town. What topological rules are important "
+"and what tools can your learners use in QGIS to make sure that the new road "
+"layer is topologically correct?"
+msgstr ""
+"あなたの町のトポロジ的道路網を表現するために、GISにベクター地物を作成する方法を考えます。どんなトポロジのルールが重要であり、どのようなツールをあなたの生徒たちがQGISで使用して、新しい道路レイヤーが位相的に正しいことを確認できるでしょうか？"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:196
+msgid "Something to think about"
+msgstr "考えてみよう"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:198
+msgid ""
+"If you don't have a computer available, you can use a map of a bus or "
+"railway network and discuss the spatial relationships and topology with your"
+" learners."
+msgstr "利用可能なコンピュータがなくても、バスや鉄道の路線ネットワーク図を使用すれば、空間的な位置関係とトポロジについて生徒たちと議論できます。"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:202
+msgid "Further reading"
+msgstr "より詳しく知りたい場合は"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:204
+msgid "**Books**:"
+msgstr "**図書**:"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:206
+msgid ""
+"Chang, Kang-Tsung (2006). Introduction to Geographic Information Systems. "
+"3rd Edition. McGraw Hill. ISBN: 0070658986"
+msgstr ""
+"Chang, Kang-Tsung (2006). Introduction to Geographic Information Systems. "
+"3rd Edition.（地理情報システムの紹介　第3版） McGraw Hill. ISBN: 0070658986"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:208
+msgid ""
+"DeMers, Michael N. (2005). Fundamentals of Geographic Information Systems. "
+"3rd Edition. Wiley. ISBN: 9814126195"
+msgstr ""
+"DeMers, Michael N. (2005). Fundamentals of Geographic Information Systems. "
+"3rd Edition. （地理情報システムの基礎。第3版）Wiley. ISBN: 9814126195"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:211
+msgid "**Websites**:"
+msgstr "**ウェブサイト**:"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:213
+msgid "http://www.innovativegis.com/basis/"
+msgstr "http://www.innovativegis.com/basis/"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:214
+msgid "https://en.wikipedia.org/wiki/Geospatial_topology"
+msgstr "https://en.wikipedia.org/wiki/Geospatial_topology"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:216
+msgid ""
+"The QGIS User Guide also has more detailed information on topological "
+"editing provided in QGIS."
+msgstr "QGISユーザーガイドには QGISで提供されるトポロジ編集に関する詳細な情報があります。"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:220
+msgid "What's next?"
+msgstr "次は？"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:222
+msgid ""
+"In the section that follows we will take a closer look at **Coordinate "
+"Reference Systems** to understand how we relate data from our spherical "
+"earth onto flat maps!"
+msgstr ""
+"続くセクションでは、データを球体の地球から平らな地図へとどのように関連づけるかを理解するため、 **座標参照系** についてさらに詳しく見ていきます。"

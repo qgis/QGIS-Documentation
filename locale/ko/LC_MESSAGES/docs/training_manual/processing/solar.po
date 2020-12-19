@@ -1,0 +1,100 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 정윤호 <yunhoc@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:22+0000\n"
+"Last-Translator: 정윤호 <yunhoc@gmail.com>, 2020\n"
+"Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/training_manual/processing/solar.rst:2
+msgid "Planning a solar farm"
+msgstr "태양광 발전소 입지 계획"
+
+#: ../../docs/training_manual/processing/solar.rst:4
+msgid ""
+"Module contributed by Paolo Cavallini - `Faunalia "
+"<https://www.faunalia.eu>`_"
+msgstr "모듈 제공자 : Paolo Cavallini - `Faunalia <https://www.faunalia.eu>`_"
+
+#: ../../docs/training_manual/processing/solar.rst:6
+msgid ""
+"This chapter shows how to use several criteria to locate the areas suitable "
+"for installing a photovoltaic power station"
+msgstr "이 강의에서는 태양광 발전소 설치에 적합한 지역의 위치를 선정하는 몇몇 기준을 어떻게 활용하는지 배울 것입니다."
+
+#: ../../docs/training_manual/processing/solar.rst:8
+msgid "First of all, create an aspect map from DTM:"
+msgstr "우선 DEM으로 지도방향을 생성합니다:"
+
+#: ../../docs/training_manual/processing/solar.rst:10
+msgid ":menuselection:`GRASS --> r.aspect` [Data type: int; cell size:100]"
+msgstr ":menuselection:`GRASS --> r.aspect` [Data type: int; cell size:100]"
+
+#: ../../docs/training_manual/processing/solar.rst:12
+msgid ""
+"In GRASS, aspect is calculated in degrees, counterclockwise starting from "
+"East. To extract only South facing slopes (270 degrees +- 45), we can "
+"reclassify it:"
+msgstr ""
+"GRASS에서는 동쪽에서 반시계방향으로 도분초로 방향이 계산됩니다. 남향 경사 (270˚ ± 45˚)만을 추출하려면 다음과 같이 "
+"재분류하십시오:"
+
+#: ../../docs/training_manual/processing/solar.rst:14
+msgid ":menuselection:`GRASS --> r.reclass`"
+msgstr ":menuselection:`GRASS --> r.reclass`"
+
+#: ../../docs/training_manual/processing/solar.rst:16
+msgid "with the following rules::"
+msgstr "다음규칙 사용:"
+
+#: ../../docs/training_manual/processing/solar.rst:21
+msgid ""
+"You can use the text file ``reclass_south.txt`` provided. Note that with "
+"these simple text files we can create also very complex reclassifications."
+msgstr ""
+"예제에 포함된 ``reclass_south.txt`` 텍스트 파일을 사용할 수 있습니다. 이런 단순한 텍스트 파일을 통해 매우 복잡한 "
+"재분류 작업도 수행할 수 있다는 사실을 기억하십시오."
+
+#: ../../docs/training_manual/processing/solar.rst:23
+msgid ""
+"We want to build a large farm, so we select only large (> 100 ha) contiguous"
+" areas:"
+msgstr "매우 넓은 발전소를 건설하려 하기 때문에, (100ha를 넘는) 인접 지역만을 선택할 것입니다."
+
+#: ../../docs/training_manual/processing/solar.rst:25
+msgid ":menuselection:`GRASS --> r.reclass.greater`"
+msgstr ":menuselection:`GRASS --> r.reclass.greater`"
+
+#: ../../docs/training_manual/processing/solar.rst:27
+msgid "Finally, we convert to a vector:"
+msgstr "마지막으로 벡터로 변환해봅시다:"
+
+#: ../../docs/training_manual/processing/solar.rst:29
+msgid ""
+":menuselection:`GRASS --> r.to.vect` [Feature type: area; Smooth corners: "
+"yes]"
+msgstr ""
+":menuselection:`GRASS --> r.to.vect` [Feature type: area; Smooth corners: "
+"yes]"
+
+#: ../../docs/training_manual/processing/solar.rst:31
+msgid ""
+"**Exercise for the reader**: repeat the analysis, replacing GRASS commands "
+"with analogous from other programs."
+msgstr "**사용자를 위한 실습 예제:** GRASS 명령어를 다른 프로그램들의 유사한 명령어로 바꿔 다시 분석을 수행하십시오."

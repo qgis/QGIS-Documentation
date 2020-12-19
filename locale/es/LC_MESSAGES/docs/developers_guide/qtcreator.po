@@ -1,0 +1,297 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:24+0000\n"
+"Last-Translator: Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020\n"
+"Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/developers_guide/qtcreator.rst:4
+msgid "Getting up and running with QtCreator and QGIS"
+msgstr "Iniciando y ejecutando QtCreator y QGIS"
+
+#: ../../docs/developers_guide/qtcreator.rst:10
+msgid ""
+"QtCreator is a newish IDE from the makers of the Qt library. With QtCreator "
+"you can build any C++ project, but it's really optimised for people working "
+"on Qt(4) based applications (including mobile apps). Everything I describe "
+"below assumes you are running Ubuntu 11.04 'Natty'."
+msgstr ""
+"QtCreator es una IDE bastante nuevo de los creadores de la librería Qt. Con "
+"QtCreator puede construir cualquier proyecto C++, pero esta realmente "
+"optimizado para la gente que trabaja con aplicaciones basadas en Qt(4)  "
+"(incluyendo aplicaciones móviles). Todo lo que describo a continuación asume"
+" que está ejecutando en Ubuntu 11.04 'Natty'."
+
+#: ../../docs/developers_guide/qtcreator.rst:17
+msgid "Installing QtCreator"
+msgstr "Instalando QtCreator"
+
+#: ../../docs/developers_guide/qtcreator.rst:20
+msgid "This part is easy:"
+msgstr "Esta parte es fácil:"
+
+#: ../../docs/developers_guide/qtcreator.rst:26
+msgid "After installing you should find it in your gnome menu."
+msgstr "Después de instalar debería encontrarlo en su menú gnome."
+
+#: ../../docs/developers_guide/qtcreator.rst:30
+msgid "Setting up your project"
+msgstr "Estableciendo su proyecto"
+
+#: ../../docs/developers_guide/qtcreator.rst:32
+msgid ""
+"I'm assuming you have already got a local QGIS clone containing the source "
+"code, and have installed all needed build dependencies etc. There are "
+"detailed instructions for :ref:`git access <git_access>` and `dependency "
+"installation <https://github.com/qgis/QGIS/blob/master/INSTALL.md>`_."
+msgstr ""
+"Supongo que ya tiene un clon de QGIS local que contiene el código fuente y "
+"ha instalado todas las dependencias de compilación necesarias, etc. Hay "
+"instrucciones detalladas para :ref:`acceso a git <git_access>` y "
+"`instalación de dependencia "
+"<https://github.com/qgis/QGIS/blob/master/INSTALL.md>`_."
+
+#: ../../docs/developers_guide/qtcreator.rst:37
+msgid ""
+"On my system I have checked out the code into ``$HOME/dev/cpp/QGIS`` and the"
+" rest of the article is written assuming that, you should update these paths"
+" as appropriate for your local system."
+msgstr ""
+"En mi sistema he descargado el código en ``$HOME/dev/cpp/QGIS`` y el resto "
+"del artículo está escrito suponiendo esto. Debería actualizar las rutas "
+"según corresponda para su sistema local."
+
+#: ../../docs/developers_guide/qtcreator.rst:41
+msgid "On launching QtCreator do:"
+msgstr "Al iniciar QtCreator haga:"
+
+#: ../../docs/developers_guide/qtcreator.rst:43
+msgid "*File* -> *Open File or Project*"
+msgstr "*File* -> *Open File or Project*"
+
+#: ../../docs/developers_guide/qtcreator.rst:45
+msgid ""
+"Then use the resulting file selection dialog to browse to and open this "
+"file:"
+msgstr ""
+"Después utilice el diálogo de selección de archivos resultante para buscar y"
+" abrir este archivo:"
+
+#: ../../docs/developers_guide/qtcreator.rst:53
+msgid ""
+"Next you will be prompted for a build location. I create a specific build "
+"dir for QtCreator to work in under:"
+msgstr ""
+"A continuación, se le pedirá una ubicación de compilación. Cree un "
+"directorio de compilación específico para que QtCreator funcione en:"
+
+#: ../../docs/developers_guide/qtcreator.rst:60
+msgid ""
+"Its probably a good idea to create separate build directories for different "
+"branches if you can afford the disk space."
+msgstr ""
+"Probablemente es una buena idea crear directorios de compilación separados "
+"para diferentes ramas si se lo permite su espacio de disco."
+
+#: ../../docs/developers_guide/qtcreator.rst:66
+msgid ""
+"Next you will be asked if you have any CMake build options to pass to CMake."
+" We will tell CMake that we want a debug build by adding this option:"
+msgstr ""
+"A continuación, se le preguntará si tiene alguna opción de compilación de "
+"CMake para pasar a CMake. Le diremos a CMake que queremos depurar la "
+"compilación añadiendo esta opción:"
+
+#: ../../docs/developers_guide/qtcreator.rst:76
+msgid ""
+"That's the basics of it. When you complete the Wizard, QtCreator will start "
+"scanning the source tree for autocompletion support and do some other "
+"housekeeping stuff in the background. We want to tweak a few things before "
+"we start to build though."
+msgstr ""
+"Y esto es lo básico. Cuando termine el asistente, QtCreator empezará a "
+"escanear el árbol de fuentes para el soporte de autocompletar y hacer "
+"algunas tareas propias de fondo. Sin embargo, queremos ajustar unas cuantas "
+"cosas antes de empezar a compilar."
+
+#: ../../docs/developers_guide/qtcreator.rst:83
+msgid "Setting up your build environment"
+msgstr "Configurando el entorno de compilación"
+
+#: ../../docs/developers_guide/qtcreator.rst:85
+msgid "Click on the 'Projects' icon on the left of the QtCreator window."
+msgstr ""
+"Pulse en el icono 'Projects' a la izquierda de la ventana de QtCreator."
+
+#: ../../docs/developers_guide/qtcreator.rst:89
+msgid "Select the build settings tab (normally active by default)."
+msgstr ""
+"Seleccione la pestaña de opciones de compilación (normalmente está activa "
+"por defecto)."
+
+#: ../../docs/developers_guide/qtcreator.rst:93
+msgid ""
+"We now want to add a custom process step. Why? Because QGIS can currently "
+"only run from an install directory, not its build directory, so we need to "
+"ensure that it is installed whenever we build it. Under 'Build Steps', click"
+" on the 'Add BuildStep' combo button and choose 'Custom Process Step'."
+msgstr ""
+"Ahora queremos añadir un paso personalizado en el proceso. ¿Por qué? Porque "
+"QGIS sólo puede ejecutarse desde un directorio de instalación, no en su "
+"directorio de compilación, por lo que necesitamos asegurarnos de que está "
+"instalado donde vayamos a compilarlo. En 'Build Steps', pulse en el botón "
+"'Add Build Step' y elija la opción 'Custom Process Step'."
+
+#: ../../docs/developers_guide/qtcreator.rst:100
+msgid "Now we set the following details:"
+msgstr "Ahora definimos los siguientes detalles:"
+
+#: ../../docs/developers_guide/qtcreator.rst:102
+msgid "Enable custom process step: [yes]"
+msgstr "Enable custom process step: [yes]"
+
+#: ../../docs/developers_guide/qtcreator.rst:104
+msgid "Command: make"
+msgstr "Command: make"
+
+#: ../../docs/developers_guide/qtcreator.rst:106
+msgid "Working directory: $HOME/dev/cpp/QGIS/build-master-qtcreator"
+msgstr "Directorio de trabajo: $HOME/dev/cpp/QGIS/build-master-qtcreator"
+
+#: ../../docs/developers_guide/qtcreator.rst:108
+msgid "Command arguments: install"
+msgstr "Argumentos de comando: install"
+
+#: ../../docs/developers_guide/qtcreator.rst:112
+msgid ""
+"You are almost ready to build. Just one note: QtCreator will need write "
+"permissions on the install prefix. By default (which I am using here) QGIS "
+"is going to get installed to ``/usr/local/``. For my purposes on my "
+"development machine, I just gave myself write permissions to the /usr/local "
+"directory."
+msgstr ""
+"Ya está casi listo para empezar a compilar. Sólo una nota adicional: "
+"QtCreator necesita permisos de escritura en la ruta de instalación. Por "
+"defecto (que es lo que usaré) QGIS se va a instalar en ``/usr/local/``. Para"
+" los objetivos de mi máquina de desarrollo, simplemente me he dado permisos "
+"a mi mismo de escritura en el directorio /usr/local/."
+
+#: ../../docs/developers_guide/qtcreator.rst:117
+msgid ""
+"To start the build, click that big hammer icon on the bottom left of the "
+"window."
+msgstr ""
+"Para iniciar la compilación, pulse en el icono del martillo grande que está "
+"situado en la parte inferior izquierda de la ventana."
+
+#: ../../docs/developers_guide/qtcreator.rst:124
+msgid "Setting your run environment"
+msgstr "Estableciendo su ambiente de ejecución"
+
+#: ../../docs/developers_guide/qtcreator.rst:126
+msgid ""
+"As mentioned above, we cannot run QGIS from directly in the build directly, "
+"so we need to create a custom run target to tell QtCreator to run QGIS from "
+"the install dir (in my case ``/usr/local/``). To do that, return to the "
+"projects configuration screen."
+msgstr ""
+"Como ya mencioné anteriormente, no podemos ejecutar QGIS directamente desde "
+"el directorio de compilación, por lo que tenemos que crear un destino de "
+"ejecución personalizado para decirle a QtCreator que ejecute QGIS desde el "
+"directorio de instalación (en mi caso ``/usr/local/``). Para hacer eso, "
+"volvamos a la pantalla de configuración de proyectos."
+
+#: ../../docs/developers_guide/qtcreator.rst:133
+msgid "Now select the 'Run Settings' tab"
+msgstr "Seleccione ahora la pestaña 'Run Settings'"
+
+#: ../../docs/developers_guide/qtcreator.rst:137
+msgid ""
+"We need to update the default run settings from using the 'qgis' run "
+"configuration to using a custom one."
+msgstr ""
+"Necesitamos actualizar las opciones de ejecución por defecto para cambiar de"
+" la configuración de ejecución 'qgis' a una personalizada."
+
+#: ../../docs/developers_guide/qtcreator.rst:142
+msgid ""
+"Do do that, click the 'Add v' combo button next to the Run configuration "
+"combo and choose 'Custom Executable' from the top of the list."
+msgstr ""
+"Para ello, pulse el botón 'Add v' junto al desplegable 'Run configuration' y"
+" seleccione 'Custom Executable' de la parte superior de la lista."
+
+#: ../../docs/developers_guide/qtcreator.rst:147
+msgid "Now in the properties area set the following details:"
+msgstr ""
+"A continuación introduzca en el área de propiedades los siguientes detalles:"
+
+#: ../../docs/developers_guide/qtcreator.rst:149
+msgid "Executable: /usr/local/bin/qgis"
+msgstr "Executable: /usr/local/bin/qgis"
+
+#: ../../docs/developers_guide/qtcreator.rst:151
+msgid "Arguments :"
+msgstr "Arguments :"
+
+#: ../../docs/developers_guide/qtcreator.rst:153
+msgid "Working directory: $HOME"
+msgstr "Working directory: $HOME"
+
+#: ../../docs/developers_guide/qtcreator.rst:155
+msgid "Run in terminal: [no]"
+msgstr "Run in terminal: [no]"
+
+#: ../../docs/developers_guide/qtcreator.rst:157
+msgid "Debugger: C++ [yes]"
+msgstr "Debugger: C++ [yes]"
+
+#: ../../docs/developers_guide/qtcreator.rst:159
+msgid "Qml [no]"
+msgstr "Qml [no]"
+
+#: ../../docs/developers_guide/qtcreator.rst:161
+msgid ""
+"Then click the 'Rename' button and give your custom executable a meaningful "
+"name e.g. 'Installed QGIS'"
+msgstr ""
+"A continuación pulse el botón 'Rename' y proporcione a su ejecutable "
+"personalizado un nombre con significado (p.ej. 'QGIS instalado')"
+
+#: ../../docs/developers_guide/qtcreator.rst:167
+msgid "Running and debugging"
+msgstr "Ejecución y depuración"
+
+#: ../../docs/developers_guide/qtcreator.rst:169
+msgid ""
+"Now you are ready to run and debug QGIS. To set a break point, simply open a"
+" source file and click in the left column."
+msgstr ""
+"Ya está listo para ejecutar y depurar QGIS. Para establecer un punto de "
+"ruptura, abra simplemente un archivo fuente y pulse en la columna de la "
+"izquierda."
+
+#: ../../docs/developers_guide/qtcreator.rst:174
+msgid ""
+"Now launch QGIS under the debugger by clicking the icon with a bug on it in "
+"the bottom left of the window."
+msgstr ""
+"Ahora inicie QGIS en el depurador pulsando el icono con el bicho que está "
+"situado en la parte inferior izquierda de la ventana."

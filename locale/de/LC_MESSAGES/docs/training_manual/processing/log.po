@@ -1,0 +1,174 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# Klaus Affeldt <ka@ansperger.de>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:22+0000\n"
+"Last-Translator: Klaus Affeldt <ka@ansperger.de>, 2020\n"
+"Language-Team: German (https://www.transifex.com/qgis/teams/6144/de/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/training_manual/processing/log.rst:2
+msgid "The processing log"
+msgstr "Das Prozessierungsprotokoll"
+
+#: ../../docs/training_manual/processing/log.rst:4
+msgid "This lesson describes the processing log."
+msgstr "Diese Lektion beschreibt das Verarbeitungsprotokoll."
+
+#: ../../docs/training_manual/processing/log.rst:6
+msgid ""
+"All the analysis performed with the processing framework is logged in QGIS "
+"logging system. This allows you to know more about what has been done with "
+"the processing tools, to solve problems when they happen, and also to re--"
+"run previous operations, since the logging system also implements some "
+"interactivity."
+msgstr ""
+"Alle Analysen, die in der Verarbeitungsumgebung ausgeführt werden, werden "
+"von QGIS protokolliert. Damit erhält man zusätzliche Informationen, was bei "
+"der Ausführung der Verarbeitungswerkzeuge getan wurde. Es erleichert die "
+"Lösung von auftretenden Problemen und erlaubt die Wiederholung "
+"vorhergehender Operationen, da die Protokollierung auch interaktive Elemente"
+" einschließt."
+
+#: ../../docs/training_manual/processing/log.rst:8
+msgid ""
+"To open the log, click on the balloon at the bottom right, on the QGIS "
+"status bar. Some algorithms might leave here information about their "
+"execution. For instance, those algorithms that call an external application "
+"usually log the console output of that application to this entry. If you "
+"have a look at it, you will see that the output of the SAGA algorithm that "
+"we just run (and that fail to execute because input data was not correct) is"
+" stored here."
+msgstr ""
+"Öffnen Sie das Protokoll durch Klick auf den Ballon auf der rechten Seite "
+"der Statusleiste in QGIS. Einige Algorithmen hinterlassen hier Nachrichten "
+"zu ihrer Ausführung. Algorithmen, die eine externe Anwendung aufrufen, "
+"hinterlassen in der Regel ein Protokoll der Konsolenausgabe der Anwendung "
+"und damit Informationen über deren Ausführung. Beim Betrachten des "
+"Protokolls sehen wir die Ausgabe des SAGA Algorithmus, den wir vorher "
+"gestartet hatten (und der nicht funktionierte, da die Eingabedaten nicht "
+"korrekt waren)."
+
+#: ../../docs/training_manual/processing/log.rst:10
+msgid ""
+"This is helpful to understand what is going on. Advanced users will be able "
+"to analyze that output to find out why the algorithm failed. If you are not "
+"an advanced user, this will be useful for others to help you diagnose the "
+"problem you are having, which might be a problem in the installation of the "
+"external software or an issue with the data you provided."
+msgstr ""
+"Das hilft uns zu verstehen, was passiert ist. Erfahrene Benutzer sind in der"
+" Lage, die Ausgabe zu analysieren und herauszufinden, warum der Algorithmus "
+"mit einem Fehler beendet wurde. Wenn Sie kein erfahrener Nutzer sind, kann "
+"die Ausgabe durch andere zur Fehlerdiagnose verwendet werden. Es könnte sich"
+" um ein Problem bezüglich der Installation von externer Software oder um ein"
+" Problem mit den verwendeten Daten handeln."
+
+#: ../../docs/training_manual/processing/log.rst:12
+msgid ""
+"Even if the algorithm could be executed, some algorithms might leave "
+"warnings in case the result might not be right. For instance, when executing"
+" an interpolation algorithm with a very small amount of points, the "
+"algorithm can run and will produce a result, but it is likely that it will "
+"not be correct, since more points should be used. It's a good idea to "
+"regularly check for this type of warnings if you are not sure about some "
+"aspect of a given algorithm."
+msgstr ""
+"Selbst wenn ein Algorithmus ausgeführt werden konnte, können Warnungen im "
+"Protokoll erstellt werden, wenn das Resultat falsch sein könnte. Wenn z.B. "
+"ein Algorithmus zur Interpolation mit nur einer sehr geringen Anzahl von "
+"Punkten ausgeführt wird, erzeugt der Algorithmus vermutlich ein Ergebnis - "
+"es ist aber wahrscheinlich nicht richtig, da mehr Punkte verwendet werden "
+"sollten. Wenn einige Aspekte von Algorithmen nicht ganz klar sind, ist es "
+"sinnvoll, sich die Warnungen regelmäßig anzusehen."
+
+#: ../../docs/training_manual/processing/log.rst:14
+msgid ""
+"From the *Processing* menu, under the *History* section, you'll find "
+"*Algorithms*. All algorithms that are executed, even if they are executed "
+"from the GUI and not from the console (which will be explained later in this"
+" manual) are stored in this section as a console call. That means that "
+"everytime you run an algorithm, a console command is added to the log, and "
+"you have the full history of your working session. Here is how that history "
+"looks like:"
+msgstr ""
+"Im Menü *Verarbeitung* unter *Protokoll* finden wir den Punkt *Algorithm*. "
+"Jeder Aufruf eines Algorithmus, egal ob von der Konsole (wird später in "
+"dieser Anleitung beschrieben) oder der grafischen Oberfläche, wird hier als "
+"Konsolenaufruf aufgezeichnet. Man erhält damit eine komplette Historie aller"
+" Aufrufe von Algorithmen der aktuellen Arbeitssitzung. Die Historie sieht in"
+" etwa wie folgt aus:"
+
+#: ../../docs/training_manual/processing/log.rst:18
+msgid ""
+"This can be very useful when starting working with the console, to learn "
+"about the syntax of algorithms. We will use it when we discuss how to run "
+"analysis commands from the console."
+msgstr ""
+"Das ist sehr nützlich, sobald man anfängt mit der Konsole zu arbeiten. Man "
+"erlernt die Syntax der Algorithmen in der Konsole. Wir werden uns damit "
+"beschäftigen, wenn wir Analysen von der Konsole aus betrachten."
+
+#: ../../docs/training_manual/processing/log.rst:20
+msgid ""
+"The history is also interactive, and you can re--run any previous algorithm "
+"just by double--clicking on its entry. This is an easy way of replicating "
+"the work we already did before."
+msgstr ""
+"Die Historie ist interaktiv, d.h. man kann jeden vorher ausgeführten "
+"Algorithmus durch Doppelklick auf den Eintrag in der Historie erneut "
+"starten. Damit kann man ganz einfach bereits ausgeführte Arbeitsschritte "
+"wiederholen."
+
+#: ../../docs/training_manual/processing/log.rst:22
+msgid ""
+"For instance, try the following. Open the data corresponding to the first "
+"chapter of this manual and run the algorithm explained there. Now go to the "
+"log dialog and locate the last algorithm in the list, which corresponds to "
+"the algorithm you have just run. Double--click on it an a new result should "
+"be produced, just like when you run it using the normal dialog and calling "
+"it from the toolbox."
+msgstr ""
+"Probieren Sie z.B. Folgendes aus. Öffnen Sie die Daten zum ersten Kapitel "
+"der Anleitung und starten den dort beschriebenen Algorithmus. Gehen Sie "
+"jetzt zur Historie und dort zum letzten Eintrag in der Liste, der zu dem "
+"eben ausgeführten Algorithmus gehört. Klicken Sie doppelt darauf. Es sollte "
+"ein neues Ergebnis erstellt werden, genauso als wenn Sie den normalen Dialog"
+" aus der Werkzeugkiste verwendet hätten."
+
+#: ../../docs/training_manual/processing/log.rst:26
+msgid "|hard| Advanced"
+msgstr "|hard| Fortgeschritten"
+
+#: ../../docs/training_manual/processing/log.rst:28
+msgid ""
+"You can also modify the algorithm. Just copy it, open the "
+":menuselection:`Plugins --> Python console`, click on :menuselection:`Import"
+" class --> Import Processing class`, then paste it to re-run the analysis; "
+"change the text at will. To display the resulting file, type "
+":kbd:`iface.addVectorLayer('/path/filename.shp', 'Layer name in legend', "
+"'ogr')`. Otherwise, you can use :kbd:`processing.runandload`."
+msgstr ""
+"Sie können den Algorithmus auch modifizieren. Kopieren Sie ihn einfach, "
+"öffnen Sie die :menuselection:`Erweiterungen --> Python-Konsole`, klicken "
+"Sie auf :menuselection:`Import Klasse --> Import Verarbeitungsklasse`, dann "
+"fügen Sie ihn ein, um die Analyse erneut auszuführen; ändern Sie den Text "
+"nach Belieben. Um die resultierende Datei anzuzeigen, geben Sie "
+":kbd:`iface.addVectorLayer('/Pfad/Dateiname.shp', 'Layername in der "
+"Legende', 'ogr')` ein. Andernfalls können Sie :kbd: `processing.runandload` "
+"verwenden."

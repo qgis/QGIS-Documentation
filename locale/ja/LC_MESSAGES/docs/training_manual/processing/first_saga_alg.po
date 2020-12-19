@@ -1,0 +1,196 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:22+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/training_manual/processing/first_saga_alg.rst:2
+msgid "Running an external algorithm"
+msgstr "外部のアルゴリズムを実行する"
+
+#: ../../docs/training_manual/processing/first_saga_alg.rst:5
+msgid ""
+"In this lesson we will see how to use algorithms that depend on a third-"
+"party application, particularly SAGA, which is one of the main algorithm "
+"providers."
+msgstr ""
+"このレッスンではサードパーティのアプリケーション、特に主要なアルゴリズムプロバイダーの一つであるSAGAに依存するアルゴリズムを使用する方法について説明します。"
+
+#: ../../docs/training_manual/processing/first_saga_alg.rst:17
+msgid ""
+"Some of the algorithms that you see in the simplified view require third "
+"party applications to be installed in your system. One algorithm provider of"
+" special interest is SAGA (System for Automated Geospatial Analysis). First,"
+" we need to configure everything so QGIS can correctly call SAGA. This is "
+"not difficult, but it's important to understand how it works. Each external "
+"application has its own configuration, and later in this same manual we will"
+" talk about some of the other ones, but SAGA is going to be our main "
+"backend, so we will discuss it here."
+msgstr ""
+"単純化されたビューに表示されるアルゴリズムには、サードパーティ製のアプリケーションがシステムにインストールされていることが必要なものがあります。特別な関心の一つのアルゴリズムプロバイダーは、SAGA（自動地理空間分析のためのシステム）です。まず、QGISから正しくSAGAを呼び出せるように、すべてのものを設定する必要があります。これは難しいことではありませんが、それがどのように動作するかを理解することが重要です。それぞれの外部アプリケーションは独自の構成を有しており、この後の同じマニュアルでは他のもののいくつかについて話しますが、SAGAは当社の主要なバックエンドになるだろうので、ここではそれを説明します。"
+
+#: ../../docs/training_manual/processing/first_saga_alg.rst:25
+msgid ""
+"If you are on Windows, the best way to work with external algorithms is to "
+"install QGIS using the standalone installer. It will take care of installing"
+" all the needed dependencies, including SAGA, so if you have used it, there "
+"is nothing else to do. You can open the settings dialog and go to the "
+"*Providers/SAGA* group."
+msgstr ""
+"Windowsである場合は、外部のアルゴリズムで作業するための最良の方法は、スタンドアロンのインストーラを使用してQGISをインストールすることです。それはSAGAを含むすべての必要な依存関係のインストールをしてくれますので、それを使用した場合は、他に何も行うことはありません。設定ダイアログを開き、"
+" *プロバイダー/SAGA* グループに行くことができます。"
+
+#: ../../docs/training_manual/processing/first_saga_alg.rst:32
+msgid ""
+"The SAGA path should already be configured and pointing to the folder where "
+"SAGA is installed."
+msgstr "SAGAパスは既に設定され、SAGAがインストールされているフォルダを指しているようにしてください"
+
+#: ../../docs/training_manual/processing/first_saga_alg.rst:34
+msgid ""
+"If you have installed QGIS not using the standalone installer, then you must"
+" enter the path to your SAGA installation (which you must have installed "
+"separately) there. The required version is SAGA 2.1 [this is changing "
+"according to the releases of SAGA]."
+msgstr ""
+"スタンドアロンインストーラを使用していないQGISをインストールしている場合は、そこ（個別にインストールされている必要があります）SAGAのインストールへのパスを入力する必要があります。必要なバージョンは、SAGA"
+" 2.1 [これはSAGAのリリースに応じて変化している]です。"
+
+#: ../../docs/training_manual/processing/first_saga_alg.rst:38
+msgid ""
+"In case you are using Linux, you do not have to set the path to your SAGA "
+"installation in the processing configuration. Instead, you must install SAGA"
+" and make sure that the SAGA folder is in PATH, so it can be called from the"
+" console (just open a console and type ``saga_cmd`` to check it). Under "
+"Linux, the target version for SAGA is also 2.1, but in some installations "
+"(such as the OSGeo Live DVD) you might have just 2.0.8 available. There are "
+"some 2.1 packages available, but they are not commonly installed and might "
+"have some issues, so if you prefer to use the more common and stable 2.0.8, "
+"you can do it by enabling 2.0.8 compatibility in the configuration dialog, "
+"under the *SAGA* group."
+msgstr ""
+"Linuxを使用しているケースでは、処理構成でSAGAのインストールへのパスを設定する必要はありません。代わりに、SAGAをインストールし、それが（ちょうどコンソールを開いて、それをチェックするために"
+" ``saga_cmd`` "
+"を入力）コンソールから呼び出すことができるようSAGAフォルダが、PATHにあることを確認する必要があります。Linuxでは、SAGAのターゲットバージョンも2.1ですが、（そのようOSGEOライブDVDなど）一部のインストールでは、だけ2.0.8利用できる可能性があります。2.1のパッケージには使用可能なものもありますが、それらは一般的にインストールされていないといくつかの問題があるかもしれないので、より一般的と2.0.8の安定を使用することを好む場合は、"
+" *SAGA* グループ下に、設定ダイアログで2.0.8の互換性を可能にすることによって、それを行うことができます。"
+
+#: ../../docs/training_manual/processing/first_saga_alg.rst:50
+msgid ""
+"Once SAGA is installed, you can launch a SAGA algorithm double clicking on "
+"its name, as with any other algorithm. Since we are using the simplified "
+"interface, you do not know which algorithms are based on SAGA or in another "
+"external application, but if you happen to double--click on one of them and "
+"the corresponding application is not installed, you will see something like "
+"this."
+msgstr ""
+"SAGAがインストールされたら、他のアルゴリズムと同様に、その名前をSAGAアルゴリズムをダブルクリックし起動できます。単純化されたインターフェイスを使用しているので、どのアルゴリズムがSAGAに基づいているかまたは別の外部のアプリケーションにいるのかはわかりませんが、それらの"
+" いずれかをたまたまダブルクリックして対応するアプリケーションがインストールされていない場合、このようなものが表示されます。"
+
+#: ../../docs/training_manual/processing/first_saga_alg.rst:58
+msgid ""
+"In our case, and assuming that SAGA is correctly installed and configured, "
+"you should not see this window, and you will get to the parameters dialog "
+"instead."
+msgstr ""
+"この場合には、SAGAが正しくインストールされ構成されていると仮定すると、このウィンドウは表示されないはずで、代わりにダイアログのパラメーターが得られるでしょう。"
+
+#: ../../docs/training_manual/processing/first_saga_alg.rst:61
+msgid ""
+"Let's try with a SAGA--based algorithm, the one called *Split shapes layer "
+"randomly*."
+msgstr "SAGAベースのアルゴリズム、 *シェープレイヤーをランダムに分割* と呼ばれるもの、で試してみましょう。"
+
+#: ../../docs/training_manual/processing/first_saga_alg.rst:65
+msgid ""
+"Use the points layer in the project corresponding to this lesson as input, "
+"and the default parameter values, and you will get something like this (the "
+"split is random, so your result might be different)."
+msgstr ""
+"入力として、このレッスンに対応したプロジェクト内のポイントレイヤー、およびデフォルトのパラメーター値を使用して、このような何かを取得します（分割がランダムであるので、結果は異なる場合があります）。"
+
+#: ../../docs/training_manual/processing/first_saga_alg.rst:71
+msgid ""
+"The input layer has been split in two layers, each one with the same number "
+"of points. This result has been computed by SAGA, and later taken by QGIS "
+"and added to the QGIS project."
+msgstr ""
+"入力レイヤーは2レイヤーに分割されていて、それぞれに同じ数のポイントがあります。この結果は、SAGAによって計算され、後でQGISによってとられQGISプロジェクトに追加されました。"
+
+#: ../../docs/training_manual/processing/first_saga_alg.rst:75
+msgid ""
+"If all goes fine, you will not notice any difference between this SAGA--"
+"based algorithm and one of the others that we have previously run. However, "
+"SAGA might, for some reason, not be able to produce a result and not "
+"generate the file that QGIS is expecting. In that case, there will be "
+"problems adding the result to the QGIS project, and an error message like "
+"this will be shown."
+msgstr ""
+"すべてがうまくいけば、このSAGAベースのアルゴリズムと、以前に実行をしている他のアルゴリズムとの間の違いに何も気付かないでしょう。しかし、SAGAでは、何らかの理由で、結果を生成できず、QGISによって想定されるファイルが作成されない場合があります。その場合、QGISプロジェクトにその結果を追加すると問題がおき、このようなエラーメッセージが表示されるでしょう。"
+
+#: ../../docs/training_manual/processing/first_saga_alg.rst:83
+msgid ""
+"This kind of problems might happen, even if SAGA (or any other application "
+"that we are calling from the processing framework) is correctly installed, "
+"and it is important to know how to deal with them. Let's produce one of "
+"those error messages."
+msgstr ""
+"この種の問題は、SAGA（または私達は処理フレームワークから呼び出している他のアプリケーション）が正しくインストールされている場合でも、起こるかもしれない、それらに対処する方法を知っておくことが重要です。これらのエラーメッセージの１つを作成してみましょう。"
+
+#: ../../docs/training_manual/processing/first_saga_alg.rst:87
+msgid "Open the *Create graticule* algorithm and use the following values."
+msgstr "*経緯を作成* アルゴリズムを開き、次の値を使用します。"
+
+#: ../../docs/training_manual/processing/first_saga_alg.rst:92
+msgid ""
+"We are using  width and height values that is larger than the specified "
+"extent, so SAGA cannot produce any output. In other words, the parameter "
+"values are wrong, but they are not checked until SAGA gets them and tries to"
+" create the graticule. Since it cannot create it, it will not produce the "
+"expected layer, and you will see the error message shown above."
+msgstr ""
+"指定された範囲よりも大きい幅と高さの値を使用しているので、SAGAは何も出力を生成できません。言い換えれば、パラメーター値は間違っているが、それらはSAGAがそれらを取得して目盛を作成しようとするまではチェックされません。それはそれを作成できませんので、それが期待されるレイヤーを生成せず、上記のようなエラーメッセージが表示されます。"
+
+#: ../../docs/training_manual/processing/first_saga_alg.rst:98
+msgid ""
+"In SAGA >= 2.2.3, the command will adjust automatically wrong input data, so"
+" you'll not get an error. To provoke an error, use negative values for "
+"division."
+msgstr ""
+"SAGA >= "
+"2.2.3では、コマンドは自動的に間違った入力データを調整しますので、エラーは出ないでしょう。エラーを発生させるため、割り算のために負の値を使用します。"
+
+#: ../../docs/training_manual/processing/first_saga_alg.rst:101
+msgid ""
+"Understanding this kind of problems will help you solve them and find an "
+"explanation to what is happening. As you can see in the error message, a "
+"test is performed to check that the connection with SAGA is working "
+"correctly, indicating you that there might be a problem in how the algorithm"
+" was executed. This applies not only to SAGA, but also to other external "
+"applications as well."
+msgstr ""
+"この種の問題を理解することは、それらを解決し、何が起こっているかの説明を見つけるのに役立つでしょう。エラーメッセージで見ることができるように、テストは、アルゴリズムが実行された方法に問題があるかもしれないことを示し、SAGAとの接続が正しく機能していることを確認するために行われます。これは、同様にSAGAにするだけでなく、他の外部アプリケーションに限らず適用されます。"
+
+#: ../../docs/training_manual/processing/first_saga_alg.rst:107
+msgid ""
+"In the next lesson we will introduce the processing log, where information "
+"about commands run by geoalgorithms is kept, and you will see how to get "
+"more detail when issues like this appear."
+msgstr ""
+"次のレッスンでは、ジオアルゴリズムによって実行されるコマンドに関する情報が保持される処理ログを、ご紹介します、そしてこのような問題が現れたときに詳細を取得する方法について説明します。"

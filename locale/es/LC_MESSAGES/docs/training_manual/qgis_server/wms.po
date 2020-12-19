@@ -1,0 +1,520 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:19+0000\n"
+"Last-Translator: Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020\n"
+"Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:2
+msgid "|LS| Serving WMS"
+msgstr "|LS| Servicio WMS"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:4
+msgid ""
+"Let's download the `Training demo data <https://github.com/qgis/QGIS-"
+"Training-Data/archive/v2.0.zip>`_ and unzip the files in the :file:`qgis-"
+"server-tutorial-data` subdirectory to any directory. We recommend that you "
+"simply create a :file:`/home/qgis/projects` directory and put your files "
+"there in order to avoid possible permissions problems."
+msgstr ""
+"Vamos a descargar  los `datos demo de Entrenamiento <https://github.com/qgis"
+"/QGIS-Training-Data/archive/v2.0.zip>`_ y secomprime los archivos en el "
+"subdirectorio :file:`qgis-server-tutorial-data` a algún directorio. Te "
+"recomendamos que simplemente crees un directorio :file:`/home/qgis/projects`"
+" y coloque sus archivos allí para evitar posibles problemas de permisos."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:9
+msgid ""
+"The demo data contains a QGIS project named :file:`world.qgs` that is "
+"already prepared to be served with QGIS Server. If you want to use your own "
+"project or you want to learn how a project is prepared see the "
+":ref:`Creatingwmsfromproject` section."
+msgstr ""
+"Los datos de demostración contienen un proyecto QGIS llamado "
+":file:`world.qgs` que ya está preparado para ser servido con QGIS Server. Si"
+" quieres usar tu propio proyecto o quieres aprender cómo se prepara un "
+"proyecto, consulta la sección :ref:`Creandowmsfromproject`."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:16
+msgid ""
+"This module presents the URLs so that the audience can easily distinguish "
+"the parameters and parameters values. While the normal format is:"
+msgstr ""
+"Este módulo presenta las URL para que la audiencia pueda distinguir "
+"fácilmente los parámetros y los valores de los parámetros. Mientras que el "
+"formato normal es:"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:23
+msgid "this tutorial uses:"
+msgstr "Este tutorial usa:"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:31
+msgid ""
+"Pasting them into Mozilla Firefox works properly but other web browsers like"
+" Chrome may add unwanted spaces between the ``field:parameter`` pairs. So, "
+"if you encounter this issue you can either use Firefox or modify the URLs so"
+" that they're in one line format."
+msgstr ""
+"Pegarlos en Mozilla Firefox funciona correctamente, pero otros navegadores "
+"web como Chrome pueden agregar espacios no deseados entre los pares "
+"``campo:parámetro``. Entonces, si encuentra este problema, puede usar "
+"Firefox o modificar las URL para que estén en formato de una línea."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:36
+msgid ""
+"Let's make a WMS GetCapabilities request in the web browser or with curl:"
+msgstr ""
+"Hagamos una solicitud GetCapabilities WMS en el navegador web o con curl:"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:46
+msgid ""
+"In the Apache config from the previous lesson the ``QGIS_PROJECT_FILE`` "
+"variable sets the default project to :file:`/home/qgis/projects/world.qgs`. "
+"However, in the above request we made use of the **map** parameter to be "
+"explicit and to show it can be used to point at any project. If you delete "
+"the **map** parameter from the above request QGIS Server will output the "
+"same response."
+msgstr ""
+"En la configuración de Apache de la lección anterior, la variable "
+"``QGIS_PROJECT_FILE`` establece el proyecto predeterminado en "
+":file:`/home/qgis/projects/world.qgs`. Sin embargo, en la solicitud anterior"
+" hicimos uso del parámetro **map** para ser explícitos y mostrar que se "
+"puede usar para apuntar a cualquier proyecto. Si elimina el parámetro "
+"**map** de la solicitud anterior, QGIS Server generará la misma respuesta."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:52
+msgid ""
+"By pointing any WMS client to the ``GetCapabilities`` URL, the client gets "
+"in response an XML document with metadata of the Web Map Server’s "
+"information, e.g. what layers does it serve, the geographical coverage, in "
+"what format, what version of WMS etc."
+msgstr ""
+"Al señalar cualquier cliente WMS a la URL ``GetCapabilities``, el cliente "
+"obtiene en respuesta un documento XML con metadatos de la información del "
+"servidor de mapas web, p. Ej. qué capas sirve, la cobertura geográfica, en "
+"qué formato, qué versión de WMS, etc."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:57
+msgid ""
+"As QGIS is also a :ref:`ogc-wms` you can create a new WMS server connection "
+"with the help of the above GetCapabilities url. See the :ref:`wms-services` "
+"or the  :ref:`ogc-wms-servers` section on how to do it."
+msgstr ""
+"Como QGIS también es un :ref:`ogc-wms`, puede crear una nueva conexión de "
+"servidor WMS con la ayuda de la URL GetCapabilities anterior. Consulte la "
+"sección :ref:`wms-services` o :ref:`ogc-wms-servers` sobre cómo hacerlo."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:61
+msgid ""
+"By adding the ``countries`` WMS layer to your QGIS project you should get an"
+" image like the one below:"
+msgstr ""
+"Al agregar la capa WMS ``countries`` a su proyecto QGIS, debería obtener una"
+" imagen como la siguiente:"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:67
+msgid "QGIS Desktop consuming the QGIS Server countries layer WMS service"
+msgstr ""
+"QGIS Desktop consume el servicio WMS de la capa de países del servidor QGIS"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:71
+msgid ""
+"QGIS Server serves layers that are defined in the :file:`world.qgs` project."
+" By opening the project with QGIS you can see there are multiple styles for "
+"the countries layer. QGIS Server is also aware of this and you can choose "
+"the style you want in your request.  The ``classified_by_population`` style "
+"was chosen in the above image."
+msgstr ""
+"QGIS Server sirve capas que están definidas en el proyecto "
+":file:`world.qgs`. Al abrir el proyecto con QGIS, puede ver que hay varios "
+"estilos para la capa de países. QGIS Server también es consciente de esto y "
+"puede elegir el estilo que desee en su solicitud. En la imagen de arriba se "
+"eligió el estilo ``Classified_by_population``."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:78
+msgid "Logging"
+msgstr "Registro"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:80
+msgid ""
+"When you're setting up a server, the logs are always important as they show "
+"you what's going on. We have setup in the :file:`*.conf` file the following "
+"logs:"
+msgstr ""
+"Cuando configura un servidor, los registros siempre son importantes, ya que "
+"muestran lo que está sucediendo. Hemos configurado en el archivo "
+":file:`*.conf` los siguientes registros:"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:83
+msgid "QGIS Server log at :file:`/logs/qgisserver.log`"
+msgstr "Registro del servidor QGIS en :file:`/logs/qgisserver.log`"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:84
+msgid ""
+"``qgisplatform.demo`` Apache access log at "
+":file:`qgisplatform.demo.access.log`"
+msgstr ""
+"``qgisplatform.demo`` Registro de acceso de Apache en "
+":file:`qgisplatform.demo.access.log`"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:85
+msgid ""
+"``qgisplatform.demo`` Apache error log at "
+":file:`qgisplatform.demo.error.log`"
+msgstr ""
+"``qgisplatform.demo`` Registro de errores de Apache en "
+":file:`qgisplatform.demo.error.log`"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:87
+msgid ""
+"The log files are simply text files so you can use a text editor to check "
+"them out. You can also use the ``tail`` command in a terminal: ``sudo tail "
+"-f /logs/qgisserver.log``."
+msgstr ""
+"Los archivos de registro son simplemente archivos de texto, por lo que puede"
+" usar un editor de texto para verificarlos. También puede usar el comando "
+"``tail`` en una terminal: ``sudo tail -f /logs/qgisserver.log``."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:91
+msgid ""
+"This will continuously output in the terminal what's written in that log "
+"file. You can also have three terminals opened for each of the log files "
+"like so:"
+msgstr ""
+"Esto generará continuamente en el terminal lo que está escrito en ese "
+"archivo de registro. También puede tener tres terminales abiertos para cada "
+"uno de los archivos de registro así:"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:97
+msgid "Using the ``tail`` command to visualise QGIS Server logs output"
+msgstr ""
+"Usando el comando ``tail`` para visualizar la salida de los registros de "
+"QGIS Server"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:99
+msgid ""
+"When you use QGIS Desktop to consume the QGIS Server WMS services you will "
+"see all the requests QGIS sends to the Server in the access log, the errors "
+"of QGIS Server in the QGIS Server log etc."
+msgstr ""
+"Cuando utilice QGIS Desktop para consumir los servicios WMS del servidor "
+"QGIS, verá todas las solicitudes que QGIS envía al servidor en el registro "
+"de acceso, los errores del servidor QGIS en el registro del servidor QGIS, "
+"etc."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:105
+msgid ""
+"If you look at the logs in the following sections you should get a better "
+"understanding on what's happening."
+msgstr ""
+"Si observa los registros en las siguientes secciones, debería comprender "
+"mejor lo que está sucediendo."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:107
+msgid ""
+"By restarting Apache while looking in the QGIS Server log you can find some "
+"extra pointers on how things work."
+msgstr ""
+"Al reiniciar Apache mientras busca en el registro de QGIS Server, puede "
+"encontrar algunos consejos adicionales sobre cómo funcionan las cosas."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:111
+msgid "GetMap requests"
+msgstr "Solicitud  GetMap"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:113
+msgid ""
+"In order to display the ``countries`` layer, QGIS Desktop, like any other "
+"WMS client, is using ``GetMap`` requests."
+msgstr ""
+"Para mostrar la capa de ``countries``, QGIS Desktop, como cualquier otro "
+"cliente WMS, utiliza solicitudes de ``GetMap``."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:116
+msgid "A simple request looks like:"
+msgstr "Una solicitud simple se ve así:"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:132
+#: ../../docs/training_manual/qgis_server/wms.rst:189
+msgid "The above request should output the following image:"
+msgstr "La solicitud anterior debería generar la siguiente imagen:"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:134
+msgid "**Figure: simple GetMap request to QGIS Server**"
+msgstr "**Figura: solicitud simple de GetMap a QGIS Server**"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:139
+msgid "Qgis Server response after a simple GetMap request"
+msgstr "Respuesta del servidor Qgis después de una simple solicitud GetMap"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:142
+msgid "|moderate| |TY| Change the Image and Layers parameters"
+msgstr "|moderate| |TY| Cambiar los parámetros de imagen y capas"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:144
+msgid ""
+"Based on the request above, let's replace the ``countries`` layer with "
+"another."
+msgstr ""
+"Según la solicitud anterior, reemplacemos la capa ``countries`` por otra."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:146
+msgid ""
+"In order to see what other layers are available you could open up the "
+":file:`world.qgs` project in QGIS and look at its contents. Keep in mind "
+"though that the WMS clients don't have access to the QGIS project, they just"
+" look at the capabilities document contents."
+msgstr ""
+"Para ver qué otras capas están disponibles, puede abrir el proyecto "
+":file:`world.qgs` en QGIS y ver su contenido. Sin embargo, tenga en cuenta "
+"que los clientes WMS no tienen acceso al proyecto QGIS, solo miran el "
+"contenido del documento de capacidades."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:151
+msgid ""
+"Also, there's a configuration option so that some of the layers existing in "
+"the QGIS project are ignored by QGIS when serving the WMS service."
+msgstr ""
+"Además, hay una opción de configuración para que QGIS ignore algunas de las "
+"capas existentes en el proyecto QGIS cuando preste servicio al servicio WMS."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:154
+msgid ""
+"So, you could look at the layer list when you point QGIS Desktop to the "
+"``GetCapabilities`` URL or you could try yourself finding other layer names "
+"in the ``GetCapabilities`` XML response."
+msgstr ""
+"Por lo tanto, puede mirar la lista de capas cuando apunta QGIS Desktop a la "
+"URL ``GetCapabilities`` o puede intentar buscar otros nombres de capas en la"
+" respuesta XML ``GetCapabilities``."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:158
+msgid ""
+"One of the layer names that you could find and works is "
+"``countries_shapeburst``. You may find others but keep in mind some may not "
+"be visible at such a small scale so you could get a blank image as response."
+msgstr ""
+"Uno de los nombres de capa que puede encontrar y funciona es "
+"``countries_shapeburst``. Puede encontrar otros, pero tenga en cuenta que "
+"algunos pueden no ser visibles a una escala tan pequeña, por lo que podría "
+"obtener una imagen en blanco como respuesta."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:162
+msgid ""
+"You can also play around with others parameters from above, like changing "
+"the returned image type to ``image/png``."
+msgstr ""
+"También puede jugar con otros parámetros de arriba, como cambiar el tipo de "
+"imagen devuelta a ``image/png``."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:166
+msgid "|moderate| |FA| Use Filter, Opacities and Styles parameters"
+msgstr "|moderate| |FA| Usar parámetros de filtro, opacidades y estilos"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:168
+msgid ""
+"Let's do another request that adds another layer, some of the :ref:`extra-"
+"getmap-parameters`, **FILTER** and **OPACITIES**, but also uses the standard"
+" STYLES parameter."
+msgstr ""
+"Hagamos otra solicitud que agregue otra capa, algunos de los :ref:`extra-"
+"getmap-parameters`, **FILTER** y **OPACITIES**, pero también usa el "
+"parámetro STYLES estándar."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:194
+msgid "Response to a GetMap request with FILTER and OPACITIES parameters"
+msgstr ""
+"Respuesta a una solicitud GetMap con los parámetros FILTER y OPACITIES"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:196
+msgid ""
+"As you can see from the above image, among other things, we told QGIS Server"
+" to render only **Germany** and **Italy** from the countries layer."
+msgstr ""
+"Como puede ver en la imagen de arriba, entre otras cosas, le dijimos a QGIS "
+"Server que renderizara solo **Alemania** e **Italia** de la capa de países."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:200
+msgid "|moderate| |FA| Use Redlining"
+msgstr "|moderate| |FA| Utilice Redlining"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:202
+msgid ""
+"Let's do another GetMap request that makes use of the :ref:`qgisserver-"
+"redlining` feature and of the **SELECTION** parameter detailed in the :ref"
+":`extra-getmap-parameters` section:"
+msgstr ""
+"Hagamos otra solicitud GetMap que haga uso de la función :ref:`qgisserver-"
+"redlining` y del parámetro **SELECTION** detallado en la sección :ref"
+":`extra-getmap-parameters`:"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:228
+msgid ""
+"Pasting the above request in your web browser should output the following "
+"image:"
+msgstr ""
+"Pegar la solicitud anterior en su navegador web debería generar la siguiente"
+" imagen:"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:233
+msgid ""
+"Response to a request with the REDLINING feature and SELECTION parameter"
+msgstr ""
+"Respuesta a una solicitud con la función REDLINING y el parámetro SELECTION"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:235
+msgid ""
+"You can see from the above image that the countries with the 171 and 65 ids "
+"were highlighted in yellow (Romania and France) by using the **SELECTION** "
+"parameter and we used the **REDLINING** feature to overlay a rectangle with "
+"the **QGIS Tutorial** label."
+msgstr ""
+"Puede ver en la imagen de arriba que los países con las IDs 171 y 65 se "
+"resaltaron en amarillo (Rumania y Francia) usando el parámetro **SELECTION**"
+" y usamos la función **REDLINING** para superponer un rectángulo con la "
+"Etiqueta **Tutorial de QGIS**."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:241
+msgid "GetPrint requests"
+msgstr "Solicitudes GetPrint"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:243
+msgid ""
+"One very nice feature of QGIS Server is that it makes use of the QGIS "
+"Desktop print layouts. You can learn about it in the :ref:`server_getprint` "
+"section."
+msgstr ""
+"Una prestación muy interesante de QGIS Server es que hace uso de los diseños"
+" de impresión de QGIS Desktop. Puedes conocerlo en el :ref:`server_getprint`"
+" section."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:246
+msgid ""
+"If you open the :file:`world.qgs` project with QGIS Desktop you will find a "
+"print layout named ``Population distribution``. A simplified ``GetPrint`` "
+"request that exemplifies this amazing feature is:"
+msgstr ""
+"Si abres el proyecto :file:`world.qgs` con QGIS Desktop, encontrará un "
+"diseño de impresión llamado ``Distribución de la población``. Una solicitud "
+"simplificada de ``GetPrint`` que ejemplifica esta característica "
+"sorprendente es:"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:268
+msgid "Shows the pdf resulted from the above GetPrint request"
+msgstr "Muestra el pdf resultante de la solicitud GetPrint anterior"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:270
+msgid ""
+"Naturally, it's hard to write your ``GetMap``, ``GetPrint`` etc. requests."
+msgstr ""
+"Naturalmente, es difícil escribir tus peticiones ``GetMap``, ``GetPrint`` "
+"etc.."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:272
+msgid ""
+"`QGIS Web Client <https://github.com/qgis/qgis-web-client>`_ or QWC is a Web"
+" client project that can work alongside QGIS Server so that you can publish "
+"your projects on the Web or help you create QGIS Server requests for a "
+"better understanding about the possibilities."
+msgstr ""
+"`Cliente Web QGIS <https://github.com/qgis/qgis-web-client>`_ o QWC es un "
+"proyecto de cliente web que puede funcionar junto con QGIS Server para que "
+"pueda publicar sus proyectos en la web o ayudarlo a crear solicitudes de "
+"QGIS Server para comprender mejor las posibilidades."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:277
+msgid "You can install it like this:"
+msgstr "Puedes instalarlo así:"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:279
+msgid "As user ``qgis`` go to the home directory with ``cd /home/qgis``."
+msgstr ""
+"Como usuario ``qgis`` vaya al directorio de inicio con ``cd /home/qgis``."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:280
+msgid ""
+"Download the QWC project from `here <https://github.com/qgis/QGIS-Web-"
+"Client/archive/master.zip>`_ and unzip it."
+msgstr ""
+"Descargue el proyecto QWC de `aquí <https://github.com/qgis/QGIS-Web-"
+"Client/archive/master.zip>`_ i descomprímelo."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:281
+msgid ""
+"Make a symbolic link to the ``/var/www/html`` directory as it's the "
+"``DocumentRoot`` that we've setup in the virtual host configuration. If you "
+"unzipped the archive under :file:`/home/qgis/Downloads/QGIS-Web-Client-"
+"master` we can do that with ``sudo ln -s /home/qgis/Downloads/QGIS-Web-"
+"Client-master /var/www/html/``."
+msgstr ""
+"Haz un enlace simbólico al directorio ``/var/www/html`` ya que es el "
+"``DocumentRoot`` que hemos configurado en la configuración del host virtual."
+" Si descomprimiste el archivo en :file:`/home/qgis/Downloads/QGIS-Web-"
+"Client-master` podemos hacer esto con ``sudo ln -s /home/qgis/Downloads"
+"/QGIS-Web-Client-master /var/www/html/``."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:285
+msgid ""
+"Access http://qgisplatform.demo/QGIS-Web-Client-"
+"master/site/qgiswebclient.html?map=/home/qgis/projects/world.qgs from your "
+"Web browser."
+msgstr ""
+"Acceso http://qgisplatform.demo/QGIS-Web-Client-"
+"master/site/qgiswebclient.html?map=/home/qgis/projects/world.qgs desde tu "
+"navegador web."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:288
+msgid "Now you should be able to see the Map as in the following figure:"
+msgstr "Ahora debería poder ver el mapa como en la siguiente figura:"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:293
+msgid "QGIS Web Client consuming the world.qgs project"
+msgstr "Cliente web QGIS consumiendo el proyecto world.qgs"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:295
+msgid ""
+"If you click the Print button in QWC you can interactively create "
+"``GetPrint`` requests. You can also click the ``?`` icon in the QWC to "
+"access the available help so that you can better discover the QWC "
+"possibilities."
+msgstr ""
+"Si hace clic en el botón Imprimir en QWC, puede crear solicitudes "
+"``GetPrint`` de forma interactiva. También puede hacer clic en el icono "
+"``?`` En el QWC para acceder a la ayuda disponible para que pueda descubrir "
+"mejor las posibilidades del QWC."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:300
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:302
+msgid "You learned how use QGIS Server to provide WMS Services."
+msgstr "Aprendió a usar Servidor QGIS para proporcionar servicios WMS."
+
+#: ../../docs/training_manual/qgis_server/wms.rst:305
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:307
+msgid ""
+"Next, you'll see how to use QGIS as a frontend for the famous GRASS GIS."
+msgstr ""
+"A continuación, verá cómo utilizar QGIS como interfaz para el famoso GRASS "
+"GIS."
