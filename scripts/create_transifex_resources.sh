@@ -10,7 +10,7 @@
 # Tim Sutton, March 2013
 # Update: Harrissou Sant-anna, December 2020
 
-TARGETBRANCH='master'
+TARGETBRANCH=`git branch --show-current`
 SOURCEPOFILES='locale/en/LC_MESSAGES/docs/'
 PROJECT='qgis-documentation'
 
@@ -35,12 +35,12 @@ do
   # Set the resource slug by
   # lowering the case of 'LC_MESSAGES'
   # appending the target branch name after double "-"
-  # and replacing "_", "/", "." and " " characters with "-" in the path
+  # and replacing "_", "/", ".", "\" and " " characters with "-" in the path
   # so for a file like
   #   locale/en/LC_MESSAGES/docs/gentle_gis_introduction/data_capture.po in release_3.16 branch
   # we will get
   #   locale-en-lc-messages-docs-gentle-gis-introduction-data-capture-po--release-3-16
-  RESOURCE=`echo "$POFILE--$TARGETBRANCH" | sed 's,LC_MESSAGES,lc-messages,g' | sed 's,_,-,g' | sed 's, ,-,g' | sed 's,/,-,g' | sed 's,\.,-,g'`
+  RESOURCE=`echo "$POFILE--$TARGETBRANCH" | sed 's,LC_MESSAGES,lc-messages,g' | sed 's,[_/ \.\\],-,g'`
   echo $RESOURCE
   # Register each po file as a transifex resource (an individual translatable file)
   set -x
