@@ -188,7 +188,7 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
-.. _gdalclipvectorbymasklayer:
+.. _gdalclipvectorbypolygon:
 
 Clip vector by mask layer
 -------------------------
@@ -257,7 +257,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``gdal:clipvectorbymasklayer``
+**Algorithm ID**: ``gdal:clipvectorbypolygon``
 
 .. include:: ../qgis/qgis_algs_include.rst
   :start-after: **algorithm_code_section**
