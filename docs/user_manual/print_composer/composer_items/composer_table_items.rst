@@ -281,7 +281,7 @@ when clicking the :guilabel:`Edit table ...`:
       regular expression for the input of the cell
     * by choosing the :guilabel:`Text format`
     * by |checkbox| :guilabel:`Format as number` (several formats are available)
-    * by defining the :guilabel:`Horizonatl alignment` and the
+    * by defining the :guilabel:`Horizontal alignment` and the
       :guilabel:`Vertical alignment`
     * by choosing a :guilabel:`Background color`
 
