@@ -8,7 +8,7 @@ on:
       - 'docs/**'
 
   schedule: #run at 02:00 UTC every day
-    - cron:  '00 02 * * *'
+    - cron:  '30 09 * * *'
 
 jobs:
   prepare_translation:
@@ -37,8 +37,7 @@ jobs:
           make gettext
           sphinx-intl update -p build/gettext -l en
 
-    - name: Commit the PO files
-      description: Update the PO files if there are changes
+    - name: Commit the changes in the PO files      
       id: "auto-commit-action"
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
