@@ -422,6 +422,11 @@ symbol layer types:
   polygon borders inside the polygon and can be useful to clearly represent
   adjacent polygon boundaries.
 
+.. tip:: Data-defined offset
+ 
+ For symbol layer types where you can define an :guilabel:`Offset`, a 
+ |dataDefined| :guilabel:`Data-defined override` definition is possible.
+
 .. note::
 
  When geometry type is polygon, you can choose to disable the automatic
