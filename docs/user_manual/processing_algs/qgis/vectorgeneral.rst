@@ -1102,7 +1102,7 @@ Flattens a :ref:`relationship <vector_relations>` for a vector layer,
 exporting a single layer containing one master feature per 
 related feature. This master feature contains all the 
 attributes for the related features.
-
+This allows to have the relation as a plain table that can be e.g. exported to CSV.
 Parameters
 ..........
 
