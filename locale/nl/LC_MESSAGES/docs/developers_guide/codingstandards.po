@@ -1,0 +1,988 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# DiGro, 2020
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:24+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Dutch (https://www.transifex.com/qgis/teams/6144/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/developers_guide/codingstandards.rst:5
+msgid "QGIS Coding Standards"
+msgstr "QGIS standaarden voor coderen"
+
+#: ../../docs/developers_guide/codingstandards.rst:10
+msgid "These standards should be followed by all QGIS developers."
+msgstr ""
+"Deze standaarden zouden door alle ontwikkelaars van QGIS moeten worden "
+"gevolgd."
+
+#: ../../docs/developers_guide/codingstandards.rst:13
+msgid "Classes"
+msgstr "Klassen"
+
+#: ../../docs/developers_guide/codingstandards.rst:17
+#: ../../docs/developers_guide/codingstandards.rst:212
+msgid "Names"
+msgstr "Naamgeving"
+
+#: ../../docs/developers_guide/codingstandards.rst:19
+msgid "Class in QGIS begin with Qgs and are formed using camel case."
+msgstr ""
+"Een klasse in QGIS begint met Qgs en wordt gevormd met behulp van camel "
+"case."
+
+#: ../../docs/developers_guide/codingstandards.rst:21
+#: ../../docs/developers_guide/codingstandards.rst:191
+#: ../../docs/developers_guide/codingstandards.rst:263
+msgid "Examples:"
+msgstr "Voorbeelden:"
+
+#: ../../docs/developers_guide/codingstandards.rst:23
+msgid "``QgsPoint``"
+msgstr "``QgsPoint``"
+
+#: ../../docs/developers_guide/codingstandards.rst:24
+msgid "``QgsMapCanvas``"
+msgstr "``QgsMapCanvas``"
+
+#: ../../docs/developers_guide/codingstandards.rst:25
+msgid "``QgsRasterLayer``"
+msgstr "``QgsRasterLayer``"
+
+#: ../../docs/developers_guide/codingstandards.rst:29
+msgid "Members"
+msgstr "Leden"
+
+#: ../../docs/developers_guide/codingstandards.rst:32
+msgid ""
+"Class member names begin with a lower case m and are formed using mixed "
+"case."
+msgstr ""
+"Namen van leden van klassen beginnen met een kleine letter m en worden "
+"gevormd met behulp van mixed case."
+
+#: ../../docs/developers_guide/codingstandards.rst:35
+msgid "``mMapCanvas``"
+msgstr "``mMapCanvas``"
+
+#: ../../docs/developers_guide/codingstandards.rst:36
+msgid "``mCurrentExtent``"
+msgstr "``mCurrentExtent``"
+
+#: ../../docs/developers_guide/codingstandards.rst:38
+msgid ""
+"All class members should be private. Public class members are STRONGLY "
+"discouraged. Protected members should be avoided when the member may need to"
+" be accessed from Python subclasses, since protected members cannot be used "
+"from the Python bindings."
+msgstr ""
+"Alle leden van klassen zouden private moeten zijn. Leden van Public-klassen "
+"worden STERK ontraden. beveiligde leden zouden moeten worden vermeden als "
+"toegang tot het lid moet worden verkregen via subklassen van Python, omdat "
+"beveiligde leden niet kunnen worden gebruikt vanuit de Python bindings."
+
+#: ../../docs/developers_guide/codingstandards.rst:43
+msgid ""
+"Mutable static class member names should begin with a lower case ``s``, but "
+"constant static class member names should be all caps:"
+msgstr ""
+"Muteerbare statische leden van klassen zouden moeten beginnen met een kleine"
+" letter ``s``, maar namen van constante statische leden van klassen zouden "
+"allemaal hoofdletters moeten zijn:"
+
+#: ../../docs/developers_guide/codingstandards.rst:46
+msgid "``sRefCounter``"
+msgstr "``sRefCounter``"
+
+#: ../../docs/developers_guide/codingstandards.rst:47
+msgid "``DEFAULT_QUEUE_SIZE``"
+msgstr "``DEFAULT_QUEUE_SIZE``"
+
+#: ../../docs/developers_guide/codingstandards.rst:51
+msgid "Accessor Functions"
+msgstr "Functies Accessor"
+
+#: ../../docs/developers_guide/codingstandards.rst:54
+msgid ""
+"Class member values should be obtained through accesssor functions. The "
+"function should be named without a get prefix. Accessor functions for the "
+"two private members above would be:"
+msgstr ""
+"Waarden voor leden van klassen zouden moeten worden verkregen door middel "
+"van functies accesssor. De functie zou moeten worden benoemd zonder een "
+"voorvoegsel get. Functies Accessor voor de twee bovenstaande private leden "
+"zouden zijn:"
+
+#: ../../docs/developers_guide/codingstandards.rst:58
+msgid "``mapCanvas()``"
+msgstr "``mapCanvas()``"
+
+#: ../../docs/developers_guide/codingstandards.rst:59
+msgid "``currentExtent()``"
+msgstr "``currentExtent()``"
+
+#: ../../docs/developers_guide/codingstandards.rst:61
+msgid ""
+"Ensure that accessors are correctly marked with ``const``. Where "
+"appropriate, this may require that cached value type member variables are "
+"marked with ``mutable``."
+msgstr ""
+"Zorg er voor dat accessors  juist zijn gemarkeerd met ``const``. Waar van "
+"toepassing zou dit er toe kunnen leiden dat gecachte waardentypen van "
+"variabele leden zijn gemarkeerd met ``mutable``."
+
+#: ../../docs/developers_guide/codingstandards.rst:66
+msgid "Functions"
+msgstr "Functies"
+
+#: ../../docs/developers_guide/codingstandards.rst:69
+msgid ""
+"Function names begin with a lowercase letter and are formed using mixed "
+"case. The function name should convey something about the purpose of the "
+"function."
+msgstr ""
+"Namen van functies beginnen met een kleine letter en worden gevormd met "
+"behulp van mixed case. De functienaam zou iets over het doel van de functie "
+"moeten zeggen."
+
+#: ../../docs/developers_guide/codingstandards.rst:72
+msgid "``updateMapExtent()``"
+msgstr "``updateMapExtent()``"
+
+#: ../../docs/developers_guide/codingstandards.rst:73
+msgid "``setUserOptions()``"
+msgstr "``setUserOptions()``"
+
+#: ../../docs/developers_guide/codingstandards.rst:75
+msgid ""
+"For consistency with the existing QGIS API and with the Qt API, "
+"abbreviations should be avoided. E.g. ``setDestinationSize`` instead of "
+"``setDestSize``, ``setMaximumValue`` instead of ``setMaxVal``."
+msgstr ""
+"Voor consistentie met de bestaande API van QGIS en met de API van Qt zouden "
+"afkortingen moeten worden vermeden. Bijv. ``setDestinationSize`` in plaats "
+"van ``setDestSize``, ``setMaximumValue`` in plaats van ``setMaxVal``."
+
+#: ../../docs/developers_guide/codingstandards.rst:79
+msgid ""
+"Acronyms should also be camel cased for consistency. E.g. ``setXml`` instead"
+" of ``setXML``."
+msgstr ""
+"Acroniemen zouden ook camel case moeten zijn om redenen van consistentie. "
+"Bijv. ``setXml`` in plaats van ``setXML``."
+
+#: ../../docs/developers_guide/codingstandards.rst:84
+msgid "Function Arguments"
+msgstr "Argumenten voor functies"
+
+#: ../../docs/developers_guide/codingstandards.rst:87
+msgid ""
+"Function arguments should use descriptive names. Do not use single letter "
+"arguments (e.g. ``setColor( const QColor& color )`` instead of ``setColor( "
+"const QColor& c )``)."
+msgstr ""
+"Argumenten voor functies zouden beschrijvende namen moeten hebben. Gebruik "
+"geen argumenten van één letter (bijv. ``setColor( const QColor& color )`` in"
+" plaats van ``setColor( const QColor& c )``)."
+
+#: ../../docs/developers_guide/codingstandards.rst:91
+msgid ""
+"Pay careful attention to when arguments should be passed by reference. "
+"Unless argument objects are small and trivially copied (such as QPoint "
+"objects), they should be passed by const reference. For consistency with the"
+" Qt API, even implicitly shared objects are passed by const reference (e.g. "
+"``setTitle( const QString& title )`` instead of ``setTitle( QString title "
+")``."
+msgstr ""
+"Wees uitermate zorgvuldig als argumenten zouden moeten worden doorgegeven "
+"door middel van verwijzingen. Tenzij de objecten voor de argumenten klein "
+"zijn en eenvoudig zijn te kopiëren (zoals objecten QPoint), zouden zij "
+"moeten worden doorgegeven door middel van een verwijzing const. Voor "
+"consistentie met de API van Qt dienen zelfs impliciet gedeelde objecten te "
+"worden doorgegeven door een verwijzing const (bijv. ``setTitle( const "
+"QString& title )`` in plaats van ``setTitle( QString title )``."
+
+#: ../../docs/developers_guide/codingstandards.rst:100
+msgid "Function Return Values"
+msgstr "Teruggegeven waarden van functies"
+
+#: ../../docs/developers_guide/codingstandards.rst:102
+msgid ""
+"Return small and trivially copied objects as values. Larger objects should "
+"be returned by const reference. The one exception to this is implicitly "
+"shared objects, which are always returned by value. Return ``QObject`` or "
+"subclassed objects as pointers."
+msgstr ""
+"Geef kleine en eenvoudig eenvoudig te kopiëren objecten als waarden. Grotere"
+" objecten zouden moeten worden teruggegeven door een verwijzing const. De "
+"enige uitzondering hierop zijn de impliciet gedeelde objecten, die altijd "
+"met hun waarde worden teruggegeven. Geef ``QObject`` of objecten van "
+"subklassen terug als pointers."
+
+#: ../../docs/developers_guide/codingstandards.rst:107
+msgid "``int maximumValue() const``"
+msgstr "``int maximumValue() const``"
+
+#: ../../docs/developers_guide/codingstandards.rst:108
+msgid "``const LayerSet& layers() const``"
+msgstr "``const LayerSet& layers() const``"
+
+#: ../../docs/developers_guide/codingstandards.rst:109
+msgid "``QString title() const`` (``QString`` is implicitly shared)"
+msgstr "``QString title() const`` (``QString`` is impliciet gedeeld)"
+
+#: ../../docs/developers_guide/codingstandards.rst:110
+msgid ""
+"``QList< QgsMapLayer* > layers() const`` (``QList`` is implicitly shared)"
+msgstr ""
+"``QList< QgsMapLayer* > layers() const`` (``QList`` is impliciet gedeeld)"
+
+#: ../../docs/developers_guide/codingstandards.rst:111
+msgid ""
+"``QgsVectorLayer *layer() const;`` (``QgsVectorLayer`` inherits ``QObject``)"
+msgstr ""
+"``QgsVectorLayer *layer() const;`` (``QgsVectorLayer`` erft ``QObject``)"
+
+#: ../../docs/developers_guide/codingstandards.rst:112
+msgid ""
+"``QgsAbstractGeometry *geometry() const;`` (``QgsAbstractGeometry`` is "
+"abstract and will probably need to be casted)"
+msgstr ""
+"``QgsAbstractGeometry *geometry() const;`` (``QgsAbstractGeometry`` is "
+"abstract en zal waarschijnlijk moeten worden gecast)"
+
+#: ../../docs/developers_guide/codingstandards.rst:117
+msgid "API Documentation"
+msgstr "API-documentatie"
+
+#: ../../docs/developers_guide/codingstandards.rst:119
+msgid ""
+"It is required to write API documentation for every class, method, enum and "
+"other code that is available in the public API."
+msgstr ""
+"Het is vereist om documentatie voor de API te schrijven voor elke klasse, "
+"methode, enumeratie en andere code die beschikbaar is in de publieke API."
+
+#: ../../docs/developers_guide/codingstandards.rst:122
+msgid ""
+"QGIS uses Doxygen for documentation. Write descriptive and meaningful "
+"comments that give a reader information about what to expect, what happens "
+"in edge cases and give hints about other interfaces he could be looking for,"
+" best practices and code samples."
+msgstr ""
+"QGIS gebruikt Doxygen voor documentatie. Schrijf beschrijvende en "
+"betekenisvolle opmerkingen die een lezer informatie geven over wat te "
+"verwachten, wat gebeurt er in randgevallen en geef hints over andere "
+"interfaces die hij zou kunnen gebruiken, goede beste werkwijzen en "
+"voorbeelden van code."
+
+#: ../../docs/developers_guide/codingstandards.rst:128
+msgid "Methods"
+msgstr "Methoden"
+
+#: ../../docs/developers_guide/codingstandards.rst:130
+msgid ""
+"Method descriptions should be written in a descriptive form, using the 3rd "
+"person. Methods require a ``\\since`` tag that defines when they have been "
+"introduced. You should add additional ``\\since`` tags for important changes"
+" that were introduced later on."
+msgstr ""
+"Beschrijvingen voor methoden zouden in een beschrijvende vorm moeten worden "
+"geschreven, in de 3e persoon. Methoden vereisen een tag ``\\since`` die "
+"definieert wanneer zij zijn geïntroduceerd. U zou aanvullende tags "
+"``\\since`` kunnen toevoegen voor belangrijke wijzigingen die later werden "
+"geïntroduceerd."
+
+#: ../../docs/developers_guide/codingstandards.rst:151
+msgid "Members Variables"
+msgstr "Variabele leden"
+
+#: ../../docs/developers_guide/codingstandards.rst:153
+msgid ""
+"Member variables should normally be in the ``private`` section and made "
+"available via getters and setters. One exception to this is for data "
+"containers like for error reporting. In such cases do not prefix the member "
+"with an ``m``."
+msgstr ""
+"Variabele leden zouden normaal gesproken in het gedeelte ``private`` moeten "
+"staan en beschikbaar moeten komen via getters en setters. Één uitzondering "
+"hierop is voor data containers zoals voor het rapporteren van fouten. "
+"Gebruik in dergelijke gevallen niet het voorvoegsel ``m`` voor het lid."
+
+#: ../../docs/developers_guide/codingstandards.rst:183
+msgid "Qt Designer"
+msgstr "Qt Designer"
+
+#: ../../docs/developers_guide/codingstandards.rst:186
+msgid "Generated Classes"
+msgstr "Gegenereerde klassen"
+
+#: ../../docs/developers_guide/codingstandards.rst:188
+msgid ""
+"QGIS classes that are generated from Qt Designer (ui) files should have a "
+"Base suffix. This identifies the class as a generated base class."
+msgstr ""
+"Klassen voor QGIS die worden gegenereerd uit Qt Designer (ui)-bestanden "
+"zouden een  achtervoegsel Base moeten hebben. Dat identificeert de klasse "
+"als een gegenereerde basisklasse."
+
+#: ../../docs/developers_guide/codingstandards.rst:193
+msgid "``QgsPluginManagerBase``"
+msgstr "``QgsPluginManagerBase``"
+
+#: ../../docs/developers_guide/codingstandards.rst:194
+msgid "``QgsUserOptionsBase``"
+msgstr "``QgsUserOptionsBase``"
+
+#: ../../docs/developers_guide/codingstandards.rst:198
+msgid "Dialogs"
+msgstr "Dialoogvensters"
+
+#: ../../docs/developers_guide/codingstandards.rst:200
+msgid ""
+"All dialogs should implement tooltip help for all toolbar icons and other "
+"relevant widgets. Tooltips add greatly to feature discoverability for both "
+"new and experienced users."
+msgstr ""
+"Alle dialoogvensters zouden helptips moeten implementeren voor alle "
+"pictogrammen van de werkbalk en andere relevante widgets. Helptips voegen "
+"een grote mate van ontdekkingsdrang toe voor zowel nieuwe als ervaren "
+"gebruikers."
+
+#: ../../docs/developers_guide/codingstandards.rst:204
+msgid ""
+"Ensure that the tab order for widgets is updated whenever the layout of a "
+"dialog changes."
+msgstr ""
+"Zorg er voor dat de tabvolgorde voor widgets wordt bijgewerkt, iedere keer "
+"als de lay-out van het dialoogvenster wijzigt."
+
+#: ../../docs/developers_guide/codingstandards.rst:209
+msgid "C++ Files"
+msgstr "C++-bestanden"
+
+#: ../../docs/developers_guide/codingstandards.rst:214
+msgid ""
+"C++ implementation and header files should have a .cpp and .h extension "
+"respectively. Filename should be all lowercase and, in the case of classes, "
+"match the class name."
+msgstr ""
+"C++ implementatie en headerbestanden zouden respectievelijk de extensie .cpp"
+" en .h moeten hebben. De bestandsnaam zou geheel in kleine letters moeten "
+"zijn en, in het geval van klassen, moeten overeenkomen met de naam van de "
+"klasse."
+
+#: ../../docs/developers_guide/codingstandards.rst:218
+msgid ""
+"Example: Class ``QgsFeatureAttribute`` source files are "
+":file:`qgsfeatureattribute.cpp` and :file:`qgsfeatureattribute.h`"
+msgstr ""
+"Voorbeeld: Bronbestanden van de klasse ``QgsFeatureAttribute`` zijn "
+":file:`qgsfeatureattribute.cpp` en :file:`qgsfeatureattribute.h`"
+
+#: ../../docs/developers_guide/codingstandards.rst:222
+msgid ""
+"In case it is not clear from the statement above, for a filename to match a "
+"class name it implicitly means that each class should be declared and "
+"implemented in its own file. This makes it much easier for newcomers to "
+"identify where the code is relating to specific class."
+msgstr ""
+"In het geval het niet duidelijk is uit het argument hierboven: om een "
+"bestandsnaam overeen te laten komen met een naam voor de klasse betekent het"
+" impliciet dat elke klasse zou moeten zijn gedeclareerd en geïmplementeerd "
+"in zijn eigen bestand. Dit maakt het voor nieuwkomers veel gemakkelijker om "
+"te identificeren waar de code gerelateerd is aan een specifieke klasse."
+
+#: ../../docs/developers_guide/codingstandards.rst:229
+msgid "Standard Header and License"
+msgstr "Standaard header en licentie"
+
+#: ../../docs/developers_guide/codingstandards.rst:231
+msgid ""
+"Each source file should contain a header section patterned after the "
+"following example:"
+msgstr ""
+"Elk bronbestand zou een gedeelte header moeten hebben met een patroon als in"
+" het volgende voorbeeld:"
+
+#: ../../docs/developers_guide/codingstandards.rst:251
+msgid ""
+"There is a template for Qt Creator in git. To use it, copy it from "
+":file:`doc/qt_creator_license_template` to a local location, adjust the mail"
+" address and - if required - the name and configure QtCreator to use it: "
+":menuselection:`Tools --> Options --> C++ --> File Naming`."
+msgstr ""
+"Er staat een sjabloon voor Qt Creator in GIT. Kopieer het, om het te "
+"gebruiken,  vanuit  :file:`doc/qt_creator_license_template` naar een lokale "
+"locatie, pas het mailadres aan en - indien vereist - de naam en configureer "
+"QtCreator om het te gebruiken: ``Tools`` -> ``Options`` -> ``C++`` -> ``File"
+" Naming``."
+
+#: ../../docs/developers_guide/codingstandards.rst:258
+msgid "Variable Names"
+msgstr "Namen van variabelen"
+
+#: ../../docs/developers_guide/codingstandards.rst:260
+msgid ""
+"Local variable names begin with a lower case letter and are formed using "
+"mixed case. Do not use prefixes like ``my`` or ``the``."
+msgstr ""
+"Namen van variabelen beginnen met een kleine letter en worden gevormd met "
+"behulp van mixed case. Gebruik geen voorvoegsels zoals ``my`` of ``the``."
+
+#: ../../docs/developers_guide/codingstandards.rst:265
+msgid "``mapCanvas``"
+msgstr "``mapCanvas``"
+
+#: ../../docs/developers_guide/codingstandards.rst:266
+msgid "``currentExtent``"
+msgstr "``currentExtent``"
+
+#: ../../docs/developers_guide/codingstandards.rst:270
+msgid "Enumerated Types"
+msgstr "Geënumereerde typen"
+
+#: ../../docs/developers_guide/codingstandards.rst:272
+msgid ""
+"Enumerated types should be named in CamelCase with a leading capital e.g.:"
+msgstr ""
+"Geënumereerde typen zouden moeten worden benoemd in CamelCase met een "
+"hoofdletter aan het begin, bijv.:"
+
+#: ../../docs/developers_guide/codingstandards.rst:284
+msgid ""
+"Do not use generic type names that will conflict with other types. e.g. use "
+"``UnkownUnit`` rather than ``Unknown``"
+msgstr ""
+"Gebruik geen algemene namen voor typen die kunnen conflicteren met andere "
+"typen. Gebruik bijvoorbeeld ``UnkownUnit`` in plaats van alleen ``Unknown``"
+
+#: ../../docs/developers_guide/codingstandards.rst:288
+msgid "Global Constants & Macros"
+msgstr "Globale constanten & macro's"
+
+#: ../../docs/developers_guide/codingstandards.rst:290
+msgid ""
+"Global constants and macros should be written in upper case underscore "
+"separated e.g.:"
+msgstr ""
+"Globale constanten en macro's zouden moeten worden geschreven in "
+"hoofdletters, gescheiden door een underscore, bijv.:"
+
+#: ../../docs/developers_guide/codingstandards.rst:298
+msgid "Comments"
+msgstr "Commentaar"
+
+#: ../../docs/developers_guide/codingstandards.rst:300
+msgid ""
+"Comments to class methods should use a third person indicative style instead"
+" of the imperative style:"
+msgstr ""
+"Opmerkingen bij klassemethoden zouden een derde persoon indicatieve stijl "
+"moeten gebruiken in plaats van de  imperatieve stijl:"
+
+#: ../../docs/developers_guide/codingstandards.rst:313
+msgid "Qt Signals and Slots"
+msgstr "Qt signalen en slots"
+
+#: ../../docs/developers_guide/codingstandards.rst:315
+msgid ""
+"All signal/slot connects should be made using the \"new style\" connects "
+"available in Qt5. Futher information on this requirement is available in "
+"`QEP #77 <https://github.com/qgis/QGIS-Enhancement-Proposals/issues/77>`_."
+msgstr ""
+"Alle verbindingen naar signal/slot zouden moeten worden gemaakt met behulp "
+"van de verbindingen \"new style\" die beschikbaar zijn in Qt5. Meer "
+"informatie over dit vereiste is beschikbaar in `QEP #77 "
+"<https://github.com/qgis/QGIS-Enhancement-Proposals/issues/77>`_."
+
+#: ../../docs/developers_guide/codingstandards.rst:319
+msgid ""
+"Avoid use of Qt auto connect slots (i.e. those named ``void "
+"on_mSpinBox_valueChanged``). Auto connect slots are fragile and prone to "
+"breakage without warning if dialogs are refactored."
+msgstr ""
+"Vermijd het gebruiken van Qt auto connect slots (d.i. die welke zijn genaamd"
+" ``void on_mSpinBox_valueChanged``). Auto connect slots zijn fragiel en "
+"gevoelig voor beschadigingen zonder waarschuwing als dialoogvensters opnieuw"
+" worden opgebouwd."
+
+#: ../../docs/developers_guide/codingstandards.rst:325
+msgid "Editing"
+msgstr "Bewerken"
+
+#: ../../docs/developers_guide/codingstandards.rst:327
+msgid ""
+"Any text editor/IDE can be used to edit QGIS code, providing the following "
+"requirements are met."
+msgstr ""
+"Elke tekstbewerker/IDE kan worden gebruikt om de code van QGIS te bewerken, "
+"vooropgesteld dat aan de volgende eisen wordt voldaan."
+
+#: ../../docs/developers_guide/codingstandards.rst:331
+msgid "Tabs"
+msgstr "Tabs"
+
+#: ../../docs/developers_guide/codingstandards.rst:333
+msgid ""
+"Set your editor to emulate tabs with spaces. Tab spacing should be set to 2 "
+"spaces."
+msgstr ""
+"Stel uw bewerker in om tabs te laten zien als spaties. De afstand voor de "
+"tab zou moeten zijn ingesteld op 2 spaties."
+
+#: ../../docs/developers_guide/codingstandards.rst:336
+msgid "In vim this is done with ``set expandtab ts=2``"
+msgstr "In VIM wordt dit gedaan met ``set expandtab ts=2``"
+
+#: ../../docs/developers_guide/codingstandards.rst:339
+msgid "Indentation"
+msgstr "Inspringen"
+
+#: ../../docs/developers_guide/codingstandards.rst:341
+msgid ""
+"Source code should be indented to improve readability. There is a "
+":file:`scripts/prepare-commit.sh` that looks up the changed files and "
+"reindents them using astyle. This should be run before committing. You can "
+"also use :file:`scripts/astyle.sh` to indent individual files."
+msgstr ""
+"Broncode zou moeten worden ingesprongen om de leesbaarheid te verbeteren. Er"
+" is een :file:`scripts/prepare-commit.sh` dat de gewijzigde bestanden "
+"ophaalt en ze opnieuw laat inspringen met astyle. Dit zou moeten worden "
+"uitgevoerd vóór het indienen. U kunt ook :file:`scripts/astyle.sh` gebruiken"
+" om individuele bestanden in te laten springen."
+
+#: ../../docs/developers_guide/codingstandards.rst:346
+msgid ""
+"As newer versions of astyle indent differently than the version used to do a"
+" complete reindentation of the source, the script uses an old astyle "
+"version, that we include in our repository (enable ``WITH_ASTYLE`` in cmake "
+"to include it in the build)."
+msgstr ""
+"Omdat nieuwere versies van astyle anders inspringen dan de gebruikte versie "
+"voor een volledige nieuw inspringen van de bron, gebruikt het script een "
+"oude versie van astyle, die we op hebben genomen in onze opslagplaats "
+"(schakel ``WITH_ASTYLE`` in cmake in om het op te nemen in de build)."
+
+#: ../../docs/developers_guide/codingstandards.rst:352
+msgid "Braces"
+msgstr "Haakjes"
+
+#: ../../docs/developers_guide/codingstandards.rst:354
+msgid "Braces should start on the line following the expression:"
+msgstr ""
+"Haakjes zouden op de regel moeten beginnen volgens de volgende expressie:"
+
+#: ../../docs/developers_guide/codingstandards.rst:370
+msgid "API Compatibility"
+msgstr "Compatibiliteit met de API"
+
+#: ../../docs/developers_guide/codingstandards.rst:372
+msgid "There is :api:`API documentation <>` for C++."
+msgstr "Er is :api:`API documentatie <>` voor C++."
+
+#: ../../docs/developers_guide/codingstandards.rst:374
+msgid ""
+"We try to keep the API stable and backwards compatible. Cleanups to the API "
+"should be done in a manner similar to the Qt sourcecode e.g."
+msgstr ""
+"We proberen de API stabiel en achterwaarts compatibel te houden. Opschonen "
+"van de API zou op een manier moeten worden gedaan die soortgelijk is aan de "
+"broncode voor Qt bijv."
+
+#: ../../docs/developers_guide/codingstandards.rst:414
+msgid "SIP Bindings"
+msgstr "SIP-bindingen"
+
+#: ../../docs/developers_guide/codingstandards.rst:416
+msgid ""
+"Some of the SIP files are automatically generated using a dedicated script."
+msgstr ""
+"Sommige van de SIP-bestanden worden automatisch gemaakt met een toegewezen "
+"script."
+
+#: ../../docs/developers_guide/codingstandards.rst:420
+msgid "Header pre-processing"
+msgstr "Voorverwerking header"
+
+#: ../../docs/developers_guide/codingstandards.rst:423
+msgid ""
+"All the information to properly build the SIP file must be found in the C++ "
+"header file. Some macros are available for such definition:"
+msgstr ""
+"Alle informatie om op de juiste manier het SIP-bestand te bouwen moet te "
+"vinden zijn in het C++ header-bestand. Enkele macro's zijn beschikbaar voor "
+"een dergelijke definitie:"
+
+#: ../../docs/developers_guide/codingstandards.rst:426
+msgid ""
+"Use ``#ifdef SIP_RUN`` to generate code only in SIP files or ``#ifndef "
+"SIP_RUN`` for C++ code only. ``#else`` statements are handled in both cases."
+msgstr ""
+"Gebruik ``#ifdef SIP_RUN`` om alleen code te maken in SIP-bestanden of "
+"``#ifndef SIP_RUN`` voor alleen code voor C++. Argumenten ``#else`` worden "
+"in beide gevallen afgehandeld."
+
+#: ../../docs/developers_guide/codingstandards.rst:429
+msgid "Use ``SIP_SKIP`` to discard a line"
+msgstr "Gebruik ``SIP_SKIP`` om een regel te negeren"
+
+#: ../../docs/developers_guide/codingstandards.rst:430
+msgid "The following annotations are handled:"
+msgstr "De volgende annotaties worden afgehandeld:"
+
+#: ../../docs/developers_guide/codingstandards.rst:432
+msgid "``SIP_FACTORY``: ``/Factory/``"
+msgstr "``SIP_FACTORY``: ``/Factory/``"
+
+#: ../../docs/developers_guide/codingstandards.rst:433
+msgid "``SIP_OUT``: ``/Out/``"
+msgstr "``SIP_OUT``: ``/Out/``"
+
+#: ../../docs/developers_guide/codingstandards.rst:434
+msgid "``SIP_INOUT``: ``/In,Out/``"
+msgstr "``SIP_INOUT``: ``/In,Out/``"
+
+#: ../../docs/developers_guide/codingstandards.rst:435
+msgid "``SIP_TRANSFER``: ``/Transfer/``"
+msgstr "``SIP_TRANSFER``: ``/Transfer/``"
+
+#: ../../docs/developers_guide/codingstandards.rst:436
+msgid "``SIP_PYNAME(name)``: ``/PyName=name/``"
+msgstr "``SIP_PYNAME(name)``: ``/PyName=name/``"
+
+#: ../../docs/developers_guide/codingstandards.rst:437
+msgid "``SIP_KEEPREFERENCE``: ``/KeepReference/``"
+msgstr "``SIP_KEEPREFERENCE``: ``/KeepReference/``"
+
+#: ../../docs/developers_guide/codingstandards.rst:438
+msgid "``SIP_TRANSFERTHIS``: ``/TransferThis/``"
+msgstr "``SIP_TRANSFERTHIS``: ``/TransferThis/``"
+
+#: ../../docs/developers_guide/codingstandards.rst:439
+msgid "``SIP_TRANSFERBACK``: ``/TransferBack/``"
+msgstr "``SIP_TRANSFERBACK``: ``/TransferBack/``"
+
+#: ../../docs/developers_guide/codingstandards.rst:441
+msgid ""
+"``private`` sections are not displayed, except if you use a ``#ifdef "
+"SIP_RUN`` statement in this block."
+msgstr ""
+"gedeelten ``private`` worden niet weergegeven, behalve wanneer u een "
+"argument ``#ifdef SIP_RUN`` in dit blok gebruikt."
+
+#: ../../docs/developers_guide/codingstandards.rst:443
+msgid ""
+"``SIP_PYDEFAULTVALUE(value)`` can be used to define an alternative default "
+"value of the python method. If the default value contains a comma ``,``, the"
+" value should be surrounded by single quotes ``'``"
+msgstr ""
+"``SIP_PYDEFAULTVALUE(value)`` kan worden gebruikt om een alternatieve "
+"standaard waarde van de methode van Python te definiëren. Als de standaard "
+"waarde een komma ``,`` bevat, zou de waarde moeten worden omsloten door "
+"enkele aanhalingstekens ``'``"
+
+#: ../../docs/developers_guide/codingstandards.rst:446
+msgid ""
+"``SIP_PYTYPE(type)`` can be used to define an alternative type for an "
+"argument of the python method. If the type contains a comma ``,``, the type "
+"should be surrounded by single quotes ``'``"
+msgstr ""
+"``SIP_PYTYPE(type)`` kan worden gebruikt om een alternatieve type voor een "
+"argument van de methode van Python te definiëren. Als het type een komma "
+"``,`` bevat, zou het type moeten worden omsloten door enkele "
+"aanhalingstekens ``'``"
+
+#: ../../docs/developers_guide/codingstandards.rst:450
+msgid "A demo file can be found in :file:`tests/scripts/sipifyheader.h`."
+msgstr ""
+"Een bestand ter demonstratie is te vinden in "
+":file:`tests/scripts/sipifyheader.h`."
+
+#: ../../docs/developers_guide/codingstandards.rst:453
+msgid "Generating the SIP file"
+msgstr "Het SIP-bestand maken"
+
+#: ../../docs/developers_guide/codingstandards.rst:455
+msgid "The SIP file can be generated using a dedicated script. For instance:"
+msgstr ""
+"Het SIP-bestand kan worden gemaakt met een toegewezen script. Bijvoorbeeld:"
+
+#: ../../docs/developers_guide/codingstandards.rst:462
+msgid ""
+"As soon as a SIP file is added to one of the source file "
+"(:file:`python/core/core.sip`, :file:`python/gui/gui.sip` or "
+":file:`python/analysis/analysis.sip`), it will be considered as generated "
+"automatically. A test on Travis will ensure that this file is up to date "
+"with its corresponding header."
+msgstr ""
+"Zodra een SIP-bestand is toegevoegd aan een van de bronbestanden "
+"(:file:`python/core/core.sip`, :file:`python/gui/gui.sip` of "
+":file:`python/analysis/analysis.sip`), zal het worden beschouwd als "
+"automatisch gemaakt. Een test op Travis zal er voor zorgen dat dit bestand "
+"up to date is met zijn overeenkomende header."
+
+#: ../../docs/developers_guide/codingstandards.rst:468
+msgid ""
+"Older files for which the automatic creation is not enabled yet are listed "
+"in :file:`python/auto_sip.blacklist`."
+msgstr ""
+"Oudere bestanden waarvoor het automatisch maken niet is ingeschakeld zijn "
+"vermeld in :file:`python/auto_sip.blacklist`."
+
+#: ../../docs/developers_guide/codingstandards.rst:472
+msgid "Improving sipify script"
+msgstr "Verbeteren van script sipify"
+
+#: ../../docs/developers_guide/codingstandards.rst:474
+msgid ""
+"If some improvements are required for sipify script, please add the missing "
+"bits to the demo file :file:`tests/scripts/sipifyheader.h` and create the "
+"expected header :file:`tests/scripts/sipifyheader.expected.si`. This will "
+"also be automatically tested on Travis as a unit test of the script itself."
+msgstr ""
+"Als enkele verbeteringen vereist zijn voor het script sipify, voeg dan de "
+"ontbrekende gedeelten toe aan het demo-bestand "
+":file:`tests/scripts/sipifyheader.h` en maak de verwachte header "
+":file:`tests/scripts/sipifyheader.expected.si`. Dit zal ook automatisch "
+"worden getest op Travis als een eenheidstest van het script zelf."
+
+#: ../../docs/developers_guide/codingstandards.rst:481
+msgid "Coding Style"
+msgstr "Stijl van coderen"
+
+#: ../../docs/developers_guide/codingstandards.rst:484
+msgid ""
+"Here are described some programming hints and tips that will hopefully "
+"reduce errors, development time and maintenance."
+msgstr ""
+"Hier worden enkele hints en tips beschreven voor het programmeren die "
+"hopelijk het aantal fouten, ontwikkeltijd en onderhoud reduceren."
+
+#: ../../docs/developers_guide/codingstandards.rst:489
+msgid "Where-ever Possible Generalize Code"
+msgstr "Waar mogelijk: generaliseer code"
+
+#: ../../docs/developers_guide/codingstandards.rst:492
+msgid ""
+"If you are cut-n-pasting code, or otherwise writing the same thing more than"
+" once, consider consolidating the code into a single function."
+msgstr ""
+"Indien u code knipt-en-plakt, of op een andere manier hetzelfde meer dan "
+"eens schrijft, overweeg dan om de code te consolideren in één enkele "
+"functie."
+
+#: ../../docs/developers_guide/codingstandards.rst:495
+msgid "This will:"
+msgstr "Dat zal:"
+
+#: ../../docs/developers_guide/codingstandards.rst:497
+msgid "allow changes to be made in one location instead of in multiple places"
+msgstr ""
+"het mogelijk maken wijzigingen op één plaats door te voeren in plaats van op"
+" meerdere plaatsen"
+
+#: ../../docs/developers_guide/codingstandards.rst:498
+msgid "help prevent code bloat"
+msgstr "helpen bij het tegengaan van overbodige code"
+
+#: ../../docs/developers_guide/codingstandards.rst:499
+msgid ""
+"make it more difficult for multiple copies to evolve differences over time, "
+"thus making it harder to understand and maintain for others"
+msgstr ""
+"het moeilijker maken voor meerdere kopieën om in de tijd verschillen te "
+"ontwikkelen, wat het moeilijker maakt voor anderen om het te begrijpen en te"
+" onderhouden"
+
+#: ../../docs/developers_guide/codingstandards.rst:504
+msgid "Prefer Having Constants First in Predicates"
+msgstr "Voorkeur voor het hebben van constanten als eerste in predicaten"
+
+#: ../../docs/developers_guide/codingstandards.rst:506
+msgid "Prefer to put constants first in predicates."
+msgstr ""
+"Heb een voorkeur voor het als eerste plaatsen van constanten in predicaten."
+
+#: ../../docs/developers_guide/codingstandards.rst:508
+msgid "``0 == value`` instead of ``value == 0``"
+msgstr "``0 == value`` in plaats van ``value == 0``"
+
+#: ../../docs/developers_guide/codingstandards.rst:510
+msgid ""
+"This will help prevent programmers from accidentally using ``=`` when they "
+"meant to use ``==``, which can introduce very subtle logic bugs. The "
+"compiler will generate an error if you accidentally use ``=`` instead of "
+"``==`` for comparisons since constants inherently cannot be assigned values."
+msgstr ""
+"Dit zal programmeurs helpen om te voorkomen dat zij per ongeluk ``=`` "
+"gebruiken wanneer zij bedoelen ``==`` te gebruiken, wat zeer subtiele "
+"logische bugs kan introduceren. De compiler zal een fout genereren als u per"
+" ongeluk ``=`` gebruikt in plaats van ``==`` voor vergelijkingen omdat "
+"inherent aan constanten geen waarden kunnen worden toegewezen."
+
+#: ../../docs/developers_guide/codingstandards.rst:516
+msgid "Whitespace Can Be Your Friend"
+msgstr "Witruimte kan uw vriend zijn"
+
+#: ../../docs/developers_guide/codingstandards.rst:518
+msgid ""
+"Adding spaces between operators, statements, and functions makes it easier "
+"for humans to parse code."
+msgstr ""
+"Toevoegen van spaties tussen operatoren, statements en functies maken het "
+"voor mensen gemakkelijker code te parsen."
+
+#: ../../docs/developers_guide/codingstandards.rst:521
+msgid "Which is easier to read, this:"
+msgstr "Wat is gemakkelijker te lezen, dit:"
+
+#: ../../docs/developers_guide/codingstandards.rst:527
+msgid "or this:"
+msgstr "of dit:"
+
+#: ../../docs/developers_guide/codingstandards.rst:533
+msgid ":file:`scripts/prepare-commit.sh` will take care of this."
+msgstr ":file:`scripts/prepare-commit.sh` zal hier voor zorgen."
+
+#: ../../docs/developers_guide/codingstandards.rst:537
+msgid "Put commands on separate lines"
+msgstr "Plaats opdrachten op afzonderlijke regels"
+
+#: ../../docs/developers_guide/codingstandards.rst:539
+msgid ""
+"When reading code it's easy to miss commands, if they are not at the "
+"beginning of the line. When quickly reading through code, it's common to "
+"skip lines if they don't look like what you are looking for in the first few"
+" characters. It's also common to expect a command after a conditional like "
+"``if``."
+msgstr ""
+"Het is bij het lezen van code eenvoudig om opdrachten te missen als zij niet"
+" aan het begin van de regel staan. Bij het snel doorlezen van code worden "
+"vaak regels, die er niet uitzien als zoals u verwacht in de eerste tekens, "
+"over te slaan. Het is ook algemeen gebruik om een opdracht te verwachten na "
+"een voorwaarde, zoals ``if``."
+
+#: ../../docs/developers_guide/codingstandards.rst:544
+msgid "Consider:"
+msgstr "Overweeg:"
+
+#: ../../docs/developers_guide/codingstandards.rst:552
+msgid "It's very easy to miss part of what the flow of control. Instead use"
+msgstr ""
+"Het is heel eenvoudig om delen van de beheersstroom te missen. Gebruik in "
+"plaats daarvan"
+
+#: ../../docs/developers_guide/codingstandards.rst:564
+msgid "Indent access modifiers"
+msgstr "Laat access modifiers inspringen"
+
+#: ../../docs/developers_guide/codingstandards.rst:566
+msgid ""
+"Access modifiers structure a class into sections of public API, protected "
+"API and private API. Access modifiers themselves group the code into this "
+"structure. Indent the access modifier and declarations."
+msgstr ""
+"Acess modifiers structureren een klasse die is opgedeeld in public API, "
+"protected API en private API. Access modifiers zelf groeperen de code binnen"
+" deze structuur. Laat de access modifier en declaraties inspringen."
+
+#: ../../docs/developers_guide/codingstandards.rst:583
+msgid "Book recommendations"
+msgstr "Aanbevolen boeken"
+
+#: ../../docs/developers_guide/codingstandards.rst:586
+msgid ""
+"`Effective Modern C++ <http://shop.oreilly.com/product/0636920033707.do>`_, "
+"Scott Meyers"
+msgstr ""
+"`Effective Modern C++ <http://shop.oreilly.com/product/0636920033707.do>`_, "
+"Scott Meyers"
+
+#: ../../docs/developers_guide/codingstandards.rst:587
+msgid ""
+"`More Effective C++ <https://www.informit.com/store/more-effective-c-plus-"
+"plus-35-new-ways-to-improve-your-9780201633719>`_, Scott Meyers"
+msgstr ""
+"`More Effective C++ <https://www.informit.com/store/more-effective-c-plus-"
+"plus-35-new-ways-to-improve-your-9780201633719>`_, Scott Meyers"
+
+#: ../../docs/developers_guide/codingstandards.rst:588
+msgid ""
+"`Effective STL <https://www.informit.com/store/effective-stl-50-specific-"
+"ways-to-improve-your-use-9780201749625>`_, Scott Meyers"
+msgstr ""
+"`Effective STL <https://www.informit.com/store/effective-stl-50-specific-"
+"ways-to-improve-your-use-9780201749625>`_, Scott Meyers"
+
+#: ../../docs/developers_guide/codingstandards.rst:589
+msgid ""
+"`Design Patterns <https://www.amazon.com/Design-Patterns-Elements-Reusable-"
+"Object-Oriented/dp/0201633612>`_, GoF"
+msgstr ""
+"`Design Patterns <https://www.amazon.com/Design-Patterns-Elements-Reusable-"
+"Object-Oriented/dp/0201633612>`_, GoF"
+
+#: ../../docs/developers_guide/codingstandards.rst:591
+msgid ""
+"You should also really read this article from Qt Quarterly on `designing Qt "
+"style (APIs) <https://doc.qt.io/archives/qq/qq13-apis.html>`_"
+msgstr ""
+"U zou ook echt dit artikel moeten lezen uit Qt Quarterly ove `designing Qt "
+"style (APIs) <https://doc.qt.io/archives/qq/qq13-apis.html>`_"
+
+#: ../../docs/developers_guide/codingstandards.rst:596
+msgid "Credits for contributions"
+msgstr "Vermelding van bijdragen"
+
+#: ../../docs/developers_guide/codingstandards.rst:598
+msgid ""
+"Contributors of new functions are encouraged to let people know about their "
+"contribution by:"
+msgstr ""
+"Zij die nieuwe functies bijdragen worden aangemoedigd om mensen kennis te "
+"laten nemen van hun bijdrage door:"
+
+#: ../../docs/developers_guide/codingstandards.rst:601
+msgid ""
+"adding a note to the changelog for the first version where the code has been"
+" incorporated, of the type::"
+msgstr ""
+"een opmerking toe te voegen in het log van wijzigingen voor de eerste versie"
+" waar de code is ingevoegd, in de vorm van::"
+
+#: ../../docs/developers_guide/codingstandards.rst:607
+msgid ""
+"writing an article about the new feature on a blog, and add it to the QGIS "
+"planet https://plugins.qgis.org/planet/"
+msgstr ""
+"een blogartikel te schrijven over de nieuwe mogelijkheid en dat toe te "
+"voegen aan de QGIS planet https://plugins.qgis.org/planet/"
+
+#: ../../docs/developers_guide/codingstandards.rst:609
+msgid "adding their name to:"
+msgstr "hun naam toe te voegen aan:"
+
+#: ../../docs/developers_guide/codingstandards.rst:611
+msgid ":source:`doc/CONTRIBUTORS`"
+msgstr ":source:`doc/CONTRIBUTORS`"
+
+#: ../../docs/developers_guide/codingstandards.rst:612
+msgid ":source:`doc/AUTHORS`"
+msgstr ":source:`doc/AUTHORS`"

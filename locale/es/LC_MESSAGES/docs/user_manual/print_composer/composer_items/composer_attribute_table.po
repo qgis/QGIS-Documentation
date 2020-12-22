@@ -1,0 +1,683 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:27+0000\n"
+"Last-Translator: Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020\n"
+"Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:5
+msgid "The Attribute Table Item"
+msgstr "El elemento de Tabla de Atributos"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:12
+msgid ""
+"Any layer in the project can have its attributes shown in the print layout. "
+"You can use this to decorate and explain your map with information about "
+"underlying data. Use the |addTable| :guilabel:`Add Attribute Table` tool "
+"following :ref:`items creation instructions <create_layout_item>` to add a "
+"new map item that you can later manipulate the same way as exposed in "
+":ref:`interact_layout_item`."
+msgstr ""
+"Cualquier capa del proyecto puede tener sus atributos mostrados en el diseño"
+" de impresión. Puede usar esto para decorar y explicar su mapa con "
+"información sobre datos subyacentes. Utilice la herramienta |addTable| "
+":guilabel:`Agregar tabla de atributos` como sigue en :ref:`instrucciones de "
+"creación de elementos <create_layout_item>`para agregar un nuevo elemento de"
+" mapa que luego puede manipular de la misma manera que se expone en "
+":ref:`interact_layout_item`."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:19
+msgid ""
+"By default, a new attribute table item loads first rows of the first "
+"(alphabetically sorted) layer, with all the fields. You can however "
+"customize the table thanks to its :guilabel:`Item Properties` panel. Other "
+"than the :ref:`items common properties <item_common_properties>`, this "
+"feature has the following functionalities (see figure_layout_table_):"
+msgstr ""
+"De forma predeterminada, un nuevo elemento de la tabla de atributos carga "
+"las primeras filas de la primera capa (ordenada alfabéticamente), con todos "
+"los campos. Sin embargo, puede personalizar la tabla gracias a su panel "
+":guilabel:`Propiedades del elemento`. Aparte de :ref:`propiedades generales "
+"de los elementos <item_common_properties>`, este objeto tiene las siguientes"
+" funcionalidades (ver figure_layout_table_):"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:30
+msgid "Attribute table Item Properties Panel"
+msgstr "Panel de Propiedades del elemento Tabla de Atributos"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:34
+msgid "Main properties"
+msgstr "Propiedades principales"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:36
+msgid ""
+"The :guilabel:`Main properties` group of the attribute table provides the "
+"following functionalities (see figure_layout_table_ppt_):"
+msgstr ""
+"El grupo :guilabel:`Propiedades principales` de la tabla de atributos "
+"proporciona las siguientes funcionalidades (ver figure_layout_table_ppt_):"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:44
+msgid "Attribute table Main properties Group"
+msgstr "Grupo de Propiedades Principales de la Tabla de Atributos"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:46
+msgid ""
+"For :guilabel:`Source` you can by default only select **Layer features** "
+"allowing you to select a :guilabel:`Layer` from the vector layers loaded in "
+"the project."
+msgstr ""
+"Para :guilabel:`Fuente`, de forma predeterminada, solo puede seleccionar "
+"**Objetos espaciales de la capa**, lo que le permite seleccionar :guilabel:`"
+" Capa` de las capas vectoriales cargadas en el proyecto."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:50
+msgid ""
+"The |dataDefined| :sup:`data-defined override` button near the layer list "
+"allows you to dynamically change the layer which is used to populate the "
+"table, e.g. you could fill the attribute table with different layer "
+"attributes per atlas page. Note that the table structure used "
+"(:numref:`figure_layout_table_select`) is the one of the layer shown in the "
+":guilabel:`Layer` drop-down list and it is left intact, meaning that setting"
+" a data defined table to a layer with different field(s) will result in "
+"empty column(s) in the table."
+msgstr ""
+"El botón |dataDefined| :sup:`suplantación definida por datos` cerca de la "
+"lista de capas le permite cambiar dinámicamente la capa que se utiliza para "
+"completar la tabla, p. ej. podría llenar la tabla de atributos con "
+"diferentes atributos de capa por página de atlas. Tenga en cuenta que la "
+"estructura de la tabla utilizada (:numref:`figure_layout_table_select`) es "
+"la de la capa que se muestra en la lista desplegable :guilabel:` Capa` y se "
+"deja intacta, lo que significa que establecer una tabla definida por datos "
+"en una capa con campo diferente(s) darán como resultado columna vacía(s) en "
+"la tabla."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:59
+msgid ""
+"In case you activate the |checkbox|:guilabel:`Generate an atlas` option in "
+"the :guilabel:`Atlas` panel (see :ref:`atlas_generation`), there are two "
+"additional :guilabel:`Source` possible:"
+msgstr ""
+"En caso de que active |checkbox| :guilabel:`Generar un atlas` en el panel "
+":guilabel:`Atlas` (ver :ref:`atlas_generation`), hay dos :guilabel:`Fuentes`"
+" adicionales posibles:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:63
+msgid ""
+"**Current atlas feature** (see figure_layout_table_atlas_): you won't see "
+"any option to choose the layer, and the table item will only show a row with"
+" the attributes from the current feature of the atlas coverage layer."
+msgstr ""
+"**Objeto de atlas actual** (ver figure_layout_table_atlas_): no verá ninguna"
+" opción para elegir la capa, y el elemento de la tabla solo mostrará una "
+"fila con los atributos del objeto actual de la capa de cobertura del atlas."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:66
+msgid ""
+"and **Relation children** (see figure_layout_table_relation_): an option "
+"with the relation names will show up. This feature can only be used if you "
+"have defined a :ref:`relation <vector_relations>` using your atlas coverage "
+"layer as parent, and the table will show the children rows of the atlas "
+"coverage layer's current feature."
+msgstr ""
+"y **Hijo de Relación** (ver figure_layout_table_relation_): aparecerá una "
+"opción con los nombres de las relaciones. Esta característica solo se puede "
+"usar si ha definido una :ref:`relación` usando su capa de cobertura de atlas"
+" como padre, y la tabla mostrará las filas secundarias de la característica "
+"actual de la capa de cobertura de atlas."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:72
+msgid ""
+"The button :guilabel:`Refresh Table Data` can be used to refresh the table "
+"when the actual contents of the table has changed."
+msgstr ""
+"El botón :guilabel:`Refrescar Tabla de Datos` se puede usar para actualizar "
+"la tabla cuando el contenido real de la tabla ha cambiado."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:81
+msgid "Attribute table Main properties for 'Current atlas feature'"
+msgstr ""
+"Propiedades principales de Tabla de atributos para 'Objeto del atlas actual'"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:89
+msgid "Attribute table Main properties for 'Relation children'"
+msgstr "Propiedades Principales de Tabla de Atributos para 'Hijo de Relación'"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:92
+msgid ""
+"The button :guilabel:`Attributes...` starts the :guilabel:`Select "
+"Attributes` dialog, (see figure_layout_table_select_) that can be used to "
+"change the visible contents of the table. The upper part of the window shows"
+" the list of the attributes to display and the lower part helps you sort the"
+" data."
+msgstr ""
+"El botón :guilabel:`Atributos...` inicia el diálogo :guilabel:`Seleccionar "
+"atributos`, (ver figure_layout_table_select_) que se puede usar para cambiar"
+" el contenido visible de la tabla. La parte superior de la ventana muestra "
+"la lista de atributos a mostrar y la parte inferior le ayuda a ordenar los "
+"datos."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:102
+msgid "Attribute table Select attributes Dialog"
+msgstr "Diálogo Seleccionar Atributos de la Tabla de Atributos"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:104
+msgid "In the :guilabel:`Columns` section you can:"
+msgstr "En la sección :guilabel:`Columnas` se puede:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:106
+msgid ""
+"Move attributes up or down the list by selecting the rows and then using the"
+" |arrowUp| and |arrowDown| buttons to shift the rows. Multiple rows can be "
+"selected and moved at any one time."
+msgstr ""
+"Mueva los atributos hacia arriba o hacia abajo en la lista seleccionando las"
+" filas y luego usando los botones |arrowUp| y |arrowDown| para cambiar las "
+"filas. Se pueden seleccionar y mover varias filas a la vez."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:109
+msgid ""
+"Add an attribute with the |signPlus| button. This will add an empty row at "
+"the bottom of the table where you can select a field to be the attribute "
+"value or create an attribute via a regular expression."
+msgstr ""
+"Agregue un atributo con el botón |signPlus|. Esto agregará una fila vacía en"
+" la parte inferior de la tabla donde puede seleccionar un campo para que sea"
+" el valor del atributo o crear un atributo a través de una expresión "
+"regular."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:112
+msgid ""
+"Remove an attribute with the |signMinus| button. Multiple rows can be "
+"selected and removed at any one time."
+msgstr ""
+"Elimine un atributo con el botón |signMinus|. Se pueden seleccionar y "
+"eliminar varias filas al mismo tiempo."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:114
+msgid ""
+"Reset the attribute table back to its default state with the "
+":guilabel:`Reset` button."
+msgstr ""
+"Restablezca la tabla de atributos a su estado predeterminado con el botón "
+":guilabel:`Restablecer`."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:115
+msgid ""
+"Clear the table using the :guilabel:`Clear` button. This is useful when you "
+"have a large table but only want to show a small number of attributes. "
+"Instead of manually removing each row, it may be quicker to clear the table "
+"and add the rows needed."
+msgstr ""
+"Limpia la tabla usando el botón :guilabel:`Limpiar`. Esto es útil cuando "
+"tiene una tabla grande pero solo desea mostrar una pequeña cantidad de "
+"atributos. En lugar de eliminar manualmente cada fila, puede ser más rápido "
+"borrar la tabla y agregar las filas necesarias."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:119
+msgid ""
+"Cell headings can be altered by adding the custom text in the "
+":guilabel:`Heading` column."
+msgstr ""
+"Los encabezados de las celdas se pueden modificar agregando el texto "
+"personalizado en la columna :guilabel:`Encabezado`."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:120
+msgid ""
+"Cell alignment can be managed with the :guilabel:`Alignment` column which "
+"will dictate the texts position within the table cell."
+msgstr ""
+"La alineación de las celdas se puede gestionar con la columna "
+":guilabel:`Alineación` que dictará la posición del texto dentro de la celda "
+"de la tabla."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:122
+msgid ""
+"Cell width can be manually managed by adding custom values to the "
+":guilabel:`width` column."
+msgstr ""
+"El ancho de celda se puede administrar manualmente agregando valores "
+"personalizados a la columna :guilabel:`Anchura`."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:124
+msgid "In the :guilabel:`Sorting` section you can:"
+msgstr "En la sección :guilabel:`Ordenar` se puede:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:126
+msgid ""
+"Add an attribute to sort the table with. Select an attribute and set the "
+"sorting order to **Ascending** or **Descending** and press the |signPlus| "
+"button. A new line is added to the sort order list."
+msgstr ""
+"Agregar un atributo para ordenar la tabla. Seleccione un atributo y "
+"configure el orden de clasificación en **Ascendente** o **Descendente** y "
+"presione el botón |signPlus|. Se agrega una nueva línea a la lista de orden "
+"de clasificación."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:129
+msgid ""
+"select a row in the list and use the |arrowUp| and |arrowDown| buttons to "
+"change the sort priority on attribute level. Selecting a cell in the "
+":guilabel:`Sort Order` column helps you change the sorting order of the "
+"attribute field."
+msgstr ""
+"seleccione una fila de la lista y utilice los botones |arrowUp| y "
+"|arrowDown| para cambiar la prioridad de clasificación a nivel de atributo. "
+"Seleccionar una celda en la columna :guilabel:`Orden de clasificación` le "
+"ayuda a cambiar el orden de clasificación del campo de atributo."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:133
+msgid ""
+"use the |signMinus| button to remove an attribute from the sort order list."
+msgstr ""
+"utilice el botón |signMinus| para eliminar un atributo de la lista de orden "
+"de clasificación."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:137
+msgid "Feature filtering"
+msgstr "Filtrado de objetos espaciales"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:139
+msgid ""
+"The :guilabel:`Feature filtering` group of the attribute table provides the "
+"following functionalities (see figure_layout_table_filter_):"
+msgstr ""
+"El grupo :guilabel:`Filtrado de objetos espaciales` de la tabla de atributos"
+" proporciona las siguientes funcionalidades (ver "
+"figure_layout_table_filter_):"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:147
+msgid "Attribute table Feature filtering Group"
+msgstr "Grupo Filtrado de Objetos Espaciales de la Tabla de Atributos"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:149
+msgid "You can:"
+msgstr "Puede:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:151
+msgid "Define the :guilabel:`Maximum rows` to be displayed."
+msgstr "Defina :guilabel:`Máximo de filas` que se mostrarán."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:152
+msgid ""
+"Activate |checkbox| :guilabel:`Remove duplicate rows from table` to show "
+"unique records only."
+msgstr ""
+"Activar |checkbox| :guilabel:`Eliminar filas duplicadas de la tabla` para "
+"mostrar sólo registros únicos."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:153
+msgid ""
+"Activate |checkbox| :guilabel:`Show only visible features within a map` and "
+"select the corresponding :guilabel:`Linked map` whose visible features "
+"attributes will be displayed."
+msgstr ""
+"Activar |checkbox| :guilabel:`Mostrar solo objetos espaciales visibles "
+"dentro de un mapa` y seleccione el correspondiente :guilabel:` Mapa "
+"enlazado` cuyos atributos de entidades visibles se mostrarán."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:155
+msgid ""
+"Activate |checkbox| :guilabel:`Show only features intersecting Atlas "
+"feature` is only available when |checkbox| :guilabel:`Generate an atlas` is "
+"activated. When activated it will show a table with only the features which "
+"intersect the current atlas feature."
+msgstr ""
+"Activar |checkbox| :guilabel:`Mostrar solo objetos que intersecan con el "
+"objeto Atlas` sólo está disponible cuando |checkbox| :guilabel:`Generar un "
+"atlas` está activado. Cuando se activa, mostrará una tabla con solo los "
+"bojetos que intersecan con el objeto atlas actual."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:158
+msgid ""
+"Activate |checkbox| :guilabel:`Filter with` and provide a filter by typing "
+"in the input line or insert a regular expression using the given "
+"|expression| expression button. A few examples of filtering statements you "
+"can use when you have loaded the airports layer from the Sample dataset:"
+msgstr ""
+"Activar |checkbox| :guilabel:`Filtrar con` y proporciona un filtro al "
+"escribir en la línea de entrada o insertar una expresión regular utilizando "
+"el botón de expresión |expression| dado. Unos pocos ejemplos de "
+"declaraciones de filtrado que puede utilizar cuando se han cargado la capa "
+"de aeropuertos a partir del conjunto de datos de la muestra:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:163
+msgid "``ELEV > 500``"
+msgstr "``ELEV > 500``"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:164
+msgid "``NAME = 'ANIAK'``"
+msgstr "``NAME = 'ANIAK'``"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:165
+msgid "``NAME NOT LIKE 'AN%'``"
+msgstr "``NAME NOT LIKE 'AN%'``"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:166
+msgid "``regexp_match( attribute( $currentfeature, 'USE' )  , '[i]')``"
+msgstr "``regexp_match( attribute( $currentfeature, 'USE' ) , '[i]')``"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:168
+msgid ""
+"The last regular expression will include only the airports that have a "
+"letter 'i' in the attribute field 'USE'."
+msgstr ""
+"La ultima expresión regular incluirá sólo los aeropuertos que tienen una "
+"letra 'i' en el campo de atributos 'USE'."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:172
+msgid "Appearance"
+msgstr "Apariencia"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:174
+msgid ""
+"The :guilabel:`Appearance` group of the attribute table provides the "
+"following functionalities  (see figure_layout_table_appearance_):"
+msgstr ""
+"El grupo :guilabel:`Apariencia` de la tabla de atributos proporciona las "
+"siguientes funcionalidades (ver figure_layout_table_appearance_):"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:182
+msgid "Attribute table appearance Group"
+msgstr "Grupo Apariencia de la Tabla de Atributos"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:184
+msgid ""
+"Click |checkbox| :guilabel:`Show empty rows` to fill the attribute table "
+"with empty cells. This option can also be used to provide additional empty "
+"cells when you have a result to show!"
+msgstr ""
+"Haga clic en |checkbox| :guilabel:`Mostrar filas vacías` para llenar la "
+"tabla de atributos con celdas vacías. ¡Esta opción también se puede usar "
+"para proporcionar celdas vacías adicionales cuando tenga un resultado para "
+"mostrar!"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:186
+msgid ""
+"With :guilabel:`Cell margins` you can define the margin around text in each "
+"cell of the table."
+msgstr ""
+"Con :guilabel:`Márgenes de celda` puede definir el margen alrededor del "
+"texto en cada celda de la tabla."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:187
+msgid ""
+"With :guilabel:`Display header` you can select from a list one of 'On first "
+"frame', 'On all frames' default option, or 'No header'."
+msgstr ""
+"Con :guilabel:`Mostrar cabecera` puede seleccionar de una lista una de las "
+"opciones 'En el primer marco', 'En todos los marcos' o 'Sin encabezado'."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:189
+msgid ""
+"The option :guilabel:`Empty table` controls what will be displayed when the "
+"result selection is empty."
+msgstr ""
+"La opción :guilabel:`Tabla vacía` controla lo que se mostrará cuando la "
+"selección de resultados esté vacía."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:191
+msgid ""
+"**Draw headers only**, will only draw the header except if you have chosen "
+"'No header' for :guilabel:`Display header`."
+msgstr ""
+"**Dibujar cabeceras solamente**, sólo dibuja la cabecera excepto si se tiene"
+" elegido 'Sin encabezado' por :guilabel:`Mostrar encabezado`."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:193
+msgid ""
+"**Hide entire table**, will only draw the background of the table. You can "
+"activate |checkbox| :guilabel:`Don't draw background if frame is empty` in "
+":guilabel:`Frames` to completely hide the table."
+msgstr ""
+"**Ocultar tabla entera**, sólo dibujará el fondo de la tabla. Se puede "
+"activar |checkbox| :guilabel:`No dibujar el fondo si el marco esta vacío` en"
+" :guilabel:`Marcos` para ocultar la tabla completamente."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:196
+msgid ""
+"**Show set message**, will draw the header and adds a cell spanning all "
+"columns and display a message like 'No result' that can be provided in the "
+"option :guilabel:`Message to display`"
+msgstr ""
+"**Mostrar mensaje del conjunto** dibujará el encabezado y añadirá un "
+"espaciado a la celda a todas las columnas y mostrará un mensaje como 'Sin "
+"resultados' que puede ser proveído en la opción :guilabel:`Mensaje a "
+"mostrar`"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:199
+msgid ""
+"The option :guilabel:`Message to display` is only activated when you have "
+"selected **Show set message** for :guilabel:`Empty table`. The message "
+"provided will be shown in the table in the first row, when the result is an "
+"empty table."
+msgstr ""
+"La opción :guilabel:`Mensaje a mostrar` sólo se activa cuando se ha "
+"seleccionado **Mostrar mensaje establecido** para :guilabel:`Tabla Vacía`. "
+"El mensaje proporcionado se mostrará en la tabla en la primer fila, cuando "
+"el resultado sea una tabla vacía."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:202
+msgid ""
+"With :guilabel:`Background color` you can set the background color of the "
+"table using the :ref:`color selector <color-selector>` widget. The "
+":guilabel:`Advanced customization` option helps you define different "
+"background colors for each cell (see figure_layout_table_background_)"
+msgstr ""
+"Con :guilabel:`Color de fondo` puede establecer el color de fondo de la "
+"tabla usando el widget :ref:` selector de color <color-selector>`. La opción"
+" :guilabel:`Personalización avanzada` te ayuda a definir diferentes colores "
+"de fondo para cada celda (ver figure_layout_table_background_)"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:212
+msgid "Attribute table Advanced Background Dialog"
+msgstr "Diálogo Fondo Avanzado de la Tabla de Atributos"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:214
+msgid ""
+"With the :guilabel:`Wrap text on` option, you can define a character on "
+"which the cell content will be wraped each time it is met"
+msgstr ""
+"Con la opción :guilabel:`Envolver texto`, puede definir un carácter en el "
+"que se envolverá el contenido de la celda cada vez que se den las "
+"condiciones"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:216
+msgid ""
+"With :guilabel:`Oversized text` you define the behavior when the width set "
+"for a column is  smaller than its content's length. It can be **Wrap text** "
+"or **Truncate text**."
+msgstr ""
+"Con :guilabel:`Texto extragrande` se define el comportamiento cuando el "
+"ancho establecido para una columna es menor que la longitud de su contenido."
+" Puede ser **Ajustar texto** o **Truncar texto**."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:222
+msgid "Show grid"
+msgstr "Mostrar cuadrícula"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:224
+msgid ""
+"The :guilabel:`Show grid` group of the attribute table provides the "
+"following functionalities (see figure_layout_table_grid_):"
+msgstr ""
+"El grupo :guilabel:`Mostrar cuadrícula` de la tabla de atributos proporciona"
+" las siguientes funcionalidades (ver figure_layout_table_grid_):"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:232
+msgid "Attribute table Show grid Group"
+msgstr "Grupo Mostrar cuadrícula de la Tabla de ATributos"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:234
+msgid ""
+"Activate |checkbox| :guilabel:`Show grid` when you want to display the grid,"
+" the outlines of the table cells. You can also select to either "
+":guilabel:`Draw horizontal lines` or :guilabel:`Draw vertical lines` or "
+"both."
+msgstr ""
+"Activar |checkbox| :guilabel:`Mostrar cuadrícula` cuando desee mostrar la "
+"cuadrícula, los contornos de las celdas de la tabla. También puede "
+"seleccionar :guilabel:`Dibujar líneas horizontales`, :guilabel:`Dibujar "
+"líneas verticales` o ambos."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:237
+msgid ""
+"With :guilabel:`Line width` you can set the thickness of the lines used in "
+"the grid."
+msgstr ""
+"Con :guilabel:`Ancho de línea` se puede establecer el espesor de las líneas "
+"utilizadas en la cuadrícula."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:238
+msgid ""
+"The :guilabel:`Color` of the grid can be set using the color selection "
+"widget."
+msgstr ""
+"El :guilabel:`Color` de la cuadrícula se puede configurar usando el widget "
+"de selección de color."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:242
+msgid "Fonts and text styling"
+msgstr "Estilo de Fuentes y Texto"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:244
+msgid ""
+"The :guilabel:`Fonts and text styling` group of the attribute table provides"
+" the following functionalities (see figure_layout_table_fonts_):"
+msgstr ""
+"El grupo :guilabel:`Estilo de fuentes y texto` de la tabla de atributos "
+"proporciona las siguientes funcionalidades (ver figure_layout_table_fonts_):"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:252
+msgid "Attribute table Fonts and text styling Group"
+msgstr "Grupo Estilo de Fuentes y Texto de la Tabla de Atributos"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:254
+msgid ""
+"You can define :guilabel:`Font` and :guilabel:`Color` for :guilabel:`Table "
+"heading` and :guilabel:`Table contents`, using font and color selector "
+"widgets."
+msgstr ""
+"Puede definir :guilabel:`Tipo de Letra` y :guilabel:`Color` para "
+":guilabel:`Encabezado de tabla` y para el :guilabel:`Contenido de tabla`, "
+"usando widgets de selección de fuente y color."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:256
+msgid ""
+"For :guilabel:`Table heading` you can additionally set the "
+":guilabel:`Alignment` to ``Follow column alignment`` or override this "
+"setting by choosing ``Left``, ``Center`` or ``Right``. The column alignment "
+"is set using the :guilabel:`Select Attributes` dialog (see "
+"figure_layout_table_select_ )."
+msgstr ""
+"Para :guilabel:`Encabezado de la tabla` también puede establecer "
+":guilabel:`Alineación` en ``Seguir la alineación de la columna`` o anular "
+"esta configuración eligiendo ``Izquierda``, ``Centro`` o ``Derecha`` . La "
+"alineación de la columna se establece mediante el cuadro de diálogo "
+":guilabel:`Seleccionar atributos` (ver figure_layout_table_select_)."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:263
+msgid "Frames"
+msgstr "Marcos"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:265
+msgid ""
+"The :guilabel:`Frames` group of the attribute table properties provides the "
+"following functionalities (see figure_layout_table_frames_):"
+msgstr ""
+"El grupo :guilabel:`Marcos` de las propiedades de la tabla de atributos "
+"proporciona las siguientes funcionalidades (ver "
+"figure_layout_table_frames_):"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:273
+msgid "Attribute table Frames Group"
+msgstr "Grupo Marcos de la Tabla de Atributos"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:275
+msgid ""
+"With :guilabel:`Resize mode` you can select how to render the attribute "
+"table contents:"
+msgstr ""
+"Con :guilabel:`Modo de redimensionado` puede seleccionar cómo representar el"
+" contenido de la tabla de atributos:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:278
+msgid ""
+"``Use existing frames`` displays the result in the first frame and added "
+"frames only."
+msgstr ""
+"``Usar marcos existentes`` muestra el resultado en el primer marco y solo en"
+" los marcos agregados."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:279
+msgid ""
+"``Extend to next page`` will create as many frames (and corresponding pages)"
+" as necessary to display the full selection of attribute table. Each frame "
+"can be moved around on the layout. If you resize a frame, the resulting "
+"table will be divided up between the other frames. The last frame will be "
+"trimmed to fit the table."
+msgstr ""
+"``Extender a la página siguiente`` creará tantos marcos (y las páginas "
+"correspondientes) como sea necesario para mostrar la selección completa de "
+"la tabla de atributos. Cada cuadro se puede mover en el diseño. Si cambia el"
+" tamaño de un marco, la tabla resultante se dividirá entre los otros marcos."
+" El último marco se recortará para adaptarse a la tabla."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:284
+msgid ""
+"``Repeat until finished`` will also create as many frames as the `Extend to "
+"next page` option, except all frames will have the same size."
+msgstr ""
+"``Repetir hasta finalizar`` también creará tantos marcos como la opción "
+"`Extender a la página siguiente`, excepto que todos los marcos tendrán el "
+"mismo tamaño."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:287
+msgid ""
+"Use the :guilabel:`Add Frame` button to add another frame with the same size"
+" as selected frame. The result of the table that will not fit in the first "
+"frame will continue in the next frame when you use the Resize mode ``Use "
+"existing frames``."
+msgstr ""
+"Utilice el botón :guilabel:`Agregar marco` para agregar otro marco con el "
+"mismo tamaño que el marco seleccionado. El resultado de la tabla que no cabe"
+" en el primer marco continuará en el siguiente marco cuando utilice el modo "
+"de cambio de tamaño ``Usar marcos existentes``."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:290
+msgid ""
+"Activate |checkbox| :guilabel:`Don't export page if frame is empty` prevents"
+" the page to be exported when the table frame has no contents. This means "
+"all other layout items, maps, scalebars, legends etc. will not be visible in"
+" the result."
+msgstr ""
+"Activar |checkbox| :guilabel:`No exportar página si el marco está vacío` "
+"evita que la página se exporte cuando el marco de la tabla no tiene "
+"contenido. Esto significa que todos los demás elementos de diseño, mapas, "
+"barras de escala, leyendas, etc. no serán visibles en el resultado."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_attribute_table.rst:293
+msgid ""
+"Activate |checkbox| :guilabel:`Don't draw background if frame is empty` "
+"prevents the background to be drawn when the table frame has no contents."
+msgstr ""
+"Activar |checkbox| :guilabel:`No dibujar fondo si el marco está vacío` "
+"impide que el fondo que se puede extraer cuando el marco de la tabla no "
+"tiene contenido."

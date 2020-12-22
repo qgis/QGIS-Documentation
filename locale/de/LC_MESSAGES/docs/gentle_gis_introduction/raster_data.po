@@ -1,0 +1,185 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:16+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: German (https://www.transifex.com/qgis/teams/6144/de/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:4
+msgid "Raster Data"
+msgstr "Rasterdaten"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:7
+msgid "|gentleLogo|"
+msgstr "|gentleLogo|"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:7
+msgid "Objectives:"
+msgstr "Ziele:"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:7
+msgid "Understand what raster data is and how it can be used in a GIS."
+msgstr ""
+"Verstehen was Rasterdaten sind und wie sie in einem GIS genutzt werden "
+"können."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:9
+msgid "Keywords:"
+msgstr "Schlüsselwörter:"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:9
+msgid "Raster, Pixel, Remote Sensing, Satellite, Image, Georeference"
+msgstr "Raster, Pixel, Fernerkundung, Satellit, Bild, Georeferenz"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:13
+msgid "Overview"
+msgstr "Übersicht"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:15
+msgid ""
+"In the previous topics we have taken a closer look at vector data. While "
+"vector features use geometry (points, polylines and polygons) to represent "
+"the real world, raster data takes a different approach. Rasters are made up "
+"of a matrix of pixels (also called cells), each containing a value that "
+"represents the conditions for the area covered by that cell (see "
+"figure_raster_). In this topic we are going to take a closer look at raster "
+"data, when it is useful and when it makes more sense to use vector data."
+msgstr ""
+"In den vorherigen Themen haben wir Vektordaten genauer betrachtet. Während "
+"bei Vektor-Features Geometrien (Punkte, Polylinien and Polygone) genutzt "
+"werden um die reale Welt abzubilden, gehen Rasterdaten einen anderen Weg. "
+"Raster bestehen aus einer Matrix aus Pixeln (auch genannt Zellen), wobei "
+"jede einen Wert enthält der Eigenschaften der von der Zelle bedeckten Fläche"
+" beschreibt (siehe figure_raster_). In diesem Thema werfen wir einen "
+"genaueren Blick auf Rasterdaten, wenn sie nützlich sind und wenn es mehr "
+"Sinn macht Vektordaten zu nutzen."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:29
+msgid ""
+"A raster dataset is composed of rows (running across) and columns (running "
+"down) of pixels (also know as cells). Each pixel represents a geographical "
+"region, and the value in that pixel represents some characteristic of that "
+"region."
+msgstr ""
+"Ein Rasterdatensatz besteht aus Reihen (Querverlauf) und Spalten "
+"(Senkrechtverlauf) von Pixeln (auch Zellen genannt). Jedes Pixel "
+"repräsentiert eine geographische Region und dessen Wert Eigenschaften dieser"
+" Region."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:35
+msgid "Raster data in detail"
+msgstr "Rasterdaten im Detail"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:37
+msgid ""
+"Raster data is used in a GIS application when we want to display information"
+" that is continuous across an area and cannot easily be divided into vector "
+"features. When we introduced you to vector data we showed you the image in "
+"figure_landscape_. Point, polyline and polygon features work well for "
+"representing some features on this landscape, such as trees, roads and "
+"building footprints. Other features on a landscape can be more difficult to "
+"represent using vector features. For example the grasslands shown have many "
+"variations in colour and density of cover. It would be easy enough to make a"
+" single polygon around each grassland area, but a lot of the information "
+"about the grassland would be lost in the process of simplifying the features"
+" to a single polygon. This is because when you give a vector feature "
+"attribute values, they apply to the whole feature, so vectors aren't very "
+"good at representing features that are not homogeneous (entirely the same) "
+"all over. Another approach you could take is to digitise every small "
+"variation of grass colour and cover as a separate polygon. The problem with "
+"that approach is that it will take a huge amount of work in order to create "
+"a good vector dataset."
+msgstr ""
+"Rasterdaten werden in GIS-Anwendungen benutzt um Informationen darzustellen,"
+" die kontinuierlich über eine Fläche verlaufen und nicht leicht in Vektor-"
+"Features aufgeteilt werden können. Als wir Sie in Vektordaten eingeführt "
+"haben zeigten wir Ihnen das Bild figure_landscape_. Punkt-, Polylinien- und "
+"Polygonfeatures funktionieren gut um bestimmte Merkmale dieser Landschaft, "
+"wie Bäume, Straßen und Gebäudegrundflächen, abzubilden. Andere Merkmale der "
+"Landschaft sind hingegen schwieriger mit Vektor-Features zu erfassen. Zum "
+"Beispiel hat das Grünland viele Farbvariationen und verschiedene "
+"Bedeckungsgrade. Es wäre leicht einzelne Polygone über jede Grünlandfläche "
+"zu legen, dabei würden jedoch viele Informationen über das Grünland durch "
+"den Prozess der Vereinfachung von Merkmalen zu einem einzelnen Polygon "
+"verloren gehen. Dies aufgrund der Tatsache, dass wenn Sie für ein Vektor-"
+"Feature Attributwerte festlegen diese das ganze Feature betreffen. Dadurch "
+"sind Vektoren nicht gut geeignet um Merkmale zu erfassen, die nicht komplett"
+" homogen (völlig gleich) sind. Eine andere Vorgehensweise wäre jede einzelne"
+" Variation an Grasfarben und Bedeckungsgraden als separate Polygone zu "
+"erfassen."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:212
+msgid "Spectral resolution"
+msgstr "Spektrale Auflösung"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:287
+msgid "Common problems / things to be aware of"
+msgstr "Bekannte Probleme / womit man rechnen muss"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:293
+msgid "What have we learned?"
+msgstr "Was haben wir gelernt?"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:295
+msgid "Let's wrap up what we covered in this worksheet:"
+msgstr ""
+"Lassen Sie uns zusammenfassen, was wir in diesem Arbeitsblatt behandelt "
+"haben:"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:311
+msgid "Now you try!"
+msgstr "Versuchen Sie es selbst!"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:313
+msgid "Here are some ideas for you to try with your learners:"
+msgstr ""
+"Hier sind einige Ideen für Sie, die Sie mit Ihren Lernenden versuchen "
+"sollten:"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:328
+msgid "Something to think about"
+msgstr "Etwas zum Nachdenken"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:341
+msgid "Further reading"
+msgstr "Literaturhinweise"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:343
+msgid "**Book**:"
+msgstr "**Buch**:"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:345
+msgid ""
+"Chang, Kang-Tsung (2006). Introduction to Geographic Information Systems. "
+"3rd Edition. McGraw Hill. ISBN: 0070658986"
+msgstr ""
+"Chang, Kang-Tsung (2006). Introduction to Geographic Information Systems. "
+"3rd Edition. McGraw Hill. ISBN: 0070658986"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:347
+msgid ""
+"DeMers, Michael N. (2005). Fundamentals of Geographic Information Systems. "
+"3rd Edition. Wiley. ISBN: 9814126195"
+msgstr ""
+"DeMers, Michael N. (2005). Fundamentals of Geographic Information Systems. "
+"3rd Edition. Wiley. ISBN: 9814126195"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:356
+msgid "What's next?"
+msgstr "Was kommt als nächstes?"

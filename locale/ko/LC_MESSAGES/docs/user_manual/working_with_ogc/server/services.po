@@ -1,0 +1,3059 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:26+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2020\n"
+"Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:3
+msgid "Services"
+msgstr "서비스"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:12
+msgid ""
+"QGIS Server is able to serve data according to standard protocols as "
+"described by the **Open Geospatial Consortium (OGC)**:"
+msgstr ""
+"QGIS 서버는 **OGC(Open Geospatial Consortium)** 가 개발한 표준 프로토콜에 따라 데이터를 서비스할 수 "
+"있습니다:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:15
+msgid "WMS 1.1.0 and 1.3.0"
+msgstr "WMS 1.1.0 및 1.3.0"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:16
+msgid "WFS 1.0.0 and 1.1.0"
+msgstr "WFS 1.0.0 및 1.1.0"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:17
+msgid "WFS3 (OGC API - Features)"
+msgstr "WFS3 (OGC API ─ 피처)"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:18
+msgid "WCS 1.1.1"
+msgstr "WCS 1.1.1"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:19
+msgid "WMTS 1.0.0"
+msgstr "WMTS 1.0.0"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:21
+msgid ""
+"Extra vendor parameters and requests are supported in addition to the "
+"original standard that greatly enhance the possibilities of customizing its "
+"behavior thanks to the QGIS rendering engine."
+msgstr ""
+"QGIS 렌더링 엔진은 본래의 표준 프로토콜은 물론, 그 습성을 사용자 지정할 수 있는 가능성을 크게 확장시켜주는 몇몇 상용 제품의 "
+"파라미터 및 요청을 지원합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:27
+msgid "Web Map Service (WMS)"
+msgstr "WMS(웹 맵 서비스)"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:29
+msgid ""
+"The **1.1.0** and **1.3.0** WMS standards implemented in QGIS Server provide"
+" a HTTP interface to request map or legend images generated from a QGIS "
+"project. A typical WMS request defines the QGIS project to use, the layers "
+"to render as well as the image format to generate. Basic support is also "
+"available for **Styled Layer Descriptor (SLD)**."
+msgstr ""
+"QGIS 서버에 구현된 WMS **1.1.0** 및 **1.3.0** 표준은 QGIS 프로젝트로부터 생성된 맵 또는 범례 이미지를 요청할"
+" 수 있는 HTTP 인터페이스를 제공합니다. 전형적인 WMS 요청은 사용할 QGIS 프로젝트, 렌더링할 레이어는 물론 생성할 이미지 "
+"포맷도 정의합니다. **SLD(Styled Layer Descriptor)** 사용도 기본으로 지원합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:35
+msgid "Specifications:"
+msgstr "사양:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:37
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1393
+msgid ""
+"`WMS 1.1.0 "
+"<https://portal.opengeospatial.org/files/?artifact_id=1081&version=1&format=pdf>`_"
+msgstr ""
+"`WMS 1.1.0 "
+"<https://portal.opengeospatial.org/files/?artifact_id=1081&version=1&format=pdf>`_"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:38
+msgid ""
+"`WMS 1.3.0 "
+"<https://portal.opengeospatial.org/files/?artifact_id=14416&format=pdf>`_"
+msgstr ""
+"`WMS 1.3.0 "
+"<https://portal.opengeospatial.org/files/?artifact_id=14416&format=pdf>`_"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:39
+msgid ""
+"`SLD 1.1.0 WMS profile "
+"<http://portal.opengeospatial.org/files/?artifact_id=22364&format=pdf>`_"
+msgstr ""
+"`SLD 1.1.0 WMS profile "
+"<http://portal.opengeospatial.org/files/?artifact_id=22364&format=pdf>`_"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:41
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:980
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1164
+msgid "Standard requests provided by QGIS Server:"
+msgstr "QGIS 서버가 제공하는 표준 요청:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Request"
+msgstr "요청"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Description"
+msgstr "설명"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1178
+msgid "GetCapabilities"
+msgstr "GetCapabilities"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Returns XML metadata with information about the server"
+msgstr "서버에 대한 정보를 담은 XML 메타데이터를 반환합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:66
+msgid "GetMap"
+msgstr "GetMap"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Returns a map"
+msgstr "맵을 반환합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:536
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1388
+msgid "GetFeatureInfo"
+msgstr "GetFeatureInfo"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Retrieves data (geometry and values) for a pixel location"
+msgstr "픽셀 위치에 대한 데이터(도형 및 값)를 검색합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:898
+msgid "GetLegendGraphics"
+msgstr "GetLegendGraphics"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Returns legend symbols"
+msgstr "범례 심볼을 반환합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:53
+msgid "Vendor requests provided by QGIS Server:"
+msgstr "QGIS 서버가 제공하는 상용 제품 요청:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:722
+msgid "GetPrint"
+msgstr "GetPrint"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Returns a QGIS composition"
+msgstr "QGIS 조판을 반환합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:954
+msgid "GetProjectSettings"
+msgstr "GetProjectSettings"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Returns specific information about QGIS Server"
+msgstr "QGIS 서버에 대한 특정 정보를 반환합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:68
+msgid ""
+"Standard parameters for the **GetMap** request according to the OGC WMS "
+"1.1.0 and 1.3.0 specifications:"
+msgstr "OGC WMS 1.1.0 및 1.3.0 사양에 따른 **GetMap** 요청용 표준 파라미터:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Parameter"
+msgstr "파라미터"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Required"
+msgstr "필수 여부"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:147
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:795
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1034
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1213
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1281
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1437
+msgid "SERVICE"
+msgstr "SERVICE"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Yes"
+msgstr "○"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Name of the service (WMS)"
+msgstr "서비스(WMS)의 명칭"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:153
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1049
+msgid "VERSION"
+msgstr "VERSION"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "No"
+msgstr "Ｘ"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Version of the service"
+msgstr "서비스의 버전"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:172
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:801
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1071
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1220
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1287
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1444
+msgid "REQUEST"
+msgstr "REQUEST"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Name of the request (GetMap)"
+msgstr "요청(GetMap)의 명칭"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:178
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "LAYERS"
+msgstr "LAYERS"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Layers to display"
+msgstr "표시할 레이어"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:216
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "STYLES"
+msgstr "STYLES"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Layers' style"
+msgstr "레이어의 스타일"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:225
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "SRS / CRS"
+msgstr "SRS / CRS"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Coordinate reference system"
+msgstr "좌표계"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:278
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "BBOX"
+msgstr "BBOX"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Map extent"
+msgstr "맵 범위"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:317
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "WIDTH"
+msgstr "WIDTH"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Width of the image in pixels"
+msgstr "이미지의 픽셀 단위 너비"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:324
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "HEIGHT"
+msgstr "HEIGHT"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Height of the image in pixels"
+msgstr "이미지의 픽셀 단위 높이"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:331
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:814
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1331
+msgid "FORMAT"
+msgstr "FORMAT"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Image format"
+msgstr "이미지 포맷"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:363
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "TRANSPARENT"
+msgstr "TRANSPARENT"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Transparent background"
+msgstr "투명한 배경"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "SLD"
+msgstr "SLD"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "URL of an SLD to be used for styling"
+msgstr "스타일 작업에 사용될 SLD의 URL"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "SLD_BODY"
+msgstr "SLD_BODY"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "In-line SLD (XML) to be used for styling"
+msgstr "스타일 작업에 사용될 인라인(In-line) SLD(XML)"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:89
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:564
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1019
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1191
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1254
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1411
+msgid ""
+"In addition to the standard ones, QGIS Server supports the following extra "
+"parameters:"
+msgstr "표준 파라미터 이외에도, QGIS 서버는 다음과 같은 추가 파라미터를 지원합니다:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:377
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1227
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1372
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1451
+msgid "MAP"
+msgstr "MAP"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Specify the QGIS project file"
+msgstr "QGIS 프로젝트 파일을 지정합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:391
+msgid "BGCOLOR"
+msgstr "BGCOLOR"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Specify the background color"
+msgstr "배경 색상을 지정합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:422
+msgid "DPI"
+msgstr "DPI"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Specify the output resolution"
+msgstr "출력물의 해상도를 지정합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:428
+msgid "IMAGE_QUALITY"
+msgstr "IMAGE_QUALITY"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "JPEG compression"
+msgstr "JPEG 압축"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:441
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "OPACITIES"
+msgstr "OPACITIES"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Opacity for layer or group"
+msgstr "레이어 또는 레이어 그룹의 투명도"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:448
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "FILTER"
+msgstr "FILTER"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Subset of features"
+msgstr "피처의 하위집합"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:489
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "SELECTION"
+msgstr "SELECTION"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Highlight features"
+msgstr "피처를 강조합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "FILE_NAME"
+msgstr "FILE_NAME"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Only for ``FORMAT=application/dxf``"
+msgstr "``FORMAT=application/dxf`` 파라미터 사용시에만 쓰입니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:3
+msgid "File name of the downloaded file"
+msgstr "다운로드한 파일의 파일명"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "FORMAT_OPTIONS"
+msgstr "FORMAT_OPTIONS"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid ""
+"Only for ``FORMAT=application/dxf`` key:value pairs separated by semicolon."
+msgstr "``FORMAT=application/dxf`` 파라미터 사용시에만, 쌍반점으로 구분된 키:값 쌍 형식으로 쓰입니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:4
+msgid ""
+"SCALE: to be used for symbology rules, filters and styles (not actual "
+"scaling of the data - data remains in the original scale)."
+msgstr ""
+"SCALE: 심볼 규칙, 필터, 스타일용으로 사용됩니다. (데이터를 실제로 크기 조정하지는 않습니다. 데이터는 원본 척도로 유지됩니다.)"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:6
+msgid ""
+"MODE: corresponds to the export options offered in the QGIS Desktop DXF "
+"export dialog. Possible values are ``NOSYMBOLOGY``, ``FEATURESYMBOLOGY`` and"
+" ``SYMBOLLAYERSYMBOLOGY``."
+msgstr ""
+"MODE: QGIS 데스크탑 DXF 내보내기 대화창에서 지정하는 내보내기 옵션에 대응합니다. ``NOSYMBOLOGY``, "
+"``FEATURESYMBOLOGY`` 및 ``SYMBOLLAYERSYMBOLOGY`` 값을 사용할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:9
+msgid ""
+"LAYERSATTRIBUTES: specify a field that contains values for DXF layer names -"
+" if not specified, the original QGIS layer names are used."
+msgstr ""
+"LAYERSATTRIBUTES: DXF 레이어명을 위한 값을 담고 있는 필드를 지정합니다 ─ 지정하지 않을 경우, 원본 QGIS "
+"레이어명을 사용합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:11
+msgid ""
+"USE_TITLE_AS_LAYERNAME: if enabled, the title of the layer will be used as "
+"layer name."
+msgstr "USE_TITLE_AS_LAYERNAME: 이 파라미터를 사용하면, 레이어의 제목을 레이어명으로 사용할 것입니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:13
+msgid ""
+"CODEC: specify a codec to be used for encoding. Default is ``ISO-8859-1`` "
+"check the QGIS desktop DXF export dialog for valid values."
+msgstr ""
+"CODEC: 인코딩에 사용할 코덱을 지정합니다. 기본값은 ``ISO-8859-1`` 입니다. QGIS 데스크탑 DXF 내보내기 대화창에서"
+" 사용할 수 있는 유효한 값을 찾아보십시오."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:521
+msgid "TILED"
+msgstr "TILED"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Working in *tiled mode*"
+msgstr "*타일 모드* 로 작동합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:125
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:347
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:465
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:582
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:758
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1060
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1076
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1096
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1118
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1140
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1202
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1265
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1422
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1766
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1841
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1853
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1867
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1878
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1894
+msgid "URL example:"
+msgstr "URL 예시:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:149
+msgid "This parameter has to be ``WMS`` in case of the **GetMap** request."
+msgstr "**GetMap** 요청의 경우, 이 파라미터는 ``WMS`` 이어야 합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:155
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1051
+msgid ""
+"This parameter allows to specify the version of the service to use. "
+"Available values for the ``VERSION`` parameter are:"
+msgstr ""
+"이 파라미터는 사용할 서비스의 버전을 지정할 수 있습니다. ``VERSION`` 파라미터가 사용할 수 있는 값은 다음과 같습니다:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:158
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1055
+msgid "``1.1.0``"
+msgstr "``1.1.0``"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:159
+msgid "``1.3.0``"
+msgstr "``1.3.0``"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:161
+msgid ""
+"If no version is indicated in the request, then ``1.3.0`` is used by "
+"default."
+msgstr "요청에서 버전을 지정하지 않을 경우, ``1.3.0`` 을 기본값으로 사용합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:164
+msgid ""
+"According to the version number, slight differences have to be expected as "
+"explained later for the next parameters:"
+msgstr "버전 번호에 따라, 다음 파라미터의 사용 방법이 조금씩 달라집니다. 이에 대해서는 차후 설명하겠습니다:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:167
+msgid "``CRS`` / ``SRS``"
+msgstr "``CRS`` / ``SRS``"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:168
+msgid "``BBOX``"
+msgstr "``BBOX``"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:174
+msgid "This parameter is ``GetMap`` in case of the **GetMap** request."
+msgstr "**GetMap** 요청의 경우, 이 파라미터는 ``GetMap`` 이어야 합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:180
+msgid ""
+"This parameter allows to specify the layers to display on the map. Names "
+"have to be separated by a comma."
+msgstr "이 파라미터는 맵 상에 표시할 레이어를 지정할 수 있습니다. 레이어명을 쉼표로 구분해야 합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:183
+msgid "In addition, QGIS Server introduced some options to select layers by:"
+msgstr "이에 더해, QGIS 서버는 레이어를 다음을 통해 선택할 수 있는 옵션을 제공합니다:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:185
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1300
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1471
+msgid "a short name"
+msgstr "약칭(short name)"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:186
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1301
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1472
+msgid "the layer id"
+msgstr "레이어 ID"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:188
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1303
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1474
+msgid ""
+"The short name of a layer may be configured through "
+":menuselection:`Properties --> Metadata` in layer menu. If the short name is"
+" defined, then it's used by default instead of the layer's name:"
+msgstr ""
+"레이어 메뉴의 :menuselection:`Properties --> Metadata` 를 통해 레이어의 약칭을 설정할 수도 있습니다. "
+"약칭을 정의한 경우, 레이어명 대신 약칭을 기본으로 사용할 것입니다:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:201
+msgid ""
+"Moreover, there's a project option allowing to select layers by their id in "
+":menuselection:`OWS Server --> WMS capabilities` menu of the "
+":menuselection:`Project --> Properties...` dialog. To activate this option, "
+"the checkbox :guilabel:`Use layer ids as names` has to be selected."
+msgstr ""
+"이에 더해, :menuselection:`Project --> Properties...` 대화창의 :menuselection:`OWS "
+"Server --> WMS capabilities` 메뉴에서 레이어 ID로 레이어를 선택할 수 있는 프로젝트 수준 옵션도 있습니다. 이 "
+"옵션을 활성화하려면, |checkbox| :guilabel:`Use layer ids as names` 를 체크하십시오."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:218
+msgid ""
+"This parameter can be used to specify a layer's style for the rendering "
+"step. Styles have to be separated by a comma. The name of the default style "
+"is ``default``."
+msgstr ""
+"렌더링 단계에서 어떤 레이어 스타일을 사용할지 지정하는 데 이 파라미터를 사용할 수 있습니다. 스타일을 쉼표로 구분해야 합니다. 기본 "
+"스타일의 명칭은 ``default`` 입니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:227
+msgid ""
+"This parameter allows to indicate the map output Spatial Reference System in"
+" WMS **1.1.0** and has to be formed like ``EPSG:XXXX``. Note that ``CRS`` is"
+" also supported if current version is **1.1.0**."
+msgstr ""
+"``SRS`` 파라미터는 WMS **1.1.0** 에서 맵 출력물의 좌표계를 나타낼 수 있으며, ``EPSG:XXXX`` 같은 서식이어야"
+" 합니다. 현재 버전이 **1.1.0** 이라면 ``CRS`` 도 지원한다는 사실을 기억하십시오."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:231
+msgid ""
+"For WMS **1.3.0**, ``CRS`` parameter is preferable but ``SRS`` is also "
+"supported."
+msgstr "WMS **1.3.0** 의 경우, ``CRS`` 파라미터가 선호되지만 ``SRS`` 도 지원합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:234
+msgid ""
+"Note that if both ``CRS`` and ``SRS`` parameters are indicated in the "
+"request, then it's the current version indicated in ``VERSION`` parameter "
+"which is decisive."
+msgstr ""
+"요청에서 ``CRS`` 와 ``SRS`` 파라미터 둘 다 사용한 경우, ``VERSION`` 파라미터에서 지정한 현재 버전을 우선합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:238
+msgid ""
+"In the next case, the ``SRS`` parameter is kept whatever the ``VERSION`` "
+"parameter because ``CRS`` is not indicated:"
+msgstr ""
+"다음 예시에서는, ``VERSION`` 파라미터 값이 무엇이든 ``SRS`` 파라미터를 사용합니다. ``CRS`` 가 없기 때문입니다:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:250
+msgid ""
+"In the next case, the ``SRS`` parameter is kept instead of ``CRS`` because "
+"of the ``VERSION`` parameter:"
+msgstr "다음 예시에서는, ``VERSION`` 파라미터 값 때문에 ``CRS`` 대신 ``SRS`` 파라미터를 사용합니다:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:263
+msgid ""
+"In the next case, the ``CRS`` parameter is kept instead of ``SRS`` because "
+"of the ``VERSION`` parameter:"
+msgstr "다음 예시에서는, ``VERSION`` 파라미터 값 때문에 ``SRS`` 대신 ``CRS`` 파라미터를 사용합니다:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:280
+msgid ""
+"This parameter allows to specify the map extent with units according to the "
+"current CRS. Coordinates have to be separated by a comma."
+msgstr "이 파라미터는 맵 범위를 현재 좌표계의 단위로 지정할 수 있습니다. 좌표를 쉼표로 구분해야 합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:284
+msgid ""
+"However, a slight difference has to be noticed according to the current "
+"``VERSION`` parameter. In WMS **1.1.0**, coordinates are formed like "
+"``minx,miny,maxx,maxy`` or ``minlong,minlat,maxlong,maxlat``. For example:"
+msgstr ""
+"하지만 현재 ``VERSION`` 파라미터 값에 따라 사용 방식이 조금씩 달라진다는 점을 주의해야 합니다. WMS **1.1.0** "
+"에서는 좌표 서식이 ``minx,miny,maxx,maxy`` 또는 ``minlong,minlat,maxlong,maxlat`` 와 "
+"같습니다. 예를 들면:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:300
+msgid ""
+"But the axis is reversed in WMS **1.3.0**, so coordinates are formed like: "
+"``miny,minx,maxy,maxx`` or ``minlat,minlong,maxlat,maxlong``. For example:"
+msgstr ""
+"그러나 WMS **1.3.0** 에서는 축 방향이 반전되어, 좌표 서식도 ``miny,minx,maxy,maxx`` 또는 "
+"``minlat,minlong,maxlat,maxlong`` 처럼 달라집니다. 예를 들면:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:319
+msgid ""
+"This parameter allows to specify the width in pixels of the output image."
+msgstr "이 파라미터는 출력 이미지의 너비를 픽셀 단위로 지정할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:326
+msgid ""
+"This parameter allows to specify the height in pixels of the output image."
+msgstr "이 파라미터는 출력 이미지의 높이를 픽셀 단위로 지정할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:333
+msgid ""
+"This parameter may be used to specify the format of map image. Available "
+"values are:"
+msgstr "이 파라미터는 맵 이미지의 포맷을 지정할 수 있습니다. 사용할 수 있는 값은 다음과 같습니다:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:336
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:818
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1336
+msgid "``jpg``"
+msgstr "``jpg``"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:337
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:819
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1337
+msgid "``jpeg``"
+msgstr "``jpeg``"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:338
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:820
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1338
+msgid "``image/jpeg``"
+msgstr "``image/jpeg``"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:339
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:822
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1339
+msgid "``image/png``"
+msgstr "``image/png``"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:340
+msgid "``image/png; mode=1bit``"
+msgstr "``image/png; mode=1bit``"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:341
+msgid "``image/png; mode=8bit``"
+msgstr "``image/png; mode=8bit``"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:342
+msgid "``image/png; mode=16bit``"
+msgstr "``image/png; mode=16bit``"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:343
+msgid ""
+"``application/dxf`` Only layers that have read access in the WFS service are"
+" exported in the DXF format."
+msgstr "``application/dxf``: WFS 서비스에서 읽기 접근 권한이 있는 레이어만 DXF 포맷으로 내보냅니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:365
+msgid ""
+"This boolean parameter can be used to specify the background transparency. "
+"Available values are (not case sensitive):"
+msgstr ""
+"이 불(boolean) 파라미터는 배경 투명도를 지정할 수 있습니다. 사용할 수 있는 값은 다음과 같습니다(대소문자 구분 안 함):"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:369
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:702
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:715
+msgid "``TRUE``"
+msgstr "``TRUE``"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:370
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:703
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:716
+msgid "``FALSE``"
+msgstr "``FALSE``"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:372
+msgid ""
+"However, this parameter is ignored if the format of the map image indicated "
+"with ``FORMAT`` is different from PNG."
+msgstr "하지만, ``FORMAT`` 파라미터가 나타내는 맵 이미지의 포맷이 PNG가 아닌 경우 이 파라미터를 무시합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:379
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1229
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1374
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1453
+msgid "This parameter allows to define the QGIS project file to use."
+msgstr "이 파라미터는 사용할 QGIS 프로젝트 파일을 정의할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:381
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1376
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1455
+msgid ""
+"As mentioned in :ref:`GetMap parameters table <qgisserver-wms-getmap>`, "
+"``MAP`` is mandatory because a request needs a QGIS project to actually "
+"work. However, the ``QGIS_PROJECT_FILE`` environment variable may be used to"
+" define a default QGIS project. In this specific case, ``MAP`` is not longer"
+" a required parameter. For further information you may refer to "
+":ref:`server_env_variables`."
+msgstr ""
+":ref:`GetMap 파라미터 표 <qgisserver-wms-getmap>` 에서 언급한 것처럼, ``MAP`` 파라미터는 "
+"필수입니다. 요청이 제대로 작동하려면 QGIS 프로젝트가 필요하기 때문입니다. 하지만 ``QGIS_PROJECT_FILE`` 환경 변수를"
+" 사용해서 기본 QGIS 프로젝트를 정의할 수도 있습니다. 이런 특정한 경우에만, ``MAP`` 이 필수 파라미터가 아니게 됩니다. 더 "
+"자세한 내용은 :ref:`server_env_variables` 을 참조하세요."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:393
+msgid ""
+"This parameter allows to indicate a background color for the map image. "
+"However it cannot be combined with ``TRANSPARENT`` parameter in case of PNG "
+"images (transparency takes priority). The colour may be literal or in "
+"hexadecimal notation."
+msgstr ""
+"이 파라미터는 맵 이미지의 배경 색상을 지정할 수 있습니다. 하지만 PNG 이미지인 경우, ``TRANSPARENT`` 파라미터와 "
+"결합해서 사용할 수 없습니다. (투명을 더 우선하기 때문입니다.) 일반적인 색상명을 사용할 수도 있고, 십육진법으로 표기할 수도 "
+"있습니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:398
+msgid "URL example with the literal notation:"
+msgstr "일반적인 표기법을 사용한 URL 예시:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:409
+msgid "URL example with the hexadecimal notation:"
+msgstr "십육진법 표기법을 사용한 URL 예시:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:424
+msgid "This parameter can be used to specify the requested output resolution."
+msgstr "이 파라미터는 요청한 출력물의 해상도를 지정할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:430
+msgid ""
+"This parameter is only used for JPEG images. By default, the JPEG "
+"compression is ``-1``."
+msgstr "이 파라미터는 JPEG 이미지 전용입니다. JPEG 압축 기본값은 ``-1`` 입니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:433
+msgid ""
+"You can change the default per QGIS project in the :menuselection:`OWS "
+"Server --> WMS capabilities` menu of the :menuselection:`Project --> "
+"Properties...` dialog. If you want to override it in a ``GetMap`` request "
+"you can do it using the ``IMAGE_QUALITY`` parameter."
+msgstr ""
+":menuselection:`Project --> Properties...` 대화창의 :menuselection:`OWS Server "
+"--> WMS capabilities` 메뉴에서 이 기본값을 QGIS 프로젝트 별로 변경할 수 있습니다. ``GetMap`` 요청에서 이"
+" 파라미터를 무시하고 싶은 경우 ``IMAGE_QUALITY`` 파라미터를 사용하면 됩니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:443
+msgid ""
+"Opacity can be set on layer or group level. Allowed values range from 0 "
+"(fully transparent) to 255 (fully opaque)."
+msgstr ""
+"레이어 또는 레이어 그룹 수준에서 불투명도를 설정할 수 있습니다. 0(완전히 투명)에서 255(완전히 불투명)까지의 범위에서 값을 정의할"
+" 수 있습니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:450
+msgid ""
+"A subset of layers can be selected with the ``FILTER`` parameter. The syntax"
+" is basically the same as for the QGIS subset string. However, there are "
+"some restrictions to avoid SQL injections into databases via QGIS Server. If"
+" a dangerous string is found in the parameter, QGIS Server will return the "
+"next error:"
+msgstr ""
+"``FILTER`` 파라미터를 통해 레이어의 하위 집합을 선택할 수 있습니다. 문법은 QGIS 하위 집합 문자열과 기본적으로 동일합니다."
+" 하지만, QGIS 서버를 통해 데이터베이스에 SQL 삽입(injection)이 일어나는 일을 막기 위한 몇몇 제약 조건이 있습니다. "
+"파라미터에서 위험한 문자열이 발견될 경우, QGIS 서버는 다음 오류를 반환할 것입니다:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:476
+msgid ""
+"In this example, the same filter (field ``col2`` equals the string "
+"``blabla``) is applied to layers ``mylayer1`` and ``mylayer2``, while the "
+"filter on ``col1`` is only applied to ``mylayer1``."
+msgstr ""
+"이 예시에서 ``mylayer1`` 및 ``mylayer2`` 양쪽에 동일한 필터(``col2`` 필드는 ``blabla`` 문자열과 "
+"동등합니다)가 적용되는 반면, ``col1`` 필드에 대한 필터는 ``mylayer1`` 레이어에만 적용됩니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:482
+msgid ""
+"It is possible to make attribute searches via GetFeatureInfo and omit the "
+"X/Y parameter if a FILTER is there. QGIS Server then returns info about the "
+"matching features and generates a combined bounding box in the XML output."
+msgstr ""
+"``FILTER`` 파라미터가 존재하는 경우 ``GetFeatureInfo`` 를 통해 속성을 검색할 수 있고 X/Y 파라미터를 생략할 "
+"수도 있습니다. 그러면 QGIS 서버가 일치하는 피처에 관한 정보를 반환하고 결합된 경계 상자를 XML 출력물 형태로 생성할 것입니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:491
+msgid ""
+"The ``SELECTION`` parameter can highlight features from one or more layers. "
+"Vector features can be selected by passing comma separated lists with "
+"feature ids."
+msgstr ""
+"``SELECTION`` 파라미터는 하나 이상의 레이어에서 피처를 강조시킬 수 있습니다. 피처 ID를 쉼표로 구분한 목록을 전송하면 벡터"
+" 피처를 선택할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:505
+msgid ""
+"The following image presents the response from a GetMap request using the "
+"``SELECTION`` option e.g. "
+"``http://myserver.com/...&SELECTION=countries:171,65``."
+msgstr ""
+"다음 그림은, 예를 들어 ``http://myserver.com/...&SELECTION=countries:171,65`` 처럼, "
+"``SELECTION`` 파라미터를 사용한 ``GetMap`` 요청이 반환한 응답의 예시입니다. "
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:509
+msgid ""
+"As those features id's correspond in the source dataset to **France** and "
+"**Romania** they're highlighted in yellow."
+msgstr "소스 데이터셋에서 파라미터의 피처 ID에 해당하는 **프랑스** 와 **루마니아** 가 노란색으로 강조돼 있습니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:517
+msgid "Server response to a GetMap request with SELECTION parameter"
+msgstr "SELECTION 파라미터를 사용한 GetMap 요청에 대한 서버의 응답"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:523
+msgid ""
+"Set the ``TILED`` parameter to ``TRUE`` to tell QGIS Server to work in "
+"*tiled* mode, and to apply the *Tile buffer* configured in the QGIS project."
+msgstr ""
+"``TILED`` 파라미터를 ``TRUE`` 로 설정하면 QGIS 서버가 *타일* 모드로 작동해서, QGIS 프로젝트에서 환경 설정한 "
+"*타일 버퍼* 를 적용합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:527
+msgid ""
+"When ``TILED`` is ``TRUE`` and when a non-zero Tile buffer is configured in "
+"the QGIS project, features outside the tile extent are drawn to avoid cut "
+"symbols at tile boundaries."
+msgstr ""
+"``TILED`` 가 ``TRUE`` 이고 QGIS 프로젝트에서 타일 버퍼를 0이 아닌 값으로 환경 설정했다면, 타일 경계선에서 심볼이 "
+"잘리는 일을 피하기 위해 타일 범위 바깥에 있는 피처를 렌더링합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:531
+msgid "``TILED`` defaults to ``FALSE``."
+msgstr "``TILED`` 파라미터의 기본값은 ``FALSE`` 입니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:538
+msgid ""
+"Standard parameters for the **GetFeatureInfo** request according to the OGC "
+"WMS 1.1.0 and 1.3.0 specifications:"
+msgstr "OGC WMS 1.1.0 및 1.3.0 사양에 따른 **GetFeatureInfo** 요청용 표준 파라미터:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid ":ref:`See GetMap <qgisserver-wms-getmap>`"
+msgstr ":ref:`GetMap 참조 <qgisserver-wms-getmap>`"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:604
+msgid "INFO_FORMAT"
+msgstr "INFO_FORMAT"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Output format"
+msgstr "출력물 포맷"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:617
+msgid "QUERY_LAYERS"
+msgstr "QUERY_LAYERS"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Layers to query"
+msgstr "쿼리할 레이어"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:632
+msgid "FEATURE_COUNT"
+msgstr "FEATURE_COUNT"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Maximum number of features to return"
+msgstr "반환할 피처의 최대 개수"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:645
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1517
+msgid "I"
+msgstr "I"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Pixel column of the point to query"
+msgstr "쿼리할 포인트의 픽셀 열"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:652
+msgid "X"
+msgstr "X"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Same as `I` parameter, but in WMS 1.1.0"
+msgstr "``I`` 파라미터와 동일 (WMS 1.1.0)"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:658
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1524
+msgid "J"
+msgstr "J"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Pixel row of the point to query"
+msgstr "쿼리할 포인트의 픽셀 행"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:665
+msgid "Y"
+msgstr "Y"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Same as `J` parameter, but in WMS 1.1.0"
+msgstr "``J`` 파라미터와 동일 (WMS 1.1.0)"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:671
+msgid "FI_POINT_TOLERANCE"
+msgstr "FI_POINT_TOLERANCE"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Tolerance in pixels for point layers"
+msgstr "포인트 레이어의 픽셀 단위 허용 오차"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:677
+msgid "FI_LINE_TOLERANCE"
+msgstr "FI_LINE_TOLERANCE"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Tolerance in pixels for line layers"
+msgstr "라인 레이어의 픽셀 단위 허용 오차"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:683
+msgid "FI_POLYGON_TOLERANCE"
+msgstr "FI_POLYGON_TOLERANCE"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Tolerance in pixels for polygon layers"
+msgstr "폴리곤 레이어의 픽셀 단위 허용 오차"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:689
+msgid "FILTER_GEOM"
+msgstr "FILTER_GEOM"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Geometry filtering"
+msgstr "도형 필터링"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:696
+msgid "WITH_MAPTIP"
+msgstr "WITH_MAPTIP"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Add map tips to the output"
+msgstr "출력물에 맵 도움말(map tip) 추가"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:707
+msgid "WITH_GEOMETRY"
+msgstr "WITH_GEOMETRY"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Add geometry to the output"
+msgstr "출력물에 도형 추가"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:606
+msgid ""
+"This parameter may be used to specify the format of the result. Available "
+"values are:"
+msgstr "이 파라미터는 산출물의 포맷을 지정할 수 있습니다. 사용할 수 있는 값은 다음과 같습니다:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:609
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1508
+msgid "``text/xml``"
+msgstr "``text/xml``"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:610
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1509
+msgid "``text/html``"
+msgstr "``text/html``"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:611
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1510
+msgid "``text/plain``"
+msgstr "``text/plain``"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:612
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1511
+msgid "``application/vnd.ogc.gml``"
+msgstr "``application/vnd.ogc.gml``"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:613
+msgid "``application/json``"
+msgstr "``application/json``"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:619
+msgid ""
+"This parameter specifies the layers to display on the map. Names are "
+"separated by a comma."
+msgstr "이 파라미터는 맵 상에 표시할 레이어를 지정합니다. 레이어명을 쉼표로 구분해야 합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:622
+msgid "In addition, QGIS Server introduces options to select layers by:"
+msgstr "이에 더해, QGIS 서버는 레이어를 다음을 통해 선택할 수 있는 옵션을 제공합니다:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:624
+msgid "short name"
+msgstr "약칭(short name)"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:625
+msgid "layer id"
+msgstr "레이어 ID"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:627
+msgid ""
+"See the ``LAYERS`` parameter defined in :ref:`See GetMap <qgisserver-wms-"
+"getmap>` for more information."
+msgstr ""
+"더 자세한 내용은 :ref:`GetMap <qgisserver-wms-getmap>` 에서 설명하는 ``LAYERS`` 파라미터를 "
+"참조하세요."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:634
+msgid ""
+"This parameter specifies the maximum number of features per layer to return."
+" For example if ``QUERY_LAYERS`` is set to ``layer1,layer2`` and "
+"``FEATURE_COUNT`` is set to ``3`` then a maximum of 3 features from layer1 "
+"will be returned. Likewise a maximun of 3 features from layer2 will be "
+"returned."
+msgstr ""
+"이 파라미터는 레이어별로 반환해야 할 피처의 최대 개수를 지정합니다. 예를 들어 ``QUERY_LAYERS`` 파라미터를 "
+"``layer1,layer2`` 로 설정하고 ``FEATURE_COUNT`` 를 ``3`` 으로 설정하면 'layer1' 로부터 피처를 "
+"최대 3개 반환할 것입니다. 'layer2' 도 마찬가지로 피처를 최대 3개 반환할 것입니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:641
+msgid "By default, only 1 feature per layer is returned."
+msgstr "각 레이어별로 피처 1개만 반환하는 것이 기본값입니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:647
+msgid ""
+"This parameter, defined in WMS 1.3.0, allows you to specify the pixel column"
+" of the query point."
+msgstr "WMS 1.3.0에서 정의된 이 파라미터는 쿼리 포인트의 픽셀 열을 지정할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:654
+msgid "Same parameter as ``I``, but defined in WMS 1.1.0."
+msgstr "``I`` 파라미터와 동일하지만, WMS 1.1.0에서 정의되었습니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:660
+msgid ""
+"This parameter, defined in WMS 1.3.0, allows you to specify the pixel row of"
+" the query point."
+msgstr "WMS 1.3.0에서 정의된 이 파라미터는 쿼리 포인트의 픽셀 행을 지정할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:667
+msgid "Same parameter as ``J``, but defined in WMS 1.1.0."
+msgstr "``J`` 파라미터와 동일하지만, WMS 1.1.0에서 정의되었습니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:673
+msgid "This parameter specifies the tolerance in pixels for point layers."
+msgstr "이 파라미터는 포인트 레이어의 허용 오차를 픽셀 단위로 지정합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:679
+msgid "This parameter specifies the tolerance in pixels for line layers."
+msgstr "이 파라미터는 라인 레이어의 허용 오차를 픽셀 단위로 지정합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:685
+msgid "This parameter specifies the tolerance in pixels for polygon layers."
+msgstr "이 파라미터는 폴리곤 레이어의 허용 오차를 픽셀 단위로 지정합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:691
+msgid ""
+"This parameter specifies a WKT geometry with which features have to "
+"intersect."
+msgstr "이 파라미터는 피처가 교차해야 하는 WKT 도형을 지정합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:698
+msgid "This parameter specifies whether to add map tips to the output."
+msgstr "이 파라미터는 출력물에 맵 도움말(map tip)을 추가할지 여부를 지정합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:700
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:713
+msgid "Available values are (not case sensitive):"
+msgstr "다음 값을 사용할 수 있습니다(대소문자 구분 안 함):"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:709
+msgid ""
+"This parameter specifies whether to add geometries to the output. To use "
+"this feature you must first enable the :guilabel:`Add geometry to feature "
+"response` option in the QGIS project. See :ref:`Configure your project "
+"<Creatingwmsfromproject>`."
+msgstr ""
+"이 파라미터는 산출물에 도형을 추가할지 여부를 지정합니다. 이 기능을 사용하려면 먼저 QGIS 프로젝트에서 :guilabel:`Add "
+"geometry to feature response` 옵션을 활성화해야만 합니다. ref:`사용자 프로젝트 환경 설정 "
+"<Creatingwmsfromproject>` 을 참조하세요."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:724
+msgid ""
+"QGIS Server has the capability to create print layout output in pdf or pixel"
+" format. Print layout windows in the published project are used as "
+"templates. In the **GetPrint** request, the client has the possibility to "
+"specify parameters of the contained layout maps and labels."
+msgstr ""
+"QGIS 서버는 인쇄 조판 출력물을 PDF 또는 픽셀 포맷으로 생성할 수 있습니다. 게시된 프로젝트에 있는 인쇄 조판기 창을 템플릿으로 "
+"사용합니다. 클라이언트는 **GetPrint** 요청 안에 템플릿이 담고 있는 조판 맵 및 라벨의 파라미터를 지정할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:730
+msgid "Parameters for the **GetPrint** request:"
+msgstr "**GetPrint** 요청의 파라미터:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Name of the request (GetPrint)"
+msgstr "요청(GetPrint)의 명칭"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:807
+msgid "TEMPLATE"
+msgstr "TEMPLATE"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Layout template to use"
+msgstr "사용할 레이어 템플릿"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:834
+msgid "ATLAS_PK"
+msgstr "ATLAS_PK"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Atlas features"
+msgstr "지도책 피처"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:847
+msgid "mapX:EXTENT"
+msgstr "mapX:EXTENT"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Extent of the map 'X'"
+msgstr "맵 'X' 의 범위"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:881
+msgid "mapX:LAYERS"
+msgstr "mapX:LAYERS"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Layers of the map 'X'"
+msgstr "맵 'X' 의 레이어"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:889
+msgid "mapX:STYLES"
+msgstr "mapX:STYLES"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Layers' style of the map 'X'"
+msgstr "맵 'X' 의 레이어의 스타일"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:872
+msgid "mapX:SCALE"
+msgstr "mapX:SCALE"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Layers' scale of the map 'X'"
+msgstr "맵 'X' 의 레이어의 축척"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:854
+msgid "mapX:ROTATION"
+msgstr "mapX:ROTATION"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Rotation  of the map 'X'"
+msgstr "맵 'X' 의 기울기"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:860
+msgid "mapX:GRID_INTERVAL_X"
+msgstr "mapX:GRID_INTERVAL_X"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Grid interval on x axis of the map 'X'"
+msgstr "맵 'X' 의 X축 그리드 간격"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:866
+msgid "mapX:GRID_INTERVAL_Y"
+msgstr "mapX:GRID_INTERVAL_Y"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Grid interval on y axis of the map 'X'"
+msgstr "맵 'X' 의 Y축 그리드 간격"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:774
+msgid ""
+"Note that the layout template may contain more than one map. In this way, if"
+" you want to configure a specific map, you have to use ``mapX:`` parameters "
+"where ``X`` is a positive number that you can retrieve thanks to the "
+"**GetProjectSettings** request."
+msgstr ""
+"조판 템플릿이 맵을 하나 이상 담고 있을 수도 있다는 사실을 기억하십시오. 이런 맥락에서, 사용자가 특정 맵을 환경 설정하려는 경우 "
+"``mapX:`` 파라미터를 사용해야 합니다. 이때 ``X`` 는 **GetProjectSettings** 요청 시 받아올 수 있는 "
+"양수(陽數)입니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:779
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1039
+msgid "For example:"
+msgstr "다음은 예시입니다:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:797
+msgid "This parameter has to be ``WMS``."
+msgstr "이 파라미터는 ``WMS`` 이어야 합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:803
+msgid "This parameter has to be ``GetPrint`` for the **GetPrint** request."
+msgstr "**GetPrint** 요청의 경우, 이 파라미터는 ``GetPrint`` 이어야 합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:809
+msgid ""
+"This parameter can be used to specify the name of a layout template to use "
+"for printing."
+msgstr "이 파라미터는 인쇄용으로 사용할 조판 템플릿의 명칭을 지정할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:816
+msgid ""
+"This parameter specifies the format of map image. Available values are:"
+msgstr "이 파라미터는 맵 이미지의 포맷을 지정할 수 있습니다. 사용할 수 있는 값은 다음과 같습니다:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:821
+msgid "``png``"
+msgstr "``png``"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:823
+msgid "``svg``"
+msgstr "``svg``"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:824
+msgid "``image/svg``"
+msgstr "``image/svg``"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:825
+msgid "``image/svg+xml``"
+msgstr "``image/svg+xml``"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:826
+msgid "``pdf``"
+msgstr "``pdf``"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:827
+msgid "``application/pdf``"
+msgstr "``application/pdf``"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:829
+msgid ""
+"If the ``FORMAT`` parameter is different from one of these values, then an "
+"exception is returned."
+msgstr "``FORMAT`` 파라미터가 이 값들 가운데 하나가 아닐 경우, 예외를 반환합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:836
+msgid ""
+"This parameter allows activation of Atlas rendering by indicating which "
+"features we want to print. In order to retrieve an atlas with all features, "
+"the ``*`` symbol may be used (according to the maximum number of features "
+"allowed in the project configuration)."
+msgstr ""
+"이 파라미터는 인쇄하려는 피처를 지정해서 지도책 렌더링을 활성화할 수 있습니다. (프로젝트 환경 설정에서 설정한 피처 최대 개수에 따라)"
+" 모든 피처를 담은 지도책을 받아오려면, ``*`` 특수문자를 사용하면 됩니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:842
+msgid ""
+"When ``FORMAT`` is ``pdf``, a single PDF document combining the feature "
+"pages is returned. For all other formats, a single page is returned."
+msgstr ""
+"``FORMAT`` 파라미터가 ``pdf`` 인 경우, 모든 피처 페이지를 결합한 PDF 문서 파일 1개를 반환합니다. 다른 모든 포맷의"
+" 경우, 단일 페이지를 반환합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:849
+msgid ""
+"This parameter specifies the extent for a layout map item as "
+"xmin,ymin,xmax,ymax."
+msgstr "이 파라미터는 조판 맵 항목의 범위를 ``xmin,ymin,xmax,ymax`` 서식으로 지정합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:856
+msgid "This parameter specifies the map rotation in degrees."
+msgstr "이 파라미터는 맵의 기울기를 도 단위로 지정합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:862
+msgid "This parameter specifies the grid line density in the X direction."
+msgstr "이 파라미터는 X축 방향의 그리드선 밀도를 지정합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:868
+msgid "This parameter specifies the grid line density in the Y direction."
+msgstr "이 파라미터는 Y축 방향의 그리드선 밀도를 지정합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:874
+msgid ""
+"This parameter specifies the map scale for a layout map item. This is useful"
+" to ensure scale based visibility of layers and labels even if client and "
+"server may have different algorithms to calculate the scale denominator."
+msgstr ""
+"이 파라미터는 조판 맵 항목의 맵 축척을 지정합니다. 클라이언트 및 서버가 축척 분모를 계산할 때 서로 다른 알고리즘을 사용하는 "
+"경우라도, 레이어와 라벨의 축척 기반 가시성을 보장하는 데 유용합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:883
+msgid ""
+"This parameter specifies the layers for a layout map item. See :ref:`See "
+"GetMap <qgisserver-wms-getmap>` for more information on this parameter."
+msgstr ""
+"이 파라미터는 조판 맵 항목에 표시될 레이어를 지정할 수 있습니다. 더 자세한 내용은 :ref:`GetMap <qgisserver-"
+"wms-getmap>` 을 참조하세요."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:891
+msgid ""
+"This parameter specifies the layers' styles defined in a specific layout map"
+" item. See :ref:`See GetMap <qgisserver-wms-getmap>` for more information on"
+" this parameter."
+msgstr ""
+"이 파라미터는 특정 조판 맵 항목에 표시되는 레이어의 스타일을 지정할 수 있습니다. 더 자세한 내용은 :ref:`GetMap "
+"<qgisserver-wms-getmap>` 을 참조하세요."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:900
+msgid ""
+"Several additional parameters are available to change the size of the legend"
+" elements:"
+msgstr "다음은 범례 항목의 크기를 변경하는 데 사용할 수 있는 여러 추가 파라미터들입니다:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:903
+msgid "**BOXSPACE** space between legend frame and content (mm)"
+msgstr "**BOXSPACE**: 범례 프레임과 내용물 사이의 여백을 밀리미터 단위로 정의합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:904
+msgid "**LAYERSPACE** vertical space between layers (mm)"
+msgstr "**LAYERSPACE**: 레이어들 사이의 수직 여백을 밀리미터 단위로 정의합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:905
+msgid ""
+"**LAYERTITLESPACE** vertical space between layer title and items following "
+"(mm)"
+msgstr "**LAYERTITLESPACE**: 레이어 제목과 그 옆에 있는 항목들 사이의 수직 여백을 밀리미터 단위로 정의합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:907
+msgid "**SYMBOLSPACE** vertical space between symbol and item following (mm)"
+msgstr "**SYMBOLSPACE**: 심볼과 그 옆에 있는 항목 사이의 수직 여백을 밀리미터 단위로 정의합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:909
+msgid "**ICONLABELSPACE** horizontal space between symbol and label text (mm)"
+msgstr "**ICONLABELSPACE**: 심볼과 라벨 텍스트 사이의 수평 여백을 밀리미터 단위로 정의합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:911
+msgid "**SYMBOLWIDTH** width of the symbol preview (mm)"
+msgstr "**SYMBOLWIDTH**: 심볼 미리보기의 너비를 밀리미터 단위로 정의합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:912
+msgid "**SYMBOLHEIGHT** height of the symbol preview (mm)"
+msgstr "**SYMBOLHEIGHT**: 심볼 미리보기의 높이를 밀리미터 단위로 정의합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:914
+msgid ""
+"These parameters change the font properties for layer titles and item "
+"labels:"
+msgstr "다음은 레이어 제목 및 항목 라벨의 글꼴 속성을 변경하는 파라미터들입니다:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:917
+msgid ""
+"**LAYERFONTFAMILY / ITEMFONTFAMILY** font family for layer title / item text"
+msgstr ""
+"**LAYERFONTFAMILY**, **ITEMFONTFAMILY**: 각각 레이어 제목 및 항목의 텍스트 용 글꼴 패밀리를 "
+"정의합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:919
+msgid "**LAYERFONTBOLD / ITEMFONTBOLD** ``TRUE`` to use a bold font"
+msgstr "**LAYERFONTBOLD**, **ITEMFONTBOLD**: 값이 ``TRUE`` 이면 굵은체를 사용합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:920
+msgid "**LAYERFONTSIZE / ITEMFONTSIZE** Font size in point"
+msgstr "**LAYERFONTSIZE**, **ITEMFONTSIZE**: 글꼴 크기를 포인트 단위로 정의합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:921
+msgid "**LAYERFONTITALIC / ITEMFONTITALIC** ``TRUE`` to use italic font"
+msgstr "**LAYERFONTITALIC**, **ITEMFONTITALIC**: 값이 ``TRUE`` 이면 이탤릭체를 사용합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:922
+msgid ""
+"**LAYERFONTCOLOR / ITEMFONTCOLOR** Hex color code (e.g. ``#FF0000`` for red)"
+msgstr ""
+"**LAYERFONTCOLOR**, **ITEMFONTCOLOR**: 색상을 헥사 코드로 (예: 빨간색의 경우 ``#FF0000``) "
+"정의합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:924
+msgid ""
+"**LAYERTITLE** ``FALSE`` to get only the legend graphics without the layer "
+"title"
+msgstr "**LAYERTITLE**: ``FALSE`` 로 설정하면 레이어 제목 없이 범례 그래픽만 반환합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:926
+msgid "**RULELABEL**:"
+msgstr "**RULELABEL**:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:928
+msgid "``FALSE`` legend graphics without item labels"
+msgstr "``FALSE`` 로 설정하면 항목 라벨 없이 범례 그래픽만 반환합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:929
+msgid ""
+"``AUTO`` hide item label for layers with :guilabel:`Single symbol` rendering"
+msgstr "``AUTO`` 로 설정하면 :guilabel:`Single symbol` 렌더링된 레이어의 항목 라벨을 숨깁니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:932
+msgid ""
+"Content based legend. These parameters let the client request a legend "
+"showing only the symbols for the features falling into the requested area:"
+msgstr ""
+"내용 기반(content based) 범례를 위한 파라미터는 클라이언트가 요청한 영역 안에 들어오는 피처에 대한 심볼만 표시하는 범례를 "
+"요청할 수 있도록 해줍니다:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:936
+msgid "**BBOX** the geographical area for which the legend should be built"
+msgstr "**BBOX**: 범례를 생성해야 하는 지리적 영역을 정의합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:937
+msgid ""
+"**CRS / SRS** the coordinate reference system adopted to define the BBOX "
+"coordinates"
+msgstr "**CRS**, **SRS**: **BBOX** 의 좌표를 계산하는 데 사용될 좌표계를 정의합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:939
+msgid ""
+"**WIDTH / HEIGHT** if set these should match those defined for the GetMap "
+"request, to let QGIS Server scale symbols according to the map view image "
+"size."
+msgstr ""
+"**WIDTH**, **HEIGHT**: 이 파라미터들을 설정하는 경우, QGIS 서버가 심볼의 크기를 맵 뷰 이미지 크기에 따라 조정할"
+" 수 있도록 ``GetMap`` 요청에서 정의한 너비 및 높이와 일치해야 합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:943
+msgid ""
+"Content based legend features are based on the `UMN MapServer "
+"implementation: <https://www.mapserver.org/development/rfc/ms-"
+"rfc-101.html>`_"
+msgstr ""
+"내용 기반 범례 피처는 `UMN 맵서버 구현 사양 <https://www.mapserver.org/development/rfc/ms-"
+"rfc-101.html>`_ 을 기반으로 합니다:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:947
+msgid ""
+"**SHOWFEATURECOUNT** if set to ``TRUE`` adds in the legend the feature count"
+" of the features like in the following image:"
+msgstr ""
+"**SHOWFEATURECOUNT**: ``TRUE`` 로 설정한 경우 범례에 각 피처의 개수를 다음 그림과 같이 추가합니다:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:956
+msgid ""
+"This request type works similar to **GetCapabilities**, but it is more "
+"specific to QGIS Server and allows a client to read additional information "
+"which is not available in the GetCapabilities output:"
+msgstr ""
+"이 요청 유형은 ``GetCapabilities`` 요청과 비슷하게 동작하지만, 좀 더 QGIS 서버에 특화돼 있고 클라이언트가 "
+"``GetCapabilities`` 출력물에서는 볼 수 없는 다음 추가 정보를 읽을 수 있습니다:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:960
+msgid "initial visibility of layers"
+msgstr "레이어의 초기 가시성"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:961
+msgid "information about vector attributes and their edit types"
+msgstr "벡터 속성 및 속성 편집 유형 관련 정보"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:962
+msgid "information about layer order and drawing order"
+msgstr "레이어 순서 및 렌더링 순서 관련 정보"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:963
+msgid "list of layers published in WFS"
+msgstr "WFS에 게시된 레이어 목록"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:967
+msgid "Web Feature Service (WFS)"
+msgstr "WFS(웹 피처 서비스)"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:969
+msgid ""
+"The **1.0.0** and **1.1.0** WFS standards implemented in QGIS Server provide"
+" a HTTP interface to query geographic features from a QGIS project. A "
+"typical WFS request defines the QGIS project to use and the layer to query."
+msgstr ""
+"QGIS 서버에 구현된 WFS **1.0.0** 및 **1.1.0** 표준은 QGIS 프로젝트로부터 지리 피처를 쿼리할 수 있는 HTTP"
+" 인터페이스를 제공합니다. 전형적인 WFS 요청은 사용할 QGIS 프로젝트와 쿼리할 레이어를 정의합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:975
+msgid ""
+"Specifications document according to the version number of the service:"
+msgstr "서비스 버전에 따른 사양 문서:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:977
+msgid ""
+"`WFS 1.0.0 <http://portal.opengeospatial.org/files/?artifact_id=7176>`_"
+msgstr ""
+"`WFS 1.0.0 <http://portal.opengeospatial.org/files/?artifact_id=7176>`_"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:978
+msgid ""
+"`WFS 1.1.0 <http://portal.opengeospatial.org/files/?artifact_id=8339>`_"
+msgstr ""
+"`WFS 1.1.0 <http://portal.opengeospatial.org/files/?artifact_id=8339>`_"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:995
+msgid "GetFeature"
+msgstr "GetFeature"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Returns a selection of features"
+msgstr "피처 집합을 반환"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "DescribeFeatureType"
+msgstr "DescribeFeatureType"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Returns a description of feature types and properties"
+msgstr "피처 유형 및 속성의 설명을 반환"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Transaction"
+msgstr "Transaction"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Allows features to be inserted, updated or deleted"
+msgstr "피처를 삽입, 업데이트, 삭제 가능"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:997
+msgid ""
+"Standard parameters for the **GetFeature** request according to the OGC WFS "
+"1.0.0 and 1.1.0 specifications:"
+msgstr "OGC WFS 1.0.0 및 1.1.0 사양에 따른 **GetFeature** 요청용 표준 파라미터:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Name of the service"
+msgstr "서비스명"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Name of the request"
+msgstr "요청명"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "TYPENAME"
+msgstr "TYPENAME"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Name of layers"
+msgstr "레이어명"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "OUTPUTFORMAT"
+msgstr "OUTPUTFORMAT"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Output Format"
+msgstr "출력물 포맷"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1088
+msgid "RESULTTYPE"
+msgstr "RESULTTYPE"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Type of the result"
+msgstr "산출물 유형"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "PROPERTYNAME"
+msgstr "PROPERTYNAME"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Name of properties to return"
+msgstr "반환할 속성의 명칭"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "MAXFEATURES"
+msgstr "MAXFEATURES"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "SRSNAME"
+msgstr "SRSNAME"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "FEATUREID"
+msgstr "FEATUREID"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Filter the features by ids"
+msgstr "피처를 ID로 필터링"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "OGC Filter Encoding"
+msgstr "OGC 필터 인코딩"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Map Extent"
+msgstr "맵 범위"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "SORTBY"
+msgstr "SORTBY"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Sort the results"
+msgstr "산출물 정렬"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1132
+msgid "STARTINDEX"
+msgstr "STARTINDEX"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Paging"
+msgstr "페이지 번호 붙이기"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1109
+msgid "GEOMETRYNAME"
+msgstr "GEOMETRYNAME"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Type of geometry to return"
+msgstr "반환할 도형의 유형"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "EXP_FILTER"
+msgstr "EXP_FILTER"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Expression filtering"
+msgstr "표현식 필터링"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1036
+msgid ""
+"This parameter has to be ``WFS`` in case of the **GetFeature** request."
+msgstr "**GetFeature** 요청의 경우, 이 파라미터는 ``WFS`` 이어야 합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1054
+msgid "``1.0.0``"
+msgstr "``1.0.0``"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1057
+msgid ""
+"If no version is indicated in the request, then ``1.1.0`` is used by "
+"default."
+msgstr "요청에서 버전을 지정하지 않을 경우, ``1.1.0`` 을 기본값으로 사용합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1073
+msgid ""
+"This parameter is ``GetFeature`` in case of the **GetFeature** request."
+msgstr "**GetFeature** 요청의 경우, 이 파라미터는 ``GetFeature`` 이어야 합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1090
+msgid ""
+"This parameter may be used to specify the kind of result to return. "
+"Available values are:"
+msgstr "이 파라미터는 산출물의 종류를 지정할 수 있습니다. 사용할 수 있는 값은 다음과 같습니다:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1093
+msgid "``results``: the default behavior"
+msgstr "``results``: 기본 습성"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1094
+msgid "``hits``: returns only a feature count"
+msgstr "``hits``: 피처 개수만 반환"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1111
+msgid ""
+"This parameter can be used to specify the kind of geometry to return for "
+"features. Available values are:"
+msgstr "이 파라미터는 피처에 대해 반환할 도형의 종류를 지정할 수 있습니다. 사용할 수 있는 값은 다음과 같습니다:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1114
+msgid "``extent``"
+msgstr "``extent``"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1115
+msgid "``centroid``"
+msgstr "``centroid``"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1116
+msgid "``none``"
+msgstr "``none``"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1134
+msgid ""
+"This parameter is standard in WFS 2.0, but it's an extension for WFS 1.0.0. "
+"Actually, it can be used to skip some features in the result set and in "
+"combination with ``MAXFEATURES``, it provides the ability to page through "
+"results."
+msgstr ""
+"이 파라미터는 WFS 2.0에서는 표준이지만, WFS 1.0.0에서는 확장 기능입니다. 실제로는 산출물 집합에서 일부 피처를 건너뛰는데 "
+"사용할 수 있기 때문에, ``MAXFEATURES`` 파라미터와 함께 사용하면 산출물의 페이지를 넘기는 기능으로 쓸 수 있습니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1153
+msgid "Web Map Tile Service (WMTS)"
+msgstr "WMTS(웹 맵 타일 서비스)"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1155
+msgid ""
+"The **1.0.0** WMTS standard implemented in QGIS Server provides a HTTP "
+"interface to request tiled map images generated from a QGIS project. A "
+"typical WMTS request defined the QGIS project to use, some WMS parameters "
+"like layers to render, as well as tile parameters."
+msgstr ""
+"QGIS 서버에 구현된 WMTS **1.0.0** 표준은 QGIS 프로젝트로부터 생성된 타일 맵 이미지들을 요청할 수 있는 HTTP "
+"인터페이스를 제공합니다. 전형적인 WMTS 요청은 사용할 QGIS 프로젝트, 렌더링할 레이어와 같은 몇몇 WMS 파라미터들은 물론 타일 "
+"파라미터들도 정의합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1160
+msgid "Specifications document of the service:"
+msgstr "WMTS 서비스의 사양 문서:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1162
+msgid ""
+"`WMTS 1.0.0 <http://portal.opengeospatial.org/files/?artifact_id=35326>`_"
+msgstr ""
+"`WMTS 1.0.0 <http://portal.opengeospatial.org/files/?artifact_id=35326>`_"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1235
+msgid "GetTile"
+msgstr "GetTile"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Returns a tile"
+msgstr "타일을 반환"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1180
+msgid ""
+"Standard parameters for the **GetCapabilities** request according to the OGC"
+" WMTS 1.0.0 specifications:"
+msgstr "OGC WMTS 1.0.0 사양에 따른 **GetCapabilities** 요청용 표준 파라미터:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Name of the service (WMTS)"
+msgstr "서비스(WMTS)의 명칭"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Name of the request (GetCapabilities)"
+msgstr "요청(GetCapabilities)의 명칭"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1215
+msgid ""
+"This parameter has to be ``WMTS`` in case of the **GetCapabilities** "
+"request."
+msgstr "**GetCapabilities** 요청의 경우, 이 파라미터는 ``WMTS`` 이어야 합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1222
+msgid ""
+"This parameter is ``GetCapabilities`` in case of the **GetCapabilities** "
+"request."
+msgstr "**GetCapabilities** 요청의 경우, 이 파라미터는 ``GetCapabilities`` 이어야 합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1237
+msgid ""
+"Standard parameters for the **GetTile** request according to the OGC WMTS "
+"1.0.0 specifications:"
+msgstr "OGC WMTS 1.0.0 사양에 따른 **GetTile** 요청용 표준 파라미터:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Name of the request (GetTile)"
+msgstr "요청(GetTile)의 명칭"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1293
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1465
+msgid "LAYER"
+msgstr "LAYER"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Layer identifier"
+msgstr "레이어 식별자"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Output format of the tile"
+msgstr "타일의 산출물 포맷"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1346
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "TILEMATRIXSET"
+msgstr "TILEMATRIXSET"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Name of the pyramid"
+msgstr "피라미드명"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1352
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "TILEMATRIX"
+msgstr "TILEMATRIX"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Meshing"
+msgstr "메시 작업"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1358
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "TILEROW"
+msgstr "TILEROW"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Row coordinate in the mesh"
+msgstr "메시 내부의 행 좌표"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1365
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "TILECOL"
+msgstr "TILECOL"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Column coordinate in the mesh"
+msgstr "메시 내부의 열 좌표"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1283
+msgid "This parameter has to be ``WMTS`` in case of the **GetTile** request."
+msgstr "**GetTile** 요청의 경우, 이 파라미터는 ``WMTS`` 이어야 합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1289
+msgid "This parameter is ``GetTile`` in case of the **GetTile** request."
+msgstr "**GetTile** 요청의 경우, 이 파라미터는 ``GetTile`` 이어야 합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1295
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1467
+msgid "This parameter allows to specify the layer to display on the tile."
+msgstr "이 파라미터는 타일 상에 표시할 레이어를 지정할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1297
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1469
+msgid "In addition, QGIS Server introduced some options to select a layer by:"
+msgstr "이에 더해, QGIS 서버는 레이어를 다음을 통해 선택할 수 있는 옵션을 제공합니다:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1315
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1487
+msgid ""
+"Moreover, there's a project option allowing to select layers by their id in "
+":menuselection:`OWS Server --> WMS capabilities` menu of the "
+":menuselection:`Project --> Project Properties` dialog. To activate this "
+"option, the checkbox :guilabel:`Use layer ids as names` has to be selected."
+msgstr ""
+"이에 더해, :menuselection:`Project --> Properties...` 대화창의 :menuselection:`OWS "
+"Server --> WMS capabilities` 메뉴에서 레이어 ID로 레이어를 선택할 수 있는 프로젝트 수준 옵션도 있습니다. 이 "
+"옵션을 활성화하려면, |checkbox| :guilabel:`Use layer ids as names` 를 체크하십시오."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1333
+msgid ""
+"This parameter may be used to specify the format of tile image. Available "
+"values are:"
+msgstr "이 파라미터는 타일 이미지의 포맷을 지정할 수 있습니다. 사용할 수 있는 값은 다음과 같습니다:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1341
+msgid ""
+"If the ``FORMAT`` parameter is different from one of these values, then the "
+"default format PNG is used instead."
+msgstr "``FORMAT`` 파라미터가 이 값들 가운데 하나가 아닐 경우, 기본 포맷인 PNG를 대신 사용합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1348
+msgid ""
+"This parameter defines the CRS to use when computing the underlying pyramid."
+" Format: ``EPSG:XXXX``."
+msgstr "이 파라미터는 기저 피라미드를 계산할 때 사용할 좌표계를 정의합니다. 서식: ``EPSG:XXXX``."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1354
+msgid "This parameter allows to define the matrix to use for the output tile."
+msgstr "이 파라미터는 산출물 타일용으로 사용할 매트릭스를 정의할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1360
+msgid ""
+"This parameter allows to select the row of the tile to get within the "
+"matrix."
+msgstr "이 파라미터는 매트릭스 내부에 들어갈 타일의 행을 선택할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1367
+msgid ""
+"This parameter allows to select the column of the tile to get within the "
+"matrix."
+msgstr "이 파라미터는 매트릭스 내부에 들어갈 타일의 열을 선택할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1390
+msgid ""
+"Standard parameters for the **GetFeatureInfo** request according to the OGC "
+"WMTS 1.0.0 specifications:"
+msgstr "OGC WMTS 1.0.0 사양에 따른 **GetFeatureInfo** 요청용 표준 파라미터:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Name of the request (GetFeatureInfo)"
+msgstr "요청(GetFeatureInfo)의 명칭"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1503
+msgid "INFOFORMAT"
+msgstr "INFOFORMAT"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "X coordinate of a pixel"
+msgstr "픽셀의 X 좌표"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Y coordinate of a pixel"
+msgstr "픽셀의 Y 좌표"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid ":ref:`See GetTile <qgisserver-wmts-gettile>`"
+msgstr ":ref:`GetTile 참조 <qgisserver-wmts-gettile>`"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1439
+msgid ""
+"This parameter has to be ``WMTS`` in case of the **GetFeatureInfo** request."
+msgstr "**GetFeatureInfo** 요청의 경우, 이 파라미터는 ``WMTS`` 이어야 합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1446
+msgid ""
+"This parameter is ``GetFeatureInfo`` in case of the **GetFeatureInfo** "
+"request."
+msgstr "**GetFeatureInfo** 요청의 경우, 이 파라미터는 ``FeatureInfo`` 이어야 합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1505
+msgid ""
+"This parameter allows to define the output format of the result. Available "
+"values are:"
+msgstr "이 파라미터는 산출물의 포맷을 지정할 수 있습니다. 사용할 수 있는 값은 다음과 같습니다:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1513
+msgid "The default value is ``text/plain``."
+msgstr "기본값은 ``text/plain`` 입니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1519
+msgid ""
+"This parameter allows to define the X coordinate of the pixel for which we "
+"want to retrieve underlying information."
+msgstr "이 파라미터는 기저 정보를 검색하고자 하는 픽셀의 X 좌표를 정의할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1526
+msgid ""
+"This parameter allows to define the Y coordinate of the pixel for which we "
+"want to retrieve underlying information."
+msgstr "이 파라미터는 기저 정보를 검색하고자 하는 픽셀의 Y 좌표를 정의할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1533
+msgid "WFS3 (OGC API Features)"
+msgstr "WFS3 (OGC API ─ 피처)"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1535
+msgid ""
+"WFS3 is the first implementation of the new generation of OGC protocols. It "
+"is described by the `OGC API - Features - Part 1: Core "
+"<http://docs.opengeospatial.org/is/17-069r3/17-069r3.html>`_ document."
+msgstr ""
+"WFS3은 신세대 OGC 프로토콜을 처음으로 구현한 것입니다. `OGC API ─ 피처 ─ 1부: 핵심 "
+"<http://docs.opengeospatial.org/is/17-069r3/17-069r3.html>`_ 문서에 잘 설명되어 "
+"있습니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1541
+msgid ""
+"Here is a quick informal summary of the most important differences between "
+"the well known WFS protocol and WFS3:"
+msgstr "다음 내용은 잘 알려진 WFS 프로토콜과 WFS3의 주요 차이점을 비공식적으로 간단히 요약한 것입니다:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1544
+msgid ""
+"WFS3 is based on a `REST "
+"<https://en.wikipedia.org/wiki/Representational_state_transfer>`_ API"
+msgstr ""
+"WFS3은 `REST "
+"<https://en.wikipedia.org/wiki/Representational_state_transfer>`_ API를 기반으로 "
+"합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1547
+msgid ""
+"WFS3 API must follow the `OPENAPI "
+"<https://en.wikipedia.org/wiki/OpenAPI_Specification>`_ specifications"
+msgstr ""
+"WFS3 API는 `OPENAPI <https://en.wikipedia.org/wiki/OpenAPI_Specification>`_ "
+"사양을 따라야만 합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1550
+msgid ""
+"WFS3 supports multiple output formats but it does not dictate any (only "
+"GeoJSON and HTML are currently available in QGIS WFS3) and it uses `content "
+"negotiation <https://en.wikipedia.org/wiki/Content_negotiation>`_ to "
+"determine which format is to be served to the client"
+msgstr ""
+"WFS3은 여러 산출물 포맷을 지원하지만 어느 포맷도 강제하지 않으며 (QGIS WFS3은 현재 GeoJSON과 HTML만 지원합니다) "
+"클라이언트에 서비스할 포맷을 결정하는 데 `내용 협상(content negotiation) "
+"<https://en.wikipedia.org/wiki/Content_negotiation>`_ 을 사용합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1555
+msgid "JSON and HTML are first class citizens in WFS3"
+msgstr "JSON과 HTML은 WFS3의 일급 객체(first class citizen)입니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1556
+msgid "WFS3 is self-documenting (through the ``/api`` endpoint)"
+msgstr "WFS3은 (``/api`` 종단점을 통해) 자체 문서화(self-documenting)합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1557
+msgid "WFS3 is fully navigable (through links) and browsable"
+msgstr "WFS3을 (링크를 통해) 완전하게 둘러보고 또 탐색할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1561
+msgid ""
+"While the WFS3 implementation in QGIS can make use of the ``MAP`` parameter "
+"to specify the project file, no extra query parameters are allowed by the "
+"OPENAPI specification. For this reason it is strongly recommended that "
+"``MAP`` is not exposed in the URL and the project file is specified in the "
+"environment by other means (i.e. setting ``QGIS_PROJECT_FILE`` in the "
+"environment through a web server rewrite rule)."
+msgstr ""
+"QGIS에 구현된 WFS3은 프로젝트 파일을 지정하는 데 ``MAP`` 파라미터를 사용할 수 있지만, OPENAPI 사양으로 인해 다른 "
+"추가 파라미터를 사용할 수는 없습니다. 때문에 URL에 ``MAP`` 을 노출시키지 말고, 해당 환경에서 다른 방법으로 (예를 들어 웹 "
+"서버 고쳐쓰기 규칙을 통해 해당 환경에 ``QGIS_PROJECT_FILE`` 을 설정해서) 프로젝트 파일을 지정할 것을 강력히 "
+"추천합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1572
+msgid ""
+"The **API** endpoint provides comprehensive documentation of all supported "
+"parameters and output formats of your service. The following paragraphs will"
+" only describe the most important ones."
+msgstr ""
+"**API** 종단점은 사용자 서비스가 지원하는 모든 파라미터 및 산출물 포맷의 포괄적인 기록을 지원합니다. 다음은 그 가운데 가장 "
+"중요한 것들만 설명한 것입니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1578
+msgid "Resource representation"
+msgstr "리소스 표현"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1580
+msgid ""
+"The QGIS Server WFS3 implementation currently supports the following "
+"resource representation (output) formats:"
+msgstr "QGIS 서버에 구현된 WFS3은 현재 다음과 같은 리소스 표현(산출물) 포맷을 지원합니다:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1583
+msgid "HTML"
+msgstr "HTML"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1584
+msgid "JSON"
+msgstr "JSON"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1586
+msgid ""
+"The format that is actually served will depend on content negotiation, but a"
+" specific format can be explicitly requested by appending a format specifier"
+" to the endpoints."
+msgstr ""
+"실제로 서비스되는 포맷은 내용 협상에 좌우될 것이지만, 종단점에 포맷 지정자를 추가해서 특정 포맷을 명확하게 요청할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1590
+msgid "Supported format specifier extensions are:"
+msgstr "다음과 같은 포맷 지정자 확장자를 지원합니다:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1592
+msgid "``.json``"
+msgstr "``.json``"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1593
+msgid "``.html``"
+msgstr "``.html``"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1595
+msgid ""
+"Additional format specifier aliases may be defined by specific endpoints:"
+msgstr "특정 종단점이 포맷 지정자의 추가적인 별명을 정의할 수도 있습니다:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1598
+msgid "``.openapi``: alias for ``.json`` supported by the **API** endpoint"
+msgstr "``.openapi``: **API** 종단점이 지원하는 ``.json`` 의 별명"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1599
+msgid ""
+"``.geojson``: alias for ``.json`` supported by the **Features** and "
+"**Feature** endpoints"
+msgstr "``.geojson``: **Features** 및 **Feature** 종단점이 지원하는 ``.json`` 의 별명"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1604
+msgid "Endpoints"
+msgstr "종단점(Endpoint)"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1606
+msgid ""
+"The API provides a list of endpoints that the clients can retrieve. The "
+"system is designed in such a way that every response provides a set of links"
+" to navigate through all the provided resources."
+msgstr ""
+"API는 클라이언트가 검색할 수 있는 종단점 목록을 제공합니다. 이 시스템은 모든 응답이 모든 제공 리소스를 탐색할 수 있는 링크 집합을"
+" 제공하도록 설계되었습니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1610
+msgid "Endpoints points provided by the QGIS implementation are:"
+msgstr "QGIS에 구현된 종단점 포인트는 다음과 같습니다:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Name"
+msgstr "명칭"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Path"
+msgstr "경로"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1633
+msgid "Landing Page"
+msgstr "Landing Page"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "``/``"
+msgstr "``/``"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid ""
+"General information about the service and provides links to all available "
+"endpoints"
+msgstr "서비스에 대한 일반 정보와 사용할 수 있는 모든 종단점을 가리키는 링크를 제공"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Conformance"
+msgstr "Conformance"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "``/conformance``"
+msgstr "``/conformance``"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Information about the conformance of the service to the standards"
+msgstr "표준에 대한 서비스의 적합성 정보"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "API"
+msgstr "API"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "``/api``"
+msgstr "``/api``"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid ""
+"Full description of the endpoints provided by the service and the returned "
+"documents structure"
+msgstr "서비스가 제공하는 종단점에 대한 전체 설명과 반환된 문서의 구조"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Collections"
+msgstr "Collections"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "``/collections``"
+msgstr "``/collections``"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "List of all collections (i.e. 'vector layers') provided by the service"
+msgstr "서비스가 제공하는 모든 선택 집합(예: 'vector layers')의 목록"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Collection"
+msgstr "Collection"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "``/collections/{collectionId}``"
+msgstr "``/collections/{collectionId}``"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Information about a collection (name, metadata, extent etc.)"
+msgstr "선택 집합 관련 정보 (명칭, 메타데이터, 범위 등등)"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Features"
+msgstr "Features"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "``/collections/{collectionId}/items``"
+msgstr "``/collections/{collectionId}/items``"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "List of the features provided by the collection"
+msgstr "선택 집합이 제공하는 피처의 목록"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Feature"
+msgstr "Feature"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "``/collections/{collectionId}/items/{featureId}``"
+msgstr "``/collections/{collectionId}/items/{featureId}``"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1
+msgid "Information about a single feature"
+msgstr "단일 피처 관련 정보"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1635
+msgid ""
+"The main endpoint is the **Landing Page**. From that page it is possible to "
+"navigate to all the available service endpoints. The **Landing Page** must "
+"provide links to"
+msgstr ""
+"주 종단점은 **Landing Page** 입니다. 해당 페이지에서 사용할 수 있는 모든 서비스 종단점으로 탐색해 갈 수 있습니다. "
+"**Landing Page** 는 다음을 가리키는 링크를 제공해야만 합니다:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1639
+msgid ""
+"the API definition (path ``/api`` link relations ``service-desc`` and "
+"``service-doc``),"
+msgstr "API 정의 (경로 ``/api``, 링크 관계 ``service-desc`` 그리고 ``service-doc``)"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1641
+msgid ""
+"the Conformance declaration (path ``/conformance``, link relation "
+"``conformance``), and"
+msgstr "적합성 선언 (경로 ``/conformance``, 링크 관계 ``conformance``)"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1643
+msgid "the Collections (path ``/collections``, link relation ``data``)."
+msgstr "선택 집합 (경로 ``/collections``, 링크 관계 ``data``)."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1650
+msgid "Server WFS3 landing page"
+msgstr "서버 WFS3 랜딩 페이지"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1655
+msgid "API Definition"
+msgstr "API 정의"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1657
+msgid ""
+"The **API Definition** is an OPENAPI-compliant description of the API "
+"provided by the service. In its HTML representation it is a browsable page "
+"where all the endpoints and their response formats are accurately listed and"
+" documented. The path of this endpoint is ``/api``."
+msgstr ""
+"**API 정의** 는 서비스가 제공하는 API의, OPENAPI와 호환되는 설명입니다. 이 HTML 표현은 모든 종단점 및 각 종단점의"
+" 응답 포맷을 정확하게 목록화하고 문서화한, 탐색 가능한 페이지입니다. 이 종단점의 경로는 ``/api`` 입니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1664
+msgid ""
+"The API definition provides a comprehensive and authoritative documentation "
+"of the service, including all supported parameters and returned formats."
+msgstr "API 정의는 서비스에 대한, 지원하는 파라미터와 반환되는 포맷을 모두 포함하는 포괄적이고 권위 있는 문서를 제공합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1670
+msgid "This endpoint is analogue to WFS's ``GetCapabilities``"
+msgstr "이 종단점은 WFS의 ``GetCapabilities`` 와 유사합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1673
+msgid "Collections list"
+msgstr "Collections 목록"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1675
+msgid ""
+"The collections endpoint provides a list of all the collections available in"
+" the service. Since the service \"serves\" a single QGIS project the "
+"collections are the vector layers from the current project (if they were "
+"published as WFS in the project properties). The path of this endpoint is "
+"``/collections/``."
+msgstr ""
+"**Collections** 종단점은 서비스에서 사용할 수 있는 모든 선택 집합의 목록을 제공합니다. 서비스가 단일 QGIS 프로젝트를 "
+"\"서비스\" 하기 때문에, 선택 집합은 (프로젝트 속성에서 벡터 레이어를 WFS로 게시한 경우) 현재 프로젝트의 벡터 레이어들입니다. "
+"이 종단점의 경로는 ``/collections/`` 입니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1687
+msgid "Server WFS3 collections list page"
+msgstr "서버 WFS3 선택 집합 목록 페이지"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1691
+msgid "Collection detail"
+msgstr "Collection 상세 정보"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1693
+msgid ""
+"While the collections endpoint does not provide detailed information about "
+"each available collection, that information is available in the "
+"``/collections/{collectionId}`` endpoints. Typical information includes the "
+"extent, a description, CRSs and other metadata."
+msgstr ""
+"**Collections** 종단점이 사용할 수 있는 각 선택 집합에 대한 자세한 정보를 제공하지 않는 반면, "
+"``/collections/{collectionId}`` 종단점에서는 해당 정보를 사용할 수 있습니다. 이 정보는 전형적으로 범위, "
+"설명, 좌표계 및 기타 메타데이터를 포함합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1699
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1720
+msgid ""
+"The HTML representation also provides a browsable map with the available "
+"features."
+msgstr "이 HTML 표현은 사용할 수 있는 피처를 보유한 탐색 가능한 맵도 제공합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1708
+msgid "Server WFS3 collection detail page"
+msgstr "서버 WFS3 선택 집합 상세 정보 페이지"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1714
+msgid "Features list"
+msgstr "Features 목록"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1716
+msgid ""
+"This endpoint provides a list of all features in a collection knowing the "
+"collection ID. The path of this endpoint is "
+"``/collections/{collectionId}/items``."
+msgstr ""
+"이 종단점은 ID를 알고 있는 선택 집합에 있는 모든 피처의 목록을 제공합니다. 이 종단점의 경로는 "
+"``/collections/{collectionId}/items`` 입니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1726
+msgid "This endpoint is analogue to ``GetFeature`` in  WFS 1 and WFS 2."
+msgstr "이 종단점은 WFS1 및 WFS2의 ``GetFeature`` 와 유사합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1734
+msgid "Server WFS3 features list page"
+msgstr "서버 WFS3 피처 목록 페이지"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1738
+msgid "Feature detail"
+msgstr "Feature 상세 정보"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1740
+msgid ""
+"This endpoint provides all the available information about a single feature,"
+" including the feature attributes and its geometry. The path of this "
+"endpoint is ``/collections/{collectionId}/items/{itemId}``."
+msgstr ""
+"이 종단점은 단일 피처에 대해 피처 속성과 도형을 포함하는, 사용할 수 있는 모든 정보를 제공합니다. 이 종단점의 경로는 "
+"``/collections/{collectionId}/items/{itemId}`` 입니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1745
+msgid ""
+"The HTML representation also provides a browsable map with the feature "
+"geometry."
+msgstr "이 HTML 표현은 피처 도형을 보유한 탐색 가능한 맵도 제공합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1754
+msgid "Server WFS3 feature detail page"
+msgstr "서버 WFS3 피처 상세 정보 페이지"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1759
+msgid "Pagination"
+msgstr "페이지 번호 매기기"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1761
+msgid ""
+"Pagination of a long list of features is implemented in the OGC API through "
+"``next`` and ``prev`` links, QGIS server constructs these links by appending"
+" ``limit`` and ``offset`` as query string parameters."
+msgstr ""
+"OGC API에서 피처의 긴 목록에 페이지 번호를 메기는 기능(pagination)은 ``next`` 및 ``prev`` 링크를 통해 "
+"구현되어 있습니다. QGIS 서버는 ``limit`` 및 ``offset`` 을 쿼리 문자열 파라미터로 추가해서 이 링크들을 구성합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1774
+msgid ""
+"The maximum acceptable value for ``limit`` can be configured with the "
+"``QGIS_SERVER_API_WFS3_MAX_LIMIT`` server configuration setting (see: :ref"
+":`qgis-server-envvar`)."
+msgstr ""
+"``QGIS_SERVER_API_WFS3_MAX_LIMIT`` 서버 환경 설정으로 ``limit`` 의 최대 허용 값의 환경을 설정할 수"
+" 있습니다. (:ref:`qgis-server-envvar` 참조)"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1780
+msgid "Feature filtering"
+msgstr "Feature 필터링"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1782
+msgid ""
+"The features available in a collection can be filtered/searched by "
+"specifying one or more filters."
+msgstr "하나 이상의 필터를 지정해서 선택 집합에서 사용할 수 있는 피처를 필터링/검색할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1787
+msgid "Date and time filter"
+msgstr "날짜 및 시간 필터"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1788
+msgid ""
+"Collections with date and/or datetime attributes can be filtered by "
+"specifying a ``datetime`` argument in the query string. By default the first"
+" date/datetime field is used for filtering. This behavior can be configured "
+"by setting a \"Date\" or \"Time\" dimension in the :menuselection:`QGIS "
+"Server --> Dimension` section of the layer properties dialog."
+msgstr ""
+"쿼리 문자열에 ``datetime`` 인자를 지정하면 날짜 그리고/또는 날짜&시간 속성을 가진 선택 집합을 필터링할 수 있습니다. 필터링"
+" 작업에 첫 번째 날짜/날짜&시간 필드를 기본적으로 이용합니다. 레이어 속성 대화창의 :menuselection:`QGIS Server "
+"--> Dimension` 부분에서 \"Date\" 및 \"Time\" 차원을 설정하면 이 습성의 환경을 설정할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1795
+msgid ""
+"The date and time filtering syntax is fully described in the "
+":ref:`ogc_api_features_api_definition` and also supports ranges (begin and "
+"end values are included) in addition to single values."
+msgstr ""
+"날짜와 시간 필터링 문법은 :ref:`ogc_api_features_api_definition` 에 충분히 설명되어 있으며, 단일 값만이"
+" 아니라 (시작 및 종단 값도 포함하는) 범위도 지원합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1800
+msgid "URL examples:"
+msgstr "URL 예시:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1802
+msgid "Returns only the features with date dimension matching ``2019-01-01``"
+msgstr "날짜 차원이 ``2019-01-01`` 과 일치하는 피처만 반환"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1808
+msgid ""
+"Returns only the features with datetime dimension matching "
+"``2019-01-01T01:01:01``"
+msgstr "날짜&시간 차원이 ``2019-01-01T01:01:01`` 과 일치하는 피처만 반환"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1815
+msgid ""
+"Returns only the features with datetime dimension in the range "
+"``2019-01-01T01:01:01`` - ``2019-01-01T12:00:00``"
+msgstr ""
+"날짜 차원이 ``2019-01-01T01:01:01`` ─ ``2019-01-01T12:00:00`` 범위에 들어오는 피처만 반환"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1824
+msgid "Bounding box filter"
+msgstr "경계 상자 필터"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1826
+msgid ""
+"A bounding box spatial filter can be specified with the ``bbox`` parameter:"
+msgstr "경계 상자 공간 필터는 ``bbox`` 파라미터로 지정할 수 있습니다:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1828
+msgid "The order of the comma separated elements is:"
+msgstr "쉼표로 구분된 요소들의 순서는 다음과 같습니다:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1830
+msgid "Lower left corner, WGS 84 longitude"
+msgstr "좌하단 모서리, WGS 84 경도"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1831
+msgid "Lower left corner, WGS 84 latitude"
+msgstr "좌하단 모서리, WGS 84 위도"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1832
+msgid "Upper right corner, WGS 84 longitude"
+msgstr "우상단 모서리, WGS 84 경도"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1833
+msgid "Upper right corner, WGS 84 latitude"
+msgstr "우상단 모서리, WGS 84 위도"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1836
+msgid ""
+"The OGC specifications also allow a 6 item bbox specifier where the third "
+"and sixth items are the Z components, this is not yet supported by QGIS "
+"server."
+msgstr ""
+"OGC 사양은 경계 상자 파라미터의 값을 6개 항목으로 지정하는 일도 지원합니다. 이때 세 번째와 여섯 번째는 Z 요소인데, QGIS "
+"서버가 아직 지원하지 않고 있습니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1847
+msgid ""
+"If the *CRS* of the bounding box is not WGS84 "
+"(*http://www.opengis.net/def/crs/OGC/1.3/CRS84*), a different CRS can be "
+"specified by using the optional parameter ``bbox-crs``. The CRS format "
+"identifier must be in the `OGC URI <http://www.opengis.net/def/crs/>`_ "
+"format:"
+msgstr ""
+"경계 상자의 좌표계가 `WGS84 <http://www.opengis.net/def/crs/OGC/1.3/CRS84>`_ 가 아닌 경우,"
+" 부가적인 ``bbox-crs`` 파라미터를 사용해서 다른 좌표계를 지정할 수 있습니다. 이때 좌표계 식별자 서식은 `OGC URI "
+"<http://www.opengis.net/def/crs/>`_ 에 있는 서식이어야만 합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1861
+msgid "Attribute filters"
+msgstr "속성 필터"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1863
+msgid ""
+"Attribute filters can be combined with the bounding box filter and they are "
+"in the general form: ``<attribute name>=<attribute value>``. Multiple "
+"filters can be combined using the ``AND`` operator."
+msgstr ""
+"속성 필터와 경계 상자 필터를 결합할 수 있습니다. 속성 필터의 일반적인 서식은 ``<attribute name>=<attribute "
+"value>`` 입니다. ``AND`` 연산자를 사용해서 여러 필터를 결합할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1869
+msgid "filters all features where attribute ``name`` equals \"my value\""
+msgstr "``name`` 속성이 \"my value\" 와 동일한 모든 피처를 필터링"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1876
+msgid "Partial matches are also supported by using a ``*`` (\"star\") operator:"
+msgstr "``*`` (\"star\") 연산자를 사용하는 부분 일치도 지원합니다:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1880
+msgid "filters all features where attribute ``name`` ends with \"value\""
+msgstr "``name`` 속성이 \"value\" 로 끝나는 모든 피처를 필터링"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1888
+msgid "Attribute selection"
+msgstr "속성 선택"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1890
+msgid ""
+"The feature attributes returned by a :ref:`ogc_api_features_features_list` "
+"call can be limited by adding a comma separated list of attribute names in "
+"the optional ``properties`` query string argument."
+msgstr ""
+"부가적인 ``properties`` 쿼리 문자열 인자에 쉼표로 구분한 속성명 목록을 추가하면 "
+":ref:`ogc_api_features_features_list` 호출이 반환하는 피처 속성을 제한할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1896
+msgid "returns only the ``name`` attribute"
+msgstr "``name`` 속성만 반환"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1904
+msgid "The HTML template language"
+msgstr "HTML 템플릿 언어"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1906
+msgid ""
+"The HTML representation uses a set of HTML templates to generate the "
+"response. The template is parsed by a template engine called `inja "
+"<https://github.com/pantor/inja#tutorial>`_. The templates can be customized"
+" by overriding them (see: :ref:`server_wfs3_template_override`). The "
+"template has access to the same data that are available to the ``JSON`` "
+"representation and a few additional functions are available to the template:"
+msgstr ""
+"HTML 표현은 응답을 생성하기 위해 HTML 템플릿의 집합을 사용합니다. `inja "
+"<https://github.com/pantor/inja#tutorial>`_ 라는 템플릿 엔진이 템플릿을 파싱합니다. 템플릿을 무시하면"
+" (:ref:`server_wfs3_template_override` 참조) 템플릿을 사용자 지정할 수 있습니다. 템플릿은 "
+"``JSON`` 표현에 사용할 수 있는 데이터와 동일한 데이터에 접근할 수 있으며, 템플릿에 몇몇 추가 함수를 사용할 수 있습니다:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1918
+msgid "Custom template functions"
+msgstr "사용자 지정 템플릿 함수"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1920
+msgid "``path_append( path )``: appends a directory path to the current url"
+msgstr "``path_append( path )``: 현재 URL에 디렉터리 경로를 추가합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1921
+msgid ""
+"``path_chomp( n )``: removes the specified number \"n\" of directory "
+"components from the current url path"
+msgstr "``path_chomp( n )``: 현재 URL 경로에서 디렉터리 요소들 가운데 지정한 \"n\" 번 디렉터리를 제거합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1923
+msgid "``json_dump( )``: prints the JSON data passed to the template"
+msgstr "``json_dump( )``: 템플릿에 전송된 JSON 데이터를 인쇄합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1924
+msgid ""
+"``static( path )``: returns the full URL to the specified static path. For "
+"example: \"static( \"/style/black.css\" )\" with a root path "
+"\"http://localhost/qgisserver/wfs3\" will return "
+"\"http://localhost/qgisserver/wfs3/static/style/black.css\"."
+msgstr ""
+"``static( path )``: URL 전체를 지정한 정적 경로로 반환합니다. 예를 들면: 루트 경로가 "
+"\"http://localhost/qgisserver/wfs3\" 인 \"static( \"/style/black.css\" )\" 는 "
+"\"http://localhost/qgisserver/wfs3/static/style/black.css\" 를 반환할 것입니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1928
+msgid ""
+"``links_filter( links, key, value )``: Returns filtered links from a link "
+"list"
+msgstr "``links_filter( links, key, value )``: 링크 목록에서 필터링한 링크를 반환합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1930
+msgid ""
+"``content_type_name( content_type )``: Returns a short name from a content "
+"type, for example \"text/html\" will return \"HTML\""
+msgstr ""
+"``content_type_name( content_type )``: 내용 유형으로부터 약칭을 반환합니다. 예를 들어 "
+"\"text/html\" 은 \"HTML\" 을 반환할 것입니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1937
+msgid "Template overrides"
+msgstr "템플릿 무시"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1939
+msgid ""
+"Templates and static assets are stored in subdirectories of the QGIS server "
+"default API resource directory "
+"(:file:`/usr/share/qgis/resources/server/api/` on a Linux system), the base "
+"directory can be customized by changing the environment variable "
+"``QGIS_SERVER_API_RESOURCES_DIRECTORY``."
+msgstr ""
+"템플릿과 정적 자산(asset)은 QGIS 서버의 기본 API 리소스 디렉터리(리눅스 시스템의 경우 "
+":file:`/usr/share/qgis/resources/server/api/`)의 하위 디렉터리에 저장되는데, "
+"``QGIS_SERVER_API_RESOURCES_DIRECTORY`` 환경 변수를 변경하면 기본 디렉터리를 사용자 지정할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1945
+msgid "A typical Linux installation will have the following directory tree:"
+msgstr "전형적인 리눅스 설치는 다음과 같은 디렉터리 트리를 가지게 될 것입니다:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1970
+msgid ""
+"To override the templates you can copy the whole tree to another location "
+"and point ``QGIS_SERVER_API_RESOURCES_DIRECTORY`` to the new location."
+msgstr ""
+"템플릿을 무시하려면, 이 트리 전체를 다른 위치에 복사한 다음 ``QGIS_SERVER_API_RESOURCES_DIRECTORY`` "
+"환경 변수가 새 위치를 가리키도록 변경하십시오."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1977
+msgid "Extra parameters supported by all request types"
+msgstr "모든 요청 유형이 지원하는 추가 파라미터들"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1979
+msgid "The following extra parameters are supported by all protocols."
+msgstr "모든 프로토콜이 다음과 같은 추가 파라미터를 지원합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1981
+msgid ""
+"**FILE_NAME**: if set, the server response will be sent to the client as a "
+"file attachment with the specified file name."
+msgstr ""
+"**FILE_NAME**: 이 파라미터를 설정하면, 서버가 클라이언트에게 지정한 파일명을 가진 첨부 파일로 응답을 전송할 것입니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1986
+msgid "Not available for WFS3."
+msgstr "WFS3에서는 사용할 수 없습니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1988
+msgid ""
+"**MAP**: Similar to MapServer, the ``MAP`` parameter can be used to specify "
+"the path to the QGIS project file. You can specify an absolute path or a "
+"path relative to the location of the server executable "
+"(:file:`qgis_mapserv.fcgi`). If not specified, QGIS Server searches for .qgs"
+" files in the directory where the server executable is located."
+msgstr ""
+"**MAP**: 맵서버와 비슷하게, QGIS 프로젝트 파일을 가리키는 경로를 지정하는 데 ``MAP`` 파라미터를 사용할 수 있습니다. "
+"절대 경로를 지정할 수도 있고, 서버 실행 파일(:file:`qgis_mapserv.fcgi`)의 위치를 기준으로 하는 상대 경로를 "
+"지정할 수도 있습니다. 이 파라미터를 설정하지 않으면, QGIS는 서버 실행 파일이 위치한 디렉터리에서 :file:`.qgs` 파일을 "
+"검색합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:1995
+msgid "Example::"
+msgstr "다음은 그 예시입니다:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:2002
+msgid ""
+"You can define a **QGIS_PROJECT_FILE** as an environment variable to tell "
+"the server executable where to find the QGIS project file. This variable "
+"will be the location where QGIS will look for the project file. If not "
+"defined it will use the MAP parameter in the request and finally look at the"
+" server executable directory."
+msgstr ""
+"``QGIS_PROJECT_FILE`` 파라미터를 환경 변수로 정의해서 서버 실행 파일에 QGIS 프로젝트 파일을 찾을 수 있는 위치를 "
+"알려줄 수 있습니다. 이 변수가 QGIS가 프로젝트 파일을 검색할 위치가 될 것입니다. 정의하지 않을 경우, 요청에 있는 ``MAP`` "
+"파라미터를 이용한 다음 마지막으로 서버 실행 파일이 있는 디렉터리를 살펴볼 것입니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:2013
+msgid "REDLINING"
+msgstr "REDLINING(특정 경계 지역 지정)"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:2015
+msgid ""
+"This feature is available and can be used with ``GetMap`` and ``GetPrint`` "
+"requests."
+msgstr "``GetMap`` 및 ``GetPrint`` 요청을 통해 이 기능을 사용할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:2018
+msgid ""
+"The redlining feature can be used to pass geometries and labels in the "
+"request which are overlapped by the server over the standard returned image "
+"(map). This permits the user to put emphasis or maybe add some comments "
+"(labels) to some areas, locations etc. that are not in the standard map."
+msgstr ""
+"요청 안에 있는, 서버가 반환한 표준 이미지(맵) 위에 중첩되는 도형 및 라벨을 전송하는 데 이 ``REDLINING`` 기능을 사용할 "
+"수 있습니다. 이 기능은 사용자가 표준 맵에는 없는 일부 지역 또는 위치 등을 강조하거나 또는 그런 곳에 주석(라벨)을 달 수 있도록 "
+"해줍니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:2024
+msgid "The request is in the format::"
+msgstr "다음과 같은 서식으로 요청합니다:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:2037
+msgid ""
+"Here is the image outputed by the above request in which a polygon and a "
+"label are drawn on top of the normal map:"
+msgstr "다음 그림은 앞의 요청을 통해 일반 맵 위에 폴리곤 및 라벨을 렌더링한 출력물을 보여줍니다:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:2045
+msgid "Server response to a GetMap request with redlining parameters"
+msgstr "REDLINING 파라미터를 보유한 GetMap 요청에 대한 서버의 응답"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:2047
+msgid "You can see there are several parameters in this request:"
+msgstr "이 요청 안에 다음 여러 파라미터들이 있다는 것을 알 수 있습니다:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:2049
+msgid ""
+"**HIGHLIGHT_GEOM**: You can add POINT, MULTILINESTRING, POLYGON etc. It "
+"supports multipart geometries. Here is an example: "
+"``HIGHLIGHT_GEOM=MULTILINESTRING((0 0, 0 1, 1 1))``. The coordinates should "
+"be in the CRS of the GetMap/GetPrint request."
+msgstr ""
+"**HIGHLIGHT_GEOM**: 포인트, 멀티라인스트링, 폴리곤 등을 추가할 수 있습니다. 다중 부분 도형도 지원합니다. 이 "
+"파라미터는 ``HIGHLIGHT_GEOM=MULTILINESTRING((0 0, 0 1, 1 1))`` 과 같이 사용할 수 있습니다. "
+"사용 좌표는 ``GetMap`` / ``GetPrint`` 요청의 좌표계의 좌표여야 합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:2054
+msgid ""
+"**HIGHLIGHT_SYMBOL**: This controls how the geometry is outlined and you can"
+" change the stroke width, color and opacity."
+msgstr ""
+"**HIGHLIGHT_SYMBOL**: 이 파라미터는 도형의 외곽선을 어떻게 렌더링할지 제어하며, 사용자가 획의 너비, 색상 및 "
+"불투명도를 변경할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:2057
+msgid ""
+"**HIGHLIGHT_LABELSTRING**: You can pass your labeling text to this "
+"parameter."
+msgstr "**HIGHLIGHT_LABELSTRING**: 이 파라미터를 통해 사용자의 라벨 텍스트를 넘겨줄 수 있습니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:2060
+msgid ""
+"**HIGHLIGHT_LABELSIZE**: This parameter controls the size of the label."
+msgstr "**HIGHLIGHT_LABELSIZE**: 이 파라미터는 라벨의 크기를 제어합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:2063
+msgid "**HIGHLIGHT_LABELCOLOR**: This parameter controls the label color."
+msgstr "**HIGHLIGHT_LABELCOLOR**: 이 파라미터는 라벨의 색상을 제어합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:2065
+msgid ""
+"**HIGHLIGHT_LABELBUFFERCOLOR**: This parameter controls the label buffer "
+"color."
+msgstr "**HIGHLIGHT_LABELBUFFERCOLOR**: 이 파라미터는 라벨 버퍼의 색상을 제어합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:2068
+msgid ""
+"**HIGHLIGHT_LABELBUFFERSIZE**: This parameter controls the label buffer "
+"size."
+msgstr "**HIGHLIGHT_LABELBUFFERSIZE**: 이 파라미터는 라벨 버퍼의 크기를 제어합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:2072
+msgid "External WMS layers"
+msgstr "외부 WMS 레이어"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:2074
+msgid ""
+"QGIS Server allows including layers from external WMS servers in WMS GetMap "
+"and WMS GetPrint requests. This is especially useful if a web client uses an"
+" external background layer in the web map. For performance reasons, such "
+"layers should be directly requested by the web client (not cascaded via QGIS"
+" server). For printing however, these layers should be cascaded via QGIS "
+"server in order to appear in the printed map."
+msgstr ""
+"QGIS 서버는 WMS ``GetMap`` 및 ``GetPrint`` 요청에 외부 WMS 서버의 레이어를 포함시킬 수 있습니다. 웹 "
+"클라이언트가 웹 맵에 외부 배경 레이어를 사용하는 경우 특히 유용한 기능입니다. 속도 향상을 위해, 웹 클라이언트가 이런 레이어를 "
+"(QGIS 서버를 통해 순차적으로 요청하는 것이 아니라) 직접 요청해야 합니다. 하지만 인쇄 작업의 경우, 인쇄한 맵에 이런 레이어가 "
+"나타나게 하려면 QGIS 서버를 통해 순차적으로 요청해야 합니다."
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:2081
+msgid ""
+"External layers can be added to the LAYERS parameter as "
+"EXTERNAL_WMS:<layername>. The parameters for the external WMS layers (e.g. "
+"url, format, dpiMode, crs, layers, styles) can later be given as service "
+"parameters <layername>:<parameter>. In a GetMap request, this might look "
+"like this:"
+msgstr ""
+"``LAYERS`` 파라미터에 외부 레이어를 ``EXTERNAL_WMS:<layername>`` 로 추가할 수 있습니다. 외부 WMS "
+"레이어용 파라미터(예를 들어 ``url``, ``format``, ``dpiMode``, ``crs``, ``layers``, "
+"``styles`` 등)는 차후 서비스 파라미터 ``<layername>:<parameter>`` 로 지정할 수 있습니다. "
+"``GetMap`` 요청에서는 다음과 같이 보일 수도 있습니다:"
+
+#: ../../docs/user_manual/working_with_ogc/server/services.rst:2102
+msgid "Similarly, external layers can be used in GetPrint requests:"
+msgstr "``GetPrint`` 요청에서도 이와 비슷하게 외부 레이어를 사용할 수 있습니다:"

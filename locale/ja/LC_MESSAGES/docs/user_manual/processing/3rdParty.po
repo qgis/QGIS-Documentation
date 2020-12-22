@@ -1,0 +1,224 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:30+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:5
+msgid "Configuring external applications"
+msgstr "外部アプリケーションの設定"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:32
+msgid "A note for Windows users"
+msgstr "Windowsユーザーへの注意点"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:47
+msgid "A note on file formats"
+msgstr "ファイルフォーマットに関する注意点"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:73
+msgid ""
+"Providers not using external applications can process any layer that you can"
+" open in QGIS, since they open it for analysis through QGIS."
+msgstr ""
+"外部アプリケーションを使用していないプロバイダーはQGISで開けるレイヤーはどれも処理できます。なぜならそれらはQGISを通じて分析のためにそれを開いているので。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:85
+msgid "A note on vector layer selections"
+msgstr "ベクターレイヤー選択に関する注意点"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:87
+msgid ""
+"External applications may also be made aware of the selections that exist in"
+" vector layers within QGIS. However, that requires rewriting all input "
+"vector layers, just as if they were originally in a format not supported by "
+"the external application. Only when no selection exists, or the *Use only "
+"selected features* option is not enabled in the processing general "
+"configuration, can a layer be directly passed to an external application."
+msgstr ""
+"外部アプリケーションがQGIS内でベクターレイヤーに存在する選択を知らされることもできます。しかし、それにはそれらが元から外部アプリケーションでサポートされていない形式であったかのように、すべての入力ベクターレイヤーを書き換えることが必要です。選択が存在しないか、"
+" *選択された地物のみを使用* オプションが処理の一般設定で有効になっていない場合にのみ、レイヤーは外部アプリケーションに直接渡すことができます。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:104
+msgid "SAGA"
+msgstr "SAGA: System for Automated Geoscientific Analyses、自動化地球科学的分析システム"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:113
+msgid "About SAGA grid system limitations"
+msgstr "SAGAグリッドシステムの制限について"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:115
+msgid ""
+"Most SAGA algorithms that require several input raster layers require them "
+"to have the same grid system. That is, they must cover the same geographic "
+"area and have the same cell size, so their corresponding grids match. When "
+"calling SAGA algorithms from QGIS, you can use any layer, regardless of its "
+"cell size and extent. When multiple raster layers are used as input for a "
+"SAGA algorithm, QGIS resamples them to a common grid system and then passes "
+"them to SAGA (unless the SAGA algorithm can operate with layers from "
+"different grid systems)."
+msgstr ""
+"複数の入力ラスターレイヤーを必要とするほとんどのSAGAアルゴリズムは、それらが同じグリッド系を持つことを必要としています。つまり、それらが同じ地理的領域をカバーして同じセルサイズを持ち、対応するグリッドが一致する必要があります。QGISからSAGAアルゴリズムを呼び出すときは、そのセルサイズと範囲に関係なく、どんなレイヤーも使用できます。複数のラスターレイヤーはSAGAアルゴリズムのための入力として使用される場合、QGISは（SAGAアルゴリズムが異なるグリッド系からのレイヤーで動作できない場合）共通のグリッド系にそれらをリサンプリングした後、SAGAに渡します。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:126
+msgid ""
+"The definition of that common grid system is controlled by the user, and you"
+" will find several parameters in the SAGA group of the settings window to do"
+" so. There are two ways of setting the target grid system:"
+msgstr ""
+"その一般的なグリッド系の定義は、ユーザーによって制御され、そうする設定ウィンドウのSAGAグループ内のいくつかのパラメーターがあります。ターゲットグリッド系を設定する2つの方法があります。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:131
+msgid ""
+"Setting it manually. You define the extent by setting the values of the "
+"following parameters:"
+msgstr "手動で設定する。次のパラメーターの値を設定することによって範囲を定義します。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:134
+msgid ":guilabel:`Resampling min X`"
+msgstr ":guilabel:`リサンプリング最小X`"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:135
+msgid ":guilabel:`Resampling max X`"
+msgstr ":guilabel:`リサンプリング最大X`"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:136
+msgid ":guilabel:`Resampling min Y`"
+msgstr ":guilabel:`リサンプリング最小Y`"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:137
+msgid ":guilabel:`Resampling max Y`"
+msgstr ":guilabel:`リサンプリング最大Y`"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:138
+msgid ":guilabel:`Resampling cellsize`"
+msgstr ":guilabel:`リサンプリングセルサイズ`"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:140
+msgid ""
+"Notice that QGIS will resample input layers to that extent, even if they do "
+"not overlap with it."
+msgstr "QGISはその範囲に対して入力レイヤーを、それらがその範囲と重複していない場合でも、再サンプリングすることに注意してください。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:142
+msgid ""
+"Setting it automatically from input layers. To select this option, just "
+"check the :guilabel:`Use min covering grid system for resampling` option. "
+"All the other settings will be ignored and the minimum extent that covers "
+"all the input layers will be used. The cell size of the target layer is the "
+"maximum of all cell sizes of the input layers."
+msgstr ""
+"入力レイヤーから自動的に設定する。このオプションを選択するには、 :guilabel:`リサンプリングにグリッド系の最小カバーを使用` "
+"オプションチェックするだけです。他のすべての設定は無視され、すべての入力レイヤーを最小でカバーする範囲が使用されます。ターゲットレイヤーのセルサイズは、入力レイヤーの全てのセルサイズの最大値です。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:150
+msgid ""
+"For algorithms that do not use multiple raster layers, or for those that do "
+"not need a unique input grid system, no resampling is performed before "
+"calling SAGA, and those parameters are not used."
+msgstr ""
+"多重ラスターレイヤーを使用しないあるいは固有の入力グリッドシステムを必要としないアルゴリズムでは、SAGAを呼び出す前にリサンプリングは実行されませんし、これらのパラメーターは使用されません。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:155
+msgid "Limitations for multi-band layers"
+msgstr "マルチバンドレイヤーに関する制限"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:157
+msgid ""
+"Unlike QGIS, SAGA has no support for multi-band layers. If you want to use a"
+" multiband layer (such as an RGB or multispectral image), you first have to "
+"split it into single-banded images. To do so, you can use the 'SAGA/Grid - "
+"Tools/Split RGB image' algorithm (which creates three images from an RGB "
+"image) or the 'SAGA/Grid - Tools/Extract band' algorithm (to extract a "
+"single band)."
+msgstr ""
+"QGISとは異なり、SAGAではマルチバンドレイヤーをサポートしていません。（例えばRGBまたはマルチスペクトル画像のような）マルチバンドレイヤーを使用する場合は、最初にシングルバンド化された画像に分割する必要があります。そうするためには、「SAGA/グリッドツール/RGB画像を分割」アルゴリズム（RGB画像から三つの画像を作成する）や「SAGA"
+" /グリッドツール/バンド抽出」アルゴリズム（単一バンドを抽出する）を使用できます。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:165
+msgid "Limitations in cell size"
+msgstr "セルサイズの制限"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:167
+msgid ""
+"SAGA assumes that raster layers have the same cell size in the X and Y axis."
+" If you are working with a layer with different values for horizontal and "
+"vertical cell size, you might get unexpected results. In this case, a "
+"warning will be added to the processing log, indicating that an input layer "
+"might not be suitable to be processed by SAGA."
+msgstr ""
+"SAGAではラスターレイヤーがx軸とy軸において同じセルサイズであることを仮定しています。もし、水平方向と垂直方向でセルサイズが異なる値のレイヤーで作業するならば、予期せぬ結果を得ることになるでしょう。この場合、入力レイヤーがSAGAによって適切に処理されないであろうという警告がプロセスログに加えられることになります。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:175
+msgid "Logging"
+msgstr "ログを記録する"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:177
+msgid ""
+"When QGIS calls SAGA, it does so using its command-line interface, thus "
+"passing a set of commands to perform all the required operations. SAGA shows"
+" its progress by writing information to the console, which includes the "
+"percentage of processing already done, along with additional content. This "
+"output is filtered and used to update the progress bar while the algorithm "
+"is running."
+msgstr ""
+"QGISはSAGAを呼び出すと、それはこれにより、すべての必要な操作を実行するためにコマンドのセットを通過する、そのコマンドラインインターフェイスを使用しません。SAGAは、追加のコンテンツと共に、既に行われる処理のパーセンテージを含むコンソールに情報を書き込むことにより、その進捗状況を示しています。この出力はフィルタがかけられ、アルゴリズムの実行中に、プログレスバーを更新するために使用されます。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:452
+msgid ""
+"If your algorithm generates raster layers, the way they are saved will "
+"depend on whether or not you have used the ``##dontuserasterpackage`` "
+"option. If you have used it, layers are saved using the ``writeGDAL()`` "
+"method. If not, the ``writeRaster()`` method from the ``raster`` package "
+"will be used."
+msgstr ""
+"アルゴリズムは、ラスターレイヤーを生成した場合、それらが保存されている方法は、 ``##dontuserasterpackage`` "
+"オプションを使用しているかどうかに依存します。それを使用している場合は、これらのレイヤーは、 ``writeGDAL()`` "
+"メソッドを使用して保存されます。そうでない場合、 ``raster`` パッケージから ``writeRaster()`` メソッドが使用されます。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:481
+msgid ""
+"The output of the last line is printed, but the output of the first is not "
+"(and neither are the outputs from other command lines added automatically by"
+" QGIS)."
+msgstr ""
+"最後の行の出力が印刷されているが、第一の出力はない（そしていずれも、他のコマンドラインからの出力は、QGISによって自動的に追加されています）。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:493
+msgid ""
+"This will cause QGIS to redirect all R graphical outputs to a temporary "
+"file, which will be opened once R execution has finished."
+msgstr "これは、QGISはRの実行が完了した後に開かれる一時ファイルにすべてのRのグラフィック出力をリダイレクトするようになります。"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:562
+msgid "GRASS"
+msgstr "GRASS: Geographic Resources Analysis Support System、地理的資源分析支援システム"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:582
+msgid ""
+"GRASS algorithms use a region for calculations. This region can be defined "
+"manually using values similar to the ones found in the SAGA configuration, "
+"or automatically, taking the minimum extent that covers all the input layers"
+" used to execute the algorithm each time. If the latter approach is the "
+"behavior you prefer, just check the :guilabel:`Use min covering region` "
+"option in the GRASS configuration parameters."
+msgstr ""
+"GRASSアルゴリズムは、計算するための領域を使用します。この領域は、アルゴリズムを毎回実行するために使用されるすべての入力レイヤーを覆う最小範囲をとる、自動的SAGA構成に見られるものと同様の値を用いて、または手動で定義できます。後者のアプローチが好む動作である場合、GRASSの設定パラメーターで"
+" :guilabel:`最小カバー領域を使用` オプションをチェックするだけです。"

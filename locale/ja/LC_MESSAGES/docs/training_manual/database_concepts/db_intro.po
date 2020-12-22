@@ -1,0 +1,450 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:18+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:2
+msgid "|LS| Introduction to Databases"
+msgstr "|LS| データベースの概要"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:4
+msgid ""
+"Before using PostgreSQL, let's make sure of our ground by covering general "
+"database theory. You will not need to enter any of the example code; it's "
+"only there for illustration purposes."
+msgstr ""
+"PostgreSQLのを使用する前に、一般的なデータベース理論をさらうことによって私たちの根拠を確認してみましょう。サンプルコードはどれも入力する必要はありません。それは説明目的のためだけにあります。"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:8
+msgid ""
+"**The goal for this lesson:** To understand fundamental database concepts."
+msgstr "**このレッスンの目標：** 基本的なデータベースの概念を理解します。"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:11
+msgid "What is a Database?"
+msgstr "データベースとは何ですか？"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:13
+msgid ""
+"A database consists of an organized collection of data for one or more uses,"
+" typically in digital form. *- Wikipedia*"
+msgstr "データベースは、典型的にはデジタル形式の、1つ以上の用途のための組織化されたデータの集合からなる。 *-ウィキペディア*"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:18
+msgid ""
+"A database management system (DBMS) consists of software that operates "
+"databases, providing storage, access, security, backup and other facilities."
+" *- Wikipedia*"
+msgstr ""
+"データベース管理システム（DBMS）は、データベースを操作し、ストレージ、アクセス、セキュリティ、バックアップなどの機能を提供するソフトウェアで構成されています。"
+" *-ウィキペディア*"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:23
+msgid "Tables"
+msgstr "テーブル"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:25
+msgid ""
+"In relational databases and flat file databases, a table is a set of data "
+"elements (values) that is organized using a model of vertical columns (which"
+" are identified by their name) and horizontal rows. A table has a specified "
+"number of columns, but can have any number of rows. Each row is identified "
+"by the values appearing in a particular column subset which has been "
+"identified as a candidate key. *- Wikipedia*"
+msgstr ""
+"リレーショナルデータベースとフラットファイルデータベースでは、テーブルは、縦の列（名前で識別される）と横の行のモデルを使用して構成されたデータ要素（値）のセットです。テーブルには指定された数の列がありますが、任意の数の行を持つことができます。各行は、候補キーとして識別された特定の列部分に現れる値によって識別されます。"
+" *-ウィキペディア*"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:40
+msgid "In SQL databases a table is also known as a **relation.**"
+msgstr "SQLデータベースではテーブルは **関係** としても知られている。"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:43
+msgid "Columns / Fields"
+msgstr "列/フィールド"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:45
+msgid ""
+"A column is a set of data values of a particular simple type, one for each "
+"row of the table. The columns provide the structure according to which the "
+"rows are composed. The term field is often used interchangeably with column,"
+" although many consider it more correct to use field (or field value) to "
+"refer specifically to the single item that exists at the intersection "
+"between one row and one column. *- Wikipedia*"
+msgstr ""
+"列は、特定の単純型のデータ値の集合であり、表の各行に対して1つです。列は、行を構成する構造を提供します。フィールドという用語は、多くの場合、フィールド（またはフィールド値）を使用して、1つの行と1つの列の交差点に存在する単一項目を具体的に参照する方が正しいと考えられますが、列と互換的に使用されます。"
+" *-ウィキペディア*"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:52
+msgid "A column:"
+msgstr "列："
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:61
+msgid "A field:"
+msgstr "フィールド："
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:68
+msgid "Records"
+msgstr "レコード"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:70
+msgid ""
+"A record is the information stored in a table row. Each record will have a "
+"field for each of the columns in the table."
+msgstr "レコードは、テーブル行に格納されている情報です。各レコードには、テーブル内の各列のフィールドがあります。"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:78
+msgid "Datatypes"
+msgstr "データ型"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:80
+msgid ""
+"Datatypes restrict the kind of information that can be stored in a column. "
+"*- Tim and Horst*"
+msgstr "データ型は、列に格納できる情報の種類を制限します。* - ティムとホルスト*"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:83
+msgid "There are many kinds of datatypes. Let's focus on the most common:"
+msgstr "データ型には多くの種類があります。最も一般的なものに焦点を当ててみましょう："
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:85
+msgid "``String`` - to store free-form text data"
+msgstr "``String`` - 自由形式のテキストデータを格納します"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:86
+msgid "``Integer`` - to store whole numbers"
+msgstr "``Integer`` - 整数を格納します"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:87
+msgid "``Real`` - to store decimal numbers"
+msgstr "``Real`` - 小数を保存します"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:88
+msgid "``Date`` - to store Horst's birthday so no one forgets"
+msgstr "``Date`` - 誰も忘れないよう、ホルストの誕生日を格納します"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:89
+msgid "``Boolean`` - to store simple true/false values"
+msgstr "``Boolean`` - シンプルな真/偽の値を格納します"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:91
+msgid ""
+"You can tell the database to allow you to also store nothing in a field. If "
+"there is nothing in a field, then the field content is referred to as a "
+"**'null' value**:"
+msgstr ""
+"フィールドに何も保存しないようにデータベースに指示することができます。フィールドに何もない場合、フィールドコンテンツは **'null'値** "
+"と呼ばれます:"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:101
+msgid "Result:"
+msgstr "結果:"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:116
+msgid "Modelling an Address Database"
+msgstr "住所データベースをモデル化"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:118
+msgid ""
+"Let's use a simple case study to see how a database is constructed. We want "
+"to create an address database."
+msgstr "データベースが構築されるかを確認するために、単純なケーススタディを使用してみましょう。住所のデータベースを作成したいとします。"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:122
+#: ../../docs/training_manual/database_concepts/db_intro.rst:189
+msgid "|TY| |basic|"
+msgstr "|TY| |basic|"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:124
+msgid ""
+"Write down the properties which make up a simple address and which we would "
+"want to store in our database."
+msgstr "簡単な住所を構成し、データベースに格納したいプロパティを書き留めます。"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:127
+msgid ":ref:`Check your results <database-concepts-1>`"
+msgstr ":ref:`結果をチェック <database-concepts-1>`"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:132
+msgid "Address Structure"
+msgstr "住所の構造"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:134
+msgid ""
+"The properties that describe an address are the columns. The type of "
+"information stored in each column is its datatype. In the next section we "
+"will analyse our conceptual address table to see how we can make it better!"
+msgstr ""
+"住所を記述するプロパティは列です。各列に格納される情報のタイプは、そのデータ型です。次のセクションでは、概念的な住所テーブルを分析して、それをより良くする方法を見てみましょう。"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:139
+msgid "Database Theory"
+msgstr "データベース理論"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:141
+msgid ""
+"The process of creating a database involves creating a model of the real "
+"world; taking real world concepts and representing them in the database as "
+"entities."
+msgstr ""
+"データベースを作成するプロセスには、現実世界のモデルを作成することが含まれます。実世界の概念を取り入れ、エンティティとしてデータベースに表現します。"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:145
+msgid "Normalisation"
+msgstr "正規化"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:147
+msgid ""
+"One of the main ideas in a database is to avoid data duplication / "
+"redundancy. The process of removing redundancy from a database is called "
+"Normalisation."
+msgstr "データベースの主なアイデアの1つは、データの重複/冗長性を避けることです。データベースから冗長性を除去するプロセスを正規化といいます。"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:150
+msgid ""
+"Normalization is a systematic way of ensuring that a database structure is "
+"suitable for general-purpose querying and free of certain undesirable "
+"characteristics - insertion, update, and deletion anomalies - that could "
+"lead to a loss of data integrity. *- Wikipedia*"
+msgstr ""
+"正規化は、データベース構造が汎用照会に適しており、挿入、更新、および削除の異常（データの整合性が失われる可能性がある）などの望ましくない特性がないことを確実にする体系的な方法です。"
+" *-ウィキペディア*"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:155
+msgid "There are different kinds of normalisation 'forms'."
+msgstr "正規「形」には様々な種類があります。"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:157
+msgid "Let's take a look at a simple example:"
+msgstr "簡単な例を見てみましょう:"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:184
+msgid ""
+"Imagine you have many friends with the same street name or city. Every time "
+"this data is duplicated, it consumes space. Worse still, if a city name "
+"changes, you have to do a lot of work to update your database."
+msgstr ""
+"同じ名前の通りや都市の友達が多いとしましょう。このデータが複製されるたびに、領域が消費されます。さらに悪いことに、都市名が変更された場合は、データベースを更新するために多くの作業を行う必要があります。"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:190
+msgid ""
+"Redesign the theoretical `people` table above to reduce duplication and to "
+"normalise the data structure."
+msgstr "重複を低減し、データ構造を正規化するために、上記の理論 `people` テーブルを再設計します。"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:196
+msgid ":ref:`Check your results <database-concepts-2>`"
+msgstr ":ref:`結果をチェック <database-concepts-2>`"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:201
+msgid "Indexes"
+msgstr "索引"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:203
+msgid ""
+"A database index is a data structure that improves the speed of data "
+"retrieval operations on a database table. *- Wikipedia*"
+msgstr "データベース索引は、データベース表のデータ検索操作の速度を向上させるデータ構造です。 *-ウィキペディア*"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:206
+msgid ""
+"Imagine you are reading a textbook and looking for the explanation of a "
+"concept - and the textbook has no index! You will have to start reading at "
+"one cover and work your way through the entire book until you find the "
+"information you need. The index at the back of a book helps you to jump "
+"quickly to the page with the relevant information:"
+msgstr ""
+"たとえば教科書を読んでいて概念の説明を探してるが、その教科書には索引がなかったとします。必要な情報が見つかるまで、1つの表紙から読み始め、書籍全体を通して作業を進めなければなりません。教科書の裏にある索引は、関連情報を持つページに素早くジャンプするのに役立ちます:"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:216
+msgid "Now searches on name will be faster:"
+msgstr "名前の検索が高速になります:"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:235
+msgid "Sequences"
+msgstr "連番"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:237
+msgid ""
+"A sequence is a unique number generator. It is normally used to create a "
+"unique identifier for a column in a table."
+msgstr "連番は、一意の番号ジェネレータです。通常、テーブル内の列の一意の識別子を作成するために使用されます。"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:240
+msgid ""
+"In this example, id is a sequence - the number is incremented each time a "
+"record is added to the table:"
+msgstr "この例では、IDは連番です - 数は、レコードがテーブルに追加されるたびに1つ増えます:"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:251
+msgid "Entity Relationship Diagramming"
+msgstr "エンティティ関係図の作成"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:253
+msgid ""
+"In a normalised database, you typically have many relations (tables). The "
+"entity-relationship diagram (ER Diagram) is used to design the logical "
+"dependencies between the relations. Consider our non-normalised `people` "
+"table from earlier in the lesson:"
+msgstr ""
+"正規化されたデータベースでは、通常、多くの関係（テーブル）があります。エンティティ関係図（ER図）は、関係間の論理依存関係を設計するために使用されます。レッスンの前半から正規化されていない"
+" `people` テーブルを考えてみましょう::"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:268
+msgid ""
+"With a little work we can split it into two tables, removing the need to "
+"repeat the street name for individuals who live in the same street:"
+msgstr "ちょっとした作業で2つのテーブルに分割でき、同じ通りに住む人のために通りの名前を繰り返す必要がなくなります:"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:280
+msgid "and:"
+msgstr "および::"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:291
+msgid ""
+"We can then link the two tables using the 'keys' :kbd:`streets.id` and "
+":kbd:`people.streets_id`."
+msgstr ""
+"その後、「キー」 :kbd:`streets.id` と :kbd:`people.streets_id` を使用して2つのテーブルをリンクできます。"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:294
+msgid ""
+"If we draw an ER Diagram for these two tables it would look something like "
+"this:"
+msgstr "この2つのテーブルのためのER図を描く場合は、次のようになります。"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:300
+msgid ""
+"The ER Diagram helps us to express 'one to many' relationships. In this case"
+" the arrow symbol show that one street can have many people living on it."
+msgstr ""
+"ERダイアグラムは、関係「一対多」を表現する助けになります。この場合、矢印記号は、1つの通りに対して住んでいる人々は何人もいることがあると示しています。"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:304
+msgid "|TY| |moderate|"
+msgstr "|TY| |moderate|"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:306
+msgid ""
+"Our `people` model still has some normalisation issues - try to see if you "
+"can normalise it further and show your thoughts by means of an ER Diagram."
+msgstr ""
+"この `people` モデルにはまだいくつかの正規化の問題があります - "
+"さらに正規化して、ER図を用いて自分の考えを示すことができるかどうか確認してみてください。"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:309
+msgid ":ref:`Check your results <database-concepts-3>`"
+msgstr ":ref:`結果をチェック<database-concepts-3>`"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:314
+msgid "Constraints, Primary Keys and Foreign Keys"
+msgstr "制約、主キーと外部キー"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:316
+msgid ""
+"A database constraint is used to ensure that data in a relation matches the "
+"modeller's view of how that data should be stored. For example a constraint "
+"on your postal code could ensure that the number falls between :kbd:`1000` "
+"and :kbd:`9999`."
+msgstr ""
+"リレーション内のデータがモデラーのデータの格納方法と一致するように、データベースの制約が使用されます。たとえば、郵便番号の制約により、数字が "
+":kbd:`1000` と :kbd:`9999` の間に入ることが保証されます。"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:321
+msgid ""
+"A Primary key is one or more field values that make a record unique. Usually"
+" the primary key is called id and is a sequence."
+msgstr "主キーは、レコードを一意にする1つ以上のフィールドの値です。通常、主キーはidという連番です。"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:324
+msgid ""
+"A Foreign key is used to refer to a unique record on another table (using "
+"that other table's primary key)."
+msgstr "外部キーは、（他のテーブルの主キーを使用して）別のテーブルに一意のレコードを参照するために使用されます。"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:327
+msgid ""
+"In ER Diagramming, the linkage between tables is normally based on Foreign "
+"keys linking to Primary keys."
+msgstr "ERダイアグラムでは、テーブル間の結合は、通常、主キーにリンクする外部キーに基づいています。"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:330
+msgid ""
+"If we look at our people example, the table definition shows that the street"
+" column is a foreign key that references the primary key on the streets "
+"table:"
+msgstr "ここでの人々の例を見てみると、テーブルの定義によれば、street列は街路テーブルの主キーを参照する外部キーです:"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:351
+msgid "Transactions"
+msgstr "トランザクション"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:353
+msgid ""
+"When adding, changing, or deleting data in a database, it is always "
+"important that the database is left in a good state if something goes wrong."
+" Most databases provide a feature called transaction support. Transactions "
+"allow you to create a rollback position that you can return to if your "
+"modifications to the database did not run as planned."
+msgstr ""
+"データベース内のデータを追加、変更、または削除するときは、何か問題が生じた場合にデータベースを良好な状態に保つことが常に重要です。ほとんどのデータベースは、トランザクションサポートと呼ばれる機能を提供します。トランザクションを使用すると、データベースへの変更が計画通りに実行されなかった場合に戻ることができるロールバック位置を作成できます。"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:359
+msgid ""
+"Take a scenario where you have an accounting system. You need to transfer "
+"funds from one account and add them to another. The sequence of steps would "
+"go like this:"
+msgstr ""
+"会計システムを持っているというシナリオを取ります。1つの口座から資金を転送し、他にそれらを追加する必要があります。一連のステップは次のように進むでしょう。"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:363
+msgid "remove R20 from Joe"
+msgstr "JoeからR20を削除"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:364
+msgid "add R20 to Anne"
+msgstr "AnneをR20に追加"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:366
+msgid ""
+"If something goes wrong during the process (e.g. power failure), the "
+"transaction will be rolled back."
+msgstr "処理の間に何か問題（例えば停電）が発生した場合、トランザクションはロールバックされます。"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:370
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:372
+msgid ""
+"Databases allow you to manage data in a structured way using simple code "
+"structures."
+msgstr "データベースを使用すると、簡単なコードの構造を使用して構造化された方法でデータを管理できます。"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:376
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:378
+msgid ""
+"Now that we've looked at how databases work in theory, let's create a new "
+"database to implement the theory we've covered."
+msgstr "これでデータベースが理論的にどのように動作するか見てしまいましたので、カバーしてきた理論を実装する新しいデータベースを作成してみましょう。"

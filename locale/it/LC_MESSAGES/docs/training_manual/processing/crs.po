@@ -1,0 +1,260 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# Simone Falceri, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:21+0000\n"
+"Last-Translator: Simone Falceri, 2020\n"
+"Language-Team: Italian (https://www.transifex.com/qgis/teams/6144/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/training_manual/processing/crs.rst:2
+msgid "CRSs. Reprojecting"
+msgstr "CRS. Riproiezione"
+
+#: ../../docs/training_manual/processing/crs.rst:5
+msgid ""
+"In this lesson we will discuss how Processing uses CRSs. We will also see a "
+"very useful algorithm: reprojecting."
+msgstr ""
+"In questa lezione parleremo di come Processing tratta i CRS. Vedremo anche "
+"algoritmo molto utile: riproiezione."
+
+#: ../../docs/training_manual/processing/crs.rst:9
+msgid ""
+"CRS's are a great source of confusion for QGIS Processing users, so here are"
+" some general rules about how they are handled by geoalgorithms when "
+"creating a new layer."
+msgstr ""
+"I CRS sono una grande fonte di confusione per gli utenti di QGIS Processing,"
+" per cui ecco alcune regole generali su come sono maneggiati dai "
+"geoalgoritmi quando si crea un nuovo vettore."
+
+#: ../../docs/training_manual/processing/crs.rst:12
+msgid ""
+"If there are input layers, it will use the CRS of the first layer. This is "
+"assumed to be the CRS of all input layers, since they should have the same "
+"one. If you use layers with unmatching CRS's, QGIS will warn you about it. "
+"Notice that the CRS of input layers is shown along with its name in the "
+"parameters dialog."
+msgstr ""
+"Se ci sono vettori in ingresso, sarà utilizzato il CRS del primo vettore. Si"
+" presuppone che tale CRS sia quello di tutti i vettori in ingresso, siccome "
+"dovrebbe essere lo stesso per tutti. Se utilizzi vettori con CRS che non "
+"corrispondono, QGIS te lo notificherà. Nota che il CRS dei vettori in "
+"ingresso è mostrato insieme al suo nome nella finestra di dialogo dei "
+"parametri."
+
+#: ../../docs/training_manual/processing/crs.rst:19
+msgid ""
+"If there are no input layer, it will use the project CRS, unless the "
+"algorithm contains a specific CRS field (as it happened in the last lesson "
+"with the graticule algorithm)"
+msgstr ""
+"Se non ci sono layer in ingresso, userà il SR del progetto, a meno che "
+"l'algoritmo non contenga un campo SR specifico (come è successo nell'ultima "
+"lezione con l'algoritmo del reticolo)"
+
+#: ../../docs/training_manual/processing/crs.rst:23
+msgid ""
+"Open the project corresponding to this lesson and you will see two layers "
+"named 23030 and 4326. They both contain the same points, but in different "
+"CRSs (EPSG:23030 and EPSG:4326). They appear in the same place because QGIS "
+"is reprojecting on the fly to the project CRS (EPSG:4326), but they are not "
+"actually the same layer."
+msgstr ""
+"Apri il progetto corrispondente a questa lezione: noterai due vettori "
+"denominati 23030 e 4326. Entrambi contengono gli stessi punti, ma in CRS "
+"differenti (EPSG:23030 e EPSG:4326). Essi appaiono nella stessa posizione "
+"perché QGIS sta riproiettando al volo nel CRS del progetto (EPSG:4326), ma "
+"in realtà non rappresentano lo stesso vettore."
+
+#: ../../docs/training_manual/processing/crs.rst:29
+msgid "Open the *Export/Add geometry columns* algorithm."
+msgstr "Apri l'algoritmo *Esporta/Aggiungi colonne geometriche*."
+
+#: ../../docs/training_manual/processing/crs.rst:33
+msgid ""
+"This algorithm add new columns to the attributes table of a vector layer. "
+"The content of the columns depend on the type of geometry of the layer. In "
+"the case of points, it adds new columns with the X and Y coordinates of each"
+" point."
+msgstr ""
+"Questo algoritmo aggiunge nuove colonne alla tabella degli attributi di un "
+"vettore. Il contenuto delle colonne dipende dal tipo di geometria del "
+"vettore. Nel caso di punti, aggiunge nuove colonne con le coordinate X e Y "
+"di ogni punto."
+
+#: ../../docs/training_manual/processing/crs.rst:38
+msgid ""
+"In the list of available layers that you will find in the input layer field,"
+" you will see each one with its corresponding CRS. That means that, although"
+" they appear in the same place in your canvas, they will be treated "
+"differently. Select the 4326 layer."
+msgstr ""
+"Nella lista dei vettori disponibili che troverai nel campo del vettore in "
+"ingresso, vedrai ognuno di essi con il CRS corrispondente. Ciò significa "
+"che, sebbene appaiano nella stessa posizione sulla mappa, saranno trattati "
+"diversamente. Selezione il vettore 4326."
+
+#: ../../docs/training_manual/processing/crs.rst:43
+msgid ""
+"The other parameter of the algorithm allows to set how the algorithm uses "
+"coordinates to calculate the new value that it will add to the resulting "
+"layers. Most algorithms do not have an option like that, and just use the "
+"coordinates directly. Select the *Layer CRS* option to just use coordinates "
+"as they are. This is how almost all geoalgorithms work."
+msgstr ""
+"L'altro parametro dell'algoritmo permette di definire come l'algoritmo "
+"utilizza le coordinate per calcolare il nuovo valore che sarà aggiunto al "
+"vettore risultante. La maggior parte degli algoritmi non ha un'opzione "
+"simile, e usa direttamente le coordinate. Seleziona l'opzione *CRS del "
+"vettore* per usare le coordinate così come sono. Questo è il modo con cui "
+"funzionano quasi tutti gli algoritmi."
+
+#: ../../docs/training_manual/processing/crs.rst:49
+msgid ""
+"You should get a new layer with exactly the same points as the other two "
+"layers. If you right click on the name of the layer and open its properties,"
+" you will see that it shares the same CRS of the input layer, that is, "
+"EPSG:4326. When the layer is loaded into QGIS, you will not be asked to "
+"enter the CRS of the layer, since QGIS already knows about it."
+msgstr ""
+"Dovresti ottenere un nuovo vettore con gli stessi identici punti degli altri"
+" due vettori. Se fai click con il tasto destro sul nome del vettore e apri "
+"le sue proprietà, vedrai che ha lo stesso CRS del vettore in ingresso, che è"
+" EPSG:4326. Quando il vettore è caricato all'interno di QGIS, non ti sarà "
+"chiesto di inserire il CRS del vettore poiché QGIS già lo conosce."
+
+#: ../../docs/training_manual/processing/crs.rst:55
+msgid ""
+"If you open the attributes table of the new layer you will see that it "
+"contains two new fields with the X and Y coordinates of each point."
+msgstr ""
+"Se apri la tabella degli attributi del nuovo vettore, vedrai che conterrà "
+"due nuovi campi con le coordinate X e Y di ogni punto."
+
+#: ../../docs/training_manual/processing/crs.rst:60
+msgid ""
+"Those coordinate values are given in the layer CRS, since we chose that "
+"option. However, even if you choose another option, the output CRS of the "
+"layer would have been the same, since the input CRS is used to set the CRS "
+"of the output layer. Choosing another option will cause the values to be "
+"different, but not the resulting point to change or the CRS of the output "
+"layer to be different to the CRS of the input one."
+msgstr ""
+"Questi valori di coordinate sono forniti dal SR del layer, poiché abbiamo "
+"scelto questa opzione. Tuttavia, anche se scegli un'altra opzione, il SR in "
+"uscita del layer sarebbe stato lo stesso, poiché il SR in ingresso viene "
+"usato per impostare il SR del layer in uscita. Se si sceglie un'altra "
+"opzione, i valori saranno diversi, ma non il punto risultante da modificare "
+"o il SR del layer in uscita sarà diverso dal SR di quello d'ingresso."
+
+#: ../../docs/training_manual/processing/crs.rst:68
+msgid ""
+"Now do the same calculation using the other layer. You should find the "
+"resulting layer rendered exactly in the same place as the other ones, and it"
+" will have the EPSG:23030 CRS, since that was the one of the input layer."
+msgstr ""
+"Ora esegui la stessa operazione utilizzando l'altro vettore. Dovresti "
+"trovare il vettore risultante rappresentato esattamente nella stessa "
+"posizione degli altri, e avrà l'EPSG:23030 come CRS, poiché era questo "
+"quello del vettore in ingresso."
+
+#: ../../docs/training_manual/processing/crs.rst:72
+msgid ""
+"If you go to its attribute table, you will see values that are different to "
+"the ones in the first layer that we created."
+msgstr ""
+"Se vai alla sua tabella degli attributi, vedrai valori diversi rispetto a "
+"quelli nel primo vettore che abbiamo creato."
+
+#: ../../docs/training_manual/processing/crs.rst:77
+msgid ""
+"This is because the original data is different (it uses a different CRS), "
+"and those coordinates are taken from it."
+msgstr ""
+"Ciò perché i dati originali sono diversi (usano un CRS diverso), e le "
+"coordinate sono ricavate da essi."
+
+#: ../../docs/training_manual/processing/crs.rst:80
+msgid ""
+"What should you learn from this? The main idea behind these examples is that"
+" geoalgorithms use the layer as it is in its original data source, and "
+"completely ignore the reprojections that QGIS might be doing before "
+"rendering. In other words, do not trust what you see in the canvas, but "
+"always have in mind that the original data will be used. That is not so "
+"important in this case, since we are just using one single layer at a time, "
+"but in an algorithm that needs several of them (such as a clip algorithm), "
+"layers that appear to match or overlay might be very far one from each "
+"other, since they might have different CRSs."
+msgstr ""
+"Cosa dovresti imparare da questo? L'idea principale dietro questi esempi è "
+"che i geoalgoritmi usano il vettore così come si trova nella sua fonte "
+"originale dei dati, e ignorano completamente le riproiezioni che QGIS "
+"potrebbe fare prima di rappresentarli. In altre parole, non fidarti di "
+"quello che vedi nella mappa, ma tieni sempre in mente che saranno utilizzati"
+" i dati originali. Ciò non è così importante in questo caso poiché stiamo "
+"utilizzando un solo vettore per volta, ma in un algoritmo che ne utilizza di"
+" diversi (come un algoritmo di ritaglio), i vettori che sembrano combaciare "
+"o sovrapporsi possono essere molto lontani tra loro poiché possono avere CRS"
+" differenti."
+
+#: ../../docs/training_manual/processing/crs.rst:89
+msgid ""
+"Algorithms performs no reprojection (except in the reprojection algorithm "
+"that we will see next), so it is up to you to make sure that layers have "
+"matching CRS's."
+msgstr ""
+"Gli algoritmi non eseguono la riproiezione (tranne l'algoritmo di "
+"riproiezione che vedremo dopo), per cui devi essere tu ad assicurarti che i "
+"vettori abbiano lo stesso CRS."
+
+#: ../../docs/training_manual/processing/crs.rst:93
+msgid ""
+"An interesting module that deals with CRS's is the reprojection one. It "
+"represents a particular case, since it has an input layer (the one to "
+"reproject), but it will not use its CRS for the output one."
+msgstr ""
+"Un modulo interessante che ha a che fare con i CRS è quello di riproiezione."
+" Esso rappresenta un caso particolare poiché ha un vettore in ingresso "
+"(quello da riproiettare), ma non utilizza il suo CRS per quello in uscita."
+
+#: ../../docs/training_manual/processing/crs.rst:97
+msgid "Open the *Reproject layer* algorithm."
+msgstr "Apri l'algoritmo *Riproietta vettore*."
+
+#: ../../docs/training_manual/processing/crs.rst:101
+msgid ""
+"Select any of the layers as input, and select EPSG:23029 as the destination "
+"CRS. Run the algorithm and you will get a new layer, identical to the input "
+"one, but with a different CRS. It will appear on the same region of the "
+"canvas, like the other ones, since QGIS will reproject it on the fly, but "
+"its original coordinates are different. You can see that by running the "
+"*Export/Add geometry columns* algorithm using this new layer as input, and "
+"veryfing that the added coordinates are different to the ones in the "
+"attribute tables of both of the two layers that we had computed before."
+msgstr ""
+"Seleziona in ingresso un qualunque vettore, e seleziona EPSG:23029 come CRS "
+"di destinazione. Eseguendo l'algoritmo otterrai un nuovo vettore, identico a"
+" quello in ingresso, ma con un CRS diverso. Apparirà nella stessa regione "
+"della mappa, come gli altri, poiché QGIS lo riproietterà al volo, ma le sue "
+"coordinate di partenza sono diverse. Puoi notare ciò eseguendo l'algoritmo "
+"*Esporta/Aggiungi colonne geometriche* usando questo nuovo vettore in "
+"ingresso, e verificando che le coordinate aggiunte siano diverse rispetto a "
+"quelle nella tabella degli attributi di entrambi i vettori che abbiamo "
+"elaborato prima."

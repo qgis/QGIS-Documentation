@@ -1,0 +1,331 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# tomoyuki arai <tarai.3367@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:26+0000\n"
+"Last-Translator: tomoyuki arai <tarai.3367@gmail.com>, 2020\n"
+"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:5
+msgid "Working with Mesh Data"
+msgstr "メッシュデータの操作"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:13
+msgid "What's a mesh?"
+msgstr "メッシュとは？"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:21
+msgid ""
+"**faces** - a face is a set of edges forming a closed shape - typically a "
+"triangle or a quadrilateral (quad), rarely polygons with more vertices"
+msgstr "**面** - 面は閉じた形状を形成する辺の集合です。通常は三角形または四辺形（quad）ですが、頂点数が多い多角形はめったにありません。"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:30
+msgid "Different mesh types"
+msgstr "さまざまなメッシュタイプ"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:32
+msgid "QGIS can currently render mesh data using triangles or regular quads."
+msgstr "QGISでは現在、三角形または正四角形を使用してメッシュデータをレンダリングできます。"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:34
+msgid ""
+"Mesh provides information about the spatial structure. In addition, the mesh"
+" can have datasets (groups) that assign a value to every vertex. For "
+"example, having a triangular mesh with numbered vertices as shown in the "
+"image below:"
+msgstr ""
+"メッシュは空間構造に関する情報を提供します。さらに、メッシュはすべての頂点に値を割り当てるデータセット（グループ）を持つことができます。たとえば、次の図に示すように頂点が番号付けされた三角メッシュを作成します："
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:45
+msgid ""
+"Each vertex can store different datasets (typically multiple quantities), "
+"and those datasets can also have a temporal dimension. Thus, a single file "
+"may contain multiple datasets."
+msgstr ""
+"各頂点は異なるデータセット（通常は複数の数量）を格納でき、それらのデータセットは時間的な次元を持つこともできます。したがって、1つのファイルに複数のデータセットを含めることができます。"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:49
+msgid ""
+"The following table gives an idea about the information that can be stored "
+"in mesh datasets. Table columns represent indices of mesh vertices, each row"
+" represents one dataset. Datasets can have different datatypes. In this "
+"case, it stores wind velocity at 10m at a particular moments in time (t1, "
+"t2, t3)."
+msgstr ""
+"次の表は、メッシュデータセットに格納できる情報についての概念を示しています。テーブルの列はメッシュの頂点のインデックスを表し、各行は1つのデータセットを表します。データセットはさまざまなデータ型を持つことができます。この場合、それには時間内の特定の瞬間（t1、t2、t3）での地上10mでの風速が格納されます。"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:55
+msgid ""
+"In a similar way, the mesh dataset can also store vector values for each "
+"vertex. For example, wind direction vector at the given time stamps:"
+msgstr "同様に、メッシュデータセットは各頂点のベクトル値も格納できます。たとえば、与えられたタイムスタンプでの風向ベクトルは、"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:59
+msgid "1"
+msgstr "1"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:59
+msgid "2"
+msgstr "2"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:59
+msgid "3"
+msgstr "3"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:61
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:63
+msgid "17251"
+msgstr "17251"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:61
+msgid "24918"
+msgstr "24918"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:61
+msgid "32858"
+msgstr "32858"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:62
+msgid "19168"
+msgstr "19168"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:62
+msgid "23001"
+msgstr "23001"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:62
+msgid "36418"
+msgstr "36418"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:63
+msgid "21085"
+msgstr "21085"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:63
+msgid "30668"
+msgstr "30668"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:65
+msgid "[20,2]"
+msgstr "[20,2]"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:65
+msgid "[20,3]"
+msgstr "[20,3]"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:65
+msgid "[20,4.5]"
+msgstr "[20,4.5]"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:66
+msgid "[21,3]"
+msgstr "[21,3]"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:66
+msgid "[21,4]"
+msgstr "[21,4]"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:66
+msgid "[21,5.5]"
+msgstr "[21,5.5]"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:67
+msgid "[22,4]"
+msgstr "[22,4]"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:67
+msgid "[22,5]"
+msgstr "[22,5]"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:67
+msgid "[22,6.5]"
+msgstr "[22,6.5]"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:71
+msgid ""
+"We can visualize the data by assigning colors to values (similarly to how it"
+" is done with :ref:`Singleband pseudocolor <label_colormaptab>` raster "
+"rendering) and interpolating data between vertices according to the mesh "
+"topology. It is common that some quantities are 2D vectors rather than being"
+" simple scalar values (e.g. wind direction). For such quantities it is "
+"desirable to display arrows indicating the directions."
+msgstr ""
+"色を値に割り当てて （ :ref:`Singleband pseudocolor <label_colormaptab>` ラスタレンダリングと同様に）"
+" "
+"、メッシュトポロジに従って頂点間でデータを補間することでデータを視覚化できます。いくつかの量が単純なスカラー値ではなく２Ｄベクトルであることはよくあることです（例えば風向）。そのような量については、方向を示す矢印を表示することが望ましい。"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:88
+msgid "Supported formats"
+msgstr "サポートされる形式"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:109
+msgid "Mesh Dataset Properties"
+msgstr "メッシュデータセットのプロパティ"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:112
+msgid "Information Properties"
+msgstr "情報プロパティ"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:119
+msgid "Mesh Layer Properties"
+msgstr "メッシュレイヤのプロパティ"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:121
+msgid ""
+"The :guilabel:`Information` tab is read-only and represents an interesting "
+"place to quickly grab summarized information and metadata on the current "
+"layer. Provided information are (based on the provider of the layer) uri, "
+"vertex count, face count and dataset groups count."
+msgstr ""
+":guilabel:`情報` "
+"タブは読み取り専用で、現在のレイヤーの要約された情報とメタデータを素早くつかむための興味深い場所を表しています。提供される情報は、（レイヤのプロバイダに基づく）URI、頂点数、面数、およびデータセットグループ数です。"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:127
+msgid "Source Properties"
+msgstr "ソースプロパティ"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:129
+msgid ""
+"The :guilabel:`Source` tab displays basic information about the selected "
+"mesh, including:"
+msgstr "：guilabel：:guilabel:`ソース` タブは選択されたメッシュに関する基本的な情報を表示します、たとえば："
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:140
+msgid ""
+"Use the :guilabel:`Assign Extra Dataset to Mesh` button to add more groups "
+"to the current mesh layer."
+msgstr ""
+"現在のメッシュレイヤにさらにグループを追加するには、 :guilabel:`メッシュへの追加データセットの割り当て` ボタンを使用してください。"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:144
+msgid "Symbology Properties"
+msgstr "シンボロジプロパティ"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:159
+msgid ":ref:`General <mesh_symbology_general>`"
+msgstr ":ref:`一般 <mesh_symbology_general>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:160
+msgid ":ref:`Contours Symbology <mesh_symbology_contours>`"
+msgstr ":ref:`等高線の表記法 <mesh_symbology_contours>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:161
+msgid ":ref:`Vectors Symbology <mesh_symbology_vectors>`"
+msgstr ":ref:`ベクタの表記法 <mesh_symbology_contours>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:162
+msgid ":ref:`Rendering <mesh_symbology_rendering>`"
+msgstr ":ref:`レンダリング<mesh_symbology_rendering>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:167
+msgid "General"
+msgstr "一般"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:199
+msgid "Contours Symbology"
+msgstr "等高線の表記法"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:213
+msgid "Styling Contours in a Mesh Layer"
+msgstr "メッシュレイヤで等高線のスタイルを設定する"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:219
+msgid ""
+"The :guilabel:`Interpolation` list contains three options to render "
+"contours: :guilabel:`Linear`, :guilabel:`Discrete` and :guilabel:`Exact`."
+msgstr ""
+":guilabel:`補間` リストには、等高線を描画するための3つのオプションがあります： :guilabel:`線形` 、 :guilabel: "
+"`離散` 、 :guilabel:`正確` 。"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:224
+msgid ""
+"The :guilabel:`Label unit suffix` is a label added after the value in the "
+"legend."
+msgstr ":guilabel:`ラベル単位接尾辞` は凡例の値の後に追加されるラベルです。"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:231
+msgid ""
+"The button |signPlus| :sup:`Add values manually` adds a value to the "
+"individual color table. The button |signMinus| :sup:`Remove selected row` "
+"deletes a value from the individual color table. Double clicking on the "
+"value column lets you insert a specific value. Double clicking on the color "
+"column opens the dialog :guilabel:`Change color`, where you can select a "
+"color to apply on that value."
+msgstr ""
+"ボタン |signPlus| :sup:`手動で値を追加` は個々のカラーテーブルに値を追加します。ボタン |signMinus| "
+":sup:`選択した行を削除` "
+"は個々のカラーテーブルから値を削除します。値の列をダブルクリックすると、特定の値を挿入できます。色の列をダブルクリックすると、ダイアログ "
+":guilabel:`色の変更` が開き、その値に適用する色を選択できます。"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:241
+msgid "Vectors Symbology"
+msgstr "ベクタの表記法"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:253
+msgid "Styling Vectors in a Mesh Layer"
+msgstr "メッシュレイヤでベクタのスタイルを設定する"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:255
+msgid ""
+"The line width can be set using the combo box or typing the value. The color"
+" widget opens the dialog :guilabel:`Change color`, where you can select a "
+"color to apply to vectors."
+msgstr ""
+"線幅はコンボボックスまたは値を入力して設定できます。カラーウィジェットはダイアログ :guilabel:`色の変更` "
+"を開きます。ここでベクトルに適用する色を選択できます。"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:261
+msgid ""
+"Check on the box |checkbox| :guilabel:`Display Vectors on User Grid` and "
+"specify the :guilabel:`X spacing` and the :guilabel:`Y spacing`, QGIS will "
+"render the vector considering the given spacing."
+msgstr ""
+"チェックボックス :guilabel:`ユーザーグリッドにベクトルを表示する` をオンにして :guilabel:`Xの間隔` と "
+":guilabel:`Yの間隔` を指定すると、QGISは与えられた間隔を考慮してベクトルを描画します。"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:268
+msgid ""
+"Vector's :guilabel:`Arrow length` can be rendered in QGIS in three different"
+" ways:"
+msgstr "ベクタの :guilabel:`矢印の長さ` は3つの異なる方法でQGISで描画できます。"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:270
+msgid ""
+"Defined by Min and Max: You specify the minimum and maximum length for the "
+"vectors, QGIS will adjust their visualization accordingly"
+msgstr "最小値と最大値で定義：ベクトルの最小長と最大長を指定します。QGISはそれに応じて視覚化を調整します。"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:272
+msgid "Scale to magnitude: You specify the (multiplying) factor to use"
+msgstr "大きさへのスケール：使用する（倍率）係数を指定します"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:273
+msgid "Fixed: all the vectors are shown with the same length"
+msgstr "固定：すべてのベクトルが同じ長さで表示されます"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:278
+msgid "Rendering"
+msgstr "レンダリング"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:295
+msgid ""
+"The line width and color can be changed in this dialog, and both the grid "
+"renderings can be turned off."
+msgstr "このダイアログでは線幅と色を変更でき、両方のグリッドレンダリングをオフにできます。"

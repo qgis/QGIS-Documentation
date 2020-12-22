@@ -1,0 +1,160 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:31+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Italian (https://www.transifex.com/qgis/teams/6144/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/user_manual/processing/console.rst:4
+msgid "Using processing algorithms from the console"
+msgstr "Usare gli algoritmi di Processing dalla console dei comandi"
+
+#: ../../docs/user_manual/processing/console.rst:11
+msgid ""
+"The console allows advanced users to increase their productivity and perform"
+" complex operations that cannot be performed using any of the other GUI "
+"elements of the processing framework. Models involving several algorithms "
+"can be defined using the command-line interface, and additional operations "
+"such as loops and conditional sentences can be added to create more flexible"
+" and powerful workflows."
+msgstr ""
+"La console permette ad utenti esperti di aumentare la propria produttività e"
+" di eseguire operazioni complesse che non possono essere eseguite "
+"utilizzando uno qualsiasi degli altri elementi dell'interfaccia grafica di "
+"Processing. I modelli che richiamano diversi algoritmi possono essere "
+"definiti utilizzando l'interfaccia della riga di comando, e le operazioni "
+"aggiuntive, come i loop e le frasi condizionali possono essere aggiunte per "
+"creare flussi di lavoro più flessibili e potenti. "
+
+#: ../../docs/user_manual/processing/console.rst:24
+msgid ""
+"The code that you can execute from the Python console, even if it does not "
+"call any specific processing method, can be converted into a new algorithm "
+"that you can later call from the toolbox, the graphical modeler or any other"
+" component, just like you do with any other algorithm. In fact, some "
+"algorithms that you can find in the toolbox are simple scripts."
+msgstr ""
+"Il codice che puoi eseguire dalla console di python, anche se non richiama "
+"un metodo specifico di Processing, può essere convertito in un nuovo "
+"algoritmo che potrai richiamare in seguito dagli Strumenti, dal Modellatore "
+"grafico o da qualunque altra parte, proprio come ogni altro algoritmo. "
+"Alcuni algoritmi che trovi in Strumenti sono in effetti degli script "
+"semplici."
+
+#: ../../docs/user_manual/processing/console.rst:31
+msgid ""
+"In this section, we will see how to use processing algorithms from the QGIS "
+"Python console, and also how to write algorithms using Python."
+msgstr ""
+"In questa sezione verrà spiegato come usare gli algoritmi di Processing "
+"dalla console di Python e anche come scrivere un algoritmo usando Python."
+
+#: ../../docs/user_manual/processing/console.rst:35
+msgid "Calling algorithms from the Python console"
+msgstr "Richiamare algoritmi dalla console di python"
+
+#: ../../docs/user_manual/processing/console.rst:37
+msgid ""
+"The first thing you have to do is to import the processing functions with "
+"the following line:"
+msgstr ""
+"La prima cosa da fare è importare le funzioni di Processing con la seguente "
+"istruzione:"
+
+#: ../../docs/user_manual/processing/console.rst:251
+msgid ""
+"Depending on the type of parameter, values are introduced differently. The "
+"next list gives a quick review of how to introduce values for each type of "
+"input parameter:"
+msgstr ""
+"A seconda del tipo di parametro, i valori sono inseriti in maniera diversa. "
+"Il seguente elenco dà una rapida panoramica di come inserire valori per ogni"
+" tipo di parametro in input:"
+
+#: ../../docs/user_manual/processing/console.rst:283
+msgid ""
+"Multiple input. The value is a string with input descriptors separated by "
+"semicolons (``;``). As in the case of single layers or tables, each input "
+"descriptor can be the data object name, or its file path."
+msgstr ""
+"Input multipli. Il valore è una stringa con descrittori in input separati da"
+" un punto e virgola (``;``). Come nel caso di layer singoli o tabelle, ogni "
+"descrittore in input può essere il nome dell'oggetto o il suo percorso."
+
+#: ../../docs/user_manual/processing/console.rst:286
+msgid ""
+"Table Field from XXX. Use a string with the name of the field to use. This "
+"parameter is case-sensitive."
+msgstr ""
+"Campo di una Tabella da XXX. Inserisci una stringa con il nome del campo da "
+"usare. Il parametro è sensibile alle lettere maiuscole."
+
+#: ../../docs/user_manual/processing/console.rst:288
+msgid ""
+"Fixed Table. Type the list of all table values separated by commas (``,``) "
+"and enclosed between quotes (``\"``). Values start on the upper row and go "
+"from left to right. You can also use a 2-D array of values representing the "
+"table."
+msgstr ""
+"Tabella fissa. Inserisci l'elenco di tutti i valori delle tabelle separati "
+"da una virgola (``,``) e racchiusi fra virgolette (``\"``). I valori partono"
+" dalla riga in alto e proseguono da sinistra verso destra. Puoi usare un "
+"array 2-D per i valori che rappresentano la tabella."
+
+#: ../../docs/user_manual/processing/console.rst:291
+msgid "CRS. Enter the EPSG code number of the desired CRS."
+msgstr "SR. Inserisci il codice EPSG del SR desiderato."
+
+#: ../../docs/user_manual/processing/console.rst:292
+msgid ""
+"Extent. You must use a string with ``xmin``, ``xmax``, ``ymin`` and ``ymax``"
+" values separated by commas (``,``)."
+msgstr ""
+"Estensione. Usa un stringa con valori ``xmin``, ``xmax``, ``ymin`` e "
+"``ymax`` separati da virgole (``,``)."
+
+#: ../../docs/user_manual/processing/console.rst:295
+msgid ""
+"Boolean, file, string and numerical parameters do not need any additional "
+"explanations."
+msgstr ""
+"Parametri booleani, di file, di stringa e numerici non hanno bisogno di "
+"ulteriori spiegazioni."
+
+#: ../../docs/user_manual/processing/console.rst:370
+msgid "Creating scripts and running them from the toolbox"
+msgstr "Creare script ed eseguirli da Strumenti "
+
+#: ../../docs/user_manual/processing/console.rst:590
+msgid "Documenting your scripts"
+msgstr "Documentare gli script"
+
+#: ../../docs/user_manual/processing/console.rst:605
+msgid "Pre- and post-execution script hooks"
+msgstr "Script agganciati pre e post esecuzione"
+
+#: ../../docs/user_manual/processing/console.rst:611
+msgid ""
+"The syntax is identical to the syntax explained above, but an additional "
+"global variable named ``alg`` is available, representing the algorithm that "
+"has just been (or is about to be) executed."
+msgstr ""
+"La sintassi è identica alla sintassi spiegato sopra, ma hai a disposizione "
+"anche una variabile globale chiamata ``alg`` che rappresenta l'algoritmo che"
+" è appena (o che sarà) stato eseguito."

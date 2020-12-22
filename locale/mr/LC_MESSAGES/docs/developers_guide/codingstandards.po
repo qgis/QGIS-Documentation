@@ -1,0 +1,300 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:24+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Marathi (https://www.transifex.com/qgis/teams/6144/mr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: mr\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/developers_guide/codingstandards.rst:5
+msgid "QGIS Coding Standards"
+msgstr "QGIS कोडींग मानक"
+
+#: ../../docs/developers_guide/codingstandards.rst:10
+msgid "These standards should be followed by all QGIS developers."
+msgstr "हे मानक सर्व QGIS डेव्हलपर्स द्वारे अनुसरण केले पाहिजे"
+
+#: ../../docs/developers_guide/codingstandards.rst:13
+msgid "Classes"
+msgstr "वर्ग"
+
+#: ../../docs/developers_guide/codingstandards.rst:17
+#: ../../docs/developers_guide/codingstandards.rst:212
+msgid "Names"
+msgstr "नावे"
+
+#: ../../docs/developers_guide/codingstandards.rst:19
+msgid "Class in QGIS begin with Qgs and are formed using camel case."
+msgstr "QGIS मध्ये वर्ग Qgs पासून सुरू आणि ऊंट केस वापरून स्थापना केली आहेत."
+
+#: ../../docs/developers_guide/codingstandards.rst:21
+#: ../../docs/developers_guide/codingstandards.rst:191
+#: ../../docs/developers_guide/codingstandards.rst:263
+msgid "Examples:"
+msgstr "उदाहरणे:"
+
+#: ../../docs/developers_guide/codingstandards.rst:23
+msgid "``QgsPoint``"
+msgstr "``QgsPoint``"
+
+#: ../../docs/developers_guide/codingstandards.rst:24
+msgid "``QgsMapCanvas``"
+msgstr "`` QgsMapCanvas``"
+
+#: ../../docs/developers_guide/codingstandards.rst:25
+msgid "``QgsRasterLayer``"
+msgstr "``QgsRasterLayer``"
+
+#: ../../docs/developers_guide/codingstandards.rst:29
+msgid "Members"
+msgstr "सदस्य"
+
+#: ../../docs/developers_guide/codingstandards.rst:32
+msgid ""
+"Class member names begin with a lower case m and are formed using mixed "
+"case."
+msgstr ""
+"क्लास सदस्याचे नावे लोअर केस एमपासून सुरू होतात आणि मिश्र केस वापरून तयार "
+"केले जातात."
+
+#: ../../docs/developers_guide/codingstandards.rst:35
+msgid "``mMapCanvas``"
+msgstr "``mMapCanvas``"
+
+#: ../../docs/developers_guide/codingstandards.rst:36
+msgid "``mCurrentExtent``"
+msgstr "``mCurrentExtent``"
+
+#: ../../docs/developers_guide/codingstandards.rst:38
+msgid ""
+"All class members should be private. Public class members are STRONGLY "
+"discouraged. Protected members should be avoided when the member may need to"
+" be accessed from Python subclasses, since protected members cannot be used "
+"from the Python bindings."
+msgstr ""
+"सर्व वर्ग सदस्य खासगी असावेत. सार्वजनिक वर्ग सदस्य कठोरपणे निराश आहेत. "
+"पायथॉन उपवर्गांमधून सदस्याला ऍक्सेस करणे आवश्यक असताना संरक्षित सदस्यांना "
+"टाळले पाहिजे, कारण संरक्षित सदस्यांना पायथन बाईंडिंगमधून वापरता येत नाही."
+
+#: ../../docs/developers_guide/codingstandards.rst:46
+msgid "``sRefCounter``"
+msgstr "``sRefCounter``"
+
+#: ../../docs/developers_guide/codingstandards.rst:47
+msgid "``DEFAULT_QUEUE_SIZE``"
+msgstr "\"मुलभूत_रांग_आकार\""
+
+#: ../../docs/developers_guide/codingstandards.rst:51
+msgid "Accessor Functions"
+msgstr "अॅक्सेसर फंक्शन्स"
+
+#: ../../docs/developers_guide/codingstandards.rst:54
+msgid ""
+"Class member values should be obtained through accesssor functions. The "
+"function should be named without a get prefix. Accessor functions for the "
+"two private members above would be:"
+msgstr ""
+"क्लास सदस्यांची मूल्ये ऍक्सेससॉर फंक्शनद्वारे मिळवली पाहिजेत. फंक्शनला "
+"प्राप्त प्रिफिक्सशिवाय नाव द्यावे. उपरोक्त दोन खासगी सदस्यांकरिता ऍक्सेसर "
+"फंक्शन्स असतील:"
+
+#: ../../docs/developers_guide/codingstandards.rst:58
+msgid "``mapCanvas()``"
+msgstr "``mapCanvas()``"
+
+#: ../../docs/developers_guide/codingstandards.rst:59
+msgid "``currentExtent()``"
+msgstr "`` वर्तमानएक्सेंट () ``"
+
+#: ../../docs/developers_guide/codingstandards.rst:61
+msgid ""
+"Ensure that accessors are correctly marked with ``const``. Where "
+"appropriate, this may require that cached value type member variables are "
+"marked with ``mutable``."
+msgstr ""
+"खात्री करा की अभिज्ञापक `` const_`` बरोबर योग्यरित्या चिन्हांकित केले आहेत. "
+"जिथे योग्य असेल तिथे त्यास कॅश मूल्य प्रकार सदस्य परिवर्तने `` अस्थिर`` "
+"चिन्हांकित करणे आवश्यक आहे."
+
+#: ../../docs/developers_guide/codingstandards.rst:66
+msgid "Functions"
+msgstr "कार्ये"
+
+#: ../../docs/developers_guide/codingstandards.rst:69
+msgid ""
+"Function names begin with a lowercase letter and are formed using mixed "
+"case. The function name should convey something about the purpose of the "
+"function."
+msgstr ""
+"फंक्शनचे नावे लोअरकेस अक्षराने सुरू होतात आणि मिश्र केस वापरून बनतात. "
+"फंक्शनचे नाव कार्याच्या उद्देशाबद्दल काहीतरी व्यक्त करणे आवश्यक आहे."
+
+#: ../../docs/developers_guide/codingstandards.rst:72
+msgid "``updateMapExtent()``"
+msgstr "`` UpdateMapExtent () ``"
+
+#: ../../docs/developers_guide/codingstandards.rst:73
+msgid "``setUserOptions()``"
+msgstr "`` SetUserOptions () ``"
+
+#: ../../docs/developers_guide/codingstandards.rst:75
+msgid ""
+"For consistency with the existing QGIS API and with the Qt API, "
+"abbreviations should be avoided. E.g. ``setDestinationSize`` instead of "
+"``setDestSize``, ``setMaximumValue`` instead of ``setMaxVal``."
+msgstr ""
+"विद्यमान QGIS API आणि Qt API सह सुसंगततेसाठी, संक्षेप टाळावे. उदा. `` "
+"SetMaxVal`` च्या ऐवजी `` setDestSize`` च्या ऐवजी `सेट्सस्टेशनसिझम` सेट करा,`"
+" `सेटमॅक्सवाइव्हल व्हेल`` ठेवा."
+
+#: ../../docs/developers_guide/codingstandards.rst:79
+msgid ""
+"Acronyms should also be camel cased for consistency. E.g. ``setXml`` instead"
+" of ``setXML``."
+msgstr ""
+"एकाग्रता देखील उंट कोंडीत असणे आवश्यक आहे. उदा. `` सेट XML`` च्या ऐवजी `` "
+"सेट Xml``."
+
+#: ../../docs/developers_guide/codingstandards.rst:84
+msgid "Function Arguments"
+msgstr "कार्य आर्ग्युमेंटस"
+
+#: ../../docs/developers_guide/codingstandards.rst:91
+msgid ""
+"Pay careful attention to when arguments should be passed by reference. "
+"Unless argument objects are small and trivially copied (such as QPoint "
+"objects), they should be passed by const reference. For consistency with the"
+" Qt API, even implicitly shared objects are passed by const reference (e.g. "
+"``setTitle( const QString& title )`` instead of ``setTitle( QString title "
+")``."
+msgstr ""
+"संदर्भानुसार तर्क विपरीत असतांना काळजीपूर्वक लक्ष द्या. जेव्हा वितर्क वस्तू "
+"लहान आणि क्षुल्लकपणे कॉपी केल्या जातात (जसे की QPoint ऑब्जेक्ट), त्यास "
+"संदर्भ संदर्भ द्वारे पुरवले जावे. Qt API सह सुसंगततेसाठी, अगदी सूचकपणे "
+"सामायिक ऑब्जेक्ट const संदर्भ (उदा. `` सेटथिटल (कस्टस्ट्रिंग शीर्षक) `` "
+"सेटटिटल (क्यूस्ट्रिंग शीर्षक) `` च्याऐवजी `सेट सेटिटल (कॉन्स्ट क्यूस्ट्रिंग "
+"अँड टोटल)` `."
+
+#: ../../docs/developers_guide/codingstandards.rst:100
+msgid "Function Return Values"
+msgstr "कार्य रिटर्न मूल्ये."
+
+#: ../../docs/developers_guide/codingstandards.rst:107
+msgid "``int maximumValue() const``"
+msgstr "`` जास्तीत जास्त व्हॅल्यू () const ``"
+
+#: ../../docs/developers_guide/codingstandards.rst:108
+msgid "``const LayerSet& layers() const``"
+msgstr "`` मांडले स्तर सेट आणि स्तर () const``"
+
+#: ../../docs/developers_guide/codingstandards.rst:183
+msgid "Qt Designer"
+msgstr "क्यूटी डिझाइनर"
+
+#: ../../docs/developers_guide/codingstandards.rst:186
+msgid "Generated Classes"
+msgstr "व्युत्पन्न केलेले वर्ग"
+
+#: ../../docs/developers_guide/codingstandards.rst:188
+msgid ""
+"QGIS classes that are generated from Qt Designer (ui) files should have a "
+"Base suffix. This identifies the class as a generated base class."
+msgstr ""
+"Qt डिज़ाइनर (ui) फायलींतून बनविलेल्या QGIS क्लासेसमध्ये बेस प्रत्यय असावा. "
+"हे वर्ग एक व्युत्पन्न बेस क्लास म्हणून ओळखले जाते."
+
+#: ../../docs/developers_guide/codingstandards.rst:193
+msgid "``QgsPluginManagerBase``"
+msgstr "`` QgsPluginManagerBase``"
+
+#: ../../docs/developers_guide/codingstandards.rst:194
+msgid "``QgsUserOptionsBase``"
+msgstr "``QgsUserOptionsBase``"
+
+#: ../../docs/developers_guide/codingstandards.rst:198
+msgid "Dialogs"
+msgstr "संवाद"
+
+#: ../../docs/developers_guide/codingstandards.rst:200
+msgid ""
+"All dialogs should implement tooltip help for all toolbar icons and other "
+"relevant widgets. Tooltips add greatly to feature discoverability for both "
+"new and experienced users."
+msgstr ""
+"सर्व संवादांनी सर्व टूलबार चिन्हे आणि इतर संबंधित विजेटसाठी टूलटिप मदत "
+"वापरावी. टूलटिप दोन्ही नवीन आणि अनुभवी वापरकर्त्यांसाठी शोधकक्षमता "
+"दर्शविण्यासाठी मोठ्या प्रमाणात जोडतात."
+
+#: ../../docs/developers_guide/codingstandards.rst:204
+msgid ""
+"Ensure that the tab order for widgets is updated whenever the layout of a "
+"dialog changes."
+msgstr "संवादची लेआउट बदलते याची खात्री करा."
+
+#: ../../docs/developers_guide/codingstandards.rst:209
+msgid "C++ Files"
+msgstr "C++ फायली"
+
+#: ../../docs/developers_guide/codingstandards.rst:214
+msgid ""
+"C++ implementation and header files should have a .cpp and .h extension "
+"respectively. Filename should be all lowercase and, in the case of classes, "
+"match the class name."
+msgstr ""
+"C ++ लागूकरण आणि शीर्षलेख फाइल्समध्ये अनुक्रमे एक .cpp आणि .h विस्तार असणे "
+"आवश्यक आहे. फाइलनाव सर्व लोअरकेसम असावा आणि, क्लासेसच्या बाबतीत, क्लासचे नाव"
+" जुळेल."
+
+#: ../../docs/developers_guide/codingstandards.rst:222
+msgid ""
+"In case it is not clear from the statement above, for a filename to match a "
+"class name it implicitly means that each class should be declared and "
+"implemented in its own file. This makes it much easier for newcomers to "
+"identify where the code is relating to specific class."
+msgstr ""
+"जर वरील विधानावरून हे स्पष्ट नाही तर एखाद्या फाइलचे नाव जुळण्यासाठी एक "
+"फाईलचे नाव असावा म्हणजे प्रत्येक वर्ग घोषित आणि कार्यान्वित केला पाहिजे. हे "
+"कोड विशिष्ट कोडशी संबंधित कोठे आहे हे ओळखण्यास नवीनांना सोपे करते."
+
+#: ../../docs/developers_guide/codingstandards.rst:229
+msgid "Standard Header and License"
+msgstr "मानक हैडर आणि परवाना"
+
+#: ../../docs/developers_guide/codingstandards.rst:231
+msgid ""
+"Each source file should contain a header section patterned after the "
+"following example:"
+msgstr ""
+"प्रत्येक स्रोत फाइलमध्ये खालील उदाहरणा नंतर नमुन्याचे शीर्षलेख भाग असणे "
+"आवश्यक आहे:"
+
+#: ../../docs/developers_guide/codingstandards.rst:251
+msgid ""
+"There is a template for Qt Creator in git. To use it, copy it from "
+":file:`doc/qt_creator_license_template` to a local location, adjust the mail"
+" address and - if required - the name and configure QtCreator to use it: "
+":menuselection:`Tools --> Options --> C++ --> File Naming`."
+msgstr ""
+"Git मध्ये Qt क्रिएटरमध्ये एक टेम्प्लेट आहे. याचा वापर करण्यासाठी, फाइल: `doc"
+" / qt_creator_license_template` ला स्थानिक ठिकाणावर कॉपी करा, मेल पत्ता "
+"समायोजित करा आणि - जर आवश्यक असेल तर - नाव वापरा व त्यास क्यूटी कटर वापरा: "
+"कॉन्फिगर करा: menuselection:` टूल्स -> ऑप्शन्स -> सी ++ -> फाईल नेमिंग `"
+
+#: ../../docs/developers_guide/codingstandards.rst:352
+msgid "Braces"
+msgstr "ब्रेन्स"

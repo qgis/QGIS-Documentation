@@ -1,0 +1,340 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:21+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Romanian (https://www.transifex.com/qgis/teams/6144/ro/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:2
+msgid "|LS| DEM from LiDAR Data"
+msgstr "|LS| Crearea unui DEM din datele LiDAR"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:4
+msgid ""
+"You can improve the look of your maps by using different background images. "
+"You could use the basic map or the aerial image you have been using before, "
+"but a hillshade raster of the terrain will look nicer in some situations."
+msgstr ""
+"Puteți îmbunătăți aspectul hărți folosind diverse imagini de fundal. Ați "
+"putea folosi harta de bază sau imaginile aeriene pe care le-ați utilizat "
+"înainte, dar un raster cu relieful terenului va arata mai frumos în anumite "
+"situații."
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:8
+msgid ""
+"You will use LAStools to extract a DEM from a LiDAR dataset and then create "
+"a hillshade raster to use in your map presentation later."
+msgstr ""
+"Veți folosi LAStools pentru a extrage un DEM dintr-un set de date LIDAR, și "
+"apoi să creați un raster al reliefului pe care să-l folosiți mai târziu în "
+"prezentarea hărții dvs."
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:11
+msgid ""
+"**The goal for this lesson:** Install LAStools and calculate a DEM from "
+"LiDAR data and a hillshade raster."
+msgstr ""
+"**Scopul acestei lecții:** Instalarea LAStools și calcularea unui DEM din "
+"datele LiDAR și dintr-un raster cu relieful."
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:16
+msgid "|basic| |FA| Installing Lastools"
+msgstr "|basic| |FA| Instalarea Lastools"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:21
+msgid ""
+"You can obtain a digital elevation model (DEM) from a LiDAR point cloud and "
+"then create a hillshade raster that is visually more intuitive for "
+"presentation purposes. First you will have to set up the "
+":guilabel:`Processing` framework settings to properly work with LAStools:"
+msgstr ""
+"Puteți obține un model de elevație digital (DEM), dintr-un nor de puncte "
+"LiDAR, iar ulterior se poate crea un raster al umbririi reliefului, care "
+"este vizual mai intuitiv în scopuri de prezentare. În primul rând, va trebui"
+" să configurați setările cadrului de lucru :guilabel:`Processing` pentru a "
+"lucra în mod corespunzător cu LAStools:"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:26
+msgid "Close QGIS, if you have already started it."
+msgstr "Închideți QGIS, dacă ați început deja."
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:27
+msgid ""
+"An old lidar plugin might be installed by default in your system in the "
+"folder :file:`C:/Program Files/QGIS "
+"Valmiera/apps/qgis/python/plugins/processing/`."
+msgstr ""
+"Un plugin LiDAR vechi ar putea fi deja instalat în sistemul dvs., în dosarul"
+" :file:`C:/Program Files/QGIS "
+"Valmiera/apps/qgis/python/plugins/processing/`."
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:29
+msgid ""
+"If you have a folder named :kbd:`lidar`, delete it. This is valid for some "
+"installations of QGIS 2.2 and 2.4."
+msgstr ""
+"Dacă aveți un folder denumit :kbd:`lidar`, ștergeți-l. Acest lucru este "
+"valabil pentru anumite instalări de QGIS 2.2 și 2.4."
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:47
+msgid ""
+"Read the :kbd:`LICENSE.txt` file inside the :kbd:`lastools` folder. Some of "
+"the LAStools are open source and other are closed source and require "
+"licensing for most commercial and governmental use.  For education and "
+"evaluation purposes you can use and test LAStools as much as you need to."
+msgstr ""
+"Citiți fișierul :kbd:`LICENSE.txt` din interiorul folderului "
+":kbd:`lastools`. Unele dintre aceste instrumente LAS sunt gratuite, pe când "
+"altele nu, acestea necesitând licențiere pentru utilizare comercială și "
+"guvernamentală. În scopuri educaționale sau de evaluare, puteți utiliza și "
+"testa LAStools oricât de mult doriți."
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:52
+msgid ""
+"The plugin and the actual algorithms are now installed in your computer and "
+"almost ready to use, you just need to set up the Processing framework to "
+"start using them:"
+msgstr ""
+"Plugin-ul și algoritmii curenți sunt de acum instalați în computerul dvs., "
+"aproape gata de utilizare, fiind nevoie doar să configurați cadrul de lucru "
+"Processing pentru a începe utilizarea lor:"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:55
+msgid "Open a new project in QGIS."
+msgstr "Deschideți un nou proiect în QGIS."
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:56
+msgid "Set the project's CRS to :kbd:`ETRS89 / ETRS-TM35FIN`."
+msgstr "Setați :kbd:`ETRS89 / ETRS-TM35FIN` ca CRS al proiectului."
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:57
+msgid "Save the project as :kbd:`forest_lidar.qgs`."
+msgstr "Salvați proiectul ca :kbd:`forest_lidar.qgs`."
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:59
+msgid "To setup the LAStools in QGIS:"
+msgstr "Pentru a seta LAStools în QGIS:"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:61
+msgid "Go to :menuselection:`Processing --> Options and configuration`."
+msgstr "Mergeți la :menuselection:`Processing --> Options and configuration`."
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:62
+msgid ""
+"In the :guilabel:`Processing options` dialog, go to :guilabel:`Providers` "
+"and then to :guilabel:`Tools for LiDAR data`."
+msgstr ""
+"În dialogul :guilabel:`Opțiunilor de procesare`, mergeți la "
+":guilabel:`Furnizori` și apoi la :guilabel:`Instrumente pentru datele "
+"LiDAR`."
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:64
+msgid "Check :guilabel:`Activate`."
+msgstr "Bifați :guilabel:`Activare`."
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:65
+msgid ""
+"For :guilabel:`LAStools folder` set :kbd:`c:\\\\lastools\\\\` (or the folder"
+" you extracted LAStools to)."
+msgstr ""
+"Pentru :guilabel:`Folderul LAStools` setați :kbd:`c:\\\\lastools\\\\` (sau "
+"folderul în care ați extras LAStools)."
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:72
+msgid "|basic| |FA| Calculating a DEM with LAStools"
+msgstr "|basic| |FA| Calcularea unui DEM, cu ajutorul LAStools"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:74
+msgid ""
+"You have already used the :menuselection:`Processing` toolbox in "
+":doc:`../vector_analysis/spatial_statistics` to run some SAGA algorithms. "
+"Now you are going to use it to run LAStools programs:"
+msgstr ""
+"Ați folosit deja bara de instrumente :menuselection:`Processing` din "
+":doc:`../vector_analysis/spatial_statistics` pentru a rula câțiva algoritmi "
+"SAGA. Acum o veți utiliza pentru a rula programele LAStools:"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:77
+msgid "Open :menuselection:`Processing --> Toolbox`."
+msgstr "Deschideți :menuselection:`Processing --> Toolbox`."
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:78
+msgid ""
+"In the dropdown menu at the bottom, select :guilabel:`Advanced interface`."
+msgstr ""
+"În meniul derulant din partea inferioară, selectați :guilabel:`Interfață "
+"avansată`."
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:79
+msgid "You should see the :guilabel:`Tools for LiDAR data` category."
+msgstr ""
+"Ar trebui să vedeți categoria :guilabel:`Instrumentelor pentru datele "
+"LiDAR`."
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:84
+msgid ""
+"Expand it to see the tools available, and expand also the "
+":guilabel:`LAStools` category (the number of algorithms may vary)."
+msgstr ""
+"Extindeți-o pentru a vedea instrumentele disponibile, apoi extindeți, de "
+"asemenea, categoria :guilabel:`LAStools` (numărul de algoritmi poate varia)."
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:86
+msgid ""
+"Scroll down until you find the :guilabel:`lasview` algorithm, double click "
+"it to open."
+msgstr ""
+"Derulați în jos până când găsiți algoritmul :guilabel:`lasview`, apoi faceți"
+" dublu-clic pentru a-l deschide."
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:93
+msgid "Click :guilabel:`Run`."
+msgstr "Clic pe :guilabel:`Run`"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:95
+msgid ""
+"Now you can see the LiDAR data in the :guilabel:`just a little LAS and LAZ "
+"viewer` dialog window:"
+msgstr ""
+"Acum puteți vedea datele LiDAR în fereastra dialogului :guilabel:`Doar un "
+"mic vizualizator LAS și LAZ`:"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:100
+msgid ""
+"There are many things you can do within this viewer, but for now you can "
+"just click and drag on the viewer to pan the LiDAR point cloud to see what "
+"it looks like."
+msgstr ""
+"Există multe alte lucruri pe care le puteți efectua în cadrul acestui "
+"vizualizator, dar pentru moment trebuie doar să faceți un clic și să glisați"
+" norul de puncte LiDAR, pentru a vedea cum arată."
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:107
+msgid "Close the viewer when you are ready."
+msgstr "Închideți vizualizatorul atunci când sunteți gata."
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:109
+msgid ""
+"Creating a DEM with LAStools can be done in two steps, first one to classify"
+" the point cloud into :kbd:`ground` and :kbd:`no ground` points and then "
+"calculating a DEM using only the :kbd:`ground` points."
+msgstr ""
+"Crearea unui DEM cu LAStools se poate face în două etape, mai întâi pentru a"
+" clasifica norul de puncte în :kbd:`ground` și :kbd:`no ground`, iar apoi "
+"pentru a calcula DEM-ul folosind numai punctele :kbd:`ground`."
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:113
+msgid "Go back to the :guilabel:`Processing Toolbox`."
+msgstr "Mergeți înapoi la :guilabel:`Bara Instrumentelor de Procesare`."
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:114
+msgid "Note the :guilabel:`Search...` box, write :kbd:`lasground`."
+msgstr "Notați :guilabel:`Search...` box, write :kbd:`lasground`."
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:115
+msgid ""
+"Double click to open the :guilabel:`lasground` tool and set it as shown in "
+"this image:"
+msgstr ""
+"Dublu clic pentru a deschide instrumentul :guilabel:`lasground`, apoi "
+"setați-l așa cum se arată în această imagine:"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:123
+msgid "You can open it with :guilabel:`lasview` if you want to check it."
+msgstr "Puteți să-l deschideți cu :guilabel:`lasview`, "
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:137
+msgid "Close the viewer again."
+msgstr "Închideți iarăși vizualizatorul."
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:138
+msgid "In the :guilabel:`Processing Toolbox`, search for :kbd:`las2dem`."
+msgstr "În :guilabel:`Processing Toolbox`, căutați :kbd:`las2dem`."
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:139
+msgid "Open the :guilabel:`las2dem` tool and set it as shown in this image:"
+msgstr ""
+"Deschideți instrumentul :guilabel:`las2dem`, apoi setați-l așa cum se arată "
+"în această imagine:"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:144
+msgid ""
+"The result DEM is added to your map with the generic name :kbd:`Output "
+"raster file`."
+msgstr ""
+"DEM-ul rezultat este adăugat la hartă cu numele generic :kbd:`Output raster "
+"file`."
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:146
+msgid ""
+"The :guilabel:`lasground` and :guilabel:`las2dem` tools require licensing. "
+"You can use the unlicensed tool as indicated in the license file, but you "
+"get the diagonals you can appreciate in the image results."
+msgstr ""
+"Instrumentele :guilabel:`lasground` și :guilabel:`las2dem` necesită "
+"licențiere. Le puteți utiliza chiar și în lipsa licenței, așa cum este "
+"indicat în fișierul licenței, dar veți obține diagonale în imaginile "
+"rezultate."
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:151
+msgid "|basic| |FA| Creating a Terrain Hillshade"
+msgstr "|basic| |FA| Crearea unui Teren Reliefat"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:156
+msgid "Open :menuselection:`Raster --> Terrain analysis --> Hillshade`."
+msgstr ""
+"Deschideți :menuselection:`Raster --> Terrain analysis --> Hillshade`."
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:159
+msgid "Leave the rest of parameters with the default settings."
+msgstr "Lasă restul parametrilor la setările implicite."
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:164
+msgid "Select :kbd:`ETRS89 / ETRS-TM35FIN` as the CRS when prompted."
+msgstr ""
+"Selectați :kbd:`ETRS89 / ETRS-TM35FIN` ca și CRS, atunci când vi se "
+"solicită."
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:166
+msgid ""
+"Despite the diagonal lines remaining in the hillshade raster result, you can"
+" clearly see an accurate relief of the area. You can even see the different "
+"soil drains that have been dug in the forests."
+msgstr ""
+"În ciuda liniilor diagonale rămase în relieful rasterului rezultat, puteți "
+"vedea în mod clar un relief exact al zonei. Puteți vedea chiar și diferite "
+"albii săpate de curgerea apelor prin pădure."
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:175
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:184
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:186
+msgid ""
+"In the next, and final step in this module, lesson you will use the "
+"hillshade raster and the forest inventory results to create a map "
+"presentation of the results."
+msgstr ""
+"În următorul, și ultimul pas din acest modul, veți folosi un raster rezultat"
+" și rezultatele inventarului forestier pentru a crea o prezentare pentru "
+"harta rezultatelor."

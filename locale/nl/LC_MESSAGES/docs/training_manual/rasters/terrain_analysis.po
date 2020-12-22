@@ -1,0 +1,1021 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# DiGro, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:20+0000\n"
+"Last-Translator: DiGro, 2020\n"
+"Language-Team: Dutch (https://www.transifex.com/qgis/teams/6144/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:2
+msgid "|LS| Terrain Analysis"
+msgstr "|LS| Terreinanalyse"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:4
+msgid ""
+"Certain types of rasters allow you to gain more insight into the terrain "
+"that they represent. Digital Elevation Models (DEMs) are particularly useful"
+" in this regard. In this lesson you will use terrain analysis tools to find "
+"out more about the study area for the proposed residential development from "
+"earlier."
+msgstr ""
+"Bepaalde typen rasters stellen u in staat meer inzicht te verkrijgen over "
+"het terrein dat zij weergeven. Digital Elevation Models (DEM's) zijn in dit "
+"opzicht in het bijzonder bruikbaar. In deze les zult u gereedschappen voor "
+"terreinanalyses gebruiken om meer uit te vinden over het te bestuderen "
+"gebied voor het eerder voorgestelde te ontwikkelen woongebied."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:12
+msgid ""
+"**The goal for this lesson:** To use terrain analysis tools to derive more "
+"information about the terrain."
+msgstr ""
+"**Het doel voor deze les:** Gereedschappen voor terreinanalyses gebruiken om"
+" meer informatie over het terrein te verkrijgen."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:16
+msgid "|basic| |FA| Calculating a Hillshade"
+msgstr "|basic| |FA| Een schaduw voor heuvels berekenen"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:18
+msgid ""
+"We are going to use the same DEM layer as in the previous lesson. If you are"
+" starting this chapter from scratch, use the :guilabel:`Browser` panel and "
+"load the :file:`raster/SRTM/srtm_41_19.tif`."
+msgstr ""
+"We gaan dezelfde DEM-laag gebruiken als in de vorige les. Als u nieuw aan "
+"dit hoofdstuk begint, gebruik dan het paneel :guilabel:`Browser` en laad het"
+" bestand :file:`raster/SRTM/srtm_41_19.tif`."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:23
+msgid ""
+"The DEM layer shows you the elevation of the terrain, but it can sometimes "
+"seem a little abstract. It contains all the 3D information about the terrain"
+" that you need, but it doesn't look like a 3D object. To get a better "
+"impression of the terrain, it is possible to calculate a *hillshade*, which "
+"is a raster that maps the terrain using light and shadow to create a 3D-"
+"looking image."
+msgstr ""
+"De DEM-laag toont u de hoogten in het terrein, maar het kan er soms wat "
+"abstract uitzien. Het bevat alle 3D-informatie over het terrein die u nodig "
+"heeft, maar het ziet er niet uit als een 3D-object. Het is mogelijk een "
+"*schaduw voor heuvels* te berekenen, wat een raster is dat de kaart "
+"weergeeft met behulp van licht en een schaduw om het uiterlijk van een 3D-"
+"afbeelding aan te nemen, om een betere indruk van het terrein te krijgen."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:31
+msgid ""
+"We are going to use algorithms in the :menuselection:`Raster --> Raster "
+"terrain analysis` menu."
+msgstr ""
+"We gaan de algoritmen in het menu :menuselection:`Raster --> Raster "
+"terreinanalyse` gebruiken."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:34
+msgid "Click on the :menuselection:`Hillshade` menu"
+msgstr "Klik op het menu :menuselection:`Schaduw voor heuvels`"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:35
+msgid ""
+"The algorithm allows you to specify the position of the light source: "
+":guilabel:`Azimuth` has values from 0 (North) through 90 (East), 180 (South)"
+" and 270 (West), while the :guilabel:`Vertical angle` sets how high the "
+"light source is (0 to 90 degrees). We will use the default values:"
+msgstr ""
+"Het algoritme stelt u in staat de positie van de lichtbron te specificeren:"
+"  :guilabel:`Azimut` heeft waarden van 0 (Noord) via 90 (Oost), 180 (Zuid) "
+"en 270 (West), terwijl de :guilabel:`Verticale hoek` instelt hoe hoog de "
+"lichtbron is (0 tot en met 90 graden). We zullen de standaardwaarden "
+"gebruiken:"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:45
+msgid ""
+"Save the file in a new folder ``raster_analysis`` within the folder "
+"``exercise_data`` with the name ``hillshade``"
+msgstr ""
+"Sla het bestand op in een nieuwe map ``raster_analysis`` binnen de map "
+"``exercise_data`` met de naam ``hillshade``"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:47
+msgid "Finally click on :guilabel:`Run`"
+msgstr "Klik tenslotte op :guilabel:`Uitvoeren`"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:49
+msgid ""
+"You will now have a new layer called :guilabel:`hillshade` that looks like "
+"this:"
+msgstr ""
+"U zult nu een nieuwe laag, genaamd :guilabel:`hillshade`, hebben die er "
+"uitziet zoals dit:"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:55
+msgid ""
+"That looks nice and 3D, but can we improve on this? On its own, the "
+"hillshade looks like a plaster cast. Can't we use it together with our "
+"other, more colorful rasters somehow? Of course we can, by using the "
+"hillshade as an overlay."
+msgstr ""
+"Dat ziet er leuk en 3D uit, maar kunnen we dit verbeteren? Op zichzelf ziet "
+"de schaduw voor de heuvels er uit als een gipsafdruk. Kunnen we het op een "
+"of andere manier gebruiken met onze, meer kleurrijke, rasters? Natuurlijk "
+"kunnen we dat, door de schaduw voor de heuvels er overheen te leggen."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:61
+msgid "|basic| |FA| Using a Hillshade as an Overlay"
+msgstr ""
+"|basic| |FA| Schaduw voor heuvels gebruiken door er overheen te leggen"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:63
+msgid ""
+"A hillshade can provide very useful information about the sunlight at a "
+"given time of day. But it can also be used for aesthetic purposes, to make "
+"the map look better. The key to this is setting the hillshade to being "
+"mostly transparent."
+msgstr ""
+"Een schaduw voor heuvels kan heel bruikbare informatie verschaffen over het "
+"zonlicht op een bepaald moment van de dag. Maar het kan ook voor esthetische"
+" doeleinden gebruikt worden om de kaart er beter uit te laten zien. De "
+"sleutel hiertoe is de schaduw voor de heuvels in te stellen op bijna geheel "
+"transparant."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:68
+msgid ""
+"Change the symbology of the original :guilabel:`srtm_41_19` layer to use the"
+" :guilabel:`Pseudocolor` scheme as in the previous exercise"
+msgstr ""
+"Wijzig de symbologie van de originele laag :guilabel:`srtm_41_19` om het "
+"schema :guilabel:`Pseudokleur` te gebruiken, zoals in de eerdere oefening."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:70
+msgid ""
+"Hide all the layers except the :guilabel:`srtm_41_19` and "
+":guilabel:`hillshade` layers"
+msgstr ""
+"Verberg alle lagen met uitzondering van de lagen :guilabel:`srtm_41_19` en "
+":guilabel:`hillshade`."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:72
+msgid ""
+"Click and drag the :guilabel:`srtm_41_19` to be beneath the "
+":guilabel:`hillshade` layer in the :guilabel:`Layers` panel"
+msgstr ""
+"Klik en sleep :guilabel:`srtm_41_19` tot onder de laag :guilabel:`hillshade`"
+" in het paneel :guilabel:`Lagen`."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:74
+msgid ""
+"Set the :guilabel:`hillshade` layer to be transparent by clicking on the "
+":guilabel:`Transparency` tab in the layer properties"
+msgstr ""
+"Stel de laag :guilabel:`hillshade` in op transparant door te klikken op de "
+"tab :guilabel:`Transparantie` in de Laageigenschappen."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:76
+msgid "Set the :guilabel:`Global opacity` to ``50%``."
+msgstr "Stel de :guilabel:`Globale transparantie` in op ``50%``:"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:78
+msgid "You'll get a result like this:"
+msgstr "U krijgt een resultaat zoals dit:"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:83
+msgid ""
+"Switch the :guilabel:`hillshade` layer off and back on in the "
+":guilabel:`Layers` panel to see the difference it makes."
+msgstr ""
+"Schakel de laag :guilabel:`hillshade` uit en weer in in het paneel "
+":guilabel:`Lagen` om het verschil dat het maakt te zien."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:86
+msgid ""
+"Using a hillshade in this way, it's possible to enhance the topography of "
+"the landscape. If the effect doesn't seem strong enough to you, you can "
+"change the transparency of the :guilabel:`hillshade` layer; but of course, "
+"the brighter the hillshade becomes, the dimmer the colors behind it will be."
+" You will need to find a balance that works for you."
+msgstr ""
+"Met het op deze manier gebruiken van een schaduw voor heuvels, is het "
+"mogelijk de topografie van het landschap te verbeteren. Als het effect voor "
+"u niet sterk genoeg lijkt te zijn, kunt u de transparantie van de laag "
+":guilabel:`hillshade` vergroten; maar natuurlijk geldt: hoe helderder de "
+"schaduw van de heuvels wordt, hoe vager de kleuren erachter zullen zijn. U "
+"dient een balans te vinden die voor u werkt."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:92
+msgid "Remember to save the project when you are done."
+msgstr "Onthoud om het project op te slaan als u gereed bent."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:96
+msgid "|moderate| |FA| Calculating the Slope"
+msgstr "|moderate| |FA| Berekenen van de helling"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:98
+msgid ""
+"Another useful thing to know about the terrain is how steep it is. If, for "
+"example, you want to build houses on the land there, then you need land that"
+" is relatively flat."
+msgstr ""
+"Een ander handig ding om te weten van het terrein is hoe steil het is. Als u"
+" bijvoorbeeld huizen wilt bouwen op het land daar, heeft u land nodig dat "
+"relatief vlak is."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:102
+msgid ""
+"To do this, you need to use the :menuselection:`Slope` algorithm of the "
+":menuselection:`Processing --> Raster terrain analysis`."
+msgstr ""
+"U moet het algoritme :guilabel:`Helling` van :menuselection:`Processing --> "
+"Raster terreinanalyse` gebruiken om dit te doen."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:105
+msgid "Open the algorithm"
+msgstr "Open het algoritme"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:106
+msgid "Choose :guilabel:`srtm_41_19` as the :guilabel:`Elevation layer`"
+msgstr "Kies :guilabel:`srtm_41_19` als de :guilabel:`Hoogtelaag`"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:107
+msgid ""
+"Save the output as a file with the name ``slope`` in the same folder as the "
+"``hillshade``"
+msgstr ""
+"Sla de uitvoer op als een bestand met de naam ``slope`` in dezelfde map als "
+"de laag ``hillshade``"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:109
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:387
+msgid "Click on :guilabel:`Run`"
+msgstr "Klik op :guilabel:`Uitvoeren`"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:111
+msgid ""
+"Now you'll see the slope of the terrain, with black pixels being flat "
+"terrain and white pixels, steep terrain:"
+msgstr ""
+"Nu zult u de helling van het terrein zien, met zwarte pixels voor vlak "
+"terrein en witte pixels voor steil terrein:"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:120
+msgid "|moderate| |TY| Calculating the aspect"
+msgstr "|moderate| |TY| Berekenen van het aspect"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:122
+msgid ""
+"*Aspect* is the compass direction that the slope of the terrain faces. An "
+"aspect of 0 means that the slope is North-facing, 90 East-facing, 180 South-"
+"facing, and 270 West-facing."
+msgstr ""
+"*Aspect* is de richting van het kompas waarop de helling van het terrein "
+"uitkijkt. Een aspect van 0 betekent dat de helling uitkijkt op het noorden, "
+"90 op het oosten, 180 op het zuiden en 270 op het westen."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:126
+msgid ""
+"Since this study is taking place in the Southern Hemisphere, properties "
+"should ideally be built on a north-facing slope so that they can remain in "
+"the sunlight."
+msgstr ""
+"Omdat deze studie plaatsvindt in de zuidelijke hemisfeer, zouden gebouwen "
+"ideaal gesproken moeten worden gebouwd op een helling die uitkijkt op het "
+"noorden, zodat zij in het zonlicht blijven."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:130
+msgid ""
+"Use the :guilabel:`Aspect` algorithm of the :menuselection:`Processing --> "
+"Raster terrain analysis` to get the layer."
+msgstr ""
+"Gebruik het algoritme :guilabel:`Aspect` van :menuselection:`Processing --> "
+"Raster terreinanalyse` om de laag te krijgen."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:133
+msgid ":ref:`Check your results <raster-analysis-1>`"
+msgstr ":ref:`Controleer uw resultaten <raster-analysis-1>`"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:136
+msgid "|moderate| |FA| Using the Raster Calculator"
+msgstr "|moderate| |FA| Rasterberekeningen gebruiken"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:138
+msgid ""
+"Think back to the estate agent problem, which we last addressed in the "
+"*Vector Analysis* lesson. Let us imagine that the buyers now wish to "
+"purchase a building and build a smaller cottage on the property. In the "
+"Southern Hemisphere, we know that an ideal plot for development needs to "
+"have areas on it that are north-facing, and with a slope of less than five "
+"degrees. But if the slope is less than 2 degrees, then the aspect doesn't "
+"matter."
+msgstr ""
+"Denk even terug aan het probleem van de makelaar dat we bespraken in de les "
+"*Vectoranalyse*. Laten we ons eens voorstellen dat de kopers een gebouw "
+"willen kopen en een kleinere woning willen bouwen op het land. We weten dat,"
+" in de zuidelijke hemisfeer, een ideaal gebied voor ontwikkeling gebieden "
+"moet hebben die uitkijken op het noorden, en met een helling van minder dan "
+"vijf graden. Maar als de helling minder is dan  2 graden, dan is het aspect "
+"niet van belang."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:148
+msgid ""
+"Fortunately, you already have rasters showing you the slope as well as the "
+"aspect, but you have no way of knowing where both conditions are satisfied "
+"at once. How could this analysis be done?"
+msgstr ""
+"Gelukkig heeft u al rasters die u zowel de helling als het aspect weergeven,"
+" maar u heeft geen manier om te weten te komen waar aan beide voorwaarden "
+"tegelijkertijd wordt voldaan. Hoe zou deze analyse worden uitgevoerd?"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:153
+msgid "The answer lies with the :guilabel:`Raster calculator`."
+msgstr "Het antwoord ligt in de :guilabel:`Rasterberekeningen`."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:155
+msgid "QGIS has different raster calculators available:"
+msgstr "QGIS heeft verschillende rasterberekeningen beschikbaar:"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:157
+msgid ":menuselection:`Raster --> Raster Calculator`"
+msgstr ":menuselection:`Raster --> Rasterberekeningen`"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:158
+msgid "In processing:"
+msgstr "In Processing:"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:160
+msgid ":menuselection:`Raster Analysis --> Raster calculator`"
+msgstr ":menuselection:`Rasteranalyse --> Raster calculator`"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:161
+msgid ":menuselection:`GDAL --> Raster miscellaneous --> Raster calculator`"
+msgstr ":menuselection:`GDAL --> Raster diversen --> Rasterberekeningen`"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:162
+msgid ":menuselection:`SAGA --> Raster calculus --> Raster calculator`"
+msgstr ":menuselection:`SAGA --> Raster calculus --> Raster calculator`"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:164
+msgid ""
+"Each tool is leading to the same results, but the syntax may be slightly "
+"different and the availability of operators may vary."
+msgstr ""
+"Elk gereedschap leidt tot dezelfde resultaten, maar de syntaxis kan "
+"enigszins verschillen en de beschikbaarheid van operatoren kan variëren."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:167
+msgid ""
+"We will use :menuselection:`Raster Analysis --> Raster calculator` in the "
+"*Processing Toolbox*"
+msgstr ""
+"We zullen :menuselection:`Rasteranalyse --> Raster calculator` in de Toolbox"
+" van *Processing* gebruiken"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:170
+msgid "Open the tool by double clicking on it."
+msgstr "Open het gereedschap door er dubbel op te klikken."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:172
+msgid ""
+"The upper left part of the dialog lists all the loaded raster layers as "
+"``name@N``, where ``name`` is the name of the layer and ``N`` is the band."
+msgstr ""
+"Het bovenste gedeelte aan de linkerkant van het dialoogvenster vermeldt alle"
+" geladen rasterlagen als ``name@N`` waar ``name`` de naam is van de laag en "
+"``N`` de band is."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:175
+msgid ""
+"In the upper right part you will see a lot of different operators. Stop for "
+"a moment to think that a raster is an image. You should see it as a 2D "
+"matrix filled with numbers."
+msgstr ""
+"In het bovenste gedeelte aan de rechterkant ziet u veel verschillende "
+"operatoren. Neem even de tijd om er aan te denken dat een raster een "
+"afbeelding is. U zou het moeten zien als een 2D-matrix, gevuld met getallen."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:179
+msgid ""
+"North is at 0 (zero) degrees, so for the terrain to face north, its aspect "
+"needs to be greater than 270 degrees and less than 90 degrees. Therefore the"
+" formula is::"
+msgstr ""
+"Noord ligt op 0 (nul) graden, dus voor het terrein dat op het noorden "
+"uitkijkt moet het aspect groter zijn dan 270 graden en minder dan 90 graden."
+" Daarom is de formule::"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:186
+msgid ""
+"Now you have to set up the raster details, like the cell size, extent and "
+"CRS. This can be done manually or it can be automatically set by choosing a "
+"``Reference layer``. Choose this last option by clicking on the "
+":guilabel:`...` button next to the :guilabel:`Reference layer(s)` parameter."
+msgstr ""
+"Nu dient u de details voor het raster in te stellen, zoals de celgrootte, "
+"bereik en CRS. Dat kan handmatig worden gedaan of het kan automatisch worden"
+" ingesteld door een ``Referentielaag`` te kiezen. Kies voor deze laatste "
+"optie door te klikken op de knop :guilabel:`…` naast de parameter "
+":guilabel:`Reference layer(s)`."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:192
+msgid ""
+"In the dialog, choose the :guilabel:`aspect` layer, because we want to "
+"obtain a layer with the same resolution."
+msgstr ""
+"Kies in het dialoogvenster voor de laag :guilabel:`aspect`, omdat we een "
+"laag willen met dezelfde  resolutie."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:194
+msgid "Save the layer as ``aspect_north``."
+msgstr "Sla de laag op als ``aspect_north``."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:196
+msgid "The dialog should look like:"
+msgstr "Het dialoogvenster zou er nu zo uit moeten zien:"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:201
+msgid "Finally click on :guilabel:`Run`."
+msgstr "Klik tenslotte op :guilabel:`Uitvoeren`."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:203
+msgid "Your result will be this:"
+msgstr "Uw resultaat zal dit zijn:"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:208
+msgid ""
+"The output values are ``0`` or ``1``. What does it mean? The formula we "
+"wrote contains the *conditional* operator ``OR``. Therefore the final result"
+" will be **False** (0) and **True** (1)."
+msgstr ""
+"De waarden voor de uitvoer zijn ``0`` of ``1``. Wat betekent dat? De formule"
+" die we schreven bevatte de *voorwaardelijke* operator ``OR``: Daarom zal "
+"het uiteindelijke resultaat **False** (0) en **True** (1) zijn."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:217
+msgid "|moderate| |TY| More criteria"
+msgstr "|moderate| |TY| Meer criteria"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:219
+msgid "Now that you have done the aspect, create two new layers from the DEM."
+msgstr "Nu u het aspect heeft gedaan, maak twee nieuwe lagen uit de DEM."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:222
+msgid ""
+"The first shall identify areas where the slope is less than or equal to "
+"``2`` degrees"
+msgstr ""
+"De eerste zal gebieden identificeren waar de helling minder is dan of gelijk"
+" is aan ``2`` graden."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:224
+msgid ""
+"The second is similar, but the slope should be less than or equal to ``5`` "
+"degrees."
+msgstr ""
+"De tweede is soortgelijk, maar de helling zou minder of gelijk moeten zijn "
+"aan ``5`` graden."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:226
+msgid ""
+"Save them under :file:`exercise_data/raster_analysis` as "
+":file:`slope_lte2.tif` and :file:`slope_lte5.tif`."
+msgstr ""
+"Sla ze op onder :file:`exercise_data/raster_analysis/` als "
+":file:`slope_lte2.tif` en :file:`slope_lte5.tif`."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:229
+msgid ":ref:`Check your results <raster-analysis-2>`"
+msgstr ":ref:`Controleer uw resultaten <raster-analysis-2>`"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:233
+msgid "|moderate| |FA| Combining Raster Analysis Results"
+msgstr "|moderate| |FA| Resultaten van rasteranalyses combineren"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:235
+msgid "Now you have generated three raster layers from the DEM:"
+msgstr "Nu heeft u drie rasterlagen gemaakt uit de DEM:"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:237
+msgid ":guilabel:`aspect_north`: terrain facing north"
+msgstr ":guilabel:`aspect_north`: het terrein kijkt uit op het noorden"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:238
+msgid ":guilabel:`slope_lte2`: slope equal to or below 2 degrees"
+msgstr ":guilabel:`slope_lte2`: de helling is 2 graden of minder"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:239
+msgid ":guilabel:`slope_lte5`: slope equal to or below 5 degrees"
+msgstr ":guilabel:`slope_lte5`: de helling is 5 graden of minder"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:241
+msgid ""
+"Where the conditions are met, the pixel value is ``1``. Elsewhere, it is "
+"``0``. Therefore, if you multiply these rasters, the pixels that have a "
+"value of ``1`` for all of them will get a value of ``1`` (the rest will get "
+"``0``)."
+msgstr ""
+"Waar aan de voorwaarden voor deze lagen wordt voldaan, is de pixelwaarde "
+"``1``. Ergens anders is het ``0``. Daarom, als u deze rasters "
+"vermenigvuldigt, zullen de pixels, die een waarde van ``1`` voor allemaal "
+"hebben, een waarde van ``1`` krijgen (de rest zal ``0`` krijgen)."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:247
+msgid "The conditions to be met are:"
+msgstr "De voorwaarden, waaraan moet worden voldaan, zijn:"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:249
+msgid "at or below 5 degrees of slope, the terrain must face north"
+msgstr ""
+"gelijk aan of minder dan 5 graden helling, het terrein moet op het noorden "
+"liggen"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:250
+msgid ""
+"at or below 2 degrees of slope, the direction that the terrain faces does "
+"not matter."
+msgstr ""
+"gelijk aan of minder dan 2 graden helling, de richting waarop het terrein "
+"uitkijkt is niet van belang."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:253
+msgid ""
+"Therefore, you need to find areas where the slope is at or below five "
+"degrees ``AND`` the terrain is facing north, ``OR`` the slope is at or below"
+" 2 degrees. Such terrain would be suitable for development."
+msgstr ""
+"Daarom moet u zoeken naar gebieden waar de helling vijf graden of minder is "
+"``AND`` het terrein uitkijkt op het noorden;  ``OR`` de helling is 2 graden "
+"of minder. Dergelijk terrein zou geschikt zijn voor ontwikkeling."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:257
+msgid "To calculate the areas that satisfy these criteria:"
+msgstr "De gebieden berekenen die voldoen aan deze criteria:"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:259
+msgid "Open the :guilabel:`Raster calculator` again"
+msgstr "Open opnieuw de :guilabel:`Raster calculator` opnieuw"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:260
+msgid "Use this expression in :guilabel:`Expression`::"
+msgstr "Gebruik deze expressie in :guilabel:`Expressie`::"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:264
+msgid ""
+"Set the :guilabel:`Reference layer(s)` parameter to ``aspect_north`` (it "
+"does not matter if you choose another - they have all been calculated from "
+"``srtm_41_19``)"
+msgstr ""
+"Stel de parameter :guilabel:`Reference layer(s)` in als ``aspect_north`` "
+"(het maakt niet uit of u een andere kiest - zij zijn allemaal berekend "
+"vanuit ``srtm_41_19``)"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:267
+msgid ""
+"Save the output under :file:`exercise_data/raster_analysis/` as "
+":file:`all_conditions.tif`"
+msgstr ""
+"Sla de uitvoer op onder :file:`exercise_data/raster_analysis/` als "
+":file:`all_conditions.tif`."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:269
+msgid "Click :guilabel:`Run`"
+msgstr "Klik op :guilabel:`Uitvoeren`"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:271
+msgid "The result:"
+msgstr "Het resultaat:"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:278
+msgid "|moderate| |FA| Simplifying the Raster"
+msgstr "|moderate| |FA| Het raster vereenvoudigen"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:280
+msgid ""
+"As you can see from the image above, the combined analysis has left us with "
+"many, very small areas where the conditions are met. But these aren't really"
+" useful for our analysis, since they are too small to build anything on. Let"
+" us get rid of all these tiny unusable areas."
+msgstr ""
+"Zoals u in bovenstaande afbeelding kunt zien, staan in de gecombineerde "
+"analyse vele kleine gebieden die voldoen aan de voorwaarden. Maar deze zijn "
+"niet echt bruikbaar voor onze analyse, omdat ze te klein zijn om er iets op "
+"te bouwen. Laten we deze kleine onbruikbare gebieden verwijderen."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:286
+msgid ""
+"Open the :guilabel:`Sieve` tool (:menuselection:`GDAL --> Raster Analysis` "
+"in the :guilabel:`Processing Toolbox`)"
+msgstr ""
+"Open het gereedschap :guilabel:`Sieve` (:menuselection:`GDAL --> "
+"Rasteranalyse` in de :guilabel:` Toolbox` van Processing)"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:289
+msgid ""
+"Set the :guilabel:`Input file` to ``all_conditions``, and the "
+":guilabel:`Sieved` to :file:`all_conditions_sieve.tif` (under "
+":file:`exercise_data/raster_analysis/`)."
+msgstr ""
+"Stel :guilabel:`Invoerlaag` in op ``all_conditions``, en :guilabel:`Gezeefd`"
+" op :file:`all_conditions_sieve.tif` (onder "
+":file:`exercise_data/raster_analysis/`)."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:292
+msgid ""
+"Set the :guilabel:`Threshold` to 8 (minimum eight contiguous pixels), and "
+"check :guilabel:`Use 8-connectedness`."
+msgstr ""
+"Stel :guilabel:`Drempel` in op 8 (minimaal acht aaneengesloten pixels), en "
+"selecteer :guilabel:`8-connectedness gebruiken`."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:298
+msgid "Once processing is done, the new layer will be loaded."
+msgstr "Als de verwerking is voltooid, zal de nieuwe laag worden geladen."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:303
+msgid "What is going on? The answer lies in the new raster file's metadata."
+msgstr ""
+"Wat is er aan de hand? Het antwoord ligt in de metadata van het nieuwe "
+"rasterbestand."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:306
+msgid ""
+"View the metadata under the :guilabel:`Information` tab of the "
+":guilabel:`Layer Properties` dialog. Look the ``STATISTICS_MINIMUM`` value:"
+msgstr ""
+"Bekijk de metadata onder de tab :guilabel:`Informatie` van het "
+"dialoogvenster :guilabel:`Laageigenschappen`. Kijk naar de waarde "
+"``STATISTICS_MINIMUM``:"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:313
+msgid ""
+"This raster, like the one it is derived from, should only feature the values"
+" ``1`` and ``0``, but it has also a very large negative number. "
+"Investigation of the data shows that this number acts as a null value. Since"
+" we are only after areas that weren't filtered out, let us set these null "
+"values to zero."
+msgstr ""
+"Dit raster, net zoals die waaruit het is afgeleid, zou alleen de waarden "
+"``1`` en ``0`` zou moeten hebben, maar het heeft ook een heel groot negatief"
+" getal. Onderzoek van de gegevens geeft aan dat dit getal optreedt als een "
+"waarde null. Omdat we alleen gebieden willen die niet uitgefilterd werden, "
+"zullen we deze waarden null op nul instellen."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:321
+msgid "Open the :guilabel:`Raster Calculator`, and build this expression::"
+msgstr "Open de :guilabel:`Raster calculator` en bouw deze expressie:"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:325
+msgid ""
+"This will maintain all non-negative values, and set the negative numbers to "
+"zero, leaving all the areas with value ``1`` intact."
+msgstr ""
+"Dit zal alle niet-negatieve waarden behouden, en de negatieve getallen "
+"instellen op nul, wat alle gebieden met de waarde ``1`` intact zal laten."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:327
+msgid ""
+"Save the output under ``exercise_data/raster_analysis/`` as "
+":file:`all_conditions_simple.tif`."
+msgstr ""
+"Sla de uitvoer op onder :file:`exercise_data/raster_analysis/` als "
+":file:`all_conditions_simple.tif`."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:330
+msgid "Your output looks like this:"
+msgstr "Uw uitvoer ziet er uit zoals dit:"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:335
+msgid ""
+"This is what was expected: a simplified version of the earlier results. "
+"Remember that if the results you get from a tool aren't what you expected, "
+"viewing the metadata (and vector attributes, if applicable) can prove "
+"essential to solving the problem."
+msgstr ""
+"Dit is wat er verwacht werd: een vereenvoudigde versie van de eerdere "
+"resultaten. Onthoud dat als de resultaten die u van een gereedschap krijgt "
+"niet zijn wat u er van verwacht, het bekijken van de metadata (en "
+"vectorattributen indien van toepassing) essentieel kan blijken te zijn om "
+"het probleem op te lossen."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:343
+msgid "|moderate| |FA| Reclassifying the Raster"
+msgstr "|moderate| |FA| Het raster opnieuw classificeren"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:345
+msgid ""
+"We have used the *Raster calculator* to do calculations on raster layers. "
+"There is another powerful tool that we can use to extract information from "
+"existing layers."
+msgstr ""
+"We hebben het gereedschap *Raster calculator* gebruikt om berekeningen op "
+"rasterlagen te maken. Er is nog een ander krachtig gereedschap dat we kunnen"
+" gebruiken om informatie uit bestaande lagen uit te nemen."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:350
+msgid ""
+"Back to the ``aspect`` layer. We know now that it has numerical values "
+"within a range from 0 through 360. What we want to do is to *reclassify* "
+"this layer to other discrete values (from 1 to 4), depending on the aspect:"
+msgstr ""
+"Terug naar de laag ``aspect``. We weten nu dat die numerieke waarden heeft "
+"in het bereik van 0 tot en met 360. Wat we willen doen is om deze laag "
+"*opnieuw te classificeren* naar andere afzonderlijke waarden (van 1 tot en "
+"met 4), afhankelijk van het aspect:"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:356
+msgid "1 = North (from 0 to 45 and from 315 to 360);"
+msgstr "1 = Noord (van 0 tot  45 en van 315 tot 360);"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:357
+msgid "2 = East (from 45 to 135)"
+msgstr "2 = Oost (van 45 tot 135)"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:358
+msgid "3 = South (from 135 to 225)"
+msgstr "3 = Zuid (van 135 tot 225)"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:359
+msgid "4 = West (from 225 to 315)"
+msgstr "4 = West (van 225 tot 315)"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:361
+msgid ""
+"This operation can be achieved with the raster calculator, but the formula "
+"would become very very large."
+msgstr ""
+"Deze bewerking kan worden uitgevoerd met de Raster calculator, maar de "
+"formule zou enorm lang worden."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:364
+msgid ""
+"The alternative tool is the :guilabel:`Reclassify by table` tool in "
+":menuselection:`Raster analysis` in the :guilabel:`Processing Toolbox`."
+msgstr ""
+"Het alternatieve gereedschap is het gereedschap :guilabel:`Opnieuw "
+"classificeren op tabel` in :menuselection:`Rasteranalyse` in de "
+":guilabel:`Toolbox` van Processing."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:368
+msgid "Open the tool"
+msgstr "Open het gereedschap"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:369
+msgid "Choose :guilabel:`aspect` as the ``Input raster layer``"
+msgstr "Kies :guilabel:`aspect` als de ``Rasterlaag``"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:370
+msgid ""
+"Click on the :guilabel:`...` of :guilabel:`Reclassification table`. A table-"
+"like dialog will pop up, where you can choose the minimum, maximum and new "
+"values for each class."
+msgstr ""
+"Klik op de :guilabel:`…` van :guilabel:`Tabel voor opnieuw classificeren`. "
+"Een tabel-achtig dialoogvenster zal openen waar u de minimum, maximum en "
+"nieuwe waarden voor elke klasse kunt kiezen."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:373
+msgid ""
+"Click on the :guilabel:`Add row` button and add 5 rows. Fill in each row as "
+"the following picture and click :guilabel:`OK`:"
+msgstr ""
+"Klik op de knop :guilabel:`Regel toevoegen` en voeg 5 rijen toe. Vul elke "
+"rij in zoals in de volgende afbeelding en klik op :guilabel:`OK`:"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:379
+msgid ""
+"The method used by the algorithm to treat the threshold values of each class"
+" is defined by the :guilabel:`Range boundaries`."
+msgstr ""
+"De door het algoritme gebruikte methode, hoe de drempelwaarden van elke "
+"klasse te behandelen, wordt gedefinieerd door :guilabel:`Grenzen bereik`."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:381
+msgid ""
+"Save the layer as file:`reclassified.tif` in the "
+":file:`exercise_data/raster_analysis/` folder"
+msgstr ""
+"Sla de laag op als file:`reclassified.tif` in de map "
+":file:`exercise_data/raster_analysis/`"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:389
+msgid ""
+"If you compare the native :guilabel:`aspect` layer with the "
+":guilabel:`reclassified` one, there are not big differences. But by looking "
+"at the legend, you can see that the values go from ``1`` to ``4``."
+msgstr ""
+"Wanneer u de eigen laag :guilabel:`aspect` vergelijkt met de "
+":guilabel:`reclassified`, zijn er geen grote verschillen. Maar door eens "
+"naar de legenda te kijken, kunt u zien dat de waarden lopen van ``1``  tot "
+"en met ``4`` ."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:394
+msgid "Let us give this layer a better style."
+msgstr "Laten we deze laag eens een betere stijl geven."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:396
+msgid "Open the :guilabel:`Layer Styling` panel"
+msgstr "Open het paneel :guilabel:`Laag opmaken`"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:397
+msgid ""
+"Choose :guilabel:`Paletted/Unique values`, instead of :guilabel:`Singleband "
+"gray`"
+msgstr ""
+"Kies :guilabel:`Gepaletteerd/Unieke waarden`, in plaats van "
+":guilabel:`Enkelbands grijs`"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:399
+msgid ""
+"Click on the :guilabel:`Classify` button to automatically fetch the values "
+"and assign them random colors:"
+msgstr ""
+"Klik op de knop :guilabel:`Classificeren` om automatisch de waarden op te "
+"halen en ze nieuwe willekeurige kleuren toe te wijzen:"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:405
+msgid ""
+"The output should look like this (you can have different colors given that "
+"they have been randomly generated):"
+msgstr ""
+"De uitvoer zou er nu ongeveer zo uit moeten zien (u kunt andere kleuren "
+"hebben omdat die willekeurig werden gemaakt):"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:411
+msgid ""
+"With this reclassification and the paletted style applied to the layer, you "
+"can immediately differentiate the aspect areas."
+msgstr ""
+"Met dit opnieuw classificeren en de toegepaste gepaletteerde stijl op de "
+"laag kunt u direct de gebieden van aspect onderscheiden."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:416
+msgid "|basic| |FA| Querying the raster"
+msgstr "|basic| |FA| Het raster bevragen"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:418
+msgid ""
+"Unlike vector layers, raster layers don't have an attribute table. Each "
+"pixel contains one or more numerical values (singleband or multiband "
+"rasters)."
+msgstr ""
+"Anders dan vectorlagen hebben rasterlagen geen attributentabel. Elke pixel "
+"bevat één of meer numerieke waarden (afhankelijk van enkelbands of  "
+"multiband rasters)."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:422
+msgid ""
+"All the raster layers we used in this exercise consist of just one band. "
+"Depending on the layer, pixel values may represent elevation, aspect or "
+"slope values."
+msgstr ""
+"Alle rasterlagen die we gebruikten in deze oefening bestaan uit slechts één "
+"enkele band. Afhankelijk van de laag zouden pixelwaarden de waarden voor "
+"hoogte, aspect of helling weer kunnen geven."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:427
+msgid ""
+"How can we query the raster layer to get the value of a pixel? We can use "
+"the |identify| :sup:`Identify Features` button!"
+msgstr ""
+"Hoe kunnen we de rasterlaag bevragen om de waarde van één enkele pixel op te"
+" halen? We kunnen de knop |identify| :sup:`Objecten identificeren` "
+"gebruiken!"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:430
+msgid "Select the tool from the Attributes toolbar."
+msgstr "Selecteer het gereedschap op de werkbalk Attributen."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:431
+msgid ""
+"Click on a random location of the :guilabel:`srtm_41_19` layer. "
+":guilabel:`Identify Results` will appear with the value of the band at the "
+"clicked location:"
+msgstr ""
+"Klik op een willekeurige locatie op de laag :guilabel:`srtm_41_19`. "
+":guilabel:`Identificatieresultaten` zal  verschijnen met de waarde van de "
+"band op de aangeklikte locatie:"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:438
+msgid ""
+"You can change the output of the :guilabel:`Identify Results` panel from the"
+" current ``tree`` mode to a ``table`` one by selecting :guilabel:`Table` in "
+"the :guilabel:`View` menu at the bottom of the panel:"
+msgstr ""
+"U kunt de uitvoer van het paneel :guilabel:`Identificatieresultaten` "
+"wijzigen van de huidige modus ``boom`` naar een ``tabel`` door "
+":guilabel:`Tabel` te selecteren in het menu :guilabel:`Weergave` aan de "
+"onderzijde van het paneel:"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:446
+msgid ""
+"Clicking each pixel to get the value of the raster could become annoying "
+"after a while. We can use the *Value Tool* plugin to solve this problem."
+msgstr ""
+"Klikken op elke pixel om de waarde van het raster te verkrijgen zou op den "
+"duur vervelend kunnen worden. We kunnen de plug-in *Value Tool* gebruiken om"
+" dit probleem op te lossen."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:450
+msgid "Go to :menuselection:`Plugins --> Manage/Install Plugins...`"
+msgstr ""
+"Ga naar :menuselection:`Plug-ins --> Plug-ins beheren en installeren…`"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:451
+msgid "In the :guilabel:`All` tab, type ``value t`` in the search box"
+msgstr "Typ, op de tab :guilabel:`Alles`, ``value t`` in het zoekvak"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:452
+msgid ""
+"Select the *Value Tool* plugin, press :guilabel:`Install Plugin` and then "
+":guilabel:`Close` the dialog."
+msgstr ""
+"Selecteer de plug-in *Value Tool*, druk op :guilabel:`Plug-in installeren` "
+"en dan :guilabel:`Close` het dialoogvenster."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:458
+msgid "The new :guilabel:`Value Tool` panel will appear."
+msgstr "Het nieuwe paneel :guilabel:`Value Tool` zal verschijnen."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:460
+msgid ""
+"If you close the panel you can reopen it by enabling it in the "
+":menuselection:`View --> Panels --> Value Tool` or by clicking on the icon "
+"in the toolbar."
+msgstr ""
+"Als u het paneel sluit kunt u het opnieuw openen door het in te schakelen in"
+" het menu :menuselection:`Beeld --> Panelen --> Value Tool` of door te "
+"klikken op het nieuwe pictogram op de werkbalk."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:464
+msgid ""
+"To use the plugin just check the :guilabel:`Enable` checkbox and be sure "
+"that the ``srtm_41_19`` layer is active (checked) in the :guilabel:`Layers` "
+"panel."
+msgstr ""
+"Selecteer, om de plug-in te gebruiken, het keuzevak :guilabel:`Enable` en "
+"zorg er voor dat de laag ``srtm_41_19`` actief (geselecteerd) is in het "
+"paneel :guilabel:`Lagen`."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:467
+msgid "Move the cursor over the map to see the value of the pixels."
+msgstr ""
+"Verplaats de cursor over de kaart om direct de waarde van de pixels te zien."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:472
+msgid ""
+"But there is more. The Value Tool plugin allows you to query **all** the "
+"active raster layers in the :guilabel:`Layers` panel. Set the "
+":guilabel:`aspect` and :guilabel:`slope` layers active again and hover the "
+"mouse on the map:"
+msgstr ""
+"Maar er is meer. De plug-in Value Tool maakt het voor u mogelijk **alle** "
+"actieve rasterlagen in het paneel :guilabel:`Lagen` te bevragen. Stel de "
+"lagen :guilabel:`aspect` en :guilabel:`slope` opnieuw in als actief en ga "
+"met de muis over de kaart:"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:483
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:485
+msgid ""
+"You've seen how to derive all kinds of analysis products from a DEM. These "
+"include hillshade, slope and aspect calculations. You've also seen how to "
+"use the raster calculator to further analyze and combine these results. "
+"Finally you learned how to reclassify a layer and how to query the results."
+msgstr ""
+"U heeft gezien hoe u alle soorten analyseproducten uit een DEM kunt halen. "
+"Dit omvat berekeningen voor schaduw voor heuvels, helling en aspect. U heeft"
+" ook gezien hoe de rasterberekeningen te gebruiken voor verdere analyses en "
+"het combineren van deze resultaten. Tenslotte leerde u hoe een laag opnieuw "
+"te classificeren en de resultaten te bevragen."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:493
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:495
+msgid ""
+"Now you have two analyses: the vector analysis which shows you the "
+"potentially suitable plots, and the raster analysis that shows you the "
+"potentially suitable terrain. How can these be combined to arrive at a final"
+" result for this problem? That's the topic for the next lesson, starting in "
+"the next module."
+msgstr ""
+"Nu heeft u twee analyses: de vectoranalyse die u de potentieel geschikte "
+"bouwplaatsen laat zien, en de rasteranalyse die u het potentieel geschikte "
+"terrein laat zien. Hoe kunnen deze worden gecombineerd om tot een "
+"uiteindelijk resultaat voor dit rp0obleem te komen? Dat is het onderwerp "
+"voor de volgende les, die begint in de volgende module."

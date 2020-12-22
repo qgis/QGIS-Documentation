@@ -1,0 +1,1813 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:28+0000\n"
+"Last-Translator: Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020\n"
+"Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:2
+msgid "Specialized Grid Analysis"
+msgstr "Análisis especializado de cuadrícula"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:11
+msgid "D8 Distance To Streams"
+msgstr "Distancia D8 a flujos"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:14
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:64
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:198
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:319
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:407
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:517
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:624
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:679
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:807
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:924
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:979
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1025
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1066
+msgid "Description"
+msgstr "Descripción"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:16
+msgid ""
+"Computes the horizontal distance to stream for each grid cell, moving "
+"downslope according to the D8 flow model, until a stream grid cell is "
+"encountered."
+msgstr ""
+"Calcula la distancia horizontal a la corriente para cada celda de la "
+"cuadrícula, moviéndose cuesta abajo de acuerdo con el modelo de flujo D8, "
+"hasta que se encuentra una celda de la cuadrícula de la corriente."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:20
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:123
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:258
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:354
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:421
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:536
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:644
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:737
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:865
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:948
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:985
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1033
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1071
+msgid "Parameters"
+msgstr "Parámetros "
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:26
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:991
+msgid "``D8 Flow Direction Grid`` [raster]"
+msgstr "``Cuadrícula de dirección de flujo D8`` [raster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:23
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:988
+msgid ""
+"This input is a grid of flow directions that are encoded using the D8 method"
+" where all flow from a cells goes to a single neighboring cell in the "
+"direction of steepest descent. This grid can be obtained as the output of "
+"the **\"D8 Flow Directions\"** tool."
+msgstr ""
+"Esta entrada es una cuadrícula de direcciones de flujo que se codifican "
+"utilizando el método D8 donde todo el flujo de una celda va a una celda "
+"vecina única en la dirección de descenso más pronunciado. Esta cuadrícula se"
+" puede obtener como resultado de la herramienta ** \"D8 Flow Directions\" "
+"**."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:37
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:439
+msgid "``Stream Raster Grid`` [raster]"
+msgstr "``Cuadrícula ráster de corriente`` [raster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:29
+msgid ""
+"A grid indicating streams. Such a grid can be created by several of the "
+"tools in the **\"Stream Network Analysis\"** toolset. However, the tools in "
+"the **\"Stream Network Analysis\"** toolset only create grids with a value "
+"of 0 for no stream, or 1 for stream cells. This tool can also accept grids "
+"with values greater than 1, which can be used in conjunction with the "
+"``Threshold`` parameter to determine the location of streams. This allows "
+"Contributing Area grids to be used to define streams as well as the normal "
+"Stream Raster grids. This grid expects integer (long integer) values and any"
+" non-integer values will be truncated to an integer before being evaluated."
+msgstr ""
+"Una cuadrícula que indica corrientes. Esta cuadrícula se puede crear "
+"mediante varias de las herramientas del conjunto de herramientas ** "
+"\"Análisis de red de transmisión\" **. Sin embargo, las herramientas del "
+"conjunto de herramientas ** \"Análisis de red de transmisión\" ** solo crean"
+" cuadrículas con un valor de 0 para ninguna transmisión o 1 para celdas de "
+"transmisión. Esta herramienta también puede aceptar cuadrículas con valores "
+"superiores a 1, que se pueden utilizar junto con el parámetro `` Umbral '' "
+"para determinar la ubicación de los arroyos. Esto permite que las "
+"cuadrículas del área de contribución se utilicen para definir corrientes, "
+"así como las cuadrículas de ráster de corrientes normales. Esta cuadrícula "
+"espera valores enteros (enteros largos) y cualquier valor que no sea entero "
+"se truncará a un entero antes de ser evaluado."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:44
+msgid "``Threshold`` [number]"
+msgstr "``Umbral`` [number]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:40
+msgid ""
+"This value acts as threshold on the ``Stream Raster Grid`` to determine the "
+"location of streams. Cells with a ``Stream Raster Grid`` value  greater than"
+" or equal to the ``Threshold`` value are interpreted as streams."
+msgstr ""
+"Este valor actúa como umbral en la `` Cuadrícula ráster de transmisión '' "
+"para determinar la ubicación de las transmisiones. Las celdas con un valor "
+"de `` Cuadrícula ráster de transmisión '' mayor o igual que el valor de `` "
+"Umbral '' se interpretan como transmisiones."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:44
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1005
+msgid "Default: *50*"
+msgstr "Por defecto: *50*"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:47
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:173
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:302
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:389
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:500
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:607
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:655
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:776
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:898
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:962
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1008
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1047
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1085
+msgid "Outputs"
+msgstr "Salidas"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:51
+msgid "``Output Distance to Streams`` [raster]"
+msgstr "``Distancia saliente a flujos``[ráster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:50
+msgid ""
+"A grid giving the horizontal distance along the flow path as defined by the "
+"D8 Flow Directions Grid to the streams in the Stream Raster Grid."
+msgstr ""
+"Una cuadrícula que proporciona la distancia horizontal a lo largo de la ruta"
+" de flujo según lo definido por la cuadrícula de direcciones de flujo D8 a "
+"los arroyos en la cuadrícula de trama de flujos."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:53
+msgid "**Algorithm ID**: ``taudem:d8hdisttostrm``"
+msgstr "**Algoritmo ID**: ``taudem:d8hdisttostrm``"
+
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+msgid ""
+"The *algorithm id* is displayed when you hover over the algorithm in the "
+"Processing Toolbox. The *parameter dictionary* provides the parameter NAMEs "
+"and values. See :ref:`processing_console` for details on how to run "
+"processing algorithms from the Python console."
+msgstr ""
+"El *algoritmo id* se muestra cuando pasa el cursor sobre el algoritmo en la "
+"caja de herramientas de procesos. El *diccionario de parámetros* proporciona"
+" los NOMBRES y valores de los parámetros. Consulte :ref:`processing_console`"
+" para obtener detalles sobre cómo ejecutar algoritmos de procesamiento desde"
+" la consola de Python."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:61
+msgid "D-Infinity Avalanche Runout"
+msgstr "Alcance de avalanchas D-Infinity"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:66
+msgid ""
+"Identifies an avalanche's affected area and the flow path length to each "
+"cell in that affacted area. All cells downslope from each source area cell, "
+"up to the point where the slope from the source to the affected area is less"
+" than a threshold angle called the Alpha Angle can be in the affected area. "
+"This tool uses the D-infinity multiple flow direction method for determining"
+" flow direction. This will likely cause very small amounts of flow to be "
+"dispersed to some downslope cells that might overstate the affected area, so"
+" a threshold proportion can be set to avoid this excess dispersion. The flow"
+" path length is the distance from the cell in question to the source cell "
+"that has the highest angle."
+msgstr ""
+"Identifica el área afectada de una avalancha y la longitud de la ruta de "
+"flujo a cada celda en esa área afectada. Todas las celdas descienden de cada"
+" celda del área de origen, hasta el punto en que la pendiente desde la "
+"fuente hasta el área afectada es menor que un ángulo de umbral llamado "
+"Ángulo Alfa que puede estar en el área afectada. Esta herramienta utiliza el"
+" método de dirección de flujo múltiple D-infinity para determinar la "
+"dirección del flujo. Esto probablemente hará que se dispersen cantidades muy"
+" pequeñas de flujo a algunas celdas de la pendiente descendente que podrían "
+"exagerar el área afectada, por lo que se puede establecer una proporción "
+"umbral para evitar este exceso de dispersión. La longitud de la ruta de "
+"flujo es la distancia desde la celda en cuestión hasta la celda fuente que "
+"tiene el ángulo más alto."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:76
+msgid ""
+"All points downslope from the source area are potentially in the affected "
+"area, but not beyond a point where the slope from the source to the affected"
+" area is less than a threshold angle called the Alpha Angle."
+msgstr ""
+"Todos los puntos cuesta abajo desde el área de la fuente están "
+"potencialmente en el área afectada, pero no más allá de un punto donde la "
+"pendiente desde la fuente hasta el área afectada es menor que un ángulo de "
+"umbral llamado Ángulo Alfa."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:83
+msgid ""
+"Slope is to be measured using the straight line distance from source point "
+"to evaluation point."
+msgstr ""
+"La pendiente se medirá utilizando la distancia en línea recta desde el punto"
+" de origen al punto de evaluación."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:86
+msgid ""
+"It makes more physical sense to me for the angle to be measured along the "
+"flow path. Nevertheless it is equally easy to code straight line angles as "
+"angles along the flow path, so an option that allows switching will be "
+"provided. The most practical way to evaluate avalanche runout is to keep "
+"track of the source point with the greatest angle to each point. Then the "
+"recursive upslope flow algebra approach will look at a grid cell and all its"
+" upslope neighbors that flow to it. Information from the upslope neighbors "
+"will be used to calculate the angle to the grid cell in question and retain "
+"it in the runout zone if the angle exceeds the alpha angle. This procedure "
+"makes the assumption that the maximum angle at a grid cell will be from the "
+"set of cells that have maximum angles to the inflowing neighbors. This will "
+"always be true of angle is calculated along a flow path, but I can conceive "
+"of cases where flow paths bend back on themselves where this would not be "
+"the case for straight line angles."
+msgstr ""
+"Para mí tiene más sentido físico que el ángulo se mida a lo largo de la "
+"trayectoria del flujo. No obstante, es igualmente fácil codificar ángulos de"
+" línea recta como ángulos a lo largo de la trayectoria del flujo, por lo que"
+" se proporcionará una opción que permite la conmutación. La forma más "
+"práctica de evaluar la desviación de la avalancha es realizar un seguimiento"
+" del punto de origen con el mayor ángulo hacia cada punto. Luego, el enfoque"
+" recursivo del álgebra de flujo ascendente observará una celda de la "
+"cuadrícula y todos sus vecinos ascendentes que fluyen hacia ella. La "
+"información de los vecinos de la pendiente ascendente se utilizará para "
+"calcular el ángulo a la celda de la cuadrícula en cuestión y retenerlo en la"
+" zona de desviación si el ángulo excede el ángulo alfa. Este procedimiento "
+"supone que el ángulo máximo en una celda de la cuadrícula será del conjunto "
+"de celdas que tienen ángulos máximos a los vecinos de entrada. Esto siempre "
+"será cierto cuando el ángulo se calcula a lo largo de una trayectoria de "
+"flujo, pero puedo concebir casos en los que las trayectorias de flujo se "
+"doblen sobre sí mismas donde este no sería el caso de los ángulos en línea "
+"recta."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:100
+msgid ""
+"The D-infinity multiple flow direction field assigns flow from each grid "
+"cell to multiple downslope neighbors using proportions (``Pik``) that vary "
+"between 0 and 1 and sum to 1 for all flows out of a grid cell. It may be "
+"desirable to specify a threshold ``T`` that this proportion has to exceed "
+"before a grid cell is counted as flowing to a downslope grid cell, e.g. "
+"``Pik > T`` (=0.2 say) to avoid dispersion to grid cells that get very "
+"little flow. ``T`` will be specified as a user input. If all upslope grid "
+"cells are to be used ``T`` may be input as 0."
+msgstr ""
+"El campo de dirección de flujo múltiple D-infinity asigna el flujo de cada "
+"celda de la cuadrícula a varios vecinos de la pendiente descendente "
+"utilizando proporciones (``Pik ``) que varían entre 0 y 1 y suman 1 para "
+"todos los flujos que salen de una celda de la cuadrícula. Puede ser deseable"
+" especificar un umbral ``T `` que esta proporción debe exceder antes de que "
+"una celda de la cuadrícula se cuente como fluyendo hacia una celda de la "
+"cuadrícula de pendiente descendente, p. ``Pik> T `` (= 0,2 digamos) para "
+"evitar la dispersión en las celdas de la cuadrícula que tienen muy poco "
+"flujo. ``T `` se especificará como entrada del usuario. Si se van a utilizar"
+" todas las celdas de la cuadrícula de pendiente ascendente, se puede "
+"ingresar ``T `` como 0."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:108
+msgid ""
+"Avalanche source sites are to be input as a short integer grid (name suffix "
+":file:`*ass`, e.g. :file:`demass`) comprised of positive values where "
+"avalanches may be triggered and 0 values elsewhere."
+msgstr ""
+"Los sitios de origen de avalanchas deben ingresarse como una cuadrícula de "
+"enteros cortos (sufijo de nombre: archivo: `*ass`, por ejemplo "
+":file:`demass`) compuesto por valores positivos donde pueden desencadenarse "
+"avalanchas y valores 0 en otros lugares."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:112
+msgid "The following grids are output:"
+msgstr "Se generan las siguientes cuadrículas:"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:114
+msgid ""
+"rz --- A runout zone indicator with value 0 to indicate that this grid cell "
+"is not in the runout zone and value > 0 to indicate that this grid cell is "
+"in the runout zone. Since there may be information in the angle to the "
+"associated source site, this variable will be assigned the angle to the "
+"source site (in degrees)"
+msgstr ""
+"rz --- Un indicador de zona de desviación con valor 0 para indicar que esta "
+"celda de la cuadrícula no está en la zona de desviación y un valor> 0 para "
+"indicar que esta celda de la cuadrícula está en la zona de desviación. Dado "
+"que puede haber información en el ángulo del sitio de origen asociado, a "
+"esta variable se le asignará el ángulo del sitio de origen (en grados)"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:119
+msgid ""
+"dm --- Along flow distance from the source site that has the highest angle "
+"to the point in question"
+msgstr ""
+"dm --- A lo largo de la distancia de flujo desde el sitio de origen que "
+"tiene el ángulo más alto hasta el punto en cuestión"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:128
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:263
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:359
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:426
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:541
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:649
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:742
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:870
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:955
+msgid "``D-Infinity Flow Direction Grid`` [raster]"
+msgstr "``Cuadrícula de dirección de flujo D-Infinity`` [raster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:126
+msgid ""
+"A grid giving flow direction by the D-infinity method. Flow direction is "
+"measured in radians, counter clockwise from east. This can be created  by "
+"the tool **\"D-Infinity Flow Directions\"**."
+msgstr ""
+"Una cuadrícula que indica la dirección del flujo mediante el método "
+"D-infinito. La dirección del flujo se mide en radianes, en sentido "
+"antihorario desde el este. Esto se puede crear con la herramienta "
+"**\"D-Infinity Flow Directions\"**."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:136
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:434
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:549
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:999
+msgid "``Pit Filled Elevation Grid`` [raster]"
+msgstr "\"Red de Elevación de Pozo Relleno\" [raster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:131
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:429
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:544
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:994
+msgid ""
+"This input is a grid of elevation values. As a general rule, it is "
+"recommended that you use a grid of elevation values that have had the pits "
+"removed for this input. Pits are generally taken to be artifacts that "
+"interfere with the analysis of flow across them. This grid can be obtained "
+"as the output of the **\"Pit Remove\"** tool, in which case it contains "
+"elevation values where the pits have been filled to the point where they "
+"just drain."
+msgstr ""
+"Esta entrada es una cuadrícula de valores de elevación. Como regla general, "
+"se recomienda que utilice una cuadrícula de valores de elevación a los que "
+"se les hayan eliminado los hoyos para esta entrada. Generalmente, se "
+"considera que los pozos son artefactos que interfieren con el análisis del "
+"flujo a través de ellos. Esta cuadrícula se puede obtener como resultado de "
+"la herramienta ** \"Remoción de Pozos\" **, en cuyo caso contiene valores de"
+" elevación donde los pozos se han llenado hasta el punto donde simplemente "
+"drenan."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:143
+msgid "``Avalanche Source Site Grid`` [raster]"
+msgstr "``Cuadrícula de Sitio Origen de Avalancha`` [ráster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:139
+msgid ""
+"This is a grid of source areas for snow avalanches that are commonly "
+"identified manually using a mix of experience and visual interpretation of "
+"maps. Avalanche source sites are to be input as a short integer grid (name "
+"suffix :file:`*ass`, e.g. :file:`demass`) comprised of positive values where"
+" avalanches may be triggered and 0 values elsewhere."
+msgstr ""
+"Esta es una cuadrícula de áreas de origen de avalanchas de nieve que "
+"comúnmente se identifican manualmente utilizando una combinación de "
+"experiencia e interpretación visual de mapas. Los sitios de origen de "
+"avalanchas deben ingresarse como una cuadrícula de enteros cortos (sufijo de"
+" nombre: archivo: `*ass`, por ejemplo :file:`demass`) compuesto por valores "
+"positivos donde pueden desencadenarse avalanchas y valores 0 en otros "
+"lugares."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:153
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:597
+msgid "``Proportion Threshold`` [number]"
+msgstr "``Umbral de proporción`` [número]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:146
+msgid ""
+"This value is a threshold proportion that is used to limit the dispersion of"
+" flow caused by using the D-infinity multiple flow direction method for "
+"determining flow direction. The D-infinity multiple flow direction method "
+"often causes very small amounts of flow to be dispersed to some downslope "
+"cells that might overstate the affected area, so a threshold proportion can "
+"be set to avoid this excess dispersion."
+msgstr ""
+"Este valor es una proporción de umbral que se utiliza para limitar la "
+"dispersión del flujo causada por el método de dirección de flujo múltiple "
+"D-infinity para determinar la dirección del flujo. El método de dirección de"
+" flujo múltiple D-infinity a menudo hace que se dispersen cantidades muy "
+"pequeñas de flujo a algunas celdas de la pendiente descendente que podrían "
+"exagerar el área afectada, por lo que se puede establecer una proporción de "
+"umbral para evitar esta dispersión excesiva."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:153
+msgid "Default: *0.2*"
+msgstr "Por defecto: *0.2*"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:162
+msgid "``Alpha Angle Threshold`` [number]"
+msgstr "``Umbral de ángulo alfa`` [número]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:156
+msgid ""
+"This value is the threshold angle, called the Alpha Angle, that is used to "
+"determine which of the cells downslope from the source cells are in the "
+"affected area. Only the cells downslope from each source area cell, up to "
+"the point where the slope from the source to the affected area is less than "
+"a threshold angle are in the affected area."
+msgstr ""
+"Este valor es el ángulo de umbral, llamado Ángulo Alfa, que se usa para "
+"determinar cuáles de las celdas descendentes de las celdas de origen están "
+"en el área afectada. Solo las celdas que descienden de cada celda del área "
+"de origen, hasta el punto en el que la pendiente desde el origen al área "
+"afectada es menor que un ángulo de umbral, están en el área afectada."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:162
+msgid "Default: *18*"
+msgstr "Por defecto: *18*"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:170
+msgid "``Measure distance along flow path`` [boolean]"
+msgstr ""
+"``Medir la distancia a lo largo de la trayectoria del flujo`` [booleano]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:165
+msgid ""
+"This option selects the method used to measure the distance used to "
+"calculate the slope angle. If option is *True* then measure it along the "
+"flow path, where the *False* option causes the slope to be measure along the"
+" straight line distance from the source cell to the evaluation cell."
+msgstr ""
+"Esta opción selecciona el método utilizado para medir la distancia utilizada"
+" para calcular el ángulo de pendiente. Si la opción es * Verdadero *, mida a"
+" lo largo de la trayectoria del flujo, donde la opción * Falso * hace que la"
+" pendiente se mida a lo largo de la distancia en línea recta desde la celda "
+"fuente a la celda de evaluación."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:170
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:299
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:386
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:497
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:604
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:773
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:895
+msgid "Default: *True*"
+msgstr "Por defecto: *True*"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:181
+msgid "``Runout Zone Grid`` [raster]"
+msgstr "``Cuadrícula de Zona de Runout`` [ráster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:176
+msgid ""
+"This grid Identifies the avalanche's runout zone (affected area) using a "
+"runout zone indicator with value 0 to indicate that this grid cell is not in"
+" the runout zone and value > 0 to indicate that this grid cell is in the "
+"runout zone. Since there may be information in the angle to the associated "
+"source site, this variable will be assigned the angle to the source site (in"
+" degrees)."
+msgstr ""
+"Esta cuadrícula identifica la zona de excentricidad de la avalancha (área "
+"afectada) usando un indicador de zona de excentricidad con valor 0 para "
+"indicar que esta celda de la cuadrícula no está en la zona de excentricidad "
+"y un valor> 0 para indicar que esta celda de la cuadrícula está en la zona "
+"de excentricidad. Dado que puede haber información en el ángulo del sitio de"
+" origen asociado, a esta variable se le asignará el ángulo del sitio de "
+"origen (en grados)."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:185
+msgid "``Path Distance Grid`` [raster]"
+msgstr "``Cuadrícula de Ruta de Distancia`` [ráster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:184
+msgid ""
+"This is a grid of the flow distance from the source site that has the "
+"highest angle to each cell."
+msgstr ""
+"Esta es una cuadrícula de la distancia del flujo desde el sitio de origen "
+"que tiene el ángulo más alto para cada celda."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:187
+msgid "**Algorithm ID**: ``taudem:dinfavalanche``"
+msgstr "**Algoritmo ID**: ``taudem:dinfavalanche``"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:195
+msgid "D-Infinity Concentration Limited Accumulation"
+msgstr "Acumulación limitada de concentración D-Infinity"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:200
+msgid ""
+"This function applies to the situation where an unlimited supply of a "
+"substance is loaded into flow at a concentration or solubility threshold "
+"Csol over a region indicated by an indicator grid (dg). It a grid of the "
+"concentration of a substance at each location in the domain, where the "
+"supply of substance from a supply area is loaded into the flow at a "
+"concentration or solubility threshold. The flow is first calculated as a "
+"D-infinity weighted contributing area of an input Effective Runoff Weight "
+"Grid (notionally excess precipitation). The concentration of substance over "
+"the supply area (indicator grid) is at the concentration threshold. As the "
+"substance moves downslope with the D-infinity flow field, it is subject to "
+"first order decay in moving from cell to cell as well as dilution due to "
+"changes in flow. The decay multiplier grid gives the fractional (first "
+"order) reduction in quantity in moving from grid cell ``x`` to the next "
+"downslope cell. If the outlets shapefile is used, the tool only evaluates "
+"the part of the domain that contributes flow to the locations given by the "
+"shapefile. This is useful for a tracking a contaminant or compound from an "
+"area with unlimited supply of that compound that is loaded into a flow at a "
+"concentration or solubility threshold over a zone and flow from the zone may"
+" be subject to decay or attenuation."
+msgstr ""
+"Esta función se aplica a la situación en la que un suministro ilimitado de "
+"una sustancia se carga en el flujo a una concentración o umbral de "
+"solubilidad Csol sobre una región indicada por una cuadrícula indicadora "
+"(dg). Es una cuadrícula de la concentración de una sustancia en cada "
+"ubicación del dominio, donde el suministro de sustancia de un área de "
+"suministro se carga en el flujo a una concentración o umbral de solubilidad."
+" El flujo se calcula primero como un área de contribución ponderada "
+"D-infinito de una cuadrícula de peso de escorrentía efectiva de entrada "
+"(teóricamente exceso de precipitación). La concentración de sustancia sobre "
+"el área de suministro (cuadrícula indicadora) está en el umbral de "
+"concentración. A medida que la sustancia se mueve pendiente abajo con el "
+"campo de flujo D-infinito, está sujeta a un deterioro de primer orden al "
+"moverse de una celda a otra, así como a la dilución debido a los cambios en "
+"el flujo. La cuadrícula del multiplicador de desintegración da la reducción "
+"fraccional (de primer orden) en la cantidad al pasar de la celda de la "
+"cuadrícula ``x`` a la siguiente celda de pendiente descendente. Si se "
+"utiliza el shapefile de outlets, la herramienta solo evalúa la parte del "
+"dominio que aporta flujo a las ubicaciones dadas por el shapefile. Esto es "
+"útil para rastrear un contaminante o compuesto desde un área con suministro "
+"ilimitado de ese compuesto que se carga en un flujo a una concentración o "
+"umbral de solubilidad sobre una zona y el flujo desde la zona puede estar "
+"sujeto a descomposición o atenuación."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:218
+msgid ""
+"The indicator grid (``dg``) is used to delineate the area of the substance "
+"supply using the (0, 1) indicator function ``i(x)``. ``A[]`` denotes the "
+"weighted accumulation operator evaluated using the D-Infinity Contributing "
+"Area function. The Effective Runoff Weight Grid gives the supply to the flow"
+" (e.g. the excess rainfall if this is overland flow) denoted as ``w(x)``. "
+"The specific discharge is then given by:"
+msgstr ""
+"La cuadrícula indicadora (``dg``) se utiliza para delimitar el área de "
+"suministro de sustancia utilizando la función de indicador (0, 1) ``i(x)``. "
+"``A[]`` denota el operador de acumulación ponderada evaluado utilizando la "
+"función de área de contribución D-Infinity. La cuadrícula de peso de "
+"escorrentía efectiva proporciona el suministro al flujo (por ejemplo, el "
+"exceso de lluvia si se trata de un flujo terrestre) denotado como ``w(x)``. "
+"La descarga específica viene dada por:"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:229
+msgid ""
+"This weighted accumulation ``Q(x)`` is output as the Overland Flow Specific "
+"Discharge Grid. Over the substance supply area concentration is at the "
+"threshold (the threshold is a saturation or solubility limit). If ``i(x) = "
+"1``, then"
+msgstr ""
+"Esta acumulación ponderada ``Q (x)`` se emite como la Rejilla de descarga "
+"específica de flujo terrestre. Por encima del área de suministro de la "
+"sustancia, la concentración está en el umbral (el umbral es un límite de "
+"saturación o solubilidad). Si ``i (x) = 1``, entonces"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:237
+msgid ""
+"where ``L(x)`` denotes the load being carried by the flow. At remaining "
+"locations, the load is determined by load accumulation and the concentration"
+" by dilution:"
+msgstr ""
+"donde ``L(x)`` denota la carga transportada por el flujo. En el resto de "
+"ubicaciones, la carga se determina por acumulación de carga y la "
+"concentración por dilución:"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:243
+msgid ""
+"Here ``d(x) = d(i, j)`` is a decay multiplier giving the fractional (first "
+"order) reduction in mass in moving from grid cell ``x`` to the next "
+"downslope cell. If travel (or residence) times ``t(x)`` associated with flow"
+" between cells are available ``d(x)`` may be evaluated as ``exp(-k t(x))`` "
+"where ``k`` is a first order decay parameter. The Concentration grid output "
+"is ``C(x)``. If the outlets shapefile is used, the tool only evaluates the "
+"part of the domain that contributes flow to the locations given by the "
+"shapefile."
+msgstr ""
+"Aquí ``d(x) = d (i, j)`` es un multiplicador de desintegración que da la "
+"reducción fraccional (de primer orden) en la masa al pasar de la celda de la"
+" cuadrícula ``x`` a la siguiente celda de pendiente descendente. Si los "
+"tiempos de viaje (o residencia) ``t(x)`` asociados con el flujo entre celdas"
+" están disponibles, ``d(x)`` puede evaluarse como ``exp (-kt "
+"(x))``donde``k`` es un parámetro de decaimiento de primer orden. La salida "
+"de la cuadrícula de concentración es``C(x)``. Si se utiliza el shapefile de "
+"outlets, la herramienta solo evalúa la parte del dominio que aporta flujo a "
+"las ubicaciones dadas por el shapefile."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:254
+msgid ""
+"Useful for a tracking a contaminant released or partitioned to flow at a "
+"fixed threshold concentration."
+msgstr ""
+"Útil para rastrear un contaminante liberado o dividido para que fluya a una "
+"concentración umbral fija."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:261
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:357
+msgid ""
+"A grid giving flow direction by the D-infinity method. Flow direction is "
+"measured in radians, counter clockwise from east. This grid can be created "
+"by the function **\"D-Infinity Flow Directions\"**."
+msgstr ""
+"Una cuadrícula que indica la dirección del flujo mediante el método "
+"D-infinito. La dirección del flujo se mide en radianes, en sentido "
+"antihorario desde el este. Esta cuadrícula se puede crear mediante la "
+"función **\"Direcciones de flujo D-Infinity\"**."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:267
+msgid "``Disturbance Indicator Grid`` [raster]"
+msgstr "``Cuadrícula de indicador de perturbación`` [ráster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:266
+msgid ""
+"A grid that indicates the source zone of the area of substance supply and "
+"must be 1 inside the zone and 0 or NODATA over the rest of the domain."
+msgstr ""
+"Una cuadrícula que indica la zona de origen del área de suministro de "
+"sustancias y debe ser 1 dentro de la zona y 0 o NODATA sobre el resto del "
+"dominio."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:274
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:364
+msgid "``Decay Multiplier Grid`` [raster]"
+msgstr "``Cuadrícula de multiplicador de decaimiento`` [ráster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:270
+msgid ""
+"A grid giving the factor by which flow leaving each grid cell is multiplied "
+"before accumulation on downslope grid cells. This may be used to simulate "
+"the movement of an attenuating or decaying substance. If travel (or "
+"residence) times ``t(x)`` associated with flow between cells are available "
+"``d(x)`` may be evaluated as ``exp(-k t(x))`` where ``k`` is a first order "
+"decay parameter."
+msgstr ""
+"Una cuadrícula que da el factor por el cual el flujo que sale de cada celda "
+"de la cuadrícula se multiplica antes de la acumulación en las celdas de la "
+"cuadrícula de pendiente descendente. Esto se puede utilizar para simular el "
+"movimiento de una sustancia atenuante o en descomposición. Si los tiempos de"
+" viaje (o residencia) ``t(x)``asociados con el flujo entre celdas están "
+"disponibles, ``d(x)``puede evaluarse como ``exp (-kt(x))``donde``k``es un "
+"parámetro de decaimiento de primer orden."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:279
+msgid "``Effective Runoff Weight Grid`` [raster]"
+msgstr "``Cuadrícula de peso de escorrentía efectiva`` [ráster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:277
+msgid ""
+"A grid giving the input quantity (notionally effective runoff or excess "
+"precipitation) to be used in the D-infinity weighted contributing area "
+"evaluation of Overland Flow Specific Discharge."
+msgstr ""
+"Una cuadrícula que da la cantidad de entrada (escorrentía teóricamente "
+"efectiva o exceso de precipitación) que se utilizará en la evaluación del "
+"área contribuyente ponderada D-infinito de la descarga específica de flujo "
+"terrestre."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:285
+msgid "``Outlets shapefile`` [vector: point]"
+msgstr "``Outlets shapefile`` [vectorail: puntual]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:282
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:367
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:374
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:442
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:761
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:883
+msgid "Optional"
+msgstr "Opcional"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:284
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:376
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:763
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:885
+msgid ""
+"This optional input is a point shapefile defining outlets of interest. If "
+"this file is used, the tool will only evaluate the area upslope of these "
+"outlets."
+msgstr ""
+"Esta entrada opcional es un shapefile puntual que define las salidas de "
+"interés. Si se utiliza este archivo, la herramienta solo evaluará el área de"
+" pendiente ascendente de estos puntos de venta."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:291
+msgid "``Concentration Threshold`` [number]"
+msgstr "``Umbral de concentración`` [número]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:288
+msgid ""
+"The concentration or solubility threshold. Over the substance supply area, "
+"concentration is at this threshold."
+msgstr ""
+"El umbral de concentración o solubilidad. Sobre el área de suministro de "
+"sustancias, la concentración se encuentra en este umbral."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:291
+msgid "Default: *1.0*"
+msgstr "Por defecto: *1.0*"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:299
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:386
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:497
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:604
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:773
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:895
+msgid "``Check for edge contamination`` [boolean]"
+msgstr "``Comprobar contaminación de borde`` [boolean]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:294
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:381
+msgid ""
+"This option determines whether the tool should check for edge contamination."
+" Edge contamination is defined as the possibility that a value may be "
+"underestimated due to grid cells outside of the domain not being considered "
+"when determining contributing area."
+msgstr ""
+"Esta opción determina si la herramienta debe verificar la contaminación del "
+"borde. La contaminación de borde se define como la posibilidad de que un "
+"valor pueda subestimarse debido a que las celdas de la cuadrícula fuera del "
+"dominio no se consideran al determinar el área de contribución."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:306
+msgid "``Concentration Grid`` [raster]"
+msgstr "``Cuadrícula de concentración`` [ráster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:305
+msgid ""
+"A grid giving the resulting concentration of the compound of interest in the"
+" flow."
+msgstr ""
+"Una cuadrícula que da la concentración resultante del compuesto de interés "
+"en el flujo."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:308
+msgid "**Algorithm ID**: ``taudem:dinfconclimaccum``"
+msgstr "**Algoritmo ID**: ``taudem:dinfconclimaccum``"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:316
+msgid "D-Infinity Decaying Accumulation"
+msgstr "Acumulación decadente D-Infinity"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:321
+msgid ""
+"The D-Infinity Decaying Accumulation tool creates a grid of the accumulated "
+"quantity at each location in the domain where the quantity accumulates with "
+"the D-infinity flow field, but is subject to first order decay in moving "
+"from cell to cell. By default, the quantity contribution of each grid cell "
+"is the cell length to give a per unit width accumulation, but can optionally"
+" be expressed with a weight grid. The decay multiplier grid gives the "
+"fractional (first order) reduction in quantity in accumulating from grid "
+"cell ``x`` to the next downslope cell."
+msgstr ""
+"La herramienta D-Infinity Decaying Accumulation crea una cuadrícula de la "
+"cantidad acumulada en cada ubicación en el dominio donde la cantidad se "
+"acumula con el campo de flujo D-infinity, pero está sujeta a una disminución"
+" de primer orden al moverse de una celda a otra. De forma predeterminada, la"
+" contribución de la cantidad de cada celda de la cuadrícula es la longitud "
+"de la celda para dar una acumulación de ancho por unidad, pero opcionalmente"
+" se puede expresar con una cuadrícula de peso. La cuadrícula del "
+"multiplicador de desintegración da la reducción fraccional (de primer orden)"
+" en la cantidad acumulada desde la celda de la cuadrícula `` x '' hasta la "
+"siguiente celda de pendiente descendente."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:330
+msgid ""
+"A decayed accumulation operator ``DA[.]`` takes as input a mass loading "
+"field ``m(x)`` expressed at each grid location as ``m(i, j)`` that is "
+"assumed to move with the flow field but is subject to first order decay in "
+"moving from cell to cell. The output is the accumulated mass at each "
+"location ``DA(x)``. The accumulation of ``m`` at each grid cell can be "
+"numerically evaluated."
+msgstr ""
+"Un operador de acumulación decaído ``DA[.]`` Toma como entrada un campo de "
+"carga de masa ``m(x)`` expresado en cada ubicación de la cuadrícula como "
+"``m(i, j)`` que se supone que se mueve con el campo de flujo, pero está "
+"sujeto a un deterioro de primer orden al moverse de una celda a otra. La "
+"salida es la masa acumulada en cada ubicación ``DA(x)``. La acumulación de "
+"``m`` en cada celda de la cuadrícula se puede evaluar numéricamente."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:339
+msgid ""
+"Here ``d(x) = d(i ,j)`` is a decay multiplier giving the fractional (first "
+"order) reduction in mass in moving from grid cell ``x`` to the next "
+"downslope cell. If travel (or residence) times ``t(x)`` associated with flow"
+" between cells are available ``d(x)`` may be evaluated as ``exp(-k t(x))`` "
+"where ``k`` is a first order decay parameter. The weight grid is used to "
+"represent the mass loading ``m(x)``. If not specified this is taken as 1. If"
+" the outlets shapefile is used the function is only evaluated on that part "
+"of the domain that contributes flow to the locations given by the shapefile."
+msgstr ""
+"Aquí ``d(x) = d(i, j)`` es un multiplicador de desintegración que da la "
+"reducción fraccional (de primer orden) en la masa al pasar de la celda de la"
+" cuadrícula ``x`` a la siguiente celda de pendiente descendente. Si los "
+"tiempos de viaje (o residencia) ``t(x)`` asociados con el flujo entre celdas"
+" están disponibles, ``d(x)`` puede evaluarse como ``exp(-kt(x))`` donde "
+"``k`` es un parámetro de decaimiento de primer orden. La cuadrícula de peso "
+"se utiliza para representar la carga de masa ``m(x)``. Si no se especifica, "
+"se toma como 1. Si se utiliza el shapefile de salidas, la función solo se "
+"evalúa en la parte del dominio que aporta flujo a las ubicaciones dadas por "
+"el shapefile."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:351
+msgid ""
+"Useful for a tracking contaminant or compound subject to decay or "
+"attenuation."
+msgstr ""
+"Útil para rastrear un contaminante o compuesto sujeto a decaimiento o "
+"atenuación."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:362
+msgid ""
+"A grid giving the factor by which flow leaving each grid cell is multiplied "
+"before accumulation on downslope grid cells. This may be used to simulate "
+"the movement of an attenuating substance."
+msgstr ""
+"Una cuadrícula que da el factor por el cual el flujo que sale de cada celda "
+"de la cuadrícula se multiplica antes de la acumulación en las celdas de la "
+"cuadrícula de pendiente descendente. Esto puede usarse para simular el "
+"movimiento de una sustancia atenuante."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:371
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:652
+msgid "``Weight Grid`` [raster]"
+msgstr "``Cuadrícula de peso`` [ráster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:369
+msgid ""
+"A grid giving weights (loadings) to be used in the accumulation. If this "
+"optional grid is not specified, weights are taken as the linear grid cell "
+"size to give a per unit width accumulation."
+msgstr ""
+"Una cuadrícula que da pesos(cargas) para ser utilizados en la acumulación. "
+"Si no se especifica esta cuadrícula opcional, los pesos se toman como el "
+"tamaño de celda de la cuadrícula lineal para dar una acumulación de ancho "
+"por unidad."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:378
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:765
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:887
+msgid "``Outlets Shapefile`` [vector: point]"
+msgstr "\"Medios de Archivo de Forma\" [vector: punto]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:394
+msgid "``Decayed Specific Catchment Area Grid`` [raster]"
+msgstr "``Cuadrícula de área de captación específica deteriorada`` [ráster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:392
+msgid ""
+"The D-Infinity Decaying Accumulation tool creates a grid of the accumulated "
+"mass at each location in the domain where mass moves with the D-infinity "
+"flow field, but is subject to first order decay in moving from cell to cell."
+msgstr ""
+"La herramienta D-Infinity Decaying Accumulation crea una cuadrícula de la "
+"masa acumulada en cada ubicación en el dominio donde la masa se mueve con el"
+" campo de flujo D-infinito, pero está sujeta a un decaimiento de primer "
+"orden al moverse de una celda a otra."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:396
+msgid "**Algorithm ID**: ``taudem:dinfdecayaccum``"
+msgstr "**Algoritmo ID**: ``taudem:dinfdecayaccum``"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:404
+msgid "D-Infinity Distance Down"
+msgstr "Distancia abajo de D-infinity"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:409
+msgid ""
+"Calculates the distance downslope to a stream using the D-infinity flow "
+"model. The D-infinity flow model is a multiple flow direction model, because"
+" the outflow from each grid cell is proportioned between up to 2 downslope "
+"grid cells. As such, the distance from any grid cell to a stream is not "
+"uniquely defined. Flow that originates at a particular grid cell may enter "
+"the stream at a number of different cells. The statistical method may be "
+"selected as the longest, shortest or weighted average of the flow path "
+"distance to the stream. Also one of several ways of measuring distance may "
+"be selected: the total straight line path (Pythagoras), the horizontal "
+"component of the straight line path, the vertical component of the straight "
+"line path, or the total surface flow path."
+msgstr ""
+"Calcula la distancia pendiente abajo a un arroyo usando el modelo de flujo "
+"D-infinito. El modelo de flujo D-infinity es un modelo de dirección de flujo"
+" múltiple, porque el flujo de salida de cada celda de la cuadrícula se "
+"proporciona entre hasta 2 celdas de la cuadrícula de pendiente descendente. "
+"Como tal, la distancia desde cualquier celda de la cuadrícula a una ruta no "
+"está definida de forma única. El flujo que se origina en una celda de "
+"cuadrícula particular puede ingresar al flujo en varias celdas diferentes. "
+"El método estadístico puede seleccionarse como el promedio más largo, más "
+"corto o ponderado de la distancia de la trayectoria del flujo a la "
+"corriente. También se puede seleccionar una de varias formas de medir la "
+"distancia: la trayectoria en línea recta total (Pitágoras), la componente "
+"horizontal de la trayectoria en línea recta, la componente vertical de la "
+"trayectoria en línea recta o la trayectoria de flujo superficial total."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:424
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:539
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:647
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:740
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:868
+msgid ""
+"A grid giving flow direction by the D-infinity method. Flow direction is "
+"measured in radians, counter clockwise from east. This can be created by the"
+" tool **\"D-Infinity Flow Directions\"**."
+msgstr ""
+"Una cuadrícula que indica la dirección del flujo mediante el método "
+"D-infinito. La dirección del flujo se mide en radianes, en sentido "
+"antihorario desde el este. Esto se puede crear con la herramienta ** "
+"\"D-Infinity Direcciones de Flujo\" **."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:437
+msgid ""
+"A grid indicating streams, by using a grid cell value of 1 on streams and 0 "
+"off streams. This is usually the output of one of the tools in the "
+"**\"Stream Network Analysis\"** toolset."
+msgstr ""
+"Una cuadrícula que indica arroyos, utilizando un valor de celda de "
+"cuadrícula de 1 en arroyos y 0 fuera de arroyos. Suele ser el resultado de "
+"una de las herramientas del conjunto de herramientas ** \"Análisis de red de"
+" transmisión\" **."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:449
+msgid "``Weight Path Grid`` [raster]"
+msgstr "``Cuadrícula de Ruta de Pesos`` [ráster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:444
+msgid ""
+"A grid giving weights (loadings) to be used in the distance calculation. "
+"This might be used for example where only flow distance through a buffer is "
+"to be calculated. The weight is then 1 in the buffer and 0 outside it. "
+"Alternatively the weight may reflect some sort of cost function for travel "
+"over the surface, perhaps representing travel time or attenuation of a "
+"process. If this input file is not used, the loadings will assumed to be one"
+" for each grid cell."
+msgstr ""
+"Una cuadrícula que da pesos (cargas) para ser usados en el cálculo de la "
+"distancia. Esto podría usarse, por ejemplo, cuando solo se deba calcular la "
+"distancia del flujo a través de un búfer. El peso es entonces 1 en el búfer "
+"y 0 fuera de él. Alternativamente, el peso puede reflejar algún tipo de "
+"función de costo para viajar sobre la superficie, quizás representando el "
+"tiempo de viaje o la atenuación de un proceso. Si no se utiliza este archivo"
+" de entrada, se asumirá que las cargas son una para cada celda de la "
+"cuadrícula."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:466
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:571
+msgid "``Statistical Method`` [enumeration]"
+msgstr "``Método estadístico`` [enumeración]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:452
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:557
+msgid ""
+"Statistical method used to calculate the distance down to the stream. In the"
+" D-Infinity flow model, the outflow from each grid cell is proportioned "
+"between two downslope grid cells. Therefore, the distance from any grid cell"
+" to a stream is not uniquely defined. Flow that originates at a particular "
+"grid cell may enter the stream at a number of cells. The distance to the "
+"stream may be defined as the longest (maximum), shortest (minimum) or "
+"weighted average of the distance down to the stream."
+msgstr ""
+"Método estadístico utilizado para calcular la distancia hasta el arroyo. En "
+"el modelo de flujo D-Infinity, el flujo de salida de cada celda de la "
+"cuadrícula se proporciona entre dos celdas de la cuadrícula de pendiente "
+"descendente. Por lo tanto, la distancia desde cualquier celda de la "
+"cuadrícula a una ruta no está definida de forma única. El flujo que se "
+"origina en una celda particular de la cuadrícula puede ingresar al flujo en "
+"varias celdas. La distancia al arroyo puede definirse como el promedio más "
+"largo (máximo), más corto (mínimo) o ponderado de la distancia hasta el "
+"arroyo."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:460
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:475
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:565
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:580
+msgid "Options:"
+msgstr "Opciones:"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:462
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:567
+msgid "0 --- Minimum"
+msgstr "0 --- Mínimo"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:463
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:568
+msgid "1 --- Maximum"
+msgstr "1 --- Máximo"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:464
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:569
+msgid "2 --- Average"
+msgstr "2 --- Promedio"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:466
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:571
+msgid "Default: *2*"
+msgstr "Predeterminado: *2*"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:482
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:587
+msgid "``Distance Method`` [enumeration]"
+msgstr "``Método distancia`` [enumeración]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:469
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:574
+msgid ""
+"Distance method used to calculate the distance down to the stream. One of "
+"several ways of measuring distance may be selected: the total straight line "
+"path (Pythagoras), the horizontal component of the straight line path "
+"(horizontal), the vertical component of the straight line path (vertical), "
+"or the total surface flow path (surface)."
+msgstr ""
+"Método de distancia utilizado para calcular la distancia hasta el arroyo. Se"
+" puede seleccionar una de varias formas de medir la distancia: la "
+"trayectoria en línea recta total (Pitágoras), la componente horizontal de la"
+" trayectoria en línea recta (horizontal), la componente vertical de la "
+"trayectoria en línea recta (vertical) o la trayectoria del flujo superficial"
+" total (superficie)."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:477
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:582
+msgid "0 --- Pythagoras"
+msgstr "0 --- Pitágoras"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:478
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:583
+msgid "1 --- Horizontal"
+msgstr "1 --- Horizontal"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:479
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:584
+msgid "2 --- Vertical"
+msgstr "2 --- Vertical"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:480
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:585
+msgid "3 --- Surface"
+msgstr "3 --- Superficie"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:482
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:587
+msgid "Default: *1*"
+msgstr "Predeterminado: *1*"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:485
+msgid ""
+"A flag that determines whether the tool should check for edge contamination."
+" This is defined as the possibility that a value may be underestimated due "
+"to grid cells outside of the domain not being counted. In the context of "
+"Distance Down this occurs when part of a flow path traced downslope from a "
+"grid cell leaves the domain without reaching a stream grid cell. With edge "
+"contamination checking selected, the algorithm recognizes this and reports "
+"no data for the result. This is the desired effect and indicates that values"
+" for these grid cells is unknown due to it being dependent on terrain "
+"outside of the domain of data available. Edge contamination checking may be "
+"overridden in cases where you know this is not an issue or want to evaluate "
+"the distance using only the fraction of flow paths that terminate at a "
+"stream."
+msgstr ""
+"Una bandera que determina si la herramienta debe verificar la contaminación "
+"del borde. Esto se define como la posibilidad de que un valor se subestime "
+"debido a que las celdas de la cuadrícula fuera del dominio no se cuentan. En"
+" el contexto de Distancia hacia abajo, esto ocurre cuando parte de una ruta "
+"de flujo trazada cuesta abajo desde una celda de cuadrícula sale del dominio"
+" sin llegar a una celda de cuadrícula de corriente. Con la comprobación de "
+"contaminación de bordes seleccionada, el algoritmo lo reconoce y no informa "
+"ningún dato del resultado. Este es el efecto deseado e indica que los "
+"valores para estas celdas de la cuadrícula son desconocidos debido a que "
+"dependen del terreno fuera del dominio de los datos disponibles. La "
+"verificación de la contaminación de los bordes puede anularse en los casos "
+"en que sepa que esto no es un problema o si desea evaluar la distancia "
+"utilizando solo la fracción de las rutas de flujo que terminan en una "
+"corriente."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:504
+msgid "``D-Infinity Drop to Stream Grid`` [raster]"
+msgstr "``Cudrícula de Flujo de Gotas d-Infinity`` [ráster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:503
+msgid ""
+"Grid containing the distance to stream calculated using the D-infinity flow "
+"model and the statistical and path methods chosen."
+msgstr ""
+"Cuadrícula que contiene la distancia a la corriente calculada utilizando el "
+"modelo de flujo D-infinito y los métodos estadísticos y de trayectoria "
+"elegidos."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:506
+msgid "**Algorithm ID**: ``taudem:dinfdistdown``"
+msgstr "**Algoritmo ID**: ``taudem:dinfdistdown``"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:514
+msgid "D-Infinity Distance Up"
+msgstr "Distancia arriba de D-infinity"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:519
+msgid ""
+"This tool calculates the distance from each grid cell up to the ridge cells "
+"along the reverse D-infinity flow directions. Ridge cells are defined to be "
+"grid cells that have no contribution from grid cells further upslope. Given "
+"the convergence of multiple flow paths at any grid cell, any given grid cell"
+" can have multiple upslope ridge cells. There are three statistical methods "
+"that this tool can use: maximum distance, minimum distance and waited flow "
+"average over these flow paths. A variant on the above is to consider only "
+"grid cells that contribute flow with a proportion greater than a user "
+"specified threshold (t) to be considered as upslope of any given grid cell. "
+"Setting t=0.5 would result in only one flow path from any grid cell and "
+"would give the result equivalent to a D8 flow model, rather than D-infinity "
+"flow model, where flow is proportioned between two downslope grid cells. "
+"Finally there are several different optional paths that can be measured: the"
+" total straight line path (Pythagoras), the horizontal component of the "
+"straight line path, the vertical component of the straight line path, or the"
+" total surface flow path."
+msgstr ""
+"Esta herramienta calcula la distancia desde cada celda de la cuadrícula "
+"hasta las celdas de la cresta a lo largo de las direcciones de flujo inverso"
+" D-infinito. Las celdas de cresta se definen como celdas de la cuadrícula "
+"que no tienen contribución de las celdas de la cuadrícula más arriba. Dada "
+"la convergencia de múltiples rutas de flujo en cualquier celda de la "
+"cuadrícula, cualquier celda de la cuadrícula dada puede tener múltiples "
+"celdas de cresta ascendente. Hay tres métodos estadísticos que puede "
+"utilizar esta herramienta: distancia máxima, distancia mínima y promedio de "
+"flujo esperado sobre estas rutas de flujo. Una variante de lo anterior es "
+"considerar solo las celdas de la cuadrícula que contribuyen al flujo con una"
+" proporción mayor que un umbral especificado por el usuario (t) para ser "
+"consideradas como pendiente ascendente de cualquier celda de la cuadrícula "
+"dada. Establecer t = 0.5 daría como resultado solo una ruta de flujo desde "
+"cualquier celda de la cuadrícula y daría el resultado equivalente a un "
+"modelo de flujo D8, en lugar del modelo de flujo D-infinito, donde el flujo "
+"se proporciona entre dos celdas de cuadrícula de pendiente descendente. "
+"Finalmente, hay varios caminos opcionales diferentes que se pueden medir: el"
+" camino en línea recta total (Pitágoras), el componente horizontal del "
+"camino en línea recta, el componente vertical del camino en línea recta o el"
+" camino del flujo superficial total."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:554
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1037
+msgid "``Slope Grid`` [raster]"
+msgstr "``Grid Pendiente`` [ráster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:552
+msgid ""
+"This input is a grid of slope values. This is measured as drop/distance and "
+"it is most often obtained as the output of the **\"D-Infinity Flow "
+"Directions\"** tool."
+msgstr ""
+"Esta entrada es una cuadrícula de valores de pendiente. Esto se mide como "
+"caída / distancia y con mayor frecuencia se obtiene como resultado de la "
+"herramienta **\"D-Infinity Direcciones de Flujo\"**."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:590
+msgid ""
+"The proportion threshold parameter where only grid cells that contribute "
+"flow with a proportion greater than this user specified threshold (``t``) is"
+" considered to be upslope of any given grid cell. Setting ``t=0.5`` would "
+"result in only one flow path from any grid cell and would give the result "
+"equivalent to a D8 flow model, rather than D-Infinity flow model, where flow"
+" is proportioned between two downslope grid cells."
+msgstr ""
+"El parámetro de umbral de proporción en el que solo las celdas de la "
+"cuadrícula que contribuyen al flujo con una proporción mayor que este umbral"
+" especificado por el usuario (``t``) se considera pendiente ascendente de "
+"cualquier celda de cuadrícula determinada. Establecer ``t = 0.5`` daría como"
+" resultado solo una ruta de flujo desde cualquier celda de la cuadrícula y "
+"daría el resultado equivalente a un modelo de flujo D8, en lugar del modelo "
+"de flujo D-Infinity, donde el flujo se proporciona entre dos celdas de la "
+"cuadrícula de pendiente descendente."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:597
+msgid "Default: *0.5*"
+msgstr "Predeterminado: *0.5*"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:600
+msgid ""
+"A flag that determines whether the tool should check for edge contamination."
+" This is defined as the possibility that a value may be underestimated due "
+"to grid cells outside of the domain not being counted."
+msgstr ""
+"Una bandera que determina si la herramienta debe verificar la contaminación "
+"del borde. Esto se define como la posibilidad de que un valor se subestime "
+"debido a que las celdas de la cuadrícula fuera del dominio no se cuentan."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:611
+msgid "``D-Infinity Distance Up`` [raster]"
+msgstr "``DIstancia ascendente d-Infinity`` [ráster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:610
+msgid ""
+"Grid containing the distances up to the ridge calculated using the "
+"D-Infinity flow model and the statistical and path methods chosen."
+msgstr ""
+"Cuadrícula que contiene las distancias hasta la cresta calculadas utilizando"
+" el modelo de flujo D-Infinity y los métodos estadísticos y de trayectoria "
+"elegidos."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:613
+msgid "**Algorithm ID**: ``taudem:dinfdistup``"
+msgstr "**Algoritmo ID**: ``taudem:dinfdistup``"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:621
+msgid "D-Infinity Reverse Accumulation"
+msgstr "Acumulación inversa D-Infinity"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:626
+msgid ""
+"This works in a similar way to evaluation of weighted Contributing area, "
+"except that the accumulation is by propagating the weight loadings upslope "
+"along the reverse of the flow directions to accumulate the quantity of "
+"weight loading downslope from each grid cell. The function also reports the "
+"maximum value of the weight loading downslope from each grid cell in the "
+"Maximum Downslope grid."
+msgstr ""
+"Esto funciona de manera similar a la evaluación del área de contribución "
+"ponderada, excepto que la acumulación se produce mediante la propagación de "
+"las cargas de peso cuesta arriba a lo largo de la dirección inversa del "
+"flujo para acumular la cantidad de carga cuesta abajo de cada celda de la "
+"cuadrícula. La función también informa el valor máximo de la carga de peso "
+"cuesta abajo desde cada celda de la cuadrícula en la cuadrícula Máxima "
+"pendiente descendente."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:635
+msgid ""
+"This function is designed to evaluate and map the hazard due to activities "
+"that may have an effect downslope. The example is land management activities"
+" that increase runoff. Runoff is sometimes a trigger for landslides or "
+"debris flows, so the weight grid here could be taken as a terrain stability "
+"map. Then the reverse accumulation provides a measure of the amount of "
+"unstable terrain downslope from each grid cell, as an indicator of the "
+"danger of activities that may increase runoff, even though there may be no "
+"potential for any local impact."
+msgstr ""
+"Esta función está diseñada para evaluar y mapear el peligro debido a "
+"actividades que pueden tener un efecto pendiente abajo. El ejemplo son las "
+"actividades de gestión de la tierra que aumentan la escorrentía. En "
+"ocasiones, la escorrentía desencadena deslizamientos de tierra o flujos de "
+"escombros, por lo que la cuadrícula de peso aquí podría tomarse como un mapa"
+" de estabilidad del terreno. Luego, la acumulación inversa proporciona una "
+"medida de la cantidad de terreno inestable pendiente abajo de cada celda de "
+"la cuadrícula, como un indicador del peligro de actividades que pueden "
+"aumentar la escorrentía, aunque no haya potencial para ningún impacto local."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:652
+msgid "A grid giving weights (loadings) to be used in the accumulation."
+msgstr ""
+"Una cuadrícula que da pesos (cargas) para ser utilizados en la acumulación."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:662
+msgid "``Reverse Accumulation Grid`` [raster]"
+msgstr "``Cuadricula de Acumulación Inversa`` [ráster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:658
+msgid ""
+"The grid giving the result of the **\"Reverse Accumulation\"** function. "
+"This works in a similar way to evaluation of weighted Contributing area, "
+"except that the accumulation is by propagating the weight loadings upslope "
+"along the reverse of the flow directions to accumulate the quantity of "
+"loading downslope from each grid cell."
+msgstr ""
+"La cuadrícula que da el resultado de la función **\"Acumulación inversa\"**."
+" Esto funciona de manera similar a la evaluación del área de contribución "
+"ponderada, excepto que la acumulación se produce mediante la propagación de "
+"las cargas de peso cuesta arriba a lo largo de la dirección inversa del "
+"flujo para acumular la cantidad de carga cuesta abajo de cada celda de la "
+"cuadrícula."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:666
+msgid "``Maximum Downslope Grid`` [raster]"
+msgstr "``Cuadrícula de Máxima Pendiente Descendente`` [ráster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:665
+msgid ""
+"The grid giving the maximum of the weight loading grid downslope from each "
+"grid cell."
+msgstr ""
+"La cuadrícula que da el máximo de la cuadrícula de carga de peso pendiente "
+"abajo de cada celda de la cuadrícula."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:668
+msgid "**Algorithm ID**: ``taudem:dinfrevaccum``"
+msgstr "**Algoritmo ID**: ``taudem:dinfrevaccum``"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:676
+msgid "D-Infinity Transport Limited Accumulation - 2"
+msgstr "Acumulación limitada de transporte D-Infinity - 2"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:681
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:809
+msgid ""
+"This function is designed to calculate the transport and deposition of a "
+"substance (e.g. sediment) that may be limited by both supply and the "
+"capacity of the flow field to transport it. This function accumulates "
+"substance flux (e.g. sediment transport) subject to the rule that transport "
+"out of any grid cell is the minimum between supply and transport capacity, "
+"``Tcap``. The total supply at a grid cell is calculated as the sum of the "
+"transport in from upslope grid cells, ``Tin``, plus the local supply "
+"contribution, ``E`` (e.g. erosion). This function also outputs deposition, "
+"``D``, calculated as total supply minus actual transport."
+msgstr ""
+"Esta función está diseñada para calcular el transporte y la deposición de "
+"una sustancia (por ejemplo, sedimento) que puede estar limitada tanto por el"
+" suministro como por la capacidad del campo de flujo para transportarla. "
+"Esta función acumula el flujo de sustancias (por ejemplo, transporte de "
+"sedimentos) sujeto a la regla de que el transporte fuera de cualquier celda "
+"de la rejilla es el mínimo entre la capacidad de suministro y transporte, "
+"``Tcap``. El suministro total en una celda de la red se calcula como la suma"
+" del transporte desde las celdas de la red de la pendiente ascendente, "
+"``Tin``, más la contribución del suministro local, ``E`` (por ejemplo, "
+"erosión). Esta función también genera la deposición, ``D``, calculada como "
+"el suministro total menos el transporte real."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:693
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:821
+msgid ""
+"Here ``E`` is the supply. ``Tout`` at each grid cell becomes ``Tin`` for "
+"downslope grid cells and is reported as Transport limited accumulation "
+"(``tla``). ``D`` is deposition (``tdep``). The function provides the option "
+"to evaluate concentration of a compound (contaminant) adhered to the "
+"transported substance. This is evaluated as follows:"
+msgstr ""
+"Aquí ``E`` es el suministro. ``Tout`` en cada celda de la cuadrícula se "
+"convierte en ``Tin`` para las celdas de la cuadrícula de pendiente "
+"descendente y se informa como acumulación limitada de transporte (``tla``). "
+"``D`` es deposición (``tdep``). La función brinda la opción de evaluar la "
+"concentración de un compuesto (contaminante) adherido a la sustancia "
+"transportada. Esto se evalúa de la siguiente manera:"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:702
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:830
+msgid ""
+"Where ``Lin`` is the total incoming compound loading and ``Cin`` and ``Tin``"
+" refer to the Concentration and Transport entering from each upslope grid "
+"cell."
+msgstr ""
+"Donde ``Lin`` es la carga total de compuesto entrante y ``Cin`` y ``Tin`` se"
+" refieren a la concentración y el transporte que ingresan desde cada celda "
+"de la cuadrícula de pendiente ascendente."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:708
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:836
+msgid "If"
+msgstr "Si"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:714
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:842
+msgid "else"
+msgstr "else"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:719
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:847
+msgid ""
+"where ``Cs`` is the concentration supplied locally and the difference in the"
+" second term on the right represents the additional supply from the local "
+"grid cell. Then,"
+msgstr ""
+"donde ``Cs`` es la concentración suministrada localmente y la diferencia en "
+"el segundo término de la derecha representa el suministro adicional de la "
+"celda de la red local. Luego,"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:726
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:854
+msgid ""
+"``Cout`` at each grid cell comprises is the concentration grid output from "
+"this function."
+msgstr ""
+"``Cout`` en cada celda de la cuadrícula comprende la salida de la cuadrícula"
+" de concentración de esta función."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:729
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:857
+msgid ""
+"If the outlets shapefile is used the tool only evaluates that part of the "
+"domain that contributes flow to the locations given by the shapefile."
+msgstr ""
+"Si se utiliza el shapefile de outlets, la herramienta solo evalúa la parte "
+"del dominio que aporta flujo a las ubicaciones dadas por el shapefile."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:732
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:860
+msgid ""
+"Transport limited accumulation is useful for modeling erosion and sediment "
+"delivery, including the spatial dependence of sediment delivery ratio and "
+"contaminant that adheres to sediment."
+msgstr ""
+"La acumulación limitada de transporte es útil para modelar la erosión y la "
+"entrega de sedimentos, incluida la dependencia espacial de la proporción de "
+"entrega de sedimentos y el contaminante que se adhiere al sedimento."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:747
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:875
+msgid "``Supply Grid`` [raster]"
+msgstr "\"Red de Suministro\" [raster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:745
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:873
+msgid ""
+"A grid giving the supply (loading) of material to a transport limited "
+"accumulation function. In the application to erosion, this grid would give "
+"the erosion detachment, or sediment supplied at each grid cell."
+msgstr ""
+"Una rejilla que proporciona el suministro (carga) de material a una función "
+"de acumulación limitada de transporte. En la aplicación a la erosión, esta "
+"cuadrícula daría desprendimiento de erosión o sedimento suministrado en cada"
+" celda de la cuadrícula."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:752
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:880
+msgid "``Transport Capacity Grid`` [raster]"
+msgstr "``Cuadrícula de Capacidad de Transporte`` [ráster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:750
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:878
+msgid ""
+"A grid giving the transport capacity at each grid cell for the transport "
+"limited accumulation function. In the application to erosion this grid would"
+" give the transport capacity of the carrying flow."
+msgstr ""
+"Una cuadrícula que proporciona la capacidad de transporte en cada celda de "
+"la cuadrícula para la función de acumulación limitada de transporte. En la "
+"aplicación a la erosión, esta cuadrícula daría la capacidad de transporte "
+"del flujo portador."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:758
+msgid "``Input Concentration Grid`` [raster]"
+msgstr "``Cuadrícula de concentración de entrada`` [raster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:755
+msgid ""
+"A grid giving the concentration of a compound of interest in the supply to "
+"the transport limited accumulation function. In the application to erosion, "
+"this grid would give the concentration of say phosphorous adhered to the "
+"eroded sediment."
+msgstr ""
+"Una cuadrícula que da la concentración de un compuesto de interés en el "
+"suministro a la función de acumulación limitada de transporte. En la "
+"aplicación a la erosión, esta cuadrícula daría la concentración de, por "
+"ejemplo, fósforo adherido al sedimento erosionado."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:768
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:890
+msgid ""
+"This option determines whether the tool should check for edge contamination."
+" Edge contamination is defined as the possibility that a value may be "
+"underestimated due to grid cells outside of the domain not being considered "
+"when determining the result."
+msgstr ""
+"Esta opción determina si la herramienta debe verificar la contaminación del "
+"borde. La contaminación del borde se define como la posibilidad de que un "
+"valor se subestime debido a que las celdas de la cuadrícula fuera del "
+"dominio no se consideran al determinar el resultado."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:783
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:905
+msgid "``Transport Limited Accumulation Grid`` [raster]"
+msgstr "``Cuadrícula de acumulación limitada de transporte`` [raster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:779
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:901
+msgid ""
+"This grid is the weighted accumulation of supply accumulated respecting the "
+"limitations in transport capacity and reports the transport rate calculated "
+"by accumulating the substance flux subject to the rule that the transport "
+"out of any grid cell is the minimum of the total supply (local supply plus "
+"transport in) to that grid cell and the transport capacity."
+msgstr ""
+"Esta cuadrícula es la acumulación ponderada de la oferta acumulada "
+"respetando las limitaciones en la capacidad de transporte e informa la tasa "
+"de transporte calculada acumulando el flujo de sustancia sujeto a la regla "
+"de que el transporte fuera de cualquier celda de la cuadrícula es el mínimo "
+"del suministro total (suministro local más transporte de entrada) a esa "
+"celda de la cuadrícula y la capacidad de transporte."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:789
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:911
+msgid "``Deposition Grid`` [raster]"
+msgstr "``Cuadrícula de dposición`` [ráster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:786
+msgid ""
+"A grid giving the deposition resulting from the transport limited "
+"accumulation. This is the residual from the transport in to each grid cell "
+"minus the transport capacity out of the grid cell. The deposition grid is "
+"calculated as the transport in + the local supply - the transport out."
+msgstr ""
+"Una rejilla que da la deposición resultante de la acumulación limitada de "
+"transporte. Este es el residuo del transporte dentro de cada celda de la "
+"cuadrícula menos la capacidad de transporte fuera de la celda de la "
+"cuadrícula. La cuadrícula de deposición se calcula como el transporte de "
+"entrada + el suministro local - el transporte de salida."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:794
+msgid "``Output Concentration Grid`` [raster]"
+msgstr "``Cuadrícula de concatenación de salida`` [raster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:792
+msgid ""
+"If an input concentration in supply grid is given, then this grid is also "
+"output and gives the concentration of a compound (contaminant) adhered or "
+"bound to the transported substance (e.g. sediment) is calculated."
+msgstr ""
+"Si se proporciona una concentración de entrada en la red de suministro, esta"
+" red también es de salida y se calcula la concentración de un compuesto "
+"(contaminante) adherido o unido a la sustancia transportada (por ejemplo, "
+"sedimento)."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:796
+msgid "**Algorithm ID**: unknown"
+msgstr "**Algoritmo ID**: unknown"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:804
+msgid "D-Infinity Transport Limited Accumulation"
+msgstr "Acumulación limitada de transporte D-Infinity"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:908
+msgid ""
+"A grid giving the deposition resulting from the transport limited "
+"accumulation. This is the residual from the transport in to each grid cell "
+"minus the transport capacity out of the grid cell. The deposition grid is "
+"calculated as the transport in + the local supply - the tranport out."
+msgstr ""
+"Una rejilla que da la deposición resultante de la acumulación limitada de "
+"transporte. Este es el residuo del transporte dentro de cada celda de la "
+"cuadrícula menos la capacidad de transporte fuera de la celda de la "
+"cuadrícula. La cuadrícula de deposición se calcula como el transporte de "
+"entrada + el suministro local - el transporte de salida."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:913
+msgid "**Algorithm ID**: ``taudem:dinftranslimaccum``"
+msgstr "**Algoritmo ID**: ``taudem:dinftranslimaccum``"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:921
+msgid "D-Infinity Upslope Dependence"
+msgstr "Dependencia pendiente arriba D-Infinity"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:926
+msgid ""
+"The D-Infinity Upslope Dependence tool quantifies the amount each grid cell "
+"in the domain contributes to a destination set of grid cells. D-Infinity "
+"flow directions proportion flow from each grid cell between multiple "
+"downslope grid cells. Following this flow field downslope the amount of flow"
+" originating at each grid cell that reaches the destination zone is defined."
+" Upslope influence is evaluated using a downslope recursion, examining grid "
+"cells downslope from each grid cell, so that the map produced identifies the"
+" area upslope where flow through the destination zone originates, or the "
+"area it depends on, for its flow."
+msgstr ""
+"La herramienta D-Infinity Dependencia Ascendente cuantifica la cantidad que "
+"cada celda de la cuadrícula en el dominio contribuye a un conjunto de "
+"destino de celdas de la cuadrícula. Las direcciones de flujo de D-Infinity "
+"proporcionan el flujo de cada celda de la cuadrícula entre varias celdas de "
+"la cuadrícula de pendiente descendente. Siguiendo este campo de flujo cuesta"
+" abajo, se define la cantidad de flujo que se origina en cada celda de la "
+"cuadrícula que llega a la zona de destino. La influencia de la pendiente "
+"ascendente se evalúa utilizando una recursividad de pendiente descendente, "
+"examinando las celdas de la cuadrícula descendente de cada celda de la "
+"cuadrícula, de modo que el mapa producido identifique el área de la "
+"pendiente ascendente donde se origina el flujo a través de la zona de "
+"destino, o el área de la que depende, para su flujo."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:935
+msgid ""
+"The figures below illustrate the amount each source point in the domain "
+"``x`` (blue) contributes to the destination point or zone ``y`` (red). If "
+"the indicator weighted contributing area function is denoted ``I(y; x)`` "
+"giving the weighted contribution using a unit value (1) from specific grid "
+"cells ``y`` to grid cells ``x``, then the upslope dependence is: ``D(x; y) ="
+" I(y; x)``."
+msgstr ""
+"Las siguientes figuras ilustran la cantidad que cada punto de origen en el "
+"dominio ``x`` (azul) contribuye al punto o zona de destino ``y`` (rojo). Si "
+"la función de área de contribución ponderada del indicador se denota como "
+"``I(y; x)`` dando la contribución ponderada usando un valor unitario (1) de "
+"las celdas específicas de la cuadrícula ``y`` a las celdas de la cuadrícula "
+"``x``, entonces el la dependencia de la pendiente ascendente es: ``D(x; y) ="
+" I(y; x)``."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:944
+msgid ""
+"This is useful for example to track where flow or a flow related substance "
+"or contaminant that enters a destination area may come from."
+msgstr ""
+"Esto es útil, por ejemplo, para rastrear de dónde puede provenir el flujo o "
+"una sustancia relacionada con el flujo o un contaminante que ingresa a un "
+"área de destino."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:951
+msgid ""
+"A grid giving flow direction by the D-Infinity method where the flow "
+"direction angle is determined as the direction of the steepest downward "
+"slope on the eight triangular facets formed in a 3x3 grid cell window "
+"centered on the grid cell of interest. This grid can be produced using the "
+"**\"D-Infinity Flow Direction\"** tool."
+msgstr ""
+"Una cuadrícula que indica la dirección del flujo mediante el método "
+"D-Infinity donde el ángulo de dirección del flujo se determina como la "
+"dirección de la pendiente descendente más pronunciada en las ocho facetas "
+"triangulares formadas en una ventana de celda de cuadrícula de 3x3 centrada "
+"en la celda de cuadrícula de interés. Esta cuadrícula se puede producir "
+"usando la herramienta **\"D-Infinity Dirección de Flujo\"**."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:959
+msgid "``Destination Grid`` [raster]"
+msgstr "``Cuadrícula Destino`` [ráster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:958
+msgid ""
+"A grid that encodes the destination zone that may receive flow from upslope."
+" This grid must be 1 inside the zone y and 0 over the rest of the domain."
+msgstr ""
+"Una cuadrícula que codifica la zona de destino que puede recibir flujo de "
+"pendiente ascendente. Esta cuadrícula debe ser 1 dentro de la zona y y 0 "
+"sobre el resto del dominio."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:966
+msgid "``Output Upslope Dependence Grid`` [raster]"
+msgstr ""
+"``Cuadrícula de Dependencia de Pendiente Ascendente de Salida`` [ráster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:965
+msgid ""
+"A grid quantifing the amount each source point in the domain contributes to "
+"the zone defined by the destination grid."
+msgstr ""
+"Una cuadrícula que cuantifica la cantidad que cada punto de origen en el "
+"dominio contribuye a la zona definida por la cuadrícula de destino."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:968
+msgid "**Algorithm ID**: ``taudem:dinfupdependence``"
+msgstr "**Algoritmo ID**: ``taudem:dinfupdependence``"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:976
+msgid "Slope Average Down"
+msgstr "Pendiente media hacia abajo"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:981
+msgid ""
+"This tool computes slope in a D8 downslope direction averaged over a user "
+"selected distance. Distance should be specified in horizontal map units."
+msgstr ""
+"Esta herramienta calcula la pendiente en una dirección de pendiente "
+"descendente D8 promediada sobre una distancia seleccionada por el usuario. "
+"La distancia debe especificarse en unidades de mapa horizontales."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1005
+msgid "``Downslope Distance`` [number]"
+msgstr "``Distancia Pendiente Abajo`` [número]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1002
+msgid ""
+"Input parameter of downslope distance over which to calculate the slope (in "
+"horizontal map units)."
+msgstr ""
+"Parámetro de entrada de la distancia de pendiente descendente sobre la cual "
+"calcular la pendiente (en unidades de mapa horizontal)."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1012
+msgid "``Slope Average Down Grid`` [raster]"
+msgstr "``Cuadrícula de pendiente descendente promedio`` [ráster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1011
+msgid ""
+"This output is a grid of slopes calculated in the D8 downslope direction, "
+"averaged over the selected distance."
+msgstr ""
+"Esta salida es una cuadrícula de pendientes calculadas en la dirección de la"
+" pendiente descendente D8, promediada sobre la distancia seleccionada."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1014
+msgid "**Algorithm ID**: ``taudem:slopeavedown``"
+msgstr "**Algoritmo ID**: ``taudem:slopeavedown``"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1022
+msgid "Slope Over Area Ratio"
+msgstr "Relación pendiente sobre área"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1027
+msgid ""
+"Calculates the ratio of the slope to the specific catchment area "
+"(contributing area). This is algebraically related to the more common "
+"ln(a/tan beta) wetness index, but contributing area is in the denominator to"
+" avoid divide by 0 errors when slope is 0."
+msgstr ""
+"Calcula la relación entre la pendiente y el área de captación específica "
+"(área de contribución). Esto está relacionado algebraicamente con el índice "
+"de humedad ln(a/tan beta) más común, pero el área de contribución está en el"
+" denominador para evitar errores de división por 0 cuando la pendiente es 0."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1036
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1074
+msgid ""
+"A grid of slope. This grid can be generated using ether the **\"D8 Flow "
+"Directions\"** tool or the **\"D-Infinity Flow Directions\"** tool."
+msgstr ""
+"Una cuadrícula de pendiente. Esta cuadrícula se puede generar usando éter, "
+"la herramienta ** \"Direcciones de flujo D8\" ** o la herramienta ** "
+"\"Direcciones de flujo D-Infinity\" **."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1044
+msgid "``Specific Catchment Area Grid`` [raster]"
+msgstr "``Cuadrícula de área de captación específica`` [ráster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1040
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1078
+msgid ""
+"A grid giving the contributing area value for each cell taken as its own "
+"contribution plus the contribution from upslope neighbors that drain in to "
+"it. Contributing area is counted in terms of the number of grid cells (or "
+"summation of weights). This grid can be generated using either the **\"D8 "
+"Contributing Area\"** tool or the **\"D-Infinity Contributing Area\"** tool."
+msgstr ""
+"Una cuadrícula que da el valor del área de contribución para cada celda "
+"tomada como su propia contribución más la contribución de los vecinos de la "
+"pendiente ascendente que drenan en ella. El área de contribución se cuenta "
+"en términos del número de celdas de la cuadrícula (o suma de pesos). Esta "
+"cuadrícula se puede generar usando la herramienta **\"Área de contribución "
+"D8\"** o la herramienta **\"Área de contribución D-Infinity\"**."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1053
+msgid "``Slope Divided By Area Ratio Grid`` [raster]"
+msgstr "``Cuadrícula de Ratio de Pendiente Dividida por Área`` [ráster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1050
+msgid ""
+"A grid of the ratio of slope to specific catchment area (contributing area)."
+" This is algebraically related to the more common ``ln(a/tan beta)`` wetness"
+" index, but contributing area is in the denominator to avoid divide by 0 "
+"errors when slope is 0."
+msgstr ""
+"Una cuadrícula de la relación entre la pendiente y el área de captación "
+"específica (área de contribución). Esto está relacionado algebraicamente con"
+" el índice de humedad más común `` ln(a/tan beta) '', pero el área de "
+"contribución está en el denominador para evitar errores de división por 0 "
+"cuando la pendiente es 0."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1055
+msgid "**Algorithm ID**: ``taudem:slopearearatio``"
+msgstr "**Algoritmo ID**: ``taudem:slopearearatio``"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1063
+msgid "Topographic wetness index"
+msgstr "Índice de humedad topográfica"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1068
+msgid "Calculates the topographic wetness index (TWI)."
+msgstr "Calcula el índice de humedad topográfica (TWI)."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1075
+msgid "``Slope`` [raster]"
+msgstr "``Pendiente`` [ráster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1082
+msgid "``Specific catchment area`` [raster]"
+msgstr "``Area de Captación Específica`` [ráster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1088
+msgid "``Wetness index`` [raster]"
+msgstr "``Índice de humedad`` [ráster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1088
+msgid "A grid of the wetness index (TWI)."
+msgstr "Una cuadrícula del índice de humedad (TWI)."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1090
+msgid "**Algorithm ID**: ``taudem:twi``"
+msgstr "**Algoritmo ID**: ``taudem:twi``"

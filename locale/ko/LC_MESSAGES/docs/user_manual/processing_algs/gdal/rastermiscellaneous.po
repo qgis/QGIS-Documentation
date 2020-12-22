@@ -1,0 +1,2063 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:28+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2020\n"
+"Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:2
+msgid "Raster miscellaneous"
+msgstr "래스터 기타 알고리즘"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:14
+msgid "Build overviews (pyramids)"
+msgstr "오버뷰 작성하기 (피라미드)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:15
+msgid ""
+"To speed up rendering time of raster layers overviews (pyramids) can be "
+"created. Overviews are lower resolution copies of the data which QGIS uses "
+"depending of the level of zoom."
+msgstr ""
+"래스터 레이어의 렌더링 시간을 단축하기 위해 오버뷰(피라미드)를 생성할 수 있습니다. 오버뷰란 QGIS가 확대/축소 수준에 따라 사용하는"
+" 데이터의 저해상도 복사본을 말합니다."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:19
+msgid ""
+"This algorithm is derived from the `GDAL addo utility "
+"<https://gdal.org/gdaladdo.html>`_."
+msgstr ""
+"이 알고리즘은 `GDAL addo 유틸리티 <https://gdal.org/gdaladdo.html>`_ 에서 파생되었습니다."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:22
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:141
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:484
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:933
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1229
+msgid "**Default menu**: :menuselection:`Raster --> Miscellaneous`"
+msgstr "**기본 메뉴**: :menuselection:`Raster --> Miscellaneous`"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:25
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:144
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:303
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:487
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:621
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:731
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:936
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1039
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1232
+msgid "Parameters"
+msgstr "파라미터"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:32
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:111
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:151
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:256
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:310
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:453
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:494
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:590
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:628
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:695
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:738
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:904
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:943
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1006
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1046
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1194
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1239
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1318
+msgid "Label"
+msgstr "라벨"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:33
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:112
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:152
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:257
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:311
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:454
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:495
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:591
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:629
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:696
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:739
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:905
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:944
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1007
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1047
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1195
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1240
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1319
+msgid "Name"
+msgstr "명칭"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:34
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:113
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:153
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:258
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:312
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:455
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:496
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:592
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:630
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:697
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:740
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:906
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:945
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1008
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1048
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1196
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1241
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1320
+msgid "Type"
+msgstr "유형"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:35
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:114
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:154
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:259
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:313
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:456
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:497
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:593
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:631
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:698
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:741
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:907
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:946
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1009
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1049
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1197
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1242
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1321
+msgid "Description"
+msgstr "설명"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:36
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:314
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:947
+msgid "**Input layer**"
+msgstr "**Input layer**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:37
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:156
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:315
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:499
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:948
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1051
+msgid "``INPUT``"
+msgstr "``INPUT``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:38
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:101
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:117
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:238
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:263
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:316
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:572
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:596
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:634
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:638
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:678
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:701
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:744
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:754
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:768
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:782
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:796
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:810
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:887
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:910
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:949
+msgid "[raster]"
+msgstr "[raster]"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:39
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:950
+msgid "Input raster layer"
+msgstr "입력 래스터 레이어"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:40
+msgid "**Overview levels**"
+msgstr "**Overview levels**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:41
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1073
+msgid "``LEVELS``"
+msgstr "``LEVELS``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:42
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:95
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:226
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:232
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:333
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:354
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:360
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:401
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:409
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:417
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:556
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:566
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:660
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:672
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:822
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:869
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:881
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:982
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1103
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1112
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1124
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1250
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1285
+msgid "[string]"
+msgstr "[string]"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:44
+msgid "Default: '2 4 8 16'"
+msgstr "기본값: '2 4 8 16'"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:45
+msgid ""
+"Defines the number of overview levels calculated by the original resolution "
+"of the input raster layer. By default 4 levels will be taken into "
+"consideration."
+msgstr "입력 래스터 레이어의 원본 해상도에서 계산할 오버뷰 수준의 개수를 정의합니다. 기본적으로 4개의 수준을 계산합니다."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:48
+msgid "**Remove all existing overviews**"
+msgstr "**Remove all existing overviews**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:49
+msgid "``CLEAN``"
+msgstr "``CLEAN``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:50
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:176
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:183
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:190
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:423
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:429
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:435
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:504
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:511
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:953
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:960
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:967
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:975
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1151
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1157
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1257
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1266
+msgid "[boolean]"
+msgstr "[boolean]"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:52
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:185
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:192
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:425
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:431
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:437
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:506
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:513
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:955
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:962
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:969
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:977
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1153
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1159
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1259
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1268
+msgid "Default: False"
+msgstr "기본값: False"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:53
+msgid ""
+"Removes existing overviews from the raster. By default these are not "
+"removed."
+msgstr "래스터에서 기존 오버뷰를 제거합니다. 기본값은 제거하지 않는다입니다."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:55
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:364
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1084
+msgid "**Resampling method**"
+msgstr "**Resampling method**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:57
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:77
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:93
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:224
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:331
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:352
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:383
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:391
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:399
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:407
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:415
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:538
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:546
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:554
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:658
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:670
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:752
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:760
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:766
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:774
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:780
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:788
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:794
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:802
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:808
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:814
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:842
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:867
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:879
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1101
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1110
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1122
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1274
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1283
+msgid "Optional"
+msgstr "부가적"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:58
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:206
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:365
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:641
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1085
+msgid "``RESAMPLING``"
+msgstr "``RESAMPLING``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:59
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:79
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:161
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:207
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:320
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:366
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:517
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:642
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:850
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1086
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1130
+msgid "[enumeration]"
+msgstr "[enumeration]"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:61
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:81
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:163
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:209
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:322
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:341
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:368
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1070
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1088
+msgid "Default: 0"
+msgstr "기본값: 0"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:62
+msgid ""
+"Calculates the overviews with a defined resampling method. Possible "
+"resampling methods are:"
+msgstr "정의된 리샘플링 방법으로 오버뷰를 계산합니다. 다음과 같은 리샘플링 방법을 사용할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:65
+msgid "0 -- Nearest Neighbour (``nearest``)"
+msgstr "0 -- 최근접 이웃 (``nearest``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:66
+msgid "1 -- Average (``average``)"
+msgstr "1 -- 평균 (``average``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:67
+msgid "2 -- Gaussian (``gauss``)"
+msgstr "2 -- 가우스 (``gauss``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:68
+msgid "3 -- Cubic Convolution (``cubic``)"
+msgstr "3 -- 3차 회선(Cubic Convolution) (``cubic``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:69
+msgid "4 -- B-Spline Convolution (``cubicspline``)"
+msgstr "4 -- B-스플라인 회선 (``cubicspline``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:70
+msgid "5 -- Lanczos Windowed Sinc (``lanczos``)"
+msgstr "5 -- 란초시 창이 있는 싱크(Lánczos Windowed Sinc) (``lanczos``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:71
+msgid "6 -- Average MP (``average_mp``)"
+msgstr "6 -- 평균 MP (``average_mp``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:72
+msgid "7 -- Average in Mag/Phase Space (``average_magphase``)"
+msgstr ""
+"7 -- 스펙트럼/페이즈 공간에서의 평균(Average in Mag/Phase Space) (``average_magphase``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:73
+msgid "8 -- Mode (``mode``)"
+msgstr "8 -- 모드 (``mode``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:75
+msgid "**Overviews format**"
+msgstr "**Overviews format**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:78
+msgid "``FORMAT``"
+msgstr "``FORMAT``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:82
+msgid ""
+"The overviews can be stored internally, or externally as GTiff or ERDAS "
+"Imagine file. By default the overviews are stored in the output raster. "
+"Possible formats methods are:"
+msgstr ""
+"오버뷰를 내부적으로 저장할 수도 있고, GTiff 또는 ERDAS Imagine 파일로 외부적으로 저장할 수도 있습니다. 오버뷰는 "
+"기본적으로 산출 래스터로 저장됩니다. 다음과 같은 포맷을 사용할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:87
+msgid "0 -- Internal (if possible)"
+msgstr "0 -- 내부 저장 (가능한 경우)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:88
+msgid "1 -- External (GTiff .ovr)"
+msgstr "1 -- 외부 저장 (GTiff .ovr)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:89
+msgid "2 -- External (ERDAS Imagine .aux)"
+msgstr "2 -- 외부 저장 (ERDAS Imagine .aux)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:91
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:230
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:564
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:668
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:877
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:980
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1120
+msgid "**Additional command-line parameters**"
+msgstr "**Additional command-line parameters**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:94
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:231
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:565
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:671
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:880
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:981
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1123
+msgid "``EXTRA``"
+msgstr "``EXTRA``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:97
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:201
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:228
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:234
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:387
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:542
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:550
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:568
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:674
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:756
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:770
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:784
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:798
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:818
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:846
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:984
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1082
+msgid "Default: None"
+msgstr "기본값: None"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:98
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:235
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:569
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:675
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:884
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:985
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1127
+msgid "Add extra GDAL command line options"
+msgstr "부가 GDAL 명령 줄 옵션을 추가합니다."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:99
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:115
+msgid "**Pyramidized**"
+msgstr "**Pyramidized**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:100
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:116
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:237
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:262
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:440
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:459
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:571
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:595
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:677
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:700
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:886
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:909
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:987
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1011
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1162
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1199
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1299
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1323
+msgid "``OUTPUT``"
+msgstr "``OUTPUT``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:102
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:264
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:597
+msgid "Output raster layer"
+msgstr "산출 래스터 레이어"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:105
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:250
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:447
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:584
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:689
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:898
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1000
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1188
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1312
+msgid "Outputs"
+msgstr "산출물"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:118
+msgid "Output raster layer with overviews"
+msgstr "오버뷰를 담은 산출 래스터 레이어"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:121
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:267
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:464
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:600
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:705
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:914
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1017
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1208
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1328
+msgid "Python code"
+msgstr "파이썬 코드"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:123
+msgid "**Algorithm ID**: ``gdal:overviews``"
+msgstr "**Algorithm ID**: ``gdal:overviews``"
+
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+msgid ""
+"The *algorithm id* is displayed when you hover over the algorithm in the "
+"Processing Toolbox. The *parameter dictionary* provides the parameter NAMEs "
+"and values. See :ref:`processing_console` for details on how to run "
+"processing algorithms from the Python console."
+msgstr ""
+"공간 처리 툴박스에 있는 알고리즘 위에 마우스를 가져가면 *알고리즘 ID* 를 표시합니다. *파라미터 목록(dictionary)* 은 "
+"파라미터 **명칭** 및 값을 제공합니다. 파이썬 콘솔에서 공간 처리 알고리즘을 어떻게 실행하는지 자세히 알고 싶다면 "
+":ref:`processing_console` 을 참조하세요."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:133
+msgid "Build virtual raster"
+msgstr "가상 래스터 작성하기"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:134
+msgid ""
+"Builds a VRT (Virtual Dataset) that is a mosaic of the list of input GDAL-"
+"supported rasters. With a mosaic you can merge several raster files."
+msgstr ""
+"GDAL이 지원하는 입력 래스터 목록의 모자이크인 가상 데이터셋(VRT)을 작성합니다. 모자이크를 사용해서 여러 래스터 파일을 병합할 수"
+" 있습니다."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:138
+msgid ""
+"This algorithm is derived from the `GDAL buildvrt utility "
+"<https://gdal.org/gdalbuildvrt.html>`_."
+msgstr ""
+"이 알고리즘은 `GDAL buildvrt 유틸리티 <https://gdal.org/gdalbuildvrt.html>`_ 에서 "
+"파생되었습니다."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:155
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:498
+msgid "**Input layers**"
+msgstr "**Input layers**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:157
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:500
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1052
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1245
+msgid "[raster] [list]"
+msgstr "[raster] [list]"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:158
+msgid "GDAL-supported raster layers."
+msgstr "GDAL이 지원하는 래스터 레이어"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:159
+msgid "**Resolution**"
+msgstr "**Resolution**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:160
+msgid "``RESOLUTION``"
+msgstr "``RESOLUTION``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:164
+msgid ""
+"The output resolution of the mosaic. By default the average resolution of "
+"the raster files will be chosen."
+msgstr "모자이크의 산출 해상도. 기본적으로 래스터 파일들의 평균 해상도를 선택할 것입니다."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:168
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:212
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:371
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:522
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:647
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:855
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1091
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1135
+msgid "Options:"
+msgstr "옵션:"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:170
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:373
+msgid "0 --- Average (``average``)"
+msgstr "0 --- 평균 (``average``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:171
+msgid "1 --- Highest (``highest``)"
+msgstr "1 --- 최고 (``highest``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:172
+msgid "2 --- Lowest (``lowest``)"
+msgstr "2 --- 최저 (``lowest``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:174
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:509
+msgid "**Place each input file into a separate band**"
+msgstr "**Place each input file into a separate band**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:175
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:510
+msgid "``SEPARATE``"
+msgstr "``SEPARATE``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:178
+msgid "Default: True"
+msgstr "기본값: True"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:179
+msgid ""
+"With 'True' you can define that each raster file goes into a separated "
+"stacked band in the VRT band."
+msgstr "'참' 으로 설정하면 VRT의 개별 적층(stacked) 밴드에 각 래스터 파일을 넣도록 정의할 수 있습니다."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:181
+msgid "**Allow projection difference**"
+msgstr "**Allow projection difference**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:182
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1265
+msgid "``PROJ_DIFFERENCE``"
+msgstr "``PROJ_DIFFERENCE``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:186
+msgid ""
+"Allows that the output bands have different projections derived from the "
+"projection of the input raster layers."
+msgstr "산출 밴드들이 입력 래스터 레이어들의 투영체에서 추출한 서로 다른 투영체를 가지도록 허용합니다."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:188
+msgid "**Add alpha mask band to VRT when source raster has none**"
+msgstr "**Add alpha mask band to VRT when source raster has none**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:189
+msgid "``ADD_ALPHA``"
+msgstr "``ADD_ALPHA``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:193
+msgid "Adds an alpha mask band to the VRT when the source raster has none."
+msgstr "소스 래스터에 알파 마스크 밴드가 없을 경우, VRT에 알파 마스크 밴드를 추가합니다."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:195
+msgid "**Override projection for the output file**"
+msgstr "**Override projection for the output file**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:197
+msgid "(optional)"
+msgstr "부가적"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:198
+msgid "``ASSIGN_CRS``"
+msgstr "``ASSIGN_CRS``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:199
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:385
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1080
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1276
+msgid "[crs]"
+msgstr "[crs]"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:202
+msgid "Overrides the projection for the output file. No reprojection is done."
+msgstr "산출 파일용 투영체를 무시합니다. 재투영하지 않습니다."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:205
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:640
+msgid "**Resampling algorithm**"
+msgstr "**Resampling algorithm**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:210
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:369
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:645
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1089
+msgid "The resampling algorithm to be used"
+msgstr "사용할 리샘플링 알고리즘"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:214
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:649
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1093
+msgid "0 --- Nearest Neighbour (``nearest``)"
+msgstr "0 --- 최근접 이웃 (``nearest``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:215
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:650
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1094
+msgid "1 --- Bilinear (``bilinear``)"
+msgstr "1 --- 이중선형 (``bilinear``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:216
+msgid "2 --- Cubic Convolution (``cubic``)"
+msgstr "2 --- 3차 회선(Cubic Convolution) (``cubic``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:217
+msgid "3 --- B-Spline Convolution (``cubicspline``)"
+msgstr "3 --- B-스플라인 회선 (``cubicspline``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:218
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:653
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1097
+msgid "4 --- Lanczos Windowed Sinc (``lanczos``)"
+msgstr "4 --- 란초시 창이 있는 싱크(Lánczos Windowed Sinc) (``lanczos``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:219
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:654
+msgid "5 --- Average (``average``)"
+msgstr "5 --- 평균 (``average``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:220
+msgid "6 --- Mode (``mode``)"
+msgstr "6 --- 모드 (``mode``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:222
+msgid "**Nodata value(s) for input bands (space separated)**"
+msgstr "**Nodata value(s) for input bands (space separated)**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:225
+msgid "``SRC_NODATA``"
+msgstr "``SRC_NODATA``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:229
+msgid "Space separated Nodata value(s) for input band(s)"
+msgstr "입력 밴드(들)를 위한 공백으로 구분된 NODATA 값(들)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:236
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:261
+msgid "**Virtual**"
+msgstr "**Virtual**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:240
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:443
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:574
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:680
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:889
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:990
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1302
+msgid "Default: ``[Save to temporary file]``"
+msgstr "기본값: ``[Save to temporary file]``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:241
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:575
+msgid "Specification of the output raster layer. One of:"
+msgstr "산출 래스터 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:244
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:578
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:683
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:892
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:994
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1182
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1306
+msgid "Save to a Temporary File"
+msgstr "임시 파일로 저장"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:245
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:579
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:684
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:893
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:995
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1183
+msgid "Save to File..."
+msgstr "파일로 저장"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:247
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:581
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:686
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:895
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:997
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1172
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1185
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1309
+msgid "The file encoding can also be changed here."
+msgstr "이 파라미터에서 파일 인코딩도 변경할 수 있습니다."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:269
+msgid "**Algorithm ID**: ``gdal:buildvirtualraster``"
+msgstr "**Algorithm ID**: ``gdal:buildvirtualraster``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:279
+msgid "gdal2tiles"
+msgstr "gdal2tiles"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:281
+msgid ""
+"Generates a directory with small tiles and metadata, following the `OSGeo "
+"Tile Map Service Specification "
+"<https://wiki.osgeo.org/wiki/Tile_Map_Service_Specification>`_. See also the"
+" `OpenGIS Web Map Tile Service Implementation Standard "
+"<https://www.opengeospatial.org/standards/wmts>`_. Simple web pages with "
+"viewers based on Google Maps, OpenLayers and Leaflet are generated as well. "
+"To explore your maps on-line in the web browser, you only need to upload the"
+" generated directory onto a web server."
+msgstr ""
+"`OSGeo 타일 맵 서비스 사양 "
+"<https://wiki.osgeo.org/wiki/Tile_Map_Service_Specification>`_ 을 따라 작은 타일들과 "
+"메타데이터를 담은 디렉터리를 생성합니다. `OpenGIS 웹 맵 타일 서비스 구현 표준 "
+"<https://www.opengeospatial.org/standards/wmts>`_ 도 참조하세요. 구글 지도, 오픈레이어, "
+"리플렛(Leaflet)을 기반으로 한 뷰어를 가진 간단한 웹 페이지도 함께 생성합니다. 웹 브라우저에서 사용자 맵을 온라인으로 "
+"탐색하려면, 웹 서버에 생성된 디렉터리를 업로드하기만 하면 됩니다."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:291
+msgid ""
+"This algorithm also creates the necessary metadata for Google Earth (KML "
+"SuperOverlay), in case the supplied map uses ``EPSG:4326`` projection."
+msgstr ""
+"이 알고리즘은 제공 맵이 ``EPSG:4326`` 투영체를 사용하는 경우 구글 어스용 필수 메타데이터(KML SuperOverlay)도 "
+"생성합니다."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:295
+msgid ""
+"ESRI world files and embedded georeferencing is used during tile generation,"
+" but you can publish a picture without proper georeferencing too."
+msgstr "타일 생성 도중 ESRI 월드 파일과 내장 지리참조를 사용하지만, 제대로 된 지리참조 없이도 그림을 발행할 수 있습니다."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:299
+msgid ""
+"This algorithm is derived from the `GDAL gdal2tiles utility "
+"<https://gdal.org/programs/gdal2tiles.html>`_."
+msgstr ""
+"이 알고리즘은 `GDAL gdal2tiles 유틸리티 <https://gdal.org/programs/gdal2tiles.html>`_ "
+"에서 파생되었습니다."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:317
+msgid "GDAL-supported raster layer."
+msgstr "GDAL이 지원하는 래스터 레이어"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:318
+msgid "**Tile cutting profile**"
+msgstr "**Tile cutting profile**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:319
+msgid "``PROFILE``"
+msgstr "``PROFILE``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:323
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:342
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1179
+msgid "One of:"
+msgstr "다음 가운데 하나로 지정할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:325
+msgid "0 --- Mercator (``mercator``)"
+msgstr "0 --- 메르카토르 (``mercator``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:326
+msgid "1 --- Geodetic (``geodetic``)"
+msgstr "1 --- 측지선 (``geodetic``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:327
+msgid "2 --- Raster (``raster``)"
+msgstr "2 --- 래스터 (``raster``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:329
+msgid "**Zoom levels to render**"
+msgstr "**Zoom levels to render**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:332
+msgid "``ZOOM``"
+msgstr "``ZOOM``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:335
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:356
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:362
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:403
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:411
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:419
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:558
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:662
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:824
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:871
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:883
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1114
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1126
+msgid "Default: ''"
+msgstr "기본값: ''"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:337
+msgid "**Web viewer to generate**"
+msgstr "**Web viewer to generate**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:338
+msgid "``VIEWER``"
+msgstr "``VIEWER``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:339
+msgid "[enumerate]"
+msgstr "[enumerate]"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:344
+msgid "0 --- All (``all``)"
+msgstr "0 --- 모두 (``all``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:345
+msgid "1 --- GoogleMaps (``google``)"
+msgstr "1 --- 구글 지도 (``google``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:346
+msgid "2 --- OpenLayers (``openlayers``)"
+msgstr "2 --- 오픈레이어 (``openlayers``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:347
+msgid "3 --- Leaflet (``leaflet``)"
+msgstr "3 --- 리플렛 (``leaflet``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:348
+msgid "4 --- None (``none``)"
+msgstr "4 --- 없음 (``none``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:350
+msgid "**Title of the map**"
+msgstr "**Title of the map**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:353
+msgid "``TITLE``"
+msgstr "``TITLE``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:358
+msgid "**Copyright of the map**"
+msgstr "**Copyright of the map**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:359
+msgid "``COPYRIGHT``"
+msgstr "``COPYRIGHT``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:374
+msgid "1 --- Nearest neighbour (``near``)"
+msgstr "1 --- 최근접 이웃 (``nearest``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:375
+msgid "2 --- Bilinear (``bilinear``)"
+msgstr "2 --- 이중선형 (``bilinear``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:376
+msgid "3 --- Cubic (``cubic``)"
+msgstr "3 --- 3차 회선(Cubic Convolution) (``cubic``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:377
+msgid "4 --- Cubic spline (``cubicspline``)"
+msgstr "4 --- B-스플라인 회선 (``cubicspline``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:378
+msgid "5 --- Lanczos Windowed sinc (``lanczos``)"
+msgstr "5 --- 란초시 창이 있는 싱크(Lánczos Windowed Sinc) (``lanczos``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:379
+msgid "6 --- Antialias (``antialias``)"
+msgstr "6 --- 에일리어싱 제거 (``antialias``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:381
+msgid "**The spatial reference system used for the source input data**"
+msgstr "**The spatial reference system used for the source input data**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:384
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1079
+msgid "``SOURCE_CRS``"
+msgstr "``SOURCE_CRS``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:389
+msgid "**Transparency value to assign to the input data**"
+msgstr "**Transparency value to assign to the input data**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:392
+msgid "``NODATA``"
+msgstr "``NODATA``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:393
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:540
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:548
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:844
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1056
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1062
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1068
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1074
+msgid "[number]"
+msgstr "[number]"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:395
+msgid "Default: 0.0"
+msgstr "기본값: 0.0"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:397
+msgid "**URL address where the generated tiles are going to be published**"
+msgstr "**URL address where the generated tiles are going to be published**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:400
+msgid "``URL``"
+msgstr "``URL``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:405
+msgid "**Google Maps API key (http://code.google.com/apis/maps/signup.html)**"
+msgstr ""
+"**Google Maps API key (http://code.google.com/apis/maps/signup.html)**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:408
+msgid "``GOOGLE_KEY``"
+msgstr "``GOOGLE_KEY``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:412
+msgid "Your Google maps API key."
+msgstr "사용자의 구글 지도 API 키"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:413
+msgid "**Bing Maps API key (https://www.bingmapsportal.com/)**"
+msgstr "**Bing Maps API key (https://www.bingmapsportal.com/)**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:416
+msgid "``BING_KEY``"
+msgstr "``BING_KEY``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:420
+msgid "Your Bing maps API key."
+msgstr "사용자의 빙 맵 API 키"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:421
+msgid "**Generate only missing files**"
+msgstr "**Generate only missing files**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:422
+msgid "``RESUME``"
+msgstr "``RESUME``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:427
+msgid "**Generate KML for Google Earth**"
+msgstr "**Generate KML for Google Earth**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:428
+msgid "``KML``"
+msgstr "``KML``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:433
+msgid "**Avoid automatic generation of KML files for EPSG:4326**"
+msgstr "**Avoid automatic generation of KML files for EPSG:4326**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:434
+msgid "``NO_KML``"
+msgstr "``NO_KML``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:439
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:458
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1161
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1198
+msgid "**Output directory**"
+msgstr "**Output directory**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:441
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:460
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1163
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1200
+msgid "[folder]"
+msgstr "[folder]"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:444
+msgid "Specify the output folder for the tiles."
+msgstr "타일을 저장할 산출물 폴더를 지정합니다."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:461
+msgid "The output folder (for the tiles)"
+msgstr "타일을 저장한 산출물 폴더"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:466
+msgid "**Algorithm ID**: ``gdal:gdal2tiles``"
+msgstr "**Algorithm ID**: ``gdal:gdal2tiles``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:476
+msgid "Merge"
+msgstr "병합하기"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:477
+msgid ""
+"Merges raster files in a simple way. Here you can use a pseudocolor table "
+"from an input raster and define the output raster type. All the images must "
+"be in the same coordinate system."
+msgstr ""
+"래스터 파일들을 단순한 방식으로 병합합니다. 이 알고리즘은 입력 래스터의 의사색상 테이블을 사용해서 산출 래스터 유형을 정의할 수 "
+"있습니다. 모든 이미지가 동일한 좌표계를 사용해야만 합니다."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:481
+msgid ""
+"This algorithm is derived from the `GDAL merge utility "
+"<https://gdal.org/gdal_merge.html>`_."
+msgstr ""
+"이 알고리즘은 `GDAL 병합 유틸리티 <https://gdal.org/gdal_merge.html>`_ 에서 파생되었습니다."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:501
+msgid "Input raster layers"
+msgstr "입력 래스터 레이어"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:502
+msgid "**Grab pseudocolor table from first layer**"
+msgstr "**Grab pseudocolor table from first layer**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:503
+msgid "``PCT``"
+msgstr "``PCT``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:507
+msgid ""
+"The pseudocolor table from the first layer will be used for the coloring"
+msgstr "색상 작업에 첫 번째 레이어의 의사색상 테이블을 사용할 것입니다."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:514
+msgid "Place each input file into a separate band"
+msgstr "개별 밴드에 각 입력 파일을 배치합니다."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:515
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1128
+msgid "**Output data type**"
+msgstr "**Output data type**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:516
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1129
+msgid "``DATA_TYPE``"
+msgstr "``DATA_TYPE``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:519
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:852
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1132
+msgid "Default: 5"
+msgstr "기본값: 5"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:520
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:853
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1133
+msgid "Defines the format of the output raster file."
+msgstr "산출 래스터 파일의 포맷을 정의합니다."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:524
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:857
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1137
+msgid "0 --- Byte"
+msgstr "0 --- 바이트(Byte)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:525
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:858
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1138
+msgid "1 --- Int16"
+msgstr "1 --- 부호 있는 16비트 정수형(Int16)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:526
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:859
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1139
+msgid "2 --- UInt16"
+msgstr "2 --- 부호 없는 16비트 정수형(UInt16)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:527
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:860
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1140
+msgid "3 --- UInt32"
+msgstr "3 --- 부호 없는 32비트 정수형(UInt32)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:528
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:861
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1141
+msgid "4 --- Int32"
+msgstr "4 --- 부호 있는 32비트 정수형(Int32)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:529
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:862
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1142
+msgid "5 --- Float32"
+msgstr "5 --- 32비트 부동소수점 실수형(Float32)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:530
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:863
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1143
+msgid "6 --- Float64"
+msgstr "6 --- 부동소수점 64비트 실수형(Float64)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:531
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1144
+msgid "7 --- CInt16"
+msgstr "7 --- 복잡 16비트 정수형(CInt16)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:532
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1145
+msgid "8 --- CInt32"
+msgstr "8 --- 복잡 32비트 정수형(CInt32)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:533
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1146
+msgid "9 --- CFloat32"
+msgstr "9 --- 복잡 부동소수점 32비트 실수형(CFloat32)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:534
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1147
+msgid "10 --- CFloat64"
+msgstr "10 --- 복잡 부동소수점 64비트 실수형(CFloat64)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:536
+msgid "**Input pixel value to treat as \"nodata\"**"
+msgstr "**Input pixel value to treat as \"nodata\"**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:539
+msgid "``NODATA_INPUT``"
+msgstr "``NODATA_INPUT``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:543
+msgid "Ignores pixels from files being merged in with this pixel value"
+msgstr "병합되는 파일들에서 이 픽셀값을 가진 픽셀을 무시합니다."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:544
+msgid "**Assign specified \"nodata\" value to output**"
+msgstr "**Assign specified \"nodata\" value to output**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:547
+msgid "``NODATA_OUTPUT``"
+msgstr "``NODATA_OUTPUT``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:551
+msgid "Assigns the specified nodata value to output bands."
+msgstr "산출 밴드에 지정한 NODATA 값을 할당합니다."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:552
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:656
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:865
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1108
+msgid "**Additional creation options**"
+msgstr "**Additional creation options**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:555
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:659
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:868
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1111
+msgid "``OPTIONS``"
+msgstr "``OPTIONS``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:559
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:663
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:872
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1115
+msgid ""
+"For adding one or more creation options that control the raster to be "
+"created (colors, block size, file compression...). For convenience, you can "
+"rely on predefined profiles (see :ref:`GDAL driver options section "
+"<gdal_createoptions>`)."
+msgstr ""
+"래스터를 생성하기 위한 (색상, 블록 크기, 파일 압축 등등) 하나 이상의 생성 옵션을 추가하기 위한 파라미터입니다. 사용자 편의를 "
+"위해, 사전 정의 프로파일을 사용할 수 있습니다. (:ref:`GDAL 드라이버 옵션 <gdal_createoptions>` 참조)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:570
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:594
+msgid "**Merged**"
+msgstr "**Merged**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:602
+msgid "**Algorithm ID**: ``gdal:merge``"
+msgstr "**Algorithm ID**: ``gdal:merge``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:612
+msgid "Pansharpening"
+msgstr "영상융합"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:613
+msgid ""
+"Performs a pan-sharpening operation. It can create a \"classic\" output "
+"dataset (such as GeoTIFF), or a VRT dataset describing the pan-sharpening "
+"operation."
+msgstr ""
+"영상융합(pan-sharpening) 작업을 수행합니다. 이 알고리즘은 (GeoTIFF 같은) \"대표적인\" 산출 데이터셋을 생성할 "
+"수도 있고, 또는 영상융합 작업을 서술하는 VRT 데이터셋을 생성할 수도 있습니다."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:617
+msgid ""
+"See `GDAL Pansharpen <https://gdal.org/programs/gdal_pansharpen.html>`_."
+msgstr ""
+"`GDAL 영상융합 <https://gdal.org/programs/gdal_pansharpen.html>`_ 을 참조하세요."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:632
+msgid "**Spectral dataset**"
+msgstr "**Spectral dataset**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:633
+msgid "``SPECTRAL``"
+msgstr "``SPECTRAL``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:635
+msgid "Input (spectral) raster layer"
+msgstr "입력 (스펙트럼) 래스터 레이어"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:636
+msgid "**Panchromatic dataset**"
+msgstr "**Panchromatic dataset**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:637
+msgid "``PANCHROMATIC``"
+msgstr "``PANCHROMATIC``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:639
+msgid "Input (panchromatic) raster layer"
+msgstr "입력 (전정색(全整色)) 래스터 레이어"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:644
+msgid "Default: 2"
+msgstr "기본값: 2"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:651
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1095
+msgid "2 --- Cubic (``cubic``)"
+msgstr "2 --- 3차 회선(Cubic Convolution) (``cubic``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:652
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1096
+msgid "3 --- Cubic Spline (``cubicspline``)"
+msgstr "3 --- B-스플라인 회선 (``cubicspline``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:676
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:699
+msgid "**Output**"
+msgstr "**산출물**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:681
+msgid "Specify the output (sharpened) raster layer. One of:"
+msgstr "산출 (선명해진) 래스터 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:702
+msgid "Output (sharpened) raster layer"
+msgstr "산출 (선명해진) 래스터 레이어"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:707
+msgid "**Algorithm ID**: ``gdal:pansharp``"
+msgstr "**Algorithm ID**: ``gdal:pansharp``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:717
+msgid "Raster calculator"
+msgstr "래스터 계산기"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:718
+msgid ""
+"Command line raster calculator with numpy syntax. Use any basic arithmetic "
+"supported by numpy arrays, such as +, -, \\*, and / along with logical "
+"operators, such as >. Note that all input rasters must have the same "
+"dimensions, but no projection checking is performed."
+msgstr ""
+"`넘파이(NumPy) <https://numpy.org/>`_ 문법을 가진 명령 줄 래스터 계산기입니다. 넘파이 배열이 지원하는 "
+"``+``, ``-``, ``*`` 및 ``/`` 같은 모든 기본 산술 연산자는 물론 ``>`` 같은 논리 연산자를 사용할 수 있습니다."
+" 모든 입력 래스터는 동일한 차원을 가지고 있어야만 하지만 어떤 투영체도 확인하지 않는다는 점을 기억하십시오."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:725
+msgid ""
+"See the `GDAL Raster Calculator utility docs "
+"<https://gdal.org/programs/gdal_calc.html>`_."
+msgstr ""
+"`GDAL 래스터 계산기 유틸리티 문서 <https://gdal.org/programs/gdal_calc.html>`_ 를 참조하세요."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:728
+msgid ":ref:`qgisrastercalculator`"
+msgstr ":ref:`qgisrastercalculator`"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:742
+msgid "**Input layer A**"
+msgstr "**Input layer A**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:743
+msgid "``INPUT_A``"
+msgstr "``INPUT_A``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:745
+msgid "First input raster layer (mandatory)"
+msgstr "첫 번째 입력 래스터 레이어 (필수)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:746
+msgid "**Number of raster band for A**"
+msgstr "**Number of raster band for A**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:747
+msgid "``BAND_A``"
+msgstr "``BAND_A``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:748
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:762
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:776
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:790
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:804
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:816
+msgid "[raster band]"
+msgstr "[raster band]"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:749
+msgid "Band for input layer A (mandatory)"
+msgstr "입력 레이어 A의 밴드 (필수)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:750
+msgid "**Input layer B**"
+msgstr "**Input layer B**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:753
+msgid "``INPUT_B``"
+msgstr "``INPUT_B``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:757
+msgid "Second input raster layer"
+msgstr "두 번째 입력 래스터 레이어"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:758
+msgid "**Number of raster band for B**"
+msgstr "**Number of raster band for B**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:761
+msgid "``BAND_B``"
+msgstr "``BAND_B``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:763
+msgid "Band for input layer B"
+msgstr "입력 레이어 B의 밴드"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:764
+msgid "**Input layer C**"
+msgstr "**Input layer C**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:767
+msgid "``INPUT_C``"
+msgstr "``INPUT_C``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:771
+msgid "Third input raster layer"
+msgstr "세 번째 입력 래스터 레이어"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:772
+msgid "**Number of raster band for C**"
+msgstr "**Number of raster band for C**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:775
+msgid "``BAND_C``"
+msgstr "``BAND_C``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:777
+msgid "Band for input layer C"
+msgstr "입력 레이어 C의 밴드"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:778
+msgid "**Input layer D**"
+msgstr "**Input layer D**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:781
+msgid "``INPUT_D``"
+msgstr "``INPUT_D``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:785
+msgid "Fourth input raster layer"
+msgstr "네 번째 입력 래스터 레이어"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:786
+msgid "**Number of raster band for D**"
+msgstr "**Number of raster band for D**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:789
+msgid "``BAND_D``"
+msgstr "``BAND_D``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:791
+msgid "Band for input layer D"
+msgstr "입력 레이어 D의 밴드"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:792
+msgid "**Input layer E**"
+msgstr "**Input layer E**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:795
+msgid "``INPUT_E``"
+msgstr "``INPUT_E``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:799
+msgid "Fifth input raster layer"
+msgstr "다섯 번째 입력 래스터 레이어"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:800
+msgid "**Number of raster band for E**"
+msgstr "**Number of raster band for E**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:803
+msgid "``BAND_E``"
+msgstr "``BAND_E``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:805
+msgid "Band for input layer E"
+msgstr "입력 레이어 E의 밴드"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:806
+msgid "**Input layer F**"
+msgstr "**Input layer F**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:809
+msgid "``INPUT_F``"
+msgstr "``INPUT_F``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:811
+msgid "Sixth input raster layer"
+msgstr "여섯 번째 입력 래스터 레이어"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:812
+msgid "**Number of raster band for F**"
+msgstr "**Number of raster band for F**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:815
+msgid "``BAND_F``"
+msgstr "``BAND_F``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:819
+msgid "Band for input layer F"
+msgstr "입력 레이어 F의 밴드"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:820
+msgid ""
+"**Calculation in gdalnumeric syntax using +-/\\* or any numpy array "
+"functions (i.e. logical_and())**"
+msgstr ""
+"**Calculation in gdalnumeric syntax using +-/\\* or any numpy array "
+"functions (i.e. logical_and())**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:821
+msgid "``FORMULA``"
+msgstr "``FORMULA``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:825
+msgid "The calculation formula. Examples:"
+msgstr "계산 공식입니다. 다음은 몇몇 예시입니다:"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:828
+msgid ""
+"``A*(A>0)`` --- outputs the value of the raster A if the value of A is "
+"greater than 0. If not, outputs 0."
+msgstr ""
+"``A*(A>0)`` --- 래스터 A의 값이 0을 초과하는 경우 래스터 A의 값을 산출합니다. 0을 초과하지 않으면, 0을 산출합니다."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:831
+msgid ""
+"``A*(A>0 and A>B)``--- outputs the value of A if that value is bigger than 0"
+" and bigger than the value of B. If not, outputs 0."
+msgstr ""
+"``A*(A>0 and A>B)``--- 래스터 A의 값이 0을 초과하고 래스터 B의 값을 초과하는 경우 래스터 A의 값을 산출합니다. "
+"그렇지 않으면, 0을 산출합니다."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:834
+msgid ""
+"``A*logical_or(A<=177,A>=185)`` --- outputs the value of A if A <= 177 or A "
+">= 185. If not, outputs 0."
+msgstr ""
+"``A*logical_or(A<=177,A>=185)`` --- 래스터 A의 값이 177 이하 또는 185 이상인 경우 래스터 A의 값을"
+" 산출합니다. 그렇지 않으면, 0을 산출합니다."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:837
+msgid ""
+"``sqrt(A*A+B*B)`` --- Outputs the square root of the sum of the value of A "
+"squared and the value of B squared."
+msgstr "``sqrt(A*A+B*B)`` --- 래스터 A의 값의 제곱과 래스터 B의 값의 제곱의 합의 제곱근을 산출합니다."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:840
+msgid "**Set output nodata value**"
+msgstr "**Set output nodata value**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:843
+msgid "``NO_DATA``"
+msgstr "``NO_DATA``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:847
+msgid "Value to use for nodata"
+msgstr "NODATA용으로 사용할 값"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:848
+msgid "**Output raster type**"
+msgstr "**Output raster type**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:849
+msgid "``RTYPE``"
+msgstr "``RTYPE``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:885
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:908
+msgid "**Calculated**"
+msgstr "**Calculated**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:890
+msgid "Specify the output (calculated) raster layer. One of:"
+msgstr "산출 (계산된) 래스터 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:911
+msgid "Output (calculated) raster layer"
+msgstr "산출 (계산된) 래스터 레이어"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:916
+msgid "**Algorithm ID**: ``gdal:rastercalculator``"
+msgstr "**Algorithm ID**: ``gdal:rastercalculator``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:926
+msgid "Raster information"
+msgstr "래스터 정보"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:927
+msgid ""
+"The gdalinfo program lists various information about a GDAL supported raster"
+" dataset."
+msgstr "gdalinfo 프로그램이 GDAL이 지원하는 래스터 데이터셋에 대한 여러 가지 정보를 목록화합니다."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:930
+msgid ""
+"This algorithm is derived from the `GDAL info utility "
+"<https://gdal.org/gdalinfo.html>`_."
+msgstr "이 알고리즘은 `GDAL 정보 유틸리티 <https://gdal.org/gdalinfo.html>`_ 에서 파생되었습니다."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:951
+msgid "**Force computation of the actual min/max values for each band**"
+msgstr "**Force computation of the actual min/max values for each band**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:952
+msgid "``MIN_MAX``"
+msgstr "``MIN_MAX``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:956
+msgid ""
+"Forces computation of the actual min/max values for each band in the dataset"
+msgstr "데이터셋에 있는 각 밴드에 대해 실제 최소/최대 값을 계산하도록 강제합니다."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:958
+msgid "**Read and display image statistics (force computation if necessary)**"
+msgstr ""
+"**Read and display image statistics (force computation if necessary)**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:959
+msgid "``STATS``"
+msgstr "``STATS``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:963
+msgid ""
+"Reads and displays image statistics. Forces computation if no statistics are"
+" stored in an image."
+msgstr "이미지 통계를 읽고 표시합니다. 이미지에 저장된 통계가 없는 경우 강제로 계산합니다."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:965
+msgid "**Suppress GCP info**"
+msgstr "**Suppress GCP info**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:966
+msgid "``NO_GCP``"
+msgstr "``NO_GCP``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:970
+msgid ""
+"Suppresses ground control points list printing. It may be useful for "
+"datasets with huge amount of GCPs, such as L1B AVHRR or HDF4 MODIS which "
+"contain thousands of them."
+msgstr ""
+"지상기준점(Ground Control Point) 목록을 인쇄하지 않습니다. 이 파라미터는 수천 개의 GCP를 담고 있는 L1B "
+"AVHRR 또는 HDF4 MODIS처럼 대용량 GCP를 가지고 있는 데이터셋에 유용할 수도 있습니다."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:973
+msgid "**Suppress metadata info**"
+msgstr "**Suppress metadata info**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:974
+msgid "``NO_METADATA``"
+msgstr "``NO_METADATA``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:978
+msgid ""
+"Suppresses metadata printing. Some datasets may contain a lot of metadata "
+"strings."
+msgstr "메타데이터를 인쇄하지 않습니다. 일부 데이터셋은 수많은 메타데이터 문자열을 담고 있을 수도 있습니다."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:986
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1010
+msgid "**Layer information**"
+msgstr "**Layer information**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:988
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1012
+msgid "[html]"
+msgstr "[html]"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:991
+msgid "Specify the HTML file for output. One of:"
+msgstr "산출물용 HTML 파일을 지정합니다. 다음 가운데 하나를 선택할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1013
+msgid "The HTML file containing information about the input raster layer"
+msgstr "입력 래스터 레이어에 대한 정보를 담고 있는 HTML 파일"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1019
+msgid "**Algorithm ID**: ``gdal:gdalinfo``"
+msgstr "**Algorithm ID**: ``gdal:gdalinfo``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1029
+msgid "Retile"
+msgstr "타일 재작업"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1030
+msgid ""
+"Retiles a set of input tiles. All the input tiles must be georeferenced in "
+"the same coordinate system and have a matching number of bands. Optionally "
+"pyramid levels are generated."
+msgstr ""
+"입력 타일 집합을 재작업(retile)합니다. 모든 입력 타일들은 동일한 좌표계를 지리참조해야만 하며, 동일한 개수의 밴드를 가져야만 "
+"합니다. 피라미드 수준을 생성할 수 있는 옵션도 있습니다."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1035
+msgid ""
+"This algorithm is derived from the `GDAL Retile utility "
+"<https://gdal.org/gdal_retile.html>`_."
+msgstr ""
+"이 알고리즘은 `GDAL 타일 재작업 유틸리티 <https://gdal.org/gdal_retile.html>`_ 에서 파생되었습니다."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1050
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1243
+msgid "**Input files**"
+msgstr "**Input files**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1053
+msgid "The input raster files"
+msgstr "입력 래스터 파일"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1054
+msgid "**Tile width**"
+msgstr "**Tile width**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1055
+msgid "``TILE_SIZE_X``"
+msgstr "``TILE_SIZE_X``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1058
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1064
+msgid "Default: 256"
+msgstr "기본값: 256"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1059
+msgid "Width of the tiles in pixels (minimum 0)"
+msgstr "타일의 픽셀 단위 너비 (최소값 0)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1060
+msgid "**Tile height**"
+msgstr "**Tile height**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1061
+msgid "``TILE_SIZE_Y``"
+msgstr "``TILE_SIZE_Y``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1065
+msgid "Height of the tiles in pixels (minimum 0)"
+msgstr "타일의 픽셀 단위 높이 (최소값 0)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1066
+msgid "**Overlap in pixels between consecutive tiles**"
+msgstr "**Overlap in pixels between consecutive tiles**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1067
+msgid "``OVERLAP``"
+msgstr "``OVERLAP``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1072
+msgid "**Number of pyramid levels to build**"
+msgstr "**Number of pyramid levels to build**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1076
+msgid "Default: 1"
+msgstr "기본값: 1"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1077
+msgid "Minimum: 0"
+msgstr "최소값: 0"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1078
+msgid "**Source coordinate reference system**"
+msgstr "**Source coordinate reference system**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1099
+msgid "**Column delimiter used in the CSV file**"
+msgstr "**Column delimiter used in the CSV file**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1102
+msgid "``DELIMITER``"
+msgstr "``DELIMITER``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1105
+msgid "Default: ';'"
+msgstr "기본값: ';'"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1106
+msgid ""
+"Delimiter to use in the CSV file containing the tile(s) georeferencing "
+"information"
+msgstr "타일(들)의 지리참조 정보를 담고 있는 CSV 파일에 사용할 구분자"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1149
+msgid "**Build only the pyramids**"
+msgstr "**Build only the pyramids**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1150
+msgid "``ONLY_PYRAMIDS``"
+msgstr "``ONLY_PYRAMIDS``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1155
+msgid "**Use separate directory for each tile row**"
+msgstr "**Use separate directory for each tile row**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1156
+msgid "``DIR_FOR_ROW``"
+msgstr "``DIR_FOR_ROW``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1165
+msgid "Default: ``[Save to temporary folder]``"
+msgstr "기본값: ``[Save to temporary folder]``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1166
+msgid "Specify the output folder for the tiles. One of:"
+msgstr "타일을 저장할 산출물 폴더를 지정합니다. 다음 가운데 하나를 선택할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1169
+msgid "Save to Temporary Directory"
+msgstr "임시 디렉터리에 저장"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1170
+msgid "Save to Directory..."
+msgstr "디렉터리에 저장"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1173
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1202
+msgid "**CSV file containing the tile(s) georeferencing information**"
+msgstr "**CSV file containing the tile(s) georeferencing information**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1174
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1203
+msgid "``OUTPUT_CSV``"
+msgstr "``OUTPUT_CSV``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1175
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1204
+msgid "[file]"
+msgstr "[file]"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1177
+msgid "Default: ``[Skip output]``"
+msgstr "기본값: ``[Skip output]``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1181
+msgid "Skip Output"
+msgstr "산출물 건너뛰기"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1201
+msgid "The output folder for the tiles."
+msgstr "타일을 저장한 산출물 폴더"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1205
+msgid "The CSV file with georeferencing information for the tiles."
+msgstr "타일의 지리참조 정보를 담고 있는 CSV 파일"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1210
+msgid "**Algorithm ID**: ``gdal:retile``"
+msgstr "**Algorithm ID**: ``gdal:retile``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1220
+msgid "Tile index"
+msgstr "타일 인덱스"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1221
+msgid ""
+"Builds a vector layer with a record for each input raster file, an attribute"
+" containing the filename, and a polygon geometry outlining the raster. This "
+"output is suitable for use with MapServer as a raster tileindex."
+msgstr ""
+"각 입력 래스터 파일의 레코드, 파일명을 담고 있는 속성, 그리고 래스터의 윤곽선을 그리는 폴리곤 도형을 가진 벡터 레이어를 작성합니다."
+" 이 산출물은 `MapServer <https://mapserver.org/>`_ 에서 래스터 타일 인덱스로 사용하기에 적합합니다."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1226
+msgid ""
+"This algorithm is derived from the `GDAL Tile Index utility "
+"<https://gdal.org/gdaltindex.html>`_."
+msgstr ""
+"이 알고리즘은 `GDAL 타일 인덱스 유틸리티 <https://gdal.org/gdaltindex.html>`_ 에서 파생되었습니다."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1244
+msgid "``LAYERS``"
+msgstr "``LAYERS``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1246
+msgid "The input raster files. Can be multiple files."
+msgstr "입력 래스터 파일입니다. 파일 여러 개를 지정할 수 있습니다."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1247
+msgid "**Field name to hold the file path to the indexed rasters**"
+msgstr "**Field name to hold the file path to the indexed rasters**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1248
+msgid "``PATH_FIELD_NAME`` Optional"
+msgstr "``PATH_FIELD_NAME`` Optional"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1252
+msgid "Default: 'location'"
+msgstr "기본값: 'location'"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1253
+msgid ""
+"The output field name to hold the file path/location to the indexed rasters."
+msgstr "인덱스가 추가된 래스터를 가리키는 파일 경로/위치를 담을 산출 필드의 명칭입니다."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1255
+msgid "**Store absolute path to the indexed rasters**"
+msgstr "**Store absolute path to the indexed rasters**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1256
+msgid "``ABSOLUTE_PATH``"
+msgstr "``ABSOLUTE_PATH``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1260
+msgid ""
+"Set whether the absolute path to the raster files is stored in the tile "
+"index file. By default the raster filenames will be put in the file exactly "
+"as they are specified in the command."
+msgstr ""
+"타일 인덱스 파일에 래스터 파일을 가리키는 절대 경로를 저장할지 여부를 설정합니다. 기본적으로 명령 줄에서 지정한 그대로 파일에 래스터 "
+"파일명을 넣을 것입니다."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1264
+msgid "**Skip files with different projection reference**"
+msgstr "**Skip files with different projection reference**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1269
+msgid ""
+"Only files with same projection as files already inserted in the tile index "
+"will be inserted. Default does not check projection and accepts all inputs."
+msgstr ""
+"타일 인덱스에 이미 삽입된 파일과 동일한 투영체를 가진 파일만 삽입할 것입니다. 기본적으로 투영체를 확인하지 않고 모든 입력물을 "
+"받아들입니다."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1272
+msgid "**Transform geometries to the given CRS**"
+msgstr "**Transform geometries to the given CRS**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1275
+msgid "``TARGET_CRS``"
+msgstr "``TARGET_CRS``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1277
+msgid ""
+"Geometries of input files will be transformed to the specified target "
+"coordinate reference system. Default creates simple rectangular polygons in "
+"the same coordinate reference system as the input rasters."
+msgstr ""
+"입력 파일의 도형을 지정한 대상 좌표계로 변형할 것입니다. 기본적으로 입력 래스터와 동일한 좌표계에서 단순한 직사각형 폴리곤을 "
+"생성합니다."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1281
+msgid "**The name of the field to store the SRS of each tile**"
+msgstr "**The name of the field to store the SRS of each tile**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1284
+msgid "``CRS_FIELD_NAME``"
+msgstr "``CRS_FIELD_NAME``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1286
+msgid "The name of the field to store the SRS of each tile"
+msgstr "각 파일의 좌표계를 저장할 필드의 명칭입니다."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1287
+msgid "**The format in which the CRS of each tile must be written**"
+msgstr "**The format in which the CRS of each tile must be written**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1288
+msgid "``CRS_FORMAT``"
+msgstr "``CRS_FORMAT``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1289
+msgid "[enumeration] Default: 0"
+msgstr "[enumeration] 기본값: 0"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1291
+msgid "Format for the CRS. One of:"
+msgstr "좌표계의 서식을 지정합니다. 다음 가운데 하나를 선택할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1293
+msgid "0 -- Auto (``AUTO``)"
+msgstr "0 -- 자동 (``AUTO``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1294
+msgid "1 -- Well-known text (``WKT``)"
+msgstr "1 -- Well-known text (``WKT``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1295
+msgid "2 -- EPSG (``EPSG``)"
+msgstr "2 -- EPSG (``EPSG``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1296
+msgid "3 -- Proj.4 (``PROJ``)"
+msgstr "3 -- Proj.4 (``PROJ``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1298
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1322
+msgid "**Tile index**"
+msgstr "**Tile index**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1300
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1324
+msgid "[vector: polygon]"
+msgstr "[vector: polygon]"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1303
+msgid "Specify the polygon vector layer to write the index to. One of:"
+msgstr "인덱스를 작성할 폴리곤 벡터 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1307
+msgid "Save to File"
+msgstr "파일로 저장"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1325
+msgid "The polygon vector layer with the tile index."
+msgstr "타일 인덱스를 가진 폴리곤 벡터 레이어"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1330
+msgid "**Algorithm ID**: ``gdal:tileindex``"
+msgstr "**Algorithm ID**: ``gdal:tileindex``"

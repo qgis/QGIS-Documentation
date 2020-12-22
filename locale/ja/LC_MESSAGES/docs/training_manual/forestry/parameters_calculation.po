@@ -1,0 +1,221 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:21+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:2
+msgid "|LS| Calculating the Forest Parameters"
+msgstr "|LS| 森林パラメーターを計算する"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:4
+msgid ""
+"Estimating the parameters of the forest is the goal of the forest inventory."
+" Continuing the example from previous lesson, you will use the inventory "
+"information gathered in the field to calculate the forest parameters, for "
+"the whole forest first, and then for the stands you digitized before."
+msgstr ""
+"森林のパラメーターを推定することは、森林調査の目標です。前のレッスンからの例を続け、野外で収集された調査情報を使用し、最初に森林全体に対して、それから前にデジタル化した林分に対して、森林のパラメーターを計算しましょう。"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:9
+msgid ""
+"**The goal for this lesson:** Calculate forest parameters at general and "
+"stand level."
+msgstr "**このレッスンの目標：** 一般と林分レベルで森林のパラメーターを計算します。"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:12
+msgid "|basic| |FA| Adding the Inventory Results"
+msgstr "|basic| |FA|  調査結果を追加"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:14
+msgid ""
+"The field teams visited the forest and with the help of the information you "
+"provided, gathered information about the forest at every sample plot."
+msgstr "野外チームは森林を訪問し、こちらから提供する情報の助けを借りて、すべてのサンプルプロットでの森林に関する情報を集めました。"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:24
+msgid "First, add the sample plots measurements to your QGIS project:"
+msgstr "まず、QGIS プロジェクトにサンプルプロットの測定を追加します。"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:26
+msgid "Go to :menuselection:`Layer --> Add Delimited Text Layer...`."
+msgstr ":menuselection:`レイヤー - >区切りのテキストレイヤーを追加...` に行きます。"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:29
+msgid "Make sure that the :guilabel:`Point coordinates` option is checked."
+msgstr ":guilabel:`ポイント座標` オプションがチェックされていることを確認します。"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:31
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:64
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:101
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:132
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:154
+msgid "Click :guilabel:`OK`."
+msgstr ":guilabel:`OK` をクリックします。"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:33
+msgid ""
+"Open the new layer's :guilabel:`Attribute table` and have a look at the "
+"data."
+msgstr "新しいレイヤーの :guilabel:`属性テーブル` を開いてデータを見てみましょう。"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:46
+msgid "Check :guilabel:`Add saved file to map`."
+msgstr ":guilabel:`保存したファイルを地図に追加` をチェックします。"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:50
+msgid "|basic| |FA| Whole Forest Parameters Estimation"
+msgstr "|basic| |FA| 森林全体のパラメーター推定"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:58
+msgid ""
+"You can calculate the average of a field in a vector layer using the "
+":guilabel:`Basic statistics` tool:"
+msgstr ":guilabel:`基本統計` ツールを使用して、ベクターレイヤー内のフィールドの平均値を計算できます。"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:74
+msgid "|basic| |FA| Estimating Stand Parameters"
+msgstr "|basic| |FA| 林分のパラメーターを推定する"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:76
+msgid ""
+"You can make use of those same systematic sample plots to calculate "
+"estimates for the different forest stands you digitized previously. Some of "
+"the forest stands did not get any sample plot and for those you will not get"
+" information. You could have planned some extra sample plots when you "
+"planned the systematic inventory, so that the field teams would have "
+"measured a few extra sample plots for this purpose. Or you could send a "
+"field team later to get estimates of the missing forest stands to complete "
+"the stand inventory. Nevertheless, you will get information for a good "
+"number of stands just using the planned plots."
+msgstr ""
+"以前にデジタル化された別の林分のための推定値を算出するために、同じ体系的サンプルプロットを利用できます。林分の一部はどんなサンプルプロットも取得しておらず、そしてそれらについては情報は取得されないでしょう。体系的な調査を計画するときに、野外チームがこの目的のためにいくつかの余分なサンプルプロットを測定するように、いくつかの余分なサンプルプロットを計画することもできたかもしれません。あるいは後で野外チームを送って不足している林分の見積を取得することで林分の調査を完了することもできたかもしれません。それにもかかわらず、計画されたプロットを使用するだけで林分のかなりの数の情報が得られるでしょう。"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:85
+msgid ""
+"What you need is to get the averages of the sample plots that are falling "
+"within each of the forest stands. When you want to combine information based"
+" on their relative locations, you perform a spatial join:"
+msgstr ""
+"必要なのは林分のそれぞれの中に落ちているサンプルプロットの平均値を取得することです。それらの相対的な位置に基づいて情報を組み合わせたいときは、空間的結合を行います："
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:89
+msgid ""
+"Open the  :menuselection:`Vector --> Data Management --> Join attributes by "
+"location` tool."
+msgstr ":menuselection:`ベクター --> データ管理 --> 位置により属性を結合` ツールを開きます。"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:95
+msgid "Check :guilabel:`Take summary of intersecting features`."
+msgstr ":guilabel:`交わる地物を集計` をチェックします。"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:96
+msgid "Check to calculate only the :guilabel:`Mean`."
+msgstr ":guilabel:`平均` だけ計算するようチェックしてください。"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:99
+msgid ""
+"Finally select :guilabel:`Keep all records...`, so you can check later what "
+"stands did not get information."
+msgstr ""
+"最後に :guilabel:`すべてのレコードを保管...` を選択し、どの林分が情報を取得していないか、後で内容を確認できるようにします。"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:102
+msgid "Accept adding the new layer to your project when prompted."
+msgstr "プロンプトが表示されたら、プロジェクトに新しいレイヤーを追加し受け入れます。"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:103
+msgid "Close the :guilabel:`Join attributes by location` tool."
+msgstr ":guilabel:`位置によって属性を結合` ツールを閉じます。"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:122
+msgid ""
+"You need to first calculate the areas for the stands and then calculate "
+"total volumes and stem numbers for each of them:"
+msgstr "最初に林分に対する面積を計算し、それからそれらの各々に対する合計体積および合計茎数を計算する必要があります："
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:125
+msgid "In the :guilabel:`Attribute table` enable editing."
+msgstr ":guilabel:`属性テーブル` 中で編集を有効にします。"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:126
+msgid "Open the :guilabel:`Field calculator`."
+msgstr ":guilabel:`フィールド計算機` を開きます。"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:134
+msgid ""
+"Now calculate a field with the total volumes and number of stems estimated "
+"for every stand:"
+msgstr "ここですべての林分について推定される体積合計および茎数合計を持つフィールドを計算します："
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:137
+msgid "The fields can be integer numbers or you can use real numbers also."
+msgstr "フィールドは整数でもよいし、実数も使用できます。"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:140
+msgid "Save the edits when you are finished."
+msgstr "終了したら、編集内容を保存します。"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:141
+msgid "Disable editing."
+msgstr "編集を無効にします。"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:143
+msgid ""
+"In the previous situation, the areas represented by every sample plot were "
+"the same, so it was enough to calculate the average of the sample plots. Now"
+" to calculate the estimates, you need to divide the sum of the stands "
+"volumes or number of stems by the sum of the areas of the stands containing "
+"information."
+msgstr ""
+"以前の状況では、すべてのサンプルプロットによって表される面積が同じだったので、サンプルプロットの平均値を計算すれば十分でした。今は見積もりを計算するためには、林分の体積または茎数の合計を必要な情報を含む林分の面積の合計で割る必要があります。"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:165
+msgid ""
+"Using the information from the forest stands, instead of directly using that"
+" from the sample plots, gives the following average estimates:"
+msgstr "サンプルプロットから、下記の平均推定値を与えることを使用して林分からの情報を使用して、代わりに直接："
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:174
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:176
+msgid ""
+"You managed to calculate forest estimates for the whole forest using the "
+"information from your systematic sample plots, first without considering the"
+" forest characteristics and also using the interpretation of the aerial "
+"image into forest stands. And you also got some valuable information about "
+"the particular stands, which could be used to plan the management of the "
+"forest in the coming years."
+msgstr ""
+"自分の体系的なサンプルプロットからの情報を使用して、最初は森林の特性を考慮することなしで、そしてまた林分への空撮画像の解釈を使用して、森林全体に対して森林の推定値を計算できました。また特定の林分に関するいくつかの貴重な情報も得ましたが、これは今後森林の管理を計画するために使用できることでしょう。"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:183
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:185
+msgid ""
+"In the following lesson, you will first create a hillshade background from a"
+" LiDAR dataset which you will use to prepare a map presentation with the "
+"forest results you just calculated."
+msgstr ""
+"次のレッスンでは、まずレーザー測量データセットから陰影起伏の背景を作成します。これはたった今計算した森林の結果で地図プレゼンテーションを準備するために使用するしょう。"

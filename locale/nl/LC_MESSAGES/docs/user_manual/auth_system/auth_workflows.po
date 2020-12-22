@@ -1,0 +1,682 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# DiGro, 2020
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:26+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Dutch (https://www.transifex.com/qgis/teams/6144/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:4
+msgid "User Authentication Workflows"
+msgstr "Werkstromen voor authenticatie van gebruikers"
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:16
+msgid "Generic user workflow"
+msgstr "Algemene werkstroom voor gerbuikers"
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:19
+msgid "HTTP(S) authentication"
+msgstr "HTTP(S)-authenticatie"
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:21
+msgid ""
+"One of the most common resource connections is via HTTP(S), e.g. web mapping"
+" servers, and authentication method plugins often work for these types of "
+"connections. Method plugins have access to the HTTP request object and can "
+"manipulate both the request as well as its headers. This allows for many "
+"forms of internet-based authentication. When connecting via HTTP(S) using "
+"the standard username/password authentication method will attempt HTTP BASIC"
+" authentication upon connection."
+msgstr ""
+"Een van de meest voorkomende verbindingen naar bronnen  is via HTTP(S), "
+"bijv. servers voor webkaarten, en plug-ins voor methoden van authenticatie "
+"werken vaak met deze typen verbindingen. Plug-ins voor methoden hebben "
+"toegang tot het object HTTP request en kunnen zowel het request als de "
+"kopteksten daarvan manipuleren. Dit maakt vele vormen van authenticatie op "
+"basis van internet mogelijk. Wanneer wordt verbonden via HTTP(S) met behulp "
+"van de standaardmethode authenticatie gebruikersnaam/wachtwoord zal bij het "
+"verbinden authenticatie HTTP BASIC worden geprobeerd."
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:34
+msgid "Configuring a WMS connection for HTTP BASIC"
+msgstr "Een WMS-verbinding voor HTTP BASIC configureren"
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:37
+msgid "Database authentication"
+msgstr "Database authenticatie"
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:39
+msgid ""
+"Connections to database resources are generally stored as ``key=value`` "
+"pairs, which will expose usernames and (optionally) passwords, if *not* "
+"using an authentication configuration. When configuring with the new auth "
+"system, the ``key=value`` will be an abstracted representation of the "
+"credentials, e.g. ``authfg=81t21b9``."
+msgstr ""
+"Verbindingen naar databasebronnen worden over het algemeen opgeslagen als "
+"paren ``sleutels=waarde``, die gebruikersnamen en (optioneel) wachtwoorden "
+"laten zien, indien *geen*  configuratie voor authenticatie wordt gebruikt. "
+"Bij het configureren met het nieuwe systeem voor authenticatie, zal de "
+"``sleutel=waarde`` een abstracte weergave zijn van de inloggegevens, bijv. "
+"``authfg=81t21b9``"
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:50
+msgid "Configuring a Postgres SSL-with-PKI connection"
+msgstr "Configureren van een verbinding Postgres SSL-met-PKI"
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:53
+msgid "PKI authentication"
+msgstr "PKI-authenticatie"
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:55
+msgid ""
+"When configuring PKI components within the authentication system, you have "
+"the option of importing components into the database or referencing "
+"component files stored on your filesystem. The latter may be useful if such "
+"components change frequently, or where the components will be replaced by a "
+"system administrator. In either instance you will need to store any "
+"passphrase needed to access private keys within the database."
+msgstr ""
+"Bij het configureren van componenten van PKI in het systeem van "
+"authenticatie moet u de optie hebben om componenten te importeren in de "
+"database of te verwijzen naar opgeslagen bestanden voor componenten op uw "
+"bestandssysteem. Het laatste zou nuttig zijn als dergelijke componenten "
+"regelmatig wijzigen, of als de componenten zullen worden vervangen door een "
+"systeembeheerder. In elk geval zult u een wachtwoord moeten opslaan dat "
+"nodig is om toegang te krijgen tot private sleutels binnen de database."
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:67
+msgid "PKI configuration workflow"
+msgstr "Werkstroom voor configuratie PKI"
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:69
+msgid ""
+"All PKI components can be managed in separate editors within the "
+"**Certificate Manager**, which can be accessed in the "
+":guilabel:`Authentication` tab in QGIS `Options` dialog "
+"(:menuselection:`Settings --> Options`) by clicking the :guilabel:`Manage "
+"Certificates` button."
+msgstr ""
+"Alle componenten voor PKI kunnen in afzonderlijke bewerkers worden beheerd "
+"binnen **Certificaten beheren**, waar toegang toe kan worden verkregen via "
+"de tab :guilabel:`Authenticatie` in QGIS, dialoogvenster `Opties` "
+"(:menuselection:`Extra  --> Opties`) door te klikken op de knop "
+":guilabel:`Certificaten beheren`."
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:79
+msgid "Opening the Certificate Manager"
+msgstr "Certificaten beheren openen"
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:81
+msgid ""
+"In the :guilabel:`Certificate Manager`, there are editors for "
+"**Identities**, **Servers** and **Authorities**. Each of these are contained"
+" in their own tabs, and are described below in the order they are "
+"encountered in the workflow chart above. The tab order is relative to "
+"frequently accessed editors once you are accustomed to the workflow."
+msgstr ""
+"In :guilabel:`Certificaten beheren`, staan bewerkers voor **Identiteiten**, "
+"**Servers** en **Autoriteiten**. Elk hiervan is opgenomen in zijn eigen tab,"
+" en ze worden hieronder beschreven in de volgorde waarin zij worden "
+"tegengekomen in de kaart voor de werkstroom hierboven.  De volgorde van de "
+"tabs is relatief aan frequent gebruikte bewerkers als u eenmaal gewend bent "
+"aan de werkstroom."
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:89
+msgid ""
+"Because all authentication system edits write immediately to the "
+"authentication database, there is no need to click the :guilabel:`Options` "
+"dialog :guilabel:`OK` button for any changes to be saved. This is unlike "
+"other settings in the Options dialog."
+msgstr ""
+"Het is niet noodzakelijk om in het dialoogvenster :guilabel:`Opties` op de "
+"knop :guilabel:`OK` te drukken voor het opslaan van de wijzigingen, omdat "
+"alle bewerkingen aan het systeem voor authenticatie direct naar de database "
+"voor authenticatie worden geschreven. Dit wijkt af van andere instellingen "
+"in het dialoogvenster Opties."
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:95
+msgid "Authorities"
+msgstr "Autoriteiten"
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:97
+msgid ""
+"You can manage available Certificate Authorities (CAs) from the "
+"**Authorities** tab in the **Certificate manager** from the "
+"**Authentication** tab of the QGIS **Options** dialog."
+msgstr ""
+"U kunt beschikbare Certificaat Autoriteiten (CA's) beheren op de tab "
+"**Autoriteiten** in **Certificaten beheren** op de tab **Authenticatie** van"
+" het dialoogvenster **Opties** van QGIS."
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:101
+msgid ""
+"As referenced in the workflow chart above, the first step is to import or "
+"reference a file of CAs. This step is optional, and may be unnecessary if "
+"your PKI trust chain originates from root CAs already installed in your "
+"operating system (OS), such as a certificate from a commercial certificate "
+"vendor. If your authenticating root CA is not in the OS's trusted root CAs, "
+"it will need to be imported or have its file system path referenced. "
+"(Contact your system administrator if unsure.)"
+msgstr ""
+"Zoals weergegeven in de kaart voor de werkstroom hierboven is de eerste stap"
+" om een bestand van CA's te importeren of naar te verwijzen. Deze stap is "
+"optioneel en zou niet nodig hoeven te zijn als uw vertrouwde ketens voor PKI"
+" hun origine vinden in bron-CA's die al zijn geïnstalleerd op uw "
+"besturingssysteem (OS), zoals een certificaat van een commerciële verkoper "
+"van certificaten. Indien uw authenticerende bron-CA niet in de door het "
+"besturingssysteem vertrouwde bron-CA's staat, zal het geïmporteerd moeten "
+"worden of een verwijzing moeten krijgen naar het pad van het "
+"bestandssysteem. (Neem contact op met uw systeembeheerder als u niet zeker "
+"bent.)"
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:114
+msgid "Authorities editor"
+msgstr "Bewerker voor autoriteiten"
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:116
+msgid ""
+"By default, the root CAs from your OS are available; however, their trust "
+"settings are not inherited. You should review the certificate trust policy "
+"settings, especially if your OS root CAs have had their policies adjusted. "
+"Any certificate that is expired will be set to untrusted and will not be "
+"used in secure server connections, unless you specifically override its "
+"trust policy. To see the QGIS-discoverable trust chain for any certificate, "
+"select it and click the |metadata| :sup:`Show information for certificate`."
+msgstr ""
+"Standaard zijn de bron-CA's van uw besturingssysteem beschikbaar; echter, "
+"hun instellingen voor vertrouwen worden niet geërfd. U zou de instellingen "
+"van het beleid voor het vertrouwen van certificaten opnieuw moeten bekijken,"
+" in het bijzonder als het beleid van de bron-CA's van uw besturingssysteem "
+"is aangepast. Elk certificaat dat is verlopen zal worden ingesteld op niet "
+"te vertrouwen en zal niet worden gebruikt in verbindingen naar een "
+"beveiligde server, tenzij u specifiek het beleid voor vertrouwen "
+"overschrijft. Selecteer het en klik op |metadata| :sup:`Informatie over "
+"certificaat weergeven` om de door QGIS te ontdekken te vertrouwen keten voor"
+" een certificaat te bekijken."
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:129
+msgid "Certificate info dialog"
+msgstr "Dialoogvenster Informatie over certificaat"
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:131
+msgid ""
+"You can edit the :guilabel:`Trust policy` |selectString| for any selected "
+"certificate within the chain. Any change in trust policy to a selected "
+"certificate will not be saved to the database unless the |fileSave| "
+":sup:`Save certificate trust policy change to database` button is clicked "
+"*per* selected certification. Closing the dialog will **not** apply the "
+"policy changes."
+msgstr ""
+"U kunt :guilabel:`Vertrouwensbeleid` |selectString| voor elk geselecteerd "
+"certificaat binnen de keten bewerken. Elke wijziging in het beleid voor "
+"vertrouwen voor een geselecteerd certificaat zal niet in de database worden "
+"opgeslagen, tenzij op de knop |fileSave| :sup:`Wijziging van certificaat "
+"vertrouwensbeleid in database opslaan` is geklikt *per* geselecteerd "
+"certificaat. Sluiten van het dialoogvenster zal de wijzigingen in het beleid"
+" **niet** doorvoeren."
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:143
+msgid "Saving the trust policy changes"
+msgstr "De wijzigingen van vertrouwensbeleid opslaan"
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:145
+msgid ""
+"You can review the filtered CAs, both intermediate and root certificates, "
+"that will be trusted for secure connections or change the default trust "
+"policy by clicking the |transformSettings| **Options** button."
+msgstr ""
+"U kunt de gefilterde CA's bekijken, zowel tussenliggende als "
+"broncertificaten, die zullen worden vertrouwd voor beveiligde verbindingen "
+"of het standaard beleid voor vertrouwen wijzigen door te klikken op de knop "
+"|transformSettings| **Opties**."
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:150
+msgid ""
+"Changing the default trust policy may result in problems with secure "
+"connections."
+msgstr ""
+"Wijzigen van het standaardbeleid voor vertrouwen zou kunnen resulteren in "
+"problemen met beveiligde verbindingen."
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:158
+msgid "Authorities options menu"
+msgstr "Menu Opties voor autoriteiten "
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:160
+msgid ""
+"You can import CAs or save a file system path from a file that contains "
+"multiple CAs, or import individual CAs. The standard PEM format for files "
+"that contain multiple CA chain certifications has the root cert at the "
+"bottom of the file and all subsequently signed child certificates above, "
+"towards the beginning of the file."
+msgstr ""
+"U kunt CA's importeren of een pad voor het bestandssysteem opslaan naar een "
+"bestand dat meerdere CA's bevat, of individuele CA's importeren. De "
+"standaardindeling PEM voor bestanden die meerdere keten certificaten voor "
+"meerdere CA's bevatten heeft het broncertificaat onder in het bestand staan "
+"en alle opvolgende ondertekende kindcertificaten daarboven, naar het begin "
+"van het bestand."
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:166
+msgid ""
+"The CA certificate import dialog will find all CA certificates within the "
+"file, regardless of order, and also offers the option to import certificates"
+" that are considered invalid (in case you want to override their trust "
+"policy). You can override the trust policy upon import, or do so later "
+"within the **Authorities** editor."
+msgstr ""
+"Het dialoogvenster voor het importeren van certificaten van CA's zal alle "
+"CA-certificaten in het bestand vinden, ongeacht de volgorde, en ook de optie"
+" bieden om certificaten te importeren die als ongeldig worden beschouwd "
+"(voor het geval u hun beleid voor vertrouwen wilt overschrijven). U kunt het"
+" beleid voor vertrouwen overschrijven bij het importeren, of dat later doen "
+"met de bewerker voor **Autoriteiten**."
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:177
+msgid "Import certificates dialog"
+msgstr "Dialoogvenster Certificaten importeren"
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:180
+msgid ""
+"If you are pasting certificate information into the :guilabel:`PEM text` "
+"field, note that encrypted certificates are not supported."
+msgstr ""
+"Indien u informatie over het certificaat plakt in het veld :guilabel:`PEM-"
+"tekst`, onthoud dan dat versleutelde certificaten niet worden ondersteund."
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:184
+msgid "Identities"
+msgstr "Identiteiten"
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:186
+msgid ""
+"You can manage available client identity bundles from the "
+":guilabel:`Identities` tab in the :guilabel:`Certificate manager` from the "
+"**Authentication** tab of the QGIS **Options** dialog. An identity is what "
+"authenticates you against a PKI-enabled service and usually consists of a "
+"client certificate and private key, either as separate files or combined "
+"into a single \"bundled\" file. The bundle or private key is often "
+"passphrase-protected."
+msgstr ""
+"U kunt de beschikbare bundels met identiteiten voor cliënten beheren vanaf "
+"de tab :guilabel:`Identiteiten` in  :guilabel:`Certificaten beheren` op de "
+"tab **Authenticatie** van het dialoogvenster **Opties**  van QGIS. Een "
+"identiteit is wat u authenticeert voor een PKI-ingeschakelde service en "
+"bestaat gewoonlijk uit een certificaat voor een cliënt en een persoonlijke "
+"sleutel, ofwel als afzonderlijke bestanden of gecombineerd in één enkel "
+"\"gebundeld\" bestand. De bundel of persoonlijke sleutel is vaak beveiligd "
+"met een wachtwoord."
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:193
+msgid ""
+"Once you have any Certificate Authorities (CAs) imported you can optionally "
+"import any identity bundles into the authentication database. If you do not "
+"wish to store the identities, you can reference their component file system "
+"paths within an individual authentication configuration."
+msgstr ""
+"Als u eenmaal enkele Certificaat Autoriteiten (CA's) hebt geïmporteerd kunt "
+"u optioneel enige  identiteitsbundels in de database voor authenticatie "
+"importeren. Als u de identiteiten niet wilt opslaan, kunt u naar de paden "
+"voor het bestandssysteem voor hun componenten verwijzen met een individuele "
+"configuratie voor authenticatie."
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:203
+msgid "Identities editor"
+msgstr "Bewerker Identiteiten"
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:205
+msgid ""
+"When importing an identity bundle, it can be passphrase-protected or "
+"unprotected, and can contain CA certificates forming a trust chain. Trust "
+"chain certifications will not be imported here; they can be added separately"
+" under the :guilabel:`Authorities` tab."
+msgstr ""
+"Bij het importeren van een identiteitsbundel, mag die beveiligd zijn met een"
+" wachtwoord of niet beveiligd, en mag CA-certificaten bevatten die een keten"
+" van vertrouwen vormen. Vertrouwde ketencertificaten zullen hier niet "
+"geïmporteerd worden; zij kunnen afzonderlijk worden toegevoegd onder de tab "
+":guilabel:`Autoriteiten`."
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:210
+msgid ""
+"Upon import the bundle's certificate and private key will be stored in the "
+"database, with the key's storage encrypted using the QGIS master password. "
+"Subsequent usage of the stored bundle from the database will only require "
+"input of the master password."
+msgstr ""
+"Bij het importeren zullen het certificaat van de bundel en de persoonlijke "
+"sleutel worden opgeslagen in de database, met de opslag van de sleutel "
+"versleuteld met behulp van het hoofdwachtwoord van QGIS. Volgend gebruik van"
+" de opgeslagen bundel uit de database zal alleen het invoeren van het "
+"hoofdwachtwoord vergen."
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:215
+msgid ""
+"Personal identity bundles consisting of PEM/DER (.pem/.der) and PKCS#12 "
+"(.p12/.pfx) components are supported. If a key or bundle is passphrase-"
+"protected, the password will be required to validate the component prior to "
+"import. Likewise, if the client certificate in the bundle is invalid (for "
+"example, its effective date has not yet started or has elapsed) the bundle "
+"can not be imported."
+msgstr ""
+"Persoonlijke identiteitsbundels, bestaande uit PEM/DER (.pem/.der) en "
+"PKCS#12 (.p12/.pfx) componenten, worden ondersteund. Als een sleutel of "
+"bundel met een wachtwoord is beveiligd, zal het wachtwoord nodig zijn om, "
+"voorafgaande aan het importeren, de component te valideren. Idem, als het "
+"certificaat van de cliënt in de bundel ongeldig is (bijvoorbeeld omdat de "
+"geldigheidsdatum nog niet is begonnen of is verlopen) kan de bundel niet "
+"worden geïmporteerd."
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:227
+msgid "PEM/DER identity import"
+msgstr "PEM/DER identiteit importeren"
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:234
+msgid "PKCS#12 identity import"
+msgstr "PKCS#12 identiteit importeren"
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:237
+msgid "Handling bad layers"
+msgstr "Probleemlagen afhandelen"
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:239
+msgid ""
+"Occasionally, the authentication configuration ID that is saved with a "
+"project file is no longer valid, possibly because the current authentication"
+" database is different than when the project was last saved, or due to a "
+"credentials mismatch. In such cases the :guilabel:`Handle bad layers` dialog"
+" will be presented upon QGIS launch."
+msgstr ""
+"Af en toe komt het voor dat de ID voor de configuratie voor de "
+"authenticatie, die werd opgeslagen in een projectbestand, niet langer geldig"
+" is, mogelijk omdat de huidige database voor authenticatie anders is dan "
+"toen het project voor het laatst werd opgeslagen, of vanwege het niet "
+"overeenkomen van de inloggegevens. In dergelijke gevallen zal het "
+"dialoogvenster :guilabel:`Probleemlagen afhandelen` worden weergegeven bij "
+"het opstarten van QGIS."
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:250
+msgid "Handle bad layers with authentication"
+msgstr "Probleemlagen met authenticatie afhandelen"
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:252
+msgid ""
+"If a data source is found to have an authentication configuration ID "
+"associated with it, you will be able to edit it. Doing so will automatically"
+" edit the data source string, much in the same way as opening the project "
+"file in a text editor and editing the string."
+msgstr ""
+"Als een gegevensbron wordt gevonden met daaraan een ID voor een configuratie"
+" voor authenticatie geassocieerd, zult u in staat zijn het te bewerken. Door"
+" dat te doen zal automatisch de tekenreeks van de gegevensbron worden "
+"bewerkt, nagenoeg op dezelfde manier als het openen van het projectbestand "
+"in een tekstverwerker en de tekenreeks te bewerken."
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:262
+msgid "Edit bad layer's authentication config ID"
+msgstr "Probleemlagen ID voor configuratie van authenticatie bewerken"
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:265
+msgid "Changing authentication config ID"
+msgstr "Configuratie voor authenticatie ID wijzigen"
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:267
+msgid ""
+"Occasionally, you will need to change the authentication configuration ID "
+"that is associated with accessing a resource. There are instances where this"
+" is useful:"
+msgstr ""
+"Af en toe zult u het ID voor de configuratie van authenticatie die is "
+"geassocieerd met toegang tot een bron moeten wijzigen. Er zijn gevallen "
+"wanneer dit nuttig is:"
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:271
+msgid ""
+"**Resource auth config ID is no longer valid**: This can occur when you have"
+" switched auth databases add need to *align* a new configuration to the ID "
+"already associated with a resource."
+msgstr ""
+"**Bron voor ID configuratie van authenticatie is niet langer geldig**: Dit "
+"kan voorkomen als u gewisseld bent van database voor authenticatie en een "
+"nieuwe configuratie voor de ID moet *uitlijnen* voor de ID die al "
+"geassocieerd is met een bron."
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:274
+msgid ""
+"**Shared project files**: If you intended to share projects between users, "
+"e.g. via a shared file server, you can *predefine* a 7-character (containing"
+" **a-z** and/or **0-9**) that is associated with the resource. Then, "
+"individual users change the ID of an authentication configuration that is "
+"specific to their credentials of the resource. When the project is opened, "
+"the ID is found in the authentication database, but the credentials are "
+"different per user."
+msgstr ""
+"**Gedeelde projectbestanden**: Als u van plan bent projecten te delen met "
+"andere gebruikers, bijv. via een server met gedeelde bestanden, kunt u een "
+"tekenreeks met 7 tekens *vooraf definiëren*  (die **a-z** en/of **0-9** "
+"bevat) die is geassocieerd met de bron. Daarna wijzigen individuele "
+"gebruikers de ID van een configuratie van authenticatie die specifiek is "
+"voor hun inloggegevens. Als het project wordt geopend, wordt de ID gevonden "
+"in de database voor authenticatie, maar de inloggegevens verschillen per "
+"gebruiker."
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:286
+msgid ""
+"Changing a layer's authentication config ID (unlocked yellow text field)"
+msgstr ""
+"Een ID voor configuratie voor authenticatie wijzigen (niet vastgezet geel "
+"tekstveld)"
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:290
+msgid ""
+"Changing the auth config ID is considered an advanced operation and should "
+"only be done with full knowledge as to why it is necessary. This is why "
+"there is a lock button that needs clicked, to unlock the ID's text field "
+"prior to editing the ID."
+msgstr ""
+"Wijzigen van de ID voor configuratie van authenticatie wordt beschouwd als "
+"een geavanceerde bewerking en zou alleen moeten worden uitgevoerd als de "
+"volledige kennis aanwezig is voor het waarom het nodig is. Dat is waarom er "
+"een knop voor vastzetten is waarop moet worden geklikt, om het tekstveld van"
+" de ID los te maken, voorafgaande aan het bewerken van de ID."
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:296
+msgid "QGIS Server support"
+msgstr "QGIS Server ondersteuning"
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:298
+msgid ""
+"When using a project file, with layers that have authentication "
+"configurations, as a basis for a map in QGIS Server, there are a couple of "
+"additional setup steps necessary for QGIS to load the resources:"
+msgstr ""
+"Bij het gebruiken van een projectbestand, met lagen die configuraties voor "
+"authenticatie hebben, als basis voor een kaart in QGIS Server, zijn er een "
+"aantal aanvullende stappen voor instellen noodzakelijk voor QGIS om de "
+"bronnen te laden:"
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:302
+msgid "Authentication database needs to be available"
+msgstr "Database voor authenticatie moet beschikbaar zijn"
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:303
+msgid "Authentication database's master password needs to be available"
+msgstr ""
+"Hoofdwachtwoord voor database voor authenticatie moet beschikbaar zijn"
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:305
+msgid ""
+"When instantiating the authentication system, Server will create or use "
+":file:`qgis-auth.db` in :file:`~/.qgis2/` or the directory defined by the "
+"``QGIS_AUTH_DB_DIR_PATH`` environment variable. It may be that the Server's "
+"user has no HOME directory, in which case, use the environment variable to "
+"define a directory that the Server's user has read/write permissions and is "
+"not located within the web-accessible directories."
+msgstr ""
+"Bij het instantiëren van het systeem voor authenticatie zal Server het "
+"bestand :file:`qgis-auth.db` in :file:`~/.qgis2/` van de map die is "
+"gedefinieerd in de omgevingsvariabele ``QGIS_AUTH_DB_DIR_PATH`` maken of "
+"gebruiken. Het kan zijn dat de gebruiker van Server geen map HOME heeft, in "
+"welk geval, de omgevingsvariabele wordt gebruikt om een map te definiëren "
+"waar de gebruiker lees/schrijf-rechten heeft en die niet is gelegen in de "
+"vanaf het web toegankelijke mappen."
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:312
+msgid ""
+"To pass the master password to Server, write it to the first line of file at"
+" a path on the file system readable by the Server processes user and defined"
+" using the ``QGIS_AUTH_PASSWORD_FILE`` environment variable. Ensure to limit"
+" the file as only readable by the Server's process user and to not store the"
+" file within web-accessible directories."
+msgstr ""
+"Schrijf, om het hoofdwachtwoord door te kunnen geven aan Server, het in de "
+"eerste regel van een bestand op het pad van het bestandssysteem dat is te "
+"lezen door de gebruiker van de processen van Server en wordt gedefinieerd "
+"met behulp van de omgevingsvariabele ``QGIS_AUTH_PASSWORD_FILE``. Zorg er "
+"voor het bestand te beperken tot alleen te lezen door de gebruiker van de "
+"processen van Server en sla het bestand niet op in mappen die toegankelijk "
+"zijn vanaf het web."
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:320
+msgid ""
+"``QGIS_AUTH_PASSWORD_FILE`` variable will be removed from the Server "
+"environment immediately after accessing."
+msgstr ""
+"De variabele ``QGIS_AUTH_PASSWORD_FILE`` wordt direct uit de omgeving van "
+"Server verwijderd nadat toegang is verleend"
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:324
+msgid "SSL server exceptions"
+msgstr "SSL server uitzonderingen"
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:331
+msgid "SSL server exception"
+msgstr "SSL server uitzondering"
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:333
+msgid ""
+"You can manage SSL server configurations and exceptions from the **Servers**"
+" tab in the **Authentication** section of the QGIS **Options** dialog."
+msgstr ""
+"U kunt de configuraties en uitzonderingen van SSL-server beheren vanaf de "
+"tab **Servers** in het gedeelte **Authenticatie** van het dialoogvenster "
+"**Opties** in QGIS."
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:336
+msgid ""
+"Sometimes, when connecting to an SSL server, there are errors with the SSL "
+"\"handshake\" or the server's certificate. You can ignore those errors or "
+"create an SSL server configuration as an exception. This is similar to how "
+"web browsers allow you to override SSL errors, but with more granular "
+"control."
+msgstr ""
+"Soms, tijdens het verbinden met een SSL-server, zijn er fouten met de SSL "
+"\"handshake\" of het certificaat van de server. U kunt deze fouten negeren "
+"of een configuratie voor een SSL-server maken als uitzondering. Dit is "
+"soortgelijk aan hoe webbrowsers u toestaan fouten van SSL te overschrijven, "
+"maar met een meer fijner beheer."
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:342
+msgid ""
+"You should not create an SSL server configuration unless you have complete "
+"knowledge of the entire SSL setup between the server and client. Instead, "
+"report the issue to the server administrator."
+msgstr ""
+"U zou geen configuratie voor een SSL-server moeten maken, tenzij u de "
+"volledige kennis heeft van de gehele instelling van SSL tussen de server en "
+"de cliënt. Rapporteer in plaats daarvan het probleem bij de beheerder van de"
+" server."
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:347
+msgid ""
+"Some PKI setups use a completely different CA trust chain to validate client"
+" identities than the chain used to validate the SSL server certificate. In "
+"such circumstances, any configuration created for the connecting server will"
+" not necessarily fix an issue with the validation of your client identity, "
+"and only your client identity's issuer or server administrator can fix the "
+"issue."
+msgstr ""
+"Sommige instellingen van PKI gebruiken een volledige andere keten van "
+"vertrouwen van CA's dan de keten die wordt gebruikt om het certificaat van "
+"de SSL-server te valideren. Onder dergelijke omstandigheden zal niet elke "
+"gemaakte configuratie voor de verbindende server noodzakelijkerwijze een "
+"probleem met de validatie van de identiteit van uw cliënt oplossen, en "
+"alleen de uitgever van de identiteit van uw cliënt of de beheerder van de "
+"server kunnen het probleem oplossen."
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:353
+msgid ""
+"You can pre-configure an SSL server configuration by clicking the |signPlus|"
+" button. Alternatively, you can add a configuration when an SSL error occurs"
+" during a connection and you are presented with an **SSL Error** dialog "
+"(where the error can be ignored temporarily or saved to the database and "
+"ignored):"
+msgstr ""
+"U kunt vooraf een configuratie voor een SSL-server configureren door te "
+"klikken op de knop |signPlus|.  Als alternatief kunt u een configuratie "
+"toevoegen als een SSL-fout optreedt gedurende een verbinding en u wordt "
+"geconfronteerd met een dialoogvenster **SSL Error** (waar de fout tijdelijk "
+"kan worden genegeerd of kan worden opgeslagen naar de database en "
+"genegeerd):"
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:363
+msgid "Manually adding configuration"
+msgstr "Handmatig configuratie toevoegen"
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:370
+msgid "Adding configuration during SSL error"
+msgstr "Configuratie gedurende SSL-fout toevoegen"
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:372
+msgid ""
+"Once an SSL configuration is saved to the database, it can be edited or "
+"deleted."
+msgstr ""
+"Als een SSL-configuratie eenmaal is opgeslagen in de database, kan die "
+"worden bewerkt of verwijderd."
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:379
+msgid "Existing SSL configuration"
+msgstr "Bestaande configuratie SSL"
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:386
+msgid "Editing an existing SSL configuration"
+msgstr "Een bestaande SSL-configuratie bewerken"
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:388
+msgid ""
+"If you want to pre-configure an SSL configuration and the import dialog is "
+"not working for your server's connection, you can manually trigger a "
+"connection via the **Python Console** by running the following code (replace"
+" ``https://bugreports.qt-project.org`` with the URL of your server):"
+msgstr ""
+"Als u vooraf een SSL-configuratie wilt configureren en het dialoogvenster "
+"voor importeren werkt niet voor de verbinding van uw server, kunt u "
+"handmatig een verbinding activeren via de **Python Console** door de "
+"volgende code uit te voeren (vervang ``https://bugreports.qt-project.org`` "
+"door de URL van uw server):"
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:402
+msgid ""
+"This will open an SSL error dialog if any errors occur, where you can choose"
+" to save the configuration to the database."
+msgstr ""
+"Dit zal een dialoogvenster voor SSL-fouten openen als er een fout optreedt, "
+"waar u er voor kunt kiezen de configuratie op te slaan naar de database."

@@ -1,0 +1,88 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:26+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Romanian (https://www.transifex.com/qgis/teams/6144/ro/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:4
+msgid "Security Considerations"
+msgstr "Avertismente de Securitate"
+
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:11
+msgid ""
+"Once the master password is entered, the API is open to access "
+"authentication configs in the authentication database, similar to how "
+"Firefox works. However, in the initial implementation, no wall against "
+"PyQGIS access has been defined. This may lead to issues where a user "
+"downloads/installs a malicious PyQGIS plugin or standalone app that gains "
+"access to authentication credentials."
+msgstr ""
+"O dată ce este introdusă parola de master, API-ul este deschis pentru a vă "
+"oferi acces la baza datelor de autentificare, similar modului în care "
+"funcționează Firefox. Cu toate acestea, la implementarea inițială, nu sunt "
+"definit piedici împotriva accesului PyQGIS. Acest lucru poate conduce la "
+"probleme, în cazul în care un utilizator descarcă/instalează un plugin "
+"PyQGIS rău intenționat, sau o aplicație de sine stătătoare, care obține "
+"acces la prerogativele de autentificare."
+
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:17
+msgid ""
+"The quick solution for initial release of feature is to just not include "
+"most PyQGIS bindings for the authentication system."
+msgstr ""
+"Soluția rapidă pentru versiunea inițială a caracteristicii, este de a nu "
+"include doar cele mai multe legături PyQGIS pentru sistemul de "
+"autentificare."
+
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:20
+msgid ""
+"Another simple, though not robust, fix is to add a combobox in "
+":menuselection:`Settings --> Options --> Authentication` (defaults to "
+"\"never\"):"
+msgstr ""
+"O altă modalitate simplă, deși nu robustă, este de a adăuga un ComboBox prin"
+" :menuselection:`Setări --> Opțiuni --> Autentificare` (implicit "
+"\"niciodată\"):"
+
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:28
+msgid ""
+"Such an option's setting would need to be saved in a location non-accessible"
+" to Python, e.g. the authentication database, and encrypted with the master "
+"password."
+msgstr ""
+"Setarea unei asemenea opțiuni ar trebui să fie salvată într-o locație de "
+"bază inaccesibilă pentru Python, cum ar fi baza de date de autentificare, și"
+" să fie criptată cu parola principală."
+
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:32
+msgid "Another option may be to track which plugins the user has specifically"
+msgstr ""
+"O altă opțiune ar putea consta în urmărirea plugin-urilor specifice "
+"utilizatorului"
+
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:47
+msgid ""
+"Alternatively, access to sensitive authentication system data from Python"
+msgstr ""
+"Alternativ, accesați din Python datele sensibile de autentificare la sistem"
+
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:59
+msgid "Restrictions"
+msgstr "Restricții"

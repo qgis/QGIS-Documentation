@@ -1,0 +1,1044 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# tomoyuki arai <tarai.3367@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:29+0000\n"
+"Last-Translator: tomoyuki arai <tarai.3367@gmail.com>, 2020\n"
+"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2
+msgid "Vector geometry"
+msgstr "ベクタジオメトリ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:14
+msgid "Add geometry attributes"
+msgstr "ジオメトリ属性を追加する"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:18
+msgid ""
+"It generates a new vector layer with the same content as the input one, but "
+"with additional attributes, containing geometric measurements based on a "
+"selected CRS."
+msgstr "入力レイヤと同じ内容で、追加の属性を持ち、選択された CRS に基づく幾何学的測定値を含む新しいベクタレイヤを作成します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:22
+msgid ""
+"The attributes added to the table depend on the geometry type and dimension "
+"of the input layer:"
+msgstr "テーブルに追加される属性は、入力レイヤのジオメトリタイプと寸法によって異なります。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:35
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:131
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:283
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:357
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:436
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:589
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:688
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:976
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1050
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1147
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1237
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1330
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1398
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1465
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1544
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1651
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1727
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1817
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1910
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1999
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2083
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2173
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2260
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2349
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2426
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2505
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2621
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2709
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2780
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2894
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2995
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3084
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3149
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3226
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3295
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3408
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3486
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3572
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3651
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3720
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3800
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3894
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3977
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4074
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4147
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4261
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4334
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4421
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4500
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4586
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4685
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4763
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4842
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4906
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4993
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5064
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5172
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5283
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5366
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5455
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5524
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5613
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5691
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5774
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5853
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5952
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6038
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6131
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6270
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6360
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6469
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6559
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6651
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6731
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6804
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6901
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6982
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7080
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7176
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7279
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7362
+msgid "Parameters"
+msgstr "引数"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:42
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:85
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:138
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:239
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:289
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:319
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:363
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:393
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:443
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:542
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:595
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:632
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:695
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:776
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:982
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1006
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1057
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1105
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1153
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1204
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1243
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1287
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1336
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1365
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1404
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1433
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1471
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1506
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1551
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1617
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1657
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1686
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1733
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1772
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1823
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1858
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1916
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1951
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2005
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2048
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2090
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2144
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2179
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2220
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2266
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2307
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2355
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2384
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2432
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2471
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2512
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2573
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2627
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2663
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2715
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2744
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2787
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2848
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2900
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2946
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3001
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3047
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3090
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3119
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3155
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3184
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3232
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3261
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3302
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3366
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3415
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3450
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3492
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3528
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3578
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3617
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3657
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3686
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3726
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3755
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3807
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3857
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3900
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3936
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3984
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4031
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4080
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4109
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4155
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4224
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4267
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4296
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4341
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4389
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4427
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4461
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4507
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4556
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4593
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4644
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4691
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4726
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4769
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4806
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4848
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4877
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4913
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4954
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4999
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5028
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5071
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5135
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5179
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5244
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5290
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5334
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5373
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5418
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5461
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5491
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5530
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5577
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5619
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5656
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5697
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5735
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5780
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5816
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5860
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5913
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5958
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5994
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6045
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6095
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6138
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6210
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6277
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6327
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6367
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6428
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6476
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6530
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6565
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6601
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6657
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6696
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6737
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6768
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6811
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6862
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6907
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6937
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6989
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7040
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7087
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7141
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7183
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7244
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7285
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7324
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7368
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7406
+msgid "Label"
+msgstr "ラベル"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:43
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:86
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:139
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:240
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:290
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:320
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:364
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:394
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:444
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:543
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:596
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:633
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:696
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:777
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:983
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1007
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1058
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1106
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1154
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1205
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1244
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1288
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1337
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1366
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1405
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1434
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1472
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1507
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1552
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1618
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1658
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1687
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1734
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1773
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1824
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1859
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1917
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1952
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2006
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2049
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2091
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2145
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2180
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2221
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2267
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2308
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2356
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2385
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2433
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2472
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2513
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2574
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2628
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2664
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2716
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2745
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2788
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2849
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2901
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2947
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3002
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3048
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3091
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3120
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3156
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3185
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3233
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3262
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3303
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3367
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3416
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3451
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3493
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3529
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3579
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3618
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3658
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3687
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3727
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3756
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3808
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3858
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3901
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3937
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3985
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4032
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4081
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4110
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4156
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4225
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4268
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4297
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4342
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4390
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4428
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4462
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4508
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4557
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4594
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4645
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4692
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4727
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4770
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4807
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4849
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4878
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4914
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4955
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5000
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5029
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5072
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5136
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5180
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5245
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5291
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5335
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5374
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5419
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5462
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5492
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5531
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5578
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5620
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5657
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5698
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5736
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5781
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5817
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5861
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5914
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5959
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5995
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6046
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6096
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6139
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6211
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6278
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6328
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6368
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6429
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6477
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6531
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6566
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6602
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6658
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6697
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6738
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6769
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6812
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6863
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6908
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6938
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6990
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7041
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7088
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7142
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7184
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7245
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7286
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7325
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7369
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7407
+msgid "Name"
+msgstr "名前"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:44
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:87
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:140
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:241
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:291
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:321
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:365
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:395
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:445
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:544
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:597
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:634
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:697
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:778
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:984
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1008
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1059
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1107
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1155
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1206
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1245
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1289
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1338
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1367
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1406
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1435
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1473
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1508
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1553
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1619
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1659
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1688
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1735
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1774
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1825
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1860
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1918
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1953
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2007
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2050
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2092
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2146
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2181
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2222
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2268
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2309
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2357
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2386
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2434
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2473
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2514
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2575
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2629
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2665
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2717
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2746
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2789
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2850
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2902
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2948
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3003
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3049
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3092
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3121
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3157
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3186
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3234
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3263
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3304
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3368
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3417
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3452
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3494
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3530
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3580
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3619
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3659
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3688
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3728
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3757
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3809
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3859
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3902
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3938
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3986
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4033
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4082
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4111
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4157
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4226
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4269
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4298
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4343
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4391
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4429
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4463
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4509
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4558
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4595
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4646
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4693
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4728
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4771
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4808
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4850
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4879
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4915
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4956
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5001
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5030
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5073
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5137
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5181
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5246
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5292
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5336
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5375
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5420
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5463
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5493
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5532
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5579
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5621
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5658
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5699
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5737
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5782
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5818
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5862
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5915
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5960
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5996
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6047
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6097
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6140
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6212
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6279
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6329
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6369
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6430
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6478
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6532
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6567
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6603
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6659
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6698
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6739
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6770
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6813
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6864
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6909
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6939
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6991
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7042
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7089
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7143
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7185
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7246
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7287
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7326
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7370
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7408
+msgid "Type"
+msgstr "タイプ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:45
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:88
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:141
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:242
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:292
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:322
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:366
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:396
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:446
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:545
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:598
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:635
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:698
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:779
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:985
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1009
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1060
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1108
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1156
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1207
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1246
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1290
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1339
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1368
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1407
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1436
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1474
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1509
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1554
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1620
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1660
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1689
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1736
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1775
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1826
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1861
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1919
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1954
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2008
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2051
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2093
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2147
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2182
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2223
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2269
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2310
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2358
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2387
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2435
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2474
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2515
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2576
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2630
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2666
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2718
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2747
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2790
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2851
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2903
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2949
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3004
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3050
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3093
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3122
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3158
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3187
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3235
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3264
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3305
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3369
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3418
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3453
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3495
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3531
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3581
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3620
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3660
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3689
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3729
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3758
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3810
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3860
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3903
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3939
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3987
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4034
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4083
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4112
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4158
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4227
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4270
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4299
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4344
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4392
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4430
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4464
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4510
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4559
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4596
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4647
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4694
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4729
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4772
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4809
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4851
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4880
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4916
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4957
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5002
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5031
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5074
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5138
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5182
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5247
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5293
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5337
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5376
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5421
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5464
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5494
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5533
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5580
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5622
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5659
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5700
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5738
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5783
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5819
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5863
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5916
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5961
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5997
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6048
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6098
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6141
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6213
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6280
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6330
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6370
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6431
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6479
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6533
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6568
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6604
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6660
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6699
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6740
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6771
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6814
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6865
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6910
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6940
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6992
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7043
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7090
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7144
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7186
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7247
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7288
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7327
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7371
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7409
+msgid "Description"
+msgstr "説明"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:78
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:233
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:313
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:387
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:536
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:626
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:769
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1000
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1099
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1198
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1281
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1359
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1427
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1500
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1611
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1680
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1766
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1852
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1945
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2042
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2138
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2214
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2301
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2378
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2465
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2567
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2657
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2738
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2842
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2940
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3041
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3113
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3178
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3255
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3360
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3444
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3522
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3611
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3680
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3749
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3851
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3930
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4025
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4103
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4218
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4290
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4383
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4455
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4550
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4638
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4720
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4800
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4871
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4948
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5022
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5129
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5237
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5328
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5412
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5485
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5571
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5650
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5729
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5810
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5907
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5988
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6089
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6204
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6321
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6422
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6524
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6595
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6690
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6762
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6856
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6931
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7034
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7135
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7238
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7318
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7400
+msgid "Outputs"
+msgstr "出力"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:120
+msgid ""
+"Geometries (if present) are combined into one multipart geometry for each "
+"group. Output attributes are computed depending on each given aggregate "
+"definition."
+msgstr ""
+"ジオメトリは（存在する場合）、各グループに対して1つのマルチパートジオメトリにまとめられます。出力属性は、指定された各集計定義に応じて計算されます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:186
+msgid ""
+"Text string to separate aggregated values, for example in case of "
+"concatenation."
+msgstr "連結の場合など、集計値を区切るためのテキスト文字列。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:343
+msgid ""
+"Calculates the bounding box (envelope) of each feature in an input layer. "
+"Polygon and line geometries are supported."
+msgstr "入力レイヤ内の各地物のバウンディングボックス（エンベロープ）を計算します。ポリゴンおよびラインジオメトリがサポートされています。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:489
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4184
+msgid "Default: *0*"
+msgstr "デフォルト： *0*"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:564
+msgid "Centroids"
+msgstr "重心"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:832
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:902
+msgid "Example"
+msgstr "例"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:957
+msgid ""
+"One or more attributes can be specified to collect only geometries belonging"
+" to the same class (having the same value for the specified attributes), "
+"alternatively all geometries can be collected."
+msgstr ""
+"1つ以上の属性を指定して、同じクラスに属する（指定された属性に対して同じ値を持つ）ジオメトリだけを収集することも、すべてのジオメトリを収集することもできます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:961
+msgid ""
+"All output geometries will be converted to multi geometries, even those with"
+" just a single part. This algorithm does not dissolve overlapping geometries"
+" - they will be collected together without modifying the shape of each "
+"geometry part."
+msgstr ""
+"すべての出力ジオメトリは、複数のジオメトリに変換されます。このアルゴリズムは重なり合う幾何学的形状を解消するものではなく、各形状部の形状を変更することなく一緒に収集されます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1132
+msgid ""
+"The number of neighbors to consider determines the concaveness of the output"
+" polygon. A lower number will result in a concave hull that follows the "
+"points very closely, while a higher number will have a smoother shape. The "
+"minimum number of neighbor points to consider is 3. A value equal to or "
+"greater than the number of points will result in a convex hull."
+msgstr ""
+"考慮する隣接点の数によって、出力ポリゴンの凹面度が決まります。数値が小さいほどポイントを追従する凹包になり、数値が大きいほど滑らかな形状になります。考慮すべき隣接点の最小数は3です。点の数以上の値だと凸包になります。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1584
+msgid ""
+"The outer *size* (length) of the wedge: the size is meant from the source "
+"point to the edge of the wedge shape."
+msgstr "くさびの外側の *サイズ* （長さ）：サイズはソースポイントからくさび形の端までを意味します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1880
+msgid "Densify by interval"
+msgstr "間隔による高密度化"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1884
+msgid ""
+"The geometries are densified by adding regularly placed extra vertices "
+"inside each segment so that the maximum distance between any two vertices "
+"does not exceed the specified distance."
+msgstr ""
+"ジオメトリは、任意の2つの頂点間の最大距離が指定された距離を超えないように、各セグメント内に規則的に配置された余分な頂点を追加することによって高密度化されます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1907
+msgid ":ref:`qgisdensifygeometries`"
+msgstr ":ref:`qgisdensifygeometries`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1973
+msgid "Dissolve"
+msgstr "ディゾルブ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2071
+msgid ""
+"Uses values sampled from a band within a raster layer to set the Z value for"
+" every overlapping vertex in the feature geometry. The raster values can "
+"optionally be scaled by a preset amount."
+msgstr ""
+"ラスタレイヤ内のバンドからサンプリングされた値を使用して、地物ジオメトリ内の重なっているすべての頂点にZ値を設定します。オプションでラスタ値をプリセット量により拡大縮小できます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2244
+msgid "Eliminate selected polygons"
+msgstr "選択ポリゴンを除去"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2245
+msgid ""
+"Combines selected polygons of the input layer with certain adjacent polygons"
+" by erasing their common boundary. The adjacent polygon can be either the "
+"one with the largest or smallest area or the one sharing the largest common "
+"boundary with the polygon to be eliminated."
+msgstr ""
+"入力レイヤの選択したポリゴンを、それらの共通の境界を消去することによってその隣接ポリゴンと結合します。隣接するポリゴンは、最大または最小の面積を持つものか、削除されるポリゴンと最大の共通境界を共有するもののどちらかです。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2251
+msgid ""
+"Eliminate is normally used to get rid of sliver polygons, i.e. tiny polygons"
+" that are a result of polygon intersection processes where boundaries of the"
+" inputs are similar but not identical."
+msgstr ""
+"除去は通常、スライバポリゴン、つまり入力の境界が似ているが同一ではないポリゴン交差プロセスの結果である小さなポリゴンを取り除くために使用されます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3081
+msgid ":ref:`qgischeckvalidity`"
+msgstr ":ref:`qgischeckvalidity`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4418
+msgid ":ref:`qgiscentroids`"
+msgstr ":ref:`qgiscentroids`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4760
+msgid ":ref:`qgispolygonstolines`"
+msgstr ":ref:`qgispolygonstolines`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5114
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5139
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5222
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5248
+msgid "**Output**"
+msgstr "**出力**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5514
+msgid ""
+"Rotates feature geometries by the specified angle clockwise. The rotation "
+"occurs around each feature's centroid, or optionally around a unique preset "
+"point."
+msgstr ""
+"指定された角度で地物ジオメトリを時計回りに回転させます。回転は各地物の重心を中心に、またはオプションで固有のプリセットポイントを中心に行われます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5603
+msgid ""
+"The segmentization is performed by specifying the maximum allowed radius "
+"angle between vertices on the straightened geometry (e.g the angle of the "
+"arc created from the original arc center to consecutive output vertices on "
+"the linearized geometry). Non-curved geometries will be retained without "
+"change."
+msgstr ""
+"折線化は、直線化されるジオメトリ上の頂点間の最大許容半径角度（例えば、元のアーク中心から線形化されたジオメトリ上の連続する出力頂点までに作成されるアークの角度）を指定することによって行われます。湾曲していないジオメトリはそのまま維持されます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6128
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7173
+msgid ":ref:`qgisbuffer`"
+msgstr ":ref:`qgisbuffer`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7199
+msgid "Default: *5*"
+msgstr "デフォルト: *5*"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7206
+msgid "Default: *False*"
+msgstr "デフォルト： *偽*"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7233
+msgid ""
+"Only applicable for mitered join styles, and controls the maximum distance "
+"from the offset curve to use when creating a mitered join."
+msgstr "マイター結合スタイルにのみ適用され、マイター結合を作成するときに使用するオフセット曲線からの最大距離を制御します。"

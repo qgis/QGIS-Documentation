@@ -1,0 +1,1395 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:25+0000\n"
+"Last-Translator: Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020\n"
+"Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:5
+msgid "Creating Layers"
+msgstr "Creando capas"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:13
+msgid "Layers can be created in many ways, including:"
+msgstr "Las capas pueden ser creadas de muchas formas, incluyendo:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:15
+msgid "empty layers from scratch"
+msgstr "capas vacías desde borrador"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:16
+msgid "layers from existing layers"
+msgstr "capas desde capas existentes"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:17
+msgid "layers from the clipboard"
+msgstr "capas desde el portapapeles"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:18
+msgid ""
+"layers as a result of an SQL-like query based on one or many layers "
+"(:ref:`virtual layers <vector_virtual_layers>`)"
+msgstr ""
+"capas como resultado de una consultas SQL basada en una o mas capas "
+"(:ref:`virtual layers <vector_virtual_layers>`)"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:21
+msgid "QGIS also provides tools to import/export from/to different formats."
+msgstr ""
+"QGIS también proporciona herramientas para importar/exportar desde/a "
+"diferentes formatos."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:29
+msgid "Creating new vector layers"
+msgstr "Creando nuevas capas vectoriales"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:31
+msgid ""
+"QGIS allows you to create new layers in different formats. It provides tools"
+" for creating GeoPackage, Shapefile, SpatiaLite, GPX format and Temporary "
+"Scratch layers (aka memory layers). Creation of a :ref:`new GRASS layer "
+"<creating_new_grass_vectors>` is supported within the GRASS plugin."
+msgstr ""
+"QGIS le permite crear nuevas capas en diferentes formatos. Proporciona "
+"herramientas para crear GeoPackage, Shapefile, SpatiaLite, formato GPX y "
+"capas temporales borrador (también conocidas como capas de memoria). La "
+"creación de una :ref: `nueva capa GRASS<creating_new_grass_vectors>` es "
+"compatible con el complemento GRASS."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:42
+msgid "Creating a new GeoPackage layer"
+msgstr "Creando una nueva capa de GeoPackage"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:44
+msgid ""
+"To create a new GeoPackage layer, press the |newGeoPackageLayer| "
+":menuselection:`New GeoPackage Layer...` button in the :menuselection:`Layer"
+" --> Create Layer -->` menu or from the :guilabel:`Data Source Manager` "
+"toolbar. The :guilabel:`New GeoPackage Layer` dialog will be displayed as "
+"shown in figure_create_geopackage_."
+msgstr ""
+"Para crear una nueva capa de GeoPackage, presione el botón "
+"|newGeoPackageLayer| :menuselection:`Nueva Capa GeoPackage...` en el menú "
+":menuselection:`Capa -> Crear capa ->` o desde la barra de herramientas "
+":guilabel:`Administrador de Fuente de Datos`. Se mostrará el diálogo "
+":guilabel:`Nueva Capa Geopaquete` como se muestra en "
+"figure_create_geopackage_."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:56
+msgid "Creating a New GeoPackage layer dialog"
+msgstr "Crear un nuevo diálogo de capa GeoPackage"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:58
+msgid ""
+"The first step is to indicate the database file location. This can be done "
+"by pressing the :guilabel:`...` button to the right of the "
+":guilabel:`Database` field and select an existing GeoPackage file or create "
+"a new one. QGIS will automatically add the right extension to the name you "
+"provide."
+msgstr ""
+"El primer paso es indicar la ubicación del archivo de la base de datos. Esto"
+" se puede hacer presionando el botón :guilabel:`...` a la derecha del campo "
+":guilabel:`Base de datos` y seleccione un archivo GeoPackage existente o "
+"cree uno nuevo. QGIS agregará automáticamente la extensión correcta al "
+"nombre que proporcione."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:63
+msgid "Give the new layer / table a name (:guilabel:`Table name`)"
+msgstr "Dá un nombre a la nueva capa/tabla (:guilabel:`Nombre Tabla`)"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:64
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:168
+msgid ""
+"Define the :guilabel:`Geometry type`. If not a geometryless layer, you can "
+"specify whether it should :guilabel:`Include Z dimension` and/or "
+":guilabel:`Include M values`."
+msgstr ""
+"Defina el :guilabel:`Tipo de geometría`. Si no es una capa sin geometría, "
+"puede especificar si debe :guilabel:`Incluir dimensión Z` y/o "
+":guilabel:`Incluir valores M`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:67
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:117
+msgid ""
+"Specify the coordinate reference system using the |setProjection| button"
+msgstr ""
+"Especificar el sistema de coordenadas de referencia usando el botón "
+"|setProjection|"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:69
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:126
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:173
+msgid "To add fields to the layer you are creating:"
+msgstr "Para añadir campos a una capa que estás creando:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:71
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:128
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:175
+msgid "Enter the :guilabel:`Name` of the field"
+msgstr "Introduce el :guilabel:`Nombre` del campo"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:72
+msgid ""
+"Select the data :guilabel:`Type`. Supported types are :guilabel:`Text data`,"
+" :guilabel:`Whole number` (both integer and integer64), :guilabel:`Decimal "
+"number`, :guilabel:`Date` and :guilabel:`Date and time`, :guilabel:`Binary "
+"(BLOB)` and :guilabel:`Boolean`."
+msgstr ""
+"Seleccione los datos :guilabel:`Tipo`. Los tipos admitidos son "
+":guilabel:`Datos de texto`, :guilabel:` Número entero` (tanto entero como "
+"entero64), :guilabel:`Número decimal`, :guilabel:` Fecha` y :guilabel:`Fecha"
+" y hora`, :guilabel:`Binario (BLOB)` y :guilabel:`Booleano`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:76
+msgid ""
+"Depending on the selected data format, enter the :guilabel:`Maximum length` "
+"of values."
+msgstr ""
+"Dependiendo del formato de datos seleccionado :guilabel:`longitud Máxima` de"
+" valores."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:78
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:134
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:178
+msgid "Click on the |newAttribute| :guilabel:`Add to Fields List` button"
+msgstr "Click en el botón |newAttribute| :guilabel:`Añadir a Lista de campos`"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:79
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:135
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:179
+msgid "Reproduce the steps above for each field you need to add"
+msgstr "Repite los pasos anteriores para cada campo que necesites añadir"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:80
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:136
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:180
+msgid ""
+"Once you are happy with the attributes, click :guilabel:`OK`. QGIS will add "
+"the new layer to the legend, and you can edit it as described in section "
+":ref:`sec_edit_existing_layer`."
+msgstr ""
+"Una vez contento con los atributos, click :guilabel:`Aceptar`. QGIS añadirá "
+"la nueva capa a la leyenda, y puede editarla como se describe en la sección "
+":ref:`sec_edit_existing_layer`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:84
+msgid ""
+"By default, when creating a GeoPackage layer, QGIS generates a "
+":guilabel:`Feature id column` called ``fid`` which acts as the primary key "
+"of the layer. The name can be changed. The geometry field, if availabe, is "
+"named ``geometry``, and you can choose to :guilabel:`Create a spatial index`"
+" on it. These options can be found under the :guilabel:`Advanced Options` "
+"together with the :guilabel:`Layer identifier` (short human readable name of"
+" the layer) and the :guilabel:`Layer description`."
+msgstr ""
+"Por defecto, al crear una capa de GeoPackage, QGIS genera una "
+":guilabel:`columna de identificación de entidad` llamada ``fid`` que actúa "
+"como la clave principal de la capa. El nombre se puede cambiar. El campo de "
+"geometría, si está disponible, se denomina ``geometría`` y puede elegir "
+":guilabel:`Crear un índice espacial` en él. Estas opciones se pueden "
+"encontrar en: guilabel: `Opciones avanzadas` junto con "
+":guilabel:`Identificador de capa` (nombre corto legible por humanos de la "
+"capa) y :guilabel:`Descripción de capa`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:93
+msgid ""
+"Further management of GeoPackage layers can be done with the :ref:`DB "
+"Manager <dbmanager>`."
+msgstr ""
+"Se puede administrar más capas de GeoPackage con el :ref:`DB Manager "
+"<dbmanager>`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:100
+msgid "Creating a new Shapefile layer"
+msgstr "Crear una nueva capa de archivo shape"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:102
+msgid ""
+"To create a new ESRI Shapefile format layer, press the |newVectorLayer| "
+":menuselection:`New Shapefile Layer...` button in the :menuselection:`Layer "
+"--> Create Layer -->` menu or from the :guilabel:`Data Source Manager` "
+"toolbar. The :guilabel:`New Shapefile Layer` dialog will be displayed as "
+"shown in figure_create_shapefile_."
+msgstr ""
+"Para crear una nueva capa de formato ESRI Shapefile, presione el botón "
+"|newVectorLayer| :menuselection:`Nueva capa de archivo shape...` en "
+":menuselection:`Capa -> Crear capa ->` o desde la barra de herramientas "
+":guilabel:`Administrador de fuentes de datos`. El diálogo :guilabel:`Nueva "
+"capa de archivo shape` se mostrará como se muestra en "
+"figure_create_shapefile_."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:109
+msgid ""
+"Provide a path and file name using the :guilabel:`...` button next to "
+":guilabel:`File name`. QGIS will automatically add the right extension to "
+"the name you provide."
+msgstr ""
+"Proporcione una ruta y un nombre de archivo usando el botón :guilabel:`...` "
+"junto a :guilabel:`Nombre de archivo`. QGIS agregará automáticamente la "
+"extensión correcta al nombre que proporcione."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:112
+msgid "Next, indicate the :guilabel:`File encoding` of the data"
+msgstr ""
+"A continuación, indica el :guilabel:`codificación de archivo` de los datos"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:113
+msgid ""
+"Choose the :guilabel:`Geometry type` of the layer (point, multipoint, line "
+"or polygon)"
+msgstr ""
+"Escoge el :guilabel:`tipo de Geometría` de la capa (punto, multipunto, "
+"líneal o poligonal)"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:115
+msgid ""
+"Specify whether the geometry should have :guilabel:`Z (+ M values)` or "
+":guilabel:`M values`"
+msgstr ""
+"Especifique si la geometría debe tener :guilabel:`Z (+ M valores)` o "
+":guilabel:`valores M`"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:124
+msgid "Creating a new Shapefile layer dialog"
+msgstr "Diálogo Creando una nueva capa de archivo shape"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:129
+msgid ""
+"Select the data :guilabel:`Type`. Only :guilabel:`Decimal number`, "
+":guilabel:`Whole number`, :guilabel:`Text data` and :guilabel:`Date` "
+"attributes are supported."
+msgstr ""
+"Selecciona el :guilabel:`Tipo` de datos. Solo los atributos "
+":guilabel:`número decimal`, :guilabel:`número entero`, :guilabel:`datos de "
+"texto` y :guilabel:`Fecha` son soportados."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:132
+msgid ""
+"Depending on the selected data format, enter the :guilabel:`Length` and "
+":guilabel:`Precision`."
+msgstr ""
+"En función del formato de datos, introduce la :guilabel:`Longitud` y "
+":guilabel:`Precisión`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:140
+msgid "By default, a first integer ``id`` column is added but can be removed."
+msgstr ""
+"Por defecto, una primera columna de enteros ``id`` se añade pero puede ser "
+"borrada."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:147
+msgid "Creating a new SpatiaLite layer"
+msgstr "Crear una nueva capa SpatiaLite"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:149
+msgid ""
+"To create a new SpatiaLite layer, press the |newSpatiaLiteLayer| "
+":menuselection:`New SpatiaLite Layer...` button in the :menuselection:`Layer"
+" --> Create Layer -->` menu or from the :guilabel:`Data Source Manager` "
+"toolbar. The :guilabel:`New SpatiaLite Layer` dialog will be displayed as "
+"shown in Figure_create_spatialite_."
+msgstr ""
+"Para crear una nueva capa SpatiaLite, presione el botón |newSpatiaLiteLayer|"
+" :menuselection:`Nueva capa SpatiaLite...` en el menú :menuselection:`Capa "
+"-> Crear Capa ->` o desde la barra de herramientas :guilabel:`Administrador "
+"de fuentes de datos`. Se mostrará el cuadro de diálogo :guilabel:`Nueva capa"
+" SpatiaLite` como se muestra en Figure_create_spatialite_."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:160
+msgid "Creating a New SpatiaLite layer dialog"
+msgstr "Diálogo de Crear una nueva capa SpatiaLite"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:162
+msgid ""
+"The first step is to indicate the database file location. This can be done "
+"by pressing the :guilabel:`...` button to the right of the "
+":guilabel:`Database` field and select an existing SpatiaLite file or create "
+"a new one. QGIS will automatically add the right extension to the name you "
+"provide."
+msgstr ""
+"El primer paso es indicar la ubicación del archivo de la base de datos. Esto"
+" se puede hacer presionando el botón :guilabel:`...` a la derecha del campo "
+":guilabel:`Base de datos` y seleccione un archivo SpatiaLite existente o "
+"cree uno nuevo. QGIS agregará automáticamente la extensión correcta al "
+"nombre que proporcione."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:167
+msgid "Provide a name (:guilabel:`Layer name`) for the new layer"
+msgstr "Proporciona un nombre (:guilabel:`Nombre de capa`) para la nueva capa"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:171
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:236
+msgid ""
+"Specify the coordinate reference system using the |setProjection| button."
+msgstr ""
+"Especifica el sistema de coordenadas de referencia usando el botón "
+"|setProjection|."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:176
+msgid ""
+"Select the data :guilabel:`Type`. Supported types are :guilabel:`Text data`,"
+" :guilabel:`Whole number` and :guilabel:`Decimal number`."
+msgstr ""
+"Selecciona el :guilabel:`Tipo`de datos. Los tipos soportados son "
+":guilabel:`datos de texto`, :guilabel:`número entero` y :guilabel:`número "
+"decimal`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:184
+msgid ""
+"If desired, you can select |checkbox| :guilabel:`Create an autoincrementing "
+"primary key` under the guilabel:`Advanced Options` section. You can also "
+"rename the :guilabel:`Geometry column` (``geometry`` by default)."
+msgstr ""
+"Si lo deseas, puedes seleccionar |checkbox| :guilabel:`Crear un clave "
+"primaria autoincremental` en la sección :guilabel:`Opciones avanzadas`. "
+"Además puedes renombrar la :guilabel:`columna Geometría`(``geometría`` por "
+"defecto)."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:188
+msgid ""
+"Further management of SpatiaLite layers can be done with :ref:`DB Manager "
+"<dbmanager>`."
+msgstr ""
+"Administración adicional de capas SpatiaLite se puede hacer con "
+":ref:Àdministrador de DB<dbmanager>`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:196
+msgid "Creating a new GPX layer"
+msgstr "Crear una nueva capa GPX"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:198
+msgid ""
+"To create a new GPX file, you first need to load the GPS plugin. "
+":menuselection:`Plugins -->` |showPluginManager| :menuselection:`Plugin "
+"Manager...` opens the Plugin Manager Dialog. Activate the |checkbox| "
+":guilabel:`GPS Tools` checkbox."
+msgstr ""
+"Para crear un nuevo archivo GPX, primero debe cargar el complemento GPS. "
+":menuselection:`Complementos ->` |showPluginManager| "
+":menuselection:`Administrador de Complementos...` abre el cuadro de diálogo "
+"Administrador de Complementos. Active la |checkbox| casilla de verificación "
+":guilabel:`Herramientas GPS`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:203
+msgid ""
+"When this plugin is loaded, choose :menuselection:`Create Layer -->` "
+"|createGPX| :menuselection:`Create new GPX Layer...` from the "
+":menuselection:`Layer` menu. In the dialog, choose where to save the new "
+"file and press :guilabel:`Save`. Three new layers are added to the "
+":guilabel:`Layers Panel`: ``waypoints``, ``routes`` and ``tracks``."
+msgstr ""
+"Cuando se cargue este complemento, elija :menuselection:`Crear capa ->` "
+"|createGPX| :menuselection:`Crear nueva capa GPX ...` desde el menú "
+":menuselection:`Capa`. En el cuadro de diálogo, elija dónde guardar el nuevo"
+" archivo y presione :guilabel:`Guardar`. Se agregan tres nuevas capas al "
+":guilabel:`Panel de capas`: ``waypoints``, ``rutas`` y ``tracks``."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:215
+msgid "Creating a new Temporary Scratch Layer"
+msgstr "Crear una nueva capa borrador temporal"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:217
+msgid ""
+"Temporary Scratch Layers are in-memory layers, meaning that they are not "
+"saved on disk and will be discarded when QGIS is closed. They can be handy "
+"for storing features you temporarily need or as intermediate layers during "
+"geoprocessing operations."
+msgstr ""
+"Las capas borrador temporales son capas en memoria, lo que significa que no "
+"se guardan en el disco y se descartarán cuando se cierre QGIS. Pueden ser "
+"útiles para almacenar entidades que necesita temporalmente o como capas "
+"intermedias durante las operaciones de geoprocesamiento."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:222
+msgid ""
+"To create a new Temporary Scratch layer, choose the |createMemory| "
+":menuselection:`New Temporary Scratch Layer...` entry in the "
+":menuselection:`Layer --> Create Layer -->` menu or in the :guilabel:`Data "
+"Source Manager` toolbar. The :guilabel:`New Temporary Scratch Layer` dialog "
+"will be displayed as shown in figure_create_temporary_. Then:"
+msgstr ""
+"Para crear una nueva capa borrador temporal, elija |createMemory| "
+":menuselection:`Nueva capa borrador temporal...` en la entrada "
+":menuselection:`Capa -> Crear capa ->` o en la barra de herramientas "
+":guilabel:`Administrador de fuentes de datos`. Se mostrará el cuadro de "
+"diálogo :guilabel:`Nueva capa borrador temporal` como se muestra en "
+"figure_create_temporary_. Luego:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:229
+msgid "Provide the :guilabel:`Layer name`"
+msgstr "Proporciona el :guilable:`nombre de capa`"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:230
+msgid "Select the :guilabel:`Geometry type`. Here you can create a:"
+msgstr "Selecciona el :guilabel:`tipo de Geometría`. Aquí puede crear una:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:232
+msgid "``No geometry`` type layer, served as simple table,"
+msgstr "tipo de capa ``sin geometría``, dotada de una simple tabla,"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:233
+msgid "``Point`` or ``MultiPoint`` layer,"
+msgstr "capa ``Punto`` o ``Multipunto``,"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:234
+msgid "``LineString/CompoundCurve`` or ``MultiLineString/MultiCurve`` layer,"
+msgstr "Capa ``Línea/CurvaCompuesta`` o ``Multilínea/MultiCurva``,"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:235
+msgid "``Polygon/CurvePolygon`` or ``MultiPolygon/MultiSurface`` layer."
+msgstr "Capa ``Polígono/PolígonoCurvo`` o ``MultiPolígono/Multisuperficie``."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:243
+msgid "Creating a new Temporary Scratch layer dialog"
+msgstr "Diálogo Crear una nueva capa Borrador Temporal"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:245
+msgid ""
+"By default, a new temporary scratch layer is created without any attributes."
+" You can later add them using the |newAttribute| :sup:`New Field` button in "
+"the layer's attribute table dialog or the :guilabel:`Fields` tab of its "
+"properties dialog. You can also create prepopulated temporary scratch layers"
+" using e.g. the clipboard (see :ref:`paste_into_layer`) or as a result of a "
+":ref:`Processing algorithm <processing_algs>`."
+msgstr ""
+"De forma predeterminada, se crea una nueva capa borrador temporal sin ningún"
+" atributo. Más tarde, puede agregarlos usando el botón |newAttribute| "
+":sup:`Nuevo campo` en el diálogo de la tabla de atributos de la capa o en la"
+" pestaña :guilabel:`Campos` de su diálogo de propiedades. También puede "
+"crear capas temporales precargadas usando p. Ej. el portapapeles (ver "
+":ref:`paste_into_layer`) o como resultado de un :ref:`algoritmo de "
+"Procesamiento<processing_algs>`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:253
+msgid "**Permanently store a memory layer on disk**"
+msgstr "**Almacenar permanentemente una capa de memoria en disco**"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:255
+msgid ""
+"To avoid data loss when closing  a project with temporary scratch layers, "
+"you can save these layers to any vector format supported by QGIS:"
+msgstr ""
+"Para evitar la pérdida de datos al cerrar un proyecto con capas borrador "
+"temporales, puede guardar estas capas en cualquier formato vectorial "
+"compatible con QGIS:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:258
+msgid "clicking the |indicatorMemory| indicator icon next to the layer;"
+msgstr "clickando el icono indicador |indicatorMemory| al lado de la capa;"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:259
+msgid ""
+"selecting the :guilabel:`Make permanent` entry in the layer contextual menu;"
+msgstr ""
+"seleccionando la èntrada :guilabel:`Hacer permanente` en el menú contextual "
+"de capa;"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:260
+msgid ""
+"using the :menuselection:`Export -->` entry from the contextual menu or the "
+":menuselection:`Layer --> Save As...` menu."
+msgstr ""
+"usando la entrada :menuselection:`Exportar -->` desde el menú contextual o "
+"desde el menú :menuselection:`Capa --> Guardar como...`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:263
+msgid ""
+"Each of these commands opens the :guilabel:`Save Vector Layer as` dialog "
+"described in the :ref:`general_saveas` section and the saved file replaces "
+"the temporary one in the :guilabel:`Layers` panel."
+msgstr ""
+"Cada uno de estos comandos abre el diálogo :guilabel:`Guardar capa vectorial"
+" como` descrito en la sección :ref:`general_saveas` y el archivo guardado "
+"reemplaza al temporal en el panel :guilabel:`Capas`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:271
+msgid "Creating new layers from an existing layer"
+msgstr "Creando nuevas capas desde una capa existente"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:273
+msgid ""
+"Both raster and vector layers can be saved in a different format and/or "
+"reprojected to a different coordinate reference system (CRS) using the "
+":menuselection:`Layer --> Save As...` menu or right-clicking on the layer in"
+" the :guilabel:`Layers panel` and selecting:"
+msgstr ""
+"Tanto las capas ráster como las vectoriales se pueden guardar en un formato "
+"diferente y/o volver a proyectar en un sistema de referencia de coordenadas "
+"(CRS) diferente usando el menú :menuselection:`Capa -> Guardar como ...` o "
+"haciendo click derecho en la capa en el :guilabel:`Panel de capas` y "
+"seleccionando:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:278
+msgid ":menuselection:`Export --> Save As...` for raster layers"
+msgstr ":menuselection:`Exportar --> Guardar como...` para capas ráster"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:279
+msgid ""
+":menuselection:`Export --> Save Features As...` or :menuselection:`Export "
+"--> Save Selected Features As...` for vector layers."
+msgstr ""
+":menuselection:`Exportar --> Guardar entidades como...` o "
+":menuselection:`Exportar --> Guardar Entidades seleccionadas como...` para "
+"capas vectoriales."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:282
+msgid ""
+"Drag and drop the layer from the layer tree to the PostGIS entry in the "
+":guilabel:`Browser Panel`. Note that you must have a PostGIS connection in "
+"the :guilabel:`Browser Panel`."
+msgstr ""
+"Arrastre y suelte la capa desde el árbol de capas a la entrada PostGIS en "
+":guilabel:`Panel del Navegador`. Tenga en cuenta que debe tener una conexión"
+" PostGIS en :guilabel:`Panel del Navegador`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:287
+msgid "Common parameters"
+msgstr "Parámetros comunes"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:289
+msgid ""
+"The :guilabel:`Save Layer as...` dialog shows several parameters to change "
+"the behavior when saving the layer. Among the common parameters for raster "
+"and vector are:"
+msgstr ""
+"El diálogo :guilabel:`Guardar capa como...` muestra varios parámetros para "
+"cambiar el comportamiento al guardar la capa. Entre los parámetros comunes "
+"para ráster y vector se encuentran:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:293
+msgid ""
+":guilabel:`File name`: the location of the file on the disk. It can refer to"
+" the output layer or to a container that stores the layer (for example "
+"database-like formats such as GeoPackage, SpatiaLite or Open Document "
+"Spreadsheets)."
+msgstr ""
+":guilabel:`nombre de archivo`: la ubicación del archivo en el disco. Puede "
+"referirse a la capa de salida o a un contenedor que almacena la capa (por "
+"ejemplo, formatos similares a bases de datos como GeoPackage, SpatiaLite o "
+"Open Document Spreadsheets)."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:297
+msgid ":guilabel:`CRS`: can be changed to reproject the data"
+msgstr ":guilabel:`CRS`: puede ser cambiado para reproyectar los datos"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:298
+msgid ""
+":guilabel:`Extent` (possible values are **layer**, **Map view** or **user-"
+"defined** extent)"
+msgstr ""
+":guilabel:`Extensión` (valores posibles de extensión son **capa**, **visor "
+"de Mapa** o **definido por el usuario**)"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:300
+msgid ":guilabel:`Add saved file to map`: to add the new layer to the canvas"
+msgstr ""
+":guilabel:`Añadir archivo guardado al mapa`: para añadir la nueva capa al "
+"lienzo"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:302
+msgid "However, some parameters are specific to raster and vector formats:"
+msgstr ""
+"Sin embargo, algunos parámetros son específicos para formatos ráster y "
+"vectoriales:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:305
+msgid "Raster specific parameters"
+msgstr "Parámetros específicos ráster"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:307
+msgid ""
+"Depending on the format of export, some of these options may not be "
+"available:"
+msgstr ""
+"Dependiendo del formato a exportar, algunas de estas opciones pueden no "
+"estar disponibles:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:309
+msgid ":guilabel:`Output mode` (it can be **raw data** or **rendered image**)"
+msgstr ""
+":guilabel:`modo de salida` (puede ser **datos crudos** o **imagen "
+"renderizada**)"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:310
+msgid ""
+":guilabel:`Format`: exports to any raster format GDAL can write to, such as "
+"GeoTiff, GeoPackage, MBTiles, Geospatial PDF, SAGA GIS Binary Grid, "
+"Intergraph Raster, ESRI .hdr Labelled..."
+msgstr ""
+":guilabel:`Formato`: exporta a cualquier formato ráster en el que GDAL pueda"
+" escribir, como GeoTiff, GeoPackage, MBTiles, PDF geoespacial, SAGA GIS "
+"Binary Grid, Intergraph Raster, ESRI .hdr etiquetado..."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:313
+msgid ":guilabel:`Resolution`"
+msgstr ":guilabel:`Resolución`"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:314
+msgid ""
+":guilabel:`Create Options`: use advanced options (file compression, block "
+"sizes, colorimetry...) when generating files, either from the "
+":ref:`predefined create profiles <gdal_createoptions>` related to the output"
+" format or by setting each parameter."
+msgstr ""
+": guilabel:`Opciones de creación`: utilice opciones avanzadas (compresión de"
+" archivos, tamaños de bloque, colorimetría ...) al generar archivos, ya sea "
+"desde :ref:`perfiles de creación predefinidos` relacionados con el formato "
+"de salida o configurando cada parámetro."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:318
+msgid ":guilabel:`Pyramids` creation"
+msgstr "Creación de :guilabel:`Piramides` "
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:319
+msgid ""
+":guilabel:`VRT Tiles` in case you opted to |checkbox| :guilabel:`Create VRT`"
+msgstr ""
+":guilabel:`Teselas VRT` en caso de que optes por |checkbox| :guilabel:`Crear"
+" VRT`"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:320
+msgid ":guilabel:`No data values`"
+msgstr ":guilabel:`valores Sin Datos`"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:327
+msgid "Saving as a new raster layer"
+msgstr "Guardando como una nueva capa ráster"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:330
+msgid "Vector specific parameters"
+msgstr "Parámetros específicos de Vectorial"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:332
+msgid ""
+"Depending on the format of export, some of these options may be available:"
+msgstr ""
+"Dependiendo del formato a exportar, algunas de estas opciones pueden estar "
+"disponibles:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:334
+msgid ""
+":guilabel:`Format`: exports to any vector format GDAL can write to, such as "
+"GeoPackage, GML, ESRI Shapefile, AutoCAD DXF, ESRI FileGDB, Mapinfo TAB or "
+"MIF, SpatiaLite, CSV, KML, ODS, ..."
+msgstr ""
+":guilabel:`Formato`: exporta a cualquier formato vectorial en el que GDAL "
+"pueda escribir, como GeoPackage, GML, ESRI Shapefile, AutoCAD DXF, ESRI "
+"FileGDB, Mapinfo TAB o MIF, SpatiaLite, CSV, KML, ODS, ..."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:337
+msgid ""
+":guilabel:`Layer name`: available when the :guilabel:`File name` refers to a"
+" container-like format, this entry represents the output layer."
+msgstr ""
+":guilabel:`nombre de capa`: disponible cuando el :guilabel:`nombre de "
+"Archivo` se refiere a un formato de contenedor, esta entrada representa la "
+"capa saliente."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:339
+msgid ":guilabel:`Encoding`"
+msgstr ":guilabel:`Codificación`"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:340
+msgid ":guilabel:`Save only selected features`"
+msgstr ":guilabel:`Guardar solo entidades seleccionadas`"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:341
+msgid ""
+":guilabel:`Select fields to export and their export options`. In case you "
+"set your fields behavior with some :ref:`Edit widgets <configure_field>`, "
+"e.g. ``value map``, you can keep the displayed values in the layer by "
+"checking |checkbox| :guilabel:`Replace all selected raw fields values by "
+"displayed values`."
+msgstr ""
+":guilabel:`Seleccionar campos a exportar y sus opciones de exportación`. En "
+"caso de que establezca el comportamiento de sus campos con algunos "
+":ref:`widgets de edición`, por ejemplo ``mapa de valores``, puede mantener "
+"los valores mostrados en la capa marcando |checkbox| :guilabel:`Sustituir "
+"todos los valores de los campos en bruto seleccionados por los valores "
+"mostrados`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:346
+msgid ""
+":guilabel:`Symbology export`: can be used mainly for DXF export and for all "
+"file formats who manage OGR feature styles (see note below) as DXF, KML, tab"
+" file formats:"
+msgstr ""
+":guilabel:`exportar Simbología`: se puede utilizar principalmente para la "
+"exportación DXF y para todos los formatos de archivo que administran estilos"
+" de funciones OGR (ver nota a continuación) como formatos de archivo de "
+"pestañas DXF, KML:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:350
+msgid "**No symbology**: default style of the application that reads the data"
+msgstr ""
+"**Sin simbología**: estilo por defecto de la aplicación que lee los datos"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:351
+msgid ""
+"**Feature symbology**: save style with OGR Feature Styles (see note below)"
+msgstr ""
+"**Simbología de entidad**: guardar estilo con Estilos de funciones OGR (ver "
+"nota a continuación)"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:352
+msgid ""
+"**Symbol Layer symbology**: save with OGR Feature Styles (see note below) "
+"but export the same geometry multiple times if there are multiple symbology "
+"symbol layers used"
+msgstr ""
+"**Simbología de la capa de símbolo**: guarde con Estilos de entidades OGR "
+"(vea la nota a continuación) pero exporta la misma geometría varias veces si"
+" se usan varias capas de símbolo de simbología"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:355
+msgid "A **Scale** value can be applied to the latest options"
+msgstr "Se puede aplicar un valor de **Escala** a las últimas opciones"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:359
+msgid ""
+"*OGR Feature Styles* are a way to store style directly in the data as a "
+"hidden attribute. Only some formats can handle this kind of information. "
+"KML, DXF and TAB file formats are such formats. For advanced details, you "
+"can read the `OGR Feature Styles specification "
+"<https://gdal.org/user/ogr_feature_style.html>`_ document."
+msgstr ""
+"*Los estilos de características de OGR* son una forma de almacenar el estilo"
+" directamente en los datos como un atributo oculto. Solo algunos formatos "
+"pueden manejar este tipo de información. Los formatos de archivo KML, DXF y "
+"TAB son tales formatos. Para obtener detalles avanzados, puede leer el "
+"documento `Especificación de estilos de entidades de OGR "
+"<https://gdal.org/user/ogr_feature_style.html>`_."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:365
+msgid ""
+":guilabel:`Geometry`: you can configure the geometry capabilities of the "
+"output layer"
+msgstr ""
+":guilabel:`Geometría`: puede configurar las capacidades de geometría de la "
+"capa de salida"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:368
+msgid ""
+":guilabel:`geometry type`: keeps the original geometry of the features when "
+"set to **Automatic**, otherwise removes or overrides it with any type. You "
+"can add an empty geometry column to an attribute table and remove the "
+"geometry column of a spatial layer."
+msgstr ""
+":guilabel:`tipo de geometría`: mantiene la geometría original de las "
+"entidades cuando se establece en **Automático**; de lo contrario, la elimina"
+" o la reemplaza con cualquier tipo. Puede agregar una columna de geometría "
+"vacía a una tabla de atributos y eliminar la columna de geometría de una "
+"capa espacial."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:372
+msgid ""
+":guilabel:`Force multi-type`: forces creation of multi-geometry features in "
+"the layer."
+msgstr ""
+":guilabel:`Forzar multi tipo`: fuerza la creación de entidades multi-"
+"geometría en la capa."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:374
+msgid ":guilabel:`Include z-dimension` to geometries."
+msgstr ":guilabel:`Incluir dimensión z` en geometrías."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:378
+msgid ""
+"Overriding layer geometry type makes it possible to do things like save a "
+"geometryless table (e.g. :file:`.csv` file) into a shapefile WITH any type "
+"of geometry (point, line, polygon), so that geometries can then be manually "
+"added to rows with the |addPart| :sup:`Add Part` tool."
+msgstr ""
+"Anular el tipo de geometría de capa permite hacer cosas como guardar una "
+"tabla sin geometría (por ejemplo archivos :file:`.csv`) en un archivo de "
+"forma CON cualquier tipo de geometría (punto, línea, polígono), de modo que "
+"las geometrías se puedan agregar manualmente a filas con la herramienta "
+"|addPart| :sup:`Agregar pieza`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:383
+msgid ""
+":guilabel:`Datasource Options`, :guilabel:`Layer Options` or "
+":guilabel:`Custom Options` which allow you to configure advanced parameters "
+"depending on the output format. Some are described in "
+":ref:`supported_format` but for full details, see the `GDAL "
+"<https://gdal.org>`_ driver documentation. Each file format has its own "
+"custom parameters, e.g. for the ``GeoJSON`` format have a look at the `GDAL "
+"GeoJSON <https://gdal.org/drivers/vector/geojson.html#layer-creation-"
+"options>`_ documentation."
+msgstr ""
+":guilabel:`Opciones de origen de datos`, :guilabel:`Opciones de capa` o "
+":guilabel:`Opciones personalizadas` que le permiten configurar parámetros "
+"avanzados según el formato de salida. Algunos se describen en "
+":ref:`supported_format` pero para obtener detalles completos, consulte la "
+"documentación del controlador `GDAL <https://gdal.org>`_. Cada formato de "
+"archivo tiene sus propios parámetros personalizados, p. Ej. para el formato "
+"``GeoJSON`` eche un vistazo a la documentación `GDAL GeoJSON "
+"<https://gdal.org/drivers/vector/geojson.html#layer-creation-options>`_."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:397
+msgid "Saving as a new vector layer"
+msgstr "Guardando como una nueva capa vectorial"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:401
+msgid ""
+"When saving a vector layer into an existing file, depending on the "
+"capabilities of the output format (Geopackage, SpatiaLite, FileGDB...), the "
+"user can decide whether to:"
+msgstr ""
+"Al guardar una capa vectorial en un archivo existente, dependiendo de las "
+"capacidades del formato de salida (Geopackage, SpatiaLite, FileGDB ...), el "
+"usuario puede decidir si:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:405
+msgid "overwrite the whole file"
+msgstr "sobreescribir el archivo entero"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:406
+msgid "overwrite only the target layer (the layer name is configurable)"
+msgstr ""
+"sobreescribir solo la capa objetivo (el nombre de capa es configurable)"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:407
+msgid "append features to the existing target layer"
+msgstr "agregar entidades a la capa de destino existente"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:408
+msgid "append features, add new fields if there are any."
+msgstr "agregar entidades, agregar nuevos campos si los hay."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:410
+msgid ""
+"For formats like ESRI Shapefile, MapInfo .tab, feature append is also "
+"available."
+msgstr ""
+"Para formatos como ESRI Shapefile, MapInfo .tab, también está disponible la "
+"función de agregar."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:417
+msgid "Creating new DXF files"
+msgstr "Creando nuevos archivos DXF"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:419
+msgid ""
+"Besides the :guilabel:`Save As...` dialog which provides options to export a"
+" single layer to another format, including :file:`*.DXF`, QGIS provides "
+"another tool to export multiple layers as a single DXF layer. It's "
+"accessible in the :menuselection:`Project --> Import/Export --> Export "
+"Project to DXF...` menu."
+msgstr ""
+"Además del diálogo :guilabel:`Guardar como...` que proporciona opciones para"
+" exportar una sola capa a otro formato, que incluye :file:`* .DXF`, QGIS "
+"proporciona otra herramienta para exportar múltiples capas como una sola "
+"capa DXF. Es accesible en el menú :menuselection:`Proyecto -> Importar / "
+"Exportar -> Exportar proyecto a DXF ...`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:424
+msgid "In the :guilabel:`DXF Export` dialog:"
+msgstr "En el diálogo :guilabel:`Exportar DXF`"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:426
+msgid "Provide the destination file."
+msgstr "Proporciona el archivo destinatario."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:427
+msgid ""
+"Choose the symbology mode and scale (see the :ref:`OGR Feature Styles "
+"<ogr_features_note>` note), if applicable."
+msgstr ""
+"Escoge el modo y la escala de simbología (ver la nota :ref:`OGR Feature "
+"Styles<ogr_features_note>` ), si es aplicable."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:429
+msgid "Select the data :guilabel:`Encoding`."
+msgstr "Selecciona la :guilabel:`Codificación` de los datos"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:430
+msgid ""
+"Select the :guilabel:`CRS` to apply: the selected layers will be reprojected"
+" to the given CRS."
+msgstr ""
+"Selecciona el :guilabel:`CRS` a aplicar: las capas seleccionadas se volverán"
+" a proyectar al CRS dado."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:432
+msgid ""
+"Select the layers to include in the DXF files either by checking them in the"
+" table widget or automatically picking them from an existing :ref:`map theme"
+" <map_themes>`. The :guilabel:`Select All` and :guilabel:`Deselect All` "
+"buttons can help to quickly set the data to export."
+msgstr ""
+"Seleccione las capas para incluir en los archivos DXF, ya sea marcándolas en"
+" el widget de tabla o seleccionándolas automáticamente de un :ref:`tema de "
+"mapa<map_themes>` existente. Los botones :guilabel:`Seleccionar todo` y "
+":guilabel:` Deseleccionar todo` pueden ayudar a configurar rápidamente los "
+"datos para exportar."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:438
+msgid ""
+"For each layer, you can choose whether to export all the features in a "
+"single DXF layer or rely on a field whose values are used to split the "
+"features into layers in the DXF output."
+msgstr ""
+"Para cada capa, puede elegir si exportar todas las entidades en una sola "
+"capa DXF o confiar en un campo cuyos valores se utilizan para dividir las "
+"entidades en capas en la salida DXF."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:442
+msgid "Optionally, you can also choose to:"
+msgstr "Opcionálmente, puede además elegir:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:444
+msgid ""
+"|checkbox| :guilabel:`Use the layer title as name if set` instead of the "
+"layer name itself;"
+msgstr ""
+"|checkbox| :guilabel:`Usar el título de la capa como nombre si está "
+"configurado` en lugar del nombre de la capa en sí;"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:446
+msgid ""
+"|checkbox| :guilabel:`Export features intersecting the current map extent`;"
+msgstr ""
+"|checkbox| :guilabel:`Exportar entidades que se cruzan con la extensión del "
+"mapa actual`;"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:447
+msgid ""
+"|unchecked| :guilabel:`Force 2d output (eg. to support polyline width)`;"
+msgstr ""
+"|unchecked| :guilabel:`Forzar salida 2d (por ejemplo, para admitir el ancho "
+"de polilínea)`;"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:448
+msgid ""
+"|checkbox| :guilabel:`Export label as MTEXT elements` or TEXT elements."
+msgstr ""
+"|checkbox| :guilabel:`Exportar etiqueta como elementos MTEXT` o elementos "
+"TEXT."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:455
+msgid "Exporting a project to DXF dialog"
+msgstr "Diálogo Exportar un proyecto a DXF"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:461
+msgid "Creating new layers from the clipboard"
+msgstr "Creando nuevas capas desde el portapapeles"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:463
+msgid ""
+"Features that are on the clipboard can be pasted into a new layer. To do "
+"this, Select some features, copy them to the clipboard, and then paste them "
+"into a new layer using :menuselection:`Edit --> Paste Features as -->` and "
+"choosing:"
+msgstr ""
+"Las entidades que están en el portapapeles se pueden pegar en una nueva "
+"capa. Para hacer esto, seleccione algunas entidades, cópielas en el "
+"portapapeles y luego péguelas en una nueva capa usando "
+":menuselection:`Editar -> Pegar entidades como ->` y eligiendo:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:467
+msgid ""
+":guilabel:`New Vector Layer...`: the :guilabel:`Save vector layer as...` "
+"dialog appears (see :ref:`general_saveas` for parameters)"
+msgstr ""
+":guilabel:`Nueva capa vectorial...`: aparece el cuadro de diálogo "
+":guilabel:`Guardar capa vectorial como...` (ver :ref:`general_saveas` para "
+"ver los parámetros)"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:469
+msgid ""
+"or :guilabel:`Temporary Scratch Layer...`: you need to provide a name for "
+"the layer"
+msgstr ""
+"o :guilabel:`Capa Borrador temporal...`: necesitas proporcionar un nombre a "
+"la capa"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:472
+msgid ""
+"A new layer, filled with selected features and their attributes is created "
+"(and added to map canvas)."
+msgstr ""
+"Se crea una nueva capa, llena de entidades seleccionadas y sus atributos (y "
+"se agrega al lienzo del mapa)."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:475
+msgid ""
+"Creating layers from the clipboard is possible with features selected and "
+"copied within QGIS as well as features from another application, as long as "
+"their geometries are defined using well-known text (WKT)."
+msgstr ""
+"Es posible crear capas desde el portapapeles con características "
+"seleccionadas y copiadas dentro de QGIS, así como características de otra "
+"aplicación, siempre que sus geometrías se definan utilizando texto conocido "
+"(WKT)."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:485
+msgid "Creating virtual layers"
+msgstr "Creando capas virtuales"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:487
+msgid ""
+"A virtual layer is a special kind of vector layer. It allows you to define a"
+" layer as the result of an SQL query involving any number of other vector "
+"layers that QGIS is able to open. Virtual layers do not carry data by "
+"themselves and can be seen as views."
+msgstr ""
+"Una capa virtual es un tipo especial de capa vectorial. Le permite definir "
+"una capa como resultado de una consulta SQL que involucra cualquier cantidad"
+" de otras capas vectoriales que QGIS es capaz de abrir. Las capas virtuales "
+"no portan datos por sí mismas y pueden verse como vistas."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:493
+msgid "To create a virtual layer, open the virtual layer creation dialog by:"
+msgstr ""
+"Para crear una capa virtual, abre el diálogo de capa virtual mediante:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:495
+msgid ""
+"choosing the |addVirtualLayer| :guilabel:`Add/Edit Virtual Layer` entry in "
+"the :menuselection:`Layer --> Add Layer -->` menu;"
+msgstr ""
+"escogiendo la entrada |addVirtualLayer| :guilabel:`Añadir/Editar Capa "
+"Virtual` en el menú :menuselection:`Capa --> Añadir Capa -->`;"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:497
+msgid ""
+"enabling the |addVirtualLayer| :guilabel:`Add Virtual Layer` tab in the "
+":guilabel:`Data Source Manager` dialog;"
+msgstr ""
+"habilitando la pestaña |addVirtualLayer| :guilabel:`Agregar capa virtual` en"
+" el diálogo :guilabel:`Administrador de fuentes de datos`;"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:499
+msgid "or using the :guilabel:`DB Manager` dialog tree."
+msgstr "o usando el diálogo del árbol :guilabel:Àdministrador de DB`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:501
+msgid ""
+"The dialog allows you to specify a :guilabel:`Layer name` and an SQL "
+":guilabel:`Query`. The query can use the name (or id) of loaded vector "
+"layers as tables, as well as their field names as columns."
+msgstr ""
+"El diálogo le permite especificar un :guilabel:`Nombre de capa` y una "
+":guilabel:`Consulta`  SQL. La consulta puede usar el nombre (o id) de las "
+"capas vectoriales cargadas como tablas, así como sus nombres de campo como "
+"columnas."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:505
+msgid ""
+"For example, if you have a layer called ``airports``, you can create a new "
+"virtual layer called ``public_airports`` with an SQL query like:"
+msgstr ""
+"Por ejemplo, si tiene una capa llamada ``airports``, puede crear una nueva "
+"capa virtual llamada ``public_airports`` con una consulta SQL como:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:514
+msgid ""
+"The SQL query will be executed, regardless of the underlying provider of the"
+" ``airports`` layer, even if this provider does not directly support SQL "
+"queries."
+msgstr ""
+"La consulta SQL se ejecutará, independientemente del proveedor subyacente de"
+" la capa de ``airports``, incluso si este proveedor no admite directamente "
+"consultas SQL."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:521
+msgid "Create virtual layers dialog"
+msgstr "Diálogo Crear Capas Virtuales"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:523
+msgid ""
+"Joins and complex queries can also be created, for example, to join airports"
+" and country information:"
+msgstr ""
+"También se pueden crear combinaciones y consultas complejas, por ejemplo, "
+"para unir información sobre aeropuertos y países:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:535
+msgid ""
+"It's also possible to create virtual layers using the SQL window of "
+":ref:`dbmanager`."
+msgstr ""
+"También es posible crear capas virtuales usando la ventana SQL de "
+":ref:`dbmanager`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:539
+msgid "Embedding layers for use in queries"
+msgstr "Incorporación de capas para su uso en consultas"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:541
+msgid ""
+"Besides the vector layers available in the map canvas, the user can add "
+"layers to the :guilabel:`Embedded layers` list, which can be used in queries"
+" without the need to have them showing in the map canvas or Layers panel."
+msgstr ""
+"Además de las capas vectoriales disponibles en el lienzo del mapa, el "
+"usuario puede agregar capas a la lista :guilabel:`Capas incrustadas`, que se"
+" pueden usar en consultas sin necesidad de que se muestren en el lienzo del "
+"mapa o en el panel Capas."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:545
+msgid ""
+"To embed a layer, click :guilabel:`Add` and provide the :guilabel:`Local "
+"name`, :guilabel:`Provider`, :guilabel:`Encoding` and the path to the "
+":guilabel:`Source`."
+msgstr ""
+"Para incrustar una capa, haz click en :guilabel:`Agregar` y proporciona "
+":guilabel:`Nombre local`, :guilabel:`Proveedor`, :guilabel:`Codificación` y "
+"la ruta a la :guilabel:`Fuente`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:549
+msgid ""
+"The :guilabel:`Import` button allows adding layers in the map canvas into "
+"the Embedded layers list. Those layers can then be removed from the Layers "
+"panel without breaking existent queries."
+msgstr ""
+"El botón :guilabel:`Importar` permite agregar capas en el lienzo del mapa en"
+" la lista de capas incrustadas. A continuación, esas capas se pueden "
+"eliminar del panel Capas sin interrumpir las consultas existentes."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:554
+msgid "Supported query language"
+msgstr "Lenguaje soportado de consultas"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:556
+msgid "The underlying engine uses SQLite and SpatiaLite to operate."
+msgstr "El motor subyacente utiliza SQLite y SpatiaLite para operar."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:558
+msgid ""
+"It means you can use all of the SQL your local installation of SQLite "
+"understands."
+msgstr ""
+"Significa que puede usar todo el SQL que comprenda su instalación local de "
+"SQLite."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:561
+msgid ""
+"Functions from SQLite and spatial functions from SpatiaLite can also be used"
+" in a virtual layer query. For instance, creating a point layer out of an "
+"attribute-only layer can be done with a query similar to:"
+msgstr ""
+"Las funciones de SQLite y las funciones espaciales de SpatiaLite también se "
+"pueden utilizar en una consulta de capa virtual. Por ejemplo, se puede crear"
+" una capa de puntos a partir de una capa de solo atributo con una consulta "
+"similar a:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:570
+msgid ""
+":ref:`Functions of QGIS expressions<functions_list>` can also be used in a "
+"virtual layer query."
+msgstr ""
+":ref:`Functions of QGIS expressions<functions_list>` también se puede "
+"utilizar en una consulta de capa virtual."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:573
+msgid "To refer the geometry column of a layer, use the name ``geometry``."
+msgstr ""
+"Para referirse a la columna de geometría de una capa, use el nombre "
+"``geometry``."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:575
+msgid ""
+"Contrary to a pure SQL query, all the fields of a virtual layer query must "
+"be named. Don't forget to use the ``as`` keyword to name your columns if "
+"they are the result of a computation or a function call."
+msgstr ""
+"A diferencia de una consulta SQL pura, todos los campos de una consulta de "
+"capa virtual deben tener un nombre. No olvide usar la palabra clave ``as`` "
+"para nombrar sus columnas si son el resultado de un cálculo o una llamada a "
+"una función."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:580
+msgid "Performance issues"
+msgstr "Problemas de Rendimiento"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:582
+msgid ""
+"With default parameters, the virtual layer engine will try its best to "
+"detect the type of the different columns of the query, including the type of"
+" the geometry column if one is present."
+msgstr ""
+"Con los parámetros predeterminados, el motor de capa virtual hará todo lo "
+"posible para detectar el tipo de las diferentes columnas de la consulta, "
+"incluido el tipo de columna de geometría, si existe una."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:586
+msgid ""
+"This is done by introspecting the query when possible or by fetching the "
+"first row of the query (LIMIT 1) as a last resort. Fetching the first row of"
+" the result just to create the layer may be undesirable for performance "
+"reasons."
+msgstr ""
+"Esto se hace con una introspección de la consulta cuando sea posible o "
+"obteniendo la primera fila de la consulta (LIMIT 1) como último recurso. "
+"Obtener la primera fila del resultado solo para crear la capa puede no ser "
+"deseable por razones de rendimiento."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:591
+msgid "The creation dialog parameters:"
+msgstr "Los parámetros del diálogo creación:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:593
+msgid ""
+":guilabel:`Unique identifier column`: specifies a field of the query that "
+"represents unique integer values that QGIS can use as row identifiers. By "
+"default, an autoincrementing integer value is used. Defining a unique "
+"identifier column speeds up the selection of rows by id."
+msgstr ""
+":guilabel:`Columna de identificador único`: especifica un campo de la "
+"consulta que representa valores enteros únicos que QGIS puede usar como "
+"identificadores de fila. De forma predeterminada, se utiliza un valor entero"
+" que aumenta automáticamente. La definición de una columna de identificador "
+"único acelera la selección de filas por id."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:600
+msgid ""
+":guilabel:`No geometry`: forces the virtual layer to ignore any geometry "
+"field. The resulting layer is an attribute-only layer."
+msgstr ""
+":guilabel:`Sin geometría`: obliga a la capa virtual a ignorar cualquier "
+"campo de geometría. La capa resultante es una capa de solo atributos."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:603
+msgid ""
+"Geometry :guilabel:`Column`: specifies the name of the geometry column."
+msgstr ""
+":guilabel:`Columna` Geometría: especifica el nombre de la columna de "
+"geometría."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:605
+msgid "Geometry :guilabel:`Type`: specifies the type of the geometry."
+msgstr ":guilabel:`Tipo` de Geometría: especifica el tipo de geometría."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:607
+msgid ""
+"Geometry :guilabel:`CRS`: specifies the coordinate reference system of the "
+"virtual layer."
+msgstr ""
+":guilabel:`CRS` de Geometría: especifica el sistema de referencia de "
+"coordenadas de la capa virtual."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:611
+msgid "Special comments"
+msgstr "Comentarios Especiales"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:613
+msgid ""
+"The virtual layer engine tries to determine the type of each column of the "
+"query. If it fails, the first row of the query is fetched to determine "
+"column types."
+msgstr ""
+"El motor de capa virtual intenta determinar el tipo de cada columna de la "
+"consulta. Si falla, se recupera la primera fila de la consulta para "
+"determinar los tipos de columna."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:617
+msgid ""
+"The type of a particular column can be specified directly in the query by "
+"using some special comments."
+msgstr ""
+"El tipo de una columna en particular se puede especificar directamente en la"
+" consulta mediante algunos comentarios especiales."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:620
+msgid ""
+"The syntax is the following: ``/*:type*/``. It has to be placed just after "
+"the name of a column. ``type`` can be either ``int`` for integers, ``real`` "
+"for floating point numbers or ``text``."
+msgstr ""
+"La sintaxis es la siguiente: ``/*:type*/``. Debe colocarse justo después del"
+" nombre de una columna. ``type`` puede ser ``int`` para números enteros, "
+"``real`` para números de coma flotante o ``text``."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:624
+msgid "For instance:"
+msgstr "Por ejemplo:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:631
+msgid ""
+"The type and coordinate reference system of the geometry column can also be "
+"set thanks to special comments with the following syntax ``/*:gtype:srid*/``"
+" where ``gtype`` is the geometry type (``point``, ``linestring``, "
+"``polygon``, ``multipoint``, ``multilinestring`` or ``multipolygon``) and "
+"``srid`` an integer representing the EPSG code of a coordinate reference "
+"system."
+msgstr ""
+"El tipo y sistema de referencia de coordenadas de la columna de geometría "
+"también se puede configurar gracias a comentarios especiales con la "
+"siguiente sintaxis ``/*:gtype:srid*/`` donde ``gtype`` es el tipo de "
+"geometría (``punto``, ``línea``, ``polígono``, ``multipunto``, "
+"``multilínea`` o ``multipolígono``) y ``srid`` un número entero que "
+"representa el código EPSG de un sistema de referencia de coordenadas."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:638
+msgid "Use of indexes"
+msgstr "Uso de índices"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:640
+msgid ""
+"When requesting a layer through a virtual layer, the source layer indices "
+"will be used in the following ways:"
+msgstr ""
+"Al solicitar una capa a través de una capa virtual, los índices de la capa "
+"fuente se utilizarán de las siguientes formas:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:643
+msgid ""
+"if an ``=`` predicate is used on the primary key column of the layer, the "
+"underlying data provider will be asked for a particular id (FilterFid)"
+msgstr ""
+"Si se usa un predicado ``=`` en la columna de clave principal de la capa, se"
+" le pedirá al proveedor de datos subyacente una identificación particular "
+"(FilterFid)"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:646
+msgid ""
+"for any other predicates (``>``, ``<=``, ``!=``, etc.) or on a column "
+"without a primary key, a request built from an expression will be used to "
+"request the underlying vector data provider. It means indexes may be used on"
+" database providers if they exist."
+msgstr ""
+"para cualquier otro predicado (``> ``, `` <= ``, ``! = ``, etc.) o en una "
+"columna sin una clave primaria, se utilizará una solicitud construida a "
+"partir de una expresión para solicitar el proveedor de datos vectoriales. "
+"Significa que los índices se pueden utilizar en proveedores de bases de "
+"datos, si existen."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:651
+msgid ""
+"A specific syntax exists to handle spatial predicates in requests and "
+"triggers the use of a spatial index: a hidden column named "
+"``_search_frame_`` exists for each virtual layer. This column can be "
+"compared for equality to a bounding box. Example:"
+msgstr ""
+"Existe una sintaxis específica para manejar los predicados espaciales en las"
+" solicitudes y desencadena el uso de un índice espacial: existe una columna "
+"oculta llamada ``_search_frame_`` para cada capa virtual. Esta columna se "
+"puede comparar por igualdad con un cuadro delimitador. Ejemplo:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:662
+msgid ""
+"Spatial binary predicates like ``ST_Intersects`` are sped up significantly "
+"when used in conjunction with this spatial index syntax."
+msgstr ""
+"Los predicados binarios espaciales como ``ST_Intersects`` se aceleran "
+"significativamente cuando se usan junto con esta sintaxis de índice "
+"espacial."

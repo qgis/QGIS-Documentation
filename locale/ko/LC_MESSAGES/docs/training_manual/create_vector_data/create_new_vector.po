@@ -1,0 +1,207 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:19+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:2
+msgid "|LS| Creating a New Vector Dataset"
+msgstr "|LS| 새 벡터 데이터셋 생성"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:4
+msgid ""
+"The data that you use has to come from somewhere. For most common "
+"applications, the data exists already; but the more particular and "
+"specialized the project, the less likely it is that the data will already be"
+" available. In such cases, you'll need to create your own new data."
+msgstr ""
+"여러분이 사용하는 데이터는 출처가 있어야 합니다. 가장 일반적인 응용 작업의 경우, 이미 존재하는 데이터를 사용합니다. 그러나 특별하고 "
+"전문적인 프로젝트일수록, 사용할 수 있는 데이터가 이미 존재할 가능성은 적어집니다. 이런 경우 여러분 자신의 새 데이터를 생성해야 "
+"합니다."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:9
+msgid "**The goal for this lesson:** To create a new vector dataset."
+msgstr "**이 강의의 목표:** 새 벡터 데이터셋 생성하기."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:12
+msgid "|basic| |FA| The Layer Creation Dialog"
+msgstr "|basic| |FA| 레이어 생성 대화 창"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:14
+msgid ""
+"Before you can add new vector data, you need a vector dataset to add it to. "
+"In our case, you'll begin by creating new data entirely, rather than editing"
+" an existing dataset. Therefore, you'll need to define your own new dataset "
+"first."
+msgstr ""
+"새 벡터 데이터를 추가하려면 먼저 데이터를 추가할 벡터 데이터셋이 필요합니다. 이 예제에서는 기존 데이터셋을 편집하기보다 완전히 새로운 "
+"데이터를 생성해보려 합니다. 따라서 사용자 자신의 새 데이터셋을 먼저 정의해야 합니다."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:35
+msgid ""
+"It's important to decide which kind of dataset you want at this stage. Each "
+"different vector layer type is \"built differently\" in the background, so "
+"once you've created the layer, you can't change its type."
+msgstr ""
+"이 단계에서 어떤 유형의 데이터셋을 생성할지 결정하는 것이 중요합니다. 서로 다른 벡터 레이어 유형은 백그라운드에서 \"서로 다르게\" "
+"구성되기 때문에 레이어를 생성한 후에는 유형을 변경할 수 없기 때문입니다."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:47
+msgid ""
+"This has no impact on the rest of the dialog, but it will cause the correct "
+"type of geometry to be used when the vector dataset is created."
+msgstr "대화 창의 다른 항목에 아무런 영향도 미치지 않지만, 벡터 데이터셋을 생성했을 때 정확한 도형 유형을 사용하게 해줍니다."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:75
+msgid "Check that your dialog now looks like this:"
+msgstr "대화 창이 다음 그림처럼 보이는지 확인하십시오."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:80
+msgid "Click :guilabel:`OK`"
+msgstr ":guilabel:`OK` 를 클릭합니다."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:87
+msgid "|basic| |FA| Data Sources"
+msgstr "|basic| |FA| 데이터소스"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:89
+msgid ""
+"When you create new data, it obviously has to be about objects that really "
+"exist on the ground. Therefore, you'll need to get your information from "
+"somewhere."
+msgstr ""
+"새 데이터를 생성하는 작업은 당연히 지표면에 실재하는 오브젝트에 관련된 것이어야 합니다. 따라서 어딘가에서 해당 정보를 구해야 합니다."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:93
+msgid ""
+"There are many different ways to obtain data about objects. For example, you"
+" could use a GPS to capture points in the real world, then import the data "
+"into QGIS afterwards. Or you could survey points using a theodolite, and "
+"enter the coordinates manually to create new features. Or you could use the "
+"digitizing process to trace objects from remote sensing data, such as "
+"satellite imagery or aerial photography."
+msgstr ""
+"오브젝트 관련 데이터를 구할 수 있는 방법은 많습니다. 예를 들어 GPS를 이용해서 실재 세계에 있는 포인트들을 데이터화한 다음 "
+"QGIS로 불러들일 수 있습니다. 또는 경위의 측량계를 통해 포인트를 측정한 다음 좌표를 직접 입력해서 새 피처를 생성할 수도 있습니다."
+" 아니면 위성영상이나 항공사진 같은 원격탐사 데이터로부터 오브젝트를 따오는 디지털라이즈 작업을 할 수도 있습니다."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:100
+msgid ""
+"For our example, you'll be using the digitizing approach. Sample raster "
+"datasets are provided, so you'll need to import them as necessary."
+msgstr "이 예제에서는 디지털라이즈 작업을 이용합니다. 래스터 데이터셋 샘플을 갖추고 있으므로, 필요한 대로 불러들여야 합니다."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:142
+msgid ""
+"In order to begin digitizing, you'll need to enter **edit mode**. GIS "
+"software commonly requires this to prevent you from accidentally editing or "
+"deleting important data. Edit mode is switched on or off individually for "
+"each layer."
+msgstr ""
+"디지타이즈를 시작하려면 **편집 모드** 로 들어가야 합니다. GIS 소프트웨어는 우연히 중요한 데이터를 편집하거나 삭제하는 일을 막기 "
+"위해 일반적으로 이런 단계를 거치게 합니다. 각 레이어에 대해 개별적으로 편집 모드를 켜거나 끌 수 있습니다."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:151
+msgid ""
+"If you can't find this button, check that the :guilabel:`Digitizing` toolbar"
+" is enabled. There should be a check mark next to the :menuselection:`View "
+"--> Toolbars --> Digitizing` menu entry."
+msgstr ""
+"이 버튼을 찾을 수 없을 경우, :guilabel:`Digitizing` 툴바가 활성화돼 있는지 확인해보십시오. "
+":menuselection:`View --> Toolbars --> Digitizing` 메뉴 항목 옆에 체크 표시가 있어야 합니다."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:176
+msgid "The first feature you'll be digitizing is the |schoolAreaType1|:"
+msgstr "여러분이 디지타이즈할 첫 번째 피처는 다음 |schoolAreaType1| 입니다."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:181
+msgid ""
+"Start digitizing by clicking on a point somewhere along the edge of the "
+"field."
+msgstr "운동장의 경계 어딘가의 포인트를 클릭해서 디지타이즈 작업을 시작합니다."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:182
+msgid ""
+"Place more points by clicking further along the edge, until the shape you're"
+" drawing completely covers the field."
+msgstr "여러분이 그리는 도형이 운동장을 완전히 가릴 때까지 경계를 따라 계속 포인트를 클릭합니다."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:189
+msgid "Fill in the values as below:"
+msgstr "다음과 같이 값을 입력하십시오."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:212
+msgid "Close the attribute table."
+msgstr "속성 테이블을 닫습니다."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:215
+msgid ""
+"Remember, if you've made a mistake while digitizing a feature, you can "
+"always edit it after you're done creating it. If you've made a mistake, "
+"continue digitizing until you're done creating the feature as above. Then:"
+msgstr ""
+"피처를 디지타이즈할 때 실수를 했을 경우, 피처 생성 후에 언제라도 편집/수정할 수 있다는 사실을 기억하십시오. 실수를 했다 하더라도 "
+"앞의 지침대로 피처를 완성할 때까지 디지타이즈 작업을 계속한 다음,"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:256
+msgid ""
+"Digitize the school itself and the upper field. Use this image to assist "
+"you:"
+msgstr "이제 학교와 그 위에 있는 운동장을 디지타이즈해보겠습니다. 다음 이미지를 참고하십시오."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:263
+msgid ""
+"When you're done adding features to a layer, remember to save your edits and"
+" then exit edit mode."
+msgstr "레이어에 피처를 추가하는 작업이 끝나면, 편집한 내용을 저장하고 편집 모드에서 나와야 한다는 사실을 잊지 마십시오."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:332
+msgid "Our track is a little further to the south:"
+msgstr "산길은 좀 더 남쪽에 있습니다."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:356
+msgid ":ref:`Check your results <create-vector-digitize-1>`"
+msgstr ":ref:`결과 확인 <create-vector-digitize-1>`"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:359
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:361
+msgid ""
+"Now you know how to create features! This course doesn't cover adding point "
+"features, because that's not really necessary once you've worked with more "
+"complicated features (lines and polygons). It works exactly the same, except"
+" that you only click once where you want the point to be, give it attributes"
+" as usual, and then the feature is created."
+msgstr ""
+"이제 피처를 생성하는 법을 배웠습니다! 이 강의에서는 포인트 피처를 추가하는 법을 다루지 않았는데, 여러분이 (라인이나 폴리곤 같은) 좀"
+" 더 복잡한 피처를 다루는 법을 안다면 포인트 피처도 쉽게 생성할 수 있기 때문입니다. 포인트 위치를 딱 한 번 클릭하는 것만 제외하면,"
+" 속성을 부여하고 피처를 생성하는 방법은 똑같습니다."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:367
+msgid ""
+"Knowing how to digitize is important because it's a very common activity in "
+"GIS programs."
+msgstr "디지타이즈는 GIS 프로그램을 사용하면서 매우 일상적인 작업이기 때문에 그 방법을 아는 것은 매우 중요합니다."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:371
+msgid "|WN|"
+msgstr "|WN|"

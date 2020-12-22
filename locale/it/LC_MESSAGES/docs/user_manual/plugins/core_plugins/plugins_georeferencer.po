@@ -1,0 +1,667 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:31+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Italian (https://www.transifex.com/qgis/teams/6144/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:6
+msgid "Georeferencer Plugin"
+msgstr "Plugin Georeferenziatore"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:13
+msgid ""
+"The |georefRun| Georeferencer Plugin is a tool for generating world files "
+"for rasters. It allows you to reference rasters to geographic or projected "
+"coordinate systems by creating a new GeoTiff or by adding a world file to "
+"the existing image. The basic approach to georeferencing a raster is to "
+"locate points on the raster for which you can accurately determine "
+"coordinates."
+msgstr ""
+"Il |georefRun| Plugin Georeferenziatore è uno strumento per generare file di"
+" georeferenziazione (world file) per i raster. Permette di georeferenziare "
+"raster in sistemi di coordinate geografiche o proiettate, creando un nuovo "
+"GeoTiff oppure associandogli un world file. L’approccio di base del plugin è"
+" quello di individuare punti del raster per i quali puoi determinare "
+"accuratamente le coordinate. "
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:19
+msgid "**Features**"
+msgstr "**Funzioni**"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:27
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:27
+msgid "Icon"
+msgstr "Icona"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:27
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:27
+msgid "Purpose"
+msgstr "Azione"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:29
+msgid "|addRasterLayer|"
+msgstr "|addRasterLayer|"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:29
+msgid "Open raster"
+msgstr "Carica un raster"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:29
+msgid "|start|"
+msgstr "|start|"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:29
+msgid "Start georeferencing"
+msgstr "Avvia la georeferenziazione"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:31
+msgid "|gdalScript|"
+msgstr "|gdalScript|"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:31
+msgid "Generate GDAL Script"
+msgstr "Genera uno script GDAL"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:31
+msgid "|loadGCPpoints|"
+msgstr "|loadGCPpoints|"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:31
+msgid "Load GCP Points"
+msgstr "Carica punti GCP (Ground Control Point)"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:33
+msgid "|saveGCPPointsAs|"
+msgstr "|saveGCPPointsAs|"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:33
+msgid "Save GCP Points As"
+msgstr "Salva Punti GCP come..."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:33
+msgid "|transformSettings|"
+msgstr "|transformSettings|"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:33
+msgid "Transformation settings"
+msgstr "Imposta la trasformazione"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:35
+msgid "|addGCPPoint|"
+msgstr "|addGCPPoint|"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:35
+msgid "Add Point"
+msgstr "Aggiunge un nuovo punto"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:35
+msgid "|deleteGCPPoint|"
+msgstr "|deleteGCPPoint|"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:35
+msgid "Delete Point"
+msgstr "Elimina un punto"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:37
+msgid "|moveGCPPoint|"
+msgstr "|moveGCPPoint|"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:37
+msgid "Move GCP Point"
+msgstr "Sposta un punto GCP"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:37
+msgid "|pan|"
+msgstr "|pan|"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:37
+msgid "Pan"
+msgstr "Sposta"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:39
+msgid "|zoomIn|"
+msgstr "|zoomIn|"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:39
+msgid "Zoom In"
+msgstr "Ingrandisce la vista"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:39
+msgid "|zoomOut|"
+msgstr "|zoomOut|"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:39
+msgid "Zoom Out"
+msgstr "Rimpicciolisce la vista"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:41
+msgid "|zoomToLayer|"
+msgstr "|zoomToLayer|"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:41
+msgid "Zoom To Layer"
+msgstr "Zoom sul layer"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:41
+msgid "|zoomLast|"
+msgstr "|zoomLast|"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:41
+msgid "Zoom Last"
+msgstr "Zoom precedente"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:43
+msgid "|zoomNext|"
+msgstr "|zoomNext|"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:43
+msgid "Zoom Next"
+msgstr "Zoom successivo"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:43
+msgid "|linkGeorefToQGis|"
+msgstr "|linkGeorefToQGis|"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:43
+msgid "Link Georeferencer to QGIS"
+msgstr "Collegare il georeferenziatore a QGIS"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:45
+msgid "|linkQGisToGeoref|"
+msgstr "|linkQGisToGeoref|"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:45
+msgid "Link QGIS to Georeferencer"
+msgstr "Collegare QGIS al georeferenziatore"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:45
+msgid "|fullHistogramStretch|"
+msgstr "|fullHistogramStretch|"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:45
+msgid "Full histogram stretch"
+msgstr "Stiramento completo dell'istogramma"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:47
+msgid "|localHistogramStretch|"
+msgstr "|localHistogramStretch|"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:47
+msgid "Local histogram stretch"
+msgstr "Stiramento locale dell'istogramma"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:50
+msgid "Table Georeferencer: Georeferencer Tools"
+msgstr "Tabella Georeferenziatore: Strumenti del Georeferenziatore"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:53
+msgid "Usual procedure"
+msgstr "Utilizzo del plugin"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:55
+msgid ""
+"As X and Y coordinates (DMS (dd mm ss.ss), DD (dd.dd) or projected "
+"coordinates (mmmm.mm)), which correspond with the selected point on the "
+"image, two alternative procedures can be used:"
+msgstr ""
+"Per le coordinate X e Y (espresse in gradi, primi e secondi DMS (dd mm "
+"ss.ss), in gradi decimali DD (dd.dd) o le coordinate proiettate (mmmm.mm) "
+"espresse in metri), che corrispondono ai punti selezionati sull'immagine, "
+"puoi usare due procedure alternative:"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:59
+msgid ""
+"The raster itself sometimes provides crosses with coordinates \"written\" on"
+" the image. In this case, you can enter the coordinates manually."
+msgstr ""
+"Alcune volte nei raster sono presenti punti con le coordinate scritte "
+"sull’immagine. In questo caso puoi inserire manualmente le coordinate."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:61
+msgid ""
+"Using already georeferenced layers. This can be either vector or raster data"
+" that contain the same objects/features that you have on the image that you "
+"want to georeference and with the projection that you want for your image. "
+"In this case, you can enter the coordinates by clicking on the reference "
+"dataset loaded in the QGIS map canvas."
+msgstr ""
+"Usando layer già georeferenziati. Può trattarsi di dati vettoriali o raster "
+"che contengono gli stessi oggetti/geometrie presenti nell'immagine che si "
+"desidera georeferenziare e con la proiezione che vuoi per la tua immagine. "
+"In questo caso, puoi inserire le coordinate facendo click sul dataset di "
+"riferimento caricato nell'area della mappa QGIS."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:67
+msgid ""
+"The usual procedure for georeferencing an image involves selecting multiple "
+"points on the raster, specifying their coordinates, and choosing a relevant "
+"transformation type. Based on the input parameters and data, the plugin will"
+" compute the world file parameters. The more coordinates you provide, the "
+"better the result will be."
+msgstr ""
+"La procedura più comune per la georeferenziazione di un'immagine consiste "
+"nel selezionare più punti sul raster, specificandone le coordinate e "
+"scegliendo un tipo di trasformazione adeguata. Sulla base dei parametri di "
+"input e dei dati, il plugin calcolerà i parametri deworld file. Più "
+"coordinate vengono fornite, migliore sarà il risultato. "
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:73
+msgid ""
+"The first step is to start QGIS, load the Georeferencer Plugin (see "
+":ref:`managing_plugins`) and click on :menuselection:`Raster -->` "
+"|georefRun| :menuselection:`Georeferencer`, which appears in the QGIS menu "
+"bar. The Georeferencer Plugin dialog appears as shown in "
+"figure_georeferencer_dialog_."
+msgstr ""
+"Il primo passo è avviare QGIS, caricare il plugin Georeferenziatore (vedi "
+":ref:`management_plugins`) e cliccare su :menuselection:`Raster -->` "
+"|georefRun| :menuselection:`Georeferenziatore`, che appare nella barra dei "
+"menu di QGIS. La finestra di dialogo del plugin Georeferenziatore appare "
+"come mostrato in figure_georeferencer_dialog_."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:78
+msgid ""
+"For this example, we are using a topo sheet of South Dakota from SDGS. It "
+"can later be visualized together with the data from the GRASS "
+":file:`spearfish60` location. You can download the topo sheet here: "
+"https://grass.osgeo.org/sampledata/spearfish_toposheet.tar.gz."
+msgstr ""
+"Per questo esempio, stiamo usando una carta topografica del South Dakota di "
+"SDGS. Può essere successivamente visualizzata insieme ai dati della cartella"
+" GRASS :file:`spearfish60`. Puoi scaricare la carta topografica da qui: "
+"https://grass.osgeo.org/sampledata/spearfish_toposheet.tar.tar.gz."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:88
+msgid "Georeferencer Plugin Dialog"
+msgstr "Finestra di dialogo del Plugin Georeferenziatore"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:94
+msgid "Entering ground control points (GCPs)"
+msgstr "Aggiungere punti di controllo (GCP)"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:96
+msgid ""
+"To start georeferencing an unreferenced raster, we must load it using the "
+"|addRasterLayer| button. The raster will show up in the main working area of"
+" the dialog. Once the raster is loaded, we can start to enter reference "
+"points."
+msgstr ""
+"Per iniziare la georeferenziazione di un raster non referenziato, dobbiamo "
+"caricarlo usando il pulsante |addRasterLayer|. Il raster verrà visualizzato "
+"nell'area di lavoro principale della finestra di dialogo. Una volta caricato"
+" il raster, possiamo iniziare a inserire i punti di riferimento."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:100
+msgid ""
+"Using the |addGCPPoint| :sup:`Add Point` button, add points to the main "
+"working area and enter their coordinates (see Figure "
+"figure_georeferencer_add_points_). For this procedure you have three "
+"options:"
+msgstr ""
+"Utilizzando il pulsante |addGCPPoint| :sup:`Aggiungi punto`, aggiungi punti "
+"all’interno dell’area di lavoro principale e insesci le rispettive "
+"coordinate (vedi la figura figure_georeferencer_add_points_). Per effettuare"
+" questa procedura, hai tre opzioni:"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:104
+msgid ""
+"Click on a point in the raster image and enter the X and Y coordinates "
+"manually."
+msgstr ""
+"Cliccare su un punto del raster ed inserire le coordinate X/Y manualmente."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:106
+msgid ""
+"Click on a point in the raster image and choose the |pencil| :sup:`From map "
+"canvas` button to add the X and Y coordinates with the help of a "
+"georeferenced map already loaded in the QGIS map canvas."
+msgstr ""
+"Cliccare su un punto nell'immagine raster ed usare il pulsante |pencil| "
+":sup:`Dalla mappa` per inserire le coordinate X e Y con l'aiuto di una mappa"
+" georeferenziata già caricata  nella vista mappa di QGIS."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:109
+msgid ""
+"With the |moveGCPPoint| button, you can move the GCPs in both windows, if "
+"they are at the wrong place."
+msgstr ""
+"Utilizzando il pulsante |moveGCPPoint|, puoi spostare i GCP in entrambe le "
+"finestre, nel caso in cui fossero posizionati in maniera errata."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:112
+msgid ""
+"Continue entering points. You should have at least four points, and the more"
+" coordinates you can provide, the better the result will be. There are "
+"additional tools on the plugin dialog to zoom and pan the working area in "
+"order to locate a relevant set of GCP points."
+msgstr ""
+"Continuare ad inserire punti. Dovresti inserire almeno 4 GCP: più punti "
+"vengono inseriti, migliore sarà il risultato. Ci sono strumenti aggiuntivi "
+"nella finestra di dialogo del plugin per ingrandire e spostare l'area di "
+"lavoro al fine di individuare un insieme rilevante di punti GCP."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:122
+msgid "Add points to the raster image"
+msgstr "Aggiungi punti all'immagine raster"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:125
+msgid ""
+"The points that are added to the map will be stored in a separate text file "
+"(:file:`[filename].points`) usually together with the raster image. This "
+"allows us to reopen the Georeferencer plugin at a later date and add new "
+"points or delete existing ones to optimize the result. The points file "
+"contains values of the form: ``mapX, mapY, pixelX, pixelY``. You can use the"
+" |loadGCPpoints| :sup:`Load GCP points` and |saveGCPPointsAs| :sup:`Save GCP"
+" points as` buttons to manage the files."
+msgstr ""
+"I punti che sono stati aggiunti alla mappa verranno salvati in un ﬁle di "
+"testo separato (:file:`[filename].points`)  in genere insieme all'immagine "
+"raster. Questo ti consente di aprire in un secondo momento il plugin "
+"Georeferenziatore e aggiungere nuovi punti oppure cancellarne alcuni, in "
+"maniera da migliorare il risultato finale. Il file dei punti contiene i "
+"valori del modulo: ``mapX, mapY, pixelX, pixelY``. Puoi usare i pulsanti "
+"|loadGCPpoints| :sup:`Carica punti GCP` e |saveGCPPointsAs| :sup:`Salva i "
+"punti GCP come` per gestire i file."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:136
+msgid "Defining the transformation settings"
+msgstr "Impostare una trasformazione"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:138
+msgid ""
+"After you have added your GCPs to the raster image, you need to define the "
+"transformation settings for the georeferencing process."
+msgstr ""
+"Dopo aver aggiunto i GCP all'immagine raster, devi definire le impostazioni "
+"di trasformazione del processo di georeferenziazione."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:146
+msgid "Defining the georeferencer transformation settings"
+msgstr ""
+"Definizione delle impostazioni di trasformazione del georeferenziatore"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:150
+msgid "Available Transformation algorithms"
+msgstr "Algoritmi di trasformazione disponibili"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:152
+msgid ""
+"Depending on how many ground control points you have captured, you may want "
+"to use different transformation algorithms. Choice of transformation "
+"algorithm is also dependent on the type and quality of input data and the "
+"amount of geometric distortion that you are willing to introduce to the "
+"final result."
+msgstr ""
+"A seconda del numero di punti di controllo a terra acquisiti, puoi "
+"utilizzare diversi algoritmi di trasformazione. La scelta dell'algoritmo di "
+"trasformazione dipende anche dal tipo e dalla qualità dei dati in ingresso e"
+" dalla quantità di distorsione geometrica che sei disposto a introdurre nel "
+"risultato finale."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:158
+msgid ""
+"Currently, the following :guilabel:`Transformation types` are available:"
+msgstr ""
+"Attualmente sono disponibili le seguenti :guilabel:`tipologie di "
+"trasformazione`:"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:160
+msgid ""
+"The **Linear** algorithm is used to create a world file and is different "
+"from the other algorithms, as it does not actually transform the raster. "
+"This algorithm likely won't be sufficient if you are dealing with scanned "
+"material."
+msgstr ""
+"L'algoritmo di trasformazione **lineare** è utilizzato per generare un file "
+"di georeferenziazione o world file, ed è differente rispetto agli altri "
+"algoritmi, in quanto attualmente non adatta deformandolo il raster "
+"originale. Questo algoritmo in genere non è adatto nel caso in cui si lavori"
+" con immagini scannerizzate."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:164
+msgid ""
+"The **Helmert** transformation performs simple scaling and rotation "
+"transformations."
+msgstr ""
+"La trasformazione di **Helmert** esegue una rototraslazione del raster con "
+"variazione di scala."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:166
+msgid ""
+"The **Polynomial** algorithms 1-3 are among the most widely used algorithms "
+"introduced to match source and destination ground control points. The most "
+"widely used polynomial algorithm is the second-order polynomial "
+"transformation, which allows some curvature. First-order polynomial "
+"transformation (affine) preserves collinearity and allows scaling, "
+"translation and rotation only."
+msgstr ""
+"Gli algoritmi **Polinomiali** di grado 1-3 sono i più utilizzati per "
+"garantire la maggior coerenza tra i punti inseriti e quelli risultanti dopo "
+"la trasformazione. L’algoritmo polinomiale più utilizzato è la "
+"trasformazione attraverso un polinomio di secondo grado, che permette alcune"
+" curvature. La trasformazione polinomiale di primo grado (affine) permette "
+"di conservare la collinearità dei punti, e consente solamente di scalare, "
+"traslare e ruotare l’immagine."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:171
+msgid ""
+"The **Thin Plate Spline** (TPS) algorithm is a more modern georeferencing "
+"method, which is able to introduce local deformations in the data. This "
+"algorithm is useful when very low quality originals are being georeferenced."
+msgstr ""
+"L'algoritmo di traformazione **Thin Plate Spline** (TPS) è un metodo di "
+"georeferenziazione recente, che permette di introdurre delle deformazioni "
+"localizzate all'interno dei dati. Questo algoritmo risulta particolarmente "
+"efficace quando si vogliono georeferenziare immagini di scarsa qualità."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:174
+msgid ""
+"The **Projective** transformation is a linear rotation and translation of "
+"coordinates."
+msgstr ""
+"La traformazione **Proiettiva** consiste in una rotazione lineare ed in una "
+"traslazione delle coordinate."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:178
+msgid "Define the Resampling method"
+msgstr "Metodo di ricampionamento"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:180
+msgid ""
+"The type of resampling you choose will likely depending on your input data "
+"and the ultimate objective of the exercise. If you don't want to change "
+"statistics of the image, you might want to choose 'Nearest neighbour', "
+"whereas a 'Cubic resampling' will likely provide a more smoothed result."
+msgstr ""
+"Il tipo di ricampionamento scelto dipenderà probabilmente dai dati in "
+"ingresso e dall'obiettivo finale del lavoro. Se non vuoi cambiare le "
+"statistiche dell'immagine, potresti voler scegliere \"Vicino più prossimo\","
+" mentre un \"Ricampionamento cubico\" probabilmente fornirà un risultato più"
+" omogeneo."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:185
+msgid "It is possible to choose between five different resampling methods:"
+msgstr "Puoi scegliere tra cinque diversi metodi di ricampionamento:"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:187
+msgid "Nearest neighbour"
+msgstr "Vicino più prossimo"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:188
+msgid "Linear"
+msgstr "Lineare"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:189
+msgid "Cubic"
+msgstr "Cubico"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:190
+msgid "Cubic Spline"
+msgstr "Spline Cubica"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:191
+msgid "Lanczos"
+msgstr "Lanczos"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:194
+msgid "Define the transformation settings"
+msgstr "Definizione delle impostazioni di trasformazione"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:196
+msgid ""
+"There are several options that need to be defined for the georeferenced "
+"output raster."
+msgstr ""
+"Ci sono diverse opzioni che devono essere definite per l'output "
+"georeferenziato di un raster."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:199
+msgid ""
+"The |checkbox| :guilabel:`Create world file` checkbox is only available if "
+"you decide to use the linear transformation type, because this means that "
+"the raster image actually won't be transformed. In this case, the "
+":guilabel:`Output raster` field is not activated, because only a new world "
+"file will be created."
+msgstr ""
+"La casella di controllo |checkbox| :guilabel:`Crea il file di "
+"georeferenziazione` è attiva solo se scegli la trasformazione lineare, "
+"quando il raster non viene fisicamente deformato. In questo caso, il campo "
+":guilabel:`Output raster` non viene attivato, perché verrà creato solo un "
+"nuovo file world."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:204
+msgid ""
+"For all other transformation types, you have to define an :guilabel:`Output "
+"raster`. As default, a new file ([filename]_modified) will be created in the"
+" same folder together with the original raster image."
+msgstr ""
+"Per tutti gli altri tipi di trasformazione devi definire un "
+":guilabel:`Raster in output`.Come modalità predefinita, viene creato un "
+"nuovo file ([nomefile]_modificato) nella stessa cartella del raster di "
+"partenza insieme all'immagine raster originale."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:207
+msgid ""
+"As a next step, you have to define the :guilabel:`Target SRS` (Spatial "
+"Reference System) for the georeferenced raster (see "
+":ref:`label_projections`)."
+msgstr ""
+"Devi poi scegliere il :guilabel:`SR` (Sistema di riferimento) per il Raster "
+"georiferito (vedi :ref:`label_projections`)."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:209
+msgid ""
+"If you like, you can **generate a pdf map** and also **a pdf report**. The "
+"report includes information about the used transformation parameters, an "
+"image of the residuals and a list with all GCPs and their RMS errors."
+msgstr ""
+"Se vuoi, puoi creare delle **mappe pdf** e anche dei **report pdf**. Il "
+"report fornisce informazioni sui parametri di informazione utilizzati, una "
+"rappresentazione degli scarti e una lista con tutti i GCP e i loro errori "
+"RMS."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:212
+msgid ""
+"Furthermore, you can activate the |checkbox| :guilabel:`Set Target "
+"Resolution` checkbox and define the pixel resolution of the output raster. "
+"Default horizontal and vertical resolution is 1."
+msgstr ""
+"Inoltre puoi attivare la casella di controllo |checkbox| :guilabel:`imposta "
+"risoluzione finale` e definire la risoluzione in pixel del raster di output."
+" La risoluzione predefinita orizzontale e verticale è 1."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:215
+msgid ""
+"The |checkbox| :guilabel:`Use 0 for transparency when needed` can be "
+"activated, if pixels with the value 0 shall be visualized transparent. In "
+"our example toposheet, all white areas would be transparent."
+msgstr ""
+"La casella di controllo| :guilabel:`Utilizzare 0 per la trasparenza quando "
+"necessario` può essere attivata, se i pixel con il valore 0 devono essere "
+"visualizzati trasparenti. Nel nostro esempio toposheet, tutte le aree "
+"bianche sarebbero trasparenti."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:218
+msgid ""
+"Finally, |checkbox| :guilabel:`Load in QGIS when done` loads the output "
+"raster automatically into the QGIS map canvas when the transformation is "
+"done."
+msgstr ""
+"Infine la casella di controllo |checkbox| :guilabel:`Carica in QGIS una "
+"volta eseguito` carica automaticamente il raster di output nella vista mappa"
+" di QGIS a trasformazione terminata."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:222
+msgid "Show and adapt raster properties"
+msgstr "Mostra e modifica le proprietà del raster"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:224
+msgid ""
+"Clicking on the :guilabel:`Raster properties` option in the "
+":guilabel:`Settings` menu opens the :ref:`Layer properties "
+"<raster_properties_dialog>` dialog of the raster file that you want to "
+"georeference."
+msgstr ""
+"Cliccando sull'opzione :guilabel:`Proprietà raster` nel menu "
+":guilabel:`Impostazioni` si apre la finestra di dialogo :ref:`Layer "
+"properties <raster_properties_dialog>` del file raster che vuoi "
+"georeferenziare."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:231
+msgid "Configure the georeferencer"
+msgstr "Configurare il georeferenziatore"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:233
+msgid "You can define whether you want to show GCP coordinates and/or IDs."
+msgstr "Puoi definire se visualizzare le coordinate e/o gli IDs dei GCP."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:234
+msgid "As residual units, pixels and map units can be chosen."
+msgstr "Imposta le unità dei residui, pixel e unità di mappa."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:235
+msgid ""
+"For the PDF report, a left and right margin can be defined and you can also "
+"set the paper size for the PDF map."
+msgstr ""
+"Per i report PDF, è possibile definire un margine sinistro e destro ed è "
+"anche possibile impostare il formato carta per la mappa PDF."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:237
+msgid ""
+"Finally, you can activate to |checkbox| :guilabel:`Show Georeferencer window"
+" docked`."
+msgstr ""
+"Infine puoi attivare la casella di controllo |checkbox| :guilabel:`Mostra la"
+" finestra del georeferenziatore agganciata`."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:242
+msgid "Running the transformation"
+msgstr "Eseguire la trasformazione"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:244
+msgid ""
+"After all GCPs have been collected and all transformation settings are "
+"defined, just press the |start| :sup:`Start georeferencing` button to create"
+" the new georeferenced raster."
+msgstr ""
+"Dopo aver acquisito tutti i GCP e definite tutte le impostazioni di "
+"trasformazione, basta premere il pulsante |start| :sup:`Inizia la "
+"georeferenziazione` per creare il nuovo raster georeferenziato."

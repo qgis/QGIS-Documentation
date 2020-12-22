@@ -1,0 +1,291 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:21+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Romanian (https://www.transifex.com/qgis/teams/6144/ro/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:2
+msgid "|LS| Systematic Sampling Design"
+msgstr "|LS| Planul de Eșantionare Sistematică"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:4
+msgid ""
+"You have already digitized a set of polygons that represent the forest "
+"stands, but you don't have information about the forest just yet. For that "
+"purpose you can design a survey to inventory the whole forest area and then "
+"estimate its parameters. In this lesson you will create a systematic set of "
+"sampling plots."
+msgstr ""
+"Ați digitizat deja un set de poligoane care reprezintă arboretul, totuși, "
+"încă nu aveți informații despre pădure. Pentru aceasta, puteți programa o "
+"achiziție de date pentru a inventaria întreaga pădure și pentru a-i estima "
+"parametrii. În această lecție veți crea un set sistematic de suprafețe de "
+"probă."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:9
+msgid ""
+"When you start planning your forest inventory it is important to clearly "
+"define the objectives, the types of sample plots that will be used, and the "
+"data that will be collected to achieve the objectives. For each individual "
+"case, those will depend on the type of forest and the management purpose; "
+"and should be carefully planned by someone with forestry knowledge. In this "
+"lesson, you will implement a theoretical inventory based on a systematic "
+"sampling plot design."
+msgstr ""
+"Atunci când începeți planificarea inventarului forestier, este important să "
+"vă definiți în mod clar obiectivele, tipurile de suprafețe de probă care vor"
+" fi utilizate, precum și datele care vor fi colectate în vederea atingerii "
+"obiectivelor. Pentru fiecare caz în parte, acestea vor depinde de tipul "
+"pădurii și de scopul managementului; ar trebui să fie planificate cu atenție"
+" de către cineva cu cunoștințe forestiere. În această lecție, veți crea un "
+"inventar teoretic, bazat pe un design sistematic al suprafețelor de probă."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:16
+msgid ""
+"**The goal for this lesson:** To create a systematic sampling plot design to"
+" survey the forest area."
+msgstr ""
+"**Scopul acestei lecții:** Crearea planului sistematic al suprafețelor de "
+"probă, pentru o vedere de ansamblu a zonei de pădure."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:20
+msgid "Inventorying the Forest"
+msgstr "Inventarierea Pădurii"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:40
+msgid "|basic| |FA| Implementing a Systematic Sampling Plot Design"
+msgstr "|LS| Implementarea unui Plan Sistematic al Suprafețelor de Probă"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:50
+msgid ""
+"In practice, you simply need to represented the sample plots as points that "
+"will be used by the field teams later:"
+msgstr ""
+"În practică, trebuie pur și simplu să reprezentăm suprafețele de probă sub "
+"formă de puncte, care vor fi folosite ulterior de către echipele din teren:"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:53
+msgid "Open your :kbd:`digitizing_2012.qgs` project from the previous lesson."
+msgstr "Deschideți proiectul :kbd:`digitizing_2012.qgs` "
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:54
+msgid "Remove all the layers except for :kbd:`forest_stands_2012`."
+msgstr "Eliminați toate straturile, cu excepția :kbd:`forest_stands_2012`."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:55
+msgid "Save your project now as :kbd:`forest_inventory.qgs`"
+msgstr "Salvați proiectul dumneavoastră ca :kbd:`forest_inventory.qgs`"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:57
+msgid ""
+"Now you need to create a rectangular grid of points separated 80 meters from"
+" each other:"
+msgstr ""
+"Acum trebuie să creați o rețea dreptunghiulară de puncte separate, aflate la"
+" 80 de metri unul de altul:"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:59
+msgid "Open :menuselection:`Vector --> Research Tools --> Regular points`."
+msgstr ""
+"Deschideți :menuselection:`Vector --> Research Tools --> Regular points`."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:60
+msgid ""
+"In the :guilabel:`Area` definitions select :guilabel:`Input Boundary Layer`."
+msgstr ""
+"În definițiile :guilabel:`Ariei`, selectați :guilabel:`Input Boundary "
+"Layer`."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:61
+msgid "And as input layer set the :kbd:`forest_stands_2012` layer."
+msgstr "Iar ca și strat de intrare alegeți :kbd:`forest_stands_2012`."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:62
+msgid ""
+"In the :guilabel:`Grid Spacing` settings, select :guilabel:`Use this point "
+"spacing` and set it to :kbd:`80`."
+msgstr ""
+"În setările de :guilabel:`Spațiere a Grilei`, selectați :guilabel:`Folosirea"
+" acestei spațieri între puncte` și stabiliți-o la :kbd:`80`."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:63
+msgid ""
+"Save the output as :kbd:`systematic_plots.shp` in the "
+":kbd:`forestry\\\\sampling\\\\` folder."
+msgstr ""
+"Salvați rezultatul ca :kbd:`systematic_plots.shp`, în folderul "
+":kbd:`forestry\\\\sampling\\\\`."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:64
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:85
+msgid "Check :guilabel:`Add result to canvas`."
+msgstr "Bifați caseta :guilabel:`Add result to canvas`."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:65
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:86
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:103
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:129
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:159
+msgid "Click :guilabel:`OK`."
+msgstr "Clic pe :guilabel:`OK`"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:74
+msgid ""
+"You notice that the tool has used the whole extent of your stands layer to "
+"generate a rectangular grid of points. But you are only interested on those "
+"points that are actually inside your forest area (see the images below):"
+msgstr ""
+"Observați că instrumentul a folosit întreaga extindere a stratului de "
+"arboret, pentru a genera o grilă dreptunghiulară de puncte. Însă, vă "
+"interesează doar acele puncte care se află în interiorul suprafeței de "
+"pădure (a se vedea imaginile de mai jos):"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:81
+msgid "Open :menuselection:`Vector --> Geoprocessing Tools --> Clip`."
+msgstr "Deschideți :menuselection:`Vector --> Geoprocessing Tools --> Clip`."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:82
+msgid "Select :kbd:`systematic_plots` as :guilabel:`Input vector layer`."
+msgstr ""
+"Selectați :kbd:`systematic_plots` ca :guilabel:`Strat vectorial de intrare`."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:83
+msgid "Set :kbd:`forest_stands_2012` as the :guilabel:`Clip layer`."
+msgstr "Setați :kbd:`forest_stands_2012` ca și :guilabel:`Strat de decupare`."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:84
+msgid "Save the result as :kbd:`systematic_plots_clip.shp`."
+msgstr "Salvați rezultatul ca și :kbd:`systematic_plots_clip.shp`."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:99
+msgid ""
+"Open the :guilabel:`Layer Properties --> Labels` for your "
+":kbd:`systematic_plots_clip`."
+msgstr ""
+"Deschideți :guilabel:`Layer Properties --> Labels` pentru "
+":kbd:`systematic_plots_clip`."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:100
+msgid ""
+"Check :guilabel:`Label this layer with` and select the field :kbd:`ID`."
+msgstr ""
+"Bifați :guilabel:`Label this layer with`, apoi selectați câmpul :kbd:`ID`."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:101
+msgid ""
+"Go to the :guilabel:`Buffer` options and check the :guilabel:`Draw text "
+"buffer`, set the :guilabel:`Size` to :kbd:`1`."
+msgstr ""
+"Mergeți la opțiunile :guilabel:`Tamponului` și bifați :guilabel:`Desenare "
+"tampon în jurul textului`, apoi setați :guilabel:`Mărimea` la :kbd:`1`."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:105
+msgid ""
+"Now look at the labels on your map. You can see that the points have been "
+"created and numbered first West to East and then North to South. If you look"
+" at the attribute table again, you will notice that the order in the table "
+"is following also that pattern. Unless you would have a reason to name the "
+"sample plots in a different way, naming them in a West-East/North-South "
+"fashion follows a logical order and is a good option."
+msgstr ""
+"Acum, priviți etichetele de pe hartă. Puteți vedea că punctele au fost "
+"create și numerotate mai întâi de la vest înspre est și apoi de la nord "
+"înspre sud. Dacă priviți iarăși la tabela de atribute, veți observa că "
+"ordinea din tabel urmează, de asemenea, acest model. Numai dacă aveți un alt"
+" motiv pentru a denumi suprafețele de probă într-un mod diferit, modul de "
+"denumire Vest-Est/Nord-Sud urmează o ordine logică și reprezintă o opțiune "
+"bună."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:112
+msgid ""
+"If you would like to order or name them in a different way, you could use a "
+"spreadsheet to be able to order and combine rows and columns in any "
+"different way."
+msgstr ""
+"În cazul în care doriți să le ordonați sau să le denumiți într-un mod "
+"diferit, ați putea folosi o foaie de calcul pentru a ordona și combina "
+"rândurile și coloanele în oricare alt mod."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:120
+msgid ""
+"Go to the :guilabel:`Attribute table` for :kbd:`systematic_plots_clip`."
+msgstr ""
+"Deschideți :guilabel:`Tabelul de atribute` pentru "
+":kbd:`systematic_plots_clip`."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:121
+msgid "Enable the edit mode."
+msgstr "Activați modul de editare."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:122
+msgid ""
+"Open the :guilabel:`Field calculator` and name the new column "
+":kbd:`Plot_id`."
+msgstr ""
+"Deschideți :guilabel:`Calculatorul de câmpuri`, apoi denumiți noua coloană "
+":kbd:`Plot_id`."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:123
+msgid "Set the :guilabel:`Output field type`to :kbd:`Text (string)`."
+msgstr "Setați :guilabel:`Output field type` la :kbd:`Text (string)`."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:130
+msgid "Disable the edit mode and save your changes."
+msgstr "Dezactivați modul de editare și salvați modificările."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:140
+msgid "|basic| |FA| Exporting Sample Plots as GPX format"
+msgstr "|basic| |FA| Exportați Suprafețele de Probă în format GPX"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:150
+msgid ""
+"Right click :kbd:`systematic_plots_clip` and select :guilabel:`Save as`."
+msgstr ""
+"Clic dreapta pe :kbd:`systematic_plots_clip`, apoi selectați :guilabel:`Save"
+" as`."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:151
+msgid "In :guilabel:`Format` select :guilabel:`GPS eXchange Format [GPX]`."
+msgstr ""
+"În :guilabel:`Format` selectați :guilabel:`GPS eXchange Format [GPX]`."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:152
+msgid "Save the output as :kbd:`plots_wgs84.gpx`."
+msgstr "Salvați rezultatul ca :kbd:`plots_wgs84.gpx`."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:153
+msgid "In :guilabel:`CRS` select :guilabel:`Selected CRS`."
+msgstr "În :guilabel:`CRS` alegeți :guilabel:`CRS-ul Selectat`."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:154
+msgid "Browse for :kbd:`WGS 84 (EPSG:4326)`."
+msgstr "Alegeți :kbd:`WGS 84 (EPSG:4326)`."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:175
+msgid "Save your QGIS project now."
+msgstr "Salvați acum proiectul dvs. QGIS."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:178
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:186
+msgid "|WN|"
+msgstr "|WN|"

@@ -1,0 +1,355 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# Harrissou Sant-anna, 2020
+# ThomasIdgeo <thomas.michel@idgeo.fr>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:31+0000\n"
+"Last-Translator: ThomasIdgeo <thomas.michel@idgeo.fr>, 2020\n"
+"Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:7
+msgid "Geometry Checker Plugin"
+msgstr "Extension Vérificateur de géométrie"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:9
+msgid ""
+"Geometry Checker is a powerful core plugin to check and fix the geometry "
+"validity of a layer. It is available from the :menuselection:`Vector` menu "
+"(|geometryChecker| :menuselection:`Check Geometries...`)."
+msgstr ""
+"Le Vérificateur de géométrie fait partie des extensions principales de QGGIS"
+" et permet de vérifier et corriger la validité d'une géométrie d'une couche."
+" Il est accessible, si activé, depuis le menu :menuselection:`Vecteur` "
+"(|geometryChecker| :menuselection:`Vérifier les géométries...`)."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:14
+msgid "Configuring the checks"
+msgstr "Configurer les vérifications "
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:16
+msgid ""
+"The :guilabel:`Check Geometries` dialog shows different grouped settings in "
+"the first tab (:guilabel:`Setup`):"
+msgstr ""
+"La boîte de dialogue :guilabel:`Vérifier les géométries` montre différents "
+"paramètres groupés dans le premier onglet (:guilabel:`Organisation`) :"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:19
+msgid ""
+":guilabel:`Input vector layers`: to select the layers to check. A |checkbox|"
+" :guilabel:`Only selected features` checkbox can be used to restrict the "
+"checking to the geometries of the selected features."
+msgstr ""
+":guilabel:`Couches vectorielles en entrée` : pour sélectionner les couches à"
+" vérifier. Une case à cocher |checkbox| :guilabel:`Uniquement les entités "
+"sélectionnées` peut être utilisée pour limiter le contrôle aux géométries "
+"des éléments sélectionnés."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:22
+msgid ""
+":guilabel:`Allowed geometry types`: to allow only some geometry types like "
+"point, multipoint, line, multiline, polygon and multipolygon."
+msgstr ""
+":guilabel:`Types de géométrie autorisés` : pour n'autoriser que certains "
+"types de géométrie; au choix entre point, multi-point, ligne, multi-ligne, "
+"polygone et multi-polygone."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:24
+msgid ""
+":guilabel:`Geometry validity`: depending on geometry types, the user can "
+"choose |checkbox| :guilabel:`Self intersections`, |checkbox| "
+":guilabel:`Duplicate nodes`, |checkbox| :guilabel:`Self contacts` and "
+"|checkbox| :guilabel:`Polygon with less than 3 nodes`."
+msgstr ""
+":guilabel:`Validité de géométrie` : selon le type de géométrie, "
+"l'utilisateur peut choisir |checkbox| :guilabel:`Auto-intersections`, "
+"|checkbox| :guilabel:`nœuds dupliqués`, |checkbox| :guilabel:`Auto-contacts`"
+" et |checkbox|::guilabel:`Polygon avec au moins 3 nœuds`."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:28
+msgid ""
+":guilabel:`Geometry properties`: depending on geometry types, the user can "
+"choose |checkbox| :guilabel:`Polygons and multipolygons may not contain any "
+"holes`, |checkbox| :guilabel:`Multipart objects must consist of more than "
+"one part` and |checkbox| :guilabel:`Lines must not have dangles`."
+msgstr ""
+":guilabel:`Propriétés de la géométrie` : selon le type de géométrie, "
+"l'utilisateur peut choisir |checkbox| :guilabel:`Les polygones et multi "
+"polygones ne doivent pas avoir de trou`, |checkbox| :guilabel:`Les objets "
+"multi parties doivent comporter plusieurs parties` et |checkbox| "
+":guilabel:`Les lignes ne doivent pas avoir de nœud isolé`."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:32
+msgid ""
+":guilabel:`Geometry conditions`: user can add some condition to validate the"
+" geometries with a minimal segment length, a minimum angle between segment, "
+"a minimal polygon area and sliver polygons detection."
+msgstr ""
+":guilabel:`Conditions géométriques` : l'utilisateur peut ajouter des "
+"conditions pour valider les géométries en précisant une longueur minimale de"
+" segment, un angle minimal entre les segments, une superficie minimale de "
+"polygones et la détection de polygones fins."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:35
+msgid ""
+":guilabel:`Topology checks`: depending on geometry types, the user can "
+"choose |checkbox| :guilabel:`Checks for duplicates`, |checkbox| "
+":guilabel:`Checks for features within other features`, |checkbox| "
+":guilabel:`Checks for overlaps smaller than` |selectNumber|, |checkbox| "
+":guilabel:`Checks for gaps smaller than` |selectNumber|, |checkbox| "
+":guilabel:`Points must be covered by lines`, |checkbox| :guilabel:`Points "
+"must properly lie inside a polygon`, |checkbox| :guilabel:`Lines must not "
+"intersect any other lines`, |checkbox| :guilabel:`Lines must not intersect "
+"with features of layer` |selectString|, |checkbox| :guilabel:`Polygons must "
+"follow boundaries of layer` |selectString|."
+msgstr ""
+":guilabel:`Vérifier la topologie` : selon le type de géométrie, "
+"l'utilisateur peut choisir |checkbox| :guilabel:`Chercher des doublons`, "
+"|checkbox| :guilabel:`Chercher des entités à l'intérieur d'autres entités`, "
+"|checkbox| :guilabel:`Vérifier les chevauchements inférieurs à` "
+"|selectNumber|, |checkbox| :guilabel:`Vérifier les espaces plus petits que` "
+"|selectNumber|, |checkbox| :guilabel:`Les points doivent être couverts par "
+"des lignes`, |checkbox| :guilabel:`Les points doivent se trouver à "
+"l'intérieur d'un polygone`, |checkbox| :guilabel:`Les lignes ne doivent pas "
+"croiser d'autres lignes`, |checkbox| :guilabel:`Les lignes ne doivent pas se"
+" croiser avec les entités de la couche` |selectString|, |checkbox| "
+":guilabel:`Les polygones doivent suivre les limites de la couche` "
+"|selectString|."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:45
+msgid ""
+":guilabel:`Tolerance`: you can define the tolerance of the check in map "
+"layer units."
+msgstr ":guilabel:`Tolérance`: définition de la tolérance des contrôles"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:47
+msgid ""
+":guilabel:`Output vector layer` gives the choice to the user how get the "
+"result between modify the current layer and create a new layer."
+msgstr ""
+":guilabel:`Couche vectorielle de sortie` donne le choix à l'utilisateur "
+"entre modifier la couche courante et créer une nouvelle couche."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:50
+msgid ""
+"When you are happy with the configuration, you can click on the "
+":guilabel:`Run` button."
+msgstr ""
+"Une fois que vous êtes satisfait de la configuration, vous pouvez cliquer "
+"sur le bouton :guilabel:`Exécuter`."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:59
+msgid "The Geometry Checker Plugin"
+msgstr "L'extension de vérification de géométrie"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:62
+msgid "The *Geometry Checker Plugin* can find the following errors:"
+msgstr ""
+"L'extension de vérification de géométrie peut chercher les types d'erreurs "
+"suivantes :"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:64
+msgid "Self intersections: a polygon with a self intersection;"
+msgstr "Auto-intersections : un polygone avec une auto-intersection ;"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:65
+msgid "Duplicate nodes: two duplicates nodes in a segment;"
+msgstr ""
+"Nœuds dupliqués : deux nœuds dupliqués au même endroit sur un segment ;"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:66
+msgid "Holes: hole in a polygon;"
+msgstr "Trous : trou dans un polygone ;"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:67
+msgid "Segment length: a segment length lower than a threshold;"
+msgstr ""
+"Longueur minimale de segment : une longueur de segment inférieure à un seuil"
+" ;"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:68
+msgid "Minimum angle: two segments with an angle lower than a threshold;"
+msgstr ""
+"Angle minimal entre les segments : deux segments dont l'angle est inférieur "
+"à un seuil ;"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:69
+msgid "Minimum area: polygon area lower than a threshold;"
+msgstr ""
+"Surface minimale de polygone : surface du polygone inférieure à un seuil ;"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:70
+msgid ""
+"Silver polygon: this error come from very small polygon (with small area) "
+"with a large perimeter;"
+msgstr ""
+"Micro Polygone ou polygone fin : cette erreur provient d'un très petit "
+"polygone (avec une petite surface) avec un grand périmètre ;"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:72
+msgid "Duplicates features;"
+msgstr "Entités en double;"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:73
+msgid "Feature within feature;"
+msgstr "Entités à l'intérieur d'autres entités ;"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:74
+msgid "Overlaps: polygon overlapping;"
+msgstr "Chevauchements : recouvrement de polygones ;"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:75
+msgid "Gaps: gaps between polygons."
+msgstr "Interstices : Interstices entre polygones."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:77
+msgid "The following figure shows the different checks made by the plugin."
+msgstr ""
+"La figure suivante montre les différentes vérifications effectuées par le "
+"plugin."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:84
+msgid "Some checks supported by the plugin"
+msgstr "Les différents contrôles pris en charge par l'extension"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:87
+msgid "Analysing the results"
+msgstr "Analyse des résultats"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:89
+msgid ""
+"The results appear in the second tab (:guilabel:`Result`) and as an overview"
+" layer of the errors in the canvas (its name has the default prefix "
+":file:`checked_`). A table lists the :guilabel:`Geometry check result` with "
+"one error per row and columns containing: the layer name, an ID, the error "
+"type, then the coordinates of the error, a value (depending on the type of "
+"the error) and finally the resolution column which indicates the resolution "
+"of the error. At the bottom of this table, you can :guilabel:`Export` the "
+"error into different file formats. You also have a counter with the number "
+"of total errors and fixed ones."
+msgstr ""
+"Les résultats apparaissent dans le deuxième onglet (:guilabel:`Résultats`) "
+"et en tant que couche dans le canevas (son nom a le préfixe par défaut "
+":file:`vérifié_`). La première partie liste le :guilabel:`Résultat de "
+"vérification de géométrie :` avec une erreur par ligne et des colonnes "
+"contenant : le nom de la couche, un ID, le type d'erreur, puis les "
+"coordonnées de l'erreur, une valeur (selon le type de l'erreur) et enfin la "
+"colonne résolution qui indique la résolution de l'erreur. En bas de cette "
+"section, vous pouvez :guilabel:`Exporter` les erreurs dans différents "
+"formats de fichiers. Vous disposez également d'un compteur avec le nombre "
+"total d'erreurs et le nombre d'erreurs corrigées."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:99
+msgid ""
+"You can select a row to see the location of the error. You can change this "
+"behavior by selecting another action between |radioButtonOn| "
+":guilabel:`Error` (default), |radioButtonOff| :guilabel:`Feature`, "
+"|radioButtonOff| :guilabel:`Don't move`, and |checkbox| :guilabel:`Highlight"
+" contour of selected features`."
+msgstr ""
+"Vous pouvez sélectionner une ligne pour voir l'emplacement de l'erreur. Vous"
+" pouvez changer ce comportement en sélectionnant une des actions, entre "
+"|radioButtonOn| :guilabel:`Erreur` (valeur par défaut), |radioButtonOff| "
+":guilabel:`Entité`, |radioButtonOff| :guilabel:`Ne pas déplacer` et "
+"|checkbox| :guilabel:`Mettre en surbrillance le contour des entités "
+"sélectionnées`."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:105
+msgid "Below the zoom action when clicking on the table row, you can:"
+msgstr ""
+"Lorsqu'une ligne est sélectionnée vous pouvez choisir, en dessous de la "
+"partie déplacement, de :"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:107
+msgid ""
+"|fromSelectedFeature| :guilabel:`Show selected features in attribute table`;"
+msgstr ""
+"|fromSelectedFeature| :guilabel:`Montrer les entités sélectionnées dans la "
+"table d'attributs` ;"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:108
+msgid "|success| :guilabel:`Fix selected errors using default resolution`;"
+msgstr ""
+"|success| :guilabel:`Corriger les erreurs sélectionnées en utilisant la "
+"correction par défaut` ;"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:109
+msgid ""
+"|success| :guilabel:`Fix selected errors, prompt for resolution method`. You"
+" will see a window to choose the resolution's method among which:"
+msgstr ""
+"|success| :guilabel:`Corriger les erreurs sélectionnées en demandant quelle "
+"méthode de correction utiliser`. Une fenêtre s'affiche pour choisir une "
+"méthode parmi :"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:112
+msgid "Merge with neighboring polygon with longest shared edge;"
+msgstr "Fusionner avec le polygone voisin ayant la plus longue limite commune"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:113
+msgid "Merge with neighboring polygon with largest area;"
+msgstr "Fusionner avec le polygone voisin ayant la plus grande surface"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:114
+msgid ""
+"Merge with neighboring polygon with identical attribute value, if any, or "
+"leave as is;"
+msgstr ""
+"Fusionner avec le polygone voisin ayant la même valeur d'attribut, si "
+"présenté, ou ne rien modifier"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:116
+msgid "Delete feature;"
+msgstr "supprimer l'entité,"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:117
+msgid "No action."
+msgstr "Aucune action"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:119
+msgid "**Fix multiple errors**"
+msgstr "**Correction d'erreurs multiples**"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:121
+msgid ""
+"You can fix multiple errors by selecting more than one row in the table with"
+" the *CTRL + click* action."
+msgstr ""
+"*CTRL + clic* vous permet de sélectionner plusieurs lignes dans la table "
+"afin de corriger toutes ces erreurs en même temps."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:124
+msgid ""
+"The default action can be changed with the last icon |options| "
+":guilabel:`Error resolution settings` For some type of errors, you can "
+"change the default action between some specific action or :guilabel:`No "
+"action`."
+msgstr ""
+"L'action par défaut peut être modifiée avec la dernière icône |options| "
+":guilabel:`Paramètres de correction d'erreur`. Pour certains types "
+"d'erreurs, vous pouvez modifier l'action par défaut entre une action "
+"spécifique ou :guilabel:`Aucune action`."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_geometry_checker.rst:128
+msgid ""
+"Finally, you can choose which :guilabel:`attribute to use when merging "
+"features by attribute value`."
+msgstr ""
+"Enfin, vous pouvez choisir :guilabel:`attribut utilisé lors de la fusion "
+"d'entités par valeur d'attribut`."

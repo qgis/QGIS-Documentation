@@ -1,0 +1,292 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:22+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/training_manual/processing/no_data.rst:2
+msgid "The raster calculator. No-data values"
+msgstr "ラスター計算機。無データ値"
+
+#: ../../docs/training_manual/processing/no_data.rst:5
+msgid ""
+"In this lesson we will see how to use the raster calculator to perform some "
+"operations on raster layers. We will also explain what are no--data values "
+"and how the calculator and other algorithms deal with them"
+msgstr ""
+"このレッスンでは、ラスターレイヤーの上にいくつかの操作を実行するために、ラスター計算機を使用する方法について説明します。また、無データ値とは何か、それを計算機や他のアルゴリズムがどのように計算し処理するか、説明します。"
+
+#: ../../docs/training_manual/processing/no_data.rst:8
+msgid ""
+"The raster calculator is one of the most powerful algorithms that you will "
+"find. It's a very flexible and versatile algorithm that can be used for many"
+" different calculations, and one that will soon become an important part of "
+"your toolbox."
+msgstr ""
+"ラスター計算機は、あなたが見つける最も強力なアルゴリズムの一つです。それは多くの異なる計算に使用できる非常に柔軟で汎用性の高いアルゴリズムで、すぐにあなたのツールボックスの重要な一部となるであろうものです。"
+
+#: ../../docs/training_manual/processing/no_data.rst:10
+msgid ""
+"In this lesson we will be performing some calculation with the raster "
+"calculator, most of them rather simple. This will let us see how it is used "
+"and how it deals with some particular situations that it might find. "
+"Understanding that is important to later get the expected results when using"
+" the calculator, and also to understand certain techniques that are commonly"
+" applied with it."
+msgstr ""
+"このレッスンでは、それらのほとんどはかなり単純、ラスター計算機で、いくつかの計算を実行します。これは、私たちはそれを使用する方法を見て、それはそれを見つけるかもしれないいくつかの特別な状況を扱う方法をできるようになります。それを理解することは、一般的にそれに適用される特定の技術を理解するためにも、計算機を使用して、いつ後で期待される結果を取得することが重要です。"
+
+#: ../../docs/training_manual/processing/no_data.rst:12
+msgid ""
+"Open the QGIS project corresponding to this lesson and you will see that it "
+"contains several raster layers."
+msgstr "このレッスンに対応するQGISプロジェクトを開きます。それにいくつかのラスターレイヤーが含まれていることがわかるでしょう。"
+
+#: ../../docs/training_manual/processing/no_data.rst:14
+msgid ""
+"Now open the toolbox and open the dialog corresponding to the raster "
+"calculator."
+msgstr "今すぐツールボックスを開き、ラスター計算機に対応するダイアログを開きます。"
+
+#: ../../docs/training_manual/processing/no_data.rst:18
+msgid "The interface is different in recent versions."
+msgstr "インターフェイスは、最近のバージョンで異なります。"
+
+#: ../../docs/training_manual/processing/no_data.rst:20
+msgid "The dialog contains 2 parameters."
+msgstr "ダイアログには、2つのパラメーターが含まれています。"
+
+#: ../../docs/training_manual/processing/no_data.rst:22
+msgid ""
+"The layers to use for the analysis. This is a multiple input, that meaning "
+"that you can select as many layers as you want. Click on the button on the "
+"right--hand side and then select the layers that you want to use in the "
+"dialog that will appear."
+msgstr ""
+"分析に使用するレイヤー。これは複数の入力、望むだけ多くのレイヤーを選択できる意味です。右のボタンをクリックして - "
+"手側と、表示されるダイアログで使用したいレイヤーを選択します。"
+
+#: ../../docs/training_manual/processing/no_data.rst:23
+msgid ""
+"The formula to apply. The formula uses the layers selected in the above "
+"parameter, which are named using alphabet letters (``a, b, c...``) or ``g1, "
+"g2, g3...`` as variable names. That is, the formula ``a + 2 * b`` is the "
+"same as ``g1 + 2 * g2`` and will compute the sum of the value in the first "
+"layer plus two times the value in the second layer. The ordering of the "
+"layers is the same ordering that you see in the selection dialog."
+msgstr ""
+"適用する式。式は、変数名として (``a, b, c...``) "
+"アルファベット文字を使用して命名された上記パラメーターで選択されたレイヤーを使用するか、または ``g1, g2, g3...`` 。すなわち、式 "
+"``a + 2 * b`` が  ``g1 + 2 * g2`` "
+"と同じであり、第一レイヤーに第二レイヤーにおけるプラス2倍の値を値の和を計算する、です。レイヤーの順序付けは選択ダイアログに表示されるのと同じ順序です。"
+
+#: ../../docs/training_manual/processing/no_data.rst:25
+msgid "The calculator is case sensitive."
+msgstr "計算機では、大文字と小文字が区別されます。"
+
+#: ../../docs/training_manual/processing/no_data.rst:27
+msgid ""
+"To start with, we will change the units of the DEM from meters to feet. The "
+"formula we need is the following one:"
+msgstr "手始めに、メートルからフィートにDEMの単位を変更します。必要とする計算式は、次のいずれかです。"
+
+#: ../../docs/training_manual/processing/no_data.rst:33
+msgid ""
+"Select the DEM in the layers field and type ``a * 3.28084`` in the formula "
+"field."
+msgstr "レイヤーフィールド内でDEMを選択し、式フィールドに ``a * 3.28084`` とタイプします。"
+
+#: ../../docs/training_manual/processing/no_data.rst:35
+msgid "For non English users: use always \".\", not \",\"."
+msgstr "英語以外のユーザーの場合：常に「.」（「,」ではない）を使用してください。"
+
+#: ../../docs/training_manual/processing/no_data.rst:37
+msgid ""
+"Click *Run* to run the algorithm. You will get a layer that has the same "
+"appearance of the input layer, but with different values. The input layer "
+"that we used has valid values in all its cells, so the last parameter has no"
+" effect at all."
+msgstr ""
+"アルゴリズムを実行するために *実行* "
+"をクリックしてください。入力レイヤーの同じ外観を有するレイヤーを得るが、異なる値となります。私たちが使用した入力レイヤーは、そのすべてのセル内の有効な値を持っているので、最後のパラメーターはまったく効果がありません。"
+
+#: ../../docs/training_manual/processing/no_data.rst:39
+msgid ""
+"Let's now perform another calculation, this time on the *accflow* layer. "
+"This layer contains values of accumulated flow, a hydrological parameter. It"
+" contains those values only within the area of a given watershed, with no--"
+"data values outside of it. As you can see, the rendering is not very "
+"informative, due to the way values are distributed. Using the logarithm of "
+"that flow accumulation will yield a much more informative representation. We"
+" can calculate that using the raster calculator."
+msgstr ""
+"それでは別の計算を実行してみましょう。今回は *accflow* "
+"レイヤーについて行います。このレイヤーは、積算流量、水文学的パラメーターの値が含まれています。それの外部データ値 - "
+"それがないと、のみ所与流域の領域内でこれらの値を含んでいます。おわかりのように、レンダリングは、値が分散されている方法に起因する非常に有益ではありません。その流れの蓄積の対数を使用すると、はるかに有益な表現が得られます。ラスター計算機を使用してそれを計算できます。"
+
+#: ../../docs/training_manual/processing/no_data.rst:41
+msgid ""
+"Open the algorithm dialog again, select the *accflow* layer as the only "
+"input layer, and enter the following formula: ``log(a)``."
+msgstr ""
+"再びアルゴリズムダイアログを開き、入力レイヤーとして *accflow* レイヤーだけを選択し、次の式を入力します： ``log(a)`` 。"
+
+#: ../../docs/training_manual/processing/no_data.rst:43
+msgid "Here is the layer that you will get."
+msgstr "これが得られるレイヤーです。"
+
+#: ../../docs/training_manual/processing/no_data.rst:47
+msgid ""
+"If you select the *Identify* tool to know the value of a layer at a given "
+"point, select the layer that we have just created, and click on a point "
+"outside of the basin, you will see that it contains a no--data value."
+msgstr ""
+"与えられた点でのレイヤーの値を知るために *識別* "
+"ツールを選択し、たった今作成したレイヤーを選択し、流域の外でポイントをクリックすると、無データ値が含まれていることがわかるでしょう。"
+
+#: ../../docs/training_manual/processing/no_data.rst:51
+msgid ""
+"For the next exercise we are going to use two layers instead of one, and we "
+"are going to get a DEM with valid elevation values only within the basin "
+"defined in the second layer. Open the calculator dialog and select both "
+"layers of the project in the input layers field. Enter the following formula"
+" in the corresponding field:"
+msgstr ""
+"次の演習のためには1つではなく2つのレイヤーを使用しようとしていて、第二のレイヤーで定義された流域内だけで有効な標高値を持つDEMを得ようとしています。計算機ダイアログを開き、入力レイヤーフィールドにプロジェクトの両方のレイヤーを選択します。対応するフィールドに次の式を入力します："
+
+#: ../../docs/training_manual/processing/no_data.rst:57
+msgid ""
+"``a`` refers to the accumulated flow layer (since it is the first one to "
+"appear in the list) and ``b`` refers to the DEM. What we are doing in the "
+"first part of the formula here is to divide the accumulated flow layer by "
+"itself, which will result in a value of 1 inside the basin, and a no--data "
+"value outside. Then we multiply by the DEM, to get the elevation value in "
+"those cells inside the basin (``DEM * 1 = DEM``) and the no--data value "
+"outside (``DEM * no_data = no_data``)"
+msgstr ""
+"``a`` は、積算流量のレイヤーを指し（リストに表示される最初のものであるため）、 ``b`` はDEMを指します。外部データ値 - "
+"ここで式の最初の部分でしていることはそれ自体で積算流量レイヤーを割ることです。この結果は流域内で値1、外でデータなし値です。それからDEMを掛け、流域内でそれらのセルの標高値"
+" （ ``DEM * 1 = DEM`` ）、外でデータなし値（ ``DEM * no_data = no_data`` ）を得ます"
+
+#: ../../docs/training_manual/processing/no_data.rst:59
+msgid "Here is the resulting layer."
+msgstr "結果のレイヤーはこれです。"
+
+#: ../../docs/training_manual/processing/no_data.rst:64
+msgid ""
+"This technique is used frequently to *mask* values in a raster layer, and is"
+" useful whenever you want to perform calculations for a region other that "
+"the arbitrary rectangular region that is used by raster layer. For instance,"
+" an elevation histogram of a raster layer doesn't have much meaning. If it "
+"is instead computed using only values corresponding to a basin (as in he "
+"case above), the result that we obtain is a meaningful one that actually "
+"gives information about the configuration of the basin."
+msgstr ""
+"この技術は、ラスターレイヤー内で値を *マスク* "
+"するために頻繁に使用され、ラスターレイヤーによって使用される任意の矩形領域でない領域のための計算を実行したいときはいつでも有用です。例えば、ラスターレイヤーの標高ヒストグラムはあまり意味を持ちません。代わりそれが流域に対応する値のみを使用して（上記の場合のように）計算される場合、得られる結果は実際に流域の構成についての情報を与える有意味なものです。"
+
+#: ../../docs/training_manual/processing/no_data.rst:66
+msgid ""
+"There are other interesting things about this algorithm that we have just "
+"run, apart from the no--data values and how they are handled. If you have a "
+"look at the extents of the layers that we have multiplied (you can do it "
+"double--clicking on their names of the layer in the table of contents and "
+"looking at their properties), you will see that they are not the same, since"
+" the extent covered by the flow accumulation layer is smaller that the "
+"extent of the full DEM."
+msgstr ""
+"実行してきたこのアルゴリズムについては、無データ値とそれらがどのように処理されるかを別にしても、他に興味深いものがあります。私たちが掛け算しているレイヤーの範囲を見る場合（それは目次のレイヤーの自分の名前をダブルクリックしてそのプロパティを見ることで行うことができます）、同じでないことがわかります、流れ蓄積レイヤーによって覆われる範囲は完全DEMの範囲より小さいので。"
+
+#: ../../docs/training_manual/processing/no_data.rst:68
+msgid ""
+"That means that those layers do not match, and that they cannot be "
+"multiplied directly without homogenizing those sizes and extents by "
+"resampling one or both layers. However, we did not do anything. QGIS takes "
+"care of this situation and automatically resamples input layers when needed."
+" The output extent is the minimum covering extent calculated from the input "
+"layers, and the minimum cell size of their cellsizes."
+msgstr ""
+"それが意味するのは、これらのレイヤーが一致しないこと、1つまたは両方のレイヤーをリサンプリングすることでそれらのサイズと範囲を同じに揃えなければ直接掛け算はできないことです。しかし、私たちは何もしませんでした。QGISではこのような状況の面倒を見てくれて、必要なときに自動的に入力レイヤーをリサンプリングします。出力範囲は、入力レイヤーから計算された最小の被覆範囲、およびそれらセルサイズの最小セルサイズです。"
+
+#: ../../docs/training_manual/processing/no_data.rst:70
+msgid ""
+"In this case (and in most cases), this produces the desired results, but you"
+" should always be aware of the additional operations that are taking place, "
+"since they might affect the result. In cases when this behaviour might not "
+"be the desired, manual resampling should be applied in advance. In later "
+"chapters, we will see more about the behaviour of algorithms when using "
+"multiple raster layers."
+msgstr ""
+"この場合（そしてほとんどの場合）、これは所望の結果を生成しますが、どんな操作が追加で行われているかには常に注意しておく必要があります。なぜならそれらは結果に影響を与える可能性があるからです。この動作が希望されない場合がある場合には、手動のリサンプリングが事前に適用されるべきです。後の章では、複数のラスターレイヤーを使用したときのアルゴリズムの動作について詳細に見るでしょう。"
+
+#: ../../docs/training_manual/processing/no_data.rst:73
+msgid ""
+"Let's finish this lesson with another masking exercise. We are going to "
+"calculate the slope in all areas with an elevation between 1000 and 1500 "
+"meters."
+msgstr ""
+"このレッスンを別のマスク作成の練習で終えましょう。私たちは標高が1000メートルと1500メートルの間のすべての地域で傾きを計算しようとしています。"
+
+#: ../../docs/training_manual/processing/no_data.rst:75
+msgid ""
+"In this case, we do not have a layer to use as a mask, but we can create it "
+"using the calculator."
+msgstr "この場合は、マスクとして使用するレイヤーはありませんが、計算機を使用して作成できます。"
+
+#: ../../docs/training_manual/processing/no_data.rst:77
+msgid ""
+"Run the calculator using the DEM as only input layer and the following "
+"formula"
+msgstr "唯一の入力レイヤーとしてDEMを、そして次式を使用して計算を実行します"
+
+#: ../../docs/training_manual/processing/no_data.rst:83
+msgid ""
+"As you can see, we can use the calculator not only to do simple algebraic "
+"operations, but also to run more complex calculation involving conditional "
+"sentences, like the one above."
+msgstr "おわかりのように、簡単な代数演算を行うためだけでなく、計算機を使用でき、また上記のような条件文を含むより複雑な計算を実行します。"
+
+#: ../../docs/training_manual/processing/no_data.rst:85
+msgid ""
+"The result has a value of 1 inside the range we want to work with, and no-"
+"data in cells outside of it."
+msgstr "結果は、私たちが作業をしたい範囲内で値1、およびそれ以外のセルで無データを持っています。"
+
+#: ../../docs/training_manual/processing/no_data.rst:89
+msgid ""
+"The no-data value comes from the 0/0 expression. Since that is an "
+"undetermined value, SAGA will add a NaN (Not a Number) value, which is "
+"actually handled as a no-data value. With this little trick you can set a "
+"no-data value without needing to know what the no--data value of the cell "
+"is."
+msgstr ""
+"無データ値は0/0の式から来ています。それは未定の値であるので、SAGAは、実際にはデータ値として扱うNaN（非数）の値を、追加します。この小さなトリックを使えば、セルの無データ値が何か知らなくても、無データ値を設定できます。"
+
+#: ../../docs/training_manual/processing/no_data.rst:91
+msgid ""
+"Now you just have to multiply it by the slope layer included in the project,"
+" and you will get the desired result."
+msgstr "今、プロジェクトに含まれる傾斜レイヤーを掛ける必要があるだけで、希望の結果が得られるでしょう。"
+
+#: ../../docs/training_manual/processing/no_data.rst:93
+msgid ""
+"All that can be done in a single operation with the calculator. We leave "
+"that as an exercise for the reader."
+msgstr "すべてのことは、計算機で、単一の操作で行うことができます。これは読者の練習として残しておきます。"

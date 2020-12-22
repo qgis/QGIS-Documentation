@@ -1,0 +1,1804 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# DiGro, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:28+0000\n"
+"Last-Translator: DiGro, 2020\n"
+"Language-Team: Dutch (https://www.transifex.com/qgis/teams/6144/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:2
+msgid "Specialized Grid Analysis"
+msgstr "Gespecialiseerde rasteranalyse"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:11
+msgid "D8 Distance To Streams"
+msgstr "D8 afstand tot stromen"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:14
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:64
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:198
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:319
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:407
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:517
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:624
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:679
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:807
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:924
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:979
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1025
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1066
+msgid "Description"
+msgstr "Omschrijving"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:16
+msgid ""
+"Computes the horizontal distance to stream for each grid cell, moving "
+"downslope according to the D8 flow model, until a stream grid cell is "
+"encountered."
+msgstr ""
+"Berekent de horizontale afstand tot de stroom voor elke cel van het raster, "
+"neerwaarts verplaatsend overeenkomstig het D8 stroommodel, totdat een stroom"
+" van een cel van het raster wordt tegengekomen."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:20
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:123
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:258
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:354
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:421
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:536
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:644
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:737
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:865
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:948
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:985
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1033
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1071
+msgid "Parameters"
+msgstr "Parameters"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:26
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:991
+msgid "``D8 Flow Direction Grid`` [raster]"
+msgstr "``D8 raster stroomrichting`` [raster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:23
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:988
+msgid ""
+"This input is a grid of flow directions that are encoded using the D8 method"
+" where all flow from a cells goes to a single neighboring cell in the "
+"direction of steepest descent. This grid can be obtained as the output of "
+"the **\"D8 Flow Directions\"** tool."
+msgstr ""
+"Deze invoer is een raster van stroomrichtingen die zijn gecodeerd met behulp"
+" van de methode D8 waarbij alle stroom vanuit een cel naar één enkele "
+"buurcel gaat in de richting van de steilste afdaling. Dit raster kan worden "
+"verkregen als de uitvoer van het gereedschap **\"D8 Stroomrichtingen\"**."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:37
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:439
+msgid "``Stream Raster Grid`` [raster]"
+msgstr "``Stroom raster grid`` [raster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:29
+msgid ""
+"A grid indicating streams. Such a grid can be created by several of the "
+"tools in the **\"Stream Network Analysis\"** toolset. However, the tools in "
+"the **\"Stream Network Analysis\"** toolset only create grids with a value "
+"of 0 for no stream, or 1 for stream cells. This tool can also accept grids "
+"with values greater than 1, which can be used in conjunction with the "
+"``Threshold`` parameter to determine the location of streams. This allows "
+"Contributing Area grids to be used to define streams as well as the normal "
+"Stream Raster grids. This grid expects integer (long integer) values and any"
+" non-integer values will be truncated to an integer before being evaluated."
+msgstr ""
+"Een raster dat stromen aangeeft. Een dergelijk raster kan worden gemaakt "
+"door verscheidene gereedschappen in de verzameling **\"Stroomnetwerk-"
+"analyse\"**. Echter, de gereedschappen in de verzameling **\"Stroomnetwerk-"
+"analyse\"** maakt alleen rasters met een waarde van 0 voor geen stroom, of 1"
+" voor stroomcellen. Dit gereedschap kan ook rasters accepteren met waarden "
+"groter dan 1, die in samenwerking kunnen worden gebruikt met de parameter "
+"``Drempel`` om de locatie van stromen te bepalen. Dit maakt het mogelijk dat"
+" rasters deelnemend gebied worden gebruikt om stromen te definiëren als ook "
+"de normale Stroomrasters. Dit raster verwacht waarden geheel getal (long "
+"integer) en alle niet geheel getal-waarden zullen worden worden afgekort tot"
+" een geheel getal voordat zij worden geëvalueerd."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:44
+msgid "``Threshold`` [number]"
+msgstr "``Drempel`` [getal]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:40
+msgid ""
+"This value acts as threshold on the ``Stream Raster Grid`` to determine the "
+"location of streams. Cells with a ``Stream Raster Grid`` value  greater than"
+" or equal to the ``Threshold`` value are interpreted as streams."
+msgstr ""
+"Deze waarde acteert als drempel voor het ``Stroomraster`` om de locatie van "
+"de stromen te bepalen. Cellen met een waarde ``Stroomraster`` groter dan of "
+"gelijk aan de waarde van de ``Drempel`` worden geïnterpreteerd als stromen."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:44
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1005
+msgid "Default: *50*"
+msgstr "Standaard: *50*"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:47
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:173
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:302
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:389
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:500
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:607
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:655
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:776
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:898
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:962
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1008
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1047
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1085
+msgid "Outputs"
+msgstr "Uitvoer"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:51
+msgid "``Output Distance to Streams`` [raster]"
+msgstr "``Uitvoer afstand tot stromen`` [raster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:50
+msgid ""
+"A grid giving the horizontal distance along the flow path as defined by the "
+"D8 Flow Directions Grid to the streams in the Stream Raster Grid."
+msgstr ""
+"Een raster dat de horizontale afstand geeft langs het stroompad, zoals "
+"gedefinieerd door het raster D8 stroomrichtingen tot de stromen in het "
+"Stroomraster."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:53
+msgid "**Algorithm ID**: ``taudem:d8hdisttostrm``"
+msgstr "**ID algoritme**: ``taudem:d8hdisttostrm``"
+
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+msgid ""
+"The *algorithm id* is displayed when you hover over the algorithm in the "
+"Processing Toolbox. The *parameter dictionary* provides the parameter NAMEs "
+"and values. See :ref:`processing_console` for details on how to run "
+"processing algorithms from the Python console."
+msgstr ""
+"Het *ID voor het algoritme* wordt weergegeven als u over het algoritme gaat "
+"met de muisaanwijzer in de Toolbox van Processing. Het *woordenboek voor de "
+"parameters* verschaft de NAME's en waarden van de parameters. Bekijk "
+":ref:`processing_console` voor details over hoe algoritmen van Processing "
+"uit te voeren vanuit de console voor Python."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:61
+msgid "D-Infinity Avalanche Runout"
+msgstr "D-oneindigheid lawine uitloop"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:66
+msgid ""
+"Identifies an avalanche's affected area and the flow path length to each "
+"cell in that affacted area. All cells downslope from each source area cell, "
+"up to the point where the slope from the source to the affected area is less"
+" than a threshold angle called the Alpha Angle can be in the affected area. "
+"This tool uses the D-infinity multiple flow direction method for determining"
+" flow direction. This will likely cause very small amounts of flow to be "
+"dispersed to some downslope cells that might overstate the affected area, so"
+" a threshold proportion can be set to avoid this excess dispersion. The flow"
+" path length is the distance from the cell in question to the source cell "
+"that has the highest angle."
+msgstr ""
+"Identificeert een door een lawine beïnvloed gebied en de lengte van het "
+"stroompad tot elke cel in dat beïnvloede gebied. Alle neerwaartse cellen "
+"vanuit elke broncel, tot aan het punt waar de helling van de bron kleiner is"
+" dan een hoek als drempel, Alfahoek genoemd, kan in het beïnvloede gebied "
+"liggen. Dit gereedschap gebruikt de methode D-oneindigheid stroomrichting "
+"voor het bepalen van de stroomrichting. Dit zal er waarschijnlijk voor "
+"zorgen dat zeer kleine hoeveelheden stroom worden verspreid over enkele "
+"neerwaartse cellen die het beïnvloede gebied groter maken, dus een drempel "
+"als proportie kan worden ingesteld om deze overmatige verspreiding te "
+"vermijden. De lengte van het stroompad is de afstand van de betrokken cel "
+"tot de broncel die de grootste hoek heeft."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:76
+msgid ""
+"All points downslope from the source area are potentially in the affected "
+"area, but not beyond a point where the slope from the source to the affected"
+" area is less than a threshold angle called the Alpha Angle."
+msgstr ""
+"Alle neerwaartse punten vanaf het brongebied liggen potentieel in het "
+"beïnvloede gebied, maar niet voorbij een punt waar de helling vanaf de bron "
+"tot het beïnvloede gebied kleiner is dan een hoek als drempel, genaamd de "
+"Alfahoek."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:83
+msgid ""
+"Slope is to be measured using the straight line distance from source point "
+"to evaluation point."
+msgstr ""
+"Helling dient te worden gemeten met behulp van de afstand in een rechte lijn"
+" vanaf het bronpunt tot het punt van evaluatie."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:86
+msgid ""
+"It makes more physical sense to me for the angle to be measured along the "
+"flow path. Nevertheless it is equally easy to code straight line angles as "
+"angles along the flow path, so an option that allows switching will be "
+"provided. The most practical way to evaluate avalanche runout is to keep "
+"track of the source point with the greatest angle to each point. Then the "
+"recursive upslope flow algebra approach will look at a grid cell and all its"
+" upslope neighbors that flow to it. Information from the upslope neighbors "
+"will be used to calculate the angle to the grid cell in question and retain "
+"it in the runout zone if the angle exceeds the alpha angle. This procedure "
+"makes the assumption that the maximum angle at a grid cell will be from the "
+"set of cells that have maximum angles to the inflowing neighbors. This will "
+"always be true of angle is calculated along a flow path, but I can conceive "
+"of cases where flow paths bend back on themselves where this would not be "
+"the case for straight line angles."
+msgstr ""
+"Voor mij is het fysiek logischer dat de te meten hoek wordt gemeten langs "
+"het stroompad. Niettegenstaande dat is net zo eenvoudig om hoeken voor "
+"rechte lijnen te coderen als hoeken langs het stroompad, dus zal een optie "
+"die het mogelijk maakt te schakelen beschikbaar worden gesteld. De meest "
+"praktische manier om de uitloop van een lawine te evalueren is om het "
+"bronpunt met de grootste hoek tot elk punt bij te houden. Dan zal de "
+"algebraïsche benadering van recursieve opwaartse stroom kijken naar een cel "
+"van het raster en alle opwaartse buren daarvan die erin stromen. Informatie "
+"van de opwaartse buren zal worden gebruikt om de hoek naar de betrokken cel "
+"te berekenen en die behouden in de zone van de uitloop als de hoek groter is"
+" dan de Alfahoek. Deze procedure neemt aan dat de maximale hoek voor een cel"
+" van het raster uit de verzameling cellen zal komen die maximale hoeken "
+"hebben naar de instromende buren. Dit zal altijd waar zijn als de hoek wordt"
+" berekend langs een stroompad, maar ik kan gevallen bedenken waar "
+"stroompaden terug buigen op zichzelf, waar dit niet het geval zou zijn voor "
+"hoeken van rechte lijnen."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:100
+msgid ""
+"The D-infinity multiple flow direction field assigns flow from each grid "
+"cell to multiple downslope neighbors using proportions (``Pik``) that vary "
+"between 0 and 1 and sum to 1 for all flows out of a grid cell. It may be "
+"desirable to specify a threshold ``T`` that this proportion has to exceed "
+"before a grid cell is counted as flowing to a downslope grid cell, e.g. "
+"``Pik > T`` (=0.2 say) to avoid dispersion to grid cells that get very "
+"little flow. ``T`` will be specified as a user input. If all upslope grid "
+"cells are to be used ``T`` may be input as 0."
+msgstr ""
+"Het veld D-oneindigheid meerdere stroomrichtingen wijst de stroom toe vanuit"
+" elke cel van het raster aan meerdere neerwaartse buren met behulp van "
+"proporties (``Pik``) die variëren tussen 0 en 1 en sommeren tot 1 voor alle "
+"stromen die een cel van het raster uitgaan. het kan gewenst zijn een "
+"drempelwaarde ``T`` te specificeren die deze proportie moeten overschrijden "
+"voordat een cel wordt geteld als stromend naar een neerwaartse cel van het "
+"raster, bijv. ``Pik > T`` (zeg =0.2) om verspreiding naar cellen die heel "
+"weinig stroom krijgen te vermijden. ``T`` zal worden gespecificeerd als een "
+"invoer door ene gebruiker. Als alle opwaartse celen van het raster moeten "
+"worden gebruikt kan ``T`` worden ingevoerd als 0."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:108
+msgid ""
+"Avalanche source sites are to be input as a short integer grid (name suffix "
+":file:`*ass`, e.g. :file:`demass`) comprised of positive values where "
+"avalanches may be triggered and 0 values elsewhere."
+msgstr ""
+"Bronnen van lawines moeten worden ingevoerd als een klein geheel getal-"
+"raster (naam achtervoegsel :file:`*ass`, bijv. :file:`demass`) samengesteld "
+"uit positieve waarden waar lawines kunnen worden geactiveerd en waarden 0 "
+"elders."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:112
+msgid "The following grids are output:"
+msgstr "De volgende rasters zijn uitvoer:"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:114
+msgid ""
+"rz --- A runout zone indicator with value 0 to indicate that this grid cell "
+"is not in the runout zone and value > 0 to indicate that this grid cell is "
+"in the runout zone. Since there may be information in the angle to the "
+"associated source site, this variable will be assigned the angle to the "
+"source site (in degrees)"
+msgstr ""
+"rz --- Een indicator voor de uitloopzone met waarde 0 om aan te geven dat "
+"deze cel van het raster niet in de uitloopzone ligt en waarde > 0 om aan te "
+"geven dat deze cel van het raster wel in de uitloopzone ligt. Omdat er "
+"informatie kan zijn in de hoek naar de geassocieerde bron, zal deze "
+"variabele worden toegewezen aan de hoek naar de bron (in graden)"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:119
+msgid ""
+"dm --- Along flow distance from the source site that has the highest angle "
+"to the point in question"
+msgstr ""
+"dm --- Afstand langs de stroom van de bron die de grootste hoek tot het "
+"betrokken punt heeft"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:128
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:263
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:359
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:426
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:541
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:649
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:742
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:870
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:955
+msgid "``D-Infinity Flow Direction Grid`` [raster]"
+msgstr "``D-oneindigheid raster stroomrichting`` [raster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:126
+msgid ""
+"A grid giving flow direction by the D-infinity method. Flow direction is "
+"measured in radians, counter clockwise from east. This can be created  by "
+"the tool **\"D-Infinity Flow Directions\"**."
+msgstr ""
+"Een raster dat de stroomrichting geeft volgens de methode D-oneindigheid. "
+"Stroomrichting wordt gemeten in radialen, tegen de wijzers van de klok in "
+"vanuit Oost. Dit kan worden gemaakt door het gereedschap **\"D-oneindigheid "
+"stroomrichtingen\"**."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:136
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:434
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:549
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:999
+msgid "``Pit Filled Elevation Grid`` [raster]"
+msgstr "``Gatengevuld hoogteraster`` [raster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:131
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:429
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:544
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:994
+msgid ""
+"This input is a grid of elevation values. As a general rule, it is "
+"recommended that you use a grid of elevation values that have had the pits "
+"removed for this input. Pits are generally taken to be artifacts that "
+"interfere with the analysis of flow across them. This grid can be obtained "
+"as the output of the **\"Pit Remove\"** tool, in which case it contains "
+"elevation values where the pits have been filled to the point where they "
+"just drain."
+msgstr ""
+"Deze invoer is een raster van hoogtewaarden. Als algemene regel wordt "
+"aanbevolen dat u een raster met hoogtewaarden gebruikt waarin de gaten zijn "
+"verwijderd voor deze invoer. Van gaten wordt in het algemeen aangenomen dat "
+"het artefacten zijn die interfereren met de analyse van de stroom rondom "
+"hen. Dit raster kan worden verkregen als de uitvoer van het gereedschap "
+"**\"Gaten verwijderen\"**, in welk geval het hoogtewaarden bevat waarvan de "
+"gaten zijn verwijderd tot het punt waarop zij nog net afvoeren."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:143
+msgid "``Avalanche Source Site Grid`` [raster]"
+msgstr "``Lawine bronraster`` [raster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:139
+msgid ""
+"This is a grid of source areas for snow avalanches that are commonly "
+"identified manually using a mix of experience and visual interpretation of "
+"maps. Avalanche source sites are to be input as a short integer grid (name "
+"suffix :file:`*ass`, e.g. :file:`demass`) comprised of positive values where"
+" avalanches may be triggered and 0 values elsewhere."
+msgstr ""
+"Dit is een raster van brongebieden voor sneeuwlawines die gewoonlijk "
+"handmatig geïdentificeerd worden met behulp van een mix van ervaring en "
+"visuele interpretatie van kaarten. Bronnen van lawines moeten worden "
+"ingevoerd als een klein geheel getal-raster (naam achtervoegsel "
+":file:`*ass`, bijv. :file:`demass`) samengesteld uit positieve waarden waar "
+"lawines kunnen worden geactiveerd en waarden 0 elders."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:153
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:597
+msgid "``Proportion Threshold`` [number]"
+msgstr "``Drempel proportie`` [getal]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:146
+msgid ""
+"This value is a threshold proportion that is used to limit the dispersion of"
+" flow caused by using the D-infinity multiple flow direction method for "
+"determining flow direction. The D-infinity multiple flow direction method "
+"often causes very small amounts of flow to be dispersed to some downslope "
+"cells that might overstate the affected area, so a threshold proportion can "
+"be set to avoid this excess dispersion."
+msgstr ""
+"Deze waarde is een drempelwaarde die wordt gebruikt om de verspreiding van "
+"de stroom, veroorzaakt door het gebruiken van de methode D-oneindigheid "
+"meerdere stroomrichtingen, te beperken. De methode D-oneindigheid meerdere "
+"stroomrichtingen zorgt er vaak voor dat zeer kleine hoeveelheden stroom "
+"worden verspreid over enkele neerwaartse cellen die het beïnvloede gebied "
+"groter maken, dus een drempel als proportie kan worden ingesteld om deze "
+"overmatige verspreiding te vermijden."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:153
+msgid "Default: *0.2*"
+msgstr "Standaard: *0.2*"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:162
+msgid "``Alpha Angle Threshold`` [number]"
+msgstr "``Drempel Alfahoek`` [getal]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:156
+msgid ""
+"This value is the threshold angle, called the Alpha Angle, that is used to "
+"determine which of the cells downslope from the source cells are in the "
+"affected area. Only the cells downslope from each source area cell, up to "
+"the point where the slope from the source to the affected area is less than "
+"a threshold angle are in the affected area."
+msgstr ""
+"Deze waarde is de drempelhoek, de Alfahoek genaamd, die wordt gebruikt om te"
+" bepalen welke van de neerwaartse cellen vanaf de broncel in het beïnvloede "
+"gebied liggen. Alle neerwaartse punten vanaf het brongebied liggen "
+"potentieel in het beïnvloede gebied, Alleen de neerwaartse cellen vanuit "
+"elke cel in het brongebied tot aan het punt waar de helling vanaf de bron "
+"kleiner is dan een hoek als drempel in het beïnvloede gebied."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:162
+msgid "Default: *18*"
+msgstr "Standaard: *18*"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:170
+msgid "``Measure distance along flow path`` [boolean]"
+msgstr "``Afstand meten langs stroompad`` [boolean]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:165
+msgid ""
+"This option selects the method used to measure the distance used to "
+"calculate the slope angle. If option is *True* then measure it along the "
+"flow path, where the *False* option causes the slope to be measure along the"
+" straight line distance from the source cell to the evaluation cell."
+msgstr ""
+"Deze optie selecteert de gebruikte methode om de afstand te meten die wordt "
+"gebruikt om de hoek van de helling te berekenen. Als de optie *True* is dan "
+"wordt het gemeten langs het stroompad, waar de optie *False* er voor zorgt "
+"dat de helling wordt gemeten langs de afstand voor de rechte lijn vanaf de "
+"broncel tot aan de te evalueren cel."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:170
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:299
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:386
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:497
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:604
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:773
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:895
+msgid "Default: *True*"
+msgstr "Standaard: *True*"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:181
+msgid "``Runout Zone Grid`` [raster]"
+msgstr "``Raster uitloopzone`` [raster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:176
+msgid ""
+"This grid Identifies the avalanche's runout zone (affected area) using a "
+"runout zone indicator with value 0 to indicate that this grid cell is not in"
+" the runout zone and value > 0 to indicate that this grid cell is in the "
+"runout zone. Since there may be information in the angle to the associated "
+"source site, this variable will be assigned the angle to the source site (in"
+" degrees)."
+msgstr ""
+"Dit raster identificeert het uitloopgebied van de lawine (het beïnvloede "
+"gebied) met behulp van een indicator voor de uitloopzone met waarde 0 om aan"
+" te geven dat deze cel van het raster niet in de uitloopzone ligt en waarde "
+"> 0 om aan te geven dat deze cel van het raster wel in de uitloopzone ligt. "
+"Omdat er informatie kan zijn in de hoek naar de geassocieerde bron, zal deze"
+" variabele worden toegewezen aan de hoek naar de bron (in graden)"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:185
+msgid "``Path Distance Grid`` [raster]"
+msgstr "``Afstand pad raster`` [raster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:184
+msgid ""
+"This is a grid of the flow distance from the source site that has the "
+"highest angle to each cell."
+msgstr ""
+"Dit is een raster van de afstand langs de stroom van de bron die de grootste"
+" hoek tot elke cel heeft"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:187
+msgid "**Algorithm ID**: ``taudem:dinfavalanche``"
+msgstr "**ID algoritme**: ``taudem:dinfavalanche``"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:195
+msgid "D-Infinity Concentration Limited Accumulation"
+msgstr "D-oneindigheid concentratiebegrensde accumulatie"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:200
+msgid ""
+"This function applies to the situation where an unlimited supply of a "
+"substance is loaded into flow at a concentration or solubility threshold "
+"Csol over a region indicated by an indicator grid (dg). It a grid of the "
+"concentration of a substance at each location in the domain, where the "
+"supply of substance from a supply area is loaded into the flow at a "
+"concentration or solubility threshold. The flow is first calculated as a "
+"D-infinity weighted contributing area of an input Effective Runoff Weight "
+"Grid (notionally excess precipitation). The concentration of substance over "
+"the supply area (indicator grid) is at the concentration threshold. As the "
+"substance moves downslope with the D-infinity flow field, it is subject to "
+"first order decay in moving from cell to cell as well as dilution due to "
+"changes in flow. The decay multiplier grid gives the fractional (first "
+"order) reduction in quantity in moving from grid cell ``x`` to the next "
+"downslope cell. If the outlets shapefile is used, the tool only evaluates "
+"the part of the domain that contributes flow to the locations given by the "
+"shapefile. This is useful for a tracking a contaminant or compound from an "
+"area with unlimited supply of that compound that is loaded into a flow at a "
+"concentration or solubility threshold over a zone and flow from the zone may"
+" be subject to decay or attenuation."
+msgstr ""
+"Deze functie is van toepassing voor de situatie waarin een onbeperkte "
+"aanvoer van een substantie wordt geladen in een stroom met een drempel voor "
+"concentratie of oplosbaarheid Csol over een regio die wordt aangegeven door "
+"een raster met indicaties (dg). Het is een raster van de concentratie van "
+"een substantie op elke locatie in het domein, waar de aanvoer van een "
+"substantie uit een aanvoergebied wordt geladen in een stroom met een drempel"
+" voor concentratie of oplosbaarheid. De stroom wordt eerst berekend als een "
+"D-oneindigheid gewogen deelnemend gebied van een invoer Effectief uitlopend "
+"gewogen raster (waarneembare overschrijding van neerslag). De concentratie "
+"van de substantie over het aanvoergebied (raster met indicaties) is op de "
+"drempelwaarde voor de concentratie. Als de substantie zich neerwaarts "
+"verplaats met het veld D-oneindigheid stroom, is het in de eerste plaats "
+"onderwerp van verval door het verplaatsen van cel naar cel al ook van "
+"verdunning vanwege de wijzigingen in de stroom. Het raster verval "
+"vermenigvuldiging geeft de fractionele (eerste orde) reductie in kwantiteit "
+"bij het verplaatsen van rastercel ``x`` naar de volgende neerwaartse cel. "
+"Als het shapefile met afvoeren wordt gebruikt, evalueert het gereedschap "
+"alleen dat gedeelte van het domein dat stroom bijdraagt aan de locaties die "
+"worden verschaft door het shapefile. Dit is handig voor het volgend van een "
+"verontreiniger of een stof vanuit ene gebied met onbeperkte aanvoer van die "
+"stof die wordt geladen in een stroom met een drempelwaarde voor concentratie"
+" of oplosbaarheid over een zone en stroom van de zone kan onderwerp zijn van"
+" verval of verdunning."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:218
+msgid ""
+"The indicator grid (``dg``) is used to delineate the area of the substance "
+"supply using the (0, 1) indicator function ``i(x)``. ``A[]`` denotes the "
+"weighted accumulation operator evaluated using the D-Infinity Contributing "
+"Area function. The Effective Runoff Weight Grid gives the supply to the flow"
+" (e.g. the excess rainfall if this is overland flow) denoted as ``w(x)``. "
+"The specific discharge is then given by:"
+msgstr ""
+"Het raster met indicaties (``dg``) wordt gebruikt om het gebied te "
+"karakteriseren van de aanvoer van de substantie met behulp van de indicatie "
+"(0, 1) functie ``i(x)``. ``A[]`` is de operator voor de gewogen accumulatie,"
+" geëvalueerd met behulp van de functie D-oneindigheid deelnemend gebied. Het"
+" raster Effectieve gewogen uitloop geeft de aanvoer naar de stroom aan "
+"(bijv. de excessieve regenval als dit een stroom over land is) vermeld als "
+"``w(x)``. De specifieke afgifte wordt dan gegeven door:"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:229
+msgid ""
+"This weighted accumulation ``Q(x)`` is output as the Overland Flow Specific "
+"Discharge Grid. Over the substance supply area concentration is at the "
+"threshold (the threshold is a saturation or solubility limit). If ``i(x) = "
+"1``, then"
+msgstr ""
+"Deze gewogen accumulatie ``Q(x)`` wordt uitgevoerd als hert raster Over land"
+" stroomspecifieke afgifte. In het aanvoergebied van de substantie is de "
+"concentratie op de drempelwaarde (de drempel is een grens voor verzadiging "
+"of oplosbaarheid). Als ``i(x) = 1``, dan"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:237
+msgid ""
+"where ``L(x)`` denotes the load being carried by the flow. At remaining "
+"locations, the load is determined by load accumulation and the concentration"
+" by dilution:"
+msgstr ""
+"waar ``L(x)`` de lading is die wordt meegevoerd door de stroom. Op de "
+"resterende locaties wordt de lading bepaald door accumulatie van de lading "
+"en de concentratie door verdunning:"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:243
+msgid ""
+"Here ``d(x) = d(i, j)`` is a decay multiplier giving the fractional (first "
+"order) reduction in mass in moving from grid cell ``x`` to the next "
+"downslope cell. If travel (or residence) times ``t(x)`` associated with flow"
+" between cells are available ``d(x)`` may be evaluated as ``exp(-k t(x))`` "
+"where ``k`` is a first order decay parameter. The Concentration grid output "
+"is ``C(x)``. If the outlets shapefile is used, the tool only evaluates the "
+"part of the domain that contributes flow to the locations given by the "
+"shapefile."
+msgstr ""
+"Hier is ``d(x) = d(i, j)`` een vermenigvuldigingsfactor voor verval die de "
+"fractionele (eerste orde) reductie in massa geeft bij het verplaatsen van "
+"rastercel ``x`` naar de volgende neerwaartse cel. Als verplaatsing (of "
+"stilstand) maal ``t(x)`` geassocieerd met de stroom tussen cellen "
+"beschikbaar zijn, kan ``d(x)`` worden geëvalueerd als ``exp(-k t(x))`` waar "
+"``k`` een parameter is voor het verval van de eerste orde. De uitvoer "
+"Concentratie-raster is ``C(x)``. Als het shapefile met afvoeren wordt "
+"gebruikt, evalueert het gereedschap alleen dat gedeelte van het domein dat "
+"stroom bijdraagt aan de in het shapefile vermelde locaties."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:254
+msgid ""
+"Useful for a tracking a contaminant released or partitioned to flow at a "
+"fixed threshold concentration."
+msgstr ""
+"Handig voor het volgen van een losgelaten verontreiniger of gedeeltelijke "
+"stroom met een vaste drempelwaarde voor concentratie."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:261
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:357
+msgid ""
+"A grid giving flow direction by the D-infinity method. Flow direction is "
+"measured in radians, counter clockwise from east. This grid can be created "
+"by the function **\"D-Infinity Flow Directions\"**."
+msgstr ""
+"Een raster dat de stroomrichting geeft volgens de methode D-oneindigheid. "
+"Stroomrichting wordt gemeten in radialen, tegen de wijzers van de klok in "
+"vanuit Oost. Dit raster kan worden gemaakt door het gereedschap "
+"**\"D-oneindigheid stroomrichtingen\"**."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:267
+msgid "``Disturbance Indicator Grid`` [raster]"
+msgstr "``Raster Indicatie verstoring`` [raster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:266
+msgid ""
+"A grid that indicates the source zone of the area of substance supply and "
+"must be 1 inside the zone and 0 or NODATA over the rest of the domain."
+msgstr ""
+"Een raster dat de doelzone van het gebied aangeeft van de aanvoer van de "
+"substantie. Dit raster moet 1 zijn binnen de zone en 0 of GEEN GEGEVENS voor"
+" de rest van het domein."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:274
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:364
+msgid "``Decay Multiplier Grid`` [raster]"
+msgstr "``Raster Vermenigvuldigingsfactor verval`` [raster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:270
+msgid ""
+"A grid giving the factor by which flow leaving each grid cell is multiplied "
+"before accumulation on downslope grid cells. This may be used to simulate "
+"the movement of an attenuating or decaying substance. If travel (or "
+"residence) times ``t(x)`` associated with flow between cells are available "
+"``d(x)`` may be evaluated as ``exp(-k t(x))`` where ``k`` is a first order "
+"decay parameter."
+msgstr ""
+"Een raster dat de factor geeft waarmee de stroom die elke cel van het raster"
+" verlaat wordt vermenigvuldigt vóór accumulatie op neerwaartse cellen van "
+"het raster. Dit kan worden gebruikt om de verplaatsing van een verdunnende "
+"of vervallende substantie te simuleren. Als verplaatsing (of stilstand) maal"
+" ``t(x)`` geassocieerd met de stroom tussen cellen beschikbaar zijn, kan "
+"``d(x)`` worden geëvalueerd als ``exp(-k t(x))`` waar ``k`` een parameter is"
+" voor het verval van de eerste orde."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:279
+msgid "``Effective Runoff Weight Grid`` [raster]"
+msgstr "``Raster Effectieve gewogen uitloop`` [raster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:277
+msgid ""
+"A grid giving the input quantity (notionally effective runoff or excess "
+"precipitation) to be used in the D-infinity weighted contributing area "
+"evaluation of Overland Flow Specific Discharge."
+msgstr ""
+"Een raster dat de kwantiteit voor de invoer geeft (waarneembare effectieve "
+"uitloop of overmatige neerslag) die moet worden gebruikt in de evaluatie van"
+" de D-oneindigheid gewogen deelnemend gebied van Over land stroomspecifieke "
+"afgifte."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:285
+msgid "``Outlets shapefile`` [vector: point]"
+msgstr "``Afvoeren-shapefile`` [vector: punt]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:282
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:367
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:374
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:442
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:761
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:883
+msgid "Optional"
+msgstr "Optioneel"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:284
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:376
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:763
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:885
+msgid ""
+"This optional input is a point shapefile defining outlets of interest. If "
+"this file is used, the tool will only evaluate the area upslope of these "
+"outlets."
+msgstr ""
+"Deze optionele invoer is een punt-shapefile dat de interessante afvoerpunten"
+" definieert. Als het bestand wordt gebruikt, zal het gereedschap alleen het "
+"hoger gelegen gebied voor deze afvoeren evalueren."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:291
+msgid "``Concentration Threshold`` [number]"
+msgstr "``Drempel concentratie`` [getal]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:288
+msgid ""
+"The concentration or solubility threshold. Over the substance supply area, "
+"concentration is at this threshold."
+msgstr ""
+"De drempel voor concentratie of oplosbaarheid. In het aanvoergebied van de "
+"substantie is concentratie op de drempelwaarde."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:291
+msgid "Default: *1.0*"
+msgstr "Standaard: *1.0*"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:299
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:386
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:497
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:604
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:773
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:895
+msgid "``Check for edge contamination`` [boolean]"
+msgstr "``Controleren op besmetting rand`` [boolean]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:294
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:381
+msgid ""
+"This option determines whether the tool should check for edge contamination."
+" Edge contamination is defined as the possibility that a value may be "
+"underestimated due to grid cells outside of the domain not being considered "
+"when determining contributing area."
+msgstr ""
+"Deze optie bepaalt of het gereedschap moet controleren op besmetting van "
+"randen. Besmetting van randen wordt gedefinieerd als de mogelijkheid dat een"
+" waarde ondergewaardeerd kan worden vanwege het feit dat cellen voor het "
+"raster buiten het domein niet in overweging worden genomen bij het bepalen "
+"van het deelnemende gebied."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:306
+msgid "``Concentration Grid`` [raster]"
+msgstr "``Concentratie-raster`` [raster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:305
+msgid ""
+"A grid giving the resulting concentration of the compound of interest in the"
+" flow."
+msgstr ""
+"Een raster dat de resulterende concentratie van de betreffende stof in de "
+"stroom aangeeft."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:308
+msgid "**Algorithm ID**: ``taudem:dinfconclimaccum``"
+msgstr "**ID algoritme**: ``taudem:dinfconclimaccum``"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:316
+msgid "D-Infinity Decaying Accumulation"
+msgstr "D-oneindigheid accumulatie van verval"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:321
+msgid ""
+"The D-Infinity Decaying Accumulation tool creates a grid of the accumulated "
+"quantity at each location in the domain where the quantity accumulates with "
+"the D-infinity flow field, but is subject to first order decay in moving "
+"from cell to cell. By default, the quantity contribution of each grid cell "
+"is the cell length to give a per unit width accumulation, but can optionally"
+" be expressed with a weight grid. The decay multiplier grid gives the "
+"fractional (first order) reduction in quantity in accumulating from grid "
+"cell ``x`` to the next downslope cell."
+msgstr ""
+"Het gereedschap D-oneindigheid accumulatie van verval maakt een raster van "
+"de geaccumuleerde kwantiteit op elke locatie in het domein waar de "
+"kwantiteit accumuleert met het veld D-oneindigheid stroom, maar onderwerp is"
+" van verval in de eerste orde bij het verplaatsen van cel naar cel. "
+"Standaard is de bijdrage aan de kwantiteit van elke cel in het raster de "
+"lengte van de cel die een per eenheid brede accumulatie geeft, maar kan "
+"optioneel worden uitgedrukt in een gewogen raster. Het raster "
+"vermenigvuldigingsfactor verval geeft de fractionele (eerste orde) reductie "
+"in kwantiteit, geaccumuleerd vanaf rastercel ``x`` naar de volgende "
+"neerwaartse cel."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:330
+msgid ""
+"A decayed accumulation operator ``DA[.]`` takes as input a mass loading "
+"field ``m(x)`` expressed at each grid location as ``m(i, j)`` that is "
+"assumed to move with the flow field but is subject to first order decay in "
+"moving from cell to cell. The output is the accumulated mass at each "
+"location ``DA(x)``. The accumulation of ``m`` at each grid cell can be "
+"numerically evaluated."
+msgstr ""
+"De operator voor accumulatie van het verval ``DA[.]`` neemt als invoer een "
+"veld voor het laden van massa ``m(x)``, uitgedrukt op elke locatie van het "
+"raster als ``m(i, j)`` waarvan wordt aangenomen dat die verplaatst met het "
+"stroomveld, maar onderwerp is van verval in de eerste orde bij het "
+"verplaatsen van cel naar cel. De uitvoer is de geaccumuleerde massa op elke "
+"locatie ``DA(x)``. De accumulatie van ``m`` in elke cel van het raster kan "
+"numeriek worden geëvalueerd."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:339
+msgid ""
+"Here ``d(x) = d(i ,j)`` is a decay multiplier giving the fractional (first "
+"order) reduction in mass in moving from grid cell ``x`` to the next "
+"downslope cell. If travel (or residence) times ``t(x)`` associated with flow"
+" between cells are available ``d(x)`` may be evaluated as ``exp(-k t(x))`` "
+"where ``k`` is a first order decay parameter. The weight grid is used to "
+"represent the mass loading ``m(x)``. If not specified this is taken as 1. If"
+" the outlets shapefile is used the function is only evaluated on that part "
+"of the domain that contributes flow to the locations given by the shapefile."
+msgstr ""
+"Hier is ``d(x) = d(i, j)`` een vermenigvuldigingsfactor voor verval die de "
+"fractionele (eerste orde) reductie in massa geeft bij het verplaatsen van "
+"rastercel ``x`` naar de volgende neerwaartse cel. Als verplaatsing (of "
+"stilstand) maal ``t(x)`` geassocieerd met de stroom tussen cellen "
+"beschikbaar zijn, kan ``d(x)`` worden geëvalueerd als ``exp(-k t(x))`` waar "
+"``k`` een parameter is voor het verval van de eerste orde. Het gewogen "
+"raster wordt gebruikt om de lading van de massa ``m(x)`` uit te drukken. "
+"Indien niet gespecificeerd wordt 1 genomen. Als het shapefile met afvoeren "
+"wordt gebruikt, evalueert het gereedschap alleen dat gedeelte van het domein"
+" dat stroom bijdraagt aan de in het shapefile vermelde locaties."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:351
+msgid ""
+"Useful for a tracking contaminant or compound subject to decay or "
+"attenuation."
+msgstr ""
+"Handig voor het volgen van verontreiniger of stof die onderwerp zijn van "
+"verval of verdunning."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:362
+msgid ""
+"A grid giving the factor by which flow leaving each grid cell is multiplied "
+"before accumulation on downslope grid cells. This may be used to simulate "
+"the movement of an attenuating substance."
+msgstr ""
+"Een raster dat de factor geeft waarmee de stroom die elke cel van het raster"
+" verlaat wordt vermenigvuldigt vóór accumulatie op neerwaartse cellen van "
+"het raster. Dit kan worden gebruikt om de verplaatsing van een verdunnende "
+"of vervallende substantie te simuleren."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:371
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:652
+msgid "``Weight Grid`` [raster]"
+msgstr "``Gewogen grid`` [raster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:369
+msgid ""
+"A grid giving weights (loadings) to be used in the accumulation. If this "
+"optional grid is not specified, weights are taken as the linear grid cell "
+"size to give a per unit width accumulation."
+msgstr ""
+"Een raster dat wegingen (ladingen) weergeeft die moeten worden gebruikt in "
+"de accumulatie. Als dit optionele raster niet wordt gespecificeerd, worden "
+"wegingen genomen als de lineaire grootte van een cel van het raster om een "
+"per eenheid brede accumulatie te geven."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:378
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:765
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:887
+msgid "``Outlets Shapefile`` [vector: point]"
+msgstr "``Afvoeren-shapefile`` [vector: punt]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:394
+msgid "``Decayed Specific Catchment Area Grid`` [raster]"
+msgstr "``Verval specifiek opvanggebied raster`` [raster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:392
+msgid ""
+"The D-Infinity Decaying Accumulation tool creates a grid of the accumulated "
+"mass at each location in the domain where mass moves with the D-infinity "
+"flow field, but is subject to first order decay in moving from cell to cell."
+msgstr ""
+"Het gereedschap D-oneindigheid accumulatie van verval maakt een raster van "
+"de geaccumuleerde massa op elke locatie in het domein waarin massa "
+"verplaatst met het veld D-oneindigheid stroom, maar onderwerp is van verval "
+"van de eerste orde bij het verplaatsen van cel naar cel."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:396
+msgid "**Algorithm ID**: ``taudem:dinfdecayaccum``"
+msgstr "**ID algoritme**: ``taudem:dinfdecayaccum``"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:404
+msgid "D-Infinity Distance Down"
+msgstr "``D-oneindigheid neerwaartse afstand`` [raster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:409
+msgid ""
+"Calculates the distance downslope to a stream using the D-infinity flow "
+"model. The D-infinity flow model is a multiple flow direction model, because"
+" the outflow from each grid cell is proportioned between up to 2 downslope "
+"grid cells. As such, the distance from any grid cell to a stream is not "
+"uniquely defined. Flow that originates at a particular grid cell may enter "
+"the stream at a number of different cells. The statistical method may be "
+"selected as the longest, shortest or weighted average of the flow path "
+"distance to the stream. Also one of several ways of measuring distance may "
+"be selected: the total straight line path (Pythagoras), the horizontal "
+"component of the straight line path, the vertical component of the straight "
+"line path, or the total surface flow path."
+msgstr ""
+"Berekent de afstand stroomafwaarts naar een stroom met behulp van het "
+"D-oneindigheid stroommodel. Het stroommodel D-oneindigheid is een model voor"
+" meerdere stroomrichtingen, omdat de uitstroom uitstroom van elke cel van "
+"het raster geproportioneerd tussen twee neerwaartse cellen van het raster. "
+"Daarom wordt de afstand van een cel van het raster tot een stroom niet uniek"
+" gedefinieerd. Stroom die afkomstig is uit een bepaalde cel van het raster "
+"kan in de stroom komen in een aantal cellen. De statistische methode kan "
+"worden geselecteerd als de langste (maximum), kortste (minimum) of gewogen "
+"gemiddelde van de afstand neerwaarts naar de stroom. ook kan een van "
+"verscheidene manieren voor het meten van de afstand kan worden geselecteerd:"
+" het totale pad in een rechte lijn (Pythagoras), de horizontale component "
+"van het pad van de rechte lijn, de verticale component van het pad van de "
+"rechte lijn, of het pad van de stroom over het totale oppervlak."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:424
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:539
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:647
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:740
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:868
+msgid ""
+"A grid giving flow direction by the D-infinity method. Flow direction is "
+"measured in radians, counter clockwise from east. This can be created by the"
+" tool **\"D-Infinity Flow Directions\"**."
+msgstr ""
+"Een raster dat de stroomrichting geeft volgens de methode D-oneindigheid. "
+"Stroomrichting wordt gemeten in radialen, tegen de wijzers van de klok in "
+"vanuit Oost. Dit kan worden gemaakt door het gereedschap **\"D-oneindigheid "
+"stroomrichtingen\"**."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:437
+msgid ""
+"A grid indicating streams, by using a grid cell value of 1 on streams and 0 "
+"off streams. This is usually the output of one of the tools in the "
+"**\"Stream Network Analysis\"** toolset."
+msgstr ""
+"Dit raster geeft de locatie van stromen aan, met een celwaarde 1 voor "
+"stromen en 0 voor buiten stromen. Dit bestand wordt geproduceerd door "
+"verscheidene gereedschappen in de set met gereedschappen **\"Stroomnetwerk-"
+"analyse\"**."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:449
+msgid "``Weight Path Grid`` [raster]"
+msgstr "``Gewogen pad raster`` [raster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:444
+msgid ""
+"A grid giving weights (loadings) to be used in the distance calculation. "
+"This might be used for example where only flow distance through a buffer is "
+"to be calculated. The weight is then 1 in the buffer and 0 outside it. "
+"Alternatively the weight may reflect some sort of cost function for travel "
+"over the surface, perhaps representing travel time or attenuation of a "
+"process. If this input file is not used, the loadings will assumed to be one"
+" for each grid cell."
+msgstr ""
+"Een raster dat de wegingen (ladingen) weergeeft die moeten worden gebruikt "
+"in de berekening van de afstand. Dit zou bijvoorbeeld kunnen worden gebruikt"
+" waar alleen een stroomafstand door een buffer moet worden berekend. De "
+"weging is dan 1 in de buffer en 0 daarbuiten. Als alternatief kan de weging "
+"enkele soort functie van kosten voor verplaatsen over het oppervlak "
+"weergeven, misschien de reistijd of verdunning van een proces weergevend. "
+"Als dit invoerbestand niet wordt gebruikt, wordt aangenomen dat de ladingen "
+"één voor elke cel in het raster zijn."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:466
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:571
+msgid "``Statistical Method`` [enumeration]"
+msgstr "``Statistische methode`` [enumeratie]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:452
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:557
+msgid ""
+"Statistical method used to calculate the distance down to the stream. In the"
+" D-Infinity flow model, the outflow from each grid cell is proportioned "
+"between two downslope grid cells. Therefore, the distance from any grid cell"
+" to a stream is not uniquely defined. Flow that originates at a particular "
+"grid cell may enter the stream at a number of cells. The distance to the "
+"stream may be defined as the longest (maximum), shortest (minimum) or "
+"weighted average of the distance down to the stream."
+msgstr ""
+"Statistische methode gebruikt om de afstand stroomafwaarts te meten. In het "
+"model D-oneindigheid is de uitstroom van elke cel van het raster "
+"geproportioneerd tussen twee neerwaartse cellen van het raster. daarom wordt"
+" de afstand van een cel van het raster tot een stroom niet uniek "
+"gedefinieerd. Stroom die afkomstig is uit een bepaalde cel van het raster "
+"kan in de stroom komen in een aantal cellen. De afstand tot de stroom kan "
+"worden gedefinieerd als de langste (maximum), kortste (minimum) of gewogen "
+"gemiddelde van de afstand neerwaarts naar de stroom."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:460
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:475
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:565
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:580
+msgid "Options:"
+msgstr "Opties:"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:462
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:567
+msgid "0 --- Minimum"
+msgstr "0 --- Minimum"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:463
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:568
+msgid "1 --- Maximum"
+msgstr "1 --- Maximum"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:464
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:569
+msgid "2 --- Average"
+msgstr "2 --- Gemiddelde"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:466
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:571
+msgid "Default: *2*"
+msgstr "Standaard: *2*"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:482
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:587
+msgid "``Distance Method`` [enumeration]"
+msgstr "``Methode afstand`` [enumeratie]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:469
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:574
+msgid ""
+"Distance method used to calculate the distance down to the stream. One of "
+"several ways of measuring distance may be selected: the total straight line "
+"path (Pythagoras), the horizontal component of the straight line path "
+"(horizontal), the vertical component of the straight line path (vertical), "
+"or the total surface flow path (surface)."
+msgstr ""
+"De methode voor de afstand die wordt gebruikt voor het berekenen van de "
+"neerwaartse afstand naar de stroom. Eén van de verscheidene manieren om "
+"afstand te meten kan worden geselecteerd: het pad van de totale rechte lijn "
+"(Pythagoras), de horizontale component van het pad van de rechte lijn "
+"(horizontaal), de verticale component van het pad van de rechte lijn "
+"(verticaal), of het totale oppervlak stroompad (oppervlak)."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:477
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:582
+msgid "0 --- Pythagoras"
+msgstr "0 --- Pythagoras"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:478
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:583
+msgid "1 --- Horizontal"
+msgstr "1 --- Horizontaal"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:479
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:584
+msgid "2 --- Vertical"
+msgstr "2 --- Verticaal"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:480
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:585
+msgid "3 --- Surface"
+msgstr "3 --- Oppervlak"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:482
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:587
+msgid "Default: *1*"
+msgstr "Standaard: *1*"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:485
+msgid ""
+"A flag that determines whether the tool should check for edge contamination."
+" This is defined as the possibility that a value may be underestimated due "
+"to grid cells outside of the domain not being counted. In the context of "
+"Distance Down this occurs when part of a flow path traced downslope from a "
+"grid cell leaves the domain without reaching a stream grid cell. With edge "
+"contamination checking selected, the algorithm recognizes this and reports "
+"no data for the result. This is the desired effect and indicates that values"
+" for these grid cells is unknown due to it being dependent on terrain "
+"outside of the domain of data available. Edge contamination checking may be "
+"overridden in cases where you know this is not an issue or want to evaluate "
+"the distance using only the fraction of flow paths that terminate at a "
+"stream."
+msgstr ""
+"Een vlag die bepaalt of het gereedschap moet controleren op besmetting van "
+"randen. Dit wordt gedefinieerd als de mogelijkheid dat een waarde van een "
+"deelnemend gebied ondergewaardeerd kan zijn wegens het feit dat rastercellen"
+" buiten het domein niet worden meegeteld.  In de context van Afstand "
+"neerwaarts komt dit voor als een deel van een neerwaarts getraceerd "
+"stroompad vanuit een cel van het raster het domein verlaat zonder een "
+"stroomcel te bereiken. Met Besmetting van randen controleren geselecteerd "
+"herkent het algoritme dit en rapporteert \"Geen gegevens\"  als resultaat. "
+"Dit is het gewenste effect en geeft aan dat het deelnemende gebied voor deze"
+" cellen van het raster onbekend zijn wegens het feit dat het afhankelijk is "
+"van terrein buiten het domein voor beschikbare gegevens. Controle van "
+"besmetting van randen kan worden uitgeschakeld in die gevallen waarvan u "
+"weet dat het geen probleem is of u de afstand alleen wilt evalueren met "
+"behulp van de delen van stroompaden die eindigen in een stroom."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:504
+msgid "``D-Infinity Drop to Stream Grid`` [raster]"
+msgstr "``D-oneindigheid verval naar stroom raster`` [raster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:503
+msgid ""
+"Grid containing the distance to stream calculated using the D-infinity flow "
+"model and the statistical and path methods chosen."
+msgstr ""
+"Raster dat de afstand tot stroom bevat die is berekend met behulp van het "
+"D-oneindigheid stroommodel en de gekozen statistische en pad-methoden."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:506
+msgid "**Algorithm ID**: ``taudem:dinfdistdown``"
+msgstr "**ID algoritme**: ``taudem:dinfdistdown``"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:514
+msgid "D-Infinity Distance Up"
+msgstr "D-oneindigheid opwaartse afstand"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:519
+msgid ""
+"This tool calculates the distance from each grid cell up to the ridge cells "
+"along the reverse D-infinity flow directions. Ridge cells are defined to be "
+"grid cells that have no contribution from grid cells further upslope. Given "
+"the convergence of multiple flow paths at any grid cell, any given grid cell"
+" can have multiple upslope ridge cells. There are three statistical methods "
+"that this tool can use: maximum distance, minimum distance and waited flow "
+"average over these flow paths. A variant on the above is to consider only "
+"grid cells that contribute flow with a proportion greater than a user "
+"specified threshold (t) to be considered as upslope of any given grid cell. "
+"Setting t=0.5 would result in only one flow path from any grid cell and "
+"would give the result equivalent to a D8 flow model, rather than D-infinity "
+"flow model, where flow is proportioned between two downslope grid cells. "
+"Finally there are several different optional paths that can be measured: the"
+" total straight line path (Pythagoras), the horizontal component of the "
+"straight line path, the vertical component of the straight line path, or the"
+" total surface flow path."
+msgstr ""
+"Dit gereedschap berekent de afstand vanaf elke cel in het raster tot de "
+"cellen aan de rand langs de omgekeerde D-oneindigheid stroomrichtingen. "
+"Cellen aan de rand worden gedefinieerd als cellen van het raster die geen "
+"bijdrage ontvangen van cellen in het raster die hoger liggen. Gegeven de "
+"convergentie van meerdere stroompaden voor enige cel in het raster, kan een "
+"bepaalde cel meerdere cellen aan de rand in opwaartse richting hebben. Er "
+"zijn drie statistische methoden die dit gereedschap kan gebruiken: maximum "
+"afstand, minimum afstand en verwacht gemiddelde van de stroom over deze "
+"stroompaden. Een variant op bovenstaande is om alleen cellen van het raster "
+"in overweging te nemen die een stroom bijdragen met een proportie die groter"
+" is dan een door de gebruiker opgegeven drempelwaarde (t) om te worden "
+"beschouwd als opwaarts gelegen ten opzichte van een bepaalde cel van het "
+"raster. Instellen van t=0.5 zou resulteren in slechts één stroompad vanuit "
+"een cel van het raster en zou het resultaat geven dat equivalent is aan een "
+"D8 stroommodel, in plaats van het D-oneindigheid stroommodel, waar de stroom"
+" is geproportioneerd tussen twee lager gelegen cellen van het raster. "
+"Tenslotte zijn er verschillende andere optionele paden die kunnen worden "
+"gemeten: het pad van de totale rechts lijn (Pythagoras), de horizontale "
+"component van het pad van de rechte lijn, de verticale component van het pad"
+" van de rechte lijn, of het totale oppervlak stroompad."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:554
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1037
+msgid "``Slope Grid`` [raster]"
+msgstr "``Raster helling`` [raster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:552
+msgid ""
+"This input is a grid of slope values. This is measured as drop/distance and "
+"it is most often obtained as the output of the **\"D-Infinity Flow "
+"Directions\"** tool."
+msgstr ""
+"Deze invoer is een raster van waarden voor de helling. Deze worden gemeten "
+"als verval/afstand en het wordt meestal verkregen als uitvoer van het "
+"gereedschap **\"D-oneindigheid stroomrichtingen\"**."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:590
+msgid ""
+"The proportion threshold parameter where only grid cells that contribute "
+"flow with a proportion greater than this user specified threshold (``t``) is"
+" considered to be upslope of any given grid cell. Setting ``t=0.5`` would "
+"result in only one flow path from any grid cell and would give the result "
+"equivalent to a D8 flow model, rather than D-Infinity flow model, where flow"
+" is proportioned between two downslope grid cells."
+msgstr ""
+"De parameter Drempel proportie waar alleen cellen van het raster die stroom "
+"bijdragen met een proportie die groter is dan de door de gebruiker "
+"gespecificeerde drempel (``t``) wordt beschouwd opwaarts te zijn van een "
+"opgegeven cel van het raster. Instellen van ``t=0.5`` zou resulteren in "
+"slechts één stroompad vanuit een cel van het raster en zou het equivalente "
+"resultaat geven voor een D8 stroommodel, in plaats van het D-oneindigheid "
+"stroommodel, waar de stroom is geproportioneerd tussen twee neerwaarts "
+"gelegen cellen van het raster."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:597
+msgid "Default: *0.5*"
+msgstr "Standaard: *0.5*"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:600
+msgid ""
+"A flag that determines whether the tool should check for edge contamination."
+" This is defined as the possibility that a value may be underestimated due "
+"to grid cells outside of the domain not being counted."
+msgstr ""
+"Een vlag die bepaalt of het gereedschap moet controleren op besmetting van "
+"randen. Dit wordt gedefinieerd als de mogelijkheid dat een waarde wordt "
+"ondergewaardeerd vanwege het feit dat cellen voor het raster buiten het "
+"domein niet worden meegeteld."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:611
+msgid "``D-Infinity Distance Up`` [raster]"
+msgstr "``D-oneindigheid opwaartse afstand`` [raster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:610
+msgid ""
+"Grid containing the distances up to the ridge calculated using the "
+"D-Infinity flow model and the statistical and path methods chosen."
+msgstr ""
+"Raster dat de afstanden tot de opwaarts gelegen rand bevat, berekend met het"
+" D-oneindigheid stroommodel en de gekozen statistische en pad-methoden."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:613
+msgid "**Algorithm ID**: ``taudem:dinfdistup``"
+msgstr "**ID algoritme**: ``taudem:dinfdistup``"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:621
+msgid "D-Infinity Reverse Accumulation"
+msgstr "D-oneindigheid omgekeerde accumulatie"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:626
+msgid ""
+"This works in a similar way to evaluation of weighted Contributing area, "
+"except that the accumulation is by propagating the weight loadings upslope "
+"along the reverse of the flow directions to accumulate the quantity of "
+"weight loading downslope from each grid cell. The function also reports the "
+"maximum value of the weight loading downslope from each grid cell in the "
+"Maximum Downslope grid."
+msgstr ""
+"Dit werkt op een soortgelijke manier als de evaluatie van het gewogen "
+"deelnemend gebied, met het verschil dat de accumulatie plaatsvindt door "
+"propagatie van de gewogen ladingen opwaarts langs de omgekeerde "
+"stroomrichtingen om de kwantiteit van de gewogen ladingen neerwaarts van "
+"elke cel van het raster te accumuleren. De functie rapporteert ook de "
+"maximumwaarde van de gewogen lading neerwaarts van elke cel in het raster "
+"Maximum neerwaarts."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:635
+msgid ""
+"This function is designed to evaluate and map the hazard due to activities "
+"that may have an effect downslope. The example is land management activities"
+" that increase runoff. Runoff is sometimes a trigger for landslides or "
+"debris flows, so the weight grid here could be taken as a terrain stability "
+"map. Then the reverse accumulation provides a measure of the amount of "
+"unstable terrain downslope from each grid cell, as an indicator of the "
+"danger of activities that may increase runoff, even though there may be no "
+"potential for any local impact."
+msgstr ""
+"Deze functie is ontworpen om het gevaar, ten gevolge van activiteiten die "
+"neerwaarts een effect zouden kunnen hebben, te evalueren en in kaart te "
+"brengen. Het voorbeeld is activiteiten in landbeheer die de uitloop "
+"verhogen. Uitloop is soms een sleutel voor landverschuivingen of stromen van"
+" puin, dus hier zou het gewogen raster genomen kunnen worden als een kaart "
+"voor stabiliteit van het terrein. De omgekeerde accumulatie verschaft dan "
+"een meting van de hoeveelheid onstabiel terrein neerwaarts vanuit elke cel "
+"van het raster, als een indicator van het gevaar voor activiteiten die "
+"uitloop zouden kunnen verhogen, zelfs hoewel er geen potentieel zou hoeven "
+"zijn voor enige lokale impact."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:652
+msgid "A grid giving weights (loadings) to be used in the accumulation."
+msgstr ""
+"Een raster dat wegingen (ladingen)weergeeft die moeten worden gebruikt voor "
+"de accumulatie."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:662
+msgid "``Reverse Accumulation Grid`` [raster]"
+msgstr "``Raster omgekeerde accumulatie`` [raster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:658
+msgid ""
+"The grid giving the result of the **\"Reverse Accumulation\"** function. "
+"This works in a similar way to evaluation of weighted Contributing area, "
+"except that the accumulation is by propagating the weight loadings upslope "
+"along the reverse of the flow directions to accumulate the quantity of "
+"loading downslope from each grid cell."
+msgstr ""
+"Het raster geeft het resultaat van de functie **\"Omgekeerde "
+"accumulatie\"**. Dit werkt op een soortgelijke manier als de evaluatie van "
+"het gewogen deelnemend gebied, met het verschil dat de accumulatie "
+"plaatsvindt door propagatie van de gewogen ladingen opwaarts langs de "
+"omgekeerde stroomrichtingen om de kwantiteit van de gewogen ladingen "
+"neerwaarts van elke cel van het raster te accumuleren."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:666
+msgid "``Maximum Downslope Grid`` [raster]"
+msgstr "``Maximum neerwaarts`` [raster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:665
+msgid ""
+"The grid giving the maximum of the weight loading grid downslope from each "
+"grid cell."
+msgstr ""
+"Het raster geeft het maximum van het gewogen lading-raster neerwaarts van "
+"elke cel van het raster."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:668
+msgid "**Algorithm ID**: ``taudem:dinfrevaccum``"
+msgstr "**ID algoritme**: ``taudem:dinfrevaccum``"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:676
+msgid "D-Infinity Transport Limited Accumulation - 2"
+msgstr "D-oneindigheid transportbegrensde accumulatie - 2"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:681
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:809
+msgid ""
+"This function is designed to calculate the transport and deposition of a "
+"substance (e.g. sediment) that may be limited by both supply and the "
+"capacity of the flow field to transport it. This function accumulates "
+"substance flux (e.g. sediment transport) subject to the rule that transport "
+"out of any grid cell is the minimum between supply and transport capacity, "
+"``Tcap``. The total supply at a grid cell is calculated as the sum of the "
+"transport in from upslope grid cells, ``Tin``, plus the local supply "
+"contribution, ``E`` (e.g. erosion). This function also outputs deposition, "
+"``D``, calculated as total supply minus actual transport."
+msgstr ""
+"Deze functie is ontworpen om het transport en achterlaten van een substantie"
+" (bijv. sediment) te berekenen, dat kan worden begrensd door zowel de "
+"aanvoer als de capaciteit van het stroomveld om het te transporteren. Deze "
+"functie accumuleert de vloeibare substantie (bijv. transport van sediment) "
+"onderwerp van de regel dat transport uit een cel van het raster het minimum "
+"is tussen aanvoer en transportcapaciteit, ``Tcap``. De totale aanvoer in een"
+" cel van het raster wordt berekend als de som van het inkomende transport "
+"van hoger gelegen cellen van het raster, ``Tin``, plus de lokale deelname "
+"aan de aanvoer, ``E`` (bijv. erosie). Deze functie voert ook het achterlaten"
+" uit, ``D``, berekend als de totale aanvoer minus het actuele transport."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:693
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:821
+msgid ""
+"Here ``E`` is the supply. ``Tout`` at each grid cell becomes ``Tin`` for "
+"downslope grid cells and is reported as Transport limited accumulation "
+"(``tla``). ``D`` is deposition (``tdep``). The function provides the option "
+"to evaluate concentration of a compound (contaminant) adhered to the "
+"transported substance. This is evaluated as follows:"
+msgstr ""
+"Hier is ``E`` de aanvoer. ``Tout`` in elke cel van het raster wordt ``Tin`` "
+"voor lager gelegen cellen in het raster en wordt gerapporteerd als "
+"Transportbegrensde accumulatie (``tla``). ``D`` is achtergelaten (``tdep``)."
+" De functie verschaft de optie om concentratie van een stof (verontreiniger)"
+" verkleefd met de getransporteerde substantie te evalueren. Dit wordt als "
+"volgt geëvalueerd:"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:702
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:830
+msgid ""
+"Where ``Lin`` is the total incoming compound loading and ``Cin`` and ``Tin``"
+" refer to the Concentration and Transport entering from each upslope grid "
+"cell."
+msgstr ""
+"Waar ``Lin`` de totale inkomende lading stof is en ``Cin`` en "
+"``Tin``verwijzen naar de Concentratie en Transport die worden ingevoerd "
+"vanuit elke hoger gelegen cel van het raster."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:708
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:836
+msgid "If"
+msgstr "If"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:714
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:842
+msgid "else"
+msgstr "else"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:719
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:847
+msgid ""
+"where ``Cs`` is the concentration supplied locally and the difference in the"
+" second term on the right represents the additional supply from the local "
+"grid cell. Then,"
+msgstr ""
+"waar ``Cs`` de concentratie is die lokaal wordt aangevoerd en het verschil "
+"in de tweede term aan de rechterkant vertegenwoordigt de aanvullende aanvoer"
+" vanuit de lokale cel van het raster. Dan,"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:726
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:854
+msgid ""
+"``Cout`` at each grid cell comprises is the concentration grid output from "
+"this function."
+msgstr ""
+"bestaat ``Cout`` voor elke cel van het raster uit de uitvoer van het raster "
+"voor de concentratie vanuit deze functie."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:729
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:857
+msgid ""
+"If the outlets shapefile is used the tool only evaluates that part of the "
+"domain that contributes flow to the locations given by the shapefile."
+msgstr ""
+"Als het shapefile voor de afvoeren werd gebruikt evalueert het gereedschap "
+"alleen dat deel van het domein dat  deelneemt in de stroom voor de locaties "
+"die worden opgegeven door het shapefile."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:732
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:860
+msgid ""
+"Transport limited accumulation is useful for modeling erosion and sediment "
+"delivery, including the spatial dependence of sediment delivery ratio and "
+"contaminant that adheres to sediment."
+msgstr ""
+"Transportbegrensde accumulatie is handig voor het modelleren van aflevering "
+"van erosie en sediment, inclusief de ruimtelijke afhankelijkheid van de "
+"ratio aflevering sediment en verontreiniger die verkleefd is met het "
+"sediment."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:747
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:875
+msgid "``Supply Grid`` [raster]"
+msgstr "``Aanvoerraster`` [raster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:745
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:873
+msgid ""
+"A grid giving the supply (loading) of material to a transport limited "
+"accumulation function. In the application to erosion, this grid would give "
+"the erosion detachment, or sediment supplied at each grid cell."
+msgstr ""
+"Een raster dat de aanvoer (lading) van een materiaal geeft voor een functie "
+"transportbegrensde accumulatie. In de toepassing voor erosie, zou dit raster"
+" de afname aan erosie, of aangevoerd sediment voor elke cel van het raster "
+"geven."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:752
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:880
+msgid "``Transport Capacity Grid`` [raster]"
+msgstr "``Raster transportcapaciteit`` [raster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:750
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:878
+msgid ""
+"A grid giving the transport capacity at each grid cell for the transport "
+"limited accumulation function. In the application to erosion this grid would"
+" give the transport capacity of the carrying flow."
+msgstr ""
+"Een raster dat de transportcapaciteit voor elke cel van het raster geeft "
+"voor de functie transportbegrensde accumulatie. In de toepassing voor erosie"
+" zou dit raster de transportcapaciteit geven van de dragende stroom."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:758
+msgid "``Input Concentration Grid`` [raster]"
+msgstr "``Invoer raster concentratie`` [raster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:755
+msgid ""
+"A grid giving the concentration of a compound of interest in the supply to "
+"the transport limited accumulation function. In the application to erosion, "
+"this grid would give the concentration of say phosphorous adhered to the "
+"eroded sediment."
+msgstr ""
+"Een raster dat de concentratie van een van belang zijnde stof in de aanvoer "
+"geeft voor de functie transportbegrensde accumulatie. In de toepassing voor "
+"erosie, zou dit raster de concentratie van, zeg fosfor, verkleefd met het "
+"geërodeerde sediment geven."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:768
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:890
+msgid ""
+"This option determines whether the tool should check for edge contamination."
+" Edge contamination is defined as the possibility that a value may be "
+"underestimated due to grid cells outside of the domain not being considered "
+"when determining the result."
+msgstr ""
+"Deze optie bepaalt of het gereedschap moet controleren op besmetting van "
+"randen. Besmetting van randen wordt gedefinieerd als de mogelijkheid dat een"
+" waarde niet kan worden bepaald vanwege het feit dat cellen voor het raster "
+"buiten het domein niet in overweging worden genomen bij het bepalen van het "
+"resultaat."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:783
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:905
+msgid "``Transport Limited Accumulation Grid`` [raster]"
+msgstr "``Raster Transportbegrensde accumulatie`` [raster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:779
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:901
+msgid ""
+"This grid is the weighted accumulation of supply accumulated respecting the "
+"limitations in transport capacity and reports the transport rate calculated "
+"by accumulating the substance flux subject to the rule that the transport "
+"out of any grid cell is the minimum of the total supply (local supply plus "
+"transport in) to that grid cell and the transport capacity."
+msgstr ""
+"Dit raster is de gewogen accumulatie van aanvoer, geaccumuleerd met "
+"inachtneming van de beperkingen in transportcapaciteit en rapporteert de "
+"transporthoeveelheid berekend door de vloeibare substantie te accumuleren "
+"onderworpen aan de regel dat het uitgaande transport van een cel van het "
+"raster het minimum is van de totale aanvoer (lokale aanvoer plus inkomend "
+"transport) voor die cel van het raster en de transportcapaciteit."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:789
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:911
+msgid "``Deposition Grid`` [raster]"
+msgstr "``Raster van achterlating`` [raster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:786
+msgid ""
+"A grid giving the deposition resulting from the transport limited "
+"accumulation. This is the residual from the transport in to each grid cell "
+"minus the transport capacity out of the grid cell. The deposition grid is "
+"calculated as the transport in + the local supply - the transport out."
+msgstr ""
+"Een raster dat de achterlating geeft dat resulteert uit de  "
+"transportbegrensde accumulatie. Dit is het residu van het inkomende "
+"transport voor elke cel van het raster minus de uitgaande "
+"transportcapaciteit van de cel van het raster. De  achterlating word "
+"berekend als: inkomend transport + de lokale aanvoer - uitgaande transport."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:794
+msgid "``Output Concentration Grid`` [raster]"
+msgstr "``Uitvoer raster concentratie`` [raster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:792
+msgid ""
+"If an input concentration in supply grid is given, then this grid is also "
+"output and gives the concentration of a compound (contaminant) adhered or "
+"bound to the transported substance (e.g. sediment) is calculated."
+msgstr ""
+"Als een invoer concentratie in het aanvoer-raster is gegeven, dan is dit "
+"raster ook uitvoer en wordt de concentratie van een stof (verontreiniger) "
+"die is verkleefd of gebonden aan de getransporteerde substantie (bijv. "
+"sediment) berekend."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:796
+msgid "**Algorithm ID**: unknown"
+msgstr "**ID algoritme**: unknown"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:804
+msgid "D-Infinity Transport Limited Accumulation"
+msgstr "D-oneindigheid transportbegrensde accumulatie"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:908
+msgid ""
+"A grid giving the deposition resulting from the transport limited "
+"accumulation. This is the residual from the transport in to each grid cell "
+"minus the transport capacity out of the grid cell. The deposition grid is "
+"calculated as the transport in + the local supply - the tranport out."
+msgstr ""
+"Een raster dat de achterlating geeft dat resulteert uit de  "
+"transportbegrensde accumulatie. Dit is het residu van het inkomende "
+"transport voor elke cel van het raster minus de uitgaande "
+"transportcapaciteit van de cel van het raster. De  achterlating word "
+"berekend als: inkomend transport + de lokale aanvoer - uitgaande transport."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:913
+msgid "**Algorithm ID**: ``taudem:dinftranslimaccum``"
+msgstr "**ID algoritme**: ``taudem:dinftranslimaccum``"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:921
+msgid "D-Infinity Upslope Dependence"
+msgstr "D-oneindigheid afhankelijkheid helling opwaarts"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:926
+msgid ""
+"The D-Infinity Upslope Dependence tool quantifies the amount each grid cell "
+"in the domain contributes to a destination set of grid cells. D-Infinity "
+"flow directions proportion flow from each grid cell between multiple "
+"downslope grid cells. Following this flow field downslope the amount of flow"
+" originating at each grid cell that reaches the destination zone is defined."
+" Upslope influence is evaluated using a downslope recursion, examining grid "
+"cells downslope from each grid cell, so that the map produced identifies the"
+" area upslope where flow through the destination zone originates, or the "
+"area it depends on, for its flow."
+msgstr ""
+"Het gereedschap D-oneindigheid afhankelijkheid helling opwaarts "
+"kwantificeert de hoeveelheid die elke cel van het raster in het domein "
+"bijdraagt aan een verzameling doelen van cellen in het raster. "
+"D-oneindigheid stroomrichtingen proportioneren de stroom vanuit elke cel van"
+" het raster tussen meerdere neerwaarts gelegen cellen in het raster. Volgend"
+" op dit neerwaartse stroomveld wordt de hoeveelheid stroom, afkomstig uit "
+"elke cel van het raster, die de doelzone bereikt gedefinieerd. Opwaartse "
+"invloed wordt geëvalueerd met behulp van een neerwaartse recursie, "
+"neerwaartse cellen in het raster vanuit elke cel van het raster "
+"onderzoekend,, zodat de geproduceerde kaart het opwaartse gebied "
+"identificeert waaruit de stroom  die door de doelzone stroomt afkomstig is, "
+"of het gebied waarvan het afhankelijk is, voor zijn stroom."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:935
+msgid ""
+"The figures below illustrate the amount each source point in the domain "
+"``x`` (blue) contributes to the destination point or zone ``y`` (red). If "
+"the indicator weighted contributing area function is denoted ``I(y; x)`` "
+"giving the weighted contribution using a unit value (1) from specific grid "
+"cells ``y`` to grid cells ``x``, then the upslope dependence is: ``D(x; y) ="
+" I(y; x)``."
+msgstr ""
+"De afbeeldingen hieronder illustreren de hoeveelheid die elk bronpunt in het"
+" domein ``x`` (blauw) bijdraagt aan het doelpunt of -zone ``y`` (rood). Als "
+"de indicatie functie Gewogen deelname gebied is genoteerd als ``I(y; x)`` "
+"wat de gewogen bijdrage een waarde voor eenheid geeft (1) vanuit specifieke "
+"cellen van het raster ``y`` naar cellen van het raster ``x``, dan is de "
+"opwaartse afhankelijkheid: ``D(x; y) = I(y; x)``."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:944
+msgid ""
+"This is useful for example to track where flow or a flow related substance "
+"or contaminant that enters a destination area may come from."
+msgstr ""
+"Dit is bijvoorbeeld handig om na te gaan waar een stroom of een aan een "
+"stroom gerelateerde substantie of verontreiniger dat een doelgebied "
+"binnenkomt vandaan zou kunnen komen."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:951
+msgid ""
+"A grid giving flow direction by the D-Infinity method where the flow "
+"direction angle is determined as the direction of the steepest downward "
+"slope on the eight triangular facets formed in a 3x3 grid cell window "
+"centered on the grid cell of interest. This grid can be produced using the "
+"**\"D-Infinity Flow Direction\"** tool."
+msgstr ""
+"Een raster dat de stroomrichting geeft met behulp van de methode "
+"D-oneindigheid waar de hoek van de stroomrichting wordt bepaald als de "
+"richting van de steilste neerwaartse helling op de acht driehoekige facetten"
+" die worden gevormd in een venster van 3x3-cellen van het raster gecentreerd"
+" in de betrokken cel van het raster. Dit raster kan worden geproduceerd met "
+"behulp van het gereedschap **\"D-oneindigheid stroomrichting\"**."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:959
+msgid "``Destination Grid`` [raster]"
+msgstr "``Doel-grid`` [raster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:958
+msgid ""
+"A grid that encodes the destination zone that may receive flow from upslope."
+" This grid must be 1 inside the zone y and 0 over the rest of the domain."
+msgstr ""
+"Een raster dat de doelzone codeert die de stroom van boven ontvangt. Dit "
+"raster moet 1 zijn binnen de zone y en 0 voor de rest van het domein."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:966
+msgid "``Output Upslope Dependence Grid`` [raster]"
+msgstr "``Uitvoer raster opwaartse afhankelijkheid`` [raster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:965
+msgid ""
+"A grid quantifing the amount each source point in the domain contributes to "
+"the zone defined by the destination grid."
+msgstr ""
+"Een raster dat de hoeveelheid kwantificeert die elk bronpunt in het domein "
+"bijdraagt aan de zone die wordt gedefinieerd door het doel-grid."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:968
+msgid "**Algorithm ID**: ``taudem:dinfupdependence``"
+msgstr "**ID algoritme**: ``taudem:dinfupdependence``"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:976
+msgid "Slope Average Down"
+msgstr "Helling neerwaarts gemiddelde"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:981
+msgid ""
+"This tool computes slope in a D8 downslope direction averaged over a user "
+"selected distance. Distance should be specified in horizontal map units."
+msgstr ""
+"Dit gereedschap berekent een helling in een D8 neerwaartse richting, "
+"gemiddeld, over een door de gebruiker geselecteerde afstand. De afstand moet"
+" worden gespecificeerd in horizontale kaarteenheden."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1005
+msgid "``Downslope Distance`` [number]"
+msgstr "``Neerwaartse afstand`` [getal]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1002
+msgid ""
+"Input parameter of downslope distance over which to calculate the slope (in "
+"horizontal map units)."
+msgstr ""
+"Parameter voor invoer van de neerwaartse afstand waarover de helling moet "
+"worden berekend (in horizontale kaarteenheden)."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1012
+msgid "``Slope Average Down Grid`` [raster]"
+msgstr "``Raster gemiddelde neerwaartse helling`` [raster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1011
+msgid ""
+"This output is a grid of slopes calculated in the D8 downslope direction, "
+"averaged over the selected distance."
+msgstr ""
+"Deze uitvoer is een raster van een helling berekend in de D8 neerwaartse "
+"richting, gemiddeld over de geselecteerde afstand. "
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1014
+msgid "**Algorithm ID**: ``taudem:slopeavedown``"
+msgstr "**ID algoritme**: ``taudem:slopeavedown``"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1022
+msgid "Slope Over Area Ratio"
+msgstr "Verhouding helling over gebied"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1027
+msgid ""
+"Calculates the ratio of the slope to the specific catchment area "
+"(contributing area). This is algebraically related to the more common "
+"ln(a/tan beta) wetness index, but contributing area is in the denominator to"
+" avoid divide by 0 errors when slope is 0."
+msgstr ""
+"Berekent de verhouding van de helling voor het specifieke opvanggebied "
+"(deelnemend gebied). Dit is algebraïsch gerelateerd aan de meer algemene "
+"ln(a/tan bèta) natheids-index, maar het deelnemend gebied staat in de noemer"
+" om fouten door delingen door 0 te vermijden als de helling 0 is."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1036
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1074
+msgid ""
+"A grid of slope. This grid can be generated using ether the **\"D8 Flow "
+"Directions\"** tool or the **\"D-Infinity Flow Directions\"** tool."
+msgstr ""
+"Een raster van de helling. Dit raster kan worden gegenereerd met behulp van "
+"ofwel de gereedschappen **\"D8 stroomrichtingen\"** of  **\"D-oneindigheid "
+"stroomrichtingen\"**."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1044
+msgid "``Specific Catchment Area Grid`` [raster]"
+msgstr "``Specifiek opvanggebied raster`` [raster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1040
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1078
+msgid ""
+"A grid giving the contributing area value for each cell taken as its own "
+"contribution plus the contribution from upslope neighbors that drain in to "
+"it. Contributing area is counted in terms of the number of grid cells (or "
+"summation of weights). This grid can be generated using either the **\"D8 "
+"Contributing Area\"** tool or the **\"D-Infinity Contributing Area\"** tool."
+msgstr ""
+"Een raster dat de waarde voor het deelnemend gebied geeft voor elke cel, "
+"genomen als zijn eigen bijdrage plus de bijdrage van opwaarts gelegen buren "
+"die er in afvoeren. Het deelnemend gebied wordt geteld in termen van het "
+"aantal celen van het raster (of opgetelde wegingen). Dit raster kan worden "
+"gegenereerd met behulp van ofwel het gereedschap **\"D8 deelnemend "
+"gebied\"** of het gereedschap **\"D-oneindigheid deelnemend gebied\"**."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1053
+msgid "``Slope Divided By Area Ratio Grid`` [raster]"
+msgstr "``Raster Helling gedeeld door verhouding gebied`` [raster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1050
+msgid ""
+"A grid of the ratio of slope to specific catchment area (contributing area)."
+" This is algebraically related to the more common ``ln(a/tan beta)`` wetness"
+" index, but contributing area is in the denominator to avoid divide by 0 "
+"errors when slope is 0."
+msgstr ""
+"Een raster van de verhouding voor een specifiek opvanggebied (deelnemend "
+"gebied). Dit is algebraïsch gerelateerd aan de meer algemene ln(a/tan bèta) "
+"natheids-index, maar het deelnemend gebied staat in de noemer om fouten door"
+" delingen door 0 te vermijden als de helling 0 is."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1055
+msgid "**Algorithm ID**: ``taudem:slopearearatio``"
+msgstr "**ID algoritme**: ``taudem:slopearearatio``"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1063
+msgid "Topographic wetness index"
+msgstr "Topografische natheidindex (TWI)"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1068
+msgid "Calculates the topographic wetness index (TWI)."
+msgstr "Berekent de topografische natheidndex (TWI)."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1075
+msgid "``Slope`` [raster]"
+msgstr "``Helling`` [raster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1082
+msgid "``Specific catchment area`` [raster]"
+msgstr "``Specifiek opvanggebied`` [raster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1088
+msgid "``Wetness index`` [raster]"
+msgstr "``Neerslagindex`` [raster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1088
+msgid "A grid of the wetness index (TWI)."
+msgstr "Een raster van de neerslagindex (TWI)."
+
+#: ../../docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools.rst:1090
+msgid "**Algorithm ID**: ``taudem:twi``"
+msgstr "**ID algoritme**: ``taudem:twi``"

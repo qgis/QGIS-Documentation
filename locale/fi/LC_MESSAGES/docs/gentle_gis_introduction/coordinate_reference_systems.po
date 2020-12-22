@@ -1,0 +1,204 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:16+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Finnish (https://www.transifex.com/qgis/teams/6144/fi/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fi\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:4
+msgid "Coordinate Reference Systems"
+msgstr "Koordinaattijärjestelmät"
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:7
+msgid "Objectives:"
+msgstr "Tavoite:"
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:7
+msgid "Understanding of Coordinate Reference Systems."
+msgstr "Ymmärrys koordinaattijärjestelmistä"
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:9
+msgid "Keywords:"
+msgstr "Avainsanat:"
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:9
+msgid ""
+"Coordinate Reference System (CRS), Map Projection, On the Fly Projection, "
+"Latitude, Longitude, Northing, Easting"
+msgstr ""
+"Koordinaattijärjestelmä, karttaprojektio, projisointi lennossa, leveysaste, "
+"pituusaste, pohjoiskoordinaatti, itäkoordinaatti"
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:13
+msgid "Overview"
+msgstr "Yleistä"
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:26
+msgid "Map Projection in detail"
+msgstr "Karttaprojektioista"
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:28
+msgid ""
+"A traditional method of representing the earth's shape is the use of globes."
+" There is, however, a problem with this approach. Although globes preserve "
+"the majority of the earth's shape and illustrate the spatial configuration "
+"of continent-sized features, they are very difficult to carry in one's "
+"pocket. They are also only convenient to use at extremely small scales (e.g."
+" 1:100 million)."
+msgstr ""
+"Perinteinen tapa esittää Maata on pallokartta. Pallokartta säilyttää hyvin "
+"laajojen kohteiden muodot, suunnat sekä suhteelliset pinta-alat ja "
+"etäisyydet. Sellaista on kuitenkin erittäin vaikea kuljetella mukanaan, eikä"
+" se sovellu kuin erittäin pienimittakaavaisille (esim. 1:100 milj.) "
+"kartoille."
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:34
+msgid ""
+"Most of the thematic map data commonly used in GIS applications are of "
+"considerably larger scale. Typical GIS datasets have scales of 1:250 000 or "
+"greater, depending on the level of detail. A globe of this size would be "
+"difficult and expensive to produce and even more difficult to carry around. "
+"As a result, cartographers have developed a set of techniques called **map "
+"projections** designed to show, with reasonable accuracy, the spherical "
+"earth in two-dimensions."
+msgstr ""
+"Pääosa teemakartoista laaditaan huomattavasti suurimittakaavaisemmiksi. "
+"Tyypillinen paikkatietoaineisto on kerätty mittakaavaan 1:250 000 tai jopa "
+"suuremmaksi esitettävien yksityiskohtien määrästä riippuen. Tämänkokoinen "
+"karttapallo olisi vaikeaa ja kallista tuottaa ja lähes mahdotonta kuljettaa."
+" Niinpä kartografit ovat kehittäneet lukuisia matemaattisia "
+"**karttaprojektioita**, joilla voidaan esittää kolmiuloitteinen, lähes "
+"pallonmuotoinen Maa kaksiuloitteisella tasolla riittävän hyvin. "
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:41
+msgid ""
+"When viewed at close range the earth appears to be relatively flat. However "
+"when viewed from space, we can see that the earth is relatively spherical. "
+"Maps, as we will see in the upcoming map production topic, are "
+"representations of reality. They are designed to not only represent "
+"features, but also their shape and spatial arrangement. Each map projection "
+"has **advantages** and **disadvantages**. The best projection for a map "
+"depends on the **scale** of the map, and on the purposes for which it will "
+"be used. For example, a projection may have unacceptable distortions if used"
+" to map the entire African continent, but may be an excellent choice for a "
+"**large-scale (detailed) map** of your country. The properties of a map "
+"projection may also influence some of the design features of the map. Some "
+"projections are good for small areas, some are good for mapping areas with a"
+" large East-West extent, and some are better for mapping areas with a large "
+"North-South extent."
+msgstr ""
+"Läheltä katsottuna maapallon pinta näyttää varsin pääpiirteittäin "
+"tasaiselta. Kun Maata katsoo avaruudesta käsin huomataan sen olevan lähes "
+"pallonmuotoinen. Kartat ovat, kuten kartan tuottamista koskevassa luvussa "
+"todetaan, todellisuuden kuvauksia. Ne eivät pelkästään näytä kohteita, vaan "
+"myös niiden muodot ja keskinäiset sijainnit. Jokaisella karttaprojektiolla "
+"on **hyvät** ja **huonot** puolensa. Paras projektio kullekin kartalle "
+"riippuu kartan **mittakaavasta** ja käyttötarkoituksesta. Joku projektio "
+"saattaa vääristää tolkuttomasti, jos sillä yritetään esittää kokonaista "
+"maanosaa, mutta sama projektio sopii erittäin hyvin **suurimittakaavaiseen "
+"(yksityiskohtaiseen) karttaan** yhdestä valtiosta. Projektion ominaisuudet "
+"vaikuttavat kartan suunnitteluun, sillä jotkut projektiot soveltuvat "
+"suppeiden alueiden karttoihin, toiset itä-länsisuuntaisten ja kolmannet "
+"pohjois-eteläsuuntaisten kohdealueiden esittämiseen."
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:56
+msgid "The three families of map projections"
+msgstr "Karttaprojektioiden kolme ryhmää"
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:82
+msgid "Accuracy of map projections"
+msgstr "Karttaprojektioiden virheellisyydet"
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:209
+msgid "Coordinate Reference System (CRS) in detail"
+msgstr "Koordinaattijärjestelmistä tarkemmin"
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:211
+msgid ""
+"With the help of coordinate reference systems (CRS) every place on the earth"
+" can be specified by a set of three numbers, called coordinates. In general "
+"CRS can be divided into **projected coordinate reference systems** (also "
+"called Cartesian or rectangular coordinate reference systems) and "
+"**geographic coordinate reference systems**."
+msgstr ""
+"Koordinaattijärjestelmien avulla mikä tahansa sijainti maapallolla voidaan "
+"yksilöidä kolmen luvun eli koordinaatin yhdistelmänä. Yleisimmin käytettävät"
+" koordinaattijärjestelmät voidaan jakaa **maantieteellisiin "
+"koordinaattijärjestelmiin** ja **tasokoordinaattijärjestelmiin**."
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:218
+msgid "Geographic Coordinate Systems"
+msgstr "Maantieteelliset koordinaattijärjestelmät"
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:220
+msgid ""
+"The use of Geographic Coordinate Reference Systems is very common. They use "
+"degrees of latitude and longitude and sometimes also a height value to "
+"describe a location on the earth’s surface. The most popular is called **WGS"
+" 84**."
+msgstr ""
+"Maantieteellisiä koordinaattijärjestelmiä käytetään yleisesti. Niissä "
+"sijainti ilmoitetaan leveys- ja pituusasteiden avulla, ja joskus käytetään "
+"myös korkeuskoordinaattia. Maailmanlaajuistesti yleisin niistä on **WGS84**."
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:224
+msgid ""
+"**Lines of latitude** run parallel to the equator and divide the earth into "
+"180 equally spaced sections from North to South (or South to North). The "
+"reference line for latitude is the equator and each **hemisphere** is "
+"divided into ninety sections, each representing one degree of latitude. In "
+"the northern hemisphere, degrees of latitude are measured from zero at the "
+"equator to ninety at the north pole. In the southern hemisphere, degrees of "
+"latitude are measured from zero at the equator to ninety degrees at the "
+"south pole. To simplify the digitisation of maps, degrees of latitude in the"
+" southern hemisphere are often assigned negative values (0 to -90°). "
+"Wherever you are on the earth’s surface, the distance between the lines of "
+"latitude is the same (60 nautical miles). See figure_geographic_crs_ for a "
+"pictorial view."
+msgstr ""
+"**Leveyspiirit** kulkevat Päiväntasaajan suuntaisesti ja jakavat Maan "
+"pohjois-eteläsuunnassa 180:een yhden asteen levyiseen vyöhykkeeseen, joista "
+"90 on kummallakin **pallonpuoliskolla**. Päiväntasaaja on leveyspiiri 0, ja "
+"navat sijaitsevat leveyspiireillä 90 astetta. Sekaannusten välttämiseksi "
+"eteläisen pallonpuoliskon leveysasteet merkitään usein negatiivisina "
+"(0...-90°), ja pohjoisen pallonpuoliskon leveysasteet vastaavasti "
+"positiivisina. Riippumatta sijainnista maapallolla etäisyys leveyspiirien "
+"välillä on kutakuinkin yhtä suuri (60 mpk eli ~110 km)."
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:417
+msgid "What have we learned?"
+msgstr "Mitä olemme oppineet?"
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:438
+msgid "Now you try!"
+msgstr "Nyt on sinun vuorosi yrittää!"
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:480
+msgid "**Websites**:"
+msgstr "**Verkkosivustoja**:"
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:489
+msgid "What's next?"
+msgstr "Mitä seuraavaksi?"
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:491
+msgid ""
+"In the section that follows we will take a closer look at **Map "
+"Production**."
+msgstr "Seuraavassa osiossa katsomme tarkemmin **kartantuotantoa**."

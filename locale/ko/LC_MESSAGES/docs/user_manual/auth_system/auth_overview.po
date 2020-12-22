@@ -1,0 +1,450 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:26+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2020\n"
+"Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:4
+msgid "Authentication System Overview"
+msgstr "인증 시스템 개요"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:16
+msgid "Anatomy of authentication system"
+msgstr "인증 시스템 개념도"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:19
+msgid "Authentication database"
+msgstr "인증 데이터베이스"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:21
+msgid ""
+"The new authentication system stores authentication configurations in an "
+"SQLite database file located, by default, at :file:`<profile directory"
+">/qgis-auth.db`."
+msgstr ""
+"새 인증 시스템은 기본적으로 :file:`<profile directory>/qgis-auth.db` 위치에 있는 SQLite "
+"데이터베이스 파일에 인증 환경 설정을 저장합니다."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:24
+msgid ""
+"This authentication database can be moved between QGIS installations without"
+" affecting other current QGIS user preferences, as it is completely separate"
+" from normal QGIS settings. A configuration ID (a random 7-character "
+"alphanumeric string) is generated when initially storing a configuration to "
+"the database. This represents the configuration, thereby allowing the ID to "
+"be stored in plain text application components, (such as project, plugin, or"
+" settings files) without disclosure of its associated credentials."
+msgstr ""
+"현재의 다른 QGIS 사용자 환경 설정에 영향을 미치지 않고 서로 다른 QGIS 설치본 간에 이 인증 데이터베이스를 이동시킬 수 "
+"있습니다. 인증 데이터베이스가 일반적인 QGIS 설정과 완벽하게 분리되어 있기 때문입니다. 환경 설정을 데이터베이스에 처음으로 저장할 때"
+" 환경 설정 ID(랜덤한 문자 7개 길이의 알파벳-숫자 문자열)를 생성합니다. 이 ID가 환경 설정을 가리키기 때문에, 관련 인증 정보를"
+" 노출시키는 일 없이 ID를 (프로젝트, 플러그인, 또는 설정 파일과 같은) 평문 텍스트 응용 프로그램 항목으로 저장할 수 있습니다."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:34
+msgid ""
+"The parent directory of the `qgis-auth.db` can be set using the following "
+"environment variable, ``QGIS_AUTH_DB_DIR_PATH``, or set on the command line "
+"during launch with the ``--authdbdirectory`` option."
+msgstr ""
+"환경 변수 ``QGIS_AUTH_DB_DIR_PATH`` 를 사용하거나 또는 QGIS 구동 시 명령 줄에서 "
+"``--authdbdirectory`` 옵션을 설정해서 :file:`qgis-auth.db` 의 부모 디렉터리를 설정할 수 있습니다."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:39
+msgid "Master password"
+msgstr "마스터 비밀번호"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:41
+msgid ""
+"To store or access sensitive information within the database, a user must "
+"define a `master password`. A new master password is requested and verified "
+"when initially storing any encrypted data to the database. When sensitive "
+"information is accessed, the user is prompted for the master password. The "
+"password is then cached for the remainder of the session (until application "
+"is quit), unless the user manually chooses an action to clear its cached "
+"value. Some instances of using the authentication system do not require "
+"input of the master password, such as when selecting an existing "
+"authentication configuration, or applying a configuration to a server "
+"configuration (such as when adding a WMS layer)."
+msgstr ""
+"데이터베이스 내에 민감한 정보를 저장하거나 접근하려면, 사용자가 *마스터 비밀번호* 를 정의해야만 합니다. 데이터베이스에 암호화된 "
+"데이터를 처음으로 저장할 때 새 마스터 비밀번호를 요청하고 확인합니다. 사용자가 민감한 정보에 접근할 때 마스터 비밀번호를 입력해야 "
+"합니다. 사용자가 캐시값을 수동으로 삭제하지만 않는다면 남은 세션 동안 (응용 프로그램을 종료할 때까지) 마스터 비밀번호를 캐시에 "
+"저장합니다. 기존 인증 환경 설정을 선택한다거나 또는 (WMS 레이어 추가 시처럼) 서버 환경 설정에 인증 환경 설정을 적용한다거나 하는"
+" 경우와 같은 인증 시스템을 이용하는 일부 인스턴스는 마스터 비밀번호를 요구하지 않습니다."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:51
+msgid ""
+"You can choose to save the password in the ``Wallet/Keyring`` of your "
+"computer."
+msgstr "사용자 컴퓨터의 ``Wallet/Keyring`` 에 비밀번호를 저장하도록 선택할 수 있습니다."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:59
+msgid "Input new master password"
+msgstr "새 마스터 비밀번호 입력 대화창"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:63
+msgid ""
+"A path to a file containing the master password can be set using the "
+"following environment variable, ``QGIS_AUTH_PASSWORD_FILE``."
+msgstr ""
+"환경 변수 ``QGIS_AUTH_PASSWORD_FILE`` 을 이용해서 마스터 비밀번호를 담고 있는 파일을 가리키는 경로를 설정할 수 "
+"있습니다."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:67
+msgid "Managing the master password"
+msgstr "마스터 비밀번호 관리하기"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:69
+msgid ""
+"Once set, the master password can be reset; the current master password will"
+" be needed prior to resetting. During this process, there is an option to "
+"generate a complete backup of the current database."
+msgstr ""
+"마스터 비밀번호를 설정한 다음, 다시 리셋할 수 있습니다. 리셋하기 전에 현재 마스터 비밀번호를 입력해야 합니다. 이 과정 도중에 현재 "
+"데이터베이스의 완전한 백업 파일을 생성하는 옵션이 있습니다."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:78
+msgid "Resetting master password"
+msgstr "마스터 비밀번호 리셋하기"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:80
+msgid ""
+"If the user forgets the master password, there is no way to retrieve or "
+"override it. There is also no means of retrieving encrypted information "
+"without knowing the master password."
+msgstr ""
+"사용자가 마스터 비밀번호를 잊어버린 경우, 다시 찾거나 무시할 수 있는 방법은 없습니다. 또 마스터 비밀번호 없이 암호화된 정보를 받아올"
+" 수 있는 방법도 없습니다."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:84
+msgid ""
+"If a user inputs their existing password incorrectly three times, the dialog"
+" will offer to erase the database."
+msgstr "사용자가 기존 비밀번호를 세 번 부정확하게 입력한 경우, 대화창이 데이터베이스를 삭제하도록 제안할 것입니다."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:92
+msgid "Password prompt after three invalid attempts"
+msgstr "부정확한 시도를 세 번 한 후의 QGIS 비밀번호 메시지"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:95
+msgid "Authentication Configurations"
+msgstr "인증 환경 설정"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:97
+msgid ""
+"You can manage authentication configurations from :guilabel:`Configurations`"
+" in the :guilabel:`Authentication` tab of the QGIS Options dialog "
+"(:menuselection:`Settings --> Options`)."
+msgstr ""
+"QGIS 옵션 대화창의 (:menuselection:`Settings --> Options`) "
+":guilabel:`Authentication` 탭에 있는 **Configurations** 부분에서 인증 환경 설정을 관리할 수 "
+"있습니다."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:106
+msgid "Configurations editor"
+msgstr "환경 설정 편집기"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:108
+msgid ""
+"Use the |signPlus| button to add a new configuration, the |signMinus| button"
+" to remove configurations, and the |symbologyEdit| button to modify existing"
+" ones."
+msgstr ""
+"새 환경 설정을 추가하려면 |signPlus| 아이콘을, 그리고 환경 설정을 제거하려면 |signMinus| 버튼을 클릭하십시오. 기존 "
+"환경 설정을 수정하려면 |symbologyEdit| 아이콘을 클릭하십시오."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:116
+msgid "Adding config from within Configuration editor"
+msgstr "환경 설정 편집기 안에서 환경 설정 추가하기"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:118
+msgid ""
+"The same type of operations for authentication configuration management "
+"(Add, Edit and Remove) can be done when configuring a given service "
+"connection, such as configuring an OWS service connection. For that, there "
+"are action buttons within the configuration selector for fully managing "
+"configurations found within the authentication database. In this case, there"
+" is no need to go to the :guilabel:`configurations` in "
+":guilabel:`Authentication` tab of QGIS options unless you need to do more "
+"comprehensive configuration management."
+msgstr ""
+"OWS 서비스 연결과 같은 지정한 서비스 연결을 환경 설정할 때, 인증 환경 설정 관리에 대해 세 가지 유형의 작업(추가, 편집 및 "
+"제거)을 할 수 있습니다. 이를 위해, 환경 설정 선택기 안에 인증 데이터베이스에서 찾은 환경 설정을 완전히 관리할 수 있는 액션 "
+"버튼들이 있습니다. 이런 경우, 환경 설정을 좀 더 종합적으로 관리해야 할 필요가 없는 한, QGIS 옵션 대화창의 "
+":guilabel:`Authentication` 탭에 있는 **Configurations** 부분으로 갈 필요가 없습니다."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:131
+msgid ""
+"WMS connection dialog showing :guilabel:`Add`, :guilabel:`Edit`, and "
+":guilabel:`Remove` authentication configuration buttons"
+msgstr ""
+":guilabel:`Add`, :guilabel:`Edit` 및 :guilabel:`Remove` 인증 환경 설정 버튼이 표시된 WMS "
+"연결 대화창"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:134
+msgid ""
+"When creating or editing an authentication configuration, the info required "
+"is a name, an authentication method and any other info that the "
+"authentication method requires (see more about the available authentication "
+"types in :ref:`authentication_methods`)."
+msgstr ""
+"인증 환경 설정을 생성하거나 편집할 때, 요구되는 정보는 명칭, 인증 방법, 그리고 인증 방법이 요구하는 기타 정보입니다. (사용할 수 "
+"있는 인증 유형에 관한 자세한 내용은 :ref:`authentication_methods` 을 참조하세요.)"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:142
+msgid "Authentication Methods"
+msgstr "인증 방법"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:144
+msgid ""
+"Available authentications are provided by C++ plugins much in the same way "
+"data provider plugins are supported by QGIS. The method of authentication "
+"that can be selected is relative to the access needed for the "
+"resource/provider, e.g. HTTP(S) or database, and whether there is support in"
+" both QGIS code and a plugin. As such, some authentication method plugins "
+"may not be applicable everywhere an authentication configuration selector is"
+" shown. A list of available authentication method plugins and their "
+"compatible resource/providers can be accessed going to "
+":menuselection:`Settings --> Options` and, in the :guilabel:`Authentication`"
+" tab, click the |options| :guilabel:`Installed Plugins` button."
+msgstr ""
+"QGIS가 데이터 제공자 플러그인을 지원하는것과 거의 동일한 방식으로 C++ 플러그인이 사용 가능한 인증을 제공합니다. QGIS 코드와 "
+"플러그인을 둘 다 지원하는지 여부와 HTTP(S), 데이터베이스 같은 리소스/제공자에 필요한 접근 권한에 따라 인증 방법을 선택할 수 "
+"있습니다. 따라서 일부 인증 방법 플러그인은 인증 환경 설정 선택기가 표시된 모든 위치에 적용이 안 될 수도 있습니다. "
+":menuselection:`Settings --> Options` 메뉴를 선택한 다음 :guilabel:`Authentication` "
+"탭에 있는 |options| :guilabel:`Installed Plugins` 버튼을 클릭하면 사용 가능한 인증 방법 플러그인과 호환"
+" 가능한 리소스/제공자 목록을 볼 수 있습니다."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:160
+msgid "Available method plugins list"
+msgstr "사용할 수 있는 인증 방법 플러그인 목록"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:162
+msgid ""
+"Plugins can be created for new authentication methods that do not require "
+"QGIS to be recompiled. Since the support for plugins is currently C++-only, "
+"QGIS will need to be restarted for the new dropped-in plugin to become "
+"available to the user. Ensure your plugin is compiled against the same "
+"target version of QGIS if you intend to add it to an existing target "
+"install."
+msgstr ""
+"QGIS를 다시 컴파일할 필요가 없는 경우 새 인증 방법을 위한 플러그인을 생성할 수 있습니다. 현재 C++ 플러그인만을 지원하고 있기 "
+"때문에, 새로 추가한 플러그인을 사용하려면 QGIS를 재시작해야 합니다. 기존 QGIS 설치본에 플러그인을 추가할 생각이라면, 사용자 "
+"플러그인이 기존 설치본과 동일한 버전을 대상으로 컴파일됐는지 확인하십시오."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:173
+msgid "Basic HTTP authentication configs"
+msgstr "HTTP 기본 인증 환경 설정"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:180
+msgid "ESRI Token authentication configs"
+msgstr "ESRI 토큰 인증 환경 설정"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:187
+msgid "OAuth2 authentication configs"
+msgstr "OAuth2 인증 환경 설정"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:194
+msgid "PKI paths authentication configs"
+msgstr "PKI 경로 인증 환경 설정"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:201
+msgid "PKI PKCS#12 file paths authentication configs"
+msgstr "PKI PKCS#12 파일 경로 인증 환경 설정"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:208
+msgid "Stored Identity authentication configs"
+msgstr "저장된 신원 인증 환경 설정"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:212
+msgid ""
+"The Resource URL is currently an *unimplemented* feature that will "
+"eventually allow a particular configuration to be auto-chosen when "
+"connecting to resources at a given URL."
+msgstr ""
+":guilabel:`Resource` URL은 현재 *구현되지 않은* 기능으로, 향후 지정한 URL에 있는 리소스에 연결 시 특정 환경 "
+"설정을 자동 선택할 수 있도록 개발할 예정입니다."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:217
+msgid "Master Password and Auth Config Utilities"
+msgstr "마스터 비밀번호 및 인증 환경 설정 유틸리티"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:219
+msgid ""
+"Under the Options menu (:menuselection:`Settings --> Options`) in the "
+":guilabel:`Authentication` tab, there are several utility actions to manage "
+"the authentication database and configurations:"
+msgstr ""
+":menuselection:`Settings --> Options` 대화창의 :guilabel:`Authentication` 에서, 인증"
+" 데이터베이스 및 환경 설정을 관리할 수 있는 다음 |settings| :guilabel:`Utilities` 액션의 콤보박스 목록을 "
+"찾을 수 있습니다:"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:228
+msgid "Utilities menu"
+msgstr "유틸리티 목록"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:230
+msgid ""
+"**Input master password**: opens the master password input dialog, "
+"independent of performing any authentication database command"
+msgstr "**마스터 비밀번호 입력**: 인증 데이터베이스 명령어 수행과는 무관하게 마스터 비밀번호 입력 대화창을 엽니다."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:232
+msgid ""
+"**Clear cached master password**: unsets the master password if it has been "
+"set"
+msgstr "**캐시된 마스터 비밀번호 삭제**: 마스터 비밀번호가 입력 대화창을 통해 설정되어있다면 이를 해제합니다."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:234
+msgid ""
+"**Reset master password**: opens a dialog to change the master password (the"
+" current password must be known) and optionally back up the current database"
+msgstr ""
+"**마스터 비밀번호 리셋**: 마스터 비밀번호를 바꾸기 위한 (현재 비밀번호를 알고 있어야만 합니다) 대화창을 열고, 선택적으로 현재 "
+"데이터베이스를 백업합니다."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:236
+msgid ""
+"**Clear network authentication access cache**: clears the authentication "
+"cache of all connections"
+msgstr "**네트워크 인증 접근 캐시 삭제**: 모든 연결의 인증 캐시를 삭제합니다."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:238
+msgid ""
+"**Automatically clear network authentication access cache on SSL errors**: "
+"the connection cache stores all authentication data for connections, also "
+"when the connection fails. If you change authentication configurations or "
+"certification authorities, you should clear the authentication cache or "
+"restart QGIS. When this option is checked, the authentication cache will be "
+"automatically cleared every time an SSL error occurs and you choose to abort"
+" the connection"
+msgstr ""
+"**SSL 오류 발생 시 자동적으로 네트워크 인증 접근 캐시 삭제**: 연결 캐시는 연결이 실패하더라도 연결에 대한 모든 인증 데이터를 "
+"저장합니다. 사용자가 인증 환경 설정이나 인증서 기관을 변경하는 경우, 인증 캐시를 삭제하거나 QGIS를 재시작해야 합니다. 이 옵션을 "
+"체크하면, SSL 오류가 발생해서 사용자가 연결을 중지하도록 선택할 때마다 인증 캐시를 자동적으로 삭제할 것입니다."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:245
+msgid ""
+"**Integrate master password with your Wallet/Keyring**: adds the master "
+"password to your personal Wallet/Keyring"
+msgstr "**마스터 비밀번호를 사용자 월렛/키링과 통합**: 사용자 개인 월렛/키링에 마스터 비밀번호를 추가합니다."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:247
+msgid ""
+"**Store/update the master password in your Wallet/Keyring**: updates the "
+"changed master password in your Wallet/Keyring"
+msgstr "**사용자 월렛/키링에 마스터 비밀번호를 저장/업데이트**: 사용자 월렛/키링에 변경된 마스터 비밀번호를 업데이트합니다."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:249
+msgid ""
+"**Clear the master password from your Wallet/Keyring**: deletes the master "
+"password from your Wallet/Keyring"
+msgstr "**사용자 월렛/키링에서 마스터 비밀번호를 삭제**: 사용자 월렛/키링에서 마스터 비밀번호를 삭제합니다."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:251
+msgid ""
+"**Enable password helper debug log**: enables a debug tool that will contain"
+" all the log information of the authentication methods"
+msgstr "**비밀번호 도우미 디버그 로그 활성화**: 인증 방법의 모든 로그 정보를 담게 될 디버그 도구를 활성화합니다."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:253
+msgid ""
+"**Clear cached authentication configurations**: clears the internal lookup "
+"cache for configurations, used to speed up network connections. This does "
+"not clear QGIS’s core network access manager’s cache, which requires a "
+"relaunch of QGIS."
+msgstr ""
+"**캐시된 인증 환경 설정 삭제**: 네트워크 연결 속도를 높이는데 사용되는 환경 설정용 내부 조회 캐시를 지웁니다. QGIS의 핵심 "
+"네트워크 접근 관리자의 캐시는 지워지지 않습니다. QGIS를 다시 시작해야 하기 때문입니다."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:256
+msgid ""
+"**Remove all authentication configurations**: clears the database of all "
+"configuration records, without removing other stored records."
+msgstr ""
+"**모든 인증 환경 설정 제거**: 저장된 다른 레코드는 삭제하지 않은 채, 모든 환경 설정 레코드의 데이터베이스를 지웁니다."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:258
+msgid ""
+"**Erase authentication database**: schedules a backup of the current "
+"database and complete rebuild of the database table structure. The actions "
+"are scheduled for a later time, to ensure that other operations, like "
+"project loading, do not interrupt the operation or cause errors due to a "
+"temporarily missing database."
+msgstr ""
+"**인증 데이터베이스 지우기**: 현재 데이터베이스의 백업과 데이터베이스 테이블 구조의 완전한 리빌딩을 예약합니다. 이런 작업들은 나중에"
+" 실행되도록 예약됩니다. 프로젝트 불러오기와 같은 다른 작업이 이를 방해하지 않도록 하거나 일시적으로 누락된 데이터베이스로 인해 오류가 "
+"발생하지 않도록 하기 위해서입니다."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:269
+msgid "DB erase verification menu"
+msgstr "DB 삭제 확인 대화창"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:272
+msgid "Using authentication configurations"
+msgstr "인증 환경 설정 사용하기"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:274
+msgid ""
+"Typically, an authentication configuration is selected in a configuration "
+"dialog for a network services (such as WMS). However, the selector widget "
+"can be embedded anywhere authentication is needed or in non-core "
+"functionality, like in third-party PyQGIS or C++ plugins."
+msgstr ""
+"일반적으로, (WMS 같은) 네트워크 서비스 용 환경 설정 대화창에서 인증 환경 설정을 선택합니다. 하지만 인증이 필요한 곳이라면 "
+"어디든, 또는 제 3자 PyQGIS 또는 C++ 플러그인 같은 비핵심 기능에 선택기 위젯을 내장시킬 수 있습니다."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:279
+msgid ""
+"When using the selector, :guilabel:`No authentication` is displayed in the "
+"pop-up menu control when nothing is selected, when there are no "
+"configurations to choose from, or when a previously assigned configuration "
+"can no longer be found in the database. The :guilabel:`Type` and "
+":guilabel:`Id` fields are read-only and provide a description of the "
+"authentication method and the config’s ID respectively."
+msgstr ""
+"선택기 위젯을 사용할 때, 아무것도 선택하지 않았거나 선택할 인증 환경 설정이 없거나 또는 데이터베이스에서 이전에 할당한 환경 설정을 "
+"찾을 수 없는 경우 팝업 메뉴의 콤보박스에 'No authentication' 이라고 표시됩니다. :guilabel:`Method` 및 "
+":guilabel:`Id` 텍스트 란은 읽기 전용으로, 선택한 인증 방법의 설명 및 환경 설정 ID를 각각 표시합니다."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:291
+msgid "Authentication configuration selector with no authentication"
+msgstr "아무 인증도 없는 인증 환경 설정 선택기"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:298
+msgid "Authentication configuration selector with selected config"
+msgstr "선택한 환경 설정을 표시한 인증 환경 설정 선택기"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:301
+msgid "Python bindings"
+msgstr "파이썬 바인딩"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:303
+msgid ""
+"All classes and public functions have sip bindings, except "
+"``QgsAuthCrypto``, since management of the master password hashing and auth "
+"database encryption should be handled by the main app, and not via Python. "
+"See :ref:`authentication_security_considerations` concerning Python access."
+msgstr ""
+"모든 클래스 및 공개 함수는 `SIP <https://en.wikipedia.org/wiki/SIP_(software)>`_ 바인딩을 "
+"보유하고 있습니다. ``QgsAuthCrypto`` 를 제외하고 말이죠. 왜냐하면 파이썬을 통해서가 아니라 주 응용 프로그램이 마스터 "
+"비밀번호 `해싱 <http://www.terms.co.kr/hashing.htm>`_ 및 인증 데이터베이스를 관리해야 하기 때문입니다. "
+"파이썬 접근 관련 설명은 :ref:`authentication_security_considerations` 을 참조하세요. "

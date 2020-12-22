@@ -1,0 +1,265 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:21+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Italian (https://www.transifex.com/qgis/teams/6144/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/training_manual/processing/cutting_merging.rst:2
+msgid "Clipping and merging raster layers"
+msgstr "Tagliare e unire raster"
+
+#: ../../docs/training_manual/processing/cutting_merging.rst:4
+msgid ""
+"In this lesson we will see another example of spatial data preparation, to "
+"continue using geoalgorithms in real-world scenarios."
+msgstr ""
+"In questa lezione vedremo un altro esempio di preparazione di dati spaziali,"
+" per continuare a utilizzare geoalgoritmi in scenari reali."
+
+#: ../../docs/training_manual/processing/cutting_merging.rst:7
+msgid ""
+"For this lesson, we are going to calculate a slope layer for an area "
+"surrounding a city area, which is given in a vector layer with a single "
+"polygon. The base DEM is divided in two raster layers that, together, cover "
+"an area much larger than that around the city that we want to work with. If "
+"you open the project corresponding to this lesson, you will see something "
+"like this."
+msgstr ""
+"Per questa lezione, andremo a calcolare un raster delle pendenze per una "
+"zona intorno a un'area cittadina, che è fornita in un vettore costituito da "
+"un singolo poligono. Il DEM di base è diviso in due raster che, insieme, "
+"coprono un'area molto più estesa di quella attorno alla città con cui "
+"vogliamo lavorare. Se apri il progetto corrispondente a questa lezione, "
+"vedrai qualcosa del genere."
+
+#: ../../docs/training_manual/processing/cutting_merging.rst:16
+msgid "These layers have two problems:"
+msgstr "Questi raster hanno due problemi:"
+
+#: ../../docs/training_manual/processing/cutting_merging.rst:18
+msgid ""
+"They cover an area that is too large for what we want (we are interested in "
+"a smaller region around the city center)"
+msgstr ""
+"Coprono un'area che troppo estesa per i nostri scopi (ci interessa solo una "
+"zona più piccola intorno al centro cittadino)"
+
+#: ../../docs/training_manual/processing/cutting_merging.rst:20
+msgid ""
+"They are in two different files (the city limits fall into just one single "
+"raster layer, but, as it's been said, we want some extra area around it)."
+msgstr ""
+"Si trovano in due file diversi (i confini cittadini si trovano all'interno "
+"di un solo raster, ma, come si è già detto, vogliamo avere dello spazio "
+"aggiuntivo attorno ad esso)."
+
+#: ../../docs/training_manual/processing/cutting_merging.rst:23
+msgid "Both of them are easily solvable with the appropriate geoalgorithms."
+msgstr ""
+"Entrambi i problemi sono facilmente risolvibili con i geoalgoritmi "
+"appropriati."
+
+#: ../../docs/training_manual/processing/cutting_merging.rst:25
+msgid ""
+"First, we create a rectangle defining the area that we want. To do it, we "
+"create a layer containing the bounding box of the layer with the limits of "
+"the city area, and then we buffer it, so as to have a raster layer that "
+"covers a bit more that the strictly necessary."
+msgstr ""
+"Innanzitutto, creiamo un rettangolo che definisca l'area di cui abbiamo "
+"bisogno. Per fare ciò, creiamo un vettore contenente il perimetro di "
+"delimitazione del vettore con i confini dell'area cittadina, e in seguito "
+"eseguiamo un buffer su di esso, in modo da avere un raster che si estenda un"
+" po' oltre lo spazio minimo necessario."
+
+#: ../../docs/training_manual/processing/cutting_merging.rst:30
+msgid ""
+"To calculate the bounding box , we can use the *Polygon from layer extent* "
+"algorithm"
+msgstr ""
+"Per il calcolare il perimetro di delimitazione, possiamo usare l'algoritmo "
+"*Poligono dall'estensione del layer*"
+
+#: ../../docs/training_manual/processing/cutting_merging.rst:34
+msgid ""
+"To buffer it, we use the *Fixed distance buffer* algorithm, with the "
+"following parameter values."
+msgstr ""
+"Per eseguire il buffer, usiamo l'algoritmo *Buffer a distanza fissa*, con i "
+"seguenti parametri."
+
+#: ../../docs/training_manual/processing/cutting_merging.rst:38
+msgid ""
+"Syntax changed in recent versions; set both Distance and Arc vertex to .25"
+msgstr ""
+"La sintassi è cambiata nelle ultime versioni; imposta .25 sia per Distanza "
+"che per Vertice dell'arco."
+
+#: ../../docs/training_manual/processing/cutting_merging.rst:40
+msgid ""
+"Here is the resulting bounding box obtained using the parameters shown above"
+msgstr ""
+"Ecco il perimetro di delimitazione risultante ottenuto utilizzando i "
+"parametri sopra mostrati."
+
+#: ../../docs/training_manual/processing/cutting_merging.rst:44
+msgid ""
+"It is a rounded box, but we can easily get the equivalent box with square "
+"angles, by running the *Polygon from layer extent* algorithm on it. We could"
+" have buffered the city limits first, and then calculate the extent "
+"rectangle, saving one step."
+msgstr ""
+"Si tratta di un riquadro arrotondato, ma possiamo ottenere facilmente il "
+"riquadro equivalente con angoli retti eseguendo l'algoritmo *Poligono "
+"dall'estensione del layer* su di esso. Avremmo potuto eseguire prima il "
+"buffer sui confini della città, e dopo calcolare il rettangolo "
+"dell'estensione, risparmiando un passaggio."
+
+#: ../../docs/training_manual/processing/cutting_merging.rst:50
+msgid ""
+"You will notice that the rasters has a different projection from the vector."
+" We should therefore reproject them before proceeding further, using the "
+"*Warp (reproject)* tool."
+msgstr ""
+"Noterai che i raster hanno una proiezione differente rispetto al vettore. "
+"Dovremmo pertanto riproiettarli prima di procedere oltre, utilizzando lo "
+"strumento *Riproiezione*."
+
+#: ../../docs/training_manual/processing/cutting_merging.rst:56
+msgid ""
+"Recent versions have a more complex interface. Make sure at least one "
+"compression method is selected."
+msgstr ""
+"Le ultime versioni hanno un'interfaccia più complessa. Assicurati che sia "
+"selezionato almeno un metodo di compressione."
+
+#: ../../docs/training_manual/processing/cutting_merging.rst:59
+msgid ""
+"With this layer that contains the bounding box of the raster layer that we "
+"want to obtain, we can crop both of the raster layers, using the *Clip "
+"raster with polygon* algorithm."
+msgstr ""
+"Con questo vettore che contiene il perimetro di delimitazione del raster che"
+" vogliamo ottenere, possiamo tagliare entrambi i raster, utilizzando "
+"l'algoritmo *Taglia raster con poligono*."
+
+#: ../../docs/training_manual/processing/cutting_merging.rst:65
+msgid ""
+"Once the layers have been cropped, they can be merged using the GDAL *Merge*"
+" algorithm."
+msgstr ""
+"Una che i raster sono stati tagliati, possono essere uniti utilizzando "
+"l'algoritmo GDAL *Unione*."
+
+#: ../../docs/training_manual/processing/cutting_merging.rst:69
+msgid ""
+"You can save time merging first and then cropping, and you will avoid "
+"calling the clipping algorithm twice. However, if there are several layers "
+"to merge and they have a rather big size, you will end up with a large layer"
+" than it can later be difficult to process. In that case, you might have to "
+"call the clipping algorithm several times, which might be time consuming, "
+"but don't worry, we will soon see that there are some additional tools to "
+"automate that operation. In this example, we just have two layers, so you "
+"shouldn't worry about that now."
+msgstr ""
+"Puoi risparmiare del tempo prima unendo e poi tagliando, evitando di "
+"richiamare due volte l'algoritmo di ritaglio. Comunque, se ci sono diversi "
+"raster da unire ed essi hanno una dimensione piuttosto elevata, otterrai un "
+"raster esteso che sarà successivamente difficile da procesare. In tal caso, "
+"potrebbe essere necessario lanciare l'algoritmo di ritaglio diverse volte, "
+"il che potrebbe essere dispendioso in termini di tempo, ma non preoccuparti,"
+" presto vedremo che esistono strumenti aggiuntivi per automatizzare tale "
+"operazione. In questo esempio abbiamo solo due raster, per cui al momento "
+"non dovresti preoccuparti di ciò."
+
+#: ../../docs/training_manual/processing/cutting_merging.rst:77
+msgid "With that, we get the final DEM we want."
+msgstr "Così facendo, otteniamo il DEM finale desiderato."
+
+#: ../../docs/training_manual/processing/cutting_merging.rst:81
+msgid "Now it is time to compute the slope layer."
+msgstr "Adesso è il momento di creare il raster delle pendenze."
+
+#: ../../docs/training_manual/processing/cutting_merging.rst:83
+msgid ""
+"A slope layer can be computed with the *Slope, Aspect, Curvature* algorithm,"
+" but the DEM obtained in the last step is not suitable as input, since "
+"elevation values are in meters but cellsize is not expressed in meters (the "
+"layer uses a CRS with geographic coordinates). A reprojection is needed. To "
+"reproject a raster layer, the *Warp (reproject)* algorithm can be used "
+"again. We reproject into a CRS with meters as units (e.g. 3857), so we can "
+"then correctly calculate the slope, with either SAGA or GDAL."
+msgstr ""
+"Un raster delle pendenze può essere calcolato con l'algoritmo **Pendenza, "
+"Esposizione, Curvatura*, ma il DEM ottenuto nell'ultimo passaggio non è "
+"adatto come file di ingresso, dal momento che i valori di elevazione sono in"
+" metri ma la dimensione della cella non è espressa in metri (il raster "
+"utilizza un CRS con coordinate geografiche). È necessaria una riproiezione. "
+"Per riproiettare un raster, si può utilizzare nuovamente l'algoritmo "
+"*Riproiezione*. Eseguiamo la riproiezione in un CRS avente i metri come "
+"unità (ad es. 3857), in modo da poter calcolare correttamente la pendenza, "
+"con SAGA o GDAL."
+
+#: ../../docs/training_manual/processing/cutting_merging.rst:91
+msgid "With the new DEM, slope can now be computed."
+msgstr "Con il nuovo DEM, la pendenza può essere ora calcolata."
+
+#: ../../docs/training_manual/processing/cutting_merging.rst:95
+msgid "And here is the resulting slope layer."
+msgstr "E questo è il raster delle pendenze risultante."
+
+#: ../../docs/training_manual/processing/cutting_merging.rst:99
+msgid ""
+"The slope produced by the *Slope, Aspect, Curvature* algorithm can be "
+"expressed in degrees or radians; degrees are a more practical and common "
+"unit. In case you calculated it in radians, the *Metric conversions* "
+"algorithm will help us to do the conversion (but in case you didn't know "
+"that algorithm existed, you could use the raster calculator that we have "
+"already used)."
+msgstr ""
+"La pendenza generata dall'algoritmo *Pendenza, Esposizione, Curvatura* può "
+"essere espressa in gradi o radianti; i gradi sono più pratici ed unità di "
+"misura comuni. Nel caso in cui l'avessi calcolata in radianti, l'algoritmo "
+"*Conversioni metriche* ci verrà in aiuto per eseguire la conversione (ma "
+"qualora non avessi saputo dell'esistenza dell'algoritmo, avresti potuto "
+"usare il calcolatore raster che abbiamo già utilizzato)."
+
+#: ../../docs/training_manual/processing/cutting_merging.rst:107
+msgid ""
+"Reprojecting the converted slope layer back with the *Reproject raster "
+"layer*, we get the final layer we wanted."
+msgstr ""
+"Riproiettato il raster delle pendenze convertito con lo strumento "
+"*Riproietta raster*, otteniamo il raster finale desiderato."
+
+#: ../../docs/training_manual/processing/cutting_merging.rst:110
+msgid "todo: Add image"
+msgstr "da fare: Aggiungi immagine"
+
+#: ../../docs/training_manual/processing/cutting_merging.rst:112
+msgid ""
+"The reprojection processes might have caused the final layer to contain data"
+" outside the bounding box that we calculated in one of the first steps. This"
+" can be solved by clipping it again, as we did to obtain the base DEM."
+msgstr ""
+"I processi di riproiezione potrebbero aver fatto in modo che il raster "
+"finale contenga alcuni dati al di fuori del perimetro di delimitazione che "
+"avevamo calcolato in uno dei passaggi iniziali. Questo può essere risolto "
+"tagliandolo di nuovo, così come abbiamo fatto per ottenere il DEM di base."

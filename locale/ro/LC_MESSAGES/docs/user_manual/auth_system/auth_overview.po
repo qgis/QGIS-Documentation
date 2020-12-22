@@ -1,0 +1,177 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:26+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Romanian (https://www.transifex.com/qgis/teams/6144/ro/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:4
+msgid "Authentication System Overview"
+msgstr "Prezentare Generală a Sistemului de Autentificare"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:16
+msgid "Anatomy of authentication system"
+msgstr "Anatomia Sistemului de Autentificare"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:19
+msgid "Authentication database"
+msgstr "Baza de date de autentificare"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:24
+msgid ""
+"This authentication database can be moved between QGIS installations without"
+" affecting other current QGIS user preferences, as it is completely separate"
+" from normal QGIS settings. A configuration ID (a random 7-character "
+"alphanumeric string) is generated when initially storing a configuration to "
+"the database. This represents the configuration, thereby allowing the ID to "
+"be stored in plain text application components, (such as project, plugin, or"
+" settings files) without disclosure of its associated credentials."
+msgstr ""
+"Această bază de date de autentificare poate fi mutată între instalările "
+"QGIS, fără afectarea altor preferințe ale utilizatorului QGIS curent, "
+"deoarece este complet separată de setările normale ale QGIS. Atunci când "
+"stocați inițial o configurație a unei baze de date, este generat un ID de "
+"configurare (un șir aleatoriu de 7 caractere alfanumerice). Acesta "
+"reprezintă configurația, fiind posibilă stocarea în clar a ID-ului de către "
+"componentele aplicației, (cum ar fi proiectele, plugin-urile, sau fișierele "
+"de setare) fără divulgarea credențialelor asociate."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:34
+msgid ""
+"The parent directory of the `qgis-auth.db` can be set using the following "
+"environment variable, ``QGIS_AUTH_DB_DIR_PATH``, or set on the command line "
+"during launch with the ``--authdbdirectory`` option."
+msgstr ""
+"Directorul părinte al `qgis-auth.db` poate fi setat folosind variabila de "
+"mediu ``QGIS_AUTH_DB_DIR_PATH``, sau din linia de comandă, pe durata "
+"lansării cu opțiunea  ``--authdbdirectory``."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:39
+msgid "Master password"
+msgstr "Parola master"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:59
+msgid "Input new master password"
+msgstr "Introducerea noii parole master"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:67
+msgid "Managing the master password"
+msgstr "Gestiunea parolei master"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:69
+msgid ""
+"Once set, the master password can be reset; the current master password will"
+" be needed prior to resetting. During this process, there is an option to "
+"generate a complete backup of the current database."
+msgstr ""
+"Odată stabilită, parola principală poate fi resetată; parola master curentă "
+"va fi necesară înainte de resetare. Pe durata acestui proces, există "
+"opțiunea de a genera o copie de rezervă completă a bazei de date curente."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:78
+msgid "Resetting master password"
+msgstr "Resetarea parolei master"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:80
+msgid ""
+"If the user forgets the master password, there is no way to retrieve or "
+"override it. There is also no means of retrieving encrypted information "
+"without knowing the master password."
+msgstr ""
+"În cazul în care utilizatorul uită parola principală, nu există nici o "
+"modalitate de a o recupera sau de a o suprascrie. De asemenea, nu există "
+"nici un mijloc de recuperare a informațiilor criptate, fără a cunoaște "
+"parola de master."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:84
+msgid ""
+"If a user inputs their existing password incorrectly three times, the dialog"
+" will offer to erase the database."
+msgstr ""
+"Dacă un utilizator introduce incorect, de trei ori, parola, fereastra de "
+"dialog se va oferi să șteargă baza de date."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:92
+msgid "Password prompt after three invalid attempts"
+msgstr "Se va cere parola după trei încercări eronate"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:95
+msgid "Authentication Configurations"
+msgstr "Configurații de Autentificare"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:106
+msgid "Configurations editor"
+msgstr "Editorul de configurații"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:116
+msgid "Adding config from within Configuration editor"
+msgstr "Adăugarea configurărilor din cadrul Editorului de Configurații"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:142
+msgid "Authentication Methods"
+msgstr "Metoda de Autentificare"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:173
+msgid "Basic HTTP authentication configs"
+msgstr "Configurări de autentificare HTTP de bază"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:194
+msgid "PKI paths authentication configs"
+msgstr "Configurări de autentificare ale căilor PKI"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:201
+msgid "PKI PKCS#12 file paths authentication configs"
+msgstr "Configurări de autentificare ale căilor către fișierele PKI PKCS#12"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:208
+msgid "Stored Identity authentication configs"
+msgstr "Configurări de autentificare ale Identităților Stocate"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:217
+msgid "Master Password and Auth Config Utilities"
+msgstr "Utilitare pentru Parola Master și Configurările de Autentificare"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:228
+msgid "Utilities menu"
+msgstr "Meniul Utilitarelor"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:269
+msgid "DB erase verification menu"
+msgstr "Meniul de verificare a ștergerii DB"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:272
+msgid "Using authentication configurations"
+msgstr "Folosirea configurațiilor de autentificare"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:274
+msgid ""
+"Typically, an authentication configuration is selected in a configuration "
+"dialog for a network services (such as WMS). However, the selector widget "
+"can be embedded anywhere authentication is needed or in non-core "
+"functionality, like in third-party PyQGIS or C++ plugins."
+msgstr ""
+"În mod tipic, o configurație de autentificare este selectată într-un dialog "
+"de configurare, pentru serviciile de rețea (cum ar fi WMS). Cu toate "
+"acestea, controlul grafic de selectare poate fi încorporat oriunde este "
+"necesară autentificarea, sau într-o funcționalitate care nu este de "
+"esențială, cum ar fi plugin-urile terțe PyQGIS sau C++."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:301
+msgid "Python bindings"
+msgstr "Legături Python"

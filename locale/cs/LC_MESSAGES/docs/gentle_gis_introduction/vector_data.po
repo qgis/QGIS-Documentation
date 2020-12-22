@@ -1,0 +1,807 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:16+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Czech (https://www.transifex.com/qgis/teams/6144/cs/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: cs\n"
+"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:5
+msgid "Vector Data"
+msgstr "Vektorová data"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:8
+msgid "|gentleLogo|"
+msgstr "|gentleLogo|"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:8
+msgid "Objectives:"
+msgstr "Cíle:"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:8
+msgid "Understanding of vector data models as used in GIS."
+msgstr "Pochopení vektorových datových modelů užitím v GIS."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:10
+msgid "Keywords:"
+msgstr "Klíčová slova:"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:10
+msgid ""
+"Vector, Point, Polyline, Polygon, Vertex, Geometry, Scale, Data Quality, "
+"Symbology, Data Sources"
+msgstr ""
+"Vektor, Bod, Křivka, Polygon, Vrchol, Geometrie, Měřítko, Kvalita Dat, "
+"Symbologie, Zdroje Dat"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:14
+msgid "Overview"
+msgstr "Přehled"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:16
+msgid ""
+"**Vector** data provide a way to represent real world **features** within "
+"the GIS environment. A feature is anything you can see on the landscape. "
+"Imagine you are standing on the top of a hill. Looking down you can see "
+"houses, roads, trees, rivers, and so on (see figure_vector_landscape_). Each"
+" one of these things would be a **feature** when we represent them in a GIS "
+"Application. Vector features have **attributes**, which consist of text or "
+"numerical information that **describe** the features."
+msgstr ""
+"\"vektor\" data poskytují způsob, jak reprezentovat \"rysy\" reálného světa "
+"v prostředí GIS. Charakteristickým rysem je něco, co můžete vidět v přírodě."
+" Představte si, že stojíte na vrcholu kopce. Při pohledu dolů můžete vidět "
+"domy, silnice, stromy, řeky, a tak dále (podívejte se na "
+"figure_vector_landscape_). Každý z těchto prvků může být \"rys\", když je "
+"zastupujeme v GIS aplikacích. Vektorové funkce mají \"atributy\", které se "
+"skládají z textových nebo číselných údajů, které \"popisují\" tyto rysy."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:30
+msgid ""
+"Looking over a landscape you can see the main features, such as roads, "
+"houses and trees."
+msgstr ""
+"Při pohledu na krajinou můžete vidět hlavní rysy, jako jsou silnice, domy a "
+"stromy."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:39
+msgid ""
+"When a feature's geometry consists of only a single vertex, it is referred "
+"to as a **point** feature (see illustration figure_geometry_point_). Where "
+"the geometry consists of two or more vertices and the first and last vertex "
+"are not equal, a **polyline** feature is formed (see illustration "
+"figure_geometry_polyline_). Where three or more vertices are present, and "
+"the last vertex is equal to the first, an enclosed **polygon** feature is "
+"formed (see illustration figure_geometry_polygon_)."
+msgstr ""
+"Když se geomtrický rys skládá pouze z jednoho vrcholu, označuje se jako "
+"\"bodová\" funkce (viz obrázek figure_geometry_point_). V případě, že se "
+"geometrie skládá ze dvou nebo více vrcholů a první a poslední vrchol nejsou "
+"stejné, je vytvořena funkce \"křivky\" (viz obrázek "
+"figure_geometry_polyline_). Tam, kde jsou přítomny tři nebo více vrcholů, a "
+"poslední vrchol je rovna první, je vytvořena funkce uzavřeného \"polygonu\" "
+"(viz obrázek figure_geometry_polygon_)."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:52
+msgid ""
+"A point feature is described by its X, Y and optionally Z coordinate. The "
+"point attributes describe the point e.g. if it is a tree or a lamp post."
+msgstr ""
+"Bodová funkce je popsána jeho X, Y a případně Z souřadnicí. Bodové atributy "
+"popisují bod např. zda se jedná o strom nebo sloup veřejného osvětlení."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:61
+msgid ""
+"A polyline is a sequence of joined vertices. Each vertex has an X, Y (and "
+"optionally Z) coordinate. Attributes describe the polyline."
+msgstr ""
+"Křivka je sekvence spojených vrcholů. Každý vrchol má X, Y (a volitelně Z) "
+"souřadnici. Atributy popisují danou křivku."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:70
+msgid ""
+"A polygon, like a polyline, is a sequence of vertices. However in a polygon,"
+" the first and last vertices are always at the same position."
+msgstr ""
+"Polygon stejně jako křivka, je sekvence vrcholů. Avšak v polygonu, první a "
+"poslední vrcholy jsou vždy na stejném místě."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:73
+msgid ""
+"Looking back at the picture of a landscape we showed you further up, you "
+"should be able to see the different types of features in the way that a GIS "
+"represents them now (see illustration figure_geometry_landscape_)."
+msgstr ""
+"Při zpětném pohledu na obraz krajiny, jak jsme vám ukázali výše, byste měli "
+"být schopni vidět různé typy funkcí tak, že GIS je teď představuje (viz "
+"obrázek_figure_geometry_landscape_)."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:83
+msgid ""
+"Landscape features as we would present them in a GIS. Rivers (blue) and "
+"roads (green) can be represented as lines, trees as points (red) and houses "
+"as polygons (white)."
+msgstr ""
+"Krajinné funkce, jak bychom je prezentovali v GIS. Řeky (modré) a silnice "
+"(zelené) mohou být reprezentovány jako čáry, stromy jako body (červeně) a "
+"domy jako polygony (bílou)."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:88
+msgid "Point features in detail"
+msgstr "Bodové funkce v detailu."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:90
+msgid ""
+"The first thing we need to realise when talking about point features is that"
+" what we describe as a point in GIS is a matter of opinion, and often "
+"dependent on scale. let's look at cities for example. If you have a small "
+"scale map (which covers a large area), it may make sense to represent a city"
+" using a point feature. However as you zoom in to the map, moving towards a "
+"larger scale, it makes more sense to show the city limits as a polygon."
+msgstr ""
+"První věc, kterou si musíme uvědomit, když mluví o bodových funkcí je, že "
+"to, co popisujeme jako bod v GIS je věc názoru, a často je to závislé na "
+"měřítku. Podívejme se například na města. Pokud máte malé měřítko mapy (což "
+"pokrývá rozsáhlou oblast), může mít smysl reprezentovat město pomocí funkce "
+"bodu. Nicméně, když sepřiblížíte na mapu, pohybující se směrem k větším "
+"měřítku, dává větší smysl ukazovat hranice města pomocí polygonu."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:97
+msgid ""
+"When you choose to use points to represent a feature is mostly a matter of "
+"scale (how far away are you from the feature), convenience (it takes less "
+"time and effort to create point features than polygon features), and the "
+"type of feature (some things like telephone poles just don't make sense to "
+"be stored as polygons)."
+msgstr ""
+"Když se rozhodnete použít body představující rys je většinou otázkou měřítka"
+" (jak daleko jste od funkce), pohodlí (trvá méně času a úsilí o vytvoření "
+"bodových funkcí než polygonu funkcí) a typ prvku (některé věci, jako "
+"telegrafní sloupy prostě nemají smysl být uloženy jako polygony)."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:102
+msgid ""
+"As we show in illustration figure_geometry_point_, a point feature has an X,"
+" Y and optionally, Z value. The X and Y values will depend on the "
+"**Coordinate Reference System** (CRS) being used. We are going to go into "
+"more detail about Coordinate Reference Systems in a later tutorial. For now "
+"let's simply say that a CRS is a way to accurately describe where a "
+"particular place is on the earth's surface. One of the most common reference"
+" systems is **Longitude and Latitude**. Lines of Longitude run from the "
+"North Pole to the South Pole. Lines of Latitude run from the East to West. "
+"You can describe precisely where you are at any place on the earth by giving"
+" someone your Longitude (X) and Latitude (Y). If you make a similar "
+"measurement for a tree or a telephone pole and marked it on a map, you will "
+"have created a point feature."
+msgstr ""
+"jak ukazujeme na obrázku figure_geometry_point_, bodová dunkce má X, Y a "
+"volitelně Z hodnoty. Hodnoty X a Y bude záviset na používaném "
+"\"souřadnicovém referenčním systému\" (CRS). Chystáme se jít do větších "
+"detailů o souřadnicových referenčních systémů v pozdějším tutoriálu. Pro "
+"tuto chvíli můžeme jednoduše říci, že souřadnicový referenční systém je "
+"způsob, jak přesně popsat místo, kde je konkrétní místo na zemském povrchu. "
+"Jedním z nejčastějších referenčních systémů je \"zeměpisná délka a šířka\". "
+"Linie zeměpisné délky běží od severního pólu k jižnímu pólu. Linie zeměpisné"
+" délky běží od východu na západ. Můžete přesně popsat místo, kde jste na "
+"libovolném místě na Zemi tím, že někomu zadáte vaší zeměpisnou délku (X) a "
+"zeměpisná šířka (Y). Pokud uděláte nějakou podobnou měření na strom nebo "
+"telefonního sloupu a označil na mapě, kdy jste již vytvořili funkci bodu."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:114
+msgid ""
+"Since we know the earth is not flat, it is often useful to add a Z value to "
+"a point feature. This describes how high above sea level you are."
+msgstr ""
+"Protože víme, že Země není plochá, je často užitečné přidat hodnotu Z do "
+"funkce bodu. Tato hodnota popisuje, jak vysoko nad mořem jste."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:118
+msgid "Polyline features in detail"
+msgstr "Funkce křivky v detailu"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:120
+msgid ""
+"Where a point feature is a single vertex, **a polyline has two or more "
+"vertices**. The polyline is a continuous path drawn through each vertex, as "
+"shown in figure_geometry_polyline_. When two vertices are joined, a line is "
+"created. When more than two are joined, they form a 'line of lines', or "
+"**polyline**."
+msgstr ""
+"V případě, že bodový funkce je jediný vrchol, \"křivka má dva nebo více "
+"vrcholů\". Křivka je kontinuální cesta vedena přes každý vrchol, jak je "
+"znázorněno na figure_geometry_polyline_. Když jsou spojeny dva vrcholy, je "
+"vytvořena řada. Při více spojení než dvou, tvoří \"linii linek\", nebo "
+"\"křivky\"."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:125
+msgid ""
+"A polyline is used to show the geometry of **linear features** such as "
+"roads, rivers, contours, footpaths, flight paths and so on. Sometimes we "
+"have special rules for polylines in addition to their basic geometry. For "
+"example contour lines may touch (e.g. at a cliff face) but should never "
+"cross over each other. Similarly, polylines used to store a road network "
+"should be connected at intersections. In some GIS applications you can set "
+"these special rules for a feature type (e.g. roads) and the GIS will ensure "
+"that these polylines always comply to these rules."
+msgstr ""
+"Křivka se používá k zobrazení geometrie \"lineárních rysů\", jako jsou "
+"silnice, řeky, obrysů, chodníků, drah letu a tak dále. Někdy máme zvláštní "
+"pravidla pro křivky kromě jejich základní geometrie. Například vrstevnice se"
+" může dotknout (např. na útesu), ale nikdy by neměly překračovat přes sebe. "
+"Podobně křivky sloužící k ukládání silničních síťi by měly být přopojeny na "
+"křižovatkách. V některých GIS aplikacích můžete nastavit tyto zvláštní "
+"pravidla pro typ prvku (například komunikace) a GIS zajistí, aby tyto křivky"
+" vždy souhlasily v souladu s těmito pravidly."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:134
+msgid ""
+"If a curved polyline has very large distances between vertices, it may "
+"appear **angular** or jagged, depending on the scale at which it is viewed "
+"(see figure_polyline_jagged_). Because of this it is important that "
+"polylines are digitised (captured into the computer) with distances between "
+"vertices that are small enough for the scale at which you want to use the "
+"data."
+msgstr ""
+"Jestliže má křivka velmi velké vzdálenosti mezi vrcholy se může zdát "
+"\"hranatá\" nebo \"zubatá\" v závislosti na rozsahu, ve kterém je zobrazeno "
+"(viz figure_polyline_jagged_). Z tohoto důvodu je důležité, aby byly křivky "
+"které jsou digitalizovány (zachycena do počítače) se vzdáleností mezi "
+"vrcholy byly dostatečně malé na rozsahu, ve kterém chcete použít data."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:146
+msgid ""
+"Polylines viewed at a smaller scale (1:20 000 to the left) may appear smooth"
+" and curved. When zoomed in to a larger scale (1:500 to the right) polylines"
+" may look very angular."
+msgstr ""
+"Křivky zobrazené v menším měřítku (1:20 000 a větším) se může objevit hladce"
+" a zakřiveně. Při přiblížení k větším měřítku (1: 500) křivky můžou vypadat "
+"velmi hranatě."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:157
+msgid "Polygon features in detail"
+msgstr "Funkce polygonu v detailu"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:159
+msgid ""
+"Polygon features are **enclosed areas** like dams, islands, country "
+"boundaries and so on. Like polyline features, polygons are created from a "
+"series of vertices that are connected with a continuous line. However "
+"because a polygon always describes an enclosed area, the first and last "
+"vertices should always be at the same place! Polygons often have **shared "
+"geometry** –-- boundaries that are in common with a neighbouring polygon. "
+"Many GIS applications have the capability to ensure that the boundaries of "
+"neighbouring polygons exactly coincide. We will explore this in the "
+":ref:`gentle_gis_topology` topic later in this tutorial."
+msgstr ""
+"Funkce polygonu jsou \"uzavřené prostory\" jako přehrady, ostrovy, hranice "
+"zemí a tak dále. Jako lomenné funkce, jsou polygony vytvořeny z řady "
+"vrcholů, které jsou spojeny kontinuální linií. Nicméně, protože mnohoúhelník"
+" popisuje vždy uzavřenou oblast, první a poslední vrchol by měl být vždy na "
+"stejném místě! Polygony mají často \"sdílenou geometrii\" --- hranice, které"
+" jsou společné se sousedním polygonem. Mnoho aplikací GIS mají schopnost "
+"zajistit, že hranice sousedních polygonů se mají přesně shodovat. Toto "
+"budeme zkoumat v: ref:`gentle_gis_topology` téma později v tomto výukovém "
+"programu."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:168
+msgid ""
+"As with points and polylines, polygons have **attributes**. The attributes "
+"describe each polygon. For example a dam may have attributes for depth and "
+"water quality."
+msgstr ""
+"Stejně jako u bodů a křivek, polygony mají \"atributy\". Tyto atributy "
+"popisují každý polygon. Například přehrada může mít atributy pro hloubku a "
+"kvalitu vody."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:173
+msgid "Vector data in layers"
+msgstr "Vektorová data ve vrstvách"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:186
+msgid "Editing vector data"
+msgstr "Editování vektorových dat"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:188
+msgid ""
+"The GIS application will allow you to create and modify the geometry data in"
+" a layer --– a process called **digitising** –-- which we will look at more "
+"closely in a later tutorial. If a layer contains polygons (e.g. farm dams), "
+"the GIS application will only allow you to create new polygons in that "
+"layer. Similarly if you want to change the shape of a feature, the "
+"application will only allow you to do it if the changed shape is correct. "
+"For example it won't allow you to edit a line in such a way that it has only"
+" one vertex –-- remember in our discussion of lines above that all lines "
+"must have at least two vertices."
+msgstr ""
+"Aplikace GIS vám umožní vytvářet a upravovat data geometrie ve vrstvě - "
+"proces se nazývá \"digitalizace\" - kterým se budeme zabývat podrobněji v "
+"pozdějším tutoriálu. Jestliže obsahuje vrstva polygony (například zemědělské"
+" přehrady), aplikace GIS pouze umožňují vytvořit nové polygony v této "
+"vrstvě. Stejně tak, pokud chcete změnit tvar prvku, aplikace povolí pouze "
+"vám, jak to udělat, za předpokladu, že je změněný tvar správný. Například to"
+" nedovolí upravovat čáru takovým způsobem, že to má jen jeden vrchol - "
+"pamatujte si z dřívější diskuze o liniích, že všechny linii musí mít alespoň"
+" dva vrcholy."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:197
+msgid ""
+"Creating and editing vector data is an important function of a GIS since it "
+"is one of the main ways in which you can create personal data for things you"
+" are interested in. Say for example you are monitoring pollution in a river."
+" You could use the GIS to digitise all outfalls for storm water drains (as "
+"point features). You could also digitise the river itself (as a polyline "
+"feature). Finally you could take readings of pH levels along the course of "
+"the river and digitise the places where you made these readings (as a point "
+"layer)."
+msgstr ""
+"Vytváření a úprava vektorových dat je důležitou funkcí GIS, protože je "
+"jednou z hlavních způsobů, kterými si můžete vytvořit osobní údaje pro věci,"
+" které nás zajímají. Řekněme například, že sledujete znečištění v řece. Dalo"
+" by se použít GIS k digitalizaci všech výpustí přívalových vod kanalizace "
+"(jako bodových objektů). Dalo by se také digitalizovat řeku samotnou (jako "
+"rys křivky). Nakonec byste mohli provádět měření hladin pH podél toku řeky a"
+" digitalizovat místa, kde jste provedli tyto hodnoty (jako bodovou vrstva)."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:205
+msgid ""
+"As well as creating your own data, there is a lot of free vector data that "
+"you can obtain and use. For example, you can obtain vector data that appears"
+" on the 1:50 000 map sheets from the Chief Directorate: Surveys and Mapping."
+msgstr ""
+"Stejně jako vytváření vlastních dat, je zde spousta volně dostupných "
+"vektorových dat, které můžete získat a použít. Například můžete získat "
+"vektorová data, která se zobrazí na 1:50 000 mapových listů z ředitelství "
+"Chief: Průzkumy a mapování."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:210
+msgid "Scale and vector data"
+msgstr "Měřítko a vektorová data"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:212
+msgid ""
+"Map **scale** is an important issue to consider when working with vector "
+"data in a GIS. When data is captured, it is usually digitised from existing "
+"maps, or by taking information from surveyor records and global positioning "
+"system devices. Maps have different scales, so if you import vector data "
+"from a map into a GIS environment (for example by digitising paper maps), "
+"the digital vector data will have the same scale issues as the original map."
+" This effect can be seen in illustrations figure_vector_small_scale_ and "
+"figure_vector_large_scale_. Many issues can arise from making a poor choice "
+"of map scale. For example using the vector data in illustration "
+"figure_vector_small_scale_ to plan a wetland conservation area could result "
+"in important parts of the wetland being left out of the reserve! On the "
+"other hand if you are trying to create a regional map, using data captured "
+"at 1:1000 000 might be just fine and will save you a lot of time and effort "
+"capturing the data."
+msgstr ""
+"Mapové \"měřítko\" je důležité prvek, který zvážit při práci s vektorovými "
+"daty v GIS. Když jsou data zachycena, to je obvykle digitalizování ze "
+"stávajících map, nebo získávání informací z geodetických záznamů a GPS. Mapy"
+" mají různá měřítka, takže pokud importuješ vektorová data z mapy do "
+"prostředí GIS (například digitalizace papírové mapy), vektorová data "
+"digitální budou mít problémy stejné jako původní mapy. Tento efekt lze vidět"
+" na obrázcích figure_vector_small_scale_ a figure_vector_large_scale_. Mnohé"
+" problémy mohou vzniknout v důsledku špatné volby měřítka mapy. Například "
+"použitím vektorových dat v ilustrace figure_vector_small_scale_ naplánovat "
+"památkovou oblast mokřadů může mít za následek vynechání důležitých částí "
+"mokřadu rezervy! Na druhou stranu, pokud se snažíte vytvořit regionální mapy"
+" s využitím dat zachycených na 1: 1000 000,  zachycující data by mohly být v"
+" pořádku a ušetří vám spoustu času a úsilí."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:232
+msgid ""
+"Vector data (red lines) that was digitised from a small scale (1:1000 000) "
+"map."
+msgstr ""
+"Vektorová data (červené linie), které byly digitalizovány z maelého měřítka "
+"(1:1000 000) map."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:240
+msgid ""
+"Vector data (green lines) that was digitised from a large scale (1:50 000) "
+"map."
+msgstr ""
+"Vektorová data (zelené linie), které byly digitalizovány z map velkých "
+"měřítek (1:50 000)."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:243
+msgid "Symbology"
+msgstr "Symbologie"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:245
+msgid ""
+"When you add vector layers to the map view in a GIS application, they will "
+"be drawn with random colours and basic symbols. One of the great advantages "
+"of using a GIS is that you can create personalised maps very easily. The GIS"
+" program will let you choose colours to suite the feature type (e.g. you can"
+" tell it to draw a water bodies vector layer in blue). The GIS will also let"
+" you adjust the symbol used. So if you have a trees point layer, you can "
+"show each tree position with a small picture of a tree, rather than the "
+"basic circle marker that the GIS uses when you first load the layer (see "
+"illustrations figure_vector_symbology_, figure_generic_symbology_ and "
+"figure_custom_symbology_)."
+msgstr ""
+"Přidáte-li vektorové vrstvy pro zobrazení mapy v aplikaci GIS, budou "
+"vypracovány s náhodnými barvami a základními symboly. Jednou z velkých výhod"
+" pomocí GIS je, že můžete vytvářet vlastní mapy velice snadno. GIS Program "
+"vám umožní vybrat barvy, které vyhovují typ prvku (např. jej můžete říci k "
+"tomu vodní útvary vektorovou vrstvu modře). GIS vám dovolí nastavit symbol "
+"použití. Takže pokud máte bodovou vrstvu stromů, můžete zobrazit jednotlivé "
+"pozice stromu s malým obrázkem stromu, spíše než základní kružnicové značky,"
+" než tu, co GIS používá při prvním načtení vrstvy (viz ilustrace "
+"figure_vector_symbology_, figure_generic_symbology_ a "
+"figure_custom_symbology_)."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:261
+msgid ""
+"In the GIS, you can use a panel (like the one above) to adjust how features "
+"in your layer should be drawn."
+msgstr ""
+"V aplikacách GIS můžete použít panel (v liště nahoře) k nastavení, jak by se"
+" měly jednotlivé vrstvy vykreslovat."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:270
+msgid ""
+"When a layer (for example the trees layer above) is first loaded, a GIS "
+"application will give it a generic symbol."
+msgstr ""
+"Pokud je vrstva (například vrstva stromů nejvýšše) je první načítána, "
+"aplikace GIS jí dávají automatický symbol."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:279
+msgid ""
+"After making our adjustments it is much easier to see that our points "
+"represent trees."
+msgstr ""
+"Po provedení našeho nastavení je mnohem jednodušší vidět že naše body "
+"reprezentují stromy."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:282
+msgid ""
+"Symbology is a powerful feature, making maps come to life and the data in "
+"your GIS easier to understand. In the topic that follows "
+"(:ref:`gentle_gis_attributes`) we will explore more deeply how symbology can"
+" help the user to understand vector data."
+msgstr ""
+"Symbolika je silný nástroj, pomocí něhož mapy ožívají a data jsou v "
+"aplikacích GIS srozumitelnější. V tématu, který následuje (ref:: "
+"`gentle_gis_attributes`) budeme zkoumat hlouběji, jak může symbolika pomoci "
+"uživateli pochopit vektorová data."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:288
+msgid "What can we do with vector data in a GIS?"
+msgstr "Co můžeme dělat s vektorovými daty v aplikacích GIS?"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:290
+msgid ""
+"At the simplest level we can use vector data in a GIS Application in much "
+"the same way you would use a normal topographic map. The real power of GIS "
+"starts to show itself when you start to ask questions like 'which houses are"
+" within the 100 year flood level of a river?'; 'where is the best place to "
+"put a hospital so that it is easily accessible to as many people as "
+"possible?'; 'which learners live in a particular suburb?'. A GIS is a great "
+"tool for answering these types of questions with the help of vector data. "
+"Generally we refer to the process of answering these types of questions as "
+"**spatial analysis**. In later topics of this tutorial we will look at "
+"spatial analysis in more detail."
+msgstr ""
+"Na nejjednodušší úrovni můžeme použít vektorová data v GIS aplikacích v "
+"podstatě stejným způsobem, jako byste použili normální topografické mapy. "
+"Skutečná síla GIS začíná, když začnete klást otázky, \"Které domy jsou v "
+"rámci 100 let úrovně povodňové řeky?\"; \"Kde je nejlepší místo pro "
+"nemocnice tak, že je snadno přístupný co největšímu počtu lidí je možné? '; "
+"\"Který studující žijí v určitém předměstí?\". GIS je skvělý nástroj pro "
+"odpovědi na tyto typy otázek pomocí vektorových dat. Obecně máme na mysli "
+"proces odpovědi na tyto typy otázek jako \"prostorové analýzy\". V "
+"pozdějších tématech tohoto tutoriálu se podíváme na prostorové analýzy "
+"podrobněji."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:301
+msgid "Common problems with vector data"
+msgstr "Obvyklé problémy s vektorovými daty"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:303
+msgid ""
+"Working with vector data does have some problems. We already mentioned the "
+"issues that can arise with vectors captured at different scales. Vector data"
+" also needs a lot of work and maintenance to ensure that it is accurate and "
+"reliable. Inaccurate vector data can occur when the instruments used to "
+"capture the data are not properly set up, when the people capturing the data"
+" aren't being careful, when time or money don't allow for enough detail in "
+"the collection process, and so on."
+msgstr ""
+"Práce s vektorovými daty má určitá úskalí. Již jsme zmínili problémy, které "
+"mohou nastat s vektory zachycených v různých měřítcích. Vektorová data také "
+"potřebují hodně práce a údržby, aby bylo zajištěno, že jsou přesné a "
+"spolehlivé. Nepřesné vektorová data mohou nastat, když nástroje použité k "
+"zachycení dat nejsou správně nastaveny, když lidé zachycující data nejsou "
+"příliš opatrní, když čas nebo peníze neumožňují dostatečně podrobný sběr dat"
+" a tak dále."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:311
+msgid ""
+"If you have poor quality vector data, you can often detect this when viewing"
+" the data in a GIS. For example **slivers** can occur when the edges of two "
+"polygon areas don't meet properly (see figure_vector_slivers_)."
+msgstr ""
+"Pokud máte špatnou kvalitu vektorových dat, můžete to často zjistit při "
+"prohlížení dat v aplikacích GIS. Například \"nedokonalosti\" mohou nastat "
+"když se jednotlivé hrany dvou polygonů nedotýkají, tak jak by se měly (viz "
+"figure_vector_slivers_)."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:321
+msgid ""
+"Slivers occur when the vertices of two polygons do not match up on their "
+"borders. At a small scale (e.g. 1 on left) you may not be able to see these "
+"errors. At a large scale they are visible as thin strips between two "
+"polygons (2 on right)."
+msgstr ""
+"Nedokonalosti mohou nastat, když vrcholy dvou polygonů neodpovídají na "
+"jejich hranicích. V malých měřítkách (1 zleva) nemusíte být schopni vidět "
+"tyto chyby. Ve velkém měřítku jsou viditelné jako tenké proužky mezi dvěma "
+"polygony (2 zprava)."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:326
+msgid ""
+"**Overshoots** can occur when a line feature such as a road does not meet "
+"another road exactly at an intersection. **Undershoots** can occur when a "
+"line feature (e.g. a river) does not exactly meet another feature to which "
+"it should be connected. Figure figure_vector_shoots_ demonstrates what "
+"undershoots and overshoots look like."
+msgstr ""
+"\"Přesahy\" mohou nastat,  pokud vlastnost čáry například silnice, není "
+"přesně spojen jinou cestou na křižovatce. \"Nedotahy\" mohou nastat, pokud "
+"funkce linie (např. řeka) neplní další funkce, ke které by měla být "
+"připojena. Obrázek figure_vector_shoots_ ukazuje, co nedotahy a přesahy "
+"znamenají."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:338
+msgid ""
+"Undershoots (1) occur when digitised vector lines that should connect to "
+"each other don’t quite touch. Overshoots (2) happen if a line ends beyond "
+"the line it should connect to."
+msgstr ""
+"Nedotahy (1) nastávají, když digitalizované vektorové linie, které by se "
+"měly připojit k sobě nemají zcela přesný dotek. Překmity (2) se stávají, "
+"když linie končí za hranicí, kde by se měla připojit."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:342
+msgid ""
+"Because of these types of errors, it is very important to digitise data "
+"carefully and accurately. In the upcoming topic on **topology**, we will "
+"examine some of these types of errors in more detail."
+msgstr ""
+"Vzhledem k typům těchto chyb, je velmi důležité, aby byla data pečlivě a "
+"přesně digitalizovat. V nadcházejícím tématu na \"topologii\", budeme "
+"zkoumat některé z těchto typů chyb podrobněji."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:347
+msgid "What have we learned?"
+msgstr "Co už jsme se naučili?"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:349
+msgid "Let's wrap up what we covered in this worksheet:"
+msgstr "Pojďme si shrnout, co jsme se naučili v tomto prostředí."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:351
+msgid "**Vector data** is used to represent real world **features** in a GIS."
+msgstr ""
+"\"Vektorová data\" jsou používána k reprezentaci \"rysů\" reálného světa v "
+"aplikacích GIS."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:352
+msgid ""
+"A vector feature can have a **geometry** type of **point**, **line** or a "
+"**polygon**."
+msgstr "Vektorová funkce může mít typy \"geometrie\" \"bod\", \"linii\" nebo \"polygon\"."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:354
+msgid "Each vector feature has **attribute data** that describes it."
+msgstr "Každý vektorový objekt mát \"atributová data\", které ho popisují."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:355
+msgid "Feature geometry is described in terms of **vertices.**"
+msgstr "Funkce geometrie je popsána v podímkách \"vrcholů\"."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:356
+msgid ""
+"Point geometries are made up of a **single vertex** (X,Y and optionally Z)."
+msgstr ""
+"Geometrie bodu je vytvořena pro \"každý vrchol\" zvlášť (X, Y někdy i Z "
+"souřadnicí)."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:357
+msgid ""
+"Polyline geometries are made up of **two or more** vertices forming a "
+"connected line."
+msgstr ""
+"Geometrie křivky je vytvořena pro \"dva a více\" vrcholů formujících danou "
+"linii."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:359
+msgid ""
+"Polygon geometries are made up of **at least four vertices** forming an "
+"enclosed area. The first and last vertices are always in the same place."
+msgstr ""
+"Geomtrie polygonu je vytvořena \"nejméně pro řtyři vrcholy\", které "
+"vytvářejí uzavřenou oblast. První a poslední vrchol jsou vždy na stejném "
+"místě."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:361
+msgid ""
+"Choosing which geometry type to use depends on scale, convenience and what "
+"you want to do with the data in the GIS."
+msgstr ""
+"Výběr, kterou geometrii použít závisí na měřítku, vhodnosti and na tom co "
+"chcetes těmito daty dále v aplikacích GIS provádět."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:363
+msgid ""
+"Most GIS applications do not allow you to mix more than one geometry type in"
+" a single layer."
+msgstr ""
+"Většína aplikací GIS nepovoluje spojení více geometrických typů v jedné "
+"vrstvě."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:365
+msgid ""
+"Digitising is the process of creating digital vector data by drawing it in a"
+" GIS application."
+msgstr ""
+"Digitalizace je proces vytváření digitálních vektorových dat kreslením v "
+"aplikaci GIS."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:367
+msgid ""
+"Vector data can have quality issues such as **undershoots**, **overshoots** "
+"and **slivers** which you need to be aware of."
+msgstr ""
+"Vektorová data mohou mít problémy s kvalitou, jako jsou \"nedotahy\", "
+"\"přetahy a \"nedokonalosti\" které budete muset brát na vědomí."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:369
+msgid ""
+"Vector data can be used for **spatial analysis** in a GIS application, for "
+"example to find the nearest hospital to a school."
+msgstr ""
+"Vektorová data mohou být použita \"pro prostorovou analýzu\" v aplikacích "
+"GIS, například najít nejbližší nemocnici ke škole."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:372
+msgid ""
+"We have summarised the GIS Vector Data concept in Figure "
+"figure_vector_summary_."
+msgstr ""
+"Sumarizovali jsme si koncept vektorových dat v GIS v figure_vector_summary_."
+" "
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:380
+msgid "This diagram shows how GIS applications deal with vector data."
+msgstr "Diagram ukazuje jak se chovají vektorová data v GIS aplikacích."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:383
+msgid "Now you try!"
+msgstr "Nyní si to zkuste sami!"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:385
+msgid "Here are some ideas for you to try with your learners:"
+msgstr "Zde jsou pro Vás nějaké nápady, jak si to zkusit se svými učni."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:387
+msgid ""
+"Using a copy of a toposheet map for your local area (like the one shown in "
+"figure_sample_map_), see if your learners can identify examples of the "
+"different types of vector data by highlighting them on the map."
+msgstr ""
+"Použití kopii topografické mapy pro tvojí místní oblast (jak je znázorněna v"
+" figure_sample_map_), zda vaše studenti mohou identifikovat příklady různých"
+" typů vektorových dat zvýrazněním je na mapě."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:390
+msgid ""
+"Think of how you would create vector features in a GIS to represent real "
+"world features on your school grounds. Create a table of different features "
+"in and around your school and then task your learners to decide whether they"
+" would be best represented in the GIS as a point, line or polygon. See "
+"table_vector_1_ for an example."
+msgstr ""
+"Přemýšlejte o tom, jak byste vytvořili vektorovou funkci GIS, aby "
+"reprezentovala reálnou funkci na svých školních pozemcích. Vytvořte tabulku "
+"různých funkcí kolem vaší školi a pak dotazte své studenty, aby rozhodli, "
+"zda by bylo nejlépe zastoupeny v GIS jako bod, linie nebo polygonu. Viz "
+"table_vector_1_ pro příklad."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:402
+msgid ""
+"Can you identify two point features and one polygon feature on this map?"
+msgstr ""
+"Můžete identifikovat dvě bodové funkce a jednu polygonovou na této mapě?"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:408
+msgid "Real world feature"
+msgstr "Rys reálného světa"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:408
+msgid "Suitable Geometry Type"
+msgstr "Vhodný typ geomtrie"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:410
+msgid "The school flagpole"
+msgstr "Školní stožár"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:412
+msgid "The soccer field"
+msgstr "Fotbalové hřiště"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:414
+msgid "The footpaths in and around the school"
+msgstr "Chodníky v a okolo školy"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:416
+msgid "Places where taps are located"
+msgstr "Místa, kde se nacházejí kohoutky"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:418
+msgid "Etc."
+msgstr "Atd."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:421
+msgid ""
+"Table Vector 1: Create a table like this (leaving the geometry type column "
+"empty) and ask your learners to decide on suitable geometry types."
+msgstr ""
+"Vektorová tabulka 1: Vytvořte tabulku podle vzoru (nechte výstupní sloupec "
+"pro geomtrii prázdný) a zeptejte se žáků aby rozhodli jaký by byl vhodný "
+"geometrický objekt."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:425
+msgid "Something to think about"
+msgstr "Něco k zamyšlení"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:427
+msgid ""
+"If you don't have a computer available, you can use a toposheet and "
+"transparency sheets to show your learners about vector data."
+msgstr ""
+"Pokud nemáte k dispozici počítač můžete použít topografickou mapu a "
+"transparentní listy  aby jste ukázal žákům vektorová data."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:431
+msgid "Further reading"
+msgstr "Další k přečtení"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:433
+msgid ""
+"The QGIS User Guide also has more detailed information on working with "
+"vector data in QGIS."
+msgstr ""
+"Uživatelský manuál QGIS má také více detailních informací o práci s "
+"vektorovými daty v QGIS."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:437
+msgid "What's next?"
+msgstr "Co dále?"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:439
+msgid ""
+"In the section that follows we will take a closer look at **attribute data**"
+" to see how it can be used to describe vector features."
+msgstr ""
+"V části, která následuje se blíže podíváme na \"atributová data\" aby jsme "
+"viděli, jak můžou být použity k popisu vektorvých funkcí."

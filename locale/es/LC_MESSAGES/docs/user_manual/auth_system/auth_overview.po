@@ -1,0 +1,529 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:26+0000\n"
+"Last-Translator: Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020\n"
+"Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:4
+msgid "Authentication System Overview"
+msgstr "Vista general del sistema de Autenticación"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:16
+msgid "Anatomy of authentication system"
+msgstr "Anatomía del sistema de Autenticación"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:19
+msgid "Authentication database"
+msgstr "Base de datos de autenticación"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:21
+msgid ""
+"The new authentication system stores authentication configurations in an "
+"SQLite database file located, by default, at :file:`<profile directory"
+">/qgis-auth.db`."
+msgstr ""
+"El nuevo sistema de autenticación almacena las configuraciones de "
+"autenticación en un archivo de base de datos SQLite ubicado, por defecto, en"
+" :file:`<profile directory>/qgis-auth.db`."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:24
+msgid ""
+"This authentication database can be moved between QGIS installations without"
+" affecting other current QGIS user preferences, as it is completely separate"
+" from normal QGIS settings. A configuration ID (a random 7-character "
+"alphanumeric string) is generated when initially storing a configuration to "
+"the database. This represents the configuration, thereby allowing the ID to "
+"be stored in plain text application components, (such as project, plugin, or"
+" settings files) without disclosure of its associated credentials."
+msgstr ""
+"Esta base de datos de autenticación se puede mover entre las instalaciones "
+"de QGIS sin afectar otras preferencias de usuario actuales de QGIS, ya que "
+"está completamente separada de la configuración normal de QGIS. Se genera un"
+" ID de configuración (una cadena alfanumérica aleatoria de 7 caracteres) "
+"cuando se almacena inicialmente una configuración en la base de datos. Esto "
+"representa la configuración, lo que permite que la ID se almacene en "
+"componentes de la aplicación de texto sin formato (como archivos de "
+"proyecto, complemento o configuración) sin revelar sus credenciales "
+"asociadas."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:34
+msgid ""
+"The parent directory of the `qgis-auth.db` can be set using the following "
+"environment variable, ``QGIS_AUTH_DB_DIR_PATH``, or set on the command line "
+"during launch with the ``--authdbdirectory`` option."
+msgstr ""
+"El directorio principal de `qgis-auth.db` se puede configurar usando la "
+"siguiente variable de entorno, ``QGIS_AUTH_DB_DIR_PATH``, o se puede "
+"configurar en la línea de comando durante el lanzamiento con la opción "
+"``--authdbdirectory``."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:39
+msgid "Master password"
+msgstr "Contraseña maestra"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:41
+msgid ""
+"To store or access sensitive information within the database, a user must "
+"define a `master password`. A new master password is requested and verified "
+"when initially storing any encrypted data to the database. When sensitive "
+"information is accessed, the user is prompted for the master password. The "
+"password is then cached for the remainder of the session (until application "
+"is quit), unless the user manually chooses an action to clear its cached "
+"value. Some instances of using the authentication system do not require "
+"input of the master password, such as when selecting an existing "
+"authentication configuration, or applying a configuration to a server "
+"configuration (such as when adding a WMS layer)."
+msgstr ""
+"Para almacenar o acceder a información confidencial dentro de la base de "
+"datos, un usuario debe definir una 'contraseña maestra'. Se solicita y "
+"verifica una nueva contraseña maestra cuando se almacena inicialmente "
+"cualquier dato cifrado en la base de datos. Cuando se accede a información "
+"confidencial, se solicita al usuario la contraseña maestra. Luego, la "
+"contraseña se almacena en caché durante el resto de la sesión (hasta que se "
+"cierra la aplicación), a menos que el usuario elija manualmente una acción "
+"para borrar su valor en caché. Algunas instancias de uso del sistema de "
+"autenticación no requieren la entrada de la contraseña maestra, como cuando "
+"se selecciona una configuración de autenticación existente o cuando se "
+"aplica una configuración a una configuración de servidor (como cuando se "
+"agrega una capa WMS)."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:51
+msgid ""
+"You can choose to save the password in the ``Wallet/Keyring`` of your "
+"computer."
+msgstr ""
+"Puede optar por guardar la contraseña en el ``Wallet/Keyring`` de su "
+"computadora."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:59
+msgid "Input new master password"
+msgstr "Ingrese la nueva contraseña maestra"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:63
+msgid ""
+"A path to a file containing the master password can be set using the "
+"following environment variable, ``QGIS_AUTH_PASSWORD_FILE``."
+msgstr ""
+"Se puede establecer una ruta a un archivo que contiene la contraseña maestra"
+" mediante la siguiente variable de entorno, ``QGIS_AUTH_PASSWORD_FILE``."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:67
+msgid "Managing the master password"
+msgstr "Administrar la contraseña maestra"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:69
+msgid ""
+"Once set, the master password can be reset; the current master password will"
+" be needed prior to resetting. During this process, there is an option to "
+"generate a complete backup of the current database."
+msgstr ""
+"Una vez configurada, la contraseña maestra se puede restablecer; se "
+"necesitará la contraseña maestra actual antes de restablecer. Durante este "
+"proceso, existe la opción de generar una copia de seguridad completa de la "
+"base de datos actual."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:78
+msgid "Resetting master password"
+msgstr "Restablecer contraseña maestra"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:80
+msgid ""
+"If the user forgets the master password, there is no way to retrieve or "
+"override it. There is also no means of retrieving encrypted information "
+"without knowing the master password."
+msgstr ""
+"Si el usuario olvida la contraseña maestra, no hay forma de recuperarla o "
+"anularla. Tampoco hay forma de recuperar información cifrada sin conocer la "
+"contraseña maestra."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:84
+msgid ""
+"If a user inputs their existing password incorrectly three times, the dialog"
+" will offer to erase the database."
+msgstr ""
+"Si un usuario ingresa su contraseña existente de manera incorrecta tres "
+"veces, el diálogo ofrecerá borrar la base de datos."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:92
+msgid "Password prompt after three invalid attempts"
+msgstr "Solicitud de contraseña después de tres intentos no válidos"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:95
+msgid "Authentication Configurations"
+msgstr "Configuraciones de autenticación"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:97
+msgid ""
+"You can manage authentication configurations from :guilabel:`Configurations`"
+" in the :guilabel:`Authentication` tab of the QGIS Options dialog "
+"(:menuselection:`Settings --> Options`)."
+msgstr ""
+"Puede administrar las configuraciones de autenticación desde "
+":guilabel:`Configuraciones` en la pestaña :guilabel:`Autenticación` del "
+"cuadro de diálogo Opciones de QGIS (:menuselection:` Configuración -> "
+"Opciones`)."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:106
+msgid "Configurations editor"
+msgstr "Editor de configuraciones"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:108
+msgid ""
+"Use the |signPlus| button to add a new configuration, the |signMinus| button"
+" to remove configurations, and the |symbologyEdit| button to modify existing"
+" ones."
+msgstr ""
+"Use el botón |signPlus| para agregar una nueva configuración, el |signMinus|"
+" para eliminar configuraciones y el botón |symbologyEdit| para modificar los"
+" existentes."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:116
+msgid "Adding config from within Configuration editor"
+msgstr "Agregar configuración desde el editor de configuración"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:118
+msgid ""
+"The same type of operations for authentication configuration management "
+"(Add, Edit and Remove) can be done when configuring a given service "
+"connection, such as configuring an OWS service connection. For that, there "
+"are action buttons within the configuration selector for fully managing "
+"configurations found within the authentication database. In this case, there"
+" is no need to go to the :guilabel:`configurations` in "
+":guilabel:`Authentication` tab of QGIS options unless you need to do more "
+"comprehensive configuration management."
+msgstr ""
+"El mismo tipo de operaciones para la gestión de la configuración de "
+"autenticación (Agregar, Editar y Eliminar) se puede realizar al configurar "
+"una conexión de servicio determinada, como configurar una conexión de "
+"servicio OWS. Para eso, hay botones de acción dentro del selector de "
+"configuración para administrar completamente las configuraciones que se "
+"encuentran dentro de la base de datos de autenticación. En este caso, no es "
+"necesario ir a la pestaña :guilabel:`Configuraciones` en "
+":guilabel:`Auttenticación` de las opciones de QGIS a menos que necesite "
+"realizar una gestión de configuración más completa."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:131
+msgid ""
+"WMS connection dialog showing :guilabel:`Add`, :guilabel:`Edit`, and "
+":guilabel:`Remove` authentication configuration buttons"
+msgstr ""
+"Cuadro de diálogo de conexión WMS que muestra los botones de configuración "
+"de autenticación :guilabel:`Añadir`, :guilabel:`Editar`, y "
+":guilabel:`Borrar`"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:134
+msgid ""
+"When creating or editing an authentication configuration, the info required "
+"is a name, an authentication method and any other info that the "
+"authentication method requires (see more about the available authentication "
+"types in :ref:`authentication_methods`)."
+msgstr ""
+"Al crear o editar una configuración de autenticación, la información "
+"requerida es un nombre, un método de autenticación y cualquier otra "
+"información que requiera el método de autenticación (vea más sobre los tipos"
+" de autenticación disponibles en :ref:`authentication_methods`)."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:142
+msgid "Authentication Methods"
+msgstr "Métodos de autenticación"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:144
+msgid ""
+"Available authentications are provided by C++ plugins much in the same way "
+"data provider plugins are supported by QGIS. The method of authentication "
+"that can be selected is relative to the access needed for the "
+"resource/provider, e.g. HTTP(S) or database, and whether there is support in"
+" both QGIS code and a plugin. As such, some authentication method plugins "
+"may not be applicable everywhere an authentication configuration selector is"
+" shown. A list of available authentication method plugins and their "
+"compatible resource/providers can be accessed going to "
+":menuselection:`Settings --> Options` and, in the :guilabel:`Authentication`"
+" tab, click the |options| :guilabel:`Installed Plugins` button."
+msgstr ""
+"Los complementos de C ++ proporcionan las autenticaciones disponibles de la "
+"misma manera que los complementos de proveedores de datos son compatibles "
+"con QGIS. El método de autenticación que se puede seleccionar es relativo al"
+" acceso necesario para el recurso/proveedor, p. ejemplo HTTP(S) o base de "
+"datos, y si hay soporte tanto en el código QGIS como en un complemento. Como"
+" tal, algunos complementos de métodos de autenticación pueden no ser "
+"aplicables en todos los lugares donde se muestra un selector de "
+"configuración de autenticación. Se puede acceder a una lista de complementos"
+" de métodos de autenticación disponibles y sus recursos / proveedores "
+"compatibles yendo a :menuselection:`Configuración -> Opciones` y, en la "
+"pestaña :guilabel:ʻAutenticación`, haga clic en el botón |options| "
+":guilabel:`Complementos instalados`."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:160
+msgid "Available method plugins list"
+msgstr "Lista de complementos de métodos disponibles"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:162
+msgid ""
+"Plugins can be created for new authentication methods that do not require "
+"QGIS to be recompiled. Since the support for plugins is currently C++-only, "
+"QGIS will need to be restarted for the new dropped-in plugin to become "
+"available to the user. Ensure your plugin is compiled against the same "
+"target version of QGIS if you intend to add it to an existing target "
+"install."
+msgstr ""
+"Se pueden crear complementos para nuevos métodos de autenticación que no "
+"requieren la recompilación de QGIS. Dado que actualmente el soporte para "
+"complementos es solo C ++, QGIS deberá reiniciarse para que el nuevo "
+"complemento incorporado esté disponible para el usuario. Asegúrese de que su"
+" complemento esté compilado con la misma versión de destino de QGIS si tiene"
+" la intención de agregarlo a una instalación de destino existente."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:173
+msgid "Basic HTTP authentication configs"
+msgstr "Configuraciones básicas de autenticación HTTP"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:180
+msgid "ESRI Token authentication configs"
+msgstr "Configuraciones de autenticación de token ESRI"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:187
+msgid "OAuth2 authentication configs"
+msgstr "Configuraciones de autenticación OAuth2"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:194
+msgid "PKI paths authentication configs"
+msgstr "Configuraciones de autenticación de rutas PKI"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:201
+msgid "PKI PKCS#12 file paths authentication configs"
+msgstr "Configuraciones de autenticación de rutas de archivo PKI PKCS#12"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:208
+msgid "Stored Identity authentication configs"
+msgstr "Configuraciones de autenticación de identidad almacenada"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:212
+msgid ""
+"The Resource URL is currently an *unimplemented* feature that will "
+"eventually allow a particular configuration to be auto-chosen when "
+"connecting to resources at a given URL."
+msgstr ""
+"La URL del recurso es actualmente una función *no implementada* que "
+"eventualmente permitirá que una configuración particular se elija "
+"automáticamente cuando se conecte a recursos en una URL determinada."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:217
+msgid "Master Password and Auth Config Utilities"
+msgstr "Utilidades de contraseña maestra y configuración de autenticación"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:219
+msgid ""
+"Under the Options menu (:menuselection:`Settings --> Options`) in the "
+":guilabel:`Authentication` tab, there are several utility actions to manage "
+"the authentication database and configurations:"
+msgstr ""
+"En el menú Opciones (:menuselection:`Configuración -> Opciones`) en la "
+"pestaña :guilabel:ʻAutenticación`, hay varias acciones de utilidad para "
+"administrar la base de datos de autenticación y las configuraciones:"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:228
+msgid "Utilities menu"
+msgstr "Menú utilidades"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:230
+msgid ""
+"**Input master password**: opens the master password input dialog, "
+"independent of performing any authentication database command"
+msgstr ""
+"**Ingresar contraseña maestra**: abre el cuadro de diálogo de ingreso de "
+"contraseña maestra, independientemente de realizar cualquier comando de "
+"autenticación de la base de datos"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:232
+msgid ""
+"**Clear cached master password**: unsets the master password if it has been "
+"set"
+msgstr ""
+"**Borrar contraseña maestra en caché**: deshabilita la contraseña maestra si"
+" se ha establecido"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:234
+msgid ""
+"**Reset master password**: opens a dialog to change the master password (the"
+" current password must be known) and optionally back up the current database"
+msgstr ""
+"**Restablecer contraseña maestra**: abre un cuadro de diálogo para cambiar "
+"la contraseña maestra (se debe conocer la contraseña actual) y, "
+"opcionalmente, hacer una copia de seguridad de la base de datos actual"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:236
+msgid ""
+"**Clear network authentication access cache**: clears the authentication "
+"cache of all connections"
+msgstr ""
+"**Borrar la caché de acceso de autenticación de red**: borra la caché de "
+"autenticación de todas las conexiones"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:238
+msgid ""
+"**Automatically clear network authentication access cache on SSL errors**: "
+"the connection cache stores all authentication data for connections, also "
+"when the connection fails. If you change authentication configurations or "
+"certification authorities, you should clear the authentication cache or "
+"restart QGIS. When this option is checked, the authentication cache will be "
+"automatically cleared every time an SSL error occurs and you choose to abort"
+" the connection"
+msgstr ""
+"**Limpiar automáticamente la caché de acceso de autenticación de red en "
+"errores de SSL**: la caché de conexión almacena todos los datos de "
+"autenticación para las conexiones, también cuando la conexión falla. Si "
+"cambia las configuraciones de autenticación o las autoridades de "
+"certificación, debe borrar el caché de autenticación o reiniciar QGIS. "
+"Cuando esta opción está marcada, la caché de autenticación se borrará "
+"automáticamente cada vez que se produzca un error de SSL y usted elija "
+"cancelar la conexión."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:245
+msgid ""
+"**Integrate master password with your Wallet/Keyring**: adds the master "
+"password to your personal Wallet/Keyring"
+msgstr ""
+"**Integre la contraseña maestra con su Wallet/Keyring**: agrega la "
+"contraseña maestra a su Wallet/Keyring personal"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:247
+msgid ""
+"**Store/update the master password in your Wallet/Keyring**: updates the "
+"changed master password in your Wallet/Keyring"
+msgstr ""
+"**Almacenar/actualizar la contraseña maestra en su Wallet/Keyring**: "
+"actualiza la contraseña maestra cambiada en su Wallet/Keyring"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:249
+msgid ""
+"**Clear the master password from your Wallet/Keyring**: deletes the master "
+"password from your Wallet/Keyring"
+msgstr ""
+"**Borrar la contraseña maestra de su Wallet/Keyring**: elimina la contraseña"
+" maestra de su Wallet/Keyring"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:251
+msgid ""
+"**Enable password helper debug log**: enables a debug tool that will contain"
+" all the log information of the authentication methods"
+msgstr ""
+"**Habilitar el registro de depuración del asistente de contraseña**: "
+"habilita una herramienta de depuración que contendrá toda la información de "
+"registro de los métodos de autenticación"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:253
+msgid ""
+"**Clear cached authentication configurations**: clears the internal lookup "
+"cache for configurations, used to speed up network connections. This does "
+"not clear QGIS’s core network access manager’s cache, which requires a "
+"relaunch of QGIS."
+msgstr ""
+"**Borrar configuraciones de autenticación en caché**: borra la caché de "
+"búsqueda interna para configuraciones, que se utiliza para acelerar las "
+"conexiones de red. Esto no borra el caché del administrador de acceso a la "
+"red central de QGIS, lo que requiere un reinicio de QGIS."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:256
+msgid ""
+"**Remove all authentication configurations**: clears the database of all "
+"configuration records, without removing other stored records."
+msgstr ""
+"**Eliminar todas las configuraciones de autenticación**: borra la base de "
+"datos de todos los registros de configuración, sin eliminar otros registros "
+"almacenados."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:258
+msgid ""
+"**Erase authentication database**: schedules a backup of the current "
+"database and complete rebuild of the database table structure. The actions "
+"are scheduled for a later time, to ensure that other operations, like "
+"project loading, do not interrupt the operation or cause errors due to a "
+"temporarily missing database."
+msgstr ""
+"**Borrar base de datos de autenticación**: programa una copia de seguridad "
+"de la base de datos actual y la reconstrucción completa de la estructura de "
+"la tabla de la base de datos. Las acciones están programadas para un momento"
+" posterior, para garantizar que otras operaciones, como la carga del "
+"proyecto, no interrumpan la operación o provoquen errores debido a una base "
+"de datos que falta temporalmente."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:269
+msgid "DB erase verification menu"
+msgstr "Menú de verificación de borrado de BD"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:272
+msgid "Using authentication configurations"
+msgstr "Usando configuraciones de autenticación"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:274
+msgid ""
+"Typically, an authentication configuration is selected in a configuration "
+"dialog for a network services (such as WMS). However, the selector widget "
+"can be embedded anywhere authentication is needed or in non-core "
+"functionality, like in third-party PyQGIS or C++ plugins."
+msgstr ""
+"Normalmente, se selecciona una configuración de autenticación en un cuadro "
+"de diálogo de configuración para servicios de red (como WMS). Sin embargo, "
+"el widget selector se puede incrustar en cualquier lugar donde se necesite "
+"autenticación o en funciones no básicas, como en complementos PyQGIS o C ++ "
+"de terceros."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:279
+msgid ""
+"When using the selector, :guilabel:`No authentication` is displayed in the "
+"pop-up menu control when nothing is selected, when there are no "
+"configurations to choose from, or when a previously assigned configuration "
+"can no longer be found in the database. The :guilabel:`Type` and "
+":guilabel:`Id` fields are read-only and provide a description of the "
+"authentication method and the config’s ID respectively."
+msgstr ""
+"Cuando se usa el selector, :guilabel:`Sin autenticación` se muestra en el "
+"control del menú emergente cuando no se selecciona nada, cuando no hay "
+"configuraciones para elegir, o cuando una configuración previamente asignada"
+" ya no se puede encontrar en la base de datos. Los campos :guilabel:`Tipo` y"
+" :guilabel:`Id` son de solo lectura y proporcionan una descripción del "
+"método de autenticación y el ID de la configuración, respectivamente."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:291
+msgid "Authentication configuration selector with no authentication"
+msgstr "Selector de configuración de autenticación sin autenticación"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:298
+msgid "Authentication configuration selector with selected config"
+msgstr ""
+"Selector de configuración de autenticación con configuración seleccionada"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:301
+msgid "Python bindings"
+msgstr "Python bindings"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:303
+msgid ""
+"All classes and public functions have sip bindings, except "
+"``QgsAuthCrypto``, since management of the master password hashing and auth "
+"database encryption should be handled by the main app, and not via Python. "
+"See :ref:`authentication_security_considerations` concerning Python access."
+msgstr ""
+"Todas las clases y funciones públicas tienen enlaces sip, excepto "
+"``QgsAuthCrypto``, ya que la administración del hash de la contraseña "
+"maestra y el cifrado de la base de datos de autenticación deben ser "
+"manejados por la aplicación principal y no a través de Python. Ver "
+":ref:`authentication_security_considerations` sobre el acceso a Python."

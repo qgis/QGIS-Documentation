@@ -1,0 +1,257 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:16+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Arabic (https://www.transifex.com/qgis/teams/6144/ar/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ar\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:4
+msgid "Coordinate Reference Systems"
+msgstr "الأنظمة المرجعية للاحداثيات"
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:7
+msgid "|gentleLogo|"
+msgstr "|gentleLogo|"
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:7
+msgid "Objectives:"
+msgstr "الأهداف:"
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:7
+msgid "Understanding of Coordinate Reference Systems."
+msgstr "فهم الأنظمة المرجعية للاحداثيات."
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:9
+msgid "Keywords:"
+msgstr "الكلمات الرئيسية:"
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:9
+msgid ""
+"Coordinate Reference System (CRS), Map Projection, On the Fly Projection, "
+"Latitude, Longitude, Northing, Easting"
+msgstr ""
+"نظام الارجاع الاحداثي (CRS)، مسقط الخريطة، اسقاط مباشر، خط العرض، خط الطول، "
+"تشميل، تشريق"
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:13
+msgid "Overview"
+msgstr "نظرة عامة"
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:26
+msgid "Map Projection in detail"
+msgstr "مسقط الخريطة بشكل مفصل"
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:28
+msgid ""
+"A traditional method of representing the earth's shape is the use of globes."
+" There is, however, a problem with this approach. Although globes preserve "
+"the majority of the earth's shape and illustrate the spatial configuration "
+"of continent-sized features, they are very difficult to carry in one's "
+"pocket. They are also only convenient to use at extremely small scales (e.g."
+" 1:100 million)."
+msgstr ""
+"الطريقة التقليدية لتمثيل شكل الارض هي باستخدام نماذج الكرات الارضية، هناك، "
+"على كل حال، مشكلة في هذا الهدف. مع أنه نماذج الكرات الارضية تمثل الغالبية "
+"العضمى من شكل الارض وتوضح معالم القارات بحجم وأشكال مناسبة، هذه النماذج صعبة"
+" الحمل ضمن جيب الانسان. انها أيضا مناسبة فقط ضمن مقاييس رسم صغيرة ( على سبيل"
+" المثال. مليون 1:100)."
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:34
+msgid ""
+"Most of the thematic map data commonly used in GIS applications are of "
+"considerably larger scale. Typical GIS datasets have scales of 1:250 000 or "
+"greater, depending on the level of detail. A globe of this size would be "
+"difficult and expensive to produce and even more difficult to carry around. "
+"As a result, cartographers have developed a set of techniques called **map "
+"projections** designed to show, with reasonable accuracy, the spherical "
+"earth in two-dimensions."
+msgstr ""
+"معظم بيانات الخرائط الموضوعية المستخدمة بشكل شائع في تطبيقات نظم المعلومات "
+"الجغرافية هي ذات نطاق أوسع بكثير. تحتوي مجموعات بيانات GIS النموذجية على "
+"مقاييس تتراوح بين 1: 250 000 أو أكثر ، اعتمادًا على مستوى التفاصيل. إن كرة "
+"من هذا الحجم ستكون صعبة ومكلفة في الإنتاج ، بل وأكثر صعوبة في حملها. ونتيجة "
+"لذلك ، طور رسامو الخرائط مجموعة من التقنيات تسمى ** إسقاطات الخرائط ** مصممة"
+" لإظهار ، مع دقة معقولة ، الأرض الكروية في بعدين."
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:41
+msgid ""
+"When viewed at close range the earth appears to be relatively flat. However "
+"when viewed from space, we can see that the earth is relatively spherical. "
+"Maps, as we will see in the upcoming map production topic, are "
+"representations of reality. They are designed to not only represent "
+"features, but also their shape and spatial arrangement. Each map projection "
+"has **advantages** and **disadvantages**. The best projection for a map "
+"depends on the **scale** of the map, and on the purposes for which it will "
+"be used. For example, a projection may have unacceptable distortions if used"
+" to map the entire African continent, but may be an excellent choice for a "
+"**large-scale (detailed) map** of your country. The properties of a map "
+"projection may also influence some of the design features of the map. Some "
+"projections are good for small areas, some are good for mapping areas with a"
+" large East-West extent, and some are better for mapping areas with a large "
+"North-South extent."
+msgstr ""
+"عند النظر إليها من مسافة قريبة ، تبدو الأرض مسطحة نسبيًا. ولكن عندما نراها "
+"من الفضاء ، يمكننا أن نرى أن الأرض كروية نسبيًا. الخرائط ، كما سنرى في موضوع"
+" إنتاج الخرائط القادم ، هي تمثيلات للواقع. وهي مصممة ليس فقط لتمثيل الميزات "
+"، ولكن أيضًا شكلها وترتيبها المكاني. كل إسقاط خريطة له ** مميزات ** و ** "
+"عيوب **. يعتمد أفضل إسقاط للخريطة على ** المقياس ** للخريطة ، والأغراض التي "
+"سيتم استخدامها من أجلها. على سبيل المثال ، قد يكون للإسقاط تشوهات غير مقبولة"
+" إذا تم استخدامه لرسم خريطة القارة الأفريقية بأكملها ، ولكنه قد يكون "
+"اختيارًا ممتازًا لخريطة ** واسعة (مفصلة) لبلدك. قد تؤثر خصائص إسقاط الخريطة "
+"أيضًا على بعض ميزات التصميم في الخريطة. بعض التوقعات جيدة للمناطق الصغيرة ، "
+"وبعضها جيد لمناطق رسم الخرائط ذات مساحة كبيرة من الشرق والغرب ، وبعضها أفضل "
+"لمناطق رسم الخرائط ذات المدى الكبير بين الشمال والجنوب."
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:56
+msgid "The three families of map projections"
+msgstr "الأسر الثلاث من توقعات الخريطة"
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:74
+msgid ""
+"The three families of map projections. They can be represented by a) "
+"cylindrical projections, b) conical projections or c) planar projections."
+msgstr ""
+"الأسر الثلاث من توقعات الخريطة. ويمكن تمثيلها من خلال الإسقاطات الأسطوانية "
+"أو ب) الإسقاطات المخروطية أو )ج) الإسقاطات المستوية."
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:77
+msgid ""
+"Today, of course, the process of projecting the spherical earth onto a flat "
+"piece of paper is done using the mathematical principles of geometry and "
+"trigonometry. This recreates the physical projection of light through the "
+"globe."
+msgstr ""
+"اليوم ، بالطبع ، تتم عملية إسقاط الأرض الكروية على قطعة مسطحة من الورق "
+"باستخدام المبادئ الرياضية للهندسة وعلم المثلثات. هذا يعيد الإسقاط المادي "
+"للضوء من خلال الكرة الأرضية."
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:82
+msgid "Accuracy of map projections"
+msgstr "دقة توقعات الخريطة"
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:99
+msgid ""
+"The Robinson projection is a compromise where distortions of area, angular "
+"conformity and distance are acceptable."
+msgstr ""
+"إسقاط روبنسون هو حل وسط حيث تكون تشوهات المنطقة ، والتوافق الزاوي والمسافة "
+"مقبولة."
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:102
+msgid ""
+"It is usually impossible to preserve all characteristics at the same time in"
+" a map projection. This means that when you want to carry out accurate "
+"analytical operations, you need to use a map projection that provides the "
+"best characteristics for your analyses. For example, if you need to measure "
+"distances on your map, you should try to use a map projection for your data "
+"that provides high accuracy for distances."
+msgstr ""
+"من المستحيل عادة الحفاظ على جميع الخصائص في نفس الوقت في إسقاط الخريطة. وهذا"
+" يعني أنه عندما تريد تنفيذ عمليات تحليلية دقيقة ، فإنك تحتاج إلى استخدام "
+"إسقاط خريطة يقدم أفضل الخصائص لتحليلاتك. على سبيل المثال ، إذا كنت بحاجة "
+"لقياس المسافات على الخريطة ، فيجب أن تحاول استخدام إسقاط خريطة لبياناتك التي"
+" توفر دقة عالية للمسافات."
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:110
+msgid "Map projections with angular conformity"
+msgstr "توقعات الخرائط ذات مطابقة الزاوي"
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:112
+msgid ""
+"When working with a globe, the main directions of the compass rose (North, "
+"East, South and West) will always occur at 90 degrees to one another. In "
+"other words, East will always occur at a 90 degree angle to North. "
+"Maintaining correct **angular properties** can be preserved on a map "
+"projection as well. A map projection that retains this property of angular "
+"conformity is called a **conformal** or **orthomorphic projection**."
+msgstr ""
+"عند العمل مع الكرة الأرضية ، ستظهر الاتجاهات الرئيسية للبوصلة (الشمال والشرق"
+" والجنوب والغرب) دائمًا عند 90 درجة إلى بعضها البعض. بمعنى آخر ، سيحدث الشرق"
+" دائمًا بزاوية 90 درجة إلى الشمال. يمكن الحفاظ على الخصائص الصحيحة ** الزاوي"
+" ** على إسقاط الخريطة أيضًا. يسمى إسقاط الخريطة الذي يحتفظ بخاصية مطابقة "
+"الزوايا هذه بـ ** conformal ** أو ** projectorphor projection **."
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:119
+msgid ""
+"These projections are used when the **preservation of angular "
+"relationships** is important. They are commonly used for navigational or "
+"meteorological tasks. It is important to remember that maintaining true "
+"angles on a map is difficult for large areas and should be attempted only "
+"for small portions of the earth. The conformal type of projection results in"
+" distortions of areas, meaning that if area measurements are made on the "
+"map, they will be incorrect. The larger the area the less accurate the area "
+"measurements will be. Examples are the **Mercator projection** (as shown in "
+"figure_mercator_projection_) and the **Lambert Conformal Conic projection**."
+" The U.S. Geological Survey uses a conformal projection for many of its "
+"topographic maps."
+msgstr ""
+"تستخدم هذه التوقعات عندما يكون الحفاظ على العلاقات الزاوية ** أمرًا مهمًا. "
+"وهي تستخدم عادة لمهام الملاحة أو الأرصاد الجوية. من المهم أن نتذكر أن الحفاظ"
+" على الزوايا الحقيقية على الخريطة أمر صعب بالنسبة للمناطق الكبيرة ويجب أن "
+"يتم محاولة فقط لأجزاء صغيرة من الأرض. يؤدي النوع المطابق من الإسقاط إلى "
+"تشوهات في المناطق ، مما يعني أنه إذا تم إجراء قياسات المنطقة على الخريطة ، "
+"فسيكون ذلك غير صحيح. كلما كانت المساحة أكبر كلما كانت قياسات المنطقة أقل "
+"دقة. ومن الأمثلة على ذلك ** إسقاط مركاتور ** (كما هو موضح في "
+"figure_mercator_projection_) و ** Lambert Conformal Conic projection **. "
+"تستخدم هيئة المسح الجيولوجي الأمريكية إسقاطًا مطابقًا للعديد من خرائطها "
+"الطبوغرافية."
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:136
+msgid ""
+"The Mercator projection, for example, is used where angular relationships "
+"are important, but the relationship of areas are distorted."
+msgstr ""
+"على سبيل المثال ، يتم استخدام إسقاط مركاتور ، حيث تكون العلاقات الزاويّة "
+"مهمة ، ولكن العلاقة بين المناطق مشوهة."
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:406
+msgid "Common problems / things to be aware of"
+msgstr "المشاكل الشائعة / أشياء يجب أن تكون على علم بها"
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:417
+msgid "What have we learned?"
+msgstr "ماذا تعلمنا؟"
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:419
+msgid "Let's wrap up what we covered in this worksheet:"
+msgstr "لنختتم ما تناولناه في ورقة العمل هذه:"
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:438
+msgid "Now you try!"
+msgstr "الآن تحاول!"
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:440
+msgid "Here are some ideas for you to try with your learners:"
+msgstr "إليك بعض الأفكار التي يمكنك تجربتها مع متعلميك:"
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:459
+msgid "Something to think about"
+msgstr "شيء لتفكر به"
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:469
+msgid "Further reading"
+msgstr "قراءة متعمقة"
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:471
+msgid "**Books**:"
+msgstr "**كتائب**:"
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:489
+msgid "What's next?"
+msgstr "ما هو التالي؟"

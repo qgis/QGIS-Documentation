@@ -1,0 +1,839 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# MarieSilvestre, 2020
+# Francis Gasc <francisgasc@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:26+0000\n"
+"Last-Translator: Francis Gasc <francisgasc@gmail.com>, 2020\n"
+"Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:5
+msgid "Working with Projections"
+msgstr "Utiliser les projections"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:14
+msgid ""
+"A Coordinate Reference System, or CRS, is a method of associating numerical "
+"coordinates with a position on the surface of the Earth. QGIS has support "
+"for approximately 7,000 standard CRSs, each with different use cases, pros "
+"and cons! Choosing an appropriate reference system for your QGIS projects "
+"and data can be a complex task, but fortunately QGIS helps guide you through"
+" this choice, and makes working with different CRSs as transparent and "
+"accurate as possible."
+msgstr ""
+"Un Système de Coordonnées de Référence ou SCR permet d'associer des "
+"coordonnées numériques à une position sur la surface de la Terre. QGIS gère "
+"environ 7000 SCR standards, ayant chacun leurs applications, leur pour et "
+"leur contre ! Choisir un système de coordonnées approprié pour vos projets "
+"QGIS et vos données est une tache complexe mais heureusement QGIS vous guide"
+" dans ce choix et fait en sorte que le travail avec différents SCR soit "
+"aussi transparent et précis que possible."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:25
+msgid "Overview of Projection Support"
+msgstr "Aperçu de la gestion des projections"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:27
+msgid ""
+"QGIS has support for approximately 7,000 known CRSs. These standard CRSs are"
+" based on those defined by the European Petroleum Search Group (EPSG) and "
+"the Institut Geographique National de France (IGNF), and are made available "
+"in QGIS through the underlying \"Proj\" projection library. Commonly, these "
+"standard projections are identified through use of an authority:code "
+"combination, where the authority is an organisation name such as \"EPSG\" or"
+" \"IGNF\", and the code is a unique number associated with a specific CRS. "
+"For instance, the common WGS 84 latitude/longitude CRS is known by the "
+"identifier ``EPSG:4326``, and the web mapping standard CRS is ``EPSG:3857``."
+msgstr ""
+"QGIS gère environ 7000 SCR connus. Ces SCR standards sont basés sur ceux "
+"définis par le European Petroleum Search Group (EPSG) et l'Institut National"
+" Géographique de France (IGNF). Ils sont disponibles dans QGIS via la "
+"bibliothèque de projection \"PROJ\". De manière classique, ces projections "
+"standards sont identifiées via une combinaison autorité:code où l'autorité "
+"est le nom d'une organisation telle que \"EPSG\" ou \"IGNF\" et le code est "
+"un nombre unique associé à un SCR spécifique. Par exemple, le SCR WGS84 "
+"latitude/longitude correspond à l'identifiant ``EPSG:4326`` et le SCR "
+"standard en webmapping, ``EPSG:3857``."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:37
+msgid ""
+"Custom, user-created CRSs are stored in a user CRS database. See section "
+":ref:`sec_custom_projections` for information on managing your custom "
+"coordinate reference systems."
+msgstr ""
+"Les SCR personnalisés créés par l'utilisateur sont stockés dans une base de "
+"données des SCR utilisateurs. Voir section :ref:`sec_custom_projections` "
+"pour plus d'informations sur la manière de gérer vos systèmes de coordonnées"
+" personnalisés."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:44
+msgid "Layer Coordinate Reference Systems"
+msgstr "Systèmes de Coordonnées de Référence d'une couche"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:46
+msgid ""
+"In order to correctly project data into a specific target CRS, either your "
+"data must contain information about its coordinate reference system or you "
+"will need to manually assign the correct CRS to the layer. For PostGIS "
+"layers, QGIS uses the spatial reference identifier that was specified when "
+"that PostGIS layer was created. For data supported by OGR or GDAL, QGIS "
+"relies on the presence of a recognized means of specifying the CRS. For "
+"instance, for the Shapefile format this is a file containing an ESRI Well-"
+"Known Text (:index:`WKT`) representation of the layer's CRS. This projection"
+" file has the same base name as the :file:`.shp` file and a :file:`.prj` "
+"extension. For example, :file:`alaska.shp` would have a corresponding "
+"projection file named :file:`alaska.prj`."
+msgstr ""
+"Afin de projeter correctement des données dans un SCR spécifique, soit vos "
+"données contiennent des informations sur leur système de coordonnées de "
+"référence soit vous devez leur assigner manuellement. Pour les couches "
+"PostGIS, QGIS utilise l'identifiant de référence spatiale qui a été défini "
+"quand la couche a été créée. Pour les données gérées par OGR ou GDAL, QGIS "
+"utilise un moyen spécifique au format pour définir le SCR. Dans le cas du "
+"format Shapefile, il s'agit d'un fichier contenant une spécification ESRI "
+"Well-Known Text (:index:`WKT`) du SCR de la couche. Ce fichier de projection"
+" a le même nom que le fichier :file:`.shp` et une extension :file:`.prj`. "
+"Par  exemple, :file:`alaska.shp` aura un fichier de projection correspondant"
+" nommé :file:`alaska.prj`.  "
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:58
+msgid ""
+"Whenever a layer is loaded into QGIS, QGIS attempts to automatically "
+"determine the correct CRS for that layer. In some cases this is not "
+"possible, e.g. when a layer has been provided without retaining this "
+"information. You can configure QGIS behavior whenever it cannot "
+"automatically determine the correct CRS for a layer:"
+msgstr ""
+"Dès qu'une couche est chargée dans QGIS, QGIS tente de déterminer "
+"automatiquement le SCR de cette couche. Dans certains cas, cela n'est pas "
+"possible, par ex. lorsqu'une couche est fourni sans cette information. Vous "
+"pouvez configurer le comportement de QGIS lorsqu'il ne détecte pas "
+"automatiquement le SCR d'une couche :"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:64
+msgid ""
+"Open :menuselection:`Settings -->` |options| :menuselection:`Options... --> "
+"CRS`"
+msgstr ""
+"Ouvrez le menu :menuselection:`Préférences -->` |options| "
+":menuselection:`Options... --> SCR`"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:71
+msgid "The CRS tab in the QGIS Options Dialog"
+msgstr "L'onglet SCR de la fenêtre des Options de QGIS"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:73
+msgid ""
+"Under the :guilabel:`CRS for layers` group, set the action to do "
+":guilabel:`when a new layer is created, or when a layer is loaded that has "
+"no CRS`. One of:"
+msgstr ""
+"Dans le groupe :guilabel:`SCR pour les nouvelles couches`, sélectionnez "
+"l’action à effectuer :guilabel:`Quand une nouvelle couche est créée ou quand"
+" une couche est chargée sans SCR` parmi :"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:77
+msgid ""
+"|radioButtonOn| :guilabel:`Leave as unknown CRS (take no action)`: there "
+"will be no prompt to select a CRS when a layer without CRS is loaded, "
+"defering CRS choice to a later time. Convenient when loading a lot of layers"
+" at once. Such layers will be identifiable in the :guilabel:`Layers` panel "
+"by the |indicatorNoCRS| icon next to them. They'll also be un-referenced, "
+"with coordinates from the layer treated as purely numerical, non-earth "
+"values, i.e. the same behavior as all layers get when :ref:`a project is set"
+" to have no CRS <project_crs>`."
+msgstr ""
+"|radioButtonOn| :guilabel:`Laisser comme un SCR inconnu (ne rien faire)` : "
+"QGIS ne demandera pas de choisir un SCR quand une couche sans SCR est "
+"chargée, remettant le choix à plus tard. Cette option est pratique lorsque "
+"l'on charge de nombreuses couches en une fois. Elles seront identifiables "
+"dans le panneau :guilabel:`Layers` par l’icône |indicatorNoCRS|. Elles ne "
+"seront alors pas positionnées par rapport à un système de référence et les "
+"coordonnées seront traitées comme des valeurs purement numériques, sans "
+"référence géographique. Il s'agit du même comportement qui s'applique à "
+"toutes les couches quand :ref:`un projet est défini sans SCR <project_crs>`."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:85
+msgid ""
+"|radioButtonOff| :guilabel:`Prompt for CRS`: it will prompt you to manually "
+"select the CRS. Selecting the correct choice is crucial, as a wrong choice "
+"will place your layer in the wrong position on the Earth's surface! "
+"Sometimes, accompanying metadata will describe the correct CRS for a layer, "
+"in other cases you will need to contact the original author of the data to "
+"determine the correct CRS to use."
+msgstr ""
+"|radioButtonOff| :guilabel:`Demander le SCR` : une fenêtre vous demandera de"
+" sélectionner manuellement le SCR. Sélectionner le bon SCR est crucial car "
+"un mauvais choix positionnera votre couche au mauvais endroit sur la surface"
+" de la Terre ! Parfois, les métadonnées associées décrivent le SCR de la "
+"couche, sinon vous devez contacter le producteur de la donnée pour connaître"
+" le SCR à utiliser."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:91
+msgid "|radioButtonOff| :guilabel:`Use project CRS`"
+msgstr "|radioButtonOff| :guilabel:`Utiliser le SCR du projet`"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:92
+msgid ""
+"|radioButtonOff| :guilabel:`Use default layer CRS`, as set in the "
+":guilabel:`Default CRS for layers` combobox above."
+msgstr ""
+"|radioButtonOff| :guilabel:`Utiliser le SCR par défaut`, tel que définit "
+"dans la liste déroulante adjacente :guilabel:`SCR par défaut pour les "
+"couches` ."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:97
+msgid ""
+"To assign the same CRS to multiple layers that have no crs or have a wrong "
+"one in one operation:"
+msgstr ""
+"Pour attribuer le même SCR à plusieurs couches qui n'ont pas de SCR ou un "
+"mauvais SCR en une seule opération :"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:100
+msgid "Select the layers in the :guilabel:`Layers` panel"
+msgstr "Sélectionnez les couches dans le panneau :guilabel:`Couches`"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:101
+msgid ""
+"Press :kbd:`Ctrl+Shift+C`. You could also right-click over one of the "
+"selected layers or go to :menuselection:`Layer --> Set CRS of layer(s)`"
+msgstr ""
+"Appuyez sur :kbd:`Ctrl+Shift+C`. Vous pouvez également faire un clic-droit "
+"sur une des couches sélectionnées ou allez dans :menuselection:`Couches --> "
+"Définir le SCR des couches`"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:103
+msgid "Find and select the right CRS to use"
+msgstr "Trouvez et sélectionnez le SCR à utiliser"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:104
+msgid ""
+"And press :guilabel:`OK`. You can confirm that it has been set correctly in "
+"the :guilabel:`Source` tab of the layers' properties dialog."
+msgstr ""
+"Cliquez sur :guilabel:`OK`. Vous pouvez vérifier que l'action a été "
+"correctement effectuée en allant dans l'onglet :guilabel:`Source` de la "
+"fenêtre des propriétés des couches."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:107
+msgid ""
+"Note that changing the CRS in this setting does not alter the underlying "
+"data source in any way, rather it just changes how QGIS interprets the raw "
+"coordinates from the layer in the current QGIS project."
+msgstr ""
+"Notez que changer le SCR par cette manière n'affecte pas la donnée source "
+"mais change simplement la façon dont QGIS interprète les coordonnées brutes "
+"de la couche dans le projet QGIS en cours."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:117
+msgid "Project Coordinate Reference Systems"
+msgstr "Systèmes de Coordonnées de Référence d'un projet"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:119
+msgid ""
+"Every project in QGIS also has an associated Coordinate Reference System. "
+"The project CRS determines how data is projected from its underlying raw "
+"coordinates to the flat map rendered within your QGIS map canvas."
+msgstr ""
+"Chaque projet QGIS est associé à un Système de Coordonnées de Référence. Le "
+"SCR du projet détermine comment les données vont être projetées depuis leurs"
+" coordonnées brutes vers la carte en plan qui s'affiche dans le canevas de "
+"QGIS."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:123
+msgid ""
+"QGIS supports \"on the fly\" CRS transformation for both raster and vector "
+"data. This means that regardless of the underlying CRS of particular map "
+"layers in your project, they will always be automatically transformed into "
+"the common CRS defined for your project. Behind the scenes, QGIS "
+"transparently reprojects all layers contained within your project into the "
+"project's CRS, so that they will all be rendered in the correct position "
+"with respect to each other!"
+msgstr ""
+"QGIS gère la transformation de SCR \"à la volée\" pour les rasters et les "
+"vecteurs. Cela signifie qu’indépendamment du SCR d'une couche de votre "
+"projet, les couches seront automatiquement transformées dans le SCR définit "
+"pour votre projet. Dans les coulisses, QGIS reprojette toutes les couches du"
+" projet de manière transparente vers le SCR du projet de manière à ce "
+"qu'elle soient toutes positionnées au bon endroit !"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:131
+msgid ""
+"It is important to make an appropriate choice of CRS for your QGIS projects."
+" Choosing an inappropriate CRS can cause your maps to look distorted, and "
+"poorly reflect the real-world relative sizes and positions of features. "
+"Usually, while working in smaller geographic areas, there will be a number "
+"of standard CRSs used within a particular country or administrative area. "
+"It's important to research which CRSs are appropriate or standard choices "
+"for the area you are mapping, and ensure that your QGIS project follows "
+"these standards."
+msgstr ""
+"Il est important de faire le bon choix de SCR pour votre projet QGIS. Un "
+"mauvais choix de SCR peut entraîner des déformations non voulues sur vos "
+"cartes et très mal refléter les tailles et les positions relatives des "
+"entités. De manière usuelle, sur les emprises géographiques restreintes, des"
+" SCR standards sont utilisés de manière préférentielle dans un pays ou une "
+"unité administrative particulière. Il est important de chercher quels SCR "
+"sont appropriés ou quels sont les choix standards pour la zone que vous "
+"cartographiez et ensuite de vous assurer que votre projet QGIS respecte ces "
+"standards."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:140
+msgid ""
+"By default, QGIS starts each new project using a global default projection. "
+"This default CRS is ``EPSG:4326`` (also known as \"WGS 84\"), and it is a "
+"global latitude/longitude based reference system. This default CRS can be "
+"changed via the :guilabel:`CRS for New Projects` setting in the "
+":guilabel:`CRS` tab under :menuselection:`Settings -->` |options| "
+":menuselection:`Options...` (see figure_projection_options_). There is an "
+"option to automatically set the project's CRS to match the CRS of the first "
+"layer loaded into a new project, or alternatively you can select a different"
+" default CRS to use for all newly created projects. This choice will be "
+"saved for use in subsequent QGIS sessions."
+msgstr ""
+"Par défaut, QGIS ouvre chaque nouveau projet en utilisant une projection par"
+" défaut globale. Ce SCR par défaut est ``EPSG:4326`` (également appelé \"WGS"
+" 84\") et il s'agit d'un système de référence global basé sur la latitude et"
+" la longitude. Ce SCR par défaut peut être modifié via le paramètre "
+":guilabel:`SCR pour les nouveaux projets` dans l’onglet :guilabel:`SCR` du "
+"menu :menuselection:`Préférences -->` |options| :menuselection:`Options...` "
+"(voir figure_projection_options_). Une option permet de faire coïncider "
+"automatiquement le SCR du projet avec celui de la première couche chargée "
+"dans un nouveau projet. Sinon vous pouvez sélectionner un autre SCR par "
+"défaut pour tous les nouveaux projets. Ce choix sera sauvegardé par la suite"
+" dans QGIS."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:151
+msgid ""
+"The project CRS can also be set through the :guilabel:`CRS` tab of the "
+":menuselection:`Project --> Properties...` dialog. It will also be shown in "
+"the lower-right of the QGIS status bar."
+msgstr ""
+"Le SCR du projet se modifie également via l'onglet :guilabel:`SCR` de la "
+"fenêtre :menuselection:`Projet --> Propriétés...`. Il apparaît aussi en bas "
+"à droite de la barre d'état de QGIS."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:160
+msgid "Project Properties Dialog"
+msgstr "Fenêtre Propriétés du projet"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:162
+msgid "Available options are:"
+msgstr "Les options disponibles sont :"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:164
+msgid ""
+"|unchecked| :guilabel:`No projection (or unknown/non-Earth projection)`: "
+"Checking this setting will disable ALL projection handling within the QGIS "
+"project, causing all layers and map coordinates to be treated as simple 2D "
+"Cartesian coordinates, with no relation to positions on the Earth's surface."
+" It can be used to guess a layer CRS (based on its raw coordinates or when "
+"using QGIS for non earth uses like role-playing game maps, building mapping "
+"or microscopic stuff. In this case:"
+msgstr ""
+"|unchecked| :guilabel:`Aucune projection (ou projection inconnue/non-"
+"terrestre)` : Cocher cette option va désactiver TOUTE gestion des "
+"projections dans le projet QGIS et traiter toutes les coordonnées des "
+"couches telles que de simples coordonnées cartésiennes en 2D, sans lien avec"
+" leur positionnement à la surface de la Terre. Cette option peut être "
+"utiliser pour deviner le SCR d'une couche (en se basant sur les coordonnée "
+"brutes) ou quand QGIS est utilisé pour des cartes non terrestres, dans les "
+"jeux de rôles par exemple ou pour l'intérieur des bâtiments ou les espaces "
+"microscopiques. Avec cette option :"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:172
+msgid ""
+"No reprojection is done while rendering the layers: features are just drawn "
+"using their raw coordinates."
+msgstr ""
+"Aucune reprojection n'est effectuée au moment d'afficher les couches : les "
+"entités sont tracées en utilisant leurs coordonnées brutes."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:174
+msgid "The ellipsoid is locked out and forced to ``None/Planimetric``."
+msgstr "L’ellipsoïde est verrouillé et forcé à ``Aucun / Planimétrique``."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:175
+msgid ""
+"The distance and area units, and the coordinate display are locked out and "
+"forced to \"unknown units\"; all measurements are done in unknown map units,"
+" and no conversion is possible."
+msgstr ""
+"Les unités de distance/ de surface et les coordonnées affichées sont "
+"verrouillées et forcées à \"Unités inconnues\" ; toutes les mesures sont "
+"faites dans des unités inconnues et aucune conversion n'est possible."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:179
+msgid ""
+"or an existing coordinate reference system that can be *geographic*, "
+"*projected* or *user-defined*. A preview of the CRS extent on earth is "
+"displayed to help you select the appropriate one. Layers added to the "
+"project are translated on-the-fly to this CRS in order to overlay them "
+"regardless their original CRS. Use of units and ellipsoid setting are "
+"available and make sense and you can perform calculations accordingly."
+msgstr ""
+"ou un système de coordonnées de référence qui peut être *géographique*, "
+"*projeté* ou *défini par l'utilisateur*. Un aperçu de l'emprise du SCR sur "
+"la Terre est affiché pour vous guider dans le choix du système approprié. "
+"Les couches ajoutées au projet seront transformées à la volée dans ce SCR "
+"afin d'assurer leur superposition quel que soit leur SCR d'origine. Les "
+"paramètres d'unités et d'ellipsoïde sont alors disponibles et vous pouvez "
+"faire des calculs en les utilisant."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:186
+msgid ""
+"Whenever you select a new CRS for your QGIS project, the measurement units "
+"will automatically be changed in the :guilabel:`General` tab of the "
+":guilabel:`Project properties` dialog (:menuselection:`Project --> "
+"Properties...`) to match the selected CRS. For instance, some CRSs define "
+"their coordinates in feet instead of meters, so setting your QGIS project to"
+" one of these CRSs will also set your project to measure using feet by "
+"default."
+msgstr ""
+"Dès que vous choisissez un nouveau SCR pour votre projet QGIS, les unités de"
+" mesure sont automatiquement modifiées dans l'onglet :guilabel:`Général` de "
+"la fenêtre des :guilabel:`Propriétés du projet` (:menuselection:`Projet --> "
+"Propriétés...`) pour correspondre au SCR sélectionné. Par exemple, certains "
+"SCR définissent les coordonnées en pieds au lieu des mètres, ainsi le choix "
+"de l'un d'eux pour votre projet QGIS entraînera par défaut des mesures en "
+"pieds."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:193
+msgid "**Setting the project CRS from a layer**"
+msgstr "**Définir le SCR du projet depuis une couche**"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:195
+msgid "You can assign a CRS to the project using a layer CRS:"
+msgstr ""
+"Vous pouvez définir le SCR du projet en utilisant le SCR d'une couche :"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:197
+msgid ""
+"In the :guilabel:`Layers` panel, right-click on the layer you want to pick "
+"the CRS"
+msgstr ""
+"Dans le panneau :guilabel:`Couches`, effectuez un clic-droit sur la couche "
+"dont vous souhaitez récupérer le SCR"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:199
+msgid "Select :guilabel:`Set project CRS from Layer`."
+msgstr "Sélectionnez :guilabel:`Définir le SCR du projet depuis cette couche`"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:201
+msgid ""
+"The project's CRS is redefined using the layer's CRS. Map canvas extent, "
+"coordinates display are updated accordingly and all the layers in the "
+"project are on-the-fly translated to the new project CRS."
+msgstr ""
+"Le SCR du projet est redéfini en se basant sur celui de la couche. L'emprise"
+" de la carte et les coordonnées affichées sont mises à jour en conséquence "
+"et toutes les couches du projet sont transformées à la volée dans le nouveau"
+" SCR."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:210
+msgid "Coordinate Reference System Selector"
+msgstr "Sélectionneur de Système de Coordonnées de Référence"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:212
+msgid ""
+"This dialog helps you assign a Coordinate Reference System to a project or a"
+" layer, provided a set of projection databases. Items in the dialog are:"
+msgstr ""
+"Cette fenêtre vous permet de choisir un Système de Coordonnées de Référence "
+"pour un projet ou une couche et propose un ensemble de systèmes de "
+"coordonnées. Cette fenêtre dispose des éléments suivants :"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:215
+msgid ""
+"**Filter**: If you know the EPSG code, the identifier, or the name for a "
+"Coordinate Reference System, you can use the search feature to find it. "
+"Enter the EPSG code, the identifier or the name."
+msgstr ""
+"**Filtre** : si vous connaissez le code EPSG, l'identifiant ou le nom d'un "
+"système de coordonnées de référence, vous pouvez utiliser la fonction "
+"rechercher pour le retrouver. Entrez le code EPSG, l'identifiant ou le nom à"
+" chercher. "
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:218
+msgid ""
+"**Recently used coordinate reference systems**: If you have certain CRSs "
+"that you frequently use in your everyday GIS work, these will be displayed "
+"in this list. Click on one of these items to select the associated CRS."
+msgstr ""
+"**Systèmes de coordonnées de référence récemment utilisés** : Si vous "
+"utilisez certains SCR fréquemment dans vos travaux quotidiens, ils seront "
+"affichés dans cette liste. Cliquez sur l'un d'entre eux pour sélectionner le"
+" SCR du projet."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:221
+msgid ""
+"**Coordinate reference systems of the world**: This is a list of all CRSs "
+"supported by QGIS, including Geographic, Projected and Custom coordinate "
+"reference systems. To define a CRS, select it from the list by expanding the"
+" appropriate node and selecting the CRS. The active CRS is preselected."
+msgstr ""
+"**Liste de tous les SCR** : C'est une liste de tous les SCR gérés par QGIS, "
+"incluant les systèmes de coordonnées de référence géographiques, projetés et"
+" personnalisés. Pour utiliser un SCR, sélectionnez-le dans la liste en "
+"dépliant le nœud approprié et en choisissant le système de coordonnées. Le "
+"SCR actif est présélectionné."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:225
+msgid ""
+"**PROJ text**: This is the CRS string used by the PROJ projection engine. "
+"This text is read-only and provided for informational purposes."
+msgstr ""
+"**Texte PROJ** : C'est la liste des paramètres décrivant le SCR telle "
+"qu'elle est utilisée par le moteur de projection PROJ. Ce texte est en "
+"lecture seule et est fourni à titre informatif. "
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:228
+msgid ""
+"The CRS selector also shows a rough preview of the geographic area for which"
+" a selected CRS is valid for use. Many CRSs are designed only for use in "
+"small geographic areas, and you should not use these outside of the area "
+"they were designed for. The preview map shades an approximate area of use "
+"whenever a CRS is selected from the list. In addition, this preview map also"
+" shows an indicator of the current main canvas map extent."
+msgstr ""
+"Le sélectionneur de SCR montre également un aperçu de la zone géographique "
+"de validité du SCR sélectionné. De nombreux SCR sont pensés pour être "
+"utilisés dans de petites zones géographiques et vous ne devriez pas les "
+"utiliser au delà. La carte d'aperçu colorise la zone d'utilisation "
+"approximative dès qu'un SCR est sélectionné dans la liste. De plus, la carte"
+" d'aperçu indique l'emprise actuelle de la carte affichée dans le canevas."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:241
+msgid "Custom Coordinate Reference System"
+msgstr "Système de Coordonnées de Référence personnalisé"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:243
+msgid ""
+"If QGIS does not provide the coordinate reference system you need, you can "
+"define a custom CRS. To define a CRS, select |customProjection| "
+":guilabel:`Custom CRS...` from the :menuselection:`Settings` menu. Custom "
+"CRSs are stored in your QGIS user database. In addition to your custom CRSs,"
+" this database also contains your spatial bookmarks and other custom data."
+msgstr ""
+"Si QGIS ne fournit pas le système de coordonnées de référence dont vous avez"
+" besoin, vous pouvez en définir un. Pour cela, sélectionnez "
+"|customProjection| :guilabel:`Projections personnalisées...` à partir du "
+"menu :menuselection:`Préférences`. Les SCR personnalisés sont stockés dans "
+"votre base de données utilisateur de QGIS. En plus de ceux-ci, cette base de"
+" données contient également vos signets spatiaux et autres données "
+"personnalisées."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:254
+msgid "Custom CRS Dialog"
+msgstr "Fenêtre de SCR personnalisé"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:257
+msgid ""
+"Defining a custom CRS in QGIS requires a good understanding of the PROJ "
+"projection library. To begin, refer to \"Cartographic Projection Procedures "
+"for the UNIX Environment - A User's Manual\" by Gerald I. Evenden, U.S. "
+"Geological Survey Open-File Report 90-284, 1990 (available at "
+"https://pubs.usgs.gov/of/1990/of90-284/ofr90-284.pdf)."
+msgstr ""
+"La définition d'un SCR personnalisé dans QGIS nécessite une bonne "
+"compréhension de la bibliothèque de projection du PROJ. Pour commencer, "
+"reportez-vous à \"Cartographic Projection Procedures for the UNIX "
+"Environment - A User's Manual\" de Gerald I. Evenden, U.S. Geological Survey"
+" Open-File Report 90-284, 1990 (disponible sur "
+"https://pubs.usgs.gov/of/1990/of90-284/ofr90-284.pdf)."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:263
+msgid ""
+"This manual describes the use of ``proj`` and related command line "
+"utilities. The cartographic parameters used with ``proj`` are described in "
+"the user manual and are the same as those used by QGIS."
+msgstr ""
+"Ce manuel décrit l'utilisation de ``proj`` et les applications en lignes de "
+"commandes liées. Les paramètres cartographiques utilisés avec ``proj`` sont "
+"décrits dans le manuel utilisateur et sont les mêmes que ceux utilisés par "
+"QGIS."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:267
+msgid ""
+"The :guilabel:`Custom Coordinate Reference System Definition` dialog "
+"requires only two parameters to define a user CRS:"
+msgstr ""
+"La fenêtre :guilabel:`Définir un système de coordonnées de référence "
+"personnalisé` nécessite seulement deux paramètres pour définir un  SCR "
+"personnalisé :"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:270
+msgid "A descriptive name"
+msgstr "Un nom descriptif"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:271
+msgid "The cartographic parameters in PROJ or WKT format"
+msgstr "Les paramètres cartographiques au format PROJ ou WKT."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:273
+msgid ""
+"To create a new CRS, click the |signPlus| :sup:`Add new CRS` button, enter a"
+" descriptive name, select the format, and the CRS parameters."
+msgstr ""
+"Pour créer un nouveau SCR, cliquez sur le bouton |signPlus| :sup:`Ajouter un"
+" nouveau SCR`, donnez un nom, sélectionnez le format et les paramètres du "
+"SCR."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:276
+msgid ""
+"Click :guilabel:`Validate` to test whether the CRS definition is an "
+"acceptable projection definition."
+msgstr ""
+"Cliquez sur :guilabel:`Valider` pour tester si la définition SCR est une "
+"définition de projection acceptable."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:279
+msgid ""
+"You can test your CRS parameters to see if they give sane results. To do "
+"this, enter known WGS 84 latitude and longitude values in :guilabel:`North` "
+"and :guilabel:`East` fields, respectively. Click on :guilabel:`Calculate`, "
+"and compare the results with the known values in your coordinate reference "
+"system."
+msgstr ""
+"Vous pouvez tester vos paramètres de SCR pour voir s'ils produisent des "
+"résultats valides. Entrez des latitudes et longitudes connues en WGS 84   "
+"dans les champs :guilabel:`Nord` et :guilabel:`Est` respectivement.   "
+"Cliquez sur le bouton :guilabel:`Calculer` et comparez les résultats avec "
+"les valeurs connues dans votre système de coordonnées de référence."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:285
+msgid "Integrate an NTv2-transformation in QGIS"
+msgstr "Intégrer une transformation NTv2 dans QGIS"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:287
+msgid ""
+"To integrate an NTv2 transformation file in QGIS you need one more step:"
+msgstr ""
+"Pour intégrer un fichier de transformation NTv2 à QGIS, vous avez besoin "
+"d'une manipulation supplémentaire :"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:289
+msgid ""
+"Place the NTv2 file (.gsb) in the CRS/Proj folder that QGIS uses (e.g. "
+":file:`C:\\\\OSGeo4W64\\\\share\\\\proj` for windows users)"
+msgstr ""
+"Placez le fichier NTv2 (.gsb) dans le répertoire de SCR utilisé par QGIS "
+"(par ex. :file:`C:\\\\OSGeo4W64\\\\share\\\\proj` pour les utilisateurs de "
+"Windows)"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:291
+msgid ""
+"Add **nadgrids** (``+nadgrids=nameofthefile.gsb``) to the Proj definition in"
+" the :guilabel:`Parameters` field of the :guilabel:`Custom Coordinate "
+"Reference System Definition` (:menuselection:`Settings --> Custom "
+"Projections...`)."
+msgstr ""
+"Ajoutez **nadgrids** (``+nadgrids=nameofthefile.gsb``) à la définition de la"
+" projection dans le champ :guilabel:`Paramètres` de la fenêtre "
+":guilabel:`Définir un système de coordonnées personnalisé` "
+"(:menuselection:`Préférences --> Projections personnalisées...`)."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:300
+msgid "Setting an NTv2 transformation"
+msgstr "Paramétrer une transformation NTv2"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:307
+msgid "Datum Transformations"
+msgstr "Transformations de systèmes géodésiques (datum)"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:309
+msgid ""
+"In QGIS, 'on-the-fly' CRS transformation is enabled by default, meaning that"
+" whenever you use layers with different coordinate systems QGIS "
+"transparently reprojects them to the project CRS. For some CRS, there are a "
+"number of possible transforms available to reproject to the project's CRS!"
+msgstr ""
+"Dans QGIS, la transformation 'à la volée' de SCR est activée par défaut, ce "
+"qui signifie que chaque fois que vous utilisez des couches avec des systèmes"
+" de coordonnées différents, QGIS les reprojettent de manière transparente "
+"dans le SCR du projet. Pour certains SCR, un certain nombre de "
+"transformations sont disponibles pour effectuer cette opération."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:314
+msgid ""
+"By default, QGIS will attempt to use the most accurate transformation "
+"available. However, in some cases this may not be possible, e.g. whenever "
+"additional support files are required to use a transformation. Whenever a "
+"more accurate transformation is available, but is not currently usable, QGIS"
+" will show an informative warning message advising you of the more accurate "
+"transformation and how to enable it on your system. Usually, this requires "
+"download of an external package of transformation support files, and "
+"extracting these to the :file:`proj` folder under your QGIS :ref:`user "
+"profile <user_profiles>` folder."
+msgstr ""
+"Par défaut, QGIS va tenter d'utiliser la transformation disponible la plus "
+"précise. Cependant, dans certains cas, il se peut que cela ne soit pas "
+"possible, par exemple, lorsque des fichiers supplémentaires sont requis pour"
+" cette transformation. Dès qu'une transformation plus précise existe mais "
+"n'est pas disponible, QGIS affichera un message vous avertissant de "
+"l’existence d'une transformation plus précise et vous expliquant comment "
+"l'activer sur votre système. De manière usuelle, il s'agira de télécharger "
+"un paquet externe contenant des fichiers de transformation, les extraire "
+"dans le répertoire :file:`proj` du répertoire de votre :ref:`profil "
+"utilisateur <user_profiles>`."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:324
+msgid ""
+"If desired, QGIS can also prompt you whenever multiple possible "
+"transformations can be made between two CRSs, and allow you to make an "
+"informed selection of which is the most appropriate transformation to use "
+"for your data."
+msgstr ""
+"Si vous le souhaitez, QGIS peut également vous informer à chaque fois que "
+"plusieurs transformations sont disponibles entre deux SCR et vous permettre "
+"de choisir celle la plus appropriée pour vos données."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:328
+msgid ""
+"This customization is done in the :menuselection:`Settings -->` |options| "
+":menuselection:`Options --> CRS` tab menu under the :guilabel:`Default datum"
+" transformations` group:"
+msgstr ""
+"Cette personnalisation s'effectue dans le menu :menuselection:`Préférences "
+"-->` |options| :menuselection:`Options --> SCR` dans "
+":guilabel:`Transformations de systèmes géodésiques (datum) par défaut` :"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:332
+msgid ""
+"using |checkbox| :guilabel:`Ask for datum transformation if several are "
+"available`: when more than one appropriate datum transformation exists for a"
+" source/destination CRS combination, a dialog will automatically be opened "
+"prompting users to choose which of these datum transformations to use for "
+"the project. If the :guilabel:`Make default` checkbox is ticked when "
+"selecting a transformation from this dialog, then the choice is remembered "
+"and automatically applied to any newly created QGIS projects."
+msgstr ""
+"en utilisant |checkbox| :guilabel:`Demander à choisir la transformation de "
+"datum si plusieurs sont disponibles` : lorsqu'il existe plus d'une "
+"transformation de données appropriée pour une combinaison source/destination"
+" de SCR, une boîte de dialogue s'ouvre automatiquement invitant les "
+"utilisateurs à choisir laquelle de ces transformations doit être utilisée "
+"pour le projet. Si la case :guilabel:`Par défaut` est cochée au moment de "
+"sélectionner une transformation depuis cette fenêtre, ce choix sera gardé en"
+" mémoire et automatiquement utilisé pour les nouveaux projets QGIS."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:339
+msgid ""
+"or defining a list of appropriate datum transformations to use as defaults "
+"when loading a layer to a project or reprojecting a layer."
+msgstr ""
+"ou prédéfinir une liste des transformations pertinentes à utiliser par "
+"défaut lors du chargement de couche dans des projets ou de la reprojection "
+"d'une couche."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:342
+msgid ""
+"Use the |signPlus| button to open the :guilabel:`Select Datum "
+"Transformations` dialog. Then:"
+msgstr ""
+"Utilisez le bouton |signPlus| pour ouvrir le dialogue "
+":guilabel:`Sélectionner la transformation de datum`. Alors :"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:345
+msgid ""
+"Choose the :guilabel:`Source CRS` of the layer, using the drop-down menu or "
+"the |setProjection| :sup:`Select CRS` widget."
+msgstr ""
+"Choisissez le :guilabel:`SCR Source` de la couche, en utilisant le menu "
+"déroulant ou le widget |setProjection| :sup:`Sélectionner le SCR`."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:347
+msgid "Provide the :guilabel:`Destination CRS` in the same way."
+msgstr "De même, indiquez le :guilabel:`SCR de destination`."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:348
+msgid ""
+"A list of available transformations from source to destination will be shown"
+" in the table. Clicking a row shows details on the settings applied and the "
+"corresponding accuracy of the transformation."
+msgstr ""
+"Une liste des transformations disponibles de la source à la destination est "
+"affichée dans le tableau. Cliquer sur une ligne permet d'afficher le détail "
+"des paramètres appliqués et la précision de la transformation."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:353
+msgid ""
+"In some cases a transformation may not be available for use on your system. "
+"In this case, the transformation will still be shown in this list but will "
+"not be selectable."
+msgstr ""
+"Dans certains cas, la transformation peut ne pas être disponible sur votre "
+"système. Dans ce cas, la transformation sera affichée dans la liste mais ne "
+"sera pas sélectionnable."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:357
+msgid ""
+"Find your preferred transformation, select it and click :guilabel:`OK`."
+msgstr ""
+"Trouvez votre transformation préférée, sélectionnez-la et cliquez sur "
+":guilabel:`OK`."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:359
+msgid ""
+"A row is added to the table under :guilabel:`Default Datum Transformations` "
+"with information about :guilabel:`Source CRS` and :guilabel:`Destination "
+"CRS` as well as the datum transformations (:guilabel:`Source Datum "
+"Transformation` and :guilabel:`Destination Datum Transformation`) to be used"
+" to transform between the CRSs."
+msgstr ""
+"Une ligne est ajoutée au tableau sous :guilabel:`Transformations de systèmes"
+" géodésiques (datum) par défaut` avec des informations sur le :guilabel:`SCR"
+" d'origine` et le :guilabel:`SCR de destination` ainsi que la transformation"
+" géodésique à utiliser entre ces deux SCR (:guilabel:`Transformation pour le"
+" datum source` et :guilabel:`Transformation pour le datum de destination`)."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:365
+msgid ""
+"From now, QGIS automatically uses the selected datum transformations for "
+"further transformation between these two CRSs until you remove it "
+"(|signMinus|) from the list or change the entry (|toggleEditing|) in the "
+"list."
+msgstr ""
+"Dès lors, QGIS utilise automatiquement la transformation de datum "
+"sélectionnée pour les transformations ultérieures entre ces deux SCRs "
+"jusqu'à ce que vous la supprimiez de la liste (|signMinus|) ou que vous la "
+"modifiiez (|toggleEditing|)."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:375
+msgid "Selecting a preferred default datum transformation"
+msgstr "Sélection d'une transformation de datum par défaut"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:377
+msgid ""
+"Datum transformations set in the :menuselection:`Settings -->` |options| "
+":menuselection:`Options --> CRS` tab will be inherited by all new QGIS "
+"projects created on the system. Additionally, a particular project may have "
+"its own specific set of transformations specified via the :guilabel:`CRS` "
+"tab of the :guilabel:`Project properties` dialog (:menuselection:`Project "
+"--> Properties...`). These settings apply to the current project only."
+msgstr ""
+"Les transformations de systèmes géodésiques définies dans "
+":menuselection:`Préférences -->` |options| :menuselection:`Options --> SCR` "
+"seront disponibles pour tous les projets QGIS créés sur votre système. De "
+"plus, un projet particulier peut avoir son propre jeu de transformations "
+"spécifié via l'onglet :guilabel:`SCR` de la fenêtre des "
+":guilabel:`Propriétés du projet` (:menuselection:`Projet --> "
+"Propriétés...`). Les paramètres définis ici ne s'appliqueront qu'au projet "
+"en cours."

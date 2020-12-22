@@ -1,0 +1,82 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# mnamihdk, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:23+0000\n"
+"Last-Translator: mnamihdk, 2020\n"
+"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:35
+msgid "Loading Projects"
+msgstr "プロジェクトをロードする"
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:37
+msgid ""
+"Sometimes you need to load an existing project from a plugin or (more often)"
+" when developing a standalone QGIS Python application (see: "
+":ref:`pythonapplications`)."
+msgstr ""
+"時々プラグインから、または（しばしば）スタンドアローンのQGIS "
+"Pythonアプリケーションを開発する時に既存のプロジェクトをロードする必要があります（参照： :ref:`pythonapplications` ）。"
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:44
+msgid ""
+"To load a project into the current QGIS application you need to create an "
+"instance of the :class:`QgsProject <qgis.core.QgsProject>` class. This is a "
+"singleton class, so you must use its :meth:`instance() "
+"<qgis.core.QgsProject.instance>` method to do it. You can call its "
+":meth:`read() <qgis.core.QgsProject.read>` method, passing the path of the "
+"project to be loaded:"
+msgstr ""
+"プロジェクトを現在のQGISアプリケーションにロードするには、 :class:`QgsProject <qgis.core.QgsProject>` "
+"クラスのインスタンスを作成する必要があります。これはシングルトンクラスなので、それを行うには :meth:`instance() "
+"<qgis.core.QgsProject.instance>` メソッドを使わなければなりません。  :meth:`read() "
+"<qgis.core.QgsProject.read>` メソッドを呼び出して、読み込むプロジェクトのパスを渡すことができます。"
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:75
+msgid ""
+"If you need to make modifications to the project (for example to add or "
+"remove some layers) and save your changes, call the :meth:`write() "
+"<qgis.core.QgsProject.write>` method of your project instance. The "
+":meth:`write() <qgis.core.QgsProject.write>` method also accepts an optional"
+" path for saving the project to a new location:"
+msgstr ""
+"プロジェクトに変更（たとえばレイヤーの追加や削除）を加え、その変更を保存する必要がある場合は、プロジェクトインスタンスの :meth:`write() "
+"<qgis.core.QgsProject.write>` メソッドを呼び出します。 :meth:`write() "
+"<qgis.core.QgsProject.write>` メソッドにパスを指定すれば、プロジェクトを新しい場所に保存することもできます。"
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:87
+msgid ""
+"Both :meth:`read() <qgis.core.QgsProject.read>` and :meth:`write() "
+"<qgis.core.QgsProject.write>` functions return a boolean value that you can "
+"use to check if the operation was successful."
+msgstr ""
+":meth:`read() <qgis.core.QgsProject.read>` と :meth:`write() "
+"<qgis.core.QgsProject.write>` の両方の関数は操作が成功したかどうかをチェックするために使用できるブール値を返します。"
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:93
+msgid ""
+"If you are writing a QGIS standalone application, in order to synchronise "
+"the loaded project with the canvas you need to instantiate a "
+":class:`QgsLayerTreeMapCanvasBridge <qgis.gui.QgsLayerTreeMapCanvasBridge>` "
+"as in the example below:"
+msgstr ""
+"QGISスタンドアロンアプリケーションを作成している場合は、ロードされたプロジェクトをキャンバスと同期させるために、 "
+":class:`QgsLayerTreeMapCanvasBridge <qgis.gui.QgsLayerTreeMapCanvasBridge>` "
+"を以下の例のようにインスタンス化する必要があります::"

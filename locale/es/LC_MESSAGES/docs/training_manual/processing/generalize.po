@@ -1,0 +1,97 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:22+0000\n"
+"Last-Translator: Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020\n"
+"Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/training_manual/processing/generalize.rst:2
+msgid "Vector simplification and smoothing"
+msgstr "Simplificación y suavizado vectorial"
+
+#: ../../docs/training_manual/processing/generalize.rst:4
+msgid ""
+"Module contributed by Paolo Cavallini - `Faunalia "
+"<https://www.faunalia.eu>`_"
+msgstr ""
+"Módulo aportado por Paolo Cavallini - `Faunalia <https://www.faunalia.eu>`_"
+
+#: ../../docs/training_manual/processing/generalize.rst:6
+msgid "This chapter shows how simplify vectors, and smooth out sharp corners."
+msgstr ""
+"Este capítulo muestra como simplificar vectores, y suavizar las esquinas "
+"agudas."
+
+#: ../../docs/training_manual/processing/generalize.rst:8
+msgid ""
+"Sometimes we need a simplified version of a vector, to have a smaller file "
+"size and get rid of unnecessary details. Many tools do this in a very rough "
+"way, and miss the adjacency and sometimes the topological correctness of "
+"polygons. GRASS is the ideal tool for this: being a topological GIS, "
+"adjacency and correctness are preserved even at very high simplification "
+"levels. In our case, we have a vector resulting from a raster, thus showing "
+"a \"saw\" pattern at borders. Applying a simplification results in straight "
+"lines:"
+msgstr ""
+"Algunas veces necesitamos una versión simplificada de un vector, para tener "
+"un tamaño de archivo más pequeño y deshacerse de detalles innecesarios. "
+"Muchas herramientas hacen esto de una manera muy general, y pierde la "
+"adyacencia y a veces la corrección topólogica de polígonos. GRASS es la "
+"herramienta ideal para esto: ser un SIG topológico, adyacencia y la "
+"corrección se conservan incluso a niveles muy altos de simplificación. En "
+"nuestro caso, tenemos un vector resultante de una trama, lo cual demuestra "
+"un patrón de \"sierra\" en las fronteras. Aplicar un resultado de "
+"simplificación en línea recta:"
+
+#: ../../docs/training_manual/processing/generalize.rst:16
+msgid ""
+":menuselection:`GRASS --> v.generalize` [Maximal tolerance value: 30 m]"
+msgstr ""
+":menuselection:`GRASS --> v.generalizar` [Valor de máxima tolerancia: 30 m]"
+
+#: ../../docs/training_manual/processing/generalize.rst:18
+msgid ""
+"We can also do the reverse, and make a layer more complex, smoothing out "
+"sharp corners:"
+msgstr ""
+"Podemos hacer a la inversa, y hacer una capa mas compleja, suavizando las "
+"esquinas agudas:"
+
+#: ../../docs/training_manual/processing/generalize.rst:20
+msgid ":menuselection:`GRASS --> v.generalize` [method: chaiken]"
+msgstr ":menuselection:`GRASS --> v.generalizar` [método: chaiken]"
+
+#: ../../docs/training_manual/processing/generalize.rst:22
+msgid ""
+"Try to apply this second command both to original vector and to the one from"
+" the first analysis, and see the difference. Note that adjacency is not "
+"lost."
+msgstr ""
+"Trate de aplicar el segundo comando, tanto para el vector original y para el"
+" primer análisis, y vea la diferencia. Tenga en cuenta que la adyacencia no "
+"se pierde."
+
+#: ../../docs/training_manual/processing/generalize.rst:25
+msgid ""
+"This second option can be applied e.g. to contour lines resulting from a "
+"coarse raster, to GPS tracks with sparse vertices, etc."
+msgstr ""
+"Esta segunda opción se puede aplicar e.j. a las curvas de nivel que resulten"
+" de una ráster grueso, de GPS pistas con vértices dispersos, etc"

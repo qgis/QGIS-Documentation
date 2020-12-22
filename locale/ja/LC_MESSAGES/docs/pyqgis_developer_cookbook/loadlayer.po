@@ -1,0 +1,112 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# mnamihdk, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:24+0000\n"
+"Last-Translator: mnamihdk, 2020\n"
+"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:25
+msgid "Loading Layers"
+msgstr "レイヤーをロードする"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:39
+msgid ""
+"Let's open some layers with data. QGIS recognizes vector and raster layers. "
+"Additionally, custom layer types are available, but we are not going to "
+"discuss them here."
+msgstr ""
+"データのレイヤーを開きましょう。QGISはベクターおよびラスターレイヤーを認識できます。加えてカスタムレイヤータイプを利用することもできますが、それについてここでは述べません."
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:47
+msgid "Vector Layers"
+msgstr "ベクターレイヤー"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:66
+msgid ""
+"The data source identifier is a string and it is specific to each vector "
+"data provider. Layer's name is used in the layer list widget. It is "
+"important to check whether the layer has been loaded successfully. If it was"
+" not, an invalid layer instance is returned."
+msgstr ""
+"データソース識別子は文字列でそれぞれのデータプロバイダーを表します。レイヤー名はレイヤーリストウィジェットの中で使われます。レイヤーが正常にロードされたかどうかをチェックすることは重要です。正しくロードされていない場合は不正なレイヤーインスタンスが返ります。"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:71
+msgid "For a geopackage vector layer:"
+msgstr "geopackageベクターレイヤなら次のようになります。"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:100
+msgid ""
+"The following list shows how to access various data sources using vector "
+"data providers:"
+msgstr "以下のリストはベクターデータプロバイダーを使って様々なデータソースにアクセスする方法が記述されています."
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:145
+msgid ""
+"The ``False`` argument passed to ``uri.uri(False)`` prevents the expansion "
+"of the authentication configuration parameters, if you are not using any "
+"authentication configuration this argument does not make any difference."
+msgstr ""
+"``uri.uri(False)`` に渡される ``False`` "
+"引数は、認証構成パラメーターの拡張を防ぎます。もし何も認証構成を使用していなければ、この引数は何の違いもありません。"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:162
+msgid ""
+"The provider string is structured as a URL, so the path must be prefixed "
+"with ``file://``. Also it allows WKT (well known text) formatted geometries "
+"as an alternative to ``x`` and ``y`` fields, and allows the coordinate "
+"reference system to be specified. For example:"
+msgstr ""
+"プロバイダーの文字列はURLとして構造化されているので、パスには ``file://`` という接頭辞を付ける必要があります。また、 ``x`` や "
+"``y`` フィールドの代わりにWKT（well-known text）形式のジオメトリを使用でき、座標参照系を指定できます。例えば："
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:174
+msgid ""
+"GPX files --- the \"gpx\" data provider reads tracks, routes and waypoints "
+"from gpx files. To open a file, the type (track/route/waypoint) needs to be "
+"specified as part of the url:"
+msgstr ""
+"GPXファイル---「GPX」データプロバイダーは、GPXファイルからトラック、ルートやウェイポイントを読み込みます。ファイルを開くには、タイプ（トラック／ルート／ウェイポイント）をURLの一部として指定する必要があります："
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:207
+msgid ""
+"MySQL WKB-based geometries, through OGR --- data source is the connection "
+"string to the table:"
+msgstr "MySQLのWKBベースジオメトリ、OGR経由 --- データソースはテーブルへの接続文字列です。"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:227
+msgid "The uri can be created using the standard ``urllib`` library:"
+msgstr "URIは標準の ``urllib`` ライブラリを使用して作成できます。"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:262
+msgid "Raster Layers"
+msgstr "ラスターレイヤー"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:352
+msgid "Raster layers can also be created from a WCS service:"
+msgstr "ラスターレイヤーもWCSサービスから作成できます。"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:396
+msgid ""
+"Alternatively you can load a raster layer from WMS server. However currently"
+" it's not possible to access GetCapabilities response from API --- you have "
+"to know what layers you want:"
+msgstr ""
+"別の方法としては、WMSサーバーからラスターレイヤーを読み込むことができます。しかし現在では、 "
+"APIからGetCapabilitiesレスポンスにアクセスすることはできません---どのレイヤが必要か知っている必要があります。"

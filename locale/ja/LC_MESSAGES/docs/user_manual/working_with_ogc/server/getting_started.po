@@ -1,0 +1,146 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# fairtommy <fairtommy@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:26+0000\n"
+"Last-Translator: fairtommy <fairtommy@gmail.com>, 2020\n"
+"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/user_manual/working_with_ogc/server/getting_started.rst:3
+msgid "Getting Started"
+msgstr "はじめに"
+
+#: ../../docs/user_manual/working_with_ogc/server/getting_started.rst:12
+msgid "Installation on Debian-based systems"
+msgstr "Debianのベースのシステムへのインストール"
+
+#: ../../docs/user_manual/working_with_ogc/server/getting_started.rst:76
+msgid "HTTP Server configuration"
+msgstr "HTTPサーバー構成"
+
+#: ../../docs/user_manual/working_with_ogc/server/getting_started.rst:85
+msgid "Apache"
+msgstr "Apache"
+
+#: ../../docs/user_manual/working_with_ogc/server/getting_started.rst:178
+msgid "NGINX"
+msgstr "NGINX"
+
+#: ../../docs/user_manual/working_with_ogc/server/getting_started.rst:252
+msgid ""
+"With the above command spawn-fcgi spawns only one QGIS Server process. To "
+"use more than one QGIS Server process you can combine spawn-fcgi with the "
+"`multiwatch <https://redmine.lighttpd.net/projects/multiwatch/wiki>`_ tool, "
+"which is also packaged in Debian."
+msgstr ""
+"上記のコマンドspawn-fcgiでは、QGISサーバープロセスを1つだけ作成します。複数のQGISサーバープロセスを使用するには、spawn-"
+"fcgiをDebianに同梱されている `multiwatch "
+"<https://redmine.lighttpd.net/projects/multiwatch/wiki>`_ ツールと組み合わせることができます。"
+
+#: ../../docs/user_manual/working_with_ogc/server/getting_started.rst:485
+msgid "Create the service file:"
+msgstr "サービスファイルを作成します："
+
+#: ../../docs/user_manual/working_with_ogc/server/getting_started.rst:502
+msgid "Enable, start and check the status of the ``xvfb.service``:"
+msgstr "``xvfb.service`` の状態を有効にし、開始し、チェックします："
+
+#: ../../docs/user_manual/working_with_ogc/server/getting_started.rst:707
+msgid "Definitions for a QGIS Server WMS/WFS/WCS project"
+msgstr "QGISサーバーのWMS / WFS / WCSプロジェクトの定義"
+
+#: ../../docs/user_manual/working_with_ogc/server/getting_started.rst:719
+msgid "WMS capabilities"
+msgstr "WMS機能"
+
+#: ../../docs/user_manual/working_with_ogc/server/getting_started.rst:721
+msgid ""
+"In the :guilabel:`WMS capabilities` section, you can define the extent "
+"advertised in the WMS GetCapabilities response by entering the minimum and "
+"maximum X and Y values in the fields under :guilabel:`Advertised extent`. "
+"Clicking :guilabel:`Use Current Canvas Extent` sets these values to the "
+"extent currently displayed in the QGIS map canvas. By checking |checkbox| "
+":guilabel:`CRS restrictions`, you can restrict in which coordinate reference"
+" systems (CRS) QGIS Server will offer to render maps. It is recommended that"
+" you restrict the offered CRS as this reduces the size of the WMS "
+"GetCapabilities response. Use the |signPlus| button below to select those "
+"CRSs from the Coordinate Reference System Selector, or click "
+":guilabel:`Used` to add the CRSs used in the QGIS project to the list."
+msgstr ""
+"guilabel:`WMS capabilities` セクションでは、 :guilabel:`Advertised範囲` "
+"の下のフィールドに最小値と最大値の X と Y を入力することで、WMS GetCapabilities "
+"レスポンスでアドバタイズされた範囲を定義できます。guilabel:`現在のキャンバス範囲を使用` "
+"をクリックすると、これらの値はQGIS地図キャンバスに現在表示されている範囲に設定されます。 |checkbox| :guilabel:`CRS制限` "
+"をチェックすると、QGISサーバが地図をレンダリングする際に提供する座標参照系(CRS) を制限できます。提供される CRS を制限するとWMS "
+"GetCapabilities レスポンスのサイズが小さくなるため、制限することをお勧めします。以下の |signPlus| "
+"ボタンを使用して、座標参照系セレクタからこれらの CRS を選択するか、 :guilabel:`使用中` をクリックして QGIS "
+"プロジェクトで使用されている CRS をリストに追加します。"
+
+#: ../../docs/user_manual/working_with_ogc/server/getting_started.rst:755
+msgid ""
+"You can receive requested GetFeatureInfo as plain text, XML and GML. Default"
+" is XML, text or GML format depends the output format chosen for the "
+"GetFeatureInfo request."
+msgstr ""
+"プレーンテキスト、XMLやGMLとして要求GetFeatureInfoを受け取ることができます。デフォルトでは、XML、テキストであるか、GML形式は、GetFeatureInfo要求のために選択した出力形式に依存します。"
+
+#: ../../docs/user_manual/working_with_ogc/server/getting_started.rst:780
+msgid ""
+"If one of your layers uses the :ref:`Map Tip display <maptips>` (i.e. to "
+"show text using expressions) this will be listed inside the GetFeatureInfo "
+"output. If the layer uses a Value Map for one of its attributes, this "
+"information will also be shown in the GetFeatureInfo output."
+msgstr ""
+"レイヤーの一つが :ref:`地図ヒントディスプレイ <maptips>` "
+"を使用している場合（つまり式を使ってテキストを表示するために）これはGetFeatureInfo出力内で表示されます。レイヤーは、その属性のいずれかの値マップを使用している場合は、この情報には、GetFeatureInfo出力に表示されます。"
+
+#: ../../docs/user_manual/working_with_ogc/server/getting_started.rst:786
+msgid "WFS capabilities"
+msgstr "WFS機能"
+
+#: ../../docs/user_manual/working_with_ogc/server/getting_started.rst:788
+msgid ""
+"In the :guilabel:`WFS capabilities` area you can select the layers you want "
+"to publish as WFS, and specify if they will allow update, insert and delete "
+"operations. If you enter a URL in the :guilabel:`Advertised URL` field of "
+"the :guilabel:`WFS capabilities` section, QGIS Server will advertise this "
+"specific URL in the WFS GetCapabilities response."
+msgstr ""
+":guilabel:`でWFS機能` エリアWFSとして公開し、それらが更新を許可するかどうかを指定、操作を挿入し、削除したいレイヤーを選択できます。 "
+":guilabel:` WFS機能` セクションの :guilabel:`宣伝URL` "
+"フィールドにURLを入力すると、QGIサーバーは、WFSのGetCapabilities応答中でこの特定のURLを宣伝します。"
+
+#: ../../docs/user_manual/working_with_ogc/server/getting_started.rst:796
+msgid "WCS capabilities"
+msgstr "WCS機能"
+
+#: ../../docs/user_manual/working_with_ogc/server/getting_started.rst:798
+msgid ""
+"In the :guilabel:`WCS capabilities` area, you can select the layers that you"
+" want to publish as WCS. If you enter a URL in the :guilabel:`Advertised "
+"URL` field of the :guilabel:`WCS capabilities` section, QGIS Server will "
+"advertise this specific URL in the WCS GetCapabilities response."
+msgstr ""
+":guilabel:`WCS機能` エリア、WCSとして公開したいレイヤーを選択できます。 :guilabel:`WCS機能` セクションで "
+":guilabel:`宣伝URL` "
+"フィールドにURLを入力すると、QGISサーバーはWCSのGetCapabilities応答でこの特定のURLを宣伝します。"
+
+#: ../../docs/user_manual/working_with_ogc/server/getting_started.rst:804
+msgid "Fine tuning your OWS"
+msgstr "OWSを微調整する"

@@ -1,0 +1,177 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:24+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/ide_debugging.rst:5
+msgid "IDE settings for writing and debugging plugins"
+msgstr "プラグインを書いてデバッグするためのIDE設定"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/ide_debugging.rst:11
+msgid ""
+"Although each programmer has his preferred IDE/Text editor, here are some "
+"recommendations for setting up popular IDE's for writing and debugging QGIS "
+"Python plugins."
+msgstr ""
+"プログラマには皆それぞれ自分の好みのIDE /テキストエディタがありますが、ここに人気のIDEを設定し、QGISの "
+"Pythonプラグインを書いたりデバッグするためのいくつかの推奨事項があります。"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/ide_debugging.rst:27
+msgid "|outofdate|"
+msgstr "|outofdate|"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/ide_debugging.rst:52
+msgid ""
+"If you used the OSGeo4W Installer, you can find this under the ``bin`` "
+"folder of your OSGeo4W install. Look for something like "
+":file:`C:\\\\OSGeo4W\\\\bin\\\\qgis-unstable.bat`."
+msgstr ""
+"OSGeo4Wインストーラを使用した場合はOSGeo4Wインストールの ``bin`` フォルダの下にこれを見つけることができます。 "
+":file:`C:\\\\OSGeo4W\\\\bin\\\\qgis-unstable.bat` のようなものを探してください。"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/ide_debugging.rst:66
+msgid ""
+"Also add the argument that points to the folder where Pyscripter can find "
+"the Python dll used by QGIS, you can find this under the bin folder of your "
+"OSGeoW install"
+msgstr ""
+"さらに、QGISが使用するPythonのDLLをPyscripterが見つけられるフォルダを指す引数を追加します。これはOSGeoWインストールのbinフォルダの下に見つけることができます"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/ide_debugging.rst:91
+msgid "Installation"
+msgstr "インストール"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/ide_debugging.rst:120
+msgid "Setting up Eclipse"
+msgstr "Eclipseをセットアップする"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/ide_debugging.rst:122
+msgid ""
+"In Eclipse, create a new project. You can select *General Project* and link "
+"your real sources later on, so it does not really matter where you place "
+"this project."
+msgstr ""
+"Eclipseで、新しいプロジェクトを作成します。 *一般的なプロジェクト* "
+"を選択しておいて本当のソースを後でリンクできるので、このプロジェクトをどこに配置するかは実際は問題になりません。"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/ide_debugging.rst:132
+msgid ""
+"Click :guilabel:`Advanced` and choose :guilabel:`Link to alternate location "
+"(Linked Folder)`. In case you already have sources you want to debug, choose"
+" these. In case you don't, create a folder as it was already explained."
+msgstr ""
+":guilabel:`詳細` をクリックし、 :guilabel:`別の場所に リンク（リンクフォルダ）` "
+"を選択します。すでにデバッグしたいソースがある場合はこれらを選択してください。そうでない場合は、すでに説明したようにフォルダを作成してください。"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/ide_debugging.rst:136
+msgid ""
+"Now in the view :guilabel:`Project Explorer`, your source tree pops up and "
+"you can start working with the code. You already have syntax highlighting "
+"and all the other powerful IDE tools available."
+msgstr ""
+"するとビュー :guilabel:`プロジェクトエクスプローラ` "
+"で、ソースツリーがポップアップしますので、コードでの作業を開始できます。すでに利用可能な構文の強調表示や他のすべての強力なIDEツールが使用できるようになっています。"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/ide_debugging.rst:149
+msgid ""
+"Eclipse is now waiting for a connection from QGIS to its debug server and "
+"when QGIS connects to the debug server it will allow it to control the "
+"python scripts. That's exactly what we installed the *Remote Debug* plugin "
+"for. So start QGIS in case you did not already and click the bug symbol."
+msgstr ""
+"EclipseはQGISからデバッグサーバーへの接続を待っています。QGISがデバッグサーバーに接続すると、Pythonスクリプトを制御できます。それはまさに私たちが"
+" *Remote Debug* "
+"プラグインをインストールしたものです。だからまだ起動していなければQGISを起動し、バグのシンボルをクリックしてください。"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/ide_debugging.rst:154
+msgid ""
+"Now you can set a breakpoint and as soon as the code hits it, execution will"
+" stop and you can inspect the current state of your plugin. (The breakpoint "
+"is the green dot in the image below, set one by double clicking in the white"
+" space left to the line you want the breakpoint to be set)."
+msgstr ""
+"ここでブレークポイントを設定できます。コードがそこに達すると実行は停止し、プラグインの現在の状態を検査できます。（ブレークポイントは下の画像の緑色の点です。ブレークポイントを設定したい行の左空白でダブルクリックすることで設定します）。"
+" "
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/ide_debugging.rst:162
+msgid "Breakpoint"
+msgstr "ブレークポイント"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/ide_debugging.rst:164
+msgid ""
+"A very interesting thing you can make use of now is the debug console. Make "
+"sure that the execution is currently stopped at a break point, before you "
+"proceed."
+msgstr "今利用できる非常に興味深いものはデバッグコンソールです。先に進む前に、現在実行がブレークポイントで停止していることを確認してください。"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/ide_debugging.rst:187
+msgid ""
+"A little bit annoying is, that every time you enter a command, the console "
+"switches back to the Debug Server. To stop this behavior, you can click the "
+"*Pin Console* button when on the Debug Server page and it should remember "
+"this decision at least for the current debug session."
+msgstr ""
+"ちょっと面倒なのですが、コマンドを入力するたびコンソールはデバッグサーバーに戻ります。この動作を停止するには、デバッグサーバーページで *Pin "
+"Console* ボタンをクリックしますが、少なくとも現在のデバッグセッションではこの決定は記憶されます。"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/ide_debugging.rst:193
+msgid "Making eclipse understand the API"
+msgstr "EclipseにAPIを理解させる"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/ide_debugging.rst:195
+msgid ""
+"A very handy feature is to have Eclipse actually know about the QGIS API. "
+"This enables it to check your code for typos. But not only this, it also "
+"enables Eclipse to help you with autocompletion from the imports to API "
+"calls."
+msgstr ""
+"非常に便利な機能は、Eclipseが実際にQGISのAPIについてわかっているようにすることです。これにより、タイプミスがないかコードを確認できます。これだけでなく、EclipseでのインポートからAPI呼び出しへ自動入力する支援を可能にします。"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/ide_debugging.rst:199
+msgid ""
+"To do this, Eclipse parses the QGIS library files and gets all the "
+"information out there. The only thing you have to do is to tell Eclipse "
+"where to find the libraries."
+msgstr ""
+"これを行うため、EclipseではQGISライブラリファイルを解析し、そこにすべての情報を取得します。しなければならないことは、どこのライブラリを検索するかをEclipseに伝えることだけです。"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/ide_debugging.rst:203
+msgid ""
+"Click :menuselection:`Window --> Preferences --> PyDev --> Interpreter --> "
+"Python`."
+msgstr ":menuselection:`ウィンドウ --> 設定 --> PyDev --> インタプリタ --> Python` をクリック。"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/ide_debugging.rst:206
+msgid ""
+"You will see your configured python interpreter in the upper part of the "
+"window (at the moment python2.7 for QGIS) and some tabs in the lower part. "
+"The interesting tabs for us are *Libraries* and *Forced Builtins*."
+msgstr ""
+"ウィンドウの上部と下部にいくつかのタブで設定済みのPythonインタプリタ（現在QGISのためのpython2.7）が表示されます。私たちにとって興味深いタブは、"
+" *ライブラリ* および *強制ビルトイン* です。"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/ide_debugging.rst:291
+msgid "Debugging using PDB"
+msgstr "PDBを利用してデバッグする"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/ide_debugging.rst:328
+msgid "**TODO:**"
+msgstr "**TODO:**"

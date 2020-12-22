@@ -1,0 +1,588 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:25+0000\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2020\n"
+"Language-Team: Italian (https://www.transifex.com/qgis/teams/6144/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:8
+msgid "Getting Started"
+msgstr "Come Iniziare"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:15
+msgid ""
+"This chapter provides a quick overview of installing QGIS, downloading QGIS "
+"sample data, and running a first simple session visualizing raster and "
+"vector data."
+msgstr ""
+"Questo capitolo fornisce una rapida panoramica sull’installazione di QGIS, "
+"su dati campione scaricabili dal sito di QGIS  e su come avviare una prima "
+"semplice sessione in cui visualizzare dati raster e dati vettoriali."
+
+#: ../../docs/user_manual/introduction/getting_started.rst:23
+msgid "Installing QGIS"
+msgstr "Installare QGIS"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:25
+msgid ""
+"QGIS project provides different ways to install QGIS depending on your "
+"platform."
+msgstr ""
+"Il progetto QGIS fornisce differenti modi per installare QGIS in base alla "
+"tua piattaforma."
+
+#: ../../docs/user_manual/introduction/getting_started.rst:28
+msgid "Installing from binaries"
+msgstr "Installazione da codice sorgente"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:30
+msgid ""
+"Standard installers are available for |win| MS Windows and |osx| macOS. "
+"Binary packages (rpm and deb) or software repositories are provided for many"
+" flavors of GNU/Linux |nix|."
+msgstr ""
+"Sono disponibili pacchetti di installazione standard per |win| MS Windows e "
+"|osx| macOS. Pacchetti binari (rpm e deb) o repository software sono "
+"disponibili per molte versioni di GNU/Linux |nix|."
+
+#: ../../docs/user_manual/introduction/getting_started.rst:34
+msgid ""
+"For more information and instructions for your operating system check "
+"https://download.qgis.org."
+msgstr ""
+"Per ulteriori informazioni e istruzioni per il tuo sistema operativo "
+"consulta https://download.qgis.org."
+
+#: ../../docs/user_manual/introduction/getting_started.rst:38
+msgid "Installing from source"
+msgstr "Installazione da codice sorgente"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:40
+msgid ""
+"If you need to build QGIS from source, please refer to the installation "
+"instructions. They are distributed with the QGIS source code in a file "
+"called :file:`INSTALL`. You can also find them online at "
+"https://github.com/qgis/QGIS/blob/master/INSTALL.md."
+msgstr ""
+"Se vuoi generare QGIS dal codice sorgente, fai riferimento alle istruzioni "
+"per l'installazione. Sono distribuite con il codice sorgente QGIS in un file"
+" chiamato :file:`INSTALL`. Puoi anche trovarle online all'indirizzo "
+"https://github.com/qgis/QGIS/blob/master/INSTALL.md."
+
+#: ../../docs/user_manual/introduction/getting_started.rst:46
+msgid ""
+"If you want to build a particular release and not the version in "
+"development, you should replace ``master`` with the release branch (commonly"
+" in the ``release-X_Y`` form) in the above-mentioned link (installation "
+"instructions may differ)."
+msgstr ""
+"Se vuoi generare un particolare release e non la versione in sviluppo, "
+"dovresti sostituire ``master`` con il nome del release (comunemente nella "
+"versione ``release-X_Y``) nel link di cui sopra (le istruzioni di "
+"installazione potrebbero essere differenti)."
+
+#: ../../docs/user_manual/introduction/getting_started.rst:51
+msgid "Installing on external media"
+msgstr "Installazione su supporti esterni"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:53
+msgid ""
+"It is possible to install QGIS (with all plugins and settings) on a flash "
+"drive. This is achieved by defining a :ref:`--profiles-path <profiles-"
+"path_option>` option that overrides the default :ref:`user profile "
+"<user_profiles>` path and forces **QSettings** to use this directory, too. "
+"See section :ref:`env_options` for additional information."
+msgstr ""
+"È possibile installare QGIS (con tutti i plugin e le impostazioni) su una "
+"flash drive. Questo si ottiene definendo un'opzione :ref:`--profiles-path "
+"<profiles-path_option>` che sovrascrive il percorso predefinito :ref:`user "
+"profile <user_profiles>` e costringe **QSettings** ad usare anche questa "
+"cartella. Vedere la sezione :ref:`env_options` per ulteriori informazioni."
+
+#: ../../docs/user_manual/introduction/getting_started.rst:67
+msgid "Downloading sample data"
+msgstr "Dati campione"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:69
+msgid ""
+"This user guide contains examples based on the QGIS sample dataset (also "
+"called the ``Alaska dataset``)."
+msgstr ""
+"Questa guida utente contiene alcuni esempi basati sull'insieme di dati "
+"campione di QGIS (anche chiamato ``Alaska dataset``)."
+
+#: ../../docs/user_manual/introduction/getting_started.rst:72
+msgid ""
+"|win| The Windows installer has an option to download the QGIS sample "
+"dataset. If checked, the data will be downloaded to your :file:`Documents` "
+"folder and placed in a folder called :file:`GIS Database`. You may use "
+"Windows Explorer to move this folder to any convenient location. If you did "
+"not select the checkbox to install the sample dataset during the initial "
+"QGIS installation, you may do one of the following:"
+msgstr ""
+"|win| Durante l’installazione di QGIS in Windows hai la possibilità di "
+"scaricare un insieme di dati campione. Se hai selezionato questa opzione, i "
+"dati verranno scaricati nella tua cartella :file:`My Documents` e verranno "
+"copiati in una cartella chiamata :file:`GIS Database`. Puoi usare Windows "
+"Explorer per spostare questa cartella in qualunque altra posizione. Se non "
+"hai selezionato la casella di controllo per scaricare l’insieme di dati "
+"campione durante l’installazione iniziale di QGIS puoi scegliere fra:"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:79
+msgid "Use GIS data that you already have"
+msgstr "Usare dati GIS che hai già"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:80
+msgid ""
+"Download sample data from https://github.com/qgis/QGIS-Sample-"
+"Data/archive/master.zip and unzip the archive on any convenient location on "
+"your system."
+msgstr ""
+"Scarica i dati campione da https://github.com/qgis/QGIS-Sample-"
+"Data/archive/master.zip e decomprimi l'archivio in un opportuno spazio di "
+"memoria del tuo sistema."
+
+#: ../../docs/user_manual/introduction/getting_started.rst:83
+msgid ""
+"Uninstall QGIS and reinstall with the data download option checked (only "
+"recommended if the above solutions are unsuccessful)"
+msgstr ""
+"Disinstallare QGIS e reinstallarlo selezionando l’opzione per lo "
+"scaricamento dei dati (opzione consigliata solo se le soluzioni precedenti "
+"non sono riuscite)"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:86
+msgid ""
+"|nix| |osx| For GNU/Linux and macOS, there are no dataset installation "
+"packages available as rpm, deb or dmg. To use the sample dataset, download "
+"it from https://github.com/qgis/QGIS-Sample-Data/archive/master.zip and "
+"unzip the archive on any convenient location on your system."
+msgstr ""
+"|nix| |osx| Per GNU/Linux e macOS, non ci sono pacchetti di installazione di"
+" dataset disponibili come rpm, deb o dmg. Per utilizzare il dataset di "
+"esempio, scaricalo da https://github.com/qgis/QGIS-Sample-"
+"Data/archive/master.zip e decomprimi l'archivio in un opportuno spazio di "
+"memoria del tuo sistema."
+
+#: ../../docs/user_manual/introduction/getting_started.rst:91
+msgid ""
+"The Alaska dataset includes all GIS data that are used for the examples and "
+"screenshots in this user guide; it also includes a small GRASS database. The"
+" projection for the QGIS sample datasets is Alaska Albers Equal Area with "
+"units feet. The EPSG code is 2964."
+msgstr ""
+"L’insieme di dati Alaska comprende tutti i dati GIS usati per gli esempi e "
+"le schermate nel manuale utente, e include anche un piccolo database GRASS. "
+"La proiezione per l’insieme di dati campione di QGIS è Alaska Albers Equal "
+"Area con unità in piedi. Il codice EPSG è 2964."
+
+#: ../../docs/user_manual/introduction/getting_started.rst:119
+msgid ""
+"If you intend to use QGIS as a graphical front end for GRASS, you can find a"
+" selection of sample locations (e.g., Spearfish or South Dakota) at the "
+"official GRASS GIS website, https://grass.osgeo.org/download/sample-data/."
+msgstr ""
+"Se vuoi usare QGIS come interfaccia grafica per GRASS, puoi trovare una "
+"selezione di dati di esempio (per esempio Spearﬁsh o South Dakota) "
+"direttamente dal sito ufficiale GRASS GIS, https://grass.osgeo.org/download"
+"/sample-data/."
+
+#: ../../docs/user_manual/introduction/getting_started.rst:127
+msgid "Starting and stopping QGIS"
+msgstr "Avviare e uscire da QGIS"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:129
+msgid ""
+"QGIS can be started like any other application on your computer. This means "
+"that you can launch QGIS by:"
+msgstr ""
+"L'avvio di QGIS può essere fatto in modo analogo a quello che tu "
+"generalmente fai per altre applicazioni sul tuo sistema. Ciò significa che "
+"puoi avviare QGIS:"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:132
+msgid ""
+"using |nix| the Applications menu, |win| the Start menu, or |osx| the Dock"
+msgstr ""
+"usando |nix| il menu Applicazioni, |win| il menu Start o |osx| il Dock"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:133
+msgid ""
+"double clicking the icon in your Applications folder or desktop shortcut"
+msgstr ""
+"doppio clic sull'icona nella tua cartella Applicazioni o sul collegamento "
+"sul desktop"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:134
+msgid ""
+"double clicking an existing QGIS project file (with :file:`.qgz` or "
+":file:`.qgs` extension). Note that this will also open the project."
+msgstr ""
+"facendo doppio clic su un file di progetto QGIS esistente (con estensione "
+":file:`.qgz` o :file:`.qgs`). Nota che questo aprirà anche il progetto."
+
+#: ../../docs/user_manual/introduction/getting_started.rst:136
+msgid ""
+"typing ``qgis`` in a command prompt (assuming that QGIS is added to your "
+"PATH or you are in its installation folder)"
+msgstr ""
+"digitando ``qgis`` nel prompt dei comandi (supponendo che QGIS sia aggiunto "
+"al tuo PATH o che tu sia nella sua cartella di installazione) "
+
+#: ../../docs/user_manual/introduction/getting_started.rst:139
+msgid "To stop QGIS, use:"
+msgstr "Per uscire da QGIS, usa:"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:141
+msgid ""
+"|nix| |win| the menu option :menuselection:`Project --> Exit QGIS` or use "
+"the shortcut :kbd:`Ctrl+Q`"
+msgstr ""
+"|nix| |win| l'opzione del menu :menuselection:`Progetto --> Esci da QGIS` o "
+"usa la scorciatoia :kbd:`Ctrl+Q`"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:143
+msgid ""
+"|osx| :menuselection:`QGIS --> Quit QGIS`, or use the shortcut :kbd:`Cmd+Q`"
+msgstr ""
+"|osx| :menuselection:`QGIS --> Quit QGIS`, o usa la scorciatoia :kbd:`Cmd+Q`"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:144
+msgid ""
+"or use the red cross at the top-right corner of the main interface of the "
+"application."
+msgstr ""
+"oppure utilizza la croce rossa nell'angolo in alto a destra dell'interfaccia"
+" principale dell'applicazione."
+
+#: ../../docs/user_manual/introduction/getting_started.rst:150
+msgid "Sample Session: Loading raster and vector layers"
+msgstr "Sessione di esempio: caricare layers raster e vettoriali"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:152
+msgid ""
+"Now that you have :ref:`QGIS installed <label_installation>` and a "
+":ref:`sample dataset <label_sampledata>` available, we will demonstrate a "
+"first sample session. In this example, we will visualize a raster and a "
+"vector layer. We will use:"
+msgstr ""
+"Ora che hai :ref:`QGIS installad <label_installation>` e un :ref:`sample "
+"dataset <label_sampledata>` disponibile, mostreremo una prima sessione di "
+"esempio. In questo esempio, visualizzeremo un layer raster e un layer "
+"vettoriale. Useremo:"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:157
+msgid ""
+"the :file:`landcover` raster layer "
+"(:file:`qgis_sample_data/raster/landcover.img`)"
+msgstr ""
+"il layer raster :file:`landcover` "
+"(:file:`qgis_sample_data/raster/landcover.img`)"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:158
+msgid ""
+"and the :file:`lakes` vector layer (:file:`qgis_sample_data/gml/lakes.gml`)"
+msgstr ""
+"e il layer vettoriale :file:`lakes` (:file:`qgis_sample_data/gml/lakes.gml`)"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:160
+msgid ""
+"Where :file:`qgis_sample_data` represents the path to the unzipped dataset."
+msgstr ""
+"Dove :file:`qgis_sample_data` rappresenta il percorso del dataset "
+"decompresso."
+
+#: ../../docs/user_manual/introduction/getting_started.rst:162
+msgid "Start QGIS as seen in :ref:`label_startingqgis`."
+msgstr "Avvia QGIS come visto in :ref:`label_startingqgis`."
+
+#: ../../docs/user_manual/introduction/getting_started.rst:163
+msgid "To load the files in QGIS:"
+msgstr "Per caricare i file in QGIS:"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:165
+msgid ""
+"Click on the |dataSourceManager| :sup:`Open Data Source Manager` icon. The "
+"Data Source Manager should open in Browser mode."
+msgstr ""
+"Clicca sull'icona |dataSourceManager| :sup:`Apri Gestore della sorgente "
+"dati`. Il Data Source Manager dovrebbe aprirsi in modalità Browser."
+
+#: ../../docs/user_manual/introduction/getting_started.rst:167
+msgid "Browse to the folder :file:`qgis_sample_data/raster/`"
+msgstr "Sfoglia la cartella :file:`qgis_sample_data/raster/`"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:168
+msgid ""
+"Select the ERDAS IMG file :file:`landcover.img` and double-click it. The "
+"landcover layer is added in the background while the Data Source Manager "
+"window remains open."
+msgstr ""
+"Seleziona il file IMG ERDAS :file:`landcover.img` e fai doppio clic su di "
+"esso. Il layer landcover viene aggiunto in background mentre la finestra "
+"Data Source Manager rimane aperta."
+
+#: ../../docs/user_manual/introduction/getting_started.rst:177
+msgid "Adding data to a new project in QGIS"
+msgstr "Aggiungere dati a un nuovo progetto in QGIS"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:179
+msgid ""
+"To load the lakes data, browse to the folder :file:`qgis_sample_data/gml/`, "
+"and double-click the :file:`lakes.gml` file to open it."
+msgstr ""
+"Per caricare i dati dei laghi, sfoglia la cartella "
+":file:`qgis_sample_sample_data/gml/`, e fai doppio clic sul file "
+":file:`lakes.gml`per aprirlo."
+
+#: ../../docs/user_manual/introduction/getting_started.rst:181
+msgid ""
+"A :guilabel:`Coordinate Reference System Selector` dialog opens. In the "
+":guilabel:`Filter` menu, type ``2964``, filtering the list of Coordinate "
+"Reference Systems below."
+msgstr ""
+"Si apre la finestra di dialogo :guilabel:`Selettore Sistema di Riferimento "
+"delle Coordinate`. Nel menu :guilabel:`Filtro`, digita ``2964``, si ottiene "
+"di seguito la lista filtrata dell'elenco dei sistemi di riferimento delle "
+"coordinate. "
+
+#: ../../docs/user_manual/introduction/getting_started.rst:190
+msgid "Select the Coordinate Reference System of data"
+msgstr "Seleziona il Sistema di Riferimento delle Coordinate"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:192
+msgid "Select the :guilabel:`NAD27 / Alaska Alberts` entry"
+msgstr "Seleziona il sistema :guilabel:`NAD27 / Alaska Alberts`"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:193
+msgid "Click :guilabel:`OK`"
+msgstr "Fai clic su :guilabel:`OK`"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:194
+msgid "Close the Data Source Manager window"
+msgstr "Chiudi la finestra Gestore della sorgente dati."
+
+#: ../../docs/user_manual/introduction/getting_started.rst:196
+msgid ""
+"You now have the two layers available in your project in some random "
+"colours. Let's do some customization on the lakes layer."
+msgstr ""
+"Ora hai i due layer disponibili nel tuo progetto in alcuni colori casuali. "
+"Facciamo qualche personalizzazione sul layer laghi."
+
+#: ../../docs/user_manual/introduction/getting_started.rst:199
+msgid ""
+"Select the |zoomIn| :sup:`Zoom In` tool on the :guilabel:`Navigation` "
+"toolbar"
+msgstr ""
+"Seleziona lo strumento |zoomIn| :sup:`Ingrandisci` sulla barra degli "
+"strumenti :guilabel:`Gestisci la barra di navigazione`"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:200
+msgid "Zoom to an area with some lakes"
+msgstr "Fai zoom su un'area con alcuni laghi"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:201
+msgid ""
+"Double-click the :file:`lakes` layer in the map legend to open the "
+":guilabel:`Properties` dialog"
+msgstr ""
+"Fai doppio click sul layer  :file:`lakes`  nella legenda per aprire la "
+"finestra di dialogo :guilabel:`Proprietà`."
+
+#: ../../docs/user_manual/introduction/getting_started.rst:203
+msgid "To change the lakes color:"
+msgstr "Per cambiare il colore dei laghi:"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:205
+msgid "Click on the |symbology| :guilabel:`Symbology` tab"
+msgstr ""
+"Clicca sulla scheda  |symbology| :guilabel:`Simbologia` e seleziona blu come"
+" colore di riempimento."
+
+#: ../../docs/user_manual/introduction/getting_started.rst:206
+msgid "Select blue as fill color."
+msgstr "Seleziona blu come colore di riempimento"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:213
+msgid "Selecting Lakes color"
+msgstr "Selezione del colore dei laghi"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:215
+msgid ""
+"Press :guilabel:`OK`. Lakes are now displayed in blue in the map canvas."
+msgstr ""
+"Premi :guilabel:`OK`. I laghi sono ora visualizzati in blu nella mappa."
+
+#: ../../docs/user_manual/introduction/getting_started.rst:216
+msgid "To display the name of the lakes:"
+msgstr "Per visualizzare i nomi dei laghi:"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:218
+msgid "Reopen the :file:`lakes` layer :guilabel:`Properties` dialog"
+msgstr ""
+"Riapri la finestra di dialogo :guilabel:`Proprietà` del layer :file:`lakes`."
+
+#: ../../docs/user_manual/introduction/getting_started.rst:219
+msgid "Click on the |labeling| :guilabel:`Labels` tab"
+msgstr "Clicca sulla scheda |labeling| :guilabel:`Etichette`"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:220
+msgid ""
+"Select :guilabel:`Single labels` in the drop-down menu to enable labeling."
+msgstr ""
+"Seleziona :guilabel:`Etichette singole` nel menu a discesa per abilitare "
+"l'etichettatura."
+
+#: ../../docs/user_manual/introduction/getting_started.rst:221
+msgid "From the :guilabel:`Label with` list, choose the ``NAMES`` field."
+msgstr "Dalla lista :guilabel:`Etichetta con`, scegli il campo ``Nomi``."
+
+#: ../../docs/user_manual/introduction/getting_started.rst:228
+msgid "Showing Lakes names"
+msgstr "Visualizzazione del nome dei laghi"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:230
+msgid "Press :guilabel:`Apply`. Names will now load over the boundaries."
+msgstr "Premi :guilabel:`Applica`. I nomi ora passeranno sopra i confini."
+
+#: ../../docs/user_manual/introduction/getting_started.rst:231
+msgid ""
+"You can improve readability of the labels by adding a white buffer around "
+"them:"
+msgstr ""
+"Puoi migliorare la leggibilità delle etichette aggiungendo un buffer bianco "
+"intorno ad esse:"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:233
+msgid "Click the :guilabel:`Buffer` tab in the list on the left"
+msgstr "Clicca sulla scheda :guilabel:`Buffer` nella lista sulla sinistra"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:234
+msgid "Check |checkbox| :guilabel:`Draw text buffer`"
+msgstr "Seleziona |checkbox| :guilabel:`Disegna buffer del testo`"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:235
+msgid "Choose ``3`` as buffer size"
+msgstr "Scegli ``3`` come dimensione del buffer"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:236
+msgid "Click :guilabel:`Apply`"
+msgstr "Fai clic su :guilabel:`Applica`"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:237
+msgid "Check if the result looks good, and update the value if needed."
+msgstr ""
+"Controlla se il risultato è buono e, se necessario, aggiorna il valore."
+
+#: ../../docs/user_manual/introduction/getting_started.rst:238
+msgid ""
+"Finally click :guilabel:`OK` to close the :guilabel:`Layer Properties` "
+"dialog and apply the changes."
+msgstr ""
+"Infine clicca :guilabel:`OK` per chiudere la finestra di dialogo "
+":guilabel:`Proprietà vettore` e applicare le modifiche."
+
+#: ../../docs/user_manual/introduction/getting_started.rst:241
+msgid ""
+"Let's now add some decorations in order to shape the map and export it out "
+"of QGIS:"
+msgstr ""
+"Aggiungiamo ora alcune decorazioni per migliorare la mappa ed esportarla da "
+"QGIS:"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:244
+msgid "Select :menuselection:`View --> Decorations --> Scale Bar` menu"
+msgstr ""
+"Seleziona il menu :menuselection:`Visualizza --> Decorazioni --> Barra di "
+"scala`"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:245
+msgid ""
+"In the dialog that opens, check |checkbox| :guilabel:`Enable Scale Bar` "
+"option"
+msgstr ""
+"Nella finestra di dialogo che si apre, spunta l'opzione |checkbox| "
+":guilabel:`Attiva Barra di Scala`"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:246
+msgid "Customize the options of the dialog as you want"
+msgstr "Personalizza le opzioni nella finestra di dialogo come preferisci"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:247
+msgid "Press :guilabel:`Apply`"
+msgstr "Premi :guilabel:`Applica`"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:248
+msgid ""
+"Likewise, from the decorations menu, add more items (north arrow, "
+"copyright...) to the map canvas with custom properties."
+msgstr ""
+"Analogamente, dal menu decorazioni, aggiungi altre voci (freccia nord, "
+"copyright....) alla mappa con proprietà personalizzate."
+
+#: ../../docs/user_manual/introduction/getting_started.rst:250
+msgid ""
+"Click :menuselection:`Project --> Import/Export -->` |saveMapAsImage| "
+":menuselection:`Export Map to Image...`"
+msgstr ""
+"Clicca :menuselection:`Progetto --> Importa/Esporta -->` |saveMapAsImage| "
+":menuselection:`Esporta Mappa come Immagine...`"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:252
+msgid "Press :guilabel:`Save` in the opened dialog"
+msgstr "Premi :guilabel:`Salva` nella finestra di dialogo aperta"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:253
+msgid ""
+"Select a file location, a format and confirm by pressing :guilabel:`Save` "
+"again."
+msgstr ""
+"Seleziona il percorso del file, il formato e conferma cliccando "
+":guilabel:`Salva` ancora."
+
+#: ../../docs/user_manual/introduction/getting_started.rst:255
+msgid ""
+"Press :menuselection:`Project -->` |fileSave| :menuselection:`Save...` to "
+"store your changes as a :file:`.qgz` project file."
+msgstr ""
+"Premi :menuselection:`Progetto -->` |fileSave| :menuselection:`Salva` per "
+"memorizzare le modifiche come file di progetto :file:`.qgz`. "
+
+#: ../../docs/user_manual/introduction/getting_started.rst:258
+msgid ""
+"That's it! You can see how easy it is to visualize raster and vector layers "
+"in QGIS, configure them and generate your map in an image format you can use"
+" in other softwares. Let's move on to learn more about the available "
+"functionality, features and settings, and how to use them."
+msgstr ""
+"Ecco fatto! Puoi vedere quanto sia facile visualizzare i layer raster e "
+"vettoriali in QGIS, configurarli e generare la tua mappa in un formato "
+"immagine che puoi usare in altri software. Passiamo ad approfondire le "
+"funzionalità, le caratteristiche e le impostazioni disponibili e come "
+"usarle."
+
+#: ../../docs/user_manual/introduction/getting_started.rst:264
+msgid ""
+"To continue learning QGIS through step-by-step exercises, follow the "
+":ref:`Training manual <QGIS-training-manual-index-reference>`."
+msgstr ""
+"Per continuare ad imparare QGIS attraverso esercizi passo dopo passo, "
+"utilizza il :ref:`Training manual <QGIS-training-manual-index-reference>`."

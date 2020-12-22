@@ -1,0 +1,220 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:24+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/developers_guide/unittesting.rst:6
+msgid "Unit Testing"
+msgstr "ユニットテスト"
+
+#: ../../docs/developers_guide/unittesting.rst:11
+msgid ""
+"As of November 2007 we require all new features going into master to be "
+"accompanied with a unit test. Initially we have limited this requirement to "
+"qgis_core, and we will extend this requirement to other parts of the code "
+"base once people are familiar with the procedures for unit testing explained"
+" in the sections that follow."
+msgstr ""
+"2007年11月の時点で、私たちはマスターに入るすべての新機能は、ユニットテストを伴うことを要求しています。当初は私たちはこの要件はqgis_coreに制限してきましたが、皆様が次のセクションで説明するユニットテストのための手続きに精通した後は、この要件をコードベースの他の部分に拡張するつもりです。"
+
+#: ../../docs/developers_guide/unittesting.rst:19
+msgid "The QGIS testing framework - an overview"
+msgstr "QGISのテストフレームワーク - 概要"
+
+#: ../../docs/developers_guide/unittesting.rst:34
+msgid ""
+"You create a unit test. This happens under ``<QGIS Source "
+"Dir>/tests/src/core`` in the case of the core lib. The test is basically a "
+"client that creates an instance of a class and calls some methods on that "
+"class. It will check the return from each method to make sure it matches the"
+" expected value. If any one of the calls fails, the unit will fail."
+msgstr ""
+"ユニットテストを作成します。これはcore libの場合 ``<QGIS Source Dir>/tests/src/core`` "
+"の下で起こります。テストは、基本的には、クラスのインスタンスを作成し、そのクラスにいくつかのメソッドを呼び出すクライアントです。それは各メソッドからの戻りをチェックし、期待値と一致することを確認します。呼び出しのいずれかに障害が発生した場合、そのユニットは失敗します。"
+
+#: ../../docs/developers_guide/unittesting.rst:40
+msgid ""
+"You include QtTestLib macros in your test class. This macro is processed by "
+"the Qt meta object compiler (moc) and expands your test class into a "
+"runnable application."
+msgstr ""
+"テストクラスにQtTestLibマクロを含めます。このマクロは、Qtのメタオブジェクトコンパイラ（MOC）によって処理され、実行可能なアプリケーションにテストクラスを拡張します。"
+
+#: ../../docs/developers_guide/unittesting.rst:44
+msgid ""
+"You add a section to the CMakeLists.txt in your tests directory that will "
+"build your test."
+msgstr "テストを構築するtestsディレクトリにCMakeLists.txtにセクションを追加します。"
+
+#: ../../docs/developers_guide/unittesting.rst:47
+msgid ""
+"You ensure you have ``ENABLE_TESTING`` enabled in ccmake / cmakesetup. This "
+"will ensure your tests actually get compiled when you type make."
+msgstr ""
+"``ENABLE_TESTING`` "
+"がccmake/cmakesetupで有効になっていることを確認します。これは、makeと入力すると、テストが実際にコンパイルされることを保証します。"
+
+#: ../../docs/developers_guide/unittesting.rst:56
+msgid ""
+"You compile your sources and install. Do this using normal ``make && (sudo)"
+"  make install`` procedure."
+msgstr ""
+"ソースをコンパイルしてインストールします。これは通常の ``make && (sudo) make install`` 手順を使用して実行します。"
+
+#: ../../docs/developers_guide/unittesting.rst:70
+msgid "Creating a unit test"
+msgstr "ユニットテストの作成"
+
+#: ../../docs/developers_guide/unittesting.rst:105
+msgid ""
+"Beyond that you just continue implementing your class as per normal, pulling"
+" in whatever headers you may need:"
+msgstr "その他は、必要となる可能性があるヘッダは何でも引っ張って、通常通りあなたのクラスを実装し続けるだけです："
+
+#: ../../docs/developers_guide/unittesting.rst:123
+msgid ""
+"Since we are combining both class declaration and implementation in a single"
+" file the class declaration comes next. We start with our doxygen "
+"documentation. Every test case should be properly documented. We use the "
+"doxygen ingroup directive so that all the UnitTests appear as a module in "
+"the generated Doxygen documentation. After that comes a short description of"
+" the unit test and the class must inherit from QObject and include the "
+"Q_OBJECT macro."
+msgstr ""
+"ここではクラス宣言と実装の両方を単一のファイルに組み合わせているので、クラス宣言が次に来ます。doxygenのドキュメントで始めます。すべてのテストケースは適切に文書化されなければなりません。すべてのユニットテストが生成されたDoxygenのドキュメントのモジュールとして表示されるように、doxygenのingroupディレクティブを使用します。その後にユニットテストの短い説明が来て、このクラスはQObjectを継承し、Q_OBJECTマクロをインクルードする必要があります。"
+
+#: ../../docs/developers_guide/unittesting.rst:214
+msgid ""
+"There is one more benefit to regression tests - they can save you time. If "
+"you ever fixed a bug that involved making changes to the source, and then "
+"running the application and performing a series of convoluted steps to "
+"replicate the issue, it will be immediately apparent that simply "
+"implementing your regression test before fixing the bug will let you "
+"automate the testing for bug resolution in an efficient manner."
+msgstr ""
+"回帰テストへの1つの以上の利点があります - "
+"それらは時間を節約できます。ソースに変更を加えてからアプリケーションを実行して問題を再現するために複雑な一連のステップを実行することに関わるバグを修正したことがあれば、バグを修正する前に回帰テストを実装するだけで、効率的な方法でバグの解決のためのテストを自動化できることがすぐに明らかになるでしょう。"
+
+#: ../../docs/developers_guide/unittesting.rst:257
+msgid ""
+"That ends our class declaration. The implementation is simply inlined in the"
+" same file lower down. First our init and cleanup functions:"
+msgstr ""
+"これで私たちのクラス宣言を終了します。実装は単に同じファイル中で下方にインライン化されます。まず、私たちのinitおよびcleanup関数："
+
+#: ../../docs/developers_guide/unittesting.rst:290
+msgid "The above init function illustrates a couple of interesting things."
+msgstr "上記のinit関数はいくつかの興味深い物事を示しています。"
+
+#: ../../docs/developers_guide/unittesting.rst:304
+msgid ""
+"Qt also provides some other interesting mechanisms for data driven testing, "
+"so if you are interested to know more on the topic, consult the Qt "
+"documentation."
+msgstr ""
+"Qtではまた、テストをデータ駆動するためのいくつかの他の興味深いメカニズムを提供していますので、この話題に関してもっと知りたいと興味をお持ちの方は、Qtのドキュメントを参照してください。"
+
+#: ../../docs/developers_guide/unittesting.rst:326
+msgid ""
+"Some of these macros are useful only when using the Qt framework for data "
+"driven testing (see the Qt docs for more detail)."
+msgstr ""
+"これらのマクロの一部は（詳細はQtのドキュメントを参照してください）、テスト駆動型のデータのためのQtフレームワークを使用している場合にのみ便利です。"
+
+#: ../../docs/developers_guide/unittesting.rst:336
+msgid ""
+"Normally your functional tests would cover all the range of functionality of"
+" your classes public API where feasible. With our functional tests out the "
+"way, we can look at our regression test example."
+msgstr ""
+"通常、あなたの機能テストが可能な場合、あなたのクラスのパブリックAPIのすべての機能範囲をカバーするでしょう。私たちの機能テストは out the "
+"way、回帰テストの例を見ることができます。"
+
+#: ../../docs/developers_guide/unittesting.rst:340
+msgid ""
+"Since the issue in bug #832 is a misreported cell count, writing our test is"
+" simply a matter of using QVERIFY to check that the cell count meets the "
+"expected value:"
+msgstr ""
+"バグ＃832での問題はセル数の誤った報告なので、私たちのテストを書くことは、単純にセル数が期待値を満たしていることをQVERIFYを使用して確認する問題です。"
+
+#: ../../docs/developers_guide/unittesting.rst:456
+msgid "Adding your unit test to CMakeLists.txt"
+msgstr "CMakeLists.txtにユニットテストを追加する"
+
+#: ../../docs/developers_guide/unittesting.rst:469
+msgid "The ADD_QGIS_TEST macro explained"
+msgstr "説明されたADD_QGIS_TESTマクロ"
+
+#: ../../docs/developers_guide/unittesting.rst:515
+msgid ""
+"Since our test class needs to be run through the Qt meta object compiler "
+"(moc) we need to provide a couple of lines to make that happen too:"
+msgstr ""
+"我々のテストクラスは、Qtのメタオブジェクトコンパイラ（MOC）を介して実行する必要がありますので、それが実現するために何行かも提供する必要があります："
+
+#: ../../docs/developers_guide/unittesting.rst:585
+msgid "Building your unit test"
+msgstr "ユニットテストをビルドする"
+
+#: ../../docs/developers_guide/unittesting.rst:587
+msgid ""
+"To build the unit test you need only to make sure that ``ENABLE_TESTS=true``"
+" in the cmake configuration. There are two ways to do this:"
+msgstr ""
+"ユニットテストをビルドするには、cmakeの設定で ``ENABLE_TESTS=true`` "
+"を確認するだけが必要です。これを行うには2つの方法があります："
+
+#: ../../docs/developers_guide/unittesting.rst:590
+msgid ""
+"Run ``ccmake ..`` ( or ``cmakesetup ..`` under windows) and interactively "
+"set the ``ENABLE_TESTS`` flag to ``ON``."
+msgstr ""
+"``ccmake..`` （またはウィンドウズの下では ``cmakesetup..`` ）を実行し、対話的に ``ENABLE_TESTS`` "
+"フラグを ``ON`` に設定します。"
+
+#: ../../docs/developers_guide/unittesting.rst:592
+msgid "Add a command line flag to cmake e.g. ``cmake -DENABLE_TESTS=true ..``"
+msgstr "cmakeのためのコマンドラインフラグを追加します、例えば ``cmake -DENABLE_TESTS=true ..``"
+
+#: ../../docs/developers_guide/unittesting.rst:594
+msgid ""
+"Other than that, just build QGIS as per normal and the tests should build "
+"too."
+msgstr "それ以外は、通常通りQGISをビルドするだけであり、またテストもビルドする必要があります。"
+
+#: ../../docs/developers_guide/unittesting.rst:598
+msgid "Run your tests"
+msgstr "テストを実行"
+
+#: ../../docs/developers_guide/unittesting.rst:601
+msgid ""
+"The simplest way to run the tests is as part of your normal build process:"
+msgstr "テストを実行する最も簡単な方法は、通常のビルドプロセスの一部としてです："
+
+#: ../../docs/developers_guide/unittesting.rst:627
+msgid ""
+"If a test fails, you can use the ctest command to examine more closely why "
+"it failed. Use the ``-R`` option to specify a regex for which tests you want"
+" to run and ``-V`` to get verbose output:"
+msgstr ""
+"テストが失敗した場合は、それが失敗した理由をより密接に検討するctestコマンドを使用できます。実行したいテストするために正規表現を指定するためには "
+"``-R`` オプションを、冗長な出力を得るためには ``-V`` オプションを使用してください："

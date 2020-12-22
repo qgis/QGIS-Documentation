@@ -1,0 +1,110 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:16+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: German (https://www.transifex.com/qgis/teams/6144/de/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:6
+msgid "Writing code in the PyQGIS Cookbook"
+msgstr "Code schreiben im PyQGIS-Kochbuch "
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:11
+msgid ""
+"If you are planning to add or update some chapters of the :ref:`PyQGIS-"
+"Developer-Cookbook`, then you should follow some rules to enable automatic "
+"testing of the code snippets."
+msgstr ""
+"Wenn Sie planen, einige Kapitel des :ref:`PyQGIS-Developer-Cookbook` "
+"hinzuzufügen oder zu aktualisieren, dann sollten Sie einige Regeln befolgen,"
+" um das automatische Testen der Code-Schnipsel zu ermöglichen."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:15
+msgid ""
+"Testing is really important because it allows automatic checking of the "
+"code. Code snippets with errors or code that uses outdated methods will fail"
+" and the notification will help you fix the problems."
+msgstr ""
+"Das Testen ist wirklich wichtig, da es die automatische Überprüfung des "
+"Codes ermöglicht. Code-Schnipsel mit Fehlern oder Code, der veraltete "
+"Methoden verwendet, werden fehlschlagen und die Benachrichtigung wird Ihnen "
+"helfen, die Probleme zu beheben."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:19
+msgid ""
+"For testing, we use the `Sphinx doctest extension <https://www.sphinx-"
+"doc.org/en/master/usage/extensions/doctest.html>`_. Refer to the extension "
+"documentation for more detailed information."
+msgstr ""
+"Zum testen wird die 'Sphinx doctest extension <https://www.sphinx-"
+"doc.org/en/master/usage/extensions/doctest.html>' verwendet. Für weitere, "
+"detailierte Informationen schauen Sie bitte in die Dokumentation der "
+"Erweiterung."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:25
+msgid "How to write testable code snippets"
+msgstr "Wie schreibe ich testbaren Code?"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:27
+msgid ""
+"Writing testable code snippets is not so different from the *old* method. "
+"Basically, you need to use a different Sphinx `directive`."
+msgstr ""
+"Das Schreiben von testbarem Code unterscheidet sich kaum von der "
+"'klassischen' Methode. Es wird lediglich eine andere Sphinx Direktive "
+"verwendet."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:31
+msgid "Doctest sphinx directives"
+msgstr "Doctest Sphinx Direktiven"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:33
+msgid ""
+"Instead of embedding the code in a ``.. code-block:: python`` directive "
+"(which would highlight the code syntax automatically), you now need to embed"
+" it in a ``.. testcode::``. That is, instead of  this::"
+msgstr ""
+"Anstatt Code in ``.. code-block:: python`` Direktiven einzubetten (mit "
+"automatischem Code Highlighting), muss es jetzt mit ``.. testcode::`` "
+"markiert werden. Also, statt diesem::"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:42
+msgid "You now use this::"
+msgstr "Nutze dieses::"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:49
+msgid ""
+"After you wrote the example code, you should add some *assertion* that will "
+"evaluate the code and that will be run automatically."
+msgstr ""
+"Nachdem du Beispielcode geschrieben hast, solltest du eine "
+"*Behauptung/assertion* hinzufügen, die den Code evaluiert und automatisch "
+"ausgeführt wird."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:52
+msgid ""
+"In the above example, you are creating a crs and with ``assert "
+"crs.isValid()`` you **test** if it is valid. If the code has a wrong python "
+"syntax or the ``crs.isValid()`` returns ``False``, this code snippet will "
+"fail during testing."
+msgstr ""
+"Im obigen Beispiel wird ein KBS erzeugt und mit ``assert crs.isValid()`` die"
+" Validität **geprüft**. Bei falscher Python-Syntax oder falls "
+"``crs.isValid()`` ``False`` zurückliefert, wird dieser Codeteil beim Test "
+"scheitern."

@@ -1,0 +1,569 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:28+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Romanian (https://www.transifex.com/qgis/teams/6144/ro/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:6
+msgid "GRASS GIS Integration"
+msgstr "Integrarea GRASS GIS"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:28
+msgid "Demo dataset"
+msgstr "Setul de date demonstrative"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:42
+msgid "Loading GRASS raster and vector layers"
+msgstr "Încărcarea straturilor raster și vectoriale GRASS"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:52
+msgid "**GRASS Data Loading**"
+msgstr "**Încărcarea Datelor GRASS**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:95
+msgid "GRASS Options"
+msgstr "Opțiuni GRASS"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:103
+msgid "Starting the GRASS plugin"
+msgstr "Startarea plugin-ului GRASS"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:115
+msgid "|grassCloseMapset| :sup:`Close Mapset`"
+msgstr "|grassCloseMapset| :sup:`Închidere set de hărți`"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:116
+msgid "|grassTools| :sup:`Open GRASS Tools`"
+msgstr "|grassTools| :sup:`Deschidere Instrumente GRASS`"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:117
+msgid "|grassRegion| :sup:`Display Current GRASS Region`"
+msgstr "|grassRegion| :sup:`Afișarea regiunii curente GRASS`"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:118
+msgid "|general| :sup:`GRASS Options`"
+msgstr "|general| :sup:`Opțiuni GRASS`"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:121
+msgid "Opening GRASS mapset"
+msgstr "Deschiderea Setului de hărți GRASS"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:130
+msgid "GRASS LOCATION and MAPSET"
+msgstr "GRASS LOCATION și MAPSET"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:132
+msgid ""
+"GRASS data are stored in a directory referred to as GISDBASE. This "
+"directory, often called :file:`grassdata`, must be created before you start "
+"working with the GRASS plugin in QGIS. Within this directory, the GRASS GIS "
+"data are organized by projects stored in subdirectories called "
+":file:`LOCATIONs`. Each :file:`LOCATION` is defined by its coordinate "
+"system, map projection and geographical boundaries. Each :file:`LOCATION` "
+"can have several :file:`MAPSETs` (subdirectories of the :file:`LOCATION`) "
+"that are used to subdivide the project into different topics or subregions, "
+"or as workspaces for individual team members (see Neteler & Mitasova 2008 in"
+" :ref:`literature_and_web`). In order to analyse vector and raster layers "
+"with GRASS modules, you generally have to import them into a GRASS "
+":file:`LOCATION`. (This is not strictly true -- with the GRASS modules "
+":file:`r.external` and :file:`v.external` you can create read-only links to "
+"external GDAL/OGR-supported datasets without importing them. This is not the"
+" usual way for beginners to work with GRASS, therefore this functionality "
+"will not be described here.)"
+msgstr ""
+"Datele GRASS sunt stocate într-un director de tip GISDBASE. Acest director, "
+"denumit adesea :file:`grassdata`, trebuie să existe înainte de a începe "
+"lucrul cu plugin-ul GRASS din QGIS. În interiorul acestui director, datele "
+"GRASS GIS sunt organizate în proiecte stocate, la rândul lor, în "
+"subdirectoare denumite  :file:`LOCATIONs`. Fiecare :file:`LOCATION` este "
+"definită prin sistemul de coordonate, proiecția hărții și limitele "
+"geografice. Fiecare :file:`LOCATION` poate avea mai multe :file:`MAPSETs` "
+"(subdirectoare ale :file:`LOCATION`) care sunt utilizate pentru a subdiviza "
+"un proiect în diferite teme sau subregiuni, ori în spații de lucru pentru "
+"membrii individuali ai unei echipe (v. Neteler & Mitasova 2008 în "
+":ref:`literature_and_web`). Pentru a analiza straturile vectoriale și raster"
+" cu ajutorul modulelor GRASS, trebuie să le importați într-o "
+":file:`LOCATION` GRASS. (Acest lucru nu este complet adevărat - cu ajutorul "
+"modulelor GRASS :file:`r.external` și :file:`v.external` puteți crea numai "
+"link-uri read-only către seturile de date GDAL/OGR externe acceptate, fără "
+"să fie necesar importul lor. Însă, deoarece acesta nu este modul obișnuit "
+"pentru începători de a lucra cu GRASS, această opțiune nu va fi descrisă "
+"aici.)"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:152
+msgid "GRASS data in the alaska LOCATION"
+msgstr "Datele GRASS din LOCAȚIA alaska"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:157
+msgid "Importing data into a GRASS LOCATION"
+msgstr "Importați datele într-o LOCAȚIE GRASS"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:168
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:214
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:283
+msgid "Start QGIS and make sure the GRASS plugin is loaded."
+msgstr "Start QGIS, apoi asigurați-vă că plugin-ul GRASS este încărcat."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:174
+msgid ""
+"Now click the |grassTools| :sup:`Open GRASS tools` icon. The GRASS Toolbox "
+"(see section :ref:`subsec_grass_toolbox`) dialog appears."
+msgstr ""
+"Acum faceți clic pe pictograma |grassTools| :sup:`Open GRASS tools`. Va "
+"apărea bara de instrumente GRASS (v. secțiunea :ref:`subsec_grass_toolbox`)."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:180
+msgid ""
+"Browse to the folder :file:`raster` in the QGIS 'Alaska' dataset and select "
+"the file :file:`landcover.img`."
+msgstr ""
+"Răsfoiți folderul :file:`raster` din setul de date 'Alaska' din QGIS, apoi "
+"selectați fișierul :file:`landcover.img`."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:193
+msgid ""
+"Browse to the folder :file:`gml` in the QGIS 'Alaska' dataset and select the"
+" file :file:`lakes.gml` as OGR file."
+msgstr ""
+"Răsfoiți folderul :file:`gml` din setul de date 'Alaska' din QGIS, apoi "
+"selectați fișierul :file:`lakes.gml` ca fișier OGR."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:206
+msgid "Creating a new GRASS LOCATION"
+msgstr "Crearea unei noi LOCAȚII GRASS"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:208
+msgid ""
+"As an example, here is the sample GRASS :file:`LOCATION alaska`, which is "
+"projected in the Albers Equal Area projection using feet as units. This "
+"sample GRASS :file:`LOCATION alaska` will be used for all examples and "
+"exercises in the following GRASS-related sections. It is useful to download "
+"and install the dataset on your computer (see :ref:`label_sampledata`)."
+msgstr ""
+"Ca exemplu, este prezentat eșantionul GRASS :file:`LOCATION alaska`, care "
+"este proiectat în proiecția Albers cu Suprafețe Egale și având feet ca "
+"unitate de măsură. Acest eșantion GRASS :file:`LOCATION alaska` va fi "
+"folosit pentru toate exemplele și exercițiile din următoarele secțiuni "
+"legate de GRASS. Este util să descărcați setul de date pe computerul dvs, "
+"apoi să-l instalați (v. :ref:`label_sampledata`)."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:235
+msgid "In :guilabel:`Filter`, insert 2964 to select the projection."
+msgstr "În :guilabel:`Filtrul`, inserați 2964 pentru a selecta proiecția."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:236
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:241
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:289
+msgid "Click :guilabel:`Next`."
+msgstr "Clic pe :guilabel:`Next`."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:249
+msgid ""
+"The new :file:`LOCATION`, 'alaska', and two :file:`MAPSETs`, 'demo' and "
+"'PERMANENT', are created. The currently opened working set is 'demo', as you"
+" defined."
+msgstr ""
+"Sunt create noua :file:`LOCATION`, 'alaska', și două :file:`MAPSETs`, 'demo'"
+" și 'PERMANENT'. Setul deschis în mod curent este 'demo', așa cum l-ați "
+"definit."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:251
+msgid ""
+"Notice that some of the tools in the GRASS toolbar that were disabled are "
+"now enabled."
+msgstr ""
+"Observați că unele instrumente din bara de instrumente GRASS, dezactivate "
+"anterior, sunt acum activate."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:260
+msgid "Creating a new GRASS LOCATION or a new MAPSET in QGIS"
+msgstr "Crearea unei LOCAȚII GRASS noi, sau a unui nou SET DE HĂRȚI în QGIS"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:272
+msgid "Adding a new MAPSET"
+msgstr "Adăugarea unui nou MAPSET"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:286
+msgid ""
+"Select the GRASS database (GISDBASE) folder :file:`grassdata` with the "
+":file:`LOCATION` 'alaska', where we want to add a further :file:`MAPSET` "
+"called 'test'."
+msgstr ""
+"Selectați folderul :file:`grassdata` al bazei de date GRASS (GISDBASE) cu "
+"locația :file:`LOCATION` 'alaska', în care dorim să adăugăm un nou "
+":file:`MAPSET` denumit 'test'."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:303
+msgid "The GRASS vector data model"
+msgstr "Modelul de date vectoriale GRASS"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:332
+msgid ""
+"Attributes can be stored inside the GRASS :file:`LOCATION` as dBase,  "
+"SQLite3 or in external database tables, for example, PostgreSQL, MySQL, "
+"Oracle, etc."
+msgstr ""
+"Atributele pot fi stocate în interiorul :file:`LOCATION` GRASS în format "
+"dBase sau SQLite3, sau în tabelele bazei de date externe, cum ar fi "
+"PostgreSQL, MySQL, Oracle, etc."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:338
+msgid ""
+"Attributes in database tables are linked to geometry elements using a "
+"'category' value."
+msgstr ""
+"Atributele din tabelele bazei de date sunt legate de elementele geometrice "
+"printr-o valoare de 'categorie'."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:344
+msgid ""
+"'Category' (key, ID) is an integer attached to geometry primitives, and it "
+"is used as the link to one key column in the database table."
+msgstr ""
+"'Categoria' (key, ID) este un număr întreg atașat primitivelor geometrice, "
+"fiind folosită ca legătură către o coloană cheie, din tabelul bazei de date."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:347
+msgid "**Learning the GRASS Vector Model**"
+msgstr "**Înțelegerea modelului de date vectoriale GRASS**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:360
+msgid "Creating a new GRASS vector layer"
+msgstr "Crearea unui nou strat vectorial GRASS"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:365
+msgid "New Point Layer"
+msgstr "Strat Nou, de tip Punct"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:366
+msgid "New Line Layer"
+msgstr "Strat Nou, de tip Linie"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:367
+msgid "New Polygon Layer"
+msgstr "Strat Nou, de tip Poligon"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:389
+msgid "Digitizing and editing a GRASS vector layer"
+msgstr "Digitizarea și editarea unui strat vectorial GRASS"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:420
+msgid "**Toolbar**"
+msgstr "**Bara de Instrumente**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:427
+msgid "Icon"
+msgstr "Pictogramă"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:427
+msgid "Tool"
+msgstr "Instrument"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:427
+msgid "Purpose"
+msgstr "Scop"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:429
+msgid "|capturePoint|"
+msgstr "|capturePoint|"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:429
+msgid "New Point"
+msgstr "Punct Nou"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:429
+msgid "Digitize new point"
+msgstr "Digitizare punct nou"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:431
+msgid "|captureLine|"
+msgstr "|captureLine|"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:431
+msgid "New Line"
+msgstr "Linie nouă"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:431
+msgid "Digitize new line"
+msgstr "Digitizare linie nouă"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:433
+msgid "|captureBoundary|"
+msgstr "|captureBoundary|"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:433
+msgid "New Boundary"
+msgstr "Limită Nouă"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:435
+msgid "|captureCentroid|"
+msgstr "|captureCentroid|"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:435
+msgid "New Centroid"
+msgstr "Centroid Nou"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:435
+msgid "Digitize new centroid (label existing area)"
+msgstr "Digitizarea unui nou centroid (etichetarea zonei existente)"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:437
+msgid "|capturePolygon|"
+msgstr "|capturePolygon|"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:443
+msgid "**Digitizing polygons in GRASS**"
+msgstr "**Digitizarea poligoanelor în GRASS**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:467
+msgid "**Attributes**"
+msgstr "**Atribute**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:506
+msgid "**Snapping**"
+msgstr "**Acroșarea**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:513
+msgid "Use layer's CRS also for canvas when editing."
+msgstr "Canvasul folosește CRS-ul stratului și la momentul editării."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:516
+msgid "**Limitations**"
+msgstr "**Limitări**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:527
+msgid "**GRASS Edit Permissions**"
+msgstr "**Permisiuni de Editare GRASS**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:529
+msgid ""
+"You must be the owner of the GRASS :file:`MAPSET` you want to edit. It is "
+"impossible to edit data layers in a :file:`MAPSET` that is not yours, even "
+"if you have write permission."
+msgstr ""
+"Trebuie să fiți proprietarul :file:`MAPSET` GRASS, pentru a-l putea edita. "
+"Este imposibilă editarea datelor din straturile :file:`MAPSET` care nu vă "
+"aparține, chiar dacă aveți permisiunea de scriere."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:539
+msgid "The GRASS region tool"
+msgstr "Regiunea instrumentelor GRASS"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:571
+msgid "The GRASS Toolbox"
+msgstr "Bara de instrumente GRASS"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:590
+msgid "Working with GRASS modules"
+msgstr "Lucrul cu modulele GRASS"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:601
+msgid ""
+"It is also possible to customize the GRASS Toolbox content. This procedure "
+"is described in section :ref:`sec_toolbox-customizing`."
+msgstr ""
+"De asemenea, este posibilă personalizarea conținutul Instrumentarului GRASS."
+" Această procedură este descrisă în secțiunea :ref:`sec_toolbox-"
+"customizing`."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:612
+msgid "**Options**"
+msgstr "**Opțiuni**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:636
+msgid "**Output**"
+msgstr "**Rezultat**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:650
+msgid "**Manual**"
+msgstr "**Manual**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:669
+msgid "**Display results immediately**"
+msgstr "**Afișează imediat rezultatele**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:671
+msgid ""
+"If you want to display your calculation results immediately in your map "
+"canvas, you can use the 'View Output' button at the bottom of the module "
+"tab."
+msgstr ""
+"Dacă doriți să afișați imediat rezultatele calculelor dvs în canevasul "
+"hărții, puteți folosi butonul 'Vizualizare Output', din partea de jos a "
+"filei modulului."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:675
+msgid "GRASS module examples"
+msgstr "Exemple de module GRASS"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:677
+msgid ""
+"The following examples will demonstrate the power of some of the GRASS "
+"modules."
+msgstr ""
+"Următoarele exemple vor demonstra puterea unora dintre modulele GRASS."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:680
+msgid "Creating contour lines"
+msgstr "Crearea curbelor de nivel"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:689
+msgid ""
+"In the list of tool categories, double-click :menuselection:`Raster --> "
+"Surface Management --> Generate vector contour lines`."
+msgstr ""
+"În lista de de unelte pentru categorii, faceți dublu-clic pe "
+":menuselection:`Raster --> Surface Management --> Generate vector contour "
+"lines`."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:696
+msgid ""
+"Type into the :guilabel:`Name for output vector map` the name ``ctour_100``."
+msgstr ""
+"Introduceți în :guilabel:`Name for output vector map `numele ``ctour_100``."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:701
+msgid ""
+"Since this is a large region, it will take a while to display. After it "
+"finishes rendering, you can open the layer properties window to change the "
+"line color so that the contours appear clearly over the elevation raster, as"
+" in :ref:`vector_properties_dialog`."
+msgstr ""
+"Deoarece aceasta este o regiune mare, va dura ceva timp până la afișare. "
+"După ce se termină randarea, puteți deschide fereastra cu proprietățile "
+"stratului, pentru a schimba culoarea liniei astfel încât conturul să apară "
+"clar pe rasterul de elevație, la fel ca în :ref:`vector_properties_dialog`."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:714
+msgid "**The simplify tool**"
+msgstr "**Instrumentul de simplificare**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:729
+msgid ""
+"Check that the 'ctour_100' vector appears as the :guilabel:`Name of input "
+"vector`."
+msgstr ""
+"Verificați dacă 'ctour_100' apare ca :guilabel:`Nume pentru vectorul de "
+"intrare`."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:735
+msgid ""
+"You may change the color of the vector to display it clearly on the raster "
+"background and to contrast with the original contour lines. You will notice "
+"that the new contour lines have smoother corners than the original while "
+"staying faithful to the original overall shape."
+msgstr ""
+"Puteți schimba culoarea vectorului pentru a-l afișa în mod clar pe fundalul "
+"raster, și pentru a contrasta față de curbele de nivel originale. Veți "
+"observa că noile curbe de nivel au colțuri mai fine decât originalul, în "
+"timp ce urmează fidel forma originală."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:748
+msgid "**Other uses for r.contour**"
+msgstr "**Alte utilizări pentru r.contour**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:755
+msgid "Creating a Hillshade 3-D effect"
+msgstr "Crearea unui efect 3-D de umbrire"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:768
+msgid "Then click **r.shaded.relief** to open the module."
+msgstr "Apoi faceți clic pe **r.shaded.relief** pentru a deschide modulul."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:771
+msgid ""
+"When the process completes, add the hillshade raster to the map. You should "
+"see it displayed in grayscale."
+msgstr ""
+"Când procesul se încheie, adăugați hărții rasterul reliefat. Ar trebui să-l "
+"vedeți afișat în tonuri de gri."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:778
+msgid ""
+"You should now have the ``gtopo30`` elevation with its colormap and "
+"transparency setting displayed **above** the grayscale hillshade map. In "
+"order to see the visual effects of the hillshading, turn off the "
+"``gtopo30_shade`` map, then turn it back on."
+msgstr ""
+"Ar trebui să aveți acum elevația ``gtopo30`` cu harta de cuori și "
+"transparența setate **deasupra** hărții reliefului, în tonuri de gri. Pentru"
+" a observa mai bine efectele vizuale ale reliefării, desetați vizualizarea "
+"hărții ``gtopo30_shade``, apoi resetați-o."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:783
+msgid "**Using the GRASS shell**"
+msgstr "**Folosirea consolei GRASS**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:826
+msgid "Raster statistics in a vector map"
+msgstr "Statistici raster pentru o hartă vectorială"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:828
+msgid ""
+"The next example shows how a GRASS module can aggregate raster data and add "
+"columns of statistics for each polygon in a vector map."
+msgstr ""
+"Următorul exemplu arată modul în care un modul din GRASS poate agrega datele"
+" rastere, apoi să adauge coloanele de statistici pentru fiecare poligon din "
+"harta vectorială."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:836
+msgid ""
+"From the Toolbox, choose :menuselection:`Vector --> Manage features`, and "
+"open the module **v.centroids**."
+msgstr ""
+"Din Bara de instrumente alegeți :menuselection:`Vector --> Manage features`,"
+" apoi deschideți modulul **v.centroids**."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:838
+msgid ""
+"Enter as the :guilabel:`output vector map` 'forest_areas' and run the "
+"module."
+msgstr ""
+"Introduceți  'forest_areas' pentru :guilabel:`output vector map`, apoi "
+"rulați modulul."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:845
+msgid ""
+"Next, reopen the GRASS Toolbox and open :menuselection:`Vector --> Vector "
+"update` by other maps."
+msgstr ""
+"Mai departe, redeschideți Bara de instrumente GRASS, apoi deschideți "
+":menuselection:`Vector --> Vector update` din alte hărți."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:847
+msgid ""
+"Click on the **v.rast.stats** module. Enter ``gtopo30`` and "
+"``forest_areas``."
+msgstr ""
+"Clic pe modulul **v.rast.stats**. Introduceți ``gtopo30`` și "
+"``forest_areas``."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:860
+msgid "Customizing the GRASS Toolbox"
+msgstr "Personalizarea Barei de Instrumente GRASS"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:866
+msgid ""
+"A sample XML file for generating the module ``v.buffer`` (v.buffer.qgm) "
+"looks like this:"
+msgstr ""
+"Un fișier XML eșantion, pentru generarea modulului ``v.buffer`` "
+"(v.buffer.qgm) arată în felul următor:"

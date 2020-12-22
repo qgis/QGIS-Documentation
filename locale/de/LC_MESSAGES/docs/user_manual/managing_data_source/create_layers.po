@@ -1,0 +1,245 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# Klaus Affeldt <ka@ansperger.de>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:25+0000\n"
+"Last-Translator: Klaus Affeldt <ka@ansperger.de>, 2020\n"
+"Language-Team: German (https://www.transifex.com/qgis/teams/6144/de/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:5
+msgid "Creating Layers"
+msgstr "Erstellung von Layern"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:13
+msgid "Layers can be created in many ways, including:"
+msgstr "Layer können auf viele Arten erstellt werden, unter anderem:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:15
+msgid "empty layers from scratch"
+msgstr "leere Layer von Grund auf"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:16
+msgid "layers from existing layers"
+msgstr "Layer von vorhandenen Layern"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:17
+msgid "layers from the clipboard"
+msgstr "Layer aus der Zwischenablage"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:18
+msgid ""
+"layers as a result of an SQL-like query based on one or many layers "
+"(:ref:`virtual layers <vector_virtual_layers>`)"
+msgstr ""
+"Layer als Ergebnis einer SQL-ähnlichen Abfrage, die auf einem oder mehreren "
+"Layern basiert: die (:ref:`virtuellen Layer <vector_virtual_layers>`)"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:21
+msgid "QGIS also provides tools to import/export from/to different formats."
+msgstr ""
+"QGIS bietet auch Werkzeuge zum Importieren/Exportieren verschiedener "
+"Formate."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:29
+msgid "Creating new vector layers"
+msgstr "Neue Vektorlayer erstellen"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:31
+msgid ""
+"QGIS allows you to create new layers in different formats. It provides tools"
+" for creating GeoPackage, Shapefile, SpatiaLite, GPX format and Temporary "
+"Scratch layers (aka memory layers). Creation of a :ref:`new GRASS layer "
+"<creating_new_grass_vectors>` is supported within the GRASS plugin."
+msgstr ""
+"QGIS erlaubt es Ihnen, neue Layer in verschiedenen Formaten zu erstellen. Es"
+" bietet Werkzeuge für die Erstellung von GeoPackage-, Shapefile-, "
+"SpatiaLite-, GPX-Format und flüchtige Layer (Temporärlayer). Die Erstellung "
+"eines :ref:`neuen GRASS-Layer <creating_new_grass_vectors>` wird innerhalb "
+"des GRASS-Plugins unterstützt."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:42
+msgid "Creating a new GeoPackage layer"
+msgstr "Einen neuen GeoPackage-Layer erstellen"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:44
+msgid ""
+"To create a new GeoPackage layer, press the |newGeoPackageLayer| "
+":menuselection:`New GeoPackage Layer...` button in the :menuselection:`Layer"
+" --> Create Layer -->` menu or from the :guilabel:`Data Source Manager` "
+"toolbar. The :guilabel:`New GeoPackage Layer` dialog will be displayed as "
+"shown in figure_create_geopackage_."
+msgstr ""
+"Um einen neuen GeoPackage-Layer zu erstellen, drücken Sie die Schaltfläche "
+"|newGeoPackageLayer| :menuselection:`Neuer GeoPackage Layer...` im Menü "
+":menuselection:`Layer --> Layer erstellen -->` oder aus der Symbolleiste "
+":guilabel:`Datenquellen-Verwaltung`. Das Dialogfeld :guilabel:`Neuer "
+"GeoPackage Layer` wird angezeigt, wie in figure_create_geopackage_ gezeigt."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:56
+msgid "Creating a New GeoPackage layer dialog"
+msgstr "Dialogfenster zum Erstellen eines neuen GeoPackage-Layers"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:58
+msgid ""
+"The first step is to indicate the database file location. This can be done "
+"by pressing the :guilabel:`...` button to the right of the "
+":guilabel:`Database` field and select an existing GeoPackage file or create "
+"a new one. QGIS will automatically add the right extension to the name you "
+"provide."
+msgstr ""
+"Der erste Schritt besteht darin, den Speicherort der Datenbankdatei "
+"anzugeben. Dies kann durch Drücken der Schaltfläche :guilabel:`....` rechts "
+"neben dem Feld :guilabel:`Datenbank` erfolgen und eine vorhandene "
+"GeoPackage-Datei auswählen oder eine neue erstellen. QGIS wird automatisch "
+"die richtige Erweiterung zu dem von Ihnen angegebenen Namen hinzufügen."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:63
+msgid "Give the new layer / table a name (:guilabel:`Table name`)"
+msgstr ""
+"Geben Sie dem neuen Layer/Tabelle einen Namen (:guilabel:`Tabellenname`)"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:64
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:168
+msgid ""
+"Define the :guilabel:`Geometry type`. If not a geometryless layer, you can "
+"specify whether it should :guilabel:`Include Z dimension` and/or "
+":guilabel:`Include M values`."
+msgstr ""
+"Definieren Sie den :guilabel:`Geometrietyp`. Wenn es sich nicht um einen "
+"geometrielosen Layer handelt, können Sie angeben, ob er "
+":guilabel:`Z-Dimension einschließen` und/oder :guilabel:`M-Werte "
+"einschließen` soll."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:67
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:117
+msgid ""
+"Specify the coordinate reference system using the |setProjection| button"
+msgstr ""
+"Geben Sie das Koordinatenreferenzsystem mit der Schaltfläche |setProjection|"
+" an"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:69
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:126
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:173
+msgid "To add fields to the layer you are creating:"
+msgstr "Zum Hinzufügen von Feldern zu dem Layer, den Sie erstellen:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:71
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:128
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:175
+msgid "Enter the :guilabel:`Name` of the field"
+msgstr "Geben Sie :guilabel:`Name` des Feldes ein"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:72
+msgid ""
+"Select the data :guilabel:`Type`. Supported types are :guilabel:`Text data`,"
+" :guilabel:`Whole number` (both integer and integer64), :guilabel:`Decimal "
+"number`, :guilabel:`Date` and :guilabel:`Date and time`, :guilabel:`Binary "
+"(BLOB)` and :guilabel:`Boolean`."
+msgstr ""
+"Wählen Sie die Daten :guilabel:`Typ`. Unterstützte Typen sind "
+":guilabel:`Text`, :guilabel:`Ganze Zahl` (sowohl Integer als auch Integer 64"
+" bit), :guilabel:`Dezimalzahl`, :guilabel:`Datum` und :guilabel:`Datum & "
+"Zeit`, :guilabel:`Binärobjekt (BLOB)` und :guilabel:`Boolean`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:76
+msgid ""
+"Depending on the selected data format, enter the :guilabel:`Maximum length` "
+"of values."
+msgstr ""
+"Je nach gewähltem Datenformat geben Sie die :guilabel:`Maximallänge` der "
+"Werte ein."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:78
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:134
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:178
+msgid "Click on the |newAttribute| :guilabel:`Add to Fields List` button"
+msgstr ""
+"Klicken Sie auf die Schaltfläche |newAttribute| :guilabel:`Zur Feldliste "
+"hinzufügen`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:79
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:135
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:179
+msgid "Reproduce the steps above for each field you need to add"
+msgstr ""
+"Wiederholen Sie die obigen Schritte für jedes Feld, das Sie hinzufügen "
+"müssen"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:80
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:136
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:180
+msgid ""
+"Once you are happy with the attributes, click :guilabel:`OK`. QGIS will add "
+"the new layer to the legend, and you can edit it as described in section "
+":ref:`sec_edit_existing_layer`."
+msgstr ""
+"Wenn Sie mit den Attributen zufrieden sind, klicken Sie auf :guilabel:`OK`. "
+"QGIS wird den neuen Layer zur Legende hinzufügen, und Sie können ihn wie in "
+"Abschnitt :ref:`sec_edit_existing_layer` beschrieben bearbeiten."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:84
+msgid ""
+"By default, when creating a GeoPackage layer, QGIS generates a "
+":guilabel:`Feature id column` called ``fid`` which acts as the primary key "
+"of the layer. The name can be changed. The geometry field, if availabe, is "
+"named ``geometry``, and you can choose to :guilabel:`Create a spatial index`"
+" on it. These options can be found under the :guilabel:`Advanced Options` "
+"together with the :guilabel:`Layer identifier` (short human readable name of"
+" the layer) and the :guilabel:`Layer description`."
+msgstr ""
+"Standardmäßig erzeugt QGIS beim Erstellen eines GeoPackage-Layers eine "
+":guilabel:`Objektkennungsspalte` namens ``fid``, die als Primärschlüssel des"
+" Layers fungiert. Der Name kann geändert werden. Das Geometriefeld, falls "
+"verfügbar, heißt ``geometry``, und Sie können wählen, ob Sie darauf einen "
+"räumlichen Index erstellen wollen. Diese Optionen sind unter dem "
+":guilabel:`Erweiterte Optionen` zusammen mit dem :guilabel: `Layerkennung` "
+"(kurzer menschenlesbarer Name des Layers) und der :guilabel: "
+"`Layerbeschreibung` zu finden."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:93
+msgid ""
+"Further management of GeoPackage layers can be done with the :ref:`DB "
+"Manager <dbmanager>`."
+msgstr ""
+"Die weitere Verwaltung von GeoPackage-Layern kann mit dem :ref:`DB-"
+"Verwaltung <dbmanager>` erfolgen. "
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:100
+msgid "Creating a new Shapefile layer"
+msgstr "Einen neuen Shapedatei-Layer erstellen"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:102
+msgid ""
+"To create a new ESRI Shapefile format layer, press the |newVectorLayer| "
+":menuselection:`New Shapefile Layer...` button in the :menuselection:`Layer "
+"--> Create Layer -->` menu or from the :guilabel:`Data Source Manager` "
+"toolbar. The :guilabel:`New Shapefile Layer` dialog will be displayed as "
+"shown in figure_create_shapefile_."
+msgstr ""
+"Um einen neuen Layer im ESRI Shapefile-Format zu erstellen, drücken Sie die "
+"Schaltfläche |newVectorLayer| :menuselection:`Neuer Shapedatei Layer...` im "
+"Menü :menuselection:`Layer --> Layer erstellen -->` oder aus der "
+"Symbolleiste :guilabel:`Datenquellenverwaltung`. Das Dialogfeld "
+":guilabel:`Neuer Shapedatei Layer` wird wie in figure_create_shapefile_ "
+"angezeigt."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:124
+msgid "Creating a new Shapefile layer dialog"
+msgstr "Dialogfenster zum Erstellen eines neuen Shapedatei-Layers"

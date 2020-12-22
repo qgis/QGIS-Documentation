@@ -1,0 +1,175 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-27 06:22+0100\n"
+"PO-Revision-Date: 2020-03-16 19:23+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Russian (https://www.transifex.com/qgis/teams/6144/ru/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:53
+msgid "Using Vector Layers"
+msgstr "Работа с векторными слоями"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:58
+msgid ""
+"This section summarizes various actions that can be done with vector layers."
+msgstr ""
+"Этот раздел описывает различные действия, которые можно выполнять с "
+"векторными слоями."
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:112
+msgid "Iterating over Vector Layer"
+msgstr "Обход объектов векторного слоя"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:349
+msgid "Modifying Vector Layers"
+msgstr "Редактирование векторных слоёв"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:407
+msgid "Add Features"
+msgstr "Добавление объектов"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:432
+msgid "Delete Features"
+msgstr "Удаление объектов"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:442
+msgid "Modify Features"
+msgstr "Изменение объектов"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:470
+msgid "Modifying Vector Layers with an Editing Buffer"
+msgstr "Редактирование векторных слоёв с использованием буфера изменений"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:571
+msgid "Adding and Removing Fields"
+msgstr "Добавление и удаление полей"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:621
+msgid "Using Spatial Index"
+msgstr "Использование пространственного индекса"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:877
+msgid "The provider supports string, int and double fields."
+msgstr ""
+"Провайдер поддерживает строковые и целочисленные поля, а также поля с "
+"плавающей запятой."
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:902
+msgid "Specifies that the provider will use a spatial index"
+msgstr "Определяет будет ли провайдер использовать пространственный индекс"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:905
+msgid ""
+"Specifies an attribute of the layer.  The attribute has a name, and "
+"optionally a type (integer, double, or string), length, and precision. There"
+" may be multiple field definitions."
+msgstr ""
+"Задает атрибуты слоя. Каждый атрибут имеет имя и, опционально, тип (целое "
+"число, вещественное число или строка), длину и точность. Таких описаний "
+"может быть несколько."
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:966
+msgid "Appearance (Symbology) of Vector Layers"
+msgstr "Внешний вид (символика) векторных слоёв"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:968
+msgid ""
+"When a vector layer is being rendered, the appearance of the data is given "
+"by **renderer** and **symbols** associated with the layer.  Symbols are "
+"classes which take care of drawing of visual representation of features, "
+"while renderers determine what symbol will be used for a particular feature."
+msgstr ""
+"При отрисовке векторного слоя, внешний вид данных определяется **рендером** и **символами**, ассоциированными со слоем. Символы это классы, занимающиеся отрисовкой визуального представления объектов, а рендер опеределяет какой\n"
+"символ будет использован для отдельного объекта."
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:992
+msgid "Type"
+msgstr "Тип"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:992
+msgid "Class"
+msgstr "Класс"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:992
+msgid "Description"
+msgstr "Описание"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:994
+msgid "Renders all features with the same symbol"
+msgstr "Отрисовывает все объекты одним и тем же символом"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:995
+msgid "Renders features using a different symbol for each category"
+msgstr "Отрисовывает объекты, используя разные символы для каждой категории"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:996
+msgid "Renders features using a different symbol for each range of values"
+msgstr ""
+"Отрисовывает объекты, используя разные символы для каждого диапазона "
+"значений"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1137
+msgid ""
+"This renderer is very similar to the categorized symbol renderer described "
+"above, but instead of one attribute value per class it works with ranges of "
+"values and thus can be used only with numerical attributes."
+msgstr ""
+"Этот рендер очень похож на рендер уникальными значениями, описанный выше, но"
+" вместо одного значения атрибута для класса он оперирует диапазоном значений"
+" и следовательно, может использоваться только с числовыми атрибутами."
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1252
+msgid "Size and width are in millimeters by default, angles are in degrees."
+msgstr ""
+"Размер и толщина по умолчанию задаются в миллиметрах, а углы --- в градусах."
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1417
+msgid ""
+"Now we are missing only the final glue: to make QGIS aware of these new "
+"classes. This is done by adding the symbol layer to registry. It is possible"
+" to use the symbol layer also without adding it to the registry, but some "
+"functionality will not work: e.g. loading of project files with the custom "
+"symbol layers or inability to edit the layer's attributes in GUI."
+msgstr ""
+"Остался последний штрих: рассказать QGIS о существовании этих новых классов."
+" Для этого достаточно добавить символьный слой в реестр. Конечно, можно "
+"использовать символьный слой и не добавляя его в реестр, но тогда некоторые "
+"возможности будут недоступны: например, загрузка проекта с пользовательскими"
+" символьными слоями или невозможность редактировать свойства слоя."
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1448
+msgid ""
+"The last step is to add this symbol layer to the registry --- and we are "
+"done."
+msgstr ""
+"Последней конструкцией мы добавляем символьный слой в реестр --- на этом "
+"все."
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1456
+msgid ""
+"It might be useful to create a new renderer implementation if you would like"
+" to customize the rules how to select symbols for rendering of features. "
+"Some use cases where you would want to do it: symbol is determined from a "
+"combination of fields, size of symbols changes depending on current scale "
+"etc."
+msgstr ""
+"Возможность создать свой рендер может быть полезной, если требуется изменить"
+" правила выбора символов для отрисовки объектов. Примерами таких ситуаций "
+"могут быть: символ должен определяться на основании значений нескольких "
+"полей, размер символа должен зависеть от текущего масштаба и т.д."

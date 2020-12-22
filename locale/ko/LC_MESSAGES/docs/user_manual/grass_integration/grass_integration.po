@@ -1,0 +1,1877 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:28+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2020\n"
+"Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:6
+msgid "GRASS GIS Integration"
+msgstr "GRASS GIS 통합"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:13
+msgid ""
+"GRASS integration provides access to GRASS GIS databases and functionalities"
+" (see GRASS-PROJECT in :ref:`literature_and_web`). The integration consists "
+"of two parts: provider and plugin. The provider allows to browse, manage and"
+" visualize GRASS raster and vector layers. The plugin can be used to create "
+"new GRASS locations and mapsets, change GRASS region, create and edit vector"
+" layers and analyze GRASS 2-D and 3-D data with more than 400 GRASS modules."
+" In this section, we'll introduce the provider and plugin functionalities "
+"and give some examples of managing and working with GRASS data."
+msgstr ""
+"GRASS를 통합하면 GRASS GIS 데이터베이스 및 기능에 접근할 수 있습니다. (:ref:`literature_and_web` 에서"
+" GRASS-PROJECT를 참조하세요.) 통합은 제공자와 플러그인 두 부분으로 이루어집니다. 제공자는 GRASS 래스터 및 벡터 "
+"레이어를 탐색하고 관리하고 가시화할 수 있게 해줍니다. 플러그인을 사용하면 새 GRASS 로케이션 및 맵셋을 생성하고, GRASS 영역을"
+" 변경하며, 벡터 레이어를 생성 및 편집하고, 400개가 넘는 GRASS 모듈을 통해 GRASS 2D 및 3D 데이터를 분석할 수 "
+"있습니다. 이 장에서 제공자와 플러그인의 기능을 소개하고 GRASS 데이터를 관리하고 작업하는 몇몇 예시를 제공할 것입니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:21
+msgid ""
+"The provider supports GRASS version 6 and 7, the plugin supports GRASS 6 and"
+" 7 (starting from QGIS 2.12). QGIS distribution may contain provider/plugin "
+"for either GRASS 6 or GRASS 7 or for both versions at the same time "
+"(binaries have different file names). Only one version of the "
+"provider/plugin may be loaded on runtime however."
+msgstr ""
+"제공자는 GRASS 6 및 7 버전을 지원하며, 플러그인도 (QGIS 2.12 버전부터) GRASS 6 및 7 버전을 지원합니다. "
+"QGIS 배포판이 GRASS 6, GRASS 7 가운데 하나를 지원하는 제공자/플러그인을 담고 있을 수도 있고, 또는 6 및 7 버전을 "
+"지원하는 제공자/플러그인을 함께 담고 있을 수도 있습니다. (바이너리 파일들이 서로 다른 파일명입니다.) 하지만 실행 시간에는 둘 중 한"
+" 버전을 지원하는 제공자/플러그인만 불러올 수 있습니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:28
+msgid "Demo dataset"
+msgstr "예제 데이터셋"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:30
+msgid ""
+"As an example, we will use the QGIS Alaska dataset (see section "
+":ref:`label_sampledata`). It includes a small sample GRASS :file:`LOCATION` "
+"with three vector layers and one raster elevation map. Create a new folder "
+"called :file:`grassdata`, download the QGIS 'Alaska' dataset "
+":file:`qgis\\_sample\\_data.zip` from https://qgis.org/downloads/data/ and "
+"unzip the file into :file:`grassdata`."
+msgstr ""
+"예제를 위해 QGIS 알래스카 데이터셋(:ref:`label_sampledata` 참조)을 사용할 것입니다. 알래스카 데이터셋은 벡터 "
+"레이어 3 개와 래스터 표고 맵 1 개를 보유한 소용량 GRASS :file:`LOCATION` 예시 데이터를 포함하고 있습니다. "
+":file:`grassdata` 라는 새 폴더를 생성한 다음, https://qgis.org/downloads/data/ 에서 QGIS "
+"알래스카 데이터셋 :file:`qgis\\_sample\\_data.zip` 파일을 다운로드해서 :file:`grassdata` 폴더에 "
+"압축 해제하십시오. "
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:36
+msgid ""
+"More sample GRASS :file:`LOCATIONs` are available at the GRASS website at "
+"https://grass.osgeo.org/download/sample-data/."
+msgstr ""
+"GRASS 웹사이트 https://grass.osgeo.org/download/sample-data/ 에서 더 많은 GRASS "
+":file:`LOCATION` 데이터를 다운로드할 수 있습니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:42
+msgid "Loading GRASS raster and vector layers"
+msgstr "GRASS 래스터 및 벡터 레이어 불러오기"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:44
+msgid ""
+"If the provider is loaded in QGIS, the location item with GRASS |grass| icon"
+" is added in the browser tree under each folder item which contains GRASS "
+"location. Go to the folder :file:`grassdata` and expand location "
+":file:`alaska` and mapset :file:`demo`."
+msgstr ""
+"QGIS에 제공자를 불러오면, 그 아래에 GRASS 로케이션을 담고 있는 각 폴더 항목을 가지고 있는 탐색기 트리에 로케이션 항목을 "
+"GRASS |grass| 아이콘과 함께 추가합니다. :file:`grassdata` 폴더를 찾아 :file:`alaska` 로케이션 및 "
+":file:`demo` 맵셋을 펼치십시오."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:49
+msgid ""
+"You can load GRASS raster and vector layers like any other layer from the "
+"browser either by double click on layer item or by dragging and dropping to "
+"map canvas or legend."
+msgstr ""
+"다른 모든 레이어와 마찬가지로, GRASS 레이어 항목을 더블클릭하거나 맵 캔버스 또는 범례로 드래그&드롭하면 GRASS 래스터 및 벡터"
+" 레이어를 불러올 수 있습니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:52
+msgid "**GRASS Data Loading**"
+msgstr "**GRASS 데이터 불러오기**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:54
+msgid ""
+"If you don't see GRASS location item, verify in :menuselection:`Help --> "
+"About --> Providers` if GRASS vector provider is loaded."
+msgstr ""
+"GRASS 로케이션 항목을 찾을 수 없는 경우 :menuselection:`Help --> About --> Providers` 메뉴 "
+"옵션에서 GRASS 벡터 제공자를 불러온 상태인지 확인하십시오."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:61
+msgid "Importing data into a GRASS LOCATION via drag and drop"
+msgstr "드래그&드롭으로 GRASS 로케이션에 데이터 가져오기"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:63
+msgid ""
+"This section gives an example of how to import raster and vector data into a"
+" GRASS mapset."
+msgstr "이 절에서는 GRASS 맵셋으로 래스터 및 벡터 데이터를 가져오는 방법을 예제를 통해 설명하겠습니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:65
+msgid "In QGIS browser navigate to the mapset you want to import data into."
+msgstr "QGIS 탐색기에서 사용자가 데이터를 가져오고 싶은 맵셋을 찾으십시오."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:66
+msgid ""
+"In QGIS browser find a layer you want to import to GRASS, note that you can "
+"open another instance of the browser (:guilabel:`Browser Panel (2)`) if "
+"source data are too far from the mapset in the tree."
+msgstr ""
+"QGIS 탐색기에서 GRASS로 가져오고 싶은 레이어를 찾으십시오. 소스 데이터가 트리의 맵셋 위치에서 너무 멀리 떨어져 있는 경우 새 "
+"탐색기 인스턴스(:guilabel:`Browser Panel (2)`)를 열 수 있다는 사실을 기억하세요."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:69
+msgid ""
+"Drag a layer and drop it on the target mapset. The import may take some time"
+" for larger layers, you will see animated icon |import| in front of new "
+"layer item until the import finishes."
+msgstr ""
+"대상 맵셋에 레이어를 드래그&드롭하십시오. 대용량 레이어인 경우 가져오기에 시간이 좀 걸릴 수도 있습니다. 가져오기를 완료할 때까지 새 "
+"레이어 항목 앞에 움직이는 |import| 아이콘이 나타날 겁니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:73
+msgid ""
+"When raster data are in different CRS, they can be reprojected using an "
+":guilabel:`Approximate` (fast) or :guilabel:`Exact` (precise) "
+"transformation. If a link to the source raster is created (using "
+"``r.external``), the source data are in the same CRS and the format is known"
+" to GDAL, the source data CRS will be used. You can set these options in the"
+" :guilabel:`Browser` tab in :ref:`grass_options`."
+msgstr ""
+"래스터 데이터가 서로 다른 좌표계를 사용하는 경우, (빠른) :guilabel:`Approximate` 변형 또는 (정확한) "
+":guilabel:`Exact` 변형을 사용해서 재투영할 수 있습니다. 소스 래스터를 가리키는 링크를 (``r.external`` 을 "
+"이용해서) 생성한 상태이며, 소스 데이터가 동일한 좌표계를 사용하고 있고 GDAL이 지원하는 포맷인 경우, 소스 데이터의 좌표계를 사용할"
+" 것입니다. :ref:`grass_options` 대화창에 있는 :guilabel:`Browser` 탭에서 이 옵션들을 설정할 수 "
+"있습니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:79
+msgid ""
+"If a source raster has more bands, a new GRASS map is created for each layer"
+" with **.<band number>** suffix and group of all maps with |rasterGroup| "
+"icon is created. External rasters have a different icon |rasterLink|."
+msgstr ""
+"소스 래스터가 더 많은 밴드를 가지고 있는 경우, 각 밴드 레이어 별로 **.<밴드 번호>** 접미어를 붙인 새 GRASS 맵을 생성한 "
+"다음 모든 맵들의 그룹을 래스터 그룹 |rasterGroup| 아이콘과 함께 생성합니다. 외부 래스터인 경우 래스터 링크 "
+"|rasterLink| 아이콘을 사용합니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:86
+msgid "Managing GRASS data in QGIS Browser"
+msgstr "QGIS 탐색기에서 GRASS 데이터 관리하기"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:88
+msgid ""
+"Copying maps: GRASS maps may be copied between mapsets within the same "
+"location using drag and drop."
+msgstr "맵 복사하기: 동일한 로케이션 내에 있는 맵셋들 간에 GRASS 맵을 드래그&드롭해서 복사할 수도 있습니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:89
+msgid ""
+"Deleting maps: Right click on a GRASS map and select :guilabel:`Delete` from"
+" context menu."
+msgstr "맵 삭제하기: GRASS 맵을 오른쪽 클릭한 다음 컨텍스트 메뉴에서 :guilabel:`Delete` 액션을 선택하십시오."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:90
+msgid ""
+"Renaming maps: Right click on a GRASS map and select :guilabel:`Rename` from"
+" context menu."
+msgstr "맵 재명명하기: GRASS 맵을 오른쪽 클릭한 다음 컨텍스트 메뉴에서 :guilabel:`Rename` 액션을 선택하십시오."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:95
+msgid "GRASS Options"
+msgstr "GRASS 옵션"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:97
+msgid ""
+"GRASS options may be set in :guilabel:`GRASS Options` dialog, which can be "
+"opened by right clicking on the location or mapset item in the browser and "
+"then choosing :guilabel:`GRASS Options`."
+msgstr ""
+":guilabel:`GRASS Options` 대화창에서 GRASS 옵션을 설정할 수도 있습니다. 해당 대화창은 탐색기에서 로케이션 또는"
+" 맵셋을 오른쪽 클릭한 다음 컨텍스트 메뉴에서 :guilabel:`GRASS Options` 를 선택하면 열 수 있습니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:103
+msgid "Starting the GRASS plugin"
+msgstr "GRASS 플러그인 시작하기"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:105
+msgid ""
+"To use GRASS functionalities in QGIS, you must select and load the GRASS "
+"plugin using the Plugin Manager. To do this, go to the menu "
+":menuselection:`Plugins -->` |showPluginManager| :menuselection:`Manage and "
+"Install Plugins...`, select |checkbox| :guilabel:`GRASS` and click "
+":guilabel:`OK`."
+msgstr ""
+"QGIS에서 GRASS 기능을 사용하려면, 플러그인 관리자를 통해 GRASS 플러그인을 선택하고 불러와야만 합니다. "
+":menuselection:`Plugins -->` |showPluginManager| :menuselection:`Manage and "
+"Install Plugins...` 메뉴를 선택하고 플러그인 관리자 대화창에서 |checkbox| :guilabel:`GRASS` 를 "
+"체크한 다음 :guilabel:`OK` 버튼을 클릭하십시오."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:110
+msgid ""
+"The following main features are provided with the GRASS menu "
+"(:menuselection:`Plugins --> GRASS`) when you start the GRASS plugin:"
+msgstr ""
+"GRASS 플러그인을 시작하면 GRASS 메뉴(:menuselection:`Plugins --> GRASS`)를 통해 다음 주 기능들을 "
+"제공합니다:"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:113
+msgid "|grassOpenMapset| :sup:`Open Mapset`"
+msgstr "|grassOpenMapset| :sup:`Open Mapset`"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:114
+msgid "|grassNewMapset| :sup:`New Mapset`"
+msgstr "|grassNewMapset| :sup:`New Mapset`"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:115
+msgid "|grassCloseMapset| :sup:`Close Mapset`"
+msgstr "|grassCloseMapset| :sup:`Close Mapset`"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:116
+msgid "|grassTools| :sup:`Open GRASS Tools`"
+msgstr "|grassTools| :sup:`Open GRASS Tools`"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:117
+msgid "|grassRegion| :sup:`Display Current GRASS Region`"
+msgstr "|grassRegion| :sup:`Display Current GRASS Region`"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:118
+msgid "|general| :sup:`GRASS Options`"
+msgstr "|general| :sup:`GRASS Options`"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:121
+msgid "Opening GRASS mapset"
+msgstr "GRASS 맵셋 열기"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:123
+msgid ""
+"A GRASS mapset must be opened to get access to GRASS Tools in the plugin "
+"(the tools are disabled if no mapset is open). You can open a mapset from "
+"the browser: right click on mapset item and then choose :guilabel:`Open "
+"mapset` from context menu."
+msgstr ""
+"플러그인의 GRASS 도구를 사용하려면 먼저 GRASS 맵셋을 열어야만 합니다. (열려 있는 맵셋이 없는 경우 도구는 비활성화 "
+"상태입니다.) 탐색기에서 맵셋 항목을 오른쪽 클릭한 다음 컨텍스트 메뉴에서 :guilabel:`Open mapset` 을 선택하면 맵셋을"
+" 열 수 있습니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:130
+msgid "GRASS LOCATION and MAPSET"
+msgstr "GRASS 로케이션 및 맵셋"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:132
+msgid ""
+"GRASS data are stored in a directory referred to as GISDBASE. This "
+"directory, often called :file:`grassdata`, must be created before you start "
+"working with the GRASS plugin in QGIS. Within this directory, the GRASS GIS "
+"data are organized by projects stored in subdirectories called "
+":file:`LOCATIONs`. Each :file:`LOCATION` is defined by its coordinate "
+"system, map projection and geographical boundaries. Each :file:`LOCATION` "
+"can have several :file:`MAPSETs` (subdirectories of the :file:`LOCATION`) "
+"that are used to subdivide the project into different topics or subregions, "
+"or as workspaces for individual team members (see Neteler & Mitasova 2008 in"
+" :ref:`literature_and_web`). In order to analyse vector and raster layers "
+"with GRASS modules, you generally have to import them into a GRASS "
+":file:`LOCATION`. (This is not strictly true -- with the GRASS modules "
+":file:`r.external` and :file:`v.external` you can create read-only links to "
+"external GDAL/OGR-supported datasets without importing them. This is not the"
+" usual way for beginners to work with GRASS, therefore this functionality "
+"will not be described here.)"
+msgstr ""
+"GRASS 데이터는 ``GISDBASE`` 라고 참조되는 디렉터리에 저장됩니다. :file:`grassdata` 로 불리는 경우가 많은 "
+"이 디렉터리는 QGIS에서 GRASS 플러그인 작업을 시작하기 전에 생성해야만 합니다. 이 디렉터리 안에서, GRASS GIS 데이터는 "
+"프로젝트 별로 정리되어 :file:`LOCATION` 이라고 불리는 하위 디렉터리에 저장됩니다. 각 :file:`LOCATION` 은 그"
+" 좌표계, 맵 투영체 그리고 지리적 경계로 정의됩니다. 각 :file:`LOCATION` 은 (:file:`LOCATION` 의 하위 "
+"디렉터리인) :file:`MAPSET` 을 여러 개 보유할 수 있습니다. :file:`MAPSET` 은 프로젝트를 서로 다른 주제 또는 "
+"하위 영역으로 세분하는 데, 또는 팀 멤버 개인 별 작업 공간(workspace)을 제공하는 데 사용됩니다. "
+"(:ref:`literature_and_web` 에서 소개하고 있는 마커스 네틀러와 헬레나 미타소바가 2008년 출판한 『Open "
+"Source GIS: A GRASS GIS Approach』를 참조하세요.) GRASS 모듈로 벡터 및 래스터 레이어를 분석하려면, "
+"일반적으로 GRASS :file:`LOCATION` 으로 레이어를 가져와야 합니다. (정확한 사실은 아닙니다 ─ GRASS 모듈 "
+":file:`r.external` 및 :file:`v.external` 을 사용하면 레이어를 가져오지 않고도 외부 GDAL/OGR 지원 "
+"데이터셋을 가리키는 읽기 전용 링크를 생성할 수 있습니다. 아직 GRASS 작업에 익숙하지 않은 사용자가 쓰기에는 일반적이지 않은 "
+"방법이기 때문에, 이 문서에서는 이 기능을 설명하지 않을 것입니다.)"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:152
+msgid "GRASS data in the alaska LOCATION"
+msgstr "알래스카 로케이션에 있는 GRASS 데이터"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:157
+msgid "Importing data into a GRASS LOCATION"
+msgstr "GRASS 로케이션에 데이터 가져오기"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:159
+msgid ""
+"See section :ref:`import_data_dnd` to find how data can be easily imported "
+"by dragging and dropping in the browser."
+msgstr "탐색기에서 드래그&드롭으로 데이터를 쉽게 가져올 수 있는 방법은 :ref:`import_data_dnd` 를 참조하세요."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:162
+msgid ""
+"This section gives an example of how to import raster and vector data into "
+"the 'alaska' GRASS :file:`LOCATION` provided by the QGIS 'Alaska' dataset in"
+" traditional way, using standard GRASS modules. Therefore, we use the "
+"landcover raster map :file:`landcover.img` and the vector GML file "
+":file:`lakes.gml` from the QGIS 'Alaska' dataset (see "
+":ref:`label_sampledata`)."
+msgstr ""
+"이 절에서는 QGIS 알래스카 데이터셋이 제공한 GRASS :file:`LOCATION` 'alaska' 로 래스터 및 벡터 데이터를 "
+"전통적인 방식으로 가져오는 방법을 예제를 통해 설명하겠습니다. 따라서 QGIS 알래스카 데이터셋으로부터 "
+"(:ref:`label_sampledata` 참조) 랜드커버 래스터 맵 :file:`landcover.img` 와 벡터 GML 파일 "
+":file:`lakes.gml` 을 사용합니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:168
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:214
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:283
+msgid "Start QGIS and make sure the GRASS plugin is loaded."
+msgstr "QGIS를 구동하고 GRASS 플러그인을 불러온 상태인지 확인하십시오."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:169
+msgid ""
+"In the GRASS toolbar, click the |grassOpenMapset| :sup:`Open MAPSET` icon to"
+" bring up the :guilabel:`MAPSET` wizard."
+msgstr ""
+"GRASS 툴바에서, |grassOpenMapset| :sup:`Open MAPSET` 아이콘을 클릭해서 "
+":guilabel:`MAPSET` 마법사를 여십시오."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:171
+msgid ""
+"Select as GRASS database the folder :file:`grassdata` in the QGIS Alaska "
+"dataset, as :file:`LOCATION` 'alaska', as :file:`MAPSET` 'demo' and click "
+":guilabel:`OK`."
+msgstr ""
+"QGIS 알래스카 데이터셋에서 :file:`grassdata` 폴더를 ─ :file:`LOCATION` 'alaska', "
+":file:`MAPSET` 'demo' 를 ─ GRASS 데이터베이스로 선택한 다음 :guilabel:`OK` 버튼을 누르십시오."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:174
+msgid ""
+"Now click the |grassTools| :sup:`Open GRASS tools` icon. The GRASS Toolbox "
+"(see section :ref:`subsec_grass_toolbox`) dialog appears."
+msgstr ""
+"그리고 |grassTools| :sup:`Open GRASS tools` 아이콘을 클릭하십시오. "
+":ref:`subsec_grass_toolbox` 대화창이 열립니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:176
+msgid ""
+"To import the raster map :file:`landcover.img`, click the module "
+":file:`r.in.gdal` in the :guilabel:`Modules Tree` tab. This GRASS module "
+"allows you to import GDAL-supported raster files into a GRASS "
+":file:`LOCATION`. The module dialog for :file:`r.in.gdal` appears."
+msgstr ""
+":file:`landcover.img` 래스터 맵을 가져오려면, :guilabel:`Modules Tree` 탭에서 "
+":file:`r.in.gdal` 모듈을 클릭하십시오. 이 GRASS 모듈을 통해 GRASS :file:`LOCATION` 으로 GDAL "
+"지원 래스터 파일을 가져올 수 있습니다. :file:`r.in.gdal` 모듈 대화창이 열릴 것입니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:180
+msgid ""
+"Browse to the folder :file:`raster` in the QGIS 'Alaska' dataset and select "
+"the file :file:`landcover.img`."
+msgstr ""
+"QGIS 알래스카 데이터셋에서 :file:`raster` 폴더를 찾아 :file:`landcover.img` 파일을 선택하십시오."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:182
+msgid ""
+"As raster output name, define :file:`landcover_grass` and click "
+":guilabel:`Run`. In the :guilabel:`Output` tab, you see the currently "
+"running GRASS command ``r.in.gdal -o input=/path/to/landcover.img "
+"output=landcover_grass``."
+msgstr ""
+"래스터 산출물 명칭을 :file:`landcover_grass` 라고 지정한 다음 :guilabel:`Run` 버튼을 클릭하십시오. "
+":guilabel:`Output` 탭에 현재 실행중인 GRASS 명령어 ``r.in.gdal -o "
+"input=/path/to/landcover.img output=landcover_grass`` 가 표시됩니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:186
+msgid ""
+"When it says **Successfully finished**, click :guilabel:`View Output`. The "
+":file:`landcover_grass` raster layer is now imported into GRASS and will be "
+"visualized in the QGIS canvas."
+msgstr ""
+"**Successfully finished** 메시지가 표시되면, :guilabel:`View Output` 버튼을 클릭하십시오. 이제 "
+"GRASS로 :file:`landcover_grass` 래스터 레이어를 가져와서 QGIS 캔버스에 가시화할 것입니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:189
+msgid ""
+"To import the vector GML file :file:`lakes.gml`, click the module "
+":file:`v.in.ogr` in the :guilabel:`Modules Tree` tab. This GRASS module "
+"allows you to import OGR-supported vector files into a GRASS "
+":file:`LOCATION`. The module dialog for :file:`v.in.ogr` appears."
+msgstr ""
+":file:`lakes.gml` GML 파일을 가져오려면, :guilabel:`Modules Tree` 탭에서 "
+":file:`v.in.ogr` 모듈을 클릭하십시오. 이 GRASS 모듈을 통해 GRASS :file:`LOCATION` 으로 OGR 지원"
+" 벡터 파일을 가져올 수 있습니다. :file:`v.in.ogr` 모듈 대화창이 열릴 것입니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:193
+msgid ""
+"Browse to the folder :file:`gml` in the QGIS 'Alaska' dataset and select the"
+" file :file:`lakes.gml` as OGR file."
+msgstr "QGIS 알래스카 데이터셋에서 :file:`gml` 폴더를 찾아 :file:`lakes.gml` 파일을 선택하십시오."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:195
+msgid ""
+"As vector output name, define :file:`lakes_grass` and click :guilabel:`Run`."
+" You don't have to care about the other options in this example. In the "
+":guilabel:`Output` tab you see the currently running GRASS command "
+"``v.in.ogr -o dsn=/path/to/lakes.gml output=lakes\\_grass``."
+msgstr ""
+"벡터 산출물 명칭을 :file:`lakes_grass` 라고 지정한 다음 :guilabel:`Run` 버튼을 클릭하십시오. 이 예제에서는"
+" 다른 옵션을 신경쓰지 않아도 됩니다. :guilabel:`Output` 탭에 현재 실행중인 GRASS 명령어 ``v.in.ogr -o "
+"dsn=/path/to/lakes.gml output=lakes_grass`` 가 표시됩니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:199
+msgid ""
+"When it says **Succesfully finished**, click :guilabel:`View Output`. The "
+":file:`lakes_grass` vector layer is now imported into GRASS and will be "
+"visualized in the QGIS canvas."
+msgstr ""
+"**Successfully finished** 메시지가 표시되면, :guilabel:`View Output` 버튼을 클릭하십시오. 이제 "
+"GRASS로 :file:`lakes_grass` 벡터 레이어를 가져와서 QGIS 캔버스에 가시화할 것입니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:206
+msgid "Creating a new GRASS LOCATION"
+msgstr "새 GRASS 로케이션 생성하기"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:208
+msgid ""
+"As an example, here is the sample GRASS :file:`LOCATION alaska`, which is "
+"projected in the Albers Equal Area projection using feet as units. This "
+"sample GRASS :file:`LOCATION alaska` will be used for all examples and "
+"exercises in the following GRASS-related sections. It is useful to download "
+"and install the dataset on your computer (see :ref:`label_sampledata`)."
+msgstr ""
+"이 예제에서, 피트 단위를 사용하는 알버 정적도법(Alber's Equal Area projection)으로 투영된 예시 GRASS "
+":file:`LOCATION` 'alaska' 를 예시 데이터로 사용합니다. 이 다음에 나오는 GRASS 관련 절, 항에서 설명하는 모든"
+" 예시 및 예제에서 이 예시 GRASS :file:`LOCATION` 'alaska' 를 사용할 것입니다. 사용자 컴퓨터에 QGIS 예시"
+" 데이터셋을 다운로드하고 설치하는 편이 좋습니다. (:ref:`label_sampledata` 를 참조하세요.)"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:215
+msgid ""
+"Visualize the :file:`alaska.shp` shapefile (see section :ref:`loading_file`)"
+" from the QGIS Alaska dataset (see :ref:`label_sampledata`)."
+msgstr ""
+"QGIS 알래스카 데이터셋에서 (:ref:`label_sampledata` 참조) :file:`alaska.shp` shapefile을 "
+"가시화하십시오. (:ref:`loading_file` 를 참조하세요.)"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:217
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:284
+msgid ""
+"In the GRASS toolbar, click on the |grassNewMapset| :sup:`New mapset` icon "
+"to bring up the :guilabel:`MAPSET` wizard."
+msgstr ""
+"GRASS 툴바에서, |grassNewMapset| :sup:`New mapset` 아이콘을 클릭해서 :guilabel:`MAPSET` "
+"마법사를 여십시오."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:219
+msgid ""
+"Select an existing GRASS database (GISDBASE) folder :file:`grassdata`, or "
+"create one for the new :file:`LOCATION` using a file manager on your "
+"computer. Then click :guilabel:`Next`."
+msgstr ""
+"기존 GRASS 데이터베이스(GISDBASE) 폴더 :file:`grassdata` 를 선택하거나, 또는 사용자 컴퓨터에서 파일 탐색기를"
+" 사용해서 새 :file:`LOCATION` 용 폴더를 생성한 다음 :guilabel:`Next` 버튼을 클릭하십시오."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:222
+msgid ""
+"We can use this wizard to create a new :file:`MAPSET` within an existing "
+":file:`LOCATION` (see section :ref:`sec_add_mapset`) or to create a new "
+":file:`LOCATION` altogether. Select |radioButtonOn| :guilabel:`Create new "
+"location` (see figure_grass_new_location_)."
+msgstr ""
+"이 마법사를 통해 기존 :file:`LOCATION` 안에 새 :file:`MAPSET` 을 생성하거나 "
+"(:ref:`sec_add_mapset` 참조) 또는 새 :file:`LOCATION` 을 처음부터 생성할 수 있습니다. "
+"|radioButtonOn| :guilabel:`Create new location` 옵션을 체크하십시오. "
+"(:ref:`figure_grass_new_location` 그림을 참조하세요.)"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:226
+msgid ""
+"Enter a name for the :file:`LOCATION` -- we used 'alaska' -- and click "
+":guilabel:`Next`."
+msgstr ""
+":file:`LOCATION` 을 위한 명칭을 ─ 이 예제에서는 'alaska' 를 ─ 입력한 다음 :guilabel:`Next` 버튼을"
+" 클릭하십시오."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:227
+msgid ""
+"Define the projection by clicking on the radio button |radioButtonOn| "
+":guilabel:`Projection` to enable the projection list."
+msgstr ""
+"|radioButtonOn| :guilabel:`Projection` 라디오 버튼을 체크해서 투영체 목록을 활성화한 다음 투영체를 "
+"선택하십시오."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:229
+msgid ""
+"We are using Albers Equal Area Alaska (feet) projection. Since we happen to "
+"know that it is represented by the EPSG ID 2964, we enter it in the search "
+"box. (Note: If you want to repeat this process for another :file:`LOCATION` "
+"and projection and haven't memorized the EPSG ID, click on the "
+"|projectionEnabled| :sup:`CRS Status` icon in the lower right-hand corner of"
+" the status bar (see section :ref:`label_projections`))."
+msgstr ""
+"알버 정적도법 알래스카 (피트 단위) 투영체를 사용할 것입니다. 이 투영체가 ``EPSG ID 2964`` 라는 사실을 이미 알고 "
+"있으므로, 검색 란에 해당 문자열을 입력할 수 있습니다. (주의 사항: 또다른 :file:`LOCATION` 과 그 투영체에 대해 이 "
+"과정을 반복하려 하는데 ESPG ID를 기억하지 못 하는 경우, 상태 바의 우하단에 있는 |projectionEnabled| "
+":sup:`CRS Status` 아이콘을 클릭하십시오. (:ref:`label_projections` 참조))"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:235
+msgid "In :guilabel:`Filter`, insert 2964 to select the projection."
+msgstr ":guilabel:`Filter` 란에 ``2964`` 를 입력해서 투영체를 선택하십시오."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:236
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:241
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:289
+msgid "Click :guilabel:`Next`."
+msgstr ":guilabel:`Next` 를 클릭합니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:237
+msgid ""
+"To define the default region, we have to enter the :file:`LOCATION` bounds "
+"in the north, south, east, and west directions. Here, we simply click on the"
+" button :guilabel:`Set Current QGIS Extent`, to apply the extent of the "
+"loaded layer :file:`alaska.shp` as the GRASS default region extent."
+msgstr ""
+"기본 영역(region)을 정의하려면, 동서남북 방향으로 :file:`LOCATION` 의 경계를 입력해야 합니다. 이 예제에서는 그냥 "
+":guilabel:`Set Current QGIS Extent` 버튼을 클릭해서, 불러온 :file:`alaska.shp` 레이어의 "
+"범위를 GRASS 기본 영역 범위로 적용하겠습니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:242
+msgid ""
+"We also need to define a :file:`MAPSET` within our new :file:`LOCATION` "
+"(this is necessary when creating a new :file:`LOCATION`). You can name it "
+"whatever you like - we used 'demo'. GRASS automatically creates a special "
+":file:`MAPSET` called :file:`PERMANENT`, designed to store the core data for"
+" the project, its default spatial extent and coordinate system definitions "
+"(see Neteler & Mitasova 2008 in :ref:`literature_and_web`)."
+msgstr ""
+"새 :file:`LOCATION` 안에 :file:`MAPSET` 도 정의해야 합니다. (새 :file:`LOCATION` 을 생성하는 "
+"경우 꼭 필요한 단계입니다.) 사용자가 원하는 대로 명명할 수 있지만, 이 예제에서는 'demo' 라고 하겠습니다. GRASS가 "
+":file:`PERMANENT` 라고 불리는 :file:`MAPSET` 을 자동적으로 생성할 것입니다. :file:`PERMANENT` "
+"는 프로젝트 용 핵심 데이터, 데이터의 공간 범위 및 좌표계 정의를 저장하기 위해 고안됐습니다. "
+"(:ref:`literature_and_web` 에서 소개하는 Neteler, M., and Mitasova, H. (2008)을 "
+"참조하세요.)"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:248
+msgid ""
+"Check out the summary to make sure it's correct and click "
+":guilabel:`Finish`."
+msgstr "작업 내용이 정확한지 작업 요약을 확인한 다음 :guilabel:`Finish` 버튼을 클릭하십시오. "
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:249
+msgid ""
+"The new :file:`LOCATION`, 'alaska', and two :file:`MAPSETs`, 'demo' and "
+"'PERMANENT', are created. The currently opened working set is 'demo', as you"
+" defined."
+msgstr ""
+"새 :file:`LOCATION` 인 'alaska' 와 2개의 :file:`MAPSET` 'demo' 및 'PERMANENT' 가 "
+"생성됐습니다. 현재 열려 있는 작업 맵셋은 사용자가 정의한 대로 'demo' 입니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:251
+msgid ""
+"Notice that some of the tools in the GRASS toolbar that were disabled are "
+"now enabled."
+msgstr "GRASS 툴바에서 비활성 상태였던 일부 도구들이 이제 활성화됐다는 사실을 주목하십시오."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:260
+msgid "Creating a new GRASS LOCATION or a new MAPSET in QGIS"
+msgstr "QGIS에서 새 GRASS 로케이션 또는 새 맵셋 생성하기"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:262
+msgid ""
+"If that seemed like a lot of steps, it's really not all that bad and a very "
+"quick way to create a :file:`LOCATION`. The :file:`LOCATION` 'alaska' is now"
+" ready for data import (see section :ref:`sec_import_loc_data`). You can "
+"also use the already-existing vector and raster data in the sample GRASS "
+":file:`LOCATION` 'alaska', included in the QGIS 'Alaska' dataset "
+":ref:`label_sampledata`, and move on to section :ref:`label_vectmodel`."
+msgstr ""
+"작업 단계가 너무 많다고 생각할 수도 있겠지만, 사실 :file:`LOCATION` 을 생성할 수 있는 매우 빠른 방법으로 그렇게 "
+"나쁘지는 않습니다. 이제 :file:`LOCATION` 'alaska' 에 데이터를 가져올 준비가 끝났습니다. "
+"(:ref:`sec_import_loc_data` 를 참조하세요.) 아니면 QGIS 알래스카 데이터셋 "
+":ref:`label_sampledata` 에 포함된 예시 GRASS :file:`LOCATION` 'alaska' 에 있는 기존 벡터 "
+"및 래스터 데이터를 사용해서 바로 :ref:`label_vectmodel` 절로 넘어갈 수도 있습니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:272
+msgid "Adding a new MAPSET"
+msgstr "새 맵셋 추가하기"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:274
+msgid ""
+"A user has write access only to a GRASS :file:`MAPSET` which he or she "
+"created. This means that besides access to your own :file:`MAPSET`, you can "
+"read maps in other users' :file:`MAPSETs` (and they can read yours), but you"
+" can modify or remove only the maps in your own :file:`MAPSET`."
+msgstr ""
+"사용자는 본인이 생성한 GRASS :file:`MAPSET` 에 대해서만 쓰기 권한을 가집니다. 즉 사용자 본인의 "
+":file:`MAPSET` 을 읽고 쓰는 것 이외에도 다른 사용자의 :file:`MAPSET` 에 있는 맵을 읽을 수 있다는 뜻입니다. "
+"(다른 사용자도 사용자의 맵을 읽을 수 있습니다.) 그러나 사용자는 오직 본인이 생성한 :file:`MAPSET` 에 있는 맵만을 "
+"수정하거나 제거할 수 있습니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:279
+msgid ""
+"All :file:`MAPSETs` include a :file:`WIND` file that stores the current "
+"boundary coordinate values and the currently selected raster resolution (see"
+" Neteler & Mitasova 2008 in :ref:`literature_and_web`, and section "
+":ref:`sec_grass_region`)."
+msgstr ""
+"모든 :file:`MAPSET` 은 현재 경계 좌표값과 현재 선택한 래스터 해상도를 저장하는 :file:`WIND` 파일을 포함하고 "
+"있습니다. (:ref:`literature_and_web` 에서 소개하는 Neteler, M., and Mitasova, H. "
+"(2008) 및 :ref:`sec_grass_region` 를 참조하세요.)"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:286
+msgid ""
+"Select the GRASS database (GISDBASE) folder :file:`grassdata` with the "
+":file:`LOCATION` 'alaska', where we want to add a further :file:`MAPSET` "
+"called 'test'."
+msgstr ""
+":file:`LOCATION` 'alaska' 가 있는 GRASS 데이터베이스(``GISDBASE``) 폴더 "
+":file:`grassdata` 를 선택하십시오. :file:`LOCATION` 'alaska' 에 'test' 라는 심화 "
+":file:`MAPSET` 을 추가하려 합니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:290
+msgid ""
+"We can use this wizard to create a new :file:`MAPSET` within an existing "
+":file:`LOCATION` or to create a new :file:`LOCATION` altogether. Click on "
+"the radio button |radioButtonOn| :guilabel:`Select location` (see "
+"figure_grass_new_location_) and click :guilabel:`Next`."
+msgstr ""
+"이 마법사를 통해 기존 :file:`LOCATION` 안에 새 :file:`MAPSET` 을 생성하거나 "
+"(:ref:`sec_add_mapset` 참조) 또는 새 :file:`LOCATION` 을 처음부터 생성할 수 있습니다. "
+"|radioButtonOn| :guilabel:`Select location` 라디오 버튼을 클릭한 다음 "
+"(:ref:`figure_grass_new_location` 그림 참조) :guilabel:`Next` 버튼을 클릭하십시오."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:294
+msgid ""
+"Enter the name :file:`test` for the new :file:`MAPSET`. Below in the wizard,"
+" you see a list of existing :file:`MAPSETs` and corresponding owners."
+msgstr ""
+"새 :file:`MAPSET` 에 대해 :file:`test` 라는 명칭을 입력하십시오. 마법사 대화창 하단에 기존 "
+":file:`MAPSET` 및 해당 소유자의 목록이 표시됩니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:296
+msgid ""
+"Click :guilabel:`Next`, check out the summary to make sure it's all correct "
+"and click :guilabel:`Finish`."
+msgstr ""
+":guilabel:`Next` 버튼을 클릭해서 작업 내용이 정확한지 작업 요약을 확인한 다음 :guilabel:`Finish` 버튼을 "
+"클릭하십시오."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:303
+msgid "The GRASS vector data model"
+msgstr "GRASS 벡터 데이터 모델"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:305
+msgid ""
+"It is important to understand the :index:`GRASS vector data model` prior to "
+"digitizing. In general, GRASS uses a topological vector model. This means "
+"that areas are not represented as closed polygons, but by one or more "
+"boundaries. A boundary between two adjacent areas is digitized only once, "
+"and it is shared by both areas. Boundaries must be connected and closed "
+"without gaps. An area is identified (and labelled) by the **centroid** of "
+"the area."
+msgstr ""
+"디지타이즈 작업 전에 \"GRASS 벡터 데이터 모델\"을 이해하고 있어야 합니다. 일반적으로, GRASS는 위상 벡터 모델을 "
+"이용합니다. 즉 면(area)을 닫힌 폴리곤으로 표현하는 것이 아니라 하나 이상의 경계로 표현한다는 뜻입니다. 인접한 두 면 사이의 "
+"경계를 한 번에 디지타이즈하고, 두 면이 해당 경계를 공유한다는 것입니다. 이 경계는 연결되어 빈자리 없이 닫힌 상태여야만 합니다. 면의"
+" **중심(centroid)** 이 면을 정의하고, 라벨의 위치가 됩니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:312
+msgid ""
+"Besides boundaries and centroids, a vector map can also contain points and "
+"lines. All these geometry elements can be mixed in one vector and will be "
+"represented in different so-called 'layers' inside one GRASS vector map. So "
+"in GRASS, a layer is not a vector or raster map but a level inside a vector "
+"layer. This is important to distinguish carefully. (Although it is possible "
+"to mix geometry elements, it is unusual and, even in GRASS, only used in "
+"special cases such as vector network analysis. Normally, you should prefer "
+"to store different geometry elements in different layers.)"
+msgstr ""
+"경계 및 중심 이외에도, 벡터 맵은 포인트 및 라인을 담고 있을 수 있습니다. 이 모든 도형 항목들이 벡터 하나에 혼합되어 있을 수 "
+"있으며, 하나의 GRASS 벡터 맵 안에 서로 다른 소위 '레이어' 들로 표현될 것입니다. 따라서 GRASS에서는, 레이어가 벡터 또는 "
+"래스터 맵이 아니라 벡터 레이어 내부의 '층(level)' 이 됩니다. 이런 개념을 주의해서 구분해야만 합니다. (다만 도형 항목들을 "
+"혼합할 수 있다고는 해도, GRASS에서조차 벡터 네트워크 분석과 같은 특별한 경우에만 사용되는 흔치 않은 상황입니다. 일반적으로, 서로"
+" 다른 도형 항목들을 서로 다른 레이어에 저장하는 편이 좋을 겁니다.)"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:321
+msgid ""
+"It is possible to store several 'layers' in one vector dataset. For example,"
+" fields, forests and lakes can be stored in one vector. An adjacent forest "
+"and lake can share the same boundary, but they have separate attribute "
+"tables. It is also possible to attach attributes to boundaries. An example "
+"might be the case where the boundary between a lake and a forest is a road, "
+"so it can have a different attribute table."
+msgstr ""
+"하나의 벡터 데이터셋에 여러 '레이어' 를 저장할 수 있습니다. 예를 들면, 벡터 하나 안에 평야, 삼림, 호수 등을 저장할 수 "
+"있습니다. 인접한 삼림과 호수는 동일한 경계를 공유할 수 있지만, 각각 개별 속성 테이블을 보유합니다. 또 경계에 속성을 붙일 수도 "
+"있습니다. 삼림과 호수 사이의 경계가 도로이기 때문에 도로가 고유한 속성 테이블을 보유하는 경우를 예로 들 수 있겠죠."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:327
+msgid ""
+"The 'layer' of the feature is defined by the 'layer' inside GRASS. 'Layer' "
+"is the number which defines if there is more than one layer inside the "
+"dataset (e.g., if the geometry is forest or lake). For now, it can be only a"
+" number. In the future, GRASS will also support names as fields in the user "
+"interface."
+msgstr ""
+"GRASS에서 객체의 '레이어' 는 숫자로 된 '레이어' 값으로 정의됩니다. 한 데이터셋(예를 들어 삼림 또는 호수를 표현하는 도형) "
+"안에 여러 레이어가 있는 경우 '레이어' 는 숫자로 지정됩니다. 현재로서는 숫자로만 지정할 수 있지만, 앞으로는 GRASS 사용자 "
+"인터페이스 상에서 명칭으로 지정할 수 있게 될 예정입니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:332
+msgid ""
+"Attributes can be stored inside the GRASS :file:`LOCATION` as dBase,  "
+"SQLite3 or in external database tables, for example, PostgreSQL, MySQL, "
+"Oracle, etc."
+msgstr ""
+"속성은 GRASS :file:`LOCATION` 내부에 dBase, SQLite3으로 저장하거나, 또는 외부 데이터베이스 테이블에, 예를"
+" 들어 PostgreSQL, MySQL, Oracle 등에 저장할 수 있습니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:338
+msgid ""
+"Attributes in database tables are linked to geometry elements using a "
+"'category' value."
+msgstr "데이터베이스 테이블에 있는 속성은 ``category`` 값을 통해 도형 항목과 링크되어 있습니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:344
+msgid ""
+"'Category' (key, ID) is an integer attached to geometry primitives, and it "
+"is used as the link to one key column in the database table."
+msgstr ""
+"``categoty`` (키, ID)는 도형 원시형(primitive)에 첨부된 정수로, 데이터베이스 테이블에 있는 유일 키 열을 "
+"가리키는 링크로 사용됩니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:347
+msgid "**Learning the GRASS Vector Model**"
+msgstr "**GRASS 벡터 모델 이해하기**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:349
+msgid ""
+"The best way to learn the GRASS vector model and its capabilities is to "
+"download one of the many GRASS tutorials where the vector model is described"
+" more deeply. See https://grass.osgeo.org/documentation/manuals/ for more "
+"information, books and tutorials in several languages."
+msgstr ""
+"GRASS 벡터 모델과 그 능력을 이해하는 데 있어 가장 좋은 방법은 벡터 모델을 좀 더 심도 있게 설명하고 있는 여러 GRASS 예제 "
+"가운데 하나를 다운로드하는 것입니다. 자세한 정보 및 문서 그리고 예제를 여러 언어로 제공하고 있는 "
+"https://grass.osgeo.org/documentation/manuals/ 웹페이지를 참조하세요."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:360
+msgid "Creating a new GRASS vector layer"
+msgstr "새 GRASS 벡터 레이어 생성하기"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:362
+msgid ""
+"To create a new GRASS vector layer, select one of following items from "
+"mapset context menu in the browser:"
+msgstr "새 GRASS 벡터 레이어를 생성하려면, 탐색기에 있는 맵셋의 컨텍스트 메뉴에서 다음 액션 가운데 하나를 선택하십시오:"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:365
+msgid "New Point Layer"
+msgstr ":guilabel:`New Point Layer`: 새 포인트 레이어를 추가합니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:366
+msgid "New Line Layer"
+msgstr ":guilabel:`New Line Layer`: 새 라인 레이어를 추가합니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:367
+msgid "New Polygon Layer"
+msgstr ":guilabel:`New Polygon Layer`: 새 폴리곤 레이어를 추가합니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:369
+msgid ""
+"and enter a name in the dialog. A new vector map will be created and layer "
+"will be added to canvas and editing started. Selecting type of the layer "
+"does not restrict geometry types which can be digitized in the vector map. "
+"In GRASS, it is possible to organize all sorts of geometry types (point, "
+"line and polygon) in one vector map. The type is only used to add the layer "
+"to the canvas, because QGIS requires a layer to have a specific type."
+msgstr ""
+"그리고 대화창에서 명칭을 입력하십시오. 새 벡터 맵이 생성되어 맵 캔버스에 편집 모드 상태로 추가될 것입니다. 레이어 유형을 선택한다고 "
+"해도 벡터 맵 안에 디지타이즈할 수 있는 도형 유형이 제한되지는 않습니다. GRASS에서는, 하나의 벡터 맵 안에 모든 도형 유형을 "
+"(포인트, 라인 및 폴리곤을) 구조화시킬 수 있습니다. 레이어 유형은 맵 캔버스에 레이어를 추가하기 위해서만 사용됩니다. 왜냐하면 "
+"QGIS는 레이어가 특정 유형일 것을 요구하기 때문입니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:375
+msgid ""
+"It is also possible to add layers to existing vector maps selecting one of "
+"the items described above from context menu of existing vector map."
+msgstr ""
+"기존 벡터 맵의 컨텍스트 메뉴에서 앞에서 설명한 액션 가운데 하나를 선택하면, 기존 벡터 맵에 레이어를 추가할 수도 있습니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:378
+msgid ""
+"In GRASS, it is possible to organize all sorts of geometry types (point, "
+"line and area) in one layer, because GRASS uses a topological vector model, "
+"so you don't need to select the geometry type when creating a new GRASS "
+"vector. This is different from shapefile creation with QGIS, because "
+"shapefiles use the Simple Feature vector model (see section "
+":ref:`sec_create_vector`)."
+msgstr ""
+"GRASS에서는, 하나의 레이어 안에 모든 도형 유형을 (점, 선 및 면을) 구조화시킬 수 있습니다. GRASS가 위상 벡터 모델을 "
+"사용하므로, 새 GRASS 벡터 생성 시 도형 유형을 선택할 필요가 없기 때문입니다. QGIS에서 shapefile을 생성하는 것과는 "
+"다릅니다. 왜냐하면 shapefile은 단순 객체 벡터 모델을 사용하기 때문입니다. (:ref:`sec_create_vector` 을 "
+"참조하세요.)"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:389
+msgid "Digitizing and editing a GRASS vector layer"
+msgstr "GRASS 벡터 레이어 디지타이즈 및 편집하기"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:391
+msgid ""
+"GRASS vector layers can be digitized using the standard QGIS digitizing "
+"tools. There are however some particularities, which you should know about, "
+"due to"
+msgstr ""
+"표준 QGIS 다지타이즈 작업 도구를 사용해서 GRASS 벡터 레이어를 디지타이즈할 수 있습니다. 하지만 다음 사실들 때문에 사용자가 "
+"알고 있어야 할 몇몇 특수성 또한 존재합니다:"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:394
+msgid "GRASS topological model versus QGIS simple feature"
+msgstr "GRASS 위상 모델 대 QGIS 단순 객체"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:395
+msgid "complexity of GRASS model"
+msgstr "GRASS 모델의 복잡성"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:397
+msgid "multiple layers in single maps"
+msgstr "단일 맵 안의 다중 레이어"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:398
+msgid "multiple geometry types in single map"
+msgstr "단일 맵 안의 멀티 도형 유형"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:399
+msgid "geometry sharing by multiple features from multiple layers"
+msgstr "다중 레이어에서 다중 객체가 도형을 공유"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:401
+msgid "The particularities are discussed in the following sections."
+msgstr "다음 문단부터 이 특수성들을 설명하겠습니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:403
+msgid "**Save, discard changes, undo, redo**"
+msgstr "**저장, 변경 사항 무시, 실행 취소, 재실행**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:405
+msgid ""
+"All the changes done during editing are immediately written to vector map "
+"and related attribute tables."
+msgstr "편집 작업 동안 이루어진 모든 변경 사항은 즉시 벡터 맵과 관련 속성 테이블에 작성됩니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:407
+msgid ""
+"Changes are written after each operation, it is however, possible to do "
+"undo/redo or discard all changes when closing editing. If undo or discard "
+"changes is used, original state is rewritten in vector map and attribute "
+"tables."
+msgstr ""
+"각 편집 작업마다 변경 사항을 작성하지만, 실행 취소/재실행할 수 있고 또는 편집 작업 종료 시 모든 변경 사항을 무시할 수도 있습니다."
+" 실행 취소 또는 변경 사항 무시 기능을 이용하는 경우, 벡터 맵과 속성 테이블에 원본 상태를 다시 작성합니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:411
+msgid "There are two main reasons for this behaviour:"
+msgstr "이런 습성에는 다음과 같은 두 가지 중요한 이유가 있습니다:"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:413
+msgid ""
+"It is the nature of GRASS vectors coming from conviction that user wants to "
+"do what he is doing and it is better to have data saved when the work is "
+"suddenly interrupted (for example, blackout)"
+msgstr ""
+"GRASS 벡터의 본질은 사용자가 본인의 작업을 원하고 있고 작업이 갑자기 중단되는 경우 (예를 들어 정전 시) 변경 데이터를 저장한 "
+"상태인 편이 낫다는 확신에서 나오기 때문입니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:416
+msgid ""
+"Necessity for effective editing of topological data is visualized "
+"information about topological correctness, such information can only be "
+"acquired from GRASS vector map if changes are written to the map."
+msgstr ""
+"위상 데이터를 효과적으로 편집하려면 위상적 정확성에 관한 정보를 가시화해야 하는데, 변경 사항을 GRASS 벡터 맵에 작성하는 경우에만 "
+"맵에서 그런 정보를 얻을 수 있기 때문입니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:420
+msgid "**Toolbar**"
+msgstr "**툴바**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:422
+msgid ""
+"The 'Digitizing Toolbar' has some specific tools when a GRASS layer is "
+"edited:"
+msgstr "GRASS 레이어를 편집하는 경우 '디지타이즈 작업 툴바' 에서 다음과 같은 몇몇 특정 도구를 사용할 수 있습니다:"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:427
+msgid "Icon"
+msgstr "아이콘"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:427
+msgid "Tool"
+msgstr "도구"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:427
+msgid "Purpose"
+msgstr "목적"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:429
+msgid "|capturePoint|"
+msgstr "|capturePoint|"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:429
+msgid "New Point"
+msgstr "New Point"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:429
+msgid "Digitize new point"
+msgstr "새 포인트를 디지타이즈합니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:431
+msgid "|captureLine|"
+msgstr "|captureLine|"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:431
+msgid "New Line"
+msgstr "New Line"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:431
+msgid "Digitize new line"
+msgstr "새 라인을 디지타이즈합니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:433
+msgid "|captureBoundary|"
+msgstr "|captureBoundary|"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:433
+msgid "New Boundary"
+msgstr "New Boundary"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:433
+msgid "Digitize new boundary"
+msgstr "새 경계를 디지타이즈합니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:435
+msgid "|captureCentroid|"
+msgstr "|captureCentroid|"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:435
+msgid "New Centroid"
+msgstr "New Centroid"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:435
+msgid "Digitize new centroid (label existing area)"
+msgstr "새 중심(라벨 위치)을 디지타이즈합니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:437
+msgid "|capturePolygon|"
+msgstr "|capturePolygon|"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:437
+msgid "New Closed Boundary"
+msgstr "New Closed Boundary"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:437
+msgid "Digitize new closed boundary"
+msgstr "새 닫힌 경계를 디지타이즈합니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:441
+msgid "Table GRASS Digitizing: GRASS Digitizing Tools"
+msgstr "표: GRASS 디지타이즈 작업 - GRASS 디지타이즈 작업 도구"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:443
+msgid "**Digitizing polygons in GRASS**"
+msgstr "**GRASS에서 폴리곤을 디지타이즈하기**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:445
+msgid ""
+"If you want to create a polygon in GRASS, you first digitize the boundary of"
+" the polygon. Then you add a centroid (label point) into the closed "
+"boundary. The reason for this is that a topological vector model links the "
+"attribute information of a polygon always to the centroid and not to the "
+"boundary."
+msgstr ""
+"GRASS에서 폴리곤을 생성하고 싶다면, 먼저 폴리곤의 경계를 디지타이즈합니다. 그리고 닫힌 경계 안에 중심(라벨 포인트)을 추가합니다."
+" 그 이유는 위상 벡터 모델은 언제나 폴리곤의 경계가 아니라 중심에 폴리곤의 속성 정보를 링크시키기 때문입니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:451
+msgid "**Category**"
+msgstr "**카테고리**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:453
+msgid ""
+"Category, often called cat, is sort of ID. The name comes from times when "
+"GRASS vectors had only singly attribute \"category\". Category is used as a "
+"link between geometry and attributes. A single geometry may have multiple "
+"categories and thus represent multiple features in different layers. "
+"Currently it is possible to assign only one category per layer using QGIS "
+"editing tools. New features have automatically assigned new unique category,"
+" except boundaries. Boundaries usually only form areas and do not represent "
+"linear features, it is however possible to define attributes for a boundary "
+"later, for example in different layer."
+msgstr ""
+"'cat' 으로 줄여 부르는 일이 많은 카테고리는 일종의 ID입니다. 이 명칭은 GRASS 벡터가 ``category`` 라는 단일 "
+"속성만 보유하던 시절에 시작됐습니다. 카테고리는 도형과 속성 사이의 링크로 사용됩니다. 단일 도형이 여러 카테고리를 보유할 수도 있기 "
+"때문에, 서로 다른 레이어들 안에 있는 여러 객체들을 나타낼 수도 있습니다. 현재, QGIS 편집 도구를 사용해서 레이어 하나 당 오직 "
+"하나의 카테고리만 할당할 수 있습니다. 새 객체는 유일한 새 카테고리를 자동적으로 할당받게 됩니다. 경계를 제외하고 말이죠. 경계는 보통"
+" 면을 형성할 뿐 선형 객체를 타나내지는 않지만, 이후에 -- 예를 들어 다른 레이어에서 -- 경계에 대한 속성을 정의할 수 있습니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:461
+msgid ""
+"New categories are always created only in currently being edited layer."
+msgstr "언제나 현재 편집 중인 레이어에서만 새 카테고리를 생성할 수 있습니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:463
+msgid ""
+"It is not possible to assign more categories to geometry using QGIS editing,"
+" such data are properly represented as multiple features, and individual "
+"features, even from different layers, may be deleted."
+msgstr ""
+"QGIS 편집 도구를 통해 카테고리에 더 많은 카테고리를 할당할 수는 없습니다. 그런 데이터는 아마도 다중 객체로 표현되어, 서로 다른 "
+"레이어들에 있는 개별 객체인 경우에도 삭제될 수도 있습니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:467
+msgid "**Attributes**"
+msgstr "**속성**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:469
+msgid ""
+"Attributes of currently edited layer can only be modified. If the vector map"
+" contains more layers, features of other layers will have all attributes set"
+" to '<not editable (layer #)>' to warn you that such attribute is not "
+"editable. The reason is, that other layers may have and usually have "
+"different set of fields while QGIS only supports one fixed set of fields per"
+" layer."
+msgstr ""
+"현재 편집 중인 레이어의 속성만 수정할 수 있습니다. 벡터 맵이 레이어를 하나 이상 담고 있는 경우, 다른 레이어의 객체는 그 속성을 "
+"편집할 수 없다고 경고하기 위해 모든 속성이 ``<not editable (layer #)>`` 로 설정될 것입니다. 그 이유는 "
+"QGIS가 레이어 하나 당 하나의 고정된 필드 집합만 지원하는 반면 다른 레이어는 다른 필드 집합을 보유하고 있을 수도 있고, 또 보통 "
+"보유하고 있기 때문입니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:474
+msgid ""
+"If a geometry primitive does not have a category assigned, a new unique "
+"category is automatically assigned and new record in attribute table is "
+"created when an attribute of that geometry is changed."
+msgstr ""
+"도형 원시형에 할당된 카테고리가 없는 경우, 유일한 새 카테고리가 자동적으로 할당되어 해당 도형의 속성을 변경할 때 속성 테이블 안에 새"
+" 레코드를 생성합니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:479
+msgid ""
+"If you want to do bulk update of attributes in table, for example using "
+"'Field Calculator' (:ref:`vector_field_calculator`), and there are features "
+"without category which you don't want to update (typically boundaries), you "
+"can filter them out by setting 'Advanced Filter' to ``cat is not null``."
+msgstr ""
+"테이블에 있는 속성을 대규모로 -- 예를 들어 :ref:`vector_field_calculator` 를 사용해서 -- 업데이트하고 "
+"싶은데 사용자가 업데이트하고 싶지 않은, 카테고리가 없는 객체(주로 경계)가 존재할 경우, '고급 필터' 를 ``cat is not "
+"null`` 로 설정해서 해당 객체를 필터링할 수 있습니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:484
+msgid "**Editing style**"
+msgstr "**편집 스타일**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:489
+msgid ""
+"The topological symbology is essential for effective editing of topological "
+"data. When editing starts, a specialized 'GRASS Edit' renderer is set on the"
+" layer automatically and original renderer is restored when editing is "
+"closed. The style may be customized in layer properties 'Style' tab. The "
+"style can also be stored in project file or in separate file as any other "
+"style. If you customize the style, do not change its name, because it is "
+"used to reset the style when editing is started again."
+msgstr ""
+"위상 심볼은 위상 데이터를 효과적으로 편집하는 데 필수 불가결합니다. 편집 작업 시작 시, 레이어 상에 특화된 'GRASS 편집' 렌더링"
+" 작업자를 자동적으로 설정하며 편집 작업 종료 시 원래 렌더링 작업자로 되돌립니다. 레이어 속성 대화창의 :guilabel:`Style`"
+" 탭에서 스타일을 사용자 지정할 수도 있습니다. 다른 모든 스타일과 마찬가지로, 스타일을 프로젝트 파일에 저장할 수도 있고 개별 파일에 "
+"저장할 수도 있습니다. 스타일을 사용자 지정하는 경우, 명칭은 변경하지 마십시오. 왜냐하면 편집 작업을 다시 시작할 때 명칭을 사용해서 "
+"스타일을 리셋하기 때문입니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:496
+msgid ""
+"Do not save project file when the layer is edited, the layer would be stored"
+" with 'Edit Style' which has no meaning if layer is not edited."
+msgstr ""
+"레이어 편집 중에 프로젝트 파일을 저장하지 마십시오. 레이어가 변경되지 않았을 경우 아무 의미도 가지지 못 하는 '편집 스타일' 과 함께"
+" 레이어를 저장할 것이기 때문입니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:499
+msgid ""
+"The style is based on topological information which is temporarily added to "
+"attribute table as field 'topo_symbol'. The field is automatically removed "
+"when editing is closed."
+msgstr ""
+"스타일은 속성 테이블에 ``topo_symbol`` 이라는 필드로 일시적으로 추가된 위상 정보를 기반으로 합니다. 편집 작업 종료 시 이"
+" 필드는 자동적으로 제거됩니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:502
+msgid ""
+"Do not remove 'topo_symbol' field from attribute table, that would make "
+"features invisible because the renderer is based on that column."
+msgstr ""
+"속성 테이블에서 ``topo_symbol`` 필드를 제거하지 마십시오. 렌더링 작업자가 해당 열에 의존하기 때문에 객체가 보이지 않게 될"
+" 것입니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:506
+msgid "**Snapping**"
+msgstr "**스냅**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:508
+msgid ""
+"To form an area, vertices of connected boundaries must have **exactly** the "
+"same coordinates. This can be achieved using snapping tool only if canvas "
+"and vector map have the same CRS. Otherwise, due conversion from map "
+"coordinates to canvas and back, the coordinate may become slightly different"
+" due to representation error and CRS transformations."
+msgstr ""
+"면을 형성하려면, 연결된 경계의 꼭짓점들이 **정확히** 동일한 좌표를 보유하고 있어야 합니다. 맵 캔버스와 벡터 맵이 동일한 좌표계인 "
+"경우에만 스냅 도구를 사용해서 동일한 좌표를 부여할 수 있습니다. 그렇지 않은 경우, 벡터 맵 좌표를 맵 캔버스 좌표로 변환하고 다시 그"
+" 반대로 변환하는 과정에서 표현 오류 및 좌표계 변환 때문에 좌표가 조금씩 달라질 수도 있습니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:513
+msgid "Use layer's CRS also for canvas when editing."
+msgstr "편집 작업 시 레이어의 좌표계를 맵 캔버스에도 적용하십시오."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:516
+msgid "**Limitations**"
+msgstr "**제약 사항**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:518
+msgid ""
+"Simultaneous editing of multiple layers within the same vector at the same "
+"time is not supported. This is mainly due to the impossibility of handling "
+"multiple undo stacks for a single data source."
+msgstr ""
+"한 번에 동일 벡터 안에 있는 여러 레이어들을 동시 편집할 수는 없습니다. 주된 이유는 단일 데이터 소스에 대해 여러 실행 취소 "
+"스택(stack)을 처리하는 것이 불가능하기 때문입니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:522
+msgid ""
+"|nix| |osx| On Linux and macOS only one GRASS layer can be edited at time. "
+"This is due to a bug in GRASS which does not allow to close database drivers"
+" in random order. This is being solved with GRASS developers."
+msgstr ""
+"|nix| |osx| 리눅스 및 맥 상에서는 한 번에 하나의 GRASS 레이어만 편집할 수 있습니다. 데이터베이스 드라이버를 랜덤한 "
+"순서로 종료할 수 없는 GRASS의 버그 때문입니다. 현재 GRASS 개발자들이 이 문제를 해결하고 있는 중입니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:527
+msgid "**GRASS Edit Permissions**"
+msgstr "**GRASS 편집 권한**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:529
+msgid ""
+"You must be the owner of the GRASS :file:`MAPSET` you want to edit. It is "
+"impossible to edit data layers in a :file:`MAPSET` that is not yours, even "
+"if you have write permission."
+msgstr ""
+"사용자가 편집하고자 하는 GRASS :file:`MAPSET` 의 소유자여야만 합니다. 사용자의 소유가 아닌 :file:`MAPSET` "
+"에 있는 데이터 레이어를 편집하는 것은, 사용자가 쓰기 권한을 가지고 있더라도 불가능합니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:539
+msgid "The GRASS region tool"
+msgstr "GRASS 영역 도구"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:542
+msgid ""
+"The region definition (setting a spatial working window) in GRASS is "
+"important for working with raster layers. Vector analysis is by default not "
+"limited to any defined region definitions. But all newly created rasters "
+"will have the spatial extension and resolution of the currently defined "
+"GRASS region, regardless of their original extension and resolution. The "
+"current GRASS region is stored in the :file:`$LOCATION/$MAPSET/WIND` file, "
+"and it defines north, south, east and west bounds, number of columns and "
+"rows, horizontal and vertical spatial resolution."
+msgstr ""
+"GRASS에서 래스터 레이어를 작업하는 경우 (공간 작업창을 설정하는) 영역(region) 정의가 중요합니다. 벡터 분석은 기본적으로 "
+"설정한 어느 영역 정의에도 제약을 받지 않습니다. 그러나 새로 생성한 모든 래스터는 원본의 범위 및 해상도에 상관없이 현재 정의된 "
+"GRASS 영역의 공간 범위 및 해상도를 적용받게 됩니다. 현재 GRASS 영역은 :file:`$LOCATION/$MAPSET/WIND`"
+" 파일에 저장되는데, 이 파일은 동서남북 방향의 경계, 열 및 행의 개수, 수직 및 수평 공간 해상도를 정의합니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:550
+msgid ""
+"It is possible to switch on and off the visualization of the GRASS region in"
+" the QGIS canvas using the |grassRegion| :sup:`Display current GRASS region`"
+" button."
+msgstr ""
+"|grassRegion| :sup:`Display current GRASS region` 버튼을 통해 QGIS 맵 캔버스에서 GRASS "
+"영역의 가시성을 켜고 끌 수 있습니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:556
+msgid ""
+"The region can be modified in 'Region' tab in 'GRASS Tolls' dock widget. "
+"Type in the new region bounds and resolution, and click :guilabel:`Apply`. "
+"If you click on :guilabel:`Select the extent by dragging on canvas` you can "
+"select a new region interactively with your mouse on the QGIS canvas "
+"dragging a rectangle."
+msgstr ""
+"'GRASS Tools' 도킹 위젯에 있는 'Region' 탭에서 GRASS 영역을 수정할 수 있습니다. 새 영역의 경계 및 해상도를 "
+"입력한 다음 :guilabel:`Apply` 버튼을 클릭하십시오. :guilabel:`Select the extent by "
+"dragging on canvas` 버튼을 클릭하면 QGIS 맵 캔버스 위에 마우스로 직사각형을 클릭&드래그해서 새 영역의 범위를 "
+"대화형으로 선택할 수 있습니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:562
+msgid ""
+"The GRASS module :file:`g.region` provides a lot more parameters to define "
+"an appropriate region extent and resolution for your raster analysis. You "
+"can use these parameters with the GRASS Toolbox, described in section "
+":ref:`subsec_grass_toolbox`."
+msgstr ""
+":file:`g.region` GRASS 모듈은 사용자의 래스터 분석 작업을 위해 적절한 영역 범위 및 해상도를 정의할 수 있는 훨씬 "
+"많은 파라미터를 제공하고 있습니다.  :ref:`subsec_grass_toolbox` 를 통해 이 파라미터들을 사용할 수 있습니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:571
+msgid "The GRASS Toolbox"
+msgstr "GRASS 툴박스"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:573
+msgid ""
+"The |grassTools| :sup:`Open GRASS Tools` box provides GRASS module "
+"functionalities to work with data inside a selected GRASS :file:`LOCATION` "
+"and :file:`MAPSET`. To use the GRASS Toolbox you need to open a "
+":file:`LOCATION` and :file:`MAPSET` that you have write permission for "
+"(usually granted, if you created the :file:`MAPSET`). This is necessary, "
+"because new raster or vector layers created during analysis need to be "
+"written to the currently selected :file:`LOCATION` and :file:`MAPSET`."
+msgstr ""
+"|grassTools| :sup:`Open GRASS Tools` GRASS 툴박스는 선택한 GRASS :file:`LOCATION` 및"
+" :file:`MAPSET` 안에 있는 데이터를 작업할 수 있는 GRASS 모듈 기능을 제공하고 있습니다. GRASS 툴박스를 "
+"이용하려면, 먼저 사용자가 쓰기 권한을 보유하고 있는 (사용자가 해당 :file:`MAPSET` 을 생성한 경우 보통 당연히 보유하고 "
+"있습니다) :file:`LOCATION` 및 :file:`MAPSET` 을 열어야 합니다. 분석 작업 도중에 새로 래스터 및 벡터 "
+"레이어를 생성하는 경우 현재 선택 중인 :file:`LOCATION` 및 :file:`MAPSET` 에 작성해야 하기 때문입니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:585
+msgid "GRASS Toolbox and Module Tree"
+msgstr "GRASS 툴박스 및 모듈 트리"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:590
+msgid "Working with GRASS modules"
+msgstr "GRASS 모듈로 작업하기"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:592
+msgid ""
+"The GRASS shell inside the GRASS Toolbox provides access to almost all (more"
+" than 300) GRASS modules in a command line interface. To offer a more user-"
+"friendly working environment, about 200 of the available GRASS modules and "
+"functionalities are also provided by graphical dialogs within the GRASS "
+"plugin Toolbox."
+msgstr ""
+"GRASS 툴박스에 있는 GRASS 셸을 통해, 명령 줄 인터페이스에서 거의 모든 (300개가 넘는) GRASS 모듈을 사용할 수 "
+"있습니다. 좀 더 사용자 친화적인 작업 환경을 제공하기 위해, GRASS 플러그인 툴박스 내부의 그래픽 인터페이스 대화창에서 약 "
+"200개의 GRASS 모듈 및 기능을 사용할 수 있습니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:597
+msgid ""
+"A complete list of GRASS modules available in the graphical Toolbox in QGIS "
+"version |CURRENT| is available in the GRASS wiki at "
+"https://grasswiki.osgeo.org/wiki/GRASS-QGIS_relevant_module_list."
+msgstr ""
+"`GRASS 위키 사이트 <https://grasswiki.osgeo.org/wiki/GRASS-"
+"QGIS_relevant_module_list>`_ 에서, QGIS |CURRENT| 버전의 GUI 툴박스를 통해 사용할 수 있는 "
+"GRASS 모듈의 완전한 목록을 찾아볼 수 있습니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:601
+msgid ""
+"It is also possible to customize the GRASS Toolbox content. This procedure "
+"is described in section :ref:`sec_toolbox-customizing`."
+msgstr ""
+"GRASS 툴박스의 내용을 사용자 지정할 수도 있습니다. 이 과정은 :ref:`sec_toolbox-customizing` 에서 설명하고"
+" 있습니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:604
+msgid ""
+"As shown in figure_grass_toolbox_, you can look for the appropriate GRASS "
+"module using the thematically grouped :guilabel:`Modules Tree` or the "
+"searchable :guilabel:`Modules List` tab."
+msgstr ""
+":ref:`figure_grass_toolbox` 그림에서 알 수 있는 바와 같이, 테마 별로 그룹화된 :guilabel:`Modules"
+" Tree` 또는 검색 가능한 :guilabel:`Modules List` 탭을 통해 알맞은 GRASS 모듈을 찾을 수 있습니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:608
+msgid ""
+"By clicking on a graphical module icon, a new tab will be added to the "
+"Toolbox dialog, providing three new sub-tabs: :guilabel:`Options`, "
+":guilabel:`Output` and :guilabel:`Manual`."
+msgstr ""
+"모듈의 아이콘을 클릭하면, 툴박스 대화창에 새 탭이 추가될 것입니다. 이 탭은 :guilabel:`Options`, "
+":guilabel:`Output` 및 :guilabel:`Manual` 이라는 하위 탭 3개를 보유하고 있습니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:612
+msgid "**Options**"
+msgstr "**옵션**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:614
+msgid ""
+"The :guilabel:`Options` tab provides a simplified module dialog where you "
+"can usually select a raster or vector layer visualized in the QGIS canvas "
+"and enter further module-specific parameters to run the module."
+msgstr ""
+":guilabel:`Options` 탭은 보통 QGIS 맵 캔버스에 가시화된 래스터 및 벡터 레이어를 선택하고 해당 모듈에 특화된 "
+"파라미터를 입력해서 모듈을 실행할 수 있는 간소화된 대화창을 담고 있습니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:623
+msgid "GRASS Toolbox Module Options"
+msgstr "GRASS 툴박스: 모듈 옵션"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:625
+msgid ""
+"The provided module parameters are often not complete to keep the dialog "
+"simple. If you want to use further module parameters and flags, you need to "
+"start the GRASS shell and run the module in the command line."
+msgstr ""
+"이 대화창을 간소하게 유지하기 위해, 대화창에 표시되는 모듈 파라미터들이 완전하지 않은 경우가 많습니다. 심화 모듈 파라미터 및 플래그를"
+" 사용하고 싶다면, GRASS 셸을 실행해서 명령 줄에서 모듈을 구동해야 합니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:629
+msgid ""
+"A new feature since QGIS 1.8 is the support for a :guilabel:`Show Advanced "
+"Options` button below the simplified module dialog in the "
+":guilabel:`Options` tab. At the moment, it is only added to the module "
+":file:`v.in.ascii` as an example of use, but it will probably be part of "
+"more or all modules in the GRASS Toolbox in future versions of QGIS. This "
+"allows you to use the complete GRASS module options without the need to "
+"switch to the GRASS shell."
+msgstr ""
+"QGIS 1.8 버전부터 :guilabel:`Options` 탭의 간소화된 모듈 대화창 하단에 **[Show Advanced "
+"Options]** 버튼을 지원하고 있습니다. 현재에는 활용법을 보여주기 위한 목적으로 :file:`v.in.ascii` 모듈에만 추가돼"
+" 있지만, QGIS 향후 버전에서는 GRASS 툴박스에 있는 좀 더 많은 또는 모든 모듈에 추가될 수도 있습니다. 이 버튼을 누르면 "
+"GRASS 셸로 전환할 필요없이 대화창에서 완전한 GRASS 모듈 옵션을 사용할 수 있습니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:636
+msgid "**Output**"
+msgstr "**산출물**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:643
+msgid "GRASS Toolbox Module Output"
+msgstr "GRASS 툴박스: 모듈 산출물"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:645
+msgid ""
+"The :guilabel:`Output` tab provides information about the output status of "
+"the module. When you click the :guilabel:`Run` button, the module switches "
+"to the :guilabel:`Output` tab and you see information about the analysis "
+"process. If all works well, you will finally see a ``Successfully finished``"
+" message."
+msgstr ""
+":guilabel:`Output` 탭은 모듈의 산출물 상태에 관한 정보를 표시합니다. :guilabel:`Run` 버튼을 클릭했을 때, "
+"모듈이 :guilabel:`Output` 탭으로 전환되어 사용자가 분석 과정에 관한 정보를 볼 수 있습니다. 모든 과정이 무사히 "
+"완료되면, 마지막으로 ``Successfully finished`` 메시지가 표시될 것입니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:650
+msgid "**Manual**"
+msgstr "**사용자 설명서**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:657
+msgid "GRASS Toolbox Module Manual"
+msgstr "GRASS 툴박스: 모듈 사용자 설명서"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:659
+msgid ""
+"The :guilabel:`Manual` tab shows the HTML help page of the GRASS module. You"
+" can use it to check further module parameters and flags or to get a deeper "
+"knowledge about the purpose of the module. At the end of each module manual "
+"page, you see further links to the :file:`Main Help index`, the "
+":file:`Thematic index` and the :file:`Full index`. These links provide the "
+"same information as the module :file:`g.manual`."
+msgstr ""
+":guilabel:`Manual` 탭은 GRASS 모듈의 HTML 도움말 페이지를 표시합니다. 심화 모듈 파라미터 및 플래그를 확인하는 "
+"데, 또는 해당 모듈의 목적에 관한 심도 있는 지식을 얻기 위해 이 탭을 사용할 수 있습니다. 각 모듈의 사용자 설명서 페이지 맨 끝에,"
+" :guilabel:`Main Help index`, :guilabel:`Thematic index` 및 :guilabel:`Full "
+"index` 를 가리키는 링크들이 있습니다. 이 링크들은 각각 :file:`g.manual` 모듈이 제공하는 주요 도움말 색인, 테마 "
+"색인, 전체 색인으로 연결됩니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:669
+msgid "**Display results immediately**"
+msgstr "**결과를 즉시 표시하기**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:671
+msgid ""
+"If you want to display your calculation results immediately in your map "
+"canvas, you can use the 'View Output' button at the bottom of the module "
+"tab."
+msgstr ""
+"사용자의 맵 캔버스에 계산 결과를 즉시 표시하고 싶다면, 모듈 탭 하단에 있는 **[View Output]** 버튼을 누르면 됩니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:675
+msgid "GRASS module examples"
+msgstr "GRASS 모듈 예제"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:677
+msgid ""
+"The following examples will demonstrate the power of some of the GRASS "
+"modules."
+msgstr "다음 예제들이 일부 GRASS 모듈의 강력한 기능을 보여줄 것입니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:680
+msgid "Creating contour lines"
+msgstr "등고선 생성하기"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:682
+msgid ""
+"The first example creates a vector contour map from an elevation raster "
+"(DEM). Here, it is assumed that you have the Alaska :file:`LOCATION` set up "
+"as explained in section :ref:`sec_import_loc_data`."
+msgstr ""
+"첫 번째 예제는 표고 래스터(DEM)로부터 벡터 등고선 맵을 생성하는 것입니다. 이 예시에서는 사용자가 "
+":ref:`sec_import_loc_data` 에서 설명한 대로 :file:`LOCATION` 'alaska' 를 설정했다고 "
+"가정합니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:686
+msgid ""
+"First, open the location by clicking the |grassOpenMapset| :sup:`Open "
+"mapset` button and choosing the Alaska location."
+msgstr ""
+"먼저, |grassOpenMapset| :sup:`Open mapset` 아이콘을 클릭하고 :file:`LOCATION` 'alaska'"
+" 를 선택해서 로케이션을 여십시오."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:688
+msgid ""
+"Now open the Toolbox with the |grassTools| :sup:`Open GRASS tools` button."
+msgstr "이제 |grassTools| :sup:`Open GRASS tools` 아이콘을 클릭해서 툴박스를 여십시오."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:689
+msgid ""
+"In the list of tool categories, double-click :menuselection:`Raster --> "
+"Surface Management --> Generate vector contour lines`."
+msgstr ""
+"도구 범주 목록에서 :menuselection:`Raster --> Surface Management --> Generate vector"
+" contour lines` 를 더블클릭하십시오."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:691
+msgid ""
+"Now a single click on the tool **r.contour** will open the tool dialog as "
+"explained above (see :ref:`grass_modules`)."
+msgstr ""
+"이제 ``r.contour`` 모듈을 한 번 클릭하면 앞에서 설명한 것처럼 (:ref:`grass_modules` 참조) 모듈 대화창이 "
+"열릴 것입니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:693
+msgid "In the :guilabel:`Name of input raster map` enter ``gtopo30``."
+msgstr ":guilabel:`Name of input raster map` 옵션에 ``gtopo30`` 이라고 입력하십시오."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:694
+msgid ""
+"Type into the :guilabel:`Increment between Contour levels` |selectNumber| "
+"the value 100. (This will create contour lines at intervals of 100 meters.)"
+msgstr ""
+":guilabel:`Increment between Contour levels` |selectNumber| 옵션의 값을 100으로 "
+"입력하십시오. (이렇게 하면 등고선을 100미터 간격으로 생성할 것입니다.)"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:696
+msgid ""
+"Type into the :guilabel:`Name for output vector map` the name ``ctour_100``."
+msgstr ""
+":guilabel:`Name for output vector map` 옵션에서 명칭을 ``ctour_100`` 으로 입력하십시오."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:697
+msgid ""
+"Click :guilabel:`Run` to start the process. Wait for several moments until "
+"the message ``Successfully finished`` appears in the output window. Then "
+"click :guilabel:`View Output` and :guilabel:`Close`."
+msgstr ""
+":guilabel:`Run` 버튼을 눌러 공간 처리 과정을 시작하십시오. 산출물 창에 ``Successfully finished`` "
+"메시지가 나타낼 때까지 잠시 기다렸다가 :guilabel:`View Output` 버튼을 클릭한 다음 :guilabel:`Close` "
+"버튼을 클릭하십시오."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:701
+msgid ""
+"Since this is a large region, it will take a while to display. After it "
+"finishes rendering, you can open the layer properties window to change the "
+"line color so that the contours appear clearly over the elevation raster, as"
+" in :ref:`vector_properties_dialog`."
+msgstr ""
+"알래스카가 넓은 영역이기 때문에, 전체를 표시하는 데 시간이 좀 걸릴 겁니다. 렌더링이 종료된 다음, "
+":ref:`vector_properties_dialog` 에서 설명한 대로 레이어 속성 대화창을 열어서 라인 색상을 변경하면 표고 레스터"
+" 위에 중첩한 등고선이 명확하게 보이도록 할 수 있습니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:705
+msgid ""
+"Next, zoom in to a small, mountainous area in the center of Alaska. Zooming "
+"in close, you will notice that the contours have sharp corners. GRASS offers"
+" the **v.generalize** tool to slightly alter vector maps while keeping their"
+" overall shape. The tool uses several different algorithms with different "
+"purposes. Some of the algorithms (i.e., Douglas Peuker and Vertex Reduction)"
+" simplify the line by removing some of the vertices. The resulting vector "
+"will load faster. This process is useful when you have a highly detailed "
+"vector, but you are creating a very small-scale map, so the detail is "
+"unnecessary."
+msgstr ""
+"그 다음, 알래스카 중심부에 있는 좁은 산지 지역으로 확대하십시오. 가까이 확대해보면 등고선이 급격히 꺾여 있다는 사실을 알 수 있을 "
+"겁니다. GRASS는 벡터 맵의 전체 형태를 유지하면서도 살짝 수정할 수 있는 ``v.generalize`` 모듈을 제공하고 있습니다. "
+"이 모듈은 서로 다른 목적에 따라 서로 다른 알고리즘을 여럿 사용합니다. 몇몇 (예를 들면 `더글러스-포이커 "
+"<https://en.wikipedia.org/wiki/Ramer%E2%80%93Douglas%E2%80%93Peucker_algorithm>`_"
+" 및 꼭짓점 감축) 알고리즘은 꼭짓점 가운데 일부를 제거해서 라인을 단순화시킵니다. 산출되는 벡터는 더 빨리 불러올 수 있을 것입니다. "
+"사용자가 너무나 상세한 벡터를 가지고 있지만, 매우 소축척의 맵을 생성하기 때문에 세밀한 사항이 필요없는 경우 이런 공간 처리를 하는 "
+"것이 유용합니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:714
+msgid "**The simplify tool**"
+msgstr "**단순화 도구**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:716
+msgid ""
+"Note that QGIS has a :menuselection:`Vector --> Geometry Tools --> Simplify "
+"geometries` tool that works just like the GRASS **v.generalize** Douglas-"
+"Peuker algorithm."
+msgstr ""
+"QGIS도 GRASS ``v.generalize`` 모듈의 더글러스-포이커 알고리즘과 동일하게 작동하는 "
+":menuselection:`Vector --> Geometry Tools --> Simplify geometries` 도구를 보유하고 "
+"있다는 사실을 기억하십시오."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:720
+msgid ""
+"However, the purpose of this example is different. The contour lines created"
+" by ``r.contour`` have sharp angles that should be smoothed. Among the "
+"**v.generalize** algorithms, there is Chaiken's, which does just that (also "
+"Hermite splines). Be aware that these algorithms can **add** additional "
+"vertices to the vector, causing it to load even more slowly."
+msgstr ""
+"하지만, 이 예제의 목적은 다릅니다. ``r.contour`` 모듈이 생성한 등고선의 날카로운 각도를 매끄럽게 다듬어야 합니다. "
+"``v.generalize`` 모듈의 알고리즘 가운데, `체이킨 "
+"<http://graphics.cs.ucdavis.edu/education/CAGDNotes/Chaikins-Algorithm"
+"/Chaikins-Algorithm.html>`_ (또는 `에르미트 스플라인 "
+"<https://en.wikipedia.org/wiki/Cubic_Hermite_spline>`_) 알고리즘이 바로 이런 처리를 할 수 "
+"있습니다. 다만 이런 알고리즘들이 벡터에 더 많은 꼭짓점들을 **추가** 할 수 있다는 사실을 잘 알고 있어야 합니다. 이런 경우 벡터를"
+" 불러오는 데 시간이 더 걸릴 수도 있습니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:726
+msgid ""
+"Open the GRASS Toolbox and double-click the categories "
+":menuselection:`Vector --> Develop map --> Generalization`, then click on "
+"the **v.generalize** module to open its options window."
+msgstr ""
+"GRASS 툴박스를 열고 :menuselection:`Vector --> Develop map --> Generalization` 범주를"
+" 더블클릭한 다음, ``v.generalize`` 모듈을 클릭해서 모듈 옵션 대화창을 여십시오."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:729
+msgid ""
+"Check that the 'ctour_100' vector appears as the :guilabel:`Name of input "
+"vector`."
+msgstr ":guilabel:`Name of input vector` 옵션에 'ctour_100' 옵션이 표시돼 있는지 확인하십시오."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:730
+msgid ""
+"From the list of algorithms, choose Chaiken's. Leave all other options at "
+"their default, and scroll down to the last row to enter in the field "
+":guilabel:`Name for output vector map` 'ctour_100_smooth', and click "
+":guilabel:`Run`."
+msgstr ""
+"알고리즘 목록에서, ``Chaiken's`` 를 선택하십시오. 다른 모든 옵션은 기본값으로 내버려두고, 마지막 행으로 스크롤해서 "
+":guilabel:`Name for output vector map` 란에 'ctour_100_smooth' 를 입력한 다음 "
+":guilabel:`Run` 버튼을 클릭하십시오."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:733
+msgid ""
+"The process takes several moments. Once ``Successfully finished`` appears in"
+" the output windows, click :guilabel:`View Output` and then "
+":guilabel:`Close`."
+msgstr ""
+"산출물 창에 ``Successfully finished`` 메시지가 나타낼 때까지 잠시 기다렸다가 :guilabel:`View "
+"Output` 버튼을 클릭한 다음 :guilabel:`Close` 버튼을 클릭하십시오."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:735
+msgid ""
+"You may change the color of the vector to display it clearly on the raster "
+"background and to contrast with the original contour lines. You will notice "
+"that the new contour lines have smoother corners than the original while "
+"staying faithful to the original overall shape."
+msgstr ""
+"래스터 배경에서 벡터가 더 잘 보이도록 그리고 원본 등고선과 대조되도록 벡터의 색상을 변경할 수도 있습니다. 새 등고선이 원본의 전체 "
+"형태를 잘 보전하면서도 원본보다 더 매끄러워졌다는 사실을 알 수 있습니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:746
+msgid "GRASS module v.generalize to smooth a vector map"
+msgstr "벡터 맵을 매끄럽게 만드는 GRASS *v.generalize* 모듈"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:748
+msgid "**Other uses for r.contour**"
+msgstr "**r.contour의 다른 활용법**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:750
+msgid ""
+"The procedure described above can be used in other equivalent situations. If"
+" you have a raster map of precipitation data, for example, then the same "
+"method will be used to create a vector map of isohyetal (constant rainfall) "
+"lines."
+msgstr ""
+"동등한 다른 상황에서도 앞에서 설명한 처리 과정을 사용할 수 있습니다. 예를 들어 강수량 데이터 래스터 맵이 있을 경우, 동일한 방법으로"
+" 등강수량(isohyetal) 선 벡터 맵을 생성할 수 있습니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:755
+msgid "Creating a Hillshade 3-D effect"
+msgstr "음영기복도 3D 효과 생성하기"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:757
+msgid ""
+"Several methods are used to display elevation layers and give a 3-D effect "
+"to maps. The use of contour lines, as shown above, is one popular method "
+"often chosen to produce topographic maps. Another way to display a 3-D "
+"effect is by hillshading. The hillshade effect is created from a DEM "
+"(elevation) raster by first calculating the slope and aspect of each cell, "
+"then simulating the sun's position in the sky and giving a reflectance value"
+" to each cell. Thus, you get sun-facing slopes lighted; the slopes facing "
+"away from the sun (in shadow) are darkened."
+msgstr ""
+"표고 레이어를 표시하고 맵에 3D 효과를 주는 데 쓰이는 몇 가지 방법들이 있습니다. 앞에서 보인 등고선을 활용하는 것도 지형도 생산에 "
+"자주 쓰이는 인기 있는 방법 가운데 하나입니다. 3D 효과를 줄 수 있는 또다른 방법이 바로 음영기복도입니다. 먼저 DEM(표고) "
+"래스터에서 각 셀의 경사(slope) 및 경사방향(aspect)을 계산한 다음, 하늘에 있는 태양의 위치를 시뮬레이션하고 각 셀에 그 "
+"반사율(reflectance)을 적용해서 음영기복도 효과를 생성합니다. 즉, 태양을 향해 있는 경사는 밝아지고 태양을 등지고 있는 경사는"
+" (그림자가 져서) 어두워집니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:765
+msgid ""
+"Begin this example by loading the ``gtopo30`` elevation raster. Start the "
+"GRASS Toolbox, and under the Raster category, double-click to open "
+":menuselection:`Spatial analysis --> Terrain analysis`."
+msgstr ""
+"``gtopo30`` 표고 래스터를 불러오는 것으로 이 예제를 시작하겠습니다. GRASS 툴박스를 연 다음, 래스터 범주에 있는 "
+":menuselection:`Spatial analysis --> Terrain analysis` 를 더블클릭해서 지형 분석 대화창을 "
+"여십시오."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:768
+msgid "Then click **r.shaded.relief** to open the module."
+msgstr "그리고 ``r.shaded.relief`` 를 클릭해서 모듈을 여십시오."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:769
+msgid "Change the :guilabel:`azimuth angle` |selectNumber| 270 to 315."
+msgstr ":guilabel:`azimuth angle` |selectNumber| 옵션에서 방위각을 270에서 315로 변경하십시오."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:770
+msgid ""
+"Enter ``gtopo30_shade`` for the new hillshade raster, and click "
+":guilabel:`Run`."
+msgstr ""
+"새 음영기복 래스터의 명칭으로 ``gtopo30_shade`` 를 입력한 다음 :guilabel:`Run` 버튼을 누르십시오."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:771
+msgid ""
+"When the process completes, add the hillshade raster to the map. You should "
+"see it displayed in grayscale."
+msgstr "공간 처리 과정이 완료되면, 음영기복 래스터를 맵에 추가하십시오. 회색조로 표시되는 것을 볼 수 있을 것입니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:773
+msgid ""
+"To view both the hillshading and the colors of the ``gtopo30`` together, "
+"move the hillshade map below the ``gtopo30`` map in the table of contents, "
+"then open the :menuselection:`Properties` window of ``gtopo30``, switch to "
+"the :guilabel:`Transparency` tab and set its transparency level to about "
+"25%."
+msgstr ""
+"음영기복도와 함께 ``gtopo30`` 레이어의 색상을 보려면, 범례에서 음영기복도를 ``gtopo30`` 맵 아래로 이동시킨 다음 "
+"``gtopo30`` 레이어의 속성 대화창을 여십시오. :guilabel:`Transparency` 탭에서 투명도 수준을 약 25%로 "
+"설정하십시오."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:778
+msgid ""
+"You should now have the ``gtopo30`` elevation with its colormap and "
+"transparency setting displayed **above** the grayscale hillshade map. In "
+"order to see the visual effects of the hillshading, turn off the "
+"``gtopo30_shade`` map, then turn it back on."
+msgstr ""
+"이제 ``gtopo30`` 표고 레이어가 색상표 및 투명도가 설정된 상태로 회색조인 음영기복도 **위에** 표시되었을 것입니다. "
+"음영기복도가 어떤 시각 효과를 주는지 보려면, ``gtopo30_shade`` 레이어를 껐다가 다시 켜보십시오."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:783
+msgid "**Using the GRASS shell**"
+msgstr "**GRASS 셸 사용하기**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:785
+msgid ""
+"The GRASS plugin in QGIS is designed for users who are new to GRASS and not "
+"familiar with all the modules and options. As such, some modules in the "
+"Toolbox do not show all the options available, and some modules do not "
+"appear at all. The GRASS shell (or console) gives the user access to those "
+"additional GRASS modules that do not appear in the Toolbox tree, and also to"
+" some additional options to the modules that are in the Toolbox with the "
+"simplest default parameters. This example demonstrates the use of an "
+"additional option in the **r.shaded.relief** module that was shown above."
+msgstr ""
+"QGIS의 GRASS 플러그인은 GRASS 초보자로서 모든 모듈 및 옵션에 익숙하지 않은 사용자를 위해 설계돼 있습니다. 따라서, "
+"툴박스에 있는 모듈 가운데 일부는 사용할 수 있는 모든 옵션을 표시하지 않으며, 일부는 아예 나타나지도 않습니다. GRASS 셸(또는 "
+"콘솔)은 사용자가 툴박스 트리에 나타나지 않는 이런 부가적인 GRASS 모듈을 사용할 수 있게 해주며, 또한 툴박스에 간소화된 기본 "
+"파라미터들만 표시되는 모듈의 부가적인 옵션들도 사용할 수 있게 해줍니다. 이번 예제에서는 앞에서 소개한 "
+"``r.shaded.relief`` 모듈의 부가적인 옵션을 사용하는 법을 보여줄 것입니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:799
+msgid "The GRASS shell, r.shaded.relief module"
+msgstr "GRASS 셸: *r.shaded.relief* 모듈"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:801
+msgid ""
+"The module **r.shaded.relief** can take a parameter ``zmult``, which "
+"multiplies the elevation values relative to the X-Y coordinate units so that"
+" the hillshade effect is even more pronounced."
+msgstr ""
+"``r.shaded.relief`` 모듈은 ``zmult`` 파라미터를 받을 수 있는데, 이 파라미터는 표고 값을 X/Y 좌표 단위를 "
+"기준으로 증가시켜서 음영기복 효과를 더욱 두드러지게 만듭니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:805
+msgid ""
+"Load the ``gtopo30`` elevation raster as above, then start the GRASS Toolbox"
+" and click on the GRASS shell. In the shell window, type the command "
+"``r.shaded.relief map=gtopo30 shade=gtopo30_shade2 azimuth=315 zmult=3`` and"
+" press :kbd:`Enter`."
+msgstr ""
+"앞에서와 마찬가지로 ``gtopo30`` 표고 래스터를 불러온 다음, GRASS 툴박스 대화창을 열고 GRASS 셸을 클릭하십시오. 셸 "
+"창에서 ``r.shaded.relief map=gtopo30 shade=gtopo30_shade2 azimuth=315 zmult=3``"
+" 명령어를 입력한 다음 :kbd:`Enter` 키를 누르십시오."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:809
+msgid ""
+"After the process finishes, shift to the :guilabel:`Browse` tab and double-"
+"click on the new ``gtopo30_shade2`` raster to display it in QGIS."
+msgstr ""
+"공간 처리 과정이 종료된 후, :guilabel:`Browse` 탭을 선택하고 새 ``gtopo30_shade2`` 래스터를 더블클릭해서"
+" QGIS 맵 캔버스에 표시하십시오."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:811
+msgid ""
+"As explained above, move the shaded relief raster below the ``gtopo30`` "
+"raster in the table of contents, then check the transparency of the colored "
+"``gtopo30`` layer. You should see that the 3-D effect stands out more "
+"strongly compared with the first shaded relief map."
+msgstr ""
+"앞에서 설명한 대로, 범례에서 음영기복 래스터를 ``gtopo30`` 래스터 아래로 이동시킨 다음, 색상이 적용된 ``gtopo30`` "
+"레이어의 투명도를 확인하십시오. 첫 번째 음영기복도를 사용했을 때보다 3D 효과가 더욱 두드러진다는 사실을 알 수 있을 겁니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:822
+msgid "Displaying shaded relief created with the GRASS module r.shaded.relief"
+msgstr "GRASS *r.shaded.relief* 모듈로 생성한 음영기복도 표시하기"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:826
+msgid "Raster statistics in a vector map"
+msgstr "벡터 맵에서의 래스터 통계"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:828
+msgid ""
+"The next example shows how a GRASS module can aggregate raster data and add "
+"columns of statistics for each polygon in a vector map."
+msgstr ""
+"다음 예제에서는 GRASS 모듈이 어떻게 래스터 데이터를 합치고 벡터 맵에 있는 각 폴리곤에 대한 통계 열들을 추가하는지 보여줄 "
+"것입니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:831
+msgid ""
+"Again using the Alaska data, refer to :ref:`sec_import_loc_data` to import "
+"the :file:`shapefiles/trees.shp` file into GRASS."
+msgstr ""
+"알래스카 데이터를 다시 사용해서, :file:`shapefiles/trees.shp` 파일을 GRASS 로 가져오십시오. "
+"(:ref:`sec_import_loc_data` 를 참조하세요.)"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:833
+msgid ""
+"Now an intermediate step is required: centroids must be added to the "
+"imported trees map to make it a complete GRASS area vector (including both "
+"boundaries and centroids)."
+msgstr ""
+"이제 중간 단계를 처리해야 합니다 -- 가져온 삼림 맵을 (경계 및 중심 둘 다 포함한) 완전한 GRASS 면 벡터로 만들려면 중심을 "
+"추가해야만 합니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:836
+msgid ""
+"From the Toolbox, choose :menuselection:`Vector --> Manage features`, and "
+"open the module **v.centroids**."
+msgstr ""
+"툴박스에서 :menuselection:`Vector --> Manage features` 를 선택한 다음, ``v.centroids`` "
+"모듈을 여십시오."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:838
+msgid ""
+"Enter as the :guilabel:`output vector map` 'forest_areas' and run the "
+"module."
+msgstr ""
+":guilabel:`Name for output vector map` 옵션에서 명칭을 ``forest_areas`` 로 입력한 다음 "
+"모듈을 실행하십시오."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:839
+msgid ""
+"Now load the ``forest_areas`` vector and display the types of forests - "
+"deciduous, evergreen, mixed - in different colors: In the layer "
+":guilabel:`Properties` window, :guilabel:`Symbology` tab, choose from "
+":guilabel:`Legend type` |selectString| 'Unique value' and set the "
+":guilabel:`Classification field` to 'VEGDESC'. (Refer to the explanation of "
+"the symbology tab in :ref:`vector_style_menu` of the vector section.)"
+msgstr ""
+"이제 ``forest_areas`` 벡터를 불러와서 삼림 유형을 -- 낙엽수림, 상록수림, 혼효수림 -- 서로 다른 색상으로 "
+"표시하십시오. 레이어 속성 대화창의 :guilabel:`Symbology` 탭에서 :guilabel:`Legend type` "
+"|selectString| 옵션을 'Unique value' 로 선택하고 :guilabel:`Classification field` "
+"옵션을 'VEGDESC' 으로 설정하십시오. (:ref:`vector_style_menu` 절의 :guilabel:`Symbology` "
+"탭에 관한 설명을 참조하세요.)"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:845
+msgid ""
+"Next, reopen the GRASS Toolbox and open :menuselection:`Vector --> Vector "
+"update` by other maps."
+msgstr ""
+"그리고 GRASS 툴박스 대화창을 다시 열고 다른 맵으로 :menuselection:`Vector --> Vector update` 를 "
+"여십시오."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:847
+msgid ""
+"Click on the **v.rast.stats** module. Enter ``gtopo30`` and "
+"``forest_areas``."
+msgstr "``v.rast.stats`` 모듈을 클릭한 다음 ``gtopo30`` 및 ``forest_areas`` 를 입력하십시오."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:848
+msgid ""
+"Only one additional parameter is needed: Enter :guilabel:`column prefix` "
+"``elev``, and click :guilabel:`Run`. This is a computationally heavy "
+"operation, which will run for a long time (probably up to two hours)."
+msgstr ""
+"이제 추가 파라미터 하나만 더 설정하면 됩니다. :guilabel:`column prefix` 옵션에 ``elev`` 를 입력한 다음 "
+":guilabel:`Run` 버튼을 클릭하십시오. 이 작업은 수많은 계산을 해야 하는 작업이기 때문에 아주 오래 (아마도 2시간 정도) "
+"걸릴 것입니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:851
+msgid ""
+"Finally, open the ``forest_areas`` attribute table, and verify that several "
+"new columns have been added, including ``elev_min``, ``elev_max``, "
+"``elev_mean``, etc., for each forest polygon."
+msgstr ""
+"마지막으로, ``forest_areas`` 레이어의 속성 테이블을 열고 각 삼림 폴리곤에 대해 ``elev_min``, "
+"``elev_max``, ``elev_mean`` 등을 포함한 새 열들 여럿이 추가된 것을 확인하십시오."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:860
+msgid "Customizing the GRASS Toolbox"
+msgstr "GRASS 툴박스 사용자 지정하기"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:862
+msgid ""
+"Nearly all GRASS modules can be added to the GRASS Toolbox. An XML interface"
+" is provided to parse the pretty simple XML files that configure the "
+"modules' appearance and parameters inside the Toolbox."
+msgstr ""
+"GRASS 툴박스에 거의 모든 GRASS 모듈을 추가할 수 있습니다. 매우 단순한 XML 파일로 툴박스 내부에서 모듈의 모습 및 "
+"파라미터를 환경 설정할 수 있으며, 이 파일을 파싱하기 위한 XML 인터페이스도 있습니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:866
+msgid ""
+"A sample XML file for generating the module ``v.buffer`` (v.buffer.qgm) "
+"looks like this:"
+msgstr "``v.buffer`` (v.buffer.qgm) 모듈을 생성하기 위한 예시 XML 파일의 내용은 다음과 같습니다:"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:881
+msgid ""
+"The parser reads this definition and creates a new tab inside the Toolbox "
+"when you select the module. A more detailed description for adding new "
+"modules, changing a module's group, etc., can be found at "
+"https://qgis.org/en/site/getinvolved/development/addinggrasstools.html."
+msgstr ""
+"사용자가 해당 모듈을 선택하면 파싱 작업자(parser)가 이 정의를 읽어들여 툴박스 안에 새 탭을 생성합니다. 새 모듈을 추가하는 "
+"방법, 모듈이 속한 그룹을 변경하는 방법 등에 대한 자세한 설명은 "
+"https://qgis.org/ko/site/getinvolved/development/addinggrasstools.html "
+"웹페이지에서 찾아볼 수 있습니다."

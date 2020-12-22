@@ -1,0 +1,142 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:31+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:27
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:27
+msgid "Icon"
+msgstr "アイコン"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:27
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:27
+msgid "Purpose"
+msgstr "目的"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:29
+msgid "|addRasterLayer|"
+msgstr "|addRasterLayer|"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:31
+msgid "|gdalScript|"
+msgstr "|gdalScript|"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:37
+msgid "|pan|"
+msgstr "|pan|"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:39
+msgid "|zoomIn|"
+msgstr "|zoomIn|"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:39
+msgid "|zoomOut|"
+msgstr "|zoomOut|"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:41
+msgid "|zoomToLayer|"
+msgstr "|zoomToLayer|"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:41
+msgid "|zoomLast|"
+msgstr "|zoomLast|"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:43
+msgid "|zoomNext|"
+msgstr "|zoomNext|"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:43
+msgid "|linkGeorefToQGis|"
+msgstr "|linkGeorefToQGis|"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:45
+msgid "|linkQGisToGeoref|"
+msgstr "|linkQGisToGeoref|"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:45
+msgid "|fullHistogramStretch|"
+msgstr "|fullHistogramStretch|"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:61
+msgid ""
+"Using already georeferenced layers. This can be either vector or raster data"
+" that contain the same objects/features that you have on the image that you "
+"want to georeference and with the projection that you want for your image. "
+"In this case, you can enter the coordinates by clicking on the reference "
+"dataset loaded in the QGIS map canvas."
+msgstr ""
+"すでにジオリファレンスされたレイヤを使用します。これはベクタまたはラスタデータのいずれかで、ジオリファレンスしたい画像内にある同じオブジェクト/地物が含まれ、画像に使用したい投影のものです。この場合、QGIS地図キャンバスにロードされた参照データセットをクリックして座標を入力できます。"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:67
+msgid ""
+"The usual procedure for georeferencing an image involves selecting multiple "
+"points on the raster, specifying their coordinates, and choosing a relevant "
+"transformation type. Based on the input parameters and data, the plugin will"
+" compute the world file parameters. The more coordinates you provide, the "
+"better the result will be."
+msgstr ""
+"通常の画像ジオレファレンス手順では、ラスタ上の複数の点の選択、それらの座標指定、そして利用する変換タイプの選択が必要です。入力パラメータとデータに従ってプラグインではワールドファイルパラメータを計算します。座標を多く指定するほど結果はより良いものになるでしょう。"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:96
+msgid ""
+"To start georeferencing an unreferenced raster, we must load it using the "
+"|addRasterLayer| button. The raster will show up in the main working area of"
+" the dialog. Once the raster is loaded, we can start to enter reference "
+"points."
+msgstr ""
+"ジオリファレンスされていないラスタのジオリファレンスを開始するには、 |addRasterLayer| "
+"ボタンを使用してそのラスタをロードする必要があります。ラスタはダイアログのメインの作業領域に表示されます。ラスタがロードされると、基準点の入力を開始できます。"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:125
+msgid ""
+"The points that are added to the map will be stored in a separate text file "
+"(:file:`[filename].points`) usually together with the raster image. This "
+"allows us to reopen the Georeferencer plugin at a later date and add new "
+"points or delete existing ones to optimize the result. The points file "
+"contains values of the form: ``mapX, mapY, pixelX, pixelY``. You can use the"
+" |loadGCPpoints| :sup:`Load GCP points` and |saveGCPPointsAs| :sup:`Save GCP"
+" points as` buttons to manage the files."
+msgstr ""
+"通常一緒にラスター画像と地図に追加された点は、別個のテキストファイル（ :file:`[ファイル名].points` "
+"）に格納されます。これは、後日ジオリファレンサプラグインを再び開いて、新しいポイントを追加したり、結果を最適化するために、既存のものを削除できます。 "
+"``mapX、mapY、pixelX、pixelY`` ：ポイント・ファイルは、フォームの値が含まれています。 |loadGCPpoints| "
+":sup:`GCP点をロード` と |saveGCPPointsAs| :sup:`名前を付けてGCPポイントを保存` "
+"ボタンを使用してファイルを管理できます。"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:166
+msgid ""
+"The **Polynomial** algorithms 1-3 are among the most widely used algorithms "
+"introduced to match source and destination ground control points. The most "
+"widely used polynomial algorithm is the second-order polynomial "
+"transformation, which allows some curvature. First-order polynomial "
+"transformation (affine) preserves collinearity and allows scaling, "
+"translation and rotation only."
+msgstr ""
+"**多項式** "
+"アルゴリズム1-3は最も広く使用されるアルゴリズムの一つで、変換元と変換先の地上基準点が一致するように導入されます。最も広く使用されている多項式アルゴリズムは二次多項式変換で、いくらかの湾曲が可能になります。一次多項式変換（アフィン）では共線性が保持され、縮尺変更、平行移動及び回転だけが可能になります。"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:188
+msgid "Linear"
+msgstr "線形"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_georeferencer.rst:189
+msgid "Cubic"
+msgstr "キュービック"
