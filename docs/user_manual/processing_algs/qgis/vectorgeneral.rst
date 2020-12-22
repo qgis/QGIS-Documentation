@@ -1093,7 +1093,7 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
-.. _qgisflattenrelationship:
+.. _qgisflattenrelationships:
 
 Flatten relationship
 --------------------
