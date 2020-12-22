@@ -212,6 +212,8 @@ Icon                            Substitution                        Icon        
 |newMap|                        ``|newMap|``                        |new3DMap|                      ``|new3DMap|``
 |tiltUp|                        ``|tiltUp|``                        |tiltDown|                      ``|tiltDown|``
 |3dNavigation|                  ``|3dNavigation|``                  |play|                          ``|play|``
+|temporal|                      ``|temporal``                       |temporalNavigationOff|         ``|temporalNavigationOff|``
+|temporalNavigationFixedRange|  ``|temporalNavigationFixedRange|``  |temporalNavigationAnimated|    ``|temporalNavigationAnimated|``
 ==============================  ==================================  ==============================  ==================================
 
 Selection and Expressions
@@ -1348,6 +1350,12 @@ Icon                            Substitution                        Icon        
 .. |tab| image:: /static/common/tab.png
    :width: 1.5em
 .. |temporal| image:: /static/common/temporal.png
+   :width: 1.5em
+.. |temporalNavigationAnimated| image:: /static/common/mTemporalNavigationAnimated.png
+   :width: 1.5em
+.. |temporalNavigationFixedRange| image:: /static/common/mTemporalNavigationFixedRange.png
+   :width: 1.5em
+.. |temporalNavigationOff| image:: /static/common/mTemporalNavigationOff.png
    :width: 1.5em
 .. |text| image:: /static/common/text.png
    :width: 1.5em
