@@ -1118,7 +1118,23 @@ Parameters
    * - **Input Layer**
      - ``INPUT``
      - [vector: any]
-     - Layer with relationships that should be de-normalized
+     - Layer with the relationship that should be de-normalized
+   * - **Flattened Layer**
+
+       Optional
+     - ``OUTPUT``
+     - [same as input]
+
+       Default: ``[Save to temporary file]``
+     - Specify the output (flattened) layer. One of:
+
+       * Skip Output
+       * Save to a Temporary File
+       * Save to File...
+       * Save To GeoPackage...
+       * Save to Database Table...
+
+       The file encoding can also be changed here.
 
 Outputs
 ..........
