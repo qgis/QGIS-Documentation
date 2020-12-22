@@ -28,6 +28,7 @@ QGIS User Guide
     working_with_ogc/ogc_client_support.rst
     working_with_gps/index
     auth_system/index
+    temporal/temporal
     grass_integration/grass_integration
     processing/index
     processing_algs/index
