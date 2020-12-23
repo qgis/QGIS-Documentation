@@ -48,6 +48,7 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.doctest',
     'sphinx.ext.extlinks',
+    'sphinxext.rediraffe',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -440,3 +441,9 @@ class BetterOutputChecker(doctest.OutputChecker):
         return doctest.OutputChecker.check_output(self, want, got, optionflags)
 
 ext_doctest.SphinxDocTestRunner = BetterDocTestRunner
+
+
+# -- Redirection settings --------------------------------
+
+rediraffe_redirects = "redirects.txt"
+#rediraffe_branch = "release_3.4"
