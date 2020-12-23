@@ -23,7 +23,8 @@ rm -r $SOURCEPOFILES
 sphinx-intl update -p build/gettext -l en
 
 # Clean the .tx/config files from existing references, out of the main section
-sed -i "/$PROJECT/,$ d" .tx/config
+# each reference is made of 5 lines and a blank line
+sed -i "/$PROJECT/,+5d" .tx/config
 
 for POFILE in `find $SOURCEPOFILES -type f -name '*.po'`
 do
