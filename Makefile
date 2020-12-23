@@ -132,12 +132,12 @@ all: springclean
 # transifex, we need to replace the underscores by dashes,
 # the english language is removed to avoid pulling the po source files.
 # finally, the spaces are replaced by commas. In the end we have something like this
-# tx pull -f --parallel -l lang1,lang2,lang2,lang4
+# tx pull -f --parallel --mode onlytranslated -l lang1,lang2,lang3,lang4
 tx_force_pull_translations:
 	$(eval space := )
 	$(eval space += )
 	$(eval comma += ,)
-	tx pull -f --parallel -l $(subst $(space),$(comma),$(subst en$(space),,$(subst zh_,zh-,$(LANGUAGES)))) ;
+	tx pull -f --parallel --mode onlytranslated -l $(subst $(space),$(comma),$(subst en$(space),,$(subst zh_,zh-,$(LANGUAGES)))) ;
 
 doctest:
 	LD_PRELOAD=/lib/x86_64-linux-gnu/libSegFault.so $(SPHINXBUILD) -b doctest . $(BUILDDIR)/doctest
