@@ -1435,7 +1435,9 @@ curved geometry, if not, QGIS will segmentize the circular arcs.
 - |circle3Tangents| :sup:`Add circle from 3 tangents`: Draws a circle that is
   tangential to three segments. **Note that you must activate snapping to
   segments** (See :ref:`snapping_tolerance`). Click on a segment to add a
-  tangent. If two tangents are parallel, an error message appears and the input
+  tangent. If two tangents are parallel, we take the coordinates of the first 
+  click on the first parallel tangent to determine the positioning of the circle.
+  If three tangents are parallel, an error message appears and the input
   is cleared. (Left-click, left-click, right-click)
 - |circle2TangentsPoint| :sup:`Add circle from 2 tangents and a point`: Similar
   to circle from 3 tangents, except that you have to select two tangents, enter
