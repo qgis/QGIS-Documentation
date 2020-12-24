@@ -155,12 +155,16 @@ Returns an array with only the items for which the expression evaluates to true.
    :widths: 15 85
 
    * - Syntax
-     - array_filter(array, expression)
+     - array_filter(array, expression, [limit=0])
+
+       [] marks optional arguments
    * - Arguments
      - * **array** - an array
        * **expression** - an expression to evaluate on each item. The variable `@element` will be replaced by the current value.
+       * **limit** - maximum number of elements to be returned. Use 0 to return all values.
    * - Examples
      - * ``array_filter(array(1,2,3),@element &lt; 3)`` → [ 1, 2 ]
+       * ``array_filter(array(1,2,3),@element &lt; 3, 1)`` → [ 1 ]
 
 
 .. end_array_filter_section
@@ -349,6 +353,119 @@ Returns the number of elements of an array.
 
 .. end_array_length_section
 
+.. array_majority_section
+
+.. _expression_function_Arrays_array_majority:
+
+array_majority
+..............
+
+Returns an array containing the most common value in an array. The returned array may contain more than one value if multiple values occur equally often.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - array_majority(array)
+   * - Arguments
+     - * **array** - an array
+   * - Examples
+     - * ``array_majority(array(0,1,42,42,43))`` → [ 42 ]
+       * ``array_majority(array(0,0,1,2,2,42))`` → [ 0, 2 ]
+
+
+.. end_array_majority_section
+
+.. array_max_section
+
+.. _expression_function_Arrays_array_max:
+
+array_max
+.........
+
+Returns the maximum value of an array.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - array_max(array)
+   * - Arguments
+     - * **array** - an array
+   * - Examples
+     - * ``array_max(array(0,42,4,2))`` → 42
+
+
+.. end_array_max_section
+
+.. array_mean_section
+
+.. _expression_function_Arrays_array_mean:
+
+array_mean
+..........
+
+Returns the mean of arithmetic values in an array. Non numeric values in the array are ignored.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - array_mean(array)
+   * - Arguments
+     - * **array** - an array
+   * - Examples
+     - * ``array_mean(array(0,1,7,66.6,135.4))`` → 42
+       * ``array_mean(array(0,84,'a','b','c'))`` → 42
+
+
+.. end_array_mean_section
+
+.. array_median_section
+
+.. _expression_function_Arrays_array_median:
+
+array_median
+............
+
+Returns the median of arithmetic values in an array. Non arithmetic values in the array are ignored.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - array_median(array)
+   * - Arguments
+     - * **array** - an array
+   * - Examples
+     - * ``array_median(array(0,1,42,42,43))`` → 42
+       * ``array_median(array(0,1,2,42,'a','b'))`` → 1.5
+
+
+.. end_array_median_section
+
+.. array_min_section
+
+.. _expression_function_Arrays_array_min:
+
+array_min
+.........
+
+Returns the minimum value of an array.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - array_min(array)
+   * - Arguments
+     - * **array** - an array
+   * - Examples
+     - * ``array_min(array(43,42,54))`` → 42
+
+
+.. end_array_min_section
+
 .. array_prepend_section
 
 .. _expression_function_Arrays_array_prepend:
@@ -495,6 +612,28 @@ Returns the provided array with its elements sorted.
 
 
 .. end_array_sort_section
+
+.. array_sum_section
+
+.. _expression_function_Arrays_array_sum:
+
+array_sum
+.........
+
+Returns the sum of arithmetic values in an array. Non numeric values in the array are ignored.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - array_sum(array)
+   * - Arguments
+     - * **array** - an array
+   * - Examples
+     - * ``array_sum(array(0,1,39.4,1.6,'a'))`` → 42.0
+
+
+.. end_array_sum_section
 
 .. array_to_string_section
 
