@@ -283,6 +283,13 @@ layer types:
   * :guilabel:`Cap style`
   * |checkbox| :guilabel:`Use custom dash pattern`: overrides the
     :guilabel:`Stroke style` setting with a custom dash.
+  * |checkbox| :guilabel:`Align dash pattern to line length`: the dash pattern
+    length will be adjusted so that the line will end with a complete dash 
+    element, instead of a gap.
+  * |checkbox| :guilabel:`Tweak dash pattern at sharp corners`: dynamically 
+    adjusts the dash pattern placement so that sharp corners are represented
+    by a full dash element coming into and out of the sharp corner.
+    Dependent on :guilabel:`Align dash pattern to line length`.
 
 .. _arrow_symbol:
 
