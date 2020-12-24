@@ -4,7 +4,7 @@
 # You can set these variables from the command line.
 LANG            = en
 # currently we are building for the following languages, if you want yours to be build: ask!
-LANGUAGES       = en bg cs # de es fi fr id it ja ko nl pt_BR pt_PT ro ru tr zh_Hant zh_Hans
+LANGUAGES       = en nl # bg cs de es fi fr id it ja ko nl pt_BR pt_PT ro ru tr zh_Hant zh_Hans
 SPHINXOPTS      =
 SPHINXINTLOPTS  = $(SPHINXOPTS) -D language=$(LANG)
 SPHINXBUILD     ?= sphinx-build
