@@ -1,24 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
-# Francis Gasc <francisgasc@gmail.com>, 2020
+# Harrissou Sant-anna, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:24+0000\n"
-"Last-Translator: Francis Gasc <francisgasc@gmail.com>, 2020\n"
+"POT-Creation-Date: 2020-12-13 09:01+0100\n"
+"PO-Revision-Date: 2020-12-24 10:15+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2020\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
 "Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
@@ -807,7 +808,7 @@ msgstr ""
 msgid "Adding your unit test to CMakeLists.txt"
 msgstr "Ajouter votre test unitaire à CMakeLists.txt"
 
-#: ../../docs/developers_guide/unittesting.rst:458
+#: ../../docs/developers_guide/unittesting.rst:459
 msgid ""
 "Adding your unit test to the build system is simply a matter of editing the "
 ":file:`CMakeLists.txt` in the test directory, cloning one of the existing "
@@ -818,11 +819,11 @@ msgstr ""
 "cloner un des blocs de test existants, puis de remplacer le nom de votre "
 "classe de test dans celui-ci. Par exemple :"
 
-#: ../../docs/developers_guide/unittesting.rst:469
+#: ../../docs/developers_guide/unittesting.rst:470
 msgid "The ADD_QGIS_TEST macro explained"
 msgstr "La macro ADD_QGIS_TEST expliquée"
 
-#: ../../docs/developers_guide/unittesting.rst:471
+#: ../../docs/developers_guide/unittesting.rst:472
 msgid ""
 "We'll run through these lines briefly to explain what they do, but if you "
 "are not interested, just do the step explained in the above section."
@@ -831,7 +832,7 @@ msgstr ""
 " mais si vous n'êtes pas intéressé, faites simplement l'étape expliquée dans"
 " la section ci-dessus."
 
-#: ../../docs/developers_guide/unittesting.rst:506
+#: ../../docs/developers_guide/unittesting.rst:507
 msgid ""
 "Let's look a little more in detail at the individual lines. First we define "
 "the list of sources for our test. Since we have only one source file "
@@ -844,7 +845,7 @@ msgstr ""
 "de classe et la définition sont dans le même fichier), il s'agit d'une "
 "simple déclaration :"
 
-#: ../../docs/developers_guide/unittesting.rst:515
+#: ../../docs/developers_guide/unittesting.rst:516
 msgid ""
 "Since our test class needs to be run through the Qt meta object compiler "
 "(moc) we need to provide a couple of lines to make that happen too:"
@@ -853,7 +854,7 @@ msgstr ""
 "méta-objet Qt (cmo), nous devons fournir quelques lignes en plus pour "
 "déclencher ce comportement:"
 
-#: ../../docs/developers_guide/unittesting.rst:524
+#: ../../docs/developers_guide/unittesting.rst:525
 msgid ""
 "Next we tell cmake that it must make an executable from the test class. "
 "Remember in the previous section on the last line of the class "
@@ -868,7 +869,7 @@ msgstr ""
 "choses) une méthode principale pour que la classe puisse être compilée comme"
 " un exécutable :"
 
-#: ../../docs/developers_guide/unittesting.rst:535
+#: ../../docs/developers_guide/unittesting.rst:536
 msgid ""
 "Next we need to specify any library dependencies. At the moment, classes "
 "have been implemented with a catch-all QT_LIBRARIES dependency, but we will "
@@ -883,7 +884,7 @@ msgstr ""
 "Bien entendu, vous devez également établir des liens vers les bibliothèques "
 "qgis pertinentes, comme l'exige votre test unitaire."
 
-#: ../../docs/developers_guide/unittesting.rst:545
+#: ../../docs/developers_guide/unittesting.rst:546
 msgid ""
 "Next we tell cmake to install the tests to the same place as the qgis "
 "binaries itself. This is something we plan to remove in the future so that "
@@ -894,7 +895,7 @@ msgstr ""
 "l'avenir afin que les tests puissent être exécutés directement à partir de "
 "l'arbre des sources."
 
-#: ../../docs/developers_guide/unittesting.rst:572
+#: ../../docs/developers_guide/unittesting.rst:573
 msgid ""
 "Finally the above uses ``ADD_TEST`` to register the test with cmake / ctest."
 " Here is where the best magic happens - we register the class with ctest. If"
@@ -922,11 +923,11 @@ msgstr ""
 "l'exécution des tests dans le processus de compilation, c'est le CTest que "
 "nous utilisons."
 
-#: ../../docs/developers_guide/unittesting.rst:585
+#: ../../docs/developers_guide/unittesting.rst:586
 msgid "Building your unit test"
 msgstr "Compiler votre test unitaire"
 
-#: ../../docs/developers_guide/unittesting.rst:587
+#: ../../docs/developers_guide/unittesting.rst:588
 msgid ""
 "To build the unit test you need only to make sure that ``ENABLE_TESTS=true``"
 " in the cmake configuration. There are two ways to do this:"
@@ -935,7 +936,7 @@ msgstr ""
 "``ENABLE_TESTS=true`` est dans la configuration de CMake. Il existe deux "
 "moyens pour y parvenir:"
 
-#: ../../docs/developers_guide/unittesting.rst:590
+#: ../../docs/developers_guide/unittesting.rst:591
 msgid ""
 "Run ``ccmake ..`` ( or ``cmakesetup ..`` under windows) and interactively "
 "set the ``ENABLE_TESTS`` flag to ``ON``."
@@ -943,13 +944,13 @@ msgstr ""
 "Lancez ``cmake ..`` (ou ``cmakesetup ..`` sous MS-Windows) et positionnez "
 "interactivement l'option ``ENABLE_TESTS`` à ``ON``."
 
-#: ../../docs/developers_guide/unittesting.rst:592
+#: ../../docs/developers_guide/unittesting.rst:593
 msgid "Add a command line flag to cmake e.g. ``cmake -DENABLE_TESTS=true ..``"
 msgstr ""
 "Ajoutez une option à la ligne de commande de cmake; ex: ``cmake "
 "-DENABLE_TESTS=true ..``"
 
-#: ../../docs/developers_guide/unittesting.rst:594
+#: ../../docs/developers_guide/unittesting.rst:595
 msgid ""
 "Other than that, just build QGIS as per normal and the tests should build "
 "too."
@@ -957,18 +958,18 @@ msgstr ""
 "À part cela, compilez QGIS comme d'habitude et les tests devraient également"
 " se compiler."
 
-#: ../../docs/developers_guide/unittesting.rst:598
+#: ../../docs/developers_guide/unittesting.rst:599
 msgid "Run your tests"
 msgstr "Lancer vos tests"
 
-#: ../../docs/developers_guide/unittesting.rst:601
+#: ../../docs/developers_guide/unittesting.rst:602
 msgid ""
 "The simplest way to run the tests is as part of your normal build process:"
 msgstr ""
 "Le moyen le plus simple de lancer les tests est de les inclure directement "
 "dans le processus de compilation:"
 
-#: ../../docs/developers_guide/unittesting.rst:607
+#: ../../docs/developers_guide/unittesting.rst:608
 msgid ""
 "The ``make test`` command will invoke CTest which will run each test that "
 "was registered using the ADD_TEST CMake directive described above. Typical "
@@ -980,7 +981,7 @@ msgstr ""
 " utilisant la directive CMake ADD_TEST décrite ci-dessus. La sortie typique "
 "de ``make test`` ressemblera à ceci :"
 
-#: ../../docs/developers_guide/unittesting.rst:627
+#: ../../docs/developers_guide/unittesting.rst:628
 msgid ""
 "If a test fails, you can use the ctest command to examine more closely why "
 "it failed. Use the ``-R`` option to specify a regex for which tests you want"
@@ -991,11 +992,11 @@ msgstr ""
 " expression rationnelle pour désigner les tests que vous voulez lancer et "
 "``-V`` pour activer la sortie verbeuse."
 
-#: ../../docs/developers_guide/unittesting.rst:672
+#: ../../docs/developers_guide/unittesting.rst:673
 msgid "Running individual tests"
 msgstr "Réalisation de tests individuels"
 
-#: ../../docs/developers_guide/unittesting.rst:674
+#: ../../docs/developers_guide/unittesting.rst:675
 msgid ""
 "C++ tests are ordinary applications. You can run them from the build folder "
 "like any executable."
@@ -1003,7 +1004,7 @@ msgstr ""
 "Les tests C++ sont des applications ordinaires. Vous pouvez les exécuter à "
 "partir du dossier de construction comme n'importe quel exécutable."
 
-#: ../../docs/developers_guide/unittesting.rst:690
+#: ../../docs/developers_guide/unittesting.rst:691
 msgid ""
 "These tests also take `command line arguments <https://doc-"
 "snapshots.qt.io/qt5-5.9/qtest-overview.html#qt-test-command-line-"
@@ -1013,15 +1014,15 @@ msgstr ""
 "://doc-snapshots.qt.io/qt5-5.9/qtest-overview.html#qt-test-command-line-"
 "arguments>`_. Cela permet d'exécuter un sous-ensemble spécifique de tests :"
 
-#: ../../docs/developers_guide/unittesting.rst:706
+#: ../../docs/developers_guide/unittesting.rst:707
 msgid "Debugging unit tests"
 msgstr "Tests de l'unité de débogage"
 
-#: ../../docs/developers_guide/unittesting.rst:709
+#: ../../docs/developers_guide/unittesting.rst:710
 msgid "C++ Tests"
 msgstr "Test C++ "
 
-#: ../../docs/developers_guide/unittesting.rst:711
+#: ../../docs/developers_guide/unittesting.rst:712
 msgid ""
 "For C++ unit tests, QtCreator automatically adds run targets, so you can "
 "start them from the debugger."
@@ -1029,7 +1030,7 @@ msgstr ""
 "Pour les tests unitaires C++, QtCreator ajoute automatiquement des cibles "
 "d'exécution, de sorte que vous pouvez les lancer depuis le débogueur."
 
-#: ../../docs/developers_guide/unittesting.rst:714
+#: ../../docs/developers_guide/unittesting.rst:715
 msgid ""
 "If you go to *Projects* and there to the *Build & Run* --> Desktop *Run* "
 "tab, you can also specify command line parameters that will allow a subset "
@@ -1040,11 +1041,11 @@ msgstr ""
 "ligne de commande qui permettront d'exécuter un sous-ensemble de tests dans "
 "un fichier .cpp dans le débogueur."
 
-#: ../../docs/developers_guide/unittesting.rst:719
+#: ../../docs/developers_guide/unittesting.rst:720
 msgid "Python Tests"
 msgstr "Test Python "
 
-#: ../../docs/developers_guide/unittesting.rst:721
+#: ../../docs/developers_guide/unittesting.rst:722
 msgid ""
 "It's also possible to start Python unit tests from QtCreator with GDB. For "
 "this, you need to go to :guilabel:`Projects` and choose :guilabel:`Run` "
@@ -1061,47 +1062,47 @@ msgstr ""
 " test unitaire, par exemple "
 ":file:`/home/user/dev/qgis/QGIS/tests/src/python/test_qgsattributeformeditorwidget.py`."
 
-#: ../../docs/developers_guide/unittesting.rst:729
+#: ../../docs/developers_guide/unittesting.rst:730
 msgid "Now also change the ``Run Environment`` and add 3 new variables:"
 msgstr ""
 "Maintenant, modifiez également l'``Environnement d'exécution`` et ajoutez 3 "
 "nouvelles variables :"
 
-#: ../../docs/developers_guide/unittesting.rst:732
+#: ../../docs/developers_guide/unittesting.rst:733
 msgid "Variable"
 msgstr "Variable"
 
-#: ../../docs/developers_guide/unittesting.rst:732
+#: ../../docs/developers_guide/unittesting.rst:733
 msgid "Value"
 msgstr "Valeur"
 
-#: ../../docs/developers_guide/unittesting.rst:734
+#: ../../docs/developers_guide/unittesting.rst:735
 msgid "PYTHONPATH"
 msgstr "PYTHONPATH"
 
-#: ../../docs/developers_guide/unittesting.rst:734
+#: ../../docs/developers_guide/unittesting.rst:735
 msgid ""
 "[build]/output/python/:[build]/output/python/plugins:[source]/tests/src/python"
 msgstr ""
 "[build]/output/python/:[build]/output/python/plugins:[source]/tests/src/python"
 
-#: ../../docs/developers_guide/unittesting.rst:736
+#: ../../docs/developers_guide/unittesting.rst:737
 msgid "QGIS_PREFIX_PATH"
 msgstr "QGIS_PREFIX_PATH"
 
-#: ../../docs/developers_guide/unittesting.rst:736
+#: ../../docs/developers_guide/unittesting.rst:737
 msgid "[build]/output"
 msgstr "[build]/output"
 
-#: ../../docs/developers_guide/unittesting.rst:738
+#: ../../docs/developers_guide/unittesting.rst:739
 msgid "LD_LIBRARY_PATH"
 msgstr "LD_LIBRARY_PATH"
 
-#: ../../docs/developers_guide/unittesting.rst:738
+#: ../../docs/developers_guide/unittesting.rst:739
 msgid "[build]/output/lib"
 msgstr "[build]/output/lib"
 
-#: ../../docs/developers_guide/unittesting.rst:741
+#: ../../docs/developers_guide/unittesting.rst:742
 msgid ""
 "Replace ``[build]`` with your build directory and ``[source]`` with your "
 "source directory."
@@ -1109,11 +1110,11 @@ msgstr ""
 "Remplacez ``[build]`` par votre répertoire de compilation et ``[source]`` "
 "par le répertoire source."
 
-#: ../../docs/developers_guide/unittesting.rst:745
+#: ../../docs/developers_guide/unittesting.rst:746
 msgid "Have fun"
 msgstr "Amusez-vous"
 
-#: ../../docs/developers_guide/unittesting.rst:747
+#: ../../docs/developers_guide/unittesting.rst:748
 msgid ""
 "Well that concludes this section on writing unit tests in QGIS. We hope you "
 "will get into the habit of writing test to test new functionality and to "
