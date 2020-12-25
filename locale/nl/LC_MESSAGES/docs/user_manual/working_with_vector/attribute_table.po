@@ -1,24 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
+# Harrissou Sant-anna, 2020
 # DiGro, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:32+0000\n"
+"POT-Creation-Date: 2020-12-13 09:01+0100\n"
+"PO-Revision-Date: 2020-12-24 10:23+0000\n"
 "Last-Translator: DiGro, 2020\n"
 "Language-Team: Dutch (https://www.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
 "Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -307,8 +309,8 @@ msgid ":kbd:`Ctrl+R`"
 msgstr ":kbd:`Ctrl+R`"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
-msgid "|deselectAll|"
-msgstr "|deselectAll|"
+msgid "|deselectActiveLayer|"
+msgstr "|deselectActiveLayer|"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Deselect all"
@@ -884,8 +886,10 @@ msgid "|formSelect| :guilabel:`Select Features By Value...`"
 msgstr "|formSelect| :guilabel:`Objecten selecteren d.m.v. waarde...`"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:304
-msgid "|deselectAll| :guilabel:`Deselect Features from All Layers`"
-msgstr "|deselectAll| :guilabel:`Objecten uit alle lagen deselecteren`"
+msgid "|deselectActiveLayer| :guilabel:`Deselect All Features from the Layer`"
+msgstr ""
+"|deselectActiveLayer| :guilabel:`Objecten deselecteren van huidige actieve "
+"laag`"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:305
 msgid "|selectAll| :guilabel:`Select All Features`"
@@ -1739,19 +1743,19 @@ msgstr ""
 "QGIS de relaties tussen uw tabellen te vertellen."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:684
-msgid "Defining 1-N relations (Relation Manager)"
-msgstr " 1-N-relaties definiëren (Relatiebeheer)"
+msgid "Defining 1-N relations"
+msgstr "1-N-relaties definiëren"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:686
 msgid ""
 "The first thing we are going to do is to let QGIS know about the relations "
-"between the layers. This is done in :menuselection:`Project --> Project "
-"Properties...`. Open the :guilabel:`Relations` tab and click on "
+"between the layers. This is done in :menuselection:`Project --> "
+"Properties...`. Open the :guilabel:`Relations` tab and click on |signPlus| "
 ":guilabel:`Add Relation`."
 msgstr ""
 "Het eerste dat gaan we doen is om QGIS in kennis te stellen van de relaties "
 "tussen de lagen. Dit wordt gedaan in :menuselection:`Project --> "
-"Eigenschappen…`. Open de tab :guilabel:`Relaties` en klik op "
+"Eigenschappen…`. Open de tab :guilabel:`Relaties` en klik op |signPlus| "
 ":guilabel:`Relatie toevoegen`."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:690
@@ -1768,33 +1772,41 @@ msgstr ""
 msgid ""
 "**Referenced Layer (Parent)** also considered as parent layer, is the one "
 "with the primary key, pointed to, so here it is the ``regions`` layer. You "
-"can define the primary key of the referenced layer, so it is ``ID``. For "
-"this layer you can define multiple referenced fields by using the |signPlus|"
-" button."
+"need to define the primary key of the referenced layer, so it is ``ID``."
 msgstr ""
 "**Referentielaag (Parent)**, ook wel beschouwd als de ouderlaag, is die "
 "waarnaar de primaire sleutel verwijst, dus hier is het de laag ``regions``. "
-"U kunt de primaire sleutel voor de referentielaag definiëren, dus is het "
-"``ID``. Voor deze laag kunt u meerdere velden, waarnaar wordt verwezen, "
-"definiëren door de knop |signPlus| tegebruiken."
+"U moet de primaire sleutel voor de referentielaag definiëren, dus is het "
+"``ID``."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:697
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:696
 msgid ""
 "**Referencing Layer (Child)** also considered as child layer, is the one "
 "with the foreign key field on it. In our case, this is the ``airports`` "
 "layer. For this layer you need to add a referencing field which points to "
-"the other layer, so this is ``fk_region``. When using multiple field "
-"relations you can add another referencing field by using the |signPlus| "
-"button."
+"the other layer, so this is ``fk_region``."
 msgstr ""
 "**Referentielaag (Kind)**, ook wel beschouwd als de kindlaag, is die met het"
 " veld voor de vreemde sleutel erop. In ons geval is dit de laag "
 "``airports``. Voor deze laag dient u een verwijzingsveld toe te voegen dat "
-"naar de andere laag verwijst, dus is dit ``fk_region``. Bij het gebruiken "
-"van meerdere veldrelaties kunt u een ander verwijzingsveld toevoegen met de "
-"knop |signPlus|."
+"naar de andere laag verwijst, dus is dit ``fk_region``."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:702
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:701
+msgid ""
+"Sometimes, you need more than a single field to uniquely identify features "
+"in a layer. Creating a relation with such a layer requires a **composite "
+"key**, ie more than a single pair of matching fields. Use the |signPlus| "
+":sup:`Add new field pair as part of a composite foreign key` button to add "
+"as many pairs as necessary."
+msgstr ""
+"Soms heeft u meer dan één enkel veld nodig om objecten op een laag uniek te "
+"kunnen identificeren. Maken van een relatie met een dergelijke laag vereist "
+"een **samengestelde sleutel**, d.i. meer dan één enkel paar van "
+"overeenkomende velden. Gebruik de knop |signPlus| :sup:`Nieuw veldpaar "
+"toevoegen als deel van een samengestelde sleutel` om net zoveel paren toe te"
+" voegen als nodig is."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:707
 msgid ""
 "**Id** will be used for internal purposes and has to be unique. You may need"
 " it to build :ref:`custom forms <customize_form>`. If you leave it empty, "
@@ -1806,7 +1818,7 @@ msgstr ""
 " het leeg laat zal er een voor u worden gegenereerd maar u kunt er zelf een "
 "toewijzen om er een te krijgen die voor u eenvoudiger is."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:706
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:711
 msgid ""
 "**Relationship strength** sets the strength of the relation between the "
 "parent and the child layer. The default :guilabel:`Association` type means "
@@ -1820,15 +1832,27 @@ msgstr ""
 ":guilabel:`Compositie` u in staat stelt ook de kindobjecten te dupliceren "
 "wanneer u die van de ouderlaag dupliceert."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:717
-msgid "Relation Manager"
-msgstr "Relatiebeheer"
-
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:722
+msgid "Adding a relation between regions and airports layers"
+msgstr "Toevoegen van een relatie tussen de lagen regions en airports"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:724
+msgid ""
+"From the :guilabel:`Relations` tab, you can also press the |signPlus| "
+":guilabel:`Discover Relation` button to fetch the relations available from "
+"the providers of the loaded layers. This is possible for layers stored in "
+"data providers like PostgreSQL or SpatiaLite."
+msgstr ""
+"Op de tab :guilabel:`Relaties` kunt u ook drukken op de knop |signPlus| "
+":guilabel:`Relaties ontdekken` om de beschikbare relaties van de geladen "
+"lagen op te halen. Dit is mogelijk voor lagen die zijn opgeslagen in "
+"gegevensproviders zoals PostgreSQL of SpatiaLite."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:732
 msgid "Forms for 1-N relations"
 msgstr "Formulieren voor 1-N-relaties"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:724
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:734
 msgid ""
 "Now that QGIS knows about the relation, it will be used to improve the forms"
 " it generates. As we did not change the default form method (autogenerated) "
@@ -1846,12 +1870,12 @@ msgstr ""
 "kiezen om het openen in het dialoogvenster Identificatieresultaten onder "
 "Acties."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:736
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:746
 msgid "Identification dialog regions with relation to airports"
 msgstr ""
 "Dialoogvenster Identificatieresultaten regions met relatie naar vliegvelden"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:738
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:748
 msgid ""
 "As you can see, the airports assigned to this particular region are all "
 "shown in a table. And there are also some buttons available. Let's review "
@@ -1861,7 +1885,7 @@ msgstr ""
 "toegewezen weergegeven in een tabel. En er zijn ook enkele knoppen "
 "beschikbaar. Laten we die even kort bekijken:"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:741
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:751
 msgid ""
 "The |toggleEditing| button is for toggling the edit mode. Be aware that it "
 "toggles the edit mode of the airport layer, although we are in the feature "
@@ -1873,11 +1897,11 @@ msgstr ""
 "in het objectformulier van een object uit de laag regions staan. maar de "
 "tabel geeft objecten weer uit de laag airports."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:745
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:755
 msgid "The |saveEdits| button is for saving all the edits."
 msgstr "De knop |saveEdits| is voor het opslaan van alle bewerkingen."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:746
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:756
 msgid ""
 "The |newTableRow| button will add a new record to the airport layer "
 "attribute table. And it will assign the new airport to the current region by"
@@ -1887,14 +1911,24 @@ msgstr ""
 "laag airports toevoegen. En het zal standaard het nieuwe vliegveld toevoegen"
 " aan de huidige regio."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:748
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:758
+msgid ""
+"The |capturePoint| is the same as |newTableRow| but lets you digitize the "
+"airport geometry in the map canvas beforehand. Note that the icon will "
+"change according to geometry type."
+msgstr ""
+"Het |capturePoint| is hetzelfde als |newTableRow| maar laat u van tevoren de"
+" geometrie van het airport digitaliseren in het kaartvenster. Onthoud dat "
+"het pictogram zal wijzigen, overeenkomstig het type geometrie."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:761
 msgid ""
 "The |duplicateFeature| button allows you to copy one or more child features."
 msgstr ""
 "De knop |duplicateFeature| stelt u in staat één of meer kindobjecten te "
 "kopiëren."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:749
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:762
 msgid ""
 "The |deleteSelectedFeatures| button will delete the selected airport "
 "permanently."
@@ -1902,7 +1936,7 @@ msgstr ""
 "De knop |deleteSelectedFeatures| zal het geselecteerde vliegveld permanent "
 "verwijderen."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:751
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:764
 msgid ""
 "The |link| symbol will open a new dialog where you can select any existing "
 "airport which will then be assigned to the current region. This may be handy"
@@ -1913,7 +1947,7 @@ msgstr ""
 "regio. Dit kan handig zijn als u per ongeluk eerder het vliegveld in de "
 "verkeerde regio maakte."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:754
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:767
 msgid ""
 "The |unlink| symbol will unlink the selected airport from the current "
 "region, leaving them unassigned (the foreign key is set to NULL) "
@@ -1923,7 +1957,7 @@ msgstr ""
 "huidige regio en het daarna als niet toegewezen beschouwen (de secundaire "
 "sleutel wordt op NULL gezet)."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:756
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:769
 msgid ""
 "With the |zoomToSelected| button you can zoom the map to the selected child "
 "features."
@@ -1931,7 +1965,7 @@ msgstr ""
 "Met de knop |zoomToSelected| kunt u op de kaart inzoomen op de geselecteerde"
 " kindobjecten."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:758
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:771
 msgid ""
 "The two buttons |formView| and |openTable| to the right switch between table"
 " view and form view where the later let's you view all the airports in their"
@@ -1941,7 +1975,7 @@ msgstr ""
 "tussen de tabelweergave en de formulierweergave waarbij de laatste u de "
 "vliegvelden laat zien in hun respectievelijke formulier."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:762
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:775
 msgid ""
 "In the above example the referencing layer has geometries (so it isn't just "
 "an alphanumeric table) so the above steps will create an entry in the layer "
@@ -1953,7 +1987,7 @@ msgstr ""
 "stappen een item maken in de attributentabel van de laag dat geen "
 "overeenkomend geometrisch object heeft. De geometrie toevoegen:"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:767
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:780
 msgid ""
 "Choose |openTable| :menuselection:`Open Attribute Table` for the referencing"
 " layer."
@@ -1961,7 +1995,7 @@ msgstr ""
 "Kies |openTable| :menuselection:`Attributentabel openen` voor de "
 "referentielaag."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:768
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:781
 msgid ""
 "Select the record that has been added previously within the feature form of "
 "the referenced layer."
@@ -1969,7 +2003,7 @@ msgstr ""
 "Selecteer het record dat eerder werd toegevoegd in het objectformulier van "
 "de verwijzingslaag."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:770
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:783
 msgid ""
 "Use the |addPart| :sup:`Add Part` digitizing tool to attach a geometry to "
 "the selected attributes table record."
@@ -1978,7 +2012,7 @@ msgstr ""
 "om een geometrie te verbinden met het geselecteerde record van de "
 "attributentabel."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:773
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:786
 msgid ""
 "If you work on the airport table, the widget Relation Reference is "
 "automatically set up for the ``fk_region`` field (the one used to create the"
@@ -1988,7 +2022,7 @@ msgstr ""
 "automatisch ingesteld voor het veld ``fk_region`` (dat werd gebruikt om de "
 "relatie te maken), bekijk :ref:`widget Relatie-verwijzing<configure_field>`."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:779
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:792
 msgid ""
 "In the airport form you will see the |formView| button at the right side of "
 "the ``fk_region`` field: if you click on the button the form of the region "
@@ -2000,12 +2034,12 @@ msgstr ""
 "laag Regions worden geopend. Dit widget stelt u in staat eenvoudig en snel "
 "de formulieren van de gekoppelde ouderobjecten te openen."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:789
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:802
 msgid "Identification dialog airport with relation to regions"
 msgstr ""
 "Dialoogvenster Identificatieresultaten Airports met relatie naar Regions"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:791
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:804
 msgid ""
 "The Relation Reference widget has also an option to embed the form of the "
 "parent layer within the child one. It is available in  the "
@@ -2018,7 +2052,7 @@ msgstr ""
 "Airports: selecteer het veld ``fk_region`` en selecteer de optie ``Ingebed "
 "formulier weergeven``."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:796
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:809
 msgid ""
 "If you look at the feature dialog now, you will see, that the form of the "
 "region is embedded inside the airports form and will even have a combobox, "
@@ -2029,7 +2063,7 @@ msgstr ""
 "zelfs een combinatievak zal hebben, wat u in staat stelt het huidige "
 "vliegveld aan een andere regio toe te wijzen."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:805
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:818
 msgid ""
 "Moreover if you toggle the editing mode of the airport layer, the "
 "``fk_region`` field has also an autocompleter function: while typing you "
@@ -2046,7 +2080,7 @@ msgstr ""
 "toestaan`` in het menu :menuselection:`Eigenschappen --> Formulier "
 "attributen` van de laag airports."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:812
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:825
 msgid ""
 "The child layer can also be used in the :ref:`select_by_value` tool in order"
 " to select features of the parent layer based on attributes of their "
@@ -2056,7 +2090,7 @@ msgstr ""
 ":ref:`select_by_value` om objecten van de ouderlaag te selecteren, gebaseerd"
 " op attributen van hun kinderen."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:815
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:828
 msgid ""
 "In :numref:`figure_select_by_value`, all the regions where the mean altitude"
 " of the airports is greater than 500 meters above sea level are selected."
@@ -2065,7 +2099,7 @@ msgstr ""
 " hoogte van de vliegvelden groter is dan 500 meter boven zeeniveau, "
 "geselecteerd."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:819
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:832
 msgid ""
 "You will find that many different aggregation functions are available in the"
 " form."
@@ -2073,15 +2107,15 @@ msgstr ""
 "U zult merken dat veel verschillende functies voor samenvoegen in het "
 "formulier beschikbaar zijn."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:826
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:839
 msgid "Select parent features with child values"
 msgstr "Ouderobjecten selecteren met waarden van hun kind"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:833
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:846
 msgid "Introducing many-to-many (N-M) relations"
 msgstr "Introduceren van relaties veel-tot-veel (N-M)"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:835
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:848
 msgid ""
 "N-M relations are many-to-many relations between two tables. For instance, "
 "the ``airports`` and ``airlines`` layers: an airport receives several "
@@ -2092,7 +2126,7 @@ msgstr ""
 "verscheidene luchtvaartmaatschappijen en een luchtvaartmaatschappij vliegt "
 "naar verscheidene vliegvelden."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:839
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:852
 msgid ""
 "This SQL code creates the three tables we need for an N-M relationship in a "
 "PostgreSQL/PostGIS schema named *locations*. You can run the code using the "
@@ -2117,7 +2151,7 @@ msgstr ""
 "*voorwaarden* in deze tabel forceren dat een airport alleen kan worden "
 "geassocieerd met een airline als beide al in hun lagen bestaan."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:891
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:904
 msgid ""
 "Instead of PostgreSQL you can also use GeoPackage. In this case, the three "
 "tables can be created manually using the :menuselection:`Database --> DB "
@@ -2129,7 +2163,7 @@ msgstr ""
 ":menuselection:`Database --> DB Manager…`. In GeoPackage zijn geen schema's,"
 " dus het voorvoegsel *locations* is niet nodig."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:895
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:908
 msgid ""
 "Foreign key constraints in ``airports_airlines`` table can´t be created "
 "using :menuselection:`Table --> Create Table…` or :menuselection:`Table --> "
@@ -2144,7 +2178,7 @@ msgstr ""
 "ondersteunt geen argumenten *ADD CONSTRAINT*, dus de tabel "
 "``airports_airlines`` zou in twee stappen moeten worden gemaakt:"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:900
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:913
 msgid ""
 "Set up the table only with the ``id`` field using :menuselection:`Table --> "
 "Create Table…`"
@@ -2152,7 +2186,7 @@ msgstr ""
 "Maak de tabel met alleen het veld ``ID`` met :menuselection:`Tabel --> Tabel"
 " maken…`"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:901
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:914
 msgid ""
 "Using :menuselection:`Database --> SQL Window…`, type and execute this SQL "
 "code:"
@@ -2160,7 +2194,7 @@ msgstr ""
 "Met :menuselection:`Database --> SQL-venster…`, typ en voer deze code voor "
 "SQL uit:"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:919
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:932
 msgid ""
 "Then in QGIS, you should set up two :ref:`one-to-many relations "
 "<one_to_many_relation>` as explained above:"
@@ -2168,15 +2202,15 @@ msgstr ""
 "Dan, in QGIS, zou u twee :ref:`een-tot-veel relaties <one_to_many_relation>`"
 " moeten instellen zoals hierboven uitgelegd:"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:922
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:935
 msgid "a relation between ``airlines`` table and the pivot table;"
 msgstr "een relatie tussen de tabel ``airlines`` en de draaitabel;"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:923
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:936
 msgid "and a second one between ``airports`` table and the pivot table."
 msgstr "en een tweede tussen de tabel ``airports`` en de draaitabel."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:925
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:938
 msgid ""
 "An easier way to do it (only for PostgreSQL) is using the "
 ":guilabel:`Discover Relations` in :menuselection:`Project --> Properties -->"
@@ -2190,11 +2224,11 @@ msgstr ""
 "hoeft alleen de twee te kiezen die u nodig hebt. Vergeet niet eerst de drie "
 "tabellen in het project van QGIS in te lezen."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:935
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:948
 msgid "Relations and autodiscover"
 msgstr "Relaties en automatisch ontdekken"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:937
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:950
 msgid ""
 "In case you want to remove an ``airport`` or an ``airline``, QGIS won't "
 "remove the associated record(s) in ``airports_airlines`` table. This task "
@@ -2207,11 +2241,11 @@ msgstr ""
 "juiste *voorwaarden* specificeren bij het maken van de draaitabel, zoals in "
 "het huidige voorbeeld."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:942
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:955
 msgid "**Combining N-M relation with automatic transaction group**"
 msgstr "**N-M-relatie combineren met automatische transactie groep**"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:944
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:957
 msgid ""
 "You should enable the transaction mode in :menuselection:`Project Properties"
 " --> Data Sources -->` when working on such context. QGIS should be able to "
@@ -2223,7 +2257,7 @@ msgstr ""
 "dergelijke context. QGIS zou in staat moeten zijn rij(en) in alle tabellen "
 "(airlines, airports en de draaitabel) toe te voegen en bij te werken."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:948
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:961
 msgid ""
 "Finally we have to select the right cardinalilty in the "
 ":menuselection:`Layer Properties --> Attributes Form` for the ``airports`` "
@@ -2235,11 +2269,11 @@ msgstr ""
 "``airports`` en ``airlines``. Voor de eerste zouden we de optie **airlines "
 "(id)** kiezen en voor de tweede de optie **airports (id)**."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:958
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:971
 msgid "Set relationship cardinality"
 msgstr "Kardinaliteit relatie instellen "
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:960
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:973
 msgid ""
 "Now you can associate an airport with an airline (or an airline with an "
 "airport) using :guilabel:`Add child feature` or :guilabel:`Link existing "
@@ -2251,15 +2285,15 @@ msgstr ""
 "kindobject koppelen` in de subformulieren. Een record zal automatisch worden"
 " ingevoegd in de tabel ``airports_airlines``."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:970
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:983
 msgid "N-M relationship between airports and airlines"
 msgstr "N-M-relaties tussen airports en airlines"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:972
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:985
 msgid "Using **Many to one relation** cardinality"
 msgstr "Kardinaliteit **Veel-tot één-relatie** gebruiken "
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:974
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:987
 msgid ""
 "Sometimes hiding the pivot table in an N-M relationship is not desirable. "
 "Mainly because there are attributes in the relationship that can only have "
@@ -2277,11 +2311,11 @@ msgstr ""
 "attributen --> Beschikbare widgets --> Velden`) te activeren voor de velden "
 "met secundaire sleutels in de draaitabel."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:981
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:994
 msgid "**Pivot table primary key**"
 msgstr "**Primaire sleutel draaitabel**"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:983
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:996
 msgid ""
 "Avoid using multiple fields in the primary key in a pivot table. QGIS "
 "assumes a single primary key so a constraint like ``constraint "
