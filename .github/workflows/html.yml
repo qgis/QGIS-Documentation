@@ -1,6 +1,8 @@
 name: HTML build
 
 on: [push, pull_request]
+  paths-ignore:
+    - 'locale/**'
 
 jobs:
   build:
