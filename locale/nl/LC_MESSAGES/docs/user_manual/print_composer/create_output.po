@@ -1,24 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
+# Harrissou Sant-anna, 2020
 # DiGro, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:27+0000\n"
+"POT-Creation-Date: 2020-12-13 09:01+0100\n"
+"PO-Revision-Date: 2020-12-24 10:26+0000\n"
 "Last-Translator: DiGro, 2020\n"
 "Language-Team: Dutch (https://www.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
 "Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -821,6 +823,7 @@ msgid "or, another combination:"
 msgstr "of, een andere combinatie:"
 
 #: ../../docs/user_manual/print_composer/create_output.rst:376
+#, python-format
 msgid ""
 "The information ``[% concat( upper(CITY_NAME), ',', ZIPCODE, ' is ',  "
 "format_number($area/1000000, 2) ) %]`` is an expression used inside the "
@@ -967,21 +970,69 @@ msgstr ""
 
 #: ../../docs/user_manual/print_composer/create_output.rst:461
 msgid ""
-"This is just one example of how you can use some advanced settings with "
+"Another example for using data-defined override buttons is the usage of a "
+"dynamic picture. For the following examples we use a geopackage layer "
+"containing a BLOB field called ``logo`` with the field type binary (see "
+":ref:`vector_create_geopackage`). For every feature there is defined a "
+"different picture so that the atlas can iterate over as described in "
+":ref:`atlas_preview`. All you need to do is add a picture in the print "
+"layout and go to its :guilabel:`Item properties` in the atlas context. There"
+" you can find a data-defined override button in the :guilabel:`Image source`"
+" section of the :guilabel:`Main Properties`."
+msgstr ""
+"Een ander voorbeeld van het gebruiken van de knoppen voor data-bepaalde "
+"override is het gebruiken van een dynamische afbeelding. Voor de volgende "
+"voorbeelden gebruiken we een laag van Geopackage die een veld BLOB bevat, "
+"genaamd ``logo`` met het veldtype binary (zie "
+":ref:`vector_create_geopackage`). Voor elk object is een andere afbeelding "
+"gedefinieerd, zodat de atlas daar doorheen kan gaan zoals beschreven in "
+":ref:`atlas_preview`. Alles wat u hoeft te doen is een afbeelding toe te "
+"voegen in de afdruklay-out en naar de :guilabel:`Item-eigenschappen` daarvan"
+" te gaan in de context van de atlas. Daar vindt u een knop Data-bepaalde "
+"override in het gedeelte :guilabel:`Bron afbeelding` van de "
+":guilabel:`Algemene instellingen`."
+
+#: ../../docs/user_manual/print_composer/create_output.rst:476
+msgid ""
+"In the following window choose :guilabel:`Edit` so that the "
+":guilabel:`Expression String Builder` opens. From the :guilabel:`Fields and "
+"values` section you can find the BLOB field that was defined in the "
+"geopackage layer. Double-click the field name :file:`logo` and click "
+":guilabel:`OK`."
+msgstr ""
+"Kies, in het volgende venster, :guilabel:`Bewerken` zodat de "
+":guilabel:`Expressie string-bouwer` opent. In het gedeelte :guilabel:`Velden"
+" en waarden` vindt u het veld BLOB dat werd gedefinieerd in de laag van "
+"Geopackage. Dubbelklik op de veldnaam :file:`logo` en klik op "
+":guilabel:`OK`."
+
+#: ../../docs/user_manual/print_composer/create_output.rst:485
+msgid ""
+"The atlas iterates over the entries in the BLOB field provided that you "
+"choose the geopackage layer as :guilabel:`Coverage layer` (further "
+"instructions you can find in :ref:`atlas_preview`)."
+msgstr ""
+"De atlas gaat door de items in het veld BLOB, vooropgesteld dat u de laag "
+"van Geopackage koos als :guilabel:`Bedekkingslaag` (meer instructies zijn te"
+" vinden in :ref:`atlas_preview`)."
+
+#: ../../docs/user_manual/print_composer/create_output.rst:488
+msgid ""
+"These are just two examples of how you can use some advanced settings with "
 "atlas."
 msgstr ""
-"Dit is slechts één voorbeeld van hoe u enkele gevorderde instellingen kunt "
-"gebruiken met atlas."
+"Dit zijn slechts twee voorbeelden van hoe u enkele gevorderde instellingen "
+"kunt gebruiken met atlas."
 
-#: ../../docs/user_manual/print_composer/create_output.rst:466
+#: ../../docs/user_manual/print_composer/create_output.rst:493
 msgid "Preview and generate an atlas"
 msgstr "Voorbeeld en maken van een atlas"
 
-#: ../../docs/user_manual/print_composer/create_output.rst:473
+#: ../../docs/user_manual/print_composer/create_output.rst:500
 msgid "Atlas Preview toolbar"
 msgstr "Werkbalk Voorbeeld atlas "
 
-#: ../../docs/user_manual/print_composer/create_output.rst:475
+#: ../../docs/user_manual/print_composer/create_output.rst:502
 msgid ""
 "Once the atlas settings have been configured, and layout items (map, table, "
 "image...) linked to it, you can create a preview of all the pages by "
@@ -995,23 +1046,23 @@ msgstr ""
 "Voorbeeld Atlas` of door te klikken op het pictogram |atlas| :sup:`Voorbeeld"
 " Atlas`. U kunt dan de pijlen gebruiken om door alle objecten te navigeren:"
 
-#: ../../docs/user_manual/print_composer/create_output.rst:481
+#: ../../docs/user_manual/print_composer/create_output.rst:508
 msgid "|atlasFirst| :sup:`First feature`"
 msgstr "|atlasFirst| :sup:`Eerste object`"
 
-#: ../../docs/user_manual/print_composer/create_output.rst:482
+#: ../../docs/user_manual/print_composer/create_output.rst:509
 msgid "|atlasPrev| :sup:`Previous feature`"
 msgstr "|atlasPrev| :sup:`Vorige object`"
 
-#: ../../docs/user_manual/print_composer/create_output.rst:483
+#: ../../docs/user_manual/print_composer/create_output.rst:510
 msgid "|atlasNext| :sup:`Next feature`"
 msgstr "|atlasNext| :sup:`Volgende object`"
 
-#: ../../docs/user_manual/print_composer/create_output.rst:484
+#: ../../docs/user_manual/print_composer/create_output.rst:511
 msgid "|atlasLast| :sup:`Last feature`"
 msgstr "|atlasLast| :sup:`Laatste object`"
 
-#: ../../docs/user_manual/print_composer/create_output.rst:486
+#: ../../docs/user_manual/print_composer/create_output.rst:513
 msgid ""
 "You can also use the combo box to select and preview a specific feature. The"
 " combo box shows atlas feature names according to the expression set in the "
@@ -1022,7 +1073,7 @@ msgstr ""
 "weer, overeenkomstig de ingestelde expressie in de optie voor atlas "
 ":guilabel:`Paginanaam`."
 
-#: ../../docs/user_manual/print_composer/create_output.rst:490
+#: ../../docs/user_manual/print_composer/create_output.rst:517
 msgid ""
 "As for simple compositions, an atlas can be generated in different ways (see"
 " :ref:`create-output` for more information - just use tools from the "
@@ -1035,7 +1086,7 @@ msgstr ""
 ":menuselection:`Atlas` of werkbalk, in plaats van het menu :menuselection"
 ":`Lay-out`."
 
-#: ../../docs/user_manual/print_composer/create_output.rst:495
+#: ../../docs/user_manual/print_composer/create_output.rst:522
 msgid ""
 "This means that you can directly print your compositions with "
 ":menuselection:`Atlas --> Print Atlas`. You can also create a PDF using "
@@ -1052,7 +1103,7 @@ msgstr ""
 "geselecteerd). In dat geval zal u worden gevraagd een bestandsnaam in te "
 "voeren."
 
-#: ../../docs/user_manual/print_composer/create_output.rst:502
+#: ../../docs/user_manual/print_composer/create_output.rst:529
 msgid ""
 "With :menuselection:`Atlas --> Export Atlas as Images...` or "
 ":menuselection:`Atlas --> Export Atlas as SVG...` tool, you're also prompted"
@@ -1066,7 +1117,7 @@ msgstr ""
 "afbeeldingsbestand zoals ingesteld in het paneel :guilabel:`Atlas` of naar "
 "SVG."
 
-#: ../../docs/user_manual/print_composer/create_output.rst:508
+#: ../../docs/user_manual/print_composer/create_output.rst:535
 msgid ""
 "With multi-page output, an atlas behaves like a layout in that only the page"
 " that contains the :ref:`reference_map` will get a world file (for each "
@@ -1076,11 +1127,11 @@ msgstr ""
 "out, met dien verstande dat alleen de pagina die de :ref:`reference_map` "
 "bevat, een world file zal krijgen (voor elk uitgevoerd object)."
 
-#: ../../docs/user_manual/print_composer/create_output.rst:512
+#: ../../docs/user_manual/print_composer/create_output.rst:539
 msgid "**Print a specific atlas feature**"
 msgstr "**Een specifiek object van atlas afdrukken**"
 
-#: ../../docs/user_manual/print_composer/create_output.rst:514
+#: ../../docs/user_manual/print_composer/create_output.rst:541
 msgid ""
 "If you want to print or export the composition of only one feature of the "
 "atlas, simply start the preview, select the desired feature in the drop-down"
@@ -1092,11 +1143,11 @@ msgstr ""
 "keuzelijst en klik op :menuselection:`Lay-out --> Afdrukken` (of "
 ":menuselection:`Exporteren…` naar enige ondersteunde bestandsindeling)."
 
-#: ../../docs/user_manual/print_composer/create_output.rst:525
+#: ../../docs/user_manual/print_composer/create_output.rst:552
 msgid "Use project defined relations for atlas creation"
 msgstr "Projectgedefinieerde relaties gebruiken voor maken van Atlas"
 
-#: ../../docs/user_manual/print_composer/create_output.rst:527
+#: ../../docs/user_manual/print_composer/create_output.rst:554
 msgid ""
 "For users with HTML and Javascript knowledge it is possible to operate on "
 "GeoJSON objects and use project defined relations from the QGIS project. The"
@@ -1113,7 +1164,7 @@ msgstr ""
 "bestaande bibliotheken en functies voor Javascript kunt gebruiken die werken"
 " op weergaven van objecten voor GeoJSON."
 
-#: ../../docs/user_manual/print_composer/create_output.rst:535
+#: ../../docs/user_manual/print_composer/create_output.rst:562
 msgid ""
 "The following code includes all related child features from the defined "
 "relation. Using the JavaScript ``setFeature`` function it allows you to make"
@@ -1127,7 +1178,7 @@ msgstr ""
 "(lijsten, tabellen, etc). In het codevoorbeeld maken we een dynamische lijst"
 " met opsommingen van de gerelateerde kindobjecten."
 
-#: ../../docs/user_manual/print_composer/create_output.rst:564
+#: ../../docs/user_manual/print_composer/create_output.rst:591
 msgid ""
 "During atlas creation there will be an iteration over the coverage layer "
 "containing the parent features. On each page, you will see a bullet list of "
