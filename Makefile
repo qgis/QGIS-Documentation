@@ -119,10 +119,10 @@ all: springclean
 	done
 	rsync -hvrzc $(BUILDDIR)/zip $(SITEDIR)/;
 
-#	@for LANG in $(LANGUAGES) ; do \
-#		make LANG=$$LANG pdf; \
-#	done
-#	rsync -hvrzc $(BUILDDIR)/pdf $(SITEDIR)/;
+	@for LANG in $(LANGUAGES) ; do \
+		make LANG=$$LANG pdf; \
+	done
+	rsync -hvrzc $(BUILDDIR)/pdf $(SITEDIR)/;
 
 # this will pull ALL translations (or at least from the languages we build for)
 # to your local disk, so it can be committed into github
