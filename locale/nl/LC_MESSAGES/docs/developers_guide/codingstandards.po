@@ -1,24 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
+# Harrissou Sant-anna, 2020
 # DiGro, 2020
-# Richard Duivenvoorde <richard@duif.net>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:24+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"POT-Creation-Date: 2020-12-13 09:01+0100\n"
+"PO-Revision-Date: 2020-12-24 12:01+0000\n"
+"Last-Translator: DiGro, 2020\n"
 "Language-Team: Dutch (https://www.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
 "Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -710,10 +712,10 @@ msgstr ""
 "aanhalingstekens ``'``"
 
 #: ../../docs/developers_guide/codingstandards.rst:450
-msgid "A demo file can be found in :file:`tests/scripts/sipifyheader.h`."
+msgid "A demo file can be found in :file:`tests/code_layout/sipifyheader.h`."
 msgstr ""
 "Een bestand ter demonstratie is te vinden in "
-":file:`tests/scripts/sipifyheader.h`."
+":file:`tests/code_layout/sipifyheader.h`."
 
 #: ../../docs/developers_guide/codingstandards.rst:453
 msgid "Generating the SIP file"
@@ -724,7 +726,15 @@ msgid "The SIP file can be generated using a dedicated script. For instance:"
 msgstr ""
 "Het SIP-bestand kan worden gemaakt met een toegewezen script. Bijvoorbeeld:"
 
-#: ../../docs/developers_guide/codingstandards.rst:462
+#: ../../docs/developers_guide/codingstandards.rst:461
+msgid ""
+"To automatically generate the SIP file of a newly added C++ file "
+":file:`scripts/sip_include.sh` needs to be executed."
+msgstr ""
+"Om automatisch het SIP-bestand van een nieuw toegevoegd C++-bestand te "
+"maken, moet file:`scripts/sip_include.sh` worden uitgevoerd."
+
+#: ../../docs/developers_guide/codingstandards.rst:464
 msgid ""
 "As soon as a SIP file is added to one of the source file "
 "(:file:`python/core/core.sip`, :file:`python/gui/gui.sip` or "
@@ -738,36 +748,37 @@ msgstr ""
 "automatisch gemaakt. Een test op Travis zal er voor zorgen dat dit bestand "
 "up to date is met zijn overeenkomende header."
 
-#: ../../docs/developers_guide/codingstandards.rst:468
+#: ../../docs/developers_guide/codingstandards.rst:470
 msgid ""
-"Older files for which the automatic creation is not enabled yet are listed "
-"in :file:`python/auto_sip.blacklist`."
+"To force recreation of SIP files, :file:`scripts/sipify_all.sh` shall be "
+"executed."
 msgstr ""
-"Oudere bestanden waarvoor het automatisch maken niet is ingeschakeld zijn "
-"vermeld in :file:`python/auto_sip.blacklist`."
+"Voor het forceren van het opnieuw maken van SIP-bestanden zal "
+":file:`scripts/sipify_all.sh` worden uitgevoerd."
 
-#: ../../docs/developers_guide/codingstandards.rst:472
+#: ../../docs/developers_guide/codingstandards.rst:473
 msgid "Improving sipify script"
 msgstr "Verbeteren van script sipify"
 
-#: ../../docs/developers_guide/codingstandards.rst:474
+#: ../../docs/developers_guide/codingstandards.rst:475
 msgid ""
 "If some improvements are required for sipify script, please add the missing "
-"bits to the demo file :file:`tests/scripts/sipifyheader.h` and create the "
-"expected header :file:`tests/scripts/sipifyheader.expected.si`. This will "
-"also be automatically tested on Travis as a unit test of the script itself."
+"bits to the demo file :file:`tests/code_layout/sipifyheader.h` and create "
+"the expected header :file:`tests/code_layout/sipifyheader.expected.sip`. "
+"This will also be automatically tested on Travis as a unit test of the "
+"script itself."
 msgstr ""
 "Als enkele verbeteringen vereist zijn voor het script sipify, voeg dan de "
 "ontbrekende gedeelten toe aan het demo-bestand "
-":file:`tests/scripts/sipifyheader.h` en maak de verwachte header "
-":file:`tests/scripts/sipifyheader.expected.si`. Dit zal ook automatisch "
-"worden getest op Travis als een eenheidstest van het script zelf."
+":file:`tests/code_layout/sipifyheader.h` en maak de verwachte header "
+":file:`tests/code_layout/sipifyheader.expected.sip`. Dit zal ook automatisch"
+" worden getest op Travis als een eenheidstest van het script zelf."
 
-#: ../../docs/developers_guide/codingstandards.rst:481
+#: ../../docs/developers_guide/codingstandards.rst:482
 msgid "Coding Style"
 msgstr "Stijl van coderen"
 
-#: ../../docs/developers_guide/codingstandards.rst:484
+#: ../../docs/developers_guide/codingstandards.rst:485
 msgid ""
 "Here are described some programming hints and tips that will hopefully "
 "reduce errors, development time and maintenance."
@@ -775,11 +786,11 @@ msgstr ""
 "Hier worden enkele hints en tips beschreven voor het programmeren die "
 "hopelijk het aantal fouten, ontwikkeltijd en onderhoud reduceren."
 
-#: ../../docs/developers_guide/codingstandards.rst:489
+#: ../../docs/developers_guide/codingstandards.rst:490
 msgid "Where-ever Possible Generalize Code"
 msgstr "Waar mogelijk: generaliseer code"
 
-#: ../../docs/developers_guide/codingstandards.rst:492
+#: ../../docs/developers_guide/codingstandards.rst:493
 msgid ""
 "If you are cut-n-pasting code, or otherwise writing the same thing more than"
 " once, consider consolidating the code into a single function."
@@ -788,21 +799,21 @@ msgstr ""
 "eens schrijft, overweeg dan om de code te consolideren in één enkele "
 "functie."
 
-#: ../../docs/developers_guide/codingstandards.rst:495
+#: ../../docs/developers_guide/codingstandards.rst:496
 msgid "This will:"
 msgstr "Dat zal:"
 
-#: ../../docs/developers_guide/codingstandards.rst:497
+#: ../../docs/developers_guide/codingstandards.rst:498
 msgid "allow changes to be made in one location instead of in multiple places"
 msgstr ""
 "het mogelijk maken wijzigingen op één plaats door te voeren in plaats van op"
 " meerdere plaatsen"
 
-#: ../../docs/developers_guide/codingstandards.rst:498
+#: ../../docs/developers_guide/codingstandards.rst:499
 msgid "help prevent code bloat"
 msgstr "helpen bij het tegengaan van overbodige code"
 
-#: ../../docs/developers_guide/codingstandards.rst:499
+#: ../../docs/developers_guide/codingstandards.rst:500
 msgid ""
 "make it more difficult for multiple copies to evolve differences over time, "
 "thus making it harder to understand and maintain for others"
@@ -811,20 +822,20 @@ msgstr ""
 "ontwikkelen, wat het moeilijker maakt voor anderen om het te begrijpen en te"
 " onderhouden"
 
-#: ../../docs/developers_guide/codingstandards.rst:504
+#: ../../docs/developers_guide/codingstandards.rst:505
 msgid "Prefer Having Constants First in Predicates"
 msgstr "Voorkeur voor het hebben van constanten als eerste in predicaten"
 
-#: ../../docs/developers_guide/codingstandards.rst:506
+#: ../../docs/developers_guide/codingstandards.rst:507
 msgid "Prefer to put constants first in predicates."
 msgstr ""
 "Heb een voorkeur voor het als eerste plaatsen van constanten in predicaten."
 
-#: ../../docs/developers_guide/codingstandards.rst:508
+#: ../../docs/developers_guide/codingstandards.rst:509
 msgid "``0 == value`` instead of ``value == 0``"
 msgstr "``0 == value`` in plaats van ``value == 0``"
 
-#: ../../docs/developers_guide/codingstandards.rst:510
+#: ../../docs/developers_guide/codingstandards.rst:511
 msgid ""
 "This will help prevent programmers from accidentally using ``=`` when they "
 "meant to use ``==``, which can introduce very subtle logic bugs. The "
@@ -837,11 +848,11 @@ msgstr ""
 " ongeluk ``=`` gebruikt in plaats van ``==`` voor vergelijkingen omdat "
 "inherent aan constanten geen waarden kunnen worden toegewezen."
 
-#: ../../docs/developers_guide/codingstandards.rst:516
+#: ../../docs/developers_guide/codingstandards.rst:517
 msgid "Whitespace Can Be Your Friend"
 msgstr "Witruimte kan uw vriend zijn"
 
-#: ../../docs/developers_guide/codingstandards.rst:518
+#: ../../docs/developers_guide/codingstandards.rst:519
 msgid ""
 "Adding spaces between operators, statements, and functions makes it easier "
 "for humans to parse code."
@@ -849,23 +860,23 @@ msgstr ""
 "Toevoegen van spaties tussen operatoren, statements en functies maken het "
 "voor mensen gemakkelijker code te parsen."
 
-#: ../../docs/developers_guide/codingstandards.rst:521
+#: ../../docs/developers_guide/codingstandards.rst:522
 msgid "Which is easier to read, this:"
 msgstr "Wat is gemakkelijker te lezen, dit:"
 
-#: ../../docs/developers_guide/codingstandards.rst:527
+#: ../../docs/developers_guide/codingstandards.rst:528
 msgid "or this:"
 msgstr "of dit:"
 
-#: ../../docs/developers_guide/codingstandards.rst:533
+#: ../../docs/developers_guide/codingstandards.rst:534
 msgid ":file:`scripts/prepare-commit.sh` will take care of this."
 msgstr ":file:`scripts/prepare-commit.sh` zal hier voor zorgen."
 
-#: ../../docs/developers_guide/codingstandards.rst:537
+#: ../../docs/developers_guide/codingstandards.rst:538
 msgid "Put commands on separate lines"
 msgstr "Plaats opdrachten op afzonderlijke regels"
 
-#: ../../docs/developers_guide/codingstandards.rst:539
+#: ../../docs/developers_guide/codingstandards.rst:540
 msgid ""
 "When reading code it's easy to miss commands, if they are not at the "
 "beginning of the line. When quickly reading through code, it's common to "
@@ -879,21 +890,21 @@ msgstr ""
 "over te slaan. Het is ook algemeen gebruik om een opdracht te verwachten na "
 "een voorwaarde, zoals ``if``."
 
-#: ../../docs/developers_guide/codingstandards.rst:544
+#: ../../docs/developers_guide/codingstandards.rst:545
 msgid "Consider:"
 msgstr "Overweeg:"
 
-#: ../../docs/developers_guide/codingstandards.rst:552
+#: ../../docs/developers_guide/codingstandards.rst:553
 msgid "It's very easy to miss part of what the flow of control. Instead use"
 msgstr ""
 "Het is heel eenvoudig om delen van de beheersstroom te missen. Gebruik in "
 "plaats daarvan"
 
-#: ../../docs/developers_guide/codingstandards.rst:564
+#: ../../docs/developers_guide/codingstandards.rst:565
 msgid "Indent access modifiers"
 msgstr "Laat access modifiers inspringen"
 
-#: ../../docs/developers_guide/codingstandards.rst:566
+#: ../../docs/developers_guide/codingstandards.rst:567
 msgid ""
 "Access modifiers structure a class into sections of public API, protected "
 "API and private API. Access modifiers themselves group the code into this "
@@ -903,35 +914,35 @@ msgstr ""
 "protected API en private API. Access modifiers zelf groeperen de code binnen"
 " deze structuur. Laat de access modifier en declaraties inspringen."
 
-#: ../../docs/developers_guide/codingstandards.rst:583
+#: ../../docs/developers_guide/codingstandards.rst:584
 msgid "Book recommendations"
 msgstr "Aanbevolen boeken"
 
-#: ../../docs/developers_guide/codingstandards.rst:586
-msgid ""
-"`Effective Modern C++ <http://shop.oreilly.com/product/0636920033707.do>`_, "
-"Scott Meyers"
-msgstr ""
-"`Effective Modern C++ <http://shop.oreilly.com/product/0636920033707.do>`_, "
-"Scott Meyers"
-
 #: ../../docs/developers_guide/codingstandards.rst:587
 msgid ""
-"`More Effective C++ <https://www.informit.com/store/more-effective-c-plus-"
-"plus-35-new-ways-to-improve-your-9780201633719>`_, Scott Meyers"
+"`Effective Modern C++ <http://shop.oreilly.com/product/0636920033707.do>`_, "
+"Scott Meyers"
 msgstr ""
-"`More Effective C++ <https://www.informit.com/store/more-effective-c-plus-"
-"plus-35-new-ways-to-improve-your-9780201633719>`_, Scott Meyers"
+"`Effective Modern C++ <http://shop.oreilly.com/product/0636920033707.do>`_, "
+"Scott Meyers"
 
 #: ../../docs/developers_guide/codingstandards.rst:588
 msgid ""
+"`More Effective C++ <https://www.informit.com/store/more-effective-c-plus-"
+"plus-35-new-ways-to-improve-your-9780201633719>`_, Scott Meyers"
+msgstr ""
+"`More Effective C++ <https://www.informit.com/store/more-effective-c-plus-"
+"plus-35-new-ways-to-improve-your-9780201633719>`_, Scott Meyers"
+
+#: ../../docs/developers_guide/codingstandards.rst:589
+msgid ""
 "`Effective STL <https://www.informit.com/store/effective-stl-50-specific-"
 "ways-to-improve-your-use-9780201749625>`_, Scott Meyers"
 msgstr ""
 "`Effective STL <https://www.informit.com/store/effective-stl-50-specific-"
 "ways-to-improve-your-use-9780201749625>`_, Scott Meyers"
 
-#: ../../docs/developers_guide/codingstandards.rst:589
+#: ../../docs/developers_guide/codingstandards.rst:590
 msgid ""
 "`Design Patterns <https://www.amazon.com/Design-Patterns-Elements-Reusable-"
 "Object-Oriented/dp/0201633612>`_, GoF"
@@ -939,7 +950,7 @@ msgstr ""
 "`Design Patterns <https://www.amazon.com/Design-Patterns-Elements-Reusable-"
 "Object-Oriented/dp/0201633612>`_, GoF"
 
-#: ../../docs/developers_guide/codingstandards.rst:591
+#: ../../docs/developers_guide/codingstandards.rst:592
 msgid ""
 "You should also really read this article from Qt Quarterly on `designing Qt "
 "style (APIs) <https://doc.qt.io/archives/qq/qq13-apis.html>`_"
@@ -947,11 +958,11 @@ msgstr ""
 "U zou ook echt dit artikel moeten lezen uit Qt Quarterly ove `designing Qt "
 "style (APIs) <https://doc.qt.io/archives/qq/qq13-apis.html>`_"
 
-#: ../../docs/developers_guide/codingstandards.rst:596
+#: ../../docs/developers_guide/codingstandards.rst:597
 msgid "Credits for contributions"
 msgstr "Vermelding van bijdragen"
 
-#: ../../docs/developers_guide/codingstandards.rst:598
+#: ../../docs/developers_guide/codingstandards.rst:599
 msgid ""
 "Contributors of new functions are encouraged to let people know about their "
 "contribution by:"
@@ -959,7 +970,7 @@ msgstr ""
 "Zij die nieuwe functies bijdragen worden aangemoedigd om mensen kennis te "
 "laten nemen van hun bijdrage door:"
 
-#: ../../docs/developers_guide/codingstandards.rst:601
+#: ../../docs/developers_guide/codingstandards.rst:602
 msgid ""
 "adding a note to the changelog for the first version where the code has been"
 " incorporated, of the type::"
@@ -967,7 +978,7 @@ msgstr ""
 "een opmerking toe te voegen in het log van wijzigingen voor de eerste versie"
 " waar de code is ingevoegd, in de vorm van::"
 
-#: ../../docs/developers_guide/codingstandards.rst:607
+#: ../../docs/developers_guide/codingstandards.rst:608
 msgid ""
 "writing an article about the new feature on a blog, and add it to the QGIS "
 "planet https://plugins.qgis.org/planet/"
@@ -975,14 +986,14 @@ msgstr ""
 "een blogartikel te schrijven over de nieuwe mogelijkheid en dat toe te "
 "voegen aan de QGIS planet https://plugins.qgis.org/planet/"
 
-#: ../../docs/developers_guide/codingstandards.rst:609
+#: ../../docs/developers_guide/codingstandards.rst:610
 msgid "adding their name to:"
 msgstr "hun naam toe te voegen aan:"
 
-#: ../../docs/developers_guide/codingstandards.rst:611
+#: ../../docs/developers_guide/codingstandards.rst:612
 msgid ":source:`doc/CONTRIBUTORS`"
 msgstr ":source:`doc/CONTRIBUTORS`"
 
-#: ../../docs/developers_guide/codingstandards.rst:612
+#: ../../docs/developers_guide/codingstandards.rst:613
 msgid ":source:`doc/AUTHORS`"
 msgstr ":source:`doc/AUTHORS`"
