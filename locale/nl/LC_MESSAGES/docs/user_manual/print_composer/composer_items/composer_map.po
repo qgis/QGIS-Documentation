@@ -1,24 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
+# Harrissou Sant-anna, 2020
 # DiGro, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:27+0000\n"
+"POT-Creation-Date: 2020-12-13 09:01+0100\n"
+"PO-Revision-Date: 2020-12-24 10:17+0000\n"
 "Last-Translator: DiGro, 2020\n"
 "Language-Team: Dutch (https://www.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
 "Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -182,11 +184,94 @@ msgstr ""
 " te plaatsen) door ze te accentueren in een :ref:`vooraf gedefinieerde kleur"
 " <automated_placement>`."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:76
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:71
+msgid ""
+"|clip| :sup:`Clipping settings`: allows to clip the map item to the atlas "
+"feature and to shape and polygon items:"
+msgstr ""
+"|clip| :sup:`Instellingen clippen`: stelt u in staat het kaartitem te "
+"clippen naar het object van de atlas en naar items Vorm en Polygoon:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:74
+msgid ""
+"|checkbox| :guilabel:`Clip to atlas feature`: you can determine that the "
+"layout map item will be clipped automatically to the current :ref:`atlas "
+"feature <atlas_generation>`."
+msgstr ""
+"|checkbox| :guilabel:`Clippen naar atlas object`: u kunt bepalen dat het "
+"kaartitem van de lay-out automatisch zal worden geclipt tot het huidige "
+":ref:`object van atlas <atlas_generation>`."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:78
+msgid "There are different clipping modes available:"
+msgstr "Er zijn verschillende modi voor clippen beschikbaar:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:80
+msgid ""
+":guilabel:`Clip During Render Only`: applies a painter based clip, so that "
+"portions of vector features which sit outside the atlas feature become "
+"invisible"
+msgstr ""
+":guilabel:`Alleen clippen tijdens renderen`: past een op schilderen "
+"gebaseerde clip toe, zodat delen van vectorobjecten, die zich buiten het "
+"object van atlas bevinden, onzichtbaar worden"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:83
+msgid ""
+":guilabel:`Clip Feature Before Render`: applies the clip before rendering "
+"features, so borders of features which fall partially outside the atlas "
+"feature will still be visible on the boundary of the atlas feature"
+msgstr ""
+":guilabel:`Object clippen vóór renderen`: past de clip toe voor het renderen"
+" van de objecten, dus randen van objecten, die gedeeltelijk buiten het "
+"object van atlas vallen, zullen nog steeds zichtbaar zijn op de grens van "
+"het object van atlas"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:86
+msgid ""
+":guilabel:`Render Intersecting Features Unchanged`: renders all features "
+"which intersect the current atlas feature, but without clipping their their "
+"geometry."
+msgstr ""
+":guilabel:`Kruisende objecten ongewijzigd renderen`: rendert alle objecten "
+"die kruisen met het huidige object van atlas, maar zonder hun geometrie te "
+"clippen."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:90
+msgid ""
+"You can |checkbox| :guilabel:`Force labels inside atlas feature`. If you "
+"don't want to |radiobuttonoff| :guilabel:`Clip all layers` to the atlas "
+"feature you can use the |radiobuttonon| :guilabel:`Clip selected layers` "
+"option."
+msgstr ""
+"U kunt |checkbox| :guilabel:`Labels binnen atlas object forceeren`. Als u "
+"niet wilt |radiobuttonoff| :guilabel:`Alle lagen clippen` naar het atlas "
+"object, kunt u de optie |radiobuttonon| :guilabel:`Geselecteerde lagen "
+"clippen` gebruiken."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:94
+msgid ""
+"|checkbox| :guilabel:`Clip to item`: it is possible to change the shape of "
+"the map item by using a :ref:`shape <layout_basic_shape_item>` or "
+":ref:`polygon <layout_node_based_shape_item>` item from the print layout. "
+"When you enable this option the map will be automatically clipped to the "
+"selected shape in the combobox. Again, the above mentioned clipping modes "
+"are available and labels can be forced to display only inside the clipping "
+"shape."
+msgstr ""
+"|checkbox| :guilabel:`Naar item clippen`: het is mogelijk om de vorm van het"
+" kaartitem te wijzigen door een item :ref:`Vorm <layout_basic_shape_item>` "
+"of :ref:`Polygoon <layout_node_based_shape_item>` te gebruiken uit de "
+"afdruklay-out. Wanneer u deze optie inschakelt zal de kaart automatisch "
+"worden geclipt naar de geselecteerde vorm in het combinatievak. Nogmaals, de"
+" hierboven vermelde modi voor clippen zijn beschikbaar en labels kunnen "
+"worden geforceerd om alleen binnen de geclipte vorm te worden weergegeven."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:105
 msgid "Main properties"
 msgstr "Algemene eigenschappen"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:78
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:107
 msgid ""
 "In the :guilabel:`Main properties` group (see figure_layout_map_) of the map"
 " :guilabel:`Item Properties` panel, available options are:"
@@ -194,7 +279,7 @@ msgstr ""
 "In de groep :guilabel:`Algemene eigenschappen` (zie figure_layout_map_) van "
 "het paneel :guilabel:`Item-eigenschappen` zijn de beschikbare opties:"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:81
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:110
 msgid ""
 "The :guilabel:`Update Preview` button to refresh the map item rendering if "
 "the view in map canvas has been modified. Note that most of the time, the "
@@ -205,13 +290,13 @@ msgstr ""
 "kaartvenster. Onthoud dat de meeste keren het vernieuwen van het kaartitem "
 "automatisch wordt geactiveerd door de wijzigingen;"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:84
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:113
 msgid "The :guilabel:`Scale` to manually set the map item scale;"
 msgstr ""
 "De :guilabel:`Schaal` om handmatig de schaal voor het kaartitem in te "
 "stellen;"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:85
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:114
 msgid ""
 "The :guilabel:`Map rotation` allows you to rotate the map item content "
 "clockwise in degrees. The rotation of the map canvas can be imitated here;"
@@ -220,7 +305,7 @@ msgstr ""
 " wijzers van de klok mee in graden. De rotatie van het kaartvenster kan hier"
 " worden geïmiteerd;"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:87
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:116
 msgid ""
 "The :guilabel:`CRS` allows you to display the map item content in any "
 ":ref:`CRS <crs_selector>`. It defaults to ``Use project CRS``;"
@@ -229,7 +314,7 @@ msgstr ""
 "geven in elk :ref:`CRS <crs_selector>`. De standaard is ``Project-CRS "
 "gebruiken``;"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:89
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:118
 msgid ""
 "|checkbox| :guilabel:`Draw map canvas items` lets you show in the print "
 "layout :ref:`annotations <sec_annotations>` that are placed on the main map "
@@ -239,11 +324,11 @@ msgstr ""
 " <sec_annotations>`, die zijn geplaatst in het hoofdkaartvenster, weergeven "
 "in de afdruklay-out."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:96
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:125
 msgid "Layers"
 msgstr "Lagen"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:98
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:127
 msgid ""
 "By default, map item appearance is synced with the map canvas rendering "
 "meaning that toggling visibility of the layers or modifying their style in "
@@ -265,11 +350,11 @@ msgstr ""
 "eigenschappen :guilabel:`Lagen` (zie figure_layout_map_layers_) helpt u dat "
 "te doen."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:112
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:141
 msgid "Map Layers group"
 msgstr "Kaart groep Lagen"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:115
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:144
 msgid ""
 "If you want to keep the map item consistent with an existing :ref:`map theme"
 " <map_themes>`, check |checkbox| :guilabel:`Follow map theme` and select the"
@@ -289,7 +374,7 @@ msgstr ""
 "zichtbaarheid volgen` ook de stijl (symbologie, label, diagram) van de lagen"
 " in de voorkeuze voor zichtbaarheid bijwerkt. "
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:124
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:153
 msgid ""
 "To lock the layers shown in a map item to the current map canvas visibility,"
 " check |checkbox| :guilabel:`Lock layers`. When this option is enabled, any "
@@ -306,7 +391,7 @@ msgstr ""
 "steeds vernieuwd,  overeenkomstig het hoofdvenster van QGIS. U kunt dit "
 "voorkomen door :guilabel:`Stijlen voor lagen vergrendelen` te gebruiken."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:131
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:160
 msgid ""
 "Instead of using the current map canvas, you can also lock the layers of the"
 " map item to those of an existing map theme: select a map theme from the "
@@ -329,7 +414,7 @@ msgstr ""
 "|refresh| :sup:`Scherm vernieuwen` van de werkbalk :guilabel:`Navigatie` of "
 "de knop :guilabel:`Voorbeeld kaart verversen` zoals hierboven weergegeven."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:140
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:169
 msgid ""
 "Note that, unlike the :guilabel:`Follow map theme` option, if the "
 ":guilabel:`Lock layers` option is enabled and set to a map theme, the layers"
@@ -341,7 +426,7 @@ msgstr ""
 "thema, de lagen van het kaartitem niet worden bijgewerkt als het thema wordt"
 " gewijzigd (met de optie Thema vervangen) in het hoofdvenster van QGIS."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:145
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:174
 msgid ""
 "Locked layers in the map item can also be :ref:`data-defined "
 "<data_defined>`, using the |dataDefined| icon beside the option. When used, "
@@ -356,11 +441,11 @@ msgstr ""
 "volgende voorbeeld zet het kaartitem vast om alleen de lagen ``layer 1`` en "
 "``layer 2`` te gebruiken::"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:156
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:185
 msgid "Extents"
 msgstr "Bereiken"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:158
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:187
 msgid ""
 "The :guilabel:`Extents` group of the map item properties panel provides the "
 "following functionalities (see figure_layout_map_extents_):"
@@ -368,11 +453,11 @@ msgstr ""
 "De groep :guilabel:`Bereiken` van het paneel van het kaartitem verschaft de "
 "volgende functionaliteiten (zie figure_layout_map_extents_):"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:166
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:195
 msgid "Map Extents group"
 msgstr "groep Bereiken kaart "
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:168
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:197
 msgid ""
 "The **Extents** area displays ``X`` and ``Y`` coordinates of the area shown "
 "in the map item. Each of these values can be manually replaced, modifying "
@@ -392,7 +477,7 @@ msgstr ""
 " werkt het bereik van het kaartvenster bij naar het bereik van het kaartitem"
 " van de lay-out."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:176
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:205
 msgid ""
 "You can also alter a map item extent using the |moveItemContent| :sup:`Move "
 "item content` tool: click-and-drag within the map item to modify its current"
@@ -408,11 +493,11 @@ msgstr ""
 "kaart aanpassend. Combineer de verschuiving met het indrukken van de "
 ":kbd:`Ctrl`-toets ingedrukt om een kleinere zoom te krijgen."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:186
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:215
 msgid "Controlled by atlas"
 msgstr "Beheerd door atlas"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:188
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:217
 msgid ""
 "The |checkbox| :guilabel:`Controlled by atlas` group properties is available"
 " only if an :ref:`atlas <atlas_generation>` is active in the print layout. "
@@ -427,7 +512,7 @@ msgstr ""
 "bereik van het kaartitem verschoven/gezoomd naar het object van de atlas, "
 "waarbij:"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:194
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:223
 msgid ""
 "|radioButtonOn| :guilabel:`Margin around features`: zooms to the feature at "
 "the best scale, keeping around each a margin representing a percentage of "
@@ -440,7 +525,7 @@ msgstr ""
 " zijn voor alle objecten of :ref:`variabel ingesteld <data_defined>`, bijv. "
 "afhankelijk van de schaal van de kaart;"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:198
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:227
 msgid ""
 "|radioButtonOff| :guilabel:`Predefined scale (best fit)`: zooms to the "
 "feature at the project :ref:`predefined scale <predefinedscales>` where the "
@@ -450,7 +535,7 @@ msgstr ""
 "zoomt naar het object met de voor het project :ref:`vooraf gedefinieerde "
 "schaal <predefinedscales>` waar het object van de atlas het beste past;"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:201
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:230
 msgid ""
 "|radioButtonOff| :guilabel:`Fixed scale`: atlas features are panned from one"
 " to another, keeping the same scale of the map item. Ideal when working with"
@@ -463,11 +548,11 @@ msgstr ""
 "een raster) of mogelijkheid om verschillen in grootte tussen objecten van "
 "atlas te accentueren."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:209
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:238
 msgid "Grids"
 msgstr "Rasters"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:211
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:240
 msgid ""
 "With grids, you can add, over your map, information relative to its extent "
 "or coordinates, either in the map item projection or a different one. The "
@@ -479,7 +564,7 @@ msgstr ""
 " De groep :guilabel:`Rasters` verschaft de mogelijkheid om verschillende "
 "rasters aan een kaartitem toe te voegen."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:216
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:245
 msgid ""
 "With the |signPlus| and |signMinus| buttons you can add or remove a selected"
 " grid;"
@@ -487,7 +572,7 @@ msgstr ""
 "Met de knoppen |signPlus| en |signMinus| kunt u een geselecteerd raster "
 "toevoegen of verwijderen;"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:218
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:247
 msgid ""
 "With the |arrowUp| and |arrowDown| buttons you can move up and down a grid "
 "in the list, hence move it on top or bottom of another one, over the map "
@@ -497,15 +582,15 @@ msgstr ""
 "boven of beneden verplaatsen, het daarmee bovenop een ander of onder een "
 "ander te plaatsen, over het kaartitem."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:221
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:250
 msgid "Double-click the added grid to rename it."
 msgstr "Dubbelklik op het toegevoegde raster om het een andere naam te geven."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:228
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:257
 msgid "Map Grids Dialog"
 msgstr "Dialoogvenster Kaartraster"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:230
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:259
 msgid ""
 "To modify a grid, select it and press the :guilabel:`Modify Grid...` button "
 "to open the :guilabel:`Map Grid Properties` panel and access its "
@@ -516,11 +601,11 @@ msgstr ""
 "kaartraster` te openen en toegang te krijgen tot de opties om het te "
 "configureren."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:235
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:264
 msgid "Grid Appearance"
 msgstr "Uiterlijk"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:237
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:266
 msgid ""
 "In the :guilabel:`Map Grid Properties` panel, check |checkbox| "
 ":guilabel:`Grid enabled` to show the grid on the map item."
@@ -529,11 +614,11 @@ msgstr ""
 ":guilabel:`Raster ingeschakeld` om het raster op het kaartitem weer te "
 "geven."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:240
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:269
 msgid "As grid type, you can specify to use a:"
 msgstr "U kunt, als te gebruiken type raster, specificeren:"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:242
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:271
 msgid ""
 "*Solid*: shows a line across the grid frame. The :guilabel:`Line style` can "
 "be customized using :ref:`color <color-selector>` and :ref:`symbol <symbol-"
@@ -543,7 +628,7 @@ msgstr ""
 ":guilabel:`Lijnstijl` kan worden aangepast met widgets voor het kiezen van "
 ":ref:`kleur <color-selector>` en :ref:`symbool <symbol-selector>`;"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:245
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:274
 msgid ""
 "*Cross*: displays segment at the grid lines intersection for which you can "
 "set the :guilabel:`Line style` and the :guilabel:`Cross width`;"
@@ -551,7 +636,7 @@ msgstr ""
 "*Kruis*: geeft segment weer op de kruising van de rasterlijnen waarvoor u de"
 " :guilabel:`Lijnstijl` en de :guilabel:`Kruisdikte` kunt instellen;"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:247
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:276
 msgid ""
 "*Markers*: only displays customizable markers symbol at grid lines "
 "intersection;"
@@ -559,15 +644,15 @@ msgstr ""
 "*Markeringen*: geeft alleen aan te passen markeringssymbolen weer op de "
 "kruisingen van de rasterlijnen;"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:249
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:278
 msgid "or *Frame and annotations only*."
 msgstr "of *Alleen frame en annotaties*."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:251
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:280
 msgid "Other than the grid type, you can define:"
 msgstr "Naast het type raster kunt u definiëren:"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:253
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:282
 msgid ""
 "the :guilabel:`CRS` of the grid. If not changed, it will follow the Map CRS."
 " The :guilabel:`Change` button lets you set it to a different CRS. Once set,"
@@ -583,7 +668,7 @@ msgstr ""
 "ReferentieSystemen` in het dialoogvenster Keuze Coördinaten "
 "ReferentieSysteem."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:259
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:288
 msgid ""
 "the :guilabel:`Interval` type to use for the grid references. Available "
 "options are ``Map Unit``, ``Fit Segment Width``, ``Millimeter`` or "
@@ -593,7 +678,7 @@ msgstr ""
 "raster. Beschikbare opties zijn ``Kaarteenheid``, ``Breedte segment passend "
 "maken``, ``Millimeter`` of ``Centimeter``:"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:262
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:291
 msgid ""
 "choosing ``Fit Segment Width`` will dynamically select the grid interval "
 "based on the map extent to a \"pretty\" interval. When selected, the "
@@ -604,7 +689,7 @@ msgstr ""
 "interval. Indien geselecteerd kunnen de ``Minimum`` en ``Maximum`` voor de "
 "intervallen worden ingesteld."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:265
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:294
 msgid ""
 "the other options allow you to set the distance between two consecutive grid"
 " references in the ``X`` and ``Y`` directions."
@@ -612,7 +697,7 @@ msgstr ""
 "de andere opties stellen u in staat de afstand tussen twee opeenvolgende "
 "rasterverwijzingen in de richtingen ``X`` en ``Y`` in te stellen."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:268
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:297
 msgid ""
 "the :guilabel:`Offset` from the map item edges, in the ``X`` and/or the "
 "``Y`` direction"
@@ -620,7 +705,7 @@ msgstr ""
 "de :guilabel:`Verspringing` vanaf de randen van het kaartitem, in de "
 "richting ``X`` en/of ``Y``"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:270
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:299
 msgid ""
 "and the :guilabel:`Blend mode` of the grid (see :ref:`blend-modes`) when "
 "compatible."
@@ -628,15 +713,15 @@ msgstr ""
 "en de :guilabel:`Meng-modus` van het raster (zie :ref:`blend-modes`) indien "
 "compatibel."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:278
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:307
 msgid "Grid Appearance Dialog"
 msgstr "Dialoogvenster Uiterlijk"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:281
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:310
 msgid "Grid Frame"
 msgstr "Rasterframe"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:283
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:312
 msgid ""
 "There are different options to style the frame that holds the map. The "
 "following options are available: ``No Frame``, ``Zebra``, ``Zebra "
@@ -648,7 +733,7 @@ msgstr ""
 "(nautisch)``, ``Interieurtikken``, ``Exterieurtikken``, ``Interieur- en "
 "exterieurtikken``, ``Lijnrand`` en ``Lijnrand (nautisch)``."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:288
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:317
 msgid ""
 "When compatible, it's possible to set the :guilabel:`Frame size`, a "
 ":guilabel:`Frame margin`, the :guilabel:`Frame line thickness` with "
@@ -658,7 +743,7 @@ msgstr ""
 "stellen, een :guilabel:`Marge frame`, de :guilabel:`Frame lijndiktes` met "
 "geassocieerde kleur en de :guilabel:`Frame vulkleuren`."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:292
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:321
 msgid ""
 "Using ``Latitude/Y only`` and ``Longitude/X only`` values in the divisions "
 "section you can prevent a mix of latitude/Y and longitude/X coordinates "
@@ -672,15 +757,15 @@ msgstr ""
 "geprojecteerde rasters. U kunt er ook voor kiezen om elke zijde van het "
 "frame van het raster zichtbaar te laten zijn, of niet."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:302
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:331
 msgid "Grid Frame Dialog"
 msgstr "Dialoogvenster Frame raster"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:305
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:334
 msgid "Coordinates"
 msgstr "Coördinaten"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:307
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:336
 msgid ""
 "The |checkbox| :guilabel:`Draw coordinates` checkbox allows you to add "
 "coordinates to the map frame. You can choose the annotation numeric format, "
@@ -694,7 +779,7 @@ msgstr ""
 "seconden, met of zonder achtervoegsel, uitgelijnd of niet en een aangepaste "
 "indeling met het dialoogvenster voor expressie."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:312
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:341
 msgid ""
 "You can choose which annotation to show. The options are: show all, latitude"
 " only, longitude only, or disable(none). This is useful when the map is "
@@ -709,7 +794,7 @@ msgstr ""
 "annotatie kan worden gedefinieerd als horizontaal, verticaal stijgend of "
 "verticaal dalend."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:318
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:347
 msgid ""
 "Finally, you can define the annotation font, font color, distance from the "
 "map frame and the precision of the drawn coordinates."
@@ -718,15 +803,15 @@ msgstr ""
 "kaartframe en de precisie van de getekende coördinaten van de annotatie "
 "definiëren."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:326
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:355
 msgid "Grid Draw Coordinates dialog"
 msgstr "Dialoogvenster Raster - Coördinaten tekenen"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:332
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:361
 msgid "Overviews"
 msgstr "Overzichtskaarten"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:334
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:363
 msgid ""
 "Sometimes you may have more than one map in the print layout and would like "
 "to locate the study area of one map item on another one. This could be for "
@@ -738,7 +823,7 @@ msgstr ""
 "bijvoorbeeld kaartlezers helpen het gebied te identificeren in relatie met "
 "zijn grotere geografische context, weergegeven in de tweede kaart."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:339
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:368
 msgid ""
 "The :guilabel:`Overviews` group of the map panel helps you create the link "
 "between two different maps extent and provides the following "
@@ -748,11 +833,11 @@ msgstr ""
 "koppeling te maken tussen twee verschillende kaartbereiken en verschaft de "
 "volgende functionaliteiten:"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:347
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:376
 msgid "Map Overviews group"
 msgstr "Kaart groep Overzichtskaarten"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:349
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:378
 msgid ""
 "To create an overview, select the map item on which you want to show the "
 "other map item's extent and expand the :guilabel:`Overviews` option in the "
@@ -764,7 +849,7 @@ msgstr ""
 ":guilabel:`Overzichtskaarten` in het paneel :guilabel:`Item-eigenschappen`. "
 "Druk dan op de knop |signPlus| om een overzichtskaart toe te voegen."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:354
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:383
 msgid ""
 "Initially this overview is named 'Overview 1' (see "
 "Figure_layout_map_overview_). You can:"
@@ -772,17 +857,17 @@ msgstr ""
 "Initieel is deze overzichtskaart genaamd 'Overzichtskaart 1' (zie "
 "Figure_layout_map_overview_). U kunt:"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:357
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:386
 msgid "Rename it with a double-click"
 msgstr "Het met een dubbelklik hernoemen"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:358
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:387
 msgid "With the |signPlus| and |signMinus| buttons, add or remove overviews"
 msgstr ""
 "Met de knoppen |signPlus| en |signMinus| kunt u overzichtskaarten toevoegen "
 "of verwijderen"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:359
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:388
 msgid ""
 "With the |arrowUp| and |arrowDown| buttons, move an overview up and down in "
 "the list, placing it above or below other overviews in the map item (when "
@@ -793,7 +878,7 @@ msgstr ""
 " het kaartitem plaatsen (als zij dezelfde :ref:`gestapelde positie "
 "<overview_stack_position>` hebben)."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:363
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:392
 msgid ""
 "Then select the overview item in the list and check the |checkbox| "
 ":guilabel:`Draw \"<name_overview>\" overview` to enable the drawing of the "
@@ -804,7 +889,7 @@ msgstr ""
 "de overzichtskaart op het geselecteerde kaartframe in te schakelen. U kunt "
 "het aanpassen met:"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:367
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:396
 msgid ""
 "The :guilabel:`Map frame` selects the map item whose extents will be shown "
 "on the present map item."
@@ -812,7 +897,7 @@ msgstr ""
 "Het :guilabel:`Kaartframe` selecteert het kaartitem waarvan de bereiken "
 "zullen worden weergegeven in het huidige kaartitem."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:369
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:398
 msgid ""
 "The :guilabel:`Frame Style` uses the :ref:`symbol properties <symbol-"
 "selector>` to render the overview frame."
@@ -820,7 +905,7 @@ msgstr ""
 "De :guilabel:`Randstijl` gebruikt de :ref:`eigenschappen van symbool "
 "<symbol-selector>` om het frame voor de overzichtskaart te renderen."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:371
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:400
 msgid ""
 "The :guilabel:`Blending mode` allows you to set different transparency blend"
 " modes."
@@ -828,7 +913,7 @@ msgstr ""
 "De :guilabel:`Meng-modus` stelt u in staat verschillende meng-modi voor "
 "transparantie in te stellen."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:373
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:402
 msgid ""
 "The |checkbox| :guilabel:`Invert overview` creates a mask around the extents"
 " when activated: the referenced map extents are shown clearly, whereas the "
@@ -841,7 +926,7 @@ msgstr ""
 "vertroebeld door de vulkleur van het frame (als een vulkleur wordt "
 "gebruikt)."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:377
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:406
 msgid ""
 "The |checkbox| :guilabel:`Center on overview` pans the map item content so "
 "that the overview frame is displayed at the center of the map. You can only "
@@ -852,7 +937,7 @@ msgstr ""
 "het midden van de kaart. U kunt slechts één overzichtskaart gebruiken voor "
 "centreren, als u meerdere overzichtskaarten hebt."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:383
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:412
 msgid ""
 "The :guilabel:`Position` controls exactly where in the map item's layer "
 "stack the overview will be placed, e.g. allowing an overview extent to be "
@@ -865,11 +950,11 @@ msgstr ""
 "objecten, zoals wegen, bij het tekenen boven andere lagen voor de "
 "achtergrond. Beschikbare opties zijn:"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:388
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:417
 msgid ":guilabel:`Below map`"
 msgstr ":guilabel:`Onder kaart`"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:389
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:418
 msgid ""
 ":guilabel:`Below map layer` and :guilabel:`Above map layer`: place the "
 "overview frame below and above the geometries of a layer, respectively. The "
@@ -879,7 +964,7 @@ msgstr ""
 "overzichtskaart respectievelijk onder en boven de geometrieën van een laag. "
 "De laag wordt geselecteerd in de optie :guilabel:`Laag stapelen`."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:392
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:421
 msgid ""
 ":guilabel:`Below map labels`: given that labels are always rendered above "
 "all the feature geometries in a map item, places the overview frame above "
@@ -889,7 +974,7 @@ msgstr ""
 "bovenop alle geometrieën van objecten in een kaartitem, plaatst het frame "
 "voor de overzichtskaart bovenop alle geometrieën en onder eventuele labels."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:395
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:424
 msgid ""
 ":guilabel:`Above map labels`: places the overview frame above all the "
 "geometries and labels in the map item."
