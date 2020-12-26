@@ -1,6 +1,13 @@
 name: Doctest build
 
-on: [push, pull_request]
+on: 
+  push:
+    paths-ignore:
+      - 'locale/**'
+
+  pull_request:
+    paths-ignore:
+      - 'locale/**'
 
 jobs:
   build:
