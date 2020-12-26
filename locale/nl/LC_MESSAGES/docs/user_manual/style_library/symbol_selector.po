@@ -1,24 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
+# Harrissou Sant-anna, 2020
 # DiGro, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:27+0000\n"
+"POT-Creation-Date: 2020-12-25 09:53+0000\n"
+"PO-Revision-Date: 2020-12-24 12:04+0000\n"
 "Last-Translator: DiGro, 2020\n"
 "Language-Team: Dutch (https://www.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
 "Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -379,22 +381,22 @@ msgstr ""
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:154
 msgid ""
-"the |checkbox| :guilabel:`Enable layer` option controls the symbol layer's "
-"visibility. Disabled symbol layers are not drawn when rendering the symbol "
-"but are saved in the symbol. Being able to hide symbol layers is convenient "
-"when looking for the best design of your symbol as you don't need to remove "
-"any for the testing. The data-defined override then makes it possible to "
-"hide or display different symbol layers based on expressions (using, for "
-"instance, feature attributes)."
+"the |checkbox| :guilabel:`Enable symbol layer` option controls the symbol "
+"layer's visibility. Disabled symbol layers are not drawn when rendering the "
+"symbol but are saved in the symbol. Being able to hide symbol layers is "
+"convenient when looking for the best design of your symbol as you don't need"
+" to remove any for the testing. The data-defined override then makes it "
+"possible to hide or display different symbol layers based on expressions "
+"(using, for instance, feature attributes)."
 msgstr ""
-"de optie |checkbox| :guilabel:`Laag inschakelen` beheert de zichtbaarheid "
-"van de symboollaag. Uitgeschakelde symboollagen worden niet getekend bij het"
-" renderen van het symbool, maar worden opgeslagen in het symbool. Het kunnen"
-" verbergen van symboollagen is handig bij het zoeken naar het beste ontwerp "
-"van uw symbool, omdat u er geen hoeft te verwijderen bij het testen. De "
-"data-bepaalde 'override' maakt het dan mogelijk om verschillende "
-"symboollagen te verbergen of weer te geven, gebaseerd op expressies (met "
-"behulp van bijvoorbeeld attributen van objecten)."
+"de optie |checkbox| :guilabel:`Symboollaag inschakelen` beheert de "
+"zichtbaarheid van de symboollaag. Uitgeschakelde symboollagen worden niet "
+"getekend bij het renderen van het symbool, maar worden opgeslagen in het "
+"symbool. Het kunnen verbergen van symboollagen is handig bij het zoeken naar"
+" het beste ontwerp van uw symbool, omdat u er geen hoeft te verwijderen bij "
+"het testen. De data-bepaalde 'override' maakt het dan mogelijk om "
+"verschillende symboollagen te verbergen of weer te geven, gebaseerd op "
+"expressies (met behulp van bijvoorbeeld attributen van objecten)."
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:160
 msgid ""
@@ -462,37 +464,78 @@ msgstr ""
 "shapeburst."
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:196
-msgid "**Font marker**: use installed fonts as marker symbols"
+msgid ""
+"**Font marker**: similar to the simple marker symbol layer, except that it "
+"uses installed fonts to render the marker. Its additional properties are:"
 msgstr ""
-"**Lettertype-symbool**: geïnstalleerde lettertypen als markeringssymbolen "
-"gebruiken"
+"**Lettertype-markering**: soortgelijk aan de standaard "
+"markeringssymboollaag, met de uitzondering dat het geïnstalleerde "
+"lettertypen gebruikt om de markering te renderen. De aanvullende "
+"eigenschappen ervan zijn:"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:197
-#: ../../docs/user_manual/style_library/symbol_selector.rst:275
-#: ../../docs/user_manual/style_library/symbol_selector.rst:348
+#: ../../docs/user_manual/style_library/symbol_selector.rst:200
+msgid ":guilabel:`Font family`"
+msgstr ":guilabel:`Lettertype`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:201
+msgid ":guilabel:`Font style`"
+msgstr ":guilabel:`Stijl lettertype`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:202
+msgid ""
+":guilabel:`Character(s)`, representing the text to display as symbol. They "
+"can be typed in or selected from the font characters collection widget and "
+"you can live :guilabel:`Preview` them with the selected settings."
+msgstr ""
+":guilabel:`Teken(s)`, de tekst om weer te geven als symbool. Zij kunnen "
+"worden getypt of geselecteerd uit de widget met verzamelde tekens van het "
+"lettertype en u kunt ze live als :guilabel:`Voorbeeld` zien met de "
+"geselecteerde instellingen."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:206
+#: ../../docs/user_manual/style_library/symbol_selector.rst:302
+#: ../../docs/user_manual/style_library/symbol_selector.rst:384
 msgid "**Geometry generator** (see :ref:`geometry_generator_symbol`)"
 msgstr "**Geometrie-generator** (bekijk :ref:`geometry_generator_symbol`)"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:201
+#: ../../docs/user_manual/style_library/symbol_selector.rst:210
+msgid ""
+"**Mask**: its sub-symbol defines a mask shape whose color property will be "
+"ignored and only the opacity will be used. This is convenient when the "
+"marker symbol overlaps with labels or other symbols whose colors are close, "
+"making it hard to decipher. More details at :ref:`vector_mask_menu`."
+msgstr ""
+"**Masker**: zijn sub-symboel definieert een vorm masker waarvan de "
+"eigenschap kleur zal worden genegeerd en alleen doorzichtbaarheid zal worden"
+" gebruikt. Dit is nuttig als het markeringssymbool overlapt met labels of "
+"andere symbolen waarvan kleuren dicht bij elkaar liggen, wat het moeilijker "
+"te ontcijferen maakt. Meer details in :ref:`vector_mask_menu`."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:217
 msgid ""
 "**Raster image marker**: use an image (:file:`PNG`, :file:`JPG`, :file:`BMP`"
 " ...) as marker symbol. The image can be a file on the disk, a remote URL or"
 " embedded in the style database (:ref:`more details <svg_paths>`). Width and"
 " height of the image can be set independently or using the |lockedGray| "
-":sup:`Lock aspect ratio`."
+":sup:`Lock aspect ratio`. The size can be set using any of the :ref:`common "
+"units <unit_selector>` or as a percentage of the image's original size "
+"(scaled by the width)."
 msgstr ""
-"**Markering rasterafbeelding**: gebruiken van een afbeelding (:file:`PNG`, "
+"**Markering rasterafbeelding**: gebruikt een afbeelding (:file:`PNG`, "
 ":file:`JPG`, :file:`BMP` …) als markeringssymbool. De afbeelding mag een "
 "bestand op schijf zijn, een URL op afstand of ingebed in de stijldatabase "
 "(:ref:`meer details <svg_paths>`). Breedte en hoogte van de afbeelding "
 "kunnen afzonderlijk worden ingesteld of gebruik |lockedGray| "
-":sup:`Verhoudingen aspect vastzetten`."
+":sup:`Verhoudingen aspect vastzetten`. De grootte kan worden ingesteld met "
+"een van de :ref:`algemene eenheden <unit_selector>` of als een percentage "
+"van de originele grootte van de afbeelding (op schaal gebracht via de "
+"breedte)."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:206
+#: ../../docs/user_manual/style_library/symbol_selector.rst:224
 msgid "**Vector Field marker** (see :ref:`vector_field_marker`)"
 msgstr "**Markering vectorveld** (bekijk :ref:`vector_field_marker`)"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:210
+#: ../../docs/user_manual/style_library/symbol_selector.rst:228
 msgid ""
 "**SVG marker**: provides you with images from your SVG paths (set in "
 ":menuselection:`Settings --> Options... --> System` menu) to render as "
@@ -509,11 +552,11 @@ msgstr ""
 "afbeelding mag een bestand op schijf zijn, een URL op afstand of ingebed in "
 "de stijldatabase (:ref:`meer details <svg_paths>`)."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:217
+#: ../../docs/user_manual/style_library/symbol_selector.rst:235
 msgid "SVG version requirements"
 msgstr "Vereisten voor versie van SVG"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:219
+#: ../../docs/user_manual/style_library/symbol_selector.rst:237
 msgid ""
 "QGIS renders SVG files that follow the `SVG Tiny 1.2 profile "
 "<https://www.w3.org/TR/SVGMobile12/>`_, intended for implementation on a "
@@ -528,7 +571,7 @@ msgstr ""
 "mogelijkheden die zijn opgenomen in SVG 1.1 Full, naast de nieuwe "
 "mogelijkheden om de mogelijkheden van SVG uit te breiden."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:225
+#: ../../docs/user_manual/style_library/symbol_selector.rst:243
 msgid ""
 "Some features not included in these specifications might not be rendered "
 "correctly in QGIS."
@@ -536,11 +579,11 @@ msgstr ""
 "Sommige mogelijkheden, die niet zijn opgenomen in deze specificaties, zouden"
 " misschien niet correct worden gerenderd in QGIS."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:228
+#: ../../docs/user_manual/style_library/symbol_selector.rst:246
 msgid "Enable SVG marker symbol customization"
 msgstr "Aanpassen van SVG-symbolen inschakelen"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:230
+#: ../../docs/user_manual/style_library/symbol_selector.rst:248
 msgid ""
 "To have the possibility to change the colors of a :guilabel:`SVG marker`, "
 "you have to add the placeholders ``param(fill)`` for fill color, "
@@ -554,27 +597,27 @@ msgstr ""
 " toevoegen. Deze plaatsvervangers mogen, optioneel, worden gevolgd door een "
 "stadaardwaarde, bijv.:"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:246
+#: ../../docs/user_manual/style_library/symbol_selector.rst:264
 msgid "Line Symbols"
 msgstr "Symbolen Lijn "
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:248
+#: ../../docs/user_manual/style_library/symbol_selector.rst:266
 msgid ""
-"Appropriate for line geometry features, line symbols have following symbol "
-"layer types:"
+"Appropriate for line geometry features, line symbols have the following "
+"symbol layer types:"
 msgstr ""
-"Toepasselijk voor geometrieobjecten lijn hebben symbolen lijn verscheidene "
-":guilabel:`Symboollaagtypen`:"
+"Toepasselijk voor geometrieobjecten lijn hebben lijnsymbolen de volgende "
+"typen symboollagen:"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:251
+#: ../../docs/user_manual/style_library/symbol_selector.rst:271
 msgid "**Simple line** (default): available settings are:"
 msgstr "**Doorgetrokken lijn** (standaard): beschikbare instellingen zijn:"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:258
+#: ../../docs/user_manual/style_library/symbol_selector.rst:278
 msgid "Designing a Simple Line Symbol"
 msgstr "Een symbool Doorgetrokken lijn ontwerpen"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:260
+#: ../../docs/user_manual/style_library/symbol_selector.rst:280
 msgid ""
 "The simple line symbol layer type has many of the same properties as the "
 ":ref:`simple marker symbol <simple_marker_symbol>`, and in addition:"
@@ -583,11 +626,11 @@ msgstr ""
 " het :ref:`standaard markeringssymbool <simple_marker_symbol>`, en, in "
 "aanvulling daarop:"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:263
+#: ../../docs/user_manual/style_library/symbol_selector.rst:283
 msgid ":guilabel:`Cap style`"
 msgstr ":guilabel:`Eindstijl`"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:264
+#: ../../docs/user_manual/style_library/symbol_selector.rst:284
 msgid ""
 "|checkbox| :guilabel:`Use custom dash pattern`: overrides the "
 ":guilabel:`Stroke style` setting with a custom dash."
@@ -595,7 +638,30 @@ msgstr ""
 "|checkbox| :guilabel:`Gebruik aangepast lijnpatroon`: overschrijft de "
 "instelling :guilabel:`Lijnstijl` door een aangepast streepje."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:269
+#: ../../docs/user_manual/style_library/symbol_selector.rst:286
+msgid ""
+"|checkbox| :guilabel:`Align dash pattern to line length`: the dash pattern "
+"length will be adjusted so that the line will end with a complete dash "
+"element, instead of a gap."
+msgstr ""
+"|checkbox| :guilabel:`Streepjespatroon uitlijnen op lijnlengte`: de lengte "
+"van het streepjespatroon zal worden aangepast, zodat de lijn zal eindigen "
+"met een volledig element streepje, in plaats van met een gat."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:289
+msgid ""
+"|checkbox| :guilabel:`Tweak dash pattern at sharp corners`: dynamically "
+"adjusts the dash pattern placement so that sharp corners are represented by "
+"a full dash element coming into and out of the sharp corner. Dependent on "
+":guilabel:`Align dash pattern to line length`."
+msgstr ""
+"|checkbox| :guilabel:`Streepjespatroon op scherpe hoeken aanpassen`: pas de "
+"plaatsing van het streepjespatroon dynamisch aan, zodat scherpe hoeken "
+"worden weergegeven door een volledig element streepje dat in en uit de "
+"scherpe hoek komt. Afhankelijk van :guilabel:`Streepjespatroon uitlijnen op "
+"lijnlengte`."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:296
 msgid ""
 "**Arrow**: draws lines as curved (or not) arrows with a single or a double "
 "head with configurable width, length and thickness. To create a curved arrow"
@@ -612,7 +678,7 @@ msgstr ""
 "Gecombineerd met de geometrie-generator helpt dit type laagsymbool u om "
 "stroomkaarten weer te geven."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:279
+#: ../../docs/user_manual/style_library/symbol_selector.rst:306
 msgid ""
 "**Marker line**: repeats a :ref:`marker symbol <vector_marker_symbols>` over"
 " the length of a line."
@@ -620,7 +686,7 @@ msgstr ""
 "**Symbolenlijn**: herhaalt een :ref:`markeringssymbool "
 "<vector_marker_symbols>` over de lengte van een lijn."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:282
+#: ../../docs/user_manual/style_library/symbol_selector.rst:309
 msgid ""
 "The markers placement can be at a regular distance or based on the line "
 "geometry: first, last or each vertex, on the central point of the line or of"
@@ -630,23 +696,23 @@ msgstr ""
 " de geometrie van de lijn: eerste, laatste of elk punt, op het centrale punt"
 " van de lijn of van elk segment, of op elk punt van de boog."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:285
+#: ../../docs/user_manual/style_library/symbol_selector.rst:312
 msgid "The markers placement can also be given an offset along the line"
 msgstr ""
 "De plaatsing van de markeringen kan ook een verschuiving langs de lijn "
 "worden gegeven"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:286
+#: ../../docs/user_manual/style_library/symbol_selector.rst:313
 msgid ""
-"The |checkbox| :guilabel:`Rotate marker` option allows you to set whether "
-"each marker symbol should be oriented relative to the line direction or not."
+"The |checkbox| :guilabel:`Rotate marker to follow line direction` option "
+"sets whether each marker symbol should be oriented relative to the line "
+"direction or not."
 msgstr ""
 "De optie |checkbox| :guilabel:`Markering draaien zodat die de lijnrichting "
-"volgt` maakt het mogelijk in te stellen of elk markeringssymbool zou moeten "
-"worden georiënteerd, relatief ten opzichte van de richting van de lijn of "
-"niet."
+"volgt` stelt in of elk markeringssymbool zou moeten worden georiënteerd, "
+"relatief ten opzichte van de richting van de lijn of niet."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:289
+#: ../../docs/user_manual/style_library/symbol_selector.rst:317
 msgid ""
 "Because a line is often a succession of segments of different directions, "
 "the rotation of the marker is calculated by averaging over a specified "
@@ -668,11 +734,11 @@ msgstr ""
 "wat resulteert in veel nettere visuele oriëntaties van de symbolen van de "
 "markeringslijn."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:298
+#: ../../docs/user_manual/style_library/symbol_selector.rst:326
 msgid "The marker line can also be offset from the line itself."
 msgstr "De markeringslijn kan ook worden verschoven vanaf de lijn zelf."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:302
+#: ../../docs/user_manual/style_library/symbol_selector.rst:330
 msgid ""
 "**Hashed line**: repeats a line segment (a hash) over the length of a line "
 "symbol, with a line sub-symbol used to render each individual segment. In "
@@ -688,23 +754,23 @@ msgstr ""
 "eigenschappen <marker_line_symbol>` als symbolen voor markeringslijnen, "
 "naast:"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:309
+#: ../../docs/user_manual/style_library/symbol_selector.rst:337
 msgid ":guilabel:`Hash length`"
 msgstr ":guilabel:`Lengte van streepjes`"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:310
+#: ../../docs/user_manual/style_library/symbol_selector.rst:338
 msgid ":guilabel:`Hash rotation`"
 msgstr ":guilabel:`Rotatie van streepjes`"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:318
+#: ../../docs/user_manual/style_library/symbol_selector.rst:346
 msgid "Examples of hashed lines"
 msgstr "Voorbeeld van gestreepte lijnen"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:324
+#: ../../docs/user_manual/style_library/symbol_selector.rst:352
 msgid "Fill Symbols"
 msgstr "Standaard vulling"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:326
+#: ../../docs/user_manual/style_library/symbol_selector.rst:354
 msgid ""
 "Appropriate for polygon geometry features, fill symbols have also several "
 "symbol layer types:"
@@ -712,40 +778,62 @@ msgstr ""
 "Toepasselijk voor geometrieobjecten polygoon hebben standaard vullingen ook "
 "verscheidene symboollaagtypen:"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:329
+#: ../../docs/user_manual/style_library/symbol_selector.rst:357
 msgid "**Simple fill** (default): fills a polygon with a uniform color"
 msgstr ""
 "**Standaard vulling** (standaard): vult een polygoon met een uniforme kleur"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:336
+#: ../../docs/user_manual/style_library/symbol_selector.rst:364
 msgid "Designing a Simple Fill Symbol"
 msgstr "Een symbool Standaard vulling ontwerpen"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:338
+#: ../../docs/user_manual/style_library/symbol_selector.rst:366
 msgid ""
 "**Centroid fill**: places a :ref:`marker symbol <vector_marker_symbols>` at "
 "the centroid of the visible feature. The position of the marker may not be "
 "the real centroid of the feature, because calculation takes into account the"
 " polygon(s) clipped to area visible in map canvas for rendering and ignores "
-"holes. Use the geometry generator symbol if you want the exact centroid."
+"holes. Use the :ref:`geometry generator symbol <geometry_generator_symbol>` "
+"if you want the exact centroid."
 msgstr ""
 "**Vuling centroïde**: plaatst een :ref:`markeringssymbool "
 "<vector_marker_symbols>` op het zwaartepunt van het zichtbare object. De "
 "positie van de markering mag niet het echte zwaartepunt van het object zijn,"
 " omdat de berekening rekening houdt met de polygo(o)n(en) die zijn geclipt "
 "tot het zichtbare gebied in het kaartvenster voor renderen en gaten negeert."
-" Gebruik het symbool geometrie-generator als u het exacte zwaartepunt wilt."
+" Gebruik het :ref:`symbool geometrie-generator <geometry_generator_symbol>` "
+"als u het exacte zwaartepunt wilt."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:345
+#: ../../docs/user_manual/style_library/symbol_selector.rst:374
+msgid "You can:"
+msgstr "U kunt:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:376
+msgid ":guilabel:`Force point inside polygon`"
+msgstr ":guilabel:`Punt binnen polygoon forceren`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:377
 msgid ""
-"The marker(s) can be placed on every part of a multi-part feature or only on"
-" its biggest part, and forced to be inside the polygon."
+":guilabel:`Draw point on every part of multi-part feature` or place the "
+"point only on its biggest part"
 msgstr ""
-"De markering(en) kunnen worden geplaatst op elk deel van een meerdelig "
-"object of alleen op het grootste deel ervan, en binnen de polygoon worden "
-"geforceerd."
+":guilabel:`Punt tekenen op elk deel van een meerdelig object` of plaats de "
+"punt alleen op zijn grootste deel"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:349
+#: ../../docs/user_manual/style_library/symbol_selector.rst:379
+msgid ""
+"display the marker symbol(s) in whole or in part, keeping parts overlapping "
+"the current feature geometry (:guilabel:`Clip markers to polygon boundary`) "
+"or the geometry part the symbol belongs to (:guilabel:`Clip markers to "
+"current part boundary only`)"
+msgstr ""
+"geef de markeringssymbo(o)l(en) in zijn geheel of gedeeltelijk weer, behoud "
+"delen die de geometrie van het huidige object overlappen "
+"(:guilabel:`Markeringen clippen naar grenzen polygoon`) of het gedeelte "
+"geometrie van het symbool behoort tot (:guilabel:`Markeringen alleen clippen"
+" naar huidige deel van polygoon`)"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:385
 msgid ""
 "**Gradient fill**: uses a radial, linear or conical gradient, based on "
 "either simple two color gradients or a predefined :ref:`gradient color ramp "
@@ -761,7 +849,7 @@ msgstr ""
 " worden ingesteld via coördinaten of met het zwaartepunt (van object of "
 "kaart);"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:354
+#: ../../docs/user_manual/style_library/symbol_selector.rst:390
 msgid ""
 "**Line pattern fill**: fills the polygon with a hatching pattern of "
 ":ref:`line symbol layer <vector_line_symbols>`. You can set a rotation, the "
@@ -771,7 +859,7 @@ msgstr ""
 ":ref:`lijnsymboollagen <vector_line_symbols>`. U kunt een rotatie, de ruimte"
 " tussen lijnen en een verschuiving vanaf de grens van een object instellen;"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:357
+#: ../../docs/user_manual/style_library/symbol_selector.rst:393
 msgid ""
 "**Point pattern fill**: fills the polygon with a hatching pattern of "
 ":ref:`marker symbol layer <vector_marker_symbols>`. You can set the distance"
@@ -783,27 +871,69 @@ msgstr ""
 "plaatsing tussen rijen van markeringen en een verschuiving vanaf de grens "
 "van het object instellen;"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:361
+#: ../../docs/user_manual/style_library/symbol_selector.rst:397
+msgid ""
+"**Random marker fill**: fills the polygon with a :ref:`marker symbol "
+"<vector_marker_symbols>` placed at random locations within the polygon "
+"boundary. You can set:"
+msgstr ""
+"**Vulling willekeurige markering**: vult de polygoon met een "
+":ref:`markeringssymbool <vector_marker_symbols>` geplaatst op willekeurige "
+"locaties binnen de grenzen van de polygoon. U kunt instellen:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:401
+msgid ""
+"the number of marker symbols to render, either as an absolute count or as "
+"density-based (the fill density will remain the same on different scale / "
+"zoom levels)"
+msgstr ""
+"het aantal te renderen markeringssymbolen, ofwel als een absoluut aantal of "
+"op dichtheid gebaseerd (de dichtheid van de vulling zal hetzelfde blijven "
+"bij verschillende schaal- / zoomniveaus)"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:404
+msgid ""
+"an optional random number seed, to give consistent placement of markers "
+"whenever maps are refreshed (also allows random placement to play nice with "
+"QGIS server and tile-based rendering)"
+msgstr ""
+"een optioneel willekeurig aantal zaad, om consistente plaatsing van "
+"markeringen te geven wanneer kaarten worden vernieuwd (laat willekeurige "
+"plaatsing ook in lijn lopen met QGIS server en op tegels gebaseerd renderen)"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:407
+msgid ""
+"whether markers rendered near the edges of polygons should be clipped to the"
+" polygon boundary or not"
+msgstr ""
+"of markeringen die worden gerenderd nabij de randen van polygonen tot de "
+"grenzen van de polygoon zouden moeten worden geclipt of niet"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:410
 msgid ""
 "**Raster image fill**: fills the polygon with tiles from a raster image "
 "(:file:`PNG` :file:`JPG`, :file:`BMP` ...). The image can be a file on the "
 "disk, a remote URL or an embedded file encoded as a string (:ref:`more "
 "details <svg_paths>`). Options include (data defined) opacity, image width, "
-"coordinate mode (object or viewport), rotation and offset."
+"coordinate mode (object or viewport), rotation and offset. The image width "
+"can be set using any of the :ref:`common units <unit_selector>` or as a "
+"percentage of the original size."
 msgstr ""
 "**Vulling rasterafbeelding**: vult de polygoon met tegels van een "
 "rasterafbeelding (:file:`PNG` :file:`JPG`, :file:`BMP` …). De afbeelding mag"
 " een bestand op schijf zijn, een URL op afstand of een ingebed bestand dat "
 "is gecodeerd als een tekenreeks (:ref:`meer details <svg_paths>`). Opties "
 "omvatten (data-bepaald) doorzichtbaarheid, breedte afbeelding, modus  voor "
-"coördinaten (object of zichtgebied), rotatie en verschuiving."
+"coördinaten (object of zichtgebied), rotatie en verschuiving. De breedte van"
+" de afbeelding kan worden ingesteld met een van de :ref:`algemene eenheden "
+"<unit_selector>` of als een percentage van de originele grootte."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:366
+#: ../../docs/user_manual/style_library/symbol_selector.rst:416
 msgid "**SVG fill**: fills the polygon using :ref:`SVG markers <svg_marker>`;"
 msgstr ""
 "**SVG-vulling**: vult de polygoon met :ref:`SVG-markeringen <svg_marker>`;"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:367
+#: ../../docs/user_manual/style_library/symbol_selector.rst:417
 msgid ""
 "**Shapeburst fill**: buffers a gradient fill, where a gradient is drawn from"
 " the boundary of a polygon towards the polygon's centre. Configurable "
@@ -817,7 +947,7 @@ msgstr ""
 "kleurverlopen of eenvoudige tweekleurige verlopen, optioneel vervagen van de"
 " vulling en verschuivingen;"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:372
+#: ../../docs/user_manual/style_library/symbol_selector.rst:422
 msgid ""
 "**Outline: Arrow**: uses a line :ref:`arrow symbol <arrow_symbol>` layer to "
 "represent the polygon boundary;"
@@ -825,7 +955,7 @@ msgstr ""
 "**Rand: Pijl**: gebruikt een lijnlaag :ref:`pijlsymbool <arrow_symbol>` om "
 "de grens van de polygoon weer te geven;"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:374
+#: ../../docs/user_manual/style_library/symbol_selector.rst:424
 msgid ""
 "**Outline: Hashed line**: uses a :ref:`hash line symbol "
 "<hashed_line_symbol>` layer to represent the polygon boundary (the interior "
@@ -835,30 +965,32 @@ msgstr ""
 "<hashed_line_symbol>` om de grens van de polygoon weer te geven (de "
 "interieurringen, de exterieurring of alle ringen)."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:377
+#: ../../docs/user_manual/style_library/symbol_selector.rst:427
 msgid ""
-"**Outline: Marker line**: uses a marker line symbol layer to represent the "
-"polygon boundary (the interior rings, the exterior ring or all the rings)."
+"**Outline: Marker line**: uses a :ref:`marker line symbol "
+"<marker_line_symbol>` layer to represent the polygon boundary (the interior "
+"rings, the exterior ring or all the rings)."
 msgstr ""
-"**Rand: Markeringslijn**: gebruikt een symboollaag markeringslijn om de "
-"grens van de polygoon weer te geven (de interieurringen, de exterieurring of"
-" alle ringen)."
+"**Rand: Markeringslijn**: gebruikt een :ref:`markeringslijn symbool "
+"<marker_line_symbol>`-laag om de grens van de polygoon weer te geven (de "
+"ringen van het interieur, de ring voor het exterieur of alle ringen)."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:379
+#: ../../docs/user_manual/style_library/symbol_selector.rst:430
 msgid ""
-"**Outline: simple line**: uses a simple line symbol layer to represent the "
-"polygon boundary (the interior rings, the exterior ring or all the rings). "
-"The :guilabel:`Draw line only inside polygon` option displays the polygon "
-"borders inside the polygon and can be useful to clearly represent adjacent "
-"polygon boundaries."
+"**Outline: simple line**: uses a :ref:`simple line symbol "
+"<simple_line_symbol>` layer to represent the polygon boundary (the interior "
+"rings, the exterior ring or all the rings). The :guilabel:`Draw line only "
+"inside polygon` option displays the polygon borders inside the polygon and "
+"can be useful to clearly represent adjacent polygon boundaries."
 msgstr ""
-"**Rand: Doorgetrokken lijn**: gebruikt een symboollaag Doorgetrokken lijn om"
-" de grens van de polygoon weer te geven (de interieurringen, de "
-"exterieurring of alle ringen). De optie :guilabel:`Teken lijn alleen binnen "
-"polygoon` geeft de grenzen van de polygoon weer binnen de polygoon en kan "
-"nuttig zijn om aanliggende grenzen van polygonen helder weer te geven."
+"**Rand: Doorgetrokken lijn**: gebruikt een :ref:`Doorgetrokken lijn symbool "
+"<simple_line_symbol>`-laag om de grens van de polygoon weer te geven (de "
+"interieurringen, de exterieurring of alle ringen). De optie :guilabel:`Teken"
+" lijn alleen binnen polygoon` geeft de grenzen van de polygoon weer binnen "
+"de polygoon en kan nuttig zijn om aanliggende grenzen van polygonen helder "
+"weer te geven."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:387
+#: ../../docs/user_manual/style_library/symbol_selector.rst:439
 msgid ""
 "When geometry type is polygon, you can choose to disable the automatic "
 "clipping of lines/polygons to the canvas extent. In some cases this clipping"
@@ -871,11 +1003,11 @@ msgstr ""
 "vullingen centroïde waarbij de centroïde altijd het feitelijke zwaartepunt "
 "van het object moet zijn)."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:395
+#: ../../docs/user_manual/style_library/symbol_selector.rst:447
 msgid "The Geometry Generator"
 msgstr "De Geometrie-generator"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:397
+#: ../../docs/user_manual/style_library/symbol_selector.rst:449
 msgid ""
 "Available with all types of symbols, the :guilabel:`geometry generator` "
 "symbol layer allows to use :ref:`expression syntax <functions_list>` to "
@@ -890,15 +1022,15 @@ msgstr ""
 "komen met het originele type geometrie en u kunt verscheidene, verschillend "
 "aangepaste, symboollagen boven op elkaar toevoegen."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:403
+#: ../../docs/user_manual/style_library/symbol_selector.rst:455
 msgid "Some examples:"
 msgstr "Enkele voorbeelden:"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:433
+#: ../../docs/user_manual/style_library/symbol_selector.rst:485
 msgid "The Vector Field Marker"
 msgstr "De markering Vectorveld"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:435
+#: ../../docs/user_manual/style_library/symbol_selector.rst:487
 msgid ""
 "The vector field marker is used to display vector field data such as earth "
 "deformation, tidal flows, and the like. It displays the vectors as lines "
@@ -913,7 +1045,7 @@ msgstr ""
 "gegevenspunten. Het kan alleen worden gebruikt om puntgegevens te renderen; "
 "lijn en polygoonlagen worden bij deze symbologie niet getekend."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:441
+#: ../../docs/user_manual/style_library/symbol_selector.rst:493
 msgid ""
 "The vector field is defined by attributes in the data, which can represent "
 "the field either by:"
@@ -921,12 +1053,12 @@ msgstr ""
 "Het vectorveld wordt gedefinieerd door attributen in de gegevens, die het "
 "veld kunnen weergeven als:"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:444
+#: ../../docs/user_manual/style_library/symbol_selector.rst:496
 msgid "**cartesian** components (``x`` and ``y`` components of the field)"
 msgstr ""
 "**Cartesiaanse** componenten (``X``- en ``Y``-componenten van het veld)"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:445
+#: ../../docs/user_manual/style_library/symbol_selector.rst:497
 msgid ""
 "or **polar** coordinates: in this case, attributes define ``Length`` and "
 "``Angle``. The angle may be measured either clockwise from north, or "
@@ -937,7 +1069,7 @@ msgstr ""
 "vanuit het noorden, of tegen de wijzers van de klok in vanuit het oosten, en"
 " mogen in radialen of graden zijn."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:448
+#: ../../docs/user_manual/style_library/symbol_selector.rst:500
 msgid ""
 "or as **height only** data, which displays a vertical arrow scaled using an "
 "attribute of the data. This is appropriate for displaying the vertical "
@@ -947,7 +1079,7 @@ msgstr ""
 "geschaald met behulp van een attribuut van de gegevens. Dit is bijvoorbeeld "
 "toepasbaar voor het weergeven van de verticale component van vervorming."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:452
+#: ../../docs/user_manual/style_library/symbol_selector.rst:504
 msgid ""
 "The magnitude of field can be scaled up or down to an appropriate size for "
 "viewing the field."
