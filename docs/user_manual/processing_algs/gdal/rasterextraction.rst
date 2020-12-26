@@ -15,7 +15,7 @@ Clip raster by extent
 Clips any GDAL-supported raster file to a given extent.
 
 This algorithm is derived from the
-`GDAL warp utility <https://gdal.org/programs/gdalwarp.htm>`_.
+`GDAL warp utility <https://gdal.org/programs/gdalwarp.html>`_.
 
 **Default menu**: :menuselection:`Raster --> Extraction`
 
@@ -138,7 +138,7 @@ Clip raster by mask layer
 Clips any GDAL-supported raster by a vector mask layer.
 
 This algorithm is derived from the
-`GDAL warp utility <https://gdal.org/programs/gdalwarp.htm>`_.
+`GDAL warp utility <https://gdal.org/programs/gdalwarp.html>`_.
 
 **Default menu**: :menuselection:`Raster --> Extraction`
 
@@ -356,7 +356,7 @@ Parameters
      - [string]
 
        Default: 'ELEV'
-     - Provides a name for the attribute in which to put the elevation.
+     - Provide a name for the attribute in which to put the elevation.
    * - **Offset from zero relative to which to interpret intervals**
 
        Optional
@@ -489,7 +489,7 @@ Parameters
      - [string]
 
        Default: 'ELEV_MIN'
-     - Provides a name for the attribute in which to put the minimum elevation
+     - Provide a name for the attribute in which to put the minimum elevation
        of contour polygon. If not provided no minimum elevation attribute
        is attached.
    * - **Attribute name for maximum elevation of contour polygon**
@@ -499,7 +499,7 @@ Parameters
      - [string]
 
        Default: 'ELEV_MAX'
-     - Provides a name for the attribute in which to put the maximum elevation
+     - Provide a name for the attribute in which to put the maximum elevation
        of contour polygon. If not provided no maximum elevation attribute
        is attached.
    * - **Produce 3D vector**
