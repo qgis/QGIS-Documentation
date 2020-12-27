@@ -1,3 +1,10 @@
+<!-- Transifex follows a particular logic to build target pages
+example of expected format: .../locale-en-lc-messages-docs-gentle-gis-introduction-data-capture-po--release-3-16 
+for the page ...3.16/docs/gentle_gis_introduction/data_capture.html in release_3.16 branch-->
+{%- set transifex_slug = ['locale-en-lc-messages', pagename, 'po--release', version] | join('-') | replace("/","-") | replace("_","-") | replace(".","-") | lower  %}
+<!--Make sure that mismatching languages codes are converted-->
+{%- set transifex_lang = language if language not in ('zh_Hant', 'zh_Hans') else (language | replace('_', '-')) %}
+
 {# Add rst-badge after rst-versions for small badge style. #}
   <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
     <span class="rst-current-version" data-toggle="rst-current-version">
@@ -38,9 +45,9 @@
             <a href="{{ github_url }}/{{ pagename }}.rst" target="_blank" rel="noopener noreferrer">{{ _('Edit on GitHub') }}</a>
           </dd>
           {# Display the call for translation only for the latest document. #}
-          {% if not isTesting %} 
+          {% if not isTesting %}
           <dd>
-            <a href="{{ transifex_url }}/#{{ language }}/{{ pagename | replace("/","--") }}" target="_blank" rel="noopener noreferrer">{{ _('Translate Page') }}</a>
+            <a href="{{ transifex_url }}/#{{ transifex_lang }}/{{ transifex_slug }}" target="_blank" rel="noopener noreferrer">{{ _('Translate Page') }}</a>
           </dd>
           {% endif %}
           <dd>
