@@ -13,6 +13,7 @@
 TARGETBRANCH=`git branch --show-current`
 SOURCEPOFILES='locale/en/LC_MESSAGES/docs/'
 PROJECT='qgis-documentation'
+CONFIGFILE='.tx/config'
 
 # To be sure there are no *.pot or *.mo files left
 make springclean
@@ -43,15 +44,19 @@ do
   #   locale-en-lc-messages-docs-user-manual-processing-3rdparty-po--release-3-16
   RESOURCE=`echo "$POFILE--$TARGETBRANCH" | tr '[:upper:]' '[:lower:]' | sed 's,[_/ \.\\],-,g'`
   echo $RESOURCE
-  # Register each po file as a transifex resource (an individual translatable file)
-  set -x
-  tx config mapping \
-    -t PO \
-    -r $PROJECT.$RESOURCE \
-    -s $POFILE \
-    --expression "$GENERICFILE" \
-    --source-language en \
-    --execute
+
+  # Populate the config file
+  # When we are done in this block we should have created sections in the
+  # .tx/config file that look like this:
+  #
+  #   [qgis-documentation.locale-en-lc-messages-docs-user-manual-processing-3rdparty-po--release-3-16]
+  #   file_filter = locale/<lang>/LC_MESSAGES/docs/user_manual/processing/3rdParty.po
+  #   source_file = locale/en/LC_MESSAGES/docs/user_manual/processing/3rdParty.po
+  #   source_lang = en
+  #   type = PO
+  #
+  echo -e "[$PROJECT.$RESOURCE]\nfile_filter = $GENERICFILE\nsource_file = $POFILE\nsource_lang = en\ntype = PO\n" >> $CONFIGFILE
+
 done
 
 # Print out a listing of all registered resources
