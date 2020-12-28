@@ -270,7 +270,7 @@ Each item can be identified by:
 * an :guilabel:`ID`
 * a :guilabel:`Name`
 * a :guilabel:`Title`
-* and an :guilabel:`Astract`.
+* and an :guilabel:`Abstract`.
 
 The list can be filtered using the |search| widget in the top right corner.
 
