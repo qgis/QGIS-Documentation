@@ -114,7 +114,7 @@ should be surrounded by ``[%`` and ``%]`` in the :guilabel:`Main properties` fra
                concatenator := ', '
              )
 
-  Or, if an ref:`attributes relation <vector_relations>` is set:
+  Or, if an :ref:`attributes relation <vector_relations>` is set:
 
   ::
 
