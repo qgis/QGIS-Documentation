@@ -166,46 +166,50 @@ Some languages will also need specific fonts installed:
 
 # Translating
 
-<http://www.sphinx-doc.org/en/master/usage/advanced/intl.html>
+We rely on the [Transifex platform](https://transifex.com) to store and coordinate
+our translation efforts. To be part of the translation team, please follow
+[becoming a translator](https://www.qgis.org/en/site/getinvolved/translate.html#becoming-a-translator).
 
-<https://pypi.org/project/sphinx-intl/>
+The process is automated using some custom scripts and GitHub integration:
+* [create_transifex_resources](scripts/create_transifex_resources.sh):
+creates/updates the [.tx/config](.tx/config) file with references of the English
+source files and their translation in the GitHub repository and link them to
+the resources in Transifex.
+This may only be necessary when releasing a new branch, to push local strings to Transifex.
+* [pofiles action](.github/workflows/pofiles.yml): update English `*.po` files
+with recent changes in the source files 
+* The [Transifex GitHub integration](https://docs.transifex.com/integrations/transifex-github-integration):
+  manages pulls and pushes of the strings, in other words:
+  - Tracks any changes to the English `*.po` resource files in GitHub
+    and automatically sends them to the Transifex platform
+  - Each language translator can begin translating the new strings
+  - When a resource is 100% translated, automatically sends back
+    the translated `*.po` file to GitHub, for build.
 
-<https://docs.transifex.com/integrations/transifex-github-integration>
-
-To update the english po files (which are being used as SOURCE files in transifex):
-
+Based on the above, translated strings are automatically available in released
+branch so building the docs in any translated locale is possible following
+the instructions in earlier sections:
 ```
-# FIRST create the pot files in build/gettext (po file be based on those pot files)
-make gettext
-# then update the english po files only:
-sphinx-intl update -p build/gettext -l en
-```
-
-To create the `.tx/config` file to push/pull using tx client do:
-
-```
-# Creating the txconfig is only to be done the first time (we have one now...)
-#sphinx-intl create-txconfig
-
-# Update list of resources (necessary when files were added or removed)
-sphinx-intl update-txconfig-resources --transifex-project-name qgis-documentation
-
-# Then (only Transifex admin) can push the po source files to Transifex
-tx push -fs --no-interactive #push the source (-s) files forcing (-f) overwriting the ones there without asking (--no-interactive)
-```
-
-To update all po files of all languages (Which we do not use here! This is done by Transifex):
-
-```
-export SPHINXINTL_LANGUAGE=de,nl, ...
-# is the same same as
-sphinx-intl <command> --language=de --language=nl ...
+make html LANG=yourlanguage
 ```
 
-We created a script to create the transifex yaml files for github-transifex integrations.
+You may however want to pull unfinished translated resources to build.
+To do so, you need to manually pull the translations from Transifex to your local repository:
 
-BUT we do not do this yet as there were some technical issues...
-
-```
-.\scripts\create_transifex_yaml.sh
-```
+1. Checkout locally the repository and target branch in git
+1. Update resources references in the config file.
+   This is necessary to catch any new or removed files.
+   ```
+   ./scripts/create_transifex_resources.sh
+   ```
+1. Download the translated strings using the [minimize_translation script](scripts/create_transifex_resources.sh).
+   By default this pulls all the languages.
+   ```
+   ./scripts/create_transifex_resources.sh
+   ```
+1. Build the docs in your language
+   ```
+   make html LANG=yourlanguage
+   ```
+1. Share the changes by opening a pull-request, allowing us to integrate
+   the new strings for all the languages
