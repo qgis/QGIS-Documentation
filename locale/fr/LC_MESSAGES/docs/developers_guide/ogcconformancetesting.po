@@ -1,24 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
-# a00fce65fdff2427915d78cd7ee0a4f6_c16c729 <a55eac686ada07eb8210deda0a39fa35_814277>, 2020
+# Harrissou Sant-anna, 2020
+# Francis Gasc <francisgasc@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:24+0000\n"
-"Last-Translator: a00fce65fdff2427915d78cd7ee0a4f6_c16c729 <a55eac686ada07eb8210deda0a39fa35_814277>, 2020\n"
+"POT-Creation-Date: 2020-12-13 09:01+0100\n"
+"PO-Revision-Date: 2020-12-24 10:18+0000\n"
+"Last-Translator: Francis Gasc <francisgasc@gmail.com>, 2020\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
 "Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
@@ -40,46 +42,73 @@ msgstr ""
 "sur un système Ubuntu. Une documentation détaillée est disponible sur le "
 "`site internet de l'OGC <https://www.opengeospatial.org/compliance>`_."
 
-#: ../../docs/developers_guide/ogcconformancetesting.rst:19
-msgid "Setup of WMS 1.3 and WMS 1.1.1 conformance tests"
-msgstr "Installation des tests de conformité WMS 1.3 et WMS 1.1.1"
+#: ../../docs/developers_guide/ogcconformancetesting.rst:20
+msgid "pyogctest"
+msgstr "pyogctest"
 
-#: ../../docs/developers_guide/ogcconformancetesting.rst:34
-msgid "Download and install WMS 1.3.0 test"
-msgstr "Télécharger et installer le test WMS 1.3.0"
-
-#: ../../docs/developers_guide/ogcconformancetesting.rst:43
-msgid "Download and install WMS 1.1.1 test"
-msgstr "Télécharger et installer le test WMS 1.1.1"
-
-#: ../../docs/developers_guide/ogcconformancetesting.rst:54
-msgid "Test project"
-msgstr "Projet test"
-
-#: ../../docs/developers_guide/ogcconformancetesting.rst:56
+#: ../../docs/developers_guide/ogcconformancetesting.rst:22
 msgid ""
-"For the WMS tests, data can be downloaded and loaded into a QGIS project:"
+"`pyogctest <https://github.com/pblottiere/pyogctest>`_ is a Python tool "
+"dedicated to run OGC tests easily. The installation may be done in a virtual"
+" environment:"
 msgstr ""
-"Pour les tests WMS, les données doivent être téléchargées et chargées dans "
-"un projet Qgis :"
+"`pyogctest <https://github.com/pblottiere/pyogctest>`_ est un outil Python "
+"dédié à l'exécution facile de tests OGC. L'installation peut se faire dans "
+"un environnement virtuel :"
 
-#: ../../docs/developers_guide/ogcconformancetesting.rst:63
+#: ../../docs/developers_guide/ogcconformancetesting.rst:35
+msgid "WMS 1.3.0 test suite"
+msgstr "WMS 1.3.0 test suite"
+
+#: ../../docs/developers_guide/ogcconformancetesting.rst:37
 msgid ""
-"Then create a :source:`QGIS project <tests/testdata/qgis_server/ets-"
-"wms13/project.qgs>` according to the description in "
-"https://cite.opengeospatial.org/teamengine/about/wms/1.3.0/site/. To run the"
-" tests, we need to provide the GetCapabilities URL of the service later."
+"To run the WMS 1.3.0 test suite with success, a test dataset is needed. It "
+"can be downloaded using **pyogctest**:"
 msgstr ""
-"Créez ensuite un: source: `QGIS project <tests / testdata / qgis_server / "
-"ets-wms13 / project.qgs>` selon la description dans "
-"https://cite.opengeospatial.org/teamengine/about/wms/1.3.0/ site/. Pour "
-"exécuter les tests, nous devons fournir l'URL GetCapabilities du service "
-"ultérieurement."
+"Pour que la suite de tests WMS 1.3.0 fonctionne avec succès, un ensemble de "
+"données de test est nécessaire. Il peut être téléchargé en utilisant "
+"**pyogctest** :"
 
-#: ../../docs/developers_guide/ogcconformancetesting.rst:70
-msgid "Running the WMS 1.3.0 test"
-msgstr "Lancer le test WMS 1.3.0"
+#: ../../docs/developers_guide/ogcconformancetesting.rst:44
+msgid ""
+"After the download, a ``teamengine_wms_130.qgs`` project is available in the"
+" new ``data`` directory. This project has to be registered as the default "
+"project for QGIS Server thanks to the **QGIS_SERVER_PROJECT_FILE** "
+"environment variable. This way, we don't need to explicitly set the ``MAP`` "
+"vendor-parameter of QGIS Server."
+msgstr ""
+"Après le téléchargement, un projet ``teamengine_wms_130.qgs`` est disponible"
+" dans le nouveau répertoire ``data``. Ce projet doit être enregistré comme "
+"projet par défaut pour QGIS Server grâce à la variable d'environnement "
+"**QGIS_SERVER_PROJECT_FILE**. De cette façon, nous n'avons pas besoin de "
+"définir explicitement le paramètre ``MAP`` du fournisseur QGIS Server."
 
-#: ../../docs/developers_guide/ogcconformancetesting.rst:82
-msgid "Running the WMS 1.1.1 test"
-msgstr "Lancer le test WMS 1.1.1"
+#: ../../docs/developers_guide/ogcconformancetesting.rst:50
+msgid ""
+"A specific configuration is also necessary to comply with metadata tests. "
+"Indeed, some metadata are available in the ``data/metadata`` directory and "
+"have to be available for the OGC testing framework thanks to an URL. The "
+"easiest option is to configure your web server to have an access through "
+"something like ``http://XXX.XXX.XXX.XXX/metadata/Autos.xml``. These metadata"
+" URLs are defined in the project and inserted in the WMS ``GetCapabilities``"
+" document. So the project needs to be updated according to your testing "
+"environment to let QGIS Server generate a valid XML document:"
+msgstr ""
+"Une configuration spécifique est également nécessaire pour se conformer aux "
+"tests de métadonnées. En effet, certaines métadonnées sont disponibles dans "
+"le répertoire ``data/metadata`` et doivent être disponibles pour le cadre de"
+" test de OGC grâce à une URL. L'option la plus simple est de configurer "
+"votre serveur web pour qu'il puisse y accéder par le biais d'une adresse du "
+"type ``http://XXX.XXX.XXX.XXX/metadata/Autos.xml``. Ces URL de métadonnées "
+"sont définies dans le projet et insérées dans le document WMS "
+"``GetCapabilities``. Le projet doit donc être mis à jour en fonction de "
+"votre environnement de test pour permettre au logiciel QGIS Server de "
+"générer un document XML valide :"
+
+#: ../../docs/developers_guide/ogcconformancetesting.rst:64
+msgid ""
+"Now that everything is properly configured, we can run the WMS 1.3.0 test "
+"suite:"
+msgstr ""
+"Maintenant que tout est correctement configuré, nous pouvons lancer la suite"
+" de tests WMS 1.3.0 :"
