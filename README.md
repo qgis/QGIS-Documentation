@@ -180,7 +180,7 @@ This may only be necessary when releasing a new branch, to push local strings to
 with recent changes in the source files 
 * The [Transifex GitHub integration](https://docs.transifex.com/integrations/transifex-github-integration):
   manages pulls and pushes of the strings, in other words:
-  - Tracks any changes to the English `*.po` resource files in GitHub
+  - Tracks any changes of the English `*.po` resource files in GitHub
     and automatically sends them to the Transifex platform
   - Each language translator can begin translating the new strings
   - When a resource is 100% translated, automatically sends back
@@ -197,6 +197,12 @@ You may however want to pull unfinished translated resources to build.
 To do so, you need to manually pull the translations from Transifex to your local repository:
 
 1. Checkout locally the repository and target branch in git
+1. Prepare the environment
+   ```
+   python3 -m venv venv
+   source ./venv/bin/activate
+   pip install -r REQUIREMENTS.txt
+   ```
 1. Update resources references in the config file.
    This is necessary to catch any new or removed files.
    ```
@@ -206,6 +212,16 @@ To do so, you need to manually pull the translations from Transifex to your loca
    By default this pulls all the languages.
    ```
    ./scripts/create_transifex_resources.sh
+   ```
+   IMPORTANT: to be able to pull from transifex.com, you will need a credentials file. 
+   This file should be named: ``.transifexrc`` and easiest is to put it in your home dir. 
+   The file should contain this:
+   ```
+   [https://www.transifex.com]
+   hostname = https://www.transifex.com
+   password = yourtransifexpassword
+   token = 
+   username = yourtransifexusername
    ```
 1. Build the docs in your language
    ```
