@@ -484,7 +484,7 @@ Placement for line layers
 
 Label modes for line layers include:
 
-* :guilabel:`Parallel`:draws the label parallel to a generalised line
+* :guilabel:`Parallel`: draws the label parallel to a generalised line
   representing the feature, with preference for placement over straighter
   portions of the line. You can define:
 
@@ -567,7 +567,7 @@ You can choose one of the following modes for placing labels of polygons:
   the centroid, with a preference for the placement directly over the centroid.
   Again, you can define whether the centroid is the one of the
   :guilabel:`visible polygon` or the :guilabel:`whole polygon`, and whether
-  to force the force the centroid point inside the polygon.
+  to force the centroid point inside the polygon.
 
 * :guilabel:`Horizontal`: places at the best position a horizontal label inside
   the polygon. The preferred placement is further from the edges of the polygon.
