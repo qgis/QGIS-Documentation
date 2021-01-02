@@ -7,39 +7,70 @@ Stream Network Analysis
       :local:
       :depth: 1
 
+.. _taudemconnectdown:
+
 Connect down
 ------------
-
-Description
-...........
 
 
 Parameters
 ..........
 
-``D8 flow directions`` [raster]
-  A grid of D8 flow directions which are defined, for each cell, as the
-  direction of the one of its eight adjacent or diagonal neighbors with the
-  steepest downward slope. This grid can be obtained as the output of the
-  **"D8 Flow Directions"** tool.
+.. list-table::
+   :widths: 20 15 15 50
+   :class: longtable
 
-``D8 contribution area`` [raster]
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **D8 flow directions**
+     -
+     - [raster]
+     - A grid of D8 flow directions which are defined, for each cell, as the
+       direction of the one of its eight adjacent or diagonal neighbors with the
+       steepest downward slope. This grid can be obtained as the output of the
+       **"D8 Flow Directions"** tool.
 
-``Watershed`` [raster]
+   * - **D8 contribution area**
+     -
+     - [raster]
+     -
+   * - **Watershed**
+     -
+     - [raster]
+     -
+   * - **Grid cells move to downstream**
+     -
+     - [number]
+     -
+   * - **Outlets**
 
-``Grid cells move to downstream`` [number]
-
-``Outlets`` [vector: point]
-  Optional
-
-  A point shape file defining outlets of interest. If this input file is used,
-  only the area upslope of these outlets will be evaluated by the tool.
+       Optional
+     -
+     - [vector: point]
+     - A point shape file defining outlets of interest. If this input file is used,
+       only the area upslope of these outlets will be evaluated by the tool.
 
 Outputs
 .......
 
-``Extreme Upslope Values Grid`` [raster]
-  A grid of the maximum/minimum upslope values.
+.. list-table::
+   :widths: 20 15 15 50
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+
+   * - **Extreme Upslope Values Grid**
+     -
+     - [raster]
+     - A grid of the maximum/minimum upslope values.
+
+Python code
+...........
 
 **Algorithm ID**: ``taudem:connectdown``
 
@@ -47,12 +78,10 @@ Outputs
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
+.. _taudemd8flowpathextremeup:
 
 D8 Extreme Upslope Value
 ------------------------
-
-Description
-...........
 
 Evaluates the extreme (either maximum or minimum) upslope value from an input
 grid based on the D8 flow model. This is intended initially for use in stream
@@ -77,39 +106,66 @@ for example, the DEM has been clipped along a watershed outline.
 Parameters
 ..........
 
-``D8 Flow Directions Grid`` [raster]
-  A grid of D8 flow directions which are defined, for each cell, as the
-  direction of the one of its eight adjacent or diagonal neighbors with the
-  steepest downward slope. This grid can be obtained as the output of the
-  **"D8 Flow Directions"** tool.
+.. list-table::
+   :widths: 20 15 15 50
+   :class: longtable
 
-``Upslope Values Grid`` [raster]
-  This is the grid of values of which the maximum or minimum upslope value is
-  selected. The values most commonly used are the slope times area product
-  needed when generating stream rasters according to drop analysis.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **D8 Flow Directions Grid**
+     -
+     - [raster]
+     - A grid of D8 flow directions which are defined, for each cell, as the
+       direction of the one of its eight adjacent or diagonal neighbors with the
+       steepest downward slope. This grid can be obtained as the output of the
+       **"D8 Flow Directions"** tool.
+   * - **Upslope Values Grid**
+     -
+     - [raster]
+     - This is the grid of values of which the maximum or minimum upslope value is
+       selected. The values most commonly used are the slope times area product
+       needed when generating stream rasters according to drop analysis.
+   * - **Outlets Shapefile**
 
-``Outlets Shapefile`` [vector: point]
-  Optional
+       Optional
+     -
+     - [vector: point]
+     - A point shape file defining outlets of interest. If this input file is used,
+       only the area upslope of these outlets will be evaluated by the tool.
+   * - **Check for edge contamination**
+     - 
+     - [boolean]
 
-  A point shape file defining outlets of interest. If this input file is used,
-  only the area upslope of these outlets will be evaluated by the tool.
+       Default: True
+     - A flag that indicates whether the tool should check for edge contamination.
+   * - **Use max upslope value**
+     -
+     - [boolean]
 
-``Check for edge contamination`` [boolean]
-  A flag that indicates whether the tool should check for edge contamination.
-
-  Default: *True*
-
-``Use max upslope value`` [boolean]
-  A flag to indicate whether the maximum or minimum upslope value is to be
-  calculated.
-
-  Default: *True*
+       Default: True
+     - A flag to indicate whether the maximum or minimum upslope value is to be
+       calculated.
 
 Outputs
 .......
 
-``Extreme Upslope Values Grid`` [raster]
-  A grid of the maximum/minimum upslope values.
+.. list-table::
+   :widths: 20 15 15 50
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Extreme Upslope Values Grid**
+     -
+     - [raster]
+     - A grid of the maximum/minimum upslope values.
+
+Python code
+...........
 
 **Algorithm ID**: ``taudem:d8flowpathextremeup``
 
@@ -117,12 +173,10 @@ Outputs
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
+.. _taudemgagewatershed:
 
 Gage Watershed
 --------------
-
-Description
-...........
 
 Calculates Gage Watersheds Grid. Each grid cell is labeled with the identifier
 (from column ``id``) of the gage to which it drains directly without passing
@@ -131,27 +185,58 @@ through any other gages.
 Parameters
 ..........
 
-``D8 Flow Directions Grid`` [raster]
-  A grid of D8 flow directions which are defined, for each cell, as the
-  direction of the one of its eight adjacent or diagonal neighbors with the
-  steepest downward slope. This grid can be obtained as the output of the
-  **"D8 Flow Directions"** tool.
+.. list-table::
+   :widths: 20 15 15 50
+   :class: longtable
 
-``Gages Shapefile`` [vector: point]
-  A point shapefile defining the gages to which watersheds will be delineated.
-  This shapefile should have a colmun ``id``. Grid cells draining directly to
-  each point in this shapefile will be labeled with this id.
+   * - Label
+     - Name
+     - Type
+     - Description
+
+   * - A suppr **D-infinity flow directions**
+     - ``DINF_FLOWDIR``
+     - [raster]
+     - A grid of flow directions based on the D-infinity flow method
+
+   * - **D8 Flow Directions Grid**
+     -
+     - [raster]
+     - A grid of D8 flow directions which are defined, for each cell, as the
+       direction of the one of its eight adjacent or diagonal neighbors with the
+       steepest downward slope. This grid can be obtained as the output of the
+       **"D8 Flow Directions"** tool.
+   * - **Gages Shapefile**
+     -
+     - [vector: point]
+     - A point shapefile defining the gages to which watersheds will be delineated.
+       This shapefile should have a colmun ``id``. Grid cells draining directly to
+       each point in this shapefile will be labeled with this id.
 
 Outputs
 .......
 
-``Gage Watershed Grid`` [raster]
-  A grid identifies each gage watershed. Each grid cell is labeled with the
-  identifier (from column ``id``) of the gage to which it drains directly
-  without passing through any other gages.
+.. list-table::
+   :widths: 20 15 15 50
+   :class: longtable
 
-``Downstream Identifiers File`` [file]
-  Text file giving watershed downslope connectivity
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Gage Watershed Grid**
+     -
+     - [raster]
+     - A grid identifies each gage watershed. Each grid cell is labeled with the
+       identifier (from column ``id``) of the gage to which it drains directly
+       without passing through any other gages.
+   * - **Downstream Identifiers File**
+     -
+     - [file]
+     - Text file giving watershed downslope connectivity
+
+Python code
+...........
 
 **Algorithm ID**: ``taudem:gagewatershed``
 
@@ -159,12 +244,10 @@ Outputs
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
+.. _taudemlengtharea:
 
 Length Area Stream Source
 -------------------------
-
-Description
-...........
 
 Creates an indicator grid (1, 0) that evaluates ``A >= (M)(Ly)`` based on upslope
 path length, D8 contributing area grid inputs, and parameters ``M`` and ``y``.
@@ -177,47 +260,73 @@ identifying grid cells as stream cells if ``A > M (L (1/0.8))``.
 Parameters
 ..........
 
-``Length Grid`` [raster]
-  A grid of the maximum upslope length for each cell. This is calculated as the
-  length of the flow path from the furthest cell that drains to each cell.
-  Length is measured between cell centers taking into account cell size and
-  whether the direction is adjacent or diagonal. It is this length (``L``) that
-  is used in the formula, ``A >(M)(Ly)``, to determine which cells are
-  considered stream cells. This grid can be obtained as an output from the
-  **"Grid Network"** tool.
+.. list-table::
+   :widths: 20 15 15 50
+   :class: longtable
 
-``Contributing Area Grid`` [raster]
-  A grid of contributing area values for each cell that were calculated using
-  the D8 algorithm. The contributing area for a cell is the sum of its own
-  contribution plus the contribution from all upslope neighbors that drain to
-  it, measured as a number of cells. This grid is typically obtained as the
-  output of the **"D8 Contributing Area"** tool. In this tool, it is the
-  contributing area (``A``) that is compared in the formula ``A > (M)(Ly)`` to
-  determine the transition to a stream.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Length Grid**
+     -
+     - [raster]
+     - A grid of the maximum upslope length for each cell. This is calculated as the
+       length of the flow path from the furthest cell that drains to each cell.
+       Length is measured between cell centers taking into account cell size and
+       whether the direction is adjacent or diagonal. It is this length (``L``) that
+       is used in the formula, ``A >(M)(Ly)``, to determine which cells are
+       considered stream cells. This grid can be obtained as an output from the
+       **"Grid Network"** tool.
+   * - **Contributing Area Grid**
+     -
+     - [raster]
+     - A grid of contributing area values for each cell that were calculated using
+       the D8 algorithm. The contributing area for a cell is the sum of its own
+       contribution plus the contribution from all upslope neighbors that drain to
+       it, measured as a number of cells. This grid is typically obtained as the
+       output of the **"D8 Contributing Area"** tool. In this tool, it is the
+       contributing area (``A``) that is compared in the formula ``A > (M)(Ly)`` to
+       determine the transition to a stream.
+   * - **Threshold**
+     -
+     - [number]
 
-``Threshold`` [number]
-  The multiplier threshold (``M``) parameter which is used in the formula:
-  ``A > (M)(Ly)``, to identify the beginning of streams.
+       Default: 0.03
+     - The multiplier threshold (``M``) parameter which is used in the formula:
+       ``A > (M)(Ly)``, to identify the beginning of streams.
+   * - **Exponent**
+     -
+     - [number]
 
-  Default: *0.03*
-
-``Exponent`` [number]
-  The exponent (``y``) parameter which is used in the formula: ``A > (M)(Ly)``,
-  to identify the beginning of streams. In branching systems, Hack's law
-  suggests that ``L = 1/M A(1/y)`` with ``1/y = 0.6`` (or 0.56) (``y`` about 1.7).
-  In parallel flow systems ``L`` is proportional to ``A`` (``y`` about 1). This
-  method tries to identify the transition between these two paradigms by using
-  an exponent ``y`` somewhere in between (``y`` about 1.3).
-
-  Default: *1.3*
+       Default: 1.3
+     - The exponent (``y``) parameter which is used in the formula: ``A > (M)(Ly)``,
+       to identify the beginning of streams. In branching systems, Hack's law
+       suggests that ``L = 1/M A(1/y)`` with ``1/y = 0.6`` (or 0.56) (``y`` about 1.7).
+       In parallel flow systems ``L`` is proportional to ``A`` (``y`` about 1). This
+       method tries to identify the transition between these two paradigms by using
+       an exponent ``y`` somewhere in between (``y`` about 1.3).
 
 Outputs
 .......
 
-``Stream Source Grid`` [raster]
-  An indicator grid (1,0) that evaluates A >= (M)(L^y), based on the maximum
-  upslope path length, the D8 contributing area grid inputs, and parameters ``M``
-  and ``y``. This grid indicates likely stream source grid cells.
+.. list-table::
+   :widths: 20 15 15 50
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Stream Source Grid**
+     -
+     - [raster]
+     - An indicator grid (1,0) that evaluates A >= (M)(L^y), based on the maximum
+       upslope path length, the D8 contributing area grid inputs, and parameters ``M``
+       and ``y``. This grid indicates likely stream source grid cells.
+
+Python code
+...........
 
 **Algorithm ID**: ``taudem:lengtharea``
 
@@ -225,12 +334,10 @@ Outputs
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
+.. _taudemmoveoutletstostreams:
 
 Move Outlets To Streams
 -----------------------
-
-Description
-...........
 
 Moves outlet points that are not aligned with a stream cell from a stream raster
 grid, downslope along the D8 flow direction until a stream raster cell is
@@ -253,44 +360,70 @@ value is encountered). In which case, the point is not moved and the
 Parameters
 ..........
 
-``D8 Flow Direction Grid`` [raster]
-  A grid of D8 flow directions which are defined, for each cell, as the
-  direction of the one of its eight adjacent or diagonal neighbors with the
-  steepest downward slope. This grid can be obtained as the output of the
-  **"D8 Flow Directions"** tool.
+.. list-table::
+   :widths: 20 15 15 50
+   :class: longtable
 
-``Stream Raster Grid`` [raster]
-  This output is an indicator grid (1, 0) that indicates the location of
-  streams, with a value of 1 for each of the stream cells and 0 for the
-  remainder of the cells. This file is produced by several different tools in
-  the **"Stream Network Analysis"** toolset.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **D8 Flow Direction Grid**
+     -
+     - [raster]
+     - A grid of D8 flow directions which are defined, for each cell, as the
+       direction of the one of its eight adjacent or diagonal neighbors with the
+       steepest downward slope. This grid can be obtained as the output of the
+       **"D8 Flow Directions"** tool.
+   * - **Stream Raster Grid**
+     -
+     - [raster]
+     - This output is an indicator grid (1, 0) that indicates the location of
+       streams, with a value of 1 for each of the stream cells and 0 for the
+       remainder of the cells. This file is produced by several different tools in
+       the **"Stream Network Analysis"** toolset.
+   * - **Outlets Shapefile**
+     -
+     - [vector: point]
+     - A point shape file defining points of interest or outlets that should ideally
+       be located on a stream, but may not be exactly on the stream due to the fact
+       that the shapefile point locations may not have been accurately registered
+       with respect to the stream raster grid.
+   * - **Maximum Number of Grid Cells to traverse**
+     -
+     - [number]
 
-``Outlets Shapefile`` [vector: point]
-  A point shape file defining points of interest or outlets that should ideally
-  be located on a stream, but may not be exactly on the stream due to the fact
-  that the shapefile point locations may not have been accurately registered
-  with respect to the stream raster grid.
-
-``Maximum Number of Grid Cells to traverse`` [number]
-  This input parameter is the maximum number of grid cells that the points in
-  the input outlet shapefile will be moved before they are saved to the output
-  outlet shapefile.
-
-  Default: *50*
+       Default: 50
+     - This input parameter is the maximum number of grid cells that the points in
+       the input outlet shapefile will be moved before they are saved to the output
+       outlet shapefile.
 
 Outputs
 .......
 
-``Output Outlet Shapefile`` [vector: point]
-  A point shape file defining points of interest or outlets. This file has one
-  point in it for each point in the input outlet shapefile. If the original
-  point was located on a stream, then the point was not moved. If the original
-  point was not on a stream, the point was moved downslope according to the D8
-  flow direction until it reached a stream or the maximum distance had been
-  reached. This file has an additional field "dist_moved" added to it which is
-  the number of cells that the point was moved. This field is 0 if the cell was
-  originally on a stream, -1 if it was not moved because there was not a stream
-  within the maximum distance, or some positive value if it was moved.
+.. list-table::
+   :widths: 20 15 15 50
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output Outlet Shapefile**
+     -
+     - [vector: point]
+     - A point shape file defining points of interest or outlets. This file has one
+       point in it for each point in the input outlet shapefile. If the original
+       point was located on a stream, then the point was not moved. If the original
+       point was not on a stream, the point was moved downslope according to the D8
+       flow direction until it reached a stream or the maximum distance had been
+       reached. This file has an additional field "dist_moved" added to it which is
+       the number of cells that the point was moved. This field is 0 if the cell was
+       originally on a stream, -1 if it was not moved because there was not a stream
+       within the maximum distance, or some positive value if it was moved.
+
+Python code
+...........
 
 **Algorithm ID**: ``taudem:moveoutletstostreams``
 
@@ -298,12 +431,10 @@ Outputs
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
+.. _taudempeukerdouglas:
 
 Peuker Douglas
 --------------
-
-Description
-...........
 
 Creates an indicator grid (1, 0) of upward curved grid cells according to the
 Peuker and Douglas algorithm.
@@ -320,36 +451,68 @@ in detail by Band (1986).
 Parameters
 ..........
 
-``Elevation Grid`` [raster]
-  A grid of elevation values. This is usually the output of the
-  **"Pit Remove"** tool, in which case it is elevations with pits removed.
+.. list-table::
+   :widths: 20 15 15 50
+   :class: longtable
 
-``Center Smoothing Weight`` [number]
-  The center weight parameter used by a kernel to smooth the DEM before the tool
-  identifies upwardly curved grid cells.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Elevation Grid**
+     -
+     - [raster]
+     - A grid of elevation values. This is usually the output of the
+       **"Pit Remove"** tool, in which case it is elevations with pits removed.
+   * - **Center Smoothing Weight**
+     -
+     - [number]
 
-  Default: *0.4*
+       Default: 0.4
+     - The center weight parameter used by a kernel to smooth the DEM before the tool
+       identifies upwardly curved grid cells.
+   * - **Side Smoothing Weight**
+     -
+     - [number]
 
-``Side Smoothing Weight`` [number]
-  The side weight parameter used by a kernel to smooth the DEM before the tool
-  identifies upwardly curved grid cells.
+       Default: 0.1
+     - The side weight parameter used by a kernel to smooth the DEM before the tool
+       identifies upwardly curved grid cells.
+   * - **Diagonal Smoothing Weight**
+     -
+     - [number]
 
-  Default: *0.1*
-
-``Diagonal Smoothing Weight`` [number]
-  The diagonal weight parameter used by a kernel to smooth the DEM before the
-  tool identifies upwardly curved grid cells.
-
-  Default: *0.05*
+       Default: 0.05
+     - The diagonal weight parameter used by a kernel to smooth the DEM before the
+       tool identifies upwardly curved grid cells.
 
 Outputs
 .......
 
-``Stream Source Grid`` [raster]
-  An indicator grid (1, 0) of upward curved grid cells according to the Peuker
-  and Douglas algorithm, and if viewed, resembles a channel network. This
-  proto-channel network generally lacks connectivity and requires thinning,
-  issues that were discussed in detail by Band (1986).
+.. list-table::
+   :widths: 20 15 15 50
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Stream Source Grid**
+     -
+     - [raster]
+     - An indicator grid (1, 0) of upward curved grid cells according to the Peuker
+       and Douglas algorithm, and if viewed, resembles a channel network. This
+       proto-channel network generally lacks connectivity and requires thinning,
+       issues that were discussed in detail by Band (1986).
+
+Python code
+...........
+
+**Algorithm ID**: ``taudem:peukerdouglas``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 See also
 ........
@@ -360,31 +523,36 @@ See also
   by local parallel processing of discrete terrain elevation data", Comput.
   Graphics Image Process., 4: 375-387.
 
-**Algorithm ID**: ``taudem:peukerdouglas``
-
-.. include:: ../qgis/qgis_algs_include.rst
-  :start-after: **algorithm_code_section**
-  :end-before: **end_algorithm_code_section**
-
+.. _taudempeukerdouglasstreamdef:
 
 Peuker Douglas stream
 ---------------------
 
-Description
-...........
-
-
 Parameters
 ..........
+
 
 Outputs
 .......
 
-``Stream source`` [raster]
-  An indicator grid (1, 0) of upward curved grid cells according to the Peuker
-  and Douglas algorithm, and if viewed, resembles a channel network. This
-  proto-channel network generally lacks connectivity and requires thinning,
-  issues that were discussed in detail by Band (1986).
+.. list-table::
+   :widths: 20 15 15 50
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Stream source**
+     -
+     - [raster]
+     - An indicator grid (1, 0) of upward curved grid cells according to the Peuker
+       and Douglas algorithm, and if viewed, resembles a channel network. This
+       proto-channel network generally lacks connectivity and requires thinning,
+       issues that were discussed in detail by Band (1986).
+
+Python code
+...........
 
 **Algorithm ID**: ``taudem:peukerdouglasstreamdef``
 
@@ -392,12 +560,10 @@ Outputs
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
+.. _taudemslopearea:
 
 Slope Area Combination
 ----------------------
-
-Description
-...........
 
 Creates a grid of slope-area values = ``(Sm) (An)`` based on slope and specific
 catchment area grid inputs, and parameters ``m`` and ``n``. This tool is intended
@@ -406,35 +572,62 @@ for use as part of the slope-area stream raster delineation method.
 Parameters
 ..........
 
-``Slope Grid`` [raster]
-  This input is a grid of slope values. This grid can be obtained from the
-  **"D-Infinity Flow Directions"** tool.
+.. list-table::
+   :widths: 20 15 15 50
+   :class: longtable
 
-``Contributing Area Grid`` [raster]
-  A grid giving the specific catchment area for each cell taken as its own
-  contribution (grid cell length or summation of weights) plus the proportional
-  contribution from upslope neighbors that drain in to it. This grid is
-  typically obtained from the **"D-Infinity Contributing Area"** tool.
+   * - Label
+     - Name
+     - Type
+     - Description
 
-``Slope Exponent`` [number]
-  The slope exponent (``m``) parameter which will be used in the formula:
-  ``(Sm)(An)``, that is used to create the slope-area grid.
+   * - **Slope Grid**
+     -
+     - [raster]
+     - This input is a grid of slope values. This grid can be obtained from the
+       **"D-Infinity Flow Directions"** tool.
+   * - **Contributing Area Grid**
+     -
+     - [raster]
+     - A grid giving the specific catchment area for each cell taken as its own
+       contribution (grid cell length or summation of weights) plus the proportional
+       contribution from upslope neighbors that drain in to it. This grid is
+       typically obtained from the **"D-Infinity Contributing Area"** tool.
+   * - **Slope Exponent**
+     -
+     - [number]
 
-  Default: *2*
+       Default: 2
+     - The slope exponent (``m``) parameter which will be used in the formula:
+       ``(Sm)(An)``, that is used to create the slope-area grid.
+   * - **Area Exponent**
+     -
+     - [number]
 
-``Area Exponent`` [number]
-  The area exponent (``n``) parameter which will be used in the formula:
-  ``(Sm)(An)``, that is used to create the slope-area grid.
-
-  Default: *1*
+       Default: 1
+     - The area exponent (``n``) parameter which will be used in the formula:
+       ``(Sm)(An)``, that is used to create the slope-area grid.
 
 Outputs
 .......
 
-``Slope Area Grid`` [raster]
-  A grid of slope-area values = ``(Sm)(An)`` calculated from the slope grid,
-  specific catchment area grid, ``m`` slope exponent parameter, and ``n`` area
-  exponent parameter.
+.. list-table::
+   :widths: 20 15 15 50
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Slope Area Grid**
+     -
+     - [raster]
+     - A grid of slope-area values = ``(Sm)(An)`` calculated from the slope grid,
+       specific catchment area grid, ``m`` slope exponent parameter, and ``n`` area
+       exponent parameter.
+
+Python code
+...........
 
 **Algorithm ID**: ``taudem:slopearea``
 
@@ -442,12 +635,10 @@ Outputs
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
+.. _taudemslopeareastreamdef:
 
 Slope area stream definition
 ----------------------------
-
-Description
-...........
 
 Creates a grid of slope-area values = ``(Sm) (An)`` based on slope and specific
 catchment area grid inputs, and parameters ``m`` and ``n``. This tool is intended
@@ -456,71 +647,126 @@ for use as part of the slope-area stream raster delineation method.
 Parameters
 ..........
 
-``D8 flow directions`` [raster]
+.. list-table::
+   :widths: 20 15 15 50
+   :class: longtable
 
-``D-infinity Contributing Area`` [raster]
-  A grid giving the specific catchment area for each cell taken as its own
-  contribution (grid cell length or summation of weights) plus the proportional
-  contribution from upslope neighbors that drain in to it. This grid is
-  typically obtained from the **"D-Infinity Contributing Area"** tool.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **D8 flow directions**
+     -
+     - [raster]
+     -
+   * - **D-infinity Contributing Area**
+     -
+     - [raster]
+     - A grid giving the specific catchment area for each cell taken as its own
+       contribution (grid cell length or summation of weights) plus the proportional
+       contribution from upslope neighbors that drain in to it. This grid is
+       typically obtained from the **"D-Infinity Contributing Area"** tool.
+   * - **Slope**
+     -
+     - [raster]
+     - This input is a grid of slope values. This grid can be obtained from the
+       **"D-Infinity Flow Directions"** tool.
+   * - **Mask grid**
+     -
+     - [raster]
+     -
+   * - **Outlets**
+     -
+     - [vector: point]
+     -
+   * - **Pit-filled grid for drop analysis**
+     -
+     - [raster]
+     -
+   * - **D8 contributing area for drop analysis**
+     -
+     - [raster]
+     -
+   * - **Slope Exponent**
+     -
+     - [number]
 
-``Slope`` [raster]
-  This input is a grid of slope values. This grid can be obtained from the
-  **"D-Infinity Flow Directions"** tool.
+       Default: 2
+     - The slope exponent (``m``) parameter which will be used in the formula:
+       ``(Sm)(An)``, that is used to create the slope-area grid.
+   * - **Area Exponent**
+     -
+     - [number]
 
-``Mask grid`` [raster]
+       Default: 1
+     - The area exponent (``n``) parameter which will be used in the formula:
+       ``(Sm)(An)``, that is used to create the slope-area grid.
+   * - **Accumulation threshold**
+     -
+     - [number]
+     -
+   * - **Minimum threshold**
+     -
+     - [number]
+     -
+   * - **Maximum threshold**
+     -
+     - [number]
+     -
+   * - **Number of drop thresholds**
+     -
+     - [number]
+     -
+   * - **Type of threshold step**
+     -
+     - [enumeration]
 
-``Outlets`` [vector: point]
+       Default: 0
+     - Options:
 
-``Pit-filled grid for drop analysis`` [raster]
-
-``D8 contributing area for drop analysis`` [raster]
-
-``Slope Exponent`` [number]
-  The slope exponent (``m``) parameter which will be used in the formula:
-  ``(Sm)(An)``, that is used to create the slope-area grid.
-
-  Default: *2*
-
-``Area Exponent`` [number]
-  The area exponent (``n``) parameter which will be used in the formula:
-  ``(Sm)(An)``, that is used to create the slope-area grid.
-
-  Default: *1*
-
-``Accumulation threshold`` [number]
-
-``Minimum threshold`` [number]
-
-``Maximum threshold`` [number]
-
-``Number of drop thresholds`` [number]
-
-``Type of threshold step`` [enumeration].
-
-  Options:
-
-  * 0 --- Logarithmic
-  * 1 --- Linear
-
-  Default: *0*
-
-``Check for edge contamination`` [boolean]
-
-``Select threshold by drop analysis`` [boolean]
+       * 0 --- Logarithmic
+       * 1 --- Linear
+   * - **Check for edge contamination**
+     -
+     - [boolean]
+     -
+   * - **Select threshold by drop analysis**
+     -
+     - [boolean]
+     -
 
 Outputs
 .......
-``Stream raster`` [raster]
 
-``Slope area`` [raster]
-  A grid of slope-area values = ``(Sm)(An)`` calculated from the slope grid,
-  specific catchment area grid, ``m`` slope exponent parameter, and ``n`` area
-  exponent parameter.
+.. list-table::
+   :widths: 20 15 15 50
+   :class: longtable
 
-``Maximum upslope`` [raster]
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Stream raster**
+     -
+     - [raster]
+     -
+   * - **Slope area**
+     -
+     - [raster]
+     - A grid of slope-area values = ``(Sm)(An)`` calculated from the slope grid,
+       specific catchment area grid, ``m`` slope exponent parameter, and ``n`` area
+       exponent parameter.
+   * - **Maximum upslope**
+     -
+     - [raster]
+     -
+   * - **Drop analysis**
+     -
+     - [file]
+     -
 
-``Drop analysis`` [file]
+Python code
+...........
 
 **Algorithm ID**: ``taudem:slopeareastreamdef``
 
@@ -528,12 +774,10 @@ Outputs
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
+.. _taudemthreshold:
 
 Stream Definition By Threshold
 ------------------------------
-
-Description
-...........
 
 Operates on any grid and outputs an indicator (1, 0) grid identifying cells with
 input values >= the threshold value. The standard use is to use an accumulated
@@ -550,38 +794,64 @@ mask. The threshold logic is:
 Parameters
 ..........
 
-``Accumulated Stream Source Grid`` [raster]
-  This grid nominally accumulates some characteristic or combination of
-  characteristics of the watershed. The exact characteristic(s) varies depending
-  on the stream network raster algorithm being used. This grid needs to have
-  the property that grid cell values are monotonically increasing downslope
-  along D8 flow directions, so that the resulting stream network is continuous.
-  While this grid is often from an accumulation, other sources such as a maximum
-  upslope function will also produce a suitable grid.
+.. list-table::
+   :widths: 20 15 15 50
+   :class: longtable
 
-``Threshold`` [number]
-  This parameter is compared to the value in the Accumulated Stream Source grid
-  (:file:`*ssa`) to determine if the cell should be considered a stream cell.
-  Streams are identified as grid cells for which ssa value is >= this threshold.
+   * - Label
+     - Name
+     - Type
+     - Description
 
-  Default: *100*
+   * - **Accumulated Stream Source Grid**
+     -
+     - [raster]
+     - This grid nominally accumulates some characteristic or combination of
+       characteristics of the watershed. The exact characteristic(s) varies depending
+       on the stream network raster algorithm being used. This grid needs to have
+       the property that grid cell values are monotonically increasing downslope
+       along D8 flow directions, so that the resulting stream network is continuous.
+       While this grid is often from an accumulation, other sources such as a maximum
+       upslope function will also produce a suitable grid.
+   * - **Threshold**
+     -
+     - [number]
 
-``Mask Grid`` [raster]
-  Optional
+       Default: 100
+     - This parameter is compared to the value in the Accumulated Stream Source grid
+       (:file:`*ssa`) to determine if the cell should be considered a stream cell.
+       Streams are identified as grid cells for which ssa value is >= this threshold.
+   * - **Mask Grid**
 
-  This optional input is a grid that is used to mask the domain of interest and
-  output is only provided where this grid is >= 0. A common use of this input
-  is to use a D-Infinity contributing area grid as the mask so that the
-  delineated stream network is constrained to areas where D-infinity
-  contributing area is available, replicating the functionality of an edge
-  contamination mask.
+       Optional
+     -
+     - [raster]
+     - This optional input is a grid that is used to mask the domain of interest and
+       output is only provided where this grid is >= 0. A common use of this input
+       is to use a D-Infinity contributing area grid as the mask so that the
+       delineated stream network is constrained to areas where D-infinity
+       contributing area is available, replicating the functionality of an edge
+       contamination mask.
 
 Outputs
 .......
 
-``Stream Raster Grid`` [raster]
-  This is an indicator grid (1, 0) that indicates the location of streams, with
-  a value of 1 for each of the stream cells and 0 for the remainder of the cells.
+.. list-table::
+   :widths: 20 15 15 50
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Stream Raster Grid**
+     -
+     - [raster]
+     - This is an indicator grid (1, 0) that indicates the location of streams, with
+       a value of 1 for each of the stream cells and 0 for the remainder of the cells.
+
+Python code
+...........
 
 **Algorithm ID**: ``taudem:threshold``
 
@@ -589,21 +859,20 @@ Outputs
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
+.. _taudemstreamdefdropanalysis:
 
 Stream definition with drop analysis
 ------------------------------------
 
-Description
-...........
-
-
 Parameters
 ..........
-
 
 Outputs
 .......
 
+
+Python code
+...........
 
 **Algorithm ID**: ``taudem:streamdefdropanalysis``
 
@@ -611,12 +880,10 @@ Outputs
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
+.. _taudemdropanalysis:
 
 Stream Drop Analysis
 --------------------
-
-Description
-...........
 
 Applies a series of thresholds (determined from the input parameters) to the
 input accumulated stream source grid (:file:`*ssa`) grid and outputs the results
@@ -649,91 +916,125 @@ al. (1991, 1992), Tarboton and Ames (2001).
 Parameters
 ..........
 
-``D8 Contributing Area Grid`` [raster]
-  A grid of contributing area values for each cell that were calculated using
-  the D8 algorithm. The contributing area for a cell is the sum of its own
-  contribution plus the contribution from all upslope neighbors that drain to
-  it, measured as a number of cells or the sum of weight loadings. This grid
-  can be obtained as the output of the **"D8 Contributing Area"** tool. This
-  grid is used in the evaluation of drainage density reported in the stream
-  drop table.
+.. list-table::
+   :widths: 20 15 15 50
+   :class: longtable
 
-``D8 Flow Direction Grid`` [raster]
-  A grid of D8 flow directions which are defined, for each cell, as the
-  direction of the one of its eight adjacent or diagonal neighbors with the
-  steepest downward slope. This grid can be obtained as the output of the
-  **"D8 Flow Directions"** tool.
+   * - Label
+     - Name
+     - Type
+     - Description
 
-``Pit Filled Elevation Grid`` [raster]
-  A grid of elevation values. This is usually the output of the
-  **"Pit Remove"** tool, in which case it is elevations with pits removed.
+   * - **D8 Contributing Area Grid**
+     -
+     - [raster]
+     - A grid of contributing area values for each cell that were calculated using
+       the D8 algorithm. The contributing area for a cell is the sum of its own
+       contribution plus the contribution from all upslope neighbors that drain to
+       it, measured as a number of cells or the sum of weight loadings. This grid
+       can be obtained as the output of the **"D8 Contributing Area"** tool. This
+       grid is used in the evaluation of drainage density reported in the stream
+       drop table.
+   * - **D8 Flow Direction Grid**
+     -
+     - [raster]
+     - A grid of D8 flow directions which are defined, for each cell, as the
+       direction of the one of its eight adjacent or diagonal neighbors with the
+       steepest downward slope. This grid can be obtained as the output of the
+       **"D8 Flow Directions"** tool.
+   * - **Pit Filled Elevation Grid**
+     -
+     - [raster]
+     - A grid of elevation values. This is usually the output of the
+       **"Pit Remove"** tool, in which case it is elevations with pits removed.
+   * - **Accumulated Stream Source Grid**
+     -
+     - [raster]
+     - This grid must be monotonically increasing along the downslope D8 flow
+       directions. It it compared to a series of thresholds to determine the
+       beginning of the streams. It is often generated by accumulating some
+       characteristic or combination of characteristics of the watershed with the
+       **"D8 Contributing Area"** tool, or using the maximum option of the
+       **"D8 Flow Path Extreme"** tool. The exact method varies depending on the
+       algorithm being used.
+   * - **Outlets Shapefile**
+     -
+     - [vector: point]
+     - A point shapefile defining the outlets upstream of which drop analysis
+       is performed.
+   * - **Minimum Threshold**
+     -
+     - [number]
 
-``Accumulated Stream Source Grid`` [raster]
-  This grid must be monotonically increasing along the downslope D8 flow
-  directions. It it compared to a series of thresholds to determine the
-  beginning of the streams. It is often generated by accumulating some
-  characteristic or combination of characteristics of the watershed with the
-  **"D8 Contributing Area"** tool, or using the maximum option of the
-  **"D8 Flow Path Extreme"** tool. The exact method varies depending on the
-  algorithm being used.
+       Default: 5
+     - This parameter is the lowest end of the range searched for possible threshold
+       values using drop analysis. This technique looks for the smallest threshold
+       in the range where the absolute value of the t-statistic is less than 2. For
+       the science behind the drop analysis see Tarboton et al. (1991, 1992),
+       Tarboton and Ames (2001).
+   * - **Maximum Threshold**
+     -
+     - [number]
 
-``Outlets Shapefile`` [vector: point]
-  A point shapefile defining the outlets upstream of which drop analysis
-  is performed.
+       Default: 500
+     - This parameter is the highest end of the range searched for possible threshold
+       values using drop analysis. This technique looks for the smallest threshold
+       in the range where the absolute value of the t-statistic is less than 2. For
+       the science behind the drop analysis see Tarboton et al. (1991, 1992),
+       Tarboton and Ames (2001).
+   * - **Number of Threshold Values**
+     -
+     - [number]
 
-``Minimum Threshold`` [number]
-  This parameter is the lowest end of the range searched for possible threshold
-  values using drop analysis. This technique looks for the smallest threshold
-  in the range where the absolute value of the t-statistic is less than 2. For
-  the science behind the drop analysis see Tarboton et al. (1991, 1992),
-  Tarboton and Ames (2001).
+       Default: 10
+     - The parameter is the number of steps to divide the search range into when
+       looking for possible threshold values using drop analysis. This technique
+       looks for the smallest threshold in the range where the absolute value of the
+       t-statistic is less than 2. For the science behind the drop analysis see
+       Tarboton et al. (1991, 1992), Tarboton and Ames (2001).
 
-  Default: *5*
+   * - **Spacing for Threshold Values**
+     -
+     - [enumeration]
 
-``Maximum Threshold`` [number]
-  This parameter is the highest end of the range searched for possible threshold
-  values using drop analysis. This technique looks for the smallest threshold
-  in the range where the absolute value of the t-statistic is less than 2. For
-  the science behind the drop analysis see Tarboton et al. (1991, 1992),
-  Tarboton and Ames (2001).
+       Default: 0
+     - This parameter indicates whether logarithmic or linear spacing should be used
+       when looking for possible threshold values using drop analysis.
 
-  Default: *500*
+       Options:
 
-``Number of Threshold Values`` [number]
-  The parameter is the number of steps to divide the search range into when
-  looking for possible threshold values using drop analysis. This technique
-  looks for the smallest threshold in the range where the absolute value of the
-  t-statistic is less than 2. For the science behind the drop analysis see
-  Tarboton et al. (1991, 1992), Tarboton and Ames (2001).
-
-  Default: *10*
-
-``Spacing for Threshold Values`` [enumeration]
-  This parameter indicates whether logarithmic or linear spacing should be used
-  when looking for possible threshold values using drop analysis.
-
-  Options:
-
-  * 0 --- Logarithmic
-  * 1 --- Linear
-
-  Default: *0*
+       * 0 --- Logarithmic
+       * 1 --- Linear
 
 Outputs
 .......
 
-``D-Infinity Drop to Stream Grid`` [file]
-  This is a comma delimited text file
-  with the following header line:
+.. list-table::
+   :widths: 20 15 15 50
+   :class: longtable
 
-  ::
-      Threshold,DrainDen,NoFirstOrd,NoHighOrd,MeanDFirstOrd,MeanDHighOrd,StdDevFirstOrd,StdDevHighOrd,T
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **D-Infinity Drop to Stream Grid**
+     -
+     - [file]
+     - This is a comma delimited text file
+       with the following header line:
 
-  The file then contains one line of data for each threshold value examined, and
-  then a summary line that indicates the optimum threshold value. This technique
-  looks for the smallest threshold in the range where the absolute value of the
-  t-statistic is less than 2. For the science behind the drop analysis, see
-  Tarboton et al. (1991, 1992), Tarboton and Ames (2001).
+       ::
+
+          Threshold,DrainDen,NoFirstOrd,NoHighOrd,MeanDFirstOrd,MeanDHighOrd,StdDevFirstOrd,StdDevHighOrd,T
+
+       The file then contains one line of data for each threshold value examined, and
+       then a summary line that indicates the optimum threshold value. This technique
+       looks for the smallest threshold in the range where the absolute value of the
+       t-statistic is less than 2. For the science behind the drop analysis, see
+       Tarboton et al. (1991, 1992), Tarboton and Ames (2001).
+
+Python code
+...........
 
 **Algorithm ID**: ``taudem:dropanalysis``
 
@@ -760,9 +1061,6 @@ See also
 
 Stream Reach and Watershed
 --------------------------
-
-Description
-...........
 
 This tool produces a vector network and shapefile from the stream raster grid.
 The flow direction grid is used to connect flow paths along the stream raster.
@@ -799,140 +1097,174 @@ watershed grid.
 Parameters
 ..........
 
-``Pit Filled Elevation Grid`` [raster]
-  A grid of elevation values. This is usually the output of the
-  **"Pit Remove"** tool, in which case it is elevations with pits removed.
+.. list-table::
+   :widths: 20 15 15 50
+   :class: longtable
 
-``D8 Flow Direction Grid`` [raster]
-  A grid of D8 flow directions which are defined, for each cell, as the
-  direction of the one of its eight adjacent or diagonal neighbors with the
-  steepest downward slope. This grid can be obtained as the output of the
-  **"D8 Flow Directions"** tool.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Pit Filled Elevation Grid**
+     -
+     - [raster]
+     - A grid of elevation values. This is usually the output of the
+       **"Pit Remove"** tool, in which case it is elevations with pits removed.
+   * - **D8 Flow Direction Grid**
+     -
+     - [raster]
+     - A grid of D8 flow directions which are defined, for each cell, as the
+       direction of the one of its eight adjacent or diagonal neighbors with the
+       steepest downward slope. This grid can be obtained as the output of the
+       **"D8 Flow Directions"** tool.
+   * - **D8 Drainage Area**
+     -
+     - [raster]
+     - A grid giving the contributing area value in terms of the number of grid
+       cells (or the summation of weights) for each cell taken as its own
+       contribution plus the contribution from upslope neighbors that drain in to it
+       using the D8 algorithm. This is usually the output of the
+       **"D8 Contributing Area"** tool and is used to determine the contributing area
+       attribute in the Network Coordinate file.
+   * - **Stream Raster Grid**
+     -
+     - [raster]
+     - An indicator grid indicating streams, by using a grid cell value of 1 on
+       streams and 0 off streams. Several of the **"Stream Network Analysis"** tools
+       produce this type of grid. The Stream Raster Grid is used as the source for
+       the stream network.
+   * - **Outlets Shapefile as Network Nodes**
 
-``D8 Drainage Area`` [raster]
-  A grid giving the contributing area value in terms of the number of grid
-  cells (or the summation of weights) for each cell taken as its own
-  contribution plus the contribution from upslope neighbors that drain in to it
-  using the D8 algorithm. This is usually the output of the
-  **"D8 Contributing Area"** tool and is used to determine the contributing area
-  attribute in the Network Coordinate file.
+       Optional
+     -
+     - [vector: point]
+     - A point shape file defining points of interest. If this file is used, the
+       tool will only deliniate the stream network upstream of these outlets.
+       Additionally, points in the Outlets Shapefile are used to logically split
+       stream reaches to facilitate representing watersheds upstream and downstream
+       of monitoring points. This tool REQUIRES THAT THERE BE an integer attribute
+       field "id" in the Outlets Shapefile, because the "id" values are used as
+       identifiers in the Network Tree file.
+   * - **Delineate Single Watershed**
+     -
+     - [boolean]
 
-``Stream Raster Grid`` [raster]
-  An indicator grid indicating streams, by using a grid cell value of 1 on
-  streams and 0 off streams. Several of the **"Stream Network Analysis"** tools
-  produce this type of grid. The Stream Raster Grid is used as the source for
-  the stream network.
-
-``Outlets Shapefile as Network Nodes`` [vector: point]
-  Optional
-
-  A point shape file defining points of interest. If this file is used, the
-  tool will only deliniate the stream network upstream of these outlets.
-  Additionally, points in the Outlets Shapefile are used to logically split
-  stream reaches to facilitate representing watersheds upstream and downstream
-  of monitoring points. This tool REQUIRES THAT THERE BE an integer attribute
-  field "id" in the Outlets Shapefile, because the "id" values are used as
-  identifiers in the Network Tree file.
-
-``Delineate Single Watershed`` [boolean]
-  This option causes the tool to delineate a single watershed by representing
-  the entire area draining to the Stream Network as a single value in the output
-  watershed grid. Otherwise a seperate watershed is delineated for each stream
-  reach. Default is *False* (seperate watershed).
-
-  Default: *False*
+       Default: True
+     - This option causes the tool to delineate a single watershed by representing
+       the entire area draining to the Stream Network as a single value in the output
+       watershed grid. Otherwise a seperate watershed is delineated for each stream
+       reach. Default is *False* (seperate watershed).
 
 Outputs
 .......
 
-``Stream Order Grid`` [raster]
-  The Stream Order Grid has cells values of streams ordered according to the
-  Strahler order system. The Strahler ordering system defines order 1 streams
-  as stream reaches that don't have any other reaches draining in to them. When
-  two stream reaches of different order join the order of the downstream reach
-  is the order of the highest incoming reach. When two reaches of equal order
-  join the downstream reach order is increased by 1. When more than two reaches
-  join the downstream reach order is calculated as the maximum of the highest
-  incoming reach order or the second highest incoming reach order + 1. This
-  generalizes the common definition to cases where more than two flow paths
-  reaches join at a point.
+.. list-table::
+   :widths: 20 15 15 50
+   :class: longtable
 
-``Watershed Grid`` [raster]
-  This output grid identified each reach watershed with a unique ID number, or
-  in the case where the delineate single watershed option was checked, the
-  entire area draining to the stream network is identified with a single ID.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Stream Order Grid**
+     -
+     - [raster]
+     - The Stream Order Grid has cells values of streams ordered according to the
+       Strahler order system. The Strahler ordering system defines order 1 streams
+       as stream reaches that don't have any other reaches draining in to them. When
+       two stream reaches of different order join the order of the downstream reach
+       is the order of the highest incoming reach. When two reaches of equal order
+       join the downstream reach order is increased by 1. When more than two reaches
+       join the downstream reach order is calculated as the maximum of the highest
+       incoming reach order or the second highest incoming reach order + 1. This
+       generalizes the common definition to cases where more than two flow paths
+       reaches join at a point.
+   * - **Watershed Grid**
+     -
+     - [raster]
+     - This output grid identified each reach watershed with a unique ID number, or
+       in the case where the delineate single watershed option was checked, the
+       entire area draining to the stream network is identified with a single ID.
+   * - **Stream Reach Shapefile**
+     -
+     - [vector: line]
+     - This output is a polyline shapefile giving the links in a stream network.
+       The columns in the attribute table are:
 
-``Stream Reach Shapefile`` [vector: line]
-  This output is a polyline shapefile giving the links in a stream network. The
-  columns in the attribute table are:
+       * LINKNO --- Link Number. A unique number associated with each link (segment
+         of channel between junctions). This is arbitrary and will vary depending on
+         number of processes used
+       * DSLINKNO --- Link Number of the downstream link. -1 indicates that this does
+         not exist
+       * USLINKNO1 --- Link Number of first upstream link. (-1 indicates no link
+         upstream, i.e. for a source link)
+       * USLINKNO2 --- Link Number of second upstream link. (-1 indicates no second
+         link upstream, i.e. for a source link or an internal monitoring point where
+         the reach is logically split but the network does not bifurcate)
+       * DSNODEID --- Node identifier for node at downstream end of stream reach. This
+         identifier corresponds to the "id" attribute from the Outlets shapefile used
+         to designate nodes
+       * Order --- Strahler Stream Order
+       * Length --- Length of the link. The units are the horizontal map units of the
+         underlying DEM grid
+       * Magnitude --- Shreve Magnitude of the link. This is the total number of
+         sources upstream
+       * DS_Cont_Ar --- Drainage area at the downstream end of the link. Generally
+         this is one grid cell upstream of the downstream end because the drainage
+         area at the downstream end grid cell includes the area of the stream being
+         joined
+       * Drop --- Drop in elevation from the start to the end of the link
+       * Slope --- Average slope of the link (computed as drop/length)
+       * Straight_L --- Straight line distance from the start to the end of the link
+       * US_Cont_Ar --- Drainage area at the upstream end of the link
+       * WSNO --- Watershed number. Cross reference to the :file:`*w.shp` and
+         :file:`*w` grid files giving the identification number of the watershed
+         draining directly to the link
+       * DOUT_END --- Distance to the eventual outlet (i.e. the most downstream point
+         in the stream network) from the downstream end of the link
+       * DOUT_START --- Distance to the eventual outlet from the upstream end of the
+         link
+       * DOUT_MID --- Distance to the eventual outlet from the midpoint of the link
 
-  * LINKNO --- Link Number. A unique number associated with each link (segment
-    of channel between junctions). This is arbitrary and will vary depending on
-    number of processes used
-  * DSLINKNO --- Link Number of the downstream link. -1 indicates that this does
-    not exist
-  * USLINKNO1 --- Link Number of first upstream link. (-1 indicates no link
-    upstream, i.e. for a source link)
-  * USLINKNO2 --- Link Number of second upstream link. (-1 indicates no second
-    link upstream, i.e. for a source link or an internal monitoring point where
-    the reach is logically split but the network does not bifurcate)
-  * DSNODEID --- Node identifier for node at downstream end of stream reach. This
-    identifier corresponds to the "id" attribute from the Outlets shapefile used
-    to designate nodes
-  * Order --- Strahler Stream Order
-  * Length --- Length of the link. The units are the horizontal map units of the
-    underlying DEM grid
-  * Magnitude --- Shreve Magnitude of the link. This is the total number of
-    sources upstream
-  * DS_Cont_Ar --- Drainage area at the downstream end of the link. Generally
-    this is one grid cell upstream of the downstream end because the drainage
-    area at the downstream end grid cell includes the area of the stream being
-    joined
-  * Drop --- Drop in elevation from the start to the end of the link
-  * Slope --- Average slope of the link (computed as drop/length)
-  * Straight_L --- Straight line distance from the start to the end of the link
-  * US_Cont_Ar --- Drainage area at the upstream end of the link
-  * WSNO --- Watershed number. Cross reference to the :file:`*w.shp` and
-    :file:`*w` grid files giving the identification number of the watershed
-    draining directly to the link
-  * DOUT_END --- Distance to the eventual outlet (i.e. the most downstream point
-    in the stream network) from the downstream end of the link
-  * DOUT_START --- Distance to the eventual outlet from the upstream end of the
-    link
-  * DOUT_MID --- Distance to the eventual outlet from the midpoint of the link
+   * - **Network Connectivity Tree**
+     -
+     - [file]
+     - This output is a text file that details the network topological connectivity
+       is stored in the Stream Network Tree file. Columns are as follows:
 
-``Network Connectivity Tree`` [file]
-  This output is a text file that details the network topological connectivity
-  is stored in the Stream Network Tree file. Columns are as follows:
+       * Link Number (Arbitrary --- will vary depending on number of processes used)
+       * Start Point Number in Network coordinates (:file:`*coord.dat)` file
+         (Indexed from 0)
+       * End Point Number in Network coordinates (:file:`*coord.dat`) file
+         (Indexed from 0)
+       * Next (Downstream) Link Number. Points to Link Number. -1 indicates no links
+         downstream, i.e. a terminal link
+       * First Previous (Upstream) Link Number. Points to Link Number. -1 indicates
+         no upstream links
+       * Second Previous (Upstream) Link Numbers. Points to Link Number. -1 indicates
+         no upstream links. Where only one previous link is -1, it indicates an
+         internal monitoring point where the reach is logically split, but the network
+         does not bifurcate
+       * Strahler Order of Link
+       * Monitoring point identifier at downstream end of link. -1 indicates
+         downstream end is not a monitoring point
+       * Network magnitude of the link, calculated as the number of upstream sources
+         (following Shreve)
 
-  * Link Number (Arbitrary --- will vary depending on number of processes used)
-  * Start Point Number in Network coordinates (:file:`*coord.dat)` file
-    (Indexed from 0)
-  * End Point Number in Network coordinates (:file:`*coord.dat`) file
-    (Indexed from 0)
-  * Next (Downstream) Link Number. Points to Link Number. -1 indicates no links
-    downstream, i.e. a terminal link
-  * First Previous (Upstream) Link Number. Points to Link Number. -1 indicates
-    no upstream links
-  * Second Previous (Upstream) Link Numbers. Points to Link Number. -1 indicates
-    no upstream links. Where only one previous link is -1, it indicates an
-    internal monitoring point where the reach is logically split, but the network
-    does not bifurcate
-  * Strahler Order of Link
-  * Monitoring point identifier at downstream end of link. -1 indicates
-    downstream end is not a monitoring point
-  * Network magnitude of the link, calculated as the number of upstream sources
-    (following Shreve)
+   * - **Network Coordinates**
+     -
+     - [file]
+     - This output is a text file that contains the coordinates and attributes of
+       points along the stream network. Columns are as follows:
 
-``Network Coordinates`` [file]
-  This output is a text file that contains the coordinates and attributes of
-  points along the stream network. Columns are as follows:
+       * X coordinate
+       * Y Coordinate
+       * Distance along channels to the downstream end of a terminal link
+       * Elevation
+       * Contributing area
 
-  * X coordinate
-  * Y Coordinate
-  * Distance along channels to the downstream end of a terminal link
-  * Elevation
-  * Contributing area
+Python code
+...........
 
 **Algorithm ID**: ``taudem:streamnet``
 
