@@ -124,11 +124,11 @@ direction). The call looks like this
 .. code-block:: python
 
   director = QgsVectorLayerDirector(vectorLayer,
-                                        directionFieldId,
-                                        directDirectionValue,
-                                        reverseDirectionValue,
-                                        bothDirectionValue,
-                                        defaultDirection)
+                                    directionFieldId,
+                                    directDirectionValue,
+                                    reverseDirectionValue,
+                                    bothDirectionValue,
+                                    defaultDirection)
 
 And here is full list of what these parameters mean:
 
@@ -146,9 +146,9 @@ And here is full list of what these parameters mean:
   those roads where field ``directionFieldId`` is not set or has some value
   different from any of the three values specified above. Possible values are:
 
-    * ``QgsVectorLayerDirector.DirectionForward`` --- One-way direct
-    * ``QgsVectorLayerDirector.DirectionBackward`` --- One-way reverse
-    * ``QgsVectorLayerDirector.DirectionBoth`` --- Two-way
+  * ``QgsVectorLayerDirector.DirectionForward`` --- One-way direct
+  * ``QgsVectorLayerDirector.DirectionBackward`` --- One-way reverse
+  * ``QgsVectorLayerDirector.DirectionBoth`` --- Two-way
 
 
 It is necessary then to create a strategy for calculating edge properties
@@ -174,7 +174,7 @@ Now we can use the builder, which will create the graph. The :class:`QgsGraphBui
 <qgis.analysis.QgsGraphBuilder>` class constructor takes several arguments:
 
 * ``crs`` --- coordinate reference system to use. Mandatory argument.
-* ``otfEnabled`` --- use "on the fly" reprojection or no. By default const:`True`
+* ``otfEnabled`` --- use "on the fly" reprojection or no. By default :const:`True`
   (use OTF).
 * ``topologyTolerance`` --- topological tolerance. Default value is 0.
 * ``ellipsoidID`` --- ellipsoid to use. By default "WGS84".

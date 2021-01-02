@@ -314,6 +314,8 @@ nitpick_ignore = [
                   ('py:mod', 'qgis.core'),
                   ('py:mod', 'qgis.gui'),
                   ('py:mod', 'qgis.utils'),
+
+                  ('py:const', 'True'),
                   ]
 
 
