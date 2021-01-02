@@ -11,7 +11,6 @@ Developing Python Plugins
 
    plugins
    snippets
-   pluginlayer
    ide_debugging
    releasing
    
