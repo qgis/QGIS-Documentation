@@ -16,9 +16,6 @@ our case, you'll begin by creating new data entirely, rather than editing an
 existing dataset. Therefore, you'll need to define your own new dataset first.
 
 #. Open QGIS and create a new blank project.
-
-
-
 #. Navigate to and click on the menu entry
    :menuselection:`Layer --> Create Layer --> New Shapefile Layer`. 
    You'll be presented with the :guilabel:`New Shapefile Layer` dialog, which will
@@ -179,7 +176,8 @@ To enter edit mode for the ``school_property`` layer:
      :align: center
 
 #. Start digitizing by clicking on a point somewhere along the edge of the field.
-#. Place more points by clicking further along the edge, until the shape you're drawing completely covers the field.
+#. Place more points by clicking further along the edge, until the shape you're
+   drawing completely covers the field.
   
    .. figure:: img/school_field_outline.png
      :align: center
@@ -229,25 +227,11 @@ digitizing until you're done creating the feature as above. Then:
    The same procedure can be used to move a line segment, but you will need to
    hover over the midpoint of the line segment.
 
-If you want to undo a change, you can press the |undo| :sup:`Undo` button or :kbd:`Ctrl+Z`.
+   If you want to undo a change, you can press the |undo| :sup:`Undo` button or :kbd:`Ctrl+Z`.
 
-Remember to save your changes by clicking the |saveEdits| :sup:`Save Edits` button.
-
-To enable the remaining feature editing tools, one needs to select the feature.
-
-#. Click on the |selectRectangle| :sup:`Select Features` button in the Attributes Toolbar.
-#. Click on the feature that was just created and the remaining buttons will become enabled.
-
-
-
-   .. figure:: img/all_active_buttons.png
-     :align: center
-
-   See :ref:`User Manual<sec_edit_existing_layer>` for description of the other buttons in this toolbar.
-
-
+#. Remember to save your changes by clicking the |saveEdits| :sup:`Save Edits` button.
 #. When done editing, click the |toggleEditing| :sup:`Toggle Editing` button
-   to get out of edit mode, and save your edits.
+   to get out of edit mode.
 
 
 |basic| |TY| Digitizing Polygons 
@@ -334,13 +318,14 @@ Our track is a little further to the south:
 .. figure:: img/track_start_end.png
      :align: center
 
-#. Create a new ESRI Shapefile line dataset called ``routes.shp``,
-   with attributes ``id`` and ``type`` (use the approach above to guide you.)
-
-#. If the roads layer is not in your map, then add it from the
-   GeoPackage file :file:`training-data.gpkg` included in the
+#. If the *roads* layer is not yet in your map, then add the :file:`roads`
+   layer from the GeoPackage file :file:`training-data.gpkg` included in the
    :file:`exercise_data` folder of the training data you downloaded.
-#. Activate edit mode.
+   You can read :ref:`load_geopackage` for a how-to.
+#. Create a new ESRI Shapefile line dataset called ``routes.shp`` in the 
+   :file:`exercise_data` directory, with attributes ``id`` and ``type``
+   (use the approach above to guide you.)
+#. Activate edit mode on the :guilabel:`routes` layer.
 #. Since you are working with a line feature, click on the
    |captureLine| :sup:`Add Line` button to initiate line
    digitizing mode.
