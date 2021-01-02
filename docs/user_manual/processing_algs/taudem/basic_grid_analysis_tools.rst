@@ -10,9 +10,6 @@ Basic Grid Analysis
 D-Infinity Contributing Area
 ----------------------------
 
-Description
-...........
-
 Calculates a grid of specific catchment area which is the contributing area per
 unit contour length using the multiple flow direction D-infinity approach.
 D-infinity flow direction is defined as steepest downward slope on planar
@@ -174,9 +171,6 @@ Outputs
 D-Infinity Flow Directions
 --------------------------
 
-Description
-...........
-
 Assigns a flow direction based on the D-infinity flow method using the steepest
 slope of a triangular facet (Tarboton, 1997, "A New Method for the Determination
 of Flow Directions and Contributing Areas in Grid Digital Elevation Models",
@@ -323,9 +317,6 @@ Outputs
 D8 Contributing Area
 --------------------
 
-Description
-...........
-
 Calculates a grid of contributing areas using the single direction D8 flow model.
 The contribution of each grid cell is taken as one (or when the optional weight
 grid is used, the value from the weight grid). The contributing area for each
@@ -451,9 +442,6 @@ Outputs
 D8 Flow Directions
 ------------------
 
-Description
-...........
-
 Creates 2 grids. The first contains the flow direction from each grid cell to one
 of its adjacent or diagonal neighbors, calculated using the direction of steepest
 descent. The second contain the slope, as evaluated in the direction of steepest
@@ -575,9 +563,6 @@ Outputs
 
 Grid Network
 ------------
-
-Description
-...........
 
 Creates 3 grids that contain for each grid cell: 1) the longest path, 2) the total
 path, and 3) the Strahler order number. These values are derived from the network
@@ -755,9 +740,6 @@ Outputs
 
 Pit Remove
 ----------
-
-Description
-...........
 
 Identifies all pits in the DEM and raises their elevation to the level of the
 lowest pour point around their edge. Pits are low elevation areas in digital
