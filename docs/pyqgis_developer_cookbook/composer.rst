@@ -146,6 +146,17 @@ an empty A4 page to the layout. You can create layouts without calling the
 :meth:`initializeDefaults() <qgis.core.QgsLayout.initializeDefaults>` method,
 but you'll need to take care of adding pages to the layout yourself.
 
+The previous code creates a "temporary" layout that is not visible in the GUI.
+It can be handy to e.g. quickly add some items and export without modifying
+the project itself nor expose these changes to the user.
+If you want the layout to be saved/restored along with the project and
+available in the layout manager, then add:
+
+.. testcode:: composer
+
+  layout.setName("MyLayout")
+  project.layoutManager().addLayout(layout)
+
 Now we can add various elements (map, label, ...) to the layout. All these objects
 are represented by classes that inherit from the base :class:`QgsLayoutItem <qgis.core.QgsLayoutItem>` class.
 
