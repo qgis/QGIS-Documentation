@@ -1,24 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Kayama Yoichi <yoichi.kayama@gmail.com>, 2020
-# tomoyuki arai <tarai.3367@gmail.com>, 2020
+# Harrissou Sant-anna, 2020
+# tomoyuki arai <tarai.3367@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:27+0000\n"
-"Last-Translator: tomoyuki arai <tarai.3367@gmail.com>, 2020\n"
+"POT-Creation-Date: 2020-12-13 09:01+0100\n"
+"PO-Revision-Date: 2020-12-24 10:21+0000\n"
+"Last-Translator: tomoyuki arai <tarai.3367@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -129,23 +131,33 @@ msgstr ""
 "は、テキストの書式や、ラベル配置、優先度、引出し線、レンダリングなどレイヤの種類に固有の設定を含む :ref:`ラベルの設定 <showlabels>`"
 " を管理します。"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:70
+#: ../../docs/user_manual/style_library/style_manager.rst:68
+msgid ""
+"|3d| :guilabel:`3D Symbols` to configure symbols with :ref:`3D properties "
+"<3dsymbols>` (extrusion, shading, altitude, ...) for the features to render "
+"in a :ref:`3D Map view <label_3dmapview>`"
+msgstr ""
+"|3d| :guilabel:`3Dシンボル` は、 :ref:`3Dマップビュー <label_3dmapview>` "
+"において地物をレンダリングするために、 :ref:`3Dビュープロパティ <3dsymbols>` "
+"（押出、シェーディング、高さ、...）を持つシンボルを設定します。"
+
+#: ../../docs/user_manual/style_library/style_manager.rst:72
 msgid ""
 "For each family of items, you can organize the elements into different "
 "categories, listed in the panel on the left:"
 msgstr "各アイテム群については、左側のパネルに表示されている様々なカテゴリに要素を整理することができます："
 
-#: ../../docs/user_manual/style_library/style_manager.rst:73
+#: ../../docs/user_manual/style_library/style_manager.rst:75
 msgid ""
 "**Favorites**: displayed by default when configuring an item, it shows an "
 "extensible set of items;"
 msgstr "**お気に入り** ：アイテムを設定する際ににデフォルトで表示され、拡張可能なアイテムのセットを表示します。"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:75
+#: ../../docs/user_manual/style_library/style_manager.rst:77
 msgid "**All**: lists all the available items for the active type;"
 msgstr "**全てのプラグイン** ：アクティブなタイプで利用可能な全てのアイテムをリスト表示します。"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:76
+#: ../../docs/user_manual/style_library/style_manager.rst:78
 msgid ""
 "**Tags**: shows a list of labels you can use to identify the items. An item "
 "can be tagged more than once. Select a tag in the list and the tabs are "
@@ -159,7 +171,7 @@ msgstr ""
 " :guilabel:`タグを追加...` ボタンを押すか、任意のタグのコンテキストメニューから |signPlus| "
 ":guilabel:`タグを追加...` を選択します。"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:82
+#: ../../docs/user_manual/style_library/style_manager.rst:84
 msgid ""
 "**Smart Group**: a smart group dynamically fetches its symbols according to "
 "conditions set (see eg, figure_smart_group_). Click the :guilabel:`Add Smart"
@@ -173,11 +185,11 @@ msgstr ""
 "）。スマートグループをっ作成するには、 :guilabel:`スマートグループを追加...` "
 "ボタンをクリックします。ダイアログボックスでは、選択するアイテムをフィルタリング（特定のタグを持っている、名前の一部が文字列に一致する、など）するための式を入力することができます。入力された条件を満足するシンボルやカラーランプ、テキスト形式、ラベルの設定は、自動的にスマートグループに追加されます。"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:95
+#: ../../docs/user_manual/style_library/style_manager.rst:97
 msgid "Creating a Smart Group"
 msgstr "スマートグループを作成する"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:97
+#: ../../docs/user_manual/style_library/style_manager.rst:99
 msgid ""
 "Tags and smart groups are not mutually exclusive: they are simply two "
 "different ways to organize your style elements. Unlike the smart groups that"
@@ -187,14 +199,14 @@ msgid ""
 msgstr ""
 "タグとスマートグループは相互排他的ではありません。これらはスタイル要素を整理するための、単なる2つの異なる方法です。入力した制約条件に基づいて属するアイテムが自動的に取得されるスマートグループとは異なり、タグはユーザーによって付けられます。これらのカテゴリを編集するには、次のいずれかの方法で行います："
 
-#: ../../docs/user_manual/style_library/style_manager.rst:103
+#: ../../docs/user_manual/style_library/style_manager.rst:105
 msgid ""
 "select the items, right-click and choose :menuselection:`Add to Tag -->` and"
 " then select the tag name or create a new tag;"
 msgstr ""
 "アイテムを選択し、右クリックして :menuselection:`タグに追加 -->` を選び、タグ名を選択するか、新しいタグを作成します。"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:105
+#: ../../docs/user_manual/style_library/style_manager.rst:107
 msgid ""
 "select the tag and press :menuselection:`Modify group... --> Attach Selected"
 " Tag to Symbols`. A checkbox appears next to each item to help you select or"
@@ -205,7 +217,7 @@ msgstr ""
 "を押します。各アイテムの隣にチェックボックスが現れ、アイテムを選択するか除外するかを設定できます。選択が完了したら、 "
 ":menuselection:`グループの変更... --> タグ付けの完了` を押します。"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:109
+#: ../../docs/user_manual/style_library/style_manager.rst:111
 msgid ""
 "select the smart group, press :menuselection:`Modify group... --> Edit smart"
 " group...` and configure a new set of constraints in the :guilabel:`Smart "
@@ -216,7 +228,7 @@ msgstr ""
 ":guilabel:`スマートグループエディタ` "
 "ダイアログで新しい制約条件を設定することができます。このオプションは、スマートグループのコンテキストメニューからも利用可能です。"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:114
+#: ../../docs/user_manual/style_library/style_manager.rst:116
 msgid ""
 "To remove a tag or a smart group, right-click on it and select the "
 "|signMinus| :guilabel:`Remove` button. Note that this does not delete the "
@@ -225,11 +237,11 @@ msgstr ""
 "タグやスマートグループを削除するには、これを右クリックして |signMinus| :guilabel:`削除` "
 "ボタンを選択します。これは、カテゴリにグループ化されたアイテムを削除するのではないことに留意してください。"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:119
+#: ../../docs/user_manual/style_library/style_manager.rst:121
 msgid "Adding, editing or removing an item"
 msgstr "アイテムの追加、編集、削除"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:121
+#: ../../docs/user_manual/style_library/style_manager.rst:123
 msgid ""
 "As seen earlier, style elements are listed under different tabs whose "
 "contents depend on the active category (tag, smart group, favorites...). "
@@ -238,7 +250,7 @@ msgstr ""
 "上で述べたように、スタイル要素は様々なタブの下にリストされます。リストの内容はアクティブなカテゴリ（タグ、スマートグループ、お気に入り...）に依存します。"
 " タブが有効になっているときは、以下の操作ができます。"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:125
+#: ../../docs/user_manual/style_library/style_manager.rst:127
 msgid ""
 "Add new items: press the |signPlus| :sup:`Add item` button and configure the"
 " item following :ref:`symbols <symbol-selector>`, :ref:`color ramps <color-"
@@ -248,7 +260,7 @@ msgstr ""
 " :ref:`カラーランプ <color-ramp>` または :ref:`テキスト形式やラベルの設定 <showlabels>` "
 "ビルダーの説明に従ってアイテムを設定します。"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:128
+#: ../../docs/user_manual/style_library/style_manager.rst:130
 msgid ""
 "Modify an existing item: select an item and press |symbologyEdit| :sup:`Edit"
 " item` button and configure as mentioned above."
@@ -256,7 +268,7 @@ msgstr ""
 "既存のアイテムの編集：アイテムを選択し、 |symbologyEdit| :sup:`アイテム編集` "
 "ボタンを押して、上で述べたのと同様にアイテムの設定を行います。"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:130
+#: ../../docs/user_manual/style_library/style_manager.rst:132
 msgid ""
 "Delete existing items: to delete an element you no longer need, select it "
 "and click |signMinus| :sup:`Remove item` (also available through right-"
@@ -265,25 +277,25 @@ msgstr ""
 "既存のアイテムを削除する：不要になった要素を削除するには、それを選択して |signMinus| :sup:`アイテム削除` "
 "（右クリックからも利用可能）ボタンを押します。そのアイテムはローカルデータベースから削除されます。"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:134
+#: ../../docs/user_manual/style_library/style_manager.rst:136
 msgid ""
 "Note that the :guilabel:`All` tab provides access to these options for every"
 " type of item."
 msgstr ":guilabel:`全てのプラグイン` タブでは、全ての種類のアイテムについてこれらのオプションにアクセスできることに留意してください。"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:137
+#: ../../docs/user_manual/style_library/style_manager.rst:139
 msgid "Right-clicking over a selection of items also allows you to:"
 msgstr "アイテムを選択して右クリックすると、以下の操作もできます。"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:139
+#: ../../docs/user_manual/style_library/style_manager.rst:141
 msgid ":guilabel:`Add to Favorites`;"
 msgstr ":guilabel:`お気に入りに追加`"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:140
+#: ../../docs/user_manual/style_library/style_manager.rst:142
 msgid ":guilabel:`Remove from Favorites`;"
 msgstr ":guilabel:`お気に入りから削除`"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:141
+#: ../../docs/user_manual/style_library/style_manager.rst:143
 msgid ""
 ":menuselection:`Add to Tag -->` and select the appropriate tag or create a "
 "new one to use; the currently assigned tags are checked;"
@@ -291,46 +303,46 @@ msgstr ""
 ":menuselection:`タグに追加 -->` "
 "を選び、適切なタグを選択するか、使用する新しいタグを作成します。現在指定されているタグはチェック済みになっています"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:143
+#: ../../docs/user_manual/style_library/style_manager.rst:145
 msgid ":guilabel:`Clear Tags`: detaching the symbols from any tag;"
 msgstr ":guilabel:`タグをクリアする` ：シンボルから全てのタグを外します"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:144
+#: ../../docs/user_manual/style_library/style_manager.rst:146
 msgid ":guilabel:`Remove Item(s)`;"
 msgstr ":guilabel:`アイテムを削除する`"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:145
+#: ../../docs/user_manual/style_library/style_manager.rst:147
 msgid ":guilabel:`Edit Item`: applies to the item you right-click over;"
 msgstr ":guilabel:`アイテムの編集` ：右クリックしたアイテムに適用されます"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:146
+#: ../../docs/user_manual/style_library/style_manager.rst:148
 msgid ":guilabel:`Copy Item`;"
 msgstr ":guilabel:`アイテムのコピー`"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:147
+#: ../../docs/user_manual/style_library/style_manager.rst:149
 msgid ""
 ":guilabel:`Paste Item ...`: pasting to one of the categories of the style "
 "manager or elsewhere in QGIS (symbol or color buttons)"
 msgstr ""
 ":guilabel:`アイテムの貼り付け...` ：スタイルマネージャのカテゴリの一つもしくはQGISの他の場所（シンボルや色ボタン等）に貼りつけます"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:149
+#: ../../docs/user_manual/style_library/style_manager.rst:151
 msgid ""
 ":guilabel:`Export Selected Symbol(s) as PNG...` (only available with "
 "symbols);"
 msgstr ":guilabel:`選択したシンボルをPNGとしてエクスポート...` （シンボルのみ利用可能）"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:150
+#: ../../docs/user_manual/style_library/style_manager.rst:152
 msgid ""
 ":guilabel:`Export Selected Symbol(s) as SVG...` (only available with "
 "symbols);"
 msgstr ":guilabel:`選択したシンボルをSVGとしてエクスポート...` （シンボルのみ利用可能）"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:155
+#: ../../docs/user_manual/style_library/style_manager.rst:157
 msgid "Sharing style items"
 msgstr "スタイルアイテムの共有"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:157
+#: ../../docs/user_manual/style_library/style_manager.rst:159
 msgid ""
 "The |sharing| :guilabel:`Import/Export` tool, at the left bottom of the "
 "Style Manager dialog, offers options to easily share symbols, color ramps, "
@@ -340,15 +352,15 @@ msgstr ""
 "スタイルマネージャダイアログの左下にある |sharing| :guilabel:`インポートとエクスポート` "
 "ツールには、シンボル、カラーランプ、テキスト形式、ラベルの設定を他者と簡単に共有するためのオプションがあります。これらのオプションは、アイテム上で右クリックして使用することもできます。"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:163
+#: ../../docs/user_manual/style_library/style_manager.rst:165
 msgid "Exporting items"
 msgstr "アイテムのエクスポート"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:165
+#: ../../docs/user_manual/style_library/style_manager.rst:167
 msgid "You can export a set of items to an :file:`.XML` file:"
 msgstr "アイテムのセットを :file:`.XML` ファイルにエクスポートすることができます。"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:167
+#: ../../docs/user_manual/style_library/style_manager.rst:169
 msgid ""
 "Expand the |sharing| :guilabel:`Import/Export` drop-down menu and select "
 "|fileSave| :guilabel:`Export Item(s)...`"
@@ -356,13 +368,13 @@ msgstr ""
 "|sharing| :guilabel:`インポートとエクスポート` ドロップダウンメニューを展開し、 |fileSave| "
 ":guilabel:`アイテムのエクスポート...` を選択します。"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:169
+#: ../../docs/user_manual/style_library/style_manager.rst:171
 msgid ""
 "Choose the items you'd like to integrate. Selection can be done with the "
 "mouse or using a tag or a group previously set."
 msgstr "エクスポートにまとめたいアイテムを選択します。選択はマウスを使用するか、事前に設定したタグやグループを使用して行うことができます。"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:171
+#: ../../docs/user_manual/style_library/style_manager.rst:173
 msgid ""
 "Press :guilabel:`Export` when ready. You'll be prompted to indicate the "
 "destination of the saved file. The XML format generates a single file "
@@ -372,11 +384,11 @@ msgstr ""
 "準備ができたら :guilabel:`エクスポート` "
 "ボタンを押します。ファイルの保存先を指定するように求められます。XML形式は、選択したアイテム全てを含む単一のファイルを生成します。このファイルは、他のユーザーのスタイルライブラリにインポートできます。"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:181
+#: ../../docs/user_manual/style_library/style_manager.rst:183
 msgid "Exporting style items"
 msgstr "スタイルアイテムのエクスポート"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:183
+#: ../../docs/user_manual/style_library/style_manager.rst:185
 msgid ""
 "When symbols are selected, you can also export them to :file:`.PNG` or "
 ":file:`.SVG`. Exporting to :file:`.PNG` or :file:`.SVG` (both not available "
@@ -391,15 +403,15 @@ msgstr ""
 " :menuselection:`設定 --> オプション --> システム` メニューの :guilabel:`SVGパス` "
 "に追加することで、これらすべてのシンボルに直接アクセスできるようになります。"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:193
+#: ../../docs/user_manual/style_library/style_manager.rst:195
 msgid "Importing items"
 msgstr "アイテムのインポート"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:195
+#: ../../docs/user_manual/style_library/style_manager.rst:197
 msgid "You can extend your style library by importing new items:"
 msgstr "新しいアイテムをインポートすることで、スタイルライブラリを拡張できます。"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:197
+#: ../../docs/user_manual/style_library/style_manager.rst:199
 msgid ""
 "Expand the |sharing| :guilabel:`Import/Export` drop-down menu and select "
 "|fileOpen| :guilabel:`Import Item(s)` at the left bottom of the dialog."
@@ -407,18 +419,18 @@ msgstr ""
 "ダイアログの左下にある |sharing| :guilabel:`インポートとエクスポート` ドロップダウンメニューを展開し、 |fileOpen| "
 ":guilabel:`アイテムのインポート` ボタンを押します。"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:199
+#: ../../docs/user_manual/style_library/style_manager.rst:201
 msgid ""
 "In the new dialog, indicate the source of the style items (it can be an "
 ":file:`.xml` file on the disk or a url)."
 msgstr "新しく開いたダイアログで、スタイルアイテムのソース（ディスク上の :file:`.xml` ファイルまたはURL）を指定します。"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:201
+#: ../../docs/user_manual/style_library/style_manager.rst:203
 msgid ""
 "Set whether to |unchecked| :guilabel:`Add to favorites` the items to import."
 msgstr "インポートするアイテムを |unchecked| :guilabel:`お気に入りに追加` するかを設定します。"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:202
+#: ../../docs/user_manual/style_library/style_manager.rst:204
 msgid ""
 "Check |unchecked| :guilabel:`Do not import embedded tags` to avoid the "
 "import of tags associated to the items being imported."
@@ -426,29 +438,29 @@ msgstr ""
 "|unchecked| :guilabel:`埋め込みタグをインポートしない` "
 "をチェックすると、インポートするアイテムに関連付けられたタグをインポートしません。"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:204
+#: ../../docs/user_manual/style_library/style_manager.rst:206
 msgid ""
 "Give the name of any :guilabel:`Additional tag(s)` to apply to the new "
 "items."
 msgstr "新しいアイテムに適用する :guilabel:`追加のタグ` 名を指定します。"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:205
+#: ../../docs/user_manual/style_library/style_manager.rst:207
 msgid "Select from the preview the symbols you want to add to your library."
 msgstr "ライブラリに追加するシンボルをプレビューから選択します。"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:206
+#: ../../docs/user_manual/style_library/style_manager.rst:208
 msgid "And press :guilabel:`Import`."
 msgstr "最後に、 :guilabel:`インポート` ボタンを押します。"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:213
+#: ../../docs/user_manual/style_library/style_manager.rst:215
 msgid "Importing style items"
 msgstr "スタイルアイテムのインポート"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:219
+#: ../../docs/user_manual/style_library/style_manager.rst:221
 msgid "Using the Browser panel"
 msgstr "ブラウザパネルの使用"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:221
+#: ../../docs/user_manual/style_library/style_manager.rst:223
 msgid ""
 "It's also possible to import style items into the active user profile style "
 "database directly from the :guilabel:`Browser` panel:"
@@ -456,28 +468,28 @@ msgstr ""
 ":guilabel:`ブラウザ` "
 "パネルから直接、アクティブなユーザープロファイルのスタイルデータベースにスタイルアイテムをインポートすることも可能です。"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:224
+#: ../../docs/user_manual/style_library/style_manager.rst:226
 msgid "Select the style :file:`.xml` file in the browser"
 msgstr "スタイルの :file:`.xml` ファイルをブラウザで選択します。"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:225
+#: ../../docs/user_manual/style_library/style_manager.rst:227
 msgid ""
 "Drag-and-drop it over the map canvas or right-click and select "
 ":guilabel:`Import Style...`"
 msgstr "マップキャンバス上へドラッグアンドドロップするか、右クリックして :guilabel:`スタイルのインポート...` を選びます。"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:227
+#: ../../docs/user_manual/style_library/style_manager.rst:229
 msgid ""
 "Fill the :guilabel:`Import Items` dialog following :ref:`import_style_items`"
 msgstr ":ref:`import_style_items` に従い、 :guilabel:`アイテムのインポート` ダイアログを入力します。 "
 
-#: ../../docs/user_manual/style_library/style_manager.rst:228
+#: ../../docs/user_manual/style_library/style_manager.rst:230
 msgid ""
 "Press :guilabel:`Import` and the selected style items are added to the style"
 " database"
 msgstr ":guilabel:`インポート` ボタンを押すと、選択されたスタイルアイテムがスタイルデータベースに追加されます。"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:231
+#: ../../docs/user_manual/style_library/style_manager.rst:233
 msgid ""
 "Double-clicking the style file in the browser opens the :guilabel:`Style "
 "Manager` dialog showing the items in the file. You can select them and press"
@@ -490,22 +502,22 @@ msgstr ""
 "を押すと、それらをアクティブなスタイルデータベースにインポートすることができます。アイテムにタグを付けることも可能です。また、このダイアログはスタイルファイルを右クリックして"
 " :guilabel:`スタイルを開く...` コマンドからも利用可能です。"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:242
+#: ../../docs/user_manual/style_library/style_manager.rst:244
 msgid "Opening a style items file"
 msgstr "スタイルアイテムファイルを開く"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:244
+#: ../../docs/user_manual/style_library/style_manager.rst:246
 msgid ""
 "The dialog also allows to export single symbols as :file:`.PNG` or "
 ":file:`.SVG` files."
 msgstr ""
 "このダイアログでは、単一のシンボルを :file:`.PNG` または :file:`.SVG` 形式のファイルとしてエクスポートすることもできます。"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:250
+#: ../../docs/user_manual/style_library/style_manager.rst:252
 msgid "Setting a Color Ramp"
 msgstr "カラーランプの設定"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:258
+#: ../../docs/user_manual/style_library/style_manager.rst:260
 msgid ""
 "The Color ramp tab in the :guilabel:`Style Manager` dialog helps you preview"
 " different color ramps based on the category selected in the left panel."
@@ -513,7 +525,7 @@ msgstr ""
 ":guilabel:`スタイルマネージャ` "
 "ダイアログの「カラーランプ」タブでは、左のパネル内で選択されたカテゴリに基づくさまざまなカラーランプをプレビューすることができます。"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:261
+#: ../../docs/user_manual/style_library/style_manager.rst:263
 msgid ""
 "To create a custom color ramp, activate the Color ramp tab and click the "
 "|signPlus| :sup:`Add item` button. The button reveals a drop-down list to "
@@ -522,7 +534,7 @@ msgstr ""
 "カスタムカラーランプを作成するには、カラーランプタブをアクティブにして |signPlus| :sup:`アイテム追加` "
 "ボタンをクリックします。ボタンをクリックすると、カラーランプのタイプを選ぶドロップダウンリストが表示されます："
 
-#: ../../docs/user_manual/style_library/style_manager.rst:265
+#: ../../docs/user_manual/style_library/style_manager.rst:267
 msgid ""
 ":guilabel:`Gradient`: given a start and end colors, generate a color ramp "
 "which can be **continuous** or **discrete**. With double-clicking the ramp "
@@ -531,17 +543,17 @@ msgstr ""
 ":guilabel:`グラデーション` ：開始色と終了色を指定し、 **連続値** または **個別の** "
 "カラーランプを生成します。ランププレビューをダブルクリックすると、好きなだけ中間カラーストップを追加できます。"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:274
+#: ../../docs/user_manual/style_library/style_manager.rst:276
 msgid "Example of custom gradient color ramp with multiple stops"
 msgstr "複数のストップを持つカスタムグラデーションカラーランプの例"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:276
+#: ../../docs/user_manual/style_library/style_manager.rst:278
 msgid ""
 ":guilabel:`Color presets`: allows to create a color ramp consisting of a "
 "list of colors selected by the user;"
 msgstr ":guilabel:`カラープリセット` ：ユーザーが選択した色のリストで構成されるカラーランプを作成します。"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:278
+#: ../../docs/user_manual/style_library/style_manager.rst:280
 msgid ""
 ":guilabel:`Random`: creates a random set of colors based on range of values "
 "for :guilabel:`Hue`, :guilabel:`Saturation`, :guilabel:`Value` and "
@@ -550,7 +562,7 @@ msgstr ""
 ":guilabel:`ランダム` ： :guilabel:`色相` 、 :guilabel:`彩度` 、 :guilabel:`値` の範囲と、 "
 ":guilabel:`不透明度` と色の数（ :guilabel:`分類数` ）に基づいてランダムな色のセットを作成します。"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:281
+#: ../../docs/user_manual/style_library/style_manager.rst:283
 msgid ""
 ":guilabel:`Catalog: ColorBrewer`: a set of predefined discrete color "
 "gradients you can customize the number of colors in the ramp;"
@@ -558,7 +570,7 @@ msgstr ""
 ":guilabel:`カタログ: ColorBrewer` "
 "：事前に定義された離散的なカラーグラデーションのセットで、カラーランプの色数をカスタマイズできます。"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:283
+#: ../../docs/user_manual/style_library/style_manager.rst:285
 msgid ""
 "or :guilabel:`Catalog: cpt-city`: an access to a whole catalog of color "
 "gradients to locally :guilabel:`save as standard gradient`. The cpt-city "
@@ -568,15 +580,15 @@ msgstr ""
 "としてローカルに保存するためのカラーグラデーションのカタログ全体へのアクセスです。cpt-city "
 "オプションは、追加設定の必要のないものも含め、何百ものテーマがある新しいダイアログを開きます。"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:292
+#: ../../docs/user_manual/style_library/style_manager.rst:294
 msgid "cpt-city dialog with hundreds of color ramps"
 msgstr "何百ものカラーランプがあるcpt-city ダイアログ"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:294
+#: ../../docs/user_manual/style_library/style_manager.rst:296
 msgid "**Easily adjust the color stops of the gradient color ramp**"
 msgstr "**グラデーションカラーランプのカラーストップを簡単に調整する**"
 
-#: ../../docs/user_manual/style_library/style_manager.rst:296
+#: ../../docs/user_manual/style_library/style_manager.rst:298
 msgid ""
 "Double-clicking the ramp preview or drag-and-drop a color from the color "
 "spot onto the ramp preview adds a new color stop. Each color stop can be "
