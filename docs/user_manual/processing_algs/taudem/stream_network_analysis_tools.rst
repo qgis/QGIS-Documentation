@@ -12,6 +12,12 @@ Stream Network Analysis
 Connect down
 ------------
 
+For each zone in a raster entered (e.g. HUC converted to grid) it identifies
+the point with largest AreaD8. This is taken to be the outlet. A OGR file is created.
+Using flow directions each outlet is moved downflow a specified number of
+grid cells which is user controllable (Default is 1). The ID of the location
+the point has moved to is taken as iddown. Two OGR files are created one with
+the initial points and one with the moved points. Both contain id, iddown and AreaD8.
 
 Parameters
 ..........
@@ -27,30 +33,26 @@ Parameters
    * - **D8 flow directions**
      -
      - [raster]
-     - A grid of D8 flow directions which are defined, for each cell, as the
-       direction of the one of its eight adjacent or diagonal neighbors with the
-       steepest downward slope. This grid can be obtained as the output of the
-       **"D8 Flow Directions"** tool.
-
+     - A grid of flow directions that are encoded using the D8 method where all
+       flow from a cells goes to a single neighboring cell in the direction of
+       steepest descent
    * - **D8 contribution area**
      -
      - [raster]
-     -
+     - A grid giving the contributing area value in terms of the number of grid
+       cells (or the summation of weights) for each cell taken as its own
+       contribution plus the contribution from upslope neighbors that drain in
+       to it using the D8 algorithm.
+       This is usually the output of the **"D8 Contributing Area"** tool.
    * - **Watershed**
      -
      - [raster]
-     -
+     - Watershed grid delineated from gage watershed function or streamreachwatershed function.
+       Other watershed (e.g. HUC) raster also can be used as watershed grid.
    * - **Grid cells move to downstream**
      -
      - [number]
-     -
-   * - **Outlets**
-
-       Optional
-     -
-     - [vector: point]
-     - A point shape file defining outlets of interest. If this input file is used,
-       only the area upslope of these outlets will be evaluated by the tool.
+     - Number of grid cells move to downstream based on flow directions.
 
 Outputs
 .......
@@ -63,11 +65,16 @@ Outputs
      - Name
      - Type
      - Description
-
-   * - **Extreme Upslope Values Grid**
+   * - **Outlets**
      -
-     - [raster]
-     - A grid of the maximum/minimum upslope values.
+     - [vector: point]
+     -  A point OGR file where each point is created from watershed grid having the largest
+        contributing area for each zone.
+   * - **Moved Outlets**
+     -
+     - [vector: point]
+     - A point OGR file defining moved outlets of interest. where each outlet is moved
+       downflow a specified number of grid cells using flow directions.
 
 Python code
 ...........
@@ -528,6 +535,34 @@ See also
 Peuker Douglas stream
 ---------------------
 
+Combines the functionality of the "Peuker Douglas", "D8 Contributing Area",
+"Stream Drop Analysis" and "Stream Definition by Threshold" tools in order
+to generate a stream indicator grid (1,0) where the streams are located using
+a DEM curvature-based method. With this method, the DEM is first smoothed by
+a kernel with weights at the center, sides, and diagonals.
+The Peuker and Douglas (1975) method (also explained in Band, 1986), is then used
+to identify upwardly curving grid cells. This technique flags the entire grid,
+then examines in a single pass each quadrant of 4 grid cells, and unflags the highest.
+The remaining flagged cells are deemed 'upwardly curved', and when viewed,
+resemble a channel network. This proto-channel network sometimes lacks connectivity,
+and/or requires thinning, issues that were discussed in detail by Band (1986).
+The thinning and connecting of these grid cells is achieved here by computing the D8
+contributing area using only these upwardly curving cells. An accumulation threshold
+on the number of these cells is then used to map the channel network where
+this threshold is optionally set by the user, or determined via drop analysis.
+
+If drop analysis is used, then instead of providing a value for the accumulation threshold,
+the accumulation threshold value is determined by searching the range between
+the Drop Analysis Parameters "Lowest" and "Highest", using the number of steps in the parameter "Number".
+For the science behind drop analysis, see Tarboton, et al. (1991, 1992), and Tarboton and Ames (2001).
+The value of accumulation threshold that is selected is the smallest value
+where the absolute value of the t-statistic is less than 2.
+This is written to the drop analysis table text file. Drop analysis is only possible
+when outlets have been specified, because if an entire grid domain is analyzed,
+as the threshold varies, shorter streams draining off the edge may not meet the threshold criterion
+and be excluded from the analysis. This makes defining drainage density problematic
+and it is somewhat inconsistent to compare statistics evaluated over differing domains.
+
 Parameters
 ..........
 
@@ -863,6 +898,17 @@ Python code
 
 Stream definition with drop analysis
 ------------------------------------
+
+Combines the function of the "Stream Drop Analysis" tool and the "Stream Definition by Threshold" tools.
+It applies a series of thresholds (determined from the input parameters) to
+the input accumulated stream source grid (``ssa``) grid and outputs the results
+in the stream drop statistics table (``drp.txt``). Then it outputs a stream raster grid,
+which is an indicator (1,0) grid of stream cells. Stream cells are defined as those cells
+where the accumulated stream source value is >= the optimal threshold as determined
+from the stream drop statistics.
+There is an option to include a mask input to replicate the functionality for using
+the ``*sca`` file as an edge contamination mask.
+The threshold logic should be: ``src = ((ssa >= thresh) & (mask >=0)) ? 1:0``
 
 Parameters
 ..........
