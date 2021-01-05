@@ -8,7 +8,7 @@ Integration with third parties
       :local:
       :depth: 3
 
-QGIS server provides standard OGC web services like `WMS, WFS, etc. <https://www.ogc.org/docs/is>`_ thus it can used by a wide variety of end user tools.
+QGIS Server provides standard OGC web services like `WMS, WFS, etc. <https://www.ogc.org/docs/is>`_ thus it can be used by a wide variety of end user tools.
 
 Integration with QGIS Desktop
 =============================
@@ -21,7 +21,7 @@ Furthermore, dedicated update processes must be established to refresh a project
 Integration with MapProxy
 =========================
 
-`MapProxy <https://mapproxy.org/>`_ is tile cache server and as it can read and serve any WMS/WMTS map server, it can be directly connected to QGIS server web services and improve end user experience.
+`MapProxy <https://mapproxy.org/>`_ is a tile cache server and as it can read and serve any WMS/WMTS map server, it can be directly connected to QGIS server web services and improve end user experience.
 
 
 Integration with QWC2

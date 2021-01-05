@@ -17,9 +17,9 @@ Comparison matrix
    :stub-columns: 1
 
    * - Features
-     - QGIS server
-     - Geoserver
-     - ArcGis server
+     - QGIS Server
+     - GeoServer
+     - ArcGIS Server
        
    * - Since
      - 2015
@@ -34,7 +34,7 @@ Comparison matrix
    * - Commercial support
      - Multiple companies
      - Multiple companies
-     - ESRI and its vendor network
+     - ESRI and its vendors network
 
    * - Technology
      - C++/python
@@ -77,9 +77,9 @@ Comparison matrix
    :stub-columns: 1
 
    * - OGC standards
-     - QGIS server
-     - Geoserver
-     - ArcGis server
+     - QGIS Server
+     - GeoServer
+     - ArcGIS Server
        
    * - WMS
      - 1.3.0 - 1.1.1
