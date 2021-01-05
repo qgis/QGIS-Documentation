@@ -1053,7 +1053,7 @@ to find out currently available renderers:
 
 .. testoutput:: vectors
 
-    ['nullSymbol', 'singleSymbol', 'categorizedSymbol', 'graduatedSymbol', 'RuleRenderer', 'pointDisplacement', 'pointCluster', 'invertedPolygonRenderer', 'heatmapRenderer', '25dRenderer']
+    ['nullSymbol', 'singleSymbol', 'categorizedSymbol', 'graduatedSymbol', 'RuleRenderer', 'pointDisplacement', 'pointCluster', 'mergedFeatureRenderer', 'invertedPolygonRenderer', 'heatmapRenderer', '25dRenderer']
 
 It is possible to obtain a dump of a renderer contents in text form --- can be
 useful for debugging
