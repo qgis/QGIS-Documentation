@@ -35,13 +35,13 @@ choose a title for the new layout.
 
 To demonstrate how to create a map please follow the next instructions.
 
-#. On the left side, select the |addMap| :sup:`Add new map` toolbar button
+#. On the left side, select the |addMap| :sup:`Add map` toolbar button
    and draw a rectangle on the canvas holding down the left mouse button.
    Inside the drawn rectangle the QGIS map view to the canvas.
-#. Select the |scaleBar| :sup:`Add new scalebar` toolbar button and click
+#. Select the |scaleBar| :sup:`Add scalebar` toolbar button and click
    with the left mouse button on the print layout canvas. A scalebar will be
    added to the canvas.
-#. Select the |addLegend| :sup:`Add new legend` toolbar button and draw a
+#. Select the |addLegend| :sup:`Add legend` toolbar button and draw a
    rectangle on the canvas holding down the left mouse button.
    Inside the drawn rectangle the legend will be drawn.
 #. Select the |select| :sup:`Select/Move item` icon to select the map on
