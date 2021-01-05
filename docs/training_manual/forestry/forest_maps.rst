@@ -70,10 +70,10 @@ You need to activate the use of the grid:
 * Notice that options for using :guilabel:`guides` are checked by default, which
   allows you to see red guiding lines when you are moving elements in the layout.
 
-Now you can start to add elements to your map canvas. Add first a map element so
-you can review how it looks as you will be making changes in the layers symbology:
+Now you can start to add elements to your layout. Add first a map element so
+you can review how the map canvas looks as you will be making changes in the layers symbology:
 
-* Click on the :guilabel:`Add New Map` button: |addMap|.
+* Click on the |addMap| :sup:`Add Map` button.
 * Click and drag a box on the canvas so that the map occupies most of it.
 
 .. figure:: img/composer_1.png
