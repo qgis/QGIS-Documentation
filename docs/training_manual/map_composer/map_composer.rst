@@ -66,7 +66,7 @@ Ensure that yours is as well.
    page is still blank.
    It clearly lacks a map. Let's fix that!
 
-#. Click on the |addMap| :sup:`Add New Map` button. 
+#. Click on the |addMap| :sup:`Add Map` button.
 
    With this tool activated, you will be able to place a map on the
    page.
