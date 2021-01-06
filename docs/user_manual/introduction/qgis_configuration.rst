@@ -572,7 +572,9 @@ This tab offers some options regarding the behavior of the :ref:`Identify tool <
 
 **Coordinate and Bearing Display**
 
-* Define :guilabel:`Default bearing format for new projects`
+* Define :guilabel:`Default bearing format for new projects`:
+  used to display the mouse coordinate in the status bar when panning
+  the map canvas. It can be overridden in the project properties dialog.
 
 **Panning and zooming**
 
