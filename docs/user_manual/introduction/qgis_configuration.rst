@@ -1501,7 +1501,7 @@ Temporal Properties
 -------------------
 
 The tab :guilabel:`Temporal` is used to set the temporal range of your project, 
-either by using manual input or by calculating it from the current projects temporal layers.
+either by using manual input or by calculating it from the current project temporal layers.
 
 .. _figure_temporal_tab:
 
