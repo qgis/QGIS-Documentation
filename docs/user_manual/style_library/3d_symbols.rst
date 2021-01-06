@@ -97,10 +97,10 @@ Polygon Layers
   extrusion you can use the |dataDefined| button in order to use the values of
   the vector layer and have different results for each polygon:
 
-   .. figure:: img/3d_extrusion.png
-      :align: center
+  .. figure:: img/3d_extrusion.png
+     :align: center
 
-      Data Defined Extrusion
+     Data Defined Extrusion
 
 * The :guilabel:`Altitude clamping`, :guilabel:`Altitude binding` can be defined
   as explained above.
