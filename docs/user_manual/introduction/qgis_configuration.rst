@@ -1495,8 +1495,8 @@ available in section :ref:`Creatingwmsfromproject` and subsequent.
 
    QGIS Server settings tab
 
-QGIS Temporal Properties
-------------------------
+Temporal Properties
+-------------------
 
 The tab :guilabel:`Temporal` is used to set the temporal range of your project, 
 either by using manual input or by calculating it from the current projects temporal layers.
