@@ -526,6 +526,7 @@ These properties let you set:
     (see :ref:`vector_style_menu` for more information).
   * the :guilabel:`WMS getLegendGraphic Resolution`
   * :guilabel:`Minimum` and :guilabel:`Maximum legend symbol size`
+    to control symbol size display in the :guilabel:`Layers` panel
 * the :guilabel:`Delay` in milliseconds of layers :ref:`map tips <maptips>` display
 
 .. index:: Map tools
