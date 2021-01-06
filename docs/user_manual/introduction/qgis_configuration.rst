@@ -525,6 +525,8 @@ These properties let you set:
     panel, e.g. when applying a categorized or rule-based renderer
     (see :ref:`vector_style_menu` for more information).
   * the :guilabel:`WMS getLegendGraphic Resolution`
+  * :guilabel:`Minimum` and :guilabel:`Maximum legend symbol size`
+    to control symbol size display in the :guilabel:`Layers` panel
 * the :guilabel:`Delay` in milliseconds of layers :ref:`map tips <maptips>` display
 
 .. index:: Map tools
@@ -568,6 +570,12 @@ This tab offers some options regarding the behavior of the :ref:`Identify tool <
 * :guilabel:`Preferred angle units`: options are 'Degrees', 'Radians',
   'Gon/gradians', 'Minutes of arc', 'Seconds of arc', 'Turns/revolutions',
   milliradians (SI definition) or mil (NATO/military definition)
+
+**Coordinate and Bearing Display**
+
+* Define :guilabel:`Default bearing format for new projects`:
+  used to display the mouse coordinate in the status bar when panning
+  the map canvas. It can be overridden in the project properties dialog.
 
 **Panning and zooming**
 
@@ -1258,7 +1266,7 @@ frame lets you control these parameters. You can indeed choose:
   * Identify tool derived length, perimeter and area values
   * Default unit shown in measure dialog
 
-The :guilabel:`Coordinate display` allows you to choose and customize the format of units
+The :guilabel:`Coordinate and Bearing display` allows you to choose and customize the bearing format and the format of units
 to use to display the mouse coordinate in the status bar and the derived coordinates
 shown via the identify tool.
 
@@ -1489,6 +1497,19 @@ available in section :ref:`Creatingwmsfromproject` and subsequent.
    :align: center
 
    QGIS Server settings tab
+
+Temporal Properties
+-------------------
+
+The tab :guilabel:`Temporal` is used to set the temporal range of your project, 
+either by using manual input or by calculating it from the current project temporal layers.
+
+.. _figure_temporal_tab:
+
+   figure:: img/project_temporal.png
+   :align: center
+
+   QGIS Temporal tab
 
 .. index:: Customization
 .. _sec_customization:
