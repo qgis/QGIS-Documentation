@@ -1505,7 +1505,7 @@ either by using manual input or by calculating it from the current project tempo
 
 .. _figure_temporal_tab:
 
--- figure:: img/project_temporal.png
+   figure:: img/project_temporal.png
    :align: center
 
    QGIS Temporal tab
