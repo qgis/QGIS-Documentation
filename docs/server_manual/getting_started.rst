@@ -704,14 +704,14 @@ If you obtain the next image, then QGIS Server is running correctly:
 
   Server response to a basic GetMap request
 
-Note that you may define **PROJECT_FILE** environment variable to use a project
+Note that you may define **QGIS_PROJECT_FILE** environment variable to use a project
 by default instead of giving a **MAP** parameter (see :ref:`qgis-server-envvar`).
 
 For example with spawn-fcgi:
 
 .. code-block:: bash
 
- export PROJECT_FILE=/home/qgis/projects/world.qgs
+ export QGIS_PROJECT_FILE=/home/qgis/projects/world.qgs
  spawn-fcgi -f /usr/lib/bin/cgi-bin/qgis_mapserv.fcgi \
             -s /var/run/qgisserver.socket \
             -U www-data -G www-data -n
