@@ -60,7 +60,7 @@ This is a good thing, it tells you we're on the right track as the server is
 saying that we haven't asked for a supported service. We'll see later on
 how to make WMS requests.
 
-|hard| |FA| HTTP Server Configuration
+|hard| HTTP Server Configuration
 -------------------------------------------------------------------------------
 
 In order to access on the installed QGIS server from an Internet Browser we need to use an HTTP server.
