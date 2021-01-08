@@ -154,8 +154,9 @@ called :file:`qgis.demo.conf`, with this content:
  </VirtualHost>
 
 Further readings:
-* `QGIS server logging <https://docs.qgis.org/latest/en/docs/server_manual/config.html#logging>`_
-* `pg-service-file in QGIS server <https://docs.qgis.org/latest/en/docs/user_manual/managing_data_source/opening_data.html?highlight=pg_service#pg-service-file>`_
+
+* :ref:`QGIS server logging <qgis-server-logging>`
+* :ref:`pg-service-file in QGIS Server <pg-service-file>`
 	
 You can do the above in a linux Desktop system by pasting and saving the above
 configuration after doing ``nano /etc/apache2/sites-available/qgis.demo.conf``.
