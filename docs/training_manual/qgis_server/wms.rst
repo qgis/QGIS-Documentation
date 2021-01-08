@@ -1,10 +1,11 @@
 |LS| Serving WMS
 ===============================================================================
 
-Let's download the `Training demo data <https://github.com/qgis/QGIS-Training-Data/archive/v2.0.zip>`_
-and unzip the files in the :file:`qgis-server-tutorial-data` subdirectory to
-any directory. We recommend that you simply create a :file:`/home/qgis/projects`
-directory and put your files there in order to avoid possible permissions problems.
+The data used for this exercise are available in the :file:`qgis-server-tutorial-data`
+subdirectory of the :ref:`training data <data_downloadlink>` you downloaded.
+For convenience and to avoid possible permissions problems, we will assume
+that these files are stored in :file:`/home/qgis/projects` directory.
+Hence, adapt the following instructions to your path.
 
 The demo data contains a QGIS project named :file:`world.qgs` that is already
 prepared to be served with QGIS Server.
