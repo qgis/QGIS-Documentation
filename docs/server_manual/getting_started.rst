@@ -155,14 +155,18 @@ called :file:`qgis.demo.conf`, with this content:
 
 Further readings:
 
-* :ref:`QGIS server logging <qgis-server-logging>`
+* :ref:`QGIS Server logging <qgis-server-logging>`
 * :ref:`pg-service-file in QGIS Server <pg-service-file>`
 	
 You can do the above in a linux Desktop system by pasting and saving the above
-configuration after doing ``nano /etc/apache2/sites-available/qgis.demo.conf``.
+configuration after doing:
 
-.. note:: See some of the configuration options are explained in the Server
- :ref:`server_env_variables` section.
+.. code-block:: bash
+
+  nano /etc/apache2/sites-available/qgis.demo.conf
+
+.. note:: Some of the configuration options are explained in the Server
+ :ref:`environment variables <server_env_variables>` section.
 
 Let's now create the directories that will store the QGIS Server logs and
 the authentication database:
@@ -178,7 +182,7 @@ the authentication database:
 
  ``www-data`` is the Apache user on Debian based systems and we need Apache to have access to
  those locations or files.
- The ``chown www-data...`` commands changes the owner of the respective directories and files
+ The ``chown www-data...`` commands change the owner of the respective directories and files
  to ``www-data``.
 
 We can now enable the `virtual host <https://httpd.apache.org/docs/2.4/vhosts>`_,
@@ -205,7 +209,7 @@ Replace ``127.0.0.1`` with the IP of your server.
 .. note::
 
    Remember that both the :file:`myhost.conf` and :file:`/etc/hosts` files should
-   be configured for our setup to work.
+   be configured for your setup to work.
    You can also test the access to your QGIS Server from other clients on the
    network (e.g. Windows or macOS machines) by going to their :file:`/etc/hosts`
    file and point the ``myhost`` name to whatever IP the server machine has on the 
