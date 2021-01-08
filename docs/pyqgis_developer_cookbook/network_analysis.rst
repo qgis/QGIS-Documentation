@@ -71,7 +71,8 @@ In the latter case the edge will be split and a new vertex added.
 Vector layer attributes and length of an edge can be used as the properties
 of an edge.
 
-Converting from a vector layer to the graph is done using the `Builder <https://en.wikipedia.org/wiki/Builder_pattern>`_
+Converting from a vector layer to the graph is done using the
+`Builder <https://en.wikipedia.org/wiki/Builder_pattern>`_
 programming pattern. A graph is constructed using a so-called Director.
 There is only one Director for now: :api:`QgsVectorLayerDirector
 <classQgsVectorLayerDirector.html>`.
@@ -79,9 +80,9 @@ The director sets the basic settings that will be used to construct a graph
 from a line vector layer, used by the builder to create the graph. Currently, as
 in the case with the director, only one builder exists: :class:`QgsGraphBuilder <qgis.analysis.QgsGraphBuilder>`,
 that creates :class:`QgsGraph <qgis.analysis.QgsGraph>` objects.
-You may want to implement your own builders that will build a graphs compatible
+You may want to implement your own builders that will build a graph compatible
 with such libraries as `BGL <https://www.boost.org/doc/libs/1_48_0/libs/graph/doc/index.html>`_
-or `NetworkX <https://networkx.lanl.gov/>`_.
+or `NetworkX <https://networkx.org/>`_.
 
 To calculate edge properties the programming pattern `strategy <https://en.wikipedia.org/wiki/Strategy_pattern>`_
 is used. For now only :api:`QgsNetworkDistanceStrategy <classQgsNetworkDistanceStrategy.html>`

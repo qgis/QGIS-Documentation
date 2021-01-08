@@ -17,12 +17,10 @@ Forestry Sample Data
 -------------------------------------------------------------------------------
 
 .. note:: The sample data used in this module is part of the training manual
- data set and can be `downloaded here  <https://qgis.org/downloads/data/training_manual_exercise_data.zip>`_.
- Download the zip file and extract the :file:`forestry\\` folder into your
- :file:`exercise_data\\` folder.
+ data set and is available in the :file:`exercise_data\\forestry\\` folder.
 
 The forestry related sample data (forestry map, forest data), has been provided
-by the `EVO-HAMK forestry school <https://www.hamk.fi/tietoa-hamkista/kartat-ja-toimipaikat/Sivut/evo.aspx>`_.
+by the `EVO-HAMK forestry school <https://www.hamk.fi/campuses-and-maps/evo/?lang=en>`_.
 The datasets have been modified to adapt to the lessons needs.
 
 The general sample data (aerial images, LiDAR data, basic maps) has been
