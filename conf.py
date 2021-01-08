@@ -442,6 +442,18 @@ class BetterOutputChecker(doctest.OutputChecker):
 
 ext_doctest.SphinxDocTestRunner = BetterDocTestRunner
 
+# -- External Link check settings --------------------------------
+
+# A list of regular expressions that match URIs that should not be checked
+# when doing a linkcheck build.
+linkcheck_ignore = [r'http://localhost(:|/)?',
+                    r'http://qgis(platform)?\.demo',
+                    r'http://myhost/'
+                   ]
+
+# The number of times the linkcheck builder will attempt to check a URL
+# before declaring it broken. Defaults to 1 attempt.
+linkcheck_retries = 2
 
 # -- Redirection settings --------------------------------
 
