@@ -183,6 +183,8 @@ Finally we are adding the imports and modifying the ``__init__`` function:
         def unload(self):
             iface.unregisterOptionsWidgetFactory(self.options_factory)
 
-.. tip:: You can apply a similar logic to add the plugin custom option to the layer 
+.. tip:: **Add custom tabs to a vector layer properties dialog**
+
+    You can apply a similar logic to add the plugin custom option to the layer
     properties dialog using the classes :class:`QgsMapLayerConfigWidgetFactory <qgis.gui.QgsMapLayerConfigWidgetFactory>` 
     and :class:`QgsMapLayerConfigWidget <qgis.gui.QgsMapLayerConfigWidget>`.
