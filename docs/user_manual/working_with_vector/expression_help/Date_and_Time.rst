@@ -524,7 +524,7 @@ Calculates the length in seconds of an interval.
 to_date
 .......
 
-Converts a string into a date object. An optional format string can be provided to parse the string; see `QDate::fromString <https://doc.qt.io/qt-5/qdate.html#fromString-1>`_ for additional documentation on the format.
+Converts a string into a date object. An optional format string can be provided to parse the string; see `QDate::fromString <https://doc.qt.io/qt-5/qdate.html#fromString-2>`_ for additional documentation on the format.
 
 .. list-table::
    :widths: 15 85
@@ -552,7 +552,7 @@ Converts a string into a date object. An optional format string can be provided 
 to_datetime
 ...........
 
-Converts a string into a datetime object. An optional format string can be provided to parse the string; see `QDateTime::fromString <https://doc.qt.io/qt-5/qdatetime.html#fromString-1>`_ for additional documentation on the format.
+Converts a string into a datetime object. An optional format string can be provided to parse the string; see `QDate::fromString <https://doc.qt.io/qt-5/qdate.html#fromString-2>`_ and `QTime::fromString <https://doc.qt.io/qt-5/qtime.html#fromString-1>`_ for additional documentation on the format.
 
 .. list-table::
    :widths: 15 85

@@ -56,7 +56,7 @@ def sphynxify_html(text, base_indent=0):
     text = re.sub(r"<\/(thead|table)>", '', text)
 
     # Format <a> links
-    text = re.sub(r"<a href='(.*)'>(.*)</a>", r"`\2 <\1>`_", text)
+    text = re.sub(r"<a href='(.*?)'>(.*?)</a>", r"`\2 <\1>`_", text)
 
     return text
 
