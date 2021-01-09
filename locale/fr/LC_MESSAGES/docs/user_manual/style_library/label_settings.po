@@ -1,24 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Francis Gasc <francisgasc@gmail.com>, 2020
-# Sant-anna <delazj@gmail.com>, 2020
+# Harrissou Sant-anna, 2020
+# Francis Gasc <francisgasc@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:27+0000\n"
-"Last-Translator: Sant-anna <delazj@gmail.com>, 2020\n"
+"POT-Creation-Date: 2021-01-02 09:58+0000\n"
+"PO-Revision-Date: 2020-12-24 12:03+0000\n"
+"Last-Translator: Francis Gasc <francisgasc@gmail.com>, 2021\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
 "Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
@@ -28,98 +30,151 @@ msgstr "Paramétrer une étiquette"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:12
 msgid ""
-"Labels are textual information you can display on vector features. They add "
-"details you could not necessarily represent using symbols."
+"Labels are textual information you can display on vector features or maps. "
+"They add details you could not necessarily represent using symbols. Two "
+"types of text-related items are available in QGIS:"
 msgstr ""
 "Les étiquettes sont des informations textuelles que vous pouvez afficher sur"
-" les entités vecteur. Ils ajoutent des détails que vous ne pourriez pas "
-"nécessairement représenter à l'aide de symboles."
+" des éléments vecteur ou des cartes. Ils ajoutent des détails que vous ne "
+"pourriez pas nécessairement représenter à l'aide de symboles. Deux types "
+"d'éléments textuels sont disponibles dans QGIS :"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:15
+#: ../../docs/user_manual/style_library/label_settings.rst:16
 msgid ""
-"The :guilabel:`Style Manager` dialog allows you to create a set of labels or"
-" text formats (ie the appearance of the text, including font, size, colors, "
-"shadow, background...). Each of these items could later be applied to layers"
-" in the |labeling| :guilabel:`Labels` tab of the vector :guilabel:`Layer "
-"Properties` dialog or :guilabel:`Layer Styling` panel or using the "
-"|labeling| :sup:`Layer Labeling Options` button of the **Labels toolbar**. "
-"You can also directly configure them in the abovementioned dialogs."
+":guilabel:`Text Format`: defines the appearance of the text, including "
+":ref:`font, size, colors <labels_text>`, :ref:`shadow <labels_shadow>`, "
+":ref:`background <labels_background>`, :ref:`buffer <labels_buffer>`, ..."
 msgstr ""
-"La boîte de dialogue :guilabel:`Gestionnaire de styles` vous permet de créer"
-" un ensemble d'étiquettes ou de formats de texte (c'est-à-dire l'apparence "
-"du texte, y compris la police, la taille, les couleurs, l'ombre, l'arrière-"
-"plan ...). Chacun de ces éléments pourraient être appliqués ultérieurement "
-"aux couches dans l 'onglet |labeling| :guilabel:`Etiquettes` du vecteur "
-":guilabel:`Propriétés de la couche` ou le panneau :guilabel:`Style de "
-"couche` ou en utilisant le bouton |labeling| :sup:`Options d'étiquetage des "
-"couches` de la barre d'outils **Etiquettes**. Vous pouvez également les "
-"configurer directement dans les boîtes de dialogue susmentionnées."
+":guilabel:`Formatage texte` : définit l'apparence du texte, incluant "
+":ref:`font, size, colors <labels_text>`, :ref:`shadow <labels_shadow>`, "
+":ref:`background <labels_background>`, :ref:`buffer <labels_buffer>`, ..."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:20
+msgid ""
+"They can be used to render texts over the map (layout/map title, "
+"decorations, scale bar, ...), usually through the :ref:`font "
+"<font_selector>` widget."
+msgstr ""
+"Ils peuvent être utilisés pour rendre des textes sur la carte (mise en "
+"page/titre de la carte, décorations, barre d'échelle, ...), généralement par"
+" le biais du widget :ref:`font <font_selector>`."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:24
+msgid "To create a :guilabel:`Text Format` item:"
+msgstr "Pour créer un élément :guilabel:`Format de texte` :"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:26
-msgid ""
-"The :guilabel:`Label Settings` dialog allows you to configure smart labeling"
-" for vector layers. Setting a label includes configuring the :ref:`text "
-"format <text_format>`, and how the label relates with the features or other "
-"labels (through :ref:`placement <labels_placement>`, :ref:`rendering "
-"<labels_rendering>` and :ref:`callout <labels_callouts>`)."
-msgstr ""
-"La boîte de dialogue :guilabel:`Paramètres d'étiquette` vous permet de "
-"configurer l'étiquetage intelligent pour les couches vecteur. La définition "
-"d'une étiquette comprend la configuration du :ref:`format de texte "
-"<text_format>`, et la façon dont l'étiquette est liée aux entités ou aux "
-"autres étiquettes (via la :ref:`position<labels_placement>`, le "
-":ref:`rendu<labels_rendering>` et les :ref:`connecteurs<labels_callouts>`)."
-
-#: ../../docs/user_manual/style_library/label_settings.rst:35
-msgid "Formatting the label text"
-msgstr "Formatage du texte de l'étiquette"
-
-#: ../../docs/user_manual/style_library/label_settings.rst:37
-msgid "To create text formats, you can:"
-msgstr "Pour créer des formats de texte, vous pouvez:"
-
-#: ../../docs/user_manual/style_library/label_settings.rst:39
+#: ../../docs/user_manual/style_library/label_settings.rst:52
 msgid "Open the |styleManager| :guilabel:`Style Manager` dialog"
 msgstr ""
 "Ouvrir la boîte de dialogue |styleManager| :guilabel:`Gestionnaire de "
 "styles`"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:40
+#: ../../docs/user_manual/style_library/label_settings.rst:27
 msgid "Activate the :guilabel:`Text format` tab"
 msgstr "Activez l'onglet :guilabel:`text format`"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:47
+#: ../../docs/user_manual/style_library/label_settings.rst:34
 msgid "Text formats in Style Manager dialog"
 msgstr "Formats de texte dans la boîte de dialogue Gestionnaire de styles"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:49
+#: ../../docs/user_manual/style_library/label_settings.rst:36
 msgid ""
-"Press the |signPlus| :sup:`Add item` button. The :guilabel:`Text Settings` "
-"dialog opens with the following properties. As usual, these properties are "
-":ref:`data-definable <data_defined>`."
+"Press the |signPlus| :sup:`Add item` button. The :guilabel:`Text Format` "
+"dialog opens for :ref:`configuration <text_format>`. As usual, these "
+"properties are :ref:`data-definable <data_defined>`."
 msgstr ""
 "Appuyez sur le bouton |signPlus| :sup:`Ajouter un élément`. La boîte de "
-"dialogue :guilabel:`Paramètres de texte` s'ouvre avec les propriétés "
-"suivantes. Comme d'habitude, ces propriétés sont :ref:`définissables via des"
-" données <data_defined>`."
+"dialogue :guilabel:`Format texte` s'ouvre pour :ref:`configuration "
+"<text_format>`. Comme d'habitude, ces propriétés sont :ref:`data-definable "
+"<data_defined>`."
 
-#: ../../docs/user_manual/style_library/label_settings.rst:57
+#: ../../docs/user_manual/style_library/label_settings.rst:40
+msgid ""
+":guilabel:`Label Settings`: extend the text format settings with properties "
+"related to the location or the interaction with other texts or features "
+"(:ref:`callouts <labels_callouts>`, :ref:`placement <labels_placement>`, "
+":ref:`overlay, scale visibility <labels_rendering>`, mask ...)."
+msgstr ""
+":guilabel:`Paramétrage étiquettes` : étend les paramètres du format de texte"
+" avec des propriétés liées à l'emplacement ou à l'interaction avec d'autres "
+"textes ou entités (:ref:`callouts <labels_callouts>`, :ref:`placement "
+"<labels_placement>`, :ref:`overlay, scale visibility <labels_rendering>`, "
+"mask ...)."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:45
+msgid ""
+"They are used to configure smart labelling for vector layers through the "
+"|labeling| :guilabel:`Labels` tab of the vector :guilabel:`Layer Properties`"
+" dialog or :guilabel:`Layer Styling` panel or using the |labeling| "
+":sup:`Layer Labeling Options` button of the :ref:`Label toolbar "
+"<label_toolbar>`."
+msgstr ""
+"Ils sont utilisés pour configurer l'étiquetage intelligent des couches "
+"vecteur par l'intermédiaire de l'onglet |labeling| :guilabel:`Etiquettes` du"
+" dialogue vecteur :guilabel:`Propriétés couche` ou du panneau "
+":guilabel:`Style couche` ou en utilisant le bouton |labeling| :sup:`Options "
+"d'étiquetage de la couche` de la :ref:`Label toolbar <label_toolbar>`."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:50
+msgid "To create a :guilabel:`Label Settings` item:"
+msgstr "Pour créer un élément :guilabel:`Paramétrage étiquettes` :"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:53
+msgid "Activate the :guilabel:`Label Settings` tab"
+msgstr "Activez l'onglet :guilabel:`Paramétrage étiquettes`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:60
+msgid "Label Settings in Style Manager dialog"
+msgstr "Paramètrage des étiquettes dans le dialogue du gestionnaire de style"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:62
+msgid ""
+"Press the |signPlus| :sup:`Add item` menu and select the entry corresponding"
+" to the geometry type of the features you want to label."
+msgstr ""
+"Appuyez sur le menu |signPlus| :sup:`Ajouter un élément` et sélectionnez "
+"l'entrée correspondant au type de géométrie des éléments que vous voulez "
+"étiqueter."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:65
+msgid ""
+"The :guilabel:`Label Settings` dialog opens with the following properties. "
+"As usual, these properties are :ref:`data-definable <data_defined>`."
+msgstr ""
+"La boîte de dialogue :guilabel:`Paramétrage des étiquettes` s'ouvre avec les"
+" propriétés suivantes. Comme d'habitude, ces propriétés sont :ref:`data-"
+"definable <data_defined>`."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:72
+msgid "Formatting the label text"
+msgstr "Formatage du texte de l'étiquette"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:74
+msgid ""
+"Most of the following properties are common to :guilabel:`Text Format` and "
+":guilabel:`Label Settings` items."
+msgstr ""
+"La plupart des propriétés suivantes sont communes aux éléments de "
+":guilabel:`Formatage de texte` et :guilabel:`Paramétrage des étiquettes`."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:80
 msgid "Text tab"
 msgstr "Onglet Texte"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:64
-msgid "Text settings - Text tab"
-msgstr "Paramètres de texte - onglet Texte"
+#: ../../docs/user_manual/style_library/label_settings.rst:87
+msgid "Labels settings - Text tab"
+msgstr "Paramètrage des étiquettes - Onglet Texte"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:66
+#: ../../docs/user_manual/style_library/label_settings.rst:89
 msgid "In the |text| :guilabel:`Text` tab, you can set:"
 msgstr "Dans l'onglet |text| :guilabel:`Texte`, vous pouvez définir:"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:68
+#: ../../docs/user_manual/style_library/label_settings.rst:91
 msgid "the :guilabel:`Font`, from the ones available on your machine"
 msgstr "la :guilabel:`Police`, parmi celles disponibles sur votre machine"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:69
+#: ../../docs/user_manual/style_library/label_settings.rst:92
 msgid ""
 "the :guilabel:`Style`: along with the common styles of the font, you can set"
 " whether the text should be underlined or striked through"
@@ -127,80 +182,105 @@ msgstr ""
 "le :guilabel:`Style`: avec les styles courants de la police, vous pouvez "
 "définir si le texte doit être souligné ou barré"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:71
+#: ../../docs/user_manual/style_library/label_settings.rst:94
 msgid "the :guilabel:`Size` in any :ref:`supported unit <unit_selector>`"
 msgstr ""
 "la :guilabel:`Taille` dans n'importe quel :ref:`supported unit "
 "<unit_selector>`"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:72
+#: ../../docs/user_manual/style_library/label_settings.rst:95
 msgid "the :guilabel:`Color`"
 msgstr "la :guilabel:`Couleur`"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:73
+#: ../../docs/user_manual/style_library/label_settings.rst:96
 msgid "and the :guilabel:`Opacity`."
 msgstr "et l' :guilabel:`Opacité`."
 
-#: ../../docs/user_manual/style_library/label_settings.rst:75
+#: ../../docs/user_manual/style_library/label_settings.rst:100
 msgid ""
-"At the bottom, a text formats list widget shows a filterable list of text "
-"formats stored within your :ref:`style manager database "
-"<vector_style_manager>`. This allows you to easily set text formats to match"
-" styles saved in the local style database, and also to add a new text format"
-" to the style database based on the current settings. Press the "
-":guilabel:`Save format...` button to store the current text format in the "
-":guilabel:`Style Manager`, providing a name and tag(s)."
+"At the bottom of the tab, a widget shows a filterable list of compatible "
+"items stored in your :ref:`style manager database <vector_style_manager>`. "
+"This allows you to easily configure the current text format or label setting"
+" based on an existing one, and also save a new item to the style database: "
+"Press the :guilabel:`Save format...` or :guilabel:`Save settings...` button "
+"and provide a name and tag(s)."
 msgstr ""
-"En bas, un widget de liste de formats de texte affiche une liste filtrable "
-"de formats de texte stockés dans la base de données de votre "
-":ref:`gestionnaire de style <vector_style_manager>`. Cela vous permet de "
-"définir facilement des formats de texte pour qu'ils correspondent aux styles"
-" enregistrés dans la base de données de styles locale, et également "
-"d'ajouter un nouveau format de texte à la base de données de styles en "
-"fonction des paramètres actuels. Appuyez sur le bouton "
-":guilabel:`Enregistrer le format...` pour enregistrer le format de texte "
-"actuel dans le :guilabel:`Gestionnaire de styles`, avec un nom et des "
-"balises."
+"En bas de l'onglet, un widget affiche une liste filtrable des éléments "
+"compatibles stockés dans votre base de données :ref:`style manager "
+"<vector_style_manager>`. Cela vous permet de configurer facilement le format"
+" de texte actuel ou le paramètre d'étiquette basé sur un format existant, et"
+" également d'enregistrer un nouvel élément dans la base de données de style "
+": Appuyez sur le bouton :guilabel:`Sauvegarder format...` ou "
+":guilabel:`Sauvegarder paramètres...` et donnez un nom et une ou plusieurs "
+"étiquettes."
 
-#: ../../docs/user_manual/style_library/label_settings.rst:82
+#: ../../docs/user_manual/style_library/label_settings.rst:107
 msgid ""
-"Likewise, a label settings list widget is shown when configuring labels, "
-"allowing you to pick from the |styleManager| :sup:`Style Manager` widget or "
-"to add new styles to it."
+"When configuring a :guilabel:`Label Settings` item, text format items are "
+"also available in this widget. Select one to quickly overwrite the current "
+":ref:`textual properties <text_format>` of the label. Likewise, you can "
+"create/overwrite a text format from there."
 msgstr ""
-"De même, un widget de liste de paramètres d'étiquette est affiché lors de la"
-" configuration des étiquettes, vous permettant de choisir dans le widget "
-"|styleManager| :sup:`Gestionnaire de styles` ou pour y ajouter de nouveaux "
-"styles."
+"Lors de la configuration d'un élément :guilabel:`Paramétrage des "
+"étiquettes`, des éléments au format texte sont également disponibles dans ce"
+" widget. Choisissez-en un pour écraser rapidement les propriétés de texte "
+":ref:`textual properties <text_format>`. De même, vous pouvez créer/écraser "
+"un format de texte à partir de là."
 
-#: ../../docs/user_manual/style_library/label_settings.rst:90
+#: ../../docs/user_manual/style_library/label_settings.rst:115
 msgid "Formatting tab"
 msgstr "Onglet Formatage"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:97
-msgid "Text settings - Formatting tab"
-msgstr "Paramètres de texte - Onglet Formatage"
+#: ../../docs/user_manual/style_library/label_settings.rst:122
+msgid "Label settings - Formatting tab"
+msgstr "Paramètrage des étiquettes - Onglet Formatage"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:99
+#: ../../docs/user_manual/style_library/label_settings.rst:124
 msgid "In the |labelformatting| :guilabel:`Formatting` tab, you can:"
 msgstr "Dans l'onglet |labelformatting| :guilabel:`Formatage`, vous pouvez:"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:101
+#: ../../docs/user_manual/style_library/label_settings.rst:126
 msgid ""
 "Use the :guilabel:`Type case` option to change the capitalization style of "
-"the text. You have the possibility to render the text as :guilabel:`All "
-"uppercase`, :guilabel:`All lowercase` or :guilabel:`Capitalize first "
-"letter`. Note that the last option modifies only the first letter of each "
-"word and leaves the other letters in the text untouched."
+"the text. You have the possibility to render the text as:"
 msgstr ""
-"Utilisez l'option :guilabel:`Type casse` pour changer le style de mise en "
-"majuscule du texte. Vous avez la possibilité de rendre le texte comme "
-":guilabel:`Tout en majuscule`, :guilabel:`Tout en minuscule` ou "
-":guilabel:`Mettre en majuscule la première lettre`. Notez que la dernière "
-"option modifie uniquement la première lettre de chaque mot et laisse les "
-"autres lettres du texte intactes."
+"Utilisez l'option :guilabel:`Type de casse` pour changer le style de "
+"capitalisation du texte. Vous avez la possibilité de rendre le texte comme :"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:106
+#: ../../docs/user_manual/style_library/label_settings.rst:129
+msgid ":guilabel:`No change`"
+msgstr ":guilabel:`Pas de changement`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:130
+msgid ":guilabel:`All uppercase`"
+msgstr ":guilabel:`Toutes en majuscules`."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:131
+msgid ":guilabel:`All lowercase`"
+msgstr ":guilabel:`Toutes en minuscules`."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:132
+msgid ""
+":guilabel:`Title case`: modifies the first letter of each word into capital,"
+" and turns the other letters into lower case if the original text is using a"
+" single type case. In case of mixed type cases in the text, the other "
+"letters are left untouched."
+msgstr ""
+":guilabel:`Casse de titre` : modifie la première lettre de chaque mot en "
+"majuscule, et transforme les autres lettres en minuscules si le texte "
+"original utilise une seule casse. En cas de casse mixte dans le texte, les "
+"autres lettres sont laissées intactes."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:136
+msgid ""
+":guilabel:`Force first letter to capital`: modifies the first letter of each"
+" word into capital and leaves the other letters in the text untouched."
+msgstr ""
+":guilabel:`Force la première lettre en majuscule` : modifie la première "
+"lettre de chaque mot en majuscule et laisse les autres lettres du texte "
+"intactes."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:139
 msgid ""
 "Under :guilabel:`Spacing`, change the space between words and between "
 "individual letters."
@@ -208,21 +288,24 @@ msgstr ""
 "Sous :guilabel:`Espacement`, changez l'espace entre les mots et entre les "
 "lettres individuelles."
 
-#: ../../docs/user_manual/style_library/label_settings.rst:108
+#: ../../docs/user_manual/style_library/label_settings.rst:141
 msgid "|checkbox| :guilabel:`Enable kerning` of the text font"
 msgstr "|checkbox| :guilabel:`Activer le crénelage` de la police de texte"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:109
+#: ../../docs/user_manual/style_library/label_settings.rst:142
 msgid ""
 "Set the :guilabel:`Text orientation` which can be :guilabel:`Horizontal` or "
 ":guilabel:`Vertical`. It can also be :guilabel:`Rotation-based` when setting"
-" a label."
+" a label (e.g., to properly label line features in :ref:`parallel "
+"<labels_line_placement>` placement mode)."
 msgstr ""
-"Définissez l' :guilabel:`orientation du texte` qui peut être "
-":guilabel:`Horizontal` ou :guilabel:`Vertical`. Il peut également s'agir de "
-":guilabel:`baser sur la rotation` lors de la définition d'une étiquette."
+"Définissez l'orientation du texte :guilabel:`Texte` qui peut être "
+":guilabel:`Horizontal` ou :guilabel:`Vertical`. Il peut également être "
+":guilabel:`Basé sur la rotation` lors de la définition d'une étiquette (par "
+"exemple, pour étiqueter correctement les entités d'une ligne en mode de "
+"placement :ref:`parallel <labels_line_placement>`)."
 
-#: ../../docs/user_manual/style_library/label_settings.rst:112
+#: ../../docs/user_manual/style_library/label_settings.rst:146
 msgid ""
 "Use the :guilabel:`Blend mode` option to determine how your labels will mix "
 "with the map features below them (more details at :ref:`blend-modes`)."
@@ -231,7 +314,7 @@ msgstr ""
 "étiquettes se mélangeront avec les caractéristiques de la carte en dessous "
 "(plus de détails sur :ref:`blend-modes`)."
 
-#: ../../docs/user_manual/style_library/label_settings.rst:114
+#: ../../docs/user_manual/style_library/label_settings.rst:148
 msgid ""
 "The |unchecked| :guilabel:`Apply label text substitutes` option allows you "
 "to specify a list of texts to substitute to texts in feature labels (e.g., "
@@ -246,11 +329,11 @@ msgstr ""
 " la carte. Les utilisateurs peuvent également exporter et importer des "
 "listes de substituts pour faciliter la réutilisation et le partage."
 
-#: ../../docs/user_manual/style_library/label_settings.rst:119
+#: ../../docs/user_manual/style_library/label_settings.rst:153
 msgid "Configure :guilabel:`Multiple lines`:"
 msgstr "Configurer :guilabel:`Plusieurs lignes`:"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:121
+#: ../../docs/user_manual/style_library/label_settings.rst:155
 msgid ""
 "Set a character that will force a line break in the text with the "
 ":guilabel:`Wrap on character` option"
@@ -258,7 +341,7 @@ msgstr ""
 "Définissez un caractère qui forcera un saut de ligne dans le texte avec "
 "l'option :guilabel:`Wrap au caractere`"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:123
+#: ../../docs/user_manual/style_library/label_settings.rst:157
 msgid ""
 "Set an ideal line size for auto-wrapping using the :guilabel:`Wrap lines to`"
 " option. The size can represent either the :guilabel:`Maximum line length` "
@@ -269,19 +352,21 @@ msgstr ""
 ":guilabel:`Longueur de ligne maximale`, soit :guilabel:`Longueur de ligne "
 "minimale`."
 
-#: ../../docs/user_manual/style_library/label_settings.rst:126
+#: ../../docs/user_manual/style_library/label_settings.rst:160
 msgid "Decide the :guilabel:`Line Height`"
 msgstr "Décidez de la :guilabel:`hauteur de ligne`"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:127
+#: ../../docs/user_manual/style_library/label_settings.rst:161
 msgid ""
 "Format the :guilabel:`Alignment`: typical values available are "
-":guilabel:`Left`, :guilabel:`Right` and :guilabel:`Center`."
+":guilabel:`Left`, :guilabel:`Right`, :guilabel:`Justify` and "
+":guilabel:`Center`."
 msgstr ""
-"Formatez l' :guilabel:`alignement`: les valeurs typiques disponibles sont "
-":guilabel:`gauche`, :guilabel:`droite` et :guilabel:`centre`."
+"Formatez l' :guilabel:`Alignement` : les valeurs typiques disponibles sont "
+":guilabel:`Gauche`, :guilabel:`Droite`, :guilabel:`Justifier` et "
+":guilabel:`Centrer`."
 
-#: ../../docs/user_manual/style_library/label_settings.rst:130
+#: ../../docs/user_manual/style_library/label_settings.rst:164
 msgid ""
 "When setting point labels properties, the text alignment can also be "
 ":guilabel:`Follow label placement`. In that case, the alignment will depend "
@@ -296,7 +381,7 @@ msgstr ""
 "alors l'étiquette sera alignée à droite, tandis que si elle est placée à "
 "droite, elle sera alignée à gauche."
 
-#: ../../docs/user_manual/style_library/label_settings.rst:136
+#: ../../docs/user_manual/style_library/label_settings.rst:170
 msgid ""
 "For line labels you can include :guilabel:`Line direction symbol` to help "
 "determine the line directions, with symbols to use to indicate the "
@@ -313,7 +398,7 @@ msgstr ""
 ":guilabel:`positionnement`. Il existe des options pour définir la position "
 "des symboles et pour |unchecked| :guilabel:`Inverser la direction`."
 
-#: ../../docs/user_manual/style_library/label_settings.rst:142
+#: ../../docs/user_manual/style_library/label_settings.rst:176
 msgid ""
 "Use the |unchecked| :guilabel:`Formatted numbers` option to format numeric "
 "texts. You can set the number of :guilabel:`Decimal places`. By default, "
@@ -326,15 +411,15 @@ msgstr ""
 ":guilabel:`Afficher le signe plus` si vous souhaitez afficher le signe plus "
 "pour les nombres positifs."
 
-#: ../../docs/user_manual/style_library/label_settings.rst:151
+#: ../../docs/user_manual/style_library/label_settings.rst:185
 msgid "Buffer tab"
 msgstr "Onglet tampon"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:158
-msgid "Text settings - Buffer tab"
-msgstr "Paramètres de texte - onglet Tampon"
+#: ../../docs/user_manual/style_library/label_settings.rst:192
+msgid "Label settings - Buffer tab"
+msgstr "Paramètrage des étiquettes - Onglet tampon"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:160
+#: ../../docs/user_manual/style_library/label_settings.rst:194
 msgid ""
 "To create a buffer around the label, activate the |checkbox| :guilabel:`Draw"
 " text buffer` checkbox in the |labelbuffer| :guilabel:`Buffer` tab. Then you"
@@ -344,7 +429,7 @@ msgstr ""
 "le buffer de texte` dans l'onglet |labelbuffer| :guilabel:`tampon`. Ensuite "
 "vous pouvez:"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:163
+#: ../../docs/user_manual/style_library/label_settings.rst:197
 msgid ""
 "Set the buffer's :guilabel:`Size` in any :ref:`supported unit "
 "<unit_selector>`"
@@ -352,11 +437,11 @@ msgstr ""
 "Définissez la :guilabel:`Taille` du tampon dans n'importe quelle :ref:`unité"
 " supportée <unit_selector>`"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:164
+#: ../../docs/user_manual/style_library/label_settings.rst:198
 msgid "Select the buffer's :guilabel:`Color`"
 msgstr "Sélectionnez la :guilabel:`Couleur` du tampon"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:165
+#: ../../docs/user_manual/style_library/label_settings.rst:199
 msgid ""
 "|checkbox| :guilabel:`Color buffer's fill`: The buffer expands from the "
 "label's outline, so, if the option is activated, the label's interior is "
@@ -373,11 +458,11 @@ msgstr ""
 " l'option (tout en utilisant des étiquettes totalement transparentes) vous "
 "permettra de créer des étiquettes de texte décrites."
 
-#: ../../docs/user_manual/style_library/label_settings.rst:171
+#: ../../docs/user_manual/style_library/label_settings.rst:205
 msgid "Define the buffer's :guilabel:`Opacity`"
 msgstr "Définissez l':guilabel:`opacite` du tampon"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:172
+#: ../../docs/user_manual/style_library/label_settings.rst:206
 msgid ""
 "Apply a :guilabel:`Pen join style`: it can be :guilabel:`Round`, "
 ":guilabel:`Miter` or :guilabel:`Bevel`"
@@ -385,7 +470,7 @@ msgstr ""
 "Appliquer un :guilabel:`style jointure`: il peut être :guilabel:`arrondi`, "
 ":guilabel:`Miter` ou :guilabel:`biseau`"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:174
+#: ../../docs/user_manual/style_library/label_settings.rst:208
 msgid ""
 "Use the :guilabel:`Blend mode` option to determine how your label's buffer "
 "will mix with the map components below them (more details at :ref:`blend-"
@@ -395,7 +480,7 @@ msgstr ""
 "tampon de votre étiquette se mélangera avec les composants de la carte en "
 "dessous (plus de détails sur :ref:`blend-modes`)."
 
-#: ../../docs/user_manual/style_library/label_settings.rst:177
+#: ../../docs/user_manual/style_library/label_settings.rst:211
 msgid ""
 "Check |unchecked| :guilabel:`Draw effects` to add advanced |paintEffects| "
 ":ref:`paint effects <draw_effects>` for improving text readability, eg "
@@ -406,11 +491,11 @@ msgstr ""
 "lisibilité du texte, par exemple à travers les lueurs et les flous "
 "extérieurs"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:185
+#: ../../docs/user_manual/style_library/label_settings.rst:219
 msgid "Background tab"
 msgstr "Onglet d'arrière-plan"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:187
+#: ../../docs/user_manual/style_library/label_settings.rst:221
 msgid ""
 "The |labelbackground| :guilabel:`Background` tab allows you to configure a "
 "shape that stays below each label. To add a background, activate the "
@@ -422,7 +507,7 @@ msgstr ""
 "un arrière-plan, activez la case |unchecked| :guilabel:`Dessiner le fond` et"
 " sélectionnez le type de :guilabel:`forme`. Cela  peut être:"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:192
+#: ../../docs/user_manual/style_library/label_settings.rst:226
 msgid ""
 "a regular shape such as :guilabel:`Rectangle`, :guilabel:`Square`, "
 ":guilabel:`Circle` or :guilabel:`Ellipse`"
@@ -430,7 +515,7 @@ msgstr ""
 "une forme régulière telle que :guilabel:`rectangle`, :guilabel:`carré`, "
 ":guilabel:`cercle` ou :guilabel:`ellipse`"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:194
+#: ../../docs/user_manual/style_library/label_settings.rst:228
 msgid ""
 "an :guilabel:`SVG` symbol from a file, a URL or embedded in the project or "
 "style database (:ref:`more details <svg_paths>`)"
@@ -439,7 +524,7 @@ msgstr ""
 "la base de données du projet ou du style (:ref:`plus de détails "
 "<svg_paths>`)"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:196
+#: ../../docs/user_manual/style_library/label_settings.rst:230
 msgid ""
 "or a :guilabel:`Marker Symbol` you can create or select from the "
 ":ref:`symbol library <vector_marker_symbols>`."
@@ -447,11 +532,11 @@ msgstr ""
 "ou un symbole de type :guilabel:`marqueur` que vous pouvez créer ou "
 "sélectionner dans :ref:`symbol library <vector_marker_symbols>`."
 
-#: ../../docs/user_manual/style_library/label_settings.rst:204
-msgid "Text settings - Background tab"
-msgstr "Paramètres de texte - onglet Arrière-plan"
+#: ../../docs/user_manual/style_library/label_settings.rst:238
+msgid "Label settings - Background tab"
+msgstr "Paramètrage des étiquettes - Onglet Fond"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:206
+#: ../../docs/user_manual/style_library/label_settings.rst:240
 msgid ""
 "Depending on the selected shape, you need to configure some of the following"
 " properties:"
@@ -459,11 +544,11 @@ msgstr ""
 "Selon la forme sélectionnée, vous devez configurer certaines des propriétés "
 "suivantes:"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:209
+#: ../../docs/user_manual/style_library/label_settings.rst:243
 msgid "The :guilabel:`Size type` of the frame, which can be:"
 msgstr "Le :guilabel:`Type de taille` du cadre, qui peut être:"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:211
+#: ../../docs/user_manual/style_library/label_settings.rst:245
 msgid ""
 ":guilabel:`Fixed`: using the same size for all the labels, regardless the "
 "size of the text"
@@ -471,11 +556,11 @@ msgstr ""
 ":guilabel:`Fixe`: utiliser la même taille pour toutes les étiquettes, quelle"
 " que soit la taille du texte"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:213
+#: ../../docs/user_manual/style_library/label_settings.rst:247
 msgid "or a :guilabel:`Buffer` over the text's bounding box"
 msgstr "ou un :guilabel:`tampon` sur la boîte englobante du texte"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:214
+#: ../../docs/user_manual/style_library/label_settings.rst:248
 msgid ""
 "The :guilabel:`Size` of the frame in X and Y directions, using any "
 ":ref:`supported units <unit_selector>`"
@@ -483,7 +568,7 @@ msgstr ""
 "La :guilabel:`Taille` du cadre dans les directions X et Y, en utilisant "
 "n'importe quelle :ref:`unité supportée <unit_selector>`"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:216
+#: ../../docs/user_manual/style_library/label_settings.rst:250
 msgid ""
 "A :guilabel:`Rotation` of the background, between :guilabel:`Sync with "
 "label`, :guilabel:`Offset of label` and :guilabel:`Fixed`. The last two "
@@ -493,7 +578,7 @@ msgstr ""
 "étiquette`, :guilabel:`décalage étiquette` et :guilabel:`fixe`. Les deux "
 "derniers nécessitent un angle en degré."
 
-#: ../../docs/user_manual/style_library/label_settings.rst:219
+#: ../../docs/user_manual/style_library/label_settings.rst:253
 msgid ""
 "An :guilabel:`Offset X,Y` to shift the background item in the X and/or Y "
 "directions"
@@ -501,7 +586,7 @@ msgstr ""
 "Sous :guilabel:`decalage X, Y` pour déplacer l'élément d'arrière-plan dans "
 "les directions X et / ou Y"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:220
+#: ../../docs/user_manual/style_library/label_settings.rst:254
 msgid ""
 "A :guilabel:`Radius X,Y` to round the corners of the background shape "
 "(applies to rectangle and square shapes only)"
@@ -509,11 +594,11 @@ msgstr ""
 "Un :guilabel:`Rayon X, Y` pour arrondir les coins de la forme d'arrière-plan"
 " (s'applique uniquement aux formes rectangulaires et carrées)"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:222
+#: ../../docs/user_manual/style_library/label_settings.rst:256
 msgid "An :guilabel:`Opacity` of the background"
 msgstr "Une :guilabel:`Opacité` du fond"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:223
+#: ../../docs/user_manual/style_library/label_settings.rst:257
 msgid ""
 "A :guilabel:`Blend mode` to mix the background with the other items in the "
 "rendering (see :ref:`blend-modes`)."
@@ -521,7 +606,7 @@ msgstr ""
 "Un :guilabel:`mode fusion` pour mélanger l'arrière-plan avec les autres "
 "éléments du rendu (voir :ref:`blend-modes`)."
 
-#: ../../docs/user_manual/style_library/label_settings.rst:225
+#: ../../docs/user_manual/style_library/label_settings.rst:259
 msgid ""
 "The :guilabel:`Fill color`, :guilabel:`Stroke color` and :guilabel:`Stroke "
 "width` for shape types other than the marker symbol. Use the :guilabel:`Load"
@@ -533,7 +618,7 @@ msgstr ""
 "de marqueurs. Utilisez :guilabel:`Charger les paramètres des symboles` pour "
 "rétablir les paramètres par défaut d'un symbole SVG."
 
-#: ../../docs/user_manual/style_library/label_settings.rst:229
+#: ../../docs/user_manual/style_library/label_settings.rst:263
 msgid ""
 "A :guilabel:`Pen join style`: it can be :guilabel:`Round`, :guilabel:`Miter`"
 " or :guilabel:`Bevel` (applies to rectangle and square shapes only)"
@@ -542,7 +627,7 @@ msgstr ""
 ":guilabel:`Miter` ou :guilabel:`biseau` (s'applique uniquement aux formes "
 "rectangulaires et carrées)"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:231
+#: ../../docs/user_manual/style_library/label_settings.rst:265
 msgid ""
 "|unchecked| :guilabel:`Draw effects` to add advanced |paintEffects| "
 ":ref:`paint effects <draw_effects>` for improving text readability, eg "
@@ -552,15 +637,15 @@ msgstr ""
 ":ref:`effects de rendu <draw_effects>` avancés pour améliorer la lisibilité "
 "du texte, par exemple à travers les lueurs et les flous extérieurs"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:239
+#: ../../docs/user_manual/style_library/label_settings.rst:273
 msgid "Shadow tab"
 msgstr "Onglet Ombre"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:246
-msgid "Text settings - Shadow tab"
-msgstr "Paramètres de texte - onglet Ombre"
+#: ../../docs/user_manual/style_library/label_settings.rst:280
+msgid "Label settings - Shadow tab"
+msgstr "Paramètrage des étiquettes - Onglet Ombre"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:248
+#: ../../docs/user_manual/style_library/label_settings.rst:282
 msgid ""
 "To add a shadow to the text, enable the |labelshadow| :guilabel:`Shadow` tab"
 " and activate the |checkbox| :guilabel:`Draw drop shadow`. Then you can:"
@@ -569,7 +654,7 @@ msgstr ""
 ":guilabel:`Ombre` et activez |checkbox| :guilabel:`Dessiner une ombre "
 "portée`. Ensuite vous pouvez:"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:251
+#: ../../docs/user_manual/style_library/label_settings.rst:285
 msgid ""
 "Indicate the item used to generate the shadow with :guilabel:`Draw under`. "
 "It can be the :guilabel:`Lowest label component` or a particular component "
@@ -581,27 +666,27 @@ msgstr ""
 "d'un composant particulier tel que le :guilabel:`Texte` lui-même, "
 ":guilabel:`Buffer` ou :guilabel:`Fond`."
 
-#: ../../docs/user_manual/style_library/label_settings.rst:255
+#: ../../docs/user_manual/style_library/label_settings.rst:289
 msgid "Set the shadow's :guilabel:`Offset` from the item being shadowded, ie:"
 msgstr ""
 "Définissez le :guilabel:`décalage` de l'ombre par rapport à l'élément ombré,"
 " c'est-à-dire:"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:257
+#: ../../docs/user_manual/style_library/label_settings.rst:291
 msgid "The angle: clockwise, it depends on the underlying item orientation"
 msgstr ""
 "L'angle: dans le sens horaire, cela dépend de l'orientation de l'élément "
 "sous-jacent"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:258
+#: ../../docs/user_manual/style_library/label_settings.rst:292
 msgid "The distance of offset from the item being shadowded"
 msgstr "La distance de décalage par rapport à l'élément ombré"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:259
+#: ../../docs/user_manual/style_library/label_settings.rst:293
 msgid "The units of the offset"
 msgstr "Les unités du décalage"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:261
+#: ../../docs/user_manual/style_library/label_settings.rst:295
 msgid ""
 "If you tick the |checkbox| :guilabel:`Use global shadow` checkbox, then the "
 "zero point of the angle is always oriented to the north and doesn't depend "
@@ -611,7 +696,7 @@ msgstr ""
 "zéro de l'angle est toujours orienté vers le nord et ne dépend pas de "
 "l'orientation de l'élément de l'étiquette."
 
-#: ../../docs/user_manual/style_library/label_settings.rst:265
+#: ../../docs/user_manual/style_library/label_settings.rst:299
 msgid ""
 "Influence the appearance of the shadow with the :guilabel:`Blur radius`. The"
 " higher the number, the softer the shadows, in the units of your choice."
@@ -620,21 +705,21 @@ msgstr ""
 "nombre est élevé, plus les ombres sont douces, dans les unités de votre "
 "choix."
 
-#: ../../docs/user_manual/style_library/label_settings.rst:286
+#: ../../docs/user_manual/style_library/label_settings.rst:320
 msgid "Define the shadow's :guilabel:`Opacity`"
 msgstr "Définir l':guilabel:`opacité` de l'ombre"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:287
+#: ../../docs/user_manual/style_library/label_settings.rst:321
 msgid "Rescale the shadow's size using the :guilabel:`Scale` factor"
 msgstr ""
 "Redimensionnez la taille de l'ombre à l'aide du facteur "
 ":guilabel:`d'echelle`"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:289
+#: ../../docs/user_manual/style_library/label_settings.rst:323
 msgid "Choose the shadow's :guilabel:`Color`"
 msgstr "Choisissez la :guilabel:`Couleur` de l'ombre"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:290
+#: ../../docs/user_manual/style_library/label_settings.rst:324
 msgid ""
 "Use the :guilabel:`Blend mode` option to determine how your label's shadow "
 "will mix with the map components below them (more details at :ref:`blend-"
@@ -644,11 +729,90 @@ msgstr ""
 " de votre étiquette se mélangera avec les composants de la carte en dessous "
 "(plus de détails sur :ref:`blend-modes`)."
 
-#: ../../docs/user_manual/style_library/label_settings.rst:298
+#: ../../docs/user_manual/style_library/label_settings.rst:329
+msgid "Configuring interaction with labels"
+msgstr "Configurer l'interaction avec les étiquettes"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:331
+msgid ""
+"Other than the text formatting settings exposed above, you can also set how "
+"labels interact with each others or with the features."
+msgstr ""
+"Outre les paramètres de formatage du texte exposés ci-dessus, vous pouvez "
+"également définir la manière dont les étiquettes interagissent entre elles "
+"ou avec les entités."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:338
+msgid "Mask tab"
+msgstr "Onglet Masque"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:340
+msgid ""
+"The |labelmask| :guilabel:`Mask` tab allows you to define a mask area around"
+" the labels. This feature is very useful when you have overlapping symbols "
+"and labels with similar colors, and you want to make the labels visible."
+msgstr ""
+"L'onglet |labelmask| :guilabel:`Masque` vous permet de définir une zone de "
+"masque autour des étiquettes. Cette fonction est très utile lorsque vous "
+"avez des symboles qui se chevauchent et des étiquettes de couleurs "
+"similaires, et que vous souhaitez rendre les étiquettes visibles."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:349
+msgid "Labels settings - Mask tab"
+msgstr "Paramètrage des étiquettes - Onglet Masque"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:351
+msgid "To create masking effects on labels:"
+msgstr "Pour créer des effets de masque sur les étiquettes :"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:353
+msgid ""
+"Activate the |checkbox| :guilabel:`Enable mask` checkbox in the |labelmask| "
+"tab."
+msgstr ""
+"Activez la case à cocher |checkbox| :guilabel:`Activer le masque` dans "
+"l'onglet |labelmask|."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:354
+msgid "Then you can set:"
+msgstr "Ensuite, vous pouvez mettre en place :"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:356
+msgid ""
+"the mask's :guilabel:`Size` in the :ref:`supported units <unit_selector>`"
+msgstr ""
+"la :guilabel:`Taille` du masque dans :ref:`supported units <unit_selector>`."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:357
+msgid "the :guilabel:`Opacity` of the mask area around the label"
+msgstr "l' :guilabel:`Opacité` de la zone du masque autour de l'étiquette"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:358
+msgid "a :guilabel:`Pen Join Style`"
+msgstr "un :guilabel:`Style de jointure`."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:359
+msgid ""
+":ref:`paint effects <draw_effects>` through the |checkbox| :guilabel:`Draw "
+"effects` checkbox."
+msgstr ""
+":ref:`paint effects <draw_effects>` grâce à la |checkbox| :guilabel:`effets "
+"de dessin`."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:362
+msgid ""
+"Select this mask shape as a mask source in the overlapping layer properties "
+"|labelmask| :guilabel:`Mask` tab (see :ref:`vector_mask_menu`)."
+msgstr ""
+"Sélectionnez cette forme de masque comme source de masque dans les "
+"propriétés de la couche de recouvrement |labelmask| onglet "
+":guilabel:`Masque` (voir :ref:`vector_mask_menu`)."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:369
 msgid "Callouts tab"
 msgstr "Onglet Connecteurs"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:300
+#: ../../docs/user_manual/style_library/label_settings.rst:371
 msgid ""
 "A common practice when placing labels on a crowded map is to use "
 "**callouts** - labels which are placed outside (or displaced from) their "
@@ -663,11 +827,11 @@ msgstr ""
 "(l'étiquette ou l'entité) est déplacée, la forme du connecteur est "
 "recalculée."
 
-#: ../../docs/user_manual/style_library/label_settings.rst:311
+#: ../../docs/user_manual/style_library/label_settings.rst:382
 msgid "Labels with various callouts settings"
 msgstr "Étiquettes avec divers paramètres de renvoi"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:313
+#: ../../docs/user_manual/style_library/label_settings.rst:384
 msgid ""
 "To add a callout to a label, enable the |labelcallout| :guilabel:`Callouts` "
 "tab and activate the |checkbox| :guilabel:`Draw callouts`. Then you can:"
@@ -676,19 +840,19 @@ msgstr ""
 "|labelcallout|, onglet :guilabel:`Connecteurs` et activez |checkbox| "
 ":guilabel:`Dessiner des connecteurs`. Ensuite vous pouvez:"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:316
+#: ../../docs/user_manual/style_library/label_settings.rst:387
 msgid "Select the :guilabel:`Style` of connector, one of:"
 msgstr "Sélectionnez le :guilabel:`Style` du connecteur, l'un des:"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:318
+#: ../../docs/user_manual/style_library/label_settings.rst:389
 msgid ":guilabel:`Simple lines`: a straight line, the shortest path"
 msgstr ":guilabel:`Lignes simples`: une ligne droite, le chemin le plus court"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:319
+#: ../../docs/user_manual/style_library/label_settings.rst:390
 msgid ":guilabel:`Manhattan style`: a 90° broken line"
 msgstr ":guilabel:`Style Manhattan`: une ligne brisée à 90 °"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:321
+#: ../../docs/user_manual/style_library/label_settings.rst:392
 msgid ""
 "Select the :guilabel:`Line style` with full capabilities of a :ref:`line "
 "symbol <vector_line_symbols>` including layer effects, and data-defined "
@@ -698,11 +862,11 @@ msgstr ""
 " :ref:`symbole de ligne <vector_line_symbols>`, y compris les effets de "
 "couche et les paramètres définis par les données"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:324
+#: ../../docs/user_manual/style_library/label_settings.rst:395
 msgid "Set the :guilabel:`Minimum length` of callout lines"
 msgstr "Définissez la :guilabel:`Longueur minimale` des lignes de renvoi"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:325
+#: ../../docs/user_manual/style_library/label_settings.rst:396
 msgid ""
 "Set the :guilabel:`Offset from feature` option: controls the distance from "
 "the feature (or its anchor point if a polygon) where callout lines end. Eg, "
@@ -713,54 +877,80 @@ msgstr ""
 "lignes de renvoi. Par exemple, cela évite de tracer des lignes directement "
 "contre les bords des entités."
 
-#: ../../docs/user_manual/style_library/label_settings.rst:328
+#: ../../docs/user_manual/style_library/label_settings.rst:399
 msgid ""
 "Set the :guilabel:`Offset from label area` option: controls the distance "
-"from the label closest corner where callout lines end. This avoids drawing "
-"lines right up against the text."
+"from the label anchor point (where the callout line ends). This avoids "
+"drawing lines right up against the text."
 msgstr ""
-"Définissez l'option :guilabel:`Décalage par rapport à la zone de "
-"l'étiquette`: contrôle la distance du coin le plus proche de l'étiquette où "
-"se terminent les lignes de renvoi. Cela évite de tracer des lignes "
-"directement contre le texte."
+"Définissez l'option :guilabel:`Décalage de la surface de l'étiquette` : "
+"contrôle la distance du point d'ancrage de l'étiquette (où la ligne d'appel "
+"se termine). Cela permet d'éviter de tracer des lignes directement contre le"
+" texte."
 
-#: ../../docs/user_manual/style_library/label_settings.rst:331
+#: ../../docs/user_manual/style_library/label_settings.rst:402
 msgid ""
-"|checkbox| :guilabel:`Draw lines to all features parts` from the feature's "
+"|checkbox| :guilabel:`Draw lines to all feature parts` from the feature's "
 "label"
 msgstr ""
-"|checkbox| :guilabel:`Tracer des lignes vers toutes les parties d'entité` à "
-"partir de l'étiquette de l'entité"
+"|checkbox| :guilabel:`Dessiner des lignes vers toutes les parties de "
+"l'entité` à partir de l'étiquette de l'entité"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:333
+#: ../../docs/user_manual/style_library/label_settings.rst:404
 msgid ""
-"Set an :guilabel:`Anchor point` on the (polygon) feature to use as end point"
-" of the connector line : available options are:"
+"Set the :guilabel:`Anchor point` for the (polygon) feature (the end point of"
+" the connector line). Available options:"
 msgstr ""
-"Définissez un :guilabel:`Point d'ancrage` sur l'entité (polygone) à utiliser"
-" comme point final de la ligne de connexion: les options disponibles sont:"
+"Définissez le :guilabel:`point d'ancrage` pour l'élément (polygone) (le "
+"point d'extrémité de la ligne de connexion). Options disponibles :"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:336
+#: ../../docs/user_manual/style_library/label_settings.rst:407
 msgid ":guilabel:`Pole of inaccessibility`"
 msgstr ":guilabel:`Pôle d'inaccessibilité`"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:337
+#: ../../docs/user_manual/style_library/label_settings.rst:408
 msgid ":guilabel:`Point on exterior`"
 msgstr ":guilabel:`Point sur l'extérieur`"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:338
+#: ../../docs/user_manual/style_library/label_settings.rst:409
 msgid ":guilabel:`Point on surface`"
 msgstr ":guilabel:`Point sur la surface`"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:339
+#: ../../docs/user_manual/style_library/label_settings.rst:410
+#: ../../docs/user_manual/style_library/label_settings.rst:415
 msgid ":guilabel:`Centroid`"
 msgstr ":guilabel:`Centroïde`"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:345
+#: ../../docs/user_manual/style_library/label_settings.rst:411
+msgid ""
+"Set the :guilabel:`Label anchor point`: controls where the connector line "
+"should join to the label text. Available options:"
+msgstr ""
+"Définissez le :guilabel:`Point d'ancrage de l'étiquette` : contrôle "
+"l'endroit où la ligne de connexion doit se joindre au texte de l'étiquette. "
+"Options disponibles :"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:414
+msgid ":guilabel:`Closest point`"
+msgstr ":guilabel:`Le point le plus proche`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:416
+msgid ""
+"Fixed position at the edge (:guilabel:`Top left`, :guilabel:`Top center`, "
+":guilabel:`Top right`, :guilabel:`Left middle`, :guilabel:`Right middle`, "
+":guilabel:`Bottom left`, :guilabel:`Bottom center` and :guilabel:`Bottom "
+"right`)."
+msgstr ""
+"Position fixe au bord (:guilabel:`en haut à gauche`, :guilabel:`en haut au "
+"centre`, :guilabel:`en haut à droite`, :guilabel:`au milieu à gauche`, "
+":guilabel:`au milieu à droite`, :guilabel:`en bas à gauche`, :guilabel:`en "
+"bas au centre` et :guilabel:`en bas à droite`)."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:424
 msgid "Placement tab"
 msgstr "Onglet Emplacement"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:347
+#: ../../docs/user_manual/style_library/label_settings.rst:426
 msgid ""
 "Choose the |labelplacement| :guilabel:`Placement` tab for configuring label "
 "placement and labeling priority. Note that the placement options differ "
@@ -773,295 +963,643 @@ msgstr ""
 "point, la ligne ou le polygone, et sont affectées par les :ref:`paramètres "
 "généraux de placement<automated_placement>`."
 
-#: ../../docs/user_manual/style_library/label_settings.rst:355
+#: ../../docs/user_manual/style_library/label_settings.rst:434
 msgid "Placement for point layers"
 msgstr "Placement pour les couches de points"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:357
-msgid ""
-"With the |radioButtonOn| :guilabel:`Cartographic` placement mode, point "
-"labels are generated with a better visual relationship with the point "
-"feature, following ideal cartographic placement rules. Labels can be placed "
-"at a set :guilabel:`Distance` either from the point feature itself or from "
-"the bounds of the symbol used to represent the feature. The latter option is"
-" especially useful when the symbol size isn't fixed, e.g. if it's set by a "
-"data defined size or when using different symbols in a categorized renderer."
-msgstr ""
-"Avec le mode de placement |radioButtonOn| :guilabel:`Cartographique`, les "
-"étiquettes de points sont générées avec une meilleure relation visuelle avec"
-" l'entité ponctuelle, en suivant les règles idéales de placement "
-"cartographique. Les étiquettes peuvent être placées à une "
-":guilabel:`Distance` définie soit depuis l'entité ponctuelle elle-même, soit"
-" depuis les limites du symbole utilisé pour représenter l'entité. Cette "
-"dernière option est particulièrement utile lorsque la taille du symbole "
-"n'est pas fixe, par ex. si elle est définie par des attributs ou lorsque "
-"vous utilisez différents symboles dans un rendu catégorisé."
-
-#: ../../docs/user_manual/style_library/label_settings.rst:366
-msgid "By default, placements are prioritised in the following order:"
-msgstr ""
-"Par défaut, les placements sont classés par ordre de priorité dans l'ordre "
-"suivant:"
-
-#: ../../docs/user_manual/style_library/label_settings.rst:368
-msgid "top right"
-msgstr "en haut à droite"
-
-#: ../../docs/user_manual/style_library/label_settings.rst:369
-msgid "top left"
-msgstr "en haut à gauche"
-
-#: ../../docs/user_manual/style_library/label_settings.rst:370
-msgid "bottom right"
-msgstr "en bas à droite"
-
-#: ../../docs/user_manual/style_library/label_settings.rst:371
-msgid "bottom left"
-msgstr "en bas à gauche"
-
-#: ../../docs/user_manual/style_library/label_settings.rst:372
-msgid "middle right"
-msgstr "au milieu à droite"
-
-#: ../../docs/user_manual/style_library/label_settings.rst:373
-msgid "middle left"
-msgstr "au milieu a gauche"
-
-#: ../../docs/user_manual/style_library/label_settings.rst:374
-msgid "top, slightly right"
-msgstr "en haut, légèrement à droite"
-
-#: ../../docs/user_manual/style_library/label_settings.rst:375
-msgid "bottom, slightly left."
-msgstr "en bas, légèrement à gauche."
-
-#: ../../docs/user_manual/style_library/label_settings.rst:377
-msgid ""
-"Placement priority can, however, be customized or set for an individual "
-"feature using a data defined list of prioritised positions. This also allows"
-" only certain placements to be used, so e.g. for coastal features you can "
-"prevent labels being placed over the land."
-msgstr ""
-"La priorité de placement peut toutefois être personnalisée ou définie pour "
-"une entité individuelle à l'aide d'une liste définie par les données de "
-"positions prioritaires. Cela permet également d'utiliser uniquement certains"
-" emplacements, par exemple pour les entités côtières, vous pouvez empêcher "
-"la pose d'étiquettes sur le terrain."
-
-#: ../../docs/user_manual/style_library/label_settings.rst:382
-msgid ""
-"The |radioButtonOn| :guilabel:`Around point` setting places the label in an "
-"equal radius (set in :guilabel:`Distance`) circle around the feature. The "
-"placement of the label can even be constrained using the "
-":guilabel:`Quadrant` option."
-msgstr ""
-"Le paramètre |radioButtonOn| :guilabel:`Autour du point` place l'étiquette "
-"dans un rayon égal (défini dans :guilabel:`Distance`) autour de l'entité. Le"
-" placement de l'étiquette peut même être contraint en utilisant l'option "
-":guilabel:`Quadrant`."
-
-#: ../../docs/user_manual/style_library/label_settings.rst:387
-msgid ""
-"With the |radioButtonOn| :guilabel:`Offset from point`, labels are placed at"
-" a fixed offset from the point feature. You can select the "
-":guilabel:`Quadrant` in which to place your label. You are also able to set "
-"the :guilabel:`Offset X,Y` distances between the points and their labels and"
-" can alter the angle of the label placement with the :guilabel:`Rotation` "
-"setting. Thus, placement in a selected quadrant with a defined rotation is "
-"possible."
-msgstr ""
-"Avec le |radioButtonOn| :guilabel:`Décalage par rapport au point`, les "
-"étiquettes sont placées à un décalage fixe par rapport à l'entité "
-"ponctuelle. Vous pouvez sélectionner :guilabel:`Quadrant` dans lequel placer"
-" votre étiquette. Vous pouvez également définir les distances "
-":guilabel:`Décalage X, Y` entre les points et leurs étiquettes et pouvez "
-"modifier l'angle de placement de l'étiquette avec le paramètre "
-":guilabel:`Rotation`. Ainsi, le placement dans un quadrant sélectionné avec "
-"une rotation définie est possible."
-
-#: ../../docs/user_manual/style_library/label_settings.rst:398
-msgid "Placement for line layers"
-msgstr "Placement des couches de lignes"
-
-#: ../../docs/user_manual/style_library/label_settings.rst:400
-msgid ""
-"Label options for line layers include |radioButtonOn| :guilabel:`Parallel`, "
-"|radioButtonOff| :guilabel:`Curved` or |radioButtonOff| "
-":guilabel:`Horizontal`. For the |radioButtonOn| :guilabel:`Parallel` and "
-"|radioButtonOff| :guilabel:`Curved` options, you can set the position to "
-"|checkbox| :guilabel:`Above line`, |checkbox| :guilabel:`On line` and "
-"|checkbox| :guilabel:`Below line`. It's possible to select several options "
-"at once. In that case, QGIS will look for the optimal label position. For "
-"Parallel and curved placement options, you can also use the line orientation"
-" for the position of the label. Additionally, you can define a "
-":guilabel:`Maximum angle between curved characters` when selecting the "
-"|radioButtonOff| :guilabel:`Curved` option (see "
-"Figure_labels_placement_line)."
-msgstr ""
-"Les options d'étiquette pour les couches de ligne incluent |radioButtonOn| "
-":guilabel:`Parallèle`, |radioButtonOff| :guilabel:`incurve` ou "
-"|radioButtonOff| :guilabel:`Horizontal`. Pour le |radioButtonOn| "
-":guilabel:`Parallèle` et |radioButtonOff| :guilabel:`incurve`, vous pouvez "
-"définir la position sur |checkbox| :guilabel:`Au-dessus de la ligne`, "
-"|checkbox| :guilabel:`Sur la ligne` et |checkbox| :guilabel:`en-dessous la "
-"ligne`. Il est possible de sélectionner plusieurs options à la fois. Dans ce"
-" cas, QGIS recherchera la position optimale de l'étiquette. Pour les options"
-" de placement parallèle et courbe, vous pouvez également utiliser "
-"l'orientation des lignes pour la position de l'étiquette. De plus, vous "
-"pouvez définir un :guilabel:`Angle maximum entre les caractères courbes` "
-"lors de la sélection de option |radioButtonOff| :guilabel:`incurve` (voir "
-"Figure_labels_placement_line)."
-
-#: ../../docs/user_manual/style_library/label_settings.rst:417
-msgid "Label placement examples in lines"
-msgstr "Exemples de placement d'étiquettes en lignes"
-
-#: ../../docs/user_manual/style_library/label_settings.rst:419
-msgid ""
-"For all three placement options, in :guilabel:`Repeat`, you can set up a "
-"minimum distance for repeating labels. The distance can be in ``mm`` or in "
-"``map units``."
-msgstr ""
-"Pour les trois options de placement, dans :guilabel:`Repeter`, vous pouvez "
-"définir une distance minimale pour répéter les étiquettes. La distance peut "
-"être en ``mm`` ou en ``unités de carte``."
-
-#: ../../docs/user_manual/style_library/label_settings.rst:424
-msgid "Placement for polygon layers"
-msgstr "Placement des couches de polygones"
-
-#: ../../docs/user_manual/style_library/label_settings.rst:426
-msgid ""
-"You can choose one of the following options for placing labels in polygons "
-"(see figure_labels_placement_polygon_):"
-msgstr ""
-"Vous pouvez choisir l'une des options suivantes pour placer des étiquettes "
-"dans des polygones (voir figure_labels_placement_polygon_):"
-
-#: ../../docs/user_manual/style_library/label_settings.rst:429
-msgid "|radioButtonOn| :guilabel:`Offset from centroid`,"
-msgstr "|radioButtonOn| :guilabel:`Décalage du centroïde`,"
-
-#: ../../docs/user_manual/style_library/label_settings.rst:430
-msgid "|radioButtonOff| :guilabel:`Horizontal (slow)`,"
-msgstr "|radioButtonOff| :guilabel:`Horizontal (lent)`,"
-
-#: ../../docs/user_manual/style_library/label_settings.rst:431
-msgid "|radioButtonOff| :guilabel:`Around centroid`,"
-msgstr "|radioButtonOff| :guilabel:`Autour du centroïde`,"
-
-#: ../../docs/user_manual/style_library/label_settings.rst:432
-msgid "|radioButtonOff| :guilabel:`Free (slow)`,"
-msgstr "|radioButtonOff| :guilabel:`Libre (lent)`,"
-
-#: ../../docs/user_manual/style_library/label_settings.rst:433
-msgid "|radioButtonOff| :guilabel:`Using perimeter`,"
-msgstr "|radioButtonOff| :guilabel:`Utilisation du périmètre`,"
-
-#: ../../docs/user_manual/style_library/label_settings.rst:434
-msgid "and |radioButtonOff| :guilabel:`Using perimeter (curved)`."
-msgstr "et |radioButtonOff| :guilabel:`Utilisation du périmètre (incurve)`."
-
 #: ../../docs/user_manual/style_library/label_settings.rst:436
+msgid "Point labels placement modes available are:"
+msgstr "Les modes de placement des étiquettes de points disponibles sont :"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:440
 msgid ""
-"In the :guilabel:`Offset from centroid` settings you can specify if the "
-"centroid is of the |radioButtonOn| :guilabel:`visible polygon` or "
-"|radioButtonOff| :guilabel:`whole polygon`. That means that either the "
-"centroid is used for the polygon you can see on the map or the centroid is "
-"determined for the whole polygon, no matter if you can see the whole feature"
-" on the map. You can place your label within a specific quadrant, and define"
-" offset and rotation."
+":guilabel:`Cartographic`: point labels are generated with a better visual "
+"relationship with the point feature, following ideal cartographic placement "
+"rules. Labels can be placed:"
 msgstr ""
-"Dans les paramètres :guilabel:`Décalage par rapport au centroïde`, vous "
-"pouvez spécifier si le centroïde est |radioButtonOn| :guilabel:`polygone "
-"visible` ou |radioButtonOff| :guilabel:`polygone entier`. Cela signifie que "
-"le centroïde est utilisé pour le polygone que vous pouvez voir sur la carte "
-"ou le centroïde est déterminé pour l'ensemble du polygone, peu importe si "
-"vous pouvez voir l'entité entière sur la carte. Vous pouvez placer votre "
-"étiquette dans un quadrant spécifique et définir le décalage et la rotation."
+":guilabel:`Cartographique` : les étiquettes de points sont générées avec une"
+" meilleure relation visuelle avec l'élément de point, en suivant les règles "
+"de placement cartographique idéal. Les étiquettes peuvent être placées :"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:444
 msgid ""
-"The :guilabel:`Around centroid` setting places the label at a specified "
-"distance around the centroid. Again, you can define |radioButtonOn| "
-":guilabel:`visible polygon` or |radioButtonOff| :guilabel:`whole polygon` "
-"for the centroid."
+"at a set :guilabel:`Distance` in :ref:`supported units <unit_selector>`, "
+"either from the point feature itself or from the bounds of the symbol used "
+"to represent the feature (set in :guilabel:`Distance offset from`). The "
+"latter option is especially useful when the symbol size isn't fixed, e.g. if"
+" it's set by a data defined size or when using different symbols in a "
+":ref:`categorized <categorized_renderer>` renderer."
 msgstr ""
-"Le paramètre :guilabel:`Autour du centroïde` place l'étiquette à une "
-"distance spécifiée autour du centroïde. Encore une fois, vous pouvez définir"
-" |radioButtonOn| :guilabel:`polygone visible` ou |radioButtonOff| "
-":guilabel:`polygone entier` pour le centroïde."
+"à un ensemble :guilabel:`Distance` en :ref:`supported units "
+"<unit_selector>`, soit à partir de l'entité point elle-même, soit à partir "
+"des limites du symbole utilisé pour représenter l'élément (ensemble "
+":guilabel:`Distance de décalage depuis`). Cette dernière option est "
+"particulièrement utile lorsque la taille du symbole n'est pas fixe, par "
+"exemple si elle est fixée par une taille définie par les données ou lorsque "
+"l'on utilise des symboles différents dans un rendu :ref:`categorized "
+"<categorized_renderer>`."
 
-#: ../../docs/user_manual/style_library/label_settings.rst:449
+#: ../../docs/user_manual/style_library/label_settings.rst:450
 msgid ""
-"With the :guilabel:`Horizontal (slow)` or :guilabel:`Free (slow)` options, "
-"QGIS places at the best position either a horizontal or a rotated label "
-"inside the polygon."
+"following a :guilabel:`Position priority` that can be customized or set for "
+"an individual feature using a data defined list of prioritised positions. "
+"This also allows only certain placements to be used, so e.g. for coastal "
+"features you can prevent labels being placed over the land."
 msgstr ""
-"Avec les options :guilabel:`Horizontal (lent)` ou :guilabel:`Libre (lent)`, "
-"QGIS place au mieux la position d'une étiquette horizontale ou tournée à "
-"l'intérieur du polygone."
+"suivant une :guilabel:`Position prioritaire` qui peut être personnalisée ou "
+"définie pour une entité individuelle en utilisant une liste de positions "
+"prioritaires définie par des données. Cela permet également de n'utiliser "
+"que certains placements, de sorte que, par exemple, pour les entités "
+"côtières, vous pouvez empêcher que des étiquettes soient placées sur la "
+"terre ferme."
 
-#: ../../docs/user_manual/style_library/label_settings.rst:453
+#: ../../docs/user_manual/style_library/label_settings.rst:455
 msgid ""
-"With the :guilabel:`Using perimeter` option, the label will be drawn next to"
-" the polygon boundary. The label will behave like the parallel option for "
-"lines. You can define a position and a distance for the label. For the "
-"position, |checkbox| :guilabel:`Above line`, |checkbox| :guilabel:`On line`,"
-" |checkbox| :guilabel:`Below line` and |checkbox| :guilabel:`Line "
-"orientation dependent position` are possible. You can specify the distance "
-"between the label and the polygon outline, as well as the repeat interval "
-"for the label."
+"By default, cartographic mode placements are prioritised in the following "
+"order (respecting the `guidelines from Krygier and Wood (2011) "
+"<https://www.researchgate.net/publication/44463780_Making_maps_a_visual_guide_to_map_design_for_GIS_John_Krygier_Denis_Wood>`_"
+" and other cartographic textbooks):"
 msgstr ""
-"Avec l'option :guilabel:`Utilisation du périmètre`, l'étiquette sera "
-"dessinée à côté de la limite du polygone. L'étiquette se comportera comme "
-"l'option parallèle pour les lignes. Vous pouvez définir une position et une "
-"distance pour l'étiquette. Pour la position, |checkbox| :guilabel:`Au-dessus"
-" de la ligne`, |checkbox| :guilabel:`sur la ligne`, |checkbox| :guilabel"
-":`En-dessous de la ligne` et |checkbox| :guilabel:`La position dépendante de"
-" l'orientation de la ligne` est possible. Vous pouvez spécifier la distance "
-"entre l'étiquette et le contour du polygone, ainsi que l'intervalle de "
-"répétition pour l'étiquette."
+"Par défaut, les placements en mode cartographique sont priorisés dans "
+"l'ordre suivant (en respectant les `guidelines from Krygier and Wood (2011) "
+"<https://www.researchgate.net/publication/44463780_Making_maps_a_visual_guide_to_map_design_for_GIS_John_Krygier_Denis_Wood>`_"
+" and other cartographic textbooks) :"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:460
+msgid "top right"
+msgstr "en haut à droite"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:461
+msgid "top left"
+msgstr "en haut à gauche"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:462
-msgid ""
-"The :guilabel:`Using perimeter (curved)` option helps you draw the label "
-"along the polygon boundary, using a curved labeling. In addition to the "
-"parameters available with :guilabel:`Using perimeter` setting, you can set "
-"the :guilabel:`Maximum angle between curved characters polygon`, either "
-"inside or outside."
-msgstr ""
-"L'option :guilabel:`Utiliser le périmètre (courbe)` vous aide à dessiner "
-"l'étiquette le long de la limite du polygone, en utilisant un étiquetage "
-"courbe. En plus des paramètres disponibles avec :guilabel:`Utilisation du "
-"périmètre`, vous pouvez définir l' :guilabel:`Angle maximal entre les "
-"polygones de caractères courbes`, à l'intérieur ou à l'extérieur."
+msgid "bottom right"
+msgstr "en bas à droite"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:473
-msgid "Label placement examples in polygons"
-msgstr "Étiqueter des exemples de placement dans des polygones"
+#: ../../docs/user_manual/style_library/label_settings.rst:463
+msgid "bottom left"
+msgstr "en bas à gauche"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:475
+#: ../../docs/user_manual/style_library/label_settings.rst:464
+msgid "middle right"
+msgstr "au milieu à droite"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:465
+msgid "middle left"
+msgstr "au milieu a gauche"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:466
+msgid "top, slightly right"
+msgstr "en haut, légèrement à droite"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:467
+msgid "bottom, slightly left."
+msgstr "en bas, légèrement à gauche."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:469
 msgid ""
-"In the :guilabel:`priority` section you can define the priority with which "
-"labels are rendered for all three vector layer types (point, line, polygon)."
-" This placement option interacts with the labels from other vector layers in"
-" the map canvas. If there are labels from different layers in the same "
-"location, the label with the higher priority will be displayed and the "
-"others will be left out."
+":guilabel:`Around Point`: labels are placed in a circle around the feature. "
+"equal radius (set in :guilabel:`Distance`) circle around the feature. The "
+"placement priority is clockwise from the \"top right\". The position can be "
+"constrained using the data-defined :guilabel:`Quadrant` option."
 msgstr ""
-"Dans la section :guilabel:`Priorite`, vous pouvez définir la priorité avec "
-"laquelle les étiquettes sont rendues pour les trois types de couches vecteur"
-" (point, ligne, polygone). Cette option de placement interagit avec les "
-"étiquettes des autres couches vecteur du canevas de carte. S'il y a des "
-"étiquettes de différentes couches au même emplacement, l'étiquette avec la "
-"priorité la plus élevée sera affichée et les autres seront laissées de côté."
+":guilabel:`Autour du point` : les étiquettes sont placées dans un cercle "
+"autour de l'entité. Un cercle de rayon égal (défini dans "
+":guilabel:`Distance`) entoure l'élément. La priorité de placement est dans "
+"le sens des aiguilles d'une montre à partir du \"haut à droite\". La "
+"position peut être contrainte en utilisant l'option :guilabel:`Quadrant` "
+"définie dans les données."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:474
+msgid ""
+":guilabel:`Offset from Point`: labels are placed at an :guilabel:`Offset "
+"X,Y` distance from the point feature, in various units, or preferably over "
+"the feature. You can use a data-defined :guilabel:`Quadrant` to constrain "
+"the placement and can assign a :guilabel:`Rotation` to the label."
+msgstr ""
+":guilabel:`Décalage depuis le point` : les étiquettes sont placées à une "
+"distance :guilabel:`Décalage X,Y` de l'élément du point, en différentes "
+"unités, ou de préférence au-dessus de l'élément. Vous pouvez utiliser un "
+":guilabel:`Quadrant` défini par des données pour limiter le placement et "
+"vous pouvez attribuer une :guilabel:`Rotation` à l'étiquette."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:483
+msgid "Placement for line layers"
+msgstr "Placement des couches de lignes"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:485
+msgid "Label modes for line layers include:"
+msgstr "Les modes d'étiquetage pour les couches de lignes comprennent :"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:487
+msgid ""
+":guilabel:`Parallel`: draws the label parallel to a generalised line "
+"representing the feature, with preference for placement over straighter "
+"portions of the line. You can define:"
+msgstr ""
+":guilabel:`Parallèle` : dessine l'étiquette parallèlement à une ligne "
+"généralisée représentant l'entité, en privilégiant le placement sur des "
+"portions plus droites de la ligne. Vous pouvez définir :"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:491
+msgid ""
+":guilabel:`Allowed positions`: :guilabel:`Above line`, :guilabel:`On line`, "
+":guilabel:`Below line` and :guilabel:`Line orientation dependent position` "
+"(placing the label at the left or the right of the line). It's possible to "
+"select several options at once. In that case, QGIS will look for the optimal"
+" label position."
+msgstr ""
+":guilabel:`Positions autorisées` : :guilabel:`Au dessus de la ligne`, "
+":guilabel:`Sur la ligne`, :guilabel:`En dessous de la ligne` et "
+":guilabel:`Position dépendante de l'orientation de la ligne` (en plaçant "
+"l'étiquette à gauche ou à droite de la ligne). Il est possible de "
+"sélectionner plusieurs options à la fois. Dans ce cas, le QGIS cherchera la "
+"position optimale du label."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:496
+msgid ":guilabel:`Distance` between the label and the line"
+msgstr ":guilabel:`Distance` entre l'étiquette et la ligne"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:497
+msgid ""
+":guilabel:`Curved`: draws the label following the curvature of the line "
+"feature. In addition to the parameters available with the "
+":guilabel:`Parallel` mode, you can set the :guilabel:`Maximum angle between "
+"curved characters`, either inside or outside."
+msgstr ""
+":guilabel:`Incurvé` : dessine l'étiquette en suivant la courbure de l'entité"
+" type ligne. En plus des paramètres disponibles avec le mode "
+":guilabel:`Parallèle`, vous pouvez définir l'angle maximum entre les "
+"caractères courbes, soit à l'intérieur soit à l'extérieur."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:501
+msgid ""
+":guilabel:`Horizontal`: draws labels horizontally along the length of the "
+"line feature."
+msgstr ""
+":guilabel:`Horizontal` : dessine des étiquettes horizontalement sur la "
+"longueur de l'entité de type ligne."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:509
+msgid "Label placement examples for lines"
+msgstr "Exemples de placement d'étiquettes pour les lignes"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:511
+msgid "Next to placement modes, you can set:"
+msgstr "En plus des modes de placement, vous pouvez régler :"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:513
+msgid ""
+":guilabel:`Repeating Labels` :guilabel:`Distance` to display multiple times "
+"the label over the length of the feature. The distance can be in "
+"``Millimeters``, ``Points``, ``Pixels``, ``Meters at scale``, ``Map Units`` "
+"and ``Inches``."
+msgstr ""
+":guilabel:`Répétition des étiquettes` :guilabel:`Distance` pour afficher "
+"plusieurs fois l'étiquette sur la longueur de l'entité. La distance peut "
+"être exprimée en ``millimètres``, ``points``, ``pixels``, ``mètres à "
+"l'échelle``, ``unités cartographiques`` et ``pouces``."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:517
+msgid ""
+"A :guilabel:`Label Overrun` :guilabel:`Distance` (not available for "
+"horizontal mode): specifies the maximal allowable distance a label may run "
+"past the end (or start) of line features. Increasing this value can allow "
+"for labels to be shown for shorter line features."
+msgstr ""
+":guilabel:`Déborder les étiquettes` :guilabel:`Distance` (non disponible "
+"pour le mode horizontal) : spécifie la distance maximale autorisée qu'une "
+"étiquette peut parcourir au-delà de la fin (ou du début) des éléments de "
+"type ligne. L'augmentation de cette valeur peut permettre d'afficher des "
+"étiquettes pour des éléments de ligne plus courts."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:521
+msgid ""
+":guilabel:`Label Anchoring`: controls the placement of the labels along the "
+"line feature they refer to. Click on :guilabel:`Settings ...` to choose:"
+msgstr ""
+":guilabel:`Ancrage étiquette` : contrôle le placement des étiquettes le long"
+" de la ligne à laquelle elles se réfèrent. Cliquez sur :guilabel:`Paramètres"
+" ...` pour choisir :"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:524
+msgid ""
+"the position along the line (as a ratio) which labels will be placed close "
+"to. It can be data-defined and possible values are:"
+msgstr ""
+"la position le long de la ligne (sous forme de ratio) à laquelle les "
+"étiquettes seront placées à proximité. Il peut être défini par des données "
+"et les valeurs possibles sont"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:527
+msgid "|labelAnchorCenter| :guilabel:`Center of Line`"
+msgstr "|labelAnchorCenter| :guilabel:`Centre de la ligne`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:528
+msgid "|labelAnchorStart| :guilabel:`Start of Line`"
+msgstr "|labelAnchorStart| :guilabel:`Début de la ligne`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:529
+msgid "|labelAnchorEnd| :guilabel:`End of Line`"
+msgstr "|labelAnchorEnd| :guilabel:`Fin de la ligne`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:530
+msgid "or |labelAnchorCustom| :guilabel:`Custom...`."
+msgstr "ou |labelAnchorCustom| :guilabel:`Personnalisé...`."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:532
+msgid ""
+":guilabel:`Placement Behavior`: use :guilabel:`Preferred Placement Hint` to "
+"treat the label anchor only as a hint for the label placement. By choosing "
+":guilabel:`Strict`, labels are placed exactly on the label anchor."
+msgstr ""
+":guilabel:`Comportement de placement` : utilisez :guilabel:`Conseil de "
+"placement préféré` pour traiter l'ancrage de l'étiquette uniquement comme un"
+" conseil pour le placement de l'étiquette. En choisissant "
+":guilabel:`Stricte`, les étiquettes sont placées exactement sur l'ancre de "
+"l'étiquette."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:539
+msgid "Placement for polygon layers"
+msgstr "Placement des couches de polygones"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:541
+msgid ""
+"You can choose one of the following modes for placing labels of polygons:"
+msgstr ""
+"Vous pouvez choisir l'un des modes suivants pour placer les étiquettes des "
+"polygones :"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:548
+msgid "Label placement examples for polygons"
+msgstr "Exemples de placement d'étiquettes pour les polygones"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:551
+msgid ""
+":guilabel:`Offset from Centroid`: labels are placed over the feature "
+"centroid or at a fixed :guilabel:`Offset X,Y` distance (in :ref:`supported "
+"units <unit_selector>`) from the centroid. The reference centroid can be "
+"determined based on the part of the polygon rendered in the map canvas "
+"(:guilabel:`visible polygon`) or the :guilabel:`whole polygon`, no matter if"
+" you can see it. You can also:"
+msgstr ""
+":guilabel:`Décalage depuis le centroïde` : les étiquettes sont placées sur "
+"le centroïde de l'entité ou à une distance fixe :guilabel:`Décalage X,Y` (en"
+" :ref:`supported units 1`) du centroïde. Le centroïde de référence peut être"
+" déterminé sur la base de la partie du polygone rendue dans le canevas de la"
+" carte (:guilabel:`polygone visible`) ou du :guilabel:`polygone entier`, peu"
+" importe si vous pouvez le voir. Vous pouvez égalemen"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:558
+msgid "force the centroid point to lay inside their polygon"
+msgstr ""
+"forcer le point du centroïde à se situer à l'intérieur de leur polygone"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:559
+msgid "place the label within a specific quadrant"
+msgstr "placer l'étiquette dans un quadrant spécifique"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:560
+msgid "assign a rotation"
+msgstr "attribuer une rotation"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:561
+msgid ""
+":guilabel:`Allow placing labels outside of polygons` when it is not possible"
+" to place them inside the polygon. Thanks to data-defined properties, this "
+"makes possible to either allow outside labels, prevent outside labels, or "
+"force outside labels on a feature-by-feature basis."
+msgstr ""
+":guilabel:`Permet de placer des étiquettes à l'extérieur des polygones` "
+"lorsqu'il n'est pas possible de les placer à l'intérieur du polygone. Grâce "
+"à des propriétés définies par les données, cela permet soit d'autoriser les "
+"étiquettes extérieures, soit d'empêcher les étiquettes extérieures, soit "
+"encore de forcer les étiquettes extérieures en fonction de chaque entité."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:566
+msgid ""
+":guilabel:`Around Centroid`: places the label within a preset distance "
+"around the centroid, with a preference for the placement directly over the "
+"centroid. Again, you can define whether the centroid is the one of the "
+":guilabel:`visible polygon` or the :guilabel:`whole polygon`, and whether to"
+" force the centroid point inside the polygon."
+msgstr ""
+":guilabel:`Autour du centroïde` : place l'étiquette à une distance "
+"prédéfinie autour du centroïde, avec une préférence pour le placement "
+"directement sur le centroïde. Là encore, vous pouvez définir si le centroïde"
+" est celui du polygone :guilabel:`visible` ou du polygone "
+":guilabel:`global`, et s'il faut forcer le point du centroïde à l'intérieur "
+"du polygone."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:572
+msgid ""
+":guilabel:`Horizontal`: places at the best position a horizontal label "
+"inside the polygon. The preferred placement is further from the edges of the"
+" polygon. It's possible to :guilabel:`Allow placing labels outside of "
+"polygons`."
+msgstr ""
+":guilabel:`Horizontal` : place au meilleur endroit une étiquette horizontale"
+" à l'intérieur du polygone. L'emplacement préféré est plus éloigné des bords"
+" du polygone. Il est possible de :guilabel:`Permettre de placer les "
+"étiquettes à l'extérieur des polygones`."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:576
+msgid ""
+":guilabel:`Free (Angled)`: places at the best position a rotated label "
+"inside the polygon. The rotation respects the polygon's orientation and the "
+"preferred placement is further from the edges of the polygon. It's possible "
+"to :guilabel:`Allow placing labels outside of polygons`."
+msgstr ""
+":guilabel:`Libre (angle)` : place à la meilleure position une étiquette "
+"tournée à l'intérieur du polygone. La rotation respecte l'orientation du "
+"polygone et le placement préféré est plus éloigné des bords du polygone. Il "
+"est possible de :guilabel:`Permettre de placer les étiquettes à l'extérieur "
+"des polygones"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:581
+msgid ""
+":guilabel:`Using Perimeter`: draws the label parallel to a generalised line "
+"representing the polygon boundary, with preference for straighter portions "
+"of the perimeter. You can define:"
+msgstr ""
+":guilabel:`Utilisation du périmètre' : dessine l'étiquette parallèlement à "
+"une ligne généralisée représentant la limite du polygone, avec une "
+"préférence pour les portions plus droites du périmètre. Vous pouvez définir "
+":"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:585
+msgid ""
+":guilabel:`Allowed positions`: :guilabel:`Above line`, :guilabel:`On line`, "
+":guilabel:`Below line` and :guilabel:`Line orientation dependent position` "
+"(placing the label at the left or the right of the polygon's boundary). It's"
+" possible to select several options at once. In that case, QGIS will look "
+"for the optimal label position."
+msgstr ""
+":guilabel:`Positions autorisées` : :guilabel:`Au-dessus de la ligne`, "
+":guilabel:`Sur la ligne`, :guilabel:`Au-dessous de la ligne` et "
+":guilabel:`Orientation de la ligne dépendant de la position` (en plaçant le "
+"label à gauche ou à droite de la limite du polygone). Il est possible de "
+"sélectionner plusieurs options à la fois. Dans ce cas, QGIS cherchera la "
+"position optimale de l'étiquette."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:590
+msgid ":guilabel:`Distance` between the label and the polygon's outline"
+msgstr ":guilabel:`Distance` entre l'étiquette et le contour du polygone"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:591
+msgid ""
+"the :guilabel:`Repeating Labels` :guilabel:`Distance` to display multiple "
+"times the label over the length of the perimeter."
+msgstr ""
+"la :guilabel:`Répétition des étiquettes` :guilabel:`Distance` pour afficher "
+"plusieurs fois l'étiquette sur la longueur du périmètre."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:594
+msgid ""
+":guilabel:`Using Perimeter (Curved)`: draws the label following the "
+"curvature of the polygon's boundary. In addition to the parameters available"
+" with the :guilabel:`Using Perimeter` mode, you can set the "
+":guilabel:`Maximum angle between curved characters polygon`, either inside "
+"or outside."
+msgstr ""
+":guilabel:`Utilisation du périmètre (incurvé) ` : dessine l'étiquette en "
+"suivant la courbure de la limite du polygone. En plus des paramètres "
+"disponibles avec le mode :guilabel:`Utilisation du périmètre`, vous pouvez "
+"définir le polygone :guilabel:`l'angle maximum entre les caractères "
+"incurvés`, soit à l'intérieur ou à l'extérieur."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:600
+msgid ""
+":guilabel:`Outside Polygons`: always places labels outside the polygons, at "
+"a set :guilabel:`Distance`"
+msgstr ""
+":guilabel:`En dehors des polygones` : place toujours les étiquettes en "
+"dehors des polygones, à un ensemble :guilabel:`Distance`."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:604
+msgid "Common placement settings"
+msgstr "Paramètres de placement communs"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:606
+msgid ""
+"Some label placement settings are available for all layer geometry types:"
+msgstr ""
+"Certains paramètres de placement des étiquettes sont disponibles pour tous "
+"les types de géométrie des couches :"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:609
+msgid "Data Defined"
+msgstr "Définit par les données."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:611
+msgid ""
+"The :guilabel:`Data Defined` group provides direct control on labels "
+"placement, on a feature-by-feature basis. It relies on their attributes or "
+"an expression to set:"
+msgstr ""
+"Le groupe :guilabel:`Définit par les données` offre un contrôle direct sur "
+"le placement des étiquettes, entité par entité. Il s'appuie sur leurs "
+"attributs ou sur une expression à définir :"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:615
+msgid "the :guilabel:`X` and :guilabel:`Y` coordinate"
+msgstr "les coordonnées :guilabel:`X` et :guilabel:`Y"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:616
+msgid "the text alignment over the custom position set above:"
+msgstr ""
+"l'alignement du texte par rapport à la position personnalisée définie ci-"
+"dessus :"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:618
+msgid ":guilabel:`Horizontal`: it can be **Left**, **Center** or **Right**"
+msgstr ""
+":guilabel:`Horizontal` : il peut être **Gauche**, **Centre** ou **Droite**"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:619
+msgid ""
+"the text :guilabel:`Vertical`: it can be **Bottom**, **Base**, **Half**, "
+"**Cap** or **Top**"
+msgstr ""
+"le texte :guilabel:`Vertical` : il peut être **Dessous**, **Base**, "
+"**Moitié**, **Cap** ou **Haut**"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:621
+msgid ""
+"the text :guilabel:`Rotation`. Check the :guilabel:`Preserve data rotation "
+"values` entry if you want to keep the rotation value in the associated field"
+" and apply it to the label, whether the label is pinned or not. If "
+"unchecked, unpinning the label rotation is reset and its value cleared from "
+"the attribute table."
+msgstr ""
+"la :guilabel:`Rotation` du texte. Vérifiez l'entrée :guilabel:`Préserver les"
+" valeurs de rotation des données` si vous souhaitez conserver la valeur de "
+"rotation dans le champ associé et l'appliquer à l'étiquette, que celle-ci "
+"soit épinglée ou non. Si elle n'est pas cochée, la rotation de l'étiquette "
+"est réinitialisée et sa valeur est effacée de la table d'attributs."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:627
+msgid ""
+"Data-defined rotation with polygon features is currently supported only with"
+" the :guilabel:`Around centroid` placement mode."
+msgstr ""
+"La rotation définie par les données avec des entités de type polygone n'est "
+"actuellement supportée qu'avec le mode de placement :guilabel:`Autour "
+"centroïde`."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:630
+msgid ""
+"Expressions can not be used in combination with the labels map tools (ie the"
+" :guilabel:`Rotate label` and :guilabel:`Move label` tools) to :ref:`data-"
+"define <data_defined>` labels placement. The widget will be reset to the "
+"corresponding :ref:`auxiliary storage field <vector_auxiliary_storage>`."
+msgstr ""
+"Les expressions ne peuvent pas être utilisées en combinaison avec les outils"
+" de cartographie des étiquettes (c'est-à-dire les outils :guilabel:`Rotation"
+" des étiquettes` et :guilabel:`Déplacer étiquettes`) pour le placement des "
+"étiquettes :ref:`data-define <data_defined>`. Le widget sera réinitialisé "
+"sur le champ de stockage auxiliaire correspondant :ref:`auxiliary storage "
+"field <vector_auxiliary_storage>`."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:639
+msgid "Priority"
+msgstr "Priorité"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:641
+msgid ""
+"In the :guilabel:`Priority` section you can define the placement priority "
+"rank of each label, ie if there are different diagrams or labels candidates "
+"for the same location, the item with the higher priority will be displayed "
+"and the others could be left out."
+msgstr ""
+"Dans la section :guilabel:`priorité` vous pouvez définir le rang de priorité"
+" de placement de chaque étiquette, c'est-à-dire que s'il y a différents "
+"diagrammes ou étiquettes candidats pour le même emplacement, l'élément avec "
+"la priorité la plus élevée sera affiché et les autres pourraient être "
+"laissés de côté."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:646
+msgid ""
+"The priority rank is also used to evaluate whether a label could be omitted "
+"due to a greater weighted :ref:`obstacle feature <labels_obstacles>`."
+msgstr ""
+"Le rang de priorité est également utilisé pour évaluer si une étiquette "
+"pourrait être omis en raison d'une entité pondéré :ref:`obstacle feature "
+"<labels_obstacles>`."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:652
+msgid "Obstacles"
+msgstr "Obstacles"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:654
+msgid ""
+"In some contexts (eg, high density labels, overlapping features...), the "
+"labels placement can result in labels being placed over unrelated features."
+msgstr ""
+"Dans certains contextes (par exemple, les étiquettes à haute densité, les "
+"entités qui se chevauchent...), le placement des étiquettes peut avoir pour "
+"conséquence que des étiquettes soient placées sur des entités sans rapport."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:657
+msgid ""
+"An obstacle is a feature over which QGIS avoids placing other features' "
+"labels or diagrams. This can be controlled from the :guilabel:`Obstacles` "
+"section:"
+msgstr ""
+"Un obstacle est une entité sur laquelle QGIS évite de placer les étiquettes "
+"ou les diagrammes d'autres entités. Ceci peut être contrôlé à partir de la "
+"section :guilabel:`Obstacles` :"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:660
+msgid ""
+"Activate the |checkbox| :guilabel:`Features act as obstacles` option to "
+"decide that features of the layer should act as obstacles for any label and "
+"diagram (including items from other features in the same layer)."
+msgstr ""
+"Activez l'option |checkbox| :guilabel:`Entités en obstacle` pour décider que"
+" les entités de la couche doivent agir comme des obstacles pour toute "
+"étiquette et diagramme (y compris les éléments d'autres entités de la même "
+"couche)."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:664
+msgid ""
+"Instead of the whole layer, you can select a subset of features to use as "
+"obstacles, using the |dataDefined| :sup:`data-defined override` control next"
+" to the option."
+msgstr ""
+"Au lieu de la couche entière, vous pouvez sélectionner un sous-ensemble de "
+"l'entité à utiliser comme obstacle, en utilisant le contrôle |dataDefined| "
+":sup:`Passer outre la définition des données` à côté de l'option."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:668
+msgid "Use the :guilabel:`Settings` button to tweak the obstacle's weighting."
+msgstr ""
+"Utilisez le bouton :guilabel:`Paramètres` pour modifier la pondération de "
+"l'obstacle."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:670
+msgid ""
+"For every potential obstacle feature you can assign an :guilabel:`Obstacle "
+"weight`: any :ref:`label <labels_priority>` or :ref:`diagram "
+"<diagram_placement>` whose placement priority rank is greater than this "
+"value can be placed over. Labels or diagrams with lower rank will be omitted"
+" if no other placement is possible."
+msgstr ""
+"Pour chaque obstacle potentiel, vous pouvez attribuer un :guilabel:`Poid "
+"d'obstacle` : tout :ref:`label <labels_priority>` ou :ref:`diagram "
+"<diagram_placement>` dont le rang de priorité de placement est supérieur à "
+"cette valeur peut être placé par dessus. Les étiquettes ou diagrammes de "
+"rang inférieur seront omis si aucun autre placement n'est possible."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:676
+msgid ""
+"This weighting can also be data-defined, so that within the same layer, "
+"certain features are more likely to be covered than others."
+msgstr ""
+"Cette pondération peut également être définie par les données, de sorte que "
+"dans une même couche, certaines entités sont plus susceptibles d'être "
+"couvertes que d'autres."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:678
+msgid ""
+"For polygon layers, you can choose the kind of obstacle the feature is:"
+msgstr ""
+"Pour les couches de type polygone, vous pouvez choisir le type d'obstacle "
+"que représente l'entité :"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:680
+msgid ""
+"**over the feature's interior**: avoids placing labels over the interior of "
+"the polygon (prefers placing labels totally outside or just slightly inside "
+"the polygon)"
+msgstr ""
+"**sur l'intérieur de l'entité**: évite de placer des étiquettes sur "
+"l'intérieur du polygone (préfère placer les étiquettes totalement à "
+"l'extérieur ou juste légèrement à l'intérieur du polygone)"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:683
+msgid ""
+"or **over the feature's boundary**: avoids placing labels over the boundary "
+"of the polygon (prefers placing labels outside or completely inside the "
+"polygon). This can be useful for layers where the features cover the whole "
+"area (administrative units, categorical coverages, ...). In this case, it is"
+" impossible to avoid placing labels within these features, and it looks much"
+" better when placing them over the boundaries between features is avoided."
+msgstr ""
+"ou **sur la limite de l'élément** : évite de placer des étiquettes sur la "
+"limite du polygone (préfère placer des étiquettes à l'extérieur ou "
+"complètement à l'intérieur du polygone). Cela peut être utile pour les "
+"couches où les entités couvrent toute la zone (unités administratives, "
+"couvertures catégorielles, ...). Dans ce cas, il est impossible d'éviter de "
+"placer des étiquettes à l'intérieur de ces entités, et il est préférable "
+"d'éviter de les placer au-dessus des limites entre les entités"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:695
 msgid "Rendering tab"
 msgstr "Onglet Rendu"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:487
+#: ../../docs/user_manual/style_library/label_settings.rst:697
 msgid ""
 "In the |render| :guilabel:`Rendering` tab, you can tune when the labels can "
 "be rendered and their interaction with other labels and features."
@@ -1070,15 +1608,15 @@ msgstr ""
 "étiquettes peuvent être rendues et leur interaction avec d'autres étiquettes"
 " et entites."
 
-#: ../../docs/user_manual/style_library/label_settings.rst:491
+#: ../../docs/user_manual/style_library/label_settings.rst:701
 msgid "Label options"
 msgstr "Options d'étiquette"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:493
+#: ../../docs/user_manual/style_library/label_settings.rst:703
 msgid "Under :guilabel:`Label options`:"
 msgstr "Sous :guilabel:`Options d'étiquette`:"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:495
+#: ../../docs/user_manual/style_library/label_settings.rst:705
 msgid ""
 "You find the :ref:`scale-based <label_scaledepend>` and the :guilabel:`Pixel"
 " size-based` visibility settings."
@@ -1086,7 +1624,7 @@ msgstr ""
 "Vous trouverez les paramètres de visibilité :ref:`basée sur l'échelle "
 "<label_scaledepend>` et :guilabel:`basé sur la taille de pixel`."
 
-#: ../../docs/user_manual/style_library/label_settings.rst:498
+#: ../../docs/user_manual/style_library/label_settings.rst:708
 msgid ""
 "The :guilabel:`Label z-index` determines the order in which labels are "
 "rendered, as well in relation with other feature labels in the layer (using "
@@ -1101,7 +1639,7 @@ msgstr ""
 "supérieur sont rendues au-dessus des étiquettes (de n'importe quelle couche)"
 " avec un z-index inférieur."
 
-#: ../../docs/user_manual/style_library/label_settings.rst:503
+#: ../../docs/user_manual/style_library/label_settings.rst:713
 msgid ""
 "Additionally, the logic has been tweaked so that if two labels have matching"
 " z-indexes, then:"
@@ -1109,7 +1647,7 @@ msgstr ""
 "De plus, la logique a été modifiée de sorte que si deux étiquettes ont des "
 "index z correspondants, alors:"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:506
+#: ../../docs/user_manual/style_library/label_settings.rst:716
 msgid ""
 "if they are from the same layer, the smaller label will be drawn above the "
 "larger label"
@@ -1117,7 +1655,7 @@ msgstr ""
 "s'ils proviennent de la même couche, la plus petite étiquette sera dessinée "
 "au-dessus de la plus grande étiquette"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:508
+#: ../../docs/user_manual/style_library/label_settings.rst:718
 msgid ""
 "if they are from different layers, the labels will be drawn in the same "
 "order as their layers themselves (ie respecting the order set in the map "
@@ -1127,7 +1665,7 @@ msgstr ""
 "dans le même ordre que leurs couches elles-mêmes (c'est-à-dire en respectant"
 " l'ordre défini dans la légende de la carte)."
 
-#: ../../docs/user_manual/style_library/label_settings.rst:511
+#: ../../docs/user_manual/style_library/label_settings.rst:721
 msgid ""
 "This setting doesn't make labels to be drawn below the features from other "
 "layers, it just controls the order in which labels are drawn on top of all "
@@ -1137,7 +1675,7 @@ msgstr ""
 "d'autres couches, il contrôle simplement l'ordre dans lequel les étiquettes "
 "sont dessinées par-dessus toutes les entités des couches."
 
-#: ../../docs/user_manual/style_library/label_settings.rst:515
+#: ../../docs/user_manual/style_library/label_settings.rst:725
 msgid ""
 "While rendering labels and in order to display readable labels, QGIS "
 "automatically evaluates the position of the labels and can hide some of them"
@@ -1152,7 +1690,7 @@ msgstr ""
 "compris les étiquettes en collision)` afin de corriger manuellement leur "
 "placement (voir :ref:`label_toolbar`)."
 
-#: ../../docs/user_manual/style_library/label_settings.rst:520
+#: ../../docs/user_manual/style_library/label_settings.rst:730
 msgid ""
 "With data-defined expressions in :guilabel:`Show label` and "
 ":guilabel:`Always Show` you can fine tune which labels should be rendered."
@@ -1161,7 +1699,7 @@ msgstr ""
 "étiquette` et :guilabel:`toujours afficher` vous pouvez affiner les "
 "étiquettes à rendre."
 
-#: ../../docs/user_manual/style_library/label_settings.rst:522
+#: ../../docs/user_manual/style_library/label_settings.rst:732
 msgid ""
 "Allow to :guilabel:`Show upside-down labels`: alternatives are **Never**, "
 "**when rotation defined** or **always**."
@@ -1169,23 +1707,23 @@ msgstr ""
 "Autoriser :guilabel:`Afficher les étiquettes à l'envers`: les alternatives "
 "sont **Jamais**, **lorsque la rotation est définie** ou **toujours**."
 
-#: ../../docs/user_manual/style_library/label_settings.rst:526
+#: ../../docs/user_manual/style_library/label_settings.rst:736
 msgid "Feature options"
 msgstr "Options d'entités"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:528
+#: ../../docs/user_manual/style_library/label_settings.rst:738
 msgid "Under :guilabel:`Feature options`:"
 msgstr "Sous :guilabel:`Options d'entité`:"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:530
+#: ../../docs/user_manual/style_library/label_settings.rst:740
 msgid ""
-"You can choose to :guilabel:`label every part of a multi-part feature` and "
-":guilabel:`limit the number of features to be labeled`."
+"You can choose to :guilabel:`Label every part of a multi-part features` and "
+":guilabel:`Limit number of features to be labeled to`."
 msgstr ""
-"Vous pouvez choisir d':guilabel:`étiqueter chaque partie d'une entité en "
-"plusieurs parties` et :guilabel: limiter le nombre d'entités à étiqueter`."
+"Vous pouvez choisir :guilabel:`Etiqueter chaque partie d'une entité en "
+"plusieurs parties` et :guilabel:`Limiter le nombre d'entités à étiqueter`."
 
-#: ../../docs/user_manual/style_library/label_settings.rst:532
+#: ../../docs/user_manual/style_library/label_settings.rst:742
 msgid ""
 "Both line and polygon layers offer the option to set a minimum size for the "
 "features to be labeled, using :guilabel:`Suppress labeling of features "
@@ -1195,7 +1733,7 @@ msgstr ""
 "taille minimale pour les entités à étiqueter, en utilisant "
 ":guilabel:`Supprimer l'étiquetage des entités plus petites que`."
 
-#: ../../docs/user_manual/style_library/label_settings.rst:535
+#: ../../docs/user_manual/style_library/label_settings.rst:745
 msgid ""
 "For polygon features, you can also filter the labels to show according to "
 "whether they completely fit within their feature or not."
@@ -1204,7 +1742,7 @@ msgstr ""
 "pour qu'elles s'affichent selon qu'elles s'intègrent complètement dans leur "
 "entité ou non."
 
-#: ../../docs/user_manual/style_library/label_settings.rst:537
+#: ../../docs/user_manual/style_library/label_settings.rst:747
 msgid ""
 "For line features, you can choose to :guilabel:`Merge connected lines to "
 "avoid duplicate labels`, rendering a quite airy map in conjunction with the "
@@ -1216,90 +1754,24 @@ msgstr ""
 "assez aérée en conjonction avec les options :guilabel:`Distance` ou "
 ":guilabel:`Répéter` dans :ref:`Placement <labels_line_placement>`."
 
-#: ../../docs/user_manual/style_library/label_settings.rst:543
-msgid "Obstacles"
-msgstr "Obstacles"
+#~ msgid ""
+#~ ":guilabel:`Parallel`:draws the label parallel to a generalised line "
+#~ "representing the feature, with preference for placement over straighter "
+#~ "portions of the line. You can define:"
+#~ msgstr ""
+#~ ":guilabel:`Parallèle`:dessine l'étiquette parallèlement à une ligne "
+#~ "généralisée représentant l'entité, avec une préférence pour le placement sur"
+#~ " des portions plus droites de la ligne. Vous pouvez définir :"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:545
-msgid ""
-"An obstacle is a feature QGIS tries as far as possible to not place labels "
-"over. From the :guilabel:`Obstacles` frame, you can manage the covering "
-"relation between labels and features:"
-msgstr ""
-"Un obstacle est une entité que QGIS essaie autant que possible de ne pas "
-"placer d'étiquettes. Depuis :guilabel:`Obstacles`, vous pouvez gérer la "
-"relation de couverture entre les étiquettes et les entites:"
-
-#: ../../docs/user_manual/style_library/label_settings.rst:549
-msgid ""
-"Activate the |checkbox| :guilabel:`Discourage labels from covering features`"
-" option to decide whether features of the layer should act as obstacles for "
-"any label (including labels from other features in the same layer)."
-msgstr ""
-"|checkbox| option :guilabel:`Empêcher les étiquettes de recouvrir les "
-"entités` pour décider si les entités de la couche doivent faire obstacle à "
-"toute étiquette (y compris les étiquettes des autres entités de la même "
-"couche)."
-
-#: ../../docs/user_manual/style_library/label_settings.rst:553
-msgid ""
-"Instead of the whole layer, you can define a subset of features to use as "
-"obstacles, using the |dataDefined| :sup:`data-defined override` control next"
-" to the option."
-msgstr ""
-"Au lieu de la couche entière, vous pouvez définir un sous-ensemble d'entités"
-" à utiliser comme obstacles, à l'aide de |dataDefined| :sup:`remplacement "
-"défini par les données` à côté de l'option."
-
-#: ../../docs/user_manual/style_library/label_settings.rst:556
-msgid ""
-"The |slider| priority control slider for obstacles allows you to make labels"
-" prefer to overlap features from certain layers rather than others. A **Low "
-"weight** obstacle priority means that features of the layer are less "
-"considered as obstacles and thus more likely to be covered by labels. This "
-"priority can also be data-defined, so that within the same layer, certain "
-"features are more likely to be covered than others."
-msgstr ""
-"Le |slider| le curseur de contrôle de priorité des obstacles vous permet de "
-"faire en sorte que les étiquettes préfèrent chevaucher les entités de "
-"certaines couches plutôt que d'autres. Une priorité d'obstacle **de faible "
-"poids** signifie que les caractéristiques de la couche sont moins "
-"considérées comme des obstacles et donc plus susceptibles d'être couvertes "
-"par des étiquettes. Cette priorité peut également être définie par les "
-"données, de sorte qu'au sein de la même couche, certaines entités sont plus "
-"susceptibles d'être plus couvertes que d'autres."
-
-#: ../../docs/user_manual/style_library/label_settings.rst:563
-msgid ""
-"For polygon layers, you can choose the type of obstacle the features could "
-"be, by minimising the labels placement:"
-msgstr ""
-"Pour les couches de polygones, vous pouvez choisir le type d'obstacle que "
-"les entités pourraient être, en minimisant le placement des étiquettes:"
-
-#: ../../docs/user_manual/style_library/label_settings.rst:566
-msgid ""
-"**over the feature's interior**: avoids placing labels over the interior of "
-"the polygon (prefers placing labels totally outside or just slightly inside "
-"the polygon)"
-msgstr ""
-"**sur l'intérieur de l'entité**: évite de placer des étiquettes sur "
-"l'intérieur du polygone (préfère placer les étiquettes totalement à "
-"l'extérieur ou juste légèrement à l'intérieur du polygone)"
-
-#: ../../docs/user_manual/style_library/label_settings.rst:569
-msgid ""
-"or **over the feature's boundary**: avoids placing labels over boundary of "
-"the polygon (prefers placing labels outside or completely inside the "
-"polygon). E.g., it can be useful for regional boundary layers, where the "
-"features cover an entire area. In this case, it's impossible to avoid "
-"placing labels within these features, and it looks much better to avoid "
-"placing them over the boundaries between features."
-msgstr ""
-"ou **au-dessus de la limite de l'entité**: évite de placer des étiquettes "
-"sur la limite du polygone (préfère placer des étiquettes à l'extérieur ou "
-"complètement à l'intérieur du polygone). Par exemple, il peut être utile "
-"pour les couches de limites régionales, où les entités couvrent une zone "
-"entière. Dans ce cas, il est impossible d'éviter de placer des étiquettes "
-"dans ces entités, et il semble beaucoup mieux d'éviter de les placer au-"
-"dessus des limites entre les entités."
+#~ msgid ""
+#~ ":guilabel:`Around Centroid`: places the label within a preset distance "
+#~ "around the centroid, with a preference for the placement directly over the "
+#~ "centroid. Again, you can define whether the centroid is the one of the "
+#~ ":guilabel:`visible polygon` or the :guilabel:`whole polygon`, and whether to"
+#~ " force the force the centroid point inside the polygon."
+#~ msgstr ""
+#~ ":guilabel:`Autour centroïde` : place l'étiquette à une distance prédéfinie "
+#~ "autour du centroïde, avec une préférence pour le placement directement sur "
+#~ "le centroïde. Là encore, vous pouvez définir si le centroïde est celui du "
+#~ "polygone :guilabel:`visible` ou du polygone :guilabel:`global`, et s'il faut"
+#~ " forcer le point du centroïde à l'intérieur du polygone."
