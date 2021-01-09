@@ -1620,20 +1620,22 @@ We now describe an example using the data-defined override function for the
    Now you can shift the label manually to another position (see figure_labels_move_).
    The new position of the label is saved in the ``xlabel`` and ``ylabel`` columns
    of the attribute table.
-#. Using :ref:`geometry_generator_symbol` with the expression below, you can
-   also add a linestring symbol layer to connect each lake to its moved label:
+#. It's also possible to add a line connecting each lake to its moved label using:
 
-   ::
+   * the label's :ref:`callout property <labels_callouts>`
+   * or the :ref:`geometry generator symbol layer <geometry_generator_symbol>` with
+     the expression below:
+
+     ::
 
       make_line( centroid( $geometry ), make_point( "xlabel", "ylabel" ) )
 
+     .. _figure_labels_move:
 
-   .. _figure_labels_move:
+     .. figure:: img/move_label.png
+        :align: center
 
-   .. figure:: img/move_label.png
-      :align: center
-
-      Moved labels
+        Moved labels
 
 .. note::
 
