@@ -107,9 +107,9 @@ right place to put this information.
 
 .. _plugin_metadata_table:
 
-=====================  ========  =======================================
+=====================  ========  =============================================================
 Metadata name          Required  Notes
-=====================  ========  =======================================
+=====================  ========  =============================================================
 name                   True      a short string  containing the name of the plugin
 qgisMinimumVersion     True      dotted notation of minimum QGIS version
 qgisMaximumVersion     False     dotted notation of maximum QGIS version
@@ -131,13 +131,13 @@ tracker                False     a valid URL for tickets and bug reports
 icon                   False     a file name or a relative path (relative to
                                  the base folder of the plugin's compressed
                                  package) of a web friendly image (PNG, JPEG)
-category               False     one of `Raster`, `Vector`, `Database` and `Web`
+category               False     one of ``Raster``, ``Vector``, ``Database`` and ``Web``
 plugin_dependencies    False     PIP-like comma separated list of other plugins to install
 server                 False     boolean flag, :const:`True` or :const:`False`, determines if
                                  the plugin has a server interface
 hasProcessingProvider  False     boolean flag, :const:`True` or :const:`False`, determines if
                                  the plugin provides processing algorithms
-=====================  ========  =======================================
+=====================  ========  =============================================================
 
 By default, plugins are placed in the :menuselection:`Plugins` menu (we will see
 in the next section how to add a menu entry for your plugin) but they can also

@@ -146,7 +146,6 @@ purposes only but still interesting for learning):
 https://github.com/qgis/QGIS/blob/master/tests/src/python/qgis_wrapped_server.py
 
 
-
 Server plugins
 ==============
 
@@ -193,7 +192,8 @@ Each filter should implement at least one of three callbacks:
 * :meth:`responseComplete() <qgis.server.QgsServerFilter.responseComplete>`
 * :meth:`sendResponse() <qgis.server.QgsServerFilter.sendResponse>`
 
-All filters have access to the request/response object (:class:`QgsRequestHandler <qgis.server.QgsRequestHandler>`)
+All filters have access to the request/response object
+(:class:`QgsRequestHandler <qgis.server.QgsRequestHandler>`)
 and can manipulate all its properties (input/output) and
 raise exceptions (while in a quite particular way as we’ll see below).
 

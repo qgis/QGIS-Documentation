@@ -116,7 +116,7 @@ Then some examples for creating a director
   # This scheme can be used with OpenStreetMap data
   director = QgsVectorLayerDirector(vectorLayer, 5, 'yes', '1', 'no', QgsVectorLayerDirector.DirectionBoth)
 
-To construct a director  we should pass a vector layer, that will be used
+To construct a director, we should pass a vector layer that will be used
 as the source for the graph structure and information about allowed movement on
 each road segment (one-way or bidirectional movement, direct or reverse
 direction). The call looks like this
@@ -146,9 +146,9 @@ And here is full list of what these parameters mean:
   those roads where field ``directionFieldId`` is not set or has some value
   different from any of the three values specified above. Possible values are:
 
-  * ``QgsVectorLayerDirector.DirectionForward`` --- One-way direct
-  * ``QgsVectorLayerDirector.DirectionBackward`` --- One-way reverse
-  * ``QgsVectorLayerDirector.DirectionBoth`` --- Two-way
+  * :attr:`QgsVectorLayerDirector.DirectionForward <qgis.analysis.QgsVectorLayerDirector.DirectionForward>` --- One-way direct
+  * :attr:`QgsVectorLayerDirector.DirectionBackward <qgis.analysis.QgsVectorLayerDirector.DirectionBackward>` --- One-way reverse
+  * :attr:`QgsVectorLayerDirector.DirectionBoth <qgis.analysis.QgsVectorLayerDirector.DirectionBoth>` --- Two-way
 
 
 It is necessary then to create a strategy for calculating edge properties

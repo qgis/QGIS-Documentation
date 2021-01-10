@@ -34,11 +34,11 @@ Python application.
 
 .. index:: API
 
-There is a :api:`complete QGIS API <>` reference that
+There is a :api:`complete QGIS C++ API <>` reference that
 documents the classes from the QGIS libraries. :pyqgis:`The Pythonic QGIS API
 (pyqgis) <>` is nearly identical to the C++ API.
 
-A good resource for learning how to perform common tasks is to
+Another good resource for learning how to perform common tasks is to
 download existing plugins from the
 `plugin repository <https://plugins.qgis.org/>`_ and examine their
 code.
@@ -231,25 +231,37 @@ used.
 
 The QGIS install path varies by platform; the easiest way to find it
 for your system is to use the :ref:`pythonconsole` from within
-QGIS and look at the output from running
-``QgsApplication.prefixPath()``.
+QGIS and look at the output from running:
+
+.. code-block:: python
+
+  QgsApplication.prefixPath()
 
 After the prefix path is configured, we save a reference to
-``QgsApplication`` in the variable ``qgs``. The second argument is set
-to ``False``, specifying that we do not plan to use the GUI since
-we are writing a standalone script. With ``QgsApplication``
+:class:`QgsApplication <qgis.core.QgsApplication>` in the variable ``qgs``.
+The second argument is set to :const:`False`, specifying that we do not plan
+to use the GUI since we are writing a standalone script. With ``QgsApplication``
 configured, we load the QGIS data providers and layer registry by
-calling the ``qgs.initQgis()`` method. With QGIS initialized, we are
-ready to write the rest of the script. Finally, we wrap up by calling
-``qgs.exitQgis()`` to remove the data providers and layer registry
-from memory.
+calling the :meth:`initQgis() <qgis.core.QgsApplication.initQgis>` method.
 
+.. code-block:: python
+
+  qgs.initQgis()
+
+With QGIS initialized, we are ready to write the rest of the script.
+Finally, we wrap up by calling :meth:`exitQgis() <qgis.core.QgsApplication.exitQgis>`
+to remove the data providers and layer registry from memory.
+
+.. code-block:: python
+
+  qgs.exitQgis()
 
 Using PyQGIS in custom applications
 -----------------------------------
 
 The only difference between :ref:`standalonescript` and a custom PyQGIS
-application is the second argument when instantiating the ``QgsApplication``.
+application is the second argument when instantiating the
+:class:`QgsApplication <qgis.core.QgsApplication>`.
 Pass :const:`True` instead of :const:`False` to indicate that we plan to
 use a GUI.
 
