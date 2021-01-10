@@ -387,7 +387,8 @@ From a drop-down list of current layers in the layer panel, select an item and:
     These options are the same as in the :ref:`raster_properties_dialog`.
   * |symbology| :guilabel:`Symbology`, |labeling| :guilabel:`Labels`, |labelmask|
     :guilabel:`Mask` and |3d| :guilabel:`3D View` properties for vector layer.
-    These options are the same as in the :ref:`vector_properties_dialog`.
+    These options are the same as in the :ref:`vector_properties_dialog`
+    and can be extended by custom properties introduced by third-party plugins.
   * |symbology| :guilabel:`Symbology` and |3d| :guilabel:`3D View` properties
     for mesh layer.
     These options are the same as in the :ref:`label_meshproperties`.
@@ -414,14 +415,6 @@ you no longer need to click the :guilabel:`Apply` button.
 
     Defining a layer's symbology from the layer styling panel
 
-.. tip:: **Add custom tabs to the Layer Styling panel**
-
-  Using :ref:`PyQGIS <PyQGIS-Developer-Cookbook>`, you can set new tabs to manage
-  layer properties in the Layer Styling Panel. See
-  https://nathanw.net/2016/06/29/qgis-style-dock-part-2-plugin-panels/ for an example.
-
-.. Todo: Actually, what could be nice is to provide example in the Cookbook to have an
- internal and always guaranteed link (see #2071)
 
 .. index:: Layers; Order
 .. _layer_order:
