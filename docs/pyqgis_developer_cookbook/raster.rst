@@ -264,7 +264,7 @@ Raster values can be queried using the
 the :class:`QgsRasterDataProvider <qgis.core.QgsRasterDataProvider>` class.
 You have to specify a :class:`QgsPointXY <qgis.core.QgsPointXY>`
 and the band number of the raster layer you want to query. The method returns a
-tuple with the value and ``True`` or ``False`` depending on the results:
+tuple with the value and :const:`True` or :const:`False` depending on the results:
 
 .. testcode:: raster
 

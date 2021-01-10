@@ -408,7 +408,8 @@ Add Features
 ------------
 
 Create some :class:`QgsFeature <qgis.core.QgsFeature>` instances and pass a list of them to provider's
-:meth:`addFeatures() <qgis.core.QgsVectorDataProvider.addFeatures>` method. It will return two values: result (true/false) and
+:meth:`addFeatures() <qgis.core.QgsVectorDataProvider.addFeatures>` method. It will return two values:
+result (:const:`True` or :const:`False`) and
 list of added features (their ID is set by the data store).
 
 To set up the attributes of the feature, you can either initialize the feature passing a

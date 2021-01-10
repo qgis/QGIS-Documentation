@@ -226,7 +226,7 @@ installed on your system. It is configured in the script by calling
 the :meth:`setPrefixPath <qgis.core.QgsApplication.setPrefixPath>` method.
 The second argument of
 :meth:`setPrefixPath <qgis.core.QgsApplication.setPrefixPath>`
-is set to ``True``, specifying that default paths are to be
+is set to :const:`True`, specifying that default paths are to be
 used.
 
 The QGIS install path varies by platform; the easiest way to find it
@@ -250,7 +250,7 @@ Using PyQGIS in custom applications
 
 The only difference between :ref:`standalonescript` and a custom PyQGIS
 application is the second argument when instantiating the ``QgsApplication``.
-Pass ``True`` instead of ``False`` to indicate that we plan to
+Pass :const:`True` instead of :const:`False` to indicate that we plan to
 use a GUI.
 
 .. code-block:: python
