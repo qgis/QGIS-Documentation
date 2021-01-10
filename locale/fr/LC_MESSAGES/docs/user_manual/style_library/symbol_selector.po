@@ -1,24 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Francis Gasc <francisgasc@gmail.com>, 2020
-# Sant-anna <delazj@gmail.com>, 2020
+# Harrissou Sant-anna, 2020
+# Francis Gasc <francisgasc@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:27+0000\n"
-"Last-Translator: Sant-anna <delazj@gmail.com>, 2020\n"
+"POT-Creation-Date: 2020-12-25 09:53+0000\n"
+"PO-Revision-Date: 2020-12-24 12:04+0000\n"
+"Last-Translator: Francis Gasc <francisgasc@gmail.com>, 2021\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
 "Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
@@ -381,22 +383,22 @@ msgstr ""
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:154
 msgid ""
-"the |checkbox| :guilabel:`Enable layer` option controls the symbol layer's "
-"visibility. Disabled symbol layers are not drawn when rendering the symbol "
-"but are saved in the symbol. Being able to hide symbol layers is convenient "
-"when looking for the best design of your symbol as you don't need to remove "
-"any for the testing. The data-defined override then makes it possible to "
-"hide or display different symbol layers based on expressions (using, for "
-"instance, feature attributes)."
+"the |checkbox| :guilabel:`Enable symbol layer` option controls the symbol "
+"layer's visibility. Disabled symbol layers are not drawn when rendering the "
+"symbol but are saved in the symbol. Being able to hide symbol layers is "
+"convenient when looking for the best design of your symbol as you don't need"
+" to remove any for the testing. The data-defined override then makes it "
+"possible to hide or display different symbol layers based on expressions "
+"(using, for instance, feature attributes)."
 msgstr ""
-"l'option |checkbox| :guilabel:`Activer la couche` contrôle la visibilité de "
-"la couche de symbole. Les couches de symboles désactivées ne sont pas "
-"dessinées lors du rendu du symbole mais sont enregistrées dans le symbole. "
-"La possibilité de masquer les couches de symboles est pratique lorsque vous "
-"recherchez la meilleure conception de votre symbole, car vous n'avez pas "
-"besoin d'en supprimer pour le test. Le remplacement défini par les données "
-"permet ensuite de masquer ou d'afficher différentes couches de symboles en "
-"fonction d'expressions (en utilisant, par exemple, des attributs d'entités)."
+"l'option |checkbox| :guilabel:`Activer couche de symbole` contrôle la "
+"visibilité de la couche de symboles. Les couches de symbole désactivées ne "
+"sont pas dessinées lors du rendu du symbole mais sont enregistrées dans le "
+"symbole. Pouvoir cacher les couches de symboles est pratique lorsque vous "
+"cherchez le meilleur design de votre symbole car vous n'avez pas besoin d'en"
+" supprimer pour les tests. La surcharge définie par les données permet "
+"ensuite de masquer ou d'afficher différentes couches de symboles en fonction"
+" d'expressions (en utilisant, par exemple, des attributs des entités)."
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:160
 msgid ""
@@ -464,38 +466,77 @@ msgstr ""
 "marqueurs, par ex. dégradé ou remplissage de forme."
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:196
-msgid "**Font marker**: use installed fonts as marker symbols"
+msgid ""
+"**Font marker**: similar to the simple marker symbol layer, except that it "
+"uses installed fonts to render the marker. Its additional properties are:"
 msgstr ""
-"**Marqueur de police**: utilisez les polices installées comme symboles de "
-"marqueur"
+"**Marqueur de police** : similaire à la couche de symboles du marqueur "
+"simple, sauf qu'il utilise les polices installées pour rendre le marqueur. "
+"Ses propriétés supplémentaires sont les suivantes :"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:197
-#: ../../docs/user_manual/style_library/symbol_selector.rst:275
-#: ../../docs/user_manual/style_library/symbol_selector.rst:348
+#: ../../docs/user_manual/style_library/symbol_selector.rst:200
+msgid ":guilabel:`Font family`"
+msgstr ":guilabel:`Font family`."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:201
+msgid ":guilabel:`Font style`"
+msgstr ":guilabel:`Font style`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:202
+msgid ""
+":guilabel:`Character(s)`, representing the text to display as symbol. They "
+"can be typed in or selected from the font characters collection widget and "
+"you can live :guilabel:`Preview` them with the selected settings."
+msgstr ""
+":guilabel:`Caractère(s) `, représentant le texte à afficher comme symbole. "
+"Ils peuvent être tapés ou sélectionnés dans le widget de collecte de "
+"caractères et vous pouvez les afficher en direct dans "
+":guilabel:`Prévisualise` avec les paramètres sélectionnés."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:206
+#: ../../docs/user_manual/style_library/symbol_selector.rst:302
+#: ../../docs/user_manual/style_library/symbol_selector.rst:384
 msgid "**Geometry generator** (see :ref:`geometry_generator_symbol`)"
 msgstr ""
 "**Générateur de géométries** ( voir :ref:`geometry_generator_symbol` )"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:201
+#: ../../docs/user_manual/style_library/symbol_selector.rst:210
+msgid ""
+"**Mask**: its sub-symbol defines a mask shape whose color property will be "
+"ignored and only the opacity will be used. This is convenient when the "
+"marker symbol overlaps with labels or other symbols whose colors are close, "
+"making it hard to decipher. More details at :ref:`vector_mask_menu`."
+msgstr ""
+"**Masque** : son sous-symbole définit une forme de masque dont la propriété "
+"de couleur sera ignorée et seule l'opacité sera utilisée. Cela est pratique "
+"lorsque le symbole du marqueur chevauche des étiquettes ou d'autres symboles"
+" dont les couleurs sont proches, ce qui le rend difficile à déchiffrer. Pour"
+" plus de détails, voir :ref:`vector_mask_menu`."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:217
 msgid ""
 "**Raster image marker**: use an image (:file:`PNG`, :file:`JPG`, :file:`BMP`"
 " ...) as marker symbol. The image can be a file on the disk, a remote URL or"
 " embedded in the style database (:ref:`more details <svg_paths>`). Width and"
 " height of the image can be set independently or using the |lockedGray| "
-":sup:`Lock aspect ratio`."
+":sup:`Lock aspect ratio`. The size can be set using any of the :ref:`common "
+"units <unit_selector>` or as a percentage of the image's original size "
+"(scaled by the width)."
 msgstr ""
-"**Marqueur d'image raster**: utilisez une image ( :file:`PNG`, :file:`JPG`, "
+"**Marqueur d'image raster** : utiliser une image (:file:`PNG`, :file:`JPG`, "
 ":file:`BMP` ...) comme symbole de marqueur. L'image peut être un fichier sur"
-" le disque, une URL distante ou incorporée dans la base de données de style "
-"( :ref:`plus de détails <svg_paths>`). La largeur et la hauteur de l'image "
-"peuvent être définies indépendamment ou en utilisant le bouton |lockedGray| "
-":sup:`Verrouiller le format d'image`."
+" le disque, une URL distante ou intégrée dans la base de données de styles "
+"(:ref:`more details <svg_paths>`). La largeur et la hauteur de l'image "
+"peuvent être définies indépendamment ou en utilisant le |lockedGray| "
+":sup:`Bloquer le ratio`. La taille peut être définie en utilisant l'une des "
+"unités communes :ref:`common units <unit_selector>` ou en pourcentage de la "
+"taille originale de l'image (mise à l'échelle par la largeur)."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:206
+#: ../../docs/user_manual/style_library/symbol_selector.rst:224
 msgid "**Vector Field marker** (see :ref:`vector_field_marker`)"
 msgstr "**Marqueur vecteur** ( voir :ref:`vector_field_marker` )"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:210
+#: ../../docs/user_manual/style_library/symbol_selector.rst:228
 msgid ""
 "**SVG marker**: provides you with images from your SVG paths (set in "
 ":menuselection:`Settings --> Options... --> System` menu) to render as "
@@ -513,11 +554,11 @@ msgstr ""
 "distante ou incorporée dans la base de données de style ( :ref:`plus de "
 "details <svg_paths>` )."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:217
+#: ../../docs/user_manual/style_library/symbol_selector.rst:235
 msgid "SVG version requirements"
 msgstr "Exigences de version SVG"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:219
+#: ../../docs/user_manual/style_library/symbol_selector.rst:237
 msgid ""
 "QGIS renders SVG files that follow the `SVG Tiny 1.2 profile "
 "<https://www.w3.org/TR/SVGMobile12/>`_, intended for implementation on a "
@@ -532,7 +573,7 @@ msgstr ""
 "incluses dans SVG 1.1 Full, ainsi que de nouvelles fonctionnalités pour "
 "étendre les capacités de SVG."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:225
+#: ../../docs/user_manual/style_library/symbol_selector.rst:243
 msgid ""
 "Some features not included in these specifications might not be rendered "
 "correctly in QGIS."
@@ -540,11 +581,11 @@ msgstr ""
 "Certaines fonctionnalités non incluses dans ces spécifications peuvent ne "
 "pas être rendues correctement dans QGIS."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:228
+#: ../../docs/user_manual/style_library/symbol_selector.rst:246
 msgid "Enable SVG marker symbol customization"
 msgstr "Activer la personnalisation du symbole de marqueur SVG"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:230
+#: ../../docs/user_manual/style_library/symbol_selector.rst:248
 msgid ""
 "To have the possibility to change the colors of a :guilabel:`SVG marker`, "
 "you have to add the placeholders ``param(fill)`` for fill color, "
@@ -558,27 +599,27 @@ msgstr ""
 "``param(outline-width)`` pour la largeur du trait. Ces espaces réservés "
 "peuvent éventuellement être suivis d'une valeur par défaut, par exemple:"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:246
+#: ../../docs/user_manual/style_library/symbol_selector.rst:264
 msgid "Line Symbols"
 msgstr "Symboles de ligne"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:248
+#: ../../docs/user_manual/style_library/symbol_selector.rst:266
 msgid ""
-"Appropriate for line geometry features, line symbols have following symbol "
-"layer types:"
+"Appropriate for line geometry features, line symbols have the following "
+"symbol layer types:"
 msgstr ""
-"Adaptés aux fonctions de géométrie de ligne, les symboles de ligne ont les "
-"types de couches de symboles suivants:"
+"Adaptés aux entités de la géométrie des lignes, les symboles de lignes ont "
+"les types de couches de symboles suivants :"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:251
+#: ../../docs/user_manual/style_library/symbol_selector.rst:271
 msgid "**Simple line** (default): available settings are:"
 msgstr "**Ligne simple** (par défaut): les paramètres disponibles sont:"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:258
+#: ../../docs/user_manual/style_library/symbol_selector.rst:278
 msgid "Designing a Simple Line Symbol"
 msgstr "Conception d'un symbole de lignes simple"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:260
+#: ../../docs/user_manual/style_library/symbol_selector.rst:280
 msgid ""
 "The simple line symbol layer type has many of the same properties as the "
 ":ref:`simple marker symbol <simple_marker_symbol>`, and in addition:"
@@ -587,11 +628,11 @@ msgstr ""
 "propriétés du :ref:`marqueur de symbole simple <simple_marker_symbol>`, avec"
 " en plus:"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:263
+#: ../../docs/user_manual/style_library/symbol_selector.rst:283
 msgid ":guilabel:`Cap style`"
 msgstr ":guilabel:`style cap`"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:264
+#: ../../docs/user_manual/style_library/symbol_selector.rst:284
 msgid ""
 "|checkbox| :guilabel:`Use custom dash pattern`: overrides the "
 ":guilabel:`Stroke style` setting with a custom dash."
@@ -599,7 +640,29 @@ msgstr ""
 "|checkbox| :guilabel:`Utiliser un motif de tiret personnalisé`: remplace le "
 "paramètre :guilabel:`Style de trait` par un tiret personnalisé."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:269
+#: ../../docs/user_manual/style_library/symbol_selector.rst:286
+msgid ""
+"|checkbox| :guilabel:`Align dash pattern to line length`: the dash pattern "
+"length will be adjusted so that the line will end with a complete dash "
+"element, instead of a gap."
+msgstr ""
+"|checkbox| :guilabel:`Aligner le motif du tiret sur la longueur de la ligne`"
+" : la longueur du motif de tiret sera ajustée de manière à ce que la ligne "
+"se termine par un élément tiret complet, au lieu d'un espace."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:289
+msgid ""
+"|checkbox| :guilabel:`Tweak dash pattern at sharp corners`: dynamically "
+"adjusts the dash pattern placement so that sharp corners are represented by "
+"a full dash element coming into and out of the sharp corner. Dependent on "
+":guilabel:`Align dash pattern to line length`."
+msgstr ""
+"|checkbox| :guilabel:`des tirets aux angles fixes` : ajuste dynamiquement le"
+" placement du motif de tiret de sorte que les coins nets soient représentés "
+"par un élément de tiret complet entrant et sortant du coin fixe . Dépend de "
+":guilabel:`Aligner le motif de tiret sur la longueur de la ligne`."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:296
 msgid ""
 "**Arrow**: draws lines as curved (or not) arrows with a single or a double "
 "head with configurable width, length and thickness. To create a curved arrow"
@@ -616,7 +679,7 @@ msgstr ""
 "rendre le corps de la flèche. Combiné avec le générateur de géométries, ce "
 "type de symbole de couche vous aide à représenter les cartes de flux."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:279
+#: ../../docs/user_manual/style_library/symbol_selector.rst:306
 msgid ""
 "**Marker line**: repeats a :ref:`marker symbol <vector_marker_symbols>` over"
 " the length of a line."
@@ -624,7 +687,7 @@ msgstr ""
 "**Ligne de marqueurs**: répète un :ref:`marqueur de symbole "
 "<vector_marker_symbols>` sur la longueur d'une ligne."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:282
+#: ../../docs/user_manual/style_library/symbol_selector.rst:309
 msgid ""
 "The markers placement can be at a regular distance or based on the line "
 "geometry: first, last or each vertex, on the central point of the line or of"
@@ -634,22 +697,23 @@ msgstr ""
 " géométrie de la ligne: premier, dernier ou chaque sommet, sur le point "
 "central de la ligne ou de chaque segment, ou sur chaque point de courbe."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:285
+#: ../../docs/user_manual/style_library/symbol_selector.rst:312
 msgid "The markers placement can also be given an offset along the line"
 msgstr ""
 "Le placement des marqueurs peut également recevoir un décalage le long de la"
 " ligne"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:286
+#: ../../docs/user_manual/style_library/symbol_selector.rst:313
 msgid ""
-"The |checkbox| :guilabel:`Rotate marker` option allows you to set whether "
-"each marker symbol should be oriented relative to the line direction or not."
+"The |checkbox| :guilabel:`Rotate marker to follow line direction` option "
+"sets whether each marker symbol should be oriented relative to the line "
+"direction or not."
 msgstr ""
-"La |checkbox| :guilabel:`Rotation du marqueur` vous permet de définir si "
-"chaque symbole de marqueur doit être orienté par rapport à la direction de "
-"la ligne ou non."
+"L'option |checkbox| :guilabel:`rotation du marqueur pour suivre la direction"
+" de la ligne` définit si chaque symbole de marqueur doit être orienté par "
+"rapport à la direction de la ligne ou non."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:289
+#: ../../docs/user_manual/style_library/symbol_selector.rst:317
 msgid ""
 "Because a line is often a succession of segments of different directions, "
 "the rotation of the marker is calculated by averaging over a specified "
@@ -670,11 +734,11 @@ msgstr ""
 "rapport à la direction globale de la ligne, ce qui entraîne des orientations"
 " visuelles beaucoup plus agréables des symboles de ligne de marqueurs."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:298
+#: ../../docs/user_manual/style_library/symbol_selector.rst:326
 msgid "The marker line can also be offset from the line itself."
 msgstr "Le marqueur ligne peut également être décalé de la ligne elle-même."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:302
+#: ../../docs/user_manual/style_library/symbol_selector.rst:330
 msgid ""
 "**Hashed line**: repeats a line segment (a hash) over the length of a line "
 "symbol, with a line sub-symbol used to render each individual segment. In "
@@ -690,23 +754,23 @@ msgstr ""
 " :ref:`mêmes propriétés <marker_line_symbol>` que les symboles de ligne de "
 "marqueurs, avec en plus:"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:309
+#: ../../docs/user_manual/style_library/symbol_selector.rst:337
 msgid ":guilabel:`Hash length`"
 msgstr ":guilabel:`Longueur de hachure`"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:310
+#: ../../docs/user_manual/style_library/symbol_selector.rst:338
 msgid ":guilabel:`Hash rotation`"
 msgstr ":guilabel:`rotation de hachure`"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:318
+#: ../../docs/user_manual/style_library/symbol_selector.rst:346
 msgid "Examples of hashed lines"
 msgstr "Exemples de lignes hachurées"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:324
+#: ../../docs/user_manual/style_library/symbol_selector.rst:352
 msgid "Fill Symbols"
 msgstr "Symboles de remplissage"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:326
+#: ../../docs/user_manual/style_library/symbol_selector.rst:354
 msgid ""
 "Appropriate for polygon geometry features, fill symbols have also several "
 "symbol layer types:"
@@ -714,41 +778,63 @@ msgstr ""
 "Adaptés aux entités géométriques polygonales, les symboles de remplissage "
 "ont également plusieurs types de couches de symboles:"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:329
+#: ../../docs/user_manual/style_library/symbol_selector.rst:357
 msgid "**Simple fill** (default): fills a polygon with a uniform color"
 msgstr ""
 "**Remplissage simple** (par défaut): remplit un polygone avec une couleur "
 "uniforme"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:336
+#: ../../docs/user_manual/style_library/symbol_selector.rst:364
 msgid "Designing a Simple Fill Symbol"
 msgstr "Conception d'un symbole de remplissage simple"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:338
+#: ../../docs/user_manual/style_library/symbol_selector.rst:366
 msgid ""
 "**Centroid fill**: places a :ref:`marker symbol <vector_marker_symbols>` at "
 "the centroid of the visible feature. The position of the marker may not be "
 "the real centroid of the feature, because calculation takes into account the"
 " polygon(s) clipped to area visible in map canvas for rendering and ignores "
-"holes. Use the geometry generator symbol if you want the exact centroid."
+"holes. Use the :ref:`geometry generator symbol <geometry_generator_symbol>` "
+"if you want the exact centroid."
 msgstr ""
-"**Remplissage centroïde**: place un :ref:`symbole marqueur "
-"<vector_marker_symbols>` au centroïde de l'entité visible. La position du "
-"marqueur peut ne pas être le véritable centre de gravité de l'entité, car le"
-" calcul prend en compte le ou les polygones coupés sur la zone visible dans "
-"le canevas de carte pour le rendu et ignore les trous. Utilisez le symbole "
-"du générateur de géométries si vous voulez le centroïde exact."
+"**Remplissage centroïde** : place un :ref:`marker symbol "
+"<vector_marker_symbols>` au centroïde de l'élément visible. La position du "
+"marqueur peut ne pas être le véritable centroïde de l'élément, car le calcul"
+" prend en compte le(s) polygone(s) coupé(s) à la zone visible dans le "
+"canevas de la carte pour le rendu et ignore les trous. Utilisez "
+":ref:`geometry generator symbol <geometry_generator_symbol>` si vous "
+"souhaitez connaître le centroïde exact  "
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:345
+#: ../../docs/user_manual/style_library/symbol_selector.rst:374
+msgid "You can:"
+msgstr "Vous pouvez :"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:376
+msgid ":guilabel:`Force point inside polygon`"
+msgstr ":guilabel:`Forcer point à l'intérieur d'un polygone`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:377
 msgid ""
-"The marker(s) can be placed on every part of a multi-part feature or only on"
-" its biggest part, and forced to be inside the polygon."
+":guilabel:`Draw point on every part of multi-part feature` or place the "
+"point only on its biggest part"
 msgstr ""
-"Le ou les marqueurs peuvent être placés sur chaque partie d'une entité en "
-"plusieurs parties ou uniquement sur sa plus grande partie, et forcés d'être "
-"à l'intérieur du polygone."
+":guilabel:`Dessinez un point sur chaque partie d'un élément à plusieurs "
+"parties` ou placez le point uniquement sur sa plus grande partie`"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:349
+#: ../../docs/user_manual/style_library/symbol_selector.rst:379
+msgid ""
+"display the marker symbol(s) in whole or in part, keeping parts overlapping "
+"the current feature geometry (:guilabel:`Clip markers to polygon boundary`) "
+"or the geometry part the symbol belongs to (:guilabel:`Clip markers to "
+"current part boundary only`)"
+msgstr ""
+"afficher le(s) symbole(s) de marqueur en tout ou en partie, en conservant "
+"les parties chevauchant la géométrie de l'élément actuel "
+"(:guilabel:`Marqueurs découpés à la limite du polygone`) ou la partie de la "
+"géométrie à laquelle le symbole appartient (:guilabel:`Marqueurs découpés à "
+"la limite de la partie actuelle seulement`)"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:385
 msgid ""
 "**Gradient fill**: uses a radial, linear or conical gradient, based on "
 "either simple two color gradients or a predefined :ref:`gradient color ramp "
@@ -764,7 +850,7 @@ msgstr ""
 "définis via des coordonnées ou en utilisant le centroïde (d'entité ou de "
 "carte);"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:354
+#: ../../docs/user_manual/style_library/symbol_selector.rst:390
 msgid ""
 "**Line pattern fill**: fills the polygon with a hatching pattern of "
 ":ref:`line symbol layer <vector_line_symbols>`. You can set a rotation, the "
@@ -775,7 +861,7 @@ msgstr ""
 "pouvez définir une rotation, l'espacement entre les lignes et un décalage "
 "par rapport à la limite de l'entité;"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:357
+#: ../../docs/user_manual/style_library/symbol_selector.rst:393
 msgid ""
 "**Point pattern fill**: fills the polygon with a hatching pattern of "
 ":ref:`marker symbol layer <vector_marker_symbols>`. You can set the distance"
@@ -787,28 +873,71 @@ msgstr ""
 "définir la distance et un déplacement entre les rangées de marqueurs et un "
 "décalage par rapport à la limite de l'entité;"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:361
+#: ../../docs/user_manual/style_library/symbol_selector.rst:397
+msgid ""
+"**Random marker fill**: fills the polygon with a :ref:`marker symbol "
+"<vector_marker_symbols>` placed at random locations within the polygon "
+"boundary. You can set:"
+msgstr ""
+"**Marqueur de remplissage aléatoire** : remplit le polygone avec un "
+":ref:`marker symbol <vector_marker_symbols>` placé à des endroits aléatoires"
+" à l'intérieur de la limite du polygone. Vous pouvez définir :"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:401
+msgid ""
+"the number of marker symbols to render, either as an absolute count or as "
+"density-based (the fill density will remain the same on different scale / "
+"zoom levels)"
+msgstr ""
+"le nombre de symboles marqueurs à rendre, soit sous forme de comptage "
+"absolu, soit sous forme de densité (la densité de remplissage restera la "
+"même à différentes échelles / niveaux de zoom)"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:404
+msgid ""
+"an optional random number seed, to give consistent placement of markers "
+"whenever maps are refreshed (also allows random placement to play nice with "
+"QGIS server and tile-based rendering)"
+msgstr ""
+"un grain de nombre aléatoire optionnel, pour donner un placement cohérent "
+"des marqueurs chaque fois que les cartes sont rafraîchies (permet également "
+"un placement aléatoire pour être agréable avec QGIS Server et le rendu basé "
+"sur les tuiles)"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:407
+msgid ""
+"whether markers rendered near the edges of polygons should be clipped to the"
+" polygon boundary or not"
+msgstr ""
+"si les marqueurs rendus près des bords des polygones doivent être coupés à "
+"la limite du polygone ou non"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:410
 msgid ""
 "**Raster image fill**: fills the polygon with tiles from a raster image "
 "(:file:`PNG` :file:`JPG`, :file:`BMP` ...). The image can be a file on the "
 "disk, a remote URL or an embedded file encoded as a string (:ref:`more "
 "details <svg_paths>`). Options include (data defined) opacity, image width, "
-"coordinate mode (object or viewport), rotation and offset."
+"coordinate mode (object or viewport), rotation and offset. The image width "
+"can be set using any of the :ref:`common units <unit_selector>` or as a "
+"percentage of the original size."
 msgstr ""
-"**Remplissage d'image raster**: remplit le polygone avec des tuiles d'une "
+"**Remplissage image raster** : remplit le polygone avec les tuiles d'une "
 "image raster (:file:`PNG` :file:`JPG`, :file:`BMP` ...). L'image peut être "
-"un fichier sur le disque, une URL distante ou un fichier incorporé codé en "
-"chaîne (:ref:`plus de détails <svg_paths>`). Les options incluent l'opacité "
-"(définie par les données), la largeur de l'image, le mode de coordonnées "
-"(objet ou fenêtre), la rotation et le décalage."
+"un fichier sur le disque, une URL distante ou un fichier intégré codé sous "
+"forme de chaîne (:ref:`more details <svg_paths>`). Les options comprennent "
+"l'opacité (définie par les données), la largeur de l'image, le mode de "
+"coordonnées (objet ou vue), la rotation et le décalage. La largeur de "
+"l'image peut être définie à l'aide de l'une des unités communes :ref:`common"
+" units <unit_selector>` ou en pourcentage de la taille originale."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:366
+#: ../../docs/user_manual/style_library/symbol_selector.rst:416
 msgid "**SVG fill**: fills the polygon using :ref:`SVG markers <svg_marker>`;"
 msgstr ""
 "**Remplissage SVG**: remplit le polygone en utilisant des :ref:`marqueurs "
 "SVG <svg_marker>`;"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:367
+#: ../../docs/user_manual/style_library/symbol_selector.rst:417
 msgid ""
 "**Shapeburst fill**: buffers a gradient fill, where a gradient is drawn from"
 " the boundary of a polygon towards the polygon's centre. Configurable "
@@ -821,7 +950,7 @@ msgstr ""
 "l'ombre, l'utilisation de rampes de couleurs ou de simples dégradés de deux "
 "couleurs, le flou facultatif du remplissage et des décalages;"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:372
+#: ../../docs/user_manual/style_library/symbol_selector.rst:422
 msgid ""
 "**Outline: Arrow**: uses a line :ref:`arrow symbol <arrow_symbol>` layer to "
 "represent the polygon boundary;"
@@ -829,7 +958,7 @@ msgstr ""
 "**Contour: Flèche**: utilise une ligne de :ref:`symbole flèche "
 "<arrow_symbol>` pour représenter la limite du polygone;"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:374
+#: ../../docs/user_manual/style_library/symbol_selector.rst:424
 msgid ""
 "**Outline: Hashed line**: uses a :ref:`hash line symbol "
 "<hashed_line_symbol>` layer to represent the polygon boundary (the interior "
@@ -839,31 +968,32 @@ msgstr ""
 "<hashed_line_symbol>` pour représenter la limite du polygone (les anneaux "
 "intérieurs, l'anneau extérieur ou tous les anneaux)."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:377
+#: ../../docs/user_manual/style_library/symbol_selector.rst:427
 msgid ""
-"**Outline: Marker line**: uses a marker line symbol layer to represent the "
-"polygon boundary (the interior rings, the exterior ring or all the rings)."
+"**Outline: Marker line**: uses a :ref:`marker line symbol "
+"<marker_line_symbol>` layer to represent the polygon boundary (the interior "
+"rings, the exterior ring or all the rings)."
 msgstr ""
-"**contour: ligne marqueurs**: utilise une couche de symboles de ligne de "
-"marqueurs pour représenter la limite du polygone (les anneaux intérieurs, "
-"l'anneau extérieur ou tous les anneaux)."
+"**contour : Ligne de repère** : utilise une couche :ref:`marker line symbol "
+"<marker_line_symbol>` pour représenter la limite du polygone (les anneaux "
+"intérieurs, l'anneau extérieur ou tous les anneaux)."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:379
+#: ../../docs/user_manual/style_library/symbol_selector.rst:430
 msgid ""
-"**Outline: simple line**: uses a simple line symbol layer to represent the "
-"polygon boundary (the interior rings, the exterior ring or all the rings). "
-"The :guilabel:`Draw line only inside polygon` option displays the polygon "
-"borders inside the polygon and can be useful to clearly represent adjacent "
-"polygon boundaries."
+"**Outline: simple line**: uses a :ref:`simple line symbol "
+"<simple_line_symbol>` layer to represent the polygon boundary (the interior "
+"rings, the exterior ring or all the rings). The :guilabel:`Draw line only "
+"inside polygon` option displays the polygon borders inside the polygon and "
+"can be useful to clearly represent adjacent polygon boundaries."
 msgstr ""
-"**Contour: ligne simple**: utilise une couche de symboles de ligne simple "
-"pour représenter la limite du polygone (les anneaux intérieurs, l'anneau "
-"extérieur ou tous les anneaux). L'option :guilabel:`Tracer la ligne "
-"uniquement à l'intérieur du polygone` affiche les bordures du polygone à "
-"l'intérieur du polygone et peut être utile pour représenter clairement les "
-"limites des polygones adjacents."
+"**Contour : ligne simple** : utilise une couche de :ref:`simple line symbol "
+"<simple_line_symbol>` pour représenter la limite du polygone (les anneaux "
+"intérieurs, l'anneau extérieur ou tous les anneaux). L'option "
+":guilabel:`dessiner la ligne uniquement à l'intérieur du polygone` affiche "
+"les limites du polygone à l'intérieur du polygone et peut être utile pour "
+"représenter clairement les limites des polygones adjacents."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:387
+#: ../../docs/user_manual/style_library/symbol_selector.rst:439
 msgid ""
 "When geometry type is polygon, you can choose to disable the automatic "
 "clipping of lines/polygons to the canvas extent. In some cases this clipping"
@@ -876,11 +1006,11 @@ msgstr ""
 " (par exemple, le centroïde remplit où le centroïde doit toujours être le "
 "centroïde de l'entité réelle)."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:395
+#: ../../docs/user_manual/style_library/symbol_selector.rst:447
 msgid "The Geometry Generator"
 msgstr "Le générateur de géométries"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:397
+#: ../../docs/user_manual/style_library/symbol_selector.rst:449
 msgid ""
 "Available with all types of symbols, the :guilabel:`geometry generator` "
 "symbol layer allows to use :ref:`expression syntax <functions_list>` to "
@@ -895,15 +1025,15 @@ msgstr ""
 "correspondre au type de géométrie d'origine et vous pouvez ajouter plusieurs"
 " couches de symboles modifiées différemment les unes sur les autres."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:403
+#: ../../docs/user_manual/style_library/symbol_selector.rst:455
 msgid "Some examples:"
 msgstr "Quelques exemples:"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:433
+#: ../../docs/user_manual/style_library/symbol_selector.rst:485
 msgid "The Vector Field Marker"
 msgstr "Le marqueur de champ vecteur"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:435
+#: ../../docs/user_manual/style_library/symbol_selector.rst:487
 msgid ""
 "The vector field marker is used to display vector field data such as earth "
 "deformation, tidal flows, and the like. It displays the vectors as lines "
@@ -919,7 +1049,7 @@ msgstr ""
 "restituer des données ponctuelles; les couches de lignes et de polygones ne "
 "sont pas dessinées par cette symbologie."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:441
+#: ../../docs/user_manual/style_library/symbol_selector.rst:493
 msgid ""
 "The vector field is defined by attributes in the data, which can represent "
 "the field either by:"
@@ -927,11 +1057,11 @@ msgstr ""
 "Le champ vectoriel est défini par des attributs dans les données, qui "
 "peuvent représenter le champ soit par:"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:444
+#: ../../docs/user_manual/style_library/symbol_selector.rst:496
 msgid "**cartesian** components (``x`` and ``y`` components of the field)"
 msgstr "**composants cartésiens** (composants ``x`` et ``y`` du champ)"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:445
+#: ../../docs/user_manual/style_library/symbol_selector.rst:497
 msgid ""
 "or **polar** coordinates: in this case, attributes define ``Length`` and "
 "``Angle``. The angle may be measured either clockwise from north, or "
@@ -942,7 +1072,7 @@ msgstr ""
 "partir du nord ou dans le sens antihoraire à partir de l'est, et peut être "
 "en degrés ou en radians."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:448
+#: ../../docs/user_manual/style_library/symbol_selector.rst:500
 msgid ""
 "or as **height only** data, which displays a vertical arrow scaled using an "
 "attribute of the data. This is appropriate for displaying the vertical "
@@ -953,7 +1083,7 @@ msgstr ""
 "approprié pour afficher la composante verticale de la déformation, par "
 "exemple."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:452
+#: ../../docs/user_manual/style_library/symbol_selector.rst:504
 msgid ""
 "The magnitude of field can be scaled up or down to an appropriate size for "
 "viewing the field."
