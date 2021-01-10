@@ -184,8 +184,8 @@ of the services workflow, it is possible for example to restrict the access to
 selected layers, to inject an XSL stylesheet to the XML response, to add a
 watermark to a generated WMS image and so on.
 
-From this point, you might find useful a quick look to the :api:`server plugins
-API docs <group__server.html>`.
+From this point, you might find useful a quick look to the
+:pyqgis:`server plugins API docs <server>`.
 
 Each filter should implement at least one of three callbacks:
 

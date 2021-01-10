@@ -73,8 +73,8 @@ of an edge.
 
 Converting from a vector layer to the graph is done using the `Builder <https://en.wikipedia.org/wiki/Builder_pattern>`_
 programming pattern. A graph is constructed using a so-called Director.
-There is only one Director for now: :api:`QgsVectorLayerDirector
-<classQgsVectorLayerDirector.html>`.
+There is only one Director for now: :class:`QgsVectorLayerDirector
+<qgis.analysis.QgsVectorLayerDirector>`.
 The director sets the basic settings that will be used to construct a graph
 from a line vector layer, used by the builder to create the graph. Currently, as
 in the case with the director, only one builder exists: :class:`QgsGraphBuilder <qgis.analysis.QgsGraphBuilder>`,
@@ -84,9 +84,9 @@ with such libraries as `BGL <https://www.boost.org/doc/libs/1_48_0/libs/graph/do
 or `NetworkX <https://networkx.lanl.gov/>`_.
 
 To calculate edge properties the programming pattern `strategy <https://en.wikipedia.org/wiki/Strategy_pattern>`_
-is used. For now only :api:`QgsNetworkDistanceStrategy <classQgsNetworkDistanceStrategy.html>`
+is used. For now only :class:`QgsNetworkDistanceStrategy <qgis.analysis.QgsNetworkDistanceStrategy>`
 strategy (that takes into account the length of the route) and
-:api:`QgsNetworkSpeedStrategy <classQgsNetworkSpeedStrategy.html>` (that also considers
+:class:`QgsNetworkSpeedStrategy <qgis.analysis.QgsNetworkSpeedStrategy>` (that also considers
 the speed) are availabile. You can implement your own strategy that will use all
 necessary parameters.
 For example, RoadGraph plugin uses a strategy that computes travel time

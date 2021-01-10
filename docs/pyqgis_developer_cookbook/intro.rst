@@ -167,12 +167,12 @@ Python Applications
 
 It is often handy to create  scripts for automating processes.
 With PyQGIS, this is perfectly possible --- import
-the :mod:`qgis.core` module, initialize it and you are ready for the
+the :pyqgis:`qgis.core <core>` module, initialize it and you are ready for the
 processing.
 
 Or you may want to create an interactive application that uses
 GIS functionality --- perform measurements, export a map as PDF, ...
-The :mod:`qgis.gui` module provides various GUI
+The :pyqgis:`qgis.gui <gui>` module provides various GUI
 components, most notably the map canvas widget that can be
 incorporated into the application with support for zooming, panning
 and/or any further custom map tools.
@@ -220,7 +220,7 @@ beginning of the script:
   # provider and layer registries from memory
   qgs.exitQgis()
 
-First we import the :mod:`qgis.core` module and configure
+First we import the :pyqgis:`qgis.core <core>` module and configure
 the prefix path. The prefix path is the location where QGIS is
 installed on your system. It is configured in the script by calling
 the :meth:`setPrefixPath <qgis.core.QgsApplication.setPrefixPath>` method.
