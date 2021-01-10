@@ -1,25 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Francis Gasc <francisgasc@gmail.com>, 2020
-# Richard Duivenvoorde <richard@duif.net>, 2020
-# MarieSilvestre, 2020
+# Harrissou Sant-anna, 2020
+# Francis Gasc <francisgasc@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:31+0000\n"
-"Last-Translator: MarieSilvestre, 2020\n"
+"POT-Creation-Date: 2020-12-13 09:01+0100\n"
+"PO-Revision-Date: 2020-12-24 10:26+0000\n"
+"Last-Translator: Francis Gasc <francisgasc@gmail.com>, 2021\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
 "Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
@@ -57,36 +58,70 @@ msgstr ""
 #: ../../docs/user_manual/processing/modeler.rst:24
 msgid ""
 "The modeler has a working canvas where the structure of the model and the "
-"workflow it represents are shown. The left part of the window is a panel "
-"with two tabs that can be used to add new elements to the model."
+"workflow it represents are shown. The left part of the window is a section "
+"with five panels that can be used to add new elements to the model:"
 msgstr ""
-"Le modeleur possède un espace de travail où sont représentés la structure du"
-" modèle et le flux de traitement. Sur la partie gauche se trouve un panneau "
-"avec deux onglets pour ajouter de nouveaux éléments au modèle."
+"Le modeleur dispose d'un canevas de travail où la structure du modèle et le "
+"flux de travail qu'il représente sont indiqués. La partie gauche de la "
+"fenêtre est une section avec cinq panneaux qui peuvent être utilisés pour "
+"ajouter de nouveaux éléments au modèle :"
 
-#: ../../docs/user_manual/processing/modeler.rst:34
+#: ../../docs/user_manual/processing/modeler.rst:29
+msgid ""
+"``Model Properties``: you can specify the name of the model and the group "
+"that will contain it"
+msgstr ""
+"``Propriétés du modèle`` : vous pouvez spécifier le nom du modèle et le "
+"groupe qui le contient"
+
+#: ../../docs/user_manual/processing/modeler.rst:31
+msgid "``Inputs``: all the inputs that will shape your model"
+msgstr "``Entrées`` : toutes les entrées qui formeront votre modèle"
+
+#: ../../docs/user_manual/processing/modeler.rst:32
+msgid "``Algorithms``: the Processing algorithms available"
+msgstr "``Algorithmes`` : les algorithmes de traitement disponibles"
+
+#: ../../docs/user_manual/processing/modeler.rst:33
+msgid ""
+"``Variables``: you can also define variables that will only be available in "
+"the Processing Modeler"
+msgstr ""
+"``Variables`` : vous pouvez également définir des variables qui ne seront "
+"disponibles que dans le modeleur de traitement"
+
+#: ../../docs/user_manual/processing/modeler.rst:35
+msgid ""
+"``Undo History``: this panel will register everything that happens in the "
+"modeler, making it easy to cancel things you did wrong."
+msgstr ""
+"``Annuler historique`` : ce panneau enregistre tout ce qui se passe dans le "
+"modeleur, ce qui permet d'annuler facilement les choses que vous avez mal "
+"réalisées."
+
+#: ../../docs/user_manual/processing/modeler.rst:43
 msgid "Modeler"
 msgstr "Modeleur"
 
-#: ../../docs/user_manual/processing/modeler.rst:36
-msgid "Creating a model involves two steps:"
-msgstr "Deux étapes sont nécessaires pour la création d'un modèle :"
+#: ../../docs/user_manual/processing/modeler.rst:45
+msgid "Creating a model involves two basic steps:"
+msgstr "La création d'un modèle comporte deux étapes fondamentales :"
 
-#: ../../docs/user_manual/processing/modeler.rst:38
+#: ../../docs/user_manual/processing/modeler.rst:47
 msgid ""
 "*Definition of necessary inputs*. These inputs will be added to the "
 "parameters window, so the user can set their values when executing the "
 "model. The model itself is an algorithm, so the parameters window is "
-"generated automatically as it happens with all the algorithms available in "
-"the processing framework."
+"generated automatically as for all algorithms available in the Processing "
+"framework."
 msgstr ""
-"*Définir les entrées nécessaires*. Ces entrées seront ajoutées à la fenêtre "
-"des paramètres afin que l'utilisateur puisse y fixer les valeurs nécessaires"
-" à l’exécution du modèle. Le modèle en lui-même est un algorithme. Ainsi la "
-"fenêtre des paramètres est générée automatiquement comme cela est le cas "
-"pour tous les algorithmes fournis avec le Module de Traitements."
+"*Définition des entrées nécessaires*. Ces entrées seront ajoutées à la "
+"fenêtre des paramètres, afin que l'utilisateur puisse définir leurs valeurs "
+"lors de l'exécution du modèle. Le modèle lui-même est un algorithme, la "
+"fenêtre des paramètres est donc générée automatiquement comme pour tous les "
+"algorithmes disponibles dans le cadre de traitement."
 
-#: ../../docs/user_manual/processing/modeler.rst:44
+#: ../../docs/user_manual/processing/modeler.rst:53
 msgid ""
 "*Definition of the workflow*. Using the input data of the model, the "
 "workflow is defined by adding algorithms and selecting how they use the "
@@ -97,305 +132,391 @@ msgstr ""
 "sélectionnant comment ces derniers utiliseront les données ou d'autres "
 "données générées par d'autres algorithmes déjà présents dans le modèle."
 
-#: ../../docs/user_manual/processing/modeler.rst:50
+#: ../../docs/user_manual/processing/modeler.rst:59
 msgid "Definition of inputs"
 msgstr "Définition des données d'entrée"
 
-#: ../../docs/user_manual/processing/modeler.rst:52
+#: ../../docs/user_manual/processing/modeler.rst:61
 msgid ""
 "The first step is to define the inputs for the model. The following elements"
-" are found in the :guilabel:`Inputs` tab on the left side of the modeler "
+" are found in the :guilabel:`Inputs` panel on the left side of the modeler "
 "window:"
 msgstr ""
-"La première étape est de définir les données d'entrées du modèle. Vous "
-"trouverez les éléments suivants dans l'onglet :guilabel:`Entrées` dans la "
-"partie gauche de la fenêtre du modeleur :"
+"La première étape consiste à définir les données d'entrée du modèle. Les "
+"éléments suivants se trouvent dans le panneau :guilabel:`Entrées` sur le "
+"côté gauche de la fenêtre du modeleur :"
 
-#: ../../docs/user_manual/processing/modeler.rst:56
+#: ../../docs/user_manual/processing/modeler.rst:65
 msgid "Authentication Configuration"
 msgstr "Configuration de l'authentification"
 
-#: ../../docs/user_manual/processing/modeler.rst:57
+#: ../../docs/user_manual/processing/modeler.rst:66
 msgid "Boolean"
 msgstr "Booléen"
 
-#: ../../docs/user_manual/processing/modeler.rst:58
-msgid "CRS"
-msgstr "SCR"
-
-#: ../../docs/user_manual/processing/modeler.rst:59
+#: ../../docs/user_manual/processing/modeler.rst:67
 msgid "Color"
 msgstr "Couleur"
 
-#: ../../docs/user_manual/processing/modeler.rst:60
+#: ../../docs/user_manual/processing/modeler.rst:68
+msgid "Connection Name"
+msgstr "Nom de la connexion"
+
+#: ../../docs/user_manual/processing/modeler.rst:69
+msgid "Coordinate Operation"
+msgstr "Coordonner l'opération"
+
+#: ../../docs/user_manual/processing/modeler.rst:70
+msgid "CRS"
+msgstr "SCR"
+
+#: ../../docs/user_manual/processing/modeler.rst:71
+msgid "Database Schema"
+msgstr "Schéma de la base de données"
+
+#: ../../docs/user_manual/processing/modeler.rst:72
+msgid "Database Table"
+msgstr "Table de la base de données"
+
+#: ../../docs/user_manual/processing/modeler.rst:73
+msgid "Datetime"
+msgstr "Datetime"
+
+#: ../../docs/user_manual/processing/modeler.rst:74
 msgid "Distance"
 msgstr "Distance"
 
-#: ../../docs/user_manual/processing/modeler.rst:61
+#: ../../docs/user_manual/processing/modeler.rst:75
 msgid "Enum"
 msgstr "Énumération"
 
-#: ../../docs/user_manual/processing/modeler.rst:62
+#: ../../docs/user_manual/processing/modeler.rst:76
 msgid "Expression"
 msgstr "Expression"
 
-#: ../../docs/user_manual/processing/modeler.rst:63
+#: ../../docs/user_manual/processing/modeler.rst:77
 msgid "Extent"
 msgstr "Emprise"
 
-#: ../../docs/user_manual/processing/modeler.rst:64
+#: ../../docs/user_manual/processing/modeler.rst:78
+msgid "Fields Aggregate"
+msgstr "Champs agrégés"
+
+#: ../../docs/user_manual/processing/modeler.rst:79
 msgid "Fields Mapper"
 msgstr "Mappage de champs"
 
-#: ../../docs/user_manual/processing/modeler.rst:65
+#: ../../docs/user_manual/processing/modeler.rst:80
 msgid "File/Folder"
 msgstr "Fichier/Dossier"
 
-#: ../../docs/user_manual/processing/modeler.rst:66
+#: ../../docs/user_manual/processing/modeler.rst:81
 msgid "Map Layer"
 msgstr "Couche"
 
-#: ../../docs/user_manual/processing/modeler.rst:67
+#: ../../docs/user_manual/processing/modeler.rst:82
+msgid "Map Theme"
+msgstr "Thème de la carte"
+
+#: ../../docs/user_manual/processing/modeler.rst:83
 msgid "Matrix"
 msgstr "Table"
 
-#: ../../docs/user_manual/processing/modeler.rst:68
+#: ../../docs/user_manual/processing/modeler.rst:84
+msgid "Mesh Layer"
+msgstr "Couche de maillage"
+
+#: ../../docs/user_manual/processing/modeler.rst:85
 msgid "Multiple Input"
 msgstr "Sources multiples"
 
-#: ../../docs/user_manual/processing/modeler.rst:69
+#: ../../docs/user_manual/processing/modeler.rst:86
 msgid "Number"
 msgstr "Nombre"
 
-#: ../../docs/user_manual/processing/modeler.rst:70
+#: ../../docs/user_manual/processing/modeler.rst:87
 msgid "Point"
 msgstr "Point"
 
-#: ../../docs/user_manual/processing/modeler.rst:71
+#: ../../docs/user_manual/processing/modeler.rst:88
 msgid "Print Layout"
 msgstr "Mise en page de cartes"
 
-#: ../../docs/user_manual/processing/modeler.rst:72
+#: ../../docs/user_manual/processing/modeler.rst:89
 msgid "Print Layout Item"
 msgstr "Objet d'une mise en page de cartes"
 
-#: ../../docs/user_manual/processing/modeler.rst:73
+#: ../../docs/user_manual/processing/modeler.rst:90
 msgid "Range"
 msgstr "Plage"
 
-#: ../../docs/user_manual/processing/modeler.rst:74
+#: ../../docs/user_manual/processing/modeler.rst:91
 msgid "Raster Band"
 msgstr "Bande raster"
 
-#: ../../docs/user_manual/processing/modeler.rst:75
+#: ../../docs/user_manual/processing/modeler.rst:92
 msgid "Raster Layer"
 msgstr "Couche raster"
 
-#: ../../docs/user_manual/processing/modeler.rst:76
+#: ../../docs/user_manual/processing/modeler.rst:93
 msgid "Scale"
 msgstr "Échelle"
 
-#: ../../docs/user_manual/processing/modeler.rst:77
+#: ../../docs/user_manual/processing/modeler.rst:94
 msgid "String"
 msgstr "Chaîne de caractères"
 
-#: ../../docs/user_manual/processing/modeler.rst:78
+#: ../../docs/user_manual/processing/modeler.rst:95
 msgid "Vector Features"
 msgstr "Entités vectorielles"
 
-#: ../../docs/user_manual/processing/modeler.rst:79
+#: ../../docs/user_manual/processing/modeler.rst:96
 msgid "Vector Field"
 msgstr "Champs vectoriel"
 
-#: ../../docs/user_manual/processing/modeler.rst:80
+#: ../../docs/user_manual/processing/modeler.rst:97
 msgid "Vector Layer"
 msgstr "Couche vecteur"
 
-#: ../../docs/user_manual/processing/modeler.rst:82
+#: ../../docs/user_manual/processing/modeler.rst:98
+msgid "Vector Tile Writer Layers"
+msgstr "Couches de tuiles vecteur"
+
+#: ../../docs/user_manual/processing/modeler.rst:100
+msgid ""
+"Hovering with the mouse over the inputs will show a tooltip with additional "
+"information."
+msgstr ""
+"En survolant les entrées avec la souris, une info-bulle contenant des "
+"informations supplémentaires apparaîtra."
+
+#: ../../docs/user_manual/processing/modeler.rst:103
 msgid ""
 "When double-clicking on an element, a dialog is shown that lets you define "
 "its characteristics. Depending on the parameter, the dialog will contain at "
-"least one basic element (the description, which is what the user will see "
-"when executing the model). When adding a numerical value, as can be seen in "
-"the next figure, in addition to the description of the parameter, you have "
-"to set a default value and the range of valid values."
+"least one element (the description, which is what the user will see when "
+"executing the model). For example, when adding a numerical value, as can be "
+"seen in the next figure, in addition to the description of the parameter, "
+"you have to set a default value and the range of valid values."
 msgstr ""
-"Lorsque l'on double-clique sur un élément, une fenêtre apparaît et vous "
-"permet de définir ses caractéristiques. Selon le paramètre, cette fenêtre "
-"contiendra au moins un élément (la description que l'utilisateur verra à "
-"l'exécution du modèle). À l'ajout d'une valeur numérique, comme on peut le "
-"voir sur la figure suivante, en plus de la description du paramètre, vous "
-"devez définir une valeur par défaut et une plage de valeurs."
+"En double-cliquant sur un élément, un dialogue s'affiche pour vous permettre"
+" de définir ses caractéristiques. Selon le paramètre, le dialogue contiendra"
+" au moins un élément (la description, qui est ce que l'utilisateur verra en "
+"exécutant le modèle). Par exemple, lors de l'ajout d'une valeur numérique, "
+"comme le montre la figure suivante, en plus de la description du paramètre, "
+"vous devez définir une valeur par défaut et la plage des valeurs valides."
 
-#: ../../docs/user_manual/processing/modeler.rst:96
+#: ../../docs/user_manual/processing/modeler.rst:117
 msgid "Model Parameters Definition"
 msgstr "Définition des Paramètres du Modèle"
 
-#: ../../docs/user_manual/processing/modeler.rst:98
+#: ../../docs/user_manual/processing/modeler.rst:119
 msgid ""
 "You can define your input as mandatory for your model by checking the "
-"|checkbox|:sup:`Mandatory` option and by checking the "
-"|unchecked|:sup:`Advanced` checkbox you can set the input to be within the "
-"Advanced section. This is particularly useful when the model has many "
-"parameters and some of them are not trivial, but you still want to choose "
-"them. For each added input, a new element is added to the modeler canvas."
+"|checkbox| ``Mandatory`` option and by checking the |unchecked| ``Advanced``"
+" checkbox you can set the input to be within the ``Advanced`` section. This "
+"is particularly useful when the model has many parameters and some of them "
+"are not trivial, but you still want to choose them."
 msgstr ""
-"Votre entrée peut être obligatoire pour votre modèle en cochant l'option "
-"|checkbox|:sup:`Obligatoire` et en cochant la case |unchecked|:sup:`Avancé`,"
-" l'entrée fera partie des paramètres avancés. Ceci est particulièrement "
-"pratique lorsque le modèle a de nombreux paramètres dont certains non "
-"triviaux mais que vous souhaitez les choisir. Pour chaque entrée ajoutée, un"
-" nouvel élément est ajouté au canevas."
+"Vous pouvez définir votre entrée comme obligatoire pour votre modèle en "
+"cochant l'option ``Obligatoire`` et en cochant la case ``Avancé`` si elle "
+"n'est pas cochée, vous pouvez définir l'entrée comme étant dans la section "
+"``Avancé``. Cela est particulièrement utile lorsque le modèle comporte de "
+"nombreux paramètres et que certains d'entre eux ne sont pas triviaux, mais "
+"que vous souhaitez néanmoins les choisir."
 
-#: ../../docs/user_manual/processing/modeler.rst:110
+#: ../../docs/user_manual/processing/modeler.rst:125
+msgid ""
+"The ``Comments`` tab allows you to tag the input with more information, to "
+"better describe the parameter. Comments are visible only in the modeler "
+"canvas and not in the final algorithm dialog."
+msgstr ""
+"L'onglet ``Commentaires`` vous permet de marquer l'entrée avec plus "
+"d'informations, pour mieux décrire le paramètre. Les commentaires ne sont "
+"visibles que dans le canevas du modeleur et non dans le dialogue final de "
+"l'algorithme."
+
+#: ../../docs/user_manual/processing/modeler.rst:130
+msgid "For each added input, a new element is added to the modeler canvas."
+msgstr ""
+"Pour chaque entrée supplémentaire, un nouvel élément est ajouté au canevas "
+"du modeleur."
+
+#: ../../docs/user_manual/processing/modeler.rst:137
 msgid "Model Parameters"
 msgstr "Paramètres du modèle"
 
-#: ../../docs/user_manual/processing/modeler.rst:112
+#: ../../docs/user_manual/processing/modeler.rst:139
 msgid ""
 "You can also add inputs by dragging the input type from the list and "
-"dropping it in the position where you want it in the modeler canvas."
+"dropping it at the position where you want it in the modeler canvas. If you "
+"want to change a parameter of an existing input, just double click on it, "
+"and the same dialog will pop up."
 msgstr ""
-"Vous pouvez également ajouter des données d'entrée en faisant glisser le "
-"type choisi depuis la liste et en le déposant à l'endroit souhaité dans le "
-"canevas du modèle."
+"Vous pouvez également ajouter des entrées en faisant glisser le type "
+"d'entrée depuis la liste et en le déposant à l'endroit où vous le souhaitez "
+"dans le canevas du modeleur. Si vous souhaitez modifier un paramètre d'une "
+"entrée existante, il vous suffit de double-cliquer dessus, et la même boîte "
+"de dialogue s'affichera."
 
-#: ../../docs/user_manual/processing/modeler.rst:116
+#: ../../docs/user_manual/processing/modeler.rst:145
 msgid "Definition of the workflow"
 msgstr "Définition d'un flux de traitements"
 
-#: ../../docs/user_manual/processing/modeler.rst:118
+#: ../../docs/user_manual/processing/modeler.rst:147
 msgid ""
-"Once the inputs have been defined, it is time to define the algorithms of "
-"the model. Algorithms can be found in the :guilabel:`Algorithms` tab, "
-"grouped much in the same way as they are in the Processing toolbox."
+"In the following example we will add two inputs and two algorithms. The aim "
+"of the model is to copy the elevation values from a DEM raster layer to a "
+"line layer using the ``Drape`` algorithm,  and then calculate the total "
+"ascent of the line layer using the ``Climb Along Line`` algorithm."
 msgstr ""
-"Une fois les données d'entrée définies, il faut à présent définir les "
-"algorithmes du modèle. Ils se situent dans l'onglet :guilabel:`Algorithmes`,"
-" regroupés de la même manière que dans la boîte à outils de traitements."
+"Dans l'exemple suivant, nous allons ajouter deux entrées et deux "
+"algorithmes. L'objectif du modèle est de copier les valeurs d'élévation "
+"d'une couche raster du MNT vers une couche linéaire en utilisant "
+"l'algorithme ``Drape``, puis de calculer l'ascension totale de la couche "
+"linéaire en utilisant l'algorithme ``Climb Along Line``."
 
-#: ../../docs/user_manual/processing/modeler.rst:128
+#: ../../docs/user_manual/processing/modeler.rst:152
+msgid ""
+"In the :guilabel:`Inputs` tab, choose the two inputs as ``Vector Layer`` for"
+" the line and ``Raster Layer`` for the DEM. We are now ready to add the "
+"algorithms to the workflow."
+msgstr ""
+"Dans l'onglet :guilabel:`Entrées`, choisissez les deux entrées comme "
+"``Couche vecteur`` pour la ligne et ``Couche raster`` pour le MNT. Nous "
+"sommes maintenant prêts à ajouter les algorithmes au flux de travail."
+
+#: ../../docs/user_manual/processing/modeler.rst:156
+msgid ""
+"Algorithms can be found in the :guilabel:`Algorithms` panel, grouped much in"
+" the same way as they are in the Processing toolbox."
+msgstr ""
+"Les algorithmes peuvent être trouvés dans le panneau "
+":guilabel:`Algorithmes`, regroupés à peu près de la même manière qu'ils le "
+"sont dans la boîte à outils Processing."
+
+#: ../../docs/user_manual/processing/modeler.rst:164
 msgid "Model Inputs"
 msgstr "Entrées du modèle"
 
-#: ../../docs/user_manual/processing/modeler.rst:131
+#: ../../docs/user_manual/processing/modeler.rst:167
 msgid ""
 "To add an algorithm to a model, double-click on its name or drag and drop "
-"it, just like for inputs. An execution dialog will appear, with a content "
-"similar to the one found in the execution panel that is shown when executing"
-" the algorithm from the toolbox. The ones shown next correspond to the QGIS "
-"'Drape (set Z value from raster)' algorithm and the QGIS 'Climb along line' "
-"algorithm."
+"it, just like for inputs. As for the inputs you can change the description "
+"of the algorithm and add a comment. When adding an algorithm, an execution "
+"dialog will appear, with a content similar to the one found in the execution"
+" panel that is shown when executing the algorithm from the toolbox. The "
+"following picture shows both the ``Drape (set Z value from raster)`` and the"
+" ``Climb along line`` algorithm dialogs."
 msgstr ""
-"Pour ajouter un algorithme, double-cliquez sur son nom ou faites le glisser "
-"comme pour les données d'entrée. Une boîte d'exécution apparaît, semblable à"
-" celle qui apparaît lorsque l'on lance ce même algorithme à partir de la "
-"boîte à outils. Celles montrées ci-après correspondent aux algorithmes de "
-"QGIS 'Drapé (régler la valeur z du raster)' et 'Dénivelés le long de lignes "
-"3D'."
+"Pour ajouter un algorithme à un modèle, double-cliquez sur son nom ou "
+"glissez-déposez-le, comme pour les entrées. Comme pour les entrées, vous "
+"pouvez modifier la description de l'algorithme et ajouter un commentaire. "
+"Lors de l'ajout d'un algorithme, un dialogue d'exécution apparaîtra, avec un"
+" contenu similaire à celui du panneau d'exécution qui est affiché lors de "
+"l'exécution de l'algorithme à partir de la boîte à outils. L'image suivante "
+"montre les dialogues d'algorithme ``Drape (set Z value from raster)`` et "
+"``Climb along line``."
 
-#: ../../docs/user_manual/processing/modeler.rst:145
+#: ../../docs/user_manual/processing/modeler.rst:181
 msgid "Model Algorithm parameters"
 msgstr "Paramètres du modèle de l’algorithme"
 
-#: ../../docs/user_manual/processing/modeler.rst:148
-msgid ""
-"As you can see, some differences exist. Instead of the file output box that "
-"was used to set the file path for output layers and tables, a simple text "
-"box is used here. If the layer generated by the algorithm is just a "
-"temporary result that will be used as the input of another algorithm and "
-"should not be kept as a final result, just do not edit that text box. Typing"
-" anything in it means that the result is final and the text that you supply "
-"will be the description for the output, which will be the output the user "
-"will see when executing the model."
-msgstr ""
-"Comme vous pouvez le voir, quelques différences existent entre les deux "
-"fenêtres. Ainsi, le nom de fichier en sortie de l'algorithme est remplacé "
-"par un simple champ texte. Pour créer une couche temporaire en sortie pour "
-"être utilisée par un autre algorithme et supprimée à la fin, laissez le "
-"champ texte vide. Dans le cas contraire, la couche résultante sera un "
-"résultat final de l'algorithme et portera le nom défini dans le champ de "
-"texte. C'est ce nom que verra l'utilisateur du modèle à son exécution."
+#: ../../docs/user_manual/processing/modeler.rst:184
+msgid "As you can see there are some differences."
+msgstr "Comme vous pouvez le constater, il y a quelques différences."
 
-#: ../../docs/user_manual/processing/modeler.rst:158
-msgid ""
-"Selecting the value of each parameter is also a bit different, since there "
-"are important differences between the context of the modeler and that of the"
-" toolbox. Let's see how to introduce the values for each type of parameter."
-msgstr ""
-"La sélection des valeurs de chaque paramètre s'effectue également "
-"différemment, en raison de la différence de contexte entre le modeleur et la"
-" boite à outils. Détaillons les valeurs pour chaque type de paramètre."
+#: ../../docs/user_manual/processing/modeler.rst:186
+msgid "You have four choices to define the algorithm **inputs**:"
+msgstr "Vous avez quatre choix pour définir l'algorithme **source** :"
 
-#: ../../docs/user_manual/processing/modeler.rst:163
+#: ../../docs/user_manual/processing/modeler.rst:188
 msgid ""
-"Layers (raster and vector) and tables. These are selected from a list, but "
-"in this case, the possible values are not the layers or tables currently "
-"loaded in QGIS, but the list of model inputs of the corresponding type, or "
-"other layers or tables generated by algorithms already added to the model."
+"|integer| ``Value``: allows you to set the parameter from a loaded layer in "
+"the QGIS project or to browse a layer from a folder"
 msgstr ""
-"Les couches raster et vectorielles et les tables. Elles sont à choisir dans "
-"une liste, non pas des couches ou tables déjà chargées dans QGIS, mais soit "
-"parmi les entrées du modèle, soit parmi les couches et/ou tables générées "
-"par les algorithmes déjà présents dans le modèle."
+"|integer| ``Valeur`` : permet de définir le paramètre à partir d'une couche "
+"chargée dans le projet QGIS ou de parcourir une couche à partir d'un dossier"
 
-#: ../../docs/user_manual/processing/modeler.rst:168
+#: ../../docs/user_manual/processing/modeler.rst:190
 msgid ""
-"Numerical values. Literal values can be introduced directly in the text box."
-" Clicking on the button beside the text box, expressions can be entered. "
-"Available variables for expressions include numerical inputs of the model, "
-"outputs from model algorithms and also statistical values from available "
-"layers within the model."
+"|expression| ``Pre-calculated Value``: with this option you can open the "
+"Expression Builder and define your own expression to fill the parameter. "
+"Model inputs together with some other layer statistics are available as "
+"**variables** and are listed at the top of the Search dialog of the "
+"Expression Builder"
 msgstr ""
-"Valeurs numériques. Les valeurs littérales peuvent être introduites "
-"directement dans la zone de texte. En cliquant sur le bouton à côté de la "
-"zone de texte, des expressions peuvent être saisies. Les variables "
-"disponibles pour les expressions incluent les entrées numériques du modèle, "
-"les sorties des algorithmes du modèle et également les valeurs statistiques "
-"issues des couches disponibles dans le modèle."
+"|expression| ``Valeur pré-calculée`` : avec cette option, vous pouvez ouvrir"
+" le générateur d'expression et définir votre propre expression pour remplir "
+"le paramètre. Les entrées du modèle ainsi que certaines autres statistiques "
+"de couche sont disponibles sous forme de **variables** et sont listées en "
+"haut de la boîte de dialogue de recherche du générateur d'expression"
 
-#: ../../docs/user_manual/processing/modeler.rst:174
+#: ../../docs/user_manual/processing/modeler.rst:194
 msgid ""
-"String. Literal strings can be typed in the corresponding text box. Clicking"
-" on the button beside the text box, expressions can be entered, as for "
-"numerical values."
+"|processingModel| ``Model Input``: choose this option if the parameter comes"
+" from an input of the model you have defined. Once clicked, this option will"
+" list all the suitable inputs for the parameter"
 msgstr ""
-"Chaîne de caractères. Les chaînes littérales peuvent être saisies dans la "
-"zone de texte correspondante. En cliquant sur le bouton à côté de la zone de"
-" texte, des expressions peuvent être saisies, comme pour les valeurs "
-"numériques."
+"|processingModel| ``Modèle source`` : choisissez cette option si le "
+"paramètre provient d'une entrée du modèle que vous avez défini. Une fois que"
+" vous aurez cliqué sur cette option, vous obtiendrez une liste de toutes les"
+" entrées appropriées pour le paramètre"
 
-#: ../../docs/user_manual/processing/modeler.rst:178
+#: ../../docs/user_manual/processing/modeler.rst:197
 msgid ""
-"Vector Field. The fields of a vector layer cannot be known at design time, "
-"since they depend on the selection of the user each time the model is "
-"executed. To set the value for this parameter, type the name of a field "
-"directly in the text box, or use the list to select a table field. The "
-"validity of the selected field will be checked at run time."
+"|processing| ``Algorithm Output``: is useful when the input parameter of an "
+"algorithm is an output of another algorithm"
 msgstr ""
-"Champ de couche vecteur. Les champs de la table d'une couche vecteur ne sont"
-" pas connus au moment de la conception du modèle puisqu'ils seront définis à"
-" l'exécution du modèle. Pour remplir ce paramètre, entrez le nom du champ "
-"directement dans le champ texte correspondant ou sélectionnez-le dans la "
-"liste des champs. La validité du champ sélectionné sera vérifiée à "
-"l'exécution."
+"|processing| ``Algorithme sortie`` : est utile lorsque le paramètre d'entrée"
+" d'un algorithme est une sortie d'un autre algorithme"
 
-#: ../../docs/user_manual/processing/modeler.rst:185
+#: ../../docs/user_manual/processing/modeler.rst:200
 msgid ""
-"In all cases, you will find an additional parameter named *Parent "
-"algorithms* that is not available when calling the algorithm from the "
-"toolbox. This parameter allows you to define the order in which algorithms "
-"are executed by explicitly defining one algorithm as a parent of the current"
-" one, which will force the parent algorithm to be executed before the "
-"current one."
+"Algorithm **outputs** have the addditional |processingOutput| ``Model "
+"Output`` option that makes the output of the algorithm available in the "
+"model."
 msgstr ""
-"Dans tous les cas, vous trouverez un paramètre supplémentaire nommé "
-"*Algorithme parent* qui n'est pas disponible lors de l'appel de l'algorithme"
-" via la boîte à outils. Ce paramètre vous permet de choisir dans quel ordre "
-"seront exécutés les algorithmes, en définissant explicitement un algorithme "
-"qui sera parent d'un autre, son exécution sera forcée en premier."
+"Les **sorties de l'algorithme** ont l'option supplémentaire "
+"|processingOutput| ``Modèle de sortie`` qui rend la sortie de l'algorithme "
+"disponible dans le modèle."
 
-#: ../../docs/user_manual/processing/modeler.rst:193
+#: ../../docs/user_manual/processing/modeler.rst:203
+msgid ""
+"If a layer generated by the algorithm is only to be used as input to another"
+" algorithm,  don't edit that text box."
+msgstr ""
+"Si une couche générée par l'algorithme ne doit être utilisée qu'en entrée "
+"d'un autre algorithme, ne modifiez pas cette zone de texte."
+
+#: ../../docs/user_manual/processing/modeler.rst:206
+msgid ""
+"In the following picture you can see the two input parameters defined as "
+"``Model Input`` and the temporary output layer:"
+msgstr ""
+"Dans l'image suivante, vous pouvez voir les deux paramètres d'entrée définis"
+" comme ``Entrée du modèle`` et la couche de sortie temporaire :"
+
+#: ../../docs/user_manual/processing/modeler.rst:212
+msgid "Algorithm Input and Output parameters"
+msgstr "Paramètres d'entrée et de sortie de l'algorithme"
+
+#: ../../docs/user_manual/processing/modeler.rst:214
+msgid ""
+"In all cases, you will find an additional parameter named *Dependencies* "
+"that is not available when calling the algorithm from the toolbox. This "
+"parameter allows you to define the order in which algorithms are executed, "
+"by explicitly defining one algorithm as a *parent* of the current one. This "
+"will force the *parent* algorithm to be executed before the current one."
+msgstr ""
+"Dans tous les cas, vous trouverez un paramètre supplémentaire appelé "
+"*Dépendances* qui n'est pas disponible lorsque vous appelez l'algorithme "
+"depuis la boîte à outils. Ce paramètre vous permet de définir l'ordre dans "
+"lequel les algorithmes sont exécutés, en définissant explicitement un "
+"algorithme comme *parent* de l'algorithme courant. Cela obligera "
+"l'algorithme *parent* à être exécuté avant l'algorithme actuel."
+
+#: ../../docs/user_manual/processing/modeler.rst:222
 msgid ""
 "When you use the output of a previous algorithm as the input of your "
 "algorithm, that implicitly sets the previous algorithm as parent of the "
@@ -404,19 +525,20 @@ msgid ""
 "does not use any output object from it (for instance, an algorithm that "
 "executes a SQL sentence on a PostGIS database and another one that imports a"
 " layer into that same database). In that case, just select the previous "
-"algorithm in the *Parent algorithms* parameter and they will be executed in "
-"the correct order."
+"algorithm in the *Dependencies* parameter and they will be executed in the "
+"correct order."
 msgstr ""
-"Lorsque vous utilisez les sorties d'un algorithme comme entrée de votre "
-"algorithme, le premier est implicitement défini comme l'algorithme parent du"
-" votre (et ajoute la flèche correspondante sur le modèle). Cependant, dans "
-"certains cas, un algorithme peut dépendre d'un autre même s'il n'en utilise "
-"pas les sorties (par exemple un algorithme qui exécute une requête SQL sur "
-"une base de données PostGIS et un autre qui importe une couche dans cette "
-"même base de données). Dans ce cas, sélectionnez le simplement dans le "
-"paramètre *Algorithme parent* et l'exécution se fera dans le bon ordre."
+"Lorsque vous utilisez la sortie d'un algorithme précédent comme entrée de "
+"votre algorithme, cela définit implicitement l'algorithme précédent comme "
+"parent de l'algorithme actuel (et place la flèche correspondante dans le "
+"canevas du modeleur). Cependant, dans certains cas, un algorithme peut "
+"dépendre d'un autre même s'il n'utilise aucun objet de sortie de celui-ci "
+"(par exemple, un algorithme qui exécute une phrase SQL sur une base de "
+"données PostGIS et un autre qui importe une couche dans cette même base de "
+"données). Dans ce cas, il suffit de sélectionner l'algorithme précédent dans"
+" le paramètre *Dépendances* et ils seront exécutés dans le bon ordre."
 
-#: ../../docs/user_manual/processing/modeler.rst:204
+#: ../../docs/user_manual/processing/modeler.rst:233
 msgid ""
 "Once all the parameters have been assigned valid values, click on "
 ":guilabel:`OK` and the algorithm will be added to the canvas. It will be "
@@ -428,55 +550,211 @@ msgstr ""
 "présents, données d'entrée ou algorithmes fournissant des objets à utiliser "
 "comme entrée de cet algorithme."
 
-#: ../../docs/user_manual/processing/modeler.rst:209
+#: ../../docs/user_manual/processing/modeler.rst:238
 msgid ""
 "Elements can be dragged to a different position on the canvas. This is "
-"useful to make the structure of the model more clear and intuitive. Links "
-"between elements are updated automatically. You can zoom in and out by using"
-" the mouse wheel."
+"useful to make the structure of the model more clear and intuitive. You can "
+"also resize elements. This is particularly useful if the description of the "
+"input or algorithm is long."
 msgstr ""
-"Les éléments peuvent être disposés et déplacés en les glissant dans le "
-"canevas. Cela s'avère utile pour rendre la structure du modèle plus claire "
-"et plus lisible. Les liens entre éléments sont mis à jour automatiquement. "
-"Vous pouvez zoomer et dé-zoomer avec la molette de la souris."
+"Les éléments peuvent être glissés dans une position différente sur le "
+"canevas. Cela est utile pour rendre la structure du modèle plus claire et "
+"plus intuitive. Vous pouvez également redimensionner les éléments. Ceci est "
+"particulièrement utile si la description de l'entrée ou de l'algorithme est "
+"longue."
 
-#: ../../docs/user_manual/processing/modeler.rst:220
+#: ../../docs/user_manual/processing/modeler.rst:244
+msgid ""
+"Links between elements are updated automatically and you can see a plus "
+"button at the top and at the bottom of each algorithm. Clicking the button "
+"will list all the inputs and outputs of the algorithm so you can have a "
+"quick overview."
+msgstr ""
+"Les liens entre les éléments sont mis à jour automatiquement et vous pouvez "
+"voir un bouton \"plus\" en haut et en bas de chaque algorithme. En cliquant "
+"sur le bouton, vous obtiendrez la liste de toutes les entrées et sorties de "
+"l'algorithme, ce qui vous permettra d'avoir une vue d'ensemble rapide."
+
+#: ../../docs/user_manual/processing/modeler.rst:248
+msgid "You can zoom in and out by using the mouse wheel."
+msgstr ""
+"Vous pouvez faire un zoom avant et arrière en utilisant la molette de la "
+"souris."
+
+#: ../../docs/user_manual/processing/modeler.rst:255
 msgid "A complete model"
 msgstr "Un modèle complet"
 
-#: ../../docs/user_manual/processing/modeler.rst:223
+#: ../../docs/user_manual/processing/modeler.rst:258
 msgid ""
-"You can run your algorithm any time by clicking on the :guilabel:`Run` "
-"button. In order to use the algorithm from the toolbox, it has to be saved "
-"and the modeler dialog closed, to allow the toolbox to refresh its contents."
+"You can run your algorithm any time by clicking on the |start| button. In "
+"order to use the algorithm from the toolbox, it has to be saved and the "
+"modeler dialog closed, to allow the toolbox to refresh its contents."
 msgstr ""
-"Vous pouvez à tout moment exécuter votre algorithme en cliquant que le "
-"bouton :guilabel:`Exécuter`. Pour pouvoir l'utiliser à partir de la boîte à "
-"outils, le modèle doit être sauvegardé et le modeleur fermé. La boîte à "
-"outils pourra alors mettre à jour les traitements disponibles."
+"Vous pouvez exécuter votre algorithme à tout moment en cliquant sur le "
+"bouton |start|. Pour pouvoir utiliser l'algorithme de la boîte à outils, il "
+"faut l'enregistrer et fermer la boîte de dialogue du modeleur, afin de "
+"permettre à la boîte à outils de rafraîchir son contenu."
 
-#: ../../docs/user_manual/processing/modeler.rst:230
+#: ../../docs/user_manual/processing/modeler.rst:264
+msgid "Interacting with the canvas and elements"
+msgstr "Interaction canevas et éléments"
+
+#: ../../docs/user_manual/processing/modeler.rst:266
+msgid ""
+"You can use the |zoomIn|, |zoomOut|, |zoomActual| and |zoomFullExtent| "
+"buttons to zoom the modeler canvas. The behavior of the buttons is basically"
+" the same of the main QGIS toolbar."
+msgstr ""
+"Vous pouvez utiliser les boutons |zoomIn|, |zoomOut|, |zoomActual| et "
+"|zoomFullExtent| pour zoomer sur le canevas du modeleur. Le comportement des"
+" boutons est essentiellement le même que celui de la barre d'outils "
+"principale de QGIS."
+
+#: ../../docs/user_manual/processing/modeler.rst:270
+msgid ""
+"The ``Undo History`` panel together with the |undo| and |redo| buttons are "
+"extremely useful to quickly rollback to a previous situation. The ``Undo "
+"History`` panel lists everything you have done when creating the workflow."
+msgstr ""
+"Le panneau ``Historique d'annulation`` ainsi que les boutons |undo| et "
+"|redo| sont extrêmement utiles pour revenir rapidement à une situation "
+"antérieure. Le panneau ``Historique d'annulation`` liste tout ce que vous "
+"avez fait lors de la création du flux de travai"
+
+#: ../../docs/user_manual/processing/modeler.rst:274
+msgid ""
+"You can move or resize many elements at the same time by first selecting "
+"them, dragging the mouse."
+msgstr ""
+"Vous pouvez déplacer ou redimensionner de nombreux éléments en même temps en"
+" les sélectionnant d'abord, en faisant glisser la souris."
+
+#: ../../docs/user_manual/processing/modeler.rst:277
+msgid ""
+"If you want to snap the elements while moving them in the canvas you can "
+"choose :menuselection:`View --> Enable Snapping`."
+msgstr ""
+"Si vous voulez capturer les éléments tout en les déplaçant dans le canevas, "
+"vous pouvez choisir :menuselection:`Vue --> Activer l'accrochage`."
+
+#: ../../docs/user_manual/processing/modeler.rst:280
+msgid ""
+"The :menuselection:`Edit` menu contains some very useful options to interact"
+" with your model elements:"
+msgstr ""
+"Le menu :menuselection:`Modifier` contient des options très utiles pour "
+"interagir avec les éléments de votre modèle :"
+
+#: ../../docs/user_manual/processing/modeler.rst:283
+msgid "|selectAll|:sup:`Select All`: select all elements of the model"
+msgstr ""
+"|selectAll|:sup:`Sélectionner tous` : sélectionner tous les éléments du "
+"modèle"
+
+#: ../../docs/user_manual/processing/modeler.rst:284
+msgid ""
+"``Snap Selected Components to Grid``: snap and align the elements into a "
+"grid"
+msgstr ""
+"``Accrocher les composants sélectionnés à la grille`` : accrocher et aligner"
+" les éléments dans une grille"
+
+#: ../../docs/user_manual/processing/modeler.rst:286
+msgid "|undo|:sup:`Undo`: undo the last action"
+msgstr "|undo|:sup:`Undo` : annuler la dernière action"
+
+#: ../../docs/user_manual/processing/modeler.rst:287
+msgid "|redo|:sup:`Redo`: redo the last action"
+msgstr "|redo|:sup:`Redo` : refaire la dernière action"
+
+#: ../../docs/user_manual/processing/modeler.rst:288
+msgid "|editCut|:sup:`Cut`: cut the selected elements"
+msgstr "|editCut|:sup:`couper` : couper les éléments sélectionnés"
+
+#: ../../docs/user_manual/processing/modeler.rst:289
+msgid "|editCopy|:sup:`Copy`: copy the selected elements"
+msgstr "|editCopy|:sup:`Copier` : copier les éléments sélectionnés"
+
+#: ../../docs/user_manual/processing/modeler.rst:290
+msgid "|editPaste|:sup:`Paste`: paste the elements"
+msgstr "|editPaste|:sup:`coller` : coller les éléments"
+
+#: ../../docs/user_manual/processing/modeler.rst:291
+msgid ""
+"|deleteSelected|:sup:`Delete Selected Components`: delete all the selected "
+"elements from the model"
+msgstr ""
+"|deleteSelected|:sup:`Supprimer les composants sélectionnés` : supprimez "
+"tous les éléments sélectionnés du modèle"
+
+#: ../../docs/user_manual/processing/modeler.rst:293
+msgid ""
+"``Add Group Box``: add a draggable *box* to the canvas. This feature is very"
+" useful in big models to group elements in the modeler canvas and to keep "
+"the workflow clean. For example we might group together all the inputs of "
+"the example:"
+msgstr ""
+"``Ajouter une boîte de groupe`` : ajouter une *boîte glissante* au canevas. "
+"Cette fonctionnalité est très utile dans les grands modèles pour regrouper "
+"des éléments dans le canevas du modeleur et pour garder le flux de travail "
+"propre. Par exemple, nous pouvons regrouper toutes les entrées de l'exemple "
+":"
+
+#: ../../docs/user_manual/processing/modeler.rst:302
+msgid "Model Group Box"
+msgstr "Boîte de groupe modèle"
+
+#: ../../docs/user_manual/processing/modeler.rst:304
+msgid ""
+"You can change the name and the color of the boxes. Group boxes are very "
+"useful when used together with :menuselection:`View --> Zoom To`. This "
+"allows you to zoom to a specific part of the model."
+msgstr ""
+"Vous pouvez changer le nom et la couleur des boites. Les boîtes de groupe "
+"sont très utiles lorsqu'elles sont utilisées avec :menuselection:`Vue --> "
+"Zoomer vers`. Cela vous permet de zoomer sur une partie spécifique du "
+"modèle."
+
+#: ../../docs/user_manual/processing/modeler.rst:309
+msgid ""
+"You might want to change the order of the inputs and how they are listed in "
+"the main model dialog. At the bottom of the ``Input`` panel you will find "
+"the ``Reorder Model Inputs...`` button and by clicking on it a new dialog "
+"pops up allowing you to change the order of the inputs:"
+msgstr ""
+"Vous pouvez modifier l'ordre des entrées et la façon dont elles sont "
+"énumérées dans le dialogue principal du modèle. En bas du panneau "
+"``Entrée``, vous trouverez le bouton ``Réorganiser les entrées du "
+"modèle...`` et en cliquant dessus, une nouvelle boîte de dialogue apparaît, "
+"vous permettant de modifier l'ordre des entrées :"
+
+#: ../../docs/user_manual/processing/modeler.rst:317
+msgid "Reorder Model Inputs"
+msgstr "Réorganiser les entrées du modèle"
+
+#: ../../docs/user_manual/processing/modeler.rst:321
 msgid "Saving and loading models"
 msgstr "Sauvegarder et charger des modèles"
 
-#: ../../docs/user_manual/processing/modeler.rst:232
+#: ../../docs/user_manual/processing/modeler.rst:323
 msgid ""
-"Use the :guilabel:`Save` button to save the current model and the "
-":guilabel:`Open` button to open any previously saved model. Models are saved"
-" with the :file:`.model3` extension. If the model has been already been "
-"saved from the modeler window, you will not be prompted for a filename. "
+"Use the |fileSave|:sup:`Save model` button to save the current model and the"
+" |fileOpen|:sup:`Open Model` button to open a previously saved model. Models"
+" are saved with the :file:`.model3` extension. If the model has already been"
+" saved from the modeler window, you will not be prompted for a filename. "
 "Since there is already a file associated with the model, that file will be "
 "used for subsequent saves."
 msgstr ""
-"Utilisez le bouton :guilabel:`Enregistrer le modèle` pour sauvegarder le "
-"modèle courant et le bouton :guilabel:`Ouvrir le modèle` pour ouvrir un "
-"modèle existant. Les modèles sont sauvegardés dans un fichier avec "
-"l'extension :file:`.model3`. Si le modèle a précédemment été sauvegardé à "
-"partir du modeleur, vous n'aurez pas à redonner de nom de fichier. Ce "
-"fichier étant déjà associé au modèle, il sera utilisé pour les sauvegardes "
-"suivantes."
+"Utilisez le bouton |fileSave|:sup:`Sauvegarder le modèle` pour enregistrer "
+"le modèle actuel et le bouton |fileOpen|:sup:`ouvrir modèle` pour ouvrir un "
+"modèle précédemment enregistré. Les modèles sont enregistrés avec "
+"l'extension :file:`.model3`. Si le modèle a déjà été sauvegardé à partir de "
+"la fenêtre du modeleur, aucun nom de fichier ne vous sera demandé. Comme il "
+"y a déjà un fichier associé au modèle, ce fichier sera utilisé pour les "
+"sauvegardes ultérieures."
 
-#: ../../docs/user_manual/processing/modeler.rst:240
+#: ../../docs/user_manual/processing/modeler.rst:331
 msgid ""
 "Before saving a model, you have to enter a name and a group for it in the "
 "text boxes in the upper part of the window."
@@ -485,7 +763,7 @@ msgstr ""
 "auquel il appartient. Pour cela, remplissez les deux champs texte situés sur"
 " la partie haute de la fenêtre."
 
-#: ../../docs/user_manual/processing/modeler.rst:243
+#: ../../docs/user_manual/processing/modeler.rst:334
 msgid ""
 "Models saved in the :file:`models` folder (the default folder when you are "
 "prompted for a filename to save the model) will appear in the toolbox in the"
@@ -501,7 +779,7 @@ msgstr ""
 "fait maintenant partie des algorithmes, il peut être utilisé comme tous les "
 "autres depuis la boite à outils ou depuis le modeleur."
 
-#: ../../docs/user_manual/processing/modeler.rst:252
+#: ../../docs/user_manual/processing/modeler.rst:343
 msgid ""
 "Models can also be saved within the project file using the "
 "|addToProject|:sup:`Save model in project` button. Models saved using this "
@@ -513,7 +791,7 @@ msgstr ""
 "modèles sauvegardés par ce biais ne seront pas enregistrés dans un fichier "
 ":file:`.model3` mais directement intégrés au fichier du projet."
 
-#: ../../docs/user_manual/processing/modeler.rst:257
+#: ../../docs/user_manual/processing/modeler.rst:348
 msgid ""
 "Project models are available in the |qgsProjectFile|:guilabel:`Project "
 "models` menu of the toolbox."
@@ -521,7 +799,7 @@ msgstr ""
 "Les modèles associés au projet sont disponibles depuis le menu "
 "|qgsProjectFile|:guilabel:`Modèles du projet` de la boîte à outils."
 
-#: ../../docs/user_manual/processing/modeler.rst:260
+#: ../../docs/user_manual/processing/modeler.rst:351
 msgid ""
 "The models folder can be set from the Processing configuration dialog, under"
 " the :guilabel:`Modeler` group."
@@ -529,7 +807,7 @@ msgstr ""
 "Le répertoire par défaut des modèles peut être défini dans les "
 "configurations du Module de Traitements, dans le groupe :guilabel:`Modèles`."
 
-#: ../../docs/user_manual/processing/modeler.rst:263
+#: ../../docs/user_manual/processing/modeler.rst:354
 msgid ""
 "Models loaded from the :file:`models` folder appear not only in the toolbox,"
 " but also in the algorithms tree in the :guilabel:`Algorithms` tab of the "
@@ -542,31 +820,34 @@ msgstr ""
 "pouvez utiliser un modèle depuis un autre modèle, comme tous les "
 "algorithmes."
 
-#: ../../docs/user_manual/processing/modeler.rst:269
+#: ../../docs/user_manual/processing/modeler.rst:360
 msgid ""
-"Models will show up in the :ref:`Browser <browser_panel>` panel , and can be"
-" run from there."
+"Models will show up in the :ref:`Browser <browser_panel>` panel and can be "
+"run from there."
 msgstr ""
-"Les modèles apparaissent dans le panneau :ref:`Explorateur <browser_panel>` "
-"et peuvent y être lancés directement."
+"Les modèles apparaîtront dans le panneau :ref:`Browser <browser_panel>` et "
+"pourront être exécutés à partir de là."
 
-#: ../../docs/user_manual/processing/modeler.rst:273
+#: ../../docs/user_manual/processing/modeler.rst:364
 msgid "Exporting a model as an image, PDF or SVG"
 msgstr "Exporter un modèle comme image, PDF ou SVG."
 
-#: ../../docs/user_manual/processing/modeler.rst:275
+#: ../../docs/user_manual/processing/modeler.rst:366
 msgid ""
 "A model can also be exported as an image, SVG or PDF (for illustration "
-"purposes)."
+"purposes) by clicking |saveMapAsImage|:sup:`Export as image`, "
+"|saveAsPDF|:sup:`Export as PDF` or |saveAsSVG|:sup:`Export as SVG`."
 msgstr ""
-"Un modèle peut également être exporté en tant qu'image, fichier SVG ou PDF "
-"(pour des besoins d'illustration)."
+"Un modèle peut également être exporté en tant qu'image, SVG ou PDF (à des "
+"fins d'illustration) en cliquant sur |saveMapAsImage|:sup:`Exporter en tant "
+"qu'image`, |saveAsPDF|:sup:`Exporter en PDF` ou |saveAsSVG|:sup:`Exporter en"
+" SVG ` ."
 
-#: ../../docs/user_manual/processing/modeler.rst:280
+#: ../../docs/user_manual/processing/modeler.rst:372
 msgid "Editing a model"
 msgstr "Éditer un modèle"
 
-#: ../../docs/user_manual/processing/modeler.rst:282
+#: ../../docs/user_manual/processing/modeler.rst:374
 msgid ""
 "You can edit the model you are currently creating, redefining the workflow "
 "and the relationships between the algorithms and inputs that define the "
@@ -576,7 +857,7 @@ msgstr ""
 " chaîne de traitements et les relations entre algorithmes et données "
 "d'entrée."
 
-#: ../../docs/user_manual/processing/modeler.rst:286
+#: ../../docs/user_manual/processing/modeler.rst:378
 msgid ""
 "If you right-click on an algorithm in the canvas, you will see a context "
 "menu like the one shown next:"
@@ -584,11 +865,11 @@ msgstr ""
 "Si vous faites un clic-droit sur un algorithme dans le canevas, le menu "
 "contextuel suivant apparaîtra :"
 
-#: ../../docs/user_manual/processing/modeler.rst:294
+#: ../../docs/user_manual/processing/modeler.rst:386
 msgid "Modeler Right Click"
 msgstr "Clic-droit sur un algorithme"
 
-#: ../../docs/user_manual/processing/modeler.rst:296
+#: ../../docs/user_manual/processing/modeler.rst:388
 msgid ""
 "Selecting the :guilabel:`Remove` option will cause the selected algorithm to"
 " be removed. An algorithm can be removed only if there are no other "
@@ -603,26 +884,27 @@ msgstr ""
 "ailleurs. Si vous tentez de supprimer un algorithme utilisé par ailleurs, le"
 " message d'avertissement suivant s'affichera :"
 
-#: ../../docs/user_manual/processing/modeler.rst:310
+#: ../../docs/user_manual/processing/modeler.rst:402
 msgid "Cannot Delete Algorithm"
 msgstr "Impossible de supprimer l'algorithme"
 
-#: ../../docs/user_manual/processing/modeler.rst:312
+#: ../../docs/user_manual/processing/modeler.rst:404
 msgid ""
-"Selecting the :guilabel:`Edit` option will show the parameter dialog of the "
-"algorithm, so you can change the inputs and parameter values. Not all input "
-"elements available in the model will appear as available inputs. Layers or "
-"values generated at a more advanced step in the workflow defined by the "
-"model will not be available if they cause circular dependencies."
+"Selecting the :guilabel:`Edit...` option will show the parameter dialog of "
+"the algorithm, so you can change the inputs and parameter values. Not all "
+"input elements available in the model will appear as available inputs. "
+"Layers or values generated at a more advanced step in the workflow defined "
+"by the model will not be available if they cause circular dependencies."
 msgstr ""
-"Choisissez l'option :guilabel:`Éditer` pour afficher la fenêtre des "
-"paramètres de l'algorithme, pour changer les données en entrée et les "
-"paramètres. Tous les paramètres d'entrée ne seront pas systématiquement "
-"affichés. Les couches ou les valeurs générées en amont dans le flux de "
-"traitement ne seront ainsi pas disponibles, pour éviter les références "
+"En sélectionnant l'option :guilabel:`Editer...`, le dialogue de paramétrage "
+"de l'algorithme s'affichera, ce qui vous permettra de modifier les entrées "
+"et les valeurs des paramètres. Tous les éléments d'entrée disponibles dans "
+"le modèle n'apparaîtront pas comme des entrées disponibles. Les couches ou "
+"les valeurs générées à une étape plus avancée du flux de travail défini par "
+"le modèle ne seront pas disponibles si elles provoquent des dépendances "
 "circulaires."
 
-#: ../../docs/user_manual/processing/modeler.rst:320
+#: ../../docs/user_manual/processing/modeler.rst:412
 msgid ""
 "Select the new values and click on the :guilabel:`OK` button as usual. The "
 "connections between the model elements will change in the modeler canvas "
@@ -632,25 +914,34 @@ msgstr ""
 " Les liens entre les éléments du modèle seront actualisés sur le canevas du "
 "modeleur."
 
-#: ../../docs/user_manual/processing/modeler.rst:324
+#: ../../docs/user_manual/processing/modeler.rst:416
 msgid ""
-"A model can be run partially, by deactivating some of its algorithms. To do "
+"The :guilabel:`Add comment...` allows you to add a comment to the algorithm "
+"to better describe the behavior."
+msgstr ""
+":guilabel:`ajouter commentaire...` vous permet d'ajouter un commentaire à "
+"l'algorithme pour mieux décrire le comportement."
+
+#: ../../docs/user_manual/processing/modeler.rst:419
+msgid ""
+"A model can be run partially by deactivating some of its algorithms. To do "
 "it, select the :guilabel:`Deactivate` option in the context menu that "
 "appears when right-clicking on an algorithm element. The selected algorithm,"
 " and all the ones in the model that depend on it will be displayed in grey "
 "and will not be executed as part of the model."
 msgstr ""
-"Un modèle peut tourner partiellement en désactivant certains de ses "
-"algorithmes. Pour ce faire, sélectionnez l'option :guilabel:`Désactiver` qui"
-" figure dans le menu contextuel qui apparaît en faisant un clic-droit sur un"
-" algorithme. Celui-ci et tous les autres qui en dépendent figureront en gris"
-" et ne seront pas exécutés par le modèle."
+"Un modèle peut être exécuté partiellement en désactivant certains de ses "
+"algorithmes. Pour ce faire, sélectionnez l'option :guilabel:`désactiver` "
+"dans le menu contextuel qui apparaît lorsque l'on clique avec le bouton "
+"droit de la souris sur un élément de l'algorithme. L'algorithme sélectionné,"
+" et tous ceux du modèle qui en dépendent, seront affichés en gris et ne "
+"seront pas exécutés en tant que partie du modèle."
 
-#: ../../docs/user_manual/processing/modeler.rst:335
+#: ../../docs/user_manual/processing/modeler.rst:430
 msgid "Model With Deactivated Algorithms"
 msgstr "Modèle dont un algorithme a été désactivé"
 
-#: ../../docs/user_manual/processing/modeler.rst:337
+#: ../../docs/user_manual/processing/modeler.rst:432
 msgid ""
 "When right-clicking on an algorithm that is not active, you will see a "
 ":guilabel:`Activate` menu option that you can use to reactivate it."
@@ -659,24 +950,25 @@ msgstr ""
 "verrez alors l'option :guilabel:`Activer` du menu que vous pouvez utiliser "
 "pour le rendre actif."
 
-#: ../../docs/user_manual/processing/modeler.rst:342
+#: ../../docs/user_manual/processing/modeler.rst:437
 msgid "Editing model help files and meta-information"
 msgstr "Éditer l'aide et les métadonnées"
 
-#: ../../docs/user_manual/processing/modeler.rst:344
+#: ../../docs/user_manual/processing/modeler.rst:439
 msgid ""
-"You can document your models from the modeler itself. Just click on the "
-":guilabel:`Edit Model Help` button, and a dialog like the one shown next "
-"will appear."
+"You can document your models from the modeler itself. Click on the "
+"|processingHelp|:sup:`Edit model help` button, and a dialog like the one "
+"shown next will appear."
 msgstr ""
-"Vous pouvez documenter vos modèles. Cliquez sur le bouton :guilabel:`Éditer "
-"l'aide du modèle` et une fenêtre semblable à celle-ci apparaîtra."
+"Vous pouvez documenter vos modèles à partir du modeleur lui-même. Cliquez "
+"sur le bouton |processingHelp|:sup:`Editer l'aide du modèle`, et une boîte "
+"de dialogue comme celle qui suit apparaîtra."
 
-#: ../../docs/user_manual/processing/modeler.rst:353
+#: ../../docs/user_manual/processing/modeler.rst:448
 msgid "Editing Help"
 msgstr "Éditer la documentation"
 
-#: ../../docs/user_manual/processing/modeler.rst:355
+#: ../../docs/user_manual/processing/modeler.rst:450
 msgid ""
 "On the right-hand side, you will see a simple HTML page, created using the "
 "description of the input parameters and outputs of the algorithm, along with"
@@ -694,41 +986,45 @@ msgstr ""
 "la fenêtre. Sélectionnez un élément dans la partie supérieure puis "
 "remplissez sa description dans la partie inférieure."
 
-#: ../../docs/user_manual/processing/modeler.rst:365
+#: ../../docs/user_manual/processing/modeler.rst:460
 msgid "Model help is saved as part of the model itself."
 msgstr ""
 "L'aide d'un modèle est enregistrée comme une partie intégrante du modèle."
 
-#: ../../docs/user_manual/processing/modeler.rst:369
+#: ../../docs/user_manual/processing/modeler.rst:464
 msgid "Exporting a model as a Python script"
 msgstr "Exporter le modèle en script Python"
 
-#: ../../docs/user_manual/processing/modeler.rst:371
+#: ../../docs/user_manual/processing/modeler.rst:466
 msgid ""
 "As we will see in a later chapter, Processing algorithms can be called from "
 "the QGIS Python console, and new Processing algorithms can be created using "
-"Python. A quick way of creating such a Python script is to create a model "
-"and then to export is as a Python file."
+"Python. A quick way to create such a Python script is to create a model and "
+"then export it as a Python file."
 msgstr ""
-"Comme nous le verrons dans un des chapitres suivants, les algorithmes "
-"peuvent être appelés depuis la console Python de QGIS et de nouveaux "
-"algorithmes peuvent être créés directement en Python. Une manière rapide de "
-"créer un script Python est de créer un modèle puis de l'exporter en Python."
+"Comme nous le verrons dans un chapitre ultérieur, les algorithmes de "
+"traitement peuvent être appelés depuis la console Python de QGIS, et de "
+"nouveaux algorithmes de traitement peuvent être créés à l'aide de Python. Un"
+" moyen rapide de créer un tel script Python est de créer un modèle et de "
+"l'exporter ensuite sous forme de fichier Python."
 
-#: ../../docs/user_manual/processing/modeler.rst:377
+#: ../../docs/user_manual/processing/modeler.rst:472
 msgid ""
-"To do so, right click on the name of the model in the Processing Toolbox and"
-" choose :guilabel:`Export Model as Python Algorithm...`."
+"To do so, click on the |saveAsPython|:sup:`Export as Script Algorithm...` in"
+" the modeler canvas or right click on the name of the model in the "
+"Processing Toolbox and choose |saveAsPython|:sup:`Export Model as Python "
+"Algorithm...`."
 msgstr ""
-"Pour cet export, faites un clic-droit sur le nom du modèle dans la Boîte à "
-"outils de traitements et cliquez sur :guilabel:`Exporter le modèle comme un "
-"Algorithme Python...`."
+"Pour ce faire, cliquez sur le bouton |saveAsPython|:sup:`Exporter comme "
+"Algorithme de script...` dans le canevas du modeleur ou faites un clic droit"
+" sur le nom du modèle dans la boîte à outils de traitement et choisissez "
+"|saveAsPython|:sup:`Exporter le modèle comme Algorithme Python...`."
 
-#: ../../docs/user_manual/processing/modeler.rst:382
+#: ../../docs/user_manual/processing/modeler.rst:478
 msgid "About available algorithms"
 msgstr "À propos des algorithmes disponibles"
 
-#: ../../docs/user_manual/processing/modeler.rst:384
+#: ../../docs/user_manual/processing/modeler.rst:480
 msgid ""
 "You might notice that some algorithms that can be executed from the toolbox "
 "do not appear in the list of available algorithms when you are designing a "
