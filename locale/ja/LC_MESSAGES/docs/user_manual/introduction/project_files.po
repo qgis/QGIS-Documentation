@@ -1,25 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
-# tomoyuki arai <tarai.3367@gmail.com>, 2020
-# Kayama Yoichi <yoichi.kayama@gmail.com>, 2020
+# Harrissou Sant-anna, 2020
+# tomoyuki arai <tarai.3367@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:26+0000\n"
-"Last-Translator: Kayama Yoichi <yoichi.kayama@gmail.com>, 2020\n"
+"POT-Creation-Date: 2020-12-13 09:01+0100\n"
+"PO-Revision-Date: 2020-12-24 12:04+0000\n"
+"Last-Translator: tomoyuki arai <tarai.3367@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -41,12 +42,24 @@ msgid ""
 "|fileSave| :menuselection:`Save` or :menuselection:`Project -->` "
 "|fileSaveAs| :menuselection:`Save As...`."
 msgstr ""
-"あなたの QGIS セッションの状態はプロジェクトと呼ばれます. QGIS は１つのプロジェクトで動作しています. "
-"プロジェクト特有、またはアプリケーション全体で決められている規定値が新規のプロジェクトのために設定できます ( :ref:`gui_options` "
-"参照). QGISではあなたのワークスペースの状態をメニューオプション :menuselection:`プロジェクト -->` |fileSave| "
-":menuselection:`保存` または :menuselection:`プロジェクト -->` |fileSaveAs| "
-":menuselection:`名前をつけて保存...` を利用することで :ref:`QGIS プロジェクトファイル "
-"<qgisprojectfile>`  に保存できます."
+"QGISセッションの状態は「プロジェクト」と呼ばれます。QGISが動作するのは一度に１つのプロジェクトです。新しいプロジェクトの設定には、プロジェクトに固有のものや、アプリケーション全体のデフォルトで決められているものがあります（"
+" :ref:`gui_options` 参照）。QGISでは、メニューオプションの :menuselection:`プロジェクト -->` "
+"|fileSave| :menuselection:`保存` または :menuselection:`プロジェクト -->` |fileSaveAs| "
+":menuselection:`名前をつけて保存...` を利用することで、ワークスペースの状態を :ref:`QGISプロジェクトファイル "
+"<qgisprojectfile>`  に保存できます。"
+
+#: ../../docs/user_manual/introduction/project_files.rst:34
+msgid ""
+"If the project has been modified the ``*`` symbol will appear in the title "
+"bar and QGIS will, by default, ask you if you would like to save the "
+"changes. This behavior is controlled by the |checkbox| :guilabel:`Prompt to "
+"save project and data source changes when required` setting under "
+":menuselection:`Settings --> Options --> General`."
+msgstr ""
+"プロジェクトの内容の変更があった場合、タイトルバーには ``*`` "
+"記号が表示され、デフォルトではQGISは変更を保存するかどうかを確認します。この動作は、 :menuselection:`設定 --> オプション "
+"--> 一般情報` にある |checkbox| :guilabel:`必要なときにプロジェクトおよびデータソースの変更を保存するか尋ねる` "
+"の設定によって制御されます。"
 
 #: ../../docs/user_manual/introduction/project_files.rst:40
 msgid ""
@@ -55,9 +68,9 @@ msgid ""
 ":menuselection:`Project --> New from template` or :menuselection:`Project "
 "--> Open Recent -->`."
 msgstr ""
-"既存のプロジェクトをQGISに読み込むにはブラウザパネルを利用するか :menuselection:`Project -->` |fileOpen| "
-":menuselection:`Open...`, :menuselection:`Project --> New from template` または"
-" :menuselection:`Project --> Open Recent -->` を利用して下さい."
+"既存のプロジェクトをQGISに読み込むには、ブラウザパネルを利用するか、 :menuselection:`プロジェクト -->` |fileOpen| "
+":menuselection:`開く...` 、 :menuselection:`プロジェクト --> テンプレートから新規作成` 、または "
+":menuselection:`プロジェクト --> 最近使用したプロジェクト -->` を使用します。"
 
 #: ../../docs/user_manual/introduction/project_files.rst:46
 msgid ""
@@ -68,11 +81,10 @@ msgid ""
 " template. You can also add a layer to create a new project automatically. "
 "The lists will then disappear, giving way to the map canvas."
 msgstr ""
-"起動時に, a list of :guilabel:`Project Templates` と :guilabel:`Recent Projects` "
-"のリストが表示されます, そこには名前とファイルパス (最近の10プロジェクトの)が表示されます.  :guilabel:`Recent "
-"Projects` リストは最近使ったプロジェクトを利用するときに便利です. "
-"エントリをダブルクリックするとプロジェクトかプロジェクトテンプレートが開きます. 新しいプロジェクトに自動的にレイヤを加えることができます. "
-"その後リストは消えマップキャンバスに移動します."
+"起動時には :guilabel:`プロジェクトテンプレート` と :guilabel:`最近使用したプロジェクト` "
+"のリストが表示され、プロジェクトのスクリーンショット、名前、ファイルパスが（最大10個）表示されます。 :guilabel:`最近使用したプロジェクト`"
+" "
+"のリストは、最近使ったプロジェクトにアクセスするのに便利です。エントリをダブルクリックすると、プロジェクトやプロジェクトテンプレートが開きます。また、新しいプロジェクトに自動的にレイヤを追加して作成することもできます。その後、リストは消えて、マップキャンバスに移動します。"
 
 #: ../../docs/user_manual/introduction/project_files.rst:55
 msgid ""
@@ -81,9 +93,15 @@ msgid ""
 "prompt you to save the existing project if changes have been made since it "
 "was opened or last saved."
 msgstr ""
-"セッションをクリアし、新たに起動したい場合は、:menuselection:`プロジェクト -->` |FileNew| "
+"セッションをクリアして新たなセッションを開始したい場合は、:menuselection:`プロジェクト -->` |FileNew| "
 ":menuselection:`新規` "
-"に進みます。ここでは、それが開かれたか、最後に保存されて以降、変更が行われた場合、既存のプロジェクトを保存するように求められます。"
+"を実行します。このとき、プロジェクトを開いてからや最後に保存されて以降に変更があった場合には、現在のプロジェクトを保存するように促されます。"
+
+#: ../../docs/user_manual/introduction/project_files.rst:60
+msgid ""
+"When you open a fresh project, the title bar will show ``Untitled Project`` "
+"until you save it."
+msgstr "新規プロジェクトを開くと、保存するまではタイトルバーには ``無題のプロジェクト`` と表示されます。"
 
 #: ../../docs/user_manual/introduction/project_files.rst:68
 msgid "Starting a new project in QGIS"
@@ -95,15 +113,15 @@ msgstr "以下の情報がプロジェクトファイルに保存されます：
 
 #: ../../docs/user_manual/introduction/project_files.rst:72
 msgid "Layers added"
-msgstr "追加されたレイヤー群"
+msgstr "追加されたレイヤ"
 
 #: ../../docs/user_manual/introduction/project_files.rst:73
 msgid "Which layers can be queried"
-msgstr "どのレイヤーをクエリできるか"
+msgstr "どのレイヤをクエリできるか"
 
 #: ../../docs/user_manual/introduction/project_files.rst:74
 msgid "Layer properties, including symbolization and styles"
-msgstr "レイヤーのプロパティ、記号化とスタイルを含めて"
+msgstr "シンボルとスタイルを含むレイヤのプロパティ"
 
 #: ../../docs/user_manual/introduction/project_files.rst:75
 msgid "Projection for the map view"
@@ -119,11 +137,11 @@ msgstr "印刷レイアウト"
 
 #: ../../docs/user_manual/introduction/project_files.rst:78
 msgid "Print layout elements with settings"
-msgstr "設定付きの印刷レイアウト要素"
+msgstr "印刷レイアウト要素とその設定"
 
 #: ../../docs/user_manual/introduction/project_files.rst:79
 msgid "Print layout atlas settings"
-msgstr "印刷レイアウト地図帳設定"
+msgstr "印刷レイアウトの地図帳の設定"
 
 #: ../../docs/user_manual/introduction/project_files.rst:80
 msgid "Digitizing settings"
@@ -148,7 +166,7 @@ msgstr "プラグイン設定"
 #: ../../docs/user_manual/introduction/project_files.rst:85
 msgid ""
 "QGIS Server settings from the OWS settings tab in the Project properties"
-msgstr "プロジェクトプロパティ中のOWS 設定タブからのQGISサーバー設定"
+msgstr "QGISサーバー設定（プロジェクトプロパティのOWS設定タブの設定）"
 
 #: ../../docs/user_manual/introduction/project_files.rst:86
 msgid "Queries stored in the DB Manager"
@@ -161,9 +179,8 @@ msgid ""
 "you are doing. The project file format has been updated several times. "
 "Project files from older QGIS versions may not work properly any more."
 msgstr ""
-"プロジェクトファイルはXML 形式で保存されます ( :ref:`qgisprojectfile` 参照). "
-"このことはあなたがやりたいことがある場合QGISの外でファイルを編集することができることを意味します. "
-"プロジェクトファイルの形式はしばしば更新されます. QGISの古いバージョンのプロジェクトファイルは正しく機能しなくなる可能性があります."
+"プロジェクトファイルはXML 形式で保存されます（ :ref:`qgisprojectfile` "
+"参照）。これは、知識があればQGISの外部でファイルを編集することが可能であることを意味します。プロジェクトファイルの形式は何度か更新されています。QGISの古いバージョンのプロジェクトファイルは、今後は正常に動作しない可能性があります。"
 
 #: ../../docs/user_manual/introduction/project_files.rst:96
 msgid ""
@@ -172,9 +189,9 @@ msgid ""
 "Options` (|checkbox| :guilabel:`Warn when opening a project file saved with "
 "an older version of QGIS`)."
 msgstr ""
-"デフォルトでQGISは開いたプロジェクトファイルとプログラムのバージョンが異なると警告します. この動作は :menuselection:`設定 -->"
-" オプション` の　 :guilabel:`一般情報` タブ  (|checkbox| "
-":guilabel:`古いバージョンのQGISで保存されたプロジェクトファイルを開く時に警告する`)で管理できます."
+"デフォルトでは、QGISは開いたプロジェクトファイルとプログラムのバージョンが異なると警告します。この動作は :menuselection:`設定 "
+"--> オプション` の :guilabel:`一般情報` タブ（ |checkbox| "
+":guilabel:`古いバージョンのQGISで保存されたプロジェクトファイルを開く時に警告する` ）で制御できます。"
 
 #: ../../docs/user_manual/introduction/project_files.rst:102
 msgid ""
@@ -182,7 +199,8 @@ msgid ""
 "created in the same directory as the project file, with the extension "
 "``.qgs~``."
 msgstr ""
-"QGISで ``.qgs`` プロジェクトファイルを保存すると同じディレクトリに ``.qgs~`` という拡張子のバックアップファイルが作成されます."
+"QGISで ``.qgs`` プロジェクトファイルを保存すると、同じディレクトリに ``.qgs~`` "
+"という拡張子のバックアップファイルが作成されます。"
 
 #: ../../docs/user_manual/introduction/project_files.rst:106
 msgid ""
@@ -193,23 +211,24 @@ msgid ""
 "<vector_auxiliary_storage>`. You can get to these files by unzipping the "
 "``.qgz`` file."
 msgstr ""
-"QGIS プロジェクトファイルの拡張子は ``.qgs`` です.しかし QGISから保存を行った場合 ``.qgz`` "
-"拡張子で圧縮された形式で保存されるのがデフォルトです. The ``.qgs`` ファイルは ``.qgz`` ファイルに(zip "
-"アーカイブされています)組み込まれていて,  :ref:`auxiliary data <vector_auxiliary_storage>` "
-"用に構成された sqlite データベース (``.qgd``) が同梱されています. それらのファイルは ``.qgz`` を解凍すると取得できます."
+"QGISプロジェクトファイルの拡張子は ``.qgs`` ですが、QGISから保存を行う場合、デフォルトでは圧縮された形式の ``.qgz`` "
+"拡張子で保存します。 ``.qgs`` ファイルは ``.qgz`` ファイル（zipアーカイブ）内に埋め込まれ、関連付けられた "
+":ref:`補助テーブル <vector_auxiliary_storage>` 用の sqlite データベース (``.qgd``) "
+"とともに保存されます。これらのファイルは、 ``.qgz`` を解凍すると取得できます。"
 
 #: ../../docs/user_manual/introduction/project_files.rst:116
 msgid ""
 "The :ref:`vector_auxiliary_storage` mechanism makes a zipped project "
 "particularly useful, since it embeds auxiliary data."
 msgstr ""
-" :ref:`vector_auxiliary_storage` 機能では補助データを組み込んだzipされたプロジェクトを作れるので便利ですを."
+"補助データが埋め込まれているので、 :ref:`vector_auxiliary_storage` "
+"の仕組みはzip形式プロジェクトが特に便利になります。"
 
 #: ../../docs/user_manual/introduction/project_files.rst:121
 msgid ""
 "Projects can also be saved/loaded to/from a PostgreSQL database using the "
 "following Project menu items:"
-msgstr "プロジェクトでは以下のプロジェクトメニュー項目を使用してPostgreSQLデータベースに保存/ロードすることもできます."
+msgstr "以下のプロジェクトメニュー項目を使用して、プロジェクトをPostgreSQLデータベースに保存/ロードすることもできます。"
 
 #: ../../docs/user_manual/introduction/project_files.rst:124
 msgid ":menuselection:`Project --> Open from`"
@@ -226,24 +245,89 @@ msgid ""
 " dialog to pick a GeoPackage connection and project or a PostgreSQL "
 "connection, schema and project."
 msgstr ""
-"両方のメニューアイテムにはリストされているような拡張プロジェクト保存実装のサブメニューがあります (PostgreSQL と GeoPackage). "
-"アクションをクリックすると GeoPackage 接続を選択するダイアログか PostgreSQL "
-"接続,スキーマとプロジェクトを選択するダイアログが開きます."
+"どちらのメニュー項目にも、プロジェクトの特別なストレージ実装（PostgreSQLとGeoPackage）のリストを持つサブメニューがあります。アクションをクリックすると"
+" GeoPackage 接続とプロジェクトを選択するダイアログ、あるいはPostgreSQL接続とスキーマ、プロジェクトを選択するダイアログが開きます。"
 
 #: ../../docs/user_manual/introduction/project_files.rst:132
 msgid ""
-"Projects stored in Geopackage or PostgreSQL can be also be loaded through "
-"the QGIS browser panel, either by double-clicking them or by dragging them "
-"to the map canvas."
+"Projects stored in Geopackage or PostgreSQL can also be loaded through the "
+"QGIS browser panel, either by double-clicking them or by dragging them to "
+"the map canvas."
 msgstr ""
-"Geopackage や PostgreSQLに格納されたプロジェクトは QGIS ブラウザパネルからロードすることもできます, "
-"それらをダブルクリックするか地図キャンバスまでドラッグして下さい."
+"GeoPackageやPostgreSQLに格納されたプロジェクトも、QGISブラウザパネルからロードすることができます。それらをダブルクリックするか、マップキャンバスまでドラッグしてください。"
 
 #: ../../docs/user_manual/introduction/project_files.rst:140
+msgid "Handling broken file paths"
+msgstr "壊れたファイルパスの取り扱い"
+
+#: ../../docs/user_manual/introduction/project_files.rst:142
+msgid ""
+"When opening a project, QGIS may fail to reach some data sources due to "
+"unavailable service/database, or to a renamed or moved file. QGIS then opens"
+" the :guilabel:`Handle Unavailable Layers` dialog, referencing the unfound "
+"layers. You can:"
+msgstr ""
+"プロジェクトを開くときに、利用できないサービス/データベース、またはファイル名の変更や移動によって、QGIS "
+"が一部のデータソースに到達できないことがあります。この場合、QGISは :guilabel:`利用できないレイヤを処理する` "
+"ダイアログを開き、見つからなかったレイヤを列挙します。以下の操作ができます。"
+
+#: ../../docs/user_manual/introduction/project_files.rst:148
+msgid ""
+"Double-click in the :guilabel:`Datasource` field, adjust the path of each "
+"layer and click :guilabel:`Apply changes`;"
+msgstr ""
+":guilabel:`データソース` フィールドをダブルクリックし、各レイヤのパスを修正して :guilabel:`変更の適用` "
+"ボタンをクリックします。"
+
+#: ../../docs/user_manual/introduction/project_files.rst:150
+msgid ""
+"Select a row, press :guilabel:`Browse` to indicate the correct location and "
+"click :guilabel:`Apply changes`;"
+msgstr ""
+"行を選択し、 :guilabel:`ブラウズ` ボタンを押して正しい場所を指定し、 :guilabel:`変更の適用` ボタンをクリックします。"
+
+#: ../../docs/user_manual/introduction/project_files.rst:152
+msgid ""
+"Press :guilabel:`Auto-Find` to browse the folders and try to automatically "
+"fix all or selected broken path(s). Be aware that the browsing may take some"
+" time."
+msgstr ""
+":guilabel:`自動検索` "
+"ボタンを押し、フォルダを検索して、全てもしくは選択したファイルの壊れているパスの自動修正を試みます。検索には時間がかかることがあるため注意してください。"
+
+#: ../../docs/user_manual/introduction/project_files.rst:154
+msgid ""
+"Ignore the message and open your project with the broken path(s) by clicking"
+" :guilabel:`Keep Unavailable Layers`. Your layer is then displayed in the "
+":guilabel:`Layers` panel, but without any data until you fix the path using "
+"the |indicatorBadLayer| :sup:`Unavailable layer!` icon next to it in the "
+":guilabel:`Layers` panel, or :guilabel:`Repair Data Source...` in the layer "
+"contextual menu."
+msgstr ""
+":guilabel:`利用できないレイヤを保持する` "
+"ボタンをクリックすると、メッセージを無視して、パスが壊れた状態のままでプロジェクトを開きます。この場合、レイヤは :guilabel:`レイヤ` "
+"パネルに表示されますが、 :guilabel:`レイヤ` パネルの横にある |indicatorBadLayer| :sup:`利用できないレイヤ!` "
+"アイコンまたはレイヤのコンテキストメニューの :guilabel:`データソースの変更...` を使用してパスを修正するまでは、データは何もありません。"
+
+#: ../../docs/user_manual/introduction/project_files.rst:161
+msgid ""
+"With the :guilabel:`Repair Data Source...` tool, once a layer path has been "
+"fixed, QGIS scans through all other broken paths and tries to auto-fix those"
+" that have the same broken file path."
+msgstr ""
+":guilabel:`データソースの変更...` "
+"ツールを使用して、あるレイヤのパスが修正されると、QGISは他の壊れたパス全てをスキャンし、同じ壊れたファイルパスの自動修正を試みます。"
+
+#: ../../docs/user_manual/introduction/project_files.rst:164
+msgid ""
+"|deleteSelected| :guilabel:`Remove Unavailable Layers` from the project."
+msgstr "プロジェクトから |deleteSelected| :guilabel:`利用できないレイヤを削除します` 。"
+
+#: ../../docs/user_manual/introduction/project_files.rst:170
 msgid "Generating output"
 msgstr "出力を作成する"
 
-#: ../../docs/user_manual/introduction/project_files.rst:145
+#: ../../docs/user_manual/introduction/project_files.rst:175
 msgid ""
 "There are several ways to generate output from your QGIS session. We have "
 "already discussed saving as a project file in :ref:`sec_projects`. Other "
@@ -252,7 +336,7 @@ msgstr ""
 "QGISセッションから出力を作成するには、いくつかの方法があります。 :ref:`sec_projects` "
 "でプロジェクトファイルとして保存することについては既に説明しました。出力ファイルを作成する他の方法は："
 
-#: ../../docs/user_manual/introduction/project_files.rst:150
+#: ../../docs/user_manual/introduction/project_files.rst:180
 msgid ""
 "Creating images: :menuselection:`Project --> Import/Export -->` "
 "|saveMapAsImage| :menuselection:`Export Map to Image...` outputs the map "
@@ -265,7 +349,7 @@ msgstr ""
 "を使うと地図キャンバスに描画されているものをスケール,解像度,サイズを指定してイメージ形式 (PNG, JPG, TIFF...) で出力できます, "
 "... ジオリファレンスされたイメージの出力も可能です. 詳細は :ref:`exportingmapcanvas` を参照して下さい."
 
-#: ../../docs/user_manual/introduction/project_files.rst:157
+#: ../../docs/user_manual/introduction/project_files.rst:187
 msgid ""
 "Exporting to PDF files: :menuselection:`Project --> Import/Export --> Export"
 " Map to PDF...` outputs the map canvas rendering to PDF at custom scale, "
@@ -276,7 +360,7 @@ msgstr ""
 "を使うとスケール,解像度といくつかの設定(簡素化, ジオリファレンス, ...)を指定して地図キャンバスをPDFに出力することができます. 詳細は "
 ":ref:`exportingmapcanvas` を参照して下さい."
 
-#: ../../docs/user_manual/introduction/project_files.rst:163
+#: ../../docs/user_manual/introduction/project_files.rst:193
 msgid ""
 "Exporting to DXF files: :menuselection:`Project --> Import/Export --> Export"
 " Project to DXF...` opens a dialog where you can define the 'Symbology "
@@ -289,7 +373,7 @@ msgstr ""
 "DXFに出力するベクタレイヤを選択できます. Through the 'シンボロジモード' を使うとQGISのオリジナルシンボルを忠実に出力できます  "
 "( :ref:`create_dxf_files` 参照)."
 
-#: ../../docs/user_manual/introduction/project_files.rst:170
+#: ../../docs/user_manual/introduction/project_files.rst:200
 msgid ""
 "Designing maps: :menuselection:`Project -->` |newLayout| :menuselection:`New"
 " Print Layout...` opens a dialog where you can layout and print the current "
