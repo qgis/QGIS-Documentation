@@ -755,36 +755,64 @@ tab and select or deselect the following checkboxes:
 .. index:: Zoom, Pan, Map navigation
 .. _zoom_pan:
 
+
 Zooming and Panning
 -------------------
 
-QGIS provides tools to zoom and pan to your area of interest.
+There are multiple ways to zoom and pan to an area of interest.
+You can use either the mouse buttons on the map canvas, the keyboard
+on the map canvas, or the menu actions.
 
-Apart from using the |pan| :sup:`pan` and |zoomIn|
-:sup:`zoom-in`/|zoomOut| :sup:`zoom-out` icons on the toolbar
-with the mouse, you can also navigate with the mouse wheel, spacebar
-and arrow keys. A :guilabel:`Zoom factor` can be set under the
+With the Tools in the Toolbar
+.............................
+
+Zooming and panning the map can be done with the following tools available in the toolbar:
+
+  * |pan| :sup:`Pan` will activate the pan tool and allow you to left click anywhere on the map
+    canvas to pan the map at the cursor position. You can also pan the map
+    by holding down the left mouse button and dragging the map canvas.
+
+  * |zoomIn| :sup:`Zoom In` and |zoomOut| :sup:`Zoom Out` will activate the Zoom In and Zoom Out tools allowing
+    you to left click anywhere on the map canvas to zoom in or zoom out one level. The mouse cursor
+    position will be the center of the zoomed area of interest. You can also zoom in
+    to an area (or zoom out) by dragging a rectangle on the map canvas with the left mouse button.
+
+  * |panToSelected| :sup:`Pan Map to Selection` will pan the map to the selected features of all the selected layers in the layer panel.
+
+  * |zoomToSelected| :sup:`Zoom to Selection` will zoom to the selected features of all the selected layers in the layer panel.
+
+  * |zoomToLayer| :sup:`Zoom to Layer(s)` will zoom to the extent of all the selected layers in the layer panel.
+
+  * |zoomFull| :sup:`Zoom Full` will zoom to the extent of all the visible layers in the map.
+
+  * |zoomLast| :sup:`Zoom Last` will zoom the map to the previous extent in history.
+
+  * |zoomNext| :sup:`Zoom Next` will zoom the map to the next extent in history.
+
+A :guilabel:`Zoom factor` can be set under the
 :menuselection:`Settings -->` |options| :menuselection:`Options --> Map tools`
 menu to define the scale behavior while zooming.
 
-With the mouse wheel
-....................
+With the Mouse Wheel on the Map Canvas
+......................................
 
-You can press the mouse wheel to pan inside of the main window (on macOS,
-you may need to hold down the :kbd:`cmd` key).
-You can roll the mouse wheel to zoom in and out on the map; the mouse
+You can pan the map by holding the mouse wheel inside of the map canvas and dragging the mouse cursor
+(on macOS, you may need to hold down the :kbd:`cmd` key).
+You can also roll the mouse wheel to zoom in and out on the map. The mouse
 cursor position will be the center of the zoomed area of interest.
 Holding down :kbd:`Ctrl` while rolling the mouse wheel results in a finer zoom.
 
-With the arrow keys
-...................
+With the Keyboard on the Map Canvas
+...................................
+
+Holding down :kbd:`spacebar` on the keyboard and moving the mouse cursor will
+pan the map the same way dragging the map canvas with |pan| :sup:`Pan` does.
 
 Panning the map is possible with the arrow keys.
-Place the mouse cursor inside the map area, and click on the arrow keys
+Place the mouse cursor inside the map area, and press on the arrow keys
 to pan up, down, left and right.
 
-You can also use the space bar to cause mouse movements temporarily to pan
-the map. The :kbd:`PgUp` and :kbd:`PgDown` keys on your keyboard will cause
+The :kbd:`PgUp` and :kbd:`PgDown` keys on the keyboard will cause
 the map display to zoom in or out following the zoom factor set. Pressing
 :kbd:`Ctrl++` or :kbd:`Ctrl+-` also performs an immediate zoom in/out
 on the map canvas.
@@ -793,6 +821,35 @@ When certain map tools are active (Identify, Measure...), you can perform a zoom
 holding down :kbd:`Shift` and dragging a rectangle on the map to zoom to that area.
 This is not enabled for selection tools (since they
 use :kbd:`Shift` for adding to selection) or edit tools.
+
+With the menu actions
+.....................
+
+Zooming and panning the map can be done with the following menu actions:
+
+  * :menuselection:`View --> Pan Map` will activate the |pan| :sup:`Pan` tool available in the toolbar.
+
+  * :menuselection:`View --> Zoom In` will activate the |zoomIn| :sup:`Zoom In` tool available in the toolbar.
+
+  * :menuselection:`View --> Zoom Out` will activate the |zoomOut| :sup:`Zoom Out` tool available in the toolbar.
+
+  * :menuselection:`View --> Pan Map to Selection` will pan the map to the selected features of all the selected
+    layers in the layer panel.
+
+  * :menuselection:`View --> Zoom To Selection` will pan the map to the selected features
+    of all the selected layers in the layer panel. This action is also available from the context menu when right-clicking
+    on a layer in the layer panel.
+
+  * :menuselection:`View --> Zoom To Layer(s)` will zoom to the extent of all the selected layers
+    in the layer panel. This action is also available from the context menu when right-clicking on a layer in the layer panel.
+
+  * :menuselection:`View --> Zoom Full` will zoom to the extent of all the layers of the map.
+
+  * :menuselection:`View --> Zoom Last` will zoom the map to the previous extent in history.
+
+  * :menuselection:`View --> Zoom Next` will zoom the map to the next extent in history.
+
+Note that all these actions are also available from the toolbar.
 
 
 .. index::
@@ -2623,6 +2680,8 @@ The values presented in the varying size assistant above will set the size
    :width: 1em
 .. |pan| image:: /static/common/mActionPan.png
    :width: 1.5em
+.. |panToSelected| image:: /static/common/mActionPanToSelected.png
+   :width: 1.5em
 .. |rasterHistogram| image:: /static/common/rasterHistogram.png
    :width: 1.5em
 .. |refresh| image:: /static/common/mActionRefresh.png
@@ -2693,5 +2752,13 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |zoomToBookmark| image:: /static/common/mActionZoomToBookmark.png
    :width: 1.5em
+.. |zoomFull| image:: /static/common/mActionZoomFullExtent.png
+   :width: 1.5em
+.. |zoomLast| image:: /static/common/mActionZoomLast.png
+   :width: 1.5em
+.. |zoomNext| image:: /static/common/mActionZoomNext.png
+   :width: 1.5em
 .. |zoomToLayer| image:: /static/common/mActionZoomToLayer.png
+   :width: 1.5em
+.. |zoomToSelected| image:: /static/common/mActionZoomToSelected.png
    :width: 1.5em
