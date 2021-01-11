@@ -25,6 +25,7 @@ PyQGIS Developer Cookbook
    tasks
    plugins/index
    processing
+   pluginlayer
    network_analysis
    server
    cheat_sheet
