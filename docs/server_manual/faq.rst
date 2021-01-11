@@ -12,7 +12,7 @@ Frequently Asked Question
 
 * *What are the differences between QGIS Desktop and QGIS Server?*
 
-  QGIS Desktop has a graphical user interface and allow you to create and modify maps.
+  QGIS Desktop has a graphical user interface and allows you to create and modify maps.
   QGIS Server is a server application serving your QGIS project files to end user
   applications via OGC streams like `WMS, WFS, etc. <https://www.ogc.org/docs/is>`_.
 
