@@ -19,7 +19,7 @@ same way as exposed in :ref:`interact_layout_item`.
 By default, the legend item displays all available layers and can be refined
 using its :guilabel:`Item Properties` panel. Other than the :ref:`items common
 properties <item_common_properties>`, this feature has the following
-functionalities (see figure_layout_legend_):
+functionalities (see :numref:`figure_layout_legend`):
 
 .. showing all layers is a bug (https://issues.qgis.org/issues/13575) but given
    that it's the behavior for a long moment now, let's document it...
@@ -35,7 +35,7 @@ Main properties
 ---------------
 
 The :guilabel:`Main properties` group of the legend :guilabel:`Item Properties`
-panel provides the following functionalities (see figure_layout_legend_ppt_):
+panel provides the following functionalities (see :numref:`figure_layout_legend_ppt`):
 
 .. _figure_layout_legend_ppt:
 
@@ -72,7 +72,7 @@ Legend items
 ------------
 
 The :guilabel:`Legend items` group of the legend :guilabel:`Item Properties`
-panel provides the following functionalities (see figure_layout_legend_items_):
+panel provides the following functionalities (see :numref:`figure_layout_legend_items`):
 
 .. _figure_layout_legend_items:
 
@@ -224,7 +224,7 @@ WMS LegendGraphic and Spacing
 
 The :guilabel:`WMS LegendGraphic` and :guilabel:`Spacing` groups of the legend
 :guilabel:`Item Properties` panel provide the following functionalities (see
-figure_layout_legend_wms_):
+:numref:`figure_layout_legend_wms`):
 
 .. _figure_layout_legend_wms:
 

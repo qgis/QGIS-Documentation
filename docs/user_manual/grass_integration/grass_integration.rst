@@ -222,7 +222,7 @@ install the dataset on your computer (see :ref:`label_sampledata`).
 #. We can use this wizard to create a new :file:`MAPSET` within an existing
    :file:`LOCATION` (see section :ref:`sec_add_mapset`) or to create a new
    :file:`LOCATION` altogether. Select |radioButtonOn| :guilabel:`Create new
-   location` (see figure_grass_new_location_).
+   location` (see :numref:`figure_grass_new_location`).
 #. Enter a name for the :file:`LOCATION` -- we used 'alaska' -- and click :guilabel:`Next`.
 #. Define the projection by clicking on the radio button |radioButtonOn|
    :guilabel:`Projection` to enable the projection list.
@@ -290,7 +290,7 @@ coordinate values and the currently selected raster resolution (see Neteler & Mi
 #. We can use this wizard to create a new :file:`MAPSET` within an existing
    :file:`LOCATION` or to create a new :file:`LOCATION` altogether. Click on the
    radio button |radioButtonOn| :guilabel:`Select location`
-   (see figure_grass_new_location_) and click :guilabel:`Next`.
+   (see :numref:`figure_grass_new_location`) and click :guilabel:`Next`.
 #. Enter the name :file:`test` for the new :file:`MAPSET`. Below in the wizard, you
    see a list of existing :file:`MAPSETs` and corresponding owners.
 #. Click :guilabel:`Next`, check out the summary to make sure it's all correct and
@@ -601,7 +601,7 @@ https://grasswiki.osgeo.org/wiki/GRASS-QGIS_relevant_module_list.
 It is also possible to customize the GRASS Toolbox content. This procedure is
 described in section :ref:`sec_toolbox-customizing`.
 
-As shown in figure_grass_toolbox_, you can look for the appropriate GRASS
+As shown in :numref:`figure_grass_toolbox`, you can look for the appropriate GRASS
 module using the thematically grouped :guilabel:`Modules Tree` or the searchable
 :guilabel:`Modules List` tab.
 

@@ -16,7 +16,7 @@ In the previous topics we have taken a closer look at vector data. While vector
 features use geometry (points, polylines and polygons) to represent the real
 world, raster data takes a different approach. Rasters are made up of a matrix
 of pixels (also called cells), each containing a value that represents the
-conditions for the area covered by that cell (see figure_raster_). In this topic
+conditions for the area covered by that cell (see :numref:`figure_raster`). In this topic
 we are going to take a closer look at raster data, when it is useful and when it
 makes more sense to use vector data.
 
@@ -36,7 +36,7 @@ Raster data in detail
 
 Raster data is used in a GIS application when we want to display information that
 is continuous across an area and cannot easily be divided into vector features.
-When we introduced you to vector data we showed you the image in figure_landscape_.
+When we introduced you to vector data we showed you the image in :numref:`figure_landscape`.
 Point, polyline and polygon features work well for representing some features on
 this landscape, such as trees, roads and building footprints. Other features on
 a landscape can be more difficult to represent using vector features. For example
@@ -76,7 +76,7 @@ each cell in the raster represents a different value e.g. risk of fire on a scal
 of one to ten.
 
 An example that shows the difference between an image obtained from a satellite
-and one that shows calculated values can be seen in figure_raster_types_.
+and one that shows calculated values can be seen in :numref:`figure_raster_types`.
 
 .. _figure_raster_types:
 
@@ -115,7 +115,7 @@ imported into a computer and georeferenced. Satellite imagery is created when
 satellites orbiting the earth point special digital cameras towards the earth
 and then take an image of the area on earth they are passing over. Once the image
 has been taken it is sent back to earth using radio signals to special receiving
-stations such as the one shown in figure_csir_station_. The process of capturing raster data from
+stations such as the one shown in :numref:`figure_csir_station`. The process of capturing raster data from
 an aeroplane or satellite is called **remote sensing**.
 
 .. _figure_csir_station:
@@ -133,7 +133,7 @@ take police crime incident reports and create a country wide raster map showing
 how high the incidence of crime is likely to be in each area. Meteorologists
 (people who study weather patterns) might generate a province level raster showing
 average temperature, rainfall and wind direction using data collected from weather
-stations (see figure_csir_station_). In these cases, they will often use raster
+stations (see :numref:`figure_csir_station`). In these cases, they will often use raster
 analysis techniques such as interpolation (which we describe in Topic
 :ref:`spatial_analysys`).
 
@@ -152,8 +152,8 @@ Spatial Resolution
 
 Every raster layer in a GIS has pixels (cells) of a fixed size that determine its
 spatial resolution. This becomes apparent when you look at an image at a small
-scale (see figure_raster_small_scale_) and then zoom in to a large scale (see
-figure_raster_large_scale_).
+scale (see :numref:`figure_raster_small_scale`) and then zoom in to a large scale (see
+:numref:`figure_raster_large_scale`).
 
 .. _figure_raster_small_scale:
 

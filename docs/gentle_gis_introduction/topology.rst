@@ -22,7 +22,7 @@ analysis, such as network analysis.
 
 Imagine you travel to London. On a sightseeing tour you plan to visit St. Paul's
 Cathedral first and in the afternoon Covent Garden Market for some souvenirs.
-Looking at the Underground map of London (see figure_topology_london_) you have
+Looking at the Underground map of London (see :numref:`figure_topology_london`) you have
 to find connecting trains to get from Covent Garden to St. Paul's. This requires
 topological information (data) about where it is possible to change trains.
 Looking at a map of the underground, the topological relationships are illustrated
@@ -46,7 +46,7 @@ borders or overlapping polygon borders. A common topological error with
 **polyline** features is that they do not meet perfectly at a point (node). This
 type of error is called an **undershoot** if a gap exists between the lines, and
 an **overshoot** if a line ends beyond the line it should connect to (see
-figure_topology_errors_).
+:numref:`figure_topology_errors`).
 
 .. _figure_topology_errors:
 
@@ -106,10 +106,10 @@ you can **enable topological editing** to improve editing and maintaining common
 boundaries in polygon layers. A GIS such as QGIS 'detects' a shared boundary in
 a polygon map so you only have to move the edge vertex of one polygon boundary
 and QGIS will ensure the updating of the other polygon boundaries as shown in
-figure_topological_tools_ (1).
+:numref:`figure_topological_tools` (1).
 
 Another topological option allows you to prevent** polygon overlaps** during
-digitising (see figure_topological_tools_ (2)). If you already have one polygon,
+digitising (see :numref:`figure_topological_tools` (2)). If you already have one polygon,
 it is possible with this option to digitise a second adjacent polygon so that
 both polygons overlap and QGIS then clips the second polygon to the common
 boundary.
@@ -133,7 +133,7 @@ and / or segment you are trying to connect when you digitise. A **segment** is a
 straight line formed between two vertices in a polygon or polyline geometry. If
 you aren't within the snapping distance, a GIS such as QGIS will leave the vertex
 where you release the mouse button, instead of snapping it to an existing vertex
-and / or segment (see figure_snapping_distance_).
+and / or segment (see :numref:`figure_snapping_distance`).
 
 .. _figure_snapping_distance:
 

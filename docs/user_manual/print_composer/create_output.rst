@@ -295,7 +295,7 @@ to their exports settings.
 
 To enable the generation of an atlas and access atlas parameters, refer to
 the :guilabel:`Atlas` panel. This panel contains the following
-(see figure_layout_atlas_):
+(see :numref:`figure_layout_atlas`):
 
 .. _figure_layout_atlas:
 

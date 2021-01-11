@@ -69,7 +69,7 @@ There are three options to select the layer(s) to snap to:
 * :guilabel:`Current layer`: only the active layer is used, a convenient
   way to ensure topological consistency within the layer being edited.
 * :guilabel:`Advanced Configuration`: allows you to enable and adjust
-  snapping mode and tolerance on a layer basis (see figure_edit_snapping_).
+  snapping mode and tolerance on a layer basis (see :numref:`figure_edit_snapping`).
   If you need to edit a layer and snap its vertices to another, make
   sure that the target layer is checked and increase the snapping
   tolerance to a higher value.
@@ -465,7 +465,7 @@ geometry then enter its attributes. To digitize the geometry:
     update rubber band during node editing`.
 
 #. The attribute window will appear, allowing you to enter the information for
-   the new feature. Figure_edit_values_ shows setting attributes for a fictitious
+   the new feature. :numref:`Figure_edit_values` shows setting attributes for a fictitious
    new river in Alaska. However, in the :guilabel:`Digitizing` menu under the
    :menuselection:`Settings --> Options` menu, you can also activate:
 
@@ -752,7 +752,7 @@ Undo and Redo
 
 The |undo| :sup:`Undo` and |redo| :sup:`Redo` tools allows you to undo or redo
 vector editing operations. There is also a dockable widget, which shows all
-operations in the undo/redo history (see Figure_edit_undo_). This widget is not
+operations in the undo/redo history (see :numref:`Figure_edit_undo`). This widget is not
 displayed by default; it can be displayed by right-clicking on the toolbar and
 activating the :guilabel:`Undo/Redo Panel` checkbox. The Undo/Redo capability
 is however active, even if the widget is not displayed.
@@ -1313,7 +1313,7 @@ change the rotation of point symbols in the map canvas.
    |rotatePointSymbols| :sup:`Rotate Point Symbols` tool
 #. Move the mouse around.
    A red arrow with the rotation value will be visualized (see
-   Figure_rotate_point_).
+   :numref:`Figure_rotate_point`).
    If you hold the :kbd:`Ctrl` key while moving, the rotation will be done
    in 15 degree steps.
 #. When you get the expected angle value, click again. The symbol is rendered

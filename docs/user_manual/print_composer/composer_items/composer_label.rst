@@ -19,7 +19,7 @@ same way as exposed in :ref:`interact_layout_item`.
 By default, the label item provides a default text that you can customize using
 its :guilabel:`Item Properties` panel. Other than the :ref:`items common
 properties <item_common_properties>`, this feature has the following
-functionalities (see figure_layout_label_):
+functionalities (see :numref:`figure_layout_label`):
 
 .. _figure_layout_label:
 

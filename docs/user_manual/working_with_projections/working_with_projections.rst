@@ -142,7 +142,7 @@ This default CRS is ``EPSG:4326`` (also known as "WGS 84"), and it is a global
 latitude/longitude based reference system.
 This default CRS can be changed via the :guilabel:`CRS for New Projects`
 setting in the :guilabel:`CRS` tab under :menuselection:`Settings -->` |options|
-:menuselection:`Options...` (see figure_projection_options_).
+:menuselection:`Options...` (see :numref:`figure_projection_options`).
 There is an option to automatically set the project's CRS
 to match the CRS of the first layer loaded into a new project, or alternatively
 you can select a different default CRS to use for all newly created projects.
