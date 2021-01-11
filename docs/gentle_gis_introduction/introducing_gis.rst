@@ -87,7 +87,7 @@ will be focusing on GIS Software.
 What is GIS Software / a GIS Application?
 =========================================
 
-You can see an example of what a **GIS Application** looks like figure_gis_application_.
+You can see an example of what a **GIS Application** looks like :numref:`figure_gis_application`.
 GIS Applications are normally programs with a graphical user interface that can
 be manipulated using the mouse and keyboard. The application provides **menus**
 near to the top of the window (File, Edit etc.) which, when clicked using the
@@ -121,8 +121,8 @@ will have data about the street network.
 When you open a layer in the GIS Application it will appear in the **map view**.
 The map view shows a graphic representing your layer. When you add more than one
 layer to a map view, the layers are overlaid on top of each other. Look at
-figures figure_map_view_towns_, figure_map_view_schools_, figure_map_view_railways_ and
-figure_map_view_rivers_ to see a map view that has several layers being added to it.
+figures :numref:`figure_map_view_towns`, :numref:`figure_map_view_schools`, :numref:`figure_map_view_railways` and
+:numref:`figure_map_view_rivers` to see a map view that has several layers being added to it.
 An important function of the map view is to allow you to zoom in to magnify,
 zoom out to see a greater area and move around (panning) in the map.
 
@@ -168,8 +168,8 @@ provides a list of layers that have been loaded in the GIS Application. Unlike a
 paper map legend, the map legend or 'layers list' in the GIS Application provides
 a way to re-order, hide, show and group layers. Changing the layer order is done
 by clicking on a layer in the legend, holding the mouse button down and then
-dragging the layer to a new position. In figures figure_map_legend_before_ and
-figure_map_legend_after_ the map legend is shown as the area to the left of the GIS
+dragging the layer to a new position. In figures :numref:`figure_map_legend_before` and
+:numref:`figure_map_legend_after` the map legend is shown as the area to the left of the GIS
 Application window. By changing the layer order, the way that layers are drawn
 can be adjusted –-- in this case so that rivers are drawn over the roads instead
 of below them.
@@ -245,7 +245,7 @@ data associated with places.
 
 GIS Systems work with many different types of data. **Vector data** is stored as
 a series of ``X, Y`` coordinate pairs inside the computer's memory. Vector data
-is used to represent points, lines and areas. Illustration figure_vector_data_
+is used to represent points, lines and areas. Illustration :numref:`figure_vector_data`
 shows different types of vector data being viewed in a GIS application. In the
 tutorials that follow we will be exploring vector data in more detail.
 
@@ -262,7 +262,7 @@ tutorials that follow we will be exploring vector data in more detail.
 the earth and the photographs they take are a kind of raster data that can be
 viewed in a GIS. One important difference between raster and vector data is that
 if you zoom in too much on a raster image, it will start to appear 'blocky' (see
-illustrations figure_raster_data_ and figure_raster_data_zoom_). In fact these
+illustrations :numref:`figure_raster_data` and :numref:`figure_raster_data_zoom`). In fact these
 blocks are the individual cells of the data grid that makes up the raster image.
 We will be looking at raster data in greater detail in later tutorials.
 

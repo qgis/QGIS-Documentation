@@ -921,7 +921,7 @@ cache on SSL errors (recommended)`.
 Credentials of proxy are set using the :ref:`authentication widget <authentication>`.
 
 Excluding some URLs can be added to the text box below the proxy settings (see
-Figure_Network_Tab_). No proxy will be used if the target url starts with one of
+:numref:`Figure_Network_Tab`). No proxy will be used if the target url starts with one of
 the string listed in this text box.
 
 If you need more detailed information about the different proxy settings,

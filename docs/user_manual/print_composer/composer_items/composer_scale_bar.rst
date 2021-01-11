@@ -19,7 +19,7 @@ By default, a new scale bar item shows the scale of the map item over which
 it is drawn. If there is no map item below, the :ref:`reference map <reference_map>` is
 used. You can customize it in the :guilabel:`Item Properties` panel.
 Other than the :ref:`items common properties <item_common_properties>`, this
-feature has the following functionalities (see figure_layout_scalebar_):
+feature has the following functionalities (see :numref:`figure_layout_scalebar`):
 
 .. _figure_layout_scalebar:
 
@@ -33,7 +33,7 @@ Main properties
 
 The :guilabel:`Main properties` group of the scale bar
 :guilabel:`Item Properties` panel provides the following functionalities
-(see figure_layout_scalebar_ppt_):
+(see :numref:`figure_layout_scalebar_ppt`):
 
 .. _figure_layout_scalebar_ppt:
 
@@ -59,7 +59,7 @@ Units
 
 The :guilabel:`Units` group of the scale bar :guilabel:`Item Properties` panel
 provides the functionalities to set the units of display and some text formatting
-(see figure_layout_scalebar_units_):
+(see :numref:`figure_layout_scalebar_units`):
 
 .. _figure_layout_scalebar_units:
 
@@ -92,7 +92,7 @@ Segments
 
 The :guilabel:`Segments` group of the scale bar :guilabel:`Item Properties` panel
 provides the functionalities to configure the number and size of segments and
-subdivisions (see figure_layout_scalebar_segments_):
+subdivisions (see :numref:`figure_layout_scalebar_segments`):
 
 .. _figure_layout_scalebar_segments:
 

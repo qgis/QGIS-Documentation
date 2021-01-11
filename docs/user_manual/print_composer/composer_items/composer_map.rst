@@ -104,7 +104,7 @@ functionalities:
 Main properties
 ---------------
 
-In the :guilabel:`Main properties` group (see figure_layout_map_) of the map
+In the :guilabel:`Main properties` group (see :numref:`figure_layout_map`) of the map
 :guilabel:`Item Properties` panel, available options are:
 
 * The :guilabel:`Update Preview` button to refresh the map item rendering if the view
@@ -130,7 +130,7 @@ that toggling visibility of the layers or modifying their style in the
 like any other item, you may want to add multiple map items to a print layout,
 there's a need to break this synchronization in order to allow showing
 different areas, layer combinations, at different scales...
-The :guilabel:`Layers` properties group (see figure_layout_map_layers_) helps
+The :guilabel:`Layers` properties group (see :numref:`figure_layout_map_layers`) helps
 you do that.
 
 .. _figure_layout_map_layers:
@@ -185,7 +185,7 @@ Extents
 -------
 
 The :guilabel:`Extents` group of the map item properties panel provides the
-following functionalities (see figure_layout_map_extents_):
+following functionalities (see :numref:`figure_layout_map_extents`):
 
 .. _figure_layout_map_extents:
 
@@ -380,7 +380,7 @@ map item's extent and expand the :guilabel:`Overviews` option in the
 :guilabel:`Item Properties` panel. Then press the |signPlus| button to add
 an overview.
 
-Initially this overview is named 'Overview 1' (see Figure_layout_map_overview_).
+Initially this overview is named 'Overview 1' (see :numref:`Figure_layout_map_overview`).
 You can:
 
 * Rename it with a double-click

@@ -171,7 +171,7 @@ The Target language should be filled correctly. The Source language can be left
 as is with language POSIX and Country/Region on Any Country.
 
 When you press the :guilabel:`OK` button Qt Linguist is filled with sentences and
-you can start translating, see Figure_translation_menu_.
+you can start translating, see :numref:`Figure_translation_menu`.
 
 
 .. _figure_translation_menu:
@@ -278,7 +278,7 @@ A bit further we meet the following tricky translation item:
 .. code-block:: rst
 
    The |heatmap| :sup:`Heatmap` tool button starts the Dialog of the Heatmap
-   plugin (see figure_heatmap_settings_).
+   plugin (see :numref:`figure_heatmap_settings`).
 
 It holds a reference to a figure ``figure_heatmap_settings_``, and like a reference
 to a section this reference should not be changed!! The reference definition

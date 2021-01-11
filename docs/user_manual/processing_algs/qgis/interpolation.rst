@@ -175,7 +175,7 @@ Another excellent QGIS tutorial on making heatmaps can be found at
 `http://qgistutorials.com
 <http://www.qgistutorials.com/en/docs/creating_heatmaps.html>`_.
 
-In Figure_Heatmap_data_processing_, the airports of Alaska are shown.
+In :numref:`Figure_Heatmap_data_processing`, the airports of Alaska are shown.
 
 .. _figure_heatmap_data_processing:
 
@@ -195,7 +195,7 @@ In Figure_Heatmap_data_processing_, the airports of Alaska are shown.
    The :guilabel:`Pixel size Y`, :guilabel:`Rows` and
    :guilabel:`Columns` will be automatically updated.
 #. Click on :guilabel:`Run` to create and load the airports heatmap
-   (see Figure_Heatmap_created_processing_).
+   (see :numref:`Figure_Heatmap_created_processing`).
 
 .. _figure_heatmap_settings_processing:
 
@@ -228,7 +228,7 @@ The heatmap can now be styled in QGIS to improve its appearance.
 #. Click the :guilabel:`Classify` button.
 #. Press :guilabel:`OK` to update the layer.
 
-The final result is shown in Figure_Heatmap_styled_processing_.
+The final result is shown in :numref:`Figure_Heatmap_styled_processing`.
 
 .. _figure_heatmap_styled_processing:
 
