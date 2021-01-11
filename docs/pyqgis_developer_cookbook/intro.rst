@@ -223,9 +223,9 @@ beginning of the script:
 First we import the :pyqgis:`qgis.core <core>` module and configure
 the prefix path. The prefix path is the location where QGIS is
 installed on your system. It is configured in the script by calling
-the :meth:`setPrefixPath <qgis.core.QgsApplication.setPrefixPath>` method.
+the :meth:`setPrefixPath() <qgis.core.QgsApplication.setPrefixPath>` method.
 The second argument of
-:meth:`setPrefixPath <qgis.core.QgsApplication.setPrefixPath>`
+:meth:`setPrefixPath() <qgis.core.QgsApplication.setPrefixPath>`
 is set to :const:`True`, specifying that default paths are to be
 used.
 

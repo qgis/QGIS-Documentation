@@ -849,7 +849,7 @@ A destination CRS may also be specified --- if a valid instance of
 :class:`QgsCoordinateReferenceSystem <qgis.core.QgsCoordinateReferenceSystem>`
 is passed as the fourth parameter, the layer is transformed to that CRS.
 
-For valid driver names please call the :meth:`supportedFiltersAndFormats
+For valid driver names please call the :meth:`supportedFiltersAndFormats()
 <qgis.core.QgsVectorFileWriter.supportedFiltersAndFormats>` method
 or consult the `supported formats by OGR`_ --- you
 should pass the value in the "Code" column as the driver name.
@@ -943,7 +943,7 @@ of the memory provider in the URI. The syntax is:
 
 crs=definition
     Specifies the coordinate reference system, where definition may be any
-    of the forms accepted by :meth:`QgsCoordinateReferenceSystem.createFromString
+    of the forms accepted by :meth:`QgsCoordinateReferenceSystem.createFromString()
     <qgis.core.QgsCoordinateReferenceSystem.createFromString>`
 
 index=yes
@@ -1210,11 +1210,11 @@ To find out more about ranges used in the renderer
     101.0 - 200.0: class 101-200 <qgis._core.QgsMarkerSymbol object at 0x7f8bad281b88>
 
 you can again use the
-:meth:`classAttribute <qgis.core.QgsGraduatedSymbolRenderer.classAttribute>`
+:meth:`classAttribute() <qgis.core.QgsGraduatedSymbolRenderer.classAttribute>`
 (to find the classification attribute name),
-:meth:`sourceSymbol <qgis.core.QgsGraduatedSymbolRenderer.sourceSymbol>`
-and :meth:`sourceColorRamp <qgis.core.QgsGraduatedSymbolRenderer.sourceColorRamp>` methods.
-Additionally there is the :meth:`mode <qgis.core.QgsGraduatedSymbolRenderer.mode>`
+:meth:`sourceSymbol() <qgis.core.QgsGraduatedSymbolRenderer.sourceSymbol>`
+and :meth:`sourceColorRamp() <qgis.core.QgsGraduatedSymbolRenderer.sourceColorRamp>` methods.
+Additionally there is the :meth:`mode() <qgis.core.QgsGraduatedSymbolRenderer.mode>`
 method which determines how the ranges were created:
 using equal intervals, quantiles or some other method.
 
@@ -1276,8 +1276,8 @@ three derived classes:
 symbol class itself serves only as a container for the symbol layers.
 
 Having an instance of a symbol (e.g. from a renderer), it is possible to
-explore it: the :meth:`type <qgis.core.QgsSymbol.type>` method says whether it is a
-marker, line or fill symbol. There is a :meth:`dump <qgis.core.QgsSymbol.dump>`
+explore it: the :meth:`type() <qgis.core.QgsSymbol.type>` method says whether it is a
+marker, line or fill symbol. There is a :meth:`dump() <qgis.core.QgsSymbol.dump>`
 method which returns a brief description of the symbol. To get a list of symbol
 layers:
 
@@ -1292,10 +1292,12 @@ layers:
 
     0: SimpleMarker
 
-To find out symbol's color use :meth:`color <qgis.core.QgsSymbol.color>` method and :meth:`setColor <qgis.core.QgsSymbol.setColor>` to
+To find out symbol's color use :meth:`color() <qgis.core.QgsSymbol.color>` method
+and :meth:`setColor() <qgis.core.QgsSymbol.setColor>` to
 change its color. With marker symbols additionally you can query for the symbol
-size and rotation with the :meth:`size <qgis.core.QgsMarkerSymbol.size>` and :meth:`angle <qgis.core.QgsMarkerSymbol.angle>` methods. For line symbols
-the :meth:`width <qgis.core.QgsLineSymbol.width>` method returns the line width.
+size and rotation with the :meth:`size() <qgis.core.QgsMarkerSymbol.size>`
+and :meth:`angle() <qgis.core.QgsMarkerSymbol.angle>` methods. For line symbols
+the :meth:`width() <qgis.core.QgsLineSymbol.width>` method returns the line width.
 
 Size and width are in millimeters by default, angles are in degrees.
 
@@ -1340,9 +1342,9 @@ a database of all available symbol layer types.
 To access symbol layer data, use its :meth:`properties() <qgis.core.QgsSymbolLayer.properties>` method that returns a
 key-value dictionary of properties which determine the appearance. Each symbol
 layer type has a specific set of properties that it uses. Additionally, there
-are the generic methods :meth:`color <qgis.core.QgsSymbol.color>`, :meth:`size
-<qgis.core.QgsMarkerSymbol.size>`, :meth:`angle <qgis.core.QgsMarkerSymbol.angle>` and
-:meth:`width <qgis.core.QgsLineSymbol.width>`,
+are the generic methods :meth:`color() <qgis.core.QgsSymbol.color>`, :meth:`size()
+<qgis.core.QgsMarkerSymbol.size>`, :meth:`angle() <qgis.core.QgsMarkerSymbol.angle>` and
+:meth:`width() <qgis.core.QgsLineSymbol.width>`,
 with their setter counterparts. Of course size and angle are available only for
 marker symbol layers and width for line symbol layers.
 
@@ -1391,23 +1393,23 @@ radius
         return FooSymbolLayer(self.radius)
 
 
-The :meth:`layerType <qgis.core.QgsSymbolLayer.layerType>` method determines
+The :meth:`layerType() <qgis.core.QgsSymbolLayer.layerType>` method determines
 the name of the symbol layer; it has to be unique among all symbol layers.
-The :meth:`properties <qgis.core.QgsSymbolLayer.properties>` method is used
-for persistence of attributes. The :meth:`clone <qgis.core.QgsSymbolLayer.clone>`
+The :meth:`properties() <qgis.core.QgsSymbolLayer.properties>` method is used
+for persistence of attributes. The :meth:`clone() <qgis.core.QgsSymbolLayer.clone>`
 method must return a copy of the symbol layer with
 all attributes being exactly the same. Finally there are rendering methods:
-:meth:`startRender <qgis.core.QgsSymbolLayer.startRender>` is called before
-rendering the first feature, :meth:`stopRender <qgis.core.QgsSymbolLayer.stopRender>`
-when the rendering is done, and :meth:`renderPoint
+:meth:`startRender() <qgis.core.QgsSymbolLayer.startRender>` is called before
+rendering the first feature, :meth:`stopRender() <qgis.core.QgsSymbolLayer.stopRender>`
+when the rendering is done, and :meth:`renderPoint()
 <qgis.core.QgsMarkerSymbolLayer.renderPoint>` is called to do the rendering.
 The coordinates of the point(s) are already transformed to the output coordinates.
 
 For polylines and polygons the only difference would be in the rendering
 method: you would use
-:meth:`renderPolyline <qgis.core.QgsLineSymbolLayer.renderPolyline>`
+:meth:`renderPolyline() <qgis.core.QgsLineSymbolLayer.renderPolyline>`
 which receives a list of lines,
-while :meth:`renderPolygon <qgis.core.QgsFillSymbolLayer.renderPolygon>`
+while :meth:`renderPolygon() <qgis.core.QgsFillSymbolLayer.renderPolygon>`
 receives a list of points on the outer ring as the
 first parameter and a list of inner rings (or None) as a second parameter.
 
@@ -1452,10 +1454,10 @@ widget
 This widget can be embedded into the symbol properties dialog. When the symbol
 layer type is selected in symbol properties dialog, it creates an instance of
 the symbol layer and an instance of the symbol layer widget. Then it calls
-the :meth:`setSymbolLayer <qgis.gui.QgsSymbolLayerWidget.setSymbolLayer>` method to
+the :meth:`setSymbolLayer() <qgis.gui.QgsSymbolLayerWidget.setSymbolLayer>` method to
 assign the symbol layer to the widget. In that
 method the widget should update the UI to reflect the attributes of the symbol
-layer. The :meth:`symbolLayer <qgis.gui.QgsSymbolLayerWidget.symbolLayer>` method
+layer. The :meth:`symbolLayer() <qgis.gui.QgsSymbolLayerWidget.symbolLayer>` method
 is used to retrieve the symbol layer again
 by the properties dialog to use it for the symbol.
 
@@ -1549,13 +1551,13 @@ symbols and chooses randomly one of them for every feature
 
 The constructor of the parent :class:`QgsFeatureRenderer <qgis.core.QgsFeatureRenderer>`
 class needs a renderer name (which has to be unique among renderers). The
-:meth:`symbolForFeature <qgis.core.QgsFeatureRenderer.symbolForFeature>` method
+:meth:`symbolForFeature() <qgis.core.QgsFeatureRenderer.symbolForFeature>` method
 is the one that decides what symbol will be used for a particular feature.
-:meth:`startRender <qgis.core.QgsFeatureRenderer.startRender>` and :meth:`stopRender
+:meth:`startRender() <qgis.core.QgsFeatureRenderer.startRender>` and :meth:`stopRender()
 <qgis.core.QgsFeatureRenderer.stopRender>` take care of initialization/finalization
-of symbol rendering. The :meth:`usedAttributes <qgis.core.QgsFeatureRenderer.usedAttributes>`
+of symbol rendering. The :meth:`usedAttributes() <qgis.core.QgsFeatureRenderer.usedAttributes>`
 method can return a list of field names that the renderer expects to be present.
-Finally, the :meth:`clone <qgis.core.QgsFeatureRenderer.clone>` method
+Finally, the :meth:`clone() <qgis.core.QgsFeatureRenderer.clone>` method
 should return a copy of the renderer.
 
 Like with symbol layers, it is possible to attach a GUI for configuration of
@@ -1598,7 +1600,7 @@ The constructor receives instances of the active layer (:class:`QgsVectorLayer
 renderer or the renderer has different type, it will be replaced with our new
 renderer, otherwise we will use the current renderer (which has already the
 type we need). The widget contents should be updated to show current state of
-the renderer. When the renderer dialog is accepted, the widget's :meth:`renderer
+the renderer. When the renderer dialog is accepted, the widget's :meth:`renderer()
 <qgis.gui.QgsRendererWidget.renderer>` method is called to get the current
 renderer --- it will be assigned to the layer.
 
@@ -1634,9 +1636,9 @@ RandomRenderer example
 
 Similarly as with symbol layers, abstract metadata constructor awaits renderer
 name, name visible for users and optionally name of renderer's icon.
-The :meth:`createRenderer <qgis.core.QgsRendererAbstractMetadata.createRenderer>`
+The :meth:`createRenderer() <qgis.core.QgsRendererAbstractMetadata.createRenderer>`
 method passes a :class:`QDomElement` instance that can be
-used to restore the renderer's state from the DOM tree. The :meth:`createRendererWidget
+used to restore the renderer's state from the DOM tree. The :meth:`createRendererWidget()
 <qgis.core.QgsRendererAbstractMetadata.createRendererWidget>`
 method creates the configuration widget. It does not have to be present or can
 return ``None`` if the renderer does not come with GUI.
@@ -1655,7 +1657,7 @@ function becomes
          "Random renderer",
          QIcon(QPixmap("RandomRendererIcon.png", "png")))
 
-The icon can also be associated at any later time using the :meth:`setIcon
+The icon can also be associated at any later time using the :meth:`setIcon()
 <qgis.core.QgsRendererAbstractMetadata.setIcon>` method
 of the metadata class. The icon can be loaded from a file (as shown above) or
 can be loaded from a `Qt resource <https://doc.qt.io/qt-5/resources.html>`_
