@@ -1,24 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
-# tomoyuki arai <tarai.3367@gmail.com>, 2020
+# Harrissou Sant-anna, 2020
+# tomoyuki arai <tarai.3367@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:25+0000\n"
-"Last-Translator: tomoyuki arai <tarai.3367@gmail.com>, 2020\n"
+"POT-Creation-Date: 2020-12-13 09:01+0100\n"
+"PO-Revision-Date: 2020-12-24 10:23+0000\n"
+"Last-Translator: tomoyuki arai <tarai.3367@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -130,6 +132,7 @@ msgstr "作成するレイヤにフィールドを追加するには、"
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:71
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:128
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:175
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:242
 msgid "Enter the :guilabel:`Name` of the field"
 msgstr "フィールドの :guilabel:`名前` を入力します"
 
@@ -153,6 +156,7 @@ msgstr "選択したデータタイプにもよりますが、値の :guilabel:`
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:78
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:134
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:178
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:249
 msgid "Click on the |newAttribute| :guilabel:`Add to Fields List` button"
 msgstr "|newAttribute| :guilabel:`フィールドリストに追加` ボタンをクリックします"
 
@@ -227,15 +231,19 @@ msgstr "次に、データの :guilabel:`ファイルエンコーディング` �
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:113
 msgid ""
-"Choose the :guilabel:`Geometry type` of the layer (point, multipoint, line "
-"or polygon)"
-msgstr "レイヤの :guilabel:`ジオメトリタイプ` （ポイント、マルチポイント、ライン、ポリゴン）を選択します"
+"Choose the :guilabel:`Geometry type` of the layer: No Geometry (resulting in"
+" a :file:`.DBF` format file), point, multipoint, line or polygon"
+msgstr ""
+"レイヤの :guilabel:`ジオメトリタイプ` を選択します：ジオメトリなし（ :file:`.DBF` "
+"形式ファイルのみ）、ポイント、マルチポイント、ライン、ポリゴン"
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:115
 msgid ""
-"Specify whether the geometry should have :guilabel:`Z (+ M values)` or "
-":guilabel:`M values`"
-msgstr "ジオメトリが :guilabel:`Z値（＋M値）` や :guilabel:`M値` を持っているかを指定します"
+"Specify whether the geometry should have additional dimensions: "
+":guilabel:`None`, :guilabel:`Z (+ M values)` or :guilabel:`M values`"
+msgstr ""
+"ジオメトリが追加次元を持っているかを指定します： :guilabel:`なし` 、 :guilabel:`Z値（＋M値）` 、 "
+":guilabel:`M値` "
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:124
 msgid "Creating a new Shapefile layer dialog"
@@ -298,7 +306,7 @@ msgid "Provide a name (:guilabel:`Layer name`) for the new layer"
 msgstr "新しいレイヤの名前（ :guilabel:`レイヤ名` ） を指定します"
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:171
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:236
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:238
 msgid ""
 "Specify the coordinate reference system using the |setProjection| button."
 msgstr "|setProjection| ボタンを使用し、座標参照系を指定します"
@@ -406,45 +414,86 @@ msgstr "``ラインストリング / 複合曲線`` または ``マルチライ�
 msgid "``Polygon/CurvePolygon`` or ``MultiPolygon/MultiSurface`` layer."
 msgstr "``ポリゴン / カーブポリゴン`` または ``マルチポリゴン / マルチサーフェス`` レイヤ"
 
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:236
+msgid ""
+"For geometric types, specify the dimensions of the dataset: check whether it"
+" should :guilabel:`Include Z dimension` and/or :guilabel:`Include M values`"
+msgstr ""
+"ジオメトリタイプについて、データセットの次元を定義します： :guilabel:`Z次元を含む` かつ/または :guilabel:`M値を含める` "
+"かどうかをチェックボックスで設定します。"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:239
+msgid ""
+"Add fields to the layer. Note that unlike many formats, temporary layers can"
+" be created without any fields. This step is thus optional."
+msgstr ""
+"レイヤにフィールドを追加します。他の多くの形式とは異なり、一時スクラッチレイヤはフィールドなしでも作成できることに注意してください。従ってこのステップは任意です。"
+
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:243
+msgid ""
+"Select the data :guilabel:`Type`: :guilabel:`Text`, :guilabel:`Whole "
+"number`, :guilabel:`Decimal number`, :guilabel:`Boolean`, :guilabel:`Date`, "
+":guilabel:`Time`, :guilabel:`Date & Time` and :guilabel:`Binary (BLOB)` are "
+"supported."
+msgstr ""
+"データの :guilabel:`型` を選択します： :guilabel:`テキスト` 、 :guilabel:`整数値` 、 "
+":guilabel:`小数点付き数値（decimal）` 、 :guilabel:`ブール値（boolean）` 、 "
+":guilabel:`日付（Date）` 、 :guilabel:`時刻（Time）` 、 :guilabel:`日付時刻（Datetime）` そして"
+" :guilabel:`バイナリ（BLOB）` 型をサポートしています。"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:247
+msgid ""
+"Depending on the selected data format, enter the :guilabel:`Length` and "
+":guilabel:`Precision`"
+msgstr "選択したデータ型にもよりますが、 :guilabel:`長さ` と :guilabel:`精度` を入力します。"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:250
+msgid "Repeat the steps above for each field you need to add"
+msgstr "追加する必要のある各フィールドについて、上記の手順を繰り返します"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:251
+msgid ""
+"Once you are happy with the settings, click :guilabel:`OK`. QGIS will add "
+"the new layer to the :guilabel:`Layers` panel, and you can edit it as "
+"described in section :ref:`sec_edit_existing_layer`."
+msgstr ""
+"設定に満足したら、 :guilabel:`OK` をクリックします。QGISは新しいレイヤを :guilabel:`レイヤ` パネルに追加し、 "
+":ref:`sec_edit_existing_layer` のセクションで説明するように編集することができます。"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:261
 msgid "Creating a new Temporary Scratch layer dialog"
 msgstr "新しい一時スクラッチレイヤの作成ダイアログ"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:245
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:264
 msgid ""
-"By default, a new temporary scratch layer is created without any attributes."
-" You can later add them using the |newAttribute| :sup:`New Field` button in "
-"the layer's attribute table dialog or the :guilabel:`Fields` tab of its "
-"properties dialog. You can also create prepopulated temporary scratch layers"
-" using e.g. the clipboard (see :ref:`paste_into_layer`) or as a result of a "
-":ref:`Processing algorithm <processing_algs>`."
+"You can also create prepopulated temporary scratch layers using e.g. the "
+"clipboard (see :ref:`paste_into_layer`) or as a result of a :ref:`Processing"
+" algorithm <processing_algs>`."
 msgstr ""
-"デフォルトでは、作成される新しい一時的なスクラッチレイヤには何も属性がありません。後で、レイヤの属性テーブルダイアログまたはレイヤのプロパティダイアログの"
-" :guilabel:`フィールド` タブにある |newAttribute| :sup:`新規フィールド` "
-"ボタンを使用して、属性を追加することができます。また、例えばクリップボード（ :ref:`paste_into_layer` 参照）を使用したり、 "
-":ref:`プロセシングアルゴリズム <processing_algs>` の結果として、空でない一時スクラッチレイヤを作成することもできます。"
+"また、フィールド入力済みの一時レイヤを作成する方法には、例えば、クリップボードを使用して（ :ref:`paste_into_layer` ）や、 "
+":ref:`プロセシングアルゴリズム <processing_algs>` の出力結果などもあります。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:253
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:268
 msgid "**Permanently store a memory layer on disk**"
 msgstr "**メモリレイヤをディスク上に永続的に保存する**"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:255
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:270
 msgid ""
-"To avoid data loss when closing  a project with temporary scratch layers, "
-"you can save these layers to any vector format supported by QGIS:"
+"To avoid data loss when closing a project with temporary scratch layers, you"
+" can save these layers to any vector format supported by QGIS:"
 msgstr ""
 "プロジェクトを閉じたときに一時スクラッチレイヤのデータが失われないようにするために、これらのレイヤを次の方法でQGISがサポートする任意のベクタ形式に保存することができます："
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:258
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:273
 msgid "clicking the |indicatorMemory| indicator icon next to the layer;"
 msgstr "レイヤの横にある |indicatorMemory| 表示アイコンをクリックする"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:259
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:274
 msgid ""
 "selecting the :guilabel:`Make permanent` entry in the layer contextual menu;"
 msgstr "レイヤのコンテキストメニューの :guilabel:`保存...` エントリを選択する"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:260
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:275
 msgid ""
 "using the :menuselection:`Export -->` entry from the contextual menu or the "
 ":menuselection:`Layer --> Save As...` menu."
@@ -452,7 +501,7 @@ msgstr ""
 "レイヤのコンテキストメニューの :menuselection:`エクスポート -->` エントリ、または :menuselection:`レイヤ -->"
 " 名前を付けて保存...` メニューを使用する"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:263
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:278
 msgid ""
 "Each of these commands opens the :guilabel:`Save Vector Layer as` dialog "
 "described in the :ref:`general_saveas` section and the saved file replaces "
@@ -462,11 +511,11 @@ msgstr ""
 ":guilabel:`ベクタレイヤを名前を付けて保存...` ダイアログを開きます。保存されたファイルは :guilabel:`レイヤ` "
 "パネルの一時スクラッチレイヤを置き換えます。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:271
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:286
 msgid "Creating new layers from an existing layer"
 msgstr "既存のレイヤから新しいレイヤを作成する"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:273
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:288
 msgid ""
 "Both raster and vector layers can be saved in a different format and/or "
 "reprojected to a different coordinate reference system (CRS) using the "
@@ -477,11 +526,11 @@ msgstr ""
 ":menuselection:`レイヤ --> 名前をつけて保存...` メニューを使用するか、 :guilabel:`レイヤパネル` "
 "のレイヤを右クリックして次のいずれかを選択します："
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:278
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:293
 msgid ":menuselection:`Export --> Save As...` for raster layers"
 msgstr "ラスタレイヤの場合は :menuselection:`エクスポート --> 名前を付けて保存...`"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:279
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:294
 msgid ""
 ":menuselection:`Export --> Save Features As...` or :menuselection:`Export "
 "--> Save Selected Features As...` for vector layers."
@@ -489,7 +538,7 @@ msgstr ""
 "ベクタレイヤの場合は :menuselection:`エクスポート --> 地物の保存...` または :menuselection:`エクスポート "
 "--> 選択地物の保存...`"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:282
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:297
 msgid ""
 "Drag and drop the layer from the layer tree to the PostGIS entry in the "
 ":guilabel:`Browser Panel`. Note that you must have a PostGIS connection in "
@@ -498,11 +547,11 @@ msgstr ""
 "レイヤツリーからレイヤを :guilabel:`ブラウザパネル` のPostGISエントリへとドラッグ＆ドロップします。 "
 ":guilabel:`ブラウザパネル` でPostGISへの接続が必要であることに注意してください。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:287
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:302
 msgid "Common parameters"
 msgstr "共通のパラメータ"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:289
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:304
 msgid ""
 "The :guilabel:`Save Layer as...` dialog shows several parameters to change "
 "the behavior when saving the layer. Among the common parameters for raster "
@@ -511,7 +560,7 @@ msgstr ""
 ":guilabel:`名前を付けて保存...` "
 "ダイアログには、レイヤを保存する際の動作を変更するパラメータがいくつかあります。ラスタとベクタで共通のパラメータは次のとおりです："
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:293
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:308
 msgid ""
 ":guilabel:`File name`: the location of the file on the disk. It can refer to"
 " the output layer or to a container that stores the layer (for example "
@@ -522,39 +571,39 @@ msgstr ""
 "：ディスク上のファイルの場所です。これは出力レイヤ、またはレイヤを格納するコンテナ（例えばGeoPackageやSpatiaLite、Open "
 "Document Spreadsheetsといったデータベースライクな形式）を参照できます。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:297
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:312
 msgid ":guilabel:`CRS`: can be changed to reproject the data"
 msgstr ":guilabel:`CRS` ：変更して、データを再投影することができます。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:298
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:313
 msgid ""
 ":guilabel:`Extent` (possible values are **layer**, **Map view** or **user-"
 "defined** extent)"
 msgstr ":guilabel:`領域` （可能な値は **レイヤ** 、 **マップビュー** または **ユーザー定義** の領域です）"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:300
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:315
 msgid ":guilabel:`Add saved file to map`: to add the new layer to the canvas"
 msgstr ":guilabel:`保存されたファイルを地図に追加する` ：新しいレイヤをマップキャンバスに追加します。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:302
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:317
 msgid "However, some parameters are specific to raster and vector formats:"
 msgstr "しかし、ラスタ形式とベクタ形式に固有のパラメータもあります："
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:305
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:320
 msgid "Raster specific parameters"
 msgstr "ラスタに固有のパラメータ"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:307
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:322
 msgid ""
 "Depending on the format of export, some of these options may not be "
 "available:"
 msgstr "エクスポートの形式によっては、これらのオプションが利用できない場合があります："
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:309
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:324
 msgid ":guilabel:`Output mode` (it can be **raw data** or **rendered image**)"
 msgstr ":guilabel:`出力モード` （ **生データ** または **画像** ）"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:310
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:325
 msgid ""
 ":guilabel:`Format`: exports to any raster format GDAL can write to, such as "
 "GeoTiff, GeoPackage, MBTiles, Geospatial PDF, SAGA GIS Binary Grid, "
@@ -563,11 +612,11 @@ msgstr ""
 ":guilabel:`形式` ：GeoTiff、GeoPackage、MBTiles、Geospatial PDF、SAGA GIS Binary "
 "Grid、Intergraph Raster、ESRI .hdr Labelled など、GDALが書き出せる任意のラスタ形式にエクスポートします。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:313
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:328
 msgid ":guilabel:`Resolution`"
 msgstr ":guilabel:`解像度`"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:314
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:329
 msgid ""
 ":guilabel:`Create Options`: use advanced options (file compression, block "
 "sizes, colorimetry...) when generating files, either from the "
@@ -578,33 +627,33 @@ msgstr ""
 "<gdal_createoptions>` "
 "を使用するか、各パラメータを設定することで高度なオプション（ファイル圧縮、ブロックサイズ、測色など）を使用します。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:318
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:333
 msgid ":guilabel:`Pyramids` creation"
 msgstr ":guilabel:`ピラミッド` 作成"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:319
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:334
 msgid ""
 ":guilabel:`VRT Tiles` in case you opted to |checkbox| :guilabel:`Create VRT`"
 msgstr ":guilabel:`VRTタイル` ： |checkbox| :guilabel:`VRT作成` にチェックを入れた場合"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:320
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:335
 msgid ":guilabel:`No data values`"
 msgstr ":guilabel:`nodata値`"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:327
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:342
 msgid "Saving as a new raster layer"
 msgstr "新しいラスタレイヤとして保存する"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:330
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:345
 msgid "Vector specific parameters"
 msgstr "ベクタに固有のパラメータ"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:332
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:347
 msgid ""
 "Depending on the format of export, some of these options may be available:"
 msgstr "エクスポートの形式によりますが、これらのオプションが利用できます："
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:334
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:349
 msgid ""
 ":guilabel:`Format`: exports to any vector format GDAL can write to, such as "
 "GeoPackage, GML, ESRI Shapefile, AutoCAD DXF, ESRI FileGDB, Mapinfo TAB or "
@@ -614,7 +663,7 @@ msgstr ""
 "FileGDB、Mapinfo TABやMapinfo MIF、SpatiaLite、CSV、KML、ODS "
 "など、GDALが書き出せる任意のベクタ形式にエクスポートします。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:337
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:352
 msgid ""
 ":guilabel:`Layer name`: available when the :guilabel:`File name` refers to a"
 " container-like format, this entry represents the output layer."
@@ -622,15 +671,15 @@ msgstr ""
 ":guilabel:`レイヤ名` ： :guilabel:`ファイル名` "
 "がコンテナライクな形式を参照している場合には、このエントリは出力レイヤの名前を表します。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:339
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:354
 msgid ":guilabel:`Encoding`"
 msgstr ":guilabel:`エンコーディング`"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:340
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:355
 msgid ":guilabel:`Save only selected features`"
 msgstr ":guilabel:`選択地物のみ保存する`"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:341
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:356
 msgid ""
 ":guilabel:`Select fields to export and their export options`. In case you "
 "set your fields behavior with some :ref:`Edit widgets <configure_field>`, "
@@ -643,7 +692,7 @@ msgstr ""
 ":guilabel:`選択した全てのRawフィールド値を表示値で置き換える` "
 "をチェックすることにより、表示されている値をレイヤ内に保持することができます。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:346
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:361
 msgid ""
 ":guilabel:`Symbology export`: can be used mainly for DXF export and for all "
 "file formats who manage OGR feature styles (see note below) as DXF, KML, tab"
@@ -652,16 +701,16 @@ msgstr ""
 ":guilabel:`シンボロジのエクスポート` ：主にDXFのエクスポートに使われますが、DXF、KML、tabファイル形式など、OGR "
 "Feature Styles（下記注を参照）を扱うことのできるすべてのファイル形式で使用できます。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:350
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:365
 msgid "**No symbology**: default style of the application that reads the data"
 msgstr "**シンボロジなし** ：データ読み込むアプリケーションのデフォルトのスタイル"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:351
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:366
 msgid ""
 "**Feature symbology**: save style with OGR Feature Styles (see note below)"
 msgstr "**地物シンボロジ** ：OGR Feature Styles によるスタイルの保存（下記を参照）"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:352
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:367
 msgid ""
 "**Symbol Layer symbology**: save with OGR Feature Styles (see note below) "
 "but export the same geometry multiple times if there are multiple symbology "
@@ -670,11 +719,11 @@ msgstr ""
 "**シンボルレイヤシンボロジ** ：OGR Feature Styles "
 "で保存（下記の注を参照）しますが、レイヤがマルチシンボロジのシンボルを使用している場合、同じジオメトリを複数回エクスポートします"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:355
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:370
 msgid "A **Scale** value can be applied to the latest options"
 msgstr "**縮尺** の値は、現在のキャンバス縮尺値を設定することができます。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:359
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:374
 msgid ""
 "*OGR Feature Styles* are a way to store style directly in the data as a "
 "hidden attribute. Only some formats can handle this kind of information. "
@@ -687,13 +736,13 @@ msgstr ""
 " `OGR Feature Styles specification "
 "<https://gdal.org/user/ogr_feature_style.html>`_ ドキュメントを参照してください。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:365
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:380
 msgid ""
 ":guilabel:`Geometry`: you can configure the geometry capabilities of the "
 "output layer"
 msgstr ":guilabel:`ジオメトリ` ：出力レイヤのジオメトリ機能を設定できます"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:368
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:383
 msgid ""
 ":guilabel:`geometry type`: keeps the original geometry of the features when "
 "set to **Automatic**, otherwise removes or overrides it with any type. You "
@@ -703,17 +752,17 @@ msgstr ""
 ":guilabel:`ジオメトリタイプ` ： **自動** "
 "に設定されている場合には地物のオリジナルのジオメトリを保持し、そうでない場合には削除または任意のジオメトリタイプで上書きします。属性テーブルに空のジオメトリカラムを追加し、空間レイヤのジオメトリカラムを削除することもできます。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:372
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:387
 msgid ""
 ":guilabel:`Force multi-type`: forces creation of multi-geometry features in "
 "the layer."
 msgstr ":guilabel:`マルチタイプにする` ：レイヤにマルチジオメトリ地物を強制的に作成します。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:374
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:389
 msgid ":guilabel:`Include z-dimension` to geometries."
 msgstr ":guilabel:`Z次元を含める` ：ジオメトリにZ次元を含めます。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:378
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:393
 msgid ""
 "Overriding layer geometry type makes it possible to do things like save a "
 "geometryless table (e.g. :file:`.csv` file) into a shapefile WITH any type "
@@ -724,7 +773,7 @@ msgstr ""
 "ファイル）を任意のタイプのジオメトリ（ポイント、ライン、ポリゴン）を持ったシェープファイルに保存して、  |addPart| :sup:`部分の追加` "
 "ツールを使用してジオメトリを手動で行に追加できるようになります。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:383
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:398
 msgid ""
 ":guilabel:`Datasource Options`, :guilabel:`Layer Options` or "
 ":guilabel:`Custom Options` which allow you to configure advanced parameters "
@@ -742,11 +791,11 @@ msgstr ""
 "形式については、 `GDAL GeoJSON <https://gdal.org/drivers/vector/geojson.html#layer-"
 "creation-options>`_ のドキュメントを参照してください。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:397
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:412
 msgid "Saving as a new vector layer"
 msgstr "新しいベクタレイヤとして保存する"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:401
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:416
 msgid ""
 "When saving a vector layer into an existing file, depending on the "
 "capabilities of the output format (Geopackage, SpatiaLite, FileGDB...), the "
@@ -754,33 +803,33 @@ msgid ""
 msgstr ""
 "ベクタレイヤを既存のファイルに保存する場合、出力形式（GeoPackage、SpatiaLite、FileGDB等）の機能に応じて、ユーザーは下記操作を行うかどうかを決めることができます："
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:405
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:420
 msgid "overwrite the whole file"
 msgstr "ファイル全体を上書きする"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:406
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:421
 msgid "overwrite only the target layer (the layer name is configurable)"
 msgstr "ターゲットレイヤだけを上書きする（レイヤ名は設定可能です）"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:407
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:422
 msgid "append features to the existing target layer"
 msgstr "既存のターゲットレイヤに地物を追加する"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:408
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:423
 msgid "append features, add new fields if there are any."
 msgstr "地物を追加し、新しいフィールドがあれば追加します。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:410
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:425
 msgid ""
 "For formats like ESRI Shapefile, MapInfo .tab, feature append is also "
 "available."
 msgstr "ESRIシェープファイル、MapInfo .TAB 等の形式は、地物の追加も可能です。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:417
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:432
 msgid "Creating new DXF files"
 msgstr "新しいDXFファイルを作成する"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:419
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:434
 msgid ""
 "Besides the :guilabel:`Save As...` dialog which provides options to export a"
 " single layer to another format, including :file:`*.DXF`, QGIS provides "
@@ -793,15 +842,15 @@ msgstr ""
 ":menuselection:`プロジェクト --> インポートとエクスポート --> プロジェクトをDXFにエクスポート...` "
 "メニューからアクセスできます。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:424
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:439
 msgid "In the :guilabel:`DXF Export` dialog:"
 msgstr ":guilabel:`DXFエクスポート` ダイアログで以下の設定を行います："
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:426
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:441
 msgid "Provide the destination file."
 msgstr "保存先のファイルを指定します。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:427
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:442
 msgid ""
 "Choose the symbology mode and scale (see the :ref:`OGR Feature Styles "
 "<ogr_features_note>` note), if applicable."
@@ -809,17 +858,17 @@ msgstr ""
 "該当する場合は、シンボロジーモードとシンボルの縮尺を選択します（ :ref:`OGR Feature Styles "
 "<ogr_features_note>` の注釈参照）。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:429
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:444
 msgid "Select the data :guilabel:`Encoding`."
 msgstr "データの :guilabel:`エンコーディング` を選択します。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:430
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:445
 msgid ""
 "Select the :guilabel:`CRS` to apply: the selected layers will be reprojected"
 " to the given CRS."
 msgstr "適用する :guilabel:`CRS` を選択します。選択したレイヤは指定したCRSに再投影されます。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:432
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:447
 msgid ""
 "Select the layers to include in the DXF files either by checking them in the"
 " table widget or automatically picking them from an existing :ref:`map theme"
@@ -830,7 +879,7 @@ msgstr ""
 "からの自動抽出で選択します。 :guilabel:`全てを選択する` ボタンと :guilabel:`全ての選択を解除` "
 "ボタンは、エクスポートするデータを素早く設定するのに役立ちます。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:438
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:453
 msgid ""
 "For each layer, you can choose whether to export all the features in a "
 "single DXF layer or rely on a field whose values are used to split the "
@@ -838,40 +887,40 @@ msgid ""
 msgstr ""
 "各レイヤについて、DXF出力時に全ての地物を単一のDXFレイヤにエクスポートするか、もしくはフィールドの値に依存してして地物をレイヤに分割するかを選択できます。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:442
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:457
 msgid "Optionally, you can also choose to:"
 msgstr "下記オプションを選択することもできます："
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:444
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:459
 msgid ""
 "|checkbox| :guilabel:`Use the layer title as name if set` instead of the "
 "layer name itself;"
 msgstr "レイヤ名自体の代わりに、 |checkbox| :guilabel:`設定されている場合はレイヤタイトルを名前として使う` "
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:446
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:461
 msgid ""
 "|checkbox| :guilabel:`Export features intersecting the current map extent`;"
 msgstr "|checkbox| :guilabel:`現在の地図領域に交差する地物をエクスポートする`"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:447
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:462
 msgid ""
 "|unchecked| :guilabel:`Force 2d output (eg. to support polyline width)`;"
 msgstr "|unchecked| :guilabel:`2D出力を強制する（例えばポリライン幅をサポートするため）`"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:448
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:463
 msgid ""
 "|checkbox| :guilabel:`Export label as MTEXT elements` or TEXT elements."
 msgstr "|checkbox| :guilabel:`ラベルをMTEXT要素としてエクスポートする` ：チェックなしではTEXT要素です。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:455
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:470
 msgid "Exporting a project to DXF dialog"
 msgstr "プロジェクトをDXFにエクスポートダイアログ"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:461
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:476
 msgid "Creating new layers from the clipboard"
 msgstr "クリップボードから新しいレイヤを作成する"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:463
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:478
 msgid ""
 "Features that are on the clipboard can be pasted into a new layer. To do "
 "this, Select some features, copy them to the clipboard, and then paste them "
@@ -881,7 +930,7 @@ msgstr ""
 "クリップボードにある地物は新しいレイヤに貼り付けできます。これを行うには、いくつかの地物を選択してクリップボードにコピーし、 "
 ":menuselection:`編集 --> 新規レイヤへの地物貼り付け -->` で以下のどちらかを選択することで、新しいレイヤに地物を貼り付けます。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:467
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:482
 msgid ""
 ":guilabel:`New Vector Layer...`: the :guilabel:`Save vector layer as...` "
 "dialog appears (see :ref:`general_saveas` for parameters)"
@@ -889,19 +938,19 @@ msgstr ""
 ":guilabel:`新規ベクタレイヤ...` ： :guilabel:`ベクタレイヤを名前を付けて保存...` "
 "ダイアログが現れます（パラメータについては :ref:`general_saveas` を参照）"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:469
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:484
 msgid ""
 "or :guilabel:`Temporary Scratch Layer...`: you need to provide a name for "
 "the layer"
 msgstr ":guilabel:`一時スクラッチレイヤ...` ：レイヤ名を指定する必要があります"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:472
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:487
 msgid ""
 "A new layer, filled with selected features and their attributes is created "
 "(and added to map canvas)."
 msgstr "選択した地物とその属性を持った新しいレイヤが作成され（そしてマップキャンバスに追加され）ます。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:475
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:490
 msgid ""
 "Creating layers from the clipboard is possible with features selected and "
 "copied within QGIS as well as features from another application, as long as "
@@ -910,11 +959,11 @@ msgstr ""
 "クリップボードからのレイヤ作成は、well-known "
 "text（WKT）を使用してジオメトリが定義されていれば、QGIS内で選択してコピーした地物でも、ほかのアプリケーションの地物でも可能です。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:485
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:500
 msgid "Creating virtual layers"
 msgstr "仮想レイヤを作成する"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:487
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:502
 msgid ""
 "A virtual layer is a special kind of vector layer. It allows you to define a"
 " layer as the result of an SQL query involving any number of other vector "
@@ -923,11 +972,11 @@ msgid ""
 msgstr ""
 "仮想レイヤは特別な種類のベクタレイヤです。これは、QGISが開くことができる任意の数の他のベクタレイヤに関するSQLクエリの結果としてレイヤを定義します。仮想レイヤは、それ自体はデータを保持しておらず、ビューと見なすことができます。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:493
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:508
 msgid "To create a virtual layer, open the virtual layer creation dialog by:"
 msgstr "仮想レイヤを作成するためには、下記の方法で仮想レイヤの作成ダイアログを開きます："
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:495
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:510
 msgid ""
 "choosing the |addVirtualLayer| :guilabel:`Add/Edit Virtual Layer` entry in "
 "the :menuselection:`Layer --> Add Layer -->` menu;"
@@ -935,18 +984,18 @@ msgstr ""
 ":menuselection:`レイヤ --> レイヤの追加 -->` メニュー内の |addVirtualLayer| "
 ":guilabel:`仮想レイヤの追加 / 編集` エントリを選択する"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:497
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:512
 msgid ""
 "enabling the |addVirtualLayer| :guilabel:`Add Virtual Layer` tab in the "
 ":guilabel:`Data Source Manager` dialog;"
 msgstr ""
 ":guilabel:`データソースマネージャ` ダイアログ内で |addVirtualLayer| :guilabel:`仮想レイヤ` タブを有効にする"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:499
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:514
 msgid "or using the :guilabel:`DB Manager` dialog tree."
 msgstr ":guilabel:`DBマネージャ` ダイアログのツリーを使用する"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:501
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:516
 msgid ""
 "The dialog allows you to specify a :guilabel:`Layer name` and an SQL "
 ":guilabel:`Query`. The query can use the name (or id) of loaded vector "
@@ -955,7 +1004,7 @@ msgstr ""
 "ダイアログでは、 :guilabel:`レイヤ名` とSQL :guilabel:`クエリ` "
 "を指定します。クエリでは、読み込まれたベクタレイヤの名前（またはid）をテーブルとして、フィールド名をカラムとして使用することができます。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:505
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:520
 msgid ""
 "For example, if you have a layer called ``airports``, you can create a new "
 "virtual layer called ``public_airports`` with an SQL query like:"
@@ -963,7 +1012,7 @@ msgstr ""
 "例えば、 ``airports`` という名前のレイヤがある場合、 ``public_airports`` "
 "という名前の新しい仮想レイヤを次のようなSQLクエリで作成できます。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:514
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:529
 msgid ""
 "The SQL query will be executed, regardless of the underlying provider of the"
 " ``airports`` layer, even if this provider does not directly support SQL "
@@ -971,11 +1020,11 @@ msgid ""
 msgstr ""
 "このSQLクエリは ``airports`` レイヤの元のプロバイダが直接にはSQLクエリをサポートしていなくとも、プロバイダに関係なく実行されます。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:521
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:536
 msgid "Create virtual layers dialog"
 msgstr "仮想レイヤの作成ダイアログ"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:523
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:538
 msgid ""
 "Joins and complex queries can also be created, for example, to join airports"
 " and country information:"
@@ -983,17 +1032,17 @@ msgstr ""
 "結合（JOIN）や、複雑なクエリを使用して作成することもできます。例えば、 airports と country "
 "の情報を結合するには、次のようにします："
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:535
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:550
 msgid ""
 "It's also possible to create virtual layers using the SQL window of "
 ":ref:`dbmanager`."
 msgstr ":ref:`dbmanager` のSQLウィンドウを使用して仮想レイヤを作成することもできます。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:539
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:554
 msgid "Embedding layers for use in queries"
 msgstr "クエリで使用するためのレイヤの埋め込み"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:541
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:556
 msgid ""
 "Besides the vector layers available in the map canvas, the user can add "
 "layers to the :guilabel:`Embedded layers` list, which can be used in queries"
@@ -1002,7 +1051,7 @@ msgstr ""
 "マップキャンバスで利用できるベクタレイヤの他に、 :guilabel:`埋め込みレイヤ` "
 "リストにレイヤを追加することができます。埋め込みレイヤは、マップキャンバスやレイヤパネルに表示することなくクエリ内で使用することができます。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:545
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:560
 msgid ""
 "To embed a layer, click :guilabel:`Add` and provide the :guilabel:`Local "
 "name`, :guilabel:`Provider`, :guilabel:`Encoding` and the path to the "
@@ -1011,7 +1060,7 @@ msgstr ""
 "レイヤを埋め込むには、 :guilabel:`追加` をクリックし :guilabel:`ローカル名` 、 :guilabel:`プロバイダ` 、 "
 ":guilabel:`エンコーディング` および :guilabel:`ソース` へのパスを指定します。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:549
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:564
 msgid ""
 "The :guilabel:`Import` button allows adding layers in the map canvas into "
 "the Embedded layers list. Those layers can then be removed from the Layers "
@@ -1020,21 +1069,21 @@ msgstr ""
 ":guilabel:`インポート` "
 "ボタンを押すと、マップキャンバスのレイヤを埋め込みレイヤリストに追加できます。そのレイヤは既存のクエリを壊すことなくレイヤパネルから削除できます。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:554
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:569
 msgid "Supported query language"
 msgstr "サポートされているクエリ言語"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:556
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:571
 msgid "The underlying engine uses SQLite and SpatiaLite to operate."
 msgstr "クエリ操作の基本エンジンはSQLiteとSpatiaLiteを使用しています。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:558
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:573
 msgid ""
 "It means you can use all of the SQL your local installation of SQLite "
 "understands."
 msgstr "これはすなわち、ローカルインストールのSQLiteが理解できるSQLはすべて使用できることを意味します。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:561
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:576
 msgid ""
 "Functions from SQLite and spatial functions from SpatiaLite can also be used"
 " in a virtual layer query. For instance, creating a point layer out of an "
@@ -1043,17 +1092,17 @@ msgstr ""
 "SQLiteの関数や "
 "SpatiaLiteの空間関数も仮想レイヤのクエリで使用できます。例えば、属性のみのレイヤからポイントレイヤを作成するには、次のようなクエリを使用します："
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:570
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:585
 msgid ""
 ":ref:`Functions of QGIS expressions<functions_list>` can also be used in a "
 "virtual layer query."
 msgstr ":ref:`QGIS式の関数<functions_list>` も仮想レイヤのクエリ内で使用できます。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:573
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:588
 msgid "To refer the geometry column of a layer, use the name ``geometry``."
 msgstr "レイヤのジオメトリ列を参照するため、名前 ``geometry`` を使用します。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:575
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:590
 msgid ""
 "Contrary to a pure SQL query, all the fields of a virtual layer query must "
 "be named. Don't forget to use the ``as`` keyword to name your columns if "
@@ -1062,11 +1111,11 @@ msgstr ""
 "純粋なSQLクエリとは違い、仮想レイヤのクエリのフィールドには全て名前を付けなければなりません。計算や関数呼び出しの結果としてカラムに名前を付ける場合には、"
 " ``as`` キーワードを使用することを忘れないでください。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:580
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:595
 msgid "Performance issues"
 msgstr "パフォーマンスの問題"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:582
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:597
 msgid ""
 "With default parameters, the virtual layer engine will try its best to "
 "detect the type of the different columns of the query, including the type of"
@@ -1074,7 +1123,7 @@ msgid ""
 msgstr ""
 "デフォルトのパラメータを使用すると、仮想レイヤのエンジンは、クエリのさまざまなカラムの型を検出するために最善を尽くそうとします。もしある場合には、ジオメトリカラムも含め型検出を行います。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:586
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:601
 msgid ""
 "This is done by introspecting the query when possible or by fetching the "
 "first row of the query (LIMIT 1) as a last resort. Fetching the first row of"
@@ -1084,11 +1133,11 @@ msgstr ""
 "型検出は、可能な場合にはクエリをイントロスペクトするか、最後の手段としてクエリの最初の行（LIMIT "
 "1）をフェッチすることで行われます。レイヤを作成するためだけに結果の最初の行をフェッチするのは、パフォーマンス上好ましくないかもしれません。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:591
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:606
 msgid "The creation dialog parameters:"
 msgstr "作成ダイアログのパラメータには以下のものがあります："
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:593
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:608
 msgid ""
 ":guilabel:`Unique identifier column`: specifies a field of the query that "
 "represents unique integer values that QGIS can use as row identifiers. By "
@@ -1098,46 +1147,46 @@ msgstr ""
 ":guilabel:`ユニークな識別子カラム` "
 "：QGISが行の識別子として使用可能なユニークな整数値を表すクエリのフィールドを指定します。デフォルトでは、自動的インクリメントの整数値が使用されます。ユニークな識別子カラムを定義すると、IDによる行の選択を高速化します。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:600
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:615
 msgid ""
 ":guilabel:`No geometry`: forces the virtual layer to ignore any geometry "
 "field. The resulting layer is an attribute-only layer."
 msgstr ""
 ":guilabel:`ジオメトリなし` ：仮想レイヤのジオメトリフィールドを強制的に無視します。結果として得られるレイヤは属性のみのレイヤとなります。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:603
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:618
 msgid ""
 "Geometry :guilabel:`Column`: specifies the name of the geometry column."
 msgstr ":guilabel:`ジオメトリカラム` ： ジオメトリカラムの名前を指定します。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:605
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:620
 msgid "Geometry :guilabel:`Type`: specifies the type of the geometry."
 msgstr ":guilabel:`タイプ` ：ジオメトリの種類を指定します。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:607
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:622
 msgid ""
 "Geometry :guilabel:`CRS`: specifies the coordinate reference system of the "
 "virtual layer."
 msgstr ":guilabel:`CRS` ：仮想レイヤの座標参照系を指定します。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:611
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:626
 msgid "Special comments"
 msgstr "特別なコメント"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:613
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:628
 msgid ""
 "The virtual layer engine tries to determine the type of each column of the "
 "query. If it fails, the first row of the query is fetched to determine "
 "column types."
 msgstr "仮想レイヤエンジンは、クエリの各列の型を決定しようとします。それが失敗した場合、列の型を決定するためにクエリの最初の行をフェッチします。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:617
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:632
 msgid ""
 "The type of a particular column can be specified directly in the query by "
 "using some special comments."
 msgstr "いくつかの特別なコメントを使用することで、特定の列の型をクエリ内で直接指定できます。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:620
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:635
 msgid ""
 "The syntax is the following: ``/*:type*/``. It has to be placed just after "
 "the name of a column. ``type`` can be either ``int`` for integers, ``real`` "
@@ -1146,11 +1195,11 @@ msgstr ""
 "構文は、 ``/*:type*/`` のようになります。これはカラム名の直後に記述しなければなりません。 ``type`` は、整数の場合は "
 "``int`` 、浮動小数点数の場合は ``real`` 、テキストの場合は ``text`` です。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:624
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:639
 msgid "For instance:"
 msgstr "例："
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:631
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:646
 msgid ""
 "The type and coordinate reference system of the geometry column can also be "
 "set thanks to special comments with the following syntax ``/*:gtype:srid*/``"
@@ -1163,23 +1212,23 @@ msgstr ""
 "はジオメトリタイプ（ ``point`` 、 ``linestring`` 、 ``polygon`` 、 ``multipoint`` 、 "
 "``multilinestring`` 、 ``multipolygon`` ）、 ``srid`` は座標参照系のEPSGコードを表す整数です。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:638
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:653
 msgid "Use of indexes"
 msgstr "インデックスの使用"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:640
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:655
 msgid ""
 "When requesting a layer through a virtual layer, the source layer indices "
 "will be used in the following ways:"
 msgstr "仮想レイヤを介してレイヤをリクエストする場合、ソースレイヤのインデックスは以下の方法で使用されます："
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:643
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:658
 msgid ""
 "if an ``=`` predicate is used on the primary key column of the layer, the "
 "underlying data provider will be asked for a particular id (FilterFid)"
 msgstr "レイヤの主キーカラムに ``=`` 述語が使用されている場合、元のデータプロバイダには、特定のID（FilterFid）が要求されます。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:646
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:661
 msgid ""
 "for any other predicates (``>``, ``<=``, ``!=``, etc.) or on a column "
 "without a primary key, a request built from an expression will be used to "
@@ -1189,7 +1238,7 @@ msgstr ""
 "他の述語（ ``>`` 、 ``<=`` 、 ``!=`` "
 "など）や、主キーのないカラムについては、元のベクタデータプロバイダへのリクエストには、式から構築されたリクエストが使用されます。これは、データベースプロバイダにインデックスがある場合には、インデックスが使用される可能性があることを意味します。"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:651
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:666
 msgid ""
 "A specific syntax exists to handle spatial predicates in requests and "
 "triggers the use of a spatial index: a hidden column named "
@@ -1199,7 +1248,7 @@ msgstr ""
 "リクエスト内の空間的述語を処理し、空間インデックスの使用をトリガーするための特定の構文が存在します： ``_search_frame_`` "
 "という名前の隠しカラムが各仮想レイヤーに対して存在します。このカラムは、バウンディングボックスに等しいかどうかを比較できます。例："
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:662
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:677
 msgid ""
 "Spatial binary predicates like ``ST_Intersects`` are sped up significantly "
 "when used in conjunction with this spatial index syntax."
