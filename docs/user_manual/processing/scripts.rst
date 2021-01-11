@@ -653,7 +653,7 @@ You can document your scripts by overloading the
 Flags
 -----
 
-You can override the :meth:`flags <qgis.core.QgsProcessingAlgorithm.flags>`
+You can override the :meth:`flags() <qgis.core.QgsProcessingAlgorithm.flags>`
 method of :class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>`
 to tell QGIS more about your algorithm.
 You can for instance tell QGIS that the script shall be hidden from

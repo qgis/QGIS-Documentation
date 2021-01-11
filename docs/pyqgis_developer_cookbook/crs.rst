@@ -74,7 +74,7 @@ If no prefix is specified, WKT definition is assumed.
 
 It's wise to check whether creation (i.e. lookup in the database) of the CRS
 has been successful: :meth:`isValid() <qgis.core.QgsCoordinateReferenceSystem.isValid>`
-must return ``True``.
+must return :const:`True`.
 
 Note that for initialization of spatial reference systems QGIS needs to look up
 appropriate values in its internal database :file:`srs.db`. Thus in case you
