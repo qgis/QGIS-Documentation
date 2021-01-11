@@ -73,8 +73,8 @@ of an edge.
 
 Converting from a vector layer to the graph is done using the `Builder <https://en.wikipedia.org/wiki/Builder_pattern>`_
 programming pattern. A graph is constructed using a so-called Director.
-There is only one Director for now: :api:`QgsVectorLayerDirector
-<classQgsVectorLayerDirector.html>`.
+There is only one Director for now: :class:`QgsVectorLayerDirector
+<qgis.analysis.QgsVectorLayerDirector>`.
 The director sets the basic settings that will be used to construct a graph
 from a line vector layer, used by the builder to create the graph. Currently, as
 in the case with the director, only one builder exists: :class:`QgsGraphBuilder <qgis.analysis.QgsGraphBuilder>`,
@@ -84,9 +84,9 @@ with such libraries as `BGL <https://www.boost.org/doc/libs/1_48_0/libs/graph/do
 or `NetworkX <https://networkx.lanl.gov/>`_.
 
 To calculate edge properties the programming pattern `strategy <https://en.wikipedia.org/wiki/Strategy_pattern>`_
-is used. For now only :api:`QgsNetworkDistanceStrategy <classQgsNetworkDistanceStrategy.html>`
+is used. For now only :class:`QgsNetworkDistanceStrategy <qgis.analysis.QgsNetworkDistanceStrategy>`
 strategy (that takes into account the length of the route) and
-:api:`QgsNetworkSpeedStrategy <classQgsNetworkSpeedStrategy.html>` (that also considers
+:class:`QgsNetworkSpeedStrategy <qgis.analysis.QgsNetworkSpeedStrategy>` (that also considers
 the speed) are availabile. You can implement your own strategy that will use all
 necessary parameters.
 For example, RoadGraph plugin uses a strategy that computes travel time
@@ -116,7 +116,7 @@ Then some examples for creating a director
   # This scheme can be used with OpenStreetMap data
   director = QgsVectorLayerDirector(vectorLayer, 5, 'yes', '1', 'no', QgsVectorLayerDirector.DirectionBoth)
 
-To construct a director  we should pass a vector layer, that will be used
+To construct a director, we should pass a vector layer that will be used
 as the source for the graph structure and information about allowed movement on
 each road segment (one-way or bidirectional movement, direct or reverse
 direction). The call looks like this
@@ -124,11 +124,11 @@ direction). The call looks like this
 .. code-block:: python
 
   director = QgsVectorLayerDirector(vectorLayer,
-                                        directionFieldId,
-                                        directDirectionValue,
-                                        reverseDirectionValue,
-                                        bothDirectionValue,
-                                        defaultDirection)
+                                    directionFieldId,
+                                    directDirectionValue,
+                                    reverseDirectionValue,
+                                    bothDirectionValue,
+                                    defaultDirection)
 
 And here is full list of what these parameters mean:
 
@@ -146,9 +146,9 @@ And here is full list of what these parameters mean:
   those roads where field ``directionFieldId`` is not set or has some value
   different from any of the three values specified above. Possible values are:
 
-    * ``QgsVectorLayerDirector.DirectionForward`` --- One-way direct
-    * ``QgsVectorLayerDirector.DirectionBackward`` --- One-way reverse
-    * ``QgsVectorLayerDirector.DirectionBoth`` --- Two-way
+  * :attr:`QgsVectorLayerDirector.DirectionForward <qgis.analysis.QgsVectorLayerDirector.DirectionForward>` --- One-way direct
+  * :attr:`QgsVectorLayerDirector.DirectionBackward <qgis.analysis.QgsVectorLayerDirector.DirectionBackward>` --- One-way reverse
+  * :attr:`QgsVectorLayerDirector.DirectionBoth <qgis.analysis.QgsVectorLayerDirector.DirectionBoth>` --- Two-way
 
 
 It is necessary then to create a strategy for calculating edge properties
@@ -174,7 +174,7 @@ Now we can use the builder, which will create the graph. The :class:`QgsGraphBui
 <qgis.analysis.QgsGraphBuilder>` class constructor takes several arguments:
 
 * ``crs`` --- coordinate reference system to use. Mandatory argument.
-* ``otfEnabled`` --- use "on the fly" reprojection or no. By default const:`True`
+* ``otfEnabled`` --- use "on the fly" reprojection or no. By default :const:`True`
   (use OTF).
 * ``topologyTolerance`` --- topological tolerance. Default value is 0.
 * ``ellipsoidID`` --- ellipsoid to use. By default "WGS84".
@@ -234,14 +234,14 @@ with the following properties:
 * if vertex B is reachable from vertex A, then the path from A to B is the
   single available path and it is optimal (shortest) on this graph
 
-To get the shortest path tree use the methods :meth:`shortestTree
-<qgis.analysis.QgsGraphAnalyzer.shortestTree>` and :meth:`dijkstra
+To get the shortest path tree use the methods :meth:`shortestTree()
+<qgis.analysis.QgsGraphAnalyzer.shortestTree>` and :meth:`dijkstra()
 <qgis.analysis.QgsGraphAnalyzer.dijkstra>` of the :class:`QgsGraphAnalyzer
 <qgis.analysis.QgsGraphAnalyzer>` class. It is recommended to use the
-:meth:`dijkstra <qgis.analysis.QgsGraphAnalyzer.dijkstra>` method because it works
+:meth:`dijkstra() <qgis.analysis.QgsGraphAnalyzer.dijkstra>` method because it works
 faster and uses memory more efficiently.
 
-The :meth:`shortestTree <qgis.analysis.QgsGraphAnalyzer.shortestTree>` method
+The :meth:`shortestTree() <qgis.analysis.QgsGraphAnalyzer.shortestTree>` method
 is useful when you want to walk around the
 shortest path tree. It always creates a new graph object (QgsGraph) and accepts
 three variables:
@@ -254,7 +254,7 @@ three variables:
 
   tree = QgsGraphAnalyzer.shortestTree(graph, startId, 0)
 
-The :meth:`dijkstra <qgis.analysis.QgsGraphAnalyzer.dijkstra>` method has the
+The :meth:`dijkstra() <qgis.analysis.QgsGraphAnalyzer.dijkstra>` method has the
 same arguments, but returns two arrays.
 In the first array element `n` contains index of the incoming edge or -1 if there
 are no incoming edges. In the second array element `n` contains the distance from
@@ -266,7 +266,7 @@ from the root.
   (tree, cost) = QgsGraphAnalyzer.dijkstra(graph, startId, 0)
 
 Here is some very simple code to display the shortest path tree using the graph
-created with the :meth:`shortestTree <qgis.analysis.QgsGraphAnalyzer.shortestTree>`
+created with the :meth:`shortestTree() <qgis.analysis.QgsGraphAnalyzer.shortestTree>`
 method (select linestring layer in :guilabel:`Layers` panel
 and replace coordinates with your own).
 
@@ -306,7 +306,7 @@ and replace coordinates with your own).
     rb.addPoint (tree.vertex(tree.edge(i).toVertex()).point())
     i = i + 1
 
-Same thing but using the :meth:`dijkstra <qgis.analysis.QgsGraphAnalyzer.dijkstra>`
+Same thing but using the :meth:`dijkstra() <qgis.analysis.QgsGraphAnalyzer.dijkstra>`
 method
 
 .. testcode:: network_analysis
@@ -347,8 +347,8 @@ Finding shortest paths
 
 To find the optimal path between two points the following approach is used.
 Both points (start A and end B) are "tied" to the graph when it is built. Then
-using the :meth:`shortestTree <qgis.analysis.QgsGraphAnalyzer.shortestTree>`
-or :meth:`dijkstra <qgis.analysis.QgsGraphAnalyzer.dijkstra>` method we build the
+using the :meth:`shortestTree() <qgis.analysis.QgsGraphAnalyzer.shortestTree>`
+or :meth:`dijkstra() <qgis.analysis.QgsGraphAnalyzer.dijkstra>` method we build the
 shortest path tree with root in the start point A. In the same tree we also
 find the end point B and start to walk through the tree from point B to point
 A. The whole algorithm can be written as:
@@ -369,7 +369,7 @@ be visited during traveling by this path.
 
 Here is the sample code for QGIS Python Console (you may need to load and
 select a linestring layer in TOC and replace coordinates in the code with yours) that
-uses the :meth:`shortestTree <qgis.analysis.QgsGraphAnalyzer.shortestTree>` method
+uses the :meth:`shortestTree() <qgis.analysis.QgsGraphAnalyzer.shortestTree>` method
 
 .. testcode:: network_analysis
 
@@ -423,7 +423,7 @@ uses the :meth:`shortestTree <qgis.analysis.QgsGraphAnalyzer.shortestTree>` meth
         rb.addPoint(p)
 
 
-And here is the same sample but using the :meth:`dijkstra
+And here is the same sample but using the :meth:`dijkstra()
 <qgis.analysis.QgsGraphAnalyzer.dijkstra>` method
 
 .. testcode:: network_analysis
@@ -490,7 +490,7 @@ station. Which parts of city can a fire truck reach in 5 minutes? 10 minutes?
 15 minutes?". Answers to these questions are fire station's areas of
 availability.
 
-To find the areas of availability we can use the :meth:`dijkstra
+To find the areas of availability we can use the :meth:`dijkstra()
 <qgis.analysis.QgsGraphAnalyzer.dijkstra>` method of the :class:`QgsGraphAnalyzer
 <qgis.analysis.QgsGraphAnalyzer>` class. It is enough to compare the elements of
 the cost array with a predefined value. If cost[i] is less than or equal to a

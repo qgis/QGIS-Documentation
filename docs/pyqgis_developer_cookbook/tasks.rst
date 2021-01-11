@@ -94,7 +94,7 @@ There are several ways to create a QGIS task:
    Attempting to use them from background threads will result in
    crashes.
 
-Dependencies between tasks can be described using the :meth:`addSubTask <qgis.core.QgsTask.addSubTask>`
+Dependencies between tasks can be described using the :meth:`addSubTask() <qgis.core.QgsTask.addSubTask>`
 function of :class:`QgsTask <qgis.core.QgsTask>`.
 When a dependency is stated, the task manager will automatically
 determine how these dependencies will be executed.
@@ -105,18 +105,18 @@ task will also be canceled.
 Circular dependencies can make deadlocks possible, so be careful.
 
 If a task depends on a layer being available, this can be stated
-using the :meth:`setDependentLayers <qgis.core.QgsTask.setDependentLayers>`
+using the :meth:`setDependentLayers() <qgis.core.QgsTask.setDependentLayers>`
 function of :class:`QgsTask <qgis.core.QgsTask>`.
 If a layer on which a task depends is not available, the task will be
 canceled.
 
 Once the task has been created it can be scheduled for running using
-the :meth:`addTask <qgis.core.QgsTaskManager.addTask>` function of the task manager.
+the :meth:`addTask() <qgis.core.QgsTaskManager.addTask>` function of the task manager.
 Adding a task to the manager automatically transfers ownership of
 that task to the manager, and the manager will cleanup and delete
 tasks after they have executed.
 The scheduling of the tasks is influenced by the task priority, which
-is set in :meth:`addTask <qgis.core.QgsTaskManager.addTask>`.
+is set in :meth:`addTask() <qgis.core.QgsTaskManager.addTask>`.
 
 The status of tasks can be monitored using :class:`QgsTask <qgis.core.QgsTask>` and
 :class:`QgsTaskManager <qgis.core.QgsTaskManager>` signals and functions.

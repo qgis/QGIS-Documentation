@@ -43,7 +43,7 @@ with the following line:
 
 Now, there is basically just one (interesting) thing you can do with
 that from the console: execute an algorithm. That is done using the
-:meth:`run <qgis.core.QgsProcessingAlgorithm.run>` method, which
+:meth:`run() <qgis.core.QgsProcessingAlgorithm.run>` method, which
 takes the name of the algorithm to execute
 as its first parameter, and then a variable number of additional
 parameters depending on the requirements of the algorithm. So the
@@ -455,19 +455,19 @@ After doing the necessary imports, the following
 :class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>`
 functions are specified:
 
-* :meth:`name <qgis.core.QgsProcessingAlgorithm.name>`: The id of the
+* :meth:`name() <qgis.core.QgsProcessingAlgorithm.name>`: The id of the
   algorithm (lowercase).
-* :meth:`displayName <qgis.core.QgsProcessingAlgorithm.displayName>`:
+* :meth:`displayName() <qgis.core.QgsProcessingAlgorithm.displayName>`:
   A human readable name for the algorithm.
-* :meth:`createInstance <qgis.core.QgsProcessingAlgorithm.createInstance>`:
+* :meth:`createInstance() <qgis.core.QgsProcessingAlgorithm.createInstance>`:
   Create a new instance of the algorithm class.
-* :meth:`initAlgorithm <qgis.core.QgsProcessingAlgorithm.initAlgorithm>`:
+* :meth:`initAlgorithm() <qgis.core.QgsProcessingAlgorithm.initAlgorithm>`:
   Configure the parameterDefinitions and outputDefinitions.
 
   Here you describe the parameters and output of the algorithm.  In
   this case, a feature source for the input, a feature sink for
   the result and a number for the buffer distance.
-* :meth:`processAlgorithm <qgis.core.QgsProcessingAlgorithm.processAlgorithm>`:
+* :meth:`processAlgorithm() <qgis.core.QgsProcessingAlgorithm.processAlgorithm>`:
   Do the work.
 
   Here we first run the ``smoothgeometry`` algorithm to smooth the
@@ -551,19 +551,19 @@ Feedback
 ........
 
 The :class:`feedback <qgis.core.QgsProcessingFeedback>` object passed to
-:meth:`processAlgorithm <qgis.core.QgsProcessingAlgorithm.processAlgorithm>`
+:meth:`processAlgorithm() <qgis.core.QgsProcessingAlgorithm.processAlgorithm>`
 should be used for user feedback / interaction.
-You can use the :meth:`setProgress <qgis.core.QgsFeedback.setProgress>`
+You can use the :meth:`setProgress() <qgis.core.QgsFeedback.setProgress>`
 function of the :class:`feedback <qgis.core.QgsProcessingFeedback>` object to update
 the progress bar (0 to 100) to inform the user about the progress of the
 algorithm. This is very useful if your algorithm takes a long time to complete.
 
 The :class:`feedback <qgis.core.QgsProcessingFeedback>` object provides an
-:meth:`isCanceled <qgis.core.QgsFeedback.isCanceled>` method that
+:meth:`isCanceled() <qgis.core.QgsFeedback.isCanceled>` method that
 should be monitored to enable cancelation of the algorithm by the user.
-The :meth:`pushInfo <qgis.core.QgsProcessingFeedback.pushInfo>` method of
+The :meth:`pushInfo() <qgis.core.QgsProcessingFeedback.pushInfo>` method of
 :class:`feedback <qgis.core.QgsProcessingFeedback>` can be used to send information
-to the user, and :meth:`reportError <qgis.core.QgsProcessingFeedback.reportError>`
+to the user, and :meth:`reportError() <qgis.core.QgsProcessingFeedback.reportError>`
 is handy for pushing non-fatal errors to users.
 
 Algorithms should avoid using other forms of providing feedback to
@@ -602,12 +602,12 @@ As in the case of models, you can create additional documentation for
 your scripts, to explain what they do and how to use them.
 
 :class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>`
-provides the :meth:`helpString <qgis.core.QgsProcessingAlgorithm.helpString>`,
-:meth:`shortHelpString <qgis.core.QgsProcessingAlgorithm.shortHelpString>` and
-:meth:`helpUrl <qgis.core.QgsProcessingAlgorithm.helpUrl>` functions for that purpose.
+provides the :meth:`helpString() <qgis.core.QgsProcessingAlgorithm.helpString>`,
+:meth:`shortHelpString() <qgis.core.QgsProcessingAlgorithm.shortHelpString>` and
+:meth:`helpUrl() <qgis.core.QgsProcessingAlgorithm.helpUrl>` functions for that purpose.
 Specify / override these to provide more help to the user.
 
-:meth:`shortDescription <qgis.core.QgsProcessingAlgorithm.shortDescription>`
+:meth:`shortDescription() <qgis.core.QgsProcessingAlgorithm.shortDescription>`
 is used in the tooltip when hovering over the algorithm in the toolbox.
 
 Pre- and post-execution script hooks
