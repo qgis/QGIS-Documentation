@@ -295,19 +295,6 @@ renders like this:
 
 see :ref:`figure_logo`
 
-It is also possible (but not recommended) to use the following mechanism:
-
-.. code-block:: rst
-
-   (see Figure_logo_).
-
-It will render like this:
-
-(see Figure_logo_).
-
-You can use uppercase if you want.
-This mechanism can only be used in the same :file:`.rst` file.
-
 
 Tables
 ......

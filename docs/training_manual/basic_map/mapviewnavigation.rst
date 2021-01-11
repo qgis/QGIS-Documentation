@@ -39,7 +39,7 @@ Next, let's zoom in and take a closer look at the layers we imported.
    density of buildings and roads.
 #. Left click and hold. 
 #. Then drag the mouse, which will create a rectangle, and cover the dense area of 
-   buildings and roads (:ref:`figure_zoom_in_mapview`).
+   buildings and roads (:numref:`figure_zoom_in_mapview`).
 
    .. _figure_zoom_in_mapview:
 

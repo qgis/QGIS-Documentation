@@ -15,7 +15,7 @@ Overview
 
 If every line on a map was the same colour, width, thickness, and had the same
 label, it would be very hard to make out what was going on. The map would also
-give us very little information. Take a look at figure_map_attributes_ for example.
+give us very little information. Take a look at :numref:`figure_map_attributes` for example.
 
 .. _figure_map_attributes:
 
@@ -31,7 +31,7 @@ give us very little information. Take a look at figure_map_attributes_ for examp
 In this topic we will look at how attribute data can help us to make interesting
 and informative maps. In the previous topic on vector data, we briefly explained
 that **attribute data** are used to **describe vector features**. Take a look at
-the house pictures in figure_house_.
+the house pictures in :numref:`figure_house`.
 
 .. _figure_house:
 
@@ -47,7 +47,7 @@ house), the attributes we have recorded are roof colour, whether there is a
 balcony, and the year the house was built. Note that attributes don't have to be
 visible things --– they can describe things we know about the feature such as the
 year it was built. In a GIS Application, we can represent this feature type in a
-houses polygon layer, and the attributes in an attribute table (see figure_house_gis_).
+houses polygon layer, and the attributes in an attribute table (see :numref:`figure_house_gis`).
 
 .. _figure_house_gis:
 
@@ -62,7 +62,7 @@ houses polygon layer, and the attributes in an attribute table (see figure_house
 
 The fact that features have attributes as well geometry in a GIS Application opens
 up many possibilities. For example we can use the attribute values to tell the
-GIS what colours and style to use when drawing features (see figure_style_by_attribute_).
+GIS what colours and style to use when drawing features (see :numref:`figure_style_by_attribute`).
 The process of setting colours and drawing styles is often referred to as setting
 feature **symbology**.
 
@@ -83,7 +83,7 @@ label each feature.
 
 If you have ever **searched a map** for a place name or a specific feature, you
 will know how time consuming it can be. Having attribute data can make searching
-for a specific feature quick and easy. In figure_search_by_attribute_ you can see
+for a specific feature quick and easy. In :numref:`figure_search_by_attribute` you can see
 an example of an attribute search in a GIS.
 
 .. _figure_search_by_attribute:
@@ -112,7 +112,7 @@ Before we move on to attribute data in more detail, let's take a quick recap.
 Features are real world things such as roads, property boundaries, electrical
 substation sites and so on. A **feature** has a **geometry** (which determines
 if it is a **point**, **polyline** or **polygon**) and **attributes** (which
-describe the feature). This is shown in figure_features_at_glance_.
+describe the feature). This is shown in :numref:`figure_features_at_glance`.
 
 .. _figure_features_at_glance:
 
@@ -187,13 +187,13 @@ In order to do that, you need to use either a **graduated**, **continuous** or
 follow.
 
 A GIS application will normally allow you to set the symbology of a layer using
-a **dialog box** such as the one shown in in figure_single_symbol_. In this
+a **dialog box** such as the one shown in in :numref:`figure_single_symbol`. In this
 dialog box you can choose colours and symbol styles. Depending on the geometry
 type of a layer, different options may be shown. For example with point layers
 you can choose a **marker style**. With line and polygon layers there is no marker
 style option, but instead you can select a **line style** and **colour** such as
 dashed orange for gravel roads, solid orange for minor roads, and so on (as shown
-in figure_single_symbol_poly_). With polygon layers you also have the option of
+in :numref:`figure_single_symbol_poly`). With polygon layers you also have the option of
 setting a **fill style** and color.
 
 .. _figure_single_symbol:
@@ -245,8 +245,8 @@ areas with another and high-altitude areas with a third.
    Our map after setting graduated colours for our contours.
 
 Setting colours based on discrete groups of attribute values is called Graduated
-Symbology in QGIS. The process is shown in Illustrations figure_graduated_symbol_
-and figure_graduated_symbol_map_. **Graduated symbols** are most useful when you
+Symbology in QGIS. The process is shown in Illustrations :numref:`figure_graduated_symbol`
+and :numref:`figure_graduated_symbol_map`. **Graduated symbols** are most useful when you
 want to show clear differences between features with attribute values in different
 value ranges. The GIS Application will analyse the attribute data (e.g. height)
 and, based on the number of classes you request, create groupings for you. This
@@ -320,7 +320,7 @@ series of shades between those colours.
 Using the same contours example we used in the previous section, let's see how a
 map with continuous colour symbology is defined and looks. The process starts by
 setting the layers properties to continuous colour using a dialog like the one
-shown in figure_continuous_symbol_.
+shown in :numref:`figure_continuous_symbol`.
 
 .. _figure_continuous_symbol:
 
@@ -340,7 +340,7 @@ at 1000 m and ending at 1400 m, the value range is 1000 to 1400. If the colour
 set for the minimum value is set to orange and the colour for the maximum value
 is black, contours with a value of close to 1400 m will be drawn close to black.
 On the other hand contours with a value near to 1000 m will be drawn close to
-orange (see figure_continuous_symbol_map_).
+orange (see :numref:`figure_continuous_symbol_map`).
 
 .. _figure_continuous_symbol_map:
 
@@ -381,7 +381,7 @@ have their own symbol.
 Within the GIS Application we can open/choose to use Unique Value symbology for
 a layer. The GIS will scan through all the different string values in the
 attribute field and build a list of unique strings or numbers. Each unique value
-can then be assigned a colour and style. This is shown in figure_unique_symbol_.
+can then be assigned a colour and style. This is shown in :numref:`figure_unique_symbol`.
 
 .. _figure_unique_symbol:
 
@@ -394,7 +394,7 @@ can then be assigned a colour and style. This is shown in figure_unique_symbol_.
 When the GIS draws the layer, it will look at the attributes of each feature
 before drawing it to the screen. Based on the value in the chosen field in the
 attribute table, the road line will be drawn with suitable colour and line style
-(and fill style if its a polygon feature). This is shown in figure_unique_symbol_map_.
+(and fill style if its a polygon feature). This is shown in :numref:`figure_unique_symbol_map`.
 
 .. _figure_unique_symbol_map:
 

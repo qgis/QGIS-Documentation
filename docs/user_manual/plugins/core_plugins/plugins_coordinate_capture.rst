@@ -23,7 +23,7 @@ coordinates on the map canvas for two selected coordinate reference systems (CRS
    :ref:`managing_plugins`) and ensure that the dialog is visible by going to
    :menuselection:`View --> Panels` and ensuring that |checkbox|
    :guilabel:`Coordinate Capture` is enabled. The coordinate capture dialog
-   appears as shown in Figure figure_coordinate_capture_. Alternatively,
+   appears as shown in Figure :numref:`figure_coordinate_capture`. Alternatively,
    you can also look for :menuselection:`Vector --> Coordinate Capture`.
 #. Click on the |geographic| :sup:`Click to the select the CRS to use for
    coordinate display` icon and select a different CRS from the one you selected

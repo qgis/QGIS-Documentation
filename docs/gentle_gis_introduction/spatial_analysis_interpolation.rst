@@ -33,7 +33,7 @@ values at other unknown points. For example, to make a precipitation (rainfall)
 map for your country, you will not find enough evenly spread weather stations to
 cover the entire region. Spatial interpolation can estimate the temperatures at
 locations without recorded data by using known temperature readings at nearby
-weather stations (see figure_temperature_map_). This type of interpolated surface
+weather stations (see :numref:`figure_temperature_map`). This type of interpolated surface
 is often called a **statistical surface**. Elevation data, precipitation, snow
 accumulation, water table and population density are other types of data that can
 be computed using interpolation.
@@ -69,7 +69,7 @@ Inverse Distance Weighted (IDW)
 In the IDW interpolation method, the sample points are weighted during
 interpolation such that the influence of one point relative to another declines
 with distance from the unknown point you want to create (see
-figure_idw_interpolation_).
+:numref:`figure_idw_interpolation`).
 
 .. _figure_idw_interpolation:
 
@@ -93,10 +93,10 @@ disadvantages: the quality of the interpolation result can decrease, if the
 distribution of sample data points is uneven. Furthermore, maximum and minimum
 values in the interpolated surface can only occur at sample data points. This
 often results in small peaks and pits around the sample data points as shown in
-figure_idw_interpolation_.
+:numref:`figure_idw_interpolation`.
 
 In GIS, interpolation results are usually shown as a 2 dimensional raster layer.
-In figure_idw_result_, you can see a typical IDW interpolation result, based on
+In :numref:`figure_idw_result`, you can see a typical IDW interpolation result, based on
 elevation sample points collected in the field with a GPS device.
 
 .. _figure_idw_result:
@@ -115,7 +115,7 @@ TIN interpolation is another popular tool in GIS. A common TIN algorithm is call
 **Delaunay triangulation**. It tries to create a surface formed by triangles of
 nearest neighbour points. To do this, circumcircles around selected sample points
 are created and their intersections are connected to a network of non overlapping
-and as compact as possible triangles (see figure_tin_interpolation_).
+and as compact as possible triangles (see :numref:`figure_tin_interpolation`).
 
 .. _figure_tin_interpolation:
 
@@ -131,7 +131,7 @@ The main disadvantage of the TIN interpolation is that the surfaces are not smoo
 and may give a jagged appearance. This is caused by discontinuous slopes at the
 triangle edges and sample data points. In addition, triangulation is generally
 not suitable for extrapolation beyond the area with collected sample data points
-(see figure_tin_result_ ).
+(see :numref:`figure_tin_result` ).
 
 .. _figure_tin_result:
 

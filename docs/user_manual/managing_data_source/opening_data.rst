@@ -377,7 +377,7 @@ To load a layer from a file:
    Source Manager` dialog
 #. You can specify the encoding for vector file if desired
 #. Press :guilabel:`Add` to load the file in QGIS and display them in the map view.
-   figure_vector_loaded_ shows QGIS after loading the :file:`alaska.shp` file.
+   :numref:`figure_vector_loaded` shows QGIS after loading the :file:`alaska.shp` file.
 
    .. _figure_vector_loaded:
 
@@ -743,7 +743,7 @@ corresponding descriptions at:
 The first time you use a PostGIS data source, you must create a connection to a
 database that contains the data. Begin by clicking the appropriate button as
 exposed above, opening an :guilabel:`Add PostGIS Table(s)` dialog
-(see figure_add_postgis_tables_).
+(see :numref:`figure_add_postgis_tables`).
 To access the connection manager, click on the :guilabel:`New`
 button to display the
 :guilabel:`Create a New PostGIS Connection` dialog.
@@ -846,7 +846,7 @@ clicking the :guilabel:`Test Connection` button or apply it by clicking
 the :guilabel:`OK` button.
 From :guilabel:`Add PostGIS Table(s)`, click now on :guilabel:`Connect`,
 and the dialog is filled with tables from the selected database
-(as shown in figure_add_postgis_tables_).
+(as shown in :numref:`figure_add_postgis_tables`).
 
 
 .. _db_requirements:
@@ -1161,7 +1161,7 @@ will then be used to render the Vector Tile in QGIS.
 For Mercator projection (used by OpenStreetMap Vector Tiles) Zoom Level 0
 represents the whole world at a scale of 1:500.000.000. Zoom Level 14
 represents the scale 1:35.000. 
-figure_vector_tiles_maptilerplanet_ shows the dialog with the
+:numref:`figure_vector_tiles_maptilerplanet` shows the dialog with the
 MapTiler planet Vector Tiles service configuration.
 
 .. _figure_vector_tiles_maptilerplanet:
@@ -1186,7 +1186,7 @@ By default, the OpenStreetMap XYZ Tile service is configured. You can
 add other services that use the XYZ Tile protocol by choosing
 :guilabel:`New Connection` in the XYZ Tiles context menu (right-click
 to open).
-figure_xyz_tiles_openstreetmap_ shows the dialog with the OpenStreetMap
+:numref:`figure_xyz_tiles_openstreetmap` shows the dialog with the OpenStreetMap
 XYZ Tile service configuration.
 
 .. _figure_xyz_tiles_openstreetmap:

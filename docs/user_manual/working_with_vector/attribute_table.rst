@@ -466,7 +466,7 @@ to a new field (that can be a :ref:`virtual <virtual_field>` one).
 
 The field calculator is available on any layer that supports edit.
 When you click on the field calculator icon the dialog opens (see
-figure_field_calculator_). If the layer is not in edit mode, a warning is
+:numref:`figure_field_calculator`). If the layer is not in edit mode, a warning is
 displayed and using the field calculator will cause the layer to be put in
 edit mode before the calculation is made.
 

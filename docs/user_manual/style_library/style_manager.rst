@@ -82,7 +82,7 @@ listed in the panel on the left:
   :guilabel:`Add Tag...` button or select the |signPlus| :guilabel:`Add Tag...`
   from any tag contextual menu;
 * **Smart Group**: a smart group dynamically fetches its symbols according to
-  conditions set (see eg, figure_smart_group_). Click the :guilabel:`Add Smart Group...`
+  conditions set (see eg, :numref:`figure_smart_group`). Click the :guilabel:`Add Smart Group...`
   button to create smart groups. The dialog box allows you to enter an expression
   to filter the items to select (has a particular tag, have a string in its name,
   etc.). Any symbol, color ramp, text format or label setting that satisfies

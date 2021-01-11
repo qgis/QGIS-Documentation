@@ -137,7 +137,7 @@ project.
 
 You can use one or more layer attributes to define the filter in the ``Query
 Builder``.
-The use of more than one attribute is shown in Figure_vector_querybuilder_.
+The use of more than one attribute is shown in :numref:`Figure_vector_querybuilder`.
 In the example, the filter combines the attributes
 
 * ``toa`` (``DateTime`` field: ``cast("toa" as character) > '2017-05-17'`` and
@@ -535,7 +535,7 @@ Right-clicking over selected item(s) shows a contextual menu to:
 * :guilabel:`Change Size...` of the selected point symbol(s)
 * :guilabel:`Change Angle...` of the selected point symbol(s)
 
-The example in figure_graduated_symbology_ shows the graduated rendering dialog for
+The example in :numref:`figure_graduated_symbology` shows the graduated rendering dialog for
 the major_rivers layer of the QGIS sample dataset.
 
 .. _figure_graduated_symbology:
@@ -708,7 +708,7 @@ Double-click the rules in the map legend and the Symbology tab of the layer
 properties appears showing the rule that is the background for the symbol in
 the tree.
 
-The example in figure_rule_based_symbology_ shows the rule-based rendering
+The example in :numref:`figure_rule_based_symbology` shows the rule-based rendering
 dialog for the rivers layer of the QGIS sample dataset.
 
 .. _figure_rule_based_symbology:
@@ -1052,7 +1052,7 @@ to corresponding features). You can combine both usage.
 
 Paint effects can be activated by checking the |checkbox| :guilabel:`Draw effects` option
 and clicking the |paintEffects| :sup:`Customize effects` button. That will open
-the :guilabel:`Effect Properties` Dialog (see figure_effects_source_). The following
+the :guilabel:`Effect Properties` Dialog (see :numref:`figure_effects_source`). The following
 effect types, with custom options are available:
 
 * **Source**: Draws the feature's original style according to the configuration
@@ -1336,7 +1336,7 @@ seen beforehand.
 
    Rule settings
 
-A summary of existing rules is shown in the main dialog (see figure_labels_rule_based_).
+A summary of existing rules is shown in the main dialog (see :numref:`figure_labels_rule_based`).
 You can add multiple rules, reorder or imbricate them with a drag-and-drop.
 You can as well remove them with the |signMinus| button or edit them with
 |projectProperties| button or a double-click.
@@ -1363,7 +1363,7 @@ Assuming you are using the :guilabel:`Single labels` method, click the
 |expression| button near the :guilabel:`Value` drop-down list in the
 |labeling| :guilabel:`Labels` tab of the properties dialog.
 
-In figure_labels_expression_, you see a sample expression to label the alaska
+In :numref:`figure_labels_expression`, you see a sample expression to label the alaska
 trees layer with tree type and area, based on the field 'VEGDESC', some
 descriptive text, and the function ``$area`` in combination with
 ``format_number()`` to make it look nicer.
@@ -1598,7 +1598,7 @@ Customize the labels from the map canvas
 Combined with the :guilabel:`Label Toolbar`, the data defined override setting
 helps you manipulate labels in the map canvas (move, edit, rotate).
 We now describe an example using the data-defined override function for the
-|moveLabel|:sup:`Move label` function (see figure_labels_coordinate_data_defined_).
+|moveLabel|:sup:`Move label` function (see :numref:`figure_labels_coordinate_data_defined`).
 
 #. Import :file:`lakes.shp` from the QGIS sample dataset.
 #. Double-click the layer to open the Layer Properties. Click on :guilabel:`Labels`
@@ -1617,7 +1617,7 @@ We now describe an example using the data-defined override function for the
 #. Zoom into a lake.
 #. Set editable the layer using the |toggleEditing| :sup:`Toggle Editing` button.
 #. Go to the Label toolbar and click the |moveLabel| icon.
-   Now you can shift the label manually to another position (see figure_labels_move_).
+   Now you can shift the label manually to another position (see :numref:`figure_labels_move`).
    The new position of the label is saved in the ``xlabel`` and ``ylabel`` columns
    of the attribute table.
 #. It's also possible to add a line connecting each lake to its moved label using:
@@ -1650,7 +1650,7 @@ Diagrams Properties
 ===================
 
 |diagram| The :guilabel:`Diagrams` tab allows you to add a graphic overlay to
-a vector layer (see figure_diagrams_attributes_).
+a vector layer (see :numref:`figure_diagrams_attributes`).
 
 The current core implementation of diagrams provides support for:
 
@@ -2044,7 +2044,7 @@ The drag and drop designer
 
 The drag and drop designer allows you to create a form with several containers
 (tabs or groups) to present the attribute fields, as shown for example
-in figure_fields_form_.
+in :numref:`figure_fields_form`.
 
 .. _figure_fields_form:
 

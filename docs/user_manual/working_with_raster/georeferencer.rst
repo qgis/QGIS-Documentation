@@ -72,7 +72,7 @@ the result will be.
 
 The first step is to start QGIS and click on :menuselection:`Raster -->` |georefRun|
 :menuselection:`Georeferencer`, which appears in the QGIS menu bar. The Georeferencer
-dialog appears as shown in figure_georeferencer_dialog_.
+dialog appears as shown in :numref:`figure_georeferencer_dialog`.
 
 For this example, we are using a topo sheet of South Dakota from SDGS. It can
 later be visualized together with the data from the GRASS :file:`spearfish60`
@@ -97,7 +97,7 @@ Entering ground control points (GCPs)
    area of the dialog. Once the raster is loaded, we can start to enter reference
    points.
 #. Using the |addGCPPoint| :sup:`Add Point` button, add points to the
-   main working area and enter their coordinates (see Figure figure_georeferencer_add_points_).
+   main working area and enter their coordinates (see Figure :numref:`figure_georeferencer_add_points`).
    For this procedure you have three options:
 
    - Click on a point in the raster image and enter the X and Y coordinates

@@ -18,7 +18,7 @@ There are four possible screens in this GPS tracking window:
 * |metadata| GPS position coordinates and an interface for manually entering
   vertices and features
 * |gpsTrackBarChart| GPS signal strength of satellite connections
-* |options| GPS options screen (see figure_gps_options_)
+* |options| GPS options screen (see :numref:`figure_gps_options`)
 
 With a plugged-in GPS receiver (has to be supported by your operating system),
 a simple click on :guilabel:`Connect` connects the GPS to QGIS. A second click (now

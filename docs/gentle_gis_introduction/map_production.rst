@@ -17,7 +17,7 @@ all about. Maps are usually produced for presentations and reports where the
 audience or reader is a politician, citizen or a learner with no professional
 background in GIS. Because of this, a map has to be effective in communicating
 spatial information. Common elements of a map are the title, map body, legend,
-north arrow, scale bar, acknowledgement, and map border (see figure_map_elements_).
+north arrow, scale bar, acknowledgement, and map border (see :numref:`figure_map_elements`).
 
 .. _figure_map_elements:
 
@@ -49,7 +49,7 @@ Map Border in detail
 The map border is a line that defines exactly the edges of the area shown on the
 map. When printing a map with a graticule (which we describe further down), you
 often find the coordinate information of the graticule lines along the border
-lines, as you can see in figure_map_legend_.
+lines, as you can see in :numref:`figure_map_legend`.
 
 Map Legend in detail
 ====================
@@ -61,7 +61,7 @@ a key to all the symbols used on the map. It is like a dictionary that allows yo
 to understand the meaning of what the map shows. A map legend is usually shown a
 a little box in a corner of the map. It contains icons, each of which will
 represent a type of feature. For example, a *house* icon will show you how to
-identify houses on the map (see figure_map_legend_).
+identify houses on the map (see :numref:`figure_map_legend`).
 
 .. _figure_map_legend:
 
@@ -73,7 +73,7 @@ identify houses on the map (see figure_map_legend_).
    different themes, map symbols and colours in the legend.
 
 You can also use different symbols and icons in your legend to show different
-themes. In figure_map_legend_ you can see a map with a lake in light blue overlaid
+themes. In :numref:`figure_map_legend` you can see a map with a lake in light blue overlaid
 with contour lines and spot heights to show information about the terrain in that
 area. On the right side you see the same area with the lake in the background but
 this map is designed to show tourists the location of houses they can rent for
@@ -99,15 +99,15 @@ Scale in detail
 The scale of a map, is the value of a single unit of distance on the map,
 representing distance in the real world. The values are shown in map units
 (meters, feet or degrees). The scale can be expressed in several ways, for
-example, in words, as a ratio or as a graphical scale bar (see figure_map_scale_).
+example, in words, as a ratio or as a graphical scale bar (see :numref:`figure_map_scale`).
 
 **Expressing a scale in words** is a commonly used method and has the advantage
 of being easily understood by most map users. You can see an example of a word
-based scale in a figure_map_scale_ (a). Another option is the **representative
+based scale in a :numref:`figure_map_scale` (a). Another option is the **representative
 fraction (RF)** method, where both the map distance and the ground distance in
 the real world are given in the same map units, as a ratio. For example, a RF
 value 1:25,000 means that any distance on the map is 1/25,000 *th* of the real
-distance on the ground (see figure_map_scale_ (b)). The value 25,000 in the ratio
+distance on the ground (see :numref:`figure_map_scale` (b)). The value 25,000 in the ratio
 is called the **scale denominator**. More experienced users often prefer the
 representative fraction method, because it reduces confusion.
 
@@ -119,7 +119,7 @@ scale map covers a **small area**!
 
 A **scale expression as a graphic or bar scale** is another basic method of
 expressing a scale. A bar scale shows measured distances on the map. The equivalent
-distance in the real world is placed above as you can see in figure_map_scale_ (c).
+distance in the real world is placed above as you can see in :numref:`figure_map_scale` (c).
 
 .. _figure_map_scale:
 
@@ -147,7 +147,7 @@ real word.
 
 Another interesting aspect of a map scale, is that the lower the map scale, the
 more detailed the feature information in the map will be. In
-figure_map_scale_compare_, you can see an example of this. Both maps are the same
+:numref:`figure_map_scale_compare`, you can see an example of this. Both maps are the same
 size but have a different scale. The image on the left side shows more details,
 for example the houses south-west of the water body can be clearly identified as
 separate squares. In the image on the right you can only see a black clump of
@@ -184,7 +184,7 @@ lines of a graticule can represent the earth's parallels of latitude and meridia
 of longitude. When you want to refer to a special area on a map during your
 presentation or in a report you could say: 'the houses close to latitude 26.04 /
 longitude -32.11 are often exposed to flooding during January and February' (see
-figure_map_graticule_).
+:numref:`figure_map_graticule`).
 
 .. _figure_map_graticule:
 
@@ -208,7 +208,7 @@ projection has advantages and disadvantages.
 To be able to create maps as precisely as possible, people have studied, modified,
 and produced many different kinds of projections. In the end almost every country
 has developed its own map projection with the goal of improving the map accuracy
-for their territorial area (see figure_map_projection_).
+for their territorial area (see :numref:`figure_map_projection`).
 
 .. _figure_map_projection:
 
@@ -223,7 +223,7 @@ With this in mind, we can now understand why it makes sense to add the name of
 the projection on a map. It allows the reader to see quickly, if one map can be
 compared with another. For example, features on a map in a so-called Equal Area
 projection appear very different to features projected in a Cylindrical
-Equidistant projection (see figure_map_projection_).
+Equidistant projection (see :numref:`figure_map_projection`).
 
 Map projection is a very complex topic and we cannot cover it completely here.
 You may want to take a look at our previous topic: Coordinate Reference Systems

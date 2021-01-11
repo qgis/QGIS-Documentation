@@ -52,9 +52,9 @@ data, as shown in table_shapefile_.
 Table Shapefile 1: The basic files that together make up a 'shapefile'.
 
 When you look at the files that make up a shapefile on the computer hard disk,
-you will see something like figure_shapefile_. If you want to share vector data
+you will see something like :numref:`figure_shapefile`. If you want to share vector data
 stored in shapefiles with another person, it is important to give them all of
-the files for that layer. So in the case of the trees layer shown in figure_shapefile_,
+the files for that layer. So in the case of the trees layer shown in :numref:`figure_shapefile`,
 you would need to give the person :file:`trees.shp`, :file:`trees.shx`,
 :file:`trees.dbf`, :file:`trees.prj` and :file:`trees.qml`.
 
@@ -103,7 +103,7 @@ you need. So, for example, if you look at digital data provided by the Chief
 Directorate: Surveys and Mapping, South Africa, they provide a river areas
 (polygons) layer and a rivers polyline layer. They use the river areas (polygons)
 to represent river stretches that are wide, and they use river polylines to
-represent narrow stretches of river. In figure_tourism_ we can see how our tourism
+represent narrow stretches of river. In :numref:`figure_tourism` we can see how our tourism
 layers might look on a map if we used all three geometry types.
 
 .. _figure_tourism:
@@ -160,7 +160,7 @@ geometry type and attributes that each feature should have, you can move on to
 the next step of creating an empty shapefile.
 
 The process usually starts with choosing the 'new vector layer' option in your
-GIS Application and then selecting a geometry type (see figure_new_shapefile_).
+GIS Application and then selecting a geometry type (see :numref:`figure_new_shapefile`).
 As we covered in an earlier topic, this means choosing either point, polyline or
 polygon for the geometry.
 
@@ -189,7 +189,7 @@ a whole number (**integer**) or a decimal number (**floating point**) –-- so y
 need to think before hand whether the numeric data you are going to capture will
 have decimal places or not.
 
-The final step (as shown in figure_save_shapefile_) for creating a shapefile is
+The final step (as shown in :numref:`figure_save_shapefile`) for creating a shapefile is
 to give it a name and a place on the computer hard disk where it should be
 created. Once again it is a good idea to give the shapefile a short and meaningful
 name. Good examples are 'rivers', 'watersamples' and so on.
@@ -228,7 +228,7 @@ correct geographical area that you are going to be recording data for. Next you
 will need to enable the point capture tool. Having done that, the next place you
 click with the **left mouse button** in the map view, is where you want your new
 point **geometry** to appear. After you click on the map, a window will appear
-and you can enter all of the **attribute data** for that point (see figure_attribute_dialog_).
+and you can enter all of the **attribute data** for that point (see :numref:`figure_attribute_dialog`).
 If you are unsure of the data for a given field you can usually leave it blank,
 but be aware that if you leave a lot of fields blank it will be hard to make a
 useful map from your data!
@@ -252,7 +252,7 @@ capture icon in the tool bar and then start drawing your line by clicking on the
 map. After you make your first click, you will notice that the line stretches
 like an elastic band to follow the mouse cursor around as you move it. Each time
 you click with the **left mouse button**, a new vertex will be added to the map.
-This process is shown in figure_capture_polyline_.
+This process is shown in :numref:`figure_capture_polyline`.
 
 .. _figure_capture_polyline:
 
@@ -293,7 +293,7 @@ solution to this problem is to use a raster layer (such as an aerial photograph
 or a satellite image) as a backdrop layer. You can then use this layer as a
 reference map, or even trace the features off the raster layer into your vector
 layer if they are visible. This process is known as 'heads-up digitising' and is
-shown in figure_headsup_digitizing_.
+shown in :numref:`figure_headsup_digitizing`.
 
 .. _figure_headsup_digitizing:
 
@@ -315,7 +315,7 @@ special device called a 'puck' is used to trace features from the map. Tiny
 cross-hairs in the puck are used to ensure that lines and points are drawn
 accurately. The puck is connected to a computer and each feature that is captured
 using the puck gets stored in the computer's memory. You can see what a digitising
-puck looks like in figure_digitizing_table_.
+puck looks like in :numref:`figure_digitizing_table`.
 
 .. _figure_digitizing_table:
 
@@ -342,7 +342,7 @@ or satellite image, it is very important that the raster layer is properly
 georeferenced. A layer that is georeferenced properly displays in the correct
 position in the map view based on the GIS Application's internal model of the
 Earth. We can see the effect of a poorly georeferenced image in
-figure_georeference_issue_.
+:numref:`figure_georeference_issue`.
 
 .. _figure_georeference_issue:
 

@@ -17,7 +17,7 @@ same way as exposed in :ref:`interact_layout_item`.
 
 The HTML item can be customized using its :guilabel:`Item Properties` panel.
 Other than the :ref:`items common properties <item_common_properties>`, this
-feature has the following functionalities (see figure_layout_html_):
+feature has the following functionalities (see :numref:`figure_layout_html`):
 
 
 .. _figure_layout_html:
@@ -32,7 +32,7 @@ HTML Source
 ------------
 
 The :guilabel:`HTML Source` group of the HTML frame :guilabel:`Item Properties`
-panel provides the following functionalities (see figure_layout_html_ppt_):
+panel provides the following functionalities (see :numref:`figure_layout_html_ppt`):
 
 .. _figure_layout_html_ppt:
 
@@ -64,7 +64,7 @@ Frames
 -------
 
 The :guilabel:`Frames` group of the HTML frame :guilabel:`Item Properties`
-panel provides the following functionalities (see figure_layout_html_frames_):
+panel provides the following functionalities (see :numref:`figure_layout_html_frames`):
 
 .. _figure_layout_html_frames:
 
@@ -103,7 +103,7 @@ Use smart page breaks and User style sheet
 
 The :guilabel:`Use smart page breaks` dialog and :guilabel:`User style sheet`
 dialog of the HTML frame :guilabel:`Item Properties` panel provides the
-following functionalities (see figure_layout_html_breaks_):
+following functionalities (see :numref:`figure_layout_html_breaks`):
 
 .. _figure_layout_html_breaks:
 
