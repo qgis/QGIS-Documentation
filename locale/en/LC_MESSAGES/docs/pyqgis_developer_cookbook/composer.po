@@ -9,14 +9,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-13 09:01+0100\n"
+"POT-Creation-Date: 2021-01-12 10:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.8.0\n"
+"Generated-By: Babel 2.9.0\n"
 
 #: ../../docs/pyqgis_developer_cookbook/composer.rst:10
 msgid "The code snippets on this page need the following imports:"
@@ -96,103 +96,121 @@ msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/composer.rst:144
 msgid ""
+"This initializes the layout with some default settings, specifically by "
+"adding an empty A4 page to the layout. You can create layouts without "
+"calling the :meth:`initializeDefaults() "
+"<qgis.core.QgsLayout.initializeDefaults>` method, but you'll need to take"
+" care of adding pages to the layout yourself."
+msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:149
+msgid ""
+"The previous code creates a \"temporary\" layout that is not visible in "
+"the GUI. It can be handy to e.g. quickly add some items and export "
+"without modifying the project itself nor expose these changes to the "
+"user. If you want the layout to be saved/restored along with the project "
+"and available in the layout manager, then add:"
+msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:160
+msgid ""
 "Now we can add various elements (map, label, ...) to the layout. All "
 "these objects are represented by classes that inherit from the base "
 ":class:`QgsLayoutItem <qgis.core.QgsLayoutItem>` class."
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:147
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:163
 msgid ""
 "Here's a description of some of the main layout items that can be added "
 "to a layout."
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:149
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:165
 msgid ""
-"map --- this item tells the libraries where to put the map itself. Here "
-"we create a map and stretch it over the whole paper size"
+"map --- Here we create a map of a custom size and render the current map "
+"canvas"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:157
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:177
 msgid ""
 "label --- allows displaying labels. It is possible to modify its font, "
 "color, alignment and margin"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:167
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:187
 msgid "legend"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:175
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:195
 msgid "scale bar"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:185
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:205
 msgid "arrow"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:186
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:206
 msgid "picture"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:187
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:207
 msgid "basic shape"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:188
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:208
 msgid "nodes based shape"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:212
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:232
 msgid "table"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:214
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:234
 msgid "Once an item is added to the layout, it can be moved and resized:"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:221
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:241
 msgid ""
 "A frame is drawn around each item by default. You can remove it as "
 "follows:"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:228
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:248
 msgid ""
 "Besides creating the layout items by hand, QGIS has support for layout "
 "templates which are essentially compositions with all their items saved "
 "to a .qpt file (with XML syntax)."
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:232
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:252
 msgid ""
 "Once the composition is ready (the layout items have been created and "
 "added to the composition), we can proceed to produce a raster and/or "
 "vector output."
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:238
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:258
 msgid "Exporting the layout"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:240
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:260
 msgid ""
 "To export a layout, the :class:`QgsLayoutExporter "
 "<qgis.core.QgsLayoutExporter>` class must be used."
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:250
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:270
 msgid ""
 "Use the :meth:`exportToImage() "
 "<qgis.core.QgsLayoutExporter.exportToImage>` in case you want to export "
 "to an image instead of a PDF file."
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:254
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:274
 msgid "Exporting a layout atlas"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:256
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:276
 msgid ""
 "If you want to export all pages from a layout that has the atlas option "
 "configured and enabled, you need to use the :meth:`atlas() "
@@ -202,9 +220,17 @@ msgid ""
 "images:"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:266
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:286
 msgid ""
 "Notice that the outputs will be saved in the base path folder, using the "
 "output filename expression configured on atlas."
 msgstr ""
+
+#~ msgid ""
+#~ "map --- this item tells the "
+#~ "libraries where to put the map "
+#~ "itself. Here we create a map and"
+#~ " stretch it over the whole paper "
+#~ "size"
+#~ msgstr ""
 
