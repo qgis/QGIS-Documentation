@@ -175,7 +175,7 @@ in this list.
    Alignment helper lines in the print layout
 
 There are several alignment options available within the |alignLeft|
-:sup:`Align selected items` pull-down menu (see figure_layout_common_align_).
+:sup:`Align selected items` pull-down menu (see :numref:`figure_layout_common_align`).
 To use an alignment function, you first select the elements and then click on
 one of the alignment icons:
 
@@ -195,7 +195,7 @@ Items Common Properties
 
 Layout items have a set of common properties you will find at the bottom of
 the :guilabel:`Item Properties` panel: Position and size, Rotation, Frame,
-Background, Item ID, Variables and Rendering (See figure_layout_common_).
+Background, Item ID, Variables and Rendering (See :numref:`figure_layout_common`).
 
 .. _figure_layout_common:
 

@@ -46,7 +46,7 @@ To create a new GeoPackage layer, press the |newGeoPackageLayer|
 :menuselection:`Layer --> Create Layer -->` menu or from the
 :guilabel:`Data Source Manager` toolbar.
 The :guilabel:`New GeoPackage Layer` dialog will be displayed as shown in
-figure_create_geopackage_.
+:numref:`figure_create_geopackage`.
 
 .. _figure_create_geopackage:
 
@@ -104,7 +104,7 @@ To create a new ESRI Shapefile format layer, press the |newVectorLayer|
 :menuselection:`Layer --> Create Layer -->` menu or from the
 :guilabel:`Data Source Manager` toolbar.
 The :guilabel:`New Shapefile Layer` dialog will be displayed as shown in
-figure_create_shapefile_.
+:numref:`figure_create_shapefile`.
 
 #. Provide a path and file name using the
    :guilabel:`...` button next to :guilabel:`File name`. QGIS will
@@ -150,7 +150,7 @@ To create a new SpatiaLite layer, press the |newSpatiaLiteLayer|
 :menuselection:`New SpatiaLite Layer...` button in the :menuselection:`Layer
 --> Create Layer -->` menu or from the :guilabel:`Data Source Manager` toolbar.
 The :guilabel:`New SpatiaLite Layer` dialog will be displayed as shown in
-Figure_create_spatialite_.
+:numref:`Figure_create_spatialite`.
 
 .. _figure_create_spatialite:
 
@@ -224,7 +224,7 @@ To create a new Temporary Scratch layer, choose the |createMemory|
 :menuselection:`Layer --> Create Layer -->` menu or in the :guilabel:`Data
 Source Manager` toolbar.
 The :guilabel:`New Temporary Scratch Layer` dialog will be displayed as shown in
-figure_create_temporary_. Then:
+:numref:`figure_create_temporary`. Then:
 
 #. Provide the :guilabel:`Layer name`
 #. Select the :guilabel:`Geometry type`. Here you can create a:

@@ -149,7 +149,7 @@ zoom in on an area and pan the view on the layout a well as buttons to
 select any layout item and to move the contents of the map item.
 
 
-figure_layout_overview_ shows the initial view of the print layout before
+:numref:`figure_layout_overview` shows the initial view of the print layout before
 any elements are added.
 
 .. _figure_layout_overview:
@@ -771,7 +771,7 @@ any time you right-click in the print layout area:
 * |redo| :sup:`Restore last change`
 
 This can also be done by mouse click within the :guilabel:`Undo history`
-panel (see figure_layout_). The History panel lists the last actions done
+panel (see :numref:`figure_layout`). The History panel lists the last actions done
 within the print layout.
 Just select the point you want to revert to and once you do new action all
 the actions done after the selected one will be removed.

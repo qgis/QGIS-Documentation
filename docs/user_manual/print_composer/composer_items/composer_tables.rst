@@ -30,7 +30,7 @@ By default, a new attribute table item loads first rows of the first
 (alphabetically sorted) layer, with all the fields. You can however customize
 the table thanks to its :guilabel:`Item Properties` panel. Other than the
 :ref:`items common properties <item_common_properties>`, this feature has the
-following functionalities (see figure_layout_table_):
+following functionalities (see :numref:`figure_layout_table`):
 
 .. _figure_layout_table:
 
@@ -44,7 +44,7 @@ Main properties
 ...............
 
 The :guilabel:`Main properties` group of the attribute table provides the
-following functionalities (see figure_layout_table_ppt_):
+following functionalities (see :numref:`figure_layout_table_ppt`):
 
 .. _figure_layout_table_ppt:
 
@@ -70,10 +70,10 @@ following functionalities (see figure_layout_table_ppt_):
   the :guilabel:`Atlas` panel (see :ref:`atlas_generation`), there are
   two additional :guilabel:`Source` possible:
 
-  * **Current atlas feature** (see figure_layout_table_atlas_): you won't see
+  * **Current atlas feature** (see :numref:`figure_layout_table_atlas`): you won't see
     any option to choose the layer, and the table item will only show a row with
     the attributes from the current feature of the atlas coverage layer.
-  * and **Relation children** (see figure_layout_table_relation_): an option
+  * and **Relation children** (see :numref:`figure_layout_table_relation`): an option
     with the relation names will show up. This feature can only be used if you
     have defined a :ref:`relation <vector_relations>` using your atlas coverage
     layer as parent, and the table will show the children rows of the atlas
@@ -100,7 +100,7 @@ following functionalities (see figure_layout_table_ppt_):
 
 
 * The button :guilabel:`Attributes...` starts the :guilabel:`Select Attributes` dialog,
-  (see figure_layout_table_select_) that can be used to change the visible
+  (see :numref:`figure_layout_table_select`) that can be used to change the visible
   contents of the table. The upper part of the window shows the list of the
   attributes to display and the lower part helps you sort the data.
 
@@ -147,7 +147,7 @@ Feature filtering
 .................
 
 The :guilabel:`Feature filtering` group of the attribute table provides
-the following functionalities (see figure_layout_table_filter_):
+the following functionalities (see :numref:`figure_layout_table_filter`):
 
 .. _figure_layout_table_filter:
 
@@ -182,7 +182,7 @@ Appearance
 ..........
 
 The :guilabel:`Appearance` group of the attribute table provides
-the following functionalities  (see figure_layout_table_appearance_):
+the following functionalities (see :numref:`figure_layout_table_appearance`):
 
 .. _figure_layout_table_appearance:
 
@@ -212,7 +212,7 @@ the following functionalities  (see figure_layout_table_appearance_):
 * With :guilabel:`Background color` you can set the background color of the table using
   the :ref:`color selector <color-selector>` widget.
   The :guilabel:`Advanced customization` option helps you define different background colors
-  for each cell (see figure_layout_table_background_)
+  for each cell (see :numref:`figure_layout_table_background`)
 
 .. _figure_layout_table_background:
 
@@ -311,7 +311,7 @@ Show grid
 .........
 
 The :guilabel:`Show grid` group of the table items provides
-the following functionalities (see figure_layout_table_grid_):
+the following functionalities (see :numref:`figure_layout_table_grid`):
 
 .. _figure_layout_table_grid:
 
@@ -331,7 +331,7 @@ Fonts and text styling
 ......................
 
 The :guilabel:`Fonts and text styling` group of the table items
-provides the following functionalities (see figure_layout_table_fonts_):
+provides the following functionalities (see :numref:`figure_layout_table_fonts`):
 
 .. _figure_layout_table_fonts:
 
@@ -345,14 +345,14 @@ provides the following functionalities (see figure_layout_table_fonts_):
 * For :guilabel:`Table heading` you can additionally set the :guilabel:`Alignment`
   to ``Follow column alignment`` or override this setting by choosing ``Left``,
   ``Center`` or ``Right``. The column alignment is set using the :guilabel:`Select
-  Attributes` dialog (see figure_layout_table_select_ ).
+  Attributes` dialog (see :numref:`figure_layout_table_select` ).
 
 
 Frames
 ......
 
 The :guilabel:`Frames` group of the table item properties provides
-the following functionalities (see figure_layout_table_frames_):
+the following functionalities (see :numref:`figure_layout_table_frames`):
 
 .. _figure_layout_table_frames:
 

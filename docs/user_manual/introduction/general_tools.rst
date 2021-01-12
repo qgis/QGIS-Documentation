@@ -432,7 +432,7 @@ in :menuselection:`View --> Panels -->` menu or with :kbd:`Ctrl+9`.
 Check |checkbox| :guilabel:`Control rendering order` underneath
 the list of layers and reorganize the layers in the panel as you want. This
 order becomes the one applied to the map canvas.
-For example, in figure_layer_order_, you can see that the ``airports``
+For example, in :numref:`figure_layer_order`, you can see that the ``airports``
 features are displayed over the ``alaska`` polygon despite those layers'
 respective placement in the Layers panel.
 
@@ -581,7 +581,7 @@ If you want to embed content from other project files into your project, select
 :menuselection:`Layer --> Embed Layers and Groups`:
 
 #. Click the :guilabel:`...` button to look for a project: you can see the content of the
-   project (see figure_embed_dialog_)
+   project (see :numref:`figure_embed_dialog`)
 #. Hold down :kbd:`Ctrl` ( or |osx| :kbd:`Cmd`) and click on the layers and
    groups you wish to retrieve
 #. Click :guilabel:`OK`
@@ -1224,7 +1224,7 @@ added using the corresponding tools in the :guilabel:`Attributes Toolbar`:
   file
 * |svgAnnotation| :sup:`SVG Annotation` to add an :file:`SVG` symbol
 * |formAnnotation| :sup:`Form Annotation`: useful to display attributes
-  of a vector layer in a customized :file:`ui` file (see figure_custom_annotation_).
+  of a vector layer in a customized :file:`ui` file (see :numref:`figure_custom_annotation`).
   This is similar to the :ref:`custom attribute forms <provide_ui_file>`,
   but displayed in an annotation item. Also see this video
   https://www.youtube.com/watch?v=0pDBuSbQ02o&feature=youtu.be&t=2m25s
@@ -2082,7 +2082,7 @@ options to:
 * copy, paste, import or export colors
 * create, import or remove color palettes
 * add the custom palette to the color selector widget with the :guilabel:`Show
-  in Color Buttons` item (see figure_color_selector_)
+  in Color Buttons` item (see :numref:`figure_color_selector`)
 
 .. _figure_color_selector_swatches:
 

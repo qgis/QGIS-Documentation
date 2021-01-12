@@ -36,7 +36,7 @@ items, a regular shape can be manipulated the same way as exposed in
 
 The default shape item can be customized using its :guilabel:`Item Properties`
 panel. Other than the :ref:`items common properties <item_common_properties>`,
-this feature has the following functionalities (see figure_layout_label):
+this feature has the following functionalities (see :numref:`figure_layout_basic_shape`):
 
 .. _figure_layout_basic_shape:
 

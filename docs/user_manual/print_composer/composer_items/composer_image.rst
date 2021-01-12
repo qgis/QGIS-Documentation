@@ -25,7 +25,7 @@ blank frame that you can customize using its
 :guilabel:`Item Properties` panel.
 Other than the :ref:`items common properties <item_common_properties>`,
 this feature has the following functionalities (see
-:ref:`figure_layout_image`):
+:numref:`figure_layout_image`):
 
 .. _figure_layout_image:
 

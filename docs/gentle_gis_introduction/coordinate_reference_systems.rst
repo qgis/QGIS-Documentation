@@ -63,7 +63,7 @@ Different ways of projecting can be produced by surrounding the globe in a
 these methods produces what is called a **map projection family**. Therefore,
 there is a family of **planar projections**, a family of **cylindrical
 projections**, and another called **conical projections** (see
-figure_projection_families_)
+:numref:`figure_projection_families`)
 
 .. _figure_projection_families:
 
@@ -87,7 +87,7 @@ of angular conformity, distance and area**. A map projection may combine several
 of these characteristics, or may be a compromise that distorts all the properties
 of area, distance and angular conformity, within some acceptable limit. Examples
 of compromise projections are the **Winkel Tripel projection** and the **Robinson
-projection** (see figure_robinson_projection_), which are often used for producing
+projection** (see :numref:`figure_robinson_projection`), which are often used for producing
 and visualizing world maps.
 
 .. _figure_robinson_projection:
@@ -123,7 +123,7 @@ large areas and should be attempted only for small portions of the earth. The
 conformal type of projection results in distortions of areas, meaning that if
 area measurements are made on the map, they will be incorrect. The larger the
 area the less accurate the area measurements will be. Examples are the **Mercator
-projection** (as shown in figure_mercator_projection_) and the **Lambert Conformal
+projection** (as shown in :numref:`figure_mercator_projection`) and the **Lambert Conformal
 Conic projection**. The U.S. Geological Survey uses a conformal projection for
 many of its topographic maps.
 
@@ -147,10 +147,10 @@ from the centre of the projection to any other place on the map. **Equidistant
 projections** maintain accurate distances from the centre of the projection or
 along given lines. These projections are used for radio and seismic mapping, and
 for navigation. The **Plate Carree Equidistant Cylindrical** (see
-figure_plate_caree_projection_) and the **Equirectangular projection** are two
+:numref:`figure_plate_caree_projection`) and the **Equirectangular projection** are two
 good examples of equidistant projections. The **Azimuthal Equidistant projection**
 is the projection used for the emblem of the United Nations (see
-figure_azimuthal_equidistant_projection_).
+:numref:`figure_azimuthal_equidistant_projection`).
 
 .. _figure_plate_caree_projection:
 
@@ -186,7 +186,7 @@ projection results in **distortions of angular conformity** when dealing with
 large areas. Small areas will be far less prone to having their angles distorted
 when you use an equal area projection. **Alber's equal area**, **Lambert's equal
 area** and **Mollweide Equal Area Cylindrical projections** (shown in
-figure_mollweide_equal_area_projection_) are types of equal area projections that
+:numref:`figure_mollweide_equal_area_projection`) are types of equal area projections that
 are often encountered in GIS work.
 
 .. _figure_mollweide_equal_area_projection:
@@ -230,7 +230,7 @@ pole. In the southern hemisphere, degrees of latitude are measured from zero at
 the equator to ninety degrees at the south pole. To simplify the digitisation of
 maps, degrees of latitude in the southern hemisphere are often assigned negative
 values (0 to -90°). Wherever you are on the earth’s surface, the distance between
-the lines of latitude is the same (60 nautical miles). See figure_geographic_crs_
+the lines of latitude is the same (60 nautical miles). See :numref:`figure_geographic_crs`
 for a pictorial view.
 
 .. _figure_geographic_crs:
@@ -248,7 +248,7 @@ converge at the poles. The reference line for longitude (the prime meridian) run
 from the North pole to the South pole through Greenwich, England. Subsequent
 lines of longitude are measured from zero to 180 degrees East or West of the prime
 meridian. Note that values West of the prime meridian are assigned negative values
-for use in digital mapping applications. See figure_geographic_crs_ for a pictorial
+for use in digital mapping applications. See :numref:`figure_geographic_crs` for a pictorial
 \view.
 
 At the equator, and only at the equator, the distance represented by one line of
@@ -273,11 +273,11 @@ Projected coordinate reference systems
 
 A two-dimensional coordinate reference system is commonly defined by two axes.
 At right angles to each other, they form a so called **XY-plane** (see
-figure_projected_crs_ on the left side). The horizontal axis is normally labelled
+:numref:`figure_projected_crs` on the left side). The horizontal axis is normally labelled
 **X**, and the vertical axis is normally labelled **Y**. In a three-dimensional
 coordinate reference system, another axis, normally labelled **Z**, is added. It
 is also at right angles to the **X** and **Y** axes. The **Z** axis provides the
-third dimension of space (see figure_projected_crs_ on the right side). Every
+third dimension of space (see :numref:`figure_projected_crs` on the right side). Every
 point that is expressed in spherical coordinates can be expressed as an **X Y Z**
 coordinate.
 
@@ -312,7 +312,7 @@ zones** that are all **6 degrees** wide in longitude from East to West. The **UT
 zones** are numbered **1 to 60**, starting at the **antimeridian**
 (**zone 1** at 180 degrees West longitude) and progressing East back to the
 **antemeridian** (**zone 60** at 180 degrees East longitude) as shown
-in figure_utm_zones_.
+in :numref:`figure_utm_zones`.
 
 .. _figure_utm_zones:
 
@@ -323,7 +323,7 @@ in figure_utm_zones_.
    The Universal Transverse Mercator zones. For South Africa UTM zones 33S, 34S,
    35S, and 36S are used.
 
-As you can see in figure_utm_zones_ and figure_utm_for_sa_, South Africa is
+As you can see in :numref:`figure_utm_zones` and :numref:`figure_utm_for_sa`, South Africa is
 covered by four **UTM zones** to minimize distortion. The **zones** are called
 **UTM 33S**, **UTM 34S**, **UTM 35S** and **UTM 36S**. The **S** after the zone
 means that the UTM zones are located **south of the equator**.
@@ -339,7 +339,7 @@ means that the UTM zones are located **south of the equator**.
    of Interest (AOI).
 
 Say, for example, that we want to define a two-dimensional coordinate within the
-**Area of Interest (AOI)** marked with a red cross in figure_utm_for_sa_. You can
+**Area of Interest (AOI)** marked with a red cross in :numref:`figure_utm_for_sa`. You can
 see, that the area is located within the **UTM zone 35S**. This means, to minimize
 distortion and to get accurate analysis results, we should use **UTM zone 35S**
 as the coordinate reference system.
@@ -349,7 +349,7 @@ the **zone number** (35) and with its **northing (Y) value** and **easting (X)
 value** in meters. The **northing value** is the distance of the position from
 the **equator** in meters. The **easting value** is the distance from the
 **central meridian** (longitude) of the used UTM zone. For UTM zone 35S it is
-**27 degrees** **East** as shown in figure_utm_for_sa_. Furthermore, because we
+**27 degrees** **East** as shown in :numref:`figure_utm_for_sa`. Furthermore, because we
 are south of the equator and negative values are not allowed in the UTM coordinate
 reference system, we have to add a so called **false northing value** of
 10,000,000 m to the northing (Y) value and a false easting value of 500,000 m to
@@ -370,7 +370,7 @@ The easting (X) value
 ---------------------
 
 First we have to find the **central meridian** (longitude) for the **UTM zone
-35S**. As we can see in figure_utm_for_sa_ it is **27 degrees East**. The place
+35S**. As we can see in :numref:`figure_utm_for_sa` it is **27 degrees East**. The place
 we are looking for is **85,000 meters West** from the central meridian. Just like
 the northing value, the easting (X) value gets a negative sign, giving a result
 of **-85,000 m**. According to the UTM definitions we have to add a **false
