@@ -53,7 +53,8 @@ there are tools for panning, zooming, identifying layers, measuring, vector
 editing and others. Similar to other graphics programs, there is always one
 tool active and the user can switch between the available tools.
 
-The map canvas is implemented with the :class:`QgsMapCanvas <qgis.gui.QgsMapCanvas>` class in the :mod:`qgis.gui`
+The map canvas is implemented with the :class:`QgsMapCanvas <qgis.gui.QgsMapCanvas>`
+class in the :pyqgis:`qgis.gui <gui>`
 module. The implementation is based on the Qt Graphics View framework.
 This framework generally provides a surface and a view where custom graphics
 items are placed and user can interact with them.  We will assume that you are

@@ -291,7 +291,7 @@ enabled service like a WMS or WFS or to a DB connection.
   Take into account that not all QGIS data providers are integrated with the
   Authentication infrastructure. Each authentication method, derived from the
   base class :class:`QgsAuthMethod <qgis.core.QgsAuthMethod>`
-  and support a different set of Providers. For example the :meth:`certIdentity ()
+  and support a different set of Providers. For example the :meth:`certIdentity()
   <qgis.core.QgsAuthManager.certIdentity>` method supports the following list
   of providers:
 

@@ -107,9 +107,9 @@ right place to put this information.
 
 .. _plugin_metadata_table:
 
-=====================  ========  =======================================
+=====================  ========  =============================================================
 Metadata name          Required  Notes
-=====================  ========  =======================================
+=====================  ========  =============================================================
 name                   True      a short string  containing the name of the plugin
 qgisMinimumVersion     True      dotted notation of minimum QGIS version
 qgisMaximumVersion     False     dotted notation of maximum QGIS version
@@ -120,9 +120,10 @@ author                 True      author name
 email                  True      email of the author, only shown on the website to logged in users,
                                  but visible in the Plugin Manager after the plugin is installed
 changelog              False     string, can be multiline, no HTML allowed
-experimental           False     boolean flag, `True` or `False` - `True` if this version is experimental
-deprecated             False     boolean flag, `True` or `False`, applies to the whole plugin
-                                 and not just to the uploaded version
+experimental           False     boolean flag, :const:`True` or :const:`False` -
+                                 :const:`True` if this version is experimental
+deprecated             False     boolean flag, :const:`True` or :const:`False`, applies to
+                                 the whole plugin and not just to the uploaded version
 tags                   False     comma separated list, spaces are allowed inside individual tags
 homepage               False     a valid URL pointing to the homepage of your plugin
 repository             True      a valid URL for the source code repository
@@ -130,13 +131,13 @@ tracker                False     a valid URL for tickets and bug reports
 icon                   False     a file name or a relative path (relative to
                                  the base folder of the plugin's compressed
                                  package) of a web friendly image (PNG, JPEG)
-category               False     one of `Raster`, `Vector`, `Database` and `Web`
+category               False     one of ``Raster``, ``Vector``, ``Database`` and ``Web``
 plugin_dependencies    False     PIP-like comma separated list of other plugins to install
-server                 False     boolean flag, `True` or `False`, determines if the
-                                 plugin has a server interface
-hasProcessingProvider  False     boolean flag, `True` or `False`, determines if
+server                 False     boolean flag, :const:`True` or :const:`False`, determines if
+                                 the plugin has a server interface
+hasProcessingProvider  False     boolean flag, :const:`True` or :const:`False`, determines if
                                  the plugin provides processing algorithms
-=====================  ========  =======================================
+=====================  ========  =============================================================
 
 By default, plugins are placed in the :menuselection:`Plugins` menu (we will see
 in the next section how to add a menu entry for your plugin) but they can also
@@ -298,7 +299,7 @@ The only plugin functions that must exist in the main plugin source file (e.g.
 * ``initGui()`` called when the plugin is loaded
 * ``unload()`` called when the plugin is unloaded
 
-In the above example, :meth:`addPluginToMenu <qgis.gui.QgisInterface.addPluginToMenu>` is used.
+In the above example, :meth:`addPluginToMenu() <qgis.gui.QgisInterface.addPluginToMenu>` is used.
 This will add the corresponding menu action to the :menuselection:`Plugins`
 menu. Alternative methods exist to add the action to a different menu. Here is
 a list of those methods:
@@ -309,7 +310,7 @@ a list of those methods:
 * :meth:`addPluginToWebMenu() <qgis.gui.QgisInterface.addPluginToWebMenu>`
 
 All of them have the same syntax as the
-:meth:`addPluginToMenu <qgis.gui.QgisInterface.addPluginToMenu>` method.
+:meth:`addPluginToMenu() <qgis.gui.QgisInterface.addPluginToMenu>` method.
 
 Adding your plugin menu to one of those predefined method is recommended to
 keep consistency in how plugin entries are organized. However, you can add your

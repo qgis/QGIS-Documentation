@@ -146,7 +146,6 @@ purposes only but still interesting for learning):
 https://github.com/qgis/QGIS/blob/master/tests/src/python/qgis_wrapped_server.py
 
 
-
 Server plugins
 ==============
 
@@ -169,9 +168,9 @@ one of the classes below and by calling the corresponding method of
 =============== ===================================================================== ======================================================================================
 Filter Type     Base Class                                                            QgsServerInterface registration
 --------------- --------------------------------------------------------------------- --------------------------------------------------------------------------------------
-I/O             :class:`QgsServerFilter <qgis.server.QgsServerFilter>`                :meth:`registerFilter <qgis.server.QgsServerInterface.registerFilter>`
-Access Control  :class:`QgsAccessControlFilter <qgis.server.QgsAccessControlFilter>`  :meth:`registerAccessControl <qgis.server.QgsServerInterface.registerAccessControl>`
-Cache           :class:`QgsServerCacheFilter <qgis.server.QgsServerCacheFilter>`      :meth:`registerServerCache <qgis.server.QgsServerInterface.registerServerCache>`
+I/O             :class:`QgsServerFilter <qgis.server.QgsServerFilter>`                :meth:`registerFilter() <qgis.server.QgsServerInterface.registerFilter>`
+Access Control  :class:`QgsAccessControlFilter <qgis.server.QgsAccessControlFilter>`  :meth:`registerAccessControl() <qgis.server.QgsServerInterface.registerAccessControl>`
+Cache           :class:`QgsServerCacheFilter <qgis.server.QgsServerCacheFilter>`      :meth:`registerServerCache() <qgis.server.QgsServerInterface.registerServerCache>`
 =============== ===================================================================== ======================================================================================
 
 
@@ -184,8 +183,8 @@ of the services workflow, it is possible for example to restrict the access to
 selected layers, to inject an XSL stylesheet to the XML response, to add a
 watermark to a generated WMS image and so on.
 
-From this point, you might find useful a quick look to the :api:`server plugins
-API docs <group__server.html>`.
+From this point, you might find useful a quick look to the
+:pyqgis:`server plugins API docs <server>`.
 
 Each filter should implement at least one of three callbacks:
 
@@ -193,7 +192,8 @@ Each filter should implement at least one of three callbacks:
 * :meth:`responseComplete() <qgis.server.QgsServerFilter.responseComplete>`
 * :meth:`sendResponse() <qgis.server.QgsServerFilter.sendResponse>`
 
-All filters have access to the request/response object (:class:`QgsRequestHandler <qgis.server.QgsRequestHandler>`)
+All filters have access to the request/response object
+(:class:`QgsRequestHandler <qgis.server.QgsRequestHandler>`)
 and can manipulate all its properties (input/output) and
 raise exceptions (while in a quite particular way as we’ll see below).
 
@@ -245,18 +245,18 @@ huge that a streaming XML implementation was needed (WFS GetFeature is one of th
 in this case, :meth:`sendResponse <qgis.server.QgsServerFilter.sendResponse>` is
 called multiple times before the response
 is complete (and before
-:meth:`responseComplete <qgis.server.QgsServerFilter.responseComplete>` is called).
+:meth:`responseComplete() <qgis.server.QgsServerFilter.responseComplete>` is called).
 The obvious consequence
-is that :meth:`sendResponse <qgis.server.QgsServerFilter.sendResponse>` is
+is that :meth:`sendResponse() <qgis.server.QgsServerFilter.sendResponse>` is
 normally called once but might be exceptionally
 called multiple times and in that case (and only in that case) it is also called
-before :meth:`responseComplete <qgis.server.QgsServerFilter.responseComplete>`.
+before :meth:`responseComplete() <qgis.server.QgsServerFilter.responseComplete>`.
 
-:meth:`sendResponse <qgis.server.QgsServerFilter.sendResponse>` is the best place
+:meth:`sendResponse() <qgis.server.QgsServerFilter.sendResponse>` is the best place
 for direct manipulation of core service’s
-output and while :meth:`responseComplete <qgis.server.QgsServerFilter.responseComplete>`
+output and while :meth:`responseComplete() <qgis.server.QgsServerFilter.responseComplete>`
 is typically also an option,
-:meth:`sendResponse <qgis.server.QgsServerFilter.sendResponse>` is the only
+:meth:`sendResponse() <qgis.server.QgsServerFilter.sendResponse>` is the only
 viable option in case of streaming services.
 
 responseComplete
@@ -264,12 +264,12 @@ responseComplete
 
 This is called once when core services (if hit) finish their process and the
 request is ready to be sent to the client. As discussed above, this is normally
-called before :meth:`sendResponse <qgis.server.QgsServerFilter.sendResponse>`
+called before :meth:`sendResponse() <qgis.server.QgsServerFilter.sendResponse>`
 except for streaming services (or other plugin
 filters) that might have called
-:meth:`sendResponse <qgis.server.QgsServerFilter.sendResponse>` earlier.
+:meth:`sendResponse() <qgis.server.QgsServerFilter.sendResponse>` earlier.
 
-:meth:`responseComplete <qgis.server.QgsServerFilter.responseComplete>` is the
+:meth:`responseComplete() <qgis.server.QgsServerFilter.responseComplete>` is the
 ideal place to provide new services implementation
 (WPS or custom services) and to perform direct manipulation of the output coming
 from core services (for example to add a watermark upon a WMS image).
@@ -401,7 +401,7 @@ The filters must be registered into the **serverIface** as in the following exam
             serverIface.registerFilter(HelloFilter(serverIface), 100)
 
 The second parameter of
-:meth:`registerFilter <qgis.server.QgsServerInterface.registerFilter>` sets a priority which
+:meth:`registerFilter() <qgis.server.QgsServerInterface.registerFilter>` sets a priority which
 defines the order for the callbacks with the same name (the lower priority is
 invoked first).
 
@@ -471,7 +471,7 @@ the output and send them to the client (this is explained here below).
 
     If you really want to implement a custom service it is recommended to subclass
     :class:`QgsService <qgis.server.QgsService>` and register your service on
-    :meth:`registerFilter <qgis.server.QgsServerInterface.serviceRegistry>` by
+    :meth:`registerFilter() <qgis.server.QgsServerInterface.serviceRegistry>` by
     calling its :meth:`registerService(service) <qgis.server.QgsServiceRegistry.registerService>`
 
 Modifying or replacing the output
@@ -652,7 +652,7 @@ layerPermissions
 
 Limit the access to the layer.
 
-Return an object of type :meth:`LayerPermissions
+Return an object of type :meth:`LayerPermissions()
 <qgis.server.QgsAccessControlFilter.layerPermissions>`, which has the properties:
 
 * :attr:`canRead <qgis.server.QgsAccessControlFilter.LayerPermissions.canRead>`
@@ -729,7 +729,7 @@ In QGIS Server, core services such as WMS, WFS and WCS are implemented as subcla
 
 To implemented a new service that will be executed when the query string parameter ``SERVICE``
 matches the service name, you can implemented your own :class:`QgsService <qgis.server.QgsService>`
-and register your service on the :meth:`serviceRegistry <qgis.server.QgsServerInterface.serviceRegistry>` by
+and register your service on the :meth:`serviceRegistry() <qgis.server.QgsServerInterface.serviceRegistry>` by
 calling its :meth:`registerService(service) <qgis.server.QgsServiceRegistry.registerService>`.
 
 Here is an example of a custom service named CUSTOM:
@@ -773,7 +773,7 @@ are registered to an instance of :class:`QgsServerOgcApi <qgis.server.QgsServerO
 To implemented a new API that will be executed when the url path matches
 a certain URL, you can implemented your own :class:`QgsServerOgcApiHandler <qgis.server.QgsServerOgcApiHandler>`
 instances, add them to an :class:`QgsServerOgcApi <qgis.server.QgsServerOgcApi>` and register
-the API on the :meth:`serviceRegistry <qgis.server.QgsServerInterface.serviceRegistry>` by
+the API on the :meth:`serviceRegistry() <qgis.server.QgsServerInterface.serviceRegistry>` by
 calling its :meth:`registerApi(api) <qgis.server.QgsServiceRegistry.registerApi>`.
 
 Here is an example of a custom API that will be executed when the URL contains ``/customapi``:
