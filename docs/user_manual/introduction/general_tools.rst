@@ -760,47 +760,83 @@ Zooming and Panning
 -------------------
 
 There are multiple ways to zoom and pan to an area of interest.
-You can use either the mouse buttons on the map canvas, the keyboard
-on the map canvas, or the menu actions.
+You can use the :guilabel:`Map Navigation` toolbar, the mouse and keyboard on
+the map canvas and also the menu actions from the :menuselection:`View`
+menu and the :menuselection:`Layers` panel contextual menu.
 
-With the Tools in the Toolbar
-.............................
+.. list-table::
+   :header-rows: 1
+   :widths: 15 15 15 55
+   :class: longtable
 
-Zooming and panning the map can be done with the following tools available in the toolbar:
-
-  * |pan| :sup:`Pan` will activate the pan tool and allow you to left click anywhere on the map
-    canvas to pan the map at the cursor position. You can also pan the map
-    by holding down the left mouse button and dragging the map canvas.
-
-  * |zoomIn| :sup:`Zoom In` and |zoomOut| :sup:`Zoom Out` will activate the Zoom In and Zoom Out tools allowing
-    you to left click anywhere on the map canvas to zoom in or zoom out one level. The mouse cursor
-    position will be the center of the zoomed area of interest. You can also zoom in
-    to an area (or zoom out) by dragging a rectangle on the map canvas with the left mouse button.
-
-  * |panToSelected| :sup:`Pan Map to Selection` will pan the map to the selected features of all the selected layers in the layer panel.
-
-  * |zoomToSelected| :sup:`Zoom to Selection` will zoom to the selected features of all the selected layers in the layer panel.
-
-  * |zoomToLayer| :sup:`Zoom to Layer(s)` will zoom to the extent of all the selected layers in the layer panel.
-
-  * |zoomFull| :sup:`Zoom Full` will zoom to the extent of all the visible layers in the map.
-
-  * |zoomLast| :sup:`Zoom Last` will zoom the map to the previous extent in history.
-
-  * |zoomNext| :sup:`Zoom Next` will zoom the map to the next extent in history.
+   * - Map Navigation Toolbar
+     - View Menu
+     - Layer Panel Contextual Menu
+     - Usage
+   * - |pan| :sup:`Pan`
+     - :menuselection:`View --> Pan Map`
+     -
+     - When activated, left click anywhere on the map canvas to pan the map at
+       the cursor position. You can also pan the map by holding down the left
+       mouse button and dragging the map canvas.
+   * - |zoomIn| :sup:`Zoom In`
+     - :menuselection:`View --> Zoom In`
+     -
+     - When activated, left click anywhere on the map canvas to zoom in or zoom
+       out one level. The mouse cursor position will be the center of the
+       zoomed area of interest. You can also zoom in to an area (or zoom out)
+       by dragging a rectangle on the map canvas with the left mouse button.
+   * - |zoomOut| :sup:`Zoom Out`
+     - :menuselection:`View --> Zoom Out`
+     -
+     - When activated, left click anywhere on the map canvas to zoom in or zoom
+       out one level. The mouse cursor position will be the center of the
+       zoomed area of interest. You can also zoom in to an area (or zoom out)
+       by dragging a rectangle on the map canvas with the left mouse button.
+   * - |panToSelected| :sup:`Pan Map to Selection`
+     - :menuselection:`View --> Pan Map to Selection`
+     -
+     - Pan the map to the selected features of all the selected layers in the
+       :menuselection:`Layers` panel.
+   * - |zoomToSelected| :sup:`Zoom to Selection`
+     - :menuselection:`View --> Zoom To Selection`
+     - :menuselection:`Layers --> Zoom To Selection`
+     - Zoom to the selected features of all the selected layers in the
+       :menuselection:`Layers` panel.
+   * - |zoomToLayer| :sup:`Zoom to Layer(s)`
+     - :menuselection:`View --> Zoom To Layer(s)`
+     - :menuselection:`Layers --> Zoom to Layers(s)`
+     - Zoom to the extent of all the selected layers in the
+       :menuselection:`Layers` panel.
+   * - |zoomFull| :sup:`Zoom Full`
+     - :menuselection:`View --> Zoom Full`
+     -
+     - Zoom to the extent of all the visible layers in the map.
+   * - |zoomLast| :sup:`Zoom Last`
+     - :menuselection:`View --> Zoom Last`
+     -
+     - Zoom the map to the previous extent in history.
+   * - |zoomNext| :sup:`Zoom Next`
+     - :menuselection:`View --> Zoom Next`
+     -
+     - Zoom the map to the next extent in history.
 
 A :guilabel:`Zoom factor` can be set under the
-:menuselection:`Settings -->` |options| :menuselection:`Options --> Map tools`
-menu to define the scale behavior while zooming.
+:menuselection:`Settings -->` |options| :menuselection:`Options --> Map
+tools` menu to define the scale behavior while zooming. There, you can also
+set a list of :guilabel:`Predefined Scales` that will be available at the
+bottom of the map canvas.
 
-With the Mouse Wheel on the Map Canvas
+With the Mouse on the Map Canvas
 ......................................
 
-You can pan the map by holding the mouse wheel inside of the map canvas and dragging the mouse cursor
-(on macOS, you may need to hold down the :kbd:`cmd` key).
-You can also roll the mouse wheel to zoom in and out on the map. The mouse
-cursor position will be the center of the zoomed area of interest.
-Holding down :kbd:`Ctrl` while rolling the mouse wheel results in a finer zoom.
+In addition to using the |pan| :sup:`Pan` |zoomIn| :sup:`Zoom In` and
+|zoomOut| :sup:`Zoom Out` tools described above, you can hold the mouse wheel
+inside of the map canvas and drag the mouse cursor (on macOS, you may need to
+hold down the :kbd:`cmd` key). You can also roll the mouse wheel to zoom in and
+out on the map. The mouse cursor position will be the center of the zoomed area
+of interest. Holding down :kbd:`Ctrl` while rolling the mouse wheel results in a
+finer zoom.
 
 With the Keyboard on the Map Canvas
 ...................................
@@ -817,40 +853,10 @@ the map display to zoom in or out following the zoom factor set. Pressing
 :kbd:`Ctrl++` or :kbd:`Ctrl+-` also performs an immediate zoom in/out
 on the map canvas.
 
-When certain map tools are active (Identify, Measure...), you can perform a zoom by
-holding down :kbd:`Shift` and dragging a rectangle on the map to zoom to that area.
-This is not enabled for selection tools (since they
+When certain map tools are active (Identify, Measure...), you can perform a
+zoom by holding down :kbd:`Shift` and dragging a rectangle on the map to zoom
+to that area. This is not enabled for selection tools (since they
 use :kbd:`Shift` for adding to selection) or edit tools.
-
-With the menu actions
-.....................
-
-Zooming and panning the map can be done with the following menu actions:
-
-  * :menuselection:`View --> Pan Map` will activate the |pan| :sup:`Pan` tool available in the toolbar.
-
-  * :menuselection:`View --> Zoom In` will activate the |zoomIn| :sup:`Zoom In` tool available in the toolbar.
-
-  * :menuselection:`View --> Zoom Out` will activate the |zoomOut| :sup:`Zoom Out` tool available in the toolbar.
-
-  * :menuselection:`View --> Pan Map to Selection` will pan the map to the selected features of all the selected
-    layers in the layer panel.
-
-  * :menuselection:`View --> Zoom To Selection` will pan the map to the selected features
-    of all the selected layers in the layer panel. This action is also available from the context menu when right-clicking
-    on a layer in the layer panel.
-
-  * :menuselection:`View --> Zoom To Layer(s)` will zoom to the extent of all the selected layers
-    in the layer panel. This action is also available from the context menu when right-clicking on a layer in the layer panel.
-
-  * :menuselection:`View --> Zoom Full` will zoom to the extent of all the layers of the map.
-
-  * :menuselection:`View --> Zoom Last` will zoom the map to the previous extent in history.
-
-  * :menuselection:`View --> Zoom Next` will zoom the map to the next extent in history.
-
-Note that all these actions are also available from the toolbar.
-
 
 .. index::
    single: Bookmarks
