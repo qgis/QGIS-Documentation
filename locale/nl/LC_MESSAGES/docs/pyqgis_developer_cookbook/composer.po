@@ -6,20 +6,21 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2020
+# DiGro, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-13 09:01+0100\n"
+"POT-Creation-Date: 2021-01-12 10:14+0000\n"
 "PO-Revision-Date: 2020-12-24 10:20+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"Last-Translator: DiGro, 2021\n"
 "Language-Team: Dutch (https://www.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.8.0\n"
+"Generated-By: Babel 2.9.0\n"
 "Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -132,6 +133,34 @@ msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/composer.rst:144
 msgid ""
+"This initializes the layout with some default settings, specifically by "
+"adding an empty A4 page to the layout. You can create layouts without "
+"calling the :meth:`initializeDefaults() "
+"<qgis.core.QgsLayout.initializeDefaults>` method, but you'll need to take "
+"care of adding pages to the layout yourself."
+msgstr ""
+"Dit initialiseert de lay-out met enkele standaard instellingen, in het "
+"bijzonder een lege pagina A4 aan de lay-out. U kunt lay-outs maken zonder de"
+" methode :meth:`initializeDefaults() "
+"<qgis.core.QgsLayout.initializeDefaults>` aan te roepen, maar u dient zelf "
+"het toevoegen van pagina's aan de lay-out te regelen."
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:149
+msgid ""
+"The previous code creates a \"temporary\" layout that is not visible in the "
+"GUI. It can be handy to e.g. quickly add some items and export without "
+"modifying the project itself nor expose these changes to the user. If you "
+"want the layout to be saved/restored along with the project and available in"
+" the layout manager, then add:"
+msgstr ""
+"De vorige code maakt een \"tijdelijke\" lay-out die niet zichtbaar is in de "
+"GUI. Het kan handig zijn om bijvoorbeeld snel enkele items toe te voegen en "
+"te exporteren, zonder het project aan te passen of deze wijzigingen aan de "
+"gebruiker te laten zien. Als u de lay-out wilt opslaan/herstellen naast het "
+"project en beschikbaar zijn in Lay-out beheren, voeg dan toe:"
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:160
+msgid ""
 "Now we can add various elements (map, label, ...) to the layout. All these "
 "objects are represented by classes that inherit from the base "
 ":class:`QgsLayoutItem <qgis.core.QgsLayoutItem>` class."
@@ -140,7 +169,7 @@ msgstr ""
 "out. Al deze objecten worden weergegeven door klassen die erven van de "
 "basisklasse :class:`QgsLayoutItem <qgis.core.QgsLayoutItem>`."
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:147
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:163
 msgid ""
 "Here's a description of some of the main layout items that can be added to a"
 " layout."
@@ -148,16 +177,15 @@ msgstr ""
 "Hier is een beschrijving van enkele van de belangrijkste items voor lay-out "
 "die aan een lay-out kunnen worden toegevoegd."
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:149
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:165
 msgid ""
-"map --- this item tells the libraries where to put the map itself. Here we "
-"create a map and stretch it over the whole paper size"
+"map --- Here we create a map of a custom size and render the current map "
+"canvas"
 msgstr ""
-"kaart --- dit item vertelt de bibliotheken waar de kaart zelf moet worden "
-"geplaatst. Hier maken we ene kaart en spreiden die over de gehele grootte "
-"van het papier"
+"map --- Hier maken we een kaart van een aangepaste grootte en renderen het "
+"huidige kaartvenster"
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:157
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:177
 msgid ""
 "label --- allows displaying labels. It is possible to modify its font, "
 "color, alignment and margin"
@@ -165,48 +193,48 @@ msgstr ""
 "label --- maakt het weergeven van labels mogelijk. Het is mogelijk het "
 "lettertype, de kleur, de uitlijning en marge aan te passen"
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:167
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:187
 msgid "legend"
 msgstr "legenda"
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:175
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:195
 msgid "scale bar"
 msgstr "schaalbalk"
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:185
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:205
 msgid "arrow"
 msgstr "pijl"
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:186
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:206
 msgid "picture"
 msgstr "afbeelding"
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:187
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:207
 msgid "basic shape"
 msgstr "basisvorm"
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:188
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:208
 msgid "nodes based shape"
 msgstr "op knopen gebaseerde vorm"
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:212
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:232
 msgid "table"
 msgstr "tabel"
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:214
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:234
 msgid "Once an item is added to the layout, it can be moved and resized:"
 msgstr ""
 "Als een item eenmaal is toegevoegd aan de lay-out kan het worden verplaatst "
 "en de grootte worden gewijzigd:"
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:221
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:241
 msgid ""
 "A frame is drawn around each item by default. You can remove it as follows:"
 msgstr ""
 "Standaard wordt een kader rondom elk item getekend. U kunt dat als volgt "
 "verwijderen:"
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:228
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:248
 msgid ""
 "Besides creating the layout items by hand, QGIS has support for layout "
 "templates which are essentially compositions with all their items saved to a"
@@ -216,7 +244,7 @@ msgstr ""
 "ondersteuning voor sjablonen van afdruklay-out wat in essentie lay-outs zijn"
 " met al hun items, opgeslagen als een bestand .qpt (met syntaxis XML)."
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:232
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:252
 msgid ""
 "Once the composition is ready (the layout items have been created and added "
 "to the composition), we can proceed to produce a raster and/or vector "
@@ -226,11 +254,11 @@ msgstr ""
 " toegevoegd aan de lay-out), kunnen we doorgaan en een raster- en/of vector-"
 "uitvoer produceren."
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:238
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:258
 msgid "Exporting the layout"
 msgstr "Lay-out exporteren"
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:240
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:260
 msgid ""
 "To export a layout, the :class:`QgsLayoutExporter "
 "<qgis.core.QgsLayoutExporter>` class must be used."
@@ -238,7 +266,7 @@ msgstr ""
 "De klasse :class:`QgsLayoutExporter <qgis.core.QgsLayoutExporter>` moet "
 "worden gebruikt om een lay-out te exporteren."
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:250
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:270
 msgid ""
 "Use the :meth:`exportToImage() <qgis.core.QgsLayoutExporter.exportToImage>` "
 "in case you want to export to an image instead of a PDF file."
@@ -247,11 +275,11 @@ msgstr ""
 "in het geval dat u wilt exporteren naar een afbeelding in plaats van een "
 "bestand PDF."
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:254
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:274
 msgid "Exporting a layout atlas"
 msgstr "Een afdrukatlas exporteren"
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:256
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:276
 msgid ""
 "If you want to export all pages from a layout that has the atlas option "
 "configured and enabled, you need to use the :meth:`atlas() "
@@ -266,7 +294,7 @@ msgstr ""
 " aanpassingen. In het volgende voorbeeld worden de pagina's geëxporteerd "
 "naar afbeeldingen PNG:"
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:266
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:286
 msgid ""
 "Notice that the outputs will be saved in the base path folder, using the "
 "output filename expression configured on atlas."
@@ -274,3 +302,11 @@ msgstr ""
 "Onthoud dat de uitvoer zal worden opgeslagen in de map voor het basispad, "
 "met de expressie voor de bestandsnaam voor de uitvoer die werd "
 "geconfigureerd in Atlas."
+
+#~ msgid ""
+#~ "map --- this item tells the libraries where to put the map itself. Here we "
+#~ "create a map and stretch it over the whole paper size"
+#~ msgstr ""
+#~ "kaart --- dit item vertelt de bibliotheken waar de kaart zelf moet worden "
+#~ "geplaatst. Hier maken we ene kaart en spreiden die over de gehele grootte "
+#~ "van het papier"
