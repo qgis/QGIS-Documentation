@@ -1,26 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
-# MarieSilvestre, 2020
-# Sant-anna <delazj@gmail.com>, 2020
-# Francis Gasc <francisgasc@gmail.com>, 2020
+# Harrissou Sant-anna, 2020
+# Francis Gasc <francisgasc@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:27+0000\n"
-"Last-Translator: Francis Gasc <francisgasc@gmail.com>, 2020\n"
+"POT-Creation-Date: 2021-01-12 10:14+0000\n"
+"PO-Revision-Date: 2020-12-24 10:26+0000\n"
+"Last-Translator: Francis Gasc <francisgasc@gmail.com>, 2021\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
 "Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
@@ -647,11 +647,11 @@ msgstr ""
 msgid ""
 "To enable the generation of an atlas and access atlas parameters, refer to "
 "the :guilabel:`Atlas` panel. This panel contains the following (see "
-"figure_layout_atlas_):"
+":numref:`figure_layout_atlas`):"
 msgstr ""
 "Pour permettre la génération d'un atlas et accéder aux paramètres de "
-"l'atlas, reportez-vous au panneau :guilabel:`Atlas`. Ce panneau contient les"
-" éléments suivants (voir figure_layout_atlas_) :"
+"l'atlas, reportez-vous au panneau :guilabel:`Atlas`. Ce panneau contient ce "
+"qui suit (voir :numref:`figure_layout_atlas`) :"
 
 #: ../../docs/user_manual/print_composer/create_output.rst:305
 msgid "Atlas Panel"
@@ -814,6 +814,7 @@ msgid "or, another combination:"
 msgstr "ou une autre combinaison:"
 
 #: ../../docs/user_manual/print_composer/create_output.rst:376
+#, python-format
 msgid ""
 "The information ``[% concat( upper(CITY_NAME), ',', ZIPCODE, ' is ',  "
 "format_number($area/1000000, 2) ) %]`` is an expression used inside the "
@@ -957,21 +958,68 @@ msgstr ""
 
 #: ../../docs/user_manual/print_composer/create_output.rst:461
 msgid ""
-"This is just one example of how you can use some advanced settings with "
+"Another example for using data-defined override buttons is the usage of a "
+"dynamic picture. For the following examples we use a geopackage layer "
+"containing a BLOB field called ``logo`` with the field type binary (see "
+":ref:`vector_create_geopackage`). For every feature there is defined a "
+"different picture so that the atlas can iterate over as described in "
+":ref:`atlas_preview`. All you need to do is add a picture in the print "
+"layout and go to its :guilabel:`Item properties` in the atlas context. There"
+" you can find a data-defined override button in the :guilabel:`Image source`"
+" section of the :guilabel:`Main Properties`."
+msgstr ""
+"L'utilisation d'une image dynamique est un autre exemple d'utilisation des "
+"boutons de surcharge définis par les données. Pour les exemples suivants, "
+"nous utilisons une couche géopackage contenant un champ BLOB appelé ``logo``"
+" avec le type de champ binaire (voir :ref:`vector_create_geopackage`). Pour "
+"chaque entité, une image différente est définie de sorte que l'atlas peut "
+"être répété comme décrit dans :ref:`atlas_preview`. Tout ce que vous avez à "
+"faire est d'ajouter une image dans la mise en page d'impression et d'aller à"
+" ses propriétés :guilabel:`Elément propriétés ` dans le contexte de l'atlas."
+" Là, vous trouverez un bouton de surcharge défini par les données dans la "
+"section :guilabel:`Image source` de :guilabel:`Propriétés principales`."
+
+#: ../../docs/user_manual/print_composer/create_output.rst:476
+msgid ""
+"In the following window choose :guilabel:`Edit` so that the "
+":guilabel:`Expression String Builder` opens. From the :guilabel:`Fields and "
+"values` section you can find the BLOB field that was defined in the "
+"geopackage layer. Double-click the field name :file:`logo` and click "
+":guilabel:`OK`."
+msgstr ""
+"Dans la fenêtre suivante, choisissez :guilabel:`Editer` afin que le "
+"constructeur de chaînes d'expression :guilabel:`Constructeur d'expression` "
+"s'ouvre. Dans la section :guilabel:`champs et valeurs`, vous trouverez le "
+"champ BLOB qui a été défini dans la couche géopackage. Double-cliquez sur le"
+" nom du champ :file:`logo` et cliquez sur :guilabel:`OK`."
+
+#: ../../docs/user_manual/print_composer/create_output.rst:485
+msgid ""
+"The atlas iterates over the entries in the BLOB field provided that you "
+"choose the geopackage layer as :guilabel:`Coverage layer` (further "
+"instructions you can find in :ref:`atlas_preview`)."
+msgstr ""
+"L'atlas itére sur les entrées du champ BLOB à condition que vous choisissiez"
+" la couche géopackage comme :guilabel:`couche couverture ` (d'autres "
+"instructions se trouvent dans :ref:`atlas_preview`)."
+
+#: ../../docs/user_manual/print_composer/create_output.rst:488
+msgid ""
+"These are just two examples of how you can use some advanced settings with "
 "atlas."
 msgstr ""
-"Il  ne s'agit que d'un exemple de comment utiliser certains paramètres "
-"avancés de l'atlas."
+"Ce ne sont là que deux exemples de la manière dont vous pouvez utiliser "
+"certains paramètres avancés avec l'atlas."
 
-#: ../../docs/user_manual/print_composer/create_output.rst:466
+#: ../../docs/user_manual/print_composer/create_output.rst:493
 msgid "Preview and generate an atlas"
 msgstr "Prévisualiser et générer un atlas"
 
-#: ../../docs/user_manual/print_composer/create_output.rst:473
+#: ../../docs/user_manual/print_composer/create_output.rst:500
 msgid "Atlas Preview toolbar"
 msgstr "Barre d'outils d'aperçu de l'atlas"
 
-#: ../../docs/user_manual/print_composer/create_output.rst:475
+#: ../../docs/user_manual/print_composer/create_output.rst:502
 msgid ""
 "Once the atlas settings have been configured, and layout items (map, table, "
 "image...) linked to it, you can create a preview of all the pages by "
@@ -985,23 +1033,23 @@ msgstr ""
 "l'Atlas` ou sur l'icône |atlas| :sup:`Aperçu de l'Atlas`. Vous pouvez "
 "utiliser les flèches pour naviguer à travers les entités :"
 
-#: ../../docs/user_manual/print_composer/create_output.rst:481
+#: ../../docs/user_manual/print_composer/create_output.rst:508
 msgid "|atlasFirst| :sup:`First feature`"
 msgstr "|atlasFirst| :sup:`Première entité`"
 
-#: ../../docs/user_manual/print_composer/create_output.rst:482
+#: ../../docs/user_manual/print_composer/create_output.rst:509
 msgid "|atlasPrev| :sup:`Previous feature`"
 msgstr "|atlasPrev| :sup:`Entité précédente`"
 
-#: ../../docs/user_manual/print_composer/create_output.rst:483
+#: ../../docs/user_manual/print_composer/create_output.rst:510
 msgid "|atlasNext| :sup:`Next feature`"
 msgstr "|atlasNext| :sup:`Entité suivante`"
 
-#: ../../docs/user_manual/print_composer/create_output.rst:484
+#: ../../docs/user_manual/print_composer/create_output.rst:511
 msgid "|atlasLast| :sup:`Last feature`"
 msgstr "|atlasLast| :sup:`Dernière entité`"
 
-#: ../../docs/user_manual/print_composer/create_output.rst:486
+#: ../../docs/user_manual/print_composer/create_output.rst:513
 msgid ""
 "You can also use the combo box to select and preview a specific feature. The"
 " combo box shows atlas feature names according to the expression set in the "
@@ -1012,7 +1060,7 @@ msgstr ""
 "entités selon l'expression paramétrée dans l'option :guilabel:`Nom de page` "
 "de l'atlas."
 
-#: ../../docs/user_manual/print_composer/create_output.rst:490
+#: ../../docs/user_manual/print_composer/create_output.rst:517
 msgid ""
 "As for simple compositions, an atlas can be generated in different ways (see"
 " :ref:`create-output` for more information - just use tools from the "
@@ -1024,7 +1072,7 @@ msgstr ""
 "utilisez simplement les outils du menu ou de la barre d'outils "
 ":menuselection:`Atlas` au lieu du menu :menuselection:`Mise en page`."
 
-#: ../../docs/user_manual/print_composer/create_output.rst:495
+#: ../../docs/user_manual/print_composer/create_output.rst:522
 msgid ""
 "This means that you can directly print your compositions with "
 ":menuselection:`Atlas --> Print Atlas`. You can also create a PDF using "
@@ -1041,7 +1089,7 @@ msgstr ""
 "fichier (si possible)` a été sélectionnée. Dans ce cas, un nom de fichier "
 "vous sera demandé."
 
-#: ../../docs/user_manual/print_composer/create_output.rst:502
+#: ../../docs/user_manual/print_composer/create_output.rst:529
 msgid ""
 "With :menuselection:`Atlas --> Export Atlas as Images...` or "
 ":menuselection:`Atlas --> Export Atlas as SVG...` tool, you're also prompted"
@@ -1054,7 +1102,7 @@ msgstr ""
 "d'atlas est exportée dans un fichier d'image ou SVG tel que défini dans le "
 "panneau :guilabel:`Atlas`."
 
-#: ../../docs/user_manual/print_composer/create_output.rst:508
+#: ../../docs/user_manual/print_composer/create_output.rst:535
 msgid ""
 "With multi-page output, an atlas behaves like a layout in that only the page"
 " that contains the :ref:`reference_map` will get a world file (for each "
@@ -1064,11 +1112,11 @@ msgstr ""
 " la mesure où seule la page qui contient la :ref:`reference_map` obtiendra "
 "un fichier world (pour chaque sortie d'entité)."
 
-#: ../../docs/user_manual/print_composer/create_output.rst:512
+#: ../../docs/user_manual/print_composer/create_output.rst:539
 msgid "**Print a specific atlas feature**"
 msgstr "**Imprimer une entité spécifique de l'atlas**"
 
-#: ../../docs/user_manual/print_composer/create_output.rst:514
+#: ../../docs/user_manual/print_composer/create_output.rst:541
 msgid ""
 "If you want to print or export the composition of only one feature of the "
 "atlas, simply start the preview, select the desired feature in the drop-down"
@@ -1081,12 +1129,12 @@ msgstr ""
 "Imprimer...` (ou :menuselection:`Exporter...` pour n'importe quel format de "
 "fichier pris en charge). "
 
-#: ../../docs/user_manual/print_composer/create_output.rst:525
+#: ../../docs/user_manual/print_composer/create_output.rst:552
 msgid "Use project defined relations for atlas creation"
 msgstr ""
 "Utiliser les relations définies par le projet pour la création d'atlas"
 
-#: ../../docs/user_manual/print_composer/create_output.rst:527
+#: ../../docs/user_manual/print_composer/create_output.rst:554
 msgid ""
 "For users with HTML and Javascript knowledge it is possible to operate on "
 "GeoJSON objects and use project defined relations from the QGIS project. The"
@@ -1103,7 +1151,7 @@ msgstr ""
 "signifie que vous pouvez utiliser les bibliothèques et fonctions Javascript "
 "existantes qui fonctionnent sur les représentations d'entités GeoJSON."
 
-#: ../../docs/user_manual/print_composer/create_output.rst:535
+#: ../../docs/user_manual/print_composer/create_output.rst:562
 msgid ""
 "The following code includes all related child features from the defined "
 "relation. Using the JavaScript ``setFeature`` function it allows you to make"
@@ -1117,7 +1165,7 @@ msgstr ""
 " que vous souhaitez (listes, tableaux, etc.). Dans l'exemple de code, nous "
 "créons une liste à puces dynamique des entités enfants associées."
 
-#: ../../docs/user_manual/print_composer/create_output.rst:564
+#: ../../docs/user_manual/print_composer/create_output.rst:591
 msgid ""
 "During atlas creation there will be an iteration over the coverage layer "
 "containing the parent features. On each page, you will see a bullet list of "
@@ -1126,3 +1174,12 @@ msgstr ""
 "Lors de la création de l'atlas, il y aura une itération sur la couche de "
 "couverture contenant les entités parentes. Sur chaque page, vous verrez une "
 "liste à puces des entités enfants associées suivant l'identifiant du parent."
+
+#~ msgid ""
+#~ "To enable the generation of an atlas and access atlas parameters, refer to "
+#~ "the :guilabel:`Atlas` panel. This panel contains the following (see "
+#~ "figure_layout_atlas_):"
+#~ msgstr ""
+#~ "Pour permettre la génération d'un atlas et accéder aux paramètres de "
+#~ "l'atlas, reportez-vous au panneau :guilabel:`Atlas`. Ce panneau contient les"
+#~ " éléments suivants (voir figure_layout_atlas_) :"
