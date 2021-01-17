@@ -1,24 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
-# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2020
+# Harrissou Sant-anna, 2020
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:26+0000\n"
-"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2020\n"
+"POT-Creation-Date: 2020-12-13 09:01+0100\n"
+"PO-Revision-Date: 2020-12-24 12:04+0000\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2021\n"
 "Language-Team: Italian (https://www.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -275,19 +277,97 @@ msgstr ""
 
 #: ../../docs/user_manual/introduction/project_files.rst:132
 msgid ""
-"Projects stored in Geopackage or PostgreSQL can be also be loaded through "
-"the QGIS browser panel, either by double-clicking them or by dragging them "
-"to the map canvas."
+"Projects stored in Geopackage or PostgreSQL can also be loaded through the "
+"QGIS browser panel, either by double-clicking them or by dragging them to "
+"the map canvas."
 msgstr ""
 "I progetti memorizzati in Geopackage o PostgreSQL possono essere caricati "
-"anche attraverso il pannello browser QGIS, sia facendo doppio clic su di "
-"essi che trascinandoli nell'area di disegno della mappa."
+"anche attraverso il pannello del browser QGIS, sia facendo doppio clic su di"
+" essi che trascinandoli sulla visualizzazione della mappa."
 
 #: ../../docs/user_manual/introduction/project_files.rst:140
+msgid "Handling broken file paths"
+msgstr "Gestire i percorsi corrotti di file"
+
+#: ../../docs/user_manual/introduction/project_files.rst:142
+msgid ""
+"When opening a project, QGIS may fail to reach some data sources due to "
+"unavailable service/database, or to a renamed or moved file. QGIS then opens"
+" the :guilabel:`Handle Unavailable Layers` dialog, referencing the unfound "
+"layers. You can:"
+msgstr ""
+"Quando si apre un progetto, QGIS potrebbe non riuscire a raggiungere alcune "
+"fonti di dati a causa di servizio/base dati non disponibile, o a causa di un"
+" file rinominato o spostato. QGIS apre quindi la finestra di dialogo "
+":guilabel:`Gestione Layer Non Disponibili`, facendo riferimento ai layer non"
+" trovati. Puoi:"
+
+#: ../../docs/user_manual/introduction/project_files.rst:148
+msgid ""
+"Double-click in the :guilabel:`Datasource` field, adjust the path of each "
+"layer and click :guilabel:`Apply changes`;"
+msgstr ""
+"Fare doppio clic nel campo :guilabel:`Sorgente dati`, aggiustare il percorso"
+" di ogni layer e cliccare :guilabel:`Applica le modifiche`;"
+
+#: ../../docs/user_manual/introduction/project_files.rst:150
+msgid ""
+"Select a row, press :guilabel:`Browse` to indicate the correct location and "
+"click :guilabel:`Apply changes`;"
+msgstr ""
+"Selezionare una riga, premere :guilabel:`Sfoglia` per individuare la "
+"posizione corretta e cliccare su :guilabel:`Applica Modifiche`;"
+
+#: ../../docs/user_manual/introduction/project_files.rst:152
+msgid ""
+"Press :guilabel:`Auto-Find` to browse the folders and try to automatically "
+"fix all or selected broken path(s). Be aware that the browsing may take some"
+" time."
+msgstr ""
+"Premere :guilabel:`Auto-Ricerca` per sfogliare le cartelle e provare a "
+"correggere automaticamente tutti i percorsi interrotti o quello(i) "
+"selezionati(i). Bisogna essere essere consapevoli del fatto che la ricerca "
+"può richiedere un certo tempo."
+
+#: ../../docs/user_manual/introduction/project_files.rst:154
+msgid ""
+"Ignore the message and open your project with the broken path(s) by clicking"
+" :guilabel:`Keep Unavailable Layers`. Your layer is then displayed in the "
+":guilabel:`Layers` panel, but without any data until you fix the path using "
+"the |indicatorBadLayer| :sup:`Unavailable layer!` icon next to it in the "
+":guilabel:`Layers` panel, or :guilabel:`Repair Data Source...` in the layer "
+"contextual menu."
+msgstr ""
+"Ignorare il messaggio e aprire il tuo progetto con il percorso (o i "
+"percorsi) interrotti cliccando su :guilabel:`Mantieni Layer Non "
+"Disponibili`. Il tuo layer viene quindi visualizzato nel pannello "
+":guilabel:`Layer`, ma senza dati fino a quando non si fissa il percorso "
+"usando l'icona |indicatoreBadLayer| :sup:`Layer non disponibile!` accanto ad"
+" esso nel pannello :guilabel:`Layer`, o :guilabel:`Ripara Sorgente Dati...` "
+"nel menu contestuale del layer."
+
+#: ../../docs/user_manual/introduction/project_files.rst:161
+msgid ""
+"With the :guilabel:`Repair Data Source...` tool, once a layer path has been "
+"fixed, QGIS scans through all other broken paths and tries to auto-fix those"
+" that have the same broken file path."
+msgstr ""
+"Con lo strumento :guilabel:`Ripara Sorgenti Dati`, una volta che un percorso"
+" di un layer è stato riparato, QGIS scansiona tutti gli altri percorsi "
+"interrotti e cerca di riparare automaticamente quelli che hanno lo stesso "
+"percorso di file interrotto."
+
+#: ../../docs/user_manual/introduction/project_files.rst:164
+msgid ""
+"|deleteSelected| :guilabel:`Remove Unavailable Layers` from the project."
+msgstr ""
+"|deleteSelected| :guilabel:`Rimuovi Layer Non Disponibili` dal progetto."
+
+#: ../../docs/user_manual/introduction/project_files.rst:170
 msgid "Generating output"
 msgstr "Generazione output"
 
-#: ../../docs/user_manual/introduction/project_files.rst:145
+#: ../../docs/user_manual/introduction/project_files.rst:175
 msgid ""
 "There are several ways to generate output from your QGIS session. We have "
 "already discussed saving as a project file in :ref:`sec_projects`. Other "
@@ -297,7 +377,7 @@ msgstr ""
 "discusso il salvataggio come file di progetto in :ref:`sec_projects`. Altri "
 "modi per produrre file di output sono: "
 
-#: ../../docs/user_manual/introduction/project_files.rst:150
+#: ../../docs/user_manual/introduction/project_files.rst:180
 msgid ""
 "Creating images: :menuselection:`Project --> Import/Export -->` "
 "|saveMapAsImage| :menuselection:`Export Map to Image...` outputs the map "
@@ -311,7 +391,7 @@ msgstr ""
 "dimensione personalizzate, ... È possibile la georeferenziazione "
 "dell'immagine. Vedi :ref:`exportingmapcanvas` per maggiori dettagli."
 
-#: ../../docs/user_manual/introduction/project_files.rst:157
+#: ../../docs/user_manual/introduction/project_files.rst:187
 msgid ""
 "Exporting to PDF files: :menuselection:`Project --> Import/Export --> Export"
 " Map to PDF...` outputs the map canvas rendering to PDF at custom scale, "
@@ -324,7 +404,7 @@ msgstr ""
 "georeferenziazione, ...). Vedi :ref:`exportingmapcanvas` per maggiori "
 "dettagli."
 
-#: ../../docs/user_manual/introduction/project_files.rst:163
+#: ../../docs/user_manual/introduction/project_files.rst:193
 msgid ""
 "Exporting to DXF files: :menuselection:`Project --> Import/Export --> Export"
 " Project to DXF...` opens a dialog where you can define the 'Symbology "
@@ -339,7 +419,7 @@ msgstr ""
 "Simbologia originale di QGIS possono essere esportati con alta fedeltà (vedi"
 " la sezione :ref:`create_dxf_f_files`)."
 
-#: ../../docs/user_manual/introduction/project_files.rst:170
+#: ../../docs/user_manual/introduction/project_files.rst:200
 msgid ""
 "Designing maps: :menuselection:`Project -->` |newLayout| :menuselection:`New"
 " Print Layout...` opens a dialog where you can layout and print the current "
