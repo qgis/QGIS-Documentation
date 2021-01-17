@@ -7,20 +7,21 @@
 # Translators:
 # Harrissou Sant-anna, 2020
 # MarieSilvestre, 2021
+# Francis Gasc <francisgasc@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-13 09:01+0100\n"
+"POT-Creation-Date: 2021-01-12 10:14+0000\n"
 "PO-Revision-Date: 2020-12-24 10:24+0000\n"
-"Last-Translator: MarieSilvestre, 2021\n"
+"Last-Translator: Francis Gasc <francisgasc@gmail.com>, 2021\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.8.0\n"
+"Generated-By: Babel 2.9.0\n"
 "Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
@@ -72,7 +73,7 @@ msgid ""
 msgstr ""
 "Si vous enregistrez le script dans le dossier :file:`scripts` (l'emplacement"
 " par défaut) avec l'extension :file:`.py`, l'algorithme sera disponible dans"
-" :guilabel:`Processing Toolbox`."
+" la :guilabel:`Boîte à outils de traitements`."
 
 #: ../../docs/user_manual/processing/scripts.rst:35
 msgid "Extending QgsProcessingAlgorithm"
@@ -80,28 +81,28 @@ msgstr "Étendre QgsProcessingAlgorithm"
 
 #: ../../docs/user_manual/processing/scripts.rst:37
 msgid "The following code"
-msgstr "Le code suivant"
+msgstr "Le code suivant permet de"
 
 #: ../../docs/user_manual/processing/scripts.rst:39
 msgid "takes a vector layer as input"
-msgstr "prend une couche vectorielle en entrée"
+msgstr "prendre une couche vectorielle en entrée"
 
 #: ../../docs/user_manual/processing/scripts.rst:40
 msgid "counts the number of features"
-msgstr "compte le nombre d'entités"
+msgstr "compter le nombre d'entités"
 
 #: ../../docs/user_manual/processing/scripts.rst:41
 msgid "does a buffer operation"
-msgstr "effectue une opération tampon"
+msgstr "effectuer une opération tampon"
 
 #: ../../docs/user_manual/processing/scripts.rst:42
 msgid "creates a raster layer from the result of the buffer operation"
-msgstr "crée une couche raster à partir du résultat de l'opération de tampon"
+msgstr "créer une couche raster à partir du résultat de l'opération de tampon"
 
 #: ../../docs/user_manual/processing/scripts.rst:43
 #: ../../docs/user_manual/processing/scripts.rst:316
 msgid "returns the buffer layer, raster layer and number of features"
-msgstr "renvoie la couche tampon, la couche raster et le nombre d'entités"
+msgstr "renvoyer la couche tampon, la couche raster et le nombre d'entités"
 
 #: ../../docs/user_manual/processing/scripts.rst:233
 msgid "Processing algorithm standard functions:"
@@ -262,7 +263,7 @@ msgid ""
 "needed to make it a proper Processing algorithm. This simplifies the "
 "creation of algorithms and the specification of inputs and outputs."
 msgstr ""
-"En utilisant le  @alg decorator, vous pouvez créer vos propres algorithmes "
+"En utilisant le décorateur @alg, vous pouvez créer vos propres algorithmes "
 "en écrivant le code Python et en ajoutant quelques lignes supplémentaires "
 "pour fournir les informations supplémentaires nécessaires pour en faire un "
 "algorithme de traitement approprié. Cela simplifie la création d'algorithmes"
@@ -275,15 +276,15 @@ msgid ""
 "provider -- it is not possible to add these algorithms to a custom provider,"
 " e.g. for use in plugins."
 msgstr ""
-"Une limitation importante de l'approche décoratrice est que les algorithmes "
-"créés de cette manière seront toujours ajoutés au fournisseur de scripts de "
-"traitement d'un utilisateur - il n'est pas possible d'ajouter ces "
-"algorithmes à un fournisseur personnalisé, par ex. pour une utilisation dans"
-" les plugins."
+"Une limitation importante de l'approche par décorateurs est que les "
+"algorithmes créés de cette manière seront toujours ajoutés au fournisseur de"
+" scripts de traitement d'un utilisateur - il n'est pas possible d'ajouter "
+"ces algorithmes à un fournisseur personnalisé, par ex. pour une utilisation "
+"dans les extensions."
 
 #: ../../docs/user_manual/processing/scripts.rst:310
 msgid "The following code uses the @alg decorator to"
-msgstr "Le code suivant utilise le @alg decorator pour"
+msgstr "Le code suivant utilise le décorateur @alg pour"
 
 #: ../../docs/user_manual/processing/scripts.rst:312
 msgid "use a vector layer as input"
@@ -299,7 +300,7 @@ msgstr "faire une opération buffer"
 
 #: ../../docs/user_manual/processing/scripts.rst:315
 msgid "create a raster layer from the result of the buffer operation"
-msgstr "créer une couche raster à partir du résultat de l'opération buffer"
+msgstr "créer une couche raster à partir du résultat de l'opération de tampon"
 
 #: ../../docs/user_manual/processing/scripts.rst:383
 msgid ""
@@ -332,7 +333,7 @@ msgid ""
 "These lines are all calls to the ``@alg`` decorator functions that help "
 "simplify the coding of the algorithm."
 msgstr ""
-"Ces lignes sont toutes des appels aux fonctions ``@alg decorator`` qui "
+"Ces lignes sont toutes des appels aux fonctions du décorateur ``@alg`` qui "
 "aident à simplifier le codage de l'algorithme."
 
 #: ../../docs/user_manual/processing/scripts.rst:398
@@ -340,21 +341,21 @@ msgid ""
 "The @alg decorator is used to define the name and location of the algorithm "
 "in the Toolbox."
 msgstr ""
-"Le @alg decorator est utilisé pour définir le nom et l'emplacement de "
+"Le décorateur @alg est utilisé pour définir le nom et l'emplacement de "
 "l'algorithme dans la boîte à outils."
 
 #: ../../docs/user_manual/processing/scripts.rst:400
 msgid ""
 "The @alg.input decorator is used to define the inputs of the algorithm."
 msgstr ""
-"Le @alg.input decorator est utilisé pour définir les entrées de "
+"Le décorateur @alg.input est utilisé pour définir les entrées de "
 "l'algorithme."
 
 #: ../../docs/user_manual/processing/scripts.rst:401
 msgid ""
 "The @alg.output decorator is used to define the outputs of the algorithm."
 msgstr ""
-"Le @alg.output decorator est utilisé pour définir les sorties de "
+"Le décorateur @alg.output est utilisé pour définir les sorties de "
 "l'algorithme."
 
 #: ../../docs/user_manual/processing/scripts.rst:406
@@ -367,8 +368,8 @@ msgid ""
 "with their corresponding alg decorator constants (:file:`algfactory.py` "
 "contains the complete list of alg constants). Sorted on class name."
 msgstr ""
-"Voici la liste des types d'entrée et de sortie pris en charge dans "
-"Processing avec leurs constantes de décorateur correspondantes ( "
+"Voici la liste des types d'entrée et de sortie pris en charge dans le Module"
+" de Traitements avec leurs constantes de décorateur correspondantes ( "
 ":file:`algfactory.py` contient la liste complète des constantes). Trié par "
 "nom de classe."
 
@@ -379,7 +380,7 @@ msgstr "Types d'entrées"
 #: ../../docs/user_manual/processing/scripts.rst:421
 #: ../../docs/user_manual/processing/scripts.rst:546
 msgid "Class"
-msgstr "Classz"
+msgstr "Classe"
 
 #: ../../docs/user_manual/processing/scripts.rst:422
 #: ../../docs/user_manual/processing/scripts.rst:547
@@ -1223,10 +1224,10 @@ msgid ""
 "<qgis.core.QgsProcessingAlgorithm.helpUrl>` methods of "
 ":class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>`."
 msgstr ""
-"Vous pouvez documenter vos scripts en surchargeant les méthodes: "
-":meth:`helpString() <qgis.core.QgsProcessingAlgorithm.helpString>` et "
-":meth:`helpUrl() <qgis.core.QgsProcessingAlgorithm.helpUrl>` methode de la "
-"classe:  :class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>`."
+"Vous pouvez documenter vos scripts en surchargeant :meth:`helpString() "
+"<qgis.core.QgsProcessingAlgorithm.helpString>` et :meth:`helpUrl() "
+"<qgis.core.QgsProcessingAlgorithm.helpUrl>`, méthodes de la classe  "
+":class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>`."
 
 #: ../../docs/user_manual/processing/scripts.rst:654
 msgid "Flags"
@@ -1234,15 +1235,16 @@ msgstr "Flags"
 
 #: ../../docs/user_manual/processing/scripts.rst:656
 msgid ""
-"You can override the :meth:`flags <qgis.core.QgsProcessingAlgorithm.flags>` "
-"method of :class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>`"
-" to tell QGIS more about your algorithm. You can for instance tell QGIS that"
-" the script shall be hidden from the modeler, that it can be canceled, that "
-"it is not thread safe, and more."
+"You can override the :meth:`flags() "
+"<qgis.core.QgsProcessingAlgorithm.flags>` method of "
+":class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>` to tell "
+"QGIS more about your algorithm. You can for instance tell QGIS that the "
+"script shall be hidden from the modeler, that it can be canceled, that it is"
+" not thread safe, and more."
 msgstr ""
-"Vous pouvez remplacer la méthode: :meth:`flags "
-"<qgis.core.QgsProcessingAlgorithm.flags>` de: :class:`QgsProcessingAlgorithm"
-" <qgis.core.QgsProcessingAlgorithm>` pour en dire plus à QGIS sur votre "
+"Vous pouvez remplacer la méthode :meth:`flags() "
+"<qgis.core.QgsProcessingAlgorithm.flags>` de :class:`QgsProcessingAlgorithm "
+"<qgis.core.QgsProcessingAlgorithm>` pour en dire plus à QGIS sur votre "
 "algorithme. Vous pouvez par exemple dire à QGIS que le script doit être "
 "caché au modeleur, qu'il peut être annulé, qu'il n'est pas sûr pour les "
 "threads, et plus encore."
@@ -1304,7 +1306,7 @@ msgstr ""
 "N'affichez pas de boîtes de message et n'utilisez aucun élément GUI du "
 "script. Si vous souhaitez communiquer avec l'utilisateur, utilisez les "
 "méthodes de l'objet de rétroaction ( :class:`QgsProcessingFeedback "
-"<qgis.core.QgsProcessingFeedback>`) ou lancez une classe: "
+"<qgis.core.QgsProcessingFeedback>`) ou lancez une "
 ":class:`QgsProcessingException <qgis.core.QgsProcessingException>`."
 
 #: ../../docs/user_manual/processing/scripts.rst:690
@@ -1313,5 +1315,19 @@ msgid ""
 " code on :source:`python/plugins/processing/algs/qgis`."
 msgstr ""
 "Il existe déjà de nombreux algorithmes de traitement disponibles dans QGIS. "
-"Vous pouvez trouver du code sur: :source:`python / plugins / processing / "
-"algs / qgis`."
+"Vous pouvez trouver du code sur "
+":source:`python/plugins/processing/algs/qgis`."
+
+#~ msgid ""
+#~ "You can override the :meth:`flags <qgis.core.QgsProcessingAlgorithm.flags>` "
+#~ "method of :class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>`"
+#~ " to tell QGIS more about your algorithm. You can for instance tell QGIS that"
+#~ " the script shall be hidden from the modeler, that it can be canceled, that "
+#~ "it is not thread safe, and more."
+#~ msgstr ""
+#~ "Vous pouvez remplacer la méthode :meth:`flags "
+#~ "<qgis.core.QgsProcessingAlgorithm.flags>` de: :class:`QgsProcessingAlgorithm"
+#~ " <qgis.core.QgsProcessingAlgorithm>` pour en dire plus à QGIS sur votre "
+#~ "algorithme. Vous pouvez par exemple dire à QGIS que le script doit être "
+#~ "caché au modeleur, qu'il peut être annulé, qu'il n'est pas sûr pour les "
+#~ "threads, et plus encore."
