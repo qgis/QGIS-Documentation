@@ -235,7 +235,7 @@ the following functionalities (see :numref:`figure_layout_table_appearance`):
   **Truncate text**.
 
 .. note:: More properties of the attribute table item are described in the
-   :ref:`tables_common_pptes` section.
+   :ref:`tables_common_properties` section.
 
 .. _layout_fixed_table_item:
 
@@ -308,9 +308,9 @@ The :guilabel:`Appearance` group of the fixed table provides the following funct
   **Truncate text**.
 
 .. note:: More properties of the fixed table item are described in the
-   :ref:`tables_common_pptes` section.
+   :ref:`tables_common_properties` section.
 
-.. _tables_common_pptes:
+.. _tables_common_properties:
 
 Tables common functionalities
 -----------------------------
@@ -350,9 +350,10 @@ provides the following functionalities (see :numref:`figure_layout_table_fonts`)
 
 * You can define :guilabel:`Font` properties for :guilabel:`Table heading` and
   :guilabel:`Table contents`, using the advanced :ref:`text settings <text_format>`
-  widget. These changes affect only the cells that have no custom font assigned,
+  widget (with buffer, shadow, paint effects, transparence, background, coloring, ...).
+  Note that these changes do not affect the cells that have custom font assigned,
   either from the :guilabel:`Appearance` section or the :guilabel:`Table Designer`
-  dialog.
+  dialog. Only cells with the default rendering are overwritten. 
 * For :guilabel:`Table heading` you can additionally set the :guilabel:`Alignment`
   to ``Follow column alignment`` or override this setting by choosing ``Left``,
   ``Center`` or ``Right``. The column alignment is set using the :guilabel:`Select
