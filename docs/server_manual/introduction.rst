@@ -2,8 +2,8 @@
 Introduction
 ************
 
-QGIS Server is an open source :ref:`implementation of OGC specifications<version_comparaison>` that, in
-addition, implements advanced cartographic features for
+QGIS Server is an open source WMS, WFS, OGC API for Features 1.0 (WFS3) and WCS
+implementation that, in addition, implements advanced cartographic features for
 thematic mapping. QGIS Server is a FastCGI/CGI (Common Gateway Interface)
 application written in C++ that works together with a web server (e.g., Apache,
 Nginx). It has Python plugin support allowing for fast and efficient
