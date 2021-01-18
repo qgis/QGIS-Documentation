@@ -7,8 +7,8 @@ on:
     paths:
       - 'docs/**'
 
-  schedule: #run at 02:00 UTC every day
-    - cron:  '30 09 * * *'
+  schedule: #run at 02:00 UTC on Wednesday
+    - cron:  '00 02 * * 03'
 
 jobs:
   prepare_translation:
