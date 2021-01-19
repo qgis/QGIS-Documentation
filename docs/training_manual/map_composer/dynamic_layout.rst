@@ -234,7 +234,7 @@ Also, the date of creation will adapt dynamically.
 
    #. For :guilabel:`X`, use the expression::
 
-        @layout_pagewidth - @sw_layout_margin * 2 - 78
+        @layout_pagewidth - @sw_layout_margin - 49.5
 
    #. For :guilabel:`Y`, use the expression::
 
