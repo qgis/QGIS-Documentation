@@ -685,7 +685,7 @@ actions like:
      - :kbd:`Ctrl+J`
      - :guilabel:`Map Navigation`
      -
-   * - |zoomToLayer| :guilabel:`Zoom To Layer`
+   * - |zoomToLayer| :guilabel:`Zoom To Layer(s)`
      -
      - :guilabel:`Map Navigation`
      -
@@ -2051,13 +2051,15 @@ Click on the map view and you should be able to interact with it:
   and |zoomIn| :sup:`Zoom Out` tools. Hold the :kbd:`Alt` key to switch from
   one tool to the other. Zooming is also performed by rolling
   the wheel forward to zoom in and backwards to zoom out.
-  The zoom is centered on the mouse cursor position.
-
-  You can customize the :guilabel:`Zoom factor` under the
+  The zoom is centered on the mouse cursor position. You can customize the
+  :guilabel:`Zoom factor` under the
   :menuselection:`Settings --> Options --> Map tools` menu.
 * it can be zoomed to the full extent of all loaded layers (|zoomFullExtent|
-  :sup:`Zoom Full`), to a layer extent (|zoomToLayer| :sup:`Zoom to Layer`)
-  or to the extent of selected features (|zoomToSelected| :sup:`Zoom to Selection`)
+  :sup:`Zoom Full`), to the extent of all the selected layers in the
+  :menuselection:`Layers` panel (|zoomToLayer| :sup:`Zoom to Layer(s)`)
+  or to the extent of the selected features of all the selected layers in the
+  :menuselection:`Layers` panel (|zoomToSelected| :sup:`Zoom to
+  Selection`)
 * you can navigate back/forward through the canvas view history with
   the |zoomLast|:sup:`Zoom Last` and |zoomNext|:sup:`Zoom Next` buttons
   or using the back/forward mouse buttons.
@@ -2094,7 +2096,7 @@ At the top of an additional map canvas, there's a toolbar with the following
 capabilities:
 
 * |zoomFullExtent| :sup:`Zoom Full`, |zoomToSelected| :sup:`Zoom to Selection`
-  and |zoomToLayer| :sup:`Zoom to Layer` to navigate within the view
+  and |zoomToLayer| :sup:`Zoom to Layer(s)` to navigate within the view
 * |showMapTheme| :sup:`Set View Theme` to select the :ref:`map theme <map_themes>`
   to display in the map view. If set to ``(none)``, the view will follow
   the :guilabel:`Layers` panel changes.

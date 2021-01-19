@@ -21,7 +21,7 @@ remember the names and functions of the screen elements.
 ...............................................................................
 
 #. :guilabel:`Save as`
-#. :guilabel:`Zoom to layer`
+#. :guilabel:`Zoom to layer(s)`
 #. :guilabel:`Invert selection`
 #. :guilabel:`Rendering on/off`
 #. :guilabel:`Measure line`

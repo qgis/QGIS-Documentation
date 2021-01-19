@@ -173,7 +173,7 @@ right-click shows a dedicated set of options presented below.
 =================================================================  ==================  =================  =============
 Option                                                             Vector Layer        Raster Layer       Group
 =================================================================  ==================  =================  =============
-|zoomToLayer| :guilabel:`Zoom to Layer/Group`                      |checkbox|          |checkbox|         |checkbox|
+|zoomToLayer| :guilabel:`Zoom to Layer(s)/Group`                   |checkbox|          |checkbox|         |checkbox|
 |zoomToLayer| :guilabel:`Zoom to Selection`                        |checkbox|          \                  \
 |inOverview| :guilabel:`Show in Overview`                          |checkbox|          |checkbox|         \
 :guilabel:`Show Feature Count`                                     |checkbox|          \                  \
@@ -762,8 +762,7 @@ Zooming and Panning
 There are multiple ways to zoom and pan to an area of interest.
 You can use the :guilabel:`Map Navigation` toolbar, the mouse and keyboard on
 the map canvas and also the menu actions from the :menuselection:`View`
-menu and the layers' contextual menu in the :menuselection:`Layers` panel.
-
+menu and the layers' contextual menu in the :guilabel:`Layers` panel.
 
 .. list-table::
    :header-rows: 1
@@ -804,19 +803,22 @@ menu and the layers' contextual menu in the :menuselection:`Layers` panel.
      -
    * - |panToSelected|
      - Pan Map to Selection
-     - Pan the map to the active layer's selected features.
+     - Pan the map to the selected features of all the selected layers in the
+       :guilabel:`Layers` panel.
      - |checkbox|
      - |checkbox|
      -
    * - |zoomToSelected|
      - Zoom To Selection
-     - Zoom to the active layer's selected features.
+     - Zoom to the selected features of all the selected layers in the
+       :guilabel:`Layers` panel.
      - |checkbox|
      - |checkbox|
      - |checkbox|
    * - |zoomToLayer|
-     - Zoom To Layer
-     - Zoom to the active layer's extent.
+     - Zoom To Layer(s)
+     - Zoom to the extent of all the selected layers in the
+       :guilabel:`Layers` panel.
      - |checkbox|
      - |checkbox|
      - |checkbox|
