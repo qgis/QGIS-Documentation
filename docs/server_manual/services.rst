@@ -13,7 +13,7 @@ QGIS Server is able to serve data according to standard protocols as described
 by the **Open Geospatial Consortium (OGC)**:
 
 - WMS 1.1.0 and 1.3.0
-- WFS 1.0.0, 1.1.0, 2.0
+- WFS 1.0.0 and 1.1.0
 - OGC API - Features (WFS3)
 - WCS 1.1.1
 - WMTS 1.0.0
@@ -2020,7 +2020,7 @@ The HTML template language
 The HTML representation uses a set of HTML templates to generate the
 response.
 The template is parsed by a template engine called
-`inja <https://github.com/pantor/inja#tutorial>`_.
+`inja <https://github.com/pantor/inja/>`_.
 The templates can be customized by overriding them (see:
 :ref:`server_wfs3_template_override`).
 The template has access to the same data that are available to the

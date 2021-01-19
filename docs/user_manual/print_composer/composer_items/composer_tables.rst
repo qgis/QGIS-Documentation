@@ -133,14 +133,14 @@ following functionalities (see :numref:`figure_layout_table_ppt`):
 
   In the :guilabel:`Sorting` section you can:
 
-  * Add an attribute to sort the table with. Select an attribute and set the
-    sorting order to **Ascending** or **Descending** and press the |signPlus| button.
-    A new line is added to the sort order list.
-  * select a row in the list and use the |arrowUp| and |arrowDown| buttons to
+  * Add an attribute to sort the table with: press the |signPlus| button and a new empty
+    row is added. Insert a field or an expression in the :guilabel:`Attribute` column and
+    set the :guilabel:`Sort order` to **Ascending** or **Descending**.
+  * Select a row in the list and use the |arrowUp| and |arrowDown| buttons to
     change the sort priority on attribute level. Selecting a cell in the
     :guilabel:`Sort Order` column helps you change the sorting order of the
     attribute field.
-  * use the |signMinus| button to remove an attribute from the sort order list.
+  * Use the |signMinus| button to remove an attribute from the sorting list.
 
 
 Feature filtering
@@ -234,6 +234,9 @@ the following functionalities (see :numref:`figure_layout_table_appearance`):
   a column is  smaller than its content's length. It can be **Wrap text** or
   **Truncate text**.
 
+.. note:: More properties of the attribute table item are described in the
+   :ref:`tables_common_properties` section.
+
 .. _layout_fixed_table_item:
 
 The fixed table item
@@ -304,6 +307,11 @@ The :guilabel:`Appearance` group of the fixed table provides the following funct
   a column is  smaller than its content's length. It can be **Wrap text** or
   **Truncate text**.
 
+.. note:: More properties of the fixed table item are described in the
+   :ref:`tables_common_properties` section.
+
+.. _tables_common_properties:
+
 Tables common functionalities
 -----------------------------
 
@@ -340,8 +348,12 @@ provides the following functionalities (see :numref:`figure_layout_table_fonts`)
 
    Attribute table Fonts and text styling Group
 
-* You can define :guilabel:`Font` and :guilabel:`Color` for :guilabel:`Table
-  heading` and :guilabel:`Table contents`, using font and color selector widgets.
+* You can define :guilabel:`Font` properties for :guilabel:`Table heading` and
+  :guilabel:`Table contents`, using the advanced :ref:`text settings <text_format>`
+  widget (with buffer, shadow, paint effects, transparence, background, coloring, ...).
+  Note that these changes do not affect the cells that have custom font assigned,
+  either from the :guilabel:`Appearance` section or the :guilabel:`Table Designer`
+  dialog. Only cells with the default rendering are overwritten. 
 * For :guilabel:`Table heading` you can additionally set the :guilabel:`Alignment`
   to ``Follow column alignment`` or override this setting by choosing ``Left``,
   ``Center`` or ``Right``. The column alignment is set using the :guilabel:`Select

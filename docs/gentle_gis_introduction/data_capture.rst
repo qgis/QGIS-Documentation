@@ -419,11 +419,8 @@ then fill in all the additional information you want to record.
 Further reading
 ===============
 
-**Website** http://www.k12science.org/curriculum/waterproj/S00project/miami2000/miamiriverfinal/
---- A school project to assess water quality in their local river.
-
-The QGIS User Guide also has more detailed information on digitising vector data
-in QGIS.
+The QGIS User Guide has more detailed information on :ref:`digitising vector data
+<editingvector>` in QGIS.
 
 What's next?
 ============

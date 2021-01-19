@@ -44,7 +44,7 @@ If you get the following output, the server is correctly installed
 
 .. code-block::
 
-	  QFSFileEngine::open: No file name specified
+    QFSFileEngine::open: No file name specified
     Warning 1: Unable to find driver ECW to unload from GDAL_SKIP environment variable.
     Warning 1: Unable to find driver ECW to unload from GDAL_SKIP environment variable.
     Warning 1: Unable to find driver JP2ECW to unload from GDAL_SKIP environment variable.
@@ -922,6 +922,44 @@ For SVG annotations, you will need either to set the project to save absolute
 paths (in the :guilabel:`General` menu of the
 :menuselection:`Project --> Properties...` dialog) or to manually modify
 the path to the SVG image so that it represents a valid relative path.
+
+
+Integration with third parties
+==============================
+
+QGIS Server provides standard OGC web services like `WMS, WFS, etc. <https://www.ogc.org/docs/is>`_
+thus it can be used by a wide variety of end user tools.
+
+Integration with QGIS Desktop
+-----------------------------
+
+QGIS Desktop is the map designer where QGIS Server is the map server. The maps or
+QGIS projects will be served by the QGIS Server to provide OGC standards. These QGIS
+projects can either be files or entries in a database (by using
+:menuselection:`Project --> Save to --> PostgreSQL` in QGIS Desktop).
+
+Furthermore, dedicated update workflow must be established to refresh a project used
+by a QGIS Server (ie. copy project files into server location and restart QGIS
+Server). For now, automated processes (as server reloading over message queue
+service) are not implemented yet.
+
+
+Integration with MapProxy
+-------------------------
+
+`MapProxy <https://mapproxy.org/>`_ is a tile cache server and as it can read and
+serve any WMS/WMTS map server, it can be directly connected to QGIS server web
+services and improve end user experience.
+
+
+Integration with QWC2
+---------------------
+
+`QWC2 <https://github.com/qgis/qwc2>`_ is a responsive web application dedicated to
+QGIS Server. It helps you to build a highly customized map viewer with layer
+selection, feature info, etc.. Also many plugins are available like authentication or
+print service, the full list is available is this `repository
+<https://github.com/qwc-services>`_.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE

@@ -226,6 +226,12 @@ To export a layout as PDF:
      the rendering quality is decreased, AND there are issues with rendering when
      certain text settings like buffers are in place. That’s why exporting as
      paths is recommended.
+   * Control the PDF :guilabel:`Image compression` using:
+   
+     * :guilabel:`Lossy (JPEG)`, which is the default compression mode
+     * or :guilabel:`Lossless`, which creates bigger files in most cases, but is
+       much more suitable for printing outputs or for post-production in external
+       applications (requires Qt 5.13 or later).
    * |unchecked| :guilabel:`Create Geospatial PDF (GeoPDF)`:
      Generate a georeferenced PDF file (requires GDAL version 3 or later).
    * |unchecked| :guilabel:`Disable tiled raster layer exports`: When exporting

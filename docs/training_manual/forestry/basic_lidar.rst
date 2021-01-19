@@ -176,7 +176,7 @@ soil drains that have been dug in the forests.
 
 Using LiDAR data to get a DEM, specially in forested areas, gives good results
 with not much effort. You could also use ready LiDAR derived DEMs or other
-sources like the `SRTM 9m resolution DEMs <http://srtm.csi.cgiar.org/srtmdata/>`_.
+sources like the `SRTM 9m resolution DEMs <https://srtm.csi.cgiar.org/srtmdata/>`_.
 Either way, you can use them to create a hillshade raster to use in your map
 presentations.
 

@@ -110,11 +110,6 @@ several ways to define these variables. This is fully described in
      - false
      - All
 
-   * - MAX_CACHE_LAYERS
-     - Specify the maximum number of cached layers (default: ``100``).
-     - 100
-     - All
-
    * - QGIS_PLUGINPATH
      - Useful if you are using Python plugins for the server, this sets the folder
        that is searched for Python plugins.

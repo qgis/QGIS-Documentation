@@ -224,7 +224,7 @@ Geometry Cleaning
 -------------------------------------------------------------------------------
 
 You can get more information for this topic in `this blog entry
-<https://linfiniti.com/?s=cleangeometry>`_.
+<https://gisforthought.com/projects/postgis_tutorial/validity.html>`_.
 
 Differences between tables
 -------------------------------------------------------------------------------
