@@ -50,7 +50,7 @@ and update the whole QGIS documentation.
    "Paolo Corti", "Tudor Bărăscu", "Maning Sambale",  "Claudia A. Engel", "Yoichi Kayama"
    "Otto Dassau", "Denis Rouzaud", "Nick Bearman", "embelding", "ajazepk"
    "Ramon", "Andrei", "zstadler",  "icephale", "Rosa Aguilar"
-
+   "Patrice Pineault"
 
 
 .. index:: 
