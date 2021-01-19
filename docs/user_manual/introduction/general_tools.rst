@@ -843,7 +843,7 @@ menu and the layers' contextual menu in the :menuselection:`Layers` panel.
      -
      - |checkbox|
      - |checkbox|
-     -
+     - |checkbox|
 
 A :guilabel:`Zoom factor` can be set under the
 :menuselection:`Settings -->` |options| :menuselection:`Options --> Map
