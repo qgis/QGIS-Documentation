@@ -291,7 +291,7 @@ Further reading
 * DeMers, Michael N. (2005). Fundamentals of Geographic Information Systems. 3rd
   Edition. Wiley. ISBN: 9814126195
 
-**Website**: https://en.wikipedia.org/wiki/Scale_(map)
+**Website**: `Scale (map) <https://en.wikipedia.org/wiki/Scale_(map)>`_
 
 The QGIS User Guide also has more detailed information on map production provided
 in QGIS.

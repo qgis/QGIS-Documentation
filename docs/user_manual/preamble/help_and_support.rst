@@ -83,7 +83,7 @@ channel on irc.freenode.net. Please wait for a response to your
 question, as many folks on the channel are doing other things and it
 may take a while for them to notice your question. If you missed a
 discussion on IRC, not a problem! We log all discussion, so you can
-easily catch up. Just go to https://qgis.org/irclogs and read the
+easily catch up. Just go to http://irclogs.geoapt.com/qgis/ and read the
 IRC-logs.
 
 Commercial support
@@ -120,7 +120,7 @@ Blog
 ====
 
 The QGIS community also runs a weblog at
-https://planet.qgis.org/planet/, which has some interesting articles
+https://plugins.qgis.org/planet/, which has some interesting articles
 for users and developers.
 Many other QGIS blogs exist, and you are invited to contribute
 with your own QGIS blog!

@@ -493,7 +493,7 @@ the same technique?
 Further reading
 ===============
 
-**Website:** https://en.wikipedia.org/wiki/Cartography#Map_symbology
+**Website:** https://en.wikipedia.org/wiki/Cartography
 
 The QGIS User Guide also has more detailed information on working with attribute
 data and symbology in QGIS.

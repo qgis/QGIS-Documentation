@@ -295,17 +295,17 @@ Installation
 
 If you have a **Docker Desktop** installation, using Kubernetes (aka
 k8s) is pretty straight forward:
-`enable k8s <https://docs.docker.com/get-started/orchestration/#enable-Kubernetes>`_. 
+`enable k8s <https://docs.docker.com/get-started/orchestration/#enable-kubernetes>`_.
 
 If not, follow the
-`minikube tutorial <https://Kubernetes.io/docs/tutorials/hello-minikube/>`_
+`minikube tutorial <https://kubernetes.io/docs/tutorials/hello-minikube/>`_
 or
-`microk8s for Ubuntu <https://ubuntu.com/tutorials/install-a-local-Kubernetes-with-microk8s>`_.
+`microk8s for Ubuntu <https://ubuntu.com/tutorials/install-a-local-kubernetes-with-microk8s>`_.
 
 As Kubernetes installation can be really complex, we will only focus
 on aspects used by this demo.
 For further / deeper information, check the
-`official documentation <https://Kubernetes.io/docs/home/>`_. 
+`official documentation <https://kubernetes.io/docs/home/>`_.
 
 microk8s
 """"""""
