@@ -762,64 +762,88 @@ Zooming and Panning
 There are multiple ways to zoom and pan to an area of interest.
 You can use the :guilabel:`Map Navigation` toolbar, the mouse and keyboard on
 the map canvas and also the menu actions from the :menuselection:`View`
-menu and the :menuselection:`Layers` panel contextual menu.
+menu and the layers' contextual menu in the :menuselection:`Layers` panel.
+
 
 .. list-table::
    :header-rows: 1
-   :widths: 15 15 15 55
+   :widths: 5 15 65 5 5 5
    :class: longtable
 
-   * - Map Navigation Toolbar
-     - View Menu
-     - Layer Panel Contextual Menu
+   * - Icon
+     - Label
      - Usage
-   * - |pan| :sup:`Pan`
-     - :menuselection:`View --> Pan Map`
-     -
+     - View menu
+     - Map Navigation Toolbar
+     - Layer Contextual Menu
+   * - |pan|
+     - Pan Map
      - When activated, left click anywhere on the map canvas to pan the map at
        the cursor position. You can also pan the map by holding down the left
        mouse button and dragging the map canvas.
-   * - |zoomIn| :sup:`Zoom In`
-     - :menuselection:`View --> Zoom In`
+     - |checkbox|
+     - |checkbox|
      -
-     - When activated, left click anywhere on the map canvas to zoom in or zoom
-       out one level. The mouse cursor position will be the center of the
-       zoomed area of interest. You can also zoom in to an area (or zoom out)
+   * - |zoomIn|
+     - Zoom In
+     - When activated, left click anywhere on the map canvas to zoom in one
+       level. The mouse cursor position will be the center of the
+       zoomed area of interest. You can also zoom in to an area
        by dragging a rectangle on the map canvas with the left mouse button.
-   * - |zoomOut| :sup:`Zoom Out`
-     - :menuselection:`View --> Zoom Out`
+     - |checkbox|
+     - |checkbox|
      -
-     - When activated, left click anywhere on the map canvas to zoom in or zoom
-       out one level. The mouse cursor position will be the center of the
-       zoomed area of interest. You can also zoom in to an area (or zoom out)
+   * - |zoomOut|
+     - Zoom Out
+     - When activated, left click anywhere on the map canvas to zoom out one
+       level. The mouse cursor position will be the center of the
+       zoomed area of interest. You can also zoom out from an area
        by dragging a rectangle on the map canvas with the left mouse button.
-   * - |panToSelected| :sup:`Pan Map to Selection`
-     - :menuselection:`View --> Pan Map to Selection`
+     - |checkbox|
+     - |checkbox|
      -
-     - Pan the map to the selected features of all the selected layers in the
-       :menuselection:`Layers` panel.
-   * - |zoomToSelected| :sup:`Zoom to Selection`
-     - :menuselection:`View --> Zoom To Selection`
-     - :menuselection:`Layers --> Zoom To Selection`
-     - Zoom to the selected features of all the selected layers in the
-       :menuselection:`Layers` panel.
-   * - |zoomToLayer| :sup:`Zoom to Layer(s)`
-     - :menuselection:`View --> Zoom To Layer(s)`
-     - :menuselection:`Layers --> Zoom to Layers(s)`
-     - Zoom to the extent of all the selected layers in the
-       :menuselection:`Layers` panel.
-   * - |zoomFull| :sup:`Zoom Full`
-     - :menuselection:`View --> Zoom Full`
+   * - |panToSelected|
+     - Pan Map to Selection
+     - Pan the map to the active layer's selected features.
+     - |checkbox|
+     - |checkbox|
      -
-     - Zoom to the extent of all the visible layers in the map.
-   * - |zoomLast| :sup:`Zoom Last`
-     - :menuselection:`View --> Zoom Last`
+   * - |zoomToSelected|
+     - Zoom To Selection
+     - Zoom to the active layer's selected features.
+     - |checkbox|
+     - |checkbox|
+     - |checkbox|
+   * - |zoomToLayer|
+     - Zoom To Layer
+     - Zoom to the active layer's extent.
+     - |checkbox|
+     - |checkbox|
+     - |checkbox|
+   * - |zoomFull|
+     - Zoom Full
+     - Zoom to the extent of all the layers in the project.
+     - |checkbox|
+     - |checkbox|
      -
+   * - |zoomLast|
+     - Zoom Last
      - Zoom the map to the previous extent in history.
-   * - |zoomNext| :sup:`Zoom Next`
-     - :menuselection:`View --> Zoom Next`
+     - |checkbox|
+     - |checkbox|
      -
+   * - |zoomNext|
+     - Zoom Next
      - Zoom the map to the next extent in history.
+     - |checkbox|
+     - |checkbox|
+     -
+   * - |zoomToNativeResolution|
+     - Zoom to Native Resolution
+     -
+     - |checkbox|
+     - |checkbox|
+     -
 
 A :guilabel:`Zoom factor` can be set under the
 :menuselection:`Settings -->` |options| :menuselection:`Options --> Map
@@ -2765,6 +2789,8 @@ The values presented in the varying size assistant above will set the size
 .. |zoomNext| image:: /static/common/mActionZoomNext.png
    :width: 1.5em
 .. |zoomToLayer| image:: /static/common/mActionZoomToLayer.png
+   :width: 1.5em
+.. |zoomToNativeResolution| image:: /static/common/mActionZoomActual.png
    :width: 1.5em
 .. |zoomToSelected| image:: /static/common/mActionZoomToSelected.png
    :width: 1.5em
