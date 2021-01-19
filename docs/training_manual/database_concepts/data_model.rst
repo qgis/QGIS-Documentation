@@ -11,11 +11,8 @@ implement our example database.
 Install PostgreSQL
 -------------------------------------------------------------------------------
 
-.. note:: Although outside the scope of this document, Mac users can install
-  PostgreSQL using
-  `Homebrew <www.russbrooks.com/2010/11/25/install-postgresql-9-on-os-x>`_.
-  Windows users can use the
-  `graphical installer <https://www.postgresql.org/download/windows/>`_.
+.. note:: You can find PostGreSQL packages and installation instructions for
+  your operating system at https://www.postgresql.org/download/.
   Please note that the documentation will assume users are running QGIS under
   Ubuntu.
 

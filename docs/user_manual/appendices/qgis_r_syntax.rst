@@ -6,7 +6,8 @@
 Appendix D: QGIS R script syntax
 ********************************
 
-Contributed by Matteo Ghetta - funded by `Scuola Superiore Sant'Anna <http://www.santannapisa.it/it/istituto/scienze-della-vita/agricultural-water-management>`_
+Contributed by Matteo Ghetta - funded by `Scuola Superiore Sant'Anna
+<https://www.santannapisa.it/en/istituto/scienze-della-vita/istituto-di-scienze-della-vita>`_
 
 Writing R scripts in Processing is a bit tricky because of the
 special syntax.

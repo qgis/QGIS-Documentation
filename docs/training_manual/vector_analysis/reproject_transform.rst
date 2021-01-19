@@ -227,8 +227,7 @@ represented accurately.
 Materials for the *Advanced* section of this lesson were taken from `this
 article <https://anitagraser.com/2012/03/18/beautiful-global-projections-adding-custom-projections-to-qgis/>`_.
 
-Further information on Coordinate Reference Systems is available `here
-<https://linfiniti.com/dla/worksheets/7_CRS.pdf>`_.
+Read further information on :ref:`Coordinate Reference Systems <gis_coord_ref_system>`.
 
 |WN|
 ----------------------------------------------------------------------

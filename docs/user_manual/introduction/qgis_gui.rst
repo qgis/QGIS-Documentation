@@ -2414,7 +2414,7 @@ Terrain
     * a :guilabel:`Flat terrain`
     * a loaded :guilabel:`DEM (Raster Layer)`
     * an :guilabel:`Online` service, loading `elevation tiles
-      <http://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png>`_
+      <http://s3.amazonaws.com/elevation-tiles-prod/>`_
       produced by Mapzen tools -- more details at https://registry.opendata.aws/terrain-tiles/
     * a loaded :guilabel:`Mesh` dataset
   * :guilabel:`Elevation`: Raster or mesh layer to be used for generation of
