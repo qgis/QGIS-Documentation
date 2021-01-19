@@ -840,7 +840,8 @@ menu and the layers' contextual menu in the :menuselection:`Layers` panel.
      -
    * - |zoomToNativeResolution|
      - Zoom to Native Resolution
-     -
+     - Zoom the map to a level where one pixel of the active raster layer covers
+       one screen pixel.
      - |checkbox|
      - |checkbox|
      - |checkbox|
