@@ -123,7 +123,7 @@ symbology:
 
    #. Click :guilabel:`OK`.
 #. Now right-click on one of your own layers in the :guilabel:`Layers` panel and
-   click :guilabel:`Zoom to layer extent`. You should see the |majorUrbanName|
+   click :guilabel:`Zoom to layer(s)`. You should see the |majorUrbanName|
    area:
 
    .. figure:: img/wms_result.png
