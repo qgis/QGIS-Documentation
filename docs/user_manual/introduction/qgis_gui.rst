@@ -680,27 +680,27 @@ actions like:
    * - |zoomFullExtent| :guilabel:`Zoom Full`
      - :kbd:`Ctrl+Shift+F`
      - :guilabel:`Map Navigation`
-     -
+     - :ref:`zoom_pan`
    * - |zoomToSelected| :guilabel:`Zoom To Selection`
      - :kbd:`Ctrl+J`
      - :guilabel:`Map Navigation`
-     -
+     - :ref:`zoom_pan`
    * - |zoomToLayer| :guilabel:`Zoom To Layer`
      -
      - :guilabel:`Map Navigation`
-     -
+     - :ref:`zoom_pan`
    * - |zoomActual| :guilabel:`Zoom To Native Resolution (100%)`
      -
      - :guilabel:`Map Navigation`
-     -
+     - :ref:`zoom_pan`
    * - |zoomLast| :guilabel:`Zoom Last`
      -
      - :guilabel:`Map Navigation`
-     -
+     - :ref:`zoom_pan`
    * - |zoomNext| :guilabel:`Zoom Next`
      -
      - :guilabel:`Map Navigation`
-     -
+     - :ref:`zoom_pan`
    * - :menuselection:`Decorations -->`
      - :kbd:`Alt+V` + :kbd:`D`
      -
