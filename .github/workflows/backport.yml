@@ -1,6 +1,6 @@
 name: Backport
 on:
-  pull_request:
+  pull_request_target:
     types:
       - closed
       - labeled
@@ -11,9 +11,7 @@ jobs:
     name: Backport
     steps:
       - name: Backport Bot
-        uses: Gaurav0/backport@v1.0.26
+        id: backport
+        uses: m-kuhn/backport@v1.1.1
         with:
-          bot_username: qgis-bot
-          bot_token: ddbdec32940df79f1adf2369b4b10f10b5a66f65
-          bot_token_key: a1b2c3d47311f8e29e204f85a81b4df4a44e252c
           github_token: ${{ secrets.GITHUB_TOKEN }}
