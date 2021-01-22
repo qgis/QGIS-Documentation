@@ -1150,8 +1150,8 @@ Outputs
    * - **Flattened layer**
      - ``OUTPUT``
      - [same as input]
-     - A master feature 
-       containing all the attributes for the related features
+     - A layer containing master features 
+       with all the attributes for the related features
 
 Python code
 ...........
