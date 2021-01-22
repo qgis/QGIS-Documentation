@@ -1077,9 +1077,10 @@ The following parameters can be entered:
 
 * :guilabel:`Host`: The name of the database host.
 
-* :guilabel:`Identifier`: Identifies the instance to connect to on the host. Can
-  be either :guilabel:`Instance Number` or :guilabel:`Port Number`. Instance
-  numbers consist of two digits, port numbers are in the range from 1 to 65,535.
+* :guilabel:`Identifier`: Identifies the instance to connect to on the host.
+  This can be either :guilabel:`Instance Number` or :guilabel:`Port Number`.
+  Instance numbers consist of two digits, port numbers are in the range from 1
+  to 65,535.
 
 * :guilabel:`Mode`: Specifies the mode in which the SAP HANA instance runs. This
   setting is only taken into account if :guilabel:`Identifier` is set to
@@ -1091,7 +1092,7 @@ The following parameters can be entered:
   QGIS will only search for data in that schema. If this field is left blank,
   QGIS will search for data in all schemas.
 
-* :guilabel:`Authentication`, Basic.
+* :menuselection:`Authentication --> Basic`.
 
   * :guilabel:`User name`: User name used to connect to the database.
   * :guilabel:`Password`: Password used to connect to the database.
@@ -1133,7 +1134,7 @@ The following parameters can be entered:
 .. tip:: **Connecting to SAP HANA Cloud**
 
    If you'd like to connect to an SAP HANA Cloud instance, you usually must set
-   :guilabel:`Port Number` to ``443`` and you must enable
+   :guilabel:`Port Number` to ``443`` and enable
    :guilabel:`Enable TLS/SSL encryption`.
 
 .. _vector_loading_database:
