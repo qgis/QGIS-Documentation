@@ -1989,12 +1989,32 @@ Every toolbar can be moved around according to your needs.
 Additionally, they can be switched off using the right mouse button
 context menu, or by holding the mouse over the toolbars.
 
-.. _figure_toolbars:
+Available toolbars are:
 
-.. figure:: img/toolbars.png
-   :align: center
+.. csv-table::
+   :header: "Name", "Main Reference for tools"
+   :widths: auto
 
-   The Toolbars menu
+   ":guilabel:`Advanced Digitizing Toolbar`", ":ref:`sec_advanced_edit`"
+   ":guilabel:`Attributes`", ":ref:`sec_attribute_table`, :ref:`general_tools`"
+   ":guilabel:`Data Source Manager`", ":ref:`manage_data_source`"
+   ":guilabel:`Database`", ":ref:`dbmanager`"
+   ":guilabel:`Digitizing`", ":ref:`sec_edit_existing_layer`"
+   ":guilabel:`Help`"
+   ":guilabel:`Label`", ":ref:`label_toolbar`"
+   ":guilabel:`Manage Layers`", ":ref:`opening_data`"
+   ":guilabel:`Map Navigation`", ":ref:`working_canvas`"
+   ":guilabel:`Plugins`", ":ref:`plugins.index`"
+   ":guilabel:`Project`", ":ref:`project_files`, :ref:`label_printlayout`, :ref:`vector_symbol_library`"
+   ":guilabel:`Raster`", ":ref:`plugins.index`"
+   ":guilabel:`Selection`",":ref:`sec_selection`"
+   ":guilabel:`Shape digitizing`", ":ref:`shape_edit`"
+   ":guilabel:`Snapping`",":ref:`snapping_tolerance`"
+   ":guilabel:`Vector`", ":ref:`plugins.index`"
+   ":guilabel:`Web`", ":ref:`plugins.index`, :ref:`metasearch`"
+
+.. note:: Third-party plugins can extend the default toolbar with their own tools
+ or provide their own toolbar.
 
 .. index::
    single: Toolbars; Layout
@@ -2019,13 +2039,6 @@ QGIS provides many panels.
 Panels are special widgets that you can interact with (selecting
 options, checking boxes, filling values...) to perform more complex
 tasks.
-
-.. _figure_panels:
-
-.. figure:: img/panels.png
-   :align: center
-
-   The Panels menu
 
 Below is a list of the default panels provided by QGIS:
 
