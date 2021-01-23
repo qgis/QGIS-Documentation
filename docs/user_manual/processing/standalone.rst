@@ -28,7 +28,7 @@ Specify the name of the algorithm or a path to a model as first parameter.
 
 The ``run`` command also supports further parameters.
 
- - `--json` will format stdout output in a JSON structured way.
+ - ``--json`` will format stdout output in a JSON structured way.
  - ``--ellipsoid`` will set the ellipsoid to the specified one.
  - ``--distance_units`` will use the specified distance units.
  - ``--area_units`` will use the specified area units.
