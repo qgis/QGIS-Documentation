@@ -230,7 +230,7 @@ some example scripts in the :guilabel:`Processing Toolbox`:
   the packages it depends on) for you, using the
   :guilabel:`Package repository` specified in
   :menuselection:`Provider --> R` in the Processing options.
-  The default is `http://cran.at.r-project.org/`.
+  The default is `https://cran.at.r-project.org/`.
   Installing may take some time...
 * :guilabel:`test_sp` can be used to check if the R package ``sp`` is
   installed.
