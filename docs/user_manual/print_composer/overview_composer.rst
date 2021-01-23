@@ -400,8 +400,10 @@ in :ref:`layout_items` chapter.
  Tool                                                      Toolbar                    Reference
 ========================================================= ======================== =====================================
  |addMap| :guilabel:`Add Map`                              :guilabel:`Toolbox`        :ref:`layout_map_item`
+ |add3DMap| :guilabel:`Add 3D Map`                         :guilabel:`Toolbox`        :ref:`layout_map3d_item`
  |addImage| :guilabel:`Add Picture`                        :guilabel:`Toolbox`        :ref:`layout_picture_item`
  |label| :guilabel:`Add Label`                             :guilabel:`Toolbox`        :ref:`layout_label_item`
+ :menuselection:`Add Dynamic Text -->`                                                :ref:`The Label Item <layout_label_main_properties>`
  |addLegend| :guilabel:`Add Legend`                        :guilabel:`Toolbox`        :ref:`layout_legend_item`
  |scaleBar| :guilabel:`Add Scale Bar`                      :guilabel:`Toolbox`        :ref:`layout_scalebar_item`
  |northArrow| :guilabel:`Add North Arrow`                  :guilabel:`Toolbox`        :ref:`layout_northarrow_item`
@@ -417,7 +419,6 @@ in :ref:`layout_items` chapter.
  |addHtml| :guilabel:`Add HTML`                            :guilabel:`Toolbox`        :ref:`layout_html_item`
  |addTable| :guilabel:`Add Attribute Table`                :guilabel:`Toolbox`        :ref:`layout_attribute_table_item`
  |addManualTable| :guilabel:`Add Fixed Table`              :guilabel:`Toolbox`        :ref:`layout_fixed_table_item`
- |add3DMap| :guilabel:`Add 3D Map`                         :guilabel:`Toolbox`        :ref:`layout_map3d_item`
 ========================================================= ======================== =====================================
 
 
