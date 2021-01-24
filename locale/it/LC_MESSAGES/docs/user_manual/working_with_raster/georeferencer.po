@@ -1,24 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
-# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2020
+# Harrissou Sant-anna, 2020
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation testing\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-22 21:43+0200\n"
-"PO-Revision-Date: 2020-09-22 19:54+0000\n"
-"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2020\n"
+"POT-Creation-Date: 2021-01-12 10:14+0000\n"
+"PO-Revision-Date: 2020-12-24 11:59+0000\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2021\n"
 "Language-Team: Italian (https://www.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -26,16 +28,35 @@ msgstr ""
 msgid "Georeferencer"
 msgstr "Georeferenziatore"
 
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:13
+msgid ""
+"The |georefRun| Georeferencer is a tool for generating world files for "
+"rasters. It allows you to reference rasters to geographic or projected "
+"coordinate systems by creating a new GeoTiff or by adding a world file to "
+"the existing image. The basic approach to georeferencing a raster is to "
+"locate points on the raster for which you can accurately determine "
+"coordinates."
+msgstr ""
+"Il |georefRun| Georeferenziatore è uno strumento per generare world file per"
+" i raster. Ti permette di riferire i raster a sistemi di coordinate "
+"geografiche o proiettate creando un nuovo GeoTiff o aggiungendo un world "
+"file all'immagine esistente. L'approccio di base per la georeferenziazione "
+"di un raster consiste nel localizzare punti sul raster per i quali puoi "
+"determinare accuratamente le coordinate. Georeferencer is a tool for "
+"generating world files for rasters. It allows you to reference rasters to "
+"geographic or projected coordinate systems by creating a new GeoTiff or by "
+"adding a world file to the existing image. The basic approach to "
+"georeferencing a raster is to locate points on the raster for which you can "
+"accurately determine coordinates."
+
 #: ../../docs/user_manual/working_with_raster/georeferencer.rst:19
 msgid "**Features**"
 msgstr "**Funzioni**"
 
 #: ../../docs/user_manual/working_with_raster/georeferencer.rst:27
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:27
 msgid "Icon"
 msgstr "Icona"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:27
 #: ../../docs/user_manual/working_with_raster/georeferencer.rst:27
 msgid "Purpose"
 msgstr "Azione"
@@ -233,6 +254,32 @@ msgstr ""
 "In questo caso, puoi inserire le coordinate facendo click sul dataset di "
 "riferimento caricato nell'area della mappa QGIS."
 
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:67
+msgid ""
+"The usual procedure for georeferencing an image involves selecting multiple "
+"points on the raster, specifying their coordinates, and choosing a relevant "
+"transformation type. Based on the input parameters and data, the "
+"Georeferencer will compute the world file parameters. The more coordinates "
+"you provide, the better the result will be."
+msgstr ""
+"La procedura usuale per la georeferenziazione di un'immagine comporta la "
+"selezione di più punti sul raster, specificando le loro coordinate, e "
+"scegliendo un tipo di trasformazione appropriato. Sulla base dei parametri e"
+" dei dati di input, il georeferenziatore calcolerà i parametri del world "
+"file. Più coordinate si forniscono, migliore sarà il risultato."
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:73
+msgid ""
+"The first step is to start QGIS and click on :menuselection:`Raster -->` "
+"|georefRun| :menuselection:`Georeferencer`, which appears in the QGIS menu "
+"bar. The Georeferencer dialog appears as shown in "
+":numref:`figure_georeferencer_dialog`."
+msgstr ""
+"Il primo passo è avviare QGIS e cliccare su :menuselection:`Raster -->` "
+"|georefRun| :menuselection:`Georeferenziatore...`, che appare nella barra "
+"dei menu di QGIS. La finestra di dialogo del georeferenziatore appare come "
+"mostrato in :numref:`figure_georeferencer_dialog`."
+
 #: ../../docs/user_manual/working_with_raster/georeferencer.rst:77
 msgid ""
 "For this example, we are using a topo sheet of South Dakota from SDGS. It "
@@ -244,6 +291,10 @@ msgstr ""
 "SDGS. Può essere successivamente visualizzata insieme ai dati della cartella"
 " GRASS :file:`spearfish60`. Puoi scaricare la carta topografica da qui: "
 "https://grass.osgeo.org/sampledata/spearfish_toposheet.tar.tar.gz."
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:87
+msgid "Georeferencer Dialog"
+msgstr "Finestra di dialogo Georeferenziatore"
 
 #: ../../docs/user_manual/working_with_raster/georeferencer.rst:93
 msgid "Entering ground control points (GCPs)"
@@ -265,13 +316,13 @@ msgstr ""
 msgid ""
 "Using the |addGCPPoint| :sup:`Add Point` button, add points to the main "
 "working area and enter their coordinates (see Figure "
-"figure_georeferencer_add_points_). For this procedure you have three "
-"options:"
+":numref:`figure_georeferencer_add_points`). For this procedure you have "
+"three options:"
 msgstr ""
-"Utilizzando il pulsante |addGCPPoint| :sup:`Aggiungi punto`, aggiungi punti "
-"all’interno dell’area di lavoro principale e insesci le rispettive "
-"coordinate (vedi la figura figure_georeferencer_add_points_). Per effettuare"
-" questa procedura, hai tre opzioni:"
+"Usando il pulsante |addGCPPoint| :sup:`Aggiunge un nuovo punto`, aggiungi "
+"punti all'area di lavoro principale e inserisci le loro coordinate (vedi "
+"Figura :numref:`figure_georeferencer_add_points`). Per questa procedura hai "
+"tre opzioni:"
 
 #: ../../docs/user_manual/working_with_raster/georeferencer.rst:103
 msgid ""
@@ -298,9 +349,40 @@ msgstr ""
 "Utilizzando il pulsante |moveGCPPoint|, puoi spostare i GCP in entrambe le "
 "finestre, nel caso in cui fossero posizionati in maniera errata."
 
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:111
+msgid ""
+"Continue entering points. You should have at least four points, and the more"
+" coordinates you can provide, the better the result will be. There are "
+"additional tools for zooming and panning the working area in order to locate"
+" a relevant set of GCP points."
+msgstr ""
+"Continua a inserire i punti. Dovresti avere almeno quattro punti, e più "
+"coordinate puoi fornire, migliore sarà il risultato. Ci sono strumenti "
+"aggiuntivi per lo zoom e la panoramica dell'area di lavoro al fine di "
+"localizzare un numero di punti GCP appropriato."
+
 #: ../../docs/user_manual/working_with_raster/georeferencer.rst:121
 msgid "Add points to the raster image"
 msgstr "Aggiungi punti all'immagine raster"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:124
+msgid ""
+"The points that are added to the map will be stored in a separate text file "
+"(:file:`[filename].points`) usually together with the raster image. This "
+"allows us to reopen the Georeferencer at a later date and add new points or "
+"delete existing ones to optimize the result. The points file contains values"
+" of the form: ``mapX, mapY, pixelX, pixelY``. You can use the "
+"|loadGCPpoints| :sup:`Load GCP points` and |saveGCPPointsAs| :sup:`Save GCP "
+"points as` buttons to manage the files."
+msgstr ""
+"I punti che vengono aggiunti alla mappa saranno memorizzati in un file di "
+"testo separato (:file:`[nome del file].points`) di solito insieme "
+"all'immagine raster. Questo ci permette di riaprire il Georeferenziatore in "
+"un secondo momento e aggiungere nuovi punti o cancellare quelli esistenti "
+"per ottimizzare il risultato. Il file dei punti contiene valori della forma:"
+" ``mapX, mapY, pixelX, pixelY``. Puoi usare i pulsanti |loadGCPpoints| "
+":sup:`Carica punti GCP` e |saveGCPPointsAs| :sup:`Salva punti GCP come` per "
+"gestire i file."
 
 #: ../../docs/user_manual/working_with_raster/georeferencer.rst:135
 msgid "Defining the transformation settings"
@@ -587,3 +669,25 @@ msgstr ""
 "Dopo aver acquisito tutti i GCP e definite tutte le impostazioni di "
 "trasformazione, basta premere il pulsante |start| :sup:`Inizia la "
 "georeferenziazione` per creare il nuovo raster georeferenziato."
+
+#~ msgid ""
+#~ "The first step is to start QGIS and click on :menuselection:`Raster -->` "
+#~ "|georefRun| :menuselection:`Georeferencer`, which appears in the QGIS menu "
+#~ "bar. The Georeferencer dialog appears as shown in "
+#~ "figure_georeferencer_dialog_."
+#~ msgstr ""
+#~ "Il primo passo è avviare QGIS e cliccare su :menuselection:`Raster -->` "
+#~ "|georefRun| :menuselection:`Georeferenziatore...`, che appare nella barra "
+#~ "dei menu di QGIS. La finestra di dialogo del georeferenziatore appare come "
+#~ "mostrato in :numref:`figure_georeferencer_dialog`."
+
+#~ msgid ""
+#~ "Using the |addGCPPoint| :sup:`Add Point` button, add points to the main "
+#~ "working area and enter their coordinates (see Figure "
+#~ "figure_georeferencer_add_points_). For this procedure you have three "
+#~ "options:"
+#~ msgstr ""
+#~ "Utilizzando il pulsante |addGCPPoint| :sup:`Aggiungi punto`, aggiungi punti "
+#~ "all’interno dell’area di lavoro principale e insesci le rispettive "
+#~ "coordinate (vedi la figura figure_georeferencer_add_points_). Per effettuare"
+#~ " questa procedura, hai tre opzioni:"
