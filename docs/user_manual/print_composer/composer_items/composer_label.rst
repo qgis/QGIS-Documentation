@@ -47,17 +47,43 @@ surrounded by ``[%`` and ``%]`` in order to be interpreted as such.
   If you want to update an existing text, you need to select it the part of
   interest beforehand.
 
-You can combine HTML rendering and expressions, leading to e.g. a text like:
+You can combine HTML rendering with expressions, leading to advanced labeling.
+The following code will output :numref:`figure_layout_label_html`:
 
-::
+.. code-block:: css
 
- [% '<b>Check out the new logo for ' || '<a href="https://www.qgis.org" title="Nice logo" target="_blank">QGIS ' ||@qgis_short_version || '</a>' || ' : <img src="https://qgis.org/en/_downloads/qgis-icon128.png" alt="QGIS icon"/>' %]
+ <html>
+  <head>
+    <style>
+       /* Define some custom styles, with attribute-based size */
+       name {color:red; font-size: [% ID %]px; font-family: Verdana; text-shadow: grey 1px 0 10px;}
+       use {color:blue;}
+    </style>
+  </head>
 
-which will render:
-**Check out the new logo for** `QGIS 3.0 <https://www.qgis.org>`_ **:** |logo|
+  <body>
+    <!-- Information to display -->
+    <u>Feature Information</u>
+    <ul style="list-style-type:disc">
+      <li>Feature Id: [% ID %]</li>
+      <li>Airport: <name>[% NAME %]</name></li>
+      <li>Main use: <use>[% USE %]</use></li>
+    </ul>
+    Last check: [% concat( format_date( "control_date", 'yyyy-MM-dd'), ' by <b><i>', @user_full_name, '</i></b>' ) %]
 
-.. Todo: it may be nice to provide some screenshot of some funnier/cooler/advanced
- html label in action
+    <!-- Insert an image -->
+    <p align=center><img src="path/to/logos/qgis-logo-made-with-color.svg" alt="QGIS icon" style="width:80px;height:50px;"</p>
+  </body>
+ </html>
+
+.. _figure_layout_label_html:
+
+.. figure:: img/label_htmlexpression.png
+   :align: center
+
+   Leveraging a label with HTML styling
+
+
 
 Appearance
 ----------
