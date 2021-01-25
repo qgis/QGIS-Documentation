@@ -53,7 +53,7 @@ regardless the vector data source.
 However, because of the differences in format specifications
 (GeoPackage, ESRI Shapefile, MapInfo and MicroStation file formats,
 AutoCAD DXF, PostGIS, SpatiaLite, DB2, Oracle Spatial, MSSQL
-Spatial databases, SAP HANA Spatial and many more), QGIS may handle some of
+Spatial, SAP HANA Spatial databases and many more), QGIS may handle some of
 their properties differently.
 Support is provided by the
 `OGR Simple Feature Library <https://gdal.org/drivers/vector/index.html>`_.
@@ -684,9 +684,8 @@ SAP HANA Spatial Layers
 This section contains some details on how QGIS accesses SAP HANA layers. Most of
 the time, QGIS should simply provide you with a list of database tables and
 views that can be loaded, and it will load them on request. However, if you have
-trouble loading a SAP HANA table or view into QGIS, the information below may
-help you understand QGIS messages and give you directions for modifying the
-SAP HANA table or view definition to allow QGIS to load it.
+trouble loading an SAP HANA table or view into QGIS, the information below may
+help you understand the root cause and assist in resolving the issue.
 
 Feature Identification
 ......................
@@ -696,17 +695,17 @@ able to unambiguously identify each feature in a layer. Internally, QGIS uses a
 64-bit signed integer to identify features, whereas the negative range is
 reserved for special purposes.
 
-Therefore, the SAP HANA provider requires a unique key consisting that can be
-mapped to a positive 64-bit integer to fully support QGIS' feature editing
-capabilities. If it is not possible to create such a mapping, you might still
-view the features, but editing might not work.
+Therefore, the SAP HANA provider requires a unique key that can be mapped to a
+positive 64-bit integer to fully support QGIS' feature editing capabilities. If
+it is not possible to create such a mapping, you might still view the features,
+but editing might not work.
 
 Adding tables
 ^^^^^^^^^^^^^
 
 When adding a table as a layer, the SAP HANA provider uses the table's primary
 key to map it to a unique feature id. Therefore, to have full feature editing
-support, you need to add a primary key to your table definition.
+support, you need to have a primary key to your table definition.
 
 The SAP HANA provider supports multi-column primary keys, but if you'd like to
 get the best performance, your primary key should be a single column of type
@@ -725,7 +724,8 @@ must manually provide QGIS with one or more columns that identify a feature. The
 columns can be given by using
 :menuselection:`Layer --> Add Layer --> Add SAP HANA Spatial Layer` and then
 selecting the columns in the :guilabel:`Feature id` column. For best
-performance, the feature id should be a single ``INTEGER`` column.
+performance, the :guilabel:`Feature id` value should be a single ``INTEGER``
+column.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
