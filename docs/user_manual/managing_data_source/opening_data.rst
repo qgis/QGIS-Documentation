@@ -29,8 +29,8 @@ and often write a lot of formats:
   many more...
   Read the complete list of `supported raster formats
   <https://gdal.org/drivers/raster/index.html>`_.
-* Database formats include PostgreSQL/PostGIS, SQLite/SpatiaLite, Oracle, DB2
-  or MSSQL Spatial, MySQL...
+* Database formats include PostgreSQL/PostGIS, SQLite/SpatiaLite, Oracle, DB2,
+  MSSQL Spatial, SAP HANA, MySQL...
 * Web map and data services (WM(T)S, WFS, WCS, CSW, XYZ tiles, ArcGIS
   services, ...) are also handled by QGIS providers.
   See :ref:`working_with_ogc` for more information about some of these.
@@ -155,6 +155,7 @@ hierarchically, and there are several top level entries:
    * |mssql| :guilabel:`MSSQL`
    * |oracle| :guilabel:`Oracle`
    * |db2| :guilabel:`DB2`
+   * |hana| :guilabel:`SAP HANA`
    * |wms| :guilabel:`WMS/WMTS`
    * |vectorTileLayer| :guilabel:`Vector Tiles`
    * |xyz| :guilabel:`XYZ Tiles`
@@ -720,6 +721,8 @@ of them and load their tables:
   :kbd:`Ctrl+Shift+O`
 * |addDb2Layer| :menuselection:`Add DB2 Spatial Layer...` or by typing
   :kbd:`Ctrl+Shift+2`
+* |addHanaLayer| :menuselection:`Add SAP HANA Spatial Layer...` or by typing
+  :kbd:`Ctrl+Shift+G`
 
 These tools are accessible either from the :guilabel:`Manage Layers Toolbar`
 and the :menuselection:`Layer --> Add Layer -->` menu.
@@ -738,7 +741,8 @@ corresponding descriptions at:
 
 * :ref:`create_mssql_connection`;
 * :ref:`create_oracle_connection`;
-* :ref:`create_db2_connection`.
+* :ref:`create_db2_connection`;
+* :ref:`create_hana_connection`.
 
 The first time you use a PostGIS data source, you must create a connection to a
 database that contains the data. Begin by clicking the appropriate button as
@@ -1042,6 +1046,96 @@ In addition to some of the options in :ref:`vector_create_stored_connection`,
 creating a new MSSQL connection dialog proposes you to fill a **Provider/DSN**
 name. You can also display available databases.
 
+.. _create_hana_connection:
+
+Connecting to SAP HANA
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. note:: You require the SAP HANA Client to connect to a SAP HANA database.
+  You can download the SAP HANA Client for your platform at the `SAP Development
+  Tools website <https://tools.hana.ondemand.com/#hanatools>`_.
+
+.. _figure_new_hana_connection:
+
+.. figure:: img/newhanaconnection.png
+   :align: center
+
+   Create a New SAP HANA Connection Dialog
+
+The following parameters can be entered:
+
+* :guilabel:`Name`: A name for this connection.
+
+* :guilabel:`Driver` |win|: The name of the HANA ODBC driver. It is ``HDBODBC``
+  if you are using 64-bit QGIS, ``HDBODBC32`` if you are using 32-bit QGIS. The
+  appropriate driver name is entered automatically.
+
+* :guilabel:`Driver` |nix| |osx|: Either the name under which the SAP HANA ODBC
+  driver has been registered in :file:`/etc/odbcinst.ini` or the full path to the
+  SAP HANA ODBC driver. The SAP HANA Client installer will install the ODBC
+  driver to :file:`/usr/sap/hdbclient/libodbcHDB.so` by default.
+
+* :guilabel:`Host`: The name of the database host.
+
+* :guilabel:`Identifier`: Identifies the instance to connect to on the host.
+  This can be either :guilabel:`Instance Number` or :guilabel:`Port Number`.
+  Instance numbers consist of two digits, port numbers are in the range from 1
+  to 65,535.
+
+* :guilabel:`Mode`: Specifies the mode in which the SAP HANA instance runs. This
+  setting is only taken into account if :guilabel:`Identifier` is set to
+  :guilabel:`Instance Number`. If the database hosts multiple containers, you
+  can either connect to a tenant with the name given at
+  :guilabel:`Tenant database` or you can connect to the system database.
+
+* :guilabel:`Schema`: This parameter is optional. If a schema name is given,
+  QGIS will only search for data in that schema. If this field is left blank,
+  QGIS will search for data in all schemas.
+
+* :menuselection:`Authentication --> Basic`.
+
+  * :guilabel:`User name`: User name used to connect to the database.
+  * :guilabel:`Password`: Password used to connect to the database.
+
+* :guilabel:`SSL Settings`
+
+  * |checkbox| :guilabel:`Enable TLS/SSL encryption`: Enables TLS 1.1 - TLS1.2
+    encryption. The server will choose the highest available.
+  * :guilabel:`Provider`: Specifies the cryptographic library provider used for
+    SSL communication. :guilabel:`sapcrypto` should work on all platforms,
+    :guilabel:`openssl` should work on |nix| |osx|, :guilabel:`mscrypto` should
+    work on |win| and :guilabel:`commoncrypto` requires CommonCryptoLib to be
+    installed.
+  * |checkbox| :guilabel:`Validate SSL certificate`: If checked, the SSL
+    certificate will be validated using the truststore given in
+    :guilabel:`Trust store file with public key`.
+  * :guilabel:`Override hostname in certificate`: Specifies the host name used
+    to verify server’s identity. The host name specified here verifies the
+    identity of the server instead of the host name with which the connection
+    was established. If you specify ``*`` as the host name, then the server's
+    host name is not validated. Other wildcards are not permitted.
+  * :guilabel:`Key store file with public key`: Currently ignored. This
+    parameter might allow to authenticate via certificate instead via user and
+    password in future.
+  * :guilabel:`Trust store file with public key`: Specifies the path to a trust
+    store file that contains the server’s public certificates if using OpenSSL.
+    Typically, the trust store contains the root certificate or the certificate
+    of the certification authority that signed the server’s public certificates.
+    If you are using the cryptographic library CommonCryptoLib or msCrypto, then
+    leave this property empty.
+
+* |checkbox| :guilabel:`Only look for user's tables`: If checked, QGIS searches
+  only for tables and views that are owned by the user that connects to the
+  database.
+
+* |checkbox| :guilabel:`Also list tables with no geometries`: If checked, QGIS
+  searches also for tables and views that do not contain a spatial column.
+
+.. tip:: **Connecting to SAP HANA Cloud**
+
+   If you'd like to connect to an SAP HANA Cloud instance, you usually must set
+   :guilabel:`Port Number` to ``443`` and check
+   :guilabel:`Enable TLS/SSL encryption`.
 
 .. _vector_loading_database:
 
@@ -1245,6 +1339,8 @@ Examples of XYZ Tile services:
    :width: 1.5em
 .. |addDelimitedTextLayer| image:: /static/common/mActionAddDelimitedTextLayer.png
    :width: 1.5em
+.. |addHanaLayer| image:: /static/common/mActionAddHanaLayer.png
+   :width: 1.5em
 .. |addLayer| image:: /static/common/mActionAddLayer.png
    :width: 1.5em
 .. |addMeshLayer| image:: /static/common/mActionAddMeshLayer.png
@@ -1281,14 +1377,20 @@ Examples of XYZ Tile services:
    :width: 1.5em
 .. |geonode| image:: /static/common/mIconGeonode.png
    :width: 1.5em
+.. |hana| image:: /static/common/mIconHana.png
+   :width: 1.5em
 .. |kde| image:: /static/common/kde.png
    :width: 1.5em
 .. |metadata| image:: /static/common/metadata.png
    :width: 1.5em
 .. |mssql| image:: /static/common/mIconMssql.png
    :width: 1.5em
+.. |nix| image:: /static/common/nix.png
+   :width: 1em
 .. |oracle| image:: /static/common/mIconOracle.png
    :width: 1.5em
+.. |osx| image:: /static/common/osx.png
+   :width: 1em
 .. |ows| image:: /static/common/mIconOws.png
    :width: 1.5em
 .. |postgis| image:: /static/common/mIconPostgis.png
@@ -1311,6 +1413,8 @@ Examples of XYZ Tile services:
    :width: 1.5em
 .. |wfs| image:: /static/common/mIconWfs.png
    :width: 1.5em
+.. |win| image:: /static/common/win.png
+   :width: 1em
 .. |wms| image:: /static/common/mIconWms.png
    :width: 1.5em
 .. |xyz| image:: /static/common/mIconXyz.png
