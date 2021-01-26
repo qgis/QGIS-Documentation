@@ -400,12 +400,14 @@ Otherwise
 
 .. testcode:: cheat_sheet
 
+    from qgis.core import QgsDataProvider
+
     fileName = "testdata/sublayers.gpkg"
     layer = QgsVectorLayer(fileName, "test", "ogr")
     subLayers = layer.dataProvider().subLayers()
 
     for subLayer in subLayers:
-        name = subLayer.split('!!::!!')[1]
+        name = subLayer.split(QgsDataProvider.SUBLAYER_SEPARATOR)[1]
         uri = "%s|layername=%s" % (fileName, name,)
         # Create layer
         sub_vlayer = QgsVectorLayer(uri, name, 'ogr')
