@@ -10,7 +10,7 @@ A Gentle Introduction to GIS
 Brought to you with QGIS, a Free and Open Source Software GIS Application
 for everyone.
 
-.. figure:: img/qgis_logo.png
+.. figure:: ../../static/common/logo.png
    :align: center
    :width: 8em
 
