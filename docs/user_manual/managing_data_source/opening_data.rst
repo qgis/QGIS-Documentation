@@ -1067,13 +1067,13 @@ The following parameters can be entered:
 * :guilabel:`Name`: A name for this connection.
 
 * :guilabel:`Driver` |win|: The name of the HANA ODBC driver. It is ``HDBODBC``
-  if you are using 64-bit QGIS, ``HDBODBC32`` if you using 32-bit QGIS. The
+  if you are using 64-bit QGIS, ``HDBODBC32`` if you are using 32-bit QGIS. The
   appropriate driver name is entered automatically.
 
 * :guilabel:`Driver` |nix| |osx|: Either the name under which the SAP HANA ODBC
-  driver has been registered in ``/etc/odbcinst.ini`` or the full path to the
+  driver has been registered in :file:`/etc/odbcinst.ini` or the full path to the
   SAP HANA ODBC driver. The SAP HANA Client installer will install the ODBC
-  driver to ``/usr/sap/hdbclient/libodbcHDB.so`` by default.
+  driver to :file:`/usr/sap/hdbclient/libodbcHDB.so` by default.
 
 * :guilabel:`Host`: The name of the database host.
 
@@ -1134,7 +1134,7 @@ The following parameters can be entered:
 .. tip:: **Connecting to SAP HANA Cloud**
 
    If you'd like to connect to an SAP HANA Cloud instance, you usually must set
-   :guilabel:`Port Number` to ``443`` and enable
+   :guilabel:`Port Number` to ``443`` and check
    :guilabel:`Enable TLS/SSL encryption`.
 
 .. _vector_loading_database:
