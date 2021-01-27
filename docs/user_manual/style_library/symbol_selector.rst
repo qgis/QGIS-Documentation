@@ -232,6 +232,8 @@ Appropriate for point geometry features, marker symbols have several
   also be adapted. The image can be a file on the disk, a remote URL or
   embedded in the style database (:ref:`more details <svg_paths>`).
 
+  See :ref:`svg_symbol` section to parametrize an SVG symbol.
+
   .. note:: SVG version requirements
 
    QGIS renders SVG files that follow the `SVG Tiny 1.2 profile
@@ -242,20 +244,6 @@ Appropriate for point geometry features, marker symbols have several
 
    Some features not included in these specifications might not be rendered
    correctly in QGIS.
-
-  .. tip:: Enable SVG marker symbol customization
-
-   To have the possibility to change the colors of a :guilabel:`SVG marker`,
-   you have to add the placeholders ``param(fill)`` for fill color,
-   ``param(outline)`` for stroke color and ``param(outline-width)`` for stroke
-   width. These placeholders can optionally be followed by a default value, e.g.:
-
-   .. code-block:: xml
-
-    <svg width="100%" height="100%">
-    <rect fill="param(fill) #ff0000" stroke="param(outline) #00ff00" stroke-width="param(outline-width) 10" width="100" height="100">
-    </rect>
-    </svg>
 
 
 .. _vector_line_symbols:
@@ -440,6 +428,41 @@ symbol layer types:
  clipping of lines/polygons to the canvas extent. In some cases this clipping
  results in unfavourable symbology (e.g. centroid fills where the centroid must
  always be the actual feature's centroid).
+
+.. _svg_symbol:
+
+Parametrizable SVG
+..................
+
+You have the possibility to change the colors of a :guilabel:`SVG marker`.
+You have to add the placeholders ``param(fill)`` for fill color,
+``param(outline)`` for stroke color and ``param(outline-width)`` for stroke
+width. These placeholders can optionally be followed by a default value, e.g.:
+
+.. code-block:: xml
+
+    <svg width="100%" height="100%">
+    <rect fill="param(fill) #ff0000" stroke="param(outline) #00ff00" stroke-width="param(outline-width) 10" width="100" height="100">
+    </rect>
+    </svg>
+
+More generally, SVG can be freely parametrized using ``param(param_name)``.
+This param can either be used as an attribute value or a node text:
+
+.. code-block:: xml
+
+    <g stroke-width=".265" text-anchor="middle" alignment-baseline="param(align)">
+      <text x="98" y="147.5" font-size="6px">param(text1)</text>
+      <text x="98" y="156.3" font-size="4.5px">param(text2)</text>
+    </g>
+
+The parameters can then be defined as expressions in the :guilabel:`Dynamic SVG parameters` table.
+
+.. figure:: img/svg_parameters.png
+   :align: center
+
+   Dynamic SVG parameters table
+
 
 .. _geometry_generator_symbol: 
  
