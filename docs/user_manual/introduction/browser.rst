@@ -357,13 +357,13 @@ Here you will find a read-only list of all your Open Web Services (OWS)
 - WMS / WCS / WFS / ...
 
 
-ArcGIS Map Service
+ArcGIS Rest Servers
 ......................................................................
+*ArcGIS Feature Services* and *ArcGIS Map Services*
 
-
-ArcGIS Features Service
-......................................................................
-
+From the top level context menu, you add an existing service
+(:guilabel:`New Connection...`), and you can
+:guilabel:`Save Connections...` or :guilabel:`Load Connections...`.
 
 GeoNode
 ......................................................................
