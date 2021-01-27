@@ -432,12 +432,12 @@ symbol layer types:
 Parametrizable SVG
 ..................
 
-You have the possibility to change the colors of a :guilabel:`SVG marker`,
-you have to add the placeholders ``param(fill)`` for fill color,
-   ``param(outline)`` for stroke color and ``param(outline-width)`` for stroke
-   width. These placeholders can optionally be followed by a default value, e.g.:
+You have the possibility to change the colors of a :guilabel:`SVG marker`.
+You have to add the placeholders ``param(fill)`` for fill color,
+``param(outline)`` for stroke color and ``param(outline-width)`` for stroke
+width. These placeholders can optionally be followed by a default value, e.g.:
 
-   .. code-block:: xml
+.. code-block:: xml
 
     <svg width="100%" height="100%">
     <rect fill="param(fill) #ff0000" stroke="param(outline) #00ff00" stroke-width="param(outline-width) 10" width="100" height="100">
@@ -447,7 +447,7 @@ you have to add the placeholders ``param(fill)`` for fill color,
 More generally, SVG can be freely parametrized using ``param(param_name)``.
 This param can either be used as an attribute value or a node text:
 
-   .. code-block:: xml
+.. code-block:: xml
 
     <g stroke-width=".265" text-anchor="middle" alignment-baseline="param(align)">
       <text x="98" y="147.5" font-size="6px">param(text1)</text>
@@ -456,10 +456,10 @@ This param can either be used as an attribute value or a node text:
 
 The parameters can then be defined as expressions in the :guilabel:`Dynamic SVG parameters` table.
 
-  .. figure:: img/svg_parameters.png
-     :align: center
+.. figure:: img/svg_parameters.png
+   :align: center
 
-     Dynamic SVG parameters table
+   Dynamic SVG parameters table
 
 
 .. _geometry_generator_symbol: 
