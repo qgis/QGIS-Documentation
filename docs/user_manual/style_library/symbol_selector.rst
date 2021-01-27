@@ -232,6 +232,8 @@ Appropriate for point geometry features, marker symbols have several
   also be adapted. The image can be a file on the disk, a remote URL or
   embedded in the style database (:ref:`more details <svg_paths>`).
 
+  See :ref:`svg_symbol` section to parametrize an SVG symbol.
+
   .. note:: SVG version requirements
 
    QGIS renders SVG files that follow the `SVG Tiny 1.2 profile
