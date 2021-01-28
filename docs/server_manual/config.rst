@@ -273,6 +273,53 @@ several ways to define these variables. This is fully described in
      - ''
      - All
 
+   * - SERVICE_URL
+     - This is an option To set the service URL it it's not present in the project.
+
+       The service URL resolution watch on the following and thaks the first:
+
+         - Value defined in the project per service.
+         - The ``<service>_SERVICE_URL`` environment variable.
+         - The ``SERVICE_URL`` environment variable.
+         - The ``X-<service>-Servcie-Url`` header.
+         - The ``X-Service-Url`` header.
+         - Build form the ``Forwarded`` header.
+         - Build form the ``X-Forwarded-Host`` and ``X-Forwarded-Proto`` headers.
+         - Build form the ``Host`` header and the server protocol.
+         - Build form the server name and the server protocol.
+
+       The tree last also use the request path and the ``MAP`` provided in the query string.
+     - ''
+     - All
+
+   * - WMS_SERVICE_URL
+     - This is an option To set the service URL it it's not present in the project.
+
+       See ``SERVICE_URL`` for more informations
+     - ''
+     - WMS
+
+   * - WFS_SERVICE_URL
+     - This is an option To set the service URL it it's not present in the project.
+
+       See ``SERVICE_URL`` for more informations
+     - ''
+     - WFS
+
+   * - WMTS_SERVICE_URL
+     - This is an option To set the service URL it it's not present in the project.
+
+       See ``SERVICE_URL`` for more informations
+     - ''
+     - WMTS
+
+   * - WCS_SERVICE_URL
+     - This is an option To set the service URL it it's not present in the project.
+
+       See ``SERVICE_URL`` for more informations
+     - ''
+     - WCS
+
 
 Settings summary
 ================
