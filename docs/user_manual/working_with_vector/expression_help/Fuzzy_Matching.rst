@@ -65,7 +65,7 @@ The Levenshtein distance is a measure of the similarity between two strings. Sma
 longest_common_substring
 ........................
 
-Returns the longest common substring between two strings. This substring is the longest string that is a substring of the two input strings. For example, the longest common substring of "ABABC" and "BABCA" is "ABC". The substring is case sensitive.
+Returns the longest common substring between two strings. This substring is the longest string that is a substring of the two input strings. For example, the longest common substring of "ABABC" and "BABCA" is "BABC". The substring is case sensitive.
 
 .. list-table::
    :widths: 15 85
@@ -76,7 +76,7 @@ Returns the longest common substring between two strings. This substring is the 
      - * **string1** - a string
        * **string2** - a string
    * - Examples
-     - * ``longest_common_substring('ABABC','BABCA')`` → 'ABC'
+     - * ``longest_common_substring('ABABC','BABCA')`` → 'BABC'
        * ``longest_common_substring('abcDeF','abcdef')`` → 'abc'
        * ``longest_common_substring(upper('abcDeF'),upper('abcdex'))`` → 'ABCDE'
 

@@ -13,7 +13,7 @@
 item_variables
 ..............
 
-Returns a map of variables from a composer item inside this composition.
+Returns a map of variables from a layout item inside this print layout.
 
 .. list-table::
    :widths: 15 85
@@ -21,7 +21,7 @@ Returns a map of variables from a composer item inside this composition.
    * - Syntax
      - item_variables(id)
    * - Arguments
-     - * **id** - composer item ID
+     - * **id** - layout item ID
    * - Examples
      - * ``map_get( item_variables('Map 0'), 'map_scale')`` → scale of the item 'Map 0' in the current print layout
 
