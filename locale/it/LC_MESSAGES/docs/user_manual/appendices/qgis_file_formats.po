@@ -1,26 +1,202 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
+# Harrissou Sant-anna, 2020
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-05-10 09:48+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"POT-Creation-Date: 2020-12-13 09:01+0100\n"
+"PO-Revision-Date: 2020-12-24 12:03+0000\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2021\n"
 "Language-Team: Italian (https://www.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:5
+msgid "Appendix C: QGIS File Formats"
+msgstr "Appendice C: File QGIS di Formato"
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:14
+msgid "QGS/QGZ - The QGIS Project File Format"
+msgstr "QGS/QGZ - Il file di formato del progetto QGIS"
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:16
+msgid ""
+"The **QGS** format is an XML format for storing QGIS projects. The **QGZ** "
+"format is a compressed (zip) archive containing a QGS file and a QGD file. "
+"The **QGD** file is the associated sqlite database of the qgis project that "
+"contain auxiliary data for the project. If there are no auxiliary data, the "
+"QGD file will be empty."
+msgstr ""
+"Il formato **QGS** è un formato XML per memorizzare i progetti QGIS. Il "
+"formato **QGZ** è un archivio compresso (zip) contenente un file QGS e un "
+"file QGD. Il file **QGD** è il database sqlite associato al progetto qgis "
+"che contiene i dati ausiliari del progetto. Se non ci sono dati ausiliari, "
+"il file QGD sarà vuoto."
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:23
+msgid ""
+"A QGIS file contains everything that is needed for storing a QGIS project, "
+"including:"
+msgstr ""
+"Un file QGIS contiene tutto ciò che è necessario per memorizzare un progetto"
+" QGIS, includendo:"
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:26
+msgid "project title"
+msgstr "il titolo delmprogetto"
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:27
+msgid "project CRS"
+msgstr "l'SR del progetto"
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:28
+msgid "the layer tree"
+msgstr "l'albero dei layer"
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:29
+msgid "snapping settings"
+msgstr "le impostazioni di aggancio"
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:30
+msgid "relations"
+msgstr "le relazioni"
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:31
+msgid "the map canvas extent"
+msgstr "l'estensione della mappa"
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:32
+msgid "project models"
+msgstr "i modelli del progetto"
 
 #: ../../docs/user_manual/appendices/qgis_file_formats.rst:33
 msgid "legend"
 msgstr "legenda"
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:34
+msgid "mapview docks (2D and 3D)"
+msgstr "le mapview zone (2D e 3D)"
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:35
+msgid ""
+"the layers with links to the underlying datasets (data sources) and other "
+"layer properties including extent, SRS, joins, styles, renderer, blend mode,"
+" opacity and more."
+msgstr ""
+"i layer con collegamenti ai set di dati sottostanti (fonti di dati) e altre "
+"proprietà dei layer tra cui estensione, SR, join, stili, visulizzazione, "
+"modalità di fusione, opacità e altro."
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:38
+msgid "project properties"
+msgstr "le proprietà del progetto"
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:40
+msgid ""
+"The figures below show the top level tags in a QGS file and the expanded "
+"``ProjectLayers`` tag."
+msgstr ""
+"Le figure seguenti mostrano i tag di primo livello in un file QGS e il tag "
+"espanso ``ProjectLayers``."
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:48
+msgid "The top level tags in a QGS file"
+msgstr "I tag di primo livello in un file QGS"
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:55
+msgid "The expanded top level ProjectLayers tag of a QGS file"
+msgstr "I tag di primo livello espanso ProjectLayers di un file QGS"
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:63
+msgid "QLR - The QGIS Layer Definition file"
+msgstr "QLR - Il file di definizione dei layer di QGIS"
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:65
+msgid ""
+"A Layer Definition file (QLR) is an XML file that contains a pointer to the "
+"layer data source in addition to QGIS style information for the layer."
+msgstr ""
+"Un file definizione layer (QLR) è un file XML che contiene un puntatore "
+"all'origine dei dati del layer oltre alle informazioni di stile QGIS per il "
+"layer."
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:69
+msgid ""
+"The use case for this file is simple: To have a single file for opening a "
+"data source and bringing in all the related style information. QLR files "
+"also allow you to mask the underlying datasource in an easy to open file."
+msgstr ""
+"Il caso d'uso di questo file è semplice: Avere un unico file per aprire una "
+"fonte di dati e portare tutte le informazioni di stile relative. I file QLR "
+"permettono anche di proteggere la fonte di dati sottostante in un file "
+"facile da aprire."
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:75
+msgid ""
+"An example of QLR usage is for opening MS SQL layers. Rather than having to "
+"go to the MS SQL connection dialog, connect, select, load and finally style,"
+" you can simply add a .qlr file that points to the correct MS SQL layer with"
+" all the necessary style included."
+msgstr ""
+"Un esempio di utilizzo di QLR è per l'apertura dei layer MS SQL. Piuttosto "
+"che dover andare alla finestra di dialogo di connessione MS SQL, "
+"connettersi, selezionare, caricare e infine avere lo stile, si può "
+"semplicemente aggiungere un file .qlr che punta al corretto layer MS SQL con"
+" tutto lo stile necessario incluso."
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:81
+msgid "In the future a .qlr file may hold a reference to more than one layer."
+msgstr ""
+"In futuro un file .qlr potrà contenere un riferimento a più di un layer."
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:88
+msgid "The top level tags of a QLR file"
+msgstr "I tag di primo livello di un file QLR"
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:96
+msgid "QML - The QGIS Style File Format"
+msgstr "QML - Il formato dei file di stile QGIS"
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:98
+msgid "QML is an XML format for storing layer styling."
+msgstr "QML è un formato XML per memorizzare lo stile dei layer."
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:100
+msgid ""
+"A QML file contains all the information QGIS can handle for the rendering of"
+" feature geometries including symbol definitions, sizes and rotations, "
+"labelling, opacity and blend mode and more."
+msgstr ""
+"Un file QML contiene tutte le informazioni che QGIS può gestire per la "
+"rappresentazione delle geometrie, comprese le definizioni dei simboli, le "
+"dimensioni e le rotazioni, l'etichettatura, l'opacità e la modalità di "
+"fusione e altro ancora."
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:104
+msgid ""
+"The figure below shows the top level tags of a QML file (with only "
+"``renderer_v2`` and its ``symbol`` tag expanded)."
+msgstr ""
+"La figura qui sotto mostra i tag di primo livello di un file QML (con solo "
+"``renderer_v2`` e il suo tag ``symbol`` espanso)."
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:112
+msgid ""
+"The top level tags of a QML file (only the renderer_v2 tag with its symbol "
+"tag is expanded)"
+msgstr ""
+"I tag di primo livello di un file QML (solo il tag renderer_v2 con il suo "
+"tag symbol è espanso)"
