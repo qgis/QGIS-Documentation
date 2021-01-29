@@ -11,56 +11,60 @@ WMS.
 |basic| |FA| Loading a WFS Layer
 -------------------------------------------------------------------------------
 
-* Start a new map. This is for demo purposes and won't be saved.
-* Ensure that "on the fly" re-projection is switched off.
-* Click the |addWfsLayer| :guilabel:`Add WFS Layer` button:
-* Click the :guilabel:`New` button.
-* In the dialog that appears, enter the :guilabel:`Name` as ``nsidc.org``
-  and the :guilabel:`URL` as
-  ``https://nsidc.org/cgi-bin/atlas_south?version=1.1.0``.
+#. Start a new map. This is for demo purposes and won't be saved.
+#. Click the |dataSourceManager| :sup:`Open Data Source Manager` button.
+#. Enable the |wfs| :guilabel:`WFS / OGC API - Features` tab.
+#. Click the :guilabel:`New` button.
+#. In the dialog that appears, enter the :guilabel:`Name` as ``nsidc.org``
+   and the :guilabel:`URL` as
+   ``https://nsidc.org/cgi-bin/atlas_south?version=1.1.0``.
 
-  .. figure:: img/new_wfs_connection.png
-     :align: center
+   .. figure:: img/new_wfs_connection.png
+      :align: center
 
-* Click :guilabel:`OK`, and the new connection will appear in your
-  :guilabel:`Server connections`.
-* Click the :guilabel:`Connect`. A list of the available layers will appear:
+#. Click :guilabel:`OK`, and the new connection will appear in your
+   :guilabel:`Server connections`.
+#. Click the :guilabel:`Connect`. A list of the available layers will appear:
 
-  .. figure:: img/wfs_connection_layers.png
-     :align: center
+   .. figure:: img/wfs_connection_layers.png
+      :align: center
 
-* Find the layer :guilabel:`south_poles_wfs`.
-* Click on the layer to select it:
+#. Uncheck the :guilabel:`Only request features overlapping the view extent` option
+   below the layers list, since your current map canvas may not cover our area of
+   interest: Antartica.
+#. Find the layer :guilabel:`antarctica_country_border`.
+   You can use the :guilabel:`Filter` box at the top.
+#. Click on the layer to select it:
+#. Find and select also the layer :guilabel:`south_poles_wfs`.
+   You might need to hold :kbd:`Ctrl`.
 
-  .. figure:: img/south_poles_wfs.png
-     :align: center
+   .. figure:: img/south_poles_wfs.png
+      :align: center
 
-* Click :guilabel:`Add`.
+#. Click :guilabel:`Add`.
 
-It may take a while to load the layer. When it has loaded, it will appear in
-the map. Here it is over the outlines of Antarctica (available on the same
-server, and by the name of :guilabel:`antarctica_country_border`):
+   It may take a while to load the layers. When they are loaded, they will appear in
+   the map, showing the outlines of Antarctica and a few points over.
 
-.. figure:: img/antarctica_border.png
-   :align: center
+   .. figure:: img/antarctica_border.png
+      :align: center
 
-How is this different from having a WMS layer? That will become obvious when
-you see the layers' attributes.
+   How is this different from having a WMS layer?
 
-* Open the :guilabel:`south_poles_wfs` layer's attribute table. You should see
-  this:
+#. Select any of the layers and you'll notice that feature selection and
+   attribute table tools are enabled. These are vector layers.
+#. Select the :guilabel:`south_poles_wfs` layer and open its attribute table.
+   You should see this:
 
-.. figure:: img/poles_attribute_table.png
-   :align: center
+   .. figure:: img/poles_attribute_table.png
+      :align: center
 
-Since the points have attributes, we are able to label them,
-as well as change their symbology. Here's an example:
+   Since the points have attributes, we are able to label them,
+   as well as change their symbology. Here's an example:
 
-.. figure:: img/labelling_example.png
-   :align: center
+   .. figure:: img/labelling_example.png
+      :align: center
 
-* Add labels to your layer to take advantage of the attribute data in this
-  layer.
 
 Differences from WMS layers
 ...............................................................................
@@ -95,34 +99,42 @@ this dataset can take several minutes to load.
 The alternative is to build the query as a filter before even loading the layer
 from the server.
 
-* In the :guilabel:`Add WFS Layer ...` dialog, connect to the server we used
-  before and you should see the list of available layers.
-* Double-click next to the :guilabel:`countries ...` layer in the
-  :guilabel:`Filter` field, or click :guilabel:`Build query`:
+#. Enable the :guilabel:`WFS / OGC API Features` tab in the
+   :guilabel:`Data Source Manager` dialog
+#. Connect to the server we used before and you should see the list of available layers.
+#. Find and double-click the :guilabel:`countries (excluding Antarctica)` layer.
+   The layer name is ``country_borders_excluding_antarctica``.
+   You can also select the layer and press :guilabel:`Build query` button at
+   the bottom of the dialog:
 
-  .. figure:: img/select_country_filter.png
-     :align: center
+   .. figure:: img/select_country_filter.png
+      :align: center
 
-* In the dialog that appears, build the query :kbd:`"Countryeng" = 'South
-  Africa'`:
+#. In the dialog that appears, type the following
+   ``SELECT * FROM country_borders_excluding_antarctica WHERE "Countryeng" = 'South Africa'``
+   query in the :guilabel:`SQL Statement` box.
 
-  .. figure:: img/country_sa_builder.png
-     :align: center
+   .. figure:: img/country_sa_builder.png
+      :align: center
 
-* It will appear as the :guilabel:`Filter` value:
+#. Press :guilabel:`OK`.
+#. The expression used will appear as the :guilabel:`Sql` value of the target layer:
 
-  .. figure:: img/country_filter_enabled.png
-     :align: center
+   .. figure:: img/country_filter_enabled.png
+      :align: center
 
-* Click :guilabel:`Add` with the :guilabel:`countries` layer selected as
-  above. Only the country with the :kbd:`Countryeng` value of :kbd:`South
-  Africa` will load from that layer:
+#. Click :guilabel:`Add` with the layer selected as above.
+   Only the country with the ``Countryeng`` value of ``South Africa`` will load from
+   that layer:
 
-  .. figure:: img/antarctica_sa.png
-     :align: center
+   .. figure:: img/antarctica_sa.png
+      :align: center
 
-You don't have to, but if you tried both methods, you'll notice that this is a
-lot faster than loading all the countries before filtering them!
+   Did you notice the |indicatorFilter| icon next to the
+   ``country_borders_excluding_antarctica`` layer? It indicates that the loaded
+   layer is filtered and does not display in the project all of its features.
+#. You don't have to, but if you tried both methods, you'll notice that this is a
+   lot faster than loading all the countries before filtering them!
 
 Notes on WFS availability
 ...............................................................................
@@ -164,4 +176,10 @@ Next, you'll see how to use QGIS Server to provide OGC services.
 .. |addWfsLayer| image:: /static/common/mActionAddWfsLayer.png
    :width: 1.5em
 .. |basic| image:: /static/common/basic.png
+.. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
+   :width: 1.5em
+.. |indicatorFilter| image:: /static/common/mIndicatorFilter.png
+   :width: 1.5em
 .. |moderate| image:: /static/common/moderate.png
+.. |wfs| image:: /static/common/mIconWfs.png
+   :width: 1.5em
