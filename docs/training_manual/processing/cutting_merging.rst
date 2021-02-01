@@ -62,7 +62,7 @@ polygon* algorithm.
 
 .. figure:: img/cutting_merging/clip.png 
 
-Once the layers have been cropped, they can be merged using the GDAL *Merge* algorithm.
+Once the layers have been cropped, they can be merged using the SAGA *Mosaic raster layers* algorithm.
 
 .. figure:: img/cutting_merging/merge.png
 
