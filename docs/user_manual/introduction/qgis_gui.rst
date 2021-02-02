@@ -1112,7 +1112,7 @@ copy or paste layer properties (style, scale, CRS...).
      -
      - :ref:`xyz_tile`
    * - :menuselection:`-->` |addAmsLayer|
-       :guilabel:`Add ArcGIS Map Service Layer...`
+       :guilabel:`Add ArcGIS REST Service Layer...`
      -
      - :guilabel:`Manage Layers`
      -
@@ -1126,11 +1126,6 @@ copy or paste layer properties (style, scale, CRS...).
      -
      - :guilabel:`Manage Layers`
      - :ref:`ogc-wfs`
-   * - :menuselection:`-->` |addAfsLayer|
-       :guilabel:`Add ArcGIS Feature Service Layer...`
-     -
-     - :guilabel:`Manage Layers`
-     -
    * - :menuselection:`-->` |addVectorTileLayer|
        :guilabel:`Add Vector Tile Layer...`
      -
