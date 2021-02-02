@@ -5,17 +5,17 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
 # Francis Gasc <francisgasc@gmail.com>, 2021
+# Harrissou Sant-anna, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-12 10:14+0000\n"
+"POT-Creation-Date: 2021-01-20 10:25+0000\n"
 "PO-Revision-Date: 2020-12-24 10:26+0000\n"
-"Last-Translator: Francis Gasc <francisgasc@gmail.com>, 2021\n"
+"Last-Translator: Harrissou Sant-anna, 2021\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -492,6 +492,26 @@ msgstr ""
 "C'est pour cela que l'export en chemins est recommandé."
 
 #: ../../docs/user_manual/print_composer/create_output.rst:229
+msgid "Control the PDF :guilabel:`Image compression` using:"
+msgstr "Contrôler la :guilabel:`Compression d'image` du PDF :"
+
+#: ../../docs/user_manual/print_composer/create_output.rst:231
+msgid ":guilabel:`Lossy (JPEG)`, which is the default compression mode"
+msgstr ""
+":guilabel:`Avec perte (JPEG)`, qui est le mode de compression par défaut"
+
+#: ../../docs/user_manual/print_composer/create_output.rst:232
+msgid ""
+"or :guilabel:`Lossless`, which creates bigger files in most cases, but is "
+"much more suitable for printing outputs or for post-production in external "
+"applications (requires Qt 5.13 or later)."
+msgstr ""
+"ou :guilabel:`Sans perte`, générant des fichiers plus volumineux dans la "
+"plupart des cas. Mais ce mode est plus adapté pour les impressions ou pour "
+"des traitements ultérieurs au seing d'autres applications (n'est disponible "
+"que dans les versions compilées avec Qt 5.13 ou ultérieurs)."
+
+#: ../../docs/user_manual/print_composer/create_output.rst:235
 msgid ""
 "|unchecked| :guilabel:`Create Geospatial PDF (GeoPDF)`: Generate a "
 "georeferenced PDF file (requires GDAL version 3 or later)."
@@ -499,7 +519,7 @@ msgstr ""
 "|unchecked| :guilabel:`Créer un PDF Géospatial (GeoPDF)`: Génère un fichier "
 "PDF géoréférencé (nécessite la version 3 ou plus de GDAL)."
 
-#: ../../docs/user_manual/print_composer/create_output.rst:231
+#: ../../docs/user_manual/print_composer/create_output.rst:237
 msgid ""
 "|unchecked| :guilabel:`Disable tiled raster layer exports`: When exporting "
 "files, QGIS uses tiled based rendering that saves memory. Sometimes, this "
@@ -514,7 +534,7 @@ msgstr ""
 "résoudrait cela, au prix d'une utilisation de mémoire plus élevée lors des "
 "exportations."
 
-#: ../../docs/user_manual/print_composer/create_output.rst:236
+#: ../../docs/user_manual/print_composer/create_output.rst:242
 msgid ""
 "|checkbox| :guilabel:`Simplify geometries to reduce output file size`: "
 "Geometries will be simplified while exporting the layout by removing "
@@ -532,11 +552,11 @@ msgstr ""
 "fichier d'exportation (les fichiers très volumineux peuvent ne pas se "
 "charger dans d'autres applications)."
 
-#: ../../docs/user_manual/print_composer/create_output.rst:250
+#: ../../docs/user_manual/print_composer/create_output.rst:256
 msgid "PDF Export Options"
 msgstr "Options d'export PDF"
 
-#: ../../docs/user_manual/print_composer/create_output.rst:252
+#: ../../docs/user_manual/print_composer/create_output.rst:258
 msgid ""
 "Since QGIS 3.10, with GDAL 3, GeoPDF export is supported, and a number of "
 "GeoPDF specific options are available:"
@@ -544,19 +564,19 @@ msgstr ""
 "Depuis QGIS 3.10, avec GDAL 3, l'export en GeoPDF est géré et un grand "
 "nombre d'options spécifiques sont disponibles :"
 
-#: ../../docs/user_manual/print_composer/create_output.rst:255
+#: ../../docs/user_manual/print_composer/create_output.rst:261
 msgid ":guilabel:`Format` (GeoPDF format - there are some GeoPDF variations),"
 msgstr ""
 ":guilabel:`Format` (format GeoPDF - il existe des variantes de GeoPDF),"
 
-#: ../../docs/user_manual/print_composer/create_output.rst:256
+#: ../../docs/user_manual/print_composer/create_output.rst:262
 msgid ""
 ":guilabel:`Include multiple map themes` (specify map themes to include),"
 msgstr ""
 ":guilabel:`Inclure plusieurs thèmes de carte` (spécifier les thèmes de carte"
 " à inclure),"
 
-#: ../../docs/user_manual/print_composer/create_output.rst:257
+#: ../../docs/user_manual/print_composer/create_output.rst:263
 msgid ""
 ":guilabel:`Include vector feature information` (choose the layers and group "
 "them into logical PDF groups)."
@@ -564,7 +584,7 @@ msgstr ""
 ":guilabel:`Inclure les informations des entités vectorielles` (choisissez "
 "les couches et regroupez-les en groupes PDF logiques)."
 
-#: ../../docs/user_manual/print_composer/create_output.rst:260
+#: ../../docs/user_manual/print_composer/create_output.rst:266
 msgid ""
 "Exporting a print layout to formats that supports georeferencing (e.g. "
 "``PDF`` and ``TIFF``) creates a georeferenced output by default."
@@ -573,11 +593,11 @@ msgstr ""
 "géoréférencement (par exemple, ``PDF`` et ``TIFF``) crée une sortie "
 "géoréférencée par défaut."
 
-#: ../../docs/user_manual/print_composer/create_output.rst:268
+#: ../../docs/user_manual/print_composer/create_output.rst:274
 msgid "Generate an Atlas"
 msgstr "Générer un Atlas"
 
-#: ../../docs/user_manual/print_composer/create_output.rst:270
+#: ../../docs/user_manual/print_composer/create_output.rst:276
 msgid ""
 "Atlas functions allow you to create map books in an automated way. Atlas "
 "uses the features of a table or vector layer (:guilabel:`Coverage layer`) to"
@@ -592,7 +612,7 @@ msgstr ""
 "courant consiste à zoomer un objet carte sur l'entité actuelle de l'atlas. "
 "D'autres cas d'utilisation incluent :"
 
-#: ../../docs/user_manual/print_composer/create_output.rst:278
+#: ../../docs/user_manual/print_composer/create_output.rst:284
 msgid ""
 "a map item showing, for another layer, only features that share the same "
 "attribute as the atlas feature or are within its geometry."
@@ -601,14 +621,14 @@ msgstr ""
 "partagent le même attribut que l'entité de l'atlas ou qui se trouvent dans "
 "sa géométrie."
 
-#: ../../docs/user_manual/print_composer/create_output.rst:280
+#: ../../docs/user_manual/print_composer/create_output.rst:286
 msgid ""
 "a label or HTML item whose text is replaced as features are iterated over"
 msgstr ""
 "une étiquette ou un élément HTML dont le texte est remplacé lors de "
 "l'itération des entités"
 
-#: ../../docs/user_manual/print_composer/create_output.rst:281
+#: ../../docs/user_manual/print_composer/create_output.rst:287
 msgid ""
 "a table item showing attributes of associated :ref:`parent or children "
 "<vector_relations>` features of the current atlas feature..."
@@ -616,7 +636,7 @@ msgstr ""
 "un objet table montrant les attributs des entités :ref:`parent ou enfants "
 "<vector_relations>` associées à l'entité actuelle de l'atlas..."
 
-#: ../../docs/user_manual/print_composer/create_output.rst:284
+#: ../../docs/user_manual/print_composer/create_output.rst:290
 msgid ""
 "For each feature, the output is processed for all pages and items according "
 "to their exports settings."
@@ -624,11 +644,11 @@ msgstr ""
 "Pour chaque entité, la sortie est traitée pour toutes les pages et tous les "
 "objets en fonction de leurs paramètres d'exportation."
 
-#: ../../docs/user_manual/print_composer/create_output.rst:287
+#: ../../docs/user_manual/print_composer/create_output.rst:293
 msgid "**Use variables for more flexibility**"
 msgstr "**Utilisez des variables pour plus de flexibilité**"
 
-#: ../../docs/user_manual/print_composer/create_output.rst:289
+#: ../../docs/user_manual/print_composer/create_output.rst:295
 msgid ""
 "QGIS provides a large panel of functions and :ref:`variables "
 "<general_tools_variables>`, including atlas related ones, that you can use "
@@ -643,7 +663,7 @@ msgstr ""
 "fonctionnalités vous donne beaucoup de flexibilité et vous aide à produire "
 "facilement des cartes avancées."
 
-#: ../../docs/user_manual/print_composer/create_output.rst:296
+#: ../../docs/user_manual/print_composer/create_output.rst:302
 msgid ""
 "To enable the generation of an atlas and access atlas parameters, refer to "
 "the :guilabel:`Atlas` panel. This panel contains the following (see "
@@ -653,11 +673,11 @@ msgstr ""
 "l'atlas, reportez-vous au panneau :guilabel:`Atlas`. Ce panneau contient ce "
 "qui suit (voir :numref:`figure_layout_atlas`) :"
 
-#: ../../docs/user_manual/print_composer/create_output.rst:305
+#: ../../docs/user_manual/print_composer/create_output.rst:311
 msgid "Atlas Panel"
 msgstr "Panneau Atlas"
 
-#: ../../docs/user_manual/print_composer/create_output.rst:307
+#: ../../docs/user_manual/print_composer/create_output.rst:313
 msgid ""
 "|checkbox| :guilabel:`Generate an atlas` enables or disables atlas "
 "generation."
@@ -665,11 +685,11 @@ msgstr ""
 "|checkbox| :guilabel:`Générer un atlas` active ou désactive la génération "
 "d'atlas."
 
-#: ../../docs/user_manual/print_composer/create_output.rst:309
+#: ../../docs/user_manual/print_composer/create_output.rst:315
 msgid ":guilabel:`Configuration`"
 msgstr ":guilabel:`Configuration`"
 
-#: ../../docs/user_manual/print_composer/create_output.rst:311
+#: ../../docs/user_manual/print_composer/create_output.rst:317
 msgid ""
 "A :guilabel:`Coverage layer` |selectString| combo box that allows you to "
 "choose the table or vector layer containing the features to iterate over."
@@ -678,7 +698,7 @@ msgstr ""
 "de choisir la table ou la couche vecteur contenant les entités à partir "
 "desquelles générer chaque planche. "
 
-#: ../../docs/user_manual/print_composer/create_output.rst:313
+#: ../../docs/user_manual/print_composer/create_output.rst:319
 msgid ""
 "An optional |checkbox| :guilabel:`Hidden coverage layer` that, if checked, "
 "will hide the coverage layer (but not the other layers) during the "
@@ -687,7 +707,7 @@ msgstr ""
 "La case optionnelle |checkbox| :guilabel:`Cacher la couche de couverture` "
 "permet de cacher la couche de couverture sur les planches en sortie."
 
-#: ../../docs/user_manual/print_composer/create_output.rst:315
+#: ../../docs/user_manual/print_composer/create_output.rst:321
 msgid ""
 "An optional :guilabel:`Page name` combo box to specify the name for the "
 "feature page(s). You can select a field of the coverage layer or set an "
@@ -701,7 +721,7 @@ msgstr ""
 "<vector_expressions>`. Si cette option est vide, QGIS utilise un identifiant"
 " interne, selon le filtre et/ou l'ordre de tri appliqué à la couche. "
 
-#: ../../docs/user_manual/print_composer/create_output.rst:321
+#: ../../docs/user_manual/print_composer/create_output.rst:327
 msgid ""
 "An optional |checkbox| :guilabel:`Filter with` text area that allows you to "
 "specify an expression for filtering features from the coverage layer. If the"
@@ -713,7 +733,7 @@ msgstr ""
 "les entités satisfaisant la condition seront utilisées. Le bouton à droite "
 "permet d'ouvrir un constructeur de requête. "
 
-#: ../../docs/user_manual/print_composer/create_output.rst:325
+#: ../../docs/user_manual/print_composer/create_output.rst:331
 msgid ""
 "An optional |checkbox| :guilabel:`Sort by` that allows you to sort features "
 "of the coverage layer (and the output), using a field of the coverage layer "
@@ -726,7 +746,7 @@ msgstr ""
 "est spécifié par le bouton *Ordre du tri* représenté par une flèche "
 "ascendante ou descendante. "
 
-#: ../../docs/user_manual/print_composer/create_output.rst:331
+#: ../../docs/user_manual/print_composer/create_output.rst:337
 msgid ""
 ":guilabel:`Output` - this is where the output of the atlas can be "
 "configured:"
@@ -734,7 +754,7 @@ msgstr ""
 ":guilabel:`Sortie` - c'est ici que la sortie de l'atlas peut être configurée"
 " :"
 
-#: ../../docs/user_manual/print_composer/create_output.rst:333
+#: ../../docs/user_manual/print_composer/create_output.rst:339
 msgid ""
 "An :guilabel:`Output filename expression` textbox that is used to generate a"
 " filename for each atlas feature. It is based on expressions. is meaningful "
@@ -744,7 +764,7 @@ msgstr ""
 "nom de fichier pour chaque planche de l'atlas. Il est basé sur une "
 "expression. Il n'est utile que lorsque plusieurs fichiers sont produits."
 
-#: ../../docs/user_manual/print_composer/create_output.rst:336
+#: ../../docs/user_manual/print_composer/create_output.rst:342
 msgid ""
 "A |checkbox| :guilabel:`Single file export when possible` that allows you to"
 " force the generation of a single file if this is possible with the chosen "
@@ -756,7 +776,7 @@ msgstr ""
 "le permet (par exemple le ``PDF``). Si cette case est cochée, "
 "l':guilabel:`Expression du fichier en sortie` n'est pas prise en compte. "
 
-#: ../../docs/user_manual/print_composer/create_output.rst:340
+#: ../../docs/user_manual/print_composer/create_output.rst:346
 msgid ""
 "An :guilabel:`Image export format` drop-down list to select the output "
 "format when using the |saveMapAsImage| :sup:`Export atlas as Images...` "
@@ -766,11 +786,11 @@ msgstr ""
 "sélectionner le format de sortie lors de l'utilisation de |saveMapAsImage| "
 ":sup:`Exporter l'atlas en tant qu'images...`."
 
-#: ../../docs/user_manual/print_composer/create_output.rst:344
+#: ../../docs/user_manual/print_composer/create_output.rst:350
 msgid "Control map by atlas"
 msgstr "Carte contrôlée par l'atlas"
 
-#: ../../docs/user_manual/print_composer/create_output.rst:346
+#: ../../docs/user_manual/print_composer/create_output.rst:352
 msgid ""
 "The most common usage of atlas is with the map item, zooming to the current "
 "atlas feature, as iteration goes over the coverage layer. This behavior is "
@@ -785,11 +805,11 @@ msgstr ""
 ":ref:`controlled_atlas` pour les différents paramètres que vous pouvez "
 "appliquer sur l'objet carte."
 
-#: ../../docs/user_manual/print_composer/create_output.rst:354
+#: ../../docs/user_manual/print_composer/create_output.rst:360
 msgid "Customize labels with expression"
 msgstr "Personnalisez les étiquettes avec les expressions"
 
-#: ../../docs/user_manual/print_composer/create_output.rst:356
+#: ../../docs/user_manual/print_composer/create_output.rst:362
 msgid ""
 "In order to adapt labels to the feature the atlas iterates over, you can "
 "include expressions. Make sure that you place the expression part (including"
@@ -801,7 +821,7 @@ msgstr ""
 "(incluant les fonctions, les champs ou les variables) entre ``[%`` et ``%]``"
 " (voir :ref:`layout_label_item` pour plus de détails)."
 
-#: ../../docs/user_manual/print_composer/create_output.rst:361
+#: ../../docs/user_manual/print_composer/create_output.rst:367
 msgid ""
 "For example, for a city layer with fields ``CITY_NAME`` and ``ZIPCODE``, you"
 " could insert this:"
@@ -809,11 +829,11 @@ msgstr ""
 "Par exemple, pour une couche de ville ayant les champs ``CITY_NAME`` et "
 "``ZIPCODE``, vous pouvez insérer ceci : "
 
-#: ../../docs/user_manual/print_composer/create_output.rst:369
+#: ../../docs/user_manual/print_composer/create_output.rst:375
 msgid "or, another combination:"
 msgstr "ou une autre combinaison:"
 
-#: ../../docs/user_manual/print_composer/create_output.rst:376
+#: ../../docs/user_manual/print_composer/create_output.rst:382
 #, python-format
 msgid ""
 "The information ``[% concat( upper(CITY_NAME), ',', ZIPCODE, ' is ',  "
@@ -826,11 +846,11 @@ msgstr ""
 "zone de texte. Les deux expressions produiront ce type d'étiquette dans "
 "l'atlas :"
 
-#: ../../docs/user_manual/print_composer/create_output.rst:388
+#: ../../docs/user_manual/print_composer/create_output.rst:394
 msgid "Explore Data-defined override buttons with atlas"
 msgstr "Explorer les boutons de valeurs définies par les données avec l'atlas"
 
-#: ../../docs/user_manual/print_composer/create_output.rst:390
+#: ../../docs/user_manual/print_composer/create_output.rst:396
 msgid ""
 "There are several places where you can use a |dataDefined| :sup:`Data "
 "defined override` button to override the selected setting. This is "
@@ -842,7 +862,7 @@ msgstr ""
 " Ces options sont particulièrement utiles avec la Génération d'Atlas. Voir "
 ":ref:`data_defined` pour plus de détails."
 
-#: ../../docs/user_manual/print_composer/create_output.rst:395
+#: ../../docs/user_manual/print_composer/create_output.rst:401
 msgid ""
 "For the following examples the :file:`Regions` layer of the QGIS sample "
 "dataset is used and selected as :guilabel:`Coverage layer` for the atlas "
@@ -854,7 +874,7 @@ msgstr ""
 "couverture` pour la génération de l'atlas. Nous supposons qu'il s'agit d'une"
 " mise en page unique contenant un objet carte et un objet étiquette."
 
-#: ../../docs/user_manual/print_composer/create_output.rst:401
+#: ../../docs/user_manual/print_composer/create_output.rst:407
 msgid ""
 "When the height (north-south) of a region extent is greater than its width "
 "(east-west), you should use *Portrait* instead of *Landscape* orientation to"
@@ -867,7 +887,7 @@ msgstr ""
 ":sup:`valeur défninie par les données`, vous pouvez définir dynamiquement "
 "l'orientation du papier."
 
-#: ../../docs/user_manual/print_composer/create_output.rst:407
+#: ../../docs/user_manual/print_composer/create_output.rst:413
 msgid ""
 "Right-click on the page and select :guilabel:`Page Properties` to open the "
 "panel. We want to set the orientation dynamically, using an expression "
@@ -884,7 +904,7 @@ msgstr ""
 ":guilabel:`Constructeur de chaînes d'expression` et entrez l'expression "
 "suivante :"
 
-#: ../../docs/user_manual/print_composer/create_output.rst:419
+#: ../../docs/user_manual/print_composer/create_output.rst:425
 msgid ""
 "Now if you :ref:`preview the atlas <atlas_preview>`, the paper orients "
 "itself automatically, but item placements may not be ideal. For each Region "
@@ -899,7 +919,7 @@ msgstr ""
 "bouton |dataDefined| sur la :guilabel:`Largeur` pour le rendre dynamique en "
 "utilisant l'expression suivante :"
 
-#: ../../docs/user_manual/print_composer/create_output.rst:429
+#: ../../docs/user_manual/print_composer/create_output.rst:435
 msgid ""
 "Likewise, use the |dataDefined| button of the :guilabel:`Height` property to"
 " provide the following expression to constrain map item size:"
@@ -907,7 +927,7 @@ msgstr ""
 "De même, utilisez le bouton |dataDefined| sur la :guilabel:`Hauteur` pour "
 "fournir l'expression suivante afin de limiter la taille de l'objet carte :"
 
-#: ../../docs/user_manual/print_composer/create_output.rst:436
+#: ../../docs/user_manual/print_composer/create_output.rst:442
 msgid ""
 "To ensure the map item is centered in the page, set its :guilabel:`Reference"
 " point` to the upper left radio button and enter ``10`` for its "
@@ -917,7 +937,7 @@ msgstr ""
 ":guilabel:`Point de référence` sur le bouton radio en haut à gauche et "
 "entrez ``10`` pour ses positions :guilabel:`X` et :guilabel:`Y`."
 
-#: ../../docs/user_manual/print_composer/create_output.rst:440
+#: ../../docs/user_manual/print_composer/create_output.rst:446
 msgid ""
 "Let's add a title above the map in the center of the page. Select the label "
 "item and set the horizontal alignment to |radioButtonOn| :guilabel:`Center`."
@@ -931,7 +951,7 @@ msgstr ""
 "choisissez le bouton du milieu pour :guilabel:`Point de référence`, et "
 "fournissez l'expression suivante pour le champ :guilabel:`X` :"
 
-#: ../../docs/user_manual/print_composer/create_output.rst:450
+#: ../../docs/user_manual/print_composer/create_output.rst:456
 msgid ""
 "For all other layout items you can set the position in a similar way so they"
 " are correctly positioned both for portrait and landscape. You can also do "
@@ -946,7 +966,7 @@ msgstr ""
 ":ref:`atlas_labels`), la modification des images, le redimensionnement du "
 "nombre de colonnes de légende en fonction de l'orientation de la page..."
 
-#: ../../docs/user_manual/print_composer/create_output.rst:457
+#: ../../docs/user_manual/print_composer/create_output.rst:463
 msgid ""
 "The information provided here is an update of the excellent blog (in English"
 " and Portuguese) on the Data Defined Override options "
@@ -956,7 +976,7 @@ msgstr ""
 "anglais et portugais) sur les options de Valeurs définies par des données "
 "Multiple_format_map_series_using_QGIS_2.6_ ."
 
-#: ../../docs/user_manual/print_composer/create_output.rst:461
+#: ../../docs/user_manual/print_composer/create_output.rst:467
 msgid ""
 "Another example for using data-defined override buttons is the usage of a "
 "dynamic picture. For the following examples we use a geopackage layer "
@@ -979,7 +999,7 @@ msgstr ""
 " Là, vous trouverez un bouton de surcharge défini par les données dans la "
 "section :guilabel:`Image source` de :guilabel:`Propriétés principales`."
 
-#: ../../docs/user_manual/print_composer/create_output.rst:476
+#: ../../docs/user_manual/print_composer/create_output.rst:482
 msgid ""
 "In the following window choose :guilabel:`Edit` so that the "
 ":guilabel:`Expression String Builder` opens. From the :guilabel:`Fields and "
@@ -993,7 +1013,7 @@ msgstr ""
 "champ BLOB qui a été défini dans la couche géopackage. Double-cliquez sur le"
 " nom du champ :file:`logo` et cliquez sur :guilabel:`OK`."
 
-#: ../../docs/user_manual/print_composer/create_output.rst:485
+#: ../../docs/user_manual/print_composer/create_output.rst:491
 msgid ""
 "The atlas iterates over the entries in the BLOB field provided that you "
 "choose the geopackage layer as :guilabel:`Coverage layer` (further "
@@ -1003,7 +1023,7 @@ msgstr ""
 " la couche géopackage comme :guilabel:`couche couverture ` (d'autres "
 "instructions se trouvent dans :ref:`atlas_preview`)."
 
-#: ../../docs/user_manual/print_composer/create_output.rst:488
+#: ../../docs/user_manual/print_composer/create_output.rst:494
 msgid ""
 "These are just two examples of how you can use some advanced settings with "
 "atlas."
@@ -1011,15 +1031,15 @@ msgstr ""
 "Ce ne sont là que deux exemples de la manière dont vous pouvez utiliser "
 "certains paramètres avancés avec l'atlas."
 
-#: ../../docs/user_manual/print_composer/create_output.rst:493
+#: ../../docs/user_manual/print_composer/create_output.rst:499
 msgid "Preview and generate an atlas"
 msgstr "Prévisualiser et générer un atlas"
 
-#: ../../docs/user_manual/print_composer/create_output.rst:500
+#: ../../docs/user_manual/print_composer/create_output.rst:506
 msgid "Atlas Preview toolbar"
 msgstr "Barre d'outils d'aperçu de l'atlas"
 
-#: ../../docs/user_manual/print_composer/create_output.rst:502
+#: ../../docs/user_manual/print_composer/create_output.rst:508
 msgid ""
 "Once the atlas settings have been configured, and layout items (map, table, "
 "image...) linked to it, you can create a preview of all the pages by "
@@ -1033,23 +1053,23 @@ msgstr ""
 "l'Atlas` ou sur l'icône |atlas| :sup:`Aperçu de l'Atlas`. Vous pouvez "
 "utiliser les flèches pour naviguer à travers les entités :"
 
-#: ../../docs/user_manual/print_composer/create_output.rst:508
+#: ../../docs/user_manual/print_composer/create_output.rst:514
 msgid "|atlasFirst| :sup:`First feature`"
 msgstr "|atlasFirst| :sup:`Première entité`"
 
-#: ../../docs/user_manual/print_composer/create_output.rst:509
+#: ../../docs/user_manual/print_composer/create_output.rst:515
 msgid "|atlasPrev| :sup:`Previous feature`"
 msgstr "|atlasPrev| :sup:`Entité précédente`"
 
-#: ../../docs/user_manual/print_composer/create_output.rst:510
+#: ../../docs/user_manual/print_composer/create_output.rst:516
 msgid "|atlasNext| :sup:`Next feature`"
 msgstr "|atlasNext| :sup:`Entité suivante`"
 
-#: ../../docs/user_manual/print_composer/create_output.rst:511
+#: ../../docs/user_manual/print_composer/create_output.rst:517
 msgid "|atlasLast| :sup:`Last feature`"
 msgstr "|atlasLast| :sup:`Dernière entité`"
 
-#: ../../docs/user_manual/print_composer/create_output.rst:513
+#: ../../docs/user_manual/print_composer/create_output.rst:519
 msgid ""
 "You can also use the combo box to select and preview a specific feature. The"
 " combo box shows atlas feature names according to the expression set in the "
@@ -1060,7 +1080,7 @@ msgstr ""
 "entités selon l'expression paramétrée dans l'option :guilabel:`Nom de page` "
 "de l'atlas."
 
-#: ../../docs/user_manual/print_composer/create_output.rst:517
+#: ../../docs/user_manual/print_composer/create_output.rst:523
 msgid ""
 "As for simple compositions, an atlas can be generated in different ways (see"
 " :ref:`create-output` for more information - just use tools from the "
@@ -1072,7 +1092,7 @@ msgstr ""
 "utilisez simplement les outils du menu ou de la barre d'outils "
 ":menuselection:`Atlas` au lieu du menu :menuselection:`Mise en page`."
 
-#: ../../docs/user_manual/print_composer/create_output.rst:522
+#: ../../docs/user_manual/print_composer/create_output.rst:528
 msgid ""
 "This means that you can directly print your compositions with "
 ":menuselection:`Atlas --> Print Atlas`. You can also create a PDF using "
@@ -1089,7 +1109,7 @@ msgstr ""
 "fichier (si possible)` a été sélectionnée. Dans ce cas, un nom de fichier "
 "vous sera demandé."
 
-#: ../../docs/user_manual/print_composer/create_output.rst:529
+#: ../../docs/user_manual/print_composer/create_output.rst:535
 msgid ""
 "With :menuselection:`Atlas --> Export Atlas as Images...` or "
 ":menuselection:`Atlas --> Export Atlas as SVG...` tool, you're also prompted"
@@ -1102,7 +1122,7 @@ msgstr ""
 "d'atlas est exportée dans un fichier d'image ou SVG tel que défini dans le "
 "panneau :guilabel:`Atlas`."
 
-#: ../../docs/user_manual/print_composer/create_output.rst:535
+#: ../../docs/user_manual/print_composer/create_output.rst:541
 msgid ""
 "With multi-page output, an atlas behaves like a layout in that only the page"
 " that contains the :ref:`reference_map` will get a world file (for each "
@@ -1112,11 +1132,11 @@ msgstr ""
 " la mesure où seule la page qui contient la :ref:`reference_map` obtiendra "
 "un fichier world (pour chaque sortie d'entité)."
 
-#: ../../docs/user_manual/print_composer/create_output.rst:539
+#: ../../docs/user_manual/print_composer/create_output.rst:545
 msgid "**Print a specific atlas feature**"
 msgstr "**Imprimer une entité spécifique de l'atlas**"
 
-#: ../../docs/user_manual/print_composer/create_output.rst:541
+#: ../../docs/user_manual/print_composer/create_output.rst:547
 msgid ""
 "If you want to print or export the composition of only one feature of the "
 "atlas, simply start the preview, select the desired feature in the drop-down"
@@ -1129,12 +1149,12 @@ msgstr ""
 "Imprimer...` (ou :menuselection:`Exporter...` pour n'importe quel format de "
 "fichier pris en charge). "
 
-#: ../../docs/user_manual/print_composer/create_output.rst:552
+#: ../../docs/user_manual/print_composer/create_output.rst:558
 msgid "Use project defined relations for atlas creation"
 msgstr ""
 "Utiliser les relations définies par le projet pour la création d'atlas"
 
-#: ../../docs/user_manual/print_composer/create_output.rst:554
+#: ../../docs/user_manual/print_composer/create_output.rst:560
 msgid ""
 "For users with HTML and Javascript knowledge it is possible to operate on "
 "GeoJSON objects and use project defined relations from the QGIS project. The"
@@ -1151,7 +1171,7 @@ msgstr ""
 "signifie que vous pouvez utiliser les bibliothèques et fonctions Javascript "
 "existantes qui fonctionnent sur les représentations d'entités GeoJSON."
 
-#: ../../docs/user_manual/print_composer/create_output.rst:562
+#: ../../docs/user_manual/print_composer/create_output.rst:568
 msgid ""
 "The following code includes all related child features from the defined "
 "relation. Using the JavaScript ``setFeature`` function it allows you to make"
@@ -1165,7 +1185,7 @@ msgstr ""
 " que vous souhaitez (listes, tableaux, etc.). Dans l'exemple de code, nous "
 "créons une liste à puces dynamique des entités enfants associées."
 
-#: ../../docs/user_manual/print_composer/create_output.rst:591
+#: ../../docs/user_manual/print_composer/create_output.rst:597
 msgid ""
 "During atlas creation there will be an iteration over the coverage layer "
 "containing the parent features. On each page, you will see a bullet list of "
