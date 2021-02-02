@@ -58,6 +58,147 @@ several ways to define these variables. This is fully described in
      - ''
      - All
 
+   * - QGIS_PLUGINPATH
+     - Useful if you are using Python plugins for the server, this sets the folder
+       that is searched for Python plugins.
+     - ''
+     - All
+
+   * - QGIS_PROJECT_FILE
+     - The ``.qgs`` or ``.qgz`` project file, normally passed as a parameter in the
+       query string (with *MAP*), you can also set it as an environment variable (for
+       example by using ``mod_rewrite`` Apache module).
+
+       Note that you may also indicate a project stored in PostgreSQL, e.g.
+       ``postgresql://localhost:5432?sslmode=disable&dbname=mydb&schema=myschema&project=myproject``.
+     - ''
+     - All
+
+   * - QGIS_SERVER_API_RESOURCES_DIRECTORY
+     - Base directory for all OGC API (such as OAPIF/WFS3) static resources (HTML
+       templates, CSS, JS, ...)
+     - depends on packaging
+     - WFS
+
+   * - QGIS_SERVER_API_WFS3_MAX_LIMIT
+     - Maximum value for ``limit`` in a features request.
+     - 10000
+     - WFS
+
+   * - QGIS_SERVER_CACHE_DIRECTORY
+     - Specifies the network cache directory on the filesystem.
+     - ``cache`` in profile directory
+     - All
+
+   * - QGIS_SERVER_CACHE_SIZE
+     - Sets the network cache size in MB.
+     - 50 MB
+     - All
+
+   * - QGIS_SERVER_DISABLE_GETPRINT
+     - This is an option at the project level to improve project read time by disabling
+       loading of layouts.
+
+       Activating this option disables the QGIS WMS GetPrint request.
+       Set this QGIS project flag to not load layouts.
+     - false
+     - WMS
+
+   * - QGIS_SERVER_IGNORE_BAD_LAYERS
+     - "Bad" layers are layers that cannot be loaded. The default behavior of QGIS Server
+       is to consider the project as not available if it contains a bad layer.
+
+       The default behavior can be overridden by setting this variable to ``1`` or ``true``.
+       In this case, "bad" layers will just be ignored, and the project will be considered
+       valid and available.
+     - false
+     - All
+
+   * - .. _qgis_server_log_file:
+
+       QGIS_SERVER_LOG_FILE
+     - Specify path and filename. Make sure that server has proper permissions for
+       writing to file. File should be created automatically, just send some requests
+       to server. If it's not there, check permissions.
+
+       .. warning:: QGIS_SERVER_LOG_FILE is deprecated since QGIS 3.4.
+         File logging support will be removed in QGIS 4.0.
+     - ''
+     - All
+
+   * - .. _qgis_server_log_level:
+
+       QGIS_SERVER_LOG_LEVEL
+     - Specify desired log level. Available values are:
+
+       * ``0`` or ``INFO`` (log all requests)
+       * ``1`` or ``WARNING``
+       * ``2`` or ``CRITICAL`` (log just critical errors, suitable for production purposes)
+     - 0
+     - All
+
+   * - .. _qgis_server_log_stderr:
+
+       QGIS_SERVER_LOG_STDERR
+     - Activate logging to stderr. This variable  has no effect when ``QGIS_SERVER_LOG_FILE``
+       is set.
+
+       * ``0`` or ``false`` (case insensitive)
+       * ``1`` or ``true`` (case insensitive)
+     - false
+     - All
+
+   * - QGIS_SERVER_MAX_THREADS
+     - Number of threads to use when parallel rendering is activated. If value is ``-1`` it
+       uses the number of processor cores.
+     - -1
+     - All
+
+   * - QGIS_SERVER_OVERRIDE_SYSTEM_LOCALE
+     - Sets LOCALE to be used by QGIS server. The default value is empty (no override).
+
+       Example: ``de_CH.utf8``
+     - ''
+     - All
+
+   * - QGIS_SERVER_PARALLEL_RENDERING
+     - Activates parallel rendering for WMS GetMap requests. It's disabled (``false``)
+       by default. Available values are:
+
+       * ``0`` or ``false`` (case insensitive)
+       * ``1`` or ``true`` (case insensitive)
+     - false
+     - WMS
+
+   * - QGIS_SERVER_SHOW_GROUP_SEPARATOR
+     - Defines whether a group separator (e.g. thousand separator) should be used for
+       numeric values (e.g. in GetFeatureInfo responses). The default value is ``0``.
+
+       * ``0`` or ``false`` (case insensitive)
+       * ``1`` or ``true`` (case insensitive)
+     - false
+     - WMS
+
+   * - QGIS_SERVER_TRUST_LAYER_METADATA
+     - This is an option at the project level to improve project read time by using the vector
+       layer extents defined in the project metadata and disabling the check for
+       PostgreSQL/PostGIS layer primary key uniqueness.
+
+       Trusting layer metadata can be forced by setting this variable to ``1`` or ``true``.
+       The vector layer's extent will then be the one defined in the project, and the
+       PostgreSQL/PostGIS layer's primary key defined in the data source is
+       considered as unique without a check.
+
+       Do not use it if layers' extent is not fixed during the project's use.
+     - false
+     - All
+
+   * - QGIS_SERVER_WMS_MAX_HEIGHT / QGIS_SERVER_WMS_MAX_WIDTH
+     - Maximum height/width for a WMS request. The most conservative between this and the project one is used.
+       If the value is ``-1``, it means that there is no maximum set.
+     - -1
+     - WMS
+
    * - QUERY_STRING
      - The query string, normally passed by the web server. This variable can be
        useful while testing QGIS server binary from the command line.
@@ -77,146 +218,6 @@ several ways to define these variables. This is fully described in
      - ''
      - All
 
-   * - QGIS_PROJECT_FILE
-     - The ``.qgs`` or ``.qgz`` project file, normally passed as a parameter in the
-       query string (with *MAP*), you can also set it as an environment variable (for
-       example by using ``mod_rewrite`` Apache module).
-
-       Note that you may also indicate a project stored in PostgreSQL, e.g.
-       ``postgresql://localhost:5432?sslmode=disable&dbname=mydb&schema=myschema&project=myproject``.
-     - ''
-     - All
-
-   * - .. _qgis_server_log_file:
-
-       QGIS_SERVER_LOG_FILE
-     - Specify path and filename. Make sure that server has proper permissions for
-       writing to file. File should be created automatically, just send some requests
-       to server. If it's not there, check permissions.
-
-       .. warning:: QGIS_SERVER_LOG_FILE is deprecated since QGIS 3.4.
-         File logging support will be removed in QGIS 4.0.
-     - ''
-     - All
-
-   * - .. _qgis_server_log_stderr:
-
-       QGIS_SERVER_LOG_STDERR
-     - Activate logging to stderr. This variable  has no effect when ``QGIS_SERVER_LOG_FILE``
-       is set.
-
-       * ``0`` or ``false`` (case insensitive)
-       * ``1`` or ``true`` (case insensitive)
-     - false
-     - All
-
-   * - QGIS_PLUGINPATH
-     - Useful if you are using Python plugins for the server, this sets the folder
-       that is searched for Python plugins.
-     - ''
-     - All
-
-   * - .. _qgis_server_log_level:
-
-       QGIS_SERVER_LOG_LEVEL
-     - Specify desired log level. Available values are:
-
-       * ``0`` or ``INFO`` (log all requests)
-       * ``1`` or ``WARNING``
-       * ``2`` or ``CRITICAL`` (log just critical errors, suitable for production purposes)
-     - 0
-     - All
-
-   * - QGIS_SERVER_PARALLEL_RENDERING
-     - Activates parallel rendering for WMS GetMap requests. It's disabled (``false``)
-       by default. Available values are:
-
-       * ``0`` or ``false`` (case insensitive)
-       * ``1`` or ``true`` (case insensitive)
-     - false
-     - WMS
-
-   * - QGIS_SERVER_MAX_THREADS
-     - Number of threads to use when parallel rendering is activated. If value is ``-1`` it
-       uses the number of processor cores.
-     - -1
-     - All
-
-   * - QGIS_SERVER_CACHE_DIRECTORY
-     - Specifies the network cache directory on the filesystem. 
-     - ``cache`` in profile directory
-     - All
-
-   * - QGIS_SERVER_CACHE_SIZE
-     - Sets the network cache size in MB.
-     - 50 MB
-     - All
-
-   * - QGIS_SERVER_OVERRIDE_SYSTEM_LOCALE
-     - Sets LOCALE to be used by QGIS server. The default value is empty (no override).
-
-       Example: ``de_CH.utf8``
-     - ''
-     - All
-
-   * - QGIS_SERVER_SHOW_GROUP_SEPARATOR
-     - Defines whether a group separator (e.g. thousand separator) should be used for
-       numeric values (e.g. in GetFeatureInfo responses). The default value is ``0``.
-
-       * ``0`` or ``false`` (case insensitive)
-       * ``1`` or ``true`` (case insensitive)
-     - false
-     - WMS
-
-   * - QGIS_SERVER_IGNORE_BAD_LAYERS
-     - "Bad" layers are layers that cannot be loaded. The default behavior of QGIS Server
-       is to consider the project as not available if it contains a bad layer.
-
-       The default behavior can be overridden by setting this variable to ``1`` or ``true``.
-       In this case, "bad" layers will just be ignored, and the project will be considered
-       valid and available.
-     - false
-     - All
-
-   * - QGIS_SERVER_WMS_MAX_HEIGHT / QGIS_SERVER_WMS_MAX_WIDTH
-     - Maximum height/width for a WMS request. The most conservative between this and the project one is used.
-       If the value is ``-1``, it means that there is no maximum set.
-     - -1
-     - WMS
-
-   * - QGIS_SERVER_API_RESOURCES_DIRECTORY
-     - Base directory for all OGC API (such as OAPIF/WFS3) static resources (HTML
-       templates, CSS, JS, ...)
-     - depends on packaging
-     - WFS
-
-   * - QGIS_SERVER_API_WFS3_MAX_LIMIT
-     - Maximum value for ``limit`` in a features request.
-     - 10000
-     - WFS
-
-   * - QGIS_SERVER_TRUST_LAYER_METADATA
-     - This is an option at the project level to improve project read time by using the vector
-       layer extents defined in the project metadata and disabling the check for
-       PostgreSQL/PostGIS layer primary key uniqueness.
-
-       Trusting layer metadata can be forced by setting this variable to ``1`` or ``true``.
-       The vector layer's extent will then be the one defined in the project, and the
-       PostgreSQL/PostGIS layer's primary key defined in the data source is
-       considered as unique without a check.
-
-       Do not use it if layers' extent is not fixed during the project's use.
-     - false
-     - All
-
-   * - QGIS_SERVER_DISABLE_GETPRINT
-     - This is an option at the project level to improve project read time by disabling
-       loading of layouts.
-
-       Activating this option disables the QGIS WMS GetPrint request.
-       Set this QGIS project flag to not load layouts.
-     - false
-     - WMS
 
 Settings summary
 ================
