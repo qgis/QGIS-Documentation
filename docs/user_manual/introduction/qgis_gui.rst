@@ -262,6 +262,10 @@ details).
      - :kbd:`Ctrl+Alt+V`
      -
      - :ref:`sec_attribute_table`
+   * - |deleteSelectedFeatures| :guilabel:`Delete Selected`
+     -
+     - :guilabel:`Digitizing`
+     - :ref:`delete_feature`
    * - :menuselection:`Select -->`
      -
      -
@@ -472,96 +476,105 @@ details).
      -
      - :guilabel:`Attributes`
      - :ref:`sec_annotations`
-   * - |moveFeature| :guilabel:`Move Feature(s)`
+   * - :menuselection:`Edit Attributes -->`
      -
-     - :guilabel:`Advanced Digitizing`
-     - :ref:`move_feature`
-   * - |moveFeatureCopy| :guilabel:`Copy and Move Feature(s)`
      -
-     - :guilabel:`Advanced Digitizing`
-     - :ref:`move_feature`
-   * - |deleteSelectedFeatures| :guilabel:`Delete Selected`
      -
-     - :guilabel:`Digitizing`
-     - :ref:`delete_feature`
-   * - |multiEdit| :guilabel:`Modify Attributes of Selected Features`
+   * - :menuselection:`-->` |multiEdit|
+       :guilabel:`Modify Attributes of Selected Features`
      -
      - :guilabel:`Digitizing`
      - :ref:`calculate_fields_values`
-   * - |rotateFeature| :guilabel:`Rotate Feature(s)`
-     -
-     - :guilabel:`Advanced Digitizing`
-     - :ref:`rotate_feature`
-   * - |simplifyFeatures| :guilabel:`Simplify Feature`
-     -
-     - :guilabel:`Advanced Digitizing`
-     - :ref:`simplify_feature`
-   * - |addRing| :guilabel:`Add Ring`
-     -
-     - :guilabel:`Advanced Digitizing`
-     - :ref:`add_ring`
-   * - |addPart| :guilabel:`Add Part`
-     -
-     - :guilabel:`Advanced Digitizing`
-     - :ref:`add_part`
-   * - |fillRing| :guilabel:`Fill Ring`
-     -
-     - :guilabel:`Advanced Digitizing`
-     - :ref:`fill_ring`
-   * - |deleteRing| :guilabel:`Delete Ring`
-     -
-     - :guilabel:`Advanced Digitizing`
-     - :ref:`delete_ring`
-   * - |deletePart| :guilabel:`Delete Part`
-     -
-     - :guilabel:`Advanced Digitizing`
-     - :ref:`delete_part`
-   * - |reshape| :guilabel:`Reshape Features`
-     -
-     - :guilabel:`Advanced Digitizing`
-     - :ref:`reshape_feature`
-   * - |offsetCurve| :guilabel:`Offset Curve`
-     -
-     - :guilabel:`Advanced Digitizing`
-     - :ref:`offset_curve`
-   * - |splitFeatures| :guilabel:`Split Features`
-     -
-     - :guilabel:`Advanced Digitizing`
-     - :ref:`split_feature`
-   * - |splitParts| :guilabel:`Split Parts`
-     -
-     - :guilabel:`Advanced Digitizing`
-     - :ref:`split_part`
-   * - |mergeFeatures| :guilabel:`Merge Selected Features`
-     -
-     - :guilabel:`Advanced Digitizing`
-     - :ref:`mergeselectedfeatures`
-   * - |mergeFeatAttributes|
+   * - :menuselection:`-->` |mergeFeatAttributes|
        :guilabel:`Merge Attributes of Selected Features`
      -
      - :guilabel:`Advanced Digitizing`
      - :ref:`mergeattributesfeatures`
-   * - |vertexTool| :guilabel:`Vertex Tool (All Layers)`
+   * - :menuselection:`Edit Geometry -->`
+     -
+     -
+     -
+   * - :menuselection:`-->` |moveFeature| :guilabel:`Move Feature(s)`
+     -
+     - :guilabel:`Advanced Digitizing`
+     - :ref:`move_feature`
+   * - :menuselection:`-->` |moveFeatureCopy|
+       :guilabel:`Copy and Move Feature(s)`
+     -
+     - :guilabel:`Advanced Digitizing`
+     - :ref:`move_feature`
+   * - :menuselection:`-->` |rotateFeature| :guilabel:`Rotate Feature(s)`
+     -
+     - :guilabel:`Advanced Digitizing`
+     - :ref:`rotate_feature`
+   * - :menuselection:`-->` |simplifyFeatures| :guilabel:`Simplify Feature`
+     -
+     - :guilabel:`Advanced Digitizing`
+     - :ref:`simplify_feature`
+   * - :menuselection:`-->` |addRing| :guilabel:`Add Ring`
+     -
+     - :guilabel:`Advanced Digitizing`
+     - :ref:`add_ring`
+   * - :menuselection:`-->` |addPart| :guilabel:`Add Part`
+     -
+     - :guilabel:`Advanced Digitizing`
+     - :ref:`add_part`
+   * - :menuselection:`-->` |fillRing| :guilabel:`Fill Ring`
+     -
+     - :guilabel:`Advanced Digitizing`
+     - :ref:`fill_ring`
+   * - :menuselection:`-->` |deleteRing| :guilabel:`Delete Ring`
+     -
+     - :guilabel:`Advanced Digitizing`
+     - :ref:`delete_ring`
+   * - :menuselection:`-->` |deletePart| :guilabel:`Delete Part`
+     -
+     - :guilabel:`Advanced Digitizing`
+     - :ref:`delete_part`
+   * - :menuselection:`-->` |reshape| :guilabel:`Reshape Features`
+     -
+     - :guilabel:`Advanced Digitizing`
+     - :ref:`reshape_feature`
+   * - :menuselection:`-->` |offsetCurve| :guilabel:`Offset Curve`
+     -
+     - :guilabel:`Advanced Digitizing`
+     - :ref:`offset_curve`
+   * - :menuselection:`-->` |splitFeatures| :guilabel:`Split Features`
+     -
+     - :guilabel:`Advanced Digitizing`
+     - :ref:`split_feature`
+   * - :menuselection:`-->` |splitParts| :guilabel:`Split Parts`
+     -
+     - :guilabel:`Advanced Digitizing`
+     - :ref:`split_part`
+   * - :menuselection:`-->` |mergeFeatures| :guilabel:`Merge Selected Features`
+     -
+     - :guilabel:`Advanced Digitizing`
+     - :ref:`mergeselectedfeatures`
+   * - :menuselection:`-->` |vertexTool| :guilabel:`Vertex Tool (All Layers)`
      -
      - :guilabel:`Digitizing`
      - :ref:`vertex_tool`
-   * - |vertexToolActiveLayer| :guilabel:`Vertex Tool (Current Layer)`
+   * - :menuselection:`-->` |vertexToolActiveLayer|
+       :guilabel:`Vertex Tool (Current Layer)`
      -
      - :guilabel:`Digitizing`
      - :ref:`vertex_tool`
-   * - |rotatePointSymbols| :guilabel:`Rotate Point Symbols`
+   * - :menuselection:`-->` |rotatePointSymbols|
+       :guilabel:`Rotate Point Symbols`
      -
      - :guilabel:`Advanced Digitizing`
      - :ref:`rotate_symbol`
-   * - |offsetPointSymbols| :guilabel:`Offset Point Symbols`
+   * - :menuselection:`-->` |offsetPointSymbols|
+       :guilabel:`Offset Point Symbols`
      -
      - :guilabel:`Advanced Digitizing`
      - :ref:`offset_symbol`
-   * - |reverseLine| :guilabel:`Reverse Line`
+   * - :menuselection:`-->` |reverseLine| :guilabel:`Reverse Line`
      -
      - :guilabel:`Advanced Digitizing`
      - :ref:`reverse_line`
-   * - |trimExtend| :guilabel:`Trim/extend Feature`
+   * - :menuselection:`-->` |trimExtend| :guilabel:`Trim/extend Feature`
      -
      - :guilabel:`Advanced Digitizing`
      - :ref:`trim_extend_feature`
@@ -788,31 +801,39 @@ actions like:
      - :kbd:`F5`
      - :guilabel:`Map Navigation`
      -
-   * - |showAllLayers| :guilabel:`Show All Layers`
+   * - :menuselection:`Layer Visibility -->`
+     -
+     -
+     - :ref:`label_legend`
+   * - :menuselection:`-->` |showAllLayers| :guilabel:`Show All Layers`
      - :kbd:`Ctrl+Shift+U`
      -
      - :ref:`label_legend`
-   * - |hideAllLayers| :guilabel:`Hide All Layers`
+   * - :menuselection:`-->` |hideAllLayers| :guilabel:`Hide All Layers`
      - :kbd:`Ctrl+Shift+H`
      -
      - :ref:`label_legend`
-   * - |showSelectedLayers| :guilabel:`Show Selected Layers`
+   * - :menuselection:`-->` |showSelectedLayers|
+       :guilabel:`Show Selected Layers`
      -
      -
      - :ref:`label_legend`
-   * - |hideSelectedLayers| :guilabel:`Hide Selected Layers`
+   * - :menuselection:`-->` |hideSelectedLayers|
+       :guilabel:`Hide Selected Layers`
      -
      -
      - :ref:`label_legend`
-   * - |toggleSelectedLayers| :guilabel:`Toggle Selected Layers`
+   * - :menuselection:`-->` |toggleSelectedLayers|
+       :guilabel:`Toggle Selected Layers`
      -
      -
      - :ref:`label_legend`
-   * - :guilabel:`Toogle Selected Layers Independently`
+   * - :menuselection:`-->` :guilabel:`Toogle Selected Layers Independently`
      -
      -
      - :ref:`label_legend`
-   * - |hideDeselectedLayers| :guilabel:`Hide Deselected Layers`
+   * - :menuselection:`-->` |hideDeselectedLayers|
+       :guilabel:`Hide Deselected Layers`
      -
      -
      - :ref:`label_legend`
