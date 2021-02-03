@@ -1093,6 +1093,82 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
+.. _qgisflattenrelationships:
+
+Flatten relationship
+--------------------
+
+Flattens a :ref:`relationship <vector_relations>` for a vector layer,
+exporting a single layer containing one master feature per 
+related feature. This master feature contains all the 
+attributes for the related features.
+This allows to have the relation as a plain table that can be e.g. exported to CSV.
+
+.. figure:: img/flatten_relationship.png
+  :align: center
+
+  Flatten relationship example: identify tool with relations and the attribute table with flattened relations
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input Layer**
+     - ``INPUT``
+     - [vector: any]
+     - Layer with the relationship that should be de-normalized
+   * - **Flattened Layer**
+
+       Optional
+     - ``OUTPUT``
+     - [same as input]
+
+       Default: ``[Save to temporary file]``
+     - Specify the output (flattened) layer. One of:
+
+       * Skip Output
+       * Save to a Temporary File
+       * Save to File...
+       * Save To GeoPackage...
+       * Save to Database Table...
+
+       The file encoding can also be changed here.
+
+Outputs
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Flattened layer**
+     - ``OUTPUT``
+     - [same as input]
+     - A layer containing master features 
+       with all the attributes for the related features
+
+Python code
+...........
+
+**Algorithm ID**: ``native:flattenrelationships``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+  
+
 .. _qgisjoinattributestable:
 
 Join attributes by field value
