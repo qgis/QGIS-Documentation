@@ -115,11 +115,9 @@ called :file:`qgis.demo.conf`, with this content:
    FcgidInitialEnv PYTHONIOENCODING UTF-8
    FcgidInitialEnv LANG "en_US.UTF-8"
 
-   # QGIS log (different from apache logs)
-   FcgidInitialEnv QGIS_SERVER_LOG_FILE /var/log/qgis/qgisserver.log
+   # QGIS log
+   FcgidInitialEnv QGIS_SERVER_LOG_STDERR 1
    FcgidInitialEnv QGIS_SERVER_LOG_LEVEL 0
-
-   FcgidInitialEnv QGIS_DEBUG 1
 
    # default QGIS project
    SetEnv QGIS_PROJECT_FILE /home/qgis/projects/world.qgs
@@ -295,8 +293,7 @@ In the NGINX configuration file, :file:`/etc/nginx/nginx.conf`, you have to use
     location /qgisserver {
          gzip           off;
          include        fastcgi_params;
-         fastcgi_param  QGIS_DEBUG              1;
-         fastcgi_param  QGIS_SERVER_LOG_FILE    /var/log/qgis/qgisserver.log;
+         fastcgi_param  QGIS_SERVER_LOG_STDERR  1;
          fastcgi_param  QGIS_SERVER_LOG_LEVEL   0;
          fastcgi_pass   unix:/var/run/qgisserver.socket;
      }
@@ -357,7 +354,7 @@ QGIS Server is now available at http://localhost/qgisserver.
 
     When using spawn-fcgi, you may directly define environment variables
     before running the server. For example:
-    ``export QGIS_SERVER_LOG_FILE=/var/log/qgis/qgisserver.log``
+    ``export QGIS_SERVER_LOG_STDERR=1``
 
 Of course, you can add an init script to start QGIS Server at boot time or whenever you want.
 For example with **systemd**, edit the file
@@ -375,8 +372,7 @@ For example with **systemd**, edit the file
     ;Environment="QGIS_SERVER_PARALLEL_RENDERING=1"
     ;Environment="QGIS_SERVER_MAX_THREADS=12"
     ;Environment="QGIS_SERVER_LOG_LEVEL=0"
-    ;Environment="DEBUG=1"
-    ;Environment="QGIS_SERVER_LOG_FILE=/var/log/qgis-server.log"
+    ;Environment="QGIS_SERVER_LOG_STDERR=1"
     ;; or use a file:
     ;EnvironmentFile=/etc/qgis-server/env
 
