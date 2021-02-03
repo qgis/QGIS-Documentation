@@ -640,7 +640,7 @@ of a given person is to read from the beginning until you find it.
 Spatial indexes are not created by default for a QGIS vector layer, but you can
 create them easily. This is what you have to do:
 
-* create spatial index using the :class:`QgsSpatialIndex() <qgis.core.QgsSpatialIndex>`
+* create spatial index using the :class:`QgsSpatialIndex <qgis.core.QgsSpatialIndex>`
   class:
 
   .. testcode:: vectors
@@ -672,8 +672,8 @@ create them easily. This is what you have to do:
     # returns array of IDs of features which intersect the rectangle
     intersect = index.intersects(QgsRectangle(22.5, 15.3, 23.1, 17.2))
 
-You can also use the :class:`QgsSpatialIndexKDBush() <qgis.core.QgsSpatialIndexKDBush>`
-spatial index. This index is similar to the *standard* :class:`QgsSpatialIndex() <qgis.core.QgsSpatialIndex>`
+You can also use the :class:`QgsSpatialIndexKDBush <qgis.core.QgsSpatialIndexKDBush>`
+spatial index. This index is similar to the *standard* :class:`QgsSpatialIndex <qgis.core.QgsSpatialIndex>`
 but:
 
 * supports **only** single point features
