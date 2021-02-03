@@ -1104,6 +1104,11 @@ related feature. This master feature contains all the
 attributes for the related features.
 This allows to have the relation as a plain table that can be e.g. exported to CSV.
 
+.. figure:: img/flatten_relationship.png
+  :align: center
+
+  Flatten relationship example: identify tool with relations and the attribute table with flattened relations
+
 Parameters
 ..........
 
