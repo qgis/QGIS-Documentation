@@ -255,7 +255,7 @@ For example with spawn-fcgi:
 .. code-block:: bash
 
  export QGIS_OPTIONS_PATH=/home/user/.local/share/QGIS/QGIS3/profiles/default/
- export QGIS_SERVER_LOG_FILE=/home/user/qserv.log
+ export QGIS_SERVER_LOG_STDERR=1
  export QGIS_SERVER_LOG_LEVEL=2
  spawn-fcgi -f /usr/lib/cgi-bin/qgis_mapserv.fcgi -s /tmp/qgisserver.sock -U www-data -G www-data -n
 
@@ -269,7 +269,7 @@ For example with spawn-fcgi:
 
     - QGIS_SERVER_LOG_LEVEL / '' (Log level): '2' (read from ENVIRONMENT_VARIABLE)
 
-    - QGIS_SERVER_LOG_FILE / '' (Log file): '/tmp/qserv.log' (read from ENVIRONMENT_VARIABLE)
+    - QGIS_SERVER_LOG_STDERR / '' (Activate/Deactivate logging to stderr): '1' (read from ENVIRONMENT_VARIABLE)
 
     - QGIS_PROJECT_FILE / '' (QGIS project file): '' (read from DEFAULT_VALUE)
 
