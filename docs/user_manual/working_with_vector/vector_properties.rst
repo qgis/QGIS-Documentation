@@ -2252,8 +2252,8 @@ You can constrain the value to insert in the field. This constraint can be:
 * |checkbox| :guilabel:`Not null`: requires the user to provide a value;
 * |checkbox| :guilabel:`Unique`: guarantee the inserted value to be unique
   throughout the field;
-* based on a custom :guilabel:`expression`: e.g. ``regexp_match(col0,'A-Za-z')``
-  to ensure that the value of the field *col0* has only alphabetical letter.
+* based on a custom :guilabel:`expression`: e.g. ``not regexp_match(col0,'[^A-Za-z]')``
+  will ensure that the value of the field *col0* has only alphabet letters.
   A short description can be added to help you remember the constraint.
 
 Whenever a value is added or edited in a field, it's submitted to the existing
