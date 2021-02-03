@@ -40,7 +40,11 @@ class. Instances of this class can be created in several different ways:
 
      # EPSG 4326 is allocated for WGS84
      crs = QgsCoordinateReferenceSystem("EPSG:4326")
-     assert crs.isValid()
+     print(crs.isValid())
+
+  .. testoutput:: crs
+
+     True
 
   QGIS supports different CRS identifiers with the following formats:
 
@@ -60,7 +64,11 @@ If no prefix is specified, WKT definition is assumed.
            'PRIMEM["Greenwich", 0.0], UNIT["degree",0.017453292519943295],' \
            'AXIS["Longitude",EAST], AXIS["Latitude",NORTH]]'
      crs = QgsCoordinateReferenceSystem(wkt)
-     assert crs.isValid()
+     print(crs.isValid())
+
+  .. testoutput:: crs
+
+     True
 
 * create an invalid CRS and then use one of the ``create*`` functions to
   initialize it. In the following example we use a Proj string to initialize the
@@ -70,7 +78,11 @@ If no prefix is specified, WKT definition is assumed.
 
      crs = QgsCoordinateReferenceSystem()
      crs.createFromProj("+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs")
-     assert crs.isValid()
+     print(crs.isValid())
+
+  .. testoutput:: crs
+
+     True
 
 It's wise to check whether creation (i.e. lookup in the database) of the CRS
 has been successful: :meth:`isValid() <qgis.core.QgsCoordinateReferenceSystem.isValid>`
