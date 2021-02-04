@@ -374,7 +374,8 @@ symbol layer types:
   simple two color gradients or a predefined :ref:`gradient color ramp
   <color-ramp>` to fill polygons. The gradient can be rotated and applied on
   a single feature basis or across the whole map extent. Also start and end
-  points can be set via coordinates or using the centroid (of feature or map);
+  points can be set via coordinates or using the centroid (of feature or map).
+  A data-defined offset can be defined;
 * **Line pattern fill**: fills the polygon with a hatching pattern of
   :ref:`line symbol layer <vector_line_symbols>`. You can set a rotation, the
   spacing between lines and an offset from the feature boundary;
@@ -408,24 +409,31 @@ symbol layer types:
   color ramps or simple two color gradients, optional blurring of the fill and
   offsets;
 * **Outline: Arrow**: uses a line :ref:`arrow symbol <arrow_symbol>` layer to
-  represent the polygon boundary;
+  represent the polygon boundary. The settings for the line are (data-defined)
+  :guilabel:`Head type`, :guilabel:`Arrow type`, :guilabel:`Arrow width`,
+  :guilabel:`Arrow width at start`,:guilabel:`Head length`, :guilabel:`Head thickness`
+  and :guilabel:`Offset`;
 * **Outline: Hashed line**: uses a :ref:`hash line symbol <hashed_line_symbol>`
   layer to represent the polygon boundary (the interior rings, the
-  exterior ring or all the rings).
+  exterior ring or all the rings). The settings can also be made for
+  :guilabel:`Hash placement`, :guilabel:`Offset along line`, :guilabel:`Hash length`,
+  :guilabel:`Hash rotation`, :guilabel:`Average line over` and :guilabel:`Offset`;
 * **Outline: Marker line**: uses a :ref:`marker line symbol <marker_line_symbol>`
   layer to represent the
   polygon boundary (the interior rings, the exterior ring or all the rings).
+  The settings can also be made for :guilabel:`Marker placement`,
+  :guilabel:`Offset along line`, :guilabel:`Average angel over` and 
+  :guilabel:`Line offset`;
 * **Outline: simple line**: uses a :ref:`simple line symbol <simple_line_symbol>`
   layer to represent the
   polygon boundary (the interior rings, the exterior ring or all the rings).
+  The settings can also be made for :guilabel:`Color`, :guilabel:`Stroke width`,
+  :guilabel:`Offset`, :guilabel:`Stroke style`, :guilabel:`Join style` and 
+  :guilabel:`Cap style`. There are options to use :guilabel:`Align patterns to line length`
+  and :guilabel:`Tweak dash pattern at sharp corners`.
   The :guilabel:`Draw line only inside polygon` option displays the
   polygon borders inside the polygon and can be useful to clearly represent
   adjacent polygon boundaries.
-
-.. tip:: Data-defined offset
- 
- For symbol layer types where you can define an :guilabel:`Offset`, a 
- |dataDefined| :guilabel:`Data-defined override` definition is possible.
 
 .. note::
 
