@@ -100,8 +100,9 @@ Symbology Properties
 Band rendering
 --------------
 
-QGIS offers four different :guilabel:`Render types`.
-The choice of renderer depends on the data type.
+QGIS offers many different :guilabel:`Render types`.
+The choice of renderer depends on the data type and the
+information you'd like to highlight.
 
 #. :ref:`Multiband color <multiband_color>` - if the file comes
    with several bands (e.g. a satellite image with several bands).
@@ -117,6 +118,8 @@ The choice of renderer depends on the data type.
    (e.g. an elevation map).
 #. :ref:`Hillshade <hillshade_renderer>` - Creates hillshade from a
    band.
+#. :ref:`Contours <raster_contours>` - Generates contours on the
+   fly for a source raster band.
 
 
 .. _multiband_color:
@@ -319,6 +322,44 @@ Options:
 * |checkbox| :guilabel:`Multidirectional`: Specify if multidirectional
   hillshading is to be used (default is ``off``).
 
+.. _raster_contours:
+
+Contours
+........
+
+This renderer draws contour lines that are calculated on the fly from
+the source raster band.
+
+.. todo: Add a figure showing options, and the rendering in map canvas
+   
+   .. _figure_raster_contour:
+
+   .. figure:: img/rasterContour.png
+      :align: center
+
+      Raster Symbology - Contour rendering
+
+Options:
+
+* :guilabel:`Input band`: the raster band to use.
+* :guilabel:`Contour interval`: the distance between two consecutive contour lines
+* :guilabel:`Contour symbol`: the :ref:`symbol <vector_line_symbols>` to apply
+  to the common contour lines.
+* :guilabel:`Index contour interval`: the distance between two consecutive
+  **index contours**, that is the lines shown in a distinctive manner for ease
+  of identification, being commonly printed more heavily than other contour
+  lines and generally labeled with a value along its course.
+* :guilabel:`Index contour symbol`: the symbol to apply to the index contour lines
+* :guilabel:`Input downscaling`: Indicates by how much the renderer will scale
+  down the request to the data provider. Default is ``1.0``, meaning no downscaling.
+
+  For example, if you generate contour lines on input raster block with the
+  same size as the output raster block, the generated lines would contain too
+  much detail. This detail can be reduced by the "downscale" factor, requesting
+  lower resolution of the source raster.
+  For a raster block 1000x500 with downscale 10, the renderer will request
+  raster 100x50 from provider. Higher downscale makes contour lines
+  more simplified (at the expense of losing some detail).
 
 .. _minmaxvalues:
 
