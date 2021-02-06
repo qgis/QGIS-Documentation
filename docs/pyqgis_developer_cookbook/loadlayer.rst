@@ -221,7 +221,7 @@ providers:
 
   .. testcode:: loadlayer
 
-      uri = "https://demo.geo-solutions.it/geoserver/ows?service=WFS&version=1.1.0&request=GetFeature&typename=geosolutions:regioni"
+      uri = "https://demo.mapserver.org/cgi-bin/wfs?service=WFS&version=2.0.0&request=GetFeature&typename=ms:cities"
       vlayer = QgsVectorLayer(uri, "my wfs layer", "WFS")
 
 
@@ -233,12 +233,12 @@ providers:
 
       params = {
           'service': 'WFS',
-          'version': '1.1.0',
+          'version': '2.0.0',
           'request': 'GetFeature',
-          'typename': 'geosolutions:regioni',
+          'typename': 'ms:cities',
           'srsname': "EPSG:4326"
       }
-      uri2 = 'https://demo.geo-solutions.it/geoserver/ows?' + urllib.parse.unquote(urllib.parse.urlencode(params))
+      uri2 = 'https://demo.mapserver.org/cgi-bin/wfs?' + urllib.parse.unquote(urllib.parse.urlencode(params))
 
 .. note:: You can change the data source of an existing layer by calling
    :meth:`setDataSource() <qgis.core.QgsVectorLayer.setDataSource>`
@@ -247,7 +247,7 @@ providers:
 
    .. testcode:: loadlayer
 
-      uri = "https://demo.geo-solutions.it/geoserver/ows?service=WFS&version=1.1.0&request=GetFeature&typename=geosolutions:regioni"
+      uri = "https://demo.mapserver.org/cgi-bin/wfs?service=WFS&version=2.0.0&request=GetFeature&typename=ms:cities"
       provider_options = QgsDataProvider.ProviderOptions()
       # Use project's transform context
       provider_options.transformContext = QgsProject.instance().transformContext()
@@ -353,8 +353,8 @@ Raster layers can also be created from a WCS service:
 
 .. code-block:: python
 
- layer_name = 'nurc:mosaic'
- uri = "https://demo.geo-solutions.it/geoserver/ows?identifier={}".format(layer_name)
+ layer_name = 'modis'
+ url = "https://demo.mapserver.org/cgi-bin/wcs?identifier={}".format(layer_name)
  rlayer = QgsRasterLayer(uri, 'my wcs layer', 'wcs')
 
 Here is a description of the parameters that the WCS URI can contain:
@@ -399,7 +399,7 @@ know what layers you want:
 
 .. testcode:: loadlayer
 
-      urlWithParams = "crs=EPSG:4326&format=image/png&layers=tasmania&styles&url=https://demo.geo-solutions.it/geoserver/ows"
+      urlWithParams = "crs=EPSG:4326&format=image/png&layers=continents&styles&url=https://demo.mapserver.org/cgi-bin/wms"
       rlayer = QgsRasterLayer(urlWithParams, 'some layer name', 'wms')
       if not rlayer.isValid():
         print("Layer failed to load!")
@@ -414,11 +414,13 @@ them to the :class:`QgsProject <qgis.core.QgsProject>` instance.
 The :class:`QgsProject <qgis.core.QgsProject>` instance takes ownership of layers
 and they can be later accessed from any part of the application by their unique
 ID. When the layer is removed from the project, it gets deleted, too. Layers can
-be removed by the user in the QGIS interface, or via Python using the :meth:`removeMapLayer() <qgis.core.QgsProject.removeMapLayer>` method.
+be removed by the user in the QGIS interface, or via Python using the
+:meth:`removeMapLayer() <qgis.core.QgsProject.removeMapLayer>` method.
 
 .. index:: Qgis project; Adding a layer
 
-Adding a layer to the current project is done using the :meth:`addMapLayer() <qgis.core.QgsProject.addMapLayer>` method:
+Adding a layer to the current project is done using the
+:meth:`addMapLayer() <qgis.core.QgsProject.addMapLayer>` method:
 
 .. testcode:: loadlayer
 
