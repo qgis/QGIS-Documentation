@@ -1158,7 +1158,7 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
-.. _qgisoverlapanalysis:
+.. _qgiscalculatevectoroverlaps:
 
 Overlap analysis
 ---------------------
@@ -1224,7 +1224,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:overlapanalysis``
+**Algorithm ID**: ``qgis:calculatevectoroverlaps``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
