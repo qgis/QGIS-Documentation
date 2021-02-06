@@ -354,7 +354,6 @@ Raster layers can also be created from a WCS service:
 .. code-block:: python
 
  layer_name = 'modis'
- uri = "https://demo.geo-solutions.it/geoserver/ows?identifier={}".format(layer_name)
  url = "https://demo.mapserver.org/cgi-bin/wcs?identifier={}".format(layer_name)
  rlayer = QgsRasterLayer(uri, 'my wcs layer', 'wcs')
 
