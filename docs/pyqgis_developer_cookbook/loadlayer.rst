@@ -399,7 +399,7 @@ know what layers you want:
 
 .. testcode:: loadlayer
 
-      urlWithParams = "crs=EPSG:4326&ormat=image/png&layers=continents&styles&url=https://demo.mapserver.org/cgi-bin/wms"
+      urlWithParams = "crs=EPSG:4326&format=image/png&layers=continents&styles&url=https://demo.mapserver.org/cgi-bin/wms"
       rlayer = QgsRasterLayer(urlWithParams, 'some layer name', 'wms')
       if not rlayer.isValid():
         print("Layer failed to load!")
