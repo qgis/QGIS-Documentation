@@ -142,13 +142,13 @@ understand the snippet.
   # QgsAuthManager.init() is executed during QGIS application init and hence
   # you do not normally need to call it directly.
   if authMgr.authenticationDatabasePath():
-      # already initilised => we are inside a QGIS app.
+      # already initialized => we are inside a QGIS app.
       if authMgr.masterPasswordIsSet():
           msg = 'Authentication master password not recognized'
           assert authMgr.masterPasswordSame("your master password"), msg
       else:
           msg = 'Master password could not be set'
-          # The verify parameter check if the hash of the password was
+          # The verify parameter checks if the hash of the password was
           # already saved in the authentication db
           assert authMgr.setMasterPassword("your master password",
                                             verify=True), msg
@@ -180,8 +180,8 @@ an organization.
 :class:`QgsAuthMethodConfig <qgis.core.QgsAuthMethodConfig>` is the base class
 for any :term:`Authentication Method`.
 Any Authentication Method sets a configuration hash map where authentication
-informations will be stored. Hereafter an useful snippet to store PKI-path
-credentials for an hypothetic alice user:
+information will be stored. Hereafter a useful snippet to store PKI-path
+credentials for a hypothetical alice user:
 
 .. testcode:: auth
 
