@@ -55,9 +55,9 @@ you **test** if it is valid. If the code has a wrong python syntax or the
 
 To successfully run the tests on snippets, you must import all the classes and
 declare any variables used in the code snippets. You can include those in the
-code snippet itself (visible in the HTML pages) or you can add them to a ``..
-testsetup::`` directive (hidden in the HTML pages). The ``.. testsetup::`` needs
-to be placed before the ``.. testcode::``::
+code snippet itself (visible in the HTML pages) or you can add them to a
+``.. testsetup::`` directive (hidden in the HTML pages). The ``.. testsetup::``
+needs to be placed before the ``.. testcode::``::
 
   .. testsetup::
 

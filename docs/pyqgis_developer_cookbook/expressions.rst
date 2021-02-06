@@ -111,12 +111,27 @@ simple arithmetic to aggregate expressions.
 Basic Expressions
 -----------------
 
-This basic expression evaluates to 1, meaning it is true:
+This basic expression evaluates a simple arithmetic operation:
+
+.. testcode:: expr
+
+   exp = QgsExpression('2 * 3')
+   print(exp)
+   print(exp.evaluate())
+
+.. testoutput:: expr
+
+   <QgsExpression: '2 * 3'>
+   6
+
+Expression can also be used for comparison, evaluating to 1 (:const:`True`)
+or 0 (:const:`False`)
 
 .. testcode:: expr
 
    exp = QgsExpression('1 + 1 = 2')
-   assert(exp.evaluate()) # exp.evaluate() returns 1 and assert() recognizes this as True
+   exp.evaluate()
+   # 1
 
 
 Expressions with features
@@ -141,7 +156,8 @@ feature to the expression context.
    exp = QgsExpression('"Column"')
    context = QgsExpressionContext()
    context.setFeature(feature)
-   assert(exp.evaluate(context) == 99)
+   exp.evaluate(context)
+   # 99
 
 
 The following is a more complete example of how to use expressions in the context of a vector layer, in
@@ -203,7 +219,7 @@ order to compute new field values:
            f['Fun'] = expression3.evaluate(context)
            vl.updateFeature(f)
 
-   print( f['Sum'])
+   print(f['Sum'])
 
 .. testoutput:: expr
 
@@ -236,8 +252,12 @@ matches a predicate.
    for f in layer.getFeatures(request):
       matches += 1
 
-   assert(matches == 7)
+   print(matches)
 
+
+.. testoutput:: expr
+
+   7
 
 Handling expression errors
 ==========================
