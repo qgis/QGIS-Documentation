@@ -5,17 +5,17 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Harrissou Sant-anna, 2021
 # Francis Gasc <francisgasc@gmail.com>, 2021
+# Harrissou Sant-anna, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-12 10:14+0000\n"
+"POT-Creation-Date: 2021-02-03 02:18+0000\n"
 "PO-Revision-Date: 2020-12-24 10:18+0000\n"
-"Last-Translator: Francis Gasc <francisgasc@gmail.com>, 2021\n"
+"Last-Translator: Harrissou Sant-anna, 2021\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -115,24 +115,22 @@ msgstr ""
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:50
 msgid ""
-"You can combine HTML rendering and expressions, leading to e.g. a text like:"
+"You can combine HTML rendering with expressions, leading to advanced "
+"labeling. The following code will output :numref:`figure_layout_label_html`:"
 msgstr ""
-"Vous pouvez combiner un rendu HTML avec des expressions ce qui donnera par "
-"exemple le texte comme suit :"
+"Vous pouvez combiner un rendu HTML avec des expressions et obtenir des "
+"étiquettes avancées. Le code suivant donnera l'image "
+":numref:`figure_layout_label_html` :"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:56
-msgid ""
-"which will render: **Check out the new logo for** `QGIS 3.0 "
-"<https://www.qgis.org>`_ **:** |logo|"
-msgstr ""
-"qui rendra : **Regardez le nouveau logo de** `QGIS 3.0 "
-"<https://www.qgis.org>`_ **:** |logo|"
+#: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:84
+msgid "Leveraging a label with HTML styling"
+msgstr "Réaliser une étiquette avec du style HTML"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:63
+#: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:89
 msgid "Appearance"
 msgstr "Apparence"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:65
+#: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:91
 msgid ""
 "Define :guilabel:`Font` by clicking on the :guilabel:`Font...` button or a "
 ":guilabel:`Font color` by pushing the :ref:`color widget <color-selector>`."
@@ -141,7 +139,7 @@ msgstr ""
 ":guilabel:`Police...` ou une :guilabel:`Couleur de police` en sélectionnant "
 "une couleur via l':ref:`outil de sélection de couleur <color-selector>`."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:67
+#: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:93
 msgid ""
 "You can specify different horizontal and vertical margins in ``mm``. This is"
 " the margin from the edge of the layout item. The label can be positioned "
@@ -154,14 +152,14 @@ msgstr ""
 "alignement avec d'autres objets. Dans ce cas, utilisez des valeurs négatives"
 " pour les marges. "
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:71
+#: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:97
 msgid ""
 "Using the text alignment is another way to position your label. It can be:"
 msgstr ""
 "Utiliser les paramètres d’alignement est une autre façon de positionner "
 "votre étiquette. Il est possible de le faire de différentes manières :"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:73
+#: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:99
 msgid ""
 ":guilabel:`Left`, :guilabel:`Center`, :guilabel:`Right` or "
 ":guilabel:`Justify` for :guilabel:`Horizontal alignment`"
@@ -169,7 +167,7 @@ msgstr ""
 ":guilabel:`Gauche`, :guilabel:`Centré`, :guilabel:`Droite` ou "
 ":guilabel:`Justifié` pour l':guilabel:`Alignement horizontal`"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:75
+#: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:101
 msgid ""
 "and :guilabel:`Top`, :guilabel:`Middle`, :guilabel:`Bottom` for "
 ":guilabel:`Vertical alignment`."
@@ -177,11 +175,11 @@ msgstr ""
 "et :guilabel:`Haut`, :guilabel:`Centré`, :guilabel:`Bas` pour "
 "l':guilabel:`Alignement vertical`."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:81
+#: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:107
 msgid "Exploring expressions in a label item"
 msgstr "Explorer les expressions dans un objet Étiquette"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:83
+#: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:109
 msgid ""
 "Below some examples of expressions you can use to populate the label item "
 "with interesting information - remember that the code, or at least the "
@@ -193,22 +191,22 @@ msgstr ""
 " code, ou du moins la partie interprétée, doit être encadrée par ``[%`` et "
 "``%]`` dans les :guilabel:`Propriétés principales` :"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:87
+#: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:113
 msgid "Display a title with the current atlas feature value in \"field1\":"
 msgstr ""
 "Afficher un titre avec la valeur de l'attribut \"field1\" de l'entité "
 "d'atlas en cours :"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:93
+#: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:119
 msgid "or, written in the :guilabel:`Main properties` section:"
 msgstr "ou, écrit dans la section des :guilabel:`Propriétés principales` : "
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:99
+#: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:125
 msgid "Add a pagination for processed atlas features (eg, ``Page 1/10``):"
 msgstr ""
 "Ajouter une pagination pour l'entité d'atlas (par exemple, ``Page 1/10``) :"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:105
+#: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:131
 msgid ""
 "Return the name of the airports of the current atlas region feature, based "
 "on their common attributes:"
@@ -216,12 +214,12 @@ msgstr ""
 "Renvoyez le nom des aéroports de la région actuelle de l'atlas, en fonction "
 "de leurs attributs communs :"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:117
+#: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:143
 msgid "Or, if an :ref:`attributes relation <vector_relations>` is set:"
 msgstr ""
 "Ou, si une :ref:`relation attributaire <vector_relations>` est définie :"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:127
+#: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:153
 msgid ""
 "Return the name of the airports contained in the current atlas region "
 "feature, based on their spatial relationship:"
@@ -229,17 +227,17 @@ msgstr ""
 "Renvoyer le nom des aéroports contenus dans l'entité actuelle de la région "
 "de l'atlas, en fonction de leur relation spatiale :"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:139
+#: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:165
 msgid "OR::"
 msgstr "OR::"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:146
+#: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:172
 msgid "Return the lower X coordinate of the ``Map 1`` item's extent:"
 msgstr ""
 "Afficher la coordonnée X inférieure de l'emprise de l'objet carte ``Map 1`` "
 ":"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:152
+#: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:178
 msgid ""
 "Retrieve the name of the layers in the current layout ``Map 1`` item, and "
 "formats in one name by line:"
@@ -261,3 +259,16 @@ msgstr ""
 #~ ":guilabel:`Propriétés de l'objet`. En plus des :ref:`propriétés communes "
 #~ "<item_common_properties>`, cet objet propose les fonctionnalités suivantes "
 #~ "(voir figure_layout_label_) :"
+
+#~ msgid ""
+#~ "You can combine HTML rendering and expressions, leading to e.g. a text like:"
+#~ msgstr ""
+#~ "Vous pouvez combiner un rendu HTML avec des expressions ce qui donnera par "
+#~ "exemple le texte comme suit :"
+
+#~ msgid ""
+#~ "which will render: **Check out the new logo for** `QGIS 3.0 "
+#~ "<https://www.qgis.org>`_ **:** |logo|"
+#~ msgstr ""
+#~ "qui rendra : **Regardez le nouveau logo de** `QGIS 3.0 "
+#~ "<https://www.qgis.org>`_ **:** |logo|"
