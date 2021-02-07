@@ -293,33 +293,34 @@ selected layer on the newly created canvas
   w = MyWnd(iface.activeLayer())
   w.show()
 
-.. index:: Map canvas; Custom map tools
 
 
-Selection of a feature using QgsMapToolIdentifyFeature
-------------------------------------------------------
+Select a feature using QgsMapToolIdentifyFeature
+------------------------------------------------
 
-You can use the map tool QgsMapToolIdentifyFeature for asking to the
-user to select a feature that wiil be send to a callback function.
+You can use the map tool :class:`QgsMapToolIdentifyFeature <qgis.gui.QgsMapToolIdentifyFeature>`
+for asking to the user to select a feature that will be sent to a callback function.
 
 .. testcode:: canvas
 
   def callback(feature):
     """Code called when the feature is selected by the user"""
-    print(f"You clicked on feature {feature.id()}")
+    print("You clicked on feature {}".format(feature.id()))
 
+  canvas = iface.mapCanvas()
   feature_identifier = QgsMapToolIdentifyFeature(canvas)
 
-  # indicates the layer on which the selection wiil be done
+  # indicates the layer on which the selection will be done
   feature_identifier.setLayer(vlayer)
 
-  # use the callback as a slot triggered when the user identify a feature
+  # use the callback as a slot triggered when the user identifies a feature
   feature_identifier.featureIdentified.connect(callback)
 
-  # activation of hte map tool
+  # activation of the map tool
   canvas.setMapTool(feature_identifier)
 
 
+.. index:: Map canvas; Custom map tools
 
 Writing Custom Map Tools
 ========================
