@@ -278,15 +278,20 @@ layer types:
     adjusts the dash pattern placement so that sharp corners are represented
     by a full dash element coming into and out of the sharp corner.
     Dependent on :guilabel:`Align dash pattern to line length`.
+  * |checkbox| :guilabel:`Draw line only inside polygon`
 
 .. _arrow_symbol:
 
 * **Arrow**: draws lines as curved (or not) arrows with a single or a double
-  head with configurable width, length and thickness. To create a curved arrow
-  the line feature must have at least three vertices. It also uses a
-  :ref:`fill symbol <vector_fill_symbols>` such as gradients or shapeburst
-  to render the arrow body. Combined with the geometry generator, this type of
-  layer symbol helps you representing flow maps.
+  head with configurable :guilabel:`Head type`, :guilabel:`Arrow type`,
+  :guilabel:`Arrow width`, :guilabel:`Arrow width at start`, :guilabel:`Head length`
+  :guilabel:`Head thickness` and :guilabel:`Offset`. It is possible to create
+  |checkbox| :guilabel:`Curved arrows` and
+  |checkbox| :guilabel:`Repeat arrow on each segment`.
+  To create a curved arrow the line feature must have at least three vertices.
+  It also uses a :ref:`fill symbol <vector_fill_symbols>` such as gradients or
+  shapeburst to render the arrow body. Combined with the geometry generator,
+  this type of layer symbol helps you representing flow maps.
 * **Geometry generator** (see :ref:`geometry_generator_symbol`)
 
 .. _marker_line_symbol:
@@ -324,6 +329,7 @@ layer types:
 
   * :guilabel:`Hash length`
   * :guilabel:`Hash rotation`
+  * |checkbox| :guilabel:`Rotate hash to follow line direction`
 
   .. _figure_hashed_line_symbol:
 
@@ -409,28 +415,20 @@ symbol layer types:
   color ramps or simple two color gradients, optional blurring of the fill and
   offsets;
 * **Outline: Arrow**: uses a line :ref:`arrow symbol <arrow_symbol>` layer to
-  represent the polygon boundary. The settings for the line are (data-defined)
-  :guilabel:`Head type`, :guilabel:`Arrow type`, :guilabel:`Arrow width`,
-  :guilabel:`Arrow width at start`,:guilabel:`Head length`, :guilabel:`Head thickness`
-  and :guilabel:`Offset`;
+  represent the polygon boundary. The settings for the outline arrow are the same
+  as for line symbols.
 * **Outline: Hashed line**: uses a :ref:`hash line symbol <hashed_line_symbol>`
   layer to represent the polygon boundary (the interior rings, the
-  exterior ring or all the rings). The settings can also be made for
-  :guilabel:`Hash placement`, :guilabel:`Offset along line`, :guilabel:`Hash length`,
-  :guilabel:`Hash rotation`, :guilabel:`Average line over` and :guilabel:`Offset`;
+  exterior ring or all the rings). The settings for the outline hashed line are the
+  same as for line symbols.
 * **Outline: Marker line**: uses a :ref:`marker line symbol <marker_line_symbol>`
   layer to represent the
   polygon boundary (the interior rings, the exterior ring or all the rings).
-  The settings can also be made for :guilabel:`Marker placement`,
-  :guilabel:`Offset along line`, :guilabel:`Average angel over` and 
-  :guilabel:`Line offset`;
+  The settings for the outline marker line are same as for line symbols.
 * **Outline: simple line**: uses a :ref:`simple line symbol <simple_line_symbol>`
   layer to represent the
   polygon boundary (the interior rings, the exterior ring or all the rings).
-  The settings can also be made for :guilabel:`Color`, :guilabel:`Stroke width`,
-  :guilabel:`Offset`, :guilabel:`Stroke style`, :guilabel:`Join style` and 
-  :guilabel:`Cap style`. There are options to use :guilabel:`Align patterns to line length`
-  and :guilabel:`Tweak dash pattern at sharp corners`.
+  The settings for the outline simple line are the same as for line symbols.
   The :guilabel:`Draw line only inside polygon` option displays the
   polygon borders inside the polygon and can be useful to clearly represent
   adjacent polygon boundaries.
