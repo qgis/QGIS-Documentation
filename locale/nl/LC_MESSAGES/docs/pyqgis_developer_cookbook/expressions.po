@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-12 10:14+0000\n"
+"POT-Creation-Date: 2021-02-10 02:04+0000\n"
 "PO-Revision-Date: 2020-12-24 12:01+0000\n"
 "Last-Translator: DiGro, 2021\n"
 "Language-Team: Dutch (https://www.transifex.com/qgis/teams/6144/nl/)\n"
@@ -215,14 +215,22 @@ msgid "Basic Expressions"
 msgstr "Basisexpressies"
 
 #: ../../docs/pyqgis_developer_cookbook/expressions.rst:114
-msgid "This basic expression evaluates to 1, meaning it is true:"
-msgstr "Deze basis expressie evalueert tot 1, wat betekent dat hij waar is:"
+msgid "This basic expression evaluates a simple arithmetic operation:"
+msgstr "Deze basis expressie evalueert een eenvoudige rekenkundige bewerking:"
 
-#: ../../docs/pyqgis_developer_cookbook/expressions.rst:123
+#: ../../docs/pyqgis_developer_cookbook/expressions.rst:127
+msgid ""
+"Expression can also be used for comparison, evaluating to 1 (:const:`True`) "
+"or 0 (:const:`False`)"
+msgstr ""
+"Expressie mag ook gebruikt worden voor vergelijking, evalueert tot 1 "
+"(:const:`True`) of 0 (:const:`False`)"
+
+#: ../../docs/pyqgis_developer_cookbook/expressions.rst:138
 msgid "Expressions with features"
 msgstr "Expressies met objecten"
 
-#: ../../docs/pyqgis_developer_cookbook/expressions.rst:125
+#: ../../docs/pyqgis_developer_cookbook/expressions.rst:140
 msgid ""
 "To evaluate an expression against a feature, a :class:`QgsExpressionContext "
 "<qgis.core.QgsExpressionContext>` object has to be created and passed to the"
@@ -234,7 +242,7 @@ msgstr ""
 "worden gemaakt en doorgegeven aan de functie evaluate om de expressie toe te"
 " staan toegang te krijgen tot de veldwaarden van het object."
 
-#: ../../docs/pyqgis_developer_cookbook/expressions.rst:129
+#: ../../docs/pyqgis_developer_cookbook/expressions.rst:144
 msgid ""
 "The following example shows how to create a feature with a field called "
 "\"Column\" and how to add this feature to the expression context."
@@ -242,7 +250,7 @@ msgstr ""
 "Het volgende voorbeeld laat zien hoe een object te maken met een veld "
 "\"Column\" en hoe dit object toe te voegen aan de context van de expressie."
 
-#: ../../docs/pyqgis_developer_cookbook/expressions.rst:147
+#: ../../docs/pyqgis_developer_cookbook/expressions.rst:163
 msgid ""
 "The following is a more complete example of how to use expressions in the "
 "context of a vector layer, in order to compute new field values:"
@@ -250,11 +258,11 @@ msgstr ""
 "Het volgende is een meer compleet voorbeeld van hoe expressies te gebruiken "
 "in de context van een vectorlaag, om nieuwe veldwaarden te kunnen berekenen:"
 
-#: ../../docs/pyqgis_developer_cookbook/expressions.rst:214
+#: ../../docs/pyqgis_developer_cookbook/expressions.rst:230
 msgid "Filtering a layer with expressions"
 msgstr "Een laag filteren met expressies"
 
-#: ../../docs/pyqgis_developer_cookbook/expressions.rst:216
+#: ../../docs/pyqgis_developer_cookbook/expressions.rst:232
 msgid ""
 "The following example can be used to filter a layer and return any feature "
 "that matches a predicate."
@@ -262,11 +270,11 @@ msgstr ""
 "Het volgende voorbeeld kan worden gebruikt om een laag te filteren en elk "
 "object terug te geven dat overeenkomt met een term."
 
-#: ../../docs/pyqgis_developer_cookbook/expressions.rst:243
+#: ../../docs/pyqgis_developer_cookbook/expressions.rst:263
 msgid "Handling expression errors"
 msgstr "Fouten in expressies afhandelen"
 
-#: ../../docs/pyqgis_developer_cookbook/expressions.rst:245
+#: ../../docs/pyqgis_developer_cookbook/expressions.rst:265
 msgid ""
 "Expression-related errors can occur during expression parsing or evaluation:"
 msgstr ""
@@ -286,3 +294,6 @@ msgstr ""
 #~ " True of False teruggeven) of als functies (die een scalaire waarde "
 #~ "teruggeven). Bekijk :ref:`vector_expressions` in de Gebruikershandleiding "
 #~ "voor een volledige lijst van beschikbare functies."
+
+#~ msgid "This basic expression evaluates to 1, meaning it is true:"
+#~ msgstr "Deze basis expressie evalueert tot 1, wat betekent dat hij waar is:"
