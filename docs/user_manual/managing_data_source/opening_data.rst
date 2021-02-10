@@ -951,7 +951,11 @@ the connection dialog proposes:
 * **Database**: SID or SERVICE_NAME of the Oracle instance;
 * **Port**: Port number the Oracle database server listens on. The default
   port is ``1521``;
-* **Workspace**: Workspace to switch to.
+* **Options**: Oracle connection specific options (e.g. OCI_ATTR_PREFETCH_ROWS,
+  OCI_ATTR_PREFETCH_MEMORY). The format of the options string is a semicolon
+  separated list of option names or option=value pairs;
+* **Workspace**: Workspace to switch to;
+* **Schema**: Schema in which the data are stored
 
 Optionally, you can activate the following checkboxes:
 
