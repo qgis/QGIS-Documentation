@@ -2068,64 +2068,6 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
-.. _qgissetstyleforvectorlayer:
-
-Set style for vector layer
---------------------------
-Sets the style of a vector layer. The style must be defined in a
-QML file.
-
-No new output are created: the style is immediately assigned to the
-vector layer.
-
-.. seealso:: :ref:`qgissetstyleforrasterlayer`
-
-Parameters
-..........
-
-.. list-table::
-   :header-rows: 1
-   :widths: 20 20 20 40
-
-   * - Label
-     - Name
-     - Type
-     - Description
-   * - **Input Layer**
-     - ``INPUT``
-     - [vector: any]
-     - Input vector layer you want to set the style for
-   * - **Style file**
-     - ``STYLE``
-     - [file]
-     - ``qml`` file of the style
-
-Outputs
-..........
-
-.. list-table::
-   :header-rows: 1
-   :widths: 20 20 20 40
-
-   * - Label
-     - Name
-     - Type
-     - Description
-   * - **Input Layer**
-     - ``INPUT``
-     - [same as input]
-     - The input vector layer with the new style
-
-Python code
-...........
-
-**Algorithm ID**: ``qgis:setstyleforvectorlayer``
-
-.. include:: qgis_algs_include.rst
-  :start-after: **algorithm_code_section**
-  :end-before: **end_algorithm_code_section**
-
-
 .. _qgissplitfeaturesbycharacter:
 
 Split features by character
