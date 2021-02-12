@@ -76,7 +76,7 @@ eventually the end date:
    Raster Layer Temporal Settings
 
 In this example the raster layer has a ``Start date`` set to ``2013-06-30 00:00:00``
-and no ``End Date``. It means that the raster will be convered by other rasters
+and no ``End Date``. It means that the raster will be covered by other rasters
 that have a more recent start date set.
 
 Once you have enabled the temporal control on the layer the
