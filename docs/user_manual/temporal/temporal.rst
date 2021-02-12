@@ -1,8 +1,8 @@
 .. _`temporal`:
 
-****************
-Temporal Support
-****************
+*********************
+Temporal Data Support
+*********************
 
 .. only:: html
 
@@ -17,7 +17,7 @@ Different providers are supported:
 * raster layers
 * vector layers
 * mesh layers
-* WMST
+* WMS-T
 
 Activating the temporal control support means setting up the temporal options on
 the layer(s) and then enabling the temporal view QGIS-wide.
@@ -25,7 +25,7 @@ the layer(s) and then enabling the temporal view QGIS-wide.
 The temporal support is also available in the print layout: you can export time
 based maps.
 
-Furthermore, many variables are added to the Field Calculator so that you can
+Furthermore, many variables are added to the Expression Builder so that you can
 use them to change the appearance of the layer(s) depending on the current map
 frame.
 
@@ -34,11 +34,12 @@ General concepts
 ================
 Temporal control settings are available at different levels:
 
-* in the `Temporal` tab within the project properties :menuselection:`Project --> Properties`
-* in the properties on the single layer(s)
+* in the :guilabel:`Temporal` tab within the project properties
+  :menuselection:`Project --> Properties` dialog * in the properties on the
+  single layer(s)
 
 The whole temporal control is activated with the |temporal| icon located in the
-main toolbar. Once clicked the temporal panel will appear:
+:guilabel:`Map Navigation` toolbar. Once clicked the temporal panel will appear:
 
 .. _temporal_controller:
 
@@ -47,14 +48,14 @@ main toolbar. Once clicked the temporal panel will appear:
 
    Temporal Controller Panel
 
-The temporal panel has 3 main icons:
+The temporal panel has the following buttons:
 
-* |indicatorTemporalOff| :guilabel:`Turn off temporal navigation`: all the temporal 
-  settings are diabled
-* |indicatorTemporalFixedRange| :guilabel:`Fixed range tamporal navigation`: a 
-  fixed time range is set and oly layers that fit this range will be diplayed in 
-  the map
-* |indicatorTemporalAnimated| :guilabel:`Animated tamporal navigation`: the map
+* |temporalNavigationOff| :guilabel:`Turn off temporal navigation`: all the temporal 
+  settings are disabled
+* |temporalNavigationFixedRange| :guilabel:`Fixed range temporal navigation`: a 
+  fixed time range is set and only layers that fit this range will be displayed
+  in the map
+* |temporalNavigationAnimated| :guilabel:`Animated temporal navigation`: the map
   will be animated depending on the layer settings and temporal customization
 
 In order to link the visible layers with the time range you have first to tweak
@@ -79,29 +80,29 @@ and no ``End Date``. It means that the raster will be convered by other rasters
 that have a more recent start date set.
 
 Once you have enabled the temporal control on the layer the
-|indicatorTemporalFixedRange| icon will be dislayed next to the layer name in
-the legend to remind you that the layer is temporal controlled:
+|temporalNavigationFixedRange| icon will be displayed next to the layer name in
+the legend to remind you that the layer is temporally controlled:
 
 .. figure:: img/temporal_icon_legend.png
    :align: center
 
    Temporal icon in the legend
 
-You can click on the icon to quickly go to the temporal layer settings.
+You can click on the icon to quickly go to the temporal settings of the layer.
 
-If you have many different raster layers loaded in the legend be sure to tweak
+If you have many different raster layers loaded in the project be sure to tweak
 the temporal settings for each layer. In the following example the name of the
-layers describes the date.
+layers describes the date at which they are set to display.
 
 If you open the main temporal panel with the |temporal| button you can animate
-the map with by clicking the |indicatorTemporalAnimated| :guilabel:`Animated
-tamporal navigation` button.
+the map by clicking the |temporalNavigationAnimated| :guilabel:`Animated
+temporal navigation` button.
 
 Before to play the map you have to set the temporal options shown in the bottom
-part of the ``Animated temporal navigation`` panel:
+part of the :guilabel:`Animated temporal navigation` panel:
 
-* ``Range``: the starting and ending datetime range
-* ``Step``: how often the map should update
+* :guilabel:`Range`: the starting and ending datetime range
+* :guilabel:`Step`: how often the map should update
 
 .. figure:: img/animated_raster_options.png
    :align: center
@@ -117,11 +118,10 @@ button. Use all the other buttons to pause, stop, rewind and forward the map:
    Animated Temporal Navigation Buttons
 
 If the |unchecked| :guilabel:`Loop` checkbox in the upper right part of the bar
-if checked the animation will be endlessly repeated.
+is checked the animation will be endlessly repeated.
 
 .. figure:: img/temporal.gif
    :align: center
-
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
@@ -130,15 +130,15 @@ if checked the animation will be endlessly repeated.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |indicatorTemporalAnimated| image:: /static/common/mTemporalNavigationAnimated.png
-   :width: 1.5em
-.. |indicatorTemporalFixedRange| image:: /static/common/mTemporalNavigationFixedRange.png
-   :width: 1.5em
-.. |indicatorTemporalOff| image:: /static/common/mTemporalNavigationOff.png
-   :width: 1.5em
 .. |play| image:: /static/common/mActionPlay.png
    :width: 1.5em
 .. |temporal| image:: /static/common/temporal.png
+   :width: 1.5em
+.. |temporalNavigationAnimated| image:: /static/common/mTemporalNavigationAnimated.png
+   :width: 1.5em
+.. |temporalNavigationFixedRange| image:: /static/common/mTemporalNavigationFixedRange.png
+   :width: 1.5em
+.. |temporalNavigationOff| image:: /static/common/mTemporalNavigationOff.png
    :width: 1.5em
 .. |unchecked| image:: /static/common/checkbox_unchecked.png
    :width: 1.3em
