@@ -431,6 +431,62 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
+.. _qgissetlayerstyle:
+
+Set layer style
+---------------
+
+Applies a provided style to a layer. The style must be defined in a
+:file:`QML` file.
+
+No new output are created: the style is immediately assigned to the layer.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input Layer**
+     - ``INPUT``
+     - [layer]
+     - Input layer you want to apply the style to
+   * - **Style file**
+     - ``STYLE``
+     - [file]
+     - Path to the ``.qml`` file of the style
+
+Outputs
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * -
+     - ``OUTPUT``
+     - [same as input]
+     - The input layer with the new style assigned. No new layer is created.
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:setlayerstyle``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
 .. _qgistopologicalcoloring:
 
 Topological coloring
