@@ -91,6 +91,21 @@ to find a balance that works for you.
 
 Remember to save the project when you are done.
 
+|FA| Finding the best areas
+----------------------------------------------------------------------
+
+Think back to the estate agent problem, which we last addressed in the
+*Vector Analysis* lesson.
+Let us imagine that the buyers now wish to purchase a building and
+build a smaller cottage on the property.
+In the Southern Hemisphere, we know that an ideal plot for development
+needs to have areas on it that:
+
+* are north-facing
+* with a slope of less than 5 degrees
+* But if the slope is less than 2 degrees, then the aspect doesn't matter.
+
+Let's find the best areas for them.
 
 |moderate| |FA| Calculating the Slope
 ----------------------------------------------------------------------
@@ -134,16 +149,6 @@ Use the :guilabel:`Aspect` algorithm of the
 
 |moderate| |FA| Using the Raster Calculator
 ----------------------------------------------------------------------
-
-Think back to the estate agent problem, which we last addressed in the
-*Vector Analysis* lesson.
-Let us imagine that the buyers now wish to purchase a building and
-build a smaller cottage on the property.
-In the Southern Hemisphere, we know that an ideal plot for development
-needs to have areas on it that are north-facing, and with a slope of
-less than five degrees.
-But if the slope is less than 2 degrees, then the aspect doesn't
-matter.
 
 Fortunately, you already have rasters showing you the slope as well as
 the aspect, but you have no way of knowing where both conditions are
