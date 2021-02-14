@@ -304,12 +304,12 @@ Let us get rid of all these tiny unusable areas.
 #. Set the :guilabel:`Threshold` to 8 (minimum eight contiguous
    pixels), and check :guilabel:`Use 8-connectedness`.
 
-   .. figure:: img/raster_seive_dialog.png
+   .. figure:: img/raster_sieve_dialog.png
       :align: center
 
    Once processing is done, the new layer will be loaded.
 
-   .. figure:: img/seive_result_incorrect.png
+   .. figure:: img/sieve_result_incorrect.png
       :align: center
 
    What is going on? The answer lies in the new raster file's
@@ -319,7 +319,7 @@ Let us get rid of all these tiny unusable areas.
    :guilabel:`Layer Properties` dialog.
    Look the ``STATISTICS_MINIMUM`` value:
 
-   .. figure:: img/seive_metadata.png
+   .. figure:: img/sieve_metadata.png
       :align: center
 
    This raster, like the one it is derived from, should only feature
@@ -341,7 +341,7 @@ Let us get rid of all these tiny unusable areas.
 
 Your output looks like this:
 
-.. figure:: img/raster_seive_correct.png
+.. figure:: img/raster_sieve_correct.png
    :align: center
 
 This is what was expected: a simplified version of the earlier
