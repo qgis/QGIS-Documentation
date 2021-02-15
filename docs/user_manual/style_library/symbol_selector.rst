@@ -283,12 +283,19 @@ layer types:
 .. _arrow_symbol:
 
 * **Arrow**: draws lines as curved (or not) arrows with a single or a double
-  head with configurable :guilabel:`Head type`, :guilabel:`Arrow type`,
-  :guilabel:`Arrow width`, :guilabel:`Arrow width at start`, :guilabel:`Head length`
-  :guilabel:`Head thickness` and :guilabel:`Offset`. It is possible to create
-  |checkbox| :guilabel:`Curved arrows` and
+  head with configurable (and data-defined):
+
+  * :guilabel:`Head type`
+  * :guilabel:`Arrow type`
+  * :guilabel:`Arrow width`
+  * :guilabel:`Arrow width at start`
+  * :guilabel:`Head length`
+  * :guilabel:`Head thickness`
+  * :guilabel:`Offset`
+
+  It is possible to create |checkbox| :guilabel:`Curved arrows`
+  (the line feature must have at least three vertices) and
   |checkbox| :guilabel:`Repeat arrow on each segment`.
-  To create a curved arrow the line feature must have at least three vertices.
   It also uses a :ref:`fill symbol <vector_fill_symbols>` such as gradients or
   shapeburst to render the arrow body. Combined with the geometry generator,
   this type of layer symbol helps you representing flow maps.
