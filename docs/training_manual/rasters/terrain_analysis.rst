@@ -285,6 +285,11 @@ The result:
 .. figure:: img/development_analysis_results.png
    :align: center
 
+.. hint:: The previous steps could have been simplified using the
+   following command::
+
+    ((aspect@1 <= 90 OR  aspect@1 >= 270) AND slope@1 <= 5) OR slope@1 <= 2
+
 
 |moderate| |FA| Simplifying the Raster
 ----------------------------------------------------------------------
