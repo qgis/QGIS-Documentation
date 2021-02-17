@@ -72,15 +72,19 @@ the left side of the modeler window:
 * Database Table
 * Datetime
 * Distance
+* DXF Layers
 * Enum
 * Expression
 * Extent
-* Fields Aggregate
+* Field Aggregates
 * Fields Mapper
 * File/Folder
+* Geometry
 * Map Layer
 * Map Theme
 * Matrix
+* Mesh Dataset Groups
+* Mesh Dataset Time
 * Mesh Layer
 * Multiple Input
 * Number
@@ -92,6 +96,7 @@ the left side of the modeler window:
 * Raster Layer
 * Scale
 * String
+* TIN Creation Layers 
 * Vector Features
 * Vector Field
 * Vector Layer
