@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-12 10:14+0000\n"
+"POT-Creation-Date: 2021-02-17 02:06+0000\n"
 "PO-Revision-Date: 2020-12-24 10:17+0000\n"
 "Last-Translator: DiGro, 2021\n"
 "Language-Team: Dutch (https://www.transifex.com/qgis/teams/6144/nl/)\n"
@@ -1353,11 +1353,11 @@ msgid ""
 "on disk."
 msgstr ""
 "Aan het einde, klik op :guilabel:`Toevoegen` om de laag aan de kaart toe te "
-"voegen. In ons voorbeeld wordt een puntlaag, genaamd``Hoogte`` toegevoegd "
-"aan het project en gedraagt zich als elke andere laag in QGIS. Deze laag is "
-"het resultaat van een query op het bronbestand :file:`.csv` (deswege, eraan "
-"gekoppeld) en zou moeten :ref:`worden opgeslagen <general_saveas>` om een "
-"ruimtelijke laag op schijf te krijgen."
+"voegen. In ons voorbeeld wordt een puntenlaag, genaamd ``Hoogte``, "
+"toegevoegd aan het project en gedraagt zich als elke andere laag in QGIS. "
+"Deze laag is het resultaat van een query op het bronbestand :file:`.csv` "
+"(deswege, eraan gekoppeld) en zou moeten :ref:`worden opgeslagen "
+"<general_saveas>` om een ruimtelijke laag op schijf te krijgen."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:578
 msgid "Importing a DXF or DWG file"
@@ -2059,7 +2059,7 @@ msgid ""
 "etc.) and :file:`pg_service.conf` on Windows."
 msgstr ""
 "Het is genaamd :file:`.pg_service.conf` op systemen van \\*nix (GNU/Linux, "
-"MacOS etc.) en :file:`pg_service.conf` op Windows."
+"macOS etc.) en :file:`pg_service.conf` op Windows."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:872
 msgid "The service file can look like this::"
@@ -2113,8 +2113,8 @@ msgstr ""
 "Op besturingssystemen van \\*nix (GNU/Linux, macOS etc.) kunt u het bestand "
 ":file:`.pg_service.conf` opslaan in de thuismap van de gebruiker en cliënten"
 " van PostgreSQL zullen zich daar automatisch van bewust zijn. Als "
-"bijvoorbeeld de ingelogde gebruiker``web`` is, zou :file:`.pg_service.conf` "
-"worden opgeslagen in de map :file:`/home/web/` om direct te kunnen werken "
+"bijvoorbeeld de ingelogde gebruiker ``web`` is, zou :file:`.pg_service.conf`"
+" worden opgeslagen in de map :file:`/home/web/` om direct te kunnen werken "
 "(zonder enige andere omgevingsvariabelen te specificeren)."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:909
@@ -2219,14 +2219,29 @@ msgstr ""
 "luistert. De standaard poort is ``1521``;"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:954
-msgid "**Workspace**: Workspace to switch to."
-msgstr "**Werkruimte**: De werkruimte waarnaar moet worden geschakeld."
+msgid ""
+"**Options**: Oracle connection specific options (e.g. "
+"OCI_ATTR_PREFETCH_ROWS, OCI_ATTR_PREFETCH_MEMORY). The format of the options"
+" string is a semicolon separated list of option names or option=value pairs;"
+msgstr ""
+"**Opties**: Specifieke opties voor verbindingen van Oracle (bijv. "
+"OCI_ATTR_PREFETCH_ROWS, OCI_ATTR_PREFETCH_MEMORY). De indeling van de "
+"tekenreeks voor de optie is een door puntkomma's gescheiden lijst van namen "
+"van opties of paren van optie=waarde;"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:956
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:957
+msgid "**Workspace**: Workspace to switch to;"
+msgstr "**Werkruimte**: De werkruimte waarnaar moet worden geschakeld;"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:958
+msgid "**Schema**: Schema in which the data are stored"
+msgstr "**Schema**: Schema waarin de gegevens zijn opgeslagen"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:960
 msgid "Optionally, you can activate the following checkboxes:"
 msgstr "Optioneel kunt u de volgende keuzevakken selecteren:"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:958
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:962
 msgid ""
 "|checkbox| :guilabel:`Only look in metadata table`: restricts the displayed "
 "tables to those that are in the ``all_sdo_geom_metadata`` view. This can "
@@ -2237,7 +2252,7 @@ msgstr ""
 "``all_sdo_geom_metadata``. Dit kan de initiële weergave van ruimtelijke "
 "tabellen aanzienlijk versnellen."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:961
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:965
 msgid ""
 "|checkbox| :guilabel:`Only look for user's tables`: when searching for "
 "spatial tables, restricts the search to tables that are owned by the user."
@@ -2246,7 +2261,7 @@ msgstr ""
 " zoeken naar ruimtelijke tabellen, beperk het zoeken tot alleen die tabellen"
 " waar de gebruiker eigenaar van is."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:963
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:967
 msgid ""
 "|checkbox| :guilabel:`Also list tables with no geometry`: indicates that "
 "tables without geometry should also be listed by default."
@@ -2255,7 +2270,7 @@ msgstr ""
 "ook tabellen zonder geometrie standaard in de lijst getoond zouden moeten "
 "worden."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:965
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:969
 msgid ""
 "|checkbox| :guilabel:`Use estimated table statistics for the layer "
 "metadata`: when the layer is set up, various metadata are required for the "
@@ -2280,7 +2295,7 @@ msgstr ""
 "een laagfilter wordt gebruikt. Het bepalen van het type geometrie wordt "
 "bepaald uit de eerste 100 niet null regels in de tabel."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:975
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:979
 msgid ""
 "|checkbox| :guilabel:`Only existing geometry types`: only lists the existing"
 " geometry types and don't offer to add others."
@@ -2288,15 +2303,15 @@ msgstr ""
 "|checkbox| :guilabel:`Alleen aanwezige typen geometrie`: toon alleen "
 "bestaande typen geometrie en biedt niet aan om andere toe te voegen."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:977
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:981
 msgid "|checkbox| :guilabel:`Include additional geometry attributes`."
 msgstr "|checkbox| :guilabel:`Aanvullende attributen geometrie opnemen`"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:981
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:985
 msgid "**Oracle Spatial Layers**"
 msgstr "**Oracle Spatial-lagen**"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:983
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:987
 msgid ""
 "Normally, an Oracle Spatial layer is defined by an entry in the "
 "**USER_SDO_METADATA** table."
@@ -2304,7 +2319,7 @@ msgstr ""
 "Normaal gesproken wordt een ruimtelijke laag in ORACLE gedefinieerd door een"
 " item in de tabel **USER_SDO_METADATA**."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:986
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:990
 msgid ""
 "To ensure that selection tools work correctly, it is recommended that your "
 "tables have a **primary key**."
@@ -2312,11 +2327,11 @@ msgstr ""
 "Het wordt aanbevolen dat uw tabellen een **primaire sleutel** hebben, om er "
 "voor te zorgen dat de gereedschappen voor selecteren correct werken."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:993
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:997
 msgid "Connecting to DB2 Spatial"
 msgstr "Verbinden met DB2 Spatial"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:995
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:999
 msgid ""
 "In addition to some of the options described in "
 ":ref:`vector_create_stored_connection`, the connection to a DB2 database "
@@ -2331,7 +2346,7 @@ msgstr ""
 " voor ODBC of :guilabel:`Stuurbestand`, :guilabel:`Host` en "
 ":guilabel:`Poort`."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1001
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1005
 msgid ""
 "An ODBC **Service/DSN** connection requires the service name defined to "
 "ODBC."
@@ -2339,11 +2354,11 @@ msgstr ""
 "Een ODBC **Service/DSN**-verbinding vereist dat de naam van de service wordt"
 " gedefinieerd naar ODBC."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1003
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1007
 msgid "A driver/host/port connection requires:"
 msgstr "Een stuurprogramma/host/poort-verbinding vereist:"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1005
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1009
 msgid ""
 "**Driver**: Name of the DB2 driver. Typically this would be IBM DB2 ODBC "
 "DRIVER."
@@ -2351,7 +2366,7 @@ msgstr ""
 "**Stuurbestand (driver)**: Naam van het stuurprogramma voor DB2. Gewoonlijk "
 "zou dit het stuurprogramma IBM DB2 ODBC DRIVER zijn."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1007
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1011
 msgid ""
 "**DB2 Host**: Name of the database host. This must be a resolvable host name"
 " such as would be used to open a TCP/IP connection or ping the host. If the "
@@ -2362,7 +2377,7 @@ msgstr ""
 " kunt pingen. Wanneer de database op dezelfde computer staat als QGIS, "
 "gebruik hier dan *localhost*."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1012
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1016
 msgid ""
 "**DB2 Port**: Port number the DB2 database server listens on. The default "
 "DB2 LUW port is ``50000``. The default DB2 z/OS port is ``446``."
@@ -2371,11 +2386,11 @@ msgstr ""
 " De standaard DB2 LUW-poort is ``50000``. De standaard DB2 z/OS-poort is "
 "``446``."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1018
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1022
 msgid "**DB2 Spatial Layers**"
 msgstr "**DB2 Spatial-lagen**"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1020
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1024
 msgid ""
 "A DB2 Spatial layer is defined by a row in the "
 "**DB2GSE.ST_GEOMETRY_COLUMNS** view."
@@ -2383,7 +2398,7 @@ msgstr ""
 "Een DB2 Spatial-laag wordt gedefinieerd door een rij in de weergave "
 "**DB2GSE.ST_GEOMETRY_COLUMNS**."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1025
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1029
 msgid ""
 "In order to work effectively with DB2 spatial tables in QGIS, it is "
 "important that tables have an INTEGER or BIGINT column defined as PRIMARY "
@@ -2395,7 +2410,7 @@ msgstr ""
 "gedefinieerd als PRIMARY KEY en indien nieuwe objecten zullen worden "
 "toegevoegd, zou deze kolom ook een karakteristiek GENERATED moeten hebben."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1030
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1034
 msgid ""
 "It is also helpful for the spatial column to be registered with a specific "
 "spatial reference identifier (most often ``4326`` for WGS84 coordinates). A "
@@ -2407,11 +2422,11 @@ msgstr ""
 "WGS84). Een ruimtelijke kolom kan worden geregistreerd door de opgeslagen "
 "procedure ``ST_Register_Spatial_Column`` aan te roepen."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1039
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1043
 msgid "Connecting to MSSQL Spatial"
 msgstr "Verbinden met MSSQL Spatial"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1041
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1045
 msgid ""
 "In addition to some of the options in "
 ":ref:`vector_create_stored_connection`, creating a new MSSQL connection "
@@ -2423,11 +2438,11 @@ msgstr ""
 " u voor om een **Provider/DSN**-naam in te vullen. U kunt ook aanwezige "
 "databases weergeven."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1049
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1053
 msgid "Loading a Database Layer"
 msgstr "Het laden van laag uit een database"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1051
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1055
 msgid ""
 "Once you have one or more connections defined to a database (see section "
 ":ref:`vector_create_stored_connection`), you can load layers from it. Of "
@@ -2441,12 +2456,12 @@ msgstr ""
 "gedeelte :ref:`vector_import_data_in_postgis` voor een bespreking over het "
 "importeren van gegevens in een database van PostgreSQL."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1057
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1061
 msgid "To load a layer from a database, you can perform the following steps:"
 msgstr ""
 "U kunt de volgende stappen uitvoeren om een laag te laden uit een database:"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1059
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1063
 msgid ""
 "Open the \"Add <database> table(s)\" dialog (see "
 ":ref:`vector_create_stored_connection`)."
@@ -2454,20 +2469,20 @@ msgstr ""
 "Open het dialoogvenster \"Databasetabel(len) toevoegen <database>\" (zie "
 ":ref:`vector_create_stored_connection`)."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1061
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1065
 msgid ""
 "Choose the connection from the drop-down list and click :guilabel:`Connect`."
 msgstr ""
 "Kies de verbinding vanuit de keuzelijst en druk op :guilabel:`Verbinden`."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1062
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1066
 msgid ""
 "Select or unselect |checkbox| :guilabel:`Also list tables with no geometry`."
 msgstr ""
 "Selecteer of deselecteer het keuzevak |checkbox| :guilabel:`Ook tabellen "
 "zonder geometrie tonen`"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1063
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1067
 msgid ""
 "Optionally, use some |checkbox| :guilabel:`Search Options` to reduce the "
 "list of tables to those matching your search. You can also set this option "
@@ -2479,13 +2494,13 @@ msgstr ""
 "deze optie ook instellen voordat u op de knop :guilabel:`Verbinden` drukt, "
 "wat het ophalen uit de database versnelt."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1067
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1071
 msgid "Find the layer(s) you wish to add in the list of available layers."
 msgstr ""
 "Zoek naar de laag/lagen die u wilt toevoegen in de lijst van beschikbare "
 "lagen."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1068
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1072
 msgid ""
 "Select it by clicking on it. You can select multiple layers by holding down "
 "the :kbd:`Shift` or :kbd:`Ctrl` key while clicking."
@@ -2494,7 +2509,7 @@ msgstr ""
 "de :kbd:`Shift`- of :kbd:`Ctrl`-toets ingedrukt te houden tijdens het "
 "klikken."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1070
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1074
 msgid ""
 "If applicable, use the :guilabel:`Set Filter` button (or double-click the "
 "layer) to start the :guilabel:`Query Builder` dialog (see section "
@@ -2511,7 +2526,7 @@ msgstr ""
 "verwijderd of bewerkt in het frame :menuselection:`Laageigenschappen --> "
 "Algemeen --> Provider objectfilter`."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1076
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1080
 msgid ""
 "The checkbox in the ``Select at id`` column that is activated by default "
 "gets the feature ids without the attributes and generally speeds up the data"
@@ -2521,23 +2536,23 @@ msgstr ""
 " haalt de object-ID's op zonder de attributen en versnelt over het algemeen "
 "het laden van gegevens."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1079
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1083
 msgid "Click on the :guilabel:`Add` button to add the layer to the map."
 msgstr ""
 "Klik op de knop :guilabel:`Toevoegen` om de laag toe te voegen aan het "
 "kaartvenster."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1087
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1091
 msgid "Add PostGIS Table(s) Dialog"
 msgstr "Dialoogvenster PostGIS-tabel(len) toevoegen"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1090
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1094
 msgid "**Use the Browser Panel to speed up loading of database table(s)**"
 msgstr ""
 "**Het paneel Browser gebruiken om het laden van tabel(len) van databases te "
 "versnellen**"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1092
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1096
 msgid ""
 "Adding DB tables from the :guilabel:`Data Source Manager` may sometimes be "
 "time consuming as QGIS fetches statistics and properties (e.g. geometry type"
@@ -2556,15 +2571,15 @@ msgstr ""
 "de tabellen van de database met slepen-en-neerzetten naar het kaartvenster "
 "te brengen."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1104
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1108
 msgid "QGIS Custom formats"
 msgstr "QGIS aangepaste indelingen"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1106
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1110
 msgid "QGIS proposes two custom formats:"
 msgstr "QGIS stelt twee aangepaste indelingen voor:"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1108
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1112
 msgid ""
 "Temporary Scratch Layer: a memory layer that is bound to the project (see "
 ":ref:`vector_new_scratch_layer` for more information)"
@@ -2572,7 +2587,7 @@ msgstr ""
 "Tijdelijke tekenlaag: een geheugenlaag die is gebonden aan het project (zie "
 ":ref:`vector_new_scratch_layer` voor meer informatie)"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1110
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1114
 msgid ""
 "Virtual Layers: a layer resulting from a query on other layer(s) (see "
 ":ref:`vector_virtual_layers` for more information)"
@@ -2580,11 +2595,11 @@ msgstr ""
 "Virtuele lagen: een laag die resulteert vanuit een query op andere "
 "laag/lagen (zie :ref:`vector_virtual_layers` voor meer informatie)"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1117
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1121
 msgid "QLR - QGIS Layer Definition File"
 msgstr "QLR - QGIS Laag-definitiebestand"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1119
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1123
 msgid ""
 "Layer definitions can be saved as a :ref:`Layer Definition File "
 "<qgislayerdefinitionfile>` (QLR - :file:`.qlr`) using :menuselection:`Export"
@@ -2595,7 +2610,7 @@ msgstr ""
 ":menuselection:`Exporteren --> Opslaan als Laag-definitiebestand…` in het "
 "contextmenu van de laag."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1125
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1129
 msgid ""
 "The QLR format makes it possible to share \"complete\" QGIS layers with "
 "other QGIS users. QLR files contain links to the data sources and all the "
@@ -2606,7 +2621,7 @@ msgstr ""
 "gegevensbronnen en alle benodigde QGIS stijlinformatie om de laag op te "
 "kunnen maken."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1130
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1134
 msgid ""
 "QLR files are shown in the Browser Panel and can be used to add layers (with"
 " their saved styles) to the Layers Panel. You can also drag and drop QLR "
@@ -2617,11 +2632,11 @@ msgstr ""
 "Lagen. U kunt ook QLR-bestanden slepen en neerzetten vanuit de systeem "
 "bestandsbeheerder in het kaartvenster."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1136
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1140
 msgid "Connecting to web services"
 msgstr "Verbinden met webservices"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1138
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1142
 msgid ""
 "With QGIS you can get access to different types of OGC web services (WM(T)S,"
 " WFS(-T), WCS, CSW, ...). Thanks to QGIS Server, you can also publish such "
@@ -2633,11 +2648,11 @@ msgstr ""
 "services ook publiceren. :ref:`QGIS-Server-manual` bevat beschrijvingen van "
 "deze mogelijkheden."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1147
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1151
 msgid "Using Vector Tiles services"
 msgstr "Vector tegelservices gebruiken"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1149
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1153
 msgid ""
 "Vector Tiles services can be found in the :guilabel:`Vector Tiles` top level"
 " entry in the :guilabel:`Browser`. You can add a service by opening the "
@@ -2672,11 +2687,11 @@ msgstr ""
 ":numref:`figure_vector_tiles_maptilerplanet` geeft het dialoogvenster weer "
 "met de configuratie voor de MapTiler planet Vector Tiles service."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1172
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1176
 msgid "Vector Tiles - Maptiler Planet configuration"
 msgstr "Vector Tiles - configuratie Maptiler Planet "
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1174
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1178
 msgid ""
 "By using :guilabel:`New ArcGIS Vector Tile Service Connection ...` you can "
 "connect to ArcGIS Vector Tile Services."
@@ -2684,11 +2699,11 @@ msgstr ""
 "Door :guilabel:`Nieuwe ArcGIS vectortegel serviceverbinding …` te gebruiken "
 "kunt u verbinden met ArcGIS Vector Tile Services."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1181
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1185
 msgid "Using XYZ Tile services"
 msgstr "XYZ Tile-services gebruiken"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1183
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1187
 msgid ""
 "XYZ Tile services can be found in the :guilabel:`XYZ Tiles` top level entry "
 "in the :guilabel:`Browser`. By default, the OpenStreetMap XYZ Tile service "
@@ -2706,11 +2721,11 @@ msgstr ""
 "dialoogvenster weer met de configuratie van de OpenStreetMap XYZ Tile-"
 "service."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1197
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1201
 msgid "XYZ Tiles - OpenStreetMap configuration"
 msgstr "XYZ Tiles - OpenStreetMap configuratie"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1199
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1203
 msgid ""
 "Configurations can be saved (:guilabel:`Save Connections`) to XML and loaded"
 " (:guilabel:`Load Connections`) through the context menu. Authentication "
@@ -2721,7 +2736,7 @@ msgstr ""
 "Configuratie voor authenticatie wordt ondersteund. Het XML-bestand voor "
 "OpenStreetMap ziet er uit als dit:"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1213
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1217
 msgid ""
 "Once a connection to a XYZ tile service is set, right-click over the entry "
 "to:"
@@ -2729,15 +2744,15 @@ msgstr ""
 "Als eenmaal een verbinding naar een XYZ tile-service is ingesteld, klik dan "
 "met rechts op het item voor:"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1215
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1219
 msgid ":guilabel:`Edit...` the XYZ connection settings"
 msgstr ":guilabel:`Bewerken…` van de verbindingsinstellingen voor XYZ"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1216
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1220
 msgid ":guilabel:`Delete` the connection"
 msgstr ":guilabel:`Verwijderen` van de verbinding"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1217
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1221
 msgid ""
 ":menuselection:`Export layer... --> To File`, :ref:`saving it as a raster "
 "<general_saveas>`"
@@ -2745,12 +2760,12 @@ msgstr ""
 ":menuselection:`Laag exporteren… --> Naar bestand`, :ref:`het opslaan als "
 "een raster <general_saveas>`"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1219
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1223
 msgid ":guilabel:`Add layer to project`: a double-click also adds the layer"
 msgstr ""
 ":guilabel:`Laag aan project toevoegen`: een dubbelklik voegt de laag ook toe"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1220
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1224
 msgid ""
 "View the :guilabel:`Layer Properties...` and get access to metadata and a "
 "preview of the data provided by the service. More settings are available "
@@ -2760,11 +2775,11 @@ msgstr ""
 "een voorbeeld van de gegevens die door de service worden verschaft. Meer "
 "instellingen zijn beschikbaar als de laag in het project is geladen."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1225
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1229
 msgid "Examples of XYZ Tile services:"
 msgstr "Voorbeelden van XYZ Tile-services:"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1227
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1231
 msgid ""
 "OpenStreetMap Monochrome: :guilabel:`URL`: ``http://tiles.wmflabs.org/bw-"
 "mapnik/{z}/{x}/{y}.png``, :guilabel:`Min. Zoom Level`: 0, :guilabel:`Max. "
@@ -2774,7 +2789,7 @@ msgstr ""
 "mapnik/{z}/{x}/{y}.png``, :guilabel:`Min. Zoom Level`: 0, :guilabel:`Max. "
 "Zoom Level`: 19."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1230
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1234
 msgid ""
 "Google Maps: :guilabel:`URL`: "
 "``https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}``, :guilabel:`Min. Zoom"
@@ -2784,7 +2799,7 @@ msgstr ""
 "``https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}``, :guilabel:`Min. Zoom"
 " Level`: 0, :guilabel:`Max. Zoom Level`: 19."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1233
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1237
 msgid ""
 "Open Weather Map Temperature: :guilabel:`URL`: "
 "``http://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?appid={api_key}``"
@@ -2882,3 +2897,6 @@ msgstr ""
 #~ "rechts om te openen). figure_xyz_tiles_openstreetmap_ geeft het "
 #~ "dialoogvenster weer met de configuratie van de OpenStreetMap XYZ Tile-"
 #~ "service."
+
+#~ msgid "**Workspace**: Workspace to switch to."
+#~ msgstr "**Werkruimte**: De werkruimte waarnaar moet worden geschakeld."
