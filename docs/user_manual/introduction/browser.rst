@@ -7,6 +7,12 @@
 The Browser panel
 ======================================================================
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 2
+
 The QGIS Browser panel is a great tool for browsing, searching,
 inspecting, copying and loading QGIS resources.
 Only resources that QGIS knows how to handle are shown in the
@@ -220,6 +226,58 @@ For layers/tables you can
 * add it to the project (:guilabel:`Add Layer to Project`)
 * delete it (:guilabel:`Delete Layer`)
 * inspect its properties (:guilabel:`Layer Properties...`)
+
+
+.. You might want to use https://www.tablesgenerator.com/text_tables to resahpe the next one.
+
++-------------+-------------------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+
+| Level       | Context menu                              |                                Databases                                          |
+|             |                                           +-------------+-------------+-------------+-------------+-------------+-------------+
+|             |                                           | PostGIS     | MSSQL       | DB2         | SAP HANA    | Oracle      | GeoPackage  |
++=============+===========================================+=============+=============+=============+=============+=============+=============+
+| Top menu    | Create a :guilabel:`New Connection…`      | |Checkbox|  | |Checkbox|  | |Checkbox|  | |Checkbox|  | |Checkbox|  | |Checkbox|  |
+|             +-------------------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|             | :guilabel:`Save Connections…`             | |Checkbox|  | |Checkbox|  | |Checkbox|  |             |             |             |
+|             +-------------------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|             | :guilabel:`Load Connections…`             | |Checkbox|  | |Checkbox|  | |Checkbox|  |             |             |             |
+|             +-------------------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|             | :guilabel:`Create Database…`              |             |             |             |             |             | |Checkbox|  |
++-------------+-------------------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+
+| Connection  | :guilabel:`Refresh` a connection          | |Checkbox|  | |Checkbox|  | |Checkbox|  | |Checkbox|  | |Checkbox|  |             |
+| / Database  +-------------------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|             | :guilabel:`Edit Connection…` settings     | |Checkbox|  | |Checkbox|  | |Checkbox|  | |Checkbox|  | |Checkbox|  |             |
+|             +-------------------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|             | :guilabel:`Delete Connection`             | |Checkbox|  | |Checkbox|  | |Checkbox|  | |Checkbox|  | |Checkbox|  |             |
+|             +-------------------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|             | Create a :guilabel:`New Schema…`          | |Checkbox|  |             |             |             |             |             |
+|             +-------------------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|             | Create a :guilabel:`New Table…`           | |Checkbox|  |             |             |             |             |             |
++-------------+-------------------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+
+| Schema      | :guilabel:`Create schema`                 | |Checkbox|  | |Checkbox|  | |Checkbox|  | |Checkbox|  | |Checkbox|  |             |
+|             +-------------------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|             | :guilabel:`Refresh` a schema              | |Checkbox|  | |Checkbox|  |             | |Checkbox|  | |Checkbox|  |             |
+|             +-------------------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|             | :guilabel:`Rename schema`                 | |Checkbox|  | |Checkbox|  | |Checkbox|  | |Checkbox|  | |Checkbox|  |             |
+|             +-------------------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|             | :guilabel:`Delete schema`                 | |Checkbox|  |             | |Checkbox|  | |Checkbox|  | |Checkbox|  |             |
++-------------+-------------------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+
+| Table/Layer | :guilabel:`Rename Table…`                 | |Checkbox|  | |Checkbox|  | |Checkbox|  |             | |Checkbox|  |             |
+|             +-------------------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|             | :guilabel:`Truncate Table…`               | |Checkbox|  | |Checkbox|  | |Checkbox|  | |Checkbox|  | |Checkbox|  |             |
+|             +-------------------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|             | :guilabel:`Export Layer to file`          | |Checkbox|  | |Checkbox|  | |Checkbox|  | |Checkbox|  | |Checkbox|  |             |
+|             +-------------------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|             | :guilabel:`Add layer to Project`          | |Checkbox|  | |Checkbox|  | |Checkbox|  | |Checkbox|  | |Checkbox|  |             |
+|             +-------------------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|             | :guilabel:`Delete layer`                  | |Checkbox|  | |Checkbox|  | |Checkbox|  |             | |Checkbox|  |             |
+|             +-------------------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|             | Open :guilabel:`Layer properties` dialog  | |Checkbox|  | |Checkbox|  | |Checkbox|  | |Checkbox|  | |Checkbox|  |             |
++-------------+-------------------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+
+
+
+
 
 
 MSSQL
@@ -454,6 +512,8 @@ Resources
 .. |browserCollapse| image:: /static/common/browser_collapse.png
    :width: 1.5em
 .. |browserExpand| image:: /static/common/browser_expand.png
+   :width: 1.5em
+.. |checkbox| image:: /static/common/checkbox.png
    :width: 1.5em
 .. |collapseTree| image:: /static/common/mActionCollapseTree.png
    :width: 1.5em
