@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-12 10:14+0000\n"
+"POT-Creation-Date: 2021-02-17 02:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1641,34 +1641,46 @@ msgid ""
 msgstr ""
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:954
-msgid "**Workspace**: Workspace to switch to."
+msgid ""
+"**Options**: Oracle connection specific options (e.g. "
+"OCI_ATTR_PREFETCH_ROWS, OCI_ATTR_PREFETCH_MEMORY). The format of the "
+"options string is a semicolon separated list of option names or "
+"option=value pairs;"
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:956
-msgid "Optionally, you can activate the following checkboxes:"
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:957
+msgid "**Workspace**: Workspace to switch to;"
 msgstr ""
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:958
+msgid "**Schema**: Schema in which the data are stored"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:960
+msgid "Optionally, you can activate the following checkboxes:"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:962
 msgid ""
 "|checkbox| :guilabel:`Only look in metadata table`: restricts the "
 "displayed tables to those that are in the ``all_sdo_geom_metadata`` view."
 " This can speed up the initial display of spatial tables."
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:961
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:965
 msgid ""
 "|checkbox| :guilabel:`Only look for user's tables`: when searching for "
 "spatial tables, restricts the search to tables that are owned by the "
 "user."
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:963
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:967
 msgid ""
 "|checkbox| :guilabel:`Also list tables with no geometry`: indicates that "
 "tables without geometry should also be listed by default."
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:965
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:969
 msgid ""
 "|checkbox| :guilabel:`Use estimated table statistics for the layer "
 "metadata`: when the layer is set up, various metadata are required for "
@@ -1683,37 +1695,37 @@ msgid ""
 "table."
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:975
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:979
 msgid ""
 "|checkbox| :guilabel:`Only existing geometry types`: only lists the "
 "existing geometry types and don't offer to add others."
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:977
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:981
 msgid "|checkbox| :guilabel:`Include additional geometry attributes`."
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:981
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:985
 msgid "**Oracle Spatial Layers**"
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:983
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:987
 msgid ""
 "Normally, an Oracle Spatial layer is defined by an entry in the "
 "**USER_SDO_METADATA** table."
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:986
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:990
 msgid ""
 "To ensure that selection tools work correctly, it is recommended that "
 "your tables have a **primary key**."
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:993
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:997
 msgid "Connecting to DB2 Spatial"
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:995
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:999
 msgid ""
 "In addition to some of the options described in "
 ":ref:`vector_create_stored_connection`, the connection to a DB2 database "
@@ -1722,23 +1734,23 @@ msgid ""
 ":guilabel:`Driver`, :guilabel:`Host` and :guilabel:`Port`."
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1001
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1005
 msgid ""
 "An ODBC **Service/DSN** connection requires the service name defined to "
 "ODBC."
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1003
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1007
 msgid "A driver/host/port connection requires:"
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1005
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1009
 msgid ""
 "**Driver**: Name of the DB2 driver. Typically this would be IBM DB2 ODBC "
 "DRIVER."
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1007
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1011
 msgid ""
 "**DB2 Host**: Name of the database host. This must be a resolvable host "
 "name such as would be used to open a TCP/IP connection or ping the host. "
@@ -1746,23 +1758,23 @@ msgid ""
 " here."
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1012
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1016
 msgid ""
 "**DB2 Port**: Port number the DB2 database server listens on. The default"
 " DB2 LUW port is ``50000``. The default DB2 z/OS port is ``446``."
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1018
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1022
 msgid "**DB2 Spatial Layers**"
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1020
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1024
 msgid ""
 "A DB2 Spatial layer is defined by a row in the "
 "**DB2GSE.ST_GEOMETRY_COLUMNS** view."
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1025
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1029
 msgid ""
 "In order to work effectively with DB2 spatial tables in QGIS, it is "
 "important that tables have an INTEGER or BIGINT column defined as PRIMARY"
@@ -1770,7 +1782,7 @@ msgid ""
 "have the GENERATED characteristic."
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1030
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1034
 msgid ""
 "It is also helpful for the spatial column to be registered with a "
 "specific spatial reference identifier (most often ``4326`` for WGS84 "
@@ -1778,11 +1790,11 @@ msgid ""
 "``ST_Register_Spatial_Column`` stored procedure."
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1039
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1043
 msgid "Connecting to MSSQL Spatial"
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1041
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1045
 msgid ""
 "In addition to some of the options in "
 ":ref:`vector_create_stored_connection`, creating a new MSSQL connection "
@@ -1790,11 +1802,11 @@ msgid ""
 " available databases."
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1049
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1053
 msgid "Loading a Database Layer"
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1051
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1055
 msgid ""
 "Once you have one or more connections defined to a database (see section "
 ":ref:`vector_create_stored_connection`), you can load layers from it. Of "
@@ -1803,29 +1815,29 @@ msgid ""
 "into a PostGIS database."
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1057
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1061
 msgid "To load a layer from a database, you can perform the following steps:"
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1059
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1063
 msgid ""
 "Open the \"Add <database> table(s)\" dialog (see "
 ":ref:`vector_create_stored_connection`)."
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1061
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1065
 msgid ""
 "Choose the connection from the drop-down list and click "
 ":guilabel:`Connect`."
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1062
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1066
 msgid ""
 "Select or unselect |checkbox| :guilabel:`Also list tables with no "
 "geometry`."
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1063
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1067
 msgid ""
 "Optionally, use some |checkbox| :guilabel:`Search Options` to reduce the "
 "list of tables to those matching your search. You can also set this "
@@ -1833,17 +1845,17 @@ msgid ""
 "database fetching."
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1067
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1071
 msgid "Find the layer(s) you wish to add in the list of available layers."
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1068
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1072
 msgid ""
 "Select it by clicking on it. You can select multiple layers by holding "
 "down the :kbd:`Shift` or :kbd:`Ctrl` key while clicking."
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1070
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1074
 msgid ""
 "If applicable, use the :guilabel:`Set Filter` button (or double-click the"
 " layer) to start the :guilabel:`Query Builder` dialog (see section "
@@ -1853,26 +1865,26 @@ msgid ""
 "Properties --> General --> Provider Feature Filter` frame."
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1076
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1080
 msgid ""
 "The checkbox in the ``Select at id`` column that is activated by default "
 "gets the feature ids without the attributes and generally speeds up the "
 "data loading."
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1079
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1083
 msgid "Click on the :guilabel:`Add` button to add the layer to the map."
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1087
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1091
 msgid "Add PostGIS Table(s) Dialog"
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1090
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1094
 msgid "**Use the Browser Panel to speed up loading of database table(s)**"
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1092
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1096
 msgid ""
 "Adding DB tables from the :guilabel:`Data Source Manager` may sometimes "
 "be time consuming as QGIS fetches statistics and properties (e.g. "
@@ -1883,31 +1895,31 @@ msgid ""
 "drop the database tables into the map canvas."
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1104
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1108
 msgid "QGIS Custom formats"
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1106
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1110
 msgid "QGIS proposes two custom formats:"
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1108
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1112
 msgid ""
 "Temporary Scratch Layer: a memory layer that is bound to the project (see"
 " :ref:`vector_new_scratch_layer` for more information)"
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1110
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1114
 msgid ""
 "Virtual Layers: a layer resulting from a query on other layer(s) (see "
 ":ref:`vector_virtual_layers` for more information)"
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1117
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1121
 msgid "QLR - QGIS Layer Definition File"
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1119
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1123
 msgid ""
 "Layer definitions can be saved as a :ref:`Layer Definition File "
 "<qgislayerdefinitionfile>` (QLR - :file:`.qlr`) using "
@@ -1915,25 +1927,25 @@ msgid ""
 " context menu."
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1125
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1129
 msgid ""
 "The QLR format makes it possible to share \"complete\" QGIS layers with "
 "other QGIS users. QLR files contain links to the data sources and all the"
 " QGIS style information necessary to style the layer."
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1130
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1134
 msgid ""
 "QLR files are shown in the Browser Panel and can be used to add layers "
 "(with their saved styles) to the Layers Panel. You can also drag and drop"
 " QLR files from the system file manager into the map canvas."
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1136
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1140
 msgid "Connecting to web services"
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1138
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1142
 msgid ""
 "With QGIS you can get access to different types of OGC web services "
 "(WM(T)S, WFS(-T), WCS, CSW, ...). Thanks to QGIS Server, you can also "
@@ -1941,11 +1953,11 @@ msgid ""
 " these capabilities."
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1147
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1151
 msgid "Using Vector Tiles services"
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1149
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1153
 msgid ""
 "Vector Tiles services can be found in the :guilabel:`Vector Tiles` top "
 "level entry in the :guilabel:`Browser`. You can add a service by opening "
@@ -1964,21 +1976,21 @@ msgid ""
 "MapTiler planet Vector Tiles service configuration."
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1172
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1176
 msgid "Vector Tiles - Maptiler Planet configuration"
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1174
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1178
 msgid ""
 "By using :guilabel:`New ArcGIS Vector Tile Service Connection ...` you "
 "can connect to ArcGIS Vector Tile Services."
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1181
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1185
 msgid "Using XYZ Tile services"
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1183
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1187
 msgid ""
 "XYZ Tile services can be found in the :guilabel:`XYZ Tiles` top level "
 "entry in the :guilabel:`Browser`. By default, the OpenStreetMap XYZ Tile "
@@ -1988,11 +2000,11 @@ msgid ""
 "shows the dialog with the OpenStreetMap XYZ Tile service configuration."
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1197
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1201
 msgid "XYZ Tiles - OpenStreetMap configuration"
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1199
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1203
 msgid ""
 "Configurations can be saved (:guilabel:`Save Connections`) to XML and "
 "loaded (:guilabel:`Load Connections`) through the context menu. "
@@ -2000,56 +2012,56 @@ msgid ""
 " looks like this:"
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1213
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1217
 msgid ""
 "Once a connection to a XYZ tile service is set, right-click over the "
 "entry to:"
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1215
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1219
 msgid ":guilabel:`Edit...` the XYZ connection settings"
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1216
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1220
 msgid ":guilabel:`Delete` the connection"
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1217
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1221
 msgid ""
 ":menuselection:`Export layer... --> To File`, :ref:`saving it as a raster"
 " <general_saveas>`"
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1219
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1223
 msgid ":guilabel:`Add layer to project`: a double-click also adds the layer"
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1220
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1224
 msgid ""
 "View the :guilabel:`Layer Properties...` and get access to metadata and a"
 " preview of the data provided by the service. More settings are available"
 " when the layer has been loaded into the project."
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1225
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1229
 msgid "Examples of XYZ Tile services:"
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1227
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1231
 msgid ""
 "OpenStreetMap Monochrome: :guilabel:`URL`: ``http://tiles.wmflabs.org/bw-"
 "mapnik/{z}/{x}/{y}.png``, :guilabel:`Min. Zoom Level`: 0, :guilabel:`Max."
 " Zoom Level`: 19."
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1230
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1234
 msgid ""
 "Google Maps: :guilabel:`URL`: "
 "``https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}``, :guilabel:`Min. "
 "Zoom Level`: 0, :guilabel:`Max. Zoom Level`: 19."
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1233
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1237
 msgid ""
 "Open Weather Map Temperature: :guilabel:`URL`: "
 "``http://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?appid={api_key}``"
@@ -2135,5 +2147,8 @@ msgstr ""
 #~ "figure_xyz_tiles_openstreetmap_ shows the dialog "
 #~ "with the OpenStreetMap XYZ Tile service"
 #~ " configuration."
+#~ msgstr ""
+
+#~ msgid "**Workspace**: Workspace to switch to."
 #~ msgstr ""
 

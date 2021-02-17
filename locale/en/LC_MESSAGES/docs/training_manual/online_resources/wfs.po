@@ -9,14 +9,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-13 09:01+0100\n"
+"POT-Creation-Date: 2021-02-17 02:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.8.0\n"
+"Generated-By: Babel 2.9.0\n"
 
 #: ../../docs/training_manual/online_resources/wfs.rst:2
 msgid "|LS| Web Feature Services"
@@ -45,11 +45,11 @@ msgid "Start a new map. This is for demo purposes and won't be saved."
 msgstr ""
 
 #: ../../docs/training_manual/online_resources/wfs.rst:15
-msgid "Ensure that \"on the fly\" re-projection is switched off."
+msgid "Click the |dataSourceManager| :sup:`Open Data Source Manager` button."
 msgstr ""
 
 #: ../../docs/training_manual/online_resources/wfs.rst:16
-msgid "Click the |addWfsLayer| :guilabel:`Add WFS Layer` button:"
+msgid "Enable the |wfs| :guilabel:`WFS / OGC API - Features` tab."
 msgstr ""
 
 #: ../../docs/training_manual/online_resources/wfs.rst:17
@@ -74,53 +74,66 @@ msgid "Click the :guilabel:`Connect`. A list of the available layers will appear
 msgstr ""
 
 #: ../../docs/training_manual/online_resources/wfs.rst:32
-msgid "Find the layer :guilabel:`south_poles_wfs`."
+msgid ""
+"Uncheck the :guilabel:`Only request features overlapping the view extent`"
+" option below the layers list, since your current map canvas may not "
+"cover our area of interest: Antartica."
 msgstr ""
 
-#: ../../docs/training_manual/online_resources/wfs.rst:33
+#: ../../docs/training_manual/online_resources/wfs.rst:35
+msgid ""
+"Find the layer :guilabel:`antarctica_country_border`. You can use the "
+":guilabel:`Filter` box at the top."
+msgstr ""
+
+#: ../../docs/training_manual/online_resources/wfs.rst:37
 msgid "Click on the layer to select it:"
 msgstr ""
 
 #: ../../docs/training_manual/online_resources/wfs.rst:38
+msgid ""
+"Find and select also the layer :guilabel:`south_poles_wfs`. You might "
+"need to hold :kbd:`Ctrl`."
+msgstr ""
+
+#: ../../docs/training_manual/online_resources/wfs.rst:44
 msgid "Click :guilabel:`Add`."
 msgstr ""
 
-#: ../../docs/training_manual/online_resources/wfs.rst:40
+#: ../../docs/training_manual/online_resources/wfs.rst:46
 msgid ""
-"It may take a while to load the layer. When it has loaded, it will appear"
-" in the map. Here it is over the outlines of Antarctica (available on the"
-" same server, and by the name of :guilabel:`antarctica_country_border`):"
+"It may take a while to load the layers. When they are loaded, they will "
+"appear in the map, showing the outlines of Antarctica and a few points "
+"over."
 msgstr ""
 
-#: ../../docs/training_manual/online_resources/wfs.rst:47
-msgid ""
-"How is this different from having a WMS layer? That will become obvious "
-"when you see the layers' attributes."
+#: ../../docs/training_manual/online_resources/wfs.rst:52
+msgid "How is this different from having a WMS layer?"
 msgstr ""
 
-#: ../../docs/training_manual/online_resources/wfs.rst:50
+#: ../../docs/training_manual/online_resources/wfs.rst:54
 msgid ""
-"Open the :guilabel:`south_poles_wfs` layer's attribute table. You should "
-"see this:"
+"Select any of the layers and you'll notice that feature selection and "
+"attribute table tools are enabled. These are vector layers."
 msgstr ""
 
 #: ../../docs/training_manual/online_resources/wfs.rst:56
+msgid ""
+"Select the :guilabel:`south_poles_wfs` layer and open its attribute "
+"table. You should see this:"
+msgstr ""
+
+#: ../../docs/training_manual/online_resources/wfs.rst:62
 msgid ""
 "Since the points have attributes, we are able to label them, as well as "
 "change their symbology. Here's an example:"
 msgstr ""
 
-#: ../../docs/training_manual/online_resources/wfs.rst:62
-msgid ""
-"Add labels to your layer to take advantage of the attribute data in this "
-"layer."
-msgstr ""
-
-#: ../../docs/training_manual/online_resources/wfs.rst:66
+#: ../../docs/training_manual/online_resources/wfs.rst:70
 msgid "Differences from WMS layers"
 msgstr ""
 
-#: ../../docs/training_manual/online_resources/wfs.rst:68
+#: ../../docs/training_manual/online_resources/wfs.rst:72
 msgid ""
 "A Web Feature Service returns the layer itself, not just a map rendered "
 "from it. This gives you direct access to the data, meaning that you can "
@@ -132,11 +145,11 @@ msgid ""
 "this."
 msgstr ""
 
-#: ../../docs/training_manual/online_resources/wfs.rst:77
+#: ../../docs/training_manual/online_resources/wfs.rst:81
 msgid "|moderate| |FA| Querying a WFS Layer"
 msgstr ""
 
-#: ../../docs/training_manual/online_resources/wfs.rst:79
+#: ../../docs/training_manual/online_resources/wfs.rst:83
 msgid ""
 "Although it is of possible to query a WFS layer after having loaded it, "
 "it's often more efficient to query it before you load it. That way, "
@@ -144,7 +157,7 @@ msgid ""
 "less bandwidth."
 msgstr ""
 
-#: ../../docs/training_manual/online_resources/wfs.rst:83
+#: ../../docs/training_manual/online_resources/wfs.rst:87
 msgid ""
 "For example, on the WFS server we're currently using, there is a layer "
 "called :guilabel:`countries (excluding Antarctica)`. Let's say that we "
@@ -153,7 +166,7 @@ msgid ""
 ":guilabel:`antarctica_country_border` layer) that's already been loaded."
 msgstr ""
 
-#: ../../docs/training_manual/online_resources/wfs.rst:89
+#: ../../docs/training_manual/online_resources/wfs.rst:93
 msgid ""
 "There are two ways to do this. You can load the whole "
 ":guilabel:`countries ...` layer, and then build a query as usual once "
@@ -163,52 +176,75 @@ msgid ""
 " minutes to load."
 msgstr ""
 
-#: ../../docs/training_manual/online_resources/wfs.rst:95
+#: ../../docs/training_manual/online_resources/wfs.rst:99
 msgid ""
 "The alternative is to build the query as a filter before even loading the"
 " layer from the server."
 msgstr ""
 
-#: ../../docs/training_manual/online_resources/wfs.rst:98
+#: ../../docs/training_manual/online_resources/wfs.rst:102
 msgid ""
-"In the :guilabel:`Add WFS Layer ...` dialog, connect to the server we "
-"used before and you should see the list of available layers."
+"Enable the :guilabel:`WFS / OGC API Features` tab in the :guilabel:`Data "
+"Source Manager` dialog"
 msgstr ""
 
-#: ../../docs/training_manual/online_resources/wfs.rst:100
+#: ../../docs/training_manual/online_resources/wfs.rst:104
 msgid ""
-"Double-click next to the :guilabel:`countries ...` layer in the "
-":guilabel:`Filter` field, or click :guilabel:`Build query`:"
+"Connect to the server we used before and you should see the list of "
+"available layers."
 msgstr ""
 
-#: ../../docs/training_manual/online_resources/wfs.rst:106
+#: ../../docs/training_manual/online_resources/wfs.rst:105
 msgid ""
-"In the dialog that appears, build the query :kbd:`\"Countryeng\" = 'South"
-" Africa'`:"
+"Find and double-click the :guilabel:`countries (excluding Antarctica)` "
+"layer. The layer name is ``country_borders_excluding_antarctica``. You "
+"can also select the layer and press :guilabel:`Build query` button at the"
+" bottom of the dialog:"
 msgstr ""
 
-#: ../../docs/training_manual/online_resources/wfs.rst:112
-msgid "It will appear as the :guilabel:`Filter` value:"
-msgstr ""
-
-#: ../../docs/training_manual/online_resources/wfs.rst:117
+#: ../../docs/training_manual/online_resources/wfs.rst:113
 msgid ""
-"Click :guilabel:`Add` with the :guilabel:`countries` layer selected as "
-"above. Only the country with the :kbd:`Countryeng` value of :kbd:`South "
-"Africa` will load from that layer:"
+"In the dialog that appears, type the following ``SELECT * FROM "
+"country_borders_excluding_antarctica WHERE \"Countryeng\" = 'South "
+"Africa'`` query in the :guilabel:`SQL Statement` box."
 msgstr ""
 
-#: ../../docs/training_manual/online_resources/wfs.rst:124
+#: ../../docs/training_manual/online_resources/wfs.rst:120
+msgid "Press :guilabel:`OK`."
+msgstr ""
+
+#: ../../docs/training_manual/online_resources/wfs.rst:121
+msgid ""
+"The expression used will appear as the :guilabel:`Sql` value of the "
+"target layer:"
+msgstr ""
+
+#: ../../docs/training_manual/online_resources/wfs.rst:126
+msgid ""
+"Click :guilabel:`Add` with the layer selected as above. Only the country "
+"with the ``Countryeng`` value of ``South Africa`` will load from that "
+"layer:"
+msgstr ""
+
+#: ../../docs/training_manual/online_resources/wfs.rst:133
+msgid ""
+"Did you notice the |indicatorFilter| icon next to the "
+"``country_borders_excluding_antarctica`` layer? It indicates that the "
+"loaded layer is filtered and does not display in the project all of its "
+"features."
+msgstr ""
+
+#: ../../docs/training_manual/online_resources/wfs.rst:136
 msgid ""
 "You don't have to, but if you tried both methods, you'll notice that this"
 " is a lot faster than loading all the countries before filtering them!"
 msgstr ""
 
-#: ../../docs/training_manual/online_resources/wfs.rst:128
+#: ../../docs/training_manual/online_resources/wfs.rst:140
 msgid "Notes on WFS availability"
 msgstr ""
 
-#: ../../docs/training_manual/online_resources/wfs.rst:130
+#: ../../docs/training_manual/online_resources/wfs.rst:142
 msgid ""
 "It is rare to find a WFS hosting features you need, if your needs are "
 "very specific. The reason why Web Feature Services are relatively rare is"
@@ -217,18 +253,18 @@ msgid ""
 " a WFS rather than a WMS, which sends only images."
 msgstr ""
 
-#: ../../docs/training_manual/online_resources/wfs.rst:136
+#: ../../docs/training_manual/online_resources/wfs.rst:148
 msgid ""
 "The most common type of WFS you'll encounter will therefore probably be "
 "on a local network or even on your own computer, rather than on the "
 "Internet."
 msgstr ""
 
-#: ../../docs/training_manual/online_resources/wfs.rst:140
+#: ../../docs/training_manual/online_resources/wfs.rst:152
 msgid "|IC|"
 msgstr ""
 
-#: ../../docs/training_manual/online_resources/wfs.rst:142
+#: ../../docs/training_manual/online_resources/wfs.rst:154
 msgid ""
 "WFS layers are preferable over WMS layers if you need direct access to "
 "the attributes and geometries of the layers. However, considering the "
@@ -237,11 +273,79 @@ msgid ""
 "possible to use a WFS instead of a WMS."
 msgstr ""
 
-#: ../../docs/training_manual/online_resources/wfs.rst:149
+#: ../../docs/training_manual/online_resources/wfs.rst:161
 msgid "|WN|"
 msgstr ""
 
-#: ../../docs/training_manual/online_resources/wfs.rst:151
+#: ../../docs/training_manual/online_resources/wfs.rst:163
 msgid "Next, you'll see how to use QGIS Server to provide OGC services."
 msgstr ""
+
+#~ msgid "Ensure that \"on the fly\" re-projection is switched off."
+#~ msgstr ""
+
+#~ msgid "Click the |addWfsLayer| :guilabel:`Add WFS Layer` button:"
+#~ msgstr ""
+
+#~ msgid "Find the layer :guilabel:`south_poles_wfs`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "It may take a while to load "
+#~ "the layer. When it has loaded, it"
+#~ " will appear in the map. Here "
+#~ "it is over the outlines of "
+#~ "Antarctica (available on the same "
+#~ "server, and by the name of "
+#~ ":guilabel:`antarctica_country_border`):"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "How is this different from having "
+#~ "a WMS layer? That will become "
+#~ "obvious when you see the layers' "
+#~ "attributes."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Open the :guilabel:`south_poles_wfs` layer's "
+#~ "attribute table. You should see this:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Add labels to your layer to take"
+#~ " advantage of the attribute data in"
+#~ " this layer."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In the :guilabel:`Add WFS Layer ...` "
+#~ "dialog, connect to the server we "
+#~ "used before and you should see the"
+#~ " list of available layers."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Double-click next to the "
+#~ ":guilabel:`countries ...` layer in the "
+#~ ":guilabel:`Filter` field, or click "
+#~ ":guilabel:`Build query`:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In the dialog that appears, build "
+#~ "the query :kbd:`\"Countryeng\" = 'South "
+#~ "Africa'`:"
+#~ msgstr ""
+
+#~ msgid "It will appear as the :guilabel:`Filter` value:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Click :guilabel:`Add` with the "
+#~ ":guilabel:`countries` layer selected as above."
+#~ " Only the country with the "
+#~ ":kbd:`Countryeng` value of :kbd:`South Africa`"
+#~ " will load from that layer:"
+#~ msgstr ""
 

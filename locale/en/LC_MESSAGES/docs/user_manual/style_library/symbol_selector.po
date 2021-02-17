@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-25 09:53+0000\n"
+"POT-Creation-Date: 2021-02-17 02:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -363,8 +363,8 @@ msgid ""
 msgstr ""
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:206
-#: ../../docs/user_manual/style_library/symbol_selector.rst:302
-#: ../../docs/user_manual/style_library/symbol_selector.rst:384
+#: ../../docs/user_manual/style_library/symbol_selector.rst:314
+#: ../../docs/user_manual/style_library/symbol_selector.rst:397
 msgid "**Geometry generator** (see :ref:`geometry_generator_symbol`)"
 msgstr ""
 
@@ -484,41 +484,79 @@ msgid ""
 " on :guilabel:`Align dash pattern to line length`."
 msgstr ""
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:296
+#: ../../docs/user_manual/style_library/symbol_selector.rst:293
+msgid "|checkbox| :guilabel:`Draw line only inside polygon`"
+msgstr ""
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:297
 msgid ""
 "**Arrow**: draws lines as curved (or not) arrows with a single or a "
-"double head with configurable width, length and thickness. To create a "
-"curved arrow the line feature must have at least three vertices. It also "
-"uses a :ref:`fill symbol <vector_fill_symbols>` such as gradients or "
-"shapeburst to render the arrow body. Combined with the geometry "
-"generator, this type of layer symbol helps you representing flow maps."
+"double head with configurable (and data-defined):"
+msgstr ""
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:300
+msgid ":guilabel:`Head type`"
+msgstr ""
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:301
+msgid ":guilabel:`Arrow type`"
+msgstr ""
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:302
+msgid ":guilabel:`Arrow width`"
+msgstr ""
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:303
+msgid ":guilabel:`Arrow width at start`"
+msgstr ""
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:304
+msgid ":guilabel:`Head length`"
+msgstr ""
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:305
+msgid ":guilabel:`Head thickness`"
 msgstr ""
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:306
+msgid ":guilabel:`Offset`"
+msgstr ""
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:308
+msgid ""
+"It is possible to create |checkbox| :guilabel:`Curved arrows` (the line "
+"feature must have at least three vertices) and |checkbox| "
+":guilabel:`Repeat arrow on each segment`. It also uses a :ref:`fill "
+"symbol <vector_fill_symbols>` such as gradients or shapeburst to render "
+"the arrow body. Combined with the geometry generator, this type of layer "
+"symbol helps you representing flow maps."
+msgstr ""
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:318
 msgid ""
 "**Marker line**: repeats a :ref:`marker symbol <vector_marker_symbols>` "
 "over the length of a line."
 msgstr ""
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:309
+#: ../../docs/user_manual/style_library/symbol_selector.rst:321
 msgid ""
 "The markers placement can be at a regular distance or based on the line "
 "geometry: first, last or each vertex, on the central point of the line or"
 " of each segment, or on every curve point."
 msgstr ""
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:312
+#: ../../docs/user_manual/style_library/symbol_selector.rst:324
 msgid "The markers placement can also be given an offset along the line"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:313
+#: ../../docs/user_manual/style_library/symbol_selector.rst:325
 msgid ""
 "The |checkbox| :guilabel:`Rotate marker to follow line direction` option "
 "sets whether each marker symbol should be oriented relative to the line "
 "direction or not."
 msgstr ""
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:317
+#: ../../docs/user_manual/style_library/symbol_selector.rst:329
 msgid ""
 "Because a line is often a succession of segments of different directions,"
 " the rotation of the marker is calculated by averaging over a specified "
@@ -531,11 +569,11 @@ msgid ""
 " symbols."
 msgstr ""
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:326
+#: ../../docs/user_manual/style_library/symbol_selector.rst:338
 msgid "The marker line can also be offset from the line itself."
 msgstr ""
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:330
+#: ../../docs/user_manual/style_library/symbol_selector.rst:342
 msgid ""
 "**Hashed line**: repeats a line segment (a hash) over the length of a "
 "line symbol, with a line sub-symbol used to render each individual "
@@ -545,37 +583,41 @@ msgid ""
 "along with:"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:337
+#: ../../docs/user_manual/style_library/symbol_selector.rst:349
 msgid ":guilabel:`Hash length`"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:338
+#: ../../docs/user_manual/style_library/symbol_selector.rst:350
 msgid ":guilabel:`Hash rotation`"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:346
+#: ../../docs/user_manual/style_library/symbol_selector.rst:351
+msgid "|checkbox| :guilabel:`Rotate hash to follow line direction`"
+msgstr ""
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:359
 msgid "Examples of hashed lines"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:352
+#: ../../docs/user_manual/style_library/symbol_selector.rst:365
 msgid "Fill Symbols"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:354
+#: ../../docs/user_manual/style_library/symbol_selector.rst:367
 msgid ""
 "Appropriate for polygon geometry features, fill symbols have also several"
 " symbol layer types:"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:357
+#: ../../docs/user_manual/style_library/symbol_selector.rst:370
 msgid "**Simple fill** (default): fills a polygon with a uniform color"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:364
+#: ../../docs/user_manual/style_library/symbol_selector.rst:377
 msgid "Designing a Simple Fill Symbol"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:366
+#: ../../docs/user_manual/style_library/symbol_selector.rst:379
 msgid ""
 "**Centroid fill**: places a :ref:`marker symbol <vector_marker_symbols>` "
 "at the centroid of the visible feature. The position of the marker may "
@@ -585,21 +627,21 @@ msgid ""
 "<geometry_generator_symbol>` if you want the exact centroid."
 msgstr ""
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:374
+#: ../../docs/user_manual/style_library/symbol_selector.rst:387
 msgid "You can:"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:376
+#: ../../docs/user_manual/style_library/symbol_selector.rst:389
 msgid ":guilabel:`Force point inside polygon`"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:377
+#: ../../docs/user_manual/style_library/symbol_selector.rst:390
 msgid ""
 ":guilabel:`Draw point on every part of multi-part feature` or place the "
 "point only on its biggest part"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:379
+#: ../../docs/user_manual/style_library/symbol_selector.rst:392
 msgid ""
 "display the marker symbol(s) in whole or in part, keeping parts "
 "overlapping the current feature geometry (:guilabel:`Clip markers to "
@@ -607,24 +649,24 @@ msgid ""
 "(:guilabel:`Clip markers to current part boundary only`)"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:385
+#: ../../docs/user_manual/style_library/symbol_selector.rst:398
 msgid ""
 "**Gradient fill**: uses a radial, linear or conical gradient, based on "
 "either simple two color gradients or a predefined :ref:`gradient color "
 "ramp <color-ramp>` to fill polygons. The gradient can be rotated and "
 "applied on a single feature basis or across the whole map extent. Also "
 "start and end points can be set via coordinates or using the centroid (of"
-" feature or map);"
+" feature or map). A data-defined offset can be defined;"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:390
+#: ../../docs/user_manual/style_library/symbol_selector.rst:404
 msgid ""
 "**Line pattern fill**: fills the polygon with a hatching pattern of "
 ":ref:`line symbol layer <vector_line_symbols>`. You can set a rotation, "
 "the spacing between lines and an offset from the feature boundary;"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:393
+#: ../../docs/user_manual/style_library/symbol_selector.rst:407
 msgid ""
 "**Point pattern fill**: fills the polygon with a hatching pattern of "
 ":ref:`marker symbol layer <vector_marker_symbols>`. You can set the "
@@ -632,34 +674,34 @@ msgid ""
 "the feature boundary;"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:397
+#: ../../docs/user_manual/style_library/symbol_selector.rst:411
 msgid ""
 "**Random marker fill**: fills the polygon with a :ref:`marker symbol "
 "<vector_marker_symbols>` placed at random locations within the polygon "
 "boundary. You can set:"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:401
+#: ../../docs/user_manual/style_library/symbol_selector.rst:415
 msgid ""
 "the number of marker symbols to render, either as an absolute count or as"
 " density-based (the fill density will remain the same on different scale "
 "/ zoom levels)"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:404
+#: ../../docs/user_manual/style_library/symbol_selector.rst:418
 msgid ""
 "an optional random number seed, to give consistent placement of markers "
 "whenever maps are refreshed (also allows random placement to play nice "
 "with QGIS server and tile-based rendering)"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:407
+#: ../../docs/user_manual/style_library/symbol_selector.rst:421
 msgid ""
 "whether markers rendered near the edges of polygons should be clipped to "
 "the polygon boundary or not"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:410
+#: ../../docs/user_manual/style_library/symbol_selector.rst:424
 msgid ""
 "**Raster image fill**: fills the polygon with tiles from a raster image "
 "(:file:`PNG` :file:`JPG`, :file:`BMP` ...). The image can be a file on "
@@ -670,11 +712,11 @@ msgid ""
 "<unit_selector>` or as a percentage of the original size."
 msgstr ""
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:416
+#: ../../docs/user_manual/style_library/symbol_selector.rst:430
 msgid "**SVG fill**: fills the polygon using :ref:`SVG markers <svg_marker>`;"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:417
+#: ../../docs/user_manual/style_library/symbol_selector.rst:431
 msgid ""
 "**Shapeburst fill**: buffers a gradient fill, where a gradient is drawn "
 "from the boundary of a polygon towards the polygon's centre. Configurable"
@@ -683,37 +725,41 @@ msgid ""
 "offsets;"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:422
+#: ../../docs/user_manual/style_library/symbol_selector.rst:436
 msgid ""
 "**Outline: Arrow**: uses a line :ref:`arrow symbol <arrow_symbol>` layer "
-"to represent the polygon boundary;"
-msgstr ""
-
-#: ../../docs/user_manual/style_library/symbol_selector.rst:424
-msgid ""
-"**Outline: Hashed line**: uses a :ref:`hash line symbol "
-"<hashed_line_symbol>` layer to represent the polygon boundary (the "
-"interior rings, the exterior ring or all the rings)."
-msgstr ""
-
-#: ../../docs/user_manual/style_library/symbol_selector.rst:427
-msgid ""
-"**Outline: Marker line**: uses a :ref:`marker line symbol "
-"<marker_line_symbol>` layer to represent the polygon boundary (the "
-"interior rings, the exterior ring or all the rings)."
-msgstr ""
-
-#: ../../docs/user_manual/style_library/symbol_selector.rst:430
-msgid ""
-"**Outline: simple line**: uses a :ref:`simple line symbol "
-"<simple_line_symbol>` layer to represent the polygon boundary (the "
-"interior rings, the exterior ring or all the rings). The :guilabel:`Draw "
-"line only inside polygon` option displays the polygon borders inside the "
-"polygon and can be useful to clearly represent adjacent polygon "
-"boundaries."
+"to represent the polygon boundary. The settings for the outline arrow are"
+" the same as for line symbols."
 msgstr ""
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:439
+msgid ""
+"**Outline: Hashed line**: uses a :ref:`hash line symbol "
+"<hashed_line_symbol>` layer to represent the polygon boundary (the "
+"interior rings, the exterior ring or all the rings). The settings for the"
+" outline hashed line are the same as for line symbols."
+msgstr ""
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:443
+msgid ""
+"**Outline: Marker line**: uses a :ref:`marker line symbol "
+"<marker_line_symbol>` layer to represent the polygon boundary (the "
+"interior rings, the exterior ring or all the rings). The settings for the"
+" outline marker line are same as for line symbols."
+msgstr ""
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:447
+msgid ""
+"**Outline: simple line**: uses a :ref:`simple line symbol "
+"<simple_line_symbol>` layer to represent the polygon boundary (the "
+"interior rings, the exterior ring or all the rings). The settings for the"
+" outline simple line are the same as for line symbols. The "
+":guilabel:`Draw line only inside polygon` option displays the polygon "
+"borders inside the polygon and can be useful to clearly represent "
+"adjacent polygon boundaries."
+msgstr ""
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:457
 msgid ""
 "When geometry type is polygon, you can choose to disable the automatic "
 "clipping of lines/polygons to the canvas extent. In some cases this "
@@ -721,11 +767,11 @@ msgid ""
 " centroid must always be the actual feature's centroid)."
 msgstr ""
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:447
+#: ../../docs/user_manual/style_library/symbol_selector.rst:465
 msgid "The Geometry Generator"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:449
+#: ../../docs/user_manual/style_library/symbol_selector.rst:467
 msgid ""
 "Available with all types of symbols, the :guilabel:`geometry generator` "
 "symbol layer allows to use :ref:`expression syntax <functions_list>` to "
@@ -735,15 +781,15 @@ msgid ""
 "each other."
 msgstr ""
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:455
+#: ../../docs/user_manual/style_library/symbol_selector.rst:473
 msgid "Some examples:"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:485
+#: ../../docs/user_manual/style_library/symbol_selector.rst:503
 msgid "The Vector Field Marker"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:487
+#: ../../docs/user_manual/style_library/symbol_selector.rst:505
 msgid ""
 "The vector field marker is used to display vector field data such as "
 "earth deformation, tidal flows, and the like. It displays the vectors as "
@@ -752,33 +798,97 @@ msgid ""
 "data; line and polygon layers are not drawn by this symbology."
 msgstr ""
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:493
+#: ../../docs/user_manual/style_library/symbol_selector.rst:511
 msgid ""
 "The vector field is defined by attributes in the data, which can "
 "represent the field either by:"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:496
+#: ../../docs/user_manual/style_library/symbol_selector.rst:514
 msgid "**cartesian** components (``x`` and ``y`` components of the field)"
 msgstr ""
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:497
+#: ../../docs/user_manual/style_library/symbol_selector.rst:515
 msgid ""
 "or **polar** coordinates: in this case, attributes define ``Length`` and "
 "``Angle``. The angle may be measured either clockwise from north, or "
 "Counterclockwise from east, and may be either in degrees or radians."
 msgstr ""
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:500
+#: ../../docs/user_manual/style_library/symbol_selector.rst:518
 msgid ""
 "or as **height only** data, which displays a vertical arrow scaled using "
 "an attribute of the data. This is appropriate for displaying the vertical"
 " component of deformation, for example."
 msgstr ""
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:504
+#: ../../docs/user_manual/style_library/symbol_selector.rst:522
 msgid ""
 "The magnitude of field can be scaled up or down to an appropriate size "
 "for viewing the field."
 msgstr ""
+
+#~ msgid ""
+#~ "**Arrow**: draws lines as curved (or "
+#~ "not) arrows with a single or a "
+#~ "double head with configurable width, "
+#~ "length and thickness. To create a "
+#~ "curved arrow the line feature must "
+#~ "have at least three vertices. It "
+#~ "also uses a :ref:`fill symbol "
+#~ "<vector_fill_symbols>` such as gradients or"
+#~ " shapeburst to render the arrow body."
+#~ " Combined with the geometry generator, "
+#~ "this type of layer symbol helps "
+#~ "you representing flow maps."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**Gradient fill**: uses a radial, linear"
+#~ " or conical gradient, based on either"
+#~ " simple two color gradients or a "
+#~ "predefined :ref:`gradient color ramp "
+#~ "<color-ramp>` to fill polygons. The "
+#~ "gradient can be rotated and applied "
+#~ "on a single feature basis or "
+#~ "across the whole map extent. Also "
+#~ "start and end points can be set"
+#~ " via coordinates or using the "
+#~ "centroid (of feature or map);"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**Outline: Arrow**: uses a line "
+#~ ":ref:`arrow symbol <arrow_symbol>` layer to"
+#~ " represent the polygon boundary;"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**Outline: Hashed line**: uses a "
+#~ ":ref:`hash line symbol <hashed_line_symbol>` "
+#~ "layer to represent the polygon boundary"
+#~ " (the interior rings, the exterior "
+#~ "ring or all the rings)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**Outline: Marker line**: uses a "
+#~ ":ref:`marker line symbol <marker_line_symbol>` "
+#~ "layer to represent the polygon boundary"
+#~ " (the interior rings, the exterior "
+#~ "ring or all the rings)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**Outline: simple line**: uses a "
+#~ ":ref:`simple line symbol <simple_line_symbol>` "
+#~ "layer to represent the polygon boundary"
+#~ " (the interior rings, the exterior "
+#~ "ring or all the rings). The "
+#~ ":guilabel:`Draw line only inside polygon` "
+#~ "option displays the polygon borders "
+#~ "inside the polygon and can be "
+#~ "useful to clearly represent adjacent "
+#~ "polygon boundaries."
+#~ msgstr ""
 
