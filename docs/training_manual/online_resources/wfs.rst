@@ -31,7 +31,7 @@ WMS.
 
 #. Uncheck the :guilabel:`Only request features overlapping the view extent` option
    below the layers list, since your current map canvas may not cover our area of
-   interest: Antartica.
+   interest: Antarctica.
 #. Find the layer :guilabel:`antarctica_country_border`.
    You can use the :guilabel:`Filter` box at the top.
 #. Click on the layer to select it:
