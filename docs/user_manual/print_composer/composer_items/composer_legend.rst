@@ -144,10 +144,10 @@ e.g. ``Borough (3) - 850ha``:
    dialog
 #. Enter the following expression (*assuming symbol labels have not been edited*)::
 
-    concat( @symbol_label,
-            ' (', @symbol_count, ') - ',
-            round( aggregate(@layer, 'sum', $area, filter:= "type"=@symbol_label)/10000 ),
-            'ha'
+    format( '%1 (%2) - %3ha',
+            @symbol_label,
+            @symbol_count,
+            round( aggregate(@layer, 'sum', $area, filter:= "type"=@symbol_label)/10000 )
           )
 
 #. Press :guilabel:`OK`
