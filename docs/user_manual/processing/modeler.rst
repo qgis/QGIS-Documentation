@@ -75,9 +75,10 @@ the left side of the modeler window:
 * Enum
 * Expression
 * Extent
-* Fields Aggregate
+* Field Aggregates
 * Fields Mapper
 * File/Folder
+* Geometry
 * Map Layer
 * Map Theme
 * Matrix
@@ -92,6 +93,7 @@ the left side of the modeler window:
 * Raster Layer
 * Scale
 * String
+* TIN Creation Layers 
 * Vector Features
 * Vector Field
 * Vector Layer
