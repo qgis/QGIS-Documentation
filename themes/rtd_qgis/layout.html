@@ -25,7 +25,8 @@
    <a href= "{{pathto('genindex.html', 1)}}">Index</a>
  {% endblock %}
 
-{% block footer %}
+{% block document %}
+  {{ super() }}
 <script type="text/javascript">
   $(document).ready(function () {
     $(".toggle > *").hide();
