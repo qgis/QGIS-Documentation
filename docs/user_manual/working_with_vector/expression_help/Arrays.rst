@@ -163,8 +163,8 @@ Returns an array with only the items for which the expression evaluates to true.
        * **expression** - an expression to evaluate on each item. The variable `@element` will be replaced by the current value.
        * **limit** - maximum number of elements to be returned. Use 0 to return all values.
    * - Examples
-     - * ``array_filter(array(1,2,3),@element &lt; 3)`` → [ 1, 2 ]
-       * ``array_filter(array(1,2,3),@element &lt; 3, 1)`` → [ 1 ]
+     - * ``array_filter(array(1,2,3),@element < 3)`` → [ 1, 2 ]
+       * ``array_filter(array(1,2,3),@element < 3, 1)`` → [ 1 ]
 
 
 .. end_array_filter_section
