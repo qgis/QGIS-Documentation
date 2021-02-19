@@ -121,8 +121,9 @@ will have data about the street network.
 When you open a layer in the GIS Application it will appear in the **map view**.
 The map view shows a graphic representing your layer. When you add more than one
 layer to a map view, the layers are overlaid on top of each other. Look at
-figures :numref:`figure_map_view_towns`, :numref:`figure_map_view_schools`, :numref:`figure_map_view_railways` and
-:numref:`figure_map_view_rivers` to see a map view that has several layers being added to it.
+figures :numref:`figure_map_view_towns`, :numref:`figure_map_view_schools`,
+:numref:`figure_map_view_railways` and :numref:`figure_map_view_rivers`
+to see a map view that has several layers being added to it.
 An important function of the map view is to allow you to zoom in to magnify,
 zoom out to see a greater area and move around (panning) in the map.
 
@@ -171,8 +172,8 @@ by clicking on a layer in the legend, holding the mouse button down and then
 dragging the layer to a new position. In figures :numref:`figure_map_legend_before` and
 :numref:`figure_map_legend_after` the map legend is shown as the area to the left of the GIS
 Application window. By changing the layer order, the way that layers are drawn
-can be adjusted –-- in this case so that rivers are drawn over the roads instead
-of below them.
+can be adjusted –-- in this case so that rivers are drawn below the roads instead
+of over them.
 
 .. _figure_map_symbology:
 
@@ -190,7 +191,7 @@ of below them.
    :width: 30em
 
    Changing the layer order allows to adjust the way that layers are drawn. Before
-   changing the layer order, rivers are drawn underneath roads
+   changing the layer order, rivers are drawn on top of roads
 
 .. _figure_map_legend_after:
 
@@ -199,7 +200,7 @@ of below them.
    :width: 30em
 
    Changing the layer order allows to adjust the way that layers are drawn. After
-   changing the layer order, rivers are drawn on top of roads
+   changing the layer order, rivers are drawn underneath roads
 
 
 Getting a GIS Application for your own computer(s)
