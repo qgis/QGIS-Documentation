@@ -1,34 +1,6 @@
 Answer Sheet
 ===============================================================================
 
-|RF| *An Overview of the Interface*
--------------------------------------------------------------------------------
-
-.. _interface-overview-1:
-
-|basic| *Overview* (Part 1)
-...............................................................................
-
-Refer back to the image showing the interface layout and check that you
-remember the names and functions of the screen elements.
-
-:ref:`Back to text <backlink-interface-overview-1>`
-
-
-.. _interface-overview-2:
-
-|basic| *Overview* (Part 2)
-...............................................................................
-
-#. :guilabel:`Save as`
-#. :guilabel:`Zoom to layer(s)`
-#. :guilabel:`Invert selection`
-#. :guilabel:`Rendering on/off`
-#. :guilabel:`Measure line`
-
-:ref:`Back to text <backlink-interface-overview-2>`
-
-
 |RF| *Adding Your First Layer*
 -------------------------------------------------------------------------------
 
