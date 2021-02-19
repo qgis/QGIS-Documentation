@@ -160,7 +160,7 @@ Returns an array with only the items for which the expression evaluates to true.
      - * **array** - an array
        * **expression** - an expression to evaluate on each item. The variable `@element` will be replaced by the current value.
    * - Examples
-     - * ``array_filter(array(1,2,3),@element &lt; 3)`` → [ 1, 2 ]
+     - * ``array_filter(array(1,2,3),@element < 3)`` → [ 1, 2 ]
 
 
 .. end_array_filter_section

@@ -70,7 +70,7 @@ Evaluates a template which is passed in a string. Useful to expand dynamic param
    * - Arguments
      - * **template** - a template string
    * - Examples
-     - * ``eval_template('QGIS [% upper(\\'rocks\\') %]')`` → QGIS ROCKS
+     - * ``eval_template('QGIS [% upper(\'rocks\') %]')`` → QGIS ROCKS
 
 
 .. end_eval_template_section
