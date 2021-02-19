@@ -145,8 +145,8 @@ Return the first matching position matching a regular expression within an unico
      - * **input_string** - the string to test against the regular expression
        * **regex** - The regular expression to test against. Backslash characters must be double escaped (e.g., "\\\\s" to match a white space character or  "\\\\b" to a match word boundary).
    * - Examples
-     - * ``regexp_match('QGIS ROCKS','\\\\sROCKS')`` → 5
-       * ``regexp_match('Budač','udač\\\\b')`` → 2
+     - * ``regexp_match('QGIS ROCKS','\\sROCKS')`` → 5
+       * ``regexp_match('Budač','udač\\b')`` → 2
 
 
 .. end_regexp_match_section

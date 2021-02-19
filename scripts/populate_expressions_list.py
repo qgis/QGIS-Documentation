@@ -2,6 +2,7 @@ from os import path, walk
 from sys import argv
 import json
 import re
+import html
 
 # To use this script clone the QGIS/QGIS repository, and checkout the release
 # and run:
@@ -57,6 +58,9 @@ def sphynxify_html(text, base_indent=0):
 
     # Format <a> links
     text = re.sub(r"<a href='(.*?)'>(.*?)</a>", r"`\2 <\1>`_", text)
+
+    # Format html special characters (e.g. &lt;)
+    text = html.unescape(text)
 
     return text
 
@@ -126,7 +130,11 @@ def format_variant(function_dict, f_name):
     if 'examples' in function_dict:
         ex_list = []
         for ex in function_dict['examples']:
-            example = f"``{ex['expression']}`` → {ex['returns']}"
+
+            # backticks do not escape backslash so let's do it before pulling example text
+            example_backslashed = ex['expression'].replace('\\\\', '\\')
+            example = f"``{sphynxify_html(example_backslashed)}`` → {ex['returns']}"
+
             if 'note' in ex:
                 example += f"\n\n         {sphynxify_html(ex['note'])}"
 
