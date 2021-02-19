@@ -301,6 +301,14 @@ Parameters
      
        Default: True
      - Save the layer styles
+   * - **Save only selected features**
+     - ``SELECTED_FEATURES_ONLY``
+     - [boolean]
+     
+       Default: False
+     - If a layer has a selection, setting this option to ``True``
+       will result in only selected features being saved. For
+       layers without a selection all features will be saved.
    * - **Destination GeoPackage**
      - ``OUTPUT``
      - [file]
