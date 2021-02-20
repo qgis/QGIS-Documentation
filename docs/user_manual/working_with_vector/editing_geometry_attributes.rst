@@ -1488,12 +1488,12 @@ below.
   projection of the third point on the first edge. (Left-click, left-click,
   right-click)
 
-   .. _figure_draw_rectangles_3_points:
+  .. _figure_draw_rectangles_3_points:
 
-   .. figure:: img/draw_rectangles_3_points.png
-      :align: center
+  .. figure:: img/draw_rectangles_3_points.png
+     :align: center
 
-      Draw rectangle from 3 points using distance (right) and projected (left)
+     Draw rectangle from 3 points using distance (right) and projected (left)
 
 .. index:: Draw regular polygons
 .. _draw_regular_polygons:
