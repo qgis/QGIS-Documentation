@@ -689,7 +689,7 @@ Returns a geometry from a GML representation of geometry.
    * - Arguments
      - * **gml** - GML representation of a geometry as a string
    * - Examples
-     - * ``geom_from_gml('&lt;gml:LineString srsName="EPSG:4326"&gt;&lt;gml:coordinates&gt;4,4 5,5 6,6&lt;/gml:coordinates&gt;&lt;/gml:LineString&gt;')`` → a line geometry object
+     - * ``geom_from_gml('<gml:LineString srsName="EPSG:4326"><gml:coordinates>4,4 5,5 6,6</gml:coordinates></gml:LineString>')`` → a line geometry object
 
 
 .. end_geom_from_gml_section
