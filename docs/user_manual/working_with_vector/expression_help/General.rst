@@ -149,6 +149,29 @@ Returns a matching layer property or metadata value.
 
 .. end_layer_property_section
 
+.. mime_type_section
+
+.. _expression_function_General_mime_type:
+
+mime_type
+.........
+
+Returns the mime type of the binary data.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - mime_type(bytes)
+   * - Arguments
+     - * **bytes** - the binary data
+   * - Examples
+     - * ``mime_type('<html><body></body></html>')`` → text/html
+       * ``mime_type(from_base64('R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAIAOw=='))`` → image/gif
+
+
+.. end_mime_type_section
+
 .. var_section
 
 .. _expression_function_General_var:

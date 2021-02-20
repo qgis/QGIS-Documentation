@@ -360,18 +360,35 @@ Returns the number of elements of an array.
 array_majority
 ..............
 
-Returns an array containing the most common value in an array. The returned array may contain more than one value if multiple values occur equally often.
+Returns the most common values in an array.
 
 .. list-table::
    :widths: 15 85
 
    * - Syntax
-     - array_majority(array)
+     - array_majority(array, [option='all'])
+
+       [] marks optional arguments
    * - Arguments
      - * **array** - an array
+       * **option='all'** - a string specifying the return values handling. Valid options are:
+
+         
+
+         * all: Default, all most common values are returned in an array.
+         * any: Returns one of the most common values.
+         * median: Returns the median of the most common values. Non arithmetic values are ignored.
+         * real_majority: Returns the value which occurs more than half the size of the array.
+         
+
    * - Examples
-     - * ``array_majority(array(0,1,42,42,43))`` → [ 42 ]
-       * ``array_majority(array(0,0,1,2,2,42))`` → [ 0, 2 ]
+     - * ``array_majority(array(0,1,42,42,43), 'all')`` → [ 42 ]
+       * ``array_majority(array(0,1,42,42,43,1), 'all')`` → [ 42, 1 ]
+       * ``array_majority(array(0,1,42,42,43,1), 'any')`` → 1 or 42
+       * ``array_majority(array(0,1,1,2,2), 'median')`` → 1.5
+       * ``array_majority(array(0,1,42,42,43), 'real_majority')`` → NULL
+       * ``array_majority(array(0,1,42,42,43,42), 'real_majority')`` → NULL
+       * ``array_majority(array(0,1,42,42,43,42,42), 'real_majority')`` → 42
 
 
 .. end_array_majority_section
@@ -465,6 +482,46 @@ Returns the minimum value of an array.
 
 
 .. end_array_min_section
+
+.. array_minority_section
+
+.. _expression_function_Arrays_array_minority:
+
+array_minority
+..............
+
+Returns the less common values in an array.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - array_minority(array, [option='all'])
+
+       [] marks optional arguments
+   * - Arguments
+     - * **array** - an array
+       * **option='all'** - a string specifying the return values handling. Valid options are:
+
+         
+
+         * all: Default, all less common values are returned in an array.
+         * any: Returns one of the less common values.
+         * median: Returns the median of the less common values. Non arithmetic values are ignored.
+         * real_minority: Returns values which occur less than half the size of the array.
+         
+
+   * - Examples
+     - * ``array_minority(array(0,42,42), 'all')`` → [ 0 ]
+       * ``array_minority(array(0,1,42,42), 'all')`` → [ 0, 1 ]
+       * ``array_minority(array(0,1,42,42,43,1), 'any')`` → 0 or 43
+       * ``array_minority(array(1,2,3,3), 'median')`` → 1.5
+       * ``array_minority(array(0,1,42,42,43), 'real_minority')`` → [ 42, 43, 0, 1 ]
+       * ``array_minority(array(0,1,42,42,43,42), 'real_minority')`` → [ 42, 43, 0, 1 ]
+       * ``array_minority(array(0,1,42,42,43,42,42), 'real_minority')`` → [ 43, 0, 1 ]
+
+
+.. end_array_minority_section
 
 .. array_prepend_section
 
