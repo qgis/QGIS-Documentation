@@ -135,7 +135,7 @@ with open('docs_conf.yml', 'r') as f:
 html_context = {
     # When a QGIS version reaches end of life, set this to True to show an information
     # message on the top of the page.
-    'outdated': False,
+    'outdated': True,
     # When a new QGIS version is released, set this to False to remove the disclaimer
     # information message on the top of the page.
     'isTesting': False
