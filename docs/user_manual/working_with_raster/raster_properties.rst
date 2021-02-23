@@ -330,14 +330,13 @@ Contours
 This renderer draws contour lines that are calculated on the fly from
 the source raster band.
 
-.. todo: Add a figure showing options, and the rendering in map canvas
-   
-   .. _figure_raster_contour:
 
-   .. figure:: img/rasterContour.png
-      :align: center
+.. _figure_raster_contours:
 
-      Raster Symbology - Contour rendering
+.. figure:: img/rasterContours.png
+   :align: center
+
+   Raster Symbology - Contours rendering
 
 Options:
 
