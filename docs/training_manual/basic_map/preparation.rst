@@ -79,8 +79,15 @@ your work.
 Repeat the steps above to add the :file:`places.shp` and :file:`rivers.shp`
 layers from the same folder (:file:`exercise_data/shapefile`) to the map.
 
-:ref:`Check your results <interface-preparation-1>`
+.. admonition:: Solution
+   :class: toggle
 
+   In the main area of the dialog you should see many shapes with different
+   colors. Each shape belongs to a layer you can identify by its color in the
+   left panel (your colors may be different from the ones below):
+
+   .. figure:: img/basic_map.png
+      :align: center
 
 .. _load_geopackage:
 
