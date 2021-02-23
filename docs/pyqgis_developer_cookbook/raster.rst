@@ -120,6 +120,15 @@ The following code assumes ``rlayer`` is a
 
 .. testcode:: raster
 
+     # get the first band name of the raster
+     print(rlayer.bandName(1))
+
+.. testoutput:: raster
+
+    Band 1: Height
+
+.. testcode:: raster
+
     # get all the available metadata as a QgsLayerMetadata object
     print(rlayer.metadata())
 
@@ -159,8 +168,10 @@ method of :class:`QgsRasterLayer <qgis.core.QgsRasterLayer>`. There are a
 number of renderer classes (derived from :class:`QgsRasterRenderer
 <qgis.core.QgsRasterRenderer>`):
 
+* :class:`QgsHillshadeRenderer <qgis.core.QgsHillshadeRenderer>`
 * :class:`QgsMultiBandColorRenderer <qgis.core.QgsMultiBandColorRenderer>`
 * :class:`QgsPalettedRasterRenderer <qgis.core.QgsPalettedRasterRenderer>`
+* :class:`QgsRasterContourRenderer <qgis.core.QgsRasterContourRenderer>`
 * :class:`QgsSingleBandColorDataRenderer <qgis.core.QgsSingleBandColorDataRenderer>`
 * :class:`QgsSingleBandGrayRenderer <qgis.core.QgsSingleBandGrayRenderer>`
 * :class:`QgsSingleBandPseudoColorRenderer <qgis.core.QgsSingleBandPseudoColorRenderer>`
