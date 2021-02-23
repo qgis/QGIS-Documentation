@@ -128,7 +128,7 @@ of the :menuselection:`Processing --> Raster terrain analysis`.
    ``hillshade``
 #. Click on :guilabel:`Run`
 
-Now you'll see the slope of the terrain, each pixel holding the correponding
+Now you'll see the slope of the terrain, each pixel holding the corresponding
 slope value. Black pixels show flat terrain and white pixels, steep terrain:
 
 .. figure:: img/slope_raster.png
