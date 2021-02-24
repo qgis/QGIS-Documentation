@@ -248,8 +248,7 @@ Figure
 
 The result looks like this:
 
-.. _figure_logo:
-
+.. _figure_log
 .. figure:: /static/common/logo.png
    :width: 20 em
    :align: center
