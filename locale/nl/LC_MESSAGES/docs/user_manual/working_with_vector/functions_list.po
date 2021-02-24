@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-03 02:18+0000\n"
+"POT-Creation-Date: 2021-02-24 02:11+0000\n"
 "PO-Revision-Date: 2020-12-24 10:27+0000\n"
 "Last-Translator: DiGro, 2021\n"
 "Language-Team: Dutch (https://www.transifex.com/qgis/teams/6144/nl/)\n"
@@ -2041,8 +2041,8 @@ msgstr ""
 "`@element` zal worden vervangen door de huidige waarde."
 
 #: ../../docs/user_manual/working_with_vector/expression_help/Arrays.rst:163
-msgid "``array_filter(array(1,2,3),@element &lt; 3)`` → [ 1, 2 ]"
-msgstr "``array_filter(array(1,2,3),@element &lt; 3)`` → [ 1, 2 ]"
+msgid "``array_filter(array(1,2,3),@element < 3)`` → [ 1, 2 ]"
+msgstr "``array_filter(array(1,2,3),@element < 3)`` → [ 1, 2 ]"
 
 #: ../../docs/user_manual/working_with_vector/expression_help/Arrays.rst:173
 msgid "array_find"
@@ -3533,8 +3533,8 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression_help/Conditionals.rst:148
 #: ../../docs/user_manual/working_with_vector/expression_help/String.rst:247
-msgid "``regexp_match('QGIS ROCKS','\\\\\\\\sROCKS')`` → 5"
-msgstr "``regexp_match('QGIS ROCKS','\\\\\\\\sROCKS')`` → 5"
+msgid "``regexp_match('QGIS ROCKS','\\\\sROCKS')`` → 5"
+msgstr "``regexp_match('QGIS ROCKS','\\\\sROCKS')`` → 5"
 
 #: ../../docs/user_manual/working_with_vector/expression_help/Conditionals.rst:158
 msgid "try"
@@ -5880,8 +5880,8 @@ msgstr "**template** - een tekenreeks voor een sjabloon"
 
 #: ../../docs/user_manual/working_with_vector/expression_help/General.rst:73
 #, python-format
-msgid "``eval_template('QGIS [% upper(\\\\'rocks\\\\') %]')`` → QGIS ROCKS"
-msgstr "``eval_template('QGIS [% upper(\\\\'rocks\\\\') %]')`` → QGIS ROCKS"
+msgid "``eval_template('QGIS [% upper(\\'rocks\\') %]')`` → QGIS ROCKS"
+msgstr "``eval_template('QGIS [% upper(\\'rocks\\') %]')`` → QGIS ROCKS"
 
 #: ../../docs/user_manual/working_with_vector/expression_help/General.rst:83
 msgid "is_layer_visible"
@@ -7189,15 +7189,11 @@ msgstr "**gml** - GML-weergave van een geometrie als een tekenreeks"
 
 #: ../../docs/user_manual/working_with_vector/expression_help/GeometryGroup.rst:20
 msgid ""
-"``geom_from_gml('&lt;gml:LineString "
-"srsName=\"EPSG:4326\"&gt;&lt;gml:coordinates&gt;4,4 5,5 "
-"6,6&lt;/gml:coordinates&gt;&lt;/gml:LineString&gt;')`` → a line geometry "
-"object"
+"``geom_from_gml('<gml:LineString srsName=\"EPSG:4326\"><gml:coordinates>4,4 "
+"5,5 6,6</gml:coordinates></gml:LineString>')`` → a line geometry object"
 msgstr ""
-"``geom_from_gml('&lt;gml:LineString "
-"srsName=\"EPSG:4326\"&gt;&lt;gml:coordinates&gt;4,4 5,5 "
-"6,6&lt;/gml:coordinates&gt;&lt;/gml:LineString&gt;')`` → a line geometry "
-"object"
+"``geom_from_gml('<gml:LineString srsName=\"EPSG:4326\"><gml:coordinates>4,4 "
+"5,5 6,6</gml:coordinates></gml:LineString>')`` → een object lijngeometrie"
 
 #: ../../docs/user_manual/working_with_vector/expression_help/GeometryGroup.rst:30
 msgid "geom_from_wkb"
@@ -13716,8 +13712,8 @@ msgid "**arg** - any type. Any number of arguments."
 msgstr "**arg** - elk type. Elk aantal argumenten."
 
 #: ../../docs/user_manual/working_with_vector/expression_help/String.rst:21
-msgid "``format('This %1 a %2','is', 'test')`` → 'This is a test''"
-msgstr "``format('This %1 a %2','is', 'test')`` → 'This is a test''"
+msgid "``format('This %1 a %2','is', 'test')`` → 'This is a test'"
+msgstr "``format('Dit %1 een %2','is', 'test')`` → 'Dit is een test'"
 
 #: ../../docs/user_manual/working_with_vector/expression_help/String.rst:97
 msgid "format_number"
@@ -13889,23 +13885,23 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression_help/String.rst:271
 msgid ""
-"``regexp_replace('QGIS SHOULD ROCK','\\\\\\\\sSHOULD\\\\\\\\s',' DOES ')`` →"
-" 'QGIS DOES ROCK'"
+"``regexp_replace('QGIS SHOULD ROCK','\\\\sSHOULD\\\\s',' DOES ')`` → 'QGIS "
+"DOES ROCK'"
 msgstr ""
-"``regexp_replace('QGIS SHOULD ROCK','\\\\\\\\sSHOULD\\\\\\\\s',' DOES ')`` →"
-" 'QGIS DOES ROCK'"
+"``regexp_replace('QGIS SHOULD ROCK','\\\\sSHOULD\\\\s',' DOES ')`` → 'QGIS "
+"DOES ROCK'"
 
 #: ../../docs/user_manual/working_with_vector/expression_help/String.rst:272
-msgid "``regexp_replace('ABC123','\\\\\\\\d+','')`` → 'ABC'"
-msgstr "``regexp_replace('ABC123','\\\\\\\\d+','')`` → 'ABC'"
+msgid "``regexp_replace('ABC123','\\\\d+','')`` → 'ABC'"
+msgstr "``regexp_replace('ABC123','\\\\d+','')`` → 'ABC'"
 
 #: ../../docs/user_manual/working_with_vector/expression_help/String.rst:273
 msgid ""
-"``regexp_replace('my name is John','(.*) is (.*)','\\\\\\\\2 is "
-"\\\\\\\\1')`` → 'John is my name'"
+"``regexp_replace('my name is John','(.*) is (.*)','\\\\2 is \\\\1')`` → "
+"'John is my name'"
 msgstr ""
-"``regexp_replace('my name is John','(.*) is (.*)','\\\\\\\\2 is "
-"\\\\\\\\1')`` → 'John is my name'"
+"``regexp_replace('mijn naam is Jan','(.*) is (.*)','\\\\2 is \\\\1')`` → "
+"'Jan is mijn naam'"
 
 #: ../../docs/user_manual/working_with_vector/expression_help/String.rst:283
 msgid "regexp_substr"
@@ -13939,8 +13935,8 @@ msgstr ""
 "een teken voor witruimte)."
 
 #: ../../docs/user_manual/working_with_vector/expression_help/String.rst:296
-msgid "``regexp_substr('abc123','(\\\\\\\\d+)')`` → '123'"
-msgstr "``regexp_substr('abc123','(\\\\\\\\d+)')`` → '123'"
+msgid "``regexp_substr('abc123','(\\\\d+)')`` → '123'"
+msgstr "``regexp_substr('abc123','(\\\\d+)')`` → '123'"
 
 #: ../../docs/user_manual/working_with_vector/expression_help/String.rst:306
 msgid "replace"
@@ -15562,3 +15558,46 @@ msgstr ""
 
 #~ msgid "**id** - composer item ID"
 #~ msgstr "**id** - ID van het item van afdruklay-out"
+
+#~ msgid "``array_filter(array(1,2,3),@element &lt; 3)`` → [ 1, 2 ]"
+#~ msgstr "``array_filter(array(1,2,3),@element &lt; 3)`` → [ 1, 2 ]"
+
+#~ msgid "``regexp_match('QGIS ROCKS','\\\\\\\\sROCKS')`` → 5"
+#~ msgstr "``regexp_match('QGIS ROCKS','\\\\\\\\sROCKS')`` → 5"
+
+#~ msgid "``eval_template('QGIS [% upper(\\\\'rocks\\\\') %]')`` → QGIS ROCKS"
+#~ msgstr "``eval_template('QGIS [% upper(\\\\'rocks\\\\') %]')`` → QGIS ROCKS"
+
+#~ msgid ""
+#~ "``geom_from_gml('&lt;gml:LineString "
+#~ "srsName=\"EPSG:4326\"&gt;&lt;gml:coordinates&gt;4,4 5,5 "
+#~ "6,6&lt;/gml:coordinates&gt;&lt;/gml:LineString&gt;')`` → a line geometry "
+#~ "object"
+#~ msgstr ""
+#~ "``geom_from_gml('&lt;gml:LineString "
+#~ "srsName=\"EPSG:4326\"&gt;&lt;gml:coordinates&gt;4,4 5,5 "
+#~ "6,6&lt;/gml:coordinates&gt;&lt;/gml:LineString&gt;')`` → a line geometry "
+#~ "object"
+
+#~ msgid "``format('This %1 a %2','is', 'test')`` → 'This is a test''"
+#~ msgstr "``format('This %1 a %2','is', 'test')`` → 'This is a test''"
+
+#~ msgid ""
+#~ "``regexp_replace('QGIS SHOULD ROCK','\\\\\\\\sSHOULD\\\\\\\\s',' DOES ')`` →"
+#~ " 'QGIS DOES ROCK'"
+#~ msgstr ""
+#~ "``regexp_replace('QGIS SHOULD ROCK','\\\\\\\\sSHOULD\\\\\\\\s',' DOES ')`` →"
+#~ " 'QGIS DOES ROCK'"
+
+#~ msgid "``regexp_replace('ABC123','\\\\\\\\d+','')`` → 'ABC'"
+#~ msgstr "``regexp_replace('ABC123','\\\\\\\\d+','')`` → 'ABC'"
+
+#~ msgid ""
+#~ "``regexp_replace('my name is John','(.*) is (.*)','\\\\\\\\2 is "
+#~ "\\\\\\\\1')`` → 'John is my name'"
+#~ msgstr ""
+#~ "``regexp_replace('my name is John','(.*) is (.*)','\\\\\\\\2 is "
+#~ "\\\\\\\\1')`` → 'John is my name'"
+
+#~ msgid "``regexp_substr('abc123','(\\\\\\\\d+)')`` → '123'"
+#~ msgstr "``regexp_substr('abc123','(\\\\\\\\d+)')`` → '123'"
