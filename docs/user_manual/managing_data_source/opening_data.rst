@@ -373,6 +373,7 @@ To load a layer from a file:
    Only formats that have been well tested appear in the formats filter.
    Other formats can be loaded by selecting ``All files`` (the top item
    in the pull-down menu).
+   Also you can define the encoding of the
 #. Press :guilabel:`Open` to load the selected file into :guilabel:`Data
    Source Manager` dialog
    
@@ -437,6 +438,9 @@ Layer` tabs allow loading of layers from source types other than :guilabel:`File
     using ``GeoJSON`` or ``GEOJSON - Newline Delimited`` format or based on
     ``CouchDB`` database.
     A :guilabel:`URI` is required, with optional :ref:`authentication <authentication_index>`.
+ * For all vector source types it is possible to define the :guilabel:`Encoding` or
+   to use the :menuselection:`Automatic -->` setting.
+   
     
 .. note::
 
