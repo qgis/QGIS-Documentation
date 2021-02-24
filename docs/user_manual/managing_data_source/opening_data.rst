@@ -373,7 +373,6 @@ To load a layer from a file:
    Only formats that have been well tested appear in the formats filter.
    Other formats can be loaded by selecting ``All files`` (the top item
    in the pull-down menu).
-   Also you can define the encoding of the
 #. Press :guilabel:`Open` to load the selected file into :guilabel:`Data
    Source Manager` dialog
    
@@ -393,6 +392,12 @@ To load a layer from a file:
       :align: center
 
       QGIS with Shapefile of Alaska loaded
+      
+.. note::
+
+ For loading vector files the GDAL driver offers to define open actions. These will
+ be shown when the vector file is selected. Options are described in detail on
+ https://gdal.org/drivers/vector/ .
 
 .. note::
 
@@ -440,13 +445,6 @@ Layer` tabs allow loading of layers from source types other than :guilabel:`File
     A :guilabel:`URI` is required, with optional :ref:`authentication <authentication_index>`.
  * For all vector source types it is possible to define the :guilabel:`Encoding` or
    to use the :menuselection:`Automatic -->` setting.
-   
-    
-.. note::
-
- For loading vector layers the GDAL driver offers to define open actions. These will
- be shown when the vector file is selected. Options are described in detail on
- https://gdal.org/drivers/vector/ .
 
 .. _mesh_loading:
 
