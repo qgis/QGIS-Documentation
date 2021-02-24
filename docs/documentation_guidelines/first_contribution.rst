@@ -400,7 +400,7 @@ You can clone  your QGIS repository using the web URL as follows:
 
 The former command line is simply an example.
 You should adapt both the path and the repository URL, replacing ``<YourName>``
-with your user name.
+with your github user name.
 
 Check the following:
 
