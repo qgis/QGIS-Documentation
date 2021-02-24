@@ -50,7 +50,7 @@ pollution protection zones along rivers.
 
 In a GIS Application, **buffer zones are** always represented as **vector
 polygons** enclosing other polygon, line or point features (see
-:numref:`figure_point_buffer`, :numref:`figure_line_buffer`, ).
+:numref:`figure_point_buffer`, :numref:`figure_line_buffer`, :numref:`figure_polygon_buffer`).
 
 .. _figure_point_buffer:
 
