@@ -284,7 +284,7 @@ This is the preferred way of referencing figures.
 
    For ``:numref:`` to work, the figure **must have a caption**.
 
-It is possible to use ``:ref:`` instead of ``:numref:`` for reference, but
+Avoid using ``:ref:`` instead of ``:numref:`` for reference,since
 this returns the full caption of the image.
 
 .. code-block:: rst
