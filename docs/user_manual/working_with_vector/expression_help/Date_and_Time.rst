@@ -211,7 +211,7 @@ Formats a date type or string into a custom string format. Uses Qt date/time for
             "AP or A", "interpret as an AM/PM time. *AP* must be either 'AM' or 'PM'."
             "ap or a", "Interpret as an AM/PM time. *ap* must be either 'am' or 'pm'."
 
-       * **language** - language (lowercase, two- or three-letter, ISO 639 language code) used to format the date into a custom string
+       * **language** - language (lowercase, two- or three-letter, `ISO 639 language code <https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes>`_) used to format the date into a custom string
    * - Examples
      - * ``format_date('2012-05-15','dd.MM.yyyy')`` → '15.05.2012'
        * ``format_date('2012-05-15','d MMMM yyyy','fr')`` → '15 mai 2012'

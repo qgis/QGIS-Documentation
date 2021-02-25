@@ -156,7 +156,7 @@ Formats a date type or string into a custom string format. Uses Qt date/time for
             "AP or A", "interpret as an AM/PM time. *AP* must be either 'AM' or 'PM'."
             "ap or a", "Interpret as an AM/PM time. *ap* must be either 'am' or 'pm'."
 
-       * **language** - language (lowercase, two- or three-letter, ISO 639 language code) used to format the date into a custom string
+       * **language** - language (lowercase, two- or three-letter, `ISO 639 language code <https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes>`_) used to format the date into a custom string
    * - Examples
      - * ``format_date('2012-05-15','dd.MM.yyyy')`` → '15.05.2012'
        * ``format_date('2012-05-15','d MMMM yyyy','fr')`` → '15 mai 2012'
@@ -183,9 +183,10 @@ Returns a number formatted with the locale separator for thousands. Also truncat
    * - Arguments
      - * **number** - number to be formatted
        * **places** - integer representing the number of decimal places to truncate the string to.
-       * **language** - language (lowercase, two- or three-letter, ISO 639 language code) used to format the number into a string
+       * **language** - language (lowercase, two- or three-letter, `ISO 639 language code <https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes>`_) used to format the number into a string
    * - Examples
      - * ``format_number(10000000.332,2)`` → '10,000,000.33'
+       * ``format_number(10000000.332,2,'fr')`` → '10 000 000,33'
 
 
 .. end_format_number_section
@@ -308,7 +309,7 @@ Returns a string padded on the left to the specified width, using a fill charact
 regexp_match
 ............
 
-Return the first matching position matching a regular expression within a string, or 0 if the substring is not found.
+Return the first matching position matching a regular expression within an unicode string, or 0 if the substring is not found.
 
 .. list-table::
    :widths: 15 85
@@ -317,9 +318,10 @@ Return the first matching position matching a regular expression within a string
      - regexp_match(input_string, regex)
    * - Arguments
      - * **input_string** - the string to test against the regular expression
-       * **regex** - The regular expression to test against. Backslash characters must be double escaped (e.g., "\\\\s" to match a white space character).
+       * **regex** - The regular expression to test against. Backslash characters must be double escaped (e.g., "\\\\s" to match a white space character or  "\\\\b" to match a word boundary).
    * - Examples
      - * ``regexp_match('QGIS ROCKS','\\sROCKS')`` → 5
+       * ``regexp_match('Budač','udač\\b')`` → 2
 
 
 .. end_regexp_match_section
