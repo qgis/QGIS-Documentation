@@ -37,12 +37,16 @@ We are going to use algorithms in the
    (East), 180 (South) and 270 (West), while the
    :guilabel:`Vertical angle` sets how high the light source is
    (0 to 90 degrees).
-   We will use the default values:
+#. We will use the following values:
+
+   * :guilabel:`Z factor` at ``1.0``
+   * :guilabel:`Azimuth (horizontal angle)` at ``300.0``\°
+   * :guilabel:`Vertical angle` at ``40.0``\°
 
    .. figure:: img/hillshade_explanation.png
       :align: center
 
-#. Save the file in a new folder ``raster_analysis`` within the folder ``exercise_data``
+#. Save the file in a new folder :file:`exercise_data/raster_analysis/`
    with the name ``hillshade``
 #. Finally click on :guilabel:`Run`
 
@@ -91,25 +95,41 @@ to find a balance that works for you.
 
 Remember to save the project when you are done.
 
+|FA| Finding the best areas
+----------------------------------------------------------------------
+
+Think back to the estate agent problem, which we last addressed in the
+*Vector Analysis* lesson.
+Let us imagine that the buyers now wish to purchase a building and
+build a smaller cottage on the property.
+In the Southern Hemisphere, we know that an ideal plot for development
+needs to have areas on it that:
+
+* are north-facing
+* with a slope of less than 5 degrees
+* But if the slope is less than 2 degrees, then the aspect doesn't matter.
+
+Let's find the best areas for them.
 
 |moderate| |FA| Calculating the Slope
 ----------------------------------------------------------------------
 
-Another useful thing to know about the terrain is how steep it is. If, for
-example, you want to build houses on the land there, then you need land
+*Slope* informs about how steep the terrain is. If, for example,
+you want to build houses on the land there, then you need land
 that is relatively flat.
 
-To do this, you need to use the :menuselection:`Slope` algorithm of the
-:menuselection:`Processing --> Raster terrain analysis`.
+To calculate the slope, you need to use the :menuselection:`Slope` algorithm
+of the :menuselection:`Processing --> Raster terrain analysis`.
 
 #. Open the algorithm
 #. Choose :guilabel:`srtm_41_19` as the :guilabel:`Elevation layer`
+#. Keep the :guilabel:`Z factor` at ``1.0``
 #. Save the output as a file with the name ``slope`` in the same folder as the
    ``hillshade``
 #. Click on :guilabel:`Run`
 
-Now you'll see the slope of the terrain, with black pixels being flat terrain
-and white pixels, steep terrain:
+Now you'll see the slope of the terrain, each pixel holding the corresponding
+slope value. Black pixels show flat terrain and white pixels, steep terrain:
 
 .. figure:: img/slope_raster.png
    :align: center
@@ -128,25 +148,16 @@ ideally be built on a north-facing slope so that they can remain in the
 sunlight.
 
 Use the :guilabel:`Aspect` algorithm of the
-:menuselection:`Processing --> Raster terrain analysis` to get the layer.
+:menuselection:`Processing --> Raster terrain analysis` to get the ``aspect``
+layer saved along with the ``slope``.
 
 :ref:`Check your results <raster-analysis-1>`
 
-|moderate| |FA| Using the Raster Calculator
+|moderate| |FA| Finding the north-facing aspect
 ----------------------------------------------------------------------
 
-Think back to the estate agent problem, which we last addressed in the
-*Vector Analysis* lesson.
-Let us imagine that the buyers now wish to purchase a building and
-build a smaller cottage on the property.
-In the Southern Hemisphere, we know that an ideal plot for development
-needs to have areas on it that are north-facing, and with a slope of
-less than five degrees.
-But if the slope is less than 2 degrees, then the aspect doesn't
-matter.
-
-Fortunately, you already have rasters showing you the slope as well as
-the aspect, but you have no way of knowing where both conditions are
+Now, you have rasters showing you the slope as well as the aspect,
+but you have no way of knowing where ideal conditions are
 satisfied at once.
 How could this analysis be done?
 
@@ -177,7 +188,7 @@ the *Processing Toolbox*
      You should see it as a 2D matrix filled with numbers.
 
 #. North is at 0 (zero) degrees, so for the terrain to face north, its
-   aspect needs to be greater than 270 degrees and less than 90
+   aspect needs to be greater than 270 degrees or less than 90
    degrees.
    Therefore the formula is::
 
@@ -207,7 +218,8 @@ Your result will be this:
 
 The output values are ``0`` or ``1``.
 What does it mean?
-The formula we wrote contains the *conditional* operator ``OR``.
+For each pixel in the raster, the formula we wrote returns whether it matches
+the conditions or not.
 Therefore the final result will be **False** (0) and **True** (1).
 
 
@@ -238,7 +250,7 @@ Now you have generated three raster layers from the DEM:
 * :guilabel:`slope_lte2`: slope equal to or below 2 degrees
 * :guilabel:`slope_lte5`: slope equal to or below 5 degrees
 
-Where the conditions are met, the pixel value is ``1``.
+Where the condition is met, the pixel value is ``1``.
 Elsewhere, it is ``0``.
 Therefore, if you multiply these rasters, the pixels that have a value
 of ``1`` for all of them will get a value of ``1`` (the rest will get
@@ -273,12 +285,17 @@ The result:
 .. figure:: img/development_analysis_results.png
    :align: center
 
+.. hint:: The previous steps could have been simplified using the
+   following command::
+
+    ((aspect@1 <= 90 OR  aspect@1 >= 270) AND slope@1 <= 5) OR slope@1 <= 2
+
 
 |moderate| |FA| Simplifying the Raster
 ----------------------------------------------------------------------
 
 As you can see from the image above, the combined analysis has left us
-with many, very small areas where the conditions are met.
+with many, very small areas where the conditions are met (in white).
 But these aren't really useful for our analysis, since they are too
 small to build anything on.
 Let us get rid of all these tiny unusable areas.
@@ -292,12 +309,12 @@ Let us get rid of all these tiny unusable areas.
 #. Set the :guilabel:`Threshold` to 8 (minimum eight contiguous
    pixels), and check :guilabel:`Use 8-connectedness`.
 
-   .. figure:: img/raster_seive_dialog.png
+   .. figure:: img/raster_sieve_dialog.png
       :align: center
 
    Once processing is done, the new layer will be loaded.
 
-   .. figure:: img/seive_result_incorrect.png
+   .. figure:: img/sieve_result_incorrect.png
       :align: center
 
    What is going on? The answer lies in the new raster file's
@@ -307,7 +324,7 @@ Let us get rid of all these tiny unusable areas.
    :guilabel:`Layer Properties` dialog.
    Look the ``STATISTICS_MINIMUM`` value:
 
-   .. figure:: img/seive_metadata.png
+   .. figure:: img/sieve_metadata.png
       :align: center
 
    This raster, like the one it is derived from, should only feature
@@ -329,7 +346,7 @@ Let us get rid of all these tiny unusable areas.
 
 Your output looks like this:
 
-.. figure:: img/raster_seive_correct.png
+.. figure:: img/raster_sieve_correct.png
    :align: center
 
 This is what was expected: a simplified version of the earlier
@@ -378,7 +395,7 @@ in :menuselection:`Raster analysis` in the
 
    The method used by the algorithm to treat the threshold values of
    each class is defined by the :guilabel:`Range boundaries`.
-#. Save the layer as file:`reclassified.tif` in the
+#. Save the layer as :file:`reclassified.tif` in the
    :file:`exercise_data/raster_analysis/` folder
 
    .. figure:: img/reclassify_setup.png
