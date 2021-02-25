@@ -1,5 +1,3 @@
-.. index:: Plugins; Processing algorithm
-.. _processing_plugin:
 
 .. highlight:: python
    :linenothreshold: 5
@@ -12,6 +10,8 @@
 
     iface = start_qgis()
 
+.. index:: Plugins; Processing algorithm
+.. _processing_plugin:
 
 ****************************
 Writing a Processing plugin

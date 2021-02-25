@@ -120,6 +120,29 @@ Returns true if an array contains the given value.
 
 .. end_array_contains_section
 
+.. array_count_section
+
+.. _expression_function_Arrays_array_count:
+
+array_count
+...........
+
+Counts the number of occurrences of a given value in an array.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - array_count(array, value)
+   * - Arguments
+     - * **array** - an array
+       * **value** - the value to count
+   * - Examples
+     - * ``array_count(array('a', 'b', 'c', 'b'), 'b')`` → 2
+
+
+.. end_array_count_section
+
 .. array_distinct_section
 
 .. _expression_function_Arrays_array_distinct:
@@ -546,6 +569,30 @@ Returns an array with the given value added at the beginning.
 
 .. end_array_prepend_section
 
+.. array_prioritize_section
+
+.. _expression_function_Arrays_array_prioritize:
+
+array_prioritize
+................
+
+Returns an array sorted using the ordering specified in another array. Values which are present in the first array but are missing from the second array will be added to the end of the result.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - array_prioritize(array, array_prioritize)
+   * - Arguments
+     - * **array** - an array
+       * **array_prioritize** - an array with values ordered by priority
+   * - Examples
+     - * ``array_prioritize(array(1, 8, 2, 5), array(5, 4, 2, 1, 3, 8))`` → [ 5, 2, 1, 8 ]
+       * ``array_prioritize(array(5, 4, 2, 1, 3, 8), array(1, 8, 6, 5))`` → [ 1, 8, 5, 4, 2, 3 ]
+
+
+.. end_array_prioritize_section
+
 .. array_remove_all_section
 
 .. _expression_function_Arrays_array_remove_all:
@@ -591,6 +638,52 @@ Returns an array with the given index removed.
 
 
 .. end_array_remove_at_section
+
+.. array_replace_section
+
+.. _expression_function_Arrays_array_replace:
+
+array_replace
+.............
+
+Returns an array with the supplied value, array, or map of values replaced.
+
+**Value & array variant**
+
+Returns an array with the supplied value or array of values replaced by another value or an array of values.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - array_replace(array, before, after)
+   * - Arguments
+     - * **array** - the input array
+       * **before** - the value or array of values to replace
+       * **after** - the value or array of values to use as a replacement
+   * - Examples
+     - * ``array_replace(array('QGIS','SHOULD','ROCK'),'SHOULD','DOES')`` → [ 'QGIS', 'DOES', 'ROCK' ]
+       * ``array_replace(array(3,2,1),array(1,2,3),array(7,8,9))`` → [ 9, 8, 7 ]
+       * ``array_replace(array('Q','G','I','S'),array('Q','S'),'-')`` → [ '-', 'G', 'I', '-' ]
+
+
+**Map variant**
+
+Returns an array with the supplied map keys replaced by their paired values.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - array_replace(array, map)
+   * - Arguments
+     - * **array** - the input array
+       * **map** - the map containing keys and values
+   * - Examples
+     - * ``array_replace(array('APP', 'SHOULD', 'ROCK'),map('APP','QGIS','SHOULD','DOES'))`` → [ 'QGIS', 'DOES', 'ROCK' ]
+
+
+.. end_array_replace_section
 
 .. array_reverse_section
 

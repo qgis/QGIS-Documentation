@@ -548,7 +548,10 @@ Your result:
 |moderate| *Calculate Slope (less than 2 and 5 degrees)*
 ...............................................................................
 
-* Set your :guilabel:`Raster calculator` dialog up like this:
+* Set your :guilabel:`Raster calculator` dialog up with:
+
+  * the following expression: ``slope@1 <= 2``
+  * the ``slope`` layer as the :guilabel:`Reference layer(s)`
 
   .. figure:: img/answer_raster_calculator_slope.png
      :align: center
