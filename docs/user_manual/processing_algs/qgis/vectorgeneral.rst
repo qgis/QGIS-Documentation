@@ -1099,15 +1099,16 @@ Flatten relationship
 --------------------
 
 Flattens a :ref:`relationship <vector_relations>` for a vector layer,
-exporting a single layer containing one master feature per 
-related feature. This master feature contains all the 
+exporting a single layer containing one parent feature per 
+related child feature. This master feature contains all the 
 attributes for the related features.
 This allows to have the relation as a plain table that can be e.g. exported to CSV.
 
 .. figure:: img/flatten_relationship.png
   :align: center
+  :width: 100%
 
-  Flatten relationship example: identify tool with relations and the attribute table with flattened relations
+  Form of a region with related children (left) - A duplicate region feature for each related child, with joined attributes (right)
 
 Parameters
 ..........
