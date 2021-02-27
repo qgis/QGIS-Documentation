@@ -131,23 +131,24 @@ Date and Time Functions
 ------------------------
 
 This group contains functions for handling date and time data.
-This group shares several functions with the :ref:`conversion_functions` (
-to_date, to_time, to_datetime, to_interval) and :ref:`string_functions`
+This group shares several functions with the :ref:`conversion_functions`
+(to_date, to_time, to_datetime, to_interval) and :ref:`string_functions`
 (format_date) groups.
 
 .. note:: **Storing date, datetime and intervals on fields**
 
    The ability to store *date*, *time* and *datetime* values directly on
-   fields may depend on the data source's provider (e.g., Shapefile accepts
+   fields depends on the data source's provider (e.g., Shapefile accepts
    *date* format, but not *datetime* or *time* format). The following are some
    suggestions to overcome this limitation:
 
-   * *date*, *Datetime* and *time* can be stored in text type fields after
-     using the ``to_format()`` function.
+   * *date*, *datetime* and *time* can be converted and stored in text type fields
+     using the :ref:`format_date() <expression_function_Date_and_Time_format_date>`
+     function.
 
    * *Intervals* can be stored in integer or decimal type fields after using
-     one of the date extraction functions (e.g., ``day()`` to get the interval
-     expressed in days)
+     one of the date extraction functions (e.g., :ref:`day() <expression_function_Date_and_Time_day>`
+     to get the interval expressed in days)
 
 .. contents::
    :local:
