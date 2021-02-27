@@ -208,10 +208,10 @@ To do so, you need to manually pull the translations from Transifex to your loca
    ```
    ./scripts/create_transifex_resources.sh
    ```
-1. Download the translated strings using the [minimize_translation script](scripts/create_transifex_resources.sh).
+1. Download the translated strings using the [minimize_translation script](scripts/minimize_translation.sh).
    By default this pulls all the languages.
    ```
-   ./scripts/create_transifex_resources.sh
+   ./scripts/minimize_translation.sh
    ```
    IMPORTANT: to be able to pull from transifex.com, you will need a credentials file. 
    This file should be named: ``.transifexrc`` and easiest is to put it in your home dir. 
