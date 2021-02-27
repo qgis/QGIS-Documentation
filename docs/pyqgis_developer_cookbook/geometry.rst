@@ -297,13 +297,13 @@ The following code assumes ``layer`` is a :class:`QgsVectorLayer
 .. testoutput:: geometry
 
     Zambia
-    Perimeter (m): 5539361.250080013
-    Area (m2): 752000605894.2937
-    Area (km2): 752000.6058942936
+    Perimeter (m): 5539361.250294596
+    Area (m2): 751989035032.9031
+    Area (km2): 751989.0350329031
     Zimbabwe
-    Perimeter (m): 2865021.3323912495
-    Area (m2): 389250992553.95465
-    Area (km2): 389250.99255395465
+    Perimeter (m): 2865021.332507607
+    Area (m2): 389267821381.6009
+    Area (km2): 389267.82138160086
 
 Alternatively, you may want to know the distance and bearing between two points.
 
@@ -323,7 +323,7 @@ Alternatively, you may want to know the distance and bearing between two points.
 .. testoutput:: geometry
   :hide:
 
-  Distance in meters:  5154172.923937496
+  Distance in meters:  5154172.923936774
 
 You can find many example of algorithms that are included in QGIS and use these
 methods to analyze and transform vector data. Here are some links to the code
