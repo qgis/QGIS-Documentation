@@ -828,7 +828,7 @@ Parameters for the **GetPrint** request:
    ":ref:`LAYERS <wms-layers>`", "No", "Layers to display"
    ":ref:`TEMPLATE <wms-template>`", "Yes", "Layout template to use"
    ":ref:`SRS / CRS <wms-srs>`", "Yes", "Coordinate reference system"
-   ":ref:`FORMAT <wms-getprint-format>`", "Yes", "Output format"
+   ":ref:`FORMAT <wms-getprint-format>`", "No", "Output format"
    ":ref:`ATLAS_PK <wms-atlaspk>`", "No", "Atlas features"
    ":ref:`STYLES <wms-styles>`", "No", "Layers' style"
    ":ref:`TRANSPARENT <wms-transparent>`", "No", "Transparent background"
@@ -901,11 +901,11 @@ FORMAT
 
 This parameter specifies the format of map image. Available values are:
 
+- ``png`` (default value)
+- ``image/png``
 - ``jpg``
 - ``jpeg``
 - ``image/jpeg``
-- ``png``
-- ``image/png``
 - ``svg``
 - ``image/svg``
 - ``image/svg+xml``
