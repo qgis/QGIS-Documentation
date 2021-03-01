@@ -20,8 +20,12 @@ make springclean
 
 # Regenerate the English PO files
 make gettext
-rm -r $SOURCEPOFILES
+# Only rm if really starting from scratch (might "break" metadata in transifex)
+# rm -r $SOURCEPOFILES
 sphinx-intl update -p build/gettext -l en
+
+# Clean generated translation *.po files from obsolete strings, if any
+find $SOURCEPOFILES -type f -name '*.po' -exec sed -i '/^#~ /,/^$/d' {} \;
 
 # Clean the .tx/config files from existing references, out of the main section
 # each reference is made of 5 lines and a blank line
