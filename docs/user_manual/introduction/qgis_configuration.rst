@@ -1447,7 +1447,7 @@ In the :guilabel:`Data Sources` tab, you can:
 Relations Properties
 --------------------
 
-The :guilabel:`Relations` tab is used to define 1:n relations. The relations
+The :guilabel:`Relations` tab is used to define 1:n relations and polymorphic relations. The relations
 are defined in the project properties dialog. Once relations exist for a layer,
 a new user interface element in the form view (e.g. when identifying a feature
 and opening its form) will list the related entities. This provides a powerful

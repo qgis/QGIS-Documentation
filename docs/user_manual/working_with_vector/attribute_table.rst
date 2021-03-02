@@ -998,6 +998,129 @@ table.
   will not work.
 
 
+.. index:: Polymorphic relation; Relation
+.. _polymorphic_relation:
+
+Introducing polymorphic relations
+---------------------------------
+
+Polymorphic relations are special case of 1-N relations, where a single referencing (document) layer contains 
+the features for multiple referenced layers. This differs from normal relations which require different 
+referencing layer for each referenced layer. A single referencing (document) layer is achieved by adding an adiditonal 
+`layer_field` column in the referencing (document) layer that stores information to identify the referenced layer. In 
+its most simple form, the referencing (document) layer will just insert the layer name of the referenced layer into 
+this field.
+
+To be more precise, a polymorphic relation is a set of normal relations having the same referencing 
+layer but having the referenced layer dynamically defined. The polymorphic setting of the layer is solved by using 
+an expression which has to match some properties of the the referenced layer like the table name, layer id, layer name.
+
+Imagine we are going to the park and want to take pictures of different species of ``plants`` and ``animals`` 
+we see there. Each plant or animal has multiple pictures associated with it, so if we use the normal 1:N 
+relations to store pictures, we would need two separate tables, ``animal_images`` and ``plant_images``.
+This might not be a problem for 2 tables, but imagine if we want to take separate pictures for mushrooms, birds etc.
+
+Polymorphic relations solve this problem as all the referencing features are stored in the same table table ``documents``. 
+For each feature the referenced layer is stored in the ``referenced_layer`` field and the referenced 
+feature id in the ``referenced_fk``.
+
+.. code-block:: sql
+
+   CREATE SCHEMA park;
+
+   CREATE TABLE park.animals
+   (
+      fid serial NOT NULL,
+      geom geometry(Point, 4326) NOT NULL,
+      animal_species text NOT NULL,
+      CONSTRAINT animals_pkey PRIMARY KEY (fid)
+   );
+
+   CREATE INDEX animals_geom_idx ON park.animals USING gist (geom);
+
+   CREATE TABLE park.plants
+   (
+      fid serial NOT NULL,
+      geom geometry(Point, 4326) NOT NULL,
+      plant_species text NOT NULL,
+      CONSTRAINT plants_pkey PRIMARY KEY (fid)
+   );
+
+   CREATE INDEX plants_geom_idx ON park.plants USING gist (geom);
+
+   CREATE TABLE park.documents
+   (
+      fid serial NOT NULL,
+      referenced_layer text NOT NULL,
+      referenced_fk integer NOT NULL,
+      image_filename text NOT NULL,
+      CONSTRAINT documents_pkey PRIMARY KEY (fid)
+   );
+
+
+Defining polymorphic relations
+..............................
+
+First, let QGIS know about the polymorphic relations between the layers. This is
+done in :menuselection:`Project --> Properties...`.
+Open the :guilabel:`Relations` tab and click on the little down arrow next to the |signPlus|
+:guilabel:`Add Relation` button, so you can select the :guilabel:`Add Polymorphic Relation` option
+from the newly appeared dropdown.
+
+.. _figure_define_polymorphic_relation:
+
+.. figure:: img/relations9.png
+   :align: center
+
+   Adding a polymorphic relation using ``documents`` layer as referencing and ``animals`` and ``plants`` as referenced layers.
+
+
+* **Id** will be used for internal purposes and has to be unique. You may need
+  it to build :ref:`custom forms <customize_form>`. If
+  you leave it empty, one will be generated for you but you can assign one
+  yourself to get one that is easier to handle
+
+* **Referencing Layer (Child)** also considered as child layer, is the one with
+  the foreign key field on it. In our case, this is the ``documents`` layer. For
+  this layer you need to add a referencing field which points to the other
+  layer, so this is ``referenced_fk``.
+
+  .. note:: Sometimes, you need more than a single field to uniquely identify
+   features in a layer. Creating a relation with such a layer requires
+   a **composite key**, ie more than a single pair of matching
+   fields. Use the |signPlus| :sup:`Add new field pair as part of a composite
+   foreign key` button to add as many pairs as necessary.
+
+* **Layer Field** is the field in the referencing table that stores the result of the evaluated
+   layer expression which is the referencing table that this feature belongs to. In our example,
+   this would be the ``referenced_layer`` field.
+
+* **Layer expression** evaluates to a unique identifier of the layer. This can be the layer name
+   ``@layer_name``, the layer id ``@layer_id``, the layer's table name ``decode_uri(@layer, 'table')``
+   or anything that can uniquely identifies a layer.
+
+* **Relationship strength** sets the strength of the generated relations between the parent
+  and the child layer. The default :guilabel:`Association` type means that
+  the parent layer is *simply* linked to the child one while the
+  :guilabel:`Composition` type allows you to duplicate also the child features
+  when duplicating the parent ones.
+
+* **Referenced Layers** also considered as parent layers, are those with
+  the primary key, pointed to, so here they would be ``plants`` and ``animals`` layers. You need to define
+  the primary key of the referenced layers from the dropdown, so it is ``fid``. Note that the definition of a
+  valid primary key requires all the referenced layer to have a field with that name. If there is no such field
+  you cannot save a polymorphic relation.
+
+Once added, the polymorphic relation can be edited via the :guilabel:`Edit Polymorphic Relation` menu entry.
+
+.. _figure_list_polymorphic_relations:
+
+.. figure:: img/relations10.png
+   :align: center
+
+   Preview of the newly created polymorphic relation and it's child relations for animals and plants.
+
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
