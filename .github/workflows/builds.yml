@@ -1,0 +1,52 @@
+name: Docs builds
+
+on: 
+  push:
+    paths-ignore:
+      - 'locale/**'
+
+  pull_request:
+    paths-ignore:
+      - 'locale/**'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 1
+    - name: Set up Python 3.7
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.7
+    - name: Install Requirements
+      run: |
+        sudo apt-get install -y texlive-xetex fonts-freefont-otf
+
+        python -m pip install --upgrade pip
+        pip install -r REQUIREMENTS.txt
+
+    - name: Build English HTML documentation
+      run: |
+          make html
+    - name: Upload build artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: HTML build
+        path: build/html
+        retention-days: 15
+
+    - name: Build English PDF documentation
+      run: |
+          make pdf
+    - name: Upload build artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: PDF build
+        path: build/pdf
+        retention-days: 15
+
