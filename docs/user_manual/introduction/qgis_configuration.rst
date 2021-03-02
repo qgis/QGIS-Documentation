@@ -383,9 +383,6 @@ Data Sources Settings
   and filter locally, at the expense of a performance penalty. This option is
   meant as a safety break and should only be deactivated if you identify a
   misbehavior of the QGIS expression translation engine.
-* |checkbox| :guilabel:`Evaluate default values` defines whether default values
-  from database provider should be calculated when digitizing the new feature
-  (checked status) or when saving the changes.
 
 
 **Hidden Browser Path**
