@@ -9,20 +9,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-13 09:01+0100\n"
+"POT-Creation-Date: 2021-03-03 02:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.8.0\n"
+"Generated-By: Babel 2.9.0\n"
 
-#: ../../docs/training_manual/processing/hydro.rst:2
+#: ../../docs/training_manual/processing/hydro.rst:4
 msgid "Hydrological analysis"
 msgstr ""
 
-#: ../../docs/training_manual/processing/hydro.rst:5
+#: ../../docs/training_manual/processing/hydro.rst:7
 msgid ""
 "In this lesson we will perform some hydrological analysis. This analysis "
 "will be used in some of the following lessons, as it constitutes a very "
@@ -30,103 +30,106 @@ msgid ""
 "some advanced features."
 msgstr ""
 
-#: ../../docs/training_manual/processing/hydro.rst:10
+#: ../../docs/training_manual/processing/hydro.rst:12
 msgid ""
-"In this lesson, we are going to do some hydrological analysis. Starting "
-"with a DEM, we are going to extract a channel network, delineate "
-"watersheds and calculate some statistics."
+"Objectives: Starting with a DEM, we are going to extract a channel "
+"network, delineate watersheds and calculate some statistics."
 msgstr ""
 
-#: ../../docs/training_manual/processing/hydro.rst:13
+#: ../../docs/training_manual/processing/hydro.rst:15
 msgid ""
 "The first thing is to load the project with the lesson data, which just "
 "contains a DEM."
 msgstr ""
 
-#: ../../docs/training_manual/processing/hydro.rst:17
+#: ../../docs/training_manual/processing/hydro.rst:19
 msgid ""
 "The first module to execute is *Catchment area* (in some SAGA versions it"
-" is called *Flow accumulation (Top Down)*). You can use anyone of  the "
-"others named *Catchment area*. They have different algorithms underneath,"
-" but the results are basically the same."
+" is called *Flow accumulation (Top Down)*). You can use any of the others"
+" named *Catchment area*. They have different algorithms underneath, but "
+"the results are basically the same."
 msgstr ""
 
-#: ../../docs/training_manual/processing/hydro.rst:21
+#: ../../docs/training_manual/processing/hydro.rst:23
 msgid ""
-"Select the DEM in the *Elevation* field, and leave the default values for"
-" the rest of parameters."
+"Select the DEM in the :guilabel:`Elevation` field, and leave the default "
+"values for the rest of the parameters."
 msgstr ""
 
-#: ../../docs/training_manual/processing/hydro.rst:25
+#: ../../docs/training_manual/processing/hydro.rst:28
 msgid ""
-"Some algorithms calculate many layers, but the *Catchment Area* one is "
-"the only one we will be using."
+"Some algorithms calculate many layers, but the *Catchment Area* layer is "
+"the only one we will be using. You can get rid of the other ones if you "
+"want."
 msgstr ""
 
-#: ../../docs/training_manual/processing/hydro.rst:27
-msgid "You can get rid of the other ones if you want."
-msgstr ""
-
-#: ../../docs/training_manual/processing/hydro.rst:29
+#: ../../docs/training_manual/processing/hydro.rst:31
 msgid "The rendering of the layer is not very informative."
 msgstr ""
 
-#: ../../docs/training_manual/processing/hydro.rst:33
+#: ../../docs/training_manual/processing/hydro.rst:35
 msgid ""
 "To know why, you can have a look at the histogram and you will see that "
-"value are not evenly distributed (there are a few cells with very high "
-"value, those corresponding to the channel network). Calculating the "
-"logarithm of the catchment area value yields a layer that conveys much "
-"more information (you can do it using the raster calculator)."
+"values are not evenly distributed (there are a few cells with very high "
+"value, those corresponding to the channel network). Use the "
+":guilabel:`Raster calculator` algorithm to calculate the logarithm of the"
+" catchment value area and you will get a layer with much more information"
 msgstr ""
 
-#: ../../docs/training_manual/processing/hydro.rst:41
+#: ../../docs/training_manual/processing/hydro.rst:43
 msgid ""
-"The catchment area (also known as flow accumulation), can be used to set "
-"a threshold for channel initiation. This can be done using the *Channel "
-"network* algorithm. Here is how you have to set it up (note the "
-"*Initiation threshold* *Greater than* 10.000.000)."
+"The catchment area (also known as flow accumulation) can be used to set a"
+" threshold for channel initiation. This can be done using the "
+":guilabel:`Channel network` algorithm."
+msgstr ""
+
+#: ../../docs/training_manual/processing/hydro.rst:47
+msgid ""
+":guilabel:`Initiation grid`: use the catchment area layer and not the "
+"logarithm one."
 msgstr ""
 
 #: ../../docs/training_manual/processing/hydro.rst:48
-msgid ""
-"Use the original catchment area layer, not the logarithm one. That one "
-"was just for rendering purposes."
+msgid ":guilabel:`Initiation threshold`: ``10.000.000``"
 msgstr ""
 
-#: ../../docs/training_manual/processing/hydro.rst:51
-msgid ""
-"If you increase the *Initiation threshold* value, you will get a more "
-"sparse channel network. If you decrease it, you will get a denser one. "
-"With the proposed value, this is what you get."
+#: ../../docs/training_manual/processing/hydro.rst:49
+msgid ":guilabel:`Initiation type`: *Greater than*"
 msgstr ""
 
-#: ../../docs/training_manual/processing/hydro.rst:58
+#: ../../docs/training_manual/processing/hydro.rst:53
+msgid ""
+"If you increase the :guilabel:`Initiation threshold` value, you will get "
+"a more sparse channel network. If you decrease it, you will get a denser "
+"one. With the proposed value, this is what you get."
+msgstr ""
+
+#: ../../docs/training_manual/processing/hydro.rst:59
 msgid ""
 "The image above shows just the resulting vector layer and the DEM, but "
-"there should be also a raster one with the same channel network. That "
-"raster one will be, in fact, the one we will be using."
+"there should be also a raster layer with the same channel network. That "
+"raster will be, in fact, the layer we will be using."
 msgstr ""
 
-#: ../../docs/training_manual/processing/hydro.rst:62
+#: ../../docs/training_manual/processing/hydro.rst:63
 msgid ""
-"Now, we will use the *Watersheds basins* algorithm to delineate the "
-"subbasins corresponding to that channel network, using as outlet points "
-"all the junctions in it. Here is how you have to set the corresponding "
-"parameters dialog."
+"Now, we will use the :guilabel:`Watersheds basins` algorithm to delineate"
+" the subbasins corresponding to that channel network, using as outlet "
+"points all the junctions in it. Here is how you have to set the "
+"corresponding parameters dialog."
 msgstr ""
 
-#: ../../docs/training_manual/processing/hydro.rst:69
+#: ../../docs/training_manual/processing/hydro.rst:70
 msgid "And this is what you will get."
 msgstr ""
 
-#: ../../docs/training_manual/processing/hydro.rst:73
+#: ../../docs/training_manual/processing/hydro.rst:74
 msgid ""
-"This is a raster result. You can vectorise it using the *Vectorising grid"
-" classes* algorithm."
+"This is a raster result. You can vectorise it using the "
+":guilabel:`Vectorising grid classes` algorithm."
 msgstr ""
 
-#: ../../docs/training_manual/processing/hydro.rst:80
+#: ../../docs/training_manual/processing/hydro.rst:82
 msgid ""
 "Now, let's try to compute statistics about the elevation values in one of"
 " the subbasins. The idea is to have a layer that just represents the "
@@ -134,45 +137,175 @@ msgid ""
 "calculates those statistics."
 msgstr ""
 
-#: ../../docs/training_manual/processing/hydro.rst:84
+#: ../../docs/training_manual/processing/hydro.rst:86
 msgid ""
 "First, let's clip the original DEM with the polygon representing a "
-"subbasin. We will use the *Clip raster with polygon* algorithm. If we "
-"select a single subbasin polygon and then call the clipping algorithm, we"
-" can clip the DEM to the area covered by that polygon, since the "
-"algorithm is aware of the selection."
+"subbasin. We will use the :guilabel:`Clip raster with polygon` algorithm."
+" If we select a single subbasin polygon and then call the clipping "
+"algorithm, we can clip the DEM to the area covered by that polygon, since"
+" the algorithm is aware of the selection."
 msgstr ""
 
-#: ../../docs/training_manual/processing/hydro.rst:89
-msgid "Select a polygon,"
+#: ../../docs/training_manual/processing/hydro.rst:91
+msgid "Select a polygon"
 msgstr ""
 
-#: ../../docs/training_manual/processing/hydro.rst:93
-msgid "and call the clipping algorithm with the following parameters:"
-msgstr ""
-
-#: ../../docs/training_manual/processing/hydro.rst:97
-msgid ""
-"The element selected in the input field is, or course, the DEM we want to"
-" clip."
+#: ../../docs/training_manual/processing/hydro.rst:95
+msgid "Call the clipping algorithm with the following parameters:"
 msgstr ""
 
 #: ../../docs/training_manual/processing/hydro.rst:99
+msgid ""
+"The element selected in the input field is, of course, the DEM we want to"
+" clip."
+msgstr ""
+
+#: ../../docs/training_manual/processing/hydro.rst:101
 msgid "You will get something like this."
 msgstr ""
 
-#: ../../docs/training_manual/processing/hydro.rst:103
-msgid "This layer is ready to be used in the *Raster layer statistics* algorithm."
+#: ../../docs/training_manual/processing/hydro.rst:105
+msgid ""
+"This layer is ready to be used in the :guilabel:`Raster layer statistics`"
+" algorithm."
 msgstr ""
 
-#: ../../docs/training_manual/processing/hydro.rst:107
+#: ../../docs/training_manual/processing/hydro.rst:109
 msgid "The resulting statistics are the following ones."
 msgstr ""
 
-#: ../../docs/training_manual/processing/hydro.rst:111
+#: ../../docs/training_manual/processing/hydro.rst:113
 msgid ""
 "We will use both the basin calculations procedure and the statistics "
 "calculation in other lessons, to find out how other elements can help us "
 "automate both of them and work more effectively."
 msgstr ""
+
+#~ msgid ""
+#~ "In this lesson, we are going to"
+#~ " do some hydrological analysis. Starting"
+#~ " with a DEM, we are going to"
+#~ " extract a channel network, delineate "
+#~ "watersheds and calculate some statistics."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The first module to execute is "
+#~ "*Catchment area* (in some SAGA versions"
+#~ " it is called *Flow accumulation (Top"
+#~ " Down)*). You can use anyone of  "
+#~ "the others named *Catchment area*. They"
+#~ " have different algorithms underneath, but"
+#~ " the results are basically the same."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Select the DEM in the *Elevation* "
+#~ "field, and leave the default values "
+#~ "for the rest of parameters."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Some algorithms calculate many layers, "
+#~ "but the *Catchment Area* one is "
+#~ "the only one we will be using."
+#~ msgstr ""
+
+#~ msgid "You can get rid of the other ones if you want."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To know why, you can have a "
+#~ "look at the histogram and you will"
+#~ " see that value are not evenly "
+#~ "distributed (there are a few cells "
+#~ "with very high value, those "
+#~ "corresponding to the channel network). "
+#~ "Calculating the logarithm of the "
+#~ "catchment area value yields a layer "
+#~ "that conveys much more information (you"
+#~ " can do it using the raster "
+#~ "calculator)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The catchment area (also known as "
+#~ "flow accumulation), can be used to "
+#~ "set a threshold for channel initiation."
+#~ " This can be done using the "
+#~ "*Channel network* algorithm. Here is how"
+#~ " you have to set it up (note"
+#~ " the *Initiation threshold* *Greater than*"
+#~ " 10.000.000)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Use the original catchment area layer,"
+#~ " not the logarithm one. That one "
+#~ "was just for rendering purposes."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you increase the *Initiation "
+#~ "threshold* value, you will get a "
+#~ "more sparse channel network. If you "
+#~ "decrease it, you will get a denser"
+#~ " one. With the proposed value, this"
+#~ " is what you get."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The image above shows just the "
+#~ "resulting vector layer and the DEM, "
+#~ "but there should be also a raster"
+#~ " one with the same channel network."
+#~ " That raster one will be, in "
+#~ "fact, the one we will be using."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Now, we will use the *Watersheds "
+#~ "basins* algorithm to delineate the "
+#~ "subbasins corresponding to that channel "
+#~ "network, using as outlet points all "
+#~ "the junctions in it. Here is how"
+#~ " you have to set the corresponding"
+#~ " parameters dialog."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This is a raster result. You can"
+#~ " vectorise it using the *Vectorising "
+#~ "grid classes* algorithm."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "First, let's clip the original DEM "
+#~ "with the polygon representing a "
+#~ "subbasin. We will use the *Clip "
+#~ "raster with polygon* algorithm. If we"
+#~ " select a single subbasin polygon and"
+#~ " then call the clipping algorithm, we"
+#~ " can clip the DEM to the area"
+#~ " covered by that polygon, since the"
+#~ " algorithm is aware of the selection."
+#~ msgstr ""
+
+#~ msgid "Select a polygon,"
+#~ msgstr ""
+
+#~ msgid "and call the clipping algorithm with the following parameters:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The element selected in the input "
+#~ "field is, or course, the DEM we"
+#~ " want to clip."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This layer is ready to be used "
+#~ "in the *Raster layer statistics* "
+#~ "algorithm."
+#~ msgstr ""
 
