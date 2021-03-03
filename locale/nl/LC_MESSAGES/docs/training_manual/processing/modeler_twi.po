@@ -6,28 +6,29 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2020
+# DiGro, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-13 09:01+0100\n"
+"POT-Creation-Date: 2021-03-03 02:15+0000\n"
 "PO-Revision-Date: 2020-12-24 10:24+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"Last-Translator: DiGro, 2021\n"
 "Language-Team: Dutch (https://www.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.8.0\n"
+"Generated-By: Babel 2.9.0\n"
 "Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:2
+#: ../../docs/training_manual/processing/modeler_twi.rst:4
 msgid "Starting with the graphical modeler"
 msgstr "Beginnen met Grafische modellen bouwen"
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:4
+#: ../../docs/training_manual/processing/modeler_twi.rst:6
 msgid ""
 "In this lesson we will use the graphical modeler, a powerful component that "
 "we can use to define a workflow and run a chain of algorithms."
@@ -36,7 +37,7 @@ msgstr ""
 "component die we kunnen gebruiken om een werkstroom te definiëren en een "
 "reeks algoritmen uit te voeren."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:6
+#: ../../docs/training_manual/processing/modeler_twi.rst:8
 msgid ""
 "A normal session with the processing tools includes more than running a "
 "single algorithm. Usually several of them are run to obtain a result, and "
@@ -48,7 +49,7 @@ msgstr ""
 "uitgevoerd om een resultaat te krijgen, en de uitvoer van sommige van die "
 "algoritmen worden gebruikt als invoer voor sommige van de andere."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:8
+#: ../../docs/training_manual/processing/modeler_twi.rst:10
 msgid ""
 "Using the graphical modeler, that workflow can be put into a model, which "
 "will run all the necessary algorithms in a single run, thus simplifying the "
@@ -59,17 +60,17 @@ msgstr ""
 " zal uitvoeren, aldus het gehele proces vereenvoudigend en het "
 "automatiseren."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:10
+#: ../../docs/training_manual/processing/modeler_twi.rst:12
 msgid ""
 "To start this lesson, we are going to calculate a parameter named "
 "Topographic Wetness Index. The algorithm that computes it is called "
-"*Topographic wetness index (twi)*"
+":guilabel:`Topographic wetness index (twi)`."
 msgstr ""
-"We gaan een parameter, genaamd Topographic wetness index, om deze les te "
-"beginnen. Het algoritme dat dit berekent is genaamd *Topographic wetness "
-"index (twi)*"
+"We gaan, om deze les te beginnen, een parameter berekenen, genaamd "
+"Topographic wetness index. Het algoritme dat dit berekent is genaamd "
+":guilabel:`Topographic wetness index (twi)`."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:14
+#: ../../docs/training_manual/processing/modeler_twi.rst:16
 msgid ""
 "As you can see, there are two mandatory inputs: *Slope* and *Catchment "
 "area*. There is also an optional input, but we will not be using it, so we "
@@ -79,7 +80,7 @@ msgstr ""
 "area*. Er is ook een optionele invoer, maar die zullen we niet gebruiken, "
 "dus kunnen we die negeren."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:16
+#: ../../docs/training_manual/processing/modeler_twi.rst:18
 msgid ""
 "The data for this lesson contains just a DEM, so we do not have any of the "
 "required inputs. However, we know how to calculate both of them from that "
@@ -93,7 +94,7 @@ msgstr ""
 "opvanggebied te berekenen. We kunnen dus eerst die lagen berekenen en ze dan"
 " gebruiken voor het algoritme TWI."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:18
+#: ../../docs/training_manual/processing/modeler_twi.rst:20
 msgid ""
 "Here are the parameter dialogs that you should use to calculate the 2 "
 "intermediate layers."
@@ -101,33 +102,33 @@ msgstr ""
 "Hier zijn de dialoogvensters voor de parameters die u zou moeten gebruiken "
 "om de 2 tussenliggende lagen te berekenen."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:20
+#: ../../docs/training_manual/processing/modeler_twi.rst:22
 msgid "Slope must be calculated in radians, not in degrees."
 msgstr "Helling moet worden berekend in radialen, niet in graden."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:26
+#: ../../docs/training_manual/processing/modeler_twi.rst:28
 msgid ""
 "And this is how you have to set the parameters dialog of the TWI algorithm."
 msgstr ""
 "En dit is hoe u het dialoogvenster voor de parameters van het algoritme TWI "
 "zou moeten instellen."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:30
+#: ../../docs/training_manual/processing/modeler_twi.rst:32
 msgid ""
 "This is the result that you will obtain (the default singleband pseudocolor "
-"inverted palette has been used for rendering). You can use the ``twi.qml`` "
-"style provided."
+"inverted palette has been used for rendering). You can use the "
+":file:`twi.qml` style provided."
 msgstr ""
 "Dit is het resultaat dat u zult verkrijgen (het standaard geïnverteerde "
 "palet enkelband pseudokleur is gebruikt voor het renderen). U kunt de "
-"verschafte stijl ``twi.qml`` gebruiken."
+"verschafte stijl :file:`twi.qml` gebruiken."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:34
+#: ../../docs/training_manual/processing/modeler_twi.rst:36
 msgid ""
 "What we will try to do now is to create an algorithm that calculates the TWI"
 " from a DEM in just one single step. That will save us work in case we later"
 " have to compute a TWI layer from another DEM, since we will need just one "
-"single step to do it instead of the 3 ones above. All the processes that we "
+"single step to do it instead of the three above. All the processes that we "
 "need are found in the  toolbox, so what we have to do is to define the "
 "workflow to wrap them. This is where the graphical modeler comes in."
 msgstr ""
@@ -135,29 +136,29 @@ msgstr ""
 "berekent vanuit een DEM in slechts één enkele stap. Dat zal ons werk "
 "besparen voor het geval we later een laag TWI moeten berekenen uit een "
 "andere DEM, omdat we slechts één stap nodig hebben om het te doen in plaats "
-"van de 3 bovenstaande. Alle processen die we nodig hebben zijn te vinden in "
-"de Toolbox, dus wat we moeten doen is de werkstroom definiëren om ze te "
+"van de drie bovenstaande. Alle processen die we nodig hebben zijn te vinden "
+"in de Toolbox, dus wat we moeten doen is de werkstroom definiëren om ze te "
 "verpakken. Dat is waar Grafische modellen bouwen van pas komt."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:36
+#: ../../docs/training_manual/processing/modeler_twi.rst:38
 msgid "Open the modeler by selecting its menu entry in the processing menu."
 msgstr ""
 "Open Grafische modellen bouwen door het menuitem daarvan te selecteren in "
 "het menu Processing."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:40
+#: ../../docs/training_manual/processing/modeler_twi.rst:42
 msgid ""
 "Two things are needed to create a model: setting the inputs that it will "
 "need, and defining the algorithm that it contains. Both of them are done by "
-"adding elements from the two tabs in the left--hand side of the modeler "
-"window: *Inputs* and *Algorithms*"
+"adding elements from the two tabs in the left-hand side of the modeler "
+"window: :guilabel:`Inputs` and :guilabel:`Algorithms`."
 msgstr ""
 "Twee dingen zijn nodig om een model te maken: de benodigde invoer instellen "
 "en het algoritme definiëren dat het bevat. Beide worden gedaan door "
 "elementen toe te voegen uit de twee tabs aan de linkerkant van het venster "
-"Grafische modellen bouwen: *Invoer* en *Algoritmen*"
+"Grafische modellen bouwen: :guilabel:`Invoer` en :guilabel:`Algoritmes`."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:42
+#: ../../docs/training_manual/processing/modeler_twi.rst:44
 msgid ""
 "Let's start with the inputs. In this case we do not have much to add. We "
 "just need a raster layer with the DEM, and that will be our only input data."
@@ -166,49 +167,61 @@ msgstr ""
 "voegen. We hebben slechts een rasterlaag nodig met de DEM en dat zullen onze"
 " enige gegevens voor invoer zijn."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:44
+#: ../../docs/training_manual/processing/modeler_twi.rst:46
 msgid ""
-"Double click on the *Raster layer* input and you will see the following "
-"dialog."
+"Double click on the :guilabel:`Raster layer` input and you will see the "
+"following dialog."
 msgstr ""
-"Dubbelklik op de invoer *Raster Layer* en u zult het volgende dialoogvenster"
-" zien."
-
-#: ../../docs/training_manual/processing/modeler_twi.rst:48
-msgid ""
-"Here we will have to define the input we want. Since we expect this raster "
-"layer to be a DEM, we will call it *DEM*. That's the name that the user of "
-"the model will see when running it. Since we need that layer to work, we "
-"will define it as a mandatory layer."
-msgstr ""
-"Hier moeten we de invoer definiëren die we willen. Omdat we verwachten dat "
-"deze rasterlaag een DEM zal zijn, zullen we die *DEM* noemen. Dat is de naam"
-" die de gebruiker van het model zal zien bij het uitvoeren. Omdat we die "
-"laag nodig hebben om te kunnen werken, zullen we het definiëren als een "
-"vereiste laag."
+"Dubbelklik op de invoer :guilabel:`Raster layer` en u zult het volgende "
+"dialoogvenster zien."
 
 #: ../../docs/training_manual/processing/modeler_twi.rst:50
+msgid "Here we will have to define the input we want:"
+msgstr "Hier moeten we de invoer definiëren die we willen:"
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:52
+msgid ""
+"Since we expect this raster layer to be a DEM, we will call it ``DEM``. "
+"That's the name that the user of the model will see when running it."
+msgstr ""
+"Omdat we verwachten dat deze rasterlaag een DEM zal zijn, zullen we die "
+"``DEM`` noemen. Dat is de naam die de gebruiker van het model zal zien bij "
+"het uitvoeren."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:53
+msgid ""
+"Since we need that layer to work, we will define it as a mandatory layer."
+msgstr ""
+"We zullen het definiëren als een vereiste laag, omdat we die laag nodig "
+"hebben om te kunnen werken."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:55
 msgid "Here is how the dialog should be configured."
 msgstr "Hier is hoe het dialoogvenster zou moeten zijn geconfigureerd."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:54
-msgid "Click on *OK* and the input will appear in the modeler canvas."
-msgstr ""
-"Klik op *OK* en de invoer zal verschijnen in het kaartvenster van Grafische "
-"modellen bouwen."
-
-#: ../../docs/training_manual/processing/modeler_twi.rst:58
+#: ../../docs/training_manual/processing/modeler_twi.rst:59
 msgid ""
-"Now let's move to the *Algorithms* tab. The first algorithm we have to run "
-"is the *Slope, aspect, curvature* algorithm. Locate it in the algorithm "
-"list, double--click on it and you will see the dialog shown below."
+"Click on :guilabel:`OK` and the input will appear in the modeler canvas."
 msgstr ""
-"Laten we nu naar de tab *Algoritmen* gaan. Het eerste algoritme dat we "
-"moeten uitvoeren is het algoritme *Slope, aspect, curvature*. Zoek het op in"
-" de lijst met algoritmen, dubbelklik erop en u zult het dialoogvenster zien "
-"dat hieronder wordt weergegeven."
+"Klik op :guilabel:`OK` en de invoer zal verschijnen in het kaartvenster van "
+"Grafische modellen bouwen."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:62
+#: ../../docs/training_manual/processing/modeler_twi.rst:63
+msgid "Now let's move to the :guilabel:`Algorithms` tab."
+msgstr "Laten we nu naar de tab :guilabel:`Algoritmes` gaan."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:64
+msgid ""
+"The first algorithm we have to run is the :guilabel:`Slope, aspect, "
+"curvature` algorithm. Locate it in the algorithm list, double-click on it "
+"and you will see the dialog shown below."
+msgstr ""
+"Het eerste algoritme dat we moeten uitvoeren is het algoritme "
+":guilabel:`Slope, aspect, curvature`. Zoek het op in de lijst met "
+"algoritmes, dubbelklik erop en u zult het dialoogvenster zien dat hieronder "
+"wordt weergegeven."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:69
 msgid ""
 "This dialog is very similar to the one that you can find when running the "
 "algorithm from the toolbox, but the element that you can use as parameter "
@@ -216,8 +229,8 @@ msgid ""
 "itself. That means that, in this case, we will not have all the raster "
 "layers of our project available for the *Elevation* field, but just the ones"
 " defined in our model. Since we have added just one single raster input "
-"named *DEM*, that will be the only raster layer that we will see in the list"
-" corresponding to the *Elevation* parameter."
+"named ``DEM``, that will be the only raster layer that we will see in the "
+"list corresponding to the :guilabel:`Elevation` parameter."
 msgstr ""
 "Dit dialoogvenster lijkt erg op dat wat u krijgt als u het algoritme "
 "uitvoert vanuit de Toolbox, maar het element dat u kunt gebruiken als waarde"
@@ -225,11 +238,11 @@ msgstr ""
 "maar vanuit het model zelf. Dat betekent dat, in dit geval, we niet alle "
 "rasterlagen van ons project beschikbaar hebben voor het veld *Elevation*, "
 "maar slechts die welke zijn gedefinieerd in ons model. Omdat we slechts één "
-"enkele rasterinvoer hebben toegevoegd, genaamd *DEM*, zal dat de enige "
+"enkele rasterinvoer hebben toegevoegd, genaamd ``DEM``, zal dat de enige "
 "rasterlaag zijn die we zullen zien in de lijst die correspondeert met de "
-"parameter *Elevation*."
+"parameter :guilabel:`Elevation`."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:64
+#: ../../docs/training_manual/processing/modeler_twi.rst:71
 msgid ""
 "Output generated by an algorithm are handled a bit differently when the "
 "algorithm is used as a part of a model. Instead of selecting the filepath "
@@ -251,7 +264,7 @@ msgstr ""
 "laag TWI te berekenen, die het uiteindelijke resultaat is dat we willen "
 "verkrijgen."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:66
+#: ../../docs/training_manual/processing/modeler_twi.rst:73
 msgid ""
 "When layers are not a final result, you should just leave the corresponding "
 "field. Otherwise, you have to enter a name that will be used to identify the"
@@ -263,21 +276,21 @@ msgstr ""
 "worden gebruikt om de laag te identificeren in het dialoogvenster voor de "
 "parameters dat zal worden weergegeven wanneer u het model later uitvoert."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:68
+#: ../../docs/training_manual/processing/modeler_twi.rst:75
 msgid ""
 "There is not much to select in this first dialog, since we do not have but "
-"just one layer in or model (The DEM input that we created). Actually, the "
+"just one layer in our model (The DEM input that we created). Actually, the "
 "default configuration of the dialog is the correct one in this case, so you "
-"just have to press *OK*. This is what you will now have in the modeler "
-"canvas."
+"just have to press :guilabel:`OK`. This is what you will now have in the "
+"modeler canvas."
 msgstr ""
 "Er is niet veel te selecteren in dit eerste dialoogvenster, omdat we slechts"
 " één laag in ons model hebben (De invoer DEM die we gemaakt hebben). In "
-"feite is de standaard configuratie van het dialoogvenster de juiste in dit "
-"geval, dus u hoeft alleen maar op *OK* te drukken. Dit is wat u zult hebben "
-"in het kaartvenster van Grafische modellen bouwen."
+"feite is de standaard configuratie van het dialoogvenster in dit geval de "
+"juiste, dus u hoeft alleen maar op :guilabel:`OK` te drukken. Dit is wat u "
+"nu zult hebben in het kaartvenster van Grafische modellen bouwen."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:72
+#: ../../docs/training_manual/processing/modeler_twi.rst:79
 msgid ""
 "The second algorithm we have to add to our model is the catchment area "
 "algorithm. We will use the algorithm named *Catchment area (Paralell)*. We "
@@ -290,19 +303,19 @@ msgstr ""
 "de uitvoeren die het produceert is de uiteindelijke, dus hier is hoe u het "
 "overeenkomstige dialoogvenster in moet vullen."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:76
+#: ../../docs/training_manual/processing/modeler_twi.rst:83
 msgid "Now your model should look like this."
 msgstr "Nu zou uw model er zo uit moeten zien."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:80
+#: ../../docs/training_manual/processing/modeler_twi.rst:87
 msgid ""
-"The last step is to add the *Topographic wetness index* algorithm, with the "
-"following configuration."
+"The last step is to add the :guilabel:`Topographic wetness index` algorithm,"
+" with the following configuration."
 msgstr ""
-"De laatste stap is om het algoritme *Topographic wetness index* toe te "
-"voegen, met de volgende configuratie."
+"De laatste stap is om het algoritme :guilabel:`Topographic wetness index` "
+"toe te voegen, met de volgende configuratie."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:84
+#: ../../docs/training_manual/processing/modeler_twi.rst:91
 msgid ""
 "In this case, we will not be using the DEM as input, but instead, we will "
 "use the slope and catchment area layers that are calculated by the "
@@ -317,57 +330,55 @@ msgstr ""
 "andere algoritmen, en door ze te gebruiken koppelt u de algoritmen, wat de "
 "werkstroom maakt."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:86
+#: ../../docs/training_manual/processing/modeler_twi.rst:93
 msgid ""
-"In this case, the output TWI layer is a final layer, so we have to indicate "
-"so. In the corresponding textbox, enter the name that you want to be shown "
-"for this output."
+"In this case, the output ``TWI`` layer is a final layer, so we have to "
+"indicate so. In the corresponding textbox, enter the name that you want to "
+"be shown for this output."
 msgstr ""
-"In dit geval is de uitvoerlaag TWI de uiteindelijke laag, dus moeten we dat "
-"aangeven. Voer, in het overeenkomstige tekstvak, de naam in die u wilt "
+"In dit geval is de uitvoerlaag ``TWI`` de uiteindelijke laag, dus moeten we "
+"dat aangeven. Voer, in het overeenkomstige tekstvak, de naam in die u wilt "
 "hebben weergegeven voor deze uitvoer."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:88
+#: ../../docs/training_manual/processing/modeler_twi.rst:95
 msgid "Now our model is finished and it should look like this."
 msgstr "Nu is uw model voltooid en zou er zo uit moeten zien."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:92
-msgid ""
-"Enter a name and a group name in the upper part of the model window, and "
-"then save it clicking on the *Save* button."
+#: ../../docs/training_manual/processing/modeler_twi.rst:99
+msgid "Enter a name and a group name in the upper part of the model window."
 msgstr ""
-"Voer een naam en een naam voor de groep in in het bovenste gedeelte van het "
-"venster Grafische modellen bouwen, en sla het dan op door te klikken op de "
-"knop  *Opslaan*."
+"Voer een naam en een naam voor de groep, in het bovenste gedeelte van het "
+"venster Grafische modellen bouwen, in."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:96
+#: ../../docs/training_manual/processing/modeler_twi.rst:103
 msgid ""
-"You can save it anywhere you want and open it later, but if you save it in "
-"the models folder (which is the folder that you will see when the save file "
-"dialog appears), you model will also be available in the toolbox as well. So"
-" stay on that folder and save the model with the filename that you prefer."
+"Save it clicking on the :guilabel:`Save` button. You can save it anywhere "
+"you want and open it later, but if you save it in the models folder (which "
+"is the folder that you will see when the save file dialog appears), your "
+"model will also be available in the toolbox as well. So stay on that folder "
+"and save the model with the filename that you prefer."
 msgstr ""
-"U kunt het overal opslaan waar u wilt en het later openen, maar als u het "
-"opslaat in de map Models (wat de map is die u zult zien als het "
-"dialoogvenster Opslaan verschijnt), zal uw model ook in de Toolbox "
-"beschikbaar zijn. Blijf dus in die map en sla het model op onder de "
-"bestandsnaam die uw voorkeur heeft."
+"Sla het op door te klikken op de knop :guilabel:`Opslaan`. U kunt het overal"
+" opslaan waar u wilt en het later openen, maar als u het opslaat in de map "
+"Models (wat de map is die u zult zien als het dialoogvenster Opslaan "
+"verschijnt), zal uw model ook in de Toolbox beschikbaar zijn. Blijf dus in "
+"die map en sla het model op onder de bestandsnaam die uw voorkeur heeft."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:98
+#: ../../docs/training_manual/processing/modeler_twi.rst:105
 msgid ""
-"Now close the modeler dialog and go to the toolbox. In the *Models* entry "
-"you will find you model."
+"Now close the modeler dialog and go to the toolbox. In the "
+":guilabel:`Models` entry you will find your model."
 msgstr ""
 "Sluit nu het dialoogvenster Grafische modellen bouwen en ga naar de Toolbox."
-" In het item *Models* zult u uw model vinden."
+" In het item :guilabel:`Models` zult u uw model vinden."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:102
-msgid "You can run it just like any normal algorithm, double--clicking on it."
+#: ../../docs/training_manual/processing/modeler_twi.rst:109
+msgid "You can run it just like any normal algorithm, double-clicking on it."
 msgstr ""
 "U kunt het net als elk normaal algoritme uitvoeren, door erop te "
 "dubbelklikken."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:106
+#: ../../docs/training_manual/processing/modeler_twi.rst:113
 msgid ""
 "As you can see, the parameters dialog, contain the input that you added to "
 "the model, along with the outputs that you set as final when adding the "
@@ -378,10 +389,170 @@ msgstr ""
 "uiteindelijk heeft ingesteld bij het toevoegen van de overeenkomstige "
 "algoritmen."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:108
+#: ../../docs/training_manual/processing/modeler_twi.rst:115
 msgid ""
 "Run it using the DEM as input and you will get the TWI layer in just one "
 "single step."
 msgstr ""
 "Voer het uit met behulp van de DEM als invoer en u zult de laag TWI in "
 "slechts één stap krijgen."
+
+#~ msgid ""
+#~ "To start this lesson, we are going to calculate a parameter named "
+#~ "Topographic Wetness Index. The algorithm that computes it is called "
+#~ "*Topographic wetness index (twi)*"
+#~ msgstr ""
+#~ "We gaan een parameter, genaamd Topographic wetness index, om deze les te "
+#~ "beginnen. Het algoritme dat dit berekent is genaamd *Topographic wetness "
+#~ "index (twi)*"
+
+#~ msgid ""
+#~ "This is the result that you will obtain (the default singleband pseudocolor "
+#~ "inverted palette has been used for rendering). You can use the ``twi.qml`` "
+#~ "style provided."
+#~ msgstr ""
+#~ "Dit is het resultaat dat u zult verkrijgen (het standaard geïnverteerde "
+#~ "palet enkelband pseudokleur is gebruikt voor het renderen). U kunt de "
+#~ "verschafte stijl ``twi.qml`` gebruiken."
+
+#~ msgid ""
+#~ "What we will try to do now is to create an algorithm that calculates the TWI"
+#~ " from a DEM in just one single step. That will save us work in case we later"
+#~ " have to compute a TWI layer from another DEM, since we will need just one "
+#~ "single step to do it instead of the 3 ones above. All the processes that we "
+#~ "need are found in the  toolbox, so what we have to do is to define the "
+#~ "workflow to wrap them. This is where the graphical modeler comes in."
+#~ msgstr ""
+#~ "Wat we nu zullen proberen te doen is om een algoritme te maken dat de TWI "
+#~ "berekent vanuit een DEM in slechts één enkele stap. Dat zal ons werk "
+#~ "besparen voor het geval we later een laag TWI moeten berekenen uit een "
+#~ "andere DEM, omdat we slechts één stap nodig hebben om het te doen in plaats "
+#~ "van de 3 bovenstaande. Alle processen die we nodig hebben zijn te vinden in "
+#~ "de Toolbox, dus wat we moeten doen is de werkstroom definiëren om ze te "
+#~ "verpakken. Dat is waar Grafische modellen bouwen van pas komt."
+
+#~ msgid ""
+#~ "Two things are needed to create a model: setting the inputs that it will "
+#~ "need, and defining the algorithm that it contains. Both of them are done by "
+#~ "adding elements from the two tabs in the left--hand side of the modeler "
+#~ "window: *Inputs* and *Algorithms*"
+#~ msgstr ""
+#~ "Twee dingen zijn nodig om een model te maken: de benodigde invoer instellen "
+#~ "en het algoritme definiëren dat het bevat. Beide worden gedaan door "
+#~ "elementen toe te voegen uit de twee tabs aan de linkerkant van het venster "
+#~ "Grafische modellen bouwen: *Invoer* en *Algoritmen*"
+
+#~ msgid ""
+#~ "Double click on the *Raster layer* input and you will see the following "
+#~ "dialog."
+#~ msgstr ""
+#~ "Dubbelklik op de invoer *Raster Layer* en u zult het volgende dialoogvenster"
+#~ " zien."
+
+#~ msgid ""
+#~ "Here we will have to define the input we want. Since we expect this raster "
+#~ "layer to be a DEM, we will call it *DEM*. That's the name that the user of "
+#~ "the model will see when running it. Since we need that layer to work, we "
+#~ "will define it as a mandatory layer."
+#~ msgstr ""
+#~ "Hier moeten we de invoer definiëren die we willen. Omdat we verwachten dat "
+#~ "deze rasterlaag een DEM zal zijn, zullen we die *DEM* noemen. Dat is de naam"
+#~ " die de gebruiker van het model zal zien bij het uitvoeren. Omdat we die "
+#~ "laag nodig hebben om te kunnen werken, zullen we het definiëren als een "
+#~ "vereiste laag."
+
+#~ msgid "Click on *OK* and the input will appear in the modeler canvas."
+#~ msgstr ""
+#~ "Klik op *OK* en de invoer zal verschijnen in het kaartvenster van Grafische "
+#~ "modellen bouwen."
+
+#~ msgid ""
+#~ "Now let's move to the *Algorithms* tab. The first algorithm we have to run "
+#~ "is the *Slope, aspect, curvature* algorithm. Locate it in the algorithm "
+#~ "list, double--click on it and you will see the dialog shown below."
+#~ msgstr ""
+#~ "Laten we nu naar de tab *Algoritmen* gaan. Het eerste algoritme dat we "
+#~ "moeten uitvoeren is het algoritme *Slope, aspect, curvature*. Zoek het op in"
+#~ " de lijst met algoritmen, dubbelklik erop en u zult het dialoogvenster zien "
+#~ "dat hieronder wordt weergegeven."
+
+#~ msgid ""
+#~ "This dialog is very similar to the one that you can find when running the "
+#~ "algorithm from the toolbox, but the element that you can use as parameter "
+#~ "values are not taken from the current QGIS project, but from the model "
+#~ "itself. That means that, in this case, we will not have all the raster "
+#~ "layers of our project available for the *Elevation* field, but just the ones"
+#~ " defined in our model. Since we have added just one single raster input "
+#~ "named *DEM*, that will be the only raster layer that we will see in the list"
+#~ " corresponding to the *Elevation* parameter."
+#~ msgstr ""
+#~ "Dit dialoogvenster lijkt erg op dat wat u krijgt als u het algoritme "
+#~ "uitvoert vanuit de Toolbox, maar het element dat u kunt gebruiken als waarde"
+#~ " voor de parameters worden niet uit het huidige project van QGIS genomen, "
+#~ "maar vanuit het model zelf. Dat betekent dat, in dit geval, we niet alle "
+#~ "rasterlagen van ons project beschikbaar hebben voor het veld *Elevation*, "
+#~ "maar slechts die welke zijn gedefinieerd in ons model. Omdat we slechts één "
+#~ "enkele rasterinvoer hebben toegevoegd, genaamd *DEM*, zal dat de enige "
+#~ "rasterlaag zijn die we zullen zien in de lijst die correspondeert met de "
+#~ "parameter *Elevation*."
+
+#~ msgid ""
+#~ "There is not much to select in this first dialog, since we do not have but "
+#~ "just one layer in or model (The DEM input that we created). Actually, the "
+#~ "default configuration of the dialog is the correct one in this case, so you "
+#~ "just have to press *OK*. This is what you will now have in the modeler "
+#~ "canvas."
+#~ msgstr ""
+#~ "Er is niet veel te selecteren in dit eerste dialoogvenster, omdat we slechts"
+#~ " één laag in ons model hebben (De invoer DEM die we gemaakt hebben). In "
+#~ "feite is de standaard configuratie van het dialoogvenster de juiste in dit "
+#~ "geval, dus u hoeft alleen maar op *OK* te drukken. Dit is wat u zult hebben "
+#~ "in het kaartvenster van Grafische modellen bouwen."
+
+#~ msgid ""
+#~ "The last step is to add the *Topographic wetness index* algorithm, with the "
+#~ "following configuration."
+#~ msgstr ""
+#~ "De laatste stap is om het algoritme *Topographic wetness index* toe te "
+#~ "voegen, met de volgende configuratie."
+
+#~ msgid ""
+#~ "In this case, the output TWI layer is a final layer, so we have to indicate "
+#~ "so. In the corresponding textbox, enter the name that you want to be shown "
+#~ "for this output."
+#~ msgstr ""
+#~ "In dit geval is de uitvoerlaag TWI de uiteindelijke laag, dus moeten we dat "
+#~ "aangeven. Voer, in het overeenkomstige tekstvak, de naam in die u wilt "
+#~ "hebben weergegeven voor deze uitvoer."
+
+#~ msgid ""
+#~ "Enter a name and a group name in the upper part of the model window, and "
+#~ "then save it clicking on the *Save* button."
+#~ msgstr ""
+#~ "Voer een naam en een naam voor de groep in in het bovenste gedeelte van het "
+#~ "venster Grafische modellen bouwen, en sla het dan op door te klikken op de "
+#~ "knop  *Opslaan*."
+
+#~ msgid ""
+#~ "You can save it anywhere you want and open it later, but if you save it in "
+#~ "the models folder (which is the folder that you will see when the save file "
+#~ "dialog appears), you model will also be available in the toolbox as well. So"
+#~ " stay on that folder and save the model with the filename that you prefer."
+#~ msgstr ""
+#~ "U kunt het overal opslaan waar u wilt en het later openen, maar als u het "
+#~ "opslaat in de map Models (wat de map is die u zult zien als het "
+#~ "dialoogvenster Opslaan verschijnt), zal uw model ook in de Toolbox "
+#~ "beschikbaar zijn. Blijf dus in die map en sla het model op onder de "
+#~ "bestandsnaam die uw voorkeur heeft."
+
+#~ msgid ""
+#~ "Now close the modeler dialog and go to the toolbox. In the *Models* entry "
+#~ "you will find you model."
+#~ msgstr ""
+#~ "Sluit nu het dialoogvenster Grafische modellen bouwen en ga naar de Toolbox."
+#~ " In het item *Models* zult u uw model vinden."
+
+#~ msgid "You can run it just like any normal algorithm, double--clicking on it."
+#~ msgstr ""
+#~ "U kunt het net als elk normaal algoritme uitvoeren, door erop te "
+#~ "dubbelklikken."
