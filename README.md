@@ -1,4 +1,4 @@
-[![Docs Builds](https://github.com/qgis/QGIS-Documentation/workflows/docs%20builds/badge.svg?branch=master)](https://github.com/qgis/QGIS-Documentation/actions/workflows/builds.yml?query=branch%3Amaster+event%3Apush)
+[![Docs Builds](https://github.com/qgis/QGIS-Documentation/workflows/Docs%20builds/badge.svg?branch=master)](https://github.com/qgis/QGIS-Documentation/actions/workflows/builds.yml?query=branch%3Amaster+event%3Apush)
 [![Doctest Build](https://github.com/qgis/QGIS-Documentation/workflows/Doctest%20build/badge.svg?branch=master)](https://github.com/qgis/QGIS-Documentation/actions/workflows/doctest.yml?query=branch%3Amaster+event%3Apush)
 [![Read the documentation](https://img.shields.io/badge/Read-the%20docs-green.svg)](https://docs.qgis.org/testing/)
 
