@@ -261,7 +261,11 @@ latex_elements = {
     \\newunicodechar{㎡}{$m^2$}
     \\newunicodechar{′}{\ensuremath{^{\prime}}}
     \\newunicodechar{″}{\ensuremath{^{\prime\prime}}}
-    \\newunicodechar{​}{ }'''
+    \\newunicodechar{​}{ }''',
+
+    # Latex figure float alignment
+    # use ‘H’ to disable floating, and position the figures strictly in the order they appear in the source
+    'figure_align': 'H'
 }
 
 # Special case of korean that need different latex settings to work
