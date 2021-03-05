@@ -265,15 +265,22 @@ Now that we have the data, let's use them to render the ``landuse`` layer.
    :align: center
 
 
-.. _backlink-classification-refine-1:
-
 |moderate| |TY| Refine the Classification
 ----------------------------------------------------------------------
 
 * Change the values of :guilabel:`Mode` and :guilabel:`Classes` until
   you get a classification that makes sense.
 
-:ref:`Check your results <classification-refine-1>`
+.. admonition:: Answer
+   :class: toggle
+
+   The settings you used might not be the same, but with the values
+   :guilabel:`Classes` = ``6`` and :guilabel:`Mode` = :guilabel:`Natural Breaks
+   (Jenks)` (and using the same colors, of course), the map will look like this:
+
+   .. figure:: img/gradient_map_new_mode.png
+      :align: center
+
 
 |hard| |FA| Rule-based Classification
 ----------------------------------------------------------------------
