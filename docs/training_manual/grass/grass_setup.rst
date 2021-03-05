@@ -241,8 +241,6 @@ We are going to import in the GRASS Mapset the layer |srtmFileName|.
 #. You may now remove the original |srtmFileName| layer.
 
 
-.. _backlink-grass_add_to_mapset:
-
 |basic| |TY| Add Layers to Mapset
 -------------------------------------------------------------------------------
 Try to import in the GRASS Mapset the vector layers :file:`water.shp` and
@@ -250,8 +248,12 @@ Try to import in the GRASS Mapset the vector layers :file:`water.shp` and
 for :file:`rivers` rename the imported layer as :file:`g_water` and :file:`g_places`
 to avoid confusion
 
-:ref:`Check your results <grass_add_to_mapset>`
+.. admonition:: Answer
+   :class: toggle
 
+   You can add layers (both vector and raster) into a GRASS Mapset by drag and
+   drop them in the Browser (see :ref:`grass_browser`) or by using the
+   ``v.in.gdal.qgis`` for vector and ``r.in.gdal.qgis`` for raster layers.
 
 |basic| Open an existing GRASS Mapset
 -------------------------------------------------------------------------------

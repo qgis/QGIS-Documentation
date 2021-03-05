@@ -1,49 +1,6 @@
 Answer Sheet
 ===============================================================================
 
-.. _grass_add_to_mapset:
-
-|RF| *GRASS Integration*
--------------------------------------------------------------------------------
-
-|basic| *Add Layers to Mapset*
-...............................................................................
-
-You can add layers (both vector and raster) into a GRASS Mapset by drag and drop
-them in the Browser (see :ref:`grass_browser`) or by using the ``v.in.gdal.qgis``
-for vector and ``r.in.gdal.qgis`` for raster layers.
-
-:ref:`Back to text <backlink-grass_add_to_mapset>`
-
-
-.. _grass_reclass:
-
-|moderate| *Reclassify raster layer*
-...............................................................................
-
-To discover the maximum value of the raster run the :kbd:`r.info` tool: in the
-console you will see that the maximum value is 1699.
-
-You are now ready to write the rules. Open a text editor and add the following
-rules::
-
-  0 thru 1000 = 1
-  1000 thru 1400 = 2
-  1400 thru 1699 = 3
-
-save the file as a ``my_rules.txt`` file and close the text editor.
-
-Run the :kbd:`r.reclass` tool, choose the :kbd:`g_dem` layer and load the file
-containing the rules you just have saved.
-
-Click on :guilabel:`Run` and then on :guilabel:`View Output`. You can change the
-colors and the final result should look like the following picture:
-
-.. figure:: img/grass_reclass.png
-  :align: center
-
-:ref:`Back to text <backlink-grass_reclass>`
-
 |RF| *Database Concepts*
 -------------------------------------------------------------------------------
 
