@@ -134,7 +134,6 @@ slope value. Black pixels show flat terrain and white pixels, steep terrain:
 .. figure:: img/slope_raster.png
    :align: center
 
-.. _backlink-raster-analysis-1:
 
 |moderate| |TY| Calculating the aspect
 ----------------------------------------------------------------------
@@ -151,7 +150,18 @@ Use the :guilabel:`Aspect` algorithm of the
 :menuselection:`Processing --> Raster terrain analysis` to get the ``aspect``
 layer saved along with the ``slope``.
 
-:ref:`Check your results <raster-analysis-1>`
+.. admonition:: Answer
+   :class: toggle
+
+   * Set your :guilabel:`Aspect` dialog up like this:
+
+     .. figure:: img/answer_dem_aspect.png
+        :align: center
+
+   Your result:
+
+     .. figure:: img/answer_aspect_result.png
+        :align: center
 
 |moderate| |FA| Finding the north-facing aspect
 ----------------------------------------------------------------------
@@ -223,8 +233,6 @@ the conditions or not.
 Therefore the final result will be **False** (0) and **True** (1).
 
 
-.. _backlink-raster-analysis-2:
-
 |moderate| |TY| More criteria
 ----------------------------------------------------------------------
 
@@ -238,7 +246,31 @@ DEM.
 * Save them under :file:`exercise_data/raster_analysis` as
   :file:`slope_lte2.tif` and :file:`slope_lte5.tif`.
 
-:ref:`Check your results <raster-analysis-2>`
+.. admonition:: Answer
+   :class: toggle
+
+   * Set your :guilabel:`Raster calculator` dialog up with:
+
+   * the following expression: ``slope@1 <= 2``
+   * the ``slope`` layer as the :guilabel:`Reference layer(s)`
+
+     .. figure:: img/answer_raster_calculator_slope.png
+        :align: center
+
+   * For the 5 degree version, replace the ``2`` in the expression and file
+     name with ``5``.
+
+   Your results:
+
+   * 2 degrees:
+
+     .. figure:: img/answer_2degree_result.png
+        :align: center
+
+   * 5 degrees:
+
+     .. figure:: img/answer_5degree_result.png
+        :align: center
 
 
 |moderate| |FA| Combining Raster Analysis Results
