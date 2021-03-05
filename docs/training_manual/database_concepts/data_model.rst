@@ -253,9 +253,33 @@ Add fields such as phone number, home address, name, etc. (these aren't all
 valid names: change them to make them valid). Make sure you give the table an
 ID column with the same data-type as above.
 
-:ref:`Check your results <database-concepts-4>`
+.. admonition:: Answer
+  :class: toggle
 
-.. _backlink-database-concepts-4:
+  The SQL required to create the correct people table is::
+
+    create table people (id serial not null primary key,
+                         name varchar(50),
+                         house_no int not null,
+                         street_id int not null,
+                         phone_no varchar null );
+
+  The schema for the table (enter :kbd:`\\d people`) looks like this::
+
+    Table "public.people"
+
+    Column     |         Type          |                      Modifiers
+    -----------+-----------------------+-------------------------------------
+    id         | integer               | not null default
+               |                       | nextval('people_id_seq'::regclass)
+    name       | character varying(50) |
+    house_no   | integer               | not null
+    street_id  | integer               | not null
+    phone_no   | character varying     |
+    Indexes:
+      "people_pkey" PRIMARY KEY, btree (id)
+
+  For illustration purposes, we have purposely omitted the fkey constraint.
 
 Create Keys in SQL
 -------------------------------------------------------------------------------
@@ -356,11 +380,20 @@ If you want to get rid of a table you can use the :kbd:`drop` command:
 
   drop table streets;
 
+In our current example, the above command would not work. Why not?
 
-.. note:: In our current example, the above command would not work. Why not?
-    :ref:`See why <database-concepts-5>`
+.. admonition:: Answer
+  :class: toggle
 
-.. _backlink-database-concepts-5:
+  The reason the DROP command would not work in this case is because the
+  `people` table has a Foreign Key constraint to the `streets` table. This means
+  that dropping (or deleting) the `streets` table would leave the `people` table
+  with references to non-existent `streets` data.
+  
+  It is possible to 'force' the `streets` table to be deleted by using the
+  `CASCADE` command, but this would also delete the `people` and any other table
+  which had a relationship to the `streets` table. Use with caution!
+
 
 If you used the same :kbd:`drop table` command on the `people` table, it would
 be successful:
