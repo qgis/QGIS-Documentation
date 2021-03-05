@@ -125,7 +125,7 @@ referring to the diagram above. See if you can identify their names and
 functions. You will become more familiar with these elements as you use them in
 the coming days.
 
-.. admonition:: Solution
+.. admonition:: Answer
    :class: toggle
 
    Refer back to the image showing the interface layout and check that you
@@ -154,7 +154,7 @@ Try to find each of these tools on your screen. What is their purpose?
    arrow button in any such collapsed toolbar. You can see a tooltip with the
    name of any tool by holding your mouse over the tool for a while.
 
-.. admonition:: Solution
+.. admonition:: Answer
    :class: toggle
 
    #. :guilabel:`Save as`

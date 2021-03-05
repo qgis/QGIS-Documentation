@@ -79,7 +79,7 @@ your work.
 Repeat the steps above to add the :file:`places.shp` and :file:`rivers.shp`
 layers from the same folder (:file:`exercise_data/shapefile`) to the map.
 
-.. admonition:: Solution
+.. admonition:: Answer
    :class: toggle
 
    In the main area of the dialog you should see many shapes with different
@@ -181,9 +181,6 @@ the :guilabel:`Browser`.
 .. note:: Remember to save your project frequently! The project file doesn't contain
    any of the data itself, but it remembers which layers you loaded into your map.
 
-
-.. _backlink-vector-load-more-data:
-
 |moderate| |TY| Load More Vector Data
 -------------------------------------------------------------------------------
 
@@ -193,7 +190,18 @@ using any of the methods explained above:
 * :guilabel:`buildings`
 * :guilabel:`water`
 
-:ref:`Check your results <vector-load-more-data>`
+.. admonition:: Answer
+   :class: toggle
+
+   Your map should have seven layers:
+
+   * :guilabel:`protected_areas`
+   * :guilabel:`places`
+   * :guilabel:`rivers`
+   * :guilabel:`roads`
+   * :guilabel:`landuse`
+   * :guilabel:`buildings` (taken from :file:`training_data.gpkg`) and
+   * :guilabel:`water` (taken from :file:`exercise_data/shapefile`).
 
 
 |FA| Reordering the Layers
