@@ -54,17 +54,19 @@ Refer back to the module on vector analysis.
 
 
    #. Open the :guilabel:`Query Builder` by right-clicking on the
-     :guilabel:`all_terrain` layer in the :guilabel:`Layers` panel, and selecting
-     the :menuselection:`Properties --> Source` tab.
+      :guilabel:`all_terrain` layer in the :guilabel:`Layers` panel, and selecting
+      the :menuselection:`Properties --> Source` tab.
    #. Then build the query ``"suitable" = 1``.
    #. Click :guilabel:`OK` to filter out all the polygons where this condition
-     isn't met   
-     When viewed over the original raster, the areas should overlap perfectly   
-     .. figure:: img/polygonize_raster.png
-         :align: cente   
+      isn't met. When viewed over the original raster, the areas should overlap 
+      perfectly:
+     
+      .. figure:: img/polygonize_raster.png
+         :align: center
+    
    #. You can save this layer by right-clicking on the :guilabel:`all_terrain`
-     layer in the :guilabel:`Layers` panel and choosing :guilabel:`Save As...`,
-     then continue as per the instructions.
+      layer in the :guilabel:`Layers` panel and choosing :guilabel:`Save As...`,
+      then continue as per the instructions.
 
 |moderate| |FA| The :guilabel:`Vector to Raster` Tool
 -------------------------------------------------------------------------------
