@@ -160,7 +160,6 @@ gives you vector layers separately, and not as part of a WMS-style map.
 This will be covered in the next lesson, however. First, let's add another WMS
 layer from the :guilabel:`terrestris` WMS server.
 
-.. _backlink-wms-1:
 
 |basic| |TY|
 -------------------------------------------------------------------------------
@@ -180,10 +179,14 @@ layer from the :guilabel:`terrestris` WMS server.
    .. figure:: img/bedrock_geology_layer.png
       :align: center
 
-:ref:`Check your results <wms-1>`
+.. admonition:: Answer
+   :class: toggle
 
+   Your map should look like this (you may need to re-order the layers):
 
-.. _backlink-wms-2:
+   .. figure:: img/geology_layer_result.png
+      :align: center
+
 
 |moderate| |TY|
 -------------------------------------------------------------------------------
@@ -193,10 +196,28 @@ layer from the :guilabel:`terrestris` WMS server.
 #. Add the "OGC" WMS server at this URL: ``http://ogc.gbif.org:80/wms``
 #. Add the :guilabel:`bluemarble` layer.
 
-:ref:`Check your results <wms-2>`
 
+.. admonition:: Answer
+   :class: toggle
 
-.. _backlink-wms-3:
+   * Use the same approach as before to add the new server and the appropriate
+     layer as hosted on that server:
+   
+     .. figure:: img/add_ogc_server.png
+        :align: center
+   
+     .. figure:: img/add_bluemarble_layer.png
+        :align: center
+   
+   * If you zoom into the |majorUrbanName| area, you'll notice that this dataset has a
+     low resolution:
+   
+   .. figure:: img/low_resolution_dataset.png
+      :align: center
+   
+   Therefore, it's better not to use this data for the current map. The Blue
+   Marble data is more suitable at global or national scales
+
 
 |hard| |TY|
 -------------------------------------------------------------------------------
@@ -210,7 +231,16 @@ Part of the difficulty of using WMS is finding a good (free) server.
   Remember that what you need in order to use a WMS is only its URL (and
   preferably some sort of description).
 
-:ref:`Check your results <wms-3>`
+.. admonition:: Answer
+   :class: toggle
+
+   You may notice that many WMS servers are not always available. Sometimes this
+   is temporary, sometimes it is permanent. An example of a WMS server that
+   worked at the time of writing is the :guilabel:`World Mineral Deposits` WMS
+   at http://apps1.gdr.nrcan.gc.ca/cgi-bin/worldmin_en-ca_ows. It does not
+   require fees or have access constraints, and it is global. Therefore, it does
+   satisfy the requirements. Keep in mind, however, that this is merely an
+   example. There are many other WMS servers to choose from.
 
 
 |IC|
