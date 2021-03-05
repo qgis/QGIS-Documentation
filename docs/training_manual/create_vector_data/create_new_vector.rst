@@ -251,7 +251,6 @@ Remember that each new feature needs to have a unique ``id`` value!
    of the ``school_property`` using techniques learnt in earlier
    lessons.
 
-.. _backlink-create-vector-digitize-1:
 
 |moderate| |FA| Using Vertex Editor Table
 -------------------------------------------------------------------------------
@@ -338,7 +337,15 @@ Our track is a little further to the south:
 #. Save your edits and toggle off editing mode by pressing the
    |toggleEditing| :sup:`Toggle Editing` button.
 
-:ref:`Check your results <create-vector-digitize-1>`
+.. admonition:: Answer
+   :class: toggle
+
+   The symbology doesn't matter, but the results should look more or less like
+   this:
+
+   .. figure:: img/routes_layer_result.png
+      :align: center
+
 
 |IC|
 -------------------------------------------------------------------------------
