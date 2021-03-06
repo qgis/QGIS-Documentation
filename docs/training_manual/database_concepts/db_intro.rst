@@ -125,7 +125,7 @@ Write down the properties which make up a simple address and which we would want
 to store in our database.
 
 .. admonition:: Answer
-  :class: toggle
+  :class: dropdown
 
   For our theoretical address table, we might want to store the following
   properties::
@@ -214,7 +214,7 @@ You can read more about database normalisation `here
 <https://en.wikipedia.org/wiki/Database_normalization>`_
 
 .. admonition:: Answer
-  :class: toggle
+  :class: dropdown
 
   The major problem with the `people` table is that there is a single address
   field which contains a person's entire address. Thinking about our theoretical
@@ -343,7 +343,7 @@ Our `people` model still has some normalisation issues - try to see if you can
 normalise it further and show your thoughts by means of an ER Diagram.
 
 .. admonition:: Answer
-  :class: toggle
+  :class: dropdown
 
 
   Our `people` table currently looks like this::

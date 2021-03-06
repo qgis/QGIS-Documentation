@@ -140,7 +140,7 @@ You may now close the attribute table.
    Which field would be the most useful to represent in label form, and why?
 
 .. admonition:: Answer
-   :class: toggle
+   :class: dropdown
 
    * There should be 9 fields in the :guilabel:`rivers` layer:
 

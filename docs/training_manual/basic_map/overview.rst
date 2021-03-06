@@ -126,7 +126,7 @@ functions. You will become more familiar with these elements as you use them in
 the coming days.
 
 .. admonition:: Answer
-   :class: toggle
+   :class: dropdown
 
    Refer back to the image showing the interface layout and check that you
    remember the names and functions of the screen elements.
@@ -155,7 +155,7 @@ Try to find each of these tools on your screen. What is their purpose?
    name of any tool by holding your mouse over the tool for a while.
 
 .. admonition:: Answer
-   :class: toggle
+   :class: dropdown
 
    #. :guilabel:`Save as`
    #. :guilabel:`Zoom to layer(s)`

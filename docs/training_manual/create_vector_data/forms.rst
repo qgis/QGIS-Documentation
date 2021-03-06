@@ -107,7 +107,7 @@ checkbox next to it denoting ``True`` (checked) or ``False``
 Set a more appropriate form widget for the :guilabel:`highway` field.
 
 .. admonition:: Answer
-   :class: toggle
+   :class: dropdown
 
    For the :guilabel:`TYPE`, there is obviously a limited amount of types that a
    road can be, and if you check the attribute table for this layer, you'll see

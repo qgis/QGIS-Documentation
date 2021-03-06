@@ -180,7 +180,7 @@ layer from the :guilabel:`terrestris` WMS server.
       :align: center
 
 .. admonition:: Answer
-   :class: toggle
+   :class: dropdown
 
    Your map should look like this (you may need to re-order the layers):
 
@@ -198,7 +198,7 @@ layer from the :guilabel:`terrestris` WMS server.
 
 
 .. admonition:: Answer
-   :class: toggle
+   :class: dropdown
 
    * Use the same approach as before to add the new server and the appropriate
      layer as hosted on that server:
@@ -232,7 +232,7 @@ Part of the difficulty of using WMS is finding a good (free) server.
   preferably some sort of description).
 
 .. admonition:: Answer
-   :class: toggle
+   :class: dropdown
 
    You may notice that many WMS servers are not always available. Sometimes this
    is temporary, sometimes it is permanent. An example of a WMS server that

@@ -249,7 +249,7 @@ for :file:`rivers` rename the imported layer as :file:`g_water` and :file:`g_pla
 to avoid confusion
 
 .. admonition:: Answer
-   :class: toggle
+   :class: dropdown
 
    You can add layers (both vector and raster) into a GRASS Mapset by drag and
    drop them in the Browser (see :ref:`grass_browser`) or by using the

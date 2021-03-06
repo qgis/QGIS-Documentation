@@ -151,7 +151,7 @@ Use the :guilabel:`Aspect` algorithm of the
 layer saved along with the ``slope``.
 
 .. admonition:: Answer
-   :class: toggle
+   :class: dropdown
 
    * Set your :guilabel:`Aspect` dialog up like this:
 
@@ -247,7 +247,7 @@ DEM.
   :file:`slope_lte2.tif` and :file:`slope_lte5.tif`.
 
 .. admonition:: Answer
-   :class: toggle
+   :class: dropdown
 
    * Set your :guilabel:`Raster calculator` dialog up with:
 

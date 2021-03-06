@@ -277,7 +277,7 @@ Summarise the people by street name and show the actual street names instead
 of the street_ids.
 
 .. admonition:: Answer
-  :class: toggle
+  :class: dropdown
 
   Here is the correct SQL statement you should use::
 
