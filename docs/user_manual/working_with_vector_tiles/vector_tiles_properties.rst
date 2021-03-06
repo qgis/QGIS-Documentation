@@ -17,9 +17,9 @@ Working with Vector Tiles
 
 .. only:: html
 
-.. contents::
+   .. contents::
 
-   :local:
+      :local:
 
 What are Vector Tiles?
 ======================
@@ -55,6 +55,5 @@ There is support for vector tiles through:
 * remote sources (HTTP/S) - with XYZ template - ``type=xyz&url=http://example.com/{z}/{x}/{y}.pbf``
 * local files - with XYZ template - e.g. ``type=xyz&url=file:///path/to/tiles/{z}/{x}/{y}.pbf``
 * local MBTiles database - e.g. ``type=mbtiles&url=file:///path/to/file.mbtiles``
-
 
 
