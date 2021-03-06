@@ -1,24 +1,13 @@
-1
-
+.. index:: Vector Tiles, vector tiles properties
 .. _`label_vector_tiles`:
 
-2
-
-​
-
-3
-
-***********************
-
-4
-
+*************************
 Working with Vector Tiles
 *************************
 
 .. only:: html
 
    .. contents::
-
       :local:
 
 What are Vector Tiles?
