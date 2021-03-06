@@ -22,7 +22,7 @@ The clipped tiles represent the zoom-levels of the vector tile service,
 derived from a pyramid approach.
 Using this structure, the data-transfer is reduced in comparison to
 un-tiled vector maps. Only data within the current map view, and at the
-current zoom level needs to be transferred.
+current zoom level need to be transferred.
 Also, compared to a tiled raster map, data transfer is also greatly reduced,
 as vector data is typically much smaller than a rendered bitmap.
 Vector tiles do not have any styling information assigned so QGIS needs to
