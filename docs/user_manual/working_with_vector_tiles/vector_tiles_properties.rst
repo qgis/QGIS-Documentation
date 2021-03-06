@@ -50,12 +50,11 @@ apply a cartographic style in order to display the data.
 Supported Formats
 =================
 
-There is support for vector tiles through
+There is support for vector tiles through:
 
-    * remote sources (HTTP/S) - with XYZ template - ``type=xyz&url=http://example.com/{z}/{x}/{y}.pbf``
-    * local files - with XYZ template - e.g. ``type=xyz&url=file:///path/to/tiles/{z}/{x}/{y}.pbf``
-    * local MBTiles database - e.g. ``type=mbtiles&url=file:///path/to/file.mbtiles``
-
+* remote sources (HTTP/S) - with XYZ template - ``type=xyz&url=http://example.com/{z}/{x}/{y}.pbf``
+* local files - with XYZ template - e.g. ``type=xyz&url=file:///path/to/tiles/{z}/{x}/{y}.pbf``
+* local MBTiles database - e.g. ``type=mbtiles&url=file:///path/to/file.mbtiles``
 
 
 
