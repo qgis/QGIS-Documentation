@@ -13,7 +13,8 @@ It is possible to add a frame that displays the contents of a website or even
 create and style your own HTML page and display it!
 You can add a picture with the |addHtml| :guilabel:`Add HTML` following
 :ref:`items creation instructions <create_layout_item>` and manipulate it the
-same way as exposed in :ref:`interact_layout_item`.
+same way as exposed in :ref:`interact_layout_item`. Note that the HTML scale is
+controlled by the layout export resolution at the time the HTML frame is created.
 
 The HTML item can be customized using its :guilabel:`Item Properties` panel.
 Other than the :ref:`items common properties <item_common_properties>`, this
