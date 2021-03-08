@@ -91,6 +91,8 @@ layers from the same folder (:file:`exercise_data/shapefile`) to the map.
    .. figure:: img/basic_map.png
       :align: center
 
+      A basic map
+
 .. _load_geopackage:
 
 |basic| |FA| Loading vector data from a GeoPackage Database
