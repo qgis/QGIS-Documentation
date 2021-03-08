@@ -162,8 +162,7 @@ So you are advised to turn off snapping before cutting a hole.
 #. When you right-click, the hole will be visible.
 #. Remove the hole you just created using the |deleteRing|
    :sup:`Delete Ring` tool.
-
-   .. Note:: Click inside the hole to delete it.
+   Click inside the hole to delete it.
 
 .. admonition:: Answer
    :class: toggle
