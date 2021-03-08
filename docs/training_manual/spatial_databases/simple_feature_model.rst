@@ -42,7 +42,6 @@ Let's add a point field to our people table:
 
   alter table people add column the_geom geometry;
 
-.. _backlink-simple-feature-1:
 
 Add a constraint based on geometry type
 -------------------------------------------------------------------------------
@@ -67,9 +66,19 @@ Create a new table called cities and give it some appropriate columns,
 including a geometry field for storing polygons (the city boundaries). Make
 sure it has a constraint enforcing geometries to be polygons.
 
-:ref:`Check your results <simple-feature-1>`
+.. admonition:: Answer
+   :class: dropdown
 
-.. _backlink-simple-feature-2:
+   ::
+
+     create table cities (id serial not null primary key,
+                          name varchar(50),
+                          the_geom geometry not null);
+      alter table cities
+      add constraint cities_geom_point_chk
+      check (st_geometrytype(the_geom) = 'ST_Polygon'::text );
+
+
 
 Populate geometry_columns table
 -------------------------------------------------------------------------------
@@ -109,9 +118,15 @@ about the EPSG).
 
 Add an appropriate `geometry_columns` entry for your new cities layer
 
-:ref:`Check your results <simple-feature-2>`
+.. admonition:: Answer
+   :class: dropdown
 
-.. _backlink-simple-feature-3:
+   ::
+
+     insert into geometry_columns values
+           ('','public','cities','the_geom',2,4326,'POLYGON');
+
+
 
 Add geometry record to table using SQL
 -------------------------------------------------------------------------------
@@ -182,7 +197,30 @@ and add layers to your project as usual.
 Formulate a query that shows a person's name, street name and position (from the
 the_geom column) as plain text.
 
-:ref:`Check your results <simple-feature-3>`
+.. admonition:: Answer
+   :class: dropdown
+
+   ::
+
+     select people.name,
+            streets.name as street_name,
+            st_astext(people.the_geom) as geometry
+     from   streets, people
+     where  people.street_id=streets.id;
+
+   Result::
+
+            name     | street_name |   geometry
+       --------------+-------------+---------------
+        Roger Jones  | High street |
+        Sally Norman | High street |
+        Jane Smith   | Main Road   |
+        Joe Bloggs   | Low Street  |
+        Fault Towers | Main Road   | POINT(33 -33)
+       (5 rows)
+
+   As you can see, our constraint allows nulls to be added into the database.
+
 
 |IC|
 -------------------------------------------------------------------------------

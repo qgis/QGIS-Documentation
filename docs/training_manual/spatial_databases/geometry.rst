@@ -10,7 +10,6 @@ understanding how the database is assembled.
 **The goal of this lesson:** To better understand how to create spatial
 entities directly in PostgreSQL/PostGIS.
 
-.. _backlink-geometry-1:
 
 Creating Linestrings
 -------------------------------------------------------------------------------
@@ -30,7 +29,21 @@ the geometry_columns table.
   not LINESTRINGS or null.
 * Create a spatial index on the new geometry column
 
-:ref:`Check your results <geometry-1>`
+.. admonition:: Answer
+  :class: dropdown
+
+  ::
+
+    alter table streets add column the_geom geometry;
+    alter table streets add constraint streets_geom_point_chk check
+         (st_geometrytype(the_geom) = 'ST_LineString'::text OR the_geom IS NULL);
+    insert into geometry_columns values ('','public','streets','the_geom',2,4326,
+         'LINESTRING');
+    create index streets_geo_idx
+      on streets
+      using gist
+      (the_geom);
+
 
 Now let's insert a linestring into our streets table. In this case we will
 update an existing street record:
@@ -75,7 +88,6 @@ If you followed this step, you can check what it did by loading the cities
 dataset into QGIS, opening its attribute table, and selecting the new entry.
 Note how the two new polygons behave like one polygon.
 
-.. _backlink-geometry-2:
 
 Exercise: Linking Cities to People
 -------------------------------------------------------------------------------
@@ -117,7 +129,54 @@ Your updated people schema should look something like this:
     "people_street_id_fkey" FOREIGN KEY (street_id) REFERENCES streets(id)
 
 
-:ref:`Check your results <geometry-2>`
+.. admonition:: Answer
+  :class: dropdown
+
+  ::
+
+    delete from people;
+    alter table people add column city_id int not null references cities(id);
+
+  (capture cities in QGIS)
+
+  ::
+
+    insert into people (name,house_no, street_id, phone_no, city_id, the_geom)
+       values ('Faulty Towers',
+               34,
+               3,
+               '072 812 31 28',
+               1,
+               'SRID=4326;POINT(33 33)');
+
+    insert into people (name,house_no, street_id, phone_no, city_id, the_geom)
+       values ('IP Knightly',
+               32,
+               1,
+               '071 812 31 28',
+               1,F
+               'SRID=4326;POINT(32 -34)');
+
+    insert into people (name,house_no, street_id, phone_no, city_id, the_geom)
+       values ('Rusty Bedsprings',
+               39,
+               1,
+               '071 822 31 28',
+               1,
+               'SRID=4326;POINT(34 -34)');
+
+  If you're getting the following error message:
+
+  ::
+
+    ERROR:  insert or update on table "people" violates foreign key constraint
+            "people_city_id_fkey"
+    DETAIL: Key (city_id)=(1) is not present in table "cities".
+
+  then it means that while experimenting with creating polygons for the
+  cities table, you must have deleted some of them and started over. Just
+  check the entries in your cities table and use any :guilabel:`id` which exists.
+
 
 
 Looking at Our Schema

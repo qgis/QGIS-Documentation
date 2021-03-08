@@ -8,7 +8,6 @@ PostGIS in our database, we have additional functions to query our database.
 **The goal for this lesson:** To see how spatial functions are implemented
 similarly to "normal" non-spatial functions.
 
-.. _backlink-spatial-queries-1:
 
 Spatial Operators
 -------------------------------------------------------------------------------
@@ -38,9 +37,17 @@ Result:
 How do we know that the query above returns all the points within 2 *degrees*?
 Why not 2 *meters*? Or any other unit, for that matter?
 
-:ref:`Check your results <spatial-queries-1>`
+.. admonition:: Answer
+  :class: dropdown
 
-.. _backlink-spatial-queries-2:
+  The units being used by the example query are degrees, because the CRS that
+  the layer is using is WGS 84. This is a Geographic CRS, which means that its
+  units are in degrees. A Projected CRS, like the UTM projections, is in meters.
+  
+  Remember that when you write a query, you need to know which units the layer's
+  CRS is in. This will allow you to write a query that will return the results
+  that you expect.
+
 
 Spatial Indexes
 -------------------------------------------------------------------------------
@@ -86,7 +93,15 @@ Result:
 -------------------------------------------------------------------------------
 Modify the cities table so its geometry column is spatially indexed.
 
-:ref:`Check your results <spatial-queries-2>`
+.. admonition:: Answer
+  :class: dropdown
+
+  ::
+
+    CREATE INDEX cities_geo_idx
+      ON cities
+      USING gist (the_geom);
+
 
 
 PostGIS Spatial Functions Demo

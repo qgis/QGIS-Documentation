@@ -105,7 +105,7 @@ Now that you know how to use the tool, feel free to test other
 locations.
 
 
-.. _backlink-network_analysis_1:
+.. _network_fastest_path:
 
 |moderate| |TY| Fastest path
 ----------------------------------------------------------------------
@@ -115,14 +115,28 @@ fastest path between the two points.
 
 How much time do you need to go from the start to the end point?
 
-:ref:`Check your results <network-analysis-1>`
+.. admonition:: Answer
+   :class: dropdown
 
+   #. Open :menuselection:`Network Analysis --> Shortest Path (Point to Point)` and
+      fill the dialog as:
+
+      .. figure:: img/fastest_path_result.png
+         :align: center
+
+   #. Make sure that the :guilabel:`Path type to calculate` is ``Fastest``.
+   #. Click on :guilabel:`Run` and close the dialog.
+   #. Open now the attribute table of the output layer. The :guilabel:`cost` field
+      contains the travel time between the two points (as fraction of hours):
+
+      .. figure:: img/fastest_path_attribute.png
+         :align: center
 
 |moderate| |FA| Advanced options
 ----------------------------------------------------------------------
 
 Let us explore some more options of the Network Analysis tools.
-In the :ref:`previous exercise <backlink-network_analysis_1>` we
+In the :ref:`previous exercise <network_fastest_path>` we
 calculated the **fastest** route between two points.
 As you can imagine, the time depends on the travel **speed**.
 

@@ -34,8 +34,6 @@ example:
    :align: center
 
 
-.. _backlink-complete-analysis-2:
-
 |moderate| |TY| Inspecting the Results
 -------------------------------------------------------------------------------
 
@@ -46,10 +44,15 @@ about some of the buildings? Are they all suitable just because they intersect w
 the :guilabel:`suitable_terrain` layer? Why or why not? Which ones would you
 deem to be unsuitable?
 
-:ref:`Check your results <complete-analysis-2>`
+.. admonition:: Answer
+   :class: dropdown
 
+   You may notice that some of the buildings in your :file:`new_solution` layer
+   have been "sliced" by the :guilabel:`Intersection` tool. This shows that only
+   part of the building - and therefore only part of the property - lies on
+   suitable terrain. We can therefore sensibly eliminate those buildings from
+   our dataset.
 
-.. _backlink-complete-analysis-3:
 
 |moderate| |TY| Refining the Analysis
 -------------------------------------------------------------------------------
@@ -62,7 +65,74 @@ entirely within the :guilabel:`suitable_terrain` layer. How would you achieve th
 Use one or more Vector Analysis tools and remember that our buildings are all
 over 100m squared in size.
 
-:ref:`Check your results <complete-analysis-3>`
+.. admonition:: Answer
+
+   At the moment, your analysis should look something like this:
+   
+   .. figure:: img/new_solution_example.png
+      :align: center
+   
+   Consider a circular area, continuous for 100 meters in all directions.
+   
+   .. figure:: img/circle_100.png
+      :align: center
+   
+   If it is greater than 100 meters in radius, then subtracting 100 meters from
+   its size (from all directions) will result in a part of it being left in the
+   middle.
+   
+   .. figure:: img/circle_with_remainder.png
+      :align: center
+   
+   Therefore, you can run an *interior buffer* of 100 meters on your existing
+   :guilabel:`suitable_terrain` vector layer. In the output of the buffer
+   function, whatever remains of the original layer will represent areas where
+   there is suitable terrain for 100 meters beyond.
+   
+   To demonstrate:
+   
+   #. Go to :menuselection:`Vector --> Geoprocessing Tools --> Buffer(s)` to open
+      the Buffer(s) dialog.
+   #. Set it up like this:
+   
+      .. figure:: img/suitable_terrain_buffer.png
+         :align: center
+   
+   #. Use the :guilabel:`suitable_terrain` layer with ``10`` segments and a
+      buffer distance of ``-100``. (The distance is automatically in meters
+      because your map is using a projected CRS.)
+   #. Save the output in :file:`exercise_data/residential_development/` as
+      :file:`suitable_terrain_continuous100m.shp`.
+   #. If necessary, move the new layer above your original
+      :guilabel:`suitable_terrain` layer.
+   
+      Your results will look like something like this:
+   
+      .. figure:: img/suitable_buffer_results.png
+         :align: center
+   
+   #. Now use the :guilabel:`Select by Location` tool (:menuselection:`Vector -->
+      Research Tools --> Select by location`).
+   #. Set up like this:
+   
+      .. figure:: img/select_by_location.png
+         :align: center
+   
+   #. Select features in :guilabel:`new_solution` that intersect features in
+      :guilabel:`suitable_terrain_continuous100m.shp`.
+   
+      This is the result:
+   
+      .. figure:: img/buffer_select_result.png
+         :align: center
+   
+      The yellow buildings are selected. Although some of the buildings fall
+      partly outside the new :guilabel:`suitable_terrain_continuous100m` layer,
+      they lie well within the original :guilabel:`suitable_terrain` layer and
+      therefore meet all of our requirements.
+   
+   #. Save the selection under :file:`exercise_data/residential_development/` as
+      :file:`final_answer.shp`.
 
 |IC|
 -------------------------------------------------------------------------------

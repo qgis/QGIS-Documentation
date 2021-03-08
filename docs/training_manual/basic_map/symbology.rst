@@ -48,16 +48,27 @@ begin by changing the color of the :guilabel:`landuse` layer.
 #. Click :guilabel:`OK` again in the :guilabel:`Layer Properties` window, and
    you will see the color change being applied to the layer.
 
-.. _backlink-symbology-colors-1:
-
-
 |basic| |TY|
 -------------------------------------------------------------------------------
 
 Change the color of the :guilabel:`water` layer to light blue. Try to use the
 :guilabel:`Layer Styling` panel instead of the :guilabel:`Layer Properties` menu.
 
-:ref:`Check your results <symbology-colors-1>`
+.. admonition:: Solution
+   :class: dropdown
+
+   * Verify that the colors are changing as you expect them to change.
+   * It is enough to select the :guilabel:`water` layer in the legend and then click
+     on the |symbology| :sup:`Open the Layer Styling panel` button. Change the color
+     to one that fits the water layer.
+
+   .. figure:: img/answer_water_blue.png
+      :align: center
+
+   If you want to work on only one layer at a time and don't want the
+   other layers to distract you, you can hide a layer by clicking in the checkbox
+   next to its name in the layers list. If the box is blank, then the layer
+   is hidden.
 
 
 |basic| |FA| Changing Symbol Structure
@@ -87,8 +98,6 @@ areas so as to make the map less visually cluttered.
 Now the :guilabel:`landuse` layer won't have any lines between areas.
 
 
-.. _backlink-symbology-structure-1:
-
 |basic| |TY|
 -------------------------------------------------------------------------------
 
@@ -101,7 +110,26 @@ Remember: you can use the |symbology| :sup:`Open the Layer Styling panel`
 button and see all the changes instantly. That panel also allows you to undo
 individual changes while symbolizing a layer.
 
-:ref:`Check your results <symbology-structure-1>`
+.. admonition:: Answer
+   :class: dropdown
+
+   Your map should now look like this:
+
+   .. figure:: img/answer_symbology1.png
+      :align: center
+
+   If you are a Beginner-level user, you may stop here.
+
+   * Use the method above to change the colors and styles for all the remaining
+     layers.
+   * Try using natural colors for the objects. For example, a road should not be
+     red or blue, but can be gray or black.
+   * Also feel free to experiment with different :guilabel:`Fill style` and
+     :guilabel:`Stroke style` settings for the polygons.
+
+   .. figure:: img/answer_symbology2.png
+      :align: center
+
 
 |moderate| |FA| Scale-Based Visibility
 -------------------------------------------------------------------------------
@@ -198,7 +226,6 @@ your layer that way.
 
 It's fun! But it probably has too many colors to use in a real map...
 
-.. _backlink-symbology-layers-1:
 
 |moderate| |TY|
 -------------------------------------------------------------------------------
@@ -206,7 +233,17 @@ It's fun! But it probably has too many colors to use in a real map...
 Remembering to zoom in if necessary, create a simple, but not distracting
 texture for the :guilabel:`buildings` layer using the methods above.
 
-:ref:`Check your results <symbology-layers-1>`
+
+.. admonition:: Answer
+   :class: dropdown
+
+   Customize your :guilabel:`buildings` layer as you like, but remember that it
+   has to be easy to tell different layers apart on the map.
+
+   Here's an example:
+
+   .. figure:: img/answer_buildings_symbology.png
+      :align: center
 
 
 |moderate| |FA| Ordering Symbol Levels
@@ -278,7 +315,6 @@ previously saved style at any time by clicking the :guilabel:`Load Style...`
 button. Before you change a style, keep in mind that any unsaved style you are
 replacing will be lost.
 
-.. _backlink-symbology-levels-1:
 
 |moderate| |TY|
 -------------------------------------------------------------------------------
@@ -292,10 +328,31 @@ rendering order via the :menuselection:`Advanced --> Symbol levels...` dialog.
 .. figure:: img/target_road_symbology.png
    :align: center
 
-:ref:`Check your results <symbology-levels-1>`
 
+.. admonition:: Answer
+   :class: dropdown
 
-.. _backlink-symbology-levels-2:
+   To make the required symbol, you need three symbol layers:
+
+   .. figure:: img/answer_road_symbology.png
+      :align: center
+
+   The lowest symbol layer is a broad, solid gray line. On top of it there is a
+   slightly thinner solid yellow line and finally another thinner solid black line.
+
+   If your symbol layers resemble the above but you're not getting the result
+   you want:
+
+   #. Check that your symbol levels look something like this:
+
+      .. figure:: img/answer_road_symbol_levels.png
+         :align: center
+
+   #. Now your map should look like this:
+
+      .. figure:: img/target_road_symbology_answer.png
+         :align: center
+
 
 |hard| |TY|
 -------------------------------------------------------------------------------
@@ -314,7 +371,17 @@ rudimentary pre-classified data.
    .. figure:: img/correct_advanced_levels.png
       :align: center
 
-:ref:`Check your results <symbology-levels-2>`
+
+.. admonition:: Answer
+   :class: dropdown
+
+   #. Adjust your symbol levels to these values:
+
+   .. figure:: img/answer_road_symbol_layers.png
+      :align: center
+
+   #. Experiment with different values to get different results.
+   #. Open your original map again before continuing with the next exercise.
 
 
 |moderate| |FA| Symbol layer types
@@ -426,7 +493,16 @@ and change the outline to look like this:
    :align: center
 
 
-:ref:`Check your results <symbology-marker-line>`
+.. admonition:: Answer
+   :class: dropdown
+
+   Here are examples of the symbol structure:
+
+   .. figure:: img/answer_marker_line.png
+      :align: center
+
+   .. figure:: img/answer_marker_line2.png
+      :align: center
 
 
 |hard| |FA| Geometry generator symbology
@@ -472,8 +548,6 @@ With the Geometry generator symbology you can really go over the edge of *normal
 symbology.
 
 
-.. _backlink-symbology-geom_generator:
-
 |hard| |TY|
 ...............................................................................
 
@@ -487,7 +561,16 @@ The final result should look like this:
 .. figure:: img/geometry_generator_preview.png
    :align: center
 
-:ref:`Check your results <symbology-geom_generator>`
+
+.. admonition:: Answer
+   :class: dropdown
+
+   #. Click on the |signPlus| button to add another Symbol level.
+   #. Move the new symbol at the bottom of the list clicking the |arrowDown| button.
+   #. Choose a good color to fill the water polygons.
+   #. Click on :guilabel:`Marker` of the Geometry generator symbology and change the
+      circle with another shape as your wish.
+   #. Try experimenting other options to get more useful results.
 
 
 |hard| |FA| Creating a Custom SVG Fill
@@ -610,6 +693,8 @@ map.
 .. |LS| replace:: Lesson:
 .. |TY| replace:: Try Yourself
 .. |WN| replace:: What's Next?
+.. |arrowDown| image:: /static/common/mActionArrowDown.png
+   :width: 1.5em
 .. |basic| image:: /static/common/basic.png
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em

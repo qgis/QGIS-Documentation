@@ -139,7 +139,30 @@ You may now close the attribute table.
 #. Open the attribute table for the :guilabel:`places` layer.
    Which field would be the most useful to represent in label form, and why?
 
-:ref:`Check your results <vector-explore-attribute-data>`
+.. admonition:: Answer
+   :class: dropdown
+
+   * There should be 9 fields in the :guilabel:`rivers` layer:
+
+     #. Select the layer in the :guilabel:`Layers` panel.
+     #. Right-click and choose :guilabel:`Open Attribute Table`, or press the |openTable|
+        button on the :guilabel:`Attributes Toolbar`.
+     #. Count the number of columns.
+
+     A quicker approach could be to double-click the :guilabel:`rivers` layer, 
+     open the :menuselection:`Layer properties --> Fields` tab, where you will 
+     find a numbered list of the table's fields.
+
+   * Information about towns is available in the :guilabel:`places` layer. Open its
+     attribute table as you did with the :guilabel:`rivers` layer:
+     there are two features whose :guilabel:`place`
+     attribute is set to ``town``: *Swellendam* and *Buffeljagsrivier*.
+     You can add comment on other fields from these two records, if you like.
+
+   * The ``name`` field is the most useful to show as labels. This is because all its
+     values are unique for every object and are very unlikely to contain *NULL*
+     values. If your data contains some *NULL* values, do not worry as long as most
+     of your places have names.
 
 |IC|
 -------------------------------------------------------------------------------

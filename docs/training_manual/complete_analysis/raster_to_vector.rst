@@ -38,7 +38,6 @@ the only areas you're interested in are those that are suitable; i.e., those
 polygons where the value of :guilabel:`suitable` is ``1``. You can change the
 style of this layer if you want to have a clearer visualization of it.
 
-.. _backlink-complete-analysis-1:
 
 |moderate| |TY|
 -------------------------------------------------------------------------------
@@ -50,7 +49,24 @@ Refer back to the module on vector analysis.
 * Save the new file under :file:`exercise_data/residential_development/` as
   :file:`suitable_terrain.shp`.
 
-:ref:`Check your results <complete-analysis-1>`
+.. admonition:: Answer
+  :class: dropdown
+
+
+   #. Open the :guilabel:`Query Builder` by right-clicking on the
+      :guilabel:`all_terrain` layer in the :guilabel:`Layers` panel, and selecting
+      the :menuselection:`Properties --> Source` tab.
+   #. Then build the query ``"suitable" = 1``.
+   #. Click :guilabel:`OK` to filter out all the polygons where this condition
+      isn't met. When viewed over the original raster, the areas should overlap 
+      perfectly:
+     
+      .. figure:: img/polygonize_raster.png
+         :align: center
+    
+   #. You can save this layer by right-clicking on the :guilabel:`all_terrain`
+      layer in the :guilabel:`Layers` panel and choosing :guilabel:`Save As...`,
+      then continue as per the instructions.
 
 |moderate| |FA| The :guilabel:`Vector to Raster` Tool
 -------------------------------------------------------------------------------

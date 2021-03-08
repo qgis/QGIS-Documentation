@@ -79,8 +79,19 @@ your work.
 Repeat the steps above to add the :file:`places.shp` and :file:`rivers.shp`
 layers from the same folder (:file:`exercise_data/shapefile`) to the map.
 
-:ref:`Check your results <interface-preparation-1>`
+.. admonition:: Answer
+   :class: dropdown
 
+   In the main area of the dialog you should see many shapes with different
+   colors. Each shape belongs to a layer you can identify by its color in the
+   left panel (your colors may be different from the ones in :numref:`figure_basic_map` below):
+
+   .. _figure_basic_map:
+
+   .. figure:: img/basic_map.png
+      :align: center
+
+      A basic map
 
 .. _load_geopackage:
 
@@ -174,9 +185,6 @@ the :guilabel:`Browser`.
 .. note:: Remember to save your project frequently! The project file doesn't contain
    any of the data itself, but it remembers which layers you loaded into your map.
 
-
-.. _backlink-vector-load-more-data:
-
 |moderate| |TY| Load More Vector Data
 -------------------------------------------------------------------------------
 
@@ -186,7 +194,18 @@ using any of the methods explained above:
 * :guilabel:`buildings`
 * :guilabel:`water`
 
-:ref:`Check your results <vector-load-more-data>`
+.. admonition:: Answer
+   :class: dropdown
+
+   Your map should have seven layers:
+
+   * :guilabel:`protected_areas`
+   * :guilabel:`places`
+   * :guilabel:`rivers`
+   * :guilabel:`roads`
+   * :guilabel:`landuse`
+   * :guilabel:`buildings` (taken from :file:`training_data.gpkg`) and
+   * :guilabel:`water` (taken from :file:`exercise_data/shapefile`).
 
 
 |FA| Reordering the Layers

@@ -124,9 +124,29 @@ create an address database.
 Write down the properties which make up a simple address and which we would want
 to store in our database.
 
-:ref:`Check your results <database-concepts-1>`
+.. admonition:: Answer
+  :class: dropdown
 
-.. _backlink-database-concepts-1:
+  For our theoretical address table, we might want to store the following
+  properties::
+  
+      House Number
+      Street Name
+      Suburb Name
+      City Name
+      Postcode
+      Country
+  
+  When creating the table to represent an address object, we would create columns
+  to represent each of these properties and we would name them with SQL-compliant
+  and possibly shortened names::
+  
+      house_number
+      street_name
+      suburb
+      city
+      postcode
+      country
 
 Address Structure
 ...............................................................................
@@ -193,9 +213,25 @@ normalise the data structure.
 You can read more about database normalisation `here
 <https://en.wikipedia.org/wiki/Database_normalization>`_
 
-:ref:`Check your results <database-concepts-2>`
+.. admonition:: Answer
+  :class: dropdown
 
-.. _backlink-database-concepts-2:
+  The major problem with the *people* table is that there is a single address
+  field which contains a person's entire address. Thinking about our theoretical
+  *address* table earlier in this lesson, we know that an address is made up of
+  many different properties. By storing all these properties in one field, we make
+  it much harder to update and query our data. We therefore need to split the
+  address field into the various properties. This would give us a table which has
+  the following structure::
+
+    id |     name      | house_no |  street_name   |    city    |   phone_no
+     --+---------------+----------+----------------+------------+-----------------
+     1 | Tim Sutton    |     3    | Buirski Plein  | Swellendam | 071 123 123
+     2 | Horst Duester |     4    | Avenue du Roix | Geneva     | 072 121 122
+
+
+  In the next section, you will learn about Foreign Key relationships which could
+  be used in this example to further improve our database's structure.
 
 Indexes
 -------------------------------------------------------------------------------
@@ -306,9 +342,38 @@ the arrow symbol show that one street can have many people living on it.
 Our `people` model still has some normalisation issues - try to see if you can
 normalise it further and show your thoughts by means of an ER Diagram.
 
-:ref:`Check your results <database-concepts-3>`
+.. admonition:: Answer
+  :class: dropdown
 
-.. _backlink-database-concepts-3:
+
+  Our *people* table currently looks like this::
+  
+     id |     name     | house_no | street_id |  phone_no
+     ---+--------------+----------+-----------+-------------
+      1 | Horst Duster |        4 |         1 | 072 121 122
+  
+  The :guilabel:`street_id` column represents a 'one to many' relationship between the
+  people object and the related street object, which is in the *streets* table.
+  
+  One way to further normalise the table is to split the name field into
+  *first_name* and *last_name*::
+  
+      id | first_name | last_name  | house_no | street_id |  phone_no
+      ---+------------+------------+----------+-----------+------------
+       1 |    Horst   |   Duster   |     4    |     1     | 072 121 122
+  
+  We can also create separate tables for the town or city name and country,
+  linking them to our *people* table via 'one to many' relationships::
+  
+      id | first_name | last_name | house_no | street_id | town_id | country_id
+      ---+------------+-----------+----------+-----------+---------+------------
+       1 |    Horst   |   Duster  |     4    |     1     |    2    |     1
+  
+  
+  An ER Diagram to represent this would look like this:
+  
+  .. figure:: img/er-people-normalised-example.png
+     :align: center
 
 Constraints, Primary Keys and Foreign Keys
 -------------------------------------------------------------------------------

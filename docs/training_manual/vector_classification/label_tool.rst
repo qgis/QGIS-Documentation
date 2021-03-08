@@ -151,21 +151,49 @@ For now, zoom out and click on the |showUnplacedLabel| button in the toolbar
 and see what happens.
 
 
-.. _backlink-label-tool-1:
-
 |moderate| |TY| Customize the Labels
 -------------------------------------------------------------------------------
 
 * Reset the label and symbol settings to have a point marker and a label offset
   of ``2.0`` Millimeters.
 
-:ref:`Check your results <label-tool-1>`
+.. admonition:: Answer
+   :class: dropdown
+
+   Your map should now show the marker points and the labels should be offset by
+   2mm. The style of the markers and labels should allow both to be
+   clearly visible on the map:
+
+   .. figure:: img/customised_labels_one.png
+      :align: center
 
 * Set the map to the scale ``1:100000``. You can do this by typing it into
   the :guilabel:`Scale` box in the :guilabel:`Status Bar`. Modify your labels
   to be suitable for viewing at this scale.
 
-:ref:`Check your results <label-tool-2>`
+.. admonition:: Answer
+   :class: dropdown
+
+   One possible solution has this final product:
+
+   .. figure:: img/possible_outcome_map.png
+      :align: center
+
+   To arrive at this result:
+
+   * Use a font size of ``10``
+   * Use an around point placement distance of ``1.5 mm``
+   * Use a marker size of ``3.0 mm``
+   * In addition, this example uses the :guilabel:`Wrap on character` option:
+
+     .. figure:: img/wrap_character_settings.png
+        :align: center
+
+   * Enter a ``space`` in this field and click :guilabel:`Apply` to achieve the
+     same effect. In our case, some of the place names are very long, resulting in
+     names with multiple lines which is not very user friendly. You might find this
+     setting to be more appropriate for your map.
+
 
 
 |moderate| |FA| Labeling Lines
@@ -281,9 +309,6 @@ field matches ``town`` are displayed in italics.
    :align: center
 
 
-.. _backlink-label-data-defined-1:
-
-
 |hard| |TY| Using Data Defined Settings
 -------------------------------------------------------------------------------
 
@@ -303,7 +328,24 @@ field matches ``town`` are displayed in italics.
 #. Use this to set custom font sizes for each different type of place
    (each key in the ``place`` field)
 
-:ref:`Check your results <label-data-defined-1>`
+.. admonition:: Answer
+   :class: dropdown
+
+   #. Still in edit mode, set the ``FONT_SIZE`` values to whatever you prefer.
+      The example uses ``16`` for towns, ``14`` for suburbs, ``12`` for
+      localities, and ``10`` for hamlets.
+   #. Remember to save changes and exit edit mode
+   #. Return to the :guilabel:`Text` formatting options for the ``places``
+      layer and select ``FONT_SIZE`` in the :guilabel:`Attribute field` of the
+      font size |dataDefined| data defined override dropdown:
+
+      .. figure:: img/font_size_override.png
+         :align: center
+
+   Your results, if using the above values, should be this:
+
+     .. figure:: img/font_override_results.png
+        :align: center
 
 
 |hard| Further Possibilities With Labeling

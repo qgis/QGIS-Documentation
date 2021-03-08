@@ -276,10 +276,35 @@ Now there are no unnecessary subdivisions.
 
 Use the same approach as above and create a buffer for your schools.
 
-It shall to be ``1 km`` in radius.
+It shall be ``1 km`` in radius.
 Save the new layer in the :file:`vector_analysis.gpkg` file as ``schools_buffer_1km_dissolved``.
 
-:ref:`Check your results <vector-analysis-basic-1>`
+.. admonition:: Answer
+   :class: dropdown
+
+   * Your buffer dialog should look like this:
+
+     .. figure:: img/schools_buffer_setup.png
+        :align: center
+
+   The :guilabel:`Buffer distance` is :guilabel:`1` kilometer.
+
+   * The :guilabel:`Segments to approximate` value is set to :guilabel:`20`. 
+     This is optional, but it's recommended, because it makes the output buffers 
+     look smoother. Compare this:
+
+     .. figure:: img/schools_buffer_5.png
+        :align: center
+
+     To this:
+
+     .. figure:: img/schools_buffer_6.png
+        :align: center
+
+   The first image shows the buffer with the :guilabel:`Segments to approximate`
+   value set to :guilabel:`5` and the second shows the value set to :guilabel:`20`.
+   In our example, the difference is subtle, but you can see that the buffer's edges
+   are smoother with the higher value.
 
 |basic| |FA| Overlapping Areas
 ----------------------------------------------------------------------
@@ -352,7 +377,6 @@ Next, you want to extract the buildings in that area.
 #. Now you have two separated layers and can remove ``buildings_34S``
    from the layer list.
 
-.. _backlink-vector-analysis-basic-2:
 
 |moderate| |TY| Further Filter our Buildings
 ----------------------------------------------------------------------
@@ -367,7 +391,31 @@ Using the processes described above, create a new layer called
 :guilabel:`well_located_houses` layer to show only those which are
 within 500m of a restaurant.
 
-:ref:`Check your results <vector-analysis-basic-2>`
+.. admonition:: Answer
+   :class: dropdown
+
+   To create the new :guilabel:`houses_restaurants_500m` layer, we go through a two step
+   process:
+
+   #. First, create a buffer of 500m around the restaurants and add the layer to
+      the map:
+
+      .. figure:: img/restaurants_buffer.png
+         :align: center
+
+      .. figure:: img/restaurants_buffer_result.png
+         :align: center
+
+   #. Next, extract buildings within that buffer area:
+
+      .. figure:: img/select_within_restaurants.png
+         :align: center
+
+   Your map should now show only those buildings which are within 50m of a road,
+   1km of a school and 500m of a restaurant:
+
+   .. figure:: img/restaurant_buffer_result.png
+      :align: center
 
 |basic| |FA| Select Buildings of the Right Size
 ----------------------------------------------------------------------

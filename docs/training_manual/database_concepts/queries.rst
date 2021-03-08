@@ -276,9 +276,29 @@ Result:
 Summarise the people by street name and show the actual street names instead
 of the street_ids.
 
-:ref:`Check your results <database-concepts-8>`
+.. admonition:: Answer
+  :class: dropdown
 
-.. _backlink-database-concepts-8:
+  Here is the correct SQL statement you should use::
+
+    select count(people.name), streets.name
+    from people, streets
+    where people.street_id=streets.id
+    group by streets.name;
+
+  Result::
+
+       count |    name
+       ------+-------------
+           1 | Low Street
+           2 | High street
+           1 | Main Road
+       (3 rows)
+
+  You will notice that we have prefixed field names with table names (e.g.
+  people.name and streets.name). This needs to be done whenever the field name
+  is ambiguous (i.e. not unique across all tables in the database).
+
 
 |IC|
 -------------------------------------------------------------------------------

@@ -137,7 +137,6 @@ So this tool is better suited for stand-alone features.
 Before you go on, set the polygon back to its original state by
 undoing the last change.
 
-.. _backlink-create-vector-topology-1:
 
 |moderate| |TY| Tool: Add Ring
 ----------------------------------------------------------------------
@@ -163,13 +162,19 @@ So you are advised to turn off snapping before cutting a hole.
 #. When you right-click, the hole will be visible.
 #. Remove the hole you just created using the |deleteRing|
    :sup:`Delete Ring` tool.
+   Click inside the hole to delete it.
 
-   .. Note:: Click inside the hole to delete it.
+.. admonition:: Answer
+   :class: dropdown
 
-:ref:`Check your results <create-vector-topology-1>`
+   The exact shape doesn't matter, but you should be getting a hole in the middle
+   of your feature, like this one:
 
+   .. figure:: img/ring_tool_result.png
+      :align: center
 
-.. _backlink-create-vector-topology-2:
+* Undo your edit before continuing with the exercise for the next tool.
+
 
 |moderate| |TY| Tool: Add Part
 ----------------------------------------------------------------------
@@ -189,7 +194,20 @@ would use this tool to create them.
 
    .. Note:: Click inside the part to delete it.
 
-:ref:`Check your results <create-vector-topology-2>`
+.. admonition:: Answer
+   :class: dropdown
+
+   #. First select the |largeLandUseArea|:
+
+      .. figure:: img/park_selected.png
+         :align: center
+
+   #. Now add your new part:
+
+      .. figure:: img/new_park_area_answer.png
+         :align: center
+
+   #. Undo your edit before continuing with the exercise for the next tool.
 
 
 |moderate| |FA| Tool: Reshape Features
@@ -281,7 +299,24 @@ part of the polygon:
 #. Note the differences.
 
 
-:ref:`Check your results <create-vector-topology-4>`
+.. admonition:: Answer
+   :class: dropdown
+
+   * Use the :guilabel:`Merge Selected Features` tool, making sure to first select
+     both of the polygons you wish to merge.
+   * Use the feature with the :guilabel:`OGC_FID` of ``1`` as the source of your
+     attributes (click on its entry in the dialog, then click the :guilabel:`Take
+     attributes from selected feature` button):
+
+   If you're using a different dataset, it is highly likely that your original
+   polygon's :guilabel:`OGC_FID` will not be ``1``. Just choose the feature
+   which has an :guilabel:`OGC_FID`.
+
+   .. figure:: img/merge_feature_dialog.png
+      :align: center
+
+   Using the :guilabel:`Merge Attributes of Selected Features` tool will keep the
+   geometries distinct, but give them the same attributes.
 
 |IC|
 ----------------------------------------------------------------------
@@ -322,6 +357,7 @@ simpler and more effective.
 .. |deleteRing| image:: /static/common/mActionDeleteRing.png
    :width: 2em
 .. |hard| image:: /static/common/hard.png
+.. |largeLandUseArea| replace:: Bontebok National Park
 .. |mergeFeatAttributes| image:: /static/common/mActionMergeFeatureAttributes.png
    :width: 1.5em
 .. |mergeFeatures| image:: /static/common/mActionMergeFeatures.png

@@ -90,8 +90,6 @@ rules is very simple and the GRASS Manual contains very good description.
   manual: a lot of different examples are pointed out.
 
 
-.. _backlink-grass_reclass:
-
 |moderate| |TY| Reclassify with your rules
 -------------------------------------------------------------------------------
 
@@ -101,7 +99,27 @@ Try to reclassify the :file:`g_dem` layer into 3 new categories:
 * from 1000 to 1400, new value = 2
 * from 1400 to the maximum raster value, new value = 3
 
-:ref:`Check your results <grass_reclass>`
+.. admonition:: Answer
+   :class: dropdown
+
+   To discover the maximum value of the raster run the ``r.info`` tool: in the
+   console you will see that the maximum value is 1699.
+   You are now ready to write the rules.
+
+   #. Open a text editor and add the following rules::
+
+        0 thru 1000 = 1
+        1000 thru 1400 = 2
+        1400 thru 1699 = 3
+
+   #. Save the file as ``my_rules.txt`` file and close the text editor.
+   #. Run the ``r.reclass`` tool: choose the ``g_dem`` layer and load the file
+      containing the rules you just have saved.
+   #. Click on :guilabel:`Run` and then on :guilabel:`View Output`. You can change the
+      colors and the final result should look like the following picture:
+
+      .. figure:: img/grass_reclass_answer.png
+         :align: center
 
 
 |moderate| |FA| The Mapcalc Tool
