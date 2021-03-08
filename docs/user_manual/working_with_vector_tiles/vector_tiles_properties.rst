@@ -28,7 +28,7 @@ as vector data is typically much smaller than a rendered bitmap.
 Vector tiles do not have any styling information assigned so QGIS needs to
 apply a cartographic style in order to display the data. 
 
-.. _figure_vector_tiles_pyramidstructure
+.. _figure_vector_tiles_pyramidstructure:
 
 .. figure:: img/vector_tiles_pyramid_structure.png
    :align: center
