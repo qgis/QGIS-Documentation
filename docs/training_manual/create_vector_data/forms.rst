@@ -113,21 +113,21 @@ Set a more appropriate form widget for the :guilabel:`highway` field.
    road can be, and if you check the attribute table for this layer, you'll see
    that they are predefined.
 
-   * Set the widget to :guilabel:`Value Map` and click
-     :guilabel:`Load Data from Layer`.
-   * Select :guilabel:`roads` in the :guilabel:`Label` dropdown and
-     :guilabel:`highway` for both the :guilabel:`Value` and :guilabel:`Description`
-     options:
+   #. Set the widget to :guilabel:`Value Map` and click
+      :guilabel:`Load Data from Layer`.
+   #. Select :guilabel:`roads` in the :guilabel:`Label` dropdown and
+      :guilabel:`highway` for both the :guilabel:`Value` and :guilabel:`Description`
+      options:
 
-     .. figure:: img/value_map_settings.png
+      .. figure:: img/value_map_settings.png
+         :align: center
+
+   #. Click :guilabel:`OK` three times.
+   #. If you use the :guilabel:`Identify` tool on a street now while edit mode is
+      active, the dialog you get should look like this:
+
+     .. figure:: img/highway_as_value_map.png
         :align: center
-
-   * Click :guilabel:`OK` three times.
-   * If you use the :guilabel:`Identify` tool on a street now while edit mode is
-     active, the dialog you get should look like this:
-
-    .. figure:: img/highway_as_value_map.png
-       :align: center
 
 |hard| |TY| Creating Test Data
 ----------------------------------------------------------------------
