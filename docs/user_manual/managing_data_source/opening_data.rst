@@ -443,8 +443,8 @@ Layer` tabs allow loading of layers from source types other than :guilabel:`File
     using ``GeoJSON`` or ``GEOJSON - Newline Delimited`` format or based on
     ``CouchDB`` database.
     A :guilabel:`URI` is required, with optional :ref:`authentication <authentication_index>`.
- * For all vector source types it is possible to define the :guilabel:`Encoding` or
-   to use the :menuselection:`Automatic -->` setting.
+  * For all vector source types it is possible to define the :guilabel:`Encoding` or
+    to use the :menuselection:`Automatic -->` setting.
 
 .. _mesh_loading:
 
