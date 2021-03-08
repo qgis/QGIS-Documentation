@@ -155,13 +155,18 @@ table can be of one of the following types.
 * A **coordinate reference system**. You can select it among the recently used
   ones from the drop-down list or from the :ref:`CRS selection <crs_selector>`
   dialog that appears when you click on the button on the right-hand side.
-* An **extent**, to be entered by four numbers representing its ``xmin``,
-  ``xmax``, ``ymin``, ``ymax`` limits. Clicking on the button on the
-  right-hand side of the value selector, a pop-up menu will appear, giving
-  you options:
+* An **extent**, a text box defining a rectangle through its corners coordinate
+  in the format ``xmin, xmax, ymin, ymax``. Clicking on the button on the
+  right-hand side of the value selector, a pop-up menu will appear,
+  giving you options to:
 
-  * to select the value from a layer or the current canvas extent;
-  * or to define it by dragging directly onto the map canvas.
+  * :guilabel:`Calculate from layer`: fills the text box with the coordinates
+    of the bounding box of a layer to select among the loaded ones
+  * :guilabel:`Use map canvas extent`
+  * :guilabel:`Draw on canvas`: the parameters window will hide itself, so you
+    can click and drag onto the canvas. Once you have defined the extent
+    rectangle, the dialog will reappear, containing the values in the extent text
+    box.
 
   .. _figure_extent:
 
@@ -169,27 +174,6 @@ table can be of one of the following types.
      :align: center
 
      Extent selector
-
-  If you select the first option, you will see a window like the next one.
-
-  .. _figure_extent_list:
-
-  .. figure:: img/extent_list.png
-     :align: center
-
-     Extent List
-
-  If you select the second one, the parameters window will hide itself, so you
-  can click and drag onto the canvas. Once you have defined the selected
-  rectangle, the dialog will reappear, containing the values in the extent text
-  box.
-
-  .. _figure_extent_drag:
-
-  .. figure:: img/extent_drag.png
-     :align: center
-
-     Extent Drag
 
 * A **list of elements** (whether raster or vector layers, tables, fields) to
   select from. Click on the :guilabel:`...` button at the left of the option to
