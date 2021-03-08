@@ -153,10 +153,10 @@ layer saved along with the ``slope``.
 .. admonition:: Answer
    :class: toggle
 
-   * Set your :guilabel:`Aspect` dialog up like this:
+   Set your :guilabel:`Aspect` dialog up like this:
 
-     .. figure:: img/answer_dem_aspect.png
-        :align: center
+   .. figure:: img/answer_dem_aspect.png
+      :align: center
 
    Your result:
 

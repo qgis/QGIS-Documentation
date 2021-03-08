@@ -304,7 +304,7 @@ part of the polygon:
 
    * Use the :guilabel:`Merge Selected Features` tool, making sure to first select
      both of the polygons you wish to merge.
-   * Use the feature with the :guilabel:`OGC_FID` of :kbd:`1` as the source of your
+   * Use the feature with the :guilabel:`OGC_FID` of ``1`` as the source of your
      attributes (click on its entry in the dialog, then click the :guilabel:`Take
      attributes from selected feature` button):
 

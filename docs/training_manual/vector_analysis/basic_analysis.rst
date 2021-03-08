@@ -276,7 +276,7 @@ Now there are no unnecessary subdivisions.
 
 Use the same approach as above and create a buffer for your schools.
 
-It shall to be ``1 km`` in radius.
+It shall be ``1 km`` in radius.
 Save the new layer in the :file:`vector_analysis.gpkg` file as ``schools_buffer_1km_dissolved``.
 
 .. admonition:: Answer
@@ -296,7 +296,7 @@ Save the new layer in the :file:`vector_analysis.gpkg` file as ``schools_buffer_
      .. figure:: img/schools_buffer_5.png
         :align: center
 
-   To this:
+     To this:
 
      .. figure:: img/schools_buffer_6.png
         :align: center
@@ -397,19 +397,19 @@ within 500m of a restaurant.
    To create the new :guilabel:`houses_restaurants_500m` layer, we go through a two step
    process:
 
-   * First, create a buffer of 500m around the restaurants and add the layer to
-     the map:
+   #. First, create a buffer of 500m around the restaurants and add the layer to
+      the map:
 
-     .. figure:: img/restaurants_buffer.png
-        :align: center
+      .. figure:: img/restaurants_buffer.png
+         :align: center
 
-     .. figure:: img/restaurants_buffer_result.png
-        :align: center
+      .. figure:: img/restaurants_buffer_result.png
+         :align: center
 
-   * Next, extract buildings within that buffer area:
+   #. Next, extract buildings within that buffer area:
 
-     .. figure:: img/select_within_restaurants.png
-        :align: center
+      .. figure:: img/select_within_restaurants.png
+         :align: center
 
    Your map should now show only those buildings which are within 50m of a road,
    1km of a school and 500m of a restaurant:

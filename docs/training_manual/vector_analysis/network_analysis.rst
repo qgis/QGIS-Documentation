@@ -118,21 +118,19 @@ How much time do you need to go from the start to the end point?
 .. admonition:: Answer
    :class: toggle
 
-   Open :menuselection:`Network Analysis --> Shortest Path (Point to Point)` and
-   fill the dialog as:
+   #. Open :menuselection:`Network Analysis --> Shortest Path (Point to Point)` and
+      fill the dialog as:
 
-   .. figure:: img/fastest_path_result.png
-      :align: center
+      .. figure:: img/fastest_path_result.png
+         :align: center
 
-   Make sure that the :guilabel:`Path type to calculate` is ``Fastest``.
+   #. Make sure that the :guilabel:`Path type to calculate` is ``Fastest``.
+   #. Click on :guilabel:`Run` and close the dialog.
+   #. Open now the attribute table of the output layer. The :guilabel:`cost` field
+      contains the travel time between the two points (as fraction of hours):
 
-   Click on :guilabel:`Run` and close the dialog.
-
-   Open now the attribute table of the output layer. The :guilabel:`cost` field
-   contains the travel time between the two points (as fraction of hours):
-
-   .. figure:: img/fastest_path_attribute.png
-      :align: center
+      .. figure:: img/fastest_path_attribute.png
+         :align: center
 
 |moderate| |FA| Advanced options
 ----------------------------------------------------------------------

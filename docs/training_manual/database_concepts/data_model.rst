@@ -264,7 +264,7 @@ ID column with the same data-type as above.
                          street_id int not null,
                          phone_no varchar null );
 
-  The schema for the table (enter :kbd:`\\d people`) looks like this::
+  The schema for the table (enter ``\\d people``) looks like this::
 
     Table "public.people"
 
@@ -386,13 +386,13 @@ In our current example, the above command would not work. Why not?
   :class: toggle
 
   The reason the DROP command would not work in this case is because the
-  `people` table has a Foreign Key constraint to the `streets` table. This means
-  that dropping (or deleting) the `streets` table would leave the `people` table
-  with references to non-existent `streets` data.
-  
-  It is possible to 'force' the `streets` table to be deleted by using the
-  `CASCADE` command, but this would also delete the `people` and any other table
-  which had a relationship to the `streets` table. Use with caution!
+  *people* table has a Foreign Key constraint to the *streets* table. This means
+  that dropping (or deleting) the *streets* table would leave the *people* table
+  with references to non-existent *streets* data.
+
+  It is possible to 'force' the *streets* table to be deleted by using the
+  ``CASCADE`` command, but this would also delete the *people* and any other table
+  which had a relationship to the *streets* table. Use with caution!
 
 
 If you used the same :kbd:`drop table` command on the `people` table, it would

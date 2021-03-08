@@ -102,26 +102,24 @@ Try to reclassify the :file:`g_dem` layer into 3 new categories:
 .. admonition:: Answer
    :class: toggle
 
-   To discover the maximum value of the raster run the :kbd:`r.info` tool: in the
+   To discover the maximum value of the raster run the ``r.info`` tool: in the
    console you will see that the maximum value is 1699.
+   You are now ready to write the rules.
 
-   You are now ready to write the rules. Open a text editor and add the following
-   rules::
+   #. Open a text editor and add the following rules::
 
-     0 thru 1000 = 1
-     1000 thru 1400 = 2
-     1400 thru 1699 = 3
+        0 thru 1000 = 1
+        1000 thru 1400 = 2
+        1400 thru 1699 = 3
 
-   save the file as a ``my_rules.txt`` file and close the text editor.
+   #. Save the file as ``my_rules.txt`` file and close the text editor.
+   #. Run the ``r.reclass`` tool: choose the ``g_dem`` layer and load the file
+      containing the rules you just have saved.
+   #. Click on :guilabel:`Run` and then on :guilabel:`View Output`. You can change the
+      colors and the final result should look like the following picture:
 
-   Run the :kbd:`r.reclass` tool, choose the :kbd:`g_dem` layer and load the file
-   containing the rules you just have saved.
-
-   Click on :guilabel:`Run` and then on :guilabel:`View Output`. You can change the
-   colors and the final result should look like the following picture:
-
-   .. figure:: img/grass_reclass_answer.png
-      :align: center
+      .. figure:: img/grass_reclass_answer.png
+         :align: center
 
 
 |moderate| |FA| The Mapcalc Tool

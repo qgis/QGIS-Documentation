@@ -103,15 +103,14 @@ Using the above knowledge, add the new person to the database.
       values ('Joe Smith',55,2,'072 882 33 21');
   
   If you look at the streets table again (using a select statement as before),
-  you'll see that the :kbd:`id` for the :kbd:`Main Road` entry is :kbd:`2`.
+  you'll see that the :guilabel:`id` for the ``Main Road`` entry is *2*.
   
-  That's why we could merely enter the number :kbd:`2` above. Even though we're
-  not seeing :kbd:`Main Road` written out fully in the entry above, the
-  database will be able to associate that with the :kbd:`street_id` value of
-  :kbd:`2`.
+  That's why we could merely enter the number ``2`` above. Even though we're
+  not seeing ``Main Road`` written out fully in the entry above, the
+  database will be able to associate that with the :guilabel:`street_id` value of *2*.
   
-  If you have already added a new :kbd:`street` object, you might find that the
-  new :kbd:`Main Road` has an ID of :kbd:`3` not :kbd:`2`.
+  If you have already added a new street object, you might find that the
+  new ``Main Road`` has an :guilabel:`id` of *3* not *2*.
 
 
 Select data

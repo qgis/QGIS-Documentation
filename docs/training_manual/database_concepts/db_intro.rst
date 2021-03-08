@@ -216,9 +216,9 @@ You can read more about database normalisation `here
 .. admonition:: Answer
   :class: toggle
 
-  The major problem with the `people` table is that there is a single address
+  The major problem with the *people* table is that there is a single address
   field which contains a person's entire address. Thinking about our theoretical
-  `address` table earlier in this lesson, we know that an address is made up of
+  *address* table earlier in this lesson, we know that an address is made up of
   many different properties. By storing all these properties in one field, we make
   it much harder to update and query our data. We therefore need to split the
   address field into the various properties. This would give us a table which has
@@ -346,15 +346,14 @@ normalise it further and show your thoughts by means of an ER Diagram.
   :class: toggle
 
 
-  Our `people` table currently looks like this::
+  Our *people* table currently looks like this::
   
      id |     name     | house_no | street_id |  phone_no
      ---+--------------+----------+-----------+-------------
       1 | Horst Duster |        4 |         1 | 072 121 122
   
-  The :kbd:`street_id` column represents a 'one to many' relationship between the
-  `people` object and the related `street` object, which is in the `streets`
-  table.
+  The :guilabel:`street_id` column represents a 'one to many' relationship between the
+  people object and the related street object, which is in the *streets* table.
   
   One way to further normalise the table is to split the name field into
   *first_name* and *last_name*::
@@ -364,7 +363,7 @@ normalise it further and show your thoughts by means of an ER Diagram.
        1 |    Horst   |   Duster   |     4    |     1     | 072 121 122
   
   We can also create separate tables for the town or city name and country,
-  linking them to our `people` table via 'one to many' relationships::
+  linking them to our *people* table via 'one to many' relationships::
   
       id | first_name | last_name | house_no | street_id | town_id | country_id
       ---+------------+-----------+----------+-----------+---------+------------

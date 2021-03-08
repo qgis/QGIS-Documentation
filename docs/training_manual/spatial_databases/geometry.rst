@@ -175,7 +175,7 @@ Your updated people schema should look something like this:
 
   then it means that while experimenting with creating polygons for the
   cities table, you must have deleted some of them and started over. Just
-  check the entries in your cities table and use any :kbd:`id` which exists.
+  check the entries in your cities table and use any :guilabel:`id` which exists.
 
 
 
