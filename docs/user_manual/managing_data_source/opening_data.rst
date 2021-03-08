@@ -375,7 +375,14 @@ To load a layer from a file:
    in the pull-down menu).
 #. Press :guilabel:`Open` to load the selected file into :guilabel:`Data
    Source Manager` dialog
-#. You can specify the encoding for vector file if desired
+   
+   .. _figure_vector_layer_open_options:
+   
+   .. figure:: img/openoptionsvectorlayer.png
+      :align: center
+      
+      Loading a Shapefile with open options
+
 #. Press :guilabel:`Add` to load the file in QGIS and display them in the map view.
    :numref:`figure_vector_loaded` shows QGIS after loading the :file:`alaska.shp` file.
 
@@ -385,6 +392,12 @@ To load a layer from a file:
       :align: center
 
       QGIS with Shapefile of Alaska loaded
+      
+.. note::
+
+ For loading vector files the GDAL driver offers to define open actions. These will
+ be shown when the vector file is selected. Options are described in detail on
+ https://gdal.org/drivers/vector/ .
 
 .. note::
 
@@ -430,6 +443,8 @@ Layer` tabs allow loading of layers from source types other than :guilabel:`File
     using ``GeoJSON`` or ``GEOJSON - Newline Delimited`` format or based on
     ``CouchDB`` database.
     A :guilabel:`URI` is required, with optional :ref:`authentication <authentication_index>`.
+  * For all vector source types it is possible to define the :guilabel:`Encoding` or
+    to use the :menuselection:`Automatic -->` setting.
 
 .. _mesh_loading:
 
