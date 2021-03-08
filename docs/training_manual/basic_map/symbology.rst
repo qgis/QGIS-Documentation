@@ -565,12 +565,12 @@ The final result should look like this:
 .. admonition:: Answer
    :class: toggle
 
-   * Click on the |signPlus| button to add another Symbol level.
-   * Move the new symbol at the bottom of the list clicking the |arrowDown| button.
-   * Choose a good color to fill the water polygons.
-   * Click on :guilabel:`Marker` of the Geometry generator symbology and change the
-     circle with another shape as your wish.
-   * Try experimenting other options to get more useful results.
+   #. Click on the |signPlus| button to add another Symbol level.
+   #. Move the new symbol at the bottom of the list clicking the |arrowDown| button.
+   #. Choose a good color to fill the water polygons.
+   #. Click on :guilabel:`Marker` of the Geometry generator symbology and change the
+      circle with another shape as your wish.
+   #. Try experimenting other options to get more useful results.
 
 
 |hard| |FA| Creating a Custom SVG Fill
