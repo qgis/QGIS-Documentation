@@ -116,7 +116,7 @@ fastest path between the two points.
 How much time do you need to go from the start to the end point?
 
 .. admonition:: Answer
-   :class: toggle
+   :class: dropdown
 
    #. Open :menuselection:`Network Analysis --> Shortest Path (Point to Point)` and
       fill the dialog as:

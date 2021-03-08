@@ -23,21 +23,5 @@
  {% block sidebartitle %}
    {{ super() }}
    <a href= "{{pathto('genindex.html', 1)}}">Index</a>
- {% endblock %}
+ {% endblock sidebartitle %}
 
- <!-- Extending the document block with a custom function  -->
- {% block document %}
- <!-- write the content of the document block -->
- {{ super() }}
- <!-- The function adds the ability to expand/collaps the custom admonition box with a mouse click -->
-<script type="text/javascript">
-  $(document).ready(function () {
-    $(".toggle > *").hide();
-    $(".toggle .admonition-title").show();
-    $(".toggle .admonition-title").click(function () {
-      $(this).parent().children().not(".admonition-title").toggle(400);
-      $(this).parent().children(".admonition-title").toggleClass("open");
-    })
-  });
-</script>
-{% endblock %}

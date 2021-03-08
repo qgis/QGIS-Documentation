@@ -80,7 +80,7 @@ Repeat the steps above to add the :file:`places.shp` and :file:`rivers.shp`
 layers from the same folder (:file:`exercise_data/shapefile`) to the map.
 
 .. admonition:: Answer
-   :class: toggle
+   :class: dropdown
 
    In the main area of the dialog you should see many shapes with different
    colors. Each shape belongs to a layer you can identify by its color in the
@@ -191,7 +191,7 @@ using any of the methods explained above:
 * :guilabel:`water`
 
 .. admonition:: Answer
-   :class: toggle
+   :class: dropdown
 
    Your map should have seven layers:
 

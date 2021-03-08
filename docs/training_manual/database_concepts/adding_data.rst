@@ -54,7 +54,7 @@ Result:
 Use the :kbd:`INSERT` command to add a new street to the :kbd:`streets` table.
 
 .. admonition:: Answer
-  :class: toggle
+  :class: dropdown
 
   The SQL command you should use looks like this (you can replace the street name
   with a name of your choice)::
@@ -94,7 +94,7 @@ corresponding street record.
 Using the above knowledge, add the new person to the database.
 
 .. admonition:: Answer
-  :class: toggle
+  :class: dropdown
 
   Here is the correct SQL statement::
   

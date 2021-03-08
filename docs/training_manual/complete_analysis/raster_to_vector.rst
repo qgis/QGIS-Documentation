@@ -50,7 +50,7 @@ Refer back to the module on vector analysis.
   :file:`suitable_terrain.shp`.
 
 .. admonition:: Answer
-  :class: toggle
+  :class: dropdown
 
 
    #. Open the :guilabel:`Query Builder` by right-clicking on the

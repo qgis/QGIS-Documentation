@@ -45,7 +45,7 @@ the :guilabel:`suitable_terrain` layer? Why or why not? Which ones would you
 deem to be unsuitable?
 
 .. admonition:: Answer
-   :class: toggle
+   :class: dropdown
 
    You may notice that some of the buildings in your :file:`new_solution` layer
    have been "sliced" by the :guilabel:`Intersection` tool. This shows that only

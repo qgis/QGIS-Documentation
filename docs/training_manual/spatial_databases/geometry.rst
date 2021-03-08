@@ -30,7 +30,7 @@ the geometry_columns table.
 * Create a spatial index on the new geometry column
 
 .. admonition:: Answer
-  :class: toggle
+  :class: dropdown
 
   ::
 
@@ -130,7 +130,7 @@ Your updated people schema should look something like this:
 
 
 .. admonition:: Answer
-  :class: toggle
+  :class: dropdown
 
   ::
 

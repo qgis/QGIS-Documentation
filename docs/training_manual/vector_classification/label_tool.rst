@@ -158,7 +158,7 @@ and see what happens.
   of ``2.0`` Millimeters.
 
 .. admonition:: Answer
-   :class: toggle
+   :class: dropdown
 
    Your map should now show the marker points and the labels should be offset by
    2mm. The style of the markers and labels should allow both to be
@@ -172,7 +172,7 @@ and see what happens.
   to be suitable for viewing at this scale.
 
 .. admonition:: Answer
-   :class: toggle
+   :class: dropdown
 
    One possible solution has this final product:
 
@@ -329,7 +329,7 @@ field matches ``town`` are displayed in italics.
    (each key in the ``place`` field)
 
 .. admonition:: Answer
-   :class: toggle
+   :class: dropdown
 
    #. Still in edit mode, set the ``FONT_SIZE`` values to whatever you prefer.
       The example uses ``16`` for towns, ``14`` for suburbs, ``12`` for

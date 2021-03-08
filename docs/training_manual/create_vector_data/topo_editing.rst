@@ -165,7 +165,7 @@ So you are advised to turn off snapping before cutting a hole.
    Click inside the hole to delete it.
 
 .. admonition:: Answer
-   :class: toggle
+   :class: dropdown
 
    The exact shape doesn't matter, but you should be getting a hole in the middle
    of your feature, like this one:
@@ -195,7 +195,7 @@ would use this tool to create them.
    .. Note:: Click inside the part to delete it.
 
 .. admonition:: Answer
-   :class: toggle
+   :class: dropdown
 
    #. First select the |largeLandUseArea|:
 
@@ -300,7 +300,7 @@ part of the polygon:
 
 
 .. admonition:: Answer
-   :class: toggle
+   :class: dropdown
 
    * Use the :guilabel:`Merge Selected Features` tool, making sure to first select
      both of the polygons you wish to merge.

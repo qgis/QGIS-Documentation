@@ -55,7 +55,7 @@ Change the color of the :guilabel:`water` layer to light blue. Try to use the
 :guilabel:`Layer Styling` panel instead of the :guilabel:`Layer Properties` menu.
 
 .. admonition:: Solution
-   :class: toggle
+   :class: dropdown
 
    * Verify that the colors are changing as you expect them to change.
    * It is enough to select the :guilabel:`water` layer in the legend and then click
@@ -111,7 +111,7 @@ button and see all the changes instantly. That panel also allows you to undo
 individual changes while symbolizing a layer.
 
 .. admonition:: Answer
-   :class: toggle
+   :class: dropdown
 
    Your map should now look like this:
 
@@ -235,7 +235,7 @@ texture for the :guilabel:`buildings` layer using the methods above.
 
 
 .. admonition:: Answer
-   :class: toggle
+   :class: dropdown
 
    Customize your :guilabel:`buildings` layer as you like, but remember that it
    has to be easy to tell different layers apart on the map.
@@ -330,7 +330,7 @@ rendering order via the :menuselection:`Advanced --> Symbol levels...` dialog.
 
 
 .. admonition:: Answer
-   :class: toggle
+   :class: dropdown
 
    To make the required symbol, you need three symbol layers:
 
@@ -373,7 +373,7 @@ rudimentary pre-classified data.
 
 
 .. admonition:: Answer
-   :class: toggle
+   :class: dropdown
 
    #. Adjust your symbol levels to these values:
 
@@ -494,7 +494,7 @@ and change the outline to look like this:
 
 
 .. admonition:: Answer
-   :class: toggle
+   :class: dropdown
 
    Here are examples of the symbol structure:
 
@@ -563,7 +563,7 @@ The final result should look like this:
 
 
 .. admonition:: Answer
-   :class: toggle
+   :class: dropdown
 
    #. Click on the |signPlus| button to add another Symbol level.
    #. Move the new symbol at the bottom of the list clicking the |arrowDown| button.

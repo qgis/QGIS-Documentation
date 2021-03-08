@@ -272,7 +272,7 @@ Now that we have the data, let's use them to render the ``landuse`` layer.
   you get a classification that makes sense.
 
 .. admonition:: Answer
-   :class: toggle
+   :class: dropdown
 
    The settings you used might not be the same, but with the values
    :guilabel:`Classes` = ``6`` and :guilabel:`Mode` = :guilabel:`Natural Breaks

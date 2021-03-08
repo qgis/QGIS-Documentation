@@ -338,7 +338,7 @@ Our track is a little further to the south:
    |toggleEditing| :sup:`Toggle Editing` button.
 
 .. admonition:: Answer
-   :class: toggle
+   :class: dropdown
 
    The symbology doesn't matter, but the results should look more or less like
    this:

@@ -280,7 +280,7 @@ It shall be ``1 km`` in radius.
 Save the new layer in the :file:`vector_analysis.gpkg` file as ``schools_buffer_1km_dissolved``.
 
 .. admonition:: Answer
-   :class: toggle
+   :class: dropdown
 
    * Your buffer dialog should look like this:
 
@@ -392,7 +392,7 @@ Using the processes described above, create a new layer called
 within 500m of a restaurant.
 
 .. admonition:: Answer
-   :class: toggle
+   :class: dropdown
 
    To create the new :guilabel:`houses_restaurants_500m` layer, we go through a two step
    process:

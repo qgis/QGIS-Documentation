@@ -100,7 +100,7 @@ Try to reclassify the :file:`g_dem` layer into 3 new categories:
 * from 1400 to the maximum raster value, new value = 3
 
 .. admonition:: Answer
-   :class: toggle
+   :class: dropdown
 
    To discover the maximum value of the raster run the ``r.info`` tool: in the
    console you will see that the maximum value is 1699.

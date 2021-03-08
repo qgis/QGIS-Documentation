@@ -38,7 +38,7 @@ How do we know that the query above returns all the points within 2 *degrees*?
 Why not 2 *meters*? Or any other unit, for that matter?
 
 .. admonition:: Answer
-  :class: toggle
+  :class: dropdown
 
   The units being used by the example query are degrees, because the CRS that
   the layer is using is WGS 84. This is a Geographic CRS, which means that its
@@ -94,7 +94,7 @@ Result:
 Modify the cities table so its geometry column is spatially indexed.
 
 .. admonition:: Answer
-  :class: toggle
+  :class: dropdown
 
   ::
 

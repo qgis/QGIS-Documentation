@@ -67,7 +67,7 @@ including a geometry field for storing polygons (the city boundaries). Make
 sure it has a constraint enforcing geometries to be polygons.
 
 .. admonition:: Answer
-   :class: toggle
+   :class: dropdown
 
    ::
 
@@ -119,7 +119,7 @@ about the EPSG).
 Add an appropriate `geometry_columns` entry for your new cities layer
 
 .. admonition:: Answer
-   :class: toggle
+   :class: dropdown
 
    ::
 
@@ -198,7 +198,7 @@ Formulate a query that shows a person's name, street name and position (from the
 the_geom column) as plain text.
 
 .. admonition:: Answer
-   :class: toggle
+   :class: dropdown
 
    ::
 

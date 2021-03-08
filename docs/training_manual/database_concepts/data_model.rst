@@ -254,7 +254,7 @@ valid names: change them to make them valid). Make sure you give the table an
 ID column with the same data-type as above.
 
 .. admonition:: Answer
-  :class: toggle
+  :class: dropdown
 
   The SQL required to create the correct people table is::
 
@@ -383,7 +383,7 @@ If you want to get rid of a table you can use the :kbd:`drop` command:
 In our current example, the above command would not work. Why not?
 
 .. admonition:: Answer
-  :class: toggle
+  :class: dropdown
 
   The reason the DROP command would not work in this case is because the
   *people* table has a Foreign Key constraint to the *streets* table. This means
