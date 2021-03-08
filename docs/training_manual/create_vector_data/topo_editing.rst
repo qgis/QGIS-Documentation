@@ -197,17 +197,17 @@ would use this tool to create them.
 .. admonition:: Answer
    :class: toggle
 
-   * First select the |largeLandUseArea|:
+   #. First select the |largeLandUseArea|:
 
-     .. figure:: img/park_selected.png
-        :align: center
+      .. figure:: img/park_selected.png
+         :align: center
 
-   * Now add your new part:
+   #. Now add your new part:
 
-     .. figure:: img/new_park_area_answer.png
-        :align: center
+      .. figure:: img/new_park_area_answer.png
+         :align: center
 
-   * Undo your edit before continuing with the exercise for the next tool.
+   #. Undo your edit before continuing with the exercise for the next tool.
 
 
 |moderate| |FA| Tool: Reshape Features
