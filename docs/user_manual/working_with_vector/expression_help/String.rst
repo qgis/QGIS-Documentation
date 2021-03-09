@@ -160,6 +160,9 @@ Formats a date type or string into a custom string format. Uses Qt date/time for
    * - Examples
      - * ``format_date('2012-05-15','dd.MM.yyyy')`` → '15.05.2012'
        * ``format_date('2012-05-15','d MMMM yyyy','fr')`` → '15 mai 2012'
+       * ``format_date('2012-05-15','dddd')`` → 'Tuesday'
+       * ``format_date('2012-05-15 13:54:20','dd.MM.yy')`` → '15.05.12'
+       * ``format_date('13:54:20','hh:mm AP')`` → '01:54 PM'
 
 
 .. end_format_date_section
