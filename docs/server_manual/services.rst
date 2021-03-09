@@ -12,7 +12,7 @@ Services
 QGIS Server is able to serve data according to standard protocols as described
 by the **Open Geospatial Consortium (OGC)**:
 
-- WMS 1.1.0 and 1.3.0
+- WMS 1.1.1 and 1.3.0
 - WFS 1.0.0 and 1.1.0
 - OGC API - Features (WFS3)
 - WCS 1.1.1
@@ -26,7 +26,7 @@ behavior thanks to the QGIS rendering engine.
 Web Map Service (WMS)
 =====================
 
-The **1.1.0** and **1.3.0** WMS standards implemented in QGIS Server provide
+The **1.1.1** and **1.3.0** WMS standards implemented in QGIS Server provide
 a HTTP interface to request map or legend images generated from a QGIS project.
 A typical WMS request defines the QGIS project to use, the layers to render as
 well as the image format to generate. Basic support is also available for
@@ -34,7 +34,7 @@ well as the image format to generate. Basic support is also available for
 
 Specifications:
 
-- `WMS 1.1.0 <https://portal.opengeospatial.org/files/?artifact_id=1081&version=1&format=pdf>`_
+- `WMS 1.1.1 <https://portal.ogc.org/files/?artifact_id=1081&amp;version=1&amp;format=pdf>`_
 - `WMS 1.3.0 <https://portal.opengeospatial.org/files/?artifact_id=14416&format=pdf>`_
 - `SLD 1.1.0 WMS profile <http://portal.opengeospatial.org/files/?artifact_id=22364&format=pdf>`_
 
@@ -66,7 +66,7 @@ GetMap
 ------
 
 Standard parameters for the **GetMap** request according to the OGC
-WMS 1.1.0 and 1.3.0 specifications:
+WMS 1.1.1 and 1.3.0 specifications:
 
 .. csv-table::
    :header: "Parameter", "Required", "Description"
@@ -155,7 +155,7 @@ VERSION
 This parameter allows to specify the version of the service to use.
 Available values for the ``VERSION`` parameter are:
 
-- ``1.1.0``
+- ``1.1.1``
 - ``1.3.0``
 
 If no version is indicated in the request, then ``1.3.0`` is used by
@@ -234,8 +234,8 @@ SRS / CRS
 ^^^^^^^^^
 
 This parameter allows to indicate the map output Spatial Reference
-System in WMS **1.1.0** and has to be formed like ``EPSG:XXXX``.
-Note that ``CRS`` is also supported if current version is **1.1.0**.
+System in WMS **1.1.1** and has to be formed like ``EPSG:XXXX``.
+Note that ``CRS`` is also supported if current version is **1.1.1**.
 
 For WMS **1.3.0**, ``CRS`` parameter is preferable but ``SRS`` is also
 supported.
@@ -264,7 +264,7 @@ because of the ``VERSION`` parameter:
   http://localhost/qgisserver?
   SERVICE=WMS
   &REQUEST=GetMap
-  &VERSION=1.1.0
+  &VERSION=1.1.1
   &CRS=EPSG:4326
   &SRS=EPSG:2854
   &...
@@ -294,7 +294,7 @@ Coordinates have to be separated by a comma.
 
 However, a slight difference has to be noticed according to the
 current ``VERSION`` parameter.
-In WMS **1.1.0**, coordinates are formed like
+In WMS **1.1.1**, coordinates are formed like
 ``minx,miny,maxx,maxy`` or ``minlong,minlat,maxlong,maxlat``.
 For example:
 
@@ -303,7 +303,7 @@ For example:
   http://localhost/qgisserver?
   SERVICE=WMS
   &REQUEST=GetMap
-  &VERSION=1.1.0
+  &VERSION=1.1.1
   &SRS=epsg:4326
   &BBOX=-180,-90,180,90
   &...
@@ -601,7 +601,7 @@ GetFeatureInfo
 --------------
 
 Standard parameters for the **GetFeatureInfo** request according to
-the OGC WMS 1.1.0 and 1.3.0 specifications:
+the OGC WMS 1.1.1 and 1.3.0 specifications:
 
 .. csv-table::
    :header: "Parameter", "Required", "Description"
@@ -621,9 +621,9 @@ the OGC WMS 1.1.0 and 1.3.0 specifications:
    ":ref:`QUERY_LAYERS <wms-querylayers>`", "Yes", "Layers to query"
    ":ref:`FEATURE_COUNT <wms-featurecount>`", "No", "Maximum number of features to return"
    ":ref:`I <wms-i>`", "No", "Pixel column of the point to query"
-   ":ref:`X <wms-x>`", "No", "Same as `I` parameter, but in WMS 1.1.0"
+   ":ref:`X <wms-x>`", "No", "Same as `I` parameter, but in WMS 1.1.1"
    ":ref:`J <wms-j>`", "No", "Pixel row of the point to query"
-   ":ref:`Y <wms-y>`", "No", "Same as `J` parameter, but in WMS 1.1.0"
+   ":ref:`Y <wms-y>`", "No", "Same as `J` parameter, but in WMS 1.1.1"
    "WMS_PRECISION", "No", "The precision (number of digits) to be used
    when returning geometry (see :ref:`how to add geometry to feature response <addGeometryToFeatureResponse>`).
    The default value is ``-1`` meaning that the precision defined in the project is used."
@@ -731,7 +731,7 @@ column of the query point.
 X
 ^
 
-Same parameter as ``I``, but defined in WMS 1.1.0.
+Same parameter as ``I``, but defined in WMS 1.1.1.
 
 .. _`wms-j`:
 
@@ -746,7 +746,7 @@ row of the query point.
 Y
 ^
 
-Same parameter as ``J``, but defined in WMS 1.1.0.
+Same parameter as ``J``, but defined in WMS 1.1.1.
 
 .. _`wms-fipointtolerance`:
 
@@ -2147,9 +2147,9 @@ The ``GetMap`` request is in the format::
  &HIGHLIGHT_LABELCOLOR=%23000000
  &HIGHLIGHT_LABELBUFFERCOLOR=%23FFFFFF
  &HIGHLIGHT_LABELBUFFERSIZE=1.5
- 
+
 The ``GetPrint`` equivalent is in the format (note that ``mapX:`` parameter is added to tell which map has redlining)::
- 
+
  http://qgisplatform.demo/cgi-bin/qgis_mapserv.fcgi?map=/world.qgs&SERVICE=WMS&VERSION=1.3.0&
  REQUEST=GetPrint
  ...
