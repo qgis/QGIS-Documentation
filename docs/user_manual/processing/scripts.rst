@@ -651,6 +651,7 @@ You can document your scripts by overloading the
 :class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>`.
 
 .. _flags:
+
 Flags
 -----
 
@@ -671,6 +672,7 @@ and more.
     algorithm in the main thread instead.
 
     Here is how flags can be added to the ones inherited by the base class
+
     .. code-block:: python
         def flags(self):
         return super().flags() | QgsProcessingAlgorithm.FlagNoThreading
@@ -701,19 +703,21 @@ interface.
   :ref:`Processing settings dialog <processing.options>` can cause a runtime error
   in :source:`python/plugins/processing/gui/AlgorithmDialog.py` invoked by
   :class:`QgsProcessingAlgorithmDialogBase <qgis.core.QgsProcessingAlgorithmDialogBase>`
-  due to a missing :class:`QgsProcessingProvider <qgis.core.QgsProcessingProvider>`::
+  due to a missing :class:`QgsProcessingProvider <qgis.core.QgsProcessingProvider>`
+
+  ::
 
   RuntimeError: wrapped C/C++ object of type AlgorithmDialog has been deleted 
   An error has occurred while executing Python code: 
 
-  RuntimeError: wrapped C/C++ object of type AlgorithmDialog has been deleted 
-  Traceback (most recent call last):
-    File "C:/OSGEO4~1/apps/qgis/./python/plugins\processing\gui\AlgorithmDialog.py", line 246, in runAlgorithm
-      on_complete(ok, results)
-    File "C:/OSGEO4~1/apps/qgis/./python/plugins\processing\gui\AlgorithmDialog.py", line 201, in on_complete
-      self.tr('Execution completed in {0:0.2f} seconds').format(time.time() - start_time))
-  RuntimeError: wrapped C/C++ object of type AlgorithmDialog has been deleted
-
+	RuntimeError: wrapped C/C++ object of type AlgorithmDialog has been deleted 
+	Traceback (most recent call last):
+	File "C:/OSGEO4~1/apps/qgis/./python/plugins\processing\gui\AlgorithmDialog.py", line 246, in runAlgorithm
+		on_complete(ok, results)
+	File "C:/OSGEO4~1/apps/qgis/./python/plugins\processing\gui\AlgorithmDialog.py", line 201, in on_complete
+		self.tr('Execution completed in {0:0.2f} seconds').format(time.time() - start_time))
+	RuntimeError: wrapped C/C++ object of type AlgorithmDialog has been deleted
+  
 
 There are already many processing algorithms available in QGIS.
 You can find code on :source:`python/plugins/processing/algs/qgis`.
