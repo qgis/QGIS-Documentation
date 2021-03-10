@@ -138,13 +138,9 @@ the coming days.
 Try to find each of these tools on your screen. What is their purpose?
 
 1. |fileSaveAs|
-
 2. |zoomToLayer|
-
 3. |invertSelection|
-
-4. .. figure:: img/toggle_render.png
-
+4. |checkbox|:guilabel:`Render`
 5. |measure|
 
 .. note:: If any of these tools is not visible on the screen, try enabling
@@ -174,6 +170,8 @@ lesson we will see how to load some common data types.
 .. |TY| replace:: Try Yourself
 .. |WN| replace:: What's Next?
 .. |basic| image:: /static/common/basic.png
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
 .. |favourites| image:: /static/common/mIconFavourites.png
    :width: 1.5em
 .. |fileSaveAs| image:: /static/common/mActionFileSaveAs.png
