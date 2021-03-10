@@ -674,6 +674,7 @@ and more.
     Here is how flags can be added to the ones inherited by the base class
 
     .. code-block:: python
+
         def flags(self):
         return super().flags() | QgsProcessingAlgorithm.FlagNoThreading
 
@@ -707,8 +708,8 @@ interface.
 
   ::
 
-  RuntimeError: wrapped C/C++ object of type AlgorithmDialog has been deleted 
-  An error has occurred while executing Python code: 
+     RuntimeError: wrapped C/C++ object of type AlgorithmDialog has been deleted 
+     An error has occurred while executing Python code: 
 
 	RuntimeError: wrapped C/C++ object of type AlgorithmDialog has been deleted 
 	Traceback (most recent call last):
@@ -717,7 +718,7 @@ interface.
 	File "C:/OSGEO4~1/apps/qgis/./python/plugins\processing\gui\AlgorithmDialog.py", line 201, in on_complete
 		self.tr('Execution completed in {0:0.2f} seconds').format(time.time() - start_time))
 	RuntimeError: wrapped C/C++ object of type AlgorithmDialog has been deleted
-  
+     
 
 There are already many processing algorithms available in QGIS.
 You can find code on :source:`python/plugins/processing/algs/qgis`.
