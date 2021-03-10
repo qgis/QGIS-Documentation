@@ -703,7 +703,7 @@ interface.
 * Scripts not executed within the path configured in 
   :ref:`Processing settings dialog <processing.options>` can cause a runtime error
   in :source:`python/plugins/processing/gui/AlgorithmDialog.py` invoked by
-  :class:`QgsProcessingAlgorithmDialogBase <qgis.core.QgsProcessingAlgorithmDialogBase>`
+  :class:`QgsProcessingAlgorithmDialogBase <qgis.gui.QgsProcessingAlgorithmDialogBase>`
   due to a missing :class:`QgsProcessingProvider <qgis.core.QgsProcessingProvider>`
 
   ::
