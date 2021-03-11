@@ -700,7 +700,7 @@ interface.
 * If you are not sure whether the methods used in your script are thread safe
   and the script causes QGIS to crash consider implementing the
   :meth:`flags() <qgis.core.QgsProcessingAlgorithm.flags>` method as explained in
-  :ref:`Flags <_flags>`
+  :ref:`flags`
 * Scripts not executed within the path configured in 
   :ref:`Processing settings dialog <processing.options>` can cause a runtime error
   in :source:`python/plugins/processing/gui/AlgorithmDialog.py` invoked by
