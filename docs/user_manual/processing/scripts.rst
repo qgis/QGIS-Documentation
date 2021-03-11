@@ -675,6 +675,7 @@ and more.
 
     .. code-block:: python
 
+
         def flags(self):
         return super().flags() | QgsProcessingAlgorithm.FlagNoThreading
 
