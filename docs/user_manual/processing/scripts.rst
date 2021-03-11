@@ -667,7 +667,8 @@ and more.
     to keep QGIS responsive while the processing task runs.
     If your algorithm is **regularly crashing**, you are probably using API
     calls which are not safe to do in a background thread.
-    Try returning the **QgsProcessingAlgorithm.FlagNoThreading** flag from
+    Try returning the :attr:`QgsProcessingAlgorithm.FlagNoThreading
+    <qgis.core.QgsProcessingAlgorithm.FlagNoThreading>` flag from
     your algorithm's flags() method to force Processing to run your
     algorithm in the main thread instead.
 
