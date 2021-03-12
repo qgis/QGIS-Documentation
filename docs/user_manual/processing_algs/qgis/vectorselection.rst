@@ -729,8 +729,8 @@ Parameters
 
        * 0 --- creating new selection
        * 1 --- adding to current selection
-       * 2 --- selecting within current selection
-       * 3 --- removing from current selection
+       * 2 --- removing from current selection
+       * 3 --- selecting within current selection
 
 Outputs
 .......
@@ -799,8 +799,8 @@ Parameters
 
        * 0 --- creating new selection
        * 1 --- adding to current selection
-       * 2 --- selecting within current selection
-       * 3 --- removing from current selection
+       * 2 --- removing from current selection
+       * 3 --- selecting within current selection
 
 Outputs
 .......
