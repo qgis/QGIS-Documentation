@@ -231,7 +231,8 @@ Where parameters is a dictionary of parameters that depend on the
 algorithm you want to run, and is exactly the list that the
 ``algorithmHelp()`` method gives you.
 
-::
+.. code-block:: python
+   :linenos:
 
     >>> processing.run("native:buffer", {'INPUT': '/data/lines.shp',
                   'DISTANCE': 100.0,
@@ -308,14 +309,16 @@ appended to the given file path.
 
 Unlike when an algorithm is executed from the toolbox, outputs are not
 added to the map canvas if you execute that same algorithm from the
-Python console using ``run()``, but ``runAndLoadResults()`` will do
-that.
+Python console using :meth:`run() <qgis.core.QgsProcessingAlgorithm.run>`,
+but ``runAndLoadResults()`` will do that.
 
-The ``run`` method returns a dictionary with one or more output names (the
+The :meth:`run() <qgis.core.QgsProcessingAlgorithm.run>` method returns
+a dictionary with one or more output names (the
 ones shown in the algorithm description) as keys and the file paths of
 those outputs as values:
 
-::
+.. code-block:: python
+   :linenos:
 
     >>> myresult = processing.run("native:buffer", {'INPUT': '/data/lines.shp',
                   'DISTANCE': 100.0,
@@ -330,7 +333,8 @@ those outputs as values:
 
 You can load feature output by passing the corresponding file paths to
 the ``load()`` method.
-Or you could use ``runAndLoadResults()`` instead of ``run()`` to load
+Or you could use ``runAndLoadResults()`` instead of
+:meth:`run() <qgis.core.QgsProcessingAlgorithm.run>` to load
 them immediately.
 
 If you want to open an algorithm dialog from the console you can use the 
@@ -338,7 +342,8 @@ If you want to open an algorithm dialog from the console you can use the
 name, but you can also define the dictionary of parameters so that the dialog 
 will be filled automatically:
 
-::
+.. code-block:: python
+   :linenos:
 
     >>> my_dialog = processing.createAlgorithmDialog("native:buffer", {
                   'INPUT': '/data/lines.shp',
@@ -353,7 +358,8 @@ will be filled automatically:
 
 The ``execAlgorithmDialog`` method opens the dialog immediately:
 
-::
+.. code-block:: python
+   :linenos:
 
     >>> processing.execAlgorithmDialog("native:buffer", {
                   'INPUT': '/data/lines.shp',
@@ -393,6 +399,7 @@ distance on a vector layer that is specified by the user, after first
 smoothing the layer.
 
 .. code-block:: python
+  :linenos:
 
   from qgis.core import (QgsProcessingAlgorithm, 
          QgsProcessingParameterNumber,
