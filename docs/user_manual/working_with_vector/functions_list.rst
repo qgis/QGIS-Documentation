@@ -865,7 +865,7 @@ To use these variables in an expression, they should be preceded by the
 ``@`` character (e.g, ``@row_number``).
 
 .. csv-table::
-   :header: "Function", "Description"
+   :header: "Variable", "Description"
    :widths: 25, 70
 
    "algorithm_id", "The unique ID of an algorithm"
