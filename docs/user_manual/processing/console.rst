@@ -447,7 +447,7 @@ smoothing the layer.
               'MITER_LIMIT': 10,
               'DISSOLVE': True,
               'OUTPUT': parameters[self.OUTPUT_BUFFER]},
-              context=context, feedback=feedback, is_child_algorithm=True)
+              context=context, feedback=feedback)
           buffered = algresult['OUTPUT']
           return {self.OUTPUT_BUFFER: buffered}
 
@@ -473,9 +473,8 @@ functions are specified:
   Here we first run the ``smoothgeometry`` algorithm to smooth the
   geometry, and then we run the ``buffer`` algorithm on the smoothed
   output.
-  To be able to run algorithms from within another algorithm we have to
-  define a dummy function for the ``onFinish`` parameter for ``run``.
-  This is the ``no_post_process`` function.
+  To be able to run the ``smoothgeometry`` algorithm from within the other
+  algorithm we have to set the ``is_child_algorithm`` argument to :const:`True`.
   You can see how input and output parameters are used as parameters
   to the ``smoothgeometry`` and ``buffer`` algorithms.
 
