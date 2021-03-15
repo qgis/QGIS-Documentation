@@ -2161,7 +2161,7 @@ An example is (in module MyForms.py):
 
   def open(dialog,layer,feature):
       geom = feature.geometry()
-      control = dialog.findChild(QWidged,"My line edit")
+      control = dialog.findChild(QWidget,"My line edit")
 
 Reference in Python Init Function like so: ``open``
 
