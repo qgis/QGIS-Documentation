@@ -91,7 +91,6 @@ Registering a Vector layer as Temporal
    # get a handle to current project and determine start and end range of ALL current temporal enabled layers
    project = QgsProject.instance()
    time_range = QgsTemporalUtils.calculateTemporalRangeForProject(project)
-   print(f'Project Temporal Range: start: {time_range.begin().toString()} end: {time_range.end().toString()}')
 
    # get the current  responsible for the mapCanvas behaviour and Temporal Controller gui
    navigator = iface.mapCanvas().temporalController()
@@ -109,7 +108,7 @@ Saving temporal images
 
 .. testcode:: temporal_data
 
-   # now create an set of images so you can create an animated gif or mp4 movie of it
+   # now create a set of images so you can create an animated gif or mp4 movie of it
 
    # setup all your map settings stuff here, e.g. scale, extent, image size, etc
    map_settings = QgsMapSettings()
@@ -119,7 +118,6 @@ Saving temporal images
    rect.scale(1.0)
    map_settings.setExtent(rect)
    map_settings.setIsTemporal(True)
-
 
    navigator = iface.mapCanvas().temporalController()
    save_dir = tempfile.gettempdir() + os.sep
