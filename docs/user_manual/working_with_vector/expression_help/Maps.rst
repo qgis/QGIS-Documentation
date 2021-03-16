@@ -23,7 +23,7 @@ Loads a JSON formatted string.
    * - Arguments
      - * **string** - JSON string
    * - Examples
-     - * ``from_json('{"qgis":"rocks"}')`` → { "qgis" : "rocks" }
+     - * ``from_json('{"qgis":"rocks"}')`` → { 'qgis': 'rocks' }
        * ``from_json('[1,2,3]')`` → [1,2,3]
 
 
@@ -46,32 +46,10 @@ Creates a map from a hstore-formatted string.
    * - Arguments
      - * **string** - the input string
    * - Examples
-     - * ``hstore_to_map('qgis=>rocks')`` → { "qgis" : "rocks" }
+     - * ``hstore_to_map('qgis=>rocks')`` → { 'qgis': 'rocks' }
 
 
 .. end_hstore_to_map_section
-
-.. json_to_map_section
-
-.. _expression_function_Maps_json_to_map:
-
-json_to_map
-...........
-
-Creates a map from a json-formatted string.
-
-.. list-table::
-   :widths: 15 85
-
-   * - Syntax
-     - json_to_map(string)
-   * - Arguments
-     - * **string** - the input string
-   * - Examples
-     - * ``json_to_map('{"qgis":"rocks"}')`` → { "qgis" : "rocks" }
-
-
-.. end_json_to_map_section
 
 .. map_section
 
@@ -157,7 +135,7 @@ Returns a map containing all the entries of the given maps. If two maps contain 
    * - Arguments
      - * **map** - a map
    * - Examples
-     - * ``map_concat(map('1','one', '2','overridden'),map('2','two', '3','three'))`` → { '1': 'one, '2': 'two', '3': 'three' }
+     - * ``map_concat(map('1','one', '2','overridden'),map('2','two', '3','three'))`` → { '1': 'one', '2': 'two', '3': 'three' }
 
 
 .. end_map_concat_section
@@ -215,7 +193,7 @@ Returns true if the given key exists in the map.
 map_get
 .......
 
-Returns the value of a map, given it's key.
+Returns the value of a map, given its key. Returns NULL if the key does not exist.
 
 .. list-table::
    :widths: 15 85
@@ -227,7 +205,7 @@ Returns the value of a map, given it's key.
        * **key** - the key to lookup
    * - Examples
      - * ``map_get(map('1','one','2','two'),'2')`` → 'two'
-       * ``map_get( item_variables('Map 0'), 'map_scale')`` → scale of the item 'Map 0' in the current print layout
+       * ``map_get( item_variables('Map 0'), 'map_scale')`` → scale of the item 'Map 0' (if it exists) in the current print layout
 
 
 .. end_map_get_section
@@ -239,7 +217,7 @@ Returns the value of a map, given it's key.
 map_insert
 ..........
 
-Returns a map with an added key/value.
+Returns a map with an added key/value. If the key already exists, its value is overridden.
 
 .. list-table::
    :widths: 15 85
@@ -252,6 +230,7 @@ Returns a map with an added key/value.
        * **value** - the value to add
    * - Examples
      - * ``map_insert(map('1','one'),'3','three')`` → { '1': 'one', '3': 'three' }
+       * ``map_insert(map('1','one','2','overridden'),'2','two')`` → { '1': 'one', '2': 'two' }
 
 
 .. end_map_insert_section
@@ -273,32 +252,10 @@ Merge map elements into a hstore-formatted string.
    * - Arguments
      - * **map** - the input map
    * - Examples
-     - * ``map_to_hstore(map('qgis','rocks'))`` → "qgis"=>"rocks"}
+     - * ``map_to_hstore(map('qgis','rocks'))`` → '"qgis"=>"rocks"'
 
 
 .. end_map_to_hstore_section
-
-.. map_to_json_section
-
-.. _expression_function_Maps_map_to_json:
-
-map_to_json
-...........
-
-Merge map elements into a json-formatted string.
-
-.. list-table::
-   :widths: 15 85
-
-   * - Syntax
-     - map_to_json(map)
-   * - Arguments
-     - * **map** - the input map
-   * - Examples
-     - * ``map_to_json(map('qgis','rocks'))`` → {"qgis":"rocks"}
-
-
-.. end_map_to_json_section
 
 .. to_json_section
 
