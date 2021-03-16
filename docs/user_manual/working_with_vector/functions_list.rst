@@ -259,13 +259,6 @@ This group contains general assorted functions.
 
 .. include:: expression_help/General.rst
    :start-after: :orphan:
-   :end-before: .. end_layer_property_section
-
-Further reading: :ref:`vector <vectorinformationmenu>`, :ref:`raster <raster_information>`
-and :ref:`mesh <mesh_information>` layer properties
-
-.. include:: expression_help/General.rst
-   :start-after: .. end_layer_property_section
    :end-before: .. end_var_section
 
 Further reading: List of default :ref:`variables <expression_variables>`
@@ -633,6 +626,13 @@ It also provides some convenient functions to manipulate layers.
 
 .. include:: expression_help/Map_Layers.rst
    :start-after: :orphan:
+   :end-before: .. end_layer_property_section
+
+Further reading: :ref:`vector <vectorinformationmenu>`, :ref:`raster <raster_information>`
+and :ref:`mesh <mesh_information>` layer properties
+
+.. include:: expression_help/Map_Layers.rst
+   :start-after: .. end_layer_property_section
 
 
 .. index:: Map data structure, Dictionary, Key-value pairs, Associative arrays
