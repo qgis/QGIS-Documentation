@@ -312,7 +312,7 @@ QGIS installation path:
 
 * on Linux: :command:`export PYTHONPATH=/<qgispath>/share/qgis/python`
 * on Windows: :command:`set PYTHONPATH=c:\\<qgispath>\\python`
-* on macOS: :command:`export PYTHONPATH=/<qgispath>/Contents/Resources/python`
+* on macOS: :command:`export PYTHONPATH=/Applications/QGIS$QGIS_VERSION.app/Contents/Resources/python; export QT_QPA_PLATFORM_PLUGIN_PATH=/Applications/QGIS$QGIS_VERSION.app/Contents/PlugIns/platforms/; export DYLD_INSERT_LIBRARIES=/Applications/QGIS$QGIS_VERSION.app/Contents/MacOS/lib/libsqlite3.dylib`
 
 Now, the path to the PyQGIS modules is known, but they depend on
 the ``qgis_core`` and ``qgis_gui`` libraries (the Python modules serve
