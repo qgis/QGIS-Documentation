@@ -678,7 +678,7 @@ but:
 
 * supports **only** single point features
 * is **static** (no additional features can be added to the index after the
-  contruction)
+  construction)
 * is **much faster!**
 * allows direct retrieval of the original feature’s points, without requiring
   additional feature requests
