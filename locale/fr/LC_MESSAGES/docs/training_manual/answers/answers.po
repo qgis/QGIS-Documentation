@@ -5,22 +5,22 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
 # Francis Gasc <francisgasc@gmail.com>, 2020
+# Harrissou Sant-anna, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-13 09:01+0100\n"
+"POT-Creation-Date: 2021-03-03 02:15+0000\n"
 "PO-Revision-Date: 2020-12-24 10:27+0000\n"
-"Last-Translator: Francis Gasc <francisgasc@gmail.com>, 2020\n"
+"Last-Translator: Harrissou Sant-anna, 2021\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.8.0\n"
+"Generated-By: Babel 2.9.0\n"
 "Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
@@ -853,12 +853,19 @@ msgid "|moderate| *Calculate Slope (less than 2 and 5 degrees)*"
 msgstr "|moderate| *Calcul de la pente (moins que 2 et 5 degrés)*"
 
 #: ../../docs/training_manual/answers/answers.rst:551
-msgid "Set your :guilabel:`Raster calculator` dialog up like this:"
+msgid "Set your :guilabel:`Raster calculator` dialog up with:"
 msgstr ""
-"Configurez votre boîte de dialogue :guilabel:`Calculatrice Raster` comme "
-"ceci :"
+"Configurez votre boîte de dialogue :guilabel:`Calculatrice Raster` avec :"
 
-#: ../../docs/training_manual/answers/answers.rst:556
+#: ../../docs/training_manual/answers/answers.rst:553
+msgid "the following expression: ``slope@1 <= 2``"
+msgstr "l'expression suivante : ``slope@1 <= 2``"
+
+#: ../../docs/training_manual/answers/answers.rst:554
+msgid "the ``slope`` layer as the :guilabel:`Reference layer(s)`"
+msgstr "la couche ``slope`` comme :guilabel:`Couche(s) de référence`"
+
+#: ../../docs/training_manual/answers/answers.rst:559
 msgid ""
 "For the 5 degree version, replace the ``2`` in the expression and file name "
 "with ``5``."
@@ -866,31 +873,31 @@ msgstr ""
 "Pour la version à 5 degrés, remplacez le ``2`` dans l'expression et le nom "
 "du fichier par ``5``."
 
-#: ../../docs/training_manual/answers/answers.rst:559
+#: ../../docs/training_manual/answers/answers.rst:562
 msgid "Your results:"
 msgstr "Vos résultats:"
 
-#: ../../docs/training_manual/answers/answers.rst:561
+#: ../../docs/training_manual/answers/answers.rst:564
 msgid "2 degrees:"
 msgstr "2 degrés :"
 
-#: ../../docs/training_manual/answers/answers.rst:566
+#: ../../docs/training_manual/answers/answers.rst:569
 msgid "5 degrees:"
 msgstr "5 degrés :"
 
-#: ../../docs/training_manual/answers/answers.rst:571
+#: ../../docs/training_manual/answers/answers.rst:574
 msgid ":ref:`Back to text <backlink-raster-analysis-2>`"
 msgstr ":ref:`Retour au texte <backlink-raster-analysis-2>`"
 
-#: ../../docs/training_manual/answers/answers.rst:575
+#: ../../docs/training_manual/answers/answers.rst:578
 msgid "|RF| *Completing the Analysis*"
 msgstr "|RF| *Complément à l'Analyse*"
 
-#: ../../docs/training_manual/answers/answers.rst:580
+#: ../../docs/training_manual/answers/answers.rst:583
 msgid "|moderate| *Raster to Vector*"
 msgstr "|moderate| *Raster vers Vecteur*"
 
-#: ../../docs/training_manual/answers/answers.rst:582
+#: ../../docs/training_manual/answers/answers.rst:585
 msgid ""
 "Open the :guilabel:`Query Builder` by right-clicking on the "
 ":guilabel:`all_terrain` layer in the :guilabel:`Layers` panel, and selecting"
@@ -900,11 +907,11 @@ msgstr ""
 "couche :guilabel:`all_terrain` dans le panneau :guilabel:`Couches`, et en "
 "sélectionnant l'onglet :menuselection:`Propriétés --> Source`."
 
-#: ../../docs/training_manual/answers/answers.rst:585
+#: ../../docs/training_manual/answers/answers.rst:588
 msgid "Then build the query ``\"suitable\" = 1``."
 msgstr "Ensuite, construisez la requête ``\"suitable\" = 1``."
 
-#: ../../docs/training_manual/answers/answers.rst:586
+#: ../../docs/training_manual/answers/answers.rst:589
 msgid ""
 "Click :guilabel:`OK` to filter out all the polygons where this condition "
 "isn't met."
@@ -912,14 +919,14 @@ msgstr ""
 "Cliquez sur :guilabel:`OK` pour filtrer tous les polygones où cette "
 "condition n'est pas respectée."
 
-#: ../../docs/training_manual/answers/answers.rst:589
+#: ../../docs/training_manual/answers/answers.rst:592
 msgid ""
 "When viewed over the original raster, the areas should overlap perfectly:"
 msgstr ""
 "Lorsqu'on regarde sur le raster d'origine, les zones doivent se chevaucher "
 "parfaitement :"
 
-#: ../../docs/training_manual/answers/answers.rst:594
+#: ../../docs/training_manual/answers/answers.rst:597
 msgid ""
 "You can save this layer by right-clicking on the :guilabel:`all_terrain` "
 "layer in the :guilabel:`Layers` panel and choosing :guilabel:`Save As...`, "
@@ -930,15 +937,15 @@ msgstr ""
 "choisissant :guilabel:`Sauvegarder sous ...`, puis continuez selon les "
 "instructions."
 
-#: ../../docs/training_manual/answers/answers.rst:598
+#: ../../docs/training_manual/answers/answers.rst:601
 msgid ":ref:`Back to text <backlink-complete-analysis-1>`"
 msgstr ":ref:`Retour au texte <backlink-complete-analysis-1>`"
 
-#: ../../docs/training_manual/answers/answers.rst:604
+#: ../../docs/training_manual/answers/answers.rst:607
 msgid "|moderate| *Inspecting the Results*"
 msgstr "|moderate| *Contrôler les résultats*"
 
-#: ../../docs/training_manual/answers/answers.rst:606
+#: ../../docs/training_manual/answers/answers.rst:609
 msgid ""
 "You may notice that some of the buildings in your :file:`new_solution` layer"
 " have been \"sliced\" by the :guilabel:`Intersection` tool. This shows that "
@@ -953,25 +960,25 @@ msgstr ""
 "approprié. Nous pouvons donc raisonnablement éliminer ces bâtiments de notre"
 " ensemble de données."
 
-#: ../../docs/training_manual/answers/answers.rst:611
+#: ../../docs/training_manual/answers/answers.rst:614
 msgid ":ref:`Back to text <backlink-complete-analysis-2>`"
 msgstr ":ref:`Retour au texte <backlink-complete-analysis-2>`"
 
-#: ../../docs/training_manual/answers/answers.rst:617
+#: ../../docs/training_manual/answers/answers.rst:620
 msgid "|moderate| *Refining the Analysis*"
 msgstr "|moderate| *Affiner l'analyse*"
 
-#: ../../docs/training_manual/answers/answers.rst:619
+#: ../../docs/training_manual/answers/answers.rst:622
 msgid "At the moment, your analysis should look something like this:"
 msgstr "A ce stade, votre analyse devrait ressembler à peu près à ceci:"
 
-#: ../../docs/training_manual/answers/answers.rst:624
+#: ../../docs/training_manual/answers/answers.rst:627
 msgid "Consider a circular area, continuous for 100 meters in all directions."
 msgstr ""
 "Considérez une aire circulaire, continue sur 100 mètres dans toutes les "
 "directions."
 
-#: ../../docs/training_manual/answers/answers.rst:629
+#: ../../docs/training_manual/answers/answers.rst:632
 msgid ""
 "If it is greater than 100 meters in radius, then subtracting 100 meters from"
 " its size (from all directions) will result in a part of it being left in "
@@ -981,7 +988,7 @@ msgstr ""
 "toutes les directions) résultera dans l'apparition d'une partie restant au "
 "milieu."
 
-#: ../../docs/training_manual/answers/answers.rst:636
+#: ../../docs/training_manual/answers/answers.rst:639
 msgid ""
 "Therefore, you can run an *interior buffer* of 100 meters on your existing "
 ":guilabel:`suitable_terrain` vector layer. In the output of the buffer "
@@ -993,11 +1000,11 @@ msgstr ""
 " ce qui restera de la couche originelle représentera les surfaces disposant "
 "de plus de 100m autour."
 
-#: ../../docs/training_manual/answers/answers.rst:641
+#: ../../docs/training_manual/answers/answers.rst:644
 msgid "To demonstrate:"
 msgstr "Pour le démontrer:"
 
-#: ../../docs/training_manual/answers/answers.rst:643
+#: ../../docs/training_manual/answers/answers.rst:646
 msgid ""
 "Go to :menuselection:`Vector --> Geoprocessing Tools --> Buffer(s)` to open "
 "the Buffer(s) dialog."
@@ -1005,11 +1012,11 @@ msgstr ""
 "Allez à :menuselection:`Vecteur --> Outils de géotraitement --> Tampon(s)` "
 "pour ouvrir la fenêtre Tampon(s)."
 
-#: ../../docs/training_manual/answers/answers.rst:645
+#: ../../docs/training_manual/answers/answers.rst:648
 msgid "Set it up like this:"
 msgstr "Définissez-le comme ceci:"
 
-#: ../../docs/training_manual/answers/answers.rst:650
+#: ../../docs/training_manual/answers/answers.rst:653
 msgid ""
 "Use the :guilabel:`suitable_terrain` layer with ``10`` segments and a buffer"
 " distance of ``-100``. (The distance is automatically in meters because your"
@@ -1019,7 +1026,7 @@ msgstr ""
 "et une distance tampon de ``-100``. (La distance est automatiquement en "
 "mètres car votre carte utilise un CRS projeté)."
 
-#: ../../docs/training_manual/answers/answers.rst:653
+#: ../../docs/training_manual/answers/answers.rst:656
 msgid ""
 "Save the output in :file:`exercise_data/residential_development/` as "
 ":file:`suitable_terrain_continuous100m.shp`."
@@ -1027,7 +1034,7 @@ msgstr ""
 "Enregistrez le résultat dans :file:`exercise_data/residential_development/` "
 "sous :file:`suitable_terrain_continu100m.shp`."
 
-#: ../../docs/training_manual/answers/answers.rst:655
+#: ../../docs/training_manual/answers/answers.rst:658
 msgid ""
 "If necessary, move the new layer above your original "
 ":guilabel:`suitable_terrain` layer."
@@ -1035,11 +1042,11 @@ msgstr ""
 "Si nécessaire, déplacez la nouvelle couche au-dessus de votre couche "
 "d'origine :guilabel:`suitable_terrain`."
 
-#: ../../docs/training_manual/answers/answers.rst:658
+#: ../../docs/training_manual/answers/answers.rst:661
 msgid "Your results will look like something like this:"
 msgstr "Votre résultat ressemblera à peu près à ceci :"
 
-#: ../../docs/training_manual/answers/answers.rst:663
+#: ../../docs/training_manual/answers/answers.rst:666
 msgid ""
 "Now use the :guilabel:`Select by Location` tool (:menuselection:`Vector --> "
 "Research Tools --> Select by location`)."
@@ -1048,11 +1055,11 @@ msgstr ""
 "(:menuselection:`Vecteur --> Outils de recherche --> Sélection par "
 "localisation`)."
 
-#: ../../docs/training_manual/answers/answers.rst:665
+#: ../../docs/training_manual/answers/answers.rst:668
 msgid "Set up like this:"
 msgstr "Configurez comme suit :"
 
-#: ../../docs/training_manual/answers/answers.rst:670
+#: ../../docs/training_manual/answers/answers.rst:673
 msgid ""
 "Select features in :guilabel:`new_solution` that intersect features in "
 ":guilabel:`suitable_terrain_continuous100m.shp`."
@@ -1060,11 +1067,11 @@ msgstr ""
 "Sélectionnez les entités de :guilabel:`new_solution` qui croisent les "
 "entités de :guilabel:`suitable_terrain_continuous100m.shp`."
 
-#: ../../docs/training_manual/answers/answers.rst:673
+#: ../../docs/training_manual/answers/answers.rst:676
 msgid "This is the result:"
 msgstr "Voici le résultat:"
 
-#: ../../docs/training_manual/answers/answers.rst:678
+#: ../../docs/training_manual/answers/answers.rst:681
 msgid ""
 "The yellow buildings are selected. Although some of the buildings fall "
 "partly outside the new :guilabel:`suitable_terrain_continuous100m` layer, "
@@ -1077,7 +1084,7 @@ msgstr ""
 "l'intérieur de la couche :guilabel:`suitable_terrain` originale et répondent"
 " donc à toutes nos exigences."
 
-#: ../../docs/training_manual/answers/answers.rst:683
+#: ../../docs/training_manual/answers/answers.rst:686
 msgid ""
 "Save the selection under :file:`exercise_data/residential_development/` as "
 ":file:`final_answer.shp`."
@@ -1085,33 +1092,33 @@ msgstr ""
 "Enregistrez la sélection sous :file:`exercise_data/residential_development/`"
 " sous :file:`final_answer.shp`."
 
-#: ../../docs/training_manual/answers/answers.rst:687
+#: ../../docs/training_manual/answers/answers.rst:690
 msgid ":ref:`Back to text <backlink-complete-analysis-3>`"
 msgstr ":ref:`Retour au texte <backlink-complete-analysis-3>`"
 
-#: ../../docs/training_manual/answers/answers.rst:690
+#: ../../docs/training_manual/answers/answers.rst:693
 msgid "|RF| *WMS*"
 msgstr "|RF| *WMS*"
 
-#: ../../docs/training_manual/answers/answers.rst:695
+#: ../../docs/training_manual/answers/answers.rst:698
 msgid "|basic| *Adding Another WMS Layer*"
 msgstr "|basic| *Ajout d'une autre couche WMS*"
 
-#: ../../docs/training_manual/answers/answers.rst:697
+#: ../../docs/training_manual/answers/answers.rst:700
 msgid "Your map should look like this (you may need to re-order the layers):"
 msgstr ""
 "Votre carte devrait ressembler à ceci (vous aurez peut-être besoin de "
 "réorganiser vos couches):"
 
-#: ../../docs/training_manual/answers/answers.rst:702
+#: ../../docs/training_manual/answers/answers.rst:705
 msgid ":ref:`Back to text <backlink-wms-1>`"
 msgstr ":ref:`Retour au texte <backlink-wms-1>`"
 
-#: ../../docs/training_manual/answers/answers.rst:708
+#: ../../docs/training_manual/answers/answers.rst:711
 msgid "|moderate| *Adding a New WMS Server*"
 msgstr "|moderate| *Ajout d'un Nouveau Serveur WMS*"
 
-#: ../../docs/training_manual/answers/answers.rst:710
+#: ../../docs/training_manual/answers/answers.rst:713
 msgid ""
 "Use the same approach as before to add the new server and the appropriate "
 "layer as hosted on that server:"
@@ -1119,7 +1126,7 @@ msgstr ""
 "Utilisez la même approche qu'avant pour ajouter le nouveau serveur et la "
 "couche appropriée comme hébergée sur ce serveur :"
 
-#: ../../docs/training_manual/answers/answers.rst:719
+#: ../../docs/training_manual/answers/answers.rst:722
 msgid ""
 "If you zoom into the |majorUrbanName| area, you'll notice that this dataset "
 "has a low resolution:"
@@ -1127,7 +1134,7 @@ msgstr ""
 "Si vous zoomez sur la zone |majorUrbanName|, vous remarquerez que ce jeu de "
 "données a une basse résolution :"
 
-#: ../../docs/training_manual/answers/answers.rst:725
+#: ../../docs/training_manual/answers/answers.rst:728
 msgid ""
 "Therefore, it's better not to use this data for the current map. The Blue "
 "Marble data is more suitable at global or national scales."
@@ -1136,15 +1143,15 @@ msgstr ""
 "carte actuelle. Les données Blue Marble sont plus adaptées à une échelle "
 "mondiale ou nationale."
 
-#: ../../docs/training_manual/answers/answers.rst:728
+#: ../../docs/training_manual/answers/answers.rst:731
 msgid ":ref:`Back to text <backlink-wms-2>`"
 msgstr ":ref:`Retour au texte <backlink-wms-2>`"
 
-#: ../../docs/training_manual/answers/answers.rst:734
+#: ../../docs/training_manual/answers/answers.rst:737
 msgid "|moderate| *Finding a WMS Server*"
 msgstr "|moderate| *Trouver un serveur WMS*"
 
-#: ../../docs/training_manual/answers/answers.rst:736
+#: ../../docs/training_manual/answers/answers.rst:739
 msgid ""
 "You may notice that many WMS servers are not always available. Sometimes "
 "this is temporary, sometimes it is permanent. An example of a WMS server "
@@ -1164,19 +1171,19 @@ msgstr ""
 "qu'il ne s'agit là que d'un exemple. Il existe de nombreux autres serveurs "
 "WMS parmi lesquels vous pouvez choisir."
 
-#: ../../docs/training_manual/answers/answers.rst:744
+#: ../../docs/training_manual/answers/answers.rst:747
 msgid ":ref:`Back to text <backlink-wms-3>`"
 msgstr ":ref:`Retour au texte <backlink-wms-3>`"
 
-#: ../../docs/training_manual/answers/answers.rst:750
+#: ../../docs/training_manual/answers/answers.rst:753
 msgid "|RF| *GRASS Integration*"
 msgstr "|RF| *GRASS Integration*"
 
-#: ../../docs/training_manual/answers/answers.rst:753
+#: ../../docs/training_manual/answers/answers.rst:756
 msgid "|basic| *Add Layers to Mapset*"
 msgstr "|basic| *Ajouter une couche au mapset* "
 
-#: ../../docs/training_manual/answers/answers.rst:755
+#: ../../docs/training_manual/answers/answers.rst:758
 msgid ""
 "You can add layers (both vector and raster) into a GRASS Mapset by drag and "
 "drop them in the Browser (see :ref:`grass_browser`) or by using the "
@@ -1187,15 +1194,15 @@ msgstr ""
 ":ref:`grass_browser`) ou en utilisant le ``v.in.gdal.qgis`` pour les couches"
 " vecteur et le ``r.in.gdal.qgis`` pour les couches raster."
 
-#: ../../docs/training_manual/answers/answers.rst:759
+#: ../../docs/training_manual/answers/answers.rst:762
 msgid ":ref:`Back to text <backlink-grass_add_to_mapset>`"
 msgstr ":ref:`Back to text <backlink-grass_add_to_mapset>`"
 
-#: ../../docs/training_manual/answers/answers.rst:765
+#: ../../docs/training_manual/answers/answers.rst:768
 msgid "|moderate| *Reclassify raster layer*"
 msgstr "|moderate| *Reclassification couche raster*"
 
-#: ../../docs/training_manual/answers/answers.rst:767
+#: ../../docs/training_manual/answers/answers.rst:770
 msgid ""
 "To discover the maximum value of the raster run the :kbd:`r.info` tool: in "
 "the console you will see that the maximum value is 1699."
@@ -1203,7 +1210,7 @@ msgstr ""
 "Pour découvrir la valeur maximale du raster, lancez l'outil :kbd:`r.info` : "
 "dans la console, vous verrez que la valeur maximale est de 1699."
 
-#: ../../docs/training_manual/answers/answers.rst:770
+#: ../../docs/training_manual/answers/answers.rst:773
 msgid ""
 "You are now ready to write the rules. Open a text editor and add the "
 "following rules::"
@@ -1211,13 +1218,13 @@ msgstr ""
 "Vous êtes maintenant prêt à écrire les règles. Ouvrez un éditeur de texte et"
 " ajouter les règles suivantes::"
 
-#: ../../docs/training_manual/answers/answers.rst:777
+#: ../../docs/training_manual/answers/answers.rst:780
 msgid "save the file as a ``my_rules.txt`` file and close the text editor."
 msgstr ""
 "enregistrer le fichier comme un fichier \"my_rule.txt\" et fermez l'éditeur "
 "de texte."
 
-#: ../../docs/training_manual/answers/answers.rst:779
+#: ../../docs/training_manual/answers/answers.rst:782
 msgid ""
 "Run the :kbd:`r.reclass` tool, choose the :kbd:`g_dem` layer and load the "
 "file containing the rules you just have saved."
@@ -1225,7 +1232,7 @@ msgstr ""
 "Lancez l'outil :kbd:`r.reclass`, choisissez la couche :kbd:`g_dem` et "
 "chargez le fichier contenant les règles que vous venez de sauvegarder."
 
-#: ../../docs/training_manual/answers/answers.rst:782
+#: ../../docs/training_manual/answers/answers.rst:785
 msgid ""
 "Click on :guilabel:`Run` and then on :guilabel:`View Output`. You can change"
 " the colors and the final result should look like the following picture:"
@@ -1234,19 +1241,19 @@ msgstr ""
 " Vous pouvez changer les couleurs et le résultat final devrait ressembler à "
 "l'image suivante :"
 
-#: ../../docs/training_manual/answers/answers.rst:788
+#: ../../docs/training_manual/answers/answers.rst:791
 msgid ":ref:`Back to text <backlink-grass_reclass>`"
 msgstr ":ref:`Retour au texte <backlink-grass_reclass>`"
 
-#: ../../docs/training_manual/answers/answers.rst:791
+#: ../../docs/training_manual/answers/answers.rst:794
 msgid "|RF| *Database Concepts*"
 msgstr "|RF| *Concepts de bases de données*"
 
-#: ../../docs/training_manual/answers/answers.rst:796
+#: ../../docs/training_manual/answers/answers.rst:799
 msgid "|basic| *Address Table Properties*"
 msgstr "|basic| *Propriétés de la table d'adresses*"
 
-#: ../../docs/training_manual/answers/answers.rst:798
+#: ../../docs/training_manual/answers/answers.rst:801
 msgid ""
 "For our theoretical address table, we might want to store the following "
 "properties::"
@@ -1254,7 +1261,7 @@ msgstr ""
 "Pour notre table d'adresses théorique, nous pourrions stocker les propriétés"
 " suivantes :"
 
-#: ../../docs/training_manual/answers/answers.rst:808
+#: ../../docs/training_manual/answers/answers.rst:811
 msgid ""
 "When creating the table to represent an address object, we would create "
 "columns to represent each of these properties and we would name them with "
@@ -1264,15 +1271,15 @@ msgstr ""
 "allons créer des colonnes qui représentent chacune de ces propriétés et nous"
 " allons les nommer avec des noms courts conformes au SQL::"
 
-#: ../../docs/training_manual/answers/answers.rst:819
+#: ../../docs/training_manual/answers/answers.rst:822
 msgid ":ref:`Back to text <backlink-database-concepts-1>`"
 msgstr ":ref:`Retour au texte <backlink-database-concepts-1>`"
 
-#: ../../docs/training_manual/answers/answers.rst:824
+#: ../../docs/training_manual/answers/answers.rst:827
 msgid "|basic| *Normalising the People Table*"
 msgstr "|basic| *Normalisation de la table Personne*"
 
-#: ../../docs/training_manual/answers/answers.rst:826
+#: ../../docs/training_manual/answers/answers.rst:829
 msgid ""
 "The major problem with the `people` table is that there is a single address "
 "field which contains a person's entire address. Thinking about our "
@@ -1290,7 +1297,7 @@ msgstr ""
 "devons donc séparer le champ adresse en autant d'éléments que nécessaire. "
 "Cela nous donnera une table avec la structure suivante::"
 
-#: ../../docs/training_manual/answers/answers.rst:840
+#: ../../docs/training_manual/answers/answers.rst:843
 msgid ""
 "In the next section, you will learn about Foreign Key relationships which "
 "could be used in this example to further improve our database's structure."
@@ -1299,19 +1306,19 @@ msgstr ""
 " étrangères qui peuvent s'appliquer à cet exemple pour améliorer la "
 "structure de notre base de données."
 
-#: ../../docs/training_manual/answers/answers.rst:844
+#: ../../docs/training_manual/answers/answers.rst:847
 msgid ":ref:`Back to text <backlink-database-concepts-2>`"
 msgstr ":ref:`Retour au texte <backlink-database-concepts-2>`"
 
-#: ../../docs/training_manual/answers/answers.rst:849
+#: ../../docs/training_manual/answers/answers.rst:852
 msgid "|moderate| *Further Normalisation of the People Table*"
 msgstr "|moderate| *Normalisation avancée de la table People*"
 
-#: ../../docs/training_manual/answers/answers.rst:851
+#: ../../docs/training_manual/answers/answers.rst:854
 msgid "Our `people` table currently looks like this::"
 msgstr "Notre table `people` ressemble actuellement à ceci::"
 
-#: ../../docs/training_manual/answers/answers.rst:857
+#: ../../docs/training_manual/answers/answers.rst:860
 msgid ""
 "The :kbd:`street_id` column represents a 'one to many' relationship between "
 "the `people` object and the related `street` object, which is in the "
@@ -1321,7 +1328,7 @@ msgstr ""
 "les objets `people` et l'objet lié `street` qui est stocké dans la table "
 "`streets`."
 
-#: ../../docs/training_manual/answers/answers.rst:861
+#: ../../docs/training_manual/answers/answers.rst:864
 msgid ""
 "One way to further normalise the table is to split the name field into "
 "*first_name* and *last_name*::"
@@ -1329,7 +1336,7 @@ msgstr ""
 "Un moyen d'améliorer la normalisation de la table est de séparer le champ de"
 " nom en deux: *first_name* et *last_name*::"
 
-#: ../../docs/training_manual/answers/answers.rst:868
+#: ../../docs/training_manual/answers/answers.rst:871
 msgid ""
 "We can also create separate tables for the town or city name and country, "
 "linking them to our `people` table via 'one to many' relationships::"
@@ -1338,42 +1345,42 @@ msgstr ""
 "des villages et pour le nom des pays en les liant à notre table `people` via"
 " une relation 'un à plusieurs'::"
 
-#: ../../docs/training_manual/answers/answers.rst:876
+#: ../../docs/training_manual/answers/answers.rst:879
 msgid "An ER Diagram to represent this would look like this:"
 msgstr "Un diagramme ER pour représenter cela devrait ressembler à ça :"
 
-#: ../../docs/training_manual/answers/answers.rst:881
+#: ../../docs/training_manual/answers/answers.rst:884
 msgid ":ref:`Back to text <backlink-database-concepts-3>`"
 msgstr ":ref:`Retour au texte <backlink-database-concepts-3>`"
 
-#: ../../docs/training_manual/answers/answers.rst:886
+#: ../../docs/training_manual/answers/answers.rst:889
 msgid "|moderate| *Create a People Table*"
 msgstr "|moderate| *Créer une table People*"
 
-#: ../../docs/training_manual/answers/answers.rst:888
+#: ../../docs/training_manual/answers/answers.rst:891
 msgid "The SQL required to create the correct people table is::"
 msgstr "Voici la requête SQL pour créer une table de personnes correcte::"
 
-#: ../../docs/training_manual/answers/answers.rst:896
+#: ../../docs/training_manual/answers/answers.rst:899
 msgid "The schema for the table (enter :kbd:`\\\\d people`) looks like this::"
 msgstr "Le schéma de la table (entrez :kbd:`\\\\d people`) ressemble à ceci ::"
 
-#: ../../docs/training_manual/answers/answers.rst:911
+#: ../../docs/training_manual/answers/answers.rst:914
 msgid ""
 "For illustration purposes, we have purposely omitted the fkey constraint."
 msgstr ""
 "Pour des questions d'affichage, nous avons délibérément omis la contrainte "
 "de clef étrangère."
 
-#: ../../docs/training_manual/answers/answers.rst:914
+#: ../../docs/training_manual/answers/answers.rst:917
 msgid ":ref:`Back to text <backlink-database-concepts-4>`"
 msgstr ":ref:`Retour au texte <backlink-database-concepts-4>`"
 
-#: ../../docs/training_manual/answers/answers.rst:919
+#: ../../docs/training_manual/answers/answers.rst:922
 msgid "|basic| *The DROP Command*"
 msgstr "|basic| *La commande DROP*"
 
-#: ../../docs/training_manual/answers/answers.rst:921
+#: ../../docs/training_manual/answers/answers.rst:924
 msgid ""
 "The reason the DROP command would not work in this case is because the "
 "`people` table has a Foreign Key constraint to the `streets` table. This "
@@ -1387,7 +1394,7 @@ msgstr ""
 "`people` qui pointeraient vers des références non existantes de la table "
 "`streets`."
 
-#: ../../docs/training_manual/answers/answers.rst:926
+#: ../../docs/training_manual/answers/answers.rst:929
 msgid ""
 "It is possible to 'force' the `streets` table to be deleted by using the "
 "`CASCADE` command, but this would also delete the `people` and any other "
@@ -1399,15 +1406,15 @@ msgstr ""
 "qui disposerait d'une relation avec la table `streets`. A utiliser avec "
 "précaution !"
 
-#: ../../docs/training_manual/answers/answers.rst:930
+#: ../../docs/training_manual/answers/answers.rst:933
 msgid ":ref:`Back to text <backlink-database-concepts-5>`"
 msgstr ":ref:`Retour au texte <backlink-database-concepts-5>`"
 
-#: ../../docs/training_manual/answers/answers.rst:935
+#: ../../docs/training_manual/answers/answers.rst:938
 msgid "|basic| *Insert a New Street*"
 msgstr "|basic| *Insérer une nouvelle rue*"
 
-#: ../../docs/training_manual/answers/answers.rst:937
+#: ../../docs/training_manual/answers/answers.rst:940
 msgid ""
 "The SQL command you should use looks like this (you can replace the street "
 "name with a name of your choice)::"
@@ -1415,21 +1422,21 @@ msgstr ""
 "La commande SQL que vous devez utiliser ressemble à cela (vous pouvez "
 "remplacer le nom de la rue avec un nom de votre choix) :"
 
-#: ../../docs/training_manual/answers/answers.rst:942
+#: ../../docs/training_manual/answers/answers.rst:945
 msgid ":ref:`Back to text <backlink-database-concepts-6>`"
 msgstr ":ref:`Retour au texte <backlink-database-concepts-6>`"
 
-#: ../../docs/training_manual/answers/answers.rst:947
+#: ../../docs/training_manual/answers/answers.rst:950
 msgid "|moderate| *Add a New Person With Foreign Key Relationship*"
 msgstr ""
 "|moderate| *Ajouter une nouvelle personne avec une relation de clef "
 "étrangère*"
 
-#: ../../docs/training_manual/answers/answers.rst:949
+#: ../../docs/training_manual/answers/answers.rst:952
 msgid "Here is the correct SQL statement::"
 msgstr "Voici la syntaxe SQL correcte à utiliser :"
 
-#: ../../docs/training_manual/answers/answers.rst:955
+#: ../../docs/training_manual/answers/answers.rst:958
 msgid ""
 "If you look at the streets table again (using a select statement as before),"
 " you'll see that the :kbd:`id` for the :kbd:`Main Road` entry is :kbd:`2`."
@@ -1438,7 +1445,7 @@ msgstr ""
 "déclaration de sélection comme avant), vous verrez que l':kbd:`id` pour "
 "l'entrée :kbd:`Main Road` est :kbd:`2`."
 
-#: ../../docs/training_manual/answers/answers.rst:958
+#: ../../docs/training_manual/answers/answers.rst:961
 msgid ""
 "That's why we could merely enter the number :kbd:`2` above. Even though "
 "we're not seeing :kbd:`Main Road` written out fully in the entry above, the "
@@ -1450,7 +1457,7 @@ msgstr ""
 " la requête précédente, la base de données sera capable de l'associer avec "
 "le champ :kbd:`street_id` ayant une valeur de :kbd:`2`."
 
-#: ../../docs/training_manual/answers/answers.rst:963
+#: ../../docs/training_manual/answers/answers.rst:966
 msgid ""
 "If you have already added a new :kbd:`street` object, you might find that "
 "the new :kbd:`Main Road` has an ID of :kbd:`3` not :kbd:`2`."
@@ -1459,24 +1466,24 @@ msgstr ""
 "trouver que le nouveau :kbd:`Main Road` a un identifiant à :kbd:`3` et non à"
 " :kbd:`2`."
 
-#: ../../docs/training_manual/answers/answers.rst:966
+#: ../../docs/training_manual/answers/answers.rst:969
 msgid ":ref:`Back to text <backlink-database-concepts-7>`"
 msgstr ":ref:`Retour au texte <backlink-database-concepts-7>`"
 
-#: ../../docs/training_manual/answers/answers.rst:972
+#: ../../docs/training_manual/answers/answers.rst:975
 msgid "|moderate| *Return Street Names*"
 msgstr "|moderate| *Renvoyer les noms des rues*"
 
-#: ../../docs/training_manual/answers/answers.rst:974
+#: ../../docs/training_manual/answers/answers.rst:977
 msgid "Here is the correct SQL statement you should use::"
 msgstr "Voici la syntaxe SQL correcte à utiliser:"
 
-#: ../../docs/training_manual/answers/answers.rst:981
-#: ../../docs/training_manual/answers/answers.rst:1153
+#: ../../docs/training_manual/answers/answers.rst:984
+#: ../../docs/training_manual/answers/answers.rst:1156
 msgid "Result::"
 msgstr "Résultat::"
 
-#: ../../docs/training_manual/answers/answers.rst:990
+#: ../../docs/training_manual/answers/answers.rst:993
 msgid ""
 "You will notice that we have prefixed field names with table names (e.g. "
 "people.name and streets.name). This needs to be done whenever the field name"
@@ -1487,19 +1494,19 @@ msgstr ""
 "lorsque les noms des champs sont ambigus (c'est-à-dire que plusieurs tables "
 "ont les mêmes noms de champs dans la base de données)."
 
-#: ../../docs/training_manual/answers/answers.rst:994
+#: ../../docs/training_manual/answers/answers.rst:997
 msgid ":ref:`Back to text <backlink-database-concepts-8>`"
 msgstr ":ref:`Retour au texte <backlink-database-concepts-8>`"
 
-#: ../../docs/training_manual/answers/answers.rst:998
+#: ../../docs/training_manual/answers/answers.rst:1001
 msgid "|RF| *Spatial Queries*"
 msgstr "|RF| *Requêtes Spatiales*"
 
-#: ../../docs/training_manual/answers/answers.rst:1003
+#: ../../docs/training_manual/answers/answers.rst:1006
 msgid "|basic| *The Units Used in Spatial Queries*"
 msgstr "|basic| *Les Unités utilisées dans les requêtes spatiales*"
 
-#: ../../docs/training_manual/answers/answers.rst:1005
+#: ../../docs/training_manual/answers/answers.rst:1008
 msgid ""
 "The units being used by the example query are degrees, because the CRS that "
 "the layer is using is WGS 84. This is a Geographic CRS, which means that its"
@@ -1511,7 +1518,7 @@ msgstr ""
 "signifie que ses unités sont en degrés. Un SCR projeté, comme les "
 "projections UTM, est en mètres."
 
-#: ../../docs/training_manual/answers/answers.rst:1009
+#: ../../docs/training_manual/answers/answers.rst:1012
 msgid ""
 "Remember that when you write a query, you need to know which units the "
 "layer's CRS is in. This will allow you to write a query that will return the"
@@ -1521,43 +1528,43 @@ msgstr ""
 "savoir quelles unités le SCR de la couche utilise. Cela vous permettra "
 "d'écrire une requête qui retournera le résultat que vous attendez."
 
-#: ../../docs/training_manual/answers/answers.rst:1013
+#: ../../docs/training_manual/answers/answers.rst:1016
 msgid ":ref:`Back to text <backlink-spatial-queries-1>`"
 msgstr ":ref:`Retour au texte <backlink-spatial-queries-1>`"
 
-#: ../../docs/training_manual/answers/answers.rst:1019
+#: ../../docs/training_manual/answers/answers.rst:1022
 msgid "|basic| *Creating a Spatial Index*"
 msgstr "|basic| *Création d'un Index Spatial*"
 
-#: ../../docs/training_manual/answers/answers.rst:1027
+#: ../../docs/training_manual/answers/answers.rst:1030
 msgid ":ref:`Back to text <backlink-spatial-queries-2>`"
 msgstr ":ref:`Retour au texte <backlink-spatial-queries-2>`"
 
-#: ../../docs/training_manual/answers/answers.rst:1031
+#: ../../docs/training_manual/answers/answers.rst:1034
 msgid "|RF| *Geometry Construction*"
 msgstr "|RF| *Construction géométrique*"
 
-#: ../../docs/training_manual/answers/answers.rst:1037
+#: ../../docs/training_manual/answers/answers.rst:1040
 msgid "|moderate| *Creating Linestrings*"
 msgstr "|moderate| *Création de polylignes*"
 
-#: ../../docs/training_manual/answers/answers.rst:1051
+#: ../../docs/training_manual/answers/answers.rst:1054
 msgid ":ref:`Back to text <backlink-geometry-1>`"
 msgstr ":ref:`Retour au texte <backlink-geometry-1>`"
 
-#: ../../docs/training_manual/answers/answers.rst:1057
+#: ../../docs/training_manual/answers/answers.rst:1060
 msgid "|moderate| *Linking Tables*"
 msgstr "|moderate| *Lier des tables*"
 
-#: ../../docs/training_manual/answers/answers.rst:1064
+#: ../../docs/training_manual/answers/answers.rst:1067
 msgid "(capture cities in QGIS)"
 msgstr "(Capturer les villes dans QGIS)"
 
-#: ../../docs/training_manual/answers/answers.rst:1092
+#: ../../docs/training_manual/answers/answers.rst:1095
 msgid "If you're getting the following error message:"
 msgstr "Si vous obtenez le message d'erreur suivant:"
 
-#: ../../docs/training_manual/answers/answers.rst:1100
+#: ../../docs/training_manual/answers/answers.rst:1103
 msgid ""
 "then it means that while experimenting with creating polygons for the cities"
 " table, you must have deleted some of them and started over. Just check the "
@@ -1567,41 +1574,41 @@ msgstr ""
 " la table des villes, vous avez dû en supprimer quelques-uns. Vérifiez les "
 "enregistrements de votre table de ville et utiliser un :kbd:`id` qui existe."
 
-#: ../../docs/training_manual/answers/answers.rst:1104
+#: ../../docs/training_manual/answers/answers.rst:1107
 msgid ":ref:`Back to text <backlink-geometry-2>`"
 msgstr ":ref:`Retour au texte <backlink-geometry-2>`"
 
-#: ../../docs/training_manual/answers/answers.rst:1107
+#: ../../docs/training_manual/answers/answers.rst:1110
 msgid "|RF| *Simple Feature Model*"
 msgstr "|RF| *Modèle d'Entité Simple*"
 
-#: ../../docs/training_manual/answers/answers.rst:1113
+#: ../../docs/training_manual/answers/answers.rst:1116
 msgid "|moderate| *Populating Tables*"
 msgstr "|moderate| *Remplir les tables*"
 
-#: ../../docs/training_manual/answers/answers.rst:1124
+#: ../../docs/training_manual/answers/answers.rst:1127
 msgid ":ref:`Back to text <backlink-simple-feature-1>`"
 msgstr ":ref:`Retour au texte <backlink-simple-feature-1>`"
 
-#: ../../docs/training_manual/answers/answers.rst:1130
+#: ../../docs/training_manual/answers/answers.rst:1133
 msgid "|moderate| *Populate the Geometry_Columns Table*"
 msgstr "|moderate| *Remplir la table Geometry_Columns*"
 
-#: ../../docs/training_manual/answers/answers.rst:1137
+#: ../../docs/training_manual/answers/answers.rst:1140
 msgid ":ref:`Back to text <backlink-simple-feature-2>`"
 msgstr ":ref:`Retour au texte <backlink-simple-feature-2>`"
 
-#: ../../docs/training_manual/answers/answers.rst:1143
+#: ../../docs/training_manual/answers/answers.rst:1146
 msgid "|hard| *Adding Geometry*"
 msgstr "|hard| *Ajouter une géométrie*"
 
-#: ../../docs/training_manual/answers/answers.rst:1164
+#: ../../docs/training_manual/answers/answers.rst:1167
 msgid ""
 "As you can see, our constraint allows nulls to be added into the database."
 msgstr ""
 "Comme vous pouvez le voir, notre contrainte autorise l'ajout de valeurs "
 "nulles dans la base de données."
 
-#: ../../docs/training_manual/answers/answers.rst:1166
+#: ../../docs/training_manual/answers/answers.rst:1169
 msgid ":ref:`Back to text <backlink-simple-feature-3>`"
 msgstr ":ref:`Retour au texte <backlink-simple-feature-3>`"
