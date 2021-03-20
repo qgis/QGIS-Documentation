@@ -113,6 +113,15 @@ To do so, create a directory :file:`data` within the directory
 :file:`qgis-server` and copy your file in it. To comply with the following
 explanations, rename it to :file:`osm.qgs`.
 
+.. note::
+
+You may need to add advertised URLs under the :guilabel:`QGIS Server` tab of the
+:menuselection:`Project --> Properties` if the GetCapibilites are broken.
+For example if your server is exposed on port 8080, you will put this for
+advertised URL ``http://localhost:8080/qgis-server/`` . More information
+available in section :ref:`Creatingwmsfromproject` and subsequent.
+
+
 Now, you can run the server with:
 
 .. code-block:: bash
