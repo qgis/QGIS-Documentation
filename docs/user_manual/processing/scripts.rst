@@ -29,6 +29,15 @@ If you save the script in the :file:`scripts` folder
 (the default location) with a :file:`.py` extension, the algorithm will
 become available in the :guilabel:`Processing Toolbox`.
 
+Processing scripts implementing the
+`:class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>` are
+required to be available in the :file:`scripts` folder in order not to
+cause a runtime error when called for processing by 
+:source:`python/plugins/processing/gui/AlgorithmDialog.py`
+
+Processing scripts available in the :file:`scripts` folder are read in
+during the startup phase of QGIS.
+
 .. _scripts_extend:
 
 Extending QgsProcessingAlgorithm
