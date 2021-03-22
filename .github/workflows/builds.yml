@@ -13,6 +13,9 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        format: [html, pdf]
 
     steps:
     - name: Check out repository
@@ -25,28 +28,20 @@ jobs:
         python-version: 3.7
     - name: Install Requirements
       run: |
-        sudo apt-get install -y texlive-xetex fonts-freefont-otf
+        if [[ ${{ matrix.format }} != "html" ]]; then
+          sudo apt-get install -y texlive-xetex fonts-freefont-otf
+        fi
 
         python -m pip install --upgrade pip
         pip install -r REQUIREMENTS.txt
 
-    - name: Build English HTML documentation
+    - name: Build English ${{ matrix.format }} documentation
       run: |
-          make html
-    - name: Upload build artifact
+          make ${{ matrix.format }}
+    - name: Upload ${{ matrix.format }} build artifact
       uses: actions/upload-artifact@v2
       with:
-        name: HTML build
-        path: build/html
-        retention-days: 15
-
-    - name: Build English PDF documentation
-      run: |
-          make pdf
-    - name: Upload build artifact
-      uses: actions/upload-artifact@v2
-      with:
-        name: PDF build
-        path: build/pdf
+        name: ${{ matrix.format }} build
+        path: build/${{ matrix.format }}
         retention-days: 15
 

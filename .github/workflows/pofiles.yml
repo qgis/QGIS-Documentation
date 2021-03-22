@@ -36,6 +36,8 @@ jobs:
       run: |
           make gettext
           sphinx-intl update -p build/gettext -l en
+          # Remove obsolete strings from the generated *.po files
+          find locale/en/LC_MESSAGES/docs/ -type f -name '*.po' -exec sed -i '/^#~ /,/^$/d' {} \;
 
     - name: Commit the changes in the PO files      
       id: "auto-commit-action"
