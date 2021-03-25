@@ -161,7 +161,9 @@ project.
 Roles
 -----
 
-There exist various roles on GitHub. When having an account on GitHub you are already allowed to contribute by forking the repository and have the role 'contributor'. Core developers are 'collaborators' and can merge branches into the master repository.
+There exist various roles on GitHub. When having an account on GitHub you are already
+allowed to contribute by forking the repository and have the role 'contributor'.
+Core developers are 'collaborators' and can merge branches into the upstream and official repository.
 
 Contributions to development
 ----------------------------
