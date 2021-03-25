@@ -174,7 +174,12 @@ Once signed up on GitHub you can engage as a contributor. You can contribute by 
 4. Commit and push it back to the remote fork on GitHub
 5. Open a pull request (PR) that will pull the commit(s) from your branch into the master branch. For pull request is offered as web link (URL) right after the push. 
 
-A more detailed Github's Fork & Pull Workflow is available at https://reflectoring.io/github-fork-and-pull/
+.. note:: Regarding (optional) step 2: Contributions to QGIS code can be also be
+done on the github website without a local clone. The new code will automatically
+be built by the build environment.
+
+.. note:: A more detailed Github's Fork & Pull Workflow is available at
+https://reflectoring.io/github-fork-and-pull/
 
 
 Procedure
