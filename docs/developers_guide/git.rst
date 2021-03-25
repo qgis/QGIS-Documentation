@@ -142,7 +142,8 @@ See the following sites for information on becoming a GIT master.
 Development process
 ===================
 
-As common in open source projects contributions of code and documentation to the project are highly appreciated. The QGIS community is very supportive. 
+As common in open source projects contributions of code and documentation
+to the project are highly appreciated. The QGIS community is very supportive. 
 
 
 Development in branches
@@ -163,18 +164,25 @@ Roles
 
 There exist various roles on GitHub. When having an account on GitHub you are already
 allowed to contribute by forking the repository and have the role 'contributor'.
-Core developers are 'collaborators' and can merge branches into the upstream and official repository.
+Core developers are 'collaborators' and can merge branches into the upstream and
+official repository.
 
 Contributions to development
 ----------------------------
 
-Once signed up on GitHub you can engage as a contributor. You can contribute by forking the repository and initiating a pull request. To do that follow these generic steps:
+Once signed up on GitHub you can engage as a contributor. You can contribute by
+forking the repository and initiating a pull request. To do that follow these
+generic steps:
 
 1. Fork the repository on GitHub
 2. (Optional) Clone it onto your local computer and set up the build environment
 3. Create a new branch and do the edits for development
-4. Commit your changes and push your branch back to the remote fork on GitHub
-5. Open a pull request (PR), asking to pull the commit(s) from your branch into the master branch in upstream repository. For pull request is offered as web link (URL) right after the push. 
+4. Commit your changes and push your branch back to the remote fork on GitHub.
+A pull request is then offered as web link (URL) right after.
+5. Open a pull request (PR) asking to pull the commit(s) from your branch into
+the master branch into the upstream repository.
+6. A review process is being started informing other contributors and collaborators
+about your pull request. You should be reactive to their comments and suggestions.
 
 .. note:: Regarding (optional) step 2: Contributions to QGIS code can be also be
 done on the github website without a local clone. The new code will automatically
