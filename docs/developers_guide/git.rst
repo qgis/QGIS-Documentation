@@ -169,7 +169,7 @@ Contributions to development
 Once signed up on GitHub you can engage as a contributor. You can contribute by forking the repository and initiating a pull request. To do that follow these generic steps:
 
 1. Fork the repository on GitHub
-2. Clone it onto your local computer and set up the build environment
+2. (Optional) Clone it onto your local computer and set up the build environment
 3. Create a new branch and do the edits for development
 4. Commit and push it back to the remote fork on GitHub
 5. Open a pull request (PR) that will pull the commit(s) from your branch into the master branch. For pull request is offered as web link (URL) right after the push. 
