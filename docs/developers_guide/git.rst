@@ -178,18 +178,18 @@ generic steps:
 2. (Optional) Clone it onto your local computer and set up the build environment
 3. Create a new branch and do the edits for development
 4. Commit your changes and push your branch back to the remote fork on GitHub.
-A pull request is then offered as web link (URL) right after.
+  A pull request is then offered as web link (URL) right after.
 5. Open a pull request (PR) asking to pull the commit(s) from your branch into
-the master branch into the upstream repository.
+  the master branch into the upstream repository.
 6. A review process is being started informing other contributors and collaborators
-about your pull request. You should be reactive to their comments and suggestions.
+  about your pull request. You should be reactive to their comments and suggestions.
 
 .. note:: Regarding (optional) step 2: Contributions to QGIS code can be also be
-done on the github website without a local clone. The new code will automatically
-be built by the build environment.
+  done on the github website without a local clone. The new code will automatically
+  be built by the build environment.
 
 .. note:: A more detailed Github's Fork & Pull Workflow is available at
-https://reflectoring.io/github-fork-and-pull/
+  https://reflectoring.io/github-fork-and-pull/
 
 
 Procedure
