@@ -25,7 +25,7 @@ To log requests sent to the server, you have to set the following environment
 variables:
 
 - :ref:`QGIS_SERVER_LOG_LEVEL <qgis_server_log_level>`
-- :ref:`QGIS_SERVER_LOG_FILE <qgis_server_log_file>`
+- :ref:`QGIS_SERVER_LOG_PROFILE <qgis_server_log_profile>`
 - :ref:`QGIS_SERVER_LOG_STDERR <qgis_server_log_stderr>`
 
 
@@ -151,7 +151,9 @@ several ways to define these variables. This is fully described in
      - 0
      - All
 
-   * - QGIS_SERVER_LOG_PROFILE
+   * - .. _qgis_server_log_profile:
+
+       QGIS_SERVER_LOG_PROFILE
      - Add detailed profile information to the logs, only effective when QGIS_SERVER_LOG_LEVEL=0
      - /qgis/server_log_profile
      - All
