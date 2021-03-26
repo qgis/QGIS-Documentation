@@ -7,60 +7,28 @@
 .. contents::
    :local:
 
-This section describes how to get started using the QGIS GIT repository. Before
-you can do this, you need to first have a git client installed on your system.
+QGIS source code is handled through the `git <https://git-scm.com>`_
+version control system and hosted at https://github.com/qgis/QGIS.
+This section describes how to get started using and contributing to
+the QGIS repository. Before you can do this, you need to:
 
+#. have a `GitHub account <https://github.com/join>`_
+#. have your own copy of the `QGIS repository <https://github.com/qgis/QGIS>`_
+   (see `fork <https://docs.github.com/en/github/getting-started-with-github/fork-a-repo#fork-an-example-repository>`_)
+#. have a :ref:`git client installed <installing_git>` on your system
+#. set up your `git environment <https://docs.github.com/en/github/getting-started-with-github/set-up-git#setting-up-git>`_
+#. and have fun!
 
-Installation
-=============
+.. _installing_git:
 
-Install git for GNU/Linux
---------------------------
+Installing git
+==============
 
-Debian based distro users can do:
-
-.. code-block:: bash
-
-  sudo apt install git
-
-
-Install git for Windows
-------------------------
-
-Windows users can obtain `msys git <https://gitforwindows.org/>`_ or use git
-distributed with `cygwin <https://cygwin.com>`_.
-
-
-Install git for OSX
--------------------
-
-The `git project <https://git-scm.com/>`_ has a downloadable build of git.
-Make sure to get the package matching your processor (x86_64 most likely, only
-the first Intel Macs need the i386 package).
-
-Once downloaded open the disk image and run the installer.
-
-PPC/source note
-
-The git site does not offer PPC builds. If you need a PPC build, or you just want
-a little more control over the installation, you need to compile it yourself.
-
-Download the source from https://git-scm.com/.
-Unzip it, and in a Terminal cd to the source folder, then:
-
-.. code-block:: bash
-
-  make prefix=/usr/local
-  sudo make prefix=/usr/local install
-
-If you don't need any of the extras, Perl, Python or TclTk (GUI),
-you can disable them before running make with:
-
-.. code-block:: bash
-
-  export NO_PERL=
-  export NO_TCLTK=
-  export NO_PYTHON=
+The git project provides recent versions of the software for most platforms.
+Follow the instructions at https://git-scm.com/downloads to get the copy
+corresponding to your OS and architecture.
+There, it's also possible to install a git GUI client to browse and manage
+your repositories (most of the time, it will install git if not yet available).
 
 
 Accessing the Repository
@@ -94,12 +62,12 @@ To check out the master branch:
   git checkout master
 
 .. note:: In QGIS we keep our most stable code in the current release branch.
-  Master contains code for the so called 'unstable' release series. Periodically
+  ``master`` branch contains code for the so called 'unstable' release series. Periodically
   we will branch a release off master, and then continue stabilisation and selective
   incorporation of new features into master.
 
-  See the INSTALL file in the source tree for specific instructions on building
-  development versions.
+  See the :source:`INSTALL <INSTALL.md>` file in the source tree for specific instructions
+  on building development versions.
 
 
 QGIS documentation sources
