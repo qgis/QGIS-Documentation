@@ -22,11 +22,14 @@ Logging
 =======
 
 To log requests sent to the server, you have to set the following environment
-variables:
+variable:
+
+- :ref:`QGIS_SERVER_LOG_STDERR <qgis_server_log_stderr>`
+
+With the following variables the logging can be further customized:
 
 - :ref:`QGIS_SERVER_LOG_LEVEL <qgis_server_log_level>`
 - :ref:`QGIS_SERVER_LOG_PROFILE <qgis_server_log_profile>`
-- :ref:`QGIS_SERVER_LOG_STDERR <qgis_server_log_stderr>`
 
 
 .. _`qgis-server-envvar`:
@@ -229,7 +232,7 @@ several ways to define these variables. This is fully described in
        pg_service.conf file:
 
        .. code-block:: bash
-		
+
         PGSERVICEFILE=/etc/pg_service.conf \
 	QUERY_STRING="MAP=/home/qgis/projects/world.qgs&SERVICE=WMS&REQUEST=GetCapabilities" \
 	/usr/lib/cgi-bin/qgis_mapserv.fcgi
