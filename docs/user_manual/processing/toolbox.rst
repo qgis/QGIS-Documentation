@@ -69,7 +69,7 @@ The algorithm dialog
 --------------------
 
 Once you double-click on the name of the algorithm that you want to execute, a
-dialog similar to that in the :numfig:`figure_parameters_dialog` below is shown
+dialog similar to that in the :numref:`figure_parameters_dialog` below is shown
 (in this case, the dialog corresponds to the ``Centroids`` algorithm).
 
 .. _figure_parameters_dialog:
@@ -232,7 +232,7 @@ table can be of one of the following types.
   will be used.
 
 Along with the :guilabel:`Parameters` tab, there is another tab named
-:guilabel:`Log` (see :numfig:`figure_alg_dialog_log` below).
+:guilabel:`Log` (see :numref:`figure_alg_dialog_log` below).
 Information provided by the algorithm during its execution is written
 in this tab, and allow you to track the execution and be aware and have
 more details about the algorithm as it runs.
