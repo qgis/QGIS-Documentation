@@ -132,9 +132,6 @@ called :file:`qgis.demo.conf`, with this content:
    SetEnv PGSERVICEFILE /home/qgis/.pg_service.conf
    FcgidInitialEnv PGPASSFILE "/home/qgis/.pgpass"
 
-   # Tell QGIS Server instances to use a specific display number
-   FcgidInitialEnv DISPLAY ":99"
-
    # if qgis-server is installed from packages in debian based distros this is usually /usr/lib/cgi-bin/
    # run "locate qgis_mapserv.fcgi" if you don't know where qgis_mapserv.fcgi is
    ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
