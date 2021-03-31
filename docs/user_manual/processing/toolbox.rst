@@ -69,8 +69,8 @@ The algorithm dialog
 --------------------
 
 Once you double-click on the name of the algorithm that you want to execute, a
-dialog similar to that in the figure below is shown (in this case, the dialog
-corresponds to the ``Centroids`` algorithm).
+dialog similar to that in the :numref:`figure_parameters_dialog` below is shown
+(in this case, the dialog corresponds to the ``Centroids`` algorithm).
 
 .. _figure_parameters_dialog:
 
@@ -79,8 +79,11 @@ corresponds to the ``Centroids`` algorithm).
 
    Algorithm Dialog - Parameters
 
+The dialog shows two tabs (:guilabel:`Parameters` and :guilabel:`Log`)
+on the left part, the algorithm description on the right, and a set of
+buttons at the bottom.
 
-This dialog is used to set the input values that the algorithm needs to be
+The :guilabel:`Parameters` tab is used to set the input values that the algorithm needs to be
 executed. It shows a list of input values and configuration parameters to
 be set. It of course has a different content, depending on the requirements of
 the algorithm to be executed, and is created automatically based on those
@@ -221,7 +224,7 @@ table can be of one of the following types.
 
 .. _reference_layer_param:
 
-.. note:: Some algorithms require many parameter to run, e.g. in the
+.. note:: Some algorithms require many parameters to run, e.g. in the
   :ref:`qgisrastercalculator` you have to specify manually the cell size, the
   extent and the CRS. You can avoid to choose all the parameters manually when
   the algorithm has the ``Reference layers`` parameter. With this parameter you
@@ -229,12 +232,17 @@ table can be of one of the following types.
   will be used.
 
 Along with the :guilabel:`Parameters` tab, there is another tab named
-:guilabel:`Log` (see figure below).
+:guilabel:`Log` (see :numref:`figure_alg_dialog_log` below).
 Information provided by the algorithm during its execution is written
 in this tab, and allow you to track the execution and be aware and have
-more details about the algorithm as it runs. Notice that not all algorithms
-write information to this tab, and many of them might run silently without
+more details about the algorithm as it runs.
+Information on algorithm execution is also output in the
+:menuselection:`View --> Panels --> Log Messages Panel`.
+
+Notice that not all algorithms write information to the :guilabel:`Log` tab,
+and many of them might run silently without
 producing any output other than the final files.
+Check the :guilabel:`Log Messages Panel` in that case.
 
 .. _figure_alg_dialog_log:
 
@@ -244,10 +252,11 @@ producing any output other than the final files.
    Algorithm Dialog - Log
 
 At the bottom of the :guilabel:`Log` tab you will find buttons to
-``Save Log to File``, ``Copy Log to Clipboard`` and ``Clear Log``.
+|fileSave| :guilabel:`Save Log to File`, |editCopy| :guilabel:`Copy
+Log to Clipboard` and |clearConsole| :guilabel:`Clear Log`.
 These are particularly handy when you have checked the
-``Keep dialog open after running algorithm`` in the ``General`` part
-of the Processing options.
+:guilabel:`Keep dialog open after running algorithm` in the
+:guilabel:`General` part of the Processing options.
 
 On the right hand side of the dialog you will find a short description of the
 algorithm, which will help you understand its purpose and its basic ideas.
@@ -258,6 +267,10 @@ parameter it uses, or examples, you will find a :guilabel:`Help` button at the
 bottom of the dialog bringing you to the :ref:`Processing algorithms
 documentation <processing_algs>` or to the provider documentation (for
 some third-party providers).
+
+The :guilabel:`Run as batch process` button triggers the :ref:`batch processing
+mode <processing_batch>` allowing to configure and run multiple instances of
+the algorithm with a variety of parameters.
 
 
 A note on projections
@@ -383,7 +396,13 @@ to a temporary file and deleted once you exit QGIS).
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |clearConsole| image:: /static/common/iconClearConsole.png
+   :width: 1.5em
 .. |dataDefined| image:: /static/common/mIconDataDefine.png
+   :width: 1.5em
+.. |editCopy| image:: /static/common/mActionEditCopy.png
+   :width: 1.5em
+.. |fileSave| image:: /static/common/mActionFileSave.png
    :width: 1.5em
 .. |options| image:: /static/common/mActionOptions.png
    :width: 1em
