@@ -50,6 +50,7 @@ Returns an aggregate value calculated using features from another layer.
          * concatenate_unique: join unique strings with a concatenator
          * collect: create an aggregated multipart geometry
          * array_agg: create an array of aggregated values
+         * last_value: last value of the data as the aggregated value
          
 
        * **expression** - sub expression or field name to aggregate
