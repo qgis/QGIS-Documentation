@@ -907,6 +907,8 @@ To use these variables in an expression, they should be preceded by the
    "geometry_part_num", "The current geometry part number for feature being rendered"
    "geometry_point_count", "The number of points in the rendered geometry's part"
    "geometry_point_num", "The current point number in the rendered geometry's part"
+   "geometry_ring_num", "Current geometry ring number for feature being rendered
+   (for polygon features only). The exterior ring has a value of 0."
    "grid_axis", "The current grid annotation axis (eg, 'x' for longitude, 'y' for latitude)"
    "grid_number", "The current grid annotation value"
    "item_id", "The layout item user ID (not necessarily unique)"
