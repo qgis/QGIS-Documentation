@@ -5,29 +5,30 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
+# Harrissou Sant-anna, 2021
+# Francis Gasc <francisgasc@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-13 09:01+0100\n"
+"POT-Creation-Date: 2021-03-03 02:15+0000\n"
 "PO-Revision-Date: 2020-12-24 10:24+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"Last-Translator: Francis Gasc <francisgasc@gmail.com>, 2021\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.8.0\n"
+"Generated-By: Babel 2.9.0\n"
 "Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:2
+#: ../../docs/training_manual/processing/modeler_twi.rst:4
 msgid "Starting with the graphical modeler"
 msgstr "Commencer avec le modeleur graphique"
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:4
+#: ../../docs/training_manual/processing/modeler_twi.rst:6
 msgid ""
 "In this lesson we will use the graphical modeler, a powerful component that "
 "we can use to define a workflow and run a chain of algorithms."
@@ -36,7 +37,7 @@ msgstr ""
 " que nous pouvons utiliser pour définir un flux de traitements et exécuter "
 "une chaîne d'algorithmes."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:6
+#: ../../docs/training_manual/processing/modeler_twi.rst:8
 msgid ""
 "A normal session with the processing tools includes more than running a "
 "single algorithm. Usually several of them are run to obtain a result, and "
@@ -48,7 +49,7 @@ msgstr ""
 "sont exécutés pour obtenir un résultat et les sorties de certains de ces "
 "algorithmes sont utilisées comme entrée pour d'autres."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:8
+#: ../../docs/training_manual/processing/modeler_twi.rst:10
 msgid ""
 "Using the graphical modeler, that workflow can be put into a model, which "
 "will run all the necessary algorithms in a single run, thus simplifying the "
@@ -58,17 +59,17 @@ msgstr ""
 " un modèle, qui exécutera tous les algorithmes nécessaires en une unique "
 "exécution, en simplifiant ainsi le processus entier et en l'automatisant."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:10
+#: ../../docs/training_manual/processing/modeler_twi.rst:12
 msgid ""
 "To start this lesson, we are going to calculate a parameter named "
 "Topographic Wetness Index. The algorithm that computes it is called "
-"*Topographic wetness index (twi)*"
+":guilabel:`Topographic wetness index (twi)`."
 msgstr ""
 "Pour commencer cette leçon, nous allons calculer un paramètre nommé Indice "
-"d'Humidité Topographique. L'algorithme qui le calcule est appelé *Indice "
-"d'Humidité Topographique (twi)*"
+"d'Humidité Topographique. L'algorithme qui le calcule est appelé "
+":guilabel:`Indice d'Humidité Topographique (twi)`."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:14
+#: ../../docs/training_manual/processing/modeler_twi.rst:16
 msgid ""
 "As you can see, there are two mandatory inputs: *Slope* and *Catchment "
 "area*. There is also an optional input, but we will not be using it, so we "
@@ -78,7 +79,7 @@ msgstr ""
 "*Bassin versant*. Il y a aussi une entrée optionnelle, mais nous ne "
 "l'utiliserons pas, donc nous pouvons l'ignorer."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:16
+#: ../../docs/training_manual/processing/modeler_twi.rst:18
 msgid ""
 "The data for this lesson contains just a DEM, so we do not have any of the "
 "required inputs. However, we know how to calculate both of them from that "
@@ -92,7 +93,7 @@ msgstr ""
 "calculer une pente et un bassin versant. Donc nous pouvons d'abord calculer "
 "ces couches et ensuite les utiliser pour l'algorithme TWI."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:18
+#: ../../docs/training_manual/processing/modeler_twi.rst:20
 msgid ""
 "Here are the parameter dialogs that you should use to calculate the 2 "
 "intermediate layers."
@@ -100,33 +101,33 @@ msgstr ""
 "Voici les boîtes de dialogue des paramètres que vous devriez utiliser pour "
 "calculer les 2 couches intermédiaires."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:20
+#: ../../docs/training_manual/processing/modeler_twi.rst:22
 msgid "Slope must be calculated in radians, not in degrees."
 msgstr "La pente doit être calculée en radians, et non en degrés."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:26
+#: ../../docs/training_manual/processing/modeler_twi.rst:28
 msgid ""
 "And this is how you have to set the parameters dialog of the TWI algorithm."
 msgstr ""
 "Et c'est comme ça que vous devez configurer la boîte de dialogue des "
 "paramètres de l'algorithme TWI."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:30
+#: ../../docs/training_manual/processing/modeler_twi.rst:32
 msgid ""
 "This is the result that you will obtain (the default singleband pseudocolor "
-"inverted palette has been used for rendering). You can use the ``twi.qml`` "
-"style provided."
+"inverted palette has been used for rendering). You can use the "
+":file:`twi.qml` style provided."
 msgstr ""
 "C'est le résultat que vous obtiendrez (la palette par défaut de pseudo-"
 "couleurs inversées de bande unique a été utilisée pour le rendu). Vous "
-"pouvez utiliser le style ``twi.qml`` fourni."
+"pouvez utiliser le style :file:`twi.qml` fourni."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:34
+#: ../../docs/training_manual/processing/modeler_twi.rst:36
 msgid ""
 "What we will try to do now is to create an algorithm that calculates the TWI"
 " from a DEM in just one single step. That will save us work in case we later"
 " have to compute a TWI layer from another DEM, since we will need just one "
-"single step to do it instead of the 3 ones above. All the processes that we "
+"single step to do it instead of the three above. All the processes that we "
 "need are found in the  toolbox, so what we have to do is to define the "
 "workflow to wrap them. This is where the graphical modeler comes in."
 msgstr ""
@@ -134,29 +135,29 @@ msgstr ""
 "calcule le TWI depuis un MNE en seulement une seule étape. Cela nous "
 "facilitera la tâche si nous avons, par la suite, à calculer une couche TWI à"
 " partir d'un autre MNE, car nous n'aurons besoin que d'une seule étape pour "
-"le faire à la place des 3 ci-dessus. Tous les traitements dont nous avons "
-"besoin se trouvent dans la boîte à outils, donc ce que nous avons à faire "
-"est de définir le flux de traitements pour les assembler. C'est ici que le "
-"modeleur graphique entre en jeu."
+"le faire à la place des trois ci-dessus. Tous les traitements dont nous "
+"avons besoin se trouvent dans la boîte à outils, donc ce que nous avons à "
+"faire est de définir le flux de traitements pour les assembler. C'est ici "
+"que le modeleur graphique entre en jeu."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:36
+#: ../../docs/training_manual/processing/modeler_twi.rst:38
 msgid "Open the modeler by selecting its menu entry in the processing menu."
 msgstr ""
 "Ouvrez le modeleur en sélectionnant son entrée dans le menu du traitement."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:40
+#: ../../docs/training_manual/processing/modeler_twi.rst:42
 msgid ""
 "Two things are needed to create a model: setting the inputs that it will "
 "need, and defining the algorithm that it contains. Both of them are done by "
-"adding elements from the two tabs in the left--hand side of the modeler "
-"window: *Inputs* and *Algorithms*"
+"adding elements from the two tabs in the left-hand side of the modeler "
+"window: :guilabel:`Inputs` and :guilabel:`Algorithms`."
 msgstr ""
 "Deux choses sont nécessaires pour créer un modèle : configurer les entrées "
 "qu'il faudra, et définir l'algorithme qu'il contient. Tous les deux sont "
 "faits en ajoutant des éléments depuis les deux onglets sur la partie gauche "
-"de la fenêtre du modeleur : *Entrées* et *Algorithmes*"
+"de la fenêtre du modeleur : :guilabel:`Entrées` et :guilabel:`Algorithmes`."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:42
+#: ../../docs/training_manual/processing/modeler_twi.rst:44
 msgid ""
 "Let's start with the inputs. In this case we do not have much to add. We "
 "just need a raster layer with the DEM, and that will be our only input data."
@@ -165,47 +166,60 @@ msgstr ""
 " Nous avons juste besoin d'une couche raster avec un MNE, et ceci sera notre"
 " seule entrée de données."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:44
+#: ../../docs/training_manual/processing/modeler_twi.rst:46
 msgid ""
-"Double click on the *Raster layer* input and you will see the following "
-"dialog."
+"Double click on the :guilabel:`Raster layer` input and you will see the "
+"following dialog."
 msgstr ""
-"Double-cliquez sur l'entrée *Couche raster* et vous verrez la boîte de "
-"dialogue suivante."
-
-#: ../../docs/training_manual/processing/modeler_twi.rst:48
-msgid ""
-"Here we will have to define the input we want. Since we expect this raster "
-"layer to be a DEM, we will call it *DEM*. That's the name that the user of "
-"the model will see when running it. Since we need that layer to work, we "
-"will define it as a mandatory layer."
-msgstr ""
-"Ici nous devons définir l'entrée que nous voulons. Puisque nous nous "
-"attendons à ce que cette couche raster soit un MNE, nous l'appellerons "
-"*MNE*. C'est le nom que l'utilisateur du modèle verra lorsqu'il l'exécutera."
-" Comme nous avons besoin de cette couche pour que ça fonctionne, nous la "
-"définirons comme une couche obligatoire."
+"Double-cliquez sur l'entrée :guilabel:`Couche raster` et vous verrez la "
+"boîte de dialogue suivante."
 
 #: ../../docs/training_manual/processing/modeler_twi.rst:50
+msgid "Here we will have to define the input we want:"
+msgstr "Ici nous devons définir l'élément en entrée à utiliser :"
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:52
+msgid ""
+"Since we expect this raster layer to be a DEM, we will call it ``DEM``. "
+"That's the name that the user of the model will see when running it."
+msgstr ""
+"Puisque nous nous attendons à ce que cette couche raster soit un MNT, nous "
+"l'appellerons ``MNT``. C'est le nom que l'utilisateur du modèle verra lors "
+"de son exécution."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:53
+msgid ""
+"Since we need that layer to work, we will define it as a mandatory layer."
+msgstr ""
+"Puisque nous avons besoin de cette couche pour fonctionner, nous la "
+"définirons comme une couche obligatoire."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:55
 msgid "Here is how the dialog should be configured."
 msgstr "Voici comment la boîte de dialogue devrait être configurée."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:54
-msgid "Click on *OK* and the input will appear in the modeler canvas."
-msgstr "Cliquez sur *OK* et l'entrée apparaîtra dans le canevas du modeleur."
-
-#: ../../docs/training_manual/processing/modeler_twi.rst:58
+#: ../../docs/training_manual/processing/modeler_twi.rst:59
 msgid ""
-"Now let's move to the *Algorithms* tab. The first algorithm we have to run "
-"is the *Slope, aspect, curvature* algorithm. Locate it in the algorithm "
-"list, double--click on it and you will see the dialog shown below."
+"Click on :guilabel:`OK` and the input will appear in the modeler canvas."
 msgstr ""
-"Rendons-nous maintenant à l'onglet *Algorithmes*. Le premier algorithme que "
-"nous devons exécuter est l'algorithme *Pente, aspect, courbature*. "
-"Localisez-le dans la liste des algorithmes, double-cliquez dessus et vous "
-"verrez la boîte de dialogue montrée ci-dessous."
+"Cliquez sur :guilabel:`OK` et l'entrée apparaîtra dans le canevas du "
+"modeleur."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:62
+#: ../../docs/training_manual/processing/modeler_twi.rst:63
+msgid "Now let's move to the :guilabel:`Algorithms` tab."
+msgstr "Passons maintenant à l'onglet :guilabel:`Algorithmes`."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:64
+msgid ""
+"The first algorithm we have to run is the :guilabel:`Slope, aspect, "
+"curvature` algorithm. Locate it in the algorithm list, double-click on it "
+"and you will see the dialog shown below."
+msgstr ""
+"Le premier algorithme que nous devons exécuter est l'algorithme "
+":guilabel:`Pente, aspect, courbure`. Localisez-le dans la liste des "
+"algorithmes, double-cliquez dessus et vous verrez le dialogue ci-dessous."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:69
 msgid ""
 "This dialog is very similar to the one that you can find when running the "
 "algorithm from the toolbox, but the element that you can use as parameter "
@@ -213,20 +227,20 @@ msgid ""
 "itself. That means that, in this case, we will not have all the raster "
 "layers of our project available for the *Elevation* field, but just the ones"
 " defined in our model. Since we have added just one single raster input "
-"named *DEM*, that will be the only raster layer that we will see in the list"
-" corresponding to the *Elevation* parameter."
+"named ``DEM``, that will be the only raster layer that we will see in the "
+"list corresponding to the :guilabel:`Elevation` parameter."
 msgstr ""
-"Cette boîte de dialogue est très semblable à celle que vous pouvez trouver "
-"lors de l'exécution de l'algorithme depuis la boîte à outils, mais les "
-"éléments que vous pouvez utiliser comme valeurs de paramètre ne viennent pas"
-" du projet QGIS courant, mais du modèle lui-même. Cela signifie que, dans ce"
-" cas, nous n'aurons pas toutes les couches raster de notre projet "
-"disponibles pour le champ *Élévation*, mais uniquement pour ceux définis "
-"dans notre modèle. Comme nous avons ajouté seulement un seul raster d'entrée"
-" nommé *MNE*, ce sera la seule couche raster que nous verrons dans la liste "
-"correspondant au paramètre d'*Élévation*."
+"Cette boîte de dialogue est très similaire à celle que vous pouvez trouver "
+"lorsque vous exécutez l'algorithme à partir de la boîte à outils, mais les "
+"éléments que vous pouvez utiliser comme valeurs de paramètres ne sont pas "
+"pris dans le projet QGIS actuel, mais dans le modèle lui-même. Cela signifie"
+" que, dans ce cas, nous n'aurons pas toutes les couches raster de notre "
+"projet disponibles pour le champ *Elevation*, mais seulement celles définies"
+" dans notre modèle. Puisque nous n'avons ajouté qu'une seule entrée raster "
+"nommée ``MNT``, ce sera la seule couche raster que nous verrons dans la "
+"liste correspondant au paramètre :guilabel:`Elevation`."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:64
+#: ../../docs/training_manual/processing/modeler_twi.rst:71
 msgid ""
 "Output generated by an algorithm are handled a bit differently when the "
 "algorithm is used as a part of a model. Instead of selecting the filepath "
@@ -248,7 +262,7 @@ msgstr ""
 "juste besoin pour calculer la couche TWI, qui est le résultat final que nous"
 " voulons obtenir."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:66
+#: ../../docs/training_manual/processing/modeler_twi.rst:73
 msgid ""
 "When layers are not a final result, you should just leave the corresponding "
 "field. Otherwise, you have to enter a name that will be used to identify the"
@@ -260,22 +274,21 @@ msgstr ""
 " utilisé pour identifier la couche dans la boîte de dialogue des paramètres "
 "qui apparaîtra lorsque vous exécuterez plus tard le modèle."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:68
+#: ../../docs/training_manual/processing/modeler_twi.rst:75
 msgid ""
 "There is not much to select in this first dialog, since we do not have but "
-"just one layer in or model (The DEM input that we created). Actually, the "
+"just one layer in our model (The DEM input that we created). Actually, the "
 "default configuration of the dialog is the correct one in this case, so you "
-"just have to press *OK*. This is what you will now have in the modeler "
-"canvas."
+"just have to press :guilabel:`OK`. This is what you will now have in the "
+"modeler canvas."
 msgstr ""
-"Il n'y a plus grand-chose d'autre à sélectionner dans cette première boîte "
-"de dialogue étant donné que nous n'avons qu'une seule couche d'entrée dans "
-"notre modèle (le MNE que nous avons créé). En fait la configuration par "
-"défaut de la boîte de dialogue est correcte et vous pouvez simplement "
-"cliquer sur *Ok*. Voici ce que vous aurez maintenant dans le canevas du "
-"modeleur."
+"Il n'y a pas grand chose à sélectionner dans ce premier dialogue, puisque "
+"nous n'avons qu'une seule couche dans notre modèle (l'entrée MNT que nous "
+"avons créée). En fait, la configuration par défaut du dialogue est la bonne "
+"dans ce cas, donc vous devez juste appuyer sur :guilabel:`OK`. C'est ce que "
+"vous aurez maintenant dans le canevas du modeleur."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:72
+#: ../../docs/training_manual/processing/modeler_twi.rst:79
 msgid ""
 "The second algorithm we have to add to our model is the catchment area "
 "algorithm. We will use the algorithm named *Catchment area (Paralell)*. We "
@@ -288,19 +301,19 @@ msgstr ""
 "aucune des sorties produites seront des sorties finales, donc voici comment "
 "vous devez remplir la boîte de dialogue correspondante."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:76
+#: ../../docs/training_manual/processing/modeler_twi.rst:83
 msgid "Now your model should look like this."
 msgstr "Votre modèle devrait maintenant ressembler à cela."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:80
+#: ../../docs/training_manual/processing/modeler_twi.rst:87
 msgid ""
-"The last step is to add the *Topographic wetness index* algorithm, with the "
-"following configuration."
+"The last step is to add the :guilabel:`Topographic wetness index` algorithm,"
+" with the following configuration."
 msgstr ""
-"La dernière étape est l'ajout de l'algorithme *Indice d'Humidité "
-"Topographique*, avec la configuration suivante."
+"La dernière étape consiste à ajouter l'algorithme :guilabel:`indice "
+"topographique humidité`, avec la configuration suivante."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:84
+#: ../../docs/training_manual/processing/modeler_twi.rst:91
 msgid ""
 "In this case, we will not be using the DEM as input, but instead, we will "
 "use the slope and catchment area layers that are calculated by the "
@@ -315,57 +328,56 @@ msgstr ""
 "deviennent disponibles pour les autres algorithmes, et en les utilisant vous"
 " reliez les algorithmes, créant le flux de traitement."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:86
+#: ../../docs/training_manual/processing/modeler_twi.rst:93
 msgid ""
-"In this case, the output TWI layer is a final layer, so we have to indicate "
-"so. In the corresponding textbox, enter the name that you want to be shown "
-"for this output."
+"In this case, the output ``TWI`` layer is a final layer, so we have to "
+"indicate so. In the corresponding textbox, enter the name that you want to "
+"be shown for this output."
 msgstr ""
-"Dans ce cas, la couche de sortie TWI est une couche finale, donc nous devons"
-" l'indiquer. Dans le champ correspondant, entrez le nom que vous voulez "
-"qu'il soit montré pour cette sortie."
+"Dans ce cas, la couche de sortie ``TWI`` est une couche finale, nous devons "
+"donc l'indiquer. Dans la zone de texte correspondante, entrez le nom que "
+"vous souhaitez voir apparaître pour cette sortie."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:88
+#: ../../docs/training_manual/processing/modeler_twi.rst:95
 msgid "Now our model is finished and it should look like this."
 msgstr "Notre modèle est maintenant terminé et il devrait ressembler à cela."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:92
+#: ../../docs/training_manual/processing/modeler_twi.rst:99
+msgid "Enter a name and a group name in the upper part of the model window."
+msgstr ""
+"Saisissez un nom et un nom de groupe dans la partie supérieure de la fenêtre"
+" du modèle."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:103
 msgid ""
-"Enter a name and a group name in the upper part of the model window, and "
-"then save it clicking on the *Save* button."
+"Save it clicking on the :guilabel:`Save` button. You can save it anywhere "
+"you want and open it later, but if you save it in the models folder (which "
+"is the folder that you will see when the save file dialog appears), your "
+"model will also be available in the toolbox as well. So stay on that folder "
+"and save the model with the filename that you prefer."
 msgstr ""
-"Entrez un nom et un nom de groupe dans la partie du haut de la fenêtre du "
-"modèle, et ensuite sauvegardez-le en cliquant sur le bouton *Sauvegarder*."
+"Enregistrez-le en cliquant sur le bouton :guilabel:`Sauvegarder`. Vous "
+"pouvez l'enregistrer où vous voulez et l'ouvrir plus tard, mais si vous "
+"l'enregistrez dans le dossier des modèles (qui est le dossier que vous "
+"verrez lorsque le dialogue d'enregistrement du fichier apparaîtra), votre "
+"modèle sera également disponible dans la boîte à outils. Restez donc dans ce"
+" dossier et enregistrez le modèle avec le nom de fichier que vous préférez."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:96
+#: ../../docs/training_manual/processing/modeler_twi.rst:105
 msgid ""
-"You can save it anywhere you want and open it later, but if you save it in "
-"the models folder (which is the folder that you will see when the save file "
-"dialog appears), you model will also be available in the toolbox as well. So"
-" stay on that folder and save the model with the filename that you prefer."
+"Now close the modeler dialog and go to the toolbox. In the "
+":guilabel:`Models` entry you will find your model."
 msgstr ""
-"Vous pouvez le sauvegarder n'importe où où vous voulez et l'ouvrir plus "
-"tard, mais si vous le sauvegardez dans le répertoire des modèles (qui est le"
-" répertoire que vous verrez lorsque la boîte de dialogue de sauvegarde du "
-"fichier apparaîtra), votre modèle sera également disponible dans la boîte à "
-"outils. Donc restez dans ce répertoire et sauvegardez le modèle avec le nom "
-"de fichier que vous désirez."
+"Fermez maintenant la boîte de dialogue du modeleur et allez dans la boîte à "
+"outils. Dans l'entrée :guilabel:`modèle`, vous trouverez votre modèle."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:98
-msgid ""
-"Now close the modeler dialog and go to the toolbox. In the *Models* entry "
-"you will find you model."
+#: ../../docs/training_manual/processing/modeler_twi.rst:109
+msgid "You can run it just like any normal algorithm, double-clicking on it."
 msgstr ""
-"Fermez maintenant la boîte de dialogue du modeleur et rendez-vous dans la "
-"boîte à outils. Sous l'entrée *Modèles*, vous trouverez votre modèle."
+"Vous pouvez l'exécuter comme n'importe quel algorithme normal, en double-"
+"cliquant dessus."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:102
-msgid "You can run it just like any normal algorithm, double--clicking on it."
-msgstr ""
-"Vous pouvez l'exécuter simplement comme n'importe quel algorithme normal, en"
-" double-cliquant dessus."
-
-#: ../../docs/training_manual/processing/modeler_twi.rst:106
+#: ../../docs/training_manual/processing/modeler_twi.rst:113
 msgid ""
 "As you can see, the parameters dialog, contain the input that you added to "
 "the model, along with the outputs that you set as final when adding the "
@@ -376,7 +388,7 @@ msgstr ""
 "avez configurées comme finales lors de l'ajout des algorithmes "
 "correspondants."
 
-#: ../../docs/training_manual/processing/modeler_twi.rst:108
+#: ../../docs/training_manual/processing/modeler_twi.rst:115
 msgid ""
 "Run it using the DEM as input and you will get the TWI layer in just one "
 "single step."
