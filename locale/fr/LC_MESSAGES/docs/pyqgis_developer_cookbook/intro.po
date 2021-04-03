@@ -6,20 +6,21 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2020
+# Francis Gasc <francisgasc@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-13 09:01+0100\n"
+"POT-Creation-Date: 2021-01-12 10:14+0000\n"
 "PO-Revision-Date: 2020-12-24 10:20+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"Last-Translator: Francis Gasc <francisgasc@gmail.com>, 2021\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.8.0\n"
+"Generated-By: Babel 2.9.0\n"
 "Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
@@ -83,23 +84,23 @@ msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/intro.rst:37
 msgid ""
-"There is a :api:`complete QGIS API <>` reference that documents the classes "
-"from the QGIS libraries. :pyqgis:`The Pythonic QGIS API (pyqgis) <>` is "
-"nearly identical to the C++ API."
+"There is a :api:`complete QGIS C++ API <>` reference that documents the "
+"classes from the QGIS libraries. :pyqgis:`The Pythonic QGIS API (pyqgis) <>`"
+" is nearly identical to the C++ API."
 msgstr ""
-"Une :api:`API QGIS <>` référençant et décrivant les classes de la "
-"bibliothèque QGIS :pyqgis: est disponible. `L'API Python (pyqgis) <>` est "
-"quasiment identique à l'API C++."
+"Il existe une référence :api:`complete QGIS C++ API <>` qui documente les "
+"classes des bibliothèques QGIS. :pyqgis:`L'API Pythonique QGIS (pyqgis) <>` "
+"est presque identique à l'API C++."
 
 #: ../../docs/pyqgis_developer_cookbook/intro.rst:41
 msgid ""
-"A good resource for learning how to perform common tasks is to download "
-"existing plugins from the `plugin repository <https://plugins.qgis.org/>`_ "
-"and examine their code."
+"Another good resource for learning how to perform common tasks is to "
+"download existing plugins from the `plugin repository "
+"<https://plugins.qgis.org/>`_ and examine their code."
 msgstr ""
-"Une bonne méthode pour apprendre à réaliser des tâches classiques est de "
-"télécharger des extensions existantes depuis le  `dépôt d'extensions "
-"<https://plugins.qgis.org/>` puis d'examiner leur code."
+"Une autre bonne ressource pour apprendre à effectuer des tâches courantes "
+"est de télécharger des plugins existants depuis le `dépôt de plugins "
+"<https://plugins.qgis.org/>`_ et d'examiner leur code."
 
 #: ../../docs/pyqgis_developer_cookbook/intro.rst:52
 msgid "Scripting in the Python Console"
@@ -299,27 +300,28 @@ msgstr "Applications Python"
 #: ../../docs/pyqgis_developer_cookbook/intro.rst:168
 msgid ""
 "It is often handy to create  scripts for automating processes. With PyQGIS, "
-"this is perfectly possible --- import the :mod:`qgis.core` module, "
-"initialize it and you are ready for the processing."
+"this is perfectly possible --- import the :pyqgis:`qgis.core <core>` module,"
+" initialize it and you are ready for the processing."
 msgstr ""
 "Il est souvent pratique de créer des scripts pour automatiser des processus."
-" Avec PyQGIS, cela est parfaitement possible --- importez le module "
-":mod:`qgis.core`, initialisez-le et vous êtes prêt pour le traitement."
+" Avec PyQGIS, c'est parfaitement possible --- importez le module "
+":pyqgis:`qgis.core <core>`, initialisez-le et vous êtes prêt pour le "
+"traitement."
 
 #: ../../docs/pyqgis_developer_cookbook/intro.rst:173
 msgid ""
 "Or you may want to create an interactive application that uses GIS "
 "functionality --- perform measurements, export a map as PDF, ... The "
-":mod:`qgis.gui` module provides various GUI components, most notably the map"
-" canvas widget that can be incorporated into the application with support "
-"for zooming, panning and/or any further custom map tools."
+":pyqgis:`qgis.gui <gui>` module provides various GUI components, most "
+"notably the map canvas widget that can be incorporated into the application "
+"with support for zooming, panning and/or any further custom map tools."
 msgstr ""
-"Vous pouvez aussi souhaiter créer une application interactive utilisant "
-"certaines fonctionnalités SIG --- mesurer des données, exporter une carte en"
-" PDF, .... Le module :mod:`qgis.gui` fournit différentes composantes de "
-"l'interface, le plus notable étant le canevas de carte qui peut être "
-"facilement intégré dans l'application, avec le support du zoom, du "
-"déplacement ou de tout autre outil personnalisé de cartographie."
+"Vous pouvez aussi créer une application interactive qui utilise les "
+"fonctionnalités du SIG --- effectuer des mesures, exporter une carte au "
+"format PDF, ... Le module :pyqgis:`qgis.gui <gui>` fournit divers composants"
+" d'interface graphique, notamment le widget de canevas de carte qui peut "
+"être incorporé dans l'application avec le support du zoom, du panoramique "
+"et/ou d'autres outils de carte personnalisés."
 
 #: ../../docs/pyqgis_developer_cookbook/intro.rst:180
 msgid ""
@@ -361,70 +363,82 @@ msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/intro.rst:223
 msgid ""
-"First we import the :mod:`qgis.core` module and configure the prefix path. "
-"The prefix path is the location where QGIS is installed on your system. It "
-"is configured in the script by calling the :meth:`setPrefixPath "
-"<qgis.core.QgsApplication.setPrefixPath>` method. The second argument of "
-":meth:`setPrefixPath <qgis.core.QgsApplication.setPrefixPath>` is set to "
-"``True``, specifying that default paths are to be used."
+"First we import the :pyqgis:`qgis.core <core>` module and configure the "
+"prefix path. The prefix path is the location where QGIS is installed on your"
+" system. It is configured in the script by calling the "
+":meth:`setPrefixPath() <qgis.core.QgsApplication.setPrefixPath>` method. The"
+" second argument of :meth:`setPrefixPath() "
+"<qgis.core.QgsApplication.setPrefixPath>` is set to :const:`True`, "
+"specifying that default paths are to be used."
 msgstr ""
-"Nous commençons par importer le module :mod:`qgis.core` puis nous "
-"configurons le chemin de préfixe. Le chemin de préfixe est l'endroit où QGIS"
-" est installé sur votre système. Il est configuré dans le script en faisant "
-"appel à la méthode :meth:`setPrefixPath "
-"<qgis.core.QgsApplication.setPrefixPath>`. Le second argument de la méthode "
-":meth:`setPrefixPath <qgis.core.QgsApplication.setPrefixPath>` est mis à "
-"``True``, indiquant que les chemins par défaut sont à utiliser."
+"Tout d'abord, nous importons le module :pyqgis:`qgis.core <core>` et "
+"configurons le chemin du préfixe. Le chemin du préfixe est l'endroit où QGIS"
+" est installé sur votre système. Il est configuré dans le script en appelant"
+" la méthode :meth:`setPrefixPath() "
+"<qgis.core.QgsApplication.setPrefixPath>`. Le deuxième argument de "
+":meth:`setPrefixPath() <qgis.core.QgsApplication.setPrefixPath>` est défini "
+"sur :const:`True`, spécifiant que les chemins par défaut doivent être "
+"utilisés."
 
 #: ../../docs/pyqgis_developer_cookbook/intro.rst:232
 msgid ""
 "The QGIS install path varies by platform; the easiest way to find it for "
 "your system is to use the :ref:`pythonconsole` from within QGIS and look at "
-"the output from running ``QgsApplication.prefixPath()``."
+"the output from running:"
 msgstr ""
-"Le chemin d'installation de QGIS varie selon les plateformes; le moyen le "
-"plus simple pour trouver celle qui correspond à votre système est d'utiliser"
-" la console  :ref:`pythonconsole` depuis QGIS et de vérifier la sortie de la"
-" commande ``QgsApplication.prefixPath()``."
+"Le chemin d'installation de QGIS varie en fonction de la plate-forme ; le "
+"moyen le plus simple de le trouver pour votre système est d'utiliser la "
+"commande :ref:`pythonconsole` à partir de QGIS et de regarder la sortie de "
+"l'exécution :"
 
-#: ../../docs/pyqgis_developer_cookbook/intro.rst:237
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:240
 msgid ""
 "After the prefix path is configured, we save a reference to "
-"``QgsApplication`` in the variable ``qgs``. The second argument is set to "
-"``False``, specifying that we do not plan to use the GUI since we are "
-"writing a standalone script. With ``QgsApplication`` configured, we load the"
-" QGIS data providers and layer registry by calling the ``qgs.initQgis()`` "
-"method. With QGIS initialized, we are ready to write the rest of the script."
-" Finally, we wrap up by calling ``qgs.exitQgis()`` to remove the data "
-"providers and layer registry from memory."
+":class:`QgsApplication <qgis.core.QgsApplication>` in the variable ``qgs``. "
+"The second argument is set to :const:`False`, specifying that we do not plan"
+" to use the GUI since we are writing a standalone script. With "
+"``QgsApplication`` configured, we load the QGIS data providers and layer "
+"registry by calling the :meth:`initQgis() "
+"<qgis.core.QgsApplication.initQgis>` method."
 msgstr ""
-"Une fois la configuration du chemin faite, nous sauvegardons une références "
-"à ``QgsApplication`` dans la variable ``qgs``. Le second argument est défini"
-" à ``False``, indiquant que n'allons pas utiliser une interface graphique "
-"puisque nous écrivons un script autonome. ``QgsApplication`` étant "
-"configuré, nous chargeons les fournisseurs de données de QGIS et le registre"
-" de couches via la méthode ``qgs.initQgis()``. QGIS étant initialisé, nous "
-"sommes prêts à écrire le reste de notre script. Pour finir, nous utilisons "
-"``qgs.exitQgis()`` pour nous assurer de supprimer de la mémoire les "
-"fournisseurs de données et le registre de couches."
-
-#: ../../docs/pyqgis_developer_cookbook/intro.rst:249
-msgid "Using PyQGIS in custom applications"
-msgstr "Utiliser PyQGIS dans une application personnalisée "
+"Une fois le chemin du préfixe configuré, nous enregistrons une référence à "
+":class:`QgsApplication <qgis.core.QgsApplication>` dans la variable ``qgs``."
+" Le second argument est défini à :const:`False`, spécifiant que nous ne "
+"prévoyons pas d'utiliser l'interface graphique puisque nous écrivons un "
+"script autonome. Avec ``QgsApplication`` configuré, nous chargeons les "
+"fournisseurs de données QGIS et le registre des couches en appelant la "
+"méthode :meth:`initQgis() <qgis.core.QgsApplication.initQgis>`."
 
 #: ../../docs/pyqgis_developer_cookbook/intro.rst:251
 msgid ""
+"With QGIS initialized, we are ready to write the rest of the script. "
+"Finally, we wrap up by calling :meth:`exitQgis() "
+"<qgis.core.QgsApplication.exitQgis>` to remove the data providers and layer "
+"registry from memory."
+msgstr ""
+"Avec QGIS initialisé, nous sommes prêts à écrire le reste du script. Enfin, "
+"nous terminons en appelant :meth:`exitQgis() "
+"<qgis.core.QgsApplication.exitQgis>` pour supprimer de la mémoire les "
+"fournisseurs de données et le registre des couches."
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:260
+msgid "Using PyQGIS in custom applications"
+msgstr "Utiliser PyQGIS dans une application personnalisée "
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:262
+msgid ""
 "The only difference between :ref:`standalonescript` and a custom PyQGIS "
 "application is the second argument when instantiating the "
-"``QgsApplication``. Pass ``True`` instead of ``False`` to indicate that we "
-"plan to use a GUI."
+":class:`QgsApplication <qgis.core.QgsApplication>`. Pass :const:`True` "
+"instead of :const:`False` to indicate that we plan to use a GUI."
 msgstr ""
 "La seule différence entre :ref:`standalonescript` et une application PyQGIS "
-"personnalisée réside dans le second argument lors de l'initialisation de "
-"``QgsApplication``. Passer ``True`` au lieu de ``False`` pour indiquer que "
-"nous allons utiliser une interface graphique."
+"personnalisée est le second argument lors de l'instanciation de la "
+":class:`QgsApplication <qgis.core.QgsApplication>`. Passez :const:`True` au "
+"lieu de :const:`False` pour indiquer que nous prévoyons d'utiliser une "
+"interface graphique."
 
-#: ../../docs/pyqgis_developer_cookbook/intro.rst:280
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:292
 msgid ""
 "Now you can work with the QGIS API - load layers and do some processing or "
 "fire up a GUI with a map canvas. The possibilities are endless :-)"
@@ -433,11 +447,11 @@ msgstr ""
 "et effectuer des traitements ou lancer une interface graphique avec un "
 "canevas de carte. Les possibilités sont infinies :-)"
 
-#: ../../docs/pyqgis_developer_cookbook/intro.rst:288
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:300
 msgid "Running Custom Applications"
 msgstr "Exécuter des applications personnalisées"
 
-#: ../../docs/pyqgis_developer_cookbook/intro.rst:290
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:302
 msgid ""
 "You need to tell your system where to search for QGIS libraries and "
 "appropriate Python modules if they are not in a well-known location - "
@@ -447,7 +461,7 @@ msgstr ""
 "modules Python appropriés s'ils ne sont pas à un emplacement connu - "
 "autrement, Python se plaindra::"
 
-#: ../../docs/pyqgis_developer_cookbook/intro.rst:297
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:309
 msgid ""
 "This can be fixed by setting the ``PYTHONPATH`` environment variable. In the"
 " following commands, ``<qgispath>`` should be replaced with your actual QGIS"
@@ -457,22 +471,22 @@ msgstr ""
 "``PYTHONPATH``. Dans les commandes suivantes, ``<qgispath>`` doit être "
 "remplacé par le réel chemin d'accès au dossier d'installation de QGIS:"
 
-#: ../../docs/pyqgis_developer_cookbook/intro.rst:301
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:313
 msgid "on Linux: :command:`export PYTHONPATH=/<qgispath>/share/qgis/python`"
 msgstr "sur Linux: :command:`export PYTHONPATH=/<qgispath>/share/qgis/python`"
 
-#: ../../docs/pyqgis_developer_cookbook/intro.rst:302
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:314
 msgid "on Windows: :command:`set PYTHONPATH=c:\\\\<qgispath>\\\\python`"
 msgstr "sur Windows: :command:`set PYTHONPATH=c:\\\\<qgispath>\\\\python`"
 
-#: ../../docs/pyqgis_developer_cookbook/intro.rst:303
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:315
 msgid ""
 "on macOS: :command:`export PYTHONPATH=/<qgispath>/Contents/Resources/python`"
 msgstr ""
 "sur macOS: :command:`export "
 "PYTHONPATH=/<qgispath>/Contents/Resources/python`"
 
-#: ../../docs/pyqgis_developer_cookbook/intro.rst:305
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:317
 msgid ""
 "Now, the path to the PyQGIS modules is known, but they depend on the "
 "``qgis_core`` and ``qgis_gui`` libraries (the Python modules serve only as "
@@ -486,7 +500,7 @@ msgstr ""
 "être inconnu du système d'exploitation auquel cas vous auriez de nouveau une"
 " erreur d'import (le message peut varier selon le système)::"
 
-#: ../../docs/pyqgis_developer_cookbook/intro.rst:315
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:327
 msgid ""
 "Fix this by adding the directories where the QGIS libraries reside to the "
 "search path of the dynamic linker:"
@@ -494,11 +508,11 @@ msgstr ""
 "Corrigez ce problème en ajoutant les répertoires d'emplacement des "
 "bibliothèques QGIS au chemin de recherche de l'éditeur dynamique de liens:"
 
-#: ../../docs/pyqgis_developer_cookbook/intro.rst:318
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:330
 msgid "on Linux: :command:`export LD_LIBRARY_PATH=/<qgispath>/lib`"
 msgstr "sur Linux: :command:`export LD_LIBRARY_PATH=/<qgispath>/lib`"
 
-#: ../../docs/pyqgis_developer_cookbook/intro.rst:319
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:331
 msgid ""
 "on Windows: :command:`set "
 "PATH=C:\\\\<qgispath>\\\\bin;C:\\\\<qgispath>\\\\apps\\\\<qgisrelease>\\\\bin;%PATH%`"
@@ -510,7 +524,7 @@ msgstr ""
 " où ``<qgisrelease>`` devra être remplacé avec le type de release que vous "
 "ciblez (ex. ``qgis-ltr``, ``qgis``, ``qgis-dev``)"
 
-#: ../../docs/pyqgis_developer_cookbook/intro.rst:323
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:335
 msgid ""
 "These commands can be put into a bootstrap script that will take care of the"
 " startup. When deploying custom applications using PyQGIS, there are usually"
@@ -520,7 +534,7 @@ msgstr ""
 " démarrage. Lorsque vous déployez des applications personnalisées qui "
 "utilisent PyQGIS, il existe généralement deux possibilités:"
 
-#: ../../docs/pyqgis_developer_cookbook/intro.rst:327
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:339
 msgid ""
 "require the user to install QGIS prior to installing your application. The "
 "application installer should look for default locations of QGIS libraries "
@@ -534,7 +548,7 @@ msgstr ""
 "approche a l'avantage d'être plus simple mais elle impose plus d'actions à "
 "l'utilisateur."
 
-#: ../../docs/pyqgis_developer_cookbook/intro.rst:333
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:345
 msgid ""
 "package QGIS together with your application. Releasing the application may "
 "be more challenging and the package will be larger, but the user will be "
@@ -546,7 +560,7 @@ msgstr ""
 "volumineux mais l'utilisateur n'aura pas à télécharger et à installer "
 "d'autres logiciels."
 
-#: ../../docs/pyqgis_developer_cookbook/intro.rst:338
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:350
 msgid ""
 "The two deployment models can be mixed.  You can provide a standalone "
 "applications on Windows and macOS, but for Linux leave the installation of "
@@ -556,11 +570,11 @@ msgstr ""
 "application autonome sous Windows et MacOS, mais sous Linux laisser "
 "l'installation de QGIS à l'utilisateur via son gestionnaire de paquets ."
 
-#: ../../docs/pyqgis_developer_cookbook/intro.rst:343
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:355
 msgid "Technical notes on PyQt and SIP"
 msgstr "Notes techniques sur PyQt et SIP"
 
-#: ../../docs/pyqgis_developer_cookbook/intro.rst:345
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:357
 msgid ""
 "We've decided for Python as it's one of the most favoured languages for "
 "scripting. PyQGIS bindings in QGIS 3 depend on SIP and PyQt5. The reason for"
