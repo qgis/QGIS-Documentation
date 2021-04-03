@@ -1,23 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
+# Harrissou Sant-anna, 2021
+# Francis Gasc <francisgasc@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:22+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"POT-Creation-Date: 2021-03-03 02:15+0000\n"
+"PO-Revision-Date: 2020-12-24 10:28+0000\n"
+"Last-Translator: Francis Gasc <francisgasc@gmail.com>, 2021\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
 "Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
@@ -36,15 +39,15 @@ msgstr ""
 #: ../../docs/training_manual/processing/modeler_hydro.rst:6
 msgid ""
 "The first model that we created in the previous chapter was a very simple "
-"one, with just one input and 3 algorithms. More complex models can be "
-"created, with different types of inputs and containing more step. For this "
+"one, with just one input and three algorithms. More complex models can be "
+"created, with different types of inputs and containing more steps. For this "
 "chapter we will work with a model that creates a vector layer with "
 "watersheds, based on a DEM and a threshold value. That will be very useful "
 "for calculating several vector layers corresponding to different thresholds,"
 " without having to repeat each single step each time."
 msgstr ""
 "Le premier modèle que nous avons créé dans le chapitre précédent était très "
-"simple, avec seulement une entrée et 3 algorithmes. Des modèles plus "
+"simple, avec seulement une entrée et trois algorithmes. Des modèles plus "
 "complexes peuvent être créés, avec différents types d'entrée et contenant "
 "plus d'étapes. Dans ce chapitre nous travaillerons avec un modèle qui crée "
 "une couche vectorielle avec des bassins versants basés sur un MNE et une "
@@ -54,20 +57,20 @@ msgstr ""
 
 #: ../../docs/training_manual/processing/modeler_hydro.rst:8
 msgid ""
-"This lesson does not contain instructions about how to create you model. You"
-" already know the necessary steps (we saw them in a previous lesson) and you"
-" have already seen the basic ideas about the modeler, so you should try it "
-"yourself. Spend a few minutes trying to create your model, and don't worry "
-"about making mistakes. Remember: first add the inputs and then add the "
-"algorithms that use them to create the workflow."
+"This lesson does not contain instructions about how to create your model. "
+"You already know the necessary steps (we saw them in a :ref:`previous lesson"
+" <tm_start_modeler>`) and you have already seen the basic ideas about the "
+"modeler, so you should try it yourself. Spend a few minutes trying to create"
+" your model, and don't worry about making mistakes. Remember: first add the "
+"inputs and then add the algorithms that use them to create the workflow."
 msgstr ""
 "Cette leçon ne contient pas d'instructions sur comment créer votre modèle. "
 "Vous connaissez déjà les étapes nécessaires (nous les avons vues dans une "
-"leçon précédente) et vous avez déjà vu les idées de base sur le modeleur, "
-"donc vous devrez essayer de le faire vous-même. Passez quelques minutes à "
-"essayer de créer votre modèle, et n'ayez crainte de faire des fautes. "
-"Souvenez-vous : premièrement, ajoutez les entrées et ensuite ajoutez les "
-"algorithmes qui les utilisent pour créer le flux de traitements."
+":ref:`leçon précédente <tm_start_modeler>`) et vous avez déjà vu les bases "
+"du modeleur, donc vous devrez essayer de le faire vous-même. Passez quelques"
+" minutes à essayer de créer votre modèle, et n'ayez crainte de faire des "
+"erreurs. Souvenez-vous : premièrement, ajoutez les entrées et ensuite "
+"ajoutez les algorithmes qui les utilisent pour créer le flux de traitements."
 
 #: ../../docs/training_manual/processing/modeler_hydro.rst:10
 msgid ""
@@ -86,7 +89,7 @@ msgstr ""
 msgid ""
 "This model contains all the steps needed to complete the calculation, but it"
 " just has one input: the DEM. That means that the threshold for channel "
-"definition use a fixed value, which makes the model not as useful as it "
+"definition uses a fixed value, which makes the model not as useful as it "
 "could be. That is not a problem, since we can edit the model, and that is "
 "exactly what we will do."
 msgstr ""
@@ -101,53 +104,81 @@ msgstr ""
 msgid ""
 "First, let's add a numerical input. That will ask the user for a numerical "
 "input that we can use when such a value is needed in any of the algorithms "
-"included in our model. Click on the *Number* entry in the inputs tree, and "
-"you will see the corresponding dialog. Fill it with the values shown next."
+"included in our model."
 msgstr ""
 "Premièrement, ajoutons une entrée numérique. Cela demandera à l'utilisateur "
-"une entrée numérique que nous pouvons utiliser lorsqu'une telle valeur est "
-"nécessaire dans un des algorithmes inclus dans notre modèle. Cliquez sur "
-"l'entrée *Nombre* dans l'arbre de saisie, et vous verrez la boîte de "
-"dialogue correspondante. Remplissez-la avec les valeurs montrées ensuite."
+"de fournir un nombre que nous pouvons utiliser lorsqu'une telle valeur est "
+"nécessaire dans un des algorithmes inclus dans notre modèle."
+
+#: ../../docs/training_manual/processing/modeler_hydro.rst:17
+msgid ""
+"Click on the :guilabel:`Number` entry in the :guilabel:`Inputs` tree, and "
+"you will see the corresponding dialog."
+msgstr ""
+"Cliquez sur l'entrée :guilabel:`Nombre` dans la liste des "
+":guilabel:`Entrées`, et vous verrez la boîte de dialogue correspondante."
+
+#: ../../docs/training_manual/processing/modeler_hydro.rst:18
+msgid "Fill it with the following values."
+msgstr " Remplissez-la avec les valeurs ci-après."
 
 #: ../../docs/training_manual/processing/modeler_hydro.rst:20
+msgid ":guilabel:`Parameter name`: ``Threshold for channel definition``"
+msgstr ":guilabel:`Nom du paramètre` : ``Seuil pour la définition du canal``"
+
+#: ../../docs/training_manual/processing/modeler_hydro.rst:21
+msgid ":guilabel:`Default value`: ``1,000,000``"
+msgstr ":guilabel:`Valeur par défaut`: ``1 000 000``"
+
+#: ../../docs/training_manual/processing/modeler_hydro.rst:25
 msgid "Now your model should look like this."
 msgstr "Votre modèle devrait maintenant ressembler à cela."
 
-#: ../../docs/training_manual/processing/modeler_hydro.rst:24
+#: ../../docs/training_manual/processing/modeler_hydro.rst:29
 msgid ""
 "The input that we have just added is not used, so the model hasn't actually "
 "changed. We have to link that input to the algorithm that uses it, in this "
 "case the *Channel network* one. To edit an algorithm that already exists in "
 "the modeler, just click on the pen icon on the corresponding box in the "
-"canvas. If you click on the *Channel network* algorithm, you will see "
+"canvas."
+msgstr ""
+"L'entrée que nous venons d'ajouter n'est pas utilisée, donc le modèle n'a "
+"pas réellement changé. Nous devons lier cette entrée à l'algorithme qui "
+"l'utilise, dans ce cas le *réseau de canaux*. Pour modifier un algorithme "
+"qui existe déjà dans le modeleur, il suffit de cliquer sur l'icône du stylo "
+"sur la case correspondante dans le canevas."
+
+#: ../../docs/training_manual/processing/modeler_hydro.rst:31
+msgid ""
+"Click on the :guilabel:`Channel network` algorithm and you will see "
 "something like this."
 msgstr ""
-"L'entrée que nous venons juste d'ajouter n'est pas utilisée, donc le modèle "
-"n'a pas réellement changé. Nous devons lier cette entrée à l'algorithme qui "
-"l'utilise, dans ce cas, le *Réseau de canaux*. Pour modifier un algorithme "
-"qui existe déjà dans le modeleur, cliquez simplement sur l'icône crayon de "
-"la boîte correspondante dans le canevas. Si vous cliquez sur l'algorithme "
-"*Réseau de canaux*, vous verrez quelque chose comme ça."
+"Cliquez sur l'algorithme :guilabel:`Réseau de canaux` et vous verrez quelque"
+" chose comme ceci."
 
-#: ../../docs/training_manual/processing/modeler_hydro.rst:28
+#: ../../docs/training_manual/processing/modeler_hydro.rst:35
 msgid ""
 "The dialog is filled with the current values used by the algorithm. You can "
-"see that the threshold parameter has a fixed value of 1,000,000 (this is "
-"also the default value of the algorithm, but any other value could be put in"
-" there). However, you might notice that the parameter is not entered in a "
-"common text box, but in an option menu. If you unfold it, you will see "
-"something like this."
+"see that the :guilabel:`Initiation threshold` parameter has a fixed value of"
+" 1,000,000 (this is also the default value of the algorithm, but any other "
+"value could be put in there). However, you might notice that the parameter "
+"is not entered in a common text box, but in a drop-down menu."
 msgstr ""
-"La boîte de dialogue est remplie avec les valeurs actuelles utilisées par "
-"l'algorithme. Vous pouvez voir que le paramètre de seuil a une valeur fixe "
-"de 1,000,000 (c'est également la valeur par défaut de cet algorithme, mais "
-"toute autre valeur pourrait être mise ici). Cependant, vous remarquerez "
-"peut-être que le paramètre n'est pas entré dans une zone de texte commune, "
-"mais dans un menu d'options. Si vous le déroulez, vous verrez quelque chose "
-"comme ça."
+"Le dialogue est rempli avec les valeurs actuelles utilisées par "
+"l'algorithme. Vous pouvez voir que le paramètre :guilabel:`Seuil "
+"d'initialisation` a une valeur fixe de 1 000 000 (c'est aussi la valeur par "
+"défaut de l'algorithme, mais n'importe quelle autre valeur peut y être "
+"placée). Cependant, vous pouvez remarquer que le paramètre n'est pas saisi "
+"dans une zone de texte ordinaire, mais dans un menu déroulant."
 
-#: ../../docs/training_manual/processing/modeler_hydro.rst:32
+#: ../../docs/training_manual/processing/modeler_hydro.rst:36
+msgid ""
+"Unfold the threshold parameter menu and you will see something like this."
+msgstr ""
+"Déployez le menu des paramètres de seuil et vous verrez quelque chose comme "
+"ceci."
+
+#: ../../docs/training_manual/processing/modeler_hydro.rst:40
 msgid ""
 "The input that we added is there and we can select it. Whenever an algorithm"
 " in a model requires a numerical value, you can hardcode it and directly "
@@ -166,35 +197,46 @@ msgstr ""
 " vous verrez également des entrées de chaînes de caractères et vous pourrez "
 "sélectionner l'une d'entre elles ou taper la valeur fixe souhaitée."
 
-#: ../../docs/training_manual/processing/modeler_hydro.rst:34
-msgid ""
-"Select the *Threshold* input in the *Threshold* parameter and click on *OK* "
-"to apply the changes to your model. Now the design of the model should look "
-"like this."
-msgstr ""
-"Sélectionnez l'entrée *Seuil* dans le paramètre *Seuil* et cliquez sur *OK* "
-"pour appliquer les changements à votre modèle. La conception du modèle "
-"devrait maintenant ressembler à cela."
-
-#: ../../docs/training_manual/processing/modeler_hydro.rst:38
-msgid ""
-"The model is now complete. Try to run it using the DEM that we have used in "
-"previous lessons, and with different threshold values. Here you have a "
-"sample of the result obtained for different values. You can compare with the"
-" result for the default value, which is the one we obtained in the "
-"hydrological analysis lesson."
-msgstr ""
-"Le modèle est maintenant complet. Essayer de le lancer en utilisant le MNE "
-"que nous avons utilisé dans les leçons précédentes, et avec différentes "
-"valeurs de seuil. Ici vous avez un échantillon des résultats obtenus pour "
-"différentes valeurs. Vous pouvez comparer avec le résultat pour la valeur "
-"par défaut, qui est celui que nous avons obtenu dans la leçon d'analyse "
-"hydrologique."
-
 #: ../../docs/training_manual/processing/modeler_hydro.rst:42
-msgid "Threshold = 100,000"
-msgstr "Seuil = 100,000"
+msgid ""
+"Select the ``Threshold for channel definition`` input in the "
+":guilabel:`Initiation threshold` parameter."
+msgstr ""
+"Sélectionnez le paramètre :guilabel:`Seuil de définition des canaux` dans le"
+" paramètre :guilabel:`Seuil d'initialisation`."
 
-#: ../../docs/training_manual/processing/modeler_hydro.rst:46
+#: ../../docs/training_manual/processing/modeler_hydro.rst:43
+msgid ""
+"Click on :guilabel:`OK` to apply the changes to your model. Now the design "
+"of the model should look like this."
+msgstr ""
+"Cliquez sur :guilabel:`OK` pour appliquer les modifications à votre modèle. "
+"La conception du modèle devrait maintenant ressembler à ceci."
+
+#: ../../docs/training_manual/processing/modeler_hydro.rst:47
+msgid ""
+"The model is now complete. Run it using the DEM that we have used in "
+"previous lessons, and with different threshold values."
+msgstr ""
+"Le modèle est maintenant complet. Exécutez-le en utilisant le MNT que nous "
+"avons utilisé dans les leçons précédentes, et avec différentes valeurs de "
+"seuil."
+
+#: ../../docs/training_manual/processing/modeler_hydro.rst:49
+msgid ""
+"Below you have a sample of the result obtained for different values. You can"
+" compare with the result for the default value, which is the one we obtained"
+" in the :ref:`hydrological analysis lesson <tm_hydro_analysis>`."
+msgstr ""
+"Vous avez ci-dessous un échantillon du résultat obtenu pour différentes "
+"valeurs. Vous pouvez comparer avec le résultat pour la valeur par défaut, "
+"qui est celle que nous avons obtenue dans :ref:`hydrological analysis lesson"
+" <tm_hydro_analysis>`."
+
+#: ../../docs/training_manual/processing/modeler_hydro.rst:53
+msgid "Threshold = 100,000"
+msgstr "Seuil = 100 000"
+
+#: ../../docs/training_manual/processing/modeler_hydro.rst:57
 msgid "Threshold = 1,0000,000"
-msgstr "Seuil = 1,0000,000"
+msgstr "Seuil = 1 000 000"
