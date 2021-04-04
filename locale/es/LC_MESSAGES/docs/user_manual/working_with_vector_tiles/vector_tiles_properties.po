@@ -1,0 +1,101 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# 
+# Translators:
+# Rodrigo Armesto Baztán <rodri_Armesto@hotmail.com>, 2021
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.16\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-04-04 19:45+0000\n"
+"PO-Revision-Date: 2021-04-04 19:47+0000\n"
+"Last-Translator: Rodrigo Armesto Baztán <rodri_Armesto@hotmail.com>, 2021\n"
+"Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:6
+msgid "Working with Vector Tiles"
+msgstr "Trabajando con Teselas Vectoriales"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:14
+msgid "What are Vector Tiles?"
+msgstr "¿Que son las teselas vectoriales?"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:16
+msgid ""
+"Vector tiles are packets of geographic data, packaged into pre-defined "
+"roughly-square shaped \"tiles\" for transfer over the web. They combine pre-"
+"rendered raster map tiles and vector map tiles. The vector tile server "
+"returns vector map data, which has been clipped to the boundaries of each "
+"tile, instead of a pre-rendered map image. The clipped tiles represent the "
+"zoom-levels of the vector tile service, derived from a pyramid approach. "
+"Using this structure, the data-transfer is reduced in comparison to un-tiled"
+" vector maps. Only data within the current map view, and at the current zoom"
+" level need to be transferred. Also, compared to a tiled raster map, data "
+"transfer is also greatly reduced, as vector data is typically much smaller "
+"than a rendered bitmap. Vector tiles do not have any styling information "
+"assigned so QGIS needs to apply a cartographic style in order to display the"
+" data."
+msgstr ""
+"Las teselas vectoriales son paquetes de datos geográficos, empaquetados en "
+"\"mosaicos\" predefinidos de forma aproximadamente cuadrada para su "
+"transferencia a través de la web. Combinan teselas de mapas ráster pre-"
+"renderizados y teselas de mapas vectoriales. El servidor de teselas "
+"vectoriales devuelve datos de mapas vectoriales, que se han recortado a los "
+"límites de cada tesela, en lugar de una imagen de mapa renderizada "
+"previamente. Las teselas recortadas representan los niveles de zoom del "
+"servicio de teselas vectoriales, derivados de un enfoque piramidal. Con esta"
+" estructura, la transferencia de datos se reduce en comparación con los "
+"mapas vectoriales sin teselas. Solo es necesario transferir los datos dentro"
+" de la vista de mapa actual y en el nivel de zoom actual. Además, en "
+"comparación con un mapa ráster en mosaico, la transferencia de datos también"
+" se reduce considerablemente, ya que los datos vectoriales suelen ser mucho "
+"más pequeños que un mapa de bits renderizado. Las teselas vectoriales no "
+"tienen ninguna información de estilo asignada, por lo que QGIS necesita "
+"aplicar un estilo cartográfico para mostrar los datos."
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:36
+msgid "Pyramid structure of vector tiles with zoom-levels"
+msgstr "Estructura piramidal de teselas vectoriales con niveles de zoom"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:40
+msgid "Supported Formats"
+msgstr "Formatos Soportados"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:42
+msgid "There is support for vector tiles through:"
+msgstr "Hay soporte para teselas vectoriales a través de:"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:44
+msgid ""
+"remote sources (HTTP/S) - with XYZ template - "
+"``type=xyz&url=http://example.com/{z}/{x}/{y}.pbf``"
+msgstr ""
+"fuentes (HTTP/S) remotas - con plantilla XYZ - "
+"``type=xyz&url=http://example.com/{z}/{x}/{y}.pbf``"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:45
+msgid ""
+"local files - with XYZ template - e.g. "
+"``type=xyz&url=file:///path/to/tiles/{z}/{x}/{y}.pbf``"
+msgstr ""
+"archivos locales - con plantilla XYZ - p.ej. "
+"``type=xyz&url=file:///path/to/tiles/{z}/{x}/{y}.pbf``"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:46
+msgid ""
+"local MBTiles database - e.g. "
+"``type=mbtiles&url=file:///path/to/file.mbtiles``"
+msgstr ""
+"base de datos local MBTiles - p.ej. "
+"``type=mbtiles&url=file:///path/to/file.mbtiles``"
