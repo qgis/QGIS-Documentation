@@ -1,24 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
-# Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020
+# Harrissou Sant-anna, 2020
+# Rodrigo Armesto Baztán <rodri_Armesto@hotmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:26+0000\n"
-"Last-Translator: Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020\n"
+"POT-Creation-Date: 2021-03-10 02:18+0000\n"
+"PO-Revision-Date: 2020-12-24 10:16+0000\n"
+"Last-Translator: Rodrigo Armesto Baztán <rodri_Armesto@hotmail.com>, 2021\n"
 "Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -195,13 +197,14 @@ msgstr "Representación de banda"
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:103
 msgid ""
-"QGIS offers four different :guilabel:`Render types`. The choice of renderer "
-"depends on the data type."
+"QGIS offers many different :guilabel:`Render types`. The choice of renderer "
+"depends on the data type and the information you'd like to highlight."
 msgstr ""
-"QGIS ofrece cuatro diferentes :guilabel:`tipos de Representación`. La "
-"elección del renderizador depende del tipo de datos."
+"QGIS ofrece muchos :guilabel:`tipos de renderizado` diferentes. La elección "
+"del renderizador depende del tipo de datos y la información que quiera "
+"resaltar."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:106
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:107
 msgid ""
 ":ref:`Multiband color <multiband_color>` - if the file comes with several "
 "bands (e.g. a satellite image with several bands)."
@@ -209,7 +212,7 @@ msgstr ""
 ":ref:`Color Multibanda<multiband_color>` - si el archivo viene con varias "
 "bandas (por ejemplo, una imagen de satélite con varias bandas)."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:108
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:109
 msgid ""
 ":ref:`Paletted/Unique values <paletted>` - for single band files that come "
 "with an indexed palette (e.g. a digital topographic map) or for general use "
@@ -219,7 +222,7 @@ msgstr ""
 "única que vienen con una paleta indexada (por ejemplo, un mapa topográfico "
 "digital) o para el uso general de paletas para renderizar capas ráster."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:111
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:112
 msgid ""
 ":ref:`Singleband gray <singleband_gray>` - (one band of) the image will be "
 "rendered as gray. QGIS will choose this renderer if the file is neither "
@@ -229,7 +232,7 @@ msgstr ""
 "renderizará en gris. QGIS elegirá este renderizador si el archivo no es "
 "multibanda ni paletizado (por ejemplo, un mapa de relieve sombreado)."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:115
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:116
 msgid ""
 ":ref:`Singleband pseudocolor <label_colormaptab>` - this renderer can be "
 "used for files with a continuous palette or color map (e.g. an elevation "
@@ -239,16 +242,24 @@ msgstr ""
 " utilizar para archivos con una paleta continua o un mapa de colores (por "
 "ejemplo, un mapa de elevación)."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:118
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:119
 msgid ":ref:`Hillshade <hillshade_renderer>` - Creates hillshade from a band."
 msgstr ""
 ":ref:`Sombreado<hillshade_renderer>` - Crea sombreado a partir de una banda."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:125
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:121
+msgid ""
+":ref:`Contours <raster_contours>` - Generates contours on the fly for a "
+"source raster band."
+msgstr ""
+":ref:`Contornos <raster_contours>` - Genera contornos al vuelo para una "
+"banda de fuente ráster."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:128
 msgid "Multiband color"
 msgstr "Color Multibanda"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:127
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:130
 msgid ""
 "With the multiband color renderer, three selected bands from the image will "
 "be used as the red, green or blue component of the color image. QGIS "
@@ -263,8 +274,8 @@ msgstr ""
 "consecuencia. Puede controlar los rangos de valores en la sección "
 ":ref:`Configuración de valores Min/Max <minmaxvalues>`."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:134
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:214
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:137
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:217
 msgid ""
 "A :guilabel:`Contrast enhancement` method can be applied to the values: 'No "
 "enhancement', 'Stretch to MinMax', 'Stretch and clip to MinMax' and 'Clip to"
@@ -274,11 +285,11 @@ msgstr ""
 "'Sin realce', 'Estirar a MinMax', 'Estirar y cortar a MinMax' y 'Cortar a "
 "min max'."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:140
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:143
 msgid "**Contrast enhancement**"
 msgstr "**Mejorar contraste**"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:142
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:145
 msgid ""
 "When adding GRASS rasters, the option *Contrast enhancement* will always be "
 "set automatically to *stretch to min max*, even if this is set to another "
@@ -288,15 +299,15 @@ msgstr ""
 "establecerá automáticamente en *Estirar a MinMax*, incluso si se establece "
 "en otro valor en las opciones generales de QGIS."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:151
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:154
 msgid "Raster Symbology - Multiband color rendering"
 msgstr "Simbología Ráster - renderizado de color Multibanda"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:154
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:157
 msgid "**Viewing a Single Band of a Multiband Raster**"
 msgstr "**Visualización de una sola banda de un ráster multibanda**"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:156
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:159
 msgid ""
 "If you want to view a single band of a multiband image (for example, Red), "
 "you might think you would set the Green and Blue bands to :guilabel:`Not "
@@ -310,11 +321,11 @@ msgstr ""
 " imagen en :ref:`Gris Monobanda <singleband_gray>`, y entonces seleccione "
 "Rojo como la :guilabel:`Banda Gris` a usar."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:167
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:170
 msgid "Paletted/Unique values"
 msgstr "Valores en Paleta/valores únicos"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:169
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:172
 msgid ""
 "This is the standard render option for singleband files that include a color"
 " table, where a certain color is assigned to each pixel value. In that case,"
@@ -324,7 +335,7 @@ msgstr ""
 " incluyen una tabla de colores, donde se asigna un color determinado a cada "
 "valor de píxel. En ese caso, la paleta se renderiza automáticamente."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:173
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:176
 msgid ""
 "It can be used for all kinds of raster bands, assigning a color to each "
 "unique raster value."
@@ -332,7 +343,7 @@ msgstr ""
 "Se puede utilizar para todo tipo de bandas de ráster, asignando un color a "
 "cada valor de ráster único."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:176
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:179
 msgid ""
 "If you want to change a color, just double-click on the color and the "
 ":guilabel:`Select color` dialog appears."
@@ -340,7 +351,7 @@ msgstr ""
 "Si desea cambiar un color, simplemente haga doble clic en el color y "
 "aparecerá el cuadro de diálogo :guilabel:`Seleccionar color`."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:179
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:182
 msgid ""
 "It is also possible to assign labels to the colors. The label will then "
 "appear in the legend of the raster layer."
@@ -348,8 +359,8 @@ msgstr ""
 "También es posible asignar etiquetas a los colores. La etiqueta aparecerá en"
 " la leyenda de la capa ráster."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:182
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:281
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:185
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:284
 msgid ""
 "Right-clicking over selected rows in the color table shows a contextual menu"
 " to:"
@@ -357,25 +368,25 @@ msgstr ""
 "Al hacer clic con el botón derecho sobre las filas seleccionadas en la tabla"
 " de colores, se muestra un menú contextual para:"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:185
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:284
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:188
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:287
 msgid ":guilabel:`Change Color...` for the selection"
 msgstr ":guilabel:`Cambiar Color...` para la selección"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:186
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:285
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:189
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:288
 msgid ":guilabel:`Change Opacity...` for the selection"
 msgstr ":guilabel:`Cambiar opacidad...` para la selección"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:187
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:190
 msgid ":guilabel:`Change Label...` for the selection"
 msgstr ":guilabel:`Cambiar Etiqueta...` para la selección"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:194
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:197
 msgid "Raster Symbology - Paletted unique value rendering"
 msgstr "Simbología Ráster - Representación paletizada de valor único"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:196
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:199
 msgid ""
 "The pulldown menu, that opens when clicking the :guilabel:`...` "
 "(:guilabel:`Advanced options`) button below the color map to the right, "
@@ -389,11 +400,11 @@ msgstr ""
 "archivo. ..`) y exportando (:guilabel:`Exportar mapa de color a "
 "archivo...`), y cargando clases (:guilabel:`Cargar clases desde capa`)."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:206
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:209
 msgid "Singleband gray"
 msgstr "Gris monobanda"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:208
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:211
 msgid ""
 "This renderer allows you to render a single band layer with a "
 ":guilabel:`Color gradient`: 'Black to white' or 'White to black'. You can "
@@ -405,15 +416,15 @@ msgstr ""
 "cambiar el rango de valores a color (:guilabel:`Min` y :guilabel:` Max`) en "
 "el :ref:`Configuración de valores Min/Máx <minmaxvalues>`."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:223
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:226
 msgid "Raster Symbology - Singleband gray rendering"
 msgstr "Simbología Ráster - representación de gris monobanda"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:230
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:233
 msgid "Singleband pseudocolor"
 msgstr "Pseudocolor Monobanda"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:232
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:235
 msgid ""
 "This is a render option for single-band files that include a continuous "
 "palette. You can also create color maps for a bands of a multiband raster."
@@ -422,11 +433,11 @@ msgstr ""
 "una paleta continua. También puede crear mapas de color para bandas de un "
 "ráster multibanda."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:241
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:244
 msgid "Raster Symbology - Singleband pseudocolor rendering"
 msgstr "Simbología Ráster - representación Pseudocolor Monobanda"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:244
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:247
 msgid ""
 "Using a :guilabel:`Band` of the layer and a :ref:`values range "
 "<minmaxvalues>`, three types of color :guilabel:`Interpolation` are "
@@ -436,7 +447,7 @@ msgstr ""
 "<minmaxvalues>`, tres tipos de :guilabel:`Interpolación` de color están "
 "disponibles:"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:248
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:251
 msgid ""
 "Discrete (a ``<=`` symbol appears in the header of the :guilabel:`Value` "
 "column)"
@@ -444,11 +455,11 @@ msgstr ""
 "Discreto (aparece un símbolo `` <= `` en el encabezado de la columna "
 ":guilabel:`Valor`)"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:250
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:253
 msgid "Linear"
 msgstr "Lineal"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:251
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:254
 msgid ""
 "Exact (an ``=`` symbol appears in the header of the :guilabel:`Value` "
 "column)"
@@ -456,7 +467,7 @@ msgstr ""
 "Exacto (aparece un símbolo `` = `` en el encabezado de la columna "
 ":guilabel:`Valor`)"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:254
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:257
 msgid ""
 "The :guilabel:`Color ramp` drop down lists the available color ramps. You "
 "can create a new one and edit or save the currently selected one. The name "
@@ -467,7 +478,7 @@ msgstr ""
 "actualmente. El nombre de la rampa de color se guardará en la configuración "
 "y en el archivo QML."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:259
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:262
 msgid ""
 "The :guilabel:`Label unit suffix` is a label added after the value in the "
 "legend."
@@ -475,7 +486,7 @@ msgstr ""
 "La :guilabel:`Unidad de Etiqueta de Sufijo` es una etiqueta agregada despues"
 " del valor en la leyenda."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:262
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:265
 msgid ""
 "For classification :guilabel:`Mode` |selectString| 'Equal interval', you "
 "only need to select the :guilabel:`number of classes` |selectNumber| and "
@@ -489,7 +500,7 @@ msgstr ""
 "|selectString| 'Continuo', QGIS crea clases automáticamente dependiendo de "
 ":guilabel:`Min` y :guilabel:` Max`."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:269
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:272
 msgid ""
 "The button |signPlus| :sup:`Add values manually` adds a value to the table. "
 "The button |signMinus| :sup:`Remove selected row` deletes a value from the "
@@ -508,7 +519,7 @@ msgstr ""
 "agregar etiquetas para cada color, pero este valor no se mostrará cuando use"
 " la herramienta de identificación de objetos espaciales."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:287
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:290
 msgid ""
 "You can use the buttons |fileOpen| :sup:`Load color map from file` or "
 "|fileSaveAs| :sup:`Export color map to file` to load an existing color table"
@@ -519,7 +530,7 @@ msgstr ""
 "de colores existente o para guardar la tabla de colores para su uso "
 "posterior."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:291
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:294
 msgid ""
 "The |checkbox| :guilabel:`Clip out of range values` allows QGIS to not "
 "render pixel greater than the :guilabel:`Max` value."
@@ -527,27 +538,28 @@ msgstr ""
 "EL |checkbox| :guilabel:`Corte fuera de los valores del intervalo` permite a"
 " QGIS No renderizar píxeles mayores que el valor :guilabel:`Max`."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:299
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:302
 msgid "Hillshade"
 msgstr "Sombreado"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:301
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:304
 msgid "Render a band of the raster layer using hillshading."
 msgstr "Representar una banda del ráster usando sombreado."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:308
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:311
 msgid "Raster Symbology - Hillshade rendering"
 msgstr "Simbología Ráster - representación sombreada"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:310
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:313
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:341
 msgid "Options:"
 msgstr "Opciones:"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:312
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:315
 msgid ":guilabel:`Band`: The raster band to use."
 msgstr ":guilabel:`Banda`: La banda ráster a usar."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:313
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:316
 msgid ""
 ":guilabel:`Altitude`: The elevation angle of the light source (default is "
 "``45°``)."
@@ -555,14 +567,14 @@ msgstr ""
 ":guilabel:`Altitud`: El ángulo de elevación de la fuente luminosa "
 "(predeterminado es ``45°``)."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:315
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:318
 msgid ""
 ":guilabel:`Azimuth`: The azimuth of the light source (default is ``315°``)."
 msgstr ""
 ":guilabel:`Azimuth`: El azimut de la fuente de luz (predeterminado es "
 "``315°``)."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:317
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:320
 msgid ""
 ":guilabel:`Z Factor`: Scaling factor for the values of the raster band "
 "(default is ``1``)."
@@ -570,7 +582,7 @@ msgstr ""
 ":guilabel:`Factor Z`: Factor de Escala para los valores de la banda del "
 "ráster (predeterminado es ``1``)."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:319
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:322
 msgid ""
 "|checkbox| :guilabel:`Multidirectional`: Specify if multidirectional "
 "hillshading is to be used (default is ``off``)."
@@ -578,11 +590,97 @@ msgstr ""
 "|checkbox| :guilabel:`Multidireccional`: Especifica si se utilizará "
 "sombreado multidireccional (el valor predeterminado es `` desactivado '')."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:326
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:328
+msgid "Contours"
+msgstr "Contornos"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:330
+msgid ""
+"This renderer draws contour lines that are calculated on the fly from the "
+"source raster band."
+msgstr ""
+"Este renderizador traza las líneas de contorno que son calculadas al vuelo "
+"desde la banda de fuente ráster."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:339
+msgid "Raster Symbology - Contours rendering"
+msgstr "Simbología Ráster - renderizado de Contornos"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:343
+msgid ":guilabel:`Input band`: the raster band to use."
+msgstr ":guilabel:`banda de Entrada`: la banda ráster a  usar."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:344
+msgid ""
+":guilabel:`Contour interval`: the distance between two consecutive contour "
+"lines"
+msgstr ""
+":guilabel:`intervalo de Contorno`: la distancia entre dos líneas de contorno"
+" consecutivas"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:345
+msgid ""
+":guilabel:`Contour symbol`: the :ref:`symbol <vector_line_symbols>` to apply"
+" to the common contour lines."
+msgstr ""
+":guilabel:`Símbolo de Contorno`: el :ref:`símbolo <vector_line_symbols>` a "
+"aplicar a las líneas de contorno vulgares."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:347
+msgid ""
+":guilabel:`Index contour interval`: the distance between two consecutive "
+"**index contours**, that is the lines shown in a distinctive manner for ease"
+" of identification, being commonly printed more heavily than other contour "
+"lines and generally labeled with a value along its course."
+msgstr ""
+":guilabel:`Indice de Intervalo de contorno`: la distancia entre dos "
+"**índices de contornos** consecutivos, es decir, las líneas que se muestran "
+"de manera distintiva para facilitar la identificación, que se imprimen "
+"comúnmente con mayor densidad que otras líneas de contorno y generalmente se"
+" etiquetan con un valor a lo largo de su curso."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:351
+msgid ""
+":guilabel:`Index contour symbol`: the symbol to apply to the index contour "
+"lines"
+msgstr ""
+":guilabel:`símbolo de índice de contorno`: el símbolo a aplicar al índice de"
+" las líneas de contorno"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:352
+msgid ""
+":guilabel:`Input downscaling`: Indicates by how much the renderer will scale"
+" down the request to the data provider. Default is ``1.0``, meaning no "
+"downscaling."
+msgstr ""
+":guilabel:`Reducción de escala de entrada`: Indica cuánto reducirá el "
+"renderizador la solicitud al proveedor de datos. El valor predeterminado es "
+"``1.0``, lo que significa que no se reduce la escala."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:355
+msgid ""
+"For example, if you generate contour lines on input raster block with the "
+"same size as the output raster block, the generated lines would contain too "
+"much detail. This detail can be reduced by the \"downscale\" factor, "
+"requesting lower resolution of the source raster. For a raster block "
+"1000x500 with downscale 10, the renderer will request raster 100x50 from "
+"provider. Higher downscale makes contour lines more simplified (at the "
+"expense of losing some detail)."
+msgstr ""
+"Por ejemplo, si genera líneas de contorno en un bloque ráster de entrada con"
+" el mismo tamaño que el bloque ráster de salida, las líneas generadas "
+"contendrían demasiados detalles. Este detalle se puede reducir mediante el "
+"factor de \"reducción de escala\", que solicita una resolución más baja del "
+"ráster de origen. Para un bloque ráster 1000x500 con escala descendente 10, "
+"el renderizador solicitará ráster 100x50 al proveedor. Una escala más alta "
+"hace que las curvas de nivel sean más simplificadas (a costa de perder "
+"algunos detalles)."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:366
 msgid "Setting the min and max values"
 msgstr "Configurando los valores min y max"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:328
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:368
 msgid ""
 "By default, QGIS reports the :guilabel:`Min` and :guilabel:`Max` values of "
 "the band(s) of the raster. A few very low and/or high values can have a "
@@ -595,15 +693,15 @@ msgstr ""
 "marco :guilabel:`Configuración de valores mín/máx` le ayuda a controlar la "
 "representación."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:340
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:380
 msgid "Raster Symbology - Min and Max Value Settings"
 msgstr "Simbología ráster: configuración de valores mínimo y máximo"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:343
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:383
 msgid "Available options are:"
 msgstr "Las opciones disponibles son:"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:345
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:385
 msgid ""
 "|radioButtonOff| :guilabel:`User defined`: The default :guilabel:`Min` and "
 ":guilabel:`Max` values of the band(s) can be overridden"
@@ -612,7 +710,7 @@ msgstr ""
 "predeterminados :guilabel:`Min` y :guilabel:`Max` de la banda(s) pueden ser "
 "invalidados"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:348
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:388
 msgid ""
 "|radioButtonOff| :guilabel:`Cumulative count cut`: Removes outliers. The "
 "standard range of values is ``2%`` to ``98%``, but it can be adapted "
@@ -622,7 +720,7 @@ msgstr ""
 "atípicos. El rango estándar de valores es de ``2%`` a ``98%``, pero se puede"
 " adaptar manualmente."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:351
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:391
 msgid ""
 "|radioButtonOn| :guilabel:`Min / max`: Uses the whole range of values in the"
 " image band."
@@ -630,7 +728,7 @@ msgstr ""
 "|radioButtonOn| :guilabel:`Min / max`: Utiliza todo el rango de valores en "
 "la banda de la imagen."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:353
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:393
 msgid ""
 "|radioButtonOff| :guilabel:`Mean +/- standard deviation x`: Creates a color "
 "table that only considers values within the standard deviation or within "
@@ -644,14 +742,14 @@ msgstr ""
 "dos celdas con valores anormalmente altos en una capa ráster que impactan "
 "negativamente en la representación del ráster."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:360
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:400
 msgid ""
 "Calculations of the min and max values of the bands are made based on the:"
 msgstr ""
 "Los cálculos de los valores mínimo y máximo de las bandas se realizan en "
 "base a:"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:363
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:403
 msgid ""
 ":guilabel:`Statistics extent`: it can be :guilabel:`Whole raster`, "
 ":guilabel:`Current canvas` or :guilabel:`Updated canvas`. :guilabel:`Updated"
@@ -664,7 +762,7 @@ msgstr ""
 "utilizados para la representación cambiarán con la extensión del lienzo "
 "(estiramiento dinámico)."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:367
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:407
 msgid ""
 ":guilabel:`Accuracy`, which can be either :guilabel:`Estimate (faster)` or "
 ":guilabel:`Actual (slower)`."
@@ -672,7 +770,7 @@ msgstr ""
 ":guilabel:`Precisión`, que puede ser :guilabel:`Estimar (rápida)` o "
 ":guilabel:`Actual (lenta)`."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:370
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:410
 msgid ""
 "For some settings, you may need to press the :guilabel:`Apply` button of the"
 " layer properties dialog in order to display the actual min and max values "
@@ -682,11 +780,11 @@ msgstr ""
 ":guilabel:`Aplicar` del diálogo de propiedades de la capa para mostrar los "
 "valores mínimos y máximos reales en los widgets."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:376
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:416
 msgid "Color rendering"
 msgstr "Color de representación"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:378
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:418
 msgid ""
 "For all kinds of :guilabel:`Band rendering`, the :guilabel:`Color rendering`"
 " set."
@@ -694,7 +792,7 @@ msgstr ""
 "Para todo tipo de :guilabel:`Representación de banda`, el ajuste de "
 ":guilabel:`Representación de color`."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:381
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:421
 msgid ""
 "You can achieve special rendering effects for your raster file(s) by using "
 "one of the blending modes (see :ref:`blend-modes`)."
@@ -702,25 +800,26 @@ msgstr ""
 "Puede lograr efecto de renderizado especial(es) para sus archivos ráster "
 "utilizando uno de los modos de fusión (consulte :ref:`blend-modes`)."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:384
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:424
 msgid ""
 "Further settings can be made by modifying the :guilabel:`Brightness`, "
-":guilabel:`Saturation` and :guilabel:`Contrast`. You can also use a "
-":guilabel:`Grayscale` option, where you can choose between 'Off', 'By "
-"lightness', 'By luminosity' and 'By average'. For one :guilabel:`Hue` in the"
-" color table, you can modify the 'Strength'."
+":guilabel:`Saturation`, :guilabel:`Gamma` and :guilabel:`Contrast`. You can "
+"also use a :guilabel:`Grayscale` option, where you can choose between 'Off',"
+" 'By lightness', 'By luminosity' and 'By average'. For one :guilabel:`Hue` "
+"in the color table, you can modify the 'Strength'."
 msgstr ""
 "Se pueden realizar más ajustes modificando :guilabel:`Brillo`, "
-":guilabel:`Saturación` y :guilabel:`Contraste`. También puede utilizar la "
-"opción :guilabel:`Escala de grises`, donde puede elegir entre "
-"'Desconectado', 'Por brillo', 'Por luminosidad' y 'Por promedio'. Para un "
-":guilabel:`Matiz` en la tabla de colores, puede modificar la 'Fuerza'."
+":guilabel:`Saturación`, :guilabel:`Gamma` y :guilabel:`Contraste`. También "
+"puede utilizar la opción :guilabel:`Escala de grises`, donde puede elegir "
+"entre 'Desactivado', 'Por iluminación', 'Por luminosidad' y 'Por media'. Por"
+" un lado :guilabel:`Matiz` en la tabla de colores, puede modificar la "
+"'Fuerza'."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:392
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:432
 msgid "Resampling"
 msgstr "Remuestreo"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:394
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:434
 msgid ""
 "The :guilabel:`Resampling` option has effect when you zoom in and out of an "
 "image. Resampling modes can optimize the appearance of the map. They "
@@ -731,12 +830,12 @@ msgstr ""
 "Calculan una nueva matriz de valores grises mediante una transformación "
 "geométrica."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:405
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:445
 msgid "Raster Symbology - Color rendering and Resampling settings"
 msgstr ""
 "Simbología ráster: configuración de reproducción cromática y remuestreo"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:408
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:448
 msgid ""
 "When applying the 'Nearest neighbour' method, the map can get a pixelated "
 "structure when zooming in. This appearance can be improved by using the "
@@ -750,7 +849,7 @@ msgstr ""
 " se vean borrosos. El efecto es una imagen más suave. Este método puede "
 "aplicarse, por ejemplo, a mapas rasterizados topográficos digitales."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:416
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:456
 msgid ""
 "At the bottom of the :guilabel:`Symbology` tab, you can see a thumbnail of "
 "the layer, its legend symbol, and the palette."
@@ -758,11 +857,11 @@ msgstr ""
 "En la parte inferior de la pestaña :guilabel:`Simbología`, puede ver una "
 "miniatura de la capa, su símbolo de leyenda y la paleta."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:424
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:464
 msgid "Transparency Properties"
 msgstr "Propiedades de Transparencia"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:426
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:466
 msgid ""
 "|transparency| QGIS has the ability to set the transparency level of a "
 "raster layer. Use the transparency slider |slider| to set to what extent the"
@@ -779,11 +878,11 @@ msgstr ""
 "sombreado superpuesto por un mapa ráster clasificado). Esto hará que la "
 "apariencia del mapa sea más tridimensional."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:440
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:480
 msgid "Raster Transparency"
 msgstr "Transparencia ráster"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:442
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:482
 msgid ""
 "Additionally, you can enter a raster value that should be treated as an "
 ":guilabel:`Additional no data value`."
@@ -791,7 +890,7 @@ msgstr ""
 "Además, puede ingresar un valor ráster que debe tratarse como "
 ":guilabel:`Valor de sin datos`."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:445
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:485
 msgid ""
 "An even more flexible way to customize the transparency is available in the "
 ":guilabel:`Custom transparency options` section:"
@@ -799,14 +898,14 @@ msgstr ""
 "Una forma aún más flexible de personalizar la transparencia está disponible "
 "en la sección :guilabel:`Opciones de transparencia personalizadas`:"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:448
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:488
 msgid ""
 "Use :guilabel:`Transparency band` to apply transparency for an entire band."
 msgstr ""
 "Utilice :guilabel:`Banda de transparencia` para aplicar transparencia a toda"
 " una banda."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:450
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:490
 msgid ""
 "Provide a list of pixels to make transparent with corresponding levels of "
 "transparency:"
@@ -814,7 +913,7 @@ msgstr ""
 "Proporcione una lista de píxeles para hacer transparentes con los niveles "
 "correspondientes de transparencia:"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:453
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:493
 msgid ""
 "Click the |signPlus| :sup:`Add values manually` button. A new row will "
 "appear in the pixel list."
@@ -822,7 +921,7 @@ msgstr ""
 "Haga clic en el botón |signPlus| :sup:`Agregar valores manualmente`. "
 "Aparecerá una nueva fila en la lista de píxeles."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:455
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:495
 msgid ""
 "Enter the **Red**, **Green** and **Blue** values of the pixel and adjust the"
 " **Percent Transparent** to apply."
@@ -830,7 +929,7 @@ msgstr ""
 "Ingrese los valores **Rojo**, **Verde** y **Azul** del píxel y ajuste el "
 "**Porcentaje de transparencia** a aplicar."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:457
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:497
 msgid ""
 "Alternatively, you can fetch the pixel values directly from the raster using"
 " the |contextHelp| :sup:`Add values from display` button. Then enter the "
@@ -840,16 +939,16 @@ msgstr ""
 " ráster utilizando el botón |contextHelp| :sup:`Añadir valores de la "
 "visualización`. Luego ingrese el valor de transparencia."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:461
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:501
 msgid "Repeat the steps to adjust more values with custom transparency."
 msgstr ""
 "Repita los pasos para ajustar más valores con transparencia personalizada."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:462
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:502
 msgid "Press the :guilabel:`Apply` button and have a look at the map."
 msgstr "Presiona el botón :guilabel:`Aplicar` y echa un vistazo al mapa."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:464
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:504
 msgid ""
 "As you can see, it is quite easy to set custom transparency, but it can be "
 "quite a lot of work. Therefore, you can use the button |fileSave| "
@@ -863,11 +962,11 @@ msgstr ""
 "en un archivo. El botón |fileOpen| :sup:`Importar de archivo` carga la "
 "configuración de transparencia y la aplica a la capa ráster actual."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:476
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:516
 msgid "Histogram Properties"
 msgstr "Propiedades de Histograma"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:478
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:518
 msgid ""
 "The |rasterHistogram| :guilabel:`Histogram` tab allows you to view the "
 "distribution of the values in your raster. The histogram is generated when "
@@ -881,7 +980,7 @@ msgstr ""
 "existentes se mostrarán juntas. Puede guardar el histograma como una imagen "
 "con el botón |fileSave|."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:485
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:525
 msgid ""
 "At the bottom of the histogram, you can select a raster band in the drop-"
 "down menu and :guilabel:`Set min/max style for` it. The |actionRun| "
@@ -893,7 +992,7 @@ msgstr ""
 "desplegable |actionRun| :guilabel:`Prefs/Acciones` le ofrece opciones "
 "avanzadas para personalizar el histograma:"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:490
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:530
 msgid ""
 "With the :guilabel:`Visibility` option, you can display histograms for "
 "individual bands. You will need to select the option |radioButtonOff| "
@@ -903,7 +1002,7 @@ msgstr ""
 " individuales. Deberá seleccionar la opción |radioButtonOff| "
 ":guilabel:`Mostrar banda seleccionada`."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:494
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:534
 msgid ""
 "The :guilabel:`Min/max options` allow you to 'Always show min/max markers', "
 "to 'Zoom to min/max' and to 'Update style to min/max'."
@@ -911,7 +1010,7 @@ msgstr ""
 "Las :guilabel:`Opciones mín/máx` te permiten 'Mostrar siempre los marcadores"
 " mín/máx', 'Zoom a mín/máx' Y 'Actualizar estilo a mín/máx'."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:497
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:537
 msgid ""
 "The :guilabel:`Actions` option allows you to 'Reset' or 'Recompute "
 "histogram' after you have changed the min or max values of the band(s)."
@@ -920,19 +1019,19 @@ msgstr ""
 "histograma' después de haber cambiado los valores mínimo o máximo de la "
 "banda(s)."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:506
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:546
 msgid "Raster Histogram"
 msgstr "Histograma de Ráster"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:513
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:553
 msgid "Rendering Properties"
 msgstr "Propiedades de representación"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:515
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:555
 msgid "In the |rendering| :guilabel:`Rendering` tab, it's possible to:"
 msgstr "En la pestaña |rendering| :guilabel:`Rendering`, es posible:"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:517
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:557
 msgid ""
 "set :guilabel:`Scale dependent visibility` for the layer: You can set the "
 ":guilabel:`Maximum (inclusive)` and :guilabel:`Minimum (exclusive)` scale, "
@@ -949,7 +1048,7 @@ msgstr ""
 "mapa` le ayuda a utilizar la escala del lienzo del mapa actual como límite. "
 "Consulte :ref:`label_scaledepend` para obtener más información."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:525
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:565
 msgid ""
 ":guilabel:`Refresh layer at interval (seconds)`: set a timer to "
 "automatically refresh individual layers. Canvas updates are deferred in "
@@ -961,15 +1060,15 @@ msgstr ""
 " de lienzo se aplazan para evitar la actualización varias veces si más de "
 "una capa tiene un intervalo de actualización automático establecido."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:535
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:575
 msgid "Raster Rendering"
 msgstr "Representación Ráster"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:542
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:582
 msgid "Pyramids Properties"
 msgstr "Propiedades de Pirámides"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:544
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:584
 msgid ""
 "High resolution raster layers can slow navigation in QGIS. By creating lower"
 " resolution copies of the data (pyramids), performance can be considerably "
@@ -981,7 +1080,7 @@ msgstr ""
 "rendimiento se puede mejorar considerablemente, ya que QGIS selecciona la "
 "resolución más adecuada para usar según el nivel de zoom."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:549
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:589
 msgid ""
 "You must have write access in the directory where the original data is "
 "stored to build pyramids."
@@ -989,7 +1088,7 @@ msgstr ""
 "Debe tener acceso de escritura en el directorio donde se almacenan los datos"
 " originales para construir pirámides."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:552
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:592
 msgid ""
 "From the :guilabel:`Resolutions` list, select resolutions at which you want "
 "to create pyramid levels by clicking on them."
@@ -997,7 +1096,7 @@ msgstr ""
 "En la lista :guilabel:`Resoluciones`, seleccione las resoluciones en las que"
 " desea crear niveles piramidales haciendo clic en ellos."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:555
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:595
 msgid ""
 "If you choose **Internal (if possible)** from the :guilabel:`Overview "
 "format` drop-down menu, QGIS tries to build pyramids internally."
@@ -1005,7 +1104,7 @@ msgstr ""
 "Si elige **Interno (Si es posible)** del menú desplegable :guilabel:`Vista "
 "general del formato`, QGIS intenta construir pirámides internamente."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:561
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:601
 msgid ""
 "Please note that building pyramids may alter the original data file, and "
 "once created they cannot be removed. If you wish to preserve a 'non-"
@@ -1017,7 +1116,7 @@ msgstr ""
 "conservar una versión \"no piramidal\" de su ráster, haga una copia de "
 "seguridad antes de construir la pirámide."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:566
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:606
 msgid ""
 "If you choose **External** and **External (Erdas Imagine)** the pyramids "
 "will be created in a file next to the original raster with the same name and"
@@ -1027,60 +1126,60 @@ msgstr ""
 "crearán en un archivo junto al ráster original con el mismo nombre y una "
 "extensión :file:`.ovr`."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:570
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:610
 msgid ""
 "Several :guilabel:`Resampling methods` can be used for pyramid calculation:"
 msgstr ""
 "Varios :guilabel:`Métodos de remuestreo` se pueden utilizar para el cálculo "
 "de la pirámide:"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:573
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:613
 msgid "Nearest Neighbour"
 msgstr "Vecino más próximo"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:574
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:614
 msgid "Average"
 msgstr "Media"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:575
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:615
 msgid "Gauss"
 msgstr "Gauss"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:576
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:616
 msgid "Cubic"
 msgstr "Cúbico"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:577
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:617
 msgid "Cubic Spline"
 msgstr "Spline cúbica"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:578
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:618
 msgid "Laczos"
 msgstr "Lanczos"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:579
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:619
 msgid "Mode"
 msgstr "Modo"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:580
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:620
 msgid "None"
 msgstr "Ninguno"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:582
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:622
 msgid "Finally, click :guilabel:`Build Pyramids` to start the process."
 msgstr ""
 "Finalmente, haga clic en :guilabel:`Construir Prirámides` para iniciar el "
 "proceso."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:589
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:629
 msgid "Raster Pyramids"
 msgstr "Pirámides Ráster"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:596
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:636
 msgid "Metadata Properties"
 msgstr "Propiedades de metadatos"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:598
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:638
 msgid ""
 "The |editMetadata| :guilabel:`Metadata` tab provides you with options to "
 "create and edit a metadata report on your layer. See :ref:`vector layer "
@@ -1091,15 +1190,15 @@ msgstr ""
 ":ref:<vectormetadatamenu>`propiedades de metadatos de la capa vectorial` "
 "para obtener más información."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:608
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:648
 msgid "Raster Metadata"
 msgstr "Metadatos Ráster"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:615
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:655
 msgid "Legend Properties"
 msgstr "Propiedades de la leyenda"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:617
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:657
 msgid ""
 "The |legend| :guilabel:`Legend` tab provides you with a list of widgets you "
 "can embed within the layer tree in the Layers panel. The idea is to have a "
@@ -1112,7 +1211,7 @@ msgstr ""
 "menudo con la capa (configuración de transparencia, filtrado, selección, "
 "estilo u otras cosas ...)."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:623
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:663
 msgid ""
 "By default, QGIS provides a transparency widget but this can be extended by "
 "plugins that register their own widgets and assign custom actions to layers "
@@ -1122,15 +1221,15 @@ msgstr ""
 "esto se puede ampliar mediante complementos que registran sus propios "
 "widgets y asignan acciones personalizadas a las capas que administran."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:632
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:672
 msgid "Raster Legend"
 msgstr "Leyenda Ráster"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:639
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:679
 msgid "QGIS Server Properties"
 msgstr "Propiedades del servidor de QGIS"
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:641
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:681
 msgid ""
 "From the |overlay| :guilabel:`QGIS Server` tab, information can be provided "
 "for :guilabel:`Description`, :guilabel:`Attribution`, "
@@ -1141,6 +1240,6 @@ msgstr ""
 ":guilabel:`Atribución`, :guilabel:`URLdeMetadatos` y "
 ":guilabel:`URLdeLeyenda`."
 
-#: ../../docs/user_manual/working_with_raster/raster_properties.rst:650
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:690
 msgid "QGIS Server in Raster Properties"
 msgstr "Servidor de QGIS en Propiedades de Ráster"
