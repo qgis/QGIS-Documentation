@@ -6,20 +6,21 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2020
+# Francis Gasc <francisgasc@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-13 09:01+0100\n"
+"POT-Creation-Date: 2021-01-12 10:14+0000\n"
 "PO-Revision-Date: 2020-12-24 10:20+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"Last-Translator: Francis Gasc <francisgasc@gmail.com>, 2021\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.8.0\n"
+"Generated-By: Babel 2.9.0\n"
 "Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
@@ -133,6 +134,35 @@ msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/composer.rst:144
 msgid ""
+"This initializes the layout with some default settings, specifically by "
+"adding an empty A4 page to the layout. You can create layouts without "
+"calling the :meth:`initializeDefaults() "
+"<qgis.core.QgsLayout.initializeDefaults>` method, but you'll need to take "
+"care of adding pages to the layout yourself."
+msgstr ""
+"Cette méthode initialise la mise en page avec certains paramètres par "
+"défaut, spécifiquement en ajoutant une page A4 vide à la mise en page. Vous "
+"pouvez créer des mises en page sans appeler la méthode "
+":meth:`initializeDefaults() <qgis.core.QgsLayout.initializeDefaults>`, mais "
+"vous devrez vous charger vous-même d'ajouter des pages à la mise en page."
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:149
+msgid ""
+"The previous code creates a \"temporary\" layout that is not visible in the "
+"GUI. It can be handy to e.g. quickly add some items and export without "
+"modifying the project itself nor expose these changes to the user. If you "
+"want the layout to be saved/restored along with the project and available in"
+" the layout manager, then add:"
+msgstr ""
+"Le code précédent crée une mise en page \"temporaire\" qui n'est pas visible"
+" dans l'interface graphique. Cela peut être pratique pour, par exemple, "
+"ajouter rapidement quelques éléments et exporter sans modifier le projet "
+"lui-même ni exposer ces changements à l'utilisateur. Si vous voulez que la "
+"mise en page soit sauvegardée/restaurée avec le projet et disponible dans le"
+" gestionnaire de mise en page, alors ajoutez :"
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:160
+msgid ""
 "Now we can add various elements (map, label, ...) to the layout. All these "
 "objects are represented by classes that inherit from the base "
 ":class:`QgsLayoutItem <qgis.core.QgsLayoutItem>` class."
@@ -141,7 +171,7 @@ msgstr ""
 " mise en page. Tous ces objets sont représentés par des classes qui héritent"
 " de la classe de base :class:`QgsLayoutItem <qgis.core.QgsLayoutItem>`."
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:147
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:163
 msgid ""
 "Here's a description of some of the main layout items that can be added to a"
 " layout."
@@ -149,15 +179,15 @@ msgstr ""
 "Voici une description de certains des principaux éléments qui peuvent être "
 "ajoutés à une mise en page."
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:149
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:165
 msgid ""
-"map --- this item tells the libraries where to put the map itself. Here we "
-"create a map and stretch it over the whole paper size"
+"map --- Here we create a map of a custom size and render the current map "
+"canvas"
 msgstr ""
-"carte --- cet élément indique aux bibliothèques l'emplacement de la carte. "
-"Nous créons ici une carte et l'étirons sur toute la taille de la page"
+"map --- Ici nous créons une carte d'une taille personnalisée et rendons le "
+"canevas de la carte actuelle"
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:157
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:177
 msgid ""
 "label --- allows displaying labels. It is possible to modify its font, "
 "color, alignment and margin"
@@ -165,48 +195,48 @@ msgstr ""
 "étiquette --- permet d'afficher des étiquettes. Il est possible d'en "
 "modifier la police, la couleur, l'alignement et les marges::"
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:167
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:187
 msgid "legend"
 msgstr "légende"
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:175
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:195
 msgid "scale bar"
 msgstr "Échelle graphique"
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:185
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:205
 msgid "arrow"
 msgstr "flèche"
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:186
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:206
 msgid "picture"
 msgstr "image"
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:187
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:207
 msgid "basic shape"
 msgstr "Forme simple"
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:188
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:208
 msgid "nodes based shape"
 msgstr "Forme basée sur les nœuds"
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:212
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:232
 msgid "table"
 msgstr "table"
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:214
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:234
 msgid "Once an item is added to the layout, it can be moved and resized:"
 msgstr ""
 "Une fois qu'un élément est ajouté à la mise en page, il peut être déplacé et"
 " redimensionné :"
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:221
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:241
 msgid ""
 "A frame is drawn around each item by default. You can remove it as follows:"
 msgstr ""
 "Par défaut, un cadre est dessiné autour de chaque élément. Vous pouvez le "
 "supprimer comme suit "
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:228
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:248
 msgid ""
 "Besides creating the layout items by hand, QGIS has support for layout "
 "templates which are essentially compositions with all their items saved to a"
@@ -217,7 +247,7 @@ msgstr ""
 " dont tous les éléments sont enregistrés dans un fichier .qpt (avec une "
 "syntaxe XML)."
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:232
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:252
 msgid ""
 "Once the composition is ready (the layout items have been created and added "
 "to the composition), we can proceed to produce a raster and/or vector "
@@ -227,11 +257,11 @@ msgstr ""
 "créés et ajoutés à la composition), nous pouvons procéder à la production "
 "d'une sortie raster et/ou vecteur."
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:238
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:258
 msgid "Exporting the layout"
 msgstr "Exporter la mise en page"
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:240
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:260
 msgid ""
 "To export a layout, the :class:`QgsLayoutExporter "
 "<qgis.core.QgsLayoutExporter>` class must be used."
@@ -239,7 +269,7 @@ msgstr ""
 "Pour exporter une mise en page, la classe :class:`QgsLayoutExporter "
 "<qgis.core.QgsLayoutExporter>` doit être utilisée."
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:250
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:270
 msgid ""
 "Use the :meth:`exportToImage() <qgis.core.QgsLayoutExporter.exportToImage>` "
 "in case you want to export to an image instead of a PDF file."
@@ -248,11 +278,11 @@ msgstr ""
 "<qgis.core.QgsLayoutExporter.exportToImage>` au cas où vous voudriez "
 "exporter vers une image au lieu d'un fichier PDF."
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:254
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:274
 msgid "Exporting a layout atlas"
 msgstr "Exporter un atlas"
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:256
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:276
 msgid ""
 "If you want to export all pages from a layout that has the atlas option "
 "configured and enabled, you need to use the :meth:`atlas() "
@@ -266,7 +296,7 @@ msgstr ""
 "(:class:`QgsLayoutExporter <qgis.core.QgsLayoutExporter>`) avec de petits "
 "ajustements. Dans l'exemple suivant, les pages sont exportées en image PNG :"
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:266
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:286
 msgid ""
 "Notice that the outputs will be saved in the base path folder, using the "
 "output filename expression configured on atlas."
