@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-20 10:25+0000\n"
+"POT-Creation-Date: 2021-04-04 19:45+0000\n"
 "PO-Revision-Date: 2020-12-24 10:23+0000\n"
 "Last-Translator: DiGro, 2021\n"
 "Language-Team: Dutch (https://www.transifex.com/qgis/teams/6144/nl/)\n"
@@ -113,7 +113,7 @@ msgid "Apache HTTP Server"
 msgstr "Apache HTTP Server"
 
 #: ../../docs/server_manual/getting_started.rst:84
-#: ../../docs/server_manual/getting_started.rst:234
+#: ../../docs/server_manual/getting_started.rst:229
 msgid ""
 "In the following, please replace ``localhost`` with the name or IP address "
 "of your server."
@@ -145,19 +145,19 @@ msgstr ""
 "Laten we in de map :file:`/etc/apache2/sites-available` een bestand maken, "
 "genaamd :file:`qgis.demo.conf`, met deze inhoud:"
 
-#: ../../docs/server_manual/getting_started.rst:156
+#: ../../docs/server_manual/getting_started.rst:151
 msgid "Further readings:"
 msgstr "Meer informatie:"
 
-#: ../../docs/server_manual/getting_started.rst:158
+#: ../../docs/server_manual/getting_started.rst:153
 msgid ":ref:`QGIS Server logging <qgis-server-logging>`"
 msgstr ":ref:`QGIS Server loggen <qgis-server-logging>`"
 
-#: ../../docs/server_manual/getting_started.rst:159
+#: ../../docs/server_manual/getting_started.rst:154
 msgid ":ref:`pg-service-file in QGIS Server <pg-service-file>`"
 msgstr ":ref:`pg-service-bestand in QGIS Server <pg-service-file>`"
 
-#: ../../docs/server_manual/getting_started.rst:161
+#: ../../docs/server_manual/getting_started.rst:156
 msgid ""
 "You can do the above in a linux Desktop system by pasting and saving the "
 "above configuration after doing:"
@@ -165,7 +165,7 @@ msgstr ""
 "U kunt bovenstaande op een Linux desktopsysteem uitvoeren door de "
 "bovenstaande configuratie te plakken en op te slaan nadat u heeft gedaan:"
 
-#: ../../docs/server_manual/getting_started.rst:168
+#: ../../docs/server_manual/getting_started.rst:163
 msgid ""
 "Some of the configuration options are explained in the Server "
 ":ref:`environment variables <server_env_variables>` section."
@@ -173,7 +173,7 @@ msgstr ""
 "Enkele van de opties voor configuratie worden uitgelegd in het gedeelte voor"
 " de Server :ref:`omgevingsvariabelen <server_env_variables>`."
 
-#: ../../docs/server_manual/getting_started.rst:171
+#: ../../docs/server_manual/getting_started.rst:166
 msgid ""
 "Let's now create the directories that will store the QGIS Server logs and "
 "the authentication database:"
@@ -181,7 +181,7 @@ msgstr ""
 "Laten we nu de mappen maken waarin de logboeken voor de QGIS Server en de "
 "database voor authenticatie zullen worden opgeslagen:"
 
-#: ../../docs/server_manual/getting_started.rst:183
+#: ../../docs/server_manual/getting_started.rst:178
 msgid ""
 "``www-data`` is the Apache user on Debian based systems and we need Apache "
 "to have access to those locations or files. The ``chown www-data...`` "
@@ -193,7 +193,7 @@ msgstr ""
 "locaties of bestanden. De opdrachten ``chown www-data...`` wijzigen de "
 "eigenaar van de respectievelijke mappen en bestanden naar ``www-data``."
 
-#: ../../docs/server_manual/getting_started.rst:188
+#: ../../docs/server_manual/getting_started.rst:183
 msgid ""
 "We can now enable the `virtual host "
 "<https://httpd.apache.org/docs/2.4/vhosts>`_, enable the ``fcgid`` mod if "
@@ -202,14 +202,14 @@ msgstr ""
 "We kunnen nu de `virtuele host <https://httpd.apache.org/docs/2.4/vhosts>`_ "
 "inschakelen, schakel de module ``fcgid`` in als dat nog niet is gebeurd:"
 
-#: ../../docs/server_manual/getting_started.rst:196
-#: ../../docs/server_manual/getting_started.rst:597
+#: ../../docs/server_manual/getting_started.rst:191
+#: ../../docs/server_manual/getting_started.rst:590
 msgid "Now restart Apache for the new configuration to be taken into account:"
 msgstr ""
 "Herstart Apache nu opnieuw om er voor te zorgen dat de nieuwe configuratie "
 "daadwerkelijk wordt doorgevoerd:"
 
-#: ../../docs/server_manual/getting_started.rst:202
+#: ../../docs/server_manual/getting_started.rst:197
 #, python-format
 msgid ""
 "Now that Apache knows that he should answer requests to http://qgis.demo we "
@@ -226,7 +226,7 @@ msgstr ""
 "We kunnen dat doen met ``sh -c \"echo '127.0.0.1 qgis.demo' >> "
 "/etc/hosts\"``. Vervang ``127.0.0.1`` door het IP van uw server."
 
-#: ../../docs/server_manual/getting_started.rst:211
+#: ../../docs/server_manual/getting_started.rst:206
 msgid ""
 "Remember that both the :file:`myhost.conf` and :file:`/etc/hosts` files "
 "should be configured for your setup to work. You can also test the access to"
@@ -253,7 +253,7 @@ msgstr ""
 "uw tekstbewerker te starten met rechten als administrator voordat u het "
 "bestand hosts opent."
 
-#: ../../docs/server_manual/getting_started.rst:223
+#: ../../docs/server_manual/getting_started.rst:218
 msgid ""
 "QGIS Server is now available at http://localhost/qgisserver. To check, type "
 "in a browser, as in the simple case:"
@@ -261,11 +261,11 @@ msgstr ""
 "QGIS Server is nu beschikbaar op http://localhost/qgisserver. Typ, om het te"
 " controleren, in een browser, zoals in het eenvoudigste geval:"
 
-#: ../../docs/server_manual/getting_started.rst:232
+#: ../../docs/server_manual/getting_started.rst:227
 msgid "NGINX HTTP Server"
 msgstr "NGINX HTTP Server"
 
-#: ../../docs/server_manual/getting_started.rst:236
+#: ../../docs/server_manual/getting_started.rst:231
 msgid ""
 "You can also use QGIS Server with `NGINX <https://nginx.org/>`_. Unlike "
 "Apache, NGINX does not automatically spawn FastCGI processes. The FastCGI "
@@ -275,11 +275,11 @@ msgstr ""
 "dan bij Apache voert NGINX niet automatisch FastCGI-processen uit. De "
 "processen van FastCGI moeten door iets anders worden gestart."
 
-#: ../../docs/server_manual/getting_started.rst:240
+#: ../../docs/server_manual/getting_started.rst:235
 msgid "Install NGINX:"
 msgstr "NGINX installeren:"
 
-#: ../../docs/server_manual/getting_started.rst:247
+#: ../../docs/server_manual/getting_started.rst:242
 msgid ""
 "As a first option, you can use **spawn-fcgi** or **fcgiwrap** to start and "
 "manage the QGIS Server processes. Official Debian packages exist for both. "
@@ -292,7 +292,7 @@ msgstr ""
 "voeren en u moet, bijvoorbeeld, afdrukken, kunt u :ref:`xvfb <xvfb>` "
 "gebruiken."
 
-#: ../../docs/server_manual/getting_started.rst:253
+#: ../../docs/server_manual/getting_started.rst:248
 msgid ""
 "Another option is to rely on **Systemd**, the init system for GNU/Linux that"
 " most Linux distributions use today. One of the advantages of this method is"
@@ -305,11 +305,11 @@ msgstr ""
 "processen vereist. Het is bedoeld als eenvoudig, maar toch robuust en "
 "efficiënt voor uitrol voor productie."
 
-#: ../../docs/server_manual/getting_started.rst:260
+#: ../../docs/server_manual/getting_started.rst:255
 msgid "NGINX Configuration"
 msgstr "Configuratie van NGINX"
 
-#: ../../docs/server_manual/getting_started.rst:262
+#: ../../docs/server_manual/getting_started.rst:257
 msgid ""
 "The **include fastcgi_params;** used in the previous configuration is "
 "important, as it adds the parameters from :file:`/etc/nginx/fastcgi_params`:"
@@ -318,7 +318,7 @@ msgstr ""
 "belangrijk omdat het de parameters toevoegt vanuit "
 ":file:`/etc/nginx/fastcgi_params`:"
 
-#: ../../docs/server_manual/getting_started.rst:292
+#: ../../docs/server_manual/getting_started.rst:287
 msgid ""
 "Moreover, you can use some :ref:`qgis-server-envvar` to configure QGIS "
 "Server. In the NGINX configuration file, :file:`/etc/nginx/nginx.conf`, you "
@@ -330,11 +330,11 @@ msgstr ""
 ":file:`/etc/nginx/nginx.conf`, moet u de instructie ``fastcgi_param`` "
 "gebruiken om deze variabelen te definiëren, zoals hieronder weergegeven:"
 
-#: ../../docs/server_manual/getting_started.rst:308
+#: ../../docs/server_manual/getting_started.rst:302
 msgid "FastCGI wrappers"
 msgstr "FastCGI wrappers"
 
-#: ../../docs/server_manual/getting_started.rst:312
+#: ../../docs/server_manual/getting_started.rst:306
 msgid ""
 "**fcgiwrap** is easier to set up than **spawn-fcgi**, because it's already "
 "wrapped in a Systemd service. But it also leads to a solution that is much "
@@ -355,11 +355,11 @@ msgstr ""
 "verzoeken, wat resulteert in veel betere uitvoering. Om die reden wordt "
 "spawn-fcgi aanbevolen voor productiegebruik."
 
-#: ../../docs/server_manual/getting_started.rst:322
+#: ../../docs/server_manual/getting_started.rst:316
 msgid "spawn-fcgi"
 msgstr "spawn-fcgi"
 
-#: ../../docs/server_manual/getting_started.rst:324
+#: ../../docs/server_manual/getting_started.rst:318
 msgid ""
 "If you want to use `spawn-fcgi <https://redmine.lighttpd.net/projects/spawn-"
 "fcgi/wiki>`_, the first step is to install the package:"
@@ -367,18 +367,18 @@ msgstr ""
 "Als u `spawn-fcgi <https://redmine.lighttpd.net/projects/spawn-fcgi/wiki>`_ "
 "wilt gebruiken, is de eerste stap om het pakket te installeren:"
 
-#: ../../docs/server_manual/getting_started.rst:332
-#: ../../docs/server_manual/getting_started.rst:412
+#: ../../docs/server_manual/getting_started.rst:326
+#: ../../docs/server_manual/getting_started.rst:405
 msgid ""
 "Then, introduce the following block in your NGINX server configuration:"
 msgstr ""
 "Plaats vervolgens het volgende blok in uw configuratie voor uw NGINX-server:"
 
-#: ../../docs/server_manual/getting_started.rst:342
+#: ../../docs/server_manual/getting_started.rst:336
 msgid "And restart NGINX to take into account the new configuration:"
 msgstr "En herstart NGINX om de nieuwe configuratie door te voeren:"
 
-#: ../../docs/server_manual/getting_started.rst:348
+#: ../../docs/server_manual/getting_started.rst:342
 msgid ""
 "Finally, considering that there is no default service file for spawn-fcgi, "
 "you have to manually start QGIS Server in your terminal:"
@@ -386,22 +386,21 @@ msgstr ""
 "Tenslotte, omdat er geen standaard servicebestand is voor spawn-fcgi, dient "
 "u QGIS Server handmatig te starten in uw terminal:"
 
-#: ../../docs/server_manual/getting_started.rst:357
-#: ../../docs/server_manual/getting_started.rst:431
+#: ../../docs/server_manual/getting_started.rst:351
+#: ../../docs/server_manual/getting_started.rst:424
 msgid "QGIS Server is now available at http://localhost/qgisserver."
 msgstr "QGIS Server is nu beschikbaar op http://localhost/qgisserver."
 
-#: ../../docs/server_manual/getting_started.rst:361
+#: ../../docs/server_manual/getting_started.rst:355
 msgid ""
 "When using spawn-fcgi, you may directly define environment variables before "
-"running the server. For example: ``export "
-"QGIS_SERVER_LOG_FILE=/var/log/qgis/qgisserver.log``"
+"running the server. For example: ``export QGIS_SERVER_LOG_STDERR=1``"
 msgstr ""
-"Bij het gebruiken van spawn-fcgi, kunt u direct omgevingsvariabelen "
-"configureren vóór het uitvoeren van de server. Bijvoorbeeld: ``export "
-"QGIS_SERVER_LOG_FILE=/var/log/qgis/qgisserver.log``"
+"Bij het gebruiken van spawn-fcgi zou u direct omgevingsvariabelen kunnen "
+"configureren, vóór het uitvoeren van de server. Bijvoorbeeld: ``export "
+"QGIS_SERVER_LOG_STDERR=1``"
 
-#: ../../docs/server_manual/getting_started.rst:365
+#: ../../docs/server_manual/getting_started.rst:359
 msgid ""
 "Of course, you can add an init script to start QGIS Server at boot time or "
 "whenever you want. For example with **systemd**, edit the file "
@@ -411,22 +410,22 @@ msgstr ""
 "het opstarten of wanneer u maar wilt. Bijvoorbeeld met **systemd**, bewerk "
 "het bestand :file:`/etc/systemd/system/qgis-server.service` met deze inhoud:"
 
-#: ../../docs/server_manual/getting_started.rst:391
+#: ../../docs/server_manual/getting_started.rst:384
 msgid "Then enable and start the service:"
 msgstr "Schakel dan de service in en start die:"
 
-#: ../../docs/server_manual/getting_started.rst:399
+#: ../../docs/server_manual/getting_started.rst:392
 msgid ""
 "With the above commands spawn-fcgi spawns only one QGIS Server process."
 msgstr ""
 "Met de bovenstaande opdrachten voert spawn-fcgi slechts één proces voor QGIS"
 " Server uit."
 
-#: ../../docs/server_manual/getting_started.rst:402
+#: ../../docs/server_manual/getting_started.rst:395
 msgid "fcgiwrap"
 msgstr "fcgiwrap"
 
-#: ../../docs/server_manual/getting_started.rst:404
+#: ../../docs/server_manual/getting_started.rst:397
 msgid ""
 "Using `fcgiwrap "
 "<https://www.nginx.com/resources/wiki/start/topics/examples/fcgiwrap/>`_ is "
@@ -438,7 +437,7 @@ msgstr ""
 "veel gemakkelijker in te stellen dan **spawn-fcgi**, maar het is veel "
 "trager. U dient eerst het corresponderende pakket te installeren:"
 
-#: ../../docs/server_manual/getting_started.rst:424
+#: ../../docs/server_manual/getting_started.rst:417
 msgid ""
 "Finally, restart NGINX and **fcgiwrap** to take into account the new "
 "configuration:"
@@ -446,11 +445,11 @@ msgstr ""
 "Start tenslotte NGINX opnieuw op en **fcgiwrap** om de nieuwe configuratie "
 "door te voeren:"
 
-#: ../../docs/server_manual/getting_started.rst:436
+#: ../../docs/server_manual/getting_started.rst:429
 msgid "Systemd"
 msgstr "Systemd"
 
-#: ../../docs/server_manual/getting_started.rst:438
+#: ../../docs/server_manual/getting_started.rst:431
 msgid ""
 "QGIS Server needs a running X Server to be fully usable, in particular for "
 "printing. In the case you already have a running X Server, you can use "
@@ -460,13 +459,13 @@ msgstr ""
 " in het bijzonder voor afdrukken. In het geval u al een werkende X Server "
 "heeft, kunt services van systemd gebruiken."
 
-#: ../../docs/server_manual/getting_started.rst:441
+#: ../../docs/server_manual/getting_started.rst:434
 msgid "This method, to deploy QGIS Server, relies on two Systemd units:"
 msgstr ""
 "Deze methode om QGIS Server uit te rollen, vertrouwt op twee eenheden van "
 "Systemd:"
 
-#: ../../docs/server_manual/getting_started.rst:443
+#: ../../docs/server_manual/getting_started.rst:436
 msgid ""
 "a `Socket unit "
 "<https://www.freedesktop.org/software/systemd/man/systemd.socket.html>`_"
@@ -474,7 +473,7 @@ msgstr ""
 "een `Socket unit "
 "<https://www.freedesktop.org/software/systemd/man/systemd.socket.html>`_"
 
-#: ../../docs/server_manual/getting_started.rst:444
+#: ../../docs/server_manual/getting_started.rst:437
 msgid ""
 "and a `Service unit "
 "<https://www.freedesktop.org/software/systemd/man/systemd.service.html>`_."
@@ -482,7 +481,7 @@ msgstr ""
 "en een `Service unit "
 "<https://www.freedesktop.org/software/systemd/man/systemd.service.html>`_."
 
-#: ../../docs/server_manual/getting_started.rst:446
+#: ../../docs/server_manual/getting_started.rst:439
 msgid ""
 "The **QGIS Server Socket unit** defines and creates a file system socket, "
 "used by NGINX to start and communicate with QGIS Server. The Socket unit has"
@@ -499,11 +498,11 @@ msgstr ""
 "proces. Het is geplaatst in :file:`/etc/systemd/system/qgis-server@.socket`,"
 " wat in feite een sjabloon is:"
 
-#: ../../docs/server_manual/getting_started.rst:469
+#: ../../docs/server_manual/getting_started.rst:462
 msgid "Now enable and start sockets:"
 msgstr "Nu de sockets inschakelen en starten:"
 
-#: ../../docs/server_manual/getting_started.rst:475
+#: ../../docs/server_manual/getting_started.rst:468
 msgid ""
 "The **QGIS Server Service unit** defines and starts the QGIS Server process."
 " The important part is that the Service process’ standard input is connected"
@@ -518,7 +517,7 @@ msgstr ""
 " Service unit, geplaatst in :file:`/etc/systemd/system/qgis-"
 "server@.service`:"
 
-#: ../../docs/server_manual/getting_started.rst:499
+#: ../../docs/server_manual/getting_started.rst:492
 msgid ""
 "The QGIS Server :ref:`environment variables <qgis-server-envvar>` are "
 "defined in a separate file, :file:`/etc/qgis-server/env`. It could look like"
@@ -528,11 +527,11 @@ msgstr ""
 "gedefinieerd in een afzonderlijk bestand, :file:`/etc/qgis-server/env`. Het "
 "zou er zo uit kunnen zien:"
 
-#: ../../docs/server_manual/getting_started.rst:509
+#: ../../docs/server_manual/getting_started.rst:502
 msgid "Now start socket service:"
 msgstr "Nu de socket service starten:"
 
-#: ../../docs/server_manual/getting_started.rst:515
+#: ../../docs/server_manual/getting_started.rst:508
 msgid ""
 "Finally, for the NGINX HTTP server, lets introduce the configuration for "
 "this setup:"
@@ -540,13 +539,13 @@ msgstr ""
 "Tenslotte, voor de NGINX HTTP-server, Introduceren we de configuratie voor "
 "deze setup:"
 
-#: ../../docs/server_manual/getting_started.rst:536
+#: ../../docs/server_manual/getting_started.rst:529
 msgid "Now restart NGINX for the new configuration to be taken into account:"
 msgstr ""
 "Herstart NGINX nu opnieuw om er voor te zorgen dat de nieuwe configuratie "
 "daadwerkelijk wordt doorgevoerd:"
 
-#: ../../docs/server_manual/getting_started.rst:542
+#: ../../docs/server_manual/getting_started.rst:535
 msgid ""
 "Thanks to Oslandia for sharing `their tutorial "
 "<https://oslandia.com/en/2018/11/23/deploying-qgis-server-with-systemd/>`_."
@@ -554,11 +553,11 @@ msgstr ""
 "Met dank aan Oslandia voor het delen van `hun handleiding "
 "<https://oslandia.com/en/2018/11/23/deploying-qgis-server-with-systemd/>`_."
 
-#: ../../docs/server_manual/getting_started.rst:547
+#: ../../docs/server_manual/getting_started.rst:540
 msgid "Xvfb"
 msgstr "Xvfb"
 
-#: ../../docs/server_manual/getting_started.rst:548
+#: ../../docs/server_manual/getting_started.rst:541
 msgid ""
 "QGIS Server needs a running X Server to be fully usable, in particular for "
 "printing. On servers it is usually recommended not to install it, so you may"
@@ -569,7 +568,7 @@ msgstr ""
 "het niet te installeren, dus u zou ``xvfb`` kunnen gebruiken om een virtuele"
 " X-omgeving te maken."
 
-#: ../../docs/server_manual/getting_started.rst:552
+#: ../../docs/server_manual/getting_started.rst:545
 msgid ""
 "If you're running the Server in graphic/X11 environment then there is no "
 "need to install xvfb. More info at https://www.itopen.it/qgis-server-setup-"
@@ -579,11 +578,11 @@ msgstr ""
 "reden om xvfb te installeren. Meer informatie op https://www.itopen.it/qgis-"
 "server-setup-notes/."
 
-#: ../../docs/server_manual/getting_started.rst:555
+#: ../../docs/server_manual/getting_started.rst:548
 msgid "To install the package:"
 msgstr "Het pakket installeren:"
 
-#: ../../docs/server_manual/getting_started.rst:561
+#: ../../docs/server_manual/getting_started.rst:554
 msgid ""
 "Create the service file, :file:`/etc/systemd/system/xvfb.service`, with this"
 " content:"
@@ -591,12 +590,12 @@ msgstr ""
 "Maak het servicebestand, :file:`/etc/systemd/system/xvfb.service`, met deze "
 "inhoud:"
 
-#: ../../docs/server_manual/getting_started.rst:575
+#: ../../docs/server_manual/getting_started.rst:568
 msgid "Enable, start and check the status of the ``xvfb.service``:"
 msgstr ""
 "Inschakelen, starten en de status controleren van de ``xvfb.service``:"
 
-#: ../../docs/server_manual/getting_started.rst:582
+#: ../../docs/server_manual/getting_started.rst:575
 msgid ""
 "Then, according to your HTTP server, you should configure the **DISPLAY** "
 "parameter or directly use **xvfb-run**."
@@ -604,25 +603,25 @@ msgstr ""
 "Dan, overeenkomstig uw HTTP-server, zou u de parameter  **DISPLAY** moeten "
 "configureren of direct **xvfb-run** moeten gebruiken."
 
-#: ../../docs/server_manual/getting_started.rst:586
+#: ../../docs/server_manual/getting_started.rst:579
 msgid "With Apache"
 msgstr "Met Apache"
 
-#: ../../docs/server_manual/getting_started.rst:588
+#: ../../docs/server_manual/getting_started.rst:581
 msgid "Then you can configure the **DISPLAY** parameter."
 msgstr "Dan kunt u de parameter **DISPLAY** configureren."
 
-#: ../../docs/server_manual/getting_started.rst:590
+#: ../../docs/server_manual/getting_started.rst:583
 msgid "With Apache you just add to your *FastCGI* configuration (see above):"
 msgstr ""
 "Met Apache voegt u eenvoudigweg uw configuratie voor *FastCGI* toe (zie "
 "boven):"
 
-#: ../../docs/server_manual/getting_started.rst:604
+#: ../../docs/server_manual/getting_started.rst:597
 msgid "With NGINX"
 msgstr "Met NGINX"
 
-#: ../../docs/server_manual/getting_started.rst:606
+#: ../../docs/server_manual/getting_started.rst:599
 msgid ""
 "Then you can directly use **xvfb-run** or configure the **DISPLAY** "
 "parameter."
@@ -630,21 +629,21 @@ msgstr ""
 "Dan kunt u direct **xvfb-run** gebruiken of de parameter **DISPLAY** "
 "configureren."
 
-#: ../../docs/server_manual/getting_started.rst:608
+#: ../../docs/server_manual/getting_started.rst:601
 msgid "With spawn-fcgi using ``xvfb-run``:"
 msgstr "Met spawn-fcgi ``xvfb-run`` gebruiken:"
 
-#: ../../docs/server_manual/getting_started.rst:616
+#: ../../docs/server_manual/getting_started.rst:609
 msgid ""
 "With the **DISPLAY** environment variable in the HTTP server configuration."
 msgstr ""
 "Met de omgevingsvariabele **DISPLAY** in de configuratie van de HTTP-server."
 
-#: ../../docs/server_manual/getting_started.rst:623
+#: ../../docs/server_manual/getting_started.rst:616
 msgid "Installation on Windows"
 msgstr "Installeren onder Windows"
 
-#: ../../docs/server_manual/getting_started.rst:627
+#: ../../docs/server_manual/getting_started.rst:620
 msgid ""
 "QGIS Server can also be installed on Windows systems. While the QGIS Server "
 "package is available in the 64 bit version of the OSGeo4W network installer "
@@ -659,11 +658,11 @@ msgstr ""
 " Apache (of andere webserver) beschikbaar, die moeten dus op een andere "
 "manier geïnstalleerd worden."
 
-#: ../../docs/server_manual/getting_started.rst:632
+#: ../../docs/server_manual/getting_started.rst:625
 msgid "A simple procedure is the following:"
 msgstr "Een eenvoudige procedure is de volgende:"
 
-#: ../../docs/server_manual/getting_started.rst:634
+#: ../../docs/server_manual/getting_started.rst:627
 msgid ""
 "Download the XAMPP installer (https://www.apachefriends.org/download.html) "
 "for Windows and install Apache"
@@ -672,7 +671,7 @@ msgstr ""
 "(https://www.apachefriends.org/download.html) voor Windows en installeer "
 "Apache"
 
-#: ../../docs/server_manual/getting_started.rst:640
+#: ../../docs/server_manual/getting_started.rst:633
 msgid ""
 "Download the OSGeo4W installer, follow the \"Advanced Install\" and install "
 "both the QGIS Desktop and QGIS Server packages"
@@ -680,7 +679,7 @@ msgstr ""
 "Download het installatieprogramma van OSGeo4W, volg de \"Advanced Install\" "
 "en installeer zowel de pakketten QGIS Desktop als QGIS Server"
 
-#: ../../docs/server_manual/getting_started.rst:646
+#: ../../docs/server_manual/getting_started.rst:639
 msgid ""
 "Edit the httpd.conf file (:file:`C:\\\\xampp\\\\apache\\\\httpd.conf` if the"
 " default installation paths have been used) and make the following changes:"
@@ -689,23 +688,23 @@ msgstr ""
 "als de standaardpaden voor installeren zijn gebruikt) en maak de volgende "
 "wijzigingen:"
 
-#: ../../docs/server_manual/getting_started.rst:649
-#: ../../docs/server_manual/getting_started.rst:663
-#: ../../docs/server_manual/getting_started.rst:688
+#: ../../docs/server_manual/getting_started.rst:642
+#: ../../docs/server_manual/getting_started.rst:656
+#: ../../docs/server_manual/getting_started.rst:681
 msgid "From:"
 msgstr "Van:"
 
-#: ../../docs/server_manual/getting_started.rst:656
-#: ../../docs/server_manual/getting_started.rst:674
-#: ../../docs/server_manual/getting_started.rst:695
+#: ../../docs/server_manual/getting_started.rst:649
+#: ../../docs/server_manual/getting_started.rst:667
+#: ../../docs/server_manual/getting_started.rst:688
 msgid "To:"
 msgstr "Naar:"
 
-#: ../../docs/server_manual/getting_started.rst:702
+#: ../../docs/server_manual/getting_started.rst:695
 msgid "Then at the bottom of httpd.conf add:"
 msgstr "Voeg tenslotte aan het einde van httpd.conf toe:"
 
-#: ../../docs/server_manual/getting_started.rst:714
+#: ../../docs/server_manual/getting_started.rst:707
 msgid ""
 "Restart the Apache web server from the XAMPP Control Panel and open browser "
 "window to testing a GetCapabilities request to QGIS Server"
@@ -714,17 +713,17 @@ msgstr ""
 "venster van de browser om een verzoek GetCapabilities te testen met QGIS "
 "Server"
 
-#: ../../docs/server_manual/getting_started.rst:723
+#: ../../docs/server_manual/getting_started.rst:716
 msgid "Serve a project"
 msgstr "Een project op de server gebruiken"
 
-#: ../../docs/server_manual/getting_started.rst:725
+#: ../../docs/server_manual/getting_started.rst:718
 msgid "Now that QGIS Server is installed and running, we just have to use it."
 msgstr ""
 "Nu QGIS Server is geïnstalleerd en werkt, hoeven we het aleen nog maar te "
 "gebruiken."
 
-#: ../../docs/server_manual/getting_started.rst:727
+#: ../../docs/server_manual/getting_started.rst:720
 msgid ""
 "Obviously, we need a QGIS project to work on. Of course, you can fully "
 "customize your project by defining contact information, precise some "
@@ -737,7 +736,7 @@ msgstr ""
 "wat u daarover dient te weten wordt later beschreven in "
 ":ref:`Creatingwmsfromproject`."
 
-#: ../../docs/server_manual/getting_started.rst:732
+#: ../../docs/server_manual/getting_started.rst:725
 msgid ""
 "But for now, we are going to use a simple project already configured and "
 "previously downloaded in :file:`/home/qgis/projects/world.qgs`, as described"
@@ -747,7 +746,7 @@ msgstr ""
 "geconfigureerd en eerder werd gedownload in "
 ":file:`/home/qgis/projects/world.qgs`, zoals boven beschreven. "
 
-#: ../../docs/server_manual/getting_started.rst:735
+#: ../../docs/server_manual/getting_started.rst:728
 msgid ""
 "By opening the project and taking a quick look on layers, we know that 4 "
 "layers are currently available:"
@@ -755,23 +754,23 @@ msgstr ""
 "Bij het openen van het project en door snel even te kijken naar de lagen, "
 "weten we dat momenteel 4 lagen beschikbaar zijn:"
 
-#: ../../docs/server_manual/getting_started.rst:738
+#: ../../docs/server_manual/getting_started.rst:731
 msgid "airports"
 msgstr "airports"
 
-#: ../../docs/server_manual/getting_started.rst:739
+#: ../../docs/server_manual/getting_started.rst:732
 msgid "places"
 msgstr "places"
 
-#: ../../docs/server_manual/getting_started.rst:740
+#: ../../docs/server_manual/getting_started.rst:733
 msgid "countries"
 msgstr "countries"
 
-#: ../../docs/server_manual/getting_started.rst:741
+#: ../../docs/server_manual/getting_started.rst:734
 msgid "countries_shapeburst"
 msgstr "countries_shapeburst"
 
-#: ../../docs/server_manual/getting_started.rst:743
+#: ../../docs/server_manual/getting_started.rst:736
 msgid ""
 "You don't have to understand the full request for now but you may retrieve a"
 " map with some of the previous layers thanks to QGIS Server by doing "
@@ -781,16 +780,16 @@ msgstr ""
 " enkele van de eerdere lagen op kunnen halen dankzij QGIS Server door iets "
 "zoals dit te doen in uw webbrowser om de laag *countries* op te halen:"
 
-#: ../../docs/server_manual/getting_started.rst:758
+#: ../../docs/server_manual/getting_started.rst:751
 msgid "If you obtain the next image, then QGIS Server is running correctly:"
 msgstr ""
 "Als u de volgende afbeelding ziet dan wordt QGIS Server correct uitgevoerd:"
 
-#: ../../docs/server_manual/getting_started.rst:763
+#: ../../docs/server_manual/getting_started.rst:756
 msgid "Server response to a basic GetMap request"
 msgstr "Antwoord van Server na een eenvoudig verzoek GetMap"
 
-#: ../../docs/server_manual/getting_started.rst:765
+#: ../../docs/server_manual/getting_started.rst:758
 msgid ""
 "Note that you may define **QGIS_PROJECT_FILE** environment variable to use a"
 " project by default instead of giving a **MAP** parameter (see :ref:`qgis-"
@@ -800,15 +799,15 @@ msgstr ""
 " een standaardproject te gebruiken in plaats van een parameter **MAP** op te"
 " geven (bekijk :ref:`qgis-server-envvar`)."
 
-#: ../../docs/server_manual/getting_started.rst:768
+#: ../../docs/server_manual/getting_started.rst:761
 msgid "For example with spawn-fcgi:"
 msgstr "Bijvoorbeeld met spawn-fcgi:"
 
-#: ../../docs/server_manual/getting_started.rst:780
+#: ../../docs/server_manual/getting_started.rst:773
 msgid "Configure your project"
 msgstr "Uw project configureren"
 
-#: ../../docs/server_manual/getting_started.rst:782
+#: ../../docs/server_manual/getting_started.rst:775
 msgid ""
 "To provide a new QGIS Server WMS, WFS or WCS, you have to create a QGIS "
 "project file with some data or use one of your current project. Define the "
@@ -820,11 +819,11 @@ msgstr ""
 "verschaffen. Definieer de kleuren en stijlen van de lagen in QGIS en het CRS"
 " voor het project, als die nog niet gedefinieerd zijn."
 
-#: ../../docs/server_manual/getting_started.rst:791
+#: ../../docs/server_manual/getting_started.rst:784
 msgid "Definitions for a QGIS Server WMS/WFS/WCS project"
 msgstr "Definities voor een project QGIS Server WMS/WFS/WCS"
 
-#: ../../docs/server_manual/getting_started.rst:793
+#: ../../docs/server_manual/getting_started.rst:786
 msgid ""
 "Then, go to the :guilabel:`QGIS Server` menu of the :menuselection:`Project "
 "--> Properties...` dialog and provide some information about the OWS in the "
@@ -842,11 +841,11 @@ msgstr ""
 " de informatie gebruiken die is opgegeven in het bestand "
 ":file:`wms_metadata.xml` dat is opgeslagen in de map :file:`cgi-bin`."
 
-#: ../../docs/server_manual/getting_started.rst:803
+#: ../../docs/server_manual/getting_started.rst:796
 msgid "WMS capabilities"
 msgstr "WMS-mogelijkheden"
 
-#: ../../docs/server_manual/getting_started.rst:805
+#: ../../docs/server_manual/getting_started.rst:798
 msgid ""
 "In the :guilabel:`WMS capabilities` section, you can define the extent "
 "advertised in the WMS GetCapabilities response by entering the minimum and "
@@ -874,7 +873,7 @@ msgstr ""
 "Coördinaten ReferentieSysteem, of klik op :guilabel:`Huidige gebruikte` om "
 "het in het project van QGIS gebruikte CRS aan de lijst toe te voegen."
 
-#: ../../docs/server_manual/getting_started.rst:819
+#: ../../docs/server_manual/getting_started.rst:812
 msgid ""
 "If you have print layouts defined in your project, they will be listed in "
 "the ``GetProjectSettings`` response, and they can be used by the GetPrint "
@@ -895,7 +894,7 @@ msgstr ""
 "out vanuit het dialoogvenster :guilabel:`Lay-out selecteren` om die toe te "
 "voegen aan de lijst met uitgesloten lay-outs."
 
-#: ../../docs/server_manual/getting_started.rst:829
+#: ../../docs/server_manual/getting_started.rst:822
 msgid ""
 "If you want to exclude any layer or layer group from being published by the "
 "WMS, check |checkbox| :guilabel:`Exclude Layers` and click the |signPlus| "
@@ -917,7 +916,7 @@ msgstr ""
 "gebruikt uitsluit omdat dat de grootte van het antwoord WMS GetCapabilities "
 "reduceert, wat leidt tot snellere laadtijden aan de zijde van de cliënt."
 
-#: ../../docs/server_manual/getting_started.rst:839
+#: ../../docs/server_manual/getting_started.rst:832
 msgid ""
 "If you check |checkbox| :guilabel:`Use layer ids as name`, layer ids will be"
 " used to reference layers in the ``GetCapabilities`` response or ``GetMap "
@@ -930,7 +929,7 @@ msgstr ""
 "worden de laagnaam of korte naam, indien gedefinieerd (zie "
 ":ref:`vectorservermenu`) gebruikt."
 
-#: ../../docs/server_manual/getting_started.rst:844
+#: ../../docs/server_manual/getting_started.rst:837
 msgid ""
 "You can receive requested GetFeatureInfo as plain text, XML and GML. The "
 "default is XML."
@@ -938,7 +937,7 @@ msgstr ""
 "U kunt de door u verzochte GetFeatureInfo als platte tekst, XML en GML "
 "ontvangen. XML is standaard."
 
-#: ../../docs/server_manual/getting_started.rst:848
+#: ../../docs/server_manual/getting_started.rst:841
 msgid ""
 "If you wish, you can check |checkbox| :guilabel:`Add geometry to feature "
 "response`. This will include the bounding box for each feature in the "
@@ -950,7 +949,7 @@ msgstr ""
 "tekstindeling opnemen in het antwoord GetFeatureInfo. Bekijk ook de "
 "parameter :ref:`WITH_GEOMETRY `."
 
-#: ../../docs/server_manual/getting_started.rst:852
+#: ../../docs/server_manual/getting_started.rst:845
 msgid ""
 "As many web clients can’t display circular arcs in geometries you have the "
 "option to segmentize the geometry before sending it to the client in a "
@@ -967,7 +966,7 @@ msgstr ""
 "|checkbox| :guilabel:`Informatie over segmenten van het object geometrie` te"
 " selecteren om de optie te activeren."
 
-#: ../../docs/server_manual/getting_started.rst:858
+#: ../../docs/server_manual/getting_started.rst:851
 msgid ""
 "You can also use the :guilabel:`GetFeatureInfo geometry precision` option to"
 " set the precision of the GetFeatureInfo geometry. This enables you to save "
@@ -978,7 +977,7 @@ msgstr ""
 "geometrie voor GetFeatureInfo. Dit stelt u in staat bandbreedte te besparen "
 "indien u niet de volledige precisie nodig hebt."
 
-#: ../../docs/server_manual/getting_started.rst:862
+#: ../../docs/server_manual/getting_started.rst:855
 msgid ""
 "If you want QGIS Server to advertise specific request URLs in the WMS "
 "GetCapabilities response, enter the corresponding URL in the "
@@ -988,7 +987,7 @@ msgstr ""
 "antwoord van WMS GetCapabilities, voer dan de overeenkomende URL in in het "
 "veld :guilabel:`Gegeven URL`."
 
-#: ../../docs/server_manual/getting_started.rst:866
+#: ../../docs/server_manual/getting_started.rst:859
 msgid ""
 "Furthermore, you can restrict the maximum size of the maps returned by the "
 "GetMap request by entering the maximum width and height into the respective "
@@ -999,7 +998,7 @@ msgstr ""
 "voeren in de respectievelijke velden onder :guilabel:`Maxima voor GetMap-"
 "verzoek`."
 
-#: ../../docs/server_manual/getting_started.rst:870
+#: ../../docs/server_manual/getting_started.rst:863
 msgid ""
 "You can change the :guilabel:`Quality for JPEG images` factor. The quality "
 "factor must be in the range 0 to 100. Specify 0 for maximum compression, 100"
@@ -1009,7 +1008,7 @@ msgstr ""
 "factor voor kwaliteit moet in het bereik van 0 tot en met 100 liggen. "
 "Specificeer 0 voor maximale compressie, 100 voor geen compressie."
 
-#: ../../docs/server_manual/getting_started.rst:873
+#: ../../docs/server_manual/getting_started.rst:866
 msgid ""
 "You can change the limit for atlas features to be printed in one request by "
 "setting the :guilabel:`Maximum features for Atlas print requests` field."
@@ -1018,7 +1017,7 @@ msgstr ""
 "wijzigen door het veld :guilabel:`Maximum aantal objecten voor "
 "afdrukverzoeken van atlas` in te stellen."
 
-#: ../../docs/server_manual/getting_started.rst:876
+#: ../../docs/server_manual/getting_started.rst:869
 msgid ""
 "When QGIS Server is used in tiled mode (see :ref:`TILED parameter <wms-"
 "tiled>`), you can set the :guilabel:`Tile buffer in pixels`. The recommended"
@@ -1029,7 +1028,7 @@ msgstr ""
 " De aanbevolen waarde is de grootte van het grootste symbool of lijnbreedte "
 "in uw project van QGIS."
 
-#: ../../docs/server_manual/getting_started.rst:880
+#: ../../docs/server_manual/getting_started.rst:873
 msgid ""
 "If one of your layers uses the :ref:`Map Tip display <maptips>` (i.e. to "
 "show text using expressions) this will be listed inside the GetFeatureInfo "
@@ -1042,11 +1041,11 @@ msgstr ""
 "Map gebruikt voor één van zijn attributen, wordt die informatie ook "
 "weergegeven in de uitvoer van GetFeatureInfo."
 
-#: ../../docs/server_manual/getting_started.rst:886
+#: ../../docs/server_manual/getting_started.rst:879
 msgid "WFS capabilities"
 msgstr "WFS-mogelijkheden"
 
-#: ../../docs/server_manual/getting_started.rst:888
+#: ../../docs/server_manual/getting_started.rst:881
 msgid ""
 "In the :guilabel:`WFS capabilities` area you can select the layers you want "
 "to publish as WFS, and specify if they will allow update, insert and delete "
@@ -1061,11 +1060,11 @@ msgstr ""
 "zal QGIS Server deze specifieke URL opnemen in het antwoord WFS "
 "GetCapabilities."
 
-#: ../../docs/server_manual/getting_started.rst:896
+#: ../../docs/server_manual/getting_started.rst:889
 msgid "WCS capabilities"
 msgstr "WCS-mogelijkheden"
 
-#: ../../docs/server_manual/getting_started.rst:898
+#: ../../docs/server_manual/getting_started.rst:891
 msgid ""
 "In the :guilabel:`WCS capabilities` area, you can select the layers that you"
 " want to publish as WCS. If you enter a URL in the :guilabel:`Advertised "
@@ -1078,11 +1077,11 @@ msgstr ""
 "zal QGIS Server deze specifieke URL opnemen in het antwoord van WCS "
 "GetCapabilities."
 
-#: ../../docs/server_manual/getting_started.rst:904
+#: ../../docs/server_manual/getting_started.rst:897
 msgid "Fine tuning your OWS"
 msgstr "Fijn afstemmen van uw OWS"
 
-#: ../../docs/server_manual/getting_started.rst:906
+#: ../../docs/server_manual/getting_started.rst:899
 msgid ""
 "For vector layers, the :guilabel:`Fields` menu of the :menuselection:`Layer "
 "--> Layer Properties` dialog allows you to define for each attribute if it "
@@ -1098,7 +1097,7 @@ msgstr ""
 "specifiek attribuut wordt gepubliceerd, deselecteer het overeenkomende "
 "keuzevak in de kolom :guilabel:`WMS` of :guilabel:`WFS`."
 
-#: ../../docs/server_manual/getting_started.rst:913
+#: ../../docs/server_manual/getting_started.rst:906
 msgid ""
 "You can overlay watermarks over the maps produced by your WMS by adding text"
 " annotations or SVG annotations to the project file. See the "
@@ -1125,11 +1124,11 @@ msgstr ""
 "Eigenschappen…`) of door het pad  voor de SVG-afbeelding handmatig zo aan te"
 " passen dat het een geldig relatief pad weergeeft."
 
-#: ../../docs/server_manual/getting_started.rst:928
+#: ../../docs/server_manual/getting_started.rst:921
 msgid "Integration with third parties"
 msgstr "Integratie met derde partijen"
 
-#: ../../docs/server_manual/getting_started.rst:930
+#: ../../docs/server_manual/getting_started.rst:923
 msgid ""
 "QGIS Server provides standard OGC web services like `WMS, WFS, etc. "
 "<https://www.ogc.org/docs/is>`_ thus it can be used by a wide variety of end"
@@ -1139,11 +1138,11 @@ msgstr ""
 "<https://www.ogc.org/docs/is>`_ , dus het kan door een breed scala aan "
 "gebruikersgereedschappen worden gebruikt."
 
-#: ../../docs/server_manual/getting_started.rst:934
+#: ../../docs/server_manual/getting_started.rst:927
 msgid "Integration with QGIS Desktop"
 msgstr "Integratie met QGIS Desktop"
 
-#: ../../docs/server_manual/getting_started.rst:936
+#: ../../docs/server_manual/getting_started.rst:929
 msgid ""
 "QGIS Desktop is the map designer where QGIS Server is the map server. The "
 "maps or QGIS projects will be served by the QGIS Server to provide OGC "
@@ -1157,7 +1156,7 @@ msgstr ""
 "zijn of items in een database (door :menuselection:`Project --> Opslaan naar"
 " --> PostgreSQL` te gebruiken in QGIS Desktop)."
 
-#: ../../docs/server_manual/getting_started.rst:941
+#: ../../docs/server_manual/getting_started.rst:934
 msgid ""
 "Furthermore, dedicated update workflow must be established to refresh a "
 "project used by a QGIS Server (ie. copy project files into server location "
@@ -1170,11 +1169,11 @@ msgstr ""
 "opnieuw starten). Voor nu zijn geautomatiseerde processen (zoals herladen "
 "van de server over de service message queue) nog niet geïmplementeerd."
 
-#: ../../docs/server_manual/getting_started.rst:948
+#: ../../docs/server_manual/getting_started.rst:941
 msgid "Integration with MapProxy"
 msgstr "Integratie met MapProxy"
 
-#: ../../docs/server_manual/getting_started.rst:950
+#: ../../docs/server_manual/getting_started.rst:943
 msgid ""
 "`MapProxy <https://mapproxy.org/>`_ is a tile cache server and as it can "
 "read and serve any WMS/WMTS map server, it can be directly connected to QGIS"
@@ -1185,11 +1184,11 @@ msgstr ""
 "verbonden met QGIS Server webservices en de ervaring voor de eindgebruiker "
 "verbeteren."
 
-#: ../../docs/server_manual/getting_started.rst:956
+#: ../../docs/server_manual/getting_started.rst:949
 msgid "Integration with QWC2"
 msgstr "Integratie met QWC2"
 
-#: ../../docs/server_manual/getting_started.rst:958
+#: ../../docs/server_manual/getting_started.rst:951
 msgid ""
 "`QWC2 <https://github.com/qgis/qwc2>`_ is a responsive web application "
 "dedicated to QGIS Server. It helps you to build a highly customized map "
@@ -1203,56 +1202,3 @@ msgstr ""
 "plug-ins zijn beschikbaar, zoals authenticatie of afdrukservice, de "
 "volledige lijst die beschikbaar is, is deze `repository <https://github.com"
 "/qwc-services>`_."
-
-#~ msgid ""
-#~ "QGIS Server is now available at http://localhost/. To check, type in a "
-#~ "browser:"
-#~ msgstr ""
-#~ "QGIS Server is nu beschikbaar op http://localhost. Typ, om het te "
-#~ "controleren, in een browser:"
-
-#~ msgid "If you get something like:"
-#~ msgstr "Als u iets krijgt zoals:"
-
-#~ msgid "the server is correctly installed and responds through Apache."
-#~ msgstr "dan is de server correct geïnstalleerd en antwoord via Apache."
-
-#~ msgid "Let's now add ``mod_fcgid`` configuration directives for QGIS Server:"
-#~ msgstr ""
-#~ "Laten we nu richtlijnen voor de configuratie van ``mod_fcgid`` voor QGIS "
-#~ "Server toevoegen:"
-
-#~ msgid ""
-#~ "See the ``mod_fcgid`` documentation for more information on the ``Fcgid`` "
-#~ "parameters used. And see the :ref:`xvfb` section to understand when and why "
-#~ "the ``DISPLAY`` environment variable needs to be set."
-#~ msgstr ""
-#~ "Bekijk de documentatie voor ``mod_fcgid`` voor meer informatie over de "
-#~ "gebruikte parameters ``Fcgid``. En bekijk het gedeelte :ref:`xvfb` om te "
-#~ "begrijpen wanneer en waarom de omgevingsvariabele ``DISPLAY`` moet zijn "
-#~ "ingesteld."
-
-#~ msgid ""
-#~ "These directives can be added either to :file:`/etc/apache2/mods-"
-#~ "enabled/fcgid.conf` for a system-wide configuration, or to a specific Apache"
-#~ " ``VirtualHost``, if you want QGIS server to be available only for that "
-#~ "address; the default one is available at :file:`/etc/apache2/sites-"
-#~ "available/000-default.conf`."
-#~ msgstr ""
-#~ "Deze directieven kunnen ofwel worden toegevoegd aan :file:`/etc/apache2"
-#~ "/mods-enabled/fcgid.conf` voor een systeembrede configuratie, of aan een "
-#~ "specifieke Apache ``VirtualHost``. Als u wilt dat QGIS server alleen "
-#~ "beschikbaar is voor dat adres; de standaard is beschikbaar op "
-#~ ":file:`/etc/apache2/sites-available/000-default.conf`."
-
-#~ msgid "Then create all the needed directories with appropriate permissions:"
-#~ msgstr "Maak dan alle benodigde mappen met toepasselijke rechten:"
-
-#~ msgid ""
-#~ "Note that you may define **PROJECT_FILE** environment variable to use a "
-#~ "project by default instead of giving a **MAP** parameter (see :ref:`qgis-"
-#~ "server-envvar`)."
-#~ msgstr ""
-#~ "Onthoud dat u de omgevingsvariabele **PROJECT_FILE** kunt definiëren om een "
-#~ "standaardproject te gebruiken in plaats van een parameter **MAP** op te "
-#~ "geven (bekijk :ref:`qgis-server-envvar`)."
