@@ -7,7 +7,7 @@ within PostgreSQL.
 **The goal for this lesson:** To install spatial functions and briefly demo
 their effects.
 
-.. note:: We will assume the use of PostGIS version 2.1 in this exercise. The
+.. note:: We will assume the use of PostGIS version 2.1 or newer in this exercise. The
    installation and database configuration are different for older versions,
    but the rest of this material in this module will still work. Consult the
    documentation for your platform for help with installation and database
@@ -20,36 +20,34 @@ Postgis is easily installed from apt.
 
 .. code-block:: bash
 
+  $ sudo apt install postgresql
   $ sudo apt install postgis
-  $ sudo apt install postgresql-9.1-postgis
 
 Really, it's that easy...
 
-.. note:: Depending on which version of Ubuntu you are using, and which
-   repositories you have configured, these commands will install PostGIS 1.5,
-   or 2.x. You can find the version installed by issuing a ``select
+.. note:: The exact versions that will be installed depend on which version of Ubuntu you are using and which
+   repositories you have configured. After installing you can check the version by issuing a ``select
    PostGIS_full_version();`` query with psql or another tool.
 
-To install the absolute latest version of PostGIS, you can use the following
+To install a specific version (PostgreSQL verison 13 and PostGIS 3), you can use the following
 commands.
 
 .. code-block:: bash
 
-  $ sudo apt-add-repository ppa:sharpie/for-science
-  $ sudo apt-add-repository ppa:sharpie/postgis-nightly
-  $ sudo apt update
-  $ sudo apt install postgresql-9.1-postgis-nightly
+  $ sudo apt install wget ca-certificates
+  $ sudo lsb_release -a 
+  $ wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+  $ sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" >> /etc/apt/sources.list.d/pgdg.list'
+  $ sudo apt-get update
+  $ sudo apt install postgis postgresql-13-postgis-3
 
 
 Installing under Windows
 -------------------------------------------------------------------------------
 
-Installing on Windows is a little more complicated, but still not hard. Note
-that you need to be online to install the postgis stack.
+Installing on Windows can be done from binary packages using a normal Windows installation dialogs. 
 
-First Visit `the download page <https://www.postgresql.org/download/>`_.
-
-Then follow `this guide
+First Visit `the download page <https://www.postgresql.org/download/>`_. Then follow `this guide
 <https://www.bostongis.com/PrinterFriendly.aspx?content_name=postgis_tut01>`_.
 
 More information about installing on Windows can be found on the `PostGIS
@@ -59,7 +57,7 @@ Installing on Other Platforms
 -------------------------------------------------------------------------------
 
 The `PostGIS website download <https://postgis.net/install/>`_ has information about
-installing on other platforms including macOS and on other linux distributions
+installing on other platforms including macOS and on other Linux distributions
 
 Configuring Databases to use PostGIS
 -------------------------------------------------------------------------------
