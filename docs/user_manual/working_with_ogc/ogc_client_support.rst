@@ -723,8 +723,6 @@ features and view the attribute table.
    :width: 1.5em
 .. |addWmsLayer| image:: /static/common/mActionAddWmsLayer.png
    :width: 1.5em
-.. |browserExpand| image:: /static/common/browser_expand.png
-   :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png

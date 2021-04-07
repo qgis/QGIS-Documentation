@@ -822,7 +822,7 @@ menu and the layers' contextual menu in the :guilabel:`Layers` panel.
      - |checkbox|
      - |checkbox|
      - |checkbox|
-   * - |zoomFull|
+   * - |zoomFullExtent|
      - Zoom Full
      - Zoom to the extent of all the layers in the project.
      - |checkbox|
@@ -840,7 +840,7 @@ menu and the layers' contextual menu in the :guilabel:`Layers` panel.
      - |checkbox|
      - |checkbox|
      -
-   * - |zoomToNativeResolution|
+   * - |zoomActual|
      - Zoom to Native Resolution
      - Zoom the map to a level where one pixel of the active raster layer covers
        one screen pixel.
@@ -2779,21 +2779,19 @@ The values presented in the varying size assistant above will set the size
    :width: 1.3em
 .. |zoomActual| image:: /static/common/mActionZoomActual.png
    :width: 1.5em
+.. |zoomFullExtent| image:: /static/common/mActionZoomFullExtent.png
+   :width: 1.5em
 .. |zoomIn| image:: /static/common/mActionZoomIn.png
-   :width: 1.5em
-.. |zoomOut| image:: /static/common/mActionZoomOut.png
-   :width: 1.5em
-.. |zoomToBookmark| image:: /static/common/mActionZoomToBookmark.png
-   :width: 1.5em
-.. |zoomFull| image:: /static/common/mActionZoomFullExtent.png
    :width: 1.5em
 .. |zoomLast| image:: /static/common/mActionZoomLast.png
    :width: 1.5em
 .. |zoomNext| image:: /static/common/mActionZoomNext.png
    :width: 1.5em
-.. |zoomToLayer| image:: /static/common/mActionZoomToLayer.png
+.. |zoomOut| image:: /static/common/mActionZoomOut.png
    :width: 1.5em
-.. |zoomToNativeResolution| image:: /static/common/mActionZoomActual.png
+.. |zoomToBookmark| image:: /static/common/mActionZoomToBookmark.png
+   :width: 1.5em
+.. |zoomToLayer| image:: /static/common/mActionZoomToLayer.png
    :width: 1.5em
 .. |zoomToSelected| image:: /static/common/mActionZoomToSelected.png
    :width: 1.5em
