@@ -392,8 +392,6 @@ be useful.
 .. |saveEdits| image:: /static/common/mActionSaveEdits.png
    :width: 1.5em
 .. |schoolAreaType1| replace:: athletics field
-.. |selectRectangle| image:: /static/common/mActionSelectRectangle.png
-   :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
 .. |undo| image:: /static/common/mActionUndo.png

@@ -786,10 +786,6 @@ Under :guilabel:`Feature options`:
    :width: 1.5em
 .. |paintEffects| image:: /static/common/mIconPaintEffects.png
    :width: 1.5em
-.. |radioButtonOff| image:: /static/common/radiobuttonoff.png
-   :width: 1.5em
-.. |radioButtonOn| image:: /static/common/radiobuttonon.png
-   :width: 1.5em
 .. |render| image:: /static/common/render.png
    :width: 1.5em
 .. |signPlus| image:: /static/common/symbologyAdd.png
