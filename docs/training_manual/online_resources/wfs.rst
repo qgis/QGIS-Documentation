@@ -173,8 +173,6 @@ Next, you'll see how to use QGIS Server to provide OGC services.
 .. |IC| replace:: In Conclusion
 .. |LS| replace:: Lesson:
 .. |WN| replace:: What's Next?
-.. |addWfsLayer| image:: /static/common/mActionAddWfsLayer.png
-   :width: 1.5em
 .. |basic| image:: /static/common/basic.png
 .. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
    :width: 1.5em

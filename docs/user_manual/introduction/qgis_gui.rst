@@ -2700,8 +2700,6 @@ Click the icon to open the Plugin Manager dialog.
    :width: 1.5em
 .. |3dNavigation| image:: /static/common/mAction3DNavigation.png
    :width: 1.3em
-.. |addAfsLayer| image:: /static/common/mActionAddAfsLayer.png
-   :width: 1.5em
 .. |addAllToOverview| image:: /static/common/mActionAddAllToOverview.png
    :width: 1.5em
 .. |addAmsLayer| image:: /static/common/mActionAddAmsLayer.png
