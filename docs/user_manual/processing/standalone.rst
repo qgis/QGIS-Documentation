@@ -28,11 +28,11 @@ Specify the name of the algorithm or a path to a model as first parameter.
 
 The ``run`` command also supports further parameters.
 
- - ``--json`` will format stdout output in a JSON structured way.
- - ``--ellipsoid`` will set the ellipsoid to the specified one.
- - ``--distance_units`` will use the specified distance units.
- - ``--area_units`` will use the specified area units.
- - ``--project_path`` will load the specified project for running the algorithm.
+- ``--json`` will format stdout output in a JSON structured way.
+- ``--ellipsoid`` will set the ellipsoid to the specified one.
+- ``--distance_units`` will use the specified distance units.
+- ``--area_units`` will use the specified area units.
+- ``--project_path`` will load the specified project for running the algorithm.
 
 The command ``help`` can be used to get further information about commands or algorithms.
 
