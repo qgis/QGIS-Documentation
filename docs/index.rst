@@ -9,6 +9,12 @@ Documentation for QGIS |version|
       Expand the :guilabel:`QGIS Documentation` menu at the bottom of the
       sidebar to see the list.
 
+.. only:: testing
+
+  .. attention::  You are reading the testing version of this documentation,
+   an ongoing work which targets the latest changes in QGIS and may document
+   features not available or compatible with QGIS |CURRENT| Long Term Release.
+
 .. only:: not testing
 
   .. tip:: This is the documentation for the QGIS |version| Long Term Release.
@@ -95,3 +101,12 @@ Please have a look into one of the documents below.
    Developers Guide <developers_guide/index>
 
 * :ref:`genindex`
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |CURRENT| replace:: 3.16
