@@ -16,17 +16,17 @@ Installing QtCreator
 =====================
 
 Qt Creator is available on all major platforms and can be downloaded from
-https://www.qt.io/download (Go the open source route). Installation
-procedure follows the platform's.
+https://www.qt.io/download (Go the open source route).
+The installation procedure depends on your platform.
 
-If you are running a Unix-like platform, you can also install with command line,
-following your platform flavour, eg on Debian system: 
+If you are running a Unix-like platform, you can use the command line,
+eg on Debian:
 
 .. code-block:: bash
 
   sudo apt install qtcreator qtcreator-doc
 
-After installing you should find it in your menu. XXX
+After installing you should find it in your menu.
 
 
 Setting up your project
@@ -35,13 +35,13 @@ Setting up your project
 We assume you have already got a local QGIS clone containing the
 source code, and have installed all needed build dependencies etc. There are
 detailed instructions for :ref:`git access <git_access>` and `dependency installation
-<https://github.com/qgis/QGIS/blob/master/INSTALL.md>`_.
+<https://htmlpreview.github.io/?https://github.com/qgis/QGIS/blob/master/doc/INSTALL.html>`_.
 
 On our system we have checked out the code into ``$HOME/dev/cpp/QGIS`` and the
 rest of the article is written assuming that. You should update these paths as
 appropriate for your local system.
 
-On launching QtCreator do :menuselection:`File --> Open File or Project`
+After launching QtCreator do :menuselection:`File --> Open File or Project`
 
 Then use the resulting file selection dialog to browse to and open this file:
 
@@ -54,14 +54,14 @@ Then use the resulting file selection dialog to browse to and open this file:
 QtCreator will parse the project and you will be prompted for a build location
 and options in the :guilabel:`Configure Project` dialog.
 
-Since we want QGIS to have debugging capabilities then we'll enable only the
+Since we want QGIS to have debugging capabilities we will only enable the
 debug entry and fill it with our build location:
 
 #. Check |checkbox| :guilabel:`Select all kits` enabling the :guilabel:`Desktop`
    entry
-#. Uncheck all but |checkbox| :guilabel:`Debug` sub item
+#. Uncheck all but the |checkbox| :guilabel:`Debug` sub item
 #. Fill the path with the build directory. For our purpose, we create a
-   specific build dir for QtCreator to work in under:
+   specific build dir for QtCreator:
 
    .. code-block:: bash
 
@@ -80,7 +80,7 @@ do some other housekeeping stuff in the background.
 .. image:: img/configurationDone.png
    :width: 100%
 
-We want to tweak a few things before we start to build though.
+We want to tweak a few things before we start to build.
 
 
 Setting up your build environment
@@ -106,8 +106,8 @@ you may want to enable more features such as:
 Press :guilabel:`Apply Configuration Changes`.
 
 By default, Qt Creator uses all the CPU cores available to speed the build with
-maximum parallelization. To avoid your computer freeze, you'd better specify a
-lesser number of cores. Under the :guilabel:`Build Steps` section:
+maximum parallelization. To avoid that your computer freezes, you should specify a
+smaller number of cores. Under the :guilabel:`Build Steps` section:
 
 #. Press the :menuselection:`Add build step -->` menu and select
    :guilabel:`Custom Process Step`
@@ -121,7 +121,7 @@ lesser number of cores. Under the :guilabel:`Build Steps` section:
 
 .. note::
 
-  Also, if you want to speed your build times, you can do it with ``ninja``, an
+  Also, if you want to reduce your build times, you can do it with ``ninja``, an
   alternative to ``make`` with similar build options. You'd need to set it as
   the :guilabel:`CMake generator`:
   
@@ -129,12 +129,12 @@ lesser number of cores. Under the :guilabel:`Build Steps` section:
   #. Select the :guilabel:`Desktop (default)` kit entry, displaying its properties
   #. Press :guilabel:`Change...` next to :guilabel:`CMake generator`
 
-You are now ready to build. Press the |build| :sup:`Build` icon at the left
+You are now ready to build. Press the |build| :sup:`Build` button at the left
 bottom of the dialog (or :kbd:`Ctrl+B`) to launch the project build! Qt Creator
-will begin compiling and this may be long the first time, depending on your
+will begin compiling and this may take some time the first time, depending on your
 device.
 
-At the end of the compilation, you can run QGIS pressing the |runInstall|
+At the end of the compilation, you can run QGIS by pressing the |runInstall|
 :sup:`Run` button.
 
 The compilation of QGIS also generates binaries in the build directory.
@@ -145,7 +145,7 @@ Hence you can execute QGIS from the command line using:
  cd $HOME/dev/cpp/QGIS/build-master-qtcreator
  output/bin/qgis
 
-Sometimes you may want to install QGIS as an executable, out of the build
+Sometimes you may want to install QGIS as an executable, outside the build
 directory.
 
 #. If you do not have root access or do not want to overwrite existing QGIS
