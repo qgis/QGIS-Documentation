@@ -209,18 +209,12 @@ be tested by developers and users.
 
 .. _submit_patch:
 
-Submitting Patches and Pull Requests
-====================================
-
+Submitting Pull Requests
+========================
 
 There are a few guidelines that will help you to get your patches and pull
 requests into QGIS easily, and help us deal with the patches that are sent to
 use easily.
-
-
-Pull Requests
---------------
-
 
 In general it is easier for developers if you submit GitHub pull
 requests. We do not describe Pull Requests here, but rather refer you to the
@@ -234,15 +228,18 @@ If you are a developer and wish to evaluate the pull request queue, there is a
 very nice `tool that lets you do this from the command line
 <https://changelog.com/posts/git-pulls-command-line-tool-for-github-pull-requests>`_
 
-Please see the section below on 'getting your patch noticed'. In general when
-you submit a PR you should take the responsibility to follow it through to
-completion - respond to queries posted by other developers, seek out a
+In general when you submit a PR you should take the responsibility to follow it
+through to completion - respond to queries posted by other developers, seek out a
 'champion' for your feature and give them a gentle reminder occasionally if you
 see that your PR is not being acted on. Please bear in mind that the QGIS
 project is driven by volunteer effort and people may not be able to attend to
-your PR instantaneously. If you feel the PR is not receiving the attention it
+your PR instantaneously. We do scan the incoming pull requests
+but sometimes we miss things. Don't be offended or alarmed. Try to identify a
+developer to help you and contact them asking them if they can look at your patch.
+If you feel the PR is not receiving the attention it
 deserves your options to accelerate it should be (in order of priority):
 
+* Help review others pull requests to free the person assigned to yours.
 * Send a message to the mailing list 'marketing' your PR and how wonderful it
   will be to have it included in the code base.
 * Send a message to the person your PR has been assigned to in the PR queue.
@@ -252,14 +249,13 @@ deserves your options to accelerate it should be (in order of priority):
 
 
 Best practice for creating a pull request
-..........................................
-
+-----------------------------------------
 
 * Always start a feature branch from current master.
 * If you are coding a feature branch, don't "merge" anything into that branch,
   rather rebase as described in the next point to keep your history clean.
-* Before you create a pull request do ``git fetch origin`` and ``git rebase origin/master``
-  (given origin is the remote for upstream   and not your own remote, check your
+* Before you create a pull request do ``git fetch upstream`` and ``git rebase upstream/master``
+  (given upstream is the remote for qgis user and not your own remote, check your
   ``.git/config`` or do ``git remote -v | grep github.com/qgis``).
 
 * You may do a git rebase like in the last line repeatedly without doing any
@@ -268,12 +264,17 @@ Best practice for creating a pull request
 * Attention: After a rebase you need to ``git push -f`` to your forked repo. 
   **CORE DEVS: DO NOT DO THIS ON THE QGIS PUBLIC REPOSITORY!**
 
-Special labels to notify documentors
-.....................................
 
-Besides common tags you can add to classify your PR, there are special ones
-you can use to automatically generate issue reports in QGIS-Documentation
-repository as soon as your pull request is merged:
+Special labels to notify documentors
+------------------------------------
+
+There is a special label (``Needs Documentation``) that can be assigned by reviewers
+to your pull request to automatically generate issue reports in QGIS-Documentation
+repository as soon as your pull request is merged. Remember to mention whether your
+feature deserves such a label.
+
+Moreover, you can add special tags to your commit messages to provide more information
+to documenters. The commit message is then added to the generated issue report:
   
 * ``[needs-docs]`` to instruct doc writers to please add some extra documentation
   after a fix or addition to an already existing functionality.
@@ -283,68 +284,6 @@ repository as soon as your pull request is merged:
 Please devs use these labels (case insensitive) so doc writers have issues to
 work on and have an overview of things to do. BUT please also take time to add
 some text: either in the commit OR in the docs itself.
-
-For merging a pull request
-...........................
-
-Option A:
-
-* click the merge button (Creates a non-fast-forward merge)
-
-Option B:
-
-* `Checkout the pull request <https://gist.github.com/piscisaureus/3342247>`_
-* Test (Also required for option A, obviously)
-* checkout master, git merge pr/1234
-* Optional: ``git pull --rebase``: Creates a fast-forward, no "merge commit" is
-  made. Cleaner history, but it is harder to revert the merge.
-* ``git push`` (NEVER EVER use the -f option here)
-
-
-Patch file naming
-==================
-
-If the patch is a fix for a specific bug, please name the file with the bug
-number in it e.g. bug777fix.patch, and attach it to the `original bug report in
-GitHub <https://github.com/qgis/QGIS/issues>`_.
-
-If the bug is an enhancement or new feature, it's usually a good idea to create
-a `ticket in GitHub <https://github.com/qgis/QGIS/issues>`_
-first and then attach your patch.
-
-
-Create your patch in the top level QGIS source dir
-===================================================
-
-This makes it easier for us to apply the patches since we don't need to
-navigate to a specific place in the source tree to apply the patch. Also when I
-receive patches I usually evaluate them using merge, and having the patch
-from the top level dir makes this much easier. Below is an example of how you
-can include multiple changed files into your patch from the top level
-directory:
-
-.. code-block:: bash
-
-  cd QGIS
-  git checkout master
-  git pull origin master
-  git checkout newfeature
-  git format-patch master --stdout > bug777fix.patch
-
-This will make sure your master branch is in sync with the upstream repository,
-and then generate a patch which contains the delta between your feature branch
-and what is in the master branch.
-
-
-Getting your patch noticed
----------------------------
-
-QGIS developers are busy folk. We do scan the incoming patches on bug reports
-but sometimes we miss things. Don't be offended or alarmed. Try to identify a
-developer to help you and contact them
-asking them if they can look at your patch. If you don't get any response, you
-can escalate your query to one of the Project Steering Committee members
-(contact details also available in the Technical Resources).
 
 
 Due Diligence
