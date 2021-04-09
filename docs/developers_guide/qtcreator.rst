@@ -100,7 +100,6 @@ configuration should be enough for a first pass, depending on your needs,
 you may want to enable more features such as:
 
 * **WITH_3D = ON** for 3D rendering
-* **WITH_ASTYLE = ON** to use QGIS custom reindent scripts
 * **WITH_CUSTOM_WIDGETS = ON** to add QGIS custom widgets for interface design
 
 Press :guilabel:`Apply Configuration Changes`.
@@ -143,14 +142,14 @@ Hence you can execute QGIS from the command line using:
 .. code-block:: bash
 
  cd $HOME/dev/cpp/QGIS/build-master-qtcreator
- output/bin/qgis
+ ./output/bin/qgis
 
 Sometimes you may want to install QGIS as an executable, outside the build
 directory.
 
-#. If you do not have root access or do not want to overwrite existing QGIS
-   installs (by your package manager for example), set the ``CMAKE_INSTALL_PREFIX``
-   to somewhere you have write access to (we use :file:`${HOME}/apps`).
+#. Set the ``CMAKE_INSTALL_PREFIX`` to somewhere you have write access to
+   (we use :file:`${HOME}/apps`). This would avoid overwriting an existing QGIS
+   installs (by your package manager for example).
 
    .. image:: img/customInstallPrefix.png
 
