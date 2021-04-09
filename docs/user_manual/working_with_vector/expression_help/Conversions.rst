@@ -137,7 +137,7 @@ Encodes a binary value into a string, using the Base64 encoding.
 to_date
 .......
 
-Converts a string into a date object. An optional format string can be provided to parse the string; see `QDate::fromString <https://doc.qt.io/qt-5/qdate.html#fromString-2>`_ for additional documentation on the format.
+Converts a string into a date object. An optional format string can be provided to parse the string; see `QDate::fromString <https://doc.qt.io/qt-5/qdate.html#fromString-2>`_ or the documentation of the format_date function for additional documentation on the format. By default the current QGIS user locale is used.
 
 .. list-table::
    :widths: 15 85
@@ -149,10 +149,10 @@ Converts a string into a date object. An optional format string can be provided 
    * - Arguments
      - * **string** - string representing a date value
        * **format** - format used to convert the string into a date
-       * **language** - language (lowercase, two- or three-letter, ISO 639 language code) used to convert the string into a date
+       * **language** - language (lowercase, two- or three-letter, ISO 639 language code) used to convert the string into a date. By default the current QGIS user locale is used.
    * - Examples
      - * ``to_date('2012-05-04')`` → 2012-05-04
-       * ``to_date('June 29, 2019','MMMM d, yyyy')`` → 2019-06-29
+       * ``to_date('June 29, 2019','MMMM d, yyyy')`` → 2019-06-29, if the current locale uses the name 'June' for the sixth month, otherwise an error occurs
        * ``to_date('29 juin, 2019','d MMMM, yyyy','fr')`` → 2019-06-29
 
 
@@ -165,7 +165,7 @@ Converts a string into a date object. An optional format string can be provided 
 to_datetime
 ...........
 
-Converts a string into a datetime object. An optional format string can be provided to parse the string; see `QDate::fromString <https://doc.qt.io/qt-5/qdate.html#fromString-2>`_ and `QTime::fromString <https://doc.qt.io/qt-5/qtime.html#fromString-1>`_ for additional documentation on the format.
+Converts a string into a datetime object. An optional format string can be provided to parse the string; see `QDate::fromString <https://doc.qt.io/qt-5/qdate.html#fromString-2>`_, `QTime::fromString <https://doc.qt.io/qt-5/qtime.html#fromString-1>`_ or the documentation of the format_date function for additional documentation on the format. By default the current QGIS user locale is used.
 
 .. list-table::
    :widths: 15 85
@@ -177,10 +177,10 @@ Converts a string into a datetime object. An optional format string can be provi
    * - Arguments
      - * **string** - string representing a datetime value
        * **format** - format used to convert the string into a datetime
-       * **language** - language (lowercase, two- or three-letter, ISO 639 language code) used to convert the string into a datetime
+       * **language** - language (lowercase, two- or three-letter, ISO 639 language code) used to convert the string into a datetime. By default the current QGIS user locale is used.
    * - Examples
      - * ``to_datetime('2012-05-04 12:50:00')`` → 2012-05-04T12:50:00
-       * ``to_datetime('June 29, 2019 @ 12:34','MMMM d, yyyy @ HH:mm')`` → 2019-06-29T12:34
+       * ``to_datetime('June 29, 2019 @ 12:34','MMMM d, yyyy @ HH:mm')`` → 2019-06-29T12:34, if the current locale uses the name 'June' for the sixth month, otherwise an error occurs
        * ``to_datetime('29 juin, 2019 @ 12:34','d MMMM, yyyy @ HH:mm','fr')`` → 2019-06-29T12:34
 
 
