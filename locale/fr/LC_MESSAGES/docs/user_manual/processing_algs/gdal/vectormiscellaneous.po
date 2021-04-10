@@ -1,26 +1,27 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
-# MarieSilvestre, 2020
-# Francis Gasc <francisgasc@gmail.com>, 2020
-# Sant-anna <delazj@gmail.com>, 2020
+# Harrissou Sant-anna, 2020
+# MarieSilvestre, 2021
+# Francis Gasc <francisgasc@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:28+0000\n"
-"Last-Translator: Sant-anna <delazj@gmail.com>, 2020\n"
+"POT-Creation-Date: 2020-12-13 09:01+0100\n"
+"PO-Revision-Date: 2020-12-24 10:27+0000\n"
+"Last-Translator: Francis Gasc <francisgasc@gmail.com>, 2021\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
 "Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
@@ -29,278 +30,235 @@ msgid "Vector miscellaneous"
 msgstr "Divers vecteur"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:14
-msgid "Execute SQL"
-msgstr "Exécuter SQL"
+msgid "Build virtual vector"
+msgstr "Construire un vecteur virtuel"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:16
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:15
 msgid ""
-"Runs a simple or complex query with SQL syntax on the source layer. The "
-"result of the query will be added as a new layer."
+"Creates a virtual vector layer that contains a set of vector layers. The "
+"output virtual vector layer will not be opened in the current project."
 msgstr ""
-"Exécute une requête simple ou complexe avec la syntaxe SQL sur la couche "
-"source. Le résultat de la requête sera ajouté en tant que nouvelle couche."
+"Crée une couche vectorielle virtuelle qui contient un ensemble de couches "
+"vectorielles. Le calque vectoriel virtuel créé ne sera pas ouvert dans le "
+"projet actuel."
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:19
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:116
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:414
 msgid ""
-"This algorithm is derived from the `GDAL ogr2ogr utility "
-"<https://gdal.org/ogr2ogr.html>`_."
+"This algorithm is especially useful in case another algorithm needs multiple"
+" layers but accept only one ``vrt`` in which the layers are specified."
 msgstr ""
-"Cet algorithme est dérivé de l'utilitaire `GDAL ogr2ogr "
-"<https://gdal.org/ogr2ogr.html>`_."
+"Cet algorithme est particulièrement utile dans le cas où un autre algorithme"
+" a besoin de plusieurs couches mais n'accepte qu'un seul ``vrt`` dans lequel"
+" les couches sont spécifiées."
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:23
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:120
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:418
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:764
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:24
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:97
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:194
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:492
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:838
 msgid "Parameters"
 msgstr "Paramètres"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:30
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:84
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:127
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:425
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:771
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:817
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:66
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:104
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:158
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:201
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:499
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:845
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:891
 msgid "Label"
 msgstr "Étiquette"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:31
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:85
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:128
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:426
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:772
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:818
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:67
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:105
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:159
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:202
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:500
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:846
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:892
 msgid "Name"
 msgstr "Nom"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:32
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:86
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:129
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:427
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:773
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:819
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:68
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:106
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:160
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:203
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:501
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:847
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:893
 msgid "Type"
 msgstr "Type"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:33
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:87
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:130
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:428
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:774
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:820
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:69
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:107
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:161
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:204
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:502
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:848
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:894
 msgid "Description"
 msgstr "Description"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:34
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:135
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:429
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:775
-msgid "**Input layer**"
-msgstr "**Couche source**"
+msgid "**Input datasources**"
+msgstr "**Sources de données en entrée**"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:35
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:136
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:430
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:776
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:109
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:210
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:504
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:850
 msgid "``INPUT``"
 msgstr "``INPUT``"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:36
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:63
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:90
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:137
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:431
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:777
-msgid "[vector: any]"
-msgstr "[vector: any]"
+msgid "[vector: any] [list]"
+msgstr "[vector: any] [list]"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:37
-msgid "OGR-supported input vector layer"
-msgstr "Couche vectorielle d'entrée prise en charge par OGR"
-
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:38
-msgid "**SQL expression**"
-msgstr "**Expression SQL**"
+msgid "Select the vector layers you want to use to build the virtual vector"
+msgstr ""
+"Sélectionnez les couches vectorielles que vous souhaitez utiliser pour "
+"construire le vecteur virtuel."
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:39
-msgid "``SQL``"
-msgstr "``SQL``"
+msgid "**Create \"unioned\" VRT**"
+msgstr "**Créer un VRT uni **."
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:40
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:57
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:133
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:143
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:193
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:201
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:212
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:231
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:253
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:263
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:291
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:300
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:387
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:437
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:487
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:495
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:503
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:511
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:519
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:527
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:535
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:546
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:564
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:586
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:596
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:633
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:642
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:729
-msgid "[string]"
-msgstr "[string]"
+msgid "``UNIONED``"
+msgstr "``UNIONED``"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:41
-msgid ""
-"Defines the SQL query, for example ``SELECT * FROM my_table WHERE name is "
-"not null``."
-msgstr ""
-"Définit la requête SQL,  par exemple ``SELECT * FROM my_table WHERE name is "
-"not null``."
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:356
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:384
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:394
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:405
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:417
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:427
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:437
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:445
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:453
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:689
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:726
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:736
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:747
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:759
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:769
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:779
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:787
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:795
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:857
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:865
+msgid "[boolean]"
+msgstr "[boolean]"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:43
-msgid "**SQL dialect**"
-msgstr "**SQL dialect**"
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:358
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:396
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:407
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:419
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:429
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:439
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:691
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:738
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:749
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:761
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:771
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:781
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:867
+msgid "Default: False"
+msgstr "Defaut: False"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:44
-msgid "``DIALECT``"
-msgstr "``DIALECT``"
+msgid "Check if you want to unite all the vectors in a single ``vrt`` file"
+msgstr ""
+"Vérifiez si vous voulez unir tous les vecteurs dans un seul fichier ``vrt``."
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:45
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:149
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:240
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:443
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:573
-msgid "[enumeration]"
-msgstr "[enumeration]"
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:46
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:70
+msgid "**Virtual vector**"
+msgstr "**Vecteur virtuel**"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:47
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:151
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:445
-msgid "Default: 0"
-msgstr "Par defaut: 0"
-
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:48
-msgid "SQL dialect to use.  One of:"
-msgstr "Dialecte SQL à utiliser. Un des:"
-
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:50
-msgid "0 --- None"
-msgstr "0 --- Aucun"
-
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:51
-msgid "1 --- OGR SQL"
-msgstr "1 --- OGR SQL"
-
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:52
-msgid "2 --- SQLite"
-msgstr "2 --- SQLite"
-
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:53
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:383
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:725
-msgid "**Additional creation options**"
-msgstr "**Options de création supplémentaires**"
-
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:55
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:385
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:727
-msgid "(optional)"
-msgstr "(optional)"
-
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:56
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:386
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:728
-msgid "``OPTIONS``"
-msgstr "``OPTIONS``"
-
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:59
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:389
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:731
-msgid "Default: '' (no additional options)"
-msgstr "Defaut: '' (pas d'options supplémentaires)"
-
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:60
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:390
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:732
-msgid "Additional GDAL creation options."
-msgstr "Options de création GDAL supplémentaires."
-
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:61
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:88
-msgid "**SQL result**"
-msgstr "**Resultat SQL**"
-
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:62
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:89
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:796
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:823
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:71
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:136
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:163
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:870
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:897
 msgid "``OUTPUT``"
 msgstr "``OUTPUT``"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:64
-msgid "Specification of the output layer. One of:"
-msgstr "Spécification de la couche de sortie. Un des:"
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:48
+msgid "[same as input]"
+msgstr "[same as input]"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:67
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:803
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:50
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:873
+msgid "Default: ``[Save to temporary file]``"
+msgstr "Defaut: ``[Save to temporary file]``"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:51
+msgid "Specify the output layer containing only the duplicates. One of:"
+msgstr ""
+"Spécifiez la couche de sortie contenant uniquement les doublons. Une des "
+"options suivantes :"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:54
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:141
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:877
 msgid "Save to a Temporary File"
 msgstr "Enregistrer dans un fichier temporaire"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:68
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:804
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:55
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:142
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:878
 msgid "Save to File..."
 msgstr "Enregistrer dans un fichier ..."
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:70
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:57
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:144
 msgid "The file encoding can also be changed here."
 msgstr "L'encodage du fichier peut également être modifié ici."
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:72
-msgid ""
-"For ``Save to File``, the output format has to be specified. All GDAL vector"
-" formats are supported. For ``Save to a Temporary File`` the default output "
-"vector layer format will be used."
-msgstr ""
-"Pour `` Enregistrer dans un fichier '', le format de sortie doit être "
-"spécifié. Tous les formats vectoriels GDAL sont pris en charge. Pour `` "
-"Enregistrer dans un fichier temporaire '', le format de couche de vecteur de"
-" sortie par défaut sera utilisé."
-
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:78
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:393
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:735
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:812
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:60
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:152
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:467
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:809
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:886
 msgid "Outputs"
 msgstr "Les sorties"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:91
-msgid "Vector layer created by the query"
-msgstr "Couche vectorielle créée par la requête"
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:72
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:110
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:137
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:164
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:211
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:505
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:851
+msgid "[vector: any]"
+msgstr "[vector: any]"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:94
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:398
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:740
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:828
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:73
+msgid "The output virtual vector made from the chosen sources"
+msgstr "Le vecteur virtuel de sortie réalisé à partir des sources choisies"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:76
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:168
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:472
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:814
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:902
 msgid "Python code"
 msgstr "Code Python"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:96
-msgid "**Algorithm ID**: ``gdal:executesql``"
-msgstr "**Algorithm ID**: ``gdal:executesql``"
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:78
+msgid "**Algorithm ID**: ``gdal:buildvirtualvector``"
+msgstr "**ID de l'algorithme** : ``gdal:buildvirtualvector``"
 
-#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
-#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
-#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
 msgid ""
 "The *algorithm id* is displayed when you hover over the algorithm in the "
@@ -314,11 +272,243 @@ msgstr ""
 ":ref:`processing_console` pour plus de détails sur l'exécution d'algorithmes"
 " via la console Python."
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:106
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:88
+msgid "Execute SQL"
+msgstr "Exécuter SQL"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:90
+msgid ""
+"Runs a simple or complex query with SQL syntax on the source layer. The "
+"result of the query will be added as a new layer."
+msgstr ""
+"Exécute une requête simple ou complexe avec la syntaxe SQL sur la couche "
+"source. Le résultat de la requête sera ajouté en tant que nouvelle couche."
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:93
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:190
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:488
+msgid ""
+"This algorithm is derived from the `GDAL ogr2ogr utility "
+"<https://gdal.org/programs/ogr2ogr.html>`_."
+msgstr ""
+"Cet algorithme est dérivé de l'utilitaire `GDAL ogr2ogr "
+"<https://gdal.org/programs/ogr2ogr.html>`_."
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:108
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:209
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:503
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:849
+msgid "**Input layer**"
+msgstr "**Couche source**"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:111
+msgid "OGR-supported input vector layer"
+msgstr "Couche vectorielle d'entrée prise en charge par OGR"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:112
+msgid "**SQL expression**"
+msgstr "**Expression SQL**"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:113
+msgid "``SQL``"
+msgstr "``SQL``"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:114
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:131
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:207
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:217
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:267
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:275
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:286
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:305
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:327
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:337
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:365
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:374
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:461
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:511
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:561
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:569
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:577
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:585
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:593
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:601
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:609
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:620
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:638
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:660
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:670
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:707
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:716
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:803
+msgid "[string]"
+msgstr "[string]"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:115
+msgid ""
+"Defines the SQL query, for example ``SELECT * FROM my_table WHERE name is "
+"not null``."
+msgstr ""
+"Définit la requête SQL,  par exemple ``SELECT * FROM my_table WHERE name is "
+"not null``."
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:117
+msgid "**SQL dialect**"
+msgstr "**SQL dialect**"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:118
+msgid "``DIALECT``"
+msgstr "``DIALECT``"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:119
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:223
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:314
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:517
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:647
+msgid "[enumeration]"
+msgstr "[enumeration]"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:121
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:225
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:519
+msgid "Default: 0"
+msgstr "Par defaut: 0"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:122
+msgid "SQL dialect to use.  One of:"
+msgstr "Dialecte SQL à utiliser. Un des:"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:124
+msgid "0 --- None"
+msgstr "0 --- Aucun"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:125
+msgid "1 --- OGR SQL"
+msgstr "1 --- OGR SQL"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:126
+msgid "2 --- SQLite"
+msgstr "2 --- SQLite"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:127
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:457
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:799
+msgid "**Additional creation options**"
+msgstr "**Options de création supplémentaires**"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:129
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:215
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:241
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:249
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:257
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:265
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:273
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:284
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:294
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:303
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:312
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:325
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:335
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:345
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:354
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:363
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:372
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:382
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:392
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:403
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:415
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:425
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:435
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:443
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:451
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:459
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:509
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:535
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:543
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:551
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:559
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:567
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:575
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:583
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:591
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:599
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:607
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:618
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:627
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:636
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:645
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:658
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:668
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:678
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:687
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:696
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:705
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:714
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:724
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:734
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:745
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:757
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:767
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:777
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:785
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:793
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:801
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:855
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:863
+msgid "Optional"
+msgstr "Optionnel"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:130
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:460
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:802
+msgid "``OPTIONS``"
+msgstr "``OPTIONS``"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:133
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:463
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:805
+msgid "Default: '' (no additional options)"
+msgstr "Defaut: '' (pas d'options supplémentaires)"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:134
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:464
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:806
+msgid "Additional GDAL creation options."
+msgstr "Options de création GDAL supplémentaires."
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:135
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:162
+msgid "**SQL result**"
+msgstr "**Resultat SQL**"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:138
+msgid "Specification of the output layer. One of:"
+msgstr "Spécification de la couche de sortie. Un des:"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:146
+msgid ""
+"For ``Save to File``, the output format has to be specified. All GDAL vector"
+" formats are supported. For ``Save to a Temporary File`` the default output "
+"vector layer format will be used."
+msgstr ""
+"Pour `` Enregistrer dans un fichier '', le format de sortie doit être "
+"spécifié. Tous les formats vectoriels GDAL sont pris en charge. Pour `` "
+"Enregistrer dans un fichier temporaire '', le format de couche de vecteur de"
+" sortie par défaut sera utilisé."
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:165
+msgid "Vector layer created by the query"
+msgstr "Couche vectorielle créée par la requête"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:170
+msgid "**Algorithm ID**: ``gdal:executesql``"
+msgstr "**ID de l'algorithme** :``gdal:executesql``"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:180
 msgid "Export to PostgreSQL (available connections)"
 msgstr "Exporter vers PostgreSQL (connexions disponibles)"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:107
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:181
 msgid ""
 "Imports vector layers inside a PostgreSqL database on the basis of an "
 "available connection. The connection has to :ref:`be defined properly "
@@ -332,282 +522,223 @@ msgstr ""
 "que les cases à cocher «Enregistrer le nom d'utilisateur» et «Enregistrer le"
 " mot de passe» sont activées. Ensuite, vous pouvez utiliser l'algorithme."
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:131
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:205
 msgid "**Database (connection name)**"
 msgstr "**Database (connection name)**"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:132
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:206
 msgid "``DATABASE``"
 msgstr "``DATABASE``"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:134
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:208
 msgid "The PostgreSQL database to connect to"
 msgstr "La base de données PostgreSQL à laquelle se connecter"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:138
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:432
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:212
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:506
 msgid "OGR-supported vector layer to export to the database"
 msgstr ""
 "Couche vectorielle prise en charge par OGR à exporter vers la base de "
 "données"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:139
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:433
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:213
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:507
 msgid "**Shape encoding**"
 msgstr "**Shape encoding**"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:141
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:167
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:175
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:183
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:191
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:199
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:210
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:220
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:229
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:238
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:251
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:261
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:271
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:280
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:289
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:298
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:308
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:318
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:329
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:341
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:351
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:361
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:369
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:377
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:435
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:461
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:469
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:477
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:485
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:493
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:501
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:509
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:517
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:525
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:533
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:544
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:553
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:562
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:571
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:584
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:594
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:604
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:613
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:622
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:631
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:640
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:650
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:660
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:671
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:683
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:693
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:703
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:711
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:719
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:781
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:789
-msgid "Optional"
-msgstr "Optionnel"
-
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:142
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:436
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:216
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:510
 msgid "``SHAPE_ENCODING``"
 msgstr "``SHAPE_ENCODING``"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:145
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:203
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:255
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:265
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:293
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:302
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:439
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:505
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:219
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:277
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:329
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:339
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:367
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:376
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:513
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:521
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:537
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:588
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:598
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:635
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:644
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:579
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:587
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:595
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:611
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:662
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:672
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:709
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:718
 msgid "Default: ''"
 msgstr "Defaut: ''"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:146
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:440
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:220
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:514
 msgid "Sets the encoding to apply to the data"
 msgstr "Définit l'encodage à appliquer aux données"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:147
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:441
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:221
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:515
 msgid "**Output geometry type**"
 msgstr "**Type de géométrie en sortie**"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:148
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:442
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:222
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:516
 msgid "``GTYPE``"
 msgstr "``GTYPE``"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:152
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:446
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:226
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:520
 msgid "Defines the output geometry type. One of:"
 msgstr "Définit le type de géométrie en sortie. Un des:"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:154
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:448
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:228
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:522
 msgid "0 ---"
 msgstr "0 ---"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:155
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:449
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:229
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:523
 msgid "1 --- NONE"
 msgstr "1 --- NONE"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:156
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:450
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:230
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:524
 msgid "2 --- GEOMETRY"
 msgstr "2 --- GEOMETRY"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:157
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:451
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:231
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:525
 msgid "3 --- POINT"
 msgstr "3 --- POINT"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:158
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:452
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:232
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:526
 msgid "4 --- LINESTRING"
 msgstr "4 --- LINESTRING"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:159
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:453
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:233
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:527
 msgid "5 --- POLYGON"
 msgstr "5 --- POLYGON"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:160
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:454
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:234
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:528
 msgid "6 --- GEOMETRYCOLLECTION"
 msgstr "6 --- GEOMETRYCOLLECTION"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:161
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:455
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:235
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:529
 msgid "7 --- MULTIPOINT"
 msgstr "7 --- MULTIPOINT"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:162
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:456
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:236
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:530
 msgid "8 --- MULTIPOLYGON"
 msgstr "8 --- MULTIPOLYGON"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:163
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:457
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:237
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:531
 msgid "9 --- MULTILINESTRING"
 msgstr "9 --- MULTILINESTRING"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:165
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:459
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:239
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:533
 msgid "**Assign an output CRS**"
 msgstr "**Attribuer un SCR de sortie**"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:168
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:462
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:242
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:536
 msgid "``A_SRS``"
 msgstr "``A_SRS``"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:169
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:177
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:185
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:463
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:471
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:479
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:243
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:251
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:259
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:537
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:545
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:553
 msgid "[crs]"
 msgstr "[crs]"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:171
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:179
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:187
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:224
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:275
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:465
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:473
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:481
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:557
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:608
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:245
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:253
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:261
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:298
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:349
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:539
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:547
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:555
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:631
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:682
 msgid "Default: None"
 msgstr "Defaut: None"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:172
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:466
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:246
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:540
 msgid "Defines the output CRS of the database table"
 msgstr "Définit le SCR de sortie de la table de base de données"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:173
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:467
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:247
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:541
 msgid "**Reproject to this CRS on output**"
 msgstr "**Reprojeter dans ce SCR en sortie**"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:176
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:470
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:250
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:544
 msgid "``T_SRS``"
 msgstr "``T_SRS``"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:180
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:474
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:254
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:548
 msgid "Reprojects/transforms to this CRS on output"
 msgstr "Reprojete / transforme dans ce SCR en sortie"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:181
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:475
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:255
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:549
 msgid "**Override source CRS**"
 msgstr "**Remplacer le SCR de la source**"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:184
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:478
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:258
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:552
 msgid "``S_SRS``"
 msgstr "``S_SRS``"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:188
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:482
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:262
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:556
 msgid "Overrides the input layer CRS"
 msgstr "Remplace le SCR de la couche d'entrée"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:189
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:523
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:263
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:597
 msgid "**Schema (schema name)**"
 msgstr "**Schema (nom schema)**"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:192
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:526
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:266
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:600
 msgid "``SCHEMA``"
 msgstr "``SCHEMA``"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:195
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:529
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:269
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:603
 msgid "Default: 'public'"
 msgstr "Par defaut: 'public'"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:196
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:530
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:270
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:604
 msgid "Defines the schema for the database table"
 msgstr "Définit le schéma de la table de base de données"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:197
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:271
 msgid "**Table to export to (leave blank to use layer name)**"
 msgstr ""
 "**Table vers laquelle exporter (laisser vide pour utiliser le nom de la "
 "couche)**"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:200
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:534
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:274
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:608
 msgid "``TABLE``"
 msgstr "``TABLE``"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:204
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:538
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:278
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:612
 msgid ""
 "Defines a name for the table that will be imported into the database. By "
 "default the table name is the name of the input vector file."
@@ -615,49 +746,49 @@ msgstr ""
 "Définit un nom pour la table qui sera importée dans la base de données. Par "
 "défaut, le nom de la table est le nom du fichier vectoriel d'entrée."
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:208
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:542
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:282
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:616
 msgid "**Primary Key (new field)**"
 msgstr "**Clé primaire (nouveau champ)**"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:211
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:545
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:285
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:619
 msgid "``PK``"
 msgstr "``PK``"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:214
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:548
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:288
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:622
 msgid "Default: 'id'"
 msgstr "Defaut: 'id'"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:215
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:549
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:289
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:623
 msgid ""
 "Defines which attribute field will be the primary key of the database table"
 msgstr ""
 "Définit quel champ d'attribut sera la clé primaire de la table de base de "
 "données"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:217
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:551
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:291
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:625
 msgid ""
 "**Primary Key (existing field, used if the above option is left empty)**"
 msgstr ""
 "**Clé primaire (champ existant, utilisé si l'option ci-dessus est laissée "
 "vide)**"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:221
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:554
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:295
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:628
 msgid "``PRIMARY_KEY``"
 msgstr "``PRIMARY_KEY``"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:222
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:555
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:296
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:629
 msgid "[tablefield: any]"
 msgstr "[tablefield: any]"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:225
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:558
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:299
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:632
 msgid ""
 "Defines which attribute field in the exported layer will be the primary key "
 "of the database table"
@@ -665,22 +796,22 @@ msgstr ""
 "Définit quel champ d'attribut dans la couche exportée sera la clé primaire "
 "de la table de base de données"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:227
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:560
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:301
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:634
 msgid "**Geometry column name**"
 msgstr "**Nom de la colonne Geometry**"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:230
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:563
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:304
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:637
 msgid "``GEOCOLUMN``"
 msgstr "``GEOCOLUMN``"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:233
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:566
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:307
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:640
 msgid "Default: 'geom'"
 msgstr "Defaut: 'geom'"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:234
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:308
 msgid ""
 "Defines in which attribute field of the database there will be the geometry "
 "information"
@@ -688,47 +819,47 @@ msgstr ""
 "Définit dans quel champ d'attribut de la base de données il y aura les "
 "informations de géométrie"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:236
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:569
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:310
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:643
 msgid "**Vector dimensions**"
 msgstr "**Dimensions vectorielles**"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:239
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:572
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:313
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:646
 msgid "``DIM``"
 msgstr "``DIM``"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:242
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:575
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:316
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:649
 msgid "Default: 0 (2D)"
 msgstr "Defaut: 0 (2D)"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:243
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:576
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:317
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:650
 msgid "Defines if the vector file to be imported has 2D or 3D data. One of:"
 msgstr ""
 "Définit si le fichier vectoriel à importer contient des données 2D ou 3D. Un"
 " des:"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:246
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:320
 msgid "0 --- 2"
 msgstr "0 --- 2"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:247
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:321
 msgid "1 --- 3"
 msgstr "1 --- 3"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:249
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:582
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:323
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:656
 msgid "**Distance tolerance for simplification**"
 msgstr "**Tolérance de distance pour la simplification**"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:252
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:585
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:326
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:659
 msgid "``SIMPLIFY``"
 msgstr "``SIMPLIFY``"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:256
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:330
 msgid ""
 "Defines a distance tolerance for the simplification of the vector geometries"
 " to be imported. By default there is no simplification."
@@ -736,18 +867,18 @@ msgstr ""
 "Définit une tolérance de distance pour la simplification des géométries "
 "vectorielles à importer. Par défaut, il n'y a pas de simplification."
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:259
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:592
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:333
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:666
 msgid "**Maximum distance between 2 nodes (densification)**"
 msgstr "**Distance maximale entre 2 nœuds (densification)**"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:262
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:595
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:336
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:669
 msgid "``SEGMENTIZE``"
 msgstr "``SEGMENTIZE``"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:266
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:599
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:340
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:673
 msgid ""
 "The maximum distance between two nodes. Used to create intermediate points. "
 "By default there is no densification."
@@ -755,25 +886,25 @@ msgstr ""
 "La distance maximale entre deux nœuds. Utilisé pour créer des points "
 "intermédiaires. Par défaut, il n'y a pas de densification."
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:269
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:602
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:343
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:676
 msgid "**Select features by extent (defined in input layer CRS)**"
 msgstr ""
 "**Sélectionner des entités par étendue (définie dans le SCR de la couche "
 "d'entrée)**"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:272
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:605
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:346
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:679
 msgid "``SPAT``"
 msgstr "``SPAT``"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:273
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:606
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:347
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:680
 msgid "[extent]"
 msgstr "[extent]"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:276
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:609
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:350
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:683
 msgid ""
 "You can select features from a given extent that will be in the output "
 "table."
@@ -781,74 +912,35 @@ msgstr ""
 "Vous pouvez sélectionner des entités d'une étendue donnée qui figureront "
 "dans le tableau de sortie."
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:278
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:611
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:352
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:685
 msgid "**Clip the input layer using the above (rectangle) extent**"
 msgstr ""
 "**Coupez la couche d'entrée en utilisant l'étendue ci-dessus (rectangle)**"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:281
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:614
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:355
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:688
 msgid "``CLIP``"
 msgstr "``CLIP``"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:282
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:310
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:320
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:331
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:343
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:353
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:363
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:371
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:379
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:615
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:652
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:662
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:673
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:685
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:695
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:705
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:713
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:721
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:783
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:791
-msgid "[boolean]"
-msgstr "[boolean]"
-
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:284
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:322
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:333
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:345
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:355
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:365
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:617
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:664
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:675
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:687
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:697
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:707
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:793
-msgid "Default: False"
-msgstr "Defaut: False"
-
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:285
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:618
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:359
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:692
 msgid "The input layer will be clipped by the extent you defined before"
 msgstr ""
 "La couche d'entrée sera découpée selon l'étendue que vous avez définie "
 "auparavant"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:287
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:629
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:361
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:703
 msgid "**Select features using a SQL \"WHERE\" statement (Ex: column=\"value\")**"
 msgstr "**Select features using a SQL \"WHERE\" statement (Ex: column=\"value\")**"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:290
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:632
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:364
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:706
 msgid "``WHERE``"
 msgstr "``WHERE``"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:294
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:368
 msgid ""
 "Defines with a SQL \"WHERE\" statement which features should be selected "
 "from the input layer"
@@ -856,18 +948,18 @@ msgstr ""
 "Définit avec une instruction SQL \"WHERE\" quelles entités doivent être "
 "sélectionnées dans la couche d'entrée"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:296
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:638
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:370
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:712
 msgid "**Group N features per transaction (Default: 2000)**"
 msgstr "**Entités du groupe N par transaction (par défaut: 2000)**"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:299
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:641
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:373
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:715
 msgid "``GT``"
 msgstr "``GT``"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:303
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:645
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:377
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:719
 msgid ""
 "You can group the input features in transactions where N defines the size. "
 "By default N limits the transaction size to 20000 features."
@@ -876,28 +968,28 @@ msgstr ""
 "définit la taille. Par défaut, N limite la taille de la transaction à 20000 "
 "entites"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:306
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:648
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:380
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:722
 msgid "**Overwrite existing table**"
 msgstr "**Remplacer la table existante**"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:309
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:651
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:383
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:725
 msgid "``OVERWRITE``"
 msgstr "``OVERWRITE``"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:312
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:373
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:381
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:654
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:715
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:723
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:785
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:386
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:447
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:455
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:728
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:789
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:797
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:859
 msgid "Default: True"
 msgstr "Defaut: True"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:313
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:655
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:387
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:729
 msgid ""
 "If there is a table with the same name in the database, and if this option "
 "is set to True, the table will be overwritten."
@@ -905,18 +997,18 @@ msgstr ""
 "S'il existe une table du même nom dans la base de données et si cette option"
 " est définie sur True, la table sera remplacée."
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:316
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:658
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:390
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:732
 msgid "**Append to existing table**"
 msgstr "**Ajouter à la table existante**"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:319
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:661
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:393
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:735
 msgid "``APPEND``"
 msgstr "``APPEND``"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:323
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:665
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:397
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:739
 msgid ""
 "If checked / True the vector data will be appended to an existing table. New"
 " fields found in the input layer are ignored. By default a new table will be"
@@ -926,17 +1018,17 @@ msgstr ""
 "existante. Les nouveaux champs trouvés dans la couche d'entrée sont ignorés."
 " Par défaut, une nouvelle table sera créée."
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:327
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:669
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:401
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:743
 msgid "**Append and add new fields to existing table**"
 msgstr "**Charger et ajouter de nouveaux champs à la table existante**"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:330
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:672
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:404
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:746
 msgid "``ADDFIELDS``"
 msgstr "``ADDFIELDS``"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:334
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:408
 msgid ""
 "If activated the vector data will be appended to an existing table, there "
 "won't be a new table created. New fields found in input layer are added to "
@@ -947,18 +1039,18 @@ msgstr ""
 "couche d'entrée sont ajoutés à la table. Par défaut, une nouvelle table sera"
 " créée."
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:339
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:681
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:413
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:755
 msgid "**Do not launder columns/table names**"
 msgstr "**Ne pas blanchir les noms de colonnes / tables**"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:342
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:684
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:416
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:758
 msgid "``LAUNDER``"
 msgstr "``LAUNDER``"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:346
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:688
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:420
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:762
 msgid ""
 "With this option checked you can prevent the default behaviour (converting "
 "column names to lowercase, removing spaces and other invalid characters)."
@@ -967,18 +1059,18 @@ msgstr ""
 "défaut (conversion de noms de colonne en minuscules, suppression d'espaces "
 "et d'autres caractères non valides)."
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:349
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:691
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:423
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:765
 msgid "**Do not create Spatial Index**"
 msgstr "**Ne créez pas d'index spatial**"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:352
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:694
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:426
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:768
 msgid "``INDEX``"
 msgstr "``INDEX``"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:356
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:698
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:430
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:772
 msgid ""
 "Prevents a spatial index for the output table from being created. By "
 "default, a spatial index is added."
@@ -986,67 +1078,67 @@ msgstr ""
 "Empêche la création d'un index spatial pour la table de sortie. Par défaut, "
 "un index spatial est ajouté."
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:359
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:701
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:433
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:775
 msgid "**Continue after a failure, skipping the failed feature**"
 msgstr "**Continuer après un échec, ignorer les entités ayant échouées**"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:362
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:704
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:436
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:778
 msgid "``SKIPFAILURES``"
 msgstr "``SKIPFAILURES``"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:367
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:709
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:441
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:783
 msgid "**Promote to Multipart**"
 msgstr "**Promouvoir en multipart**"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:370
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:712
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:444
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:786
 msgid "``PROMOTETOMULTI``"
 msgstr "``PROMOTETOMULTI``"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:374
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:716
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:448
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:790
 msgid "Casts features geometry type to multipart in the output table"
 msgstr ""
 "Convertit le type de géométrie en plusieurs parties dans la table en sortie"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:375
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:717
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:449
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:791
 msgid "**Keep width and precision of input attributes**"
 msgstr "**Conserver la largeur et la précision des attributs d'entrée**"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:378
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:720
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:452
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:794
 msgid "``PRECISION``"
 msgstr "``PRECISION``"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:382
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:724
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:456
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:798
 msgid "Avoids modifying column attributes to comply with input data"
 msgstr ""
 "Évite de modifier les attributs de colonne pour se conformer aux données "
 "d'entrée"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:395
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:737
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:469
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:811
 msgid "This algorithm has no output."
 msgstr "Cet algorithme n'a pas de sortie."
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:400
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:474
 msgid ""
 "**Algorithm ID**: "
 "``gdal:importvectorintopostgisdatabaseavailableconnections``"
 msgstr ""
-"**Algorithm ID**: "
+"**ID de l'algorithme** : "
 "``gdal:importvectorintopostgisdatabaseavailableconnections``"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:410
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:484
 msgid "Export to PostgreSQL (new connection)"
 msgstr "Exporter vers PostgreSQL (nouvelle connexion)"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:411
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:485
 msgid ""
 "Imports vector layers inside a PostGreSQL database. A new connection to the "
 "PostGIS database must be created."
@@ -1054,96 +1146,96 @@ msgstr ""
 "Importe des couches vectorielles dans une base de données PostGreSQL. Une "
 "nouvelle connexion à la base de données PostGIS doit être créée."
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:483
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:557
 msgid "**Host**"
 msgstr "**Hote**"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:486
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:560
 msgid "``HOST``"
 msgstr "``HOST``"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:489
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:563
 msgid "Default: 'localhost'"
 msgstr "Defaut: 'localhost'"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:490
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:564
 msgid "Name of the database host"
 msgstr "Nom de la base de données"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:491
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:565
 msgid "**Port**"
 msgstr "**Port**"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:494
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:568
 msgid "``PORT``"
 msgstr "``PORT``"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:497
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:571
 msgid "Default: '5432'"
 msgstr "Defaut: '5432'"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:498
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:572
 msgid "Port number the PostgreSQL database server listens on"
 msgstr ""
 "Numéro de port sur lequel le serveur de base de données PostgreSQL écoute"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:499
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:573
 msgid "**Username**"
 msgstr "**Nom util.**"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:502
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:576
 msgid "``USER``"
 msgstr "``USER``"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:506
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:580
 msgid "User name used to log in to the database"
 msgstr "Nom d'utilisateur utilisé pour se connecter à la base de données"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:507
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:581
 msgid "**Database name**"
 msgstr "**Nom de la base de données**"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:510
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:584
 msgid "``DBNAME``"
 msgstr "``DBNAME``"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:514
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:588
 msgid "Name of the database"
 msgstr "Nom de la base de données"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:515
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:589
 msgid "**Password**"
 msgstr "**Mot de passe**"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:518
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:592
 msgid "``PASSWORD``"
 msgstr "``PASSWORD``"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:522
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:596
 msgid "Password used with Username to connect to the database"
 msgstr ""
 "Mot de passe utilisé avec le nom d'utilisateur pour se connecter à la base "
 "de données"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:531
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:605
 msgid "**Table name, leave blank to use input name**"
 msgstr "**Nom de table, laisser vide pour utiliser le nom d'entrée**"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:567
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:641
 msgid "Defines in which attribute field to store the geometry information"
 msgstr ""
 "Définit dans quel champ d'attribut pour stocker les informations de "
 "géométrie"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:579
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:653
 msgid "0 --- 2D"
 msgstr "0 --- 2D"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:580
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:654
 msgid "1 --- 3D"
 msgstr "1 --- 3D"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:589
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:663
 msgid ""
 "Defines a distance tolerance for the simplification of the vector geometries"
 " to be imported. By default no simplification there is no simplification."
@@ -1152,23 +1244,23 @@ msgstr ""
 "vectorielles à importer. Par défaut pas de simplification il n'y a pas de "
 "simplification."
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:620
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:694
 msgid "**Fields to include (leave empty to use all fields)**"
 msgstr "**Champs à inclure (laisser vide pour utiliser tous les champs)**"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:623
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:697
 msgid "``FIELDS``"
 msgstr "``FIELDS``"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:624
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:698
 msgid "[string] [list]"
 msgstr "[string] [list]"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:626
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:700
 msgid "Default: []"
 msgstr "Defaut: []"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:627
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:701
 msgid ""
 "Defines fields to keep from the imported vector file. If none is selected, "
 "all the fields are imported."
@@ -1176,7 +1268,7 @@ msgstr ""
 "Définit les champs à conserver du fichier vectoriel importé. Si aucun n'est "
 "sélectionné, tous les champs sont importés."
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:636
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:710
 msgid ""
 "Defines with a SQL \"WHERE\" statement which features should be selected for"
 " the output table"
@@ -1184,7 +1276,7 @@ msgstr ""
 "Définit avec une instruction SQL \"WHERE\" quelles entités doivent être "
 "sélectionnées pour la table de sortie"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:676
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:750
 msgid ""
 "If activated the vector data will be appended to an existing table, there "
 "won't be created a new table. New fields found in input layer are added to "
@@ -1195,17 +1287,18 @@ msgstr ""
 "couche d'entrée sont ajoutés à la table. Par défaut, une nouvelle table sera"
 " créée."
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:742
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:816
 msgid ""
 "**Algorithm ID**: ``gdal:importvectorintopostgisdatabasenewconnection``"
 msgstr ""
-"**Algorithm ID**: ``gdal:importvectorintopostgisdatabasenewconnection``"
+"**ID de l'algorithme** : "
+"``gdal:importvectorintopostgisdatabasenewconnection``"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:752
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:826
 msgid "Vector Information"
 msgstr "Information vectorielle"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:753
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:827
 msgid ""
 "Creates an information file that lists information about an OGR-supported "
 "data source. The output will be shown in a 'Result' window and can be "
@@ -1218,56 +1311,52 @@ msgstr ""
 "informations comprennent le type de géométrie, le nombre d'entités, "
 "l'étendue spatiale, les informations de projection et bien d'autres."
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:760
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:834
 msgid ""
 "This algorithm is derived from the `GDAL ogrinfo utility "
-"<https://gdal.org/ogrinfo.html>`_."
+"<https://gdal.org/programs/ogrinfo.html>`_."
 msgstr ""
 "Cet algorithme est dérivé de l'utilitaire `GDAL ogrinfo "
-"<https://gdal.org/ogrinfo.html>`_."
+"<https://gdal.org/programs/ogrinfo.html>`_."
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:778
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:852
 msgid "Input vector layer"
 msgstr "Couche vectorielle en entrée"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:779
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:853
 msgid "**Summary output only**"
 msgstr "**Sortie récapitulative uniquement**"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:782
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:856
 msgid "``SUMMARY_ONLY``"
 msgstr "``SUMMARY_ONLY``"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:787
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:861
 msgid "**Suppress metadata info**"
 msgstr "**Supprimer les informations de métadonnées**"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:790
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:864
 msgid "``NO_METADATA``"
 msgstr "``NO_METADATA``"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:795
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:822
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:869
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:896
 msgid "**Layer information**"
 msgstr "**Informations sur la couche**"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:797
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:824
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:871
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:898
 msgid "[html]"
 msgstr "[html]"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:799
-msgid "Default: ``[Save to temporary file]``"
-msgstr "Defaut: ``[Save to temporary file]``"
-
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:800
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:874
 msgid ""
 "Specify the output HTML file that includes the file information. One of:"
 msgstr ""
 "Spécifiez le fichier HTML de sortie qui inclut les informations sur le "
 "fichier. Un des:"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:806
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:880
 msgid ""
 "The file encoding can also be changed here. If no HTML-file is defined the "
 "output will be written to a temporary file"
@@ -1275,10 +1364,10 @@ msgstr ""
 "L'encodage du fichier peut également être modifié ici. Si aucun fichier HTML"
 " n'est défini, la sortie sera écrite dans un fichier temporaire"
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:825
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:899
 msgid "The output HTML-file that includes the file information."
 msgstr "Le fichier HTML de sortie qui inclut les informations sur le fichier."
 
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:830
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:904
 msgid "**Algorithm ID**: ``gdal:ogrinfo``"
-msgstr "**Algorithm ID**: ``gdal:ogrinfo``"
+msgstr "**ID de l'algorithme** : ``gdal:ogrinfo``"
