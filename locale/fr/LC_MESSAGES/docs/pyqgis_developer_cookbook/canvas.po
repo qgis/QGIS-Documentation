@@ -5,7 +5,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
+# Harrissou Sant-anna, 2021
 # Francis Gasc <francisgasc@gmail.com>, 2021
 # 
 #, fuzzy
@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-12 10:14+0000\n"
+"POT-Creation-Date: 2021-02-17 02:06+0000\n"
 "PO-Revision-Date: 2020-12-24 10:28+0000\n"
 "Last-Translator: Francis Gasc <francisgasc@gmail.com>, 2021\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
@@ -358,10 +358,25 @@ msgstr ""
 "sélectionnée sur le canevas nouvellement créé"
 
 #: ../../docs/pyqgis_developer_cookbook/canvas.rst:299
+msgid "Select a feature using QgsMapToolIdentifyFeature"
+msgstr "Sélectionner les entités en utilisant QgsMapToolIdentifyFeature"
+
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:301
+msgid ""
+"You can use the map tool :class:`QgsMapToolIdentifyFeature "
+"<qgis.gui.QgsMapToolIdentifyFeature>` for asking to the user to select a "
+"feature that will be sent to a callback function."
+msgstr ""
+"Vous pouvez utiliser l'outil cartographique "
+":class:`QgsMapToolIdentifyFeature <qgis.gui.QgsMapToolIdentifyFeature>` pour"
+" demander à l'utilisateur de sélectionner une entité qui sera envoyée à une "
+"fonction de rappel."
+
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:326
 msgid "Writing Custom Map Tools"
 msgstr "Ecrire des outils cartographiques personnalisés"
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:301
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:328
 msgid ""
 "You can write your custom tools, to implement a custom behavior to actions "
 "performed by users on the canvas."
@@ -370,7 +385,7 @@ msgstr ""
 "comportement personnalisé aux actions effectuées par les utilisateurs sur le"
 " canevas."
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:304
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:331
 msgid ""
 "Map tools should inherit from the :class:`QgsMapTool <qgis.gui.QgsMapTool>`,"
 " class or any derived class, and selected as active tools in the canvas "
@@ -383,7 +398,7 @@ msgstr ""
 ":meth:`setMapTool() <qgis.gui.QgsMapCanvas.setMapTool>` comme nous l'avons "
 "déjà vu."
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:309
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:336
 msgid ""
 "Here is an example of a map tool that allows to define a rectangular extent "
 "by clicking and dragging on the canvas. When the rectangle is defined, it "
@@ -397,29 +412,10 @@ msgstr ""
 "console. On utilise des éléments de contour d'édition décrits auparavant "
 "pour afficher le rectangle sélectionné au fur et à mesure de son dessin."
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:383
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:410
 msgid "Writing Custom Map Canvas Items"
 msgstr "Ecrire des éléments de canevas de carte personnalisés"
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:385
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:412
 msgid "Here is an example of a custom canvas item that draws a circle:"
 msgstr "Voici un exemple d'un canevas personnalisé qui dessine un cercle :"
-
-#~ msgid ""
-#~ "The map canvas is implemented with the :class:`QgsMapCanvas "
-#~ "<qgis.gui.QgsMapCanvas>` class in the :mod:`qgis.gui` module. The "
-#~ "implementation is based on the Qt Graphics View framework. This framework "
-#~ "generally provides a surface and a view where custom graphics items are "
-#~ "placed and user can interact with them.  We will assume that you are "
-#~ "familiar enough with Qt to understand the concepts of the graphics scene, "
-#~ "view and items. If not, please read the `overview of the framework "
-#~ "<https://doc.qt.io/qt-5/graphicsview.html>`_."
-#~ msgstr ""
-#~ "Le canevas de carte est implémenté par la classe :class:`QgsMapCanvas "
-#~ "<qgis.gui.QgsMapCanvas>` dans le module :mod:`qgis.gui`. L'implémentation "
-#~ "est basée sur le framework de vue graphique de Qt. Ce framework fournit en "
-#~ "général une surface et une vue où des items graphiques personnalisés peuvent"
-#~ " être placés et avec lesquels l'utilisateur peut interagir. Nous supposerons"
-#~ " que vous suffisamment familier avec Qt pour comprendre les concepts de "
-#~ "scène graphique, de vue et d'items. Si ce n'est pas le cas, veuillez lire la"
-#~ " `documentation du framework <https://doc.qt.io/qt-5/graphicsview.html>`_."
