@@ -29,7 +29,7 @@ Really, it's that easy...
    repositories you have configured. After installing you can check the version by issuing a ``select
    PostGIS_full_version();`` query with psql or another tool.
 
-To install a specific version (PostgreSQL verison 13 and PostGIS 3), you can use the following
+To install a specific version (eg, PostgreSQL version 13 and PostGIS 3), you can use the following
 commands.
 
 .. code-block:: bash
