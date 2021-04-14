@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-20 10:25+0000\n"
+"POT-Creation-Date: 2021-04-14 02:17+0000\n"
 "PO-Revision-Date: 2020-12-24 10:17+0000\n"
 "Last-Translator: DiGro, 2021\n"
 "Language-Team: Dutch (https://www.transifex.com/qgis/teams/6144/nl/)\n"
@@ -46,16 +46,16 @@ msgstr ""
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:10
 msgid ""
-"We will assume the use of PostGIS version 2.1 in this exercise. The "
-"installation and database configuration are different for older versions, "
+"We will assume the use of PostGIS version 2.1 or newer in this exercise. The"
+" installation and database configuration are different for older versions, "
 "but the rest of this material in this module will still work. Consult the "
 "documentation for your platform for help with installation and database "
 "configuration."
 msgstr ""
-"We gaan er van uit dat we voor deze oefening PostGIS versie 2.1 gebruiken. "
-"De installatie en configuratie van de database zijn anders voor oudere "
-"versies, maar de rest van dit materiaal in deze module zal nog steeds "
-"werken. Consulteer de documentatie voor uw platform voor hulp bij de "
+"We gaan er van uit dat we voor deze oefening PostGIS versie 2.1 of nieuwer "
+"gebruiken. De installatie en configuratie van de database zijn anders voor "
+"oudere versies, maar de rest van dit materiaal in deze module zal nog steeds"
+" werken. Consulteer de documentatie voor uw platform voor hulp bij de "
 "installatie en de configuratie van de database."
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:17
@@ -72,52 +72,48 @@ msgstr "Echt, zo eenvoudig is dat..."
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:28
 msgid ""
-"Depending on which version of Ubuntu you are using, and which repositories "
-"you have configured, these commands will install PostGIS 1.5, or 2.x. You "
-"can find the version installed by issuing a ``select "
-"PostGIS_full_version();`` query with psql or another tool."
+"The exact versions that will be installed depend on which version of Ubuntu "
+"you are using and which repositories you have configured. After installing "
+"you can check the version by issuing a ``select PostGIS_full_version();`` "
+"query with psql or another tool."
 msgstr ""
-"Afhankelijk van welke versie van Ubuntu u gebruikt en welke afhankelijkheden"
-" u heeft geconfigureerd, zullen deze opdrachten PostGIS 1.5, of 2.x "
-"installeren. U kunt de geïnstalleerde versie zoeken door een query ``select "
-"PostGIS_full_version();`` uit te voeren met psql of een ander gereedschap."
+"De exacte versies die zullen worden geïnstalleerd zijn afhankelijk van de "
+"versie van Ubuntu die u gebruikt en welke afhankelijkheden u heeft "
+"geconfigureerd. U kunt de geïnstalleerde versie controleren door een query "
+"``select PostGIS_full_version();`` uit te voeren met psql of een ander "
+"gereedschap."
 
-#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:33
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:32
 msgid ""
-"To install the absolute latest version of PostGIS, you can use the following"
-" commands."
+"To install a specific version (eg, PostgreSQL version 13 and PostGIS 3), you"
+" can use the following commands."
 msgstr ""
-"U kunt de volgende opdrachten gebruiken om de absoluut laatste versie van "
-"PostGIS te installeren."
+"U kunt de volgende opdrachten gebruiken om een specifieke versie (bijv, "
+"PostgreSQL versie 13 en PostGIS 3) te installeren. "
 
-#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:45
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:46
 msgid "Installing under Windows"
 msgstr "Installeren onder Windows"
 
-#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:47
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:48
 msgid ""
-"Installing on Windows is a little more complicated, but still not hard. Note"
-" that you need to be online to install the postgis stack."
+"Installing on Windows can be done from binary packages using a normal "
+"Windows installation dialogs."
 msgstr ""
-"Installeren op Windows is iets meer gecompliceerd, maar nog steeds niet "
-"moeilijk. Onthoud dat u online moet zijn om de opgeslagen Postgis te "
-"installeren."
+"Installeren op Windows kan worden gedaan vanuit binaire pakketten met behulp"
+" van normale Windows dialoogvensters voor installeren."
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:50
 msgid ""
-"First Visit `the download page <https://www.postgresql.org/download/>`_."
-msgstr ""
-"Bezoek eerst `de downloadpagina <https://www.postgresql.org/download/>`_."
-
-#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:52
-msgid ""
+"First Visit `the download page <https://www.postgresql.org/download/>`_. "
 "Then follow `this guide "
 "<https://www.bostongis.com/PrinterFriendly.aspx?content_name=postgis_tut01>`_."
 msgstr ""
-"Volg dan `deze gids "
+"Bezoek eerst `de downloadpagina <https://www.postgresql.org/download/>`_. "
+"Volg daarna `deze gids "
 "<https://www.bostongis.com/PrinterFriendly.aspx?content_name=postgis_tut01>`_."
 
-#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:55
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:53
 msgid ""
 "More information about installing on Windows can be found on the `PostGIS "
 "website <https://postgis.net/windows_downloads>`_."
@@ -125,25 +121,25 @@ msgstr ""
 "Meer informatie over het installeren op Windows kan worden gevonden op de "
 "`website van PostGIS <https://postgis.net/windows_downloads>`_."
 
-#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:59
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:57
 msgid "Installing on Other Platforms"
 msgstr "Installeren op andere platformen"
 
-#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:61
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:59
 msgid ""
 "The `PostGIS website download <https://postgis.net/install/>`_ has "
 "information about installing on other platforms including macOS and on other"
-" linux distributions"
+" Linux distributions"
 msgstr ""
-"De `website van PostGIS <https://postgis.net/install/>`_ bevat informatie "
-"over de installatie op andere besturingssystemen en platformen waaronder "
-"macOS en andere distributies van Linux."
+"De `downlaodwebsite van PostGIS <https://postgis.net/install/>`_ bevat "
+"informatie over het installeren op andere besturingssystemen en platformen, "
+"inclusief macOS en andere distributies van Linux."
 
-#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:65
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:63
 msgid "Configuring Databases to use PostGIS"
 msgstr "Databases configureren om PostGIS te gebruiken"
 
-#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:67
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:65
 msgid ""
 "Once PostGIS is installed, you will need to configure your database to use "
 "the extensions. If you have installed PostGIS version > 2.0, this is as "
@@ -155,7 +151,7 @@ msgstr ""
 "geïnstalleerd, is dit zo simpel als de volgende opdracht met psql uit te "
 "voeren met behulp van de adresdatabase uit onze vorige oefening."
 
-#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:76
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:74
 msgid ""
 "Depending on your version, you could find more instructions on how to "
 "spatially enable a database at "
@@ -165,11 +161,11 @@ msgstr ""
 "ruimtelijk in te schakelen kunnen vinden op "
 "https://postgis.net/docs/postgis_administration.html#create_spatial_db."
 
-#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:81
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:79
 msgid "Looking at the installed PostGIS functions"
 msgstr "Kijken naar de geïnstalleerde functies van PostGIS"
 
-#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:83
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:81
 msgid ""
 "PostGIS can be thought of as a collection of in-database functions that "
 "extend the core capabilities of PostgreSQL so that it can deal with spatial "
@@ -182,7 +178,7 @@ msgstr ""
 "ophalen, bevragen en bewerken. Een aantal functies worden in de database "
 "geïnstalleerd om dit te kunnen doen."
 
-#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:88
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:86
 msgid ""
 "Our PostgreSQL ``address`` database is now geospatially enabled, thanks to "
 "PostGIS. We are going to delve a lot deeper into this in the coming "
@@ -198,7 +194,7 @@ msgstr ""
 "functies te zoeken in relatie tot punten. Als u nog niet verbonden bent met "
 "de database ``address``, doe dat dan nu. Voer dan uit:"
 
-#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:98
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:96
 msgid ""
 "This is the command we're looking for: :kbd:`st_pointfromtext`.  To page "
 "through the list, use the down arrow, then press :kbd:`Q` to quit back to "
@@ -208,21 +204,21 @@ msgstr ""
 "pijl naar beneden om door de lijst te gaan en druk op :kbd:`Q` om terug te "
 "gaan naar de shell van psql."
 
-#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:101
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:99
 msgid "Try running this command:"
 msgstr "Probeer deze opdracht uit te voeren:"
 
-#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:107
-#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:141
-#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:208
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:105
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:139
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:206
 msgid "Result:"
 msgstr "Resultaat:"
 
-#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:116
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:114
 msgid "Three things to note:"
 msgstr "Drie dingen om te onthouden:"
 
-#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:118
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:116
 msgid ""
 "We defined a point at position 1,1 (EPSG:4326 is assumed) using "
 ":kbd:`POINT(1 1)`,"
@@ -230,7 +226,7 @@ msgstr ""
 "We definieerden een punt op de positie 1,1 (we gaan uit van EPSG:4326) met "
 "behulp van :kbd:`POINT(1 1)`,"
 
-#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:120
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:118
 msgid ""
 "We ran an sql statement, but not on any table, just on data entered from the"
 " SQL prompt,"
@@ -238,11 +234,11 @@ msgstr ""
 "We voerden een argument van sql uit, maar niet op een tabel, alleen maar op "
 "gegevens ingevoerd vanuit de SQL-prompt,"
 
-#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:122
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:120
 msgid "The resulting row does not make much sense."
 msgstr "De resulterende rij heeft weinig betekenis."
 
-#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:124
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:122
 msgid ""
 "The resulting row is in the OGC format called 'Well Known Binary' (WKB). We "
 "will look at this format in detail in the next section."
@@ -251,7 +247,7 @@ msgstr ""
 "(WKB). We zullen in het volgende gedeelte in detail naar deze indeling "
 "kijken."
 
-#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:127
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:125
 msgid ""
 "To get the results back as text, we can do a quick scan through the function"
 " list for something that returns text:"
@@ -259,7 +255,7 @@ msgstr ""
 "We kunnen een snelle scan doen door de functielijst naar iets dat tekst "
 "teruggeeft om de resultaten als tekst terug te krijgen:"
 
-#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:134
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:132
 msgid ""
 "The query we're looking for now is ``st_astext``. Let's combine it with the "
 "previous query:"
@@ -267,7 +263,7 @@ msgstr ""
 "De query waar we nu naar zoeken is ``st_astext``. Laten we die combineren "
 "met de vorige query:"
 
-#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:150
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:148
 msgid ""
 "Here, we entered the string :kbd:`POINT(1,1)`, turned it into a point using "
 ":kbd:`st_pointfromtext()`, and turned it back into a human-readable form "
@@ -278,14 +274,14 @@ msgstr ""
 "mensen te lezen vorm van met :kbd:`st_astext()`, wat ons onze originele "
 "tekenreeks teruggaf."
 
-#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:155
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:153
 msgid ""
 "One last example before we really get into the detail of using PostGIS:"
 msgstr ""
 "Een laatste voorbeeld voor we echt naar de details gaan van het gebruiken "
 "van PostGIS:"
 
-#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:161
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:159
 msgid ""
 "What did that do? It created a buffer of 1 degree around our point, and "
 "returned the result as text."
@@ -293,11 +289,11 @@ msgstr ""
 "Wat deed dat? Het maakte een buffer van 1 graad rondom ons punt, en gaf het "
 "resultaat als tekst terug."
 
-#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:165
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:163
 msgid "Spatial Reference Systems"
 msgstr "Ruimtelijke referentiesystemen"
 
-#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:167
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:165
 msgid ""
 "In addition to the PostGIS functions, the extension contains a collection of"
 " spatial reference system (SRS) definitions as defined by the European "
@@ -309,7 +305,7 @@ msgstr ""
 " de European Petroleum Survey Group (EPSG). Deze worden gebruikt tijdens "
 "bewerkingen zoals conversies van coördinaten referentiesystemen (CRS)."
 
-#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:172
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:170
 msgid ""
 "We can inspect these SRS definitions in our database as they are stored in "
 "normal database tables."
@@ -317,7 +313,7 @@ msgstr ""
 "We kunnen deze definities voor SRS inspecteren in onze database omdat zij "
 "zijn opgeslagen in normale databasetabellen."
 
-#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:175
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:173
 msgid ""
 "First, let's look at the schema of the table by entering the following "
 "command in the psql prompt:"
@@ -325,11 +321,11 @@ msgstr ""
 "Laten we eerst eens kijken naar het schema van de tabel door de volgende "
 "opdracht in te voeren bij de psql prompt:"
 
-#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:182
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:180
 msgid "The result should be this:"
 msgstr "Het resultaat zou dit moeten zijn:"
 
-#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:197
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:195
 msgid ""
 "You can use standard SQL queries (as we have learned from our introductory "
 "sections), to view and manipulate this table - though its not a good idea to"
@@ -340,7 +336,7 @@ msgstr ""
 "hoewel het geen goed idee is om records te bewerken of te verwijderen, "
 "tenzij u weet waar u mee bezig bent."
 
-#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:201
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:199
 msgid ""
 "One SRID you may be interested in is EPSG:4326 - the geographic / lat lon "
 "reference system using the WGS 84 ellipsoid. Let's take a look at it:"
@@ -349,7 +345,7 @@ msgstr ""
 "geografische / lat lon referentiesysteem dat de ellipsoïde WGS 84 gebruikt. "
 "Laten we er eens naar kijken:"
 
-#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:222
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:220
 msgid ""
 "The :kbd:`srtext` is the projection definition in well known text (you may "
 "recognise this from .prj files in your shapefile collection)."
@@ -357,11 +353,11 @@ msgstr ""
 "De :kbd:`srtext` is de definitie van de projectie in well known text (u zou "
 "dit kunnen herkennen van de bestanden .prj in uw verzameling shapefiles)."
 
-#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:226
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:224
 msgid "|IC|"
 msgstr "|IC|"
 
-#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:228
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:226
 msgid ""
 "You now have PostGIS functions installed in your copy of PostgreSQL. With "
 "this you'll be able to make use of PostGIS' extensive spatial functions."
@@ -370,26 +366,12 @@ msgstr ""
 "Hiermee bent u in staat gebruik te maken van de uitgebreide ruimtelijke "
 "functies van PostGIS."
 
-#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:232
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:230
 msgid "|WN|"
 msgstr "|WN|"
 
-#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:234
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:232
 msgid "Next you'll learn how spatial features are represented in a database."
 msgstr ""
 "Vervolgens zult u leren hoe ruimtelijke objecten worden weergegeven in een "
 "database."
-
-#~ msgid ""
-#~ "If you are using PostGIS 1.5 and a version of PostgreSQL lower than 9.1, you"
-#~ " will need to follow a different set of steps in order to install the "
-#~ "postgis extensions for your database. Please consult the `PostGIS "
-#~ "Documentation "
-#~ "<https://postgis.net/docs/postgis_installation.html#create_new_db>`_ for "
-#~ "instructions on how to do this."
-#~ msgstr ""
-#~ "Wanneer u PostGIS 1.5 gebruikt en een versie van PostgreSQL lager dan 9.1, "
-#~ "zult u een aantal andere stappen moeten volgen om de extensies voor PostGIS "
-#~ "te installeren voor uw database. Bekijk de `PostGIS Documentation "
-#~ "<https://postgis.net/docs/postgis_installation.html#create_new_db>`_ voor "
-#~ "instructies over hoe dit te doen."
