@@ -9,14 +9,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-13 09:01+0100\n"
+"POT-Creation-Date: 2021-04-14 02:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.8.0\n"
+"Generated-By: Babel 2.9.0\n"
 
 #: ../../docs/developers_guide/qtcreator.rst:4
 msgid "Getting up and running with QtCreator and QGIS"
@@ -24,216 +24,259 @@ msgstr ""
 
 #: ../../docs/developers_guide/qtcreator.rst:10
 msgid ""
-"QtCreator is a newish IDE from the makers of the Qt library. With "
-"QtCreator you can build any C++ project, but it's really optimised for "
-"people working on Qt(4) based applications (including mobile apps). "
-"Everything I describe below assumes you are running Ubuntu 11.04 'Natty'."
+"QtCreator is an IDE from the makers of the `Qt library "
+"<https://www.qt.io>`_. With QtCreator you can build any C++ project, but "
+"it's really optimised for people working on Qt based applications "
+"(including mobile apps)."
 msgstr ""
 
-#: ../../docs/developers_guide/qtcreator.rst:17
+#: ../../docs/developers_guide/qtcreator.rst:16
 msgid "Installing QtCreator"
 msgstr ""
 
-#: ../../docs/developers_guide/qtcreator.rst:20
-msgid "This part is easy:"
+#: ../../docs/developers_guide/qtcreator.rst:18
+msgid ""
+"Qt Creator is available on all major platforms and can be downloaded from"
+" https://www.qt.io/download (Go the open source route). The installation "
+"procedure depends on your platform."
 msgstr ""
 
-#: ../../docs/developers_guide/qtcreator.rst:26
-msgid "After installing you should find it in your gnome menu."
+#: ../../docs/developers_guide/qtcreator.rst:22
+msgid ""
+"If you are running a Unix-like platform, you can use the command line, eg"
+" on Debian:"
 msgstr ""
 
-#: ../../docs/developers_guide/qtcreator.rst:30
+#: ../../docs/developers_guide/qtcreator.rst:29
+msgid "After installing you should find it in your menu."
+msgstr ""
+
+#: ../../docs/developers_guide/qtcreator.rst:33
 msgid "Setting up your project"
 msgstr ""
 
-#: ../../docs/developers_guide/qtcreator.rst:32
+#: ../../docs/developers_guide/qtcreator.rst:35
 msgid ""
-"I'm assuming you have already got a local QGIS clone containing the "
-"source code, and have installed all needed build dependencies etc. There "
-"are detailed instructions for :ref:`git access <git_access>` and "
-"`dependency installation "
-"<https://github.com/qgis/QGIS/blob/master/INSTALL.md>`_."
+"We assume you have already got a local QGIS clone containing the source "
+"code, and have installed all needed build dependencies etc. There are "
+"detailed instructions for :ref:`git access <git_access>` and `dependency "
+"installation "
+"<https://htmlpreview.github.io/?https://github.com/qgis/QGIS/blob/master/doc/INSTALL.html>`_."
 msgstr ""
 
-#: ../../docs/developers_guide/qtcreator.rst:37
+#: ../../docs/developers_guide/qtcreator.rst:40
 msgid ""
-"On my system I have checked out the code into ``$HOME/dev/cpp/QGIS`` and "
-"the rest of the article is written assuming that, you should update these"
-" paths as appropriate for your local system."
+"On our system we have checked out the code into ``$HOME/dev/cpp/QGIS`` "
+"and the rest of the article is written assuming that. You should update "
+"these paths as appropriate for your local system."
 msgstr ""
 
-#: ../../docs/developers_guide/qtcreator.rst:41
-msgid "On launching QtCreator do:"
+#: ../../docs/developers_guide/qtcreator.rst:44
+msgid ""
+"After launching QtCreator do :menuselection:`File --> Open File or "
+"Project`"
 msgstr ""
 
-#: ../../docs/developers_guide/qtcreator.rst:43
-msgid "*File* -> *Open File or Project*"
-msgstr ""
-
-#: ../../docs/developers_guide/qtcreator.rst:45
+#: ../../docs/developers_guide/qtcreator.rst:46
 msgid ""
 "Then use the resulting file selection dialog to browse to and open this "
 "file:"
 msgstr ""
 
-#: ../../docs/developers_guide/qtcreator.rst:53
+#: ../../docs/developers_guide/qtcreator.rst:54
 msgid ""
-"Next you will be prompted for a build location. I create a specific build"
-" dir for QtCreator to work in under:"
+"QtCreator will parse the project and you will be prompted for a build "
+"location and options in the :guilabel:`Configure Project` dialog."
+msgstr ""
+
+#: ../../docs/developers_guide/qtcreator.rst:57
+msgid ""
+"Since we want QGIS to have debugging capabilities we will only enable the"
+" debug entry and fill it with our build location:"
 msgstr ""
 
 #: ../../docs/developers_guide/qtcreator.rst:60
 msgid ""
-"Its probably a good idea to create separate build directories for "
-"different branches if you can afford the disk space."
+"Check |checkbox| :guilabel:`Select all kits` enabling the "
+":guilabel:`Desktop` entry"
 msgstr ""
 
-#: ../../docs/developers_guide/qtcreator.rst:66
+#: ../../docs/developers_guide/qtcreator.rst:62
+msgid "Uncheck all but the |checkbox| :guilabel:`Debug` sub item"
+msgstr ""
+
+#: ../../docs/developers_guide/qtcreator.rst:63
 msgid ""
-"Next you will be asked if you have any CMake build options to pass to "
-"CMake. We will tell CMake that we want a debug build by adding this "
-"option:"
+"Fill the path with the build directory. For our purpose, we create a "
+"specific build dir for QtCreator:"
+msgstr ""
+
+#: ../../docs/developers_guide/qtcreator.rst:70
+msgid ""
+"It's probably a good idea to create separate build directories for "
+"different branches if you can afford the disk space."
 msgstr ""
 
 #: ../../docs/developers_guide/qtcreator.rst:76
 msgid ""
-"That's the basics of it. When you complete the Wizard, QtCreator will "
-"start scanning the source tree for autocompletion support and do some "
-"other housekeeping stuff in the background. We want to tweak a few things"
-" before we start to build though."
+"That's the basics of it. Press the :guilabel:`Configure Project` button "
+"and QtCreator will start scanning the source tree for autocompletion "
+"support and do some other housekeeping stuff in the background."
 msgstr ""
 
 #: ../../docs/developers_guide/qtcreator.rst:83
+msgid "We want to tweak a few things before we start to build."
+msgstr ""
+
+#: ../../docs/developers_guide/qtcreator.rst:87
 msgid "Setting up your build environment"
 msgstr ""
 
-#: ../../docs/developers_guide/qtcreator.rst:85
-msgid "Click on the 'Projects' icon on the left of the QtCreator window."
-msgstr ""
-
 #: ../../docs/developers_guide/qtcreator.rst:89
-msgid "Select the build settings tab (normally active by default)."
-msgstr ""
-
-#: ../../docs/developers_guide/qtcreator.rst:93
 msgid ""
-"We now want to add a custom process step. Why? Because QGIS can currently"
-" only run from an install directory, not its build directory, so we need "
-"to ensure that it is installed whenever we build it. Under 'Build Steps',"
-" click on the 'Add BuildStep' combo button and choose 'Custom Process "
-"Step'."
-msgstr ""
-
-#: ../../docs/developers_guide/qtcreator.rst:100
-msgid "Now we set the following details:"
-msgstr ""
-
-#: ../../docs/developers_guide/qtcreator.rst:102
-msgid "Enable custom process step: [yes]"
-msgstr ""
-
-#: ../../docs/developers_guide/qtcreator.rst:104
-msgid "Command: make"
-msgstr ""
-
-#: ../../docs/developers_guide/qtcreator.rst:106
-msgid "Working directory: $HOME/dev/cpp/QGIS/build-master-qtcreator"
-msgstr ""
-
-#: ../../docs/developers_guide/qtcreator.rst:108
-msgid "Command arguments: install"
-msgstr ""
-
-#: ../../docs/developers_guide/qtcreator.rst:112
-msgid ""
-"You are almost ready to build. Just one note: QtCreator will need write "
-"permissions on the install prefix. By default (which I am using here) "
-"QGIS is going to get installed to ``/usr/local/``. For my purposes on my "
-"development machine, I just gave myself write permissions to the "
-"/usr/local directory."
-msgstr ""
-
-#: ../../docs/developers_guide/qtcreator.rst:117
-msgid ""
-"To start the build, click that big hammer icon on the bottom left of the "
+"Click on the :guilabel:`Projects` icon on the left of the QtCreator "
 "window."
 msgstr ""
 
-#: ../../docs/developers_guide/qtcreator.rst:124
-msgid "Setting your run environment"
+#: ../../docs/developers_guide/qtcreator.rst:93
+msgid "Select the :guilabel:`Build` settings tab (normally active by default)."
 msgstr ""
 
-#: ../../docs/developers_guide/qtcreator.rst:126
+#: ../../docs/developers_guide/qtcreator.rst:97
 msgid ""
-"As mentioned above, we cannot run QGIS from directly in the build "
-"directly, so we need to create a custom run target to tell QtCreator to "
-"run QGIS from the install dir (in my case ``/usr/local/``). To do that, "
-"return to the projects configuration screen."
+"The dialog shows the ``Debug`` build configuration and allows you to edit"
+" settings under the :guilabel:`CMake` section. While the default "
+"configuration should be enough for a first pass, depending on your needs,"
+" you may want to enable more features such as:"
 msgstr ""
 
-#: ../../docs/developers_guide/qtcreator.rst:133
-msgid "Now select the 'Run Settings' tab"
+#: ../../docs/developers_guide/qtcreator.rst:102
+msgid "**WITH_3D = ON** for 3D rendering"
 msgstr ""
 
-#: ../../docs/developers_guide/qtcreator.rst:137
+#: ../../docs/developers_guide/qtcreator.rst:103
 msgid ""
-"We need to update the default run settings from using the 'qgis' run "
-"configuration to using a custom one."
+"**WITH_CUSTOM_WIDGETS = ON** to add QGIS custom widgets for interface "
+"design"
 msgstr ""
 
-#: ../../docs/developers_guide/qtcreator.rst:142
+#: ../../docs/developers_guide/qtcreator.rst:105
+msgid "Press :guilabel:`Apply Configuration Changes`."
+msgstr ""
+
+#: ../../docs/developers_guide/qtcreator.rst:107
 msgid ""
-"Do do that, click the 'Add v' combo button next to the Run configuration "
-"combo and choose 'Custom Executable' from the top of the list."
+"By default, Qt Creator uses all the CPU cores available to speed the "
+"build with maximum parallelization. To avoid that your computer freezes, "
+"you should specify a smaller number of cores. Under the :guilabel:`Build "
+"Steps` section:"
+msgstr ""
+
+#: ../../docs/developers_guide/qtcreator.rst:111
+msgid ""
+"Press the :menuselection:`Add build step -->` menu and select "
+":guilabel:`Custom Process Step`"
+msgstr ""
+
+#: ../../docs/developers_guide/qtcreator.rst:113
+msgid "Fill the new form as follows:"
+msgstr ""
+
+#: ../../docs/developers_guide/qtcreator.rst:115
+msgid ":guilabel:`Command`: ``make``"
+msgstr ""
+
+#: ../../docs/developers_guide/qtcreator.rst:116
+msgid ""
+":guilabel:`Arguments`: ``-j4`` to use 4 cores (setting depends on your "
+"device)"
+msgstr ""
+
+#: ../../docs/developers_guide/qtcreator.rst:117
+msgid ":guilabel:`Working directory`: ``%{buildDir}``"
+msgstr ""
+
+#: ../../docs/developers_guide/qtcreator.rst:123
+msgid ""
+"Also, if you want to reduce your build times, you can do it with "
+"``ninja``, an alternative to ``make`` with similar build options. You'd "
+"need to set it as the :guilabel:`CMake generator`:"
+msgstr ""
+
+#: ../../docs/developers_guide/qtcreator.rst:127
+msgid "Open :menuselection:`Tools --> Options --> Build & Run --> Kits`"
+msgstr ""
+
+#: ../../docs/developers_guide/qtcreator.rst:128
+msgid ""
+"Select the :guilabel:`Desktop (default)` kit entry, displaying its "
+"properties"
+msgstr ""
+
+#: ../../docs/developers_guide/qtcreator.rst:129
+msgid "Press :guilabel:`Change...` next to :guilabel:`CMake generator`"
+msgstr ""
+
+#: ../../docs/developers_guide/qtcreator.rst:131
+msgid ""
+"You are now ready to build. Press the |build| :sup:`Build` button at the "
+"left bottom of the dialog (or :kbd:`Ctrl+B`) to launch the project build!"
+" Qt Creator will begin compiling and this may take some time the first "
+"time, depending on your device."
+msgstr ""
+
+#: ../../docs/developers_guide/qtcreator.rst:136
+msgid ""
+"At the end of the compilation, you can run QGIS by pressing the "
+"|runInstall| :sup:`Run` button."
+msgstr ""
+
+#: ../../docs/developers_guide/qtcreator.rst:139
+msgid ""
+"The compilation of QGIS also generates binaries in the build directory. "
+"Hence you can execute QGIS from the command line using:"
 msgstr ""
 
 #: ../../docs/developers_guide/qtcreator.rst:147
-msgid "Now in the properties area set the following details:"
+msgid ""
+"Sometimes you may want to install QGIS as an executable, outside the "
+"build directory."
 msgstr ""
 
-#: ../../docs/developers_guide/qtcreator.rst:149
-msgid "Executable: /usr/local/bin/qgis"
+#: ../../docs/developers_guide/qtcreator.rst:150
+msgid ""
+"Set the ``CMAKE_INSTALL_PREFIX`` to somewhere you have write access to "
+"(we use :file:`${HOME}/apps`). This would avoid overwriting an existing "
+"QGIS installs (by your package manager for example)."
 msgstr ""
 
-#: ../../docs/developers_guide/qtcreator.rst:151
-msgid "Arguments :"
-msgstr ""
-
-#: ../../docs/developers_guide/qtcreator.rst:153
-msgid "Working directory: $HOME"
-msgstr ""
-
-#: ../../docs/developers_guide/qtcreator.rst:155
-msgid "Run in terminal: [no]"
+#: ../../docs/developers_guide/qtcreator.rst:156
+msgid "Press :guilabel:`Apply Configuration Changes` to update the settings"
 msgstr ""
 
 #: ../../docs/developers_guide/qtcreator.rst:157
-msgid "Debugger: C++ [yes]"
+msgid "Press the |build| button"
 msgstr ""
 
-#: ../../docs/developers_guide/qtcreator.rst:159
-msgid "Qml [no]"
-msgstr ""
-
-#: ../../docs/developers_guide/qtcreator.rst:161
+#: ../../docs/developers_guide/qtcreator.rst:158
 msgid ""
-"Then click the 'Rename' button and give your custom executable a "
-"meaningful name e.g. 'Installed QGIS'"
+"When the build is complete, you'll find the :file:`qgis` executable in "
+"the :file:`${HOME}/apps/bin` folder."
 msgstr ""
 
-#: ../../docs/developers_guide/qtcreator.rst:167
+#: ../../docs/developers_guide/qtcreator.rst:235
 msgid "Running and debugging"
 msgstr ""
 
-#: ../../docs/developers_guide/qtcreator.rst:169
+#: ../../docs/developers_guide/qtcreator.rst:237
 msgid ""
 "Now you are ready to run and debug QGIS. To set a break point, simply "
 "open a source file and click in the left column."
 msgstr ""
 
-#: ../../docs/developers_guide/qtcreator.rst:174
+#: ../../docs/developers_guide/qtcreator.rst:242
 msgid ""
-"Now launch QGIS under the debugger by clicking the icon with a bug on it "
-"in the bottom left of the window."
+"Now launch QGIS under the debugger by clicking the |runDebug| :sup:`Start"
+" Debugging` in the bottom left of the window."
 msgstr ""
 
