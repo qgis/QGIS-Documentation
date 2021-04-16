@@ -1135,7 +1135,6 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specify the output (flattened) layer. One of:
 
-       * Skip Output
        * Save to a Temporary File
        * Save to File...
        * Save To GeoPackage...
