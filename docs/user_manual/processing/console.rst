@@ -447,7 +447,7 @@ smoothing the layer.
               'MITER_LIMIT': 10,
               'DISSOLVE': True,
               'OUTPUT': parameters[self.OUTPUT_BUFFER]},
-              context=context, feedback=feedback)
+              context=context, feedback=feedback, is_child_algorithm=True)
           buffered = algresult['OUTPUT']
           return {self.OUTPUT_BUFFER: buffered}
 
