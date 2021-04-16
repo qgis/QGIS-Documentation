@@ -481,8 +481,7 @@ functions are specified:
   geometry, and then we run the ``buffer`` algorithm on the smoothed
   output.
   To be able to run algorithms from within another algorithm we have to
-  define a dummy function for the ``onFinish`` parameter for ``run``.
-  This is the ``no_post_process`` function.
+  set the ``is_child_algorithm`` argument to :const:`True`.
   You can see how input and output parameters are used as parameters
   to the ``smoothgeometry`` and ``buffer`` algorithms.
 
