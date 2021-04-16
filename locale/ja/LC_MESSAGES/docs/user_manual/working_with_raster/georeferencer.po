@@ -1,32 +1,53 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
+# Harrissou Sant-anna, 2020
+# tomoyuki arai <tarai.3367@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation testing\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-22 21:43+0200\n"
-"PO-Revision-Date: 2020-09-22 19:54+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"POT-Creation-Date: 2021-01-12 10:14+0000\n"
+"PO-Revision-Date: 2020-12-24 11:59+0000\n"
+"Last-Translator: tomoyuki arai <tarai.3367@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:27
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:6
+msgid "Georeferencer"
+msgstr "ジオリファレンサ"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:13
+msgid ""
+"The |georefRun| Georeferencer is a tool for generating world files for "
+"rasters. It allows you to reference rasters to geographic or projected "
+"coordinate systems by creating a new GeoTiff or by adding a world file to "
+"the existing image. The basic approach to georeferencing a raster is to "
+"locate points on the raster for which you can accurately determine "
+"coordinates."
+msgstr ""
+"|georefRun| "
+"ジオリファレンサは、ラスタに対するワールドファイルを生成するためのツールです。これは新規GeoTiffファイルを作成するか、既存イメージへのワールドファイルを追加することで、ラスタを地理的座標系や投影座標系にリファレンスします。ラスタのジオリファレンスの基本的なアプローチは、正確に座標を決定できるポイントをラスタ上に位置付けることです。"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:19
+msgid "**Features**"
+msgstr "**機能**"
+
 #: ../../docs/user_manual/working_with_raster/georeferencer.rst:27
 msgid "Icon"
 msgstr "アイコン"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:27
 #: ../../docs/user_manual/working_with_raster/georeferencer.rst:27
 msgid "Purpose"
 msgstr "目的"
@@ -35,45 +56,176 @@ msgstr "目的"
 msgid "|addRasterLayer|"
 msgstr "|addRasterLayer|"
 
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:29
+msgid "Open raster"
+msgstr "ラスタを開く"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:29
+msgid "|start|"
+msgstr "|start|"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:29
+msgid "Start georeferencing"
+msgstr "ジオリファレンスを開始"
+
 #: ../../docs/user_manual/working_with_raster/georeferencer.rst:31
 msgid "|gdalScript|"
 msgstr "|gdalScript|"
 
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:31
+msgid "Generate GDAL Script"
+msgstr "GDALスクリプトを生成"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:31
+msgid "|loadGCPpoints|"
+msgstr "|loadGCPpoints|"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:31
+msgid "Load GCP Points"
+msgstr "GCPを読み込み"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:33
+msgid "|saveGCPPointsAs|"
+msgstr "|saveGCPPointsAs|"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:33
+msgid "Save GCP Points As"
+msgstr "名前を付けて保存"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:33
+msgid "|transformSettings|"
+msgstr "|transformSettings|"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:33
+msgid "Transformation settings"
+msgstr "変換を設定"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:35
+msgid "|addGCPPoint|"
+msgstr "|addGCPPoint|"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:35
+msgid "Add Point"
+msgstr "点を追加"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:35
+msgid "|deleteGCPPoint|"
+msgstr "|deleteGCPPoint|"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:35
+msgid "Delete Point"
+msgstr "点を削除"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:37
+msgid "|moveGCPPoint|"
+msgstr "|moveGCPPoint|"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:37
+msgid "Move GCP Point"
+msgstr "GCPを移動"
+
 #: ../../docs/user_manual/working_with_raster/georeferencer.rst:37
 msgid "|pan|"
 msgstr "|pan|"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:37
+msgid "Pan"
+msgstr "パン"
 
 #: ../../docs/user_manual/working_with_raster/georeferencer.rst:39
 msgid "|zoomIn|"
 msgstr "|zoomIn|"
 
 #: ../../docs/user_manual/working_with_raster/georeferencer.rst:39
+msgid "Zoom In"
+msgstr "拡大"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:39
 msgid "|zoomOut|"
 msgstr "|zoomOut|"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:39
+msgid "Zoom Out"
+msgstr "縮小"
 
 #: ../../docs/user_manual/working_with_raster/georeferencer.rst:41
 msgid "|zoomToLayer|"
 msgstr "|zoomToLayer|"
 
 #: ../../docs/user_manual/working_with_raster/georeferencer.rst:41
+msgid "Zoom To Layer"
+msgstr "レイヤの全領域にズーム"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:41
 msgid "|zoomLast|"
 msgstr "|zoomLast|"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:41
+msgid "Zoom Last"
+msgstr "前の領域へズーム"
 
 #: ../../docs/user_manual/working_with_raster/georeferencer.rst:43
 msgid "|zoomNext|"
 msgstr "|zoomNext|"
 
 #: ../../docs/user_manual/working_with_raster/georeferencer.rst:43
+msgid "Zoom Next"
+msgstr "次の表示領域にズーム"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:43
 msgid "|linkGeorefToQGis|"
 msgstr "|linkGeorefToQGis|"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:43
+msgid "Link Georeferencer to QGIS"
+msgstr "ジオリファレンサをQGISにリンクする"
 
 #: ../../docs/user_manual/working_with_raster/georeferencer.rst:45
 msgid "|linkQGisToGeoref|"
 msgstr "|linkQGisToGeoref|"
 
 #: ../../docs/user_manual/working_with_raster/georeferencer.rst:45
+msgid "Link QGIS to Georeferencer"
+msgstr "QGISをジオリファレンサにリンクする"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:45
 msgid "|fullHistogramStretch|"
 msgstr "|fullHistogramStretch|"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:45
+msgid "Full histogram stretch"
+msgstr "ヒストグラムをデータセット全域の値で引きのばす"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:47
+msgid "|localHistogramStretch|"
+msgstr "|localHistogramStretch|"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:47
+msgid "Local histogram stretch"
+msgstr "ヒストグラムを表示領域の値で引きのばす"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:50
+msgid "Table Georeferencer: Georeferencer Tools"
+msgstr "表：ジオリファレンサのツール"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:53
+msgid "Usual procedure"
+msgstr "通常の手順"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:55
+msgid ""
+"As X and Y coordinates (DMS (dd mm ss.ss), DD (dd.dd) or projected "
+"coordinates (mmmm.mm)), which correspond with the selected point on the "
+"image, two alternative procedures can be used:"
+msgstr ""
+"画像上の選択された点に対応するX、Y座標（度分秒（dd mm ss.ss）や度（dd.dd）、あるいは投影された座標（mmmm.mm））の設定には、 "
+"手順の選択肢が2つあります："
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:59
+msgid ""
+"The raster itself sometimes provides crosses with coordinates \"written\" on"
+" the image. In this case, you can enter the coordinates manually."
+msgstr "ラスタ自体が、画像上に座標値のある十字が「描かれて」いる場合があります。この場合には、その座標値を手動で入力します。"
 
 #: ../../docs/user_manual/working_with_raster/georeferencer.rst:61
 msgid ""
@@ -83,7 +235,47 @@ msgid ""
 "In this case, you can enter the coordinates by clicking on the reference "
 "dataset loaded in the QGIS map canvas."
 msgstr ""
-"すでにジオリファレンスされたレイヤを使用します。これはベクタまたはラスタデータのいずれかで、ジオリファレンスしたい画像内にある同じオブジェクト/地物が含まれ、画像に使用したい投影のものです。この場合、QGIS地図キャンバスにロードされた参照データセットをクリックして座標を入力できます。"
+"すでにジオリファレンスされたレイヤを使用する方法もあります。このレイヤはベクタデータでもラスタデータでもよく、ジオリファレンスしたい画像内にある同じオブジェクト/地物が含まれており、画像に使用したい座標系を持っているものです。この場合には、QGISのマップキャンバスにロードされた参照データセット上をクリックして、座標を入力できます。"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:67
+msgid ""
+"The usual procedure for georeferencing an image involves selecting multiple "
+"points on the raster, specifying their coordinates, and choosing a relevant "
+"transformation type. Based on the input parameters and data, the "
+"Georeferencer will compute the world file parameters. The more coordinates "
+"you provide, the better the result will be."
+msgstr ""
+"画像をジオリファレンスする通常の手順では、ラスタ上で複数の点を選択し、それらの座標を指定して、関連する変換タイプを選択します。入力パラメータと入力データに基づいて、ジオリファレンサはワールドファイルのパラメータを計算します。より多くの座標を指定するほど、より良い結果が得られるでしょう。"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:73
+msgid ""
+"The first step is to start QGIS and click on :menuselection:`Raster -->` "
+"|georefRun| :menuselection:`Georeferencer`, which appears in the QGIS menu "
+"bar. The Georeferencer dialog appears as shown in "
+":numref:`figure_georeferencer_dialog`."
+msgstr ""
+"最初のステップは、QGISを起動して、QGISのメニューバー内にある :menuselection:`ラスタ -->` |georefRun| "
+":menuselection:`ジオリファレンサ` をクリックすることです。 :numref:`figure_georeferencer_dialog`"
+" に示すようなジオリファレンサダイアログが現れます。"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:77
+msgid ""
+"For this example, we are using a topo sheet of South Dakota from SDGS. It "
+"can later be visualized together with the data from the GRASS "
+":file:`spearfish60` location. You can download the topo sheet here: "
+"https://grass.osgeo.org/sampledata/spearfish_toposheet.tar.gz."
+msgstr ""
+"以下の例では、SDGSによるサウスダコタ州の地形図を使用します。これは後でGRASSの :file:`spearfish60` "
+"のデータと一緒に可視化します。地形図は以下のリンクからダウンロードできます： "
+"https://grass.osgeo.org/sampledata/spearfish_toposheet.tar.gz"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:87
+msgid "Georeferencer Dialog"
+msgstr "ジオリファレンサダイアログ"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:93
+msgid "Entering ground control points (GCPs)"
+msgstr "グラウンドコントロールポイント（GCPs）の入力"
 
 #: ../../docs/user_manual/working_with_raster/georeferencer.rst:95
 msgid ""
@@ -95,6 +287,114 @@ msgstr ""
 "ジオリファレンスされていないラスタのジオリファレンスを開始するには、 |addRasterLayer| "
 "ボタンを使用してそのラスタをロードする必要があります。ラスタはダイアログのメインの作業領域に表示されます。ラスタがロードされると、基準点の入力を開始できます。"
 
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:99
+msgid ""
+"Using the |addGCPPoint| :sup:`Add Point` button, add points to the main "
+"working area and enter their coordinates (see Figure "
+":numref:`figure_georeferencer_add_points`). For this procedure you have "
+"three options:"
+msgstr ""
+"|addGCPPoint| :sup:`点を追加` ボタンを使用して、メインの作業エリアにポイントを追加し、それらの座標を入力してください（ "
+":numref:`figure_georeferencer_add_points` の図を参照）。この手順には3つの選択肢があります："
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:103
+msgid ""
+"Click on a point in the raster image and enter the X and Y coordinates "
+"manually."
+msgstr "ラスタ画像内の点をクリックして、XとY座標を手動で入力する"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:105
+msgid ""
+"Click on a point in the raster image and choose the |pencil| :sup:`From map "
+"canvas` button to add the X and Y coordinates with the help of a "
+"georeferenced map already loaded in the QGIS map canvas."
+msgstr ""
+"ラスタ画像内のポイントをクリックし、 |pencil| :sup:`地図キャンバスから` "
+"ボタンを選択して、既にQGISマップキャンバスにロードされたジオリファレンス済みの地図を使用してＸ座標とＹ座標を追加する"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:108
+msgid ""
+"With the |moveGCPPoint| button, you can move the GCPs in both windows, if "
+"they are at the wrong place."
+msgstr "|moveGCPPoint| ボタンを使用すると、GCPが間違った場所にある場合に両方のウィンドウで移動できます。"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:111
+msgid ""
+"Continue entering points. You should have at least four points, and the more"
+" coordinates you can provide, the better the result will be. There are "
+"additional tools for zooming and panning the working area in order to locate"
+" a relevant set of GCP points."
+msgstr ""
+"ポイント入力を繰り返します。最低4個のポイントの指定が必要ですが、より多くの座標を入力すれば、より良い結果が得られます。また、関連するGCPポイントの組を適切な場所に置くために、作業領域をズームしたりパンしたりするツールもあります。"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:121
+msgid "Add points to the raster image"
+msgstr "ラスタ画像へポイントを追加"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:124
+msgid ""
+"The points that are added to the map will be stored in a separate text file "
+"(:file:`[filename].points`) usually together with the raster image. This "
+"allows us to reopen the Georeferencer at a later date and add new points or "
+"delete existing ones to optimize the result. The points file contains values"
+" of the form: ``mapX, mapY, pixelX, pixelY``. You can use the "
+"|loadGCPpoints| :sup:`Load GCP points` and |saveGCPPointsAs| :sup:`Save GCP "
+"points as` buttons to manage the files."
+msgstr ""
+"地図に追加した点は通常、ラスタ画像と同じ場所の別個のテキストファイル（ :file:`[ファイル名].points` "
+"）に保存されます。これにより、後日ジオリファレンサを再度開いて、新しい点を追加したり既存の点を削除して結果を最適化することができます。このポイントファイルには、次のような形式の値が含まれています："
+" ``mapX, mapY, pixelX, pixelY`` 。 |loadGCPpoints| :sup:`GCPを読み込み` ボタンと "
+"|saveGCPPointsAs| :sup:`名前を付けて保存` ボタンを使用して、ファイルの管理ができます。"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:135
+msgid "Defining the transformation settings"
+msgstr "変換の設定の定義"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:137
+msgid ""
+"After you have added your GCPs to the raster image, you need to define the "
+"transformation settings for the georeferencing process."
+msgstr "ラスタ画像にGCPを追加したら、ジオレファレンス処理のための変換の設定を定義する必要があります。"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:145
+msgid "Defining the georeferencer transformation settings"
+msgstr "ジオリファレンサの変換設定の定義"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:149
+msgid "Available Transformation algorithms"
+msgstr "利用可能な変換アルゴリズム"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:151
+msgid ""
+"Depending on how many ground control points you have captured, you may want "
+"to use different transformation algorithms. Choice of transformation "
+"algorithm is also dependent on the type and quality of input data and the "
+"amount of geometric distortion that you are willing to introduce to the "
+"final result."
+msgstr ""
+"設定したGCPの数にもよりますが、さまざまな変換アルゴリズムを使用することができます。変換アルゴリズムの選択は、入力データの種類や品質、最終結果に入り込むことをいとわない幾何学的な歪みの量にも依存します。"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:157
+msgid ""
+"Currently, the following :guilabel:`Transformation types` are available:"
+msgstr "現在、以下の :guilabel:`変換タイプ` が利用できます："
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:159
+msgid ""
+"The **Linear** algorithm is used to create a world file and is different "
+"from the other algorithms, as it does not actually transform the raster. "
+"This algorithm likely won't be sufficient if you are dealing with scanned "
+"material."
+msgstr ""
+"**線形** "
+"アルゴリズムはワールドファイルの作成に使用され、他のアルゴリズムとは異なり、実際にはラスタの変換は行われません。このアルゴリズムでは、スキャンした素材を扱うには十分ではないでしょう。"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:163
+msgid ""
+"The **Helmert** transformation performs simple scaling and rotation "
+"transformations."
+msgstr "**ヘルマート** 変換は、単純なスケーリングと回転変換を行います。"
+
 #: ../../docs/user_manual/working_with_raster/georeferencer.rst:165
 msgid ""
 "The **Polynomial** algorithms 1-3 are among the most widely used algorithms "
@@ -105,7 +405,44 @@ msgid ""
 "translation and rotation only."
 msgstr ""
 "**多項式** "
-"アルゴリズム1-3は最も広く使用されるアルゴリズムの一つで、変換元と変換先の地上基準点が一致するように導入されます。最も広く使用されている多項式アルゴリズムは二次多項式変換で、いくらかの湾曲が可能になります。一次多項式変換（アフィン）では共線性が保持され、縮尺変更、平行移動及び回転だけが可能になります。"
+"アルゴリズム1-3は、変換元と変換先のGCPを一致させるためのアルゴリズムの中でも最も広く使用されているものです。最も広く使用されている多項式アルゴリズムは2次多項式変換で、多少の湾曲を許容します。1次多項式変換（アフィン）では共線性が保持され、スケーリング、平行移動および回転だけの変換です。"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:170
+msgid ""
+"The **Thin Plate Spline** (TPS) algorithm is a more modern georeferencing "
+"method, which is able to introduce local deformations in the data. This "
+"algorithm is useful when very low quality originals are being georeferenced."
+msgstr ""
+"**薄板プレートスプライン（Thin Plate Spline）** "
+"アルゴリズムはより現代的なジオリファレンス手法で、データの局所的な変形を導入できます。このアルゴリズムは、非常に低品質なオリジナルファイルをジオリファレンスする場合に有用です。"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:173
+msgid ""
+"The **Projective** transformation is a linear rotation and translation of "
+"coordinates."
+msgstr "**投影変換** は、座標の線形回転と平行移動を行います。"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:177
+msgid "Define the Resampling method"
+msgstr "リサンプリング方法の定義"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:179
+msgid ""
+"The type of resampling you choose will likely depending on your input data "
+"and the ultimate objective of the exercise. If you don't want to change "
+"statistics of the image, you might want to choose 'Nearest neighbour', "
+"whereas a 'Cubic resampling' will likely provide a more smoothed result."
+msgstr ""
+"どのようなリサンプリング方法を選択するかは、入力データと最終目的によって異なります。画像の統計情報を変更したくない場合には「最近傍（Nearest "
+"neighbour）」を、より滑らかな結果を得たい場合には「キュービック（Cubic）」を選択するとよいでしょう。"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:184
+msgid "It is possible to choose between five different resampling methods:"
+msgstr "5つの異なるリサンプリング手法から選択できます："
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:186
+msgid "Nearest neighbour"
+msgstr "最近傍（Nearest neighbour）"
 
 #: ../../docs/user_manual/working_with_raster/georeferencer.rst:187
 msgid "Linear"
@@ -113,4 +450,140 @@ msgstr "線形"
 
 #: ../../docs/user_manual/working_with_raster/georeferencer.rst:188
 msgid "Cubic"
-msgstr "キュービック"
+msgstr "キュービック（Cubic）"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:189
+msgid "Cubic Spline"
+msgstr "キュービック・スプライン（Cubic Spline）"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:190
+msgid "Lanczos"
+msgstr "ランチョス法（Lanczos）"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:193
+msgid "Define the transformation settings"
+msgstr "変換の設定の定義"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:195
+msgid ""
+"There are several options that need to be defined for the georeferenced "
+"output raster."
+msgstr "ジオリファレンスされた出力ラスタの作成のために、さまざまなオプションを指定する必要があります。"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:198
+msgid ""
+"The |checkbox| :guilabel:`Create world file` checkbox is only available if "
+"you decide to use the linear transformation type, because this means that "
+"the raster image actually won't be transformed. In this case, the "
+":guilabel:`Output raster` field is not activated, because only a new world "
+"file will be created."
+msgstr ""
+"|checkbox| :guilabel:`ワールドファイルの作成のみ（リニア変換）` "
+"のチェックボックスは、線形変換タイプを指定した場合にのみ利用可能です。これは、実際にはラスタ画像は変換されないことを意味しています。チェックを入れた場合、新しいワールドファイルが作成されるのみのため、"
+" :guilabel:`出力ラスタ` フィールドは無効になります。"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:203
+msgid ""
+"For all other transformation types, you have to define an :guilabel:`Output "
+"raster`. As default, a new file ([filename]_modified) will be created in the"
+" same folder together with the original raster image."
+msgstr ""
+"これ以外の変換タイプに対しては、 :guilabel:`出力ラスタ` "
+"を指定する必要があります。デフォルトでは、新規ファイル（[ファイル名]_modified）をオリジナルのラスタ画像ファイルと同じフォルダに作成します。"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:206
+msgid ""
+"As a next step, you have to define the :guilabel:`Target SRS` (Spatial "
+"Reference System) for the georeferenced raster (see "
+":ref:`label_projections`)."
+msgstr ""
+"続いて、ジオリファレンスされたラスタの :guilabel:`変換先SRS` （空間参照系）を指定する必要があります（ "
+":ref:`label_projections` 参照）。"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:208
+msgid ""
+"If you like, you can **generate a pdf map** and also **a pdf report**. The "
+"report includes information about the used transformation parameters, an "
+"image of the residuals and a list with all GCPs and their RMS errors."
+msgstr ""
+"必要ならば **PDFマップの作成** や **PDFレポートの作成** を行えます。 "
+"このレポートには、使用した変換パラメータ、残差の画像、すべてのGCPとそのRMSエラーのリストといった情報が含まれています。"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:211
+msgid ""
+"Furthermore, you can activate the |checkbox| :guilabel:`Set Target "
+"Resolution` checkbox and define the pixel resolution of the output raster. "
+"Default horizontal and vertical resolution is 1."
+msgstr ""
+"さらに、 |checkbox| :guilabel:`解像度の設定` "
+"チェックボックスにチェックを入れると、出力ラスタのピクセル解像度を指定できます。デフォルトの水平解像度と垂直解像度は 1 です。"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:214
+msgid ""
+"The |checkbox| :guilabel:`Use 0 for transparency when needed` can be "
+"activated, if pixels with the value 0 shall be visualized transparent. In "
+"our example toposheet, all white areas would be transparent."
+msgstr ""
+"|checkbox| :guilabel:`必要に応じて透明に0を使用` "
+"にチェックを入れると、値0のピクセルは透明で表示されるようになります。サウスダコタ地形図の例では、余白領域がすべて透明になります。"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:217
+msgid ""
+"Finally, |checkbox| :guilabel:`Load in QGIS when done` loads the output "
+"raster automatically into the QGIS map canvas when the transformation is "
+"done."
+msgstr ""
+"最後に、 |checkbox| :guilabel:`完了時にQGISにロードする` "
+"にチェックを入れると、変換が完了したときに出力ラスタをQGISのマップキャンバスに自動的に読み込みます。"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:221
+msgid "Show and adapt raster properties"
+msgstr "ラスタプロパティの表示と調整"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:223
+msgid ""
+"Clicking on the :guilabel:`Raster properties` option in the "
+":guilabel:`Settings` menu opens the :ref:`Layer properties "
+"<raster_properties_dialog>` dialog of the raster file that you want to "
+"georeference."
+msgstr ""
+":guilabel:`設定` メニューの :guilabel:`ラスタプロパティ` "
+"オプションをクリックすると、ジオリファレンスしようとしているラスタファイルの :ref:`レイヤプロパティ "
+"<raster_properties_dialog>` ダイアログが開きます。"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:230
+msgid "Configure the georeferencer"
+msgstr "ジオリファレンサの構成"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:232
+msgid "You can define whether you want to show GCP coordinates and/or IDs."
+msgstr "GCPの座標やIDを表示するかどうかを定義できます。"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:233
+msgid "As residual units, pixels and map units can be chosen."
+msgstr "残差の単位として、ピクセルまたは地図上の単位を選択できます。"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:234
+msgid ""
+"For the PDF report, a left and right margin can be defined and you can also "
+"set the paper size for the PDF map."
+msgstr "PDFレポートについて左右のマージンを指定したり、PDF地図について用紙サイズを指定できます。"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:236
+msgid ""
+"Finally, you can activate to |checkbox| :guilabel:`Show Georeferencer window"
+" docked`."
+msgstr "最後に、 |checkbox| :guilabel:`ジオリファレンサウィンドウを結合して表示する` を有効化できます。"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:241
+msgid "Running the transformation"
+msgstr "変換の実行"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:243
+msgid ""
+"After all GCPs have been collected and all transformation settings are "
+"defined, just press the |start| :sup:`Start georeferencing` button to create"
+" the new georeferenced raster."
+msgstr ""
+"すべてのGCPを設定しすべての変換設定が定義されたら、 |start| :sup:`ジオリファレンスを開始` "
+"ボタンを押すと、新しいジオリファレンスされたラスタが作成されます。"
