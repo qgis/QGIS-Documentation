@@ -148,38 +148,55 @@ transformation settings for the georeferencing process.
 Available Transformation algorithms
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Depending on how many ground control points you have captured, you may want
-to use different transformation algorithms. Choice of transformation
-algorithm is also dependent on the type and quality of input data and the
-amount of geometric distortion that you are willing to introduce to the final
-result.
+A number of transformation algorithms are available, dependent on the type and quality of input data, the
+nature and amount of geometric distortion that you are willing to introduce to the final
+result, and the number of ground control points (GCPs).
 
 Currently, the following :guilabel:`Transformation types` are available:
 
 *  The **Linear** algorithm is used to create a world file and is different
-   from the other algorithms, as it does not actually transform the raster.
-   This algorithm likely won't be sufficient if you are dealing with scanned
-   material.
-*  The **Helmert** transformation performs simple scaling and rotation
-   transformations.
-*  The **Polynomial** algorithms 1-3 are among the most widely used algorithms
-   introduced to match source and destination ground control points. The most
-   widely used polynomial algorithm is the second-order polynomial transformation,
-   which allows some curvature. First-order polynomial transformation (affine)
-   preserves collinearity and allows scaling, translation and rotation only.
-*  The **Thin Plate Spline** (TPS) algorithm is a more modern georeferencing
-   method, which is able to introduce local deformations in the data. This
-   algorithm is useful when very low quality originals are being georeferenced.
-*  The **Projective** transformation is a linear rotation and translation
-   of coordinates.
+   from the other algorithms, as it does not actually transform the raster pixels.
+   It allows positioning (translating) the image and uniform scaling, but no rotation or other transformations.
+   It is the most suitable if your image is a good quality raster map, in a known CRS, but is just missing georeferencing information. At least 2 GCPs are needed.
+   
+*  The **Helmert** transformation also allows rotation. It is particularly useful if your raster is a good quality local 
+   map or orthorectified aerial image, but not aligned with the grid bearing in your CRS. At least 2 GCPs are needed.
+   
+*  The **Polynomial 1** algorithm allows a more general affine transformation, in particular also a uniform shear. Straight lines remain straight 
+   (i.e., collinear points stay collinear) and parallel lines remain parallel. This is particularly useful for georeferencing data cartograms, 
+   which may have been plotted (or data collected) with different ground pixel sizes in different directions. At least 3 GCP's are required.
+
+*  The **Polynomial** algorithms 2-3 use more general 2nd or 3rd degree polynomials instead of just affine transformation. This allows them to account 
+   for curvature or other systematic warping of the image, for instance photographed maps with curving edges. At least 6 (respectively 10) GCP's are required.  
+   Angles and local scale are not preserved or treated uniformly across the image. In particular, straight lines may become curved, and there may be significant 
+   distortion introduced at the edges or far from any GCPs arising from extrapolating the data-fitted polynomials too far.
+
+*  The **Projective** algorithm generalizes Polynomial 1 in a different way, allowing transformations representing a central projection between 2 non-parallel planes, 
+   the image and the map canvas. Straight lines stay straight, but parallelism is not preserved and scale across the image varies consistently with the 
+   change in perspective. This transformation type is most useful for georeferencing angled photographs (rather than flat scans) of good quality maps, or 
+   oblique aerial images. A minimum of 4 GCPs is required.
+   
+*  Finally, the **Thin Plate Spline** (TPS) algorithm "rubber sheets" the raster using multiple local polynomials to match the GCPs specified, with overall 
+   surface curvature minimized. Areas away from GCPs will be moved around in the output to 
+   accommodate the GCP matching, but will otherwise be minimally locally deformed.  TPS is most useful for georeferencing damaged, deformed, or otherwise slightly 
+   inaccurate maps, or poorly orthorectified aerials.  It is also useful for approximately georeferencing and implicitly reprojecting maps with unknown projection type 
+   or parameters, but where a regular grid or dense set of ad-hoc GCPs can be matched with a reference map layer. It technically requires a minimum of 
+   10 GCPs, but usually more to be successful.
+   
+In all of the algorithms except TPS, if more than the minimum GCPs are specified, parameters will be fitted so that the overall residual error is minimized. 
+This is helpful to minimize the impact of registration errors, i.e. slight imprecisions in pointer clicks or typed coordinates, or other small local image deformations.  
+Absent other GCPs to compensate, such errors or deformations could translate into significant distortions, especially 
+near the edges of the georeferenced image.  However, if more than the minimum GCPs are specified, they will match only approximately in the output.  
+In contrast, TPS will precisely match all specified GCPs, but may introduce significant deformations between nearby GCPs with registration errors.
 
 Define the Resampling method
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The type of resampling you choose will likely depending on your input data
 and the ultimate objective of the exercise. If you don't want to change
-statistics of the image, you might want to choose 'Nearest neighbour', whereas a
-'Cubic resampling' will likely provide a more smoothed result.
+statistics of the raster (other than as implied by nonuniform geometric scaling if using other than the Linear, Helmert, or Polynomial 1 transformations), 
+you might want to choose 'Nearest neighbour'. In contrast, 
+'cubic resampling', for instance, will usually generate a visually smoother result.
 
 It is possible to choose between five different resampling methods:
 
