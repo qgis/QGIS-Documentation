@@ -1468,7 +1468,7 @@ segmented.
 .. _draw_rectangles:
 
 Draw Rectangles
-...............
+---------------
 
 There is a set of tools for drawing rectangles. The tools are described
 below.
@@ -1497,7 +1497,7 @@ below.
 .. _draw_regular_polygons:
 
 Draw Regular Polygons
-.....................
+---------------------
 
 There is a set of tools for drawing regular polygons. The tools are described
 below. Left-click to place the first point.
