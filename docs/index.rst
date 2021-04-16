@@ -38,7 +38,9 @@ Documentation for QGIS |version|
       how to use QGIS nevertheless.
 
 Welcome to the official documentation of `QGIS <https://qgis.org>`_,
-the free and open source community-driven GIS software!
+the free and open source community-driven GIS software whose
+source code is available at https://github.com/qgis/QGIS.
+
 If you are new to this documentation, the table of contents below
 and in the sidebar should let you easily access the documentation
 for your topic of interest. You can also use the search function
