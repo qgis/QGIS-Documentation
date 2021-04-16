@@ -473,8 +473,8 @@ functions are specified:
   Here we first run the ``smoothgeometry`` algorithm to smooth the
   geometry, and then we run the ``buffer`` algorithm on the smoothed
   output.
-  To be able to run the ``smoothgeometry`` algorithm from within the other
-  algorithm we have to set the ``is_child_algorithm`` argument to :const:`True`.
+  To be able to run algorithms from within another algorithm we have to
+  set the ``is_child_algorithm`` argument to :const:`True`.
   You can see how input and output parameters are used as parameters
   to the ``smoothgeometry`` and ``buffer`` algorithms.
 
