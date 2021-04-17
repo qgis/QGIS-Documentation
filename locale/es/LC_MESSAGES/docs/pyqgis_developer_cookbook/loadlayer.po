@@ -1,39 +1,40 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
-# Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020
-# Krotalo25 <krotalo25@gmail.com>, 2020
+# Harrissou Sant-anna, 2020
+# Rodrigo Armesto Baztán <rodri_Armesto@hotmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:24+0000\n"
-"Last-Translator: Krotalo25 <krotalo25@gmail.com>, 2020\n"
+"POT-Creation-Date: 2020-12-13 09:01+0100\n"
+"PO-Revision-Date: 2020-12-24 12:01+0000\n"
+"Last-Translator: Rodrigo Armesto Baztán <rodri_Armesto@hotmail.com>, 2021\n"
 "Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:25
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:26
 msgid "Loading Layers"
 msgstr "Cargar capas"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:27
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:28
 msgid "The code snippets on this page need the following imports:"
 msgstr ""
 "Los fragmentos de código en esta página necesitan las siguientes "
 "importaciones:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:39
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:40
 msgid ""
 "Let's open some layers with data. QGIS recognizes vector and raster layers. "
 "Additionally, custom layer types are available, but we are not going to "
@@ -43,11 +44,11 @@ msgstr ""
 "ráster. Además, están disponibles tipos de capas personalizadas, pero no se "
 "va a discutir de ellas aquí."
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:47
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:48
 msgid "Vector Layers"
 msgstr "Capas Vectoriales"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:49
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:50
 msgid ""
 "To create and add a vector layer instance to the project, specify the "
 "layer's data source identifier, name for the layer and provider's name:"
@@ -56,7 +57,7 @@ msgstr ""
 "especifique el identificador de origen de datos de la capa, el nombre de la "
 "capa y el nombre del proveedor:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:66
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:67
 msgid ""
 "The data source identifier is a string and it is specific to each vector "
 "data provider. Layer's name is used in the layer list widget. It is "
@@ -69,11 +70,11 @@ msgstr ""
 "satisfactoriamente. Si no fue así, se devuelve una instancia de capa no "
 "válida."
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:71
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:72
 msgid "For a geopackage vector layer:"
 msgstr "Para una capa vectorial creada mediante un geopackage: "
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:86
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:87
 msgid ""
 "The quickest way to open and display a vector layer in QGIS is the "
 ":meth:`addVectorLayer() <qgis.gui.QgisInterface.addVectorLayer>` method of "
@@ -84,7 +85,7 @@ msgstr ""
 "<qgis.gui.QgisInterface.addVectorLayer>` perteneciente a  "
 ":class:`QgisInterface <qgis.gui.QgisInterface>`:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:96
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:97
 msgid ""
 "This creates a new layer and adds it to the current QGIS project (making it "
 "appear in the layer list) in one step. The function returns the layer "
@@ -94,7 +95,7 @@ msgstr ""
 "aparecer en el listado de capas)  en un solo paso. La función retorna la "
 "instancia de capa o `None`` si es que no puede cargarla. "
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:100
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:101
 msgid ""
 "The following list shows how to access various data sources using vector "
 "data providers:"
@@ -102,7 +103,7 @@ msgstr ""
 "La siguiente lista muestra cómo acceder a varias fuentes de datos utilizando"
 " los proveedores de datos vectoriales:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:106
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:107
 msgid ""
 "OGR library (Shapefile and many other file formats) --- data source is the "
 "path to the file:"
@@ -110,16 +111,16 @@ msgstr ""
 "Librería OGR ( Shapefile y muchos otros formatos) --- la fuente de datos es "
 "la ruta hacia el archivo:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:109
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:110
 msgid "for Shapefile:"
 msgstr "Para Shapefile:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:116
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:117
 msgid "for dxf (note the internal options in data source uri):"
 msgstr ""
 "Para dxf (tenga en cuenta las opciones internas en la fuente de datos uri):"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:127
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:128
 msgid ""
 "PostGIS database - data source is a string with all information needed to "
 "create a connection to PostgreSQL database."
@@ -128,7 +129,7 @@ msgstr ""
 "la información necesaria para crear una conexión con la base de datos "
 "PostgreSQL. "
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:130
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:131
 msgid ""
 ":class:`QgsDataSourceUri <qgis.core.QgsDataSourceUri>` class can generate "
 "this string for you. Note that QGIS has to be compiled with Postgres "
@@ -139,7 +140,7 @@ msgstr ""
 "compilarse con el soporte de Postgres, o de lo contrario, este proveedor no "
 "estará disponible:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:145
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:146
 msgid ""
 "The ``False`` argument passed to ``uri.uri(False)`` prevents the expansion "
 "of the authentication configuration parameters, if you are not using any "
@@ -150,7 +151,7 @@ msgstr ""
 "utilizando ninguna configuración para autenticación, este argumento no hará "
 "ninguna diferencia. "
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:152
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:153
 msgid ""
 "CSV or other delimited text files --- to open a file with a semicolon as a "
 "delimiter, with field \"x\" for X coordinate and field \"y\" for Y "
@@ -160,7 +161,7 @@ msgstr ""
 "punto y coma como delimitador, con el campo \"x\" para la coordenada X y el "
 "campo \"y\" para la coordenada Y, usaría algo como esto:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:162
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:163
 msgid ""
 "The provider string is structured as a URL, so the path must be prefixed "
 "with ``file://``. Also it allows WKT (well known text) formatted geometries "
@@ -173,7 +174,7 @@ msgstr ""
 "campos ''x'' y ''y'', y permite especificar el sistema de referencia de "
 "coordenadas. Por ejemplo:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:174
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:175
 msgid ""
 "GPX files --- the \"gpx\" data provider reads tracks, routes and waypoints "
 "from gpx files. To open a file, the type (track/route/waypoint) needs to be "
@@ -183,7 +184,7 @@ msgstr ""
 " puntos de interés desde archivos GPX. Para abrir un archivo, el tipo "
 "(caminos/ruta/punto de interés) se debe especificar como parte de la url:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:187
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:188
 msgid ""
 "SpatiaLite database --- Similarly to PostGIS databases, "
 ":class:`QgsDataSourceUri <qgis.core.QgsDataSourceUri>` can be used for "
@@ -193,7 +194,7 @@ msgstr ""
 "PostGIS, :class:'QgsDataSourceUri <qgis.core.QgsDataSourceUri>' puede ser "
 "utilizado para la generación de identificador de origen de datos:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:207
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:208
 msgid ""
 "MySQL WKB-based geometries, through OGR --- data source is the connection "
 "string to the table:"
@@ -201,7 +202,7 @@ msgstr ""
 "Las geometrias basadas en WKB de MySQL, a través de OGR --- la fuente de "
 "datos es la cadena de conexión a la tabla:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:219
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:220
 msgid ""
 "WFS connection: the connection is defined with a URI and using the ``WFS`` "
 "provider:"
@@ -209,11 +210,11 @@ msgstr ""
 "Conexión WFS: La conexión se define con un URL y usando el proveedor `` WFS "
 "'':"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:227
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:228
 msgid "The uri can be created using the standard ``urllib`` library:"
 msgstr "La uri se puede crear utilizando la librería estándar ``urllib``:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:242
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:243
 msgid ""
 "You can change the data source of an existing layer by calling "
 ":meth:`setDataSource() <qgis.core.QgsVectorLayer.setDataSource>` on a "
@@ -225,11 +226,11 @@ msgstr ""
 "instancia de :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>`, como en el "
 "siguiente ejemplo:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:262
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:264
 msgid "Raster Layers"
 msgstr "Capas ráster"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:264
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:266
 msgid ""
 "For accessing raster files, GDAL library is used. It supports a wide range "
 "of file formats. In case you have troubles with opening some files, check "
@@ -244,11 +245,11 @@ msgstr ""
 "predeterminada). Para cargar un raster desde un archivo, especifique el "
 "nombre del archivo y su nombre de visualización:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:277
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:279
 msgid "To load a raster from a geopackage:"
 msgstr "Para cargar una capa raster desde un geopackage:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:291
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:293
 msgid ""
 "Similarly to vector layers, raster layers can be loaded using the "
 "addRasterLayer function of the :class:`QgisInterface "
@@ -258,7 +259,7 @@ msgstr ""
 "cargadas utilizando la función addRasterLayer de un objeto perteneciente a "
 ":class:`QgisInterface <qgis.gui.QgisInterface>`"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:298
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:300
 msgid ""
 "This creates a new layer and adds it to the current project (making it "
 "appear in the layer list) in one step."
@@ -266,23 +267,26 @@ msgstr ""
 "Esto crea una nueva capa y la añade al proyecto actual (haciendo que "
 "aparezca en la lista) en un solo paso. "
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:302
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:304
 msgid "To load a PostGIS raster:"
 msgstr "Para cargar un ráster PostGIS: "
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:304
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:306
 msgid ""
 "PostGIS rasters, similar to PostGIS vectors, can be added to a project using"
-" a URI string. It is efficient to create a dictionary of strings for the "
-"database connection parameters. The dictionary is then loaded into an empty "
-"URI, before adding the raster. Note that None should be used when it is "
-"desired to leave the parameter blank:"
+" a URI string. It is efficient to keep a reusable dictionary of strings for "
+"the database connection parameters. This makes it easy to edit the "
+"dictionary for the applicable connection. The dictionary is then encoded "
+"into a URI using the 'postgresraster' provider metadata object. After that "
+"the raster can be added to the project."
 msgstr ""
 "Los rásteres PostGIS, similares a los vectores PostGIS, se pueden agregar a "
-"un proyecto utilizando una cadena URI. Es eficiente crear un diccionario de "
-"cadenas para los parámetros de conexión de la base de datos. El diccionario "
-"se carga en un URI vacío, antes de agregar el ráster. Tenga en cuenta que "
-"Ninguno debe usarse cuando se desea dejar el parámetro en blanco:"
+"un proyecto mediante una cadena URI. Es eficaz mantener un diccionario de "
+"cadenas reutilizable para los parámetros de conexión de la base de datos. "
+"Esto facilita la edición del diccionario para la conexión correspondiente. "
+"Luego, el diccionario se codifica en un URI utilizando el objeto de "
+"metadatos del proveedor 'postgresraster'. Después de eso, el ráster se puede"
+" agregar al proyecto."
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:352
 msgid "Raster layers can also be created from a WCS service:"
