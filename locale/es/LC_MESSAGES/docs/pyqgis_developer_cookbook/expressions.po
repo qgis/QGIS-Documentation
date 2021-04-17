@@ -6,20 +6,21 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2020
+# Rodrigo Armesto Baztán <rodri_Armesto@hotmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-13 09:01+0100\n"
+"POT-Creation-Date: 2021-02-10 02:04+0000\n"
 "PO-Revision-Date: 2020-12-24 12:01+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"Last-Translator: Rodrigo Armesto Baztán <rodri_Armesto@hotmail.com>, 2021\n"
 "Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.8.0\n"
+"Generated-By: Babel 2.9.0\n"
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -39,16 +40,16 @@ msgstr "Expresiones, Filtros y Calculando Valores"
 msgid ""
 "QGIS has some support for parsing of SQL-like expressions. Only a small "
 "subset of SQL syntax is supported. The expressions can be evaluated either "
-"as boolean predicates (returning True or False) or as functions (returning a"
-" scalar value). See :ref:`vector_expressions` in the User Manual for a "
-"complete list of available functions."
+"as boolean predicates (returning :const:`True` or :const:`False`) or as "
+"functions (returning a scalar value). See :ref:`vector_expressions` in the "
+"User Manual for a complete list of available functions."
 msgstr ""
-"QGIS tiene apoyo para el análisis de expresiones parecidas al SQL. Solo se "
-"reconoce un pequeño subconjunto de sintaxis SQL. Las expresiones pueden ser "
-"evaluados ya sea como predicados booleanos (regresando Verdadero o Falso ) o"
-" como funciones (regresando un valor escalar). Vea :ref:`vector_expressions`"
-" en el Manual del usuario para obtener una lista completa de las funciones "
-"disponibles."
+"QGIS tiene cierto soporte para analizar expresiones similares a SQL. Solo se"
+" admite un pequeño subconjunto de sintaxis SQL. Las expresiones se pueden "
+"evaluar como predicados booleanos (devolviendo :const:`True` o "
+":const:`False`) o como funciones (devolviendo un valor escalar). Consulte "
+":ref:`vector_expressions` en el Manual del usuario para obtener una lista "
+"completa de las funciones disponibles."
 
 #: ../../docs/pyqgis_developer_cookbook/expressions.rst:45
 msgid "Three basic types are supported:"
@@ -209,14 +210,22 @@ msgid "Basic Expressions"
 msgstr "Expresiones Basicas"
 
 #: ../../docs/pyqgis_developer_cookbook/expressions.rst:114
-msgid "This basic expression evaluates to 1, meaning it is true:"
-msgstr "Esta expresión básica se evalúa a 1, lo que significa que es cierto:"
+msgid "This basic expression evaluates a simple arithmetic operation:"
+msgstr "Esta expresión básica evalúa una operación aritmética simple:"
 
-#: ../../docs/pyqgis_developer_cookbook/expressions.rst:123
+#: ../../docs/pyqgis_developer_cookbook/expressions.rst:127
+msgid ""
+"Expression can also be used for comparison, evaluating to 1 (:const:`True`) "
+"or 0 (:const:`False`)"
+msgstr ""
+"La expresión también se puede utilizar para comparar, evaluando 1 "
+"(:const:`True`) o 0 (:const:`False`)"
+
+#: ../../docs/pyqgis_developer_cookbook/expressions.rst:138
 msgid "Expressions with features"
 msgstr "Expresiones con caracteristicas"
 
-#: ../../docs/pyqgis_developer_cookbook/expressions.rst:125
+#: ../../docs/pyqgis_developer_cookbook/expressions.rst:140
 msgid ""
 "To evaluate an expression against a feature, a :class:`QgsExpressionContext "
 "<qgis.core.QgsExpressionContext>` object has to be created and passed to the"
@@ -228,7 +237,7 @@ msgstr ""
 "la función de evaluación para permitir que la expresión acceda a los valores"
 " de campo de la entidad."
 
-#: ../../docs/pyqgis_developer_cookbook/expressions.rst:129
+#: ../../docs/pyqgis_developer_cookbook/expressions.rst:144
 msgid ""
 "The following example shows how to create a feature with a field called "
 "\"Column\" and how to add this feature to the expression context."
@@ -236,7 +245,7 @@ msgstr ""
 "El siguiente ejemplo muestra cómo crear una entidad con un campo llamado "
 "\"Columna\" y cómo agregar esta entidad al contexto de expresión."
 
-#: ../../docs/pyqgis_developer_cookbook/expressions.rst:147
+#: ../../docs/pyqgis_developer_cookbook/expressions.rst:163
 msgid ""
 "The following is a more complete example of how to use expressions in the "
 "context of a vector layer, in order to compute new field values:"
@@ -244,11 +253,11 @@ msgstr ""
 "El siguiente es un ejemplo más completo de cómo usar expresiones en el "
 "contexto de una capa vectorial, para calcular nuevos valores de campo:"
 
-#: ../../docs/pyqgis_developer_cookbook/expressions.rst:214
+#: ../../docs/pyqgis_developer_cookbook/expressions.rst:230
 msgid "Filtering a layer with expressions"
 msgstr "Flitrando una capa con expresiones"
 
-#: ../../docs/pyqgis_developer_cookbook/expressions.rst:216
+#: ../../docs/pyqgis_developer_cookbook/expressions.rst:232
 msgid ""
 "The following example can be used to filter a layer and return any feature "
 "that matches a predicate."
@@ -256,11 +265,11 @@ msgstr ""
 "El siguiente ejemplo se puede utilizar para filtra capas y regresar "
 "cualquier característica que empata con el predicado."
 
-#: ../../docs/pyqgis_developer_cookbook/expressions.rst:243
+#: ../../docs/pyqgis_developer_cookbook/expressions.rst:263
 msgid "Handling expression errors"
 msgstr "Manejando errores de expresión"
 
-#: ../../docs/pyqgis_developer_cookbook/expressions.rst:245
+#: ../../docs/pyqgis_developer_cookbook/expressions.rst:265
 msgid ""
 "Expression-related errors can occur during expression parsing or evaluation:"
 msgstr ""
