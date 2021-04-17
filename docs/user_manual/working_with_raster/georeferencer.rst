@@ -192,7 +192,7 @@ In contrast, TPS will precisely match all specified GCPs, but may introduce sign
 Define the Resampling method
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The type of resampling you choose will likely depending on your input data
+The type of resampling you choose will likely depend on your input data
 and the ultimate objective of the exercise. If you don't want to change
 statistics of the raster (other than as implied by nonuniform geometric scaling if using other than the Linear, Helmert, or Polynomial 1 transformations), 
 you might want to choose 'Nearest neighbour'. In contrast, 
