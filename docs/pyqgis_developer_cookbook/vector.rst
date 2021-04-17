@@ -728,8 +728,8 @@ There are several ways to generate a vector layer dataset:
 
 * the :class:`QgsVectorFileWriter <qgis.core.QgsVectorFileWriter>` class:
   A convenient class for writing vector files to disk, using either a static
-  call to :meth:`writeAsVectorFormat()
-  <qgis.core.QgsVectorFileWriter.writeAsVectorFormat>` which saves the whole
+  call to :meth:`writeAsVectorFormatV3()
+  <qgis.core.QgsVectorFileWriter.writeAsVectorFormatV3>` which saves the whole
   vector layer or creating an instance of the class and issue calls to
   :meth:`addFeature() <qgis.core.QgsVectorFileWriter.addFeature>`. This class
   supports all the vector formats that OGR supports (GeoPackage, Shapefile,
@@ -751,7 +751,7 @@ From an instance of :class:`QgsVectorFileWriter <qgis.core.QgsVectorFileWriter>`
   save_options = QgsVectorFileWriter.SaveVectorOptions()
   transform_context = QgsProject.instance().transformContext()
   # Write to a GeoPackage (default)
-  error = QgsVectorFileWriter.writeAsVectorFormatV2(layer,
+  error = QgsVectorFileWriter.writeAsVectorFormatV3(layer,
                                                     "testdata/my_new_file.gpkg",
                                                     transform_context,
                                                     save_options)
@@ -772,7 +772,7 @@ From an instance of :class:`QgsVectorFileWriter <qgis.core.QgsVectorFileWriter>`
   save_options.driverName = "ESRI Shapefile"
   save_options.fileEncoding = "UTF-8"
   transform_context = QgsProject.instance().transformContext()
-  error = QgsVectorFileWriter.writeAsVectorFormatV2(layer,
+  error = QgsVectorFileWriter.writeAsVectorFormatV3(layer,
                                                     "testdata/my_new_shapefile",
                                                     transform_context,
                                                     save_options)
@@ -799,7 +799,7 @@ From an instance of :class:`QgsVectorFileWriter <qgis.core.QgsVectorFileWriter>`
   save_options.layerName = 'my_new_layer_name'
   transform_context = QgsProject.instance().transformContext()
   gdb_path = "testdata/my_example.gdb"
-  error = QgsVectorFileWriter.writeAsVectorFormatV2(layer,
+  error = QgsVectorFileWriter.writeAsVectorFormatV3(layer,
                                                   gdb_path,
                                                   transform_context,
                                                   save_options)
