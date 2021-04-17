@@ -1,25 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
-# micirculopolar <lfernandez@geosistec.com>, 2020
-# Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020
+# Harrissou Sant-anna, 2020
+# Rodrigo Armesto Baztán <rodri_Armesto@hotmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:24+0000\n"
-"Last-Translator: Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020\n"
+"POT-Creation-Date: 2021-01-12 10:14+0000\n"
+"PO-Revision-Date: 2020-12-24 10:18+0000\n"
+"Last-Translator: Rodrigo Armesto Baztán <rodri_Armesto@hotmail.com>, 2021\n"
 "Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -115,7 +116,7 @@ msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/tasks.rst:97
 msgid ""
-"Dependencies between tasks can be described using the :meth:`addSubTask "
+"Dependencies between tasks can be described using the :meth:`addSubTask() "
 "<qgis.core.QgsTask.addSubTask>` function of :class:`QgsTask "
 "<qgis.core.QgsTask>`. When a dependency is stated, the task manager will "
 "automatically determine how these dependencies will be executed. Wherever "
@@ -125,24 +126,24 @@ msgid ""
 "deadlocks possible, so be careful."
 msgstr ""
 "Las dependencias entre tareas se pueden describir utilizando la función "
-":meth:`addSubTask <qgis.core.QgsTask.addSubTask>` de :class:`QgsTask "
+":meth:`addSubTask() <qgis.core.QgsTask.addSubTask>` de :class:`QgsTask "
 "<qgis.core.QgsTask>`. Cuando se establece una dependencia, el administrador "
 "de tareas determinará automáticamente cómo se ejecutarán estas dependencias."
 " Siempre que sea posible, las dependencias se ejecutarán en paralelo para "
 "satisfacerlas lo más rápido posible. Si se cancela una tarea de la que "
 "depende otra tarea, la tarea dependiente también se cancelará. Las "
-"dependencias circulares pueden hacer posibles puntos muertos, así que tenga "
-"cuidado."
+"dependencias circulares pueden hacer posibles los interbloqueos, así que "
+"tenga cuidado."
 
 #: ../../docs/pyqgis_developer_cookbook/tasks.rst:107
 msgid ""
 "If a task depends on a layer being available, this can be stated using the "
-":meth:`setDependentLayers <qgis.core.QgsTask.setDependentLayers>` function "
-"of :class:`QgsTask <qgis.core.QgsTask>`. If a layer on which a task depends "
-"is not available, the task will be canceled."
+":meth:`setDependentLayers() <qgis.core.QgsTask.setDependentLayers>` function"
+" of :class:`QgsTask <qgis.core.QgsTask>`. If a layer on which a task depends"
+" is not available, the task will be canceled."
 msgstr ""
-"Si una tarea depende de que haya una capa disponible, esto se puede "
-"establecer utilizando la función :meth:`setDependentLayers "
+"Si una tarea depende de que haya una capa disponible, esto se puede indicar "
+"usando la función :meth:`setDependentLayers() "
 "<qgis.core.QgsTask.setDependentLayers>` de :class:`QgsTask "
 "<qgis.core.QgsTask>`. Si una capa de la que depende una tarea no está "
 "disponible, la tarea se cancelará."
@@ -150,20 +151,20 @@ msgstr ""
 #: ../../docs/pyqgis_developer_cookbook/tasks.rst:113
 msgid ""
 "Once the task has been created it can be scheduled for running using the "
-":meth:`addTask <qgis.core.QgsTaskManager.addTask>` function of the task "
+":meth:`addTask() <qgis.core.QgsTaskManager.addTask>` function of the task "
 "manager. Adding a task to the manager automatically transfers ownership of "
 "that task to the manager, and the manager will cleanup and delete tasks "
 "after they have executed. The scheduling of the tasks is influenced by the "
-"task priority, which is set in :meth:`addTask "
+"task priority, which is set in :meth:`addTask() "
 "<qgis.core.QgsTaskManager.addTask>`."
 msgstr ""
-"Una vez que se ha creado la tarea, se puede programar para ejecutarse "
-"utilizando la función :meth:`addTask <qgis.core.QgsTaskManager.addTask>` del"
-" administrador de tareas. Agregar una tarea al administrador transfiere "
+"Una vez que se ha creado la tarea, se puede programar su ejecución "
+"utilizando la función :meth:`addTask() <qgis.core.QgsTaskManager.addTask>` "
+"del administrador de tareas. Agregar una tarea al administrador transfiere "
 "automáticamente la propiedad de esa tarea al administrador, y el "
 "administrador limpiará y eliminará las tareas después de que se hayan "
 "ejecutado. La programación de las tareas está influenciada por la prioridad "
-"de la tarea, que se establece en :meth:`addTask "
+"de la tarea, que se establece en :meth:`addTask() "
 "<qgis.core.QgsTaskManager.addTask>`."
 
 #: ../../docs/pyqgis_developer_cookbook/tasks.rst:121
@@ -235,6 +236,6 @@ msgstr ""
 "una extensión específica. El resultado se agrega al proyecto de manera "
 "segura."
 
-#: ../../docs/pyqgis_developer_cookbook/tasks.rst:431
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:432
 msgid "See also: https://opengis.ch/2018/06/22/threads-in-pyqgis3/."
 msgstr "Ver también: https://opengis.ch/2018/06/22/threads-in-pyqgis3/."
