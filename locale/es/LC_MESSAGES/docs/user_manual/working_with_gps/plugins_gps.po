@@ -1,24 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
-# Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020
+# Harrissou Sant-anna, 2020
+# Rodrigo Armesto Baztán <rodri_Armesto@hotmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:32+0000\n"
-"Last-Translator: Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020\n"
+"POT-Creation-Date: 2021-01-12 10:14+0000\n"
+"PO-Revision-Date: 2020-12-24 10:17+0000\n"
+"Last-Translator: Rodrigo Armesto Baztán <rodri_Armesto@hotmail.com>, 2021\n"
 "Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -123,11 +125,11 @@ msgstr ""
 msgid ""
 "Select :menuselection:`Vector --> GPS Tools` or click the |importGPX| "
 ":sup:`GPS Tools` icon in the toolbar and open the :guilabel:`Load GPX file` "
-"tab (see figure_GPS_)."
+"tab (see :numref:`figure_GPS`)."
 msgstr ""
-"Seleccione :menuselection:`Vector -> GPS Tools` o haga clic en el icono "
-"|importGPX| :sup:`Herramientas GPS` en la barra de herramientas y abra la "
-"pestaña :guilabel:`Cargar archivo GPX` (ver figura_GPS_)."
+"Selecciona :menuselection:`Vectorial --> Herramientas GPS` o click en el "
+"icono |importGPX| :sup:`Herramientas GPS` en la barra de herramientas y abre"
+" la pestaña :guilabel:`Cargar archivo GPX` (ver :numref:`figure_GPS`)."
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:57
 msgid ""
@@ -224,18 +226,18 @@ msgstr "Descarga de datos GPS desde un dispositivo"
 msgid ""
 "QGIS can use GPSBabel to download data from a GPS device directly as new "
 "vector layers. For this we use the :guilabel:`Download from GPS` tab of the "
-"GPS Tools dialog (see Figure_GPS_download_). Here, we select the type of GPS"
-" device, the port that it is connected to (or USB if your GPS supports "
-"this), the feature type that you want to download, the GPX file where the "
-"data should be stored, and the name of the new layer."
+"GPS Tools dialog (see :numref:`Figure_GPS_download`). Here, we select the "
+"type of GPS device, the port that it is connected to (or USB if your GPS "
+"supports this), the feature type that you want to download, the GPX file "
+"where the data should be stored, and the name of the new layer."
 msgstr ""
 "QGIS puede usar GPSBabel para descargar datos de un dispositivo GPS "
 "directamente como nuevas capas vectoriales. Para ello usamos la pestaña "
-":guilabel:`Descargar desde GPS` del cuadro de diálogo Herramientas GPS (ver "
-"Figura_GPS_download_). Aquí, seleccionamos el tipo de dispositivo GPS, el "
-"puerto al que está conectado (o USB si su GPS lo admite), el tipo de función"
-" que desea descargar, el archivo GPX donde se deben almacenar los datos y el"
-" nombre de la nueva capa."
+":guilabel:`Descargar desde GPS` del cuadro de diálogo Herramientas de GPS "
+"(ver :numref:`Figure_GPS_download`). Aquí, seleccionamos el tipo de "
+"dispositivo GPS, el puerto al que está conectado (o USB si su GPS lo "
+"admite), el tipo de función que desea descargar, el archivo GPX donde se "
+"deben almacenar los datos y el nombre de la nueva capa."
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:117
 msgid "The download tool"
@@ -336,6 +338,7 @@ msgstr ""
 "dispositivos` en la pestaña de descarga o carga."
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:159
+#, python-format
 msgid ""
 "To define a new device, you simply click the :guilabel:`New Device` button, "
 "enter a name, enter download and upload commands for your device, and click "
@@ -371,6 +374,7 @@ msgstr ""
 "descargar."
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:172
+#, python-format
 msgid ""
 "``%in`` will be replaced by the port name that you choose in the download "
 "window and ``%out`` will be replaced by the name you choose for the GPX file"
@@ -392,6 +396,7 @@ msgstr ""
 "``gpsbabel -w -i garmin -o gpx /dev/ttyS0 output.gpx``."
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:181
+#, python-format
 msgid ""
 "The upload command is the command that is used to upload data to the device."
 " The same keywords are used, but ``%in`` is now replaced by the name of the "
