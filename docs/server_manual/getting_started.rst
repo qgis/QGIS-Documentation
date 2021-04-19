@@ -42,6 +42,8 @@ To test the installation, run:
  
 If you get the following output, the server is correctly installed
 
+.. note:: Depending on the version of QGIS, you might see slightly different output reported when your run ``qgis_mapserv.fcgi``
+
 .. code-block::
 
     QFSFileEngine::open: No file name specified
@@ -56,6 +58,29 @@ If you get the following output, the server is correctly installed
     <ServiceExceptionReport version="1.3.0" xmlns="https://www.opengis.net/ogc">
      <ServiceException code="Service configuration error">Service unknown or unsupported</ServiceException>
     </ServiceExceptionReport>
+
+.. note:: As seen below, QGIS 3.16.x reports a Status 400 code, which correctly identifies the request has failed because there is no active http session.  This is not a bug and indicates the server is functioning properly
+
+.. code-block::
+
+    Application path not initialized
+    Application path not initialized
+    Warning 1: Unable to find driver ECW to unload from GDAL_SKIP environment variable.
+    Warning 1: Unable to find driver ECW to unload from GDAL_SKIP environment variable.
+    Warning 1: Unable to find driver JP2ECW to unload from GDAL_SKIP environment variable.
+    "Loading native module /usr/lib/qgis/server/libdummy.so"
+    "Loading native module /usr/lib/qgis/server/liblandingpage.so"
+    "Loading native module /usr/lib/qgis/server/libwcs.so"
+    "Loading native module /usr/lib/qgis/server/libwfs.so"
+    "Loading native module /usr/lib/qgis/server/libwfs3.so"
+    "Loading native module /usr/lib/qgis/server/libwms.so"
+    "Loading native module /usr/lib/qgis/server/libwmts.so"
+    QFSFileEngine::open: No file name specified
+    Content-Length: 102
+    Content-Type: application/json
+    Server:  QGIS FCGI server - QGIS version 3.16.6-Hannover
+    Status:  400
+    [{"code":"Bad request error","description":"Requested URI does not match any registered API handler"}]
 
 Let's add a sample project. You can use your own, or one from
 `Training demo data <https://github.com/qgis/QGIS-Training-Data/>`_:
