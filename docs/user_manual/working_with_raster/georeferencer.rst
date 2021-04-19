@@ -101,7 +101,7 @@ Entering ground control points (GCPs)
    For this procedure you have three options:
 
    - Click on a point in the raster image and enter the X and Y coordinates
-     manually.
+     manually, along with the CRS of the points.
    - Click on a point in the raster image and choose the |pencil|
      :sup:`From map canvas` button to add the X and Y coordinates with the help of a
      georeferenced map already loaded in the QGIS map canvas.
