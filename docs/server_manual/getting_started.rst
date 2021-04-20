@@ -42,7 +42,7 @@ To test the installation, run:
  
 If you get the following output, the server is correctly installed
 
-.. note:: Depending on the version of QGIS, you might see slightly different output reported when your run ``qgis_mapserv.fcgi``
+.. note:: Depending on the version of QGIS, you might see slightly different output reported when you run ``qgis_mapserv.fcgi``
 
 .. code-block::
 
