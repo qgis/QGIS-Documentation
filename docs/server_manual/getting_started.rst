@@ -59,7 +59,9 @@ If you get the following output, the server is correctly installed
      <ServiceException code="Service configuration error">Service unknown or unsupported</ServiceException>
     </ServiceExceptionReport>
 
-.. note:: As seen below, QGIS 3.16.x reports a Status 400 code, which correctly identifies the request has failed because there is no active http session.  This is not a bug and indicates the server is functioning properly
+.. note:: As seen below, QGIS reports a Status 400 code, which correctly
+  identifies the request has failed because there is no active http session.
+  This is not a bug and indicates the server is functioning properly.
 
 .. code-block::
 
