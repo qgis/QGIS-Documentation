@@ -303,7 +303,8 @@ steps necessary for QGIS to load the resources:
 * Authentication database's master password needs to be available
 
 When instantiating the authentication system, Server will create or use
-:file:`qgis-auth.db` in :file:`~/.qgis2/` or the directory defined by the
+:file:`qgis-auth.db` file in the active :ref:`user profile <user_profiles>`,
+or the  directory defined by the
 ``QGIS_AUTH_DB_DIR_PATH`` environment variable. It may be that the Server's user
 has no HOME directory, in which case, use the environment variable to define a
 directory that the Server's user has read/write permissions and is not located
