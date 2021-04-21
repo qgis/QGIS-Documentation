@@ -610,7 +610,8 @@ the OGC WMS 1.1.1 and 1.3.0 specifications:
    ":ref:`SERVICE <wms-service>`", "Yes", "Name of the service (**WMS**)"
    ":ref:`VERSION <wms-version>`", "No", "Version of the service"
    ":ref:`REQUEST <wms-getfeatureinfo-request>`", "Yes", "Name of the request (**GetFeatureInfo**)"
-   ":ref:`LAYERS <wms-layers>`", "No", "Layers to display"
+   ":ref:`QUERY_LAYERS <wms-querylayers>`", "Yes", "Layers to query"
+   ":ref:`LAYERS <wms-layers>`", "Yes", "Layers to display (identical to `QUERY_LAYERS`)"
    ":ref:`STYLES <wms-styles>`", "No", "Layers' style"
    ":ref:`SRS / CRS <wms-srs>`", "Yes", "Coordinate reference system"
    ":ref:`BBOX <wms-bbox>`", "No", "Map extent"
@@ -618,7 +619,6 @@ the OGC WMS 1.1.1 and 1.3.0 specifications:
    ":ref:`HEIGHT <wms-height>`", "Yes", "Height of the image in pixels"
    ":ref:`TRANSPARENT <wms-transparent>`", "No", "Transparent background"
    ":ref:`INFO_FORMAT <wms-infoformat>`", "No", "Output format"
-   ":ref:`QUERY_LAYERS <wms-querylayers>`", "Yes", "Layers to query"
    ":ref:`FEATURE_COUNT <wms-featurecount>`", "No", "Maximum number of features to return"
    ":ref:`I <wms-i>`", "No", "Pixel column of the point to query"
    ":ref:`X <wms-x>`", "No", "Same as `I` parameter, but in WMS 1.1.1"
@@ -627,6 +627,7 @@ the OGC WMS 1.1.1 and 1.3.0 specifications:
    "WMS_PRECISION", "No", "The precision (number of digits) to be used
    when returning geometry (see :ref:`how to add geometry to feature response <addGeometryToFeatureResponse>`).
    The default value is ``-1`` meaning that the precision defined in the project is used."
+
 
 In addition to the standard ones, QGIS Server supports the following
 extra parameters:
