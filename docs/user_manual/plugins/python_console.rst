@@ -72,8 +72,9 @@ The console main features are:
 * :kbd:`Ctrl+Shift+Space` to view the command history: double-clicking a row
   will execute the command. The :guilabel:`Command History` dialog can also be
   accessed from context menu of input area;
-* Save and clear the command history. The history will be saved into the file
-  :file:`~/.qgis2/console_history.txt`;
+* Save and clear the command history. The history will be saved into the
+  :file:`console_history.txt` file under the active :ref:`user profile
+  <user_profiles>` folder;
 * Open :api:`QGIS C++ API <>` documentation by typing ``_api``;
 * Open :pyqgis:`QGIS Python API <>` documentation by typing ``_pyqgis``.
 * Open :ref:`PyQGIS Cookbook <PyQGIS-Developer-Cookbook>` by typing ``_cookbook``.

@@ -1983,8 +1983,8 @@ file if applicable and to check if the style should be the default style.
 
 You can save several styles for a single table in the database. However, each
 table can have only one default style. Default styles can be saved in the layer
-database or in the QGIS local database, a SQLite database in the :file:`~/.qgis2/`
-directory (where QGIS stores its local settings).
+database or in :file:`qgis.db`, a local SQLite database in the active
+:ref:`user profile <user_profiles>` directory.
 
 .. _figure_save_style_database:
 
