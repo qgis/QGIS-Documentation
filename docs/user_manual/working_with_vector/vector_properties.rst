@@ -2261,14 +2261,15 @@ constraints and:
 
 * if it meets all the requirements, a green check is shown beside the field
   in the form;
-* if it does not meet all the requirements, then a yellow or red cross is
-  displayed near the field. You can hover over the cross to remind which
+* if it does not meet all the requirements, then the field is colored in yellow
+  or orange and a corresponding cross is displayed next to the widget.
+  You can hover over the cross to remind which
   constraints are applied to the field and fix the value:
 
   * A yellow cross appears when the unmet constraint is an unenforced one
     and it does not prevent you to save the changes with the "wrong"
     values;
-  * A red cross can not be ignored and does not allow you to save your
+  * An orange cross can not be ignored and does not allow you to save your
     modifications until they meet the constraints. It appears when the
     |checkbox| :guilabel:`Enforce constraint` option is checked.
 
