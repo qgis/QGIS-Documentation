@@ -20,6 +20,7 @@ PyQGIS Developer Cookbook
    composer
    expressions
    settings
+   temporal_data
    communicating
    authentication
    tasks
