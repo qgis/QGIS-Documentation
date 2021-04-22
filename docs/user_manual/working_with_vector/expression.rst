@@ -261,6 +261,16 @@ Some use cases of expressions
       )
     )
 
+* In a print layout label, display the name of the "airports" features that are
+  within the layout "Map 1" item::
+
+   with_variable( 'extent',
+                  map_get( item_variables( 'Map 1' ), 'map_extent' ),
+                  aggregate( 'airports', 'concatenate', "NAME",
+                             intersects( $geometry, @extent ), ' ,'
+                           )
+                )
+
 
 .. _user_expressions_functions:
 
