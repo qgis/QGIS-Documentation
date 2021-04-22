@@ -218,7 +218,6 @@ For multipart geometries there are similar accessor functions:
 and :meth:`asMultiPolygon() <qgis.core.QgsGeometry.asMultiPolygon>`.
 
 
-
 It is possible to iterate over all the parts of a geometry,
 regardless of the geometry's type. E.g.
 
@@ -244,12 +243,10 @@ regardless of the geometry's type. E.g.
 
   LineString (0 0, 10 10)
 
-There are two iterators available:
+It's also possible to modify each part of the geometry using
+:meth:`QgsGeometry.parts() <qgis.core.QgsGeometry.parts>` method.
 
-* :meth:`QgsGeometry.parts() <qgis.core.QgsGeometry.parts>` gives
-  a non-const iterator, allowing the parts to be modified in place:
-
-  .. testcode:: geometry
+.. testcode:: geometry
 
     geom = QgsGeometry.fromWkt( 'MultiPoint( 0 0, 1 1, 2 2)' )
     for part in geom.parts():
@@ -261,30 +258,9 @@ There are two iterators available:
 
     print(geom.asWkt())
 
-  .. testoutput:: geometry
+.. testoutput:: geometry
 
     MultiPoint ((-10334726.79314761981368065 -5360105.10101188533008099),(-10462133.82917750626802444 -5217484.34365727473050356),(-10589398.51346865110099316 -5072020.358805269934237))
-
-* :meth:`QgsGeometry.constParts() <qgis.core.QgsGeometry.constParts>` gives
-  a const iterator, which cannot edit the parts but avoids a potentially
-  expensive :class:`QgsGeometry <qgis.core.QgsGeometry>` detach and clone.
-
-  .. testcode:: geometry
-
-    geom = QgsGeometry.fromWkt( 'MultiPoint( 0 0, 1 1, 2 2)' )
-    for part in geom.constParts():
-      part.transform(QgsCoordinateTransform(
-        QgsCoordinateReferenceSystem("EPSG:4326"),
-        QgsCoordinateReferenceSystem("EPSG:3111"),
-        QgsProject.instance())
-      )
-
-    print(geom.asWkt())
-
-  .. testoutput:: geometry
-
-    MultiPoint ((-10334726.79314761981368065 -5360105.10101188533008099),(-10462133.82917750626802444 -5217484.34365727473050356),(-10589398.51346865110099316 -5072020.358805269934237))
-
 
 
 .. index:: Geometry; Predicates and operations
