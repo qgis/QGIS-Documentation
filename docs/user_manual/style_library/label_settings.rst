@@ -93,9 +93,11 @@ In the |text| :guilabel:`Text` tab, you can set:
   whether the text should be underlined or striked through
 * the :guilabel:`Size` in any :ref:`supported unit <unit_selector>`
 * the :guilabel:`Color`
-* and the :guilabel:`Opacity`.
+* the :guilabel:`Opacity`
+* and :guilabel:`Allow HTML Formatting`.
 
-
+The HTML formatting option enables the proper rendering of some HTML tag to customize the label.
+The supported tags are the HTML Color tags, underline, strikethrough, and overline for the text.
 
 At the bottom of the tab, a widget shows a filterable list of compatible items
 stored in your :ref:`style manager database <vector_style_manager>`.
