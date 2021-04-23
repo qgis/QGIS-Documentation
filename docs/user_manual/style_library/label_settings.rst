@@ -422,6 +422,7 @@ tab and activate the |checkbox| :guilabel:`Draw callouts`. Then you can:
    * Fixed position at the edge (:guilabel:`Top left`, :guilabel:`Top center`,
      :guilabel:`Top right`, :guilabel:`Left middle`, :guilabel:`Right middle`,
      :guilabel:`Bottom left`, :guilabel:`Bottom center` and :guilabel:`Bottom right`).
+
 Callouts can also be controlled manually by using the Movel Label tool in the Labelling Toolbar.
 The start and end point of each callout can be moved this way. The nodes should be highlighted
 when the mouse pointer is nearby. If needed the Shift Key can be held during the movement.
@@ -622,7 +623,7 @@ Geometry Generator
 
 The :guilabel:'Geometry Generator' section allows a user to atler the label geometry
 by using expressions. This can be usefulto perform displacement of the geomtry dynamically
- or to convert it to another geometry.
+or to convert it to another geometry.
 Some other options include:
 
 -Use the @map_scale variable to calculate distances / sizes be zoom level independent.
