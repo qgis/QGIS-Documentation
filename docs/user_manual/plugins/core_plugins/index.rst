@@ -11,7 +11,6 @@ Using QGIS Core Plugins
 .. toctree::
    :maxdepth: 1
 
-   plugins_coordinate_capture
    plugins_db_manager
    plugins_geometry_checker
    plugins_metasearch
@@ -25,7 +24,6 @@ They are not necessarily enabled by default.
 ======================  ============================  ======================================================  ===============================
 Icon                    Plugin                        Description                                             Manual Reference
 ======================  ============================  ======================================================  ===============================
-|coordinateCapture|     Coordinate Capture            Capture mouse coordinate in different CRS               :ref:`coordcapt`
 |dbManager|             DB Manager                    Manage your databases within QGIS                       :ref:`dbmanager`
 |geometryChecker|       Geometry Checker              Check and repair errors in vector geometries            :ref:`geometry_checker`
 |gpsImporter|           GPS Tools                     Tools for loading and importing GPS data                :ref:`plugin_gps`
@@ -43,8 +41,6 @@ Icon                    Plugin                        Description               
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |coordinateCapture| image:: /static/common/coordinate_capture.png
-   :width: 1.5em
 .. |dbManager| image:: /static/common/dbmanager.png
    :width: 1.5em
 .. |geometryChecker| image:: /static/common/geometrychecker.png
