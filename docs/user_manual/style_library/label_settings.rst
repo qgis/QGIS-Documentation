@@ -390,6 +390,10 @@ tab and activate the |checkbox| :guilabel:`Draw callouts`. Then you can:
 
    * :guilabel:`Simple lines`: a straight line, the shortest path
    * :guilabel:`Manhattan style`: a 90° broken line
+   * :guilabel:`Curved lines`: a curved line
+   * :guilabel:`Balloons`: a polygon surrounding the label and pointing to the feature, can have rounded corners
+
+
 
 #. Select the :guilabel:`Line style` with full capabilities of a :ref:`line
    symbol <vector_line_symbols>` including layer effects, and data-defined
@@ -534,6 +538,9 @@ Next to placement modes, you can set:
     * |labelAnchorEnd| :guilabel:`End of Line`
     * or |labelAnchorCustom| :guilabel:`Custom...`.
 
+  * :guilabel:`Clipping`: Determines how the line placement is calculated.
+    By default only the visible extent of the line is used but the whole extent
+    can be used to have more consistent results.
   * :guilabel:`Placement Behavior`: use :guilabel:`Preferred Placement Hint`
     to treat the label anchor only as a hint for the label placement.
     By choosing :guilabel:`Strict`, labels are placed exactly on the label
