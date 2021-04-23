@@ -418,7 +418,10 @@ tab and activate the |checkbox| :guilabel:`Draw callouts`. Then you can:
    * Fixed position at the edge (:guilabel:`Top left`, :guilabel:`Top center`,
      :guilabel:`Top right`, :guilabel:`Left middle`, :guilabel:`Right middle`,
      :guilabel:`Bottom left`, :guilabel:`Bottom center` and :guilabel:`Bottom right`).
-
+Callouts can also be controlled manually by using the Movel Label tool in the Labelling Toolbar.
+The start and end point of each callout can be moved this way. The nodes should be highlighted
+when the mouse pointer is nearby. If needed the Shift Key can be held during the movement.
+This will snap the point in a way that the angle between the two point in increment of 15 degree.
 
 .. _labels_placement:
 
