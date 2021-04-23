@@ -1,32 +1,40 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
-# mnamihdk, 2020
+# Harrissou Sant-anna, 2020
+# fairtommy <fairtommy@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:23+0000\n"
-"Last-Translator: mnamihdk, 2020\n"
+"POT-Creation-Date: 2020-12-13 09:01+0100\n"
+"PO-Revision-Date: 2020-12-24 10:26+0000\n"
+"Last-Translator: fairtommy <fairtommy@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:35
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:11
+msgid ""
+"The code snippets on this page need the following imports if you're outside "
+"the pyqgis console:"
+msgstr "pyqgisコンソールの外部にいる場合、このページのコードスニペットでは以下のインポートが必要になります："
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:29
 msgid "Loading Projects"
 msgstr "プロジェクトをロードする"
 
-#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:37
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:31
 msgid ""
 "Sometimes you need to load an existing project from a plugin or (more often)"
 " when developing a standalone QGIS Python application (see: "
@@ -35,7 +43,7 @@ msgstr ""
 "時々プラグインから、または（しばしば）スタンドアローンのQGIS "
 "Pythonアプリケーションを開発する時に既存のプロジェクトをロードする必要があります（参照： :ref:`pythonapplications` ）。"
 
-#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:44
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:38
 msgid ""
 "To load a project into the current QGIS application you need to create an "
 "instance of the :class:`QgsProject <qgis.core.QgsProject>` class. This is a "
@@ -49,7 +57,7 @@ msgstr ""
 "<qgis.core.QgsProject.instance>` メソッドを使わなければなりません。  :meth:`read() "
 "<qgis.core.QgsProject.read>` メソッドを呼び出して、読み込むプロジェクトのパスを渡すことができます。"
 
-#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:75
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:63
 msgid ""
 "If you need to make modifications to the project (for example to add or "
 "remove some layers) and save your changes, call the :meth:`write() "
@@ -61,7 +69,7 @@ msgstr ""
 "<qgis.core.QgsProject.write>` メソッドを呼び出します。 :meth:`write() "
 "<qgis.core.QgsProject.write>` メソッドにパスを指定すれば、プロジェクトを新しい場所に保存することもできます。"
 
-#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:87
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:75
 msgid ""
 "Both :meth:`read() <qgis.core.QgsProject.read>` and :meth:`write() "
 "<qgis.core.QgsProject.write>` functions return a boolean value that you can "
@@ -70,7 +78,7 @@ msgstr ""
 ":meth:`read() <qgis.core.QgsProject.read>` と :meth:`write() "
 "<qgis.core.QgsProject.write>` の両方の関数は操作が成功したかどうかをチェックするために使用できるブール値を返します。"
 
-#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:93
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:81
 msgid ""
 "If you are writing a QGIS standalone application, in order to synchronise "
 "the loaded project with the canvas you need to instantiate a "
@@ -80,3 +88,54 @@ msgstr ""
 "QGISスタンドアロンアプリケーションを作成している場合は、ロードされたプロジェクトをキャンバスと同期させるために、 "
 ":class:`QgsLayerTreeMapCanvasBridge <qgis.gui.QgsLayerTreeMapCanvasBridge>` "
 "を以下の例のようにインスタンス化する必要があります::"
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:93
+msgid "Resolving bad paths"
+msgstr "正しくないパスを解決する"
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:95
+msgid ""
+"It can happen that layers loaded in the project are moved to another "
+"location. When the project is loaded again all the layer paths are broken."
+msgstr "プロジェクトにロードされたレイヤーが別の場所に移動される場合があります。プロジェクトが再度ロードされると、すべてのレイヤーパスが壊れます。"
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:98
+msgid ""
+"The :class:`QgsPathResolver <qgis.core.QgsPathResolver>` class with the "
+":meth:`setPathPreprocessor() "
+"<qgis.core.QgsPathResolver.setPathPreprocessor>` allows setting a custom "
+"path pre-processor function, which allows for manipulation of paths and data"
+" sources prior to resolving them to file references or layer sources."
+msgstr ""
+":class:`QgsPathResolver <qgis.core.QgsPathResolver>` クラスと "
+":meth:`setPathPreprocessor() "
+"<qgis.core.QgsPathResolver.setPathPreprocessor>` "
+"を使用するとカスタムのパス前処理関数を設定できます。これにより、ファイル参照またはレイヤーソースに解決する前にパスとデータソースの操作ができます。"
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:104
+msgid ""
+"The processor function must accept a single string argument (representing "
+"the original file path or data source) and return a processed version of "
+"this path."
+msgstr "処理関数は、文字列引数（元のファイルパスまたはデータソースを表す）を1つ受け取り、このパスの処理済バージョンを返す必要があります。"
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:107
+msgid ""
+"The path pre-processor function is called **before** any bad layer handler."
+msgstr "パス前処理関数は、不良レイヤーハンドラの **前** に呼び出されます。"
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:109
+msgid "Some use cases:"
+msgstr "使用例："
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:111
+msgid "replace an outdated path:"
+msgstr "旧パスを置き換え："
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:120
+msgid "replace a database host address with a new one:"
+msgstr "データベースのホストアドレスを新しいもので置き換え："
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:129
+msgid "replace stored database credentials with new ones:"
+msgstr "保存されているデータベースのクレデンシャルを新しいものに置き換え："
