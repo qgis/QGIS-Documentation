@@ -1325,10 +1325,6 @@ are enabled.
      - Shortcut
      - Toolbar
      - Reference
-   * - |coordinateCapture| :guilabel:`Coordinate Capture`
-     -
-     - :guilabel:`Vector`
-     - :ref:`coordcapt`
    * - |geometryChecker| :guilabel:`Check Geometries...`
      -
      -
@@ -2767,8 +2763,6 @@ Click the icon to open the Plugin Manager dialog.
 .. |circularStringCurvePoint| image:: /static/common/mActionCircularStringCurvePoint.png
    :width: 1.5em
 .. |circularStringRadius| image:: /static/common/mActionCircularStringRadius.png
-   :width: 1.5em
-.. |coordinateCapture| image:: /static/common/coordinate_capture.png
    :width: 1.5em
 .. |copyrightLabel| image:: /static/common/copyright_label.png
    :width: 1.5em
