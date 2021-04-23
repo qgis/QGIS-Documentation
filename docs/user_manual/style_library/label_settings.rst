@@ -605,6 +605,21 @@ Common placement settings
 
 Some label placement settings are available for all layer geometry types:
 
+Geometry Generator
+^^^^^^^^^^^^^^^^^^
+
+The :guilabel:'Geometry Generator' section allows a user to atler the label geometry
+by using expressions. This can be usefulto perform displacement of the geomtry dynamically
+ or to convert it to another geometry.
+Some other options include:
+
+-Use the @map_scale variable to calculate distances / sizes be zoom level independent.
+-Make a circular label with: exterior_ring(make_circle($geometry, 20))
+-Use a geometry which is saved in another field "label_position"
+-Use the generated geometry from the symbology also for labeling
+-Add a label at the line start and the line end
+-Use a smoothed line to label a river
+
 Data Defined
 ^^^^^^^^^^^^
 
