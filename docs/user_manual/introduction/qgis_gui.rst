@@ -460,19 +460,19 @@ details).
      -
      -
      - :ref:`sec_annotations`
-   * - |textAnnotation| :menuselection:`--> Text Annotation`
+   * - :menuselection:`-->` |textAnnotation| :menuselection:`Text Annotation`
      -
      - :guilabel:`Attributes`
      - :ref:`sec_annotations`
-   * - |formAnnotation| :menuselection:`--> Form Annotation`
+   * - :menuselection:`-->` |formAnnotation| :menuselection:`Form Annotation`
      -
      - :guilabel:`Attributes`
      - :ref:`sec_annotations`
-   * - |htmlAnnotation| :menuselection:`--> HTML Annotation`
+   * - :menuselection:`-->` |htmlAnnotation| :menuselection:`HTML Annotation`
      -
      - :guilabel:`Attributes`
      - :ref:`sec_annotations`
-   * - |svgAnnotation| :menuselection:`--> SVG Annotation`
+   * - :menuselection:`-->` |svgAnnotation| :menuselection:`SVG Annotation`
      -
      - :guilabel:`Attributes`
      - :ref:`sec_annotations`
