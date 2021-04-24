@@ -2054,6 +2054,11 @@ Click on the map view and you should be able to interact with it:
   the |zoomLast|:sup:`Zoom Last` and |zoomNext|:sup:`Zoom Next` buttons
   or using the back/forward mouse buttons.
 
+Right-click over the map and you should be able to |editCopy|
+:guilabel:`Copy coordinates` of the clicked point in the map CRS, in WGS84
+or in a custom CRS. The copied information can then be pasted in an expression,
+a script, text editor or spreadsheet...
+
 By default, QGIS opens a single map view (called "main map"), which is
 tightly bound to the :guilabel:`Layers` panel; the main map *automatically*
 reflects the changes you do in the :guilabel:`Layers` panel area.
