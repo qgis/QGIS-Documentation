@@ -342,7 +342,7 @@ Icon                            Substitution                        Icon        
 |transformation|                ``|transformation|``
 |georefRun|                     ``|georefRun|``                     |pencil|                        ``|pencil|``
 |linkQGisToGeoref|              ``|linkQGisToGeoref|``              |linkGeorefToQGis|              ``|linkGeorefToQGis|``
-|coordinateCapture|             ``|coordinateCapture|``             |fullHistogramStretch|          ``|fullHistogramStretch|``
+|fullHistogramStretch|          ``|fullHistogramStretch|``
 ==============================  ==================================  ==============================  ==================================
 
 
@@ -675,8 +675,6 @@ Icon                            Substitution                        Icon        
 .. |contextHelp| image:: /static/common/mActionContextHelp.png
    :width: 1.5em
 .. |convexHull| image:: /static/common/convex_hull.png
-   :width: 1.5em
-.. |coordinateCapture| image:: /static/common/coordinate_capture.png
    :width: 1.5em
 .. |copySelected| image:: /static/common/mActionCopySelected.png
    :width: 1.5em
