@@ -57,7 +57,10 @@ The snapping mode, tolerance value, and units can also be configured in
 this toolbar.
 
 The snapping configuration can also be set in
-:menuselection:`Project --> Snapping Options...`.
+:menuselection:`Project --> Snapping Options...`. Or it can be customied for
+each layer in the layer properties in the Digitizing tab. This will show
+a dotted grid when the scale is low enough to show the specified precision limit.
+Snapping can be performed on the dots of the grid.
 
 There are three options to select the layer(s) to snap to:
 
@@ -76,8 +79,8 @@ There are three options to select the layer(s) to snap to:
   Snapping will not occur to a layer that is not checked in the
   snapping options dialog.
 
-As for snapping mode, you can choose between ``To vertex``, ``To segment``,
-and ``To vertex and segment``.
+As for snapping mode, you can choose between ``Vertex``, ``Segment``,
+``Area``, ``Centroid``, ``Middle of Segments`` and ``Line Endpoints``.
 
 The tolerance values can be set either in the project's ``map units``
 or in ``pixels``.
@@ -227,6 +230,8 @@ the geometries of the neighboring features.
 Topological editing works with features from different layers, as long
 as the layers are visible and in editing mode.
 
+In layer with Z values, topological editing will interpolate the Z value of 
+a point based on the value of the edge used for the connection.
 
 .. index:: Avoid overlap
    seealso: Avoid overlap; Topology
@@ -464,6 +469,11 @@ geometry then enter its attributes. To digitize the geometry:
     You can also avoid the use of the rubber band by checking :guilabel:`Don't
     update rubber band during node editing`.
 
+#. For line feature pressing :kbd:`Shift+` + right-click will close the line automatically.
+
+#. For line and polygon feature pressing :kbd:`R` or toggling stream digitizing the 'Advanced
+   Digitizing Toolbar' will let you perform a free-hand draw of the geometry.
+
 #. The attribute window will appear, allowing you to enter the information for
    the new feature. :numref:`Figure_edit_values` shows setting attributes for a fictitious
    new river in Alaska. However, in the :guilabel:`Digitizing` menu under the
@@ -563,7 +573,9 @@ Red circles will appear when hovering vertices.
   A double-click on any location of the boundary also creates a new
   node.
   For lines, a virtual node is also proposed at both extremities of a
-  line to extend it.
+  line to extend it. When adding a node at the end of a line the function
+  will remain active until a right-click. This allows to easily extend an
+  existing line.
 
   .. _figure_vertex_add_node:
 
@@ -1759,6 +1771,13 @@ and angle entered. Repeating the process, several points can be added.
 
 .. index:: Edit in place
 .. _processing_inplace_edit:
+
+Information Floater
+-------------------
+
+As an additionnal tool, the Floater can also be activated. This allows to display
+the values in the panel right next to the cursor.
+
 
 The Processing in-place layer modifier
 ======================================
