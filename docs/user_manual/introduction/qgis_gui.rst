@@ -460,19 +460,19 @@ details).
      -
      -
      - :ref:`sec_annotations`
-   * - |textAnnotation| :menuselection:`--> Text Annotation`
+   * - :menuselection:`-->` |textAnnotation| :menuselection:`Text Annotation`
      -
      - :guilabel:`Attributes`
      - :ref:`sec_annotations`
-   * - |formAnnotation| :menuselection:`--> Form Annotation`
+   * - :menuselection:`-->` |formAnnotation| :menuselection:`Form Annotation`
      -
      - :guilabel:`Attributes`
      - :ref:`sec_annotations`
-   * - |htmlAnnotation| :menuselection:`--> HTML Annotation`
+   * - :menuselection:`-->` |htmlAnnotation| :menuselection:`HTML Annotation`
      -
      - :guilabel:`Attributes`
      - :ref:`sec_annotations`
-   * - |svgAnnotation| :menuselection:`--> SVG Annotation`
+   * - :menuselection:`-->` |svgAnnotation| :menuselection:`SVG Annotation`
      -
      - :guilabel:`Attributes`
      - :ref:`sec_annotations`
@@ -1345,10 +1345,6 @@ are enabled.
      - Shortcut
      - Toolbar
      - Reference
-   * - |coordinateCapture| :guilabel:`Coordinate Capture`
-     -
-     - :guilabel:`Vector`
-     - :ref:`coordcapt`
    * - |geometryChecker| :guilabel:`Check Geometries...`
      -
      -
@@ -2080,6 +2076,11 @@ Click on the map view and you should be able to interact with it:
   the |zoomLast|:sup:`Zoom Last` and |zoomNext|:sup:`Zoom Next` buttons
   or using the back/forward mouse buttons.
 
+Right-click over the map and you should be able to |editCopy|
+:guilabel:`Copy coordinates` of the clicked point in the map CRS, in WGS84
+or in a custom CRS. The copied information can then be pasted in an expression,
+a script, text editor or spreadsheet...
+
 By default, QGIS opens a single map view (called "main map"), which is
 tightly bound to the :guilabel:`Layers` panel; the main map *automatically*
 reflects the changes you do in the :guilabel:`Layers` panel area.
@@ -2787,8 +2788,6 @@ Click the icon to open the Plugin Manager dialog.
 .. |circularStringCurvePoint| image:: /static/common/mActionCircularStringCurvePoint.png
    :width: 1.5em
 .. |circularStringRadius| image:: /static/common/mActionCircularStringRadius.png
-   :width: 1.5em
-.. |coordinateCapture| image:: /static/common/coordinate_capture.png
    :width: 1.5em
 .. |copyrightLabel| image:: /static/common/copyright_label.png
    :width: 1.5em
