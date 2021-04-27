@@ -563,7 +563,9 @@ Red circles will appear when hovering vertices.
   A double-click on any location of the boundary also creates a new
   node.
   For lines, a virtual node is also proposed at both extremities of a
-  line to extend it.
+  line to extend it. When adding a node at the end of a line the function
+  will remain active until a right-click. This allows to easily extend an
+  existing line.
 
   .. _figure_vertex_add_node:
 
