@@ -33,6 +33,8 @@ The code snippets on this page need the following imports if you're outside the 
       QgsVectorLayer,
       QgsDistanceArea,
       QgsUnitTypes,
+      QgsCoordinateTransform,
+      QgsCoordinateReferenceSystem
     )
 
 .. _geometry:
@@ -211,7 +213,54 @@ vector type. Here's an example on how to use these accessors:
    and :meth:`y() <qgis.core.QgsPoint.y>` methods.
 
 For multipart geometries there are similar accessor functions:
-:meth:`asMultiPoint() <qgis.core.QgsGeometry.asMultiPoint>`, :meth:`asMultiPolyline() <qgis.core.QgsGeometry.asMultiPolyline>` and :meth:`asMultiPolygon() <qgis.core.QgsGeometry.asMultiPolygon>`.
+:meth:`asMultiPoint() <qgis.core.QgsGeometry.asMultiPoint>`,
+:meth:`asMultiPolyline() <qgis.core.QgsGeometry.asMultiPolyline>`
+and :meth:`asMultiPolygon() <qgis.core.QgsGeometry.asMultiPolygon>`.
+
+
+It is possible to iterate over all the parts of a geometry,
+regardless of the geometry's type. E.g.
+
+.. testcode:: geometry
+
+  geom = QgsGeometry.fromWkt( 'MultiPoint( 0 0, 1 1, 2 2)' )
+  for part in geom.parts():
+    print(part.asWkt())
+
+.. testoutput:: geometry
+
+  Point (0 0)
+  Point (1 1)
+  Point (2 2)
+
+.. testcode:: geometry
+
+  geom = QgsGeometry.fromWkt( 'LineString( 0 0, 10 10 )' )
+  for part in geom.parts():
+    print(part.asWkt())
+
+.. testoutput:: geometry
+
+  LineString (0 0, 10 10)
+
+It's also possible to modify each part of the geometry using
+:meth:`QgsGeometry.parts() <qgis.core.QgsGeometry.parts>` method.
+
+.. testcode:: geometry
+
+    geom = QgsGeometry.fromWkt( 'MultiPoint( 0 0, 1 1, 2 2)' )
+    for part in geom.parts():
+      part.transform(QgsCoordinateTransform(
+        QgsCoordinateReferenceSystem("EPSG:4326"),
+        QgsCoordinateReferenceSystem("EPSG:3111"),
+        QgsProject.instance())
+      )
+
+    print(geom.asWkt())
+
+.. testoutput:: geometry
+
+    MultiPoint ((-10334726.79314761981368065 -5360105.10101188533008099),(-10462133.82917750626802444 -5217484.34365727473050356),(-10589398.51346865110099316 -5072020.358805269934237))
 
 
 .. index:: Geometry; Predicates and operations
