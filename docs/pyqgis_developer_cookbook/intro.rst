@@ -108,16 +108,16 @@ for detailed instructions.
     See :ref:`server_plugins` for further details.
 
 
-.. index::
-  pair: Python; Startup
-
 Processing Plugins
-==================
+------------------
 
 Processing Plugins can be used to process data. They are easier to develop,
 more specific and more lightweight than Python Plugins. :ref:`processing_plugin`
 explains when the use of Processing algorithms is appropiate and how to develop
 them.
+
+.. index::
+  pair: Python; Startup
 
 Running Python code when QGIS starts
 ====================================
