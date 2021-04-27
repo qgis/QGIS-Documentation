@@ -35,53 +35,54 @@ Parameters
    * - **Use field aliases as column headings**
      - ``USE_ALIAS``
      - [boolean]
-       
+
        Default: False
      - Use the field aliases from the attribute table for the spreadsheet.
    * - **Export formatted values instead of raw values**
      - ``FORMATTED_VALUES``
      - [boolean]
-       
+
        Default: False
      - If ``True``, exports the formatted, human readable values (e.g., from a :ref:`value map
-      or value relation <edit_widgets>`) to the spreadsheet.
+       or value relation <edit_widgets>`) to the spreadsheet.
    * - **Overwrite existing spreadsheet**
      - ``OVERWRITE``
      - [boolean]
-       
+
        Default: True
      - If the specified spreadsheet exists, setting this option to ``True`` will overwrite the existing spreadsheet.
        If this option is ``False`` and the spreadsheet exists, the layers will be appended as additional sheets.
 
-   *  - **Destination spreadsheet**
-      - ``OUTPUT``
-      - [file]
+   * - **Destination spreadsheet**
+     - ``OUTPUT``
+     - [file]
 
-        Default: ``[Create temporary layer]``
-      - Output spreadsheet with a sheet for every layer. One of:
+       Default: ``[Create temporary layer]``
+     - Output spreadsheet with a sheet for every layer. One of:
 
-        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-        * Save to File…
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File…
 
 
 Outputs
 .......
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
 
-   *  - Label
-      - Name
-      - Type
-      - Description
-   *  - **Destination spreadsheet**
-      - ``OUTPUT``
-      - [file]
-      - Spreadsheet with a sheet for every layer.
-   *  - **Layers within spreadsheet**
-      - ``OUTPUT_LAYERS``
-      - [list]
-      - The list of sheets added to the spreadsheet.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Destination spreadsheet**
+     - ``OUTPUT``
+     - [file]
+     - Spreadsheet with a sheet for every layer.
+   * - **Layers within spreadsheet**
+     - ``OUTPUT_LAYERS``
+     - [list]
+     - The list of sheets added to the spreadsheet.
 
 Python code
 ...........
