@@ -636,7 +636,7 @@ A simple procedure is the following:
 .. figure:: img/qgis_server_windows2.png
   :align: center
   
-* Edit the httpd.conf file (:file:`C:\\xampp\\apache\\httpd.conf`
+* Edit the httpd.conf file (:file:`C:\\xampp\\apache\\conf\\httpd.conf`
   if the default installation paths have been used) and make the following changes:
 
 From:
@@ -650,7 +650,7 @@ To:
 
 .. code-block:: apache
 
-    ScriptAlias /cgi-bin/ "c:/OSGeo4W64/apps/qgis/bin/"
+    ScriptAlias /cgi-bin/ "C:/OSGeo4W64/apps/qgis/bin/"
 
 
 From:
@@ -658,9 +658,9 @@ From:
 .. code-block:: apache
 
     <Directory "C:/xampp/cgi-bin">
-    AllowOverride None
-    Options None
-    Require all granted
+        AllowOverride None
+        Options None
+        Require all granted
     </Directory>
 
 
@@ -668,13 +668,13 @@ To:
 
 .. code-block:: apache
 
-    <Directory "c:/OSGeo4W64/apps/qgis/bin">
-    SetHandler cgi-script
-    AllowOverride None
-    Options ExecCGI
-    Order allow,deny
-    Allow from all
-    Require all granted
+    <Directory "C:/OSGeo4W64/apps/qgis/bin">
+        SetHandler cgi-script
+        AllowOverride None
+        Options ExecCGI
+        Order allow,deny
+        Allow from all
+        Require all granted
     </Directory>
 
 
