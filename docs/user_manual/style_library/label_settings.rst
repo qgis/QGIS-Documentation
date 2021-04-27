@@ -422,6 +422,7 @@ tab and activate the |checkbox| :guilabel:`Draw callouts`. Then you can:
    * Fixed position at the edge (:guilabel:`Top left`, :guilabel:`Top center`,
      :guilabel:`Top right`, :guilabel:`Left middle`, :guilabel:`Right middle`,
      :guilabel:`Bottom left`, :guilabel:`Bottom center` and :guilabel:`Bottom right`).
+#. Set the :guilabel:`Blend mode`: controls the blending of the callout.
 
 Callouts can also be controlled manually by using the Movel Label tool in the Labelling Toolbar.
 The start and end point of each callout can be moved this way. The nodes should be highlighted
