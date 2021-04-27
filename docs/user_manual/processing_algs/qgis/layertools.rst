@@ -13,7 +13,8 @@ Layer tools
 Export to spreadsheet
 ---------------------
 
-Exports the attributes of a selection of vector layers into a spreadsheet document or optionally appends them to an existing spreadsheet as additional sheets. 
+Exports the attributes of a selection of vector layers into a spreadsheet document
+or optionally appends them to an existing spreadsheet as additional sheets. 
 
 Parameters
 ..........
@@ -26,10 +27,11 @@ Parameters
      - Name
      - Type
      - Description
-   * - **Layer**
-     - ``Layers``
-     - [vector:any]
-     - Input vector layers. The output spreadsheet will consist of a sheet, for each layer, that contains the attributes of this layer.
+   * - **Input layers**
+     - ``LAYERS``
+     - [vector: any]
+     - Input vector layers. The output spreadsheet will consist of a sheet,
+       for each layer, that contains the attributes of this layer.
    * - **Use field aliases as column headings**
      - ``USE_ALIAS``
      - [boolean]
@@ -41,18 +43,25 @@ Parameters
      - [boolean]
        
        Default: False
-     - Export the formatted values to the spreadsheet.
+     - If ``True``, exports the formatted, human readable values (e.g., from a :ref:`value map
+      or value relation <edit_widgets>`) to the spreadsheet.
    * - **Overwrite existing spreadsheet**
      - ``OVERWRITE``
      - [boolean]
        
        Default: True
-     - If the specified spreadsheet exists, setting this option to ``True`` will overwrite the existing spreadsheet. If this options is ``False`` and the spreadsheet exists the layers will be appended as additional sheets.
+     - If the specified spreadsheet exists, setting this option to ``True`` will overwrite the existing spreadsheet.
+       If this option is ``False`` and the spreadsheet exists, the layers will be appended as additional sheets.
 
    *  - **Destination spreadsheet**
       - ``OUTPUT``
-      - [spreadsheet]
-      - If not specified the spreadsheet will be saved in the temporary folder.
+      - [file]
+
+        Default: ``[Create temporary layer]``
+      - Output spreadsheet with a sheet for every layer. One of:
+
+        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+        * Save to File…
 
 
 Outputs
@@ -67,12 +76,12 @@ Outputs
       - Description
    *  - **Destination spreadsheet**
       - ``OUTPUT``
-      - [spreadsheet]
+      - [file]
       - Spreadsheet with a sheet for every layer.
    *  - **Layers within spreadsheet**
       - ``OUTPUT_LAYERS``
-      - [spreadsheet]
-      - The list of layers added to the spreadsheet.
+      - [list]
+      - The list of sheets added to the spreadsheet.
 
 Python code
 ...........
@@ -156,4 +165,3 @@ Python code
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
-
