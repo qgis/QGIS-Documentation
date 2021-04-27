@@ -29,6 +29,15 @@ If you save the script in the :file:`scripts` folder
 (the default location) with a :file:`.py` extension, the algorithm will
 become available in the :guilabel:`Processing Toolbox`.
 
+Processing scripts implementing the
+`:class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>` are
+required to be available in the :file:`scripts` folder in order not to
+cause a runtime error when called for processing by 
+:source:`python/plugins/processing/gui/AlgorithmDialog.py`
+
+Processing scripts available in the :file:`scripts` folder are read in
+during the startup phase of QGIS.
+
 .. _scripts_extend:
 
 Extending QgsProcessingAlgorithm
@@ -650,6 +659,8 @@ You can document your scripts by overloading the
 :meth:`helpUrl() <qgis.core.QgsProcessingAlgorithm.helpUrl>` methods of
 :class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>`.
 
+.. _flags:
+
 Flags
 -----
 
@@ -663,14 +674,24 @@ and more.
 .. tip::
     By default, Processing runs algorithms in a separate thread in order
     to keep QGIS responsive while the processing task runs.
-    If your algorithm is regularly crashing, you are probably using API
+    If your algorithm is **regularly crashing**, you are probably using API
     calls which are not safe to do in a background thread.
-    Try returning the QgsProcessingAlgorithm.FlagNoThreading flag from
+    Try returning the :attr:`QgsProcessingAlgorithm.FlagNoThreading
+    <qgis.core.QgsProcessingAlgorithm.FlagNoThreading>` flag from
     your algorithm's flags() method to force Processing to run your
     algorithm in the main thread instead.
 
-Best practices for writing script algorithms
---------------------------------------------
+    Here is how flags can be added to the ones inherited by the base class
+
+    .. code-block:: python
+
+
+        def flags(self):
+        return super().flags() | QgsProcessingAlgorithm.FlagNoThreading
+
+
+Best practices for writing script algorithms and troubleshooting
+----------------------------------------------------------------
 
 Here's a quick summary of ideas to consider when creating your script
 algorithms and, especially, if you want to share them with other QGIS users.
@@ -686,6 +707,29 @@ interface.
   feedback object
   (:class:`QgsProcessingFeedback <qgis.core.QgsProcessingFeedback>`) or
   throw a :class:`QgsProcessingException <qgis.core.QgsProcessingException>`.
+* If you are not sure whether the methods used in your script are thread safe
+  and the script causes QGIS to crash consider implementing the
+  :meth:`flags() <qgis.core.QgsProcessingAlgorithm.flags>` method as explained in
+  :ref:`flags`
+* Scripts not executed within the path configured in 
+  :ref:`Processing settings dialog <processing.options>` can cause a runtime error
+  in :source:`python/plugins/processing/gui/AlgorithmDialog.py` invoked by
+  :class:`QgsProcessingAlgorithmDialogBase <qgis.gui.QgsProcessingAlgorithmDialogBase>`
+  due to a missing :class:`QgsProcessingProvider <qgis.core.QgsProcessingProvider>`
+
+  ::
+
+     RuntimeError: wrapped C/C++ object of type AlgorithmDialog has been deleted 
+     An error has occurred while executing Python code: 
+
+	RuntimeError: wrapped C/C++ object of type AlgorithmDialog has been deleted 
+	Traceback (most recent call last):
+	File "C:/OSGEO4~1/apps/qgis/./python/plugins\processing\gui\AlgorithmDialog.py", line 246, in runAlgorithm
+		on_complete(ok, results)
+	File "C:/OSGEO4~1/apps/qgis/./python/plugins\processing\gui\AlgorithmDialog.py", line 201, in on_complete
+		self.tr('Execution completed in {0:0.2f} seconds').format(time.time() - start_time))
+	RuntimeError: wrapped C/C++ object of type AlgorithmDialog has been deleted
+     
 
 There are already many processing algorithms available in QGIS.
 You can find code on :source:`python/plugins/processing/algs/qgis`.
