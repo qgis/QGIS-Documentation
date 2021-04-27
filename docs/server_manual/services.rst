@@ -2086,8 +2086,8 @@ and point ``QGIS_SERVER_API_RESOURCES_DIRECTORY`` to the new location.
 
 .. _`ogc_api_landing_page`:
 
-Landing page |316|
-==================
+Landing page
+============
 
 The landing page API module provides a set of APIs and HTML templates to show
 a list of projects available on the server and a simple map browser to
@@ -2113,16 +2113,16 @@ the available projects have to be searched:
 QGIS_SERVER_LANDING_PAGE_PROJECTS_DIRECTORIES
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-A single directory or a list of absolute directories paths separated by `||`.
+A single directory or a list of absolute directories paths separated by ``||``.
 
-All `.qgs` or `.qgz` files (case insensitive) will be added to the available projects.
+All :file:`.qgs` or :file:`.qgz` files (case insensitive) will be added to the available projects.
 
 QGIS_SERVER_LANDING_PAGE_PROJECTS_PG_CONNECTIONS
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-A single connection or a list of connections separated by `||`.
+A single connection or a list of connections separated by ``||``.
 
-The format for the connections is the same that the one that is currently used for QGIS
+The format for the connections is the same as the one that is currently used for QGIS
 project storage in Postgres. Here is an example:
 
 "postgresql://localhost:5432?sslmode=disable&dbname=landing_page_test&schema=public"
