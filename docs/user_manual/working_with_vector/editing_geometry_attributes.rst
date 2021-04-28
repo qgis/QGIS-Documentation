@@ -24,6 +24,13 @@ MSSQL Spatial and Oracle Spatial vector layers and tables.
    same feature at the same time as you are.
    The last person to save the edits wins.
 
+.. _tip_validating_edits:
+
+.. tip:: **Validating Edits**
+
+   The core plugin Geometry Checker can be used to validate new or modified
+   geometries to ensure their validity in order to prevent issues later, 
+   for more information see:ref:`geometry_checker`.
 
 .. index:: Snapping
    single: Digitizing; Snapping
@@ -257,19 +264,6 @@ digitize all vertices of the common boundary.
    Since this option will cut new overlapping geometries of any polygon layer,
    you can get unexpected geometries if you forget to uncheck it when no longer
    needed.
-
-
-Geometry Checker
------------------
-
-A core plugin can help the user to find the geometry invalidity. You can find
-more information on this plugin at :ref:`geometry_checker`.
-
-
-.. index::
-   single: Digitizing tools; Automatic tracing
-
-.. _tracing:
 
 Automatic Tracing
 -----------------
