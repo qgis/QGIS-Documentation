@@ -1761,6 +1761,13 @@ and angle entered. Repeating the process, several points can be added.
 .. index:: Edit in place
 .. _processing_inplace_edit:
 
+Information Floater
+-------------------
+
+As an additionnal tool, the Floater can also be activated. This allows to display
+the values in the panel right next to the cursor.
+
+
 The Processing in-place layer modifier
 ======================================
 
