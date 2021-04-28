@@ -227,6 +227,8 @@ the geometries of the neighboring features.
 Topological editing works with features from different layers, as long
 as the layers are visible and in editing mode.
 
+In layer with Z values, topological editing will interpolate the Z value of 
+a point based on the value of the edge used for the connection.
 
 .. index:: Avoid overlap
    seealso: Avoid overlap; Topology
