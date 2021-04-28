@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-10 02:04+0000\n"
+"POT-Creation-Date: 2021-04-28 02:21+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -3430,101 +3430,102 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2264
 msgid ""
-"if it does not meet all the requirements, then a yellow or red cross is "
-"displayed near the field. You can hover over the cross to remind which "
-"constraints are applied to the field and fix the value:"
+"if it does not meet all the requirements, then the field is colored in "
+"yellow or orange and a corresponding cross is displayed next to the "
+"widget. You can hover over the cross to remind which constraints are "
+"applied to the field and fix the value:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2268
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2269
 msgid ""
 "A yellow cross appears when the unmet constraint is an unenforced one and"
 " it does not prevent you to save the changes with the \"wrong\" values;"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2271
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2272
 msgid ""
-"A red cross can not be ignored and does not allow you to save your "
+"An orange cross can not be ignored and does not allow you to save your "
 "modifications until they meet the constraints. It appears when the "
 "|checkbox| :guilabel:`Enforce constraint` option is checked."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2279
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2280
 msgid "Edit widgets"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2281
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2282
 msgid ""
 "Based on the field type, QGIS automatically determines and assigns a "
 "default widget type to it. You can then replace the widget with any other"
 " compatible with the field type. The available widgets are:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2285
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2286
 msgid "**Checkbox**: Displays a checkbox whose state defines the value to insert."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2286
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2287
 msgid ""
 "**Classification**: Only available when a :ref:`categorized symbology "
 "<categorized_renderer>` is applied to the layer, displays a combo box "
 "with the values of the classes."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2289
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2290
 msgid ""
 "**Color**: Displays a :ref:`color widget <color-selector>` allowing to "
 "select a color; the color value is stored as a html notation in the "
 "attribute table."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2291
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2292
 msgid ""
 "**Date/Time**: Displays a line field which can open a calendar widget to "
 "enter a date, a time or both. Column type must be text. You can select a "
 "custom format, pop-up a calendar, etc."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2294
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2295
 msgid ""
 "**Enumeration**: Opens a combo box with predefined values fetched from "
 "the database. This is currently only supported by the PostgreSQL "
 "provider, for fields of ``enum`` type."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2297
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2298
 msgid ""
 "**Attachment**: Uses a \"Open file\" dialog to store file path in a "
 "relative or absolute mode. It can also be used to display a hyperlink (to"
 " document path), a picture or a web page."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2300
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2301
 msgid ""
 "**Hidden**: A hidden attribute column is invisible. The user is not able "
 "to see its contents."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2302
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2303
 msgid ""
 "**Key/Value**: Displays a two-columns table to store sets of key/value "
 "pairs within a single field. This is currently supported by the "
 "PostgreSQL provider, for fields of ``hstore`` type."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2305
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2306
 msgid ""
 "**List**: Displays a single column table to add different values within a"
 " single field. This is currently supported by the PostgreSQL provider, "
 "for fields of ``array`` type."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2308
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2309
 msgid ""
 "**Range**: Allows you to set numeric values from a specific range. The "
 "edit widget can be either a slider or a spin box."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2310
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2311
 msgid ""
 "**Relation Reference**: This is the default widget assigned to the "
 "referencing field (i.e., the foreign key in the child layer) when a "
@@ -3533,34 +3534,34 @@ msgid ""
 "children."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2314
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2315
 msgid ""
 "**Text Edit** (default): This opens a text edit field that allows simple "
 "text or multiple lines to be used. If you choose multiple lines you can "
 "also choose html content."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2317
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2318
 msgid ""
 "**Unique Values**: You can select one of the values already used in the "
 "attribute table. If 'Editable' is activated, a line edit is shown with "
 "autocompletion support, otherwise a combo box is used."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2320
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2321
 msgid ""
 "**Uuid Generator**: Generates a read-only UUID (Universally Unique "
 "Identifiers) field, if empty."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2322
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2323
 msgid ""
 "**Value Map**: A combo box with predefined items. The value is stored in "
 "the attribute, the description is shown in the combo box. You can define "
 "values manually or load them from a layer or a CSV file."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2325
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2326
 msgid ""
 "**Value Relation**: Offers values from a related table in a combobox. You"
 " can select layer, key column and value column. Several options are "
@@ -3570,11 +3571,11 @@ msgid ""
 "checkbox is enabled."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2332
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2333
 msgid "**Relative Path in Attachment widget**"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2334
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2335
 msgid ""
 "If the path which is selected with the file browser is located in the "
 "same directory as the :file:`.qgs` project file or below, paths are "
@@ -3582,11 +3583,11 @@ msgid ""
 " project with multimedia information attached."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2344
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2345
 msgid "Joins Properties"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2346
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2347
 msgid ""
 "|join| The :guilabel:`Joins` tab allows you to associate features of the "
 "current layer (called ``Target layer``) to features from another loaded "
@@ -3595,57 +3596,57 @@ msgid ""
 "join attribute should be of the same type."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2352
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2353
 msgid "To create a join:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2354
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2355
 msgid ""
 "Click the |signPlus| :sup:`Add new join` button. The :guilabel:`Add "
 "vector join` dialog appears."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2356
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2357
 msgid ""
 "Select the :guilabel:`Join layer` you want to connect with the target "
 "vector layer"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2358
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2359
 msgid ""
 "Specify the :guilabel:`Join field` and the :guilabel:`Target field` that "
 "are common to both the join layer and the target layer"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2360
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2361
 msgid ""
 "Press :guilabel:`OK` and a summary of selected parameters is added to the"
 " :guilabel:`Join` panel."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2368
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2369
 msgid "Join an attribute table to an existing vector layer"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2370
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2371
 msgid ""
 "The steps above will create a join, where **ALL** the attributes of the "
 "first matching feature in the join layer is added to the target layer's "
 "feature. QGIS provides more options to tweak the join:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2374
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2375
 msgid ""
 "|checkbox| :guilabel:`Cache join layer in virtual memory`: allows you to "
 "cache values in memory (without geometries) from the joined layer in "
 "order to speed up lookups."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2377
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2378
 msgid "|unchecked| :guilabel:`Create attribute index on the join field`"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2378
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2379
 msgid ""
 "|unchecked| :guilabel:`Dynamic form`: helps to synchronize join fields on"
 " the fly, according to the :guilabel:`Target field`. This way, "
@@ -3654,13 +3655,13 @@ msgid ""
 "a lot of features or a myriad of joins."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2383
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2384
 msgid ""
 "If the target layer is editable, then some icons will be displayed in the"
 " attribute table next to fields, in order to inform about their status:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2386
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2387
 msgid ""
 "|joinNotEditable|: the join layer is not configured to be editable. If "
 "you want to be able to edit join features from the target attribute "
@@ -3668,13 +3669,13 @@ msgid ""
 "join layer`."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2390
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2391
 msgid ""
 "|joinedLayerNotEditable|: the join layer is well configured to be "
 "editable, but its current status is read only."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2392
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2393
 msgid ""
 "|joinHasNotUpsertOnEdit|: the join layer is editable, but synchronization"
 " mechanisms are not activated. If you want to automatically add a feature"
@@ -3684,30 +3685,30 @@ msgid ""
 "activated if you want to automatically delete join features."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2398
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2399
 msgid ""
 "|unchecked| :guilabel:`Joined fields`: instead of adding all the fields "
 "from the joined layer, you can specify a subset."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2400
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2401
 msgid ""
 "|unchecked| :guilabel:`Custom field name prefix` for joined fields, in "
 "order to avoid name collision"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2403
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2404
 msgid ""
 "QGIS currently has support for joining non-spatial table formats "
 "supported by OGR (e.g., CSV, DBF and Excel), delimited text and the "
 "PostgreSQL provider."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2410
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2411
 msgid "Auxiliary Storage Properties"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2412
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2413
 msgid ""
 "The regular way to customize styling and labeling is to use data-defined "
 "properties as described in :ref:`data_defined`. However, it may not be "
@@ -3719,7 +3720,7 @@ msgid ""
 "font style, color and so on)."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2420
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2421
 msgid ""
 "The Auxiliary Storage mechanism provides the solution to these "
 "limitations and awkward configurations. Auxiliary fields are a roundabout"
@@ -3729,21 +3730,21 @@ msgid ""
 "editable."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2426
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2427
 msgid ""
 "A tab is available in vector layer properties dialog to manage auxiliary "
 "storage:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2432
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2433
 msgid "Auxiliary Storage tab"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2437
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2438
 msgid "Labeling"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2439
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2440
 msgid ""
 "Considering that the data source may be customized thanks to data-defined"
 " properties without being editable, labeling map tools described in "
@@ -3751,7 +3752,7 @@ msgid ""
 "activated."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2443
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2444
 msgid ""
 "Actually, the auxiliary storage system needs an auxiliary layer to store "
 "these properties in a SQLite database (see "
@@ -3762,37 +3763,37 @@ msgid ""
 "identified):"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2455
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2456
 msgid "Auxiliary Layer creation dialog"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2458
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2459
 msgid ""
 "As soon as an auxiliary layer is configured for the current data source, "
 "you can retrieve its information in the tab:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2464
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2465
 msgid "Auxiliary Layer key"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2467
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2468
 msgid "The auxiliary layer now has these characteristics:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2469
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2470
 msgid "the primary key is ``ID``,"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2470
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2471
 msgid "there are ``0`` features using an auxiliary field,"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2471
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2472
 msgid "there are ``0`` auxiliary fields."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2473
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2474
 msgid ""
 "Now that the auxiliary layer is created, you can edit the layer labels. "
 "Click on a label while the |changeLabelProperties| :sup:`Change Label` "
@@ -3801,11 +3802,11 @@ msgid ""
 " and can be retrieved:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2482
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2483
 msgid "Auxiliary Fields"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2485
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2486
 msgid ""
 "As you can see in the figure above, ``21`` fields are automatically "
 "created and configured for labeling. For example, the ``FontStyle`` "
@@ -3814,18 +3815,18 @@ msgid ""
 "currently using these auxiliary fields."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2491
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2492
 msgid ""
 "Notice that the icon |dataDefineOn| is displayed in the "
 ":guilabel:`Labels` properties tab indicating that the data-defined "
 "override options are set correctly:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2498
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2499
 msgid "Data-defined properties automatically created"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2501
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2502
 msgid ""
 "Otherwise, there's another way to create an auxiliary field for a "
 "specific property thanks to the |dataDefined| :sup:`data-defined "
@@ -3836,11 +3837,11 @@ msgid ""
 "displayed to select the primary key to use for joining."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2512
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2513
 msgid "Symbology"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2514
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2515
 msgid ""
 "Like the method described above for customizing labels, auxiliary fields "
 "can also be used to stylize symbols and diagrams. To do this, click on "
@@ -3849,11 +3850,11 @@ msgid ""
 ":guilabel:`Fill color` field:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2523
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2524
 msgid "Data-defined property menu for symbol"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2526
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2527
 msgid ""
 "There are different attributes for each symbol (e.g. fill style, fill "
 "color, stroke color, etc...), so each auxiliary field representing an "
@@ -3864,32 +3865,32 @@ msgid ""
 "auxiliary field the following window opens:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2537
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2538
 msgid "Name of the auxiliary field for a symbol"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2540
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2541
 msgid ""
 "Once created, the auxiliary field can be retrieved in the auxiliary "
 "storage tab:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2546
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2547
 msgid "Auxiliary field symbol"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2550
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2551
 msgid "Attribute table and widgets"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2552
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2553
 msgid ""
 "Auxiliary fields can be edited using the :ref:`attribute table "
 "<sec_attribute_table>`. However, not all auxiliary fields are initially "
 "visible in the attribute table."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2556
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2557
 msgid ""
 "Auxiliary fields representing attributes of a layer's symbology, "
 "labeling, appearance, or diagrams will appear automatically in the "
@@ -3899,7 +3900,7 @@ msgid ""
 "default, otherwise auxiliary fields default to the **Text Edit** widget."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2563
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2564
 msgid ""
 "Auxiliary fields that represent attributes that can be modified using the"
 " :ref:`Label toolbar<label_toolbar>` are **Hidden** in the attribute "
@@ -3912,31 +3913,31 @@ msgid ""
 "fields will now be visible in the attribute table."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2572
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2573
 msgid ""
 "Auxiliary fields in the attribute table will appear like the following "
 "image:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2578
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2579
 msgid "Form with auxiliary fields"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2582
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2583
 msgid "Management"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2584
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2585
 msgid ""
 "The :guilabel:`Auxiliary Layer` menu allows you to manage the auxiliary "
 "fields:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2589
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2590
 msgid "Auxiliary layer management"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2592
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2593
 msgid ""
 "The first item :guilabel:`Create` is disabled in this case because the "
 "auxiliary layer is already created. But in case of a fresh work, you can "
@@ -3944,21 +3945,21 @@ msgid ""
 ":ref:`vector_auxiliary_storage_key`, a primary key will be needed then."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2597
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2598
 msgid ""
 "The :guilabel:`Clear` action allows to keep all auxiliary fields, but "
 "remove their contents. This way, the number of features using these "
 "fields will fall to ``0``."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2601
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2602
 msgid ""
 "The :guilabel:`Delete` action completely removes the auxiliary layer. In "
 "other words, the corresponding table is deleted from the underlying "
 "SQLite database and properties customization are lost."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2605
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2606
 msgid ""
 "Finally, the :guilabel:`Export` action allows to save the auxiliary layer"
 " as a :ref:`new vector layer <general_saveas>`. Note that geometries are "
@@ -3966,29 +3967,29 @@ msgid ""
 "exported from the original data source too."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2613
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2614
 msgid "Auxiliary storage database"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2615
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2616
 msgid ""
 "When you save your project with the ``.qgs`` format, the SQLite database "
 "used for auxiliary storage is saved at the same place but with the "
 "extension ``.qgd``."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2619
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2620
 msgid ""
 "For convenience, an archive may be used instead thanks to the ``.qgz`` "
 "format. In this case, ``.qgd`` and  ``.qgs`` files are both embedded in "
 "the archive."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2627
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2628
 msgid "Actions Properties"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2629
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2630
 msgid ""
 "|action| QGIS provides the ability to perform an action based on the "
 "attributes of a feature. This can be used to perform any number of "
@@ -3996,30 +3997,30 @@ msgid ""
 "attributes of a feature or passing parameters to a web reporting tool."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2639
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2640
 msgid "Overview action dialog with some sample actions"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2641
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2642
 msgid ""
 "Actions are useful when you frequently want to run an external "
 "application or view a web page based on one or more values in your vector"
 " layer. They are divided into six types and can be used like this:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2645
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2646
 msgid "Generic, Mac, Windows and Unix actions start an external process."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2646
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2647
 msgid "Python actions execute a Python expression."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2647
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2648
 msgid "Generic and Python actions are visible everywhere."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2648
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2649
 msgid ""
 "Mac, Windows and Unix actions are visible only on the respective platform"
 " (i.e., you can define three 'Edit' actions to open an editor and the "
@@ -4027,7 +4028,7 @@ msgid ""
 "to run the editor)."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2652
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2653
 msgid ""
 "There are several examples included in the dialog. You can load them by "
 "clicking on :guilabel:`Create Default Actions`. To edit any of the "
@@ -4035,7 +4036,7 @@ msgid ""
 "on an attribute value. This concept is used in the following discussion."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2657
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2658
 msgid ""
 "The |checkbox| :guilabel:`Show in Attribute Table` allows you to display "
 "in the attribute table dialog the checked feature-scoped actions, either "
@@ -4043,11 +4044,11 @@ msgid ""
 ":ref:`configure_table_columns`)."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2667
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2668
 msgid "Defining Actions"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2669
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2670
 msgid ""
 "To define an attribute action, open the vector :guilabel:`Layer "
 "Properties` dialog and click on the :guilabel:`Actions` tab. In the "
@@ -4055,7 +4056,7 @@ msgid ""
 "open the :guilabel:`Edit Action` dialog."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2674
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2675
 #, python-format
 msgid ""
 "Select the action :guilabel:`Type` and provide a descriptive name for the"
@@ -4071,39 +4072,39 @@ msgid ""
 " if preceded by a backslash."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2686
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2687
 msgid ""
 "The :guilabel:`Action Scopes` allows you to define *where* the action "
 "should be available. You have 4 different choices:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2689
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2690
 msgid ""
 ":guilabel:`Feature Scope`: action is available when right click in the "
 "cell within the attribute table."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2691
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2692
 msgid ""
 ":guilabel:`Field Scope`: action is available when right click in the cell"
 " within the attribute table, in the feature form and in the default "
 "action button of the main toolbar."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2694
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2695
 msgid ""
 ":guilabel:`Layer Scope`: action is available in the action button in the "
 "attribute table toolbar. Be aware that this type of action involves the "
 "entire layer and not the single features."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2697
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2698
 msgid ""
 ":guilabel:`Canvas`: action is available in the main action button in the "
 "toolbar."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2700
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2701
 #, python-format
 msgid ""
 "If you have field names that are substrings of other field names (e.g., "
@@ -4116,7 +4117,7 @@ msgid ""
 "brackets, use a second set like this: ``[[%col10]]``."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2708
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2709
 msgid ""
 "Using the :guilabel:`Identify Features` tool, you can open the "
 ":guilabel:`Identify Results` dialog. It includes a *(Derived)* item that "
@@ -4129,20 +4130,20 @@ msgid ""
 "dialog box, not the :guilabel:`Attribute Table` dialog box."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2720
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2721
 msgid "Two example actions are shown below:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2722
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2723
 msgid "``konqueror https://www.google.com/search?q=%nam``"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2723
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2724
 #, python-format
 msgid "``konqueror https://www.google.com/search?q=%%``"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2725
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2726
 msgid ""
 "In the first example, the web browser konqueror is invoked and passed a "
 "URL to open. The URL performs a Google search on the value of the ``nam``"
@@ -4154,7 +4155,7 @@ msgid ""
 "action is invoked."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2734
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2735
 msgid ""
 "The second example uses the \\%\\% notation, which does not rely on a "
 "particular field for its value. When the action is invoked, the \\%\\% "
@@ -4162,42 +4163,42 @@ msgid ""
 "results or attribute table."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2743
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2744
 msgid "Using Actions"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2745
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2746
 msgid ""
 "QGIS offers many ways to execute actions you enabled on a layer. "
 "Depending on their settings, they can be available:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2748
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2749
 msgid ""
 "in the drop-down menu of |actionRun| :sup:`Run Feature Action` button "
 "from the :guilabel:`Attributes toolbar` or :guilabel:`Attribute table` "
 "dialog;"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2750
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2751
 msgid ""
 "when right-clicking a feature with the |identify| :sup:`Identify "
 "Features` tool (see :ref:`identify` for more information);"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2752
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2753
 msgid ""
 "from the :guilabel:`Identify Results` panel, under the "
 ":guilabel:`Actions` section;"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2753
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2754
 msgid ""
 "as items of an :guilabel:`Actions` column in the :guilabel:`Attribute "
 "Table` dialog."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2756
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2757
 #, python-format
 msgid ""
 "If you are invoking an action that uses the ``%%`` notation, right-click "
@@ -4206,7 +4207,7 @@ msgid ""
 "application or script."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2761
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2762
 msgid ""
 "Here is another example that pulls data out of a vector layer and inserts"
 " it into a file using bash and the ``echo`` command (so it will only work"
@@ -4217,13 +4218,13 @@ msgid ""
 "in yellow in the QGIS map area). Here is the action to achieve this:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2775
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2776
 msgid ""
 "After selecting a few localities and running the action on each one, "
 "opening the output file will show something like this:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2787
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2788
 msgid ""
 "As an exercise, we can create an action that does a Google search on the "
 "``lakes`` layer. First, we need to determine the URL required to perform "
@@ -4234,98 +4235,98 @@ msgid ""
 "Armed with this information, we can proceed:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2794
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2795
 msgid "Make sure the ``lakes`` layer is loaded."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2795
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2796
 msgid ""
 "Open the :guilabel:`Layer Properties` dialog by double-clicking on the "
 "layer in the legend, or right-click and choose "
 ":menuselection:`Properties` from the pop-up menu."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2798
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2799
 msgid "Click on the :guilabel:`Actions` tab."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2799
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2800
 msgid "Click |signPlus| :sup:`Add a new action`."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2800
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2801
 msgid "Choose the :guilabel:`Open` action type,"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2801
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2802
 msgid "Enter a name for the action, for example ``Google Search``."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2802
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2803
 msgid ""
 "Additionally you can add a :guilabel:`Short Name` or even an "
 ":guilabel:`Icon`."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2803
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2804
 msgid ""
 "Choose the action :guilabel:`Scope`. See :ref:`adding_actions` for "
 "further information. Leave the default settings for this example."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2805
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2806
 msgid ""
 "For the action, we need to provide the name of the external program to "
 "run. In this case, we can use Firefox. If the program is not in your "
 "path, you need to provide the full path."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2808
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2809
 msgid ""
 "Following the name of the external application, add the URL used for "
 "doing a Google search, up to but not including the search term: "
 "``https://www.google.com/search?q=``"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2811
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2812
 msgid ""
 "The text in the :guilabel:`Action` field should now look like this: "
 "``https://www.google.com/search?q=``"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2813
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2814
 msgid ""
 "Click on the drop-down box containing the field names for the ``lakes`` "
 "layer. It's located just to the left of the :guilabel:`Insert` button."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2815
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2816
 msgid "From the drop-down box, select 'NAMES' and click :guilabel:`Insert`."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2816
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2817
 msgid "Your action text now looks like this:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2818
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2819
 msgid "``https://www.google.com/search?q=[%NAMES%]``"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2819
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2820
 msgid "To finalize and add the action, click the :guilabel:`OK` button."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2826
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2827
 msgid "Edit action dialog configured with the example"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2828
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2829
 msgid ""
 "This completes the action, and it is ready to use. The final text of the "
 "action should look like this:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2835
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2836
 msgid ""
 "We can now use the action. Close the :guilabel:`Layer Properties` dialog "
 "and zoom in to an area of interest. Make sure the ``lakes`` layer is "
@@ -4333,11 +4334,11 @@ msgid ""
 "action is visible:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2844
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2845
 msgid "Select feature and choose action"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2846
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2847
 msgid ""
 "When we click on the action, it brings up Firefox and navigates to the "
 "URL https://www.google.com/search?q=Tustumena. It is also possible to add"
@@ -4347,19 +4348,19 @@ msgid ""
 "available that would make sense to search for."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2853
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2854
 msgid ""
 "You can define multiple actions for a layer, and each will show up in the"
 " :guilabel:`Identify Results` dialog."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2857
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2858
 msgid ""
 "You can also invoke actions from the attribute table by selecting a row "
 "and right-clicking, then choosing the action from the pop-up menu."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2861
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2862
 msgid ""
 "There are all kinds of uses for actions. For example, if you have a point"
 " layer containing locations of images or photos along with a file name, "
@@ -4369,13 +4370,13 @@ msgid ""
 "Google search example."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2868
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2869
 msgid ""
 "We can also make more complex examples, for instance, using **Python** "
 "actions."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2871
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2872
 msgid ""
 "Usually, when we create an action to open a file with an external "
 "application, we can use absolute paths, or eventually relative paths. In "
@@ -4385,19 +4386,19 @@ msgid ""
 "SpatiaLite)? The following code will do the trick:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2892
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2893
 msgid ""
 "We just have to remember that the action is one of type *Python* and the "
 "*command* and *imagerelpath* variables must be changed to fit our needs."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2895
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2896
 msgid ""
 "But what about if the relative path needs to be relative to the (saved) "
 "project file? The code of the Python action would be:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2909
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2910
 msgid ""
 "Another Python action example is the one that allows us to add new layers"
 " to the project. For instance, the following examples will add to the "
@@ -4407,51 +4408,51 @@ msgid ""
 "attributes of the vector where the action was created):"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2922
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2923
 msgid "To add a raster (a TIF image in this example), it becomes:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2933
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2934
 msgid "Display Properties"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2935
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2936
 msgid ""
 "|display| The :guilabel:`Display` tab helps you configure fields to use "
 "for feature identification:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2938
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2939
 msgid ""
 "The :guilabel:`Display name`: based on a field or an :ref:`expression "
 "<vector_expressions>`. This is:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2941
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2942
 msgid ""
 "the label shown on top of the feature information in the :ref:`Identify "
 "tool <identify>` results"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2943
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2944
 msgid ""
 "the field used in the :ref:`locator bar <locator_options>` when looking "
 "for features in all layers"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2945
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2946
 msgid ""
 "the feature identifier in the attribute table :ref:`form view "
 "<attribute_table_view>`"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2947
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2948
 msgid ""
 "the feature identifier when the map or layout is exported to a layered "
 "output format such as GeoPDF"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2949
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2950
 msgid ""
 "the map tip information, i.e. the message displayed in the map canvas "
 "when hovering over a feature of the active layer with the |mapTips| "
@@ -4459,18 +4460,18 @@ msgid ""
 " Tip` is set."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2953
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2954
 msgid ""
 "The :guilabel:`HTML Map Tip` is specifically created for the map tips: "
 "it's a more complex and full HTML text mixing fields, expressions and "
 "html tags (multiline, fonts, images, hyperlink...)."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2962
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2963
 msgid "HTML code for map tip"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2965
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2966
 msgid ""
 "To activate map tips, select the menu option :menuselection:`View --> "
 "Show Map Tips` or click on the |mapTips| :sup:`Show Map Tips` icon of the"
@@ -4479,19 +4480,19 @@ msgid ""
 "project, even in future QGIS sessions until it's toggled off."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2976
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2977
 msgid "Map tip made with HTML code"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2983
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2984
 msgid "Rendering Properties"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2986
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2987
 msgid "Scale dependent visibility"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2988
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2989
 msgid ""
 "You can set the :guilabel:`Maximum (inclusive)` and :guilabel:`Minimum "
 "(exclusive)` scale, defining a range of scale in which features will be "
@@ -4501,11 +4502,11 @@ msgid ""
 ":ref:`label_scaledepend` for more information."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2996
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2997
 msgid "Simplify geometry"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2998
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2999
 msgid ""
 "QGIS offers support for on-the-fly feature generalisation. This can "
 "improve rendering times when drawing many complex features at small "
@@ -4516,18 +4517,18 @@ msgid ""
 " information)."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3010
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3011
 msgid "Layer Geometry Simplification dialog"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3014
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3015
 msgid ""
 "Feature generalisation may introduce artefacts into your rendered output "
 "in some cases. These may include slivers between polygons and inaccurate "
 "rendering when using offset-based symbol layers."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3019
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3020
 msgid ""
 "While rendering extremely detailed layers (e.g. polygon layers with a "
 "huge number of nodes), this can cause layout exports in PDF/SVG format to"
@@ -4535,7 +4536,7 @@ msgid ""
 "make the resultant file very slow to work with/open in other programs."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3024
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3025
 msgid ""
 "Checking |checkbox| :guilabel:`Force layer to render as raster` forces "
 "these layers to be rasterised so that the exported files won't have to "
@@ -4543,14 +4544,14 @@ msgid ""
 "therefore sped up."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3028
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3029
 msgid ""
 "You can also do this by forcing the layout to export as a raster, but "
 "that is an all-or-nothing solution, given that the rasterisation is "
 "applied to all layers."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3032
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3033
 msgid ""
 ":guilabel:`Refresh layer at interval (seconds)`: set a timer to "
 "automatically refresh individual layers at a matching interval. Canvas "
@@ -4558,7 +4559,7 @@ msgid ""
 "than one layer has an auto update interval set."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3037
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3038
 msgid ""
 "Depending on the data provider (e.g. PostgreSQL), notifications can be "
 "sent to QGIS when changes are applied to the data source, out of QGIS. "
@@ -4567,18 +4568,18 @@ msgid ""
 "message set in the |checkbox| :guilabel:`Only if message is` text box."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3048
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3049
 msgid "Variables Properties"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3050
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3051
 msgid ""
 "|expression| The :guilabel:`Variables` tab lists all the variables "
 "available at the layer's level (which includes all global and project's "
 "variables)."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3053
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3054
 msgid ""
 "It also allows the user to manage layer-level variables. Click the "
 "|signPlus| button to add a new custom layer-level variable. Likewise, "
@@ -4586,84 +4587,84 @@ msgid ""
 "|signMinus| button to remove it."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3058
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3059
 msgid ""
 "More information on variables usage in the General Tools "
 ":ref:`general_tools_variables` section."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3066
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3067
 msgid "Metadata Properties"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3068
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3069
 msgid ""
 "|editMetadata| The :guilabel:`Metadata` tab provides you with options to "
 "create and edit a metadata report on your layer. Information to fill "
 "concern:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3071
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3072
 msgid ""
 "the data :guilabel:`Identification`: basic attribution of the dataset "
 "(parent, identifier, title, abstract, language...);"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3073
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3074
 msgid ""
 "the :guilabel:`Categories` the data belongs to. Alongside the **ISO** "
 "categories, you can add custom ones;"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3075
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3076
 msgid ""
 "the :guilabel:`Keywords` to retrieve the data and associated concepts "
 "following a standard based vocabulary;"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3077
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3078
 msgid ""
 "the :guilabel:`Access` to the dataset (licenses, rights, fees, and "
 "constraints);"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3078
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3079
 msgid ""
 "the :guilabel:`Extent` of the dataset, either spatial one (CRS, map "
 "extent, altitudes) or temporal;"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3080
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3081
 msgid "the :guilabel:`Contact` of the owner(s) of the dataset;"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3081
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3082
 msgid "the :guilabel:`Links` to ancillary resources and related information;"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3082
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3083
 msgid "the :guilabel:`History` of the dataset."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3084
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3085
 msgid ""
 "A summary of the filled information is provided in the "
 ":guilabel:`Validation` tab and helps you identify potential issues "
 "related to the form. You can then either fix them or ignore them."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3088
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3089
 msgid ""
 "Metadata are currently saved in the project file. They can also be saved "
 "in a :file:`.qmd` file alongside file based layers or in a local "
 ":file:`.sqlite` database for remote layers (e.g. PostGIS)."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3096
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3097
 msgid "Dependencies Properties"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3098
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3099
 msgid ""
 "|dependencies| The :guilabel:`Dependencies` tab allows to declare data "
 "dependencies between layers. A data dependency occurs when a data "
@@ -4673,7 +4674,7 @@ msgid ""
 "modification of another layer's geometry."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3105
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3106
 msgid ""
 "In the :guilabel:`Dependencies` tab, you can select any layers which may "
 "externally alter the data in the current layer. Correctly specifying "
@@ -4681,18 +4682,18 @@ msgid ""
 " dependent layers are altered."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3115
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3116
 msgid "Legend Properties"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3117
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3118
 msgid ""
 "|legend| The :guilabel:`Legend` properties tab provides you with advanced"
 " settings for the :ref:`Layers panel <label_legend>` and/or the "
 ":ref:`print layout legend <layout_legend_item>`. These options include:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3121
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3122
 msgid ""
 "|checkbox| :guilabel:`Text on symbols`: In some cases it can be useful to"
 " add extra information to the symbols in the legend. With this frame, you"
@@ -4704,13 +4705,13 @@ msgid ""
 "font and color selector widgets of the :guilabel:`Text Format` button."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3135
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3136
 msgid ""
 "Setting text on symbols (left) and its rendering in the "
 ":guilabel:`Layers` panel (right)"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3137
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3138
 msgid ""
 "a list of widgets you can embed within the layer tree in the Layers "
 "panel. The idea is to have a way to quickly access some actions that are "
@@ -4718,25 +4719,25 @@ msgid ""
 "style or other stuff...)."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3142
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3143
 msgid ""
 "By default, QGIS provides transparency widget but this can be extended by"
 " plugins registering their own widgets and assign custom actions to "
 "layers they manage."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3152
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3153
 msgid "QGIS Server Properties"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3154
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3155
 msgid ""
 "|overlay| The :guilabel:`QGIS Server` tab consists of "
 ":guilabel:`Description`, :guilabel:`Attribution`, "
 ":guilabel:`MetadataURL`, and :guilabel:`LegendUrl` sections."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3157
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3158
 msgid ""
 "From the :guilabel:`Description` section, you can change the "
 ":guilabel:`Short name` used to reference the layer in requests (to learn "
@@ -4747,20 +4748,20 @@ msgid ""
 "file, you have to fill in a link in the :guilabel:`DataUrl` field."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3164
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3165
 msgid ""
 "Use :guilabel:`Attribution` to get attribute data from an XML metadata "
 "catalog."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3166
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3167
 msgid ""
 "In :guilabel:`MetadataUrl`, you can define the general path to the XML "
 "metadata catalog. This information will be saved in the QGIS project file"
 " for subsequent sessions and will be used for QGIS server."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3170
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3171
 msgid ""
 "In the :guilabel:`LegendUrl` section, you can provide the url of a legend"
 " image in the url field. You can use the Format drop-down option to apply"
@@ -4768,33 +4769,33 @@ msgid ""
 "formats are supported."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3179
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3180
 msgid "QGIS Server tab in vector layers properties dialog"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3181
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3182
 msgid "To learn more about QGIS Server, read the :ref:`QGIS-Server-manual`."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3186
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3187
 msgid "Digitizing Properties"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3188
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3189
 msgid ""
 "|digitizing| The :guilabel:`Digitizing` tab gives access to options that "
 "help to ensure the quality of digitized geometries."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3196
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3197
 msgid "The QGIS Digitizing tab in the vector layers properties dialog"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3199
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3200
 msgid "Automatic Fixes"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3201
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3202
 msgid ""
 "Options in the :guilabel:`Automatic Fixes` section will directly affect "
 "the vertices of any geometry which is added or modified. If the "
@@ -4807,11 +4808,11 @@ msgid ""
 "canvas while digitizing."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3211
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3212
 msgid "Geometry Checks"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3213
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3214
 msgid ""
 "In the :guilabel:`Geometry checks` section, additional validations on a "
 "per geometry basis can be activated. Immediately after any geometry "
@@ -4821,11 +4822,11 @@ msgid ""
 "will run basic validity checks like self intersection on geometries."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3221
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3222
 msgid "Topology Checks"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3223
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3224
 msgid ""
 "In the :guilabel:`Topology checks` section, additional topology "
 "validation checks can be activated. Topology checks will be executed when"
@@ -4837,38 +4838,38 @@ msgid ""
 "well as errors introduced in the current edit session."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3235
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3236
 msgid "Topology check option"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3236
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3237
 msgid "Illustration"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3237
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3238
 msgid ""
 "The |checkbox| :guilabel:`Gap` check will check for gaps between "
 "neighbouring polygons."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3240
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3241
 msgid ""
 "The |checkbox| :guilabel:`Overlap` check will check for overlaps between "
 "neighbouring polygons."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3243
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3244
 msgid ""
 "The |checkbox| :guilabel:`Missing vertex` check will check for shared "
 "boundaries of neighbouring polygons where one border misses a vertex "
 "which is present on the other one."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3250
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3251
 msgid "Gap check exceptions"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3252
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3253
 msgid ""
 "Sometimes it is desirable to keep gaps inside an area in a polygon layer "
 "that otherwise is fully covered by polygons. For example, a land use "
@@ -4877,20 +4878,20 @@ msgid ""
 "allowed, we will refer to them as *Allowed Gaps* areas."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3258
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3259
 msgid ""
 "In the options for the gap checks under :guilabel:`Allowed Gaps`, an "
 "*Allowed Gaps layer* can be configured."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3261
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3262
 msgid ""
 "Whenever the gap check is executed, gaps which are covered by one or more"
 " polygons in the *Allowed Gaps Layer* are not reported as topology "
 "errors."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3264
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3265
 msgid ""
 "It is also possible to configure an additional :guilabel:`Buffer`. This "
 "buffer is applied to each polygon on the *Allowed Gaps Layer*. This makes"
@@ -4898,7 +4899,7 @@ msgid ""
 "outlines at the borders of gaps."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3269
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3270
 msgid ""
 "When *Allowed Gaps* are enabled, an additional button (:guilabel:`Add "
 "Allowed Gap`) for detected gap errors is available in the geometry "

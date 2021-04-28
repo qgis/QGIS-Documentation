@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-12 10:14+0000\n"
+"POT-Creation-Date: 2021-04-28 02:21+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -337,103 +337,150 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_raster/georeferencer.rst:151
 msgid ""
-"Depending on how many ground control points you have captured, you may "
-"want to use different transformation algorithms. Choice of transformation"
-" algorithm is also dependent on the type and quality of input data and "
-"the amount of geometric distortion that you are willing to introduce to "
-"the final result."
+"A number of transformation algorithms are available, dependent on the "
+"type and quality of input data, the nature and amount of geometric "
+"distortion that you are willing to introduce to the final result, and the"
+" number of ground control points (GCPs)."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:157
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:155
 msgid "Currently, the following :guilabel:`Transformation types` are available:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:159
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:157
 msgid ""
 "The **Linear** algorithm is used to create a world file and is different "
-"from the other algorithms, as it does not actually transform the raster. "
-"This algorithm likely won't be sufficient if you are dealing with scanned"
-" material."
+"from the other algorithms, as it does not actually transform the raster "
+"pixels. It allows positioning (translating) the image and uniform "
+"scaling, but no rotation or other transformations. It is the most "
+"suitable if your image is a good quality raster map, in a known CRS, but "
+"is just missing georeferencing information. At least 2 GCPs are needed."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:163
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:162
 msgid ""
-"The **Helmert** transformation performs simple scaling and rotation "
-"transformations."
+"The **Helmert** transformation also allows rotation. It is particularly "
+"useful if your raster is a good quality local map or orthorectified "
+"aerial image, but not aligned with the grid bearing in your CRS. At least"
+" 2 GCPs are needed."
 msgstr ""
 
 #: ../../docs/user_manual/working_with_raster/georeferencer.rst:165
 msgid ""
-"The **Polynomial** algorithms 1-3 are among the most widely used "
-"algorithms introduced to match source and destination ground control "
-"points. The most widely used polynomial algorithm is the second-order "
-"polynomial transformation, which allows some curvature. First-order "
-"polynomial transformation (affine) preserves collinearity and allows "
-"scaling, translation and rotation only."
+"The **Polynomial 1** algorithm allows a more general affine "
+"transformation, in particular also a uniform shear. Straight lines remain"
+" straight (i.e., collinear points stay collinear) and parallel lines "
+"remain parallel. This is particularly useful for georeferencing data "
+"cartograms, which may have been plotted (or data collected) with "
+"different ground pixel sizes in different directions. At least 3 GCP's "
+"are required."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:170
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:169
 msgid ""
-"The **Thin Plate Spline** (TPS) algorithm is a more modern georeferencing"
-" method, which is able to introduce local deformations in the data. This "
-"algorithm is useful when very low quality originals are being "
-"georeferenced."
+"The **Polynomial** algorithms 2-3 use more general 2nd or 3rd degree "
+"polynomials instead of just affine transformation. This allows them to "
+"account for curvature or other systematic warping of the image, for "
+"instance photographed maps with curving edges. At least 6 (respectively "
+"10) GCP's are required. Angles and local scale are not preserved or "
+"treated uniformly across the image. In particular, straight lines may "
+"become curved, and there may be significant distortion introduced at the "
+"edges or far from any GCPs arising from extrapolating the data-fitted "
+"polynomials too far."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:173
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:174
 msgid ""
-"The **Projective** transformation is a linear rotation and translation of"
-" coordinates."
-msgstr ""
-
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:177
-msgid "Define the Resampling method"
+"The **Projective** algorithm generalizes Polynomial 1 in a different way,"
+" allowing transformations representing a central projection between 2 "
+"non-parallel planes, the image and the map canvas. Straight lines stay "
+"straight, but parallelism is not preserved and scale across the image "
+"varies consistently with the change in perspective. This transformation "
+"type is most useful for georeferencing angled photographs (rather than "
+"flat scans) of good quality maps, or oblique aerial images. A minimum of "
+"4 GCPs is required."
 msgstr ""
 
 #: ../../docs/user_manual/working_with_raster/georeferencer.rst:179
 msgid ""
-"The type of resampling you choose will likely depending on your input "
-"data and the ultimate objective of the exercise. If you don't want to "
-"change statistics of the image, you might want to choose 'Nearest "
-"neighbour', whereas a 'Cubic resampling' will likely provide a more "
-"smoothed result."
-msgstr ""
-
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:184
-msgid "It is possible to choose between five different resampling methods:"
+"Finally, the **Thin Plate Spline** (TPS) algorithm \"rubber sheets\" the "
+"raster using multiple local polynomials to match the GCPs specified, with"
+" overall surface curvature minimized. Areas away from GCPs will be moved "
+"around in the output to accommodate the GCP matching, but will otherwise "
+"be minimally locally deformed.  TPS is most useful for georeferencing "
+"damaged, deformed, or otherwise slightly inaccurate maps, or poorly "
+"orthorectified aerials.  It is also useful for approximately "
+"georeferencing and implicitly reprojecting maps with unknown projection "
+"type or parameters, but where a regular grid or dense set of ad-hoc GCPs "
+"can be matched with a reference map layer. It technically requires a "
+"minimum of 10 GCPs, but usually more to be successful."
 msgstr ""
 
 #: ../../docs/user_manual/working_with_raster/georeferencer.rst:186
-msgid "Nearest neighbour"
-msgstr ""
-
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:187
-msgid "Linear"
-msgstr ""
-
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:188
-msgid "Cubic"
-msgstr ""
-
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:189
-msgid "Cubic Spline"
-msgstr ""
-
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:190
-msgid "Lanczos"
+msgid ""
+"In all of the algorithms except TPS, if more than the minimum GCPs are "
+"specified, parameters will be fitted so that the overall residual error "
+"is minimized. This is helpful to minimize the impact of registration "
+"errors, i.e. slight imprecisions in pointer clicks or typed coordinates, "
+"or other small local image deformations. Absent other GCPs to compensate,"
+" such errors or deformations could translate into significant "
+"distortions, especially near the edges of the georeferenced image.  "
+"However, if more than the minimum GCPs are specified, they will match "
+"only approximately in the output. In contrast, TPS will precisely match "
+"all specified GCPs, but may introduce significant deformations between "
+"nearby GCPs with registration errors."
 msgstr ""
 
 #: ../../docs/user_manual/working_with_raster/georeferencer.rst:193
-msgid "Define the transformation settings"
+msgid "Define the Resampling method"
 msgstr ""
 
 #: ../../docs/user_manual/working_with_raster/georeferencer.rst:195
+msgid ""
+"The type of resampling you choose will likely depend on your input data "
+"and the ultimate objective of the exercise. If you don't want to change "
+"statistics of the raster (other than as implied by nonuniform geometric "
+"scaling if using other than the Linear, Helmert, or Polynomial 1 "
+"transformations), you might want to choose 'Nearest neighbour'. In "
+"contrast, 'cubic resampling', for instance, will usually generate a "
+"visually smoother result."
+msgstr ""
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:201
+msgid "It is possible to choose between five different resampling methods:"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:203
+msgid "Nearest neighbour"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:204
+msgid "Linear"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:205
+msgid "Cubic"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:206
+msgid "Cubic Spline"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:207
+msgid "Lanczos"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:210
+msgid "Define the transformation settings"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:212
 msgid ""
 "There are several options that need to be defined for the georeferenced "
 "output raster."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:198
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:215
 msgid ""
 "The |checkbox| :guilabel:`Create world file` checkbox is only available "
 "if you decide to use the linear transformation type, because this means "
@@ -442,7 +489,7 @@ msgid ""
 "world file will be created."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:203
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:220
 msgid ""
 "For all other transformation types, you have to define an "
 ":guilabel:`Output raster`. As default, a new file ([filename]_modified) "
@@ -450,46 +497,46 @@ msgid ""
 "image."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:206
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:223
 msgid ""
 "As a next step, you have to define the :guilabel:`Target SRS` (Spatial "
 "Reference System) for the georeferenced raster (see "
 ":ref:`label_projections`)."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:208
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:225
 msgid ""
 "If you like, you can **generate a pdf map** and also **a pdf report**. "
 "The report includes information about the used transformation parameters,"
 " an image of the residuals and a list with all GCPs and their RMS errors."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:211
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:228
 msgid ""
 "Furthermore, you can activate the |checkbox| :guilabel:`Set Target "
 "Resolution` checkbox and define the pixel resolution of the output "
 "raster. Default horizontal and vertical resolution is 1."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:214
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:231
 msgid ""
 "The |checkbox| :guilabel:`Use 0 for transparency when needed` can be "
 "activated, if pixels with the value 0 shall be visualized transparent. In"
 " our example toposheet, all white areas would be transparent."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:217
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:234
 msgid ""
 "Finally, |checkbox| :guilabel:`Load in QGIS when done` loads the output "
 "raster automatically into the QGIS map canvas when the transformation is "
 "done."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:221
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:238
 msgid "Show and adapt raster properties"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:223
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:240
 msgid ""
 "Clicking on the :guilabel:`Raster properties` option in the "
 ":guilabel:`Settings` menu opens the :ref:`Layer properties "
@@ -497,35 +544,35 @@ msgid ""
 "georeference."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:230
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:247
 msgid "Configure the georeferencer"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:232
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:249
 msgid "You can define whether you want to show GCP coordinates and/or IDs."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:233
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:250
 msgid "As residual units, pixels and map units can be chosen."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:234
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:251
 msgid ""
 "For the PDF report, a left and right margin can be defined and you can "
 "also set the paper size for the PDF map."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:236
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:253
 msgid ""
 "Finally, you can activate to |checkbox| :guilabel:`Show Georeferencer "
 "window docked`."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:241
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:258
 msgid "Running the transformation"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:243
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:260
 msgid ""
 "After all GCPs have been collected and all transformation settings are "
 "defined, just press the |start| :sup:`Start georeferencing` button to "
