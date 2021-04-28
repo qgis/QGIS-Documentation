@@ -956,6 +956,14 @@ To abort feature rotation, press the :kbd:`ESC` button or click on the
    single: Digitizing tools; Simplify Feature
 .. _simplify_feature:
 
+Scale Feature
+-------------
+
+The Scale Feature tool is similar to the Rotate feature. Though instead of performing
+a rotation of selected features, it changes the scale of those features. The change is
+performed in relation to the anchor point and the value can be manually specified in
+the widget that appears in the upper corner of the canvas.
+
 Simplify Feature
 ----------------
 
@@ -1256,11 +1264,14 @@ a multipolygon/multipolyline/multipoint feature is created.
    * selecting a row in the table and pressing :guilabel:`Take attributes from
      selected feature` to use the values of this initial feature;
    * pressing :guilabel:`Skip all fields` to use empty attributes;
-   * or, expanding the drop down menu at the top of the table, select any of the
+   * by expanding the drop down menu at the top of the table, select any of the
      above options to apply to the corresponding field only. There, you can also
      choose to aggregate the initial features attributes (Minimum, Maximum, Median,
      Sum, Count, Concatenation... depending on the type of the field.
      see :ref:`statistical_summary` for the full list of functions).
+   * or by using the tools at the bottom of the table. The 'Take atributes from the
+     largest geometry' will use the attributes from the feature with the longest 
+     feature, the largest polygons, or the most points when used with multipoints.
 
    .. note::
     If the layer has default values or clauses present on fields,
@@ -1282,6 +1293,7 @@ The dialog is the same as the ``Merge Selected Features`` tool's except that
 unlike that tool, selected objects are kept with their geometry while some of their
 attributes are made identical.
 
+The tools at the bottom of the table are the same as seen in :sup:`Merge Selected Features`.
 
 .. index::
    single: Digitizing tools; Rotate Point Symbols
