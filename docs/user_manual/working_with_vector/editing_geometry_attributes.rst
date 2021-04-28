@@ -465,6 +465,7 @@ geometry then enter its attributes. To digitize the geometry:
     in :menuselection:`Settings --> Options --> Digitizing` menu.
     You can also avoid the use of the rubber band by checking :guilabel:`Don't
     update rubber band during node editing`.
+#. For line feature pressing :kbd:`Shift+` + right-click will close the line automatically.
 
 #. The attribute window will appear, allowing you to enter the information for
    the new feature. :numref:`Figure_edit_values` shows setting attributes for a fictitious
