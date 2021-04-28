@@ -336,6 +336,15 @@ direction and a negative value does the opposite.
 
 .. _sec_edit_existing_layer:
 
+
+Self-snapping
+-------------
+
+The last tool on the Snapping toolbar allows you to toggle self-snapping.
+When active, it allows you to snap to the geometry that is being edited.
+Self-snapping can cause invalid geometries, use with caution.
+
+
 Digitizing an existing layer
 ============================
 
