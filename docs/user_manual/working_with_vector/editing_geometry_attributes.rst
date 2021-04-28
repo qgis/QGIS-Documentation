@@ -243,18 +243,14 @@ a point based on the value of the edge used for the connection.
 .. index:: Avoid overlap
    seealso: Avoid overlap; Topology
 
-Avoid overlap of new polygons
------------------------------
+Overlapping control
+-------------------
 
-When the snapping mode is set to ``Advanced configuration``, for polygon layers,
-there's an option called |checkbox| :guilabel:`Avoid overlap`. This option
-prevents you from drawing new features that overlap existing ones in the
-selected layer, speeding up digitizing of adjacent polygons.
-
-With avoid overlap enabled, if you already have one polygon, you can digitize
-a second one such that they intersect. QGIS will then cut the second polygon to the
-boundary of the existing one. The advantage is that you don't have to
-digitize all vertices of the common boundary.
+Overlapping can be controlled by the overlap tool. By default overlap is allowed.
+Two other modes exist, 'Avoid Overlap on Active Layer' and 'Follow Advanced Configuration'.
+The second mode prevent any overlap with other features from the layer being editted.
+The last mode is the the previous behavior, where ovelapping is controlled on a layer basis 
+in the snapping configuration.
 
 .. note:: If the new geometry is totally covered by existing ones, it gets
    cleared, and QGIS will show an error message.
@@ -264,6 +260,8 @@ digitize all vertices of the common boundary.
    Since this option will cut new overlapping geometries of any polygon layer,
    you can get unexpected geometries if you forget to uncheck it when no longer
    needed.
+
+.. _tracing:
 
 Automatic Tracing
 -----------------
@@ -335,6 +333,15 @@ direction and a negative value does the opposite.
    seealso: Digitizing; Attribute table
 
 .. _sec_edit_existing_layer:
+
+
+Self-snapping
+-------------
+
+The last tool on the Snapping toolbar allows you to toggle self-snapping.
+When active, it allows you to snap to the geometry that is being edited.
+Self-snapping can cause invalid geometries, use with caution.
+
 
 Digitizing an existing layer
 ============================
@@ -947,6 +954,14 @@ To abort feature rotation, press the :kbd:`ESC` button or click on the
    single: Digitizing tools; Simplify Feature
 .. _simplify_feature:
 
+Scale Feature
+-------------
+
+The Scale Feature tool is similar to the Rotate feature. Though instead of performing
+a rotation of selected features, it changes the scale of those features. The change is
+performed in relation to the anchor point and the value can be manually specified in
+the widget that appears in the upper corner of the canvas.
+
 Simplify Feature
 ----------------
 
@@ -1247,11 +1262,14 @@ a multipolygon/multipolyline/multipoint feature is created.
    * selecting a row in the table and pressing :guilabel:`Take attributes from
      selected feature` to use the values of this initial feature;
    * pressing :guilabel:`Skip all fields` to use empty attributes;
-   * or, expanding the drop down menu at the top of the table, select any of the
+   * by expanding the drop down menu at the top of the table, select any of the
      above options to apply to the corresponding field only. There, you can also
      choose to aggregate the initial features attributes (Minimum, Maximum, Median,
      Sum, Count, Concatenation... depending on the type of the field.
      see :ref:`statistical_summary` for the full list of functions).
+   * or by using the tools at the bottom of the table. The 'Take atributes from the
+     largest geometry' will use the attributes from the feature with the longest 
+     feature, the largest polygons, or the most points when used with multipoints.
 
    .. note::
     If the layer has default values or clauses present on fields,
@@ -1273,6 +1291,7 @@ The dialog is the same as the ``Merge Selected Features`` tool's except that
 unlike that tool, selected objects are kept with their geometry while some of their
 attributes are made identical.
 
+The tools at the bottom of the table are the same as seen in :sup:`Merge Selected Features`.
 
 .. index::
    single: Digitizing tools; Rotate Point Symbols
