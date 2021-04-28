@@ -76,8 +76,8 @@ There are three options to select the layer(s) to snap to:
   Snapping will not occur to a layer that is not checked in the
   snapping options dialog.
 
-As for snapping mode, you can choose between ``To vertex``, ``To segment``,
-and ``To vertex and segment``.
+As for snapping mode, you can choose between ``Vertex``, ``Segment``,
+``Area``, ``Centroid``, ``Middle of Segments`` and ``Line Endpoints``.
 
 The tolerance values can be set either in the project's ``map units``
 or in ``pixels``.
