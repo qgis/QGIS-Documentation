@@ -57,7 +57,10 @@ The snapping mode, tolerance value, and units can also be configured in
 this toolbar.
 
 The snapping configuration can also be set in
-:menuselection:`Project --> Snapping Options...`.
+:menuselection:`Project --> Snapping Options...`. Or it can be customied for
+each layer in the layer properties in the Digitizing tab. This will show
+a dotted grid when the scale is low enough to show the specified precision limit.
+Snapping can be performed on the dots of the grid.
 
 There are three options to select the layer(s) to snap to:
 
