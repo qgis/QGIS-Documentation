@@ -408,7 +408,7 @@ Returns a string with the supplied string or array of strings replaced by a stri
 
 **Map variant**
 
-Returns a string with the supplied map keys replaced by paired values.
+Returns a string with the supplied map keys replaced by paired values. Longer map keys are evaluated first.
 
 .. list-table::
    :widths: 15 85
@@ -420,6 +420,7 @@ Returns a string with the supplied map keys replaced by paired values.
        * **map** - the map containing keys and values
    * - Examples
      - * ``replace('APP SHOULD ROCK',map('APP','QGIS','SHOULD','DOES'))`` → 'QGIS DOES ROCK'
+       * ``replace('forty two',map('for','4','two','2','forty two','42'))`` → '42'
 
 
 .. end_replace_section
