@@ -243,18 +243,14 @@ a point based on the value of the edge used for the connection.
 .. index:: Avoid overlap
    seealso: Avoid overlap; Topology
 
-Avoid overlap of new polygons
------------------------------
+Overlapping control
+-------------------
 
-When the snapping mode is set to ``Advanced configuration``, for polygon layers,
-there's an option called |checkbox| :guilabel:`Avoid overlap`. This option
-prevents you from drawing new features that overlap existing ones in the
-selected layer, speeding up digitizing of adjacent polygons.
-
-With avoid overlap enabled, if you already have one polygon, you can digitize
-a second one such that they intersect. QGIS will then cut the second polygon to the
-boundary of the existing one. The advantage is that you don't have to
-digitize all vertices of the common boundary.
+Overlapping can be controlled by the overlap tool. By default overlap is allowed.
+Two other modes exist, 'Avoid Overlap on Active Layer' and 'Follow Advanced Configuration'.
+The second mode prevent any overlap with other features from the layer being editted.
+The last mode is the the previous behavior, where ovelapping is controlled on a layer basis 
+in the snapping configuration.
 
 .. note:: If the new geometry is totally covered by existing ones, it gets
    cleared, and QGIS will show an error message.
@@ -264,6 +260,8 @@ digitize all vertices of the common boundary.
    Since this option will cut new overlapping geometries of any polygon layer,
    you can get unexpected geometries if you forget to uncheck it when no longer
    needed.
+
+.. _tracing:
 
 Automatic Tracing
 -----------------
