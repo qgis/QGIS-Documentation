@@ -113,7 +113,7 @@ Entering ground control points (GCPs)
    order to locate a relevant set of GCP points.
 
 #. With the |moveGCPPoint| tool, you can move the GCPs in both the canvas and the
-   georefering window, if you need to correct them.
+   georeferencing window, if you need to correct them.
 
 .. _figure_georeferencer_add_points:
 
