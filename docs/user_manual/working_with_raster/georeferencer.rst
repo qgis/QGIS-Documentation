@@ -98,7 +98,7 @@ Entering ground control points (GCPs)
    points.
 #. Using the |addGCPPoint| :sup:`Add Point` button, add points to the
    main working area and enter their coordinates (see Figure :numref:`figure_georeferencer_add_points`).
-   For this procedure you have two options:
+   For this procedure you have the following options:
 
    - Click on a point in the raster image and enter the X and Y coordinates
      manually, along with the CRS of the point.
