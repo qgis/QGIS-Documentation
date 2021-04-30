@@ -541,7 +541,7 @@ Next to placement modes, you can set:
     * |labelAnchorEnd| :guilabel:`End of Line`
     * or |labelAnchorCustom| :guilabel:`Custom...`.
 
-  * :guilabel:`Clipping`: Determines how the line placement is calculated.
+  * :guilabel:`Clipping`: Determines how the label placement on a line is calculated.
     By default only the visible extent of the line is used but the whole extent
     can be used to have more consistent results.
   * :guilabel:`Placement Behavior`: use :guilabel:`Preferred Placement Hint`
