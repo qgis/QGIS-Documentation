@@ -1573,10 +1573,10 @@ same way with diagrams:
   visibility. If you drag an area, all the labels in the area will be restored.
 * |moveLabel| :sup:`Moves a Label or Diagram`. You just have to click to select
    the label and click to move it to the desired place. Selecting the label with
-   this tool and hiting the Delete key will delete remove the stored positon value.
+   this tool and hitting the :kbd:`Delete` key will delete the stored position value.
 * |rotateLabel| :sup:`Rotates a Label`. Click to select the label and click again
-  to apply the desired rotation. Selecting a label with this tool and hiting the
-  Delete key will delete the rotation value of this label.
+  to apply the desired rotation. Selecting a label with this tool and hitting the
+  :kbd:`Delete` key will delete the rotation value of this label.
 * |changeLabelProperties| :sup:`Change Label Properties`. It opens a dialog to change the
   clicked label properties; it can be the label itself, its coordinates, angle,
   font, size, multiline alignment ... as long as this property has been mapped
