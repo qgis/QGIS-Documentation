@@ -12,6 +12,10 @@
 QGIS has various capabilities for editing OGR, SpatiaLite, PostGIS,
 MSSQL Spatial and Oracle Spatial vector layers and tables.
 
+Editing can be done by placing nodes manually. And for lines and polygons
+, free-hand digitising can be toggled by pressing :kbd:`R` or activating
+stream digitizing in the 'Advanced Digitizing Toolbar'.
+
 .. note::
    The procedure for editing GRASS layers is different - see section
    :ref:`grass_digitizing` for details.
@@ -29,8 +33,8 @@ MSSQL Spatial and Oracle Spatial vector layers and tables.
 .. tip:: **Validating Edits**
 
    The core plugin Geometry Checker can be used to validate new or modified
-   geometries to ensure their validity in order to prevent issues later, 
-   for more information see:ref:`geometry_checker`.
+   geometries to ensure their validity in order to prevent issues laterF
+   for more information see :ref:`geometry_checker`.
 
 .. index:: Snapping
    single: Digitizing; Snapping
@@ -246,11 +250,21 @@ a point based on the value of the edge used for the connection.
 Overlapping control
 -------------------
 
-Overlapping can be controlled by the overlap tool. By default overlap is allowed.
-Two other modes exist, 'Avoid Overlap on Active Layer' and 'Follow Advanced Configuration'.
-The second mode prevent any overlap with other features from the layer being editted.
-The last mode is the the previous behavior, where ovelapping is controlled on a layer basis 
-in the snapping configuration.
+Overlapping can be controlled by the overlap tool. Three modes are available:
+
+#. Allow Overlap
+#. Avoid Overlap on Active Layer
+#. Follow Advanced Configuration
+
+Allow Overlap is the default setting. The 'Avoid Overlap on Active Layer' prevent
+ any overlap with other features from the layer being edited. And 'Follow Advanced
+Configuration' allows the overlapping setting to be set on a layer basis in the
+advanced configuration panel.
+
+With avoid overlap enabled, if you already have one polygon, you can digitize
+a second one such that they intersect. QGIS will then cut the second polygon to the
+boundary of the existing one. The advantage is that you don't have to
+digitize all vertices of the common boundary.
 
 .. note:: If the new geometry is totally covered by existing ones, it gets
    cleared, and QGIS will show an error message.
@@ -261,6 +275,8 @@ in the snapping configuration.
    you can get unexpected geometries if you forget to uncheck it when no longer
    needed.
 
+.. index::
+   single: Digitizing tools; Automatic tracing
 .. _tracing:
 
 Automatic Tracing
@@ -470,10 +486,7 @@ geometry then enter its attributes. To digitize the geometry:
     You can also avoid the use of the rubber band by checking :guilabel:`Don't
     update rubber band during node editing`.
 
-#. For line feature pressing :kbd:`Shift+` + right-click will close the line automatically.
-
-#. For line and polygon feature pressing :kbd:`R` or toggling stream digitizing the 'Advanced
-   Digitizing Toolbar' will let you perform a free-hand draw of the geometry.
+#. For line feature pressing :kbd:`Shift` + right-click will close the line automatically.
 
 #. The attribute window will appear, allowing you to enter the information for
    the new feature. :numref:`Figure_edit_values` shows setting attributes for a fictitious
@@ -850,13 +863,15 @@ Advanced digitizing
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
 | Icon                      | Purpose                                 | Icon                   | Purpose                 |
 +===========================+=========================================+========================+=========================+
-| |cad|                     | Enable Advanced Digitizing Tools        | |tracing|              | Enable Tracing          |
+| |digitizewithCurve|       | Draw curves                             | |streamDigitizing|     | Enable stream digitizing|
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
 | |moveFeature|             | Move Feature(s)                         | |moveFeatureCopy|      | Copy and Move Feature(s)|
 | |moveFeatureLine|         |                                         | |moveFeatureCopyLine|  |                         |
 | |moveFeaturePoint|        |                                         | |moveFeatureCopyPoint| |                         |
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
 | |rotateFeature|           | Rotate Feature(s)                       | |simplifyFeatures|     | Simplify Feature        |
++---------------------------+-----------------------------------------+------------------------+-------------------------+
+| |cad|                     | Enable Advanced Digitizing Tools        | |scaleFeature|         | Enable Tracing          |
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
 | |addRing|                 | Add Ring                                | |addPart|              | Add Part                |
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
@@ -877,6 +892,21 @@ Advanced digitizing
 
 Table Advanced Editing: Vector layer advanced editing toolbar
 
+.. index::
+   single: Digitizing tools; Draw curves
+   single: Digitizing tools; Enable stream digitizing
+.. _draw_curves:
+
+Draw Curves
+---------------
+
+The |drawCurves| :sup:`Draw Curves` tool allows you to draw curves in layers with
+geometries that support curves.
+
+Alternatively the |streamDigitizing| :sup:`Stream Digitizing` tool allows you to
+activate and deactivate stream digitizing. Allowing to create features in freehand
+mode. Generatig features with curves with dense vertices, even if the layer does not
+support curved geometries. 
 
 .. index::
    single: Digitizing tools; Move feature
@@ -951,16 +981,21 @@ To abort feature rotation, press the :kbd:`ESC` button or click on the
 |rotateFeature| :sup:`Rotate Feature(s)` icon.
 
 .. index::
-   single: Digitizing tools; Simplify Feature
-.. _simplify_feature:
+   single: Digitizing tools; Scale Feature
+.. _scale_feature:
 
 Scale Feature
 -------------
 
 The Scale Feature tool is similar to the Rotate feature. Though instead of performing
-a rotation of selected features, it changes the scale of those features. The change is
-performed in relation to the anchor point and the value can be manually specified in
-the widget that appears in the upper corner of the canvas.
+a rotation of selected features, it changes rescales their geometry. The change is
+performed in relation to the anchor point and the scale ration can be manually specified
+in the widget that appears in the upper corner of the canvas.
+
+
+single: Digitizing tools; Simplify Feature
+.. _simplify_features:
+
 
 Simplify Feature
 ----------------
@@ -1261,15 +1296,15 @@ a multipolygon/multipolyline/multipoint feature is created.
    * manually replacing the value in the corresponding cell;
    * selecting a row in the table and pressing :guilabel:`Take attributes from
      selected feature` to use the values of this initial feature;
+   * pressing the :guilabel:`Take attributes from the largest geometry`
+     to use the attributes from the longest line feature
+     the largest polygon, or the multipoints with the most parts;
    * pressing :guilabel:`Skip all fields` to use empty attributes;
-   * by expanding the drop down menu at the top of the table, select any of the
+   * expanding the drop down menu at the top of the table, select any of the
      above options to apply to the corresponding field only. There, you can also
      choose to aggregate the initial features attributes (Minimum, Maximum, Median,
      Sum, Count, Concatenation... depending on the type of the field.
      see :ref:`statistical_summary` for the full list of functions).
-   * or by using the tools at the bottom of the table. The 'Take atributes from the
-     largest geometry' will use the attributes from the feature with the longest 
-     feature, the largest polygons, or the most points when used with multipoints.
 
    .. note::
     If the layer has default values or clauses present on fields,
@@ -1291,7 +1326,6 @@ The dialog is the same as the ``Merge Selected Features`` tool's except that
 unlike that tool, selected objects are kept with their geometry while some of their
 attributes are made identical.
 
-The tools at the bottom of the table are the same as seen in :sup:`Merge Selected Features`.
 
 .. index::
    single: Digitizing tools; Rotate Point Symbols
@@ -1782,14 +1816,15 @@ and angle entered. Repeating the process, several points can be added.
 
    Points at given distance and angle
 
-.. index:: Edit in place
-.. _processing_inplace_edit:
 
 Information Floater
 -------------------
 
 As an additionnal tool, the Floater can also be activated. This allows to display
 the values in the panel right next to the cursor.
+
+.. index:: Edit in place
+.. _processing_inplace_edit:
 
 
 The Processing in-place layer modifier
