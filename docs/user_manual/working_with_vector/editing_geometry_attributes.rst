@@ -994,7 +994,7 @@ in the widget that appears in the upper corner of the canvas.
 
 
 single: Digitizing tools; Simplify Feature
-.. _simplify_feature:
+.. _simplify_features:
 
 
 Simplify Feature
