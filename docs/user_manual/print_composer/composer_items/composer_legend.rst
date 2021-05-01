@@ -153,6 +153,9 @@ e.g. ``Borough (3) - 850ha``:
 #. Press :guilabel:`OK`
 
 
+Expressions can also be added directly anywhere in the legend by using the expression
+notation: [% expression %].
+
 Fonts
 -----
 
