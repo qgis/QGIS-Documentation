@@ -156,6 +156,27 @@ e.g. ``Borough (3) - 850ha``:
 Expressions can also be added directly anywhere in the legend by using the expression
 notation: [% expression %].
 
+Customizing legend items
+........................
+
+Double-clicking on an item allows for futher customization. For all item types it
+allows to modify the label text and its expression as previously detailed or by using the
+insert expression. The item menu also allows you to control the column splitting behaviour
+by forcing the column split to occur after a specific item.
+
+For items with a symbol, the item menu allows you to specify the maximum height and width
+that a symbol can occupy.
+
+For vector symbols, you can also specify a custom shape for the symbol. The shapes are usually
+defined by an expression to represent the geometry in a simple plain, but those symbol can also
+be save in the style manager and imported later. The default symbol for each geometry type can
+also be controlled via the style manager.
+
+An entire custom symbol can also be specified for vector symbols.This can be useful
+if you want to tweak the render of a symbol to heance it in the legend and detach it
+from the layer render. This custom symbol will override the legend symbol, but will
+take into account the symbol shape. 
+
 Fonts
 -----
 
@@ -222,8 +243,8 @@ You can:
    Legend Symbol configuration
 
 
-WMS LegendGraphic and Spacing
-------------------------------
+WMS LegendGraphic
+-----------------
 
 The :guilabel:`WMS LegendGraphic` and :guilabel:`Spacing` groups of the legend
 :guilabel:`Item Properties` panel provide the following functionalities (see
@@ -243,6 +264,9 @@ The WMS legend content will be provided as a raster image.
 
 :guilabel:`WMS LegendGraphic` is used to be able to adjust the :guilabel:`Legend
 width` and the :guilabel:`Legend height` of the WMS legend raster image.
+
+Spacing
+-------
 
 :guilabel:`Spacing` around title, groups, subgroups, symbols, labels, boxes,
 columns and lines can be customized through this dialog.
