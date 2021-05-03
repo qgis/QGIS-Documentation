@@ -566,7 +566,8 @@ This tab offers some options regarding the behavior of the :ref:`Identify tool <
 
 **Predefined scales**
 
-Here, you find a list of predefined scales. With the |signPlus|
+Here, you find a list of predefined scales to display in the status
+bar :guilabel:`Scale` drop-down widget, for quick zoom. With the |signPlus|
 and |signMinus| buttons you can add or remove your personal scales.
 You can also import or export scales from/to a ``.XML`` file. Note that you
 still have the possibility to remove your changes and reset to the predefined
@@ -1248,12 +1249,10 @@ frame lets you control these parameters. You can indeed choose:
   * Identify tool derived length, perimeter and area values
   * Default unit shown in measure dialog
 
-The :guilabel:`Coordinate and Bearing display` allows you to choose and customize the bearing format and the format of units
+The :guilabel:`Coordinate and Bearing display` allows you to choose and
+customize the bearing format and the format of units
 to use to display the mouse coordinate in the status bar and the derived coordinates
 shown via the identify tool.
-
-Finally, you can set a :guilabel:`Project predefined scales` list, which overrides
-the global predefined scales.
 
 .. _figure_general_tab:
 
@@ -1273,6 +1272,32 @@ categories, keywords, contact details, links, history. There is also a
 validation functionality that checks if specific fields were filled, anyway
 this is not enforced. See :ref:`vector layer metadata properties
 <vectormetadatamenu>` for some details.
+
+View Settings
+--------------
+
+.. _figure_viewsettings_tab:
+
+.. figure:: img/project_viewsettings.png
+   :align: center
+
+   View Settings tab of the Project Properties dialog
+
+The |overlay| :guilabel:`View Settings` tab provides means to control
+the project map canvas. You can:
+
+* set :guilabel:`Project predefined scales`: the list of scales to display in
+  the status bar :guilabel:`Scale` drop-down widget. This overrides
+  the global predefined scales.
+
+.. _project_full_extent:
+
+* :guilabel:`Set Project full Extent`: this extent will be used instead of the
+  extent of all layers when zooming to full map extent (|zoomFullExtent|).
+  It's useful when a project contains web layers/national layers/global layers
+  yet the actual area of interest for the project is a smaller geographic area.
+  The project full extent coordinates can be derived from an existing layer,
+  based on the current map canvas extent or defined by the user.
 
 CRS Properties
 --------------
@@ -1964,6 +1989,8 @@ in the QGIS user profile.
    :width: 1em
 .. |osx| image:: /static/common/osx.png
    :width: 1em
+.. |overlay| image:: /static/common/overlay.png
+   :width: 1.5em
 .. |processing| image:: /static/common/processingAlgorithm.png
    :width: 1.5em
 .. |radioButtonOff| image:: /static/common/radiobuttonoff.png
@@ -1996,3 +2023,5 @@ in the QGIS user profile.
    :width: 1.3em
 .. |win| image:: /static/common/win.png
    :width: 1em
+.. |zoomFullExtent| image:: /static/common/mActionZoomFullExtent.png
+   :width: 1.5em
