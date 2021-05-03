@@ -1,25 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# mnamihdk, 2020
-# Kayama Yoichi <yoichi.kayama@gmail.com>, 2020
-# Richard Duivenvoorde <richard@duif.net>, 2020
+# Harrissou Sant-anna, 2020
+# tomoyuki arai <tarai.3367@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:32+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"POT-Creation-Date: 2021-01-12 10:14+0000\n"
+"PO-Revision-Date: 2020-12-24 10:23+0000\n"
+"Last-Translator: tomoyuki arai <tarai.3367@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -48,8 +49,8 @@ msgid ""
 "are listed in the :guilabel:`Layers` panel. Whether a layer is spatially "
 "enabled or not determines whether you can interact with it on the map."
 msgstr ""
-"QGISでは空間情報のあるテーブル、ないテーブルの両方を読み込むことができます。現状ではOGR、デリミテッドテキストに加えてPostgreSQL、MSSQL、Spatialite、DB2、オラクルのプロバイダーがサポートされています。読み込まれた全てのレイヤは"
-" :guilabel:`Layers` に順番に格納されます。レイヤの空間情報が定義されているか否かによってマップ上で操作できるか否かが決まります。"
+"QGISでは、空間情報を持つレイヤも、持たないレイヤも読み込むことができます。現状では、OGR、区切りテキストや、PostgreSQL、MSSQL、SpatiaLite、DB2、Oracleプロバイダがサポートされています。読み込まれた全てのレイヤは"
+" :guilabel:`レイヤ` パネルにリストされます。レイヤの空間情報が定義されているか否かによって、マップ上で操作できるか否かが決まります。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:30
 msgid ""
@@ -60,18 +61,57 @@ msgid ""
 "digitizing. Have a closer look at the edit widget in section "
 ":ref:`vector_attributes_menu` to find out more."
 msgstr ""
-"空間情報のないテーブルは属性テーブルを使って閲覧、編集をすることができます。加えて、フィールド検索が可能です。例えば、空間情報がないテーブルでも、編集モード中に列を使って属性値や値の範囲を定義したりすることができます。詳しくは"
-" :ref:`vector_attributes_menu` を参考にしてください。"
+"空間情報を持たないテーブルは、属性テーブルビューを使用して閲覧や編集ができます。さらに、これをフィールドの参照値に使用することも可能です。例えば、空間情報を持たないテーブルの列を使用して、編集モード中の特定のベクタレイヤに追加される属性値に許容される値や範囲を定義することができます。詳しくは、"
+" :ref:`vector_attributes_menu` セクションの編集ウィジェットを参考にしてください。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:40
+msgid "Introducing the attribute table interface"
+msgstr "属性テーブルのインターフェイスの紹介"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:42
+msgid ""
+"To open the attribute table for a vector layer, activate the layer by "
+"clicking on it in the :ref:`label_legend`. Then, from the main "
+":menuselection:`Layer` menu, choose |openTable| :menuselection:`Open "
+"Attribute Table`. It is also possible to right-click on the layer and choose"
+" |openTable| :menuselection:`Open Attribute Table` from the drop-down menu, "
+"or to click on the |openTable| :guilabel:`Open Attribute Table` button in "
+"the Attributes toolbar. If you prefer shortcuts, :kbd:`F6` will open the "
+"attribute table. :kbd:`Shift+F6` will open the attribute table filtered to "
+"selected features and :kbd:`Ctrl+F6` will open the attribute table filtered "
+"to visible features."
+msgstr ""
+"ベクタレイヤの属性テーブルを開くには、 :ref:`label_legend` 内でレイヤをクリックしてアクティブにします。次に、メインメニューの "
+":menuselection:`レイヤ` メニューから、 |openTable| :menuselection:`属性テーブルを開く` "
+"を選択します。レイヤを右クリックして、メニューから |openTable| :menuselection:`属性テーブルを開く` "
+"を選択するか、属性ツールバーの |openTable| :guilabel:`属性テーブルを開く` "
+"ボタンをクリックしても開くことができます。ショートカットキーがお好みなら、 :kbd:`F6` を押すと属性テーブルが開きます。 "
+":kbd:`Shift+F6` は、選択した地物でフィルタリングされた属性テーブルを開き、 :kbd:`Ctrl+F6` "
+"は表示されている地物のみでフィルタリングされた属性テーブルを開きます。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:53
+msgid ""
+"This will open a new window that displays the feature attributes for the "
+"layer (figure_attributes_table_). According to the setting in "
+":menuselection:`Settings --> Options --> Data sources` menu, the attribute "
+"table will open in a docked window or a regular window. The total number of "
+"features in the layer and the number of currently selected/filtered features"
+" are shown in the attribute table title, as well as if the layer is "
+"spatially limited."
+msgstr ""
+"これにより、レイヤの地物属性を表示するウィンドウが開きます（ figure_attributes_table_ ）。 "
+":menuselection:`設定 --> オプション --> データソース` "
+"メニューの設定により、属性テーブルはドックウィンドウとして開くか、または通常のウィンドウで開きます。レイヤ内の地物数の合計や、選択中の地物数、フィルタリングされた地物数が属性テーブルのタイトルに表示されます。また、レイヤが空間的に制限されているかどうかも表示します。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:66
 msgid "Attribute Table for regions layer"
-msgstr "地域レイヤーに対する属性テーブル"
+msgstr "地域レイヤの属性テーブル"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:68
 msgid ""
 "The buttons at the top of the attribute table window provide the following "
 "functionality:"
-msgstr "属性テーブルウィンドウの上部にあるボタンは、次の機能を提供します。"
+msgstr "属性テーブルウィンドウの上部にあるボタンには以下の機能があります。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:73
 msgid "Available Tools"
@@ -115,11 +155,11 @@ msgstr "|multiEdit|"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Toggle multi edit mode"
-msgstr "複数編集モード切替"
+msgstr "マルチエディットモード切替"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Update multiple fields of many features"
-msgstr "多くの地物の複数のフィールドを更新"
+msgstr "多くの地物の複数のフィールドを更新する"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "|saveEdits|"
@@ -131,11 +171,15 @@ msgstr "編集内容の保存"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Save current modifications"
-msgstr "現在の修正を保存"
+msgstr "現在の修正を保存する"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "|refresh|"
+msgstr "|refresh|"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Reload the table"
-msgstr "テーブルを再ロード"
+msgstr "テーブルを再読み込み"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "|newTableRow|"
@@ -143,23 +187,31 @@ msgstr "|newTableRow|"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Add feature"
-msgstr "地物を追加"
+msgstr "地物追加"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Add new geometryless feature"
-msgstr "新規ジオメトリなし地物を追加"
+msgstr "ジオメトリを持っていない地物を新規追加します"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "|deleteSelectedFeatures|"
+msgstr "|deleteSelectedFeatures|"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Delete selected features"
-msgstr "選択地物を削除"
+msgstr "選択地物の削除"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Remove selected features from the layer"
-msgstr "レイヤーから選択された地物を削除します"
+msgstr "選択された地物をレイヤから削除します"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "|editCut|"
 msgstr "|editCut|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Cut selected features to clipboard"
+msgstr "選択行を切り取ってクリップボードへ"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid ":kbd:`Ctrl+X`"
@@ -168,6 +220,10 @@ msgstr ":kbd:`Ctrl+X`"
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "|copySelected|"
 msgstr "|copySelected|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Copy selected features to clipboard"
+msgstr "選択している行をクリップボードへコピーする"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid ":kbd:`Ctrl+C`"
@@ -183,7 +239,7 @@ msgstr "クリップボードから地物を貼り付ける"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Insert new features from copied ones"
-msgstr "コピーされたものから新しい地物を挿入"
+msgstr "コピーされた地物を新規地物として挿入します"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid ":kbd:`Ctrl+V`"
@@ -195,7 +251,7 @@ msgstr "|expressionSelect|"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Select features using an Expression"
-msgstr "式を使用して地物を選択します"
+msgstr "式による地物選択"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "|selectAll|"
@@ -203,11 +259,11 @@ msgstr "|selectAll|"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Select All"
-msgstr "全てを選択する"
+msgstr "すべて選択"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Select all features in the layer"
-msgstr "レイヤー内の全地物を選択"
+msgstr "レイヤ内のすべての地物を選択します"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid ":kbd:`Ctrl+A`"
@@ -219,27 +275,27 @@ msgstr "|invertSelection|"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Invert selection"
-msgstr "選択を反転する"
+msgstr "選択部分を反転する"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Invert the current selection in the layer"
-msgstr "レイヤー内の現在の選択を反転"
+msgstr "レイヤ内の現在の選択状態を反転します"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid ":kbd:`Ctrl+R`"
 msgstr ":kbd:`Ctrl+R`"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
-msgid "|deselectAll|"
-msgstr "|deselectAll|"
+msgid "|deselectActiveLayer|"
+msgstr "|deselectActiveLayer|"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Deselect all"
-msgstr "全ての選択を解除する"
+msgstr "レイヤ内の全地物を選択解除"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Deselect all features in the current layer"
-msgstr "現在のレイヤー内のすべての地物の選択を解除"
+msgstr "現在のレイヤ内のすべての地物の選択を解除します"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid ":kbd:`Ctrl+Shift+A`"
@@ -251,7 +307,7 @@ msgstr "|filterMap|"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Filter/Select features using form"
-msgstr "フォームを使用して地物をフィルタ／選択"
+msgstr "フォームによる地物選択/フィルタ"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid ":kbd:`Ctrl+F`"
@@ -263,11 +319,11 @@ msgstr "|selectedToTop|"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Move selected to top"
-msgstr "選択されたものを一番上に"
+msgstr "選択を一番上に"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Move selected rows to the top of the table"
-msgstr "選択行を最上に移動"
+msgstr "選択した行をテーブルの先頭行に移動します"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "|panToSelected|"
@@ -275,7 +331,7 @@ msgstr "|panToSelected|"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Pan map to the selected rows"
-msgstr "選択した行の地物に地図をパンする"
+msgstr "選択した行の地物にパン"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid ":kbd:`Ctrl+P`"
@@ -287,7 +343,7 @@ msgstr "|zoomToSelected|"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Zoom map to the selected rows"
-msgstr "選択した行の地物に地図をズームする"
+msgstr "選択した行の地物にズームする"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid ":kbd:`Ctrl+J`"
@@ -303,7 +359,7 @@ msgstr "新規フィールド"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Add a new field to the data source"
-msgstr "データソースに新しいフィールドを追加します。"
+msgstr "データソースに新しいフィールドを追加します"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid ":kbd:`Ctrl+W`"
@@ -331,7 +387,7 @@ msgstr "フィールド計算機を開く"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Update field for many features in a row"
-msgstr "行の複数の地物に対してフィールドを更新します。"
+msgstr "多数の地物のフィールドを連続的に更新します"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid ":kbd:`Ctrl+I`"
@@ -350,14 +406,34 @@ msgid "Enable table formatting"
 msgstr "表の書式設定を有効にします"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "|dock|"
+msgstr "|dock|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Dock attribute table"
+msgstr "属性テーブルをドッキング"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Allows to dock/undock the attribute table"
+msgstr "属性テーブルをウィンドウにドッキング/ドッキング解除します"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "|actionRun|"
 msgstr "|actionRun|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Actions"
+msgstr "アクション"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Lists the actions related to the layer"
+msgstr "レイヤに関連したアクションをリストします"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:103
 msgid ""
 "Depending on the format of the data and the OGR library built with your QGIS"
 " version, some tools may not be available."
-msgstr "QGISバージョンで構築されたデータおよびOGRライブラリのフォーマットによっては、一部のツールが利用できない場合があります。"
+msgstr "データ形式やご使用のQGISバージョンでビルドされたOGRライブラリによっては、一部のツールが利用できない場合があります。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:106
 msgid ""
@@ -368,19 +444,57 @@ msgid ""
 ":sup:`Field Calculator` (see :ref:`calculate_fields_values`)."
 msgstr ""
 "これらのボタンの下には、クイックフィールド計算バー（ :ref:`編集モード <sec_edit_existing_layer>` "
-"でのみ有効）があり、レイヤー内の地物のすべてまたは一部に計算を迅速に適用できます。このバーは |calculateField| "
-":sup:`フィールド計算機` として、同じ :ref:`式 <vector_expressions>` を使用します（ "
+"でのみ有効）があり、レイヤ内の地物のすべてまたは一部に計算結果を素早く適用できます。このバーは |calculateField| "
+":sup:`フィールド計算機` と同様の :ref:`式 <vector_expressions>` を使用します（ "
 ":ref:`calculate_fields_values` 参照）。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:115
 msgid "Table view vs Form view"
-msgstr "テーブルビュー対フォームビュー"
+msgstr "テーブル表示 vs フォーム表示"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:117
 msgid ""
 "QGIS provides two view modes to easily manipulate data in the attribute "
 "table:"
-msgstr "QGISは簡単属性テーブル内のデータを操作するために2つの表示モードが用意されています。"
+msgstr "QGISは属性テーブル内のデータを簡単に操作するための2つの表示モードが用意されています。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:119
+msgid ""
+"The |openTable| :sup:`Table view`, displays values of multiple features in a"
+" tabular mode, each row representing a feature and each column a field."
+msgstr ""
+"|openTable| :sup:`テーブル表示` は、複数の地物の値を表形式で表示します。各行は１つの地物を、各列はフィールドを表しています。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:121
+msgid ""
+"The |formView| :sup:`Form view` shows :ref:`feature identifiers <maptips>` "
+"in a first panel and displays only the attributes of the clicked identifier "
+"in the second one. There is a pull-down menu at the top of the first panel "
+"where the \"identifier\" can be specified using an attribute "
+"(:guilabel:`Column preview`) or an :guilabel:`Expression`. The pull-down "
+"also includes the last 10 expressions for re-use. Form view uses the layer "
+"fields configuration (see :ref:`vector_attributes_menu`). You can browse "
+"through the feature identifiers with the arrows on the bottom of the first "
+"panel. Once you markered the feature in yellow in the list it is selected in"
+" yellow on the canvas. Use the |zoomToSelected| on top of the attribute "
+"table to zoom to the feature. Clicking on an entry in the list (without "
+"using the rectangles) makes a feature flash in red color once so you can see"
+" where it is situated."
+msgstr ""
+"|formView| :sup:`フォーム表示` は、最初のパネルに :ref:`地物の表示名 <maptips>` "
+"が表示され、クリックした表示名の属性のみを2つ目のパネルに表示します。最初のパネルの上部には、属性（ :guilabel:`カラムプレビュー` ）や "
+":guilabel:`式` "
+"を使用して「表示名」を指定することができるプルダウンメニューがあります。このプルダウンメニューには、再利用のために最後に使用した10個の式も含まれています。フォーム表示はレイヤのフィールドの設定（"
+" :ref:`vector_attributes_menu` "
+"参照）を使用します。最初のパネルの下部にある矢印ボタンを使用して、地物識別子の順番にブラウズできます。リスト内で黄色でマーカーを付けた地物は、キャンバス上で選択されて黄色で表示されます。属性テーブルの上部にある"
+" |zoomToSelected| "
+"を使用すると、選択した地物にズームすることができます。リスト内でエントリ（の四角でない場所）をクリックすると地物が赤色で点滅し、その地物がどこにあるのか確認できます。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:137
+msgid ""
+"You can switch from one mode to the other by clicking the corresponding icon"
+" at the bottom right of the dialog."
+msgstr "あるモードから他方のモードへの切り替えは、ダイアログの右下にある対応するアイコンをクリックすることによって行えます。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:140
 msgid ""
@@ -388,17 +502,28 @@ msgid ""
 " attribute table in :menuselection:`Settings --> Options --> Data Sources` "
 "menu. It can be 'Remember last view', 'Table view' or 'Form view'."
 msgstr ""
-":menuselection:`設定 --> オプション --> データソース` メニューで、属性テーブルのオープン時に "
+":menuselection:`設定 --> オプション --> データソース` メニューで、属性テーブルのオープン時の "
 ":guilabel:`デフォルトビュー` モードを指定することもできます。 "
-"「最後のビューを保存する」、「テーブルビュー」または「フォームビュー」にすることができます。"
+"「直前の表示形式」、「テーブル表示」または「フォーム表示」にすることができます。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:149
+msgid "Attribute table in table view (top) vs form view (bottom)"
+msgstr "属性テーブルのテーブル表示（上）とフォーム表示（下）"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:157
+msgid "Configuring the columns"
+msgstr "列の設定"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:159
 msgid ""
 "Right-click in a column header when in table view to have access to tools "
 "that help you configure what can be displayed in the attribute table and "
 "how."
-msgstr ""
-"テーブルビューにいるときに列見出しを右クリックすると、属性テーブルで何がどのように表示できるかを設定するのに役立つツールにアクセスできます。"
+msgstr "テーブル表示の場合に列見出しを右クリックすると、属性テーブルで何をどのように表示するかを設定するためのツールにアクセスできます。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:163
+msgid "Hiding and organizing columns and enabling actions"
+msgstr "列の非表示・整理とアクションの有効化"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:165
 msgid ""
@@ -407,12 +532,12 @@ msgid ""
 " or change the order of the columns, choose :guilabel:`Organize columns "
 "...`. In the new dialog, you can:"
 msgstr ""
-"列見出しを右クリックすると、それを属性テーブルから隠すことを選択できます。列の非表示を解除または列の順序を変更し、一度に複数の列の動作を変更するには、"
-"  :guilabel:`列を整理...` を選択します。新しいダイアログでは以下のことができます："
+"列見出しを右クリックすると、列を属性テーブルから隠すかどうかを選択できます。列の非表示の解除や順序の変更といった、列の動作変更を一度にするには、 "
+":guilabel:`列の整理...` を選択します。このダイアログでは、以下のことができます："
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:170
 msgid "check/uncheck columns you want to show or hide"
-msgstr "表示または非表示にする/チェックを外し列をチェック"
+msgstr "チェックして列を表示 / チェックを外して列を非表示にできます"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:171
 msgid ""
@@ -420,7 +545,7 @@ msgid ""
 " this change is for the table rendering and does not alter the fields order "
 "in the layer datasource"
 msgstr ""
-"属性テーブル内の列の順序を変更するには、ドラッグアンドドロップアイテム。この変更は、表のレンダリングのためのものであり、レイヤのデータソースのフィールドの順序を変更しないことに注意してください"
+"アイテムをドラッグ＆ドロップして、属性テーブル内の列の順序が変更できます。この変更はテーブルの表示のためのものであり、レイヤのデータソースのフィールドの順序は変更されないことに注意してください。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:174
 msgid ""
@@ -428,31 +553,40 @@ msgid ""
 "drop-down box or button list of actions for each row, see "
 ":ref:`actions_menu` for more information about actions."
 msgstr ""
-"各行の行ごとのアクションのドロップダウンボックスやボタン、リストを表示し、 :guilabel:`アクション` "
-"列、以下を参照してください。アクションの詳細については :ref:`actions_menu` 新しい仮想を有効にします。"
+"新しい仮想の :guilabel:`アクション` 列を有効にして、各行にドロップダウンボックスやボタンのリストを表示できます。アクションについての詳細は"
+" :ref:`actions_menu` を参照してください。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:179
+msgid "Resizing columns widths"
+msgstr "列の幅の修正"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:181
 msgid ""
 "Columns width can be set through a right-click on the column header and "
 "select either:"
-msgstr "列の幅を右クリックして列ヘッダーにいずれかを選択して設定できます："
+msgstr "列の幅は、列見出しを右クリックして、次のいずれかを選択することで設定できます："
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:184
 msgid ""
 ":guilabel:`Set width...` to enter the desired value. By default, the current"
 " value is displayed in the widget"
-msgstr ":guilabel:`幅を設定...` 希望の値を入力します。デフォルトでは、現在の値がウィジェットに表示されます"
+msgstr ":guilabel:`幅の設定...` 希望する幅の値を入力します。デフォルトでは、現在の値がウィジェットに表示されます"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:186
 msgid ":guilabel:`Autosize` to resize at the best fit the column."
-msgstr ":guilabel:`自動サイズ` では列に合わせて最高の状態でリサイズします。"
+msgstr ":guilabel:`自動サイズ` は、列に合わせて最適なサイズに変更します。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:188
 msgid ""
 "It can also be changed by dragging the boundary on the right of the column "
 "heading. The new size of the column is maintained for the layer, and "
 "restored at the next opening of the attribute table."
-msgstr "また、列見出しの右側の境界をドラッグして変更できます。新しい列サイズは、レイヤーに維持され、次の開始時に属性テーブルに復元されます。"
+msgstr ""
+"また、列見出しの右側の境界をドラッグしても列幅を変更できます。新しい列サイズはレイヤに保持され、次に属性テーブルを開いたときに復元されます。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:193
+msgid "Sorting columns"
+msgstr "列による並べ替え"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:195
 msgid ""
@@ -464,21 +598,55 @@ msgid ""
 "expression, e.g. to sort the row using multiple columns you can write "
 "``concat(col0, col1)``."
 msgstr ""
-"テーブルは、列見出しをクリックすることにより、任意の列でソートできます。小さな矢印は、ソート順は、（下向きダウン一番上の行からの値を降順手段、上向きでは、先頭行から下上昇値を意味する）を示しています。列見出しのコンテキストメニューの"
-" :guilabel:`sort` オプションと式を記述、またして行をソートするように選択できます、例えば、複数の列を使用して行を並べ替えるには、 "
-"``concat(col0, col1)`` と書くことができます。"
+"テーブルは列見出しをクリックすることで任意の列でソートできます。小さな矢印はソート順を示しています（下向きは先頭行から値を降順で、上向きは先頭行から値を昇順で並べることを意味します）。列見出しのコンテキストメニューの"
+" :guilabel:`並べ替え` オプションを使用して式を書くことでも行を並べ替えることができます。例えば、複数の列を使用して行を並べ替えるには "
+"``concat(col0, col1)`` と書きます。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:203
 msgid ""
 "In form view, features identifier can be sorted using the |sort| "
 ":guilabel:`Sort by preview expression` option."
-msgstr "フォームビューでは、地物識別子は |sort|  :guilabel:`プレビュー式で並べ替える` オプションを使用してソートできます。"
+msgstr "フォーム表示では、地物識別子は |sort|  :guilabel:`プレビュー式で並べ替え` オプションを使用してソートできます。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:208
+msgid "**Sorting based on columns of different types**"
+msgstr "**異なる型の列に基づいた並べ替え**"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:210
+msgid ""
+"Trying to sort an attribute table based on columns of string and numeric "
+"types may lead to unexpected result because of the ``concat(\"USE\", "
+"\"ID\")`` expression returning string values (ie, ``'Borough105' < "
+"'Borough6'``). You can workaround this by using eg ``concat(\"USE\", "
+"lpad(\"ID\", 3, 0))`` which returns ``'Borough105' > 'Borough006'``."
+msgstr ""
+"文字列型の列と数値型の列に基づいて属性テーブルを並べ替えようとすると、予期しない結果となることがあります。これは、式 ``concat(\"USE\","
+" \"ID\")`` が文字列値を返す（つまり ``'Borough105' < 'Borough6'`` "
+"である）ために起こります。この問題を回避するには、例えば、 ``concat(\"USE\", lpad(\"ID\", 3, 0))`` とすると、 "
+"``'Borough105' > 'Borough006'`` を返します。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:220
+msgid "Formatting of table cells using conditions"
+msgstr "条件式を使ったテーブルセルの書式設定"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:222
+msgid ""
+"Conditional formatting settings can be used to highlight in the attribute "
+"table features you may want to put a particular focus on, using custom "
+"conditions on feature's:"
+msgstr "以下に基づいたカスタム条件式による条件付き書式設定を使用して、属性テーブル内で特に注目したい地物を強調表示させることができます。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:226
 msgid ""
 "geometry (e.g., identifying multi-parts features, small area ones or in a "
 "defined map extent...);"
-msgstr "ジオメトリ（例えば、マルチパートの地物を、小面積の地物を、または定義された地図範囲内で、...、識別する）。"
+msgstr "ジオメトリ（例：マルチパート地物、面積が小さい地物、定義された地図範囲内にある地物などを識別する）"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:228
+msgid ""
+"or field value (e.g., comparing values to a threshold, identifying empty "
+"cells...)."
+msgstr "フィールド値（例：しきい値との比較や、空のセルを区別するなど）"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:231
 msgid ""
@@ -486,8 +654,8 @@ msgid ""
 "|conditionalFormatting| at the top right of the attributes window in table "
 "view (not available in form view)."
 msgstr ""
-"|conditionalFormatting| "
-"をクリックする条件付き書式パネルを有効にできます（フォームビューでは使用できません）テーブルビューの属性ウィンドウの右上にあります。"
+"テーブル表示の属性ウィンドウの右上にある |conditionalFormatting| "
+"をクリックして、条件付き書式パネルを有効にできます（フォーム表示では使用できません）。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:235
 msgid ""
@@ -495,40 +663,41 @@ msgid ""
 "|radioButtonOn|:guilabel:`Field` or |radioButtonOff|:guilabel:`Full row`. "
 "Adding new rule opens a form to define:"
 msgstr ""
-"新しいパネルによって、ユーザーは |radioButtonOn| :guilabel:`フィールド` または |radioButtonOff| "
-":guilabel:`行全体` のフォーマットレンダリングに新しい規則を追加できます。新しい規則を追加するには、定義するために、フォームを開きます。"
+"この新しいパネルでは、 |radioButtonOn|:guilabel:`フィールド` または "
+"|radioButtonOff|:guilabel:`行全体` "
+"の書式レンダリングに新ルールを追加することができます。新ルールを追加すると、以下のものを定義するためのフォームが開きます："
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:239
 msgid "the name of the rule;"
-msgstr "規則の名前；"
+msgstr "ルールの名前"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:240
 msgid ""
 "a condition using any of the :ref:`expression builder <vector_expressions>` "
 "functions;"
-msgstr ":ref:`式ビルダー <vector_expressions>` 関数のいずれかを使用する条件;"
+msgstr "何らかの :ref:`式ビルダー <vector_expressions>` 関数を使用した条件式"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:242
 msgid ""
 "the formatting: it can be choosen from a list of predefined formats or "
 "created based on properties like:"
-msgstr "書式設定：事前定義された書式のリストから選択するか、以下のようなプロパティに基づいて作成できます。"
+msgstr "書式設定：プリセット書式のリストから選択するか、以下のプロパティに基づいて作成できます。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:245
 msgid "background and text colors;"
-msgstr "背景とテキストの色。"
+msgstr "背景色とテキスト色"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:246
 msgid "use of icon;"
-msgstr "アイコンの使用;"
+msgstr "アイコンを使用するかどうか"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:247
 msgid "bold, italic, underline, or strikeout;"
-msgstr "太字、斜体、下線、または取り消し線;"
+msgstr "太字、イタリック、下線、取り消し線"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:248
 msgid "font."
-msgstr "フォント。"
+msgstr "フォント"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:255
 msgid "Conditional Formatting of an attribute table"
@@ -536,11 +705,11 @@ msgstr "属性テーブルの条件付き書式"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:261
 msgid "Interacting with features in an attribute table"
-msgstr "属性テーブルで地物とやりとりする"
+msgstr "属性テーブルの地物とのやりとり"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:264
 msgid "Selecting features"
-msgstr "地物を選択する"
+msgstr "地物の選択"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:266
 msgid ""
@@ -552,7 +721,7 @@ msgid ""
 "selection is also updated in the attribute table (or map canvas) "
 "accordingly."
 msgstr ""
-"テーブルビューでは、属性テーブルの各行は、レイヤー中のユニークな地物の属性が表示されます。行を選択する地物を選択し、同様に、（ジオメトリ有効レイヤーの場合）地図キャンバスに地物を選択すると、属性テーブル内の行を選択します。地図キャンバス（または属性テーブル）で選択された地物のセットが変更された場合、選択は、それに応じて属性テーブル（又は地図キャンバス）で更新されます。"
+"テーブル表示では、属性テーブルの各行はレイヤ内の個別地物の属性を表します。ある行を選択するとその地物が選択され、同様に、（ジオメトリのあるレイヤの場合は）マップキャンバスで地物を選択すると属性テーブル内の行が選択されます。マップキャンバス（または属性テーブル）で選択された地物の組み合わせが変更された場合、それに応じて属性テーブル（またはマップキャンバス）の選択が更新されます。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:273
 msgid ""
@@ -565,9 +734,9 @@ msgid ""
 "table, does not change the row selection. Changing the selection in the main"
 " canvas does not move the cursor position in the attribute table."
 msgstr ""
-"行は、行の左側にある行番号をクリックすると選択できます。 :kbd:`Ctrl` キーを押していることによって **複数の行** をマークできます。 "
-":kbd:`Shift` キー保持と行の左側にいくつかの行ヘッダーをクリックすることによって **連続選択** "
-"を行うことができます。現在のカーソル位置とクリック行との間のすべての行が選択されます。属性テーブル内のカーソル位置を移動する、テーブル内のセルをクリックして、行選択を変更しません。メインキャンバスでの選択を変更すると、属性テーブルのカーソル位置を移動しません。"
+"行の左端にある行番号をクリックすることで、行を選択することができます。 :kbd:`Ctrl` キーを押しながらクリックすると、 **複数の行** "
+"をマークすることができます。 :kbd:`Shift` キーを押しながら行の左側にある複数の行ヘッダをクリックすると、 **連続選択** "
+"ができます。現在のカーソル位置とクリックした行の間のすべての行が選択されます。属性テーブルのセルをクリックしてカーソル位置を移動しても、行の選択は変わりません。また、メインキャンバス内で選択を変更しても、属性テーブルのカーソル位置は移動しません。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:282
 msgid ""
@@ -577,8 +746,8 @@ msgid ""
 "panel, either by selecting an existing field or using a custom expression. "
 "You can also choose to sort the list of features from the drop-down menu."
 msgstr ""
-"属性テーブルのフォームビューでは、地物が（ :ref:`maptips` "
-"参照）、その表示されたフィールドの値によって左側のパネルで特定され、デフォルトです。この識別子は、既存のフィールドを選択するか、カスタム式を使用するか、パネルの上部にあるドロップダウンリストを使用して交換できます。また、ドロップダウンメニューから地物のリストをソートすることもできます。"
+"属性テーブルのフォーム表示では、地物はデフォルトで左側パネル内において表示フィールド（ :ref:`maptips` "
+"参照）の値によって識別されています。この識別子はパネルの上部にあるドロップダウンリストを使用して、既存のフィールドを選択するか、カスタム式を使用して置き換えることができます。また、ドロップダウンメニューから地物フォームのリストをソートすることもできます。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:288
 msgid ""
@@ -588,7 +757,7 @@ msgid ""
 "Like in the table view, you can perform multiple feature selection using the"
 " keyboard combinations previously exposed."
 msgstr ""
-"右のいずれかで地物の属性を表示するには、左のパネルで値をクリックします。地物を選択するには、識別子の左に正方形のシンボルの内側をクリックする必要があります。デフォルトでは、シンボルが黄色に変わります。テーブルビューのように、以前に公開キーボードの組み合わせを使用して、複数の地物選択を行うことができます。"
+"左側のパネルで値をクリックすると、右側のパネルにその地物の属性が表示されます。地物を選択するには、識別子の左にある四角いシンボルの中をクリックします。デフォルトでは、シンボルが黄色に変わります。テーブル表示と同様、これまでに紹介したキーボードの組み合わせで複数の地物を選択することができます。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:297
 msgid ""
@@ -597,28 +766,28 @@ msgid ""
 "attribute table toolbar, such as (see section :ref:`automatic_selection` and"
 " following one for more information and use case):"
 msgstr ""
-"マウスで地物を選択する以外に、このようななどの属性テーブルのツールバーで利用可能なツールを使用して、フィーチャの属性に基づいて自動選択を行うことができます（より多くの情報とユースケースについてはセクション"
+"マウスで地物を選択するだけでなく、属性テーブルのツールバーにある以下のようなツールを使用して、地物の属性に基づいた自動選択を行うことができます（詳細や使用例については、"
 " :ref:`automatic_selection` および次のセクションを参照）："
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:302
 msgid "|expressionSelect| :guilabel:`Select By Expression...`"
-msgstr "|expressionSelect| :guilabel:`式で選択...`"
+msgstr "|expressionSelect| :guilabel:`式による地物選択...`"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:303
 msgid "|formSelect| :guilabel:`Select Features By Value...`"
-msgstr "|formSelect| :guilabel:`値で地物を選択...`"
+msgstr "|formSelect| :guilabel:`値による地物選択...`"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:304
-msgid "|deselectAll| :guilabel:`Deselect Features from All Layers`"
-msgstr "|deselectAll| :guilabel:`すべてのレイヤーから地物を選択解除`"
+msgid "|deselectActiveLayer| :guilabel:`Deselect All Features from the Layer`"
+msgstr "|deselectActiveLayer| :guilabel:`レイヤ内の全地物を選択解除`"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:305
 msgid "|selectAll| :guilabel:`Select All Features`"
-msgstr "|selectAll| :guilabel:`すべての地物を選択`"
+msgstr "|selectAll| :guilabel:`すべて選択`"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:306
 msgid "|invertSelection| :guilabel:`Invert Feature Selection`."
-msgstr "|invertSelection| :guilabel:`地物選択を反転`."
+msgstr "|invertSelection| :guilabel:`選択部分を反転する`"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:308
 msgid ""
@@ -627,7 +796,7 @@ msgstr ":ref:`filter_select_form` を使って地物を選択することもで�
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:314
 msgid "Filtering features"
-msgstr "地物をフィルタする"
+msgstr "地物のフィルタリング"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:316
 msgid ""
@@ -637,24 +806,24 @@ msgid ""
 "bottom left of the attribute table dialog. This list offers the following "
 "filters:"
 msgstr ""
-"属性テーブルで地物を選択したら、テーブルにこれらのレコードのみを表示できます。これは、属性テーブル]ダイアログボックスの左下にあるドロップダウンリストから"
-" :guilabel:`選択した地物を表示` 項目を使用して簡単に行うことができます。このリストは、次のフィルタを提供しています："
+"属性テーブルで地物を選択したら、テーブルにこれらのレコードのみを表示したい場合があります。これは、属性テーブルダイアログの左下にあるドロップダウンリストから"
+" :guilabel:`選択した地物を表示` アイテムを使用すると簡単にできます。このリストには、次のようなフィルタがあります："
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:321
 msgid ":guilabel:`Show All Features`"
-msgstr ":guilabel:`すべての地物を表示`"
+msgstr ":guilabel:`全地物を表示`"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:322
 msgid ":guilabel:`Show Selected Features`"
-msgstr ":guilabel:`選択地物を表示`"
+msgstr ":guilabel:`選択した地物を表示`"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:323
 msgid ":guilabel:`Show Features visible on map`"
-msgstr ":guilabel:`地図上で見える地物を表示`"
+msgstr ":guilabel:`地図上に表示されている地物を表示`"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:324
 msgid ":guilabel:`Show Edited and New Features`"
-msgstr ":guilabel:`新規または編集された地物を表示`"
+msgstr ":guilabel:`編集された地物と新しい地物を表示`"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:325
 msgid ""
@@ -662,9 +831,26 @@ msgid ""
 "field: choose a column from a list, type a value and press :kbd:`Enter` to "
 "filter. Then, only the matching features are shown in the attribute table."
 msgstr ""
-":guilabel:`フィールドフィルタ` - "
-"ユーザーがフィールドの値に基づいてフィルタリングできるようにする：リストから列を選択し、値を入力し、フィルタリングするためにを押す "
-":kbd:`Enter` を押す。次に、一致する地物のみが属性テーブルに表示されます。"
+":guilabel:`属性フィルタ` ― ユーザーがフィールドの値に基づいてフィルタリングできるようになります：リストからカラムを選択し、値を入力して "
+":kbd:`Enter` を押すと、フィルタリングを行います。すると、フィルタに一致する地物のみが属性テーブルに表示されます。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:328
+msgid ""
+":guilabel:`Advanced filter (Expression)` - Opens the expression builder "
+"dialog. Within it, you can create :ref:`complex expressions "
+"<vector_expressions>` to match table rows. For example, you can filter the "
+"table using more than one field. When applied, the filter expression will "
+"show up at the bottom of the form."
+msgstr ""
+":guilabel:`詳細フィルタ（式）` ー 式ビルダーダイアログを開きます。ここでは、テーブルの行にマッチさせるための :ref:`複雑な式 "
+"<vector_expressions>` "
+"を作成することができます。例えば、複数のフィールドを使用してテーブルをフィルタできます。OKボタンを押すと、そのフィルタ式がフォームの下部に表示されます。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:334
+msgid ""
+"It is also possible to :ref:`filter features using forms "
+"<filter_select_form>`."
+msgstr "これらは :ref:`フォームによる地物フィルタ <filter_select_form>` でも利用可能です。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:338
 msgid ""
@@ -674,12 +860,12 @@ msgid ""
 "hide features from the layer, use the :ref:`Query Builder "
 "<vector_query_builder>`."
 msgstr ""
-"レイヤーのうちの地物をフィルタしていない属性テーブルからレコードをフィルタします。それらは単に瞬間的にmomentaneouslyテーブルから隠されており、地図キャンバスから、またはフィルタを除去することによってアクセスできます。レイヤーから非表示地物を行うフィルタでは、"
-" :ref:`クエリビルダー<vector_query_builder>` 使用。"
+"属性テーブルからレコードをフィルタリングしても、レイヤから地物がフィルタリングされるわけではありません。地物はテーブルから一時的に非表示になるだけで、マップキャンバスからはアクセスでき、フィルタを取り除いてもアクセスすることができます。フィルタでレイヤから地物を実際に隠すには、"
+" :ref:`クエリビルダ <vector_query_builder>` を使用してください。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:344
 msgid "**Update datasource filtering with** ``Show Features Visible on Map``"
-msgstr "``地図上で見える地物を表示`` で **更新データソースのフィルタリング**"
+msgstr "``地図上に表示されている地物を表示``  **によるデータソースフィルタリングの更新**"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:346
 msgid ""
@@ -689,13 +875,47 @@ msgid ""
 "Features Visible on Map` on a new canvas extent updates the spatial "
 "restriction."
 msgstr ""
-"性能上の理由から、属性表に示される地物は、オープン時にキャンバスの範囲に空間的に制限されています(方法については :ref:`データソースオプション "
-"<tip_table_filtering>` 参照)。新しいキャンバス範囲で :guilabel:`地図に表示される地物を表示する` "
-"と空間制限を更新します。"
+"パフォーマンス上の理由で、属性テーブルに表示される地物がテーブルを開いたときのキャンバス範囲に空間的に制限されている場合（設定方法は "
+":ref:`データソースオプション <tip_table_filtering>` を参照）、新しいキャンバス範囲で "
+":guilabel:`地図に表示されている地物を表示` を選択すると、空間的な制限が更新されます。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:355
+msgid "Filtering and selecting features using forms"
+msgstr "フォームによるフィルタと地物選択"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:357
+msgid ""
+"Clicking the |filterMap| :sup:`Filter/Select features using form` or "
+"pressing :kbd:`Ctrl+F` will make the attribute table dialog switch to form "
+"view and replace each widget with its search variant."
+msgstr ""
+"|filterMap| :sup:`フォームによる地物選択/フィルタ` をクリックするか、または :kbd:`Ctrl+F` "
+"を押すと、属性テーブルダイアログをフォーム表示に切り替え、各ウィジェットが検索変数に置き換わります。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:361
+msgid ""
+"From this point onwards, this tool functionality is similar to the one "
+"described in :ref:`select_by_value`, where you can find descriptions of all "
+"operators and selecting modes."
+msgstr ""
+"ここで説明するこのツールの機能は、 :ref:`select_by_value` "
+"で説明されているものと同様です。そちらには、すべての演算子と選択モードについての説明があります。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:370
 msgid "Attribute table filtered by the filter form"
 msgstr "フィルタフォームでフィルタされた属性テーブル"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:372
+msgid ""
+"When selecting / filtering features from the attribute table, there is a "
+":guilabel:`Filter features` button that allows defining and refining "
+"filters. Its use triggers the :guilabel:`Advanced filter (Expression)` "
+"option and displays the corresponding filter expression in an editable text "
+"widget at the bottom of the form."
+msgstr ""
+"属性テーブルから地物を選択/フィルタする際には、フィルタを定義したり、絞り込んだりできる :guilabel:`地物をフィルタする` "
+"ボタンがあります。このボタンを押すと :guilabel:`詳細フィルタ（式）` "
+"オプションがトリガーされ、対応したフィルタ式がフォームの下部にある編集可能なテキストウィジェットに表示されます。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:377
 msgid ""
@@ -703,7 +923,7 @@ msgid ""
 "drop-down list next to the :guilabel:`Filter features` button. The options "
 "are:"
 msgstr ""
-"すでにフィルタされた地物がある場合は、 :guilabel:`地物をフィルタ` "
+"すでにフィルタされた地物がある場合は、 :guilabel:`地物をフィルタする` "
 "ボタンの隣にあるドロップダウンリストを使用してフィルタを絞り込むことができます。オプションは次のとおりです。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:380
@@ -714,15 +934,56 @@ msgstr ":guilabel:`フィルタの絞り込み (\"AND\")`"
 msgid ":guilabel:`Extend filter (\"OR\")`"
 msgstr ":guilabel:`フィルタを拡げる (\"OR\")`"
 
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:383
+msgid ""
+"To clear the filter, either select the :guilabel:`Show all features` option "
+"from the bottom left pull-down menu, or clear the expression and click "
+":guilabel:`Apply` or press :kbd:`Enter`."
+msgstr ""
+"フィルタを削除するには、左下のプルダウンメニューから :guilabel:`全地物を表示` オプションを選択するか、または式をクリアして "
+":guilabel:`適用` ボタンをクリックするか :kbd:`Enter` キーを押します。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:388
+msgid "Using action on features"
+msgstr "地物に関するアクション"
+
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:390
 msgid ""
 "Users have several possibilities to manipulate feature with the contextual "
 "menu like:"
-msgstr "ユーザーはコンテキストメニューで地物を操作するためのいくつかの可能性を持っています、以下のように："
+msgstr "ユーザーはコンテキストメニューを使用していくつかの地物操作が可能です："
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:393
+msgid ":guilabel:`Select all` (:kbd:`Ctrl+A`) the features;"
+msgstr "地物を :guilabel:`すべて選択する` （ :kbd:`Ctrl+A` ）"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:394
+msgid ""
+"Copy the content of a cell in the clipboard with :guilabel:`Copy cell "
+"content`;"
+msgstr ":guilabel:`セルの内容をコピーする` で、セルの内容をクリップボードにコピーする"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:395
+msgid ":guilabel:`Zoom to feature` without having to select it beforehand;"
+msgstr "地物を選択することなく :guilabel:`地物にズーム`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:396
+msgid ":guilabel:`Pan to feature` without having to select it beforehand;"
+msgstr "地物を選択することなく :guilabel:`地物にパン`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:397
+msgid ":guilabel:`Flash feature`, to highlight it in the map canvas;"
+msgstr ":guilabel:`地物をフラッシュ` で、マップキャンバス内で強調表示"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:398
+msgid ""
+":guilabel:`Open form`: it toggles attribute table into form view with a "
+"focus on the clicked feature."
+msgstr ":guilabel:`フォームを開く` ：そのクリックされた地物にフォーカスした状態で、属性テーブルをフォーム表示に切り替えます"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:406
 msgid "Copy cell content button"
-msgstr "[セルの内容をコピー]ボタン"
+msgstr "「セルの内容をコピーする」ボタン"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:408
 msgid ""
@@ -731,8 +992,8 @@ msgid ""
 "and use the |copySelected| :sup:`Copy selected rows to clipboard` button or "
 "press :kbd:`Ctrl+C`."
 msgstr ""
-"外部プログラム（Excel、LibreOffice、QGIS、カスタムWebアプリケーションなど）で属性データを使用する場合は、1つまたは複数の行を選択し、"
-" |copySelected| :sup:`選択した行をクリップボードにコピーする` ボタンを押すか、 :kbd:`Ctrl+C` を押します。"
+"属性データを外部プログラム（Excel、LibreOffice、QGIS、カスタムWebアプリケーションなど）で使用したい場合には、1つまたは複数の行を選択して"
+" |copySelected| :sup:`選択している行をクリップボードへコピーする` ボタンを押すか、 :kbd:`Ctrl+C` を押します。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:415
 msgid ""
@@ -740,16 +1001,16 @@ msgid ""
 "define the format to paste to with :guilabel:`Copy features as` dropdown "
 "list:"
 msgstr ""
-":menuselection:`設定 --> オプション --> データソース` メニューで貼り付ける形式を定義できます "
-":guilabel:`形式を選択して地物をコピー` ドロップダウンリスト："
+":menuselection:`設定 --> オプション --> データソース` メニューでは、 :guilabel:`地物のコピー` "
+"ドロップダウンリストで貼り付け形式を指定できます："
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:419
 msgid "Plain text, no geometry,"
-msgstr "プレーンテキスト、ジオメトリなし、"
+msgstr "プレーンテキスト（ジオメトリなし）"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:420
 msgid "Plain text, WKT geometry,"
-msgstr "プレーンテキスト、WKTジオメトリ、"
+msgstr "プレーンテキスト（WKTジオメトリ）"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:421
 msgid "GeoJSON"
@@ -761,12 +1022,33 @@ msgid ""
 "enabled in the :menuselection:`Layer properties --> Actions` tab. See "
 ":ref:`actions_menu` for more information on actions."
 msgstr ""
-"このコンテキストメニューでアクションのリストを表示することもできます。これは :menuselection:`レイヤープロパティ --> アクション` "
-"タブで有効になります。アクションの詳細については :ref:`actions_menu` を参照。"
+"このコンテキストメニューでアクションのリストを表示することもできます。これは :menuselection:`レイヤプロパティ --> アクション` "
+"タブから有効にできます。アクションの詳細については :ref:`actions_menu` を参照してください。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:428
+msgid "Saving selected features as new layer"
+msgstr "選択地物を新規レイヤとして保存する"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:430
+msgid ""
+"The selected features can be saved as any OGR-supported vector format and "
+"also transformed into another coordinate reference system (CRS). In the "
+"contextual menu of the layer, from the :guilabel:`Layers` panel, click on "
+":menuselection:`Export --> Save selected features as...` to define the name "
+"of the output dataset, its format and CRS (see section "
+":ref:`general_saveas`). You'll notice that |checkbox| :menuselection:`Save "
+"only selected features` is checked. It is also possible to specify OGR "
+"creation options within the dialog."
+msgstr ""
+"選択した地物はOGRでサポートする任意のベクタ形式として保存することができ、また別の座標参照系（CRS）に変換することもできます。 "
+":guilabel:`レイヤ` パネルのレイヤのコンテキストメニューから :menuselection:`エクスポート --> 選択地物の保存...` "
+"をクリックすると、出力データセットの名前や形式、CRSを定義し保存します（ :ref:`general_saveas` のセクションを参照）。 "
+"|checkbox| :menuselection:`選択地物のみ保存する` "
+"にチェックが入っているのがわかります。また、ダイアログ内でOGR作成オプションを指定することもできます。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:442
 msgid "Editing attribute values"
-msgstr "属性値を編集する"
+msgstr "属性値の編集"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:444
 msgid "Editing attribute values can be done by:"
@@ -777,8 +1059,7 @@ msgid ""
 "typing the new value directly in the cell, whether the attribute table is in"
 " table or form view. Changes are hence done cell by cell, feature by "
 "feature;"
-msgstr ""
-"属性テーブルがテーブルビューであるか、フォームビューであるかにかかわらず、セルに直接新しい値を入力します。したがって変更は、個々のセルや地物ごとに行われます。"
+msgstr "新しい値をセルに直接入力します。属性テーブルがテーブル表示でもフォーム表示でも可能です。従って、変更はセルごと、地物ごとに行われます。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:448
 msgid ""
@@ -802,7 +1083,7 @@ msgid ""
 "or using the :ref:`multi edit <multi_edit_fields>` mode: update in a row "
 "multiple fields for multiple features."
 msgstr ""
-"または :ref:`複数編集 <multi_edit_fields>` モードを使用します。複数の地物の複数のフィールドを連続して更新します。"
+":ref:`マルチエディット <multi_edit_fields>` モードを使用します。複数の地物の複数のフィールドを連続して更新します。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:459
 msgid "Using the Field Calculator"
@@ -817,20 +1098,20 @@ msgid ""
 "to a new field (that can be a :ref:`virtual <virtual_field>` one)."
 msgstr ""
 "属性テーブルの |calculateField| :sup:`フィールド計算機` "
-"ボタンは、例えばジオメトリ地物の長さや面積を計算するために、既存の属性値もしくは定義された関数に基づいて計算を行うことを可能にします。計算の結果は既存のフィールドを更新するために、あるいは新しいフィールド（これは"
-" :ref:`virtual <virtual_field>` なフィールドでもいいです）に書き込むために使うことができます。"
+"ボタンを使うと、既存の属性値もしくは定義された関数に基づいて計算を行うことができます。例えば、ジオメトリ地物の長さや面積の計算ができます。計算結果は既存のフィールドの更新や、新しいフィールド（これは"
+" :ref:`仮想 <virtual_field>` フィールドも可）への書き込みに使うことができます。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:467
 msgid ""
 "The field calculator is available on any layer that supports edit. When you "
 "click on the field calculator icon the dialog opens (see "
-"figure_field_calculator_). If the layer is not in edit mode, a warning is "
-"displayed and using the field calculator will cause the layer to be put in "
-"edit mode before the calculation is made."
+":numref:`figure_field_calculator`). If the layer is not in edit mode, a "
+"warning is displayed and using the field calculator will cause the layer to "
+"be put in edit mode before the calculation is made."
 msgstr ""
-"フィールド計算機 は、編集をサポートするすべてのレイヤーで利用可能です。フィールド計算機アイコンをクリックするとダイアログが表示されます（ "
-"figure_field_calculator_ "
-"を参照）。レイヤーが編集モードでない場合は、警告が表示され、フィールド計算機を使用すると、計算が行われる前にレイヤーが編集モードに置かれることになります。"
+"フィールド計算機 は編集をサポートするすべてのレイヤで利用可能です。フィールド計算機のアイコンをクリックすると、ダイアログを開きます（ "
+":numref:`figure_field_calculator` "
+"参照）。レイヤが編集モードでない場合には警告が表示され、フィールド計算機を使用すると、計算が行われる前にレイヤが編集モードに変わります。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:473
 msgid ""
@@ -840,7 +1121,7 @@ msgid ""
 "calculator dialog, you must select whether you want to:"
 msgstr ""
 ":ref:`式ビルダー <functions_list>` "
-"ダイアログを基に構築されたフィールド計算機ダイアログは、式を定義し、それを既存のもしくは新しく作られたフィールドに適用するための、完璧なインターフェイスを提供します。フィールド計算機ダイアログを使うには、計算によって以下のどちらをしたいのかを選ぶ必要があります。"
+"ダイアログをベースにしたフィールド計算機ダイアログは、式を定義し、それを既存のもしくは新規作成フィールドに適用するための完璧なインターフェイスを提供します。フィールド計算機ダイアログを使うには、以下について選択する必要があります："
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:478
 msgid "apply calculation on the whole layer or on selected features only"
@@ -854,14 +1135,24 @@ msgstr "計算によって新しいフィールドを作りたいのか、それ
 msgid "Field Calculator"
 msgstr "フィールド計算機"
 
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:488
+msgid ""
+"If you choose to add a new field, you need to enter a field name, a field "
+"type (integer, real, date or string) and if needed, the total field length "
+"and the field precision. For example, if you choose a field length of 10 and"
+" a field precision of 3, it means you have 7 digits before the dot, and 3 "
+"digits for the decimal part."
+msgstr ""
+"新しいフィールドを作ることを選んだ場合には、フィールドの名前やフィールド型（整数値、小数点付き数値、日付、テキストなど）を入力する必要があり、必要ならばフィールド長や精度も入力します。例えば、フィールド長が10で精度を3とすると、これは小数点より前に7桁あり、小数部が3桁の数値ということになります。"
+
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:494
 msgid ""
 "A short example illustrates how field calculator works when using the "
 ":guilabel:`Expression` tab. We want to calculate the length in km of the "
 "``railroads`` layer from the QGIS sample dataset:"
 msgstr ""
-"短い例で、 :guilabel:`式` タブを使用している場合、フィールドの計算がどのように機能するかを示しています。QGISサンプルデータセットから "
-"``railroads`` レイヤーのキロメートルの長さを計算したいです："
+":guilabel:`式` タブを使用している場合のフィールド計算機の動作を簡単な例で説明します。QGISサンプルデータセットから、 "
+"``railroads`` レイヤの長さを km 単位で計算したいとします："
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:498
 msgid ""
@@ -876,15 +1167,65 @@ msgid ""
 "Click on |toggleEditing| :sup:`Toggle editing mode` and open the "
 "|calculateField| :sup:`Field Calculator` dialog."
 msgstr ""
-"|toggleEditing| 上のクリック :sup:`切り替え編集モード` と開く |calculateField| :sup:`フィールド計算機`"
-" ダイアログ。"
+"|toggleEditing|  :sup:`編集モード切替` をクリックし、 |calculateField| :sup:`フィールド計算機` "
+"ダイアログを開きます。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:502
 msgid ""
 "Select the |checkbox| :guilabel:`Create a new field` checkbox to save the "
 "calculations into a new field."
 msgstr ""
-"新しいフィールドに計算を保存するための |checkbox| :guilabel:`新しいフィールドを作成` チェックボックスを選択します。"
+"|checkbox| :guilabel:`新しいフィールドを作成` チェックボックスを選択し、新しいフィールドに計算を保存するようにします。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:504
+msgid "Set :guilabel:`Output field name` to  ``length_km``"
+msgstr ":guilabel:`出力する属性（フィールド）の名前` を ``length_km`` に設定します。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:505
+msgid "Select ``Decimal number (real)`` as :guilabel:`Output field type`"
+msgstr ":guilabel:`フィールド型` として ``小数点付き数値（real）`` を選択します。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:506
+msgid ""
+"Set the :guilabel:`Output field length` to ``10`` and the "
+":guilabel:`Precision` to ``3``"
+msgstr ":guilabel:`フィールド長` を ``10`` に、 :guilabel:`精度` を ``3`` に設定します。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:508
+msgid ""
+"Double click on ``$length`` in the :guilabel:`Geometry` group to add the "
+"length of the geometry into the Field calculator expression box."
+msgstr ""
+":guilabel:`ジオメトリ` グループ内の ``$length`` "
+"をダブルクリックし、フィールド計算機の式ボックスにジオメトリの長さを入力します。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:510
+msgid ""
+"Complete the expression by typing ``/ 1000`` in the Field calculator "
+"expression box and click :guilabel:`OK`."
+msgstr "フィールド計算機の式ボックスで ``/ 1000`` を入力して式を完成させ、 :guilabel:`OK` をクリックします。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:512
+msgid ""
+"You can now find a new :guilabel:`length_km` field in the attribute table."
+msgstr "これで、属性テーブルに新しい :guilabel:`length_km` フィールドが出来ました。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:517
+msgid "Creating a Virtual Field"
+msgstr "仮想フィールドの作成"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:519
+msgid ""
+"A virtual field is a field based on an expression calculated on the fly, "
+"meaning that its value is automatically updated as soon as an underlying "
+"parameter changes. The expression is set once; you no longer need to "
+"recalculate the field each time underlying values change. For example, you "
+"may want to use a virtual field if you need area to be evaluated as you "
+"digitize features or to automatically calculate a duration between dates "
+"that may change (e.g., using ``now()`` function)."
+msgstr ""
+"仮想フィールドとは、オンザフライで計算される式に基づいたフィールドのことです。式の基礎となるパラメータが変更されると値が自動的に更新されます。式の設定は一度だけでよく、基礎となる値が変更されるたびにフィールドの再計算を行う必要はありません。例えば、地物をデジタイジングするたびに面積を評価する場合や、変更の可能性がある（例："
+" ``now()`` 関数を使用する）日付間の期間を自動的に計算する場合などで、仮想フィールドを使用するのが良いでしょう。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:527
 msgid "**Use of Virtual Fields**"
@@ -895,7 +1236,57 @@ msgid ""
 "Virtual fields are not permanent in the layer attributes, meaning that "
 "they're only saved and available in the project file they've been created."
 msgstr ""
-"仮想フィールドはレイヤーの属性で永続的ではありません、つまりそれらはそれらが作成されてきたプロジェクトファイルで保存され利用可能であるだけということを意味します。"
+"仮想フィールドはレイヤの属性として永続的ではありません。つまり、仮想フィールドを作成したプロジェクトファイル内にのみ保存され、そこでのみ利用可能です。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:531
+msgid ""
+"A field can be set virtual only at its creation. Virtual fields are marked "
+"with a purple background in the fields tab of the layer properties dialog to"
+" distinguish them from regular physical or joined fields. Their expression "
+"can be edited later by pressing the expression button in the Comment column."
+" An expression editor window will be opened to adjust the expression of the "
+"virtual field."
+msgstr ""
+"フィールドは作成時にのみ、仮想フィールドに設定することができます。仮想フィールドは、レイヤプロパティダイアログのフィールドタブに紫色の背景で表示され、通常の物理フィールドや結合されたフィールドとは区別できるようになっています。仮想フィールドの式は、「コメント」列の式ボタンを押すことで、後で編集することができます。ボタンを押すと式エディタウィンドウが開き、仮想フィールドの式の修正ができます。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:541
+msgid "Using the Quick Field Calculation Bar"
+msgstr "クイックフィールド計算バーを使用する"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:543
+msgid ""
+"While Field calculator is always available, the quick field calculation bar "
+"on top of the attribute table is only visible if the layer is in edit mode. "
+"Thanks to the expression engine, it offers a quicker access to edit an "
+"already existing field:"
+msgstr ""
+"フィールド計算機がいつでも利用可能なのに対して、属性テーブルの上部にあるクイックフィールド計算バーは、レイヤが編集モードにある場合にのみ表示されます。式エンジンのおかげで、クイックフィールド計算バーを使えば既存のフィールドの編集がより素早くできるようになります。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:548
+msgid "Select the field to update in the drop-down list."
+msgstr "ドロップダウンリストから更新したいフィールドを選択します。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:549
+msgid ""
+"Fill the textbox with a value, an expression you directly write or build "
+"using the |expression| expression button."
+msgstr "テキストボックスに直接書くか、 |expression| 式ボタンを使用して値や式を入力します。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:551
+msgid ""
+"Click on :guilabel:`Update All`, :guilabel:`Update Selected` or "
+":guilabel:`Update Filtered` button according to your need."
+msgstr ""
+"必要に応じて、 :guilabel:`すべて更新` 、 :guilabel:`選択を更新` 、または :guilabel:`フィルタされたものを更新` "
+"ボタンをクリックします。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:559
+msgid "Quick Field Calculation Bar"
+msgstr "クイックフィールド計算バー"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:566
+msgid "Editing multiple fields"
+msgstr "複数のフィールドの編集"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:568
 msgid ""
@@ -903,14 +1294,21 @@ msgid ""
 "different features to be edited simultaneously. When the layer is toggled to"
 " edit, multi edit capabilities are accessible:"
 msgstr ""
-"これまでのツールとは異なり、複数編集モードでは、異なる地物の複数の属性を同時に編集できます。編集のためにレイヤーを切り替えると、複数編集機能にアクセスできます。"
+"これまでのツールとは異なり、マルチエディットモードでは、さまざまな地物の複数の属性を同時に編集できます。レイヤを編集モード切り替えて、以下の操作によりマルチエディット機能にアクセスできます。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:572
+msgid ""
+"using the |multiEdit| :sup:`Toggle multi edit mode` button from the toolbar "
+"inside the attribute table dialog;"
+msgstr "属性テーブルダイアログ内のツールバーの |multiEdit| :sup:`マルチエディットモード切替` ボタンを押す"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:574
 msgid ""
 "or selecting :menuselection:`Edit -->` |multiEdit| :menuselection:`Modify "
 "attributes of selected features` menu."
 msgstr ""
-"または選択 :menuselection:`編集 -->` |multiEdit| :menuselection:`選択地物の属性を変更` メニュー。"
+"または、 :menuselection:`編集 -->` |multiEdit| :menuselection:`選択地物の属性変更` "
+"メニューを選択する"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:579
 msgid ""
@@ -919,12 +1317,57 @@ msgid ""
 " dialog to fill attributes changes. Hence, features selection is required "
 "before execution."
 msgstr ""
-"属性テーブルのツールとは異なり、 :menuselection:`編集 --> 選択した地物の属性を変更` "
-"オプションでは、属性の変更を記入するためのモーダルダイアログが出ます。したがって、実行前に地物の選択が必要です。"
+"属性テーブルのツールとは異なり、 :menuselection:`編集 --> 選択地物の属性変更` "
+"オプションを選択すると現れる、変更する属性値を入力するためのダイアログはモーダルなダイアログです。したがって、実行前に地物の選択が必要です。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:584
 msgid "In order to edit multiple fields in a row:"
-msgstr "行の複数のフィールドを編集するには："
+msgstr "複数のフィールドを一度に編集するには："
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:586
+msgid "Select the features you want to edit."
+msgstr "編集したい地物を選択します。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:587
+msgid ""
+"From the attribute table toolbar, click the |multiEdit| button. This will "
+"toggle the dialog to its form view. Feature selection could also be made at "
+"this step."
+msgstr ""
+"属性テーブルツールバーから |multiEdit| "
+"をクリックします。これによりダイアログがフォーム表示に切り替わります。地物の選択はこの段階でも行うことができます。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:590
+msgid ""
+"At the right side of the attribute table, fields (and values) of selected "
+"features are shown. New widgets appear next to each field allowing for "
+"display of the current multi edit state:"
+msgstr ""
+"属性テーブルの右側には、選択した地物のフィールド（と値）が表示されています。新しいウィジェットが各フィールドの横に表示され、現在のマルチエディット状態を表示します。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:594
+msgid ""
+"|multiEditMixedValues| The field contains different values for selected "
+"features. It's shown empty and each feature will keep its original value. "
+"You can reset the value of the field from the drop-down list of the widget."
+msgstr ""
+"|multiEditMixedValues| "
+"選択した地物はフィールドに異なる値を有しています。値は空で表示され、各地物は元の値を持っています。ウィジェットのドロップダウンリストから、フィールドの値をリセットすることができます。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:597
+msgid ""
+"|multiEditSameValues| All selected features have the same value for this "
+"field and the value displayed in the form will be kept."
+msgstr "|multiEditSameValues| 選択した地物は全てフィールドに同じ値を持っており、フォームに表示される値を保持します。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:599
+msgid ""
+"|multiEditChangedValues| The field has been edited and the entered value "
+"will be applied to all the selected features. A message appears at the top "
+"of the dialog, inviting you to either apply or reset your modification."
+msgstr ""
+"|multiEditChangedValues| "
+"フィールドの値が編集され、入力した値を選択した地物すべてに適用しようとする状態です。ダイアログの上部には、変更を適用するか、リセットするかを案内するメッセージが表示されます"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:603
 msgid ""
@@ -936,7 +1379,17 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:612
 msgid "Editing fields of multiple features"
-msgstr "複数の地物の編集フィールド"
+msgstr "複数地物のフィールドの編集"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:614
+msgid "Make the changes to the fields you want."
+msgstr "変更したいフィールドを編集します。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:615
+msgid ""
+"Click on **Apply changes** in the upper message text or any other feature in"
+" the left panel."
+msgstr "上部のメッセージ内の **変更の適用** をクリックするか、または左側パネルの別の地物をクリックします。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:618
 msgid ""
@@ -945,28 +1398,32 @@ msgid ""
 "single edit command. So pressing |undo| :sup:`Undo` will rollback the "
 "attribute changes for all selected features at once."
 msgstr ""
-"**すべての選択された地物** "
+"**選択した地物すべて** "
 "に変更が適用されます。地物が選択されていない場合、テーブル全体が変更内容で更新されます。変更は単一の編集コマンドとして行われます。したがって、|undo|"
-"  :sup:`取り消し` を押すと、選択したすべての地物の属性変更を一度にロールバックします。"
+"  :sup:`元に戻す` を押すと、選択したすべての地物の属性変更を一度にロールバックします。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:625
 msgid ""
 "Multi edit mode is only available for auto generated and drag and drop forms"
 " (see :ref:`customize_form`); it is not supported by custom ui forms."
 msgstr ""
-"複数編集モードは、自動生成かつドラッグ＆ドロップのフォームでのみ利用可能です（ :ref:`customize_form` "
-"参照）。それは、カスタムUIフォームではサポートされていません。"
+"複数編集モードは「自動生成」または「ドラッグ＆ドロップ」のフォームでのみ利用可能です（ :ref:`customize_form` "
+"参照）。カスタムUIフォームではサポートされていません。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:633
 msgid "Creating one or many to many relations"
-msgstr "1対多または多対多の関係を作成する"
+msgstr "1対多または多対多のリレーションの作成"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:635
 msgid ""
 "Relations are a technique often used in databases. The concept is that "
 "features (rows) of different layers (tables) can belong to each other."
 msgstr ""
-"関係とは、データベースでよく使用される技術です。その概念は、異なるレイヤー（テーブル）の地物（行）はお互いに属することができるというものです。"
+"「リレーション」は、データベースでよく使用される技術です。その概念は、異なるレイヤ（テーブル）の地物（行）がお互いに属することができるというものです。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:641
+msgid "Introducing 1-N relations"
+msgstr "1対Nリレーションの導入"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:643
 msgid ""
@@ -974,7 +1431,7 @@ msgid ""
 "provides some attributes about its name and region type and a unique id "
 "(which acts as primary key)."
 msgstr ""
-"例として、アラスカのすべての地域（ポリゴン）を有するレイヤーがあり、その名前と領域タイプと固有のID（主キーとして機能する）についていくつかの属性を持っているとします。"
+"例として、アラスカのすべての地域（ポリゴン）を有するレイヤがあり、名前、領域タイプ、（主キーとして機能する）ユニークなIDといった属性を持っているとします。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:647
 msgid ""
@@ -984,11 +1441,15 @@ msgid ""
 " relation using foreign keys, because there are several airports in most "
 "regions."
 msgstr ""
-"それから、地域に位置し、またこれらのトラックを保持したい空港についての情報を有する別のポイントレイヤーまたはテーブルを取得します。領域レイヤーにそれらを追加したい場合、ほとんどの地域には空港が複数あるため、外部キーを使用して1対多関係を作成する必要があります。"
+"それから、地域にある空港の情報を持った別のポイントレイヤまたはテーブルがあり、これらの情報も把握したいとします。ほとんどの地域には複数の空港があるため、これらを地域レイヤに追加する場合は、外部キーを使って1対多のリレーションを作成する必要があります。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:657
 msgid "Alaska region with airports"
-msgstr "空港とアラスカ地域"
+msgstr "空港とアラスカの地域"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:660
+msgid "Layers in 1-N relations"
+msgstr "1対Nリレーションのレイヤ"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:662
 msgid ""
@@ -1000,10 +1461,14 @@ msgid ""
 "each airport belongs to exactly one region while each region can have any "
 "number of airports (a typical one to many relation)."
 msgstr ""
-"QGISではテーブルとベクターレイヤーの間に違いはありません。基本的に、ベクターレイヤーはジオメトリを持つテーブルです。テーブルをベクターレイヤーとして追加できます。"
-" 1対n関係を示すために、 :file:`regions` シェープファイルと :file:`airports` "
-"シェープファイルを読み込みます。シェープファイルには、レイヤー領域に外部キーフィールド（ ``fk_region`` "
-"）があります。つまり、各空港はそれぞれただ1つの地域に属し、各地域は空港をいくつでも持つことができます（典型的な1対多関係）。"
+"QGISでは、テーブルとベクタレイヤの間に違いはありません。基本的には、ベクタレイヤとはジオメトリを持っているテーブルのことです。このため、テーブルはベクタレイヤとして追加することができます。"
+" 1対Nリレーションのデモンストレーションとして、 :file:`regions` シェープファイルと、regionsレイヤへの外部キーフィールド（ "
+"``fk_region`` ）を持つ :file:`airports` "
+"シェープファイルを読み込んでみましょう。これは、各空港はそれぞれただ1つの地域に属し、各地域は空港をいくつでも持つことができることを意味します（典型的な1対多関係です）。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:671
+msgid "Foreign keys in 1-N relations"
+msgstr "1対Nリレーションの外部キー"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:673
 msgid ""
@@ -1012,7 +1477,8 @@ msgid ""
 "(if you have a database, you will probably want to define a constraint on "
 "it)."
 msgstr ""
-"空港属性テーブル中の既存の属性に加えて、外部キーとして動作する別のフィールドfk_regionが必要でしょう（データベースを持っている場合はおそらくそれに制約を定義することになるでしょう）。"
+"空港属性テーブルの既存の属性に加えて、外部キーとして動作する別のフィールド ``fk_region`` "
+"が必要です（データベースを持っている場合には、このフィールドに制約を定義することになるでしょう）。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:677
 msgid ""
@@ -1022,13 +1488,105 @@ msgid ""
 "providers (so you can also use it with shape and csv files) and all you have"
 " to do is to tell QGIS the relations between your tables."
 msgstr ""
-"このフィールドfk_regionには常に地域のIDが含まれているでしょう。それは、それが属する地域へのポインタのように見ることができます。そして、編集のためのカスタム編集フォームを設計でき、QGISではその設定についての処理をします。それはさまざまなプロバイダーで動作し（だからそれはシェープやCSVファイルで使用できます）、しなければならないのはQGISにテーブル間の関係を伝えることだけです。"
+"このフィールド fk_region "
+"には、必ず地域のIDが入ります。これは、空港が属する地域へのポインタのように見ることができます。また、編集用のカスタム編集フォームを設計でき、QGISはその設定についての処理をします。これはさまざまなプロバイダに対応しており（シェープファイルやCSVファイルも使用可）、しなければならないのは、QGISにテーブル間の関係を伝えることだけです。"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:717
-msgid "Relation Manager"
-msgstr "関係マネージャ"
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:684
+msgid "Defining 1-N relations"
+msgstr "1対Nリレーションの定義"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:686
+msgid ""
+"The first thing we are going to do is to let QGIS know about the relations "
+"between the layers. This is done in :menuselection:`Project --> "
+"Properties...`. Open the :guilabel:`Relations` tab and click on |signPlus| "
+":guilabel:`Add Relation`."
+msgstr ""
+"まず最初に行うのは、レイヤ間の関係をQGISに知らせることです。これは、 :menuselection:`プロジェクト --> プロパティ...` "
+"で行います。 :guilabel:`リレーション` タブを開き、 |signPlus| :guilabel:`リレーションを追加` をクリックします。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:690
+msgid ""
+"**Name** is going to be used as a title. It should be a human readable "
+"string, describing, what the relation is used for. We will just call say "
+"**airport_relation** in this case."
+msgstr ""
+"**名前** "
+"はタイトルとして使用されます。これはわかりやすい文字列で、リレーションが何のために用いられるのかを説明するものであるべきです。ここでは、単に "
+"**airport_relation** と名前を付けましょう。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:693
+msgid ""
+"**Referenced Layer (Parent)** also considered as parent layer, is the one "
+"with the primary key, pointed to, so here it is the ``regions`` layer. You "
+"need to define the primary key of the referenced layer, so it is ``ID``."
+msgstr ""
+"**被参照レイヤ（親）** 親レイヤとも呼ばれ、プライマリキーを持っており、参照されるレイヤです。この例では、 ``regions`` "
+"レイヤです。参照レイヤのプライマリキーを定義する必要があり、ここでは ``ID`` を指定します。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:696
+msgid ""
+"**Referencing Layer (Child)** also considered as child layer, is the one "
+"with the foreign key field on it. In our case, this is the ``airports`` "
+"layer. For this layer you need to add a referencing field which points to "
+"the other layer, so this is ``fk_region``."
+msgstr ""
+"**参照元レイヤ（子）** 子レイヤとも呼ばれ、外部キーフィールドを持ったレイヤです。この例では、 ``airports`` "
+"レイヤが該当します。参照元レイヤには他のレイヤを指す参照フィールドを指定する必要があり、ここでは ``fk_region`` とします。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:701
+msgid ""
+"Sometimes, you need more than a single field to uniquely identify features "
+"in a layer. Creating a relation with such a layer requires a **composite "
+"key**, ie more than a single pair of matching fields. Use the |signPlus| "
+":sup:`Add new field pair as part of a composite foreign key` button to add "
+"as many pairs as necessary."
+msgstr ""
+"場合によっては、レイヤ内の地物を一意に識別するためには複数のフィールドが必要となることがあります。このようなレイヤとのリレーションを作成するためには、 "
+"**複合キー** 、すなわち、一致するフィールドの複数ペアが必要です。 |signPlus| :sup:`複合外部キーとしてペアのフィールドを追加` "
+"ボタンを使用して、必要な数のペアを追加できます。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:707
+msgid ""
+"**Id** will be used for internal purposes and has to be unique. You may need"
+" it to build :ref:`custom forms <customize_form>`. If you leave it empty, "
+"one will be generated for you but you can assign one yourself to get one "
+"that is easier to handle"
+msgstr ""
+"**Id** は内部的な目的で使用され、ユニークでなければなりません。これは :ref:`カスタムフォーム <customize_form>` "
+"を作成するために必要となる場合があります。空のままにしておくと自動でIdを作成しますが、扱いやすいように自分でIdを指定することもできます。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:711
+msgid ""
+"**Relationship strength** sets the strength of the relation between the "
+"parent and the child layer. The default :guilabel:`Association` type means "
+"that the parent layer is *simply* linked to the child one while the "
+":guilabel:`Composition` type allows you to duplicate also the child features"
+" when duplicating the parent ones."
+msgstr ""
+"**リレーションの強度** は、親子レイヤ間のリレーションの強さを設定します。デフォルトの :guilabel:`Association` "
+"タイプは、親レイヤが子レイヤに *単に* リンクされていることを意味します。一方、 :guilabel:`コンポジション` "
+"タイプは、親レイヤを複製するときに子レイヤも複製されます。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:722
+msgid "Adding a relation between regions and airports layers"
+msgstr "regionsレイヤとairportsレイヤ間のリレーションの追加"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:724
+msgid ""
+"From the :guilabel:`Relations` tab, you can also press the |signPlus| "
+":guilabel:`Discover Relation` button to fetch the relations available from "
+"the providers of the loaded layers. This is possible for layers stored in "
+"data providers like PostgreSQL or SpatiaLite."
+msgstr ""
+":guilabel:`リレーション` タブでは、 |signPlus| :guilabel:`リレーションを検索` "
+"ボタンを押して、読み込んだレイヤの利用可能なリレーションをプロバイダから取得することもできます。この機能はPostgreSQLやSpatiaLiteといったデータプロバイダに保存されたレイヤで使用可能です。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:732
+msgid "Forms for 1-N relations"
+msgstr "1対Nリレーションのフォーム"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:734
 msgid ""
 "Now that QGIS knows about the relation, it will be used to improve the forms"
 " it generates. As we did not change the default form method (autogenerated) "
@@ -1037,13 +1595,21 @@ msgid ""
 "form might open directly or you will have to choose to open it in the "
 "identification dialog under actions."
 msgstr ""
-"今QGISが関係について知っていること、生成フォームを改善するために使用されます。我々は（自動生成）デフォルトのフォームのメソッドを変更していないとして、それは私たちの形で新しいウィジェットを追加します。それでは、凡例にレイヤー領域を選択してみましょうと、特定のツールを使用します。設定に応じて、フォームが直接開くこともありますし、アクションの下で識別ダイアログでそれを選択して開く必要があることもあります。"
+"これで、QGISはリレーションを把握できました。これはQGISが生成するフォームを改善するために利用されます。デフォルトのフォームのメソッド（自動生成）を変更していないので、改善はフォームに新しいウィジェットが追加されるのみです。それでは、凡例のregionsレイヤを選択して、識別ツールを使ってみましょう。設定によってはフォームが直接開くこともありますが、識別ダイアログのアクションから選択して地物フォームを開く必要があるかもしれません。"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:736
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:746
 msgid "Identification dialog regions with relation to airports"
-msgstr "空港への関係を持つ識別]ダイアログ領域"
+msgstr "airportsへのリレーションを持つregionsの識別ダイアログ"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:741
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:748
+msgid ""
+"As you can see, the airports assigned to this particular region are all "
+"shown in a table. And there are also some buttons available. Let's review "
+"them shortly:"
+msgstr ""
+"見ればわかるとおり、この特定の地域に割り当てられた空港が全てテーブル表示されています。また、いくつかのボタンも用意されています。早速見てみましょう。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:751
 msgid ""
 "The |toggleEditing| button is for toggling the edit mode. Be aware that it "
 "toggles the edit mode of the airport layer, although we are in the feature "
@@ -1051,47 +1617,299 @@ msgid ""
 "features of the airport layer."
 msgstr ""
 "|toggleEditing| "
-"ボタンは編集モードを切り替えるためのものです。私たちは地域レイヤーから地物の地物の形であるが、それは空港レイヤーの編集モードを切り替えていることに注意してください。しかしこの表は、空港レイヤーの地物を表しています。"
+"ボタンは編集モードを切り替えるためのものです。regionsレイヤの地物の地物フォームを開いていますが、このボタンはairportsレイヤの編集モードを切り替えることに注意してください。ただしこのテーブルは、airportsレイヤの地物を表しています。"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:751
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:755
+msgid "The |saveEdits| button is for saving all the edits."
+msgstr "|saveEdits| ボタンは、全ての編集を保存するためのものです。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:756
+msgid ""
+"The |newTableRow| button will add a new record to the airport layer "
+"attribute table. And it will assign the new airport to the current region by"
+" default."
+msgstr ""
+"|newTableRow| "
+"ボタンは、airportsレイヤの属性テーブルに新しいレコードを追加します。デフォルトでこの新しい空港は現在の地域に割り当てられます。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:758
+msgid ""
+"The |capturePoint| is the same as |newTableRow| but lets you digitize the "
+"airport geometry in the map canvas beforehand. Note that the icon will "
+"change according to geometry type."
+msgstr ""
+"|capturePoint| は |newTableRow| "
+"と同じですが、レコード追加前にマップキャンバスで空港のジオメトリのデジタイズができます。なお、アイコンはジオメトリタイプに応じて変わります。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:761
+msgid ""
+"The |duplicateFeature| button allows you to copy one or more child features."
+msgstr "|duplicateFeature| ボタンは1つまたは複数の子地物のコピーができます。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:762
+msgid ""
+"The |deleteSelectedFeatures| button will delete the selected airport "
+"permanently."
+msgstr "|deleteSelectedFeatures| ボタンは、選択した空港を永続的に削除します。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:764
 msgid ""
 "The |link| symbol will open a new dialog where you can select any existing "
 "airport which will then be assigned to the current region. This may be handy"
 " if you created the airport on the wrong region by accident."
 msgstr ""
 "|link| "
-"記号では、現在の領域に割り当てられる、既存の空港を選択できる新しいダイアログが開きます。たまたま間違った領域の上に空港を作成してしまった場合、これは便利かもしれません。"
+"シンボルをクリックすると、新しいダイアログが開き、既存の空港を選択して現在の地域に割り当てることができます。これは、誤って違う地域の上に空港を作成してしまった場合に便利です。"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:754
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:767
 msgid ""
 "The |unlink| symbol will unlink the selected airport from the current "
 "region, leaving them unassigned (the foreign key is set to NULL) "
 "effectively."
+msgstr "|unlink| シンボルは、選択した空港を現在の地域からリンク解除し、効果的に未割り当て状態（外部キーをNULLに設定）にします。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:769
+msgid ""
+"With the |zoomToSelected| button you can zoom the map to the selected child "
+"features."
+msgstr "|zoomToSelected| ボタンを押すと、選択した子地物にマップをズームさせます。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:771
+msgid ""
+"The two buttons |formView| and |openTable| to the right switch between table"
+" view and form view where the later let's you view all the airports in their"
+" respective form."
 msgstr ""
-"|unlink| "
-"シンボルは、効果的に（外部キーがNULLに設定されている）、未割り当て、それらを残し、現在の領域から選択された空港のリンクを解除します。"
+"右にある |formView| と |openTable| "
+"の2つのボタンは、テーブル表示とフォーム表示を切り替えます。後者は、すべての空港を個別のフォームで表示します。"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:789
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:775
+msgid ""
+"In the above example the referencing layer has geometries (so it isn't just "
+"an alphanumeric table) so the above steps will create an entry in the layer "
+"attribute table that has no corresponding geometric feature. To add the "
+"geometry:"
+msgstr ""
+"上記の例では、参照元レイヤがジオメトリを持っている（つまり、単なる英数字のテーブルではない）ので、上記の手順では、対応するジオメトリ地物を持たないエントリがレイヤの属性テーブルに作成されます。ジオメトリを追加するには、以下の操作を行います。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:780
+msgid ""
+"Choose |openTable| :menuselection:`Open Attribute Table` for the referencing"
+" layer."
+msgstr "参照元レイヤの |openTable| :menuselection:`属性テーブルを開く` を選択します。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:781
+msgid ""
+"Select the record that has been added previously within the feature form of "
+"the referenced layer."
+msgstr "被参照レイヤの地物フォーム内で追加したレコードを選択します。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:783
+msgid ""
+"Use the |addPart| :sup:`Add Part` digitizing tool to attach a geometry to "
+"the selected attributes table record."
+msgstr "|addPart| :sup:`部分を追加` デジタイジングツールを使用して、選択した属性テーブルのレコードとジオメトリを結びつけます。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:786
+msgid ""
+"If you work on the airport table, the widget Relation Reference is "
+"automatically set up for the ``fk_region`` field (the one used to create the"
+" relation), see :ref:`Relation Reference widget <configure_field>`."
+msgstr ""
+"airportsテーブルで作業しているのなら、 ``fk_region`` "
+"フィールド（リレーションを作成するために使用するフィールド）には、「リレーションの参照」ウィジェットが自動的に設定されます。詳細は "
+":ref:`リレーションの参照ウィジェット <configure_field>` を参照してください。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:792
+msgid ""
+"In the airport form you will see the |formView| button at the right side of "
+"the ``fk_region`` field: if you click on the button the form of the region "
+"layer will be opened. This widget allows you to easily and quickly open the "
+"forms of the linked parent features."
+msgstr ""
+"airportsレイヤのフォームには、 ``fk_region`` フィールドの右側に |formView| "
+"ボタンがあることがわかります。このボタンをクリックすると、regionsレイヤのフォームが開きます。このウィジェットで、簡単に素早くリンクしている親地物のフォームを開くことができます。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:802
 msgid "Identification dialog airport with relation to regions"
-msgstr "地域との関係で識別]ダイアログ空港"
+msgstr "regionsへのリレーションを持つairportsの識別ダイアログ"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:796
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:804
+msgid ""
+"The Relation Reference widget has also an option to embed the form of the "
+"parent layer within the child one. It is available in  the "
+":menuselection:`Properties --> Attributes Form` menu of the airport layer: "
+"select the ``fk_region`` field and check the ``Show embedded form`` option."
+msgstr ""
+"「リレーションの参照」ウィジェットには、親レイヤのフォームを子レイヤに埋め込むオプションもあります。これは、airportsレイヤの "
+":menuselection:`プロパティ --> 属性フォーム` メニューから設定できます。 ``fk_region`` フィールドを選択して、 "
+"``埋め込みフォームの表示`` オプションにチェックを入れてください。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:809
 msgid ""
 "If you look at the feature dialog now, you will see, that the form of the "
 "region is embedded inside the airports form and will even have a combobox, "
 "which allows you to assign the current airport to another region."
 msgstr ""
-"今地物ダイアログを見れば、地域のフォームが空港のフォーム内に埋め込まれても、別の領域に、現在の空港を割り当てることができますコンボボックスを、持っていること、わかります。"
+"今、地物フォームダイアログを見ると、regionsのフォームがairportsのフォームの中に組み込まれていて、現在の空港を別の地域に割り当てることができるコンボボックスもあることがわかります。"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:922
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:818
+msgid ""
+"Moreover if you toggle the editing mode of the airport layer, the "
+"``fk_region`` field has also an autocompleter function: while typing you "
+"will see all the values of the ``id`` field of the region layer. Here it is "
+"possible to digitize a polygon for the region layer using the |signPlus| "
+"button if you chose the option ``Allow adding new features`` in the "
+":menuselection:`Properties --> Attributes Form` menu of the airport layer."
+msgstr ""
+"さらに、airportsレイヤの編集モードを切り替えると、 ``fk_region`` フィールドにオートコンプリート機能も追加されます。入力中に "
+"regionsレイヤの ``id`` フィールドの値がすべて表示されることがわかります。ここで、airportsレイヤの "
+":menuselection:`プロパティ --> 属性フォーム` メニュー``新しい地物の追加`` オプションを選択した場合、 |signPlus| "
+"ボタンを使用してregionsレイヤのポリゴンをデジタイズすることができます。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:825
+msgid ""
+"The child layer can also be used in the :ref:`select_by_value` tool in order"
+" to select features of the parent layer based on attributes of their "
+"children."
+msgstr ""
+"子レイヤは、 :ref:`select_by_value` ツールで子レイヤの属性に基づいて親レイヤの地物を選択するために使うこともできます。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:828
+msgid ""
+"In :numref:`figure_select_by_value`, all the regions where the mean altitude"
+" of the airports is greater than 500 meters above sea level are selected."
+msgstr ":numref:`figure_select_by_value` では、空港の平均高度が海抜500mより大きい地域すべてを選択しています。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:832
+msgid ""
+"You will find that many different aggregation functions are available in the"
+" form."
+msgstr "フォームには多数のさまざまな集計関数があることがわかります。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:839
+msgid "Select parent features with child values"
+msgstr "子レイヤの値で親レイヤの地物を選択する"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:846
+msgid "Introducing many-to-many (N-M) relations"
+msgstr "多対多（N対M）リレーションの導入"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:848
+msgid ""
+"N-M relations are many-to-many relations between two tables. For instance, "
+"the ``airports`` and ``airlines`` layers: an airport receives several "
+"airline companies and an airline company flies to several airports."
+msgstr ""
+"N対Mのリレーションとは、2つのテーブル間の多数対多数の関係のことです。例えば、 ``airports`` レイヤと ``airlines`` "
+"レイヤを考えてみましょう。空港には複数の航空会社が乗り入れており、航空会社は複数の空港に乗り入れています。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:852
+msgid ""
+"This SQL code creates the three tables we need for an N-M relationship in a "
+"PostgreSQL/PostGIS schema named *locations*. You can run the code using the "
+":menuselection:`Database --> DB Manager…` for PostGIS or external tools such"
+" as `pgAdmin <https://www.pgadmin.org>`_. The airports table stores the "
+"``airports`` layer and the airlines table stores the ``airlines`` layer. In "
+"both tables few fields are used for clarity. The *tricky* part is the "
+"``airports_airlines`` table. We need it to list all airlines for all "
+"airports (or vice versa). This kind of table is known as a *pivot table*. "
+"The *constraints* in this table force that an airport can be associated with"
+" an airline only if both already exist in their layers."
+msgstr ""
+"以下のSQLコードは、 *locations* "
+"という名前のPostgreSQL/PostGISスキーマに、N対Mリレーションに必要な3つのテーブルを作成します。このコードは、PostGISの "
+":menuselection:`データベース --> DBマネージャ…` や `pgAdmin <https://www.pgadmin.org>`_ "
+"のような外部ツールを使って実行できます。airportsテーブルには ``airports`` レイヤが、airlinesテーブルには "
+"``airlines`` レイヤが格納されます。どちらのテーブルにも、わかりやすくするためにいくつかのフィールドが使われています。 *トリッキー* "
+"な部分は ``airports_airlines`` "
+"テーブルです。このテーブルは、すべての空港に対するすべての航空会社（またはその逆）をリストアップするために必要です。この種のテーブルは "
+"*ピボットテーブル* として知られています。このテーブルの *制約* "
+"は、両方とも互いのレイヤにある場合にのみ、空港と航空会社を関連づけられるものとすることを強制します。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:904
+msgid ""
+"Instead of PostgreSQL you can also use GeoPackage. In this case, the three "
+"tables can be created manually using the :menuselection:`Database --> DB "
+"Manager…`. In GeoPackage there are no schemas so the *locations* prefix is "
+"not needed."
+msgstr ""
+"PostgreSQLの代わりに、GeoPackageを使うこともできます。この場合には、3つのテーブルは :menuselection:`データベース "
+"--> DBマネージャ…` を使用して手動で作成します。GeoPackageにはスキーマが無いため、 *locations* の接頭辞は不要です。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:908
+msgid ""
+"Foreign key constraints in ``airports_airlines`` table can´t be created "
+"using :menuselection:`Table --> Create Table…` or :menuselection:`Table --> "
+"Edit Table…` so they should be created using :menuselection:`Database --> "
+"SQL Window…`. GeoPackage doesn't support *ADD CONSTRAINT* statements so the "
+"``airports_airlines`` table should be created in two steps:"
+msgstr ""
+"``airports_airlines`` テーブルの外部キー制約は、 :menuselection:`テーブル --> テーブルを作成…` や "
+":menuselection:`テーブル --> テーブルの編集…` では作成することができません。このため、このテーブルは "
+":menuselection:`データベース --> SQLウィンドウ…` を使用して作成する必要があります。GeoPackageは *ADD "
+"CONSTRAINT* 文をサポートしていないため、 ``airports_airlines`` テーブルは2段階で作成する必要があります。："
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:913
+msgid ""
+"Set up the table only with the ``id`` field using :menuselection:`Table --> "
+"Create Table…`"
+msgstr ""
+":menuselection:`テーブル --> テーブルを作成…` を使用して、 ``id`` フィールドのみを持つテーブルを準備します。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:914
+msgid ""
+"Using :menuselection:`Database --> SQL Window…`, type and execute this SQL "
+"code:"
+msgstr ":menuselection:`データベース --> SQLウィンドウ…` を使用して、以下のSQLコードを入力し実行します："
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:932
+msgid ""
+"Then in QGIS, you should set up two :ref:`one-to-many relations "
+"<one_to_many_relation>` as explained above:"
+msgstr ""
+"それから、上で説明したようにQGISで2つの :ref:`1対多のリレーション <one_to_many_relation>` を設定します。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:935
 msgid "a relation between ``airlines`` table and the pivot table;"
-msgstr "``airlines`` テーブルとピボットテーブルの間の関係。"
+msgstr "``airlines`` テーブルとピボットテーブルの間のリレーション"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:923
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:936
 msgid "and a second one between ``airports`` table and the pivot table."
-msgstr "そして ``airports`` テーブルとピボットテーブルとの間の第２の関係。"
+msgstr "``airports`` テーブルとピボットテーブルとの間の第２のリレーション"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:944
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:938
+msgid ""
+"An easier way to do it (only for PostgreSQL) is using the "
+":guilabel:`Discover Relations` in :menuselection:`Project --> Properties -->"
+" Relations`. QGIS will automatically read all relations in your database and"
+" you only have to select the two you need. Remember to load the three tables"
+" in the QGIS project first."
+msgstr ""
+"これを行うためのより簡単な方法（PostgreSQLのみ）は、 :menuselection:`プロジェクト --> プロパティ --> リレーション`"
+" の :guilabel:`リレーションを検索` "
+"を使用することです。QGISは自動的にデータベース内の全てのリレーションを読み込むので、必要な2つのリレーションを選択するだけで設定ができます。最初にQGISプロジェクトに3つのテーブルを読み込むことを忘れないようにしてください。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:948
+msgid "Relations and autodiscover"
+msgstr "リレーションと自動検索"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:950
+msgid ""
+"In case you want to remove an ``airport`` or an ``airline``, QGIS won't "
+"remove the associated record(s) in ``airports_airlines`` table. This task "
+"will be made by the database if we specify the right *constraints* in the "
+"pivot table creation as in the current example."
+msgstr ""
+"``airport`` や ``airline`` を削除する場合、QGISは ``airports_airlines`` "
+"テーブルの関連するレコードを削除しません。この作業は、現在の例のようにピボットテーブルの作成時に正しい *制約* "
+"を指定すれば、データベースによって行われます。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:955
+msgid "**Combining N-M relation with automatic transaction group**"
+msgstr "**N対Mのリレーションと自動トランザクショングループを組み合わせる**"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:957
 msgid ""
 "You should enable the transaction mode in :menuselection:`Project Properties"
 " --> Data Sources -->` when working on such context. QGIS should be able to "
@@ -1101,3 +1919,64 @@ msgstr ""
 "このようなコンテキストで作業する場合は、 :menuselection:`プロジェクトのプロパティ --> データソース-->` "
 "でトランザクションモードを有効にする必要があります。 "
 "QGISは、すべてのテーブル（航空会社、空港、ピボットテーブル）の行を追加または更新できる必要があります。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:961
+msgid ""
+"Finally we have to select the right cardinalilty in the "
+":menuselection:`Layer Properties --> Attributes Form` for the ``airports`` "
+"and ``airlines`` layers. For the first one we should choose the **airlines "
+"(id)** option and for the second one the **airports (id)** option."
+msgstr ""
+"最後に、 :menuselection:`レイヤプロパティ --> 属性フォーム` で、 ``airports`` と ``airlines`` "
+"レイヤに対して正しい「要素数」を選択する必要があります。最初のレイヤには **airlines (id)** オプションを、2番目のレイヤには "
+"**airports (id)** オプションを選択する必要があります。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:971
+msgid "Set relationship cardinality"
+msgstr "関係の要素数の設定"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:973
+msgid ""
+"Now you can associate an airport with an airline (or an airline with an "
+"airport) using :guilabel:`Add child feature` or :guilabel:`Link existing "
+"child feature` in the subforms. A record will automatically be inserted in "
+"the ``airports_airlines`` table."
+msgstr ""
+"これで、サブフォーム内で :guilabel:`子地物の追加` や :guilabel:`既存の子地物をリンク` "
+"を使用してairlineにairportを（そしてairportにairlineを）関連付けることができるようになりました。 "
+"``airports_airlines`` テーブルにはレコードが自動的に挿入されます。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:983
+msgid "N-M relationship between airports and airlines"
+msgstr "airportsとairlinesのN対Mリレーション"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:985
+msgid "Using **Many to one relation** cardinality"
+msgstr "**多対1リレーション** 要素数を使用する"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:987
+msgid ""
+"Sometimes hiding the pivot table in an N-M relationship is not desirable. "
+"Mainly because there are attributes in the relationship that can only have "
+"values when a relationship is established. If your tables are layers (have a"
+" geometry field) it could be interesting to activate the :guilabel:`On map "
+"identification` option (:menuselection:`Layer Properties --> Attributes Form"
+" --> Available widgets --> Fields`) for the foreign key fields in the pivot "
+"table."
+msgstr ""
+"N対Mリレーションでピボットテーブルを隠すことが望ましくない場合があります。これは主に、リレーションシップが確立されたときにのみ値を持つことができる属性がリレーションシップに存在するというのが理由です。テーブルが（ジオメトリフィールドを持つ）レイヤの場合、ピボットテーブルの外部キーフィールドで"
+" :guilabel:`地図上の地物特定` オプション（ :menuselection:`レイヤプロパティ --> 属性フォーム --> "
+"利用可能なウィジェット --> フィールド` ）を有効にするとよいかもしれません。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:994
+msgid "**Pivot table primary key**"
+msgstr "**ピボットテーブルの主キー**"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:996
+msgid ""
+"Avoid using multiple fields in the primary key in a pivot table. QGIS "
+"assumes a single primary key so a constraint like ``constraint "
+"airports_airlines_pkey primary key (airport_fk, airline_fk)`` will not work."
+msgstr ""
+"ピボットテーブルの主キーには複数のフィールドを使用しないでください。QGIS は単一の主キーを想定しているため、 ``constraint "
+"airports_airlines_pkey primary key (airport_fk, airline_fk)`` のような制約は機能しません。"
