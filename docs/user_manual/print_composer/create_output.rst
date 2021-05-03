@@ -215,7 +215,9 @@ To export a layout as PDF:
      keep the objects as vectors with the risk that the appearance of the output
      file may not match the print layout preview (for more details, see
      :ref:`layout_export_settings`).
-   * |checkbox| :guilabel:`Append georeference information`
+   * |checkbox| :guilabel:`Append georeference information`: available only if
+     the :ref:`reference map <reference_map>`, from which the information is taken,
+     is on the first page.
    * |checkbox| :guilabel:`Export RDF metadata` of the document such as the
      title, author, date, description...
    * Set the :guilabel:`Text export`: controls whether text labels are exported
