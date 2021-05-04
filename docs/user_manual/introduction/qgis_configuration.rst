@@ -1163,6 +1163,7 @@ that allows to store in a single folder:
 * all the :ref:`global settings <gui_options>`, including locale,
   projections, authentication settings, color palettes, shortcuts...
 * GUI configurations and :ref:`customization <sec_customization>`
+* grid files and other proj helper files installed for datum transformation
 * installed :ref:`plugins <plugins>` and their configurations
 * project templates and history of saved project with their image preview
 * :ref:`processing settings <label_processing>`, logs, scripts, models.
