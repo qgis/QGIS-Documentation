@@ -90,10 +90,11 @@ Format a string using supplied arguments.
    * - Syntax
      - format(string, arg1, arg2, ...)
    * - Arguments
-     - * **string** - A string with place holders for the arguments. Use %1, %2, etc for placeholders. Placeholders can be repeated.
+     - * **string** - A string with placeholders %1, %2, etc., for the arguments. Placeholders can be repeated. The lowest numbered placeholder is replaced by arg1, the next by arg2, etc.
        * **arg** - any type. Any number of arguments.
    * - Examples
      - * ``format('This %1 a %2','is', 'test')`` → 'This is a test'
+       * ``format('This is %2','a bit unexpected but 2 is lowest number in string','normal')`` → 'This is a bit unexpected but 2 is lowest number in string'
 
 
 .. end_format_section
