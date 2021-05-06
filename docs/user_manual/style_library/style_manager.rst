@@ -246,6 +246,23 @@ database. Tags can be assigned to items. Also available through right-click,
 The dialog also allows to export single symbols as :file:`.PNG` or :file:`.SVG`
 files.
 
+
+Using the online repository
+...........................
+
+The QGIS project maintains a repository with a collection of styles shared by
+QGIS users. This is available at https://plugins.qgis.org/styles and can be
+accessed from the :guilabel:`Style Manager` dialog, pressing the |search|
+:guilabel:`Browse Online Styles` button at the bottom.
+
+From that repository, you can:
+
+#. Browse and search for any style items, based on their type or name
+#. Download the style file and unzip it
+#. Load the :file:`.xml` based file into your style database in QGIS,
+   using any of the aforementioned import methods.
+
+
 .. _color-ramp:
 
 Setting a Color Ramp
@@ -325,6 +342,8 @@ choose the ramp type:
 .. |polygonLayer| image:: /static/common/mIconPolygonLayer.png
    :width: 1.5em
 .. |sharing| image:: /static/common/mActionSharing.png
+   :width: 1.5em
+.. |search| image:: /static/common/search.png
    :width: 1.5em
 .. |signMinus| image:: /static/common/symbologyRemove.png
    :width: 1.5em
