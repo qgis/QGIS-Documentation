@@ -1482,7 +1482,8 @@ below.
 * |rectangle3PointsDistance| :sup:`Rectangle from 3 points (distance)`: Draws an
   oriented rectangle from three points. The first and second points determine the
   length and angle of the first edge. The third point determines the length of the
-  other edge. (Left-click, left-click, right-click)
+  other edge. One can use  :ref:`advanced_digitizing_panel` to set the length of the
+  edges. (Left-click, left-click, right-click)
 * |rectangle3PointsProjected| :sup:`Rectangle from 3 points (projected)`: Same as
   the preceding tool, but the length of the second edge is computed from the
   projection of the third point on the first edge. (Left-click, left-click,
