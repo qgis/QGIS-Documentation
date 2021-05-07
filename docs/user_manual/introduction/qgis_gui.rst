@@ -2453,6 +2453,8 @@ Terrain
     Raising this value will add vertical walls ("skirts") around terrain
     tiles to hide the cracks.
 
+* :guilabel:`Terrain elevation offset`: moves the terrain up or down,
+  e.g. to adjust its elevation with the ground of some objects
 * When a mesh layer is used as terrain, you can configure the
   :guilabel:`Triangles settings` (wireframe display, smooth triangles) and the
   :guilabel:`Rendering colors settings` (as uniform or depending on terrain level).
@@ -2515,15 +2517,16 @@ Camera & Skybox
 
 In this tab, you can override some :ref:`default camera settings <3d_options>`
 made in the :menuselection:`Settings --> Options --> 3D` dialog.
-* Check |unchecked| :guilabel:`Show skybox` to enable skybox rendering in
-  the scene. The skybox type can be:
 
-  * :guilabel:`Panoramic texture`, with a single file providing sight on 360\°
-  * :guilabel:`Distinct faces`, with a texture file for each of the six sides
-    of a box containing the scene
+Furthermore, check |unchecked| :guilabel:`Show skybox` to enable skybox rendering
+in the scene. The skybox type can be:
 
-  Texture files can be files on the disk, remote URLs or embedded in the project
-  (:ref:`more details <svg_paths>`).
+* :guilabel:`Panoramic texture`, with a single file providing sight on 360\°
+* :guilabel:`Distinct faces`, with a texture file for each of the six sides
+  of a box containing the scene
+
+Texture image files of the skybox can be files on the disk, remote URLs or embedded
+in the project (:ref:`more details <embedded_file_selector>`).
 
 Advanced
 ........
