@@ -226,7 +226,7 @@ the :guilabel:`Shape` type. It can be:
 * a regular shape such as :guilabel:`Rectangle`, :guilabel:`Square`,
   :guilabel:`Circle` or :guilabel:`Ellipse`
 * an :guilabel:`SVG` symbol from a file, a URL or embedded in the project
-  or style database (:ref:`more details <svg_paths>`)
+  or style database (:ref:`more details <embedded_file_selector>`)
 * or a :guilabel:`Marker Symbol` you can create or select from the
   :ref:`symbol library <vector_marker_symbols>`.
 
