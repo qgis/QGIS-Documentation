@@ -2513,8 +2513,8 @@ given:
 Camera & Skybox
 ...............
 
-* Camera's :guilabel:`Field of view`: allowing to create panoramic scenes.
-  Default value is 45\°.
+In this tab, you can override some :ref:`default camera settings <3d_options>`
+made in the :menuselection:`Settings --> Options --> 3D` dialog.
 * Check |unchecked| :guilabel:`Show skybox` to enable skybox rendering in
   the scene. The skybox type can be:
 

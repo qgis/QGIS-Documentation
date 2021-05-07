@@ -574,6 +574,33 @@ still have the possibility to remove your changes and reset to the predefined
 list.
 
 
+.. index:: 3D
+.. _3d_options:
+
+3D Settings
+-----------
+
+.. _figure_3d_options:
+
+.. figure:: img/options_3d.png
+   :align: center
+
+   3D Settings
+
+The |3d| :guilabel:`3D` menu helps you configure some default settings to use
+for any :guilabel:`3D Map view`. These can refer to :guilabel:`Default Camera Settings`:
+
+* :guilabel:`Projection type`: allowing to view the 3D scene in a
+  :guilabel:`Perspective projection` or an :guilabel:`Orthogonal projection`
+* Camera's :guilabel:`Field of view`: allowing to create panoramic scenes.
+  Default value is 45\°.
+* :guilabel:`Navigation mode`: it can be :guilabel:`Terrain based` or
+  :guilabel:`Walk mode (first person)`
+* :guilabel:`Movement speed`
+* :guilabel:`Invert vertical axis`: possible values are :guilabel:`Never`
+  :guilabel:`Only when dragging` and :guilabel:`Always`
+
+
 .. index:: Colors
 .. _colors_options:
 
@@ -1957,6 +1984,8 @@ in the QGIS user profile.
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |3d| image:: /static/common/3d.png
+   :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |codeEditor| image:: /static/common/mIconCodeEditor.png
