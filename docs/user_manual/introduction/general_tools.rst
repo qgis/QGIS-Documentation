@@ -824,7 +824,8 @@ menu and the layers' contextual menu in the :guilabel:`Layers` panel.
      - |checkbox|
    * - |zoomFullExtent|
      - Zoom Full
-     - Zoom to the extent of all the layers in the project.
+     - Zoom to the extent of all the layers in the project
+       or to the :ref:`project full extent <project_full_extent>`.
      - |checkbox|
      - |checkbox|
      -
