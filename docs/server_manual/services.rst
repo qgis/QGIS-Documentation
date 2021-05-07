@@ -2275,7 +2275,7 @@ provides. Links to those services are also given.
 
    Server Catalog, metadata associated to a project and services (links to) that it provides. 
 
-By browsing a project, it is listed the dataset that it serves.
+By browsing a project, it is listed the dataset that it serves. 
  
 .. _figure_server_browse_dataset:
 
@@ -2284,6 +2284,15 @@ By browsing a project, it is listed the dataset that it serves.
 
    Browsing a dataset served by a project in the Server Catalog
    
+Use Right click on a layer to display the attribute table associated to it.
+
+.. _figure_server_attribute_table:
+
+.. figure:: img/server_attribute_table.png
+   :align: center
+
+   Attribute table associated to a layer
+
 It is possible to consult information of the elements in the map as shown in the image below:
 
 .. _figure_server_info_results:
