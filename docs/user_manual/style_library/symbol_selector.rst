@@ -216,7 +216,7 @@ Appropriate for point geometry features, marker symbols have several
 
 * **Raster image marker**: use an image (:file:`PNG`, :file:`JPG`, :file:`BMP` ...)
   as marker symbol. The image can be a file on the disk, a remote URL
-  or embedded in the style database (:ref:`more details <svg_paths>`).
+  or embedded in the style database (:ref:`more details <embedded_file_selector>`).
   Width and height of the image can be set independently or using the
   |lockedGray| :sup:`Lock aspect ratio`. The size can be set using any of the
   :ref:`common units <unit_selector>` or as a percentage of the image's original
@@ -230,7 +230,7 @@ Appropriate for point geometry features, marker symbols have several
   symbol. Width and height of the symbol can be set independently or using the
   |lockedGray| :sup:`Lock aspect ratio`. Each SVG file colors and stroke can
   also be adapted. The image can be a file on the disk, a remote URL or
-  embedded in the style database (:ref:`more details <svg_paths>`).
+  embedded in the style database (:ref:`more details <embedded_file_selector>`).
 
   See :ref:`svg_symbol` section to parametrize an SVG symbol.
 
@@ -411,7 +411,7 @@ symbol layer types:
 
 * **Raster image fill**: fills the polygon with tiles from a raster image (:file:`PNG`
   :file:`JPG`, :file:`BMP` ...). The image can be a file on the disk, a remote URL
-  or an embedded file encoded as a string (:ref:`more details <svg_paths>`).
+  or an embedded file encoded as a string (:ref:`more details <embedded_file_selector>`).
   Options include (data defined) opacity, image width, coordinate mode (object
   or viewport), rotation and offset. The image width can be set using any of the
   :ref:`common units <unit_selector>` or as a percentage of the original size.
