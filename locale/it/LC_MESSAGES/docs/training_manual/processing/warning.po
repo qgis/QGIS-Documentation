@@ -1,23 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
+# Harrissou Sant-anna, 2020
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:22+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"POT-Creation-Date: 2020-12-13 09:01+0100\n"
+"PO-Revision-Date: 2020-12-24 10:19+0000\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2021\n"
 "Language-Team: Italian (https://www.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -25,9 +28,29 @@ msgstr ""
 msgid "An important warning before starting"
 msgstr "Una raccomandazione importante prima di iniziare"
 
+#: ../../docs/training_manual/processing/warning.rst:4
+msgid ""
+"Just like the manual of a word processor doesn't teach you how to write a "
+"novel or a poem, or a CAD tutorial doesn't show you how to calculate the "
+"size of a beam for a building, this guide will not teach you spatial "
+"analysis. Instead, it will show you how to use the QGIS Processing "
+"framework, a powerful tool for performing spatial analysis. It is up to you "
+"to learn the required concepts that are needed to understand that type of "
+"analysis. Without them, there is no point in using the framework and its "
+"algorithms, although you might be tempted to try."
+msgstr ""
+"Proprio come il manuale di un elaboratore di testi non vi insegna a scrivere"
+" un romanzo o una poesia, o un tutorial CAD non vi mostra come calcolare le "
+"dimensioni di una trave per un edificio, questa guida non vi insegnerà "
+"l'analisi spaziale. Invece, vi mostrerà come usare il framework QGIS "
+"Processing, un potente strumento per eseguire l'analisi spaziale. Sta a voi "
+"imparare i concetti necessari per capire questo tipo di analisi. Senza di "
+"essi, non ha senso usare il framework e i suoi algoritmi, anche se potreste "
+"essere tentati di provarci."
+
 #: ../../docs/training_manual/processing/warning.rst:13
 msgid "Let's show this more clearly with an example."
-msgstr "Mostriamolo con un esempio"
+msgstr "Mostriamo questo più chiaramente con un esempio."
 
 #: ../../docs/training_manual/processing/warning.rst:15
 msgid ""
@@ -35,9 +58,14 @@ msgid ""
 "you can calculate a raster layer from them using the *Kriging* geoalgorithm."
 " The parameters dialog for that module is like the following one."
 msgstr ""
-"Dato un insieme di punti e un valore ad ogni punto, è possibile calcolare un"
-" raster utilizzando il geoalgoritmo *Kriging*. La finestra di dialogo dei "
-"parametri per quel modulo è la seguente."
+"Dato un insieme di punti e un valore di un determinato valore in ogni punto,"
+" è possibile elaborare un layer raster da essi utilizzando il geoalgoritmo "
+"*Kriging*. La finestra di dialogo dei parametri per questo modulo è simile "
+"alla seguente."
+
+#: ../../docs/training_manual/processing/warning.rst:21
+msgid "It looks complex, right?"
+msgstr "Sembra complesso, vero?"
 
 #: ../../docs/training_manual/processing/warning.rst:23
 msgid ""
@@ -56,19 +84,20 @@ msgid ""
 "it and perform the analysis. Ignoring this will result in wrong results and "
 "poor (and most likely useless) analysis."
 msgstr ""
-"leggendo questo manuale imparerai come usare questo modulo, come eseguire "
-"eseguire il processo in seri per creare il layer da centinaia di punti da un"
-" singolo comando o cosa succede se il layer di input ha alcuni punti "
-"selezionati. Tuttavia, i parametri stessi non sono spiegati. Un analista "
-"esperto con una buona conoscenza della geostatistica non avrà problemi nel "
-"comprendere questi parametri. Se non sei uno di loro e *sill*, *range* o "
-"*nugget* non ti sono familiari, non dovresti usare il modulo *Kriging*. Più "
-"che quello tu sei lontano da essere pronto a usare il modulo di *Kriging*, "
-"poiché richiede di apprendere concetti come autocorrelazione spaziale o "
-"semivariogrammi, che probabilmente non hai mai sentito prima, o almeno non "
-"hai studiato abbastanza a lungo . Dovresti prima studiarli e comprenderli, e"
-" poi tornare a QGIS per eseguirlo ed eseguire l'analisi. È probabile che "
-"questo studio porti a risultati scarsi (e molto probabilmente inutili)."
+"Leggendo questo manuale, imparerai cose come l'uso di questo modulo, come "
+"eseguirlo in un processo batch per creare layer raster da centinaia di layer"
+" di punti in una singola esecuzione, o cosa succede se il layer di input ha "
+"alcuni punti selezionati. Tuttavia, i parametri stessi non sono spiegati. Un"
+" analista esperto con una buona conoscenza della geostatistica non avrà "
+"problemi a capire questi parametri. Se non siete uno di loro e *sill*, "
+"*range*, o *nugget* non sono concetti familiari per te, allora non dovresti "
+"usare il modulo *Kriging*. Inoltre, siete lontani dall'essere pronti ad "
+"usare il modulo *Kriging*, poiché richiede l'apprendimento di concetti come "
+"l'autocorrelazione spaziale o i semivariogrammi, che probabilmente non hai "
+"mai sentito prima, o almeno non hai studiato abbastanza a lungo. Dovresti "
+"prima studiarli e capirli, e poi tornare su QGIS per eseguirli "
+"effettivamente ed eseguire l'analisi. Ignorare questo porterà a risultati "
+"sbagliati e ad analisi scadenti (e molto probabilmente inutili)."
 
 #: ../../docs/training_manual/processing/warning.rst:37
 msgid ""
@@ -77,10 +106,10 @@ msgid ""
 "fundamental analysis ideas that they are based on. Without that knowledge, "
 "using them will most likely lead to poor results."
 msgstr ""
-"Sebbene non tutti gli algoritmi siano complessi come kriging (ma alcuni di "
-"essi sono più complessi!), si tratta di comprendere l'analisi fondamentale "
-"su cui si basano. Senza questa conoscenza, il loro utilizzo molto "
-"probabilmente porterà a risultati mediocri."
+"Anche se non tutti gli algoritmi sono complessi come il kriging (ma alcuni "
+"sono anche più complessi!), quasi tutti richiedono la comprensione delle "
+"nozioni fondamentali di analisi su cui si basano. Senza questa conoscenza, "
+"usarli porterà molto probabilmente a risultati scadenti."
 
 #: ../../docs/training_manual/processing/warning.rst:42
 msgid ""
@@ -92,20 +121,21 @@ msgid ""
 "spatial analysis and get sound results. You need to study spatial analysis "
 "as well."
 msgstr ""
-"Usare i geoalgoritmi senza una buona abse di analisi spaziale è come provare"
-" a scrivere una novella senza conoscere la grammatica o la sintassi e sednza"
-" avere nessuna conoscenza di come narrare una storia. Potresti avere un "
-"risultato, ma probabilmente non ha alcun valore. Per favore, non ingannare "
-"te stesso e pensare che sei già in grado di eseguire analisi spaziali e "
-"ottenere risultati sonori. Devi studiare l'analisi spaziale."
+"Usare i geoalgoritmi senza avere una buona base di analisi spaziale è come "
+"cercare di scrivere un romanzo senza sapere nulla di grammatica o sintassi, "
+"e non avere alcuna conoscenza della narrazione. Potreste ottenere un "
+"risultato, ma è probabile che non abbia alcun valore. Per favore, non "
+"illudetevi e pensate che dopo aver letto questa guida siate già in grado di "
+"eseguire l'analisi spaziale e ottenere risultati validi. Avete bisogno di "
+"studiare anche l'analisi spaziale."
 
 #: ../../docs/training_manual/processing/warning.rst:49
 msgid ""
 "Here is a good reference that you can read to learn more about spatial data "
 "analysis."
 msgstr ""
-"Qui ci sono dei riferimenti che puoi leggere per impare di più sull'analisi "
-"spaziale."
+"Qui ci sono dei riferimenti che puoi leggere per imparare di più "
+"sull'analisi spaziale."
 
 #: ../../docs/training_manual/processing/warning.rst:51
 msgid ""
@@ -116,3 +146,8 @@ msgstr ""
 "*Geospatial Analysis (3rd Edition)*: A Comprehensive Guide to Principles, "
 "Techniques and Software Tools Michael John De Smith, Michael F. Goodchild, "
 "Paul A. Longley"
+
+#: ../../docs/training_manual/processing/warning.rst:54
+msgid ""
+"It is available online `here <https://www.spatialanalysisonline.com/>`_"
+msgstr "È disponibile online `qui <https://www.spatialanalysisonline.com/>`_"
