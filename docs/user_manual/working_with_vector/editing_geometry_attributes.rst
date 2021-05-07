@@ -12,6 +12,10 @@
 QGIS has various capabilities for editing OGR, SpatiaLite, PostGIS,
 MSSQL Spatial and Oracle Spatial vector layers and tables.
 
+Editing can be done by placing nodes manually. And for lines and polygons
+, free-hand digitising can be toggled by pressing :kbd:`R` or activating
+stream digitizing in the 'Advanced Digitizing Toolbar'.
+
 .. note::
    The procedure for editing GRASS layers is different - see section
    :ref:`grass_digitizing` for details.
@@ -24,6 +28,13 @@ MSSQL Spatial and Oracle Spatial vector layers and tables.
    same feature at the same time as you are.
    The last person to save the edits wins.
 
+.. _tip_validating_edits:
+
+.. tip:: **Validating Edits**
+
+   The core plugin Geometry Checker can be used to validate new or modified
+   geometries to ensure their validity in order to prevent issues laterF
+   for more information see :ref:`geometry_checker`.
 
 .. index:: Snapping
    single: Digitizing; Snapping
@@ -57,7 +68,10 @@ The snapping mode, tolerance value, and units can also be configured in
 this toolbar.
 
 The snapping configuration can also be set in
-:menuselection:`Project --> Snapping Options...`.
+:menuselection:`Project --> Snapping Options...`. Or it can be customied for
+each layer in the layer properties in the Digitizing tab. This will show
+a dotted grid when the scale is low enough to show the specified precision limit.
+Snapping can be performed on the dots of the grid.
 
 There are three options to select the layer(s) to snap to:
 
@@ -76,8 +90,8 @@ There are three options to select the layer(s) to snap to:
   Snapping will not occur to a layer that is not checked in the
   snapping options dialog.
 
-As for snapping mode, you can choose between ``To vertex``, ``To segment``,
-and ``To vertex and segment``.
+As for snapping mode, you can choose between ``Vertex``, ``Segment``,
+``Area``, ``Centroid``, ``Middle of Segments`` and ``Line Endpoints``.
 
 The tolerance values can be set either in the project's ``map units``
 or in ``pixels``.
@@ -227,17 +241,25 @@ the geometries of the neighboring features.
 Topological editing works with features from different layers, as long
 as the layers are visible and in editing mode.
 
+In layer with Z values, topological editing will interpolate the Z value of 
+a point based on the value of the edge used for the connection.
 
 .. index:: Avoid overlap
    seealso: Avoid overlap; Topology
 
-Avoid overlap of new polygons
------------------------------
+Overlapping control
+-------------------
 
-When the snapping mode is set to ``Advanced configuration``, for polygon layers,
-there's an option called |checkbox| :guilabel:`Avoid overlap`. This option
-prevents you from drawing new features that overlap existing ones in the
-selected layer, speeding up digitizing of adjacent polygons.
+Overlapping can be controlled by the overlap tool. Three modes are available:
+
+#. Allow Overlap
+#. Avoid Overlap on Active Layer
+#. Follow Advanced Configuration
+
+Allow Overlap is the default setting. The 'Avoid Overlap on Active Layer' prevent
+ any overlap with other features from the layer being edited. And 'Follow Advanced
+Configuration' allows the overlapping setting to be set on a layer basis in the
+advanced configuration panel.
 
 With avoid overlap enabled, if you already have one polygon, you can digitize
 a second one such that they intersect. QGIS will then cut the second polygon to the
@@ -253,17 +275,8 @@ digitize all vertices of the common boundary.
    you can get unexpected geometries if you forget to uncheck it when no longer
    needed.
 
-
-Geometry Checker
------------------
-
-A core plugin can help the user to find the geometry invalidity. You can find
-more information on this plugin at :ref:`geometry_checker`.
-
-
 .. index::
    single: Digitizing tools; Automatic tracing
-
 .. _tracing:
 
 Automatic Tracing
@@ -336,6 +349,15 @@ direction and a negative value does the opposite.
    seealso: Digitizing; Attribute table
 
 .. _sec_edit_existing_layer:
+
+
+Self-snapping
+-------------
+
+The last tool on the Snapping toolbar allows you to toggle self-snapping.
+When active, it allows you to snap to the geometry that is being edited.
+Self-snapping can cause invalid geometries, use with caution.
+
 
 Digitizing an existing layer
 ============================
@@ -464,6 +486,8 @@ geometry then enter its attributes. To digitize the geometry:
     You can also avoid the use of the rubber band by checking :guilabel:`Don't
     update rubber band during node editing`.
 
+#. For line feature pressing :kbd:`Shift` + right-click will close the line automatically.
+
 #. The attribute window will appear, allowing you to enter the information for
    the new feature. :numref:`Figure_edit_values` shows setting attributes for a fictitious
    new river in Alaska. However, in the :guilabel:`Digitizing` menu under the
@@ -563,7 +587,9 @@ Red circles will appear when hovering vertices.
   A double-click on any location of the boundary also creates a new
   node.
   For lines, a virtual node is also proposed at both extremities of a
-  line to extend it.
+  line to extend it. When adding a node at the end of a line the function
+  will remain active until a right-click. This allows to easily extend an
+  existing line.
 
   .. _figure_vertex_add_node:
 
@@ -837,13 +863,15 @@ Advanced digitizing
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
 | Icon                      | Purpose                                 | Icon                   | Purpose                 |
 +===========================+=========================================+========================+=========================+
-| |cad|                     | Enable Advanced Digitizing Tools        | |tracing|              | Enable Tracing          |
+| |digitizewithCurve|       | Draw curves                             | |streamDigitizing|     | Enable stream digitizing|
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
 | |moveFeature|             | Move Feature(s)                         | |moveFeatureCopy|      | Copy and Move Feature(s)|
 | |moveFeatureLine|         |                                         | |moveFeatureCopyLine|  |                         |
 | |moveFeaturePoint|        |                                         | |moveFeatureCopyPoint| |                         |
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
 | |rotateFeature|           | Rotate Feature(s)                       | |simplifyFeatures|     | Simplify Feature        |
++---------------------------+-----------------------------------------+------------------------+-------------------------+
+| |cad|                     | Enable Advanced Digitizing Tools        | |scaleFeature|         | Enable Tracing          |
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
 | |addRing|                 | Add Ring                                | |addPart|              | Add Part                |
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
@@ -864,6 +892,21 @@ Advanced digitizing
 
 Table Advanced Editing: Vector layer advanced editing toolbar
 
+.. index::
+   single: Digitizing tools; Draw curves
+   single: Digitizing tools; Enable stream digitizing
+.. _draw_curves:
+
+Draw Curves
+---------------
+
+The |drawCurves| :sup:`Draw Curves` tool allows you to draw curves in layers with
+geometries that support curves.
+
+Alternatively the |streamDigitizing| :sup:`Stream Digitizing` tool allows you to
+activate and deactivate stream digitizing. Allowing to create features in freehand
+mode. Generatig features with curves with dense vertices, even if the layer does not
+support curved geometries. 
 
 .. index::
    single: Digitizing tools; Move feature
@@ -938,8 +981,21 @@ To abort feature rotation, press the :kbd:`ESC` button or click on the
 |rotateFeature| :sup:`Rotate Feature(s)` icon.
 
 .. index::
-   single: Digitizing tools; Simplify Feature
-.. _simplify_feature:
+   single: Digitizing tools; Scale Feature
+.. _scale_feature:
+
+Scale Feature
+-------------
+
+The Scale Feature tool is similar to the Rotate feature. Though instead of performing
+a rotation of selected features, it changes rescales their geometry. The change is
+performed in relation to the anchor point and the scale ration can be manually specified
+in the widget that appears in the upper corner of the canvas.
+
+
+single: Digitizing tools; Simplify Feature
+.. _simplify_features:
+
 
 Simplify Feature
 ----------------
@@ -1240,8 +1296,11 @@ a multipolygon/multipolyline/multipoint feature is created.
    * manually replacing the value in the corresponding cell;
    * selecting a row in the table and pressing :guilabel:`Take attributes from
      selected feature` to use the values of this initial feature;
+   * pressing the :guilabel:`Take attributes from the largest geometry`
+     to use the attributes from the longest line feature
+     the largest polygon, or the multipoints with the most parts;
    * pressing :guilabel:`Skip all fields` to use empty attributes;
-   * or, expanding the drop down menu at the top of the table, select any of the
+   * expanding the drop down menu at the top of the table, select any of the
      above options to apply to the corresponding field only. There, you can also
      choose to aggregate the initial features attributes (Minimum, Maximum, Median,
      Sum, Count, Concatenation... depending on the type of the field.
@@ -1756,8 +1815,16 @@ and angle entered. Repeating the process, several points can be added.
 
    Points at given distance and angle
 
+
+Information Floater
+-------------------
+
+As an additionnal tool, the Floater can also be activated. This allows to display
+the values in the panel right next to the cursor.
+
 .. index:: Edit in place
 .. _processing_inplace_edit:
+
 
 The Processing in-place layer modifier
 ======================================
