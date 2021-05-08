@@ -131,6 +131,8 @@ panel provides the following functionalities (see :numref:`figure_layout_legend_
 Data-define the legend labels
 .............................
 
+These customization can only be done with |checkbox| :guilabel:`Auto update` disabled.
+
 |expression| allows you to add :ref:`expressions <vector_expressions>` to
 each symbol label of a given layer. New variables (``@symbol_label``,
 ``@symbol_id`` and ``@symbol_count``) help you interact with the legend entry.
@@ -159,23 +161,44 @@ notation: [% expression %].
 Customizing legend items
 ........................
 
-Double-clicking on an item allows for futher customization. For all item types it
-allows to modify the label text and its expression as previously detailed or by using the
-insert expression. The item menu also allows you to control the column splitting behaviour
-by forcing the column split to occur after a specific item.
+.. _figure_layout_legend_item_properties:
 
-For items with a symbol, the item menu allows you to specify the maximum height and width
+.. figure:: img/legend_item_properties.png
+   :align: center
+
+Legend items can also be customized individually in the :guilabel:`Legend Items Properties`.
+But these customization can only be done with |checkbox| :guilabel:`Auto update` disabled.
+
+Double-clicking or on an item allows for futher customization. Editing multiple items can be
+done by clicking on  |symbologyEdit| .
+
+:guilabel:`Label`
+
+For all item types it allows to modify the label text manually or by typing in or by inserting expressions
+ by using the :guilabel:`Insert Expression`.
+
+:guilabel:`Columns`
+
+The Legend Item Property also allows you to control the column splitting behaviour by forcing the column split
+to occur after a specific item or all symbols of a layer. Automatic splitting of a layer and its child can
+also be allowed or block on a layer-basis in this widget.
+
+:guilabel:`Patch`
+
+For items with a symbol, the Legend Item Propery allows you to specify the maximum height and width
 that a symbol can occupy.
 
-For vector symbols, you can also specify a custom shape for the symbol. The shapes are usually
+For vector symbols, you can specify a custom shape for the symbol. The shapes are usually
 defined by an expression to represent the geometry in a simple plain, but those symbol can also
-be save in the style manager and imported later. The default symbol for each geometry type can
+be saved in the style manager and imported later. The default symbol for each geometry type can
 also be controlled via the style manager.
 
-An entire custom symbol can also be specified for vector symbols.This can be useful
-if you want to tweak the render of a symbol to heance it in the legend and detach it
-from the layer render. This custom symbol will override the legend symbol, but will
-take into account the symbol shape. 
+:guilabel:`Custom Symbol`
+
+A custom symbol can also be specified for vector symbols.This can be useful to tweak the render
+of a specific symbol, to enhance it in the legend or have a symbol independent from its true symbol preview.
+This custom symbol will override the legend symbol, but will take into account the symbol :guilabel:`Patch` specified. 
+
 
 Fonts
 -----
@@ -246,7 +269,7 @@ You can:
 WMS LegendGraphic
 -----------------
 
-The :guilabel:`WMS LegendGraphic` and :guilabel:`Spacing` groups of the legend
+The :guilabel:`WMS LegendGraphic` section of the legend
 :guilabel:`Item Properties` panel provide the following functionalities (see
 :numref:`figure_layout_legend_wms`):
 
@@ -255,7 +278,7 @@ The :guilabel:`WMS LegendGraphic` and :guilabel:`Spacing` groups of the legend
 .. figure:: img/legend_wms.png
    :align: center
 
-   WMS LegendGraphic and Spacing groups
+   WMS LegendGraphic
 
 When you have added a WMS layer and you insert a legend item, a request
 will be sent to the WMS server to provide a WMS legend. This Legend will only be
@@ -268,8 +291,18 @@ width` and the :guilabel:`Legend height` of the WMS legend raster image.
 Spacing
 -------
 
-:guilabel:`Spacing` around title, groups, subgroups, symbols, labels, boxes,
-columns and lines can be customized through this dialog.
+
+.. _figure_layout_legend_spacing:
+
+.. figure:: img/legend_spacing.png
+   :align: center
+
+The :guilabel:`Spacing` section allows you to customize the spacing within the legend.
+Spacing can greatly help denote the groupement of items in the legend and their relation.
+
+:guilabel:`Spacing` around and before title, groups, subgroups, symbols, labels, boxes, columns
+and lines can be customized through this dialog. The group and subgroup can be modified as stated
+ in :guilabel:`Legend items`.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
