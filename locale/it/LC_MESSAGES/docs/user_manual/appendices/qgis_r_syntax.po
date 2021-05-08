@@ -1,35 +1,132 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
+# Harrissou Sant-anna, 2020
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-05-10 09:48+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"POT-Creation-Date: 2021-01-20 10:25+0000\n"
+"PO-Revision-Date: 2020-12-24 12:00+0000\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2021\n"
 "Language-Team: Italian (https://www.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:27
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:7
+msgid "Appendix D: QGIS R script syntax"
+msgstr "Appendice D: Sintassi script R QGIS"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:9
+msgid ""
+"Contributed by Matteo Ghetta - funded by `Scuola Superiore Sant'Anna "
+"<https://www.santannapisa.it/en/istituto/scienze-della-vita/istituto-di-"
+"scienze-della-vita>`_"
+msgstr ""
+"Con il contributo di Matteo Ghetta - finanziato da `Scuola Superiore "
+"Sant'Anna <https://www.santannapisa.it/en/istituto/scienze-della-vita"
+"/istituto-di-scienze-della-vita>`_"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:12
+msgid ""
+"Writing R scripts in Processing is a bit tricky because of the special "
+"syntax."
+msgstr ""
+"Scrivere script R in Processing è un po' complicato a causa della sintassi "
+"speciale."
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:15
+msgid ""
+"A Processing R script starts with defining its **Inputs** and **Outputs**, "
+"each preceded with double hash characters (``##``)."
+msgstr ""
+"Uno script Processing R inizia definendo i suoi **Input** e **Output**, "
+"ciascuno preceduto da due caratteri hash (``##``)."
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:18
+msgid ""
+"Before the inputs, the group to place the algoritm in can be specified. If "
+"the group already exists, the algorithm will be added to it, if not, the "
+"group will be created. In the example below, the name of the group is *My "
+"group*:"
+msgstr ""
+"Prima degli input, si può specificare il gruppo in cui inserire l'algoritmo."
+" Se il gruppo esiste già, l'algoritmo verrà aggiunto ad esso, altrimenti il "
+"gruppo verrà creato. Nell'esempio qui sotto, il nome del gruppo è *My "
+"group*:"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:24
+msgid "``##My Group=group``"
+msgstr "``##My Group=group``"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:28
 msgid "Inputs"
 msgstr "Input"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:46
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:30
+msgid ""
+"All input data and parameters have to be specified. There are several types "
+"of inputs:"
+msgstr ""
+"Tutti i dati e i parametri di input devono essere specificati. Ci sono "
+"diversi tipi di input:"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:33
+msgid "vector: ``##Layer = vector``"
+msgstr "vettore: ``##Layer = vector``"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:34
+msgid ""
+"vector field: ``##F = Field Layer`` (where `Layer` is the name of an input "
+"vector layer the field belongs to)"
+msgstr ""
+"campo vettoriale: ``##F = Field Layer`` (dove `Layer` è il nome di un layer "
+"vettoriale di input a cui il campo appartiene)."
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:36
+msgid "raster: ``##r = raster``"
+msgstr "raster: ``##r = raster``"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:37
+msgid "table: ``##t = table``"
+msgstr "tabella: ``##t = table``"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:38
+msgid "number: ``##Num = number``"
+msgstr "numero: ``##Num = number``"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:39
+msgid "string: ``##Str = string``"
+msgstr "stringa: ``##Str = string``"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:40
+msgid "boolean: ``##Bol = boolean``"
+msgstr "booleano: ``##Bol = boolean``"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:42
+msgid ""
+"elements in a dropdown menu. The items must be separated with semicolons "
+"``;``: ``##type=selection point;lines;point+lines``"
+msgstr ""
+"elementi in un menu a discesa. Gli elementi devono essere separati con punto"
+" e virgola ``;``: ``##type=selection point;lines;point+lines``"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:47
 msgid "Outputs"
 msgstr "In uscita:"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:48
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:49
 msgid ""
 "As for the inputs, each output has to be defined at the beginning of the "
 "script:"
@@ -37,45 +134,456 @@ msgstr ""
 "Come per gli input, ogni output deve essere definito all'inizio dello "
 "script:"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:87
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:134
-msgid "table"
-msgstr "tabella"
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:52
+msgid "vector: ``##output= output vector``"
+msgstr "vectore: ``##output= output vector``"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:146
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:53
+msgid "raster: ``##output= output raster``"
+msgstr "raster: ``##output= output raster``"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:54
+msgid "table: ``##output= output table``"
+msgstr "tabella: ``##output= output table``"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:55
+msgid "plots: ``##output_plots_to_html`` (##showplots in earlier versions)"
+msgstr ""
+"grafici: ``##output_plots_to_html`` (##showplots nelle versioni precedenti)"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:56
+msgid ""
+"To show R output in the *Result Viewer*, put ``>`` in front of the command "
+"whose output you would like to show."
+msgstr ""
+"Per visualizzare l'output di R nel *Visualizzatore di risultati*, metti "
+"``>`` davanti al comando di cui vuoi vedere l'output."
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:65
+msgid "Syntax Summary for QGIS R scripts"
+msgstr "Sintesi sintassi per gli script QGIS R"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:70
+msgid "A number of input and output parameter types are offered."
+msgstr ""
+"Sono disponibili diversi tipi di parametri per gli input e gli output."
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:73
+msgid "Input parameter types"
+msgstr "Tipi di parametri di input"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:76
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:129
+msgid "Parameter"
+msgstr "Parametro"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:76
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:129
+msgid "Syntax example"
+msgstr "Esempio sintassi"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:76
+msgid "Returning objects"
+msgstr "Oggetti risultanti"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:78
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:131
+msgid "vector"
+msgstr "vector"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:78
+msgid "Layer = vector"
+msgstr "Layer = vettore"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:78
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:80
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:82
+msgid ""
+"sf object (or SpatialDataFrame object, if ##load_vector_using_rgdal is "
+"specified)"
+msgstr ""
+"oggetto sf (o oggetto SpatialDataFrame, se è specificato "
+"##load_vector_using_rgdal)"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:80
+msgid "vector point"
+msgstr "vector point"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:80
+msgid "Layer = vector point"
+msgstr "Layer = vettore di punti"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:82
+msgid "vector line"
+msgstr "vector line"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:82
+msgid "Layer = vector line"
+msgstr "Layer = vettore di linea"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:84
+msgid "vector polygon"
+msgstr "vector polygon"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:84
+msgid "Layer = vector polygon"
+msgstr "Layer = vector polygon"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:84
+msgid ""
+"sf object (or SpatialPolygonsDataFrame object, if ##load_vector_using_rgdal "
+"is used)"
+msgstr ""
+"oggetto sf (o oggetto SpatialPolygonsDataFrame, se viene usato "
+"##load_vector_using_rgdal)"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:86
+msgid "multiple vector"
+msgstr "multiple vector"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:86
+msgid "Layer = multiple vector"
+msgstr "Layer = vettore multiplo"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:86
+msgid ""
+"sf object (or SpatialDataFrame objects if ##load_vector_using_rgdal is "
+"specified)"
+msgstr ""
+"oggetto sf (o oggetti SpatialDataFrame se è specificato "
+"##load_vector_using_rgdal)"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:88
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:135
+msgid "table"
+msgstr "table"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:88
+msgid "Layer = table"
+msgstr "Layer = tabella"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:88
+msgid "dataframe conversion from csv, default object of ``read.csv`` function"
+msgstr ""
+"conversione di dataframe da csv, oggetto predefinito della funzione "
+"``read.csv``."
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:90
+msgid "field"
+msgstr "field"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:90
+msgid "Field = Field Layer"
+msgstr "Field = Campo del Layer"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:90
+msgid "name of the Field selected, e.g. ``\"Area\"``"
+msgstr "nome del Campo selezionato, ad esempio ``\"Area\"``."
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:92
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:133
+msgid "raster"
+msgstr "raster"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:92
+msgid "Layer = raster"
+msgstr "Layer = raster"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:92
+msgid "RasterBrick object, default object of ``raster`` package"
+msgstr "Oggetti RasterBrick, oggetto predefinito del pacchetto ``raster``."
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:94
+msgid "multiple raster"
+msgstr "multiple raster"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:94
+msgid "Layer = multiple raster"
+msgstr "Layer = raster multiplo"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:94
+msgid "RasterBrick objects, default object of ``raster`` package"
+msgstr "Oggetti RasterBrick, oggetto predefinito del pacchetto ``raster``."
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:96
+msgid "number"
+msgstr "number"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:96
+msgid "N = number"
+msgstr "N = numero"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:96
+msgid "integer or floating number chosen"
+msgstr "numero intero o a virgola mobile scelto"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:98
+msgid "string"
+msgstr "string"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:98
+msgid "S = string"
+msgstr "S = stringa"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:98
+msgid "string added in the box"
+msgstr "stringa aggiunta nella casella"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:100
+msgid "longstring"
+msgstr "longstring"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:100
+msgid "LS = longstring"
+msgstr "LS = stringa variabile"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:100
+msgid "string added in the box, could be longer then the normal string"
+msgstr ""
+"stringa aggiunta nella casella, può essere più lunga della stringa normale"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:102
+msgid "selection"
+msgstr "selection"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:102
+msgid "S = selection first;second;third"
+msgstr "S = selezione primo;secondo;terzo"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:102
+msgid "string of the selected item chosen in the dropdown menu"
+msgstr "stringa dell'elemento selezionato scelto nel menu a tendina"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:104
+msgid "crs"
+msgstr "crs"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:104
+msgid "C = crs"
+msgstr "C = SR"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:104
+msgid "string of the resulting CRS chosen, in the format: ``\"EPSG:4326\"``"
+msgstr "stringa del SR risultante scelto, nel formato: ``\"EPSG:4326\"``"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:106
+msgid "extent"
+msgstr "extent"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:106
+msgid "E = extent"
+msgstr "E = estensione"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:106
+msgid ""
+"Extent object of the ``raster`` package, you can extract values as "
+"``E@xmin``"
+msgstr "Estensione oggetto ``raster``, puoi estrarre valori come ``E@xmin``."
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:108
+msgid "point"
+msgstr "point"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:108
+msgid "P = point"
+msgstr "P = punto"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:108
+msgid "when clicked on the map, you have the coordinates of the point"
+msgstr "quando si clicca sulla mappa, si hanno le coordinate del punto"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:110
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:137
+msgid "file"
+msgstr "file"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:110
+msgid "F = file"
+msgstr "F = file"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:110
+msgid "path of the file chosen, e.g. \"/home/matteo/file.txt\""
+msgstr "percorso del file scelto, ad esempio \"/home/matteo/file.txt\""
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:112
+msgid "folder"
+msgstr "folder"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:112
+msgid "F = folder"
+msgstr "F = cartella"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:112
+msgid "path of the folder chosen, e.g. \"/home/matteo/Downloads\""
+msgstr "percorso della cartella scelta, ad esempio \"/home/matteo/Downloads\""
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:115
+msgid "A parameter can be **OPTIONAL**, meaning that it can be ignored."
+msgstr "Un parametro può essere **OPZIONALE**, cioè può essere ignorato."
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:117
+msgid ""
+"In order to set an input as optional, you add the string ``optional`` "
+"**before** the input, e.g::"
+msgstr ""
+"Per impostare un input come opzionale, aggiungi la stringa ``optional`` "
+"**prima** dell'input, ad esempio:"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:126
+msgid "Output parameter types"
+msgstr "Tipi di parametri di output"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:131
+msgid "Output = output vector"
+msgstr "Output = output vettore"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:133
+msgid "Output = output raster"
+msgstr "Output = output raster"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:135
+msgid "Output = output table"
+msgstr "Output = output tabella"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:137
+msgid "Output = output file"
+msgstr "Output = output file"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:140
+msgid ""
+"You can save plots as ``png`` from the *Processing Result Viewer*, or you "
+"can choose to save the plot directly from the algorithm interface."
+msgstr ""
+"Puoi salvare i grafici come ``png`` dal *Visualizzatore Risultati di "
+"Processing*, oppure puoi scegliere di salvare il grafico direttamente "
+"dall'interfaccia dell'algoritmo."
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:147
 msgid "Script body"
 msgstr "Corpo dello script"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:160
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:149
+msgid ""
+"The script body follows R syntax and the **Log** panel can help you if there"
+" is something wrong with your script."
+msgstr ""
+"Il corpo dello script usa la sintassi di R e il pannello **Log** può "
+"aiutarvi se c'è qualcosa di sbagliato nel vostro script."
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:152
+msgid ""
+"**Remember** that you have to load all additional libraries in the script::"
+msgstr ""
+"**Ricorda** che devi caricare tutte le librerie aggiuntive nello script:"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:161
 msgid "Examples"
 msgstr "Esempi"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:163
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:164
 msgid "Example with vector output"
 msgstr "Esempio con vettore in uscita"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:180
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:166
+msgid ""
+"Let's take an algorithm from the online collection that creates random "
+"points from the extent of an input layer::"
+msgstr ""
+"Consideriamo un algoritmo dalla libreria online che crea punti casuali "
+"dall'estensione di un layer di input:"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:179
+msgid "Explanation (per line in the script):"
+msgstr "Spiegazione (per linea nello script):"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:181
 msgid "``Point pattern analysis`` is the group of the algorithm"
 msgstr "``Point pattern analysis`` è il gruppo dell'algoritmo"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:181
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:182
 msgid "``Layer`` is the input **vector** layer"
-msgstr "``Layer`` is the **vettore** in ingresso"
+msgstr "``Layer`` è il **vettore** in ingresso"
 
 #: ../../docs/user_manual/appendices/qgis_r_syntax.rst:183
+msgid "``Size`` is a **numerical** parameter with a default value of 10"
+msgstr "``Size`` è un parametro **numerico** con un valore predefinito di 10"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:184
 msgid ""
 "``Output`` is the **vector** layer that will be created by the algorithm"
 msgstr "``Output`` è il **vettore** che sarà creato dall'algoritmo"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:200
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:186
+msgid "``library(sp)`` loads the **sp** library"
+msgstr "``library(sp)`` carica la libreria **sp** "
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:187
+msgid "``spatpoly = as(Layer, \"Spatial\")`` translate to an sp object"
+msgstr "``spatpoly = as(Layer, \"Spatial\")`` trasforma in un oggetto sp"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:188
+msgid ""
+"Call the ``spsample`` function of the ``sp`` library and run it using the "
+"input defined above (``Layer`` and ``Size``)"
+msgstr ""
+"Chiama la funzione ``spsample`` della libreria ``sp`` e la esegue usando "
+"l'input definito sopra (``Layer`` e ``Size``)"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:190
+msgid ""
+"Create a *SpatialPointsDataFrame* object using the "
+"``SpatialPointsDataFrame`` function"
+msgstr ""
+"Crea un oggetto *SpatialPointsDataFrame* usando la funzione "
+"``SpatialPointsDataFrame``"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:192
+msgid "Create the output vector layer using the ``st_as_sf`` function"
+msgstr "Crea il vettore di output usando la funzione ``st_as_sf``"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:195
+msgid ""
+"That's it! Just run the algorithm with a vector layer you have in the QGIS "
+"Legend, choose the number of random point. The resulting layer will be added"
+" to your map."
+msgstr ""
+"Questo è tutto! Basta eseguire l'algoritmo con uno layer vettoriale che hai "
+"nella Legenda di QGIS, scegliere il numero di punti casuali. Il layer "
+"risultante sarà aggiunto alla tua mappa."
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:201
 msgid "Example with raster output"
 msgstr "Esempio con raster in uscita"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:231
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:203
+msgid ""
+"The following script will perform basic ordinary kriging to create a raster "
+"map of interpolated values from a specified field of the input point vector "
+"layer by using the ``autoKrige`` function of the ``automap`` R package. It "
+"will first calculate the kriging model and then create a raster. The raster "
+"is created with the ``raster`` function of the raster R package::"
+msgstr ""
+"Il seguente script eseguirà il kriging ordinario di base per creare una "
+"mappa raster di valori interpolati da un campo specificato del layer "
+"vettoriale di punti in input usando la funzione ``autoKrige`` del software R"
+" ``automap``. Prima calcola il modello di kriging e poi crea un raster. Il "
+"raster viene creato con la funzione ``raster`` del software raster R :"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:227
+msgid ""
+"By using ``##load_vector_using_rgdal``, the input vector layer will be made "
+"available as a ``SpatialDataFrame`` objects, so we avoid having to translate"
+" it from an ``sf`` object."
+msgstr ""
+"Usando ``##load_vector_using_rgdal``, il layer vettoriale di input sarà reso"
+" disponibile come un oggetto ``SpatialDataFrame``, così evitiamo di doverlo "
+"tradurre da un oggetto ``sf``."
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:232
 msgid "Example with table output"
 msgstr "Esempio con tabella in uscita"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:233
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:234
 msgid ""
 "Let's edit the ``Summary Statistics`` algorithm so that the output is a "
 "table file (csv)."
@@ -83,11 +591,11 @@ msgstr ""
 "Modifichiamo l'algoritmo ``Summary Statistics`` in modo che l'output sia un "
 "file tabella (csv)."
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:236
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:237
 msgid "The script body is the following::"
-msgstr "Il corpo dello script è il seguente::"
+msgstr "Il corpo dello script è il seguente:"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:257
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:258
 msgid ""
 "The third line specifies the **Vector Field** in input and the fourth line "
 "tells the algorithm that the output should be a table."
@@ -95,10 +603,66 @@ msgstr ""
 "La terza linea specifica il **Vector Field** in ingresso e la quarta linea "
 "dice all'algoritmo che l'output sarà una tabella."
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:260
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:261
 msgid ""
 "The last line will take the ``Stat`` object created in the script and "
 "convert it into a ``csv`` table."
 msgstr ""
 "L'ultima linea utilizzerà l'oggetto ``Stat`` creato nello script e lo "
 "convertirà in una tabella ``csv``."
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:265
+msgid "Example with console output"
+msgstr "Esempi con la console di output"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:267
+msgid ""
+"We can use the previous example and instead of creating a table, print the "
+"result in the **Result Viewer**::"
+msgstr ""
+"Possiamo usare l'esempio precedente e invece di creare una tabella, stampare"
+" il risultato nel **Visualizzatore di risultati**:"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:287
+msgid "The script is exactly the same as the one above except for two edits:"
+msgstr ""
+"Lo script è esattamente lo stesso di quello sopra, tranne che per due "
+"modifiche:"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:289
+msgid "no output specified (the fourth line has been removed)"
+msgstr "nessun output specificato (la quarta linea è stata rimossa)"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:290
+msgid ""
+"the last line begins with ``>``, telling Processing to make the object "
+"available through the result viewer"
+msgstr ""
+"l'ultima linea inizia con ``>``, specificando a Processing di rendere "
+"l'oggetto disponibile attraverso il visualizzatore di risultati"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:295
+msgid "Example with plot"
+msgstr "Esempio con grafico"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:296
+msgid ""
+"To create plots, you have to use the ``##output_plots_to_html`` parameter as"
+" in the following script::"
+msgstr ""
+"Per creare grafici, devi usare il parametro ``##output_plots_to_html`` come "
+"nel seguente script:"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:307
+msgid ""
+"The script uses a field (``Field``) of a vector layer (``Layer``) as input, "
+"and creates a *QQ Plot* (to test the normality of the distribution)."
+msgstr ""
+"Lo script usa un campo (``Field``) di un layer vettoriale (``Layer``) come "
+"input, e crea un *QQ Plot* (per testare la normalità della distribuzione)."
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:311
+msgid "The plot is automatically added to the Processing *Result Viewer*."
+msgstr ""
+"Il grafico viene aggiunto automaticamente al *Visualizzatore risultato* di "
+"Processing."
