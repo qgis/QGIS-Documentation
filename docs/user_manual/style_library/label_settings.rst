@@ -425,7 +425,7 @@ tab and activate the |checkbox| :guilabel:`Draw callouts`. Then you can:
 #. Set the :guilabel:`Blend mode`: controls the :ref:`blending <blend-modes>` of the callout.
 
 Callouts can also be controlled manually by using the |moveLabel|
-:sup:`Move Label or Diagram` tool in the :ref:`Labeling Toolbar <labels_toolbar>`.
+:sup:`Move Label or Diagram` tool in the :ref:`Labeling Toolbar <label_toolbar>`.
 The start and end points of each callout can be moved this way. The nodes should be highlighted
 when the mouse pointer is nearby. If needed the :kbd:`Shift` Key can be held during the movement.
 This will snap the point in a way that the angle between the two point in increment of 15 degree.
@@ -636,18 +636,21 @@ In order to use the geometry generator:
    the label geometry-based settings such as placement or rendering
    are updated to match the new geometry type capabilities.
 
-Some other options include:
+Some use cases include:
 
+* Use a geometry which is saved in another field "label_position"
+* Use the :ref:`generated geometry <geometry_generator_symbol>` from the symbology
+  also for labeling
 * Use the @map_scale variable to calculate distances / sizes be zoom level independent.
 * Combined with the curved placement mode, creates a circular label around a point feature::
 
      exterior_ring(make_circle($geometry, 20))
--Use a geometry which is saved in another field "label_position"
--Use the generated geometry from the symbology also for labeling
 * Add a label at the start and the end of a line feature::
 
     collect_geometries( start_point($geometry), end_point($geometry) )
--Use a smoothed line to label a river
+* Rely on a smoothed line of a river to get more room for label placement::
+
+    smooth( $geometry, iterations:=30, offset:=0.25, min_length:=10 )
 
 Data Defined
 ^^^^^^^^^^^^

@@ -177,7 +177,7 @@ Option                                                             Vector Layer 
 |zoomToLayer| :guilabel:`Zoom to Selection`                        |checkbox|          \                  \
 |inOverview| :guilabel:`Show in Overview`                          |checkbox|          |checkbox|         \
 :guilabel:`Show Feature Count`                                     |checkbox|          \                  \
-:guilabel:`Show Label`                                             |checkbox|          \                  \
+|labeling| :guilabel:`Show Label`                                  |checkbox|          \                  \
 :guilabel:`Copy Layer/Group`                                       |checkbox|          |checkbox|         |checkbox|
 :guilabel:`Rename Layer/Group`                                     |checkbox|          |checkbox|         |checkbox|
 |zoomActual| :guilabel:`Zoom to Native Resolution (100%)`          \                   |checkbox|         \
