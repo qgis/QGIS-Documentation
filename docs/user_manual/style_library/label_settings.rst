@@ -428,7 +428,7 @@ Callouts can also be controlled manually by using the |moveLabel|
 :sup:`Move Label or Diagram` tool in the :ref:`Labeling Toolbar <label_toolbar>`.
 The start and end points of each callout can be moved this way. The nodes should be highlighted
 when the mouse pointer is nearby. If needed the :kbd:`Shift` Key can be held during the movement.
-This will snap the point in a way that the angle between the two point in increment of 15 degree.
+This will snap the point in a way that the angle between the two callout points in increment of 15 degrees.
 
 .. _labels_placement:
 
