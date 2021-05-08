@@ -657,7 +657,7 @@ Updating page properties
 ........................
 
 Any page can be later customized through the Page :guilabel:`Item Properties`
-panel. To access a page's properties you can simply left-click on an empty section
+panel. To access a page's properties, left-click on an empty section
 of the page or right-click on a page and select :guilabel:`Page Properties...`. The
 :guilabel:`Item Properties` panel opens with settings such as:
 
