@@ -1,201 +1,1214 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
-# Marco Tagliabue <mark.taglia@gmail.com>, 2020
+# Harrissou Sant-anna, 2020
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:29+0000\n"
-"Last-Translator: Marco Tagliabue <mark.taglia@gmail.com>, 2020\n"
+"POT-Creation-Date: 2021-04-28 02:21+0000\n"
+"PO-Revision-Date: 2020-12-24 10:26+0000\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2021\n"
 "Language-Team: Italian (https://www.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:21
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:118
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:247
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:455
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:2
+msgid "Cartography"
+msgstr "Cartografia"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:13
+msgid "Align points to features"
+msgstr "Allinea punti agli elementi"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:15
+msgid ""
+"Calculates the rotation required to align point features with their nearest "
+"feature from another reference layer. A new field is added to the output "
+"layer which is filled with the angle (in degrees, clockwise) to the nearest "
+"reference feature."
+msgstr ""
+"Calcola la rotazione richiesta per allineare gli elementi puntuali con "
+"l'elemento più vicino di un altro layer di riferimento. Un nuovo campo viene"
+" aggiunto al layer in uscita che viene riempito con l'angolo (in gradi, in "
+"senso orario) rispetto alla elemento di riferimento più vicino."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:20
+msgid ""
+"Optionally, the output layer's symbology can be set to automatically use the"
+" calculated rotation field to rotate marker symbols. If desired, a maximum "
+"distance to use when aligning points can be set, to avoid aligning isolated "
+"points to distant features."
+msgstr ""
+"Opzionalmente, la simbologia del layer in uscita può essere impostata per "
+"utilizzare automaticamente il campo di rotazione calcolato per ruotare i "
+"simboli. Se si desidera, si può impostare una distanza massima da utilizzare"
+" quando si allineano i punti, per evitare di allineare punti isolati a "
+"elementi distanti."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:25
+msgid ""
+"This algorithm is designed for use cases like aligning building point "
+"symbols to follow the nearest road direction."
+msgstr ""
+"Questo algoritmo è progettato per casi d'uso come l'allineamento dei simboli"
+" dei punti di edifici per seguire la direzione della strada più vicina."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:28
+msgid ""
+"|checkbox| Allows :ref:`features in-place modification "
+"<processing_inplace_edit>`"
+msgstr ""
+"|checkbox| Permette :ref:`features in-place modification "
+"<processing_inplace_edit>`"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:31
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:123
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:220
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:349
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:547
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:613
 msgid "Parameters"
 msgstr "Parametri"
 
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:27
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:66
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:125
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:203
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:253
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:294
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:348
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:398
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:462
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:534
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:37
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:91
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:129
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:168
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:227
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:305
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:355
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:396
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:450
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:500
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:553
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:573
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:620
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:692
 msgid "Label"
 msgstr "Etichetta"
 
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:28
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:67
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:126
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:204
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:254
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:295
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:349
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:399
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:463
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:535
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:38
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:92
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:130
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:169
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:228
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:306
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:356
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:397
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:451
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:501
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:554
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:574
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:621
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:693
 msgid "Name"
 msgstr "Nome"
 
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:29
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:68
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:127
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:205
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:255
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:296
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:350
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:400
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:464
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:536
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:39
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:93
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:131
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:170
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:229
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:307
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:357
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:398
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:452
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:502
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:555
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:575
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:622
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:694
 msgid "Type"
 msgstr "Tipo"
 
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:30
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:69
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:128
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:206
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:256
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:297
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:351
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:401
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:465
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:537
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:40
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:94
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:132
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:171
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:230
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:308
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:358
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:399
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:453
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:503
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:556
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:576
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:623
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:695
 msgid "Description"
 msgstr "Descrizione"
 
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:32
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:130
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:260
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:467
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:41
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:231
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:624
+msgid "**Input layer**"
+msgstr "**Layer in ingresso**"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:42
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:134
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:232
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:362
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:558
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:625
 msgid "``INPUT``"
-msgstr "``IN INGRESSO``"
+msgstr "``INPUT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:43
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:72
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:97
+msgid "[vector: point]"
+msgstr "[vettore: puntuale]"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:44
+msgid "Point features to calculate the rotation for"
+msgstr "Elementi puntuali per i quali calcolare la rotazione"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:45
+msgid "**Reference layer**"
+msgstr "**Layer di riferimento**"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:46
+msgid "``REFERENCE_LAYER``"
+msgstr "``REFERENCE_LAYER``"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:47
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:79
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:218
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:275
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:307
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:378
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:407
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:514
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:539
-msgid "``OUTPUT``"
-msgstr "``LIVELLO IN USCITA``"
-
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:55
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:173
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:190
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:283
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:385
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:521
-msgid "Save to File..."
-msgstr "Salva come File..."
-
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:57
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:177
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:194
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:285
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:389
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:525
-msgid "The file encoding can also be changed here."
-msgstr "La codifica del file può anche essere cambiata qui."
-
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:60
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:197
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:288
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:392
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:528
-msgid "Outputs"
-msgstr "In uscita:"
-
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:72
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:76
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:84
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:88
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:300
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:304
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:312
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:316
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:404
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:413
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:417
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:421
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:472
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:479
-msgid "[number]"
-msgstr "[numero]"
-
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:129
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:466
-msgid "**Input layer**"
-msgstr "**Livello in ingresso**"
-
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:131
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:233
 msgid "[vector: any]"
 msgstr "[vettore: qualsiasi]"
 
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:172
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:189
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:384
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:520
-msgid "Create Temporary Layer (``TEMPORARY_OUTPUT``)"
-msgstr "Crea livello temporaneo (``TEMPORARY_OUTPUT``)"
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:48
+msgid "Layer to find the closest feature from for rotation calculation"
+msgstr ""
+"Layer per il quale trovare l'elemento più vicino per il calcolo della "
+"rotazione"
 
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:49
+msgid "**Maximum distance to consider**"
+msgstr "**Distanza massima da considerare**"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:51
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:265
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:282
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:361
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:460
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:471
+msgid "Optional"
+msgstr "Opzionale"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:52
+msgid "``MAX_DISTANCE``"
+msgstr "``MAX_DISTANCE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:53
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:174
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:191
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:386
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:522
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:178
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:186
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:190
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:402
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:406
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:414
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:418
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:506
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:515
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:519
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:523
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:630
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:637
+msgid "[number]"
+msgstr "[numero]"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:55
+msgid "Default: Not set"
+msgstr "Default: Non impostato"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:56
+msgid ""
+"If no reference feature is found within this distance, no rotation is "
+"assigned to the point feature."
+msgstr ""
+"Se non viene trovato alcun elemento di riferimento entro questa distanza, "
+"non viene assegnata alcuna rotazione all'elemento puntuale."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:58
+msgid "**Angle field name**"
+msgstr "**Nome del campo per l'angolo**"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:59
+msgid "``FIELD_NAME``"
+msgstr "``FIELD_NAME``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:60
+msgid "[string]"
+msgstr "[stringa]"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:62
+msgid "Default: 'rotation'"
+msgstr "Default: 'rotazione'"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:63
+msgid "Field in which to store the rotation value."
+msgstr "Campo in cui memorizzare il valore di rotazione."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:64
+msgid "**Automatically apply symbology**"
+msgstr "**Applica automaticamente la simbologia**"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:65
+msgid "``APPLY_SYMBOLOGY``"
+msgstr "``APPLY_SYMBOLOGY``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:66
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:250
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:257
+msgid "[boolean]"
+msgstr "[booleano]"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:68
+msgid "Default: True"
+msgstr "Default: True"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:69
+msgid "Rotates the symbol marker of the features using the angle field value"
+msgstr ""
+"Ruota il simbolo degli elementi utilizzando il valore del campo dell'angolo"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:70
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:95
+msgid "**Aligned layer**"
+msgstr "**Layer allineato**"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:71
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:96
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:149
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:181
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:320
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:377
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:409
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:480
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:509
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:578
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:672
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:697
+msgid "``OUTPUT``"
+msgstr "``OUTPUT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:74
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:152
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:380
+msgid "Default: ``[Save to temporary file]``"
+msgstr "Default: ``[Salva in un file temporaneo]``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:75
+msgid "Specify the rotated output vector layer. One of:"
+msgstr "Specifica il layer del vettore in uscita ruotato. Uno di:"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:77
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:156
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:384
+msgid "Save to a Temporary Layer (``TEMPORARY_OUTPUT``)"
+msgstr "Salva in un Layer Temporaneo (``TEMPORARY_OUTPUT``)"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:78
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:157
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:275
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:292
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:385
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:487
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:679
+msgid "Save to File..."
+msgstr "Salva come File..."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:79
+msgid "Save to GeoPackage..."
+msgstr "Salva in un GeoPackage..."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:80
+msgid "Save to Database Table..."
+msgstr "Salva in una Tabella Database..."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:82
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:159
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:279
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:296
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:387
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:491
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:683
+msgid "The file encoding can also be changed here."
+msgstr "La codifica del file può anche essere cambiata qui."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:85
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:162
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:299
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:390
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:494
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:567
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:686
+msgid "Outputs"
+msgstr "Output"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:98
+msgid ""
+"The point layer appended with a rotation field. If loaded to QGIS, it is "
+"applied by default the input layer symbology, with a data-defined rotation "
+"of its marker symbol."
+msgstr ""
+"Il vettore puntuale con un campo di rotazione aggiunto. Se caricato in QGIS,"
+" viene applicata di default la simbologia del layer in ingresso, con una "
+"rotazione definita dai dati del suo simbolo."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:103
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:194
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:326
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:422
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:527
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:583
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:702
+msgid "Python code"
+msgstr "Codice Python"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:105
+msgid "**Algorithm ID**: ``qgis:angletonearest``"
+msgstr "**ID Algoritmo**: ``qgis:angletonearest``"
+
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+msgid ""
+"The *algorithm id* is displayed when you hover over the algorithm in the "
+"Processing Toolbox. The *parameter dictionary* provides the parameter NAMEs "
+"and values. See :ref:`processing_console` for details on how to run "
+"processing algorithms from the Python console."
+msgstr ""
+"L' *id dell'algoritmo* viene visualizzato quando si passa il mouse "
+"sull'algoritmo nella finestra degli Strumenti di Processing. Il *dizionario "
+"dei parametri* fornisce i Nomi e i valori dei parametri. Vedi "
+":ref:`processing_console` per dettagli su come eseguire algoritmi di "
+"elaborazione dalla console Python."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:115
+msgid "Combine style databases"
+msgstr "Combinare i database di stile"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:116
+msgid ""
+"Combines multiple QGIS style databases into a single style database. If "
+"items of the same type with the same name exist in different source "
+"databases these will be renamed to have unique names in the output combined "
+"database."
+msgstr ""
+"Combina più database di stile QGIS in un unico database di stile. Se "
+"elementi dello stesso tipo con lo stesso nome esistono in diversi database "
+"di origine, questi saranno rinominati per avere nomi univoci nel database "
+"combinato in uscita."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:120
+msgid ":ref:`qgisstylefromproject`"
+msgstr ":ref:`qgisstylefromproject`"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:133
+msgid "**Input databases**"
+msgstr "**Database in ingresso**"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:135
+msgid "[file] [list]"
+msgstr "[file] [lista]"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:136
+msgid "Files containing QGIS style items"
+msgstr "File contenenti oggetti di stile QGIS"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:137
+msgid "**Objects to combine**"
+msgstr "**Oggetti da combinare**"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:138
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:366
+msgid "``OBJECTS``"
+msgstr "``OBJECTS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:139
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:367
+msgid "[enumeration] [list]"
+msgstr "[numerazione] [lista]"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:140
+msgid ""
+"Types of style items in the input databases you would like to put in the new"
+" database.  These can be:"
+msgstr ""
+"Tipi di oggetti di stile nei database in ingresso che vorresti mettere nel "
+"nuovo database. Questi possono essere:"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:143
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:371
+msgid "0 --- :ref:`Symbols <edit_symbol>`"
+msgstr "0 --- :ref:`Symbols <edit_symbol>`"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:144
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:372
+msgid "1 --- :ref:`Color ramps <color-ramp>`"
+msgstr "1 --- :ref:`Color ramps <color-ramp>`"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:145
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:373
+msgid "2 --- :ref:`Text formats <text_format>`"
+msgstr "2 --- :ref:`Text formats <text_format>`"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:146
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:374
+msgid "3 --- :ref:`Label settings <showlabels>`"
+msgstr "3 --- :ref:`Label settings <showlabels>`"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:148
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:180
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:376
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:408
+msgid "**Output style database**"
+msgstr "**Stile database in uscita**"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:150
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:182
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:241
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:363
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:378
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:410
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:563
+msgid "[file]"
+msgstr "[file]"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:153
+msgid "Output :file:`.XML` file combining the selected style items. One of:"
+msgstr ""
+"In uscita :file:`.XML` file che combina gli oggetti di stile selezionati. "
+"Uno di:"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:172
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:400
+msgid "**Color ramp count**"
+msgstr "**Conteggio scala di colori**"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:173
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:401
+msgid "``COLORRAMPS``"
+msgstr "``COLORRAMPS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:176
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:404
+msgid "**Label settings count**"
+msgstr "**Conteggio impostazioni etichetta**"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:177
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:405
+msgid "``LABELSETTINGS``"
+msgstr "``LABELSETTINGS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:183
+msgid "Output :file:`.XML` file combining the selected style items"
+msgstr ""
+"In uscita :file:`.XML` file che combina gli oggetti di stile selezionati"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:184
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:412
+msgid "**Symbol count**"
+msgstr "**Conteggio dei simboli**"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:185
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:413
+msgid "``SYMBOLS``"
+msgstr "``SYMBOLS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:188
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:416
+msgid "**Text format count**"
+msgstr "**Conteggio formato testo**"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:189
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:417
+msgid "``TEXTFORMATS``"
+msgstr "``TEXTFORMATS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:196
+msgid "**Algorithm ID**: ``qgis:combinestyles``"
+msgstr "**ID Algoritmo**: ``qgis:combinestyles``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:206
+msgid "Create categorized renderer from styles"
+msgstr "Creare visualizzazioni categorizzate dagli stili"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:207
+msgid ""
+"Sets a vector layer's renderer to a categorized renderer using matching "
+"symbols from a style database. If no style file is specified, symbols from "
+"the user's current :ref:`symbol library <vector_symbol_library>` are used "
+"instead."
+msgstr ""
+"Imposta la visualizzazione di un layer vettoriale ad una visualizzazione "
+"categorizzata usando simboli corrispondenti da un database di stile. Se non "
+"viene specificato alcun file di stile, vengono invece utilizzati i simboli "
+"dalla libreria di simboli dell'utente :ref:`symbol "
+"library`.<vector_symbol_library>`"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:211
+msgid ""
+"A specified expression or field is used to create categories for the "
+"renderer. Each category is individually matched to the symbols which exist "
+"within the specified QGIS XML style database. Whenever a matching symbol "
+"name is found, the category's symbol will be set to this matched symbol."
+msgstr ""
+"Un'espressione o un campo specifico viene utilizzato per creare categorie "
+"per la visualizzazione. Ogni categoria è abbinata individualmente ai simboli"
+" che esistono all'interno del database di stile XML QGIS specificato. Ogni "
+"volta che viene trovato il nome di un simbolo corrispondente, il simbolo "
+"della categoria sarà impostato su questo simbolo identificato."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:216
+msgid ""
+"If desired, outputs can also be tables containing lists of the categories "
+"which could not be matched to symbols, and symbols which were not matched to"
+" categories."
+msgstr ""
+"Se vuoi, gli output possono anche essere tabelle contenenti le liste delle "
+"categorie che non hanno potuto essere abbinate ai simboli, e i simboli che "
+"non sono stati abbinati alle categorie."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:234
+msgid "Vector layer to apply a categorized style to"
+msgstr "Layer vettoriale a cui applicare uno stile categorizzato"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:235
+msgid "**Categorize using expression**"
+msgstr "**Categorizzare usando una espressione**"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:236
+msgid "``FIELD``"
+msgstr "``FIELD``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:237
+msgid "[expression]"
+msgstr "[espressione]"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:238
+msgid "Field or expression to categorize the features"
+msgstr "Campo o espressione per categorizzare gli elementi"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:239
+msgid "**Style database (leave blank to use saved symbols)**"
+msgstr "**Database di stile (lasciare vuoto per usare i simboli salvati)**"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:240
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:562
+msgid "``STYLE``"
+msgstr "``STYLE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:242
+msgid ""
+"File (:file:`.XML`) containing the symbols to apply to the input layer "
+"categories. The file can be obtained from the Style Manager :ref:`Share "
+"symbols <share_symbols>` tool. If no file is specified, QGIS local symbols "
+"library is used."
+msgstr ""
+"File (:file:`.XML`) contenente i simboli da applicare alle categorie del "
+"layer in ingresso. Il file può essere ottenuto dallo strumento Gestore Stile"
+" :ref:`Share symbols <share_symbols>`. Se non viene specificato alcun file, "
+"viene utilizzata la libreria di simboli locale di QGIS."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:248
+msgid "**Use case-sensitive match to symbol names**"
+msgstr ""
+"**Usare la distinzione tra maiuscole e minuscole per i nomi dei simboli**"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:249
+msgid "``CASE_SENSITIVE``"
+msgstr "``CASE_SENSITIVE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:252
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:259
+msgid "Default: False"
+msgstr "Predefinito: False"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:253
+msgid ""
+"If True (checked), applies a case sensitive comparison between the "
+"categories and symbols names"
+msgstr ""
+"Se True ( selezionato), applica un confronto case sensitive tra le categorie"
+" e i nomi dei simboli"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:255
+msgid "**Ignore non-alphanumeric characters while matching**"
+msgstr "**Ignorare i caratteri non alfanumerici quando si confrontano**."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:256
+msgid "``TOLERANT``"
+msgstr "``TOLERANT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:260
+msgid ""
+"If True (checked), non-alphanumeric characters in the categories and symbols"
+" names will be ignored, allowing greater tolerance during the match."
+msgstr ""
+"Se True ( selezionato), i caratteri non alfanumerici nei nomi delle "
+"categorie e dei simboli saranno ignorati, permettendo una maggiore "
+"tolleranza durante la selezione."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:263
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:309
+msgid "**Non-matching categories**"
+msgstr "**Categorie che non trovano corrispondenza**"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:266
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:310
+msgid "``NON_MATCHING_CATEGORIES``"
+msgstr "``NON_MATCHING_CATEGORIES``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:267
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:284
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:311
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:316
+msgid "[table]"
+msgstr "[tabella]"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:269
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:286
+msgid "Default: ``[Skip output]``"
+msgstr "Default: ``[Skip output]``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:270
+msgid ""
+"Output table for categories which do not match any symbol in the database. "
+"One of:"
+msgstr ""
+"Tabella risultato per le categorie che non corrispondono a nessun simbolo "
+"nel database. Uno di:"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:273
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:290
+msgid "Skip output"
+msgstr "Ignora risultato"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:274
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:291
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:486
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:678
+msgid "Create Temporary Layer (``TEMPORARY_OUTPUT``)"
+msgstr "Crea Layer Temporaneo (``TEMPORARY_OUTPUT``)"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:276
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:293
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:488
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:680
 msgid "Save to Geopackage..."
 msgstr "Salva come Geopackage..."
 
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:175
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:192
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:387
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:523
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:277
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:294
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:489
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:681
 msgid "Save to PostGIS Table..."
 msgstr "Salva su Tabella PostGIS..."
 
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:219
-msgid "[same as input]"
-msgstr "[lo stesso del livello in ingresso]"
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:280
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:314
+msgid "**Non-matching symbol names**"
+msgstr "**Nomi di simboli che non trovano corrispondenza**"
 
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:354
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:360
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:487
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:283
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:315
+msgid "``NON_MATCHING_SYMBOLS``"
+msgstr "``NON_MATCHING_SYMBOLS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:287
+msgid ""
+"Output table for symbols from the provided style database which do not match"
+" any category. One of:"
+msgstr ""
+"Tabella risultato per i simboli del database di stile fornito che non "
+"corrispondono a nessuna categoria. Uno di:"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:312
+msgid ""
+"Lists categories which could not be matched to any symbol in the provided "
+"style database"
+msgstr ""
+"Elenca le categorie che non possono essere associate a nessun simbolo nel "
+"database di stile fornito"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:317
+msgid ""
+"Lists symbols from the provided style database which could not match any "
+"category"
+msgstr ""
+"Elenca i simboli dal database di stile fornito che non possono essere "
+"abbinati a nessuna categoria"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:319
+msgid "**Categorized layer**"
+msgstr "**Layer categorizzati**"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:321
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:579
+msgid "[same as input]"
+msgstr "[uguale all'input]"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:322
+msgid ""
+"The input vector layer with the categorized style applied. No new layer is "
+"output."
+msgstr ""
+"Il layer vettoriale in ingresso con lo stile categorizzato applicato. Nessun"
+" nuovo layer è in uscita."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:328
+msgid "**Algorithm ID**: ``qgis:categorizeusingstyle``"
+msgstr "**ID Algoritmo**: ``qgis:categorizeusingstyle``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:338
+msgid "Create style database from project"
+msgstr "Crea database dello stile dal progetto"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:339
+msgid ""
+"Extracts all style objects (symbols, color ramps, text formats and label "
+"settings) from a QGIS project."
+msgstr ""
+"Estrae tutti gli oggetti di stile (simboli, scala di colori, formati di "
+"testo e impostazioni delle etichette) da un progetto QGIS."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:342
+msgid ""
+"The extracted symbols are saved to a QGIS style database (:file:`XML` "
+"format), which can be managed and imported via the :ref:`Style Manager "
+"<vector_style_manager>` dialog."
+msgstr ""
+"I simboli estratti sono salvati in un database di stile QGIS "
+"(formato:file:`XML`), che può essere gestito e importato tramite la finestra"
+" di dialogo :ref:`Style Manager <vector_style_manager>`."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:346
+msgid ":ref:`qgiscombinestyles`"
+msgstr ":ref:`qgiscombinestyles`"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:359
+msgid "**Input project (leave blank to use current)**"
+msgstr "**Progetto in ingresso (lasciare vuoto per usare quello attivo)** "
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:364
+msgid "A QGIS project file to extract the style items from"
+msgstr "Un file di progetto QGIS da cui estrarre gli oggetti di stile"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:365
+msgid "**Objects to extract**"
+msgstr "**Oggetti da estrarre**"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:368
+msgid ""
+"Types of style items in the input project you would like to put in the new "
+"database. These can be:"
+msgstr ""
+"Tipi di oggetti di stile nel progetto in input che vorresti mettere nel "
+"nuovo database. Questi possono essere:"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:381
+msgid ""
+"Specify the output :file:`.XML` file for the selected style items. One of:"
+msgstr ""
+"Specifica il file :file:`.XML` di output per gli articoli di stile "
+"selezionati. Uno di:"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:403
+msgid "Number of color ramps"
+msgstr "Numero delle scale di colori"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:407
+msgid "Number of label settings"
+msgstr "Numero delle impostazioni delle etichette"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:411
+msgid "Output :file:`.XML` file for the selected style items"
+msgstr "Risultato :file:`.XML` per gli elementi di stile selezionati "
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:415
+msgid "Number of symbols"
+msgstr "Numero di simboli"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:419
+msgid "Number of text formats"
+msgstr "Numero di formati di testo "
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:424
+msgid "**Algorithm ID**: ``qgis:stylefromproject``"
+msgstr "**ID Algoritmo**: ``qgis:stylefromproject``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:434
+msgid "Print layout map extent to layer"
+msgstr "Stampa il layout della mappa con l'estensione del layer "
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:436
+msgid ""
+"Creates a polygon layer containing the extent of a print layout map item (or"
+" items), with attributes specifying the map size (in layout units, i.e. the "
+":ref:`reference map <reference_map>` units), scale and rotation."
+msgstr ""
+"Crea un layer poligonale contenente l'estensione di un elemento (o più "
+"elementi) della mappa del layout di stampa, con attributi che specificano la"
+" dimensione della mappa (in unità di layout, cioè le unità :ref:`reference "
+"map <reference_map>`), la scala e la rotazione."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:440
+msgid ""
+"If the map item parameter is specified, then only the matching map extent "
+"will be exported. If it is not specified, all map extents from the layout "
+"will be exported."
+msgstr ""
+"Se il parametro dell'oggetto mappa è specificato, allora solo l'estensione "
+"della mappa corrispondente sarà esportata. Se non è specificato, saranno "
+"esportate tutte le estensioni della mappa dal layout."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:443
+msgid ""
+"Optionally, a specific output CRS can be specified. If it is not specified, "
+"the original map item CRS will be used."
+msgstr ""
+"Opzionalmente, può essere specificato uno specifico SR in uscita. Se non è "
+"specificato, verrà usato il SR originale dell'oggetto mappa."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:454
+msgid "**Print layout**"
+msgstr "**Stampa layout**"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:455
+msgid "``LAYOUT``"
+msgstr "``LAYOUT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:456
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:462
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:645
 msgid "[enumeration]"
 msgstr "[numero]"
 
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:381
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:517
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:457
+msgid "A print layout in the current project"
+msgstr "Un layout di stampa nel progetto corrente"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:458
+msgid "**Map item**"
+msgstr "**Oggetto Mappa**"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:461
+msgid "``MAP``"
+msgstr "``MAP``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:464
+msgid "Default: *All the map items*"
+msgstr "Predefinito: *Tutti gli oggetti delle mappa*"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:465
+msgid ""
+"The map item(s) whose information you want to extract. If none is provided "
+"then all the map items are processed."
+msgstr ""
+"L'oggetto(i) della mappa di cui vuoi estrarre le informazioni. Se non ne "
+"viene fornito nessuno, allora vengono elaborati tutti gli oggetti della "
+"mappa."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:469
+msgid "**Overrride CRS**"
+msgstr "**Sovrascrivere SR**"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:472
+msgid "``CRS``"
+msgstr "``SR``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:473
+msgid "[crs]"
+msgstr "[sr]"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:475
+msgid "Default: *The layout CRS*"
+msgstr "Predefinito: *SR del layout*"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:476
+msgid ""
+"Select the CRS for the layer in which the information will be reported."
+msgstr "Selezionare il SR per il layer in cui l'informazione sarà restituita."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:479
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:508
+msgid "**Extent**"
+msgstr "**Estensione**"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:481
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:510
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:626
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:673
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:698
+msgid "[vector: polygon]"
+msgstr "[vettore: poligono]"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:483
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:675
 msgid "Default: ``[Create temporary layer]``"
 msgstr "Predefinito: ``[Crea livello temporaneo]``"
 
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:403
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:484
+msgid "Specify the output vector layer for the extent(s). One of:"
+msgstr "Specifica il layer vettoriale in uscita per l'estensione(i). Uno di:"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:504
+msgid "**Map height**"
+msgstr "**Altezza Mappa**"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:505
 msgid "``HEIGHT``"
-msgstr "``ALTEZZA``"
+msgstr "``HEIGHT``"
 
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:420
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:511
+msgid ""
+"Output polygon vector layer containing extents of all the input layout map "
+"item(s)"
+msgstr ""
+"Layer vettoriale poligonale in uscita contenente le estensioni di tutti gli "
+"oggetti della mappa del layout in ingresso"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:513
+msgid "**Map rotation**"
+msgstr "**Rotazione Mappa**"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:514
+msgid "``ROTATION``"
+msgstr "``ROTATION``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:517
+msgid "**Map scale**"
+msgstr "**Scala della Mappa**"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:518
+msgid "``SCALE``"
+msgstr "``SCALE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:521
+msgid "**Map width**"
+msgstr "**Larghezza Mappa**"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:522
 msgid "``WIDTH``"
-msgstr "``LARGHEZZA``"
+msgstr "``WIDTH``"
 
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:489
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:529
+msgid "**Algorithm ID**: ``qgis:printlayoutmapextenttolayer``"
+msgstr "**ID Algoritmo**: ``qgis:printlayoutmapextenttolayer``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:539
+msgid "Set layer style"
+msgstr "Impostare lo stile layer"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:541
+msgid ""
+"Applies a provided style to a layer. The style must be defined in a "
+":file:`QML` file."
+msgstr ""
+"Applica uno stile specifico ad un layer. Lo stile deve essere definito in un"
+" file :file:`QML`."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:544
+msgid ""
+"No new output are created: the style is immediately assigned to the layer."
+msgstr ""
+"Non viene creato nessun nuovo output: lo stile viene immediatamente "
+"assegnato al layer."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:557
+msgid "**Input Layer**"
+msgstr "**Layer in ingresso**"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:559
+msgid "[layer]"
+msgstr "[layer]"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:560
+msgid "Input layer you want to apply the style to"
+msgstr "Layer in ingresso a cui si vuole applicare lo stile"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:561
+msgid "**Style file**"
+msgstr "**File di stile**"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:564
+msgid "Path to the ``.qml`` file of the style"
+msgstr "Percorso per il file ``.qml`` dello stile"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:580
+msgid "The input layer with the new style assigned. No new layer is created."
+msgstr ""
+"Il layer in ingresso con il nuovo stile assegnato. Non viene creato nessun "
+"nuovo layer."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:585
+msgid "**Algorithm ID**: ``qgis:setlayerstyle``"
+msgstr "**ID Algoritmo**: ``qgis:setlayerstyle``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:595
+msgid "Topological coloring"
+msgstr "Colorazione topologica"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:596
+msgid ""
+"Assigns a color index to polygon features in such a way that no adjacent "
+"polygons share the same color index, whilst minimizing the number of colors "
+"required."
+msgstr ""
+"Assegna un indice di colore al poligono in modo tale che nessun poligono "
+"adiacente condivida lo stesso indice di colore, minimizzando il numero di "
+"colori richiesti."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:599
+msgid "The algorithm allows choice of method to use when assigning colors."
+msgstr ""
+"L'algoritmo permette di scegliere il metodo da utilizzare per l'assegnazione"
+" dei colori."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:601
+msgid ""
+"A minimum number of colors can be specified if desired. The color index is "
+"saved to a new attribute named **color_id**."
+msgstr ""
+"Un numero minimo di colori può essere specificato, se lo si desidera. "
+"L'indice del colore viene salvato in un nuovo attributo chiamato "
+"**color_id**."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:604
+msgid ""
+"The following example shows the algorithm with four different colors chosen;"
+" as you can see each color class has the same amount of features."
+msgstr ""
+"L'esempio seguente mostra l'algoritmo con la scelta di quattro colori "
+"diversi; come puoi vedere ogni classe di colore ha la stessa quantità di "
+"elementi."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:610
+msgid "Topological colors example"
+msgstr "Esempio di colori topologici"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:627
+msgid "The input polygon layer"
+msgstr "Il layer poligonale in ingresso"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:628
+msgid "**Minimum number of colors**"
+msgstr "**Numero minimo di colori**"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:629
+msgid "``MIN_COLORS``"
+msgstr "``MIN_COLORS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:632
+msgid "Default: 4"
+msgstr "Predefinito: 4"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:633
+msgid "The minimum number of colors to assign. Minimum 1, maximum 1000."
+msgstr "Il numero minimo di colori da assegnare. Minimo 1, massimo 1000."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:635
+msgid "**Minimum distance between features**"
+msgstr "**Distanza minima tra gli elementi**"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:636
+msgid "``MIN_DISTANCE``"
+msgstr "``MIN_DISTANCE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:639
+msgid "Default: 0.0"
+msgstr "Default: 0.0"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:640
+msgid ""
+"Prevent nearby (but non-touching) features from being assigned equal colors."
+" Minimum 0.0."
+msgstr ""
+"Impedisce che agli elementi vicini (ma che non si toccano) vengano assegnati"
+" colori uguali. Minimo 0,0."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:643
+msgid "**Balance color assignment**"
+msgstr "**Assegnazione colore bilanciato**"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:644
+msgid "``BALANCE``"
+msgstr "``BALANCE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:647
 msgid "Default: 0"
-msgstr "Predefinito: 0"
+msgstr "Default: 0"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:648
+msgid "Options are:"
+msgstr "Le opzioni sono:"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:650
+msgid "0 --- By feature count"
+msgstr "0 --- Per numero di elementi"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:652
+msgid ""
+"Attempts to assign colors so that the count of features assigned to each "
+"individual color index is balanced."
+msgstr ""
+"Tenta di assegnare i colori in modo che il conteggio degli elementi "
+"assegnati a ogni singolo indice di colore sia bilanciato."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:656
+msgid "1 --- By assigned area"
+msgstr "1 --- Per area assegnata"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:658
+msgid ""
+"Assigns colors so that the total area of features assigned to each color is "
+"balanced. This mode can be useful to help avoid large features resulting in "
+"one of the colors appearing more dominant on a colored map."
+msgstr ""
+"Assegna i colori in modo che l'area totale degli elementi assegnati a "
+"ciascun colore sia bilanciata. Questa modalità può essere utile per evitare "
+"che elementi grandi risultino in uno dei colori che appare più dominante su "
+"una mappa colorata."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:664
+msgid "2 --- By distance between colors"
+msgstr "2 --- Per distanza tra i colori"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:666
+msgid ""
+"Assigns colors in order to maximize the distance between features of the "
+"same color. This mode helps to create a more uniform distribution of colors "
+"across a map."
+msgstr ""
+"Assegna i colori in modo da massimizzare la distanza tra gli elementi dello "
+"stesso colore. Questa modalità aiuta a creare una distribuzione più uniforme"
+" dei colori su una mappa."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:671
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:696
+msgid "**Colored**"
+msgstr "**Colorato**"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:676
+msgid "Specify the output layer. One of:"
+msgstr "Specifica il layer in uscita. Uno di:"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:699
+msgid "Polygon vector layer with an added ``color_id`` column"
+msgstr "Layer vettoriale poligonale con una colonna ``color_id`` aggiunta"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:704
+msgid "**Algorithm ID**: ``qgis:topologicalcoloring``"
+msgstr "**ID Algoritmo**: ``qgis:topologicalcoloring``"
