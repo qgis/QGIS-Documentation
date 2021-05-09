@@ -371,9 +371,10 @@ This customization is done in the :menuselection:`Settings -->` |options|
 
      In some cases a transformation may not be available for use on your system.
      In this case, the transformation will still be shown (greyed) in this list
-     but can not be picked until you download and install the required package
-     of transformation support. Usually, a button is provided to download the
-     corresponding grid.
+     but can not be picked until you install the required package
+     of transformation support. Usually, a button is provided to download and
+     install the corresponding grid, which is then stored under the :file:`proj`
+     folder in the active :ref:`user profile <user_profiles>` directory.
 
   #. Find your preferred transformation and select it
   #. Set whether you |checkbox| :guilabel:`Allow fallback transforms if preferred
